@@ -1,0 +1,458 @@
+[
+ {
+  "nombre": "Google Noticias · Semana Santa Sevilla",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20Sevilla%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "sevilla",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Sevilla",
+  "url": "https://news.google.com/rss/search?q=Sevilla%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "sevilla",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Málaga",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20M%C3%A1laga%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "malaga",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Málaga",
+  "url": "https://news.google.com/rss/search?q=M%C3%A1laga%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "malaga",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Granada",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20Granada%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "granada",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Granada",
+  "url": "https://news.google.com/rss/search?q=Granada%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "granada",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Córdoba",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20C%C3%B3rdoba%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "cordoba",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Córdoba",
+  "url": "https://news.google.com/rss/search?q=C%C3%B3rdoba%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "cordoba",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Cádiz",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20C%C3%A1diz%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "cadiz",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Cádiz",
+  "url": "https://news.google.com/rss/search?q=C%C3%A1diz%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "cadiz",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Huelva",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20Huelva%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "huelva",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Huelva",
+  "url": "https://news.google.com/rss/search?q=Huelva%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "huelva",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Almería",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20Almer%C3%ADa%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "almeria",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Almería",
+  "url": "https://news.google.com/rss/search?q=Almer%C3%ADa%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "almeria",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Semana Santa Jaén",
+  "url": "https://news.google.com/rss/search?q=%22Semana%20Santa%22%20Ja%C3%A9n%20(hermandad%20OR%20cofrad%C3%ADa%20OR%20cofrad%C3%ADas)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "jaen",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas y música cofrade Jaén",
+  "url": "https://news.google.com/rss/search?q=Ja%C3%A9n%20(%22banda%20de%20cornetas%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20OR%20%22banda%20de%20m%C3%BAsica%22)%20cofrade%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "jaen",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Pregones y carteles de Semana Santa en Andalucía",
+  "url": "https://news.google.com/rss/search?q=Andaluc%C3%ADa%20%22Semana%20Santa%22%20(pregonero%20OR%20cartel%20OR%20preg%C3%B3n)%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Marchas procesionales y estrenos",
+  "url": "https://news.google.com/rss/search?q=%22marcha%20procesional%22%20(estreno%20OR%20dedicada)%20Andaluc%C3%ADa%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Cofradías de Andalucía",
+  "url": "https://news.google.com/rss/search?q=cofrad%C3%ADas%20Andaluc%C3%ADa%20hermandad%20noticias%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Google Noticias · Bandas de cornetas y tambores",
+  "url": "https://news.google.com/rss/search?q=%22banda%20de%20cornetas%20y%20tambores%22%20OR%20%22agrupaci%C3%B3n%20musical%22%20Semana%20Santa%20when%3A14d&hl=es&gl=ES&ceid=ES:es",
+  "tipo": "agregador",
+  "filtro": false,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Diario de Sevilla (portada, filtrada por temática cofrade)",
+  "url": "https://www.diariodesevilla.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "sevilla",
+  "legacy": true
+ },
+ {
+  "nombre": "Málaga Hoy (portada, filtrada por temática cofrade)",
+  "url": "https://www.malagahoy.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "malaga",
+  "legacy": true
+ },
+ {
+  "nombre": "Granada Hoy (portada, filtrada por temática cofrade)",
+  "url": "https://www.granadahoy.com/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "granada",
+  "legacy": true
+ },
+ {
+  "nombre": "Huelva Información (portada, filtrada por temática cofrade)",
+  "url": "https://www.huelvainformacion.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "huelva",
+  "legacy": true
+ },
+ {
+  "nombre": "Diario de Cádiz (portada, filtrada por temática cofrade)",
+  "url": "https://www.diariodecadiz.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "cadiz",
+  "legacy": true
+ },
+ {
+  "nombre": "El Día de Córdoba (portada, filtrada por temática cofrade)",
+  "url": "https://www.eldiadecordoba.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "cordoba",
+  "legacy": true
+ },
+ {
+  "nombre": "Diario de Almería (portada, filtrada por temática cofrade)",
+  "url": "https://www.diariodealmeria.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "almeria",
+  "legacy": true
+ },
+ {
+  "nombre": "Europa Sur (portada, filtrada por temática cofrade)",
+  "url": "https://www.europasur.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Diario de Jerez (portada, filtrada por temática cofrade)",
+  "url": "https://www.diariodejerez.es/rss/",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Diario SUR (portada, filtrada por temática cofrade)",
+  "url": "https://www.diariosur.es/rss/2.0/portada",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "malaga",
+  "legacy": true
+ },
+ {
+  "nombre": "Ideal (portada, filtrada por temática cofrade)",
+  "url": "https://www.ideal.es/rss/2.0/portada",
+  "tipo": "prensa",
+  "filtro": true,
+  "ciudad": "",
+  "legacy": true
+ },
+ {
+  "nombre": "Agrupación de Cofradías de Semana Santa de Málaga",
+  "url": "https://agrupaciondecofradias.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "malaga",
+  "legacy": true
+ },
+ {
+  "nombre": "Agrupación de Hermandades y Cofradías de Almería",
+  "url": "https://www.cofradiasdealmeria.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "almeria",
+  "legacy": true
+ },
+ {
+  "nombre": "Archidiócesis de Sevilla",
+  "url": "https://www.archisevilla.org/feed/",
+  "tipo": "oficial",
+  "filtro": true,
+  "ciudad": "sevilla",
+  "legacy": true
+ },
+ {
+  "nombre": "Diócesis de Huelva",
+  "url": "https://www.diocesisdehuelva.es/feed/",
+  "tipo": "oficial",
+  "filtro": true,
+  "ciudad": "huelva",
+  "legacy": true
+ },
+ {
+  "nombre": "Diócesis de Jaén",
+  "url": "https://www.diocesisdejaen.es/feed/",
+  "tipo": "oficial",
+  "filtro": true,
+  "ciudad": "jaen",
+  "legacy": true
+ },
+ {
+  "nombre": "Real Federación de Hermandades y Cofradías de Granada",
+  "url": "https://hermandadesdegranada.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "granada"
+ },
+ {
+  "nombre": "Hermandad Huerto (Córdoba)",
+  "url": "https://www.hermandadelhuerto.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Esperanza (Córdoba)",
+  "url": "https://hermandadesperanza.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Amor (Córdoba)",
+  "url": "https://realhermandadamorcordoba.blogspot.com/rss.xml",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Rescatado (Córdoba)",
+  "url": "https://rescatado.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Merced (Córdoba)",
+  "url": "https://www.hermandaddelamerced.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Estrella (Córdoba)",
+  "url": "https://www.laestrelladecordoba.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Sentencia (Córdoba)",
+  "url": "https://hermandaddelasentencia.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Universitaria (Córdoba)",
+  "url": "https://www.hermandaduniversitaria.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Santa Faz (Córdoba)",
+  "url": "https://www.santafaz-cordoba.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Prendimiento (Córdoba)",
+  "url": "https://prendimientocordoba.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Pasión (Córdoba)",
+  "url": "https://www.hermandaddepasioncordoba.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Nazareno (Córdoba)",
+  "url": "https://nazarenocordoba.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Cena (Córdoba)",
+  "url": "https://sagradacena-cordoba.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Caído (Córdoba)",
+  "url": "https://www.jesuscaido.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Caridad (Córdoba)",
+  "url": "https://hermandaddelacaridad.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad las Angustias (Córdoba)",
+  "url": "https://lasangustiascordoba.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Descendimiento (Córdoba)",
+  "url": "https://www.descendimientocordoba.org/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad los Dolores (Córdoba)",
+  "url": "https://hermandadlosdolores.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Santo Sepulcro (Córdoba)",
+  "url": "https://hermandadsepulcro.com/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Conversión (Córdoba)",
+  "url": "https://conversioncordoba.blogspot.com/rss.xml",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad la Presentación al Pueblo (Córdoba)",
+  "url": "https://hermandadpresentacionalpueblo.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Dolores de Alcolea (Córdoba)",
+  "url": "https://doloresalcolea.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ },
+ {
+  "nombre": "Hermandad Resucitado (Córdoba)",
+  "url": "https://www.resucitadocordoba.es/feed/",
+  "tipo": "oficial",
+  "filtro": false,
+  "ciudad": "cordoba"
+ }
+]

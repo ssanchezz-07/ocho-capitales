@@ -1,0 +1,73 @@
+/* InfoCofrade — estructura del sitio estático */
+html.ic-site { background: var(--ic-bg); color: var(--ic-ink); -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+.ic-site body { margin: 0; background: var(--ic-bg); font-family: var(--ic-sans); color: var(--ic-ink); }
+.ic-wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 28px); }
+.ic-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ic-skip { position: absolute; left: -999px; top: 8px; background: var(--ic-primary); color: var(--ic-on-primary); padding: 8px 12px; border-radius: 8px; z-index: 100; }
+.ic-skip:focus { left: 8px; }
+
+.ic-header { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--ic-bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--ic-line); }
+.ic-header-in { display: flex; align-items: center; gap: 18px; min-height: 64px; }
+.ic-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ic-ink); flex: 0 0 auto; }
+.ic-logo-mark { width: 36px; height: 36px; }
+.ic-logo-txt { font-family: var(--ic-display); font-size: 1.25rem; letter-spacing: .02em; font-weight: 600; }
+.ic-logo-txt b { color: var(--ic-gold); font-weight: 700; }
+.ic-nav { flex: 1; }
+.ic-nav ul { list-style: none; display: flex; gap: 2px; margin: 0; padding: 0; flex-wrap: wrap; }
+.ic-nav a { display: block; padding: 8px 12px; border-radius: 10px; color: var(--ic-ink); text-decoration: none; font-weight: 550; font-size: .95rem; }
+.ic-nav a:hover, .ic-nav a[aria-current] { background: var(--ic-gold-soft); color: var(--ic-ink); }
+.ic-tools { display: flex; gap: 4px; margin-left: auto; }
+.ic-iconbtn { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; border: 1px solid transparent; background: transparent; color: var(--ic-ink); cursor: pointer; font: inherit; text-decoration: none; }
+.ic-iconbtn:hover { background: var(--ic-gold-soft); }
+.ic-iconbtn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ic-menu-btn { display: none; }
+@media (max-width: 920px) {
+  .ic-menu-btn { display: inline-grid; }
+  .ic-nav { position: absolute; left: 0; right: 0; top: 100%; background: var(--ic-surface); border-bottom: 1px solid var(--ic-line); box-shadow: var(--ic-shadow); display: none; }
+  .ic-nav.is-open { display: block; }
+  .ic-nav ul { flex-direction: column; padding: 8px clamp(16px, 3vw, 28px) 14px; }
+  .ic-nav a { padding: 12px; font-size: 1.05rem; }
+  .ic-logo-txt { font-size: 1.1rem; }
+}
+
+main.pcof { padding-top: 18px; padding-bottom: 48px; min-height: 60vh; }
+.ic-title { font-family: var(--ic-serif); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); margin: .2rem 0 .4rem; line-height: 1.08; }
+.ic-title-city { font-family: var(--ic-display); letter-spacing: .02em; font-size: clamp(2.4rem, 9vw, 4.6rem); }
+.ic-subtitle { color: var(--ic-muted); margin: 0 0 12px; font-size: .98rem; }
+.ic-h3 { font-size: 1.05rem; margin: 1.2rem 0 .4rem; color: var(--ic-muted); text-transform: uppercase; letter-spacing: .06em; }
+.ic-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 16px; }
+.ic-fav { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 12px; border: 1px solid var(--ic-line); background: var(--ic-surface); color: var(--ic-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.ic-fav[aria-pressed="true"] { background: var(--ic-gold-soft); border-color: var(--ic-gold); }
+.ic-fav[aria-pressed="true"] span:first-child { color: var(--ic-gold); }
+.ic-prevnext { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0; flex-wrap: wrap; }
+.ic-prevnext a { padding: 10px 14px; border: 1px solid var(--ic-line); border-radius: 12px; text-decoration: none; background: var(--ic-surface); }
+.ic-credits { font-size: .8rem; color: var(--ic-muted); }
+kbd { border: 1px solid var(--ic-line); border-bottom-width: 2px; border-radius: 6px; padding: 0 6px; font-size: .85em; background: var(--ic-surface); }
+
+.ic-footer { border-top: 1px solid var(--ic-line); background: var(--ic-surface); padding: 32px 0 18px; font-size: .92rem; color: var(--ic-muted); }
+.ic-footer-in { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.ic-footer h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ic-ink); margin: 0 0 8px; }
+.ic-footer ul { list-style: none; padding: 0; margin: 0; columns: 2; }
+.ic-footer li { margin: 4px 0; }
+.ic-footer a { color: var(--ic-muted); }
+.ic-legal { font-size: .78rem; margin-top: 20px; }
+
+.ic-search-overlay { position: fixed; inset: 0; z-index: 60; background: rgba(20, 12, 28, .55); display: flex; justify-content: center; align-items: flex-start; padding: clamp(10px, 8vh, 90px) 12px 12px; }
+.ic-search-overlay[hidden] { display: none; }
+.ic-search-box { width: min(720px, 100%); max-height: 82vh; display: flex; flex-direction: column; background: var(--ic-surface); border-radius: 18px; box-shadow: 0 20px 60px rgba(0, 0, 0, .35); overflow: hidden; }
+.ic-search-row { display: flex; gap: 6px; padding: 10px; border-bottom: 1px solid var(--ic-line); }
+.ic-search-row input { flex: 1; border: 0; font: inherit; font-size: 1.1rem; padding: 10px; background: transparent; color: var(--ic-ink); outline: none; }
+.ic-search-results { overflow: auto; padding: 8px; }
+.ic-sr-group { margin: 8px 6px 2px; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ic-muted); }
+.ic-sr-item { display: block; padding: 10px 12px; border-radius: 10px; text-decoration: none; color: var(--ic-ink); }
+.ic-sr-item:hover, .ic-sr-item:focus, .ic-sr-item.is-active { background: var(--ic-gold-soft); outline: none; }
+.ic-sr-item small { display: block; color: var(--ic-muted); }
+.ic-sr-item mark { background: color-mix(in srgb, var(--ic-gold) 35%, transparent); color: inherit; border-radius: 2px; }
+@media (max-width: 440px) {
+  .ic-header-in { gap: 8px; }
+  .ic-tools { gap: 0; }
+  .ic-iconbtn { width: 38px; height: 38px; }
+  .ic-logo-mark { width: 32px; height: 32px; }
+  .ic-logo-txt { font-size: 1rem; }
+}
+@media (max-width: 360px) { .ic-logo-txt { display: none; } }

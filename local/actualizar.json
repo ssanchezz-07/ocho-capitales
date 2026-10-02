@@ -1,0 +1,6 @@
+{
+  "landingPage": "/",
+  "steps": [
+    { "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; wp_set_current_user(1); update_option('blogname','InfoCofrade'); update_option('blogdescription','La Semana Santa de Andalucía: noticias, hermandades, bandas e imagineros'); $map=get_option('pcof_pages',array()); if(!empty($map['inicio'])){ wp_update_post(array('ID'=>(int)$map['inicio'],'post_title'=>'InfoCofrade')); } $m=wp_get_nav_menu_object('Portal Cofrade'); if($m){ wp_update_term($m->term_id,'nav_menu',array('name'=>'InfoCofrade')); } $f='terminos'; $o=0; $n=0; while(true){ $x=PCOF_Importer::step($f,$o); $n++; if($x['done']) break; $f=$x['next']['fase']; $o=$x['next']['offset']; } file_put_contents('/wordpress/ultima-actualizacion.txt', date('c').' pasos='.$n); echo 'OK '.$n;" }
+  ]
+}

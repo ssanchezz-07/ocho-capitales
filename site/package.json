@@ -1,0 +1,14 @@
+{
+  "name": "infocofrade",
+  "private": true,
+  "type": "module",
+  "description": "InfoCofrade: portal estático de noticias y enciclopedia de la Semana Santa andaluza",
+  "scripts": {
+    "noticias": "node fetch-news.mjs",
+    "build": "node build.mjs",
+    "dev": "node fetch-news.mjs && node build.mjs && node serve.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  }
+}

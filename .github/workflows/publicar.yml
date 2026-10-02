@@ -1,0 +1,61 @@
+# InfoCofrade — actualiza noticias y publica el sitio en GitHub Pages (gratis).
+# Se ejecuta cada 2 horas, al subir cambios y a mano desde la pestaña «Actions».
+name: Publicar InfoCofrade
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Instalar
+        working-directory: site
+        run: npm ci
+      - name: Leer noticias
+        working-directory: site
+        run: node fetch-news.mjs
+      - name: Guardar archivo de noticias
+        run: |
+          git config user.name "InfoCofrade bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/data/news.json
+          git diff --cached --quiet || (git commit -m "Noticias: actualización automática" && git push)
+      - name: Generar sitio
+        working-directory: site
+        env:
+          # Con dominio propio, cambia BASE_PATH a "/" y SITE_URL a tu dominio.
+          BASE_PATH: /${{ github.event.repository.name }}/
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: node build.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+  desplegar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

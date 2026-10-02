@@ -1,0 +1,3512 @@
+[
+ {
+  "id": "sevilla",
+  "nombre": "Sevilla",
+  "color": "#5b2a86",
+  "lema": "La Semana Santa por antonomasia: sesenta cofradías, pasos a costal y la Madrugá.",
+  "intro": [
+   "La Semana Santa sevillana cristaliza tras el Concilio de Trento. El Sínodo del cardenal Niño de Guevara (1604) obligó a las cofradías a hacer estación de penitencia en la Catedral, origen de la carrera oficial. Los grandes imagineros del Barroco —Martínez Montañés, Juan de Mesa, Pedro Roldán, Luisa Roldán, Francisco Antonio Gijón— tallaron aquí buena parte de las imágenes que siguen procesionando.",
+   "El siglo XX aportó la segunda gran oleada artística: Antonio Castillo Lastrucci, Sebastián Santos, Antonio Illanes, Luis Ortega Bru, Francisco Buiza o Luis Álvarez Duarte; el bordador Juan Manuel Rodríguez Ojeda inventó el palio moderno y el músico Manuel López Farfán fijó la marcha de palio con bandas de cornetas incorporadas.",
+   "Los pasos van a costal: las cuadrillas de costaleros (hermanos desde la Hermandad de los Estudiantes, 1973) cargan bajo las trabajaderas, invisibles tras los faldones, guiados por el capataz y el llamador. Las cofradías se reparten entre las de barrio, alegres y con música, y las «serias», de ruan, cera tiniebla y silencio."
+  ],
+  "datos": [
+   [
+    "Hermandades en carrera oficial",
+    "60 (más las de Vísperas)"
+   ],
+   [
+    "Organismo",
+    "Consejo General de Hermandades y Cofradías"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Internacional (1980)"
+   ],
+   [
+    "Carrera oficial",
+    "La Campana, Sierpes, Plaza de San Francisco, Avenida de la Constitución y Catedral"
+   ],
+   [
+    "Forma de carga",
+    "A costal, con costaleros bajo el paso"
+   ]
+  ],
+  "claves": [
+   "La Madrugá (noche del Jueves al Viernes): Silencio, Gran Poder, Macarena, Calvario, Esperanza de Triana y Gitanos.",
+   "El paso de las cofradías de Triana por el puente de Isabel II.",
+   "San Esteban: los costaleros sacan el paso de rodillas por la puerta.",
+   "Marchas emblema: Amarguras (Manuel Font de Anta, 1919), Estrella Sublime (López Farfán), Virgen del Valle (Vicente Gómez-Zarzuela) y La Madrugá (Abel Moreno)."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquita",
+      "s": "Iglesia del Salvador",
+      "f": "s. XVII (unida al Amor)",
+      "t": [
+       "Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII"
+      ],
+      "p": "Un paso de misterio. Abre la Semana Santa por la mañana.",
+      "m": "Cornetas y tambores.",
+      "h": "La «cofradía de los niños»: sus nazarenos son niños, con palmas y túnica blanca. Pertenece a la Hermandad del Amor."
+     },
+     {
+      "n": "El Amor",
+      "s": "Iglesia del Salvador",
+      "f": "1618 (fusión)",
+      "t": [
+       "Santísimo Cristo del Amor — Juan de Mesa, 1620",
+       "Nuestra Señora del Socorro — anónima"
+      ],
+      "p": "Paso de Cristo crucificado y paso de palio.",
+      "h": "Uno de los grandes crucificados de Juan de Mesa, contratado en 1618 y entregado en 1620. Cierra el Domingo de Ramos."
+     },
+     {
+      "n": "Jesús Despojado",
+      "s": "Capilla de Molviedro (Arenal)",
+      "f": "1936",
+      "t": [
+       "Jesús Despojado de sus Vestiduras",
+       "María Santísima de los Dolores y Misericordia"
+      ],
+      "p": "Misterio del despojo y palio.",
+      "h": "Hermandad fundada en el barrio del Arenal en torno a la escena del despojo de vestiduras en el Calvario."
+     },
+     {
+      "n": "La Paz",
+      "s": "Parroquia de San Sebastián (El Porvenir)",
+      "f": "1939",
+      "t": [
+       "Cristo de la Victoria — Antonio Illanes",
+       "María Santísima de la Paz — Antonio Illanes"
+      ],
+      "p": "Nazareno y palio. Larguísimo recorrido desde el Parque de María Luisa.",
+      "h": "Hermandad del Porvenir. La Virgen de la Paz bajo el arco del Postigo es una de las estampas del día."
+     },
+     {
+      "n": "La Cena",
+      "s": "Iglesia de los Terceros",
+      "f": "s. XVI",
+      "t": [
+       "Sagrada Cena — misterio de Sebastián Santos",
+       "Señor de la Humillación",
+       "María Santísima del Subterráneo"
+      ],
+      "p": "Misterio de la Santa Cena con el apostolado y palio.",
+      "h": "Hermandad sacramental; su misterio representa la institución de la Eucaristía."
+     },
+     {
+      "n": "La Hiniesta",
+      "s": "Parroquia de San Julián",
+      "f": "s. XV",
+      "t": [
+       "Cristo de la Buena Muerte — Castillo Lastrucci, 1938",
+       "María Santísima de la Hiniesta Dolorosa — Castillo Lastrucci, 1937"
+      ],
+      "p": "Cristo crucificado y palio.",
+      "h": "Una de las corporaciones más antiguas. Sus imágenes primitivas se perdieron en el incendio de San Julián de 1932 y fueron sustituidas por Castillo Lastrucci."
+     },
+     {
+      "n": "San Roque",
+      "s": "Parroquia de San Roque",
+      "t": [
+       "Nuestro Padre Jesús de las Penas",
+       "María Santísima de Gracia y Esperanza"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Hermandad de barrio muy querida, entre la Puerta de Carmona y la Calzada."
+     },
+     {
+      "n": "La Estrella",
+      "s": "Capilla de la Estrella (Triana)",
+      "f": "s. XVI",
+      "t": [
+       "Nuestro Padre Jesús de las Penas — anónimo s. XVII",
+       "María Santísima de la Estrella — atribuida al círculo de Martínez Montañés"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Cristo: Banda de Cornetas y Tambores de la Estrella (propia). Palio: banda de música.",
+      "h": "Apodada «la Valiente» por salir en 1932, cuando casi ninguna cofradía se atrevió. La marcha «Estrella Sublime» (López Farfán) le está dedicada."
+     },
+     {
+      "n": "La Amargura",
+      "s": "San Juan de la Palma",
+      "f": "s. XVII",
+      "t": [
+       "Cristo del Silencio en el Desprecio de Herodes",
+       "María Santísima de la Amargura — atrib. Benito Hita del Castillo",
+       "San Juan Evangelista — Benito Hita del Castillo"
+      ],
+      "p": "Misterio y palio con San Juan (sacra conversación).",
+      "h": "Su Virgen es una de las dolorosas cumbre de la ciudad. La marcha «Amarguras» de Font de Anta se asocia a ella desde hace un siglo."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "San Pablo",
+      "s": "Parroquia de San Pablo (Polígono)",
+      "t": [
+       "Jesús Cautivo y Rescatado",
+       "María Santísima del Rosario"
+      ],
+      "p": "Paso de Cautivo y palio. Uno de los recorridos más largos.",
+      "h": "Cofradía de barrio obrero, con una devoción al Cautivo muy popular."
+     },
+     {
+      "n": "Redención",
+      "s": "Parroquia de Santiago",
+      "t": [
+       "Santísimo Cristo de la Redención en el Beso de Judas",
+       "María Santísima del Rocío"
+      ],
+      "p": "Misterio del Beso de Judas y palio."
+     },
+     {
+      "n": "Santa Genoveva",
+      "s": "Parroquia de Santa Genoveva (Tiro de Línea)",
+      "f": "1956",
+      "t": [
+       "Nuestro Padre Jesús Cautivo — José Paz Vélez, 1957",
+       "María Santísima de las Mercedes"
+      ],
+      "p": "Cautivo y palio.",
+      "h": "El Cautivo de Tiro de Línea tiene uno de los besamanos más multitudinarios de Sevilla."
+     },
+     {
+      "n": "Santa Marta",
+      "s": "Parroquia de San Andrés",
+      "f": "1946",
+      "t": [
+       "Santísimo Cristo de la Caridad en su Traslado al Sepulcro — Luis Ortega Bru, 1953"
+      ],
+      "p": "Un solo paso de misterio.",
+      "m": "Música de capilla.",
+      "h": "Cofradía de hostelería; su misterio del traslado es una de las obras cumbre de Ortega Bru."
+     },
+     {
+      "n": "San Gonzalo",
+      "s": "Parroquia de San Gonzalo (Triana)",
+      "f": "1942",
+      "t": [
+       "Jesús del Soberano Poder ante Caifás — Luis Ortega Bru",
+       "María Santísima de la Salud"
+      ],
+      "p": "Misterio ante Caifás y palio.",
+      "h": "Cruza el puente de Triana: la bajada al puente es de las más vistas del Lunes."
+     },
+     {
+      "n": "Vera Cruz",
+      "s": "Capilla del Dulce Nombre de Jesús",
+      "f": "s. XV",
+      "t": [
+       "Santísimo Cristo de la Vera Cruz — anónimo s. XVI",
+       "María Santísima de las Tristezas"
+      ],
+      "p": "Crucificado y palio.",
+      "m": "Capilla musical.",
+      "h": "Pasa por ser la hermandad penitencial más antigua de la ciudad, de fundación franciscana."
+     },
+     {
+      "n": "Las Penas",
+      "s": "Parroquia de San Vicente",
+      "t": [
+       "Nuestro Padre Jesús de las Penas",
+       "María Santísima de los Dolores"
+      ],
+      "p": "Nazareno caído y palio."
+     },
+     {
+      "n": "Las Aguas",
+      "s": "Capilla del Rosario (calle Dos de Mayo)",
+      "t": [
+       "Santísimo Cristo de las Aguas",
+       "Nuestra Señora de Guadalupe"
+      ],
+      "p": "Cristo crucificado y palio.",
+      "h": "Recorre el Arenal y pasa por el Postigo del Aceite."
+     },
+     {
+      "n": "El Museo",
+      "s": "Capilla del Museo",
+      "t": [
+       "Santísimo Cristo de la Expiración — Marcos Cabrera, 1575",
+       "Nuestra Señora de las Aguas"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Su Cristo es uno de los crucificados más antiguos que procesionan en Sevilla, de papelón y madera."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "El Cerro",
+      "s": "Parroquia de Nuestra Señora de los Dolores (Cerro del Águila)",
+      "t": [
+       "Santísimo Cristo de los Desamparados",
+       "María Santísima de los Dolores"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Recorrido extenuante desde el Cerro del Águila hasta la Catedral y regreso."
+     },
+     {
+      "n": "Los Javieres",
+      "s": "Omnium Sanctorum",
+      "t": [
+       "Santísimo Cristo de las Almas",
+       "Nuestra Señora de Gracia y Amparo"
+      ],
+      "p": "Crucificado y palio."
+     },
+     {
+      "n": "San Esteban",
+      "s": "Parroquia de San Esteban",
+      "t": [
+       "Cristo de la Salud y Buen Viaje",
+       "María Santísima de los Desamparados"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Célebre por la salida: los costaleros sacan el paso de rodillas por una puerta demasiado baja."
+     },
+     {
+      "n": "Los Estudiantes",
+      "s": "Capilla de la Universidad",
+      "f": "1924",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Juan de Mesa, 1620",
+       "María Santísima de la Angustia — Juan de Astorga"
+      ],
+      "p": "Crucificado (en silencio) y palio.",
+      "m": "Cristo en silencio.",
+      "h": "Hermandad universitaria. Fue la primera en llevar costaleros hermanos (1973), cambiando para siempre la forma de cargar en Sevilla."
+     },
+     {
+      "n": "San Benito",
+      "s": "Iglesia de San Benito",
+      "t": [
+       "Presentación de Jesús al Pueblo",
+       "Santísimo Cristo de la Sangre",
+       "María Santísima de la Encarnación"
+      ],
+      "p": "Tres pasos: misterio, crucificado y palio.",
+      "h": "Cofradía de barrio muy numerosa, de La Calzada."
+     },
+     {
+      "n": "La Candelaria",
+      "s": "Iglesia de San Nicolás",
+      "t": [
+       "Nuestro Padre Jesús de la Salud",
+       "María Santísima de la Candelaria"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Su palio en malla de plata es una de sus señas de identidad."
+     },
+     {
+      "n": "Dulce Nombre («La Bofetá»)",
+      "s": "Parroquia de San Lorenzo",
+      "t": [
+       "Nuestro Padre Jesús ante Anás",
+       "María Santísima del Dulce Nombre"
+      ],
+      "p": "Misterio de la bofetada ante Anás y palio.",
+      "h": "El apodo viene de la escena del misterio: un sayón abofetea a Cristo."
+     },
+     {
+      "n": "Santa Cruz",
+      "s": "Parroquia de Santa Cruz",
+      "t": [
+       "Santísimo Cristo de las Misericordias",
+       "María Santísima de los Dolores"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Recorre el barrio de Santa Cruz: callejuelas imposibles y cofradía de corte serio."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "El Carmen Doloroso",
+      "s": "Convento del Carmen / San Buenaventura",
+      "t": [
+       "Nazareno",
+       "María Santísima del Carmen en sus Dolores"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "La Sed",
+      "s": "Parroquia de la Concepción (Nervión)",
+      "f": "1969",
+      "t": [
+       "Santísimo Cristo de la Sed — Luis Álvarez Duarte",
+       "María Santísima de Consolación — Luis Álvarez Duarte"
+      ],
+      "p": "Misterio de la Sed y palio.",
+      "h": "Hermandad joven del barrio de Nervión con uno de los recorridos más largos."
+     },
+     {
+      "n": "San Bernardo",
+      "s": "Parroquia de San Bernardo",
+      "t": [
+       "Santísimo Cristo de la Salud — atrib. Andrés Cansino, s. XVII",
+       "María Santísima del Refugio"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "El barrio de los toreros. Cruza la Puerta de la Carne y su vuelta de madrugada es un clásico."
+     },
+     {
+      "n": "El Buen Fin",
+      "s": "Iglesia de San Antonio de Padua",
+      "t": [
+       "Santísimo Cristo del Buen Fin",
+       "María Santísima de la Palma"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Hermandad de raíz franciscana."
+     },
+     {
+      "n": "La Lanzada",
+      "s": "Parroquia de San Martín",
+      "t": [
+       "Sagrada Lanzada",
+       "María Santísima de Guía"
+      ],
+      "p": "Misterio con Longinos a caballo y palio."
+     },
+     {
+      "n": "El Baratillo",
+      "s": "Capilla del Baratillo (Arenal)",
+      "t": [
+       "Santísimo Cristo de la Misericordia",
+       "Nuestra Señora de la Piedad",
+       "María Santísima de la Caridad en su Soledad"
+      ],
+      "p": "Misterio de la Piedad y palio.",
+      "h": "Junto a la Maestranza: la Virgen de la Caridad pasa ante la plaza de toros."
+     },
+     {
+      "n": "Cristo de Burgos",
+      "s": "Parroquia de San Pedro",
+      "t": [
+       "Santísimo Cristo de Burgos — Juan Bautista Vázquez el Viejo, 1573",
+       "Madre de Dios de la Palma"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Uno de los crucificados más antiguos de la nómina, obra renacentista."
+     },
+     {
+      "n": "Siete Palabras",
+      "s": "Parroquia de San Vicente",
+      "t": [
+       "Santísimo Cristo de las Siete Palabras",
+       "María Santísima de la Cabeza",
+       "María Santísima de los Remedios"
+      ],
+      "p": "Crucificado y dos pasos marianos."
+     },
+     {
+      "n": "Los Panaderos",
+      "s": "Capilla de San Andrés",
+      "f": "s. XVII",
+      "t": [
+       "Nuestro Padre Jesús en su Prendimiento",
+       "María Santísima de Regla"
+      ],
+      "p": "Misterio del Prendimiento y palio.",
+      "h": "Fundada por el gremio de panaderos."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "Los Negritos",
+      "s": "Capilla de los Ángeles",
+      "f": "1393",
+      "t": [
+       "Santísimo Cristo de la Fundación — Andrés de Ocampo, 1622",
+       "Nuestra Señora de los Ángeles"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Fundada por el arzobispo Gonzalo de Mena para atender a la población negra de Sevilla; una de las más antiguas."
+     },
+     {
+      "n": "La Exaltación («Los Caballos»)",
+      "s": "Iglesia de Santa Catalina",
+      "t": [
+       "Exaltación de Cristo en la Cruz — Pedro Roldán y Luis Antonio de los Arcos, 1687",
+       "María Santísima de las Lágrimas"
+      ],
+      "p": "Misterio con los caballos de los romanos y palio.",
+      "h": "El apodo viene de los caballos del misterio, raros en Sevilla."
+     },
+     {
+      "n": "Las Cigarreras",
+      "s": "Capilla de la Fábrica de Tabacos (Los Remedios)",
+      "t": [
+       "Jesús atado a la Columna — atrib. Pedro Roldán",
+       "María Santísima de la Victoria"
+      ],
+      "p": "Misterio de la Columna y palio.",
+      "m": "Cristo: Banda de Cornetas y Tambores de las Cigarreras (propia), una de las más influyentes de España.",
+      "h": "Nació ligada a las trabajadoras de la Real Fábrica de Tabacos."
+     },
+     {
+      "n": "Montesión",
+      "s": "Capilla de Montesión (Feria)",
+      "t": [
+       "Oración en el Huerto",
+       "María Santísima del Rosario en sus Misterios Dolorosos"
+      ],
+      "p": "Misterio del Huerto y palio."
+     },
+     {
+      "n": "La Quinta Angustia",
+      "s": "Parroquia de la Magdalena",
+      "t": [
+       "Sagrado Descendimiento — Pedro Roldán (atrib.), s. XVII",
+       "María Santísima de la Quinta Angustia"
+      ],
+      "p": "Misterio del Descendimiento y paso de Virgen.",
+      "m": "Capilla musical; cofradía de silencio.",
+      "h": "Su Descendimiento es modelo de todos los posteriores."
+     },
+     {
+      "n": "El Valle",
+      "s": "Iglesia de la Anunciación",
+      "t": [
+       "Coronación de Espinas",
+       "Nuestro Padre Jesús con la Cruz al hombro",
+       "María Santísima del Valle"
+      ],
+      "p": "Tres pasos.",
+      "h": "La marcha «Virgen del Valle» de Vicente Gómez-Zarzuela (1898) es de las más antiguas del repertorio."
+     },
+     {
+      "n": "Pasión",
+      "s": "Iglesia del Salvador",
+      "t": [
+       "Nuestro Padre Jesús de la Pasión — Juan Martínez Montañés, c. 1610",
+       "Nuestra Señora de la Merced"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "El «Señor de Pasión», obra maestra de Montañés, el «Dios de la madera»."
+     }
+    ]
+   },
+   {
+    "dia": "Madrugá",
+    "hs": [
+     {
+      "n": "El Silencio",
+      "s": "Iglesia de San Antonio Abad",
+      "f": "s. XIV (reivindica 1340)",
+      "t": [
+       "Nuestro Padre Jesús Nazareno",
+       "María Santísima de la Concepción"
+      ],
+      "p": "Nazareno y palio.",
+      "m": "Sin música.",
+      "h": "Se titula Primitiva Hermandad de los Nazarenos; abre la Madrugá en absoluto silencio."
+     },
+     {
+      "n": "El Gran Poder",
+      "s": "Basílica del Gran Poder",
+      "f": "s. XV",
+      "t": [
+       "Nuestro Padre Jesús del Gran Poder — Juan de Mesa, 1620",
+       "María Santísima del Mayor Dolor y Traspaso"
+      ],
+      "p": "Nazareno (sin música) y palio.",
+      "m": "El Señor va en silencio; el palio con banda.",
+      "h": "El «Señor de Sevilla». Miles de penitentes con cruces le acompañan; su zancada al andar es inconfundible."
+     },
+     {
+      "n": "La Macarena",
+      "s": "Basílica de la Macarena",
+      "f": "1595",
+      "t": [
+       "Nuestro Padre Jesús de la Sentencia — anónimo s. XVII",
+       "María Santísima de la Esperanza Macarena — anónima s. XVII (atribuida sin certeza a Luisa Roldán)"
+      ],
+      "p": "Misterio de la Sentencia y palio.",
+      "m": "Cristo: Banda de Cornetas y Tambores Centuria Romana Macarena (propia). Palio: banda de música; marcha «Coronación de la Macarena» (Pedro Braña).",
+      "h": "La devoción más universal de Sevilla. Coronada canónicamente en 1964. La acompañan los «armaos», su centuria romana."
+     },
+     {
+      "n": "El Calvario",
+      "s": "Parroquia de la Magdalena",
+      "t": [
+       "Santísimo Cristo del Calvario — Francisco de Ocampo, 1612",
+       "María Santísima de la Presentación"
+      ],
+      "p": "Crucificado y paso de Virgen.",
+      "m": "Silencio.",
+      "h": "Cofradía de ruan, austera y seria."
+     },
+     {
+      "n": "La Esperanza de Triana",
+      "s": "Capilla de los Marineros",
+      "t": [
+       "Nuestro Padre Jesús de las Tres Caídas",
+       "María Santísima de la Esperanza de Triana"
+      ],
+      "p": "Nazareno caído y palio.",
+      "m": "Cristo: Banda de Cornetas y Tambores Tres Caídas de Triana (propia).",
+      "h": "Hermandad de los marineros de Triana. La Esperanza fue coronada en 1984 y su vuelta al barrio al mediodía del Viernes es multitudinaria."
+     },
+     {
+      "n": "Los Gitanos",
+      "s": "Santuario de los Gitanos",
+      "f": "1753",
+      "t": [
+       "Nuestro Padre Jesús de la Salud",
+       "María Santísima de las Angustias"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Fundada por gitanos; desde 1999 tiene santuario propio en la calle Verónica."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "La Carretería",
+      "s": "Capilla de la Carretería",
+      "t": [
+       "Santísimo Cristo de la Salud",
+       "Nuestra Señora de la Luz",
+       "María Santísima del Mayor Dolor en su Soledad"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Fundada por el gremio de carreteros."
+     },
+     {
+      "n": "San Isidoro",
+      "s": "Iglesia de San Isidoro",
+      "t": [
+       "Nuestro Padre Jesús de las Tres Caídas",
+       "María Santísima de Loreto"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "La O",
+      "s": "Iglesia de la O (Triana)",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — Pedro Roldán, 1685",
+       "María Santísima de la O"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Cruza el puente de Triana el Viernes Santo por la tarde."
+     },
+     {
+      "n": "San Buenaventura",
+      "s": "Convento de San Buenaventura",
+      "t": [
+       "Crucificado titular",
+       "Dolorosa titular"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Hermandad de sede franciscana en la calle Carlos Cañal."
+     },
+     {
+      "n": "Montserrat",
+      "s": "Capilla de Montserrat",
+      "t": [
+       "Santísimo Cristo de la Conversión del Buen Ladrón — Juan de Mesa, 1619",
+       "Nuestra Señora de Montserrat"
+      ],
+      "p": "Misterio de la Conversión y palio.",
+      "h": "Fundada por catalanes residentes en Sevilla."
+     },
+     {
+      "n": "La Sagrada Mortaja",
+      "s": "Convento de la Paz",
+      "t": [
+       "Misterio de la Sagrada Mortaja"
+      ],
+      "p": "Un paso de misterio.",
+      "m": "Capilla musical; cofradía de silencio."
+     },
+     {
+      "n": "El Cachorro",
+      "s": "Basílica del Patrocinio (Triana)",
+      "t": [
+       "Santísimo Cristo de la Expiración «El Cachorro» — Francisco Antonio Gijón, 1682",
+       "Nuestra Señora del Patrocinio — Luis Álvarez Duarte, 1973"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Cuenta la leyenda que Gijón tomó como modelo a un gitano apodado «el Cachorro» moribundo tras una reyerta. La Virgen primitiva se perdió en el incendio de 1973."
+     }
+    ]
+   },
+   {
+    "dia": "Sábado Santo",
+    "hs": [
+     {
+      "n": "Los Servitas",
+      "s": "Iglesia de San Marcos",
+      "t": [
+       "Santísimo Cristo de la Providencia",
+       "María Santísima de los Dolores"
+      ],
+      "p": "Crucificado y dolorosa.",
+      "m": "Silencio.",
+      "h": "Orden tercera de los Siervos de María; cofradía de silencio."
+     },
+     {
+      "n": "La Trinidad",
+      "s": "Basílica de la Trinidad",
+      "t": [
+       "Sagrada Decisión",
+       "Cristo de las Cinco Llagas",
+       "María Santísima de la Esperanza"
+      ],
+      "p": "Varios pasos, entre ellos uno de los más antiguos misterios de la ciudad."
+     },
+     {
+      "n": "El Santo Entierro",
+      "s": "Iglesia de San Gregorio",
+      "t": [
+       "Cristo Yacente en la urna",
+       "Triunfo de la Santa Cruz sobre la muerte («La Canina») — Antonio Cardoso de Quirós, 1693",
+       "Nuestra Señora de Villaviciosa"
+      ],
+      "p": "Tres pasos.",
+      "h": "Cortejo oficial al que asisten representaciones de todas las hermandades y autoridades. «La Canina» es un esqueleto sentado sobre el globo terráqueo."
+     },
+     {
+      "n": "La Soledad de San Lorenzo",
+      "s": "Parroquia de San Lorenzo",
+      "t": [
+       "Nuestra Señora de la Soledad — anónima s. XVI"
+      ],
+      "p": "Un paso de Virgen.",
+      "h": "Cierra la Semana Santa de penitencia."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "La Resurrección",
+      "s": "Iglesia de Santa Marina",
+      "f": "1969",
+      "t": [
+       "Sagrada Resurrección — Francisco Buiza, 1973",
+       "María Santísima de la Aurora"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Pone el punto final festivo."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "malaga",
+  "nombre": "Málaga",
+  "color": "#1f6b4a",
+  "lema": "Tronos inmensos a varal, hombres de trono y la ciudad volcada en la calle.",
+  "intro": [
+   "Las cofradías malagueñas nacen tras la incorporación de la ciudad a Castilla (1487), al amparo de las órdenes religiosas. La escuela de imaginería de Pedro de Mena dio lustre al Barroco, pero la quema de templos de mayo de 1931 y la Guerra Civil destruyeron casi todo el patrimonio: la mayoría de las imágenes actuales son de posguerra (Palma Burgos, Martín Simón, Buiza, Castillo Lastrucci, Pío Mollar, Benlliure).",
+   "En 1921 se creó la Agrupación de Cofradías, la primera de España. Lo que define a Málaga es el trono: estructuras enormes llevadas a varal por cientos de hombres (y mujeres) de trono, dirigidos por el capataz y el mayordomo con la campana. Los tronos de Virgen, con palio o con manto de cola de varios metros, se mecen en un avance característico.",
+   "Todas las cofradías hacen estación de penitencia en la Catedral y pasan por un recorrido oficial común. La presencia militar y de cuerpos del Estado es muy intensa: la más famosa, la Legión con el Cristo de Mena."
+  ],
+  "datos": [
+   [
+    "Cofradías",
+    "45 en la Agrupación"
+   ],
+   [
+    "Organismo",
+    "Agrupación de Cofradías de Semana Santa (1921)"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Internacional (1980)"
+   ],
+   [
+    "Recorrido oficial",
+    "Plaza de la Constitución, Larios, Martínez, Atarazanas, Torregorda, Alameda, Plaza de la Marina, Molina Lario y Catedral (Torre Sur)"
+   ],
+   [
+    "Forma de carga",
+    "A varal, por hombres de trono"
+   ]
+  ],
+  "claves": [
+   "Jueves Santo: la Legión desembarca y traslada al Cristo de la Buena Muerte (Mena), cantando «El novio de la muerte».",
+   "Miércoles Santo: Jesús «El Rico» libera cada año a un preso, privilegio concedido por Carlos III.",
+   "Martes Santo: el manto de miles de flores de la Virgen de las Penas.",
+   "La leyenda de la rosa de Zamarrilla y la vuelta a la Trinidad de madrugada."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "Pollinica",
+      "s": "Iglesia de San Agustín / casa hermandad (calle Parras)",
+      "t": [
+       "Jesús a su Entrada en Jerusalén",
+       "María Santísima del Amparo",
+       "San Juan Evangelista"
+      ],
+      "p": "Trono de misterio y trono de Virgen.",
+      "h": "Abre la Semana Santa por la mañana: palmas, olivos y cientos de niños con su primera salida."
+     },
+     {
+      "n": "Lágrimas y Favores",
+      "s": "Parroquia de San Juan",
+      "t": [
+       "Titular cristífero",
+       "María Santísima de Lágrimas y Favores"
+      ],
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Cofradía de la feligresía de San Juan; su Virgen es de las más fotografiadas del Domingo."
+     },
+     {
+      "n": "Dulce Nombre",
+      "s": "Parroquia de la Divina Pastora (Capuchinos)",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Cofradía del barrio de Capuchinos."
+     },
+     {
+      "n": "Salutación",
+      "t": [
+       "Nuestro Padre Jesús de la Salutación",
+       "Titular mariana"
+      ],
+      "p": "Misterio y trono de Virgen."
+     },
+     {
+      "n": "Humildad",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "No confundir con Humildad y Paciencia: son cofradías distintas del mismo día."
+     },
+     {
+      "n": "Salud",
+      "s": "Parroquia de San Pablo (Trinidad)",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Cofradía trinitaria del Domingo de Ramos."
+     },
+     {
+      "n": "Humildad y Paciencia",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "En 2026 pasó a la penúltima posición para regresar más rápido por calle Nueva."
+     },
+     {
+      "n": "Huerto",
+      "s": "Parroquia de los Santos Mártires",
+      "t": [
+       "Oración en el Huerto",
+       "María Santísima de la Concepción"
+      ],
+      "p": "Misterio con el ángel y trono de Virgen.",
+      "h": "La «hermandad de los Mártires»; su trono de Virgen es de los más espectaculares del Domingo."
+     },
+     {
+      "n": "Prendimiento",
+      "t": [
+       "Nuestro Padre Jesús del Prendimiento",
+       "María Santísima del Gran Perdón"
+      ],
+      "p": "Misterio y trono de Virgen.",
+      "h": "Cierra el Domingo de Ramos en el recorrido oficial."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "Crucifixión",
+      "s": "Parroquia del Buen Pastor (Capuchinos)",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Abre el Lunes; sale y vuelve por la Trinidad."
+     },
+     {
+      "n": "Gitanos",
+      "t": [
+       "Jesús de la Columna, «el Señor Moreno»",
+       "María Santísima de la O"
+      ],
+      "p": "Trono de la Columna y trono de Virgen.",
+      "h": "Su encuentro entre Cristo y Virgen es uno de los momentos del Lunes."
+     },
+     {
+      "n": "Dolores del Puente",
+      "s": "Parroquia de Santo Domingo (Perchel)",
+      "t": [
+       "Nuestra Señora de los Dolores"
+      ],
+      "p": "Trono de Virgen.",
+      "h": "Cofradía perchelera; su nombre alude al puente sobre el Guadalmedina."
+     },
+     {
+      "n": "Pasión",
+      "t": [
+       "Nuestro Padre Jesús de la Pasión",
+       "María Santísima del Amor Doloroso"
+      ],
+      "p": "Nazareno y trono de Virgen."
+     },
+     {
+      "n": "Cautivo",
+      "s": "Parroquia de San Pablo (Trinidad)",
+      "f": "1934",
+      "t": [
+       "Nuestro Padre Jesús Cautivo — José Martín Simón, 1939",
+       "María Santísima de la Trinidad Coronada — Francisco Buiza, 1964"
+      ],
+      "p": "Trono del Cautivo y trono de la Virgen.",
+      "h": "El «Señor de Málaga». Miles de penitentes descalzos le siguen; llega a la Tribuna de Larios hacia las 20:30 y su recorrido se prolonga hasta la mañana del Martes."
+     },
+     {
+      "n": "Estudiantes",
+      "t": [
+       "Cristo Coronado de Espinas",
+       "María Santísima de Gracia y Esperanza"
+      ],
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Cierra el Lunes Santo, con encierro de madrugada."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "Rocío",
+      "s": "Parroquia de San Lázaro (Victoria)",
+      "t": [
+       "Titular cristífero",
+       "María Santísima del Rocío, «la Novia de Málaga»"
+      ],
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Primera del Martes, el día del barrio de la Victoria. La Virgen, vestida de hebrea, es conocida como la Novia de Málaga."
+     },
+     {
+      "n": "Penas",
+      "t": [
+       "Santísimo Cristo de la Agonía",
+       "María Santísima de las Penas"
+      ],
+      "p": "Crucificado y trono de Virgen.",
+      "h": "La Virgen luce un manto confeccionado con unas 12.000 flores naturales."
+     },
+     {
+      "n": "Nueva Esperanza",
+      "p": "Trono de Cristo y trono de Virgen."
+     },
+     {
+      "n": "Humillación y Estrella",
+      "t": [
+       "Nuestro Padre Jesús de la Humillación",
+       "María Santísima de la Estrella"
+      ],
+      "p": "Trono de Cristo y trono de Virgen."
+     },
+     {
+      "n": "Rescate",
+      "t": [
+       "Nuestro Padre Jesús del Rescate",
+       "María Santísima de Gracia"
+      ],
+      "p": "Nazareno y trono de Virgen."
+     },
+     {
+      "n": "Sentencia",
+      "t": [
+       "Nuestro Padre Jesús de la Sentencia",
+       "María Santísima del Rosario en sus Misterios Dolorosos"
+      ],
+      "p": "Misterio y trono de Virgen.",
+      "h": "Cierra el Martes Santo."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "Mediadora",
+      "s": "Parroquia de San Patricio (Huelin)",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Abre el día a las 16:00 con uno de los recorridos más largos, desde Huelin."
+     },
+     {
+      "n": "Salesianos",
+      "s": "Santuario de María Auxiliadora",
+      "p": "Trono de Cristo y trono de Virgen."
+     },
+     {
+      "n": "Fusionadas",
+      "s": "Parroquia de San Juan",
+      "t": [
+       "Santísimo Cristo de Ánimas de Ciegos",
+       "Jesús atado a la Columna (Azotes y Columna)",
+       "Santísimo Cristo de la Exaltación",
+       "Dolorosas titulares"
+      ],
+      "p": "Varios tronos.",
+      "h": "Son varias cofradías históricas fusionadas en una sola corporación de San Juan."
+     },
+     {
+      "n": "Paloma",
+      "t": [
+       "Nuestro Padre Jesús de la Puente del Cedrón",
+       "María Santísima de la Paloma"
+      ],
+      "p": "Misterio y trono de Virgen.",
+      "h": "Al paso de la Virgen se sueltan palomas blancas."
+     },
+     {
+      "n": "El Rico",
+      "s": "Parroquia de Santiago",
+      "t": [
+       "Nuestro Padre Jesús Nazareno «El Rico»",
+       "María Santísima del Amor"
+      ],
+      "p": "Nazareno y trono de Virgen.",
+      "h": "Cada Miércoles Santo el Rico libera a un preso: según la tradición, en una epidemia los presos se escaparon para sacarlo en procesión y volvieron voluntariamente a la cárcel; Carlos III concedió el privilegio en 1759."
+     },
+     {
+      "n": "Sangre",
+      "t": [
+       "Santísimo Cristo de la Sangre",
+       "María Santísima de Consolación y Lágrimas"
+      ],
+      "p": "Crucificado y trono de Virgen.",
+      "h": "Una de las cofradías más antiguas de Málaga (principios del s. XVI)."
+     },
+     {
+      "n": "Expiración",
+      "s": "Parroquia de San Pedro (Trinidad-Perchel)",
+      "t": [
+       "Santísimo Cristo de la Expiración — Mariano Benlliure, 1940",
+       "María Santísima de los Dolores"
+      ],
+      "p": "Crucificado y trono de Virgen.",
+      "h": "Su Cristo es obra del escultor valenciano Benlliure. Cierra el día con encierro hacia las 03:45."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "Sagrada Cena",
+      "s": "Parroquia de San Carlos y Santo Domingo",
+      "t": [
+       "Sagrada Cena",
+       "María Santísima de la Paz"
+      ],
+      "p": "Misterio con el apostolado y trono de Virgen.",
+      "h": "Abre el Jueves a las 17:00."
+     },
+     {
+      "n": "Viñeros",
+      "s": "Iglesia de la Aurora y Divina Providencia",
+      "t": [
+       "Nuestro Padre Jesús de Viñeros",
+       "Virgen del Traspaso y Soledad"
+      ],
+      "p": "Nazareno y trono de Virgen.",
+      "h": "Nacida del gremio de los viñeros (vendimiadores y arrieros de la pasa)."
+     },
+     {
+      "n": "Santa Cruz",
+      "s": "Parroquia de San Felipe Neri",
+      "p": "Trono de Cristo y trono de Virgen."
+     },
+     {
+      "n": "Vera+Cruz",
+      "t": [
+       "Santísimo Cristo de la Vera+Cruz",
+       "Dolorosa titular"
+      ],
+      "p": "Crucificado y trono de Virgen.",
+      "h": "Se considera la corporación penitencial más antigua de la ciudad (principios del s. XVI)."
+     },
+     {
+      "n": "Mena",
+      "s": "Parroquia de Santo Domingo",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Francisco Palma Burgos, 1941 (sustituye al de Pedro de Mena, destruido en 1931)",
+       "Nuestra Señora de la Soledad"
+      ],
+      "p": "Trono del Cristo y trono de la Soledad.",
+      "m": "La Legión (banda y escuadra de gastadores) acompaña al Cristo desde 1928.",
+      "h": "Por la mañana los legionarios trasladan al Cristo a hombros; la ciudad entera canta «El novio de la muerte». Pasa por Larios hacia las 20:20."
+     },
+     {
+      "n": "Zamarrilla",
+      "s": "Ermita de Zamarrilla (Trinidad)",
+      "t": [
+       "Santísimo Cristo de los Milagros",
+       "María Santísima de la Amargura «Zamarrilla»"
+      ],
+      "p": "Crucificado y trono de Virgen.",
+      "h": "Según la leyenda, el bandolero Zamarrilla se escondió bajo el manto de la Virgen y le prendió una rosa blanca que se tiñó de rojo. Es la que más tarde recoge el Jueves (04:15)."
+     },
+     {
+      "n": "Misericordia",
+      "s": "Parroquia del Carmen (Perchel)",
+      "t": [
+       "Nuestro Padre Jesús de la Misericordia",
+       "Dolorosa titular"
+      ],
+      "p": "Nazareno y trono de Virgen."
+     },
+     {
+      "n": "Esperanza",
+      "s": "Basílica del Paso y la Esperanza",
+      "t": [
+       "Nuestro Padre Jesús del Paso",
+       "María Santísima de la Esperanza Coronada"
+      ],
+      "p": "Nazareno y uno de los tronos de palio más grandes de la Semana Santa española.",
+      "h": "Archicofradía perchelera; su encierro de madrugada del Viernes es de los más emotivos."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "Monte Calvario",
+      "s": "Capilla del Monte Calvario (Victoria)",
+      "p": "Trono de Cristo y trono de Virgen.",
+      "h": "Abre el Viernes Santo a las 16:00 bajando desde el Monte Calvario."
+     },
+     {
+      "n": "Descendimiento",
+      "s": "La Malagueta",
+      "t": [
+       "Sagrado Descendimiento",
+       "Dolorosa titular"
+      ],
+      "p": "Misterio del Descendimiento y trono de Virgen.",
+      "h": "Sale de la Malagueta y combina mar y ciudad por el Paseo de Reding."
+     },
+     {
+      "n": "Dolores de San Juan",
+      "s": "Parroquia de San Juan",
+      "t": [
+       "Nuestra Señora de los Dolores — atribuida a Fernando Ortiz, s. XVIII"
+      ],
+      "p": "Trono de Virgen.",
+      "h": "Una de las dolorosas barrocas que sobrevivió a 1931."
+     },
+     {
+      "n": "Amor",
+      "p": "Trono de Cristo y trono de Virgen."
+     },
+     {
+      "n": "Traslado",
+      "t": [
+       "Traslado al Sepulcro",
+       "Nuestra Señora de la Soledad"
+      ],
+      "p": "Misterio y trono de Virgen."
+     },
+     {
+      "n": "Piedad",
+      "t": [
+       "Nuestra Señora de la Piedad con el Cristo muerto"
+      ],
+      "p": "Trono de la Piedad."
+     },
+     {
+      "n": "Santo Sepulcro",
+      "s": "Abadía del Císter",
+      "t": [
+       "Cristo Yacente en la urna",
+       "Nuestra Señora de la Soledad"
+      ],
+      "p": "Urna y trono de Virgen.",
+      "h": "Procesión oficial del Santo Entierro, de gran solemnidad y con presencia de autoridades."
+     },
+     {
+      "n": "Servitas",
+      "s": "Parroquia de San Felipe Neri",
+      "t": [
+       "María Santísima de los Dolores"
+      ],
+      "p": "Trono de Virgen.",
+      "m": "Silencio.",
+      "h": "Cierra la Semana Santa de penitencia de madrugada: las farolas del recorrido se apagan a su paso."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "Resucitado",
+      "t": [
+       "Cristo Resucitado",
+       "María Santísima Reina de los Cielos"
+      ],
+      "p": "Trono del Resucitado y trono de Virgen.",
+      "h": "Le acompañan representaciones de todas las cofradías de la Agrupación."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "granada",
+  "nombre": "Granada",
+  "color": "#8a2c2c",
+  "lema": "Pasos bajo la Alhambra, cuestas del Albaicín y el silencio del Paseo de los Tristes.",
+  "intro": [
+   "Tras la toma de 1492 se fundan las primeras cofradías; en el siglo XVI las tres «de sangre» más antiguas fueron la Vera Cruz, las Angustias y la Soledad (las Chías). El arzobispo Pedro de Castro redujo drásticamente las hermandades en 1597 y el grueso de la nómina actual nace en el siglo XX: el renacer empezó con el Santo Entierro Magno de 1909 y en 1927 se creó la Federación de Hermandades.",
+   "Granada tiene una escuela de imaginería propia de primer nivel: Pablo de Rojas, Alonso Cano, José y Diego de Mora, José Risueño y Torcuato Ruiz del Peral en el Barroco; Eduardo Espinosa Cuadros, Antonio Barbero Gor, Miguel Zúñiga o Manuel Ramos Corona en el siglo XX. En 1936 Federico García Lorca escribió una narración radiofónica sobre la Semana Santa granadina."
+  ],
+  "datos": [
+   [
+    "Cofradías",
+    "32 (34 cortejos)"
+   ],
+   [
+    "Organismo",
+    "Real Federación de Hermandades y Cofradías (1927)"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Internacional (2009)"
+   ],
+   [
+    "Carrera oficial",
+    "Carrera de la Virgen, Bibataubín, Mariana Pineda, Ganivet, Puerta Real, Mesones, Marqués de Gerona, Pasiegas y Catedral"
+   ]
+  ],
+  "claves": [
+   "Domingo de Ramos: las Maravillas bajando por la Carrera del Darro.",
+   "Miércoles: los Gitanos suben al Sacromonte entre hogueras y cante.",
+   "Medianoche del Jueves: el Silencio sale de San Pedro y San Pablo con la Alhambra iluminada.",
+   "Viernes Santo a las 15:00: rezo multitudinario ante el Cristo de los Favores en el Campo del Príncipe (cruz barroca de 1640).",
+   "Sábado Santo: la Virgen de las Angustias de la Alhambra baja del recinto nazarí."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquilla",
+      "s": "Iglesia de San Andrés (bajo Albaicín)",
+      "f": "1947",
+      "t": [
+       "Entrada de Jesús en Jerusalén — Eduardo Espinosa Cuadros, 1917 (misterio completado por Ángel Asenjo)",
+       "Nuestra Señora de la Paz — Antonio Dubé de Luque, 1972"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Niños vestidos de hebreos con palmas abren la Semana Santa."
+     },
+     {
+      "n": "Santa Cena",
+      "s": "Iglesia de Santo Domingo (Realejo)",
+      "f": "1926",
+      "t": [
+       "Santa Cena — Eduardo Espinosa Cuadros, 1926-1928",
+       "María Santísima de la Victoria — Eduardo Espinosa, 1940"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "La Sentencia («Maravillas»)",
+      "s": "San Pedro y San Pablo (Albaicín)",
+      "f": "1944",
+      "t": [
+       "Jesús de la Sentencia — s. XVIII, donado por José de Mora a los carmelitas",
+       "María Santísima de las Maravillas — anónima, atribuida tradicionalmente a Pedro de Mena"
+      ],
+      "p": "Misterio (figuras de Benito Barbero, 1961) y palio.",
+      "h": "Procesionaba el Martes Santo hasta 1961. La salida y bajada por la Carrera del Darro es de las más difíciles de la ciudad."
+     },
+     {
+      "n": "El Despojado («Silencio Blanco»)",
+      "s": "Parroquia de San Emilio (Figares)",
+      "f": "1986",
+      "t": [
+       "Jesús Despojado de sus Vestiduras — Manuel Ramos Corona, c. 1989",
+       "María Santísima del Dulce Nombre y San Juan"
+      ],
+      "p": "Misterio y palio (desde 2019).",
+      "h": "Apodada «Silencio Blanco» por sus nazarenos de blanco, serios y elegantes."
+     },
+     {
+      "n": "El Cautivo",
+      "s": "Capilla junto al convento de la Encarnación; sale del Sagrario",
+      "f": "1981",
+      "t": [
+       "Nuestro Padre Jesús Cautivo — Antonio Dubé de Luque, 1982",
+       "María Santísima de la Encarnación — Dubé de Luque, 1982"
+      ],
+      "p": "Cautivo y palio."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "El Trabajo",
+      "s": "Parroquia del Corpus Christi (Zaidín)",
+      "f": "1990",
+      "t": [
+       "Santísimo Cristo del Trabajo — Eduardo Espinosa Alfambra, 1986",
+       "Nuestra Señora de la Luz — Espinosa Alfambra, 1992"
+      ],
+      "p": "Misterio con la Verónica, San Juan y la Magdalena; palio.",
+      "m": "Marchas propias «Cristo del Trabajo» y «Nuestra Señora de la Luz» (Aniceto Giner, 1988).",
+      "h": "El recorrido más largo de Granada (más de 6 km): sale a las 16:00 y recoge hacia las 02:00."
+     },
+     {
+      "n": "Nuestra Señora de los Dolores",
+      "s": "San Pedro y San Pablo",
+      "f": "1937",
+      "t": [
+       "Nuestra Señora de los Dolores"
+      ],
+      "p": "Paso de Virgen.",
+      "h": "Nació en torno al Tercio de Requetés Isabel la Católica; tiene el cuerpo de camareras más numeroso de la ciudad."
+     },
+     {
+      "n": "Jesús del Rescate",
+      "s": "Iglesia del Corpus Christi (parroquia de la Magdalena)",
+      "f": "1925",
+      "t": [
+       "Nuestro Padre Jesús del Rescate — Diego de Mora, 1718"
+      ],
+      "p": "Un paso.",
+      "h": "Una de las mayores devociones de Granada (Granada de Oro por sus 300 años). Su «túnica persa» se atribuye a Rodríguez Ojeda y se cree hecha para el Gran Poder de Sevilla."
+     },
+     {
+      "n": "El Huerto",
+      "s": "Monasterio de las Comendadoras de Santiago",
+      "f": "1943",
+      "t": [
+       "Oración en el Huerto — Domingo Sánchez-Mesa, 1943",
+       "María Santísima de la Amargura Coronada — José de Mora, s. XVIII"
+      ],
+      "p": "Misterio y palio.",
+      "h": "El paso de palio porta una reliquia de Santiago; coronada canónicamente en 2015."
+     },
+     {
+      "n": "Cristo de San Agustín",
+      "s": "Monasterio del Santo Ángel Custodio",
+      "f": "reglas de 1681",
+      "t": [
+       "Santísimo Cristo de San Agustín — Jacobo Florentino «el Indaco», 1520",
+       "Nuestra Madre y Señora de la Consolación — Antonio Dubé de Luque, 1990"
+      ],
+      "p": "Crucificado y dolorosa.",
+      "h": "Salió en rogativa contra la peste en el s. XVII. Isabel II le dio el título de Real en 1844."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "La Lanzada",
+      "s": "Parroquia de Nuestra Señora de los Dolores",
+      "f": "1984",
+      "t": [
+       "Cristo de la Sagrada Lanzada — Antonio Barbero Gor, 1984",
+       "María Santísima de la Caridad — Miguel Zúñiga, 1985"
+      ],
+      "p": "Misterio con Longinos y palio."
+     },
+     {
+      "n": "El Vía Crucis",
+      "s": "Albaicín",
+      "f": "1917",
+      "t": [
+       "Nuestro Padre Jesús de la Amargura — José de Mora",
+       "Nuestra Señora de los Reyes — Antonio Asensio de la Cerda, s. XVIII"
+      ],
+      "p": "Nazareno y Virgen.",
+      "m": "Cristo con música de capilla; Virgen con marchas fúnebres.",
+      "h": "La hermandad decana de la Federación. Al volver desde Plaza Nueva reza las catorce estaciones del Vía Crucis."
+     },
+     {
+      "n": "La Esperanza",
+      "s": "Iglesia de San Gil y Santa Ana (Plaza Nueva)",
+      "f": "1927",
+      "t": [
+       "Nuestro Padre Jesús del Gran Poder — Manuel Ramos Corona, 1996",
+       "Nuestra Señora de la Esperanza Coronada — José Risueño, 1718"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "La salida de San Gil y Santa Ana llena Plaza Nueva."
+     },
+     {
+      "n": "La Cañilla",
+      "s": "Iglesia de Santo Domingo",
+      "f": "1926",
+      "t": [
+       "Señor de la Humildad — anónimo s. XVII",
+       "Soledad de Nuestra Señora — Manuel González de los Santos, s. XIX"
+      ],
+      "p": "Misterio y paso de Virgen.",
+      "h": "El nombre viene de la cañita que porta el Señor. El Viernes Santo la Soledad reza ante el Cristo de los Favores."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "Los Gitanos",
+      "s": "Abadía del Sacromonte",
+      "f": "1939",
+      "t": [
+       "Santísimo Cristo del Consuelo — Miguel Zúñiga, 1989 (el original es de José Risueño, 1698)",
+       "María Santísima del Sacromonte — Manuel González de los Santos, s. XIX"
+      ],
+      "p": "Cristo y Virgen.",
+      "h": "Sube el Sacromonte entre hogueras, cante y baile gitano: una de las procesiones más singulares de España."
+     },
+     {
+      "n": "Los Estudiantes",
+      "s": "Colegiata de los Santos Justo y Pastor",
+      "f": "1979",
+      "t": [
+       "Nuestro Señor de la Meditación — círculo de José de Mora",
+       "María Santísima de los Remedios — Israel Cornejo, 2005"
+      ],
+      "p": "Misterio de la Meditación y palio (desde 2016)."
+     },
+     {
+      "n": "Paciencia y Penas",
+      "s": "Iglesia de San Matías",
+      "f": "1959",
+      "t": [
+       "Nuestro Padre Jesús de la Paciencia — Pablo de Rojas, s. XVI",
+       "María Santísima de las Penas — José Jiménez de Mesa, 1960"
+      ],
+      "p": "Cristo y palio.",
+      "h": "Su entrada con los costaleros de rodillas es muy celebrada."
+     },
+     {
+      "n": "Tres Caídas y Rosario",
+      "s": "Santa Isabel la Real / Santo Domingo",
+      "f": "1927",
+      "t": [
+       "Nuestro Padre Jesús de las Tres Caídas — anónimo s. XVII",
+       "Nuestra Señora del Rosario en sus Misterios Dolorosos — Miguel Zúñiga, 1985"
+      ],
+      "p": "Misterio (Cirineo de Antonio Bernal) y palio."
+     },
+     {
+      "n": "El Nazareno",
+      "s": "Convento de San José (Carmelitas)",
+      "f": "1981",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — Antonio Barbero Gor, 1982",
+       "María Santísima de la Merced — anónima granadina s. XVII"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Recoge una devoción que se remonta a 1582 y cuyas constituciones, según la tradición, redactó San Juan de la Cruz."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "Los Salesianos",
+      "f": "1983",
+      "t": [
+       "Santísimo Cristo de la Redención — Antonio Díaz, 1984",
+       "Nuestra Señora de la Salud"
+      ],
+      "p": "Crucificado y palio."
+     },
+     {
+      "n": "La Concha",
+      "s": "Monasterio de la Concepción (Albaicín)",
+      "f": "1977",
+      "t": [
+       "Nuestro Padre Jesús del Amor y la Entrega — Miguel Zúñiga, 1983",
+       "María Santísima de la Concepción — Aurelio López Azaustre, 1978"
+      ],
+      "p": "Cristo y palio.",
+      "h": "«Concha» es el diminutivo de Concepción."
+     },
+     {
+      "n": "La Aurora",
+      "s": "Iglesia de la Aurora y San Miguel Bajo",
+      "f": "1944",
+      "t": [
+       "Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982)",
+       "María Santísima de la Aurora Coronada — anónima s. XVIII"
+      ],
+      "p": "Cristo atado a la columna y palio."
+     },
+     {
+      "n": "La Estrella",
+      "s": "Iglesia de San Cristóbal (Albaicín)",
+      "f": "1979",
+      "t": [
+       "Nuestro Padre Jesús de la Pasión — Dubé de Luque",
+       "María Santísima de la Estrella — Dubé de Luque, 1981"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "El Silencio",
+      "s": "San Pedro y San Pablo (Paseo de los Tristes)",
+      "f": "1924",
+      "t": [
+       "Santísimo Cristo de la Misericordia — José de Mora, s. XVII"
+      ],
+      "p": "Un crucificado.",
+      "m": "Silencio absoluto.",
+      "h": "Sale a medianoche con la Alhambra iluminada al fondo. Su Cristo es la obra cumbre de José de Mora."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "Los Ferroviarios",
+      "s": "Parroquia de San Juan de Letrán",
+      "f": "1953",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Antonio Díaz, 1989",
+       "Nuestra Señora del Amor y el Trabajo — c. 1770"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Fundada por trabajadores del ferrocarril."
+     },
+     {
+      "n": "Los Favores",
+      "s": "Parroquia de San Cecilio (Realejo)",
+      "f": "1928",
+      "t": [
+       "Santísimo Cristo de los Favores — s. XVI, atrib. Baltasar de Arce / círculo de Pablo de Rojas",
+       "María Santísima de la Misericordia Coronada — Francisco Morales, 1896"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Vinculada al Campo del Príncipe, donde a las tres de la tarde Granada reza ante la cruz de piedra de los Favores."
+     },
+     {
+      "n": "Los Escolapios",
+      "f": "1935",
+      "t": [
+       "Santísimo Cristo de la Expiración",
+       "María Santísima del Mayor Dolor — Luis Álvarez Duarte, 2000"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "En el año 2000 su Virgen procesionó por Roma hasta San Pedro, recibida por Juan Pablo II."
+     },
+     {
+      "n": "Santo Entierro",
+      "s": "San Gil y Santa Ana",
+      "f": "1924",
+      "t": [
+       "Cristo yacente — anónimo s. XVIII, en urna de ébano y plata de Manuel Baldés (1675-1691)",
+       "Nuestra Señora de la Soledad del Calvario — José de Mora, 1671"
+      ],
+      "p": "Urna y Virgen."
+     },
+     {
+      "n": "Las Chías",
+      "s": "Monasterio de San Jerónimo",
+      "f": "1561",
+      "t": [
+       "Nuestra Señora de la Soledad — atrib. Pedro de Mena",
+       "Cristo del Descendimiento — atrib. Diego de Aranda, s. XVI"
+      ],
+      "p": "Cristo y Virgen.",
+      "h": "Tercera cofradía de sangre de Granada. Las «chías» son cuatro figuras que evocan a los pregoneros del Santo Oficio."
+     }
+    ]
+   },
+   {
+    "dia": "Sábado Santo",
+    "hs": [
+     {
+      "n": "Santa María de la Alhambra",
+      "s": "Iglesia de Santa María de la Alhambra",
+      "f": "1928",
+      "t": [
+       "Nuestra Señora de las Angustias de la Alhambra — Torcuato Ruiz del Peral, 1750-1773"
+      ],
+      "p": "Un paso: la Virgen con Cristo muerto en su regazo.",
+      "h": "Desciende desde la Alhambra por el paseo del recinto nazarí: la estampa más icónica de Granada."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "La Resurrección",
+      "s": "Parroquia de San Miguel (Zaidín)",
+      "f": "1985",
+      "t": [
+       "Nuestro Señor de la Resurrección — Miguel Zúñiga, 1986",
+       "Santa María del Triunfo — Zúñiga, 1987"
+      ],
+      "p": "Misterio y palio de malla de plata.",
+      "h": "Nazarenos completamente de blanco y monaguillos con campanillas."
+     },
+     {
+      "n": "El Resucitado",
+      "s": "Parroquia Regina Mundi; sale del Sagrario",
+      "f": "1985",
+      "t": [
+       "Santísimo Cristo Resucitado — Antonio Barbero Gor, 1987",
+       "Nuestra Señora de la Alegría — Barbero Gor, 1992 (inspirada en la Victoria de Samotracia)"
+      ],
+      "p": "Un misterio con ambos titulares."
+     },
+     {
+      "n": "Los Facundillos",
+      "s": "Iglesia de Santo Domingo",
+      "t": [
+       "Dulce Nombre de Jesús — Torcuato Ruiz del Peral, s. XVIII"
+      ],
+      "p": "Un paso.",
+      "h": "Procesión infantil de la Cañilla: niños con campanillos de plata anuncian la Resurrección."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cordoba",
+  "nombre": "Córdoba",
+  "color": "#9a5a1a",
+  "lema": "Estación de penitencia dentro de la Mezquita-Catedral, algo único en el mundo.",
+  "intro": [
+   "Las procesiones cordobesas se multiplican en el siglo XVI con la Contrarreforma, pero el «Decreto Trevilla» (1819), que prohibió todas las procesiones salvo un Santo Entierro oficial, casi acabó con ellas: durante treinta años solo hubo cultos internos. Resurge en 1849 y se reconstruye durante el siglo XX, con la Agrupación de Hermandades fundada en 1944.",
+   "Desde 2017, con autorización de la UNESCO para abrir una segunda puerta, todas las cofradías hacen estación de penitencia atravesando la Mezquita-Catedral. Juan Martínez Cerrillo, Amadeo Ruiz Olmos, Miguel Ángel González Jurado o Antonio Bernal son nombres clave de su imaginería."
+  ],
+  "datos": [
+   [
+    "Hermandades",
+    "40 en la Agrupación, 38 en carrera oficial"
+   ],
+   [
+    "Organismo",
+    "Agrupación de Hermandades y Cofradías (1944)"
+   ],
+   [
+    "Carrera oficial",
+    "Entorno de la Mezquita-Catedral, con paso por su interior"
+   ],
+   [
+    "Forma de carga",
+    "A costal"
+   ]
+  ],
+  "claves": [
+   "El paso de los pasos por el Patio de los Naranjos y el interior de la Mezquita.",
+   "El Descendimiento por el Puente Romano.",
+   "La Virgen de los Dolores, «la Señora de Córdoba», el Viernes Santo.",
+   "Ánimas: únicos pasos que conservan las ruedas tradicionales."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "Entrada Triunfal",
+      "s": "Parroquia de San Lorenzo",
+      "f": "1963",
+      "t": [
+       "Nuestro Padre Jesús de los Reyes — Juan Martínez Cerrillo, 1963",
+       "Nuestra Señora de la Palma — Francisco Romero Zafra, 1991"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "Penas de Santiago",
+      "s": "Parroquia de Santiago",
+      "f": "1955",
+      "t": [
+       "Santísimo Cristo de las Penas — gótico, ss. XIII-XV",
+       "Madre de los Desamparados y San Juan — Antonio Eslava",
+       "María Santísima de la Concepción — Juan Ventura, 1986"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Su Cristo es el más antiguo que procesiona en Córdoba."
+     },
+     {
+      "n": "Vera Cruz",
+      "s": "Parroquia de San José y Espíritu Santo (Campo de la Verdad)",
+      "f": "1983",
+      "t": [
+       "Nuestro Señor de los Reyes — Antonio Dubé de Luque, 1987 (porta la cruz invertida)",
+       "María Santísima del Dulce Nombre en sus Dolores Gloriosos — Dubé de Luque, 1984"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Recupera una advocación documentada desde el s. XV."
+     },
+     {
+      "n": "El Rescatado",
+      "s": "Parroquia de Nuestra Señora de Gracia (Trinitarios)",
+      "f": "1941",
+      "t": [
+       "Nuestro Padre Jesús Nazareno Rescatado — Fernando Díaz Pacheco, 1713",
+       "María Santísima de la Amargura — José Callejón, 1942"
+      ],
+      "p": "Cristo y palio.",
+      "h": "La duquesa de Medinaceli le donó una túnica en 1965."
+     },
+     {
+      "n": "La Esperanza",
+      "s": "Parroquia de San Andrés",
+      "f": "1939",
+      "t": [
+       "Nuestro Padre Jesús de las Penas «el Gitano» — Juan Martínez Cerrillo, 1954",
+       "María Santísima de la Esperanza — Martínez Cerrillo, 1946"
+      ],
+      "p": "Cristo y palio."
+     },
+     {
+      "n": "El Amor",
+      "s": "Parroquia de Jesús Divino Obrero (El Cerro)",
+      "f": "1955",
+      "t": [
+       "Santísimo Cristo del Amor — anónimo s. XVI",
+       "Jesús del Silencio en el Desprecio de Herodes — Luis Ortega Bru (iba destinado a Cádiz)",
+       "María Santísima de la Encarnación — Luis Álvarez Duarte, 1979"
+      ],
+      "p": "Tres pasos."
+     },
+     {
+      "n": "El Huerto",
+      "s": "Parroquia de San Francisco y San Eulogio",
+      "f": "1975 (antecedentes s. XVIII)",
+      "t": [
+       "Oración en el Huerto — círculo de Pedro de Mena",
+       "Jesús Amarrado a la Columna — 1662",
+       "María Santísima de la Candelaria — Antonio Rubio, 1974"
+      ],
+      "p": "Tres pasos.",
+      "h": "Heredera de cofradías de agricultores, curtidores y guadamecileros."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "La Merced",
+      "s": "Parroquia del Buen Pastor",
+      "f": "1954",
+      "t": [
+       "Nuestro Padre Jesús Humilde en la Coronación de Espinas — Francisco Buiza, 1978",
+       "Santa María de la Merced — Francisco Buiza, 1976"
+      ],
+      "p": "Misterio y palio.",
+      "h": "La advocación de la Merced se debe a la cercanía de la antigua cárcel."
+     },
+     {
+      "n": "La Estrella",
+      "s": "Parroquia de San Fernando",
+      "f": "1981",
+      "t": [
+       "Jesús de la Redención ante Caifás — Miguel Ángel González Jurado, 1992",
+       "Nuestra Señora de la Estrella — Juan Ventura, 1986"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "La Sentencia",
+      "s": "Parroquia de San Nicolás de la Villa",
+      "f": "1944",
+      "t": [
+       "Nuestro Padre Jesús de la Sentencia — Juan Martínez Cerrillo, 1944",
+       "María Santísima de Gracia y Amparo — anónima s. XVIII"
+      ],
+      "p": "Misterio y palio.",
+      "h": "La cofradía con más nazarenos de Córdoba, muy ligada al mundo jurídico."
+     },
+     {
+      "n": "Vía Crucis",
+      "s": "Parroquia de la Trinidad",
+      "f": "1972",
+      "t": [
+       "Santo Cristo de la Salud — anónimo s. XVI"
+      ],
+      "p": "Crucificado llevado a hombros por hermanos.",
+      "h": "La más austera: un solo paso."
+     },
+     {
+      "n": "Ánimas",
+      "s": "Barrio de San Lorenzo",
+      "f": "1949 (primitiva s. XVII)",
+      "t": [
+       "Santísimo Cristo del Remedio de Ánimas — escuela genovesa, ss. XVI-XVII",
+       "Nuestra Señora Madre de Dios en sus Tristezas — atrib. Antonio del Castillo, s. XVII"
+      ],
+      "p": "Pasos sobre ruedas; la Virgen va bajo baldaquino (Miguel Arjona, 1980).",
+      "h": "Estética única: el paso del Cristo evoca el sepulcro del cardenal Salazar."
+     },
+     {
+      "n": "Presentación al Pueblo",
+      "s": "Parroquia de San Vicente Ferrer (Cañero)",
+      "f": "2007",
+      "t": [
+       "Nuestro Padre Jesús de los Afligidos — Manuel Martín Nieto, 2016"
+      ],
+      "p": "Un paso.",
+      "h": "Se incorpora al Lunes Santo en carrera oficial."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "La Agonía",
+      "s": "Parroquia de Santa Victoria",
+      "f": "1979",
+      "t": [
+       "Santísimo Cristo de la Agonía — Castillo Ariza, 1954",
+       "Nuestra Señora de la Salud — González Jurado, 1988"
+      ],
+      "p": "Misterio de la Sed y palio."
+     },
+     {
+      "n": "La Universitaria",
+      "s": "Iglesia del Juramento de San Rafael",
+      "f": "1989",
+      "t": [
+       "Santo Cristo de la Universidad — Juan Manuel Miñarro, 2010 (inspirado en la Sábana Santa)",
+       "Nuestra Señora de la Presentación — González Jurado, 1990"
+      ],
+      "p": "Crucificado y palio."
+     },
+     {
+      "n": "La Sangre",
+      "s": "Convento del Santo Ángel",
+      "f": "1976",
+      "t": [
+       "Nuestro Padre Jesús de la Sangre — Antonio Eslava, 1978",
+       "Nuestra Señora Reina de los Ángeles y San Juan — Álvarez Duarte, 1980"
+      ],
+      "p": "Misterio del juicio de Pilatos y palio.",
+      "h": "Hermandad de capataces y costaleros."
+     },
+     {
+      "n": "El Buen Suceso",
+      "s": "Parroquia de San Andrés",
+      "f": "1973",
+      "t": [
+       "Nuestro Padre Jesús del Buen Suceso — anónimo finales s. XVII",
+       "María Santísima de la Caridad — González Jurado, 1991"
+      ],
+      "p": "Misterio del encuentro con su Madre y palio."
+     },
+     {
+      "n": "La Santa Faz",
+      "s": "Parroquia de la Trinidad",
+      "f": "1982",
+      "t": [
+       "Nuestro Padre Jesús Nazareno de la Santa Faz — Dubé de Luque, 1988",
+       "María Santísima de la Trinidad — Antonio Salto, 1989"
+      ],
+      "p": "Misterio con la Verónica y palio.",
+      "h": "Sus capataces se lucen en las estrechas calles de la Judería."
+     },
+     {
+      "n": "El Prendimiento",
+      "s": "Santuario de María Auxiliadora",
+      "f": "1952",
+      "t": [
+       "Jesús, Divino Salvador, en su Prendimiento — Dubé de Luque, 1990",
+       "Nuestra Señora de la Piedad — Martínez Cerrillo, 1958"
+      ],
+      "p": "Misterio y palio."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "El Perdón",
+      "s": "Iglesia de San Roque",
+      "f": "1990",
+      "t": [
+       "Nuestro Padre Jesús del Perdón ante Anás — Romero Zafra, 1994",
+       "María Santísima del Rocío y Lágrimas — Romero Zafra, 1990"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "El Calvario",
+      "s": "Parroquia de San Lorenzo",
+      "f": "1722 (refundada 1918)",
+      "t": [
+       "Nuestro Padre Jesús del Calvario — fray Juan de la Concepción, 1723",
+       "Nuestra Señora del Mayor Dolor — Castillo Ariza, 1945"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "La Paz",
+      "s": "Convento capuchino del Santo Ángel",
+      "f": "1939",
+      "t": [
+       "Jesús de la Humildad y Paciencia — Martínez Cerrillo, 1942",
+       "María Santísima de la Paz y Esperanza Coronada — Martínez Cerrillo, 1939"
+      ],
+      "p": "Misterio del despojo y palio.",
+      "h": "Una de las grandes devociones de Córdoba, coronada en 2022."
+     },
+     {
+      "n": "La Misericordia",
+      "s": "Basílica de San Pedro",
+      "f": "1937",
+      "t": [
+       "Santísimo Cristo de la Misericordia — anónimo s. XVI",
+       "Nuestra Señora de las Lágrimas en su Desamparo — s. XVII"
+      ],
+      "p": "Crucificado y dolorosa.",
+      "h": "Cofradía de silencio («Silencio Blanco»)."
+     },
+     {
+      "n": "La Pasión",
+      "s": "Parroquia de la Paz",
+      "f": "1939",
+      "t": [
+       "Nuestro Padre Jesús de Pasión — anónimo s. XVII",
+       "María Santísima del Amor — anónima s. XVII"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "La cofradía con el recorrido más corto."
+     },
+     {
+      "n": "La Piedad",
+      "s": "Parroquia de San Antonio María Claret (Las Palmeras)",
+      "f": "1972",
+      "t": [
+       "Santísimo Cristo de la Piedad — Antonio Bernal, 2023",
+       "María Santísima de Vida, Dulzura y Esperanza — antiguo ángel de Francisco Pascual (1945) transformado por Juan Ventura"
+      ],
+      "p": "Un paso."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo y Madrugada",
+    "hs": [
+     {
+      "n": "Jesús Nazareno",
+      "s": "Iglesia Hospital de Jesús Nazareno",
+      "f": "1971 (devoción desde 1579)",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — anterior al s. XVIII",
+       "María Santísima Nazarena — finales s. XVIII"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "La Caridad",
+      "s": "Parroquia de San Francisco y San Eulogio",
+      "f": "1469 (refundada 1939)",
+      "t": [
+       "Santísimo Cristo de la Caridad — donado en 1617",
+       "Dolorosa del s. XVIII"
+      ],
+      "p": "Crucificado con la Virgen.",
+      "m": "Le acompaña el Tercio Gran Capitán de la Legión desde 1952.",
+      "h": "Una de las cofradías con más historia, ligada al antiguo Hospital de la Caridad."
+     },
+     {
+      "n": "Jesús Caído",
+      "s": "Convento de San Cayetano",
+      "f": "1765 (refundada 1937)",
+      "t": [
+       "Nuestro Padre Jesús Caído — donado en 1676",
+       "Nuestra Señora del Mayor Dolor en su Soledad — s. XVIII"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "Muy vinculada al mundo del toro; su palio es el que lleva más costaleros."
+     },
+     {
+      "n": "La Cena",
+      "s": "Parroquia del Beato Álvaro (Poniente)",
+      "f": "1983",
+      "t": [
+       "Jesús de la Fe en su Sagrada Cena — Francisco Palos y Joaquín Ojeda, 1987",
+       "María Santísima de la Esperanza del Valle — González Jurado, 2001"
+      ],
+      "p": "Misterio con apostolado y palio."
+     },
+     {
+      "n": "Las Angustias",
+      "s": "Iglesia de San Agustín",
+      "f": "1558",
+      "t": [
+       "Nuestra Señora de las Angustias Coronada — Juan de Mesa, 1627 (obra póstuma)"
+      ],
+      "p": "Un paso: la Virgen con Cristo muerto.",
+      "h": "La cofradía más antigua de Córdoba y su dolorosa más antigua."
+     },
+     {
+      "n": "Cristo de Gracia («El Esparraguero»)",
+      "s": "Parroquia de Gracia (Trinitarios)",
+      "f": "1736",
+      "t": [
+       "Santísimo Cristo de Gracia — traído de las Indias, donado en 1618",
+       "María Santísima de los Dolores y Misericordia — escuela valenciana s. XIX"
+      ],
+      "p": "Crucificado y dolorosa."
+     },
+     {
+      "n": "La Buena Muerte",
+      "s": "Real Colegiata de San Hipólito",
+      "f": "1943",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Castillo Lastrucci, años 40",
+       "Nuestra Señora Reina de los Mártires — Castillo Lastrucci"
+      ],
+      "p": "Crucificado y palio (bordados de Esperanza Caro).",
+      "m": "Silencio.",
+      "h": "La única cofradía de la Madrugada cordobesa."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "La Soledad",
+      "s": "Parroquia de Santa María de Guadalupe (Levante)",
+      "f": "1975",
+      "t": [
+       "Santa Cruz en el Monte Calvario",
+       "María Santísima en su Soledad — Álvarez Duarte, 1975"
+      ],
+      "p": "Paso de la Cruz y paso de Virgen.",
+      "h": "Carácter franciscano; pasos en caoba y bronce."
+     },
+     {
+      "n": "La Expiración",
+      "s": "Real Iglesia de San Pablo",
+      "f": "1918",
+      "t": [
+       "Santísimo Cristo de la Expiración — anónimo s. XVII",
+       "María Santísima del Silencio — s. XVIII",
+       "Nuestra Señora del Rosario Coronada — Álvarez Duarte, 1973"
+      ],
+      "p": "Crucificado y palio."
+     },
+     {
+      "n": "El Descendimiento",
+      "s": "Parroquia de San José y Espíritu Santo",
+      "f": "1937",
+      "t": [
+       "Santísimo Cristo del Descendimiento — Amadeo Ruiz Olmos, 1937",
+       "María Santísima del Refugio — González Jurado, 1993"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Su paso por el Puente Romano es una de las fotos de la Semana Santa andaluza."
+     },
+     {
+      "n": "La Conversión",
+      "s": "Iglesia del Rosario (Electromecánicas)",
+      "f": "2016",
+      "t": [
+       "Cristo de la Oración y la Caridad en la Conversión del Buen Ladrón — Pedro García Velasco, 2016"
+      ],
+      "p": "Misterio.",
+      "h": "El recorrido más largo: unas 10 horas. El Buen Ladrón está a la izquierda, al revés de lo habitual."
+     },
+     {
+      "n": "Los Dolores",
+      "s": "Iglesia de San Jacinto (Capuchinos)",
+      "t": [
+       "Nuestra Señora de los Dolores Coronada — Juan Prieto, 1719",
+       "Santísimo Cristo de la Clemencia — Amadeo Ruiz Olmos, 1938"
+      ],
+      "p": "Crucificado y Virgen.",
+      "h": "«La Señora de Córdoba»: primera imagen coronada de la ciudad (1965) y la hermandad con más hermanos. Su cruz de guía es de filigrana cordobesa."
+     },
+     {
+      "n": "Santo Sepulcro",
+      "s": "Real Parroquia del Salvador (La Compañía)",
+      "f": "reglas de 1573",
+      "t": [
+       "Cristo yacente — anónimo s. XVII",
+       "Nuestra Señora del Desconsuelo en su Soledad — Álvarez Duarte, 1976"
+      ],
+      "p": "Urna y palio."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "El Resucitado",
+      "s": "Parroquia de Santa Marina",
+      "f": "1927",
+      "t": [
+       "Nuestro Señor Resucitado — Juan Manuel Miñarro, 1988",
+       "María Santísima Reina de Nuestra Alegría — Martínez Cerrillo, 1951"
+      ],
+      "p": "Dos pasos."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cadiz",
+  "nombre": "Cádiz",
+  "color": "#1d5c8a",
+  "lema": "Pasos estrechos, andar de costero a costero y el golpe de las horquillas.",
+  "intro": [
+   "El saqueo anglo-holandés de 1596 arrasó iglesias y archivos, pero se sabe que la Vera+Cruz, el Nazareno y el Santo Entierro ya existían antes. El comercio con las Indias trajo a Cádiz escultura genovesa (Maragliano, Giscardi, Mayo), flamenca (Peter Sterling) y obras de Jacinto Pimentel, José Montes de Oca o Francisco de Villegas; en el s. XX destacan Miguel Láinez Capote, Francisco Buiza, Luis Ortega Bru y Luis González Rey.",
+   "Rasgo único: los pasos van a hombros con un andar pausado de costero a costero, y los manigueteros marcan el compás golpeando el suelo con su horquilla. Los pasos son estrechos y altos para caber por el casco antiguo. En 1892 se constituyó aquí la primera Junta de Cofradías de Andalucía."
+  ],
+  "datos": [
+   [
+    "Hermandades",
+    "30 (2 en Vísperas)"
+   ],
+   [
+    "Organismo",
+    "Consejo Local de Hermandades y Cofradías"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Nacional (2022)"
+   ],
+   [
+    "Carrera oficial",
+    "Calle Nueva, San Juan de Dios, Pelota, Catedral, Arquitecto Acero, Compañía, Túnel de Santiago, Candelaria, Montañés, Palillero y Novena"
+   ],
+   [
+    "Forma de carga",
+    "A hombros, de costero a costero, con manigueteros"
+   ]
+  ],
+  "claves": [
+   "Lunes Santo: la Palma en el barrio de la Viña, cuna del carnaval.",
+   "Martes Santo: el Ecce-Homo con su manto rojo y la marcha «Ecce-Homo» de Eduardo Escobar.",
+   "Madrugada del Viernes: el Nazareno de Santa María, «Regidor Perpetuo» de la ciudad.",
+   "Viernes Santo: la Buena Muerte, a oscuras y en riguroso luto."
+  ],
+  "dias": [
+   {
+    "dia": "Vísperas",
+    "hs": [
+     {
+      "n": "Servitas",
+      "s": "Capilla Sagrario de los Dolores (San Lorenzo)",
+      "f": "reglas de 1735",
+      "t": [
+       "María Santísima de los Dolores — anónima s. XVIII (la primitiva es de José Montes de Oca, 1729)"
+      ],
+      "p": "Un paso, el Viernes de Dolores.",
+      "m": "Banda de Música Maestro Tejera (Sevilla)."
+     },
+     {
+      "n": "Merced (Obediencia)",
+      "s": "Parroquia de la Merced",
+      "t": [
+       "Nuestro Padre Jesús Nazareno de la Obediencia — cabeza atrib. Cosme Velázquez, cuerpo de Láinez Capote"
+      ],
+      "p": "Un paso, el Sábado de Pasión.",
+      "m": "Agrupación Musical Ecce Mater (Cádiz)."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquita",
+      "s": "Iglesia de San José",
+      "f": "1944",
+      "t": [
+       "Jesús de la Paz en su Entrada en Jerusalén — Miguel Láinez Capote, 1944",
+       "María Santísima del Amparo, «la Guapa de Cádiz» — anónima años 40"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: AM La Salud. Palio: BM Ntra. Sra. del Carmen (Villalba del Alcor) y BM de Albaida del Aljarafe."
+     },
+     {
+      "n": "El Despojado",
+      "s": "Santuario de María Auxiliadora (Salesianos)",
+      "f": "2007",
+      "t": [
+       "Jesús del Amor Despojado — Romero Zafra, 2008",
+       "María Santísima de la Concepción — Romero Zafra, 2010"
+      ],
+      "p": "Un paso.",
+      "m": "BCT Santa Cruz (Almería) y BCT Los Coloraos (Daimiel).",
+      "h": "Carga a doble ritmo, estilo costalero, que divide a los gaditanos."
+     },
+     {
+      "n": "Sagrada Cena",
+      "s": "Convento de Santo Domingo",
+      "f": "1963",
+      "t": [
+       "Jesús del Milagro en la Sagrada Cena y apostolado — Luis González Rey, 1991-1995",
+       "María Santísima Reina de Todos los Santos — Miguel Ángel Valverde, 2004"
+      ],
+      "p": "Un paso.",
+      "m": "AM Polillas (Cádiz).",
+      "h": "Nació con figuras de Olot destinadas a Cuba y retenidas por la revolución castrista."
+     },
+     {
+      "n": "Las Penas",
+      "s": "Iglesia de San Lorenzo",
+      "f": "1730 / 1955",
+      "t": [
+       "Nuestro Padre Jesús de las Penas — Álvarez Duarte, 1986",
+       "María Santísima de la Caridad — Álvarez Duarte, 1983"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: BCT La Unión (Baena). Palio: Filarmónica de Conil."
+     },
+     {
+      "n": "Humildad y Paciencia",
+      "s": "Iglesia de San Agustín",
+      "f": "1621",
+      "t": [
+       "Santísimo Cristo de la Humildad y Paciencia — Jacinto Pimentel, 1638",
+       "Nuestra Señora de la Amargura — Sebastián Santos, 1967"
+      ],
+      "p": "Cristo y palio.",
+      "m": "Cristo: BCT Ntra. Sra. del Rosario (Arriate). Virgen: BM Ntro. Padre Jesús Nazareno (Rota).",
+      "h": "La «cofradía de los vizcaínos», fundada por cargadores de Indias vascos."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "La Palma",
+      "s": "Parroquia de la Palma (La Viña)",
+      "f": "1755 / 1938",
+      "t": [
+       "Santísimo Cristo de la Misericordia — cabeza genovesa s. XVIII, cuerpo de Buiza, 1969",
+       "María Santísima de las Penas Coronada — atrib. Fernando Ortiz"
+      ],
+      "p": "Crucificado en paso dorado y palio que perteneció a los Negritos de Sevilla.",
+      "m": "Misterio: BCT Veracruz de Utrera. Palio: BM Julián Cerdán (Sanlúcar).",
+      "h": "La Virgen de la Palma, su titular de gloria, protegió al barrio en el maremoto del terremoto de Lisboa de 1755. Las Penas se coronó en 2022."
+     },
+     {
+      "n": "El Prendimiento",
+      "s": "Capilla del Beato Diego; sale del Carmen",
+      "f": "1976",
+      "t": [
+       "Nuestro Padre Jesús en su Prendimiento — Alfonso Berraquero, 1978",
+       "María Santísima del Patrocinio — s. XVII-XVIII, transformada por Berraquero"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: AM La Salud. Palio: BM Ntra. Sra. del Rosario (El Cuervo)."
+     },
+     {
+      "n": "Nazareno del Amor",
+      "s": "Convento de San Francisco",
+      "f": "1951",
+      "t": [
+       "Nuestro Padre Jesús Nazareno del Amor — José Rivera, c. 1940",
+       "Nuestra Señora de la Esperanza — Luis Jiménez, 1941"
+      ],
+      "p": "Nazareno con Cirineo y palio.",
+      "m": "Misterio: Sección Musical de los Gitanos (Sevilla). Palio: Filarmónica de Conil."
+     },
+     {
+      "n": "Vera+Cruz",
+      "s": "Convento de San Francisco",
+      "f": "mediados s. XVI",
+      "t": [
+       "Santísimo Cristo de la Vera+Cruz — s. XVIII, atrib. Anton Maria Maragliano",
+       "Nuestra Señora de la Soledad — Sebastián Santos, 1945"
+      ],
+      "p": "Crucificado y palio.",
+      "m": "Cristo: Capilla Lignum Crucis. Palio: BM Maestro Enrique Montero (Chiclana).",
+      "h": "Conserva el crucificado primitivo, hecho de papelón en las Indias."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "La Sanidad",
+      "s": "Iglesia de Santa Cruz",
+      "f": "1946",
+      "t": [
+       "Nuestro Padre Jesús del Mayor Dolor — Láinez Capote, 1950",
+       "María Santísima de la Salud — Francisco Buiza, 1978"
+      ],
+      "p": "Misterio con la Verónica y palio.",
+      "m": "Cristo: Lignum Crucis. Palio: BM Gailín (Puerto Serrano).",
+      "h": "Nació para agrupar al gremio sanitario."
+     },
+     {
+      "n": "La Piedad",
+      "s": "Iglesia de Santiago",
+      "f": "1731",
+      "t": [
+       "Santísimo Cristo de la Piedad — Francesco Maria Mayo, 1754",
+       "María Santísima de las Lágrimas — Francisco Buiza, 1958"
+      ],
+      "p": "Calvario y palio.",
+      "m": "Cristo: BCT Santísima Trinidad (Palencia). Palio: BM Ntra. Sra. de la Consolación (Huelva)."
+     },
+     {
+      "n": "Jesús Caído («El Señor del Parque»)",
+      "s": "Capilla de Jesús Caído (junto al Parque Genovés)",
+      "f": "1942",
+      "t": [
+       "Nuestro Padre Jesús Caído — Miguel Láinez Capote, 1941",
+       "María Santísima de los Desamparados — José Rivera, 1964"
+      ],
+      "p": "Paso de caoba con cuatro faros isabelinos; la Virgen va sin palio.",
+      "m": "Cristo: AM Virgen de la Oliva (Vejer). Virgen: BM Ntra. Sra. de Palomares (Trebujena).",
+      "h": "La «cofradía de los universitarios». En 2026 volvió a salir desde su capilla."
+     },
+     {
+      "n": "Ecce-Homo",
+      "s": "Iglesia de la Conversión de San Pablo (calle Ancha)",
+      "f": "s. XVII",
+      "t": [
+       "Nuestro Padre Jesús del Ecce-Homo — José Montes de Oca, 1730",
+       "María Santísima de las Angustias — atrib. Manuel Fernández Guerrero",
+       "San Juan — atrib. Domenico Giscardi"
+      ],
+      "p": "Misterio con Pilatos y palio.",
+      "m": "Cristo: BCT Los Gitanos (Málaga). Palio: BM del Carmen (Prado del Rey).",
+      "h": "El «Señor del manto rojo»: viste el «Manto de Yraola» (1912), bordado en oro."
+     },
+     {
+      "n": "La Columna",
+      "s": "Iglesia de San Antonio",
+      "f": "1660",
+      "t": [
+       "Jesús atado a la Columna y Azotes, «El Aguador» — Jacinto Pimentel, 1660",
+       "María Santísima de las Lágrimas — Domenico Giscardi, 1776"
+      ],
+      "p": "Misterio con sayones y palio.",
+      "m": "Cristo: BCT Ntra. Sra. del Rosario (Cádiz). Palio: Filarmónica de Conil.",
+      "h": "Apodado «el Aguador» por salir en rogativas por la lluvia. Su Virgen fue la primera gaditana bajo palio sevillano."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "Las Cigarreras",
+      "s": "Convento de Santo Domingo",
+      "f": "s. XVIII",
+      "t": [
+       "Nuestro Padre Jesús de la Salud — Francisco de Villegas, s. XVII",
+       "María Santísima de la Esperanza — Álvarez Duarte, 2005"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: AM La Salud (propia). Palio: Banda Municipal de Bollullos."
+     },
+     {
+      "n": "La Sentencia",
+      "s": "Iglesia de la Merced",
+      "f": "1939",
+      "t": [
+       "Nuestro Padre Jesús de la Sentencia — gótico tardío s. XVI",
+       "María Santísima del Buen Fin — Láinez Capote, 1950"
+      ],
+      "p": "Misterio con figuras de Buiza (1961) y palio.",
+      "m": "Misterio: BCT Cristo de la Elevación (Campo de Criptana). Palio: BM de Lora del Río.",
+      "h": "Fundada por estudiantes universitarios."
+     },
+     {
+      "n": "Las Aguas",
+      "s": "Iglesia de Santa Cruz",
+      "f": "1944",
+      "t": [
+       "Santísimo Cristo de las Aguas — Francisco Buiza, 1981",
+       "Nuestra Señora de la Luz — Buiza, 1981",
+       "San Juan — Antonio Eslava, 1951"
+      ],
+      "p": "Tres pasos.",
+      "m": "San Juan: AM Los Remedios (Estepona). Cristo: BCT Cristo de la Victoria (León). Palio: Filarmónica de Conil.",
+      "h": "Fundada por empleados del servicio municipal de aguas y electricidad."
+     },
+     {
+      "n": "El Caminito",
+      "s": "Capilla del Caminito",
+      "f": "1934",
+      "t": [
+       "Nuestra Señora de las Angustias — 1748, escuela de los Roldán"
+      ],
+      "p": "Un paso: la Piedad.",
+      "m": "Quinteto de metales de la BM Julián Cerdán."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo y Madrugada",
+    "hs": [
+     {
+      "n": "Los Afligidos",
+      "s": "Iglesia de San Lorenzo",
+      "f": "1726",
+      "t": [
+       "Nuestro Padre Jesús de los Afligidos — Peter Sterling, 1727",
+       "María Santísima de los Desconsuelos — Peter Sterling, 1727"
+      ],
+      "p": "Un paso con Verónica, Magdalena, San Juan y Cirineo genoveses.",
+      "m": "BM Maestro Enrique Montero (Chiclana)."
+     },
+     {
+      "n": "Oración en el Huerto",
+      "f": "1955",
+      "t": [
+       "Oración en el Huerto — Manuel Ramos Corona, 1989",
+       "Nuestra Señora de Gracia y Esperanza — Luis González Rey, 1996"
+      ],
+      "p": "Misterio.",
+      "h": "Tras problemas en San Severiano no salió en 2023-2024; su nueva sede es Santa Catalina."
+     },
+     {
+      "n": "Medinaceli",
+      "s": "Iglesia de Santa Cruz",
+      "f": "1938",
+      "t": [
+       "Nuestro Padre Jesús Cautivo y Rescatado — Láinez Capote, 1938",
+       "María Santísima de la Trinidad — Francisco Buiza, 1967"
+      ],
+      "p": "Cautivo y palio.",
+      "m": "Silencio."
+     },
+     {
+      "n": "Nazareno de Santa María",
+      "s": "Convento de Santa María",
+      "f": "s. XVI",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — Andrés de Castillejo, 1591-1602",
+       "María Santísima de los Dolores — Juan Luis Vassallo, 1943 (donada por José María Pemán)"
+      ],
+      "p": "Nazareno con la Magdalena y palio.",
+      "m": "Misterio: AM Jesús Cautivo (Estepona). Palio: Banda Municipal de Rota.",
+      "h": "El «Greñúo», «Señor de Cádiz», Regidor Perpetuo de la ciudad desde 1681 por librarla de la peste. Sale de madrugada."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "El Perdón",
+      "s": "Iglesia de Santa Cruz",
+      "f": "1935",
+      "t": [
+       "Santísimo Cristo del Perdón — Luis Ortega Bru, 1980",
+       "María Santísima del Rosario — Francisco Buiza, 1980"
+      ],
+      "p": "Calvario con los ladrones y palio.",
+      "m": "Misterio: AM Polillas. Palio: BM de Lora del Río."
+     },
+     {
+      "n": "El Descendimiento",
+      "s": "Iglesia de San Lorenzo",
+      "f": "1664",
+      "t": [
+       "Cristo del Descendimiento — Francisco Buiza, 1978",
+       "Santas mujeres y San Juan — Luis González Rey",
+       "Nuestra Señora de los Dolores — Buiza, 1978"
+      ],
+      "p": "Un paso.",
+      "m": "Capilla Lignum Crucis.",
+      "h": "Fundada por la familia Omaña tras ver la Quinta Angustia de Sevilla."
+     },
+     {
+      "n": "La Expiración",
+      "s": "Real Parroquia Castrense del Santo Ángel",
+      "f": "1944",
+      "t": [
+       "Santísimo Cristo de la Expiración — anónimo s. XVII",
+       "María Santísima de la Victoria «la Loca» — Carlos Bartús, 1940"
+      ],
+      "p": "Crucificado y gran palio.",
+      "m": "Misterio: AM Polillas. Palio: BM de Barbate.",
+      "h": "Vinculada a la Guardia Civil (tricornio a los pies de la cruz). Pasa ante el Gran Teatro Falla."
+     },
+     {
+      "n": "Siete Palabras",
+      "s": "Iglesia de la Merced",
+      "f": "1944",
+      "t": [
+       "Santísimo Cristo de la Sed — Luis González Rey, 2007",
+       "María Santísima de la Piedad — González Rey, 2005"
+      ],
+      "p": "Un paso.",
+      "m": "AM La Salud."
+     },
+     {
+      "n": "La Buena Muerte",
+      "s": "Iglesia de San Agustín",
+      "f": "1894",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — anónimo, 1648",
+       "María Santísima del Mayor Dolor — anónima s. XVIII"
+      ],
+      "p": "Crucificado y Virgen.",
+      "m": "Capilla Musical Calvarium y Capilla San Pablo.",
+      "h": "La «cofradía del Silencio»: sale completamente a oscuras. Refundada en 1921 con José María Pemán."
+     }
+    ]
+   },
+   {
+    "dia": "Sábado Santo",
+    "hs": [
+     {
+      "n": "Ecce Mater Tua",
+      "s": "Iglesia de Santiago",
+      "f": "1953",
+      "t": [
+       "Dolorosa — Domingo Sánchez Mesa, 1955"
+      ],
+      "p": "Un paso.",
+      "h": "Sale de madrugada; la Virgen va de negro con los brazos extendidos al cielo."
+     },
+     {
+      "n": "Santo Entierro",
+      "s": "Iglesia de Santa Cruz",
+      "f": "s. XVI",
+      "t": [
+       "Cristo yacente — Francisco de Villegas, 1624",
+       "Nuestra Señora de la Soledad — anónima s. XVIII"
+      ],
+      "p": "Urna y palio.",
+      "m": "Cristo: BM Ntro. Padre Jesús Nazareno (San Fernando). Palio: Filarmónica de Conil.",
+      "h": "La Soledad fue durante años patrona de Cádiz."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "La Resurrección",
+      "s": "Iglesia de San Antonio",
+      "f": "1662",
+      "t": [
+       "Cristo Resucitado — Luis González Rey, 1993"
+      ],
+      "p": "Un paso.",
+      "m": "AM Ecce Mater."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "huelva",
+  "nombre": "Huelva",
+  "color": "#2f7a86",
+  "lema": "La ciudad de León Ortega: casi toda su imaginería lleva la firma del ayamontino.",
+  "intro": [
+   "Hay noticias desde 1536 (la Virgen de los Dolores del Santo Entierro) y de la cofradía del Nazareno desde 1583, pero la Guerra Civil destruyó la mayor parte del patrimonio. La reconstrucción lleva un nombre propio: Antonio León Ortega, autor de buena parte de las imágenes actuales.",
+   "La Virgen de la Cinta, patrona de la ciudad, es protectora de las hermandades. El Consejo de Hermandades (1997, heredero de la Unión de 1989) organiza una Semana Santa de 27 hermandades, 25 de ellas en carrera oficial."
+  ],
+  "datos": [
+   [
+    "Hermandades",
+    "27 (25 en carrera oficial)"
+   ],
+   [
+    "Organismo",
+    "Consejo de Hermandades y Cofradías (1997)"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Nacional de Andalucía (2003)"
+   ],
+   [
+    "Imaginero clave",
+    "Antonio León Ortega"
+   ]
+  ],
+  "claves": [
+   "Lunes Santo: la subida de la Cuesta de las Tres Caídas.",
+   "Miércoles Santo: Victoria y Esperanza por la Gran Vía.",
+   "Madrugá: el Nazareno, la cofradía más antigua (1583).",
+   "Sábado de Pasión: el Cristo de la Vera Cruz con la Legión."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquita",
+      "s": "Parroquia de San Pedro",
+      "f": "1945",
+      "t": [
+       "Entrada Triunfal — Antonio León Ortega, 1947",
+       "Nuestra Señora de los Ángeles — León Ortega, 1949"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Su Virgen es la única de Huelva cuyo rostro no muestra dolor. El titular recibió la Medalla de Huelva en 2022."
+     },
+     {
+      "n": "La Sagrada Cena",
+      "s": "Parroquia del Sagrado Corazón (Polvorín)",
+      "f": "1948",
+      "t": [
+       "Santísimo Cristo del Amor — León Ortega, 1949",
+       "Apostolado — Enrique Galarza, 1951",
+       "María Santísima del Rosario — León Ortega, 1954"
+      ],
+      "p": "Misterio y palio (bordados Suay, orfebrería Borrero).",
+      "m": "AM Santísimo Cristo del Amor (propia).",
+      "h": "Fundada por funcionarios municipales; primera hermandad sacramental de la diócesis."
+     },
+     {
+      "n": "La Redención",
+      "s": "Parroquia de Cristo Sacerdote",
+      "f": "1983 / 2000",
+      "t": [
+       "Nuestro Padre Jesús de la Redención — Elías Rodríguez Picón, 2000",
+       "María Santísima del Dulce Nombre — Rodríguez Picón"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "Los Mutilados",
+      "s": "Parroquia de San Sebastián",
+      "f": "1943",
+      "t": [
+       "Santísimo Cristo de la Victoria Despojado — León Ortega, 1945",
+       "Nuestra Señora de la Paz — León Ortega, 1944"
+      ],
+      "p": "Cristo y palio.",
+      "h": "Fundada por excombatientes de la Guerra Civil (caballeros mutilados)."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "El Perdón",
+      "s": "Parroquia de Santa Teresa",
+      "f": "1984",
+      "t": [
+       "Santísimo Cristo del Perdón — Juan Abascal, 1981",
+       "Nuestra Señora de los Dolores — Manuel Vergara, 1943"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Salía en la Madrugá hasta 2009."
+     },
+     {
+      "n": "El Cautivo",
+      "s": "Capilla del Cautivo",
+      "f": "1981",
+      "t": [
+       "Nuestro Padre Jesús Cautivo — León Ortega, 1984-1985",
+       "María Santísima de la Misericordia — Enrique Pérez Saavedra, 1984"
+      ],
+      "p": "Cautivo y palio.",
+      "m": "Cristo: BCT Cristo de la Expiración. Palio: BM Virgen de las Mercedes."
+     },
+     {
+      "n": "El Calvario",
+      "s": "Capilla de Jesús del Calvario",
+      "f": "1972",
+      "t": [
+       "Nuestro Padre Jesús del Calvario — León Ortega, 1972",
+       "María Santísima del Rocío y Esperanza — Sebastián Santos, 1974"
+      ],
+      "p": "Nazareno y palio."
+     },
+     {
+      "n": "Las Tres Caídas",
+      "s": "Parroquia del Sagrado Corazón (Polvorín)",
+      "f": "1944",
+      "t": [
+       "Nuestro Padre Jesús de las Penas en sus Tres Caídas — León Ortega, 1945",
+       "María Santísima del Amor — León Ortega, 1949"
+      ],
+      "p": "Misterio con la Verónica y palio.",
+      "h": "La subida de la Cuesta de las Tres Caídas es de los momentos más esperados. La reina Sofía es camarista honoraria de la Virgen."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "La Salud",
+      "s": "Parroquia de San Francisco (Pérez Cubillas)",
+      "f": "1976 / 2000",
+      "t": [
+       "Jesús de la Sentencia en su Presentación al Pueblo — David Valenciano, 1998",
+       "Nuestra Señora de la Salud — Valenciano, 2000"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "La Lanzada",
+      "s": "Parroquia de los Dolores (Las Colonias)",
+      "t": [
+       "Santísimo Cristo de la Sagrada Lanzada — Joaquín Moreno Daza, 1986",
+       "María Santísima del Patrocinio — Moreno Daza, 1992"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "Los Estudiantes",
+      "s": "Parroquia de San Sebastián",
+      "f": "1949",
+      "t": [
+       "Santísimo Cristo de la Sangre — León Ortega, 1949",
+       "Nuestra Señora del Valle — León Ortega, 1956"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "Muy ligada a la Universidad de Huelva."
+     },
+     {
+      "n": "Pasión",
+      "s": "Parroquia Mayor de San Pedro",
+      "f": "1536 / 1918",
+      "t": [
+       "Nuestro Padre Jesús de la Pasión — Infantes Reina, 1938",
+       "María Santísima del Refugio — anónima s. XVIII"
+      ],
+      "p": "Nazareno y palio.",
+      "h": "La Primitiva Hermandad de la diócesis. El Señor recibió la Medalla de la Ciudad en 2009."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "El Prendimiento",
+      "s": "Parroquia del Carmen",
+      "f": "1987",
+      "t": [
+       "Nuestro Padre Jesús del Prendimiento — José Manuel Bonilla, 1989"
+      ],
+      "p": "Misterio (figuras de Rubén Fernández Parra).",
+      "h": "La Armada Argentina le entregó la Cruz Laureada en 2005."
+     },
+     {
+      "n": "La Santa Cruz",
+      "s": "Parroquia de la Purísima Concepción",
+      "t": [
+       "Nuestro Señor Jesús de la Providencia — Mario Ignacio Moya, 2005"
+      ],
+      "p": "Misterio."
+     },
+     {
+      "n": "La Victoria",
+      "s": "Parroquia del Sagrado Corazón",
+      "f": "1939",
+      "t": [
+       "Nuestro Padre Jesús de la Humildad en el Desprecio de Herodes — León Ortega, 1942",
+       "María Santísima de la Victoria Coronada — Álvarez Duarte, 1968"
+      ],
+      "p": "Misterio y palio.",
+      "h": "La Victoria fue coronada en 2012."
+     },
+     {
+      "n": "La Esperanza",
+      "s": "Capilla de Santa María de la Esperanza",
+      "f": "1894",
+      "t": [
+       "Santísimo Cristo de la Expiración — Ramón Chaveli, 1939",
+       "Nuestra Señora de la Esperanza Coronada — Joaquín Gómez del Castillo, 1939"
+      ],
+      "p": "Calvario y palio.",
+      "m": "Cristo: BCT Cristo de la Expiración (propia).",
+      "h": "Fundada por pescadores. Primera dolorosa coronada de Huelva (2000)."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "Vera Cruz y Oración",
+      "s": "Parroquia de la Purísima Concepción",
+      "f": "s. XVI / 1922",
+      "t": [
+       "Oración en el Huerto — Luis Ortega Bru, 1977 (ángel de León Ortega, 1943)",
+       "Nuestra Madre y Señora de los Dolores Coronada — Álvarez Duarte, 1967"
+      ],
+      "p": "Misterio y palio de plata.",
+      "h": "El Cristo de la Vera Cruz (Mariano Sánchez del Pino, 2004) sale el Sábado de Pasión con la Legión."
+     },
+     {
+      "n": "La Misericordia",
+      "s": "Iglesia del Cristo de la Misericordia",
+      "f": "1982",
+      "t": [
+       "Santo Cristo de la Misericordia — Gabriel Cuadrado, 1983",
+       "María Santísima de la Concepción — Juan Manuel Miñarro, 1996"
+      ],
+      "p": "Crucificado.",
+      "m": "Sin música.",
+      "h": "Única cofradía de Huelva vestida de ruan, sobria y silenciosa."
+     },
+     {
+      "n": "La Buena Muerte",
+      "s": "Iglesia de Santa María de Gracia",
+      "f": "1916",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Joaquín Gómez del Castillo, 1941",
+       "Nuestra Madre de la Consolación y Correa — Gómez del Castillo, 1940"
+      ],
+      "p": "Crucificado y paso de misterio de la Virgen (no va bajo palio)."
+     },
+     {
+      "n": "Los Judíos (La Merced)",
+      "s": "Catedral de la Merced",
+      "f": "1772",
+      "t": [
+       "Nuestro Padre Jesús de las Cadenas — anónimo s. XVII",
+       "Santísimo Cristo de Jerusalén y Buen Viaje — anónimo s. XVII",
+       "María Santísima de los Dolores — atrib. Jacome Vacaro"
+      ],
+      "p": "Tres pasos; palio íntegro de Rodríguez Ojeda."
+     }
+    ]
+   },
+   {
+    "dia": "Madrugá",
+    "hs": [
+     {
+      "n": "El Nazareno",
+      "s": "Parroquia de la Purísima Concepción",
+      "f": "1583",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — Sebastián Santos, 1950",
+       "María Santísima de la Amargura — Ramón Chaveli, 1938"
+      ],
+      "p": "Nazareno con Cirineo y palio con San Juan.",
+      "m": "BCT Nuestro Padre Jesús Nazareno (propia).",
+      "h": "La hermandad más antigua de Huelva, fundada en el desaparecido convento de la Victoria."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "La Fe",
+      "s": "Parroquia de Santa María Madre de la Iglesia",
+      "f": "1988",
+      "t": [
+       "Santísimo Cristo de la Fe — León Ortega, 1975",
+       "María Santísima de la Caridad"
+      ],
+      "p": "Misterio.",
+      "h": "Única del Viernes Santo con música «alegre»."
+     },
+     {
+      "n": "El Descendimiento",
+      "s": "Parroquia de San Pedro",
+      "f": "1951",
+      "t": [
+       "Sagrado Descendimiento — León Ortega, 1952-1953",
+       "María Santísima de la Resignación — León Ortega, 1952"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "El Santo Entierro",
+      "s": "Ermita de la Soledad",
+      "f": "s. XVI",
+      "t": [
+       "Nuestra Señora de las Angustias — León Ortega, 1958",
+       "Cristo yacente — cabeza ss. XVI-XVII",
+       "María Santísima de la Soledad — León Ortega, 1944"
+      ],
+      "p": "Tres pasos."
+     },
+     {
+      "n": "El Silencio (La Soledad)",
+      "s": "Parroquia de la Purísima Concepción",
+      "f": "1937",
+      "t": [
+       "Nuestra Señora en su Soledad — atrib. Antonio del Castillo, finales s. XVII"
+      ],
+      "p": "Un paso: la Virgen de espaldas a la cruz con clavos y corona."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "El Resucitado",
+      "s": "Parroquia del Pilar (La Hispanidad)",
+      "f": "1996",
+      "t": [
+       "Sagrada Resurrección — Elías Rodríguez Picón, 2003"
+      ],
+      "p": "Un paso."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "almeria",
+  "nombre": "Almería",
+  "color": "#b0741c",
+  "lema": "Una Semana Santa rehecha tras la guerra, con el Encuentro y el Señor de Almería.",
+  "intro": [
+   "A comienzos del s. XVI ya había un vía crucis con un encuentro entre Cristo y la Virgen en la actual calle del Encuentro, junto a la Alcazaba. Tras la crisis del XVII, el s. XVIII vio nacer la cofradía de Jesús Nazareno (reglas de 1743) o la Soledad (1772). La Guerra Civil destruyó casi todo; en los años 40 surgieron hermandades ligadas a instituciones (militares, banca, estudiantes, sindicatos).",
+   "Tras una crisis en los años 70, la Semana Santa se recuperó desde los 80 hasta las 22 hermandades actuales. Muchas imágenes son de imagineros sevillanos contemporáneos: Dubé de Luque, Álvarez Duarte, Navarro Arteaga o Miñarro."
+  ],
+  "datos": [
+   [
+    "Hermandades",
+    "22"
+   ],
+   [
+    "Organismo",
+    "Agrupación de Hermandades y Cofradías (1947)"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Nacional (2019)"
+   ],
+   [
+    "Carrera oficial",
+    "Paseo de Almería, General Tamayo, Plaza Virgen del Mar, Lucano, Trajano, Eduardo Pérez y Plaza de la Catedral"
+   ]
+  ],
+  "claves": [
+   "Miércoles Santo: Jesús Cautivo de Medinaceli, «el Señor de Almería», con cantos desde los balcones de la Plaza Marín.",
+   "Jueves Santo: el Encuentro de los tres pasos del Nazareno en la Plaza Circular.",
+   "Madrugada: vía crucis del Cristo de la Escucha desde la Catedral a las cinco de la mañana.",
+   "Martes Santo: el Silencio del Perdón, descalzos y con las farolas apagándose a su paso."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquita",
+      "s": "Parroquia del Espíritu Santo (Altamira)",
+      "f": "1924",
+      "t": [
+       "Jesús de la Victoria en su Entrada en Jerusalén — Miguel Bejarano, 1995-1996",
+       "Nuestra Señora de la Paz — anónima finales s. XVIII (la más antigua que procesiona en la ciudad)"
+      ],
+      "p": "Misterio y palio de diez varales.",
+      "m": "Misterio: AM Ntra. Sra. del Mar (Huércal). Palio: A. M. El Castillo (Serón)."
+     },
+     {
+      "n": "Los Ángeles",
+      "s": "Parroquia de Santa María de los Ángeles",
+      "f": "1996",
+      "t": [
+       "Santísimo Cristo de la Misericordia — Dubé de Luque, 2009",
+       "María Santísima de los Ángeles — Dubé de Luque, 1997"
+      ],
+      "p": "Misterio del despojo y palio.",
+      "m": "Misterio: AM Afligidos (Puente Genil). Palio: BM Santa Cecilia (Sorbas)."
+     },
+     {
+      "n": "La Estrella",
+      "s": "Parroquia de San Isidro (Regiones Devastadas)",
+      "f": "1991",
+      "t": [
+       "Nuestro Padre Jesús de las Penas — Luis Alberto García Jeute, 1999",
+       "María Santísima de la Estrella — García Jeute, 1992"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: BCT Sentencia (Cuevas del Almanzora). Palio: BM Los Iris (Instinción).",
+      "h": "Recorrido de casi ocho horas. La reina Sofía es camarera mayor honoraria."
+     },
+     {
+      "n": "La Santa Cena",
+      "s": "Iglesia de San Pedro",
+      "f": "1983",
+      "t": [
+       "Santa Cena — José Antonio Navarro Arteaga, 1999",
+       "María Santísima de Fe y Caridad — Álvarez Duarte, 1990"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Misterio: BCT Ntra. Sra. del Carmen. Palio: Banda Municipal de Berja."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "Pasión",
+      "s": "Parroquia de Santa Teresa (Oliveros)",
+      "f": "1995",
+      "t": [
+       "Nuestro Padre Jesús de Salud y Pasión — Álvarez Duarte, 1992",
+       "María Santísima de los Desamparados — Álvarez Duarte"
+      ],
+      "p": "Nazareno caído y palio.",
+      "m": "Misterio: BCT Monte Calvario (Martos). Palio: BM Santa Cecilia (Sorbas)."
+     },
+     {
+      "n": "Gran Poder",
+      "s": "Parroquia de San Pío X (El Zapillo)",
+      "f": "1996",
+      "t": [
+       "Nuestro Padre Jesús del Gran Poder — Navarro Arteaga, 1996 (réplica del de Juan de Mesa)"
+      ],
+      "p": "Un paso.",
+      "m": "Silencio.",
+      "h": "Nació en el barrio de pescadores; cortejo de riguroso silencio."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "La Coronación",
+      "s": "Parroquia de Santa María Magdalena (Los Molinos)",
+      "f": "1990",
+      "t": [
+       "Jesús de la Humildad y Paciencia en su Coronación de Espinas — Salvador Madroñal, 1995",
+       "María Santísima de Gracia y Amparo — Madroñal, 1993"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Desde 2019 procesiona por su barrio sin bajar a carrera oficial."
+     },
+     {
+      "n": "El Amor",
+      "s": "Iglesia de San Sebastián",
+      "f": "1944",
+      "t": [
+       "Santísimo Cristo del Amor — Jesús de Perceval, 1946",
+       "Nuestra Señora del Primer Dolor — José María Hervás, 1952"
+      ],
+      "p": "Crucificado y palio.",
+      "m": "Cristo: BCT Santa Cruz. Virgen: BM Santa Cecilia (Sorbas).",
+      "h": "Fundada por empleados de banca."
+     },
+     {
+      "n": "El Perdón (Silencio)",
+      "s": "Iglesia de San Ildefonso",
+      "f": "1980",
+      "t": [
+       "Santo Cristo del Perdón — Francisco Palma Burgos, 1984"
+      ],
+      "p": "Crucificado.",
+      "m": "Solo tambores y una campana.",
+      "h": "Nazarenos de negro y descalzos; las farolas se apagan conforme avanza."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "El Calvario (Cristo del Mar)",
+      "s": "Iglesia de San Roque (Pescadería)",
+      "f": "2013",
+      "t": [
+       "Santísimo Cristo del Mar — Miguel Bejarano, 2003",
+       "Nuestra Señora de las Lágrimas — Bejarano, 2012"
+      ],
+      "p": "Calvario.",
+      "m": "BCT Ntra. Sra. de la Asunción (Jódar)."
+     },
+     {
+      "n": "El Prendimiento",
+      "s": "Catedral de la Encarnación",
+      "f": "1948",
+      "t": [
+       "Nuestro Padre Jesús en su Prendimiento — Dubé de Luque, 1990",
+       "Jesús Cautivo de Medinaceli — Dubé de Luque, 1997",
+       "Nuestra Señora de la Merced — Dubé de Luque, 1996"
+      ],
+      "p": "Tres pasos.",
+      "h": "La cofradía más numerosa de Almería. El Medinaceli es «el Señor de Almería»; petalá sobre la Virgen de la Merced junto a la Catedral."
+     },
+     {
+      "n": "La Macarena",
+      "s": "Parroquia de San Ildefonso",
+      "f": "1986",
+      "t": [
+       "Nuestro Padre Jesús de la Sentencia — Dubé de Luque, 1990",
+       "María Santísima de la Esperanza Macarena — Dubé de Luque, 1988"
+      ],
+      "p": "Misterio (figuras de González Rey) y palio."
+     },
+     {
+      "n": "Los Estudiantes",
+      "s": "Catedral de la Encarnación",
+      "f": "1944",
+      "t": [
+       "Oración en el Huerto — José Martínez Puertas, 1945",
+       "Nuestra Señora del Amor y la Esperanza — Castillo Lastrucci, 1946"
+      ],
+      "p": "Misterio y palio.",
+      "m": "Cristo: AM Ntra. Sra. del Mar (Huércal). Virgen: BM Santa Cecilia (Málaga).",
+      "h": "Fundada por estudiantes de Medicina; su Virgen fue la primera de Almería bajo palio."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "Rosario del Mar",
+      "s": "Santuario de la Virgen del Mar (sale de Santo Domingo)",
+      "f": "2006",
+      "t": [
+       "Nuestro Padre Jesús de las Penas en el Abandono — Álvarez Duarte, 1992",
+       "María Santísima del Rosario del Mar — Álvarez Duarte"
+      ],
+      "p": "Misterio (figuras que fueron del Buen Fin de Sevilla) y palio.",
+      "m": "Misterio: BCT Sentencia (Almuñécar). Palio: A. M. de Güevéjar."
+     },
+     {
+      "n": "El Encuentro (Jesús Nazareno)",
+      "s": "Parroquia de San Antonio (Ciudad Jardín)",
+      "f": "1743 (reglas)",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — José Martínez Puertas",
+       "María Santísima de la Amargura — Martínez Puertas",
+       "Santa Mujer Verónica — Hervás, 1952"
+      ],
+      "p": "Tres pasos.",
+      "h": "La hermandad decana. A las 21:00 los tres pasos se encuentran en la Plaza Circular evocando la calle de la Amargura."
+     },
+     {
+      "n": "Las Angustias",
+      "s": "Iglesia de San Juan (sale de la Compañía de María)",
+      "f": "1911",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Hervás, 1954",
+       "Nuestra Señora de las Angustias — José Navas Parejo, 1942"
+      ],
+      "p": "Crucificado y Virgen.",
+      "m": "Cristo: BCT Ntra. Sra. del Carmen. Virgen: Banda de Berja."
+     },
+     {
+      "n": "El Silencio (Descendimiento)",
+      "s": "Parroquia de San Agustín",
+      "f": "1946",
+      "t": [
+       "Santísimo Cristo de la Redención en su Descendimiento — Eduardo Espinosa Cuadros, 1948",
+       "Nuestra Madre María Santísima del Consuelo — Castillo Lastrucci, 1946"
+      ],
+      "p": "Misterio y palio."
+     }
+    ]
+   },
+   {
+    "dia": "Madrugada",
+    "hs": [
+     {
+      "n": "Cristo de la Escucha",
+      "s": "Catedral",
+      "f": "1958",
+      "t": [
+       "Cristo de la Escucha — Jesús de Perceval, 1941"
+      ],
+      "p": "Vía crucis.",
+      "h": "Sale de la Catedral a las cinco de la mañana. Según la leyenda, unos albañiles oyeron «¡Escucha!» tras un tabique y hallaron el Cristo."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "La Caridad",
+      "s": "Parroquia de Santa Teresa (Oliveros)",
+      "f": "1995",
+      "t": [
+       "Santísimo Cristo de la Caridad en su Traslado al Sepulcro — Juan Manuel Miñarro, 1999",
+       "María Santísima de las Penas"
+      ],
+      "p": "Misterio de nueve figuras.",
+      "m": "Capilla de viento y cuarteto vocal."
+     },
+     {
+      "n": "El Santo Sepulcro",
+      "s": "Iglesia de San Pedro",
+      "f": "1923",
+      "t": [
+       "Cristo yacente — Nicolás Prados López",
+       "Nuestra Señora de los Dolores — Prados López"
+      ],
+      "p": "Urna a varal (estilo malagueño) y palio.",
+      "m": "Cristo: Banda Municipal de Almería.",
+      "h": "Hermandad oficial: le acompaña el Ayuntamiento y es la única que entra en la Catedral. El manto de la Virgen perteneció a la Paloma de Málaga."
+     },
+     {
+      "n": "La Soledad",
+      "s": "Iglesia de Santiago",
+      "f": "1772",
+      "t": [
+       "Nuestra Señora de los Dolores en su Soledad — José Pascual Ortells, 1941",
+       "San Juan — Miñarro, 1997"
+      ],
+      "p": "Un paso."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "El Resucitado",
+      "s": "Parroquia de Montserrat (Nueva Andalucía)",
+      "f": "2015",
+      "t": [
+       "Jesucristo Resucitado, Señor de la Vida — José María Leal, 2020"
+      ],
+      "p": "Un paso.",
+      "m": "AM Ntra. Sra. del Mar (Huércal)."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jaen",
+  "nombre": "Jaén",
+  "color": "#6b4a2b",
+  "lema": "La sobriedad de Castilla y el esplendor de Andalucía, con «El Abuelo» como centro.",
+  "intro": [
+   "Tras la conquista de Fernando III (1246) nacen cofradías de fines piadoso-militares. Las penitenciales llegan en el s. XVI: la Vera-Cruz (1541), las Angustias (1551), la Soledad (1556) y el Santo Sepulcro (1580), cuyo pleito explica que haya dos cofradías de Santo Entierro que se alternan la oficialidad (pares el Santo Sepulcro, impares la Soledad).",
+   "Imagineros clave: Sebastián de Solís, Salvador de Cuéllar, José de Mora y José de Medina en los siglos clásicos; Jacinto Higueras, Palma Burgos o Navas-Parejo tras la guerra. El músico Emilio Cebrián, director de la Banda Municipal desde 1932, compuso aquí «Nuestro Padre Jesús», una de las marchas más interpretadas de España. La saeta jiennense presume de ser la más antigua de Andalucía."
+  ],
+  "datos": [
+   [
+    "Hermandades",
+    "21"
+   ],
+   [
+    "Organismo",
+    "Agrupación de Cofradías y Hermandades (1946)"
+   ],
+   [
+    "Declaración",
+    "Interés Turístico Nacional de Andalucía"
+   ],
+   [
+    "Carrera oficial",
+    "Calle Bernabé Soriano («La Carrera»)"
+   ],
+   [
+    "Forma de carga",
+    "A costal, a hombros (costero a costero) y a varal"
+   ]
+  ],
+  "claves": [
+   "Madrugada del Viernes: «El Abuelo» sale de la Catedral y se encuentra con la Virgen de los Dolores.",
+   "Domingo de Ramos: la «llamá», el hermano mayor de la Borriquilla golpea tres veces la puerta del templo.",
+   "Miércoles: la Buena Muerte con la Legión, la única que tiene la Catedral como sede.",
+   "Marcha «Nuestro Padre Jesús» (Emilio Cebrián)."
+  ],
+  "dias": [
+   {
+    "dia": "Domingo de Ramos",
+    "hs": [
+     {
+      "n": "La Borriquilla",
+      "s": "Iglesia de Belén y San Roque",
+      "f": "1709 / 1946",
+      "t": [
+       "Nuestro Padre Jesús de la Salud entrando en Jerusalén — Dubé de Luque",
+       "María Santísima de la Paz, «la niña de los ojos verdes»"
+      ],
+      "p": "Misterio y palio.",
+      "h": "Con la «llamá» a la puerta del templo empieza la Semana Santa de Jaén."
+     },
+     {
+      "n": "Santa Cena",
+      "s": "Parroquia de San Juan Pablo II",
+      "f": "1998",
+      "t": [
+       "Jesús Salvador en su Santa Cena y apostolado — Antonio Bernal",
+       "María Santísima de la Caridad y Consolación — Antonio Bernal"
+      ],
+      "p": "Misterio y palio."
+     },
+     {
+      "n": "La Estrella",
+      "s": "Convento de las Dominicas",
+      "f": "1955 / 1982",
+      "t": [
+       "Nuestro Padre Jesús de la Piedad — s. XVII",
+       "María Santísima de la Estrella — Domingo Sánchez Mesa"
+      ],
+      "p": "Misterio de la Presentación (figuras de Navarro Arteaga) y palio.",
+      "m": "AM de la propia hermandad."
+     },
+     {
+      "n": "El Huerto (Vera-Cruz)",
+      "s": "Basílica de San Ildefonso",
+      "t": [
+       "Jesús orando en el Huerto — Juan Abascal",
+       "María Santísima de los Desamparados"
+      ],
+      "p": "Misterio y palio."
+     }
+    ]
+   },
+   {
+    "dia": "Lunes Santo",
+    "hs": [
+     {
+      "n": "Caridad y Salud",
+      "s": "Parroquia de Santa María Madre de la Iglesia",
+      "f": "2012",
+      "t": [
+       "Jesús de la Caridad ante Caifás — Miguel Cordero",
+       "María Santísima de la Salud — Antonio Bernal"
+      ],
+      "p": "Misterio.",
+      "h": "El recorrido más largo de Jaén (6,8 km)."
+     },
+     {
+      "n": "La Amargura",
+      "s": "Parroquia de El Salvador",
+      "f": "1984",
+      "t": [
+       "Nuestro Señor de la Pasión Despojado — Miguel Zúñiga (misterio de Cabello y Parras)",
+       "María Santísima de la Amargura — atrib. José de Mora"
+      ],
+      "p": "Gran misterio y palio.",
+      "m": "AM Jesús Despojado (propia).",
+      "h": "La «Virgen de los Toreros», patrona de la Policía Local, con unas 90 marchas dedicadas."
+     },
+     {
+      "n": "Los Estudiantes",
+      "s": "Iglesia de la Merced",
+      "f": "1946",
+      "t": [
+       "Santísimo Cristo de las Misericordias — s. XVI, atrib. Salvador de Cuéllar",
+       "Nuestra Señora de las Lágrimas"
+      ],
+      "p": "Crucificado y palio.",
+      "h": "La Tuna Universitaria canta a la Virgen a la salida."
+     }
+    ]
+   },
+   {
+    "dia": "Martes Santo",
+    "hs": [
+     {
+      "n": "Divino Maestro (Lavatorio)",
+      "s": "Colegio del Divino Maestro",
+      "f": "2015",
+      "t": [
+       "Jesús Divino Maestro de Humildad y Entrega — Antonio José Martínez",
+       "María Santísima del Amor — Martínez, 2021"
+      ],
+      "p": "Misterio del lavatorio de pies."
+     },
+     {
+      "n": "La Clemencia",
+      "s": "Parroquia de la Magdalena",
+      "f": "1593 / 1945",
+      "t": [
+       "Santísimo Cristo de la Clemencia — Salvador de Cuéllar, s. XVI",
+       "Santa María Magdalena — Mateo de Medina",
+       "Jesús de la Caída — Navas-Parejo",
+       "María Santísima del Mayor Dolor"
+      ],
+      "p": "Tres pasos."
+     },
+     {
+      "n": "El Silencio",
+      "s": "Parroquia de Cristo Rey",
+      "f": "1955",
+      "t": [
+       "Santísimo Cristo de la Humildad — s. XVI, atrib. Juan de Reolid (el más antiguo de Jaén)",
+       "María Santísima Madre de Dios — Israel Cornejo, 2013"
+      ],
+      "p": "Crucificado.",
+      "m": "Silencio absoluto: pide la venia por escrito."
+     }
+    ]
+   },
+   {
+    "dia": "Miércoles Santo",
+    "hs": [
+     {
+      "n": "El Cautivo",
+      "s": "Parroquia de Santa Isabel",
+      "f": "2012",
+      "t": [
+       "Jesús Cautivo en el abandono de sus discípulos — Romero Zafra",
+       "María Santísima de la Trinidad — Romero Zafra"
+      ],
+      "p": "Cautivo y palio (desde 2022)."
+     },
+     {
+      "n": "El Perdón",
+      "s": "Parroquia de Cristo Rey",
+      "f": "1952",
+      "t": [
+       "Cristo del Perdón — Francisco Palma Burgos",
+       "Cristo del Amor en su Prendimiento — Navarro Arteaga",
+       "María Santísima de la Esperanza — Antonio Eslava"
+      ],
+      "p": "Tres pasos.",
+      "h": "Entre 1955 y 1974 liberaba a un preso de la prisión provincial."
+     },
+     {
+      "n": "La Buena Muerte",
+      "s": "Catedral",
+      "f": "1926",
+      "t": [
+       "Santísimo Cristo de la Buena Muerte — Jacinto Higueras",
+       "Cristo Descendido de la Cruz — Víctor de los Ríos",
+       "Nuestra Señora de las Angustias — José de Mora (ángeles de Ramón Amadeu)"
+      ],
+      "p": "Tres tronos a varal, estilo malagueño.",
+      "m": "Acompañada por la Legión.",
+      "h": "La única con la Catedral como sede y el recorrido más corto (1,85 km)."
+     }
+    ]
+   },
+   {
+    "dia": "Jueves Santo",
+    "hs": [
+     {
+      "n": "La Lanzada",
+      "s": "Parroquia de San Pedro Pascual",
+      "t": [
+       "Santísimo Cristo de las Aguas — José Miguel Tirao, 2022",
+       "María Santísima Reina de los Ángeles — Tirao, 2016"
+      ],
+      "p": "Crucificado.",
+      "h": "La última hermandad incorporada (2023)."
+     },
+     {
+      "n": "El Gran Poder",
+      "s": "Parroquia de la Santa Cruz",
+      "f": "2017",
+      "t": [
+       "Jesús del Gran Poder — José Antonio Cabello, 2010",
+       "María Santísima del Dulce Nombre — Cabello, 2014"
+      ],
+      "p": "Misterio del encuentro en la calle de la Amargura."
+     },
+     {
+      "n": "La Vera-Cruz («los Civiles»)",
+      "s": "Basílica de San Ildefonso",
+      "f": "1541",
+      "t": [
+       "Santísimo Cristo de la Vera-Cruz — Domingo Sánchez Mesa (réplica del Cristo de las Misericordias de José de Mora)",
+       "Jesús Preso — Ramón Mateu",
+       "María Santísima de los Dolores — Sánchez Mesa"
+      ],
+      "p": "Tres pasos; palio de plata de ley.",
+      "h": "La cofradía más antigua de Jaén. La Guardia Civil es su hermano mayor honorario."
+     },
+     {
+      "n": "La Expiración",
+      "s": "Iglesia de San Bartolomé",
+      "f": "1761",
+      "t": [
+       "Santísimo Cristo de la Expiración — José de Medina, s. XVIII",
+       "María Santísima de las Siete Palabras — Álvarez Duarte, 1995"
+      ],
+      "p": "Crucificado y palio.",
+      "m": "BCT Cristo de la Expiración (propia).",
+      "h": "Considerado el mejor crucificado de la Semana Santa de Jaén."
+     }
+    ]
+   },
+   {
+    "dia": "Madrugada",
+    "hs": [
+     {
+      "n": "Nuestro Padre Jesús «El Abuelo»",
+      "s": "Santuario de Nuestro Padre Jesús; sale de la Catedral",
+      "f": "antes de 1594",
+      "t": [
+       "Nuestro Padre Jesús Nazareno — atrib. Sebastián de Solís, s. XVI",
+       "María Santísima de los Dolores — José de Medina, s. XVIII",
+       "Verónica y Cirineo — Luis Carlos Montesinos, 1883 y 1892"
+      ],
+      "p": "Tres pasos.",
+      "h": "Miles de penitentes (más de 1.000 nazarenos y 2.500 hermanos). Cuenta la leyenda que un anciano misterioso lo talló en una noche a cambio de posada y desapareció."
+     }
+    ]
+   },
+   {
+    "dia": "Viernes Santo",
+    "hs": [
+     {
+      "n": "La Soledad",
+      "s": "Basílica de San Ildefonso",
+      "f": "1556",
+      "t": [
+       "Santísimo Cristo Yacente — Constantino Unghetti",
+       "Nuestra Señora de la Soledad — Alfredo Muñoz Arcos (reformada)"
+      ],
+      "p": "Yacente y palio.",
+      "h": "Santo Entierro oficial los años impares."
+     },
+     {
+      "n": "El Santo Sepulcro",
+      "s": "Iglesia de San Juan",
+      "f": "1580",
+      "t": [
+       "Misterio del Calvario y Virgen de los Dolores — atrib. Sebastián de Solís, 1579",
+       "Cristo yacente — Juan Abascal, en urna barroca"
+      ],
+      "p": "Tres pasos.",
+      "h": "Joya de la escultura renacentista. Santo Entierro oficial los años pares (2026 le correspondió)."
+     }
+    ]
+   },
+   {
+    "dia": "Domingo de Resurrección",
+    "hs": [
+     {
+      "n": "El Resucitado",
+      "s": "Basílica de San Ildefonso",
+      "f": "1952 / 1982",
+      "t": [
+       "Cristo Resucitado — Rafael Rubio Vernia",
+       "María Santísima de la Victoria — Alfredo Muñoz Arcos"
+      ],
+      "p": "Dos pasos."
+     }
+    ]
+   }
+  ]
+ }
+]

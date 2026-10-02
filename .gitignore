@@ -1,0 +1,6 @@
+site/node_modules/
+site/dist/
+local/wordpress/
+local/wp-backup/
+*.zip
+data-raw.json.bak

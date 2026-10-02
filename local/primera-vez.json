@@ -1,0 +1,8 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=pcof",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "steps": [
+    { "step": "setSiteLanguage", "language": "es_ES" },
+    { "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH.'wp-admin/includes/plugin.php'; require_once ABSPATH.'wp-admin/includes/file.php'; wp_set_current_user(1); update_option('blogname','Portal Cofrade'); update_option('blogdescription','Semana Santa de Andalucía: noticias, historia y hermandades'); update_option('permalink_structure','/%postname%/'); update_option('timezone_string','Europe/Madrid'); update_option('date_format','j \\d\\e F \\d\\e Y'); update_option('time_format','H:i'); update_option('start_of_week',1); wp_set_password('PortalCofrade-2026','1'); $r = activate_plugin('portal-cofrade/portal-cofrade.php'); if (is_wp_error($r)) { echo 'ACTIVATE ERROR: '.$r->get_error_message(); } flush_rewrite_rules(); $f='terminos'; $o=0; $n=0; while (true) { $x = PCOF_Importer::step($f,$o); $n++; if ($x['done']) { break; } $f=$x['next']['fase']; $o=$x['next']['offset']; } $map = get_option('pcof_pages', array()); if (!empty($map['inicio'])) { update_option('show_on_front','page'); update_option('page_on_front',(int)$map['inicio']); } delete_transient('pcof_autoimport'); file_put_contents('/wordpress/primera-vez-ok.txt','import pasos='.$n); echo 'IMPORT OK '.$n;" }
+  ]
+}
