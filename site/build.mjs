@@ -161,8 +161,8 @@ function entrySimple(href, title, sub, cities, extra = '') {
   return `<li class="oc-entry is-text"${extra}><div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${href}">${esc(title)}</a></h3>${sub ? `<p class="oc-entry-sub">${esc(sub)}</p>` : ''}${cities && cities.length ? `<p class="oc-entry-meta">${cities.map(cityTag).join('')}</p>` : ''}</div></li>`;
 }
 // Noticia: titular, medio, hora relativa y capital. Siempre enlaza al medio original.
-function newsItem(n, { img = true } = {}) {
-  const pic = img && n.img ? `<div class="oc-news-img"><img src="${esc(n.img)}" alt="" width="400" height="225" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
+function newsItem(n, { img = true, eager = false } = {}) {
+  const pic = img && n.img ? `<div class="oc-news-img"><img src="${esc(n.img)}" alt="" width="400" height="225" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
   return `<article class="oc-news${pic ? ' has-img' : ''}" data-cities="${n.ciudades.join(' ')}">${pic}<div class="oc-news-body"><p class="oc-news-meta">${n.ciudades.map(cityTag).join('')}<span class="oc-news-src">${esc(n.fuente)}</span>${timeTag(n.ts)}</p><h3 class="oc-news-title"><a href="${esc(n.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(n.titulo)}<span class="oc-sr"> (abre ${esc(n.fuente)} en otra pestaña)</span></a></h3>${n.extracto ? `<p class="oc-news-text">${esc(n.extracto)}</p>` : ''}</div></article>`;
 }
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
@@ -332,7 +332,7 @@ function pageNews() {
 </div>
 <h2 class="oc-sr">Listado de noticias</h2>
 <p class="oc-count" data-news-count aria-live="polite">${Math.min(NEWS.items.length, 600)} noticias</p>
-<div class="oc-newsgrid" data-news-list>${NEWS.items.slice(0, 24).map((n) => newsItem(n)).join('')}</div>
+<div class="oc-newsgrid" data-news-list>${NEWS.items.slice(0, 24).map((n, i) => newsItem(n, { eager: i < 2 })).join('')}</div>
 <p class="oc-empty" data-news-empty hidden>No hay noticias con esos filtros. Prueba con otra capital o borra la búsqueda.</p>
 <p class="oc-center"><button class="oc-btn is-quiet" type="button" data-news-more>Cargar más noticias</button></p>`;
   write('noticias/index.html', layout({ title: 'Noticias cofrades de hoy', desc: 'Noticias cofrades de hoy en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: hermandades, bandas, pregones y carteles, con enlace a cada medio.', body, path: 'noticias/', active: 'noticias/', crumbs: [['Portada', u()], ['Noticias', '']] }));
