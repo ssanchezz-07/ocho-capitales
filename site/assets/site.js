@@ -28,8 +28,9 @@
 
   // ---------- capas (hoja «Más» y buscador) con entrada/salida animadas ----------
   var lastFocus = null;
-  function openLayer(el, focusEl) {
+  function openLayer(el, focusEl, instant) {
     lastFocus = document.activeElement;
+    el.classList.toggle('is-instant', !!instant);
     el.hidden = false;
     document.body.style.overflow = 'hidden';
     requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('is-open'); }); });
@@ -39,7 +40,7 @@
     if (!el || el.hidden) return;
     el.classList.remove('is-open');
     document.body.style.overflow = '';
-    setTimeout(function () { el.hidden = true; }, reduced ? 0 : 200);
+    setTimeout(function () { el.hidden = true; }, reduced || el.classList.contains('is-instant') ? 0 : 150);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function trapFocus(el, e) {
@@ -116,7 +117,7 @@
         var on = t.dataset.slot === id;
         t.setAttribute('aria-selected', on ? 'true' : 'false');
         t.tabIndex = on ? 0 : -1;
-        if (on) { if (focus) t.focus(); t.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduced ? 'auto' : 'smooth' }); }
+        if (on) { if (focus) t.focus(); t.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduced || focus ? 'auto' : 'smooth' }); }
       });
       $$('[data-panel]', today).forEach(function (p) {
         var on = p.dataset.panel === id;
@@ -138,7 +139,7 @@
       t.addEventListener('keydown', function (e) {
         var j = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length - 1 : -1;
         if (j < 0) return;
-        e.preventDefault(); j = (j + tabs.length) % tabs.length; selectSlot(tabs[j].dataset.slot, true, true);
+        e.preventDefault(); j = (j + tabs.length) % tabs.length; selectSlot(tabs[j].dataset.slot, true, false);
       });
     });
     // La página se genera cada dos horas: el navegador corrige la jornada si la copia en caché se ha quedado atrás.
@@ -188,7 +189,7 @@
   $$('[data-fav]').forEach(function (b) {
     b.addEventListener('click', function () {
       var k = b.dataset.fav;
-      if (favs[k]) delete favs[k]; else { favs[k] = { n: b.dataset.name, u: location.pathname, t: Date.now() }; if (!reduced) { b.classList.add('is-pop'); setTimeout(function () { b.classList.remove('is-pop'); }, 300); } }
+      if (favs[k]) delete favs[k]; else { favs[k] = { n: b.dataset.name, u: location.pathname, t: Date.now() }; if (!reduced) { b.classList.add('is-pop'); setTimeout(function () { b.classList.remove('is-pop'); }, 200); } }
       try { localStorage.setItem('oc-favs', JSON.stringify(favs)); } catch (e) {}
       paintFavs();
     });
@@ -374,7 +375,7 @@
   }
   var failMsg = '<p class="oc-hint">No se pudo cargar el buscador. Comprueba la conexión y vuelve a intentarlo.</p>';
   var ov = $('[data-search-overlay]'), input = $('[data-search-input]'), results = $('[data-search-results]');
-  function openSearch(e) { if (!ov) return; if (e) e.preventDefault(); input.value = ''; results.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; openLayer(ov, input); loadIdx().catch(function () {}); }
+  function openSearch(e, fromKey) { if (!ov) return; if (e && e.preventDefault) e.preventDefault(); input.value = ''; results.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; openLayer(ov, input, fromKey); loadIdx().catch(function () {}); }
   function closeSearch() { closeLayer(ov); }
   $$('[data-open-search]').forEach(function (b) { b.addEventListener('click', openSearch); });
   $$('[data-close-search]').forEach(function (b) { b.addEventListener('click', closeSearch); });
@@ -393,7 +394,7 @@
   }
   document.addEventListener('keydown', function (e) {
     var tag = document.activeElement && document.activeElement.tagName;
-    if (e.key === '/' && !/input|textarea|select/i.test(tag) && !e.ctrlKey && !e.metaKey) { e.preventDefault(); openSearch(); }
+    if (e.key === '/' && !/input|textarea|select/i.test(tag) && !e.ctrlKey && !e.metaKey) { e.preventDefault(); openSearch(null, true); }
   });
   var sp = $('[data-search-page]');
   if (sp) {
