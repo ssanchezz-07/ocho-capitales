@@ -39,6 +39,12 @@ Conecta el repositorio en https://pages.cloudflare.com → *Build command:* `cd 
 - **Prueba de estrés del diseño:** `PEOR_CASO=1 node build.mjs` genera el sitio con nombres larguísimos, campos vacíos e imágenes rotas. Solo para revisar; vuelve a ejecutar `node build.mjs` antes de publicar.
 - El servidor local comprime como GitHub Pages, así que Lighthouse en local da cifras comparables.
 
+## Imágenes
+Las fotos se sirven desde el propio sitio en WebP (160, 480 y 960 px) desde `site/assets/img/`, con su autor y licencia de Wikimedia Commons (índice en `site/data/imagenes.json`).
+- **Añadir o rehacer imágenes:** en `site/scripts/` ejecuta `npm install` (solo la primera vez) y `node procesar-imagenes.mjs`. Descarga de Commons lo que falte y lo optimiza; `--todo` lo rehace todo.
+- **Buscar fotos para hermandades sin imagen:** `node buscar-imagenes.mjs` propone candidatas libres cuyos metadatos nombran la hermandad y la ciudad (`site/data/imagenes-nuevas.json`). `node hoja-contacto.mjs` genera hojas para revisarlas a ojo; solo se usan las marcadas con `"aprobada": true`.
+- Estas herramientas no se usan en la publicación automática: el flujo de GitHub solo copia las imágenes ya procesadas.
+
 ## Diseño
 El contexto de producto está en `PRODUCT.md`. Estilos en `site/assets/site.css` (una sola hoja, tokens claros y oscuros), interacción en `site/assets/site.js` y plantillas en `site/build.mjs`. Los iconos de app (`icon-192.png`, `icon-512.png`, `apple-touch-icon.png`) y la imagen para compartir (`og.png`) están en `site/assets/`.
 

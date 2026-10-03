@@ -1,0 +1,2997 @@
+{
+ "generado": "2026-10-03T12:46:09.480Z",
+ "hermandades": {
+  "el-amor-sevilla": {
+   "w": 960,
+   "h": 1158,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Amor.svg"
+  },
+  "jesus-despojado-sevilla": {
+   "w": 160,
+   "h": 205,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_Jes%C3%BAs_Despojado.jpg"
+  },
+  "la-paz-sevilla": {
+   "w": 960,
+   "h": 548,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Carlos Ruiz Nieto",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Entrada_palio_La_Paz_en_parque_Maria_Luisa_(pano).jpg"
+  },
+  "la-cena-sevilla": {
+   "w": 960,
+   "h": 1445,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_cena.png"
+  },
+  "la-hiniesta-sevilla": {
+   "w": 960,
+   "h": 1392,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Anual",
+   "licencia": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nazarenos_hiniesta.jpg"
+  },
+  "san-roque-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Ángel Chacón",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaSanRoque1.jpeg"
+  },
+  "la-estrella-sevilla": {
+   "w": 960,
+   "h": 1085,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Estrella.svg"
+  },
+  "la-amargura-sevilla": {
+   "w": 960,
+   "h": 1209,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_de_la_Amargura_(Sevilla).svg"
+  },
+  "san-pablo-sevilla": {
+   "w": 960,
+   "h": 1189,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_San_Pablo_(Sevilla).svg"
+  },
+  "redencion-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Redenci%C3%B3n.jpg"
+  },
+  "santa-genoveva-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_Santa_Genoveva.JPG"
+  },
+  "santa-marta-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Manuel Agüera Ostos",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg"
+  },
+  "san-gonzalo-sevilla": {
+   "w": 160,
+   "h": 295,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_San_Gonzalo.JPG"
+  },
+  "vera-cruz-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Vera%2BCruz.JPG"
+  },
+  "las-penas-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaPenas2.jpg"
+  },
+  "las-aguas-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Estandarte_Hdad_de_las_Aguas.jpg"
+  },
+  "el-museo-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaMuseo2.jpg"
+  },
+  "el-cerro-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaElCerro1.jpg"
+  },
+  "los-javieres-sevilla": {
+   "w": 158,
+   "h": 161,
+   "widths": [
+    158
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_los_Javieres.JPG"
+  },
+  "san-esteban-sevilla": {
+   "w": 960,
+   "h": 960,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "SamuelInzunza\n\n\n \n\n\nThis picture was made for the Taller de Heráldica y vexilología of Spanish Wikipedia.",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_San_Esteban_(Sevilla).svg"
+  },
+  "los-estudiantes-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaEstudiantes3.jpg"
+  },
+  "san-benito-sevilla": {
+   "w": 160,
+   "h": 240,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaSanBenito1.jpg"
+  },
+  "la-candelaria-sevilla": {
+   "w": 480,
+   "h": 573,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Candelaria.jpg"
+  },
+  "dulce-nombre-la-bofeta-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "José Luis Filpo Cabana",
+   "licencia": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_ante_An%C3%A1s,_Sevilla.jpg"
+  },
+  "santa-cruz-sevilla": {
+   "w": 150,
+   "h": 150,
+   "widths": [
+    150
+   ],
+   "escudo": true,
+   "autor": "Hermandad de Santa Cruz",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_oficial_de_la_Hermandad_de_Santa_Cruz.png"
+  },
+  "el-carmen-doloroso-sevilla": {
+   "w": 960,
+   "h": 992,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Bocinaplatea",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_del_Carmen.png"
+  },
+  "la-sed-sevilla": {
+   "w": 160,
+   "h": 221,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Sed.JPG"
+  },
+  "san-bernardo-sevilla": {
+   "w": 160,
+   "h": 206,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_San_Bernardo.JPG"
+  },
+  "el-buen-fin-sevilla": {
+   "w": 960,
+   "h": 1339,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Buen_Fin_Sevilla.svg"
+  },
+  "la-lanzada-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Lanzada.JPG"
+  },
+  "el-baratillo-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Ángel Cachón",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaElBaratillo.jpeg"
+  },
+  "cristo-de-burgos-sevilla": {
+   "w": 960,
+   "h": 974,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Burgos_(Sevilla).svg"
+  },
+  "siete-palabras-sevilla": {
+   "w": 960,
+   "h": 1434,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Mflito",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_de_las_Siete_Palabras.jpg"
+  },
+  "los-panaderos-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Soberano_Poder_01.jpg"
+  },
+  "los-negritos-sevilla": {
+   "w": 160,
+   "h": 190,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_los_Negritos.JPG"
+  },
+  "la-exaltacion-los-caballos-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_los_Caballos.JPG"
+  },
+  "las-cigarreras-sevilla": {
+   "w": 960,
+   "h": 1158,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Cigarreras.svg"
+  },
+  "montesion-sevilla": {
+   "w": 960,
+   "h": 1423,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "SamuelInzunza\n\n\n \n\n\nThis picture was made for the Taller de Heráldica y vexilología of Spanish Wikipedia.",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_Monte-Si%C3%B3n.svg"
+  },
+  "la-quinta-angustia-sevilla": {
+   "w": 960,
+   "h": 1094,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Quinta_Angustia.svg"
+  },
+  "el-valle-sevilla": {
+   "w": 960,
+   "h": 998,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Valle.svg"
+  },
+  "pasion-sevilla": {
+   "w": 960,
+   "h": 1587,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Pasion_(Sevilla).svg"
+  },
+  "el-silencio-sevilla": {
+   "w": 480,
+   "h": 472,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Glorianazarenorum",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_silencio_trasp.PNG"
+  },
+  "el-gran-poder-sevilla": {
+   "w": 480,
+   "h": 659,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._del_Gran_Poder.JPG"
+  },
+  "el-calvario-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._del_Calvario.JPG"
+  },
+  "la-esperanza-de-triana-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Esperanza_de_Triana.JPG"
+  },
+  "los-gitanos-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_los_Gitanos.JPG"
+  },
+  "la-carreteria-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_la_Carreter%C3%ADa.JPG"
+  },
+  "san-isidoro-sevilla": {
+   "w": 960,
+   "h": 960,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "SamuelInzunza",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla).svg"
+  },
+  "la-o-sevilla": {
+   "w": 480,
+   "h": 717,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Mflito",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_O.jpg"
+  },
+  "san-buenaventura-sevilla": {
+   "w": 960,
+   "h": 960,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Soledad de San Buenaventura",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Soledad_de_San_Buenaventura.jpg"
+  },
+  "montserrat-sevilla": {
+   "w": 960,
+   "h": 1295,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Kirbo12",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Montserrat_(Sevilla).svg"
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaSagradaMortaja1.jpg"
+  },
+  "el-cachorro-sevilla": {
+   "w": 480,
+   "h": 406,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Ggleon",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristodelaexpiracion.jpg"
+  },
+  "los-servitas-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Servitas_01.JPG"
+  },
+  "la-trinidad-sevilla": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Trinidad_02.jpg"
+  },
+  "el-santo-entierro-sevilla": {
+   "w": 160,
+   "h": 218,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Juan de la lama",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Duelo_santo_entierro_sevilla.jpg"
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "w": 960,
+   "h": 643,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Mflito",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Paso_de_la_Soledad_de_San_Lorenzo.jpg"
+  },
+  "la-resurreccion-sevilla": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Joseobrero",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Sagrada_Resurrecci%C3%B3n_de_Ntro._Se%C3%B1or..JPG"
+  },
+  "bellavista-sevilla": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hdad._de_Bellavista.JPG"
+  },
+  "bendicion-y-esperanza-sevilla": {
+   "w": 960,
+   "h": 1195,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Elisabeth Sanchez Mejillas",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_Bendici%C3%B3n_y_Esperanza_(Sevilla).jpg"
+  },
+  "pasion-y-muerte-sevilla": {
+   "w": 160,
+   "h": 156,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Ked-man",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_pasi%C3%B3n_y_muerte.jpg"
+  },
+  "pino-montano-sevilla": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Estandarte_de_la_Hermandad_de_Pino_Montano.jpg"
+  },
+  "la-mision-sevilla": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Estandarte_de_la_Hermandad_de_la_Misi%C3%B3n.jpg"
+  },
+  "cristo-de-la-corona-sevilla": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "J sevillista",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_del_Cristo_de_la_Corona.png"
+  },
+  "padre-pio-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_Palmete.JPG"
+  },
+  "san-jose-obrero-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_San_Jos%C3%A9_Obrero.JPG"
+  },
+  "la-milagrosa-sevilla": {
+   "w": 160,
+   "h": 205,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_la_Milagrosa.JPG"
+  },
+  "dolores-de-torreblanca-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_Torreblanca.JPG"
+  },
+  "divino-perdon-sevilla": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Samu Bético",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_del_Divino_Perd%C3%B3n_de_Alcosa.JPG"
+  },
+  "el-sol-sevilla": {
+   "w": 480,
+   "h": 717,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Mflito",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Sol.jpg"
+  },
+  "pollinica-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_Padre_Jesus_2.jpg"
+  },
+  "dulce-nombre-malaga": {
+   "w": 960,
+   "h": 845,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jesusdelasoledad.JPG"
+  },
+  "salutacion-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Salutacion_-_Trono_Jesus_Nazareno.jpg"
+  },
+  "humildad-malaga": {
+   "w": 160,
+   "h": 228,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Humildad_malaga.png"
+  },
+  "salud-malaga": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio España from Madrid, España",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Esperanza_en_su_Gran_Amor_(Salud)_(4471734106).jpg"
+  },
+  "humildad-y-paciencia-malaga": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pel78",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Humildad_y_Paciencia_de_M%C3%A1laga.jpg"
+  },
+  "huerto-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg"
+  },
+  "prendimiento-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Prendimiento_-_Perdon.jpg"
+  },
+  "crucifixion-malaga": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio España from Madrid, España",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crucifixi%C3%B3n_en_calle_Larios_(4475804089).jpg"
+  },
+  "gitanos-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_-_Trono_Columna.jpg"
+  },
+  "dolores-del-puente-malaga": {
+   "w": 480,
+   "h": 344,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Composision de la cofradia\n\ncc",
+   "licencia": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Doloresdelpuentecoronada_cristodelperdon.jpg"
+  },
+  "pasion-malaga": {
+   "w": 160,
+   "h": 240,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_-_M%C3%A1laga.jpg"
+  },
+  "cautivo-malaga": {
+   "w": 160,
+   "h": 252,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Kalgalanos",
+   "licencia": "Public domain",
+   "licurl": "",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo1.jpg"
+  },
+  "estudiantes-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio España from Madrid, España",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg"
+  },
+  "rocio-malaga": {
+   "w": 480,
+   "h": 320,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Editor123assa",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Traslado_rocio_malaga.jpg"
+  },
+  "penas-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Penas_-_Trono_del_Cristo_3.jpg"
+  },
+  "nueva-esperanza-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nueva_Esperanza_-_Trono_del_Nazareno.jpg"
+  },
+  "rescate-malaga": {
+   "w": 480,
+   "h": 853,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Rodrigueznovaspuls.m",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:VirgenDeGraciaMalaga.JPG"
+  },
+  "sentencia-malaga": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio España from Madrid, España",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_sentenciado,_detr%C3%A1s_Pilatos_se_lava_las_manos_(Sentencia)_(4479618898).jpg"
+  },
+  "mediadora-malaga": {
+   "w": 160,
+   "h": 224,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Mediadora",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mediadora02.jpg"
+  },
+  "fusionadas-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Noeliagarcia04",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:FusionadasAzotes.jpg"
+  },
+  "paloma-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_la_Paloma.jpg"
+  },
+  "el-rico-malaga": {
+   "w": 960,
+   "h": 1472,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Enr1993",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:El_rico_malaga.jpg"
+  },
+  "sangre-malaga": {
+   "w": 480,
+   "h": 720,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Isa Ruiz from Málaga, España",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Semana_Santa_(13886747822).jpg"
+  },
+  "expiracion-malaga": {
+   "w": 960,
+   "h": 1382,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Juanma Sánchez",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_en_su_trono.jpg"
+  },
+  "sagrada-cena-malaga": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Morancio",
+   "licencia": "Public domain",
+   "licurl": "",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Cena.jpg"
+  },
+  "vineros-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg"
+  },
+  "santa-cruz-malaga": {
+   "w": 160,
+   "h": 222,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_M%C3%A1laga.jpg"
+  },
+  "mena-malaga": {
+   "w": 160,
+   "h": 110,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Cofradia de Mena",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:EL_ESCUDO_DE_LA_CONGREGACION_DE_MENA.jpg"
+  },
+  "zamarrilla-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "TheVisuales",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_los_Milagros_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Amargura_Coronada.JPG"
+  },
+  "misericordia-malaga": {
+   "w": 480,
+   "h": 360,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Alberto Medina Kilgore",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Granpoder.jpg"
+  },
+  "esperanza-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Esperanza_Trono_3.jpg"
+  },
+  "descendimiento-malaga": {
+   "w": 480,
+   "h": 361,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Descendimiento_de_M%C3%A1laga.jpg"
+  },
+  "amor-malaga": {
+   "w": 480,
+   "h": 339,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Angeltorrico",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Amor_y_Nuestra_Se%C3%B1ora_de_la_Caridad.jpg"
+  },
+  "traslado-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Santo_Traslado_Traslado_2.jpg"
+  },
+  "piedad-malaga": {
+   "w": 160,
+   "h": 231,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Escuzao",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Malaga.jpg"
+  },
+  "santo-sepulcro-malaga": {
+   "w": 960,
+   "h": 625,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Malagaescofrade",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:2v.jpg"
+  },
+  "servitas-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Servitas_Trono.jpg"
+  },
+  "cristo-de-san-agustin-granada": {
+   "w": 160,
+   "h": 227,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Hermandad de San Agustín",
+   "licencia": "Public domain",
+   "licurl": "",
+   "pagina": "https://commons.wikimedia.org/wiki/File:EscudoSanAgustin.gif"
+  },
+  "tres-caidas-y-rosario-granada": {
+   "w": 130,
+   "h": 134,
+   "widths": [
+    130
+   ],
+   "escudo": true,
+   "autor": "Tomasjpardo",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Solo_escudo_hermandad.jpg"
+  },
+  "entrada-triunfal-cordoba": {
+   "w": 960,
+   "h": 980,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pablo2248",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Entrada_Triunfal_(C%C3%B3rdoba).jpg"
+  },
+  "penas-de-santiago-cordoba": {
+   "w": 480,
+   "h": 520,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Penas_de_Santiago.png"
+  },
+  "vera-cruz-cordoba": {
+   "w": 960,
+   "h": 1200,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Arte en Córdoba",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SEMANA_SANTA_VERACRUZ_CORDOBA_05.jpg"
+  },
+  "el-rescatado-cordoba": {
+   "w": 480,
+   "h": 741,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_Rescatado_(cord).png"
+  },
+  "la-esperanza-cordoba": {
+   "w": 480,
+   "h": 721,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Cofradecordobes16",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Esperanzacordoba.jpg"
+  },
+  "el-amor-cordoba": {
+   "w": 480,
+   "h": 641,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Amor_(c%C3%B3rdoba).png"
+  },
+  "el-huerto-cordoba": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_(C%C3%B3rdoba).jpg"
+  },
+  "la-merced-cordoba": {
+   "w": 480,
+   "h": 658,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "José Gabriel Zurera",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Merced-2010-8.jpg"
+  },
+  "la-estrella-cordoba": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Abgaro2123",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ntra._Sra._de_la_Estrella_C%C3%B3rdoba_2012.jpg"
+  },
+  "la-sentencia-cordoba": {
+   "w": 160,
+   "h": 200,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Rafael Castejón",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_la_Sentencia.png"
+  },
+  "via-crucis-cordoba": {
+   "w": 160,
+   "h": 213,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "José Ignacio Aguilera Castelló y Jesús D. Caparrós Carretero",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:V%C3%ADa_Crucis.png"
+  },
+  "animas-cordoba": {
+   "w": 960,
+   "h": 1327,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Co12",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:REMEDIO_DE_%C3%81NIMAS_C%C3%93RDOBA_(3).jpg"
+  },
+  "la-agonia-cordoba": {
+   "w": 480,
+   "h": 634,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "José Gabriel Zurera",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_La_Agon%C3%ADa.jpg"
+  },
+  "la-universitaria-cordoba": {
+   "w": 480,
+   "h": 675,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Montenegro",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Universidad.jpg"
+  },
+  "la-sangre-cordoba": {
+   "w": 480,
+   "h": 649,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Carlos9933",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Se%C3%B1or_de_la_Sangre.jpg"
+  },
+  "el-buen-suceso-cordoba": {
+   "w": 960,
+   "h": 1359,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "FedeAlvrz01",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:PasoBuenSuceso.jpg"
+  },
+  "la-santa-faz-cordoba": {
+   "w": 480,
+   "h": 578,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Diego Gómez",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_Encuentro_con_la_Santa_Mujer_Ver%C3%B3nica_de_Santa_Faz.jpg"
+  },
+  "el-prendimiento-cordoba": {
+   "w": 480,
+   "h": 636,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "José Gabriel Zurera",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_en_su_Prendimiento.jpg"
+  },
+  "el-perdon-cordoba": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Emilio Luque",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_del_Perd%C3%B3n_(mi%C3%A9rcoles_santo)._Semana_Santa_de_C%C3%B3rdoba_(Andaluc%C3%ADa),_2006.jpg"
+  },
+  "el-calvario-cordoba": {
+   "w": 480,
+   "h": 730,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Se%C3%B1or_del_Calvario.jpg"
+  },
+  "la-paz-cordoba": {
+   "w": 480,
+   "h": 686,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Carlos9933",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_la_Paz.jpg"
+  },
+  "la-misericordia-cordoba": {
+   "w": 960,
+   "h": 656,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Arte C",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Misericordia_y_Nuestra_Se%C3%B1ora_de_las_L%C3%A1grimas_en_su_Desamparo.jpg"
+  },
+  "la-pasion-cordoba": {
+   "w": 480,
+   "h": 656,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Fresno",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_Pasi%C3%B3n.jpg"
+  },
+  "la-piedad-cordoba": {
+   "w": 160,
+   "h": 216,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Carlos9933",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg"
+  },
+  "jesus-nazareno-cordoba": {
+   "w": 480,
+   "h": 670,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazaren.jpg"
+  },
+  "la-caridad-cordoba": {
+   "w": 480,
+   "h": 697,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:HERMANDAD_DE_LA_CARIDAD.png"
+  },
+  "jesus-caido-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "CordobesAM",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_Ca%C3%ADdo_(2017).jpg"
+  },
+  "las-angustias-cordoba": {
+   "w": 160,
+   "h": 244,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Carlos9933",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hdad._de_las_Angustias.png"
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Zarateman",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cordoba_-_Iglesia_de_Nuestra_Se%C3%B1ora_de_Gracia_(Trinitariios)_0.jpg"
+  },
+  "la-buena-muerte-cordoba": {
+   "w": 480,
+   "h": 683,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_la_Buena_Muerte.jpg"
+  },
+  "la-soledad-cordoba": {
+   "w": 480,
+   "h": 666,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Soledad.jpg"
+  },
+  "la-expiracion-cordoba": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "José Luis Filpo Cabana",
+   "licencia": "CC BY 4.0",
+   "licurl": "https://creativecommons.org/licenses/by/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Capilla_de_la_Hermandad_de_la_Expiraci%C3%B3n,_C%C3%B3rdoba.jpg"
+  },
+  "el-descendimiento-cordoba": {
+   "w": 480,
+   "h": 480,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Descendimiento Córdoba",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo-descen-transparante-sin-texto.png"
+  },
+  "la-conversion-cordoba": {
+   "w": 960,
+   "h": 1177,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "FedeAlvrz01",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Paso_Conversi%C3%B3n_C%C3%B3rdoba.jpg"
+  },
+  "los-dolores-cordoba": {
+   "w": 960,
+   "h": 1243,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Ca",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg"
+  },
+  "santo-sepulcro-cordoba": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Marco Chiesa from Madrid, Spain",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cofrad%C3%ADa_del_Santo_Sepulcro_(3757739379).jpg"
+  },
+  "presentacion-al-pueblo-cordoba": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Cofraderuan",
+   "licencia": "CC BY 4.0",
+   "licurl": "https://creativecommons.org/licenses/by/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg"
+  },
+  "sagrada-cena-cadiz": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Migonzalva",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_la_Sagrada_Cena_(C%C3%A1diz).png"
+  },
+  "la-expiracion-cadiz": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "ROSAPASION",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Expiraci%C3%B3n.JPG"
+  },
+  "el-perdon-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Huelva2009",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Perdonhuelva222.jpg"
+  },
+  "los-estudiantes-huelva": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Morenohuelva",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Sangre_Huelva.jpg"
+  },
+  "pasion-huelva": {
+   "w": 480,
+   "h": 655,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": true,
+   "autor": "Jesusrh30031965",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Anagrama32.jpg"
+  },
+  "la-victoria-huelva": {
+   "w": 160,
+   "h": 191,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "Webvicto",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_de_la_Victoria_de_Huelva.png"
+  },
+  "el-prendimiento-almeria": {
+   "w": 480,
+   "h": 641,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Miguel Ángel",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Prendimiento_-_7054027283.jpg"
+  },
+  "la-macarena-almeria": {
+   "w": 960,
+   "h": 1201,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": true,
+   "autor": "Alvaro Abril Vela, dibujo escudo de la hermandad",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:ESCUDO_MACARENA_ALMERIA_ALVARO_ABRIL_VELA.jpg"
+  },
+  "santa-cena-jaen": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cena_Ja%C3%A9n.jpg"
+  },
+  "la-estrella-jaen": {
+   "w": 160,
+   "h": 160,
+   "widths": [
+    160
+   ],
+   "escudo": true,
+   "autor": "DplazaD",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_Hermandad_Piedad_y_Estrella.jpg"
+  },
+  "la-amargura-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio Espantaleón",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Amargura_Ja%C3%A9n.png"
+  },
+  "los-estudiantes-jaen": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG"
+  },
+  "divino-maestro-lavatorio-jaen": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Bendici%C3%B3n_Lavatorio_Ja%C3%A9n.jpg"
+  },
+  "la-clemencia-jaen": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Cofrade jaen",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Clemencia.jpg"
+  },
+  "el-silencio-jaen": {
+   "w": 160,
+   "h": 240,
+   "widths": [
+    160
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristohumildad1.jpg"
+  },
+  "el-cautivo-jaen": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Antonio Espantaleón",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_Ja%C3%A9n.png"
+  },
+  "el-perdon-jaen": {
+   "w": 480,
+   "h": 760,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Perd%C3%B3n_Ja%C3%A9n.jpg"
+  },
+  "la-buena-muerte-jaen": {
+   "w": 960,
+   "h": 1707,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Buena_Muerte_Catedral_Ja%C3%A9n.jpg"
+  },
+  "el-gran-poder-jaen": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_Ja%C3%A9n.jpg"
+  },
+  "la-vera-cruz-los-civiles-jaen": {
+   "w": 960,
+   "h": 1441,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Juan Fernández",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Vera-Cruz_2008.jpg"
+  },
+  "la-expiracion-jaen": {
+   "w": 480,
+   "h": 753,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Septenario.jpg"
+  },
+  "la-soledad-jaen": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_Ja%C3%A9n.JPG"
+  },
+  "el-santo-sepulcro-jaen": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Santo_Sepulcro_Jaen.JPG"
+  },
+  "el-resucitado-jaen": {
+   "w": 960,
+   "h": 1707,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Resucitado_Ja%C3%A9n.jpg"
+  },
+  "la-borriquita-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaLaBorriquita2.jpg"
+  },
+  "la-macarena-sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaMacarena3.jpg"
+  },
+  "lagrimas-y-favores-malaga": {
+   "w": 960,
+   "h": 1281,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rodrigo Fernández",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f05_-Maria_Sma_de_Lagrimas_y_Favores.jpg"
+  },
+  "humillacion-y-estrella-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg"
+  },
+  "salesianos-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Salesianos_-_Estandarte.jpg"
+  },
+  "vera-cruz-malaga": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Vera%2BCruz_Lectura.jpg"
+  },
+  "monte-calvario-malaga": {
+   "w": 960,
+   "h": 1445,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Oilisab",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:M%C3%A1laga-Mural_azulejos_Sta_Mar%C3%ADa_del_Monte_Calvario.JPG"
+  },
+  "dolores-de-san-juan-malaga": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "No machine-readable author provided. Azrael666~commonswiki assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:CristoRedencionMalaga001.JPG"
+  },
+  "resucitado-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Pedro J Pacheco",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Resucitado_Guion.jpg"
+  },
+  "la-borriquilla-granada": {
+   "w": 960,
+   "h": 1441,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Luisjav18",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cortejo_de_palmas_de_la_Borriquilla_en_Granada.jpg"
+  },
+  "la-sentencia-maravillas-granada": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Jl FilpoC",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_las_Maravillas,_Iglesia_de_San_Pedro_y_San_Pablo_(Granada).jpg"
+  },
+  "jesus-del-rescate-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Fermín R.F.",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Imagen_de_Nuestro_Padre_Jesus_del_Rescate_en_la_Iglesia_de_la_Magdalena,_en_Granada_(Spain)).jpg"
+  },
+  "el-huerto-granada": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Claudio Landi",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cofrad%C3%ADa_de_la_Oraci%C3%B3n_de_Nuestro_Se%C3%B1or_en_el_Huerto_de_los_Olivos_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Amargura,_Granada,_Semana_Santa_2009_(1).JPG"
+  },
+  "la-lanzada-granada": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Holiwop1",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Lanzada_Granada.JPG"
+  },
+  "los-gitanos-granada": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Luisjav18",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_de_Granada.jpg"
+  },
+  "los-estudiantes-granada": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "GCF1931",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:H%C3%A1bito_Cofrad%C3%ADa_de_los_Estudiantes.jpg"
+  },
+  "la-concha-granada": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Diego",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_concha.jpg"
+  },
+  "la-aurora-granada": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Claudio Landi",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Real,_Venerable_e_Ilustre_Cofrad%C3%ADa_de_Nuestro_Padre_Jes%C3%BAs_del_Perd%C3%B3n_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Aurora,_Granada,_Semana_Santa_2009_(12).JPG"
+  },
+  "los-favores-granada": {
+   "w": 960,
+   "h": 1441,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Luisjav18",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_los_Favores._Granada.jpg"
+  },
+  "santo-entierro-granada": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Chopanito",
+   "licencia": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Santo_Entierro.jpg"
+  },
+  "lagrimas-cordoba": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "FedeAlvrz01",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Paso_L%C3%A1grimas_C%C3%B3rdoba.jpg"
+  },
+  "servitas-cadiz": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PEPE GADEIRAS",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:SERVITAS_DE_C%C3%81DIZ.jpg"
+  },
+  "la-borriquita-cadiz": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Emilio J. Rodríguez Posada",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Comienzo_de_La_Borriquita.JPG"
+  },
+  "la-columna-cadiz": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PEPE GADEIRAS",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg"
+  },
+  "las-cigarreras-cadiz": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Cofradia de Cádiz",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Titulares_de_las_Cigarreras_de_c%C3%A1diz_en_sus_retablos.jpg"
+  },
+  "el-caminito-cadiz": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PEPE GADEIRAS",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Angustias_del_Caminito.jpg"
+  },
+  "el-perdon-cadiz": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PEPE GADEIRAS",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DEL_PERD%C3%93N,_C%C3%81DIZ.jpg"
+  },
+  "la-borriquita-huelva": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "El Sepi",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Borriquita_Huelva_2.jpg"
+  },
+  "las-tres-caidas-huelva": {
+   "w": 960,
+   "h": 540,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Calapito",
+   "licencia": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_Tres_Caidas_Huelva.JPG"
+  },
+  "la-salud-huelva": {
+   "w": 960,
+   "h": 1283,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Adrisoto93",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Salud_Huelva_Hdad_de_la_Salud.jpg"
+  },
+  "la-lanzada-huelva": {
+   "w": 960,
+   "h": 1442,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Adry gibra",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg"
+  },
+  "la-borriquita-almeria": {
+   "w": 960,
+   "h": 723,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Urci dream",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:La_Borriquita_2026_01.jpg"
+  },
+  "los-angeles-almeria": {
+   "w": 960,
+   "h": 723,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Urci dream",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_02.jpg"
+  },
+  "la-estrella-almeria": {
+   "w": 960,
+   "h": 723,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Urci dream",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:La_Estrella_Alm_04.jpg"
+  },
+  "pasion-almeria": {
+   "w": 960,
+   "h": 723,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg"
+  },
+  "gran-poder-almeria": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Miguel Ángel",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg"
+  },
+  "la-coronacion-almeria": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Coronaci%C3%B3n_02.jpg"
+  },
+  "el-amor-almeria": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Amor_01.jpg"
+  },
+  "el-calvario-cristo-del-mar-almeria": {
+   "w": 480,
+   "h": 640,
+   "widths": [
+    160,
+    480
+   ],
+   "escudo": false,
+   "autor": "Miguel Ángel",
+   "licencia": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Calvario.jpg"
+  },
+  "las-angustias-almeria": {
+   "w": 960,
+   "h": 723,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Angustias_02.jpg"
+  },
+  "cristo-de-la-escucha-almeria": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Fernando",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg"
+  },
+  "la-soledad-almeria": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PoWaH",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Soledad_de_Almer%C3%ADa_en_su_Besamanos_del_15_de_Septiembre.jpg"
+  },
+  "nuestro-padre-jesus-el-abuelo-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Veinticuatro de Jahén",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_Ja%C3%A9n_24J_05.jpg"
+  }
+ },
+ "capitales": {
+  "sevilla": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Sevilla Congress & Convention Bureau",
+   "licencia": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:19495374488_797a980243_o_Semana_Santa_Armaos.jpg"
+  },
+  "malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "MarinGarcia",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:La_Reina_de_M%C3%A1laga,_la_Virgen_del_Roc%C3%ADo_en_la_Tribuna_de_los_Pobres.jpg"
+  },
+  "granada": {
+   "w": 960,
+   "h": 1354,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Anonimo242002",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:CARTEL-SEMANA-SANTA-GRANADA-2013.jpg"
+  },
+  "cordoba": {
+   "w": 960,
+   "h": 1280,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Cruccone",
+   "licencia": "CC BY-SA 3.0 es",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cordoba_puente_romano_semana_santa.jpg"
+  },
+  "huelva": {
+   "w": 960,
+   "h": 1440,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "El Sepi",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nazarenos_Borriquita_Huelva.jpg"
+  },
+  "almeria": {
+   "w": 960,
+   "h": 1448,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "PoWaH",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_en_Santiago.JPG"
+  },
+  "jaen": {
+   "w": 960,
+   "h": 989,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Rlinx",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Incienso_Ja%C3%A9n.jpg"
+  }
+ }
+}

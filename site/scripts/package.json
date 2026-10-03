@@ -1,0 +1,7 @@
+{
+  "name": "ocho-capitales-imagenes",
+  "private": true,
+  "type": "module",
+  "description": "Herramientas locales para descargar y optimizar imágenes de Wikimedia Commons (no se usan en la publicación automática)",
+  "dependencies": { "sharp": "^0.35.5" }
+}

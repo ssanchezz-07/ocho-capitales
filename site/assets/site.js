@@ -296,9 +296,16 @@
     if (city && !CITY_NAMES[city]) city = '';
     var COLORS = window.OC_COLORS || {};
     var cityTag = function (c) { return CITY_NAMES[c] ? '<span class="oc-city" style="--c:' + (COLORS[c] || 'var(--primary)') + '">' + esc(CITY_NAMES[c]) + '</span>' : ''; };
+    var STOPW = { el: 1, la: 1, los: 1, las: 1, de: 1, del: 1, y: 1, en: 1 };
+    var mono = function (f) {
+      var w = String(f || '').replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter(function (x) { return x && !STOPW[x.toLowerCase()]; });
+      if (!w.length) return '·';
+      if (w.length === 1) return /\d|^[A-ZÁÉÍÓÚÑ]{2,5}$/.test(w[0]) ? w[0].slice(0, 5) : w[0].slice(0, 2).toUpperCase();
+      return (w[0][0] + w[1][0]).toUpperCase();
+    };
     var card = function (n) {
       var d = new Date(n.ts).toISOString();
-      return '<article class="oc-news' + (n.img ? ' has-img' : '') + '">' + (n.img ? '<div class="oc-news-img"><img src="' + esc(n.img) + '" alt="" width="400" height="225" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : '') +
+      return '<article class="oc-news has-img"><div class="oc-news-img" style="--c:' + (COLORS[n.ciudades[0]] || '#4a1f6e') + '" aria-hidden="true"><span class="oc-news-mono">' + esc(mono(n.fuente)) + '</span>' + (n.img ? '<img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken>' : '') + '</div>' +
         '<div class="oc-news-body"><p class="oc-news-meta">' + n.ciudades.map(cityTag).join('') + '<span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time></p><h3 class="oc-news-title"><a href="' + esc(n.url) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3>' + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div></article>';
     };
     var paintChips = function () { $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); }); };

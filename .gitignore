@@ -8,3 +8,5 @@ graphify-out/
 .claude/
 .playwright-mcp/
 capturas/
+node_modules/
+site/scripts/cache/
