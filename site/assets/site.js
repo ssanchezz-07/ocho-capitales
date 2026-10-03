@@ -272,6 +272,83 @@
     cityListeners.push(function (c) { if (c) showCal('cal-' + c); });
   }
 
+  // ---------- agenda cofrade: mes interactivo, filtros por tipo y capital ----------
+  var ag = $('[data-agenda]');
+  if (ag) {
+    var EVS = []; try { EVS = JSON.parse($('#oc-eventos').textContent); } catch (e) {}
+    var TIPOS_AG = {}; try { TIPOS_AG = JSON.parse($('#oc-tipos').textContent); } catch (e) {}
+    var COLS = window.OC_COLORS || {};
+    var hoy = ag.dataset.hoy;
+    var st = { g: '', c: getCity(), sel: '', y: +hoy.slice(0, 4), m: +hoy.slice(5, 7) - 1 };
+    var monthBox = $('[data-month]', ag), daysBox = $('[data-month-days]', ag), titleBox = $('[data-month-title]', ag);
+    var listBox = $('[data-agenda-list]', ag), listTitle = $('[data-agenda-list-title]', ag), emptyBox = $('[data-agenda-empty]', ag), resetBtn = $('[data-agenda-reset]', ag);
+    var citySel = $('[data-agenda-ciudad]', ag);
+    var MESES_L = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var key = function (y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); };
+    var dotClass = function (g) { return g === 'liturgico' || g === 'salidas' || g === 'cultos' ? g : 'otros'; };
+    // los eventos litúrgicos valen para todas las capitales
+    var match = function (e) { return (!st.g || e.g === st.g) && (!st.c || !e.c || e.c === st.c); };
+    var item = function (e) {
+      var d = new Date(e.f + 'T12:00:00Z');
+      var city = e.c ? '<span class="oc-city" style="--c:' + (COLS[e.c] || 'var(--primary)') + '">' + esc(CITY_NAMES[e.c] || e.c) + '</span>' : '<span>Todas las capitales</span>';
+      var title = e.u ? '<a href="' + esc(e.u) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(e.n) + '<span class="oc-sr"> (abre ' + esc(e.m) + ')</span></a>' : esc(e.n);
+      return '<li class="oc-ev"><time class="oc-ev-date" datetime="' + e.f + '"><span>' + d.getUTCDate() + '</span>' + MESES_L[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-' + e.g + '">' + esc(TIPOS_AG[e.t] || e.t) + '</span>' + city + '</p><p class="oc-ev-title">' + title + '</p>' + (e.o ? '<p class="oc-ev-note">' + esc(e.o) + '</p>' : '') + (e.m ? '<p class="oc-ev-note">Fuente: ' + esc(e.m) + '</p>' : '') + '</div></li>';
+    };
+    var renderList = function () {
+      var r;
+      if (st.sel) {
+        r = EVS.filter(function (e) { return e.f === st.sel && match(e); });
+        var d = new Date(st.sel + 'T12:00:00Z');
+        listTitle.textContent = 'Eventos del ' + d.getUTCDate() + ' de ' + MESES_L[d.getUTCMonth()];
+      } else {
+        r = EVS.filter(function (e) { return e.f >= hoy && match(e); }).slice(0, 14);
+        listTitle.textContent = 'Próximos eventos';
+      }
+      listBox.innerHTML = r.map(item).join('');
+      emptyBox.hidden = r.length > 0;
+      resetBtn.hidden = !st.sel;
+    };
+    var renderMonth = function () {
+      titleBox.textContent = MESES_L[st.m].charAt(0).toUpperCase() + MESES_L[st.m].slice(1) + ' ' + st.y;
+      var first = new Date(Date.UTC(st.y, st.m, 1));
+      var lead = (first.getUTCDay() + 6) % 7; // lunes primero
+      var days = new Date(Date.UTC(st.y, st.m + 1, 0)).getUTCDate();
+      var byDay = {};
+      EVS.forEach(function (e) { if (match(e)) (byDay[e.f] = byDay[e.f] || []).push(e); });
+      var html = '';
+      for (var i = 0; i < lead; i++) html += '<span class="oc-day is-blank" aria-hidden="true"></span>';
+      for (var d = 1; d <= days; d++) {
+        var k = key(st.y, st.m, d), evs = byDay[k] || [];
+        var groups = []; evs.forEach(function (e) { var c = dotClass(e.g); if (groups.indexOf(c) === -1) groups.push(c); });
+        var label = d + ' de ' + MESES_L[st.m] + (evs.length ? ', ' + evs.length + (evs.length === 1 ? ' evento' : ' eventos') : ', sin eventos');
+        html += '<button type="button" class="oc-day' + (k === hoy ? ' is-today' : '') + (k === st.sel ? ' is-selected' : '') + (evs.length ? ' has-ev' : '') + '" data-day="' + k + '" aria-label="' + label + '" aria-pressed="' + (k === st.sel) + '"' + (evs.length ? '' : ' disabled') + '><span>' + d + '</span><i class="oc-dots">' + groups.slice(0, 3).map(function (g) { return '<b class="oc-dot is-' + g + '"></b>'; }).join('') + '</i></button>';
+      }
+      daysBox.innerHTML = html;
+    };
+    var render = function () { renderMonth(); renderList(); };
+    daysBox.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-day]'); if (!b || b.disabled) return;
+      st.sel = st.sel === b.dataset.day ? '' : b.dataset.day; render();
+      if (st.sel && window.matchMedia('(max-width: 959px)').matches) listTitle.scrollIntoView({ block: 'start', behavior: reduced ? 'auto' : 'smooth' });
+    });
+    $('[data-month-prev]', ag).addEventListener('click', function () { st.m--; if (st.m < 0) { st.m = 11; st.y--; } st.sel = ''; render(); });
+    $('[data-month-next]', ag).addEventListener('click', function () { st.m++; if (st.m > 11) { st.m = 0; st.y++; } st.sel = ''; render(); });
+    resetBtn.addEventListener('click', function () { st.sel = ''; render(); });
+    $$('[data-agenda-tipo] button', ag).forEach(function (b) {
+      b.addEventListener('click', function () {
+        st.g = b.dataset.v;
+        $$('[data-agenda-tipo] button', ag).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        render();
+      });
+    });
+    citySel.value = st.c;
+    citySel.addEventListener('change', function () { st.c = citySel.value; render(); });
+    cityListeners.push(function (c) { st.c = c; citySel.value = c; render(); });
+    monthBox.hidden = false;
+    render();
+  }
+
   // ---------- capital: jornada visible resaltada en la barra de días ----------
   var daynav = $('.oc-daynav');
   if (daynav && 'IntersectionObserver' in window) {

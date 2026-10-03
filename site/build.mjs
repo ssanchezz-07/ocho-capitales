@@ -195,6 +195,66 @@ function newsItem(n, { img = true, eager = false } = {}) {
 }
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
 
+// ---------- agenda cofrade: fechas litúrgicas calculadas + eventos anunciados en las noticias ----------
+const TIPOS = { liturgico: 'Calendario litúrgico', magna: 'Magna', extraordinaria: 'Salida extraordinaria', procesion: 'Procesión', traslado: 'Traslado', coronacion: 'Coronación', 'via-crucis': 'Vía crucis', culto: 'Cultos', besamanos: 'Besamanos', concierto: 'Concierto', pregon: 'Pregón', cartel: 'Cartel' };
+const GRUPOS = [['', 'Todo'], ['liturgico', 'Litúrgico'], ['salidas', 'Procesiones'], ['via-crucis', 'Vía crucis'], ['cultos', 'Cultos'], ['musica', 'Conciertos'], ['anuncios', 'Pregones y carteles']];
+const GRUPO_DE = { liturgico: 'liturgico', magna: 'salidas', extraordinaria: 'salidas', procesion: 'salidas', traslado: 'salidas', coronacion: 'salidas', 'via-crucis': 'via-crucis', culto: 'cultos', besamanos: 'cultos', concierto: 'musica', pregon: 'anuncios', cartel: 'anuncios' };
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const DIAS_SEM = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+const isoDay = (ms) => new Date(ms).toISOString().slice(0, 10);
+function eventosLiturgicos(years) {
+  const ev = [];
+  for (const y of years) {
+    const e = easter(y);
+    const add = (off, titulo, nota) => ev.push({ fecha: isoDay(e + off * 864e5), tipo: 'liturgico', titulo, nota, ciudad: '' });
+    add(-46, 'Miércoles de Ceniza', 'Comienza la Cuaresma.');
+    add(-9, 'Viernes de Dolores', 'Vísperas de la Semana Santa.');
+    add(-7, 'Domingo de Ramos', 'Comienza la Semana Santa.');
+    add(-3, 'Jueves Santo', 'Santos Oficios y, por la noche, la Madrugá.');
+    add(-2, 'Viernes Santo', 'Pasión y muerte del Señor.');
+    add(0, 'Domingo de Resurrección', 'Termina la Semana Santa.');
+    add(60, 'Corpus Christi', 'Procesión del Santísimo en las capitales andaluzas.');
+  }
+  return ev;
+}
+// Tipo y fecha a partir del titular y el extracto. Solo se acepta con una fecha concreta y si la noticia es de una capital.
+const EV_TIPOS = [['magna', /\bmagna\b/], ['coronacion', /coronacion/], ['extraordinaria', /(salida|procesion|recorrido|itinerario)[^.]{0,40}extraordinari|extraordinari[^.]{0,20}(salida|procesion)/], ['via-crucis', /via ?crucis/], ['traslado', /traslado/], ['besamanos', /besamanos|besapies/], ['culto', /triduo|quinario|novena|septenario|funcion principal/], ['concierto', /concierto/], ['pregon', /pregon/], ['cartel', /cartel (oficial|de la semana santa)|presentacion del cartel|presentara el cartel/], ['procesion', /procesion|procesiona|rosario de la aurora/]];
+const EV_NO = /torea|toros|maestranza|futbol|liga |asamblea|cabildo|elecciones|junta de gobierno/;
+function eventosNoticias() {
+  const ev = new Map();
+  for (const n of NEWS.items) {
+    if (!n.ciudades || !n.ciudades.length) continue;
+    const t = norm(n.titulo + ' . ' + (n.extracto || ''));
+    if (EV_NO.test(t)) continue;
+    const ty = EV_TIPOS.find(([, r]) => r.test(t)); if (!ty) continue;
+    const pub = new Date(n.ts); const pubDay = Date.UTC(pub.getUTCFullYear(), pub.getUTCMonth(), pub.getUTCDate());
+    let when = null;
+    const m = t.match(/\b(\d{1,2})(?: y \d{1,2})? de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b/);
+    if (m && +m[1] >= 1 && +m[1] <= 31) { let d = Date.UTC(pub.getUTCFullYear(), MESES.indexOf(m[2]), +m[1]); if (d < pubDay - 60 * 864e5) d = Date.UTC(pub.getUTCFullYear() + 1, MESES.indexOf(m[2]), +m[1]); when = d; }
+    else if (!m) { const w = t.match(/\b(?:este|el proximo|proximo) (lunes|martes|miercoles|jueves|viernes|sabado|domingo)\b/); if (w) { const target = DIAS_SEM.indexOf(w[1]); const diff = (target - new Date(pubDay).getUTCDay() + 7) % 7; when = pubDay + diff * 864e5; } }
+    if (when == null || when < pubDay - 3 * 864e5 || when > pubDay + 240 * 864e5) continue;
+    const fecha = isoDay(when);
+    for (const ciudad of n.ciudades) {
+      const k = fecha + '|' + ty[0] + '|' + ciudad;
+      const prev = ev.get(k);
+      if (prev) { if (prev.fuentes.length < 3 && !prev.fuentes.some((f) => f.url === n.url || f.medio === n.fuente)) prev.fuentes.push({ url: n.url, medio: n.fuente }); continue; }
+      ev.set(k, { fecha, tipo: ty[0], titulo: n.titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
+    }
+  }
+  return [...ev.values()];
+}
+function agenda() {
+  const now = madridNow();
+  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...eventosNoticias()];
+  return list.sort((a, b) => a.fecha.localeCompare(b.fecha) || (a.tipo === 'liturgico' ? -1 : 1));
+}
+function agendaItem(e) {
+  const d = new Date(e.fecha + 'T12:00:00Z').getTime();
+  const c = CAP[e.ciudad];
+  const link = e.fuentes ? `<a href="${esc(e.fuentes[0].url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(e.titulo)}<span class="oc-sr"> (abre ${esc(e.fuentes[0].medio)})</span></a>` : esc(e.titulo);
+  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(f.medio)).join(', ')}</p>` : ''}</div></li>`;
+}
+
 // ---------- maqueta común ----------
 const NAV = [['noticias/', 'Noticias'], ['capitales/', 'Capitales'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['imagineros/', 'Imagineros']];
 const OG_DEFAULT = 'assets/og.png';
@@ -227,7 +287,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="preload" href="${u('assets/fonts/newsreader-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
-<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
+<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
 </head>
 <body>
 <a class="oc-skip" href="#contenido">Saltar al contenido</a>
@@ -340,6 +400,7 @@ ${todayPanel()}
   <p class="oc-empty" data-latest-empty hidden>Aún no hay noticias recientes de tu ciudad.</p>
   <a class="oc-btn" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
 </section>
+${(() => { const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)); const ev = agenda().filter((e) => e.fecha >= hoy).slice(0, 3); return ev.length ? `<section class="oc-homeagenda" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2><ol class="oc-evs">${ev.map(agendaItem).join('')}</ol><a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>` : ''; })()}
 </div>
 <section class="oc-section" aria-labelledby="porcapital-titulo"><h2 class="oc-h2" id="porcapital-titulo">Noticias por capital</h2><div class="oc-capgrid">${capBlocks}</div></section>
 <section class="oc-section" aria-labelledby="archivo-titulo"><h2 class="oc-h2" id="archivo-titulo">El archivo cofrade</h2>
@@ -492,10 +553,40 @@ function pageDirImag() {
   write('imagineros/index.html', layout({ title: 'Imagineros', desc: 'Los escultores e imagineros de la Semana Santa andaluza y sus obras.', body, path: 'imagineros/', active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', '']] }));
 }
 function pageCalendario() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Calendario de hermandades</h1><p class="oc-lead">Qué sale cada jornada en cada capital, en el orden de paso de la última configuración documentada. Consulta siempre los horarios oficiales del año.</p></header>
+  const EV = agenda();
+  const N = madridNow();
+  const today = isoDay(Date.UTC(N.y, N.m - 1, N.d));
+  const proximos = EV.filter((e) => e.fecha >= today).slice(0, 14);
+  const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '' }))).replace(/</g, '\\u003c');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Calendario cofrade</h1><p class="oc-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p></header>
+<section class="oc-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
+  <h2 class="oc-h2" id="agenda-titulo">Agenda cofrade</h2>
+  <div class="oc-agenda-filters">
+    <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-tipo-l">Tipo</span><ul class="oc-chips is-filter" aria-labelledby="ag-tipo-l" data-agenda-tipo>${GRUPOS.map(([v, l], i) => `<li><button type="button" data-v="${v}" aria-pressed="${i === 0}">${l}</button></li>`).join('')}</ul></div>
+    <div class="oc-field"><label for="ag-ciudad">Capital</label><select id="ag-ciudad" data-agenda-ciudad><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
+  </div>
+  <div class="oc-agenda-grid">
+    <div class="oc-month" data-month hidden>
+      <div class="oc-month-nav"><button class="oc-iconbtn" type="button" data-month-prev aria-label="Mes anterior">${icon('back')}</button><p class="oc-month-title" data-month-title aria-live="polite"></p><button class="oc-iconbtn" type="button" data-month-next aria-label="Mes siguiente">${icon('arrow')}</button></div>
+      <div class="oc-month-week" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="oc-month-days" data-month-days></div>
+      <p class="oc-month-legend"><span><i class="oc-dot is-liturgico"></i>Litúrgico</span><span><i class="oc-dot is-salidas"></i>Procesiones</span><span><i class="oc-dot is-cultos"></i>Cultos</span><span><i class="oc-dot is-otros"></i>Conciertos y anuncios</span></p>
+    </div>
+    <div class="oc-agenda-list">
+      <div class="oc-agenda-listhead"><h3 class="oc-h3" data-agenda-list-title>Próximos eventos</h3><button class="oc-textbtn" type="button" data-agenda-reset hidden>Ver próximos</button></div>
+      <ol class="oc-evs" data-agenda-list>${proximos.map(agendaItem).join('')}</ol>
+      <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
+    </div>
+  </div>
+  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. El resto se extrae automáticamente de las noticias cada dos horas; confirma siempre en la fuente enlazada.</p>
+  <script type="application/json" id="oc-eventos">${data}</script>
+  <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
+</section>
+<h2 class="oc-h2 oc-section" id="orden-de-paso">Orden de paso por capital</h2>
+<p class="oc-note">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
 <div class="oc-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}">${esc(c.nombre)}</a>`).join('')}</div>
 ${D.capitales.map((c, i) => `<section class="oc-cal" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h2 class="oc-h2"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a></h2><div class="oc-cal-days">${byDay(hermsOf(c.slug)).map(([d, list]) => `<section class="oc-cal-day"><h3 class="oc-h3">${esc(d)}</h3><ol class="oc-order">${list.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.sede ? `<span>${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol></section>`).join('')}</div></section>`).join('')}`;
-  write('calendario/index.html', layout({ title: 'Calendario de hermandades', desc: 'Qué hermandades salen cada día de la Semana Santa en las ocho capitales andaluzas, en orden de paso.', body, path: 'calendario/', active: 'calendario/', crumbs: [['Portada', u()], ['Calendario', '']] }));
+  write('calendario/index.html', layout({ title: 'Calendario cofrade', desc: 'Agenda cofrade de las ocho capitales andaluzas: Cuaresma, Semana Santa, salidas extraordinarias, vía crucis, cultos, conciertos y pregones, y el orden de paso de cada jornada.', body, path: 'calendario/', active: 'calendario/', crumbs: [['Portada', u()], ['Calendario', '']] }));
 }
 function pageBuscar() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Buscar</h1></header><form class="oc-searchform" role="search" data-search-page action="${u('buscar/')}"><label class="oc-label" for="q-page">Hermandad, imagen, imaginero, banda, capital o noticia</label><div class="oc-searchform-row"><input id="q-page" name="q" type="search" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search"><button class="oc-btn" type="submit">${icon('search')}<span>Buscar</span></button></div></form><div class="oc-search-results is-page" data-search-page-results aria-live="polite"></div>`;
