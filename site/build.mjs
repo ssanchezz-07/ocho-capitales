@@ -26,6 +26,23 @@ const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 const badImg = (s) => !s || !/^https:/.test(s) || /s\.w\.org\/images\/core\/emoji|gravatar|feeds\.feedburner/.test(s);
 const NEWS = { ...NEWS_RAW, items: NEWS_RAW.items.map((n) => ({ ...n, img: badImg(n.img) ? '' : n.img })) };
 
+// Solo desarrollo: PEOR_CASO=1 genera el sitio con datos extremos pero plausibles para comprobar que nada se rompe.
+if (process.env.PEOR_CASO) {
+  const longest = [...D.hermandades].sort((a, b) => (b.nombre_oficial || '').length - (a.nombre_oficial || '').length);
+  D.hermandades.forEach((h, i) => {
+    if (i % 4 === 0 && longest[i % 20].nombre_oficial) h.nombre = longest[i % 20].nombre_oficial; // nombre oficial completo como nombre visible
+    if (i % 5 === 1) { h.sede = ''; h.titulares = []; h.historia = ''; h.fundacion = ''; h.imagen = null; h.web = ''; h.nombre_oficial = ''; h.paso = ''; h.musica = ''; }
+    if (i % 7 === 2) { h.web = 'https://www.hermandaddelsantisimocristodelaexpiracionymariasantisimadelaesperanza.es/inicio/historia-de-la-hermandad/'; h.sede = 'Parroquia de Nuestra Señora de la Asunción y San Juan Bautista (Barrio de San Juan de Aznalfarache, junto a la Plaza de la Constitución)'; }
+  });
+  D.bandas[0].acompana = []; D.bandas[1].nombre = 'Agrupación Musical Nuestra Señora de los Reyes y Santísimo Cristo de la Buena Muerte de San Juan de Aznalfarache';
+  D.imagineros[0].obras = D.imagineros[0].obras.slice(0, 1); D.imagineros[1].obras = []; D.imagineros[1].bio = ''; D.imagineros[1].vida = '';
+  NEWS.items.forEach((n, i) => {
+    if (i % 3 === 0) n.titulo = 'La Agrupación de Hermandades y Cofradías presenta el cartel, el pregón y el itinerario oficial de la Semana Santa 2027 con importantes novedades en la carrera oficial, los horarios de paso por la Catedral y el acompañamiento musical';
+    if (i % 4 === 1) { n.ciudades = ['sevilla', 'cordoba', 'almeria']; n.fuente = 'Agrupación de Hermandades y Cofradías de la Ciudad de Almería'; }
+    if (i % 5 === 2) n.img = 'https://example.invalid/imagen-que-no-existe.jpg';
+  });
+}
+
 // ---------- índices ----------
 const CAP = Object.fromEntries(D.capitales.map((c) => [c.slug, c]));
 const IMAG = Object.fromEntries(D.imagineros.map((i) => [i.slug, i]));
@@ -202,7 +219,7 @@ ${body}
       <nav aria-label="Capitales"><h2>Capitales</h2><ul>${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a></li>`).join('')}</ul></nav>
       <nav aria-label="Archivo"><h2>Archivo</h2><ul><li><a href="${u('noticias/')}">Noticias</a></li><li><a href="${u('calendario/')}">Calendario</a></li><li><a href="${u('hermandades/')}">Hermandades</a></li><li><a href="${u('bandas/')}">Bandas</a></li><li><a href="${u('imagineros/')}">Imagineros</a></li><li><a href="${u('favoritos/')}">Mis favoritos</a></li></ul></nav>
       <div><h2>${BRAND}</h2><ul><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
-        <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Como el sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
+        <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
     <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades contrastados con consejos, agrupaciones y federaciones oficiales. Imágenes de Wikimedia Commons con su licencia.</p>
   </div>
@@ -376,7 +393,7 @@ function pageHerm(h) {
   const body = `<article class="oc-ficha">
 <header class="oc-hero${im ? ' has-img' : ''}" style="--c:${c.color}">
   <div class="oc-hero-text">
-    <h1 class="oc-title">${esc(h.nombre)}</h1>
+    <h1 class="oc-title${h.nombre.length > 60 ? ' is-long' : ''}">${esc(h.nombre)}</h1>
     ${h.nombre_oficial ? `<p class="oc-subtitle">${esc(h.nombre_oficial)}</p>` : ''}
     ${facts([['Capital', `<a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a>`], ['Día de salida', `<a href="${u('semana-santa/' + c.slug + '/#' + slugify(h.dia))}">${esc(h.dia)}</a>${vecinos.length > 1 ? ` <span class="oc-muted">(${idx + 1}.ª de ${vecinos.length})</span>` : ''}`], ['Sede', h.sede ? `${esc(h.sede)} <a class="oc-maplink" href="${mapLink(h.sede + ', ' + c.nombre)}" target="_blank" rel="noopener">${icon('pin')}Cómo llegar</a>` : ''], ['Titulares', titList], ['Fundación', esc(h.fundacion)], ['Web oficial', h.web ? `<a class="oc-break" href="${esc(h.web)}" target="_blank" rel="noopener">${esc(webTxt)}</a>` : '']], 'is-key')}
     <div class="oc-actions">${favBtn('hermandad', h.slug, h.nombre + ' (' + c.nombre + ')')}${shareBtn()}</div>
@@ -402,7 +419,7 @@ ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid
 function pageBanda(b) {
   const porCiudad = D.capitales.map((c) => [c, b.acompana.filter((a) => a.ciudad === c.slug && HERM[a.hermandad_slug])]).filter(([, l]) => l.length);
   const acompana = porCiudad.map(([c, l]) => `<h3 class="oc-h3">${esc(c.nombre)}</h3>${chips(l.map((a) => [`${HERM[a.hermandad_slug].nombre}${a.rol ? ' (' + a.rol + ')' : ''}`, u('hermandad/' + a.hermandad_slug + '/')]))}`).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">${esc(b.nombre)}</h1>${facts([['Tipo', esc(b.tipo)], ['Localidad', esc(b.localidad)], ['Hermandades en el portal', String(b.acompana.filter((a) => HERM[a.hermandad_slug]).length)]], 'is-key')}<div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div></header>${section('Acompaña a', acompana || '<p class="oc-empty">No hay hermandades del portal asociadas a esta formación.</p>')}<p class="oc-note">Configuración musical según la última información recopilada; las hermandades la cambian con frecuencia de un año a otro.</p>`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title${b.nombre.length > 60 ? ' is-long' : ''}">${esc(b.nombre)}</h1>${facts([['Tipo', esc(b.tipo)], ['Localidad', esc(b.localidad)], ['Hermandades en el portal', String(b.acompana.filter((a) => HERM[a.hermandad_slug]).length)]], 'is-key')}<div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div></header>${section('Acompaña a', acompana || '<p class="oc-empty">No hay hermandades del portal asociadas a esta formación.</p>')}<p class="oc-note">Configuración musical según la última información recopilada; las hermandades la cambian con frecuencia de un año a otro.</p>`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre, desc: `${b.nombre} (${b.tipo}${b.localidad ? ', ' + b.localidad : ''}): hermandades a las que acompaña en la Semana Santa andaluza.`, body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
@@ -414,7 +431,7 @@ function pageImag(i) {
 
 function dirFilters(withDay, tipos, total) {
   return `<div class="oc-filters" data-dir-filters>
-  <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular, imaginero…" autocomplete="off" enterkeyhint="search"></div>
+  <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular…" autocomplete="off" enterkeyhint="search"></div>
   <div class="oc-field"><label for="fc">Capital</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
   ${withDay ? `<div class="oc-field"><label for="fd">Día</label><select id="fd" data-f="dia"><option value="">Todos</option>${DAY_ORDER.filter((d) => D.hermandades.some((h) => h.dia === d)).map((d) => `<option value="${slugify(d)}">${esc(d)}</option>`).join('')}</select></div>` : ''}
   ${tipos ? `<div class="oc-field"><label for="ft">Tipo</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}

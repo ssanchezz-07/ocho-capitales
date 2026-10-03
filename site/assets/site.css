@@ -185,6 +185,7 @@ strong, b { font-weight: 700; }
 .oc-crumbs [aria-current] { color: var(--ink); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 24ch; }
 
 .oc-title { font: 600 clamp(2rem, 1.35rem + 2.8vw, 3.25rem)/1.08 var(--serif); letter-spacing: -.018em; overflow-wrap: break-word; hyphens: auto; }
+.oc-title.is-long { font-size: clamp(1.45rem, 1.2rem + 1.2vw, 2rem); line-height: 1.18; letter-spacing: -.01em; }
 .oc-title-city { font-size: clamp(2.2rem, 1.4rem + 3.6vw, 3.75rem); }
 .oc-subtitle { color: var(--muted); margin: 8px 0 0; font-size: 1rem; }
 .oc-lead { color: var(--muted); font-size: 1.1rem; max-width: 62ch; margin: 10px 0 0; }
@@ -486,7 +487,7 @@ html[data-city] .oc-daypanel { grid-template-columns: minmax(0, 1fr); }
 .oc-footer nav[aria-label="Capitales"] ul { columns: 2; column-gap: 16px; }
 @media (hover: hover) and (pointer: fine) { .oc-footer li a:hover { color: var(--primary); text-decoration: underline; } }
 .oc-theme { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; font-weight: 700; color: var(--ink); font-size: .92rem; }
-.oc-theme select { height: 44px; max-width: 12rem; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--bg); color: var(--ink); font-weight: 400; }
+.oc-theme select { height: 44px; width: 100%; max-width: 12rem; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--bg); color: var(--ink); font-weight: 400; }
 .oc-legal { font-size: .88rem; margin: 28px 0 0; padding-top: 16px; border-top: 1px solid var(--line); max-width: 90ch; }
 
 /* ---------- movimiento reducido ---------- */
