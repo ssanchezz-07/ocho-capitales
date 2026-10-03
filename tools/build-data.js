@@ -226,6 +226,44 @@ const bs = new Set(); for (const b of bandOut) { let s = b.slug, i = 2; while (b
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));
 for (const h of hermandades) h.bandas_slugs = h.bandas.map((n) => bandBySlugName.get(n.toLowerCase())).filter(Boolean);
 
+// ---------- complementos verificados (tools/sources/complementos.json) ----------
+// Datos buscados en fuentes abiertas y revisados a mano. Solo rellenan campos vacíos; las correcciones de día
+// y las nuevas cofradías de vísperas llevan su fuente. Ver tools/buscar-complementos.mjs.
+const COMP_FILE = path.join(__dirname, 'sources', 'complementos.json');
+const COMP = fs.existsSync(COMP_FILE) ? JSON.parse(fs.readFileSync(COMP_FILE, 'utf8')) : {};
+const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+for (const im of imgOut) {
+  const x = (COMP.imagineros || {})[im.nombre];
+  if (!x || x.rechazado || im.bio) continue;
+  const oficio = /imaginer/i.test(x.descripcion) ? 'Escultor e imaginero' : /escultor/i.test(x.descripcion) ? 'Escultor' : 'Escultor';
+  if (!im.vida) im.vida = x.nacimiento && x.muerte ? `${x.nacimiento}–${x.muerte}` : x.nacimiento ? `n. ${x.nacimiento}` : '';
+  im.bio = `${oficio}${x.lugar ? ' nacido en ' + x.lugar : ''}${x.nacimiento ? (x.muerte ? ` (${x.nacimiento}–${x.muerte})` : ` en ${x.nacimiento}`) : ''}.`.replace(' nacido en ' + x.lugar + ' en ', ' nacido en ' + x.lugar + ' en ');
+  im.fuente_url = x.wikipedia || x.wikidata;
+}
+const HBY = new Map(hermandades.map((h) => [h.slug, h]));
+for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
+  const h = HBY.get(slug); if (!h) continue;
+  if (!h.web && x.web_oficial && x.web_oficial.url) { h.web = x.web_oficial.url; h.web_fuente = x.web_oficial.fuente; }
+  const w = x.sevilla_wd;
+  if (w) { if (!h.web && w.web) { h.web = w.web; h.web_fuente = w.wikidata; } if (!h.fundacion && w.fundacion) h.fundacion = w.fundacion; if (!h.nombre_oficial && w.nombre_oficial) h.nombre_oficial = w.nombre_oficial; }
+}
+const V = COMP.visperas || {};
+for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; h.dia_fuente = c.fuente; } }
+for (const s of V.salidas_extra || []) { const h = HBY.get(s.slug); if (h) (h.salidas = h.salidas || []).push({ dia: s.dia, titulares: s.titulares, hora: s.hora || '', sede: s.sede || '', nota: s.nota || '', fuente: s.fuente }); }
+for (const n of V.nuevas || []) {
+  const slug = slugify(n.nombre + ' ' + n.ciudad);
+  if (HBY.has(slug)) continue;
+  const orden = hermandades.filter((h) => h.ciudad === n.ciudad && h.dia === n.dia).length + 1;
+  const h = { slug, nombre: n.nombre, ciudad: n.ciudad, dia: n.dia, orden, sede: n.sede || '', fundacion: '', titulares: (n.titulares || []).map((t) => ({ nombre: t, autor: '', imaginero: '', atrib: false })), paso: n.paso || '', musica: n.musica || '', historia: '', nombre_oficial: n.nombre_oficial || '', fuente_url: n.fuente, web: '', imagen: null, marchas: [], musica_oficial: [], bandas: [], bandas_slugs: [], hora: n.hora || '', visperas: true };
+  hermandades.push(h); HBY.set(slug, h);
+}
+// En las vísperas el orden de paso sigue la hora de salida publicada.
+const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
+for (const dia of ['Viernes de Dolores', 'Sábado de Pasión']) for (const ciudad of new Set(hermandades.map((h) => h.ciudad))) {
+  const list = hermandades.filter((h) => h.ciudad === ciudad && h.dia === dia);
+  // solo donde hay cofradías de vísperas añadidas; las que no tienen hora confirmada van al final
+  if (list.some((h) => h.visperas)) list.sort((x, y) => (mins(x.hora) ?? 9999) - (mins(y.hora) ?? 9999)).forEach((h, i) => { h.orden = i + 1; });
+}
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });

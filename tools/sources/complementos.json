@@ -1,0 +1,2309 @@
+{
+ "imagineros": {
+  "Antonio Dubé de Luque": {
+   "wikidata": "https://www.wikidata.org/wiki/Q16530966",
+   "etiqueta": "Antonio Dubé de Luque",
+   "descripcion": "escultor español",
+   "nacimiento": "1943",
+   "muerte": "2019",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Dub%C3%A9_de_Luque"
+  },
+  "Juan Martínez Cerrillo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q55992320",
+   "etiqueta": "Juan Martínez Cerrillo",
+   "descripcion": "(1910-1989)",
+   "nacimiento": "1910",
+   "muerte": "1989",
+   "lugar": "",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Mart%C3%ADnez_Cerrillo"
+  },
+  "Antonio Bernal": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5697860",
+   "etiqueta": "Antonio Bernal",
+   "descripcion": "historietista español",
+   "nacimiento": "1924",
+   "muerte": "2013",
+   "lugar": "Hospitalet de Llobregat",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Bernal_Romero",
+   "rechazado": "Wikidata corresponde a un historietista, no al imaginero"
+  },
+  "Antonio Eslava Rubio": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5552294",
+   "etiqueta": "Antonio Eslava Rubio",
+   "descripcion": "escultor e imaginero español",
+   "nacimiento": "1909",
+   "muerte": "1983",
+   "lugar": "Carmona",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Eslava_Rubio"
+  },
+  "Juan Manuel Miñarro": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5951086",
+   "etiqueta": "Juan Manuel Miñarro López",
+   "descripcion": "escultor e imaginero español",
+   "nacimiento": "1954",
+   "muerte": "",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Manuel_Mi%C3%B1arro_L%C3%B3pez"
+  },
+  "Luis Ortega Bru": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5402376",
+   "etiqueta": "Luis Ortega Bru",
+   "descripcion": "escultor español",
+   "nacimiento": "1916",
+   "muerte": "1982",
+   "lugar": "San Roque",
+   "wikipedia": "https://es.wikipedia.org/wiki/Luis_Ortega_Bru"
+  },
+  "Miguel Ángel González Jurado": null,
+  "Miguel Zúñiga": {
+   "wikidata": "https://www.wikidata.org/wiki/Q16911695",
+   "etiqueta": "Miguel Zúñiga Navarro",
+   "descripcion": "escultor español",
+   "nacimiento": "1939",
+   "muerte": "",
+   "lugar": "Granada",
+   "wikipedia": "https://es.wikipedia.org/wiki/Miguel_Z%C3%BA%C3%B1iga_Navarro"
+  },
+  "Domingo Sánchez-Mesa": null,
+  "Francisco Romero Zafra": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5867318",
+   "etiqueta": "Francisco Romero Zafra",
+   "descripcion": "",
+   "nacimiento": "1956",
+   "muerte": "",
+   "lugar": "La Victoria",
+   "wikipedia": "https://es.wikipedia.org/wiki/Francisco_Romero_Zafra"
+  },
+  "José Antonio Navarro Arteaga": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5937987",
+   "etiqueta": "José Antonio Navarro Arteaga",
+   "descripcion": "escultor español",
+   "nacimiento": "1966",
+   "muerte": "",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Navarro_Arteaga"
+  },
+  "Miguel Láinez Capote": null,
+  "Elías Rodríguez Picón": {
+   "wikidata": "https://www.wikidata.org/wiki/Q140088842",
+   "etiqueta": "Elias Rodriguez Picon",
+   "descripcion": "Spanish sculptor, 1974 -",
+   "nacimiento": "1974",
+   "muerte": "",
+   "lugar": "Rociana del Condado",
+   "wikipedia": ""
+  },
+  "Luis González Rey": null,
+  "Sebastián Santos": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6122991",
+   "etiqueta": "Sebastián Santos Calero",
+   "descripcion": "escultor y catedrático español",
+   "nacimiento": "1943",
+   "muerte": "",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Santos_Calero",
+   "rechazado": "Wikidata corresponde a Sebastián Santos Calero; el autor de las obras es Sebastián Santos Rojas"
+  },
+  "Antonio Barbero Gor": null,
+  "Eduardo Espinosa Cuadros": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5819199",
+   "etiqueta": "Eduardo Espinosa Cuadros",
+   "descripcion": "escultor español",
+   "nacimiento": "1884",
+   "muerte": "1956",
+   "lugar": "Granada",
+   "wikipedia": "https://es.wikipedia.org/wiki/Eduardo_Espinosa_Cuadros"
+  },
+  "José Manuel Bonilla": null,
+  "José Martínez Puertas": null,
+  "José Navas Parejo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5944267",
+   "etiqueta": "José Navas-Parejo",
+   "descripcion": "escultor español",
+   "nacimiento": "1883",
+   "muerte": "1953",
+   "lugar": "Álora",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Navas-Parejo"
+  },
+  "Antonio Asensio de la Cerda": null,
+  "Joaquín Gómez del Castillo": null,
+  "José de Medina": null,
+  "José María Hervás": null,
+  "Manuel Carmona Martínez": null,
+  "Miguel Bejarano": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6844454",
+   "etiqueta": "Miguel Bejarano Moreno",
+   "descripcion": "escultor español",
+   "nacimiento": "1967",
+   "muerte": "",
+   "lugar": "Sevilla",
+   "wikipedia": ""
+  },
+  "Nicolás Prados López": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6042443",
+   "etiqueta": "Nicolás Prados López",
+   "descripcion": "pintor, escultor e imaginero español (1913-1990)",
+   "nacimiento": "1913",
+   "muerte": "1990",
+   "lugar": "Málaga",
+   "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Prados_L%C3%B3pez"
+  },
+  "Pedro Moreira": null,
+  "Alfredo Muñoz Arcos": null,
+  "Amadeo Ruiz Olmos": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5395469",
+   "etiqueta": "Amadeo Ruiz Olmos",
+   "descripcion": "escultor español (1913-1993)",
+   "nacimiento": "1913",
+   "muerte": "1993",
+   "lugar": "Benetúser",
+   "wikipedia": "https://es.wikipedia.org/wiki/Amadeo_Ruiz_Olmos"
+  },
+  "Antonio Castillo Ariza": null,
+  "Antonio del Castillo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q606129",
+   "etiqueta": "Antonio del Castillo y Saavedra",
+   "descripcion": "artista español",
+   "nacimiento": "1616",
+   "muerte": "1668",
+   "lugar": "Córdoba",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_del_Castillo_y_Saavedra",
+   "rechazado": "Wikidata corresponde al pintor Antonio del Castillo y Saavedra"
+  },
+  "Antonio Díaz": {
+   "wikidata": "https://www.wikidata.org/wiki/Q601866",
+   "etiqueta": "Antonio Díaz",
+   "descripcion": "ciclista de Uruguay",
+   "nacimiento": "2000",
+   "muerte": "",
+   "lugar": "",
+   "wikipedia": "",
+   "rechazado": "Wikidata corresponde a un ciclista"
+  },
+  "Antonio Gutiérrez de León": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5698564",
+   "etiqueta": "Antonio Gutiérrez de León",
+   "descripcion": "escultor español",
+   "nacimiento": "1831",
+   "muerte": "1896",
+   "lugar": "Málaga",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Guti%C3%A9rrez_de_Le%C3%B3n"
+  },
+  "Antonio Illanes": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5698661",
+   "etiqueta": "Antonio Illanes",
+   "descripcion": "escultor español",
+   "nacimiento": "1901",
+   "muerte": "1976",
+   "lugar": "Umbrete",
+   "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Illanes"
+  },
+  "Aurelio López Azaustre": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5711998",
+   "etiqueta": "Aurelio López Azaustre",
+   "descripcion": "escultor español",
+   "nacimiento": "1925",
+   "muerte": "1988",
+   "lugar": "",
+   "wikipedia": "https://es.wikipedia.org/wiki/Aurelio_L%C3%B3pez_Azaustre"
+  },
+  "Benito Hita del Castillo": null,
+  "David Valenciano": null,
+  "Domenico Giscardi": null,
+  "Eduardo Espinosa Alfambra": null,
+  "Enrique Pérez Saavedra": null,
+  "Francisco de Villegas": null,
+  "Jacinto Pimentel": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5924220",
+   "etiqueta": "Jacinto Pimentel",
+   "descripcion": "escultor español (1605-1676)",
+   "nacimiento": "1605",
+   "muerte": "1676",
+   "lugar": "",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jacinto_Pimentel"
+  },
+  "Jesús de Perceval": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5930831",
+   "etiqueta": "Jesús de Perceval",
+   "descripcion": "pintor y escultor español",
+   "nacimiento": "1915",
+   "muerte": "1985",
+   "lugar": "Almería",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jes%C3%BAs_de_Perceval"
+  },
+  "José Antonio Cabello": null,
+  "José Gabriel Martín Simón": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5939930",
+   "etiqueta": "José Gabriel Martín Simón",
+   "descripcion": "escultor español",
+   "nacimiento": "1896",
+   "muerte": "1971",
+   "lugar": "Granada",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Gabriel_Mart%C3%ADn_Sim%C3%B3n"
+  },
+  "José María Leal": null,
+  "José Miguel Tirao": null,
+  "José Rivera": null,
+  "Juan Abascal": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5946967",
+   "etiqueta": "Juan Abascal Fuentes",
+   "descripcion": "profesor, escultor e imaginero español",
+   "nacimiento": "1922",
+   "muerte": "2003",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Abascal_Fuentes"
+  },
+  "Juan Manuel García Palomo": null,
+  "Luis Alberto García Jeute": null,
+  "Manuel González de los Santos": null,
+  "Manuel Ramos Corona": null,
+  "Peter Sterling": null,
+  "Ramón Chaveli": {
+   "wikidata": "https://www.wikidata.org/wiki/Q24939194",
+   "etiqueta": "Ramón Chaveli Carreres",
+   "descripcion": "escultor español",
+   "nacimiento": "1879",
+   "muerte": "1947",
+   "lugar": "Alcira",
+   "wikipedia": "https://es.wikipedia.org/wiki/Ram%C3%B3n_Chaveli_Carreres"
+  },
+  "Rubén Fernández Parra": null,
+  "Salvador Madroñal": null,
+  "Torcuato Ruiz del Peral": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6149110",
+   "etiqueta": "Torcuato Ruiz del Peral",
+   "descripcion": "escultor español",
+   "nacimiento": "1708",
+   "muerte": "1773",
+   "lugar": "Exfiliana",
+   "wikipedia": "https://es.wikipedia.org/wiki/Torcuato_Ruiz_del_Peral"
+  },
+  "Alfonso Berraquero": null,
+  "Alfonso Castellano": null,
+  "Andrés Cabello Requena": null,
+  "Andrés Cansino": {
+   "wikidata": "https://www.wikidata.org/wiki/Q17621028",
+   "etiqueta": "Andrés Cansino",
+   "descripcion": "escultor español",
+   "nacimiento": "1636",
+   "muerte": "1670",
+   "lugar": "",
+   "wikipedia": "https://es.wikipedia.org/wiki/Andr%C3%A9s_Cansino"
+  },
+  "Andrés de Castillejo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5676221",
+   "etiqueta": "Andrés de Castillejo",
+   "descripcion": "escultor español",
+   "nacimiento": "1550",
+   "muerte": "1625",
+   "lugar": "provincia de Córdoba",
+   "wikipedia": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Castillejos"
+  },
+  "Andrés de Ocampo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5676253",
+   "etiqueta": "Andrés de Ocampo",
+   "descripcion": "escultor castellano",
+   "nacimiento": "1555",
+   "muerte": "1623",
+   "lugar": "Villacarrillo",
+   "wikipedia": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Ocampo"
+  },
+  "Antonio Cardoso de Quirós": null,
+  "Antonio José Martínez": null,
+  "Antonio Rubio": {
+   "wikidata": "https://www.wikidata.org/wiki/Q98804150",
+   "etiqueta": "Antonio Rubio",
+   "descripcion": "pintor español",
+   "nacimiento": "",
+   "muerte": "1653",
+   "lugar": "",
+   "wikipedia": "",
+   "rechazado": "Wikidata corresponde a un pintor homónimo"
+  },
+  "Antonio Salto Román": null,
+  "Constantino Unghetti": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5784504",
+   "etiqueta": "Constantino Unghetti Álamo",
+   "descripcion": "escultor español",
+   "nacimiento": "1923",
+   "muerte": "2015",
+   "lugar": "Castellar",
+   "wikipedia": "https://es.wikipedia.org/wiki/Constantino_Unghetti"
+  },
+  "Darío Fernández Parra": {
+   "wikidata": "https://www.wikidata.org/wiki/Q117470350",
+   "etiqueta": "Darío Fernández Parra",
+   "descripcion": "escultor español",
+   "nacimiento": "1973",
+   "muerte": "",
+   "lugar": "Sevilla",
+   "wikipedia": ""
+  },
+  "Diego de Aranda": {
+   "wikidata": "https://www.wikidata.org/wiki/Q98822614",
+   "etiqueta": "Diego de Aranda",
+   "descripcion": "escultor español",
+   "nacimiento": "",
+   "muerte": "1563",
+   "lugar": "",
+   "wikipedia": ""
+  },
+  "Diego de Mora": {
+   "wikidata": "https://www.wikidata.org/wiki/Q99859763",
+   "etiqueta": "Diego de Mora",
+   "descripcion": "Spanish sculptor, 1658-1729",
+   "nacimiento": "1658",
+   "muerte": "1729",
+   "lugar": "",
+   "wikipedia": ""
+  },
+  "Edwin González Solís": null,
+  "Emilio Luis Bartús": null,
+  "Emilio Navas-Parejo": null,
+  "Enrique Galarza": null,
+  "Fernando Díaz de Pacheco": null,
+  "Francesco Maria Mayo": null,
+  "Francisco de Ocampo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5868020",
+   "etiqueta": "Francisco de Ocampo y Felguera",
+   "descripcion": "escultor castellano (1579-1639)",
+   "nacimiento": "1579",
+   "muerte": "1639",
+   "lugar": "Villacarrillo",
+   "wikipedia": "https://es.wikipedia.org/wiki/Francisco_de_Ocampo_y_Felguera"
+  },
+  "Francisco Javier Navarro Moragas": null,
+  "Francisco Morales": {
+   "wikidata": "https://www.wikidata.org/wiki/Q15411290",
+   "etiqueta": "Francisco Morales",
+   "descripcion": "cartujo y pintor español",
+   "nacimiento": "1660",
+   "muerte": "1720",
+   "lugar": "Azores",
+   "wikipedia": "https://es.wikipedia.org/wiki/Francisco_Morales_(pintor)",
+   "rechazado": "Wikidata corresponde a un cartujo y pintor"
+  },
+  "Francisco Pascual Reyes": null,
+  "Fray Juan de la Concepción": null,
+  "Gabriel Cuadrado": null,
+  "grupo valenciano de": null,
+  "Infantes Reina": null,
+  "Israel Cornejo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5922878",
+   "etiqueta": "Israel Cornejo Sánchez",
+   "descripcion": "escultor e imaginero español",
+   "nacimiento": "1979",
+   "muerte": "",
+   "lugar": "Vélez-Málaga",
+   "wikipedia": "https://es.wikipedia.org/wiki/Israel_Cornejo_S%C3%A1nchez"
+  },
+  "Jacinto Higueras": {
+   "wikidata": "https://www.wikidata.org/wiki/Q9010432",
+   "etiqueta": "Jacinto Higueras Fuentes",
+   "descripcion": "escultor español (1877-1954)",
+   "nacimiento": "1877",
+   "muerte": "1954",
+   "lugar": "Santisteban del Puerto",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jacinto_Higueras"
+  },
+  "Jacobo Florentino «el Indaco»": null,
+  "Jacome Vacaro": null,
+  "Joaquín Moreno Daza": {
+   "wikidata": "https://www.wikidata.org/wiki/Q47499999",
+   "etiqueta": "Joaquín Moreno Daza",
+   "descripcion": "Escultor español",
+   "nacimiento": "1919",
+   "muerte": "1995",
+   "lugar": "Isla Cristina",
+   "wikipedia": "https://es.wikipedia.org/wiki/Joaqu%C3%ADn_Moreno_Daza"
+  },
+  "José Callejón": null,
+  "José Jiménez de Mesa": null,
+  "José María Ruiz Montes": {
+   "wikidata": "https://www.wikidata.org/wiki/Q78760074",
+   "etiqueta": "José María Ruíz Montes",
+   "descripcion": "escultor español",
+   "nacimiento": "1981",
+   "muerte": "",
+   "lugar": "Málaga",
+   "wikipedia": ""
+  },
+  "José Méndez González": null,
+  "José Merino Román": null,
+  "José Montes de Oca": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5677887",
+   "etiqueta": "José Montes de Oca",
+   "descripcion": "escultor español",
+   "nacimiento": "1668",
+   "muerte": "1754",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Montes_de_Oca"
+  },
+  "José Ortells": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5944412",
+   "etiqueta": "José Ortells López",
+   "descripcion": "escultor español",
+   "nacimiento": "1887",
+   "muerte": "1961",
+   "lugar": "Villarreal",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Ortells_L%C3%B3pez"
+  },
+  "José Ortiz": {
+   "wikidata": "https://www.wikidata.org/wiki/Q62018301",
+   "etiqueta": "José Ortiz",
+   "descripcion": "escultor y herrero español (1955- )",
+   "nacimiento": "1955",
+   "muerte": "",
+   "lugar": "Santiago de Compostela",
+   "wikipedia": "",
+   "rechazado": "Coincidencia dudosa (escultor gallego)"
+  },
+  "José Paz Vélez": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5666010",
+   "etiqueta": "José Paz Vélez",
+   "descripcion": "escultor español",
+   "nacimiento": "1931",
+   "muerte": "2011",
+   "lugar": "Sevilla",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Paz_V%C3%A9lez"
+  },
+  "José Risueño": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5408574",
+   "etiqueta": "José Risueño",
+   "descripcion": "pintor y escultor español",
+   "nacimiento": "1665",
+   "muerte": "1732",
+   "lugar": "Granada",
+   "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Risue%C3%B1o"
+  },
+  "Juan Bautista Vázquez el Viejo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6299016",
+   "etiqueta": "Juan Bautista Vázquez el Viejo",
+   "descripcion": "artista español",
+   "nacimiento": "1510",
+   "muerte": "1588",
+   "lugar": "provincia de Salamanca",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Bautista_V%C3%A1zquez_el_Viejo"
+  },
+  "Juan de Astorga": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5953015",
+   "etiqueta": "Juan de Astorga",
+   "descripcion": "escultor español (1779-1849)",
+   "nacimiento": "1779",
+   "muerte": "1849",
+   "lugar": "Archidona",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_de_Astorga"
+  },
+  "Juan Luis Vassallo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5950823",
+   "etiqueta": "Juan Luis Vassallo Parodi",
+   "descripcion": "escultor e imaginero español (1908-1986)",
+   "nacimiento": "1908",
+   "muerte": "1986",
+   "lugar": "Cádiz",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Luis_Vassallo"
+  },
+  "Juan Prieto": null,
+  "Juan Vargas": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5952761",
+   "etiqueta": "Juan Vargas Cortés",
+   "descripcion": "escultor español",
+   "nacimiento": "1900",
+   "muerte": "1980",
+   "lugar": "Málaga",
+   "wikipedia": "https://es.wikipedia.org/wiki/Juan_Vargas_Cort%C3%A9s"
+  },
+  "Juan Ventura": null,
+  "l círculo de Martínez Montañés": null,
+  "Luis Carlos Montesinos": null,
+  "Luis Jiménez": {
+   "wikidata": "https://www.wikidata.org/wiki/Q3266727",
+   "etiqueta": "Luis Jiménez",
+   "descripcion": "artista estadounidense",
+   "nacimiento": "1940",
+   "muerte": "2006",
+   "lugar": "El Paso",
+   "wikipedia": "",
+   "rechazado": "Wikidata corresponde a un artista estadounidense"
+  },
+  "Luis Ortega León": null,
+  "Manuel Domínguez Rodríguez": null,
+  "Manuel Fernández Guerrero": null,
+  "Manuel Martín Nieto": null,
+  "Manuel Pereira": {
+   "wikidata": "https://www.wikidata.org/wiki/Q73731",
+   "etiqueta": "Manuel Pereira",
+   "descripcion": "escultor luso-español",
+   "nacimiento": "1588",
+   "muerte": "1683",
+   "lugar": "Oporto",
+   "wikipedia": "https://es.wikipedia.org/wiki/Manuel_Pereira"
+  },
+  "Manuel Vergara": {
+   "wikidata": "https://www.wikidata.org/wiki/Q11767201",
+   "etiqueta": "Manuel Vergara",
+   "descripcion": "escultor español",
+   "nacimiento": "1650",
+   "muerte": "1762",
+   "lugar": "Valencia",
+   "wikipedia": ""
+  },
+  "Marcos Cabrera": {
+   "wikidata": "https://www.wikidata.org/wiki/Q19632161",
+   "etiqueta": "Marcos Cabrera",
+   "descripcion": "escultor español",
+   "nacimiento": "",
+   "muerte": "",
+   "lugar": "",
+   "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Cabrera",
+   "rechazado": "Sin datos útiles"
+  },
+  "Mario Ignacio Moya": null,
+  "Martín de la Torre": null,
+  "Mateo de Medina": {
+   "wikidata": "https://www.wikidata.org/wiki/Q9030475",
+   "etiqueta": "Mateo de Medina",
+   "descripcion": "escultor español",
+   "nacimiento": "1741",
+   "muerte": "1813",
+   "lugar": "Jaén",
+   "wikipedia": "https://es.wikipedia.org/wiki/Mateo_de_Medina"
+  },
+  "Miguel Ángel Valverde": null,
+  "Miguel Arjona Navarro": {
+   "wikidata": "https://www.wikidata.org/wiki/Q135256672",
+   "etiqueta": "Miguel Arjona Navarro",
+   "descripcion": "escultor español",
+   "nacimiento": "1933",
+   "muerte": "2012",
+   "lugar": "Córdoba",
+   "wikipedia": ""
+  },
+  "Modesto": null,
+  "Pedro de Zayas": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6070639",
+   "etiqueta": "Pedro de Zayas",
+   "descripcion": "escultor español del siglo XVII",
+   "nacimiento": "",
+   "muerte": "1649",
+   "lugar": "Úbeda",
+   "wikipedia": "https://es.wikipedia.org/wiki/Pedro_de_Zayas"
+  },
+  "Pedro García Velasco": null,
+  "Pío Mollar Franch": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6093889",
+   "etiqueta": "Pío Mollar Franch",
+   "descripcion": "escultor español",
+   "nacimiento": "1878",
+   "muerte": "1953",
+   "lugar": "Valencia",
+   "wikipedia": "https://es.wikipedia.org/wiki/P%C3%ADo_Mollar_Franch"
+  },
+  "Rafael Rubio Vernia": null,
+  "Ramón Mateu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q96751228",
+   "etiqueta": "Ramón Mateu Montesinos",
+   "descripcion": "escultor español",
+   "nacimiento": "1891",
+   "muerte": "1981",
+   "lugar": "Valencia",
+   "wikipedia": "https://es.wikipedia.org/wiki/Ram%C3%B3n_Mateu_Montesinos"
+  },
+  "Salvador de Cuéllar": null,
+  "Sebastián de Solís": {
+   "wikidata": "https://www.wikidata.org/wiki/Q6123045",
+   "etiqueta": "Sebastián de Solís",
+   "descripcion": "escultor, arquitecto de retablos e imaginero español",
+   "nacimiento": "",
+   "muerte": "1630",
+   "lugar": "Toledo",
+   "wikipedia": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_de_Sol%C3%ADs"
+  },
+  "Suso de Marcos": {
+   "wikidata": "https://www.wikidata.org/wiki/Q9080747",
+   "etiqueta": "Suso de Marcos",
+   "descripcion": "escultor español",
+   "nacimiento": "1950",
+   "muerte": "",
+   "lugar": "Boimorto",
+   "wikipedia": "https://es.wikipedia.org/wiki/Suso_de_Marcos",
+   "rechazado": "Coincidencia dudosa"
+  },
+  "Ventura Gómez Rodríguez": null,
+  "Víctor de los Ríos": {
+   "wikidata": "https://www.wikidata.org/wiki/Q5560004",
+   "etiqueta": "Víctor de los Ríos",
+   "descripcion": "escultor español",
+   "nacimiento": "1909",
+   "muerte": "1996",
+   "lugar": "Santander",
+   "wikipedia": "https://es.wikipedia.org/wiki/V%C3%ADctor_de_los_R%C3%ADos"
+  }
+ },
+ "hermandades": {
+  "pollinica-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiapollinicamalaga.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/pollinica/"
+   }
+  },
+  "lagrimas-y-favores-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiasfusionadas.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/"
+   }
+  },
+  "dulce-nombre-malaga": {
+   "web_oficial": {
+    "url": "http://www.dulcenombre.net",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dulce-nombre/"
+   }
+  },
+  "salutacion-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadsalutacion.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/salutacion/"
+   }
+  },
+  "humildad-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelahumildad.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/humildad/"
+   }
+  },
+  "salud-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelasalud.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/salud/"
+   }
+  },
+  "humildad-y-paciencia-malaga": {
+   "web_oficial": {
+    "url": "http://www.humildadypaciencia.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/"
+   }
+  },
+  "huerto-malaga": {
+   "web_oficial": null
+  },
+  "prendimiento-malaga": {
+   "web_oficial": {
+    "url": "http://www.prendimientoygranperdon.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/prendimiento/"
+   }
+  },
+  "crucifixion-malaga": {
+   "web_oficial": {
+    "url": "http://www.crucifixion.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/crucifixion/"
+   }
+  },
+  "gitanos-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiadelacolumna.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/columna-gitanos/"
+   }
+  },
+  "dolores-del-puente-malaga": {
+   "web_oficial": {
+    "url": "http://www.doloresdelpuente.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dolores-del-puente/"
+   }
+  },
+  "pasion-malaga": {
+   "web_oficial": {
+    "url": "http://www.archicofradiadelapasion.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/pasion/"
+   }
+  },
+  "cautivo-malaga": {
+   "web_oficial": {
+    "url": "http://www.cautivotrinidad.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/cautivo/"
+   }
+  },
+  "estudiantes-malaga": {
+   "web_oficial": {
+    "url": "https://cofradiaestudiantes.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/"
+   }
+  },
+  "rocio-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelrocio.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/rocio/"
+   }
+  },
+  "penas-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiadelaspenas.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/penas/"
+   }
+  },
+  "nueva-esperanza-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadnuevaesperanza.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/nueva-esperanza/"
+   }
+  },
+  "humillacion-y-estrella-malaga": {
+   "web_oficial": {
+    "url": "http://www.humillacionyestrella.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/estrella/"
+   }
+  },
+  "rescate-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiadelrescate.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/rescate/"
+   }
+  },
+  "sentencia-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelasentencia.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sentencia/"
+   }
+  },
+  "mediadora-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadmediadora.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/mediadora-de-la-salvacion/"
+   }
+  },
+  "salesianos-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadsalesianos.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/salesianos/"
+   }
+  },
+  "fusionadas-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiasfusionadas.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/"
+   }
+  },
+  "paloma-malaga": {
+   "web_oficial": {
+    "url": "http://www.lapuenteylapaloma.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/paloma/"
+   }
+  },
+  "el-rico-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiaelrico.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/el-rico/"
+   }
+  },
+  "sangre-malaga": {
+   "web_oficial": {
+    "url": "http://www.archicofradiadelasangre.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sangre/"
+   }
+  },
+  "expiracion-malaga": {
+   "web_oficial": {
+    "url": "http://www.expiracion.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/expiracion/"
+   }
+  },
+  "sagrada-cena-malaga": {
+   "web_oficial": {
+    "url": "http://www.sagradacena.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sagrada-cena/"
+   }
+  },
+  "vineros-malaga": {
+   "web_oficial": null
+  },
+  "santa-cruz-malaga": {
+   "web_oficial": {
+    "url": "http://www.santacruzmalaga.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/santa-cruz/"
+   }
+  },
+  "vera-cruz-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiasfusionadas.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
+   }
+  },
+  "mena-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiamena.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/mena/"
+   }
+  },
+  "zamarrilla-malaga": {
+   "web_oficial": {
+    "url": "http://www.zamarrilla.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/zamarrilla/"
+   }
+  },
+  "misericordia-malaga": {
+   "web_oficial": {
+    "url": "http://www.cofradiamisericordia.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/misericordia/"
+   }
+  },
+  "esperanza-malaga": {
+   "web_oficial": {
+    "url": "http://www.pasoyesperanza.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/esperanza/"
+   }
+  },
+  "monte-calvario-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadcalvario.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/monte-calvario/"
+   }
+  },
+  "descendimiento-malaga": {
+   "web_oficial": {
+    "url": "http://www.descendimiento.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/descendimiento/"
+   }
+  },
+  "dolores-de-san-juan-malaga": {
+   "web_oficial": {
+    "url": "http://www.doloresdesanjuan.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dolores-de-san-juan/"
+   }
+  },
+  "amor-malaga": {
+   "web_oficial": {
+    "url": "http://www.amorycaridad.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/amor/"
+   }
+  },
+  "traslado-malaga": {
+   "web_oficial": {
+    "url": "http://www.trasladoysoledad.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/santo-traslado/"
+   }
+  },
+  "piedad-malaga": {
+   "web_oficial": {
+    "url": "http://www.piedadmalaga.com",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/piedad/"
+   }
+  },
+  "santo-sepulcro-malaga": {
+   "web_oficial": {
+    "url": "http://www.hermandadsepulcro.org",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sepulcro/"
+   }
+  },
+  "servitas-malaga": {
+   "web_oficial": {
+    "url": "http://www.servitasmalaga.es",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/servitas/"
+   }
+  },
+  "resucitado-malaga": {
+   "web_oficial": null
+  },
+  "la-borriquilla-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/"
+   }
+  },
+  "santa-cena-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/"
+   }
+  },
+  "la-sentencia-maravillas-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/pontificia-e-ilustre-hermandad-sacramental-y-cofradia-de-nazarenos-de-jesus-de-la-sentencia-y-maria-santisima-de-las-maravillas/"
+   }
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/"
+   }
+  },
+  "el-cautivo-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/hermandad-sacramental-de-san-francisco-de-asis-y-santa-clara-y-real-cofradia-de-penitencia-de-nuestro-padre-jesus-cautivo-y-maria-santisima-de-la-encarnacion/"
+   }
+  },
+  "el-trabajo-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/venerable-hermandad-de-caridad-del-santisimo-cristo-del-trabajo-y-nuestra-senora-de-la-luz/"
+   }
+  },
+  "nuestra-senora-de-los-dolores-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/real-cofradia-de-nuestra-senora-de-los-dolores/"
+   }
+  },
+  "jesus-del-rescate-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/cofradia-de-nuestro-padre-jesus-del-rescate/"
+   }
+  },
+  "el-huerto-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/"
+   }
+  },
+  "cristo-de-san-agustin-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-sacramental-del-santisimo-cristo-de-san-agustin-jesus-nazareno-de-las-penas-nuestra-madre-y-senora-de-la-consolacion-y-santo-angel-custodio/"
+   }
+  },
+  "la-lanzada-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/venerable-y-fervorosa-hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-senor-jesucristo-en-su-sagrada-lanzada-y-maria-santisima-de-la-caridad/"
+   }
+  },
+  "el-via-crucis-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/real-e-ilustre-hermandad-del-santo-via-crucis-y-nuestra-senora-de-los-favores-y-cofradia-nazarenos-de-jesus-de-la-amargura-maria-santisima-de-las-lagrimas-y-nuestra-senora-de-los-reyes/"
+   }
+  },
+  "la-esperanza-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/"
+   }
+  },
+  "la-canilla-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/"
+   }
+  },
+  "los-gitanos-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/insigne-pontificia-real-colegial-y-magistral-cofradia-del-santisimo-cristo-del-consuelo-y-maria-santisima-del-sacromonte-los-gitanos/"
+   }
+  },
+  "los-estudiantes-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-de-la-esclavitud-del-santisimo-sacramento-y-cofradia-universitaria-de-nuestro-senor-de-la-meditacion-y-maria-santisima-de-los-remedios-reina-y-madre-de-los-estud/"
+   }
+  },
+  "paciencia-y-penas-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/"
+   }
+  },
+  "tres-caidas-y-rosario-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/la-muy-antigua-real-e-ilustre-hermandad-de-nuestro-padre-jesus-de-las-tres-caidas-y-nuestra-senora-del-rosario-en-sus-misterios-dolorosos/"
+   }
+  },
+  "el-nazareno-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/"
+   }
+  },
+  "los-salesianos-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/"
+   }
+  },
+  "la-concha-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/"
+   }
+  },
+  "la-aurora-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/"
+   }
+  },
+  "la-estrella-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/"
+   }
+  },
+  "el-silencio-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/pontificia-y-real-sacramental-del-senor-san-jose-y-animas-y-cofradia-del-santisimo-cristo-de-la-misericordia-silencio/"
+   }
+  },
+  "los-ferroviarios-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/fervorosa-hermandad-de-nazarenos-y-cofradia-de-penitencia-del-santisimo-cristo-de-la-buena-muerte-y-nuestra-senora-del-amor-y-del-trabajo/"
+   }
+  },
+  "los-favores-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/"
+   }
+  },
+  "los-escolapios-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/"
+   }
+  },
+  "santo-entierro-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/pontificia-real-e-ilustre-hermandad-del-santo-sepulcro-y-nuestra-senora-de-la-soledad-del-calvario/"
+   }
+  },
+  "las-chias-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/"
+   }
+  },
+  "santa-maria-de-la-alhambra-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/"
+   }
+  },
+  "la-resurreccion-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/venerable-hermandad-sacramental-del-glorioso-arcangel-san-miguel-y-nazarenos-de-nuestro-senor-de-la-resurreccion-y-santa-maria-del-triunfo/"
+   }
+  },
+  "el-resucitado-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/"
+   }
+  },
+  "los-facundillos-granada": {
+   "web_oficial": {
+    "url": "https://www.centroestudioscofrades.org",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/"
+   }
+  },
+  "entrada-triunfal-cordoba": {
+   "web_oficial": null
+  },
+  "penas-de-santiago-cordoba": {
+   "web_oficial": null
+  },
+  "via-crucis-cordoba": {
+   "web_oficial": null
+  },
+  "animas-cordoba": {
+   "web_oficial": null
+  },
+  "la-agonia-cordoba": {
+   "web_oficial": null
+  },
+  "la-sangre-cordoba": {
+   "web_oficial": null
+  },
+  "el-buen-suceso-cordoba": {
+   "web_oficial": null
+  },
+  "el-perdon-cordoba": {
+   "web_oficial": null
+  },
+  "la-paz-cordoba": {
+   "web_oficial": null
+  },
+  "la-misericordia-cordoba": {
+   "web_oficial": null
+  },
+  "la-piedad-cordoba": {
+   "web_oficial": null
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba": {
+   "web_oficial": null
+  },
+  "la-buena-muerte-cordoba": {
+   "web_oficial": null
+  },
+  "la-soledad-cordoba": {
+   "web_oficial": null
+  },
+  "lagrimas-cordoba": {
+   "web_oficial": null
+  },
+  "servitas-cadiz": {
+   "web_oficial": {
+    "url": "https://servitascadiz.es",
+    "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/"
+   }
+  },
+  "merced-obediencia-cadiz": {
+   "web_oficial": null
+  },
+  "la-borriquita-cadiz": {
+   "web_oficial": null
+  },
+  "el-despojado-cadiz": {
+   "web_oficial": {
+    "url": "http://despojadocadiz.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/despojado/"
+   }
+  },
+  "sagrada-cena-cadiz": {
+   "web_oficial": {
+    "url": "http://www.sagradacenacadiz.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/sagrada-cena/"
+   }
+  },
+  "las-penas-cadiz": {
+   "web_oficial": {
+    "url": "http://archicofradiapenas.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/las-penas/"
+   }
+  },
+  "humildad-y-paciencia-cadiz": {
+   "web_oficial": {
+    "url": "http://www.humildadypacienciacadiz.com",
+    "fuente": "https://consejocofradiascadiz.es/humildad-y-paciencia/"
+   }
+  },
+  "la-palma-cadiz": {
+   "web_oficial": {
+    "url": "https://archicofradiadelapalma.webnode.es",
+    "fuente": "https://consejocofradiascadiz.es/la-palma/"
+   }
+  },
+  "el-prendimiento-cadiz": {
+   "web_oficial": {
+    "url": "http://hermandadprendimientodecadiz.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/prendimiento/"
+   }
+  },
+  "nazareno-del-amor-cadiz": {
+   "web_oficial": {
+    "url": "https://www.nazarenodelamor.es",
+    "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/"
+   }
+  },
+  "vera-cruz-cadiz": {
+   "web_oficial": {
+    "url": "http://veracruzcadiz.es",
+    "fuente": "https://consejocofradiascadiz.es/vera-cruz/"
+   }
+  },
+  "la-sanidad-cadiz": {
+   "web_oficial": {
+    "url": "http://sanidadcadiz.com",
+    "fuente": "https://consejocofradiascadiz.es/sanidad/"
+   }
+  },
+  "la-piedad-cadiz": {
+   "web_oficial": null
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "web_oficial": {
+    "url": "http://caidoydesamparados.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/jesus-caido/"
+   }
+  },
+  "ecce-homo-cadiz": {
+   "web_oficial": {
+    "url": "http://www.archicofradiaeccehomocadiz.com",
+    "fuente": "https://consejocofradiascadiz.es/ecce-homo/"
+   }
+  },
+  "la-columna-cadiz": {
+   "web_oficial": null
+  },
+  "las-cigarreras-cadiz": {
+   "web_oficial": null
+  },
+  "la-sentencia-cadiz": {
+   "web_oficial": {
+    "url": "https://cofradiasentenciacadiz.wordpress.com",
+    "fuente": "https://consejocofradiascadiz.es/sentencia/"
+   }
+  },
+  "las-aguas-cadiz": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelasaguas.com/la-hermandad",
+    "fuente": "https://consejocofradiascadiz.es/las-aguas/"
+   }
+  },
+  "el-caminito-cadiz": {
+   "web_oficial": {
+    "url": "http://www.cofradiadelasangustiascaminito.com",
+    "fuente": "https://consejocofradiascadiz.es/el-caminito/"
+   }
+  },
+  "los-afligidos-cadiz": {
+   "web_oficial": {
+    "url": "http://cofradiadelosafligidos.blogspot.com",
+    "fuente": "https://consejocofradiascadiz.es/afligidos/"
+   }
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "web_oficial": null
+  },
+  "medinaceli-cadiz": {
+   "web_oficial": {
+    "url": "http://www.medinacelicadiz.com",
+    "fuente": "https://consejocofradiascadiz.es/medinaceli/"
+   }
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "web_oficial": {
+    "url": "http://www.nazarenodesantamaria.com",
+    "fuente": "https://consejocofradiascadiz.es/nazareno/"
+   }
+  },
+  "el-perdon-cadiz": {
+   "web_oficial": {
+    "url": "http://perdonyrosario.blogspot.com.es",
+    "fuente": "https://consejocofradiascadiz.es/perdon/"
+   }
+  },
+  "el-descendimiento-cadiz": {
+   "web_oficial": {
+    "url": "http://descendimientocadiz.com",
+    "fuente": "https://consejocofradiascadiz.es/descendimiento/"
+   }
+  },
+  "la-expiracion-cadiz": {
+   "web_oficial": null
+  },
+  "siete-palabras-cadiz": {
+   "web_oficial": null
+  },
+  "la-buena-muerte-cadiz": {
+   "web_oficial": {
+    "url": "http://www.cofradiabuenamuerte.es",
+    "fuente": "https://consejocofradiascadiz.es/buena-muerte/"
+   }
+  },
+  "santo-entierro-cadiz": {
+   "web_oficial": {
+    "url": "http://cofradiasoledaddecadiz.es",
+    "fuente": "https://consejocofradiascadiz.es/soledad/"
+   }
+  },
+  "la-resurreccion-cadiz": {
+   "web_oficial": null
+  },
+  "la-borriquita-huelva": {
+   "web_oficial": {
+    "url": "https://borriquitahuelva.es",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-borriquita/"
+   }
+  },
+  "la-sagrada-cena-huelva": {
+   "web_oficial": null
+  },
+  "la-redencion-huelva": {
+   "web_oficial": null
+  },
+  "los-mutilados-huelva": {
+   "web_oficial": null
+  },
+  "el-perdon-huelva": {
+   "web_oficial": {
+    "url": "https://sacramentaldelperdon.es",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-perdon/"
+   }
+  },
+  "el-cautivo-huelva": {
+   "web_oficial": null
+  },
+  "el-calvario-huelva": {
+   "web_oficial": {
+    "url": "https://www.calvariohuelva.es",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-calvario/"
+   }
+  },
+  "las-tres-caidas-huelva": {
+   "web_oficial": {
+    "url": "https://www.trescaidashuelva.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-las-tres-caidas/"
+   }
+  },
+  "la-salud-huelva": {
+   "web_oficial": null
+  },
+  "la-lanzada-huelva": {
+   "web_oficial": null
+  },
+  "los-estudiantes-huelva": {
+   "web_oficial": null
+  },
+  "pasion-huelva": {
+   "web_oficial": {
+    "url": "https://sacramentaldepasion.org",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-pasion/"
+   }
+  },
+  "el-prendimiento-huelva": {
+   "web_oficial": null
+  },
+  "la-santa-cruz-huelva": {
+   "web_oficial": {
+    "url": "https://www.cofradiasantacruz.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/"
+   }
+  },
+  "la-victoria-huelva": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelavictoria.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-victoria/"
+   }
+  },
+  "la-esperanza-huelva": {
+   "web_oficial": {
+    "url": "https://www.esperanzadehuelva.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-esperanza/"
+   }
+  },
+  "vera-cruz-y-oracion-huelva": {
+   "web_oficial": {
+    "url": "https://veracruzyoracion.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-veracruz-y-oracion-en-el-huerto/"
+   }
+  },
+  "la-misericordia-huelva": {
+   "web_oficial": {
+    "url": "https://www.misericordiahuelva.org",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-misericordia/"
+   }
+  },
+  "la-buena-muerte-huelva": {
+   "web_oficial": {
+    "url": "http://www.hermandadelabuenamuertehuelva.es",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/"
+   }
+  },
+  "los-judios-la-merced-huelva": {
+   "web_oficial": {
+    "url": "https://www.hermandaddelamerced.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-los-judios/"
+   }
+  },
+  "el-nazareno-huelva": {
+   "web_oficial": {
+    "url": "https://hermandadnazarenohuelva.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-nazareno/"
+   }
+  },
+  "la-fe-huelva": {
+   "web_oficial": {
+    "url": "http://@HermandadlaFe",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-fe/"
+   }
+  },
+  "el-descendimiento-huelva": {
+   "web_oficial": {
+    "url": "https://www.descendimientohuelva.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/"
+   }
+  },
+  "el-santo-entierro-huelva": {
+   "web_oficial": null
+  },
+  "el-silencio-la-soledad-huelva": {
+   "web_oficial": null
+  },
+  "el-resucitado-huelva": {
+   "web_oficial": {
+    "url": "https://resucitadohuelva.blogspot.com",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-resucitado/"
+   }
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "web_oficial": null
+  },
+  "la-borriquita-almeria": {
+   "web_oficial": null
+  },
+  "los-angeles-almeria": {
+   "web_oficial": null
+  },
+  "la-estrella-almeria": {
+   "web_oficial": null
+  },
+  "la-santa-cena-almeria": {
+   "web_oficial": {
+    "url": "http://www.santacenadealmeria.org",
+    "fuente": "https://cofradiasdealmeria.es/santa-cena/"
+   }
+  },
+  "pasion-almeria": {
+   "web_oficial": null
+  },
+  "gran-poder-almeria": {
+   "web_oficial": null
+  },
+  "la-coronacion-almeria": {
+   "web_oficial": null
+  },
+  "el-amor-almeria": {
+   "web_oficial": null
+  },
+  "el-perdon-silencio-almeria": {
+   "web_oficial": {
+    "url": "https://www.elperdon.es",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-perdon/"
+   }
+  },
+  "el-calvario-cristo-del-mar-almeria": {
+   "web_oficial": null
+  },
+  "el-prendimiento-almeria": {
+   "web_oficial": {
+    "url": "http://www.hermandaddelprendimiento.com",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+   }
+  },
+  "la-macarena-almeria": {
+   "web_oficial": null
+  },
+  "los-estudiantes-almeria": {
+   "web_oficial": {
+    "url": "http://www.cofradiadeestudiantes.com",
+    "fuente": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+   }
+  },
+  "rosario-del-mar-almeria": {
+   "web_oficial": null
+  },
+  "el-encuentro-jesus-nazareno-almeria": {
+   "web_oficial": {
+    "url": "http://nazarenoalmeriense.blogspot.com",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-encuentro/"
+   }
+  },
+  "las-angustias-almeria": {
+   "web_oficial": null
+  },
+  "el-silencio-descendimiento-almeria": {
+   "web_oficial": {
+    "url": "https://silencioalmeria.blogspot.com",
+    "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/"
+   }
+  },
+  "la-caridad-almeria": {
+   "web_oficial": null
+  },
+  "el-santo-sepulcro-almeria": {
+   "web_oficial": {
+    "url": "http://sepulcro-almeria.blogspot.com",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/"
+   }
+  },
+  "la-soledad-almeria": {
+   "web_oficial": {
+    "url": "http://www.soledadalmeria.com",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/"
+   }
+  },
+  "el-resucitado-almeria": {
+   "web_oficial": null
+  },
+  "divino-maestro-lavatorio-jaen": {
+   "web_oficial": null
+  },
+  "la-clemencia-jaen": {
+   "web_oficial": null
+  },
+  "el-gran-poder-jaen": {
+   "web_oficial": null
+  },
+  "la-borriquita-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q1798637",
+    "web": "http://hermandaddelamor.net",
+    "nombre_oficial": "",
+    "fundacion": "1508"
+   }
+  },
+  "el-amor-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q1798637",
+    "web": "http://hermandaddelamor.net",
+    "nombre_oficial": "",
+    "fundacion": "1508"
+   }
+  },
+  "jesus-despojado-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895051",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-paz-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q979031",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-cena-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895085",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-hiniesta-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5391842",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-roque-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895221",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-estrella-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895087",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": "1560"
+   }
+  },
+  "la-amargura-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895077",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-pablo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895047",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "redencion-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895006",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "santa-genoveva-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895228",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "santa-marta-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895230",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-gonzalo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895213",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "vera-cruz-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895241",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "las-penas-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895115",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "las-aguas-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895110",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-museo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895020",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-cerro-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895016",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "los-javieres-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895127",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-esteban-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895211",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "los-estudiantes-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q1762326",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-benito-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q19950571",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-candelaria-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895079",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "dulce-nombre-la-bofeta-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q6442855",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "santa-cruz-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895225",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-carmen-doloroso-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895476",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-sed-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895104",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-bernardo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895209",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-buen-fin-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895009",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-lanzada-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895092",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-baratillo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5859139",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "cristo-de-burgos-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895488",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "siete-palabras-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895117",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "los-panaderos-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895133",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "los-negritos-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895129",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-exaltacion-los-caballos-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895089",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "las-cigarreras-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5560849",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "montesion-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895139",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-quinta-angustia-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895098",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-valle-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895026",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "pasion-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5481008",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-silencio-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895023",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": "1356"
+   }
+  },
+  "el-gran-poder-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5404054",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-macarena-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q647101",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-calvario-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895014",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-esperanza-de-triana-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895286",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": "1418"
+   }
+  },
+  "los-gitanos-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895455",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-carreteria-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895083",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-isidoro-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895121",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-o-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895095",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-buenaventura-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895238",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "montserrat-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q18649800",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895342",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-cachorro-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895012",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "los-servitas-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895134",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-trinidad-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5843726",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-santo-entierro-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895235",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895106",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-resurreccion-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895101",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "bellavista-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895517",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "bendicion-y-esperanza-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q16482563",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "pasion-y-muerte-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895196",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "pino-montano-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895202",
+    "web": "http://www.hermandadpinomontano.es",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-mision-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895306",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "cristo-de-la-corona-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895494",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "padre-pio-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5661573",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "san-jose-obrero-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q9003073",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "la-milagrosa-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5660126",
+    "web": "http://www.semana-santa.org/hermandades-y-cofradias-de-sevilla/hermandades-visperas-semana-santa-de-sevilla/la-milagrosa-hermandades-de-visperas-de-la-semana-santa-de-sevilla/",
+    "nombre_oficial": "",
+    "fundacion": "2015"
+   }
+  },
+  "dolores-de-torreblanca-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895441",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "divino-perdon-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5895513",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  },
+  "el-sol-sevilla": {
+   "sevilla_wd": {
+    "wikidata": "https://www.wikidata.org/wiki/Q5409503",
+    "web": "",
+    "nombre_oficial": "",
+    "fundacion": ""
+   }
+  }
+ },
+ "visperas": {
+  "revisado": "2026-10-03",
+  "nota": "Vísperas (Viernes de Dolores y Sábado de Pasión) revisadas en las ocho capitales con guías de prensa de 2026. Granada y Jaén: sin procesiones de vísperas en la capital según las fuentes consultadas.",
+  "correcciones_dia": [
+   {
+    "slug": "nuestra-senora-del-prado-huelva",
+    "dia": "Viernes de Dolores",
+    "hora": "18:00",
+    "fuente": "https://huelvabuenasnoticias.com/2026/03/27/viernes-de-dolores-huelva-2026-hermandades-horarios-estrenos/"
+   },
+   {
+    "slug": "lagrimas-cordoba",
+    "dia": "Sábado de Pasión",
+    "hora": "19:00",
+    "fuente": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+   },
+   {
+    "slug": "presentacion-al-pueblo-cordoba",
+    "dia": "Lunes Santo",
+    "hora": "16:00",
+    "fuente": "https://www.cordoba.info/evento/presentacion-al-pueblo-cordoba/"
+   },
+   {
+    "slug": "servitas-cadiz",
+    "dia": "Viernes de Dolores",
+    "hora": "19:00",
+    "fuente": "https://www.gentedepaz.es/cadiz-se-prepara-para-vivir-la-semana-santa-2026-con-pasion-y-devocion-itinerario-y-horarios-de-la-semana-santa-de-cadiz-2026/"
+   },
+   {
+    "slug": "merced-obediencia-cadiz",
+    "dia": "Sábado de Pasión",
+    "fuente": "https://www.gentedepaz.es/cadiz-se-prepara-para-vivir-la-semana-santa-2026-con-pasion-y-devocion-itinerario-y-horarios-de-la-semana-santa-de-cadiz-2026/"
+   }
+  ],
+  "salidas_extra": [
+   {
+    "slug": "la-lanzada-huelva",
+    "dia": "Viernes de Dolores",
+    "titulares": "Nuestra Señora de los Dolores",
+    "hora": "19:00",
+    "sede": "Parroquia de los Dolores (Las Colonias)",
+    "fuente": "https://huelvabuenasnoticias.com/2026/03/27/viernes-de-dolores-huelva-2026-hermandades-horarios-estrenos/",
+    "nota": "Salida de la Virgen en las vísperas; la estación de penitencia es el Martes Santo."
+   },
+   {
+    "slug": "vera-cruz-y-oracion-huelva",
+    "dia": "Sábado de Pasión",
+    "titulares": "Santísimo Cristo de la Vera Cruz",
+    "hora": "18:30",
+    "sede": "Parroquia de la Purísima Concepción",
+    "fuente": "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/",
+    "nota": "Acompañado por la Legión; la estación de penitencia es el Jueves Santo."
+   }
+  ],
+  "nuevas": [
+   {
+    "ciudad": "malaga",
+    "dia": "Sábado de Pasión",
+    "nombre": "Mutilado (Clemencia)",
+    "nombre_oficial": "Cofradía del Santísimo Cristo de la Clemencia (Mutilado)",
+    "titulares": [
+     "Santísimo Cristo de la Clemencia"
+    ],
+    "sede": "Plaza de San Ignacio de Loyola (Centro)",
+    "hora": "18:00",
+    "paso": "Hace estación de penitencia en la Catedral.",
+    "musica": "Banda de Cornetas y Tambores de la Archicofradía del Paso y la Esperanza.",
+    "fuente": "https://www.elespanol.com/malaga/cultura/cofradias/20260328/horarios-recorridos-traslados-procesiones-sabado-pasion-malaga/1003744187930_0.html"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Sábado de Pasión",
+    "nombre": "Desamparados",
+    "titulares": [
+     "Nuestra Señora de los Desamparados"
+    ],
+    "sede": "Parroquia de Santa María Goretti (Los Corazones)",
+    "hora": "18:00",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Sábado de Pasión",
+    "nombre": "Verdad y Sagrario",
+    "titulares": [
+     "Nuestro Padre Jesús de la Verdad ante Caifás",
+     "María Santísima del Sagrario"
+    ],
+    "sede": "Carranque (calle Virgen del Rocío)",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Sábado de Pasión",
+    "nombre": "Luz y Mar",
+    "titulares": [
+     "Santísimo Cristo Luz del Mundo",
+     "María Santísima del Mar"
+    ],
+    "sede": "Parroquia Virgen del Camino (Nuevo San Andrés)",
+    "hora": "16:30",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Sábado de Pasión",
+    "nombre": "Buen Camino (Gamarra)",
+    "titulares": [
+     "Nuestra Purísima Madre del Buen Camino"
+    ],
+    "sede": "Colegio Gamarra",
+    "hora": "10:00",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Viernes de Dolores",
+    "nombre": "Medinaceli (Martiricos)",
+    "titulares": [
+     "Jesús de Medinaceli",
+     "María Santísima de la Candelaria"
+    ],
+    "sede": "Calle Poeta Bernardo de la Torre (Martiricos / La Roca)",
+    "hora": "17:30",
+    "fuente": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Viernes de Dolores",
+    "nombre": "Dolores del Puerto de la Torre",
+    "titulares": [
+     "Santísimo Cristo de Hermandad y Caridad",
+     "Nuestra Señora de los Dolores"
+    ],
+    "sede": "Casa Hermandad (Puerto de la Torre)",
+    "hora": "20:30",
+    "fuente": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   },
+   {
+    "ciudad": "malaga",
+    "dia": "Viernes de Dolores",
+    "nombre": "Dolores de Churriana",
+    "titulares": [
+     "Nuestro Padre Jesús Nazareno del Paso",
+     "Nuestra Señora de los Dolores"
+    ],
+    "sede": "Parroquia de San Antonio Abad (Churriana)",
+    "hora": "21:00",
+    "fuente": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   },
+   {
+    "ciudad": "cordoba",
+    "dia": "Sábado de Pasión",
+    "nombre": "La O",
+    "titulares": [],
+    "sede": "Barrio de Fátima",
+    "hora": "18:00",
+    "fuente": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+   },
+   {
+    "ciudad": "cordoba",
+    "dia": "Sábado de Pasión",
+    "nombre": "La Sangre de El Higuerón",
+    "titulares": [],
+    "sede": "El Higuerón",
+    "hora": "18:00",
+    "fuente": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+   },
+   {
+    "ciudad": "cordoba",
+    "dia": "Sábado de Pasión",
+    "nombre": "Traslado al Sepulcro (pro-hermandad)",
+    "titulares": [],
+    "sede": "Colonia de la Paz",
+    "hora": "20:00",
+    "fuente": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+   },
+   {
+    "ciudad": "huelva",
+    "dia": "Sábado de Pasión",
+    "nombre": "La Bendición",
+    "titulares": [
+     "Cristo de la Bendición"
+    ],
+    "sede": "Iglesia de San Rafael",
+    "hora": "18:00",
+    "fuente": "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/"
+   },
+   {
+    "ciudad": "almeria",
+    "dia": "Sábado de Pasión",
+    "nombre": "La Unidad",
+    "titulares": [],
+    "sede": "Parroquia de San Ignacio de Loyola (Piedras Redondas)",
+    "hora": "19:30",
+    "fuente": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html"
+   }
+  ]
+ }
+}
