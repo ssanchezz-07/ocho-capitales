@@ -1,6 +1,10 @@
 /* Ocho Capitales: hoja de estilos única del sitio estático.
    Línea estética: cabecera de prensa sobria. Marfil, tinta, morado nazareno como único acento, dorado solo en filetes y en la marca. */
 
+/* Fuentes propias (OFL), subconjunto latino, servidas desde el sitio. */
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 200 800; font-display: swap; src: url("fonts/newsreader-latin.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/newsreader-italic-latin.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 200 900; font-display: swap; src: url("fonts/source-sans-3-latin.woff2") format("woff2"); }
 /* Fuentes de reserva con métricas igualadas: el cambio a la fuente web no mueve el texto. */
 @font-face { font-family: "Newsreader Fallback"; src: local("Georgia"); size-adjust: 104.3%; ascent-override: 71%; descent-override: 26%; line-gap-override: 0%; }
 @font-face { font-family: "Source Sans Fallback"; src: local("Arial"); size-adjust: 91.7%; ascent-override: 111%; descent-override: 43.6%; line-gap-override: 0%; }
@@ -375,6 +379,9 @@ html[data-city] .oc-daypanel { grid-template-columns: minmax(0, 1fr); }
 .oc-newsgrid .oc-news.has-img { padding-top: 0; border-top: 0; }
 .oc-news-img { aspect-ratio: 16 / 9; border-radius: var(--r); overflow: hidden; background: var(--surface-2); margin-bottom: 10px; }
 .oc-news-img img { width: 100%; height: 100%; object-fit: cover; }
+/* Imagen del medio que no carga: se conserva el hueco (sin saltos) con la estrella de la marca. */
+.oc-news-img.is-broken { display: grid; place-items: center; background: var(--surface-2) url("icon.svg") no-repeat center / 44px; opacity: .7; }
+.oc-news-img.is-broken img { display: none; }
 @media (hover: hover) and (pointer: fine) { .oc-news:hover .oc-news-title a { color: var(--primary); text-decoration: underline; text-decoration-thickness: 1px; } }
 
 /* ---------- fichas ---------- */

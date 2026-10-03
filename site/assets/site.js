@@ -74,8 +74,8 @@
   function paintAgo(r) { $$('time[data-ago]', r).forEach(function (t) { t.textContent = ago(t.getAttribute('datetime')); }); }
   paintAgo();
 
-  // Imágenes de noticias que no cargan: se quita el hueco en vez de dejar un recuadro vacío.
-  function dropImg(img) { var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news'); box.remove(); if (card) card.classList.remove('has-img'); }
+  // Imágenes de noticias que no cargan: se conserva el hueco con la marca para que la página no salte.
+  function dropImg(img) { var box = img.closest('.oc-news-img'); if (box) box.classList.add('is-broken'); }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
 

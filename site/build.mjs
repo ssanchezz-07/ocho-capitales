@@ -131,6 +131,14 @@ function imgTag(im, alt, { cls = '', sizes = '(max-width: 640px) 100vw, 33vw', w
   const src = isThumb(im.src) ? wmAt(im.src, widths[Math.min(1, widths.length - 1)]) : clean(im.src);
   return `<img src="${esc(src)}"${srcset} alt="${esc(alt)}" width="${w}" height="${h}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer"${cls ? ` class="${cls}"` : ''}>`;
 }
+// Imagen principal (LCP) de fichas y capitales: conexión previa y precarga con el mismo srcset que la etiqueta.
+function heroPreload(im, sizes, widths) {
+  if (!im) return '';
+  let origin = ''; try { origin = new URL(im.src).origin; } catch (e) { return ''; }
+  const set = isThumb(im.src) ? ` imagesrcset="${widths.map((x) => `${esc(wmAt(im.src, x))} ${x}w`).join(', ')}" imagesizes="${sizes}"` : '';
+  const href = isThumb(im.src) ? wmAt(im.src, widths[Math.min(1, widths.length - 1)]) : clean(im.src);
+  return `<link rel="preconnect" href="${origin}" crossorigin><link rel="preload" as="image" href="${esc(href)}"${set} fetchpriority="high" crossorigin="anonymous">`;
+}
 function credit(im) {
   if (!im) return '';
   const lic = im.licurl ? `<a href="${esc(im.licurl)}" rel="license noopener" target="_blank">${esc(im.licencia)}</a>` : esc(im.licencia);
@@ -163,13 +171,12 @@ const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.in
 const NAV = [['noticias/', 'Noticias'], ['capitales/', 'Capitales'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['imagineros/', 'Imagineros']];
 const OG_DEFAULT = 'assets/og.png';
 
-function layout({ title, desc, body, path: p = '', image = '', jsonld = null, active = '', crumbs: cr = null, wide = false }) {
+function layout({ title, desc, body, path: p = '', image = '', jsonld = null, active = '', crumbs: cr = null, wide = false, head = '' }) {
   const fullTitle = title ? `${title} | ${BRAND}` : `${BRAND}: Semana Santa de Andalucía hoy, noticias y hermandades`;
   const description = desc || TAGLINE;
   const canonical = abs(p);
   const ogImage = image ? clean(image) : abs(OG_DEFAULT);
   const ld = [jsonld, cr && cr.length > 1 ? { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: cr.map(([l, h], i) => ({ '@type': 'ListItem', position: i + 1, name: l, item: h ? (SITE ? SITE + h.slice(BASE.length - 1) : h) : canonical })) } : null].filter(Boolean);
-  const FONTS = 'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;600;700&display=swap';
   return `<!doctype html>
 <html lang="es">
 <head>
@@ -188,9 +195,9 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="icon" href="${u('assets/icon-192.png')}" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="${FONTS}"><link rel="stylesheet" href="${FONTS}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${FONTS}"></noscript>
-<link rel="stylesheet" href="${u('assets/site.css')}">
+<link rel="preload" href="${u('assets/fonts/source-sans-3-latin.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${u('assets/fonts/newsreader-latin.woff2')}" as="font" type="font/woff2" crossorigin>
+${head}<link rel="stylesheet" href="${u('assets/site.css')}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
 </head>
@@ -368,7 +375,7 @@ ${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u
 </aside>
 </div>
 ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n)).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
-  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: c.imagen ? wmAt(c.imagen.src, 960) : '', active: 'capitales/', crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
+  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: c.imagen ? wmAt(c.imagen.src, 960) : '', active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 860px) 100vw, 45vw', [500, 960]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
 function pageHerm(h) {
@@ -411,7 +418,7 @@ ${fuente}
 ${prev || next ? `<nav class="oc-prevnext" aria-label="Hermandades del mismo día">${prev ? `<a class="is-prev" href="${u('hermandad/' + prev.slug + '/')}"><span>Anterior el ${esc(h.dia)}</span><strong>${esc(prev.nombre)}</strong></a>` : '<span></span>'}${next ? `<a class="is-next" href="${u('hermandad/' + next.slug + '/')}"><span>Siguiente el ${esc(h.dia)}</span><strong>${esc(next.nombre)}</strong></a>` : ''}</nav>` : ''}
 ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n)).join('')}</div>`) : ''}`;
   write(`hermandad/${h.slug}/index.html`, layout({
-    title: `${h.nombre} (${c.nombre})`, desc: `${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}`.slice(0, 300), body, path: `hermandad/${h.slug}/`, image: im ? (isThumb(im.src) ? wmAt(im.src, 960) : im.src) : '', active: 'hermandades/',
+    title: `${h.nombre} (${c.nombre})`, desc: `${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}`.slice(0, 300), body, path: `hermandad/${h.slug}/`, image: im ? (isThumb(im.src) ? wmAt(im.src, 960) : im.src) : '', active: 'hermandades/', head: heroPreload(im, '(max-width: 860px) 100vw, 40vw', [500, 960]),
     crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.dia, u('semana-santa/' + c.slug + '/#' + slugify(h.dia))], [h.nombre, '']],
     jsonld: { '@context': 'https://schema.org', '@type': 'Organization', name: h.nombre_oficial || h.nombre, alternateName: h.nombre, foundingDate: (String(h.fundacion).match(/\d{4}/) || [])[0], address: h.sede ? { '@type': 'PostalAddress', streetAddress: h.sede, addressLocality: c.nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } : undefined, url: h.web || undefined, image: im ? clean(im.src) : undefined, description: h.historia || undefined },
   }));
@@ -507,7 +514,8 @@ function extras() {
   fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
   for (const f of fs.readdirSync(path.join(DIR, 'assets'))) {
     const src = path.join(DIR, 'assets', f), dst = path.join(DIST, 'assets', f);
-    if (f.endsWith('.css')) fs.writeFileSync(dst, fs.readFileSync(src, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim());
+    if (fs.statSync(src).isDirectory()) fs.cpSync(src, dst, { recursive: true });
+    else if (f.endsWith('.css')) fs.writeFileSync(dst, fs.readFileSync(src, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim());
     else fs.copyFileSync(src, dst);
   }
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
