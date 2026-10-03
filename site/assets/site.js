@@ -16,6 +16,16 @@
   var CITY_NAMES = {};
   $$('[data-city-select] option').forEach(function (o) { if (o.value) CITY_NAMES[o.value] = o.textContent; });
 
+  // Desplaza solo la tira horizontal que contiene el elemento (nunca la página): evita tirones al hacer scroll.
+  function hscroll(el, center) {
+    var p = el.parentNode;
+    while (p && p !== document.body && p.scrollWidth <= p.clientWidth) p = p.parentNode;
+    if (!p || p === document.body) return;
+    var r = el.getBoundingClientRect(), q = p.getBoundingClientRect();
+    var d = center ? (r.left - q.left) - (q.width - r.width) / 2 : r.left < q.left ? r.left - q.left - 16 : r.right > q.right ? r.right - q.right + 16 : 0;
+    if (d) p.scrollLeft += d;
+  }
+
   // ---------- tema ----------
   var themeSel = $('[data-theme-select]');
   if (themeSel) {
@@ -76,7 +86,7 @@
   paintAgo();
 
   // Imágenes de noticias que no cargan: se conserva el hueco con la marca para que la página no salte.
-  function dropImg(img) { var box = img.closest('.oc-news-img'); if (box) box.classList.add('is-broken'); }
+  function dropImg(img) { var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news'); box.remove(); if (card) card.classList.remove('has-img'); }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
 
@@ -117,7 +127,7 @@
         var on = t.dataset.slot === id;
         t.setAttribute('aria-selected', on ? 'true' : 'false');
         t.tabIndex = on ? 0 : -1;
-        if (on) { if (focus) t.focus(); t.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduced || focus ? 'auto' : 'smooth' }); }
+        if (on) { if (focus) t.focus(); hscroll(t); }
       });
       $$('[data-panel]', today).forEach(function (p) {
         var on = p.dataset.panel === id;
@@ -258,7 +268,7 @@
     var showCal = function (id, focus) {
       if (!document.getElementById(id)) return;
       $$('[data-cal]').forEach(function (s) { s.hidden = s.id !== id; });
-      ctabs.forEach(function (a) { var on = a.getAttribute('href') === '#' + id; a.setAttribute('aria-selected', on ? 'true' : 'false'); a.tabIndex = on ? 0 : -1; if (on) { if (focus) a.focus(); a.scrollIntoView({ block: 'nearest', inline: 'nearest' }); } });
+      ctabs.forEach(function (a) { var on = a.getAttribute('href') === '#' + id; a.setAttribute('aria-selected', on ? 'true' : 'false'); a.tabIndex = on ? 0 : -1; if (on) { if (focus) a.focus(); hscroll(a); } });
     };
     ctabs.forEach(function (a, i) {
       a.addEventListener('click', function (e) { e.preventDefault(); var id = a.getAttribute('href').slice(1); showCal(id); history.replaceState(null, '', '#' + id); });
@@ -358,7 +368,7 @@
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         links.forEach(function (a) { a.classList.remove('is-current'); });
-        var a = byId[en.target.id]; if (a) { a.classList.add('is-current'); a.scrollIntoView({ block: 'nearest', inline: 'center' }); }
+        var a = byId[en.target.id]; if (a) { a.classList.add('is-current'); hscroll(a, true); }
       });
     }, { rootMargin: '-35% 0px -60% 0px' });
     $$('.oc-day').forEach(function (s) { io.observe(s); });
@@ -382,7 +392,7 @@
     };
     var card = function (n) {
       var d = new Date(n.ts).toISOString();
-      return '<article class="oc-news has-img"><div class="oc-news-img" style="--c:' + (COLORS[n.ciudades[0]] || '#4a1f6e') + '" aria-hidden="true"><span class="oc-news-mono">' + esc(mono(n.fuente)) + '</span>' + (n.img ? '<img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken>' : '') + '</div>' +
+      return '<article class="oc-news' + (n.img ? ' has-img' : '') + '">' + (n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : '') +
         '<div class="oc-news-body"><p class="oc-news-meta">' + n.ciudades.map(cityTag).join('') + '<span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time></p><h3 class="oc-news-title"><a href="' + esc(n.url) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3>' + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div></article>';
     };
     var paintChips = function () { $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); }); };

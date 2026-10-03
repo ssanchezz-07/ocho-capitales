@@ -1,12 +1,12 @@
 # Ocho Capitales: actualiza noticias y publica el sitio en GitHub Pages (gratis).
-# Se ejecuta cada 2 horas, al subir cambios y a mano desde la pestaña «Actions».
+# Se ejecuta cada hora, al subir cambios y a mano desde la pestaña «Actions».
 name: Publicar Ocho Capitales
 
 on:
   push:
     branches: [main]
   schedule:
-    - cron: "17 */2 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:

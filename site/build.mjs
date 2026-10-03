@@ -194,7 +194,7 @@ function srcMono(f) {
 // Noticia: titular a la izquierda y recuadro fijo a la derecha (foto del medio o sus iniciales), para que todas tengan el mismo ritmo.
 function newsItem(n, { img = true, eager = false } = {}) {
   const col = CAP[n.ciudades[0]] ? CAP[n.ciudades[0]].color : '#4a1f6e';
-  const pic = img ? `<div class="oc-news-img" style="--c:${col}" aria-hidden="true"><span class="oc-news-mono">${esc(srcMono(n.fuente))}</span>${n.img ? `<img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken>` : ''}</div>` : '';
+  const pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
   return `<article class="oc-news${pic ? ' has-img' : ''}" data-cities="${n.ciudades.join(' ')}">${pic}<div class="oc-news-body"><p class="oc-news-meta">${n.ciudades.map(cityTag).join('')}<span class="oc-news-src">${esc(n.fuente)}</span>${timeTag(n.ts)}</p><h3 class="oc-news-title"><a href="${esc(n.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(n.titulo)}<span class="oc-sr"> (abre ${esc(n.fuente)} en otra pestaña)</span></a></h3>${n.extracto ? `<p class="oc-news-text">${esc(n.extracto)}</p>` : ''}</div></article>`;
 }
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
@@ -283,9 +283,9 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta property="og:site_name" content="${BRAND}"><meta property="og:locale" content="es_ES"><meta property="og:type" content="${p.startsWith('hermandad/') || p.startsWith('banda/') || p.startsWith('imaginero/') ? 'article' : 'website'}">
 <meta property="og:title" content="${esc(title || BRAND)}"><meta property="og:description" content="${esc(description.slice(0, 200))}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(ogImage)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title || BRAND)}"><meta name="twitter:description" content="${esc(description.slice(0, 200))}"><meta name="twitter:image" content="${esc(ogImage)}">
-<link rel="icon" href="${u('assets/icon.svg')}" type="image/svg+xml">
-<link rel="icon" href="${u('assets/icon-192.png')}" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}">
+<link rel="icon" href="${u('assets/icon.svg')}?v=2" type="image/svg+xml">
+<link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 <link rel="preload" href="${u('assets/fonts/source-sans-3-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${u('assets/fonts/newsreader-latin.woff2')}" as="font" type="font/woff2" crossorigin>
@@ -582,7 +582,7 @@ function pageCalendario() {
       <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
     </div>
   </div>
-  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. El resto se extrae automáticamente de las noticias cada dos horas; confirma siempre en la fuente enlazada.</p>
+  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. El resto se extrae automáticamente de las noticias cada hora; confirma siempre en la fuente enlazada.</p>
   <script type="application/json" id="oc-eventos">${data}</script>
   <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
 </section>
@@ -614,7 +614,7 @@ function pageAcerca() {
 <li><strong>Jaén:</strong> fichas oficiales de la Agrupación de Cofradías y Hermandades de la Ciudad de Jaén.</li>
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
-<h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada dos horas de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
+<h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada hora de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
 <h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Todas las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }

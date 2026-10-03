@@ -4,7 +4,7 @@
 Ocho Capitales se publica como **sitio estático**: páginas HTML ya generadas que se sirven desde la red de GitHub.
 - **Coste:** 0 €. GitHub Pages y GitHub Actions son gratuitos para repositorios públicos.
 - **Fluidez:** sin base de datos ni PHP; cada página se descarga ya hecha. Aguanta los picos de Semana Santa.
-- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada 2 horas**, guarda `site/data/news.json` y vuelve a publicar.
+- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada hora**, guarda `site/data/news.json` y vuelve a publicar.
 - **La portada se recalcula sola:** la jornada de «Hoy» sale de la fecha de Pascua, así que cada año se ajusta sin tocar nada.
 
 ### Pasos (una sola vez)
@@ -19,14 +19,14 @@ Ocho Capitales se publica como **sitio estático**: páginas HTML ya generadas q
 4. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 5. Pestaña **Actions** → «Publicar Ocho Capitales» → **Run workflow**. En 2–3 minutos el sitio está en:
    `https://TU_USUARIO.github.io/ocho-capitales/`
-6. A partir de ahí se actualiza solo cada 2 horas. Si cambias datos o diseño, basta con `git push`.
+6. A partir de ahí se actualiza solo cada hora. Si cambias datos o diseño, basta con `git push`.
 
 ### Dominio propio (opcional, ~10 €/año)
 Compra el dominio (comprueba antes que no exista una web cofrade con el mismo nombre), añádelo en **Settings → Pages → Custom domain** y en `.github/workflows/publicar.yml` cambia:
 `BASE_PATH: /` y `SITE_URL: https://tu-dominio.es`.
 
 ### Alternativa equivalente: Cloudflare Pages (0 €, permite repositorio privado)
-Conecta el repositorio en https://pages.cloudflare.com → *Build command:* `cd site && npm ci && node build.mjs` → *Output:* `site/dist` → variable `BASE_PATH=/`. El flujo de GitHub seguirá actualizando las noticias cada 2 h y Cloudflare publicará cada cambio.
+Conecta el repositorio en https://pages.cloudflare.com → *Build command:* `cd site && npm ci && node build.mjs` → *Output:* `site/dist` → variable `BASE_PATH=/`. El flujo de GitHub seguirá actualizando las noticias cada hora y Cloudflare publicará cada cambio.
 
 ## Trabajar en local
 - **Ver la web en tu PC:** doble clic en `ver-ocho-capitales.bat` → abre http://localhost:8080
