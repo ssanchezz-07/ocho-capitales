@@ -365,7 +365,6 @@
     var g = {};
     r.forEach(function (e) { (g[e.t] = g[e.t] || []).push(e); });
     var present = ORDER.filter(function (t) { return g[t]; });
-    present.sort(function (a, b) { return r.indexOf(g[a][0]) - r.indexOf(g[b][0]); });
     box.innerHTML = present.map(function (t) {
       return '<p class="oc-sr-group">' + TYPES[t] + ' <span class="oc-muted">(' + g[t].length + ')</span></p>' + g[t].slice(0, limit).map(function (e) {
         var ext = /^https?:/.test(e.u);

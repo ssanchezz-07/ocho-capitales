@@ -7,8 +7,11 @@ import zlib from 'node:zlib';
 const DIST = path.join(path.dirname(fileURLToPath(import.meta.url)), 'dist');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.xml': 'application/xml', '.txt': 'text/plain', '.png': 'image/png' };
 const PORT = process.env.PORT || 8080;
+// Con BASE_PATH (p. ej. /ocho-capitales/) se sirve igual que en GitHub Pages.
+const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 http.createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+  if (BASE !== '/') { if (!p.startsWith(BASE)) { res.writeHead(404); return res.end(); } p = '/' + p.slice(BASE.length); }
   let f = path.join(DIST, p);
   if (!f.startsWith(DIST)) { res.writeHead(403); return res.end(); }
   if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, 'index.html');

@@ -1,6 +1,6 @@
-# InfoCofrade — actualiza noticias y publica el sitio en GitHub Pages (gratis).
+# Ocho Capitales: actualiza noticias y publica el sitio en GitHub Pages (gratis).
 # Se ejecuta cada 2 horas, al subir cambios y a mano desde la pestaña «Actions».
-name: Publicar InfoCofrade
+name: Publicar Ocho Capitales
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
         run: node fetch-news.mjs
       - name: Guardar archivo de noticias
         run: |
-          git config user.name "InfoCofrade bot"
+          git config user.name "Ocho Capitales bot"
           git config user.email "actions@users.noreply.github.com"
           git add site/data/news.json
           git diff --cached --quiet || (git commit -m "Noticias: actualización automática" && git push)

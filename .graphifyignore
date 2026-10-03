@@ -1,0 +1,25 @@
+# .graphifyignore — sintaxis idéntica a .gitignore
+node_modules/
+.next/
+dist/
+build/
+.venv/
+vendor/
+*.generated.ts
+docs/translations/
+public/assets/
+
+# Pesado o generado en este proyecto
+local/
+site/dist/
+graphify-out/
+*.zip
+data-raw.json
+site/data/
+portal-cofrade/data/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.ico
