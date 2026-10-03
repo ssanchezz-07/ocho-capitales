@@ -4,3 +4,6 @@ local/wordpress/
 local/wp-backup/
 *.zip
 data-raw.json.bak
+graphify-out/
+.claude/
+.playwright-mcp/
