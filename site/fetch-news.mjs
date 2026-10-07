@@ -141,4 +141,6 @@ async function main() {
   console.log(`Noticias: ${nuevos.length} nuevas, ${all.length} en total. Fuentes correctas: ${ok}/${FUENTES.length}.`);
   for (const [k, v] of Object.entries(estado)) if (!v.ok) console.log('  ✗', k, '—', v.error);
 }
-main();
+// Salida explícita: en GitHub Actions alguna conexión keep-alive dejaba el proceso vivo ~10 min
+// después de terminar (las fuentes acaban en ~15 s).
+main().then(() => process.exit(0), (e) => { console.error(e); process.exit(1); });

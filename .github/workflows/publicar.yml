@@ -33,6 +33,8 @@ jobs:
         run: npm ci
       - name: Leer noticias
         working-directory: site
+        timeout-minutes: 3
+        continue-on-error: true   # si una fuente se cuelga, se publica con las noticias anteriores
         run: node fetch-news.mjs
       - name: Guardar archivo de noticias
         run: |
