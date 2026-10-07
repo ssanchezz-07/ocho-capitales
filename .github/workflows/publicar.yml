@@ -31,6 +31,9 @@ jobs:
       - name: Instalar
         working-directory: site
         run: npm ci
+      - name: Comprobar el detector de eventos
+        working-directory: site
+        run: node eventos.mjs
       - name: Leer noticias
         working-directory: site
         timeout-minutes: 3

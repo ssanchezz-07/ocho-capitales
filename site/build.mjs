@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { detectarEventos } from './eventos.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(DIR, 'dist');
@@ -11,6 +12,9 @@ const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
+// Eventos verificados a mano (prioridad sobre los detectados en noticias).
+const EVENTOS_FILE = path.join(DIR, '..', 'portal-cofrade', 'data', 'eventos.json');
+const EVENTOS_VERIFICADOS = fs.existsSync(EVENTOS_FILE) ? JSON.parse(fs.readFileSync(EVENTOS_FILE, 'utf8')).eventos : [];
 const BRAND = 'Ocho Capitales';
 const TAGLINE = 'La Semana Santa de las ocho capitales andaluzas: qué sale hoy, noticias de cada ciudad y la historia de sus hermandades, bandas e imagineros.';
 const TZ = 'Europe/Madrid';
@@ -203,8 +207,6 @@ const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.in
 const TIPOS = { liturgico: 'Calendario litúrgico', magna: 'Magna', extraordinaria: 'Salida extraordinaria', procesion: 'Procesión', traslado: 'Traslado', coronacion: 'Coronación', 'via-crucis': 'Vía crucis', culto: 'Cultos', besamanos: 'Besamanos', concierto: 'Concierto', pregon: 'Pregón', cartel: 'Cartel' };
 const GRUPOS = [['', 'Todo'], ['liturgico', 'Litúrgico'], ['salidas', 'Procesiones'], ['via-crucis', 'Vía crucis'], ['cultos', 'Cultos'], ['musica', 'Conciertos'], ['anuncios', 'Pregones y carteles']];
 const GRUPO_DE = { liturgico: 'liturgico', magna: 'salidas', extraordinaria: 'salidas', procesion: 'salidas', traslado: 'salidas', coronacion: 'salidas', 'via-crucis': 'via-crucis', culto: 'cultos', besamanos: 'cultos', concierto: 'musica', pregon: 'anuncios', cartel: 'anuncios' };
-const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-const DIAS_SEM = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
 const isoDay = (ms) => new Date(ms).toISOString().slice(0, 10);
 function eventosLiturgicos(years) {
   const ev = [];
@@ -221,42 +223,42 @@ function eventosLiturgicos(years) {
   }
   return ev;
 }
-// Tipo y fecha a partir del titular y el extracto. Solo se acepta con una fecha concreta y si la noticia es de una capital.
-const EV_TIPOS = [['magna', /\bmagna\b/], ['coronacion', /coronacion/], ['extraordinaria', /(salida|procesion|recorrido|itinerario)[^.]{0,40}extraordinari|extraordinari[^.]{0,20}(salida|procesion)/], ['via-crucis', /via ?crucis/], ['traslado', /traslado/], ['besamanos', /besamanos|besapies/], ['culto', /triduo|quinario|novena|septenario|funcion principal/], ['concierto', /concierto/], ['pregon', /pregon/], ['cartel', /cartel (oficial|de la semana santa)|presentacion del cartel|presentara el cartel/], ['procesion', /procesion|procesiona|rosario de la aurora/]];
-const EV_NO = /torea|toros|maestranza|futbol|liga |asamblea|cabildo|elecciones|junta de gobierno/;
+// Eventos detectados en las noticias (ver eventos.mjs): del texto completo leído en fetch-news (n.ev)
+// o, en noticias antiguas, del titular y el extracto. Solo noticias de una capital.
 function eventosNoticias() {
   const ev = new Map();
   for (const n of NEWS.items) {
     if (!n.ciudades || !n.ciudades.length) continue;
-    const t = norm(n.titulo + ' . ' + (n.extracto || ''));
-    if (EV_NO.test(t)) continue;
-    const ty = EV_TIPOS.find(([, r]) => r.test(t)); if (!ty) continue;
-    const pub = new Date(n.ts); const pubDay = Date.UTC(pub.getUTCFullYear(), pub.getUTCMonth(), pub.getUTCDate());
-    let when = null;
-    const m = t.match(/\b(\d{1,2})(?: y \d{1,2})? de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b/);
-    if (m && +m[1] >= 1 && +m[1] <= 31) { let d = Date.UTC(pub.getUTCFullYear(), MESES.indexOf(m[2]), +m[1]); if (d < pubDay - 60 * 864e5) d = Date.UTC(pub.getUTCFullYear() + 1, MESES.indexOf(m[2]), +m[1]); when = d; }
-    else if (!m) { const w = t.match(/\b(?:este|el proximo|proximo) (lunes|martes|miercoles|jueves|viernes|sabado|domingo)\b/); if (w) { const target = DIAS_SEM.indexOf(w[1]); const diff = (target - new Date(pubDay).getUTCDay() + 7) % 7; when = pubDay + diff * 864e5; } }
-    if (when == null || when < pubDay - 3 * 864e5 || when > pubDay + 240 * 864e5) continue;
-    const fecha = isoDay(when);
-    for (const ciudad of n.ciudades) {
-      const k = fecha + '|' + ty[0] + '|' + ciudad;
-      const prev = ev.get(k);
-      if (prev) { if (prev.fuentes.length < 3 && !prev.fuentes.some((f) => f.url === n.url || f.medio === n.fuente)) prev.fuentes.push({ url: n.url, medio: n.fuente }); continue; }
-      ev.set(k, { fecha, tipo: ty[0], titulo: n.titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
+    const found = n.ev ? n.ev.map((e) => ({ fecha: e.f, tipo: e.t, frase: e.s })) : detectarEventos(n.titulo + '. ' + (n.extracto || ''), n.ts);
+    const multi = found.length > 1; // artículo con varias fechas (p. ej. «todas las extraordinarias del otoño»): se titula con la frase
+    for (const e of found) {
+      for (const ciudad of n.ciudades) {
+        const k = e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + ciudad;
+        const prev = ev.get(k);
+        if (prev) { if (prev.fuentes.length < 3 && !prev.fuentes.some((f) => f.url === n.url || f.medio === n.fuente)) prev.fuentes.push({ url: n.url, medio: n.fuente }); continue; }
+        ev.set(k, { fecha: e.fecha, tipo: e.tipo, titulo: multi ? e.frase : n.titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
+      }
     }
   }
   return [...ev.values()];
 }
+function eventosVerificados() {
+  return EVENTOS_VERIFICADOS.map((e) => ({ fecha: e.fecha, tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: [e.hora ? e.hora + ' h.' : '', e.nota || ''].filter(Boolean).join(' '), fuentes: e.fuentes, verificado: true }));
+}
 function agenda() {
   const now = madridNow();
-  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...eventosNoticias()];
-  return list.sort((a, b) => a.fecha.localeCompare(b.fecha) || (a.tipo === 'liturgico' ? -1 : 1));
+  const verif = eventosVerificados();
+  const clave = (e) => e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + e.ciudad;
+  const ya = new Set(verif.map(clave));
+  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...eventosNoticias().filter((e) => !ya.has(clave(e)))];
+  const orden = (e) => (e.tipo === 'liturgico' ? 0 : e.verificado ? 1 : 2);
+  return list.sort((a, b) => a.fecha.localeCompare(b.fecha) || orden(a) - orden(b));
 }
 function agendaItem(e) {
   const d = new Date(e.fecha + 'T12:00:00Z').getTime();
   const c = CAP[e.ciudad];
   const link = e.fuentes ? `<a href="${esc(e.fuentes[0].url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(e.titulo)}<span class="oc-sr"> (abre ${esc(e.fuentes[0].medio)})</span></a>` : esc(e.titulo);
-  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(f.medio)).join(', ')}</p>` : ''}</div></li>`;
+  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}${e.verificado ? '<span class="oc-ev-ok">Confirmado</span>' : ''}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(f.medio)).join(', ')}</p>` : ''}</div></li>`;
 }
 
 // ---------- maqueta común ----------
@@ -561,7 +563,7 @@ function pageCalendario() {
   const N = madridNow();
   const today = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const proximos = EV.filter((e) => e.fecha >= today).slice(0, 14);
-  const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '' }))).replace(/</g, '\\u003c');
+  const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '', ...(e.verificado ? { v: 1 } : {}) }))).replace(/</g, '\\u003c');
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Calendario cofrade</h1><p class="oc-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p></header>
 <section class="oc-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
   <h2 class="oc-h2" id="agenda-titulo">Agenda cofrade</h2>
@@ -582,7 +584,7 @@ function pageCalendario() {
       <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
     </div>
   </div>
-  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. El resto se extrae automáticamente de las noticias cada hora; confirma siempre en la fuente enlazada.</p>
+  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias cada hora. Confirma siempre en la fuente enlazada.</p>
   <script type="application/json" id="oc-eventos">${data}</script>
   <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
 </section>

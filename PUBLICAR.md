@@ -51,3 +51,18 @@ El contexto de producto está en `PRODUCT.md`. Estilos en `site/assets/site.css`
 ## ¿Y WordPress?
 - **En tu PC:** `local\iniciar-portal.bat` (panel de administración, edición de fichas). Tras cambiar datos: `local\actualizar-datos.bat`.
 - **En internet:** WordPress necesita PHP y base de datos; no hay alojamiento gratuito fiable para ello. Si algún día lo quieres público, un hosting de 3–5 €/mes + `portal-cofrade.zip` funciona tal cual (ver `GUIA-INSTALACION.md`).
+
+## Que se actualice de verdad cada hora (despertador externo, gratis)
+GitHub retrasa o se salta las ejecuciones programadas (`schedule`) cuando sus servidores van cargados: en octubre de 2026 hubo huecos de hasta 8 horas. La solución es que un servicio externo dispare la publicación cada hora:
+
+1. **Permiso para el despertador** (lo crea Pablo): GitHub → foto de perfil → *Settings* → *Developer settings* → *Personal access tokens* → *Fine-grained tokens* → *Generate new token*.
+   - Nombre: `despertador-ocho-capitales`. Caducidad: la máxima que permita.
+   - *Repository access*: **Only select repositories** → `ocho-capitales`.
+   - *Permissions* → *Repository permissions* → **Actions: Read and write** (nada más).
+   - Copia el token (empieza por `github_pat_`). No lo pegues en ningún chat.
+2. **Despertador**: crea una cuenta gratuita en https://cron-job.org → *Create cronjob*:
+   - URL: `https://api.github.com/repos/ssanchezz-07/ocho-capitales/actions/workflows/publicar.yml/dispatches`
+   - Horario: cada hora (por ejemplo, en el minuto 5).
+   - *Advanced* → *Request method*: **POST**. *Headers*: `Accept: application/vnd.github+json`, `Authorization: Bearer <tu token>`, `X-GitHub-Api-Version: 2022-11-28`. *Request body*: `{"ref":"main"}`.
+   - Guarda y pulsa *Test run*: debe responder **204** y aparecer una ejecución nueva en la pestaña *Actions*.
+3. El `schedule` de GitHub se mantiene como respaldo.

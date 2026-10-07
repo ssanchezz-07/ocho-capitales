@@ -552,6 +552,8 @@ html[data-city] .oc-daypanel { grid-template-columns: minmax(0, 1fr); }
 .oc-ev-tipo.is-liturgico { color: var(--ev-liturgico); }
 .oc-ev-tipo.is-salidas { color: var(--ev-salidas); }
 .oc-ev-tipo.is-cultos { color: var(--ev-cultos); }
+.oc-ev-ok { display: inline-flex; align-items: center; gap: .25em; font-size: .78em; font-weight: 600; letter-spacing: .02em; color: var(--ev-liturgico); border: 1px solid currentColor; border-radius: 999px; padding: 0 .55em; line-height: 1.6; }
+.oc-ev-ok::before { content: "✓"; }
 .oc-ev-title { margin: 0; font: 500 1.08rem/1.35 var(--serif); overflow-wrap: anywhere; }
 .oc-ev-title a { color: var(--ink); text-decoration: none; }
 .oc-ev-note { margin: 4px 0 0; font-size: .9rem; color: var(--muted); }

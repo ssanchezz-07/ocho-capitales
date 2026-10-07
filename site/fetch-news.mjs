@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { XMLParser } from 'fast-xml-parser';
+import { detectarEventos } from './eventos.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const FUENTES = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'fuentes.json'), 'utf8'));
@@ -70,7 +71,7 @@ function items(xml) {
       const imgInHtml = (content.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1];
       return {
         titulo: decode(txt(it.title)), url: txt(it.link).trim(), fecha: txt(it.pubDate) || txt(it['dc:date']),
-        desc: decode(txt(it.description) || content), img: (enc && enc['@_url']) || (media && media['@_url']) || imgInHtml || '',
+        desc: decode(txt(it.description) || content), cuerpo: decode(content.replace(/<\/(p|li|h\d|div)>|<br\s*\/?>/gi, '. ')), img: (enc && enc['@_url']) || (media && media['@_url']) || imgInHtml || '',
         fuente: it.source ? decode(txt(it.source)) : '',
       };
     });
@@ -80,7 +81,7 @@ function items(xml) {
       const links = [].concat(e.link || []);
       const l = links.find((x) => !x['@_rel'] || x['@_rel'] === 'alternate') || links[0] || {};
       const content = txt(e.content) || txt(e.summary);
-      return { titulo: decode(txt(e.title)), url: l['@_href'] || '', fecha: txt(e.published) || txt(e.updated), desc: decode(txt(e.summary) || content), img: (content.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1] || '', fuente: '' };
+      return { titulo: decode(txt(e.title)), url: l['@_href'] || '', fecha: txt(e.published) || txt(e.updated), desc: decode(txt(e.summary) || content), cuerpo: decode(content.replace(/<\/(p|li|h\d|div)>|<br\s*\/?>/gi, '. ')), img: (content.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1] || '', fuente: '' };
     });
   }
   return [];
@@ -125,7 +126,9 @@ async function main() {
           let cs = ciudades(titulo + ' ' + extracto);
           if (!cs.length && f.ciudad) cs = [f.ciudad];
           const img = f.tipo === 'agregador' ? '' : (/^https?:\/\//.test(it.img) ? it.img : '');
-          nuevos.push({ h, t, titulo, extracto, url: it.url, fuente, ts, img, ciudades: cs, tipo: f.tipo });
+          // Eventos con fecha leídos del texto completo de la fuente (no se guarda el texto, solo fecha, tipo y una frase corta).
+          const ev = detectarEventos(titulo + '. ' + (it.cuerpo || extracto), ts).map((e) => ({ f: e.fecha, t: e.tipo, s: e.frase.slice(0, 160) }));
+          nuevos.push({ h, t, titulo, extracto, url: it.url, fuente, ts, img, ciudades: cs, tipo: f.tipo, ...(ev.length ? { ev } : {}) });
           n++;
         }
         estado[f.nombre] = { ok: true, nuevas: n, fecha: Date.now() };

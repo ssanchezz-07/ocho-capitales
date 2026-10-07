@@ -303,7 +303,7 @@
       var d = new Date(e.f + 'T12:00:00Z');
       var city = e.c ? '<span class="oc-city" style="--c:' + (COLS[e.c] || 'var(--primary)') + '">' + esc(CITY_NAMES[e.c] || e.c) + '</span>' : '<span>Todas las capitales</span>';
       var title = e.u ? '<a href="' + esc(e.u) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(e.n) + '<span class="oc-sr"> (abre ' + esc(e.m) + ')</span></a>' : esc(e.n);
-      return '<li class="oc-ev"><time class="oc-ev-date" datetime="' + e.f + '"><span>' + d.getUTCDate() + '</span>' + MESES_L[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-' + e.g + '">' + esc(TIPOS_AG[e.t] || e.t) + '</span>' + city + '</p><p class="oc-ev-title">' + title + '</p>' + (e.o ? '<p class="oc-ev-note">' + esc(e.o) + '</p>' : '') + (e.m ? '<p class="oc-ev-note">Fuente: ' + esc(e.m) + '</p>' : '') + '</div></li>';
+      return '<li class="oc-ev"><time class="oc-ev-date" datetime="' + e.f + '"><span>' + d.getUTCDate() + '</span>' + MESES_L[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-' + e.g + '">' + esc(TIPOS_AG[e.t] || e.t) + '</span>' + city + (e.v ? '<span class="oc-ev-ok">Confirmado</span>' : '') + '</p><p class="oc-ev-title">' + title + '</p>' + (e.o ? '<p class="oc-ev-note">' + esc(e.o) + '</p>' : '') + (e.m ? '<p class="oc-ev-note">Fuente: ' + esc(e.m) + '</p>' : '') + '</div></li>';
     };
     var renderList = function () {
       var r;
