@@ -32,6 +32,8 @@ const NEWS = { ...NEWS_RAW, items: NEWS_RAW.items.map((n) => ({ ...n, img: badIm
 
 // Imágenes alojadas en el sitio (WebP 160/480/960 generados con scripts/procesar-imagenes.mjs).
 // Si una hermandad o capital tiene entrada en data/imagenes.json, se sirve la copia local en vez de la de Wikimedia.
+const MAPA_FILE = path.join(DIR, 'data', 'mapa-andalucia.json');
+const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'utf8')) : null;
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
 const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina });
@@ -394,12 +396,16 @@ const STAR = '<svg class="oc-plate-seal" viewBox="0 0 40 40" aria-hidden="true" 
 const COORD = { sevilla: [37.39, -5.98, 'r'], malaga: [36.72, -4.42, 'r'], granada: [37.18, -3.60, 'r'], cordoba: [37.88, -4.78, 't'], cadiz: [36.53, -6.29, 'r'], huelva: [37.26, -6.95, 'b'], almeria: [36.84, -2.46, 'b'], jaen: [37.77, -3.79, 'r'] };
 const capHref = (c) => u('semana-santa/' + c.slug + '/');
 function mapaCapitales() {
+  const P = MAPA && MAPA.proyeccion;
   const pins = D.capitales.map((c, i) => {
     const [lat, lon, pos] = COORD[c.slug];
-    const x = 10 + ((lon + 7.1) / 4.9) * 80, y = 12 + ((38 - lat) / 1.65) * 76;
-    return `<a class="oc-pin${pos === 'l' ? ' is-l' : pos === 'b' ? ' is-b' : pos === 't' ? ' is-t' : ''}" style="--c:${c.color};left:${x.toFixed(1)}%;top:${y.toFixed(1)}%" href="${capHref(c)}" aria-label="${String(i + 1).padStart(2, '0')} ${esc(c.nombre)}">${String(i + 1).padStart(2, '0')}<span aria-hidden="true">${esc(c.nombre)}</span></a>`;
+    const x = P ? ((P.pad + (lon - P.lon0) * P.sx) / MAPA.ancho) * 100 : 10 + ((lon + 7.1) / 4.9) * 80;
+    const y = P ? ((P.pad + (P.lat1 - lat) * P.sy) / MAPA.alto) * 100 : 12 + ((38 - lat) / 1.65) * 76;
+    const num = String(i + 1).padStart(2, '0');
+    return `<a class="oc-pin${pos === 'l' ? ' is-l' : pos === 'b' ? ' is-b' : pos === 't' ? ' is-t' : ''}" style="--c:${c.color};left:${x.toFixed(1)}%;top:${y.toFixed(1)}%" href="${capHref(c)}" aria-label="${num} ${esc(c.nombre)}">${num}<span aria-hidden="true">${esc(c.nombre)}</span></a>`;
   }).join('');
-  return `<div class="oc-map" role="group" aria-label="Plano esquemático de las ocho capitales">${pins}<span class="oc-map-tag is-a oc-mono">Esquema</span><span class="oc-map-tag is-b oc-mono">8 capitales</span></div>`;
+  const svg = MAPA ? `<svg class="oc-map-svg" viewBox="${MAPA.viewBox}" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">${MAPA.provincias.map((p) => `<path class="oc-prov" style="--c:${(CAP[p.slug] || {}).color || '#888'}" d="${p.d}"/>`).join('')}</svg>` : '';
+  return `<div class="oc-map" role="group" aria-label="Mapa de las ocho capitales andaluzas" style="--ratio:${MAPA ? (MAPA.ancho / MAPA.alto).toFixed(3) : '1.667'}">${svg}${pins}<span class="oc-map-tag is-a oc-mono">Andalucía</span><span class="oc-map-tag is-b oc-mono">8 capitales</span></div>`;
 }
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
@@ -656,7 +662,7 @@ function pageAcerca() {
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
 <h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada hora de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
-<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Todas las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia.</p><ul class="oc-credits">${imgs}</ul></div>`;
+<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Todas las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }
 function page404() {

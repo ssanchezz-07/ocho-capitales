@@ -598,19 +598,22 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-hero-home h1 em { font: italic 500 1.02em/.9 var(--it); letter-spacing: -.035em; color: var(--primary); }
 .oc-hero-home .oc-lead { margin: 22px 0 0; }
 .oc-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.oc-map { position: relative; border: 1px solid var(--ink); border-radius: var(--radius-plate); aspect-ratio: 5 / 3; min-height: 250px;
+.oc-map { position: relative; border: 1px solid var(--ink); border-radius: var(--radius-plate); aspect-ratio: var(--ratio, 1.667); min-height: 220px;
   background: linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 100% 12.5%, linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 12.5% 100%, var(--surface); }
 .oc-map::after { content: ""; position: absolute; inset: 6px; border: 1px solid color-mix(in srgb, var(--gold) 70%, transparent); pointer-events: none; }
 .oc-map-tag { position: absolute; z-index: 1; color: var(--muted); }
 .oc-map-tag.is-a { left: 14px; top: 12px; } .oc-map-tag.is-b { right: 14px; bottom: 12px; }
 .oc-pin { position: absolute; z-index: 2; transform: translate(-50%, -50%); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: color-mix(in srgb, var(--c) 80%, #000); color: #fff; font: 500 .72rem var(--mono); text-decoration: none; box-shadow: 0 0 0 4px var(--surface); transition: transform var(--duration-fast) var(--ease-out); }
 .oc-pin:active { transform: translate(-50%, -50%) scale(.94); }
-.oc-pin span { position: absolute; white-space: nowrap; color: var(--ink); font: 600 .9rem/1 var(--serif); letter-spacing: -.01em; left: 40px; }
+.oc-pin span { position: absolute; white-space: nowrap; color: var(--ink); font: 700 .9rem/1 var(--serif); letter-spacing: -.01em; left: 40px; text-shadow: 0 0 3px var(--surface), 0 0 3px var(--surface), 0 0 6px var(--surface); }
 .oc-pin.is-l span { left: auto; right: 40px; }
 .oc-pin.is-b span { left: 50%; top: 40px; transform: translateX(-50%); }
 .oc-pin.is-t span { left: 50%; top: auto; bottom: 40px; transform: translateX(-50%); }
 @media (hover: hover) and (pointer: fine) { .oc-pin:hover { transform: translate(-50%, -50%) scale(1.14); } }
-@media (max-width: 859px) { .oc-hero-home { grid-template-columns: 1fr; } .oc-map { aspect-ratio: 4 / 3; } }
+@media (max-width: 859px) { .oc-hero-home { grid-template-columns: 1fr; } }
+.oc-map-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.oc-prov { fill: color-mix(in srgb, var(--c) 22%, var(--surface)); stroke: var(--ink); stroke-width: 1.1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.oc-map::after { z-index: 3; }
 
 /* ---------- portada: bloque «Hoy» (plancha morada con marco de oro) ---------- */
 .oc-today { --ink: #f6efe3; --muted: #d3c8e3; --line: rgb(246 239 227 / .2); --line-strong: rgb(246 239 227 / .42); --bg: rgb(246 239 227 / .07); --surface: rgb(246 239 227 / .07); --surface-2: rgb(246 239 227 / .12); --primary: #ecd196; --primary-hover: #f6e1b0; --on-primary: #1f0e33; --gold-ink: #ecd196; --focus: #ecd196;
