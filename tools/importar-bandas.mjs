@@ -17,8 +17,8 @@ const PROV = { Gr: 'Granada', Má: 'Málaga', Se: 'Sevilla', Ja: 'Jaén', Al: 'A
 
 // alias manuales por ciudad: nombre en la guía (normalizado) → slug sin sufijo de ciudad
 const ALIAS = {
-  granada: { 'borriquilla': 'la-borriquilla', 'santa cena': 'santa-cena', 'despojado': 'el-despojado', 'maravillas': 'la-sentencia-maravillas', 'cautivo y encarnacion': 'el-cautivo-y-la-encarnacion', 'huerto': 'el-huerto', 'trabajo y luz': 'el-trabajo', 'los dolores': 'nuestra-senora-de-los-dolores', 'el rescate': 'jesus-del-rescate', 'san agustin': null, 'lanzada': 'la-lanzada', 'via crucis': null, 'esperanza': 'la-esperanza', 'canilla': null, 'los gitanos': 'los-gitanos', 'estudiantes': 'los-estudiantes', 'paciencia y penas': null, 'rosario': null, 'nazareno': 'el-nazareno', 'concha': 'la-concha', 'aurora': 'la-aurora', 'estrella': 'la-estrella', 'silencio': 'el-silencio', 'escolapios': 'los-escolapios', 'ferroviarios': null, 'los favores': 'los-favores', 'santo sepulcro': 'santo-entierro', 'soledad de san jeronimo': null, 'alhambra': 'santa-maria-de-la-alhambra', 'facundillos': null, 'resurreccion y triunfo': 'la-resurreccion', 'resucitado y alegria': null, 'hora nona': null },
-  sevilla: {},
+  granada: { 'borriquilla': 'la-borriquilla', 'santa cena': 'santa-cena', 'despojado': 'el-despojado-silencio-blanco', 'maravillas': 'la-sentencia-maravillas', 'cautivo y encarnacion': 'el-cautivo', 'huerto': 'el-huerto', 'trabajo y luz': 'el-trabajo', 'los dolores': 'nuestra-senora-de-los-dolores', 'el rescate': 'jesus-del-rescate', 'san agustin': 'cristo-de-san-agustin', 'lanzada': 'la-lanzada', 'via crucis': 'el-via-crucis', 'esperanza': 'la-esperanza', 'canilla': 'la-canilla', 'los gitanos': 'los-gitanos', 'estudiantes': 'los-estudiantes', 'paciencia y penas': 'paciencia-y-penas', 'rosario': 'tres-caidas-y-rosario', 'nazareno': 'el-nazareno', 'salesianos': 'los-salesianos', 'concha': 'la-concha', 'aurora': 'la-aurora', 'estrella': 'la-estrella', 'silencio': 'el-silencio', 'escolapios': 'los-escolapios', 'ferroviarios': 'los-ferroviarios', 'los favores': 'los-favores', 'santo sepulcro': 'santo-entierro', 'soledad de san jeronimo': null, 'alhambra': 'santa-maria-de-la-alhambra', 'facundillos': 'los-facundillos', 'resurreccion y triunfo': 'la-resurreccion', 'resucitado y alegria': 'el-resucitado', 'hora nona': null },
+  sevilla: { 'dulce nombre de bellavista': 'bellavista', 'paz y misericordia': null, 'divino perdon de alcosa': 'divino-perdon', 'san jeronimo': null, 'el santo angel': null, 'las maravillas': null, 'la espiga': null, 'las penas de san vicente': 'las-penas', 'el cerro del aguila': 'el-cerro', 'la soledad de san buenaventura': 'san-buenaventura', 'la o': 'la-o' },
 };
 
 const lines = fs.readFileSync(txt, 'utf8').split('\n');
@@ -45,18 +45,38 @@ function enlazar(nombre) {
 const TIPO = (n) => /Cornetas y Tambores|Cornetas|Tambores/i.test(n) ? 'Banda de cornetas y tambores' : /Agrupaci[oó]n/i.test(n) ? 'Agrupación musical' : /Capilla|Coral|Quinteto|Trío|Tr[ií]o|Escolan/i.test(n) ? 'Capilla musical' : /Guerra|Unidad de M[uú]sica|Legi[oó]n/i.test(n) ? 'Música militar' : 'Banda de música';
 const NO_BANDA = /^(capilla musical\.?$|silencio|un tambor|quinteto|tr[ií]o|coral|grupo vocal|escolan[ií]a$|cornet[ií]n|propia|sin m[uú]sica)/i;
 const unknownLoc = new Map();
+const CORTA = { sevilla: true, granada: false }[ciudad] ?? true; // en Granada «de Armilla» forma parte del nombre; en Sevilla «de Sevilla» lo añade la guía
+const CANON = [
+  [/^Banda de Cornetas y Tambores (de )?(Nuestro Padres?|N.? ?P.?) Jes[uú]s Despojado( de sus Vestiduras)?$/i, 'Banda de Cornetas y Tambores Nuestro Padre Jesús Despojado de sus Vestiduras', 'Granada'],
+  [/^Banda de Cornetas y Tambores (de )?(Nuestra Señora|María Santísima) de la Victoria$/i, 'Banda de Cornetas y Tambores María Santísima de la Victoria', 'Granada'],
+  [/^Banda y Unidad de M[uú]sica (Nuestra Señora de los )?[AÁ]ngeles( de Granada)?$/i, 'Banda y Unidad de Música Nuestra Señora de los Ángeles', 'Granada'],
+  [/^Agrupaci[oó]n M[uú]sico[- ]Cultural San Sebasti[aá]n de Padul$/i, 'Agrupación Músico-Cultural San Sebastián de Padul', 'Padul'],
+  [/^Asociaci[oó]n M[uú]sico[- ]Cultural San Sebasti[aá]n de Padul$/i, 'Agrupación Músico-Cultural San Sebastián de Padul', 'Padul'],
+  [/^Asociaci[oó]n Musical San Isidro de Armilla$/i, 'Asociación Musical San Isidro de Armilla', 'Armilla'],
+  [/^Banda (de M[uú]sica )?Felipe Moreno (e|de) C[uú]llar Vega$/i, 'Banda de Música Felipe Moreno de Cúllar Vega', 'Cúllar Vega'],
+  [/^Agrupaci[oó]n Musical (del )?Dulce Nombre de Jes[uú]s$/i, 'Agrupación Musical Dulce Nombre de Jesús', 'Granada'],
+  [/^Agrupaci[oó]n Musical (Nuestra Señora|Virgen) de la Cabeza de Exfiliana$/i, 'Agrupación Musical Virgen de la Cabeza de Exfiliana', 'Exfiliana'],
+  [/^Banda de m[uú]sica Nuestra Señora de la Soledad de Mena$/i, 'Banda de Música Nuestra Señora de la Soledad', 'Mena'],
+  [/^Agrupaci[oó]n M[uú]sico-Cultural de la Santa Vera Cruz .La Pepa. de Alhaurín el Grande$/i, 'Agrupación Músico-Cultural de la Santa Vera Cruz «La Pepa»', 'Alhaurín el Grande'],
+  [/^Banda de M[uú]sica Los Iris de Instinci[oó]n de Almer[ií]a$/i, 'Banda de Música Los Iris', 'Instinción'],
+  [/^Agrupaci[oó]n Musical Jes[uú]s Despojado de Ja[eé]n$/i, 'Agrupación Musical Jesús Despojado', 'Jaén'],
+  [/^Banda de M[uú]sica Mar[ií]a Sant[ií]sima de la Esperanza de C[oó]rdoba$/i, 'Banda de Música María Santísima de la Esperanza', 'Córdoba'],
+  [/^Banda Municipal de Granada$/i, 'Banda Municipal de Música de Granada', 'Granada'],
+  [/^Capilla Musical Granamusic$/i, 'Capilla Musical Granamusic', 'Granada'],
+];
+const canon = (b) => { if (!b.es_banda) return b; for (const [re, n, loc] of CANON) if (re.test(b.nombre)) return { ...b, nombre: n, localidad: loc, tipo: TIPO(n) }; return b; };
 const locDe = (nombre, prov) => {
-  // localidad: provincia entre paréntesis (Granada) o « de <Localidad>» al final (Sevilla)
-  const m = nombre.match(/^(.*?)\s+de\s+([A-ZÁÉÍÓÚÑ][^()]*?)$/);
-  if (!m) return { nombre, localidad: '' };
-  const cand = m[2].trim();
-  const k = norm(cand);
-  const cap = D.capitales.find((c) => norm(c.nombre) === k);
-  if (cap || LOCS[k]) return { nombre: m[1].trim(), localidad: cand };
-  // «de la Puebla del Río», «del Alcor»…: probar sin artículo
-  const k2 = norm(cand.replace(/^(la|el|los|las)\s+/i, ''));
-  if (LOCS[k2]) return { nombre: m[1].trim(), localidad: cand.replace(/^(la|el|los|las)\s+/i, '') };
-  unknownLoc.set(cand, (unknownLoc.get(cand) || 0) + 1);
+  // Se busca « de <Localidad>» al final; solo se separa si la localidad está en tools/sources/localidades.json o es una capital.
+  const re = /\s+(?:de|del)\s+/gi; let m;
+  while ((m = re.exec(nombre))) {
+    const cand = nombre.slice(m.index + m[0].length).trim();
+    const k = norm(cand), k2 = norm(cand.replace(/^(la|el|los|las)\s+/i, ''));
+    const cap = D.capitales.find((c) => norm(c.nombre) === k);
+    if (cap || LOCS[k] || LOCS[k2]) return { nombre: !CORTA ? nombre : nombre.slice(0, m.index).replace(/[\s–-]+$/, '').trim(), localidad: cap ? cap.nombre : cand };
+  }
+  if (prov) return { nombre, localidad: prov };
+  const tail = nombre.match(/\sde\s+((?:[A-ZÁÉÍÓÚÑ][\wáéíóúñÁÉÍÓÚÑ.]*)(?:\s+(?:de\s+|del\s+)?[A-ZÁÉÍÓÚÑ][\wáéíóúñÁÉÍÓÚÑ.]*)*)$/);
+  if (tail) unknownLoc.set(tail[1], (unknownLoc.get(tail[1]) || 0) + 1);
   return { nombre, localidad: '' };
 };
 function banda(raw) {
@@ -65,7 +85,9 @@ function banda(raw) {
   let prov = '';
   const pm = t.match(/\s*\(([^)]+)\)\s*$/);
   if (pm) { prov = PROV[pm[1].trim()] || pm[1].trim(); t = t.replace(pm[0], '').trim(); }
-  const { nombre, localidad } = locDe(t, prov);
+  let { nombre, localidad } = locDe(t, prov);
+  // «Banda Municipal» sin el pueblo es ambiguo: se conserva «de <pueblo>» en el nombre
+  if (/(M[uú]sica Municipal|Banda Municipal|Municipal de M[uú]sica)$/i.test(nombre) && localidad) nombre = nombre + ' de ' + localidad;
   let loc = localidad;
   if (!loc && prov) loc = prov;
   return { nombre: nombre.replace(/\s+–\s+/g, ' – ').replace(/ - /g, ' – '), localidad: loc, tipo: TIPO(nombre), es_banda: true, nota: '', novedad: false, redes: [] };
@@ -79,14 +101,17 @@ for (const l of lines) {
   const m = l.match(/^([^:]{3,60}):\s*(.+)$/);
   if (m && cof && /^(m[uú]sica|abre|cruz|paso|delante|cristo|virgen|misterio|palio|se[nñ]or)/i.test(m[1].trim())) {
     const etiqueta = m[1].replace(/^M[uú]sica\s+/i, '').trim(); const lab = etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1);
-    const p = { paso: lab, bandas: [banda(m[2])] };
+    const p = { paso: lab, bandas: m[2].split(/\s+\/\s+/).map((x) => canon(banda(x))) };
     cof.pasos.push(p); continue;
   }
   if (/^(popular ahora|cofrad[ií]as \|)/i.test(l)) break;
   if (l.length > 60 || /[.!?]$/.test(l) && l.length > 40) continue; // texto corrido
   if (/^\d{1,2}[:.]\d{2}/.test(l) || /^foto/i.test(l)) continue;
   // línea sin dos puntos: nombre de cofradía
-  if (!m) { cof = { blog: l, slug: null, dia, pasos: [] }; res.push(cof); }
+  if (!m) {
+    if (cof && cof.pasos.length === 0 && /silencio|sin m[uú]sica|capilla|tambor/i.test(l)) { cof.pasos.push({ paso: 'Cortejo', bandas: [{ nombre: l, localidad: '', es_banda: false, nota: '', novedad: false, redes: [] }] }); continue; }
+    cof = { blog: l, slug: null, dia, pasos: [] }; res.push(cof);
+  }
 }
 for (const c of res) { c.slug = enlazar(c.blog); }
 const out = res.filter((c) => c.pasos.length);

@@ -216,11 +216,12 @@ for (const n of V.nuevas || []) {
 // ---------- acompañamiento musical (Málaga Musical + noticias verificadas) ----------
 // Lista de 2026 y novedades de 2027 importadas con tools/importar-malaga-musical.mjs, más acompañamientos
 // confirmados por noticias (tools/sources/acompanamientos-noticias.json).
-const MM_FILE = path.join(__dirname, 'sources', 'malaga-musical.json');
+const MM_DIR = path.join(__dirname, 'sources');
+// Una guía por capital: malaga-musical.json y <ciudad>-musica.json (tools/importar-*.mjs). Todas con el mismo esquema.
+const MM_FILES = ['malaga-musical.json', ...fs.readdirSync(MM_DIR).filter((f) => f.endsWith('-musica.json'))].filter((f) => fs.existsSync(path.join(MM_DIR, f)));
 const MN_FILE = path.join(__dirname, 'sources', 'acompanamientos-noticias.json');
-const MM = fs.existsSync(MM_FILE) ? JSON.parse(fs.readFileSync(MM_FILE, 'utf8')) : null;
 const MNEWS = fs.existsSync(MN_FILE) ? JSON.parse(fs.readFileSync(MN_FILE, 'utf8')) : { items: [] };
-if (MM) {
+{
   const HB = new Map(hermandades.map((h) => [h.slug, h]));
   const addBand = (b, h, rol, anio, fuente) => {
     if (b.es_banda === false) return;
@@ -231,17 +232,24 @@ if (MM) {
     if (!e.acompana.some((a) => a.hermandad_slug === h.slug && a.rol === rol && a.anio === anio)) e.acompana.push({ hermandad: h.nombre, hermandad_slug: h.slug, ciudad: h.ciudad, rol, propia: false, anio, fuente });
   };
   const toPasos = (pasos) => pasos.map((p) => ({ paso: p.paso, bandas: p.bandas.map((b) => ({ nombre: b.nombre, localidad: b.es_banda === false ? '' : b.localidad, nota: b.nota || '', novedad: !!b.novedad, banda: b.es_banda !== false })) }));
-  for (const c of MM.lista2026) {
-    const h = c.slug && HB.get(c.slug); if (!h) continue;
-    h.acompanamiento = { anio: MM.anio_lista, fuente: MM.url_lista, pasos: toPasos(c.pasos) };
-    for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2026, MM.url_lista);
+  let MMAL = null;
+  for (const mf of MM_FILES) {
+    const MM = JSON.parse(fs.readFileSync(path.join(MM_DIR, mf), 'utf8'));
+    if (mf === 'malaga-musical.json') MMAL = MM;
+    const medio = String(MM.fuente || '').replace(/\s*\(.*$/, '');
+    for (const c of MM.lista2026) {
+      const h = c.slug && HB.get(c.slug); if (!h) continue;
+      h.acompanamiento = { anio: MM.anio_lista, fuente: MM.url_lista, medio, pasos: toPasos(c.pasos) };
+      for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2026, MM.url_lista);
+    }
+    for (const c of MM.novedades2027) {
+      const h = c.slug && HB.get(c.slug); if (!h) continue;
+      h.acompanamiento = h.acompanamiento || { anio: MM.anio_lista, fuente: MM.url_lista, medio, pasos: [] };
+      h.acompanamiento.novedades2027 = { fuente: MM.url_novedades, pasos: toPasos(c.pasos) };
+      for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2027, MM.url_novedades);
+    }
   }
-  for (const c of MM.novedades2027) {
-    const h = c.slug && HB.get(c.slug); if (!h) continue;
-    h.acompanamiento = h.acompanamiento || { anio: MM.anio_lista, fuente: MM.url_lista, pasos: [] };
-    h.acompanamiento.novedades2027 = { fuente: MM.url_novedades, pasos: toPasos(c.pasos) };
-    for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2027, MM.url_novedades);
-  }
+  const MM = MMAL || { anio_lista: 2026, url_lista: '', url_novedades: '' };
   for (const n of MNEWS.items) {
     const h = HB.get(n.slug); if (!h) continue;
     h.acompanamiento = h.acompanamiento || { anio: MM.anio_lista, fuente: MM.url_lista, pasos: [] };

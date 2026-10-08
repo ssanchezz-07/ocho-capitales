@@ -520,7 +520,7 @@ function acompHtml(a) {
   };
   const tabla = (pasos) => '<dl class="oc-acomp">' + pasos.map((p) => '<div><dt>' + esc(p.paso) + '</dt><dd>' + p.bandas.map(bandaLi).join('<br>') + '</dd></div>').join('') + '</dl>';
   const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
-  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">Málaga Musical</a>. Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
+  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
 }
 function pageHerm(h) {
   const c = CAP[h.ciudad];
