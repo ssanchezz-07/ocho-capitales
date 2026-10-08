@@ -275,7 +275,8 @@ const imgOut = [...imagineros.values()].map((im) => ({
 const norm0 = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const bandOut = [...bandas.values()].map((b) => {
   const base = slugify(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
-  const loc = norm0(b.localidad); const origen = (capitales.find((c) => norm0(c.nombre) === loc) || {}).slug || '';
+  const loc = norm0(b.localidad); const LOCS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'localidades.json'), 'utf8'));
+  const origen = (capitales.find((c) => norm0(c.nombre) === loc) || {}).slug || LOCS[loc] || '';
   return { ...b, slug: base, origen };
 }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 // slugs de banda únicos

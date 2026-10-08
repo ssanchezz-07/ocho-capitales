@@ -363,11 +363,16 @@ const mapLink = (q) => `https://www.google.com/maps/search/?api=1&query=${encode
 const stackTable = (heads, rows) => `<table class="oc-table"><thead><tr>${heads.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c, i) => `<td data-l="${esc(heads[i])}">${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 
 // ---------- portada ----------
+function slotShort(s, year) {
+  const e = easter(year);
+  const f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'short' }).replace('.', '');
+  return s.span ? fmtDay(e + s.off * 864e5, { day: 'numeric' }) + '-' + f(s.off + 1) : f(s.off);
+}
 function todayPanel() {
   const now = madridNow();
   const pick = pickSlot(now);
   const year = pick.year;
-  const tabs = SLOTS.map((s) => `<button type="button" role="tab" id="tab-${s.id}" aria-controls="dia-${s.id}" aria-selected="${s.id === pick.id}" tabindex="${s.id === pick.id ? 0 : -1}" data-slot="${s.id}">${esc(s.corto)}</button>`).join('');
+  const tabs = SLOTS.map((s) => `<button type="button" role="tab" id="tab-${s.id}" aria-controls="dia-${s.id}" aria-selected="${s.id === pick.id}" tabindex="${s.id === pick.id ? 0 : -1}" data-slot="${s.id}">${esc(s.label)}<small>${slotShort(s, year)}</small></button>`).join('');
   const panels = SLOTS.map((s) => {
     const list = conSalidas(D.hermandades).filter((h) => s.dias.includes(h.dia));
     const groups = D.capitales.map((c) => {
@@ -564,10 +569,43 @@ ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid
 }
 
 function pageBanda(b) {
-  const porCiudad = D.capitales.map((c) => [c, b.acompana.filter((a) => a.ciudad === c.slug && HERM[a.hermandad_slug])]).filter(([, l]) => l.length);
-  const acompana = porCiudad.map(([c, l]) => `<h3 class="oc-h3">${esc(c.nombre)}</h3>${chips(l.map((a) => [`${HERM[a.hermandad_slug].nombre}${a.rol ? ' (' + a.rol + (a.anio ? ', ' + a.anio : '') + ')' : ''}`, u('hermandad/' + a.hermandad_slug + '/')]))}`).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title${b.nombre.length > 60 ? ' is-long' : ''}">${esc(b.nombre)}</h1>${facts([['Tipo', esc(b.tipo)], ['Localidad', b.origen ? `<a href="${u('bandas/?origen=' + b.origen)}">${esc(b.localidad)}</a>` : esc(b.localidad)], ['Redes', (b.redes || []).map((r) => `<a href="https://www.instagram.com/${esc(IGUSER(r))}/" target="_blank" rel="noopener nofollow">@${esc(IGUSER(r))}</a>`).join(', ')], ['Hermandades en el portal', String(b.acompana.filter((a) => HERM[a.hermandad_slug]).length)]], 'is-key')}<div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div></header>${section('Acompaña a', acompana || '<p class="oc-empty">No hay hermandades del portal asociadas a esta formación.</p>')}<p class="oc-note">Configuración musical según la última información recopilada; las hermandades la cambian con frecuencia de un año a otro.</p>`;
-  write(`banda/${b.slug}/index.html`, layout({ title: b.nombre, desc: `${b.nombre} (${b.tipo}${b.localidad ? ', ' + b.localidad : ''}): hermandades a las que acompaña en la Semana Santa andaluza.`, body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
+  const prov = CAP[b.origen];
+  const col = prov ? prov.color : '#3a1a5c';
+  const items = b.acompana.filter((a) => HERM[a.hermandad_slug]).map((a) => ({ ...a, h: HERM[a.hermandad_slug] }));
+  const ciudades = D.capitales.filter((c) => items.some((a) => a.ciudad === c.slug));
+  const jornadas = new Set(items.map((a) => a.h.dia));
+  const porCiudad = ciudades.map((c) => {
+    const rows = items.filter((a) => a.ciudad === c.slug).sort((x, y) => dayIdx(x.h.dia) - dayIdx(y.h.dia) || x.h.orden - y.h.orden);
+    return `<h3 class="oc-h3">${esc(c.nombre)}</h3>` + stackTable(['Jornada', 'Cofradía', 'Paso', 'Año'], rows.map((a) => [esc(a.h.dia), `<a href="${u('hermandad/' + a.hermandad_slug + '/')}"><strong>${esc(a.h.nombre)}</strong></a>`, esc(a.rol || 'Cortejo'), a.anio ? String(a.anio) : '<span class="oc-muted">sin año</span>']));
+  }).join('');
+  const lugar = b.localidad ? `${b.localidad}${prov && norm(b.localidad) !== norm(prov.nombre) ? ' (provincia de ' + prov.nombre + ')' : ''}` : '';
+  const resumen = items.length
+    ? `${b.nombre} es ${/^[aeiou]/i.test(b.tipo) ? 'una' : 'una'} ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}. Acompaña a ${plural(new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías')} en ${ciudades.map((c) => c.nombre).join(', ')} (${plural(jornadas.size, 'jornada', 'jornadas')}).`
+    : `${b.nombre} es ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}.`;
+  const q = encodeURIComponent(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
+  const enlaces = [
+    ['Escuchar en YouTube', `https://www.youtube.com/results?search_query=${q}`],
+    ['Buscar en Spotify', `https://open.spotify.com/search/${q}`],
+    ...(b.redes || []).map((r) => ['Instagram @' + IGUSER(r), `https://www.instagram.com/${IGUSER(r)}/`]),
+    ['Buscar su web oficial', `https://www.google.com/search?q=${q}+web+oficial`],
+  ];
+  const vecinas = b.origen ? D.bandas.filter((x) => x.slug !== b.slug && x.origen === b.origen).slice(0, 16) : [];
+  const nuevas = items.filter((a) => a.anio > 2026);
+  const body = `<header class="oc-hero is-plate" style="--c:${col}">
+  <div class="oc-hero-text">
+    <h1 class="oc-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
+    <p class="oc-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
+    <ul class="oc-stats"><li><b>${new Set(items.map((a) => a.hermandad_slug)).size}</b><span>cofradías</span></li><li><b>${items.length}</b><span>pasos</span></li><li><b>${jornadas.size}</b><span>jornadas</span></li><li><b>${ciudades.length}</b><span>${ciudades.length === 1 ? 'capital' : 'capitales'}</span></li></ul>
+    <div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div>
+  </div>
+</header>
+<div class="oc-prose oc-bandaresumen"><p>${esc(resumen)}</p></div>
+${section('Dónde sale', porCiudad || '<p class="oc-empty">Todavía no hay cofradías del portal asociadas a esta formación.</p>')}
+${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h.nombre} (${a.rol || 'cortejo'})`, u('hermandad/' + a.hermandad_slug + '/')]))) : ''}
+${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas y perfiles públicos; el portal no aloja audio ni vídeo.</p>`)}
+${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
+<p class="oc-note">Configuración musical según la información publicada; las cofradías la cambian con frecuencia de un año a otro. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
+  write(`banda/${b.slug}/index.html`, layout({ title: b.nombre, desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
 function pageImag(i) {
@@ -579,7 +617,7 @@ function pageImag(i) {
 function dirFilters(withDay, tipos, total, bandas = false) {
   return `<div class="oc-filters" data-dir-filters>
   <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular…" autocomplete="off" enterkeyhint="search"></div>
-  ${bandas ? `<div class="oc-field"><label for="fo">De la capital</label><select id="fo" data-f="origen"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>` : ''}
+  ${bandas ? `<div class="oc-field"><label for="fo">De la provincia de</label><select id="fo" data-f="origen"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>` : ''}
   <div class="oc-field"><label for="fc">${bandas ? 'Acompaña en' : 'Capital'}</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
   ${withDay ? `<div class="oc-field"><label for="fd">Día</label><select id="fd" data-f="dia"><option value="">Todos</option>${DAY_ORDER.filter((d) => D.hermandades.some((h) => h.dia === d)).map((d) => `<option value="${slugify(d)}">${esc(d)}</option>`).join('')}</select></div>` : ''}
   ${tipos ? `<div class="oc-field"><label for="ft">Tipo</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}

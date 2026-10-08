@@ -729,3 +729,19 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-acomp dt { font-weight: 700; font-size: .92rem; color: var(--muted); }
 .oc-acomp dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .oc-srclink { font-size: .85rem; white-space: nowrap; }
+
+/* ---------- jornadas con nombre completo ---------- */
+.oc-daytabs [role="tab"] small { display: block; font: 500 .72rem var(--mono); letter-spacing: .04em; text-transform: uppercase; opacity: .78; margin-top: 2px; }
+.oc-daytabs [role="tab"] { text-align: left; line-height: 1.15; padding: 8px 14px; min-height: 52px; }
+@media (min-width: 1024px) { .oc-daytabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; } .oc-daytabs [role="tab"] { min-width: 0; } }
+@media (max-width: 1023px) { .oc-daytabs [role="tab"] { min-width: 9.5rem; } }
+.oc-daytabs [data-today-mark]::after { display: inline-block; margin: 0 0 0 6px; }
+
+/* ---------- ficha de banda ---------- */
+.oc-stats { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 22px 0 0; }
+.oc-stats li { display: grid; gap: 4px; }
+.oc-stats b { font: 800 clamp(2rem, 1.4rem + 2vw, 3rem)/.9 var(--serif); letter-spacing: -.05em; font-variant-numeric: tabular-nums; }
+.oc-stats span { font: 500 .74rem var(--mono); letter-spacing: .05em; text-transform: uppercase; opacity: .85; }
+.oc-bandaresumen { margin-top: 24px; }
+.oc-bandaresumen p { font-size: 1.15rem; max-width: 60ch; }
+.oc-linklist { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
