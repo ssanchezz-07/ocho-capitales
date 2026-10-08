@@ -572,3 +572,10 @@ html[data-city] .oc-daypanel { grid-template-columns: minmax(0, 1fr); }
 .oc-homeagenda .oc-ev { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; }
 .oc-homeagenda .oc-ev-date { height: 48px; }
 .oc-homeagenda .oc-ev-date span { font-size: 1.3rem; }
+
+/* ---------- acompañamiento musical por paso ---------- */
+.oc-acomp { margin: 0 0 8px; }
+.oc-acomp > div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 4px 16px; padding: 10px 0; border-top: 1px solid var(--line); }
+.oc-acomp dt { font-weight: 700; font-size: .92rem; color: var(--muted); }
+.oc-acomp dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.oc-srclink { font-size: .85rem; white-space: nowrap; }

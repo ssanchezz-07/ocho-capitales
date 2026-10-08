@@ -1,0 +1,2101 @@
+{
+ "generado": "2026-10-08",
+ "fuente": "Málaga Musical (https://malagamusical.blogspot.com/)",
+ "nota_localidad": "Convención del blog: las formaciones sin paréntesis son de Málaga capital; las de fuera llevan su localidad entre paréntesis.",
+ "anio_lista": 2026,
+ "url_lista": "https://malagamusical.blogspot.com/2026/04/2026.html",
+ "url_novedades": "https://malagamusical.blogspot.com/2026/04/novedades2027.html",
+ "lista2026": [
+  {
+   "blog": "Pollinica",
+   "slug": "pollinica-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Vera Cruz",
+       "localidad": "Campillos",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Lágrimas y Favores",
+   "slug": "lagrimas-y-favores-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Municipal de Arahal",
+       "localidad": "Arahal",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Dulce Nombre",
+   "slug": "dulce-nombre-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Lágrimas de Dolores",
+       "localidad": "San Fernando",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Salutación",
+   "slug": "salutacion-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical San Lorenzo Mártir",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Humildad",
+   "slug": "humildad-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Salud",
+   "slug": "salud-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Cautivo",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Humildad y Paciencia",
+   "slug": "humildad-y-paciencia-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Cruz del Humilladero",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Huerto",
+   "slug": "huerto-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Cautivo",
+       "localidad": "Estepona",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de la Vera Cruz",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Prendimiento",
+   "slug": "prendimiento-malaga",
+   "dia": "Domingo de ramos",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Real Cuerpo de Bomberos",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Virgen de Gracia",
+       "localidad": "Archidona",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Virgen del Rocío",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Pasión",
+   "slug": "pasion-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Municipal de Arahal",
+       "localidad": "Arahal",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Crucifixión",
+   "slug": "crucifixion-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Columna",
+   "slug": "gitanos-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Abriendo sección de la Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Los Gitanos",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Dolores del Puente",
+   "slug": "dolores-del-puente-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Flor entre Espinas",
+       "localidad": "Loja",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Maestro Eloy García de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Cautivo",
+   "slug": "cautivo-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Cautivo",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Abriendo sección de la Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Real Cuerpo de Bomberos",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Estudiantes",
+   "slug": "estudiantes-malaga",
+   "dia": "Lunes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Dolores Coronada",
+       "localidad": "Álora",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Rocío",
+   "slug": "rocio-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Suspiros de Pasión",
+       "localidad": "Alameda",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Vera Cruz",
+       "localidad": "Campillos",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Virgen del Rocío",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Penas",
+   "slug": "penas-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Nueva Esperanza",
+   "slug": "nueva-esperanza-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Cautivo",
+       "localidad": "Estepona",
+       "nota": "desde la salida hasta Catedral",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      },
+      {
+       "nombre": "Agrupación Musical Sagrada Resurrección",
+       "localidad": "Sanlúcar de Barrameda",
+       "nota": "desde Catedral hasta el encierro",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Humillación",
+   "slug": "humillacion-y-estrella-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Real Cuerpo de Bomberos",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Rescate",
+   "slug": "rescate-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de la Vera Cruz",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Santa Cruz",
+       "localidad": "Huelva",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Cruz del Humilladero",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Sentencia",
+   "slug": "sentencia-malaga",
+   "dia": "Martes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical San Lorenzo Mártir",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Fusionadas",
+   "slug": "fusionadas-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Fusionadas",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Azotes y Columna",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Cautivo",
+       "localidad": "Estepona",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Exaltación",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Coronación",
+       "localidad": "Campillos",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Ánimas de Ciegos",
+     "bandas": [
+      {
+       "nombre": "Banda de Guerra de la Brigada Almogávares VI de Paracaidistas",
+       "localidad": "Paracuellos de Jarama",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Música militar",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de la Archicofradía del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Mediadora",
+   "slug": "mediadora-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Cruz del Humilladero",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Salesianos",
+   "slug": "salesianos-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Cautivo",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Sangre",
+   "slug": "sangre-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Vera Cruz",
+       "localidad": "Campillos",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Rico",
+   "slug": "el-rico-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Puente",
+   "slug": "paloma-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de la Santa Vera Cruz",
+       "localidad": "Alhaurín el Grande",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Agrupación Músico-Cultural de la Santa Vera Cruz «La Pepa»",
+       "localidad": "Alhaurín el Grande",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Expiración",
+   "slug": "expiracion-malaga",
+   "dia": "Miércoles santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Colegio de Guardias Jóvenes Duque de Ahumada",
+       "localidad": "Valdemoro",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de Antiguos Alumnos de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Maestro Eloy García de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Cena",
+   "slug": "sagrada-cena-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Lágrimas de Dolores",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora de la Estrella",
+       "localidad": "Dos Hermanas",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Viñeros",
+   "slug": "vineros-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical San Lorenzo Mártir",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Sorbas",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Santa Cruz",
+   "slug": "santa-cruz-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical Salud Infirmorum",
+       "localidad": "La Línea de la Concepción",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Capilla musical",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Maestro Eloy García de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Vera Cruz",
+   "slug": "vera-cruz-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Mena",
+   "slug": "mena-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Escuadra de Gastadores y Tambores roncos de la Legión",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Guerra de la Brigada de La Legión Rey Alfonso XIII",
+       "localidad": "Viator",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Música militar",
+       "es_banda": true
+      },
+      {
+       "nombre": "Unidad de Música de la Brigada de La Legión Rey Alfonso XIII",
+       "localidad": "Almería",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Música militar",
+       "es_banda": true
+      },
+      {
+       "nombre": "Compañía de honores mixta formada por miembros de la Bandera de Cuartel General, Bandera de Zapadores, del Grupo de Artillería de Campaña, y del Grupo Logístico de la Brigada Rey Alfonso XIII, II de La Legión, con base en Viator",
+       "localidad": "Almería",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Zamarrilla",
+   "slug": "zamarrilla-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Cautivo",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Misericordia",
+   "slug": "misericordia-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música Maestro Paco Tenorio",
+       "localidad": "Arriate",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Esperanza",
+   "slug": "esperanza-malaga",
+   "dia": "Jueves santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de la Archicofradía del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Calvario",
+   "slug": "monte-calvario-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Descendimiento",
+   "slug": "descendimiento-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Nazarenos con Timbales",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda Juvenil de Música Cruz del Humilladero",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Maestro Eloy García de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Amor",
+   "slug": "amor-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Virgen del Rocío",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Dolores de San Juan",
+   "slug": "dolores-de-san-juan-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Delante del Trono Cristo",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Delante del Trono Virgen",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Soledad de San Pablo",
+   "slug": null,
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Guardia Romana con Tambores Roncos",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Cautivo",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Piedad",
+   "slug": "piedad-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Zamarrilla",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Santo Sepulcro",
+   "slug": "santo-sepulcro-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Nazarenos con Timbales",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Málaga",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de la Archicofradía del Paso y la Esperanza",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Servitas",
+   "slug": "servitas-malaga",
+   "dia": "Viernes santo",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Tambor del Real Cuerpo de Bomberos con uniforme de Luto",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Delante del Trono",
+     "bandas": [
+      {
+       "nombre": "Grupo vocal Lumen Laudis",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Tambor del Real Cuerpo de Bomberos con uniforme de Luto",
+       "localidad": "",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "es_banda": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Resucitado",
+   "slug": "resucitado-malaga",
+   "dia": "Domingo de resurrección",
+   "pasos": [
+    {
+     "paso": "Cruz de Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Lágrimas de Dolores",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": true,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Paz",
+       "localidad": "Málaga",
+       "nota": "",
+       "novedad": false,
+       "redes": [],
+       "localidad_inferida": true,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "novedades2027": [
+  {
+   "blog": "Jesús Ante Anás",
+   "slug": null,
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Lágrimas de Dolores",
+       "localidad": "San Fernando",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@amlagrimas"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Verdad y Sagrario",
+   "slug": "verdad-y-sagrario-malaga",
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@Banda_Mena"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Salutación",
+   "slug": "salutacion-malaga",
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Cautivo",
+       "localidad": "Estepona",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@amcautivo"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Huerto",
+   "slug": "huerto-malaga",
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Santa Cecilia",
+       "localidad": "Aguilar de la Frontera",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@AM_SantaCecilia"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Agrupación musical",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Fusionadas",
+   "slug": "fusionadas-malaga",
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Exaltación",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Salud",
+       "localidad": "Córdoba",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@bandasaludcord"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Rico",
+   "slug": "el-rico-malaga",
+   "dia": "",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Jesús Nazareno",
+       "localidad": "Almogía",
+       "nota": "",
+       "novedad": false,
+       "redes": [
+        "@nazarenoalmogia"
+       ],
+       "localidad_inferida": false,
+       "tipo": "Banda de música",
+       "es_banda": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

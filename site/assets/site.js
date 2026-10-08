@@ -237,13 +237,13 @@
     var timer;
     function apply() {
       var q = norm(fields.q && fields.q.value).trim().split(/\s+/).filter(Boolean);
-      var c = fields.ciudad ? fields.ciudad.value : '', d = fields.dia ? fields.dia.value : '', t = fields.tipo ? fields.tipo.value : '';
+      var c = fields.ciudad ? fields.ciudad.value : '', d = fields.dia ? fields.dia.value : '', t = fields.tipo ? fields.tipo.value : '', o = fields.origen ? fields.origen.value : '';
       var n = 0;
       cards.forEach(function (el) {
         var hay = el.dataset.q || norm(el.textContent);
         var ok = q.every(function (w) { return hay.indexOf(w) !== -1; })
           && (!c || (' ' + el.dataset.ciudad + ' ').indexOf(' ' + c + ' ') !== -1)
-          && (!d || el.dataset.dia === d) && (!t || el.dataset.tipo === t);
+          && (!d || el.dataset.dia === d) && (!t || el.dataset.tipo === t) && (!o || el.dataset.origen === o);
         el.hidden = !ok; if (ok) n++;
       });
       if (count) count.textContent = n + (n === 1 ? ' resultado' : ' resultados');

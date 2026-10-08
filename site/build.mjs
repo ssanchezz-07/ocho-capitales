@@ -473,6 +473,20 @@ ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc
   write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 860px) 100vw, 45vw', [500, 960]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
+const IGUSER = (r) => String(r).replace(/^@/, '');
+function acompHtml(a) {
+  if (!a) return '';
+  const bandaLi = (x) => {
+    const nom = x.slug ? '<a href="' + u('banda/' + x.slug + '/') + '">' + esc(x.nombre) + '</a>' : esc(x.nombre);
+    const loc = x.banda && x.localidad && x.localidad !== 'Málaga' ? ' <span class="oc-muted">(' + esc(x.localidad) + ')</span>' : '';
+    const nota = [x.novedad ? 'novedad' : '', x.nota].filter(Boolean).join(', ');
+    const src = x.fuente ? ' <a class="oc-srclink" href="' + esc(x.fuente) + '" target="_blank" rel="noopener">' + esc(x.medio || 'fuente') + '</a>' : '';
+    return nom + loc + (nota ? ' <span class="oc-muted">(' + esc(nota) + ')</span>' : '') + src;
+  };
+  const tabla = (pasos) => '<dl class="oc-acomp">' + pasos.map((p) => '<div><dt>' + esc(p.paso) + '</dt><dd>' + p.bandas.map(bandaLi).join('<br>') + '</dd></div>').join('') + '</dl>';
+  const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
+  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">Málaga Musical</a>. Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
+}
 function pageHerm(h) {
   const c = CAP[h.ciudad];
   const im = h.imagen;
@@ -506,7 +520,7 @@ function pageHerm(h) {
 ${h.historia ? `<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${para(h.historia)}</div></section>` : ''}
 ${section('Titulares e imagineros', titRows.length ? stackTable(['Titular', 'Autor y año'], titRows) : '')}
 ${section('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
-${section('Acompañamiento musical', (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : '')) + (bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas) : ''))}
+${section('Acompañamiento musical', (h.acompanamiento ? acompHtml(h.acompanamiento) : (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : ''))) + (!h.acompanamiento && bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas) : ''))}
 ${section('Marchas dedicadas', marchas)}
 ${fuente}
 </article>
@@ -521,8 +535,8 @@ ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid
 
 function pageBanda(b) {
   const porCiudad = D.capitales.map((c) => [c, b.acompana.filter((a) => a.ciudad === c.slug && HERM[a.hermandad_slug])]).filter(([, l]) => l.length);
-  const acompana = porCiudad.map(([c, l]) => `<h3 class="oc-h3">${esc(c.nombre)}</h3>${chips(l.map((a) => [`${HERM[a.hermandad_slug].nombre}${a.rol ? ' (' + a.rol + ')' : ''}`, u('hermandad/' + a.hermandad_slug + '/')]))}`).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title${b.nombre.length > 60 ? ' is-long' : ''}">${esc(b.nombre)}</h1>${facts([['Tipo', esc(b.tipo)], ['Localidad', esc(b.localidad)], ['Hermandades en el portal', String(b.acompana.filter((a) => HERM[a.hermandad_slug]).length)]], 'is-key')}<div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div></header>${section('Acompaña a', acompana || '<p class="oc-empty">No hay hermandades del portal asociadas a esta formación.</p>')}<p class="oc-note">Configuración musical según la última información recopilada; las hermandades la cambian con frecuencia de un año a otro.</p>`;
+  const acompana = porCiudad.map(([c, l]) => `<h3 class="oc-h3">${esc(c.nombre)}</h3>${chips(l.map((a) => [`${HERM[a.hermandad_slug].nombre}${a.rol ? ' (' + a.rol + (a.anio ? ', ' + a.anio : '') + ')' : ''}`, u('hermandad/' + a.hermandad_slug + '/')]))}`).join('');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title${b.nombre.length > 60 ? ' is-long' : ''}">${esc(b.nombre)}</h1>${facts([['Tipo', esc(b.tipo)], ['Localidad', b.origen ? `<a href="${u('bandas/?origen=' + b.origen)}">${esc(b.localidad)}</a>` : esc(b.localidad)], ['Redes', (b.redes || []).map((r) => `<a href="https://www.instagram.com/${esc(IGUSER(r))}/" target="_blank" rel="noopener nofollow">@${esc(IGUSER(r))}</a>`).join(', ')], ['Hermandades en el portal', String(b.acompana.filter((a) => HERM[a.hermandad_slug]).length)]], 'is-key')}<div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div></header>${section('Acompaña a', acompana || '<p class="oc-empty">No hay hermandades del portal asociadas a esta formación.</p>')}<p class="oc-note">Configuración musical según la última información recopilada; las hermandades la cambian con frecuencia de un año a otro.</p>`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre, desc: `${b.nombre} (${b.tipo}${b.localidad ? ', ' + b.localidad : ''}): hermandades a las que acompaña en la Semana Santa andaluza.`, body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
@@ -532,10 +546,11 @@ function pageImag(i) {
   write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en la Semana Santa de Andalucía. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
 }
 
-function dirFilters(withDay, tipos, total) {
+function dirFilters(withDay, tipos, total, bandas = false) {
   return `<div class="oc-filters" data-dir-filters>
   <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular…" autocomplete="off" enterkeyhint="search"></div>
-  <div class="oc-field"><label for="fc">Capital</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
+  ${bandas ? `<div class="oc-field"><label for="fo">De la capital</label><select id="fo" data-f="origen"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>` : ''}
+  <div class="oc-field"><label for="fc">${bandas ? 'Acompaña en' : 'Capital'}</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
   ${withDay ? `<div class="oc-field"><label for="fd">Día</label><select id="fd" data-f="dia"><option value="">Todos</option>${DAY_ORDER.filter((d) => D.hermandades.some((h) => h.dia === d)).map((d) => `<option value="${slugify(d)}">${esc(d)}</option>`).join('')}</select></div>` : ''}
   ${tipos ? `<div class="oc-field"><label for="ft">Tipo</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}
 </div>
@@ -549,8 +564,8 @@ function pageDirHerm() {
 }
 function pageDirBandas() {
   const tipos = [...new Set(D.bandas.map((b) => b.tipo))].sort();
-  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((b) => { const cs = [...new Set(b.acompana.map((a) => a.ciudad))]; return entrySimple(u('banda/' + b.slug + '/'), b.nombre, [b.tipo, b.localidad].filter(Boolean).join(', '), cs, ` data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-tipo="${slugify(b.tipo)}"`); }).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Bandas y formaciones</h1><p class="oc-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p></header>${dirFilters(false, tipos, D.bandas.length)}<ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((b) => { const cs = [...new Set(b.acompana.map((a) => a.ciudad))]; return entrySimple(u('banda/' + b.slug + '/'), b.nombre, [b.tipo, b.localidad].filter(Boolean).join(', '), cs, ` data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"`); }).join('');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Bandas y formaciones</h1><p class="oc-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p></header>${dirFilters(false, tipos, D.bandas.length, true)}<ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
   write('bandas/index.html', layout({ title: 'Bandas', desc: 'Bandas de cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades andaluzas.', body, path: 'bandas/', active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', '']] }));
 }
 function pageDirImag() {

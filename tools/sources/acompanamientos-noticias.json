@@ -1,0 +1,31 @@
+{
+  "_leeme": "Acompañamientos confirmados por noticias o webs oficiales, revisados a mano. Se añaden como novedades del año indicado. Campos: slug (hermandad), anio, paso, banda{nombre, localidad, tipo}, fuente (URL), medio, fecha (AAAA-MM-DD).",
+  "items": [
+    {
+      "slug": "crucifixion-malaga",
+      "anio": 2027,
+      "paso": "Virgen",
+      "banda": {
+        "nombre": "Banda de Música de la Archicofradía del Paso y la Esperanza",
+        "localidad": "Málaga",
+        "tipo": "Banda de música"
+      },
+      "fuente": "https://www.gentedepaz.es/la-crucifixion-de-malaga-apuesta-por-la-b-m-paso-y-esperanza-para-el-lunes-santo",
+      "medio": "Gente de Paz",
+      "fecha": "2026-10-02"
+    },
+    {
+      "slug": "mutilado-clemencia-malaga",
+      "anio": 2026,
+      "paso": "Cortejo",
+      "banda": {
+        "nombre": "Banda de Cornetas y Tambores del Paso y la Esperanza",
+        "localidad": "Málaga",
+        "tipo": "Banda de cornetas y tambores"
+      },
+      "fuente": "https://www.elespanol.com/malaga/cultura/cofradias/20260328/horarios-recorridos-traslados-procesiones-sabado-pasion-malaga/1003744187930_0.html",
+      "medio": "El Español",
+      "fecha": "2026-03-28"
+    }
+  ]
+}

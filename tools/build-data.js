@@ -197,6 +197,62 @@ for (const c of raw) {
   }
 }
 
+// ---------- vísperas y complementos: carga y altas (antes de enlazar bandas) ----------
+const COMP_FILE = path.join(__dirname, 'sources', 'complementos.json');
+const COMP = fs.existsSync(COMP_FILE) ? JSON.parse(fs.readFileSync(COMP_FILE, 'utf8')) : {};
+const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+const HBY = new Map(hermandades.map((h) => [h.slug, h]));
+const V = COMP.visperas || {};
+for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; h.dia_fuente = c.fuente; } }
+for (const s of V.salidas_extra || []) { const h = HBY.get(s.slug); if (h) (h.salidas = h.salidas || []).push({ dia: s.dia, titulares: s.titulares, hora: s.hora || '', sede: s.sede || '', nota: s.nota || '', fuente: s.fuente }); }
+for (const n of V.nuevas || []) {
+  const slug = slugify(n.nombre + ' ' + n.ciudad);
+  if (HBY.has(slug)) continue;
+  const orden = hermandades.filter((h) => h.ciudad === n.ciudad && h.dia === n.dia).length + 1;
+  const h = { slug, nombre: n.nombre, ciudad: n.ciudad, dia: n.dia, orden, sede: n.sede || '', fundacion: '', titulares: (n.titulares || []).map((t) => ({ nombre: t, autor: '', imaginero: '', atrib: false })), paso: n.paso || '', musica: n.musica || '', historia: '', nombre_oficial: n.nombre_oficial || '', fuente_url: n.fuente, web: '', imagen: null, marchas: [], musica_oficial: [], bandas: [], bandas_slugs: [], hora: n.hora || '', visperas: true };
+  hermandades.push(h); HBY.set(slug, h);
+}
+
+// ---------- acompañamiento musical (Málaga Musical + noticias verificadas) ----------
+// Lista de 2026 y novedades de 2027 importadas con tools/importar-malaga-musical.mjs, más acompañamientos
+// confirmados por noticias (tools/sources/acompanamientos-noticias.json).
+const MM_FILE = path.join(__dirname, 'sources', 'malaga-musical.json');
+const MN_FILE = path.join(__dirname, 'sources', 'acompanamientos-noticias.json');
+const MM = fs.existsSync(MM_FILE) ? JSON.parse(fs.readFileSync(MM_FILE, 'utf8')) : null;
+const MNEWS = fs.existsSync(MN_FILE) ? JSON.parse(fs.readFileSync(MN_FILE, 'utf8')) : { items: [] };
+if (MM) {
+  const HB = new Map(hermandades.map((h) => [h.slug, h]));
+  const addBand = (b, h, rol, anio, fuente) => {
+    if (b.es_banda === false) return;
+    const key = (b.nombre + '|' + b.localidad).toLowerCase();
+    if (!bandas.has(key)) bandas.set(key, { nombre: b.nombre, tipo: b.tipo, localidad: b.localidad, acompana: [] });
+    const e = bandas.get(key);
+    if (b.redes && b.redes.length) e.redes = [...new Set([...(e.redes || []), ...b.redes])];
+    if (!e.acompana.some((a) => a.hermandad_slug === h.slug && a.rol === rol && a.anio === anio)) e.acompana.push({ hermandad: h.nombre, hermandad_slug: h.slug, ciudad: h.ciudad, rol, propia: false, anio, fuente });
+  };
+  const toPasos = (pasos) => pasos.map((p) => ({ paso: p.paso, bandas: p.bandas.map((b) => ({ nombre: b.nombre, localidad: b.es_banda === false ? '' : b.localidad, nota: b.nota || '', novedad: !!b.novedad, banda: b.es_banda !== false })) }));
+  for (const c of MM.lista2026) {
+    const h = c.slug && HB.get(c.slug); if (!h) continue;
+    h.acompanamiento = { anio: MM.anio_lista, fuente: MM.url_lista, pasos: toPasos(c.pasos) };
+    for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2026, MM.url_lista);
+  }
+  for (const c of MM.novedades2027) {
+    const h = c.slug && HB.get(c.slug); if (!h) continue;
+    h.acompanamiento = h.acompanamiento || { anio: MM.anio_lista, fuente: MM.url_lista, pasos: [] };
+    h.acompanamiento.novedades2027 = { fuente: MM.url_novedades, pasos: toPasos(c.pasos) };
+    for (const p of c.pasos) for (const b of p.bandas) addBand(b, h, p.paso, 2027, MM.url_novedades);
+  }
+  for (const n of MNEWS.items) {
+    const h = HB.get(n.slug); if (!h) continue;
+    h.acompanamiento = h.acompanamiento || { anio: MM.anio_lista, fuente: MM.url_lista, pasos: [] };
+    const ent = { paso: n.paso, bandas: [{ nombre: n.banda.nombre, localidad: n.banda.localidad, nota: 'Anunciado ' + n.fecha, novedad: n.anio > 2026, banda: true, fuente: n.fuente, medio: n.medio }] };
+    if (n.anio <= 2026) h.acompanamiento.pasos.push(ent);
+    else (h.acompanamiento.novedades2027 = h.acompanamiento.novedades2027 || { fuente: MM.url_novedades, pasos: [] }).pasos.push(ent);
+    if (false) h.acompanamiento.novedades2027.pasos.push({ paso: n.paso, bandas: [{ nombre: n.banda.nombre, localidad: n.banda.localidad, nota: 'Anunciado ' + n.fecha, novedad: true, banda: true, fuente: n.fuente, medio: n.medio }] });
+    addBand({ ...n.banda, es_banda: true }, h, n.paso, n.anio, n.fuente);
+  }
+}
+
 // fusionar bandas sin localidad con la homónima que sí la tiene (misma ciudad o única candidata)
 for (const [key, b] of [...bandas.entries()]) {
   if (b.localidad) continue;
@@ -216,9 +272,11 @@ const imgOut = [...imagineros.values()].map((im) => ({
   bio: (IMAG_INFO[im.nombre] || {}).bio || '', ciudades: [...im.ciudades], obras: im.obras,
 })).sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es'));
 
+const norm0 = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const bandOut = [...bandas.values()].map((b) => {
   const base = slugify(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
-  return { ...b, slug: base };
+  const loc = norm0(b.localidad); const origen = (capitales.find((c) => norm0(c.nombre) === loc) || {}).slug || '';
+  return { ...b, slug: base, origen };
 }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 // slugs de banda únicos
 const bs = new Set(); for (const b of bandOut) { let s = b.slug, i = 2; while (bs.has(s)) s = b.slug + '-' + i++; bs.add(s); b.slug = s; }
@@ -226,12 +284,19 @@ const bs = new Set(); for (const b of bandOut) { let s = b.slug, i = 2; while (b
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));
 for (const h of hermandades) h.bandas_slugs = h.bandas.map((n) => bandBySlugName.get(n.toLowerCase())).filter(Boolean);
 
+// enlazar el acompañamiento de cada hermandad con la ficha de cada banda
+const bandKey = new Map(bandOut.map((b) => [(b.nombre + '|' + b.localidad).toLowerCase(), b.slug]));
+for (const h of hermandades) if (h.acompanamiento) {
+  const link = (pasos) => pasos.forEach((p) => p.bandas.forEach((b) => { if (b.banda) b.slug = bandKey.get((b.nombre + '|' + b.localidad).toLowerCase()) || ''; }));
+  link(h.acompanamiento.pasos); if (h.acompanamiento.novedades2027) link(h.acompanamiento.novedades2027.pasos);
+  const sl = new Set(h.bandas_slugs || []), nm = new Set(h.bandas || []);
+  for (const p of h.acompanamiento.pasos) for (const b of p.bandas) if (b.slug) { sl.add(b.slug); nm.add(b.nombre); }
+  h.bandas_slugs = [...sl]; h.bandas = [...nm];
+}
+
 // ---------- complementos verificados (tools/sources/complementos.json) ----------
 // Datos buscados en fuentes abiertas y revisados a mano. Solo rellenan campos vacíos; las correcciones de día
 // y las nuevas cofradías de vísperas llevan su fuente. Ver tools/buscar-complementos.mjs.
-const COMP_FILE = path.join(__dirname, 'sources', 'complementos.json');
-const COMP = fs.existsSync(COMP_FILE) ? JSON.parse(fs.readFileSync(COMP_FILE, 'utf8')) : {};
-const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 for (const im of imgOut) {
   const x = (COMP.imagineros || {})[im.nombre];
   if (!x || x.rechazado || im.bio) continue;
@@ -240,22 +305,11 @@ for (const im of imgOut) {
   im.bio = `${oficio}${x.lugar ? ' nacido en ' + x.lugar : ''}${x.nacimiento ? (x.muerte ? ` (${x.nacimiento}–${x.muerte})` : ` en ${x.nacimiento}`) : ''}.`.replace(' nacido en ' + x.lugar + ' en ', ' nacido en ' + x.lugar + ' en ');
   im.fuente_url = x.wikipedia || x.wikidata;
 }
-const HBY = new Map(hermandades.map((h) => [h.slug, h]));
 for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
   const h = HBY.get(slug); if (!h) continue;
   if (!h.web && x.web_oficial && x.web_oficial.url) { h.web = x.web_oficial.url; h.web_fuente = x.web_oficial.fuente; }
   const w = x.sevilla_wd;
   if (w) { if (!h.web && w.web) { h.web = w.web; h.web_fuente = w.wikidata; } if (!h.fundacion && w.fundacion) h.fundacion = w.fundacion; if (!h.nombre_oficial && w.nombre_oficial) h.nombre_oficial = w.nombre_oficial; }
-}
-const V = COMP.visperas || {};
-for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; h.dia_fuente = c.fuente; } }
-for (const s of V.salidas_extra || []) { const h = HBY.get(s.slug); if (h) (h.salidas = h.salidas || []).push({ dia: s.dia, titulares: s.titulares, hora: s.hora || '', sede: s.sede || '', nota: s.nota || '', fuente: s.fuente }); }
-for (const n of V.nuevas || []) {
-  const slug = slugify(n.nombre + ' ' + n.ciudad);
-  if (HBY.has(slug)) continue;
-  const orden = hermandades.filter((h) => h.ciudad === n.ciudad && h.dia === n.dia).length + 1;
-  const h = { slug, nombre: n.nombre, ciudad: n.ciudad, dia: n.dia, orden, sede: n.sede || '', fundacion: '', titulares: (n.titulares || []).map((t) => ({ nombre: t, autor: '', imaginero: '', atrib: false })), paso: n.paso || '', musica: n.musica || '', historia: '', nombre_oficial: n.nombre_oficial || '', fuente_url: n.fuente, web: '', imagen: null, marchas: [], musica_oficial: [], bandas: [], bandas_slugs: [], hora: n.hora || '', visperas: true };
-  hermandades.push(h); HBY.set(slug, h);
 }
 // En las vísperas el orden de paso sigue la hora de salida publicada.
 const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
