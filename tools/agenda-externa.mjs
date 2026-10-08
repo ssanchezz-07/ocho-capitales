@@ -57,7 +57,7 @@ async function infocofrade() {
   const lines = h.split('\n').map((l) => l.replace(/\s+/g, ' ').trim()).filter(Boolean);
   const out = []; let year = null, mes = 0, dia = 0, prev = null;
   for (const l of lines) {
-    if (/^\d{4}$/.test(l)) { year = +l; continue; }
+    if (/^\d{4}$/.test(l)) { year = +l; mes = 0; continue; } // un encabezado de año reinicia el mes: no se suma otro año al llegar a enero
     const mm = norm(l).match(/^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)$/);
     if (mm) { const n = MESES[mm[1]]; if (mes && n < mes) year++; mes = n; continue; }
     const d = l.match(/^(?:LUNES|MARTES|MI[ÉE]RCOLES|JUEVES|VIERNES|S[ÁA]BADO|DOMINGO)\s+(\d{1,2})/i);
@@ -79,8 +79,8 @@ async function infocofrade() {
   return out;
 }
 
-async function elitinerario() {
-  const url = 'https://elitinerario.es/agenda/';
+// Calendarios de Google incrustados con el plugin «Simple Calendar» (El Itinerario en Málaga, la Agrupación de Almería): página + carga de meses por AJAX.
+async function simcal({ fuente, url, ajax, id, ciudad }) {
   const out = [];
   const parseMonth = (html, year, month) => {
     html = html.replace(/\\"/g, '"').replace(/\\\//g, '/').replace(/\\n|\\t/g, ' ');
@@ -88,35 +88,52 @@ async function elitinerario() {
       const t = li.match(/itemprop="name">([^<]+)</); const s = li.match(/itemprop="startDate" content="(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)/);
       if (!t || !s) continue;
       const lugar = (li.match(/<meta itemprop="name" content="([^"]*)"/) || [])[1] || '';
-      out.push({ fecha: `${s[1]}-${s[2]}-${s[3]}`, hora: `${s[4]}:${s[5]}`, ciudad: 'malaga', tipo: tipoDe(t[1].replace(/&amp;/g, '&')) || 'culto', titulo: t[1].replace(/&amp;/g, '&').replace(/&#8211;/g, '-'), nota: lugar, fuente: 'El Itinerario', url });
+      out.push({ fecha: `${s[1]}-${s[2]}-${s[3]}`, hora: `${s[4]}:${s[5]}`, ciudad, tipo: tipoDe(t[1].replace(/&amp;/g, '&')) || 'culto', titulo: t[1].replace(/&amp;/g, '&').replace(/&#8211;/g, '-'), nota: lugar, fuente, url });
     }
   };
   const r = await fetch(url, { headers: { 'User-Agent': UA } });
-  if (!r.ok) throw new Error('El Itinerario HTTP ' + r.status);
+  if (!r.ok) throw new Error(fuente + ' HTTP ' + r.status);
   const first = await r.text();
   const ym = first.match(/simcal-month-(\d+)/); const hoy = new Date();
   parseMonth(first, hoy.getFullYear(), ym ? +ym[1] : hoy.getMonth() + 1);
   for (let i = 1; i <= 6; i++) {
     const d = new Date(Date.UTC(hoy.getUTCFullYear(), hoy.getUTCMonth() + i, 1));
-    const rr = await fetch('https://elitinerario.es/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': UA, 'content-type': 'application/x-www-form-urlencoded' }, body: `action=simcal_default_calendar_draw_grid&month=${d.getUTCMonth() + 1}&year=${d.getUTCFullYear()}&id=465` });
+    const rr = await fetch(ajax, { method: 'POST', headers: { 'User-Agent': UA, 'content-type': 'application/x-www-form-urlencoded' }, body: `action=simcal_default_calendar_draw_grid&month=${d.getUTCMonth() + 1}&year=${d.getUTCFullYear()}&id=${id}` });
     if (rr.ok) { const j = await rr.json().catch(() => null); if (j && j.data) parseMonth(j.data, d.getUTCFullYear(), d.getUTCMonth() + 1); }
   }
   // sin duplicados (el mismo acto aparece en la rejilla y en el detalle)
   const seen = new Set(); return out.filter((e) => { const k = e.fecha + e.hora + e.titulo; if (seen.has(k)) return false; seen.add(k); return true; });
 }
 
+// Agenda de la Real Federación de Granada (WordPress + The Events Calendar): API pública de eventos.
+async function federacionGranada() {
+  const r = await fetch('https://hermandadesdegranada.com/wp-json/tribe/events/v1/events?per_page=100&start_date=' + new Date().toISOString().slice(0, 10), { headers: { 'User-Agent': UA } });
+  if (!r.ok) throw new Error('Federación de Granada HTTP ' + r.status);
+  const j = await r.json();
+  return (j.events || []).map((e) => { const t = String(e.title || '').replace(/&#8211;/g, '-').replace(/&#8217;/g, "'").replace(/&amp;/g, '&').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)); const hh = e.all_day ? '' : String(e.start_date).slice(11, 16); return { fecha: String(e.start_date).slice(0, 10), hora: hh, ciudad: 'granada', tipo: tipoDe(t) || 'acto', titulo: t, nota: (e.venue && e.venue.venue) || '', fuente: 'Real Federación de Hermandades y Cofradías de Granada', url: e.url }; });
+}
+
 // Los enlaces de Google Noticias (news.google.com/rss/articles/…) se resuelven al enlace real del medio.
 const UA_NAV = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36';
+const URLS_FILE = path.join(DIR, 'sources', 'agenda-urls.json');
+let URLS = {}; try { URLS = JSON.parse(fs.readFileSync(URLS_FILE, 'utf8')); } catch (e) { URLS = {}; }
+let presupuesto = 14, bloqueado = false;
 async function resolverGoogle(url) {
+  if (URLS[url]) return URLS[url];
+  if (bloqueado || presupuesto <= 0) return '';
+  presupuesto--;
   try {
+    await new Promise((r) => setTimeout(r, 1200));
     const id = url.match(/articles\/([^?/]+)/)[1];
     const page = await (await fetch(`https://news.google.com/articles/${id}?hl=es&gl=ES&ceid=ES:es`, { headers: { 'User-Agent': UA_NAV } })).text();
     const sg = (page.match(/data-n-a-sg="([^"]+)"/) || [])[1], ts = (page.match(/data-n-a-ts="([^"]+)"/) || [])[1];
-    if (!sg || !ts) return '';
+    if (!sg || !ts) { bloqueado = true; return ''; }
     const req = JSON.stringify([[['Fbv4je', JSON.stringify(['garturlreq', [['es', 'ES', ['FINANCE_TOP_INDICES', 'WEB_TEST_1_0_0'], null, null, 1, 1, 'ES:es', null, 180, null, null, null, null, null, 0, 5], 'es', 'ES', 1, [2, 4, 8], 1, 1, null, 0, 0, null, 0], id, +ts, sg]), null, 'generic']]]);
     const r = await fetch('https://news.google.com/_/DotsSplashUi/data/batchexecute', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded;charset=UTF-8', 'User-Agent': UA_NAV }, body: 'f.req=' + encodeURIComponent(req) });
     const m = (await r.text()).match(/garturlres[^h]+(https?:[^"]+)/);
-    return m ? m[1].split('\\').join('') : '';
+    const real = m ? m[1].split('\\').join('') : '';
+    if (real) { URLS[url] = real; fs.writeFileSync(URLS_FILE, JSON.stringify(URLS)); }
+    return real;
   } catch (e) { return ''; }
 }
 const textoHtml = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, '').replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h\d)>/gi, '\n').replace(/<[^>]+>/g, '')
@@ -173,8 +190,42 @@ async function agendasPrensa() {
   const seen = new Set(); return out.filter((e) => { const k = e.fecha + e.ciudad + norm(e.titulo); if (seen.has(k)) return false; seen.add(k); return true; });
 }
 
+// Texto completo de las noticias de los últimos días que hablan de cultos o salidas (incluidas las de Google Noticias, que solo traen el titular):
+// se lee el artículo y se buscan frases con tipo de acto + fecha concreta (site/eventos.mjs). Lo ya leído se guarda en agenda-cuerpos.json.
+const CUERPOS_FILE = path.join(DIR, 'sources', 'agenda-cuerpos.json');
+async function eventosDeCuerpos() {
+  const { detectarEventos } = await import('../site/eventos.mjs');
+  let news = []; try { news = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'site', 'data', 'news.json'), 'utf8')).items; } catch (e) { return []; }
+  let cache = {}; try { cache = JSON.parse(fs.readFileSync(CUERPOS_FILE, 'utf8')); } catch (e) { cache = {}; }
+  const desde = Date.now() - 7 * 864e5;
+  const RE = /triduo|besamano|besapi|proces|salida|rosario|traslado|extraordinaria|cultos|novena|v[ií]a crucis|veneraci|funci[oó]n|pregon|cartel|magna|corona/i;
+  const cand = news.filter((n) => n.ts >= desde && n.ciudades && n.ciudades.length && !/agenda cofrade|fin de semana con procesiones/i.test(n.titulo) && RE.test(n.titulo + ' ' + (n.extracto || '')) && !cache[n.h]).slice(0, 45);
+  for (const n of cand) {
+    let url = n.url; let evs = [];
+    if (/news\.google\.com/.test(url)) url = await resolverGoogle(url);
+    if (url) {
+      try {
+        const r = await fetch(url, { headers: { 'User-Agent': UA } });
+        if (r.ok) evs = detectarEventos(n.titulo + '. ' + textoHtml(await r.text()), n.ts).map((e) => ({ fecha: e.fecha, tipo: e.tipo, frase: e.frase }));
+      } catch (e) { evs = []; }
+    }
+    cache[n.h] = { ts: n.ts, url: url || n.url, fuente: n.fuente, ciudad: n.ciudades[0], titulo: n.titulo, ev: evs };
+  }
+  for (const k of Object.keys(cache)) if (cache[k].ts < Date.now() - 45 * 864e5) delete cache[k];
+  fs.writeFileSync(CUERPOS_FILE, JSON.stringify(cache));
+  const out = [];
+  const hoy = new Date().toISOString().slice(0, 10);
+  for (const c of Object.values(cache)) for (const e of c.ev) {
+    if (e.fecha < hoy) continue; // crónicas y actos ya pasados
+    // con un solo acto en la noticia, su titular describe mejor el acto que la frase suelta
+    const titulo = (c.ev.length === 1 ? c.titulo : limpia(e.frase)).replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
+    out.push({ fecha: e.fecha, hora: horaDe(e.frase), ciudad: c.ciudad, tipo: e.tipo, titulo, nota: '', fuente: c.fuente, url: c.url });
+  }
+  const seen = new Set(); return out.filter((e) => { const k = e.fecha + e.ciudad + norm(e.titulo).slice(0, 50); if (seen.has(k)) return false; seen.add(k); return true; });
+}
+
 const res = { generado: new Date().toISOString().slice(0, 10), fuentes: {}, eventos: [] };
-for (const [nombre, fn] of [['InfoCofrade', infocofrade], ['El Itinerario', elitinerario], ['Prensa (agendas semanales)', agendasPrensa]]) {
+for (const [nombre, fn] of [['InfoCofrade', infocofrade], ['El Itinerario', () => simcal({ fuente: 'El Itinerario', url: 'https://elitinerario.es/agenda/', ajax: 'https://elitinerario.es/wp-admin/admin-ajax.php', id: 465, ciudad: 'malaga' })], ['Agrupación de Almería', () => simcal({ fuente: 'Agrupación de Hermandades y Cofradías de Almería', url: 'https://www.cofradiasdealmeria.es/calendario/', ajax: 'https://cofradiasdealmeria.es/wp-admin/admin-ajax.php', id: 743, ciudad: 'almeria' })], ['Federación de Granada', federacionGranada], ['Prensa (agendas semanales)', agendasPrensa], ['Prensa (texto de noticias)', eventosDeCuerpos]]) {
   try { const ev = await fn(); res.fuentes[nombre] = ev.length; res.eventos.push(...ev); } catch (e) { console.error(nombre + ': ' + e.message); res.fuentes[nombre] = 0; }
 }
 // Contraste entre fuentes: mismo acto (palabras clave comunes) con fechas distintas = discrepancia que hay que revisar a mano.
@@ -192,6 +243,14 @@ for (let i = 0; i < ev.length; i++) for (let j = i + 1; j < ev.length; j++) {
   if (sa.size && sb.size && solapa(sa, sb) >= 0.5) conflictos.push({ a: { fecha: a.fecha, hora: a.hora, titulo: a.titulo, fuente: a.fuente, url: a.url }, b: { fecha: b.fecha, hora: b.hora, titulo: b.titulo, fuente: b.fuente, url: b.url } });
 }
 res.conflictos = conflictos;
+// lo leído de la prensa en ejecuciones anteriores se conserva mientras el acto no haya pasado (Google limita las lecturas)
+try {
+  const prev = JSON.parse(fs.readFileSync(path.join(DIR, 'sources', 'agenda-externa.json'), 'utf8')).eventos;
+  const corte = new Date(Date.now() - 3 * 864e5).toISOString().slice(0, 10);
+  const claveE = (e) => e.fecha + '|' + e.ciudad + '|' + norm(e.titulo).slice(0, 50);
+  const ya = new Set(res.eventos.map(claveE));
+  for (const e of prev) if (e.fuente !== 'InfoCofrade' && e.fuente !== 'El Itinerario' && e.fecha >= corte && !ya.has(claveE(e))) res.eventos.push(e);
+} catch (e) { /* primera ejecución */ }
 // el último archivo bueno se conserva si ambas fuentes fallan
 const file = path.join(DIR, 'sources', 'agenda-externa.json');
 if (res.eventos.length) fs.writeFileSync(file, JSON.stringify(res, null, 1));
