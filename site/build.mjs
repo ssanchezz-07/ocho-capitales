@@ -213,9 +213,9 @@ function newsItem(n, { img = true, eager = false } = {}) {
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
 
 // ---------- agenda cofrade: fechas litúrgicas calculadas + eventos anunciados en las noticias ----------
-const TIPOS = { liturgico: 'Calendario litúrgico', magna: 'Magna', extraordinaria: 'Salida extraordinaria', procesion: 'Procesión', traslado: 'Traslado', coronacion: 'Coronación', 'via-crucis': 'Vía crucis', culto: 'Cultos', besamanos: 'Besamanos', concierto: 'Concierto', pregon: 'Pregón', cartel: 'Cartel' };
-const GRUPOS = [['', 'Todo'], ['liturgico', 'Litúrgico'], ['salidas', 'Procesiones'], ['via-crucis', 'Vía crucis'], ['cultos', 'Cultos'], ['musica', 'Conciertos'], ['anuncios', 'Pregones y carteles']];
-const GRUPO_DE = { liturgico: 'liturgico', magna: 'salidas', extraordinaria: 'salidas', procesion: 'salidas', traslado: 'salidas', coronacion: 'salidas', 'via-crucis': 'via-crucis', culto: 'cultos', besamanos: 'cultos', concierto: 'musica', pregon: 'anuncios', cartel: 'anuncios' };
+const TIPOS = { liturgico: 'Calendario litúrgico', magna: 'Magna', extraordinaria: 'Salida extraordinaria', procesion: 'Procesión', traslado: 'Traslado', coronacion: 'Coronación', 'via-crucis': 'Vía crucis', culto: 'Cultos', acto: 'Acto', besamanos: 'Besamanos', concierto: 'Concierto', pregon: 'Pregón', cartel: 'Cartel' };
+const GRUPOS = [['', 'Todo'], ['liturgico', 'Litúrgico'], ['salidas', 'Procesiones'], ['via-crucis', 'Vía crucis'], ['cultos', 'Cultos y actos'], ['musica', 'Conciertos'], ['anuncios', 'Pregones y carteles']];
+const GRUPO_DE = { liturgico: 'liturgico', magna: 'salidas', extraordinaria: 'salidas', procesion: 'salidas', traslado: 'salidas', coronacion: 'salidas', 'via-crucis': 'via-crucis', culto: 'cultos', acto: 'cultos', besamanos: 'cultos', concierto: 'musica', pregon: 'anuncios', cartel: 'anuncios' };
 const isoDay = (ms) => new Date(ms).toISOString().slice(0, 10);
 function eventosLiturgicos(years) {
   const ev = [];
@@ -252,16 +252,37 @@ function eventosNoticias() {
   return [...ev.values()];
 }
 function eventosVerificados() {
-  return EVENTOS_VERIFICADOS.map((e) => ({ fecha: e.fecha, tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: [e.hora ? e.hora + ' h.' : '', e.nota || ''].filter(Boolean).join(' '), fuentes: e.fuentes, verificado: true }));
+  return EVENTOS_VERIFICADOS.map((e) => ({ fecha: e.fecha, hora: e.hora || '', tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: [e.hora ? e.hora + ' h.' : '', e.nota || ''].filter(Boolean).join(' '), fuentes: e.fuentes, verificado: true }));
+}
+// Agendas de terceros (tools/agenda-externa.mjs): InfoCofrade, El Itinerario y agendas semanales de prensa. Salen como «detectado».
+const AGENDA_EXT_FILE = path.join(DIR, '..', 'tools', 'sources', 'agenda-externa.json');
+const EXT_ORDEN = { 'Diario SUR': 0, 'La Opinión de Málaga': 0, InfoCofrade: 1, 'El Itinerario': 2 };
+const STOPW_EV = new Set(['del', 'las', 'los', 'con', 'por', 'una', 'procesion', 'extraordinaria', 'nuestra', 'nuestro', 'senora', 'senor', 'virgen', 'santisima', 'maria', 'padre', 'jesus', 'dia', 'triduo', 'funcion', 'solemne', 'honor', 'ntra', 'sra', 'stma', 'stmo', 'cristo', 'traslado', 'vuelta', 'ida', 'regreso', 'besamanos', 'rosario', 'cultos', 'primer', 'segundo', 'tercer', 'principal', 'misa', 'hermandad', 'cofradia']);
+const sigEv = (t) => new Set(norm(t).replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length >= 3 && !STOPW_EV.has(w)));
+const mismoActo = (a, b) => { if (a.fecha !== b.fecha || a.ciudad !== b.ciudad || GRUPO_DE[a.tipo] !== GRUPO_DE[b.tipo]) return false; const x = sigEv(a.titulo), y = sigEv(b.titulo); let n = 0; for (const w of x) if (y.has(w)) n++; return x.size && y.size && n / Math.min(x.size, y.size) >= 0.5; };
+function eventosExternos(previos) {
+  if (!fs.existsSync(AGENDA_EXT_FILE)) return [];
+  const raw = JSON.parse(fs.readFileSync(AGENDA_EXT_FILE, 'utf8')).eventos.filter((e) => GRUPO_DE[e.tipo] && CAP[e.ciudad]);
+  raw.sort((a, b) => (EXT_ORDEN[a.fuente] ?? 1) - (EXT_ORDEN[b.fuente] ?? 1));
+  const out = [];
+  for (const e of raw) {
+    const ev = { fecha: e.fecha, hora: e.hora || '', tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: [e.hora ? e.hora + ' h.' : '', e.nota || ''].filter(Boolean).join(' '), fuentes: [{ url: e.url, medio: e.fuente }], externo: true };
+    if (previos.some((p) => mismoActo(p, ev)) || out.some((p) => mismoActo(p, ev))) continue;
+    out.push(ev);
+  }
+  return out;
 }
 function agenda() {
   const now = madridNow();
   const verif = eventosVerificados();
   const clave = (e) => e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + e.ciudad;
   const ya = new Set(verif.map(clave));
-  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...eventosNoticias().filter((e) => !ya.has(clave(e)))];
-  const orden = (e) => (e.tipo === 'liturgico' ? 0 : e.verificado ? 1 : 2);
-  return list.sort((a, b) => a.fecha.localeCompare(b.fecha) || orden(a) - orden(b));
+  const noticias = eventosNoticias().filter((e) => !ya.has(clave(e)));
+  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...noticias, ...eventosExternos([...verif, ...noticias])];
+  // Dentro de cada día: lo litúrgico primero, luego salidas, vía crucis, cultos y el resto; a igual grupo, por hora y lo verificado antes.
+  const GP = { liturgico: 0, salidas: 1, 'via-crucis': 2, cultos: 3, musica: 4, anuncios: 5 };
+  const orden = (e) => GP[GRUPO_DE[e.tipo]] ?? 9;
+  return list.sort((a, b) => a.fecha.localeCompare(b.fecha) || orden(a) - orden(b) || (a.hora || '99').localeCompare(b.hora || '99') || (b.verificado ? 1 : 0) - (a.verificado ? 1 : 0));
 }
 function agendaItem(e) {
   const d = new Date(e.fecha + 'T12:00:00Z').getTime();

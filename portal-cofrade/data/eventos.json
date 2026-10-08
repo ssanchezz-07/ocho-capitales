@@ -1,41 +1,127 @@
 {
-  "_leeme": "Eventos verificados a mano en fuentes oficiales o prensa. Tienen prioridad sobre los que se detectan en las noticias (mismo día, capital y grupo). Campos: fecha (AAAA-MM-DD), hora (opcional), ciudad (slug de capital), tipo (magna, extraordinaria, procesion, traslado, coronacion, via-crucis, culto, besamanos, concierto, pregon, cartel), titulo, nota (opcional), fuentes [{medio, url}]. Revisado: 2026-10-07.",
-  "eventos": [
+ "_leeme": "Eventos verificados a mano en fuentes oficiales o prensa. Tienen prioridad sobre los que se detectan en las noticias (mismo día, capital y grupo). Campos: fecha (AAAA-MM-DD), hora (opcional), ciudad (slug de capital), tipo (magna, extraordinaria, procesion, traslado, coronacion, via-crucis, culto, besamanos, concierto, pregon, cartel), titulo, nota (opcional), fuentes [{medio, url}]. Revisado: 2026-10-07.",
+ "eventos": [
+  {
+   "fecha": "2026-10-03",
+   "hora": "19:30",
+   "ciudad": "jaen",
+   "tipo": "extraordinaria",
+   "titulo": "Salida extraordinaria del Santísimo Cristo de la Buena Muerte por el centenario de la hermandad",
+   "nota": "Desde la Catedral por el centro histórico.",
+   "fuentes": [
     {
-      "fecha": "2026-10-03", "hora": "19:30", "ciudad": "jaen", "tipo": "extraordinaria",
-      "titulo": "Salida extraordinaria del Santísimo Cristo de la Buena Muerte por el centenario de la hermandad",
-      "nota": "Desde la Catedral por el centro histórico.",
-      "fuentes": [{ "medio": "Planomato", "url": "https://www.planomato.com/es/jaen/p/salida-procesional-extraordinaria-buena-muerte-jaen" }]
-    },
-    {
-      "fecha": "2026-10-10", "ciudad": "malaga", "tipo": "extraordinaria",
-      "titulo": "Procesión extraordinaria del Cristo de Hermandad y Caridad (Dolores del Puerto de la Torre)",
-      "nota": "25 aniversario de su bendición. Barrio del Puerto de la Torre.",
-      "fuentes": [{ "medio": "101TV", "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026" }]
-    },
-    {
-      "fecha": "2026-10-17", "ciudad": "cordoba", "tipo": "extraordinaria",
-      "titulo": "Procesión extraordinaria de Santa María de la Merced",
-      "nota": "50 aniversario de la bendición y llegada de la imagen a Córdoba. Itinerario distinto al habitual.",
-      "fuentes": [{ "medio": "El Debate (La Voz de Córdoba)", "url": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260718/asi-sera-recorrido-virgen-merced-calles-cordoba-50-aniversario_441022.html" }]
-    },
-    {
-      "fecha": "2026-11-07", "hora": "19:00", "ciudad": "malaga", "tipo": "extraordinaria",
-      "titulo": "Procesión extraordinaria del Señor del Santo Traslado (Soledad de San Pablo)",
-      "nota": "75 aniversario de su bendición. Desde la parroquia de San Pablo, barrio de la Trinidad.",
-      "fuentes": [{ "medio": "101TV", "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026" }]
-    },
-    {
-      "fecha": "2026-11-08", "hora": "10:00", "ciudad": "sevilla", "tipo": "coronacion",
-      "titulo": "Coronación canónica de la Virgen del Amparo y procesión triunfal (17:00 h)",
-      "nota": "Real Parroquia de Santa María Magdalena. Novena extraordinaria del 24 de octubre al 1 de noviembre y vísperas solemnes el 7 de noviembre.",
-      "fuentes": [{ "medio": "Hermandad del Amparo", "url": "https://hermandaddelamparo.com" }, { "medio": "Planomato", "url": "https://planomato.com/es/sevilla/p/coronacion-canonica-virgen-del-amparo-sevilla" }]
-    },
-    {
-      "fecha": "2026-11-14", "ciudad": "malaga", "tipo": "extraordinaria",
-      "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Pasión (Archicofradía de Pasión)",
-      "nota": "50 aniversario de su bendición. Desde la iglesia de San Juan Bautista.",
-      "fuentes": [{ "medio": "101TV", "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026" }]
+     "medio": "Planomato",
+     "url": "https://www.planomato.com/es/jaen/p/salida-procesional-extraordinaria-buena-muerte-jaen"
     }
-  ]
+   ]
+  },
+  {
+   "fecha": "2026-10-10",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria del Cristo de Hermandad y Caridad (Dolores del Puerto de la Torre)",
+   "nota": "25 aniversario de su bendición. Sale de la casa hermandad (Lope de Rueda) por el Puerto de la Torre; encierro hacia las 23:40. Música: BCT Vera Cruz de Almogía y Agrupación Musical Cautivo de Estepona.",
+   "fuentes": [
+    {
+     "medio": "Diario SUR",
+     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
+    },
+    {
+     "medio": "101TV",
+     "url": "https://www.101tv.es/semanasanta/dos-procesiones-marcan-el-sabado-cofrade-en-malaga-con-101tv-como-testigo"
+    }
+   ],
+   "hora": "17:30"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "17:30",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Procesión de gloria de Nuestra Señora del Rosario, patrona de El Palo",
+   "nota": "Sale de la parroquia de Nuestra Señora de las Angustias. Música: Banda de Música Maestro Eloy García.",
+   "fuentes": [
+    {
+     "medio": "Diario SUR",
+     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
+    },
+    {
+     "medio": "101TV",
+     "url": "https://www.101tv.es/semanasanta/dos-procesiones-marcan-el-sabado-cofrade-en-malaga-con-101tv-como-testigo"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "18:00",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen del Rosario de Santo Domingo",
+   "nota": "Sale de la parroquia de Santo Domingo, procesión de alabanza.",
+   "fuentes": [
+    {
+     "medio": "Diario SUR",
+     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-10-17",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Santa María de la Merced",
+   "nota": "50 aniversario de la bendición y llegada de la imagen a Córdoba. Itinerario distinto al habitual.",
+   "fuentes": [
+    {
+     "medio": "El Debate (La Voz de Córdoba)",
+     "url": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260718/asi-sera-recorrido-virgen-merced-calles-cordoba-50-aniversario_441022.html"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "19:00",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria del Señor del Santo Traslado (Soledad de San Pablo)",
+   "nota": "75 aniversario de su bendición. Desde la parroquia de San Pablo, barrio de la Trinidad.",
+   "fuentes": [
+    {
+     "medio": "101TV",
+     "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "10:00",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Coronación canónica de la Virgen del Amparo y procesión triunfal (17:00 h)",
+   "nota": "Real Parroquia de Santa María Magdalena. Novena extraordinaria del 24 de octubre al 1 de noviembre y vísperas solemnes el 7 de noviembre.",
+   "fuentes": [
+    {
+     "medio": "Hermandad del Amparo",
+     "url": "https://hermandaddelamparo.com"
+    },
+    {
+     "medio": "Planomato",
+     "url": "https://planomato.com/es/sevilla/p/coronacion-canonica-virgen-del-amparo-sevilla"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-14",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Pasión (Archicofradía de Pasión)",
+   "nota": "50 aniversario de su bendición. Desde la iglesia de San Juan Bautista.",
+   "fuentes": [
+    {
+     "medio": "101TV",
+     "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026"
+    }
+   ]
+  }
+ ]
 }
