@@ -1,0 +1,854 @@
+{
+  "generado": "2026-10-08",
+  "ciudad": "huelva",
+  "fuente": "Guía de la Semana Santa de Huelva 2026 (Ayuntamiento de Huelva)",
+  "anio_lista": 2026,
+  "url_lista": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+  "url_novedades": "",
+  "lista2026": [
+    {
+      "blog": "Nuestra Señora del Prado",
+      "slug": "nuestra-senora-del-prado-huelva",
+      "dia": "Viernes de Dolores",
+      "pasos": [
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Bendición",
+      "slug": "la-bendicion-huelva",
+      "dia": "Sábado de Pasión",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santa Cruz",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Borriquita",
+      "slug": "la-borriquita-huelva",
+      "dia": "Domingo de Ramos",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santa Cruz",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Sagrada Cena",
+      "slug": "la-sagrada-cena-huelva",
+      "dia": "Domingo de Ramos",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santísimo Cristo del Amor",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música AMUECI",
+              "localidad": "Écija",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Redención",
+      "slug": "la-redencion-huelva",
+      "dia": "Domingo de Ramos",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Nuestro Padre Jesús de los Afligidos",
+              "localidad": "Puente Genil",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Los Mutilados",
+      "slug": "los-mutilados-huelva",
+      "dia": "Domingo de Ramos",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Victoria",
+              "localidad": "León",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Sociedad Filarmónica de Pilas",
+              "localidad": "Pilas",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Perdón",
+      "slug": "el-perdon-huelva",
+      "dia": "Lunes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santa Cruz",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda Municipal de Bollullos Par del Condado",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Cautivo",
+      "slug": "el-cautivo-huelva",
+      "dia": "Lunes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santísimo Cristo del Amor",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Nuestra Señora del Carmen",
+              "localidad": "Villalba del Alcor",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Calvario",
+      "slug": "el-calvario-huelva",
+      "dia": "Lunes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Capilla musical (trío) de la Banda de Música Nuestra Madre de la Consolación",
+              "localidad": "",
+              "es_banda": false,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Las Tres Caídas",
+      "slug": "las-tres-caidas-huelva",
+      "dia": "Lunes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Salud",
+      "slug": "la-salud-huelva",
+      "dia": "Martes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santísimo Cristo del Amor",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Lanzada",
+      "slug": "la-lanzada-huelva",
+      "dia": "Martes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda Municipal de Música de Aznalcóllar",
+              "localidad": "Aznalcóllar",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Los Estudiantes",
+      "slug": "los-estudiantes-huelva",
+      "dia": "Martes Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Capilla musical Trío Gólgota",
+              "localidad": "",
+              "es_banda": false,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Liceo Municipal de la Música",
+              "localidad": "Moguer",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Pasión",
+      "slug": "pasion-huelva",
+      "dia": "Martes Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Nuestro Padre Jesús de la Salud (Los Gitanos)",
+              "localidad": "Sevilla",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Prendimiento",
+      "slug": "el-prendimiento-huelva",
+      "dia": "Miércoles Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Santa Cruz",
+      "slug": "la-santa-cruz-huelva",
+      "dia": "Miércoles Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Capilla Musical de trío de viento-madera, trío de violines y tenor",
+              "localidad": "",
+              "es_banda": false,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Victoria",
+      "slug": "la-victoria-huelva",
+      "dia": "Miércoles Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Vera Cruz",
+              "localidad": "Los Palacios y Villafranca",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Esperanza",
+      "slug": "la-esperanza-huelva",
+      "dia": "Miércoles Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda Municipal de Música de La Puebla del Río",
+              "localidad": "La Puebla del Río",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Vera Cruz y Oración",
+      "slug": "vera-cruz-y-oracion-huelva",
+      "dia": "Jueves Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Sol",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Liceo Municipal de la Música",
+              "localidad": "Moguer",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Misericordia",
+      "slug": "la-misericordia-huelva",
+      "dia": "Jueves Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Sin música",
+              "localidad": "",
+              "es_banda": false,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Buena Muerte",
+      "slug": "la-buena-muerte-huelva",
+      "dia": "Jueves Santo",
+      "pasos": [
+        {
+          "paso": "Cristo",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Virgen",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Nuestra Madre de la Consolación",
+              "localidad": "Huelva",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "Los Judíos (La Merced)",
+      "slug": "los-judios-la-merced-huelva",
+      "dia": "Jueves Santo",
+      "pasos": [
+        {
+          "paso": "Cristo de las Cadenas",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Victoria",
+              "localidad": "León",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Cristo del Buen Viaje",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santa Cruz",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Virgen",
+          "bandas": [
+            {
+              "nombre": "Banda Municipal de Música Nuestra Señora del Rosario",
+              "localidad": "El Cuervo",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Nazareno",
+      "slug": "el-nazareno-huelva",
+      "dia": "Madrugá",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Virgen de las Mercedes",
+              "localidad": "Bollullos Par del Condado",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "La Fe",
+      "slug": "la-fe-huelva",
+      "dia": "Viernes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santísimo Cristo del Amor",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Nuestra Madre de la Consolación",
+              "localidad": "Huelva",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Descendimiento",
+      "slug": "el-descendimiento-huelva",
+      "dia": "Viernes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+              "localidad": "Huelva",
+              "tipo": "Banda de cornetas y tambores",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Liceo Municipal de la Música",
+              "localidad": "Moguer",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Santo Entierro",
+      "slug": "el-santo-entierro-huelva",
+      "dia": "Viernes Santo",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Banda de Música Juvenil de la Cruz Roja",
+              "localidad": "Sevilla",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        },
+        {
+          "paso": "Palio",
+          "bandas": [
+            {
+              "nombre": "Banda Sinfónica",
+              "localidad": "Huelva",
+              "tipo": "Banda de música",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blog": "El Resucitado",
+      "slug": "el-resucitado-huelva",
+      "dia": "Domingo de Resurrección",
+      "pasos": [
+        {
+          "paso": "Misterio",
+          "bandas": [
+            {
+              "nombre": "Agrupación Musical Santa Cruz",
+              "localidad": "Huelva",
+              "tipo": "Agrupación musical",
+              "es_banda": true,
+              "nota": "",
+              "novedad": false,
+              "redes": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "novedades2027": []
+}

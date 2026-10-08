@@ -18,6 +18,7 @@ const PROV = { Gr: 'Granada', Má: 'Málaga', Se: 'Sevilla', Ja: 'Jaén', Al: 'A
 // alias manuales por ciudad: nombre en la guía (normalizado) → slug sin sufijo de ciudad
 const ALIAS = {
   granada: { 'borriquilla': 'la-borriquilla', 'santa cena': 'santa-cena', 'despojado': 'el-despojado-silencio-blanco', 'maravillas': 'la-sentencia-maravillas', 'cautivo y encarnacion': 'el-cautivo', 'huerto': 'el-huerto', 'trabajo y luz': 'el-trabajo', 'los dolores': 'nuestra-senora-de-los-dolores', 'el rescate': 'jesus-del-rescate', 'san agustin': 'cristo-de-san-agustin', 'lanzada': 'la-lanzada', 'via crucis': 'el-via-crucis', 'esperanza': 'la-esperanza', 'canilla': 'la-canilla', 'los gitanos': 'los-gitanos', 'estudiantes': 'los-estudiantes', 'paciencia y penas': 'paciencia-y-penas', 'rosario': 'tres-caidas-y-rosario', 'nazareno': 'el-nazareno', 'salesianos': 'los-salesianos', 'concha': 'la-concha', 'aurora': 'la-aurora', 'estrella': 'la-estrella', 'silencio': 'el-silencio', 'escolapios': 'los-escolapios', 'ferroviarios': 'los-ferroviarios', 'los favores': 'los-favores', 'santo sepulcro': 'santo-entierro', 'soledad de san jeronimo': null, 'alhambra': 'santa-maria-de-la-alhambra', 'facundillos': 'los-facundillos', 'resurreccion y triunfo': 'la-resurreccion', 'resucitado y alegria': 'el-resucitado', 'hora nona': null },
+  huelva: { 'la fe': 'la-fe' },
   sevilla: { 'dulce nombre de bellavista': 'bellavista', 'paz y misericordia': null, 'divino perdon de alcosa': 'divino-perdon', 'san jeronimo': null, 'el santo angel': null, 'las maravillas': null, 'la espiga': null, 'las penas de san vicente': 'las-penas', 'el cerro del aguila': 'el-cerro', 'la soledad de san buenaventura': 'san-buenaventura', 'la o': 'la-o' },
 };
 
@@ -47,6 +48,10 @@ const NO_BANDA = /^(capilla musical\.?$|silencio|un tambor|quinteto|tr[ií]o|cor
 const unknownLoc = new Map();
 const CORTA = { sevilla: true, granada: false }[ciudad] ?? true; // en Granada «de Armilla» forma parte del nombre; en Sevilla «de Sevilla» lo añade la guía
 const CANON = [
+  [/^Banda de M[uú]sica (Nuestra Señora de las|Virgen de las) Mercedes$/i, 'Banda de Música Virgen de las Mercedes', 'Bollullos Par del Condado'],
+  [/^(Banda Sinf[oó]nica El Liceo|Liceo Municipal de la M[uú]sica|Banda del Liceo Municipal de la M[uú]sica)$/i, 'Liceo Municipal de la Música', 'Moguer'],
+  [/^Sociedad Filarm[oó]nica$/i, 'Sociedad Filarmónica de Pilas', 'Pilas'],
+  [/^Banda de Cornetas y Tambores Sant[ií]simo Cristo de la Victoria de Le[oó]n$/i, 'Banda de Cornetas y Tambores Santísimo Cristo de la Victoria', 'León'],
   [/^Banda de Cornetas y Tambores (de )?(Nuestro Padres?|N.? ?P.?) Jes[uú]s Despojado( de sus Vestiduras)?$/i, 'Banda de Cornetas y Tambores Nuestro Padre Jesús Despojado de sus Vestiduras', 'Granada'],
   [/^Banda de Cornetas y Tambores (de )?(Nuestra Señora|María Santísima) de la Victoria$/i, 'Banda de Cornetas y Tambores María Santísima de la Victoria', 'Granada'],
   [/^Banda y Unidad de M[uú]sica (Nuestra Señora de los )?[AÁ]ngeles( de Granada)?$/i, 'Banda y Unidad de Música Nuestra Señora de los Ángeles', 'Granada'],
