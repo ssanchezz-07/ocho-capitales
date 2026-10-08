@@ -132,7 +132,7 @@ const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-
 
 // Estrella de ocho puntas (dos cuadrados): una punta por capital.
 const MARK_INNER = '<rect width="40" height="40" rx="9" fill="#2b1340"/><g fill="none" stroke="#d6b263" stroke-width="2"><rect x="11.5" y="11.5" width="17" height="17"/><rect x="11.5" y="11.5" width="17" height="17" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="2.6" fill="#d6b263"/>';
-const LOGO = `<svg class="oc-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">${MARK_INNER}</svg>`;
+const LOGO = '<svg class="oc-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="11" y="11" width="18" height="18"/><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="2.4" fill="#c79a3b" stroke="none"/></svg>';
 const WORDMARK = `${LOGO}<span class="oc-wordmark">Ocho <span>Capitales</span></span>`;
 
 // ---------- imágenes ----------
@@ -280,8 +280,8 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta name="description" content="${esc(description.slice(0, 300))}">
 <link rel="canonical" href="${esc(canonical)}">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#2b1340">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17101e">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eeece6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#110c17">
 <meta property="og:site_name" content="${BRAND}"><meta property="og:locale" content="es_ES"><meta property="og:type" content="${p.startsWith('hermandad/') || p.startsWith('banda/') || p.startsWith('imaginero/') ? 'article' : 'website'}">
 <meta property="og:title" content="${esc(title || BRAND)}"><meta property="og:description" content="${esc(description.slice(0, 200))}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(ogImage)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title || BRAND)}"><meta name="twitter:description" content="${esc(description.slice(0, 200))}"><meta name="twitter:image" content="${esc(ogImage)}">
@@ -289,8 +289,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
-<link rel="preload" href="${u('assets/fonts/source-sans-3-latin.woff2')}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${u('assets/fonts/newsreader-latin.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${u('assets/fonts/bricolage-grotesque-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
@@ -381,7 +380,7 @@ function todayPanel() {
   const lead = pick.hoy
     ? `<p class="oc-today-lead" data-today-lead>Orden de paso según la última configuración documentada. Consulta los horarios oficiales de este año.</p>`
     : `<p class="oc-today-lead" data-today-lead>Faltan <strong>${pick.days}</strong> días para el Domingo de Ramos (${fmtDay(ramos, { day: 'numeric', month: 'long' })}). Así sale cada jornada.</p>`;
-  return `<section class="oc-today" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
+  return `<section class="oc-today" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
   <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Semana Santa ${year}`}</h2>
   ${lead}
   <div class="oc-daytabs" role="tablist" aria-label="Jornadas">${tabs}</div>
@@ -389,32 +388,57 @@ function todayPanel() {
 </section>`;
 }
 
+// ---------- Atlas: plano de capitales, planchas y portada ----------
+const STAR = '<svg class="oc-plate-seal" viewBox="0 0 40 40" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="11" y="11" width="18" height="18"/><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="2.2" fill="currentColor" stroke="none"/></svg>';
+// [latitud, longitud, posición de la etiqueta] de cada capital, para el plano esquemático.
+const COORD = { sevilla: [37.39, -5.98, 'r'], malaga: [36.72, -4.42, 'r'], granada: [37.18, -3.60, 'r'], cordoba: [37.88, -4.78, 't'], cadiz: [36.53, -6.29, 'r'], huelva: [37.26, -6.95, 'b'], almeria: [36.84, -2.46, 'b'], jaen: [37.77, -3.79, 'r'] };
+const capHref = (c) => u('semana-santa/' + c.slug + '/');
+function mapaCapitales() {
+  const pins = D.capitales.map((c, i) => {
+    const [lat, lon, pos] = COORD[c.slug];
+    const x = 10 + ((lon + 7.1) / 4.9) * 80, y = 12 + ((38 - lat) / 1.65) * 76;
+    return `<a class="oc-pin${pos === 'l' ? ' is-l' : pos === 'b' ? ' is-b' : pos === 't' ? ' is-t' : ''}" style="--c:${c.color};left:${x.toFixed(1)}%;top:${y.toFixed(1)}%" href="${capHref(c)}" aria-label="${String(i + 1).padStart(2, '0')} ${esc(c.nombre)}">${String(i + 1).padStart(2, '0')}<span aria-hidden="true">${esc(c.nombre)}</span></a>`;
+  }).join('');
+  return `<div class="oc-map" role="group" aria-label="Plano esquemático de las ocho capitales">${pins}<span class="oc-map-tag is-a oc-mono">Esquema</span><span class="oc-map-tag is-b oc-mono">8 capitales</span></div>`;
+}
+function plates(big) {
+  return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
+    const bandas = D.bandas.filter((b) => b.origen === c.slug).length;
+    const img = c.imagen ? imgTag(c.imagen, '', { sizes: '(max-width: 1000px) 50vw, 25vw', widths: [330, 500] }) : '';
+    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}${bandas ? ' · ' + plural(bandas, 'banda', 'bandas') : ''}</p></div></article></li>`;
+  }).join('')}</ul>`;
+}
+
 function pageHome() {
   const latest = NEWS.items.slice(0, 40);
-  const capBlocks = D.capitales.map((c, i) => {
-    const n = newsFor(c.slug, 3);
-    return `<article class="oc-capblock" style="--c:${c.color}">${c.imagen ? `<div class="oc-capblock-img">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw', widths: [330, 500] })}</div>` : `<div class="oc-capblock-img is-blank" aria-hidden="true"></div>`}<h3 class="oc-capblock-title"><a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a></h3><p class="oc-capblock-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}</p>${n.length ? `<ul class="oc-capblock-news">${n.map((x) => `<li><a href="${esc(x.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(x.titulo)}</a><span>${esc(x.fuente)}, ${timeTag(x.ts)}</span></li>`).join('')}</ul>` : ''}<a class="oc-link" href="${u('noticias/?ciudad=' + c.slug)}">Noticias de ${esc(c.nombre)}${icon('arrow')}</a></article>`;
-  }).join('');
-  const body = `<h1 class="oc-sr">${BRAND}: la Semana Santa de Andalucía hoy</h1>
-<nav class="oc-capstrip" aria-label="Las ocho capitales"><ul>${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}">${esc(c.nombre)}</a></li>`).join('')}</ul></nav>
-${NEWS.items[0] ? `<p class="oc-breaking"><span class="oc-breaking-label">Última hora</span><a href="${esc(NEWS.items[0].url)}" target="_blank" rel="nofollow noopener noreferrer" data-breaking-link>${esc(NEWS.items[0].titulo)}</a><a class="oc-breaking-more" href="#ultimas-titulo">Más noticias</a></p>` : ''}
-<div class="oc-home-top">
+  const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
+  const evs = agenda().filter((e) => e.fecha >= hoy);
+  const body = `<section class="oc-hero-home">
+  <div>
+    <h1>Ocho ciudades. <em>Una</em> Semana Santa.</h1>
+    <p class="oc-lead">Qué sale hoy, noticias de cada día y la historia de ${D.hermandades.length} hermandades, ${D.bandas.length} bandas y ${D.imagineros.length} imagineros, de Sevilla a Almería.</p>
+    <div class="oc-hero-actions"><a class="oc-btn" href="#hoy">Qué sale hoy</a><a class="oc-btn is-quiet" href="${u('calendario/')}">Ver el calendario</a></div>
+  </div>
+  ${mapaCapitales()}
+</section>
 ${todayPanel()}
+<section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
+<div class="oc-cols">
+<section aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 <section class="oc-latest" aria-labelledby="ultimas-titulo" data-latest>
   <h2 class="oc-h2" id="ultimas-titulo">Últimas noticias</h2>
   <div class="oc-latest-list" data-latest-list>${latest.map((n) => newsItem(n, { img: false })).join('')}</div>
   <p class="oc-empty" data-latest-empty hidden>Aún no hay noticias recientes de tu ciudad.</p>
   <a class="oc-btn" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
 </section>
-${(() => { const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)); const ev = agenda().filter((e) => e.fecha >= hoy).slice(0, 3); return ev.length ? `<section class="oc-homeagenda" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2><ol class="oc-evs">${ev.map(agendaItem).join('')}</ol><a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>` : ''; })()}
 </div>
-<section class="oc-section" aria-labelledby="porcapital-titulo"><h2 class="oc-h2" id="porcapital-titulo">Noticias por capital</h2><div class="oc-capgrid">${capBlocks}</div></section>
+<div class="oc-seal" aria-hidden="true">${STAR}</div>
 <section class="oc-section" aria-labelledby="archivo-titulo"><h2 class="oc-h2" id="archivo-titulo">El archivo cofrade</h2>
-<ul class="oc-index">
-<li><a href="${u('hermandades/')}"><strong>Hermandades</strong><span>${D.hermandades.length} fichas con sede, día de salida, titulares e historia.</span>${icon('arrow')}</a></li>
-<li><a href="${u('bandas/')}"><strong>Bandas</strong><span>${D.bandas.length} formaciones y las cofradías a las que acompañan.</span>${icon('arrow')}</a></li>
-<li><a href="${u('imagineros/')}"><strong>Imagineros</strong><span>${D.imagineros.length} escultores y sus obras en procesión.</span>${icon('arrow')}</a></li>
-<li><a href="${u('calendario/')}"><strong>Calendario</strong><span>Qué sale cada jornada en cada capital, en orden de paso.</span>${icon('arrow')}</a></li>
+<ul class="oc-tiles">
+<li><a class="oc-tile" href="${u('hermandades/')}"><b>${D.hermandades.length}</b><span><strong>Hermandades</strong><small>Sede, día de salida, titulares e historia.</small></span></a></li>
+<li><a class="oc-tile" href="${u('bandas/')}"><b>${D.bandas.length}</b><span><strong>Bandas</strong><small>Formaciones y las cofradías a las que acompañan.</small></span></a></li>
+<li><a class="oc-tile" href="${u('imagineros/')}"><b>${D.imagineros.length}</b><span><strong>Imagineros</strong><small>Escultores y sus obras en procesión.</small></span></a></li>
+<li><a class="oc-tile" href="${u('calendario/')}"><b>${evs.length}</b><span><strong>Agenda</strong><small>Eventos próximos y orden de paso por jornada.</small></span></a></li>
 </ul></section>`;
   write('index.html', layout({ title: '', body, path: '', jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
@@ -434,7 +458,7 @@ function pageNews() {
 }
 
 function pageCapitales() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Las ocho capitales</h1><p class="oc-lead">Cada Semana Santa tiene su forma de andar, su música y su calendario.</p></header><div class="oc-capgrid is-big">${D.capitales.map((c) => `<article class="oc-capblock" style="--c:${c.color}">${c.imagen ? `<div class="oc-capblock-img">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw', widths: [330, 500] })}</div>` : `<div class="oc-capblock-img is-blank" aria-hidden="true"></div>`}<h2 class="oc-capblock-title"><a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a></h2><p class="oc-capblock-lema">${esc(c.lema)}</p><p class="oc-capblock-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}</p></article>`).join('')}</div>`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Las ocho capitales</h1><p class="oc-lead">Cada Semana Santa tiene su forma de andar, su música y su calendario.</p></header>${plates(true)}`;
   write('capitales/index.html', layout({ title: 'Las ocho capitales', desc: 'La Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: historia, hermandades por días y noticias.', body, path: 'capitales/', active: 'capitales/', crumbs: [['Portada', u()], ['Capitales', '']] }));
 }
 
@@ -452,7 +476,7 @@ function pageCapital(c) {
   const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') : '';
   const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` : '';
   const news = newsFor(c.slug, 6);
-  const body = `<header class="oc-hero${c.imagen ? ' has-img' : ''}" style="--c:${c.color}">
+  const body = `<header class="oc-hero is-plate${c.imagen ? ' has-img' : ''}" style="--c:${c.color}">
   <div class="oc-hero-text"><h1 class="oc-title oc-title-city">Semana Santa de ${esc(c.nombre)}</h1><p class="oc-lema">${esc(c.lema)}</p><p class="oc-hero-meta">${plural(hs.length, 'hermandad', 'hermandades')} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
   ${c.imagen ? `<figure class="oc-figure">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 860px) 100vw, 45vw', widths: [500, 960], eager: true })}<figcaption>${credit(c.imagen)}</figcaption></figure>` : ''}
 </header>
@@ -660,7 +684,7 @@ function extras() {
   }
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
   fs.writeFileSync(path.join(DIST, 'news.json'), JSON.stringify({ actualizado: NEWS.actualizado, items: NEWS.items.slice(0, 600).map(({ h, t, ...n }) => n) }));
-  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f7f3ec', theme_color: '#2b1340', icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
+  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', start_url: BASE, scope: BASE, display: 'standalone', background_color: '#eeece6', theme_color: '#eeece6', icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
   fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n${SITE ? 'Sitemap: ' + SITE + '/sitemap.xml\n' : ''}`);
   if (SITE) fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${SITE}/${p}</loc></url>`).join('\n')}\n</urlset>\n`);
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');

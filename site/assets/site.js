@@ -327,12 +327,12 @@
       var byDay = {};
       EVS.forEach(function (e) { if (match(e)) (byDay[e.f] = byDay[e.f] || []).push(e); });
       var html = '';
-      for (var i = 0; i < lead; i++) html += '<span class="oc-day is-blank" aria-hidden="true"></span>';
+      for (var i = 0; i < lead; i++) html += '<span class="oc-mday is-blank" aria-hidden="true"></span>';
       for (var d = 1; d <= days; d++) {
         var k = key(st.y, st.m, d), evs = byDay[k] || [];
         var groups = []; evs.forEach(function (e) { var c = dotClass(e.g); if (groups.indexOf(c) === -1) groups.push(c); });
         var label = d + ' de ' + MESES_L[st.m] + (evs.length ? ', ' + evs.length + (evs.length === 1 ? ' evento' : ' eventos') : ', sin eventos');
-        html += '<button type="button" class="oc-day' + (k === hoy ? ' is-today' : '') + (k === st.sel ? ' is-selected' : '') + (evs.length ? ' has-ev' : '') + '" data-day="' + k + '" aria-label="' + label + '" aria-pressed="' + (k === st.sel) + '"' + (evs.length ? '' : ' disabled') + '><span>' + d + '</span><i class="oc-dots">' + groups.slice(0, 3).map(function (g) { return '<b class="oc-dot is-' + g + '"></b>'; }).join('') + '</i></button>';
+        html += '<button type="button" class="oc-mday' + (k === hoy ? ' is-today' : '') + (k === st.sel ? ' is-selected' : '') + (evs.length ? ' has-ev' : '') + '" data-day="' + k + '" aria-label="' + label + '" aria-pressed="' + (k === st.sel) + '"' + (evs.length ? '' : ' disabled') + '><span>' + d + '</span><i class="oc-dots">' + groups.slice(0, 3).map(function (g) { return '<b class="oc-dot is-' + g + '"></b>'; }).join('') + '</i></button>';
       }
       daysBox.innerHTML = html;
     };
