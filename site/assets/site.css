@@ -124,6 +124,17 @@ strong, b { font-weight: 700; }
   .oc-searchbtn-txt { display: inline; flex: 1; text-align: left; font-weight: 600; }
   .oc-searchbtn kbd { display: inline-block; }
 }
+/* siete enlaces no caben con el buscador ampliado en pantallas medias */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .oc-header-in { gap: 14px; }
+  .oc-nav a { padding: 0 8px; font-size: .92rem; }
+  .oc-nav a::after { left: 8px; right: 8px; }
+  .oc-searchbtn { min-width: 0; padding: 0 12px; }
+  .oc-searchbtn-txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .oc-searchbtn kbd { display: none; }
+}
+@media (min-width: 960px) and (max-width: 1179px) { .oc-wordmark { display: none; } }
+@media (min-width: 960px) and (max-width: 1039px) { .oc-nav a { padding: 0 6px; font-size: .9rem; } .oc-nav a::after { left: 6px; right: 6px; } }
 @media (hover: hover) and (pointer: fine) {
   .oc-nav a:hover::after { transform: scaleX(1); }
   .oc-searchbtn:hover { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }

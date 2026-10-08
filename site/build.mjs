@@ -66,6 +66,13 @@ const CAP = Object.fromEntries(D.capitales.map((c) => [c.slug, c]));
 const IMAG = Object.fromEntries(D.imagineros.map((i) => [i.slug, i]));
 const BANDA = Object.fromEntries(D.bandas.map((b) => [b.slug, b]));
 const HERM = Object.fromEntries(D.hermandades.map((h) => [h.slug, h]));
+// Marchas dedicadas: una por título+compositor+hermandad, con ficha propia
+const MARCHAS = []; const MARCHA_SLUG = new Map();
+for (const h of D.hermandades) for (const m of h.marchas || []) {
+  let slug = slugify(m.titulo + ' ' + (m.autor || h.slug)); if (!slug) continue;
+  let n = 2; const base = slug; while (MARCHAS.some((x) => x.slug === slug)) slug = base + '-' + n++;
+  MARCHAS.push({ ...m, slug, h }); MARCHA_SLUG.set(h.slug + '|' + m.titulo + '|' + (m.autor || ''), slug);
+}
 const DAY_ORDER = D.dias_orden;
 const dayIdx = (d) => { const i = DAY_ORDER.indexOf(d); return i < 0 ? 99 : i; };
 const imagSlug = (name) => (name ? slugify(name) : '');
@@ -264,7 +271,7 @@ function agendaItem(e) {
 }
 
 // ---------- maqueta común ----------
-const NAV = [['noticias/', 'Noticias'], ['capitales/', 'Capitales'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['imagineros/', 'Imagineros']];
+const NAV = [['noticias/', 'Noticias'], ['capitales/', 'Capitales'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros']];
 const OG_DEFAULT = 'assets/og.png';
 
 function layout({ title, desc, body, path: p = '', image = '', jsonld = null, active = '', crumbs: cr = null, wide = false, head = '' }) {
@@ -319,7 +326,7 @@ ${body}
     <div class="oc-footer-grid">
       <div class="oc-footer-brand"><a class="oc-logo" href="${u()}">${WORDMARK}</a><p>${TAGLINE}</p></div>
       <nav aria-label="Capitales"><h2>Capitales</h2><ul>${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a></li>`).join('')}</ul></nav>
-      <nav aria-label="Archivo"><h2>Archivo</h2><ul><li><a href="${u('noticias/')}">Noticias</a></li><li><a href="${u('calendario/')}">Calendario</a></li><li><a href="${u('hermandades/')}">Hermandades</a></li><li><a href="${u('bandas/')}">Bandas</a></li><li><a href="${u('imagineros/')}">Imagineros</a></li><li><a href="${u('favoritos/')}">Mis favoritos</a></li></ul></nav>
+      <nav aria-label="Archivo"><h2>Archivo</h2><ul><li><a href="${u('noticias/')}">Noticias</a></li><li><a href="${u('calendario/')}">Calendario</a></li><li><a href="${u('hermandades/')}">Hermandades</a></li><li><a href="${u('bandas/')}">Bandas</a></li><li><a href="${u('marchas/')}">Marchas</a></li><li><a href="${u('imagineros/')}">Imagineros</a></li><li><a href="${u('favoritos/')}">Mis favoritos</a></li></ul></nav>
       <div><h2>${BRAND}</h2><ul><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
@@ -336,7 +343,7 @@ ${body}
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
-    <ul class="oc-sheet-list">${[['capitales/', 'Capitales'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['imagineros/', 'Imagineros'], ['favoritos/', 'Mis favoritos'], ['acerca/', 'Fuentes y metodología']].map(([h, l]) => `<li><a href="${u(h)}">${l}${icon('arrow')}</a></li>`).join('')}</ul>
+    <ul class="oc-sheet-list">${[['capitales/', 'Capitales'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros'], ['favoritos/', 'Mis favoritos'], ['acerca/', 'Fuentes y metodología']].map(([h, l]) => `<li><a href="${u(h)}">${l}${icon('arrow')}</a></li>`).join('')}</ul>
     <p class="oc-sheet-sub">Capitales</p>
     <ul class="oc-sheet-caps">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}">${esc(c.nombre)}</a></li>`).join('')}</ul>
   </div>
@@ -532,7 +539,7 @@ function pageHerm(h) {
   });
   const bandas = (h.bandas_slugs || []).filter((s) => BANDA[s]).map((s) => [BANDA[s].nombre, u('banda/' + s + '/')]);
   const musicaOf = (h.musica_oficial || []).length ? stackTable(['Paso o titular', 'Formación'], h.musica_oficial.map((m) => [esc(m.titular), esc(m.banda)])) + '<p class="oc-note">Acompañamiento musical oficial de 2026 publicado por la Agrupación.</p>' : '';
-  const marchas = (h.marchas || []).length ? stackTable(['Marcha', 'Compositor', 'Año', 'Formación'], h.marchas.map((m) => [esc(m.titulo), esc(m.autor), esc(m.anio), esc(m.tipo)])) : '';
+  const marchas = (h.marchas || []).length ? stackTable(['Marcha', 'Compositor', 'Año', 'Formación'], h.marchas.map((m) => [MARCHA_SLUG.has(h.slug + '|' + m.titulo + '|' + (m.autor || '')) ? `<a href="${u('marcha/' + MARCHA_SLUG.get(h.slug + '|' + m.titulo + '|' + (m.autor || '')) + '/')}">${esc(m.titulo)}</a>` : esc(m.titulo), esc(m.autor), esc(m.anio), esc(m.tipo)])) : '';
   const isWiki = /wikipedia\.org/.test(h.fuente_url || '');
   let host = ''; try { host = h.fuente_url ? new URL(h.fuente_url).hostname.replace(/^www\./, '') : ''; } catch (e) { host = ''; }
   const fuente = h.fuente_url ? `<p class="oc-note">Fuente de los datos: <a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'artículo de Wikipedia (CC BY-SA 4.0)' : (/agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial en ' : 'información publicada en ') + esc(host)}</a>.</p>` : '';
@@ -614,6 +621,24 @@ function pageImag(i) {
   write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en la Semana Santa de Andalucía. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
 }
 
+function pageMarcha(m) {
+  const h = m.h; const c = CAP[h.ciudad];
+  const q = encodeURIComponent(m.titulo + ' ' + (m.autor || '') + ' marcha procesional');
+  const enlaces = [['Escuchar en YouTube', `https://www.youtube.com/results?search_query=${q}`], ['Buscar en Spotify', `https://open.spotify.com/search/${q}`]];
+  const otras = MARCHAS.filter((x) => x.slug !== m.slug && ((m.autor && x.autor === m.autor) || x.h.slug === h.slug)).slice(0, 14);
+  const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, dedicada a ${h.nombre} (${c.nombre}).${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
+  const body = `<header class="oc-pagehead"><p class="oc-eyebrow">Marcha procesional</p><h1 class="oc-title">${esc(m.titulo)}</h1>${facts([['Compositor', esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo)], ['Dedicada a', `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>`], ['Capital', `<a href="${u('semana-santa/' + h.ciudad + '/')}">${esc(c.nombre)}</a>`]])}</header>
+${section('Escúchala', `<ul class="oc-linklist">${enlaces.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas en cada plataforma: la grabación concreta depende de la banda que la interprete.</p>`)}
+${otras.length ? section('Más marchas', chips(otras.map((x) => [x.titulo + (x.autor ? ' · ' + x.autor : ''), u('marcha/' + x.slug + '/')]))) : ''}
+<p class="oc-note">Datos de composición tomados de la ficha de la hermandad (${esc(h.fuente_url ? 'fuente enlazada en su página' : 'fuentes del portal')}).</p>`;
+  write(`marcha/${m.slug}/index.html`, layout({ title: m.titulo + (m.autor ? ' · ' + m.autor : ''), desc: resumen.slice(0, 300), body, path: `marcha/${m.slug}/`, active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', u('marchas/')], [m.titulo, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicComposition', name: m.titulo, composer: m.autor ? { '@type': 'Person', name: m.autor } : undefined, dateCreated: m.anio || undefined } }));
+}
+function pageDirMarchas() {
+  const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
+  const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map((m) => entrySimple(u('marcha/' + m.slug + '/'), m.titulo, [m.autor, m.anio, m.tipo].filter(Boolean).join(' · ') + ' — ' + m.h.nombre, [m.h.ciudad], ` data-q="${esc(norm([m.titulo, m.autor, m.h.nombre, m.tipo].join(' ')))}" data-ciudad="${m.h.ciudad}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"`)).join('');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas dedicadas a hermandades, con compositor, año, formación y enlace para escucharlas. Se irán ampliando con las demás capitales.</p></header>${dirFilters(false, tipos, MARCHAS.length)}<ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
+}
 function dirFilters(withDay, tipos, total, bandas = false) {
   return `<div class="oc-filters" data-dir-filters>
   <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular…" autocomplete="off" enterkeyhint="search"></div>
@@ -714,7 +739,7 @@ function searchIndex() {
   for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
-  for (const h of D.hermandades) for (const m of h.marchas || []) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}, ${h.nombre}`, u: 'hermandad/' + h.slug + '/', k: norm(m.titulo + ' ' + m.autor) });
+  for (const h of D.hermandades) for (const m of h.marchas || []) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}, ${h.nombre}`, u: 'marcha/' + (MARCHA_SLUG.get(h.slug + '|' + m.titulo + '|' + (m.autor || '')) || '') + '/', k: norm(m.titulo + ' ' + m.autor) });
   for (const n of NEWS.items.slice(0, 200)) idx.push({ t: 'n', n: n.titulo, s: n.fuente + ', ' + fmtDay(n.ts, { day: 'numeric', month: 'short' }), u: n.url, d: n.ts, k: norm(n.titulo + ' ' + (n.extracto || '') + ' ' + n.ciudades.map((c) => CAP[c]?.nombre).join(' ')) });
   fs.writeFileSync(path.join(DIST, 'search-index.json'), JSON.stringify(idx));
 }
@@ -735,7 +760,7 @@ function extras() {
 }
 
 fs.rmSync(DIST, { recursive: true, force: true });
-pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); page404();
-D.capitales.forEach(pageCapital); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); D.imagineros.forEach(pageImag);
+pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); page404();
+D.capitales.forEach(pageCapital); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); D.imagineros.forEach(pageImag);
 searchIndex(); extras();
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);
