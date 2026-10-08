@@ -1,0 +1,1142 @@
+{
+ "generado": "2026-10-08",
+ "ciudad": "granada",
+ "fuente": "Ahora Granada",
+ "anio_lista": 2026,
+ "url_lista": "https://www.ahoragranada.com/noticias/asi-sonara-la-semana-santa-de-granada-2026-las-29-bandas-que-acompanaran-a-cada-paso/",
+ "url_novedades": "",
+ "lista2026": [
+  {
+   "blog": "Borriquilla",
+   "slug": "la-borriquilla-granada",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Abre calle",
+     "bandas": [
+      {
+       "nombre": "Sección musical Nuestra Señora de las Angustias Motril",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical María Santísima de la Estrella",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de música Nuestra Señora de la Soledad de Mena",
+       "localidad": "Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Santa Cena",
+   "slug": "santa-cena-granada",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores María Santísima de la Victoria",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Músico-Cultural de la Santa Vera Cruz 'La Pepa'",
+       "localidad": "Alhaurín el Grande",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Despojado",
+   "slug": null,
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Despojado",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda y Unidad de Música Nuestra Señora de los Ángeles",
+       "localidad": "Granada",
+       "tipo": "Música militar",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Maravillas",
+   "slug": "la-sentencia-maravillas-granada",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Cristo de la Elevación del Campo de Criptana",
+       "localidad": "Ciudad Real",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Cautivo y Encarnación",
+   "slug": null,
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora de la Cabeza de Exfiliana",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de Torredonjimeno",
+       "localidad": "Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Huerto",
+   "slug": "el-huerto-granada",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Trabajo y Luz",
+   "slug": "el-trabajo-granada",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical María Santísima de la Estrella",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Felipe Moreno de Cúllar Vega",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Dolores",
+   "slug": "nuestra-senora-de-los-dolores-granada",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de Los Dolores",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Rescate",
+   "slug": "jesus-del-rescate-granada",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Cruz Guía",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Santa María de la Paz",
+       "localidad": "El Ejido",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús del Rescate",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "San Agustín",
+   "slug": null,
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Cruz Guía (alzada)",
+     "bandas": [
+      {
+       "nombre": "Capilla musical Virgen de Consolación",
+       "localidad": "",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Capilla Cristo de San Agustín",
+       "localidad": "",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Capilla Santo Ángel Custodio y grupo vocal polifónico Magnum Ensemble",
+       "localidad": "",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Lanzada",
+   "slug": "la-lanzada-granada",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padres Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Músico Cultural San Sebastián de Padul",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Vía Crucis",
+   "slug": null,
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Trío de Cañas 'Äglae'",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda y Unidad de Música Ángeles de Granada",
+       "localidad": "",
+       "tipo": "Música militar",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Esperanza",
+   "slug": "la-esperanza-granada",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús del Gran Poder",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de Santa María del Alcor",
+       "localidad": "Sevilla",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Cañilla",
+   "slug": null,
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Dulce Nombre de Jesús",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Gitanos",
+   "slug": "los-gitanos-granada",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Fe y Consuelo de Martos",
+       "localidad": "Jaén",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Los Iris de Instinción de Almería",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Estudiantes",
+   "slug": "los-estudiantes-granada",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padres Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda Felipe Moreno e Cúllar Vega",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Paciencia y Penas",
+   "slug": null,
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical María Santísima de la Estrella",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Rosario",
+   "slug": null,
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario de Arriate",
+       "localidad": "Málaga",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal",
+       "localidad": "Morón de la Frontera",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Señor en silencio",
+   "slug": null,
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Músico Cultural San Sebastián de Padul",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Concha",
+   "slug": "la-concha-granada",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora de las Angustias",
+       "localidad": "Alcalá la Real",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musico Cultural San Sebastián de Padul",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Salesianos",
+   "slug": "los-salesianos-granada",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Santa Cecilia",
+       "localidad": "Aguilar de la Frontera",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda y Unidad de Música Ángeles de Granada",
+       "localidad": "",
+       "tipo": "Música militar",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Aurora",
+   "slug": "la-aurora-granada",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Estrella",
+   "slug": "la-estrella-granada",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical María Santísima de la Estrella",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Felipe Moreno de Cúllar Vega",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Silencio",
+   "slug": "el-silencio-granada",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Música",
+     "bandas": [
+      {
+       "nombre": "un tambor ronco al inicio del cortejo",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Hora Nona",
+   "slug": null,
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Escolapios",
+   "slug": "los-escolapios-granada",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Victoria",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical San Isidro de Armilla",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Ferroviarios",
+   "slug": null,
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda y Unidad de Música Ángeles de Granada",
+       "localidad": "",
+       "tipo": "Música militar",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Favores",
+   "slug": "los-favores-granada",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Pasión",
+       "localidad": "Linares",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música María Santísima de la Esperanza de Córdoba",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Santo Sepulcro",
+   "slug": "santo-entierro-granada",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical Granamusic",
+       "localidad": "",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal",
+       "localidad": "Granada",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Soledad de San Jerónimo",
+   "slug": null,
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Señor",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical Granamusic",
+       "localidad": "",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Agrupación Músico Cultural San Sebastián de Padul",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Alhambra",
+   "slug": "santa-maria-de-la-alhambra-granada",
+   "dia": "Sábado Santo",
+   "pasos": [
+    {
+     "paso": "Cruz Guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Virgen de la Cabeza de Exfiliana",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Facundillos",
+   "slug": null,
+   "dia": "Domingo de Resurrección",
+   "pasos": [
+    {
+     "paso": "Música",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical del Dulce Nombre de Jesús",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Resurrección y Triunfo",
+   "slug": "la-resurreccion-granada",
+   "dia": "Domingo de Resurrección",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Jesús Despojado",
+       "localidad": "Jaén",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Agrupación Músico Cultural San Sebastián de Padul",
+       "localidad": "Granada",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Resucitado y Alegría",
+   "slug": null,
+   "dia": "Domingo de Resurrección",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores de Nuestro Padre Jesús Despojado de sus Vestiduras",
+       "localidad": "Granada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "novedades2027": []
+}

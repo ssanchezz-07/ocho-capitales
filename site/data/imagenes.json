@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T12:46:09.480Z",
+ "generado": "2026-10-08T18:54:28.632Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -2992,6 +2992,20 @@
    "licencia": "CC BY-SA 3.0",
    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
    "pagina": "https://commons.wikimedia.org/wiki/File:Incienso_Ja%C3%A9n.jpg"
+  },
+  "cadiz": {
+   "w": 960,
+   "h": 720,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Emilio J. Rodríguez Posada",
+   "licencia": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Comienzo_de_La_Borriquita.JPG"
   }
  }
 }
