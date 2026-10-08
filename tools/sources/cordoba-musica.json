@@ -1,0 +1,1136 @@
+{
+ "generado": "2026-10-08",
+ "ciudad": "cordoba",
+ "fuente": "La Voz de Córdoba (El Debate), guías de las procesiones 2026",
+ "anio_lista": 2026,
+ "url_lista": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+ "url_novedades": "",
+ "lista2026": [
+  {
+   "blog": "Entrada Triunfal",
+   "slug": "entrada-triunfal-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Caído y Nuestra Señora de la Fuensanta",
+       "localidad": "Córdoba",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Municipal de Dos Torres",
+       "localidad": "Dos Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Penas de Santiago",
+   "slug": "penas-de-santiago-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Salud (Los Gitanos)",
+       "localidad": "Sevilla",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Las Golondrinas",
+       "localidad": "Vélez-Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Huerto",
+   "slug": "el-huerto-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Redención",
+       "localidad": "Córdoba",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Tubamirum",
+       "localidad": "Cañete de las Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Rescatado",
+   "slug": "el-rescatado-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Nazareno",
+       "localidad": "Arahal",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Estrella",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Vera Cruz",
+   "slug": "vera-cruz-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario",
+       "localidad": "Linares",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora del Carmen",
+       "localidad": "Prado del Rey",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Esperanza",
+   "slug": "la-esperanza-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Pasión",
+       "localidad": "Linares",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música María Santísima de la Esperanza",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Amor",
+   "slug": "el-amor-cordoba",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Cristo de Herodes",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Salud",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Maestro Valero de Aguilar",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Montoro",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Merced",
+   "slug": "la-merced-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Coronación de Espinas",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Tubamirum",
+       "localidad": "Cañete de las Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Presentación al Pueblo",
+   "slug": "presentacion-al-pueblo-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Elevación de Campo de Criptana",
+       "localidad": "Ciudad Real",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Estrella",
+   "slug": "la-estrella-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Redención",
+       "localidad": "Córdoba",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Estrella",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Sentencia",
+   "slug": "la-sentencia-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Sol",
+       "localidad": "Sevilla",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de la Soledad",
+       "localidad": "Cantillana",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Vía Crucis",
+   "slug": "via-crucis-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Silencio, solo cuatro tambores roncos",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Ánimas",
+   "slug": "animas-cordoba",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Coral de hermanos cantando el Miserere gregoriano",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Coral de hermanas cantando el Stabat Mater",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Agonía",
+   "slug": "la-agonia-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Salud",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Montoro",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Universitaria",
+   "slug": "la-universitaria-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Sin música",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Sangre",
+   "slug": "la-sangre-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Esencia",
+       "localidad": "Sevilla",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música María Santísima de la Esperanza",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Buen Suceso",
+   "slug": "el-buen-suceso-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Monte Calvario",
+       "localidad": "Martos",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Estrella",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Santa Faz",
+   "slug": "la-santa-faz-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Pasión",
+       "localidad": "Linares",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Tubamirum",
+       "localidad": "Cañete de las Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Prendimiento",
+   "slug": "el-prendimiento-cordoba",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Cristo de Gracia",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical de La Algaba",
+       "localidad": "La Algaba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Perdón",
+   "slug": "el-perdon-cordoba",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Coronación de Espinas",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Tubamirum",
+       "localidad": "Cañete de las Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Paz",
+   "slug": "la-paz-cordoba",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Salud",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Arahal",
+       "localidad": "Arahal",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Calvario",
+   "slug": "el-calvario-cordoba",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Nazareno",
+       "localidad": "Arahal",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda y Unidad de Música Nuestra Señora de los Ángeles",
+       "localidad": "Granada",
+       "tipo": "Música militar",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Pasión",
+   "slug": "la-pasion-cordoba",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Santo Tomás de Villanueva",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical AMUECI",
+       "localidad": "Écija",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Piedad",
+   "slug": "la-piedad-cordoba",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración",
+       "localidad": "Quesada",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Jesús Nazareno",
+   "slug": "jesus-nazareno-cordoba",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Sin música",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Caridad",
+   "slug": "la-caridad-cordoba",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Coronación de Espinas",
+       "localidad": "Córdoba",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Jesús Caído",
+   "slug": "jesus-caido-cordoba",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Caído y Nuestra Señora de la Fuensanta",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música María Santísima de la Esperanza",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Cena",
+   "slug": "la-cena-cordoba",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de Fe en su Sagrada Cena",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Tubamirum",
+       "localidad": "Cañete de las Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Las Angustias",
+   "slug": "las-angustias-cordoba",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de El Saucejo",
+       "localidad": "El Saucejo",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Buena Muerte",
+   "slug": "la-buena-muerte-cordoba",
+   "dia": "Madrugá",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Sin música",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Santo Sepulcro",
+   "slug": "santo-sepulcro-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Quinteto de viento Sabit",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Coral polifónica Cantábile",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Soledad",
+   "slug": "la-soledad-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Estrella",
+       "localidad": "Córdoba",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Expiración",
+   "slug": "la-expiracion-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Capilla musical Ars Sacra de Écija",
+       "localidad": "",
+       "es_banda": false,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora del Carmen",
+       "localidad": "Villalba del Alcor",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Descendimiento",
+   "slug": "el-descendimiento-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Caído y Nuestra Señora de la Fuensanta",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de El Saucejo",
+       "localidad": "El Saucejo",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Conversión",
+   "slug": "la-conversion-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús de la Redención",
+       "localidad": "Córdoba",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Dolores",
+   "slug": "los-dolores-cordoba",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Misterio",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Esencia",
+       "localidad": "Sevilla",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Palio",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica Municipal de Dos Torres",
+       "localidad": "Dos Torres",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "novedades2027": []
+}
