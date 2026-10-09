@@ -1,0 +1,1378 @@
+{
+ "la-borriquita-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+  "marchas": []
+ },
+ "el-amor-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+  "marchas": []
+ },
+ "jesus-despojado-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+  "marchas": []
+ },
+ "la-paz-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
+  "marchas": []
+ },
+ "la-cena-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+  "marchas": []
+ },
+ "la-hiniesta-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
+  "marchas": []
+ },
+ "san-roque-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+  "marchas": []
+ },
+ "la-estrella-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
+  "marchas": []
+ },
+ "la-amargura-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+  "marchas": []
+ },
+ "san-pablo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+  "marchas": []
+ },
+ "redencion-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+  "marchas": []
+ },
+ "santa-genoveva-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+  "marchas": []
+ },
+ "santa-marta-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
+  "marchas": []
+ },
+ "san-gonzalo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+  "marchas": []
+ },
+ "vera-cruz-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+  "marchas": []
+ },
+ "las-penas-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+  "marchas": []
+ },
+ "las-aguas-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Nuestra Señora de Guadalupe",
+    "autor": "Antonio Pantión Pérez",
+    "anio": "1968"
+   },
+   {
+    "titulo": "Guadalupe de las Aguas",
+    "autor": "Vicente Muñoz García",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Guadalupe, Madre de la Hispanidad",
+    "autor": "José Velázquez Sánchez",
+    "anio": "1991"
+   },
+   {
+    "titulo": "Guadalupe, Reina del Arenal",
+    "autor": "Ginés Sánchez Torres",
+    "anio": "1992"
+   },
+   {
+    "titulo": "Guadalupe sobre tu costal",
+    "autor": "Julio Páez Cano",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Guadalupe Sevillana",
+    "autor": "César Cadaval Pérez",
+    "anio": "2000"
+   },
+   {
+    "titulo": "Lágrimas de Guadalupe",
+    "autor": "Juan José Puntas Fernández",
+    "anio": "2002"
+   },
+   {
+    "titulo": "Niña Guadalupe",
+    "autor": "José de la Vega Sánchez",
+    "anio": "2006"
+   },
+   {
+    "titulo": "María de Guadalupe",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "2007"
+   },
+   {
+    "titulo": "Rosario, Patrona del Arenal",
+    "autor": "Vicente Muñoz García",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Rosario de Gloria – Mater Amabilis",
+    "autor": "José de la Vega Sánchez",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Cristo de las Aguas",
+    "autor": "Luis Pedro Bedmar Estrada",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Guadalupe",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Aguas de Triana",
+    "autor": "Manuel Alejandro González Cruz",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Rosa del Tepeyac",
+    "autor": "Juan Antonio Godoy Goméz",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Mayor Dolor en tu Calvario",
+    "autor": "Francisco José Ortiz Morón",
+    "anio": "2023"
+   },
+   {
+    "titulo": "Aguas",
+    "autor": "Manuel Jesús Guerrero Marín",
+    "anio": "2025"
+   }
+  ]
+ },
+ "el-museo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+  "marchas": []
+ },
+ "el-cerro-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+  "marchas": []
+ },
+ "los-javieres-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Gracia y Amparo",
+    "autor": "Gabriel Ríos Amores",
+    "anio": "1980"
+   },
+   {
+    "titulo": "Cristo de las Almas",
+    "autor": "Ignacio Otero Nieto",
+    "anio": "1987"
+   },
+   {
+    "titulo": "María Santísima de Gracia y Amparo",
+    "autor": "Ignacio Otero Nieto",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Gracia y Amparo",
+    "autor": "Abel Moreno Gómez",
+    "anio": "1990"
+   },
+   {
+    "titulo": "Amparo de nuestras Almas",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "1996"
+   },
+   {
+    "titulo": "Llena eres de Gracia",
+    "autor": "Francisco Javier Alonso Delgado",
+    "anio": "2003"
+   },
+   {
+    "titulo": "En tu Gracia está mi Amparo",
+    "autor": "José Manuel Jódar Marín",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Apiádate de mí",
+    "autor": "José Manuel Jódar Marín",
+    "anio": "2012"
+   },
+   {
+    "titulo": "Madre de los Javieres",
+    "autor": "Rubén Jordán Flores",
+    "anio": "2015"
+   },
+   {
+    "titulo": "Alma de los Javieres",
+    "autor": "Justo Manuel Jiménez Fábregas",
+    "anio": "2014"
+   },
+   {
+    "titulo": "Almas",
+    "autor": "Abel Moreno Gómez",
+    "anio": "2022"
+   }
+  ]
+ },
+ "san-esteban-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Virgen de los Desamparados",
+    "autor": "Marcelina Fortunati",
+    "anio": "1960"
+   },
+   {
+    "titulo": "Cristo de la Salud y Buen Viaje",
+    "autor": "Antonio Amodeo",
+    "anio": "1980"
+   },
+   {
+    "titulo": "A Nuestra Señora de los Desamparados",
+    "autor": "Miguel Vázquez Garfia",
+    "anio": "1983"
+   },
+   {
+    "titulo": "A la Virgen de los Desamparados",
+    "autor": "José Albero Francés",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Señora de San Esteban",
+    "autor": "Vicente Micó",
+    "anio": "1997"
+   },
+   {
+    "titulo": "Desamparados",
+    "autor": "Francisco Javier Alonso Delgado",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Reina de San Esteban",
+    "autor": "Juan Velázquez",
+    "anio": "2006"
+   },
+   {
+    "titulo": "Madre de los Desamparados",
+    "autor": "José de la Vega Sánchez",
+    "anio": "2008"
+   },
+   {
+    "titulo": "A un ángel costalero (Desamparados)",
+    "autor": "Joaquín Ruiz González",
+    "anio": "2009"
+   },
+   {
+    "titulo": "María Santísima de los Desamparados",
+    "autor": "Francisco José Caba Moya",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Señor de San Esteban",
+    "autor": "Emilio Muñóz Serna",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Tus lágrimas por Sevilla",
+    "autor": "José M. Sánchez Molero",
+    "anio": "2010"
+   },
+   {
+    "titulo": "San Esteban Mártir",
+    "autor": "Joaquín Caballero Payán",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Cristo de la Morería",
+    "autor": "Miguel A. Lanzarote Fernández",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Judería Sevillana",
+    "autor": "Alejandro Blanco Hernández",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Volver",
+    "autor": "Alejandro Blanco Hernández",
+    "anio": "2023"
+   },
+   {
+    "titulo": "Contigo",
+    "autor": "Javier Cebrero Arias",
+    "anio": "2024"
+   }
+  ]
+ },
+ "los-estudiantes-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Angustia",
+    "autor": "Pedro Braña Martínez",
+    "anio": "1945"
+   },
+   {
+    "titulo": "Cristo de la Buena Muerte",
+    "autor": "José Albero Francés",
+    "anio": "1974"
+   },
+   {
+    "titulo": "Virgen de los Estudiantes",
+    "autor": "Abel Moreno Gómez",
+    "anio": "1987"
+   },
+   {
+    "titulo": "Virgen de la Angustia",
+    "autor": "Andrés Martos Calle",
+    "anio": "2000"
+   },
+   {
+    "titulo": "Virgen de la Angustia",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "2003"
+   },
+   {
+    "titulo": "La Virgen de la Angustia",
+    "autor": "Francisco Javier Parra",
+    "anio": "2018"
+   },
+   {
+    "titulo": "Maestra",
+    "autor": "Francisco Javier Torres",
+    "anio": "2019"
+   },
+   {
+    "titulo": "Madre de los Estudiantes",
+    "autor": "Joaquín Ruiz González",
+    "anio": "2019"
+   }
+  ]
+ },
+ "san-benito-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+  "marchas": []
+ },
+ "la-candelaria-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+  "marchas": []
+ },
+ "dulce-nombre-la-bofeta-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Jesús ante Anás",
+    "autor": "Bienvenido Puelles Oliver",
+    "anio": "1985"
+   },
+   {
+    "titulo": "Jesús Tu Dulce Nombre",
+    "autor": "Ángel Manuel Cebrero Miranda",
+    "anio": "1995"
+   },
+   {
+    "titulo": "María del Dulce Nombre",
+    "autor": "José Ramón Pérez Soto",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Dulce Nombre de María",
+    "autor": "Diego Alejandro Moreno Álvarez",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Tu Dulce Nombre",
+    "autor": "Emilio Muñoz Serna",
+    "anio": "2000"
+   },
+   {
+    "titulo": "Jesús ante Anás",
+    "autor": "Jorge Águila Ordóñez / Sergio Muñiz Carmona",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Mirada de Dulce Nombre",
+    "autor": "David Álvarez García",
+    "anio": "2019"
+   },
+   {
+    "titulo": "La otra mejilla",
+    "autor": "Miguel Pérez Martín",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Ante Anás… El Hijo de Dios",
+    "autor": "Cristóbal López Gándara",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Y dijo Anás…",
+    "autor": "Pedro Manuel Pacheco Palomo",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Frente a Dios",
+    "autor": "Francisco Javier Torres Simón",
+    "anio": "2022"
+   },
+   {
+    "titulo": "La Otra Mejilla",
+    "autor": "Francisco Javier González Ríos",
+    "anio": "2026"
+   },
+   {
+    "titulo": "Jesus Christus",
+    "autor": "Moisés García Espinosa",
+    "anio": "2014"
+   },
+   {
+    "titulo": "El Dulce Nombre",
+    "autor": "Manuel López Farfán",
+    "anio": "1925"
+   },
+   {
+    "titulo": "María Santísima del Dulce Nombre",
+    "autor": "Luis Lerate Santaella",
+    "anio": "1955"
+   },
+   {
+    "titulo": "Virgen del Dulce Nombre",
+    "autor": "Pedro Morales Muñoz",
+    "anio": "1986"
+   },
+   {
+    "titulo": "Cristo del Mayor Dolor",
+    "autor": "Luis Lerate Santaella",
+    "anio": "1992"
+   },
+   {
+    "titulo": "Jesús ante Anás",
+    "autor": "Luis Lerate Santaella",
+    "anio": "1992"
+   },
+   {
+    "titulo": "Rosa de San Lorenzo",
+    "autor": "Patricio Gómez Valles",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Al Cielo con Ella",
+    "autor": "Pedro Morales Muñoz",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Fons Pietatis",
+    "autor": "Juan José Luque Vela",
+    "anio": "2007"
+   },
+   {
+    "titulo": "La Gracia de Sevilla bajo palio",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Señora del Dulce Nombre",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2010"
+   },
+   {
+    "titulo": "El Dulce Nombre de María",
+    "autor": "Alberto Fernández-Palacios García",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Madre, tu Dulce Nombre",
+    "autor": "Antonio David Rodríguez Gómez",
+    "anio": "2016"
+   },
+   {
+    "titulo": "La Rosa de San Lorenzo",
+    "autor": "José Peña Rubio",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Coplas a Nuestro Padre Jesús",
+    "autor": "Antonio Salas",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Santo Cristo del Mayor Dolor",
+    "autor": "José Luis González Rapela",
+    "anio": "2011"
+   }
+  ]
+ },
+ "santa-cruz-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Stmo. Cristo de las Misericordias",
+    "autor": "Pedro Braña Martínez",
+    "anio": "1958"
+   },
+   {
+    "titulo": "Misericordia Señor",
+    "autor": "José Albero Francés",
+    "anio": "1973"
+   },
+   {
+    "titulo": "Dolores de Santa Cruz",
+    "autor": "José Albero Francés",
+    "anio": "1976"
+   },
+   {
+    "titulo": "Cristo en la Alcazaba",
+    "autor": "Fulgencio Morón Ródenas",
+    "anio": "1980"
+   },
+   {
+    "titulo": "Nuestra Señora de los Dolores",
+    "autor": "José Carlos Albero Tamarit",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Azahar de Santa Cruz",
+    "autor": "Fulgencio Morón Ródenas",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Santa Cruz",
+    "autor": "Manuel Marvizón Carvallo",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Madre de Santa Cruz",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "2005"
+   },
+   {
+    "titulo": "Martes Santo en Santa Cruz",
+    "autor": "Antonio Martín Roldán",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Oración en Santa Cruz",
+    "autor": "Manuel Rodríguez Pedrinazzi",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Cristo de las Misericordias",
+    "autor": "José Manuel García Pulido",
+    "anio": "2014"
+   }
+  ]
+ },
+ "el-carmen-doloroso-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+  "marchas": []
+ },
+ "la-sed-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)",
+  "marchas": []
+ },
+ "san-bernardo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+  "marchas": []
+ },
+ "el-buen-fin-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+  "marchas": []
+ },
+ "la-lanzada-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+  "marchas": []
+ },
+ "el-baratillo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+  "marchas": []
+ },
+ "cristo-de-burgos-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+  "marchas": []
+ },
+ "siete-palabras-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Pasan los campanilleros",
+    "autor": "Manuel López Farfán",
+    "anio": "1924"
+   },
+   {
+    "titulo": "Santísimo Cristo de las Siete Palabras",
+    "autor": "Antonio Pantión Pérez",
+    "anio": "1955"
+   },
+   {
+    "titulo": "Nuestra Señora de la Cabeza",
+    "autor": "Antonio Pantión Pérez",
+    "anio": "1973"
+   },
+   {
+    "titulo": "Nuestro Padre Jesús de la Misericordia",
+    "autor": "Miguel Vázquez Garfia",
+    "anio": "1981"
+   },
+   {
+    "titulo": "Virgen de la Cabeza",
+    "autor": "Pedro Morales Muñoz",
+    "anio": "1991"
+   },
+   {
+    "titulo": "María Santísima de los Remedios",
+    "autor": "Francisco Javier Alonso Delgado",
+    "anio": "2007"
+   },
+   {
+    "titulo": "Nuestra Señora de la Cabeza",
+    "autor": "Manuel Serrano Rodríguez",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Rosario de San Vicente",
+    "autor": "Alberto Barea Tejada",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Campanas de Misericordia",
+    "autor": "Alberto Álvarez",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Divina Palabra",
+    "autor": "Jesús Navarro Muñoz",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Las Siete Palabras",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2018"
+   },
+   {
+    "titulo": "Siete Palabras",
+    "autor": "José Osuna",
+    "anio": "1901"
+   },
+   {
+    "titulo": "Misericordia en tus Palabras",
+    "autor": "Francisco José Martínez Pérez",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Siete palabras de nuestro señor",
+    "autor": "Isaac Gómez y Jorge Águila",
+    "anio": "2001"
+   },
+   {
+    "titulo": "A ti padre",
+    "autor": "Agustín Castro Rodríguez",
+    "anio": "2002"
+   },
+   {
+    "titulo": "Septem Verba Christi",
+    "autor": "Manuel Alejandro González",
+    "anio": "2007"
+   },
+   {
+    "titulo": "Escapulario Carmesí",
+    "autor": "Emilio José Escalante Romero",
+    "anio": "2009"
+   },
+   {
+    "titulo": "En tu Calvario",
+    "autor": "Enrique León Serrano",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Misericordia de tus Palabras",
+    "autor": "Francisco Moraza Cienfuegos",
+    "anio": "2012"
+   },
+   {
+    "titulo": "Noche carmesí",
+    "autor": "José Manuel Ortega León",
+    "anio": "2018"
+   },
+   {
+    "titulo": "Sagrados clavos",
+    "autor": "José Bazalo",
+    "anio": "2022"
+   },
+   {
+    "titulo": "Madre de los remedios",
+    "autor": "José Bazalo",
+    "anio": "2024"
+   },
+   {
+    "titulo": "Tú Esencia",
+    "autor": "Manuel Alejandro González Cruz",
+    "anio": "2025"
+   },
+   {
+    "titulo": "Siete Palabras",
+    "autor": "Francisco del Toro",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Jesús de la Divina Misericordia",
+    "autor": "Jesús Gómez Rodríguez y Juan Manuel Martínez Lara",
+    "anio": "1998"
+   }
+  ]
+ },
+ "los-panaderos-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Nuestra Señora de Regla",
+    "autor": "Manuel Borrego Hernández",
+    "anio": "1943"
+   },
+   {
+    "titulo": "Virgen de Regla",
+    "autor": "Rafael Ruiz Amé",
+    "anio": "1975"
+   },
+   {
+    "titulo": "María Santísima de Regla",
+    "autor": "José Albero Francés",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Madre de Regla",
+    "autor": "Rafael Vázquez Mateo",
+    "anio": "2001"
+   },
+   {
+    "titulo": "Regla de San Andrés",
+    "autor": "Ángel Alcaide Barroso Vázquez",
+    "anio": "2001"
+   },
+   {
+    "titulo": "Salve, Reina de los Panaderos",
+    "autor": "Luis Miguel Villalba Ángel",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Santa María de Regla",
+    "autor": "José Ramón Lozano Garrido",
+    "anio": "2003"
+   },
+   {
+    "titulo": "La Virgen de Regla",
+    "autor": "José Miguel López Rueda",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Virgen de Regla",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Virgen de Regla Coronada",
+    "autor": "José Ramón Lozano Garrido",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Jesús en su Prendimiento",
+    "autor": "Pedro Manuel Pacheco",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Virgen de Regla Coronada",
+    "autor": "Francisco Nogales Medina",
+    "anio": "2010"
+   },
+   {
+    "titulo": "María, Reina y Madre",
+    "autor": "Pedro Manuel Pacheco",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Prendido",
+    "autor": "Francisco Javier Torres Simón",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Madre de Regla Coronada",
+    "autor": "José Núñez Mayoral",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Jesús, Salvador y Soberano",
+    "autor": "José María Sánchez Martín",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Gath Shemânîm",
+    "autor": "Cristóbal López Gándara",
+    "anio": "2023"
+   },
+   {
+    "titulo": "Los Panaderos",
+    "autor": "José Colomé",
+    "anio": "2026"
+   }
+  ]
+ },
+ "los-negritos-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+  "marchas": []
+ },
+ "la-exaltacion-los-caballos-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+  "marchas": []
+ },
+ "las-cigarreras-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
+  "marchas": []
+ },
+ "montesion-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+  "marchas": []
+ },
+ "la-quinta-angustia-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+  "marchas": []
+ },
+ "el-valle-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+  "marchas": []
+ },
+ "pasion-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+  "marchas": []
+ },
+ "el-silencio-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+  "marchas": []
+ },
+ "el-gran-poder-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+  "marchas": []
+ },
+ "la-macarena-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+  "marchas": []
+ },
+ "el-calvario-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+  "marchas": []
+ },
+ "la-esperanza-de-triana-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+  "marchas": [
+   {
+    "titulo": "Soleá, Dame la Mano",
+    "autor": "Manuel Font de Anta",
+    "anio": "1918"
+   },
+   {
+    "titulo": "La Esperanza de Triana",
+    "autor": "Manuel López Farfán",
+    "anio": "1925"
+   },
+   {
+    "titulo": "Esperanza de Triana",
+    "autor": "José Martínez Peralto",
+    "anio": "1940"
+   },
+   {
+    "titulo": "Nuestra Señora de la Esperanza de Triana",
+    "autor": "Manuel Pantión Pérez",
+    "anio": "1954"
+   },
+   {
+    "titulo": "Esperanza de Triana",
+    "autor": "Manuel Rodríguez Ruiz",
+    "anio": "1969"
+   },
+   {
+    "titulo": "Pasa la Esperanza de Triana",
+    "autor": "José Albero Francés",
+    "anio": "1974"
+   },
+   {
+    "titulo": "Esperanza trianera",
+    "autor": "Ángel Alcaide",
+    "anio": "1996"
+   },
+   {
+    "titulo": "Esperanza de Pureza",
+    "autor": "Francisco del Toro Zamora",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Triana de Esperanza",
+    "autor": "Claudio Gómez Calado",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Siempre la Esperanza",
+    "autor": "Don Jesús Joaquín Espinosa de los Monteros Pérez",
+    "anio": "2012"
+   },
+   {
+    "titulo": "La Esperanza",
+    "autor": "Francisco Ortiz Morón",
+    "anio": "2017"
+   },
+   {
+    "titulo": "Triana",
+    "autor": "José Félix García Domínguez",
+    "anio": "2018"
+   },
+   {
+    "titulo": "Al Cielo la Reina de Triana",
+    "autor": "José Luis Gómez Jaldón",
+    "anio": "2019"
+   },
+   {
+    "titulo": "Esperanza que guía a Triana",
+    "autor": "José León Alapont",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Reina la Esperanza",
+    "autor": "José Félix García Domínguez",
+    "anio": "2022"
+   },
+   {
+    "titulo": "Reina, Madre y Capitana",
+    "autor": "José Luis Gómez Saldón",
+    "anio": "2023"
+   },
+   {
+    "titulo": "La Misión de la Esperanza",
+    "autor": "Rubén Jordán Flores",
+    "anio": "2024"
+   },
+   {
+    "titulo": "Creo en la Esperanza",
+    "autor": "Carlos Guillén González",
+    "anio": "2024"
+   },
+   {
+    "titulo": "Poderosa Esperanza",
+    "autor": "David Segado Ramírez",
+    "anio": "2025"
+   },
+   {
+    "titulo": "Campanilleros de una Esperanza",
+    "autor": "Alberto Barea y José Manuel Toscano",
+    "anio": "2025"
+   },
+   {
+    "titulo": "Caído vas por Triana",
+    "autor": "Manuel Hernández Garrido",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Cristo caído en Triana",
+    "autor": "José Albero",
+    "anio": "1994"
+   },
+   {
+    "titulo": "La Pasión",
+    "autor": "Manuel Alejandro González Cruz",
+    "anio": "2008"
+   },
+   {
+    "titulo": "Mi Madrugá",
+    "autor": "Manuel Alejandro González Cruz",
+    "anio": "2010"
+   },
+   {
+    "titulo": "El Alma de Triana",
+    "autor": "Francisco Ortiz Morón",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Arrepentimiento",
+    "autor": "Manuel Jesús Guerrero Marín",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Se arrodilla Triana",
+    "autor": "Manuel Jesús Guerrero Marín y José Manuel Sánchez Crespillo",
+    "anio": "2024"
+   }
+  ]
+ },
+ "los-gitanos-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+  "marchas": []
+ },
+ "la-carreteria-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Marcha Fúnebre – Carretería",
+    "autor": "José Font Marimont",
+    "anio": "1887"
+   },
+   {
+    "titulo": "Nuestra Señora del Mayor Dolor",
+    "autor": "Manuel López Farfán",
+    "anio": "1927"
+   },
+   {
+    "titulo": "Virgen de la Carretería",
+    "autor": "José Albero Francés",
+    "anio": "1977"
+   },
+   {
+    "titulo": "Nuestra Señora de la Luz",
+    "autor": "José Joaquín Méndez Moreno",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Virgen de la Soledad",
+    "autor": "José Joaquín Méndez Moreno",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Al Cristo de la Salud",
+    "autor": "José Joaquín Méndez Moreno",
+    "anio": "1990"
+   },
+   {
+    "titulo": "Nuestra Señora del Mayor Dolor en su Soledad",
+    "autor": "Ginés Sánchez Torres",
+    "anio": "1994"
+   },
+   {
+    "titulo": "Al pie de tu Santa Cruz",
+    "autor": "Francisco Javier González Ríos",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Madre del Mayor Dolor",
+    "autor": "José Manuel Delgado Rodríguez",
+    "anio": "2001"
+   },
+   {
+    "titulo": "Mayor Dolor en Sevilla",
+    "autor": "Claudio Gómez Calado",
+    "anio": "2002"
+   },
+   {
+    "titulo": "A La Carretería",
+    "autor": "Rogelio Conesa",
+    "anio": "2002"
+   },
+   {
+    "titulo": "Las Tres Necesidades",
+    "autor": "Juan Velázquez Sánchez",
+    "anio": "2005"
+   },
+   {
+    "titulo": "Ecce Homo",
+    "autor": "Francisco Manuel Rivero Gallardo",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Golgotha",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2010"
+   },
+   {
+    "titulo": "La Carretería",
+    "autor": "Pedro Manuel Pacheco Palomo",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Subida al Calvario",
+    "autor": "David Hurtado Torres",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Luz de Misericordia",
+    "autor": "Rafael Vázquez Mateo",
+    "anio": "2016"
+   },
+   {
+    "titulo": "La Espada Dolorosa",
+    "autor": "Pablo Bellido Alba",
+    "anio": "2017"
+   },
+   {
+    "titulo": "Crucifixus",
+    "autor": "Cristóbal López Gándara",
+    "anio": "2022"
+   },
+   {
+    "titulo": "El Mayor Dolor",
+    "autor": "Daniel Albarrán Acosta",
+    "anio": "2023"
+   }
+  ]
+ },
+ "san-isidoro-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+  "marchas": []
+ },
+ "la-o-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+  "marchas": [
+   {
+    "titulo": "Virgen de la O",
+    "autor": "José Gardey Cuevas / Luis Rivas Gómez / Pedro Gámez Laserna",
+    "anio": "1961"
+   },
+   {
+    "titulo": "Nazareno de la O",
+    "autor": "Pedro Pacheco y Eusebio Álvarez-Ossorio",
+    "anio": "1986"
+   },
+   {
+    "titulo": "María Santísima de la O",
+    "autor": "Abel Moreno Gómez",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Cruz de Carey",
+    "autor": "Manuel Esteban Marín",
+    "anio": "1996"
+   },
+   {
+    "titulo": "Santa María de la O",
+    "autor": "Pedro Morales Muñoz",
+    "anio": "1997"
+   },
+   {
+    "titulo": "A la voz de mi capataz",
+    "autor": "Manuel Rodríguez Pedrinazzi",
+    "anio": "2002"
+   },
+   {
+    "titulo": "La O",
+    "autor": "Francisco Japón",
+    "anio": "2002"
+   },
+   {
+    "titulo": "Callejuela de la O",
+    "autor": "Francisco Joaquín Pérez Garrido “Paco Lola”",
+    "anio": "2003"
+   },
+   {
+    "titulo": "O de Triana",
+    "autor": "Francisco José Gómez Calado",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Virgen de la O \"Coronación",
+    "autor": "Manuel Marvizón Carvallo",
+    "anio": "2007"
+   },
+   {
+    "titulo": "Santísimo Sacramento",
+    "autor": "Francisco Pizarro",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Pasa la Virgen por el Altozano",
+    "autor": "Jacinto Manuel Rojas Guisado",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Melodías de la O",
+    "autor": "Juan Manuel Fernández",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Nazareno de la O",
+    "autor": "Francisco José Carrasco Benítez",
+    "anio": "2009"
+   },
+   {
+    "titulo": "Coplas de carey",
+    "autor": "Juan Manuel Fernández y Valiente Carranza",
+    "anio": "2011"
+   },
+   {
+    "titulo": "O de Esperanza",
+    "autor": "Francisco Javier Barbero",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Y en Triana La O",
+    "autor": "Jesús J. Espinosa de los Monteros",
+    "anio": "2012"
+   },
+   {
+    "titulo": "Reina de la O",
+    "autor": "Antonio David Rodríguez Gómez",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Patre Nostro",
+    "autor": "Francisco Japón",
+    "anio": "2016"
+   }
+  ]
+ },
+ "san-buenaventura-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+  "marchas": []
+ },
+ "montserrat-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+  "marchas": []
+ },
+ "la-sagrada-mortaja-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+  "marchas": []
+ },
+ "el-cachorro-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+  "marchas": []
+ },
+ "los-servitas-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+  "marchas": []
+ },
+ "la-trinidad-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+  "marchas": []
+ },
+ "el-santo-entierro-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+  "marchas": []
+ },
+ "la-soledad-de-san-lorenzo-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+  "marchas": []
+ },
+ "la-resurreccion-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+  "marchas": []
+ },
+ "bellavista-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+  "marchas": []
+ },
+ "bendicion-y-esperanza-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+  "marchas": []
+ },
+ "pasion-y-muerte-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+  "marchas": []
+ },
+ "pino-montano-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+  "marchas": []
+ },
+ "la-mision-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
+  "marchas": []
+ },
+ "cristo-de-la-corona-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+  "marchas": []
+ },
+ "padre-pio-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+  "marchas": []
+ },
+ "san-jose-obrero-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+  "marchas": []
+ },
+ "la-milagrosa-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+  "marchas": []
+ },
+ "dolores-de-torreblanca-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+  "marchas": []
+ },
+ "divino-perdon-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+  "marchas": []
+ },
+ "el-sol-sevilla": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+  "marchas": []
+ }
+}

@@ -327,6 +327,15 @@ for (const dia of ['Viernes de Dolores', 'Sábado de Pasión']) for (const ciuda
   // solo donde hay cofradías de vísperas añadidas; las que no tienen hora confirmada van al final
   if (list.some((h) => h.visperas)) list.sort((x, y) => (mins(x.hora) ?? 9999) - (mins(y.hora) ?? 9999)).forEach((h, i) => { h.orden = i + 1; });
 }
+// Marchas dedicadas según la sección de marchas del artículo de Wikipedia de cada hermandad (tools/importar-marchas-wikipedia.mjs)
+const WM_FILE = path.join(__dirname, 'sources', 'marchas-hermandades-wikipedia.json');
+if (fs.existsSync(WM_FILE)) {
+  const WM = JSON.parse(fs.readFileSync(WM_FILE, 'utf8'));
+  for (const h of hermandades) {
+    const wm = WM[h.slug];
+    if (wm && wm.marchas && wm.marchas.length && !(h.marchas || []).length) { h.marchas = wm.marchas.map((m) => ({ titulo: m.titulo, autor: m.autor, anio: m.anio || '', tipo: '' })); h.marchas_fuente = wm.fuente_url; }
+  }
+}
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });

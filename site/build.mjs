@@ -68,10 +68,24 @@ const BANDA = Object.fromEntries(D.bandas.map((b) => [b.slug, b]));
 const HERM = Object.fromEntries(D.hermandades.map((h) => [h.slug, h]));
 // Marchas dedicadas: una por título+compositor+hermandad, con ficha propia
 const MARCHAS = []; const MARCHA_SLUG = new Map();
+const ESP_FILE = path.join(DIR, '..', 'tools', 'sources', 'marchas-espana.json');
+const ESP = fs.existsSync(ESP_FILE) ? JSON.parse(fs.readFileSync(ESP_FILE, 'utf8')) : { marchas: [] };
 for (const h of D.hermandades) for (const m of h.marchas || []) {
   let slug = slugify(m.titulo + ' ' + (m.autor || h.slug)); if (!slug) continue;
   let n = 2; const base = slug; while (MARCHAS.some((x) => x.slug === slug)) slug = base + '-' + n++;
   MARCHAS.push({ ...m, slug, h }); MARCHA_SLUG.set(h.slug + '|' + m.titulo + '|' + (m.autor || ''), slug);
+}
+{
+  const nt = (t) => norm(t).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+  const ta = (t) => new Set(nt(t).split(' ').filter((w) => w.length >= 4));
+  const coincide = (a, b) => { const x = ta(a), y = ta(b); for (const w of x) if (y.has(w)) return true; return false; };
+  for (const e of ESP.marchas) {
+    const hit = MARCHAS.find((m) => !m.video && nt(m.titulo) === nt(e.titulo) && coincide(m.autor, e.autor));
+    if (hit) { hit.video = e.video; hit.dedicatoria = hit.dedicatoria || e.dedicatoria; hit.tipo = hit.tipo || e.formacion; hit.estreno = e.estreno; hit.detalles = e.detalles; hit.anio = hit.anio || e.anio; continue; }
+    let slug = slugify(e.titulo + ' ' + (e.autor || '')); if (!slug) continue;
+    let n = 2; const base = slug; while (MARCHAS.some((x) => x.slug === slug)) slug = base + '-' + n++;
+    MARCHAS.push({ titulo: e.titulo, autor: e.autor, anio: e.anio, tipo: e.formacion, video: e.video, dedicatoria: e.dedicatoria, estreno: e.estreno, detalles: e.detalles, lugar: e.lugar, tipoMarcha: e.tipo, slug, h: null, espana: true });
+  }
 }
 const DAY_ORDER = D.dias_orden;
 const dayIdx = (d) => { const i = DAY_ORDER.indexOf(d); return i < 0 ? 99 : i; };
@@ -643,21 +657,21 @@ function pageImag(i) {
 }
 
 function pageMarcha(m) {
-  const h = m.h; const c = CAP[h.ciudad];
+  const h = m.h; const c = h ? CAP[h.ciudad] : null;
   const q = encodeURIComponent(m.titulo + ' ' + (m.autor || '') + ' marcha procesional');
-  const enlaces = [['Escuchar en YouTube', `https://www.youtube.com/results?search_query=${q}`], ['Buscar en Spotify', `https://open.spotify.com/search/${q}`]];
-  const otras = MARCHAS.filter((x) => x.slug !== m.slug && ((m.autor && x.autor === m.autor) || x.h.slug === h.slug)).slice(0, 14);
-  const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, dedicada a ${h.nombre} (${c.nombre}).${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
-  const body = `<header class="oc-pagehead"><p class="oc-eyebrow">Marcha procesional</p><h1 class="oc-title">${esc(m.titulo)}</h1>${facts([['Compositor', esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo)], ['Dedicada a', `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>`], ['Capital', `<a href="${u('semana-santa/' + h.ciudad + '/')}">${esc(c.nombre)}</a>`]])}</header>
-${section('Escúchala', `<ul class="oc-linklist">${enlaces.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas en cada plataforma: la grabación concreta depende de la banda que la interprete.</p>`)}
+  const enlaces = [m.video ? ['Escuchar en YouTube', 'https://www.youtube.com/watch?v=' + m.video] : ['Buscar en YouTube', `https://www.youtube.com/results?search_query=${q}`], ['Buscar en Spotify', `https://open.spotify.com/search/${q}`]];
+  const otras = MARCHAS.filter((x) => x.slug !== m.slug && ((m.autor && x.autor === m.autor) || (h && x.h && x.h.slug === h.slug))).slice(0, 14);
+  const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, ${h ? 'dedicada a ' + h.nombre + ' (' + c.nombre + ').' : (m.dedicatoria ? 'dedicada a ' + m.dedicatoria + '.' : '')}${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
+  const body = `<header class="oc-pagehead"><p class="oc-eyebrow">Marcha procesional</p><h1 class="oc-title">${esc(m.titulo)}</h1>${facts([['Compositor', esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo)], ['Dedicada a', h ? `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>` : esc(m.dedicatoria)], ['Capital', h ? `<a href="${u('semana-santa/' + h.ciudad + '/')}">${esc(c.nombre)}</a>` : ''], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}</header>
+${section('Escúchala', `<ul class="oc-linklist">${enlaces.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">${m.video ? 'El enlace lleva a la grabación de «Marchas de Procesión» en YouTube; Spotify es una búsqueda.' : 'Son búsquedas en cada plataforma: la grabación concreta depende de la banda que la interprete.'}</p>`)}
 ${otras.length ? section('Más marchas', chips(otras.map((x) => [x.titulo + (x.autor ? ' · ' + x.autor : ''), u('marcha/' + x.slug + '/')]))) : ''}
-<p class="oc-note">Datos de composición tomados de la ficha de la hermandad (${esc(h.fuente_url ? 'fuente enlazada en su página' : 'fuentes del portal')}).</p>`;
+<p class="oc-note">${m.espana ? 'Catálogo de marchas de España elaborado a partir de la base de datos de <a href="https://www.marchasdeprocesion.com/p/marchas-de-espana.html" target="_blank" rel="noopener nofollow">Marchas de Procesión</a>; solo se muestran los datos que su ficha tiene rellenos.' : 'Datos de composición tomados de la ficha de la hermandad (' + esc(h.fuente_url ? 'fuente enlazada en su página' : 'fuentes del portal') + ').'}</p>`;
   write(`marcha/${m.slug}/index.html`, layout({ title: m.titulo + (m.autor ? ' · ' + m.autor : ''), desc: resumen.slice(0, 300), body, path: `marcha/${m.slug}/`, active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', u('marchas/')], [m.titulo, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicComposition', name: m.titulo, composer: m.autor ? { '@type': 'Person', name: m.autor } : undefined, dateCreated: m.anio || undefined } }));
 }
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
-  const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map((m) => entrySimple(u('marcha/' + m.slug + '/'), m.titulo, [m.autor, m.anio, m.tipo].filter(Boolean).join(' · ') + ' — ' + m.h.nombre, [m.h.ciudad], ` data-q="${esc(norm([m.titulo, m.autor, m.h.nombre, m.tipo].join(' ')))}" data-ciudad="${m.h.ciudad}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas dedicadas a hermandades, con compositor, año, formación y enlace para escucharlas. Se irán ampliando con las demás capitales.</p></header>${dirFilters(false, tipos, MARCHAS.length)}<ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map((m) => entrySimple(u('marcha/' + m.slug + '/'), m.titulo, [m.autor, m.anio, m.tipo].filter(Boolean).join(' · ') + (m.h ? ' — ' + m.h.nombre : m.dedicatoria ? ' — ' + m.dedicatoria : ''), m.h ? [m.h.ciudad] : [], ` data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}" data-ciudad="${m.h ? m.h.ciudad : ''}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"`)).join('');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas procesionales: las dedicadas a hermandades y las más escuchadas de España, con compositor, año, formación, a quién van dedicadas cuando se sabe y enlace para escucharlas.</p></header>${dirFilters(false, tipos, MARCHAS.length)}<ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
   write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
 function dirFilters(withDay, tipos, total, bandas = false) {
