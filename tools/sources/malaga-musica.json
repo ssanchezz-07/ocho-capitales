@@ -1,0 +1,242 @@
+{
+ "generado": "2026-10-09",
+ "ciudad": "malaga",
+ "fuente": "Musicofrades",
+ "anio_lista": 2026,
+ "url_lista": "https://musicofrades.com/acompanamientos-musicales-de-la-semana-santa-de-malaga-2026/",
+ "url_novedades": "",
+ "lista2026": [
+  {
+   "blog": "Medinaceli (Martiricos)",
+   "slug": "medinaceli-martiricos-malaga",
+   "dia": "Viernes de Dolores",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora del Mar de Huércal",
+       "localidad": "Almería",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestro Padre Jesús Nazareno",
+       "localidad": "Almogía",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Dolores del Puerto de la Torre",
+   "slug": "dolores-del-puerto-de-la-torre-malaga",
+   "dia": "Viernes de Dolores",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Jesús Cautivo",
+       "localidad": "Estepona",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestra Señora de la Soledad",
+       "localidad": "Mena",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Dolores de Churriana",
+   "slug": "dolores-de-churriana-malaga",
+   "dia": "Viernes de Dolores",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Música San Isidro",
+       "localidad": "Churriana",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Sinfónica Virgen de la Trinidad",
+       "localidad": "Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Buen Camino (Gamarra)",
+   "slug": "buen-camino-gamarra-malaga",
+   "dia": "Sábado de Pasión",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Maestro Eloy García de la Archicofradía de la Expiración",
+       "localidad": "Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Luz y Mar",
+   "slug": "luz-y-mar-malaga",
+   "dia": "Sábado de Pasión",
+   "pasos": [
+    {
+     "paso": "Cruz de guía",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Nazareno",
+       "localidad": "Almogía",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Monte Calvario",
+       "localidad": "Martos",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Nuestro Padre Jesús Nazareno",
+       "localidad": "Almogía",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Verdad y Sagrario",
+   "slug": "verdad-y-sagrario-malaga",
+   "dia": "Sábado de Pasión",
+   "pasos": [
+    {
+     "paso": "Cristo",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Nazareno",
+       "localidad": "La Roda de Andalucía",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Municipal Maestro Paco Tenorio",
+       "localidad": "Arriate",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Desamparados",
+   "slug": "desamparados-malaga",
+   "dia": "Sábado de Pasión",
+   "pasos": [
+    {
+     "paso": "Virgen",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia",
+       "localidad": "Málaga",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "novedades2027": []
+}

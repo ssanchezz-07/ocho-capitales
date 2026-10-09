@@ -1,0 +1,606 @@
+{
+ "generado": "2026-10-09",
+ "ciudad": "almeria",
+ "fuente": "Agrupación de Hermandades y Cofradías de Almería",
+ "anio_lista": 2026,
+ "url_lista": "https://www.cofradiasdealmeria.es/",
+ "url_novedades": "",
+ "lista2026": [
+  {
+   "blog": "El Resucitado",
+   "slug": "el-resucitado-almeria",
+   "dia": "Domingo de Resurrección",
+   "pasos": [
+    {
+     "paso": "Jesucristo Resucitado, Señor de la Vida",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora del Mar de Huércal de Almería",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Santo Sepulcro",
+   "slug": "el-santo-sepulcro-almeria",
+   "dia": "Viernes Santo",
+   "pasos": [
+    {
+     "paso": "Santísimo Cristo Yacente",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Almería",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora de los Dolores",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de Alhama de Almería",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Encuentro (Jesús Nazareno)",
+   "slug": "el-encuentro-jesus-nazareno-almeria",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Santa Mujer Verónica",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Bentomiz de Arenas de Málaga",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestro Padre Jesús Nazareno",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora del Mar de Huércal de Almería",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de la Amargura",
+     "bandas": [
+      {
+       "nombre": "Asociación Músico-Cultural Sebastián Valero de Huelma",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Rosario del Mar",
+   "slug": "rosario-del-mar-almeria",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de las Penas",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Monte Calvario de Martos",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima del Rosario del Mar",
+     "bandas": [
+      {
+       "nombre": "Banda Sinfónica de la Asociación Cultural de Níjar",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Las Angustias",
+   "slug": "las-angustias-almeria",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Santísimo Cristo de la Buena Muerte",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen de Almería",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora de las Angustias",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Berja",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Silencio (Descendimiento)",
+   "slug": "el-silencio-descendimiento-almeria",
+   "dia": "Jueves Santo",
+   "pasos": [
+    {
+     "paso": "Santísimo Cristo de la Redención",
+     "bandas": [
+      {
+       "nombre": "Capilla Musical Sacra Redemptio",
+       "localidad": "Almería",
+       "tipo": "Capilla musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima del Consuelo",
+     "bandas": [
+      {
+       "nombre": "Asociación Músico Cultural La Mezquita de Alboloduy",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Prendimiento",
+   "slug": "el-prendimiento-almeria",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús del Prendimiento",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestro Padre Jesús Despojado",
+       "localidad": "Jaén",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestro Padre Jesús Cautivo de Medinaceli",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen de Almería",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora de la Merced",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia de Sorbas",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Macarena",
+   "slug": "la-macarena-almeria",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de la Sentencia",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Santa Cruz de Almería",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de la Esperanza Macarena",
+     "bandas": [
+      {
+       "nombre": "Banda de Música de Torredonjimeno",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Estudiantes",
+   "slug": "los-estudiantes-almeria",
+   "dia": "Miércoles Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de la Oración en el Huerto",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora del Mar de Huércal de Almería",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora del Amor y la Esperanza",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Albox",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Coronación",
+   "slug": "la-coronacion-almeria",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de la Humildad y Paciencia",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical María Santísima de la Cabeza",
+       "localidad": "Exfiliana",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de Gracia y Amparo y San Juan",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Huécija-Alicún",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "El Amor",
+   "slug": "el-amor-almeria",
+   "dia": "Martes Santo",
+   "pasos": [
+    {
+     "paso": "Santísimo Cristo del Amor",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Santa Cruz de Almería",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora del Primer Dolor",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia de Sorbas",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Gran Poder",
+   "slug": "gran-poder-almeria",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús del Gran Poder",
+     "bandas": [
+      {
+       "nombre": "Sin acompañamiento musical",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Pasión",
+   "slug": "pasion-almeria",
+   "dia": "Lunes Santo",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de Salud y Pasión",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Monte Calvario de Martos",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de los Desamparados",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia de Sorbas",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Borriquita",
+   "slug": "la-borriquita-almeria",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de la Victoria",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Nuestra Señora del Mar de Huércal de Almería",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "Nuestra Señora de la Paz",
+     "bandas": [
+      {
+       "nombre": "Asociación Musical El Castillo de Serón",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "Los Ángeles",
+   "slug": "los-angeles-almeria",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Santísimo Cristo de la Misericordia",
+     "bandas": [
+      {
+       "nombre": "Agrupación Musical Dulce Nombre de Jesús de Granada",
+       "localidad": "",
+       "tipo": "Agrupación musical",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de los Ángeles",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Santa Cecilia de Sorbas",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Estrella",
+   "slug": "la-estrella-almeria",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Nuestro Padre Jesús de las Penas",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Sentencia de Cuevas del Almanzora",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de la Estrella",
+     "bandas": [
+      {
+       "nombre": "Banda de Música Los Iris de Instinción",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blog": "La Santa Cena",
+   "slug": "la-santa-cena-almeria",
+   "dia": "Domingo de Ramos",
+   "pasos": [
+    {
+     "paso": "Señor de la Santa Cena",
+     "bandas": [
+      {
+       "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen de Almería",
+       "localidad": "",
+       "tipo": "Banda de cornetas y tambores",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    },
+    {
+     "paso": "María Santísima de Fe y Caridad",
+     "bandas": [
+      {
+       "nombre": "Banda Municipal de Música de Berja",
+       "localidad": "",
+       "tipo": "Banda de música",
+       "es_banda": true,
+       "nota": "",
+       "novedad": false,
+       "redes": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "novedades2027": []
+}

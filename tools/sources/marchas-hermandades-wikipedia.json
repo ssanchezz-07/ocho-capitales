@@ -2343,5 +2343,347 @@
   "leida": true,
   "fuente_url": "",
   "marchas": []
+ },
+ "el-descendimiento-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-santo-entierro-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Ermita_de_Nuestra_Se%C3%B1ora_de_la_Soledad_(Huelva)",
+  "marchas": []
+ },
+ "el-silencio-la-soledad-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-resucitado-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "nuestra-senora-del-prado-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-borriquita-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "los-angeles-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-estrella-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-santa-cena-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "pasion-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "gran-poder-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-coronacion-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-amor-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-perdon-silencio-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-calvario-cristo-del-mar-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-prendimiento-almeria": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Prendimiento_(Almer%C3%ADa)",
+  "marchas": []
+ },
+ "la-macarena-almeria": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_Macarena_(Almer%C3%ADa)",
+  "marchas": []
+ },
+ "los-estudiantes-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "rosario-del-mar-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-encuentro-jesus-nazareno-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "las-angustias-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-silencio-descendimiento-almeria": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Almer%C3%ADa)",
+  "marchas": []
+ },
+ "cristo-de-la-escucha-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-caridad-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-santo-sepulcro-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-soledad-almeria": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_(Almer%C3%ADa)",
+  "marchas": []
+ },
+ "el-resucitado-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-borriquilla-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Borriquilla_(Ja%C3%A9n)",
+  "marchas": [
+   {
+    "titulo": "Entrada de Jesús en Jerusalén",
+    "autor": "José Cuadrado",
+    "anio": "1986"
+   },
+   {
+    "titulo": "María Santísima de la Paz",
+    "autor": "J. A. Orta",
+    "anio": "1994"
+   },
+   {
+    "titulo": "Señor de Jerusalén",
+    "autor": "José Luis Hernández Linares",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Tu Salud es nuestra Paz",
+    "autor": "Francisco David Álvarez Barroso",
+    "anio": "2011"
+   },
+   {
+    "titulo": "María Santísima de la Paz",
+    "autor": "Francisco Javier Alonso Delgado",
+    "anio": "2013"
+   },
+   {
+    "titulo": "Soberano de la Salud",
+    "autor": "José María Sánchez Martín y Manuel J. Guerrero",
+    "anio": "2014"
+   }
+  ]
+ },
+ "santa-cena-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Santa_Cena_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-estrella-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-huerto-vera-cruz-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Congregaci%C3%B3n_de_la_Vera-Cruz_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "caridad-y-salud-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Caridad_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-amargura-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "los-estudiantes-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_los_Estudiantes_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "divino-maestro-lavatorio-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Maestro_(Ja%C3%A9n)",
+  "marchas": [
+   {
+    "titulo": "Maestro Divino",
+    "autor": "Óscar Fernández Bayona",
+    "anio": "2012"
+   }
+  ]
+ },
+ "la-clemencia-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Clemencia_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-silencio-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-cautivo-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cautivo_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-perdon-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_del_Perd%C3%B3n_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-buena-muerte-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Buena_Muerte_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-lanzada-jaen": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-gran-poder-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Gran_Poder_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-vera-cruz-los-civiles-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Congregaci%C3%B3n_de_la_Vera-Cruz_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-expiracion-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Expiraci%C3%B3n_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "nuestro-padre-jesus-el-abuelo-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_Nuestro_Padre_Jes%C3%BAs_Nazareno_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "la-soledad-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Soledad_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-santo-sepulcro-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Congregaci%C3%B3n_del_Santo_Sepulcro_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "el-resucitado-jaen": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_del_Resucitado_(Ja%C3%A9n)",
+  "marchas": []
+ },
+ "mutilado-clemencia-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "desamparados-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "verdad-y-sagrario-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "luz-y-mar-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "buen-camino-gamarra-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "medinaceli-martiricos-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "dolores-del-puerto-de-la-torre-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_Sacramental_de_los_Dolores_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "dolores-de-churriana-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Churriana_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "la-o-cordoba": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-sangre-de-el-higueron-cordoba": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "traslado-al-sepulcro-pro-hermandad-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Pro-hermandad_del_Traslado_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-bendicion-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-unidad-almeria": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
  }
 }

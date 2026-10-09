@@ -741,7 +741,8 @@ function pageDirImag() {
   write('imagineros/index.html', layout({ title: 'Imagineros', desc: 'Los escultores e imagineros de la Semana Santa andaluza y sus obras.', body, path: 'imagineros/', active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', '']] }));
 }
 // iCalendar: un archivo con todo lo próximo y uno por capital. Hora de Madrid; sin hora = acto de día completo.
-const icsEsc = (t) => String(t || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+// Los títulos y notas vienen de fuentes externas: se eliminan saltos de línea y caracteres de control antes de escapar, para que no puedan añadir líneas al .ics.
+const icsEsc = (t) => String(t || '').replace(/\r\n|\r|\n/g, '\\n').replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '').replace(/\\(?!n)/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,');
 const icsFold = (l) => { const out = []; while (l.length > 74) { out.push(l.slice(0, 74)); l = ' ' + l.slice(74); } out.push(l); return out.join('\r\n'); };
 function icsDe(eventos, nombre) {
   const sello = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
@@ -817,7 +818,7 @@ function datosSemanaSanta() {
   return { anio: y, dias, herms: Object.fromEntries(D.hermandades.map((h) => [h.slug, { d: h.dia, o: h.orden, c: h.ciudad }])), ciudades: Object.fromEntries(D.capitales.map((c) => [c.slug, c.nombre])) };
 }
 function pageFavoritos() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Mis favoritos</h1><p class="oc-lead">Pulsa «Guardar» en cualquier hermandad, banda, imaginero o capital para tenerla aquí. Se guarda solo en este dispositivo, sin registro.</p></header><ul class="oc-entries" data-fav-list></ul><section class="oc-miss" data-mi-ss hidden><h2 class="oc-h2">Mi Semana Santa</h2><p class="oc-note">Tus hermandades guardadas, ordenadas por jornada. Descarga el calendario para tener cada salida en tu móvil (el horario exacto lo publica cada hermandad cuando se acerca la fecha).</p><ol class="oc-evs" data-mi-ss-list></ol><p><button class="oc-btn" type="button" data-mi-ss-ics>Descargar mi Semana Santa (.ics)</button></p><script type="application/json" id="oc-ss">${JSON.stringify(datosSemanaSanta())}</script></section><div class="oc-emptystate" data-fav-empty><p>Aún no has guardado nada.</p><a class="oc-btn" href="${u('hermandades/')}">Explorar hermandades${icon('arrow')}</a></div>`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Mis favoritos</h1><p class="oc-lead">Pulsa «Guardar» en cualquier hermandad, banda, imaginero o capital para tenerla aquí. Se guarda solo en este dispositivo, sin registro.</p></header><ul class="oc-entries" data-fav-list></ul><section class="oc-miss" data-mi-ss hidden><h2 class="oc-h2">Mi Semana Santa</h2><p class="oc-note">Tus hermandades guardadas, ordenadas por jornada. Descarga el calendario para tener cada salida en tu móvil (el horario exacto lo publica cada hermandad cuando se acerca la fecha).</p><ol class="oc-evs" data-mi-ss-list></ol><p><button class="oc-btn" type="button" data-mi-ss-ics>Descargar mi Semana Santa (.ics)</button></p><script type="application/json" id="oc-ss">${JSON.stringify(datosSemanaSanta()).replace(/</g, '\\u003c')}</script></section><div class="oc-emptystate" data-fav-empty><p>Aún no has guardado nada.</p><a class="oc-btn" href="${u('hermandades/')}">Explorar hermandades${icon('arrow')}</a></div>`;
   write('favoritos/index.html', layout({ title: 'Mis favoritos', desc: 'Tus hermandades, bandas e imagineros guardados.', body, path: 'favoritos/', crumbs: [['Portada', u()], ['Mis favoritos', '']] }));
 }
 function pageAcerca() {
