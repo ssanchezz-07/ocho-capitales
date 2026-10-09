@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 68,
-  "Prensa (texto de noticias)": 3
+  "Prensa (agendas semanales)": 76,
+  "Prensa (texto de noticias)": 13
  },
  "eventos": [
   {
@@ -121,7 +121,7 @@
   },
   {
    "fecha": "2026-10-10",
-   "hora": "",
+   "hora": "19:20",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Procesión de Nuestra Señora de Montemayor (San Juan de la Palma)",
@@ -654,7 +654,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa)",
+   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -774,7 +774,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa)",
+   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -4150,6 +4150,76 @@
    "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "17:00",
+   "tipo": "acto",
+   "titulo": "Escuela de Flamenco Piedad y Esperanza",
+   "nota": "Barrio de Las Palmeras"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Encarnación",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "20:45",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino de María Santísima de la Caridad",
+   "nota": "Feligresía de San Andrés"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "20:45",
+   "tipo": "acto",
+   "titulo": "Gozos a Santa María de la Merced",
+   "nota": "Parroquia de San Antonio de Padua"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "21:00",
+   "tipo": "culto",
+   "titulo": "Rosario en el Resucitado",
+   "nota": "Parroquia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
+   "fecha": "2026-10-09",
+   "hora": "21:15",
+   "tipo": "culto",
+   "titulo": "Cabildo extraordinario del Calvario",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
    "ciudad": "malaga",
    "fuente": "Diario SUR",
    "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
@@ -4468,6 +4538,16 @@
    "tipo": "culto",
    "titulo": "Santo Traslado: Primer día de triduo en honor de la Virgen de la Soledad",
    "nota": "En la parroquia de San Pablo."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Mutilado: Conferencia 'La vida cotidiana de los primeros cristianos', a cargo del sacerdote Francisco Aurioles",
+   "nota": "En el Aula Loyola (Sagrado Corazón)."
   },
   {
    "ciudad": "cordoba",
@@ -4858,6 +4938,106 @@
    "nota": "",
    "fuente": "Diario de Almería",
    "url": "https://www.diariodealmeria.es/provincia/vera/traslado-patrona-vera-policia-local_3_2008156683.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "El desfile procesional se celebrará este sábado, 10 de octubre, y antes habrá una eucaristía",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/provincia/fuente-palmera-procesion-extraordinaria-jesus-nazareno_0_2008190830.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Fuente Palmera acogerá este sábado, 10 de octubre, la procesión extraordinaria organizada por la Hermandad de Nuestro Padre Jesús Nazareno con motivo de la conmemoración ",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/provincia/fuente-palmera-procesion-extraordinaria-jesus-nazareno_0_2008190830.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Horario e itinerario de la procesión extraordinaria de la Virgen de la Esperanza en La Rambla",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-procesion-extraordinaria-virgen-esperanza-rambla-20261009081937-nts_amp.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "Arcos vivirá una jornada histórica con su gran Procesión Magna",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/arcos-vivira-jornada-historica-gran-procesion-magna/20261009072220008243.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen del Rosario de El Palo este sábado en Málaga: itinerario y horario",
+   "nota": "",
+   "fuente": "Málaga Hoy",
+   "url": "https://www.malagahoy.es/malaga/procesion-virgen-rosario-palo-sabado-malaga-itinerario-horario_0_2008186056.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "La hermandad del Resucitado llevará a cabo este sábado la salida extraordinaria de la Virgen de la Alegría, con motivo del 75 aniversario de su bendición.",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-alegria-cordoba_0_2008180464.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "cartel",
+   "titulo": "Los actos en honor a la titular del Resucitado arrancaron en diciembre del año pasado con la presentación del cartel y del logo de este 75 aniversario de la Virgen de la ",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-alegria-cordoba_0_2008180464.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Más allá de la procesión extraordinaria de este sábado de la Virgen de la Alegría, las hermandades cordobesas siguen con sus respectivos cultos a sus titulares.",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
+  },
+  {
+   "fecha": "2026-10-09",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "culto",
+   "titulo": "Antes de celebrar el triduo y la función principal en San Andrés a su titular, la hermandad del Buen Suceso llevará a cabo este viernes un rosario vespertino con la image",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
   },
   {
    "fecha": "2026-10-08",
