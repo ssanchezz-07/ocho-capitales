@@ -1374,5 +1374,974 @@
   "leida": true,
   "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
   "marchas": []
+ },
+ "pollinica-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "lagrimas-y-favores-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "dulce-nombre-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "salutacion-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Salutaci%C3%B3n_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "humildad-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Humildad_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "salud-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Salud_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "humildad-y-paciencia-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Humildad_y_Paciencia_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "huerto-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_del_Huerto_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "prendimiento-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Prendimiento_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "crucifixion-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Crucifixi%C3%B3n_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "gitanos-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "dolores-del-puente-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_del_Puente_(M%C3%A1laga)",
+  "marchas": [
+   {
+    "titulo": "Ofertorio",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1987"
+   },
+   {
+    "titulo": "Marcha al Santísimo Cristo del Perdón",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Nuestra Señora de los Dolores del Puente",
+    "autor": "Salvador García Sánchez",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Dolorosa del Puente",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1994"
+   },
+   {
+    "titulo": "Perdón",
+    "autor": "Desiderio Artola",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Cristo del Perdón",
+    "autor": "Ginés Sánchez Torres",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Coronación",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1997"
+   },
+   {
+    "titulo": "Señor del Perdón",
+    "autor": "José María Solo de Zaldívar Molina",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Señora de los Dolores Coronada",
+    "autor": "Raúl Guirado Carmona",
+    "anio": "2000"
+   },
+   {
+    "titulo": "Mater Dolorosa",
+    "autor": "Luis Díez Huertas",
+    "anio": "2001"
+   },
+   {
+    "titulo": "Dolores del Puente",
+    "autor": "Guillermo Urrestarazu Capellán",
+    "anio": "2006"
+   },
+   {
+    "titulo": "Plegaria al Cristo del Perdón",
+    "autor": "Francisco Javier Moreno Ramos",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Santísimo Cristo del Perdón",
+    "autor": "Francisco Jesús Flores Matute",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Señora, ¿por qué lloras?",
+    "autor": "Francisco Javier Sánchez Sutil",
+    "anio": "2018"
+   },
+   {
+    "titulo": "La Azucena Dolorosa",
+    "autor": "Pablo Martínez Recio",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Azucena de Santo Domingo",
+    "autor": "Pedro S. Bonillo Ortega",
+    "anio": "2024"
+   },
+   {
+    "titulo": "Cristo del Perdón",
+    "autor": "José F. Jurado",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Paso a la Virgen de los Dolores ¡La del puente!",
+    "autor": "José López García",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Málaga te recuerda, maestro cofrade",
+    "autor": "Sergio Pastor",
+    "anio": "2012"
+   },
+   {
+    "titulo": "El Arrepentimiento de Dimas",
+    "autor": "José Bazalo",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Los Siete Dolores de María Santísima",
+    "autor": "Bernabé Ruiz",
+    "anio": "1948"
+   },
+   {
+    "titulo": "Misa de bendición del Santísimo Cristo del Perdón",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1987"
+   },
+   {
+    "titulo": "Corona de Rosas y Espinas",
+    "autor": "Luis Díez Huertas",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Misa de Coronación",
+    "autor": "Francisco Martín Jaime",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Oración al Cristo del Perdón",
+    "autor": "Francisco Jesús Flores Matute",
+    "anio": "2012"
+   }
+  ]
+ },
+ "pasion-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_Sacramental_de_la_Pasi%C3%B3n_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "cautivo-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Cautivo_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "estudiantes-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "rocio-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Sant%C3%ADsima_del_Roc%C3%ADo_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "penas-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "nueva-esperanza-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Nueva_Esperanza_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "humillacion-y-estrella-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Humillaci%C3%B3n_y_Estrella_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "rescate-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Rescate_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "sentencia-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sentencia_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "mediadora-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Mediadora_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "salesianos-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Salesianos_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "fusionadas-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Agrupaci%C3%B3n_de_Cofrad%C3%ADas_de_Semana_Santa_de_M%C3%A1laga",
+  "marchas": []
+ },
+ "paloma-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paloma_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "el-rico-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_Jes%C3%BAs_%22El_Rico%22_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "sangre-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_de_la_Sangre_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "expiracion-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_Sacramental_de_la_Expiraci%C3%B3n_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "sagrada-cena-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "vineros-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_Sacramental_de_Vi%C3%B1eros_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "santa-cruz-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Santa_Cruz_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "vera-cruz-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Santa_Cruz_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "mena-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "zamarrilla-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Zamarrilla_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "misericordia-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Misericordia_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "esperanza-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Nueva_Esperanza_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "monte-calvario-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "descendimiento-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Descendimiento_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "dolores-de-san-juan-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_del_Puente_(M%C3%A1laga)",
+  "marchas": [
+   {
+    "titulo": "Ofertorio",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1987"
+   },
+   {
+    "titulo": "Marcha al Santísimo Cristo del Perdón",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1988"
+   },
+   {
+    "titulo": "Nuestra Señora de los Dolores del Puente",
+    "autor": "Salvador García Sánchez",
+    "anio": "1989"
+   },
+   {
+    "titulo": "Dolorosa del Puente",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1994"
+   },
+   {
+    "titulo": "Perdón",
+    "autor": "Desiderio Artola",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Cristo del Perdón",
+    "autor": "Ginés Sánchez Torres",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Coronación",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1997"
+   },
+   {
+    "titulo": "Señor del Perdón",
+    "autor": "José María Solo de Zaldívar Molina",
+    "anio": "1998"
+   },
+   {
+    "titulo": "Señora de los Dolores Coronada",
+    "autor": "Raúl Guirado Carmona",
+    "anio": "2000"
+   },
+   {
+    "titulo": "Mater Dolorosa",
+    "autor": "Luis Díez Huertas",
+    "anio": "2001"
+   },
+   {
+    "titulo": "Dolores del Puente",
+    "autor": "Guillermo Urrestarazu Capellán",
+    "anio": "2006"
+   },
+   {
+    "titulo": "Plegaria al Cristo del Perdón",
+    "autor": "Francisco Javier Moreno Ramos",
+    "anio": "2010"
+   },
+   {
+    "titulo": "Santísimo Cristo del Perdón",
+    "autor": "Francisco Jesús Flores Matute",
+    "anio": "2011"
+   },
+   {
+    "titulo": "Señora, ¿por qué lloras?",
+    "autor": "Francisco Javier Sánchez Sutil",
+    "anio": "2018"
+   },
+   {
+    "titulo": "La Azucena Dolorosa",
+    "autor": "Pablo Martínez Recio",
+    "anio": "2020"
+   },
+   {
+    "titulo": "Azucena de Santo Domingo",
+    "autor": "Pedro S. Bonillo Ortega",
+    "anio": "2024"
+   },
+   {
+    "titulo": "Cristo del Perdón",
+    "autor": "José F. Jurado",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Paso a la Virgen de los Dolores ¡La del puente!",
+    "autor": "José López García",
+    "anio": "2003"
+   },
+   {
+    "titulo": "Málaga te recuerda, maestro cofrade",
+    "autor": "Sergio Pastor",
+    "anio": "2012"
+   },
+   {
+    "titulo": "El Arrepentimiento de Dimas",
+    "autor": "José Bazalo",
+    "anio": "2016"
+   },
+   {
+    "titulo": "Los Siete Dolores de María Santísima",
+    "autor": "Bernabé Ruiz",
+    "anio": "1948"
+   },
+   {
+    "titulo": "Misa de bendición del Santísimo Cristo del Perdón",
+    "autor": "Antonio Rozas Matabuena",
+    "anio": "1987"
+   },
+   {
+    "titulo": "Corona de Rosas y Espinas",
+    "autor": "Luis Díez Huertas",
+    "anio": "1995"
+   },
+   {
+    "titulo": "Misa de Coronación",
+    "autor": "Francisco Martín Jaime",
+    "anio": "2004"
+   },
+   {
+    "titulo": "Oración al Cristo del Perdón",
+    "autor": "Francisco Jesús Flores Matute",
+    "anio": "2012"
+   }
+  ]
+ },
+ "amor-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "traslado-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Traslado_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "piedad-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Piedad_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "santo-sepulcro-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Sepulcro_(M%C3%A1laga)",
+  "marchas": []
+ },
+ "servitas-malaga": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "resucitado-malaga": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Agrupaci%C3%B3n_de_Cofrad%C3%ADas_de_Semana_Santa_de_M%C3%A1laga",
+  "marchas": []
+ },
+ "entrada-triunfal-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Entrada_Triunfal_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "penas-de-santiago-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_de_Santiago_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "vera-cruz-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-rescatado-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Rescatado_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-esperanza-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-amor-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-huerto-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Huerto_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-merced-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Merced_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-estrella-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-sentencia-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sentencia_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "via-crucis-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_V%C3%ADa_Crucis_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "animas-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Remedio_de_%C3%81nimas_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-agonia-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Agon%C3%ADa_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-universitaria-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_Universitaria_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-sangre-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sangre_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-buen-suceso-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Suceso_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-santa-faz-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Santa_Faz_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-prendimiento-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Prendimiento_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-perdon-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Perd%C3%B3n_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-calvario-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-paz-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Sant%C3%ADsima_de_la_Paz_y_Esperanza_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-misericordia-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misericordia_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-pasion-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Pasi%C3%B3n_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-piedad-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Piedad_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "jesus-nazareno-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Nazareno_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-caridad-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Caridad_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "jesus-caido-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Ca%C3%ADdo_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-cena-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Cena_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "las-angustias-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Angustias_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Gracia_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-buena-muerte-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Buena_Muerte_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-soledad-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "la-expiracion-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Expiraci%C3%B3n_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-descendimiento-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Descendimiento_(C%C3%B3rdoba)",
+  "marchas": [
+   {
+    "titulo": "Al pie de la Cruz",
+    "autor": "Iván Pozo Mesa",
+    "anio": "2019"
+   },
+   {
+    "titulo": "Sagrado Descendimiento",
+    "autor": "Norberto Tapia Martínez",
+    "anio": "2019"
+   }
+  ]
+ },
+ "la-conversion-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Conversi%C3%B3n_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "los-dolores-cordoba": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "santo-sepulcro-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Sepulcro_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "el-resucitado-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Resucitado_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "presentacion-al-pueblo-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Presentaci%C3%B3n_al_Pueblo_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "lagrimas-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_las_L%C3%A1grimas_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "dolores-de-alcolea-cordoba": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Alcolea_(C%C3%B3rdoba)",
+  "marchas": []
+ },
+ "servitas-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "merced-obediencia-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-borriquita-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-despojado-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "sagrada-cena-cadiz": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Cena_(C%C3%A1diz)",
+  "marchas": []
+ },
+ "las-penas-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "humildad-y-paciencia-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-palma-cadiz": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Archicofrad%C3%ADa_de_la_Palma_(C%C3%A1diz)",
+  "marchas": []
+ },
+ "el-prendimiento-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "nazareno-del-amor-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "vera-cruz-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-sanidad-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-piedad-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "jesus-caido-el-senor-del-parque-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "ecce-homo-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-columna-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "las-cigarreras-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-sentencia-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "las-aguas-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-caminito-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "los-afligidos-cadiz": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Afligidos_(C%C3%A1diz)",
+  "marchas": []
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "medinaceli-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "nazareno-de-santa-maria-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-perdon-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-descendimiento-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-expiracion-cadiz": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Expiraci%C3%B3n_(C%C3%A1diz)",
+  "marchas": []
+ },
+ "siete-palabras-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-buena-muerte-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "ecce-mater-tua-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "santo-entierro-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-resurreccion-cadiz": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-borriquita-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-sagrada-cena-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-redencion-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "los-mutilados-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Mutilados_(Huelva)",
+  "marchas": []
+ },
+ "el-perdon-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_del_Perd%C3%B3n_(Huelva)",
+  "marchas": []
+ },
+ "el-cautivo-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "el-calvario-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_(Huelva)",
+  "marchas": []
+ },
+ "las-tres-caidas-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Huelva)",
+  "marchas": [
+   {
+    "titulo": "A Nuestro Señor de las Penas, de Manuel A",
+    "autor": "Gónzalez Cruz",
+    "anio": "2020"
+   }
+  ]
+ },
+ "la-salud-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-lanzada-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "los-estudiantes-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Huelva)",
+  "marchas": []
+ },
+ "pasion-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Huelva)",
+  "marchas": []
+ },
+ "el-prendimiento-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-santa-cruz-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-victoria-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Victoria_(Huelva)",
+  "marchas": []
+ },
+ "la-esperanza-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_(Huelva)",
+  "marchas": []
+ },
+ "vera-cruz-y-oracion-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-misericordia-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-buena-muerte-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "los-judios-la-merced-huelva": {
+  "leida": true,
+  "fuente_url": "https://es.wikipedia.org/wiki/Catedral_de_Nuestra_Se%C3%B1ora_de_la_Merced_(Huelva)",
+  "marchas": []
+ },
+ "el-nazareno-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
+ },
+ "la-fe-huelva": {
+  "leida": true,
+  "fuente_url": "",
+  "marchas": []
  }
 }

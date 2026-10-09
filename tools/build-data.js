@@ -328,8 +328,10 @@ for (const dia of ['Viernes de Dolores', 'Sábado de Pasión']) for (const ciuda
   if (list.some((h) => h.visperas)) list.sort((x, y) => (mins(x.hora) ?? 9999) - (mins(y.hora) ?? 9999)).forEach((h, i) => { h.orden = i + 1; });
 }
 // Marchas dedicadas según la sección de marchas del artículo de Wikipedia de cada hermandad (tools/importar-marchas-wikipedia.mjs)
-const WM_FILE = path.join(__dirname, 'sources', 'marchas-hermandades-wikipedia.json');
-if (fs.existsSync(WM_FILE)) {
+// y, para Málaga, del listado del foro de Patrimonio Musical (tools/importar-marchas-malaga.mjs)
+for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
+  const WM_FILE = path.join(__dirname, 'sources', f);
+  if (!fs.existsSync(WM_FILE)) continue;
   const WM = JSON.parse(fs.readFileSync(WM_FILE, 'utf8'));
   for (const h of hermandades) {
     const wm = WM[h.slug];
