@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-08",
+ "generado": "2026-10-09",
  "fuentes": {
   "InfoCofrade": 385,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 68,
-  "Prensa (texto de noticias)": 4
+  "Prensa (texto de noticias)": 3
  },
  "eventos": [
   {
@@ -4830,16 +4830,6 @@
    "nota": "Real Parroquia de San Lorenzo Mártir"
   },
   {
-   "fecha": "2026-10-08",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "procesion",
-   "titulo": "El Rosario que florece cada octubre",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/semana_santa/rosario-florece-octubre_0_2008180557.html"
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4868,6 +4858,16 @@
    "nota": "",
    "fuente": "Diario de Almería",
    "url": "https://www.diariodealmeria.es/provincia/vera/traslado-patrona-vera-policia-local_3_2008156683.html"
+  },
+  {
+   "fecha": "2026-10-08",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "El Rosario que florece cada octubre",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/rosario-florece-octubre_0_2008180557.html"
   }
  ],
  "conflictos": [
