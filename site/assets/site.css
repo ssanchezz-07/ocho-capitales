@@ -756,3 +756,14 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-bandaresumen { margin-top: 24px; }
 .oc-bandaresumen p { font-size: 1.15rem; max-width: 60ch; }
 .oc-linklist { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- curiosidad del día y muestras de color del hábito ---------- */
+.oc-curio { margin: 28px 0; padding: 18px 20px; border: 1px solid var(--rule, #cfc9bd); border-left: 4px solid var(--gold, #c9a227); background: var(--surface, transparent); display: grid; gap: 8px; }
+.oc-curio p { font-size: 1.1rem; line-height: 1.45; margin: 0; max-width: 60ch; }
+.oc-curio .oc-kicker { font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #6b6670); margin: 0; font-weight: 600; }
+.oc-curio .oc-btn { justify-self: start; }
+.oc-swatches { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 14px 0 6px; padding: 0; }
+.oc-swatches li { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; }
+.oc-swatches i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.28); box-shadow: inset 0 0 0 2px rgba(255,255,255,.35); flex: none; }
+
+.oc-colabora { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule, #cfc9bd); }

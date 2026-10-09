@@ -536,4 +536,8 @@
     var spt; spIn.addEventListener('input', function () { clearTimeout(spt); spt = setTimeout(run, 80); });
     if (q0s) run(); else spIn.focus({ preventScroll: true });
   }
+  // modo sin cobertura: copia de las páginas visitadas (service worker)
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(function () {}); });
+  }
 })();

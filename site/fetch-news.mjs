@@ -138,6 +138,18 @@ async function main() {
     }
   }
   await Promise.all(Array.from({ length: 6 }, worker));
+  // Imagen de vista previa (og:image) del artículo para las noticias sin foto; un máximo por vuelta y sin repetir intentos.
+  async function ogImage(url) {
+    const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 6000);
+    try {
+      const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: ctl.signal, redirect: 'follow' }); if (!r.ok) return '';
+      const html = (await r.text()).slice(0, 120000);
+      const m = html.match(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)["']/i) || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+      const img = m ? m[1].replace(/&amp;/g, '&') : ''; return /^https:\/\//.test(img) ? img : '';
+    } catch (e) { return ''; } finally { clearTimeout(t); }
+  }
+  const sinFoto = prev.items.concat(nuevos).filter((x) => !x.img && !x.og && /^https?:/.test(x.url) && !/news\.google\.com/.test(x.url)).slice(0, 40);
+  await Promise.all(Array.from({ length: 4 }, async (_, w) => { for (let k = w; k < sinFoto.length; k += 4) { const x = sinFoto[k]; const img = await ogImage(x.url); x.og = 1; if (img) x.img = img; } }));
   const all = prev.items.concat(nuevos).filter((n) => n.ts >= limite).sort((a, b) => b.ts - a.ts).slice(0, MAX_ITEMS);
   fs.writeFileSync(OUT, JSON.stringify({ actualizado: Date.now(), items: all, fuentes: estado }));
   const ok = Object.values(estado).filter((x) => x.ok).length;

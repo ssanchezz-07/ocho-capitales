@@ -1,0 +1,930 @@
+{
+ "pollinica-malaga": {
+  "texto": "Túnicas de lanilla crema en ambas secciones, con botonadura, mangas y capirote en morado para la sección del Señor y verde en la Virgen. La sección del Señor incluye hebreos con talet hebreo y faraona y sardineta moradas. En la Virgen las faraonas de los carguitos son verdes y los nazarenos portan cíngulos de este color.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/pollinica/"
+ },
+ "lagrimas-y-favores-malaga": {
+  "texto": "Los nazarenos visten túnica de tergal en color crema con capirote verde que incorpora la Cruz de Malta bordada en el pecho. Todos ciñen su hábito con faja de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/"
+ },
+ "dulce-nombre-malaga": {
+  "texto": "Los nazarenos de la sección del Señor visten túnica de tergal marrón con capirote y capa en color negro y cíngulo crema con tres nudos franciscanos. Los penitentes de la Virgen visten túnica de tergal marrón con capirote y cíngulo en crema y capa negra.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/dulce-nombre/"
+ },
+ "salutacion-malaga": {
+  "texto": "Los nazarenos portan túnicas y capirotes en color blanco, con botonadura y cíngulo morados en el Señor y en burdeos en la sección de la Virgen.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/salutacion/"
+ },
+ "humildad-malaga": {
+  "texto": "Los nazarenos de ambas secciones realizan su estación de penitencia con túnicas y capirotes de color blanco, con el escudo mercedario bordado en el pecho, y fajín de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/humildad/"
+ },
+ "salud-malaga": {
+  "texto": "Los penitentes de la sección del Señor lucen túnica y escapulario blancos de sarga con capirote y cíngulo morados. En la sección de la Virgen portan túnica de sarga y escapulario blancos con capirote y cíngulo burdeos.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/salud/"
+ },
+ "humildad-y-paciencia-malaga": {
+  "texto": "El hábito de la corporación está constituido por túnica y escapulario de tejido tipo \"sarga\" de color marrón, sujeta con un cinturón de cuero negro (obediencia) y revestido con capa de igual tejido de color blanco y antifaz del mismo tejido y color de la capa y calzando sandalias de cuero negro. El tramo infantil hasta 9 años con la diferencia de la denominada \"faraona\" en lugar del antifaz y capirote. Los hombres de trono visten túnica marrón bordada con los atributos de su sección (azotes, corona de espinas y caña en la sección de Santísimo Cristo y un corazón atravesado por un puñal con un ancla y tres azucenas en la sección de la Santísima Virgen) y cíngulo blanco.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/"
+ },
+ "huerto-malaga": {
+  "texto": "En la sección del Señor, la túnica es blanca con botonadura, puñetas, capirote, sardineta y capa en damasco morado. Los nazarenos de la Virgen portan túnica blanca con botonadura, puñetas, capirote, sardineta y capa de damasco azul.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/huerto/"
+ },
+ "prendimiento-malaga": {
+  "texto": "Los penitentes de la sección del Señor portan túnicas blancas con botonadura, capirote y capa en damasco rojo y escapulario bordado. Los nazarenos de la Virgen procesionan con túnicas blancas, botonadura, capirote y capa en damasco azul y escapulario bordado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/prendimiento/"
+ },
+ "crucifixion-malaga": {
+  "texto": "Los nazarenos del Señor portan túnica morada con capirote negro y escudo bordado en el pecho. Los de la Virgen visten túnica negra con capirote morado y escudo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/crucifixion/"
+ },
+ "gitanos-malaga": {
+  "texto": "Túnica morada con capillo morado en el Señor y túnica burdeos con capillo blanco en la Virgen. Los nazarenos de ambas secciones portan coronas de espinas plateadas para ceñir el capillo.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/columna-gitanos/"
+ },
+ "dolores-del-puente-malaga": {
+  "texto": "Las túnicas de los nazarenos de ambas secciones están realizadas en sarga negra, con capirote negro con el escudo bordado en el pecho y cíngulo blanco.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/dolores-del-puente/"
+ },
+ "pasion-malaga": {
+  "texto": "Túnica morada de cola con cinturón de esparto y capirote morado con escudo bordado en ambas secciones.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/pasion/"
+ },
+ "cautivo-malaga": {
+  "texto": "Los nazarenos del Cristo procesionan con túnica y capirote de raso blanco, cíngulo dorado y escapulario. Los de la Virgen salen con túnica y capirote de raso malva, cíngulo dorado y escapulario.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/cautivo/"
+ },
+ "estudiantes-malaga": {
+  "texto": "Los penitentes de la sección del Señor portan túnicas y capirotes de terciopelo en color rojo con cíngulo dorado y escudo bordado en el pecho. Los nazarenos de la Virgen visten túnicas y capirotes de terciopelo verdes con cíngulo dorado y escudo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/estudiantes/"
+ },
+ "rocio-malaga": {
+  "texto": "Los nazarenos del Señor portan túnicas y capirotes en color morado, con escapulario bordado. Los de la Virgen visten túnica y capirote blanco con escapulario bordado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/rocio/"
+ },
+ "penas-malaga": {
+  "texto": "Los nazarenos de ambas secciones visten túnica de terciopelo negro con capirote burdeos y escudo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/penas/"
+ },
+ "nueva-esperanza-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnicas y capirotes en color morado. Los penitentes de la Virgen portan capirote de raso en color verde y túnica de lanilla en color marfil.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/nueva-esperanza/"
+ },
+ "humillacion-y-estrella-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnica y capirote blancos, con estola negra y cíngulo negro. Los de la sección de la Virgen visten túnicas y capirotes de terciopelo azul, con estola y cíngulo blancos.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/estrella/"
+ },
+ "rescate-malaga": {
+  "texto": "Los penitentes de la sección del Señor portan túnicas de raso rojo con capirote negro y cíngulo dorado. Los cargos portan capas amarillas. Los de la Virgen visten túnicas de raso morado con capirote negro y capa gris.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/rescate/"
+ },
+ "sentencia-malaga": {
+  "texto": "Los nazarenos del Señor visten túnicas de terciopelo morado con capirote en raso del mismo color y cíngulo dorado. Los de la Virgen llevan túnicas de color celeste con capirote en raso del mismo color y cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/sentencia/"
+ },
+ "mediadora-malaga": {
+  "texto": "Los nazarenos del Cristo portan túnicas y capirotes negros con capas blancas y cíngulos del mismo color. En la sección de la Virgen las túnicas son de color azul pavo real con botonadura y cíngulo blancos.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/mediadora-de-la-salvacion/"
+ },
+ "salesianos-malaga": {
+  "texto": "Los nazarenos realizan cada Miércoles Santo su estación de penitencia con túnicas de cola realizadas en tergal negro, con capirote negro y escudo bordado en el pecho y cíngulo de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/salesianos/"
+ },
+ "fusionadas-malaga": {
+  "texto": "Los nazarenos de la sección de Azotes y Columna visten túnicas de tergal morado con capirote blanco. Los de Exaltación portan túnica negra y capirote rojo. Los penitentes de Ánimas de Ciegos visten con túnica y capirote negro. El cortejo de Mayor Dolor porta túnicas y capirotes en color azul. Todos llevan la cruz de San Juan bordada en el pecho y cinturón de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/fusionadas/"
+ },
+ "paloma-malaga": {
+  "texto": "Túnicas de terciopelo burdeos y capirote de raso blanco en la sección del Señor. Los Nazarenos de la Virgen portan túnicas de terciopelo azul y capirote blanco. Ambos llevan escudo bordado en el pecho y cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/paloma/"
+ },
+ "el-rico-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnicas y capirotes de terciopelo morado. En la sección de la Virgen los hábitos de los penitentes son de terciopelo azul. Ambas secciones llevan cíngulos dorados. El Rico es la única hermandad que conserva entre sus penitentes los tradicionales capirotes “de habichuela”. Los cargos portan capas blancas con el escudo de Santiago al hombro.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/el-rico/"
+ },
+ "sangre-malaga": {
+  "texto": "Los nazarenos de la sección del Señor visten túnicas de terciopelo rojo con capirote en raso del mismo color y cíngulo dorado. Los de la Virgen portan túnicas de terciopelo malva con capirote en raso del mismo color y cíngulo dorado. Los cargos, además, visten escapulario bordado en oro y capa de damasco con el escudo de la Archicofradía bordado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/sangre/"
+ },
+ "expiracion-malaga": {
+  "texto": "Los nazarenos de la sección del Cristo portan túnicas realizadas en terciopelo morado, con capirote del mismo color, cíngulo dorado y escapulario bordado. Los penitentes de la sección de la Virgen llevan túnicas y capirotes en terciopelo negro, con cíngulo dorado y escapulario bordado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/expiracion/"
+ },
+ "sagrada-cena-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnica y capirote realizados en terciopelo rojo con cíngulo dorado. En la sección de la Virgen las túnicas y capirotes son de terciopelo azul con cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/sagrada-cena/"
+ },
+ "vineros-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnicas y capirotes de terciopelo color vino con cíngulo dorado. En la Virgen las túnicas y los capirotes son de terciopelo negro con cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/vineros/"
+ },
+ "santa-cruz-malaga": {
+  "texto": "Los nazarenos de la hermandad visten túnica negra de cola con capirote negro. Llevan el escudo de la hermandad bordado en el pecho y portan cinturón de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/santa-cruz/"
+ },
+ "vera-cruz-malaga": {
+  "texto": "Los nazarenos portan túnicas de tergal negro con capirote verde en el que va bordada la cruz de San Juan y cinturón de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
+ },
+ "mena-malaga": {
+  "texto": "Los nazarenos visten túnicas y capirotes de terciopelo negro en ambas secciones, con el escudo corporativo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/mena/"
+ },
+ "zamarrilla-malaga": {
+  "texto": "Los nazarenos de la sección del Señor visten túnica y capirote de terciopelo morado. Los de la sección de la Virgen portan túnicas y capirotes en color rojo. Ambas secciones llevan una rosa bordada en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/zamarrilla/"
+ },
+ "misericordia-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnica de terciopelo burdeos con capirote de raso negro y escapulario bordado. Los de la sección de la Virgen llegan túnicas de terciopelo negro con capirote de raso burdeos y escapulario bordado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/misericordia/"
+ },
+ "esperanza-malaga": {
+  "texto": "Los nazarenos de la sección del Señor visten túnicas de cola y capirotes de terciopelo morado, con escapulario bordado y cíngulo dorado. Los de la sección de la Virgen portan túnicas de cola y capirotes de terciopelo verde, con escapulario bordado y cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/esperanza/"
+ },
+ "monte-calvario-malaga": {
+  "texto": "Los nazarenos de ambas secciones visten túnicas y capirotes negros de tergal con escudo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/monte-calvario/"
+ },
+ "descendimiento-malaga": {
+  "texto": "Los nazarenos de ambas secciones portan túnica negra de cola con cinturón de esparto. Los capirotes son de color crema con el escudo corporativo bordado en el pecho.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/descendimiento/"
+ },
+ "dolores-de-san-juan-malaga": {
+  "texto": "Los penitentes de ambas secciones visten túnicas y capirotes de rouán negro con cinturón de esparto.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/dolores-de-san-juan/"
+ },
+ "amor-malaga": {
+  "texto": "Los nazarenos de ambas secciones visten túnicas de tergal negro. Los capirotes, del mismo color, cuentan con forma de esclavina y llevan bordado en el pecho un escudo llameante en honor a San Agustín de Hipona. Todos los nazarenos portan una correa agustiniana.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/amor/"
+ },
+ "traslado-malaga": {
+  "texto": "Los nazarenos de la sección del Señor portan túnica de terciopelo negro y capirote y fajín en color burdeos. Los de la Virgen visten túnica negra de terciopelo y capirote y fajín en celeste. Todos los nazarenos llevan sandalias como calzado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/santo-traslado/"
+ },
+ "piedad-malaga": {
+  "texto": "Los nazarenos de la Virgen procesionan con túnicas de terciopelo negro con el escudo bordado en el capirote. Todos portan cíngulo dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/piedad/"
+ },
+ "santo-sepulcro-malaga": {
+  "texto": "Los nazarenos de ambas secciones visten túnicas de terciopelo negro con capirote del mismo color donde se presenta el escudo bordado en el pecho. El cíngulo de los penitentes es dorado.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/sepulcro/"
+ },
+ "servitas-malaga": {
+  "texto": "Los miembros de la Orden procesionan con túnicas y capillos de terciopelo y portan un escapulario alusivo a la confraternidad.",
+  "fuente_url": "https://agrupaciondecofradias.com/hermandades/servitas/"
+ },
+ "resucitado-malaga": {
+  "texto": "",
+  "fuente_url": "https://agrupaciondecofradias.com/titulares/"
+ },
+ "la-borriquilla-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/"
+ },
+ "santa-cena-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/"
+ },
+ "la-sentencia-maravillas-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/pontificia-e-ilustre-hermandad-sacramental-y-cofradia-de-nazarenos-de-jesus-de-la-sentencia-y-maria-santisima-de-las-maravillas/"
+ },
+ "el-despojado-silencio-blanco-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/"
+ },
+ "el-cautivo-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/hermandad-sacramental-de-san-francisco-de-asis-y-santa-clara-y-real-cofradia-de-penitencia-de-nuestro-padre-jesus-cautivo-y-maria-santisima-de-la-encarnacion/"
+ },
+ "el-trabajo-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/venerable-hermandad-de-caridad-del-santisimo-cristo-del-trabajo-y-nuestra-senora-de-la-luz/"
+ },
+ "nuestra-senora-de-los-dolores-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/real-cofradia-de-nuestra-senora-de-los-dolores/"
+ },
+ "jesus-del-rescate-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/cofradia-de-nuestro-padre-jesus-del-rescate/"
+ },
+ "el-huerto-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/"
+ },
+ "cristo-de-san-agustin-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-sacramental-del-santisimo-cristo-de-san-agustin-jesus-nazareno-de-las-penas-nuestra-madre-y-senora-de-la-consolacion-y-santo-angel-custodio/"
+ },
+ "la-lanzada-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/venerable-y-fervorosa-hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-senor-jesucristo-en-su-sagrada-lanzada-y-maria-santisima-de-la-caridad/"
+ },
+ "el-via-crucis-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/real-e-ilustre-hermandad-del-santo-via-crucis-y-nuestra-senora-de-los-favores-y-cofradia-nazarenos-de-jesus-de-la-amargura-maria-santisima-de-las-lagrimas-y-nuestra-senora-de-los-reyes/"
+ },
+ "la-esperanza-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/"
+ },
+ "la-canilla-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/"
+ },
+ "los-gitanos-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/insigne-pontificia-real-colegial-y-magistral-cofradia-del-santisimo-cristo-del-consuelo-y-maria-santisima-del-sacromonte-los-gitanos/"
+ },
+ "los-estudiantes-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-de-la-esclavitud-del-santisimo-sacramento-y-cofradia-universitaria-de-nuestro-senor-de-la-meditacion-y-maria-santisima-de-los-remedios-reina-y-madre-de-los-estud/"
+ },
+ "paciencia-y-penas-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/"
+ },
+ "tres-caidas-y-rosario-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/la-muy-antigua-real-e-ilustre-hermandad-de-nuestro-padre-jesus-de-las-tres-caidas-y-nuestra-senora-del-rosario-en-sus-misterios-dolorosos/"
+ },
+ "el-nazareno-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/"
+ },
+ "los-salesianos-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/"
+ },
+ "la-concha-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/"
+ },
+ "la-aurora-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/"
+ },
+ "la-estrella-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/"
+ },
+ "el-silencio-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/pontificia-y-real-sacramental-del-senor-san-jose-y-animas-y-cofradia-del-santisimo-cristo-de-la-misericordia-silencio/"
+ },
+ "los-ferroviarios-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/fervorosa-hermandad-de-nazarenos-y-cofradia-de-penitencia-del-santisimo-cristo-de-la-buena-muerte-y-nuestra-senora-del-amor-y-del-trabajo/"
+ },
+ "los-favores-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/"
+ },
+ "los-escolapios-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/"
+ },
+ "santo-entierro-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/pontificia-real-e-ilustre-hermandad-del-santo-sepulcro-y-nuestra-senora-de-la-soledad-del-calvario/"
+ },
+ "las-chias-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/"
+ },
+ "santa-maria-de-la-alhambra-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/"
+ },
+ "la-resurreccion-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/venerable-hermandad-sacramental-del-glorioso-arcangel-san-miguel-y-nazarenos-de-nuestro-senor-de-la-resurreccion-y-santa-maria-del-triunfo/"
+ },
+ "el-resucitado-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/"
+ },
+ "los-facundillos-granada": {
+  "texto": "",
+  "fuente_url": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/"
+ },
+ "entrada-triunfal-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4019-hermandad-de-la-entrada-triunfal.html"
+ },
+ "penas-de-santiago-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4033-hermandad-de-las-penas.html"
+ },
+ "vera-cruz-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4087-hermandad-de-la-veracruz.html"
+ },
+ "el-rescatado-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4040-hermandad-del-rescatado.html"
+ },
+ "la-esperanza-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4036-hermandad-de-la-esperanza.html"
+ },
+ "el-amor-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4039-hermandad-del-amor.html"
+ },
+ "el-huerto-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4034-hermandad-del-huerto.html"
+ },
+ "la-merced-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4041-hermandad-de-la-merced.html"
+ },
+ "la-estrella-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4085-hermandad-de-la-estrella.html"
+ },
+ "la-sentencia-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4091-hermandad-de-la-sentencia.html"
+ },
+ "via-crucis-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4092-hermandad-del-viacrucis.html"
+ },
+ "animas-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4096-hermandad-de-animas.html"
+ },
+ "la-agonia-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4098-hermandad-de-la-agonia.html"
+ },
+ "la-universitaria-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4097-hermandad-universitaria.html"
+ },
+ "la-sangre-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4099-hermandad-de-la-sangre.html"
+ },
+ "el-buen-suceso-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4100-hermandad-del-buen-suceso.html"
+ },
+ "la-santa-faz-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4101-hermandad-de-la-santa-faz.html"
+ },
+ "el-prendimiento-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4102-hermandad-del-prendimiento.html"
+ },
+ "el-perdon-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4104-hermandad-del-perdon.html"
+ },
+ "el-calvario-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4105-hermandad-del-calvario.html"
+ },
+ "la-paz-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4106-hermanad-de-la-paz.html"
+ },
+ "la-misericordia-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4107-hermandad-de-la-misericordia.html"
+ },
+ "la-pasion-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4149-hermandad-de-la-pasion.html"
+ },
+ "la-piedad-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4103-hermandad-de-la-piedad.html"
+ },
+ "jesus-nazareno-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4108-hermandad-del-nazareno.html"
+ },
+ "la-caridad-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4112-hermandad-de-la-caridad.html"
+ },
+ "jesus-caido-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4111-hermandad-del-caido.html"
+ },
+ "la-cena-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4109-hermandad-de-la-cena.html"
+ },
+ "las-angustias-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4114-hermandad-de-las-angustias.html"
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4113-hermandad-del-cristo-de-gracia.html"
+ },
+ "la-buena-muerte-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4115-hermandad-de-la-buena-muerte.html"
+ },
+ "la-soledad-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4117-hermandad-de-la-soledad.html"
+ },
+ "la-expiracion-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4118-hermandad-de-la-expiracion.html"
+ },
+ "el-descendimiento-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4119-hermandad-del-descendimiento.html"
+ },
+ "la-conversion-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4122-hermandad-de-la-conversion.html"
+ },
+ "los-dolores-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4120-hermandad-de-los-dolores.html"
+ },
+ "santo-sepulcro-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4121-hermandad-del-santo-sepulcro.html"
+ },
+ "el-resucitado-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4123-hermandad-del-resucitado.html"
+ },
+ "presentacion-al-pueblo-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4125-hermandad-de-la-presentacion-al-pueblo.html"
+ },
+ "lagrimas-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4124-hermandad-de-las-lagrimas.html"
+ },
+ "dolores-de-alcolea-cordoba": {
+  "texto": "",
+  "fuente_url": "https://www.hermandadesdecordoba.es/es/pagina/ver/4233-doloires-de-alcolea.html"
+ },
+ "servitas-cadiz": {
+  "texto": "Túnica negra con escapulario y antifaz del mismo color.",
+  "fuente_url": "https://consejocofradiascadiz.es/servitas-cadiz/"
+ },
+ "merced-obediencia-cadiz": {
+  "texto": "",
+  "fuente_url": "https://consejocofradiascadiz.es/merced-3/"
+ },
+ "la-borriquita-cadiz": {
+  "texto": "Túnicas y capas blancas, con antifaz y cíngulo de color rojo.",
+  "fuente_url": "https://consejocofradiascadiz.es/la-paz/"
+ },
+ "el-despojado-cadiz": {
+  "texto": "Túnica blanca de cola, antifaz del mismo color con el escudo de la Hermandad, ceñido ancho de esparto, calcetines blancos y sandalias marrones.",
+  "fuente_url": "https://consejocofradiascadiz.es/despojado/"
+ },
+ "sagrada-cena-cadiz": {
+  "texto": "Capirotes, capas y túnicas blancas, con cíngulos rojos.",
+  "fuente_url": "https://consejocofradiascadiz.es/sagrada-cena/"
+ },
+ "las-penas-cadiz": {
+  "texto": "Túnica y capa en marfil con botonaduras en rojo. Antifaz rojo con escudo bordado de la primitiva Archicofradía. Cingulo rojo.",
+  "fuente_url": "https://consejocofradiascadiz.es/las-penas/"
+ },
+ "humildad-y-paciencia-cadiz": {
+  "texto": "Para el Cristo, capirote y túnica morada, capa de color crema. Para la Virgen, túnica y capirote de color guinda y capa del mismo color.",
+  "fuente_url": "https://consejocofradiascadiz.es/humildad-y-paciencia/"
+ },
+ "la-palma-cadiz": {
+  "texto": "Color marfil, capirote de terciopelo y cíngulo azul.",
+  "fuente_url": "https://consejocofradiascadiz.es/la-palma/"
+ },
+ "el-prendimiento-cadiz": {
+  "texto": "Túnica y capa de color hueso, en el Cristo cíngulo de color morado al igual que el capirote, siendo turquesa en la Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/prendimiento/"
+ },
+ "nazareno-del-amor-cadiz": {
+  "texto": "Túnica morada con antifaz y capa blanca para las secciones de ambos pasos",
+  "fuente_url": "https://consejocofradiascadiz.es/nazareno-del-amor/"
+ },
+ "vera-cruz-cadiz": {
+  "texto": "Sotana de cola y antifaz de lino negro, cinturón ancho de esparto, calcetines y zapatos o sandalias negras en todas las secciones.",
+  "fuente_url": "https://consejocofradiascadiz.es/vera-cruz/"
+ },
+ "la-sanidad-cadiz": {
+  "texto": "Túnicas y capirotes negros, con cinturón de esparto amarillo.",
+  "fuente_url": "https://consejocofradiascadiz.es/sanidad/"
+ },
+ "la-piedad-cadiz": {
+  "texto": "Túnicas moradas y fajín negro, a semejanza de las usadas por los Padres Jesuitas y antifaces negros",
+  "fuente_url": "https://consejocofradiascadiz.es/piedad/"
+ },
+ "jesus-caido-el-senor-del-parque-cadiz": {
+  "texto": "Túnica blanca con fajín y antifaz en raso negro para los dos pasos. Los hermanos que portan insignias y faroles llevan capa de raso negra",
+  "fuente_url": "https://consejocofradiascadiz.es/jesus-caido/"
+ },
+ "ecce-homo-cadiz": {
+  "texto": "Desde mediados de la década de los 90 del siglo XX la Archicofradía vuelve a sus orígenes rematándose a las túnicas de época romántica del siglo XIX. Se vuelve al origen llevando una túnica de cola recogida, en tela de sarga blanco, cíngulo del mismo color de la túnica y capirotes altos en terciopelo burdeos para las secciones de Cristo, y azul marino para las secciones de la Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/ecce-homo/"
+ },
+ "la-columna-cadiz": {
+  "texto": "Túnicas, fajín y capirotes morados.",
+  "fuente_url": "https://consejocofradiascadiz.es/columna/"
+ },
+ "las-cigarreras-cadiz": {
+  "texto": "Túnicas cremas con antifaces, capas y cíngulos morados en las secciones del Señor y verdes en las de la Virgen. El escudo emblema de la Cofradía está bordado en capirotes y capas.",
+  "fuente_url": "https://consejocofradiascadiz.es/cigarreras/"
+ },
+ "la-sentencia-cadiz": {
+  "texto": "T única de color crema con botonadura del mismo color, fajín de fieltro rojo, capa de color negro con escudo de la cofradía, antifaz con escudo de la cofradía de color morado en las secciones del Cristo y de color granate en las secciones de la Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/sentencia/"
+ },
+ "las-aguas-cadiz": {
+  "texto": "Túnica verde con antifaz del mismo color y capa roja en las secciones de San Juan y túnica negra con antifaz del mismo color y capa azul de raso en los otros dos pasos",
+  "fuente_url": "https://consejocofradiascadiz.es/las-aguas/"
+ },
+ "el-caminito-cadiz": {
+  "texto": "Túnica y antifaz de color negro con cíngulo de esparto y rosario de madera.",
+  "fuente_url": "https://consejocofradiascadiz.es/el-caminito/"
+ },
+ "los-afligidos-cadiz": {
+  "texto": "Túnica morada con antifaz de terciopelo azul y el escudo bordado. Cíngulo dorado.",
+  "fuente_url": "https://consejocofradiascadiz.es/afligidos/"
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "texto": "",
+  "fuente_url": "https://consejocofradiascadiz.es/oracion-en-el-huerto/"
+ },
+ "medinaceli-cadiz": {
+  "texto": "Túnica morada, con antifaz blanco y cíngulo amarillo.",
+  "fuente_url": "https://consejocofradiascadiz.es/medinaceli/"
+ },
+ "nazareno-de-santa-maria-cadiz": {
+  "texto": "En las secciones del Señor, túnicas y antifaces de raso morado, y capa blanca con la Cruz de Jerusalén en rojo y cíngulo amarillo; en las secciones de Virgen, túnicas de color guinda y capa y antifaz negro, todo de raso, con el escudo bordado en oro en el antifaz y en la capa en rojo la Cruz de Jerusalén, y cíngulo amarillo.",
+  "fuente_url": "https://consejocofradiascadiz.es/nazareno/"
+ },
+ "el-perdon-cadiz": {
+  "texto": "Túnica blanca con capa azul en ambos pasos, con antifaz azul en las secciones de Cristo y blancos en las de Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/perdon/"
+ },
+ "el-descendimiento-cadiz": {
+  "texto": "Túnicas y capirotes negros, con cordón beige.",
+  "fuente_url": "https://consejocofradiascadiz.es/descendimiento/"
+ },
+ "la-expiracion-cadiz": {
+  "texto": "Túnicas de color negro con capas blancas; antifaz y cíngulo rojo en las secciones de Cristo, azul en las de Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/expiracion/"
+ },
+ "siete-palabras-cadiz": {
+  "texto": "Túnica negra con botonera morada y capirote y fajín morados. En el centro del capirote se encuentra el escudo de la Hdad.",
+  "fuente_url": "https://consejocofradiascadiz.es/siete-palabras/"
+ },
+ "la-buena-muerte-cadiz": {
+  "texto": "Túnica negra como el antifaz, que lleva una cruz latina en blanca y cíngulo del mismo color para ambos pasos.",
+  "fuente_url": "https://consejocofradiascadiz.es/buena-muerte/"
+ },
+ "santo-entierro-cadiz": {
+  "texto": "Túnicas negras, con cíngulos color blanco y capirotes negros en los tramos de Cristo y capirotes blancos en los de la Virgen.",
+  "fuente_url": "https://consejocofradiascadiz.es/soledad/"
+ },
+ "la-resurreccion-cadiz": {
+  "texto": "La Archicofradía no procesiona en esta jornada con hábito penitencial sino con trajes oscuros, aunque la idea de siempre de la corporación ha sido, lucir túnicas y capirotes blancos con cíngulo de esparto.",
+  "fuente_url": "https://consejocofradiascadiz.es/resucitado/"
+ },
+ "la-borriquita-huelva": {
+  "texto": "Túnica blanca con botonadura roja, capa y morrión de sarga roja y cíngulo hebreo.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-borriquita/"
+ },
+ "la-sagrada-cena-huelva": {
+  "texto": "De carácter dominico, se identifica como hábito similar a la de esta orden. Morrión y capa de sarga negra, con el escudo de la Hermandad en el lado izquierdo de la capa. Túnica y escapulario de sarga blanca, con el escudo dominico en este último. Ceñido a la cintura una correa de cuero negra con cíngulo, donde va prendido un rosario de madera. Sandalias de cuero negro con calcetines y guantes blancos.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-sagrada-cena/"
+ },
+ "la-redencion-huelva": {
+  "texto": "Túnica de sarga de color crema con bocamanga y pecho abotonados y ribeteados en color azul noche. Antifaz, capa y cíngulo trenzado de color azul noche al igual que la botonadura. Zapatos o manoletinas negras con hebillas de metal plateado. Calcetines blancos. En el hombro izquierdo sobre la capa el escudo corporativo y escudo servita en el pecho sobre el antifaz.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-rendencion/"
+ },
+ "los-mutilados-huelva": {
+  "texto": "El hábito consta de túnica de cola de color blanco roto, en tejido de sarga, con botonadura negra. El cíngulo trenza seda en color negro y celeste, mientras que el morrión es de terciopelo negro. En el centro del morrión, a la altura del pecho, aparece bordado el escudo de la hermandad. El hábito se completa con guantes y calcetines blancos.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-los-mutilados/"
+ },
+ "el-perdon-huelva": {
+  "texto": "Túnica de sotana roja con cíngulo y botonadura blanca. Capa y morrión de sarga blanca.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-perdon/"
+ },
+ "el-cautivo-huelva": {
+  "texto": "Túnica de sarga morada con botonadura y cíngulo blanco, capa de sarga blanca con escudo de la Hermandad en su lado izquierdo y antifaz de sarga blanca con la cruz trinitaria en el pecho.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-cautivo/"
+ },
+ "el-calvario-huelva": {
+  "texto": "Túnica de cola y antifaz de un metro de largo de tela marrón franciscana. La túnica va ceñida por un cinturón de esparto basto en su color. Calzado o sandalias franciscanas negras.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-calvario/"
+ },
+ "las-tres-caidas-huelva": {
+  "texto": "Túnica, capa y antifaz de sarga blanca, botonadura y fajín de sarga roja. En el lado izquierdo de la capa figura el escudo de la Hermandad y en el morrión la Cruz de Santiago.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-las-tres-caidas/"
+ },
+ "la-salud-huelva": {
+  "texto": "El hábito se compone de túnica de sarga color blanco con botonadura marrón y cordón franciscano, llevando capa y morrión de color marrón con escudo corporativo en la capa y la Tau franciscana en el morrión.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/"
+ },
+ "la-lanzada-huelva": {
+  "texto": "Túnica en sarga de color azul, antifaz y capa del mismo tejido en color blanco y botonadura forrada del mismo color. En el babero del antifaz va bordado el corazón con los siete puñales. En la capa, a la altura del hombro izquierdo, va el escudo bordado de nuestra corporación. Zapatos y calcetines de color negro. Guantes blancos.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/"
+ },
+ "los-estudiantes-huelva": {
+  "texto": "Morrión y túnica de sarga negra con cinturón de esparto y alpargatas.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-los-estudiantes/"
+ },
+ "pasion-huelva": {
+  "texto": "El hábito está constituido por túnica en tela de sarga de color morado, con morrión de babero largo y capa, ambos de igual tela y color. La botonadura es en tela de color rojo y cíngulo de igual color formado por tres cordones de seda entrelazados. La capa lleva el escudo de la Hermandad sobre su lateral superior izquierdo. El calzado es de vestir de color negro.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-pasion/"
+ },
+ "el-prendimiento-huelva": {
+  "texto": "Túnica de cola de sarga en color crema, con escapulario de terciopelo marrón.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-prendimiento-y-la-estrella/"
+ },
+ "la-santa-cruz-huelva": {
+  "texto": "Túnica, morrión, capa y escapulario azul marino con el escudo de la corporación bordado en oro en el escapulario. Cíngulo de lana crema anudado a la izquierda.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/"
+ },
+ "la-victoria-huelva": {
+  "texto": "La túnica es blanca de viella o algodón, con cíngulo de lana rojo, botonadura, capirote y capa azulina de viella de lana, guantes blancos, zapatos de material negros y calcetines del mismo color. El escudo se luce en el lado izquierdo de la capa.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-victoria/"
+ },
+ "la-esperanza-huelva": {
+  "texto": "Paso de Misterio: Túnica y capa de sarga blanca, antifaz y botonadura de terciopelo y cíngulo morados. Paso de Palio: Túnica y capa de sarga blanca, antifaz y botonadura de terciopelo y cíngulo verdes.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-esperanza/"
+ },
+ "vera-cruz-y-oracion-huelva": {
+  "texto": "Vera+Cruz . Túnica negra de ruan con cola, morrión de color verde oscuro con escudo en el centro, cinturón ancho de esparto, guantes blancos y zapatos negros.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-veracruz-y-oracion-en-el-huerto/"
+ },
+ "la-misericordia-huelva": {
+  "texto": "Túnica y morrión de ruan negro y cinturón ancho de esparto.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-misericordia/"
+ },
+ "la-buena-muerte-huelva": {
+  "texto": "Morrión y túnica negra con botonadura azul, imitando un hábito agustino de los monjes, correa agustiniana, característica de la corporación.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/"
+ },
+ "los-judios-la-merced-huelva": {
+  "texto": "Túnica de color hueso ceñida por correa agustina, escapulario de igual color que la túnica con la cruz mercedaria, antifaz de color corinto y capa del mismo color con el escudo de la Corporación.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-los-judios/"
+ },
+ "el-nazareno-huelva": {
+  "texto": "Túnica y antifaz de sarga morada con la Cruz de San Juan, cíngulo amarillo.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-nazareno/"
+ },
+ "la-fe-huelva": {
+  "texto": "Túnica negra con morrión, cíngulo y capa color burdeos, guantes y zapatos negros.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-la-fe/"
+ },
+ "el-descendimiento-huelva": {
+  "texto": "Morrión de sarga morada con escudo bordado en dorado, túnica negra, botonadura morada y cíngulo morado.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/"
+ },
+ "el-santo-entierro-huelva": {
+  "texto": "Túnica, capa, morrión, cíngulo y botonadura negras. Escudo de la Hermandad en el Morrión y Cruz de Santiago en la capa.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/"
+ },
+ "el-silencio-la-soledad-huelva": {
+  "texto": "Túnica de cola en sarga negra, morrión en mismo tejido color verde, cíngulo de ancho esparto.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-silencio/"
+ },
+ "el-resucitado-huelva": {
+  "texto": "El hábito nazareno ha sido recientemente renovado, con vistas a unificar su uso de forma definitiva en la Semana Santa de 2027. Esta nueva indumentaria se compone de túnica, capa y antifaz confeccionados en sarga blanca, símbolo de la luz, la pureza y la gloria del Domingo de Resurrección. Como novedad, el fajín y la botonadura pasan a realizarse en sarga de color celeste cielo, manteniendo así la coherencia cromática de la corporación. En el antifaz se incorpora el nuevo escudo de la Hermandad, donde figura la imagen de Cristo acompañado de las letras Alfa y Omega, representación simbólica del principio y el fin de la vida, reforzando así el mensaje pascual de la victoria de Cristo sobre la",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-del-resucitado/"
+ },
+ "nuestra-senora-del-prado-huelva": {
+  "texto": "Túnica y capa de sarga color hueso, botonadura y antifaz de los llamados de “babero largo” en terciopelo azul real y cíngulo en seda del mismo color.",
+  "fuente_url": "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/"
+ },
+ "la-borriquita-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/borriquita/"
+ },
+ "los-angeles-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/los-angeles/"
+ },
+ "la-estrella-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/estrella/"
+ },
+ "la-santa-cena-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/santa-cena/"
+ },
+ "pasion-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-de-pasion/"
+ },
+ "gran-poder-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-gran-poder/"
+ },
+ "la-coronacion-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/"
+ },
+ "el-amor-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-amor/"
+ },
+ "el-perdon-silencio-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-perdon/"
+ },
+ "el-calvario-cristo-del-mar-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/calvario/"
+ },
+ "el-prendimiento-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+ },
+ "la-macarena-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/macarena/"
+ },
+ "los-estudiantes-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+ },
+ "rosario-del-mar-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/rosario-del-mar/"
+ },
+ "el-encuentro-jesus-nazareno-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-encuentro/"
+ },
+ "las-angustias-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/"
+ },
+ "el-silencio-descendimiento-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/cofradia-del-silencio/"
+ },
+ "la-caridad-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/caridad/"
+ },
+ "el-santo-sepulcro-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/"
+ },
+ "la-soledad-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/"
+ },
+ "el-resucitado-almeria": {
+  "texto": "",
+  "fuente_url": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/"
+ },
+ "la-borriquilla-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/borriquilla/"
+ },
+ "santa-cena-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/santa-cena/"
+ },
+ "la-estrella-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/piedad-y-estrella/"
+ },
+ "el-huerto-vera-cruz-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/oracion-en-el-huerto/"
+ },
+ "caridad-y-salud-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/caridad-y-salud/"
+ },
+ "la-amargura-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/amargura/"
+ },
+ "los-estudiantes-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/estudiantes/"
+ },
+ "divino-maestro-lavatorio-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/divino-maestro/"
+ },
+ "la-clemencia-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/clemencia/"
+ },
+ "el-silencio-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/humildad-y-silencio/"
+ },
+ "el-cautivo-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/cautivo/"
+ },
+ "el-perdon-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/perdon/"
+ },
+ "la-buena-muerte-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/buena-muerte/"
+ },
+ "la-lanzada-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/lanzada/"
+ },
+ "el-gran-poder-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/gran-poder/"
+ },
+ "la-vera-cruz-los-civiles-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/vera-cruz/"
+ },
+ "la-expiracion-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/expiracion/"
+ },
+ "nuestro-padre-jesus-el-abuelo-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/ntro-padre-jesus/"
+ },
+ "la-soledad-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/soledad/"
+ },
+ "el-santo-sepulcro-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/sepulcro/"
+ },
+ "el-resucitado-jaen": {
+  "texto": "",
+  "fuente_url": "https://cofradiasjaen.org/resucitado/"
+ },
+ "mutilado-clemencia-malaga": {
+  "texto": "",
+  "fuente_url": "https://www.elespanol.com/malaga/cultura/cofradias/20260328/horarios-recorridos-traslados-procesiones-sabado-pasion-malaga/1003744187930_0.html"
+ },
+ "desamparados-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+ },
+ "verdad-y-sagrario-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+ },
+ "luz-y-mar-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+ },
+ "buen-camino-gamarra-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+ },
+ "medinaceli-martiricos-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+ },
+ "dolores-del-puerto-de-la-torre-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+ },
+ "dolores-de-churriana-malaga": {
+  "texto": "",
+  "fuente_url": "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+ },
+ "la-o-cordoba": {
+  "texto": "",
+  "fuente_url": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+ },
+ "la-sangre-de-el-higueron-cordoba": {
+  "texto": "",
+  "fuente_url": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+ },
+ "traslado-al-sepulcro-pro-hermandad-cordoba": {
+  "texto": "",
+  "fuente_url": "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+ },
+ "la-bendicion-huelva": {
+  "texto": "",
+  "fuente_url": "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/"
+ },
+ "la-unidad-almeria": {
+  "texto": "",
+  "fuente_url": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html"
+ }
+}
