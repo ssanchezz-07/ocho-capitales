@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 76,
-  "Prensa (texto de noticias)": 13
+  "Prensa (texto de noticias)": 18
  },
  "eventos": [
   {
@@ -5038,6 +5038,56 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "El Puerto de la Torre se prepara para la salida del Cristo de Hermandad y Caridad",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/09/el-puerto-de-la-torre-se-prepara-para-la-salida-del-cristo-de-hermandad-y-caridad-ser-malaga/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "La Basílica de San Juan de Dios acoge este sábado el concierto de marchas procesionales «Ecos de Pasión»",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/la-basilica-de-san-juan-de-dios-acoge-este-sabado-el-concierto-de-marchas-procesionales-ecos-de-pasion/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Horario y recorrido de la procesión de la Virgen de la Aurora de Montilla",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/provincia/montilla-prepara-procesion-virgen-aurora_0_2008192396.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Procesiones en Málaga en el puente del Pilar, dónde y a qué hora salen las cofradías",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/procesiones-en-malaga-en-el-puente-del-pilar-donde-y-a-que-hora-salen-las-cofradias/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "El canónigo de la Catedral de Sevilla, Adrián Ríos, pregonará la romería de Valme de Dos Hermanas tras un «sí» espontáneo a la Virgen",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/canonigo-catedral-sevilla-adrian-rios-pregonara-romeria-20261009100805-nts_amp.html"
   },
   {
    "fecha": "2026-10-08",
