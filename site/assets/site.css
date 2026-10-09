@@ -609,7 +609,7 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-hero-home h1 em { font: italic 500 1.02em/.9 var(--it); letter-spacing: -.035em; color: var(--primary); }
 .oc-hero-home .oc-lead { margin: 22px 0 0; }
 .oc-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.oc-map { position: relative; border: 1px solid var(--ink); border-radius: var(--radius-plate); aspect-ratio: var(--ratio, 1.667); min-height: 220px;
+.oc-map { width: 100%; min-width: 0; position: relative; border: 1px solid var(--ink); border-radius: var(--radius-plate); aspect-ratio: var(--ratio, 1.667); min-height: 220px;
   background: linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 100% 12.5%, linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 12.5% 100%, var(--surface); }
 .oc-map::after { content: ""; position: absolute; inset: 6px; border: 1px solid color-mix(in srgb, var(--gold) 70%, transparent); pointer-events: none; }
 .oc-map-tag { position: absolute; z-index: 1; color: var(--muted); }

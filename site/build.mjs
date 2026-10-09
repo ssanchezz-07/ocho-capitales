@@ -109,6 +109,8 @@ const pages = [];
 
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
+// Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
+const HUELLA = Object.fromEntries(['css', 'js'].map((x) => [x, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', 'site.' + x))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -293,7 +295,7 @@ function eventosVerificados() {
 // Agendas de terceros (tools/agenda-externa.mjs): InfoCofrade, El Itinerario y agendas semanales de prensa. Salen como «detectado».
 const AGENDA_EXT_FILE = path.join(DIR, '..', 'tools', 'sources', 'agenda-externa.json');
 const EXT_ORDEN = { 'Diario SUR': 0, 'La Opinión de Málaga': 0, InfoCofrade: 1, 'El Itinerario': 2 };
-const STOPW_EV = new Set(['del', 'las', 'los', 'con', 'por', 'una', 'procesion', 'extraordinaria', 'nuestra', 'nuestro', 'senora', 'senor', 'virgen', 'santisima', 'maria', 'padre', 'jesus', 'dia', 'triduo', 'funcion', 'solemne', 'honor', 'ntra', 'sra', 'stma', 'stmo', 'cristo', 'traslado', 'vuelta', 'ida', 'regreso', 'besamanos', 'rosario', 'cultos', 'primer', 'segundo', 'tercer', 'principal', 'misa', 'hermandad', 'cofradia']);
+const STOPW_EV = new Set(['del', 'las', 'los', 'con', 'por', 'una', 'procesion', 'extraordinaria', 'nuestra', 'nuestro', 'senora', 'senor', 'virgen', 'santisima', 'maria', 'padre', 'jesus', 'dia', 'triduo', 'funcion', 'solemne', 'honor', 'ntra', 'sra', 'stma', 'stmo', 'cristo', 'traslado', 'vuelta', 'ida', 'regreso', 'besamanos', 'rosario', 'cultos', 'primer', 'segundo', 'tercer', 'principal', 'misa', 'hermandad', 'cofradia', 'este', 'esta', 'estos', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'itinerario', 'horario', 'horarios', 'recorrido', 'hora', 'horas', 'gloria', 'patrona', 'patron', 'calles', 'almeria', 'cadiz', 'cordoba', 'granada', 'huelva', 'jaen', 'malaga', 'sevilla']);
 const sigEv = (t) => new Set(norm(t).replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length >= 3 && !STOPW_EV.has(w)));
 const mismoActo = (a, b) => { if (a.fecha !== b.fecha || a.ciudad !== b.ciudad || GRUPO_DE[a.tipo] !== GRUPO_DE[b.tipo]) return false; const x = sigEv(a.titulo), y = sigEv(b.titulo); let n = 0; for (const w of x) if (y.has(w)) n++; return x.size && y.size && n / Math.min(x.size, y.size) >= 0.5; };
 function eventosExternos(previos) {
@@ -308,13 +310,29 @@ function eventosExternos(previos) {
   }
   return out;
 }
+// Municipios andaluces (Wikidata): un acto detectado «de/en <pueblo>» de la misma provincia no es de la capital.
+const MUNI_FILE = path.join(DIR, '..', 'tools', 'sources', 'municipios-andalucia.json');
+const MUNI = fs.existsSync(MUNI_FILE) ? Object.entries(JSON.parse(fs.readFileSync(MUNI_FILE, 'utf8')).municipios).map(([n, p]) => [' ' + norm(n).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ', p]) : [];
+const CRONICA = /\b(en imagenes|las fotos|fotos de|fotogaleria|galeria|video|asi fue|asi vivio|asi se vivio|minuto a minuto|en directo)\b/;
+function actoFuera(e) {
+  if (e.verificado || e.tipo === 'liturgico') return false;
+  const t = ' ' + norm(e.titulo).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
+  if (CRONICA.test(t)) return true;
+  // En conciertos «Banda de <pueblo>» dice de dónde es la banda, no dónde toca: solo cuenta «en <pueblo>».
+  const deVale = GRUPO_DE[e.tipo] !== 'musica';
+  return MUNI.some(([n, p]) => p === e.ciudad && ((deVale && t.includes(' de' + n)) || t.includes(' en' + n)) && !t.includes(n + 'cruz '));
+}
+// Títulos de terceros cortados a media palabra: se recortan en un espacio con puntos suspensivos.
+const recorta = (t, n = 120) => { t = String(t || '').replace(/\s+/g, ' ').trim(); if (t.length <= n) return t; const c = t.slice(0, n); return c.slice(0, Math.max(c.lastIndexOf(' '), n - 20)).replace(/[\s,;:.-]+$/, '') + '…'; };
 function agenda() {
   const now = madridNow();
   const verif = eventosVerificados();
   const clave = (e) => e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + e.ciudad;
   const ya = new Set(verif.map(clave));
-  const noticias = eventosNoticias().filter((e) => !ya.has(clave(e)));
-  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...noticias, ...eventosExternos([...verif, ...noticias])];
+  // Las agendas externas suelen traer la hora: si una noticia habla del mismo acto, se queda el de la agenda.
+  const externos = eventosExternos(verif).filter((e) => !actoFuera(e));
+  const noticias = eventosNoticias().filter((e) => !ya.has(clave(e)) && !actoFuera(e) && !externos.some((x) => mismoActo(x, e)));
+  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...noticias, ...externos].map((e) => (e.verificado ? e : { ...e, titulo: recorta(e.titulo), fuentes: e.fuentes && e.fuentes.some((f) => /^https?:\/\//.test(f.url)) ? e.fuentes.filter((f) => /^https?:\/\//.test(f.url)) : undefined }));
   // Dentro de cada día: lo litúrgico primero, luego salidas, vía crucis, cultos y el resto; a igual grupo, por hora y lo verificado antes.
   const GP = { liturgico: 0, salidas: 1, 'via-crucis': 2, cultos: 3, musica: 4, anuncios: 5 };
   const orden = (e) => GP[GRUPO_DE[e.tipo]] ?? 9;
@@ -380,7 +398,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 <link rel="preload" href="${u('assets/fonts/bricolage-grotesque-latin.woff2')}" as="font" type="font/woff2" crossorigin>
-${head}<link rel="stylesheet" href="${u('assets/site.css')}">
+${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
 </head>
@@ -435,7 +453,7 @@ ${body}${colabora(p, title)}
     <div class="oc-search-results" data-search-results aria-live="polite"><p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p></div>
   </div>
 </div>
-<script src="${u('assets/site.js')}" defer></script>
+<script src="${u('assets/site.js')}?v=${HUELLA.js}" defer></script>
 </body>
 </html>`;
 }
@@ -495,7 +513,7 @@ function mapaCapitales() {
     const x = P ? ((P.pad + (lon - P.lon0) * P.sx) / MAPA.ancho) * 100 : 10 + ((lon + 7.1) / 4.9) * 80;
     const y = P ? ((P.pad + (P.lat1 - lat) * P.sy) / MAPA.alto) * 100 : 12 + ((38 - lat) / 1.65) * 76;
     const num = String(i + 1).padStart(2, '0');
-    return `<a class="oc-pin${pos === 'l' ? ' is-l' : pos === 'b' ? ' is-b' : pos === 't' ? ' is-t' : ''}" style="--c:${c.color};left:${x.toFixed(1)}%;top:${y.toFixed(1)}%" href="${capHref(c)}" aria-label="${num} ${esc(c.nombre)}">${num}<span aria-hidden="true">${esc(c.nombre)}</span></a>`;
+    return `<a class="oc-pin${pos === 'l' ? ' is-l' : pos === 'b' ? ' is-b' : pos === 't' ? ' is-t' : ''}" style="--c:${c.color};left:${x.toFixed(1)}%;top:${y.toFixed(1)}%" href="${capHref(c)}">${num} <span>${esc(c.nombre)}</span></a>`;
   }).join('');
   const svg = MAPA ? `<svg class="oc-map-svg" viewBox="${MAPA.viewBox}" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">${MAPA.provincias.map((p) => `<path class="oc-prov" style="--c:${(CAP[p.slug] || {}).color || '#888'}" d="${p.d}"/>`).join('')}</svg>` : '';
   return `<div class="oc-map" role="group" aria-label="Mapa de las ocho capitales andaluzas" style="--ratio:${MAPA ? (MAPA.ancho / MAPA.alto).toFixed(3) : '1.667'}">${svg}${pins}<span class="oc-map-tag is-a oc-mono">Andalucía</span><span class="oc-map-tag is-b oc-mono">8 capitales</span></div>`;
@@ -537,6 +555,7 @@ ${todayPanel()}
 <section aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 <section class="oc-latest" aria-labelledby="ultimas-titulo" data-latest>
   <h2 class="oc-h2" id="ultimas-titulo">Últimas noticias</h2>
+  ${NEWS.actualizado ? `<p class="oc-note oc-updated">Leídas por última vez a las ${new Date(NEWS.actualizado).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' })} del ${fmtDay(NEWS.actualizado, { day: 'numeric', month: 'long' })} (<time data-ago datetime="${new Date(NEWS.actualizado).toISOString()}"></time>).</p>` : ''}
   <div class="oc-latest-list" data-latest-list>${latest.map((n) => newsItem(n, { img: false })).join('')}</div>
   <p class="oc-empty" data-latest-empty hidden>Aún no hay noticias recientes de tu ciudad.</p>
   <a class="oc-btn" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
@@ -708,7 +727,7 @@ ${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h
 ${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas y perfiles públicos; el portal no aloja audio ni vídeo.</p>`)}
 ${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
 <p class="oc-note">Configuración musical según la información publicada; las cofradías la cambian con frecuencia de un año a otro. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
-  write(`banda/${b.slug}/index.html`, layout({ title: b.nombre, desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
+  write(`banda/${b.slug}/index.html`, layout({ title: b.nombre + (b.localidad && D.bandas.some((x) => x !== b && x.nombre === b.nombre) ? ' (' + b.localidad + ')' : ''), desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
 function pageImag(i) {
@@ -786,7 +805,8 @@ function pageDirImag() {
 // iCalendar: un archivo con todo lo próximo y uno por capital. Hora de Madrid; sin hora = acto de día completo.
 // Los títulos y notas vienen de fuentes externas: se eliminan saltos de línea y caracteres de control antes de escapar, para que no puedan añadir líneas al .ics.
 const icsEsc = (t) => String(t || '').replace(/\r\n|\r|\n/g, '\\n').replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '').replace(/\\(?!n)/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,');
-const icsFold = (l) => { const out = []; while (l.length > 74) { out.push(l.slice(0, 74)); l = ' ' + l.slice(74); } out.push(l); return out.join('\r\n'); };
+// Plegado a 75 octetos (RFC 5545) sin partir caracteres con tilde.
+const icsFold = (l) => { const out = []; let cur = '', bytes = 0; for (const ch of l) { const b = Buffer.byteLength(ch); if (bytes + b > 75) { out.push(cur); cur = ' '; bytes = 1; } cur += ch; bytes += b; } out.push(cur); return out.join('\r\n'); };
 function icsDe(eventos, nombre) {
   const sello = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
   const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Ocho Capitales//Agenda cofrade//ES', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:' + icsEsc(nombre), 'X-WR-TIMEZONE:Europe/Madrid', 'REFRESH-INTERVAL;VALUE=DURATION:PT6H', 'BEGIN:VTIMEZONE', 'TZID:Europe/Madrid', 'BEGIN:STANDARD', 'DTSTART:19701025T030000', 'TZOFFSETFROM:+0200', 'TZOFFSETTO:+0100', 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'END:STANDARD', 'BEGIN:DAYLIGHT', 'DTSTART:19700329T020000', 'TZOFFSETFROM:+0100', 'TZOFFSETTO:+0200', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU', 'END:DAYLIGHT', 'END:VTIMEZONE'];
@@ -846,7 +866,10 @@ function pageCalendario() {
 <p class="oc-note">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
 <div class="oc-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}">${esc(c.nombre)}</a>`).join('')}</div>
 ${D.capitales.map((c, i) => `<section class="oc-cal" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h2 class="oc-h2"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a></h2><div class="oc-cal-days">${byDay(conSalidas(hermsOf(c.slug))).map(([d, list]) => `<section class="oc-cal-day"><h3 class="oc-h3">${esc(d)}</h3><ol class="oc-order">${list.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}${h.extra ? ` <small>(${esc(h.extra.titulares)})</small>` : ''}</a>${h.sede || h.hora ? `<span>${h.hora ? esc(h.hora) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol></section>`).join('')}</div></section>`).join('')}`;
-  write('calendario/index.html', layout({ title: 'Calendario cofrade', desc: 'Agenda cofrade de las ocho capitales andaluzas: Cuaresma, Semana Santa, salidas extraordinarias, vía crucis, cultos, conciertos y pregones, y el orden de paso de cada jornada.', body, path: 'calendario/', active: 'calendario/', crumbs: [['Portada', u()], ['Calendario', '']] }));
+  // Datos estructurados solo para los actos confirmados (los detectados pueden cambiar de hora o no celebrarse).
+  const offMadrid = (f) => { const p = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Madrid', timeZoneName: 'shortOffset' }).formatToParts(new Date(f + 'T12:00:00Z')).find((x) => x.type === 'timeZoneName').value; const m = p.match(/([+-])(\d+)/); return m ? m[1] + m[2].padStart(2, '0') + ':00' : '+01:00'; };
+  const eventLd = EV.filter((e) => e.verificado && e.fecha >= today).map((e) => ({ '@context': 'https://schema.org', '@type': 'Event', name: e.titulo, startDate: e.hora ? e.fecha + 'T' + e.hora + ':00' + offMadrid(e.fecha) : e.fecha, eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', location: { '@type': 'Place', name: CAP[e.ciudad].nombre, address: { '@type': 'PostalAddress', addressLocality: CAP[e.ciudad].nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } }, description: e.nota || undefined, isAccessibleForFree: true, url: abs('calendario/') }));
+  write('calendario/index.html', layout({ jsonld: eventLd.length ? eventLd : null, title: 'Calendario cofrade', desc: 'Agenda cofrade de las ocho capitales andaluzas: Cuaresma, Semana Santa, salidas extraordinarias, vía crucis, cultos, conciertos y pregones, y el orden de paso de cada jornada.', body, path: 'calendario/', active: 'calendario/', crumbs: [['Portada', u()], ['Calendario', '']] }));
 }
 function pageBuscar() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Buscar</h1></header><form class="oc-searchform" role="search" data-search-page action="${u('buscar/')}"><label class="oc-label" for="q-page">Hermandad, imagen, imaginero, banda, capital o noticia</label><div class="oc-searchform-row"><input id="q-page" name="q" type="search" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search"><button class="oc-btn" type="submit">${icon('search')}<span>Buscar</span></button></div></form><div class="oc-search-results is-page" data-search-page-results aria-live="polite"></div>`;
@@ -901,7 +924,7 @@ function pageOffline() {
 }
 function escribeSw() {
   const lista = (d) => fs.existsSync(path.join(DIST, d)) ? fs.readdirSync(path.join(DIST, d)).map((x) => BASE + d + '/' + x) : [];
-  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css', BASE + 'assets/site.js', ...lista('assets/fonts')];
+  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
   fs.writeFileSync(path.join(DIST, 'sw.js'), `// Ocho Capitales: caché para usar el portal sin cobertura (en la calle, entre bullas). Generado por build.mjs.
 const V = 'oc-${Date.now()}', BASE = ${JSON.stringify(BASE)}, SHELL = ${JSON.stringify(shell)};
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
