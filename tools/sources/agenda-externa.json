@@ -1,12 +1,12 @@
 {
  "generado": "2026-10-09",
  "fuentes": {
-  "InfoCofrade": 385,
+  "InfoCofrade": 387,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 76,
-  "Prensa (texto de noticias)": 18
+  "Prensa (texto de noticias)": 20
  },
  "eventos": [
   {
@@ -144,7 +144,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real",
+   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real de 10:30-13:30 y 17:00-20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -242,6 +242,16 @@
   {
    "fecha": "2026-10-10",
    "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de María Santísima de la Alegría (Córdoba)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
    "ciudad": "cadiz",
    "tipo": "magna",
    "titulo": "Procesión magna en Arcos de la Frontera",
@@ -324,7 +334,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real",
+   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real de 10:30-13:30 y 17:00-20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -465,7 +475,7 @@
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Rosario de la Aurora con Nuestra Señora del Rosario (Humeros) hasta el Convento de Santa Rosalía",
-   "nota": "Salida: 07:00.",
+   "nota": "Salida: 07:00",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -495,6 +505,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Principal de Instituto a María Santísima del Pilar (San Pedro) a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "culto",
+   "titulo": "Peregrinación extraordinaria de la Hermandad del Rocío de Sevilla a la Parroquia de la Asunción (Almonte)",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -5088,6 +5108,26 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/canonigo-catedral-sevilla-adrian-rios-pregonara-romeria-20261009100805-nts_amp.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora del Rosario de Barrio León abrirá un intenso fin de semana procesional en Sevilla",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-de-barrio-leon-abrira-un-intenso-fin-de-semana-procesional-en-sevilla/"
   },
   {
    "fecha": "2026-10-08",
