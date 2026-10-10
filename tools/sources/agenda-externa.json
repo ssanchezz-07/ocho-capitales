@@ -1,104 +1,14 @@
 {
  "generado": "2026-10-10",
  "fuentes": {
-  "InfoCofrade": 387,
+  "InfoCofrade": 381,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 76,
-  "Prensa (texto de noticias)": 19
+  "Prensa (agendas semanales)": 85,
+  "Prensa (texto de noticias)": 20
  },
  "eventos": [
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Corona) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Aguas) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Siete Palabras) a las 20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora del Rosario (Montserrat) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Nieves (Santa María la Blanca) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Salud (Sol) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Pilar (San Pedro) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "21:00",
-   "ciudad": "sevilla",
-   "tipo": "concierto",
-   "titulo": "Concierto de la Banda de Música de Santa Ana de Dos Hermanas en la Capilla de los Marineros a las 21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Misa de acción de gracias por el CXXV aniversario fundacional de la Hermandad de San Roque a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-10",
    "hora": "18:30",
@@ -154,7 +64,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos)",
+   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos) de 10:30-13:00 y 18:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -344,7 +254,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos)",
+   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos) de 10:30-13:00 y 18:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1490,6 +1400,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación de la juventud del Martes Santo en la Hermandad de los Javieres a cargo de Víctor Manuel Cáscales Vallejo",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-11-15",
    "hora": "",
    "ciudad": "sevilla",
@@ -2125,6 +2045,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Solemne a Nuestra Señora de la Esperanza (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación de la navidad en la Hermandad de las Aguas a cargo de Marisa Atienza Ramos",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -3320,6 +3250,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2027-05-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Pregón de las glorias de María en la Hermandad de la Paz a cargo de José María Garrido Mateos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2027-05-07",
    "hora": "",
    "ciudad": "sevilla",
@@ -4168,6 +4108,96 @@
    "nota": "Ciudad de Granada",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "10:00",
+   "tipo": "acto",
+   "titulo": "24 horas de adoración al Santísimo",
+   "nota": "Parroquia del Beato Álvaro de Córdoba"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "11:00",
+   "tipo": "acto",
+   "titulo": "Reunión del grupo joven de las Penas de Santiago",
+   "nota": "Casa de Hermandad"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "11:00",
+   "tipo": "acto",
+   "titulo": "Jornada de puertas abiertas del grupo joven de la Estrella",
+   "nota": "Casa de Hermandad de la Estrella"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "12:00",
+   "tipo": "acto",
+   "titulo": "Convivencia de los grupos jóvenes de las Penas y las Angustias",
+   "nota": "Casa de Hermandad de las Angustias"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "19:00",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino de María Santísima de la O",
+   "nota": "Parroquia de Nuestra Señora de la Aurora"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "19:30",
+   "tipo": "extraordinaria",
+   "titulo": "Salida extraordinaria de la Virgen de la Alegría",
+   "nota": "Parroquia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Encarnación",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
+   "fecha": "2026-10-10",
+   "hora": "20:15",
+   "tipo": "culto",
+   "titulo": "Conferencia sobre el palio de la Virgen de la Encarnación",
+   "nota": "Salones de Jesús Divino Obrero"
   },
   {
    "ciudad": "cordoba",
@@ -5118,6 +5148,16 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-de-barrio-leon-abrira-un-intenso-fin-de-semana-procesional-en-sevilla/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Jesús Nazareno de Fuente Palmera sale en procesión extraordinaria",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/jesus-nazareno-fuente-palmera-sale-procesion-extraordinaria-20261010092317-nts.html"
   },
   {
    "fecha": "2026-10-09",
