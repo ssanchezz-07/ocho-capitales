@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 85,
-  "Prensa (texto de noticias)": 20
+  "Prensa (texto de noticias)": 29
  },
  "eventos": [
   {
@@ -5158,6 +5158,96 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/jesus-nazareno-fuente-palmera-sale-procesion-extraordinaria-20261010092317-nts.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Las mejores fotos de la procesión de la Virgen de la Aurora en Montilla",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/provincia/fotos-procesion-virgen-aurora-montilla_3_2008202552.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "coronacion",
+   "titulo": "La devoción a la Virgen de las Angustias de Vera recibe el Escudo de Oro de la Provincia",
+   "nota": "",
+   "fuente": "Diario de Almería",
+   "url": "https://www.diariodealmeria.es/provincia/vera/devocion-virgen-angustias-vera-escudo-oro-provincia_0_2008202232.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Las mejores fotos de la procesión extraordinaria de la Virgen de la Alegría en Córdoba",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/cordoba/fotos-procesion-extraordinaria-virgen-alegria-cordoba_3_2008202231.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "La Magna de Arcos, en imágenes",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/noticias-provincia-cadiz/magna-arcos-imagenes_3_2008201818.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "Arcos se siente más cofrade que nunca con un acontecimiento histórico como la salida a la calle de la Procesión Magna, que ha puesto este sábado en la calle a sus cofradí",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "La Borriquita inició la procesión única desde la basílica de Santa María, dando paso al resto de imágenes muy veneradas de la localidad, entre ellas El Nazareno, que se r",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "La Virgen de la Alegría sale este sábado en procesión de forma extraordinaria:",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La salida permitirá contemplar una imagen poco habitual de la talla, acostumbrada a procesionar durante la mañana y las primeras horas de la tarde del Domingo de Resurrec",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La programación continuará después de la procesión y tendrá otra de sus citas destacadas el 28 de noviembre, cuando María Santísima Reina de Nuestra Alegría salga en un r",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
   },
   {
    "fecha": "2026-10-09",
