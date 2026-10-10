@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 85,
-  "Prensa (texto de noticias)": 29
+  "Prensa (agendas semanales)": 89,
+  "Prensa (texto de noticias)": 31
  },
  "eventos": [
   {
@@ -4112,6 +4112,46 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "09:45",
+   "tipo": "culto",
+   "titulo": "Rosario matinal de María Santísima de la Paz y Esperanza Coronada",
+   "nota": "Iglesia conventual del Santo Ángel (Capuchinos)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "10:00",
+   "tipo": "culto",
+   "titulo": "Cabildos ordinario y extraordinario de la Hermandad de las Lágrimas",
+   "nota": "Salones parroquiales | Plaza de la Marina Española, s/n"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Encarnación",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
    "fecha": "2026-10-10",
    "hora": "10:00",
@@ -5248,6 +5288,26 @@
    "nota": "",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "El próximo 7 de noviembre, el Señor del Santo Traslado recorrerá las calles del barrio de la Trinidad.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Una semana después, el 14 de noviembre, será el turno de Nuestro Padre Jesús de la Pasión, que procesionará por la feligresía de las iglesias de los Santos Mártires y San",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
   },
   {
    "fecha": "2026-10-09",
