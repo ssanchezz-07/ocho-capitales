@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-09",
+ "generado": "2026-10-10",
  "fuentes": {
   "InfoCofrade": 387,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 76,
-  "Prensa (texto de noticias)": 20
+  "Prensa (texto de noticias)": 19
  },
  "eventos": [
   {
@@ -5040,16 +5040,6 @@
    "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
   },
   {
-   "fecha": "2026-10-09",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "culto",
-   "titulo": "Antes de celebrar el triduo y la función principal en San Andrés a su titular, la hermandad del Buen Suceso llevará a cabo este viernes un rosario vespertino con la image",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
-  },
-  {
    "fecha": "2026-10-12",
    "hora": "",
    "ciudad": "cordoba",
@@ -5128,6 +5118,16 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-de-barrio-leon-abrira-un-intenso-fin-de-semana-procesional-en-sevilla/"
+  },
+  {
+   "fecha": "2026-10-09",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "culto",
+   "titulo": "Antes de celebrar el triduo y la función principal en San Andrés a su titular, la hermandad del Buen Suceso llevará a cabo este viernes un rosario vespertino con la image",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
   },
   {
    "fecha": "2026-10-08",
