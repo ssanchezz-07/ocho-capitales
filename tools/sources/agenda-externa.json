@@ -1,194 +1,14 @@
 {
  "generado": "2026-10-11",
  "fuentes": {
-  "InfoCofrade": 381,
+  "InfoCofrade": 369,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 89,
-  "Prensa (texto de noticias)": 12
+  "Prensa (texto de noticias)": 21
  },
  "eventos": [
-  {
-   "fecha": "2026-10-10",
-   "hora": "18:30",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario (Barrio León)",
-   "nota": "Música: la Banda de Música de María Santísima de la Victoria (Cigarreras).",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "19:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario (San Jerónimo)",
-   "nota": "Salida: 19:00",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "19:20",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora de Montemayor (San Juan de la Palma)",
-   "nota": "Música: la Banda de Música del Liceo de Sevilla.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a María Santísima del Rosario (Milagrosa) de 10:00-13:30 y 17:00-20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real de 10:30-13:30 y 17:00-20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos) de 10:30-13:00 y 18:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (Parroquia de las Flores) de 10:00-13:00 y 18:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Aguas) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Nieves (Santa María la Blanca) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo y Función Solemne a Nuestra Señora de la Salud (Sol) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Pilar (San Pedro) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Misa de hermanamiento entre las Hermandades del Rocío del Cerro del Águila y Sevilla-Sur en la Parroquia de Nuestra Señora de los Dolores (Cerro) a las 20:00",
-   "nota": "Música: los coros de ambas Hermandades.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de Nuestra Señora de la Esperanza de La Rambla (Córdoba)",
-   "nota": "Música: la Asociación Musical Ecijana Amueci.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Fuente Palmera (Córdoba)",
-   "nota": "Música: la Banda de Cornetas y Tambores del Santísimo Cristo de las Tres Caídas de Triana.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de María Santísima de la Alegría (Córdoba)",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "magna",
-   "titulo": "Procesión magna en Arcos de la Frontera",
-   "nota": "Participan: Cristo Rey, El Prendimiento, Atado a la Columna, Las Tres Caídas, Verónica y El Nazareno, Cristo del Perdón, Cristo de la Vera+Cruz, Santo Sepulcro, Quinta Angustia y la Virgen de los Dolores. Música: AM Lágrimas de San Fernando abriendo el cortejo, BCT Despojado de San Fernando (con Cristo Rey), AM Redención de Córdoba (El Prendimiento), AM Ecce Mater (Atado), BCT Tres Caídas de Arcos (Las Tres Caídas), AM la Sentencia de Jerez (con el Nazareno), BCT Nazareno de Arahal (con el Perdón), Agrupación Musical Santa María Magdalena de Arahal (con Vera+Cruz), BCT Presentación al Pueblo de Dos Hermanas (con la Quinta Angustia), Banda de Música del Maestro Dueñas (con el Santo Entierro) y la Banda de Música Gómez Zarzuela (con la Virgen de los Dolores).",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "19:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de la Divina Pastora de Carmona",
-   "nota": "Salida: 19:00.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-10",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario de Gerena",
-   "nota": "Música: la Banda de Música del Maestro Tejera.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-11",
    "hora": "18:00",
@@ -316,6 +136,16 @@
    "tipo": "culto",
    "titulo": "Bendición del retablo a Nuestra Señora del Rosario (Siete Palabras) en la fachada de la Parroquia de San Vicente a las 13:00",
    "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "18:30",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestra Señora de Belén (Pilas)",
+   "nota": "Música: la Sociedad Filarmónica de Pilas.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -461,6 +291,16 @@
   },
   {
    "fecha": "2026-10-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-15",
    "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -495,6 +335,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a María Santísima del Amor (Pino Montano) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -553,6 +403,16 @@
    "fecha": "2026-10-17",
    "hora": "19:00",
    "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino con Nuestra Señora de la Misericordia (Rochelambert)",
+   "nota": "Salida: 19:00",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "19:00",
+   "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestra Señora del Rosario (San Pablo) de 17:00-21:00 (misa a las 19:00)",
    "nota": "",
@@ -595,6 +455,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a María Santísima del Amor (Pino Montano) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -661,6 +531,16 @@
   },
   {
    "fecha": "2026-10-18",
+   "hora": "08:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario de la Aurora con María Santísima de la Paz",
+   "nota": "Salida: 08:00",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
    "hora": "09:15",
    "ciudad": "sevilla",
    "tipo": "procesion",
@@ -715,6 +595,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Principal a María Santísima del Amor (Pino Montano) a las 12:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora de las Lágrimas (Exaltación)",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1066,16 +956,6 @@
    "tipo": "culto",
    "titulo": "Función Principal de Instituto a Nuestra Señora del Rosario (Macarena) a las 11:00",
    "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario de la Macarena",
-   "nota": "Música: la Banda de Música del Carmen de Salteras.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -5118,6 +4998,96 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/cordoba/paz-esperanza-coronada_0_2007854046.html"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "El arzobispo de Sevilla anima a los hermanos de Valme a vivir una fe que se traduzca en caridad",
+   "nota": "",
+   "fuente": "Archidiócesis de Sevilla",
+   "url": "https://www.archisevilla.org/el-arzobispo-de-sevilla-anima-a-los-hermanos-de-valme-a-vivir-una-fe-que-se-traduzca-en-caridad/"
+  },
+  {
+   "fecha": "2027-02-06",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "cartel",
+   "titulo": "Juan Miguel Martín Mena diseñará el cartel oficial de la Semana Santa de Cáceres de 2027",
+   "nota": "",
+   "fuente": "La Portada de Extremadura",
+   "url": "https://www.laportadadeextremadura.com/caceres/ciudad-caceres/juan-miguel-martin-mena-disenara-el-cartel-oficial-de-la-semana-santa-de-caceres-de-2027_8811_102.html"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "extraordinaria",
+   "titulo": "Por todo ello, este domingo 11 de octubre, la Virgen de la Divina Gracia realizará una salida extraordinaria en su paso de palio por las calles de su barrio.",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "magna",
+   "titulo": "Previous PostArcos de la Frontera celebra este sábado una magna con once hermandades",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "Madre de Dios del Rosario cambiará el horario de su salida procesional a la mañana",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "de las Angustias de Motril procesiona este domingo",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "17:00",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "48 estampas de una Magna inolvidable en Arcos: llenazo total en la histórica procesión extraordinaria en la Sierra de Cádiz",
+   "nota": "",
+   "fuente": "La Voz del Sur",
+   "url": "https://www.lavozdelsur.es/galerias-fotograficas/48-estampas-de-una-magna-inolvidable-en-arcos-llenazo-total-en-la-historica-procesion-extraordinaria-en-la-sierra-de-cadiz.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "coronacion",
+   "titulo": "El Centenario de la Coronación Canónica de la Virgen de las Angustias de Vera, en imágenes",
+   "nota": "",
+   "fuente": "Diario de Almería",
+   "url": "https://www.diariodealmeria.es/provincia/vera/centenario-coronacion-canonica-virgen-angustias_3_2008206252.html"
   },
   {
    "fecha": "2026-10-10",
