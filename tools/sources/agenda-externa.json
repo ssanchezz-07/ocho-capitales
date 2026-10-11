@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-10",
+ "generado": "2026-10-11",
  "fuentes": {
   "InfoCofrade": 381,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 89,
-  "Prensa (texto de noticias)": 31
+  "Prensa (texto de noticias)": 12
  },
  "eventos": [
   {
@@ -5020,6 +5020,106 @@
    "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
   },
   {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Procesiones en Málaga en el puente del Pilar, dónde y a qué hora salen las cofradías",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/procesiones-en-malaga-en-el-puente-del-pilar-donde-y-a-que-hora-salen-las-cofradias/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "El canónigo de la Catedral de Sevilla, Adrián Ríos, pregonará la romería de Valme de Dos Hermanas tras un «sí» espontáneo a la Virgen",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/canonigo-catedral-sevilla-adrian-rios-pregonara-romeria-20261009100805-nts_amp.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "La Borriquita inició la procesión única desde la basílica de Santa María, dando paso al resto de imágenes muy veneradas de la localidad, entre ellas El Nazareno, que se r",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La salida permitirá contemplar una imagen poco habitual de la talla, acostumbrada a procesionar durante la mañana y las primeras horas de la tarde del Domingo de Resurrec",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La programación continuará después de la procesión y tendrá otra de sus citas destacadas el 28 de noviembre, cuando María Santísima Reina de Nuestra Alegría salga en un r",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "El próximo 7 de noviembre, el Señor del Santo Traslado recorrerá las calles del barrio de la Trinidad.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Una semana después, el 14 de noviembre, será el turno de Nuestro Padre Jesús de la Pasión, que procesionará por la feligresía de las iglesias de los Santos Mártires y San",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "Paz y Esperanza Coronada",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/cordoba/paz-esperanza-coronada_0_2007854046.html"
+  },
+  {
    "fecha": "2026-10-10",
    "hora": "",
    "ciudad": "almeria",
@@ -5110,16 +5210,6 @@
    "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
   },
   {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
-  },
-  {
    "fecha": "2026-10-10",
    "hora": "",
    "ciudad": "malaga",
@@ -5148,36 +5238,6 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/provincia/montilla-prepara-procesion-virgen-aurora_0_2008192396.html"
-  },
-  {
-   "fecha": "2026-11-07",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "traslado",
-   "titulo": "Procesiones en Málaga en el puente del Pilar, dónde y a qué hora salen las cofradías",
-   "nota": "",
-   "fuente": "101TV",
-   "url": "https://www.101tv.es/malaga-semana-santa/procesiones-en-malaga-en-el-puente-del-pilar-donde-y-a-que-hora-salen-las-cofradias/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "12:00",
-   "ciudad": "sevilla",
-   "tipo": "pregon",
-   "titulo": "El canónigo de la Catedral de Sevilla, Adrián Ríos, pregonará la romería de Valme de Dos Hermanas tras un «sí» espontáneo a la Virgen",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/canonigo-catedral-sevilla-adrian-rios-pregonara-romeria-20261009100805-nts_amp.html"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
   },
   {
    "fecha": "2026-10-10",
@@ -5250,16 +5310,6 @@
    "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
   },
   {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "procesion",
-   "titulo": "La Borriquita inició la procesión única desde la basílica de Santa María, dando paso al resto de imágenes muy veneradas de la localidad, entre ellas El Nazareno, que se r",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
-  },
-  {
    "fecha": "2026-10-10",
    "hora": "",
    "ciudad": "cordoba",
@@ -5268,46 +5318,6 @@
    "nota": "",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La salida permitirá contemplar una imagen poco habitual de la talla, acostumbrada a procesionar durante la mañana y las primeras horas de la tarde del Domingo de Resurrec",
-   "nota": "",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
-  },
-  {
-   "fecha": "2026-11-28",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La programación continuará después de la procesión y tendrá otra de sus citas destacadas el 28 de noviembre, cuando María Santísima Reina de Nuestra Alegría salga en un r",
-   "nota": "",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
-  },
-  {
-   "fecha": "2026-11-07",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "traslado",
-   "titulo": "El próximo 7 de noviembre, el Señor del Santo Traslado recorrerá las calles del barrio de la Trinidad.",
-   "nota": "",
-   "fuente": "101TV",
-   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
-  },
-  {
-   "fecha": "2026-11-14",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Una semana después, el 14 de noviembre, será el turno de Nuestro Padre Jesús de la Pasión, que procesionará por la feligresía de las iglesias de los Santos Mártires y San",
-   "nota": "",
-   "fuente": "101TV",
-   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
   },
   {
    "fecha": "2026-10-09",
