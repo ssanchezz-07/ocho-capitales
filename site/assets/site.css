@@ -824,3 +824,14 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-hero-home h1, .oc-title-city, .oc-plate h3, .oc-tile b, .oc-stats b { letter-spacing: -.04em; }
 /* La miga actual se lee entera (antes se cortaba con «…») */
 .oc-crumbs [aria-current] { white-space: normal; max-width: none; overflow: visible; }
+
+/* ---------- Pulido 2026-10-12: listados ---------- */
+.oc-morefilters { flex: 2 1 320px; min-width: 0; }
+.oc-morefilters > summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 700; cursor: pointer; list-style: none; }
+.oc-morefilters > summary::-webkit-details-marker { display: none; }
+.oc-morefilters > summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform var(--duration-fast) var(--ease-out); }
+.oc-morefilters[open] > summary::after { transform: rotate(-135deg) translateY(-2px); }
+.oc-morefilters-body { display: flex; flex-wrap: wrap; gap: 12px 14px; align-items: flex-end; }
+@media (min-width: 641px) { .oc-morefilters > summary { display: none; } }
+.oc-dirmore { display: flex; justify-content: center; margin: 20px 0 8px; }
+.oc-dirmore[hidden] { display: none; }

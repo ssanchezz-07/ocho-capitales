@@ -255,7 +255,11 @@
     var fields = {}; $$('[data-f]', bar).forEach(function (el) { fields[el.dataset.f] = el; });
     var params = new URLSearchParams(location.search);
     Object.keys(fields).forEach(function (k) { if (params.get(k)) fields[k].value = params.get(k); });
-    var timer;
+    var timer, PAGE = 50, limit = PAGE;
+    var more = $('[data-dir-more]', scope), moreBtn = more && $('button', more);
+    // En móvil los desplegables empiezan plegados; la búsqueda queda siempre a la vista
+    var mf = $('[data-morefilters]', bar);
+    if (mf && window.matchMedia('(max-width: 640px)').matches && !Object.keys(fields).some(function (k) { return k !== 'q' && fields[k].value; })) mf.open = false;
     function apply() {
       var q = norm(fields.q && fields.q.value).trim().split(/\s+/).filter(Boolean);
       var c = fields.ciudad ? fields.ciudad.value : '', d = fields.dia ? fields.dia.value : '', t = fields.tipo ? fields.tipo.value : '', o = fields.origen ? fields.origen.value : '';
@@ -265,8 +269,10 @@
         var ok = q.every(function (w) { return hay.indexOf(w) !== -1; })
           && (!c || (' ' + el.dataset.ciudad + ' ').indexOf(' ' + c + ' ') !== -1)
           && (!d || el.dataset.dia === d) && (!t || el.dataset.tipo === t) && (!o || el.dataset.origen === o);
-        el.hidden = !ok; if (ok) n++;
+        if (ok) n++;
+        el.hidden = !ok || n > limit;
       });
+      if (more) { more.hidden = n <= limit; if (moreBtn) moreBtn.textContent = 'Mostrar ' + Math.min(PAGE, n - limit) + ' más (quedan ' + (n - limit) + ')'; }
       if (count) count.textContent = n + (n === 1 ? ' resultado' : ' resultados');
       if (empty) empty.hidden = n !== 0;
       var p = new URLSearchParams();
@@ -274,11 +280,16 @@
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     }
     Object.keys(fields).forEach(function (k) {
-      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 80); });
-      fields[k].addEventListener('change', apply);
+      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; apply(); }, 80); });
+      fields[k].addEventListener('change', function () { limit = PAGE; apply(); });
+    });
+    if (moreBtn) moreBtn.addEventListener('click', function () {
+      // el foco pasa al primer resultado nuevo para seguir leyendo con teclado o lector de pantalla
+      var first = limit; limit += PAGE; apply();
+      var vis = cards.filter(function (el) { return !el.hidden; }); var a = vis[first] && $('a', vis[first]); if (a) a.focus({ preventScroll: false });
     });
     var reset = $('[data-dir-reset]', scope);
-    if (reset) reset.addEventListener('click', function () { Object.keys(fields).forEach(function (k) { fields[k].value = ''; }); apply(); fields.q && fields.q.focus(); });
+    if (reset) reset.addEventListener('click', function () { Object.keys(fields).forEach(function (k) { fields[k].value = ''; }); limit = PAGE; apply(); fields.q && fields.q.focus(); });
     apply();
   });
 

@@ -780,34 +780,38 @@ ${otras.length ? section('Más marchas', chips(otras.map((x) => [x.titulo + (x.a
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
   const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map((m) => entrySimple(u('marcha/' + m.slug + '/'), m.titulo, [m.autor, m.anio, m.tipo].filter(Boolean).join(' · ') + (m.h ? ' — ' + m.h.nombre : m.dedicatoria ? ' — ' + m.dedicatoria : ''), m.h ? [m.h.ciudad] : [], ` data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}" data-ciudad="${m.h ? m.h.ciudad : ''}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas procesionales: las dedicadas a hermandades y las más escuchadas de España, con compositor, año, formación, a quién van dedicadas cuando se sabe y enlace para escucharlas.</p></header>${dirFilters(false, tipos, MARCHAS.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas procesionales: las dedicadas a hermandades y las más escuchadas de España, con compositor, año, formación, a quién van dedicadas cuando se sabe y enlace para escucharlas.</p></header>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
-function dirFilters(withDay, tipos, total, bandas = false) {
+function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…') {
   return `<div class="oc-filters" data-dir-filters>
-  <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="Nombre, sede, titular…" autocomplete="off" enterkeyhint="search"></div>
+  <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="${esc(ph)}" autocomplete="off" enterkeyhint="search"></div>
+  <details class="oc-morefilters" open data-morefilters><summary>Más filtros</summary><div class="oc-morefilters-body">
   ${bandas ? `<div class="oc-field"><label for="fo">De la provincia de</label><select id="fo" data-f="origen"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>` : ''}
   <div class="oc-field"><label for="fc">${bandas ? 'Acompaña en' : 'Capital'}</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
   ${withDay ? `<div class="oc-field"><label for="fd">Día</label><select id="fd" data-f="dia"><option value="">Todos</option>${DAY_ORDER.filter((d) => D.hermandades.some((h) => h.dia === d)).map((d) => `<option value="${slugify(d)}">${esc(d)}</option>`).join('')}</select></div>` : ''}
   ${tipos ? `<div class="oc-field"><label for="ft">Tipo</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}
+  </div></details>
 </div>
 <p class="oc-count" aria-live="polite" data-dir-count>${total} resultados</p>`;
 }
+// Tras cada listado: el navegador muestra 50 y este botón carga 50 más (sin JS se ven todos).
+const dirMore = '<p class="oc-dirmore" data-dir-more hidden><button class="oc-btn is-quiet" type="button">Mostrar 50 más</button></p>';
 const dirEmpty = '<p class="oc-empty" data-dir-empty hidden>Ningún resultado con esos filtros. <button class="oc-textbtn" type="button" data-dir-reset>Quitar filtros</button></p>';
 function pageDirHerm() {
   const items = [...D.hermandades].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((h) => entryHerm(h, ` data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, CAP[h.ciudad].nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Hermandades</h1><p class="oc-lead">Las ${D.hermandades.length} hermandades de las ocho capitales. Filtra por ciudad, día o cualquier dato.</p></header>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Hermandades</h1><p class="oc-lead">Las ${D.hermandades.length} hermandades de las ocho capitales. Filtra por ciudad, día o cualquier dato.</p></header>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de las ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
 }
 function pageDirBandas() {
   const tipos = [...new Set(D.bandas.map((b) => b.tipo))].sort();
   const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((b) => { const cs = [...new Set(b.acompana.map((a) => a.ciudad))]; return entrySimple(u('banda/' + b.slug + '/'), b.nombre, [b.tipo, b.localidad].filter(Boolean).join(', '), cs, ` data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"`); }).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Bandas y formaciones</h1><p class="oc-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p></header>${dirFilters(false, tipos, D.bandas.length, true)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Bandas y formaciones</h1><p class="oc-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p></header>${dirFilters(false, tipos, D.bandas.length, true, 'Nombre, localidad, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('bandas/index.html', layout({ title: 'Bandas', desc: 'Bandas de cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades andaluzas.', body, path: 'bandas/', active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', '']] }));
 }
 function pageDirImag() {
   const items = [...D.imagineros].sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es')).map((i) => entrySimple(u('imaginero/' + i.slug + '/'), i.nombre, `${plural(i.obras.length, 'obra', 'obras')}${i.vida ? ', ' + i.vida : ''}`, i.ciudades, ` data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Imagineros</h1><p class="oc-lead">Los escultores de las imágenes que procesionan, ordenados por número de obras en el portal.</p></header>${dirFilters(false, null, D.imagineros.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirEmpty}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Imagineros</h1><p class="oc-lead">Los escultores de las imágenes que procesionan, ordenados por número de obras en el portal.</p></header>${dirFilters(false, null, D.imagineros.length, false, 'Nombre, obra, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('imagineros/index.html', layout({ title: 'Imagineros', desc: 'Los escultores e imagineros de la Semana Santa andaluza y sus obras.', body, path: 'imagineros/', active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', '']] }));
 }
 // iCalendar: un archivo con todo lo próximo y uno por capital. Hora de Madrid; sin hora = acto de día completo.
