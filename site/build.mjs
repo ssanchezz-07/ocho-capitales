@@ -706,7 +706,7 @@ function pageBanda(b) {
   const jornadas = new Set(items.map((a) => a.h.dia));
   const porCiudad = ciudades.map((c) => {
     const rows = items.filter((a) => a.ciudad === c.slug).sort((x, y) => dayIdx(x.h.dia) - dayIdx(y.h.dia) || x.h.orden - y.h.orden);
-    return `<h3 class="oc-h3">${esc(c.nombre)}</h3>` + stackTable(['Jornada', 'Cofradía', 'Paso', 'Año'], rows.map((a) => [esc(a.h.dia), `<a href="${u('hermandad/' + a.hermandad_slug + '/')}"><strong>${esc(a.h.nombre)}</strong></a>`, esc(a.rol || 'Cortejo'), a.anio ? String(a.anio) : '<span class="oc-muted">sin año</span>']));
+    return `<h3 class="oc-h3">${esc(c.nombre)}</h3>` + stackTable(['Jornada', 'Cofradía', 'Paso', 'Año'], rows.map((a) => [esc(a.h.dia), `<a href="${u('hermandad/' + a.hermandad_slug + '/')}"><strong>${esc(a.h.nombre)}</strong></a>`, esc(a.rol || 'Cortejo'), a.anio ? String(a.anio) : '<span class="oc-muted" aria-label="Sin año">—</span>']));
   }).join('');
   const lugar = b.localidad ? `${b.localidad}${prov && norm(b.localidad) !== norm(prov.nombre) ? ' (provincia de ' + prov.nombre + ')' : ''}` : '';
   const resumen = items.length
@@ -725,7 +725,10 @@ function pageBanda(b) {
   <div class="oc-hero-text">
     <h1 class="oc-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
     <p class="oc-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
-    <ul class="oc-stats"><li><b>${new Set(items.map((a) => a.hermandad_slug)).size}</b><span>cofradías</span></li><li><b>${items.length}</b><span>pasos</span></li><li><b>${jornadas.size}</b><span>jornadas</span></li><li><b>${ciudades.length}</b><span>${ciudades.length === 1 ? 'capital' : 'capitales'}</span></li></ul>
+    ${(() => { // cifras solo cuando dicen algo (con todo a 1, la frase de resumen ya lo cuenta)
+      const st = [[new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías'], [items.length, 'paso', 'pasos'], [jornadas.size, 'jornada', 'jornadas'], [ciudades.length, 'capital', 'capitales']];
+      return st.some(([n]) => n > 1) ? `<ul class="oc-stats">${st.map(([n, s, p]) => `<li><b>${n}</b><span>${n === 1 ? s : p}</span></li>`).join('')}</ul>` : '';
+    })()}
     <div class="oc-actions">${favBtn('banda', b.slug, b.nombre)}${shareBtn()}</div>
   </div>
 </header>

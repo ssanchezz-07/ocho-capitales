@@ -835,3 +835,28 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 @media (min-width: 641px) { .oc-morefilters > summary { display: none; } }
 .oc-dirmore { display: flex; justify-content: center; margin: 20px 0 8px; }
 .oc-dirmore[hidden] { display: none; }
+
+/* ---------- Pulido 2026-10-12: calendario ---------- */
+/* El color es de la capital; el tipo de acto se distingue por la forma, en tinta: procesión ●, culto ○, litúrgico ◆, otros ■ */
+.oc-dots { height: 8px; gap: 4px; align-items: center; }
+.oc-dot, .oc-ev-tipo::before { --dot: var(--ink); display: inline-block; width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--dot); box-shadow: none; }
+.oc-dot.is-salidas, .oc-ev-tipo.is-salidas::before { background: var(--dot); }
+.oc-dot.is-cultos, .oc-ev-tipo.is-cultos::before { background: transparent; box-shadow: inset 0 0 0 1.6px var(--dot); }
+.oc-dot.is-liturgico, .oc-ev-tipo.is-liturgico::before { border-radius: 1px; width: 7px; height: 7px; transform: rotate(45deg); background: var(--dot); }
+.oc-dot.is-otros, .oc-ev-tipo:not(.is-salidas):not(.is-cultos):not(.is-liturgico)::before { border-radius: 1px; width: 7px; height: 7px; background: var(--dot); }
+.oc-mday.is-selected .oc-dot { --dot: var(--on-primary); box-shadow: none; }
+.oc-mday.is-selected .oc-dot.is-cultos { box-shadow: inset 0 0 0 1.6px var(--on-primary); background: transparent; }
+.oc-ev-tipo, .oc-ev-tipo.is-liturgico, .oc-ev-tipo.is-salidas, .oc-ev-tipo.is-cultos { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); }
+.oc-ev-tipo::before { content: ""; }
+.oc-ev-ok { color: var(--ink); }
+.oc-month-legend .oc-dot { margin-right: 6px; vertical-align: 1px; }
+
+/* ---------- Pulido 2026-10-12: menores ---------- */
+/* «El archivo cofrade»: cinco piezas en una fila en escritorio; en dos columnas, la última ocupa el ancho */
+@media (min-width: 1001px) { .oc-tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 1000px) { .oc-tiles > li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+.oc-tile > span { display: block; }
+/* Mapa en oscuro: más color de cada provincia para que se distingan */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-prov { fill: color-mix(in srgb, var(--c) 45%, var(--surface)); } }
+:root[data-theme="dark"] .oc-prov { fill: color-mix(in srgb, var(--c) 45%, var(--surface)); }
+.oc-crumbs [aria-current] { text-transform: none; letter-spacing: 0; }

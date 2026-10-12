@@ -9,19 +9,21 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 
 const PORT = process.env.PORT || 8080;
 // Con BASE_PATH (p. ej. /ocho-capitales/) se sirve igual que en GitHub Pages.
 const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
+// Si dist se está regenerando (build.mjs lo borra), el fichero puede desaparecer a mitad: se responde 503 en vez de caerse.
+const leer = (f, res) => fs.createReadStream(f).on('error', () => { if (!res.headersSent) res.writeHead(503); res.end(); });
 http.createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
   if (BASE !== '/') { if (!p.startsWith(BASE)) { res.writeHead(404); return res.end(); } p = '/' + p.slice(BASE.length); }
   let f = path.join(DIST, p);
   if (!f.startsWith(DIST)) { res.writeHead(403); return res.end(); }
   if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, 'index.html');
-  if (!fs.existsSync(f)) { res.writeHead(404, { 'Content-Type': TYPES['.html'] }); return fs.createReadStream(path.join(DIST, '404.html')).pipe(res); }
+  if (!fs.existsSync(f)) { res.writeHead(404, { 'Content-Type': TYPES['.html'] }); return leer(path.join(DIST, '404.html'), res).pipe(res); }
   // Comprime como GitHub Pages para que las pruebas de rendimiento locales sean comparables.
   const type = TYPES[path.extname(f)] || 'application/octet-stream';
   if (/gzip/.test(req.headers['accept-encoding'] || '') && /text|json|xml|svg|javascript|manifest/.test(type)) {
     res.writeHead(200, { 'Content-Type': type, 'Content-Encoding': 'gzip', Vary: 'Accept-Encoding' });
-    return fs.createReadStream(f).pipe(zlib.createGzip()).pipe(res);
+    return leer(f, res).pipe(zlib.createGzip()).pipe(res);
   }
   res.writeHead(200, { 'Content-Type': type });
-  fs.createReadStream(f).pipe(res);
+  leer(f, res).pipe(res);
 }).listen(PORT, () => console.log('InfoCofrade en http://localhost:' + PORT));
