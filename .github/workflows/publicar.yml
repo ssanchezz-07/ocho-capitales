@@ -1,12 +1,15 @@
 # Ocho Capitales: actualiza noticias y publica el sitio en GitHub Pages (gratis).
-# Se ejecuta cada hora, al subir cambios y a mano desde la pestaña «Actions».
+# Se ejecuta al subir cambios, a mano desde la pestaña «Actions» y por horario.
+# GitHub retrasa o se salta muchas ejecuciones programadas: por eso se despierta 3 veces por hora
+# y el trabajo «comprobar» corta en segundos si las noticias se leyeron hace menos de 40 minutos.
+# Resultado: una actualización por hora aunque GitHub se salte dos de cada tres avisos, sin servicios externos.
 name: Publicar Ocho Capitales
 
 on:
   push:
     branches: [main]
   schedule:
-    - cron: "17 * * * *"
+    - cron: "7,27,47 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,7 +20,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    outputs:
+      seguir: ${{ steps.edad.outputs.seguir }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          sparse-checkout: site/data/news.json
+          sparse-checkout-cone-mode: false
+      - id: edad
+        env:
+          EVENTO: ${{ github.event_name }}
+        run: |
+          MIN=$(node -e "const n=require('./site/data/news.json'); console.log(Math.round((Date.now() - (n.actualizado || 0)) / 60000))")
+          echo "Última lectura de noticias: hace $MIN minutos (evento: $EVENTO)"
+          if [ "$EVENTO" = "schedule" ] && [ "$MIN" -lt 40 ]; then echo "seguir=no" >> "$GITHUB_OUTPUT"; else echo "seguir=si" >> "$GITHUB_OUTPUT"; fi
   construir:
+    needs: comprobar
+    if: needs.comprobar.outputs.seguir == 'si'
     runs-on: ubuntu-latest
     permissions:
       contents: write   # guarda news.json y las agendas
