@@ -811,3 +811,16 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-curio .oc-plate-seal { width: 30px; height: 30px; color: var(--gold-ink); grid-row: span 2; margin-top: 2px; }
 .oc-curio p { margin: 0; max-width: 62ch; font: italic 500 clamp(1.15rem, 1rem + .6vw, 1.4rem)/1.35 var(--it); letter-spacing: -.005em; }
 .oc-curio .oc-link { justify-self: start; }
+
+/* ---------- Pulido 2026-10-12: legibilidad (público de 13 a 70+ años, lectura al sol) ---------- */
+/* La mono queda como voz de datos y fechas, pero nunca por debajo de 13 px */
+.oc-mono, .oc-crumbs ol, .oc-facts dt, .oc-table th, .oc-acomp dt, .oc-cal-day .oc-h3, .oc-city, .oc-news-meta, .oc-ev-meta, .oc-entry-meta, .oc-footer h2, .oc-daytitle, .oc-group-title span, .oc-plate-top, .oc-plate-meta, .oc-daytabs [role="tab"] small, .oc-stats span, .oc-h2 small { font-size: .8125rem; letter-spacing: .02em; }
+.oc-h3 { font-size: .875rem; }
+.oc-pin { font-size: .78rem; }
+.oc-tabbar a, .oc-tabbar button { font-size: .8125rem; }
+/* El nombre canónico de la hermandad se lee entero: cursiva Newsreader (el énfasis de la marca), sin mayúsculas */
+.oc-subtitle { font: italic 500 1.0625rem/1.4 var(--it); letter-spacing: 0; text-transform: none; color: var(--ink); max-width: 60ch; }
+/* Titulares grandes: el apretado de letra no baja de -0,04em, para que no se peguen las letras */
+.oc-hero-home h1, .oc-title-city, .oc-plate h3, .oc-tile b, .oc-stats b { letter-spacing: -.04em; }
+/* La miga actual se lee entera (antes se cortaba con «…») */
+.oc-crumbs [aria-current] { white-space: normal; max-width: none; overflow: visible; }
