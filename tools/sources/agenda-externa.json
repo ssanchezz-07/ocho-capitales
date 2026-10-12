@@ -1,7 +1,7 @@
 {
  "generado": "2026-10-12",
  "fuentes": {
-  "InfoCofrade": 369,
+  "InfoCofrade": 364,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
@@ -9,176 +9,6 @@
   "Prensa (texto de noticias)": 16
  },
  "eventos": [
-  {
-   "fecha": "2026-10-11",
-   "hora": "18:00",
-   "ciudad": "cadiz",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de María Santísima de la Divina Gracia (Padre Pío)",
-   "nota": "Música: la Agrupación Musical Lágrimas de Dolores (San Fernando), abriendo el cortejo, y la Banda de Música de las Angustias de Sanlúcar la Mayor.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "18:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario (La Corona)",
-   "nota": "Música: la Asociación Musical Ecijana AMUECI.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino con María Santísima de la Fe y Entrega (Asociación de Fieles del Cristo de la Clemencia)",
-   "nota": "Salida: 20:00.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a María Santísima del Rosario (Milagrosa) de 10:00-13:30 y 17:00-20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (Aguas) de 11:00-12:30 y de 17:00-20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de las Mercedes de la Puerta Real de 10:30-13:30 y 17:00-20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario de San Julián (San Marcos) de 10:30-13:00 y 18:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (Siete Palabras) de 10:30-14:00 y 17:30-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "12:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora del Rosario (Corona) a las 12:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "13:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora del Rosario (Aguas) a las 13:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "13:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Principal de Instituto a Nuestra Señora de las Nieves (Santa María la Blanca) a las 13:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Pilar (San Pedro) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "13:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Bendición del retablo a Nuestra Señora del Rosario (Siete Palabras) en la fachada de la Parroquia de San Vicente a las 13:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "18:30",
-   "ciudad": "sevilla",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de Nuestra Señora de Belén (Pilas)",
-   "nota": "Música: la Sociedad Filarmónica de Pilas.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "16:30",
-   "ciudad": "malaga",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Alameda (Málaga)",
-   "nota": "Música: la Banda de Cornetas y Tambores del Santísimo Cristo de las Tres Caídas de Triana.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de la Borriquilla de Padul (Granada)",
-   "nota": "Música: la Agrupación Musical del Cristo de Gracia de Córdoba.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "21:30",
-   "ciudad": "sevilla",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria con María Santísima de los Dolores de Montellano",
-   "nota": "Música: la Banda de Música de las Nieves de Olivares.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-12",
    "hora": "",
@@ -270,6 +100,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Misa conmemorativa del IX aniversario de la Coronación Canónica de Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-15",
    "hora": "20:30",
    "ciudad": "sevilla",
@@ -291,10 +131,20 @@
   },
   {
    "fecha": "2026-10-15",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
+   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -341,10 +191,20 @@
   },
   {
    "fecha": "2026-10-16",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
+   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -401,6 +261,16 @@
   },
   {
    "fecha": "2026-10-17",
+   "hora": "18:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de San Lucas Evangelista (Santa Aurelia)",
+   "nota": "Salida: 18:00.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
    "hora": "19:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
@@ -443,6 +313,16 @@
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Carmen (Santa Ana) de 09:30-13:30 y 18:00-20:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
    "nota": "",
@@ -461,10 +341,20 @@
   },
   {
    "fecha": "2026-10-17",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación)",
+   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -521,11 +411,11 @@
   },
   {
    "fecha": "2026-10-18",
-   "hora": "09:30",
+   "hora": "11:15",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Rosario con María Santísima del Rosario (Milagrosa)",
-   "nota": "Salida: 09:30.",
+   "nota": "Salida: 11:15",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -541,11 +431,11 @@
   },
   {
    "fecha": "2026-10-18",
-   "hora": "09:15",
+   "hora": "11:30",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Rosario de la Aurora con María Santísima de la Esperanza, Reina de los Mártires (Juncal)",
-   "nota": "Salida: 09:15",
+   "nota": "Salida: 11:30",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -583,6 +473,16 @@
    "fecha": "2026-10-18",
    "hora": "",
    "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Carmen (Santa Ana) de 09:30-13:30 y 18:00-20:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
    "nota": "",
@@ -601,10 +501,20 @@
   },
   {
    "fecha": "2026-10-18",
-   "hora": "",
+   "hora": "12:30",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora de las Lágrimas (Exaltación)",
+   "titulo": "Función Solemne a Nuestra Señora de la Salud (San Gonzalo) a las 12:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "11:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora de las Lágrimas (Exaltación) a las 11:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -851,6 +761,26 @@
   },
   {
    "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Salud (San Gonzalo)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de las Lágrimas (Exaltación) de 10:30-14:00 y 17:00-20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
    "hora": "20:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -935,6 +865,26 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a María Santísima del Amor (Pino Montano) de 13:00-14:00 y de 17:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Salud (San Gonzalo)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de las Lágrimas (Exaltación) de 10:30-13:15 y 17:00-20:15",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
