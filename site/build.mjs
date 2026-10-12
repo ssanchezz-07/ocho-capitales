@@ -397,7 +397,6 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
-<link rel="preload" href="${u('assets/fonts/bricolage-grotesque-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
@@ -496,6 +495,7 @@ function todayPanel() {
   return `<section class="oc-today" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
   <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Semana Santa ${year}`}</h2>
   ${lead}
+  <div class="oc-today-cities" data-today-cities><p class="oc-today-ask" id="hoy-capital">Elige tu capital y verás solo sus hermandades:</p><ul aria-labelledby="hoy-capital">${D.capitales.map((c) => `<li><button type="button" class="oc-citychip" style="--c:${c.color}" data-set-city="${c.slug}">${esc(c.nombre)}</button></li>`).join('')}</ul><p class="oc-today-showing" data-today-showing hidden><span data-today-city></span><button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p></div>
   <div class="oc-daytabs" role="tablist" aria-label="Jornadas">${tabs}</div>
   ${panels}
 </section>`;
@@ -518,11 +518,18 @@ function mapaCapitales() {
   const svg = MAPA ? `<svg class="oc-map-svg" viewBox="${MAPA.viewBox}" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">${MAPA.provincias.map((p) => `<path class="oc-prov" style="--c:${(CAP[p.slug] || {}).color || '#888'}" d="${p.d}"/>`).join('')}</svg>` : '';
   return `<div class="oc-map" role="group" aria-label="Mapa de las ocho capitales andaluzas" style="--ratio:${MAPA ? (MAPA.ancho / MAPA.alto).toFixed(3) : '1.667'}">${svg}${pins}<span class="oc-map-tag is-a oc-mono">Andalucía</span><span class="oc-map-tag is-b oc-mono">8 capitales</span></div>`;
 }
+// Fondo de placa con el color de la capital oscurecido lo justo para que el texto blanco pase AA (4,5:1) con margen.
+function fondoLegible(hex, min = 4.8) {
+  const rgb = hex.replace('#', '').match(/../g).map((x) => parseInt(x, 16));
+  const lum = (c) => { const [r, g, b] = c.map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+  for (let k = 0; k <= 60; k += 2) { const c = rgb.map((v) => Math.round(v * (1 - k / 100))); if (1.05 / (lum(c) + 0.05) >= min) return '#' + c.map((v) => v.toString(16).padStart(2, '0')).join(''); }
+  return hex;
+}
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
     const bandas = D.bandas.filter((b) => b.origen === c.slug).length;
     const img = c.imagen ? imgTag(c.imagen, '', { sizes: '(max-width: 1000px) 50vw, 25vw', widths: [330, 500] }) : '';
-    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}${bandas ? ' · ' + plural(bandas, 'banda', 'bandas') : ''}</p></div></article></li>`;
+    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}${bandas ? ' · ' + plural(bandas, 'banda', 'bandas') : ''}</p></div></article></li>`;
   }).join('')}</ul>`;
 }
 
@@ -541,15 +548,16 @@ function pageHome() {
   const latest = NEWS.items.slice(0, 40);
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
-  const body = `<section class="oc-hero-home">
-  <div>
+  // En móvil «Hoy» sube justo después del titular y el plano pasa debajo (principio 1: lo de hoy sin hacer scroll).
+  const body = `<div class="oc-home-top"><section class="oc-hero-home">
+  <div class="oc-hero-copy">
     <h1>Ocho ciudades. <em>Una</em> Semana Santa.</h1>
     <p class="oc-lead">Qué sale hoy, noticias de cada día y la historia de ${D.hermandades.length} hermandades, ${D.bandas.length} bandas y ${D.imagineros.length} imagineros, de Sevilla a Almería.</p>
     <div class="oc-hero-actions"><a class="oc-btn" href="#hoy">Qué sale hoy</a><a class="oc-btn is-quiet" href="${u('calendario/')}">Ver el calendario</a></div>
   </div>
   ${mapaCapitales()}
 </section>
-${todayPanel()}
+${todayPanel()}</div>
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
 <div class="oc-cols">
 <section aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
@@ -562,7 +570,7 @@ ${todayPanel()}
 </section>
 </div>
 <div class="oc-seal" aria-hidden="true">${STAR}</div>
-${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length]; return `<aside class="oc-curio" aria-labelledby="curio-titulo"><h2 class="oc-kicker" id="curio-titulo">Curiosidad del día</h2><p>${esc(k.t)}</p><a class="oc-btn is-quiet" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`; })()}
+${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length]; return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`; })()}
 <section class="oc-section" aria-labelledby="archivo-titulo"><h2 class="oc-h2" id="archivo-titulo">El archivo cofrade</h2>
 <ul class="oc-tiles">
 <li><a class="oc-tile" href="${u('hermandades/')}"><b>${D.hermandades.length}</b><span><strong>Hermandades</strong><small>Sede, día de salida, titulares e historia.</small></span></a></li>

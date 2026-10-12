@@ -105,6 +105,14 @@
     s.value = getCity();
     s.addEventListener('change', function () { setCity(s.value); });
   });
+  // Elección de capital dentro de «Hoy»: un toque y solo se ven sus hermandades (se recuerda igual que el selector).
+  $$('[data-set-city]').forEach(function (b) { b.addEventListener('click', function () { setCity(b.dataset.setCity); }); });
+  var paintCityPick = function (c) {
+    var box = $('[data-today-cities]'); if (!box) return;
+    $('.oc-today-ask', box).hidden = !!c; $('ul', box).hidden = !!c; $('[data-today-showing]', box).hidden = !c;
+    $('[data-today-city]', box).textContent = c ? 'Solo ' + CITY_NAMES[c] + '. ' : '';
+  };
+  paintCityPick(getCity()); cityListeners.push(paintCityPick);
 
   // ---------- jornada de hoy (portada) ----------
   var SLOTS = [['visperas', -9], ['ramos', -7], ['lunes', -6], ['martes', -5], ['miercoles', -4], ['jueves', -3], ['madruga', -2], ['viernes', -2], ['sabado', -1], ['resurreccion', 0]];

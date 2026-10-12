@@ -758,12 +758,56 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-linklist { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* ---------- curiosidad del día y muestras de color del hábito ---------- */
-.oc-curio { margin: 28px 0; padding: 18px 20px; border: 1px solid var(--rule, #cfc9bd); border-left: 4px solid var(--gold, #c9a227); background: var(--surface, transparent); display: grid; gap: 8px; }
-.oc-curio p { font-size: 1.1rem; line-height: 1.45; margin: 0; max-width: 60ch; }
-.oc-curio .oc-kicker { font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #6b6670); margin: 0; font-weight: 600; }
-.oc-curio .oc-btn { justify-self: start; }
 .oc-swatches { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 14px 0 6px; padding: 0; }
 .oc-swatches li { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; }
 .oc-swatches i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.28); box-shadow: inset 0 0 0 2px rgba(255,255,255,.35); flex: none; }
 
 .oc-colabora { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule, #cfc9bd); }
+
+/* ---------- Pulido 2026-10-12: uso en la calle ---------- */
+/* Portada: en móvil «Hoy» va justo después del titular y el plano debajo; en escritorio, titular y plano arriba y «Hoy» a lo ancho. */
+.oc-home-top { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "today" "map"; column-gap: clamp(22px, 4vw, 60px); }
+.oc-home-top .oc-hero-home { display: contents; }
+.oc-hero-copy { grid-area: copy; padding: clamp(24px, 5vw, 64px) 0 clamp(20px, 4vw, 40px); }
+.oc-home-top .oc-map { grid-area: map; margin-top: 28px; }
+.oc-home-top .oc-today { grid-area: today; }
+@media (min-width: 860px) {
+  .oc-home-top { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); grid-template-areas: "copy map" "today today"; align-items: end; }
+  .oc-home-top .oc-map { margin: 0 0 clamp(26px, 4vw, 52px); }
+  .oc-hero-copy { padding-bottom: clamp(26px, 4vw, 52px); }
+}
+/* «Elige tu capital» dentro de Hoy */
+.oc-today-cities { margin: 4px 0 14px; }
+.oc-today-ask { margin: 0 0 8px; font-weight: 600; }
+.oc-today-cities ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.oc-citychip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--bg); color: var(--ink); font-weight: 600; cursor: pointer; transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-instant) var(--ease-out); }
+.oc-citychip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--c); }
+.oc-citychip:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .oc-citychip:hover { border-color: var(--c); } }
+.oc-today-showing { display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; margin: 0; font-weight: 600; }
+.oc-today-showing[hidden], .oc-today-cities [hidden] { display: none; }
+/* Tiras que se deslizan: el borde se desvanece para indicar que hay más */
+@media (max-width: 1023px) { .oc-daytabs { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); } }
+.oc-daynav ul { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); }
+/* Objetivos táctiles de 44 px sin cambiar el dibujo */
+.oc-pin::before { content: ""; position: absolute; inset: -6px; border-radius: 50%; }
+.oc-crumbs a { min-height: 44px; margin-block: -6px; }
+.oc-cityselect select { height: 44px; }
+@media (max-width: 380px) { .oc-cityselect select { max-width: 8.6rem; padding-right: 26px; background-position: right 8px center; } }
+/* Placas: fondo de la capital oscurecido lo justo para leer el texto blanco (lo calcula build.mjs) */
+.oc-plate { background: var(--c-plate, var(--c)); }
+.oc-plate.is-blank { background: repeating-linear-gradient(135deg, rgb(255 255 255 / .1) 0 2px, transparent 2px 14px), var(--c-plate, var(--c)); }
+.oc-plate-meta { color: #fff; }
+/* Página de capital en móvil: cartela compacta para que la primera jornada asome en la primera pantalla */
+@media (max-width: 640px) {
+  .oc-hero.is-plate { gap: 14px; }
+  .oc-hero.is-plate .oc-figure img { max-height: 150px; aspect-ratio: 16 / 7; }
+  .oc-hero.is-plate .oc-figure figcaption { font-size: .78rem; margin-top: 6px; }
+  .oc-hero.is-plate .oc-lema { font-size: 1.15rem; margin: 8px 0 6px; }
+}
+/* Curiosidad del día: cartela Atlas (marco dorado fino, sello, frase en cursiva) */
+.oc-curio { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 16px; align-items: start; margin: 32px 0; padding: 22px 22px 14px; border: 1px solid var(--line-strong); border-radius: var(--radius-plate); background: var(--surface); }
+.oc-curio::before { content: ""; position: absolute; inset: 5px; border: 1px solid color-mix(in srgb, var(--gold) 60%, transparent); border-radius: 2px; pointer-events: none; }
+.oc-curio .oc-plate-seal { width: 30px; height: 30px; color: var(--gold-ink); grid-row: span 2; margin-top: 2px; }
+.oc-curio p { margin: 0; max-width: 62ch; font: italic 500 clamp(1.15rem, 1rem + .6vw, 1.4rem)/1.35 var(--it); letter-spacing: -.005em; }
+.oc-curio .oc-link { justify-self: start; }
