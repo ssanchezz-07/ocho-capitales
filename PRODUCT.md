@@ -15,18 +15,18 @@ Cofrades y aficionados a la Semana Santa andaluza **desde los 13 años en adelan
 Ocho Capitales reúne en un solo portal la actualidad y la memoria de la Semana Santa de las ocho capitales andaluzas (Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén). Éxito: que cualquiera encuentre en segundos qué sale hoy, las noticias de su ciudad y la ficha de su hermandad, banda o imaginero, y que el portal se perciba serio, como un medio profesional.
 
 ## Positioning
-Cubre las ocho capitales a la vez, cruza hermandad ↔ banda ↔ imaginero, y agrega noticias de ~60 fuentes cada 2 horas, siempre enlazando al medio original. Los datos de hermandades se contrastan con consejos, agrupaciones y federaciones oficiales (Sevilla: Wikipedia CC BY-SA).
+Cubre las ocho capitales a la vez, cruza hermandad ↔ banda ↔ imaginero, y agrega noticias de ~60 fuentes cada hora, siempre enlazando al medio original. Los datos de hermandades se contrastan con consejos, agrupaciones y federaciones oficiales (Sevilla: Wikipedia CC BY-SA).
 
 ## Operating Context
-- Sitio estático generado (`site/build.mjs`) desde `portal-cofrade/data/portal.json` y `site/data/news.json`; publicado en GitHub Pages bajo `/ocho-capitales/`; noticias renovadas cada 2 h por GitHub Actions.
+- Sitio estático generado (`site/build.mjs`) desde `portal-cofrade/data/portal.json` y `site/data/news.json`; publicado en GitHub Pages bajo `/ocho-capitales/`; noticias renovadas cada hora por GitHub Actions (el cron de GitHub se salta ejecuciones: hace falta un despertador externo).
 - Los días cofrades (Viernes de Dolores → Domingo de Resurrección) se calculan a partir de la fecha de Pascua; fuera de temporada la portada mira al próximo Domingo de Ramos.
 - Los horarios oficiales cambian cada año: el portal muestra el orden de paso documentado y remite a lo oficial.
 
 ## Capabilities and Constraints
-- 293 hermandades, 70 bandas, 149 imagineros, 8 capitales; buscador instantáneo local; favoritos en el dispositivo; modo oscuro.
+- 306 hermandades, 246 bandas, 1.197 marchas, 149 imagineros, 8 capitales; buscador instantáneo local; favoritos en el dispositivo; modo oscuro.
 - HTML + CSS + JS propio, sin frameworks ni librerías pesadas. Objetivo Lighthouse móvil ≥ 90 rendimiento, ≥ 95 accesibilidad/buenas prácticas/SEO.
 - No se inventan datos de hermandades, bandas ni imagineros. No se copian noticias completas: titular, extracto breve y enlace.
-- 122 hermandades no tienen imagen; las imágenes existentes son de Wikimedia Commons con crédito obligatorio.
+- 92 hermandades no tienen imagen (muestran su inicial); las imágenes existentes son de Wikimedia Commons con crédito obligatorio.
 
 ## Brand Commitments
 - Nombre: **Ocho Capitales** (antes «InfoCofrade», descartado por coincidir con infocofrade.com).
@@ -34,7 +34,7 @@ Cubre las ocho capitales a la vez, cruza hermandad ↔ banda ↔ imaginero, y ag
 - Paleta pedida: morado nazareno, negro, crema/marfil y dorado como acento, con contraste WCAG AA.
 
 ## Evidence on Hand
-- `portal-cofrade/data/portal.json` (datos verificados), `site/data/news.json` (751 noticias, 163 con imagen).
+- `portal-cofrade/data/portal.json` (datos verificados), `site/data/news.json` (archivo de 1.466 noticias, 232 con imagen; la web muestra las 600 últimas).
 - Sin testimonios, cifras de audiencia ni prensa: no fabricarlos.
 
 ## Product Principles
