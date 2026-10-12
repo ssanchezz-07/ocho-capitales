@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 89,
-  "Prensa (texto de noticias)": 15
+  "Prensa (agendas semanales)": 94,
+  "Prensa (texto de noticias)": 16
  },
  "eventos": [
   {
@@ -3992,6 +3992,56 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "08:00",
+   "tipo": "procesion",
+   "titulo": "Rosario de la aurora de María Santísima de la Encarnación",
+   "nota": "Parroquia de Jesús Divino Obrero"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "09:00",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Rocío y Lágrimas",
+   "nota": "Parroquia de la Trinidad"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "10:00",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "11:00",
+   "tipo": "culto",
+   "titulo": "Eucaristía del Pilar y convivencia de Jesús Nazareno",
+   "nota": "Iglesia-Hospital de Jesús Nazareno"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a Santa Teresa de Jesús",
+   "nota": "Iglesia conventual de San José (San Cayetano)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
    "fecha": "2026-10-11",
    "hora": "09:45",
@@ -5028,6 +5078,16 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/padre-pio-culmina-aniversario-parroquia-procesion-extraordinaria-20261011163838-nts.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/el-concurso-internacional-de-marchas-procesionales-de-malaga-cambiara-de-denominacion-por-prohibicion-expresa-de-los-herederos-de-perfecto-artola/"
   },
   {
    "fecha": "2026-10-11",
