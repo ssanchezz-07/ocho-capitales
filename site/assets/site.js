@@ -62,10 +62,10 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
-  var sheet = $('[data-more-sheet]'), moreBtn = $('[data-more]');
-  if (sheet && moreBtn) {
-    moreBtn.addEventListener('click', function () { moreBtn.setAttribute('aria-expanded', 'true'); openLayer(sheet, $('[data-more-close]', sheet)); });
-    var closeSheet = function () { moreBtn.setAttribute('aria-expanded', 'false'); closeLayer(sheet); };
+  var sheet = $('[data-more-sheet]'), moreBtns = $$('[data-more]');
+  if (sheet && moreBtns.length) {
+    moreBtns.forEach(function (b) { b.addEventListener('click', function () { moreBtns.forEach(function (x) { x.setAttribute('aria-expanded', 'true'); }); openLayer(sheet, $('[data-more-close]', sheet)); }); });
+    var closeSheet = function () { moreBtns.forEach(function (x) { x.setAttribute('aria-expanded', 'false'); }); closeLayer(sheet); };
     $('[data-more-close]', sheet).addEventListener('click', closeSheet);
     sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSheet(); });
     sheet.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); trapFocus(sheet, e); });
@@ -105,12 +105,11 @@
     s.value = getCity();
     s.addEventListener('change', function () { setCity(s.value); });
   });
-  // Elección de capital dentro de «Hoy»: un toque y solo se ven sus hermandades (se recuerda igual que el selector).
+  // «Mostrando solo <ciudad>» en Hoy, con la salida a las ocho capitales (la elección se hace en las colgaduras o en el selector).
   $$('[data-set-city]').forEach(function (b) { b.addEventListener('click', function () { setCity(b.dataset.setCity); }); });
   var paintCityPick = function (c) {
-    var box = $('[data-today-cities]'); if (!box) return;
-    $('.oc-today-ask', box).hidden = !!c; $('ul', box).hidden = !!c; $('[data-today-showing]', box).hidden = !c;
-    $('[data-today-city]', box).textContent = c ? 'Solo ' + CITY_NAMES[c] + '. ' : '';
+    var box = $('[data-today-showing]'); if (!box) return;
+    box.hidden = !c; var n = $('[data-today-city]', box); if (n) n.textContent = c ? CITY_NAMES[c] : '';
   };
   paintCityPick(getCity()); cityListeners.push(paintCityPick);
 
@@ -162,15 +161,22 @@
     });
     // La página se genera cada dos horas: el navegador corrige la jornada si la copia en caché se ha quedado atrás.
     var pick = pickSlot(new Date());
+    var home = $('[data-home]');
     if (pick.hoy) {
       var mark = $('[data-slot="' + pick.id + '"]', today); if (mark) mark.setAttribute('data-today-mark', '');
       $('[data-today-title]', today).textContent = 'Hoy en la calle';
+      if (home) home.dataset.season = 'hoy';
     }
     if (String(pick.year) === today.dataset.year) {
-      var lead = $('[data-today-lead]', today);
-      if (!pick.hoy && lead) {
-        var ramos = new Date(easter(pick.year) - 7 * 864e5);
-        lead.innerHTML = 'Faltan <strong>' + pick.days + '</strong> ' + (pick.days === 1 ? 'día' : 'días') + ' para el Domingo de Ramos (' + ramos.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' }) + '). Así sale cada jornada.';
+      var lead = $('[data-today-lead]');
+      if (lead) {
+        if (pick.hoy) {
+          var tab = $('[data-slot="' + pick.id + '"]', today);
+          lead.innerHTML = 'Hoy en la calle: <strong>' + esc(tab ? tab.firstChild.textContent : '') + '</strong>';
+        } else {
+          var ramos = new Date(easter(pick.year) - 7 * 864e5);
+          lead.innerHTML = 'Faltan <strong>' + pick.days + '</strong> ' + (pick.days === 1 ? 'día' : 'días') + ' para el Domingo de Ramos <span>(' + ramos.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' }) + ')</span>';
+        }
       }
       if (pick.id !== today.dataset.buildSlot) selectSlot(pick.id, false, false);
     }
@@ -194,6 +200,135 @@
     filterLatest(getCity());
     cityListeners.push(filterLatest);
   }
+
+  // ---------- colgaduras: el selector de capital como un objeto que cuelga ----------
+  // Movimiento solo aquí: muelles que parten de donde está el elemento y heredan la velocidad del gesto
+  // (response = segundos hasta llegar; damping 1 = sin rebote, <1 = se balancea). Con «reducir movimiento», todo cambia al instante.
+  var colg = $('[data-colgaduras]');
+  if (colg) (function () {
+    // El mapa y los hilos se dibujan aquí a partir de los datos de la página (provincias, capitales y su colgadura)
+    var NS = 'http://www.w3.org/2000/svg', mapa = $('[data-colg-map]', colg), datos = {};
+    try { datos = JSON.parse($('#oc-mapa').textContent); } catch (err) {}
+    function el(tag, attrs) { var n = document.createElementNS(NS, tag); Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); }); return n; }
+    if (mapa && datos.prov) {
+      var svg = el('svg', { 'class': 'oc-colg-svg', viewBox: datos.vb, preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
+      var defs = el('defs', {}), pat = el('pattern', { id: 'oc-acuarela', patternUnits: 'userSpaceOnUse', width: 384, height: 288 });
+      pat.appendChild(el('image', { href: datos.acuarela, width: 384, height: 288 })); defs.appendChild(pat); svg.appendChild(defs);
+      datos.prov.forEach(function (p) { var n = el('path', { 'class': 'oc-prov2', 'data-prov': p.s, d: p.d }); n.style.setProperty('--c', p.c); svg.appendChild(n); });
+      datos.prov.forEach(function (p) { svg.appendChild(el('path', { 'class': 'oc-prov-tex', d: p.d })); });
+      var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
+      datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, pathLength: 1, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
+      mapa.insertBefore(svg, mapa.firstChild); mapa.insertBefore(hs, svg.nextSibling);
+      datos.caps.forEach(function (c) { var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; mapa.insertBefore(d, $('[data-colg-pie]', mapa)); });
+    }
+    var items = $$('.oc-colg', colg), provs = $$('.oc-prov2', colg), hilos = $$('.oc-hilo', colg), puntos = $$('.oc-punto', colg), irs = $$('.oc-colg-ir', colg);
+    var row = $('.oc-colg-row', colg), pie = $('[data-colg-pie]', colg);
+    var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var EASE = 'cubic-bezier(0.23, 1, 0.32, 1)', DRAWER = 'cubic-bezier(0.32, 0.72, 0, 1)';
+
+    function Spring(response, damping) { var w = 2 * Math.PI / response; this.k = w * w; this.c = 2 * damping * w; this.x = 0; this.v = 0; this.t = 0; }
+    Spring.prototype.step = function (dt) { this.v += (-this.k * (this.x - this.t) - this.c * this.v) * dt; this.x += this.v * dt; };
+    Spring.prototype.still = function () { return Math.abs(this.x - this.t) < 0.01 && Math.abs(this.v) < 0.05; };
+
+    var S = items.map(function (el) { return { el: el, rot: new Spring(0.5, 0.5), dy: new Spring(0.38, 1), sc: new Spring(0.2, 1), vivo: false }; });
+    var raf = 0, last = 0;
+    function paint(s) { s.el.style.transform = 'translate3d(0,' + s.dy.x.toFixed(2) + 'px,0) rotate(' + s.rot.x.toFixed(2) + 'deg) scale(' + s.sc.x.toFixed(4) + ')'; }
+    function tick(now) {
+      var dt = Math.min(0.032, (now - last) / 1000 || 0.016); last = now; var moving = false;
+      S.forEach(function (s) {
+        [s.rot, s.dy, s.sc].forEach(function (p) { p.step(dt); });
+        if (s.rot.still() && s.dy.still() && s.sc.still()) { s.rot.x = s.rot.t; s.dy.x = s.dy.t; s.sc.x = s.sc.t; s.rot.v = s.dy.v = s.sc.v = 0; } else moving = true;
+        paint(s);
+      });
+      raf = moving ? requestAnimationFrame(tick) : 0;
+    }
+    function wake() { if (!raf && !calm) { last = performance.now(); raf = requestAnimationFrame(tick); } }
+    function setTarget(s, rot, dy, sc) {
+      s.rot.t = rot; s.dy.t = dy; s.sc.t = sc;
+      if (calm) { s.rot.x = rot; s.dy.x = dy; s.sc.x = sc; s.rot.v = s.dy.v = s.sc.v = 0; paint(s); } else wake();
+    }
+
+    // Hilo que se dibuja, botón que nace del punto de la capital y vuelve por el mismo camino
+    var pillAnim = null;
+    function hidePill(el, instant) {
+      if (pillAnim) { pillAnim.cancel(); pillAnim = null; }
+      if (!el || el.hidden) return;
+      if (instant || calm || !el.animate) { el.hidden = true; return; }
+      var a = el.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(0.94)' }], { duration: 160, easing: EASE });
+      a.onfinish = function () { el.hidden = true; }; pillAnim = a;
+    }
+    function showPill(el, dot) {
+      if (pillAnim) { pillAnim.cancel(); pillAnim = null; }
+      el.hidden = false;
+      if (calm || !el.animate) return;
+      var p = el.getBoundingClientRect(), d = dot.getBoundingClientRect();
+      el.style.setProperty('--ox', (d.left + d.width / 2 - p.left).toFixed(1) + 'px'); el.style.setProperty('--oy', (d.top + d.height / 2 - p.top).toFixed(1) + 'px');
+      pillAnim = el.animate([{ opacity: 0, transform: 'scale(0.9)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 300, easing: EASE });
+    }
+
+    var current = '';
+    function paintColg(city, animar) {
+      var prev = current; current = city || '';
+      if (current) colg.setAttribute('data-sel', current); else colg.removeAttribute('data-sel');
+      S.forEach(function (s, i) {
+        var on = s.el.dataset.colg === current;
+        if (on) s.el.setAttribute('aria-current', 'true'); else s.el.removeAttribute('aria-current');
+        // la elegida cuelga un poco más; las demás se recogen apenas
+        setTarget(s, 0, on ? s.el.offsetHeight * 0.075 : (current ? -2 : 0), 1);
+        if (on && animar && !calm && prev !== current) { s.rot.v += 70; var vecino = S[i + (i % 2 ? -1 : 1)]; if (vecino) vecino.rot.v -= 22; wake(); }
+      });
+      provs.forEach(function (p) { p.classList.toggle('is-on', p.dataset.prov === current); });
+      hilos.forEach(function (h) {
+        var on = h.dataset.hilo === current; h.classList.toggle('is-on', on);
+        if (on && animar && !calm && h.animate && prev !== current) h.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 560, easing: EASE });
+      });
+      puntos.forEach(function (p) { p.classList.toggle('is-on', p.dataset.punto === current); });
+      var activo = current ? irs.filter(function (a) { return a.dataset.ir === current; })[0] : null;
+      irs.forEach(function (a) { if (a !== activo) hidePill(a, true); });
+      if (activo) { var dot = puntos.filter(function (p) { return p.dataset.punto === current; })[0]; pie.dataset.lado = parseFloat(dot.style.left) < 50 ? 'der' : 'izq'; if (activo.hidden) showPill(activo, dot); }
+    }
+
+    // Toque: se hunde al pulsar (no al soltar) y elige al soltar; otro toque sobre la elegida la suelta
+    items.forEach(function (el, i) {
+      var s = S[i];
+      el.addEventListener('pointerdown', function () { setTarget(s, s.rot.t, s.dy.t + 2, 0.965); });
+      var suelta = function () { setTarget(s, s.rot.t, s.dy.t - (s.sc.t < 1 ? 2 : 0), 1); };
+      el.addEventListener('pointerup', suelta); el.addEventListener('pointercancel', suelta); el.addEventListener('pointerleave', function () { if (s.sc.t < 1) suelta(); });
+      // Con JS el enlace elige la ciudad (otro toque la suelta); con Ctrl/Cmd/botón central sigue siendo un enlace normal
+      el.addEventListener('click', function (e) { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return; e.preventDefault(); setCity(el.getAttribute('aria-current') === 'true' ? '' : el.dataset.colg); });
+    });
+
+    // Rozarlas: el movimiento del puntero empuja las colgaduras cercanas y siguen balanceándose con su inercia
+    var px = null, pt = 0, vx = 0, down = false;
+    function roza(e) {
+      if (calm) return;
+      var fino = e.pointerType === 'mouse'; if (!fino && !down) return;
+      var now = e.timeStamp, x = e.clientX;
+      if (px !== null && now > pt) { var inst = (x - px) / ((now - pt) / 1000); vx = vx * 0.6 + Math.max(-1800, Math.min(1800, inst)) * 0.4; }
+      px = x; pt = now;
+      var w = items[0] ? items[0].parentNode.getBoundingClientRect().width : 50;
+      S.forEach(function (s) {
+        var r = s.el.getBoundingClientRect(), cx = r.left + r.width / 2, d = (x - cx) / w, inf = Math.exp(-d * d / 1.1);
+        if (inf > 0.05) { s.rot.v += (vx / 1800) * 26 * inf; wake(); }
+      });
+    }
+    row.addEventListener('pointermove', roza);
+    row.addEventListener('pointerdown', function (e) { down = true; px = e.clientX; pt = e.timeStamp; vx = 0; });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (n) { row.addEventListener(n, function () { down = false; px = null; vx = 0; }); });
+
+    // Teclado: flechas entre colgaduras
+    row.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!k) return;
+      var i = items.indexOf(document.activeElement); if (i < 0) return; e.preventDefault(); items[(i + k + items.length) % items.length].focus();
+    });
+
+    cityListeners.push(function (c) { paintColg(c, true); });
+    paintColg(getCity(), false);
+
+    // Primera visita de la sesión: se despliegan de golpe, escalonadas, como al colgarlas en el balcón
+    var visto = false; try { visto = sessionStorage.getItem('oc-colg') === '1'; sessionStorage.setItem('oc-colg', '1'); } catch (err) {}
+    if (!visto && !calm && items[0].animate) items.forEach(function (el, i) { el.animate([{ transform: 'scaleY(0.5)', opacity: 0 }, { transform: 'scaleY(1)', opacity: 1 }], { duration: 560, delay: 60 * i, easing: DRAWER, fill: 'backwards' }); });
+  })();
 
   // ---------- favoritos ----------
   var favs = store.json('oc-favs', {});

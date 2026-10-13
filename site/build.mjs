@@ -110,7 +110,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries(['css', 'js'].map((x) => [x, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', 'site.' + x))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -243,9 +243,11 @@ function srcMono(f) {
   return (w[0][0] + w[1][0]).toUpperCase();
 }
 // Noticia: titular a la izquierda y recuadro fijo a la derecha (foto del medio o sus iniciales), para que todas tengan el mismo ritmo.
-function newsItem(n, { img = true, eager = false } = {}) {
+function newsItem(n, { img = true, eager = false, tile = false } = {}) {
   const col = CAP[n.ciudades[0]] ? CAP[n.ciudades[0]].color : '#4a1f6e';
-  const pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
+  let pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
+  // Sin foto del medio, la miniatura es la colgadura de su capital (terciopelo y emblema), nunca un hueco.
+  if (!pic && tile && CAP[n.ciudades[0]]) pic = `<div class="oc-news-img is-colg" aria-hidden="true" style="--c:${col}"><img src="${u('assets/plates/colgadura-' + n.ciudades[0] + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"></div>`;
   return `<article class="oc-news${pic ? ' has-img' : ''}" data-cities="${n.ciudades.join(' ')}">${pic}<div class="oc-news-body"><p class="oc-news-meta">${n.ciudades.map(cityTag).join('')}<span class="oc-news-src">${esc(n.fuente)}</span>${timeTag(n.ts)}</p><h3 class="oc-news-title"><a href="${esc(n.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(n.titulo)}<span class="oc-sr"> (abre ${esc(n.fuente)} en otra pestaña)</span></a></h3>${n.extracto ? `<p class="oc-news-text">${esc(n.extracto)}</p>` : ''}</div></article>`;
 }
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
@@ -398,6 +400,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
+<link rel="stylesheet" href="${u('assets/colgaduras.css')}?v=${HUELLA.colg}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
 </head>
@@ -408,6 +411,7 @@ ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(
     <a class="oc-logo" href="${u()}" aria-label="${BRAND}, portada">${WORDMARK}</a>
     <nav class="oc-nav" aria-label="Secciones"><ul>${NAV.map(([h, l]) => `<li><a href="${u(h)}"${active === h ? ' aria-current="page"' : ''}>${l}</a></li>`).join('')}</ul></nav>
     <div class="oc-tools">
+      <button class="oc-menubtn" type="button" data-more aria-expanded="false" aria-controls="oc-more" aria-label="Menú"><svg class="oc-i" viewBox="0 0 24 18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M1.5 2h21M1.5 9h21M1.5 16h21"/></svg></button>
       <button class="oc-searchbtn" type="button" data-open-search aria-label="Buscar">${icon('search')}<span class="oc-searchbtn-txt">Buscar</span><kbd>/</kbd></button>
       <label class="oc-cityselect"><span class="oc-sr">Mi ciudad</span><select data-city-select><option value="">8 capitales</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></label>
     </div>
@@ -488,17 +492,77 @@ function todayPanel() {
     }).join('');
     return `<div class="oc-daypanel" role="tabpanel" id="dia-${s.id}" aria-labelledby="tab-${s.id}" data-panel="${s.id}" tabindex="0"${s.id === pick.id ? '' : ' hidden'}><h3 class="oc-daytitle">${esc(s.label)} <span data-slot-date="${s.id}">${esc(slotDate(s, year))}</span></h3>${groups}<p class="oc-empty" data-today-empty hidden>Tu ciudad no tiene salidas documentadas esta jornada. Prueba otro día o elige «8 capitales».</p></div>`;
   }).join('');
-  const ramos = easter(year) - 7 * 864e5;
-  const lead = pick.hoy
-    ? `<p class="oc-today-lead" data-today-lead>Orden de paso según la última configuración documentada. Consulta los horarios oficiales de este año.</p>`
-    : `<p class="oc-today-lead" data-today-lead>Faltan <strong>${pick.days}</strong> días para el Domingo de Ramos (${fmtDay(ramos, { day: 'numeric', month: 'long' })}). Así sale cada jornada.</p>`;
   return `<section class="oc-today" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
-  <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Semana Santa ${year}`}</h2>
-  ${lead}
-  <div class="oc-today-cities" data-today-cities><p class="oc-today-ask" id="hoy-capital">Elige tu capital y verás solo sus hermandades:</p><ul aria-labelledby="hoy-capital">${D.capitales.map((c) => `<li><button type="button" class="oc-citychip" style="--c:${c.color}" data-set-city="${c.slug}">${esc(c.nombre)}</button></li>`).join('')}</ul><p class="oc-today-showing" data-today-showing hidden><span data-today-city></span><button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p></div>
+  <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Así sale Semana Santa ${year}`}</h2>
+  <p class="oc-today-sub">Orden de paso según la última configuración documentada; consulta los horarios oficiales de este año.</p>
+  <p class="oc-today-showing" data-today-showing hidden>Mostrando solo <strong data-today-city></strong>. <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
   <div class="oc-daytabs" role="tablist" aria-label="Jornadas">${tabs}</div>
   ${panels}
 </section>`;
+}
+
+// Cuenta atrás (o «hoy») de la cabecera de la portada; el JS la corrige si la copia en caché se ha quedado atrás.
+function leadHoy() {
+  const pick = pickSlot(madridNow());
+  const ramos = easter(pick.year) - 7 * 864e5;
+  return pick.hoy
+    ? `<p class="oc-hero2-count" data-today-lead>Hoy en la calle: <strong>${esc(SLOTS.find((s) => s.id === pick.id).label)}</strong></p>`
+    : `<p class="oc-hero2-count" data-today-lead>Faltan <strong>${pick.days}</strong> ${pick.days === 1 ? 'día' : 'días'} para el Domingo de Ramos <span>(${fmtDay(ramos, { day: 'numeric', month: 'long' })})</span></p>`;
+}
+
+// ---------- Colgaduras: las ocho capitales colgadas sobre el mapa ----------
+// En el orden del portal, como la maqueta aprobada; cada hilo baja a su capital.
+// Cada hilo baja recto desde su colgadura, corre en horizontal por su «carril» y baja a su capital. Se elige el reparto de carriles
+// (de 8! posibles) con menos cruces entre hilos, para que se lea como en la maqueta: líneas rectas con codos, sin enredo.
+function carrilesHilos(caps) {
+  const niveles = caps.map((_, k) => 4 + k * 3.4);
+  const coste = (p) => {
+    let n = 0;
+    for (let i = 0; i < caps.length; i++) {
+      const Li = niveles[p[i]]; if (Li > caps[i].y - 2) return 1e6;
+      const lo = Math.min(caps[i].b, caps[i].x), hi = Math.max(caps[i].b, caps[i].x);
+      for (let j = 0; j < caps.length; j++) {
+        if (i === j) continue; const Lj = niveles[p[j]];
+        if (caps[j].b > lo && caps[j].b < hi && Li < Lj) n++;
+        if (caps[j].x > lo && caps[j].x < hi && Li > Lj && Li < caps[j].y) n++;
+      }
+    }
+    return n;
+  };
+  let mejor = null, mejorC = Infinity; const a = caps.map((_, i) => i);
+  const permuta = (n) => { if (n === 1) { const c = coste(a); if (c < mejorC) { mejorC = c; mejor = [...a]; } return; } for (let i = 0; i < n; i++) { permuta(n - 1); const j = n % 2 ? 0 : i; [a[j], a[n - 1]] = [a[n - 1], a[j]]; } };
+  permuta(caps.length);
+  return caps.map((c, i) => ({ ...c, l: +niveles[mejor[i]].toFixed(1) }));
+}
+function colgaduras() {
+  const P = MAPA && MAPA.proyeccion;
+  const orden = D.capitales;
+  const pos = (c) => {
+    const [lat, lon] = COORD[c.slug];
+    return { x: P ? ((P.pad + (lon - P.lon0) * P.sx) / MAPA.ancho) * 100 : 10 + ((lon + 7.1) / 4.9) * 80, y: P ? ((P.pad + (P.lat1 - lat) * P.sy) / MAPA.alto) * 100 : 12 + ((38 - lat) / 1.65) * 76 };
+  };
+  // Cada colgadura es un enlace a la página de su capital (sin JavaScript sigue funcionando); con JS elige la ciudad y anima.
+  const items = orden.map((c, i) => {
+    const hermandades = hermsOf(c.slug).length;
+    const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">Semana Santa de ${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
+  }).join('');
+  // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
+  const datos = {
+    vb: MAPA ? MAPA.viewBox : '0 0 100 60',
+    acuarela: u('assets/plates/acuarela.webp'),
+    prov: MAPA ? MAPA.provincias.map((p) => ({ s: p.slug, c: (CAP[p.slug] || {}).color || '#888', d: p.d })) : [],
+    caps: carrilesHilos(orden.map((c, i) => { const { x, y } = pos(c); return { s: c.slug, c: c.color, x: +x.toFixed(2), y: +y.toFixed(2), b: +((i + 0.5) * 12.5).toFixed(2) }; })),
+  };
+  const lista = orden.map((c) => `<a class="oc-colg-ir" data-ir="${c.slug}" href="${capHref(c)}" hidden>Semana Santa de ${esc(c.nombre)}${icon('arrow')}</a>`).join('');
+  return `<div class="oc-colgaduras" data-colgaduras>
+  <ol class="oc-colg-row" aria-label="Elige tu capital">${items}</ol>
+  <div class="oc-colg-map" data-colg-map>
+    <div class="oc-colg-pie" data-colg-pie aria-live="polite">${lista}</div>
+  </div>
+  <script type="application/json" id="oc-mapa">${JSON.stringify(datos).replace(/</g, '\\u003c')}</script>
+  <noscript><style>.oc-colg-map{display:none}</style></noscript>
+</div>`;
 }
 
 // ---------- Atlas: plano de capitales, planchas y portada ----------
@@ -548,27 +612,24 @@ function pageHome() {
   const latest = NEWS.items.slice(0, 40);
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
-  // En móvil «Hoy» sube justo después del titular y el plano pasa debajo (principio 1: lo de hoy sin hacer scroll).
-  const body = `<div class="oc-home-top"><section class="oc-hero-home">
-  <div class="oc-hero-copy">
-    <h1>Ocho ciudades. <em>Una</em> Semana Santa.</h1>
-    <p class="oc-lead">Qué sale hoy, noticias de cada día y la historia de ${D.hermandades.length} hermandades, ${D.bandas.length} bandas y ${D.imagineros.length} imagineros, de Sevilla a Almería.</p>
-    <div class="oc-hero-actions"><a class="oc-btn" href="#hoy">Qué sale hoy</a><a class="oc-btn is-quiet" href="${u('calendario/')}">Ver el calendario</a></div>
-  </div>
-  ${mapaCapitales()}
+  // Rediseño «Colgaduras»: titular, cuenta atrás y ocho colgaduras (una por capital, de oeste a este) sobre el mapa.
+  // En temporada «Hoy» sube justo tras el mapa (lo decide el JS con data-season); fuera de ella, las noticias van primero.
+  const body = `<div class="oc-home" data-home>
+<section class="oc-hero2" aria-labelledby="hero-titulo">
+  <h1 class="oc-hero2-title" id="hero-titulo">Ocho ciudades,<br>una Semana Santa</h1>
+  ${leadHoy()}
+  ${colgaduras()}
 </section>
-${todayPanel()}</div>
-<section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
-<div class="oc-cols">
-<section aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
-<section class="oc-latest" aria-labelledby="ultimas-titulo" data-latest>
-  <h2 class="oc-h2" id="ultimas-titulo">Últimas noticias</h2>
-  ${NEWS.actualizado ? `<p class="oc-note oc-updated">Leídas por última vez a las ${new Date(NEWS.actualizado).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' })} del ${fmtDay(NEWS.actualizado, { day: 'numeric', month: 'long' })} (<time data-ago datetime="${new Date(NEWS.actualizado).toISOString()}"></time>).</p>` : ''}
-  <div class="oc-latest-list" data-latest-list>${latest.map((n) => newsItem(n, { img: false })).join('')}</div>
+<section class="oc-news-home" aria-labelledby="ultimas-titulo" data-latest>
+  <h2 class="oc-news-home-title" id="ultimas-titulo"><span>Últimas noticias</span></h2>
+  <div class="oc-latest-list" data-latest-list>${latest.map((n) => newsItem(n, { img: true, tile: true })).join('')}</div>
   <p class="oc-empty" data-latest-empty hidden>Aún no hay noticias recientes de tu ciudad.</p>
-  <a class="oc-btn" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
+  ${NEWS.actualizado ? `<p class="oc-note oc-updated">Leídas por última vez a las ${new Date(NEWS.actualizado).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' })} del ${fmtDay(NEWS.actualizado, { day: 'numeric', month: 'long' })} (<time data-ago datetime="${new Date(NEWS.actualizado).toISOString()}"></time>).</p>` : ''}
+  <a class="oc-link" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
 </section>
-</div>
+${todayPanel()}
+<section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
+<section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 <div class="oc-seal" aria-hidden="true">${STAR}</div>
 ${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length]; return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`; })()}
 <section class="oc-section" aria-labelledby="archivo-titulo"><h2 class="oc-h2" id="archivo-titulo">El archivo cofrade</h2>
@@ -578,7 +639,8 @@ ${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridN
 <li><a class="oc-tile" href="${u('marchas/')}"><b>${MARCHAS.length}</b><span><strong>Marchas</strong><small>Compositor, año, formación y enlace para escucharlas.</small></span></a></li>
 <li><a class="oc-tile" href="${u('imagineros/')}"><b>${D.imagineros.length}</b><span><strong>Imagineros</strong><small>Escultores y sus obras en procesión.</small></span></a></li>
 <li><a class="oc-tile" href="${u('calendario/')}"><b>${evs.length}</b><span><strong>Agenda</strong><small>Eventos próximos y orden de paso por jornada.</small></span></a></li>
-</ul></section>`;
+</ul></section>
+</div>`;
   write('index.html', layout({ title: '', body, path: '', jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 
@@ -939,7 +1001,7 @@ function pageOffline() {
 }
 function escribeSw() {
   const lista = (d) => fs.existsSync(path.join(DIST, d)) ? fs.readdirSync(path.join(DIST, d)).map((x) => BASE + d + '/' + x) : [];
-  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
+  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/colgaduras.css?v=' + HUELLA.colg, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
   fs.writeFileSync(path.join(DIST, 'sw.js'), `// Ocho Capitales: caché para usar el portal sin cobertura (en la calle, entre bullas). Generado por build.mjs.
 const V = 'oc-${Date.now()}', BASE = ${JSON.stringify(BASE)}, SHELL = ${JSON.stringify(shell)};
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });

@@ -17,3 +17,6 @@ prototipos/
 
 # Archivo local de críticas de diseño (impeccable)
 .impeccable/
+
+# Originales PNG de las colgaduras (3 MB, generados con Canva): se guardan en local, la web usa WebP
+/assets/
