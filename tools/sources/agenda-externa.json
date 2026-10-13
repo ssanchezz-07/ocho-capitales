@@ -1,24 +1,14 @@
 {
  "generado": "2026-10-13",
  "fuentes": {
-  "InfoCofrade": 367,
+  "InfoCofrade": 373,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 78,
-  "Prensa (texto de noticias)": 10
+  "Prensa (agendas semanales)": 65,
+  "Prensa (texto de noticias)": 14
  },
  "eventos": [
-  {
-   "fecha": "2026-10-13",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Consejo de Cofradías: Elección del cartelista de las Glorias 2027",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-14",
    "hora": "20:00",
@@ -201,11 +191,21 @@
   },
   {
    "fecha": "2026-10-17",
-   "hora": "19:00",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Rosario vespertino con Nuestra Señora de la Misericordia (Rochelambert)",
-   "nota": "Salida: 19:00",
+   "nota": "Salida: 20:00",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "21:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario público con el Simpecado de la Hermandad del Rocío del Cerro del Águila",
+   "nota": "Salida: 21:00",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -631,6 +631,16 @@
   },
   {
    "fecha": "2026-10-22",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Misericordia (Rochelambert) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-22",
    "hora": "20:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -681,6 +691,16 @@
   },
   {
    "fecha": "2026-10-23",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Misericordia (Rochelambert) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
    "hora": "20:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -705,6 +725,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "21:15",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Banda de Cornetas y Tambores Presentación al Pueblo de Dos Hermanas a las 21:15 en la Parroquia de San Roque",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -741,11 +771,11 @@
   },
   {
    "fecha": "2026-10-24",
-   "hora": "",
+   "hora": "18:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Rosario vespertino con María Santísima de la Salud (Santo Ángel)",
-   "nota": "",
+   "nota": "Salida: 18:00",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -775,6 +805,16 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestra Señora de las Lágrimas (Exaltación) de 10:30-14:00 y 17:00-20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Misericordia (Rochelambert) a las 19:30",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -845,7 +885,7 @@
    "ciudad": "cadiz",
    "tipo": "extraordinaria",
    "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Cautivo de Algeciras",
-   "nota": "",
+   "nota": "Música: la Agrupación Musical Nuestro Padre Jesús de la Salud (Gitanos).",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -911,6 +951,16 @@
   },
   {
    "fecha": "2026-10-25",
+   "hora": "12:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora de la Misericordia (Rochelambert) a las 12:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
    "hora": "11:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -935,6 +985,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Principal de Instituto a María Santísima de la Sierra (San Roque) a las 10:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Misa de acción de gracias por el primer aniversario de la «Misión de la Esperanza» en la Parroquia de San Pío X a las 12:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -4620,136 +4680,6 @@
    "nota": "Real Iglesia de San Pablo"
   },
   {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "07:30",
-   "tipo": "procesion",
-   "titulo": "Rosario de la aurora de Nuestra Señora de la Piedad",
-   "nota": "Santuario de María Auxiliadora Coronada"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "08:00",
-   "tipo": "culto",
-   "titulo": "Peregrinación de la Vera Cruz al Rocío",
-   "nota": "Córdoba-Almonte"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "09:00",
-   "tipo": "acto",
-   "titulo": "Velá de la O",
-   "nota": "Plaza Jazmín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "10:00",
-   "tipo": "culto",
-   "titulo": "Función principal y procesión de Nuestra Señora del Rosario",
-   "nota": "Parroquia de Nuestra Señora del Rosario y Santa Beatriz de Silva"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "10:30",
-   "tipo": "culto",
-   "titulo": "Rosario matinal de la Virgen de la Cabeza",
-   "nota": "Parroquia de San Francisco y San Eulogio"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Mercadillo Solidario de Otoño de la Buena Muerte",
-   "nota": "Patio de la Real Colegiata de San Hipólito"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "12:00",
-   "tipo": "culto",
-   "titulo": "Función principal de María Santísima de las Penas",
-   "nota": "Parroquia de Nuestra Señora de la Asunción"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "12:00",
-   "tipo": "culto",
-   "titulo": "Misa de hermandad y perol de la Estrella",
-   "nota": "Parroquia de San Fernando"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "12:00",
-   "tipo": "culto",
-   "titulo": "Función principal de Nuestra Señora Reina de los Apóstoles",
-   "nota": "Santuario de Nuestra Señora de la Fuensanta Coronada"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "12:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario de la Expiración",
-   "nota": "Real Iglesia de San Pablo"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "13:15",
-   "tipo": "concierto",
-   "titulo": "Certamen de bandas en Doña Mencía",
-   "nota": "Plaza de Andalucía | Doña Mencía"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "13:30",
-   "tipo": "acto",
-   "titulo": "Verbena de la Presentación al Pueblo",
-   "nota": "Patio de la parroquia de San Vicente Ferrer"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-4-octubre-cordoba/202610032200003495053.html",
-   "fecha": "2026-10-04",
-   "hora": "13:30",
-   "tipo": "acto",
-   "titulo": "Gran Perol de la Bondad",
-   "nota": "Patio de la Hermandad de la Bondad"
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4848,6 +4778,46 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/padre-pio-culmina-aniversario-parroquia-procesion-extraordinaria-20261011163838-nts.html"
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Alejandro Martín Caballero designado cartelista de las Glorias de Sevilla 2027",
+   "nota": "",
+   "fuente": "ArteSacro",
+   "url": "https://www.artesacro.org/Noticia/Ver/169493/alejandro-martin-caballero-designado-cartelista-glorias-sevilla-2027"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "José Manuel Carmona Meléndez, pregonero de la Semana Santa 2027 de Chiclana",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/chiclana/jose-manuel-carmona-melendez-pregonero_0_2008232415.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "magna",
+   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de Sevilla de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-sevilla-de-2027/"
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de 2027",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
   },
   {
    "fecha": "2026-10-12",
