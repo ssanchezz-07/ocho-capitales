@@ -1,94 +1,14 @@
 {
  "generado": "2026-10-13",
  "fuentes": {
-  "InfoCofrade": 364,
+  "InfoCofrade": 367,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 77,
+  "Prensa (agendas semanales)": 78,
   "Prensa (texto de noticias)": 10
  },
  "eventos": [
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario (Humeros)",
-   "nota": "Música: la Banda de Música de María Santísima de la Victoria (Cigarreras).",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "09:30",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Madre de Dios del Rosario (Triana)",
-   "nota": "Música: la BCT de las Tres Caídas de Triana, abriendo el cortejo, y la Banda de Música del Maestro Tejera tras el paso.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "17:50",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de María Santísima del Pilar (San Pedro)",
-   "nota": "Música: la Banda de María Santísima de la Victoria (Cigarreras).",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "07:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario de la Aurora con Nuestra Señora del Rosario (Humeros) hasta el Convento de Santa Rosalía",
-   "nota": "Salida: 07:00",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "09:30",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario de la Aurora con el Simpecado de la Hermandad del Rocío de Sevilla Sur",
-   "nota": "Salida: 09:30",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de Araceli (San Andrés) de 10:00-14:30 y 17:00-19:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "12:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Principal de Instituto a María Santísima del Pilar (San Pedro) a las 12:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "culto",
-   "titulo": "Peregrinación extraordinaria de la Hermandad del Rocío de Sevilla a la Parroquia de la Asunción (Almonte)",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-13",
    "hora": "",
@@ -115,7 +35,7 @@
    "ciudad": "sevilla",
    "tipo": "traslado",
    "titulo": "Traslado de María Santísima del Rosario (Montesión) a la Iglesia de San Martín",
-   "nota": "Salida: 20:30.",
+   "nota": "Salida: 20:30",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -250,6 +170,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "sevilla",
@@ -365,6 +295,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a la Divina Pastora (San Antonio) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -560,6 +500,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-19",
    "hora": "20:30",
    "ciudad": "sevilla",
@@ -600,6 +550,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-20",
    "hora": "20:30",
    "ciudad": "sevilla",
@@ -630,6 +590,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-21",
    "hora": "20:30",
    "ciudad": "sevilla",
@@ -645,6 +615,16 @@
    "ciudad": "jaen",
    "tipo": "culto",
    "titulo": "Triduo a la Virgen de Guadalupe, patrona de Úbeda, en la Iglesia de la Misericordia a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -675,6 +655,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a la Virgen del Rocío en la Hermandad del Rocío de Triana a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -705,6 +695,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a la Virgen del Rocío en la Hermandad del Rocío de Triana a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -811,6 +811,16 @@
   },
   {
    "fecha": "2026-10-24",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "concierto",
@@ -846,6 +856,16 @@
    "tipo": "procesion",
    "titulo": "Procesión de Nuestra Señora del Rosario (Macarena)",
    "nota": "Música: la Banda de Cornetas y Tambores de la Centuria Macarena, abriendo el cortejo, y la Banda de Música del Carmen de Salteras.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "11:30",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de María Santísima de la Sierra (San Roque)",
+   "nota": "Música: la Banda de Música del Liceo de Sevilla.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -905,6 +925,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Principal de Instituto a Nuestra Señora del Rosario (Macarena) a las 11:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "10:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a María Santísima de la Sierra (San Roque) a las 10:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -3938,6 +3968,16 @@
    "nota": "Ciudad de Granada",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-13-octubre-cordoba/202610131000003504441.amp.html",
+   "fecha": "2026-10-13",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a Santa Teresa de Jesús",
+   "nota": "Iglesia conventual de San José (San Cayetano)"
   },
   {
    "ciudad": "cordoba",
