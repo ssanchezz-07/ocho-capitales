@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-12",
+ "generado": "2026-10-13",
  "fuentes": {
   "InfoCofrade": 364,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 94,
-  "Prensa (texto de noticias)": 16
+  "Prensa (agendas semanales)": 77,
+  "Prensa (texto de noticias)": 10
  },
  "eventos": [
   {
@@ -4710,176 +4710,6 @@
    "nota": "Patio de la Hermandad de la Bondad"
   },
   {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "10:00",
-   "tipo": "acto",
-   "titulo": "Limpieza en la Hermandad del Huerto",
-   "nota": "Casa de Hermandad"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Mercadillo Solidario de Otoño de la Buena Muerte",
-   "nota": "Patio de la Real Colegiata de San Hipólito"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "11:30",
-   "tipo": "acto",
-   "titulo": "Velá de la O",
-   "nota": "Plaza Jazmín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "12:00",
-   "tipo": "acto",
-   "titulo": "Convivencia de la Hermandad del Amor",
-   "nota": "Santuario de Nuestra Señora de Linares"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "13:00",
-   "tipo": "culto",
-   "titulo": "Misa de la Hermandad del Perdón en El Rocío",
-   "nota": "Santuario de Nuestra Señora del Rocío | Almonte"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "13:00",
-   "tipo": "acto",
-   "titulo": "Verbena de la Presentación al Pueblo",
-   "nota": "Patio de la parroquia de San Vicente Ferrer"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "16:45",
-   "tipo": "procesion",
-   "titulo": "Procesión de San Francisco de Asís hacia la Catedral",
-   "nota": "Parroquia de San Francisco y San Eulogio"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "18:30",
-   "tipo": "traslado",
-   "titulo": "Traslado de Santa Beatriz de Silva",
-   "nota": "Iglesia de Santa Beatriz de Silva"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "19:00",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de María Santísima de la Amargura",
-   "nota": "Parroquia de Nuestra Señora de Gracia (Padres Trinitarios)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "19:00",
-   "tipo": "culto",
-   "titulo": "Misa previa a la Procesión de las Velas de Fátima",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario",
-   "nota": "Parroquia de Nuestra Señora del Rosario y Santa Beatriz de Silva"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:00",
-   "tipo": "acto",
-   "titulo": "Regreso procesional de San Francisco de Asís",
-   "nota": "Santa Iglesia Catedral de Córdoba"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de las Penas",
-   "nota": "Paroquia de Nuestra Señora de la Asunción (Parque Figueroa)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:00",
-   "tipo": "procesion",
-   "titulo": "Procesión de las Velas de Nuestra Señora de Fátima",
-   "nota": "Parroquia de la Virgen de Fátima"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:00",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario de San Agustín",
-   "nota": "Real Convento de San Agustín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora Reina de los Apóstoles",
-   "nota": "Santuario de Nuestra Señora de la Fuensanta Coronada"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-3-octubre-cordoba/202610030000003494760.html",
-   "fecha": "2026-10-03",
-   "hora": "20:45",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de Nuestra Señora Madre de Dios en sus Tristezas",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4890,26 +4720,6 @@
    "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
   },
   {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "magna",
-   "titulo": "Inicialmente, como informó SUR, se barajó la celebración de una procesión magna para la jornada del 12 de octubre del año que viene.",
-   "nota": "",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
-  },
-  {
    "fecha": "2026-11-07",
    "hora": "",
    "ciudad": "malaga",
@@ -4918,16 +4728,6 @@
    "nota": "",
    "fuente": "101TV",
    "url": "https://www.101tv.es/malaga-semana-santa/procesiones-en-malaga-en-el-puente-del-pilar-donde-y-a-que-hora-salen-las-cofradias/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
   },
   {
    "fecha": "2026-11-28",
@@ -4990,26 +4790,6 @@
    "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
   },
   {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "procesion",
-   "titulo": "Madre de Dios del Rosario cambiará el horario de su salida procesional a la mañana",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
-  },
-  {
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "almeria",
@@ -5028,6 +4808,56 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/padre-pio-culmina-aniversario-parroquia-procesion-extraordinaria-20261011163838-nts.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "magna",
+   "titulo": "Inicialmente, como informó SUR, se barajó la celebración de una procesión magna para la jornada del 12 de octubre del año que viene.",
+   "nota": "",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "Madre de Dios del Rosario cambiará el horario de su salida procesional a la mañana",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
   },
   {
    "fecha": "2026-10-12",
@@ -5308,16 +5138,6 @@
    "nota": "",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
-  },
-  {
-   "fecha": "2026-10-09",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "culto",
-   "titulo": "Antes de celebrar el triduo y la función principal en San Andrés a su titular, la hermandad del Buen Suceso llevará a cabo este viernes un rosario vespertino con la image",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
   }
  ],
  "conflictos": [
