@@ -5,7 +5,7 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 65,
+  "Prensa (agendas semanales)": 0,
   "Prensa (texto de noticias)": 24
  },
  "eventos": [
@@ -4030,656 +4030,6 @@
    "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-13-octubre-cordoba/202610131000003504441.amp.html",
-   "fecha": "2026-10-13",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Santa Teresa de Jesús",
-   "nota": "Iglesia conventual de San José (San Cayetano)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
-   "fecha": "2026-10-12",
-   "hora": "08:00",
-   "tipo": "procesion",
-   "titulo": "Rosario de la aurora de María Santísima de la Encarnación",
-   "nota": "Parroquia de Jesús Divino Obrero"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
-   "fecha": "2026-10-12",
-   "hora": "09:00",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a María Santísima del Rocío y Lágrimas",
-   "nota": "Parroquia de la Trinidad"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
-   "fecha": "2026-10-12",
-   "hora": "10:00",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
-   "fecha": "2026-10-12",
-   "hora": "11:00",
-   "tipo": "culto",
-   "titulo": "Eucaristía del Pilar y convivencia de Jesús Nazareno",
-   "nota": "Iglesia-Hospital de Jesús Nazareno"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
-   "fecha": "2026-10-12",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Santa Teresa de Jesús",
-   "nota": "Iglesia conventual de San José (San Cayetano)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "09:45",
-   "tipo": "culto",
-   "titulo": "Rosario matinal de María Santísima de la Paz y Esperanza Coronada",
-   "nota": "Iglesia conventual del Santo Ángel (Capuchinos)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "10:00",
-   "tipo": "culto",
-   "titulo": "Cabildos ordinario y extraordinario de la Hermandad de las Lágrimas",
-   "nota": "Salones parroquiales | Plaza de la Marina Española, s/n"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "10:00",
-   "tipo": "acto",
-   "titulo": "24 horas de adoración al Santísimo",
-   "nota": "Parroquia del Beato Álvaro de Córdoba"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Reunión del grupo joven de las Penas de Santiago",
-   "nota": "Casa de Hermandad"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Jornada de puertas abiertas del grupo joven de la Estrella",
-   "nota": "Casa de Hermandad de la Estrella"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "12:00",
-   "tipo": "acto",
-   "titulo": "Convivencia de los grupos jóvenes de las Penas y las Angustias",
-   "nota": "Casa de Hermandad de las Angustias"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:00",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de María Santísima de la O",
-   "nota": "Parroquia de Nuestra Señora de la Aurora"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "extraordinaria",
-   "titulo": "Salida extraordinaria de la Virgen de la Alegría",
-   "nota": "Parroquia de Santa Marina"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "20:15",
-   "tipo": "culto",
-   "titulo": "Conferencia sobre el palio de la Virgen de la Encarnación",
-   "nota": "Salones de Jesús Divino Obrero"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "17:00",
-   "tipo": "acto",
-   "titulo": "Escuela de Flamenco Piedad y Esperanza",
-   "nota": "Barrio de Las Palmeras"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:45",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de María Santísima de la Caridad",
-   "nota": "Feligresía de San Andrés"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:45",
-   "tipo": "acto",
-   "titulo": "Gozos a Santa María de la Merced",
-   "nota": "Parroquia de San Antonio de Padua"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "21:00",
-   "tipo": "culto",
-   "titulo": "Rosario en el Resucitado",
-   "nota": "Parroquia de Santa Marina"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "21:15",
-   "tipo": "culto",
-   "titulo": "Cabildo extraordinario del Calvario",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-08",
-   "hora": "18:30",
-   "tipo": "culto",
-   "titulo": "Piedad: Conferencia 'Historia de la Real Hermandad de Nuestra Señora de la Piedad', a cargo del historiador Salvador Jiménez Morales, por el centenario de la cofradía",
-   "nota": "En el Museum Jorge Rando."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-08",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Sol: Primer día del triduo en honor de la Virgen del Sol",
-   "nota": "En el santuario de la Victoria."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-08",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Dolores del Puerto: Veneración al Cristo de Hermandad y Caridad",
-   "nota": "De 17 a 19 horas, en la parroquia de Nuestra Señora de los Dolores, con celebración de santa misa, a las 19.30 horas. A su finalización, traslado del Cristo de Hermandad y Caridad. desde la parroquia de Nuestra Señora de los Dolores, en el…"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-08",
-   "hora": "20:30",
-   "tipo": "acto",
-   "titulo": "Remedios: Segundo día del triduo en honor de la Virgen de los Remedios con exposición y adoración del Santísimo Sacramento, y canto de la Salve",
-   "nota": "En la parroquia de los Santos Mártires."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-08",
-   "hora": "20:30",
-   "tipo": "acto",
-   "titulo": "Esperanza: Charla formativa de Juan Antonio Martos Núñez, doctor en Derecho y profesor titular de Derecho Penal de la Facultad de Derecho de la Universidad de Sevilla, bajo el título 'La Esperanza, fundamento de la vida cristiana'",
-   "nota": "En la sala de juntas de la casa hermandad."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "18:30",
-   "tipo": "culto",
-   "titulo": "Monte Calvario: Rezo del santo rosario",
-   "nota": "En la ermita del Monte Calvario."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Sol: Segundo día del triduo en honor de la Virgen del Sol",
-   "nota": "En el santuario de la Victoria."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Prendimiento: Primer día del triduo en honor de la Virgen del Gran Perdón",
-   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Remedios: Tercer día del triduo en honor de la Virgen de los Remedios con sagrada eucaristía y canto de la Salve",
-   "nota": "En la parroquia de los Santos Mártires."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Verdad y Sagrario: Primer día del triduo en honor de la Virgen del Sagrario",
-   "nota": "En la parroquia de San José Obrero. La Dolorosa estará en devoto besamanos de 17.30 a 20 horas."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "21:00",
-   "tipo": "culto",
-   "titulo": "Rocío de Málaga, filial de Almonte: Rezo del santo rosario",
-   "nota": "En la capilla del simpecado de la parroquia de la Santísima Trinidad."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-09",
-   "hora": "21:00",
-   "tipo": "culto",
-   "titulo": "Dolores del Puerto: Encendido de velas del trono del Cristo de Hermandad y Caridad, que procesionará de forma extraordinaria este sábado",
-   "nota": "En la casa hermandad."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "17:30",
-   "tipo": "extraordinaria",
-   "titulo": "Dolores del Puerto: Procesión extraordinaria del Cristo de Hermandad y Caridad por las calles del Puerto de la Torre",
-   "nota": "La salida será a las 17.30 horas. En el frente de procesión irá la banda de cornetas y tambores de la Vera Cruz de Almogía y detrás del trono, la agrupación musical Cautivo de Estepona. El Crucificado procesionará en su trono del Viernes…"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "17:30",
-   "tipo": "procesion",
-   "titulo": "Rosario de El Palo: Procesión de alabanza de la Virgen del Rosario, patrona y protectora de El Palo",
-   "nota": "La salida será a las 17.30 horas, desde la parroquia de Nuestra Señora de las Angustias. Participará la banda de música Maestro Eloy García, de la Archicofradía de la Expiración."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "18:00",
-   "tipo": "procesion",
-   "titulo": "Rosario de Santo Domingo: Procesión de alabanza de la Virgen del Rosario",
-   "nota": "La salida será a las 18 horas, desde la parroquia de Santo Domingo. Participará la banda de música de la Esperanza."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "19:00",
-   "tipo": "culto",
-   "titulo": "Mediadora: Santa misa en las vísperas del rosario",
-   "nota": "En la parroquia de San Patricio. Tras la eucaristía, imposición de medallas y carta de hermandad, y presentación de los niños a la Virgen Mediadora de la Salvación."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Sol: Tercer día del triduo en honor de la Virgen del Sol",
-   "nota": "En el santuario de la Victoria."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Valle: Santa misa sabatina",
-   "nota": "En la parroquia de la Natividad del Señor."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Prendimiento: Segundo día del triduo en honor de la Virgen del Gran Perdón",
-   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Verdad y Sagrario: Segundo día del triduo en honor de la Virgen del Sagrario",
-   "nota": "En la parroquia de San José Obrero. La Dolorosa estará en devoto besamanos de 17.30 a 20 horas."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-10",
-   "hora": "20:30",
-   "tipo": "concierto",
-   "titulo": "Fátima: Concierto 'Stabat Mater: María, testigo de la Redención', a cargo de la Capella Ocellum Duri",
-   "nota": "En la parroquia de Nuestra Señora de Fátima (entrada libre)."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-11",
-   "hora": "19:00",
-   "tipo": "traslado",
-   "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
-   "nota": ""
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-11",
-   "hora": "12:00",
-   "tipo": "culto",
-   "titulo": "Sol: Función solemne en honor de la Virgen del Sol",
-   "nota": "En el santuario de la Victoria. La Dolorosa estará expuesta en devoto besamanos de 17 a 19 horas. traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de…"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-11",
-   "hora": "12:00",
-   "tipo": "culto",
-   "titulo": "Verdad y Sagrario: Tercer día del triduo en honor de la Virgen del Sagrario y función solemne",
-   "nota": "En la parroquia de San José Obrero. La Dolorosa estará en devoto besamanos tras la celebración de la santa misa."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-11",
-   "hora": "12:30",
-   "tipo": "culto",
-   "titulo": "Prendimiento: Tercer día del triduo en honor de la Virgen del Gran Perdón",
-   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-11",
-   "hora": "12:30",
-   "tipo": "culto",
-   "titulo": "Humildad y Paciencia: Solemne función religiosa en honor de la Virgen de la Aurora",
-   "nota": "Con el rezo del santo rosario y posterior eucaristía, a las 13 horas, en la parroquia de San Vicente de Paúl. A su finalización, ofrenda floral a la imagen mariana."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-12",
-   "hora": "09:00",
-   "tipo": "procesion",
-   "titulo": "El Rico: Rosario de la aurora presidido por la Virgen del Amor",
-   "nota": "Por la feligresía de Santiago"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-12",
-   "hora": "09:30",
-   "tipo": "procesion",
-   "titulo": "Mediadora: Rosario presidido por la Virgen Mediadora de la Salvación",
-   "nota": "Desde la parroquia de San Patricio hasta el barrio de Las Delicias. regreso a su templo con el acompañamiento de la banda de música Cruz del Humilladero. El recorrido es el siguiente: Parroquia de San Patricio, avenida Sor Teresa Prat,…"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-12",
-   "hora": "19:15",
-   "tipo": "procesion",
-   "titulo": "Viñeros: Rosario vespertino presidido por la Virgen del Traspaso y Soledad de Viñeros",
-   "nota": "Desde la iglesia de la Aurora y Divina Providencia. Participará el grupo de metales de la agrupación musical San Lorenzo Mártir (durante el recorrido) y la coral polifónica Voces de Viñeros (en el interior de la parroquia de los Mártires)."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-12",
-   "hora": "12:30",
-   "tipo": "culto",
-   "titulo": "Prendimiento: Función principal de instituto",
-   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús. Participará el coro Arugrama. La Dolorosa estará en devoto besamanos tras la ceremonia religiosa."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "18:30",
-   "tipo": "culto",
-   "titulo": "Piedad: Conferencia 'Lo que representa Nuestra Señora de la Piedad en la Semana Santa de Málaga y su devoción popular', a cargo del deán de la Catedral, José Manuel Ferrary, por el centenario de la cofradía",
-   "nota": "En el Museum Jorge Rando."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Santo Traslado: Primer día de triduo en honor de la Virgen de la Soledad",
-   "nota": "En la parroquia de San Pablo."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Mutilado: Conferencia 'La vida cotidiana de los primeros cristianos', a cargo del sacerdote Francisco Aurioles",
-   "nota": "En el Aula Loyola (Sagrado Corazón)."
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-8-octubre-cordoba/202610072200003500668.amp.html",
-   "fecha": "2026-10-08",
-   "hora": "20:30",
-   "tipo": "culto",
-   "titulo": "Conferencia \"San Juan de la Cruz y el mundo cofrade\"",
-   "nota": "Sala de conferencias del Convento de San José"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario de San Agustín",
-   "nota": "Iglesia de San Agustín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario de la Expiración",
-   "nota": "Real Iglesia de San Pablo"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "20:00",
-   "tipo": "acto",
-   "titulo": "Jornada de puertas abiertas de la Merced",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-5-octubre-cordoba/202610042200003495070.amp.html",
-   "fecha": "2026-10-05",
-   "hora": "19:15",
-   "tipo": "culto",
-   "titulo": "Triduo de Nuestra Señora del Rosario de San Agustín",
-   "nota": "Iglesia de San Agustín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-5-octubre-cordoba/202610042200003495070.amp.html",
-   "fecha": "2026-10-05",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "triduo de Nuestra Señora del Rosario de la Expiración",
-   "nota": "Real Iglesia de San Pablo"
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4920,6 +4270,226 @@
    "url": "https://www.lavozdelsur.es/ediciones/granada/entre-autobuses-motos-y-coches-asi-ha-sido-el-accidentado-traslado-de-la-santa-cena-en-granada.html"
   },
   {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-13-octubre-cordoba/202610131000003504441.amp.html",
+   "fecha": "2026-10-13",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a Santa Teresa de Jesús",
+   "nota": "Iglesia conventual de San José (San Cayetano)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "08:00",
+   "tipo": "procesion",
+   "titulo": "Rosario de la aurora de María Santísima de la Encarnación",
+   "nota": "Parroquia de Jesús Divino Obrero"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "09:00",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Rocío y Lágrimas",
+   "nota": "Parroquia de la Trinidad"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "10:00",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "11:00",
+   "tipo": "culto",
+   "titulo": "Eucaristía del Pilar y convivencia de Jesús Nazareno",
+   "nota": "Iglesia-Hospital de Jesús Nazareno"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-12-octubre-cordoba/202610112200003502141.amp.html",
+   "fecha": "2026-10-12",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a Santa Teresa de Jesús",
+   "nota": "Iglesia conventual de San José (San Cayetano)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "09:45",
+   "tipo": "culto",
+   "titulo": "Rosario matinal de María Santísima de la Paz y Esperanza Coronada",
+   "nota": "Iglesia conventual del Santo Ángel (Capuchinos)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "10:00",
+   "tipo": "culto",
+   "titulo": "Cabildos ordinario y extraordinario de la Hermandad de las Lágrimas",
+   "nota": "Salones parroquiales | Plaza de la Marina Española, s/n"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Encarnación",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
+   "fecha": "2026-10-11",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
+   "nota": "Real Parroquia de San Lorenzo Mártir"
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-11",
+   "hora": "19:00",
+   "tipo": "traslado",
+   "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
+   "nota": ""
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-11",
+   "hora": "12:00",
+   "tipo": "culto",
+   "titulo": "Sol: Función solemne en honor de la Virgen del Sol",
+   "nota": "En el santuario de la Victoria. La Dolorosa estará expuesta en devoto besamanos de 17 a 19 horas. traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de…"
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-11",
+   "hora": "12:00",
+   "tipo": "culto",
+   "titulo": "Verdad y Sagrario: Tercer día del triduo en honor de la Virgen del Sagrario y función solemne",
+   "nota": "En la parroquia de San José Obrero. La Dolorosa estará en devoto besamanos tras la celebración de la santa misa."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-11",
+   "hora": "12:30",
+   "tipo": "culto",
+   "titulo": "Prendimiento: Tercer día del triduo en honor de la Virgen del Gran Perdón",
+   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-11",
+   "hora": "12:30",
+   "tipo": "culto",
+   "titulo": "Humildad y Paciencia: Solemne función religiosa en honor de la Virgen de la Aurora",
+   "nota": "Con el rezo del santo rosario y posterior eucaristía, a las 13 horas, en la parroquia de San Vicente de Paúl. A su finalización, ofrenda floral a la imagen mariana."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-12",
+   "hora": "09:00",
+   "tipo": "procesion",
+   "titulo": "El Rico: Rosario de la aurora presidido por la Virgen del Amor",
+   "nota": "Por la feligresía de Santiago"
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-12",
+   "hora": "09:30",
+   "tipo": "procesion",
+   "titulo": "Mediadora: Rosario presidido por la Virgen Mediadora de la Salvación",
+   "nota": "Desde la parroquia de San Patricio hasta el barrio de Las Delicias. regreso a su templo con el acompañamiento de la banda de música Cruz del Humilladero. El recorrido es el siguiente: Parroquia de San Patricio, avenida Sor Teresa Prat,…"
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-12",
+   "hora": "19:15",
+   "tipo": "procesion",
+   "titulo": "Viñeros: Rosario vespertino presidido por la Virgen del Traspaso y Soledad de Viñeros",
+   "nota": "Desde la iglesia de la Aurora y Divina Providencia. Participará el grupo de metales de la agrupación musical San Lorenzo Mártir (durante el recorrido) y la coral polifónica Voces de Viñeros (en el interior de la parroquia de los Mártires)."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-12",
+   "hora": "12:30",
+   "tipo": "culto",
+   "titulo": "Prendimiento: Función principal de instituto",
+   "nota": "En la parroquia de la Divina Pastora y Santa Teresa de Jesús. Participará el coro Arugrama. La Dolorosa estará en devoto besamanos tras la ceremonia religiosa."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-14",
+   "hora": "18:30",
+   "tipo": "culto",
+   "titulo": "Piedad: Conferencia 'Lo que representa Nuestra Señora de la Piedad en la Semana Santa de Málaga y su devoción popular', a cargo del deán de la Catedral, José Manuel Ferrary, por el centenario de la cofradía",
+   "nota": "En el Museum Jorge Rando."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Santo Traslado: Primer día de triduo en honor de la Virgen de la Soledad",
+   "nota": "En la parroquia de San Pablo."
+  },
+  {
+   "ciudad": "malaga",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Mutilado: Conferencia 'La vida cotidiana de los primeros cristianos', a cargo del sacerdote Francisco Aurioles",
+   "nota": "En el Aula Loyola (Sagrado Corazón)."
+  },
+  {
    "fecha": "2026-10-13",
    "hora": "",
    "ciudad": "sevilla",
@@ -5060,38 +4630,5 @@
    "url": "https://www.lavozdelsur.es/galerias-fotograficas/48-estampas-de-una-magna-inolvidable-en-arcos-llenazo-total-en-la-historica-procesion-extraordinaria-en-la-sierra-de-cadiz.html"
   }
  ],
- "conflictos": [
-  {
-   "a": {
-    "fecha": "2026-10-07",
-    "hora": "17:00",
-    "titulo": "Veneración al Stmo. Cristo de Hermandad y Caridad",
-    "fuente": "El Itinerario",
-    "url": "https://elitinerario.es/agenda/"
-   },
-   "b": {
-    "fecha": "2026-10-09",
-    "hora": "21:00",
-    "titulo": "Dolores del Puerto: Encendido de velas del trono del Cristo de Hermandad y Caridad, que procesionará de forma extraordinaria este sábado",
-    "fuente": "Diario SUR",
-    "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
-   }
-  },
-  {
-   "a": {
-    "fecha": "2026-10-12",
-    "hora": "19:00",
-    "titulo": "Traslado vuelta de Ntra. Sra. del Sol",
-    "fuente": "El Itinerario",
-    "url": "https://elitinerario.es/agenda/"
-   },
-   "b": {
-    "fecha": "2026-10-11",
-    "hora": "19:00",
-    "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
-    "fuente": "Diario SUR",
-    "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
-   }
-  }
- ]
+ "conflictos": []
 }
