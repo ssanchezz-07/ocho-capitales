@@ -550,7 +550,6 @@ function colgaduras() {
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
     vb: MAPA ? MAPA.viewBox : '0 0 100 60',
-    acuarela: u('assets/plates/acuarela.webp'),
     prov: MAPA ? MAPA.provincias.map((p) => ({ s: p.slug, c: (CAP[p.slug] || {}).color || '#888', d: p.d })) : [],
     caps: carrilesHilos(orden.map((c, i) => { const { x, y } = pos(c); return { s: c.slug, c: c.color, x: +x.toFixed(2), y: +y.toFixed(2), b: +((i + 0.5) * 12.5).toFixed(2) }; })),
   };

@@ -9,7 +9,7 @@
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var store = {
     get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
-    set: function (k, v) { try { if (v == null || v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} },
+    set: function (k, v) { try { if (v == null || v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { } },
     json: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   };
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -208,14 +208,11 @@
   if (colg) (function () {
     // El mapa y los hilos se dibujan aquí a partir de los datos de la página (provincias, capitales y su colgadura)
     var NS = 'http://www.w3.org/2000/svg', mapa = $('[data-colg-map]', colg), datos = {};
-    try { datos = JSON.parse($('#oc-mapa').textContent); } catch (err) {}
+    try { datos = JSON.parse($('#oc-mapa').textContent); } catch (err) { }
     function el(tag, attrs) { var n = document.createElementNS(NS, tag); Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); }); return n; }
     if (mapa && datos.prov) {
       var svg = el('svg', { 'class': 'oc-colg-svg', viewBox: datos.vb, preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
-      var defs = el('defs', {}), pat = el('pattern', { id: 'oc-acuarela', patternUnits: 'userSpaceOnUse', width: 384, height: 288 });
-      pat.appendChild(el('image', { href: datos.acuarela, width: 384, height: 288 })); defs.appendChild(pat); svg.appendChild(defs);
       datos.prov.forEach(function (p) { var n = el('path', { 'class': 'oc-prov2', 'data-prov': p.s, d: p.d }); n.style.setProperty('--c', p.c); svg.appendChild(n); });
-      datos.prov.forEach(function (p) { svg.appendChild(el('path', { 'class': 'oc-prov-tex', d: p.d })); });
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, pathLength: 1, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.insertBefore(svg, mapa.firstChild); mapa.insertBefore(hs, svg.nextSibling);
@@ -326,7 +323,7 @@
     paintColg(getCity(), false);
 
     // Primera visita de la sesión: se despliegan de golpe, escalonadas, como al colgarlas en el balcón
-    var visto = false; try { visto = sessionStorage.getItem('oc-colg') === '1'; sessionStorage.setItem('oc-colg', '1'); } catch (err) {}
+    var visto = false; try { visto = sessionStorage.getItem('oc-colg') === '1'; sessionStorage.setItem('oc-colg', '1'); } catch (err) { }
     if (!visto && !calm && items[0].animate) items.forEach(function (el, i) { el.animate([{ transform: 'scaleY(0.5)', opacity: 0 }, { transform: 'scaleY(1)', opacity: 1 }], { duration: 560, delay: 60 * i, easing: DRAWER, fill: 'backwards' }); });
   })();
 
@@ -343,7 +340,7 @@
     b.addEventListener('click', function () {
       var k = b.dataset.fav;
       if (favs[k]) delete favs[k]; else { favs[k] = { n: b.dataset.name, u: location.pathname, t: Date.now() }; if (!reduced) { b.classList.add('is-pop'); setTimeout(function () { b.classList.remove('is-pop'); }, 200); } }
-      try { localStorage.setItem('oc-favs', JSON.stringify(favs)); } catch (e) {}
+      try { localStorage.setItem('oc-favs', JSON.stringify(favs)); } catch (e) { }
       paintFavs();
     });
   });
@@ -360,7 +357,7 @@
     // Mi Semana Santa: las hermandades guardadas ordenadas por jornada, con sus fechas del próximo año
     var miss = $('[data-mi-ss]');
     if (miss) {
-      var SS = {}; try { SS = JSON.parse($('#oc-ss').textContent); } catch (e) {}
+      var SS = {}; try { SS = JSON.parse($('#oc-ss').textContent); } catch (e) { }
       var mine = keys.filter(function (k) { return k.indexOf('hermandad:') === 0 && SS.herms && SS.herms[k.split(':')[1]]; }).map(function (k) { var s = k.split(':')[1], h = SS.herms[s]; return { slug: s, n: favs[k].n, u: favs[k].u, d: h.d, o: h.o || 99, c: h.c, f: SS.dias[h.d] || '' }; })
         .filter(function (x) { return x.f; }).sort(function (a, b) { return a.f.localeCompare(b.f) || a.o - b.o; });
       if (mine.length) {
@@ -377,7 +374,7 @@
     b.addEventListener('click', function () {
       var data = { title: document.title, url: location.href };
       var label = $('span', b);
-      if (navigator.share) navigator.share(data).catch(function () {});
+      if (navigator.share) navigator.share(data).catch(function () { });
       else if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function () { label.textContent = 'Enlace copiado'; setTimeout(function () { label.textContent = 'Compartir'; }, 2200); });
     });
   });
@@ -452,8 +449,8 @@
   // ---------- agenda cofrade: mes interactivo, filtros por tipo y capital ----------
   var ag = $('[data-agenda]');
   if (ag) {
-    var EVS = []; try { EVS = JSON.parse($('#oc-eventos').textContent); } catch (e) {}
-    var TIPOS_AG = {}; try { TIPOS_AG = JSON.parse($('#oc-tipos').textContent); } catch (e) {}
+    var EVS = []; try { EVS = JSON.parse($('#oc-eventos').textContent); } catch (e) { }
+    var TIPOS_AG = {}; try { TIPOS_AG = JSON.parse($('#oc-tipos').textContent); } catch (e) { }
     var COLS = window.OC_COLORS || {};
     var hoy = ag.dataset.hoy;
     var st = { g: '', c: getCity(), sel: '', y: +hoy.slice(0, 4), m: +hoy.slice(5, 7) - 1 };
@@ -659,7 +656,7 @@
   }
   var failMsg = '<p class="oc-hint">No se pudo cargar el buscador. Comprueba la conexión y vuelve a intentarlo.</p>';
   var ov = $('[data-search-overlay]'), input = $('[data-search-input]'), results = $('[data-search-results]');
-  function openSearch(e, fromKey) { if (!ov) return; if (e && e.preventDefault) e.preventDefault(); input.value = ''; results.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; openLayer(ov, input, fromKey); loadIdx().catch(function () {}); }
+  function openSearch(e, fromKey) { if (!ov) return; if (e && e.preventDefault) e.preventDefault(); input.value = ''; results.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; openLayer(ov, input, fromKey); loadIdx().catch(function () { }); }
   function closeSearch() { closeLayer(ov); }
   $$('[data-open-search]').forEach(function (b) { b.addEventListener('click', openSearch); });
   $$('[data-close-search]').forEach(function (b) { b.addEventListener('click', closeSearch); });
@@ -692,6 +689,6 @@
   }
   // modo sin cobertura: copia de las páginas visitadas (service worker)
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
-    window.addEventListener('load', function () { navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(function () {}); });
+    window.addEventListener('load', function () { navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(function () { }); });
   }
 })();

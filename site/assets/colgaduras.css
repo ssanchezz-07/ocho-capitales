@@ -84,9 +84,6 @@ html:has([data-home]) .oc-cityselect { display: none; }
 .oc-colg-svg, .oc-colg-hilos { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .oc-colg-svg { overflow: visible; }
 .oc-prov2 { fill: color-mix(in srgb, var(--c) var(--tint), var(--bg)); stroke: color-mix(in srgb, var(--ink) 48%, transparent); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; transition: fill 420ms var(--ease-out); }
-.oc-prov-tex { fill: url(#oc-acuarela); mix-blend-mode: multiply; opacity: .2; pointer-events: none; }
-:root[data-theme="dark"] .oc-prov-tex { mix-blend-mode: soft-light; opacity: .18; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-prov-tex { mix-blend-mode: soft-light; opacity: .18; } }
 [data-colgaduras][data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) calc(var(--tint) * .55), var(--bg)); }
 [data-colgaduras][data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) calc(var(--tint) * 2.1), var(--bg)); }
 .oc-colg-hilos { overflow: visible; pointer-events: none; }
