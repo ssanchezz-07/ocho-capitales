@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 65,
-  "Prensa (texto de noticias)": 13
+  "Prensa (texto de noticias)": 19
  },
  "eventos": [
   {
@@ -4808,6 +4808,66 @@
    "nota": "",
    "fuente": "INRI Información",
    "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Santa María de la Merced, en su palio, preparada para la procesión del 17 de octubre.",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Recorrido de la procesión extraordinaria de la Merced el 17 de octubre",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "El viernes 16 de octubre está previsto que la banda de cornetas y tambores Coronación de Espinas ofrece un concierto extraordinario en el que dará a conocer la nueva marc",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "El traslado era además el primer paso de cara a la salida extraordinaria que tendrá el próximo 1 de noviembre por las calles de Granada.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada-semana-santa/el-traslado-de-la-santa-cena-de-granada-se-topa-con-el-trafico-en-la-gran-via/"
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Antes habrá otro traslado el 29 de octubre, de nuevo a la Catedral.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada-semana-santa/el-traslado-de-la-santa-cena-de-granada-se-topa-con-el-trafico-en-la-gran-via/"
   },
   {
    "fecha": "2026-10-13",
