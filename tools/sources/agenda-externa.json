@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 65,
-  "Prensa (texto de noticias)": 19
+  "Prensa (texto de noticias)": 24
  },
  "eventos": [
   {
@@ -4868,6 +4868,56 @@
    "nota": "",
    "fuente": "101TV",
    "url": "https://www.101tv.es/granada-semana-santa/el-traslado-de-la-santa-cena-de-granada-se-topa-con-el-trafico-en-la-gran-via/"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "via-crucis",
+   "titulo": "Chiclana ya tiene nombres propios para su Semana Santa y sus Glorias de 2027: pregoneros, carteles y una gran distinción",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/chiclana/chiclana-tiene-nombres-propios-semana-santa-glorias-2027-pregoneros-carteles-gran-distincion/202610141230263505896.html"
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Y es que, hasta el año pasado, el rosario de las Glorias se celebraba en la mañana del tercer domingo de octubre, saliendo a primera hora desde la parroquia de los Santos",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
+   "fecha": "2027-07-16",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Aunque la efigie hace su salida procesional el domingo posterior a su festividad, el 16 de julio, desde la parroquia de San Patricio, esta recibe culto durante todo el añ",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La formación participará este sábado tras el trono de la Virgen del Carmen de Huelin tanto a la ida a la Catedral como a la vuelta al templo de San Juan, donde finalizará",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Entre autobuses, motos y coches: así ha sido el accidentado traslado de la Santa Cena en Granada",
+   "nota": "",
+   "fuente": "lavozdelsur.es",
+   "url": "https://www.lavozdelsur.es/ediciones/granada/entre-autobuses-motos-y-coches-asi-ha-sido-el-accidentado-traslado-de-la-santa-cena-en-granada.html"
   },
   {
    "fecha": "2026-10-13",
