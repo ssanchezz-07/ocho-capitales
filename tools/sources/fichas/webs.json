@@ -673,5 +673,236 @@
   "url": "",
   "candidatas": [],
   "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/"
+ },
+ "la-borriquilla-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/",
+  "descartada": "https://nubexo.com/"
+ },
+ "santa-cena-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-sentencia-maravillas-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/pontificia-e-ilustre-hermandad-sacramental-y-cofradia-de-nazarenos-de-jesus-de-la-sentencia-y-maria-santisima-de-las-maravillas/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-despojado-silencio-blanco-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-cautivo-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/hermandad-sacramental-de-san-francisco-de-asis-y-santa-clara-y-real-cofradia-de-penitencia-de-nuestro-padre-jesus-cautivo-y-maria-santisima-de-la-encarnacion/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-trabajo-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/venerable-hermandad-de-caridad-del-santisimo-cristo-del-trabajo-y-nuestra-senora-de-la-luz/",
+  "descartada": "https://nubexo.com/"
+ },
+ "nuestra-senora-de-los-dolores-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/real-cofradia-de-nuestra-senora-de-los-dolores/",
+  "descartada": "https://nubexo.com/"
+ },
+ "jesus-del-rescate-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/cofradia-de-nuestro-padre-jesus-del-rescate/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-huerto-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/",
+  "descartada": "https://nubexo.com/"
+ },
+ "cristo-de-san-agustin-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-sacramental-del-santisimo-cristo-de-san-agustin-jesus-nazareno-de-las-penas-nuestra-madre-y-senora-de-la-consolacion-y-santo-angel-custodio/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-lanzada-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/venerable-y-fervorosa-hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-senor-jesucristo-en-su-sagrada-lanzada-y-maria-santisima-de-la-caridad/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-via-crucis-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/real-e-ilustre-hermandad-del-santo-via-crucis-y-nuestra-senora-de-los-favores-y-cofradia-nazarenos-de-jesus-de-la-amargura-maria-santisima-de-las-lagrimas-y-nuestra-senora-de-los-reyes/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-esperanza-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-canilla-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-gitanos-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/insigne-pontificia-real-colegial-y-magistral-cofradia-del-santisimo-cristo-del-consuelo-y-maria-santisima-del-sacromonte-los-gitanos/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-estudiantes-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-de-la-esclavitud-del-santisimo-sacramento-y-cofradia-universitaria-de-nuestro-senor-de-la-meditacion-y-maria-santisima-de-los-remedios-reina-y-madre-de-los-estud/",
+  "descartada": "https://nubexo.com/"
+ },
+ "paciencia-y-penas-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/",
+  "descartada": "https://nubexo.com/"
+ },
+ "tres-caidas-y-rosario-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/la-muy-antigua-real-e-ilustre-hermandad-de-nuestro-padre-jesus-de-las-tres-caidas-y-nuestra-senora-del-rosario-en-sus-misterios-dolorosos/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-nazareno-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-salesianos-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-concha-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-aurora-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-estrella-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-silencio-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/pontificia-y-real-sacramental-del-senor-san-jose-y-animas-y-cofradia-del-santisimo-cristo-de-la-misericordia-silencio/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-ferroviarios-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/fervorosa-hermandad-de-nazarenos-y-cofradia-de-penitencia-del-santisimo-cristo-de-la-buena-muerte-y-nuestra-senora-del-amor-y-del-trabajo/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-favores-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-escolapios-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/",
+  "descartada": "https://nubexo.com/"
+ },
+ "santo-entierro-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/pontificia-real-e-ilustre-hermandad-del-santo-sepulcro-y-nuestra-senora-de-la-soledad-del-calvario/",
+  "descartada": "https://nubexo.com/"
+ },
+ "las-chias-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/",
+  "descartada": "https://nubexo.com/"
+ },
+ "santa-maria-de-la-alhambra-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/",
+  "descartada": "https://nubexo.com/"
+ },
+ "la-resurreccion-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/venerable-hermandad-sacramental-del-glorioso-arcangel-san-miguel-y-nazarenos-de-nuestro-senor-de-la-resurreccion-y-santa-maria-del-triunfo/",
+  "descartada": "https://nubexo.com/"
+ },
+ "el-resucitado-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/",
+  "descartada": "https://nubexo.com/"
+ },
+ "los-facundillos-granada": {
+  "url": "",
+  "probada": "https://nubexo.com/",
+  "estado": 200,
+  "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/",
+  "descartada": "https://nubexo.com/"
  }
 }

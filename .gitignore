@@ -29,3 +29,7 @@ site/scripts/cache/
 
 # PDF oficiales de itinerarios (derechos de sus editores): solo en local
 Itinerarios Semana Santa/
+
+# Base de datos generada (se reconstruye sola) y caché de OpenStreetMap
+datos/ocho-capitales.sqlite
+tools/itinerarios/cache/

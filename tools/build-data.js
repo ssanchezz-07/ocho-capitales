@@ -327,6 +327,24 @@ for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
     h[k] = v.valor; (h.relleno_fuentes = h.relleno_fuentes || {})[k] = v.fuente;
   }
 }
+// Una «web oficial» compartida por más de dos hermandades no es de ninguna (p. ej. el enlace del pie de una federación): se descarta.
+{
+  const cuenta = {}; for (const h of hermandades) if (h.web) { const k = h.web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''); cuenta[k] = (cuenta[k] || 0) + 1; }
+  for (const h of hermandades) if (h.web && cuenta[h.web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')] > 2) { h.web = ''; delete h.web_fuente; }
+}
+// Hora de salida del último itinerario oficial leído (tools/itinerarios), si la ficha no la trae
+{
+  const ITF = path.join(__dirname, 'sources', 'itinerarios-2026.json');
+  if (fs.existsSync(ITF)) {
+    const IT = JSON.parse(fs.readFileSync(ITF, 'utf8')).hermandades;
+    for (const h of hermandades) {
+      const e = IT[h.slug]; if (!e || h.hora) continue;
+      const pts = e.tramos['cruz de guía'] || e.tramos.paso || Object.values(e.tramos)[0] || [];
+      const s = pts.find((p) => p.hora && /salida/i.test(p.lugar)) || pts.find((p) => p.hora);
+      if (s && s === pts.find((p) => p.hora) && /salida/i.test(s.lugar)) { h.hora = s.hora; h.hora_fuente = e.fuente; }
+    }
+  }
+}
 // En las vísperas el orden de paso sigue la hora de salida publicada.
 const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
 for (const dia of ['Viernes de Dolores', 'Sábado de Pasión']) for (const ciudad of new Set(hermandades.map((h) => h.ciudad))) {

@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const IDX = JSON.parse(fs.readFileSync(path.join(DIR, 'sources', 'fichas', 'indice.json'), 'utf8'));
 const UA = 'Mozilla/5.0 (OchoCapitales/1.0; portal cofrade sin animo de lucro)';
-const NO = /abc\.es|abcdesevilla|elcorreoweb|diariode|artesacro|hemeroteca|pasionensevilla|rafaes|lahornacina|viaf\.org|loc\.gov|dialnet|hermandades-de-sevilla\.org|semanasantasevilla|sevillasemanasanta|nazarenodesevilla|wiktionary|elpais|europapress|cadenaser|odisur|elconfidencial|lagubiayeltas|sevillaguia|iaph\.es|us\.es|uanl\.mx|doi\.org|sanisidoro\.net|xyzdiario|lahoranica|arrakis|juanantonioblanco|gmpg\.org|anapi\.com|apiweb\.es|eticonsa|lamadrugagaditana|diocesisdehuelva|grupomelampo|correonistas|telegram|semanasantadesevilla\.tv|datos\.bne|elespanol|cordopolis|wordpress\.com\/20|virgendelosreyes|especiales\.|tienda\.|geopasos|externaliza|cookiedatabase/;
+const NO = /abc\.es|abcdesevilla|elcorreoweb|diariode|artesacro|hemeroteca|pasionensevilla|rafaes|lahornacina|viaf\.org|loc\.gov|dialnet|hermandades-de-sevilla\.org|semanasantasevilla|sevillasemanasanta|nazarenodesevilla|wiktionary|elpais|europapress|cadenaser|odisur|elconfidencial|lagubiayeltas|sevillaguia|iaph\.es|us\.es|uanl\.mx|doi\.org|sanisidoro\.net|xyzdiario|lahoranica|arrakis|juanantonioblanco|gmpg\.org|anapi\.com|apiweb\.es|eticonsa|lamadrugagaditana|diocesisdehuelva|grupomelampo|correonistas|telegram|semanasantadesevilla\.tv|datos\.bne|elespanol|cordopolis|wordpress\.com\/20|virgendelosreyes|especiales\.|tienda\.|geopasos|centroestudioscofrades|hermandadesdegranada|externaliza|cookiedatabase/;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const fix = (u) => u.replace(/^https?:\/\/(https?:\/\/)/, '$1').replace(/[»"']+$/, '');
 const out = {};
@@ -35,5 +35,8 @@ for (const [slug, x] of Object.entries(IDX)) {
   out[slug] = ok ? { ...ok, fuente: x.fuente } : { url: '', candidatas: cands.slice(0, 3), fuente: x.fuente };
   console.log(slug, ok ? ok.url : '— ' + cands.slice(0, 2).join(' '));
 }
+// Una web que sale para más de dos hermandades es del sitio (pie de página, diseñador), no de la hermandad
+const veces = {}; for (const x of Object.values(out)) if (x.url) veces[x.url] = (veces[x.url] || 0) + 1;
+for (const x of Object.values(out)) if (x.url && veces[x.url] > 2) { x.descartada = x.url; x.url = ''; }
 fs.writeFileSync(path.join(DIR, 'sources', 'fichas', 'webs.json'), JSON.stringify(out, null, 1));
 console.log('Con web:', Object.values(out).filter((x) => x.url).length, 'de', Object.keys(out).length);

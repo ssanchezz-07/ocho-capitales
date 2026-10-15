@@ -15,8 +15,8 @@ const UA = 'OchoCapitales/1.0 (https://github.com/ssanchezz-07/ocho-capitales; p
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const vacio = (v) => !v || !String(v).trim();
 const solo = process.argv[2];
-const OFICIAL = /consejocofradiascadiz|consejohermandadeshuelva|cofradiasdealmeria|hermandadesdecordoba|agrupaciondecofradias|cofradiasjaen|wikipedia\.org/;
-const REDES = /facebook|instagram|twitter|x\.com|youtube|tiktok|flickr|whatsapp|wp-content|wordpress\.org|google|apple\.com|gravatar|wikimedia|wikipedia|wikidata|creativecommons|mediawiki|archive\.org/;
+const OFICIAL = /hermandadesdegranada|consejocofradiascadiz|consejohermandadeshuelva|cofradiasdealmeria|hermandadesdecordoba|agrupaciondecofradias|cofradiasjaen|wikipedia\.org/;
+const REDES = /facebook|instagram|twitter|x\.com|youtube|tiktok|flickr|whatsapp|wp-content|wordpress\.org|google|apple\.com|gravatar|wikimedia|wikipedia|wikidata|creativecommons|mediawiki|archive\.org|centroestudioscofrades|hermandadesdegranada/;
 
 function limpiar(h) {
   const m = h.match(/<article[\s\S]*?<\/article>/i) || h.match(/<main[\s\S]*?<\/main>/i) || h.match(/<div[^>]+(id|class)="[^"]*(mw-content-text|entry-content|post-content|content)[^"]*"[\s\S]*$/i);

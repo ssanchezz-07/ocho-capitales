@@ -119,7 +119,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css'], ['calle', 'calle.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -690,6 +690,7 @@ function pageCapital(c) {
   <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${plural(hs.length, 'hermandad', 'hermandades')} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
 </header>
 ${c.imagen ? `<p class="oc-caphero-credit">${credit(c.imagen)}</p>` : ''}
+${fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')) ? `<a class="oc-calle-acceso" href="${u('en-la-calle/' + c.slug + '/')}"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-5 12 5 12-5v29l-12 5-12-5-12 5z"/><path d="M18 7v29M30 12v29"/><circle cx="24" cy="22" r="4" fill="currentColor" stroke="none"/></svg><div><strong>En la calle</strong><span>Recorridos sobre el plano y dónde va cada cofradía, hora a hora</span></div></a>` : ''}
 <nav class="oc-daynav" aria-label="Jornadas de ${esc(c.nombre)}"><ul>${groups.map(([d]) => `<li><a href="#${slugify(d)}">${esc(d)}</a></li>`).join('')}</ul></nav>
 <div class="oc-split">
 <div class="oc-split-main">
@@ -1101,8 +1102,64 @@ function extras() {
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
 }
 
+// ---------- En la calle: mapa propio con los recorridos oficiales y la posición estimada de cada cortejo ----------
+// Datos por ciudad (dist/data/calle/<ciudad>.json): plano (calles en metros) + recorridos con tiempo (min del día) y XY.
+const minDia = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
+function datosCalle(c) {
+  const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
+  if (!fs.existsSync(fP) || !fs.existsSync(fR)) return null;
+  const P = JSON.parse(fs.readFileSync(fP, 'utf8')), R = JSON.parse(fs.readFileSync(fR, 'utf8'));
+  const xy = (la, lo) => [Math.round((lo - P.origen[1]) * P.kx), Math.round((P.origen[0] - la) * P.ky)];
+  const hs = [];
+  for (const [slug, e] of Object.entries(R.hermandades)) {
+    const h = HERM[slug]; if (!h) continue;
+    const tramos = {};
+    for (const [nom, pts] of Object.entries(e.tramos)) {
+      // tiempo de cada punto: la hora exacta si la hay; si no, la franja de la rejilla. Pasada la medianoche, +24 h
+      let t0 = null; const out = [];
+      for (const p of pts) {
+        if (p.lat == null) continue;
+        let t = minDia(p.hora) ?? minDia(p.fila); if (t == null) continue;
+        if (t0 == null) t0 = t; else if (t < t0 - 180) t += 1440;
+        const [x, y] = xy(p.lat, p.lon);
+        out.push([x, y, t, p.lugar, p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0]);
+      }
+      // la rejilla puede repetir franjas: el tiempo nunca retrocede
+      for (let i = 1; i < out.length; i++) if (out[i][2] < out[i - 1][2]) out[i][2] = out[i - 1][2];
+      if (out.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = out;
+    }
+    if (!Object.keys(tramos).length) continue;
+    const im = h.imagen;
+    hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos });
+  }
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, hermandades: hs, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+}
+function pageCalle(c) {
+  const datos = datosCalle(c); if (!datos) return;
+  fs.mkdirSync(path.join(DIST, 'data', 'calle'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'calle', c.slug + '.json'), JSON.stringify(datos));
+  const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
+  const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
+  fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
+  const dias = [...new Set(datos.hermandades.map((h) => h.d))].sort((a, b) => dayIdx(a) - dayIdx(b));
+  const body = `<header class="oc-calle-head"><p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · Recorridos</p><h1 class="oc-title">En la calle</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada y hora, o pulsa reproducir.</p></header>
+<section class="oc-calle" data-calle="${u('data/calle/' + c.slug + '.json')}" data-fechas='${esc(JSON.stringify(fechas))}' style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
+  <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}</div>
+  <div class="oc-calle-mapa" data-mapa><svg class="oc-calle-svg" aria-label="Plano de ${esc(c.nombre)} con los recorridos" role="img"></svg>
+    <div class="oc-calle-ctl"><button class="oc-calle-btn" type="button" data-zoom="1" aria-label="Acercar">+</button><button class="oc-calle-btn" type="button" data-zoom="-1" aria-label="Alejar">−</button><button class="oc-calle-btn" type="button" data-yo aria-label="Mi ubicación"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3" stroke="currentColor" stroke-width="1.8"/></svg></button></div>
+    <p class="oc-calle-osm">Plano: © colaboradores de OpenStreetMap</p>
+  </div>
+  <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
+  <ol class="oc-calle-lista" data-lista aria-live="polite"></ol>
+  <div class="oc-sheet oc-calle-ficha" hidden data-ficha><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="calle-ficha-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="calle-ficha-t" data-ficha-titulo></p><button class="oc-iconbtn" type="button" data-ficha-cerrar aria-label="Cerrar">${icon('x')}</button></div><div data-ficha-cuerpo></div></div></div>
+</section>
+<p class="oc-note">Recorridos del último itinerario oficial publicado (${datos.anio}: ${esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
+<noscript><p class="oc-note">El mapa necesita JavaScript. Consulta los horarios en la página de <a href="${capHref(c)}">la Semana Santa de ${esc(c.nombre)}</a>.</p></noscript>`;
+  write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
+}
+
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
-D.capitales.forEach(pageCapital); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
+D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
 searchIndex(); extras(); escribeIcs(); escribeSw();
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

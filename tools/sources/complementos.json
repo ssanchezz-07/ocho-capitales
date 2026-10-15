@@ -903,204 +903,39 @@
   "resucitado-malaga": {
    "web_oficial": null
   },
-  "la-borriquilla-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/"
-   }
-  },
-  "santa-cena-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/"
-   }
-  },
-  "la-sentencia-maravillas-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/pontificia-e-ilustre-hermandad-sacramental-y-cofradia-de-nazarenos-de-jesus-de-la-sentencia-y-maria-santisima-de-las-maravillas/"
-   }
-  },
-  "el-despojado-silencio-blanco-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/"
-   }
-  },
-  "el-cautivo-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/hermandad-sacramental-de-san-francisco-de-asis-y-santa-clara-y-real-cofradia-de-penitencia-de-nuestro-padre-jesus-cautivo-y-maria-santisima-de-la-encarnacion/"
-   }
-  },
-  "el-trabajo-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/venerable-hermandad-de-caridad-del-santisimo-cristo-del-trabajo-y-nuestra-senora-de-la-luz/"
-   }
-  },
-  "nuestra-senora-de-los-dolores-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/real-cofradia-de-nuestra-senora-de-los-dolores/"
-   }
-  },
-  "jesus-del-rescate-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/cofradia-de-nuestro-padre-jesus-del-rescate/"
-   }
-  },
-  "el-huerto-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/"
-   }
-  },
-  "cristo-de-san-agustin-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-sacramental-del-santisimo-cristo-de-san-agustin-jesus-nazareno-de-las-penas-nuestra-madre-y-senora-de-la-consolacion-y-santo-angel-custodio/"
-   }
-  },
-  "la-lanzada-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/venerable-y-fervorosa-hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-senor-jesucristo-en-su-sagrada-lanzada-y-maria-santisima-de-la-caridad/"
-   }
-  },
-  "el-via-crucis-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/real-e-ilustre-hermandad-del-santo-via-crucis-y-nuestra-senora-de-los-favores-y-cofradia-nazarenos-de-jesus-de-la-amargura-maria-santisima-de-las-lagrimas-y-nuestra-senora-de-los-reyes/"
-   }
-  },
-  "la-esperanza-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/"
-   }
-  },
-  "la-canilla-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/"
-   }
-  },
-  "los-gitanos-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/insigne-pontificia-real-colegial-y-magistral-cofradia-del-santisimo-cristo-del-consuelo-y-maria-santisima-del-sacromonte-los-gitanos/"
-   }
-  },
-  "los-estudiantes-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-de-la-esclavitud-del-santisimo-sacramento-y-cofradia-universitaria-de-nuestro-senor-de-la-meditacion-y-maria-santisima-de-los-remedios-reina-y-madre-de-los-estud/"
-   }
-  },
-  "paciencia-y-penas-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/"
-   }
-  },
-  "tres-caidas-y-rosario-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/la-muy-antigua-real-e-ilustre-hermandad-de-nuestro-padre-jesus-de-las-tres-caidas-y-nuestra-senora-del-rosario-en-sus-misterios-dolorosos/"
-   }
-  },
-  "el-nazareno-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/"
-   }
-  },
-  "los-salesianos-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/"
-   }
-  },
-  "la-concha-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/"
-   }
-  },
-  "la-aurora-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/"
-   }
-  },
-  "la-estrella-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/"
-   }
-  },
-  "el-silencio-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/pontificia-y-real-sacramental-del-senor-san-jose-y-animas-y-cofradia-del-santisimo-cristo-de-la-misericordia-silencio/"
-   }
-  },
-  "los-ferroviarios-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/fervorosa-hermandad-de-nazarenos-y-cofradia-de-penitencia-del-santisimo-cristo-de-la-buena-muerte-y-nuestra-senora-del-amor-y-del-trabajo/"
-   }
-  },
-  "los-favores-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/"
-   }
-  },
-  "los-escolapios-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/"
-   }
-  },
-  "santo-entierro-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/pontificia-real-e-ilustre-hermandad-del-santo-sepulcro-y-nuestra-senora-de-la-soledad-del-calvario/"
-   }
-  },
-  "las-chias-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/"
-   }
-  },
-  "santa-maria-de-la-alhambra-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/"
-   }
-  },
-  "la-resurreccion-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/venerable-hermandad-sacramental-del-glorioso-arcangel-san-miguel-y-nazarenos-de-nuestro-senor-de-la-resurreccion-y-santa-maria-del-triunfo/"
-   }
-  },
-  "el-resucitado-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/"
-   }
-  },
-  "los-facundillos-granada": {
-   "web_oficial": {
-    "url": "https://www.centroestudioscofrades.org",
-    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/"
-   }
-  },
+  "la-borriquilla-granada": {},
+  "santa-cena-granada": {},
+  "la-sentencia-maravillas-granada": {},
+  "el-despojado-silencio-blanco-granada": {},
+  "el-cautivo-granada": {},
+  "el-trabajo-granada": {},
+  "nuestra-senora-de-los-dolores-granada": {},
+  "jesus-del-rescate-granada": {},
+  "el-huerto-granada": {},
+  "cristo-de-san-agustin-granada": {},
+  "la-lanzada-granada": {},
+  "el-via-crucis-granada": {},
+  "la-esperanza-granada": {},
+  "la-canilla-granada": {},
+  "los-gitanos-granada": {},
+  "los-estudiantes-granada": {},
+  "paciencia-y-penas-granada": {},
+  "tres-caidas-y-rosario-granada": {},
+  "el-nazareno-granada": {},
+  "los-salesianos-granada": {},
+  "la-concha-granada": {},
+  "la-aurora-granada": {},
+  "la-estrella-granada": {},
+  "el-silencio-granada": {},
+  "los-ferroviarios-granada": {},
+  "los-favores-granada": {},
+  "los-escolapios-granada": {},
+  "santo-entierro-granada": {},
+  "las-chias-granada": {},
+  "santa-maria-de-la-alhambra-granada": {},
+  "la-resurreccion-granada": {},
+  "el-resucitado-granada": {},
+  "los-facundillos-granada": {},
   "entrada-triunfal-cordoba": {
    "web_oficial": null,
    "fuente_actual": {
