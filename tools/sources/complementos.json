@@ -1102,61 +1102,189 @@
    }
   },
   "entrada-triunfal-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4019-hermandad-de-la-entrada-triunfal.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "penas-de-santiago-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4033-hermandad-de-las-penas.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "via-crucis-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://hermandadviacrucis.com/",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4092-hermandad-del-viacrucis.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "animas-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "http://remedioanimas.es/",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4096-hermandad-de-animas.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-agonia-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4098-hermandad-de-la-agonia.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-sangre-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://hermandaddelcister.es/",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-sangre/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-sangre/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4099-hermandad-de-la-sangre.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "el-buen-suceso-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://hermandaddelbuensuceso.blogspot.com/",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4100-hermandad-del-buen-suceso.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "el-perdon-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4104-hermandad-del-perdon.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-paz-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4106-hermanad-de-la-paz.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-misericordia-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://silencioblancocordoba.org/",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-misericordia/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-misericordia/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4107-hermandad-de-la-misericordia.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-piedad-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://hermandadpalmeras.jimdofree.com/",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4103-hermandad-de-la-piedad.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "cristo-de-gracia-el-esparraguero-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4113-hermandad-del-cristo-de-gracia.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-buena-muerte-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4115-hermandad-de-la-buena-muerte.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "la-soledad-cordoba": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://soledadfranciscana.com/",
+    "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/",
+    "comprobada": "2026-10-15"
+   },
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4117-hermandad-de-la-soledad.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "lagrimas-cordoba": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4124-hermandad-de-las-lagrimas.html",
+    "comprobada": "2026-10-15"
+   }
   },
   "servitas-cadiz": {
    "web_oficial": {
     "url": "https://servitascadiz.es",
     "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "La Orden Tercera de Servitas se estableció en la parroquia de San Lorenzo de Cádiz en 1727 y pocos años después levantó su capilla propia junto al templo. Su dolorosa titular, anónima del siglo XVIII, fue coronada canónicamente en 2011.",
+     "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "merced-obediencia-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Según los archivos diocesanos, la Esclavitud se fundó en Cádiz el 9 de marzo de 1628. En 1776 quedó establecida canónicamente en el convento de los Mercedarios Descalzos y agregada a la Orden de la Merced.",
+     "fuente": "https://consejocofradiascadiz.es/merced-3/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-borriquita-cadiz": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://pazyamparo.es/",
+    "fuente": "https://consejocofradiascadiz.es/la-paz/",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Hizo su primera salida el 25 de marzo de 1945 desde la parroquia de San José, con un paso cedido por los Afligidos. En 1947 encargó a los talleres valencianos de Rafael Peris la imagen de la Virgen del Amparo.",
+     "fuente": "https://consejocofradiascadiz.es/la-paz/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-despojado-cadiz": {
    "web_oficial": {
@@ -1174,6 +1302,13 @@
    "web_oficial": {
     "url": "http://archicofradiapenas.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/las-penas/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "La Archicofradía del Pilar data de 1730 y la cofradía de Jesús de las Penas se erigió en 1955; ambas se fusionaron en 1977. Salió por primera vez el Lunes Santo de 1956 y desde 1964 la acompaña la Virgen de la Caridad.",
+     "fuente": "https://consejocofradiascadiz.es/las-penas/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "humildad-y-paciencia-cadiz": {
@@ -1192,12 +1327,26 @@
    "web_oficial": {
     "url": "http://hermandadprendimientodecadiz.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/prendimiento/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Une la Real Congregación de la Vela, fundada en 1792 y responsable del jubileo circular de la ciudad, con la hermandad de penitencia creada en 1976; se fusionaron en 1979. Su Cristo del Prendimiento es obra del gaditano Alfonso Berraquero, bendecido en 1978.",
+     "fuente": "https://consejocofradiascadiz.es/prendimiento/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "nazareno-del-amor-cadiz": {
    "web_oficial": {
     "url": "https://www.nazarenodelamor.es",
     "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "El Lunes Santo de 1954 su titular salió de San Francisco con túnica blanca en lugar de la morada tradicional; la acogida fue tal que la mantuvo y desde entonces se le conoce como el Nazareno Blanco.",
+     "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "vera-cruz-cadiz": {
@@ -1213,7 +1362,14 @@
    }
   },
   "la-piedad-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en 1731 en Santa Catalina y aprobó nuevas reglas en 1758. Su Crucificado es una de las pocas obras documentadas del escultor genovés Francesco Maria Maggio, de 1754.",
+     "fuente": "https://consejocofradiascadiz.es/piedad/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "jesus-caido-el-senor-del-parque-cadiz": {
    "web_oficial": {
@@ -1231,7 +1387,14 @@
    "web_oficial": null
   },
   "las-cigarreras-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Los incendios del convento de Santo Domingo impiden fechar su fundación, aunque a finales del siglo XVIII ya existía. Se reorganizó en 1912 y volvió a sufrir los saqueos e incendios del convento en 1931 y 1936.",
+     "fuente": "https://consejocofradiascadiz.es/cigarreras/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-sentencia-cadiz": {
    "web_oficial": {
@@ -1249,21 +1412,49 @@
    "web_oficial": {
     "url": "http://www.cofradiadelasangustiascaminito.com",
     "fuente": "https://consejocofradiascadiz.es/el-caminito/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Las actas municipales recogen reglas de la Hermandad de las Angustias aprobadas en 1732, y el obispado le reconoce antigüedad de 1748. Se refundó como cofradía de penitencia en 1935.",
+     "fuente": "https://consejocofradiascadiz.es/el-caminito/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "los-afligidos-cadiz": {
    "web_oficial": {
     "url": "http://cofradiadelosafligidos.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/afligidos/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Nació de la devoción a un lienzo del encuentro de Jesús con su Madre encargado en 1719 y se fundó en 1726. Su primera salida documentada es de 1763 y desde 1937 procesiona el Jueves Santo.",
+     "fuente": "https://consejocofradiascadiz.es/afligidos/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "oracion-en-el-huerto-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "sede": {
+     "valor": "Iglesia de Capuchinos",
+     "fuente": "https://consejocofradiascadiz.es/oracion-en-el-huerto/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "medinaceli-cadiz": {
    "web_oficial": {
     "url": "http://www.medinacelicadiz.com",
     "fuente": "https://consejocofradiascadiz.es/medinaceli/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Surgió de la devoción a un cuadro del Cautivo de Medinaceli que tenía un matrimonio gaditano; en 1938 encargaron una imagen del Señor y se fundó la cofradía, que procesiona de forma independiente desde 1942.",
+     "fuente": "https://consejocofradiascadiz.es/medinaceli/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "nazareno-de-santa-maria-cadiz": {
@@ -1276,6 +1467,13 @@
    "web_oficial": {
     "url": "http://perdonyrosario.blogspot.com.es",
     "fuente": "https://consejocofradiascadiz.es/perdon/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Su Cristo del Perdón, de autor desconocido y posible escuela italiana, presidía la capilla del palacio de los marqueses de Montecorto y pasó a la parroquia de la Merced. La cofradía la impulsaron antiguos alumnos del colegio La Salle-Mirandilla.",
+     "fuente": "https://consejocofradiascadiz.es/perdon/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-descendimiento-cadiz": {
@@ -1288,7 +1486,14 @@
    "web_oficial": null
   },
   "siete-palabras-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en marzo de 1944 y se reorganizó en agosto de 1983. Siempre ha procesionado el Viernes Santo; tras la reorganización, el sermón de las Siete Palabras se celebra aparte de la salida.",
+     "fuente": "https://consejocofradiascadiz.es/siete-palabras/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-buena-muerte-cadiz": {
    "web_oficial": {
@@ -1303,7 +1508,14 @@
    }
   },
   "la-resurreccion-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "La Archicofradía se agregó en 1662 a la cofradía de Jesús atado a la Columna y en 1769 ya procesionaba el Sábado de Gloria. Su Resucitado actual es obra de Luis González Rey (1993).",
+     "fuente": "https://consejocofradiascadiz.es/resucitado/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-borriquita-huelva": {
    "web_oficial": {
@@ -1315,7 +1527,14 @@
    "web_oficial": null
   },
   "la-redencion-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Nació a comienzos de los años ochenta en la barriada de La Navidad, de la mano de un grupo de jóvenes cofrades que empezaron dando culto a la Virgen y acabaron formando una hermandad de penitencia.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-rendencion/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "los-mutilados-huelva": {
    "web_oficial": null
@@ -1327,12 +1546,26 @@
    }
   },
   "el-cautivo-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Su origen está en una Cruz de Mayo del barrio de La Hispanidad (1971). Se fundó oficialmente el 20 de julio de 1981 como hermandad de gloria y en 1983 pasó a ser de penitencia.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-cautivo/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-calvario-huelva": {
    "web_oficial": {
     "url": "https://www.calvariohuelva.es",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-calvario/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Sus fundadores se constituyeron en 1972 y fijaron su sede en la parroquia de los Dolores de Las Colonias. El 14 de abril de 1973 se bendijo su titular, Jesús del Calvario, obra de Antonio León Ortega.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-calvario/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "las-tres-caidas-huelva": {
@@ -1342,10 +1575,24 @@
    }
   },
   "la-salud-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se erigió en junio de 1976 en el barrio de Pérez Cubillas como hermandad de gloria de la Virgen de la Salud y San Francisco de Asís, impulsada por el párroco Antonio Salas; después pasó a ser cofradía de penitencia.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-lanzada-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Hermandad de caridad y cofradía de nazarenos erigida canónicamente en la parroquia de Nuestra Señora de los Dolores, en el barrio de Las Colonias.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "los-estudiantes-huelva": {
    "web_oficial": null
@@ -1363,6 +1610,18 @@
    "web_oficial": {
     "url": "https://www.cofradiasantacruz.com",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1988 como tertulia cofrade de jóvenes en la parroquia de la Purísima Concepción. Diez de sus miembros retomaron el proyecto en 1998, año de su primera salida, y en 2015 trasladó su sede a la Purísima Concepción.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/",
+     "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1998",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-victoria-huelva": {
@@ -1393,12 +1652,26 @@
    "web_oficial": {
     "url": "http://www.hermandadelabuenamuertehuelva.es",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en 1916 en el colegio de los agustinos de Huelva, impulsada por el padre Gilberto Blanco. Tras la marcha de la comunidad pasó por la parroquia de San Pedro y se reorganizó en 1940, después de la Guerra Civil.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "los-judios-la-merced-huelva": {
    "web_oficial": {
     "url": "https://www.hermandaddelamerced.com",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-los-judios/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Hunde sus raíces en la devoción a los Dolores de la Virgen en la Huelva de los siglos XVII y XVIII, cuando los padres mercedarios promovieron una Orden Tercera de Siervos de María.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-los-judios/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-nazareno-huelva": {
@@ -1417,28 +1690,75 @@
    "web_oficial": {
     "url": "https://www.descendimientohuelva.com",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Conocida como la Hermandad del Ayuntamiento porque la fundaron funcionarios municipales, se erigió el 18 de diciembre de 1951, fecha de aprobación de sus primeras reglas.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-santo-entierro-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Es la cofradía más antigua de Huelva, con referencias documentales desde 1551, y ha atravesado a lo largo de los siglos etapas de esplendor y de decadencia.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-silencio-la-soledad-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Recoge la tradición decimonónica de una Virgen sola, «la del Silencio», que cerraba el Viernes Santo onubense. La imagen fue rescatada del incendio de la iglesia de la Purísima Concepción en 1936.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-silencio/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-resucitado-huelva": {
    "web_oficial": {
     "url": "https://resucitadohuelva.blogspot.com",
     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-resucitado/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Fundada en 1996 para completar el ciclo de la Semana Santa onubense con la Resurrección, está erigida en la parroquia de Nuestra Señora del Pilar, en el barrio de la Hispanidad.",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-del-resucitado/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "nuestra-senora-del-prado-huelva": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "fundacion": {
+     "valor": "2009",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/",
+     "revisado": "2026-10-15"
+    },
+    "sede": {
+     "valor": "Capilla de Nuestra Señora del Prado en su Dolor (antiguas dependencias de la parroquia de San Pablo)",
+     "fuente": "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-borriquita-almeria": {
    "web_oficial": null
   },
   "los-angeles-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1995 en el barrio de Los Ángeles por iniciativa de cofrades de la Macarena y el Silencio; se erigió canónicamente en 1999, año de su primera salida, y en 2001 bajó por primera vez a la Carrera Oficial. Fue la primera cofradía almeriense en salir desde su propia casa de hermandad.",
+     "fuente": "https://cofradiasdealmeria.es/los-angeles/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "la-estrella-almeria": {
    "web_oficial": null
@@ -1447,10 +1767,24 @@
    "web_oficial": {
     "url": "http://www.santacenadealmeria.org",
     "fuente": "https://cofradiasdealmeria.es/santa-cena/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en abril de 1983 y en 1986 se estableció en la parroquia de San Pedro, donde se bendijo su Jesús de la Última Cena, obra del sevillano Elías García. Su primera estación de penitencia fue en 1987.",
+     "fuente": "https://cofradiasdealmeria.es/santa-cena/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "pasion-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Procede de la asociación cultural Amigos de la Semana Santa (1992), formada sobre todo por cofrades de los Estudiantes. Sus reglas se aprobaron el 20 de febrero de 1995 y fue erigida ese mismo año en la antigua parroquia de Santa Teresa.",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "gran-poder-almeria": {
    "web_oficial": null
@@ -1468,7 +1802,14 @@
    }
   },
   "el-calvario-cristo-del-mar-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Nació en enero de 2007, cuando un grupo de fieles trasladó un crucificado a la parroquia de San Roque, donde fue bendecido con el nombre de Santísimo Cristo del Mar. Es una hermandad de inspiración marianista.",
+     "fuente": "https://cofradiasdealmeria.es/calvario/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-prendimiento-almeria": {
    "web_oficial": {
@@ -1477,7 +1818,14 @@
    }
   },
   "la-macarena-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se erigió en la parroquia de San Ildefonso con la bendición de la Esperanza Macarena el 28 de mayo de 1988 y aprobó sus primeros estatutos en 1990. La Virgen del Rosario se incorporó como tercera titular en 2016.",
+     "fuente": "https://cofradiasdealmeria.es/macarena/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "los-estudiantes-almeria": {
    "web_oficial": {
@@ -1486,7 +1834,14 @@
    }
   },
   "rosario-del-mar-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Surgió en 1995 de la asociación que logró reabrir al culto la capilla del Real Hospital Provincial de Santa María Magdalena, cerrada durante veinticinco años. Es una hermandad dominicana.",
+     "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-encuentro-jesus-nazareno-almeria": {
    "web_oficial": {
@@ -1495,16 +1850,37 @@
    }
   },
   "las-angustias-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1911 como congregación jesuita de culto interno en torno a un crucificado. En 1941 se sumó la devoción a la Virgen de las Angustias, cuya imagen talló José Navas Parejo (1943), y en 1954 se bendijo el Cristo de la Buena Muerte de José María Hervás.",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-silencio-descendimiento-almeria": {
    "web_oficial": {
     "url": "https://silencioalmeria.blogspot.com",
     "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Conocida como la Hermandad del Silencio, nació en 1946 en el seno de la organización sindical de Almería; sus estatutos fundacionales se aprobaron en junio de ese año.",
+     "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-caridad-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se constituyó como asociación el 23 de septiembre de 1995 y fue erigida canónicamente como hermandad diez años después, el 23 de septiembre de 2005, bajo el patronazgo de San Francisco de Asís.",
+     "fuente": "https://cofradiasdealmeria.es/caridad/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "el-santo-sepulcro-almeria": {
    "web_oficial": {
@@ -1516,10 +1892,24 @@
    "web_oficial": {
     "url": "http://www.soledadalmeria.com",
     "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Su documento más antiguo son unas reglas aprobadas en 1773: nació como hermandad de la Virgen de los Dolores bajo la tutela de la Orden Tercera Servita y ha atravesado la invasión francesa, la desamortización y las guerras del siglo XIX y XX.",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-resucitado-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Arranca en 2005 con un grupo de jóvenes del Higueral; desde 2007 se encargó de la procesión del Domingo de Resurrección y fue erigida canónicamente el 29 de julio de 2015 en la parroquia de Nuestra Señora de Montserrat.",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/",
+     "revisado": "2026-10-15"
+    }
+   }
   },
   "divino-maestro-lavatorio-jaen": {
    "web_oficial": null
@@ -1552,6 +1942,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://jesusdespojado.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-paz-sevilla": {
@@ -1560,6 +1955,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelapaz.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-cena-sevilla": {
@@ -1568,6 +1968,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://lacenadesevilla.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-hiniesta-sevilla": {
@@ -1576,6 +1981,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelahiniesta.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-roque-sevilla": {
@@ -1584,6 +1994,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandadsanroque.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-estrella-sevilla": {
@@ -1592,6 +2007,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": "1560"
+   },
+   "web_oficial": {
+    "url": "https://hermandad-estrella.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-amargura-sevilla": {
@@ -1600,6 +2020,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.amargura.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-pablo-sevilla": {
@@ -1608,6 +2033,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://jesuscautivoyrescatado.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "redencion-sevilla": {
@@ -1616,6 +2046,23 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandadredencion.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en 1955 en Santa María la Blanca, hizo su primera estación de penitencia en 1959 y en 1960 se trasladó a Santiago el Mayor, donde en 1983 se fusionó con la antigua sacramental del templo. San Lucas, uno de sus titulares, la vincula con el Colegio de Médicos.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1955",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "santa-genoveva-sevilla": {
@@ -1624,6 +2071,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.santagenoveva.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "santa-marta-sevilla": {
@@ -1632,6 +2084,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddesantamarta.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-gonzalo-sevilla": {
@@ -1640,6 +2097,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddesangonzalo.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "vera-cruz-sevilla": {
@@ -1648,6 +2110,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://veracruzsevilla.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "las-penas-sevilla": {
@@ -1656,6 +2123,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelaspenas.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Su Nazareno caído recibía culto en la Casa Grande del Carmen y pasó a San Vicente tras la exclaustración de 1868. Los feligreses crearon la hermandad en 1875, salió por primera vez en 1878 y, tras desaparecer, se reorganizó en 1923.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "las-aguas-sevilla": {
@@ -1664,6 +2143,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://lasaguas.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-museo-sevilla": {
@@ -1672,6 +2156,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelmuseo.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-cerro-sevilla": {
@@ -1680,6 +2169,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "http://www.doloresdelcerro.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "los-javieres-sevilla": {
@@ -1688,6 +2182,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://javieres.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en 1945 en la iglesia jesuita del Sagrado Corazón, impulsada por la congregación mariana «los Javieres», que encargó el Cristo de las Almas y la Virgen de Gracia y Amparo. Sus reglas se aprobaron en 1955.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "san-esteban-sevilla": {
@@ -1696,6 +2202,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "1926",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "los-estudiantes-sevilla": {
@@ -1704,6 +2217,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelosestudiantes.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-benito-sevilla": {
@@ -1720,6 +2238,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "http://www.hermandaddelacandelaria.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "1921",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "dulce-nombre-la-bofeta-sevilla": {
@@ -1728,6 +2258,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddeldulcenombre.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Finales del siglo XVI",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "santa-cruz-sevilla": {
@@ -1736,6 +2278,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "http://www.hermandaddesantacruz.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-carmen-doloroso-sevilla": {
@@ -1744,6 +2291,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelcarmen.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1982 de un grupo de sevillanos que hacían el servicio militar en San Fernando y se reunieron en torno a la Virgen del Carmen. De vuelta a Sevilla se instalaron en la Misericordia y en 1987 pasaron a Omnium Sanctorum.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-sed-sevilla": {
@@ -1752,6 +2311,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelased.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-bernardo-sevilla": {
@@ -1760,6 +2324,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddesanbernardo.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-buen-fin-sevilla": {
@@ -1768,6 +2337,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandadbuenfin.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-lanzada-sevilla": {
@@ -1776,6 +2350,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Su origen es una sacramental de marineros de Triana de comienzos del siglo XVI que, a finales de ese siglo, se hizo de penitencia con la devoción a la Lanzada. Pasó por San Nicolás y San Basilio, y la invasión francesa calcinó sus antiguas tallas.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-baratillo-sevilla": {
@@ -1784,6 +2365,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandadelbaratillo.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "cristo-de-burgos-sevilla": {
@@ -1792,6 +2378,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://cristodeburgos.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "siete-palabras-sevilla": {
@@ -1800,6 +2391,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://siete-palabras.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Es fruto de la unión de varias corporaciones a lo largo de los siglos; una de ellas, la Hermandad de Nuestra Señora de la Cabeza, se fundó en 1561 en la Casa Grande del Carmen, con muchos cofrades del gremio de curtidores.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "los-panaderos-sevilla": {
@@ -1808,6 +2411,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hdadpanaderos.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "los-negritos-sevilla": {
@@ -1816,6 +2424,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandadlosnegritos.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-exaltacion-los-caballos-sevilla": {
@@ -1824,6 +2437,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.laexaltacion.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "las-cigarreras-sevilla": {
@@ -1832,6 +2450,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.columnayazotes.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "montesion-sevilla": {
@@ -1840,6 +2463,23 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddemontesion.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en 1560 al unirse una cofradía de gloria del Rosario y otra de penitencia de la Oración en el Huerto, a la que pertenecían armadores de la Carrera de Indias. En 1578 encargó a Jerónimo Hernández las imágenes del misterio.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+     "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1560",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-quinta-angustia-sevilla": {
@@ -1848,6 +2488,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://laquintaangustia.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-valle-sevilla": {
@@ -1856,6 +2501,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://elvalle.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "pasion-sevilla": {
@@ -1864,6 +2514,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddepasion.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-silencio-sevilla": {
@@ -1872,6 +2527,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": "1356"
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddeelsilencio.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-gran-poder-sevilla": {
@@ -1880,6 +2540,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.gran-poder.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+    "comprobada": "2026-10-15"
    }
   },
   "la-macarena-sevilla": {
@@ -1888,6 +2553,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelamacarena.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "el-calvario-sevilla": {
@@ -1896,6 +2566,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelcalvario.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Refundada en 1887",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-esperanza-de-triana-sevilla": {
@@ -1904,6 +2586,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": "1418"
+   },
+   "web_oficial": {
+    "url": "https://esperanzadetriana.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+    "comprobada": "2026-10-15"
    }
   },
   "los-gitanos-sevilla": {
@@ -1912,6 +2599,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelosgitanos.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-carreteria-sevilla": {
@@ -1920,6 +2612,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelacarreteria.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "san-isidoro-sevilla": {
@@ -1928,6 +2625,23 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://trescaidas.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "La cofradía actual une desde 1975 dos corporaciones de la iglesia de San Isidoro: la sacramental fundada en 1526 por Teresa Enríquez, unida después a la de las Ánimas, y la cofradía de las Tres Caídas, cuyo Cirineo es obra de Francisco Ruiz Gijón.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+     "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1526 (unión actual de 1975)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-o-sevilla": {
@@ -1936,6 +2650,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelao.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "1566",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "san-buenaventura-sevilla": {
@@ -1944,6 +2670,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://soledadsanbuenaventura.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "montserrat-sevilla": {
@@ -1952,6 +2683,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.montserratsevilla.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-sagrada-mortaja-sevilla": {
@@ -1960,6 +2696,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandadsagradamortaja.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "Sus orígenes se vinculan a un antiguo hospital de la Piedad y a la tradición de una pequeña imagen de barro de la Virgen con su Hijo hallada en la torre de Santa Marina; hay datos de una hermandad de luz desde 1518.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-cachorro-sevilla": {
@@ -1968,6 +2716,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelcachorro.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "los-servitas-sevilla": {
@@ -1976,6 +2729,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://realhermandadservita.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-trinidad-sevilla": {
@@ -1984,6 +2742,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelatrinidad.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "historia": {
+     "valor": "La fundaron hortelanos a comienzos del siglo XVI en el antiguo convento trinitario, hoy santuario de María Auxiliadora, con documentos de al menos 1507. Durante la invasión francesa se refugió en Santa Lucía y desde 1956 procesiona el Sábado Santo.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-santo-entierro-sevilla": {
@@ -1992,6 +2762,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.santoentierro.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Hacia 1570",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-soledad-de-san-lorenzo-sevilla": {
@@ -2000,6 +2782,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelasoledad.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "la-resurreccion-sevilla": {
@@ -2008,6 +2795,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://www.hermandaddelaresurreccion.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "bellavista-sevilla": {
@@ -2016,6 +2808,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "paso": {
+     "valor": "La Virgen del Dulce Nombre procesiona bajo palio de terciopelo azul liso.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "bendicion-y-esperanza-sevilla": {
@@ -2024,6 +2823,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Un único paso con el encuentro de Jesús y su Madre en la calle de la Amargura, acompañados por María Magdalena, San Juan, dos soldados romanos y un judío.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "pasion-y-muerte-sevilla": {
@@ -2032,6 +2838,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://pasionymuerte-dyv.blogspot.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "pino-montano-sevilla": {
@@ -2048,6 +2859,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://archicofradiamision.es/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "cristo-de-la-corona-sevilla": {
@@ -2056,6 +2872,11 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://cristocorona.blogspot.com/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+    "comprobada": "2026-10-15"
    }
   },
   "padre-pio-sevilla": {
@@ -2072,6 +2893,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Dos pasos: Jesús de la Caridad con Simón de Cirene, obra de Fernando Aguado, y la Virgen de los Dolores bajo palio.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "la-milagrosa-sevilla": {
@@ -2080,6 +2908,13 @@
     "web": "http://www.semana-santa.org/hermandades-y-cofradias-de-sevilla/hermandades-visperas-semana-santa-de-sevilla/la-milagrosa-hermandades-de-visperas-de-la-semana-santa-de-sevilla/",
     "nombre_oficial": "",
     "fundacion": "2015"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "En el segundo paso procesiona bajo palio la Virgen del Rosario, obra de Francisco Buiza (1963).",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "dolores-de-torreblanca-sevilla": {
@@ -2088,6 +2923,18 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelosdolores.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+    "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "El paso de Cristo, neobarroco en cedro de Pedro M. Benítez Carrión, representa a Jesús interrogado por Pilato.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "divino-perdon-sevilla": {
@@ -2096,6 +2943,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "1994 (agrupación parroquial)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-15"
+    }
    }
   },
   "el-sol-sevilla": {
@@ -2104,6 +2958,193 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "web_oficial": {
+    "url": "https://hermandaddelsol.org/",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-rescatado-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-rescatado/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4040-hermandad-del-rescatado.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-esperanza-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4036-hermandad-de-la-esperanza.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-amor-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-amor/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4039-hermandad-del-amor.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-huerto-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4034-hermandad-del-huerto.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-merced-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-merced/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4041-hermandad-de-la-merced.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-estrella-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4085-hermandad-de-la-estrella.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-sentencia-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4091-hermandad-de-la-sentencia.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-universitaria-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-universitaria/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4097-hermandad-universitaria.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-santa-faz-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-santa-faz/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4101-hermandad-de-la-santa-faz.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-prendimiento-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4102-hermandad-del-prendimiento.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-calvario-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-calvario/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4105-hermandad-del-calvario.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-pasion-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4149-hermandad-de-la-pasion.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "jesus-nazareno-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4108-hermandad-del-nazareno.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-caridad-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-caridad/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4112-hermandad-de-la-caridad.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "jesus-caido-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-caido/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4111-hermandad-del-caido.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "las-angustias-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-las-angustias/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4114-hermandad-de-las-angustias.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-expiracion-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-expiracion/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4118-hermandad-de-la-expiracion.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-descendimiento-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-descendimiento/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4119-hermandad-del-descendimiento.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-conversion-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4122-hermandad-de-la-conversion.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "los-dolores-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4120-hermandad-de-los-dolores.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "santo-sepulcro-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4121-hermandad-del-santo-sepulcro.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "el-resucitado-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4123-hermandad-del-resucitado.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "presentacion-al-pueblo-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4125-hermandad-de-la-presentacion-al-pueblo.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "vera-cruz-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4087-hermandad-de-la-veracruz.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "la-cena-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4109-hermandad-de-la-cena.html",
+    "comprobada": "2026-10-15"
+   }
+  },
+  "dolores-de-alcolea-cordoba": {
+   "fuente_actual": {
+    "url": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4233-doloires-de-alcolea.html",
+    "comprobada": "2026-10-15"
    }
   }
  },

@@ -1,0 +1,677 @@
+{
+ "jesus-despojado-sevilla": {
+  "url": "https://jesusdespojado.org/",
+  "probada": "http://www.jesusdespojado.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)"
+ },
+ "la-paz-sevilla": {
+  "url": "https://www.hermandaddelapaz.org/",
+  "probada": "http://www.hermandaddelapaz.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)"
+ },
+ "la-cena-sevilla": {
+  "url": "https://lacenadesevilla.es/",
+  "probada": "https://lacenadesevilla.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)"
+ },
+ "la-hiniesta-sevilla": {
+  "url": "https://www.hermandaddelahiniesta.es/",
+  "probada": "http://www.hermandaddelahiniesta.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)"
+ },
+ "san-roque-sevilla": {
+  "url": "https://hermandadsanroque.com/",
+  "probada": "http://www.hermandadsanroque.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)"
+ },
+ "la-estrella-sevilla": {
+  "url": "https://hermandad-estrella.org/",
+  "probada": "http://www.hermandad-estrella.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)"
+ },
+ "la-amargura-sevilla": {
+  "url": "https://www.amargura.org/",
+  "probada": "http://www.amargura.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)"
+ },
+ "san-pablo-sevilla": {
+  "url": "https://jesuscautivoyrescatado.com/",
+  "probada": "http://www.jesuscautivoyrescatado.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)"
+ },
+ "redencion-sevilla": {
+  "url": "https://hermandadredencion.com/",
+  "probada": "http://www.hermandadredencion.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)"
+ },
+ "santa-genoveva-sevilla": {
+  "url": "https://www.santagenoveva.com/",
+  "probada": "http://www.santagenoveva.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)"
+ },
+ "santa-marta-sevilla": {
+  "url": "https://hermandaddesantamarta.org/",
+  "probada": "http://www.hermandaddesantamarta.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)"
+ },
+ "san-gonzalo-sevilla": {
+  "url": "https://www.hermandaddesangonzalo.es/",
+  "probada": "http://www.hermandaddesangonzalo.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)"
+ },
+ "vera-cruz-sevilla": {
+  "url": "https://veracruzsevilla.org/",
+  "probada": "http://www.veracruzsevilla.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)"
+ },
+ "las-penas-sevilla": {
+  "url": "https://www.hermandaddelaspenas.es/",
+  "probada": "http://www.hermandaddelaspenas.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)"
+ },
+ "las-aguas-sevilla": {
+  "url": "https://lasaguas.es/",
+  "probada": "http://www.hermandaddelasaguas.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)"
+ },
+ "el-museo-sevilla": {
+  "url": "https://www.hermandaddelmuseo.org/",
+  "probada": "http://www.hermandaddelmuseo.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)"
+ },
+ "el-cerro-sevilla": {
+  "url": "http://www.doloresdelcerro.com/",
+  "probada": "http://www.doloresdelcerro.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)"
+ },
+ "los-javieres-sevilla": {
+  "url": "https://javieres.com/",
+  "probada": "https://javieres.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)"
+ },
+ "san-esteban-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)"
+ },
+ "los-estudiantes-sevilla": {
+  "url": "https://hermandaddelosestudiantes.es/",
+  "probada": "https://hermandaddelosestudiantes.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)"
+ },
+ "san-benito-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)"
+ },
+ "la-candelaria-sevilla": {
+  "url": "http://www.hermandaddelacandelaria.com/",
+  "probada": "http://www.hermandaddelacandelaria.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)"
+ },
+ "dulce-nombre-la-bofeta-sevilla": {
+  "url": "https://hermandaddeldulcenombre.org/",
+  "probada": "https://hermandaddeldulcenombre.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)"
+ },
+ "santa-cruz-sevilla": {
+  "url": "http://www.hermandaddesantacruz.com/",
+  "probada": "http://www.hermandaddesantacruz.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)"
+ },
+ "el-carmen-doloroso-sevilla": {
+  "url": "https://www.hermandaddelcarmen.es/",
+  "probada": "https://www.hermandaddelcarmen.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)"
+ },
+ "la-sed-sevilla": {
+  "url": "https://hermandaddelased.org/",
+  "probada": "http://www.hermandaddelased.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)"
+ },
+ "san-bernardo-sevilla": {
+  "url": "https://www.hermandaddesanbernardo.com/",
+  "probada": "http://www.hermandaddesanbernardo.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)"
+ },
+ "el-buen-fin-sevilla": {
+  "url": "https://hermandadbuenfin.es/",
+  "probada": "http://www.hermandadbuenfin.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)"
+ },
+ "la-lanzada-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)"
+ },
+ "el-baratillo-sevilla": {
+  "url": "https://hermandadelbaratillo.es/",
+  "probada": "http://www.hermandadelbaratillo.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)"
+ },
+ "cristo-de-burgos-sevilla": {
+  "url": "https://cristodeburgos.es/",
+  "probada": "http://www.cristodeburgos.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)"
+ },
+ "siete-palabras-sevilla": {
+  "url": "https://siete-palabras.com/",
+  "probada": "http://www.siete-palabras.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)"
+ },
+ "los-panaderos-sevilla": {
+  "url": "https://www.hdadpanaderos.es/",
+  "probada": "http://www.hdadpanaderos.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)"
+ },
+ "los-negritos-sevilla": {
+  "url": "https://www.hermandadlosnegritos.org/",
+  "probada": "http://www.hermandadlosnegritos.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)"
+ },
+ "la-exaltacion-los-caballos-sevilla": {
+  "url": "https://www.laexaltacion.org/",
+  "probada": "http://www.laexaltacion.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)"
+ },
+ "las-cigarreras-sevilla": {
+  "url": "https://www.columnayazotes.es/",
+  "probada": "http://www.columnayazotes.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)"
+ },
+ "montesion-sevilla": {
+  "url": "https://hermandaddemontesion.com/",
+  "probada": "http://hermandaddemontesion.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion"
+ },
+ "la-quinta-angustia-sevilla": {
+  "url": "https://laquintaangustia.org/",
+  "probada": "http://www.laquintaangustia.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)"
+ },
+ "el-valle-sevilla": {
+  "url": "https://elvalle.org/",
+  "probada": "http://www.elvalle.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)"
+ },
+ "pasion-sevilla": {
+  "url": "https://www.hermandaddepasion.org/",
+  "probada": "http://www.hermandaddepasion.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)"
+ },
+ "el-silencio-sevilla": {
+  "url": "https://www.hermandaddeelsilencio.org/",
+  "probada": "http://www.hermandaddeelsilencio.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)"
+ },
+ "el-gran-poder-sevilla": {
+  "url": "https://www.gran-poder.es/",
+  "probada": "http://www.gran-poder.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder"
+ },
+ "la-macarena-sevilla": {
+  "url": "https://www.hermandaddelamacarena.es/",
+  "probada": "http://www.hermandaddelamacarena.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)"
+ },
+ "el-calvario-sevilla": {
+  "url": "https://hermandaddelcalvario.org/",
+  "probada": "http://www.hermandaddelcalvario.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)"
+ },
+ "la-esperanza-de-triana-sevilla": {
+  "url": "https://esperanzadetriana.es/",
+  "probada": "https://esperanzadetriana.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana"
+ },
+ "los-gitanos-sevilla": {
+  "url": "https://www.hermandaddelosgitanos.com/",
+  "probada": "http://www.hermandaddelosgitanos.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)"
+ },
+ "la-carreteria-sevilla": {
+  "url": "https://hermandaddelacarreteria.org/",
+  "probada": "http://www.hermandaddelacarreteria.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)"
+ },
+ "san-isidoro-sevilla": {
+  "url": "https://trescaidas.org/",
+  "probada": "http://www.trescaidas.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)"
+ },
+ "la-o-sevilla": {
+  "url": "https://www.hermandaddelao.es/",
+  "probada": "http://www.hermandad-de-la-o.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)"
+ },
+ "san-buenaventura-sevilla": {
+  "url": "https://soledadsanbuenaventura.com/",
+  "probada": "http://www.soledadsanbuenaventura.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)"
+ },
+ "montserrat-sevilla": {
+  "url": "https://www.montserratsevilla.com/",
+  "probada": "http://www.hermandaddemontserrat.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)"
+ },
+ "la-sagrada-mortaja-sevilla": {
+  "url": "https://www.hermandadsagradamortaja.org/",
+  "probada": "http://www.hermandadsagradamortaja.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)"
+ },
+ "el-cachorro-sevilla": {
+  "url": "https://hermandaddelcachorro.org/",
+  "probada": "http://hermandaddelcachorro.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)"
+ },
+ "los-servitas-sevilla": {
+  "url": "https://realhermandadservita.com/",
+  "probada": "http://www.realhermandadservita.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)"
+ },
+ "la-trinidad-sevilla": {
+  "url": "https://hermandaddelatrinidad.es/",
+  "probada": "http://www.hermandaddelatrinidad.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)"
+ },
+ "el-santo-entierro-sevilla": {
+  "url": "https://www.santoentierro.org/",
+  "probada": "http://santoentierro.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)"
+ },
+ "la-soledad-de-san-lorenzo-sevilla": {
+  "url": "https://www.hermandaddelasoledad.org/",
+  "probada": "http://www.hermandaddelasoledad.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)"
+ },
+ "la-resurreccion-sevilla": {
+  "url": "https://www.hermandaddelaresurreccion.com/",
+  "probada": "https://www.hermandaddelaresurreccion.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)"
+ },
+ "bellavista-sevilla": {
+  "url": "",
+  "candidatas": [
+   "http://www.dulcenombrebellavista.es/portal/historia/"
+  ],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista"
+ },
+ "bendicion-y-esperanza-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza"
+ },
+ "pasion-y-muerte-sevilla": {
+  "url": "https://pasionymuerte-dyv.blogspot.com/",
+  "probada": "http://pasionymuerte-dyv.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)"
+ },
+ "la-mision-sevilla": {
+  "url": "https://archicofradiamision.es/",
+  "probada": "https://archicofradiamision.es/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)"
+ },
+ "cristo-de-la-corona-sevilla": {
+  "url": "https://cristocorona.blogspot.com/",
+  "probada": "https://cristocorona.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)"
+ },
+ "padre-pio-sevilla": {
+  "url": "https://accounts.google.com/",
+  "probada": "http://hermandadpadrepio.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo"
+ },
+ "san-jose-obrero-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero"
+ },
+ "dolores-de-torreblanca-sevilla": {
+  "url": "https://hermandaddelosdolores.org/",
+  "probada": "http://www.hermandaddelosdolores.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca"
+ },
+ "divino-perdon-sevilla": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n"
+ },
+ "el-sol-sevilla": {
+  "url": "https://hermandaddelsol.org/",
+  "probada": "http://www.hermandaddelsol.org/",
+  "estado": 200,
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)"
+ },
+ "huerto-malaga": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/huerto/"
+ },
+ "vineros-malaga": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/vineros/"
+ },
+ "resucitado-malaga": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://agrupaciondecofradias.com/titulares/"
+ },
+ "merced-obediencia-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/merced-3/"
+ },
+ "la-borriquita-cadiz": {
+  "url": "https://pazyamparo.es/",
+  "probada": "https://pazyamparo.es/",
+  "estado": 200,
+  "fuente": "https://consejocofradiascadiz.es/la-paz/"
+ },
+ "la-piedad-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/piedad/"
+ },
+ "la-columna-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/columna/"
+ },
+ "las-cigarreras-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/cigarreras/"
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/oracion-en-el-huerto/"
+ },
+ "la-expiracion-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/expiracion/"
+ },
+ "siete-palabras-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/siete-palabras/"
+ },
+ "la-resurreccion-cadiz": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejocofradiascadiz.es/resucitado/"
+ },
+ "la-sagrada-cena-huelva": {
+  "url": "https://mutiladoshuelva.blogspot.com/",
+  "probada": "https://mutiladoshuelva.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-sagrada-cena/"
+ },
+ "la-redencion-huelva": {
+  "url": "https://mutiladoshuelva.blogspot.com/",
+  "probada": "https://mutiladoshuelva.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-rendencion/"
+ },
+ "los-mutilados-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-los-mutilados/"
+ },
+ "el-cautivo-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-del-cautivo/"
+ },
+ "la-salud-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/"
+ },
+ "la-lanzada-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/"
+ },
+ "los-estudiantes-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-de-los-estudiantes/"
+ },
+ "el-prendimiento-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-del-prendimiento-y-la-estrella/"
+ },
+ "el-santo-entierro-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/"
+ },
+ "el-silencio-la-soledad-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-del-silencio/"
+ },
+ "nuestra-senora-del-prado-huelva": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/"
+ },
+ "la-borriquita-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/borriquita/"
+ },
+ "los-angeles-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/los-angeles/"
+ },
+ "la-estrella-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/estrella/"
+ },
+ "pasion-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/"
+ },
+ "gran-poder-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-gran-poder/"
+ },
+ "la-coronacion-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/"
+ },
+ "el-amor-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-amor/"
+ },
+ "el-calvario-cristo-del-mar-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/calvario/"
+ },
+ "la-macarena-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/macarena/"
+ },
+ "rosario-del-mar-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/"
+ },
+ "las-angustias-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/"
+ },
+ "la-caridad-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/caridad/"
+ },
+ "el-resucitado-almeria": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/"
+ },
+ "entrada-triunfal-cordoba": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/"
+ },
+ "penas-de-santiago-cordoba": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/"
+ },
+ "via-crucis-cordoba": {
+  "url": "https://hermandadviacrucis.com/",
+  "probada": "https://hermandadviacrucis.com/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/"
+ },
+ "animas-cordoba": {
+  "url": "http://remedioanimas.es/",
+  "probada": "http://remedioanimas.es/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/"
+ },
+ "la-agonia-cordoba": {
+  "url": "",
+  "candidatas": [
+   "http://www.hermandaddelaagonia.es/"
+  ],
+  "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/"
+ },
+ "la-sangre-cordoba": {
+  "url": "https://hermandaddelcister.es/",
+  "probada": "https://hermandaddelcister.es/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-sangre/"
+ },
+ "el-buen-suceso-cordoba": {
+  "url": "https://hermandaddelbuensuceso.blogspot.com/",
+  "probada": "https://hermandaddelbuensuceso.blogspot.com/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/"
+ },
+ "el-perdon-cordoba": {
+  "url": "https://api.whatsapp.com/",
+  "probada": "https://wa.me/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/"
+ },
+ "la-paz-cordoba": {
+  "url": "",
+  "candidatas": [
+   "https://hermandadpazyesperanza.com/"
+  ],
+  "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/"
+ },
+ "la-misericordia-cordoba": {
+  "url": "https://silencioblancocordoba.org/",
+  "probada": "https://silencioblancocordoba.org/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-misericordia/"
+ },
+ "la-piedad-cordoba": {
+  "url": "https://hermandadpalmeras.jimdofree.com/",
+  "probada": "https://hermandadpalmeras.jimdofree.com/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/"
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "url": "",
+  "candidatas": [
+   "https://hermandadcristodegracia.es/"
+  ],
+  "fuente": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/"
+ },
+ "la-buena-muerte-cordoba": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/"
+ },
+ "la-soledad-cordoba": {
+  "url": "https://soledadfranciscana.com/",
+  "probada": "https://soledadfranciscana.com/",
+  "estado": 200,
+  "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/"
+ },
+ "lagrimas-cordoba": {
+  "url": "",
+  "candidatas": [],
+  "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/"
+ }
+}

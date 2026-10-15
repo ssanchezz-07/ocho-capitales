@@ -20,3 +20,6 @@ prototipos/
 
 # Originales PNG de las colgaduras (3 MB, generados con Canva): se guardan en local, la web usa WebP
 /assets/
+
+# Textos completos de fichas oficiales: solo para leer y resumir (derechos de sus autores)
+tools/sources/fichas/*.txt

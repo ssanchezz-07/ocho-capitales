@@ -382,3 +382,84 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-month, .oc-cal { border-radius: 20px; }
 /* Portada en escritorio: menos aire bajo el balcón para que asomen las noticias */
 @media (min-width: 1100px) { .oc-hero2 { min-height: min(calc(100svh - var(--header-h) - 120px), 660px); } }
+
+/* Díptico de titulares: Cristo y Virgen en dos tablas unidas por un filete de oro, como un retablo */
+.oc-diptico { margin: 0; min-width: 0; }
+.oc-diptico-par { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 3px; border-radius: 24px; background: linear-gradient(160deg, #e9cf8f, var(--gold) 45%, #8a6a24); box-shadow: 0 34px 60px -38px rgb(20 8 29 / .7); }
+.oc-diptico-img { aspect-ratio: 3 / 4; overflow: hidden; background: #1a0d26; }
+.oc-diptico-img:first-child { border-radius: 21px 4px 4px 21px; }
+.oc-diptico-img:last-child { border-radius: 4px 21px 21px 4px; }
+.oc-diptico-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+.oc-diptico.is-juntos > img { width: 100%; max-height: 620px; object-fit: cover; border-radius: 22px; box-shadow: 0 34px 60px -38px rgb(20 8 29 / .7); }
+.oc-diptico figcaption { margin-top: 10px; }
+.oc-diptico-nombres { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font: 600 .9rem/1.3 var(--sans); color: var(--primary); text-wrap: balance; }
+.oc-diptico.is-juntos .oc-diptico-nombres { grid-template-columns: 1fr; }
+.oc-diptico-nombres b { font-weight: 600; }
+.oc-diptico-nombres b:last-child:not(:first-child) { text-align: right; }
+.oc-diptico-cred { display: block; margin-top: 6px; font-size: .75rem; line-height: 1.45; color: var(--muted); overflow-wrap: anywhere; }
+.oc-diptico-cred a { color: var(--muted); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .oc-diptico-img img { transition: transform 700ms var(--ease-out); }
+  .oc-diptico-img:hover img { transform: scale(1.04); }
+}
+@media (max-width: 959px) { .oc-ficha > .oc-hero > .oc-diptico { order: 1; margin-top: 20px; } }
+@media (min-width: 960px) { .oc-ficha > .oc-hero:has(.oc-diptico) { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 5vw, 80px); } .oc-ficha > .oc-hero .oc-diptico { position: sticky; top: calc(var(--header-h) + 24px); } }
+
+/* =====================================================================
+   FICHAS DE ARCHIVO · imaginero, compositor y marcha
+   ===================================================================== */
+.oc-dossier { padding-top: 6px; max-width: 760px; }
+.oc-dossier .oc-title { font-size: clamp(2.8rem, 12vw, 5.6rem); line-height: .88; color: var(--primary); text-wrap: balance; }
+.oc-dossier .oc-lead { margin-top: 14px; }
+.oc-dossier .oc-facts { margin-top: 20px; padding: 0 18px; background: var(--surface); border-radius: 18px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); box-shadow: 0 18px 40px -30px rgb(20 8 29 / .45); }
+.oc-dossier .oc-facts > div { grid-template-columns: 6.6rem minmax(0, 1fr); padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 0; }
+.oc-dossier .oc-facts > div:first-child { border-top: 0; }
+.oc-dossier .oc-facts dt { font: 600 .7rem/1.4 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.oc-dossier .oc-actions { margin-top: 18px; }
+.oc-dossier .oc-btn, .oc-dossier .oc-btn.is-quiet { border-radius: 999px; }
+.oc-cifras { display: flex; flex-wrap: wrap; gap: 6px 28px; list-style: none; margin: 18px 0 0; padding: 0; }
+.oc-cifras li { display: flex; align-items: baseline; gap: 8px; }
+.oc-cifras b { font: 400 clamp(2.6rem, 9vw, 3.6rem)/.9 var(--display); color: var(--gold-ink); font-variant-numeric: tabular-nums; }
+.oc-cifras span { font: 600 .78rem/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Marcha: tarjeta de escucha con un gran botón de reproducir en oro */
+.oc-escucha { display: flex; align-items: center; gap: 18px; margin-top: 22px; padding: 16px 20px 16px 16px; border-radius: 22px; color: #fff; background: radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--primary) 70%, #6b3a9a), #1b0c28 70%); box-shadow: 0 24px 48px -30px rgb(20 8 29 / .8); }
+:root[data-theme="dark"] .oc-escucha { background: radial-gradient(120% 140% at 0% 0%, #4b2470, #1b0c28 70%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-escucha { background: radial-gradient(120% 140% at 0% 0%, #4b2470, #1b0c28 70%); } }
+.oc-escucha-play { flex: none; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(160deg, #f3dca0, var(--gold) 55%, #9a7428); color: #1b0c28; box-shadow: 0 10px 22px -10px rgb(0 0 0 / .6), inset 0 1px 0 rgb(255 255 255 / .5); transition: transform 140ms var(--ease-out); }
+.oc-escucha-play svg { width: 26px; height: 26px; margin-left: 3px; }
+.oc-escucha-play:active { transform: scale(.94); }
+.oc-escucha-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.oc-escucha-txt strong { font: 600 1.08rem/1.25 var(--sans); }
+.oc-escucha-txt span { font-size: .85rem; color: rgb(255 255 255 / .78); }
+.oc-escucha-txt a { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin-top: 6px; min-height: 32px; color: #f0d79c; font-weight: 600; font-size: .9rem; }
+.oc-escucha-txt a .oc-i { width: 15px; height: 15px; }
+@media (hover: hover) and (pointer: fine) { .oc-escucha-play:hover { transform: scale(1.06); } }
+
+/* Buscar: «Explora» con las ocho colgaduras y los accesos al archivo */
+.oc-explora { margin-top: 28px; }
+.oc-explora-caps { list-style: none; margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 10px; display: grid; grid-auto-flow: column; grid-auto-columns: 74px; gap: 10px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); }
+.oc-explora-caps::-webkit-scrollbar { display: none; }
+.oc-explora-caps li { scroll-snap-align: start; }
+.oc-explora-caps a { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font: 600 .8rem/1.1 var(--sans); }
+.oc-explora-caps img { width: 100%; height: 150px; object-fit: cover; object-position: 50% 0; filter: drop-shadow(0 8px 8px rgb(20 8 29 / .28)); transition: transform 160ms var(--ease-out); transform-origin: 50% 0; }
+.oc-explora-caps a:active img { transform: scale(.96); }
+@media (min-width: 760px) { .oc-explora-caps { grid-auto-flow: row; grid-template-columns: repeat(8, 1fr); margin-inline: 0; padding-inline: 0; overflow: visible; } .oc-explora-caps img { height: 190px; } }
+.oc-explora-dir { list-style: none; margin: 18px 0 0; padding: 0 18px; background: var(--surface); border-radius: 18px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.oc-explora-dir li + li { border-top: 1px solid var(--line); }
+.oc-explora-dir a { display: flex; align-items: center; gap: 10px; min-height: 54px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.oc-explora-dir a span { flex: 1; }
+.oc-explora-dir b { font: 400 1.5rem/1 var(--display); color: var(--gold-ink); }
+.oc-explora-dir .oc-i { width: 18px; height: 18px; color: var(--muted); }
+.oc-searchform-row input { border-radius: 999px; padding-inline: 22px; }
+.oc-searchform .oc-btn { border-radius: 999px; min-width: 52px; }
+.oc-search-results.is-page:not(:empty) + .oc-explora { display: none; }
+
+/* Tablas (bandas por jornada, titulares, marchas): en el móvil, cada fila es una tarjeta limpia */
+@media (max-width: 640px) {
+  .oc-table tr { padding: 14px 0; }
+  .oc-table td:first-child { display: block; font-weight: 600; font-size: 1.02rem; color: var(--primary); }
+  .oc-table td:first-child::before { display: none; }
+  .oc-table td:not(:first-child) { grid-template-columns: 6.2rem minmax(0, 1fr); font-size: .94rem; }
+  .oc-table td::before { font: 600 .68rem/1.9 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+}

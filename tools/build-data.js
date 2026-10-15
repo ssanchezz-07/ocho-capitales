@@ -319,6 +319,13 @@ for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
   if (!h.web && x.web_oficial && x.web_oficial.url) { h.web = x.web_oficial.url; h.web_fuente = x.web_oficial.fuente; }
   const w = x.sevilla_wd;
   if (w) { if (!h.web && w.web) { h.web = w.web; h.web_fuente = w.wikidata; } if (!h.fundacion && w.fundacion) h.fundacion = w.fundacion; if (!h.nombre_oficial && w.nombre_oficial) h.nombre_oficial = w.nombre_oficial; }
+  // La web oficial cambió de direcciones (p. ej. la Agrupación de Córdoba en 2026): se enlaza la ficha vigente
+  if (x.fuente_actual && x.fuente_actual.url) h.fuente_url = x.fuente_actual.url;
+  // Huecos rellenados a mano desde la ficha oficial o Wikipedia (tools/leer-fichas.mjs): resumen propio con su fuente.
+  for (const [k, v] of Object.entries(x.relleno || {})) {
+    if (!v || !v.valor || (h[k] && String(h[k]).trim())) continue;
+    h[k] = v.valor; (h.relleno_fuentes = h.relleno_fuentes || {})[k] = v.fuente;
+  }
 }
 // En las vísperas el orden de paso sigue la hora de salida publicada.
 const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };

@@ -83,6 +83,20 @@ for (const [kind, slug, meta] of jobs) {
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }
   fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
 }
+// Díptico de titulares (Cristo y Virgen), aprobados a ojo en data/imagenes-titulares.json (ver buscar-titulares.mjs)
+const TIT_FILE = path.join(SITE, 'data', 'imagenes-titulares.json');
+const TIT = fs.existsSync(TIT_FILE) ? JSON.parse(fs.readFileSync(TIT_FILE, 'utf8')) : { hermandades: {} };
+index.titulares = prev.titulares || {};
+for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
+  for (const tipo of ['cristo', 'virgen', 'juntos']) {
+    const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
+    const prevT = (index.titulares[slug] || {})[tipo];
+    if (prevT && prevT.pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) continue;
+    try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
+    catch (e) { fail++; console.log('FALLO', 't', slug, tipo, e.message); }
+    fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
+  }
+}
 fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
 const bytes = fs.readdirSync(OUT_DIR).reduce((a, f) => a + fs.statSync(path.join(OUT_DIR, f)).size, 0);
 console.log(`Procesadas ${done}, fallos ${fail}, total en índice ${Object.keys(index.hermandades).length + Object.keys(index.capitales).length}, peso ${(bytes / 1e6).toFixed(1)} MB`);
