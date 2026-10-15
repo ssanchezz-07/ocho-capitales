@@ -214,7 +214,7 @@
       var svg = el('svg', { 'class': 'oc-colg-svg', viewBox: datos.vb, preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.prov.forEach(function (p) { var n = el('path', { 'class': 'oc-prov2', 'data-prov': p.s, d: p.d }); n.style.setProperty('--c', p.c); svg.appendChild(n); });
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
-      datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, pathLength: 1, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
+      datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d:'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.insertBefore(svg, mapa.firstChild); mapa.insertBefore(hs, svg.nextSibling);
       datos.caps.forEach(function (c) { var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; mapa.insertBefore(d, $('[data-colg-pie]', mapa)); });
     }
@@ -277,7 +277,13 @@
       provs.forEach(function (p) { p.classList.toggle('is-on', p.dataset.prov === current); });
       hilos.forEach(function (h) {
         var on = h.dataset.hilo === current; h.classList.toggle('is-on', on);
-        if (on && animar && !calm && h.animate && prev !== current) h.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 560, easing: EASE });
+        // Con trazo de grosor fijo, Chrome mide los guiones en píxeles de pantalla: se calcula la longitud real en pantalla
+        // (tramos verticales con el alto, horizontales con el ancho) y el guion solo existe mientras se dibuja.
+        if (on && animar && !calm && h.animate && prev !== current) {
+          var c = (datos.caps || []).filter(function (k) { return k.s === current; })[0], box = h.ownerSVGElement.getBoundingClientRect();
+          var len = c ? Math.ceil((c.l + Math.abs(c.y - c.l)) * box.height / 100 + Math.abs(c.x - c.b) * box.width / 100) + 2 : 0;
+          if (len) h.animate([{ strokeDasharray: len + ' ' + len, strokeDashoffset: len }, { strokeDasharray: len + ' ' + len, strokeDashoffset: 0 }], { duration: 560, easing: EASE });
+        }
       });
       puntos.forEach(function (p) { p.classList.toggle('is-on', p.dataset.punto === current); });
       var activo = current ? irs.filter(function (a) { return a.dataset.ir === current; })[0] : null;
@@ -551,11 +557,21 @@
   if (daynav && 'IntersectionObserver' in window) {
     var links = $$('a', daynav), byId = {};
     links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    // Píldora que se desliza de una jornada a otra (como un control segmentado); sin animación con «reducir movimiento».
+    var dnUl = $('ul', daynav), ind = document.createElement('span');
+    ind.className = 'oc-daynav-ind'; ind.setAttribute('aria-hidden', 'true'); dnUl.appendChild(ind);
+    var moveInd = function (a) {
+      if (!a) { ind.style.opacity = '0'; return; }
+      ind.style.width = a.offsetWidth + 'px';
+      ind.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+      ind.style.opacity = '1';
+    };
+    window.addEventListener('resize', function () { moveInd($('.is-current', daynav)); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         links.forEach(function (a) { a.classList.remove('is-current'); });
-        var a = byId[en.target.id]; if (a) { a.classList.add('is-current'); hscroll(a, true); }
+        var a = byId[en.target.id]; if (a) { a.classList.add('is-current'); moveInd(a); hscroll(a, true); }
       });
     }, { rootMargin: '-35% 0px -60% 0px' });
     $$('.oc-day').forEach(function (s) { io.observe(s); });

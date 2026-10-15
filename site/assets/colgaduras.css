@@ -87,7 +87,7 @@ html:has([data-home]) .oc-cityselect { display: none; }
 [data-colgaduras][data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) calc(var(--tint) * .55), var(--bg)); }
 [data-colgaduras][data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) calc(var(--tint) * 2.1), var(--bg)); }
 .oc-colg-hilos { overflow: visible; pointer-events: none; }
-.oc-hilo { fill: none; stroke: var(--gold); stroke-width: 1.2px; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; opacity: .75; transition: opacity 300ms var(--ease-out), stroke-width 300ms var(--ease-out); }
+.oc-hilo { fill: none; stroke: var(--gold); stroke-width: 1.2px; vector-effect: non-scaling-stroke; stroke-linecap: round; opacity: .75; transition: opacity 300ms var(--ease-out), stroke-width 300ms var(--ease-out); }
 [data-colgaduras][data-sel] .oc-hilo { opacity: .22; }
 [data-colgaduras][data-sel] .oc-hilo.is-on { opacity: 1; stroke-width: 2.2px; }
 .oc-punto { position: absolute; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--c), 0 0 0 4px rgb(255 255 255 / .75); pointer-events: none; z-index: 1; transition: transform 320ms var(--ease-out); }
@@ -138,6 +138,16 @@ html:has([data-home]) .oc-cityselect { display: none; }
   .oc-news-home .oc-news:nth-child(2) .oc-news-body { border-top: 0; padding-top: 0; }
 }
 
+/* Pantallas anchas: el titular a la izquierda y el balcón (colgaduras + mapa) a la derecha, todo en la primera pantalla */
+@media (min-width: 1100px) {
+  .oc-hero2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 600px); grid-template-rows: auto auto; align-content: center; column-gap: clamp(40px, 5vw, 96px); text-align: left; min-height: min(calc(100svh - var(--header-h) - 24px), 760px); padding: 24px 0 8px; }
+  .oc-hero2-title { grid-column: 1; grid-row: 1; align-self: end; font-size: clamp(5rem, 6.6vw, 7.6rem); line-height: .84; }
+  .oc-hero2-count { grid-column: 1; grid-row: 2; align-self: start; margin-top: 18px; font-size: 1.3rem; }
+  .oc-colgaduras { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 100%; max-width: none; margin: 0; }
+  .oc-colg { width: 80%; }
+  .oc-colg-name { font-size: 1.02rem; }
+}
+
 /* ---------- Movimiento: solo en los selectores; con «reducir movimiento», sin muelles ---------- */
 @media (prefers-reduced-motion: reduce) {
   .oc-prov2, .oc-hilo, .oc-punto { transition: none; }
@@ -158,3 +168,159 @@ html:has([data-home]) .oc-cityselect { display: none; }
 :root[data-theme="dark"] .oc-today { --ink: #f4eff9; --muted: #bfb4cd; --line: #35254b; --line-strong: #5d4a78; --bg: #14081d; --surface: #1e1030; --surface-2: #28173e; --primary: #dcc7f4; --primary-hover: #eadbfa; --on-primary: #1b1024; --gold-ink: #e0c27a; --focus: #e2c47a; }
 .oc-today::before, .oc-today::after { display: none; }
 .oc-today-title { font-family: var(--display); font-weight: 400; letter-spacing: .01em; color: var(--primary); }
+
+/* =====================================================================
+   MOVIMIENTO · 2026-10-15
+   Una sola familia de curvas para todo el sitio. Respuesta inmediata al tacto, entradas suaves,
+   salidas rápidas. Con «reducir movimiento» nada se desplaza: solo cambia (o aparece) al instante.
+   ===================================================================== */
+:root { --ease-drawer: cubic-bezier(.32, .72, 0, 1); --ease-io: cubic-bezier(.77, 0, .175, 1); }
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+a, button, [role="button"], summary { touch-action: manipulation; }
+button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-tabbar button { -webkit-user-select: none; user-select: none; }
+
+/* Cambio de página: la cabecera y la barra inferior se quedan quietas; el contenido sube y aparece.
+   La colgadura de la portada viaja hasta la cabecera de su capital (mismo nombre de transición). */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+.oc-header { view-transition-name: oc-header; }
+.oc-tabbar { view-transition-name: oc-tabbar; }
+::view-transition-group(*) { animation-duration: 420ms; animation-timing-function: var(--ease-drawer); }
+::view-transition-old(root) { animation: 140ms cubic-bezier(.4, 0, 1, 1) both oc-vt-out; }
+::view-transition-new(root) { animation: 360ms var(--ease-out) 40ms both oc-vt-in; }
+@keyframes oc-vt-out { to { opacity: 0; } }
+@keyframes oc-vt-in { from { opacity: 0; transform: translateY(14px); } }
+
+/* Barra inferior: píldora tras el icono activo, que se desliza de pestaña a pestaña al cambiar de página */
+.oc-tabbar [aria-current="page"]::before { display: none; }
+.oc-tabbar a, .oc-tabbar button { isolation: isolate; }
+.oc-tabpill { position: absolute; top: 4px; left: 50%; width: 60px; height: 30px; margin-left: -30px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 14%, transparent); z-index: -1; view-transition-name: oc-tabpill; }
+.oc-tabbar a:active .oc-tabpill { transform: scale(.94); transition: transform 100ms var(--ease-out); }
+
+/* Cabecera: se asienta (sombra suave) en cuanto la página empieza a moverse */
+@supports (animation-timeline: scroll()) {
+  .oc-header { animation: oc-cab linear both; animation-timeline: scroll(root); animation-range: 0 90px; }
+  @keyframes oc-cab { from { box-shadow: 0 0 0 0 rgb(20 8 29 / 0); border-bottom-color: transparent; } to { box-shadow: 0 8px 24px -18px rgb(20 8 29 / .45); } }
+}
+
+/* Revelado al hacer scroll, ligado al propio desplazamiento (sin JS): lo que entra en pantalla sube y se aclara.
+   Lo que ya está a la vista al cargar se ve completo. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .oc-news-home .oc-news, .oc-newsgrid .oc-news, .oc-entry, .oc-plates > li, .oc-tiles > li, .oc-evs > li,
+    .oc-h2, .oc-prose > p, .oc-facts > div, .oc-curio, .oc-chips > li, .oc-table tbody tr, .oc-prevnext a {
+      animation: oc-aparece linear both; animation-timeline: view(); animation-range: entry 0% entry 70%;
+    }
+  }
+}
+@keyframes oc-aparece { from { opacity: 0; transform: translateY(22px); } }
+
+/* Pulsar: todo lo pulsable responde al dedo, no al soltar */
+.oc-link, .oc-tile, .oc-plate, .oc-prevnext a, .oc-colg-ir, .oc-daynav a, .oc-chips a, .oc-chips button { transition-property: transform, background-color, color, border-color; transition-duration: 140ms; transition-timing-function: var(--ease-out); }
+.oc-link:active, .oc-prevnext a:active, .oc-colg-ir:active, .oc-daynav a:active { transform: scale(.97); }
+.oc-tile:active, .oc-plate:active { transform: scale(.985); }
+@media (hover: hover) and (pointer: fine) {
+  .oc-plate:hover { transform: translateY(-3px); }
+  .oc-prevnext a:hover { border-color: var(--gold); }
+}
+
+/* =====================================================================
+   CAPITAL · portada a sangre con su colgadura
+   ===================================================================== */
+.oc-caphero { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: min(76svh, 660px); margin: 0 calc(-1 * var(--gutter)); padding: 120px var(--gutter) clamp(24px, 6vw, 48px); overflow: hidden; color: #fff; background: radial-gradient(120% 90% at 78% 0%, color-mix(in srgb, var(--c) 85%, #fff 8%), var(--c-plate) 55%, #13071d 100%); view-timeline: --caphero block; }
+.oc-caphero-img { position: absolute; inset: 0; z-index: -2; overflow: hidden; background: #13071d; }
+.oc-caphero-img img { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 30%; }
+.oc-caphero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgb(19 7 29 / .38) 0%, rgb(19 7 29 / 0) 26%, rgb(19 7 29 / .2) 46%, rgb(19 7 29 / .9) 100%), linear-gradient(90deg, color-mix(in srgb, var(--c-plate) 55%, transparent) 0%, transparent 65%); }
+.oc-caphero:not(.has-img)::after { background: linear-gradient(180deg, transparent 40%, rgb(19 7 29 / .45) 100%); }
+.oc-caphero-colg { position: absolute; top: -6px; right: clamp(18px, 7vw, 84px); width: clamp(62px, 17vw, 124px); height: auto; transform-origin: 50% 0; filter: drop-shadow(0 14px 16px rgb(0 0 0 / .45)); pointer-events: none; }
+.oc-caphero-text { position: relative; max-width: 40rem; }
+.oc-caphero-title { margin: 0; font: 400 clamp(4rem, 19vw, 8.6rem)/.84 var(--display); text-transform: uppercase; letter-spacing: .004em; text-wrap: balance; color: #fff; text-shadow: 0 2px 24px rgb(19 7 29 / .35); }
+.oc-caphero-title span { display: block; margin-bottom: .14em; font-size: .3em; line-height: 1; letter-spacing: .14em; color: #f0d79c; }
+.oc-caphero-lema { margin: 14px 0 0; max-width: 34ch; font: 500 clamp(1.05rem, 3.7vw, 1.35rem)/1.35 var(--sans); letter-spacing: -.01em; color: rgb(255 255 255 / .94); text-wrap: pretty; }
+.oc-caphero-meta { margin: 10px 0 0; font: 600 .8125rem/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #f0d79c; font-variant-numeric: tabular-nums; }
+.oc-caphero .oc-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+.oc-caphero .oc-btn, .oc-caphero .oc-btn.is-quiet { margin: 0; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid rgb(255 255 255 / .38); background: rgb(255 255 255 / .14); -webkit-backdrop-filter: blur(14px) saturate(1.6); backdrop-filter: blur(14px) saturate(1.6); color: #fff; }
+.oc-caphero .oc-btn span { display: inline; }
+.oc-caphero .oc-fav[aria-pressed="true"] { background: #f0d79c; border-color: #f0d79c; color: #1c0f2b; }
+@media (hover: hover) and (pointer: fine) { .oc-caphero .oc-btn:hover, .oc-caphero .oc-btn.is-quiet:hover { background: rgb(255 255 255 / .26); border-color: rgb(255 255 255 / .6); color: #fff; } }
+.oc-caphero-credit { margin: 8px 0 0; font-size: .75rem; color: var(--muted); overflow-wrap: anywhere; }
+.oc-caphero-credit a { color: var(--muted); }
+@media (min-width: 860px) {
+  .oc-caphero { margin-inline: 0; border-radius: 24px; min-height: min(72svh, 640px); padding: 140px clamp(36px, 5vw, 64px) clamp(36px, 5vw, 56px); }
+  .oc-caphero-title span { font-size: .26em; }
+}
+/* La colgadura se mece al llegar (muelle amortiguado) y, al bajar, la foto se queda atrás y el titular se despide */
+@media (prefers-reduced-motion: no-preference) {
+  .oc-caphero-colg { animation: oc-mece 1.9s cubic-bezier(.25, .8, .3, 1) 160ms both; }
+  @keyframes oc-mece { 0% { rotate: 7deg; } 28% { rotate: -4deg; } 52% { rotate: 2deg; } 74% { rotate: -.8deg; } 100% { rotate: 0deg; } }
+  @supports (animation-timeline: view()) {
+    .oc-caphero-img img { animation: oc-fondo linear both; animation-timeline: --caphero; animation-range: exit 0% exit 100%; }
+    .oc-caphero-text { animation: oc-despide linear both; animation-timeline: --caphero; animation-range: exit 5% exit 70%; }
+    @keyframes oc-fondo { to { transform: translateY(22%) scale(1.08); } }
+    @keyframes oc-despide { to { opacity: 0; transform: translateY(-28px); } }
+  }
+}
+
+/* Jornadas: control segmentado de cristal, con píldora que se desliza a la jornada visible */
+.oc-daynav { margin-top: 18px; background: color-mix(in srgb, var(--bg) 80%, transparent); -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.oc-daynav ul { position: relative; }
+.oc-daynav a { position: relative; z-index: 1; border-radius: 999px; padding: 0 14px; transition-property: transform, color; transition-duration: 140ms, 260ms; }
+.oc-daynav a.is-current { background: none; color: var(--on-primary); }
+.oc-daynav-ind { position: absolute; left: 0; top: 8px; height: 40px; border-radius: 999px; background: var(--primary); opacity: 0; pointer-events: none; transition: transform 460ms var(--ease-drawer), width 460ms var(--ease-drawer), opacity 200ms var(--ease-out); }
+@media (prefers-reduced-motion: reduce) { .oc-daynav-ind, .oc-daynav a { transition: none; } }
+@media (prefers-reduced-transparency: reduce) { .oc-daynav { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* =====================================================================
+   FICHAS · hermandad, banda y listas
+   ===================================================================== */
+/* Monograma bordado: la inicial en oro sobre el terciopelo de su capital (hermandades sin foto) */
+.oc-entry-img { width: 64px; height: 64px; border-radius: 14px; }
+.oc-entry-img.is-blank { background: radial-gradient(120% 90% at 30% 15%, color-mix(in srgb, var(--c) 80%, #fff 10%), var(--c-plate) 70%); border: 0; box-shadow: inset 0 0 0 1px rgb(240 215 156 / .5), inset 0 0 0 4px var(--c-plate), inset 0 0 0 5px rgb(240 215 156 / .35); }
+.oc-entry-img.is-blank span { font: 400 2.1rem/1 var(--display); color: #f0d79c; text-transform: uppercase; text-shadow: 0 1px 1px rgb(0 0 0 / .45); }
+.oc-entry-img.is-escudo { border-radius: 14px; }
+.oc-entry { transition: background-color 160ms var(--ease-out); border-radius: 2px; }
+@media (hover: hover) and (pointer: fine) { .oc-entry:hover .oc-entry-img img { transform: scale(1.05); } .oc-entry-img img { transition: transform 420ms var(--ease-out); } }
+
+/* Ficha de hermandad: galón de su capital, titular de cartel y datos agrupados en una tarjeta (como los ajustes de iOS) */
+.oc-kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 12px; font: 700 .78rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold-ink); }
+.oc-kicker::before { content: ""; width: 26px; height: 4px; border-radius: 2px; background: var(--c); box-shadow: 0 4px 0 -1px var(--gold); }
+.oc-ficha > .oc-hero { padding-top: 6px; gap: 26px; }
+.oc-ficha .oc-title { font-size: clamp(3rem, 13vw, 6.2rem); line-height: .86; color: var(--primary); text-wrap: balance; }
+.oc-ficha .oc-title.is-long { font-size: clamp(2.3rem, 8.5vw, 4.4rem); }
+.oc-ficha .oc-subtitle { margin-top: 12px; font-size: 1.05rem; line-height: 1.45; color: var(--muted); max-width: 46ch; text-wrap: pretty; }
+.oc-ficha .oc-facts { margin-top: 22px; padding: 0 18px; background: var(--surface); border-radius: 18px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); box-shadow: 0 18px 40px -30px rgb(20 8 29 / .45); }
+.oc-ficha .oc-facts > div { grid-template-columns: 6.6rem minmax(0, 1fr); padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 0; }
+.oc-ficha .oc-facts > div:first-child { border-top: 0; }
+.oc-ficha .oc-facts dt { font: 600 .7rem/1.4 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.oc-ficha .oc-facts dd a { color: var(--primary); text-underline-offset: 3px; }
+.oc-ficha .oc-actions { margin-top: 18px; }
+.oc-ficha .oc-btn, .oc-ficha .oc-btn.is-quiet { border-radius: 999px; }
+.oc-ficha .oc-figure img { border-radius: 22px; box-shadow: 0 34px 60px -38px rgb(20 8 29 / .7); }
+.oc-ficha .oc-figure.is-escudo img { border-radius: 22px; box-shadow: none; background: var(--surface); }
+@media (min-width: 960px) {
+  .oc-ficha > .oc-hero.has-img { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(40px, 5vw, 80px); }
+  .oc-ficha > .oc-hero .oc-figure { position: sticky; top: calc(var(--header-h) + 24px); }
+}
+.oc-prevnext a { border-radius: 16px; }
+
+/* Cabecera compacta de terciopelo (bandas): la colgadura de su provincia y el nombre en blanco */
+.oc-caphero.is-compact { min-height: 0; padding-top: clamp(56px, 12vw, 96px); }
+.oc-caphero.is-compact .oc-caphero-title { font-size: clamp(2.8rem, 11vw, 5.4rem); line-height: .88; padding-right: clamp(70px, 18vw, 150px); }
+.oc-caphero.is-compact .oc-caphero-title.is-long { font-size: clamp(2.2rem, 8vw, 3.8rem); }
+.oc-caphero.is-compact .oc-caphero-colg { width: clamp(48px, 12vw, 96px); }
+.oc-caphero .oc-stats { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; margin: 16px 0 0; padding: 0; }
+.oc-caphero .oc-stats li { display: flex; align-items: baseline; gap: 6px; color: #f0d79c; }
+.oc-caphero .oc-stats b { font: 400 2.4rem/1 var(--display); color: #fff; }
+.oc-caphero .oc-stats span { font: 600 .78rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+/* Móvil: la imagen de la hermandad sube justo bajo el titular (antes quedaba tras toda la tabla de datos) */
+@media (max-width: 959px) {
+  .oc-ficha > .oc-hero { gap: 0; }
+  .oc-ficha > .oc-hero > .oc-hero-text { display: contents; }
+  .oc-ficha > .oc-hero > .oc-figure { order: 1; margin-top: 20px; }
+  .oc-ficha > .oc-hero > .oc-figure img { max-height: 62svh; }
+  .oc-ficha > .oc-hero .oc-facts { order: 2; }
+  .oc-ficha > .oc-hero .oc-actions { order: 3; }
+  .oc-ficha > .oc-hero .oc-figure.is-escudo { width: 46%; max-width: 220px; }
+}
+/* Sello de ocho puntas bordado en oro sobre el terciopelo cuando no hay foto ni colgadura que lo ocupe */
+.oc-caphero.is-compact:not(:has(.oc-caphero-colg))::before, .oc-caphero:not(.has-img):not(.is-compact)::before { content: ""; position: absolute; right: clamp(-60px, -4vw, -20px); top: 50%; width: clamp(220px, 40vw, 440px); aspect-ratio: 1; translate: 0 -50%; z-index: -1; opacity: .16; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23f0d79c' stroke-width='.9'%3E%3Crect x='9' y='9' width='22' height='22'/%3E%3Crect x='9' y='9' width='22' height='22' transform='rotate(45 20 20)'/%3E%3Crect x='12.5' y='12.5' width='15' height='15'/%3E%3Crect x='12.5' y='12.5' width='15' height='15' transform='rotate(45 20 20)'/%3E%3Ccircle cx='20' cy='20' r='2.2' fill='%23f0d79c' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }

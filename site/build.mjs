@@ -226,7 +226,7 @@ const timeTag = (ts) => { const d = new Date(ts); return `<time datetime="${d.to
 function entryHerm(h, extra = '') {
   const c = CAP[h.ciudad];
   const im = h.imagen;
-  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>${tit || h.sede ? `<p class="oc-entry-sub">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
@@ -390,8 +390,8 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta name="description" content="${esc(description.slice(0, 300))}">
 <link rel="canonical" href="${esc(canonical)}">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eeece6">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#110c17">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e1030">
 <meta property="og:site_name" content="${BRAND}"><meta property="og:locale" content="es_ES"><meta property="og:type" content="${p.startsWith('hermandad/') || p.startsWith('banda/') || p.startsWith('imaginero/') ? 'article' : 'website'}">
 <meta property="og:title" content="${esc(title || BRAND)}"><meta property="og:description" content="${esc(description.slice(0, 200))}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(ogImage)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title || BRAND)}"><meta name="twitter:description" content="${esc(description.slice(0, 200))}"><meta name="twitter:image" content="${esc(ogImage)}">
@@ -436,10 +436,7 @@ ${body}${colabora(p, title)}
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
-  <a href="${u()}"${p === '' ? ' aria-current="page"' : ''}>${icon('home')}<span>Hoy</span></a>
-  <a href="${u('noticias/')}"${active === 'noticias/' ? ' aria-current="page"' : ''}>${icon('news')}<span>Noticias</span></a>
-  <a href="${u('calendario/')}"${active === 'calendario/' ? ' aria-current="page"' : ''}>${icon('cal')}<span>Calendario</span></a>
-  <a href="${u('buscar/')}" data-open-search${p === 'buscar/' ? ' aria-current="page"' : ''}>${icon('search')}<span>Buscar</span></a>
+  ${[[u(), p === '', 'home', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('calendario/'), active === 'calendario/', 'cal', 'Calendario', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
   <button type="button" data-more aria-expanded="false" aria-controls="oc-more">${icon('more')}<span>Más</span></button>
 </nav>
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
@@ -545,7 +542,7 @@ function colgaduras() {
   const items = orden.map((c, i) => {
     const hermandades = hermsOf(c.slug).length;
     const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
-    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">Semana Santa de ${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">Semana Santa de ${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
   }).join('');
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
@@ -676,10 +673,14 @@ function pageCapital(c) {
   const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') : '';
   const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` : '';
   const news = newsFor(c.slug, 6);
-  const body = `<header class="oc-hero is-plate${c.imagen ? ' has-img' : ''}" style="--c:${c.color}">
-  <div class="oc-hero-text"><h1 class="oc-title oc-title-city">Semana Santa de ${esc(c.nombre)}</h1><p class="oc-lema">${esc(c.lema)}</p><p class="oc-hero-meta">${plural(hs.length, 'hermandad', 'hermandades')} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
-  ${c.imagen ? `<figure class="oc-figure">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 860px) 100vw, 45vw', widths: [500, 960], eager: true })}<figcaption>${credit(c.imagen)}</figcaption></figure>` : ''}
+  // Portada de capital «Colgaduras»: la foto a sangre, su colgadura colgando del balcón (la misma de la portada, que viaja con
+  // la transición de página) y el titular sobre un velo nazareno. El crédito de la foto va justo debajo.
+  const body = `<header class="oc-caphero${c.imagen ? ' has-img' : ''}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
+  ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 1240px) 100vw, 1200px', widths: [500, 960, 1280], eager: true })}</div>` : ''}
+  <img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" style="view-transition-name:colg-${c.slug}">
+  <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${plural(hs.length, 'hermandad', 'hermandades')} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
 </header>
+${c.imagen ? `<p class="oc-caphero-credit">${credit(c.imagen)}</p>` : ''}
 <nav class="oc-daynav" aria-label="Jornadas de ${esc(c.nombre)}"><ul>${groups.map(([d]) => `<li><a href="#${slugify(d)}">${esc(d)}</a></li>`).join('')}</ul></nav>
 <div class="oc-split">
 <div class="oc-split-main">
@@ -694,7 +695,7 @@ ${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u
 </aside>
 </div>
 ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n)).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
-  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 860px) 100vw, 45vw', [500, 960]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
+  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 1240px) 100vw, 1200px', [500, 960, 1280]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
 const IGUSER = (r) => String(r).replace(/^@/, '');
@@ -734,6 +735,7 @@ function pageHerm(h) {
   const body = `<article class="oc-ficha">
 <header class="oc-hero${im ? ' has-img' : ''}" style="--c:${c.color}">
   <div class="oc-hero-text">
+    <p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · ${esc(h.dia)}</p>
     <h1 class="oc-title${h.nombre.length > 60 ? ' is-long' : ''}">${esc(h.nombre)}</h1>
     ${h.nombre_oficial ? `<p class="oc-subtitle">${esc(h.nombre_oficial)}</p>` : ''}
     ${facts([['Capital', `<a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a>`], ['Día de salida', `<a href="${u('semana-santa/' + c.slug + '/#' + slugify(h.dia))}">${esc(h.dia)}</a>${vecinos.length > 1 ? ` <span class="oc-muted">(${idx + 1}.ª de ${vecinos.length})</span>` : ''}`], ['Sede', h.sede ? `${esc(h.sede)} <a class="oc-maplink" href="${mapLink(h.sede + ', ' + c.nombre)}" target="_blank" rel="noopener">${icon('pin')}Cómo llegar</a>` : ''], ['Titulares', titList], ['Hora de salida', h.hora ? esc(h.hora) + ' h <span class="oc-muted">(2026)</span>' : ''], ['Otras salidas', (h.salidas || []).map((s) => `${esc(s.dia)}${s.hora ? ', ' + esc(s.hora) + ' h' : ''}: ${esc(s.titulares)}${s.nota ? ` <span class="oc-muted">${esc(s.nota)}</span>` : ''} <a href="${esc(s.fuente)}" target="_blank" rel="noopener">fuente</a>`).join('<br>')], ['Fundación', esc(h.fundacion)], ['Web oficial', h.web ? `<a class="oc-break" href="${esc(h.web)}" target="_blank" rel="noopener">${esc(webTxt)}</a>` : '']], 'is-key')}
@@ -782,10 +784,11 @@ function pageBanda(b) {
   ];
   const vecinas = b.origen ? D.bandas.filter((x) => x.slug !== b.slug && x.origen === b.origen).slice(0, 16) : [];
   const nuevas = items.filter((a) => a.anio > 2026);
-  const body = `<header class="oc-hero is-plate" style="--c:${col}">
-  <div class="oc-hero-text">
-    <h1 class="oc-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
-    <p class="oc-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
+  const body = `<header class="oc-caphero is-compact" style="--c:${col};--c-plate:${fondoLegible(col)}">
+  ${prov ? `<img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + prov.slug + '.webp')}" alt="" width="265" height="971">` : ''}
+  <div class="oc-caphero-text">
+    <h1 class="oc-caphero-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
+    <p class="oc-caphero-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
     ${(() => { // cifras solo cuando dicen algo (con todo a 1, la frase de resumen ya lo cuenta)
       const st = [[new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías'], [items.length, 'paso', 'pasos'], [jornadas.size, 'jornada', 'jornadas'], [ciudades.length, 'capital', 'capitales']];
       return st.some(([n]) => n > 1) ? `<ul class="oc-stats">${st.map(([n, s, p]) => `<li><b>${n}</b><span>${n === 1 ? s : p}</span></li>`).join('')}</ul>` : '';
