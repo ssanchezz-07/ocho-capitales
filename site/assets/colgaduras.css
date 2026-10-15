@@ -324,3 +324,57 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 }
 /* Sello de ocho puntas bordado en oro sobre el terciopelo cuando no hay foto ni colgadura que lo ocupe */
 .oc-caphero.is-compact:not(:has(.oc-caphero-colg))::before, .oc-caphero:not(.has-img):not(.is-compact)::before { content: ""; position: absolute; right: clamp(-60px, -4vw, -20px); top: 50%; width: clamp(220px, 40vw, 440px); aspect-ratio: 1; translate: 0 -50%; z-index: -1; opacity: .16; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23f0d79c' stroke-width='.9'%3E%3Crect x='9' y='9' width='22' height='22'/%3E%3Crect x='9' y='9' width='22' height='22' transform='rotate(45 20 20)'/%3E%3Crect x='12.5' y='12.5' width='15' height='15'/%3E%3Crect x='12.5' y='12.5' width='15' height='15' transform='rotate(45 20 20)'/%3E%3Ccircle cx='20' cy='20' r='2.2' fill='%23f0d79c' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+
+/* =====================================================================
+   LISTADOS Y PIEZAS · un mismo lenguaje: esquinas suaves, píldoras y terciopelo
+   ===================================================================== */
+/* Noticias (página, capital y ficha): miniatura a la izquierda como en la portada; sin foto, la colgadura de su capital */
+.oc-newsgrid { border-bottom: 0; gap: 0 clamp(28px, 4vw, 56px); }
+.oc-newsgrid .oc-news { grid-template-columns: clamp(78px, 19.9vw, 104px) minmax(0, 1fr); gap: 4px 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.oc-newsgrid .oc-news:not(.has-img) { grid-template-columns: minmax(0, 1fr); }
+.oc-newsgrid .oc-news-img { grid-column: 1; grid-row: 1; order: -1; margin: 0; width: auto; height: auto; aspect-ratio: 215 / 204; border-radius: 12px; overflow: hidden; background: var(--surface-2); }
+.oc-newsgrid .oc-news-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; aspect-ratio: auto; }
+.oc-newsgrid .oc-news-img.is-colg { background: var(--c); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .22); }
+.oc-newsgrid .oc-news-img.is-colg img { object-position: 50% 6%; }
+.oc-newsgrid .oc-news.has-img .oc-news-body { grid-column: 2; grid-row: 1; }
+.oc-newsgrid .oc-news-title { font: 600 clamp(1rem, 3.7vw, 1.14rem)/1.28 var(--sans); letter-spacing: -.01em; }
+.oc-newsgrid .oc-news-title a { color: var(--primary); }
+.oc-newsgrid .oc-news-meta { font: 500 .8rem/1.3 var(--sans); letter-spacing: 0; text-transform: none; }
+
+/* Filtros: sin caja; buscador en píldora y capitales en una tira deslizable */
+.oc-filters { padding: 0; background: none; border: 0; border-radius: 0; gap: 14px; }
+.oc-field label, .oc-label { font: 700 .72rem/1.2 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+.oc-field input, .oc-searchform input { height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--line-strong) 70%, transparent); background: var(--surface); font-size: 16px; }
+.oc-field input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 16%, transparent); outline: none; }
+.oc-chips a, .oc-chips button { border-radius: 999px; border-color: color-mix(in srgb, var(--line-strong) 65%, transparent); }
+@media (max-width: 759px) {
+  .oc-chips.is-filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding: 2px var(--gutter); scroll-padding-inline: var(--gutter); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--gutter), #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, transparent 0, #000 var(--gutter), #000 calc(100% - 28px), transparent); }
+  .oc-chips.is-filter::-webkit-scrollbar { display: none; }
+  .oc-chips.is-filter li { flex: none; }
+}
+
+/* «Así sale»: jornadas como fichas redondeadas */
+.oc-daytabs [role="tab"] { border-radius: 14px; border-color: color-mix(in srgb, var(--line-strong) 60%, transparent); background: var(--surface); }
+.oc-daytabs [aria-selected="true"] { box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--primary) 80%, transparent); }
+
+/* Agenda: la fecha como una hoja de calendario con cabecera morada */
+.oc-ev-date { height: 58px; overflow: hidden; border: 0; border-radius: 12px; background: var(--surface); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 80%, transparent), 0 8px 18px -14px rgb(20 8 29 / .5); justify-content: flex-start; text-transform: uppercase; font-size: .66rem; letter-spacing: .08em; color: var(--muted); }
+.oc-ev-date span { order: 2; margin: 4px 0 0; font: 400 1.75rem/1 var(--display); color: var(--primary); }
+.oc-ev-date::before { content: ""; align-self: stretch; height: 7px; background: var(--primary); margin-bottom: 6px; }
+
+/* Planchas de capital: esquinas suaves y lema en redonda (Heebo no tiene cursiva) */
+.oc-plate { border-radius: 20px; }
+.oc-plate-lema { font: 500 1.02rem/1.35 var(--sans); }
+
+/* Archivo: tarjetas sin marco, cifra de cartel en oro viejo */
+.oc-tile { border: 0; border-radius: 20px; background: var(--surface); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 75%, transparent), 0 18px 36px -30px rgb(20 8 29 / .55); }
+.oc-tile { justify-content: flex-start; gap: 14px; min-height: 0; }
+.oc-tile b { font: 400 clamp(3rem, 8vw, 4.4rem)/.85 var(--display); color: var(--gold-ink); letter-spacing: .01em; }
+@media (hover: hover) and (pointer: fine) { .oc-tile:hover { background: var(--surface); transform: translateY(-3px); box-shadow: 0 0 0 1px var(--gold), 0 24px 40px -28px rgb(20 8 29 / .6); } }
+
+/* Curiosidad del día: una cita entre galones dorados, sin caja */
+.oc-curio { border: 0; background: none; padding: 26px 0 18px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); border-radius: 0; }
+.oc-curio::before { inset: 4px 0 auto; height: 1px; border: 0; background: color-mix(in srgb, var(--gold) 55%, transparent); }
+.oc-curio p { font: 500 clamp(1.2rem, 1rem + .9vw, 1.6rem)/1.35 var(--sans); letter-spacing: -.015em; color: var(--primary); text-wrap: pretty; }
+/* Portada en escritorio: menos aire bajo el balcón para que asomen las noticias */
+@media (min-width: 1100px) { .oc-hero2 { min-height: min(calc(100svh - var(--header-h) - 120px), 660px); } }

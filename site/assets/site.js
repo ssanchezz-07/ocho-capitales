@@ -86,7 +86,18 @@
   paintAgo();
 
   // Imágenes de noticias que no cargan: se conserva el hueco con la marca para que la página no salte.
-  function dropImg(img) { var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news'); box.remove(); if (card) card.classList.remove('has-img'); }
+  // Sin foto del medio (o rota), la miniatura es la colgadura de su capital: nunca un hueco.
+  function colgTile(city) {
+    var col = window.OC_COLORS && window.OC_COLORS[city];
+    if (!col) return '';
+    return '<div class="oc-news-img is-colg" aria-hidden="true" style="--c:' + col + '"><img src="' + BASE + 'assets/plates/colgadura-' + city + '.webp" alt="" width="265" height="971" loading="lazy" decoding="async"></div>';
+  }
+  function dropImg(img) {
+    var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news');
+    var t = card && colgTile((card.getAttribute('data-cities') || '').split(' ')[0]);
+    if (t) { box.outerHTML = t; return; }
+    box.remove(); if (card) card.classList.remove('has-img');
+  }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
 
@@ -595,7 +606,8 @@
     };
     var card = function (n) {
       var d = new Date(n.ts).toISOString();
-      return '<article class="oc-news' + (n.img ? ' has-img' : '') + '">' + (n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : '') +
+      var tile = n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : colgTile((n.ciudades || [])[0]);
+      return '<article class="oc-news' + (tile ? ' has-img' : '') + '">' + tile +
         '<div class="oc-news-body"><p class="oc-news-meta">' + n.ciudades.map(cityTag).join('') + '<span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time></p><h3 class="oc-news-title"><a href="' + esc(n.url) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3>' + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div></article>';
     };
     var paintChips = function () { $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); }); };

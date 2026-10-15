@@ -243,7 +243,7 @@ function srcMono(f) {
   return (w[0][0] + w[1][0]).toUpperCase();
 }
 // Noticia: titular a la izquierda y recuadro fijo a la derecha (foto del medio o sus iniciales), para que todas tengan el mismo ritmo.
-function newsItem(n, { img = true, eager = false, tile = false } = {}) {
+function newsItem(n, { img = true, eager = false, tile = true } = {}) {
   const col = CAP[n.ciudades[0]] ? CAP[n.ciudades[0]].color : '#4a1f6e';
   let pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
   // Sin foto del medio, la miniatura es la colgadura de su capital (terciopelo y emblema), nunca un hueco.
@@ -402,7 +402,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 <link rel="stylesheet" href="${u('assets/colgaduras.css')}?v=${HUELLA.colg}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
-<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${active === 'noticias/' || active === 'calendario/' ? `window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};` : ''}</script>
+<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
 <body>
 <a class="oc-skip" href="#contenido">Saltar al contenido</a>
