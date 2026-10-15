@@ -1,0 +1,15 @@
+# Ocho Capitales en Cloudflare Pages (plan gratuito). La web estática sale de site/dist y functions/ añade /api/sugerencias.
+# Pasos (los hace Pablo con su cuenta; ver «Plan maestro» y la nota del proyecto):
+#   1. npx wrangler login
+#   2. npx wrangler d1 create ocho-capitales   → copiar aquí el database_id
+#   3. npx wrangler d1 execute ocho-capitales --remote --file datos/sugerencias.sql
+#   4. npx wrangler pages project create ocho-capitales --production-branch main
+#   5. Secreto para el resumen semanal: npx wrangler pages secret put RESUMEN_TOKEN --project-name ocho-capitales
+name = "ocho-capitales"
+pages_build_output_dir = "site/dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ocho-capitales"
+database_id = "PENDIENTE"

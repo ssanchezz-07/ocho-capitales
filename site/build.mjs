@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { detectarEventos } from './eventos.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
-const DIST = path.join(DIR, 'dist');
+const DIST = path.join(DIR, process.env.DIST_DIR || 'dist');
 const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
@@ -119,7 +119,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css'], ['calle', 'calle.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css'], ['calle', 'calle.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -190,6 +190,8 @@ const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-
 const MARK_INNER = '<rect width="40" height="40" rx="9" fill="#2b1340"/><g fill="none" stroke="#d6b263" stroke-width="2"><rect x="11.5" y="11.5" width="17" height="17"/><rect x="11.5" y="11.5" width="17" height="17" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="2.6" fill="#d6b263"/>';
 const LOGO = '<svg class="oc-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="11" y="11" width="18" height="18"/><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="2.4" fill="#c79a3b" stroke="none"/></svg>';
 const WORDMARK = `${LOGO}<span class="oc-wordmark">Ocho <span>Capitales</span></span>`;
+// erCuñao: el cuñao que lo sabe todo de la Semana Santa. Gafas de sol en la cabeza y la medalla de su hermandad al cuello.
+const CUNAO_SVG = `<svg class="oc-cunao-cara" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="31" fill="#2b1140"/><path d="M14 64c2-11 9-16 18-16s16 5 18 16z" fill="#f4efe6"/><path d="M22 49l10 11 10-11" fill="none" stroke="#6b2fa3" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="58" r="4.6" fill="#d9b560" stroke="#7a5a16" stroke-width="1"/><path d="M32 55.4v5.2M29.4 58h5.2" stroke="#7a5a16" stroke-width="1.2"/><ellipse cx="32" cy="33" rx="13.5" ry="15" fill="#e7b48c"/><path d="M18.5 30c0-11 6-16 13.5-16S45.5 19 45.5 30c-2-5-6-8-13.5-8s-11.5 3-13.5 8z" fill="#2a1b14"/><rect x="19.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><rect x="33.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><path d="M30.5 21.5h3" stroke="#d9b560" stroke-width="1.2"/><circle cx="26.5" cy="32.5" r="1.7" fill="#2a1b14"/><circle cx="37.5" cy="32.5" r="1.7" fill="#2a1b14"/><path d="M24 29.3q2.5-1.6 5 0M35 29.3q2.5-1.6 5 0" stroke="#2a1b14" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M25.5 39.5q6.5-4 13 0q-6.5 2-13 0z" fill="#2a1b14"/><path d="M27.5 42.5q4.5 3 9 0" stroke="#8a3d2e" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="23" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/><circle cx="41" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/></svg>`;
 
 // ---------- imágenes ----------
 // Las miniaturas de Wikimedia admiten otro ancho cambiando «/960px-» en la URL.
@@ -448,6 +450,15 @@ ${body}${colabora(p, title)}
   ${[[u(), p === '', 'home', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('calendario/'), active === 'calendario/', 'cal', 'Calendario', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
   <button type="button" data-more aria-expanded="false" aria-controls="oc-more">${icon('more')}<span>Más</span></button>
 </nav>
+<button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
+<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}">
+  <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
+    <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa. O eso dice.</p></div><button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button></div>
+    <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
+    <form class="oc-cunao-form" data-cunao-form><label class="oc-sr" for="oc-cunao-q">Pregunta a erCuñao</label><input id="oc-cunao-q" type="text" autocomplete="off" enterkeyhint="send" placeholder="¿A qué hora sale la Macarena?" data-cunao-q><button class="oc-cunao-enviar" type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l15-7-5 15-2.5-5.5z" fill="currentColor"/></svg></button></form>
+  </div>
+</div>
+<script src="${u('assets/cunao.js')}?v=${HUELLA.cunao}" defer></script>
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
@@ -1158,8 +1169,24 @@ function pageCalle(c) {
   write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
 }
 
+// ---------- erCuñao: datos compactos que consulta el asistente (sin IA, todo en el navegador) ----------
+function datosCunao() {
+  const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
+  const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
+  fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
+  const conMapa = new Set(D.capitales.filter((c) => fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json'))).map((c) => c.slug));
+  const hs = D.hermandades.map((h) => ({
+    s: h.slug, n: h.nombre, c: h.ciudad, d: h.dia, o: h.orden, h: h.hora || '', se: h.sede || '',
+    t: (h.titulares || []).map((t) => [t.nombre.split(',')[0], t.autor || '']),
+    b: (h.bandas_slugs || []).filter((s) => BANDA[s]).map((s) => [s, BANDA[s].nombre]),
+    w: h.web || '', f: h.fundacion || '',
+  }));
+  fs.mkdirSync(path.join(DIST, 'data'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], hermandades: hs }));
+}
+
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
-searchIndex(); extras(); escribeIcs(); escribeSw();
+searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw();
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

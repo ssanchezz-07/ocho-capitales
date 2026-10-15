@@ -33,3 +33,4 @@ Itinerarios Semana Santa/
 # Base de datos generada (se reconstruye sola) y caché de OpenStreetMap
 datos/ocho-capitales.sqlite
 tools/itinerarios/cache/
+site/dist-cf/

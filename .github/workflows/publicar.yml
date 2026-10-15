@@ -81,9 +81,24 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: node build.mjs
+      - name: Base de datos y auditoría
+        # SQLite con todo lo verificado y su procedencia; la auditoría (datos/auditoria.json) lista huecos y posibles errores
+        continue-on-error: true
+        run: node tools/db/construir.mjs
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: site/dist
+      - name: Publicar también en Cloudflare Pages (cuando esté configurado)
+        # Se activa al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID. Mientras, no hace nada.
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_URL: ${{ vars.CLOUDFLARE_URL }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Cloudflare aún no configurado"; exit 0; fi
+          cd site && BASE_PATH=/ SITE_URL="${CF_URL:-https://ocho-capitales.pages.dev}" DIST_DIR=dist-cf node build.mjs && cd ..
+          sed -i 's#pages_build_output_dir = "site/dist"#pages_build_output_dir = "site/dist-cf"#' wrangler.toml
+          npx --yes wrangler@3 pages deploy site/dist-cf --project-name ocho-capitales --branch main
   desplegar:
     needs: construir
     runs-on: ubuntu-latest

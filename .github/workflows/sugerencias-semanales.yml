@@ -1,0 +1,32 @@
+# Ocho Capitales: cada lunes recoge las sugerencias de la semana (llegadas por erCuñao a Cloudflare D1) y abre una
+# incidencia en GitHub para debatirlas. Solo funciona cuando la web está en Cloudflare y existen los secretos
+# SUGERENCIAS_URL (https://<proyecto>.pages.dev/api/sugerencias) y RESUMEN_TOKEN.
+name: Sugerencias de la semana
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  resumen:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Recoger y publicar el resumen
+        env:
+          URL: ${{ secrets.SUGERENCIAS_URL }}
+          TOKEN: ${{ secrets.RESUMEN_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$URL" ] || [ -z "$TOKEN" ]; then echo "Sin servidor de sugerencias configurado todavía"; exit 0; fi
+          curl -sf "$URL?dias=7&token=$TOKEN" -o s.json
+          N=$(node -e "console.log(require('./s.json').total)")
+          if [ "$N" = "0" ]; then echo "Ninguna sugerencia esta semana"; exit 0; fi
+          node -e "const s=require('./s.json');const t=s.sugerencias.map(x=>'- ['+x.fecha.slice(0,10)+'] '+(x.hermandad?'**'+x.hermandad+'** · ':'')+x.texto.replace(/\n/g,' ')+(x.pagina?' _(página: '+x.pagina+')_':'')).join('\n');require('fs').writeFileSync('cuerpo.md','Sugerencias recibidas por erCuñao en los últimos 7 días ('+s.total+'):\n\n'+t+'\n\nDecidir para cada una: corregir el dato (con su fuente), añadir a pendientes o descartar.')"
+          gh issue create --repo "$REPO" --title "Sugerencias de la semana ($(date +%F))" --label sugerencias --body-file cuerpo.md || gh issue create --repo "$REPO" --title "Sugerencias de la semana ($(date +%F))" --body-file cuerpo.md
