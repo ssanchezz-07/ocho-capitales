@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-14",
+ "generado": "2026-10-15",
  "fuentes": {
   "InfoCofrade": 377,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 63,
-  "Prensa (texto de noticias)": 25
+  "Prensa (texto de noticias)": 24
  },
  "eventos": [
   {
@@ -4820,16 +4820,6 @@
    "url": "https://www.gentedepaz.es/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-sevilla-de-2027/"
   },
   {
-   "fecha": "2026-10-14",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de 2027",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
-  },
-  {
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "cordoba",
@@ -4950,6 +4940,16 @@
    "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
   },
   {
+   "fecha": "2026-10-14",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de 2027",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
+  },
+  {
    "fecha": "2026-10-13",
    "hora": "",
    "ciudad": "sevilla",
@@ -5018,76 +5018,6 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/el-concurso-internacional-de-marchas-procesionales-de-malaga-cambiara-de-denominacion-por-prohibicion-expresa-de-los-herederos-de-perfecto-artola/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "12:00",
-   "ciudad": "sevilla",
-   "tipo": "pregon",
-   "titulo": "El canónigo de la Catedral de Sevilla, Adrián Ríos, pregonará la romería de Valme de Dos Hermanas tras un «sí» espontáneo a la Virgen",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/canonigo-catedral-sevilla-adrian-rios-pregonara-romeria-20261009100805-nts_amp.html"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "procesion",
-   "titulo": "La Borriquita inició la procesión única desde la basílica de Santa María, dando paso al resto de imágenes muy veneradas de la localidad, entre ellas El Nazareno, que se r",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/sierra/arcos-cofrade-procesion-magna_0_2008201593.html"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La salida permitirá contemplar una imagen poco habitual de la talla, acostumbrada a procesionar durante la mañana y las primeras horas de la tarde del Domingo de Resurrec",
-   "nota": "",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "El arzobispo de Sevilla anima a los hermanos de Valme a vivir una fe que se traduzca en caridad",
-   "nota": "",
-   "fuente": "Archidiócesis de Sevilla",
-   "url": "https://www.archisevilla.org/el-arzobispo-de-sevilla-anima-a-los-hermanos-de-valme-a-vivir-una-fe-que-se-traduzca-en-caridad/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "extraordinaria",
-   "titulo": "Por todo ello, este domingo 11 de octubre, la Virgen de la Divina Gracia realizará una salida extraordinaria en su paso de palio por las calles de su barrio.",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "de las Angustias de Motril procesiona este domingo",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
-  },
-  {
-   "fecha": "2026-10-11",
-   "hora": "17:00",
-   "ciudad": "cadiz",
-   "tipo": "procesion",
-   "titulo": "48 estampas de una Magna inolvidable en Arcos: llenazo total en la histórica procesión extraordinaria en la Sierra de Cádiz",
-   "nota": "",
-   "fuente": "La Voz del Sur",
-   "url": "https://www.lavozdelsur.es/galerias-fotograficas/48-estampas-de-una-magna-inolvidable-en-arcos-llenazo-total-en-la-historica-procesion-extraordinaria-en-la-sierra-de-cadiz.html"
   }
  ],
  "conflictos": [
