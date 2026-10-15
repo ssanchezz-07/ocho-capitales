@@ -1,0 +1,2551 @@
+{
+ "fuente": "JAEN 26.pdf",
+ "columnas": [
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "BORRIQUILLA Iglesia Parroquial de Belén y San Roque",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "10:50",
+     "lugar": "SALIDA (ACTO LLAMÁ)"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Cuesta Virgen"
+    },
+    {
+     "fila": "11:15",
+     "lugar": "Av. Madrid"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Rastro"
+    },
+    {
+     "fila": "11:40",
+     "lugar": "Roldán y Marín (Venia)"
+    },
+    {
+     "fila": "11:50",
+     "lugar": "Pza. Constitución"
+    },
+    {
+     "fila": "12:10",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "12:40",
+     "lugar": "Pza. Santa María"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Almenas"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "13:50",
+     "lugar": "Pza. San Ildefonso"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "Cuatro Torres"
+    },
+    {
+     "fila": "14:15",
+     "lugar": "Pza. Constitución"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Cuesta Belén"
+    },
+    {
+     "fila": "15:00",
+     "lugar": "Pza. Corazón María"
+    },
+    {
+     "fila": "15:10",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 8
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "BORRIQUILLA Iglesia Parroquial de Belén y San Roque",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "10:50",
+     "lugar": "10:50"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "11:00"
+    },
+    {
+     "fila": "11:15",
+     "lugar": "11:15"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "SALIDA 11:30"
+    },
+    {
+     "fila": "11:40",
+     "lugar": "Cuesta Virgen 11:40"
+    },
+    {
+     "fila": "11:50",
+     "lugar": "Av. Madrid 11:50"
+    },
+    {
+     "fila": "12:10",
+     "lugar": "Roldán y Marín 12:10",
+     "hora": "12:20"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "12:30"
+    },
+    {
+     "fila": "12:40",
+     "lugar": "Bernabé Soriano 12:40",
+     "hora": "12:50"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Pza. S. Francisco 13:00",
+     "hora": "13:10"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Carrera Jesús 13:30"
+    },
+    {
+     "fila": "13:50",
+     "lugar": "Almenas 13:50"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "Muñoz Garnica 14:00"
+    },
+    {
+     "fila": "14:15",
+     "lugar": "Muñoz Garnica 14:15"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Pza. San Ildefonso 14:30"
+    },
+    {
+     "fila": "15:00",
+     "lugar": "Cuesta Belén 15:00"
+    },
+    {
+     "fila": "15:10",
+     "lugar": "Pza. Belén 15:10"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Eras de Belén 15:30"
+    },
+    {
+     "fila": "15:50",
+     "lugar": "ENTRADA 15:50 TEMPLO"
+    }
+   ],
+   "pagina": 8
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "SANTA CENA Parroquia de San Juan Pablo II",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "16:00",
+     "lugar": "SALIDA",
+     "hora": "16:15"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Henry Dunant / Pso. España"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Pso. España (Castilla Mancha)"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Pso. Estación (Banco España)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Pso. Estación (Museo Íbero)"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Pso. Estación (Paseo Bicicletas)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Roldán y Marín (Venia)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Bernabé Soriano (mitad)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Muñoz Garnica (Casa Vera Cruz)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Cuatro Torres / Constitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Av. Madrid (Pío XII)"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Av. Madrid (C/ Baeza)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Av. Madrid (Isaac Albéniz)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Donantes de Sangre"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Manuel Caballero Venzalá"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Pso. España"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Federico Mayor Zaragoza"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "TEMPLO",
+     "hora": "00:15"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "SANTA CENA Parroquia de San Juan Pablo II",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:00",
+     "lugar": "SALIDA",
+     "hora": "16:55"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Pso. España (C/ País Vasco)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Extremadura / Jaén por la Paz"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Pso. Estación (IES Sta. Catalina)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Pso. Estación (Museo Provincial)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Roldán y Marín",
+     "hora": "19:40"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Bernabé Soriano (inicio)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Cuatro Torres"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Av. Madrid (Esquina Pío XII)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Av. Madrid (Esqui- na Baeza)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Av. Madrid (Isaac Albéniz)"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Donantes de Sangre"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Manuel Caballero Venzalá"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Pso. España"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Honorato Morente Megías"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "TEMPLO",
+     "hora": "00:55"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ESTRELLA Casa de hermandad (Plaza de la Purísima Concepción)",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "16:00",
+     "lugar": "SALIDA",
+     "hora": "16:15"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Pilar de la Imprenta"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Ejido Alcantarilla"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Muñoz Garnica (inicio)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Pz. San Ildefonso"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Las Bernardas"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Roldán y Marín"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "(Venia)",
+     "hora": "19:40"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Bernabé Soriano",
+     "hora": "20:15"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Campanas"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Fco. Coello (Llana)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Pilar Imprenta"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "ENTRADA CASA HDAD"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ESTRELLA Casa de hermandad (Plaza de la Purísima Concepción)",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "García Requena"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Ejido Alcantarilla"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Reja la Capilla"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Puerta del Ángel"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Roldán y Marín (20:25 horas)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pz. Sta. María"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Fco. Coello (Llana) Plaza Sta. María"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Pilar Imprenta",
+     "hora": "22:50"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Jesús de la Piedad"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "HDAD.",
+     "hora": "23:15"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ORACIÓN Basílica Menor de San Ildefonso",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "SALIDA",
+     "hora": "18:45"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Capitán Aranda Baja"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Teodoro Calvache / Tablerón"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Virgen Capilla"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Roldán y Marín (Venia)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Almenas"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA CASA ENTRADA TEMPLO",
+     "hora": "23:45"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ORACIÓN Basílica Menor de San Ildefonso",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Teodoro"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Roldán y",
+     "hora": "21:15"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pz."
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé (inicio"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Carrera"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Carrera Almenas"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Muñoz"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "SENTENCIA Parroquia de San Eufrasio CRUZ DE GUÍA · CARIDAD Iglesia Santa María Madre de la Iglesia CRUZ DE GUÍA CARIDAD",
+   "sub": "paso jesús",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "SALIDA",
+     "hora": "16:45"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "(Igl. S. Eufrasio)"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "SALIDA Colegio Jesús y"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "(Col.",
+     "hora": "17:15"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "María",
+     "hora": "17:05"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Jesús y María)"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Virgen Capilla Pta. del Ángel"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Roldán y Marín Roldán y Marín (Venia 17:55)",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Bernabé Pza. Soriano (mitad) Constitución"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Bernabé Cerón / Colón Soriano"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Maestra (Final) Maestra (Inicio)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Ramón y Cajal Carrera Jesús (Salida Almenas) (Almenas)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plz. San Muñoz Garnica Ildefonso"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Capitán Aranda Reja Capilla Baja / Bernardas",
+     "hora": "21:15"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "ENTRADA Capitán Aranda (Colegio) Baja / Bernardas Gutiérrez (Final) Gutiérrez (Inicio)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Colegio",
+     "hora": "21:55"
+    }
+   ],
+   "pagina": 18
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "CARIDAD Iglesia Santa María Madre de la Iglesia CRUZ DE GUÍA CARIDAD · AMARGURA Iglesia Parroquial de El Salvador CRUZ DE GUÍA",
+   "sub": "paso jesús",
+   "puntos": [
+    {
+     "fila": "15:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Fuente Alamillo SALIDA"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Europa Fuente Alamillo"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "San Lucas Europa (Inicio)"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Sagrado San Lucas Corazón"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Núñez de Sagrado Balboa Corazón"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Millán de Núñez de Priego Balboa"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Roldán y Marín Millán de Priego (Venia)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Bernabé Roldán y Marín Soriano"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Pza. S. Bernabé Francisco Soriano"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Pza. S. Eduardo Arroyo Francisco"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Arquitecto Eduardo Arroyo Berges"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Juan Pedro Arquitecto Gutiérrez (Inicio) Berges"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Juan Pedro Juan Pedro"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Juan Pedro Doce Apóstoles Gutiérrez (Final)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Europa Doce Apóstoles"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Fuente Alamillo Europa"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Juez Juan Fuente Ruiz Rico Alamillo"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "ENTRADA Juez Juan TEMPLO Ruiz Rico"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 18
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "AMARGURA Iglesia Parroquial de El Salvador CRUZ DE GUÍA · Nuestra Señora CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "SALIDA",
+     "hora": "16:50"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Eduardo García Maroto"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Eduardo García SALIDA"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA",
+     "hora": "17:20"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Maroto (final)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Paseo Estación García Maroto Carrera de Jesús (Cristo Rey) (Cruce Gran Eje) (Convento)"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Pza. Las Paseo Estación Almenas Batallas (Museo Íbero)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Paseo Estación Paseo Estación Plz. San (Hermanitas"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "(Museo Provincial) Ildefonso Pobres)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Roldán y Marín Pza. Las Bernardas / (Venia 19:20) Batallas Puerta del Ángel"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Bernabé Paseo Estación Virgen Capilla Soriano (mitad) (Arq. Berges)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Roldán y Marín Roldán y Marín Álamos",
+     "hora": "20:25"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "(Venia)",
+     "hora": "20:25"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bernabé Bernabé Eduardo Arroyo Soriano Soriano"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Castilla Álamos Maestra"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Paseo Estación Arco San Eduardo Arroyo (Salud Junta)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Lorenzo",
+     "hora": "21:50"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Paseo Estación Arquitecto ENTRADA (Museo"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Berges"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "TEMPLO",
+     "hora": "22:10"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Provincial)"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Eduardo García Pso. Estación Maroto (C/ Baeza)"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA Paseo Estación TEMPLO (Museo Íbero)"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Eduardo García Maroto"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "TEMPLO",
+     "hora": "00:15"
+    }
+   ],
+   "pagina": 18
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "DIVINO MAESTRO Colegio “Divino Maestro” CRUZ DE GUÍA · CLEMENCIA Parroquia de Santa María Magdalena. CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "SALIDA (COLEGIO)"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Molin Alcantarilla"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA",
+     "hora": "17:20"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "(Inicio)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "S. Ildefonso/ Ejido Alcantarilla Cuatro Torres"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Vgn. Capilla/ Pza. San Rastro Ildefonso"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Roldán y Marín Virgen (Venia 18:45) Capilla"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Roldán y Marín Bernabé Soriano (Inicio)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Constitución/ Campanas B. Soriano"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Pza. San Carrera Jesús Francisco"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Manuel Jontoya. Pza. Santa María Ejido Alcantarilla"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "García Requena Almenas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Senda Los Manuel Jontoya Huertos"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Entrada Colegio García Requena",
+     "hora": "22:15"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Entrada Colegio (23:05 Hrs)"
+    }
+   ],
+   "pagina": 24
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "CLEMENCIA Parroquia de Santa María Magdalena. CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Ctra Córdoba"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "SALIDA",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Millán de Priego Molino Condesa"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Millán de Priego Millán de Priego (Esq. Rey Alhamar) (Inicio)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Millán de Priego Pza. Jardinillos"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Millán de Priego Roldán y Marín (IES San Juan"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "(Venia)",
+     "hora": "19:40"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Bosco)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Pza. San Bernabé Francisco Soriano"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Campanas Maestra",
+     "hora": "21:40"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Martínez Molina Maestra (Inicio)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Martínez Molina Martínez Molina (Pz. Rosales) (Inicio)"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Pz. Sta. Luisa Martínez Molina Marillac (Escuela Arte)"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Sto. Domingo Martínez Molina (Fuente Lagarto) (Plz. Rosales)"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "ENTRADA Pz. Sta. Luisa"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "TEMPLO",
+     "hora": "23:45"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Marillac"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "TEMPLO",
+     "hora": "00:35"
+    }
+   ],
+   "pagina": 24
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "CLEMENCIA Parroquia de Santa María Magdalena. CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "(Pilar Arrabalejo)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Roldán y Marín"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA"
+    }
+   ],
+   "pagina": 24
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "SILENCIO Iglesia Parroquial de Cristo Rey CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Arquitecto Berges SALIDA (inicio)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Arquitecto Arquitecto Berges Berges"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "/ P. Estación (C/ Cruz"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Roldán y Marín Paseo"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "(Venia)",
+     "hora": "21:25"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "(Resid."
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé Soriano Roldán y",
+     "hora": "21:45"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Bernabé Almenas",
+     "hora": "22:10"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Pz. Constitución / Virgen de la Muñoz"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Capilla"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Rastro / Paseo Estación Estación"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Carmelo Torres Paseo",
+     "hora": "23:50"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA Ejército TEMPLO Español"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 24
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "CAUTIVO Parroquia de Santa Isabel CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:00",
+     "lugar": "SALIDA",
+     "hora": "16:55"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Sagrado Corazón"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA",
+     "hora": "17:15"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "(C/ Alberca)"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Núñez de Sagrado Balboa Corazón"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Millán de Priego Núñez de (Rey Alhamar) Balboa"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Plaza Jardinillos Millán de Priego (Eduardo Arroyo) (Rey Alhamar)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza Jardinillos Roldán y Marín (Eduardo"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "(Venia 19:20) Arroyo)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Bernabé Roldán y Marín Roldán y Marín"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Soriano",
+     "hora": "19:50"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Bernabé Campanas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Soriano Soriano",
+     "hora": "20:15"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Audiencia Campanas"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Martínez Molina Plaza Audiencia (Pza. Rosales)"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Martínez Molina Pza. S. Ildefonso / Campanas (Pza. Santo Domingo (Pza. Rosales)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Iglesia Magdalena Santo Domingo",
+     "hora": "22:20"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "C/ Puerta Iglesia Martos (Sede Magdalena"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "AAVV)",
+     "hora": "22:50"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "C/ Puerta Tallista Vicente Martos (Sede"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Castillo AAVV)"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Santo Rostro Castillo"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA Santo Rostro TEMPLO"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "PERDÓN Iglesia Parroquial de Cristo Rey CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Ejército Español (Cuartel Guardia SALIDA 18:15"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Civil)"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Arquitecto Berges (Instituto C/ Cristo Rey"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Juventud)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Arquitecto Arquitecto Berges (Palacio"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Berges (Inicio) de Justicia)"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Paseo de la Arquitecto Estación"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "(Hermanitas Pobres) Berges"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Arquitecto",
+     "hora": "19:50"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Berges (Final)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Paseo Estación Bernabé (Hermanitas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "pobres)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Santa Roldán y Marín Roldán y Marín Eduardo María",
+     "hora": "20:50"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza San Bernabé Ildefonso"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Soriano",
+     "hora": "21:15"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Cuatro Torres Santa María)"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Virgen de la Almenas Capilla"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Paseo Estación Plaza San (Inicio) Ildefonso"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Paseo Estación Virgen Capilla (Arquit. Berges)"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Tallista Vicente Ejército Español Paseo Estación (inicio) (inicio)"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA Paseo Estación TEMPLO (Arquit. Berges)"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Ejército Español (inicio)"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "BUENA MUERTE Santa Iglesia Catedral CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "SALIDA",
+     "hora": "18:45"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Campanas"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Eduardo Arroyo SALIDA (inicio)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Eduardo Arroyo Campanas (final)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Madre Soledad Eduardo Torres Acosta (inicio)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "(Venia 20:50) (final)"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Bernabé Madre Soriano Torres"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Campanas Roldán y",
+     "hora": "22:10"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "ENTRADA Bernabé TEMPLO"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Soriano",
+     "hora": "22:40"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Campanas"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA TEMPLO",
+     "hora": "23:40"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "LANZADA Parroquia de la Inmaculada y San Pedro Pascual DE JESÚS",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "09:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "09:45",
+     "lugar": "Ctra. Circunvalación"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "Juan Montilla"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "(Seminario)"
+    },
+    {
+     "fila": "10:15",
+     "lugar": "Glorieta Lola Torres"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "(Camarín)"
+    },
+    {
+     "fila": "10:45",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "10:45",
+     "lugar": "(Convento)"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Carrera Jesús (R. mayores)"
+    },
+    {
+     "fila": "11:15",
+     "lugar": "Almenas / Ramón y Cajal"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Hurtado"
+    },
+    {
+     "fila": "11:45",
+     "lugar": "San Ildefonso"
+    },
+    {
+     "fila": "12:00",
+     "lugar": "Cuatro Torres / Constitución"
+    },
+    {
+     "fila": "12:15",
+     "lugar": "Virgen Capilla / Rastro"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "Roldán y Marín"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "Venia",
+     "hora": "12:40"
+    },
+    {
+     "fila": "12:45",
+     "lugar": "Pza. Constitución"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Bernabé Soriano (mitad)"
+    },
+    {
+     "fila": "13:15",
+     "lugar": "Campanas"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Pza, Santa María"
+    },
+    {
+     "fila": "13:45",
+     "lugar": "Carrera de Jesús"
+    },
+    {
+     "fila": "13:45",
+     "lugar": "(Camarín)"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "Carrera de Jesús"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "(final)"
+    },
+    {
+     "fila": "14:15",
+     "lugar": "Juan Montilla (inicio)"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Ctra. Jabalcuz"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "(inicio)"
+    },
+    {
+     "fila": "14:45",
+     "lugar": "Ctra. Jabalcuz /"
+    },
+    {
+     "fila": "14:45",
+     "lugar": "Al-Jayyani"
+    },
+    {
+     "fila": "15:00",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 32
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "LANZADA Parroquia de la Inmaculada y San Pedro Pascual DE JESÚS",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "09:30",
+     "lugar": "09:30"
+    },
+    {
+     "fila": "09:45",
+     "lugar": "09:45"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "10:00"
+    },
+    {
+     "fila": "10:15",
+     "lugar": "SALIDA 10:10 h 10:15"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Ctra. Circunvalación 10:30"
+    },
+    {
+     "fila": "10:45",
+     "lugar": "Juan Montilla 10:45"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Glorieta Lola Torres 11:00"
+    },
+    {
+     "fila": "11:15",
+     "lugar": "Carrera Jesús 11:15 (Camarín)"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Carrera Jesús 11:30 (Convento)"
+    },
+    {
+     "fila": "11:45",
+     "lugar": "Carrera Jesús 11:45 (R mayores)"
+    },
+    {
+     "fila": "12:00",
+     "lugar": "Almenas / Ramón 12:00 y Cajal"
+    },
+    {
+     "fila": "12:15",
+     "lugar": "Hurtado 12:15"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "San Ildefonso 12:30"
+    },
+    {
+     "fila": "12:45",
+     "lugar": "Cuatro Torres / 12:45 Constitución"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Virgen Capilla / 13:00 Rastro"
+    },
+    {
+     "fila": "13:15",
+     "lugar": "Roldán y Marín 13:15"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Pza. Constitución 13:30"
+    },
+    {
+     "fila": "13:45",
+     "lugar": "Bernabé Soriano 13:45"
+    },
+    {
+     "fila": "13:45",
+     "lugar": "(mitad)"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "Campanas 14:00"
+    },
+    {
+     "fila": "14:15",
+     "lugar": "Pza. Santa María 14:15"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Carrera de Jesús 14:30"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "(Camarín)"
+    },
+    {
+     "fila": "14:45",
+     "lugar": "Carrera de Jesús 14:45"
+    },
+    {
+     "fila": "14:45",
+     "lugar": "(final)"
+    },
+    {
+     "fila": "15:00",
+     "lugar": "Juan Montilla (inicio) 15:00"
+    },
+    {
+     "fila": "15:15",
+     "lugar": "Ctra. Jabalcuz 15:15"
+    },
+    {
+     "fila": "15:15",
+     "lugar": "(inicio)"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Ctra. Jabalcuz / 15:30 Al-Jayyani"
+    },
+    {
+     "fila": "15:45",
+     "lugar": "ENTRADA 15:45 TEMPLO"
+    }
+   ],
+   "pagina": 32
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "VERA CRUZ Basílica menor de San Ildefonso CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Capitán Aranda"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Baja"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Pta. Ángel"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "SALIDA",
+     "hora": "18:45"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "(convento)"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Tablerón Capitán Aranda"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "(Lizaderas) Baja"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Virgen Capilla/ Pta. Ángel Rastro (convento)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Roldán y Marín Tablerón (Sala (Venia) Azur)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Virgen Capilla Constitución (Inicio)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bernabé SorianoRoldán y Marín Madre Soledad"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Inicio",
+     "hora": "20:45"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Campanas Constitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé Pza. Sta. María"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Soriano Soriano",
+     "hora": "21:40"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Tribuna Oficial Almenas",
+     "hora": "22:10"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Muñoz Garnica Carrera Jesús"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA Almenas (Final) TEMPLO"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "TEMPLO",
+     "hora": "00:35"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "EXPIRACIÓN Iglesia Parroquial de San Bartolomé. CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Colón"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "SALIDA",
+     "hora": "19:45"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "(Darymelia)"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Virgilio Anguita / Juan Pedro Gtrz. Salvador Álamos Martínez Molina Higueras (Inicio)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "San Clemente Cerón"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Doctor Civera Torres Acosta"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Roldán y Marín Plaza (Venia) 21:15 Jardinillos"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé Roldán y Marín"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Bernabé Maestra Soriano (inicio) Soriano (mitad)"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Campanas Virgilio Anguita (inicio)"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA Plaza"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "TEMPLO",
+     "hora": "23:15"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Audiencia"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "ENTRADA"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "TEMPLO",
+     "hora": "00:15"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "GRAN PODER Parroquia de La Santa Cruz CRUZ DE GUÍA MISTERIO",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "SALIDA",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Reconciliación SALIDA"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Bilbao"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Salvador Vicente Bilbao de la Torre"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "te de la"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Juan Pedro Gtrz. Juan Pedro Higueras (Final) Higueras"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Arquitecto Juan Pedro Berges (Inicio) Higueras"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Arquitecto Arquitecto Berges (Final) Berges"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Roldán y Marín Arquitecto (Venia) 22:05 Berges"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Bernabé Roldán y (Inicio)"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Eduardo Arroyo Bernabé (inicio) Soriano"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Millán de Priego Eduardo (IES S. Juan Bosco) (inicio)"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Núñez de Millán de Balboa (IES S. Juan"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Sagrado Corazón Núñez de (mitad) Balboa"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Sagrado Corazón / Sagrado San Lucas (mitad)"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Sagrado Av. Arjona San Lucas"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "ENTRADA Av. Arjona",
+     "hora": "01:45"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "ENTRADA",
+     "hora": "02:15"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "MADRUGÁ",
+   "cabecera": "NUESTRO PADRE JESÚS Santuario Camarín de Nuestro Padre Jesús Nazareno",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "02:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "03:00",
+     "lugar": "Frente Jesús /Merced Alta"
+    },
+    {
+     "fila": "03:30",
+     "lugar": "Pza. Merced",
+     "hora": "03:45"
+    },
+    {
+     "fila": "04:00",
+     "lugar": "4:15 Arco S. Lorenzo"
+    },
+    {
+     "fila": "04:30",
+     "lugar": "Maestra (Inicio)"
+    },
+    {
+     "fila": "05:00",
+     "lugar": "Maestra (final)"
+    },
+    {
+     "fila": "05:30",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "06:00",
+     "lugar": "Almenas",
+     "hora": "06:10"
+    },
+    {
+     "fila": "06:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "07:00",
+     "lugar": "Pz. San Ildefonso"
+    },
+    {
+     "fila": "07:30",
+     "lugar": "Capitán Aranda Alta"
+    },
+    {
+     "fila": "08:00",
+     "lugar": "Tablerón / Virgen Capilla"
+    },
+    {
+     "fila": "08:30",
+     "lugar": "Rastro"
+    },
+    {
+     "fila": "09:00",
+     "lugar": "Roldán y Marín (Venia) 08:45"
+    },
+    {
+     "fila": "09:30",
+     "lugar": "Bernabé Soriano",
+     "hora": "09:45"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "Campanas -Inicio-",
+     "hora": "10:15"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Pz. Sta. María"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Carrera Jesús (Residencia)"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "10:50 horas"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 38
+  },
+  {
+   "dia": "MADRUGÁ",
+   "cabecera": "NUESTRO PADRE JESÚS Santuario Camarín de Nuestro Padre Jesús Nazareno",
+   "sub": "paso jesús",
+   "puntos": [
+    {
+     "fila": "02:30",
+     "lugar": "SALIDA",
+     "hora": "02:50"
+    },
+    {
+     "fila": "03:00",
+     "lugar": "Cantones (inicio)"
+    },
+    {
+     "fila": "03:30",
+     "lugar": "Merced Alta (Inicio)"
+    },
+    {
+     "fila": "04:00",
+     "lugar": "Pza. Merced",
+     "hora": "04:05"
+    },
+    {
+     "fila": "04:30",
+     "lugar": "Arco San Lorenzo",
+     "hora": "04:45"
+    },
+    {
+     "fila": "05:00",
+     "lugar": "Maestra (Inicio)"
+    },
+    {
+     "fila": "05:30",
+     "lugar": "Maestra (Final)"
+    },
+    {
+     "fila": "06:00",
+     "lugar": "Pza. Sta. María"
+    },
+    {
+     "fila": "06:00",
+     "lugar": "(ENCUENTRO)",
+     "hora": "05:45"
+    },
+    {
+     "fila": "06:30",
+     "lugar": "Almenas (Inicio)"
+    },
+    {
+     "fila": "07:00",
+     "lugar": "Muñoz Garnica (Inicio)"
+    },
+    {
+     "fila": "07:30",
+     "lugar": "Pza. S. Ildefonso",
+     "hora": "07:45"
+    },
+    {
+     "fila": "08:00",
+     "lugar": "Reja Capilla"
+    },
+    {
+     "fila": "08:30",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "09:00",
+     "lugar": "Virgen Capilla"
+    },
+    {
+     "fila": "09:30",
+     "lugar": "Roldán y Marín",
+     "hora": "09:40"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "Pz. Constitución"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Bernabé Soriano",
+     "hora": "10:25"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Campanas (Inicio)"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Pz. Sta. María"
+    },
+    {
+     "fila": "12:00",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 38
+  },
+  {
+   "dia": "MADRUGÁ",
+   "cabecera": "NUESTRO PADRE JESÚS Santuario Camarín de Nuestro Padre Jesús Nazareno",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "04:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "05:00",
+     "lugar": "Conde"
+    },
+    {
+     "fila": "05:30",
+     "lugar": "Obispo González"
+    },
+    {
+     "fila": "06:00",
+     "lugar": "Pza. Sta María"
+    },
+    {
+     "fila": "06:00",
+     "lugar": "(ENCUENTRO)",
+     "hora": "05:45"
+    },
+    {
+     "fila": "06:30",
+     "lugar": "((ESPERA))"
+    },
+    {
+     "fila": "07:00",
+     "lugar": "Almenas (Inicio)",
+     "hora": "07:15"
+    },
+    {
+     "fila": "07:30",
+     "lugar": "Muñoz Garnica"
+    },
+    {
+     "fila": "08:00",
+     "lugar": "Pz. S. Ildefonso",
+     "hora": "08:10"
+    },
+    {
+     "fila": "08:30",
+     "lugar": "Capitán Aranda Alta"
+    },
+    {
+     "fila": "09:00",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "09:30",
+     "lugar": "Virgen Capilla / Rastro"
+    },
+    {
+     "fila": "10:00",
+     "lugar": "Roldán y Marín",
+     "hora": "10:10"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Pz. S. Francisco"
+    },
+    {
+     "fila": "12:00",
+     "lugar": "Pz. Sta. María"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "Carrera Jesús"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "ENTRADA TEMPLO",
+     "hora": "12:55"
+    }
+   ],
+   "pagina": 38
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SANTO SEPULCRO Iglesia San Juan y San Pedro",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Pz. Rosales",
+     "hora": "19:45"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Martínez Molina"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "(Escuela Arte)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Eduardo Arroyo"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "(Espartería)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Pza. Jardinillos (Conv.San"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Antonio)"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Roldán y"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Marín",
+     "hora": "21:20"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé Soriano",
+     "hora": "21:45"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Madre de Dios"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Almendros Aguilar (Pz."
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Santiago)"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Ayuntamiento"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "ENTRADA TEMPLO",
+     "hora": "23:50"
+    }
+   ],
+   "pagina": 43
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SANTO SEPULCRO Iglesia San Juan y San Pedro",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "SALIDA",
+     "hora": "19:45"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Ayuntamiento"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Martínez Molina"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "(Escuela Arte)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Eduardo Arroyo"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "(Espartería)"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pza. Jardinillos"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Roldán y Marín"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Maestra"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Arco S. Lorenzo",
+     "hora": "23:20"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Plaza Los Rosales"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA TEMPLO",
+     "hora": "00:20"
+    }
+   ],
+   "pagina": 43
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SOLEDAD Basílica Menor San Ildefonso",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "20:30",
+     "lugar": "SALIDA",
+     "hora": "20:45"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Capitán Aranda Baja /"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bernardas"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Tablerón"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Roldán y Marín (Venia)",
+     "hora": "22:05"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Bernabé Soriano"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Ramón y Cajal"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Mesa /Obispo Aguilar"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 43
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SOLEDAD Basílica Menor San Ildefonso",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "19:00 10:00"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "19:30 10:30"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "20:00 11:00"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "20:30 11:30"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "SALIDA 21:00 12:00",
+     "hora": "21:15"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Las Bernardas 21:30 12:30"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Tablerón 22:00 13:00"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Roldán y 22:30 13:30"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Marín",
+     "hora": "22:35"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Bernabé 23:00 14:00 Soriano"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Ramón y 23:30 14:30 Cajal / Mesa"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Obispo 00:00 15:00 Aguilar"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "ENTRADA 00:30 15:30 TEMPLO"
+    }
+   ],
+   "pagina": 43
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "RESUCITADO Basílica Menor, Iglesia Parroquial de San Ildefonso CRUZ DE DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Chinchilla"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Virgen Capilla"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Roldán y Marín"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "(Venia)"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bernabé Soriano",
+     "hora": "11:55"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Campanas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Maestra",
+     "hora": "12:50"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Cerón"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Pz. S. Francisco"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "ENTRADA TEMPLO"
+    }
+   ],
+   "pagina": 43
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "RESUCITADO Basílica Menor, Iglesia Parroquial de San Ildefonso CRUZ DE DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "SALIDA"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Melchor Cobo"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Cuatro Torres /"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Roldán y Marín",
+     "hora": "12:15"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pza."
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Bernabé Soriano",
+     "hora": "12:40"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Maestra"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Colón"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Pza. S."
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Hurtado",
+     "hora": "14:50"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "TEMPLO",
+     "hora": "15:15"
+    }
+   ],
+   "pagina": 43
+  }
+ ]
+}

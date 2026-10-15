@@ -43,9 +43,9 @@ for (const c of D.capitales) if (IMGX.capitales[c.slug]) c.imagen = localImg('c'
 for (const h of D.hermandades) {
   const t = (IMGX.titulares || {})[h.slug]; if (!t) continue;
   const im = (tipo) => (t[tipo] ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: t[tipo].titular } : null);
-  h.diptico = { cristo: im('cristo'), virgen: im('virgen'), juntos: im('juntos') };
-  // La miniatura de las listas pasa a ser el Cristo (o la Virgen) en lugar del escudo
-  const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen;
+  h.diptico = { cristo: im('cristo'), virgen: im('virgen'), juntos: im('juntos'), sede: im('sede') };
+  // La miniatura de las listas pasa a ser el Cristo (o la Virgen, o el cortejo) en lugar del escudo; la sede, solo si no hay otra
+  const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen || (!h.imagen ? h.diptico.sede : null);
   if (lead && (!h.imagen || h.imagen.escudo)) h.imagen = lead;
 }
 
@@ -721,12 +721,26 @@ function acompHtml(a) {
   const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
   return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
 }
+// Estampa: cuando no existe ninguna foto con licencia libre, una lámina diseñada (colgadura de su capital, inicial bordada y
+// nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
+function estampaHtml(h, c) {
+  const ini = esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0));
+  const tit = (h.titulares || []).slice(0, 3).map((t) => `<li>${esc(t.nombre.split(',')[0])}</li>`).join('');
+  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina" aria-hidden="true"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span class="oc-estampa-ini">${ini}</span></div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Aún no hay una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
+}
 // Díptico: el Cristo y la Virgen de la hermandad, cada uno con su crédito (licencias de Commons por separado).
 function dipticoHtml(h, c) {
   const d = h.diptico; if (!d) return '';
   const nombre = (x) => esc(String(x.titular || '').split(',')[0]);
   if (d.juntos) return `<figure class="oc-diptico is-juntos">${imgTag(d.juntos, `${String(d.juntos.titular || h.nombre)}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(d.juntos) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(d.juntos)}</span></figcaption></figure>`;
-  if (!(d.cristo && d.virgen)) return '';
+  if (!(d.cristo && d.virgen)) {
+    // un solo titular: foto grande con su nombre
+    const uno = d.cristo || d.virgen;
+    if (uno) return `<figure class="oc-diptico is-juntos">${imgTag(uno, `${String(uno.titular || h.nombre).split(',')[0]}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(uno) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(uno)}</span></figcaption></figure>`;
+    // solo hay foto de su sede: se dice claramente que es la iglesia, no los titulares
+    if (d.sede && (!h.imagen || h.imagen === d.sede)) return `<figure class="oc-diptico is-juntos is-sede">${imgTag(d.sede, `Sede de la hermandad: ${h.sede || ''}`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>Sede: ${esc(h.sede || 'templo de la hermandad')}</b></span><span class="oc-diptico-cred">${credit(d.sede)}</span></figcaption></figure>`;
+    return '';
+  }
   const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
   return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">Izquierda: ${credit(d.cristo)}. Derecha: ${credit(d.virgen)}</span></figcaption></figure>`;
 }
@@ -759,7 +773,7 @@ function pageHerm(h) {
     ${facts([['Capital', `<a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a>`], ['Día de salida', `<a href="${u('semana-santa/' + c.slug + '/#' + slugify(h.dia))}">${esc(h.dia)}</a>${vecinos.length > 1 ? ` <span class="oc-muted">(${idx + 1}.ª de ${vecinos.length})</span>` : ''}`], ['Sede', h.sede ? `${esc(h.sede)} <a class="oc-maplink" href="${mapLink(h.sede + ', ' + c.nombre)}" target="_blank" rel="noopener">${icon('pin')}Cómo llegar</a>` : ''], ['Titulares', titList], ['Hora de salida', h.hora ? esc(h.hora) + ' h <span class="oc-muted">(2026)</span>' : ''], ['Otras salidas', (h.salidas || []).map((s) => `${esc(s.dia)}${s.hora ? ', ' + esc(s.hora) + ' h' : ''}: ${esc(s.titulares)}${s.nota ? ` <span class="oc-muted">${esc(s.nota)}</span>` : ''} <a href="${esc(s.fuente)}" target="_blank" rel="noopener">fuente</a>`).join('<br>')], ['Fundación', esc(h.fundacion)], ['Web oficial', h.web ? `<a class="oc-break" href="${esc(h.web)}" target="_blank" rel="noopener">${esc(webTxt)}</a>` : '']], 'is-key')}
     <div class="oc-actions">${favBtn('hermandad', h.slug, h.nombre + ' (' + c.nombre + ')')}${shareBtn()}</div>
   </div>
-  ${dipticoHtml(h, c) || (im ? `<figure class="oc-figure${im.escudo ? ' is-escudo' : ''}">${imgTag(im, im.escudo ? 'Escudo de la hermandad ' + h.nombre : h.nombre + ', Semana Santa de ' + c.nombre, { sizes: '(max-width: 860px) 100vw, 40vw', widths: [500, 960], eager: true })}<figcaption>${credit(im)}</figcaption></figure>` : '')}
+  ${dipticoHtml(h, c) || (im ? `<figure class="oc-figure${im.escudo ? ' is-escudo' : ''}">${imgTag(im, im.escudo ? 'Escudo de la hermandad ' + h.nombre : h.nombre + ', Semana Santa de ' + c.nombre, { sizes: '(max-width: 860px) 100vw, 40vw', widths: [500, 960], eager: true })}<figcaption>${credit(im)}</figcaption></figure>` : estampaHtml(h, c))}
 </header>
 ${h.historia ? `<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${para(h.historia)}</div></section>` : ''}
 ${section('Titulares e imagineros', titRows.length ? stackTable(['Titular', 'Autor y año'], titRows) : '')}
@@ -1081,7 +1095,7 @@ function extras() {
   }
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
   fs.writeFileSync(path.join(DIST, 'news.json'), JSON.stringify({ actualizado: NEWS.actualizado, items: NEWS.items.slice(0, 600).map(({ h, t, ...n }) => n) }));
-  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', start_url: BASE, scope: BASE, display: 'standalone', background_color: '#eeece6', theme_color: '#eeece6', icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
+  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
   fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n${SITE ? 'Sitemap: ' + SITE + '/sitemap.xml\n' : ''}`);
   if (SITE) fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${SITE}/${p}</loc></url>`).join('\n')}\n</urlset>\n`);
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');

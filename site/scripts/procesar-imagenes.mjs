@@ -88,7 +88,7 @@ const TIT_FILE = path.join(SITE, 'data', 'imagenes-titulares.json');
 const TIT = fs.existsSync(TIT_FILE) ? JSON.parse(fs.readFileSync(TIT_FILE, 'utf8')) : { hermandades: {} };
 index.titulares = prev.titulares || {};
 for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
-  for (const tipo of ['cristo', 'virgen', 'juntos']) {
+  for (const tipo of ['cristo', 'virgen', 'juntos', 'sede']) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
     if (prevT && prevT.pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) continue;

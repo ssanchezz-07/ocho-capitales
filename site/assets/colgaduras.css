@@ -264,9 +264,9 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 /* Jornadas: control segmentado de cristal, con píldora que se desliza a la jornada visible */
 .oc-daynav { margin-top: 18px; background: color-mix(in srgb, var(--bg) 80%, transparent); -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
 .oc-daynav ul { position: relative; }
-.oc-daynav a { position: relative; z-index: 1; border-radius: 999px; padding: 0 14px; transition-property: transform, color; transition-duration: 140ms, 260ms; }
+.oc-daynav a { position: relative; z-index: 1; min-height: 44px; border-radius: 999px; padding: 0 14px; transition-property: transform, color; transition-duration: 140ms, 260ms; }
 .oc-daynav a.is-current { background: none; color: var(--on-primary); }
-.oc-daynav-ind { position: absolute; left: 0; top: 8px; height: 40px; border-radius: 999px; background: var(--primary); opacity: 0; pointer-events: none; transition: transform 460ms var(--ease-drawer), width 460ms var(--ease-drawer), opacity 200ms var(--ease-out); }
+.oc-daynav-ind { position: absolute; left: 0; top: 8px; height: 44px; border-radius: 999px; background: var(--primary); opacity: 0; pointer-events: none; transition: transform 460ms var(--ease-drawer), width 460ms var(--ease-drawer), opacity 200ms var(--ease-out); }
 @media (prefers-reduced-motion: reduce) { .oc-daynav-ind, .oc-daynav a { transition: none; } }
 @media (prefers-reduced-transparency: reduce) { .oc-daynav { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 
@@ -404,6 +404,16 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 }
 @media (max-width: 959px) { .oc-ficha > .oc-hero > .oc-diptico { order: 1; margin-top: 20px; } }
 @media (min-width: 960px) { .oc-ficha > .oc-hero:has(.oc-diptico) { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 5vw, 80px); } .oc-ficha > .oc-hero .oc-diptico { position: sticky; top: calc(var(--header-h) + 24px); } }
+
+/* Estampa (sin foto libre): lámina de terciopelo con la colgadura de su capital y la inicial en oro */
+.oc-estampa { margin: 0; min-width: 0; }
+.oc-estampa-lamina { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; max-height: 62svh; overflow: hidden; border-radius: 24px; background: radial-gradient(120% 90% at 30% 10%, color-mix(in srgb, var(--c) 85%, #fff 8%), var(--c-plate) 60%, #13071d); box-shadow: inset 0 0 0 1px rgb(240 215 156 / .45), inset 0 0 0 10px color-mix(in srgb, var(--c-plate) 70%, transparent), inset 0 0 0 11px rgb(240 215 156 / .3), 0 34px 60px -38px rgb(20 8 29 / .7); }
+.oc-estampa-lamina img { position: absolute; top: -6%; right: 7%; width: 17%; height: auto; filter: drop-shadow(0 12px 14px rgb(0 0 0 / .45)); }
+.oc-estampa-ini { font: 400 clamp(7rem, 30vw, 11rem)/1 var(--display); color: #f0d79c; text-shadow: 0 2px 0 rgb(0 0 0 / .25), 0 18px 40px rgb(0 0 0 / .35); }
+.oc-estampa figcaption { margin-top: 10px; }
+.oc-estampa-tit { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font: 600 .9rem/1.3 var(--sans); color: var(--primary); }
+.oc-estampa .oc-diptico-cred a { color: var(--primary); }
+@media (max-width: 959px) { .oc-ficha > .oc-hero > .oc-estampa { order: 1; margin-top: 20px; } .oc-estampa-lamina { aspect-ratio: 16 / 11; } }
 
 /* =====================================================================
    FICHAS DE ARCHIVO · imaginero, compositor y marcha

@@ -1,0 +1,2221 @@
+{
+ "fuente": "HUELVA 26.pdf",
+ "columnas": [
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "SAGRADA CENA Parroquia Sagrado Corazón de Jesús CRUZ DE GUIA · BORRIQUITA Parroquia de San Pedro CRUZ DE GUIA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "15:00",
+     "lugar": "Salida (15,00)"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Salida Puebla de",
+     "hora": "15:45"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Guzmán"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Plaza San Salida Barrio Obrero Pedro",
+     "hora": "16:15"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Pl. Quintero Plaza de Pl. San Pedro Báez España"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Pl. Quintero Plaza del Plaza Monjas Báez Punto"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Rascón/ Plaza Monjas Plaza Niña Bocas"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "C. OFICIAL Hernán Rábida/",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Cortés Murillo"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Rascón/ Hernán Concepción Bocas Cortés"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "C. OFICIAL Plaza Monjas",
+     "hora": "18:50"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Gran Vía Plaza Monjas Plaza Monjas"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza Con- Palos Gran Vía stitución"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Pl. Quintero Fernando el Alameda Báez Católico Sundheim"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Palos/La La Fuente Barrio Obrero Fuente"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Templo Plaza San Paseo Circun-",
+     "hora": "21:45"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pedro valación"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Templo Cortelazor",
+     "hora": "22:15"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Niebla"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Puebla de Guzmán"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Templo",
+     "hora": "23:20"
+    }
+   ],
+   "pagina": 9
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "REDENCIÓN Parroquia de Cristo Sacerdote CRUZ DE GUÍA MISTERIO · SAGRADA CENA Parroquia Sagrado Corazón de Jesús CRUZ DE GUIA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "15:30",
+     "lugar": "Salida",
+     "hora": "15:45"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Puebla de"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Salida",
+     "hora": "16:00"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Guzmán"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Avda. Santa Calle G Marta"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Virgen de la Cristo Victoria Redención"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Alameda F Junipero Sundheim Serra"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Plaza del Cabezo de la Punto Joya"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Vázquez López Pedro"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "C. OFICIAL Bocas Puerto"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "C. OFICIAL",
+     "hora": "19:30"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Espronceda Plaza Monjas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Con- Plaza Con- stitución stitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza del Palos de la Punto Frontera"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Alameda La Fuente Sundheim"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Barrio Obrero San Andrés"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Paseo Circun- valación"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Virgen del Avda. San Rosario Antonio"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Puebla de Plaza Huerto Guzmán Paco"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Pablo Avda. Santa Rodríguez Marta"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo Templo",
+     "hora": "00:45"
+    }
+   ],
+   "pagina": 9
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "REDENCIÓN Parroquia de Cristo Sacerdote CRUZ DE GUÍA MISTERIO · MUTILAOS Parroquia de San CRUZ DE GUIA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "Salida",
+     "hora": "16:20"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Avda. Santa Marta"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Cristo Redención"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "F Junipero Serra"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Plaza de San Cabezo de la Joya"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Plaza de San Pl. Quintero Pedro"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "C. OFICIAL José Nogales"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL",
+     "hora": "20:00"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Monjas Plaza Monjas"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Con- stitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Palos de la Frontera"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "La Fuente"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Manuel Siurot San Andrés"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Manuel Siurot"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Avda. San Antonio"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Cristo Redención"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Avda. Santa Marta"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Templo",
+     "hora": "01:00"
+    }
+   ],
+   "pagina": 9
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "MUTILAOS Parroquia de San CRUZ DE GUIA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "Salida",
+     "hora": "17:45"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Parque A. Salida Sánchez"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Cuesta La Fuente"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "La Báez"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Puerto/Isa- Pl. bel II Báez"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL",
+     "hora": "20:00"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "bel II"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C."
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Con- Plaza stitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pl. Quintero Plaza Báez"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Cuesta Tres Palos/ Caídas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Parque A. Cuesta Sánchez"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Federico Parque Mayo"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Rodrigo José Triana Patiño"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Templo",
+     "hora": "00:15"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Mayo"
+    }
+   ],
+   "pagina": 9
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "PERDÓN Parroquia de Santa Teresa de Jesús CRUZ DE · CAUTIVO Capilla del Santo Cristo Cautivo CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "Dolores"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Manuel Siurot Manuel Siurot Av. Adoratrices"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Plaza San Pedro"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Santa Fe"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Puerto"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "José Nogales José Nogales"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Monjas Plaza Monjas"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Cazenave"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Santuario"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Cinta"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Rio de la Plata"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Nicaragua"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Dolores"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "PERDÓN Parroquia de Santa Teresa de Jesús CRUZ DE · CAUTIVO Capilla del Santo Cristo Cautivo CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "16:00",
+     "lugar": "Av. Virgen"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Salida",
+     "hora": "15:45"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Dolores"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Av. Virgen Manuel Siurot"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Plaza I. Alonso Barba Cazenave"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "San Andrés"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Santa Fe"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Isabel II"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "C. OFICIAL",
+     "hora": "19:15"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza Monjas",
+     "hora": "19:55"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "La Fuente Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "San Andrés Palos/Palmera"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Av. Manuel Pl. Ivonne Siurot"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Av. Manuel Av. Manuel Siurot Siurot"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Av. Manuel Av. Manuel Siurot Siurot"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Santuario Av. Manuel Cinta Siurot"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Bartolomé"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Nicaragua"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Av. Virgen Dolores"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Av. Virgen Plaza Perdón"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Templo Plaza Perdón",
+     "hora": "01:45"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Templo"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "TRES CAÍDAS Parroquia Sagrado Corazón de Jesús CRUZ DE GUÍA · CAUTIVO Capilla del Santo Cristo Cautivo CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "16:00",
+     "lugar": "Salida",
+     "hora": "16:10"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Díaz del Castillo"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Av. Santa"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Salida",
+     "hora": "16:45"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Marta"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Av. Federico Av. Adoratrices Molina"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Jesús Pasión"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Santa Fe"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Puerto"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Gobernador José Nogales"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C. OFICIAL",
+     "hora": "20:35"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Espronceda Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Palos/Palmera Constitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "La Fuente"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Pl. Ivonne Alto Cuesta Cazenave"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Av. Manuel Siurot"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Huerto Paco Juan Niño"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Avda. Santa"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Marta"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Virgen del Reposo"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Pl. Misericordia"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Templo Alonso de",
+     "hora": "01:35"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Palos"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "P. Pablo Rodríguez"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Templo"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "TRES CAÍDAS Parroquia Sagrado Corazón de Jesús CRUZ DE GUÍA · CALVARIO Capilla de Jesús del",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "Salida",
+     "hora": "17:30"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Alameda Av. Federico Shundeim Molina"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Plaza del Av. Federico Punto Molina"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Alameda Plaza Niña Shundeim"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza del Rábida Punto"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza Niña Alonso"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C. OFICIAL Rábida"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Gobernador Salida Alonso"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "C.OFICIAL C. OFICIAL",
+     "hora": "21:20"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Cuesta Tres C. Concepción Plaza Monjas Caídas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza Plaza Plaza Constitución Constitución"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Federico MayoPalos/Palmera Rábida"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Cuesta Tres Gobernador Caídas Alonso"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Ismael Templo Federico Mayo Luca"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Serrano",
+     "hora": "00:05"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Virgen del Juan Niño Amor"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Ismael Juan Niño Serrano"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Juan Niño"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Alonso de Palos"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "P. Pablo",
+     "hora": "02:15"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Rodríguez"
+    },
+    {
+     "fila": "03:00",
+     "lugar": "Templo",
+     "hora": "02:55"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "TRES CAÍDAS Parroquia Sagrado Corazón de Jesús CRUZ DE GUÍA · CAUTIVO Capilla del Santo Cristo Cautivo CRUZ DE GUÍA",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "15:30",
+     "lugar": "Salida"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Pasaje del Cautivo"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Av. Santa Marta"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Fray Junípero Serra"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "San SebastiánSan Sebastián"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Plaza San Pedro"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Puerto"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL",
+     "hora": "19:55"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pl. Quintero Báez"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "San Andrés"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Av. Manuel Siurot"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Huerto Paco"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Virgen Montemayor"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Pl."
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Misericordia"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo",
+     "hora": "00:50"
+    }
+   ],
+   "pagina": 12
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "SENTENCIA Parroquia de San Francisco de Asís CRUZ DE GUÍA MISTERIO · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "15:30",
+     "lugar": "Río Ebro"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Salida",
+     "hora": "15:30"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Ángel Río Salado"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Serradilla"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Mazagón Mazagón"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Av. Guate- Plaza"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "mala América"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Alameda"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Plaza EspañaSalida",
+     "hora": "17:35"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Sundheim"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Manuel López Berdigón Plaza Punto"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Vega"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Rábida/ Garcí"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Murillo Fernández Colón"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Paseo Inde- Rascón La Paz"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "pendencia"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "C. Oficial Hernán San José",
+     "hora": "19:35"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Cortés"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL Plaza Monjas",
+     "hora": "19:55"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "stitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Con- Gran Vía"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "stitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "España Plaza Punto Pérez Carasa"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Av. Guate- Gobernador Obrero"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "mala"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Puebla de Barrio Obrero Bocas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Guzmán"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Puebla de Cortelazor San José"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Guzmán"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Puebla Cortelazor Plaza Merced"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Sanabria"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Puebla Paseo Inde- Jabugo"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Sanabria pendencia"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Rio Chanza Rio Guadaira"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Templo Rio Piedras",
+     "hora": "01:25"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Vega"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Rio Gua- Templo"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "dalquivir",
+     "hora": "01:35"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Templo",
+     "hora": "01:45"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "LANZADA Parroquia de los Dolores · ESTUDIANTES Parroquia de San Sebastián · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "Salida"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Cantero"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Cuadrado"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Cristo Tres"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Fernando el"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Católico"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Rábida/"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Murillo",
+     "hora": "20:35"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL Plus Ultra"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Palos"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Cuesta Tres"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Caídas"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Argantonio"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "José M."
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Patiño"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Av. Federico"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Mayo"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo",
+     "hora": "00:05"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "LANZADA Parroquia de los Dolores · ESTUDIANTES Parroquia de San Sebastián · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "Salida",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Av. Cristóbal Manuel López"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Vega"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Av. Cristóbal"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Colón"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Paseo Inde-"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "pendencia"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL San José"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Monjas Espronceda José Nogales"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "stitución",
+     "hora": "20:35"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "stitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Pérez Carasa Alonso"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Vázquez"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "López"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Hernán"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Cortés"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Placeta"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Plaza Merced"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Av. Cristóbal Paseo Inde-"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Colón pendencia"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Manuel López Av. Cristóbal"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Colón"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Manuel López"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Vega"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Templo",
+     "hora": "02:15"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "ESTUDIANTES Parroquia de San Sebastián · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "palio",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Cantero"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Cuadrado"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Salida",
+     "hora": "19:15"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Santa Fe"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Isaac Peral"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "José Nogales"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "C. OFICIAL C.Oficial",
+     "hora": "21:15"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Monjas Concepción"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "stitución"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Fernando"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Católico"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "La Fuente"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Jesús de la"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Pasión"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "ESTUDIANTES Parroquia de San Sebastián · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "Salida"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Caídas"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Quintero"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Báez"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza Niña"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C. OFICIAL Vázquez"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "López"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Rascón/"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Bocas"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "stitución",
+     "hora": "21:15"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza Con-"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "stitución"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Quintero"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Báez"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Argantonio"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Cristo de la"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Sangre"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Av. Federico"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Mayo"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Templo",
+     "hora": "00:30"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "PASIÓN Parroquia de San · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Salida"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Porche"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Pedro"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Ciudad"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "San"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "C."
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Gran"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Plaza"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Palos/"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Plaza"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Pedro"
+    }
+   ],
+   "pagina": 17
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "PRENDIMIENTO Parroquia de Nuestra Señora del Carmen CRUZ DE GUÍA MISTERIO · SANTA CRUZ Parroquia de la Concepción CRUZ DE GUÍA MISTERIO",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "17:00",
+     "lugar": "Antonio"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Salida",
+     "hora": "16:55"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Rengel"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Av. Cristóbal Tres Colón Carabelas"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Av. Cristóbal Av. Cristóbal Colón Colón"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Paseo Av. Cristóbal Colón"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "San José/ San José"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Salida",
+     "hora": "19:15"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Isabel II"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "C. OFICIAL José Nogales Mora Claros",
+     "hora": "19:25"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL Concepción",
+     "hora": "19:40"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Gran Vía Plaza Monjas Constitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Fernando Plaza Plaza Católico Constitución Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Pl. Quintero Palos Báez"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza San La Fuente Concepción Pedro"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Vázquez Paseo Templo Limón Independencia",
+     "hora": "22:25"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Av. Cristóbal Av. Cristóbal Colón Colón"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "De la Raza Av. Del Ancla"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Templo Tres",
+     "hora": "00:15"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Carabelas"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo",
+     "hora": "00:50"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "VICTORIA Parroquia Sagrado Corazón de Jesús CRUZ DE GUÍA · SANTA CRUZ Parroquia de la Concepción CRUZ DE GUÍA MISTERIO",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "Salida",
+     "hora": "16:20"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Av. Federico Molina"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Alameda Sundheim"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Alonso Sánchez"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Salida Rascón/Bocas",
+     "hora": "19:20"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "C. OFICIAL C. OFICIAL",
+     "hora": "19:40"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Gran Vía Constitución"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Pérez Carasa Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza del Rábida Murillo Punto"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Rascón Ramón Franco"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Concepción Miss Whitney"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Templo Av. Guatemala",
+     "hora": "22:40"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Puebla de Guzmán"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo",
+     "hora": "00:55"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "VICTORIA Parroquia Sagrado Corazón de Jesús CRUZ DE GUÍA · ESPERANZA Capilla Sta. María de la Esperanza CRUZ DE GUÍA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "Barrio Obrero Salida",
+     "hora": "17:15"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Av. Federico Molina"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Av. Federico Molina"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Hernán Cortés Barrio Obrero"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Alameda Sundheim"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Vázquez C. OFICIAL López"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Rascón/BocasHernán Cortés Salida"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL",
+     "hora": "20:55"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Monjas Plaza Monjas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza del Punto"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Alameda Sundheim"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Barrio Obrero Miss Whitney"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Av. Guatemala"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Barrio Obrero"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Calle G"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Puebla de Guzmán"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Templo",
+     "hora": "02:10"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "ESPERANZA Capilla Sta. María de la Esperanza CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "Salida",
+     "hora": "19:20"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Esperanza Coronada"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL Plaza",
+     "hora": "20:55"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza C. Constitución"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Gran Vía Plus"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Sta. Angela"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Miguel Sta. Redondo"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Alfonso XII Pérez"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Plaza Niña"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Esperanza Coronada"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Templo Plaza",
+     "hora": "01:20"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "ORACIÓN EN EL HUERTO Parroquia de la Concepción CRUZ DE · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "Mora Claros Salida",
+     "hora": "19:55"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Constitución",
+     "hora": "20:45"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Alfonso XII Gran Vía"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Plaza Niña Constitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Niña"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Vázquez Rábida López"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Rico/ Vázquez Concepción López"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Méndez Hernán Cortés Núñez"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Templo Rico",
+     "hora": "23:15"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Concepción"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Templo",
+     "hora": "00:10"
+    }
+   ],
+   "pagina": 26
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "MISERICORDIA Capilla del Cristo de la Misericordia · CRUZ DE GUÍA · CRUZ DE GUÍA · CRISTO",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Salida",
+     "hora": "19:20"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza de las Monjas"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Salida"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Rábida Rábida"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Espronceda Constitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Berdigón Constitución"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Alonso Palos/Tres Sánchez Agosto"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Templo La Paz",
+     "hora": "23:15"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Rábida"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Templo",
+     "hora": "23:40"
+    }
+   ],
+   "pagina": 26
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "BUENA MUERTE Iglesia de Santa María de Gracia · CRUZ DE GUÍA · VIRGEN",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "Salida Salida",
+     "hora": "19:50"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Paseo Pérez Carasa Pérez Carasa Independencia"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Murillo San José"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL Hernán Cortés Isabel II"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Bocas José Nogales"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "C. OFICIAL C. OFICIAL",
+     "hora": "21:40"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza de las C. Plaza Monjas Monjas"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Plaza Plaza Plaza Constitución Constitución"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Palos/Tres Pérez Carasa Agosto"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Plaza Coto Templo Mora"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Concepción"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Puerto"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Vázquez Limón"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Templo",
+     "hora": "01:30"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Plaza"
+    }
+   ],
+   "pagina": 26
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "MISERICORDIA Capilla del Cristo de la Misericordia · CRUZ DE GUÍA · CRUZ DE GUÍA · CRISTO",
+   "sub": "cruz de guía",
+   "puntos": [
+    {
+     "fila": "20:30",
+     "lugar": "Hernán Cortés"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL",
+     "hora": "20:45"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Monjas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Sta. Ángela Cruz"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "La Paz/Rábida"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Templo",
+     "hora": "23:20"
+    }
+   ],
+   "pagina": 26
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "DESCENDIMIENTO Parroquia de San Pedro · CRUZ DE GUIÍA · CRUZ DE GUÍA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "Salida",
+     "hora": "16:45"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Alosno"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Salida Av. Federico",
+     "hora": "17:40"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Molina"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Paseo Santa Salida Av. Federico Fe",
+     "hora": "18:15"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Molina"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Plaza San Plaza del Plaza Monjas Pedro Punto"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "CortésTres de Agosto Plaza Niña"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza Coto Bocas La Paz/Rábida Mora"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Rascón / C. OFICIAL Rascón Bocas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C. OFICIAL Plaza Monjas",
+     "hora": "20:35"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Plaza Monjas Plaza Monjas Constitución"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Fernando Plaza Plaza Católico Constitución Constitución"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Quintero Fernando el Pl. Quintero Báez Católico Báez"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza Quintero La Fuente Argantonio Báez"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Templo Plaza San Cristo de la",
+     "hora": "22:45"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Pedro Sangre"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Templo Pio XII"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "José Fariñas"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "San Marcos"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Cristo de la Fe"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Templo",
+     "hora": "01:30"
+    }
+   ],
+   "pagina": 33
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SANTO ENTIERRO Ermita de la Soledad · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "17:30",
+     "lugar": "Salida",
+     "hora": "17:25"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Av. Federico Molina"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Av. Federico Molina"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Alameda Sundheim"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza Niña Salida"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza San Rábida/Murillo Pedro"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "C. OFICIAL Puerto/C. Hernán Cortés Albornoz"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL",
+     "hora": "21:15"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Monjas Plaza Monjas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Plaza Plaza Constitución Constitución"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Palos/Palmera Gran Vía"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Palos/ Argantonio Palmera"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Cantero Plaza San Cuadrado Pedro"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Pio XII Templo"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "José Fariñas"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Pastillo"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "San Marcos"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Cristo de la Fe"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Templo",
+     "hora": "02:40"
+    }
+   ],
+   "pagina": 33
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SANTO ENTIERRO Ermita de la Soledad · SOLEDAD Parroquia de la · CRUZ DE GUÍA · CRUZ DE GUÍA",
+   "sub": "paso palio",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "Salida",
+     "hora": "19:45"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Salida Concepción",
+     "hora": "20:10"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza San Pérez Carasa Pedro"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "C. OFICIAL Paseo Santa La Paz Fe"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Puerto/C. Bocas Albornoz"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "C. OFICIAL",
+     "hora": "21:50"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza Plaza Monjas Monjas"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Plaza Plaza Constitución Constitución"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Palos/ Pérez Carasa Palmera"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Plaza San Templo Pedro"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Templo",
+     "hora": "00:45"
+    }
+   ],
+   "pagina": 33
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SOLEDAD Parroquia de la · CRUZ DE GUÍA",
+   "sub": "paso",
+   "puntos": [
+    {
+     "fila": "20:30",
+     "lugar": "Núñez"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Hernán"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "C. OFICIAL"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "C.",
+     "hora": "22:05"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Plaza"
+    }
+   ],
+   "pagina": 33
+  }
+ ]
+}

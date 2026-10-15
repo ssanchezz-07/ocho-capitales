@@ -1,0 +1,3633 @@
+{
+ "fuente": "CADIZ 26.pdf",
+ "columnas": [
+  {
+   "dia": "VIERNES DE DOLORES",
+   "cabecera": "SERVITAS",
+   "puntos": [
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Plaza de la Libertad"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza del Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Mateo de Alba"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "NAZARENO DE LA OBEDIENCIA",
+   "puntos": [
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza del Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "HUMILLACIÓN",
+   "puntos": [
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Cervantes"
+    },
+    {
+     "lugar": "Gaspar del Pino"
+    },
+    {
+     "lugar": "San Miguel"
+    },
+    {
+     "lugar": "Sacramento"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "LA BORRIQUITA",
+   "puntos": [
+    {
+     "lugar": "Avda. Andalucía"
+    },
+    {
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "lugar": "Cuesta de las Calesas"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza del Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Cuesta de las Calesas"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Acacias"
+    },
+    {
+     "lugar": "Brunete"
+    },
+    {
+     "lugar": "Avda. Francisco García de Sola"
+    },
+    {
+     "lugar": "García Carrera"
+    },
+    {
+     "lugar": "Escalzo"
+    },
+    {
+     "lugar": "Avda. María Auxiliadora"
+    },
+    {
+     "lugar": "Poeta Nieto"
+    },
+    {
+     "lugar": "Avda. Andalucía a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "LAS PENAS",
+   "puntos": [
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Plaza Libertad"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "SAGRADA CENA",
+   "puntos": [
+    {
+     "lugar": "Compás de Santo Domingo"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Callejón de los Negros"
+    },
+    {
+     "lugar": "Lázaro Dou"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "32 Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Sopranis"
+    },
+    {
+     "lugar": "Compás de Santo Domingo"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "DESPOJADO",
+   "puntos": [
+    {
+     "lugar": "Colegio Salesianos “San Ignacio” (interior)"
+    },
+    {
+     "lugar": "Avenida María Auxiliadora"
+    },
+    {
+     "lugar": "Poeta Nieto"
+    },
+    {
+     "lugar": "Avda. Andalucía"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Cuesta de las Calesas"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Callejón de los Negros"
+    },
+    {
+     "lugar": "Lázaro Dou"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza las Flores"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Sopranis"
+    },
+    {
+     "lugar": "Santo Domingo"
+    },
+    {
+     "lugar": "Perla de Cádiz"
+    },
+    {
+     "lugar": "Cuesta de las Calesas"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Avda. Bahía Blanca"
+    },
+    {
+     "lugar": "Acacias"
+    },
+    {
+     "lugar": "Plaza San Severiano"
+    },
+    {
+     "lugar": "Brunete"
+    },
+    {
+     "lugar": "García de Sola"
+    },
+    {
+     "lugar": "Avda. García Carrera"
+    },
+    {
+     "lugar": "Escalzo"
+    },
+    {
+     "lugar": "Avda. María Auxiliadora"
+    },
+    {
+     "lugar": "Interior del Colegio Salesianos “San Ignacio” a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "HUMILDAD Y PACIENCIA",
+   "puntos": [
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "San Pedro"
+    },
+    {
+     "lugar": "Beato Diego José de Cádiz"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "NAZARENO DEL AMOR",
+   "puntos": [
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "San Pedro"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "Rosario"
+    },
+    {
+     "lugar": ""
+    },
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "LA PALMA",
+   "puntos": [
+    {
+     "lugar": "Virgen de la Palma"
+    },
+    {
+     "lugar": "Cristo de la Misericordia"
+    },
+    {
+     "lugar": "Martínez Campos"
+    },
+    {
+     "lugar": "Rosa"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Plaza de la Libertad"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Plaza de la Libertad"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Torre"
+    },
+    {
+     "lugar": "Rosa"
+    },
+    {
+     "lugar": "Pastora"
+    },
+    {
+     "lugar": "Plaza del Tío de la Tiza"
+    },
+    {
+     "lugar": "Hermano Ignacio"
+    },
+    {
+     "lugar": "Virgen de las Penas"
+    },
+    {
+     "lugar": "Virgen de la Palma"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "EL PRENDIMIENTO",
+   "puntos": [
+    {
+     "lugar": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "lugar": "Alameda Clara Campoamor (lado Izda.)"
+    },
+    {
+     "lugar": "Plaza Argüelles"
+    },
+    {
+     "lugar": "Plaza de España"
+    },
+    {
+     "lugar": "Avda. Cuatro de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "(EstaITINERARIOS 3 ción de Penitencia en la S.I.C.)"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Enrique de las Marinas"
+    },
+    {
+     "lugar": "Bendición de Dios"
+    },
+    {
+     "lugar": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "VERA+CRUZ",
+   "puntos": [
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Valverde"
+    },
+    {
+     "lugar": "Cánovas del Castillo"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "San Pedro"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Tinte"
+    },
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "PIEDAD",
+   "puntos": [
+    {
+     "lugar": "Plaza de Pío XII"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colon"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "JESÚS CAÍDO",
+   "puntos": [
+    {
+     "lugar": "Plaza Istmo. Cristo de la Vera-Cruz"
+    },
+    {
+     "lugar": "Plaza San Francisco"
+    },
+    {
+     "lugar": "Rosario"
+    },
+    {
+     "lugar": "Marqués de Valdeiñigo"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Cervantes"
+    },
+    {
+     "lugar": "Plaza del Mentidero"
+    },
+    {
+     "lugar": "(por el lado izquierdo)"
+    },
+    {
+     "lugar": "Beni de Cádiz"
+    },
+    {
+     "lugar": "Interior del Parque Genovés"
+    },
+    {
+     "lugar": "(Paseo de las Palmeras)"
+    },
+    {
+     "lugar": "Avda. Doctor Gómez Ulla"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "COLUMNA",
+   "puntos": [
+    {
+     "lugar": "Plaza de San Antonio (centro)"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José (Izqda.)"
+    },
+    {
+     "lugar": "Plaza de Mina"
+    },
+    {
+     "lugar": "Tinte"
+    },
+    {
+     "lugar": "Plaza San Francisco"
+    },
+    {
+     "lugar": "Rosario"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz (Izqda.)"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Plaza de San Antonio (centro)"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "ECCE-HOMO",
+   "puntos": [
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "José del Toro"
+    },
+    {
+     "lugar": "Cardenal Zapata"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitec34 to Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Cánovas del Castillo"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "LA SENTENCIA",
+   "puntos": [
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Valverde"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "LAS CIGARRERAS",
+   "puntos": [
+    {
+     "lugar": "Compás de Santo Domingo"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Valverde"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Plocia"
+    },
+    {
+     "lugar": "Compas de Santo Domingo"
+    },
+    {
+     "lugar": "su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "LAS AGUAS",
+   "puntos": [
+    {
+     "lugar": "Santa Inés"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "San Pedro"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Plaza de San Antonio"
+    },
+    {
+     "lugar": "Torre"
+    },
+    {
+     "lugar": "Santa Inés a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "CAMINITO",
+   "puntos": [
+    {
+     "lugar": "Isabel la Católica"
+    },
+    {
+     "lugar": "Honduras"
+    },
+    {
+     "lugar": "Costa Rica"
+    },
+    {
+     "lugar": "Conde O’Reilly"
+    },
+    {
+     "lugar": "Plaza Argüelles"
+    },
+    {
+     "lugar": "Plaza de España"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Sánchez Barcaiztegui"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Plaza de Mina"
+    },
+    {
+     "lugar": "Tinte"
+    },
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "Plaza Stmo. Cristo de la Vera Cruz"
+    },
+    {
+     "lugar": "Isabel la Católica"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "AFLIGIDOS",
+   "puntos": [
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Plaza Libertad"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Pío XII"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Plaza Libertad"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "a su Templo. ITINERARIOS 35"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "ORACIÓN EN EL HUERTO",
+   "puntos": [
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "Geólogo McPherson"
+    },
+    {
+     "lugar": "Arricruz"
+    },
+    {
+     "lugar": "Avda. Campo del Sur"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Regimiento de Infantería"
+    },
+    {
+     "lugar": "Puerto Chico"
+    },
+    {
+     "lugar": "Desamparados"
+    },
+    {
+     "lugar": "Plaza de la Libertad"
+    },
+    {
+     "lugar": "Plaza de las Flores"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza Catedral"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colon"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza Las Flores"
+    },
+    {
+     "lugar": "Plaza de la Libertad"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "San José Rosa"
+    },
+    {
+     "lugar": "Pastora"
+    },
+    {
+     "lugar": "Plaza Pinto"
+    },
+    {
+     "lugar": "Hermano Ignacio"
+    },
+    {
+     "lugar": "Virgen de las Penas"
+    },
+    {
+     "lugar": "Virgen de la Palma"
+    },
+    {
+     "lugar": "Cristo de la Misericordia"
+    },
+    {
+     "lugar": "Pericón de Cádiz"
+    },
+    {
+     "lugar": "Arricruz"
+    },
+    {
+     "lugar": "Geólogo McPherson"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "EL NAZARENO",
+   "puntos": [
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "Jabonería"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Plaza de Mina. Tinte"
+    },
+    {
+     "lugar": "Plaza San Francisco"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Sopranis"
+    },
+    {
+     "lugar": "Compás de Santo Domingo"
+    },
+    {
+     "lugar": "Santo Domingo"
+    },
+    {
+     "lugar": "Mirador"
+    },
+    {
+     "lugar": "Publico"
+    },
+    {
+     "lugar": "Concepción Arenal"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "MEDINACELI",
+   "puntos": [
+    {
+     "lugar": "Santa Inés"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Plaza de Mina"
+    },
+    {
+     "lugar": "Tinte"
+    },
+    {
+     "lugar": "Plaza San Francisco"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "San Pedro"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza San Francisco a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "MADRUGADA",
+   "cabecera": "EL PERDÓN",
+   "puntos": [
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Pomponio Mela"
+    },
+    {
+     "lugar": "Fabio Rufino"
+    },
+    {
+     "lugar": "San Antonio Abad"
+    },
+    {
+     "lugar": "Posadilla"
+    },
+    {
+     "lugar": "Plaza San Martín"
+    },
+    {
+     "lugar": "Obispo José María Rancés"
+    },
+    {
+     "lugar": "Plaza Fray Félix"
+    },
+    {
+     "lugar": "Stmo. Cristo el Perdón"
+    },
+    {
+     "lugar": "Campo del Sur"
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SIETE PALABRAS",
+   "puntos": [
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Marqués de Cádiz"
+    },
+    {
+     "lugar": "Ruiz de Bustamante"
+    },
+    {
+     "lugar": "Cobos"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Palillero"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "5 Plaza San Juan de Dios (Centro)"
+    },
+    {
+     "lugar": "San Juan de Dios"
+    },
+    {
+     "lugar": "Jesús de la Sentencia"
+    },
+    {
+     "lugar": "Plaza de las Canastas"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "EXPIRACIÓN",
+   "puntos": [
+    {
+     "lugar": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "lugar": "Alameda Apodaca"
+    },
+    {
+     "lugar": "Fermín Salvochea"
+    },
+    {
+     "lugar": "Plaza de España"
+    },
+    {
+     "lugar": "Avda. 4 de Diciembre de 1977"
+    },
+    {
+     "lugar": "Cristóbal Colón"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Plaza de Mina"
+    },
+    {
+     "lugar": "Calderón de la Barca"
+    },
+    {
+     "lugar": "Buenos Aires"
+    },
+    {
+     "lugar": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "DESCENDIMIENTO",
+   "puntos": [
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Hospital de Mujeres"
+    },
+    {
+     "lugar": "Plaza la Libertad"
+    },
+    {
+     "lugar": "Plaza Topete"
+    },
+    {
+     "lugar": "Columela"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Javier de Burgos"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Sacramento"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "BUENA MUERTE",
+   "puntos": [
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Valverde"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Plaza de San Agustín"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "SÁBADO SANTO",
+   "cabecera": "ECCE-MATER-TUA",
+   "puntos": [
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza de Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza del Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Barrié"
+    },
+    {
+     "lugar": "Valverde"
+    },
+    {
+     "lugar": "Beato Diego de Cádiz"
+    },
+    {
+     "lugar": "Rosario"
+    },
+    {
+     "lugar": "Plaza Mendizábal"
+    },
+    {
+     "lugar": "Sánchez Barcaiztegui"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "SÁBADO SANTO",
+   "cabecera": "SANTO ENTIERRO",
+   "puntos": [
+    {
+     "lugar": "Santa Inés"
+    },
+    {
+     "lugar": "San José"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Plaza del Palillero Columela"
+    },
+    {
+     "lugar": "San Francisco"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza San Juan de Dios"
+    },
+    {
+     "lugar": "Pelota"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Arquitecto Acero"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "San José Santa Inés a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RESURRECCIÓN",
+   "cabecera": "LA RESURRECCIÓN",
+   "puntos": [
+    {
+     "lugar": "Plaza San Antonio"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Palillero"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "ESTACIÓN DE PENITENCIA EN LA S.I.C"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Plaza de la Catedral"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Santiago"
+    },
+    {
+     "lugar": "Plaza Candelaria"
+    },
+    {
+     "lugar": "Montañés"
+    },
+    {
+     "lugar": "Plaza Palillero"
+    },
+    {
+     "lugar": "Novena"
+    },
+    {
+     "lugar": "Ancha"
+    },
+    {
+     "lugar": "Plaza San Antonio"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  }
+ ],
+ "horas": [
+  {
+   "pagina": 6,
+   "horas": {
+    "salida": [
+     "19:00"
+    ],
+    "catedral": [
+     "20:45",
+     "21:05",
+     "21:40",
+     "22:25"
+    ],
+    "entrada": [
+     "00:40"
+    ]
+   },
+   "cerca": "XVIII. SERVITAS VIERNES DOLORES"
+  },
+  {
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "17:00"
+    ],
+    "catedral": [
+     "18:30",
+     "18:45",
+     "19:20",
+     "19:50"
+    ],
+    "entrada": [
+     "22:25"
+    ]
+   },
+   "cerca": "A.M. XIX. OBEDIENCIA NAZARENO SÁBADO PASIÓN"
+  },
+  {
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "18:35",
+     "18:55"
+    ],
+    "catedral": [
+     "19:10",
+     "19:45",
+     "20:15"
+    ],
+    "entrada": [
+     "23:00",
+     "23:40"
+    ]
+   },
+   "cerca": "BCT HUMILLACIÓN MISTERIO HORARIOS A.M. XIX."
+  },
+  {
+   "pagina": 9,
+   "horas": {
+    "salida": [
+     "13:30",
+     "16:30",
+     "13:50",
+     "16:55",
+     "14:20",
+     "17:20"
+    ],
+    "catedral": [
+     "17:30",
+     "17:45",
+     "18:25",
+     "17:55",
+     "18:10",
+     "18:50",
+     "18:20",
+     "18:35",
+     "19:15"
+    ],
+    "entrada": [
+     "18:50",
+     "00:45",
+     "19:15",
+     "01:05",
+     "19:40",
+     "01:30"
+    ]
+   },
+   "cerca": "XX. BORRIQUITA DOMINGO RAMOS"
+  },
+  {
+   "pagina": 9,
+   "horas": {
+    "salida": [
+     "15:00",
+     "17:20",
+     "15:20",
+     "17:40"
+    ],
+    "catedral": [
+     "18:20",
+     "19:15",
+     "18:40",
+     "18:55",
+     "19:35"
+    ],
+    "entrada": [
+     "19:40",
+     "22:15",
+     "20:00",
+     "22:45"
+    ]
+   },
+   "cerca": "BCT LAS PENAS ÚLTIMO MISTERIO HORARIOS"
+  },
+  {
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "16:55",
+     "18:00",
+     "17:20",
+     "18:20"
+    ],
+    "catedral": [
+     "19:00",
+     "19:15",
+     "19:55",
+     "19:20",
+     "19:35",
+     "20:15"
+    ],
+    "entrada": [
+     "20:20",
+     "23:30",
+     "20:40",
+     "23:55"
+    ]
+   },
+   "cerca": "SAGRADA CENA DOMINGO RAMOS"
+  },
+  {
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "15:00",
+     "18:40"
+    ],
+    "catedral": [
+     "19:40",
+     "19:55",
+     "20:35"
+    ],
+    "entrada": [
+     "21:00",
+     "01:50"
+    ]
+   },
+   "cerca": "DESPOJADO ÚLTIMO MISTERIO HORARIOS NUEVA SAGRADA"
+  },
+  {
+   "pagina": 11,
+   "horas": {
+    "salida": [
+     "18:40",
+     "19:00"
+    ],
+    "catedral": [
+     "20:00",
+     "20:15",
+     "20:55",
+     "21:20"
+    ],
+    "entrada": [
+     "00:50"
+    ]
+   },
+   "cerca": "BCT HUMILDAD PACIENCIA DOMINGO RAMOS"
+  },
+  {
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "16:00",
+     "17:30",
+     "16:40",
+     "18:00"
+    ],
+    "catedral": [
+     "18:30",
+     "18:45",
+     "19:25",
+     "19:00",
+     "19:15",
+     "19:55"
+    ],
+    "entrada": [
+     "19:50",
+     "22:35",
+     "20:20",
+     "23:25"
+    ]
+   },
+   "cerca": "HORARIOS PP. NAZARENO DEL AMOR LUNES"
+  },
+  {
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "14:45",
+     "18:25",
+     "15:15",
+     "18:50"
+    ],
+    "catedral": [
+     "19:25",
+     "19:40",
+     "20:20",
+     "19:50",
+     "20:05",
+     "20:45"
+    ],
+    "entrada": [
+     "20:45",
+     "23:30",
+     "21:10",
+     "00:00"
+    ]
+   },
+   "cerca": "BCT (XVIII). (XVIII) PALMA ÚLTIMO MISTERIO"
+  },
+  {
+   "pagina": 14,
+   "horas": {
+    "salida": [
+     "16:45",
+     "19:20",
+     "17:05",
+     "19:40"
+    ],
+    "catedral": [
+     "20:20",
+     "20:35",
+     "21:15",
+     "20:40",
+     "20:55",
+     "21:35"
+    ],
+    "entrada": [
+     "21:40",
+     "00:15",
+     "22:00",
+     "00:40"
+    ]
+   },
+   "cerca": "(XVIII). PRENDIMIENTO LUNES SANTO"
+  },
+  {
+   "pagina": 14,
+   "horas": {
+    "salida": [
+     "19:15",
+     "20:15",
+     "19:30",
+     "20:35"
+    ],
+    "catedral": [
+     "21:15",
+     "21:30",
+     "22:10",
+     "21:35",
+     "21:50",
+     "22:30"
+    ],
+    "entrada": [
+     "22:35",
+     "00:25",
+     "22:55",
+     "00:45"
+    ]
+   },
+   "cerca": "PP. VERA+CRUZ ÚLTIMO MISTERIO HORARIOS NUEVA"
+  },
+  {
+   "pagina": 15,
+   "horas": {
+    "salida": [
+     "16:30",
+     "18:30",
+     "16:45",
+     "18:40"
+    ],
+    "catedral": [
+     "19:15",
+     "19:30",
+     "20:10",
+     "19:30",
+     "20:25"
+    ],
+    "entrada": [
+     "20:35",
+     "22:30",
+     "20:50",
+     "22:45"
+    ]
+   },
+   "cerca": "SANIDAD MARTES SANTO"
+  },
+  {
+   "pagina": 15,
+   "horas": {
+    "salida": [
+     "17:30",
+     "18:55",
+     "17:50",
+     "19:15"
+    ],
+    "catedral": [
+     "19:55",
+     "20:10",
+     "20:50",
+     "20:15",
+     "20:30",
+     "21:10"
+    ],
+    "entrada": [
+     "21:15",
+     "00:15",
+     "21:35",
+     "00:35"
+    ]
+   },
+   "cerca": "BCT PIEDAD ÚLTIMO MISTERIO HORARIOS NUEVA"
+  },
+  {
+   "pagina": 16,
+   "horas": {
+    "salida": [
+     "19:20",
+     "17:55",
+     "19:45"
+    ],
+    "catedral": [
+     "20:20",
+     "20:35",
+     "21:15",
+     "20:45",
+     "21:00",
+     "21:40"
+    ],
+    "entrada": [
+     "21:40",
+     "00:40",
+     "22:05",
+     "01:05"
+    ]
+   },
+   "cerca": "PP. JESÚS CAÍDO MARTES SANTO"
+  },
+  {
+   "pagina": 16,
+   "horas": {
+    "salida": [
+     "17:30",
+     "20:10",
+     "18:00"
+    ],
+    "catedral": [
+     "21:10",
+     "21:25",
+     "22:05",
+     "21:30",
+     "21:45",
+     "22:25"
+    ],
+    "entrada": [
+     "22:30",
+     "23:50",
+     "22:50",
+     "00:15"
+    ]
+   },
+   "cerca": "BCT COLUMNA ÚLTIMO MISTERIO HORARIOS NUEVA"
+  },
+  {
+   "pagina": 17,
+   "horas": {
+    "salida": [
+     "19:00",
+     "20:55"
+    ],
+    "catedral": [
+     "21:55",
+     "22:10",
+     "22:50"
+    ],
+    "entrada": [
+     "23:15",
+     "00:55"
+    ]
+   },
+   "cerca": "BCT (XVIII). ECCE-HOMO MARTES SANTO"
+  },
+  {
+   "pagina": 18,
+   "horas": {
+    "salida": [
+     "16:15",
+     "17:45",
+     "16:40",
+     "18:10"
+    ],
+    "catedral": [
+     "18:45",
+     "19:00",
+     "19:40",
+     "19:10",
+     "19:25",
+     "20:05"
+    ],
+    "entrada": [
+     "20:15",
+     "00:00",
+     "20:40",
+     "00:45"
+    ]
+   },
+   "cerca": "BCT (XVI). SENTENCIA MIÉRCOLES SANTO"
+  },
+  {
+   "pagina": 18,
+   "horas": {
+    "salida": [
+     "17:15",
+     "18:40",
+     "17:35",
+     "19:05"
+    ],
+    "catedral": [
+     "19:40",
+     "20:35",
+     "20:05",
+     "20:20",
+     "21:00"
+    ],
+    "entrada": [
+     "21:10",
+     "01:25",
+     "21:35",
+     "01:55"
+    ]
+   },
+   "cerca": "XVIII LAS CIGARRERAS ÚLTIMO MISTERIO HORARIOS"
+  },
+  {
+   "pagina": 20,
+   "horas": {
+    "salida": [
+     "16:40",
+     "19:30",
+     "17:00",
+     "19:50"
+    ],
+    "catedral": [
+     "20:30",
+     "20:45",
+     "21:25",
+     "20:50",
+     "21:05",
+     "21:45"
+    ],
+    "entrada": [
+     "22:00",
+     "00:10",
+     "22:20",
+     "00:35"
+    ]
+   },
+   "cerca": "LAS AGUAS MIÉRCOLES SANTO"
+  },
+  {
+   "pagina": 20,
+   "horas": {
+    "salida": [
+     "19:00",
+     "20:25"
+    ],
+    "catedral": [
+     "21:20",
+     "21:35",
+     "22:10"
+    ],
+    "entrada": [
+     "22:45",
+     "00:40"
+    ]
+   },
+   "cerca": "CAMINITO ÚLTIMO MISTERIO HORARIOS NUEVA LAS"
+  },
+  {
+   "pagina": 21,
+   "horas": {
+    "salida": [
+     "18:20",
+     "20:10"
+    ],
+    "catedral": [
+     "21:10",
+     "21:25",
+     "22:05"
+    ],
+    "entrada": [
+     "22:30",
+     "23:35"
+    ]
+   },
+   "cerca": "AFLIGIDOS JUEVES SANTO"
+  },
+  {
+   "pagina": 21,
+   "horas": {
+    "salida": [
+     "18:00",
+     "20:50",
+     "18:30",
+     "21:15"
+    ],
+    "catedral": [
+     "21:50",
+     "22:05",
+     "22:45",
+     "22:15",
+     "22:30",
+     "23:10"
+    ],
+    "entrada": [
+     "23:10",
+     "02:30",
+     "23:35",
+     "03:00"
+    ]
+   },
+   "cerca": "HUERTO ORACIÓN MISTERIO HORARIOS NUEVA AFLIGIDOS"
+  },
+  {
+   "pagina": 22,
+   "horas": {
+    "salida": [
+     "19:50",
+     "21:45"
+    ],
+    "catedral": [
+     "22:45",
+     "23:00",
+     "23:40"
+    ],
+    "entrada": [
+     "00:10"
+    ]
+   },
+   "cerca": "NAZARENO JUEVES SANTO"
+  },
+  {
+   "pagina": 24,
+   "horas": {
+    "salida": [
+     "21:15",
+     "23:00",
+     "21:30",
+     "23:20"
+    ],
+    "catedral": [
+     "23:55",
+     "00:10",
+     "00:45",
+     "00:15",
+     "00:30",
+     "01:05"
+    ],
+    "entrada": [
+     "01:10",
+     "04:00",
+     "01:30",
+     "04:20"
+    ]
+   },
+   "cerca": "MEDINACELI MADRUGADA"
+  },
+  {
+   "pagina": 24,
+   "horas": {
+    "salida": [
+     "00:50",
+     "02:00",
+     "01:10",
+     "02:20"
+    ],
+    "catedral": [
+     "03:00",
+     "03:20",
+     "04:00",
+     "03:20",
+     "03:40",
+     "04:20"
+    ],
+    "entrada": [
+     "04:25",
+     "09:00",
+     "04:45",
+     "09:25"
+    ]
+   },
+   "cerca": "PERDÓN ÚLTIMO MISTERIO HORARIOS NUEVA MEDINACELI"
+  },
+  {
+   "pagina": 26,
+   "horas": {
+    "salida": [
+     "18:30",
+     "20:05"
+    ],
+    "catedral": [
+     "21:05",
+     "21:20",
+     "22:00"
+    ],
+    "entrada": [
+     "22:30",
+     "01:00"
+    ]
+   },
+   "cerca": "SIETE PALABRAS VIERNES SANTO"
+  },
+  {
+   "pagina": 26,
+   "horas": {
+    "salida": [
+     "17:15",
+     "20:30",
+     "17:40",
+     "20:55"
+    ],
+    "catedral": [
+     "21:30",
+     "22:25",
+     "21:55",
+     "22:10",
+     "22:55"
+    ],
+    "entrada": [
+     "22:55",
+     "02:00",
+     "23:25",
+     "02:30"
+    ]
+   },
+   "cerca": "EXPIRACIÓN MISTERIO HORARIOS NUEVA SIETE PALABRAS"
+  },
+  {
+   "pagina": 27,
+   "horas": {
+    "salida": [
+     "19:30",
+     "21:35"
+    ],
+    "catedral": [
+     "22:30",
+     "22:45",
+     "23:25"
+    ],
+    "entrada": [
+     "23:55",
+     "01:35"
+    ]
+   },
+   "cerca": "DESCENDIMIENTO VIERNES SANTO"
+  },
+  {
+   "pagina": 27,
+   "horas": {
+    "salida": [
+     "21:35",
+     "22:05"
+    ],
+    "catedral": [
+     "23:00",
+     "23:15",
+     "23:55"
+    ],
+    "entrada": [
+     "00:25",
+     "02:10"
+    ]
+   },
+   "cerca": "BUENA MUERTE MISTERIO HORARIOS NUEVA DESCENDIMIENTO"
+  },
+  {
+   "pagina": 28,
+   "horas": {
+    "salida": [
+     "15:50",
+     "18:00"
+    ],
+    "catedral": [
+     "18:50",
+     "19:05",
+     "19:35"
+    ],
+    "entrada": [
+     "19:55",
+     "21:50"
+    ]
+   },
+   "cerca": "(XVIII). SANTO ENTIERRO VIRGEN ECCE-MATER-TUA SÁBADO"
+  },
+  {
+   "pagina": 30,
+   "horas": {
+    "salida": [
+     "09:00",
+     "09:20"
+    ],
+    "catedral": [
+     "10:00",
+     "12:30",
+     "10:20",
+     "12:50"
+    ],
+    "entrada": [
+     "14:25",
+     "14:45"
+    ]
+   },
+   "cerca": "RESURRECCIÓN DOMINGO RESURRECCIÓN"
+  }
+ ]
+}

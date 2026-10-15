@@ -96,7 +96,12 @@ async function thumb(x, file) {
 async function hoja() {
   const J = JSON.parse(fs.readFileSync(OUT, 'utf8'));
   const items = [];
-  for (const [slug, list] of Object.entries(J.hermandades)) (list || []).forEach((x, i) => x.cache && items.push({ id: `${slug}#${i}`, ...x }));
+  const desde = +(process.argv.find((a) => a.startsWith('--desde=')) || '--desde=0').split('=')[1];
+  for (const [slug, list] of Object.entries(J.hermandades)) (list || []).forEach((x, i) => items.push({ id: `${slug}#${i}`, slug, ...x }));
+  items.splice(0, desde);
+  // Miniatura con nombre único (solo lectura del archivo de candidatas: se puede usar con la búsqueda en marcha)
+  for (const it of items) { try { it.cache = await thumb(it, nombreMini(it.slug, it.titulo)); } catch (e) { it.cache = ''; } }
+  for (let i = items.length - 1; i >= 0; i--) if (!items[i].cache) items.splice(i, 1);
   const COLS = 5, TW = 300, TH = 260, LH = 40, PER = 25;
   const xml = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
   for (let p = 0; p * PER < items.length; p++) {

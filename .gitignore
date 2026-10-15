@@ -23,3 +23,9 @@ prototipos/
 
 # Textos completos de fichas oficiales: solo para leer y resumir (derechos de sus autores)
 tools/sources/fichas/*.txt
+Auditoría de movilidad.md
+Plan maestro.md
+site/scripts/cache/
+
+# PDF oficiales de itinerarios (derechos de sus editores): solo en local
+Itinerarios Semana Santa/

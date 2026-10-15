@@ -1,0 +1,1786 @@
+{
+ "fuente": "ALMERIA 26.pdf",
+ "columnas": [
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "BORRIQUITA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "10:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Gregorio"
+    },
+    {
+     "fila": "10:30",
+     "lugar": "Marañón"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Obispo Orberá"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "12:00",
+     "lugar": "Virgen del Mar Carrera oficial"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Lope de Vega"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Purchena"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "Terriza"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Canga"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Argüelles"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "PAZ",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "10:30",
+     "lugar": "Tirso de Molina"
+    },
+    {
+     "fila": "11:00",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "11:30",
+     "lugar": "Javier Sanz"
+    },
+    {
+     "fila": "12:30",
+     "lugar": "Trajano"
+    },
+    {
+     "fila": "13:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "13:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "14:00",
+     "lugar": "San Sebastián"
+    },
+    {
+     "fila": "14:30",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "15:00",
+     "lugar": "Espíritu Santo Tirso de Molina"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "PENAS",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "15:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Ronda"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Real del Barrio"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Alto"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Murcia"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "San Leonardo"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Navarro"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Rodrigo"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Purchena"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Alcalde Muñoz San Sebastián"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "San Juan"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Bosco"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Carrera del"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Peru"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Redonda"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Baja de la"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Iglesia"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "ESTRELLA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "15:30",
+     "lugar": "Alta de la"
+    },
+    {
+     "fila": "15:30",
+     "lugar": "Iglesia"
+    },
+    {
+     "fila": "16:00",
+     "lugar": "Verbena"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Real del Barrio"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Alto"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Amatisteros"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "San Leonardo"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Carrera oficial Obispo Orberá"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "General"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Tamayo"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Trajano"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Cervantes"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "San Francisco"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Javier"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Ntra. Sra. del"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Mar"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Alta de la"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Iglesia"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "MISERICORDIA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "16:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "16:30",
+     "lugar": "Maestría"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Inglés"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Granada"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Purchena"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza San"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Fernando"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Purchena"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Las Cruces"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Avda. Vilches"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "San Ildefonso"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Lopán"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Avda. de los"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Ángeles"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "ÁNGELES",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "16:30",
+     "lugar": "Turquesa"
+    },
+    {
+     "fila": "17:00",
+     "lugar": "Quinta avenida"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Badén de la"
+    },
+    {
+     "fila": "17:30",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "18:00",
+     "lugar": "Granada"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Paseo de"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Almería"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "General"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Tamayo"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Trajano"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Purchena"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Quintana"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Acosta"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Lopán"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Diamante"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "CENA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "General"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Tamayo"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Real"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Las Esclavas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Ricardos"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 11
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "PASIÓN",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Hermanos Machado"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Javier Sanz"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza de Bendicho"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Gravina"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Oliveros"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 15
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "DESAMPARADOS",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "Rafael Alberti"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Artés de Arcos"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Eguilior"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Rueda López"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Lucano"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Masnou"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Gerona"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Canónigo Molina Alonso"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 15
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "GRAN PODER",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Avda. Cabo de"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Avda. Cabo de"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Almadrabillas"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Marqués de"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Plaza de Bendicho"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Arapiles"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Reina Regente"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Almadrabillas"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Avda. Cabo de"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 15
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "HUMILDAD Y PACIENCIA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "La Salle"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Obispo Orberá"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Celia Viñas"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Cervantes"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Puerta de Purchena"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Alcalde Muñoz"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "San Juan Bosco"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Carrera del Peru"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Olivo"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Juan Segura Murcia"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "GRACIA Y AMPARO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "-"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Rambla"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Javier Sanz"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Rueda López"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "San Sebastián"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Plaza Santa Rita"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "San Juan Bosco"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Rosa Felices"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Ctra. de Níjar"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Juan Segura Murcia"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "AMOR",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Cristo del Amor"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Santa Rita"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "San Leonardo"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Puerta de Purchena"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "PRIMER DOLOR",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Murcia"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Santos Zárate"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Obispo Orberá"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Paseo"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "General Tamayo"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Lucano"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "San Sebastián San"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Se recoge"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Puerta de"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Las"
+    }
+   ],
+   "pagina": 22
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "CALVARIO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "18:30",
+     "lugar": "Avda. del Mar"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Pedro Jover"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Almedina"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Plaza Flores"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Paseo (21:15 h)"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Santo Domingo"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Trajano"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "La Reina"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "San Juan"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Rosario"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "San Roque"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "PRENDI- MIENTO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Arráez"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Plaza del Monte"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "San Pedro"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Las Esclavas"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Velázquez"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Ronda"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "CAUTIVO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Las Puras"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Las Claras"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Plaza Flores"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Trajano"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Lachambre"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Puerta Perdones"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Plaza Jesús Cautivo"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "MERCED",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:30",
+     "lugar": "UNED"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Siloy"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Correos"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Lachambre"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Torre catedral"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "SENTENCIA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Avda. Vilches"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Granada"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "San Sebastián"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Real"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "San Indalecio"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Lope de Vega"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Puerta de Purchena"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Las Cruces"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Acosta"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "ESPERANZA MACARENA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Avda. Vilches"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Granada"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Puerta de Purchena"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Plaza Flores"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Ricardos"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Cervantes"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Puerta de Purchena"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Virgen del Consuelo"
+    },
+    {
+     "fila": "02:30",
+     "lugar": "Las Cruces"
+    },
+    {
+     "fila": "03:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "ORACIÓN",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Almedina"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Pedro Jover"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Arráez"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Las Tiendas"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Ricardos"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Entra"
+    },
+    {
+     "fila": "03:00",
+     "lugar": "-"
+    }
+   ],
+   "pagina": 28
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "PENAS",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Sale (sale)"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Velázquez"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "La Reina"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Juez"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "San Pedro"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Lachambre"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "ROSARIO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:30",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Lucano"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "General Castaños"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Hospital"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "La Reina"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Las Claras"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Plaza Flores"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Dr. Gómez Ulla"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Paseo"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "BUENA MUERTE",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Pta. de San Purchena Sebastián"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "San Pedro Santiago"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Carrera Ricardos oficial"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Virgen del Carrera Mar oficial"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Virgen del Catedral Mar"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Mariana Catedral"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Ricardos Jovellanos"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Navarro San Pedro Rodrigo"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Navarro Entra Rodrigo"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "ANGUSTIAS NAZARENO AMARGURA",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "18:30",
+     "lugar": "Sale",
+     "hora": "18:45"
+    },
+    {
+     "fila": "19:00",
+     "lugar": "Plaza de España"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "El Salvador La Marina"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Sierra Sierra Alhamilla Alhamilla"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Cable Santa Inglés Teresa"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Plaza Circular Circular"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Carrera Marqués oficial de Comillas"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Virgen del Carrera Mar oficial"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Virgen del Catedral Mar"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Bendicho Catedral"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Real Bendicho"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Gerona Masnou"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Santa Plaza Teresa Circular"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Sierra La Marina Alhamilla"
+    },
+    {
+     "fila": "01:30",
+     "lugar": "Entra El Salvador"
+    },
+    {
+     "fila": "02:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "DESCENDI- MIENTO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "21:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Las Cruces"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Las Claras"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Santiago"
+    },
+    {
+     "fila": "01:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 36
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "SANTO SEPULCRO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "19:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "19:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Mariana"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 41
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "DOLORES",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Cervantes"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Real"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Se recoge"
+    }
+   ],
+   "pagina": 41
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "CARIDAD",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Artés de Arcos"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Los Picos"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "Carrera oficial"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Virgen del Mar"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Bendicho"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Gravina"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Entra"
+    }
+   ],
+   "pagina": 41
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "VUELTA DEL SEPULCRO",
+   "sub": "",
+   "puntos": [
+    {
+     "fila": "20:00",
+     "lugar": "Sale"
+    },
+    {
+     "fila": "20:30",
+     "lugar": "Pósito Quisco"
+    },
+    {
+     "fila": "21:00",
+     "lugar": "Plaza Vieja Arco"
+    },
+    {
+     "fila": "21:30",
+     "lugar": "San Pedro"
+    },
+    {
+     "fila": "22:00",
+     "lugar": "Carrera oficial Conde"
+    },
+    {
+     "fila": "22:30",
+     "lugar": "Virgen del Mar General"
+    },
+    {
+     "fila": "23:00",
+     "lugar": "Catedral"
+    },
+    {
+     "fila": "23:30",
+     "lugar": "Tiendas"
+    },
+    {
+     "fila": "00:00",
+     "lugar": "Entra"
+    },
+    {
+     "fila": "00:30",
+     "lugar": "Se"
+    }
+   ],
+   "pagina": 41
+  }
+ ]
+}
