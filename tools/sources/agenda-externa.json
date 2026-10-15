@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 63,
-  "Prensa (texto de noticias)": 27
+  "Prensa (texto de noticias)": 29
  },
  "eventos": [
   {
@@ -4968,6 +4968,26 @@
    "nota": "",
    "fuente": "101TV",
    "url": "https://www.101tv.es/malaga-semana-santa/dos-meses-y-cinco-dias-de-secreto-asi-se-entero-andres-camino-de-que-seria-pregonero-en-malaga/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "traslado",
+   "titulo": "El Císter cumple 50 años y prepara un aniversario con cultos extraordinarios, música y exposiciones",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/cister-cumple-50-anos-prepara_0_2008259591.amp.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "El traslado de la Santa Cena de Granada, expuesto al tráfico en plena Gran Vía: una sucesión de escenas inadmisibles que exige responsabilidades",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
   },
   {
    "fecha": "2026-10-14",
