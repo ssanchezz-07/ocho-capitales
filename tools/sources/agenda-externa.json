@@ -6,19 +6,9 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 63,
-  "Prensa (texto de noticias)": 24
+  "Prensa (texto de noticias)": 25
  },
  "eventos": [
-  {
-   "fecha": "2026-10-14",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "coronacion",
-   "titulo": "Misa conmemorativa del IX aniversario de la Coronación Canónica de Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-15",
    "hora": "20:30",
@@ -221,6 +211,16 @@
   },
   {
    "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario público con el Simpecado de la Hermandad de la Virgen de la Alegría",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
    "hora": "19:00",
    "ciudad": "sevilla",
    "tipo": "besamanos",
@@ -345,7 +345,7 @@
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Procesión de Nuestra Señora del Rosario de San Julián",
-   "nota": "Salida (desde San Marcos): 18:30.",
+   "nota": "Música: la Banda de Cornetas y Tambores Nuestra Señora del Sol, abriendo el cortejo, y la Banda de Música Villa de Guillena tras el paso.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -4940,6 +4940,16 @@
    "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
   },
   {
+   "fecha": "2026-10-16",
+   "hora": "21:30",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
+   "nota": "",
+   "fuente": "Hermandad la Merced",
+   "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
+  },
+  {
    "fecha": "2026-10-14",
    "hora": "",
    "ciudad": "malaga",
@@ -5051,6 +5061,22 @@
     "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
     "fuente": "Diario SUR",
     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
+   }
+  },
+  {
+   "a": {
+    "fecha": "2026-10-17",
+    "hora": "",
+    "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
+    "fuente": "ABC",
+    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+   },
+   "b": {
+    "fecha": "2026-10-16",
+    "hora": "21:30",
+    "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
+    "fuente": "Hermandad la Merced",
+    "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
    }
   }
  ]
