@@ -376,5 +376,9 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-curio { border: 0; background: none; padding: 26px 0 18px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); border-radius: 0; }
 .oc-curio::before { inset: 4px 0 auto; height: 1px; border: 0; background: color-mix(in srgb, var(--gold) 55%, transparent); }
 .oc-curio p { font: 500 clamp(1.2rem, 1rem + .9vw, 1.6rem)/1.35 var(--sans); letter-spacing: -.015em; color: var(--primary); text-wrap: pretty; }
+/* Calendario y formularios: el desplegable y las casillas siguen la misma geometría que las píldoras */
+.oc-field select, .oc-theme select { border-radius: 999px; padding-left: 18px; }
+.oc-mday { border-radius: 12px; }
+.oc-month, .oc-cal { border-radius: 20px; }
 /* Portada en escritorio: menos aire bajo el balcón para que asomen las noticias */
 @media (min-width: 1100px) { .oc-hero2 { min-height: min(calc(100svh - var(--header-h) - 120px), 660px); } }
