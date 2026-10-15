@@ -117,6 +117,7 @@
       if (g && paso) g.setAttribute('transform', 'translate(' + paso.x.toFixed(1) + ' ' + paso.y.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
       if (cz && cruz) { cz.setAttribute('cx', cruz.x.toFixed(1)); cz.setAttribute('cy', cruz.y.toFixed(1)); cz.setAttribute('r', (6 * Z).toFixed(2)); }
     });
+    capas.mundo && capas.mundo.querySelectorAll('.oc-c-parada').forEach(function (m) { m.setAttribute('transform', m.getAttribute('transform').replace(/scale\([^)]*\)/, 'scale(' + Z.toFixed(3) + ')')); });
   }
   function actualizar() {
     hora.textContent = hhmm(T);
@@ -217,7 +218,7 @@
     var hoy = fechas[d] === hoyISO(), ah = ahoraMin();
     $('[data-ahora]').hidden = !hoy;
     T = hoy && ah >= L[0] - 180 ? Math.max(L[0], Math.min(L[1], ah < L[0] - 180 ? ah + 1440 : ah)) : L[0] + 60;
-    rango.value = T; dibujarRutas(); actualizar();
+    rango.value = T; dibujarRutas(); actualizar(); opcionesInicio(); rParadas.textContent = '';
   }
   $$('[data-dia]').forEach(function (b) { b.addEventListener('click', function () { parar(); ponerDia(b.getAttribute('data-dia')); }); });
   rango.addEventListener('input', function () { parar(); T = +rango.value; actualizar(); });
@@ -229,6 +230,86 @@
     if (+rango.value >= +rango.max - 1) T = +rango.min;
     var t0 = performance.now(), base = T;
     (function paso(t) { if (!playing) return; T = base + (t - t0) / 1000 * 12; if (T >= +rango.max) { T = +rango.max; parar(); } rango.value = T; actualizar(); if (playing) raf = requestAnimationFrame(paso); })(t0);
+  });
+
+  // ---------- ruta de penitencia del día ----------
+  // Rejilla de «sitios para verlas»: los puntos de todos los recorridos de la jornada agrupados cada ~120 m.
+  // Desde donde estés, elige la siguiente parada a la que llegas andando (70 m/min) antes de que pase una cofradía que
+  // aún no has visto, con la menor espera; en modo «evitar la bulla» penaliza las zonas donde coinciden muchas.
+  var rForm = $('[data-ruta-form]'), rParadas = $('[data-ruta-paradas]'), rInicio = $('[data-ruta-inicio]');
+  var TIPOS = { bar: 'Bar o cafetería', comer: 'Para comer', tienda: 'Tienda de alimentación', panaderia: 'Panadería', agua: 'Fuente de agua', aseo: 'Aseos', farmacia: 'Farmacia' };
+  function opcionesInicio() {
+    var L = limites(); rInicio.textContent = '';
+    for (var m = Math.ceil(L[0] / 30) * 30; m <= L[1] - 60; m += 30) { var o = document.createElement('option'); o.value = m; o.textContent = hhmm(m); rInicio.appendChild(o); }
+    var cerca = Math.max(+rInicio.options[0].value, Math.round(T / 30) * 30); rInicio.value = Math.min(cerca, +rInicio.options[rInicio.options.length - 1].value);
+  }
+  function planificar(t0, horas, modo) {
+    var ev = [], celdas = {};
+    delDia().forEach(function (h) { var pts = h.t.paso || h.t.cruz; pts.forEach(function (p) { var k = Math.round(p[0] / 120) + ':' + Math.round(p[1] / 120); var c = celdas[k] || (celdas[k] = { x: 0, y: 0, n: 0, ev: [], lugar: p[3] }); c.x += p[0]; c.y += p[1]; c.n++; c.ev.push({ t: p[2], h: h, lugar: p[3] }); }); });
+    var lista = Object.keys(celdas).map(function (k) { var c = celdas[k]; c.x /= c.n; c.y /= c.n; return c; });
+    var bulla = function (c, t) { var n = 0, vistas = {}; lista.forEach(function (o) { if (Math.hypot(o.x - c.x, o.y - c.y) > 300) return; o.ev.forEach(function (e) { if (Math.abs(e.t - t) <= 45 && !vistas[e.h.s]) { vistas[e.h.s] = 1; n++; } }); }); return n + (c.ev.some(function (e) { return /carrera oficial|campana|catedral/i.test(e.lugar); }) ? 4 : 0); };
+    var pos = yo && Math.hypot(yo.x, yo.y) < 15000 ? { x: yo.x, y: yo.y } : null, t = t0, fin = t0 + horas * 60, vistas = {}, paradas = [];
+    while (t < fin && paradas.length < 10) {
+      var mejor = null;
+      lista.forEach(function (c) {
+        var andar = pos ? Math.hypot(c.x - pos.x, c.y - pos.y) / 70 : 0, llega = t + andar + (pos ? 4 : 0);
+        if (andar > 30) return; // más de media hora andando entre bullas no es realista
+        c.ev.forEach(function (e) {
+          if (vistas[e.h.s] || e.t < llega + 2 || e.t > llega + 60 || e.t > fin) return;
+          // cuántas cofradías aún no vistas pasan por aquí en la hora siguiente (esperarlas en el mismo sitio)
+          var nuevas = {}; c.ev.forEach(function (o) { if (!vistas[o.h.s] && o.t >= e.t && o.t <= Math.min(fin, e.t + 60)) { if (!nuevas[o.h.s] || o.t < nuevas[o.h.s].t) nuevas[o.h.s] = o; } });
+          var nn = Object.keys(nuevas).length, b = bulla(c, e.t);
+          var valor = nn / ((e.t - t) + andar + 10);
+          if (modo === 'tranquilo') valor /= (1 + b * 0.3) * (/carrera|catedral|tribuna|oficial|campana/i.test(e.lugar) ? 3 : 1);
+          if (!mejor || valor > mejor.valor) mejor = { valor: valor, c: c, t: e.t, andar: andar, nuevas: nuevas, bulla: b };
+        });
+      });
+      if (!mejor) { t += 30; continue; } // hueco sin cofradías a mano: se espera media hora y se vuelve a mirar
+      var vistasAqui = Object.keys(mejor.nuevas).map(function (s) { return mejor.nuevas[s]; }).sort(function (a, b) { return a.t - b.t; });
+      vistasAqui.forEach(function (e) { vistas[e.h.s] = 1; });
+      var sit = (D.sitios || []).map(function (s) { return [s, Math.hypot(s[0] - mejor.c.x, s[1] - mejor.c.y)]; }).filter(function (s) { return s[1] < 160; }).sort(function (a, b) { return a[1] - b[1]; });
+      paradas.push({ c: mejor.c, t: mejor.t, andar: mejor.andar, ven: vistasAqui, bulla: mejor.bulla, sitios: sit });
+      pos = { x: mejor.c.x, y: mejor.c.y };
+      t = vistasAqui[vistasAqui.length - 1].t + 10;
+    }
+    return paradas;
+  }
+  function pintarRuta(paradas) {
+    rParadas.textContent = '';
+    var vieja = capas.mundo.querySelector('.oc-c-ruta-mia'); if (vieja) vieja.remove();
+    if (!paradas.length) { var li0 = document.createElement('li'); li0.className = 'oc-ruta-vacia'; li0.textContent = 'A esas horas no queda ninguna cofradía por ver. Prueba a empezar antes.'; rParadas.appendChild(li0); return; }
+    var g = el('g', { 'class': 'oc-c-ruta-mia' }); capas.mundo.insertBefore(g, capas.marcas);
+    g.appendChild(el('path', { 'class': 'oc-c-camino', d: paradas.map(function (p, i) { return (i ? 'L' : 'M') + p.c.x.toFixed(0) + ' ' + p.c.y.toFixed(0); }).join('') }));
+    var xs = [], ys = [];
+    paradas.forEach(function (p, i) {
+      xs.push(p.c.x); ys.push(p.c.y);
+      var m = el('g', { 'class': 'oc-c-parada', transform: 'translate(' + p.c.x.toFixed(0) + ' ' + p.c.y.toFixed(0) + ') scale(' + Z.toFixed(3) + ')' });
+      m.appendChild(el('circle', { r: '14' })); var tx = el('text', { y: '5' }); tx.textContent = i + 1; m.appendChild(tx); g.appendChild(m);
+      var li = document.createElement('li'); li.className = 'oc-ruta-parada';
+      var cab = document.createElement('div'); cab.className = 'oc-ruta-cab';
+      var n = document.createElement('span'); n.className = 'oc-ruta-n'; n.textContent = i + 1;
+      var h = document.createElement('div');
+      var lug = document.createElement('strong'); lug.textContent = hhmm(p.ven[0].t - 5) + ' · ' + (!p.ven[0].lugar || /^salida$/i.test(p.ven[0].lugar) ? 'A la salida de ' + p.ven[0].h.n : p.ven[0].lugar);
+      var meta = document.createElement('span'); meta.textContent = (i ? 'Andando unos ' + Math.max(1, Math.round(p.andar)) + ' min desde la parada anterior · ' : '') + 'Afluencia ' + (p.bulla > 5 ? 'alta' : p.bulla > 2 ? 'media' : 'baja');
+      h.appendChild(lug); h.appendChild(meta); cab.appendChild(n); cab.appendChild(h); li.appendChild(cab);
+      var ul = document.createElement('ul'); ul.className = 'oc-ruta-ven';
+      p.ven.forEach(function (e) { var x = document.createElement('li'); var b = document.createElement('b'); b.textContent = hhmm(e.t); var s = document.createElement('span'); s.textContent = e.h.n; x.appendChild(b); x.appendChild(s); ul.appendChild(x); });
+      li.appendChild(ul);
+      var cerca = {}; p.sitios.forEach(function (s) { var t2 = s[0][2]; if (!cerca[t2]) cerca[t2] = s; });
+      var sit = document.createElement('div'); sit.className = 'oc-ruta-sitios';
+      ['bar', 'comer', 'tienda', 'panaderia', 'agua', 'aseo', 'farmacia'].forEach(function (t2) { var s = cerca[t2]; if (!s) return; var ll = aLatLon(s[0][0], s[0][1]); var a = document.createElement('a'); a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent((s[0][3] || TIPOS[t2]) + ' ' + ll[0].toFixed(5) + ',' + ll[1].toFixed(5)); a.target = '_blank'; a.rel = 'noopener'; a.textContent = TIPOS[t2] + (s[0][3] ? ': ' + s[0][3] : '') + ' (' + Math.round(s[1] / 10) * 10 + ' m)'; sit.appendChild(a); });
+      if (sit.childNodes.length) li.appendChild(sit);
+      var ll2 = aLatLon(p.c.x, p.c.y), ir = document.createElement('a'); ir.className = 'oc-btn is-quiet'; ir.href = 'https://www.google.com/maps/dir/?api=1&destination=' + ll2[0].toFixed(6) + ',' + ll2[1].toFixed(6) + '&travelmode=walking'; ir.target = '_blank'; ir.rel = 'noopener'; ir.textContent = 'Cómo llegar';
+      li.appendChild(ir);
+      rParadas.appendChild(li);
+    });
+    encuadrar(xs.concat(xs.map(function (x) { return x + 200; })), ys.concat(ys.map(function (y) { return y + 200; })), true);
+    mapa.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+  }
+  rForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var modo = (rForm.querySelector('input[name="modo"]:checked') || {}).value || 'maximo';
+    pintarRuta(planificar(+rInicio.value, +$('[data-ruta-horas]').value, modo));
   });
 
   fetch(sec.getAttribute('data-calle')).then(function (r) { return r.json(); }).then(function (j) {

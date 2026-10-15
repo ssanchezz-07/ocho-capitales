@@ -1116,6 +1116,16 @@ function extras() {
 // ---------- En la calle: mapa propio con los recorridos oficiales y la posición estimada de cada cortejo ----------
 // Datos por ciudad (dist/data/calle/<ciudad>.json): plano (calles en metros) + recorridos con tiempo (min del día) y XY.
 const minDia = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
+// Algunos PDF escriben el nombre de la calle en vertical y llega troceado («P e ri o d is ta R a m ó n»):
+// si casi todas las piezas tienen 1-2 letras, se juntan y se vuelve a separar por mayúsculas.
+function limpiaLugar(s) {
+  if (!s) return '';
+  const pz = s.trim().split(/\s+/);
+  if (pz.length >= 4 && pz.filter((p) => p.length <= 2).length / pz.length > 0.6) s = pz.join('').replace(/([a-záéíóúñ.])([A-ZÁÉÍÓÚÑ])/g, '$1 $2');
+  // horas pegadas al nombre («Jesús Gran PoderSalida 19:35» → «Jesús Gran Poder»)
+  s = s.replace(/(Salida|Entrada|Recogida)\s*\d{1,2}[:.]\d{2}/gi, ' ');
+  return s.replace(/\s+/g, ' ').trim();
+}
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
   if (!fs.existsSync(fP) || !fs.existsSync(fR)) return null;
@@ -1133,7 +1143,7 @@ function datosCalle(c) {
         let t = minDia(p.hora) ?? minDia(p.fila); if (t == null) continue;
         if (t0 == null) t0 = t; else if (t < t0 - 180) t += 1440;
         const [x, y] = xy(p.lat, p.lon);
-        out.push([x, y, t, p.lugar, p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0]);
+        out.push([x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0]);
       }
       // la rejilla puede repetir franjas: el tiempo nunca retrocede
       for (let i = 1; i < out.length; i++) if (out[i][2] < out[i - 1][2]) out[i][2] = out[i - 1][2];
@@ -1143,7 +1153,9 @@ function datosCalle(c) {
     const im = h.imagen;
     hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos });
   }
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, hermandades: hs, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
+  const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 function pageCalle(c) {
   const datos = datosCalle(c); if (!datos) return;
@@ -1161,6 +1173,19 @@ function pageCalle(c) {
     <p class="oc-calle-osm">Plano: © colaboradores de OpenStreetMap</p>
   </div>
   <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
+  <section class="oc-ruta" aria-labelledby="ruta-t">
+    <h2 class="oc-h2" id="ruta-t">Tu ruta de penitencia</h2>
+    <p class="oc-ruta-intro">Te propongo dónde ponerte en cada momento para ver las cofradías de la jornada, cuánto se anda entre un sitio y otro y dónde tomar algo o comprar agua cerca.</p>
+    <form class="oc-ruta-form" data-ruta-form>
+      <label class="oc-field"><span class="oc-label">Empiezo a las</span><select data-ruta-inicio></select></label>
+      <label class="oc-field"><span class="oc-label">Durante</span><select data-ruta-horas><option value="3">3 horas</option><option value="5" selected>5 horas</option><option value="8">8 horas</option></select></label>
+      <fieldset class="oc-ruta-modo"><legend class="oc-label">Prefiero</legend><label><input type="radio" name="modo" value="maximo" checked><span>Ver el máximo</span></label><label><input type="radio" name="modo" value="tranquilo"><span>Evitar la bulla</span></label></fieldset>
+      <button class="oc-btn" type="submit">Crear mi ruta</button>
+    </form>
+    <ol class="oc-ruta-paradas" data-ruta-paradas aria-live="polite"></ol>
+    <p class="oc-note">La afluencia es una estimación según cuántas cofradías coinciden en la zona; los locales salen de OpenStreetMap y conviene confirmar su horario en Semana Santa.</p>
+  </section>
+  <h2 class="oc-h2">Cofradías de la jornada</h2>
   <ol class="oc-calle-lista" data-lista aria-live="polite"></ol>
   <div class="oc-sheet oc-calle-ficha" hidden data-ficha><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="calle-ficha-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="calle-ficha-t" data-ficha-titulo></p><button class="oc-iconbtn" type="button" data-ficha-cerrar aria-label="Cerrar">${icon('x')}</button></div><div data-ficha-cuerpo></div></div></div>
 </section>
