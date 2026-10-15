@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 63,
-  "Prensa (texto de noticias)": 26
+  "Prensa (texto de noticias)": 27
  },
  "eventos": [
   {
@@ -171,11 +171,11 @@
   },
   {
    "fecha": "2026-10-17",
-   "hora": "",
+   "hora": "19:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Procesión de Nuestra Señora del Rosario (Las Aguas)",
-   "nota": "Música: la BCT Rosario de Cádiz, abriendo el cortejo, y la Banda de Música Municipal de Mairena del Alcor.",
+   "nota": "Música: la Banda de Música Municipal de Mairena del Alcor.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -1451,16 +1451,6 @@
   },
   {
    "fecha": "2026-11-28",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino con Nuestra Señora de la Esperanza de la Trinidad",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-11-28",
    "hora": "20:15",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -1845,6 +1835,16 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestra Señora de la Encarnación (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino con Nuestra Señora de la Esperanza de la Trinidad",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -4958,6 +4958,16 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/la-virgen-del-consuelo-de-puente-genil-recorrera-las-calles-en-una-procesion-extraordinaria-por-el-cincuentenario-de-su-bendicion/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "pregon",
+   "titulo": "Dos meses y cinco días de secreto: así se enteró Andrés Camino de que sería pregonero en la Semana Santa de Málaga",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/dos-meses-y-cinco-dias-de-secreto-asi-se-entero-andres-camino-de-que-seria-pregonero-en-malaga/"
   },
   {
    "fecha": "2026-10-14",
