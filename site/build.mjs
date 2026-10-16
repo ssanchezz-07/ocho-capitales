@@ -324,6 +324,9 @@ const mismoActo = (a, b) => { if (a.fecha !== b.fecha || a.ciudad !== b.ciudad |
 function eventosExternos(previos) {
   if (!fs.existsSync(AGENDA_EXT_FILE)) return [];
   const raw = JSON.parse(fs.readFileSync(AGENDA_EXT_FILE, 'utf8')).eventos.filter((e) => GRUPO_DE[e.tipo] && CAP[e.ciudad]);
+  // Las agendas dan el acto en pocas palabras; de la prensa solo valen los titulares cortos (una frase larga es una noticia, no un acto).
+  const AGENDAS = new Set(['InfoCofrade', 'El Itinerario', 'Andalucía Información', 'Diario SUR', 'Diario Sur', 'La Opinión de Málaga', 'Real Federación de Hermandades y Cofradías de Granada']);
+  for (let i = raw.length - 1; i >= 0; i--) { const e = raw[i]; if (!AGENDAS.has(e.fuente) && (e.titulo.length > 100 || /^Previous Post|…$|\.\.\.$/.test(e.titulo))) raw.splice(i, 1); }
   raw.sort((a, b) => (EXT_ORDEN[a.fuente] ?? 1) - (EXT_ORDEN[b.fuente] ?? 1));
   const out = [];
   for (const e of raw) {
@@ -988,7 +991,7 @@ function pageCalendario() {
   const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '', ...(e.hora ? { hr: e.hora } : {}), ...(hermDeEvento(e) ? { h: hermDeEvento(e), hn: HERM[hermDeEvento(e)].nombre, hu: u('hermandad/' + hermDeEvento(e) + '/') } : {}), ...(e.verificado ? { v: 1 } : {}) }))).replace(/</g, '\\u003c');
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Calendario cofrade</h1><p class="oc-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p></header>
 <section class="oc-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
-  <h2 class="oc-h2" id="agenda-titulo">Agenda cofrade</h2>
+  <h2 class="oc-sr" id="agenda-titulo">Agenda cofrade</h2>
   <div class="oc-agenda-filters">
     <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-tipo-l">Tipo</span><ul class="oc-chips is-filter" aria-labelledby="ag-tipo-l" data-agenda-tipo>${GRUPOS.map(([v, l], i) => `<li><button type="button" data-v="${v}" aria-pressed="${i === 0}">${l}</button></li>`).join('')}</ul></div>
     <div class="oc-field"><label for="ag-ciudad">Capital</label><select id="ag-ciudad" data-agenda-ciudad><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
