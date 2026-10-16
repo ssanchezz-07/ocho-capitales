@@ -1,74 +1,14 @@
 {
  "generado": "2026-10-16",
  "fuentes": {
-  "InfoCofrade": 377,
+  "InfoCofrade": 375,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 31
+  "Prensa (texto de noticias)": 33
  },
  "eventos": [
-  {
-   "fecha": "2026-10-15",
-   "hora": "20:30",
-   "ciudad": "sevilla",
-   "tipo": "traslado",
-   "titulo": "Traslado de María Santísima del Rosario (Montesión) a la Iglesia de San Martín",
-   "nota": "Salida: 20:30",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Amor (Pino Montano) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a la Divina Pastora (San Antonio) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Cabildo extraordinario en la Hermandad del Cristo de Burgos para la aprobación, si procede, de la ejecución del nuevo moldurón y peana del paso de palio de Madre de Dios de la Palma",
-   "nota": "Primera convocatoria: 20:30.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-16",
    "hora": "21:00",
@@ -244,7 +184,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo",
+   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo de 17:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -414,7 +354,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo",
+   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo de 10:00-14:00 y 17:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -700,6 +640,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-10-22",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Francisco de Paula (San José Obrero) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-10-23",
    "hora": "",
    "ciudad": "sevilla",
@@ -745,6 +695,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Francisco de Paula (San José Obrero) a las 19:30",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -881,6 +841,16 @@
   },
   {
    "fecha": "2026-10-24",
+   "hora": "19:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Francisco de Paula (San José Obrero) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "concierto",
@@ -1011,6 +981,16 @@
   },
   {
    "fecha": "2026-10-25",
+   "hora": "12:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a San Francisco de Paula (San José Obrero) a las 12:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
    "hora": "12:00",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -1071,7 +1051,7 @@
   },
   {
    "fecha": "2026-10-30",
-   "hora": "",
+   "hora": "19:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Procesión de María Santísima de la Salud (Sol)",
@@ -5080,6 +5060,26 @@
    "url": "https://www.ideal.es/semanasantagranada/horario-recorrido-procesion-virgen-consolacion-sagrada-correa-20261016095819-nt_amp.html"
   },
   {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Día para la historia y para el recuerdo de la hermandad de la Merced.La corporación del Lunes Santo, si el tiempo lo permite, llevará a cabo este sábado a partir de las 1",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "Antes de la proccesión extraordinaria, la Banda de Cornetas y Tambores Coronación de Espinas estrenará este viernes (21:30) la marcha Eterna Merced, dedicada a la su titu",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
+  },
+  {
    "fecha": "2026-10-15",
    "hora": "",
    "ciudad": "cordoba",
@@ -5167,6 +5167,22 @@
     "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
     "fuente": "Hermandad la Merced",
     "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
+   }
+  },
+  {
+   "a": {
+    "fecha": "2026-10-17",
+    "hora": "",
+    "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
+    "fuente": "ABC",
+    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+   },
+   "b": {
+    "fecha": "2026-10-16",
+    "hora": "",
+    "titulo": "Antes de la proccesión extraordinaria, la Banda de Cornetas y Tambores Coronación de Espinas estrenará este viernes (21:30) la marcha Eterna Merced, dedicada a la su titu",
+    "fuente": "El Día de Córdoba",
+    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
    }
   }
  ]
