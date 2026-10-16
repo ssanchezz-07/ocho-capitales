@@ -511,7 +511,7 @@ function todayPanel() {
       const hs = list.filter((h) => h.ciudad === c.slug).sort((a, b) => dayIdx(a.dia) - dayIdx(b.dia) || a.orden - b.orden);
       if (!hs.length) return '';
       const anchor = slugify(hs[0].dia);
-      return `<section class="oc-group" data-city="${c.slug}" style="--c:${c.color}"><h4 class="oc-group-title"><a href="${u('semana-santa/' + c.slug + '/#' + anchor)}">${esc(c.nombre)}</a><span>${plural(hs.length, 'hermandad', 'hermandades')}</span></h4><ol class="oc-group-list">${hs.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.extra ? `<span class="oc-group-day">${esc(h.extra.titulares)}</span>` : s.span ? `<span class="oc-group-day">${esc(h.dia)}</span>` : ''}${h.sede || h.hora ? `<span class="oc-group-sede">${h.hora ? esc(h.hora) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol>${hs.length > 3 ? `<a class="oc-group-more" href="${u('semana-santa/' + c.slug + '/#' + anchor)}">Ver las ${hs.length} de ${esc(c.nombre)}</a>` : ''}</section>`;
+      return `<section class="oc-group" data-city="${c.slug}" style="--c:${c.color}"><h4 class="oc-group-title"><a href="${u('semana-santa/' + c.slug + '/#' + anchor)}">${esc(c.nombre)}</a><span>${plural(hs.length, 'hermandad', 'hermandades')}</span></h4><ol class="oc-group-list">${hs.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.extra ? `<span class="oc-group-day">${esc(h.extra.titulares)}</span>` : s.span ? `<span class="oc-group-day">${esc(h.dia)}</span>` : ''}${h.sede || h.hora ? `<span class="oc-group-sede">${h.hora ? esc(h.hora) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol>${hs.length > 3 ? `<a class="oc-group-more" href="${u('semana-santa/' + c.slug + '/#' + anchor)}">Ver las ${hs.length} de ${esc(c.nombre)}</a>` : ''}${calleDias(c.slug).has(hs[0].dia) ? `<a class="oc-group-plano" href="${u('en-la-calle/' + c.slug + '/')}?dia=${encodeURIComponent(hs[0].dia)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/></svg>En el plano</a>` : ''}</section>`;
     }).join('');
     return `<div class="oc-daypanel" role="tabpanel" id="dia-${s.id}" aria-labelledby="tab-${s.id}" data-panel="${s.id}" tabindex="0"${s.id === pick.id ? '' : ' hidden'}><h3 class="oc-daytitle">${esc(s.label)} <span data-slot-date="${s.id}">${esc(slotDate(s, year))}</span></h3>${groups}<p class="oc-empty" data-today-empty hidden>Tu ciudad no tiene salidas documentadas esta jornada. Prueba otro día o elige «8 capitales».</p></div>`;
   }).join('');
@@ -1123,6 +1123,14 @@ function extras() {
 // ---------- En la calle: mapa propio con los recorridos oficiales y la posición estimada de cada cortejo ----------
 // Datos por ciudad (dist/data/calle/<ciudad>.json): plano (calles en metros) + recorridos con tiempo (min del día) y XY.
 const minDia = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
+// Jornadas de una capital con algún recorrido en el plano (para enlazar «En el plano» desde Hoy)
+const _calleDias = {};
+function calleDias(slug) {
+  if (_calleDias[slug]) return _calleDias[slug];
+  const f = path.join(DIR, 'data', 'recorridos', slug + '.json'), s = new Set();
+  if (fs.existsSync(f)) for (const k of Object.keys(JSON.parse(fs.readFileSync(f, 'utf8')).hermandades)) if (HERM[k]) s.add(HERM[k].dia);
+  return (_calleDias[slug] = s);
+}
 // Algunos PDF escriben el nombre de la calle en vertical y llega troceado («P e ri o d is ta R a m ó n»):
 // si casi todas las piezas tienen 1-2 letras, se juntan y se vuelve a separar por mayúsculas.
 function limpiaLugar(s) {

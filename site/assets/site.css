@@ -1561,3 +1561,9 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 .oc-cunao-enviar:active { transform: scale(.93); }
 .oc-cunao-enviar svg { width: 20px; height: 20px; }
 @media (prefers-reduced-motion: reduce) { .oc-cunao-bocadillo { transition: none; } }
+
+/* «En el plano» en cada capital de Hoy */
+.oc-group-plano { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 6px; padding: 0 14px 0 12px; border-radius: 999px; background: color-mix(in srgb, var(--c) 12%, var(--surface)); color: var(--primary); font-weight: 600; font-size: .9rem; text-decoration: none; transition: transform 140ms var(--ease-out); }
+.oc-group-plano:active { transform: scale(.96); }
+.oc-group-plano svg { width: 18px; height: 18px; }
+.oc-group-more + .oc-group-plano { margin-left: 8px; }

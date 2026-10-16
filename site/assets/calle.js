@@ -316,7 +316,9 @@
     D = j; dibujarPlano();
     var hoy = hoyISO(), dHoy = null; for (var k in fechas) if (fechas[k] === hoy) dHoy = k;
     var botones = $$('[data-dia]').map(function (b) { return b.getAttribute('data-dia'); });
-    ponerDia(dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : botones[0]);
+    // ?dia=<jornada> (desde «Hoy» de la portada) manda; si no, la jornada de hoy; si no, la primera
+    var pedido = new URLSearchParams(location.search).get('dia');
+    ponerDia(pedido && botones.indexOf(pedido) >= 0 ? pedido : dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : botones[0]);
     window.addEventListener('resize', function () { capas.yaEncuadrado = false; dibujarRutas(); actualizar(); });
   }).catch(function () { mapa.classList.add('is-error'); });
 })();
