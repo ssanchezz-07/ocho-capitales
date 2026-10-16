@@ -204,7 +204,8 @@
       if (est === 'calle' && h.t.paso && cruz) {
         var pts = h.t.paso, i0 = paso.i, d = 'M' + paso.x + ' ' + paso.y, best = i0, bd = Infinity;
         for (var j = i0; j < Math.min(pts.length, i0 + 600); j++) { var dd = Math.hypot(pts[j][0] - cruz.x, pts[j][1] - cruz.y); if (dd < bd) { bd = dd; best = j; } }
-        for (var k = i0 + 1; k <= best; k++) d += 'L' + pts[k][0] + ' ' + pts[k][1];
+        // por los tramos sin calle conocida (recta de más de 150 m entre puntos oficiales) el cortejo no se dibuja
+        for (var k = i0 + 1; k <= best; k++) { var pa = pts[k - 1], pb = pts[k], salto = !pa[6] && !pb[6] && Math.hypot(pb[0] - pa[0], pb[1] - pa[1]) > 150; d += (salto ? 'M' : 'L') + pb[0] + ' ' + pb[1]; }
         // la cruz de guía solo se une si está junto al recorrido (si no, sería una recta inventada a través de la ciudad)
         if (bd < 80) d += 'L' + cruz.x + ' ' + cruz.y;
         capas.cortejos.appendChild(el('path', { 'class': 'oc-c-cortejo', d: d }));
@@ -289,7 +290,11 @@
   // ---------- jornada, reloj y reproducción ----------
   var playing = false, raf = 0;
   function ponerDia(d) {
-    dia = d; $$('[data-dia]').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-dia') === d ? 'true' : 'false'); });
+    dia = d; $$('[data-dia]').forEach(function (b) {
+      var si = b.getAttribute('data-dia') === d; b.setAttribute('aria-selected', si ? 'true' : 'false');
+      // la pestaña elegida, a la vista en la tira deslizable (sin mover la página)
+      if (si) { var tira = b.parentNode, x = b.offsetLeft - (tira.clientWidth - b.offsetWidth) / 2; if (tira.scrollWidth > tira.clientWidth) tira.scrollLeft = Math.max(0, x); }
+    });
     var L = limites(); rango.min = L[0]; rango.max = L[1];
     var hoy = fechas[d] === hoyISO(), ah = ahoraMin();
     $('[data-ahora]').hidden = !hoy;
