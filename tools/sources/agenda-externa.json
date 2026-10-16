@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 60,
-  "Prensa (texto de noticias)": 27
+  "Prensa (texto de noticias)": 29
  },
  "eventos": [
   {
@@ -4938,6 +4938,26 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen de la Consolación y Sagrada Correa de Granada 2026: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/agustinos-granada-hermandad-agustinos-granada-consolacion-granada-virgen-consolacion-granada-consolacion-y-sagrada-correa-granada-procesion-agustinos-granada_0_2008244770.amp.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "besamanos",
+   "titulo": "El sábado, 17 de octubre, la Sagrada Imagen será expuesta en Devoto Besamanos en horario de 10:00 a 18:00 horas.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-agustin-granada-hermandad-san-agustin-granada-consolacion-granada-virgen-consolacion-granada-cultos-hermandad-san-agustin-granada-cofradia-san-agustin-granada_3_2008244663.html"
   },
   {
    "fecha": "2026-10-15",
