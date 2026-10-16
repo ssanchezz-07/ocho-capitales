@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 60,
-  "Prensa (texto de noticias)": 30
+  "Prensa (agendas semanales)": 70,
+  "Prensa (texto de noticias)": 31
  },
  "eventos": [
   {
@@ -4072,6 +4072,106 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "10:00",
+   "tipo": "culto",
+   "titulo": "Inauguración de la II Feria Cofrade de España e Iberoamérica",
+   "nota": "Centro de Exposiciones, Ferias y Convenciones (CEFC) | Parque Joyero"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "17:00",
+   "tipo": "acto",
+   "titulo": "Donación de sangre en la Vera Cruz y el Descendimiento",
+   "nota": "Salones parroquiales de San José y Espíritu Santo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "17:00",
+   "tipo": "acto",
+   "titulo": "Gymkana de la Hermandad de las Lágrimas",
+   "nota": "Sede de la Hermandad de las Lágrimas"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Salud",
+   "nota": "Parroquia de Santa Victoria"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Desconsuelo en su Soledad",
+   "nota": "Parroquia del Salvador y Santo Domingo de Silos (La Compañía)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Rosario ante María Santísima Reina de Nuestra Alegría",
+   "nota": "Parroquia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "20:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima del Rocío y Lágrimas",
+   "nota": "Parroquia de San Juan y Todos los Santos (La Trinidad)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "20:30",
+   "tipo": "acto",
+   "titulo": "Visitas al paso de Santa María de la Merced",
+   "nota": "Casa de Hermandad de la Merced"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "21:00",
+   "tipo": "acto",
+   "titulo": "Igualá de costaleros de Nuestra Señora del Amparo",
+   "nota": "Patios de San Francisco"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
+   "fecha": "2026-10-16",
+   "hora": "21:30",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Coronación de Espinas",
+   "nota": "Patio de la Casa de Hermandad de la Merced"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-13-octubre-cordoba/202610131000003504441.amp.html",
    "fecha": "2026-10-13",
    "hora": "19:30",
@@ -4968,6 +5068,16 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/merced-luce-preparada-para-su-salida-extraordinaria-por-el-50-aniversario-de-su-llegada-a-la-hermandad/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Horario y recorrido de la procesión de la Virgen de la Consolación y Sagrada Correa este sábado en Granada",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/horario-recorrido-procesion-virgen-consolacion-sagrada-correa-20261016095819-nt_amp.html"
   },
   {
    "fecha": "2026-10-15",
