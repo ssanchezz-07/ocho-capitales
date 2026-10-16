@@ -901,7 +901,14 @@
    }
   },
   "resucitado-malaga": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "sede": {
+     "valor": "Iglesia de San Julián (sede de la Agrupación de Cofradías)",
+     "fuente": "https://agrupaciondecofradias.com/sede/",
+     "revisado": "2026-10-16"
+    }
+   }
   },
   "la-borriquilla-granada": {},
   "santa-cena-granada": {},
@@ -929,7 +936,15 @@
   "el-silencio-granada": {},
   "los-ferroviarios-granada": {},
   "los-favores-granada": {},
-  "los-escolapios-granada": {},
+  "los-escolapios-granada": {
+   "relleno": {
+    "sede": {
+     "valor": "Iglesia de San José de Calasanz",
+     "fuente": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
   "santo-entierro-granada": {},
   "las-chias-granada": {},
   "santa-maria-de-la-alhambra-granada": {},
@@ -1082,6 +1097,13 @@
     "url": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/",
     "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4124-hermandad-de-las-lagrimas.html",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Un paso con el Santísimo Cristo de las Lágrimas. Su misterio de la Exaltación está en proyecto (dos sayones ya tallados aún no salen) y la Virgen de las Penas no procesiona en Semana Santa desde 2018.",
+     "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "servitas-cadiz": {
@@ -1579,11 +1601,23 @@
      "valor": "Capilla de Nuestra Señora del Prado en su Dolor (antiguas dependencias de la parroquia de San Pablo)",
      "fuente": "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/",
      "revisado": "2026-10-15"
+    },
+    "paso": {
+     "valor": "Un paso de palio con Nuestra Señora del Prado en su Dolor.",
+     "fuente": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+     "revisado": "2026-10-16"
     }
    }
   },
   "la-borriquita-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Surgió en 1924 de la antigua cofradía del Niño Jesús de los Remedios y salió por primera vez el Domingo de Ramos de 1929 con un cortejo de niños hebreos. Perdida su imagen en la Guerra Civil, se reorganizó en 1948. El actual Señor de la Entrada es de Miguel Bejarano (1995-1996) y desde 2005 tiene su sede en el Espíritu Santo, en Altamira.",
+     "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
+     "revisado": "2026-10-16"
+    }
+   }
   },
   "los-angeles-almeria": {
    "web_oficial": null,
@@ -1747,13 +1781,42 @@
    }
   },
   "divino-maestro-lavatorio-jaen": {
-   "web_oficial": null
+   "web_oficial": null,
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216121941/https://cofradiasjaen.org/divino-maestro/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
   },
   "la-clemencia-jaen": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó el 17 de marzo de 1593 en el convento dominico de Santo Domingo; desapareció en 1832 y se reorganizó en 1850. En 1945 se rehízo como cofradía de penitencia, con solo cuatro cofrades, e hizo su primera estación en 1946. Su Cristo de la Clemencia es obra de Salvador de Cuéllar (1593).",
+     "fuente": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_la_Clemencia_(Ja%C3%A9n)",
+     "revisado": "2026-10-16"
+    }
+   },
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251117123425/https://cofradiasjaen.org/clemencia/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
   },
   "el-gran-poder-jaen": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "historia": {
+     "valor": "Se erigió como hermandad a finales de 2017 en la parroquia de la Santa Cruz. Sus titulares son del cordobés José Antonio Cabello Montilla (Jesús del Gran Poder, 2010; Virgen del Dulce Nombre, 2014). Salió en la Madrugada en 2018, 2019 y 2022, y desde 2023 lo hace el Jueves Santo con un único paso de misterio.",
+     "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Ja%C3%A9n",
+     "revisado": "2026-10-16"
+    }
+   },
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260219061640/https://cofradiasjaen.org/gran-poder/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
   },
   "la-borriquita-sevilla": {
    "sevilla_wd": {
@@ -2065,6 +2128,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Siglo XVI (primeras reglas aprobadas en 1554; reorganizada en 1921)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "la-candelaria-sevilla": {
@@ -2218,6 +2288,13 @@
     "url": "https://cristodeburgos.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Finales del siglo XVI (fecha exacta desconocida)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "siete-palabras-sevilla": {
@@ -2277,6 +2354,13 @@
     "url": "https://www.laexaltacion.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Siglo XVI (fusionada con la Sacramental de Santa Catalina en 1966)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "las-cigarreras-sevilla": {
@@ -2523,6 +2607,13 @@
     "url": "https://www.montserratsevilla.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Finales del siglo XVI (reglas aprobadas en 1601; reorganizada en 1849)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "la-sagrada-mortaja-sevilla": {
@@ -2622,6 +2713,13 @@
     "url": "https://www.hermandaddelasoledad.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "fundacion": {
+     "valor": "Mediados del siglo XVI",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "la-resurreccion-sevilla": {
@@ -2649,6 +2747,11 @@
      "valor": "La Virgen del Dulce Nombre procesiona bajo palio de terciopelo azul liso.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
      "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1992 (reconocida como agrupación parroquial en 1995)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -2664,6 +2767,11 @@
      "valor": "Un único paso con el encuentro de Jesús y su Madre en la calle de la Amargura, acompañados por María Magdalena, San Juan, dos soldados romanos y un judío.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
      "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1992 (reglas de hermandad de penitencia aprobadas en 2023)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -2678,6 +2786,13 @@
     "url": "https://pasionymuerte-dyv.blogspot.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "En Semana Santa sale un único paso, el del Cristo de Pasión y Muerte (canastilla neobarroca de Manuel Toledano, 2009). El palio de la Virgen del Desconsuelo y Visitación está aprobado pero aún sin realizar.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "pino-montano-sevilla": {
@@ -2686,6 +2801,13 @@
     "web": "http://www.hermandadpinomontano.es",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Dos pasos: el misterio del Prendimiento según San Marcos, con Nuestro Padre Jesús de Nazaret, y el palio de plata de María Santísima del Amor.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "la-mision-sevilla": {
@@ -2712,6 +2834,13 @@
     "url": "https://cristocorona.blogspot.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Un único paso, el del Santísimo Cristo de la Corona: diseño renacentista de Antonio Dubé de Luque en madera color caoba con relieves en bronce, completado por fases entre 2022 y 2024.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "padre-pio-sevilla": {
@@ -2720,6 +2849,13 @@
     "web": "",
     "nombre_oficial": "",
     "fundacion": ""
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Dos pasos: el de Jesús de la Salud y Clemencia y el palio de la Virgen Madre de la Divina Gracia.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "san-jose-obrero-sevilla": {
@@ -2734,6 +2870,16 @@
      "valor": "Dos pasos: Jesús de la Caridad con Simón de Cirene, obra de Fernando Aguado, y la Virgen de los Dolores bajo palio.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
      "revisado": "2026-10-15"
+    },
+    "fundacion": {
+     "valor": "1960",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+     "revisado": "2026-10-16"
+    },
+    "sede": {
+     "valor": "Parroquia de San José Obrero",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -2749,6 +2895,11 @@
      "valor": "En el segundo paso procesiona bajo palio la Virgen del Rosario, obra de Francisco Buiza (1963).",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
      "revisado": "2026-10-15"
+    },
+    "sede": {
+     "valor": "Parroquia de la Virgen de la Medalla Milagrosa (Ciudad Jardín)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -2784,6 +2935,16 @@
      "valor": "1994 (agrupación parroquial)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
      "revisado": "2026-10-15"
+    },
+    "sede": {
+     "valor": "Iglesia de la Beata Madre Ana María Javouhey y San José de Cluny",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Dos pasos: el misterio de Jesús del Divino Perdón (grupo de Navarro Arteaga estrenado en 2025, con el paso de los Hermanos Caballero aún en ejecución) y el palio de la Purísima Concepción.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -2798,6 +2959,13 @@
     "url": "https://hermandaddelsol.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Dos pasos: el del Cristo Varón de Dolores de la Divina Misericordia y un palio con la Virgen del Sol en sacra conversación con San Juan y la Magdalena.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "el-rescatado-cordoba": {
@@ -2980,6 +3148,272 @@
     "url": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
     "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4233-doloires-de-alcolea.html",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Un paso de palio con María Santísima de los Dolores.",
+     "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "la-o-cordoba": {
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1993 y, tras pasar por la ermita de la Consolación y el Juramento de San Rafael, se asentó en la iglesia de la Aurora, en Fátima. Su Virgen de la O, de Antonio Bernal, se bendijo en 1996 y salió por primera vez bajo palio en 2018. En 2024 se aprobaron sus estatutos como hermandad de pleno derecho.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(C%C3%B3rdoba)",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "1993 (estatutos de hermandad aprobados en 2024)",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(C%C3%B3rdoba)",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Dos pasos: el misterio de Jesús de la Victoria en sus Tres Caídas, con Simón de Cirene y un sayón (aún incompleto), y el palio de María Santísima de la O, todavía en ejecución.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(C%C3%B3rdoba)",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "la-bendicion-huelva": {
+   "relleno": {
+    "historia": {
+     "valor": "Asociación parroquial de Nuestro Padre Jesús de la Bendición y Nuestra Señora del Dulce Nombre de la Paz, fundada en 2010 en la parroquia de San Rafael Arcángel. Su titular, el Cristo de la Bendición, lo talló ese mismo año Rubén Fernández Parra.",
+     "fuente": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2010",
+     "fuente": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Un paso con el Santísimo Cristo de la Bendición, acompañado por la Agrupación Musical Santa Cruz.",
+     "fuente": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "la-unidad-almeria": {
+   "relleno": {
+    "historia": {
+     "valor": "Nació en 1996 como pre-hermandad en la parroquia de San Ignacio de Loyola, en Piedras Redondas, y en 1998 recibió el título de hermandad. En 2004 salió por primera vez con María Santísima de la Unidad, de Luis González Rey; su Cristo de la Paz en su Flagelación, bendecido en 2012, procesionó por primera vez en 2016.",
+     "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "1998 (pre-hermandad desde 1996)",
+     "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Dos pasos: el misterio de Jesús de la Paz en su Flagelación y el palio de María Santísima de la Unidad.",
+     "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "el-resucitado-jaen": {
+   "relleno": {
+    "historia": {
+     "valor": "La Agrupación de Cofradías creó en 1952 una procesión del Resucitado para cerrar la Semana Santa. En 1982 un grupo de cofrades fundó la cofradía, que en 1984 incorporó a la Virgen de la Victoria (Alfredo Muñoz, 1955). En 2022 la Virgen estrenó paso de palio.",
+     "fuente": "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_del_Resucitado_(Ja%C3%A9n)",
+     "revisado": "2026-10-16"
+    }
+   },
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124045627/https://cofradiasjaen.org/resucitado/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "mutilado-clemencia-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Se fundó en febrero de 1939 en torno a un crucificado del Sagrario mutilado en la quema de iglesias, y ese año salió escoltado por caballeros mutilados de guerra. Dejó de procesionar después de 1976 y fue desagrupada en 1996. En 2020 su Cristo recibió la advocación de la Clemencia y en 2022 volvió a la calle el Sábado de Pasión.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "1939",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "desamparados-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Grupo parroquial de Jesús en su Pasión, Nuestra Señora de los Desamparados y Santa María Goretti, en el barrio de Los Corazones. La Virgen procesionó por primera vez en 2008 y su salida destaca por el luto y la sobriedad.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "verdad-y-sagrario-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Empezó como asociación de Jesús de la Paz y Humildad y Estrella del Carmen, primero en Huelin y luego en Las Delicias, hasta establecerse en la parroquia de San José Obrero de Carranque. Sus dos titulares son obra del sevillano Mario Zambrano.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Saca a la calle a sus dos titulares: Jesús de la Verdad ante Caifás y la Virgen del Sagrario.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "luz-y-mar-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Asociación parroquial de Nuevo San Andrés que en su recorrido pasa también por La Luz y Belén. En 2016 bendijo a su Cristo, Luz del Mundo, de Valerio Téllez; la Virgen del Mar es obra de Liébana.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "medinaceli-martiricos-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Cofradía instituida en la iglesia de Santo Tomás de Aquino, en Martiricos. Sus imágenes de Jesús de Medinaceli y de la Virgen de la Candelaria son de Israel Cornejo, y su recorrido cruza La Goleta, El Molinillo y La Trinidad hasta calle Larios y la Catedral.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Procesiona al Señor de Medinaceli y a la Virgen de la Candelaria.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "dolores-de-churriana-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Hermandad de Nuestro Padre Jesús Nazareno del Paso, Nuestra Señora de los Dolores y San Antonio Abad, que procesiona por Churriana. Sus dos imágenes son del siglo XVIII y su Nazareno es el más antiguo de esa iconografía en la capital.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "la-borriquilla-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124063616/https://cofradiasjaen.org/borriquilla/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "santa-cena-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124065637/https://cofradiasjaen.org/santa-cena/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-estrella-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251117120000/https://cofradiasjaen.org/piedad-y-estrella/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "el-huerto-vera-cruz-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260312004707/https://cofradiasjaen.org/oracion-en-el-huerto/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "caridad-y-salud-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216114753/https://cofradiasjaen.org/caridad-y-salud/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-amargura-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251028040928/https://cofradiasjaen.org/amargura/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "los-estudiantes-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251117133030/https://cofradiasjaen.org/estudiantes/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "el-silencio-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124044656/https://cofradiasjaen.org/humildad-y-silencio/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "el-cautivo-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124045858/https://cofradiasjaen.org/cautivo/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "el-perdon-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-buena-muerte-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216125541/https://cofradiasjaen.org/buena-muerte/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-lanzada-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260219053256/https://cofradiasjaen.org/lanzada/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-vera-cruz-los-civiles-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216125242/https://cofradiasjaen.org/vera-cruz/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-expiracion-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20260124045016/https://cofradiasjaen.org/expiracion/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "nuestro-padre-jesus-el-abuelo-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216121907/https://cofradiasjaen.org/ntro-padre-jesus/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "la-soledad-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251117125450/https://cofradiasjaen.org/soledad/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
+   }
+  },
+  "el-santo-sepulcro-jaen": {
+   "fuente_actual": {
+    "url": "https://web.archive.org/web/20251216121355/https://cofradiasjaen.org/sepulcro/",
+    "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
+    "revisado": "2026-10-16"
    }
   }
  },
