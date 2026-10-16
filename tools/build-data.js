@@ -8,6 +8,9 @@ const AG = 'https://agrupaciondecofradias.com/hermandades/';
 const IMG = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'images.json'), 'utf8'));
 const ALM_MUS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'almeria-musica-2026.json'), 'utf8'));
 const GR_MARCHAS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'granada-marchas.json'), 'utf8'));
+// Complementos verificados (tools/sources/complementos.json): se usan al leer los titulares y al final
+const COMP_FILE = path.join(__dirname, 'sources', 'complementos.json');
+const COMP = fs.existsSync(COMP_FILE) ? JSON.parse(fs.readFileSync(COMP_FILE, 'utf8')) : {};
 const imgOf = (k) => { const i = IMG[k]; return i ? { src: i.thumb, w: i.w, h: i.h, autor: i.autor, licencia: i.licencia, licurl: i.licurl || '', pagina: i.page, escudo: !!i.escudo } : null; };
 
 const slugify = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -172,7 +175,12 @@ for (const c of raw) {
       const slug = uniqueSlug(base);
       const titulares = (h.t || []).map((t) => {
         const [nom, ...rest] = t.split(' — ');
-        const autorRaw = rest.join(' — ') || '';
+        let autorRaw = rest.join(' — ') || '', autorFuente = '';
+        // Autor que falta en la ficha oficial, buscado y revisado aparte (complementos.json → titulares_autor), con su fuente
+        if (!autorRaw) {
+          const ta = (((COMP.hermandades || {})[slug] || {}).titulares_autor || []).find((x) => x.titular === nom.trim());
+          if (ta && ta.autor) { autorRaw = (ta.atribucion ? 'Atribuido a ' : '') + ta.autor + (ta.anio ? ', ' + ta.anio : ''); autorFuente = ta.fuente; }
+        }
         const a = parseAuthor(autorRaw);
         if (a) {
           if (!imagineros.has(a.nombre)) imagineros.set(a.nombre, { nombre: a.nombre, obras: [], ciudades: new Set() });
@@ -180,7 +188,7 @@ for (const c of raw) {
           im.obras.push({ titular: nom.trim(), hermandad: h.n, hermandad_slug: slug, ciudad: c.id, detalle: autorRaw, atrib: a.atrib });
           im.ciudades.add(c.id);
         }
-        return { nombre: nom.trim(), autor: autorRaw, imaginero: a ? a.nombre : '', atrib: a ? a.atrib : false };
+        return { nombre: nom.trim(), autor: autorRaw, imaginero: a ? a.nombre : '', atrib: a ? a.atrib : false, ...(autorFuente ? { autor_fuente: autorFuente } : {}) };
       });
       const bs = parseBandas(h.m, c.id, h.n, slug);
       for (const b of bs) {
@@ -197,9 +205,7 @@ for (const c of raw) {
   }
 }
 
-// ---------- vísperas y complementos: carga y altas (antes de enlazar bandas) ----------
-const COMP_FILE = path.join(__dirname, 'sources', 'complementos.json');
-const COMP = fs.existsSync(COMP_FILE) ? JSON.parse(fs.readFileSync(COMP_FILE, 'utf8')) : {};
+// ---------- vísperas y complementos: altas (antes de enlazar bandas); COMP se carga al principio ----------
 const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 const HBY = new Map(hermandades.map((h) => [h.slug, h]));
 const V = COMP.visperas || {};
@@ -309,6 +315,8 @@ for (const h of hermandades) if (h.acompanamiento) {
 for (const im of imgOut) {
   const x = (COMP.imagineros || {})[im.nombre];
   if (!x || x.rechazado || im.bio) continue;
+  // Biografía breve redactada desde Wikipedia, la RAH u otra fuente (revisada aparte), con su fuente
+  if (x.bio_relleno && x.bio_relleno.valor) { im.bio = x.bio_relleno.valor; if (!im.vida && x.bio_relleno.vida) im.vida = x.bio_relleno.vida; im.fuente_url = x.bio_relleno.fuentes[0]; continue; }
   const oficio = /imaginer/i.test(x.descripcion) ? 'Escultor e imaginero' : /escultor/i.test(x.descripcion) ? 'Escultor' : 'Escultor';
   if (!im.vida) im.vida = x.nacimiento && x.muerte ? `${x.nacimiento}–${x.muerte}` : x.nacimiento ? `n. ${x.nacimiento}` : '';
   im.bio = `${oficio}${x.lugar ? ' nacido en ' + x.lugar : ''}${x.nacimiento ? (x.muerte ? ` (${x.nacimiento}–${x.muerte})` : ` en ${x.nacimiento}`) : ''}.`.replace(' nacido en ' + x.lugar + ' en ', ' nacido en ' + x.lugar + ' en ');
