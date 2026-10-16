@@ -13,7 +13,7 @@
 - Marcado SVG incrustado para mapa e hilos: el comprobador de impeccable lo trata como ilustración. Ahora se dibuja con JS desde datos JSON (`#oc-mapa`).
 
 **Técnicas**
-- `site/assets/colgaduras.css` se carga después de `site.css` y la sustituye donde se solapan (tokens, tipografías, cabecera, portada). Conviene absorberla en `site.css` cuando se dé por cerrado.
+- `colgaduras.css` se cargaba después de `site.css` y la sustituía donde se solapaban. El 2026-10-16 se absorbió al final de `site.css` (mismo orden de cascada, una petición menos).
 - Colgaduras = enlaces reales a la capital (funcionan sin JS); con JS eligen ciudad (`setCity`), con muelles propios (response/damping al estilo Apple), balanceo al rozarlas, hilo que se dibuja y botón que nace del punto de la capital. `prefers-reduced-motion`: cambios instantáneos.
 - Miniaturas de noticias sin foto: la colgadura de su capital (nunca un hueco).
 - Despertador: cron de GitHub 3 veces por hora con trabajo `comprobar` que corta si `news.json` tiene menos de 40 min (sin cron-job.org).
