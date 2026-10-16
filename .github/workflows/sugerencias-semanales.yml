@@ -17,6 +17,10 @@ jobs:
     permissions:
       issues: write
     steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          sparse-checkout: tools/resumen-sugerencias.mjs
+          sparse-checkout-cone-mode: false
       - name: Recoger y publicar el resumen
         env:
           URL: ${{ secrets.SUGERENCIAS_URL }}
@@ -25,8 +29,9 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           if [ -z "$URL" ] || [ -z "$TOKEN" ]; then echo "Sin servidor de sugerencias configurado todavía"; exit 0; fi
-          curl -sf "$URL?dias=7&token=$TOKEN" -o s.json
+          curl -sf -H "Authorization: Bearer $TOKEN" "$URL?dias=7" -o s.json
           N=$(node -e "console.log(require('./s.json').total)")
           if [ "$N" = "0" ]; then echo "Ninguna sugerencia esta semana"; exit 0; fi
-          node -e "const s=require('./s.json');const t=s.sugerencias.map(x=>'- ['+x.fecha.slice(0,10)+'] '+(x.hermandad?'**'+x.hermandad+'** · ':'')+x.texto.replace(/\n/g,' ')+(x.pagina?' _(página: '+x.pagina+')_':'')).join('\n');require('fs').writeFileSync('cuerpo.md','Sugerencias recibidas por erCuñao en los últimos 7 días ('+s.total+'):\n\n'+t+'\n\nDecidir para cada una: corregir el dato (con su fuente), añadir a pendientes o descartar.')"
+          # El texto viene del público: el script neutraliza @menciones, #referencias, HTML y enlaces antes de publicarlo
+          node tools/resumen-sugerencias.mjs s.json cuerpo.md
           gh issue create --repo "$REPO" --title "Sugerencias de la semana ($(date +%F))" --label sugerencias --body-file cuerpo.md || gh issue create --repo "$REPO" --title "Sugerencias de la semana ($(date +%F))" --body-file cuerpo.md
