@@ -1610,3 +1610,28 @@ main ol:not([class]) { padding-left: 1.4em; }
 }
 /* el foco por toque no pinta el anillo; con teclado, sí */
 .oc-iconbtn:focus:not(:focus-visible) { outline: none; box-shadow: none; }
+
+/* ===== Plano «En la calle»: rótulos de calles e iglesias y recorridos legibles ===== */
+.oc-c-nombre-calle { font: 600 10.5px/1 var(--sans); fill: rgb(236 226 250 / .82); text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: #1a0b26; stroke-width: 3.2px; stroke-linejoin: round; pointer-events: none; letter-spacing: .01em; }
+.oc-c-nombre-calle.r1 { font-size: 11.5px; fill: rgb(248 240 255 / .95); }
+.oc-c-nombre-calle.r3 { font-weight: 500; fill: rgb(220 208 238 / .75); }
+.oc-c-nombre-templo { font: 600 10.5px/1 var(--sans); fill: #f0d79c; text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: #1a0b26; stroke-width: 3.2px; stroke-linejoin: round; pointer-events: none; }
+.oc-c-cruz-templo { fill: none; stroke: rgb(240 215 156 / .7); stroke-width: 1.5px; vector-effect: non-scaling-stroke; pointer-events: none; }
+/* recorridos: el de la cofradía que está en la calle se ve fuerte; los demás, de fondo */
+.oc-c-ruta[data-estado="antes"], .oc-c-ruta[data-estado="despues"] { stroke-opacity: .22; stroke-width: 2px; filter: none; }
+.oc-c-ruta[data-estado="calle"] { stroke-opacity: .95; stroke-width: 3.4px; }
+.oc-c-ruta.is-sel[data-estado] { stroke-opacity: 1; stroke-width: 4.5px; }
+
+/* Plano en el móvil: cabecera compacta para que el plano ocupe la pantalla (la entradilla sobra: el uso se entiende solo) */
+@media (max-width: 759px) {
+  .oc-calle-head .oc-lead { display: none; }
+  .oc-calle-head { padding-bottom: 4px; }
+  .oc-calle-head .oc-title { font-size: clamp(2rem, 9vw, 2.6rem); margin-bottom: 0; }
+  .oc-calle-mapa { height: max(400px, calc(100svh - 300px)); }
+}
+
+/* erCuñao en el plano (móvil): más pequeño y a la izquierda, sobre el reloj, para no tapar el mapa ni sus botones */
+@media (max-width: 959px) {
+  html:has(.oc-calle) .oc-cunao-btn { left: 12px; right: auto; width: 48px; height: 48px; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 92px); }
+  html:has(.oc-calle) .oc-cunao-bocadillo { display: none; }
+}

@@ -50,8 +50,47 @@ for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWi
     const s = dp(g.map(xy), 2.5).flat();
     (PRINC.test(t.highway || '') ? principales : calles).push(s);
   }
+  // ---- nombres de calles para rotular el plano ----
+  // Una etiqueta por tramo largo de calle con nombre, con su ángulo. Rango 1: calles del recorrido y arterias (se ven siempre);
+  // 2: terciarias cercanas al recorrido (al acercar); 3: el resto cercanas al recorrido (más cerca aún).
+  const clave = (la, lo) => la.toFixed(6) + ',' + lo.toFixed(6);
+  const celda = (x, y) => Math.floor(x / 150) + ':' + Math.floor(y / 150);
+  const enRuta = new Set(), cerca = new Set();
+  for (const h of Object.values(R.hermandades)) for (const pts of Object.values(h.tramos)) for (const p of pts) {
+    if (p.lat == null) continue;
+    for (const [la, lo] of [[p.lat, p.lon], ...(p.via || [])]) { enRuta.add(clave(la, lo)); const [x, y] = xy([la, lo]); cerca.add(celda(x, y)); }
+  }
+  const cercaDe = (x, y) => { const cx = Math.floor(x / 150), cy = Math.floor(y / 150); for (let a = -2; a <= 2; a++) for (let b = -2; b <= 2; b++) if (cerca.has((cx + a) + ':' + (cy + b))) return true; return false; };
+  const NOMBRABLE = /^(primary|secondary|tertiary|trunk|residential|pedestrian|living_street|unclassified)(_link)?$/;
+  const corto = (n) => n.replace(/^Calle\s+/i, '').replace(/^Avenida\s+/i, 'Avda. ').replace(/^Paseo\s+/i, 'Paseo ').replace(/\s+/g, ' ').trim();
+  const cand = [];
+  for (const e of osm.elements) {
+    const t = e.tags || {}; if (!e.geometry || !t.name || !NOMBRABLE.test(t.highway || '')) continue;
+    const pts = e.geometry.filter(Boolean).map((q) => ({ x: (q.lon - o[1]) * kx, y: (o[0] - q.lat) * ky, la: q.lat, lo: q.lon }));
+    if (pts.length < 2) continue;
+    let L = 0; const acum = [0];
+    for (let i = 1; i < pts.length; i++) { L += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y); acum.push(L); }
+    if (L < 70) continue;
+    const ruta = pts.filter((q) => enRuta.has(clave(q.la, q.lo))).length >= 2;
+    const rango = ruta || /^(primary|secondary|trunk)/.test(t.highway) ? 1 : /^tertiary/.test(t.highway) ? 2 : 3;
+    const mx = pts.reduce((s, q) => s + q.x, 0) / pts.length, my = pts.reduce((s, q) => s + q.y, 0) / pts.length;
+    if (rango > 1 && !cercaDe(mx, my)) continue;
+    // punto medio por longitud y ángulo del segmento ahí
+    let i = 1; while (i < acum.length - 1 && acum[i] < L / 2) i++;
+    const a = pts[i - 1], b = pts[i], k = (L / 2 - acum[i - 1]) / ((acum[i] - acum[i - 1]) || 1);
+    let ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI; if (ang > 90) ang -= 180; if (ang <= -90) ang += 180;
+    cand.push({ n: corto(t.name), x: Math.round(a.x + (b.x - a.x) * k), y: Math.round(a.y + (b.y - a.y) * k), ang: Math.round(ang), rango, L: Math.round(L) });
+  }
+  // un mismo nombre se repite solo cada 300 m; primero lo más importante y lo más largo
+  cand.sort((p, q) => p.rango - q.rango || q.L - p.L);
+  const aceptadas = [], porNombre = new Map();
+  for (const c of cand) {
+    const prev = porNombre.get(c.n) || [];
+    if (prev.length >= 4 || prev.some((p) => Math.hypot(p.x - c.x, p.y - c.y) < 300)) continue;
+    prev.push(c); porNombre.set(c.n, prev); aceptadas.push([c.x, c.y, c.ang, c.n, c.rango, c.L]);
+  }
   const [W, Hh] = xy([la0, lo1]).map((v, i) => i === 0 ? v * 2 : v * 2);
-  const out = { ciudad, origen: o, kx, ky, ancho: Math.abs(W), alto: Math.abs(Hh), calles, principales, templos, licencia: '© colaboradores de OpenStreetMap (ODbL)' };
+  const out = { ciudad, origen: o, kx, ky, ancho: Math.abs(W), alto: Math.abs(Hh), calles, principales, templos, etiquetas: aceptadas, licencia: '© colaboradores de OpenStreetMap (ODbL)' };
   fs.writeFileSync(path.join(OUT, ciudad + '.json'), JSON.stringify(out));
   console.log(ciudad, calles.length + principales.length, 'calles', templos.length, 'templos', (fs.statSync(path.join(OUT, ciudad + '.json')).size / 1024).toFixed(0) + ' KB');
 }

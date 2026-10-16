@@ -25,8 +25,8 @@
     capas.mundo = el('g', { 'class': 'oc-c-mundo' }); svg.appendChild(capas.mundo);
     capas.mundo.appendChild(el('path', { 'class': 'oc-c-calles', d: pathDe(D.calles) }));
     capas.mundo.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
-    capas.templos = el('g', { 'class': 'oc-c-templos' }); capas.mundo.appendChild(capas.templos);
-    D.templos.forEach(function (t) { var g = el('g', { transform: 'translate(' + t.x + ' ' + t.y + ')' }); g.appendChild(el('path', { d: 'M0 -9V9M-6 -3H6' })); var ti = el('title', {}); ti.textContent = t.n; g.appendChild(ti); capas.templos.appendChild(g); });
+    // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
+    capas.nombres = el('g', { 'class': 'oc-c-nombres', 'aria-hidden': 'true' }); capas.mundo.appendChild(capas.nombres);
     capas.rutas = el('g', { 'class': 'oc-c-rutas' }); capas.mundo.appendChild(capas.rutas);
     capas.cortejos = el('g', { 'class': 'oc-c-cortejos' }); capas.mundo.appendChild(capas.cortejos);
     capas.guias = el('g', { 'class': 'oc-c-guias' }); capas.mundo.appendChild(capas.guias);
@@ -47,6 +47,44 @@
     svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, mapa.clientWidth);
     svg.classList.toggle('con-nombres', Z < 2.6);
     if (D && dia) colocarMarcas();
+    pedirNombres();
+  }
+  // ---------- rótulos de calles e iglesias ----------
+  // Cada etiqueta [x, y, ángulo, nombre, rango, largo en m] se coloca si cabe en su calle y no pisa a otra ya colocada.
+  // Rango 1 (calles del recorrido y arterias) desde lejos; 2 y 3 (calles menores) al acercar. Las iglesias, muy cerca.
+  var nombresPend = 0, posMarcas = [];
+  function pedirNombres() { if (nombresPend) return; nombresPend = requestAnimationFrame(function () { nombresPend = 0; pintarNombres(); }); }
+  function pintarNombres() {
+    var g = capas.nombres; if (!g || !D) return;
+    g.textContent = '';
+    var W = mapa.clientWidth, H = mapa.clientHeight, rMax = Z < 1.9 ? 3 : Z < 4.2 ? 2 : Z < 14 ? 1 : 0;
+    var cajas = [], puestas = 0, frag = document.createDocumentFragment();
+    // los medallones (con su nombre debajo) y los botones del plano no se tapan con rótulos
+    posMarcas.forEach(function (p) { cajas.push([(p[0] - vb.x) / Z, (p[1] - vb.y) / Z + 8, 56, 38]); });
+    cajas.push([W - 34, 100, 36, 110]);
+    var cabe = function (cx, cy, w, h, ang) {
+      var r = ang * Math.PI / 180, hw = (Math.abs(Math.cos(r)) * w + Math.abs(Math.sin(r)) * h) / 2, hh = (Math.abs(Math.sin(r)) * w + Math.abs(Math.cos(r)) * h) / 2;
+      for (var i = 0; i < cajas.length; i++) { var c = cajas[i]; if (Math.abs(c[0] - cx) < c[2] + hw && Math.abs(c[1] - cy) < c[3] + hh) return false; }
+      cajas.push([cx, cy, hw, hh]); return true;
+    };
+    var poner = function (clase, x, y, ang, txt) {
+      var t = el('text', { 'class': clase, transform: 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') rotate(' + ang + ') scale(' + Z.toFixed(3) + ')' }); t.textContent = txt; frag.appendChild(t);
+    };
+    // iglesias: cruz de tamaño fijo y, muy cerca, su nombre
+    (D.templos || []).forEach(function (t) {
+      var sx = (t.x - vb.x) / Z, sy = (t.y - vb.y) / Z; if (sx < -30 || sx > W + 30 || sy < -30 || sy > H + 30 || Z > 14) return;
+      var gl = el('path', { 'class': 'oc-c-cruz-templo', d: 'M0 -6V6M-4 -2H4', transform: 'translate(' + t.x + ' ' + t.y + ') scale(' + Z.toFixed(3) + ')' }); frag.appendChild(gl);
+      if (Z < 1.7 && t.n && cabe(sx, sy + 14, t.n.length * 5.4 + 8, 12, 0)) poner('oc-c-nombre-templo', t.x, t.y + 14 * Z, 0, t.n);
+    });
+    var E = D.etiquetas || [];
+    for (var i = 0; i < E.length && puestas < 110; i++) {
+      var e = E[i]; if (e[4] > rMax) continue;
+      var sx = (e[0] - vb.x) / Z, sy = (e[1] - vb.y) / Z; if (sx < -50 || sx > W + 50 || sy < -20 || sy > H + 20) continue;
+      var w = e[3].length * 5.5 + 10; if (e[5] / Z < w * 0.85) continue; // la calle, a esta escala, es más corta que su nombre
+      if (!cabe(sx, sy, w, 12, e[2])) continue;
+      poner('oc-c-nombre-calle r' + e[4], e[0], e[1], e[2], e[3]); puestas++;
+    }
+    g.appendChild(frag);
   }
   // Huecos de la pantalla tapados por los controles (derecha) y por el reloj (abajo): lo encuadrado queda a la vista
   function margenes() { var ancho = mapa.clientWidth < 600; return { arriba: 20, abajo: ancho ? 120 : 96, izq: 20, der: 68 }; }
@@ -182,6 +220,7 @@
       var emp = (R - d) / 2, ux = dx / d, uy = dy / d;
       A.px -= ux * emp; A.py -= uy * emp; B.px += ux * emp; B.py += uy * emp;
     }
+    posMarcas = ms.map(function (m) { return [m.px, m.py]; });
     var guias = capas.guias; if (guias) guias.textContent = '';
     ms.forEach(function (m) {
       m.g.setAttribute('transform', 'translate(' + m.px.toFixed(1) + ' ' + m.py.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
@@ -200,6 +239,8 @@
       var est = !paso ? 'fuera' : (cruz && cruz.estado === 'calle') || paso.estado === 'calle' ? 'calle' : paso.estado === 'antes' && (!cruz || cruz.estado === 'antes') ? 'antes' : 'despues';
       if (g) g.setAttribute('data-estado', est);
       if (cz) cz.setAttribute('data-estado', est);
+      // el recorrido de la que está en la calle ahora se ve; los demás, de fondo
+      capas.rutas.querySelectorAll('.oc-c-ruta[data-s="' + h.s + '"]').forEach(function (r) { r.setAttribute('data-estado', est); });
       // el cortejo ocupa la calle desde el paso hasta la cruz de guía
       if (est === 'calle' && h.t.paso && cruz) {
         var pts = h.t.paso, i0 = paso.i, d = 'M' + paso.x + ' ' + paso.y, best = i0, bd = Infinity;
