@@ -36,6 +36,10 @@ CREATE TABLE acompanamientos (banda TEXT REFERENCES bandas(slug), hermandad TEXT
 CREATE TABLE imagineros (slug TEXT PRIMARY KEY, nombre TEXT, vida TEXT, escuela TEXT, bio TEXT, fuente_url TEXT);
 CREATE TABLE obras (imaginero TEXT REFERENCES imagineros(slug), hermandad TEXT, titular TEXT, detalle TEXT, atribucion INTEGER);
 CREATE TABLE marchas (hermandad TEXT, titulo TEXT, autor TEXT, anio TEXT, tipo TEXT);
+-- Catálogo general (no ligado a una hermandad): «Marchas de Procesión» (marchas más populares de España, con vídeo)
+-- y partituras procesionales de la Biblioteca Nacional (bne: enlace a su registro). Son filas separadas: no se cruzan.
+CREATE TABLE catalogo_marchas (titulo TEXT, autor TEXT, formacion TEXT, anio TEXT, dedicatoria TEXT, tipo TEXT, estreno TEXT,
+  video TEXT, bne TEXT, fuente TEXT, fuente_url TEXT);
 CREATE TABLE itinerarios (hermandad TEXT, anio INTEGER, tramo TEXT, n INTEGER, fila TEXT, lugar TEXT, hora TEXT, fuente TEXT);
 CREATE TABLE noticias (url TEXT PRIMARY KEY, titulo TEXT, fuente TEXT, fecha TEXT, ciudades TEXT);
 CREATE TABLE agenda (fecha TEXT, ciudad TEXT, tipo TEXT, titulo TEXT, verificado INTEGER, fuente TEXT);
@@ -71,7 +75,13 @@ const iR = ins('itinerarios', ['hermandad', 'anio', 'tramo', 'n', 'fila', 'lugar
 for (const [slug, e] of Object.entries(ITI.hermandades)) for (const [tramo, pts] of Object.entries(e.tramos)) pts.forEach((p, n) => iR.run(slug, ITI.anio || 2026, tramo, n, v(p.fila), p.lugar, v(p.hora), e.fuente));
 const iN = ins('noticias', ['url', 'titulo', 'fuente', 'fecha', 'ciudades']);
 for (const n of NEWS.items || []) try { iN.run(n.url, n.titulo, n.fuente, new Date(n.ts).toISOString(), (n.ciudades || []).join(' ')); } catch (e) { /* url repetida */ }
-const iE = ins('agenda', ['fecha', 'ciudad', 'tipo', 'titulo', 'verificado', 'fuente']);
+const CAT = leer('tools/sources/marchas-espana.json', { marchas: [] }), BNE = leer('tools/sources/marchas-bne.json', { marchas: [] });
+// Sin emparejar por título: la BNE no da el autor en el listado y hay muchas marchas homónimas («Esperanza»,
+// «Marcha fúnebre»…). Unirlas por el nombre atribuiría años y partituras a obras distintas.
+const iK = ins('catalogo_marchas', ['titulo', 'autor', 'formacion', 'anio', 'dedicatoria', 'tipo', 'estreno', 'video', 'bne', 'fuente', 'fuente_url']);
+for (const m of CAT.marchas) iK.run(m.titulo, v(m.autor), v(m.formacion), v(m.anio), v(m.dedicatoria), v(m.tipo), v(m.estreno), m.video ? 'https://www.youtube.com/watch?v=' + m.video : null, null, CAT.fuente, CAT.url);
+for (const b of BNE.marchas) iK.run(b.titulo, null, null, v(b.anio), null, b.tipo, null, null, b.url, BNE.fuente, BNE.url);
+const iE = ins('agenda',['fecha', 'ciudad', 'tipo', 'titulo', 'verificado', 'fuente']);
 for (const e of EVT.eventos || []) iE.run(v(e.fecha), v(e.ciudad), v(e.tipo), v(e.titulo), 1, v(e.fuente));
 for (const e of AGX.eventos || []) iE.run(v(e.fecha), v(e.ciudad), v(e.tipo), v(e.titulo), 0, v(e.fuente || e.url));
 db.exec('COMMIT');
@@ -81,13 +91,14 @@ const q = (s) => db.prepare(s).all();
 const vac = (c) => `(${c} IS NULL OR trim(${c}) = '')`;
 const audit = {
   generado: new Date().toISOString(),
-  totales: Object.fromEntries(['capitales', 'hermandades', 'titulares', 'bandas', 'imagineros', 'marchas', 'itinerarios', 'noticias', 'agenda', 'imagenes'].map((t) => [t, q(`SELECT count(*) n FROM ${t}`)[0].n])),
+  totales: Object.fromEntries(['capitales', 'hermandades', 'titulares', 'bandas', 'imagineros', 'marchas', 'catalogo_marchas', 'itinerarios', 'noticias', 'agenda', 'imagenes'].map((t) => [t, q(`SELECT count(*) n FROM ${t}`)[0].n])),
   hermandades_sin: Object.fromEntries(['historia', 'fundacion', 'web', 'sede', 'paso', 'nombre_oficial', 'hora_salida'].map((c) => [c, q(`SELECT slug FROM hermandades WHERE ${vac(c)}`).map((r) => r.slug)])),
   sin_imagen: q(`SELECT slug FROM hermandades WHERE slug NOT IN (SELECT hermandad FROM imagenes WHERE uso <> 'escudo')`).map((r) => r.slug),
   sin_itinerario: q(`SELECT slug FROM hermandades WHERE slug NOT IN (SELECT DISTINCT hermandad FROM itinerarios)`).map((r) => r.slug),
   titulares_sin_autor: q(`SELECT hermandad, nombre FROM titulares WHERE ${vac('autor')}`),
   imagineros_sin_bio: q(`SELECT slug FROM imagineros WHERE ${vac('bio')}`).map((r) => r.slug),
-  bandas_sin_localidad: q(`SELECT slug FROM bandas WHERE ${vac('localidad')}`).map((r) => r.slug),
+  catalogo_marchas_sin: Object.fromEntries(['autor', 'anio', 'dedicatoria', 'video'].map((c) => [c, q(`SELECT count(*) n FROM catalogo_marchas WHERE ${vac(c)}`)[0].n])),
+  bandas_sin_localidad:q(`SELECT slug FROM bandas WHERE ${vac('localidad')}`).map((r) => r.slug),
   // posibles errores: banda que acompaña en una ciudad distinta de su origen y sin localidad; hermandades con día fuera de la lista
   dias_raros: q(`SELECT slug, dia FROM hermandades WHERE dia NOT IN (${D.dias_orden.map((d) => `'${d.replace(/'/g, "''")}'`).join(',')})`),
   webs_duplicadas: q(`SELECT web, group_concat(slug, ' ') hs FROM hermandades WHERE ${'web'} <> '' GROUP BY web HAVING count(*) > 1`),
