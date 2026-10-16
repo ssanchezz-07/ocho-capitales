@@ -1577,3 +1577,36 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 .oc-group-plano:active { transform: scale(.96); }
 .oc-group-plano svg { width: 18px; height: 18px; }
 .oc-group-more + .oc-group-plano { margin-left: 8px; }
+
+/* ========== Correcciones de la auditoría de consumidor (2026-10-16) ========== */
+/* P1 · la jornada elegida de «Así sale» salía en blanco: la regla de fondo de las pestañas pisaba la de la elegida */
+.oc-daytabs [role="tab"][aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.oc-daytabs [role="tab"][aria-selected="true"] small { color: inherit; opacity: .8; }
+/* chip de capital: un solo punto (el antiguo ::before sobraba) */
+.oc-citychip::before { content: none; }
+/* hoja «Más»: lista agrupada con margen interior y un solo filete */
+.oc-sheet-list a { padding-inline: 16px; border-bottom: 0; }
+/* abrir el buscador ya no desplaza la página (la barra de scroll deja su hueco reservado) */
+html { scrollbar-gutter: stable; }
+/* la sombra del enlace «Saltar al contenido» escondido se colaba en la esquina */
+.oc-skip:not(:focus) { box-shadow: none; }
+/* listas numeradas de texto (Colabora…) dentro del margen */
+main ol:not([class]) { padding-left: 1.4em; }
+/* zonas táctiles de 44 px en «Así sale»: toda la fila es el enlace */
+.oc-group-list a { display: block; padding-block: 9px; }
+.oc-group-title a { display: inline-flex; align-items: center; min-height: 44px; }
+/* web oficial: no partir el dominio por la mitad */
+.oc-facts dd a { overflow-wrap: anywhere; word-break: normal; }
+/* capital: la foto ya no ocupa toda la primera pantalla; lo de hoy (jornadas) aparece sin bajar */
+@media (max-width: 759px) { .oc-caphero { min-height: min(50svh, 440px); padding-top: 96px; } }
+@media (min-width: 760px) { .oc-caphero { min-height: min(56svh, 460px); } }
+/* barra de jornadas en PC: con muchas jornadas pasa a dos líneas en vez de cortarse */
+@media (min-width: 1024px) { .oc-daynav ul { flex-wrap: wrap; row-gap: 6px; overflow: visible; } }
+/* buscador: barra de desplazamiento discreta */
+.oc-search-results { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+/* «reducir movimiento»: red de seguridad para cualquier transición o animación */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+/* el foco por toque no pinta el anillo; con teclado, sí */
+.oc-iconbtn:focus:not(:focus-visible) { outline: none; box-shadow: none; }

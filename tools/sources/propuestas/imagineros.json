@@ -184,25 +184,335 @@
         "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_(Huelva)",
         "http://www.lahornacina.com/dossiernoprocesionhuelva.htm"
       ]
+    },
+    "david-valenciano": {
+      "bio": "Escultor e imaginero nacido en Huelva en 1978; su nombre completo es David Valenciano Larios. Estudió en la Escuela de Arte «Antonio León Ortega» de Huelva, donde se tituló en 1997, y recibió clases de anatomía artística de José María Aznares. Tiene su taller en Sevilla y su obra está repartida por Andalucía y otras regiones.",
+      "vida": "1978",
+      "fuentes": [
+        "https://www.lahornacina.com/noticiasvalenciano56.htm",
+        "https://www.lahornacina.com/entrevistasvalenciano.htm"
+      ]
+    },
+    "jose-miguel-tirao": {
+      "bio": "Escultor e imaginero nacido en Torredonjimeno, Jaén, en 1964; su nombre completo es José Miguel Tirao Carpio. En Jaén son suyos la Virgen Reina de los Ángeles (2016) y el Cristo de las Aguas en su Sagrada Lanzada (2022).",
+      "vida": "1964",
+      "fuentes": [
+        "https://www.lahornacina.com/noticiastiraocarpio2.htm"
+      ]
+    },
+    "jose-maria-leal": {
+      "bio": "Escultor e imaginero nacido en Sevilla en 1978; su nombre completo es José María Leal Bernáldez. Entró con catorce años como aprendiz en el taller de Francisco Berlanga y tiene estudio propio desde 2002. Ha trabajado para Jerez, Almería, Huelva y Málaga, y su Señor Ultrajado de Campillos recibió el XI Premio La Hornacina.",
+      "vida": "1978",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Jerez_de_la_Frontera",
+        "https://www.lahornacina.com/entrevistasleal.htm"
+      ]
+    },
+    "salvador-madronal": {
+      "bio": "Escultor e imaginero nacido en Dos Hermanas, Sevilla; su nombre completo es Salvador Madroñal Valle. De joven conoció a Francisco Buiza y Luis Ortega Bru, a quienes cita como influencias, y tiene taller en Sevilla. Ha trabajado para Jerez, Almería, Jaén y otras provincias, y ha hecho varias copias de la Virgen de Valme.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/entrevistasmadronal.htm",
+        "https://www.lahornacina.com/noticiasmadronal13.htm"
+      ]
+    },
+    "ruben-fernandez-parra": {
+      "bio": "Imaginero y restaurador sevillano, hijo del imaginero Francisco Fernández Enríquez, en cuyo taller familiar aprendió el oficio. Se especializó en restauración con José Rodríguez Rivero-Carrera, del Museo de Bellas Artes de Sevilla. Entre sus obras están el misterio del Prendimiento de Huelva y la Virgen de la Amargura de La Palma del Condado.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/semblanzasrubenparra.htm",
+        "https://www.lahornacina.com/entrevistasparra.htm"
+      ]
+    },
+    "manuel-carmona-martinez": {
+      "bio": "Escultor nacido en Fregenal de la Sierra, Badajoz, en 1938. Se formó con Manuel Escamilla, José Ovando, Juan Luis Vassallo y Rafael Barbero Medina. Talló el misterio completo de la cofradía de los Salesianos de Málaga y las esculturas del retablo mayor del santuario del Rocío de Almonte.",
+      "vida": "1938",
+      "fuentes": [
+        "http://www.lahornacina.com/noticiascarmona.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_de_los_Salesianos_(M%C3%A1laga)"
+      ]
+    },
+    "jose-antonio-cabello": {
+      "bio": "Imaginero cordobés; su nombre completo es José Antonio Cabello Montilla. Ha trabajado mucho para la provincia de Jaén: en la capital son suyas todas las imágenes titulares del Gran Poder (2010-2017) y algunas figuras del misterio del Despojado.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/entrevistascabello.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_del_Gran_Poder_(Ja%C3%A9n)"
+      ]
+    },
+    "eduardo-espinosa-alfambra": {
+      "bio": "Escultor granadino de una familia de imagineros: es hijo de Eduardo Espinosa Cobos, sobrino y discípulo de Eduardo Espinosa Cuadros. Es autor del Cristo del Trabajo (1986) y la Virgen de la Luz (1992) de Granada y del Cristo de la cofradía del Resucitado de Torredonjimeno.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/curiosidadesjaen9.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Torredonjimeno"
+      ]
+    },
+    "enrique-perez-saavedra": {
+      "bio": "Escultor onubense, discípulo de Antonio León Ortega. En Huelva talló la Virgen de los Desamparados (1982) y la Virgen de la Misericordia del Cautivo (1984), y ha intervenido en la policromía y restauración de otras imágenes de la ciudad.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/seleccionescautivo03.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+      ]
+    },
+    "luis-alberto-garcia-jeute": {
+      "bio": "Imaginero sevillano. En Sevilla talló la Virgen del Dulce Nombre y San Juan de la cofradía del Dulce Nombre (1994-1996), y en Almería la Virgen de la Estrella (1992) y Jesús de las Penas (1999).",
+      "vida": "",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
+        "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_de_Mar%C3%ADa_del_Dulce_Nombre"
+      ]
+    },
+    "juan-ventura": {
+      "bio": "Imaginero sevillano. En Córdoba talló la Virgen de la Estrella (1986) y restauró imágenes de las Penas de Santiago dañadas por el fuego; también tiene obra en Utrera, Ávila y Torredonjimeno.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/entrevistasventura.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Torredonjimeno",
+        "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(C%C3%B3rdoba)"
+      ]
+    },
+    "antonio-del-castillo": {
+      "bio": "Escultor, tallista y retablista nacido en Antequera (1635–1704); su nombre completo era Antonio José del Castillo Carrillo. Trabajó sobre todo para Antequera y su entorno. Se le atribuye la Virgen de las Tristezas, titular del Remedio de Ánimas de Córdoba.",
+      "vida": "1635–1704",
+      "fuentes": [
+        "https://www.lahornacina.com/semblanzascastilloantonio.htm"
+      ]
+    },
+    "pedro-garcia-velasco": {
+      "bio": "Escultor e imaginero nacido en Puente Genil, Córdoba. Empezó en el taller de su tío, el imaginero Francisco Palos, estudió Bellas Artes en Sevilla y es profesor en la Escuela de Arte «Dionisio Ortiz» de Córdoba. En Córdoba talló las tres figuras del misterio de la Conversión, con el Cristo de 2016.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/entrevistasgarciavelasco.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%B3rdoba"
+      ]
+    },
+    "manuel-martin-nieto": {
+      "bio": "Escultor e imaginero nacido en Morón de la Frontera, Sevilla, en 1978, donde tiene su taller y trabaja desde finales de los años noventa. En Córdoba es suyo Jesús de los Afligidos de la Presentación al Pueblo (2016).",
+      "vida": "1978",
+      "fuentes": [
+        "https://www.lahornacina.com/noticiasmartinnieto76.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_de_la_Presentaci%C3%B3n_al_Pueblo_(C%C3%B3rdoba)"
+      ]
+    },
+    "miguel-angel-valverde": {
+      "bio": "Escultor e imaginero natural de Carmona, Sevilla; su nombre completo es Miguel Ángel Valverde Jiménez. En Cádiz es suya la Virgen Reina de Todos los Santos de la Sagrada Cena, tallada en 2004 y bendecida en 2008.",
+      "vida": "",
+      "fuentes": [
+        "https://www.cadizcofrade.net/sscadiz/sagradacena/sagradacena.htm",
+        "http://www.lahornacina.com/noticiasvalverde14.htm"
+      ]
+    },
+    "mario-ignacio-moya": {
+      "bio": "Pintor, imaginero y restaurador onubense; su nombre completo es Mario Ignacio Moya Carrasco. En Huelva talló el Cristo de la Santa Cruz (2005) y otras figuras de su paso, y en 2006 una Inmaculada para la hermandad de la Purísima Concepción.",
+      "vida": "",
+      "fuentes": [
+        "http://www.lahornacina.com/noticiasmario1I.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+      ]
+    },
+    "antonio-barbero-gor": {
+      "bio": "Escultor granadino, hijo del escultor y policromador Benito Barbero Medina, en cuyo taller de Granada empezó a trabajar de joven; después trabajó en Sevilla con su tío Rafael Barbero Medina. Fue profesor de dibujo anatómico en la Escuela de Bellas Artes de Granada y talló imágenes para cofradías granadinas, como el Cristo de la Sagrada Lanzada (1984).",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/entrevistasbarbero.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Granada)"
+      ]
+    },
+    "luis-ortega-leon": {
+      "bio": "Escultor nacido en Sevilla en 1953; su nombre completo es Luis Ángel Ortega León. Hijo de Luis Ortega Bru, se trasladó pronto a Madrid, donde su padre y su tío Augusto abrieron taller. En Málaga talló la Virgen del Santo Sudario (1987) y los Santos Varones del Descendimiento, siguiendo el estilo del Cristo que hizo su padre en 1980.",
+      "vida": "1953",
+      "fuentes": [
+        "http://www.lahornacina.com/noticiassanroque2.htm"
+      ]
+    },
+    "jose-merino-roman": {
+      "bio": "Imaginero oriundo de Málaga que trabajó en Sevilla, donde en 1929 talló los respiraderos del paso de la Virgen de la Merced de Pasión y la decoración plateresca de la fachada oriental del Ayuntamiento. En 1932 hizo la imagen que hoy es la Virgen de la Soledad del Santo Sepulcro de Málaga, adquirida por esa hermandad en 1938.",
+      "vida": "",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Virgen_de_las_Angustias_(Montes_de_Oca)"
+      ]
+    },
+    "alfonso-castellano": {
+      "bio": "Escultor e imaginero cordobés, discípulo de Francisco Romero Zafra; su nombre completo es Alfonso Castellano Tamarit. Entre 2009 y 2010 talló las nuevas figuras de José de Arimatea y Nicodemo del Descendimiento de Córdoba.",
+      "vida": "",
+      "fuentes": [
+        "http://www.lahornacina.com/noticiastamarit10.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_del_Descendimiento_(C%C3%B3rdoba)"
+      ]
+    },
+    "gabriel-cuadrado": {
+      "bio": "Escultor nacido en Villanueva del Ariscal, Sevilla, en 1936, ya fallecido; su nombre completo era Gabriel Cuadrado Díaz. En 1952 entró como alumno en el taller sevillano de Manuel Escamilla y trabajó también para los talleres Santarrufina de Madrid. En Huelva talló el Cristo de la Misericordia (1983).",
+      "vida": "1936",
+      "fuentes": [
+        "https://www.lahornacina.com/semblanzascuadrado.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+      ]
+    },
+    "enrique-galarza": {
+      "bio": "Escultor valenciano. Hacia 1950-1951 talló el apostolado del misterio de la Sagrada Cena de Huelva, restaurado por Juan Luis Aquino en 2012.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/dossieraquino.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+      ]
+    },
+    "fray-juan-de-la-concepcion": {
+      "bio": "Fraile trinitario y escultor del siglo XVIII. En 1723 la hermandad del Calvario de Córdoba le encargó su Nazareno, Jesús del Calvario, que procesionó por primera vez en 1724.",
+      "vida": "s. XVIII",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(C%C3%B3rdoba)"
+      ]
+    },
+    "antonio-jose-martinez": {
+      "bio": "Imaginero nacido en Beas de Segura, Jaén, en 1971, con taller en Madrid. Para la hermandad del Divino Maestro de Jaén talló entre 2015 y 2021 el misterio del Lavatorio y la Virgen del Amor.",
+      "vida": "1971",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Beas_de_Segura",
+        "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Maestro_(Ja%C3%A9n)"
+      ]
+    },
+    "edwin-gonzalez-solis": {
+      "bio": "Escultor e imaginero cordobés de origen boliviano. En Córdoba talló el Cristo de la Luz de la hermandad de la Sagrada Cena, y en Alcalá de Guadaíra el Cristo de la Divina Misericordia (2011) y la Virgen de la Trinidad.",
+      "vida": "",
+      "fuentes": [
+        "http://www.lahornacina.com/noticiasedwin5I.htm",
+        "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Cena_(C%C3%B3rdoba)"
+      ]
+    },
+    "rafael-rubio-vernia": {
+      "bio": "Escultor valenciano. Por encargo de la Agrupación de Cofradías de Jaén talló en 1951 el Cristo Resucitado, titular de la cofradía del Resucitado de la ciudad.",
+      "vida": "",
+      "fuentes": [
+        "http://www.lahornacina.com/seleccionesjunio2013VIII.htm",
+        "https://es.wikipedia.org/wiki/Cofrad%C3%ADa_del_Resucitado_(Ja%C3%A9n)"
+      ]
+    },
+    "ventura-gomez-rodriguez": {
+      "bio": "Escultor e imaginero de Mairena del Alcor, Sevilla, discípulo cercano de Luis Álvarez Duarte. En Jaén es suya la Virgen de los Desamparados de la Vera-Cruz (2007).",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/noticiasventuragomez14.htm",
+        "https://es.wikipedia.org/wiki/Primitiva,_Pontificia_y_Real_Congregaci%C3%B3n_del_Sant%C3%ADsimo_Cristo_de_la_Vera-Cruz_y_Mar%C3%ADa_Sant%C3%ADsima_de_los_Dolores"
+      ]
+    },
+    "luis-carlos-montesinos": {
+      "bio": "Escultor valenciano de finales del siglo XIX. Para la cofradía de Nuestro Padre Jesús de Jaén hizo en 1892 el Cirineo, de corte neobarroco.",
+      "vida": "s. XIX",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Semana_Santa_de_Ja%C3%A9n"
+      ]
+    },
+    "alfredo-munoz-arcos": {
+      "bio": "Imaginero autor de tres dolorosas de Jaén: la Virgen de la Victoria, la del Mayor Dolor y la Soledad, esta muy reformada después.",
+      "vida": "",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Semana_Santa_de_Ja%C3%A9n"
+      ]
+    },
+    "jose-mendez-gonzalez": {
+      "bio": "Imaginero onubense, alumno de Antonio León Ortega. Su primera obra fue la Virgen de la Caridad de la parroquia de San Gil y Santa Ana de Granada (1989), y en Huelva talló la Virgen de la Caridad de la hermandad de la Fe (1990).",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/albumviacrucis.htm",
+        "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+      ]
+    },
+    "juan-prieto": {
+      "bio": "Escultor e imaginero del siglo XVIII. Entre 1718 y 1719 talló la Virgen de los Dolores de Córdoba, a la que tuvo que hacer una cabeza nueva porque la primera no agradó a la cofradía.",
+      "vida": "s. XVIII",
+      "fuentes": [
+        "https://www.lahornacina.com/seleccionesservitas2.htm",
+        "https://es.wikipedia.org/wiki/Nuestra_Se%C3%B1ora_de_los_Dolores_(C%C3%B3rdoba)"
+      ]
+    },
+    "martin-de-la-torre": {
+      "bio": "Escultor y retablista nacido en Córdoba en 1522, del que se conocen pocos datos; desde 1583 se le cita como difunto. Se le atribuyen retablos de la catedral de Córdoba, como los de las capillas de la Asunción (1552) y la Natividad (1567), y el crucificado que hoy es el Cristo del Amor.",
+      "vida": "1522–antes de 1583",
+      "fuentes": [
+        "https://dbe.rah.es/biografias/39748/martin-de-la-torre",
+        "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(C%C3%B3rdoba)"
+      ]
+    },
+    "manuel-dominguez-rodriguez": {
+      "bio": "Orfebre y escultor nacido en Zalamea la Real, Huelva (1924–2010), muerto en Sevilla, donde vivió. Además de orfebrería talló y restauró imágenes, sobre todo para la provincia de Huelva: el Nazareno de su pueblo (1954) y la Virgen de los Dolores de la Lanzada de Huelva (1966).",
+      "vida": "1924–2010",
+      "fuentes": [
+        "https://www.lahornacina.com/semblanzasdominguezrodriguez.htm"
+      ]
+    },
+    "francisco-pascual-reyes": {
+      "bio": "Escultor que fue ayudante de Manuel Pineda Calderón. En 1945 talló un ángel para la hermandad de las Aguas de Sevilla que Juan Ventura transformó después en la dolorosa que hoy es titular de la Piedad de Córdoba.",
+      "vida": "",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Hermandad_de_la_Piedad_(C%C3%B3rdoba)",
+        "https://es.wikipedia.org/wiki/Manuel_Pineda_Calder%C3%B3n"
+      ]
+    },
+    "jose-manuel-bonilla": {
+      "bio": "Imaginero y restaurador sevillano; su nombre completo es José Manuel Bonilla Cornejo. En Huelva talló a Jesús del Prendimiento (1989) y los soldados romanos de su misterio (1995 y 1997), y en Málaga el Cristo de la Crucifixión (1993).",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/noticiasgranada121.htm",
+        "https://es.wikipedia.org/wiki/Anexo:Procesiones_de_la_Semana_Santa_de_Huelva",
+        "https://es.wikipedia.org/wiki/Anexo:Procesiones_de_la_Semana_Santa_de_M%C3%A1laga"
+      ]
+    },
+    "juan-manuel-garcia-palomo": {
+      "bio": "Escultor e imaginero malagueño. En Málaga ha tallado, entre otras, la Virgen Mediadora de la Salvación, el Nazareno del Perdón de la Nueva Esperanza (1999) y en 2007 una recreación del Cristo del Rayo, destruido en 1931.",
+      "vida": "",
+      "fuentes": [
+        "https://www.lahornacina.com/curiosidadesllagas.htm",
+        "https://es.wikipedia.org/wiki/Anexo:Procesiones_de_la_Semana_Santa_de_M%C3%A1laga"
+      ]
     }
   },
   "sin_encontrar": [
     "manuel-fernandez-guerrero",
     "fernando-diaz-de-pacheco",
     "pedro-moreira",
-    "antonio-castillo-ariza"
+    "antonio-castillo-ariza",
+    "jose-martinez-puertas",
+    "antonio-diaz",
+    "jose-maria-hervas",
+    "andres-cabello-requena",
+    "antonio-rubio",
+    "antonio-salto-roman",
+    "emilio-luis-bartus",
+    "emilio-navas-parejo",
+    "francisco-javier-navarro-moragas",
+    "infantes-reina",
+    "jose-callejon",
+    "jose-jimenez-de-mesa",
+    "jose-ortiz",
+    "luis-jimenez",
+    "modesto",
+    "grupo-valenciano-de",
+    "l-circulo-de-martinez-montanes"
   ],
   "dudas": [
-    "miguel-lainez-capote: las fuentes no coinciden en el año de nacimiento (1906 en veracruzcadiz.es; 21-09-1910 en cadizcofrade.net; 27-11-1909 en portaldecadiz.com). La bio lo omite.",
+    "miguel-lainez-capote: las fuentes no coinciden en el año de nacimiento (1906 en veracruzcadiz.es; 21-09-1910 en cadizcofrade.net; 27-11-1909 en portaldecadiz.com). La bio lo omite y vida queda como 1906/1910–1980.",
     "luis-gonzalez-rey: cadizcofrade.net da 1965 como año de nacimiento; otra fuente vista en búsquedas da 1970. No verificado.",
     "francisco-de-villegas: la fuente (cadizcofrade.net) no indica lugar de muerte; fecha 1660 o 1661.",
     "manuel-fernandez-guerrero: las fuentes (es.wikipedia.org/wiki/José_Fernández_Guerrero y cadizcofrade.net/imagineros/fdezguerrero.htm) atribuyen la Virgen de las Angustias del Ecce-Homo de Cádiz a JOSÉ Fernández Guerrero (Ubrique 1748 – Cádiz 1826), no a «Manuel». Probable error de nombre en el portal; no se escribe bio hasta corregirlo.",
     "peter-sterling: Wikipedia (Pedro Rellins) da a la vez «h. 1676-1728» y un supuesto nacimiento en 1667 en Venray; se deja el nacimiento como dudoso. Algunas fuentes datan los Afligidos en 1727.",
-    "jacome-vacaro: la bio es de Jácome Vaccaro (Génova h.1735 – Jerez 1801). Fuentes de lahornacina relacionan la Dolorosa de los Judíos de Huelva con Francesco Maria Maggio, no con Vaccaro: revisar la atribución del portal.",
-    "jose-de-medina: la ficha de la RAH advierte que su vida y obra no están del todo documentadas y que algunas atribuciones son dudosas.",
+    "jacome-vacaro: la bio es de Jácome Vaccaro (Génova h.1735 – Jerez 1801). Artículos de lahornacina relacionan la Dolorosa de los Judíos de Huelva con Francesco Maria Maggio, no con Vaccaro: revisar la atribución del portal.",
+    "jose-de-medina: la ficha de la RAH advierte que su vida y obra no están del todo documentadas y que algunas atribuciones son dudosas. La página de la RAH no se pudo leer directamente (carga por JavaScript); los datos vienen del extracto del buscador.",
+    "martin-de-la-torre: datos de la ficha de la RAH leídos a través del extracto del buscador (la página carga por JavaScript). El Cristo del Amor es atribución.",
     "antonio-asensio-de-la-cerda: las obras que se le asignan son atribuciones (Sánchez López y Ramírez González); la fuente no da fechas de vida.",
+    "juan-prieto: lahornacina lo llama granadino y data la Dolorosa en 1718 (cabeza nueva en 1719); Wikipedia lo llama cordobés y da 1719. La bio omite el origen.",
     "fernando-diaz-de-pacheco: solo se encontró la autoría del Rescatado (1713, a imitación del Medinaceli de Madrid); las fuentes discrepan en el nombre (Fernando Díaz de Pacheco / Fernando Ruiz Díaz de Pacheco / Francisco Díaz Pacheco en lahornacina). Sin datos biográficos.",
-    "pedro-moreira y antonio-castillo-ariza: solo aparecen como autores de sus obras malagueñas (Wikipedia de las hermandades), sin datos biográficos.",
-    "jose-rivera y joaquin-gomez-del-castillo: bios mínimas; las fuentes solo dicen que eran sevillanos y citan sus obras."
+    "emilio-luis-bartus: cadizcofrade.net llama al autor de la Virgen de la Victoria de la Expiración de Cádiz «Carlos Emilio Bartús Loreto» (1940); Wikipedia, «Carlos Luis Batús». Revisar el nombre en el portal. Sin datos biográficos.",
+    "infantes-reina: el autor es Antonio Infante Reina (la hermandad de Pasión de Huelva le compró el Nazareno en 1938), pero lahornacina recoge que Juan Manuel Miñarro atribuye la talla a José Rivera García. Sin datos biográficos fiables.",
+    "luis-jimenez: veracruzcadiz.es cita a un escultor isleño Luis Jiménez Fernández (nacido en Jerez, muerto en San Fernando, h. 1902–1943), pero cadizcofrade.net fecha la Esperanza del Nazareno del Amor en 1962 y Wikipedia en 1941. No se puede asegurar que sea la misma persona.",
+    "manuel-dominguez-rodriguez: la fuente fecha la Dolorosa de la Lanzada de Huelva en 1966; el portal dice 1968.",
+    "emilio-navas-parejo: solo aparece como hijo de José Navas-Parejo encargado de las relaciones públicas del taller familiar; no se encontró obra ni biografía como escultor.",
+    "modesto: el slug viene de «Modesto y Damián Pastor y Julia». Wikipedia (Semana Santa de Jaén) atribuye la Verónica de 1883 al valenciano Luis Carlos Montesinos, no a ellos: revisar la autoría en el portal.",
+    "grupo-valenciano-de y l-circulo-de-martinez-montanes: no son personas sino atribuciones genéricas mal convertidas en slug («grupo valenciano de 1918», «círculo de Martínez Montañés»); conviene quitarlas de la lista de imagineros.",
+    "pedro-moreira, antonio-castillo-ariza, andres-cabello-requena, antonio-salto-roman, antonio-rubio, antonio-diaz, jose-callejon, jose-jimenez-de-mesa, francisco-javier-navarro-moragas, jose-ortiz, jose-maria-hervas (José María Hervás Benet), jose-martinez-puertas: solo aparecen como autores de sus obras en Wikipedia o lahornacina, sin datos biográficos. jose-ortiz: el único homónimo con artículo (José Ortiz García, Beniaján 1908–2004) es de escuela murciana y no consta relación con la Santa Cruz de Málaga.",
+    "bios mínimas (solo origen y obras, sin fechas): jose-rivera, joaquin-gomez-del-castillo, juan-ventura, luis-alberto-garcia-jeute, enrique-galarza, rafael-rubio-vernia, luis-carlos-montesinos, alfredo-munoz-arcos, francisco-pascual-reyes, fray-juan-de-la-concepcion, salvador-de-cuellar, jose-manuel-bonilla, juan-manuel-garcia-palomo, mario-ignacio-moya, enrique-perez-saavedra, edwin-gonzalez-solis.",
+    "Varias bios se apoyan en lahornacina.com (portal cofrade especializado) y en artículos de Wikipedia sobre hermandades, a falta de fichas en el DBE de la RAH.",
+    "datos/auditoria.json se regeneró durante el trabajo y ahora tiene 108 slugs en imagineros_sin_bio; los 26 nuevos no están cubiertos en este archivo."
   ]
 }

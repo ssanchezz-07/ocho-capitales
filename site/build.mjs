@@ -234,8 +234,18 @@ const favBtn = (type, slug, name) => `<button class="oc-btn is-quiet oc-fav" typ
 const shareBtn = () => `<button class="oc-btn is-quiet" type="button" data-share>${icon('share')}<span>Compartir</span></button>`;
 const timeTag = (ts) => { const d = new Date(ts); return `<time datetime="${d.toISOString()}" data-ago>${fmtDay(d.getTime() + 0, { day: 'numeric', month: 'short' })}</time>`; };
 
-function entryHerm(h, extra = '') {
+// Hora siempre como HH:MM («0:00» → «00:00»)
+const fmtHora = (s) => String(s || '').replace(/\b(\d{1,2})[:.](\d{2})\b/g, (_, a, b) => a.padStart(2, '0') + ':' + b);
+function entryHerm(h, extra = '', enCapital = false) {
   const c = CAP[h.ciudad];
+  // En la página de su capital, capital y día ya se saben: la fila dice la hora de salida y la sede
+  if (enCapital) {
+    const im = h.imagen;
+    const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+    const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
+    const meta = [h.hora ? fmtHora(h.hora) + ' h' : '', h.sede].filter(Boolean).map(esc).join(' · ');
+    return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3>${meta ? `<p class="oc-entry-sub is-hora">${meta}</p>` : ''}${tit ? `<p class="oc-entry-sub">${esc(tit)}</p>` : ''}</div></li>`;
+  }
   const im = h.imagen;
   const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
@@ -446,7 +456,7 @@ ${body}${colabora(p, title)}
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
-  ${[[u(), p === '', 'home', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('calendario/'), active === 'calendario/', 'cal', 'Calendario', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
+  ${[[u(), p === '' || active === 'capitales/' || /^(hermandad|semana-santa|en-la-calle)\//.test(p), 'home', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('calendario/'), active === 'calendario/', 'cal', 'Calendario', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
   <button type="button" data-more aria-expanded="false" aria-controls="oc-more">${icon('more')}<span>Más</span></button>
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
@@ -468,14 +478,14 @@ ${body}${colabora(p, title)}
 <div class="oc-sheet oc-citysheet" id="oc-city" hidden data-city-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-city-t">
     <div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-city-t">Tu capital</p><button class="oc-iconbtn" type="button" data-city-close aria-label="Cerrar">${icon('x')}</button></div>
-    <p class="oc-citysheet-sub">Verás primero sus cofradías, noticias y actos. Puedes cambiarla cuando quieras.</p>
+    <p class="oc-citysheet-sub">«Hoy» te enseñará primero sus cofradías y el buscador la tendrá en cuenta. Puedes cambiarla cuando quieras.</p>
     <ul class="oc-citysheet-grid">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></button></li>`).join('')}</ul>
     <button class="oc-btn is-quiet oc-citysheet-todas" type="button" data-set-city="">Ver las ocho capitales</button>
   </div>
 </div>
 <div class="oc-search" hidden data-search-overlay>
   <div class="oc-search-box" role="dialog" aria-modal="true" aria-label="Buscar en ${BRAND}">
-    <div class="oc-search-row">${icon('search')}<input type="search" placeholder="Hermandad, imagen, banda, imaginero, noticia…" aria-label="Buscar" data-search-input autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search"><button class="oc-iconbtn" type="button" data-close-search aria-label="Cerrar buscador">${icon('x')}</button></div>
+    <div class="oc-search-row">${icon('search')}<input type="search" placeholder="Hermandad, banda, imaginero…" aria-label="Buscar" data-search-input autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search"><button class="oc-iconbtn" type="button" data-close-search aria-label="Cerrar buscador">${icon('x')}</button></div>
     <div class="oc-search-results" data-search-results aria-live="polite"><p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p></div>
   </div>
 </div>
@@ -511,7 +521,7 @@ function todayPanel() {
       const hs = list.filter((h) => h.ciudad === c.slug).sort((a, b) => dayIdx(a.dia) - dayIdx(b.dia) || a.orden - b.orden);
       if (!hs.length) return '';
       const anchor = slugify(hs[0].dia);
-      return `<section class="oc-group" data-city="${c.slug}" style="--c:${c.color}"><h4 class="oc-group-title"><a href="${u('semana-santa/' + c.slug + '/#' + anchor)}">${esc(c.nombre)}</a><span>${plural(hs.length, 'hermandad', 'hermandades')}</span></h4><ol class="oc-group-list">${hs.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.extra ? `<span class="oc-group-day">${esc(h.extra.titulares)}</span>` : s.span ? `<span class="oc-group-day">${esc(h.dia)}</span>` : ''}${h.sede || h.hora ? `<span class="oc-group-sede">${h.hora ? esc(h.hora) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol>${hs.length > 3 ? `<a class="oc-group-more" href="${u('semana-santa/' + c.slug + '/#' + anchor)}">Ver las ${hs.length} de ${esc(c.nombre)}</a>` : ''}${calleDias(c.slug).has(hs[0].dia) ? `<a class="oc-group-plano" href="${u('en-la-calle/' + c.slug + '/')}?dia=${encodeURIComponent(hs[0].dia)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/></svg>En el plano</a>` : ''}</section>`;
+      return `<section class="oc-group" data-city="${c.slug}" style="--c:${c.color}"><h4 class="oc-group-title"><a href="${u('semana-santa/' + c.slug + '/#' + anchor)}">${esc(c.nombre)}</a><span>${plural(hs.length, 'hermandad', 'hermandades')}</span></h4><ol class="oc-group-list">${hs.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.extra ? `<span class="oc-group-day">${esc(h.extra.titulares)}</span>` : s.span ? `<span class="oc-group-day">${esc(h.dia)}</span>` : ''}${h.sede || h.hora ? `<span class="oc-group-sede">${h.hora ? esc(fmtHora(h.hora)) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol>${hs.length > 3 ? `<a class="oc-group-more" href="${u('semana-santa/' + c.slug + '/#' + anchor)}">Ver las ${hs.length} de ${esc(c.nombre)}</a>` : ''}${calleDias(c.slug).has(hs[0].dia) ? `<a class="oc-group-plano" href="${u('en-la-calle/' + c.slug + '/')}?dia=${encodeURIComponent(hs[0].dia)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/></svg>En el plano</a>` : ''}</section>`;
     }).join('');
     return `<div class="oc-daypanel" role="tabpanel" id="dia-${s.id}" aria-labelledby="tab-${s.id}" data-panel="${s.id}" tabindex="0"${s.id === pick.id ? '' : ' hidden'}><h3 class="oc-daytitle">${esc(s.label)} <span data-slot-date="${s.id}">${esc(slotDate(s, year))}</span></h3>${groups}<p class="oc-empty" data-today-empty hidden>Tu ciudad no tiene salidas documentadas esta jornada. Prueba otro día o elige «8 capitales».</p></div>`;
   }).join('');
@@ -711,7 +721,7 @@ ${fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')) ? `<a cl
 <nav class="oc-daynav" aria-label="Jornadas de ${esc(c.nombre)}"><ul>${groups.map(([d]) => `<li><a href="#${slugify(d)}">${esc(d)}</a></li>`).join('')}</ul></nav>
 <div class="oc-split">
 <div class="oc-split-main">
-${groups.map(([d, list]) => `<section class="oc-section oc-day" id="${slugify(d)}"><h2 class="oc-h2">${esc(d)} <small>${plural(list.length, 'hermandad', 'hermandades')}</small></h2><ol class="oc-entries is-ordered">${list.map((h) => entryHerm(h)).join('')}</ol></section>`).join('')}
+${groups.map(([d, list]) => `<section class="oc-section oc-day" id="${slugify(d)}"><h2 class="oc-h2">${esc(d)} <small>${plural(list.length, 'hermandad', 'hermandades')}</small></h2><ol class="oc-entries is-ordered">${list.map((h) => entryHerm(h, '', true)).join('')}</ol></section>`).join('')}
 </div>
 <aside class="oc-split-side">
 <section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div></section>
@@ -788,7 +798,7 @@ function pageHerm(h) {
     <p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · ${esc(h.dia)}</p>
     <h1 class="oc-title${h.nombre.length > 60 ? ' is-long' : ''}">${esc(h.nombre)}</h1>
     ${h.nombre_oficial ? `<p class="oc-subtitle">${esc(h.nombre_oficial)}</p>` : ''}
-    ${facts([['Capital', `<a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a>`], ['Día de salida', `<a href="${u('semana-santa/' + c.slug + '/#' + slugify(h.dia))}">${esc(h.dia)}</a>${vecinos.length > 1 ? ` <span class="oc-muted">(${idx + 1}.ª de ${vecinos.length})</span>` : ''}`], ['Sede', h.sede ? `${esc(h.sede)} <a class="oc-maplink" href="${mapLink(h.sede + ', ' + c.nombre)}" target="_blank" rel="noopener">${icon('pin')}Cómo llegar</a>` : ''], ['Titulares', titList], ['Hora de salida', h.hora ? esc(h.hora) + ' h <span class="oc-muted">(2026)</span>' : ''], ['Otras salidas', (h.salidas || []).map((s) => `${esc(s.dia)}${s.hora ? ', ' + esc(s.hora) + ' h' : ''}: ${esc(s.titulares)}${s.nota ? ` <span class="oc-muted">${esc(s.nota)}</span>` : ''} <a href="${esc(s.fuente)}" target="_blank" rel="noopener">fuente</a>`).join('<br>')], ['Fundación', esc(h.fundacion)], ['Web oficial', h.web ? `<a class="oc-break" href="${esc(h.web)}" target="_blank" rel="noopener">${esc(webTxt)}</a>` : '']], 'is-key')}
+    ${facts([['Capital', `<a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a>`], ['Día de salida', `<a href="${u('semana-santa/' + c.slug + '/#' + slugify(h.dia))}">${esc(h.dia)}</a>${vecinos.length > 1 ? ` <span class="oc-muted">(${idx + 1}.ª de ${vecinos.length})</span>` : ''}`], ['Sede', h.sede ? `${esc(h.sede)} <a class="oc-maplink" href="${mapLink(h.sede + ', ' + c.nombre)}" target="_blank" rel="noopener">${icon('pin')}Cómo llegar</a>` : ''], ['Titulares', titList], ['Hora de salida', h.hora ? esc(fmtHora(h.hora)) + ' h <span class="oc-muted">(2026)</span>' : ''], ['Otras salidas', (h.salidas || []).map((s) => `${esc(s.dia)}${s.hora ? ', ' + esc(s.hora) + ' h' : ''}: ${esc(s.titulares)}${s.nota ? ` <span class="oc-muted">${esc(s.nota)}</span>` : ''} <a href="${esc(s.fuente)}" target="_blank" rel="noopener">fuente</a>`).join('<br>')], ['Fundación', esc(h.fundacion)], ['Web oficial', h.web ? `<a class="oc-break" href="${esc(h.web)}" target="_blank" rel="noopener">${esc(webTxt)}</a>` : '']], 'is-key')}
     <div class="oc-actions">${favBtn('hermandad', h.slug, h.nombre + ' (' + c.nombre + ')')}${shareBtn()}</div>
   </div>
   ${dipticoHtml(h, c) || (im ? `<figure class="oc-figure${im.escudo ? ' is-escudo' : ''}">${imgTag(im, im.escudo ? 'Escudo de la hermandad ' + h.nombre : h.nombre + ', Semana Santa de ' + c.nombre, { sizes: '(max-width: 860px) 100vw, 40vw', widths: [500, 960], eager: true })}<figcaption>${credit(im)}</figcaption></figure>` : estampaHtml(h, c))}
@@ -1004,7 +1014,7 @@ function pageCalendario() {
 <h2 class="oc-h2 oc-section" id="orden-de-paso">Orden de paso por capital</h2>
 <p class="oc-note">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
 <div class="oc-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}">${esc(c.nombre)}</a>`).join('')}</div>
-${D.capitales.map((c, i) => `<section class="oc-cal" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h2 class="oc-h2"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a></h2><div class="oc-cal-days">${byDay(conSalidas(hermsOf(c.slug))).map(([d, list]) => `<section class="oc-cal-day"><h3 class="oc-h3">${esc(d)}</h3><ol class="oc-order">${list.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}${h.extra ? ` <small>(${esc(h.extra.titulares)})</small>` : ''}</a>${h.sede || h.hora ? `<span>${h.hora ? esc(h.hora) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol></section>`).join('')}</div></section>`).join('')}`;
+${D.capitales.map((c, i) => `<section class="oc-cal" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h2 class="oc-h2"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a></h2><div class="oc-cal-days">${byDay(conSalidas(hermsOf(c.slug))).map(([d, list]) => `<section class="oc-cal-day"><h3 class="oc-h3">${esc(d)}</h3><ol class="oc-order">${list.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}${h.extra ? ` <small>(${esc(h.extra.titulares)})</small>` : ''}</a>${h.sede || h.hora ? `<span>${h.hora ? esc(fmtHora(h.hora)) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol></section>`).join('')}</div></section>`).join('')}`;
   // Datos estructurados solo para los actos confirmados (los detectados pueden cambiar de hora o no celebrarse).
   const offMadrid = (f) => { const p = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Madrid', timeZoneName: 'shortOffset' }).formatToParts(new Date(f + 'T12:00:00Z')).find((x) => x.type === 'timeZoneName').value; const m = p.match(/([+-])(\d+)/); return m ? m[1] + m[2].padStart(2, '0') + ':00' : '+01:00'; };
   const eventLd = EV.filter((e) => e.verificado && e.fecha >= today).map((e) => ({ '@context': 'https://schema.org', '@type': 'Event', name: e.titulo, startDate: e.hora ? e.fecha + 'T' + e.hora + ':00' + offMadrid(e.fecha) : e.fecha, eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', location: { '@type': 'Place', name: CAP[e.ciudad].nombre, address: { '@type': 'PostalAddress', addressLocality: CAP[e.ciudad].nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } }, description: e.nota || undefined, isAccessibleForFree: true, url: abs('calendario/') }));
@@ -1031,7 +1041,7 @@ function pageFavoritos() {
   write('favoritos/index.html', layout({ title: 'Mis favoritos', desc: 'Tus hermandades, bandas e imagineros guardados.', body, path: 'favoritos/', crumbs: [['Portada', u()], ['Mis favoritos', '']] }));
 }
 function pageColabora() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Colabora</h1><p class="oc-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntalo: no hace falta registrarse en nada de este sitio.</p></header>
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Colabora</h1><p class="oc-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntalo. Lo más rápido es decírselo a erCuñao (el botón de abajo a la derecha): no hace falta ninguna cuenta. Si prefieres dejarlo por escrito en público, abajo tienes cómo hacerlo con una cuenta gratuita de GitHub.</p></header>
 <div class="oc-prose">
 <h2 class="oc-h2">Cómo avisar de un error o aportar un dato</h2>
 <ol><li>En cada ficha (hermandad, banda, imaginero, marcha) encontrarás el enlace <strong>«Sugerir una corrección»</strong>.</li><li>Se abre una incidencia en GitHub con la página ya indicada (necesitas una cuenta gratuita de GitHub).</li><li>Explica qué cambiar y, si puedes, enlaza la fuente (web de la hermandad, prensa, redes oficiales).</li></ol>
@@ -1100,7 +1110,8 @@ function searchIndex() {
   for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
-  for (const h of D.hermandades) for (const m of h.marchas || []) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}, ${h.nombre}`, u: 'marcha/' + (MARCHA_SLUG.get(h.slug + '|' + m.titulo + '|' + (m.autor || '')) || '') + '/', k: norm(m.titulo + ' ' + m.autor) });
+  // todas las marchas: las dedicadas a una hermandad y las del catálogo de España (antes estas no se encontraban)
+  for (const m of MARCHAS) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}${m.h ? ', ' + m.h.nombre : m.tipo ? ' · ' + m.tipo.toLowerCase() : ''}`, u: 'marcha/' + m.slug + '/', c: m.h ? m.h.ciudad : '', k: norm([m.titulo, m.autor, m.dedicatoria, m.h ? m.h.nombre : ''].join(' ')) });
   for (const n of NEWS.items.slice(0, 200)) idx.push({ t: 'n', n: n.titulo, s: n.fuente + ', ' + fmtDay(n.ts, { day: 'numeric', month: 'short' }), u: n.url, d: n.ts, k: norm(n.titulo + ' ' + (n.extracto || '') + ' ' + n.ciudades.map((c) => CAP[c]?.nombre).join(' ')) });
   fs.writeFileSync(path.join(DIST, 'search-index.json'), JSON.stringify(idx));
 }
@@ -1291,6 +1302,10 @@ function datosCunao() {
 
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
+// /hermandad/, /banda/, /marcha/, /imaginero/ y /en-la-calle/ sin nombre (URL recortada a mano): a su listado, no a un 404
+for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['marcha', 'marchas/'], ['imaginero', 'imagineros/'], ['en-la-calle', 'capitales/']]) {
+  write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
+}
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
 searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw();
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

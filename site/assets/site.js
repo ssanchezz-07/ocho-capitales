@@ -82,7 +82,17 @@
     if (a < 86400 * 7) return rtf.format(Math.round(d / 86400), 'day');
     return new Date(iso).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
   }
-  function paintAgo(r) { $$('time[data-ago]', r).forEach(function (t) { t.textContent = ago(t.getAttribute('datetime')); }); }
+  // En la marca de «última lectura» de noticias, pasado un rato se dice la hora exacta («ayer a las 19:16»), que suena a
+  // dato y no a abandono como «hace 24 horas»
+  function paintAgo(r) {
+    $$('time[data-ago]', r).forEach(function (t) {
+      var iso = t.getAttribute('datetime'), horas = (Date.now() - new Date(iso)) / 36e5;
+      if (horas > 6 && t.closest('.oc-updated, .oc-pagehead')) {
+        var d = new Date(iso), hoy = new Date(), ayer = new Date(Date.now() - 864e5), hm = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' });
+        t.textContent = (d.toDateString() === hoy.toDateString() ? 'hoy' : d.toDateString() === ayer.toDateString() ? 'ayer' : 'el ' + d.toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })) + ' a las ' + hm;
+      } else t.textContent = ago(iso);
+    });
+  }
   paintAgo();
 
   // Imágenes de noticias que no cargan: se conserva el hueco con la marca para que la página no salte.
@@ -118,8 +128,11 @@
   });
   // Chip de la cabecera con el punto de color de tu capital; abre una hoja con las ocho colgaduras.
   var cityChip = $('[data-city-open]'), citySheet = $('[data-city-sheet]');
+  // En la página de una capital (o de su plano) el chip dice dónde estás; elegir otra capital lleva a ella
+  var pagCap = location.pathname.match(/\/(semana-santa|en-la-calle)\/([a-z]+)\/?$/);
   var paintChip = function (c) {
     if (!cityChip) return;
+    if (pagCap && CITY_NAMES[pagCap[2]]) c = pagCap[2];
     $('[data-city-label]', cityChip).textContent = c ? CITY_NAMES[c] : '8 capitales';
     cityChip.style.setProperty('--c', c && window.OC_COLORS ? window.OC_COLORS[c] : '');
     cityChip.classList.toggle('has-city', !!c);
@@ -138,7 +151,11 @@
     b.addEventListener('click', function () {
       setCity(b.dataset.setCity);
       // en la hoja, se ve la elección un instante antes de cerrarse (como al elegir en un menú de iOS)
-      if (citySheet && citySheet.contains(b)) setTimeout(closeCity, reduced ? 0 : 160);
+      if (citySheet && citySheet.contains(b)) {
+        var nueva = b.dataset.setCity;
+        if (pagCap && nueva && nueva !== pagCap[2]) { setTimeout(function () { location.href = BASE + pagCap[1] + '/' + nueva + '/'; }, reduced ? 0 : 160); return; }
+        setTimeout(closeCity, reduced ? 0 : 160);
+      }
     });
   });
 
@@ -638,7 +655,9 @@
     var moveInd = function (a) {
       if (!a) { ind.style.opacity = '0'; return; }
       ind.style.width = a.offsetWidth + 'px';
-      ind.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+      // en PC la barra puede tener dos líneas: la píldora también baja
+      var fila = a.parentNode.offsetTop - dnUl.firstElementChild.offsetTop;
+      ind.style.transform = 'translate(' + a.offsetLeft + 'px,' + fila + 'px)';
       ind.style.opacity = '1';
     };
     window.addEventListener('resize', function () { moveInd($('.is-current', daynav)); });
@@ -737,22 +756,30 @@
   }
   var TYPES = { c: 'Capitales', h: 'Hermandades', b: 'Bandas', i: 'Imagineros', m: 'Marchas', n: 'Noticias' };
   var ORDER = ['c', 'h', 'b', 'i', 'm', 'n'];
-  function words(q) { return norm(q).trim().split(/\s+/).filter(function (w) { return w.length > 1; }); }
+  var VACIAS = { el: 1, la: 1, los: 1, las: 1, de: 1, del: 1, y: 1 };
+  var sinArticulo = function (s) { return s.replace(/^(el|la|los|las) /, ''); };
+  function words(q) { var ws = norm(q).trim().split(/\s+/).filter(function (w) { return w.length > 1; }); var sin = ws.filter(function (w) { return !VACIAS[w]; }); return sin.length ? sin : ws; }
+  // ciudad de la página actual (capital, hermandad…) para desempatar
+  var ciudadPagina = (location.pathname.match(/\/(?:semana-santa|en-la-calle)\/([a-z]+)\//) || [])[1] || '';
   function search(q) {
-    var ws = words(q), full = norm(q).trim();
+    var ws = words(q), full = sinArticulo(norm(q).trim()), miCiudad = getCity() || ciudadPagina;
     if (!ws.length) return [];
     var res = [];
     idx.forEach(function (e) {
       var score = 0;
       for (var i = 0; i < ws.length; i++) {
         var w = ws[i], at = e.nn.indexOf(w);
+        // plural tolerado: «amarguras» encuentra «Amargura»
+        if (at === -1 && w.length > 4 && /s$/.test(w)) { w = w.replace(/e?s$/, ''); at = e.nn.indexOf(w); if (at === -1) { w = ws[i].slice(0, -1); at = e.nn.indexOf(w); } }
         if (at !== -1) score += (at === 0 || e.nn.charAt(at - 1) === ' ') ? 6 : 3;
         else if (e.k.indexOf(w) !== -1) score += 1;
         else return;
       }
-      if (e.nn === full) score += 20;
+      var nombre = sinArticulo(e.nn);
+      if (nombre === full) score += 20; else if (nombre.indexOf(full) === 0) score += 8;
       if (e.t === 'c') score += 3;
-      res.push([score, e]);
+      if (miCiudad && e.c === miCiudad) score += 2;
+      e._s = score; res.push([score, e]);
     });
     return res.sort(function (a, b) { return b[0] - a[0] || (b[1].d || 0) - (a[1].d || 0); }).map(function (x) { return x[1]; });
   }
@@ -796,7 +823,8 @@
     if (!r.length) { box.innerHTML = '<p class="oc-hint">Sin resultados para «' + esc(q) + '». Prueba con el nombre popular de la hermandad, el de una imagen o el de su barrio.</p>'; return; }
     var g = {};
     r.forEach(function (e) { (g[e.t] = g[e.t] || []).push(e); });
-    var present = ORDER.filter(function (t) { return g[t]; });
+    // los grupos se ordenan por su mejor resultado (buscar «lastrucci» pone primero Imagineros); Intro abre el primero
+    var present = ORDER.filter(function (t) { return g[t]; }).sort(function (a, b) { return (g[b][0]._s || 0) - (g[a][0]._s || 0) || ORDER.indexOf(a) - ORDER.indexOf(b); });
     box.innerHTML = present.map(function (t) {
       return '<p class="oc-sr-group">' + TYPES[t] + ' <span class="oc-muted">(' + g[t].length + ')</span></p>' + g[t].slice(0, limit).map(function (e) {
         var ext = /^https?:/.test(e.u);
