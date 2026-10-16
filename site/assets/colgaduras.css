@@ -53,7 +53,72 @@ body { background-color: var(--bg); font-family: var(--sans); }
 .oc-menubtn:active { transform: scale(.94); }
 @media (max-width: 959px) { .oc-searchbtn { display: none; } }
 @media (min-width: 960px) { .oc-menubtn { display: none; } }
-html:has([data-home]) .oc-cityselect { display: none; }
+html:has([data-home]) .oc-citychip { display: none; }
+select.oc-cityselect[hidden] { display: none; }
+
+/* Chip de tu capital: un punto con su color y su nombre; abre la hoja de colgaduras */
+.oc-citychip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--primary); font: 600 .95rem/1 var(--sans); cursor: pointer; touch-action: manipulation; transition: transform 140ms var(--ease-out); white-space: nowrap; }
+.oc-citychip:active { transform: scale(.96); }
+.oc-citychip svg { width: 11px; height: 8px; opacity: .7; }
+.oc-citychip-dot { width: 10px; height: 10px; border-radius: 50%; background: conic-gradient(#7b2d8e, #c99a3a, #3a6fb0, #2f8a57, #b03a3a, #7b2d8e); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--line-strong); }
+.oc-citychip.has-city .oc-citychip-dot { background: var(--c); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--c); }
+@media (hover: hover) and (pointer: fine) { .oc-citychip:hover { border-color: var(--primary); } }
+
+/* Hoja «Tu capital»: las ocho colgaduras, como en la portada */
+.oc-citysheet-sub { margin: 0 0 14px; color: var(--muted); font-size: .92rem; }
+.oc-citysheet-grid { list-style: none; margin: 0 0 12px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 4px; }
+@media (min-width: 640px) { .oc-citysheet-grid { grid-template-columns: repeat(8, 1fr); } }
+.oc-citysheet-grid button { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 2px 10px; border: 0; border-radius: 16px; background: none; color: var(--ink); font: 600 .82rem/1.1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out), background-color 160ms ease; }
+.oc-citysheet-grid button:active { transform: scale(.95); }
+.oc-citysheet-grid img { height: 104px; width: auto; filter: drop-shadow(0 8px 10px rgb(20 8 29 / .25)); transform-origin: 50% 0; transition: transform 300ms cubic-bezier(.32,.72,0,1); }
+.oc-citysheet-grid [aria-pressed="true"] { background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--primary); }
+.oc-citysheet-grid [aria-pressed="true"] img { transform: translateY(4px) scale(1.04); }
+.oc-citysheet-todas { width: 100%; margin: 0; border-radius: 999px; }
+
+/* Hoja «Más»: capitales como mini colgaduras en una tira deslizable, y la lista agrupada al estilo iOS */
+.oc-sheet-caps.is-colg { list-style: none; display: flex; gap: 2px; margin: 0 calc(-1 * var(--gutter)) 14px; padding: 4px var(--gutter) 6px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; overscroll-behavior-x: contain; }
+.oc-sheet-caps.is-colg::-webkit-scrollbar { display: none; }
+.oc-sheet-caps.is-colg li { flex: none; scroll-snap-align: start; }
+.oc-sheet-caps.is-colg a { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 72px; padding: 0; border: 0; background: none; color: var(--ink); font: 600 .8rem/1.1 var(--sans); text-decoration: none; box-shadow: none; }
+.oc-sheet-caps.is-colg a:active { transform: scale(.95); }
+.oc-sheet-caps.is-colg a::before, .oc-sheet-caps.is-colg a::after { display: none; }
+.oc-sheet-caps.is-colg img { height: 84px; width: auto; filter: drop-shadow(0 6px 8px rgb(20 8 29 / .22)); }
+.oc-sheet-list { border-radius: 14px; overflow: hidden; background: var(--surface-2, color-mix(in srgb, var(--ink) 4%, var(--surface))); }
+.oc-sheet-list li + li { border-top: 1px solid var(--line); }
+
+/* Buscador: cada resultado con su miniatura; recientes y sugerencias al abrirlo */
+.oc-sr-item { flex-direction: row; align-items: center; gap: 12px; }
+.oc-sr-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.oc-sr-thumb { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background: color-mix(in srgb, var(--c) 82%, #14081d); color: #f0d79c; font: 400 1.25rem/1 var(--display); box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--gold) 70%, transparent); }
+.oc-sr-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.oc-sr-thumb.is-colg { border-radius: 10px; background: none; box-shadow: none; }
+.oc-sr-thumb.is-colg img { object-fit: contain; }
+.oc-sr-group { display: flex; align-items: center; justify-content: space-between; }
+.oc-sr-sug { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 12px 12px; }
+.oc-sr-sug a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font-weight: 600; font-size: .9rem; text-decoration: none; }
+.oc-sr-sug a:active { transform: scale(.96); }
+
+/* Asa de las hojas: se pueden cerrar arrastrando hacia abajo */
+.oc-grabber { width: 38px; height: 5px; margin: 2px auto 6px; border-radius: 3px; background: var(--line-strong); touch-action: none; cursor: grab; }
+.oc-sheet-head { touch-action: none; }
+@media (min-width: 760px) { .oc-cunao .oc-grabber { display: none; } }
+
+/* Migas en el móvil: solo «‹ atrás» al nivel anterior; las migas completas, en pantallas anchas */
+@media (max-width: 759px) {
+  .oc-crumbs li { display: none; }
+  .oc-crumbs li:nth-last-child(2) { display: inline-flex; }
+  .oc-crumbs li + li::before { display: none; }
+  .oc-crumbs ol { margin-bottom: 8px; font-family: var(--sans); font-size: .95rem; letter-spacing: 0; text-transform: none; }
+  .oc-crumbs li:nth-last-child(2) a { gap: 6px; margin-left: -4px; padding: 0 8px 0 4px; color: var(--primary); font-weight: 600; text-decoration: none; }
+  .oc-crumbs li:nth-last-child(2) a::before { content: ""; width: 9px; height: 9px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-right: 2px; }
+}
+
+/* Jornadas como carrusel en el móvil (se desliza de una a otra) */
+.oc-split-main.is-carrusel { display: flex; align-items: flex-start; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; margin-inline: calc(-1 * var(--gutter)); transition: height 260ms cubic-bezier(.32,.72,0,1); }
+.oc-split-main.is-carrusel::-webkit-scrollbar { display: none; }
+.oc-split-main.is-carrusel > .oc-day { flex: 0 0 100%; min-width: 0; box-sizing: border-box; padding-inline: var(--gutter); scroll-snap-align: start; scroll-snap-stop: always; margin-top: 0; }
+.oc-split-main.is-carrusel * { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .oc-split-main.is-carrusel { transition: none; } }
 @media (prefers-reduced-transparency: reduce) { .oc-header { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 
 /* ---------- Portada ---------- */

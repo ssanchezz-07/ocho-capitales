@@ -116,8 +116,72 @@
     s.value = getCity();
     s.addEventListener('change', function () { setCity(s.value); });
   });
+  // Chip de la cabecera con el punto de color de tu capital; abre una hoja con las ocho colgaduras.
+  var cityChip = $('[data-city-open]'), citySheet = $('[data-city-sheet]');
+  var paintChip = function (c) {
+    if (!cityChip) return;
+    $('[data-city-label]', cityChip).textContent = c ? CITY_NAMES[c] : '8 capitales';
+    cityChip.style.setProperty('--c', c && window.OC_COLORS ? window.OC_COLORS[c] : '');
+    cityChip.classList.toggle('has-city', !!c);
+    $$('[data-set-city]', citySheet || undefined).forEach(function (b) { if (citySheet && citySheet.contains(b)) b.setAttribute('aria-pressed', b.dataset.setCity === c ? 'true' : 'false'); });
+  };
+  var closeCity = function () { if (cityChip) cityChip.setAttribute('aria-expanded', 'false'); closeLayer(citySheet); };
+  if (cityChip && citySheet) {
+    cityChip.addEventListener('click', function () { cityChip.setAttribute('aria-expanded', 'true'); openLayer(citySheet, $('[aria-pressed="true"]', citySheet) || $('[data-city-close]', citySheet)); });
+    $('[data-city-close]', citySheet).addEventListener('click', closeCity);
+    citySheet.addEventListener('click', function (e) { if (e.target === citySheet) closeCity(); });
+    citySheet.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeCity(); trapFocus(citySheet, e); });
+  }
+  paintChip(getCity()); cityListeners.push(paintChip);
   // «Mostrando solo <ciudad>» en Hoy, con la salida a las ocho capitales (la elección se hace en las colgaduras o en el selector).
-  $$('[data-set-city]').forEach(function (b) { b.addEventListener('click', function () { setCity(b.dataset.setCity); }); });
+  $$('[data-set-city]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setCity(b.dataset.setCity);
+      // en la hoja, se ve la elección un instante antes de cerrarse (como al elegir en un menú de iOS)
+      if (citySheet && citySheet.contains(b)) setTimeout(closeCity, reduced ? 0 : 160);
+    });
+  });
+
+  // ---------- hojas: asa y cierre arrastrando hacia abajo ----------
+  // El panel sigue al dedo 1:1; se cierra si se arrastra más de un tercio o con un gesto rápido (velocidad), si no vuelve
+  // a su sitio. Solo desde el asa y la cabecera, para no pelearse con el scroll del contenido.
+  function arrastrable(sh) {
+    var panel = $('.oc-sheet-panel', sh), head = $('.oc-sheet-head', sh); if (!panel || !head) return;
+    var asa = document.createElement('div'); asa.className = 'oc-grabber'; asa.setAttribute('aria-hidden', 'true');
+    panel.insertBefore(asa, panel.firstChild);
+    var y0 = 0, dy = 0, yA = 0, tA = 0, v = 0, id = null;
+    function down(e) {
+      if (id !== null || e.button > 0 || e.target.closest('button, a, input, select, textarea')) return;
+      id = e.pointerId; y0 = yA = e.clientY; tA = performance.now(); dy = v = 0;
+      try { e.currentTarget.setPointerCapture(id); } catch (err) { }
+      panel.style.transition = 'none';
+    }
+    function move(e) {
+      if (e.pointerId !== id) return;
+      var d = e.clientY - y0, now = performance.now();
+      dy = d > 0 ? d : -Math.sqrt(-d) * 2; // hacia arriba, resistencia creciente
+      panel.style.transform = 'translateY(' + dy + 'px)';
+      if (now > tA) { v = (e.clientY - yA) / (now - tA); yA = e.clientY; tA = now; }
+    }
+    function up(e) {
+      if (e.pointerId !== id) return; id = null;
+      if (dy > panel.offsetHeight / 3 || (dy > 12 && v > 0.45)) {
+        panel.style.transition = 'transform 220ms cubic-bezier(.32,.72,0,1)';
+        panel.style.transform = 'translateY(100%)';
+        var x = $('.oc-sheet-head .oc-iconbtn', sh); if (x) x.click();
+        setTimeout(function () { panel.style.transition = ''; panel.style.transform = ''; }, 260);
+      } else {
+        panel.style.transition = 'transform 320ms cubic-bezier(.32,.72,0,1)';
+        panel.style.transform = '';
+        setTimeout(function () { panel.style.transition = ''; }, 340);
+      }
+    }
+    [asa, head].forEach(function (el) {
+      el.addEventListener('pointerdown', down); el.addEventListener('pointermove', move);
+      el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+    });
+  }
+  $$('.oc-sheet').forEach(arrastrable);
   var paintCityPick = function (c) {
     var box = $('[data-today-showing]'); if (!box) return;
     box.hidden = !c; var n = $('[data-today-city]', box); if (n) n.textContent = c ? CITY_NAMES[c] : '';
@@ -578,6 +642,38 @@
       ind.style.opacity = '1';
     };
     window.addEventListener('resize', function () { moveInd($('.is-current', daynav)); });
+    var marcar = function (a) { links.forEach(function (x) { x.classList.toggle('is-current', x === a); }); moveInd(a); if (a) hscroll(a, true); };
+    // En el móvil, las jornadas son un carrusel: se desliza de una a otra con el dedo (scroll-snap nativo, sin librerías).
+    // La altura sigue a la jornada visible para que no quede hueco debajo de las cortas.
+    var carr = $('.oc-split-main'), dias = $$('.oc-day');
+    if (carr && dias.length > 1 && matchMedia('(max-width: 759px)').matches) {
+      carr.classList.add('is-carrusel');
+      var actual = -1;
+      var ajustar = function (i) {
+        i = Math.max(0, Math.min(dias.length - 1, i));
+        carr.style.height = dias[i].offsetHeight + 'px';
+        if (i === actual) return; var primera = actual < 0; actual = i;
+        dias.forEach(function (d, j) { d.setAttribute('aria-hidden', j === i ? 'false' : 'true'); d.inert = j !== i; });
+        marcar(byId[dias[i].id]);
+        if (!primera && history.replaceState) history.replaceState(null, '', '#' + dias[i].id);
+      };
+      var idx0 = Math.max(0, dias.findIndex(function (d) { return '#' + d.id === location.hash; }));
+      carr.scrollLeft = idx0 * carr.clientWidth; ajustar(idx0);
+      var fin;
+      carr.addEventListener('scroll', function () { clearTimeout(fin); fin = setTimeout(function () { ajustar(Math.round(carr.scrollLeft / carr.clientWidth)); }, 60); }, { passive: true });
+      if ('ResizeObserver' in window) { var ro = new ResizeObserver(function () { if (actual >= 0) carr.style.height = dias[actual].offsetHeight + 'px'; }); dias.forEach(function (d) { ro.observe(d); }); }
+      window.addEventListener('resize', function () { carr.scrollLeft = actual * carr.clientWidth; ajustar(actual); });
+      links.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var i = dias.findIndex(function (d) { return '#' + d.id === a.getAttribute('href'); }); if (i < 0) return;
+          e.preventDefault();
+          carr.scrollTo({ left: i * carr.clientWidth, behavior: reduced ? 'auto' : 'smooth' });
+          var top = carr.getBoundingClientRect().top - daynav.offsetHeight - 70;
+          if (top < 0) window.scrollBy({ top: top, behavior: reduced ? 'auto' : 'smooth' });
+        });
+      });
+    }
+    if (!carr || !carr.classList.contains('is-carrusel')) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
@@ -586,6 +682,7 @@
       });
     }, { rootMargin: '-35% 0px -60% 0px' });
     $$('.oc-day').forEach(function (s) { io.observe(s); });
+    }
   }
 
   // ---------- página de noticias ----------
@@ -668,8 +765,33 @@
     marks.forEach(function (m) { if (m[0] < last) return; out += esc(text.slice(last, m[0])) + '<mark>' + esc(text.slice(m[0], m[1])) + '</mark>'; last = m[1]; });
     return out + esc(text.slice(last));
   }
+  // Miniatura de cada resultado: foto del titular, colgadura de la capital o monograma en el color de su capital.
+  var ICONO_T = { b: '♪', i: '✦', m: '♫', n: '¶' };
+  function miniatura(e) {
+    var col = (window.OC_COLORS && e.c && window.OC_COLORS[e.c]) || 'var(--primary)';
+    if (e.i) return '<span class="oc-sr-thumb' + (e.t === 'c' ? ' is-colg' : '') + '" aria-hidden="true" style="--c:' + col + '"><img src="' + esc(e.i) + '" alt="" loading="lazy" decoding="async"></span>';
+    var ini = e.t === 'h' ? esc(String(e.n).replace(/^(La|El|Los|Las)\s+/i, '').charAt(0)) : (ICONO_T[e.t] || '·');
+    return '<span class="oc-sr-thumb is-mono" aria-hidden="true" style="--c:' + col + '">' + ini + '</span>';
+  }
+  // Recientes: lo último que abriste desde el buscador (solo en este navegador).
+  function recientes() { return store.json('oc-recientes', []); }
+  function guardarReciente(a) {
+    var r = recientes().filter(function (x) { return x.u !== a.getAttribute('href'); });
+    r.unshift({ u: a.getAttribute('href'), n: a.getAttribute('data-sr-n') || a.textContent, h: a.innerHTML });
+    store.set('oc-recientes', JSON.stringify(r.slice(0, 6)));
+  }
+  function inicioBuscador(box) {
+    var r = recientes(), c = getCity(), html = '';
+    if (r.length) html += '<p class="oc-sr-group">Recientes <button type="button" class="oc-textbtn" data-sr-borrar>Borrar</button></p>' + r.map(function (x) { return '<a class="oc-sr-item" href="' + esc(x.u) + '" data-sr-n="' + esc(x.n) + '">' + x.h.replace(/<mark>|<\/mark>/g, '') + '</a>'; }).join('');
+    html += '<p class="oc-sr-group">Sugerencias</p><div class="oc-sr-sug">' +
+      (c ? '<a href="' + BASE + 'semana-santa/' + c + '/">Semana Santa de ' + esc(CITY_NAMES[c]) + '</a><a href="' + BASE + 'en-la-calle/' + c + '/">En la calle: ' + esc(CITY_NAMES[c]) + '</a>' : '') +
+      '<a href="' + BASE + 'calendario/">Calendario</a><a href="' + BASE + 'hermandades/">Todas las hermandades</a><a href="' + BASE + 'marchas/">Marchas</a></div>';
+    box.innerHTML = html;
+    var b = $('[data-sr-borrar]', box); if (b) b.addEventListener('click', function () { store.set('oc-recientes', ''); inicioBuscador(box); });
+  }
+  document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('.oc-sr-item'); if (a && a.closest('[data-search-results], [data-search-page-results]')) guardarReciente(a); });
   function renderResults(box, q, limit) {
-    if (norm(q).trim().length < 2) { box.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; return; }
+    if (norm(q).trim().length < 2) { if (box === results) inicioBuscador(box); else box.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; return; }
     var r = search(q);
     if (!r.length) { box.innerHTML = '<p class="oc-hint">Sin resultados para «' + esc(q) + '». Prueba con el nombre popular de la hermandad, el de una imagen o el de su barrio.</p>'; return; }
     var g = {};
@@ -678,13 +800,13 @@
     box.innerHTML = present.map(function (t) {
       return '<p class="oc-sr-group">' + TYPES[t] + ' <span class="oc-muted">(' + g[t].length + ')</span></p>' + g[t].slice(0, limit).map(function (e) {
         var ext = /^https?:/.test(e.u);
-        return '<a class="oc-sr-item" href="' + esc(ext ? e.u : BASE + e.u) + '"' + (ext ? ' target="_blank" rel="nofollow noopener noreferrer"' : '') + '><strong>' + hl(e.n, q) + '</strong><small>' + esc(e.s) + (ext ? ' (abre el medio)' : '') + '</small></a>';
+        return '<a class="oc-sr-item" href="' + esc(ext ? e.u : BASE + e.u) + '"' + (ext ? ' target="_blank" rel="nofollow noopener noreferrer"' : '') + ' data-sr-n="' + esc(e.n) + '">' + miniatura(e) + '<span class="oc-sr-txt"><strong>' + hl(e.n, q) + '</strong><small>' + esc(e.s) + (ext ? ' (abre el medio)' : '') + '</small></span></a>';
       }).join('');
     }).join('');
   }
   var failMsg = '<p class="oc-hint">No se pudo cargar el buscador. Comprueba la conexión y vuelve a intentarlo.</p>';
   var ov = $('[data-search-overlay]'), input = $('[data-search-input]'), results = $('[data-search-results]');
-  function openSearch(e, fromKey) { if (!ov) return; if (e && e.preventDefault) e.preventDefault(); input.value = ''; results.innerHTML = '<p class="oc-hint">Escribe al menos dos letras. Da igual con o sin tildes.</p>'; openLayer(ov, input, fromKey); loadIdx().catch(function () { }); }
+  function openSearch(e, fromKey) { if (!ov) return; if (e && e.preventDefault) e.preventDefault(); input.value = ''; inicioBuscador(results); openLayer(ov, input, fromKey); loadIdx().catch(function () { }); }
   function closeSearch() { closeLayer(ov); }
   $$('[data-open-search]').forEach(function (b) { b.addEventListener('click', openSearch); });
   $$('[data-close-search]').forEach(function (b) { b.addEventListener('click', closeSearch); });

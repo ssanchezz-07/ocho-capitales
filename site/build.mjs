@@ -422,9 +422,9 @@ ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(
     <a class="oc-logo" href="${u()}" aria-label="${BRAND}, portada">${WORDMARK}</a>
     <nav class="oc-nav" aria-label="Secciones"><ul>${NAV.map(([h, l]) => `<li><a href="${u(h)}"${active === h ? ' aria-current="page"' : ''}>${l}</a></li>`).join('')}</ul></nav>
     <div class="oc-tools">
-      <button class="oc-menubtn" type="button" data-more aria-expanded="false" aria-controls="oc-more" aria-label="Menú"><svg class="oc-i" viewBox="0 0 24 18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M1.5 2h21M1.5 9h21M1.5 16h21"/></svg></button>
       <button class="oc-searchbtn" type="button" data-open-search aria-label="Buscar">${icon('search')}<span class="oc-searchbtn-txt">Buscar</span><kbd>/</kbd></button>
-      <label class="oc-cityselect"><span class="oc-sr">Mi ciudad</span><select data-city-select><option value="">8 capitales</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></label>
+      <select class="oc-cityselect" data-city-select hidden aria-hidden="true" tabindex="-1"><option value="">8 capitales</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select>
+      <button class="oc-citychip" type="button" data-city-open aria-haspopup="dialog" aria-controls="oc-city" aria-expanded="false"><i class="oc-citychip-dot" aria-hidden="true"></i><span data-city-label>8 capitales</span><svg viewBox="0 0 12 8" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.5L6 6l4.5-4.5"/></svg><span class="oc-sr">: elegir tu capital</span></button>
     </div>
   </div>
 </header>
@@ -462,9 +462,16 @@ ${body}${colabora(p, title)}
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
-    <ul class="oc-sheet-list">${[['capitales/', 'Capitales'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros'], ['favoritos/', 'Mis favoritos'], ['acerca/', 'Fuentes y metodología']].map(([h, l]) => `<li><a href="${u(h)}">${l}${icon('arrow')}</a></li>`).join('')}</ul>
-    <p class="oc-sheet-sub">Capitales</p>
-    <ul class="oc-sheet-caps">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}">${esc(c.nombre)}</a></li>`).join('')}</ul>
+    <ul class="oc-sheet-caps is-colg">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
+    <ul class="oc-sheet-list">${[['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros'], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l]) => `<li><a href="${u(h)}">${l}${icon('arrow')}</a></li>`).join('')}</ul>
+  </div>
+</div>
+<div class="oc-sheet oc-citysheet" id="oc-city" hidden data-city-sheet>
+  <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-city-t">
+    <div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-city-t">Tu capital</p><button class="oc-iconbtn" type="button" data-city-close aria-label="Cerrar">${icon('x')}</button></div>
+    <p class="oc-citysheet-sub">Verás primero sus cofradías, noticias y actos. Puedes cambiarla cuando quieras.</p>
+    <ul class="oc-citysheet-grid">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></button></li>`).join('')}</ul>
+    <button class="oc-btn is-quiet oc-citysheet-todas" type="button" data-set-city="">Ver las ocho capitales</button>
   </div>
 </div>
 <div class="oc-search" hidden data-search-overlay>
@@ -1089,8 +1096,9 @@ function page404() {
 // ---------- índices y extras ----------
 function searchIndex() {
   const idx = [];
-  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'), u: 'semana-santa/' + c.slug + '/', k: norm(c.nombre + ' semana santa capital') });
-  for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
+  // i: miniatura (foto del titular o colgadura de la capital); c: capital, para el monograma de color si no hay foto
+  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'), u: 'semana-santa/' + c.slug + '/', i: u('assets/plates/colgadura-' + c.slug + '.webp'), c: c.slug, k: norm(c.nombre + ' semana santa capital') });
+  for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
   for (const h of D.hermandades) for (const m of h.marchas || []) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}, ${h.nombre}`, u: 'marcha/' + (MARCHA_SLUG.get(h.slug + '|' + m.titulo + '|' + (m.autor || '')) || '') + '/', k: norm(m.titulo + ' ' + m.autor) });
