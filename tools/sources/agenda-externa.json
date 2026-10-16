@@ -1,7 +1,7 @@
 {
  "generado": "2026-10-16",
  "fuentes": {
-  "InfoCofrade": 375,
+  "InfoCofrade": 363,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
@@ -9,106 +9,6 @@
   "Prensa (texto de noticias)": 33
  },
  "eventos": [
-  {
-   "fecha": "2026-10-16",
-   "hora": "21:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario Vespertino con Nuestra Señora Desconsuelo y Visitación (Pasión y Muerte)",
-   "nota": "Música: el coro del Colegio Cristo Rey de Triana.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Amor (Pino Montano) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a la Divina Pastora (San Antonio) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Ofrenda floral a Nuestra Señora del Rosario de San Julián en San Marcos de 10:00-13:00 y 18:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "21:30",
-   "ciudad": "sevilla",
-   "tipo": "concierto",
-   "titulo": "Concierto de la BCT de Nuestra Señora de la Victoria de las Cigarreras en la Iglesia de la Misericordia (dentro de los actos por el 425 aniversario de la Hermandad de los Panaderos) a las 21:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Cabildo de elecciones en la Hermandad de Santa Cruz",
-   "nota": "Primera convocatoria: 17:00.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Cabildo de elecciones en la Hermandad del Carmen",
-   "nota": "Se presenta una única candidatura, la encabezada por José Luis Oliva Martínez. Primera convocatoria: 19:00.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-17",
    "hora": "19:00",
@@ -154,7 +54,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "procesion",
-   "titulo": "Rosario público con el Simpecado de la Hermandad de la Virgen de la Alegría",
+   "titulo": "Rosario público con el Simpecado de la Hermandad de la Alegría",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -174,17 +74,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de la Salud (San Gonzalo) de 09:00-14:00 y 17:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo de 17:00-21:00",
+   "titulo": "Besamanos extraordinario a la Virgen del Amparo de 17:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -335,16 +225,6 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestra Señora del Rosario (San Pablo) de 12:00-14:30 y 17:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora de la Salud (San Gonzalo) de 09:00-14:00 y 17:00-21:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
