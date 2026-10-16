@@ -1158,11 +1158,24 @@ function datosCalle(c) {
         let t = minDia(p.hora) ?? minDia(p.fila); if (t == null) continue;
         if (t0 == null) t0 = t; else if (t < t0 - 180) t += 1440;
         const [x, y] = xy(p.lat, p.lon);
-        out.push([x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0]);
+        const q = [x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0];
+        if (p.via && p.via.length) Object.defineProperty(q, 'via', { value: p.via.map(([la, lo]) => xy(la, lo)) });
+        out.push(q);
       }
       // la rejilla puede repetir franjas: el tiempo nunca retrocede
       for (let i = 1; i < out.length; i++) if (out[i][2] < out[i - 1][2]) out[i][2] = out[i - 1][2];
-      if (out.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = out;
+      // Vértices por calle (tools/itinerarios/enrutar.mjs) entre cada par de puntos oficiales: la hora se reparte según la
+      // distancia andada; llevan 1 en la 7.ª posición para que la lista, la ficha y la ruta usen solo los puntos oficiales.
+      const conCalles = [];
+      for (let i = 0; i < out.length; i++) {
+        const a = out[i]; conCalles.push(a);
+        const b = out[i + 1]; if (!b || !a.via) continue;
+        const cad = [[a[0], a[1]], ...a.via, [b[0], b[1]]], tramo = [0];
+        for (let k = 1; k < cad.length; k++) tramo.push(tramo[k - 1] + Math.hypot(cad[k][0] - cad[k - 1][0], cad[k][1] - cad[k - 1][1]));
+        const L = tramo[tramo.length - 1] || 1;
+        for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, 0, 1]);
+      }
+      if (conCalles.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = conCalles;
     }
     if (!Object.keys(tramos).length) continue;
     const im = h.imagen;
@@ -1184,7 +1197,7 @@ function pageCalle(c) {
 <section class="oc-calle" data-calle="${u('data/calle/' + c.slug + '.json')}" data-fechas='${esc(JSON.stringify(fechas))}' style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
   <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}</div>
   <div class="oc-calle-mapa" data-mapa><svg class="oc-calle-svg" aria-label="Plano de ${esc(c.nombre)} con los recorridos" role="img"></svg>
-    <div class="oc-calle-ctl"><button class="oc-calle-btn" type="button" data-zoom="1" aria-label="Acercar">+</button><button class="oc-calle-btn" type="button" data-zoom="-1" aria-label="Alejar">−</button><button class="oc-calle-btn" type="button" data-yo aria-label="Mi ubicación"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3" stroke="currentColor" stroke-width="1.8"/></svg></button></div>
+    <div class="oc-calle-ctl"><button class="oc-calle-btn" type="button" data-zoom="1" aria-label="Acercar">+</button><button class="oc-calle-btn" type="button" data-zoom="-1" aria-label="Alejar">−</button><button class="oc-calle-btn" type="button" data-yo aria-label="Mi ubicación"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3" stroke="currentColor" stroke-width="1.8"/></svg></button><button class="oc-calle-btn" type="button" data-encuadrar aria-label="Ver toda la jornada"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>
     <p class="oc-calle-osm">Plano: © colaboradores de OpenStreetMap</p>
   </div>
   <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
@@ -1215,14 +1228,65 @@ function datosCunao() {
   const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
   fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
   const conMapa = new Set(D.capitales.filter((c) => fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json'))).map((c) => c.slug));
-  const hs = D.hermandades.map((h) => ({
-    s: h.slug, n: h.nombre, c: h.ciudad, d: h.dia, o: h.orden, h: h.hora || '', se: h.sede || '',
-    t: (h.titulares || []).map((t) => [t.nombre.split(',')[0], t.autor || '']),
-    b: (h.bandas_slugs || []).filter((s) => BANDA[s]).map((s) => [s, BANDA[s].nombre]),
-    w: h.web || '', f: h.fundacion || '',
-  }));
-  fs.mkdirSync(path.join(DIST, 'data'), { recursive: true });
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], hermandades: hs }));
+  // Tablas compartidas: bandas e imagineros se citan por índice para que el JSON siga siendo ligero
+  const B = [], bIdx = new Map();
+  const banda = (slug, nombre) => { const k = slug || 'n:' + nombre; if (!bIdx.has(k)) { const b = slug && BANDA[slug]; bIdx.set(k, B.length); B.push([b ? b.slug : '', b ? b.nombre : nombre, b ? b.tipo || '' : '', b ? b.localidad || '' : '']); } return bIdx.get(k); };
+  const I = D.imagineros.map((i) => [i.slug, i.nombre, i.vida || '', i.escuela || '']);
+  const iIdx = new Map(D.imagineros.map((i, k) => [i.slug, k]));
+  const hhmm = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? m[1].padStart(2, '0') + ':' + m[2] : ''; };
+  const lugarOk = (s) => /[a-záéíóúñ]{3}/i.test(s || '') && !/^(.)\1+$/.test(s);
+  // Recorridos: el tramo principal (paso; si no, palio o cruz de guía) como [hora, lugar, exacta]
+  const R = {};
+  for (const c of D.capitales) {
+    const f = path.join(DIR, 'data', 'recorridos', c.slug + '.json'); if (!fs.existsSync(f)) continue;
+    const j = JSON.parse(fs.readFileSync(f, 'utf8')); R[c.slug] = { anio: j.anio, r: {} };
+    for (const [slug, e] of Object.entries(j.hermandades)) {
+      if (!HERM[slug]) continue;
+      const k = e.tramos.paso ? 'paso' : e.tramos.palio ? 'palio' : Object.keys(e.tramos)[0]; if (!k) continue;
+      const pts = []; let prev = '';
+      for (const p of e.tramos[k]) {
+        const t = hhmm(p.hora) || hhmm(p.fila); if (!t) continue;
+        const l = limpiaLugar(p.lugar).replace(/\s*\(\d{1,2}[,.:]\d{2}\)/g, '').replace(/\b\d{1,2}[:.]\d{2}\b/g, '').replace(/\s+/g, ' ').trim();
+        const cof = /carrera|catedral/.test(p.como || '') || /carrera|c\. ?oficial|catedral|campana|tribuna/i.test(l) ? 1 : 0;
+        if (!lugarOk(l) && pts.length) continue;
+        if (l === prev && pts.length) continue; prev = l;
+        pts.push([t, lugarOk(l) ? l : '', p.hora ? 1 : 0, cof]);
+      }
+      if (pts.length >= 2) R[c.slug].r[slug] = { k, f: e.fuente || '', p: pts };
+    }
+  }
+  const resumen = (c, s) => {
+    const x = R[c] && R[c].r[s]; if (!x) return undefined;
+    const p = x.p, co = p.find((q) => q[3]);
+    return [p[0][0], p[0][2], p.at(-1)[0], p.at(-1)[2], co ? co[1] : '', co ? co[0] : '', co ? co[2] : 0];
+  };
+  const hs = D.hermandades.map((h) => {
+    const o = {
+      s: h.slug, n: h.nombre, c: h.ciudad, d: h.dia, o: h.orden, h: hhmm(h.hora), se: h.sede || '', f: h.fundacion || '', w: h.web || '',
+      t: (h.titulares || []).map((t) => [t.nombre.split(',')[0].trim(), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1]),
+    };
+    // Música: por paso si hay acompañamiento publicado; si no, la lista de bandas de la ficha
+    const ac = h.acompanamiento && h.acompanamiento.pasos || [];
+    if (ac.length) { o.b = ac.map((p) => [p.paso, p.bandas.map((b) => banda(b.slug && BANDA[b.slug] ? b.slug : '', b.nombre))]); o.ba = h.acompanamiento.anio; }
+    else if ((h.bandas_slugs || []).length) o.b = [['', h.bandas_slugs.filter((s) => BANDA[s]).map((s) => banda(s))]];
+    if (h.musica) o.mu = h.musica;
+    if ((h.marchas || []).length) o.nm = h.marchas.length;
+    if ((h.salidas || []).length) o.x = h.salidas.map((s) => [s.dia, hhmm(s.hora), s.sede || '', s.titulares || '']);
+    const r = resumen(h.ciudad, h.slug); if (r) o.r = r;
+    return o;
+  });
+  fs.mkdirSync(path.join(DIST, 'data', 'cunao'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 2, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs }));
+  // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, marchas dedicadas y las seis noticias más recientes
+  for (const c of D.capitales) {
+    const hi = {}, pa = {}, m = {};
+    for (const h of hermsOf(c.slug)) {
+      if (h.historia) hi[h.slug] = h.historia; if (h.paso) pa[h.slug] = h.paso;
+      if ((h.marchas || []).length) m[h.slug] = h.marchas.map((x) => [x.titulo, x.autor || '', x.anio || '', MARCHA_SLUG.get(h.slug + '|' + x.titulo + '|' + (x.autor || '')) || '']);
+    }
+    const no = NEWS.items.filter((n) => (n.ciudades || []).includes(c.slug)).sort((a, b) => b.ts - a.ts).slice(0, 6).map((n) => [n.titulo, n.url, n.fuente || '', n.ts]);
+    fs.writeFileSync(path.join(DIST, 'data', 'cunao', c.slug + '.json'), JSON.stringify({ anio: R[c.slug] ? R[c.slug].anio : null, r: R[c.slug] ? R[c.slug].r : {}, hi, pa, m, no }));
+  }
 }
 
 fs.rmSync(DIST, { recursive: true, force: true });

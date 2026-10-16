@@ -29,31 +29,59 @@
     D.templos.forEach(function (t) { var g = el('g', { transform: 'translate(' + t.x + ' ' + t.y + ')' }); g.appendChild(el('path', { d: 'M0 -9V9M-6 -3H6' })); var ti = el('title', {}); ti.textContent = t.n; g.appendChild(ti); capas.templos.appendChild(g); });
     capas.rutas = el('g', { 'class': 'oc-c-rutas' }); capas.mundo.appendChild(capas.rutas);
     capas.cortejos = el('g', { 'class': 'oc-c-cortejos' }); capas.mundo.appendChild(capas.cortejos);
+    capas.guias = el('g', { 'class': 'oc-c-guias' }); capas.mundo.appendChild(capas.guias);
     capas.marcas = el('g', { 'class': 'oc-c-marcas' }); capas.mundo.appendChild(capas.marcas);
     capas.yo = el('g', { 'class': 'oc-c-yo' }); capas.mundo.appendChild(capas.yo);
   }
   // metros por píxel: las marcas se dibujan a tamaño de pantalla, sea cual sea el zoom
   var Z = 1;
-  function aplicarVista() { svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, mapa.clientWidth); if (D && dia) colocarMarcas(); }
+  // límites del plano: el centro de la vista no puede salir de la ciudad dibujada (no se «pierde» el plano)
+  var lim = null;
+  function calcularLimites() {
+    var a = [Infinity, Infinity, -Infinity, -Infinity];
+    [D.calles, D.principales].forEach(function (ls) { ls.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { if (l[i] < a[0]) a[0] = l[i]; if (l[i + 1] < a[1]) a[1] = l[i + 1]; if (l[i] > a[2]) a[2] = l[i]; if (l[i + 1] > a[3]) a[3] = l[i + 1]; } }); });
+    lim = a;
+  }
+  function aplicarVista() {
+    if (lim) { var cx = Math.min(Math.max(vb.x + vb.w / 2, lim[0]), lim[2]), cy = Math.min(Math.max(vb.y + vb.h / 2, lim[1]), lim[3]); vb.x = cx - vb.w / 2; vb.y = cy - vb.h / 2; }
+    svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, mapa.clientWidth);
+    svg.classList.toggle('con-nombres', Z < 2.6);
+    if (D && dia) colocarMarcas();
+  }
+  // Huecos de la pantalla tapados por los controles (derecha) y por el reloj (abajo): lo encuadrado queda a la vista
+  function margenes() { var ancho = mapa.clientWidth < 600; return { arriba: 20, abajo: ancho ? 120 : 96, izq: 20, der: 68 }; }
   function encuadrar(xs, ys, animar) {
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
-    var r = mapa.clientWidth / Math.max(1, mapa.clientHeight), w = Math.max(x1 - x0, 400) * 1.15, h = Math.max(y1 - y0, 400) * 1.15;
-    if (w / h > r) h = w / r; else w = h * r;
-    var obj = { x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w: w, h: h };
+    var m = margenes(), W = Math.max(1, mapa.clientWidth), H = Math.max(1, mapa.clientHeight), iw = Math.max(80, W - m.izq - m.der), ih = Math.max(80, H - m.arriba - m.abajo);
+    var esc = Math.max(Math.max(x1 - x0, 300) / iw, Math.max(y1 - y0, 300) / ih) * 1.06; // metros por píxel
+    var w = W * esc, h = H * esc, cx = (x0 + x1) / 2 - (m.izq - m.der) / 2 * esc, cy = (y0 + y1) / 2 - (m.arriba - m.abajo) / 2 * esc;
+    var obj = { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
     if (!animar || calm) { vb = obj; aplicarVista(); return; }
     var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now();
     (function paso(t) { var k = Math.min(1, (t - t0) / 520), e = 1 - Math.pow(1 - k, 3); for (var p in obj) vb[p] = de[p] + (obj[p] - de[p]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(paso); })(t0);
   }
 
   // ---------- gestos: arrastrar con inercia, rueda y pellizco anclados al dedo ----------
-  var punteros = {}, vel = { x: 0, y: 0 }, ultimo = null, inercia = 0;
+  var punteros = {}, vel = { x: 0, y: 0 }, ultimo = null, inercia = 0, inicio = null, movido = false, finArrastre = 0, toque = null;
   function aMundo(cx, cy) { var r = svg.getBoundingClientRect(); return { x: vb.x + (cx - r.left) / r.width * vb.w, y: vb.y + (cy - r.top) / r.height * vb.h }; }
   function zoomEn(px, py, f) { var w = Math.min(Math.max(vb.w * f, 150), 30000), k = w / vb.w; vb.x = px - (px - vb.x) * k; vb.y = py - (py - vb.y) * k; vb.w = w; vb.h = vb.h * k; aplicarVista(); }
-  svg.addEventListener('pointerdown', function (e) { cancelAnimationFrame(inercia); svg.setPointerCapture(e.pointerId); punteros[e.pointerId] = { x: e.clientX, y: e.clientY }; ultimo = { t: performance.now(), x: e.clientX, y: e.clientY }; vel = { x: 0, y: 0 }; });
+  function zoomAnimado(px, py, f) {
+    if (calm) return zoomEn(px, py, f);
+    var de = vb.w, t0 = performance.now();
+    (function p(t) { var k = Math.min(1, (t - t0) / 260), e = 1 - Math.pow(1 - k, 3), w = de * (1 + (f - 1) * e); zoomEn(px, py, w / vb.w); if (k < 1) requestAnimationFrame(p); })(t0);
+  }
+  // El plano no se captura al tocar: hasta que el dedo se mueve 6 px es un toque (y llega a la marca que haya debajo).
+  svg.addEventListener('pointerdown', function (e) {
+    cancelAnimationFrame(inercia); punteros[e.pointerId] = { x: e.clientX, y: e.clientY };
+    if (Object.keys(punteros).length === 1) { inicio = { x: e.clientX, y: e.clientY }; movido = false; }
+    else { movido = true; Object.keys(punteros).forEach(function (id) { try { svg.setPointerCapture(+id); } catch (er) { } }); }
+    ultimo = { t: performance.now(), x: e.clientX, y: e.clientY }; vel = { x: 0, y: 0 };
+  });
   svg.addEventListener('pointermove', function (e) {
     if (!punteros[e.pointerId]) return;
     var ids = Object.keys(punteros), r = svg.getBoundingClientRect(), s = vb.w / r.width;
     if (ids.length === 1) {
+      if (!movido) { if (Math.hypot(e.clientX - inicio.x, e.clientY - inicio.y) < 6) return; movido = true; try { svg.setPointerCapture(e.pointerId); } catch (er) { } svg.classList.add('is-arrastrando'); }
       var p = punteros[e.pointerId], dx = e.clientX - p.x, dy = e.clientY - p.y;
       vb.x -= dx * s; vb.y -= dy * s; aplicarVista();
       var now = performance.now(), dt = Math.max(1, now - ultimo.t); vel = { x: dx / dt, y: dy / dt }; ultimo = { t: now, x: e.clientX, y: e.clientY };
@@ -66,14 +94,25 @@
   });
   function soltar(e) {
     delete punteros[e.pointerId];
-    if (Object.keys(punteros).length || calm) return;
+    svg.classList.remove('is-arrastrando');
+    if (movido) finArrastre = performance.now();
+    else if (e.type === 'pointerup' && !e.target.closest('.oc-c-marca')) {
+      // doble toque en el plano: acercar ahí (como en Mapas)
+      var ahora = performance.now();
+      if (toque && ahora - toque.t < 320 && Math.hypot(e.clientX - toque.x, e.clientY - toque.y) < 30) { var c = aMundo(e.clientX, e.clientY); zoomAnimado(c.x, c.y, 0.5); toque = null; }
+      else toque = { t: ahora, x: e.clientX, y: e.clientY };
+    }
+    if (Object.keys(punteros).length || calm || !movido) return;
     var r = svg.getBoundingClientRect(), s = vb.w / r.width, vx = vel.x * 16, vy = vel.y * 16;
     if (Math.hypot(vx, vy) < 2) return;
     (function des() { vx *= 0.92; vy *= 0.92; vb.x -= vx * s; vb.y -= vy * s; aplicarVista(); if (Math.hypot(vx, vy) > 0.3) inercia = requestAnimationFrame(des); })();
   }
   svg.addEventListener('pointerup', soltar); svg.addEventListener('pointercancel', soltar);
   svg.addEventListener('wheel', function (e) { e.preventDefault(); var c = aMundo(e.clientX, e.clientY); zoomEn(c.x, c.y, Math.exp(e.deltaY * 0.0016)); }, { passive: false });
-  $$('[data-zoom]').forEach(function (b) { b.addEventListener('click', function () { var f = b.getAttribute('data-zoom') === '1' ? 0.66 : 1.5; var c = { x: vb.x + vb.w / 2, y: vb.y + vb.h / 2 }; if (calm) zoomEn(c.x, c.y, f); else { var de = vb.w, t0 = performance.now(); (function p(t) { var k = Math.min(1, (t - t0) / 260), e = 1 - Math.pow(1 - k, 3), w = de * (1 + (f - 1) * e); zoomEn(c.x, c.y, w / vb.w); if (k < 1) requestAnimationFrame(p); })(t0); } }); });
+  svg.addEventListener('dblclick', function (e) { e.preventDefault(); });
+  $$('[data-zoom]').forEach(function (b) { b.addEventListener('click', function () { var f = b.getAttribute('data-zoom') === '1' ? 0.6 : 1.6; zoomAnimado(vb.x + vb.w / 2, vb.y + vb.h / 2, f); }); });
+  // botón «encuadrar»: vuelve a ver todos los recorridos de la jornada
+  var bEnc = $('[data-encuadrar]'); if (bEnc) bEnc.addEventListener('click', function () { capas.yaEncuadrado = true; encuadrarDia(true); });
 
   // ---------- tiempo y posiciones ----------
   function enTramo(pts, t) {
@@ -95,27 +134,58 @@
     var xs = [], ys = [];
     delDia().forEach(function (h, i) {
       var pts = h.t.paso || h.t.cruz;
-      var d = pts.map(function (p, j) { xs.push(p[0]); ys.push(p[1]); return (j ? 'L' : 'M') + p[0] + ' ' + p[1]; }).join('');
+      // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
+      var d = '', da = '';
+      pts.forEach(function (p, j) {
+        if (!j) { d = 'M' + p[0] + ' ' + p[1]; return; }
+        var q = pts[j - 1], recta = !p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150;
+        if (recta) { da += 'M' + q[0] + ' ' + q[1] + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; } else d += 'L' + p[0] + ' ' + p[1];
+      });
       var r = el('path', { 'class': 'oc-c-ruta', d: d, 'data-s': h.s }); capas.rutas.appendChild(r);
+      if (da) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-aprox', d: da, 'data-s': h.s }));
       // marca de la hermandad: su titular (o su inicial bordada) en un medallón con galón de oro
       var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n });
       g.appendChild(el('circle', { 'class': 'oc-c-halo', r: '30' }));
       g.appendChild(el('circle', { 'class': 'oc-c-galon', r: '22' }));
       if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', { href: h.img, x: '-19', y: '-19', width: '38', height: '38', 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' })); }
       else { g.appendChild(el('circle', { 'class': 'oc-c-fondo', r: '19' })); var tx = el('text', { 'class': 'oc-c-ini', y: '7' }); tx.textContent = h.ini; g.appendChild(tx); }
+      // nombre corto bajo el medallón (se ve al acercar el plano o al elegirla)
+      var nom = el('text', { 'class': 'oc-c-nombre', y: '40' }); nom.textContent = h.n.length > 24 ? h.n.slice(0, 23).replace(/\s+\S*$/, '') + '…' : h.n; g.appendChild(nom);
       var cz = el('circle', { 'class': 'oc-c-cruz', r: '6', 'data-cruz': h.s });
       capas.marcas.appendChild(cz); capas.marcas.appendChild(g);
-      g.addEventListener('click', function () { abrir(h); }); g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(h); } });
+      g.addEventListener('click', function () { if (performance.now() - finArrastre < 250) return; abrir(h); }); g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(h); } });
     });
-    if (xs.length) encuadrar(xs, ys, !!capas.yaEncuadrado); capas.yaEncuadrado = true;
+    encuadrarDia(!!capas.yaEncuadrado); capas.yaEncuadrado = true;
+  }
+  // Encuadre de la jornada: las cofradías que están en la calle (y su recorrido); si no hay ninguna, toda la jornada
+  function encuadrarDia(animar) {
+    var xs = [], ys = [], hs = delDia();
+    var enCalle = hs.filter(function (h) { var p = enTramo(h.t.paso || h.t.cruz, T); return p && p.estado === 'calle'; });
+    (enCalle.length ? enCalle : hs).forEach(function (h) { (h.t.paso || h.t.cruz).forEach(function (p) { xs.push(p[0]); ys.push(p[1]); }); });
+    if (xs.length) encuadrar(xs, ys, animar);
   }
   // posición de las marcas (se llama al cambiar la hora y al mover o ampliar el plano)
   function colocarMarcas() {
+    // posiciones reales y, si dos medallones se pisan en pantalla, se separan (como las chinchetas de Mapas) con una guía
+    var ms = [];
     delDia().forEach(function (h) {
       var paso = enTramo(h.t.paso || h.t.cruz, T), cruz = enTramo(h.t.cruz || h.t.paso, T);
       var g = capas.marcas.querySelector('.oc-c-marca[data-s="' + h.s + '"]'), cz = capas.marcas.querySelector('[data-cruz="' + h.s + '"]');
-      if (g && paso) g.setAttribute('transform', 'translate(' + paso.x.toFixed(1) + ' ' + paso.y.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
+      if (g && paso) ms.push({ g: g, x: paso.x, y: paso.y, px: paso.x, py: paso.y, sel: g.classList.contains('is-sel') });
       if (cz && cruz) { cz.setAttribute('cx', cruz.x.toFixed(1)); cz.setAttribute('cy', cruz.y.toFixed(1)); cz.setAttribute('r', (6 * Z).toFixed(2)); }
+    });
+    var R = 46 * Z; // diámetro del medallón con su galón, en metros a este zoom
+    for (var it = 0; it < 8; it++) for (var a = 0; a < ms.length; a++) for (var b = a + 1; b < ms.length; b++) {
+      var A = ms[a], B = ms[b], dx = B.px - A.px, dy = B.py - A.py, d = Math.hypot(dx, dy);
+      if (d >= R) continue;
+      if (d < 0.01) { dx = Math.cos(a + b); dy = Math.sin(a + b); d = 1; }
+      var emp = (R - d) / 2, ux = dx / d, uy = dy / d;
+      A.px -= ux * emp; A.py -= uy * emp; B.px += ux * emp; B.py += uy * emp;
+    }
+    var guias = capas.guias; if (guias) guias.textContent = '';
+    ms.forEach(function (m) {
+      m.g.setAttribute('transform', 'translate(' + m.px.toFixed(1) + ' ' + m.py.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
+      if (guias && Math.hypot(m.px - m.x, m.py - m.y) > 4 * Z) { guias.appendChild(el('path', { 'class': 'oc-c-guia', d: 'M' + m.x.toFixed(1) + ' ' + m.y.toFixed(1) + 'L' + m.px.toFixed(1) + ' ' + m.py.toFixed(1) })); guias.appendChild(el('circle', { 'class': 'oc-c-guia-punto', cx: m.x.toFixed(1), cy: m.y.toFixed(1), r: (3.5 * Z).toFixed(2) })); }
     });
     capas.mundo && capas.mundo.querySelectorAll('.oc-c-parada').forEach(function (m) { m.setAttribute('transform', m.getAttribute('transform').replace(/scale\([^)]*\)/, 'scale(' + Z.toFixed(3) + ')')); });
   }
@@ -133,9 +203,10 @@
       // el cortejo ocupa la calle desde el paso hasta la cruz de guía
       if (est === 'calle' && h.t.paso && cruz) {
         var pts = h.t.paso, i0 = paso.i, d = 'M' + paso.x + ' ' + paso.y, best = i0, bd = Infinity;
-        for (var j = i0; j < Math.min(pts.length, i0 + 40); j++) { var dd = Math.hypot(pts[j][0] - cruz.x, pts[j][1] - cruz.y); if (dd < bd) { bd = dd; best = j; } }
+        for (var j = i0; j < Math.min(pts.length, i0 + 600); j++) { var dd = Math.hypot(pts[j][0] - cruz.x, pts[j][1] - cruz.y); if (dd < bd) { bd = dd; best = j; } }
         for (var k = i0 + 1; k <= best; k++) d += 'L' + pts[k][0] + ' ' + pts[k][1];
-        d += 'L' + cruz.x + ' ' + cruz.y;
+        // la cruz de guía solo se une si está junto al recorrido (si no, sería una recta inventada a través de la ciudad)
+        if (bd < 80) d += 'L' + cruz.x + ' ' + cruz.y;
         capas.cortejos.appendChild(el('path', { 'class': 'oc-c-cortejo', d: d }));
       }
       var pts2 = h.t.paso || h.t.cruz, sal = pts2[0][2], fin = pts2[pts2.length - 1][2];
@@ -168,8 +239,12 @@
     ficha.hidden = false; requestAnimationFrame(function () { ficha.classList.add('is-open'); });
     var p = enTramo(h.t.paso || h.t.cruz, T); if (p) { var w = Math.min(vb.w, 1800), r = vb.h / vb.w; var obj = { x: p.x - w / 2, y: p.y - w * r / 2, w: w, h: w * r }; if (calm) { vb = obj; aplicarVista(); } else { var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now(); (function s(t) { var k = Math.min(1, (t - t0) / 480), e = 1 - Math.pow(1 - k, 3); for (var q in obj) vb[q] = de[q] + (obj[q] - de[q]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(s); })(t0); } }
     $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { n.classList.toggle('is-sel', n.getAttribute('data-s') === h.s); });
+    // la elegida, por encima de las demás (marca y recorrido), y el resto atenuado
+    var gm = capas.marcas.querySelector('.oc-c-marca[data-s="' + h.s + '"]'); if (gm) capas.marcas.appendChild(gm);
+    var rr = capas.rutas.querySelector('.oc-c-ruta[data-s="' + h.s + '"]'); if (rr) capas.rutas.appendChild(rr);
+    svg.classList.add('has-sel');
   }
-  function cerrar() { sel = null; ficha.classList.remove('is-open'); setTimeout(function () { ficha.hidden = true; }, calm ? 0 : 200); $$('.is-sel').forEach(function (n) { n.classList.remove('is-sel'); }); }
+  function cerrar() { sel = null; svg.classList.remove('has-sel'); ficha.classList.remove('is-open'); setTimeout(function () { ficha.hidden = true; }, calm ? 0 : 200); $$('.is-sel').forEach(function (n) { n.classList.remove('is-sel'); }); }
   $('[data-ficha-cerrar]').addEventListener('click', cerrar);
   ficha.addEventListener('click', function (e) { if (e.target === ficha) cerrar(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !ficha.hidden) cerrar(); });
@@ -184,16 +259,17 @@
     // próximo punto alcanzable: el siguiente del recorrido (o la salida si aún no ha salido)
     var i0 = p ? (p.estado === 'antes' ? 0 : Math.min(p.i + 1, pts.length - 1)) : 0;
     var ol = document.createElement('ol'); ol.className = 'oc-calle-proximos';
-    pts.slice(i0, i0 + 5).forEach(function (q) { var li = document.createElement('li'); var hh = document.createElement('b'); hh.textContent = hhmm(q[2]); var l = document.createElement('span'); l.textContent = q[3] + (q[5] ? ' (aprox.)' : ''); li.appendChild(hh); li.appendChild(l); ol.appendChild(li); });
+    var oficiales = pts.slice(i0).filter(function (q) { return !q[6]; });
+    oficiales.slice(0, 5).forEach(function (q) { var li = document.createElement('li'); var hh = document.createElement('b'); hh.textContent = hhmm(q[2]); var l = document.createElement('span'); l.textContent = q[3] + (q[5] ? ' (aprox.)' : ''); li.appendChild(hh); li.appendChild(l); ol.appendChild(li); });
     c.appendChild(ol);
-    var dest = pts[Math.min(i0 + 1, pts.length - 1)];
+    var dest = oficiales[Math.min(1, oficiales.length - 1)] || pts[pts.length - 1];
     var acc = document.createElement('div'); acc.className = 'oc-calle-acc';
     [['Cómo llegar · Google Maps', enlaceMapa(dest[0], dest[1], false)], ['Apple Maps', enlaceMapa(dest[0], dest[1], true)]].forEach(function (x, i) { var a = document.createElement('a'); a.className = 'oc-btn' + (i ? ' is-quiet' : ''); a.href = x[1]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = x[0]; acc.appendChild(a); });
     var f = document.createElement('a'); f.className = 'oc-btn is-quiet'; f.href = (window.OC_BASE || '/') + 'hermandad/' + h.s + '/'; f.textContent = 'Ver la hermandad'; acc.appendChild(f);
     c.appendChild(acc);
     if (yo) {
       // el punto del recorrido más cercano a ti que aún no ha pasado
-      var mejor = null; for (var k = i0; k < pts.length; k++) { var d = Math.hypot(pts[k][0] - yo.x, pts[k][1] - yo.y); if (!mejor || d < mejor.d) mejor = { d: d, q: pts[k] }; }
+      var mejor = null; for (var k = i0; k < pts.length; k++) { if (pts[k][6]) continue; var d = Math.hypot(pts[k][0] - yo.x, pts[k][1] - yo.y); if (!mejor || d < mejor.d) mejor = { d: d, q: pts[k] }; }
       if (mejor) { var n = document.createElement('p'); n.className = 'oc-calle-cerca'; n.textContent = 'Cerca de ti: pasará por ' + mejor.q[3] + ' hacia las ' + hhmm(mejor.q[2]) + ' (a unos ' + (mejor.d < 1000 ? Math.round(mejor.d / 10) * 10 + ' m' : (mejor.d / 1000).toFixed(1) + ' km') + ').'; c.appendChild(n); }
     }
   }
@@ -245,7 +321,7 @@
   }
   function planificar(t0, horas, modo) {
     var ev = [], celdas = {};
-    delDia().forEach(function (h) { var pts = h.t.paso || h.t.cruz; pts.forEach(function (p) { var k = Math.round(p[0] / 120) + ':' + Math.round(p[1] / 120); var c = celdas[k] || (celdas[k] = { x: 0, y: 0, n: 0, ev: [], lugar: p[3] }); c.x += p[0]; c.y += p[1]; c.n++; c.ev.push({ t: p[2], h: h, lugar: p[3] }); }); });
+    delDia().forEach(function (h) { var pts = h.t.paso || h.t.cruz; pts.forEach(function (p) { if (p[6]) return; var k = Math.round(p[0] / 120) + ':' + Math.round(p[1] / 120); var c = celdas[k] || (celdas[k] = { x: 0, y: 0, n: 0, ev: [], lugar: p[3] }); c.x += p[0]; c.y += p[1]; c.n++; c.ev.push({ t: p[2], h: h, lugar: p[3] }); }); });
     var lista = Object.keys(celdas).map(function (k) { var c = celdas[k]; c.x /= c.n; c.y /= c.n; return c; });
     var bulla = function (c, t) { var n = 0, vistas = {}; lista.forEach(function (o) { if (Math.hypot(o.x - c.x, o.y - c.y) > 300) return; o.ev.forEach(function (e) { if (Math.abs(e.t - t) <= 45 && !vistas[e.h.s]) { vistas[e.h.s] = 1; n++; } }); }); return n + (c.ev.some(function (e) { return /carrera oficial|campana|catedral/i.test(e.lugar); }) ? 4 : 0); };
     var pos = yo && Math.hypot(yo.x, yo.y) < 15000 ? { x: yo.x, y: yo.y } : null, t = t0, fin = t0 + horas * 60, vistas = {}, paradas = [];
@@ -313,7 +389,7 @@
   });
 
   fetch(sec.getAttribute('data-calle')).then(function (r) { return r.json(); }).then(function (j) {
-    D = j; dibujarPlano();
+    D = j; calcularLimites(); dibujarPlano();
     var hoy = hoyISO(), dHoy = null; for (var k in fechas) if (fechas[k] === hoy) dHoy = k;
     var botones = $$('[data-dia]').map(function (b) { return b.getAttribute('data-dia'); });
     // ?dia=<jornada> (desde «Hoy» de la portada) manda; si no, la jornada de hoy; si no, la primera

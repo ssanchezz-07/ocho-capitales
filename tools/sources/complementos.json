@@ -685,7 +685,11 @@
    }
   },
   "huerto-malaga": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://archicofradiahuertoconcepcion.com/",
+    "fuente": "https://archicofradiahuertoconcepcion.com/",
+    "comprobada": "2026-10-16"
+   }
   },
   "prendimiento-malaga": {
    "web_oficial": {
@@ -814,7 +818,11 @@
    }
   },
   "vineros-malaga": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "http://correonistas.es/",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/vineros/",
+    "comprobada": "2026-10-16"
+   }
   },
   "santa-cruz-malaga": {
    "web_oficial": {
@@ -910,24 +918,118 @@
     }
    }
   },
-  "la-borriquilla-granada": {},
-  "santa-cena-granada": {},
-  "la-sentencia-maravillas-granada": {},
-  "el-despojado-silencio-blanco-granada": {},
+  "la-borriquilla-granada": {
+   "web_oficial": {
+    "url": "https://www.borriquilla.es/",
+    "fuente": "https://www.borriquilla.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "santa-cena-granada": {
+   "web_oficial": {
+    "url": "https://santacenagranada.es/",
+    "fuente": "https://santacenagranada.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "la-sentencia-maravillas-granada": {
+   "web_oficial": {
+    "url": "https://sentenciaymaravillas.com/",
+    "fuente": "https://sentenciaymaravillas.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "web_oficial": {
+    "url": "https://www.despojado.org/",
+    "fuente": "https://www.despojado.org/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima del Dulce Nombre y San Juan",
+     "autor": "Miguel Ángel González Jurado",
+     "anio": "1994-1998",
+     "atribucion": false,
+     "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/",
+     "revisado": "2026-10-16"
+    }
+   ]
+  },
   "el-cautivo-granada": {},
-  "el-trabajo-granada": {},
-  "nuestra-senora-de-los-dolores-granada": {},
-  "jesus-del-rescate-granada": {},
-  "el-huerto-granada": {},
+  "el-trabajo-granada": {
+   "web_oficial": {
+    "url": "https://trabajoyluz.es/",
+    "fuente": "https://trabajoyluz.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "nuestra-senora-de-los-dolores-granada": {
+   "web_oficial": {
+    "url": "https://virgendelosdolores.org/",
+    "fuente": "https://virgendelosdolores.org/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "jesus-del-rescate-granada": {
+   "web_oficial": {
+    "url": "https://rescategranada.com/",
+    "fuente": "https://rescategranada.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "el-huerto-granada": {
+   "web_oficial": {
+    "url": "https://hermandadelhuertogranada.com/",
+    "fuente": "https://hermandadelhuertogranada.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "cristo-de-san-agustin-granada": {},
-  "la-lanzada-granada": {},
+  "la-lanzada-granada": {
+   "web_oficial": {
+    "url": "https://lanzadagranada.org/",
+    "fuente": "https://lanzadagranada.org/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "el-via-crucis-granada": {},
-  "la-esperanza-granada": {},
-  "la-canilla-granada": {},
+  "la-esperanza-granada": {
+   "web_oficial": {
+    "url": "https://www.esperanzagranada.es/",
+    "fuente": "https://www.esperanzagranada.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "la-canilla-granada": {
+   "web_oficial": {
+    "url": "https://www.cofradiadelahumildad.com/",
+    "fuente": "https://www.cofradiadelahumildad.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "los-gitanos-granada": {},
-  "los-estudiantes-granada": {},
-  "paciencia-y-penas-granada": {},
-  "tres-caidas-y-rosario-granada": {},
+  "los-estudiantes-granada": {
+   "web_oficial": {
+    "url": "https://estudiantesgranada.es/",
+    "fuente": "https://estudiantesgranada.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "paciencia-y-penas-granada": {
+   "web_oficial": {
+    "url": "https://pacienciaypenas.es/",
+    "fuente": "https://pacienciaypenas.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "tres-caidas-y-rosario-granada": {
+   "web_oficial": {
+    "url": "https://rosarioytrescaidas.com/",
+    "fuente": "https://trescaidasyrosario.blogspot.com/2020/06/cese-de-actividad-de-este-blog-estreno.html",
+    "comprobada": "2026-10-16"
+   }
+  },
   "el-nazareno-granada": {},
   "los-salesianos-granada": {
    "relleno": {
@@ -936,14 +1038,70 @@
      "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
      "revisado": "2026-10-16"
     }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de la Salud",
+     "autor": "Antonio Díaz",
+     "anio": "1985-1986",
+     "atribucion": false,
+     "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
+     "revisado": "2026-10-16"
+    }
+   ]
+  },
+  "la-concha-granada": {
+   "web_oficial": {
+    "url": "https://hermandaddelaconcepcion.es/",
+    "fuente": "https://hermandaddelaconcepcion.es/",
+    "comprobada": "2026-10-16"
    }
   },
-  "la-concha-granada": {},
-  "la-aurora-granada": {},
-  "la-estrella-granada": {},
-  "el-silencio-granada": {},
-  "los-ferroviarios-granada": {},
-  "los-favores-granada": {},
+  "la-aurora-granada": {
+   "web_oficial": {
+    "url": "https://perdonyaurora.com/",
+    "fuente": "http://cofradiadelaaurora.com/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982)",
+     "autor": "Antonio Barbero Gor",
+     "anio": "1982",
+     "atribucion": false,
+     "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/",
+     "revisado": "2026-10-16"
+    }
+   ]
+  },
+  "la-estrella-granada": {
+   "web_oficial": {
+    "url": "https://pasionyestrella.com/",
+    "fuente": "https://pasionyestrella.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "el-silencio-granada": {
+   "web_oficial": {
+    "url": "https://silenciogranada.es/",
+    "fuente": "https://silenciogranada.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "los-ferroviarios-granada": {
+   "web_oficial": {
+    "url": "https://www.cofradiadelosferroviarios.org/",
+    "fuente": "https://www.cofradiadelosferroviarios.org/",
+    "comprobada": "2026-10-16"
+   }
+  },
+  "los-favores-granada": {
+   "web_oficial": {
+    "url": "https://hermandaddelosfavores.org/",
+    "fuente": "https://hermandaddelosfavores.org/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "los-escolapios-granada": {
    "relleno": {
     "sede": {
@@ -951,14 +1109,37 @@
      "fuente": "https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/",
      "revisado": "2026-10-16"
     }
+   },
+   "web_oficial": {
+    "url": "https://hermandadescolapios.com/",
+    "fuente": "https://hermandadescolapios.com/",
+    "comprobada": "2026-10-16"
    }
   },
-  "santo-entierro-granada": {},
+  "santo-entierro-granada": {
+   "web_oficial": {
+    "url": "https://santosepulcrogranada.es/",
+    "fuente": "https://santosepulcrogranada.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "las-chias-granada": {},
-  "santa-maria-de-la-alhambra-granada": {},
+  "santa-maria-de-la-alhambra-granada": {
+   "web_oficial": {
+    "url": "https://www.hermandadalhambra.es/",
+    "fuente": "https://www.hermandadalhambra.es/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "la-resurreccion-granada": {},
   "el-resucitado-granada": {},
-  "los-facundillos-granada": {},
+  "los-facundillos-granada": {
+   "web_oficial": {
+    "url": "https://www.cofradiadelahumildad.com/",
+    "fuente": "https://www.cofradiadelahumildad.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "entrada-triunfal-cordoba": {
    "web_oficial": null,
    "fuente_actual": {
@@ -1389,7 +1570,11 @@
    }
   },
   "la-sagrada-cena-huelva": {
-   "web_oficial": null
+   "web_oficial": {
+    "url": "https://hermandadsagradacenahuelva.es/",
+    "fuente": "https://hermandadsagradacenahuelva.es/",
+    "comprobada": "2026-10-16"
+   }
   },
   "la-redencion-huelva": {
    "web_oficial": null,
@@ -1411,7 +1596,11 @@
    }
   },
   "el-cautivo-huelva": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://cautivohuelva.com/",
+    "fuente": "https://www.huelvacofrade.com/hermandades/cautivo.htm",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Su origen está en una Cruz de Mayo del barrio de La Hispanidad (1971). Se fundó oficialmente el 20 de julio de 1981 como hermandad de gloria y en 1983 pasó a ser de penitencia.",
@@ -1565,7 +1754,11 @@
    }
   },
   "el-santo-entierro-huelva": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://santoentierrohuelva.org/",
+    "fuente": "https://www.huelvacofrade.com/hermandades/santoentierro.htm",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Es la cofradía más antigua de Huelva, con referencias documentales desde 1551, y ha atravesado a lo largo de los siglos etapas de esplendor y de decadencia.",
@@ -1575,7 +1768,11 @@
    }
   },
   "el-silencio-la-soledad-huelva": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "http://www.soledaddehuelva.es/",
+    "fuente": "https://www.huelvacofrade.com/hermandades/silencio.htm",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Recoge la tradición decimonónica de una Virgen sola, «la del Silencio», que cerraba el Viernes Santo onubense. La imagen fue rescatada del incendio de la iglesia de la Purísima Concepción en 1936.",
@@ -1695,7 +1892,11 @@
    }
   },
   "la-macarena-almeria": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://hermandadmacarenaalmeria.es/",
+    "fuente": "https://hermandadmacarenaalmeria.es/",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Se erigió en la parroquia de San Ildefonso con la bendición de la Esperanza Macarena el 28 de mayo de 1988 y aprobó sus primeros estatutos en 1990. La Virgen del Rosario se incorporó como tercera titular en 2016.",
@@ -1727,7 +1928,11 @@
    }
   },
   "las-angustias-almeria": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://www.hermandaddelasangustias.es/",
+    "fuente": "https://www.hermandaddelasangustias.es/",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Nació en 1911 como congregación jesuita de culto interno en torno a un crucificado. En 1941 se sumó la devoción a la Virgen de las Angustias, cuya imagen talló José Navas Parejo (1943), y en 1954 se bendijo el Cristo de la Buena Muerte de José María Hervás.",
@@ -1757,7 +1962,17 @@
      "fuente": "https://cofradiasdealmeria.es/caridad/",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de las Penas",
+     "autor": "Juan Manuel Miñarro",
+     "anio": "2006-2007",
+     "atribucion": false,
+     "fuente": "https://cofradiasdealmeria.es/caridad/",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-santo-sepulcro-almeria": {
    "web_oficial": {
@@ -1779,7 +1994,11 @@
    }
   },
   "el-resucitado-almeria": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "http://resucitadoalmeria.blogspot.com/",
+    "fuente": "http://resucitadoalmeria.blogspot.com/",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Arranca en 2005 con un grupo de jóvenes del Higueral; desde 2007 se encargó de la procesión del Domingo de Resurrección y fue erigida canónicamente el 29 de julio de 2015 en la parroquia de Nuestra Señora de Montserrat.",
@@ -1789,7 +2008,11 @@
    }
   },
   "divino-maestro-lavatorio-jaen": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
+    "fuente": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
+    "comprobada": "2026-10-16"
+   },
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216121941/https://cofradiasjaen.org/divino-maestro/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
@@ -1797,7 +2020,11 @@
    }
   },
   "la-clemencia-jaen": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://clemenciajaen.wixsite.com/clemenciajaen",
+    "fuente": "https://clemenciajaen.wixsite.com/clemenciajaen",
+    "comprobada": "2026-10-16"
+   },
    "relleno": {
     "historia": {
      "valor": "Se fundó el 17 de marzo de 1593 en el convento dominico de Santo Domingo; desapareció en 1832 y se reorganizó en 1850. En 1945 se rehízo como cofradía de penitencia, con solo cuatro cofrades, e hizo su primera estación en 1946. Su Cristo de la Clemencia es obra de Salvador de Cuéllar (1593).",
@@ -1832,7 +2059,17 @@
     "web": "http://hermandaddelamor.net",
     "nombre_oficial": "",
     "fundacion": "1508"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII",
+     "autor": "Pedro Roldán",
+     "anio": "",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-amor-sevilla": {
    "sevilla_wd": {
@@ -1853,7 +2090,25 @@
     "url": "https://jesusdespojado.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús Despojado de sus Vestiduras",
+     "autor": "Antonio Perea Sánchez",
+     "anio": "1939",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Dolores y Misericordia",
+     "autor": "Antonio Eslava Rubio",
+     "anio": "1962",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-paz-sevilla": {
    "sevilla_wd": {
@@ -1879,7 +2134,17 @@
     "url": "https://lacenadesevilla.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima del Subterráneo",
+     "autor": "Anónimo",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-hiniesta-sevilla": {
    "sevilla_wd": {
@@ -1905,7 +2170,25 @@
     "url": "https://hermandadsanroque.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de las Penas",
+     "autor": "Antonio Illanes",
+     "anio": "1939",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de Gracia y Esperanza",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1938",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-estrella-sevilla": {
    "sevilla_wd": {
@@ -1931,7 +2214,17 @@
     "url": "https://www.amargura.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Cristo del Silencio en el Desprecio de Herodes",
+     "autor": "Anónimo (discípulo de Pedro Roldán)",
+     "anio": "",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "san-pablo-sevilla": {
    "sevilla_wd": {
@@ -1944,7 +2237,25 @@
     "url": "https://jesuscautivoyrescatado.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús Cautivo y Rescatado",
+     "autor": "Luis Álvarez Duarte",
+     "anio": "1992",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Rosario",
+     "autor": "Luis Álvarez Duarte",
+     "anio": "2007",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "redencion-sevilla": {
    "sevilla_wd": {
@@ -1969,7 +2280,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de la Redención en el Beso de Judas",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1957-1959",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Rocío",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1955",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "santa-genoveva-sevilla": {
    "sevilla_wd": {
@@ -1982,7 +2311,17 @@
     "url": "https://www.santagenoveva.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de las Mercedes",
+     "autor": "José Paz Vélez",
+     "anio": "1956",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "santa-marta-sevilla": {
    "sevilla_wd": {
@@ -2008,7 +2347,17 @@
     "url": "https://www.hermandaddesangonzalo.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Salud",
+     "autor": "Luis Ortega Bru",
+     "anio": "1977",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "vera-cruz-sevilla": {
    "sevilla_wd": {
@@ -2021,7 +2370,17 @@
     "url": "https://veracruzsevilla.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de las Tristezas",
+     "autor": "Antonio Illanes",
+     "anio": "1942",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "las-penas-sevilla": {
    "sevilla_wd": {
@@ -2041,7 +2400,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de las Penas",
+     "autor": "Anónimo",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Dolores",
+     "autor": "Anónimo",
+     "anio": "s. XVIII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "las-aguas-sevilla": {
    "sevilla_wd": {
@@ -2054,7 +2431,25 @@
     "url": "https://lasaguas.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de las Aguas",
+     "autor": "Antonio Illanes",
+     "anio": "1940",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestra Señora de Guadalupe",
+     "autor": "Luis Álvarez Duarte",
+     "anio": "1965",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-museo-sevilla": {
    "sevilla_wd": {
@@ -2067,7 +2462,17 @@
     "url": "https://www.hermandaddelmuseo.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de las Aguas",
+     "autor": "Cristóbal Ramos",
+     "anio": "1772",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-cerro-sevilla": {
    "sevilla_wd": {
@@ -2080,7 +2485,25 @@
     "url": "http://www.doloresdelcerro.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de los Desamparados",
+     "autor": "Círculo de Francisco de Ocampo o José de Arce",
+     "anio": "s. XVII",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Dolores",
+     "autor": "Sebastián Santos",
+     "anio": "1955",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "los-javieres-sevilla": {
    "sevilla_wd": {
@@ -2100,7 +2523,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de las Almas",
+     "autor": "José Pires Azcárraga",
+     "anio": "1945",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestra Señora de Gracia y Amparo",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1945",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "san-esteban-sevilla": {
    "sevilla_wd": {
@@ -2115,7 +2556,30 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "web_oficial": {
+    "url": "https://www.hermandadsanesteban.org/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Cristo de la Salud y Buen Viaje",
+     "autor": "Anónimo",
+     "anio": "s. XVI-XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Desamparados",
+     "autor": "Manuel Galiano Delgado",
+     "anio": "1927",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "los-estudiantes-sevilla": {
    "sevilla_wd": {
@@ -2143,7 +2607,38 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "web_oficial": {
+    "url": "https://hermandaddesanbenito.net/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Presentación de Jesús al Pueblo",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1928",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Santísimo Cristo de la Sangre",
+     "autor": "Francisco Buiza",
+     "anio": "1966",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Encarnación",
+     "autor": "Anónimo",
+     "anio": "finales s. XVII - principios s. XVIII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-candelaria-sevilla": {
    "sevilla_wd": {
@@ -2163,7 +2658,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de la Salud",
+     "autor": "Francisco de Ocampo o Pedro Roldán",
+     "anio": "c. 1615",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Candelaria",
+     "autor": "Manuel Galiano Delgado",
+     "anio": "1924",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "dulce-nombre-la-bofeta-sevilla": {
    "sevilla_wd": {
@@ -2183,7 +2696,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús ante Anás",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1923",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Dulce Nombre",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1924",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "santa-cruz-sevilla": {
    "sevilla_wd": {
@@ -2196,7 +2727,25 @@
     "url": "http://www.hermandaddesantacruz.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de las Misericordias",
+     "autor": "Anónimo",
+     "anio": "1670-1680",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Dolores",
+     "autor": "Antonio Eslava Rubio",
+     "anio": "1967",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-carmen-doloroso-sevilla": {
    "sevilla_wd": {
@@ -2216,7 +2765,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima del Carmen en sus Dolores",
+     "autor": "Francisco Berlanga de Ávila",
+     "anio": "1984",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-sed-sevilla": {
    "sevilla_wd": {
@@ -2242,7 +2801,17 @@
     "url": "https://www.hermandaddesanbernardo.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima del Refugio",
+     "autor": "Sebastián Santos",
+     "anio": "1938",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-buen-fin-sevilla": {
    "sevilla_wd": {
@@ -2255,7 +2824,25 @@
     "url": "https://hermandadbuenfin.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo del Buen Fin",
+     "autor": "Sebastián Rodríguez",
+     "anio": "1645",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Palma",
+     "autor": "Anónimo",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-lanzada-sevilla": {
    "sevilla_wd": {
@@ -2270,7 +2857,30 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "web_oficial": {
+    "url": "https://lanzada.org/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/miercoles-santo/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Sagrada Lanzada",
+     "autor": "Antonio Illanes",
+     "anio": "1929",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de Guía",
+     "autor": "Antonio Illanes",
+     "anio": "1971",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-baratillo-sevilla": {
    "sevilla_wd": {
@@ -2283,7 +2893,33 @@
     "url": "https://hermandadelbaratillo.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de la Misericordia",
+     "autor": "Luis Ortega Bru",
+     "anio": "1951",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestra Señora de la Piedad",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1945",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Caridad en su Soledad",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1931",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "cristo-de-burgos-sevilla": {
    "sevilla_wd": {
@@ -2303,7 +2939,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Madre de Dios de la Palma",
+     "autor": "Manuel Gutiérrez-Reyes Cano",
+     "anio": "1884",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "siete-palabras-sevilla": {
    "sevilla_wd": {
@@ -2323,7 +2969,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de las Siete Palabras",
+     "autor": "Felipe Martínez",
+     "anio": "1682",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Remedios",
+     "autor": "Manuel Gutiérrez-Reyes Cano",
+     "anio": "1865",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "los-panaderos-sevilla": {
    "sevilla_wd": {
@@ -2336,7 +3000,17 @@
     "url": "https://www.hdadpanaderos.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús en su Prendimiento",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1945",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "los-negritos-sevilla": {
    "sevilla_wd": {
@@ -2349,7 +3023,17 @@
     "url": "https://www.hermandadlosnegritos.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de los Ángeles",
+     "autor": "Anónimo",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-exaltacion-los-caballos-sevilla": {
    "sevilla_wd": {
@@ -2369,7 +3053,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de las Lágrimas",
+     "autor": "Anónimo",
+     "anio": "s. XVIII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "las-cigarreras-sevilla": {
    "sevilla_wd": {
@@ -2407,7 +3101,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Oración en el Huerto",
+     "autor": "Pedro Roldán",
+     "anio": "1675",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
+     "autor": "Anónimo",
+     "anio": "finales s. XVI - principios s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-quinta-angustia-sevilla": {
    "sevilla_wd": {
@@ -2420,7 +3132,17 @@
     "url": "https://laquintaangustia.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Quinta Angustia",
+     "autor": "Vicente Rodríguez-Casso",
+     "anio": "1934",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-valle-sevilla": {
    "sevilla_wd": {
@@ -2433,7 +3155,33 @@
     "url": "https://elvalle.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Coronación de Espinas",
+     "autor": "Agustín de Perea",
+     "anio": "finales s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestro Padre Jesús con la Cruz al hombro",
+     "autor": "Anónimo",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Valle",
+     "autor": "Anónimo",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "pasion-sevilla": {
    "sevilla_wd": {
@@ -2446,7 +3194,17 @@
     "url": "https://www.hermandaddepasion.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de la Merced",
+     "autor": "Sebastián Santos",
+     "anio": "1966",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-silencio-sevilla": {
    "sevilla_wd": {
@@ -2459,7 +3217,25 @@
     "url": "https://www.hermandaddeelsilencio.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús Nazareno",
+     "autor": "Anónimo",
+     "anio": "1609",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Concepción",
+     "autor": "Sebastián Santos",
+     "anio": "1954",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-gran-poder-sevilla": {
    "sevilla_wd": {
@@ -2472,7 +3248,17 @@
     "url": "https://www.gran-poder.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima del Mayor Dolor y Traspaso",
+     "autor": "Anónimo",
+     "anio": "s. XVIII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-macarena-sevilla": {
    "sevilla_wd": {
@@ -2505,7 +3291,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Presentación",
+     "autor": "Juan de Astorga",
+     "anio": "primera mitad s. XIX",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-esperanza-de-triana-sevilla": {
    "sevilla_wd": {
@@ -2518,7 +3314,25 @@
     "url": "https://esperanzadetriana.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de las Tres Caídas",
+     "autor": "Marcos Cabrera",
+     "anio": "",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Esperanza de Triana",
+     "autor": "Anónimo",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "los-gitanos-sevilla": {
    "sevilla_wd": {
@@ -2531,7 +3345,25 @@
     "url": "https://www.hermandaddelosgitanos.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de la Salud",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1938",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de las Angustias",
+     "autor": "José Rodríguez Fernández-Andes",
+     "anio": "1937",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-carreteria-sevilla": {
    "sevilla_wd": {
@@ -2544,7 +3376,25 @@
     "url": "https://hermandaddelacarreteria.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de la Luz",
+     "autor": "Luis Antonio de los Arcos (taller de Pedro Roldán)",
+     "anio": "1677",
+     "atribucion": true,
+     "fuente": "https://hermandaddelacarreteria.org/maria-santisima-de-la-luz/",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Mayor Dolor en su Soledad",
+     "autor": "Alonso Álvarez Albarrán",
+     "anio": "1629",
+     "atribucion": true,
+     "fuente": "https://hermandaddelacarreteria.org/nuestra-senora-del-mayor-dolores-en-su-soledad/",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "san-isidoro-sevilla": {
    "sevilla_wd": {
@@ -2569,7 +3419,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de las Tres Caídas",
+     "autor": "Alonso Martínez",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de Loreto",
+     "autor": "Anónimo",
+     "anio": "s. XVIII",
+     "atribucion": false,
+     "fuente": "http://www.conocersevilla.org/hermandades/penitencia/viernessanto/sanisidoro/index.html",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-o-sevilla": {
    "sevilla_wd": {
@@ -2589,7 +3457,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la O",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "1937",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "san-buenaventura-sevilla": {
    "sevilla_wd": {
@@ -2602,7 +3480,25 @@
     "url": "https://soledadsanbuenaventura.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Crucificado titular",
+     "autor": "Manuel Cerquera",
+     "anio": "1935",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Dolorosa titular",
+     "autor": "Gabriel de Astorga",
+     "anio": "1851",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "montserrat-sevilla": {
    "sevilla_wd": {
@@ -2622,7 +3518,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestra Señora de Montserrat",
+     "autor": "Gaspar de la Cueva",
+     "anio": "s. XVII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-sagrada-mortaja-sevilla": {
    "sevilla_wd": {
@@ -2642,7 +3548,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Misterio de la Sagrada Mortaja",
+     "autor": "Cristóbal Pérez",
+     "anio": "1677",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-cachorro-sevilla": {
    "sevilla_wd": {
@@ -2668,7 +3584,25 @@
     "url": "https://realhermandadservita.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de la Providencia",
+     "autor": "José Montes de Oca",
+     "anio": "1730",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de los Dolores",
+     "autor": "José Montes de Oca",
+     "anio": "1730",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-trinidad-sevilla": {
    "sevilla_wd": {
@@ -2688,7 +3622,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Cristo de las Cinco Llagas",
+     "autor": "Luis Álvarez Duarte",
+     "anio": "2002",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Esperanza",
+     "autor": "Juan de Astorga",
+     "anio": "1820",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-santo-entierro-sevilla": {
    "sevilla_wd": {
@@ -2708,7 +3660,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Cristo Yacente en la urna",
+     "autor": "Juan de Mesa",
+     "anio": "1619",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestra Señora de Villaviciosa",
+     "autor": "Antonio Cardoso de Quirós",
+     "anio": "1691",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-soledad-de-san-lorenzo-sevilla": {
    "sevilla_wd": {
@@ -2741,7 +3711,17 @@
     "url": "https://www.hermandaddelaresurreccion.com/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
     "comprobada": "2026-10-15"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Aurora",
+     "autor": "Antonio Dubé de Luque",
+     "anio": "1978",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "bellavista-sevilla": {
    "sevilla_wd": {
@@ -2761,7 +3741,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de la Salud y Remedios",
+     "autor": "Antonio Castillo Lastrucci",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "bendicion-y-esperanza-sevilla": {
    "sevilla_wd": {
@@ -2781,7 +3771,30 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "web_oficial": {
+    "url": "https://bendicionyesperanza.es/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús de la Bendición en el Santo Encuentro.",
+     "autor": "Juan Antonio Blanco Ramos",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Virgen de la Esperanza en su Soledad",
+     "autor": "Juan Antonio Blanco Ramos",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "pasion-y-muerte-sevilla": {
    "sevilla_wd": {
@@ -2801,7 +3814,33 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santa María del Buen Aire",
+     "autor": "Anónimo (escuela barroca sevillana)",
+     "anio": "s. XVIII",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Cristo de Pasión y Muerte",
+     "autor": "José Antonio Navarro Arteaga",
+     "anio": "1996",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Nuestra Señora del Desconsuelo y Visitación",
+     "autor": "José Antonio Navarro Arteaga",
+     "anio": "2001",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "pino-montano-sevilla": {
    "sevilla_wd": {
@@ -2816,7 +3855,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de Nazaret",
+     "autor": "Fernando Castejón López",
+     "anio": "1989",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Amor",
+     "autor": "Fernando Castejón López",
+     "anio": "1998",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-mision-sevilla": {
    "sevilla_wd": {
@@ -2861,7 +3918,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de la Corona",
+     "autor": "Anónimo",
+     "anio": "último tercio s. XVI",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "padre-pio-sevilla": {
    "sevilla_wd": {
@@ -2876,7 +3943,30 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "web_oficial": {
+    "url": "http://hermandadpadrepio.com/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
+    "comprobada": "2026-10-16"
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de la Salud y Clemencia",
+     "autor": "Fernando Murciano Abad",
+     "anio": "1996",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Santísima Virgen de la Divina Gracia",
+     "autor": "Luis Álvarez Duarte",
+     "anio": "1987",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "san-jose-obrero-sevilla": {
    "sevilla_wd": {
@@ -2901,6 +3991,11 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
      "revisado": "2026-10-16"
     }
+   },
+   "web_oficial": {
+    "url": "http://hermandadsanjoseobrerosevilla.blogspot.com/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
+    "comprobada": "2026-10-16"
    }
   },
   "la-milagrosa-sevilla": {
@@ -2921,7 +4016,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús de la Esperanza",
+     "autor": "José Antonio Navarro Arteaga",
+     "anio": "2008",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Virgen del Rosario",
+     "autor": "Francisco Buiza",
+     "anio": "1963",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "dolores-de-torreblanca-sevilla": {
    "sevilla_wd": {
@@ -2941,7 +4054,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
      "revisado": "2026-10-15"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "N.P.J. Cautivo ante Pilato",
+     "autor": "Jesús Méndez Lastrucci",
+     "anio": "1991-1992",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Mª Stma. de los Dolores",
+     "autor": "José María Gamero Viñau",
+     "anio": "1987",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "divino-perdon-sevilla": {
    "sevilla_wd": {
@@ -2966,7 +4097,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús del Divino Perdón",
+     "autor": "José Antonio Navarro Arteaga",
+     "anio": "2002",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Virgen de la Purísima Concepción",
+     "autor": "José Antonio Navarro Arteaga",
+     "anio": "2002",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-sol-sevilla": {
    "sevilla_wd": {
@@ -3260,7 +4409,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo de la Clemencia",
+     "autor": "Jerónimo Gómez de Hermosilla",
+     "anio": "h. 1678-1716",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "desamparados-malaga": {
    "relleno": {
@@ -3298,7 +4457,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
+     "autor": "Mario Zambrano",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Sagrario",
+     "autor": "Mario Zambrano",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "luz-y-mar-malaga": {
    "relleno": {
@@ -3317,7 +4494,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Santísimo Cristo Luz del Mundo",
+     "autor": "Valerio Téllez Bermúdez",
+     "anio": "2016",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "medinaceli-martiricos-malaga": {
    "relleno": {
@@ -3336,7 +4523,25 @@
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús de Medinaceli",
+     "autor": "Israel Cornejo",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Candelaria",
+     "autor": "Israel Cornejo",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "dolores-de-churriana-malaga": {
    "relleno": {
@@ -3390,7 +4595,17 @@
     "url": "https://web.archive.org/web/20251216114753/https://cofradiasjaen.org/caridad-y-salud/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
     "revisado": "2026-10-16"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Jesús de la Caridad ante Caifás",
+     "autor": "Miguel Cordero Romero",
+     "anio": "2016",
+     "atribucion": false,
+     "fuente": "https://www.hermandadcaridadysaludjaen.com/historia/",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-amargura-jaen": {
    "fuente_actual": {
@@ -3411,21 +4626,51 @@
     "url": "https://web.archive.org/web/20260124044656/https://cofradiasjaen.org/humildad-y-silencio/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
     "revisado": "2026-10-16"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima Madre de Dios",
+     "autor": "Israel Cornejo",
+     "anio": "2013",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Ja%C3%A9n)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-cautivo-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124045858/https://cofradiasjaen.org/cautivo/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
     "revisado": "2026-10-16"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Nuestro Divino Redentor Jesús Cautivo",
+     "autor": "Francisco Romero Zafra",
+     "anio": "2012",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cautivo_(Ja%C3%A9n)",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "el-perdon-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
     "revisado": "2026-10-16"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Esperanza",
+     "autor": "Antonio Eslava Rubio",
+     "anio": "1952",
+     "atribucion": false,
+     "fuente": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
+     "revisado": "2026-10-16"
+    }
+   ]
   },
   "la-buena-muerte-jaen": {
    "fuente_actual": {
@@ -3550,6 +4795,11 @@
      "fuente": "https://www.hermandadesdecordoba.es/",
      "revisado": "2026-10-16"
     }
+   },
+   "web_oficial": {
+    "url": "http://www.trasladoalsepulcro.org/",
+    "fuente": "http://www.trasladoalsepulcro.org/",
+    "comprobada": "2026-10-16"
    }
   }
  },

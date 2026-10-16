@@ -1,26 +1,42 @@
 {
  "sevilla": {
-  "puntos": 2058,
-  "situados": 1960,
-  "pct": 95,
+  "puntos": 2000,
+  "situados": 1961,
+  "pct": 98,
   "calles_osm": 8815,
   "templos": 156,
   "no_situados": [
-   [
-    "P. SAN",
-    8
-   ],
    [
     "Jesús del Gran",
     6
    ],
    [
-    "Cuesta del",
+    "S. Miguel Plaza",
+    5
+   ],
+   [
+    "P. SAN",
+    5
+   ],
+   [
+    "Doña",
     4
    ],
    [
     "Doña María",
     4
+   ],
+   [
+    "Caldereros",
+    3
+   ],
+   [
+    "Almenas",
+    3
+   ],
+   [
+    "Ntra. Sra. Dolores",
+    3
    ],
    [
     "Pl. Platanero",
@@ -35,31 +51,7 @@
     3
    ],
    [
-    "Doña",
-    3
-   ],
-   [
-    "Avda.",
-    3
-   ],
-   [
-    "Avda. Ciudad de",
-    3
-   ],
-   [
-    "Entrada",
-    3
-   ],
-   [
-    "Alameda de",
-    3
-   ],
-   [
-    "Pl. Cristo de",
-    3
-   ],
-   [
-    "Palos de la",
+    "de Chiva",
     3
    ],
    [
@@ -87,7 +79,7 @@
     2
    ],
    [
-    "S a l id a 1 7: 4 5",
+    "Parroquia Santa Genoveva",
     2
    ],
    [
@@ -95,48 +87,68 @@
     2
    ],
    [
-    "Torrebermeja",
+    "Pl. Retiro",
     2
    ],
    [
-    "Torres Naharro",
+    "Doctora",
     2
    ],
    [
-    "Torrenueva",
+    "Párroco A. Gómez Villalobos",
+    2
+   ],
+   [
+    "Párroco A. Gómez Villa.",
+    2
+   ],
+   [
+    "Pueblade Cazalla",
     2
    ]
   ]
  },
  "malaga": {
-  "puntos": 636,
-  "situados": 624,
-  "pct": 98,
+  "puntos": 925,
+  "situados": 913,
+  "pct": 99,
   "calles_osm": 6371,
   "templos": 86,
   "no_situados": [
    [
-    "Tribuna",
-    40
+    "Torre Sur",
+    43
    ],
    [
     "Alameda",
-    40
+    37
    ],
    [
-    "Torre Sur",
-    38
+    "Tribuna",
+    36
    ],
    [
     "Tribuna Pobres",
     14
    ],
    [
-    "Pza. Carbón",
+    "Casa Hermandad",
+    11
+   ],
+   [
+    "Plaza del Carbón",
     3
    ],
    [
-    "Atarazanas Tribuna",
+    "Tribuna de los Pobres",
+    3
+   ],
+   [
+    "Pza. Carbón",
+    2
+   ],
+   [
+    "Carreterías",
     2
    ],
    [
@@ -144,27 +156,11 @@
     1
    ],
    [
-    "San",
+    "Plaza de la Religiosa Filipense Dolores Márquez",
     1
    ],
    [
-    "Miguel",
-    1
-   ],
-   [
-    "Pte. Esperanza Cruz del",
-    1
-   ],
-   [
-    "Pza. Constitución Torre",
-    1
-   ],
-   [
-    "Nueva Pza.",
-    1
-   ],
-   [
-    "Pte. Esperanza Dos",
+    "Pasillo de Atocha",
     1
    ],
    [
@@ -176,50 +172,26 @@
     1
    ],
    [
-    "Alameda Salida",
+    "Miguel Bueno Lara",
     1
    ],
    [
-    "Pza. Arriola Pte.",
+    "Parroquia del Apóstol San Pedro",
     1
    ],
    [
-    "Pº Santa",
+    "Especerías",
     1
    ],
    [
-    "Mesón de Vélez Torre Sur",
-    1
-   ],
-   [
-    "Ancha del Carmen Pza.",
-    1
-   ],
-   [
-    "10:30",
-    1
-   ],
-   [
-    "11:00",
-    1
-   ],
-   [
-    "D DEE R ERSEUSRURRERCECCIÓCNIÓN",
-    1
-   ],
-   [
-    "11:30",
-    1
-   ],
-   [
-    "12:00",
+    "Torre sur",
     1
    ]
   ]
  },
  "granada": {
-  "puntos": 360,
-  "situados": 328,
+  "puntos": 358,
+  "situados": 327,
   "pct": 91,
   "calles_osm": 5904,
   "templos": 67,
@@ -281,10 +253,6 @@
     1
    ],
    [
-    "CARRERA DE LA",
-    1
-   ],
-   [
     "Paseo P. Manjón",
     1
    ],
@@ -323,50 +291,50 @@
    [
     "San José Alta",
     1
+   ],
+   [
+    "Carrera del",
+    1
    ]
   ]
  },
  "cordoba": {
-  "puntos": 2526,
-  "situados": 2489,
-  "pct": 99,
+  "puntos": 3279,
+  "situados": 3278,
+  "pct": 100,
   "calles_osm": 4264,
   "templos": 75,
   "no_situados": [
    [
-    "INTERIOR S.I.C.",
-    56
+    "PUERTA DEL PERDÓN",
+    75
    ],
    [
-    "PUERTA DEL PERDÓN",
-    54
+    "INTERIOR S.I.C.",
+    74
    ],
    [
     "PUERTA DE LAS COFRADÍAS",
-    53
-   ],
-   [
-    "FIN DEL CORTEJO",
-    21
+    72
    ],
    [
     "CTRA. PALMA DEL RIO",
     21
    ],
    [
-    "SAN",
-    18
-   ],
-   [
     "CAMPO SANTOS MÁRTIRES",
-    10
+    13
    ],
    [
-    "RONDA DE",
-    10
+    "CABO CARMONA CHAMIZO",
+    12
    ],
    [
-    "PLAZA DE SAN",
+    "SANTA TERESA DE JORNET",
+    9
+   ],
+   [
+    "PLAZA DE COSTASOL",
     7
    ],
    [
@@ -374,19 +342,15 @@
     6
    ],
    [
-    "SANTA TERESA DE JORNET",
+    "HAZA DEL DEMONIO",
     6
    ],
    [
+    "CALAHORRA",
+    5
+   ],
+   [
     "CAMPO SANTOS MARTIRES",
-    5
-   ],
-   [
-    "PUERTA DEL",
-    5
-   ],
-   [
-    "PLAZA DE",
     5
    ],
    [
@@ -394,15 +358,23 @@
     5
    ],
    [
-    "DOCTOR",
+    "CTRA PALMA DEL RIO",
     5
    ],
    [
-    "DOÑA BERRENGUELA",
+    "C/ESCRITOR HOYOS DE NORIEGA",
     4
    ],
    [
-    "PUERTA DE LAS",
+    "FUENTEVENTURA",
+    4
+   ],
+   [
+    "PZA. STMO CRISTO DE LAS PENAS",
+    4
+   ],
+   [
+    "DOÑA BERRENGUELA",
     4
    ],
    [
@@ -410,33 +382,33 @@
     4
    ],
    [
-    "DON",
-    4
-   ],
-   [
-    "PASEO DE LA",
-    4
-   ],
-   [
-    "INTERIOR",
-    4
-   ],
-   [
-    "PATIO",
-    4
-   ],
-   [
-    "MAGISTRAL",
-    4
-   ],
-   [
     "ARCO DE CABALLERIZAS",
+    4
+   ],
+   [
+    "BARÍTONO J.Mª. AGUILAR BLANCO",
+    4
+   ],
+   [
+    "AVDA. NTRA. SEÑORA BEGOÑA",
+    4
+   ],
+   [
+    "INGENIERO BENITO ARANDA",
+    4
+   ],
+   [
+    "PUERTA LAS COFRADÍAS",
+    4
+   ],
+   [
+    "DOCTOR MARAÑÓN",
     4
    ]
   ]
  },
  "cadiz": {
-  "puntos": 869,
+  "puntos": 868,
   "situados": 859,
   "pct": 99,
   "calles_osm": 1363,
@@ -459,10 +431,6 @@
     2
    ],
    [
-    "Plaza de Pío XII",
-    1
-   ],
-   [
     "Avda. Andalucía a su Templo",
     1
    ],
@@ -483,11 +451,11 @@
     1
    ],
    [
-    "",
+    "(Estación de Penitencia en la S.I.C.)",
     1
    ],
    [
-    "(EstaITINERARIOS 3 ción de Penitencia en la S.I.C.)",
+    "Plaza de Pío XII",
     1
    ],
    [
@@ -511,10 +479,6 @@
     1
    ],
    [
-    "Arquitec34 to Acero",
-    1
-   ],
-   [
     "su Templo",
     1
    ],
@@ -535,19 +499,27 @@
     1
    ],
    [
-    "a su Templo. ITINERARIOS 35",
+    "Regimiento de Infantería",
     1
    ],
    [
-    "Regimiento de Infantería",
+    "Plaza de las Flores",
+    1
+   ],
+   [
+    "Plaza Las Flores",
+    1
+   ],
+   [
+    "San José Rosa",
     1
    ]
   ]
  },
  "huelva": {
-  "puntos": 341,
-  "situados": 327,
-  "pct": 96,
+  "puntos": 326,
+  "situados": 317,
+  "pct": 97,
   "calles_osm": 2051,
   "templos": 18,
   "no_situados": [
@@ -560,19 +532,11 @@
     5
    ],
    [
-    "Plaza Monjas Plaza Monjas",
-    4
-   ],
-   [
-    "Plaza Con-",
+    "Plaza Con",
     4
    ],
    [
     "Cristo Redención",
-    2
-   ],
-   [
-    "Av. Manuel Av. Manuel Siurot Siurot",
     2
    ],
    [
@@ -600,7 +564,7 @@
     1
    ],
    [
-    "Gran Vía Plaza Monjas Plaza Monjas",
+    "Gran Vía Plaza Monjas",
     1
    ],
    [
@@ -612,7 +576,7 @@
     1
    ],
    [
-    "Templo Plaza San Paseo Circun-",
+    "Templo Plaza San Paseo Circun",
     1
    ],
    [
@@ -632,7 +596,7 @@
     1
    ],
    [
-    "Manuel Siurot Manuel Siurot Av. Adoratrices",
+    "Manuel Siurot Av. Adoratrices",
     1
    ],
    [
@@ -650,20 +614,24 @@
    [
     "La Fuente Constitución",
     1
+   ],
+   [
+    "San Andrés Palos/Palmera",
+    1
+   ],
+   [
+    "Av. Manuel Pl. Ivonne Siurot",
+    1
    ]
   ]
  },
  "almeria": {
-  "puntos": 216,
-  "situados": 199,
-  "pct": 92,
+  "puntos": 205,
+  "situados": 192,
+  "pct": 94,
   "calles_osm": 3585,
   "templos": 40,
   "no_situados": [
-   [
-    "Puerta de",
-    4
-   ],
    [
     "Rambla",
     4
@@ -673,16 +641,8 @@
     3
    ],
    [
-    "Alta de la",
-    2
-   ],
-   [
-    "-",
-    2
-   ],
-   [
     "Paseo",
-    2
+    3
    ],
    [
     "Lucano",
@@ -717,23 +677,11 @@
     1
    ],
    [
-    "Ntra. Sra. del",
-    1
-   ],
-   [
-    "Plaza San",
-    1
-   ],
-   [
-    "Fernando",
+    "Plaza San Fernando",
     1
    ],
    [
     "San Ildefonso",
-    1
-   ],
-   [
-    "Avda. de los",
     1
    ],
    [
@@ -749,23 +697,47 @@
     1
    ],
    [
-    "Las",
-    1
-   ],
-   [
-    "Paseo (21:15 h)",
+    "Puerta de",
     1
    ],
    [
     "Santo Domingo",
     1
+   ],
+   [
+    "Las Puras",
+    1
+   ],
+   [
+    "Puerta Perdones",
+    1
+   ],
+   [
+    "Plaza Jesús Cautivo",
+    1
+   ],
+   [
+    "Entra",
+    1
+   ],
+   [
+    "Se recoge",
+    1
+   ],
+   [
+    "Cable Santa Inglés Teresa",
+    1
+   ],
+   [
+    "Plaza Circular",
+    1
    ]
   ]
  },
  "jaen": {
-  "puntos": 513,
-  "situados": 499,
-  "pct": 97,
+  "puntos": 498,
+  "situados": 494,
+  "pct": 99,
   "calles_osm": 1945,
   "templos": 35,
   "no_situados": [
@@ -774,11 +746,15 @@
     5
    ],
    [
+    "Cuatro Torres / Constitución",
+    3
+   ],
+   [
     "(Camarín)",
     3
    ],
    [
-    "Cuatro Torres / Constitución",
+    "Pza. San Ildefonso",
     2
    ],
    [
@@ -798,7 +774,7 @@
     2
    ],
    [
-    "Soriano Soriano",
+    "San Ildefonso",
     2
    ],
    [
@@ -826,47 +802,43 @@
     2
    ],
    [
-    "Pza. San Ildefonso",
-    1
-   ],
-   [
     "Pza. Corazón María",
     1
    ],
    [
-    "10:50",
+    "Honorato Morente Megías",
     1
    ],
    [
-    "11:00",
+    "Fco. Coello (Llana)",
     1
    ],
    [
-    "11:15",
+    "Reja la Capilla",
     1
    ],
    [
-    "Cuesta Virgen 11:40",
+    "Jesús de la Piedad",
     1
    ],
    [
-    "Av. Madrid 11:50",
+    "HDAD.",
     1
    ],
    [
-    "Roldán y Marín 12:10",
+    "(Igl. S. Eufrasio)",
     1
    ],
    [
-    "12:30",
+    "(Col.",
     1
    ],
    [
-    "Bernabé Soriano 12:40",
+    "Jesús y María",
     1
    ],
    [
-    "Pza. S. Francisco 13:00",
+    "Virgen Capilla Pta. del Ángel",
     1
    ]
   ]

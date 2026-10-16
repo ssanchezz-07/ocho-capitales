@@ -37,6 +37,11 @@ function horasCadiz(J, c) {
   return { ...c, puntos: pts };
 }
 
+const JORNADAS = ['Viernes de Dolores', 'Sábado de Pasión', 'Domingo de Ramos', 'Lunes Santo', 'Martes Santo', 'Miércoles Santo', 'Jueves Santo', 'Viernes Santo', 'Sábado Santo', 'Domingo de Resurrección'];
+const ORDEN = (d) => { const i = JORNADAS.indexOf(d); return i >= 0 ? i : /Madrug/.test(d) ? 6.5 : /Jueves/.test(d) ? 6 : 99; };
+// palabras de los nombres populares de cada ciudad (para penalizar cabeceras que nombran a otra hermandad)
+const OTRAS = new Map();
+for (const h of D.hermandades) { const s = OTRAS.get(h.ciudad) || new Set(); for (const t of toks(h.nombre)) s.add(t); OTRAS.set(h.ciudad, s); }
 function puntuar(h, cab) {
   const a = toks(cab.replace(/CRUZ DE GU[IÍ]+A|FINAL DEL CORTEJO|MISTERIO|PALIO|PASO/gi, ' ')), b = new Set([...toks(h.sede)]);
   const tit = new Set((h.titulares || []).flatMap((t) => [...toks(t.nombre.split(',')[0])]));
@@ -44,6 +49,9 @@ function puntuar(h, cab) {
   const n = new Set([...toks(h.nombre), ...toks(h.slug.replace(/-/g, ' ').replace(new RegExp(' ' + h.ciudad + '$'), ''))]);
   // nombre o alias: 3 · advocación de un titular (la guía rotula «PAZ», «PRIMER DOLOR»…): 2 · sede: 1
   let s = 0; for (const t of a) { if (n.has(t)) s += 3; else if (tit.has(t)) s += 2; else if (b.has(t)) s += 1; }
+  // una palabra distintiva que solo encaja en el nombre de OTRA hermandad («DOLORES (Alcolea)» no es «Los Dolores»)
+  const otra = OTRAS.get(h.ciudad);
+  for (const t of a) if (!n.has(t) && !tit.has(t) && !b.has(t) && otra && otra.has(t)) s -= 2;
   // nombre completo contenido en la cabecera, como palabras enteras («MISERICORDIA» no contiene a «Rico»)
   if ((' ' + norm(cab) + ' ').includes(' ' + norm(h.nombre).replace(/^(la|el|los|las) /, '') + ' ')) s += 4;
   return s;
@@ -113,10 +121,14 @@ function horasEnLista(pts0, horas) {
 const SUELTAS = /^(de|del|la|las|los|el|y|e|san|santa|sta\.?|s\.|pl\.?|pza\.?|p\.|c\.|c\/|calle|plaza|avda\.?|av\.?|avd|cruz|gu[ií]a|-|·)$/i;
 const ROTULOS = /^(cruz de gu[ií]a|fin(al)? del?( cortejo)?|fin(al)? de cortejo|gu[ií]a|cortejo)$/i;
 const CONECTOR = /\s(de|del|de la|de los|de las|y|san|santa)$/i;
-const HORA_RE = /\(?\b([01]?\d|2[0-4])[:.]([0-5]\d)\b\s*(?:h\b|horas\b)?\)?|\((\d{1,2}),(\d{2})\)/g;
+const HORA_RE = /\(?(?<!\d)([01]?\d|2[0-4])[:.]([0-5]\d)(?!\d)\s*(?:h\b|horas\b)?\)?|\((\d{1,2}),(\d{2})\)/g;
 function limpiarLugar(ciudad, l0) {
   let l = String(l0 || '');
   l = l.replace(/\s*ITINERARIOS\s*\d*\s*/g, '').replace(/([a-záéíóúñ])\d{1,3}\s+([a-záéíóúñ])/g, '$1$2').replace(/^\d{1,3}\s+(?=[A-ZÁÉÍÓÚÑ])/, '');
+  // texto espaciado letra a letra con la hora dentro («. S a l id a o 1 7: 2 0»): se junta antes de buscar horas
+  const tk0 = l.trim().split(/\s+/);
+  if (tk0.filter((t) => /^\p{L}$/u.test(t)).length >= 3 && tk0.filter((t) => t.length <= 2).length / tk0.length >= 0.6 && /\d/.test(l))
+    l = tk0.join('').replace(/^[.·]+/, '').replace(/^(Salida|Entrada)o(?=\d)/i, '$1 ').replace(/(\d)(?=\d{1,2}:)/, '$1');
   const horas = new Set();
   l = l.replace(HORA_RE, (m, a, b, c, d) => { horas.add(a != null ? `${a}:${b}` : `${c}:${d}`); return ' '; });
   l = l.replace(/\(\s*\)/g, ' ').replace(/\(\s*(Venia)\s*\)/gi, '($1)').replace(/\s+/g, ' ').trim().replace(/^[-–/·,.\s]+|[-–/·,\s]+$/g, '').trim();
@@ -128,6 +140,9 @@ function limpiarLugar(ciudad, l0) {
   if (tk.filter((t) => t.length === 1 && !/^[yeaoYEAO]$/.test(t)).length >= 2 && tk.some((t) => t.length >= 12 && t === t.toUpperCase())) return null;
   // frases repetidas por celdas combinadas («Campana Campana», «P. PALOS P. PALOS»)
   for (let i = 0; i < 3; i++) l = l.replace(/(^|\s)(\S+(?:\s\S+){0,3})\s\2(?=\s|$)/g, '$1$2');
+  // paréntesis sueltos («Salida )»)
+  if (!l.includes('(')) l = l.replace(/\s*\)\s*/g, ' ').trim();
+  if (!l.includes(')')) l = l.replace(/\s*\(\s*$/g, '').trim();
   // cola minúscula pegada a un nombre en mayúsculas («JUDERÍA hy»)
   l = l.replace(/^([^a-záéíóúñ]+)\s[a-záéíóúñ]{1,2}$/, '$1');
   if (!/[A-Za-zÁÉÍÓÚÑáéíóúñ]{2}/.test(l)) return { lugar: '', horas };
@@ -145,7 +160,7 @@ function limpiar(ciudad, pts) {
     if (!p.hora && r.horas.size === 1) { p.hora = [...r.horas][0]; horasRescatadas++; }
     // nombre partido en dos renglones: «Alameda de» + «Hércules»
     const prev = out[out.length - 1];
-    if (prev && CONECTOR.test(' ' + prev.lugar) && /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) && !/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
+    if (prev && prev.fila && prev.fila === p.fila && CONECTOR.test(' ' + prev.lugar) && /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) && !/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
       prev.lugar += ' ' + p.lugar; if (!prev.hora && p.hora) prev.hora = p.hora; continue;
     }
     out.push(p);
@@ -165,7 +180,12 @@ for (const [ciudad, f, fuente] of FUENTES) {
     if (!cands.length) cands = hs;
     let best = cands.map((h) => [h, puntuar(h, c.cabecera)]).sort((x, y) => y[1] - x[1]);
     // si la jornada leída no cuadra (página mal etiquetada), se busca en toda la ciudad
-    if (!best.length || best[0][1] < 3) best = hs.map((h) => [h, puntuar(h, c.cabecera)]).sort((x, y) => y[1] - x[1]);
+    // (exigiendo más: una sola palabra suelta, p. ej. «TRIANA», no basta para saltar de jornada)
+    if (!best.length || best[0][1] < 3) {
+      best = hs.map((h) => [h, puntuar(h, c.cabecera)]).sort((x, y) => y[1] - x[1]);
+      // (las rejillas mal rotuladas se desplazan como mucho una jornada)
+      if (best.length && best[0][1] < 5 && dia && Math.abs(ORDEN(best[0][0].dia) - ORDEN(dia)) > 1) best[0][1] = Math.min(best[0][1], 1);
+    }
     if (!best.length || best[0][1] < 2 || (best[1] && best[1][1] >= best[0][1] - 0.5)) { out.sin_emparejar.push({ ciudad, dia: c.dia, cabecera: c.cabecera, sub: c.sub, opciones: best.slice(0, 3).map(([h, s]) => h.slug + ':' + s) }); continue; }
     const h = best[0][0];
     const e = (out.hermandades[h.slug] = out.hermandades[h.slug] || { ciudad, dia: h.dia, fuente, pdf: J.fuente, tramos: {} });
@@ -173,8 +193,43 @@ for (const [ciudad, f, fuente] of FUENTES) {
     if (!e.tramos[sub] || e.tramos[sub].length < c.puntos.length) e.tramos[sub] = c.puntos;
   }
 }
+// Málaga: horas oficiales de la Agrupación sobre la rejilla, o el itinerario completo de la ficha si no hay rejilla
+const FH = path.join(DIR, 'malaga-horarios-2026.json');
+const est = { fichas: 0, emparejadas: 0, horasPuestas: 0, nuevas: 0 };
+if (fs.existsSync(FH)) {
+  const J = JSON.parse(fs.readFileSync(FH, 'utf8'));
+  const { res, sueltas } = emparejarFichas(J.fichas, D.hermandades.filter((h) => h.ciudad === 'malaga'));
+  est.fichas = J.fichas.length; est.emparejadas = res.length;
+  for (const [f, h] of res) {
+    let e = out.hermandades[h.slug];
+    if (e) for (const k of Object.keys(e.tramos)) {
+      // la rejilla arrastra a veces filas de la jornada siguiente tras el encierro: se cortan
+      const t = e.tramos[k], u = t.map((p) => /^Encierro$/i.test(p.lugar)).lastIndexOf(true);
+      if (u >= 0 && u < t.length - 1) e.tramos[k] = t.slice(0, u + 1);
+      // columna mezclada con la vecina (rótulos de control pegados a calles: «Atarazanas Tribuna», «Alameda Salida»):
+      // se descarta y se usa el itinerario oficial completo de la ficha
+      if (e.tramos[k].some((p) => !/^(Salida|Tribuna|Torre Sur|Catedral|Encierro)$/i.test(p.lugar) && !/Tribuna (de los )?Pobres/i.test(p.lugar) && /\b(Salida|Tribuna|Torre|Encierro)\b/i.test(p.lugar))) { delete e.tramos[k]; est.mezcladas = (est.mezcladas || 0) + 1; }
+    }
+    if (e && Object.keys(e.tramos).length) {
+      for (const t of Object.values(e.tramos)) est.horasPuestas += horasEnRejilla(t, f.horas);
+      e.horas_fuente = `Horarios oficiales de la Agrupación de Cofradías de Málaga 2026 (${J.fuente})`;
+    } else {
+      if (e) est.nuevas--; // ya existía (rejilla descartada): no cuenta como hermandad nueva
+      e = out.hermandades[h.slug] = { ciudad: 'malaga', dia: h.dia, fuente: 'Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026', pdf: J.fuente, tramos: { paso: horasEnLista(f.puntos, f.horas) } };
+      est.nuevas++;
+    }
+    e.horas_oficiales = f.horas;
+  }
+  for (const f of sueltas) out.sin_emparejar.push({ ciudad: 'malaga', dia: f.dia, cabecera: f.cabecera.slice(0, 120), sub: 'horarios', opciones: [] });
+}
+// limpieza final de etiquetas en todas las ciudades
+const lim = { quitados: 0, horasRescatadas: 0 };
+for (const e of Object.values(out.hermandades)) for (const k of Object.keys(e.tramos)) {
+  const r = limpiar(e.ciudad, e.tramos[k]); e.tramos[k] = r.pts; lim.quitados += r.quitados; lim.horasRescatadas += r.horasRescatadas;
+}
 const OUT = path.join(DIR, '..', 'sources', 'itinerarios-2026.json');
 fs.writeFileSync(OUT, JSON.stringify(out, null, 1));
 const por = {}; for (const e of Object.values(out.hermandades)) por[e.ciudad] = (por[e.ciudad] || 0) + 1;
+console.log('Málaga horarios:', JSON.stringify(est), '· limpieza:', JSON.stringify(lim));
 console.log('Con itinerario:', Object.keys(out.hermandades).length, JSON.stringify(por), '· sin emparejar:', out.sin_emparejar.length);
 for (const s of out.sin_emparejar) console.log('  ?', s.ciudad, s.dia, '|', s.cabecera, s.sub || '', '→', s.opciones.join(' '));

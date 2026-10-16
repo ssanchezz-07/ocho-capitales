@@ -1,14 +1,14 @@
 {
- "generado": "2026-10-16T16:47:02.835Z",
+ "generado": "2026-10-16T17:08:05.511Z",
  "totales": {
   "capitales": 8,
   "hermandades": 306,
   "titulares": 624,
   "bandas": 246,
-  "imagineros": 149,
+  "imagineros": 175,
   "marchas": 806,
   "catalogo_marchas": 471,
-  "itinerarios": 8278,
+  "itinerarios": 8459,
   "noticias": 1661,
   "agenda": 513,
   "imagenes": 497
@@ -17,53 +17,21 @@
   "historia": [],
   "fundacion": [],
   "web": [
-   "san-esteban-sevilla",
-   "san-benito-sevilla",
-   "la-lanzada-sevilla",
    "bellavista-sevilla",
-   "bendicion-y-esperanza-sevilla",
-   "padre-pio-sevilla",
-   "san-jose-obrero-sevilla",
    "divino-perdon-sevilla",
    "lagrimas-y-favores-malaga",
-   "huerto-malaga",
    "fusionadas-malaga",
-   "vineros-malaga",
    "vera-cruz-malaga",
    "resucitado-malaga",
-   "la-borriquilla-granada",
-   "santa-cena-granada",
-   "la-sentencia-maravillas-granada",
-   "el-despojado-silencio-blanco-granada",
    "el-cautivo-granada",
-   "el-trabajo-granada",
-   "nuestra-senora-de-los-dolores-granada",
-   "jesus-del-rescate-granada",
-   "el-huerto-granada",
    "cristo-de-san-agustin-granada",
-   "la-lanzada-granada",
    "el-via-crucis-granada",
-   "la-esperanza-granada",
-   "la-canilla-granada",
    "los-gitanos-granada",
-   "los-estudiantes-granada",
-   "paciencia-y-penas-granada",
-   "tres-caidas-y-rosario-granada",
    "el-nazareno-granada",
    "los-salesianos-granada",
-   "la-concha-granada",
-   "la-aurora-granada",
-   "la-estrella-granada",
-   "el-silencio-granada",
-   "los-ferroviarios-granada",
-   "los-favores-granada",
-   "los-escolapios-granada",
-   "santo-entierro-granada",
    "las-chias-granada",
-   "santa-maria-de-la-alhambra-granada",
    "la-resurreccion-granada",
    "el-resucitado-granada",
-   "los-facundillos-granada",
    "entrada-triunfal-cordoba",
    "penas-de-santiago-cordoba",
    "la-agonia-cordoba",
@@ -81,16 +49,12 @@
    "siete-palabras-cadiz",
    "ecce-mater-tua-cadiz",
    "la-resurreccion-cadiz",
-   "la-sagrada-cena-huelva",
    "la-redencion-huelva",
    "los-mutilados-huelva",
-   "el-cautivo-huelva",
    "la-salud-huelva",
    "la-lanzada-huelva",
    "los-estudiantes-huelva",
    "el-prendimiento-huelva",
-   "el-santo-entierro-huelva",
-   "el-silencio-la-soledad-huelva",
    "nuestra-senora-del-prado-huelva",
    "la-borriquita-almeria",
    "los-angeles-almeria",
@@ -100,14 +64,9 @@
    "la-coronacion-almeria",
    "el-amor-almeria",
    "el-calvario-cristo-del-mar-almeria",
-   "la-macarena-almeria",
    "rosario-del-mar-almeria",
-   "las-angustias-almeria",
    "cristo-de-la-escucha-almeria",
    "la-caridad-almeria",
-   "el-resucitado-almeria",
-   "divino-maestro-lavatorio-jaen",
-   "la-clemencia-jaen",
    "el-gran-poder-jaen",
    "mutilado-clemencia-malaga",
    "desamparados-malaga",
@@ -119,7 +78,6 @@
    "dolores-de-churriana-malaga",
    "la-o-cordoba",
    "la-sangre-de-el-higueron-cordoba",
-   "traslado-al-sepulcro-pro-hermandad-cordoba",
    "la-bendicion-huelva",
    "la-unidad-almeria"
   ],
@@ -265,65 +223,42 @@
    "la-unidad-almeria"
   ],
   "hora_salida": [
-   "jesus-despojado-sevilla",
-   "la-cena-sevilla",
    "san-roque-sevilla",
    "la-estrella-sevilla",
    "la-amargura-sevilla",
    "san-pablo-sevilla",
    "santa-genoveva-sevilla",
-   "santa-marta-sevilla",
    "san-gonzalo-sevilla",
    "las-penas-sevilla",
-   "las-aguas-sevilla",
-   "los-javieres-sevilla",
    "los-estudiantes-sevilla",
    "san-benito-sevilla",
    "la-candelaria-sevilla",
-   "dulce-nombre-la-bofeta-sevilla",
    "el-carmen-doloroso-sevilla",
    "la-sed-sevilla",
    "el-buen-fin-sevilla",
-   "el-baratillo-sevilla",
    "siete-palabras-sevilla",
    "los-negritos-sevilla",
    "las-cigarreras-sevilla",
    "el-valle-sevilla",
    "los-gitanos-sevilla",
    "la-o-sevilla",
-   "san-buenaventura-sevilla",
    "la-sagrada-mortaja-sevilla",
    "la-resurreccion-sevilla",
    "bellavista-sevilla",
    "bendicion-y-esperanza-sevilla",
    "pasion-y-muerte-sevilla",
-   "pino-montano-sevilla",
    "la-mision-sevilla",
    "cristo-de-la-corona-sevilla",
-   "padre-pio-sevilla",
-   "san-jose-obrero-sevilla",
    "la-milagrosa-sevilla",
    "dolores-de-torreblanca-sevilla",
    "divino-perdon-sevilla",
-   "lagrimas-y-favores-malaga",
-   "salutacion-malaga",
+   "huerto-malaga",
    "prendimiento-malaga",
    "gitanos-malaga",
-   "dolores-del-puente-malaga",
-   "cautivo-malaga",
-   "estudiantes-malaga",
-   "rocio-malaga",
-   "mediadora-malaga",
-   "sangre-malaga",
    "expiracion-malaga",
-   "sagrada-cena-malaga",
-   "vera-cruz-malaga",
-   "zamarrilla-malaga",
+   "misericordia-malaga",
    "esperanza-malaga",
-   "monte-calvario-malaga",
-   "descendimiento-malaga",
-   "traslado-malaga",
-   "piedad-malaga",
+   "santo-sepulcro-malaga",
    "servitas-malaga",
    "resucitado-malaga",
    "el-cautivo-granada",
@@ -343,7 +278,6 @@
    "santa-maria-de-la-alhambra-granada",
    "la-resurreccion-granada",
    "los-facundillos-granada",
-   "dolores-de-alcolea-cordoba",
    "merced-obediencia-cadiz",
    "la-borriquita-cadiz",
    "el-despojado-cadiz",
@@ -420,7 +354,6 @@
    "divino-maestro-lavatorio-jaen",
    "la-clemencia-jaen",
    "el-silencio-jaen",
-   "el-perdon-jaen",
    "la-lanzada-jaen",
    "nuestro-padre-jesus-el-abuelo-jaen",
    "el-santo-sepulcro-jaen",
@@ -472,7 +405,6 @@
   "cristo-de-san-agustin-granada",
   "desamparados-malaga",
   "divino-maestro-lavatorio-jaen",
-  "dolores-de-alcolea-cordoba",
   "dolores-de-churriana-malaga",
   "dolores-del-puerto-de-la-torre-malaga",
   "el-calvario-huelva",
@@ -486,9 +418,6 @@
   "el-resucitado-almeria",
   "el-resucitado-huelva",
   "el-silencio-descendimiento-almeria",
-  "esperanza-malaga",
-  "expiracion-malaga",
-  "gitanos-malaga",
   "la-bendicion-huelva",
   "la-borriquita-huelva",
   "la-fe-huelva",
@@ -511,399 +440,44 @@
   "medinaceli-martiricos-malaga",
   "mutilado-clemencia-malaga",
   "nuestra-senora-del-prado-huelva",
-  "prendimiento-malaga",
-  "resucitado-malaga",
   "santa-genoveva-sevilla",
   "santa-maria-de-la-alhambra-granada",
   "santo-entierro-granada",
-  "servitas-malaga",
   "traslado-al-sepulcro-pro-hermandad-cordoba",
   "verdad-y-sagrario-malaga"
  ],
  "titulares_sin_autor": [
   {
-   "hermandad": "la-borriquita-sevilla",
-   "nombre": "Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII"
-  },
-  {
-   "hermandad": "jesus-despojado-sevilla",
-   "nombre": "Jesús Despojado de sus Vestiduras"
-  },
-  {
-   "hermandad": "jesus-despojado-sevilla",
-   "nombre": "María Santísima de los Dolores y Misericordia"
-  },
-  {
    "hermandad": "la-cena-sevilla",
    "nombre": "Señor de la Humillación"
-  },
-  {
-   "hermandad": "la-cena-sevilla",
-   "nombre": "María Santísima del Subterráneo"
-  },
-  {
-   "hermandad": "san-roque-sevilla",
-   "nombre": "Nuestro Padre Jesús de las Penas"
-  },
-  {
-   "hermandad": "san-roque-sevilla",
-   "nombre": "María Santísima de Gracia y Esperanza"
-  },
-  {
-   "hermandad": "la-amargura-sevilla",
-   "nombre": "Cristo del Silencio en el Desprecio de Herodes"
-  },
-  {
-   "hermandad": "san-pablo-sevilla",
-   "nombre": "Jesús Cautivo y Rescatado"
-  },
-  {
-   "hermandad": "san-pablo-sevilla",
-   "nombre": "María Santísima del Rosario"
-  },
-  {
-   "hermandad": "redencion-sevilla",
-   "nombre": "Santísimo Cristo de la Redención en el Beso de Judas"
-  },
-  {
-   "hermandad": "redencion-sevilla",
-   "nombre": "María Santísima del Rocío"
-  },
-  {
-   "hermandad": "santa-genoveva-sevilla",
-   "nombre": "María Santísima de las Mercedes"
-  },
-  {
-   "hermandad": "san-gonzalo-sevilla",
-   "nombre": "María Santísima de la Salud"
-  },
-  {
-   "hermandad": "vera-cruz-sevilla",
-   "nombre": "María Santísima de las Tristezas"
-  },
-  {
-   "hermandad": "las-penas-sevilla",
-   "nombre": "Nuestro Padre Jesús de las Penas"
-  },
-  {
-   "hermandad": "las-penas-sevilla",
-   "nombre": "María Santísima de los Dolores"
-  },
-  {
-   "hermandad": "las-aguas-sevilla",
-   "nombre": "Santísimo Cristo de las Aguas"
-  },
-  {
-   "hermandad": "las-aguas-sevilla",
-   "nombre": "Nuestra Señora de Guadalupe"
-  },
-  {
-   "hermandad": "el-museo-sevilla",
-   "nombre": "Nuestra Señora de las Aguas"
-  },
-  {
-   "hermandad": "el-cerro-sevilla",
-   "nombre": "Santísimo Cristo de los Desamparados"
-  },
-  {
-   "hermandad": "el-cerro-sevilla",
-   "nombre": "María Santísima de los Dolores"
-  },
-  {
-   "hermandad": "los-javieres-sevilla",
-   "nombre": "Santísimo Cristo de las Almas"
-  },
-  {
-   "hermandad": "los-javieres-sevilla",
-   "nombre": "Nuestra Señora de Gracia y Amparo"
-  },
-  {
-   "hermandad": "san-esteban-sevilla",
-   "nombre": "Cristo de la Salud y Buen Viaje"
-  },
-  {
-   "hermandad": "san-esteban-sevilla",
-   "nombre": "María Santísima de los Desamparados"
-  },
-  {
-   "hermandad": "san-benito-sevilla",
-   "nombre": "Presentación de Jesús al Pueblo"
-  },
-  {
-   "hermandad": "san-benito-sevilla",
-   "nombre": "Santísimo Cristo de la Sangre"
-  },
-  {
-   "hermandad": "san-benito-sevilla",
-   "nombre": "María Santísima de la Encarnación"
-  },
-  {
-   "hermandad": "la-candelaria-sevilla",
-   "nombre": "Nuestro Padre Jesús de la Salud"
-  },
-  {
-   "hermandad": "la-candelaria-sevilla",
-   "nombre": "María Santísima de la Candelaria"
-  },
-  {
-   "hermandad": "dulce-nombre-la-bofeta-sevilla",
-   "nombre": "Nuestro Padre Jesús ante Anás"
-  },
-  {
-   "hermandad": "dulce-nombre-la-bofeta-sevilla",
-   "nombre": "María Santísima del Dulce Nombre"
-  },
-  {
-   "hermandad": "santa-cruz-sevilla",
-   "nombre": "Santísimo Cristo de las Misericordias"
-  },
-  {
-   "hermandad": "santa-cruz-sevilla",
-   "nombre": "María Santísima de los Dolores"
   },
   {
    "hermandad": "el-carmen-doloroso-sevilla",
    "nombre": "Nazareno"
   },
   {
-   "hermandad": "el-carmen-doloroso-sevilla",
-   "nombre": "María Santísima del Carmen en sus Dolores"
-  },
-  {
-   "hermandad": "san-bernardo-sevilla",
-   "nombre": "María Santísima del Refugio"
-  },
-  {
-   "hermandad": "el-buen-fin-sevilla",
-   "nombre": "Santísimo Cristo del Buen Fin"
-  },
-  {
-   "hermandad": "el-buen-fin-sevilla",
-   "nombre": "María Santísima de la Palma"
-  },
-  {
-   "hermandad": "la-lanzada-sevilla",
-   "nombre": "Sagrada Lanzada"
-  },
-  {
-   "hermandad": "la-lanzada-sevilla",
-   "nombre": "María Santísima de Guía"
-  },
-  {
-   "hermandad": "el-baratillo-sevilla",
-   "nombre": "Santísimo Cristo de la Misericordia"
-  },
-  {
-   "hermandad": "el-baratillo-sevilla",
-   "nombre": "Nuestra Señora de la Piedad"
-  },
-  {
-   "hermandad": "el-baratillo-sevilla",
-   "nombre": "María Santísima de la Caridad en su Soledad"
-  },
-  {
-   "hermandad": "cristo-de-burgos-sevilla",
-   "nombre": "Madre de Dios de la Palma"
-  },
-  {
-   "hermandad": "siete-palabras-sevilla",
-   "nombre": "Santísimo Cristo de las Siete Palabras"
-  },
-  {
    "hermandad": "siete-palabras-sevilla",
    "nombre": "María Santísima de la Cabeza"
-  },
-  {
-   "hermandad": "siete-palabras-sevilla",
-   "nombre": "María Santísima de los Remedios"
-  },
-  {
-   "hermandad": "los-panaderos-sevilla",
-   "nombre": "Nuestro Padre Jesús en su Prendimiento"
   },
   {
    "hermandad": "los-panaderos-sevilla",
    "nombre": "María Santísima de Regla"
   },
   {
-   "hermandad": "los-negritos-sevilla",
-   "nombre": "Nuestra Señora de los Ángeles"
-  },
-  {
-   "hermandad": "la-exaltacion-los-caballos-sevilla",
-   "nombre": "María Santísima de las Lágrimas"
-  },
-  {
    "hermandad": "las-cigarreras-sevilla",
    "nombre": "María Santísima de la Victoria"
-  },
-  {
-   "hermandad": "montesion-sevilla",
-   "nombre": "Oración en el Huerto"
-  },
-  {
-   "hermandad": "montesion-sevilla",
-   "nombre": "María Santísima del Rosario en sus Misterios Dolorosos"
-  },
-  {
-   "hermandad": "la-quinta-angustia-sevilla",
-   "nombre": "María Santísima de la Quinta Angustia"
-  },
-  {
-   "hermandad": "el-valle-sevilla",
-   "nombre": "Coronación de Espinas"
-  },
-  {
-   "hermandad": "el-valle-sevilla",
-   "nombre": "Nuestro Padre Jesús con la Cruz al hombro"
-  },
-  {
-   "hermandad": "el-valle-sevilla",
-   "nombre": "María Santísima del Valle"
-  },
-  {
-   "hermandad": "pasion-sevilla",
-   "nombre": "Nuestra Señora de la Merced"
-  },
-  {
-   "hermandad": "el-silencio-sevilla",
-   "nombre": "Nuestro Padre Jesús Nazareno"
-  },
-  {
-   "hermandad": "el-silencio-sevilla",
-   "nombre": "María Santísima de la Concepción"
-  },
-  {
-   "hermandad": "el-gran-poder-sevilla",
-   "nombre": "María Santísima del Mayor Dolor y Traspaso"
-  },
-  {
-   "hermandad": "el-calvario-sevilla",
-   "nombre": "María Santísima de la Presentación"
-  },
-  {
-   "hermandad": "la-esperanza-de-triana-sevilla",
-   "nombre": "Nuestro Padre Jesús de las Tres Caídas"
-  },
-  {
-   "hermandad": "la-esperanza-de-triana-sevilla",
-   "nombre": "María Santísima de la Esperanza de Triana"
-  },
-  {
-   "hermandad": "los-gitanos-sevilla",
-   "nombre": "Nuestro Padre Jesús de la Salud"
-  },
-  {
-   "hermandad": "los-gitanos-sevilla",
-   "nombre": "María Santísima de las Angustias"
   },
   {
    "hermandad": "la-carreteria-sevilla",
    "nombre": "Santísimo Cristo de la Salud"
   },
   {
-   "hermandad": "la-carreteria-sevilla",
-   "nombre": "Nuestra Señora de la Luz"
-  },
-  {
-   "hermandad": "la-carreteria-sevilla",
-   "nombre": "María Santísima del Mayor Dolor en su Soledad"
-  },
-  {
-   "hermandad": "san-isidoro-sevilla",
-   "nombre": "Nuestro Padre Jesús de las Tres Caídas"
-  },
-  {
-   "hermandad": "san-isidoro-sevilla",
-   "nombre": "María Santísima de Loreto"
-  },
-  {
-   "hermandad": "la-o-sevilla",
-   "nombre": "María Santísima de la O"
-  },
-  {
-   "hermandad": "san-buenaventura-sevilla",
-   "nombre": "Crucificado titular"
-  },
-  {
-   "hermandad": "san-buenaventura-sevilla",
-   "nombre": "Dolorosa titular"
-  },
-  {
-   "hermandad": "montserrat-sevilla",
-   "nombre": "Nuestra Señora de Montserrat"
-  },
-  {
-   "hermandad": "la-sagrada-mortaja-sevilla",
-   "nombre": "Misterio de la Sagrada Mortaja"
-  },
-  {
-   "hermandad": "los-servitas-sevilla",
-   "nombre": "Santísimo Cristo de la Providencia"
-  },
-  {
-   "hermandad": "los-servitas-sevilla",
-   "nombre": "María Santísima de los Dolores"
-  },
-  {
    "hermandad": "la-trinidad-sevilla",
    "nombre": "Sagrada Decisión"
   },
   {
-   "hermandad": "la-trinidad-sevilla",
-   "nombre": "Cristo de las Cinco Llagas"
-  },
-  {
-   "hermandad": "la-trinidad-sevilla",
-   "nombre": "María Santísima de la Esperanza"
-  },
-  {
-   "hermandad": "el-santo-entierro-sevilla",
-   "nombre": "Cristo Yacente en la urna"
-  },
-  {
-   "hermandad": "el-santo-entierro-sevilla",
-   "nombre": "Nuestra Señora de Villaviciosa"
-  },
-  {
-   "hermandad": "la-resurreccion-sevilla",
-   "nombre": "María Santísima de la Aurora"
-  },
-  {
-   "hermandad": "bellavista-sevilla",
-   "nombre": "Nuestro Padre Jesús de la Salud y Remedios"
-  },
-  {
-   "hermandad": "bendicion-y-esperanza-sevilla",
-   "nombre": "Jesús de la Bendición en el Santo Encuentro."
-  },
-  {
-   "hermandad": "bendicion-y-esperanza-sevilla",
-   "nombre": "Virgen de la Esperanza en su Soledad"
-  },
-  {
-   "hermandad": "pasion-y-muerte-sevilla",
-   "nombre": "Santa María del Buen Aire"
-  },
-  {
-   "hermandad": "pasion-y-muerte-sevilla",
-   "nombre": "Cristo de Pasión y Muerte"
-  },
-  {
    "hermandad": "pasion-y-muerte-sevilla",
    "nombre": "Resurrección de Nuestro Señor"
-  },
-  {
-   "hermandad": "pasion-y-muerte-sevilla",
-   "nombre": "Nuestra Señora del Desconsuelo y Visitación"
-  },
-  {
-   "hermandad": "pino-montano-sevilla",
-   "nombre": "Nuestro Padre Jesús de Nazaret"
-  },
-  {
-   "hermandad": "pino-montano-sevilla",
-   "nombre": "María Santísima del Amor"
   },
   {
    "hermandad": "pino-montano-sevilla",
@@ -930,20 +504,8 @@
    "nombre": "Ntra. Sra. del Amparo"
   },
   {
-   "hermandad": "cristo-de-la-corona-sevilla",
-   "nombre": "Santísimo Cristo de la Corona"
-  },
-  {
    "hermandad": "padre-pio-sevilla",
    "nombre": "Santísimo Sacramento"
-  },
-  {
-   "hermandad": "padre-pio-sevilla",
-   "nombre": "Nuestro Padre Jesús de la Salud y Clemencia"
-  },
-  {
-   "hermandad": "padre-pio-sevilla",
-   "nombre": "Santísima Virgen de la Divina Gracia"
   },
   {
    "hermandad": "padre-pio-sevilla",
@@ -955,14 +517,6 @@
   },
   {
    "hermandad": "la-milagrosa-sevilla",
-   "nombre": "Jesús de la Esperanza"
-  },
-  {
-   "hermandad": "la-milagrosa-sevilla",
-   "nombre": "Virgen del Rosario"
-  },
-  {
-   "hermandad": "la-milagrosa-sevilla",
    "nombre": "San Juan Evangelista"
   },
   {
@@ -971,23 +525,7 @@
   },
   {
    "hermandad": "dolores-de-torreblanca-sevilla",
-   "nombre": "N.P.J. Cautivo ante Pilato"
-  },
-  {
-   "hermandad": "dolores-de-torreblanca-sevilla",
-   "nombre": "Mª Stma. de los Dolores"
-  },
-  {
-   "hermandad": "dolores-de-torreblanca-sevilla",
    "nombre": "San Antonio de Padua"
-  },
-  {
-   "hermandad": "divino-perdon-sevilla",
-   "nombre": "Jesús del Divino Perdón"
-  },
-  {
-   "hermandad": "divino-perdon-sevilla",
-   "nombre": "Virgen de la Purísima Concepción"
   },
   {
    "hermandad": "divino-perdon-sevilla",
@@ -998,40 +536,8 @@
    "nombre": "María Santísima de la Salud"
   },
   {
-   "hermandad": "el-despojado-silencio-blanco-granada",
-   "nombre": "María Santísima del Dulce Nombre y San Juan"
-  },
-  {
-   "hermandad": "los-salesianos-granada",
-   "nombre": "Nuestra Señora de la Salud"
-  },
-  {
-   "hermandad": "la-aurora-granada",
-   "nombre": "Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982)"
-  },
-  {
-   "hermandad": "la-caridad-almeria",
-   "nombre": "María Santísima de las Penas"
-  },
-  {
-   "hermandad": "caridad-y-salud-jaen",
-   "nombre": "Jesús de la Caridad ante Caifás"
-  },
-  {
    "hermandad": "divino-maestro-lavatorio-jaen",
    "nombre": "María Santísima del Amor"
-  },
-  {
-   "hermandad": "el-silencio-jaen",
-   "nombre": "María Santísima Madre de Dios"
-  },
-  {
-   "hermandad": "el-cautivo-jaen",
-   "nombre": "Nuestro Divino Redentor Jesús Cautivo"
-  },
-  {
-   "hermandad": "el-perdon-jaen",
-   "nombre": "María Santísima de la Esperanza"
   },
   {
    "hermandad": "mutilado-clemencia-malaga",
@@ -1091,88 +597,114 @@
   }
  ],
  "imagineros_sin_bio": [
+  "sebastian-santos",
   "antonio-bernal",
   "miguel-angel-gonzalez-jurado",
   "domingo-sanchez-mesa",
+  "jose-rodriguez-fernandez-andes",
   "miguel-lainez-capote",
-  "luis-gonzalez-rey",
-  "sebastian-santos",
   "antonio-barbero-gor",
+  "luis-gonzalez-rey",
   "jose-manuel-bonilla",
   "jose-martinez-puertas",
   "antonio-asensio-de-la-cerda",
+  "antonio-diaz",
   "joaquin-gomez-del-castillo",
   "jose-de-medina",
   "jose-maria-hervas",
   "manuel-carmona-martinez",
   "pedro-moreira",
   "alfredo-munoz-arcos",
+  "antonio-cardoso-de-quiros",
   "antonio-castillo-ariza",
   "antonio-del-castillo",
-  "antonio-diaz",
   "benito-hita-del-castillo",
   "david-valenciano",
   "domenico-giscardi",
   "eduardo-espinosa-alfambra",
   "enrique-perez-saavedra",
+  "fernando-castejon-lopez",
   "francisco-de-villegas",
   "jose-antonio-cabello",
   "jose-maria-leal",
   "jose-miguel-tirao",
   "jose-rivera",
+  "juan-antonio-blanco-ramos",
   "juan-manuel-garcia-palomo",
   "luis-alberto-garcia-jeute",
+  "manuel-galiano-delgado",
   "manuel-gonzalez-de-los-santos",
+  "manuel-gutierrez-reyes-cano",
   "manuel-ramos-corona",
+  "marcos-cabrera",
   "peter-sterling",
   "ruben-fernandez-parra",
   "salvador-madronal",
+  "agustin-de-perea",
   "alfonso-berraquero",
   "alfonso-castellano",
+  "alonso-alvarez-albarran",
+  "alonso-martinez",
   "andres-cabello-requena",
-  "antonio-cardoso-de-quiros",
   "antonio-jose-martinez",
+  "antonio-perea-sanchez",
   "antonio-rubio",
   "antonio-salto-roman",
+  "circulo-de-francisco-de-ocampo-o-jose-de-arce",
+  "cristobal-perez",
+  "cristobal-ramos",
   "edwin-gonzalez-solis",
   "emilio-luis-bartus",
   "emilio-navas-parejo",
   "enrique-galarza",
+  "felipe-martinez",
   "fernando-diaz-de-pacheco",
+  "fernando-murciano-abad",
   "francesco-maria-mayo",
+  "francisco-berlanga-de-avila",
+  "francisco-de-ocampo-o-pedro-roldan",
   "francisco-javier-navarro-moragas",
   "francisco-morales",
   "francisco-pascual-reyes",
   "fray-juan-de-la-concepcion",
   "gabriel-cuadrado",
+  "gabriel-de-astorga",
+  "gaspar-de-la-cueva",
   "grupo-valenciano-de",
   "infantes-reina",
   "jacobo-florentino-el-indaco",
   "jacome-vacaro",
+  "jesus-mendez-lastrucci",
   "jose-callejon",
   "jose-jimenez-de-mesa",
+  "jose-maria-gamero-vinau",
   "jose-mendez-gonzalez",
   "jose-merino-roman",
   "jose-ortiz",
+  "jose-pires-azcarraga",
   "juan-prieto",
   "juan-ventura",
   "l-circulo-de-martinez-montanes",
+  "luis-antonio-de-los-arcos",
   "luis-carlos-montesinos",
   "luis-jimenez",
   "luis-ortega-leon",
+  "manuel-cerquera",
   "manuel-dominguez-rodriguez",
   "manuel-fernandez-guerrero",
   "manuel-martin-nieto",
-  "marcos-cabrera",
   "mario-ignacio-moya",
   "martin-de-la-torre",
   "miguel-angel-valverde",
+  "miguel-cordero-romero",
   "modesto",
   "pedro-garcia-velasco",
   "rafael-rubio-vernia",
   "salvador-de-cuellar",
+  "sebastian-rodriguez",
   "suso-de-marcos",
-  "ventura-gomez-rodriguez"
+  "ventura-gomez-rodriguez",
+  "vicente-rodriguez-casso"
  ],
  "catalogo_marchas_sin": {
   "autor": 71,
@@ -1231,6 +763,10 @@
   {
    "web": "http://www.veracruzjaen.es",
    "hs": "el-huerto-vera-cruz-jaen la-vera-cruz-los-civiles-jaen"
+  },
+  {
+   "web": "https://www.cofradiadelahumildad.com/",
+   "hs": "la-canilla-granada los-facundillos-granada"
   }
  ]
 }
