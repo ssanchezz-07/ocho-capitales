@@ -119,7 +119,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'], ['colg', 'colgaduras.css'], ['calle', 'calle.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -411,7 +411,6 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
-<link rel="stylesheet" href="${u('assets/colgaduras.css')}?v=${HUELLA.colg}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
@@ -1068,7 +1067,7 @@ function pageOffline() {
 }
 function escribeSw() {
   const lista = (d) => fs.existsSync(path.join(DIST, d)) ? fs.readdirSync(path.join(DIST, d)).map((x) => BASE + d + '/' + x) : [];
-  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/colgaduras.css?v=' + HUELLA.colg, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
+  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
   fs.writeFileSync(path.join(DIST, 'sw.js'), `// Ocho Capitales: caché para usar el portal sin cobertura (en la calle, entre bullas). Generado por build.mjs.
 const V = 'oc-${Date.now()}', BASE = ${JSON.stringify(BASE)}, SHELL = ${JSON.stringify(shell)};
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
