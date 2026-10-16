@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T19:11:12.821Z",
+ "generado": "2026-10-16T18:31:51.105Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3635,6 +3635,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:El_Cristo_de_la_Esperanza_en_su_Gran_Amor_(Salud)_por_el_pasillo_de_Santa_Isabel_(4470948129).jpg",
     "titular": "Santísimo Cristo de la Esperanza en su Gran Amor"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 640,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Salud_-_Maria_Santisima_de_la_Salud.jpg",
+    "titular": "María Santísima de la Salud"
    }
   },
   "humildad-y-paciencia-malaga": {
@@ -3783,6 +3798,20 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Estrella_en_su_salida_procesional_del_martes_santo.jpg",
     "titular": "María Santísima de la Estrella"
+   },
+   "cristo": {
+    "w": 480,
+    "h": 320,
+    "widths": [
+     160,
+     480
+    ],
+    "escudo": false,
+    "autor": "Oscarmaldonadosuarez",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Humillaci%C3%B3n_y_Perd%C3%B3n,_lateral_izquierdo_del_trono.jpg",
+    "titular": "Nuestro Padre Jesús de la Humillación y Perdón"
    }
   },
   "rescate-malaga": {
@@ -3799,6 +3828,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:VirgenDeGraciaMalaga.JPG",
     "titular": "María Santísima de Gracia"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Tyk",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Rescate_Chapel3.jpg",
+    "titular": "Nuestro Padre Jesús del Rescate"
    }
   },
   "sentencia-malaga": {
@@ -3961,6 +4005,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_Coronada.jpg",
     "titular": "María Santísima de los Dolores Coronada"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Antonio España",
+    "licencia": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Expiracion_Holy_Week_Malaga_2012.jpg",
+    "titular": "Santísimo Cristo de la Expiración"
    }
   },
   "zamarrilla-malaga": {
@@ -4127,6 +4186,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(12).JPG",
     "titular": "Santísimo Cristo de la Lanzada"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 720,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Claudio Landi",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(12).JPG",
+    "titular": "María Santísima de la Caridad"
    }
   },
   "la-canilla-granada": {
@@ -4144,6 +4218,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada-Iglesia_de_Santo_Domingo-3-Cristo_de_la_Humildad_(An%C3%B3nimo).JPG",
     "titular": "Señor de la Humildad"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "José Luis Filpo Cabana",
+    "licencia": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
+    "titular": "Soledad de Nuestra Señora"
    }
   },
   "los-estudiantes-granada": {
@@ -4943,6 +5032,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestra_Se%C3%B1ora_Reina_de_los_M%C3%A1rtires._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.jpg",
     "titular": "Nuestra Señora Reina de los Mártires"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Lancastermerrin88",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Sant%C3%ADsimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.JPG",
+    "titular": "Santísimo Cristo de la Buena Muerte"
    }
   },
   "la-soledad-cordoba": {
@@ -5191,6 +5295,21 @@
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:2008_21_Descendimiento_(3).JPG",
     "titular": "Cristo del Descendimiento"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores,_C%C3%A1diz.jpg",
+    "titular": "Nuestra Señora de los Dolores"
    }
   },
   "la-buena-muerte-cadiz": {
@@ -5402,6 +5521,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Huelva_durante_su_triduo.jpg",
     "titular": "María Santísima de los Dolores"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1278,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "José Luis Filpo Cabana",
+    "licencia": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Cadenas,_Huelva.jpg",
+    "titular": "Nuestro Padre Jesús de las Cadenas"
    }
   },
   "el-silencio-la-soledad-huelva": {
@@ -6331,6 +6465,21 @@
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_Gracia_y_Esperanza_en_la_Iglesia_de_San_Roque_2026.jpg",
     "titular": "María Santísima de Gracia y Esperanza"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_las_Penas_de_Sevilla.jpg",
+    "titular": "Nuestro Padre Jesús de las Penas"
    }
   },
   "la-estrella-sevilla": {
@@ -7034,6 +7183,21 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Pasi%C3%B3n._Granada.jpg",
+    "titular": "Nuestro Padre Jesús de la Pasión"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Claudio Landi",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cofrad%C3%ADa_de_Nazarenos_de_Nuestro_Padre_Jes%C3%BAs_de_la_Pasi%C3%B3n_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG",
     "titular": "Nuestro Padre Jesús de la Pasión"
    }
   },
