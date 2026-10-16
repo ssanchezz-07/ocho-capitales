@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-15",
+ "generado": "2026-10-16",
  "fuentes": {
   "InfoCofrade": 377,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 63,
-  "Prensa (texto de noticias)": 29
+  "Prensa (agendas semanales)": 60,
+  "Prensa (texto de noticias)": 27
  },
  "eventos": [
   {
@@ -4670,36 +4670,6 @@
    "nota": "Sala de conferencias del Convento de San José"
   },
   {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario de San Agustín",
-   "nota": "Iglesia de San Agustín"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario de la Expiración",
-   "nota": "Real Iglesia de San Pablo"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-6-octubre-cordoba/202610052351253498275.amp.html",
-   "fecha": "2026-10-06",
-   "hora": "20:00",
-   "tipo": "acto",
-   "titulo": "Jornada de puertas abiertas de la Merced",
-   "nota": ""
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4748,16 +4718,6 @@
    "nota": "",
    "fuente": "101TV",
    "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "Paz y Esperanza Coronada",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/cordoba/paz-esperanza-coronada_0_2007854046.html"
   },
   {
    "fecha": "2027-02-06",
@@ -4890,16 +4850,6 @@
    "url": "https://www.andaluciainformacion.es/articulo/chiclana/chiclana-tiene-nombres-propios-semana-santa-glorias-2027-pregoneros-carteles-gran-distincion/202610141230263505896.html"
   },
   {
-   "fecha": "2026-10-15",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Y es que, hasta el año pasado, el rosario de las Glorias se celebraba en la mañana del tercer domingo de octubre, saliendo a primera hora desde la parroquia de los Santos",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
-  },
-  {
    "fecha": "2027-07-16",
    "hora": "",
    "ciudad": "malaga",
@@ -4990,6 +4940,26 @@
    "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
   },
   {
+   "fecha": "2026-10-15",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "Paz y Esperanza Coronada",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/cordoba/paz-esperanza-coronada_0_2007854046.html"
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Y es que, hasta el año pasado, el rosario de las Glorias se celebraba en la mañana del tercer domingo de octubre, saliendo a primera hora desde la parroquia de los Santos",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
    "fecha": "2026-10-14",
    "hora": "",
    "ciudad": "malaga",
@@ -5008,66 +4978,6 @@
    "nota": "",
    "fuente": "ArteSacro",
    "url": "https://www.artesacro.org/Noticia/Ver/169493/alejandro-martin-caballero-designado-cartelista-glorias-sevilla-2027"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "magna",
-   "titulo": "Inicialmente, como informó SUR, se barajó la celebración de una procesión magna para la jornada del 12 de octubre del año que viene.",
-   "nota": "",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Este lunes, día 12 de octubre, festividad de Nuestra Señora del Pilar, la hermandad del Amor celebrará a partir de las 08:00 el tradicional rosario de la aurora con la im",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horarios-recorridos-cuatro-rosarios-fin-semana-octubre-cordoba_0_2008188912.html"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Carmen del Santo Ángel estrenará una nueva corona de plata sobredorada con motivo del aniversario de su Coronación Canónica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-virgen-del-carmen-del-santo-angel-estrenara-una-nueva-corona-de-plata-sobredorada-con-motivo-del-aniversario-de-su-coronacion-canonica/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "procesion",
-   "titulo": "Madre de Dios del Rosario cambiará el horario de su salida procesional a la mañana",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/feijoo-recurre-a-la-marcha-procesional-la-esperanza-de-maria-de-alejandro-blanco-para-su-campana-electoral/"
-  },
-  {
-   "fecha": "2026-10-12",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Sevilla se prepara para un fin de semana de procesiones que se prolongará hasta el festivo del 12 de octubre",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/el-concurso-internacional-de-marchas-procesionales-de-malaga-cambiara-de-denominacion-por-prohibicion-expresa-de-los-herederos-de-perfecto-artola/"
   }
  ],
  "conflictos": [
