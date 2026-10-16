@@ -3828,21 +3828,6 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:VirgenDeGraciaMalaga.JPG",
     "titular": "María Santísima de Gracia"
-   },
-   "cristo": {
-    "w": 960,
-    "h": 1280,
-    "widths": [
-     160,
-     480,
-     960
-    ],
-    "escudo": false,
-    "autor": "Tyk",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Rescate_Chapel3.jpg",
-    "titular": "Nuestro Padre Jesús del Rescate"
    }
   },
   "sentencia-malaga": {
@@ -4186,21 +4171,6 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(12).JPG",
     "titular": "Santísimo Cristo de la Lanzada"
-   },
-   "virgen": {
-    "w": 960,
-    "h": 720,
-    "widths": [
-     160,
-     480,
-     960
-    ],
-    "escudo": false,
-    "autor": "Claudio Landi",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(12).JPG",
-    "titular": "María Santísima de la Caridad"
    }
   },
   "la-canilla-granada": {

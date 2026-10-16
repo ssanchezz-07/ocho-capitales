@@ -449,9 +449,17 @@
     var labels = { hermandad: 'Hermandad', banda: 'Banda', imaginero: 'Imaginero', capital: 'Capital' };
     favList.innerHTML = keys.map(function (k) {
       var f = favs[k], type = k.split(':')[0];
-      return '<li class="oc-entry is-text"><div class="oc-entry-body"><h3 class="oc-entry-title"><a href="' + esc(f.u) + '">' + esc(f.n) + '</a></h3><p class="oc-entry-meta">' + esc(labels[type] || type) + '</p></div></li>';
+      return '<li class="oc-entry is-text"><div class="oc-entry-body"><h3 class="oc-entry-title"><a href="' + esc(f.u) + '">' + esc(f.n) + '</a></h3><p class="oc-entry-meta">' + esc(labels[type] || type) + '</p></div><button type="button" class="oc-fav-quitar" data-fav-quitar="' + esc(k) + '" aria-label="Quitar ' + esc(f.n) + ' de favoritos">Quitar</button></li>';
     }).join('');
     $('[data-fav-empty]').hidden = keys.length > 0;
+    // Quitar un favorito desde la propia lista (la fila desaparece y «Mi Semana Santa» se recalcula al recargar)
+    favList.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-fav-quitar]'); if (!b) return;
+      delete favs[b.dataset.favQuitar];
+      try { localStorage.setItem('oc-favs', JSON.stringify(favs)); } catch (err) { }
+      var li = b.closest('li'); if (li) li.remove();
+      $('[data-fav-empty]').hidden = Object.keys(favs).length > 0;
+    });
     // Mi Semana Santa: las hermandades guardadas ordenadas por jornada, con sus fechas del próximo año
     var miss = $('[data-mi-ss]');
     if (miss) {

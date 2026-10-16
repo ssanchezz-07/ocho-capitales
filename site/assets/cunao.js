@@ -677,6 +677,14 @@
   const chat = hoja.querySelector('[data-cunao-chat]'), form = hoja.querySelector('[data-cunao-form]'), q = hoja.querySelector('[data-cunao-q]');
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches, tactil = matchMedia('(pointer: coarse)').matches;
   let motor = null, cargando = null, ultimoFoco = null;
+  // El botón se esconde al bajar y vuelve al subir, para no tapar el texto.
+  let ultimoY = window.scrollY;
+  addEventListener('scroll', () => {
+    const y = window.scrollY, d = y - ultimoY;
+    if (Math.abs(d) < 8) return;
+    btn.classList.toggle('is-oculto', d > 0 && y > 120 && hoja.hidden);
+    ultimoY = y;
+  }, { passive: true });
   const url = hoja.getAttribute('data-datos');
   chat.setAttribute('role', 'log'); chat.setAttribute('aria-live', 'polite'); chat.setAttribute('aria-relevant', 'additions'); chat.setAttribute('tabindex', '-1');
   const preferida = () => { try { return localStorage.getItem('oc-city') || null; } catch (e) { return null; } };

@@ -528,7 +528,7 @@ function todayPanel() {
   return `<section class="oc-today" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
   <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Así sale Semana Santa ${year}`}</h2>
   <p class="oc-today-sub">Orden de paso según la última configuración documentada; consulta los horarios oficiales de este año.</p>
-  <p class="oc-today-showing" data-today-showing hidden>Mostrando solo <strong data-today-city></strong>. <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
+  <p class="oc-today-showing" data-today-showing hidden><span>Mostrando solo <strong data-today-city></strong>.</span> <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
   <div class="oc-daytabs" role="tablist" aria-label="Jornadas">${tabs}</div>
   ${panels}
 </section>`;
@@ -679,7 +679,7 @@ ${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridN
 function pageNews() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Noticias cofrades</h1><p class="oc-lead">Titulares de la prensa andaluza, agregadores y webs oficiales de hermandades y consejos. Cada noticia lleva a su medio. Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time>.</p></header>
 <div class="oc-filters" data-news-filters>
-  <div class="oc-field oc-field-grow"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" autocomplete="off" enterkeyhint="search"></div>
+  <div class="oc-field oc-field-grow"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
   <div class="oc-field"><span class="oc-label" id="nciudad">Capital</span><ul class="oc-chips is-filter" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false">${esc(c.nombre)}</button></li>`).join('')}</ul></div>
 </div>
 <h2 class="oc-sr">Listado de noticias</h2>
