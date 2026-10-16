@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 60,
-  "Prensa (texto de noticias)": 29
+  "Prensa (texto de noticias)": 30
  },
  "eventos": [
   {
@@ -4958,6 +4958,16 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/san-agustin-granada-hermandad-san-agustin-granada-consolacion-granada-virgen-consolacion-granada-cultos-hermandad-san-agustin-granada-cofradia-san-agustin-granada_3_2008244663.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Santa María de la Merced luce preparada para su salida extraordinaria por el 50 aniversario de su llegada a la Hermandad",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/merced-luce-preparada-para-su-salida-extraordinaria-por-el-50-aniversario-de-su-llegada-a-la-hermandad/"
   },
   {
    "fecha": "2026-10-15",
