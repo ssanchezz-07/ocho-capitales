@@ -929,7 +929,15 @@
   "paciencia-y-penas-granada": {},
   "tres-caidas-y-rosario-granada": {},
   "el-nazareno-granada": {},
-  "los-salesianos-granada": {},
+  "los-salesianos-granada": {
+   "relleno": {
+    "sede": {
+     "valor": "Iglesia de María Auxiliadora (Padres Salesianos)",
+     "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
   "la-concha-granada": {},
   "la-aurora-granada": {},
   "la-estrella-granada": {},
@@ -2821,6 +2829,18 @@
     "url": "https://archicofradiamision.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "paso": {
+     "valor": "Un solo paso de misterio: el encuentro de Jesús de la Misión con las Santas Mujeres de Jerusalén en la calle de la Amargura, acompañado por San Juan Evangelista y Nuestra Señora del Amparo.",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Archicofradía del Inmaculado Corazón de María, Hermandad Sacramental y Cofradía de Nazarenos del Santo Cristo de la Misión, Nuestra Señora del Amparo, San Juan Evangelista y San Antonio María Claret",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-16"
+    }
    }
   },
   "cristo-de-la-corona-sevilla": {
@@ -3248,6 +3268,16 @@
      "valor": "Grupo parroquial de Jesús en su Pasión, Nuestra Señora de los Desamparados y Santa María Goretti, en el barrio de Los Corazones. La Virgen procesionó por primera vez en 2008 y su salida destaca por el luto y la sobriedad.",
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2006",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Un trono: Nuestra Señora de los Desamparados, procesionando de riguroso luto.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -3262,6 +3292,11 @@
      "valor": "Saca a la calle a sus dos titulares: Jesús de la Verdad ante Caifás y la Virgen del Sagrario.",
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2008",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -3269,6 +3304,16 @@
    "relleno": {
     "historia": {
      "valor": "Asociación parroquial de Nuevo San Andrés que en su recorrido pasa también por La Luz y Belén. En 2016 bendijo a su Cristo, Luz del Mundo, de Valerio Téllez; la Virgen del Mar es obra de Liébana.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2013",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Un trono procesional con Nuestro Padre Jesús Luz del Mundo y María Santísima del Mar.",
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
@@ -3285,6 +3330,11 @@
      "valor": "Procesiona al Señor de Medinaceli y a la Virgen de la Candelaria.",
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "1994",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
     }
    }
   },
@@ -3292,6 +3342,16 @@
    "relleno": {
     "historia": {
      "valor": "Hermandad de Nuestro Padre Jesús Nazareno del Paso, Nuestra Señora de los Dolores y San Antonio Abad, que procesiona por Churriana. Sus dos imágenes son del siglo XVIII y su Nazareno es el más antiguo de esa iconografía en la capital.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Dos tronos: Nuestro Padre Jesús Nazareno del Paso y Nuestra Señora de los Dolores con San Antonio Abad.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "Siglo XVIII (reorganizada en 1980)",
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
@@ -3414,6 +3474,82 @@
     "url": "https://web.archive.org/web/20251216121355/https://cofradiasjaen.org/sepulcro/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
     "revisado": "2026-10-16"
+   }
+  },
+  "buen-camino-gamarra-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Grupo parroquial fundado en el colegio y parroquia de la Purísima Concepción de Gamarra. Procesiona en la tarde del Viernes de Dolores por las calles del barrio de Gamarra.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2011",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Un trono procesional con Nuestro Padre Jesús del Buen Camino y la Pastora del Amor.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "relleno": {
+    "historia": {
+     "valor": "Hermandad radicada en la parroquia de Nuestra Señora de los Dolores del distrito de Puerto de la Torre. Realiza su estación de penitencia en la tarde del Viernes de Dolores con amplia devoción vecinal.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "1983",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Dos tronos: el Santísimo Cristo de la Hermandad y Caridad y Nuestra Señora de los Dolores.",
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "la-sangre-de-el-higueron-cordoba": {
+   "relleno": {
+    "historia": {
+     "valor": "Pro-hermandad de la barriada periurbana de El Higuerón (Córdoba), con sede en la parroquia de San Isidro Labrador. Rinde culto a Nuestro Padre Jesús de la Sangre en el Desprecio de Herodes.",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2005",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Un paso de misterio: Jesús de la Sangre en el Desprecio de Herodes.",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    }
+   }
+  },
+  "traslado-al-sepulcro-pro-hermandad-cordoba": {
+   "relleno": {
+    "historia": {
+     "valor": "Pro-hermandad del Santísimo Cristo de las Almas en su Traslado al Sepulcro y Nuestra Señora de la Salud y Consuelo, erigida en la Parroquia de Nuestra Señora de la Consolación de Córdoba.",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    },
+    "fundacion": {
+     "valor": "2007",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    },
+    "paso": {
+     "valor": "Paso de misterio que representa el Traslado al Sepulcro del Señor.",
+     "fuente": "https://www.hermandadesdecordoba.es/",
+     "revisado": "2026-10-16"
+    }
    }
   }
  },

@@ -1,0 +1,6254 @@
+{
+ "fuente": "Horarios_ACC_SS_2026.pdf",
+ "fichas": [
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "REAL COFRADÍA DE NUESTRO PADRE JESÚS A SU ENTRADA A JERUSALÉN, MARÍA SANTÍSIMA DEL AMPARO Y SAN JUAN EVANGELISTA (Pollinica). Iglesia de San Agustín (Centro)",
+   "pagina": 2,
+   "horas": {
+    "salida": [
+     "09:50"
+    ],
+    "tribuna": [
+     "12:00"
+    ],
+    "torre_sur": [
+     "14:00"
+    ],
+    "catedral": [
+     "14:10"
+    ],
+    "encierro": [
+     "16:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Parras"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Plaza San Pedro Alcántara"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustin"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Madre de Dios"
+    },
+    {
+     "lugar": "Montaño"
+    },
+    {
+     "lugar": "Plaza de Montaño"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Parras"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "MARÍA SANTÍSIMA DE LÁGRIMAS Y FAVORES (RR.CC. Fusionadas). Parroquia de San Juan Bautista (Centro)",
+   "pagina": 2,
+   "horas": {
+    "salida": [
+     "15:00"
+    ],
+    "tribuna": [
+     "16:00"
+    ],
+    "torre_sur": [
+     "18:00"
+    ],
+    "catedral": [
+     "18:10"
+    ],
+    "encierro": [
+     "22:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de San Juan"
+    },
+    {
+     "lugar": "San Juan"
+    },
+    {
+     "lugar": "Calderón de la Barca"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Plaza Enrique García Herrera"
+    },
+    {
+     "lugar": "Moreno Carbonero"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Larios"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Cister"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Puerta Nueva"
+    },
+    {
+     "lugar": "Fajardo"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Plaza Enrique García Herrera"
+    },
+    {
+     "lugar": "Moreno Carbonero"
+    },
+    {
+     "lugar": "Sebastián Souvirón"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "San Juan"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ANTIGUA, VENERABLE HERMANDAD Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS DE LA SOLEDAD, NEGACIONES Y LÁGRIMAS DE SAN PEDRO, MARÍA SANTÍSIMA DEL DULCE NOMBRE Y SAN FRANCISCO DE ASÍS. Parroquia de La Divina Pastora (Barrio de Capuchinos)",
+   "pagina": 2,
+   "horas": {
+    "salida": [
+     "14:15"
+    ],
+    "tribuna": [
+     "16:40"
+    ],
+    "torre_sur": [
+     "18:40"
+    ],
+    "catedral": [
+     "18:50"
+    ],
+    "encierro": [
+     "22:50"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia de la Divina Pastora"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "Carrera de Capuchinos"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Madre de Dios"
+    },
+    {
+     "lugar": "Montaño"
+    },
+    {
+     "lugar": "Plaza de Montaño"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Carrera de Capuchinos"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "FERVOROSA HERMANDAD Y ANTIGUA COFRADÍA DEL DIVINO NOMBRE DE JESÚS NAZARENO DE SALUTACIÓN, MARÍA SANTÍSIMA DEL PATROCINIO REINA DE LOS CIELOS, SAN JUAN EVANGELISTA, SANTA MUJER VERÓNICA Y DE LA SANTA FAZ DE NUESTRO SEÑOR JESUCRISTO. Parroquia de San Felipe (Barrio de Capuchinos, Molinillo)",
+   "pagina": 2,
+   "horas": {
+    "salida": [
+     "14:30"
+    ],
+    "tribuna": [
+     "17:25"
+    ],
+    "torre_sur": [
+     "19:25"
+    ],
+    "catedral": [
+     "19:35"
+    ],
+    "encierro": [
+     "22:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Par ras"
+    },
+    {
+     "lugar": "Cruz del Molinillo"
+    },
+    {
+     "lugar": "Ollerías"
+    },
+    {
+     "lugar": "Huerto de Monjas"
+    },
+    {
+     "lugar": "Ermitaño"
+    },
+    {
+     "lugar": "Don Rodrigo"
+    },
+    {
+     "lugar": "Convento RR.MM Carmelitas"
+    },
+    {
+     "lugar": "Álvarez"
+    },
+    {
+     "lugar": "Gigantes"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo la Sangre"
+    },
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "ANTIGUA HERMANDAD Y REAL COFRADÍA DE NAZARENOS DEL STMO, CRISTO DE LA HUMILDAD EN SU PRESENTACIÓN AL PUEBLO (ECCE HOMO), NUESTRA MADRE Y SEÑORA DE LA MERCED Y SAN JUAN EVANGELISTA. Basílica y Real Santuario de Santa María de la Victoria (Barrio de la Victoria)",
+   "pagina": 2,
+   "horas": {
+    "salida": [
+     "15:15"
+    ],
+    "tribuna": [
+     "18:05"
+    ],
+    "torre_sur": [
+     "20:05"
+    ],
+    "catedral": [
+     "20:15"
+    ],
+    "encierro": [
+     "23:40"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Basílica y Real Santuario de Santa María de la Victoria y de la Merced"
+    },
+    {
+     "lugar": "Plaza del Santuario"
+    },
+    {
+     "lugar": "Compás de la Victoria"
+    },
+    {
+     "lugar": "Plaza de la Victoria"
+    },
+    {
+     "lugar": "Altozano"
+    },
+    {
+     "lugar": "Cruz Verde"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza de la Victoria"
+    },
+    {
+     "lugar": "Compás de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Santuario"
+    },
+    {
+     "lugar": "Basílica y Real Santuario de Santa María de la Victoria y de la Merced"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "HERMANDAD DEL SANTÍSIMO CRISTO DE LA ESPERANZA EN SU GRAN AMOR Y MARÍA SANTÍSIMA DE LA SALUD. Parroquia de San Pablo (Barrio de la Trinidad)",
+   "pagina": 3,
+   "horas": {
+    "salida": [
+     "16:20"
+    ],
+    "tribuna": [
+     "18:50"
+    ],
+    "torre_sur": [
+     "20:50"
+    ],
+    "catedral": [
+     "21:00"
+    ],
+    "encierro": [
+     "00:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de San Pablo"
+    },
+    {
+     "lugar": "Plaza de San Pablo"
+    },
+    {
+     "lugar": "Zamorano"
+    },
+    {
+     "lugar": "Tiro"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Rampa de la Aurora"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Rampa de la Aurora"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Tiro"
+    },
+    {
+     "lugar": "Zamorano"
+    },
+    {
+     "lugar": "Plaza de San Pablo"
+    },
+    {
+     "lugar": "Iglesia de San Pablo"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "VENERABLE HERMANDAD CARMELITA Y COFRADÍA DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA HUMILDAD Y PACIENCIA, MARÍA SANTÍSIMA DE DOLORES Y ESPERANZA Y NUESTRA SEÑORA DE LA AURORA Parroquia de San Vicente de Paúl (Barrio de Cruz de Humilladero)",
+   "pagina": 3,
+   "horas": {
+    "salida": [
+     "15:35"
+    ],
+    "tribuna": [
+     "19:35"
+    ],
+    "torre_sur": [
+     "21:35"
+    ],
+    "catedral": [
+     "21:45"
+    ],
+    "encierro": [
+     "02:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Plazuela Virgen de Dolores y Esperanza"
+    },
+    {
+     "lugar": "Pedro de Paz"
+    },
+    {
+     "lugar": "la Unión"
+    },
+    {
+     "lugar": "Edison"
+    },
+    {
+     "lugar": "Mendívil"
+    },
+    {
+     "lugar": "Eslava"
+    },
+    {
+     "lugar": "Senador Francisco Román"
+    },
+    {
+     "lugar": "La Serna"
+    },
+    {
+     "lugar": "Ancha del Carmen"
+    },
+    {
+     "lugar": "Avenida de la Aurora"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Linaje"
+    },
+    {
+     "lugar": "Alameda Colón"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Ordóñez"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Moreno Carbonero"
+    },
+    {
+     "lugar": "Plaza Enrique García-Herrera"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Puerta del Mar"
+    },
+    {
+     "lugar": "Córdoba"
+    },
+    {
+     "lugar": "Vendeja"
+    },
+    {
+     "lugar": "Linaje"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Avenida de la Aurora"
+    },
+    {
+     "lugar": "Ancha del Carmen"
+    },
+    {
+     "lugar": "la Serna"
+    },
+    {
+     "lugar": "Senador Francisco Román"
+    },
+    {
+     "lugar": "Eslava"
+    },
+    {
+     "lugar": "Medívil"
+    },
+    {
+     "lugar": "Edison"
+    },
+    {
+     "lugar": "la Unión"
+    },
+    {
+     "lugar": "Reboul"
+    },
+    {
+     "lugar": "Plazuela Virgen de Dolores y Esperanza"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "PONTIFICIA, REAL MUY ILUSTRE Y VENERABLE ARCHICOFRADÍA SACRAMENTAL Y SERÁFICA DE NUESTRO PADRE JESÚS ORANDO EN EL HUERTO, NUESTRA SEÑORA DE LA CONCEPCIÓN, SAN JUAN EVANGELISTA Y NUESTRA SEÑORA DE LA OLIVA. Parroquia de Los Santos Mártires Ciriaco y Paula (Centro)",
+   "pagina": 3,
+   "horas": {
+    "salida": [
+     "17:45"
+    ],
+    "tribuna": [
+     "20:10"
+    ],
+    "torre_sur": [
+     "22:15"
+    ],
+    "encierro": [
+     "01:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Plazuela Virgen de la Concepción"
+    },
+    {
+     "lugar": "Padre Jorge Lamothe"
+    },
+    {
+     "lugar": "Plaza de la Religiosa Filipense Dolores Márquez"
+    },
+    {
+     "lugar": "Pasillo de Santo Domingo"
+    },
+    {
+     "lugar": "Plaza Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Plaza Legión Española"
+    },
+    {
+     "lugar": "San Jacinto"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Manuel José García Caparrós"
+    },
+    {
+     "lugar": "Pasillo de Atocha"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "San Jacinto"
+    },
+    {
+     "lugar": "Plaza de la Legión Española"
+    },
+    {
+     "lugar": "Huerta del Obispo"
+    },
+    {
+     "lugar": "Cerrojo"
+    },
+    {
+     "lugar": "Padre Jorge Lamothe"
+    },
+    {
+     "lugar": "Plazuela Virgen de la Concepción"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RAMOS",
+   "cabecera": "FERVOROSA Y MUY ILUSTRE HERMANDAD DE NUESTRO PADRE JESÚS DEL PRENDIMIENTO Y MARÍA SANTÍSIMA DEL GRAN PERDÓN. Parroquia de La Divina Pastora (Barrio de Capuchinos)",
+   "pagina": 3,
+   "horas": {
+    "salida": [
+     "16:30"
+    ],
+    "tribuna": [
+     "21:00"
+    ],
+    "encierro": [
+     "01:30"
+    ],
+    "torre_sur": [
+     "23:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "San Millán"
+    },
+    {
+     "lugar": "Plaza Maestro Artola"
+    },
+    {
+     "lugar": "Miguel Bueno Lara"
+    },
+    {
+     "lugar": "Alameda de Capuchinos"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "Capuchinos"
+    },
+    {
+     "lugar": "Cruz del Molinillo"
+    },
+    {
+     "lugar": "Ollerías"
+    },
+    {
+     "lugar": "Carreterías"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carreterías"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Refino"
+    },
+    {
+     "lugar": "Carrión"
+    },
+    {
+     "lugar": "Hermosilla"
+    },
+    {
+     "lugar": "San Millán"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "REAL, MUY ILUSTRE Y VENERABLE ARCHICOFRADÍA SACRAMENTAL Y DE NAZARENOS DE NUESTRO PADRE JESÚS DE LA PASIÓN Y MARÍA SANTÍSIMA DEL AMOR DOLOROSO. Parroquia de los Santos Mártires Ciriaco y Paula (Centro)",
+   "pagina": 4,
+   "horas": {
+    "salida": [
+     "16:50"
+    ],
+    "tribuna": [
+     "17:35"
+    ],
+    "torre_sur": [
+     "19:35"
+    ],
+    "catedral": [
+     "19:45"
+    ],
+    "encierro": [
+     "23:25"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de los Santos Mártires"
+    },
+    {
+     "lugar": "Plaza de los Mártires"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Plaza de los Mártires"
+    },
+    {
+     "lugar": "Iglesia de los Santos Mártires"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "FERVOROSA HERMANDAD DE CULTO Y PROCESIÓN DEL SANTÍSIMO CRISTO DE LA CRUCIFIXIÓN Y MARÍA SANTÍSIMA DEL MAYOR DOLOR EN SU SOLEDAD. Parroquia del Buen Pastor (Barrio de Capuchinos)",
+   "pagina": 4,
+   "horas": {
+    "salida": [
+     "15:55"
+    ],
+    "tribuna": [
+     "18:25"
+    ],
+    "torre_sur": [
+     "20:25"
+    ],
+    "catedral": [
+     "20:35"
+    ],
+    "encierro": [
+     "01:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Diego de Siloé"
+    },
+    {
+     "lugar": "Negros"
+    },
+    {
+     "lugar": "Cruz Verde"
+    },
+    {
+     "lugar": "Refino"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Plaza María Guerrero"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Refino"
+    },
+    {
+     "lugar": "Carrión"
+    },
+    {
+     "lugar": "Diego de Siloé"
+    },
+    {
+     "lugar": "a su Templo"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "VENERABLE Y MUY ILUSTRE HERMANDAD Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS DE LA COLUMNA Y MARÍA SANTÍSIMA DE LA O. Parroquia de los Santos Mártires Ciriaco y Paula (Centro)",
+   "pagina": 4,
+   "horas": {
+    "salida": [
+     "16:45"
+    ],
+    "tribuna": [
+     "19:00"
+    ],
+    "torre_sur": [
+     "21:00"
+    ],
+    "encierro": [
+     "00:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Frailes"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Carretería (Plza. San Buenaventura)"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustin"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Madre de Dios"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "Frailes"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "ANTIGUA COFRADÍA DEL SANTÍSIMO CRISTO DEL PERDÓN Y NUESTRA SEÑORA DE LOS DOLORES. Parroquia de Santo Domingo (Barrio del Perchel)",
+   "pagina": 4,
+   "horas": {
+    "salida": [
+     "17:30"
+    ],
+    "tribuna": [
+     "19:50"
+    ],
+    "torre_sur": [
+     "21:50"
+    ],
+    "catedral": [
+     "22:00"
+    ],
+    "encierro": [
+     "00:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia Santo Domingo Guzmán"
+    },
+    {
+     "lugar": "Plaza de Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Pasillo de Santo Domingo"
+    },
+    {
+     "lugar": "Plaza de la Religiosa Filipense Dolores Márquez"
+    },
+    {
+     "lugar": "Cerrojo"
+    },
+    {
+     "lugar": "Martinete"
+    },
+    {
+     "lugar": "Zurrado res"
+    },
+    {
+     "lugar": "Plaza Imagen"
+    },
+    {
+     "lugar": "Polvorista"
+    },
+    {
+     "lugar": "Llano de Doña Trinidad"
+    },
+    {
+     "lugar": "Álvaro de Bazán"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "San Jacinto"
+    },
+    {
+     "lugar": "Plaza Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Iglesia de Santo Domingo Guzmán"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "REAL, MUY ILUSTRE Y VENERABLE COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS CAUTIVO, MARÍA SANTÍSIMA DE LA TRINIDAD CORONADA Y DEL GLORIOSO APOSTOL SANTIAGO. Parroquia de San Pablo (Barrio de la Trinidad)",
+   "pagina": 4,
+   "horas": {
+    "salida": [
+     "17:30"
+    ],
+    "tribuna": [
+     "20:30"
+    ],
+    "torre_sur": [
+     "22:35"
+    ],
+    "encierro": [
+     "02:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Barrera de la Trinidad"
+    },
+    {
+     "lugar": "Plaza de Jesús Cautivo"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Plaza Montes"
+    },
+    {
+     "lugar": "Carril"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Rampa de la Aurora"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Plaza de Jesús Cautivo"
+    },
+    {
+     "lugar": "Barrera de la Trinidad"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "LUNES SANTO",
+   "cabecera": "COFRADÍA DEL SANTÍSIMO CRISTO CORONADO DE ESPINAS Y NUESTRA SEÑORA DE GRACIA Y ESPERANZA. Iglesia del Santo Cristo (Centro)",
+   "pagina": 5,
+   "horas": {
+    "salida": [
+     "17:30"
+    ],
+    "tribuna": [
+     "21:40"
+    ],
+    "torre_sur": [
+     "23:40"
+    ],
+    "encierro": [
+     "01:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "REAL, ILUSTRE Y VENERABLE HERMANDAD SACRAMENTAL DE NUESTRO PADRE JESÚS NAZARENO DE LOS PASOS EN EL MONTE CALVARIO Y MARÍA SANTÍSIMA DEL ROCÍO CORONADA. Parroquia de San Lázaro (Barrio de la Victoria)",
+   "pagina": 6,
+   "horas": {
+    "salida": [
+     "15:00"
+    ],
+    "tribuna": [
+     "17:40"
+    ],
+    "torre_sur": [
+     "19:45"
+    ],
+    "encierro": [
+     "23:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Párroco Ruiz Furest"
+    },
+    {
+     "lugar": "Altozano"
+    },
+    {
+     "lugar": "Cruz Verde"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Plaza de la Merced (Lateral oeste)"
+    },
+    {
+     "lugar": "Plaza de la Merced (Lateral norte)"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza de la Victoria"
+    },
+    {
+     "lugar": "Cristo de la Epidemia"
+    },
+    {
+     "lugar": "Puerto Parejo"
+    },
+    {
+     "lugar": "Párroco Ruiz Furest"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "VENERABLE HERMANDAD DE LA CARIDAD DE NUESTRO SEÑOR Y COFRADÍA DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA AGONÍA, MARÍA SANTÍSIMA DE LAS PENAS, REINA Y MADRE Y SANTO DOMINGO DE LA CALZADA. Oratorio de las Penas",
+   "pagina": 6,
+   "horas": {
+    "salida": [
+     "17:45"
+    ],
+    "tribuna": [
+     "18:40"
+    ],
+    "torre_sur": [
+     "20:45"
+    ],
+    "catedral": [
+     "20:55"
+    ],
+    "encierro": [
+     "01:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Oratorio de Santa María Reina y Madre"
+    },
+    {
+     "lugar": "Plazuela Virgen de las Penas"
+    },
+    {
+     "lugar": "Pozos Dulces"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Fajardo"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Andrés Pérez"
+    },
+    {
+     "lugar": "Arco de la Cabeza"
+    },
+    {
+     "lugar": "Plazuela Virgen de las Penas y Oratorio de Santa María Reina y Madre"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "VENERABLE HERMANDAD DE CULTO Y PROCESIÓN DE JESÚS NAZARENO DEL PERDÓN Y MARÍA SANTÍSIMA DE NUEVA ESPERANZA, SAN JOAQUÍN Y SANTA ANA. Parroquia de San Joaquín y Santa Ana (Barrio de Nueva Málaga)",
+   "pagina": 6,
+   "horas": {
+    "salida": [
+     "15:45"
+    ],
+    "tribuna": [
+     "19:30"
+    ],
+    "torre_sur": [
+     "21:35"
+    ],
+    "encierro": [
+     "04:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Camino Castillejos"
+    },
+    {
+     "lugar": "Magistrado Salvador Barberá"
+    },
+    {
+     "lugar": "Rosa"
+    },
+    {
+     "lugar": "Carril de Gamarra"
+    },
+    {
+     "lugar": "Dr"
+    },
+    {
+     "lugar": "Lazárraga"
+    },
+    {
+     "lugar": "José María Freuiller"
+    },
+    {
+     "lugar": "Pasaje Begoña"
+    },
+    {
+     "lugar": "Plaza de Basconia"
+    },
+    {
+     "lugar": "Pasaje Aránzazu"
+    },
+    {
+     "lugar": "General Blake"
+    },
+    {
+     "lugar": "Martínez Maldonado"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Rivera del Guadalmedina"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Barrera de la Trinidad"
+    },
+    {
+     "lugar": "Plaza de Bailén"
+    },
+    {
+     "lugar": "Pelayo"
+    },
+    {
+     "lugar": "Martínez Maldonado"
+    },
+    {
+     "lugar": "Plaza Aparejador Federico Bermúdez (las chapas)"
+    },
+    {
+     "lugar": "Sondalezas"
+    },
+    {
+     "lugar": "Carril de Gamarra"
+    },
+    {
+     "lugar": "Rosa Magistrado"
+    },
+    {
+     "lugar": "Salvador Barberá"
+    },
+    {
+     "lugar": "Camino Castillejos"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "ILUSTRE Y VENERABLE HERMANDAD DE LA ORDEN DE SANTO DOMINGO DE GUZMAN DE NUESTRO PADRE JESÚS DE LA HUMILLACIÓN Y PERDÓN Y MARÍA SANTÍSIMA DE LA ESTRELLA. Parroquia de Santo Domingo (Barrio del Perchel)",
+   "pagina": 6,
+   "horas": {
+    "salida": [
+     "17:45"
+    ],
+    "tribuna": [
+     "20:20"
+    ],
+    "torre_sur": [
+     "22:25"
+    ],
+    "encierro": [
+     "02:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia Santo Domingo Guzmán"
+    },
+    {
+     "lugar": "Plaza de Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Plaza Legión Española"
+    },
+    {
+     "lugar": "San Jacinto"
+    },
+    {
+     "lugar": "Huerta del Obispo"
+    },
+    {
+     "lugar": "Agustín Parejo"
+    },
+    {
+     "lugar": "Llano de Doña Trinidad"
+    },
+    {
+     "lugar": "Álvaro de Bazán"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Pasillo de Santo Domingo"
+    },
+    {
+     "lugar": "Plaza de la Religiosa Filipense Dolores Márquez"
+    },
+    {
+     "lugar": "Padre Jorge Lamothe"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "REAL, PIADOSA Y VENERABLE HERMANDAD DE CULTO Y PROCESIÓN DE NUESTRO PADRE JESÚS DEL RESCATE Y MARÍA SANTÍSIMA DE GRACIA. Capilla de C/Agua (Barrio de la Victoria)",
+   "pagina": 7,
+   "horas": {
+    "salida": [
+     "17:45"
+    ],
+    "tribuna": [
+     "21:10"
+    ],
+    "torre_sur": [
+     "23:15"
+    ],
+    "encierro": [
+     "02:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Agua"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza Jesús El Rico"
+    },
+    {
+     "lugar": "Plaza de María Guerrero"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Plaza María Guerrero"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Agua"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MARTES SANTO",
+   "cabecera": "MUY ILUSTRE, VENERABLE Y FERVOROSA HERMANDAD SACRAMENTAL Y COFRADIA DE NAZARENOS DE NUESTRO PADRE JESUS DE LA SENTENCIA, MARIA SANTISIMA DEL ROSARIO EN SUS MISTERIOS DOLOROSOS Y SAN JUAN EVANGELISTA. Parroquia de Santiago Apóstol (Barrio de la Victoria)",
+   "pagina": 7,
+   "horas": {
+    "salida": [
+     "19:15"
+    ],
+    "tribuna": [
+     "22:00"
+    ],
+    "torre_sur": [
+     "00:05"
+    ],
+    "encierro": [
+     "01:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Frailes"
+    },
+    {
+     "lugar": "Merced"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Plaza de Jerónimo Cuervo"
+    },
+    {
+     "lugar": "Ramos Marín"
+    },
+    {
+     "lugar": "Frailes"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "HERMANDAD SACRAMENTAL Y REALES COFRADÍAS FUSIONADAS DE JESÚS DE AZOTES Y COLUMNA, STMO, CRISTO DE LA EXALTACIÓN, STMO, CRISTO DE ÁNIMAS DE CIEGOS, MARÍA STMA, DE LÁGRIMAS Y FAVORES E ILUSTRE ARCHICOFRADÍA DE LA SANTA VERA CRUZ Y SANGRE, NTRA. SRA. DEL MAYOR DOLOR REINA DE LOS ANGELES Y SAN JUAN EVANGELISTA (PRIMITIVA DE LA CIUDAD). Parroquia de San Juan Bautista (Centro)",
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "17:15"
+    ],
+    "tribuna": [
+     "18:00"
+    ],
+    "torre_sur": [
+     "20:00"
+    ],
+    "catedral": [
+     "20:10"
+    ],
+    "encierro": [
+     "23:50"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza Constitución"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "VENERABLE HERMANDAD DE NUESTRO PADRE JESÚS NAZARENO REDENTOR DEL MUNDO Y NUESTRA SEÑORA MEDIADORA DE LA SALVACIÓN. Parroquia de San Patricio (Barrio de Huelin. Las Delicias)",
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "16:00"
+    ],
+    "tribuna": [
+     "19:20"
+    ],
+    "torre_sur": [
+     "21:20"
+    ],
+    "catedral": [
+     "21:30"
+    ],
+    "encierro": [
+     "01:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Cómico Riquelme"
+    },
+    {
+     "lugar": "Ayala"
+    },
+    {
+     "lugar": "Avenida del Ingeniero José María"
+    },
+    {
+     "lugar": "Garnica"
+    },
+    {
+     "lugar": "Cuarteles"
+    },
+    {
+     "lugar": "Plaza de Toros Vieja"
+    },
+    {
+     "lugar": "Ancha del Carmen"
+    },
+    {
+     "lugar": "Cristo de la Expiración"
+    },
+    {
+     "lugar": "Avenida de Andalucía"
+    },
+    {
+     "lugar": "Nazareno del Paso"
+    },
+    {
+     "lugar": "Hilera"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Moreno Carbonero"
+    },
+    {
+     "lugar": "Plaza Enrique García-Herrera"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Cañón"
+    },
+    {
+     "lugar": "Cortina del Muelle"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Vendeja"
+    },
+    {
+     "lugar": "Pasaje Linaje"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Cuarteles"
+    },
+    {
+     "lugar": "Jacinto Verdaguer"
+    },
+    {
+     "lugar": "Salitre"
+    },
+    {
+     "lugar": "Ayala"
+    },
+    {
+     "lugar": "Cómico Riquelme"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "HERMANDAD SALESIANA Y COFRADÍA DE NAZARENOS DEL SANTO CRISTO DE LAS PENAS, MARÍA SANTÍSIMA DEL AUXILIO, SAN JUAN EVANGELISTA Y SAN JUAN BOSCO. Santuario de María Auxiliadora (Barrio de Capuchinos)",
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "17:15"
+    ],
+    "tribuna": [
+     "19:54"
+    ],
+    "torre_sur": [
+     "21:54"
+    ],
+    "catedral": [
+     "22:04"
+    ],
+    "encierro": [
+     "00:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Santuario María Auxiliadora (salida nazarenos)"
+    },
+    {
+     "lugar": "Casa Hermandad (salida tronos)"
+    },
+    {
+     "lugar": "Eduardo Domínguez Ávila"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "Capuchinos"
+    },
+    {
+     "lugar": "Cruz del Molinillo"
+    },
+    {
+     "lugar": "Ollerías"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda"
+    },
+    {
+     "lugar": "Plaza la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Plaza Montaño"
+    },
+    {
+     "lugar": "Alcubilla"
+    },
+    {
+     "lugar": "Plaza de Capuchinos"
+    },
+    {
+     "lugar": "Eduardo Domínguez Ávila"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "PONTIFICIA Y REAL, MUY ILUSTRE Y VENERABLE ARCHICOFRADÍA DEL SANTÍSIMO CRISTO DE LA SANGRE, MARÍA SANTÍSIMA DE CONSOLACIÓN Y LÁGRIMAS Y DEL SANTO SUDARIO. Parroquia de San Felipe Neri (Barrio de Capuchinos – Molinillo)",
+   "pagina": 8,
+   "horas": {
+    "salida": [
+     "18:00"
+    ],
+    "tribuna": [
+     "20:19"
+    ],
+    "torre_sur": [
+     "22:19"
+    ],
+    "encierro": [
+     "00:10"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Plazuela Cristo de la Sangre"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Larios"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Larios"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Madre de Dios"
+    },
+    {
+     "lugar": "Plaza Montaño"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "REAL, EXCELENTÍSIMA, MUY ILUSTRE Y VENERABLE COFRADÍA DE CULTO Y PROCESIÓN, DE NUESTRO PADRE JESÚS NAZARENO bajo la advocación de “EL RICO” Y MARÍA SANTÍSIMA DEL AMOR. Parroquia de Santiago Apóstol (Centro)",
+   "pagina": 9,
+   "horas": {
+    "salida": [
+     "17:55"
+    ],
+    "tribuna": [
+     "21:04"
+    ],
+    "torre_sur": [
+     "23:04"
+    ],
+    "encierro": [
+     "01:05"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia Santiago (salida de nazarenos)"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "El Chiclanero"
+    },
+    {
+     "lugar": "Pasaje de Campos"
+    },
+    {
+     "lugar": "Casa Hermandad (salida de los Tronos)"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza Jesús El Rico"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Cister"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Obispo (Liberación)"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Calle Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Plaza Jesús El Rico"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "REAL, MUY ILUSTRE, VENERABLE Y ANTIGUA HERMANDAD Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE DE LA PUENTE DEL CEDRÓN Y MARÍA SANTÍSIMA DE LA PALOMA. Capilla de María Santísima de la Paloma (Centro)",
+   "pagina": 9,
+   "horas": {
+    "salida": [
+     "20:15"
+    ],
+    "tribuna": [
+     "22:07"
+    ],
+    "torre_sur": [
+     "00:12"
+    ],
+    "encierro": [
+     "01:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Capilla de María Santísima. de la Paloma"
+    },
+    {
+     "lugar": "Plaza de San Francisco"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Plaza de San Francisco y Capilla de María"
+    },
+    {
+     "lugar": "Santísima de la Paloma"
+    }
+   ]
+  },
+  {
+   "dia": "MIÉRCOLES SANTO",
+   "cabecera": "PONTIFICIA, REAL, ILUSTRE Y VENERABLE ARCHICOFRADÍA SACRAMENTAL DE CULTO Y PROCESIÓN DEL SANTÍSIMO CRISTO DE LA EXPIRACIÓN Y MARÍA SANTÍSIMA DE LOS DOLORES CORONADA. Parroquia del Apóstol San Pedro (Barrio del Perchel)",
+   "pagina": 9,
+   "horas": {
+    "salida": [
+     "21:15"
+    ],
+    "tribuna": [
+     "23:10"
+    ],
+    "torre_sur": [
+     "01:15"
+    ],
+    "encierro": [
+     "03:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia del Apóstol San Pedro"
+    },
+    {
+     "lugar": "Plaza de Enrique Navarro"
+    },
+    {
+     "lugar": "Cristo de la Expiración"
+    },
+    {
+     "lugar": "Avenida de Andalucía"
+    },
+    {
+     "lugar": "Puente de Tetuán"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Ordóñez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Moreno Carbonero"
+    },
+    {
+     "lugar": "Plaza Enrique García-Herrera"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Strachan"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Liborio García"
+    },
+    {
+     "lugar": "Mesón de Vélez"
+    },
+    {
+     "lugar": "Doctor Felipe Sánchez de la Cuesta y Alarcón"
+    },
+    {
+     "lugar": "Antonio Baena Gómez"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Puerta del Mar"
+    },
+    {
+     "lugar": "Córdoba"
+    },
+    {
+     "lugar": "Vendeja"
+    },
+    {
+     "lugar": "Linaje"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Avenida de la Aurora"
+    },
+    {
+     "lugar": "Cristo de la Expiración"
+    },
+    {
+     "lugar": "Plaza de Enrique Navarro"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "REAL Y MUY ILUSTRE HERMANDAD DE LA SAGRADA CENA SACRAMENTAL DE NUESTRO SEÑOR JESUCRISTO Y MARÍA SANTÍSIMA DE LA PAZ. Iglesia Parroquial de San Carlos y Santo Domingo de Guzmán",
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "17:00"
+    ],
+    "tribuna": [
+     "17:40"
+    ],
+    "torre_sur": [
+     "19:40"
+    ],
+    "encierro": [
+     "22:55"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Puerta Nueva"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Fajardo"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Puerta Nueva"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "MUY ILUSTRE, ANTIGUA Y VENERABLE HERMANDAD SACRAMENTAL DE NUESTRO PADRE JESÚS NAZARENO DE VIÑEROS, NUESTRA SEÑORA DEL TRASPASO Y SOLEDAD DE VIÑEROS Y SAN LORENZO MÁRTIR. Iglesia de la Aurora y Divina Providencia",
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "17:15"
+    ],
+    "tribuna": [
+     "18:35"
+    ],
+    "torre_sur": [
+     "20:35"
+    ],
+    "catedral": [
+     "20:45"
+    ],
+    "encierro": [
+     "22:50"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de la Aurora y Divina Providencia"
+    },
+    {
+     "lugar": "Andrés Pérez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza de Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Biedmas"
+    },
+    {
+     "lugar": "Plaza de los Viñeros"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "SERÁFICA HERMANDAD DE LA SANTA CRUZ, SANTÍSIMO CRISTO DE LA VICTORIA Y NUESTRA SEÑORA DE LOS DOLORES EN SU AMPARO Y MISERICORDIA. Parroquia de San Felipe Neri (Barrio de Capuchinos – Molinillo)",
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "17:35"
+    ],
+    "tribuna": [
+     "19:25"
+    ],
+    "torre_sur": [
+     "21:25"
+    ],
+    "catedral": [
+     "21:35"
+    ],
+    "encierro": [
+     "23:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    },
+    {
+     "lugar": "Plazuela Cristo de la Sangre"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Dos aceras"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza de Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Merced"
+    },
+    {
+     "lugar": "Madre de Dios"
+    },
+    {
+     "lugar": "Montaño"
+    },
+    {
+     "lugar": "Plaza de Montaño"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "ARCHICOFRADIA DE LA SANTA VERA CRUZ (RR.CC. Fusionadas). Parroquia de San Juan Bautista (Centro)",
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "19:00"
+    ],
+    "tribuna": [
+     "19:55"
+    ],
+    "torre_sur": [
+     "21:55"
+    ],
+    "catedral": [
+     "22:05"
+    ],
+    "encierro": [
+     "01:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de San Juan"
+    },
+    {
+     "lugar": "Calderón de la Barca"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Plaza de Jesús de la Pasión"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Muro de las Catalinas"
+    },
+    {
+     "lugar": "Arco de la Cabeza"
+    },
+    {
+     "lugar": "Plazuela Virgen de las Penas"
+    },
+    {
+     "lugar": "Pozos Dulces"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Fajardo"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Calderón de la Barca"
+    },
+    {
+     "lugar": "Iglesia de San Juan"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "PONTIFICIA Y REAL CONGREGACIÓN DEL SANTÍSIMO CRISTO DE LA BUENA MUERTE Y ÁNIMAS, NUESTRA SEÑORA DE LA SOLEDAD (Mena). Parroquia de Santo Domingo (Barrio del Perchel)",
+   "pagina": 10,
+   "horas": {
+    "salida": [
+     "18:55"
+    ],
+    "tribuna": [
+     "20:20"
+    ],
+    "torre_sur": [
+     "22:25"
+    ],
+    "encierro": [
+     "02:10"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Plaza Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Plaza Legión Española"
+    },
+    {
+     "lugar": "San Jacinto"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Pasillo Atocha"
+    },
+    {
+     "lugar": "Manuel José García Caparros"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Hilera"
+    },
+    {
+     "lugar": "Glorieta de Lola Carrera"
+    },
+    {
+     "lugar": "Cerezuela"
+    },
+    {
+     "lugar": "Plaza Legión Española"
+    },
+    {
+     "lugar": "Plaza Fray Alonso de Santo Tomás"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "REAL Y EXCELENTÍSIMA HERMANDAD DE NUESTRO PADRE JESÚS DEL SANTO SUPLICIO, SANTÍSIMO CRISTO DE LOS MILAGROS Y MARÍA SANTÍSIMA DE LA AMARGURA CORONADA (ZAMARRILLA). Ermita de Zamarrilla (Barrio de la Trinidad)",
+   "pagina": 11,
+   "horas": {
+    "salida": [
+     "19:30"
+    ],
+    "tribuna": [
+     "21:35"
+    ],
+    "torre_sur": [
+     "23:40"
+    ],
+    "encierro": [
+     "04:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Ermita de Zamarrilla (Casa Hermandad)"
+    },
+    {
+     "lugar": "Martínez Maldonado"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Mármoles"
+    },
+    {
+     "lugar": "Martínez Maldonado"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "REAL ILUSTRE Y VENERABLE HERMANDAD DE NUESTRO PADRE JESÚS DE LA MISERICORDIA, SANTÍSIMO CRISTO DE ÁNIMAS Y NUESTRA SEÑORA DEL GRAN PODER Y SAN JUAN DE DIOS. Parroquia de Nuestra señora del Carmen (Barrio del Perchel)",
+   "pagina": 11,
+   "horas": {
+    "salida": [
+     "19:50"
+    ],
+    "tribuna": [
+     "22:25"
+    ],
+    "torre_sur": [
+     "00:35"
+    ],
+    "encierro": [
+     "04:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "La Serna"
+    },
+    {
+     "lugar": "Ancha del Carmen"
+    },
+    {
+     "lugar": "Avenida de la Aurora"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Pasaje Linaje"
+    },
+    {
+     "lugar": "Alameda de Colón"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Ordoñez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Strachan"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Liborio García"
+    },
+    {
+     "lugar": "Mesón de Vélez"
+    },
+    {
+     "lugar": "Doctor Felipe Sánchez de la Cuesta y Alarcón"
+    },
+    {
+     "lugar": "Antonio Baena Gómez"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Puerta del Mar"
+    },
+    {
+     "lugar": "Córdoba"
+    },
+    {
+     "lugar": "Vendeja"
+    },
+    {
+     "lugar": "Pasaje Linaje"
+    },
+    {
+     "lugar": "Puente de la Misericordia"
+    },
+    {
+     "lugar": "Avenida de la Aurora"
+    },
+    {
+     "lugar": "Ancha del Carmen"
+    },
+    {
+     "lugar": "La Serna"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "JUEVES SANTO",
+   "cabecera": "PONTIFICIA Y REAL ARCHICOFRADÍA DEL DULCE NOMBRE DE JESÚS NAZARENO DEL PASO Y MARÍA SANTÍSIMA DE LA ESPERANZA. Basílica Menor del Paso y la Esperanza (Barrio del Perchel)",
+   "pagina": 11,
+   "horas": {
+    "salida": [
+     "21:45"
+    ],
+    "tribuna": [
+     "23:10"
+    ],
+    "torre_sur": [
+     "01:25"
+    ],
+    "encierro": [
+     "03:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Basílica del Paso y la Esperanza"
+    },
+    {
+     "lugar": "Glorieta Lola Carrera"
+    },
+    {
+     "lugar": "calle Hilera"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Manuel José García Caparrós"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especerías"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre sur"
+    },
+    {
+     "lugar": "Strachan"
+    },
+    {
+     "lugar": "Torre de Sandoval"
+    },
+    {
+     "lugar": "Bolsa"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Marín García"
+    },
+    {
+     "lugar": "Dr. Don Felipe Sánchez de la Cuesta y Alarcón"
+    },
+    {
+     "lugar": "Antonio Baena Gómez"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Puerta del Mar"
+    },
+    {
+     "lugar": "Plaza de Félix Saénz"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza de Arriola"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Prim"
+    },
+    {
+     "lugar": "Puente de la Esperanza"
+    },
+    {
+     "lugar": "Hilera"
+    },
+    {
+     "lugar": "Glorieta de Lola Carrera"
+    },
+    {
+     "lugar": "Basílica del Paso y la Esperanza"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "MUY ANTIGUA Y VENERABLE HERMANDAD DE VÍA CRUCIS DEL SANTO CRISTO DEL CALVARIO Y SEÑOR SAN FRANCISCO DE PAULA Y COFRADIA DE NAZARENOS DEL SANTÍSIMO CRISTO YACENTE DE LA PAZ Y LA UNIDAD EN EL MISTERIO DE SU SAGRADA MORTAJA, NUESTRA SEÑORA DE FE Y CONSUELO, SANTA MARÍA DEL MONTE CALVARIO Y SAN MANUEL GONZÁLEZ. Capilla del Monte Calvario (Barrio de la Victoria)",
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "16:00"
+    ],
+    "tribuna": [
+     "18:40"
+    ],
+    "torre_sur": [
+     "20:45"
+    ],
+    "catedral": [
+     "20:50"
+    ],
+    "encierro": [
+     "00:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Vía Dolorosa del Calvario",
+     "hora": "15:00",
+     "salida": true
+    },
+    {
+     "lugar": "Glorieta Padre Manuel Gámez"
+    },
+    {
+     "lugar": "Amargura"
+    },
+    {
+     "lugar": "Alfonso XII"
+    },
+    {
+     "lugar": "Plaza del Santuario"
+    },
+    {
+     "lugar": "Basílica y Santuario de Santa María de la Victoria",
+     "hora": "16:00",
+     "salida": true
+    },
+    {
+     "lugar": "Plaza del Santuario"
+    },
+    {
+     "lugar": "Compás de la Victoria"
+    },
+    {
+     "lugar": "Plaza de la Victoria"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza de María"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Plazuela de Jesús Castellanos"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Casapalma"
+    },
+    {
+     "lugar": "Cárcer"
+    },
+    {
+     "lugar": "Madre de Dios Mariblanca"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Cruz Verde"
+    },
+    {
+     "lugar": "Altozano"
+    },
+    {
+     "lugar": "Párroco Ruiz Furest"
+    },
+    {
+     "lugar": "Puerto Parejo"
+    },
+    {
+     "lugar": "Manrique"
+    },
+    {
+     "lugar": "Tejeros"
+    },
+    {
+     "lugar": "Mitjana"
+    },
+    {
+     "lugar": "Rampa del Santuario"
+    },
+    {
+     "lugar": "Basílica y Santuario de Santa María de la Victoria"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "FERVOROSA HERMANDAD SACRAMENTAL Y REAL COFRADÍA DE NAZARENOS DEL SAGRADO DESCENDIMIENTO DE NUESTRO SEÑOR JESUCRISTO, NUESTRA SEÑORA DEL SANTO SUDARIO Y MARÍA SANTÍSIMA DE LAS ANGUSTIAS. Capilla del Sagrado Descendimiento (Barrio de la Malagueta)",
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "16:30"
+    ],
+    "tribuna": [
+     "19:20"
+    ],
+    "torre_sur": [
+     "21:25"
+    ],
+    "catedral": [
+     "21:35"
+    ],
+    "encierro": [
+     "00:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Manuel Martín Estévez"
+    },
+    {
+     "lugar": "Maestranza"
+    },
+    {
+     "lugar": "Cervantes"
+    },
+    {
+     "lugar": "Paseo de Reding"
+    },
+    {
+     "lugar": "Avenida Cervantes"
+    },
+    {
+     "lugar": "Francisco Bejarano Robles"
+    },
+    {
+     "lugar": "Guillén Sotelo"
+    },
+    {
+     "lugar": "Travesía Pintor Nogales"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustin"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Cister"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Travesía Pintor Nogales"
+    },
+    {
+     "lugar": "Guillén Sotelo"
+    },
+    {
+     "lugar": "Paseo de Reding"
+    },
+    {
+     "lugar": "Plaza del General Torrijos"
+    },
+    {
+     "lugar": "Maestranza"
+    },
+    {
+     "lugar": "Manuel Martín Estévez"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "REAL COFRADÍA DEL SANTÍSIMO CRISTO DEL AMOR Y NUESTRA SEÑORA DE LA CARIDAD. Basílica y Real Santuario de Santa María de la Victoria (Barrio de la Victoria)",
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "16:50"
+    ],
+    "tribuna": [
+     "20:00"
+    ],
+    "torre_sur": [
+     "22:05"
+    ],
+    "encierro": [
+     "02:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Basílica y Santuario de Santa María de la Victoria"
+    },
+    {
+     "lugar": "Plazuela Cristo del Amor"
+    },
+    {
+     "lugar": "Conde de Tendilla"
+    },
+    {
+     "lugar": "María"
+    },
+    {
+     "lugar": "Ladrón de Guevara"
+    },
+    {
+     "lugar": "Fernando el Católico"
+    },
+    {
+     "lugar": "San Patricio"
+    },
+    {
+     "lugar": "Compás de la Victoria"
+    },
+    {
+     "lugar": "Plaza de la Victoria"
+    },
+    {
+     "lugar": "Victoria"
+    },
+    {
+     "lugar": "Plaza Jesús El Rico"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Mariblanca"
+    },
+    {
+     "lugar": "Peña"
+    },
+    {
+     "lugar": "Frailes"
+    },
+    {
+     "lugar": "Cruz Verde"
+    },
+    {
+     "lugar": "Altozano"
+    },
+    {
+     "lugar": "Párroco Ruiz Furest"
+    },
+    {
+     "lugar": "Puerto Parejo"
+    },
+    {
+     "lugar": "Manrique"
+    },
+    {
+     "lugar": "Fernando el Católico"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "MUY ANTIGUA, VENERABLE Y PONTIFICIA ARCHICOFRADÍA SACRAMENTAL DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA REDENCIÓN Y NUESTRA SEÑORA DE LOS DOLORES. Parroquia de San Juan Bautista (Centro)",
+   "pagina": 12,
+   "horas": {
+    "salida": [
+     "19:05"
+    ],
+    "tribuna": [
+     "20:50"
+    ],
+    "torre_sur": [
+     "22:55"
+    ],
+    "catedral": [
+     "23:05"
+    ],
+    "encierro": [
+     "00:35"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Iglesia de San Juan"
+    },
+    {
+     "lugar": "San Juan"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Sebastián Souvirón"
+    },
+    {
+     "lugar": "Plaza Arriola"
+    },
+    {
+     "lugar": "Sagasta"
+    },
+    {
+     "lugar": "Plaza de Félix Sáenz"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Postigo de los Abades"
+    },
+    {
+     "lugar": "Estación de penitencia en la Catedral",
+     "catedral": true
+    },
+    {
+     "lugar": "Patio de los Naranjos"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Fernán González"
+    },
+    {
+     "lugar": "Calderón de la Barca"
+    },
+    {
+     "lugar": "Iglesia de San Juan"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "REAL, ILUSTRE Y VENERABLE HERMANDAD DEL SANTO TRASLADO Y NUESTRA SEÑORA DE LA SOLEDAD. Parroquia de San Pablo Apóstol (Barrio de la Trinidad)",
+   "pagina": 13,
+   "horas": {
+    "salida": [
+     "19:30"
+    ],
+    "tribuna": [
+     "21:30"
+    ],
+    "torre_sur": [
+     "23:35"
+    ],
+    "encierro": [
+     "02:45"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Rampa de la Aurora"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza la Constitución"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Puente de la Aurora"
+    },
+    {
+     "lugar": "Rampa de la Aurora"
+    },
+    {
+     "lugar": "Trinidad"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "REAL HERMANDAD DE NUESTRA SEÑORA DE LA PIEDAD. Capilla de la Cruz del Molinillo (Barrio de Capuchinos/Molinillo)",
+   "pagina": 13,
+   "horas": {
+    "salida": [
+     "19:30"
+    ],
+    "tribuna": [
+     "22:15"
+    ],
+    "torre_sur": [
+     "00:20"
+    ],
+    "encierro": [
+     "02:00"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Alderete"
+    },
+    {
+     "lugar": "Calle San Bartolomé"
+    },
+    {
+     "lugar": "Cruz del Molinillo"
+    },
+    {
+     "lugar": "Ollerías"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Ollerías"
+    },
+    {
+     "lugar": "Cruz del Molinillo"
+    },
+    {
+     "lugar": "Alderete"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "REAL HERMANDAD DE NUESTRO PADRE JESÚS DEL SANTO SEPULCRO Y NUESTRA SEÑORA DE LA SOLEDAD. Abadía del Císter (Centro)",
+   "pagina": 13,
+   "horas": {
+    "salida": [
+     "19:20"
+    ],
+    "tribuna": [
+     "22:40"
+    ],
+    "torre_sur": [
+     "00:45"
+    ],
+    "encierro": [
+     "02:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Casa Hermandad"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Plaza del Carbón"
+    },
+    {
+     "lugar": "Calderería"
+    },
+    {
+     "lugar": "Plaza de Uncibay"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Tejón y Rodríguez"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Tribuna de los Pobres"
+    },
+    {
+     "lugar": "Pasillo de Santa Isabel"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Siglo"
+    },
+    {
+     "lugar": "Duque de la Victoria"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Císter"
+    },
+    {
+     "lugar": "Plaza de la Aduana"
+    },
+    {
+     "lugar": "Alcazabilla"
+    },
+    {
+     "lugar": "Casa Hermandad"
+    }
+   ]
+  },
+  {
+   "dia": "VIERNES SANTO",
+   "cabecera": "VENERABLE ORDEN SEGLAR DE SIERVOS DE MARÍA SANTÍSIMA DE LOS DOLORES (Servitas). Parroquia de San Felipe Neri (Barrio de Capuchinos / Molinillo)",
+   "pagina": 13,
+   "horas": {
+    "salida": [
+     "22:15"
+    ],
+    "tribuna": [
+     "23:40"
+    ],
+    "torre_sur": [
+     "02:00"
+    ],
+    "encierro": [
+     "03:30"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Álamos"
+    },
+    {
+     "lugar": "Puerta de Buenaventura"
+    },
+    {
+     "lugar": "Plaza del Teatro"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Muro de San Julián"
+    },
+    {
+     "lugar": "Muro de las Catalinas"
+    },
+    {
+     "lugar": "Arco de la Cabeza"
+    },
+    {
+     "lugar": "Plazuela Virgen de las Penas"
+    },
+    {
+     "lugar": "Pozos Dulces"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Fajardo"
+    },
+    {
+     "lugar": "Cisneros"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de La Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Torre Sur"
+    },
+    {
+     "lugar": "Strachan"
+    },
+    {
+     "lugar": "Torre de Sandoval"
+    },
+    {
+     "lugar": "Bolsa"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Liborio García"
+    },
+    {
+     "lugar": "Nueva"
+    },
+    {
+     "lugar": "Especería"
+    },
+    {
+     "lugar": "Salvago"
+    },
+    {
+     "lugar": "Compañía"
+    },
+    {
+     "lugar": "Pozos Dulces"
+    },
+    {
+     "lugar": "Plazuela Virgen de las Penas"
+    },
+    {
+     "lugar": "Arco de la Cabeza"
+    },
+    {
+     "lugar": "Muro de las Catalinas"
+    },
+    {
+     "lugar": "Muro de San Julián"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Carretería"
+    },
+    {
+     "lugar": "Dos Aceras"
+    },
+    {
+     "lugar": "Guerrero"
+    },
+    {
+     "lugar": "Gaona"
+    },
+    {
+     "lugar": "Plazuela Santísimo Cristo de la Sangre"
+    },
+    {
+     "lugar": "Parroquia de la Santa Cruz y San Felipe Neri"
+    }
+   ]
+  },
+  {
+   "dia": "DOMINGO DE RESURRECCIÓN",
+   "cabecera": "SANTÍSIMO CRISTO RESUCITADO Y MARÍA STMA REINA DE LOS CIELOS. Parroquia de San Julián",
+   "pagina": 14,
+   "horas": {
+    "salida": [
+     "10:00"
+    ],
+    "tribuna": [
+     "11:05"
+    ],
+    "torre_sur": [
+     "13:00"
+    ],
+    "encierro": [
+     "15:15"
+    ]
+   },
+   "puntos": [
+    {
+     "lugar": "Parroquia de San Julián"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Santa Lucía"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Plaza de la Constitución"
+    },
+    {
+     "lugar": "Tribuna Principal"
+    },
+    {
+     "lugar": "Marqués de Larios"
+    },
+    {
+     "lugar": "Martínez"
+    },
+    {
+     "lugar": "Atarazanas"
+    },
+    {
+     "lugar": "Torregorda"
+    },
+    {
+     "lugar": "Alameda Principal"
+    },
+    {
+     "lugar": "Plaza de la Marina"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Plaza del Obispo"
+    },
+    {
+     "lugar": "Molina Lario"
+    },
+    {
+     "lugar": "Santa María"
+    },
+    {
+     "lugar": "San Agustín"
+    },
+    {
+     "lugar": "Echegaray"
+    },
+    {
+     "lugar": "Granada"
+    },
+    {
+     "lugar": "Méndez Núñez"
+    },
+    {
+     "lugar": "Comedias"
+    },
+    {
+     "lugar": "Nosquera"
+    },
+    {
+     "lugar": "Parroquia de San Julián"
+    }
+   ]
+  }
+ ]
+}

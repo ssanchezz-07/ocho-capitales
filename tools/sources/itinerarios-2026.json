@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T19:05:21.721Z",
+ "generado": "2026-10-16T16:37:28.583Z",
  "anio": 2026,
  "hermandades": {
   "la-borriquilla-granada": {
@@ -8626,80 +8626,68 @@
    "tramos": {
     "paso": [
      {
-      "fila": "20:00",
+      "fila": "18:00",
       "lugar": "Salida",
-      "hora": "19:50"
+      "hora": "17:55"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "Victoria"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Alcazabilla"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Císter"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Pza. Obispo (Acto)"
      },
      {
       "fila": "20:30",
-      "lugar": "Ancha del Carmen"
+      "lugar": "Granada"
      },
      {
       "fila": "21:00",
-      "lugar": "Pte. Misericordia"
+      "lugar": "Tribuna",
+      "hora": "21:04"
      },
      {
       "fila": "21:30",
-      "lugar": "Alameda Salida"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Pza. Arriola Pte."
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Tribuna",
-      "hora": "22:25"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Pº Santa"
-     },
-     {
-      "fila": "23:00",
       "lugar": "Larios"
      },
      {
-      "fila": "23:30",
-      "lugar": "Atarazanas Tribuna"
+      "fila": "22:00",
+      "lugar": "Atarazanas"
      },
      {
-      "fila": "00:00",
+      "fila": "22:30",
       "lugar": "Alameda"
      },
      {
-      "fila": "00:30",
+      "fila": "23:00",
       "lugar": "Torre Sur",
-      "hora": "00:35"
+      "hora": "23:04"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Duque de la Victoria"
+     },
+     {
+      "fila": "00:00",
+      "lugar": "Casapalma"
+     },
+     {
+      "fila": "00:30",
+      "lugar": "Pza. Merced"
      },
      {
       "fila": "01:00",
-      "lugar": "Strachan"
-     },
-     {
-      "fila": "01:30",
-      "lugar": "Mesón de Vélez Torre Sur"
-     },
-     {
-      "fila": "02:00",
-      "lugar": "Vendeja"
-     },
-     {
-      "fila": "02:30",
-      "lugar": "Pte. Misericordia"
-     },
-     {
-      "fila": "03:00",
-      "lugar": "Ancha del Carmen Pza."
-     },
-     {
-      "fila": "03:30",
       "lugar": "Encierro",
-      "hora": "04:00"
-     },
-     {
-      "fila": "03:30",
-      "lugar": "Encierro"
+      "hora": "01:05"
      }
     ]
    }
@@ -9185,6 +9173,92 @@
       "fila": "03:30",
       "lugar": "Encierro",
       "hora": "04:15"
+     }
+    ]
+   }
+  },
+  "misericordia-malaga": {
+   "ciudad": "malaga",
+   "dia": "Jueves Santo",
+   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "pdf": "Itinerario SS Málaga 2026 2.pdf",
+   "tramos": {
+    "paso": [
+     {
+      "fila": "20:00",
+      "lugar": "Salida",
+      "hora": "19:50"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Ancha del Carmen"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Pte. Misericordia"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Alameda Salida"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Pza. Arriola Pte."
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Tribuna",
+      "hora": "22:25"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Pº Santa"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Larios"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Atarazanas Tribuna"
+     },
+     {
+      "fila": "00:00",
+      "lugar": "Alameda"
+     },
+     {
+      "fila": "00:30",
+      "lugar": "Torre Sur",
+      "hora": "00:35"
+     },
+     {
+      "fila": "01:00",
+      "lugar": "Strachan"
+     },
+     {
+      "fila": "01:30",
+      "lugar": "Mesón de Vélez Torre Sur"
+     },
+     {
+      "fila": "02:00",
+      "lugar": "Vendeja"
+     },
+     {
+      "fila": "02:30",
+      "lugar": "Pte. Misericordia"
+     },
+     {
+      "fila": "03:00",
+      "lugar": "Ancha del Carmen Pza."
+     },
+     {
+      "fila": "03:30",
+      "lugar": "Encierro",
+      "hora": "04:00"
+     },
+     {
+      "fila": "03:30",
+      "lugar": "Encierro"
      }
     ]
    }
@@ -10131,234 +10205,319 @@
     ]
    }
   },
-  "la-o-sevilla": {
+  "la-mision-sevilla": {
    "ciudad": "sevilla",
-   "dia": "Viernes Santo",
+   "dia": "Viernes de Dolores",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "pdf": "SEVILLA 26.pdf",
    "tramos": {
     "paso": [
      {
-      "fila": "16:30",
-      "lugar": "Salida",
-      "hora": "16:45"
-     },
-     {
-      "fila": "17:00",
-      "lugar": "Pl. Platanero"
-     },
-     {
-      "fila": "17:30",
-      "lugar": "Álamo"
-     },
-     {
-      "fila": "18:00",
-      "lugar": "Encina"
-     },
-     {
       "fila": "18:30",
-      "lugar": "Torresquevedo"
+      "lugar": "Salida"
      },
      {
       "fila": "19:00",
-      "lugar": "Torresquevedo"
+      "lugar": "Pl. Fernando VI"
      },
      {
       "fila": "19:30",
-      "lugar": "Torrebermeja"
+      "lugar": "Ávila"
      },
      {
       "fila": "20:00",
-      "lugar": "Torres Naharro"
+      "lugar": "Almirante Argandoña"
      },
      {
       "fila": "20:30",
-      "lugar": "Torrenueva"
+      "lugar": "Santa Margarita"
      },
      {
       "fila": "21:00",
-      "lugar": "Torredonjimeno"
+      "lugar": "Pamplona"
      },
      {
       "fila": "21:30",
-      "lugar": "Torrecuadrada"
+      "lugar": "Guadalajara"
      },
      {
       "fila": "22:00",
-      "lugar": "Torres del Río"
+      "lugar": "Caldereros"
      },
      {
       "fila": "22:30",
-      "lugar": "Torrescarcela"
+      "lugar": "Espejo"
      },
      {
       "fila": "23:00",
-      "lugar": "Torrelaguna"
+      "lugar": "Almenas"
      },
      {
       "fila": "23:30",
-      "lugar": "Torremegía"
+      "lugar": "Pl. Retiro"
      },
      {
       "fila": "0:00",
-      "lugar": "Pl. Salvador Valverde"
+      "lugar": "Rosas"
      },
      {
       "fila": "0:30",
-      "lugar": "Cedro"
-     },
-     {
-      "fila": "1:00",
       "lugar": "Entrada"
      },
      {
+      "fila": "1:00",
+      "lugar": "Rosas"
+     },
+     {
       "fila": "1:30",
-      "lugar": "José Muñiz San Román"
+      "lugar": "Entrada palio"
      },
      {
-      "fila": "2:00",
-      "lugar": "Cedro"
+      "fila": "1:30",
+      "lugar": "(",
+      "hora": "1:45"
+     }
+    ]
+   }
+  },
+  "la-esperanza-de-triana-sevilla": {
+   "ciudad": "sevilla",
+   "dia": "Madrugá",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "pdf": "SEVILLA 26.pdf",
+   "tramos": {
+    "paso": [
+     {
+      "fila": "20:00",
+      "lugar": "Salida"
      },
      {
-      "fila": "2:30",
-      "lugar": "Entrada palio",
-      "hora": "2:15"
+      "fila": "20:30",
+      "lugar": "Prosperidad"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Febo"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Victoria"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Parroquia de Santa Ana"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Pureza"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Rodrigo de Triana"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "San Jacinto"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Entrada",
+      "hora": "0:10"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Entrada paso"
      }
     ],
     "cruz de guía": [
      {
-      "fila": "18:00",
-      "lugar": "Salida"
-     },
-     {
-      "fila": "18:30",
-      "lugar": "San Jorge"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Reyes Católicos"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "San Pablo"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Rioja"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "CAMPANA",
-      "hora": "20:28"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "PLAZA",
-      "hora": "21:08"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "P. SAN MIGUEL",
-      "hora": "21:34"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "PALOS",
-      "hora": "21:52"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Santo Tomás"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Temprado"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Rodo"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Adriano"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "Pastor y Landero"
-     },
-     {
       "fila": "1:00",
-      "lugar": "Puente Isabel II"
+      "lugar": "Salida )",
+      "hora": "1:19"
      },
      {
       "fila": "1:30",
-      "lugar": "Callao"
+      "lugar": "Pureza"
      },
      {
       "fila": "2:00",
+      "lugar": "Pl. Altozano"
+     },
+     {
+      "fila": "2:30",
+      "lugar": "Puente de Triana"
+     },
+     {
+      "fila": "3:00",
+      "lugar": "Reyes Católicos"
+     },
+     {
+      "fila": "3:30",
+      "lugar": "Zaragoza"
+     },
+     {
+      "fila": "4:00",
+      "lugar": "Plaza Nueva"
+     },
+     {
+      "fila": "4:30",
+      "lugar": "Tetuán"
+     },
+     {
+      "fila": "5:00",
+      "lugar": "CAMPANA",
+      "hora": "5:06"
+     },
+     {
+      "fila": "5:30",
+      "lugar": "PLAZA",
+      "hora": "5:46"
+     },
+     {
+      "fila": "6:00",
+      "lugar": "P. SAN MIGUEL",
+      "hora": "6:12"
+     },
+     {
+      "fila": "6:30",
+      "lugar": "PALOS",
+      "hora": "6:31"
+     },
+     {
+      "fila": "7:00",
+      "lugar": "Arfe"
+     },
+     {
+      "fila": "7:30",
+      "lugar": "Adriano"
+     },
+     {
+      "fila": "8:00",
+      "lugar": "Puente de Triana"
+     },
+     {
+      "fila": "8:30",
+      "lugar": "Pl. Altozano"
+     },
+     {
+      "fila": "9:00",
+      "lugar": "San Jacinto"
+     },
+     {
+      "fila": "9:30",
+      "lugar": "Rodrigo de Triana"
+     },
+     {
+      "fila": "10:00",
+      "lugar": "Párroco D. Eugenio"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "Pureza"
+     },
+     {
+      "fila": "11:00",
       "lugar": "Entrada"
      }
     ],
     "palio": [
      {
-      "fila": "18:30",
-      "lugar": "Salida"
+      "fila": "3:00",
+      "lugar": "Salida",
+      "hora": "3:07"
      },
      {
-      "fila": "19:00",
-      "lugar": "Callao"
+      "fila": "3:30",
+      "lugar": "Pureza"
      },
      {
-      "fila": "19:30",
-      "lugar": "Puente"
+      "fila": "4:00",
+      "lugar": "Puente de Triana"
      },
      {
-      "fila": "20:00",
-      "lugar": "Reyes"
+      "fila": "4:30",
+      "lugar": "Reyes Católicos"
      },
      {
-      "fila": "21:00",
-      "lugar": "CAMPANA"
+      "fila": "5:00",
+      "lugar": "Zaragoza"
      },
      {
-      "fila": "21:30",
-      "lugar": "PLAZA"
+      "fila": "5:30",
+      "lugar": "Plaza Nueva"
      },
      {
-      "fila": "22:00",
-      "lugar": "P. SAN"
+      "fila": "6:00",
+      "lugar": "Tetuán"
      },
      {
-      "fila": "22:30",
-      "lugar": "PALOS"
+      "fila": "6:30",
+      "lugar": "CAMPANA",
+      "hora": "6:32"
      },
      {
-      "fila": "23:00",
-      "lugar": "Santo"
+      "fila": "7:00",
+      "lugar": "PLAZA",
+      "hora": "7:12"
      },
      {
-      "fila": "0:00",
-      "lugar": "Dos de"
+      "fila": "7:30",
+      "lugar": "P. SAN MIGUEL",
+      "hora": "7:38"
      },
      {
-      "fila": "0:30",
-      "lugar": "Real de la"
+      "fila": "8:00",
+      "lugar": "PALOS",
+      "hora": "7:57"
      },
      {
-      "fila": "1:00",
+      "fila": "8:30",
+      "lugar": "Arfe"
+     },
+     {
+      "fila": "9:00",
       "lugar": "Adriano"
      },
      {
-      "fila": "1:30",
-      "lugar": "Pastor y"
+      "fila": "9:30",
+      "lugar": "Reyes Católicos"
      },
      {
-      "fila": "2:00",
-      "lugar": "Puente"
+      "fila": "10:00",
+      "lugar": "Puente de Triana"
      },
      {
-      "fila": "2:30",
-      "lugar": "Callao"
+      "fila": "10:30",
+      "lugar": "Pl. Altozano"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "San Jacinto"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "Victoria"
+     },
+     {
+      "fila": "12:00",
+      "lugar": "Rodrigo de Triana"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "Plazuela Santa Ana"
+     },
+     {
+      "fila": "13:00",
+      "lugar": "Párroco Don Eugenio"
+     },
+     {
+      "fila": "13:30",
+      "lugar": "Pureza"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "Entrada",
+      "hora": "13:45"
      }
     ]
    }
@@ -10654,6 +10813,226 @@
     ]
    }
   },
+  "dolores-de-torreblanca-sevilla": {
+   "ciudad": "sevilla",
+   "dia": "Sábado de Pasión",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "pdf": "SEVILLA 26.pdf",
+   "tramos": {
+    "paso": [
+     {
+      "fila": "16:30",
+      "lugar": "Salida",
+      "hora": "16:45"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "Pl. Platanero"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "Álamo"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "Encina"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "Torresquevedo"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Torresquevedo"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Torrebermeja"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Torres Naharro"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Torrenueva"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Torredonjimeno"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Torrecuadrada"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Torres del Río"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Torrescarcela"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Torrelaguna"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Torremegía"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Pl. Salvador Valverde"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Cedro"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Entrada"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "José Muñiz San Román"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "Cedro"
+     },
+     {
+      "fila": "2:30",
+      "lugar": "Entrada palio",
+      "hora": "2:15"
+     }
+    ],
+    "cruz de guía": [
+     {
+      "fila": "18:30",
+      "lugar": "Salida"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "16:45"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Pl. Platanero"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Álamo"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Encina"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Torresquevedo Pl. Acacias"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Torrebermeja"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Torres Naharro"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Torrenueva"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "TorredonjimenoTorres Naharro"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Torrecuadrada"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Torremegía"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Pl . S a l v a d or V a l v e r d e"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "Cedro"
+     },
+     {
+      "fila": "1:40",
+      "lugar": "Entrada"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "19:30",
+      "lugar": "S a l id a 1 7: 4 5"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Pl. Platanero"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Torresquevedo Pl. Platanero"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Pino"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Torresquevedo"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Torrellana"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "T o r re s"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "N a h a r ro"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Torres del Río Torrenueva Avda. Ciudad"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Avda. Plata Torrescarcela Torrelaguna Pl. Obradoiro Pl. Zocodover"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Torrelaguna Torrecuadrada"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Torrescarcela"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "Torregorda"
+     },
+     {
+      "fila": "1:40",
+      "lugar": "Acedo"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "J. M. S. Román - Entra 2:15"
+     }
+    ]
+   }
+  },
   "divino-perdon-sevilla": {
    "ciudad": "sevilla",
    "dia": "Sábado de Pasión",
@@ -10717,6 +11096,64 @@
       "fila": "1:00",
       "lugar": "Entrada palio"
      }
+    ],
+    "cruz de guía": [
+     {
+      "fila": "19:30",
+      "lugar": "Salida"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "C a r m e n C o n d e"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Pint o r A l f onso G r o s s o"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Avda. Ciudad"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "de Chiva"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "de Chiva"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Ciudad de Alfafar"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Ciudad de Paterna"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Ontur"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Pl. Zocodover"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "de Chiva"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Av d a . C i u d ad d e C h i v a"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Torregrosa Emilia Barral Pl. Obradoiro"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Entrada"
+     }
     ]
    }
   },
@@ -10772,76 +11209,6 @@
       "fila": "1:00",
       "lugar": "Entrada palio",
       "hora": "0:50"
-     }
-    ],
-    "cruz de guía": [
-     {
-      "fila": "19:00",
-      "lugar": "Salida 16:55"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "Anto n i o Filpo R o j a s"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Venecia"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Jo a q u í n Mo ra l e s y T."
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Mateos"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Sol"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "María Auxiliadora Cinco"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Avda. Ciudad Carretera de Madre Carmona"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Jabugo"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "M a m á"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "M ar g ar it a"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "José María"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "de Mena"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Arroyo"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Lui s Á l v a rez D u a r t e"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "N ic a s io G a l le g o"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Entrada"
      }
     ],
     "palio": [
@@ -10916,6 +11283,76 @@
      {
       "fila": "1:40",
       "lugar": "Entrada 0:50"
+     }
+    ],
+    "cruz de guía": [
+     {
+      "fila": "19:00",
+      "lugar": "Salida 16:55"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Anto n i o Filpo R o j a s"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Venecia"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Jo a q u í n Mo ra l e s y T."
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Mateos"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Sol"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "María Auxiliadora Cinco"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Avda. Ciudad Carretera de Madre Carmona"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Jabugo"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "M a m á"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "M ar g ar it a"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "José María"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "de Mena"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Arroyo"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Lui s Á l v a rez D u a r t e"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "N ic a s io G a l le g o"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Entrada"
      }
     ]
    }
@@ -16570,205 +17007,6 @@
     ]
    }
   },
-  "la-esperanza-de-triana-sevilla": {
-   "ciudad": "sevilla",
-   "dia": "Madrugá",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
-   "tramos": {
-    "cruz de guía": [
-     {
-      "fila": "1:00",
-      "lugar": "Salida )",
-      "hora": "1:19"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "Pureza"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "Pl. Altozano"
-     },
-     {
-      "fila": "2:30",
-      "lugar": "Puente de Triana"
-     },
-     {
-      "fila": "3:00",
-      "lugar": "Reyes Católicos"
-     },
-     {
-      "fila": "3:30",
-      "lugar": "Zaragoza"
-     },
-     {
-      "fila": "4:00",
-      "lugar": "Plaza Nueva"
-     },
-     {
-      "fila": "4:30",
-      "lugar": "Tetuán"
-     },
-     {
-      "fila": "5:00",
-      "lugar": "CAMPANA",
-      "hora": "5:06"
-     },
-     {
-      "fila": "5:30",
-      "lugar": "PLAZA",
-      "hora": "5:46"
-     },
-     {
-      "fila": "6:00",
-      "lugar": "P. SAN MIGUEL",
-      "hora": "6:12"
-     },
-     {
-      "fila": "6:30",
-      "lugar": "PALOS",
-      "hora": "6:31"
-     },
-     {
-      "fila": "7:00",
-      "lugar": "Arfe"
-     },
-     {
-      "fila": "7:30",
-      "lugar": "Adriano"
-     },
-     {
-      "fila": "8:00",
-      "lugar": "Puente de Triana"
-     },
-     {
-      "fila": "8:30",
-      "lugar": "Pl. Altozano"
-     },
-     {
-      "fila": "9:00",
-      "lugar": "San Jacinto"
-     },
-     {
-      "fila": "9:30",
-      "lugar": "Rodrigo de Triana"
-     },
-     {
-      "fila": "10:00",
-      "lugar": "Párroco D. Eugenio"
-     },
-     {
-      "fila": "10:30",
-      "lugar": "Pureza"
-     },
-     {
-      "fila": "11:00",
-      "lugar": "Entrada"
-     }
-    ],
-    "palio": [
-     {
-      "fila": "3:00",
-      "lugar": "Salida",
-      "hora": "3:07"
-     },
-     {
-      "fila": "3:30",
-      "lugar": "Pureza"
-     },
-     {
-      "fila": "4:00",
-      "lugar": "Puente de Triana"
-     },
-     {
-      "fila": "4:30",
-      "lugar": "Reyes Católicos"
-     },
-     {
-      "fila": "5:00",
-      "lugar": "Zaragoza"
-     },
-     {
-      "fila": "5:30",
-      "lugar": "Plaza Nueva"
-     },
-     {
-      "fila": "6:00",
-      "lugar": "Tetuán"
-     },
-     {
-      "fila": "6:30",
-      "lugar": "CAMPANA",
-      "hora": "6:32"
-     },
-     {
-      "fila": "7:00",
-      "lugar": "PLAZA",
-      "hora": "7:12"
-     },
-     {
-      "fila": "7:30",
-      "lugar": "P. SAN MIGUEL",
-      "hora": "7:38"
-     },
-     {
-      "fila": "8:00",
-      "lugar": "PALOS",
-      "hora": "7:57"
-     },
-     {
-      "fila": "8:30",
-      "lugar": "Arfe"
-     },
-     {
-      "fila": "9:00",
-      "lugar": "Adriano"
-     },
-     {
-      "fila": "9:30",
-      "lugar": "Reyes Católicos"
-     },
-     {
-      "fila": "10:00",
-      "lugar": "Puente de Triana"
-     },
-     {
-      "fila": "10:30",
-      "lugar": "Pl. Altozano"
-     },
-     {
-      "fila": "11:00",
-      "lugar": "San Jacinto"
-     },
-     {
-      "fila": "11:30",
-      "lugar": "Victoria"
-     },
-     {
-      "fila": "12:00",
-      "lugar": "Rodrigo de Triana"
-     },
-     {
-      "fila": "12:30",
-      "lugar": "Plazuela Santa Ana"
-     },
-     {
-      "fila": "13:00",
-      "lugar": "Párroco Don Eugenio"
-     },
-     {
-      "fila": "13:30",
-      "lugar": "Pureza"
-     },
-     {
-      "fila": "14:00",
-      "lugar": "Entrada",
-      "hora": "13:45"
-     }
-    ]
-   }
-  },
   "los-gitanos-sevilla": {
    "ciudad": "sevilla",
    "dia": "Madrugá",
@@ -17053,6 +17291,188 @@
     ]
    }
   },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "ciudad": "sevilla",
+   "dia": "Sábado Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "pdf": "SEVILLA 26.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "18:30",
+      "lugar": "Salida",
+      "hora": "18:50"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Trajano"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "CAMPANA CAMPANA",
+      "hora": "19:43"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Jesús"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PLAZA",
+      "hora": "20:23"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "P. SAN MIGUEL",
+      "hora": "20:49"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PALOS",
+      "hora": "21:08"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "P. SAN"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Alemanes"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Álvarez Quintero"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Cuna"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Las Cortes"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Javier"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Entrada",
+      "hora": "23:35"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "la"
+     }
+    ],
+    "paso": [
+     {
+      "fila": "12:00",
+      "lugar": "12:00"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "12:30"
+     },
+     {
+      "fila": "13:00",
+      "lugar": "13:00"
+     },
+     {
+      "fila": "13:30",
+      "lugar": "13:30"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "14:00"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "14:30"
+     },
+     {
+      "fila": "15:00",
+      "lugar": "15:00"
+     },
+     {
+      "fila": "15:30",
+      "lugar": "15:30"
+     },
+     {
+      "fila": "16:00",
+      "lugar": "16:00"
+     },
+     {
+      "fila": "16:30",
+      "lugar": "16:30"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "17:00"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "17:30"
+     },
+     {
+      "fila": "18:21",
+      "lugar": "18:00"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "18:30"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "19:00"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "19:30"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "J. del Gran Poder 20:00"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Plaza 21:10 21:00"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "S. Miguel 21:36 21:30"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "22:00"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Chapineros 22:30"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Cuna 23:00"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "J. L. de la Vega 23:30"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Card. Spínola 0:00"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Entrada 0:20 0:30"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "1:00"
+     }
+    ]
+   }
+  },
   "el-cachorro-sevilla": {
    "ciudad": "sevilla",
    "dia": "Viernes Santo",
@@ -17269,6 +17689,150 @@
      {
       "fila": "23:00",
       "lugar": "Entrada 22:45"
+     }
+    ]
+   }
+  },
+  "la-o-sevilla": {
+   "ciudad": "sevilla",
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "pdf": "SEVILLA 26.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "18:00",
+      "lugar": "Salida"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "San Jorge"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Reyes Católicos"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "San Pablo"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Rioja"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "CAMPANA",
+      "hora": "20:28"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PLAZA",
+      "hora": "21:08"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "P. SAN MIGUEL",
+      "hora": "21:34"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "PALOS",
+      "hora": "21:52"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Santo Tomás"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Temprado"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Rodo"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Adriano"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Pastor y Landero"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Puente Isabel II"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "Callao"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "Entrada"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "18:30",
+      "lugar": "Salida"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Callao"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Puente"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Reyes"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "CAMPANA"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "PLAZA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "P. SAN"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "PALOS"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Santo"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Dos de"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Real de la"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Adriano"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "Pastor y"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "Puente"
+     },
+     {
+      "fila": "2:30",
+      "lugar": "Callao"
      }
     ]
    }
@@ -18129,188 +18693,6 @@
     ]
    }
   },
-  "la-soledad-de-san-lorenzo-sevilla": {
-   "ciudad": "sevilla",
-   "dia": "Sábado Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
-   "tramos": {
-    "cruz de guía": [
-     {
-      "fila": "18:30",
-      "lugar": "Salida",
-      "hora": "18:50"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Trajano"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "CAMPANA CAMPANA",
-      "hora": "19:43"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Jesús"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "PLAZA",
-      "hora": "20:23"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "P. SAN MIGUEL",
-      "hora": "20:49"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "PALOS",
-      "hora": "21:08"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "P. SAN"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Alemanes"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Álvarez Quintero"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Cuna"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Las Cortes"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Javier"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Entrada",
-      "hora": "23:35"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "la"
-     }
-    ],
-    "paso": [
-     {
-      "fila": "12:00",
-      "lugar": "12:00"
-     },
-     {
-      "fila": "12:30",
-      "lugar": "12:30"
-     },
-     {
-      "fila": "13:00",
-      "lugar": "13:00"
-     },
-     {
-      "fila": "13:30",
-      "lugar": "13:30"
-     },
-     {
-      "fila": "14:00",
-      "lugar": "14:00"
-     },
-     {
-      "fila": "14:30",
-      "lugar": "14:30"
-     },
-     {
-      "fila": "15:00",
-      "lugar": "15:00"
-     },
-     {
-      "fila": "15:30",
-      "lugar": "15:30"
-     },
-     {
-      "fila": "16:00",
-      "lugar": "16:00"
-     },
-     {
-      "fila": "16:30",
-      "lugar": "16:30"
-     },
-     {
-      "fila": "17:00",
-      "lugar": "17:00"
-     },
-     {
-      "fila": "17:30",
-      "lugar": "17:30"
-     },
-     {
-      "fila": "18:21",
-      "lugar": "18:00"
-     },
-     {
-      "fila": "18:30",
-      "lugar": "18:30"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "19:00"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "19:30"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "J. del Gran Poder 20:00"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Plaza 21:10 21:00"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "S. Miguel 21:36 21:30"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "22:00"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Chapineros 22:30"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Cuna 23:00"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "J. L. de la Vega 23:30"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Card. Spínola 0:00"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "Entrada 0:20 0:30"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "1:00"
-     }
-    ]
-   }
-  },
   "bellavista-sevilla": {
    "ciudad": "sevilla",
    "dia": "Viernes de Dolores",
@@ -18597,138 +18979,6 @@
      {
       "fila": "0:30",
       "lugar": "Entrada"
-     }
-    ]
-   }
-  },
-  "dolores-de-torreblanca-sevilla": {
-   "ciudad": "sevilla",
-   "dia": "Sábado de Pasión",
-   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
-   "tramos": {
-    "cruz de guía": [
-     {
-      "fila": "18:30",
-      "lugar": "Salida"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "16:45"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Pl. Platanero"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "Álamo"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Encina"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Torresquevedo Pl. Acacias"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Torrebermeja"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Torres Naharro"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Torrenueva"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "TorredonjimenoTorres Naharro"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Torrecuadrada"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "Torremegía"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Pl . S a l v a d or V a l v e r d e"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "Cedro"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "Entrada"
-     }
-    ],
-    "palio": [
-     {
-      "fila": "19:30",
-      "lugar": "S a l id a 1 7: 4 5"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Pl. Platanero"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Torresquevedo Pl. Platanero"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Pino"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Torresquevedo"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Torrellana"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "T o r re s"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "N a h a r ro"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Torres del Río Torrenueva Avda. Ciudad"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Avda. Plata Torrescarcela Torrelaguna Pl. Obradoiro Pl. Zocodover"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Torrelaguna Torrecuadrada"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Torrescarcela"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "Torregorda"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "Acedo"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "J. M. S. Román - Entra 2:15"
      }
     ]
    }
@@ -19207,6 +19457,2803 @@
      {
       "fila": "22:30",
       "lugar": "Entrada"
+     }
+    ]
+   }
+  },
+  "la-o-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Sábado de Pasión",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "18:00",
+      "lugar": "SALIDA",
+      "hora": "18:00"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "AV. BLAS INFANTE"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "AV. BLAS INFANTE"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "C/ NTRA. SEÑORA DE LA MERCED"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "C/ NTRA. SEÑORA DE LA MERCED"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "C/ ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "C/ESCRITOR GÓMEZ DE RIVERA"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "AV. ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "AV. ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "AV. ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "AV. CARLOS III"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "AV. CARLOS III"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "C/ VEREDA DE LA ALCAIDÍA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "C/ ESCRITOR JOSÉ DE LOS HEROS"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "ENTRADA",
+      "hora": "23:00"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "18:30",
+      "lugar": "SALIDA",
+      "hora": "18:30"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "AV. BLAS INFANTE"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "C/ NUESTRA SEÑORA DE LA MERCED"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "C/ NUESTRA SEÑORA DE LA MERCED"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "C/ ESCRITOR GÓMEZ DE RIVERA"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "C/ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "C/ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "C/ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "C/ESCRITOR HOYOS DE NORIEGA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "AV. CARLOS III"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "AV. CARLOS III"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "C/ VEREDA DE LA ALCAIDÍA"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "C/ ESCRITOR JOSÉ DE LOS HEROS"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "C/ HISTORIADOR JAÉN MORENTE"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "C/ARCOS DE LA FRONTERA"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "AV. VIRGEN DE FÁTIMA"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "PZA. MAHATMA GANDHI"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "ENTRADA",
+      "hora": "23:30"
+     }
+    ]
+   }
+  },
+  "lagrimas-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Sábado de Pasión",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "19:00",
+      "lugar": "SALIDA",
+      "hora": "19:00"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "PINTORA MARIA BLANDCHARD"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PASAJE BATALLA DE LEPANTO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "ISLA MALLORCA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "ISLA FORMENTERA"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "ISLA DE HIERRO"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "ISLA DE MADEIRA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "ISLA DE LANZAROTE"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "ISLA MALANTE"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "FUENTEVENTURA"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "FUENTEVENTURA"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "ISLA GRACIOSA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "ENTRADA",
+      "hora": "22:50"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "19:10",
+      "lugar": "SALIDA",
+      "hora": "19:15"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PINTORA MARIA BLANDCHARD"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "PASAJE BATALLA DE LEPANTO"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "ISLA MALLORCA"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "ISLA FORMENTERA"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "ISLA DE HIERRO"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "ISLA DE MADEIRA"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "ISLA DE LANZAROTE"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "ISLA MALANTE"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "FUENTEVENTURA"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "FUENTEVENTURA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "ISLA GRACIOSA"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "AVENIDA DEL MEDITERRANEO"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "PLAZA MARINA ESPAÑOLA"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "ENTRADA",
+      "hora": "23:05"
+     }
+    ]
+   }
+  },
+  "entrada-triunfal-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "9:45",
+      "lugar": "SALIDA",
+      "hora": "09:45"
+     },
+     {
+      "fila": "10:00",
+      "lugar": "PLAZA SAN LORENZO"
+     },
+     {
+      "fila": "10:10",
+      "lugar": "ARROYO SAN LORENZO"
+     },
+     {
+      "fila": "10:20",
+      "lugar": "RONDA DE ANDÚJAR"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "10:40",
+      "lugar": "PLAZA SAN BARTOLOMÉ"
+     },
+     {
+      "fila": "10:50",
+      "lugar": "PLAZA SAN PEDRO"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "ESQ. SAN PEDRO - LINEROS"
+     },
+     {
+      "fila": "11:10",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "11:20",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "11:40",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "11:50",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "12:00",
+      "lugar": "ENTRADA C.O.",
+      "hora": "12:00"
+     },
+     {
+      "fila": "12:10",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "12:20",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "12:40",
+      "lugar": "PUERTA DE LAS COFRADÍAS",
+      "hora": "12:40"
+     },
+     {
+      "fila": "12:50",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "13:00",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "13:10",
+      "lugar": "SALIDA C.O.",
+      "hora": "13:05"
+     },
+     {
+      "fila": "13:20",
+      "lugar": "MAGISTRAL GONZALEZ FRANCES"
+     },
+     {
+      "fila": "13:30",
+      "lugar": "CARDENAL GONZALEZ"
+     },
+     {
+      "fila": "13:40",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "13:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "14:10",
+      "lugar": "DIARIO CORDOBA"
+     },
+     {
+      "fila": "14:20",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "14:40",
+      "lugar": "SAN PABLO (IGLESIA)"
+     },
+     {
+      "fila": "14:50",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "15:00",
+      "lugar": "PLAZA DE SAN ANDRÉS"
+     },
+     {
+      "fila": "15:10",
+      "lugar": "REALEJO"
+     },
+     {
+      "fila": "15:20",
+      "lugar": "REALEJO"
+     },
+     {
+      "fila": "15:30",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "15:40",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "15:50",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "16:00",
+      "lugar": "ENTRADA",
+      "hora": "16:00"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "10:00",
+      "lugar": "SALIDA",
+      "hora": "10:15"
+     },
+     {
+      "fila": "10:10",
+      "lugar": "PLAZA SAN LORENZO"
+     },
+     {
+      "fila": "10:20",
+      "lugar": "ARROYO SAN LORENZO"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "RONDA DE ANDÚJAR"
+     },
+     {
+      "fila": "10:40",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "10:50",
+      "lugar": "PLAZA SAN BARTOLOMÉ"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "PLAZA SAN PEDRO"
+     },
+     {
+      "fila": "11:10",
+      "lugar": "ESQ. SAN PEDRO - LINEROS"
+     },
+     {
+      "fila": "11:20",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "11:40",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "11:50",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "12:00",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "12:10",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "12:20",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "ENTRADA C.O.",
+      "hora": "12:30"
+     },
+     {
+      "fila": "12:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "12:50",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "13:00",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "13:10",
+      "lugar": "PUERTA DE LAS COFRADÍAS",
+      "hora": "13:10"
+     },
+     {
+      "fila": "13:20",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "13:30",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "13:40",
+      "lugar": "SALIDA C.O.",
+      "hora": "13:35"
+     },
+     {
+      "fila": "13:50",
+      "lugar": "MAGISTRAL GONZALEZ FRANCES"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "CARDENAL GONZALEZ"
+     },
+     {
+      "fila": "14:10",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "14:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "14:40",
+      "lugar": "DIARIO CORDOBA"
+     },
+     {
+      "fila": "14:50",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "15:00",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "15:10",
+      "lugar": "SAN PABLO (IGLESIA)"
+     },
+     {
+      "fila": "15:20",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "15:30",
+      "lugar": "PLAZA DE SAN ANDRÉS"
+     },
+     {
+      "fila": "15:40",
+      "lugar": "REALEJO"
+     },
+     {
+      "fila": "15:50",
+      "lugar": "REALEJO"
+     },
+     {
+      "fila": "16:00",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "16:10",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "16:20",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "16:30",
+      "lugar": "ENTRADA",
+      "hora": "16:30"
+     }
+    ]
+   }
+  },
+  "penas-de-santiago-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "16:00",
+      "lugar": "SALIDA",
+      "hora": "16:00"
+     },
+     {
+      "fila": "16:10",
+      "lugar": "AGUSTÍN MORENO"
+     },
+     {
+      "fila": "16:20",
+      "lugar": "PZA. STMO CRISTO DE LAS PENAS"
+     },
+     {
+      "fila": "16:30",
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "16:40",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "16:50",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "17:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "18:30",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "18:50",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "RODRÍGUEZ MARÍN"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "PLAZA DEL SOCORRO"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PLAZA DE LA ALMAGRA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "ESCULTOR JUAN DE MESA"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "PLAZA DE SAN PEDRO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "PLAZA DE SAN PEDRO"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "AGUSTÍN MORENO"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "PZA. STMO CRISTO DE LAS PENAS"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "ENTRADA",
+      "hora": "22:00"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "16:30",
+      "lugar": "SALIDA",
+      "hora": "16:30"
+     },
+     {
+      "fila": "16:40",
+      "lugar": "AGUSTÍN MORENO"
+     },
+     {
+      "fila": "16:50",
+      "lugar": "PZA. STMO CRISTO DE LAS PENAS"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "18:10",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "19:00",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "19:20",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "RODRÍGUEZ MARÍN"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "PLAZA DEL SOCORRO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "PLAZA DE LA ALMAGRA"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "ESCULTOR JUAN DE MESA"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "PLAZA DE SAN PEDRO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "PLAZA DE SAN PEDRO"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "AGUSTÍN MORENO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "PZA. STMO CRISTO DE LAS PENAS"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "ENTRADA",
+      "hora": "22:30"
+     }
+    ]
+   }
+  },
+  "el-huerto-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "17:00",
+      "lugar": "SALIDA",
+      "hora": "17:00"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "18:10",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "19:00",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "19:20",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "RODRÍGUEZ MARÍN"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "SÁNCHEZ PEÑA"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SÁNCHEZ PEÑA"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "MAESE LUIS"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "MAESE LUIS"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "COMPAS DE SAN FRANCISCO"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "ENTRADA",
+      "hora": "22:40"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "17:40",
+      "lugar": "SALIDA",
+      "hora": "17:40"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "18:50",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PUERTA DE COFRADIAS"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "19:40",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "20:00",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "RODRÍGUEZ MARÍN"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "PLAZA DE LA CORREDERA"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "SÁNCHEZ PEÑA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "SÁNCHEZ PEÑA"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "MAESE LUIS"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "MAESE LUIS"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "HUERTO SAN PEDRO EL REAL"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "COMPAS DE SAN FRANCISCO"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "ENTRADA",
+      "hora": "23:10"
+     }
+    ]
+   }
+  },
+  "el-rescatado-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "16:00",
+      "lugar": "SALIDA",
+      "hora": "16:05"
+     },
+     {
+      "fila": "16:10",
+      "lugar": "MARÍA AUXILIADORA"
+     },
+     {
+      "fila": "16:20",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "16:30",
+      "lugar": "ARROYO DE SAN LORENZO"
+     },
+     {
+      "fila": "16:40",
+      "lugar": "RONDA DE ANDÚJAR"
+     },
+     {
+      "fila": "16:50",
+      "lugar": "PUERTA NUEVA"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "PLAZA VIZCONDE DE MIRANDA"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "PLAZA DEL POTRO"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "18:50",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "19:40",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "20:00",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "PLAZA DE SAN ANDRÉS"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "PLAZA DE JUAN BERNIER"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "JESÚS DEL CALVARIO"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "PLAZA DE SAN JUAN DE LETRÁN"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "FRAILES"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "FRAILES"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "PLAZA CRISTO DE GRACIA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "PLAZA CRISTO DE GRACIA"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "PLAZA CRISTO DE GRACIA"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "ENTRADA",
+      "hora": "23:15"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "15:40",
+      "lugar": "Entrada Triunfal"
+     },
+     {
+      "fila": "16:40",
+      "lugar": "SALIDA",
+      "hora": "16:40"
+     },
+     {
+      "fila": "16:50",
+      "lugar": "MARÍA AUXILIADORA"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "ARROYO DE SAN LORENZO"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "RONDA DE ANDÚJAR"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "PUERTA NUEVA"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "ALFONSO XII"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "PLAZA VIZCONDE DE MIRANDA"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "LINEROS"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "PLAZA DEL POTRO"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "LUCANO"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "19:30",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "20:40",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "PLAZA DE SAN ANDRÉS"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "SANTA MARÍA DE GRACIA"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "PLAZA DE JUAN BERNIER"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "PLAZA DE SAN LORENZO"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "JESÚS DEL CALVARIO"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "PLAZA DE SAN JUAN DE LETRÁN"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "FRAILES"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "FRAILES"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "PLAZA CRISTO DE GRACIA"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "PLAZA CRISTO DE GRACIA"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "ENTRADA",
+      "hora": "23:45"
+     }
+    ]
+   }
+  },
+  "vera-cruz-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "18:00",
+      "lugar": "SALIDA",
+      "hora": "18:00"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "AVDA DE LA DIPUTACIÓN"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "PLAZA DE SANTA TERESA"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "CALAHORRA"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "19:30",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "20:40",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "SAN FRANCISCO"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "PLAZA DEL POTRO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "ROMERO TORRES"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "PASEO DE LA RIBERA"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "PSO. CRISTO DEL DESCENDIMIENTO"
+     },
+     {
+      "fila": "23:50",
+      "lugar": "ENTRADA",
+      "hora": "23:50"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "17:50",
+      "lugar": "Entrada Triunfal"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "SALIDA"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "AVDA DE LA DIPUTACIÓN"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "PLAZA DE SANTA TERESA"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "CALAHORRA"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "20:00",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "20:50",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "21:10",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "SAN FRANCISCO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "PLAZA DEL POTRO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "ROMERO TORRES"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "PASEO DE LA RIBERA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:50",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "0:10",
+      "lugar": "PSO. CRISTO DEL DESCENDIMIENTO"
+     },
+     {
+      "fila": "0:20",
+      "lugar": "ENTRADA",
+      "hora": "00:20"
+     }
+    ]
+   }
+  },
+  "la-esperanza-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "16:30",
+      "lugar": "SALIDA",
+      "hora": "16:30"
+     },
+     {
+      "fila": "16:40",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "16:50",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "ALFONSO XIII"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "ALFONSO XIII"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "DIEGO DE LEÓN"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "PLAZA DE LAS TENDILLAS"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "GONDOMAR"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "SAN FELIPE"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "PLAZA DE RAMÓN Y CAJAL"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "TESORO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "LOPE DE HOCES"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "PUERTA DE ALMODÓVAR"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PUERTA DE ALMODÓVAR"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "CAMPO SANTO DE LOS MÁRTIRES"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "SANTA TERESA DE JORNET"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "RONDA ISASA"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "20:00",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "20:50",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "21:10",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "ENTRADA",
+      "hora": "23:10"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "16:20",
+      "lugar": "Entrada Triunfal"
+     },
+     {
+      "fila": "17:00",
+      "lugar": "SALIDA",
+      "hora": "17:05"
+     },
+     {
+      "fila": "17:10",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "17:20",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "ALFONSO XIII"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "ALFONSO XIII"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "DIEGO DE LEÓN"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "PLAZA DE LAS TENDILLAS"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "GONDOMAR"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "GONDOMAR"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "SAN FELIPE"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PLAZA DE RAMÓN Y CAJAL"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "TESORO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "LOPE DE HOCES"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "PUERTA DE ALMODÓVAR"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PUERTA DE ALMODÓVAR"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "CAMPO SANTO DE LOS MÁRTIRES"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "SANTA TERESA DE JORNET"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "RONDA ISASA"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "20:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "21:40",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "CARDENAL GONZÁLEZ"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "SAN ANDRÉS"
+     },
+     {
+      "fila": "23:50",
+      "lugar": "ENTRADA",
+      "hora": "23:50"
+     }
+    ]
+   }
+  },
+  "el-amor-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Ramos",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "17:30",
+      "lugar": "SALIDA",
+      "hora": "17:30"
+     },
+     {
+      "fila": "17:40",
+      "lugar": "PASAJE CRISTO DEL AMOR"
+     },
+     {
+      "fila": "17:50",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "20:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "21:40",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "CORREGIDOR LUIS DE LA CERDA"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "CORREGIDOR LUIS DE LA CERDA"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "22:20",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "CALAHORRA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "23:50",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:10",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:20",
+      "lugar": "PLAZA CRISTO DEL AMOR"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "ENTRADA",
+      "hora": "00:30"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "17:20",
+      "lugar": "Entrada Triunfal"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "SALIDA",
+      "hora": "18:30"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "PASAJE CRISTO DEL AMOR"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:10",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:20",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:40",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "20:50",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "21:10",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "21:20",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "PUERTA DE LAS COFRADÍAS"
+     },
+     {
+      "fila": "22:10",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "22:20",
+      "lugar": "SALIDA C.O."
+     },
+     {
+      "fila": "22:30",
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
+     },
+     {
+      "fila": "22:40",
+      "lugar": "CORREGIDOR LUIS DE LA CERDA"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "PUENTE ROMANO"
+     },
+     {
+      "fila": "23:20",
+      "lugar": "BAJADA DEL PUENTE"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "PLAZA SANTA TERESA"
+     },
+     {
+      "fila": "23:40",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "23:50",
+      "lugar": "CALLE ROSARIO"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:10",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:20",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:40",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "0:50",
+      "lugar": "BEATO HENARES"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "PASAJE CRISTO DEL AMOR"
+     },
+     {
+      "fila": "1:10",
+      "lugar": "PLAZA CRISTO DEL AMOR"
+     },
+     {
+      "fila": "1:20",
+      "lugar": "ENTRADA",
+      "hora": "01:20"
      }
     ]
    }
@@ -20767,10 +23814,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "18:40",
-      "lugar": "FINAL DE CORTEJO"
-     },
-     {
       "fila": "18:50",
       "lugar": "SALIDA",
       "hora": "18:56"
@@ -21339,25 +24382,21 @@
     ],
     "final del cortejo": [
      {
-      "fila": "20:10",
-      "lugar": "FINAL DE CORTEJO"
-     },
-     {
       "fila": "20:20",
       "lugar": "SALIDA",
       "hora": "20:19"
      },
      {
       "fila": "20:30",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN LORENZO"
      },
      {
       "fila": "20:40",
-      "lugar": "ARROYO DE SAN"
+      "lugar": "ARROYO DE SAN LORENZO"
      },
      {
       "fila": "20:50",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ANDÚJAR"
      },
      {
       "fila": "21:00",
@@ -21369,7 +24408,7 @@
      },
      {
       "fila": "21:20",
-      "lugar": "PZA. VIZCONDE DE"
+      "lugar": "PZA. VIZCONDE DE MIRANDA"
      },
      {
       "fila": "21:30",
@@ -21381,7 +24420,7 @@
      },
      {
       "fila": "21:50",
-      "lugar": "ENRIQUE ROMERO"
+      "lugar": "ENRIQUE ROMERO TORRES"
      },
      {
       "fila": "22:00",
@@ -21401,11 +24440,11 @@
      },
      {
       "fila": "22:40",
-      "lugar": "PUERTA DEL"
+      "lugar": "PUERTA DEL PERDÓN"
      },
      {
       "fila": "22:50",
-      "lugar": "PUERTA DE LAS"
+      "lugar": "PUERTA DE LAS COFRADÍAS"
      },
      {
       "fila": "23:00",
@@ -21421,11 +24460,11 @@
      },
      {
       "fila": "23:30",
-      "lugar": "MAGISTRAL GONZÁLEZ"
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
      },
      {
       "fila": "23:40",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "23:50",
@@ -21453,7 +24492,7 @@
      },
      {
       "fila": "0:50",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN ANDRÉS"
      },
      {
       "fila": "1:00",
@@ -21465,11 +24504,11 @@
      },
      {
       "fila": "1:20",
-      "lugar": "SANTA MARÍA DE"
+      "lugar": "SANTA MARÍA DE GRACIA"
      },
      {
       "fila": "1:30",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN LORENZO"
      },
      {
       "fila": "1:40",
@@ -23395,172 +26434,185 @@
     ],
     "final del cortejo": [
      {
-      "fila": "19:00",
-      "lugar": "FINAL DEL"
-     },
-     {
       "fila": "19:10",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA",
+      "hora": "19:15"
      },
      {
       "fila": "19:20",
-      "lugar": "SANTO"
+      "lugar": "SANTO DOMINGO SAVIO"
      },
      {
       "fila": "19:30",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "19:40",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "19:50",
-      "lugar": "ARROYO DE"
+      "lugar": "ARROYO DE SAN LORENZO"
      },
      {
       "fila": "20:00",
-      "lugar": "PLAZA JESÚS DEL"
+      "lugar": "PLAZA JESÚS DEL PRENDIMIENTO"
      },
      {
       "fila": "20:10",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ANDÚJAR"
+     },
+     {
+      "fila": "20:20",
+      "lugar": "ALFONSO XII"
      },
      {
       "fila": "20:30",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN BARTOLOMÉ"
      },
      {
       "fila": "20:40",
-      "lugar": "PLAZA VIZCONDE"
+      "lugar": "PLAZA VIZCONDE DE MIRANDA"
      },
      {
       "fila": "20:50",
-      "lugar": "PLAZA DE"
+      "lugar": "PLAZA DE SAN PEDRO"
      },
      {
       "fila": "21:00",
-      "lugar": "DON"
+      "lugar": "DON RODRIGO"
      },
      {
       "fila": "21:10",
-      "lugar": "DON"
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "21:20",
+      "lugar": "LINEROS"
      },
      {
       "fila": "21:30",
-      "lugar": "PLAZA DEL"
+      "lugar": "PLAZA DEL POTRO"
      },
      {
       "fila": "21:40",
-      "lugar": "PASEO DE LA"
+      "lugar": "PASEO DE LA RIBERA"
      },
      {
       "fila": "21:50",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:00",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:10",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "22:20",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "TORRIJOS"
      },
      {
       "fila": "22:40",
-      "lugar": "PUERTA DEL"
+      "lugar": "PUERTA DEL PERDÓN"
      },
      {
       "fila": "22:50",
-      "lugar": "PUERTA DE LAS"
+      "lugar": "PUERTA DE LAS COFRADÍAS"
      },
      {
       "fila": "23:00",
-      "lugar": "INTERIOR"
+      "lugar": "INTERIOR S.I.C."
      },
      {
       "fila": "23:10",
-      "lugar": "PATIO"
+      "lugar": "PATIO NARANJOS"
      },
      {
       "fila": "23:20",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA C.O."
      },
      {
       "fila": "23:30",
-      "lugar": "MAGISTRAL"
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
      },
      {
       "fila": "23:40",
-      "lugar": "MAGISTRAL"
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
      },
      {
       "fila": "23:50",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:00",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:10",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:20",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "0:30",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "0:40",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "0:50",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "1:00",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "1:10",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "1:20",
+      "lugar": "CAPITULARES"
      },
      {
       "fila": "1:30",
-      "lugar": "SAN"
+      "lugar": "SAN PABLO"
      },
      {
       "fila": "1:40",
-      "lugar": "SAN"
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "1:50",
+      "lugar": "REALEJO"
      },
      {
       "fila": "2:00",
-      "lugar": "PLAZA DEL"
+      "lugar": "PLAZA DEL REALEJO"
      },
      {
       "fila": "2:10",
-      "lugar": "SANTA MARÍA"
+      "lugar": "SANTA MARÍA DE GRACIA"
      },
      {
       "fila": "2:20",
-      "lugar": "SANTA MARÍA"
+      "lugar": "SANTA MARÍA DE GRACIA"
      },
      {
       "fila": "2:30",
-      "lugar": "PLAZA DE SAN"
-     },
-     {
-      "fila": "2:40",
-      "lugar": "MARÍA"
-     },
-     {
-      "fila": "2:50",
-      "lugar": "ENTRADA"
-     },
-     {
-      "fila": "2:50",
-      "lugar": "FINAL DEL"
+      "lugar": "PLAZA DE SAN LORENZO"
      }
     ]
    }
@@ -25292,248 +28344,266 @@
     ],
     "final del cortejo": [
      {
-      "fila": "17:30",
-      "lugar": "FINAL DEL"
-     },
-     {
       "fila": "17:40",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA",
+      "hora": "17:40"
      },
      {
       "fila": "17:50",
-      "lugar": "SIERRA DE"
+      "lugar": "SIERRA DE GUADARRAMA"
      },
      {
       "fila": "18:00",
-      "lugar": "SIERRA"
+      "lugar": "SIERRA MORENA"
      },
      {
       "fila": "18:10",
-      "lugar": "SIERRA DE"
+      "lugar": "SIERRA DE GUADARRAMA"
      },
      {
       "fila": "18:20",
-      "lugar": "SIERRA"
+      "lugar": "SIERRA CAZORLA"
      },
      {
       "fila": "18:30",
-      "lugar": "BARÍTONO J.Mª."
+      "lugar": "BARÍTONO J.Mª. AGUILAR BLANCO"
      },
      {
       "fila": "18:40",
-      "lugar": "BARÍTONO J.Mª."
+      "lugar": "BARÍTONO J.Mª. AGUILAR BLANCO"
      },
      {
       "fila": "18:50",
-      "lugar": "PASEO DE LOS"
+      "lugar": "PASEO DE LOS VERDIALES"
      },
      {
       "fila": "19:00",
-      "lugar": "PASEO DE LOS"
+      "lugar": "PASEO DE LOS VERDIALES"
      },
      {
       "fila": "19:10",
-      "lugar": "AVDA. NTRA."
+      "lugar": "AVDA. NTRA. SEÑORA BEGOÑA"
      },
      {
       "fila": "19:20",
-      "lugar": "AVDA. NTRA."
+      "lugar": "AVDA. NTRA. SEÑORA BEGOÑA"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "ELECTROMECÁNICAS"
      },
      {
       "fila": "19:40",
-      "lugar": "CARRETERA DE"
+      "lugar": "CARRETERA DE PALMA DEL RÍO"
      },
      {
       "fila": "19:50",
-      "lugar": "ESCRIBA"
+      "lugar": "ESCRIBA LUBNA"
      },
      {
       "fila": "20:00",
-      "lugar": "ESCRIBA"
+      "lugar": "ESCRIBA LUBNA"
      },
      {
       "fila": "20:10",
-      "lugar": "CAMINO VIEJO DE"
+      "lugar": "CAMINO VIEJO DE ALMODOVAR"
      },
      {
       "fila": "20:20",
-      "lugar": "RAFAEL MÁRQUEZ"
+      "lugar": "RAFAEL MÁRQUEZ MAZZANTINI"
      },
      {
       "fila": "20:30",
-      "lugar": "AVDA. DE"
+      "lugar": "AVDA. DE MANOLETE"
      },
      {
       "fila": "20:40",
-      "lugar": "ANTONIO"
+      "lugar": "ANTONIO MAURA"
      },
      {
       "fila": "20:50",
-      "lugar": "PLAZA DE"
+      "lugar": "PLAZA DE COSTASOL"
      },
      {
       "fila": "20:50",
-      "lugar": "PLAZA DE"
+      "lugar": "PLAZA DE COSTASOL"
      },
      {
       "fila": "21:00",
-      "lugar": "ANTONIO"
+      "lugar": "ANTONIO MAURA"
      },
      {
       "fila": "21:10",
-      "lugar": "REPÚBLICA"
+      "lugar": "REPÚBLICA ARGENTINA"
      },
      {
       "fila": "21:20",
-      "lugar": "JARDINES DE"
+      "lugar": "JARDINES DE LA VICTORIA"
      },
      {
       "fila": "21:30",
-      "lugar": "PASEO DE LA"
+      "lugar": "PASEO DE LA VICTORIA"
      },
      {
       "fila": "21:40",
-      "lugar": "PINTOR"
+      "lugar": "PINTOR LÓPEZ OBRERO"
      },
      {
       "fila": "21:50",
-      "lugar": "PUERTA"
+      "lugar": "PUERTA ALMODÓVAR"
      },
      {
       "fila": "22:00",
-      "lugar": "GLORIETA"
+      "lugar": "GLORIETA CRUZ ROJA"
      },
      {
       "fila": "22:10",
-      "lugar": "DOCTOR"
+      "lugar": "DOCTOR FLEMING"
      },
      {
       "fila": "22:20",
-      "lugar": "CAMPO"
+      "lugar": "CAMPO SANTOS MÁRTIRES"
      },
      {
       "fila": "22:30",
-      "lugar": "SANTA TERESA"
+      "lugar": "SANTA TERESA JOURNET"
      },
      {
       "fila": "22:40",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:50",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "23:00",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "23:10",
+      "lugar": "TORRIJOS"
      },
      {
       "fila": "23:20",
-      "lugar": "PUERTA DEL"
+      "lugar": "PUERTA DEL PERDÓN"
      },
      {
       "fila": "23:30",
-      "lugar": "PUERTA DE LAS"
+      "lugar": "PUERTA DE LAS COFRADÍAS"
      },
      {
       "fila": "23:40",
-      "lugar": "INTERIOR"
+      "lugar": "INTERIOR S.I.C."
      },
      {
       "fila": "23:50",
-      "lugar": "PATIO"
+      "lugar": "PATIO NARANJOS"
      },
      {
       "fila": "0:00",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA C.O."
      },
      {
       "fila": "0:10",
-      "lugar": "MAGISTRAL"
+      "lugar": "MAGISTRAL GLEZ. FRANCÉS"
      },
      {
       "fila": "0:20",
-      "lugar": "CORREGIDOR LUIS"
+      "lugar": "CORREGIDOR LUIS DE LA CERDA"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "TRIUNFO"
      },
      {
       "fila": "0:40",
-      "lugar": "AMADOR DE"
+      "lugar": "AMADOR DE LOS RIOS"
      },
      {
       "fila": "0:50",
-      "lugar": "CAMPO"
+      "lugar": "CAMPO SANTOS MÁRTIRES"
      },
      {
       "fila": "1:00",
-      "lugar": "DOCTOR"
+      "lugar": "DOCTOR FLEMING"
      },
      {
       "fila": "1:10",
-      "lugar": "CRUZ"
+      "lugar": "CRUZ ROJA"
      },
      {
       "fila": "1:20",
-      "lugar": "PASEO DE LA"
+      "lugar": "PASEO DE LA VICTORIA"
      },
      {
       "fila": "1:30",
-      "lugar": "CAMINO DE"
+      "lugar": "CAMINO DE LOS SASTRES"
      },
      {
       "fila": "1:40",
-      "lugar": "PLAZA DE"
+      "lugar": "PLAZA DE COSTASOL"
      },
      {
       "fila": "1:50",
-      "lugar": "ANTONIO"
+      "lugar": "ANTONIO MAURA"
      },
      {
       "fila": "2:00",
-      "lugar": "GRAN VÍA"
+      "lugar": "GRAN VÍA PARQUE"
      },
      {
       "fila": "2:10",
-      "lugar": "AVD"
+      "lugar": "AVD MANOLETE"
      },
      {
       "fila": "2:20",
-      "lugar": "PLAZA DE"
+      "lugar": "PLAZA DE TOROS"
      },
      {
       "fila": "2:30",
-      "lugar": "CAMINO VIEJO DE"
+      "lugar": "CAMINO VIEJO DE ALMODOVAR"
      },
      {
       "fila": "2:40",
-      "lugar": "ESCRIBA"
+      "lugar": "ESCRIBA LUBNA"
      },
      {
       "fila": "2:50",
-      "lugar": "ESCRIBA"
+      "lugar": "ESCRIBA LUBNA"
+     },
+     {
+      "fila": "3:00",
+      "lugar": "PUENTE"
      },
      {
       "fila": "3:10",
-      "lugar": "CTRA PALMA"
+      "lugar": "CTRA PALMA DEL RIO"
      },
      {
       "fila": "3:20",
-      "lugar": "CTRA PALMA"
+      "lugar": "CTRA PALMA DEL RIO"
      },
      {
       "fila": "3:30",
-      "lugar": "INGENIERO"
+      "lugar": "INGENIERO BENITO ARANDA"
      },
      {
       "fila": "3:40",
-      "lugar": "INGENIERO"
+      "lugar": "INGENIERO BENITO ARANDA"
      },
      {
       "fila": "3:50",
-      "lugar": "SIERRA"
+      "lugar": "SIERRA MORENA"
      },
      {
       "fila": "4:00",
-      "lugar": "SIERRA DE"
+      "lugar": "SIERRA DE GUADARRAMA"
      },
      {
       "fila": "4:10",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA",
+      "hora": "4:15"
      }
     ]
    }
@@ -25546,135 +28616,153 @@
    "tramos": {
     "cruz de guía": [
      {
-      "fila": "17:10",
-      "lugar": "GUÍA"
+      "fila": "17:20",
+      "lugar": "SALIDA",
+      "hora": "17:20"
+     },
+     {
+      "fila": "17:30",
+      "lugar": "BUEN SUCESO"
      },
      {
       "fila": "17:40",
-      "lugar": "DIEGUEZ"
+      "lugar": "HERMANOS LÓPEZ DIEGUEZ"
      },
      {
       "fila": "17:50",
-      "lugar": "ANDRES"
+      "lugar": "PLAZA SAN ANDRES"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "18:10",
+      "lugar": "SAN PABLO"
+     },
+     {
+      "fila": "18:20",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "DIARIO CORDOBA"
+     },
+     {
+      "fila": "18:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "18:50",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "19:10",
-      "lugar": "ISASA"
+      "lugar": "RONDA ISASA"
      },
      {
       "fila": "19:20",
-      "lugar": "ISASA"
+      "lugar": "RONDA ISASA"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "19:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "19:50",
+      "lugar": "TORRIJOS"
      },
      {
       "fila": "20:00",
-      "lugar": "PERDÓN"
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "20:10",
+      "lugar": "PUERTA LAS COFRADÍAS"
      },
      {
       "fila": "20:20",
-      "lugar": "S.I.C."
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "20:30",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "20:40",
+      "lugar": "SALIDA C.O."
      },
      {
       "fila": "20:50",
-      "lugar": "FRANCÉS"
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
      },
      {
       "fila": "21:00",
-      "lugar": "GONZÁLEZ"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "21:10",
-      "lugar": "GONZÁLEZ"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "21:20",
-      "lugar": "RASTRO"
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:40",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "21:50",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "SAN PABLO"
      },
      {
       "fila": "22:10",
-      "lugar": "DIEGUEZ"
+      "lugar": "HERMANOS LÓPEZ DIEGUEZ"
      },
      {
       "fila": "22:20",
-      "lugar": "ANDRES"
+      "lugar": "ARROYO SAN ANDRES"
      },
      {
       "fila": "22:30",
-      "lugar": "ANDRES"
+      "lugar": "ARROYO SAN ANDRES"
      },
      {
-      "fila": "23:00",
-      "lugar": "GUÍA"
+      "fila": "22:40",
+      "lugar": "YERBABUENA"
      },
      {
-      "fila": "0:10",
-      "lugar": "GUÍA"
+      "fila": "22:50",
+      "lugar": "ENTRADA",
+      "hora": "22:50"
      },
      {
-      "fila": "0:10",
-      "lugar": "BURGOS"
+      "fila": "0:00",
+      "lugar": "ENTRADA"
      },
      {
-      "fila": "0:30",
-      "lugar": "GRILO"
-     },
-     {
-      "fila": "0:40",
-      "lugar": "DATO"
-     },
-     {
-      "fila": "0:50",
-      "lugar": "DATO"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "DATO"
-     },
-     {
-      "fila": "1:10",
-      "lugar": "VICTORIA"
-     },
-     {
-      "fila": "1:20",
-      "lugar": "VICTORIA"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "OBRERO"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "DE JORNET"
-     },
-     {
-      "fila": "2:10",
-      "lugar": "ISASA"
-     },
-     {
-      "fila": "2:20",
-      "lugar": "C.O."
-     },
-     {
-      "fila": "2:40",
-      "lugar": "PERDÓN"
-     },
-     {
-      "fila": "3:00",
-      "lugar": "S.I.C."
-     },
-     {
-      "fila": "3:20",
-      "lugar": "PERDÓN)"
-     },
-     {
-      "fila": "3:20",
-      "lugar": "PERDÓN)"
+      "fila": "0:20",
+      "lugar": "El Perdón"
      }
     ],
     "final del cortejo": [
-     {
-      "fila": "17:30",
-      "lugar": "FIN DEL CORTEJO"
-     },
      {
       "fila": "17:40",
       "lugar": "SALIDA",
@@ -25812,107 +28900,6 @@
       "fila": "23:10",
       "lugar": "ENTRADA",
       "hora": "23:15"
-     },
-     {
-      "fila": "23:20",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
-      "fila": "0:10",
-      "lugar": "BUENA MUERTE"
-     },
-     {
-      "fila": "0:20",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "SALIDA",
-      "hora": "00:30"
-     },
-     {
-      "fila": "0:40",
-      "lugar": "PLAZA DEL ESCUDO"
-     },
-     {
-      "fila": "0:50",
-      "lugar": "PLZ ANTONIO FERNÁNDEZ GRILO"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "EDUARDO DATO"
-     },
-     {
-      "fila": "1:10",
-      "lugar": "EDUARDO DATO"
-     },
-     {
-      "fila": "1:20",
-      "lugar": "EDUARDO DATO"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "PASEO DE LA VICTORIA"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "PINTOR LÓPEZ OBRERO"
-     },
-     {
-      "fila": "1:50",
-      "lugar": "DOCTOR FLEMING"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "DOCTOR FLEMING"
-     },
-     {
-      "fila": "2:10",
-      "lugar": "SANTA TERESA DE JORNET"
-     },
-     {
-      "fila": "2:20",
-      "lugar": "RONDA DE ISASA"
-     },
-     {
-      "fila": "2:30",
-      "lugar": "ENTRADA C.O."
-     },
-     {
-      "fila": "2:40",
-      "lugar": "TRIUNFO"
-     },
-     {
-      "fila": "2:50",
-      "lugar": "TORRIJOS"
-     },
-     {
-      "fila": "3:00",
-      "lugar": "PUERTA DEL PERDÓN"
-     },
-     {
-      "fila": "3:10",
-      "lugar": "PUERTA DE LAS COFRADÍAS"
-     },
-     {
-      "fila": "3:20",
-      "lugar": "INTERIOR S.I.C."
-     },
-     {
-      "fila": "3:20",
-      "lugar": "INTERIOR S.I.C."
-     },
-     {
-      "fila": "3:30",
-      "lugar": "PATIO NARANJOS"
-     },
-     {
-      "fila": "3:40",
-      "lugar": "SALIDA C.O."
-     },
-     {
-      "fila": "3:40",
-      "lugar": "(PUERTA PERDÓN)"
      }
     ]
    }
@@ -26053,58 +29040,9 @@
       "fila": "22:10",
       "lugar": "ENTRADA",
       "hora": "22:15"
-     },
-     {
-      "fila": "0:10",
-      "lugar": "CONDE Y LUQUE"
-     },
-     {
-      "fila": "0:20",
-      "lugar": "PLZ AGRUPACIÓN DE COFRADÍAS"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "BLANCO BELMONTE"
-     },
-     {
-      "fila": "0:40",
-      "lugar": "BARROSO"
-     },
-     {
-      "fila": "0:50",
-      "lugar": "PLAZA DE SAN JUAN"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "PLAZA DE RAMÓN Y CAJAL"
-     },
-     {
-      "fila": "1:10",
-      "lugar": "SAN FELIPE"
-     },
-     {
-      "fila": "1:20",
-      "lugar": "JOSÉ ZORRILLA"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "JOSÉ ZORRILLA"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "ENTRADA",
-      "hora": "5:20"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "BUENA MUERTE"
      }
     ],
     "final del cortejo": [
-     {
-      "fila": "17:20",
-      "lugar": "FIN DEL CORTEJO"
-     },
      {
       "fila": "17:30",
       "lugar": "SALIDA",
@@ -26234,71 +29172,6 @@
       "fila": "22:40",
       "lugar": "ENTRADA",
       "hora": "22:45"
-     },
-     {
-      "fila": "22:50",
-      "lugar": "Fin del Cortejo"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
-      "fila": "0:10",
-      "lugar": "JUDERÍA"
-     },
-     {
-      "fila": "0:20",
-      "lugar": "DEANES"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "CONDE Y LUQUE"
-     },
-     {
-      "fila": "0:40",
-      "lugar": "PLZ AGRUPACIÓN DE COFRADÍAS"
-     },
-     {
-      "fila": "0:50",
-      "lugar": "BLANCO BELMONTE"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "BARROSO"
-     },
-     {
-      "fila": "1:10",
-      "lugar": "PLAZA DE SAN JUAN"
-     },
-     {
-      "fila": "1:20",
-      "lugar": "PLAZA RAMÓN Y CAJAL"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "SAN FELIPE"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "TORRE DE SAN NICOLÁS"
-     },
-     {
-      "fila": "1:50",
-      "lugar": "JOSÉ ZORRILLA"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "ENTRADA",
-      "hora": "5:40"
-     },
-     {
-      "fila": "2:10",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
-      "fila": "2:20",
-      "lugar": "BUENA MUERTE"
      }
     ]
    }
@@ -26495,10 +29368,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "17:50",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "18:00",
       "lugar": "SALIDA",
       "hora": "18:00"
@@ -26675,10 +29544,6 @@
       "fila": "1:10",
       "lugar": "ENTRADA",
       "hora": "01:15"
-     },
-     {
-      "fila": "1:20",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -26879,10 +29744,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "18:30",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "18:40",
       "lugar": "SALIDA",
       "hora": "18:40"
@@ -27067,10 +29928,6 @@
       "fila": "2:10",
       "lugar": "ENTRADA",
       "hora": "02:05"
-     },
-     {
-      "fila": "2:20",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -27243,10 +30100,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "19:20",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "19:30",
       "lugar": "SALIDA",
       "hora": "19:30"
@@ -27403,10 +30256,6 @@
       "fila": "1:50",
       "lugar": "ENTRADA",
       "hora": "01:45"
-     },
-     {
-      "fila": "2:00",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -27619,192 +30468,488 @@
     ],
     "final del cortejo": [
      {
-      "fila": "18:50",
-      "lugar": "CRISTO DE"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "FIN DEL"
-     },
-     {
       "fila": "19:10",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA",
+      "hora": "19:10"
      },
      {
       "fila": "19:20",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "19:30",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "19:40",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "19:50",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN LORENZO"
      },
      {
       "fila": "20:00",
-      "lugar": "ARROYO SAN"
+      "lugar": "ARROYO SAN LORENZO"
      },
      {
       "fila": "20:10",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ANDÚJAR"
      },
      {
       "fila": "20:20",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ANDÚJAR"
      },
      {
       "fila": "20:30",
-      "lugar": "GLORIETA"
+      "lugar": "GLORIETA PUERTA NUEVA"
      },
      {
       "fila": "20:40",
-      "lugar": "ALFONSO"
+      "lugar": "ALFONSO XII"
      },
      {
       "fila": "20:50",
-      "lugar": "ALFONSO"
+      "lugar": "ALFONSO XII"
      },
      {
       "fila": "21:00",
-      "lugar": "ALFONSO"
+      "lugar": "ALFONSO XII"
      },
      {
       "fila": "21:10",
-      "lugar": "DON"
+      "lugar": "DON RODRIGO"
      },
      {
       "fila": "21:20",
-      "lugar": "DON"
+      "lugar": "DON RODRIGO"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "LINEROS"
      },
      {
       "fila": "21:40",
-      "lugar": "PLAZA DEL"
+      "lugar": "PLAZA DEL POTRO"
      },
      {
       "fila": "21:50",
-      "lugar": "ENRIQUE"
+      "lugar": "ENRIQUE ROMERO DE TORRES"
      },
      {
       "fila": "22:00",
-      "lugar": "PASEO DE LA"
+      "lugar": "PASEO DE LA RIBERA"
      },
      {
       "fila": "22:10",
-      "lugar": "CRUZ DEL"
+      "lugar": "CRUZ DEL RASTRO"
      },
      {
       "fila": "22:20",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:30",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:40",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "22:50",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "TORRIJOS"
      },
      {
       "fila": "23:10",
-      "lugar": "PUERTA DEL"
+      "lugar": "PUERTA DEL PERDÓN"
      },
      {
       "fila": "23:20",
-      "lugar": "PUERTA LAS"
+      "lugar": "PUERTA LAS COFRADÍAS"
      },
      {
       "fila": "23:30",
-      "lugar": "INTERIOR"
+      "lugar": "INTERIOR S.I.C."
      },
      {
       "fila": "23:40",
-      "lugar": "PATIO"
+      "lugar": "PATIO NARANJOS"
      },
      {
       "fila": "23:50",
       "lugar": "SALIDA C.O."
      },
      {
+      "fila": "23:50",
+      "lugar": "(P. PERDÓN)"
+     },
+     {
       "fila": "0:00",
-      "lugar": "MAGISTRAL"
+      "lugar": "MAGISTRAL GONZÁLEZ FRANCÉS"
      },
      {
       "fila": "0:10",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:20",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:30",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL GONZÁLEZ"
      },
      {
       "fila": "0:40",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "0:50",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "1:00",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "1:10",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "1:20",
-      "lugar": "SAN"
+      "lugar": "SAN FERNANDO"
      },
      {
       "fila": "1:30",
-      "lugar": "DIARIO"
+      "lugar": "DIARIO CÓRDOBA"
+     },
+     {
+      "fila": "1:40",
+      "lugar": "CAPITULARES"
      },
      {
       "fila": "1:50",
-      "lugar": "SAN"
+      "lugar": "SAN PABLO"
      },
      {
       "fila": "2:00",
-      "lugar": "SAN"
+      "lugar": "SAN PABLO"
      },
      {
       "fila": "2:10",
-      "lugar": "PLAZA SAN"
+      "lugar": "PLAZA SAN ANDRÉS"
+     },
+     {
+      "fila": "2:20",
+      "lugar": "REALEJO"
      },
      {
       "fila": "2:30",
-      "lugar": "PLAZA SANTA"
+      "lugar": "PLAZA SANTA MARÍA DE GRACIA"
      },
      {
       "fila": "2:40",
-      "lugar": "PLAZA SAN"
+      "lugar": "PLAZA SAN LORENZO"
      },
      {
       "fila": "2:50",
-      "lugar": "MARÍA"
+      "lugar": "MARÍA AUXILIADORA"
      },
      {
       "fila": "3:00",
-      "lugar": "PLAZA SANTO"
+      "lugar": "PLAZA SANTO CRISTO DE GRACIA"
      },
      {
       "fila": "3:10",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA",
+      "hora": "03:15"
+     }
+    ]
+   }
+  },
+  "la-buena-muerte-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "0:00",
+      "lugar": "SALIDA",
+      "hora": "00:00"
+     },
+     {
+      "fila": "0:10",
+      "lugar": "ALONSO DE BURGOS"
+     },
+     {
+      "fila": "0:20",
+      "lugar": "PLAZA DE ALADREROS"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "PLZ ANTONIO FERNÁNDEZ GRILO"
+     },
+     {
+      "fila": "0:40",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "0:50",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "1:10",
+      "lugar": "PASEO DE LA VICTORIA"
+     },
+     {
+      "fila": "1:20",
+      "lugar": "PASEO DE LA VICTORIA"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "PINTOR LÓPEZ OBRERO"
+     },
+     {
+      "fila": "1:40",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "1:50",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "SANTA TERESA DE JORNET"
+     },
+     {
+      "fila": "2:10",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "2:20",
+      "lugar": "ENTRADA C.O.",
+      "hora": "2:15"
+     },
+     {
+      "fila": "2:30",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "2:40",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "2:50",
+      "lugar": "PUERTA DE LAS COFRADÍAS",
+      "hora": "2:55"
+     },
+     {
+      "fila": "3:00",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "3:10",
+      "lugar": "PATIO NARANJOS"
      },
      {
       "fila": "3:20",
-      "lugar": "FIN DEL"
+      "lugar": "SALIDA C.O. (PUERTA PERDÓN)",
+      "hora": "3:20"
+     },
+     {
+      "fila": "3:30",
+      "lugar": "JUDERÍA hy"
+     },
+     {
+      "fila": "3:40",
+      "lugar": "DEANES"
+     },
+     {
+      "fila": "3:50",
+      "lugar": "CONDE Y LUQUE"
+     },
+     {
+      "fila": "4:00",
+      "lugar": "PLZ AGRUPACIÓN DE COFRADÍAS"
+     },
+     {
+      "fila": "4:10",
+      "lugar": "BLANCO BELMONTE"
+     },
+     {
+      "fila": "4:20",
+      "lugar": "BARROSO"
+     },
+     {
+      "fila": "4:30",
+      "lugar": "PLAZA DE SAN JUAN"
+     },
+     {
+      "fila": "4:40",
+      "lugar": "PLAZA DE RAMÓN Y CAJAL"
+     },
+     {
+      "fila": "4:50",
+      "lugar": "SAN FELIPE"
+     },
+     {
+      "fila": "5:00",
+      "lugar": "JOSÉ ZORRILLA"
+     },
+     {
+      "fila": "5:10",
+      "lugar": "JOSÉ ZORRILLA"
+     },
+     {
+      "fila": "5:20",
+      "lugar": "ENTRADA",
+      "hora": "5:20"
+     }
+    ],
+    "final del cortejo": [
+     {
+      "fila": "3:50",
+      "lugar": "JUDERÍA"
+     },
+     {
+      "fila": "4:00",
+      "lugar": "DEANES"
+     },
+     {
+      "fila": "4:10",
+      "lugar": "CONDE Y LUQUE"
+     },
+     {
+      "fila": "4:20",
+      "lugar": "PLZ AGRUPACIÓN DE COFRADÍAS"
+     },
+     {
+      "fila": "4:30",
+      "lugar": "BLANCO BELMONTE"
+     },
+     {
+      "fila": "4:40",
+      "lugar": "BARROSO"
+     },
+     {
+      "fila": "4:50",
+      "lugar": "PLAZA DE SAN JUAN"
+     },
+     {
+      "fila": "5:00",
+      "lugar": "PLAZA RAMÓN Y CAJAL"
+     },
+     {
+      "fila": "5:10",
+      "lugar": "SAN FELIPE"
+     },
+     {
+      "fila": "5:20",
+      "lugar": "TORRE DE SAN NICOLÁS"
+     },
+     {
+      "fila": "5:30",
+      "lugar": "JOSÉ ZORRILLA"
+     },
+     {
+      "fila": "5:40",
+      "lugar": "ENTRADA",
+      "hora": "5:40"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "SALIDA",
+      "hora": "00:30"
+     },
+     {
+      "fila": "0:40",
+      "lugar": "PLAZA DEL ESCUDO"
+     },
+     {
+      "fila": "0:50",
+      "lugar": "PLZ ANTONIO FERNÁNDEZ GRILO"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "1:10",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "1:20",
+      "lugar": "EDUARDO DATO"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "PASEO DE LA VICTORIA"
+     },
+     {
+      "fila": "1:40",
+      "lugar": "PINTOR LÓPEZ OBRERO"
+     },
+     {
+      "fila": "1:50",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "2:00",
+      "lugar": "DOCTOR FLEMING"
+     },
+     {
+      "fila": "2:10",
+      "lugar": "SANTA TERESA DE JORNET"
+     },
+     {
+      "fila": "2:20",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "2:30",
+      "lugar": "ENTRADA C.O.",
+      "hora": "2:35"
+     },
+     {
+      "fila": "2:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "2:50",
+      "lugar": "TORRIJOS"
+     },
+     {
+      "fila": "3:00",
+      "lugar": "PUERTA DEL PERDÓN"
+     },
+     {
+      "fila": "3:10",
+      "lugar": "PUERTA DE LAS COFRADÍAS",
+      "hora": "3:15"
+     },
+     {
+      "fila": "3:20",
+      "lugar": "INTERIOR S.I.C."
+     },
+     {
+      "fila": "3:30",
+      "lugar": "PATIO NARANJOS"
+     },
+     {
+      "fila": "3:40",
+      "lugar": "SALIDA C.O. (PUERTA PERDÓN)",
+      "hora": "3:40"
      }
     ]
    }
@@ -27925,10 +31070,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "18:30",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "18:40",
       "lugar": "SALIDA",
       "hora": "18:45"
@@ -28033,10 +31174,6 @@
       "fila": "22:50",
       "lugar": "ENTRADA",
       "hora": "22:55"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -28237,10 +31374,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "17:00",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "17:10",
       "lugar": "SALIDA",
       "hora": "17:15"
@@ -28429,10 +31562,6 @@
       "fila": "0:50",
       "lugar": "ENTRADA",
       "hora": "00:50"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -28565,10 +31694,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "19:10",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "19:20",
       "lugar": "SALIDA",
       "hora": "19:20"
@@ -28685,10 +31810,6 @@
       "fila": "0:00",
       "lugar": "ENTRADA",
       "hora": "00:00"
-     },
-     {
-      "fila": "0:10",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -28829,10 +31950,6 @@
     ],
     "final del cortejo": [
      {
-      "fila": "20:20",
-      "lugar": "FIN DEL CORTEJO"
-     },
-     {
       "fila": "20:30",
       "lugar": "SALIDA",
       "hora": "20:30"
@@ -28957,10 +32074,6 @@
       "fila": "1:30",
       "lugar": "ENTRADA",
       "hora": "01:30"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "FIN DEL CORTEJO"
      }
     ]
    }
@@ -29216,10 +32329,6 @@
      }
     ],
     "final del cortejo": [
-     {
-      "fila": "17:30",
-      "lugar": "FIN DEL CORTEJO"
-     },
      {
       "fila": "17:40",
       "lugar": "SALIDA",
@@ -29633,152 +32742,301 @@
     ],
     "final del cortejo": [
      {
-      "fila": "19:20",
-      "lugar": "FIN DEL"
-     },
-     {
       "fila": "19:30",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA",
+      "hora": "19:30"
      },
      {
       "fila": "19:40",
-      "lugar": "CONDE DE"
+      "lugar": "CONDE DE TORRES CABRERA"
      },
      {
       "fila": "19:50",
-      "lugar": "CONDE DE"
+      "lugar": "CONDE DE TORRES CABRERA"
      },
      {
       "fila": "20:00",
-      "lugar": "SAN"
+      "lugar": "SAN ZOILO"
      },
      {
       "fila": "20:10",
-      "lugar": "SAN"
+      "lugar": "SAN MIGUEL"
      },
      {
       "fila": "20:20",
-      "lugar": "CRUZ"
+      "lugar": "CRUZ CONDE"
      },
      {
       "fila": "20:30",
-      "lugar": "PLAZA DE LAS"
+      "lugar": "PLAZA DE LAS TENDILLAS"
      },
      {
       "fila": "20:40",
-      "lugar": "CONDE DE"
+      "lugar": "CONDE DE GONDOMAR"
      },
      {
       "fila": "20:50",
-      "lugar": "SAN"
+      "lugar": "SAN FELIPE"
      },
      {
       "fila": "21:00",
-      "lugar": "PLAZA"
+      "lugar": "PLAZA RAMÓN Y CAJAL"
      },
      {
       "fila": "21:10",
-      "lugar": "PLAZA DE LA"
+      "lugar": "PLAZA DE LA TRINIDAD"
      },
      {
       "fila": "21:20",
-      "lugar": "PINTOR"
+      "lugar": "PINTOR LÓPEZ OBRERO"
      },
      {
       "fila": "21:30",
-      "lugar": "DOCTOR"
+      "lugar": "DOCTOR FLEMING"
      },
      {
       "fila": "21:40",
-      "lugar": "DOCTOR"
+      "lugar": "DOCTOR FLEMING"
      },
      {
       "fila": "21:50",
-      "lugar": "DOCTOR"
+      "lugar": "DOCTOR FLEMING"
      },
      {
       "fila": "22:00",
-      "lugar": "CAMPO"
+      "lugar": "CAMPO SANTOS MÁRTIRES"
      },
      {
       "fila": "22:10",
-      "lugar": "SANTA"
+      "lugar": "SANTA TERESA JORNET"
      },
      {
       "fila": "22:20",
-      "lugar": "RONDA DE"
+      "lugar": "RONDA DE ISASA"
      },
      {
       "fila": "22:30",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA C.O."
+     },
+     {
+      "fila": "22:40",
+      "lugar": "TRIUNFO"
+     },
+     {
+      "fila": "22:50",
+      "lugar": "TORRIJOS"
      },
      {
       "fila": "23:00",
-      "lugar": "PUERTA DEL"
+      "lugar": "PUERTA DEL PERDÓN"
      },
      {
       "fila": "23:10",
-      "lugar": "PUERTA DE LAS"
+      "lugar": "PUERTA DE LAS COFRADÍAS"
      },
      {
       "fila": "23:20",
-      "lugar": "INTERIOR"
+      "lugar": "INTERIOR S.I.C."
      },
      {
       "fila": "23:30",
-      "lugar": "PATIO"
+      "lugar": "PATIO NARANJOS"
      },
      {
       "fila": "23:40",
-      "lugar": "SALIDA"
+      "lugar": "SALIDA C.O."
      },
      {
       "fila": "23:50",
-      "lugar": "CARDENAL"
+      "lugar": "CARDENAL HERRERO"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "JUDERÍA"
+     },
+     {
+      "fila": "0:10",
+      "lugar": "DEANES"
      },
      {
       "fila": "0:20",
-      "lugar": "PLZ AGRUPACIÓN"
+      "lugar": "PLZ AGRUPACIÓN DE COFRADÍAS"
      },
      {
       "fila": "0:30",
-      "lugar": "BLANCO"
+      "lugar": "BLANCO BELMONTE"
      },
      {
       "fila": "0:40",
-      "lugar": "JESÚS Y"
+      "lugar": "JESÚS Y MARÍA"
      },
      {
       "fila": "0:50",
-      "lugar": "JESÚS Y"
+      "lugar": "JESÚS Y MARÍA"
      },
      {
       "fila": "1:00",
-      "lugar": "PLAZA DE LAS"
+      "lugar": "PLAZA DE LAS TENDILLAS"
      },
      {
       "fila": "1:10",
-      "lugar": "SAN"
+      "lugar": "SAN ALVARO"
      },
      {
       "fila": "1:20",
-      "lugar": "PLAZA DE SAN"
+      "lugar": "PLAZA DE SAN MIGUEL"
      },
      {
       "fila": "1:30",
-      "lugar": "TORRES"
+      "lugar": "TORRES CABRERA"
      },
      {
       "fila": "1:40",
-      "lugar": "TORRES"
+      "lugar": "TORRES CABRERA"
      },
      {
       "fila": "1:50",
-      "lugar": "ENTRADA"
+      "lugar": "ENTRADA",
+      "hora": "1:55"
+     }
+    ]
+   }
+  },
+  "el-resucitado-cordoba": {
+   "ciudad": "cordoba",
+   "dia": "Domingo de Resurrección",
+   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "pdf": "Itinerario Córdoba 2026.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "9:30",
+      "lugar": "SALIDA",
+      "hora": "9:30"
      },
      {
-      "fila": "2:00",
-      "lugar": "FIN DEL"
+      "fila": "9:40",
+      "lugar": "PLAZA DEL CONDE DE PRIEGO"
+     },
+     {
+      "fila": "9:50",
+      "lugar": "PASAJE DE LA ESTRELLA"
+     },
+     {
+      "fila": "10:00",
+      "lugar": "PLAZA RUIZ DE ALDA"
+     },
+     {
+      "fila": "10:10",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "10:20",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "10:40",
+      "lugar": "CAPITULARES"
+     },
+     {
+      "fila": "10:50",
+      "lugar": "DIARIO DE CÓRDOBA"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "11:10",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "11:20",
+      "lugar": "SAN FERNANDO"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "CRUZ DEL RASTRO"
+     },
+     {
+      "fila": "11:40",
+      "lugar": "RONDA DE ISASA"
+     },
+     {
+      "fila": "11:50",
+      "lugar": "ENTRADA C.O.",
+      "hora": "11:50"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "PUERTA DE LAS COFRADÍAS",
+      "hora": "12:30"
+     },
+     {
+      "fila": "12:50",
+      "lugar": "SALIDA C.O. (PUERTA PERDÓN)",
+      "hora": "12:55"
+     },
+     {
+      "fila": "13:00",
+      "lugar": "JUDERÍA"
+     },
+     {
+      "fila": "13:10",
+      "lugar": "DEANES"
+     },
+     {
+      "fila": "13:20",
+      "lugar": "CONDE Y LUQUE"
+     },
+     {
+      "fila": "13:30",
+      "lugar": "BLANCO BELMONTE"
+     },
+     {
+      "fila": "13:40",
+      "lugar": "ÁNGEL DE SAAVEDRA"
+     },
+     {
+      "fila": "13:50",
+      "lugar": "PLAZA DE LA COMPAÑÍA"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "CONDE DE CÁRDENAS"
+     },
+     {
+      "fila": "14:10",
+      "lugar": "MARÍA CRISTINA"
+     },
+     {
+      "fila": "14:20",
+      "lugar": "CLAUDIO MARCELO"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "14:40",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "14:50",
+      "lugar": "ALFAROS"
+     },
+     {
+      "fila": "15:00",
+      "lugar": "PLAZA DEL CONDE DE PRIEGO"
+     },
+     {
+      "fila": "15:10",
+      "lugar": "ENTRADA",
+      "hora": "15:15"
      }
     ]
    }
@@ -32991,6 +36249,28 @@
   },
   {
    "ciudad": "sevilla",
+   "dia": "VIERNES DE DOLORES",
+   "cabecera": "PARROQUIA CLARET",
+   "sub": "",
+   "opciones": [
+    "la-mision-sevilla:1",
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "VIERNES DE DOLORES",
+   "cabecera": "PARR SAGRARIO",
+   "sub": "",
+   "opciones": [
+    "cristo-de-la-corona-sevilla:1",
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
    "dia": "SÁBADO DE PASIÓN",
    "cabecera": "PARR LA",
    "sub": "",
@@ -33003,7 +36283,40 @@
   {
    "ciudad": "sevilla",
    "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "CONVENTO STO. ANGEL",
+   "sub": "",
+   "opciones": [
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0",
+    "jesus-despojado-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "SAN JERÓNIMO",
+   "sub": "",
+   "opciones": [
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0",
+    "jesus-despojado-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "SÁBADO DE PASIÓN",
    "cabecera": "CASA HDAD",
+   "sub": "",
+   "opciones": [
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0",
+    "jesus-despojado-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "SÁBADO DE PASIÓN",
+   "cabecera": "PARR LOS",
    "sub": "",
    "opciones": [
     "la-borriquita-sevilla:0",
@@ -33047,6 +36360,28 @@
   {
    "ciudad": "sevilla",
    "dia": "MARTES SANTO",
+   "cabecera": "IGLESIA SAGRADO CORAZÓN",
+   "sub": "cruz de guía",
+   "opciones": [
+    "la-quinta-angustia-sevilla:2",
+    "bellavista-sevilla:2",
+    "la-mision-sevilla:2"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "MARTES SANTO",
+   "cabecera": "IGLESIA SAGRADO CORAZÓN",
+   "sub": "palio",
+   "opciones": [
+    "la-quinta-angustia-sevilla:2",
+    "bellavista-sevilla:2",
+    "la-mision-sevilla:2"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "MARTES SANTO",
    "cabecera": "PARR. S.",
    "sub": "cruz de guía",
    "opciones": [
@@ -33059,6 +36394,17 @@
    "ciudad": "sevilla",
    "dia": "MIÉRCOLES SANTO",
    "cabecera": "CAP DE LA",
+   "sub": "cruz de guía",
+   "opciones": [
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0",
+    "jesus-despojado-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
+   "dia": "VIERNES SANTO",
+   "cabecera": "CONVENTO LA",
    "sub": "cruz de guía",
    "opciones": [
     "la-borriquita-sevilla:0",
@@ -33167,13 +36513,24 @@
   },
   {
    "ciudad": "sevilla",
+   "dia": "JUEVES SANTO",
+   "cabecera": "Monte-Sión Capilla de Monte-Sión",
+   "sub": "cruz de guía",
+   "opciones": [
+    "la-borriquita-sevilla:0",
+    "el-amor-sevilla:0",
+    "jesus-despojado-sevilla:0"
+   ]
+  },
+  {
+   "ciudad": "sevilla",
    "dia": "VIERNES SANTO",
    "cabecera": "San Isidoro Parroquia de San Isidoro · Montserrat Capilla de Montserrat",
    "sub": "palio",
    "opciones": [
     "san-isidoro-sevilla:7",
     "montserrat-sevilla:7",
-    "la-o-sevilla:4"
+    "la-carreteria-sevilla:0"
    ]
   },
   {
@@ -33185,50 +36542,6 @@
     "la-resurreccion-sevilla:1",
     "la-borriquita-sevilla:0",
     "el-amor-sevilla:0"
-   ]
-  },
-  {
-   "ciudad": "cordoba",
-   "dia": "SÁBADO DE PASIÓN",
-   "cabecera": "CRUZ DE GUÍA",
-   "sub": "cruz de guía",
-   "opciones": [
-    "entrada-triunfal-cordoba:0",
-    "penas-de-santiago-cordoba:0",
-    "vera-cruz-cordoba:0"
-   ]
-  },
-  {
-   "ciudad": "cordoba",
-   "dia": "SÁBADO DE PASIÓN",
-   "cabecera": "CRUZ DE GUÍA",
-   "sub": "final del cortejo",
-   "opciones": [
-    "entrada-triunfal-cordoba:0",
-    "penas-de-santiago-cordoba:0",
-    "vera-cruz-cordoba:0"
-   ]
-  },
-  {
-   "ciudad": "cordoba",
-   "dia": "DOMINGO DE RAMOS",
-   "cabecera": "CRUZ DE GUÍA",
-   "sub": "cruz de guía",
-   "opciones": [
-    "entrada-triunfal-cordoba:0",
-    "penas-de-santiago-cordoba:0",
-    "vera-cruz-cordoba:0"
-   ]
-  },
-  {
-   "ciudad": "cordoba",
-   "dia": "DOMINGO DE RAMOS",
-   "cabecera": "CRUZ DE GUÍA",
-   "sub": "final del cortejo",
-   "opciones": [
-    "entrada-triunfal-cordoba:0",
-    "penas-de-santiago-cordoba:0",
-    "vera-cruz-cordoba:0"
    ]
   }
  ]
