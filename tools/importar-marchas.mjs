@@ -56,6 +56,7 @@ for (const [pl, formacionLista] of LISTAS) {
   const items = await lista(pl);
   console.log(formacionLista, items.length);
   for (const it of items) {
+    if (!/^[\w-]{11}$/.test(it.id)) continue; // las listas de reproducción incrustadas no son vídeos (y bloqueaban la lectura)
     if (marchas.some((x) => x.video === it.id)) continue;
     const t = it.titulo.replace(/\s*\[(AM|CT|BM|CM)\]\s*$/, ''); const tag = (it.titulo.match(/\[(AM|CT|BM|CM)\]\s*$/) || [])[1];
     const i = t.indexOf(' - '); const titulo = i > 0 ? t.slice(0, i).trim() : t; const autor = i > 0 ? t.slice(i + 3).trim() : '';

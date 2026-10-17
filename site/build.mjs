@@ -90,24 +90,25 @@ function coloresHabito(texto) {
   }
   return out.slice(0, 8);
 }
-const MARCHAS = []; const MARCHA_SLUG = new Map();
+const MARCHAS = []; const MARCHA_SLUG = new Map(); const SLUGS_MARCHA = new Set();
 const ESP_FILE = path.join(DIR, '..', 'tools', 'sources', 'marchas-espana.json');
 const ESP = fs.existsSync(ESP_FILE) ? JSON.parse(fs.readFileSync(ESP_FILE, 'utf8')) : { marchas: [] };
 for (const h of D.hermandades) for (const m of h.marchas || []) {
   let slug = slugify(m.titulo + ' ' + (m.autor || h.slug)); if (!slug) continue;
-  let n = 2; const base = slug; while (MARCHAS.some((x) => x.slug === slug)) slug = base + '-' + n++;
-  MARCHAS.push({ ...m, slug, h }); MARCHA_SLUG.set(h.slug + '|' + m.titulo + '|' + (m.autor || ''), slug);
+  let n = 2; const base = slug; while (SLUGS_MARCHA.has(slug)) slug = base + '-' + n++;
+  SLUGS_MARCHA.add(slug); MARCHAS.push({ ...m, slug, h }); MARCHA_SLUG.set(h.slug + '|' + m.titulo + '|' + (m.autor || ''), slug);
 }
 {
   const nt = (t) => norm(t).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
   const ta = (t) => new Set(nt(t).split(' ').filter((w) => w.length >= 4));
   const coincide = (a, b) => { const x = ta(a), y = ta(b); for (const w of x) if (y.has(w)) return true; return false; };
+  const sinVideo = new Map(); for (const m of MARCHAS) if (!m.video) { const k = nt(m.titulo); (sinVideo.get(k) || sinVideo.set(k, []).get(k)).push(m); }
   for (const e of ESP.marchas) {
-    const hit = MARCHAS.find((m) => !m.video && nt(m.titulo) === nt(e.titulo) && coincide(m.autor, e.autor));
+    const hit = (sinVideo.get(nt(e.titulo)) || []).find((m) => !m.video && coincide(m.autor, e.autor));
     if (hit) { hit.video = e.video; hit.dedicatoria = hit.dedicatoria || e.dedicatoria; hit.tipo = hit.tipo || e.formacion; hit.estreno = e.estreno; hit.detalles = e.detalles; hit.anio = hit.anio || e.anio; continue; }
     let slug = slugify(e.titulo + ' ' + (e.autor || '')); if (!slug) continue;
-    let n = 2; const base = slug; while (MARCHAS.some((x) => x.slug === slug)) slug = base + '-' + n++;
-    MARCHAS.push({ titulo: e.titulo, autor: e.autor, anio: e.anio, tipo: e.formacion, video: e.video, dedicatoria: e.dedicatoria, estreno: e.estreno, detalles: e.detalles, lugar: e.lugar, tipoMarcha: e.tipo, slug, h: null, espana: true });
+    let n = 2; const base = slug; while (SLUGS_MARCHA.has(slug)) slug = base + '-' + n++;
+    SLUGS_MARCHA.add(slug); MARCHAS.push({ titulo: e.titulo, autor: e.autor, anio: e.anio, tipo: e.formacion, video: e.video, dedicatoria: e.dedicatoria, estreno: e.estreno, detalles: e.detalles, lugar: e.lugar, tipoMarcha: e.tipo, slug, h: null, espana: true });
   }
 }
 const DAY_ORDER = D.dias_orden;
