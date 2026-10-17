@@ -1010,7 +1010,7 @@ select.oc-cityselect[hidden] { display: none; }
 .oc-colg[aria-current="true"] img { filter: drop-shadow(0 9px 8px rgb(20 8 29 / .34)) brightness(1.07) saturate(1.1); }
 .oc-colg[aria-current="true"] .oc-colg-name { color: #fff; }
 
-.oc-colg-map { position: relative; margin: 2px 0 4px; aspect-ratio: 2.4 / 1; z-index: 1; transition: margin-bottom 380ms var(--ease-out); }
+.oc-colg-map { position: relative; margin: 2px 0 4px; aspect-ratio: 1000 / 615; z-index: 1; transition: margin-bottom 380ms var(--ease-out); }
 [data-colgaduras][data-sel] .oc-colg-map { margin-bottom: 36px; }
 .oc-colg-svg, .oc-colg-hilos { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .oc-colg-svg { overflow: visible; }
