@@ -1,10 +1,10 @@
 {
  "generado": "2026-10-17",
  "fuentes": {
-  "InfoCofrade": 363,
+  "InfoCofrade": 364,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 2,
+  "Federación de Granada": 0,
   "Prensa (agendas semanales)": 70,
   "Prensa (texto de noticias)": 32
  },
@@ -95,6 +95,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Rosario (San Jerónimo) de 11:00-14:00 y 17:00-19:30",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -3910,26 +3920,6 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
-  },
-  {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-16-octubre-cordoba/202610161132183508308.amp.html",
@@ -4948,6 +4938,26 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
    "fecha": "2026-10-16",
