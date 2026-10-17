@@ -104,7 +104,17 @@
    "lugar": "Sevilla",
    "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Navarro_Arteaga"
   },
-  "Miguel Láinez Capote": null,
+  "Miguel Láinez Capote": {
+   "bio_relleno": {
+    "valor": "Imaginero gaditano, muerto en Cádiz en 1980. Su primera imagen de pasión fue el Medinaceli de Cádiz (1938), y en la posguerra talló imágenes para muchas cofradías nuevas o reorganizadas de la ciudad, como el Cristo del Perdón (1939) y la Virgen del Buen Fin (1950).",
+    "vida": "1906/1910–1980",
+    "fuentes": [
+     "https://www.cadizcofrade.net/imagineros/lainez.htm",
+     "https://veracruzcadiz.es/miguel-lainez-capote-1906-1980-medio-siglo-haciendo-imagenes-para-cadiz-y-su-provincia/"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
   "Elías Rodríguez Picón": {
    "wikidata": "https://www.wikidata.org/wiki/Q140088842",
    "etiqueta": "Elias Rodriguez Picon",
@@ -114,7 +124,16 @@
    "lugar": "Rociana del Condado",
    "wikipedia": ""
   },
-  "Luis González Rey": null,
+  "Luis González Rey": {
+   "bio_relleno": {
+    "valor": "Imaginero nacido en Cádiz; su nombre completo es Luis Enrique González Rey. Estudió en la Escuela de Artes Aplicadas de Cádiz, donde fue alumno de Alfonso Berraquero. Su primer encargo fue restaurar la Virgen de la Victoria de la Expiración (1989), y es autor de Jesús del Milagro de la Sagrada Cena de Cádiz.",
+    "vida": "1965",
+    "fuentes": [
+     "https://www.cadizcofrade.net/imagineros/grey.htm"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
   "Sebastián Santos": {
    "wikidata": "https://www.wikidata.org/wiki/Q6122991",
    "etiqueta": "Sebastián Santos Calero",
@@ -2999,6 +3018,14 @@
      "atribucion": false,
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Señor de la Humillación",
+     "autor": "Anónimo",
+     "anio": "s. XVI",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    ],
    "relleno": {
@@ -4030,6 +4057,14 @@
      "atribucion": false,
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de la Cabeza",
+     "autor": "Manuel Escamilla Cabezas",
+     "anio": "1956",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    ]
   },
@@ -4053,6 +4088,14 @@
      "atribucion": false,
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima de Regla",
+     "autor": "anónima s. XVII (atribuida al círculo de Pedro Roldán)",
+     "anio": "",
+     "atribucion": true,
+     "fuente": "http://explicartesevilla.blogspot.com/2022/09/la-imagen-maria-santisima-de-regla.html",
+     "revisado": "2026-10-17"
     }
    ],
    "relleno": {
@@ -4146,7 +4189,17 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
      "revisado": "2026-10-17"
     }
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "María Santísima de la Victoria",
+     "autor": "anónima s. XVII (intervenida por Juan de Astorga, 1803)",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   ]
   },
   "montesion-sevilla": {
    "sevilla_wd": {
@@ -4529,6 +4582,14 @@
      "atribucion": true,
      "fuente": "https://hermandaddelacarreteria.org/nuestra-senora-del-mayor-dolores-en-su-soledad/",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "Santísimo Cristo de la Salud",
+     "autor": "Atribuido a Francisco de Ocampo, s. XVII",
+     "anio": "",
+     "atribucion": true,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    ],
    "relleno": {
@@ -5098,6 +5159,14 @@
      "atribucion": false,
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "San Marcos Evangelista",
+     "autor": "Fernando Castejón López",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    ]
   },
@@ -5622,6 +5691,11 @@
      "valor": "Un paso con el Santísimo Cristo de la Bendición, acompañado por la Agrupación Musical Santa Cruz.",
      "fuente": "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Asociación Parroquial de Nuestro Padre Jesús de la Bendición y Nuestra Señora del Dulce Nombre de la Paz",
+     "fuente": "https://semanasanta.huelva.es/la-bendicion/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -5769,6 +5843,14 @@
      "atribucion": false,
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
+    },
+    {
+     "titular": "María Santísima del Mar",
+     "autor": "Liébana",
+     "anio": "",
+     "atribucion": false,
+     "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+     "revisado": "2026-10-17"
     }
    ]
   },

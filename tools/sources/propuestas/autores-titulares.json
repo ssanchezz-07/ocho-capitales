@@ -1,1194 +1,1226 @@
 {
-  "generado": "2026-10-16",
-  "titulares": [
-    {
-      "hermandad": "la-borriquita-sevilla",
-      "titular": "Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII",
-      "autor": "Pedro Roldán",
-      "anio": "",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
-      "cita": "La imagen de Jesús se atribuye a Pedro Roldán"
-    },
-    {
-      "hermandad": "jesus-despojado-sevilla",
-      "titular": "Jesús Despojado de sus Vestiduras",
-      "autor": "Antonio Perea Sánchez",
-      "anio": "1939",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
-      "cita": "La imagen del Señor fue realizada por Antonio Perea Sánchez en 1939"
-    },
-    {
-      "hermandad": "jesus-despojado-sevilla",
-      "titular": "María Santísima de los Dolores y Misericordia",
-      "autor": "Antonio Eslava Rubio",
-      "anio": "1962",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
-      "cita": "Antonio Eslava hizo a la Virgen en 1962"
-    },
-    {
-      "hermandad": "la-cena-sevilla",
-      "titular": "Señor de la Humillación",
-      "autor": "Anónimo",
-      "anio": "s. XVI",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
-      "cita": "Es de autor desconocido, y está datado en torno al siglo XVI"
-    },
-    {
-      "hermandad": "la-cena-sevilla",
-      "titular": "María Santísima del Subterráneo",
-      "autor": "Anónimo",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
-      "cita": "es de autoría desconocida y está fechada en torno al siglo XVII"
-    },
-    {
-      "hermandad": "san-roque-sevilla",
-      "titular": "Nuestro Padre Jesús de las Penas",
-      "autor": "Antonio Illanes",
-      "anio": "1939",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
-      "cita": "El Señor de las Penas es obra de Antonio Illanes de 1939"
-    },
-    {
-      "hermandad": "san-roque-sevilla",
-      "titular": "María Santísima de Gracia y Esperanza",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1938",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
-      "cita": "La Virgen de Gracia y Esperanza fue realizada por Fernández-Andes en 1938"
-    },
-    {
-      "hermandad": "la-amargura-sevilla",
-      "titular": "Cristo del Silencio en el Desprecio de Herodes",
-      "autor": "Anónimo (discípulo de Pedro Roldán)",
-      "anio": "",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
-      "cita": "son obra de un discípulo de Pedro Roldán"
-    },
-    {
-      "hermandad": "san-pablo-sevilla",
-      "titular": "Jesús Cautivo y Rescatado",
-      "autor": "Luis Álvarez Duarte",
-      "anio": "1992",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
-      "cita": "(1992) es obra del imaginero sevillano y hermano de la Corporación, D. Luis Álvarez Duarte"
-    },
-    {
-      "hermandad": "san-pablo-sevilla",
-      "titular": "María Santísima del Rosario",
-      "autor": "Luis Álvarez Duarte",
-      "anio": "2007",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
-      "cita": "Nuestra Señora del Rosario Doloroso, es obra de Luis Álvarez Duarte (2007)"
-    },
-    {
-      "hermandad": "redencion-sevilla",
-      "titular": "Santísimo Cristo de la Redención en el Beso de Judas",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1957-1959",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
-      "cita": "Todas las imágenes están realizadas entre 1957 y 1959 por Antonio Castillo Lastrucci"
-    },
-    {
-      "hermandad": "redencion-sevilla",
-      "titular": "María Santísima del Rocío",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1955",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
-      "cita": "fue realizada también por Castillo Lastrucci. La hizo en 1955"
-    },
-    {
-      "hermandad": "santa-genoveva-sevilla",
-      "titular": "María Santísima de las Mercedes",
-      "autor": "José Paz Vélez",
-      "anio": "1956",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
-      "cita": "también es obra del imaginero José Paz Vélez, realizada y bendecida en 1956"
-    },
-    {
-      "hermandad": "san-gonzalo-sevilla",
-      "titular": "María Santísima de la Salud",
-      "autor": "Luis Ortega Bru",
-      "anio": "1977",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
-      "cita": "Luis Ortega Bru sería el que en el año 1977 gubiara el busto de la Dolorosa actual"
-    },
-    {
-      "hermandad": "vera-cruz-sevilla",
-      "titular": "María Santísima de las Tristezas",
-      "autor": "Antonio Illanes",
-      "anio": "1942",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
-      "cita": "es obra del escultor Antonio Illanes Rodríguez de 1942"
-    },
-    {
-      "hermandad": "las-penas-sevilla",
-      "titular": "Nuestro Padre Jesús de las Penas",
-      "autor": "Anónimo",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
-      "cita": "La imagen de Cristo es anónima del siglo XVII"
-    },
-    {
-      "hermandad": "las-penas-sevilla",
-      "titular": "María Santísima de los Dolores",
-      "autor": "Anónimo",
-      "anio": "s. XVIII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
-      "cita": "La imagen de la Virgen también es anónima del siglo XVIII"
-    },
-    {
-      "hermandad": "las-aguas-sevilla",
-      "titular": "Santísimo Cristo de las Aguas",
-      "autor": "Antonio Illanes",
-      "anio": "1940",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
-      "cita": "fue realizada por Antonio Illanes en el año 1940"
-    },
-    {
-      "hermandad": "las-aguas-sevilla",
-      "titular": "Nuestra Señora de Guadalupe",
-      "autor": "Luis Álvarez Duarte",
-      "anio": "1965",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
-      "cita": "fue realizada en 1965 por Luis Álvarez Duarte"
-    },
-    {
-      "hermandad": "el-museo-sevilla",
-      "titular": "Nuestra Señora de las Aguas",
-      "autor": "Cristóbal Ramos",
-      "anio": "1772",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
-      "cita": "La Virgen es obra de Cristóbal Ramos en 1772"
-    },
-    {
-      "hermandad": "el-cerro-sevilla",
-      "titular": "Santísimo Cristo de los Desamparados",
-      "autor": "Círculo de Francisco de Ocampo o José de Arce",
-      "anio": "s. XVII",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
-      "cita": "se ha atribuido al círculo de Francisco de Ocampo [...] o a José de Arce"
-    },
-    {
-      "hermandad": "el-cerro-sevilla",
-      "titular": "María Santísima de los Dolores",
-      "autor": "Sebastián Santos",
-      "anio": "1955",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
-      "cita": "La Virgen es una imagen realizada en 1955 por Sebastián Santos"
-    },
-    {
-      "hermandad": "los-javieres-sevilla",
-      "titular": "Santísimo Cristo de las Almas",
-      "autor": "José Pires Azcárraga",
-      "anio": "1945",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
-      "cita": "fue tallada en 1945 y bendecida 1947 por el imaginero gaditano José Pires Azcárraga"
-    },
-    {
-      "hermandad": "los-javieres-sevilla",
-      "titular": "Nuestra Señora de Gracia y Amparo",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1945",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
-      "cita": "fue tallada en 1945 por José Fernández Andés"
-    },
-    {
-      "hermandad": "san-esteban-sevilla",
-      "titular": "Cristo de la Salud y Buen Viaje",
-      "autor": "Anónimo",
-      "anio": "s. XVI-XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
-      "cita": "Es de autor anónimo"
-    },
-    {
-      "hermandad": "san-esteban-sevilla",
-      "titular": "María Santísima de los Desamparados",
-      "autor": "Manuel Galiano Delgado",
-      "anio": "1927",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
-      "cita": "Manuel Galiano Delgado fue el autor de la Virgen de los Desamparados"
-    },
-    {
-      "hermandad": "san-benito-sevilla",
-      "titular": "Presentación de Jesús al Pueblo",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1928",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
-      "cita": "Todas las imágenes de este misterio fueron realizadas por Antonio Castillo Lastrucci en 1928"
-    },
-    {
-      "hermandad": "san-benito-sevilla",
-      "titular": "Santísimo Cristo de la Sangre",
-      "autor": "Francisco Buiza",
-      "anio": "1966",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
-      "cita": "El crucificado fue realizado por Francisco Buiza Fernández en 1966"
-    },
-    {
-      "hermandad": "san-benito-sevilla",
-      "titular": "María Santísima de la Encarnación",
-      "autor": "Anónimo",
-      "anio": "finales s. XVII - principios s. XVIII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
-      "cita": "La Virgen de la Encarnación es de autor anónimo"
-    },
-    {
-      "hermandad": "la-candelaria-sevilla",
-      "titular": "Nuestro Padre Jesús de la Salud",
-      "autor": "Francisco de Ocampo o Pedro Roldán",
-      "anio": "c. 1615",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
-      "cita": "La imagen de Jesús se atribuye a Francisco de Ocampo (c. 1615) o a Pedro Roldán"
-    },
-    {
-      "hermandad": "la-candelaria-sevilla",
-      "titular": "María Santísima de la Candelaria",
-      "autor": "Manuel Galiano Delgado",
-      "anio": "1924",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
-      "cita": "La Virgen es tallada por Manuel Galiano en 1924"
-    },
-    {
-      "hermandad": "dulce-nombre-la-bofeta-sevilla",
-      "titular": "Nuestro Padre Jesús ante Anás",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1923",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
-      "cita": "El grupo escultórico de Jesús ante Anás fue realizado por Antonio Castillo Lastrucci en 1923"
-    },
-    {
-      "hermandad": "dulce-nombre-la-bofeta-sevilla",
-      "titular": "María Santísima del Dulce Nombre",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1924",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
-      "cita": "Ambas imágenes fueron realizadas por Antonio Castillo Lastrucci en 1924"
-    },
-    {
-      "hermandad": "santa-cruz-sevilla",
-      "titular": "Santísimo Cristo de las Misericordias",
-      "autor": "Anónimo",
-      "anio": "1670-1680",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
-      "cita": "Es talla anónima aunque por su estilo pudiera ser atribuido a Pedro Roldán o a su escuela"
-    },
-    {
-      "hermandad": "santa-cruz-sevilla",
-      "titular": "María Santísima de los Dolores",
-      "autor": "Antonio Eslava Rubio",
-      "anio": "1967",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
-      "cita": "es obra de Antonio Eslava Rubio realizada en el año 1967"
-    },
-    {
-      "hermandad": "el-carmen-doloroso-sevilla",
-      "titular": "María Santísima del Carmen en sus Dolores",
-      "autor": "Francisco Berlanga de Ávila",
-      "anio": "1984",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
-      "cita": "La imagen fue realizada en 1984 por Francisco Berlanga de Ávila"
-    },
-    {
-      "hermandad": "san-bernardo-sevilla",
-      "titular": "María Santísima del Refugio",
-      "autor": "Sebastián Santos",
-      "anio": "1938",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
-      "cita": "fue realizada por Sebastián Santos Rojas en el año 1938"
-    },
-    {
-      "hermandad": "el-buen-fin-sevilla",
-      "titular": "Santísimo Cristo del Buen Fin",
-      "autor": "Sebastián Rodríguez",
-      "anio": "1645",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
-      "cita": "realizada por Sebastián Rodríguez, discípulo de Juan de Mesa, en 1645"
-    },
-    {
-      "hermandad": "el-buen-fin-sevilla",
-      "titular": "María Santísima de la Palma",
-      "autor": "Anónimo",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
-      "cita": "La talla de la Virgen es de origen anónimo, del siglo XVII"
-    },
-    {
-      "hermandad": "la-lanzada-sevilla",
-      "titular": "Sagrada Lanzada",
-      "autor": "Antonio Illanes",
-      "anio": "1929",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
-      "cita": "es una obra de Antonio Illanes fechada en 1929"
-    },
-    {
-      "hermandad": "la-lanzada-sevilla",
-      "titular": "María Santísima de Guía",
-      "autor": "Antonio Illanes",
-      "anio": "1971",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
-      "cita": "La actual Virgen de Guía es de 1971, también de Illanes"
-    },
-    {
-      "hermandad": "el-baratillo-sevilla",
-      "titular": "Santísimo Cristo de la Misericordia",
-      "autor": "Luis Ortega Bru",
-      "anio": "1951",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
-      "cita": "El Cristo de la Misericordia fue realizado en 1951 por Luis Ortega Bru"
-    },
-    {
-      "hermandad": "el-baratillo-sevilla",
-      "titular": "Nuestra Señora de la Piedad",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1945",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
-      "cita": "La imagen de la Virgen fue realizada por José Manuel Rodríguez Fernández-Andés en 1945"
-    },
-    {
-      "hermandad": "el-baratillo-sevilla",
-      "titular": "María Santísima de la Caridad en su Soledad",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1931",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
-      "cita": "fue realizada en 1931 por Fernández-Andés"
-    },
-    {
-      "hermandad": "cristo-de-burgos-sevilla",
-      "titular": "Madre de Dios de la Palma",
-      "autor": "Manuel Gutiérrez-Reyes Cano",
-      "anio": "1884",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
-      "cita": "es una obra de Manuel Gutiérrez-Reyes Cano realizada en 1884"
-    },
-    {
-      "hermandad": "siete-palabras-sevilla",
-      "titular": "Santísimo Cristo de las Siete Palabras",
-      "autor": "Felipe Martínez",
-      "anio": "1682",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
-      "cita": "El Crucificado fue realizado en 1682 por Felipe Martínez"
-    },
-    {
-      "hermandad": "siete-palabras-sevilla",
-      "titular": "María Santísima de la Cabeza",
-      "autor": "Manuel Escamilla Cabezas",
-      "anio": "1956",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
-      "cita": "El escultor Manuel Escamilla Cabezas tomó la imagen de uno de los ángeles [...] y la modificó"
-    },
-    {
-      "hermandad": "siete-palabras-sevilla",
-      "titular": "María Santísima de los Remedios",
-      "autor": "Manuel Gutiérrez-Reyes Cano",
-      "anio": "1865",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
-      "cita": "Fue realizada en 1865 por Manuel Gutiérrez-Reyes Cano"
-    },
-    {
-      "hermandad": "los-panaderos-sevilla",
-      "titular": "Nuestro Padre Jesús en su Prendimiento",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1945",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
-      "cita": "es una talla de Antonio Castillo Lastrucci del año 1945"
-    },
-    {
-      "hermandad": "los-negritos-sevilla",
-      "titular": "Nuestra Señora de los Ángeles",
-      "autor": "Anónimo",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
-      "cita": "La Virgen es de autor anónimo"
-    },
-    {
-      "hermandad": "la-exaltacion-los-caballos-sevilla",
-      "titular": "María Santísima de las Lágrimas",
-      "autor": "Anónimo",
-      "anio": "s. XVIII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
-      "cita": "La imagen de la Virgen es de autor anónimo del siglo XVIII"
-    },
-    {
-      "hermandad": "montesion-sevilla",
-      "titular": "Oración en el Huerto",
-      "autor": "Pedro Roldán",
-      "anio": "1675",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
-      "cita": "En 1675 se encargó un nuevo misterio completo, incluida la imagen del Señor, a Pedro Roldán"
-    },
-    {
-      "hermandad": "montesion-sevilla",
-      "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
-      "autor": "Anónimo",
-      "anio": "finales s. XVI - principios s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
-      "cita": "una obra de escultor anónimo de finales del siglo XVI o principios del siglo XVII"
-    },
-    {
-      "hermandad": "la-quinta-angustia-sevilla",
-      "titular": "María Santísima de la Quinta Angustia",
-      "autor": "Vicente Rodríguez-Casso",
-      "anio": "1934",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
-      "cita": "La Virgen fue tallada en 1934 por Vicente Rodríguez-Casso"
-    },
-    {
-      "hermandad": "el-valle-sevilla",
-      "titular": "Coronación de Espinas",
-      "autor": "Agustín de Perea",
-      "anio": "finales s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
-      "cita": "Agustín de Perea talló la imagen del Cristo de la Coronación de Espinas"
-    },
-    {
-      "hermandad": "el-valle-sevilla",
-      "titular": "Nuestro Padre Jesús con la Cruz al hombro",
-      "autor": "Anónimo",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
-      "cita": "este cristo es de autor desconocido"
-    },
-    {
-      "hermandad": "el-valle-sevilla",
-      "titular": "María Santísima del Valle",
-      "autor": "Anónimo",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
-      "cita": "La Virgen es de origen anónimo del siglo XVII"
-    },
-    {
-      "hermandad": "pasion-sevilla",
-      "titular": "Nuestra Señora de la Merced",
-      "autor": "Sebastián Santos",
-      "anio": "1966",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
-      "cita": "fue realizada por Sebastián Santos Rojas en 1966"
-    },
-    {
-      "hermandad": "el-silencio-sevilla",
-      "titular": "Nuestro Padre Jesús Nazareno",
-      "autor": "Anónimo",
-      "anio": "1609",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
-      "cita": "La imagen es de autor desconocido, ha sido atribuida tradicionalmente a Francisco de Ocampo"
-    },
-    {
-      "hermandad": "el-silencio-sevilla",
-      "titular": "María Santísima de la Concepción",
-      "autor": "Sebastián Santos",
-      "anio": "1954",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
-      "cita": "es obra del escultor del siglo XX Sebastián Santos Rojas. Fue adquirida por la Hermandad en 1954"
-    },
-    {
-      "hermandad": "el-gran-poder-sevilla",
-      "titular": "María Santísima del Mayor Dolor y Traspaso",
-      "autor": "Anónimo",
-      "anio": "s. XVIII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
-      "cita": "La imagen de la Virgen es de origen anónimo del siglo XVIII"
-    },
-    {
-      "hermandad": "el-calvario-sevilla",
-      "titular": "María Santísima de la Presentación",
-      "autor": "Juan de Astorga",
-      "anio": "primera mitad s. XIX",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
-      "cita": "por (atribuida) Juan de Astorga"
-    },
-    {
-      "hermandad": "la-esperanza-de-triana-sevilla",
-      "titular": "Nuestro Padre Jesús de las Tres Caídas",
-      "autor": "Marcos Cabrera",
-      "anio": "",
-      "atribucion": true,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
-      "cita": "es atribuido a Marcos Cabrera"
-    },
-    {
-      "hermandad": "la-esperanza-de-triana-sevilla",
-      "titular": "María Santísima de la Esperanza de Triana",
-      "autor": "Anónimo",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
-      "cita": "es una imagen religiosa de autor desconocido"
-    },
-    {
-      "hermandad": "los-gitanos-sevilla",
-      "titular": "Nuestro Padre Jesús de la Salud",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1938",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
-      "cita": "Fue realizado por José Rodríguez y Fernández-Andes en 1938"
-    },
-    {
-      "hermandad": "los-gitanos-sevilla",
-      "titular": "María Santísima de las Angustias",
-      "autor": "José Rodríguez Fernández-Andes",
-      "anio": "1937",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
-      "cita": "fue realizada por José Rodríguez y Fernández-Andes en 1937"
-    },
-    {
-      "hermandad": "la-carreteria-sevilla",
-      "titular": "Nuestra Señora de la Luz",
-      "autor": "Luis Antonio de los Arcos (taller de Pedro Roldán)",
-      "anio": "1677",
-      "atribucion": true,
-      "fuente": "https://hermandaddelacarreteria.org/maria-santisima-de-la-luz/",
-      "cita": "con toda seguridad salió del taller de Pedro Roldán y [...] los expertos se manifiestan partidarios de que el autor fue Luis Antonio de los Arcos"
-    },
-    {
-      "hermandad": "la-carreteria-sevilla",
-      "titular": "María Santísima del Mayor Dolor en su Soledad",
-      "autor": "Alonso Álvarez Albarrán",
-      "anio": "1629",
-      "atribucion": true,
-      "fuente": "https://hermandaddelacarreteria.org/nuestra-senora-del-mayor-dolores-en-su-soledad/",
-      "cita": "Hoy día está prácticamente admitido que fue esculpida por Alonso Álvarez Albarrán en 1629"
-    },
-    {
-      "hermandad": "san-isidoro-sevilla",
-      "titular": "Nuestro Padre Jesús de las Tres Caídas",
-      "autor": "Alonso Martínez",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
-      "cita": "obra realizada por Alonso Martínez (siglo XVII)"
-    },
-    {
-      "hermandad": "san-isidoro-sevilla",
-      "titular": "María Santísima de Loreto",
-      "autor": "Anónimo",
-      "anio": "s. XVIII",
-      "atribucion": false,
-      "fuente": "http://www.conocersevilla.org/hermandades/penitencia/viernessanto/sanisidoro/index.html",
-      "cita": "La Virgen es de autor [...] desconoce al autor"
-    },
-    {
-      "hermandad": "la-o-sevilla",
-      "titular": "María Santísima de la O",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "1937",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
-      "cita": "La imagen de la Virgen fue realizada por Castillo Lastrucci en 1937"
-    },
-    {
-      "hermandad": "san-buenaventura-sevilla",
-      "titular": "Crucificado titular",
-      "autor": "Manuel Cerquera",
-      "anio": "1935",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
-      "cita": "el Cristo de la Salvación, tallado por Manuel Cerquera en 1935"
-    },
-    {
-      "hermandad": "san-buenaventura-sevilla",
-      "titular": "Dolorosa titular",
-      "autor": "Gabriel de Astorga",
-      "anio": "1851",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
-      "cita": "La imagen de la Virgen es tallada en 1851 por el imaginero Gabriel de Astorga"
-    },
-    {
-      "hermandad": "montserrat-sevilla",
-      "titular": "Nuestra Señora de Montserrat",
-      "autor": "Gaspar de la Cueva",
-      "anio": "s. XVII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
-      "cita": "La Virgen de Montserrat fue tallada por Gaspar de la Cueva en el siglo XVII"
-    },
-    {
-      "hermandad": "la-sagrada-mortaja-sevilla",
-      "titular": "Misterio de la Sagrada Mortaja",
-      "autor": "Cristóbal Pérez",
-      "anio": "1677",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
-      "cita": "La imagen de Jesús fue tallada en 1677 por Cristóbal Pérez"
-    },
-    {
-      "hermandad": "los-servitas-sevilla",
-      "titular": "Santísimo Cristo de la Providencia",
-      "autor": "José Montes de Oca",
-      "anio": "1730",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
-      "cita": "Las imágenes de Jesús muerto y la Virgen de los Dolores fueron talladas en 1730 por José Montes de Oca"
-    },
-    {
-      "hermandad": "los-servitas-sevilla",
-      "titular": "María Santísima de los Dolores",
-      "autor": "José Montes de Oca",
-      "anio": "1730",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
-      "cita": "Las imágenes de Jesús muerto y la Virgen de los Dolores fueron talladas en 1730 por José Montes de Oca"
-    },
-    {
-      "hermandad": "la-trinidad-sevilla",
-      "titular": "Cristo de las Cinco Llagas",
-      "autor": "Luis Álvarez Duarte",
-      "anio": "2002",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
-      "cita": "El nuevo Cristo fue realizado en 2002 por Álvarez Duarte"
-    },
-    {
-      "hermandad": "la-trinidad-sevilla",
-      "titular": "María Santísima de la Esperanza",
-      "autor": "Juan de Astorga",
-      "anio": "1820",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
-      "cita": "La imagen de la Virgen de la Esperanza data de 1820 y fue realizada por Juan de Astorga"
-    },
-    {
-      "hermandad": "el-santo-entierro-sevilla",
-      "titular": "Cristo Yacente en la urna",
-      "autor": "Juan de Mesa",
-      "anio": "1619",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
-      "cita": "La imagen es obra de Juan de Mesa, finalizada el 12 de marzo de 1619"
-    },
-    {
-      "hermandad": "el-santo-entierro-sevilla",
-      "titular": "Nuestra Señora de Villaviciosa",
-      "autor": "Antonio Cardoso de Quirós",
-      "anio": "1691",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
-      "cita": "la Virgen de Villaviciosa es una talla de 1691 de Cardoso Quirós"
-    },
-    {
-      "hermandad": "la-resurreccion-sevilla",
-      "titular": "María Santísima de la Aurora",
-      "autor": "Antonio Dubé de Luque",
-      "anio": "1978",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
-      "cita": "La Virgen de la Aurora su autor es Antonio Dubé de Luque (1978)"
-    },
-    {
-      "hermandad": "bellavista-sevilla",
-      "titular": "Nuestro Padre Jesús de la Salud y Remedios",
-      "autor": "Antonio Castillo Lastrucci",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
-      "cita": "una figura de Cristo Cautivo realizada por Antonio Castillo Lastrucci [...] Se le dio el nombre de Jesús de la Salud y Remedios"
-    },
-    {
-      "hermandad": "bendicion-y-esperanza-sevilla",
-      "titular": "Jesús de la Bendición en el Santo Encuentro.",
-      "autor": "Juan Antonio Blanco Ramos",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
-      "cita": "obra del escultor Juan Antonio Blanco Ramos"
-    },
-    {
-      "hermandad": "bendicion-y-esperanza-sevilla",
-      "titular": "Virgen de la Esperanza en su Soledad",
-      "autor": "Juan Antonio Blanco Ramos",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
-      "cita": "realizada por el mismo escultor"
-    },
-    {
-      "hermandad": "pasion-y-muerte-sevilla",
-      "titular": "Santa María del Buen Aire",
-      "autor": "Anónimo (escuela barroca sevillana)",
-      "anio": "s. XVIII",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
-      "cita": "obra de autor anónimo de la escuela barroca sevillana siglo XVIII"
-    },
-    {
-      "hermandad": "pasion-y-muerte-sevilla",
-      "titular": "Cristo de Pasión y Muerte",
-      "autor": "José Antonio Navarro Arteaga",
-      "anio": "1996",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
-      "cita": "El Cristo es obra del escultor y hermano fundador de la corporación, José Antonio Navarro Arteaga en 1996"
-    },
-    {
-      "hermandad": "pasion-y-muerte-sevilla",
-      "titular": "Nuestra Señora del Desconsuelo y Visitación",
-      "autor": "José Antonio Navarro Arteaga",
-      "anio": "2001",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
-      "cita": "también fue el hermano fundador e imaginero José Antonio Navarro Arteaga [...] realizada en el año 2001"
-    },
-    {
-      "hermandad": "pino-montano-sevilla",
-      "titular": "Nuestro Padre Jesús de Nazaret",
-      "autor": "Fernando Castejón López",
-      "anio": "1989",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
-      "cita": "La talla de Jesús fue realizada por Fernando Castejón López en 1989"
-    },
-    {
-      "hermandad": "pino-montano-sevilla",
-      "titular": "María Santísima del Amor",
-      "autor": "Fernando Castejón López",
-      "anio": "1998",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
-      "cita": "La Virgen del Amor es una talla de candelero realizada por Fernando Castejón en el año 1998"
-    },
-    {
-      "hermandad": "pino-montano-sevilla",
-      "titular": "San Marcos Evangelista",
-      "autor": "Fernando Castejón López",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
-      "cita": "Las imágenes secundarias son todas obra de Fernando Castejón López"
-    },
-    {
-      "hermandad": "cristo-de-la-corona-sevilla",
-      "titular": "Santísimo Cristo de la Corona",
-      "autor": "Anónimo",
-      "anio": "último tercio s. XVI",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
-      "cita": "es una talla de autor desconocido"
-    },
-    {
-      "hermandad": "padre-pio-sevilla",
-      "titular": "Nuestro Padre Jesús de la Salud y Clemencia",
-      "autor": "Fernando Murciano Abad",
-      "anio": "1996",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
-      "cita": "La talla es obra del escultor Fernando Murciano Abad y fue realizada en 1996"
-    },
-    {
-      "hermandad": "padre-pio-sevilla",
-      "titular": "Santísima Virgen de la Divina Gracia",
-      "autor": "Luis Álvarez Duarte",
-      "anio": "1987",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
-      "cita": "Fue tallada en 1987 por Luis Álvarez Duarte"
-    },
-    {
-      "hermandad": "la-milagrosa-sevilla",
-      "titular": "Jesús de la Esperanza",
-      "autor": "José Antonio Navarro Arteaga",
-      "anio": "2008",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
-      "cita": "talla de José Antonio Navarro Arteaga realizada en el año 2008"
-    },
-    {
-      "hermandad": "la-milagrosa-sevilla",
-      "titular": "Virgen del Rosario",
-      "autor": "Francisco Buiza",
-      "anio": "1963",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
-      "cita": "La Virgen fue esculpida por el insigne escultor Francisco Buiza en el año 1963"
-    },
-    {
-      "hermandad": "dolores-de-torreblanca-sevilla",
-      "titular": "N.P.J. Cautivo ante Pilato",
-      "autor": "Jesús Méndez Lastrucci",
-      "anio": "1991-1992",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
-      "cita": "el Señor Cautivo ante Pilato obra de Jesús Méndez Lastrucci (realizada entre 1991 y 1992)"
-    },
-    {
-      "hermandad": "dolores-de-torreblanca-sevilla",
-      "titular": "Mª Stma. de los Dolores",
-      "autor": "José María Gamero Viñau",
-      "anio": "1987",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
-      "cita": "La Virgen de los Dolores es obra de José María Gamero Viñau (1987)"
-    },
-    {
-      "hermandad": "divino-perdon-sevilla",
-      "titular": "Jesús del Divino Perdón",
-      "autor": "José Antonio Navarro Arteaga",
-      "anio": "2002",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
-      "cita": "En 2002 es bendecida una nueva talla del Cristo [...] realizada por José Antonio Navarro Arteaga"
-    },
-    {
-      "hermandad": "divino-perdon-sevilla",
-      "titular": "Virgen de la Purísima Concepción",
-      "autor": "José Antonio Navarro Arteaga",
-      "anio": "2002",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
-      "cita": "Ese mismo año se bendijo la talla de la Virgen, realizada también por José Antonio"
-    },
-    {
-      "hermandad": "el-despojado-silencio-blanco-granada",
-      "titular": "María Santísima del Dulce Nombre y San Juan",
-      "autor": "Miguel Ángel González Jurado",
-      "anio": "1994-1998",
-      "atribucion": false,
-      "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/",
-      "cita": "La imagen mariana de la Cofradía es encargada al Cordobés González Jurado el día de la Inmaculada de 1994"
-    },
-    {
-      "hermandad": "los-salesianos-granada",
-      "titular": "Nuestra Señora de la Salud",
-      "autor": "Antonio Díaz",
-      "anio": "1985-1986",
-      "atribucion": false,
-      "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
-      "cita": "En 1985 se encarga la ejecución de la titular mariana también a Antonio Díaz Fernández"
-    },
-    {
-      "hermandad": "la-aurora-granada",
-      "titular": "Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982)",
-      "autor": "Antonio Barbero Gor",
-      "anio": "1982",
-      "atribucion": false,
-      "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/",
-      "cita": "fue sustituida por una copia realizada “por puntos”, obra de Antonio Barbero Gor"
-    },
-    {
-      "hermandad": "la-caridad-almeria",
-      "titular": "María Santísima de las Penas",
-      "autor": "Juan Manuel Miñarro",
-      "anio": "2006-2007",
-      "atribucion": false,
-      "fuente": "https://cofradiasdealmeria.es/caridad/",
-      "cita": "Obra de D. Juan Manuel Miñarro López (Sevilla 2006-2007)"
-    },
-    {
-      "hermandad": "caridad-y-salud-jaen",
-      "titular": "Jesús de la Caridad ante Caifás",
-      "autor": "Miguel Cordero Romero",
-      "anio": "2016",
-      "atribucion": false,
-      "fuente": "https://www.hermandadcaridadysaludjaen.com/historia/",
-      "cita": "se bendice a nuestro Sagrado Titular Jesús de la Caridad, obra del joven imaginero Miguel Cordero Romero"
-    },
-    {
-      "hermandad": "el-silencio-jaen",
-      "titular": "María Santísima Madre de Dios",
-      "autor": "Israel Cornejo",
-      "anio": "2013",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Ja%C3%A9n)",
-      "cita": "Imagen realizada por Israel Cornejo Sánchez en el año 2013"
-    },
-    {
-      "hermandad": "el-cautivo-jaen",
-      "titular": "Nuestro Divino Redentor Jesús Cautivo",
-      "autor": "Francisco Romero Zafra",
-      "anio": "2012",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cautivo_(Ja%C3%A9n)",
-      "cita": "Obra de Francisco Romero Zafra en 2012"
-    },
-    {
-      "hermandad": "el-perdon-jaen",
-      "titular": "María Santísima de la Esperanza",
-      "autor": "Antonio Eslava Rubio",
-      "anio": "1952",
-      "atribucion": false,
-      "fuente": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
-      "cita": "La imagen de la Virgen de la Esperanza (1952) es de Antonio Eslava"
-    },
-    {
-      "hermandad": "mutilado-clemencia-malaga",
-      "titular": "Santísimo Cristo de la Clemencia",
-      "autor": "Jerónimo Gómez de Hermosilla",
-      "anio": "h. 1678-1716",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
-      "cita": "Cristo Crucificado muerto (h. 1678-1716), del escultor granadino afincado en Málaga, Jerónimo Gómez de Hermosilla"
-    },
-    {
-      "hermandad": "verdad-y-sagrario-malaga",
-      "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
-      "autor": "Mario Zambrano",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "a sus dos titulares, obras del escultor sevillano Mario Zambrano"
-    },
-    {
-      "hermandad": "verdad-y-sagrario-malaga",
-      "titular": "María Santísima del Sagrario",
-      "autor": "Mario Zambrano",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "a sus dos titulares, obras del escultor sevillano Mario Zambrano"
-    },
-    {
-      "hermandad": "luz-y-mar-malaga",
-      "titular": "Santísimo Cristo Luz del Mundo",
-      "autor": "Valerio Téllez Bermúdez",
-      "anio": "2016",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "En el año 2016 bendice a su titular cristifero Stmo Cristo, Luz del Mundo obra de D. Valerio Tellez Bermúdez"
-    },
-    {
-      "hermandad": "luz-y-mar-malaga",
-      "titular": "María Santísima del Mar",
-      "autor": "Liébana",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "La Virgen del Mar es obra de Liébana"
-    },
-    {
-      "hermandad": "medinaceli-martiricos-malaga",
-      "titular": "Jesús de Medinaceli",
-      "autor": "Israel Cornejo",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "procesionan al Señor de Medinaceli y a la Virgen de la Candelaría ambos obra de Israel Cornejo"
-    },
-    {
-      "hermandad": "medinaceli-martiricos-malaga",
-      "titular": "María Santísima de la Candelaria",
-      "autor": "Israel Cornejo",
-      "anio": "",
-      "atribucion": false,
-      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
-      "cita": "procesionan al Señor de Medinaceli y a la Virgen de la Candelaría ambos obra de Israel Cornejo"
-    }
-  ],
-  "sin_encontrar": [
-    {
-      "hermandad": "el-carmen-doloroso-sevilla",
-      "titular": "Nazareno"
-    },
-    {
-      "hermandad": "los-panaderos-sevilla",
-      "titular": "María Santísima de Regla"
-    },
-    {
-      "hermandad": "las-cigarreras-sevilla",
-      "titular": "María Santísima de la Victoria"
-    },
-    {
-      "hermandad": "la-carreteria-sevilla",
-      "titular": "Santísimo Cristo de la Salud"
-    },
-    {
-      "hermandad": "la-trinidad-sevilla",
-      "titular": "Sagrada Decisión"
-    },
-    {
-      "hermandad": "pasion-y-muerte-sevilla",
-      "titular": "Resurrección de Nuestro Señor"
-    },
-    {
-      "hermandad": "pino-montano-sevilla",
-      "titular": "San Isidro Labrador"
-    },
-    {
-      "hermandad": "la-mision-sevilla",
-      "titular": "Inmaculado Corazón de María"
-    },
-    {
-      "hermandad": "la-mision-sevilla",
-      "titular": "Santísimo Sacramento"
-    },
-    {
-      "hermandad": "la-mision-sevilla",
-      "titular": "Santo Cristo de la Misión"
-    },
-    {
-      "hermandad": "la-mision-sevilla",
-      "titular": "Ntra. Sra. del Amparo"
-    },
-    {
-      "hermandad": "padre-pio-sevilla",
-      "titular": "Santísimo Sacramento"
-    },
-    {
-      "hermandad": "padre-pio-sevilla",
-      "titular": "San Juan de la Cruz"
-    },
-    {
-      "hermandad": "la-milagrosa-sevilla",
-      "titular": "Virgen de la Medalla Milagrosa"
-    },
-    {
-      "hermandad": "la-milagrosa-sevilla",
-      "titular": "San Juan Evangelista"
-    },
-    {
-      "hermandad": "dolores-de-torreblanca-sevilla",
-      "titular": "Santísimo Sacramento"
-    },
-    {
-      "hermandad": "dolores-de-torreblanca-sevilla",
-      "titular": "San Antonio de Padua"
-    },
-    {
-      "hermandad": "divino-perdon-sevilla",
-      "titular": "Beata Ana María de Javouhey"
-    },
-    {
-      "hermandad": "el-sol-sevilla",
-      "titular": "María Santísima de la Salud"
-    },
-    {
-      "hermandad": "divino-maestro-lavatorio-jaen",
-      "titular": "María Santísima del Amor"
-    },
-    {
-      "hermandad": "desamparados-malaga",
-      "titular": "Nuestra Señora de los Desamparados"
-    },
-    {
-      "hermandad": "buen-camino-gamarra-malaga",
-      "titular": "Nuestra Purísima Madre del Buen Camino"
-    },
-    {
-      "hermandad": "dolores-del-puerto-de-la-torre-malaga",
-      "titular": "Santísimo Cristo de Hermandad y Caridad"
-    },
-    {
-      "hermandad": "dolores-del-puerto-de-la-torre-malaga",
-      "titular": "Nuestra Señora de los Dolores"
-    },
-    {
-      "hermandad": "dolores-de-churriana-malaga",
-      "titular": "Nuestro Padre Jesús Nazareno del Paso"
-    },
-    {
-      "hermandad": "dolores-de-churriana-malaga",
-      "titular": "Nuestra Señora de los Dolores"
-    },
-    {
-      "hermandad": "la-bendicion-huelva",
-      "titular": "Cristo de la Bendición"
-    }
-  ],
-  "notas": [
-    "Fuente general de las hermandades de Sevilla: el artículo de Wikipedia en español que figura como fuente_url en portal.json (texto leído el 2026-10-16 con la API de es.wikipedia). No se cotejó una a una cada dato con la web oficial de cada hermandad sevillana, así que no se han podido detectar contradicciones Wikipedia/fuente oficial salvo donde se indica.",
-    "la-borriquita-sevilla: Wikipedia atribuye el Cristo a Pedro Roldán pero escribe '(siglo XVI)', que no cuadra con Roldán (s. XVII); el nombre del portal dice 'anónimo s. XVII'. Se deja como atribución, sin año.",
-    "la-cena-sevilla 'Señor de la Humillación': Wikipedia no recoge ese título; se ha asociado al 'Santísimo Cristo de la Humildad y Paciencia' (autor desconocido, s. XVI, telas encoladas). Revisar el nombre en el portal antes de aplicar.",
-    "la-cena-sevilla Subterráneo: Wikipedia dice que fue 'erróneamente atribuida a Juan de Astorga' y que se reformó en el s. XIX.",
-    "la-amargura-sevilla: Wikipedia solo dice que es obra 'de un discípulo de Pedro Roldán', sin nombre.",
-    "las-penas-sevilla: el Cristo se ha atribuido tradicionalmente a Pedro Roldán; la hermandad lo sitúa en el entorno de sus colaboradores. La Virgen: hay quien la atribuye a Blas Molner; quizá de origen italiano.",
-    "las-aguas-sevilla Cristo: Wikipedia se contradice internamente: 'realizada por Antonio Illanes en el año 1940' y 'lo adapta Antonio Illanes Rodríguez en 1943 de uno anterior realizado en 1941'. Se ha dejado 1940.",
-    "el-cerro-sevilla: Wikipedia llama a la imagen 'Cristo del Desamparo y Abandono'; dos atribuciones (círculo de Ocampo, primera mitad del s. XVII; José de Arce, segunda mitad del s. XVII).",
-    "san-esteban-sevilla Desamparados: 1927 es el año de bendición; la hermandad no conserva contrato, la autoría consta en su libro de actas.",
-    "santa-cruz-sevilla Misericordias: talla anónima; por estilo atribuible a Pedro Roldán o a su escuela; otros autores la atribuyen a Francisco Ruiz Gijón.",
-    "el-valle-sevilla Cruz al hombro: varias atribuciones (estilo de los Roldán; Pérez Porto a Roldán; Banda y Vargas a la escuela de José de Arce). Virgen del Valle: atribuida a Martínez Montañés (González de León, Bermejo, Pérez Porto) y a Juan de Mesa (Hernández Díaz, Banda y Vargas, Bernales). No se elige.",
-    "el-silencio-sevilla Nazareno: atribuido tradicionalmente a Francisco de Ocampo; corrientes recientes lo atribuyen a Gaspar de la Cueva.",
-    "la-esperanza-de-triana-sevilla: Esperanza de autor desconocido; estudios apuntan a una posible atribución a Juan Bautista Patroni (Wikipedia escribe 'Petroni'); rostro intervenido por José Ordóñez en 1913.",
-    "siete-palabras-sevilla Cabeza: hay dos imágenes. La que va bajo palio (Nuestra Señora de la Cabeza) la hizo Manuel Escamilla Cabezas en 1956 transformando un ángel de Emilio Pizarro; la 'Virgen de la Cabeza Gloriosa' está atribuida a Roque Balduque (h. 1554). Se propone la de palio; confirmar cuál es la del portal.",
-    "montesion-sevilla Oración en el Huerto: el misterio original se concertó con Jerónimo Hernández (1578); en 1675 se encargó a Pedro Roldán un nuevo misterio, incluida la imagen del Señor; en 1942 Castillo Lastrucci le hizo cuerpo completo y en 1950 los apóstoles.",
-    "san-gonzalo-sevilla Salud: busto de Ortega Bru (1977); las manos son de Antonio Eslava Rubio, conservadas de la imagen anterior de Rafael Lafarque.",
-    "el-carmen-doloroso-sevilla 'Nazareno': según Wikipedia el titular cristífero es Nuestro Padre Jesús de la Paz (Francisco José Reyes Villadiego, 1990), que no es un nazareno; no se asigna hasta aclarar a qué imagen se refiere el portal.",
-    "bellavista-sevilla: Castillo Lastrucci la hizo para una hermandad de Jerez que no llegó a fundarse; se bendijo para esta hermandad en 1970 (año de bendición, no de hechura).",
-    "pino-montano-sevilla Jesús: Wikipedia da 1989 como año de la talla, pero también dice que el 1 de marzo de 1986 se bendijo una talla de Jesús de Nazaret de Castejón; remodelada por su autor en 2002. Virgen del Amor: la actual es de 1998 (hubo una anterior de terracota de 1984). San Marcos: es la figura del misterio; Wikipedia dice que todas las imágenes secundarias y 'el resto de imágenes de la cofradía' son de Castejón.",
-    "san-buenaventura-sevilla: 'Crucificado titular' = Cristo de la Salvación (titular desde 1967, no procesiona). 'Dolorosa titular' = Virgen de la Soledad, retocada por Sebastián Santos en 1954.",
-    "la-sagrada-mortaja-sevilla: el autor propuesto es el del Cristo; la Virgen de la Piedad está atribuida a La Roldana y el resto de figuras son de autor desconocido.",
-    "san-isidoro-sevilla Tres Caídas: la Wikipedia actual dice 'obra realizada por Alonso Martínez'; una versión anterior del artículo (copia en es-academic.com) decía 'atribuida a Alonso Martínez' y la fechaba en 1668. Loreto: Conocer Sevilla dice que se desconoce el autor; mascarilla retallada por Sebastián Santos en 1955.",
-    "el-despojado-silencio-blanco-granada: la misma ficha dice que 'la imagen de María Santísima del Dulce Nombre es bendecida [...] el 11 de marzo de 1989' (parece una imagen anterior) y que la actual se encargó a González Jurado en 1994 y se bendijo el 8-12-1998 junto con San Juan (encargado en 1995).",
-    "los-salesianos-granada Salud: bendecida en 1986 y retallada en 2009 por Israel Cornejo.",
-    "la-aurora-granada: copia por puntos (1982) del original de Diego de Siloé, que se venera en la parroquia de San José.",
-    "Jaén: cofradiasjaen.org está suspendido; se consultaron las copias de web.archive.org listadas en fichas.json (fuentes_nuevas) y, donde no daban el dato, Wikipedia o la web oficial de la hermandad.",
-    "el-cautivo-jaen: la copia archivada de cofradiasjaen.org da 2008 como año de hechura de la Virgen de la Trinidad (Wikipedia: 2009); para el Cautivo (2012, bendecido el 24-11-2012) se usa Wikipedia.",
-    "mutilado-clemencia-malaga: restaurado por Juan Manuel Miñarro (2019-2020).",
-    "luz-y-mar-malaga Mar: Wikipedia solo da el apellido 'Liébana', sin nombre ni año; dato incompleto.",
-    "SIN ENCONTRAR: la-carreteria-sevilla Santísimo Cristo de la Salud: Wikipedia dice 'talla atribuida a Francisco de Ocampo', mientras que la web oficial (https://hermandaddelacarreteria.org/santisimo-cristo-de-la-salud/) dice que 'nada se puede asegurar' y recoge atribuciones a Martínez Montañés, Matías de la Cruz y Juan de Oviedo. Contradicción: no se elige.",
-    "la-carreteria-sevilla Luz y Mayor Dolor: datos de la web oficial. La Luz, según la hermandad, era una de las Marías del concierto de 1677 con el taller de Roldán. El Mayor Dolor se apoya en un contrato de 1629 con Alonso Álvarez Albarrán para 'una Dolorosa' (por eso va como atribución, aunque sea firme). Wikipedia solo dice 's. XVII' y 'realizada en 1629', sin autor.",
-    "SIN ENCONTRAR (motivos): los-panaderos-sevilla Regla: atribuida a La Roldana sin documento; un inventario firmado por Rodríguez Ojeda la da a Gumersindo Jiménez Astorga (s. XIX), que pudo ser solo restaurador; otros la dan a Juan de Astorga. Wikipedia advierte que no es concluyente. No se elige.",
-    "SIN ENCONTRAR: las-cigarreras-sevilla Victoria: Wikipedia solo dice 'talla del siglo XVII, ejecutada muy probablemente entre 1611 y 1628', intervenida por Juan de Astorga en 1803. Webs no oficiales la dan como anónima (pedacitosdepasion.com) o recogen la atribución de Hernández Díaz a Juan de Mesa (rafaes.com). Sin fuente oficial ni Wikipedia con autor.",
-    "SIN ENCONTRAR: la-trinidad-sevilla 'Sagrada Decisión' es un grupo de varias figuras y Wikipedia se contradice dentro del mismo artículo (Dios 'talla anónima del siglo XVII' y Jesús 'de 1913' frente a Dios-Hijo 'anónimo del s. XVII vinculado al círculo de Duque Cornejo' y Dios-Padre 'se atribuye a Juan de Mesa').",
-    "SIN ENCONTRAR: pasion-y-muerte-sevilla 'Resurrección de Nuestro Señor': Wikipedia dice expresamente que es titular 'aunque no tiene talla que lo represente'. No hay autor posible; quizá debería salir de la lista de titulares con imagen.",
-    "SIN ENCONTRAR: los 'Santísimo Sacramento' (la-mision, padre-pio, dolores-de-torreblanca) y el 'Inmaculado Corazón de María' de la Misión son advocaciones del título, no imágenes procesionales; no tiene sentido buscar autor.",
-    "SIN ENCONTRAR: la-mision-sevilla Santo Cristo de la Misión: Wikipedia dice que en 1984 se encargó 'una imagen de nazareno' a José Manuel Bonilla Cornejo y que en 1988 se bendijo 'la talla del Santo Cristo de la Misión', pero no une ambas frases; probablemente es de Bonilla, sin confirmar. Ntra. Sra. del Amparo: procede del convento de Santa Rosalía, sin autor.",
-    "SIN ENCONTRAR: la-bendicion-huelva Cristo de la Bendición: la ficha del Ayuntamiento (semanasanta.huelva.es/la-bendicion/) solo da autor de las figuras del misterio (Juan Manuel Montaño Fernández: Caifás 2016, Anás y guardia 2019, Sanedrín y José de Arimatea 2020), no del Cristo. Montaño hace el mantenimiento del Cristo, lo que no prueba la autoría.",
-    "SIN ENCONTRAR: dolores-de-churriana-malaga: Wikipedia ('Corporaciones no agrupadas...') solo dice que el Nazareno del Paso y la Virgen de los Dolores 'datan del siglo XVIII', sin autor. buen-camino-gamarra-malaga: el mismo artículo menciona una dolorosa de Gamarra hecha por José María Hurtado en 2017 ('Encarnación y amor Divino'), pero no se puede confirmar que sea la Purísima Madre del Buen Camino. desamparados-malaga y dolores-del-puerto-de-la-torre-malaga: sin datos de autor.",
-    "SIN ENCONTRAR: divino-maestro-lavatorio-jaen María Santísima del Amor: ni la copia archivada de cofradiasjaen.org ni Wikipedia ni extrajaen.com dan autor (el Cristo y San Pedro son de Antonio José Martínez Rodríguez, 2015).",
-    "SIN ENCONTRAR: el-sol-sevilla 'María Santísima de la Salud' figura en el título de la hermandad (Hermandad Sacramental de la Inmaculada Concepción de María Santísima de la Salud), pero Wikipedia no describe esa imagen. La Virgen del Sol y las demás tallas son de José Manuel Bonilla Cornejo (Virgen del Sol, 1989).",
-    "Nombres normalizados con el listado de imagineros del portal cuando coinciden (p. ej. 'Antonio Illanes', 'Sebastián Santos', 'Antonio Díaz', 'Juan Manuel Miñarro', 'Israel Cornejo', 'Antonio Cardoso de Quirós'). 'José Rodríguez Fernández-Andes' no está en el portal; Wikipedia lo escribe de varias formas (Fernández-Andes, Fernández-Andés, Fernández Andés)."
-  ]
+ "generado": "2026-10-16",
+ "titulares": [
+  {
+   "hermandad": "la-borriquita-sevilla",
+   "titular": "Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII",
+   "autor": "Pedro Roldán",
+   "anio": "",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+   "cita": "La imagen de Jesús se atribuye a Pedro Roldán"
+  },
+  {
+   "hermandad": "jesus-despojado-sevilla",
+   "titular": "Jesús Despojado de sus Vestiduras",
+   "autor": "Antonio Perea Sánchez",
+   "anio": "1939",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+   "cita": "La imagen del Señor fue realizada por Antonio Perea Sánchez en 1939"
+  },
+  {
+   "hermandad": "jesus-despojado-sevilla",
+   "titular": "María Santísima de los Dolores y Misericordia",
+   "autor": "Antonio Eslava Rubio",
+   "anio": "1962",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+   "cita": "Antonio Eslava hizo a la Virgen en 1962"
+  },
+  {
+   "hermandad": "la-cena-sevilla",
+   "titular": "Señor de la Humillación",
+   "autor": "Anónimo",
+   "anio": "s. XVI",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+   "cita": "Es de autor desconocido, y está datado en torno al siglo XVI"
+  },
+  {
+   "hermandad": "la-cena-sevilla",
+   "titular": "María Santísima del Subterráneo",
+   "autor": "Anónimo",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+   "cita": "es de autoría desconocida y está fechada en torno al siglo XVII"
+  },
+  {
+   "hermandad": "san-roque-sevilla",
+   "titular": "Nuestro Padre Jesús de las Penas",
+   "autor": "Antonio Illanes",
+   "anio": "1939",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+   "cita": "El Señor de las Penas es obra de Antonio Illanes de 1939"
+  },
+  {
+   "hermandad": "san-roque-sevilla",
+   "titular": "María Santísima de Gracia y Esperanza",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1938",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+   "cita": "La Virgen de Gracia y Esperanza fue realizada por Fernández-Andes en 1938"
+  },
+  {
+   "hermandad": "la-amargura-sevilla",
+   "titular": "Cristo del Silencio en el Desprecio de Herodes",
+   "autor": "Anónimo (discípulo de Pedro Roldán)",
+   "anio": "",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+   "cita": "son obra de un discípulo de Pedro Roldán"
+  },
+  {
+   "hermandad": "san-pablo-sevilla",
+   "titular": "Jesús Cautivo y Rescatado",
+   "autor": "Luis Álvarez Duarte",
+   "anio": "1992",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+   "cita": "(1992) es obra del imaginero sevillano y hermano de la Corporación, D. Luis Álvarez Duarte"
+  },
+  {
+   "hermandad": "san-pablo-sevilla",
+   "titular": "María Santísima del Rosario",
+   "autor": "Luis Álvarez Duarte",
+   "anio": "2007",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+   "cita": "Nuestra Señora del Rosario Doloroso, es obra de Luis Álvarez Duarte (2007)"
+  },
+  {
+   "hermandad": "redencion-sevilla",
+   "titular": "Santísimo Cristo de la Redención en el Beso de Judas",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1957-1959",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+   "cita": "Todas las imágenes están realizadas entre 1957 y 1959 por Antonio Castillo Lastrucci"
+  },
+  {
+   "hermandad": "redencion-sevilla",
+   "titular": "María Santísima del Rocío",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1955",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+   "cita": "fue realizada también por Castillo Lastrucci. La hizo en 1955"
+  },
+  {
+   "hermandad": "santa-genoveva-sevilla",
+   "titular": "María Santísima de las Mercedes",
+   "autor": "José Paz Vélez",
+   "anio": "1956",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+   "cita": "también es obra del imaginero José Paz Vélez, realizada y bendecida en 1956"
+  },
+  {
+   "hermandad": "san-gonzalo-sevilla",
+   "titular": "María Santísima de la Salud",
+   "autor": "Luis Ortega Bru",
+   "anio": "1977",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+   "cita": "Luis Ortega Bru sería el que en el año 1977 gubiara el busto de la Dolorosa actual"
+  },
+  {
+   "hermandad": "vera-cruz-sevilla",
+   "titular": "María Santísima de las Tristezas",
+   "autor": "Antonio Illanes",
+   "anio": "1942",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+   "cita": "es obra del escultor Antonio Illanes Rodríguez de 1942"
+  },
+  {
+   "hermandad": "las-penas-sevilla",
+   "titular": "Nuestro Padre Jesús de las Penas",
+   "autor": "Anónimo",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+   "cita": "La imagen de Cristo es anónima del siglo XVII"
+  },
+  {
+   "hermandad": "las-penas-sevilla",
+   "titular": "María Santísima de los Dolores",
+   "autor": "Anónimo",
+   "anio": "s. XVIII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+   "cita": "La imagen de la Virgen también es anónima del siglo XVIII"
+  },
+  {
+   "hermandad": "las-aguas-sevilla",
+   "titular": "Santísimo Cristo de las Aguas",
+   "autor": "Antonio Illanes",
+   "anio": "1940",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+   "cita": "fue realizada por Antonio Illanes en el año 1940"
+  },
+  {
+   "hermandad": "las-aguas-sevilla",
+   "titular": "Nuestra Señora de Guadalupe",
+   "autor": "Luis Álvarez Duarte",
+   "anio": "1965",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+   "cita": "fue realizada en 1965 por Luis Álvarez Duarte"
+  },
+  {
+   "hermandad": "el-museo-sevilla",
+   "titular": "Nuestra Señora de las Aguas",
+   "autor": "Cristóbal Ramos",
+   "anio": "1772",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+   "cita": "La Virgen es obra de Cristóbal Ramos en 1772"
+  },
+  {
+   "hermandad": "el-cerro-sevilla",
+   "titular": "Santísimo Cristo de los Desamparados",
+   "autor": "Círculo de Francisco de Ocampo o José de Arce",
+   "anio": "s. XVII",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+   "cita": "se ha atribuido al círculo de Francisco de Ocampo [...] o a José de Arce"
+  },
+  {
+   "hermandad": "el-cerro-sevilla",
+   "titular": "María Santísima de los Dolores",
+   "autor": "Sebastián Santos",
+   "anio": "1955",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+   "cita": "La Virgen es una imagen realizada en 1955 por Sebastián Santos"
+  },
+  {
+   "hermandad": "los-javieres-sevilla",
+   "titular": "Santísimo Cristo de las Almas",
+   "autor": "José Pires Azcárraga",
+   "anio": "1945",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+   "cita": "fue tallada en 1945 y bendecida 1947 por el imaginero gaditano José Pires Azcárraga"
+  },
+  {
+   "hermandad": "los-javieres-sevilla",
+   "titular": "Nuestra Señora de Gracia y Amparo",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1945",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+   "cita": "fue tallada en 1945 por José Fernández Andés"
+  },
+  {
+   "hermandad": "san-esteban-sevilla",
+   "titular": "Cristo de la Salud y Buen Viaje",
+   "autor": "Anónimo",
+   "anio": "s. XVI-XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+   "cita": "Es de autor anónimo"
+  },
+  {
+   "hermandad": "san-esteban-sevilla",
+   "titular": "María Santísima de los Desamparados",
+   "autor": "Manuel Galiano Delgado",
+   "anio": "1927",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+   "cita": "Manuel Galiano Delgado fue el autor de la Virgen de los Desamparados"
+  },
+  {
+   "hermandad": "san-benito-sevilla",
+   "titular": "Presentación de Jesús al Pueblo",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1928",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+   "cita": "Todas las imágenes de este misterio fueron realizadas por Antonio Castillo Lastrucci en 1928"
+  },
+  {
+   "hermandad": "san-benito-sevilla",
+   "titular": "Santísimo Cristo de la Sangre",
+   "autor": "Francisco Buiza",
+   "anio": "1966",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+   "cita": "El crucificado fue realizado por Francisco Buiza Fernández en 1966"
+  },
+  {
+   "hermandad": "san-benito-sevilla",
+   "titular": "María Santísima de la Encarnación",
+   "autor": "Anónimo",
+   "anio": "finales s. XVII - principios s. XVIII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+   "cita": "La Virgen de la Encarnación es de autor anónimo"
+  },
+  {
+   "hermandad": "la-candelaria-sevilla",
+   "titular": "Nuestro Padre Jesús de la Salud",
+   "autor": "Francisco de Ocampo o Pedro Roldán",
+   "anio": "c. 1615",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+   "cita": "La imagen de Jesús se atribuye a Francisco de Ocampo (c. 1615) o a Pedro Roldán"
+  },
+  {
+   "hermandad": "la-candelaria-sevilla",
+   "titular": "María Santísima de la Candelaria",
+   "autor": "Manuel Galiano Delgado",
+   "anio": "1924",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+   "cita": "La Virgen es tallada por Manuel Galiano en 1924"
+  },
+  {
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "titular": "Nuestro Padre Jesús ante Anás",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1923",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+   "cita": "El grupo escultórico de Jesús ante Anás fue realizado por Antonio Castillo Lastrucci en 1923"
+  },
+  {
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "titular": "María Santísima del Dulce Nombre",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1924",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+   "cita": "Ambas imágenes fueron realizadas por Antonio Castillo Lastrucci en 1924"
+  },
+  {
+   "hermandad": "santa-cruz-sevilla",
+   "titular": "Santísimo Cristo de las Misericordias",
+   "autor": "Anónimo",
+   "anio": "1670-1680",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+   "cita": "Es talla anónima aunque por su estilo pudiera ser atribuido a Pedro Roldán o a su escuela"
+  },
+  {
+   "hermandad": "santa-cruz-sevilla",
+   "titular": "María Santísima de los Dolores",
+   "autor": "Antonio Eslava Rubio",
+   "anio": "1967",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+   "cita": "es obra de Antonio Eslava Rubio realizada en el año 1967"
+  },
+  {
+   "hermandad": "el-carmen-doloroso-sevilla",
+   "titular": "María Santísima del Carmen en sus Dolores",
+   "autor": "Francisco Berlanga de Ávila",
+   "anio": "1984",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+   "cita": "La imagen fue realizada en 1984 por Francisco Berlanga de Ávila"
+  },
+  {
+   "hermandad": "san-bernardo-sevilla",
+   "titular": "María Santísima del Refugio",
+   "autor": "Sebastián Santos",
+   "anio": "1938",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+   "cita": "fue realizada por Sebastián Santos Rojas en el año 1938"
+  },
+  {
+   "hermandad": "el-buen-fin-sevilla",
+   "titular": "Santísimo Cristo del Buen Fin",
+   "autor": "Sebastián Rodríguez",
+   "anio": "1645",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+   "cita": "realizada por Sebastián Rodríguez, discípulo de Juan de Mesa, en 1645"
+  },
+  {
+   "hermandad": "el-buen-fin-sevilla",
+   "titular": "María Santísima de la Palma",
+   "autor": "Anónimo",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+   "cita": "La talla de la Virgen es de origen anónimo, del siglo XVII"
+  },
+  {
+   "hermandad": "la-lanzada-sevilla",
+   "titular": "Sagrada Lanzada",
+   "autor": "Antonio Illanes",
+   "anio": "1929",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+   "cita": "es una obra de Antonio Illanes fechada en 1929"
+  },
+  {
+   "hermandad": "la-lanzada-sevilla",
+   "titular": "María Santísima de Guía",
+   "autor": "Antonio Illanes",
+   "anio": "1971",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+   "cita": "La actual Virgen de Guía es de 1971, también de Illanes"
+  },
+  {
+   "hermandad": "el-baratillo-sevilla",
+   "titular": "Santísimo Cristo de la Misericordia",
+   "autor": "Luis Ortega Bru",
+   "anio": "1951",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+   "cita": "El Cristo de la Misericordia fue realizado en 1951 por Luis Ortega Bru"
+  },
+  {
+   "hermandad": "el-baratillo-sevilla",
+   "titular": "Nuestra Señora de la Piedad",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1945",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+   "cita": "La imagen de la Virgen fue realizada por José Manuel Rodríguez Fernández-Andés en 1945"
+  },
+  {
+   "hermandad": "el-baratillo-sevilla",
+   "titular": "María Santísima de la Caridad en su Soledad",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1931",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+   "cita": "fue realizada en 1931 por Fernández-Andés"
+  },
+  {
+   "hermandad": "cristo-de-burgos-sevilla",
+   "titular": "Madre de Dios de la Palma",
+   "autor": "Manuel Gutiérrez-Reyes Cano",
+   "anio": "1884",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+   "cita": "es una obra de Manuel Gutiérrez-Reyes Cano realizada en 1884"
+  },
+  {
+   "hermandad": "siete-palabras-sevilla",
+   "titular": "Santísimo Cristo de las Siete Palabras",
+   "autor": "Felipe Martínez",
+   "anio": "1682",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+   "cita": "El Crucificado fue realizado en 1682 por Felipe Martínez"
+  },
+  {
+   "hermandad": "siete-palabras-sevilla",
+   "titular": "María Santísima de la Cabeza",
+   "autor": "Manuel Escamilla Cabezas",
+   "anio": "1956",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+   "cita": "El escultor Manuel Escamilla Cabezas tomó la imagen de uno de los ángeles [...] y la modificó"
+  },
+  {
+   "hermandad": "siete-palabras-sevilla",
+   "titular": "María Santísima de los Remedios",
+   "autor": "Manuel Gutiérrez-Reyes Cano",
+   "anio": "1865",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+   "cita": "Fue realizada en 1865 por Manuel Gutiérrez-Reyes Cano"
+  },
+  {
+   "hermandad": "los-panaderos-sevilla",
+   "titular": "Nuestro Padre Jesús en su Prendimiento",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1945",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+   "cita": "es una talla de Antonio Castillo Lastrucci del año 1945"
+  },
+  {
+   "hermandad": "los-negritos-sevilla",
+   "titular": "Nuestra Señora de los Ángeles",
+   "autor": "Anónimo",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+   "cita": "La Virgen es de autor anónimo"
+  },
+  {
+   "hermandad": "la-exaltacion-los-caballos-sevilla",
+   "titular": "María Santísima de las Lágrimas",
+   "autor": "Anónimo",
+   "anio": "s. XVIII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+   "cita": "La imagen de la Virgen es de autor anónimo del siglo XVIII"
+  },
+  {
+   "hermandad": "montesion-sevilla",
+   "titular": "Oración en el Huerto",
+   "autor": "Pedro Roldán",
+   "anio": "1675",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+   "cita": "En 1675 se encargó un nuevo misterio completo, incluida la imagen del Señor, a Pedro Roldán"
+  },
+  {
+   "hermandad": "montesion-sevilla",
+   "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
+   "autor": "Anónimo",
+   "anio": "finales s. XVI - principios s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+   "cita": "una obra de escultor anónimo de finales del siglo XVI o principios del siglo XVII"
+  },
+  {
+   "hermandad": "la-quinta-angustia-sevilla",
+   "titular": "María Santísima de la Quinta Angustia",
+   "autor": "Vicente Rodríguez-Casso",
+   "anio": "1934",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+   "cita": "La Virgen fue tallada en 1934 por Vicente Rodríguez-Casso"
+  },
+  {
+   "hermandad": "el-valle-sevilla",
+   "titular": "Coronación de Espinas",
+   "autor": "Agustín de Perea",
+   "anio": "finales s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+   "cita": "Agustín de Perea talló la imagen del Cristo de la Coronación de Espinas"
+  },
+  {
+   "hermandad": "el-valle-sevilla",
+   "titular": "Nuestro Padre Jesús con la Cruz al hombro",
+   "autor": "Anónimo",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+   "cita": "este cristo es de autor desconocido"
+  },
+  {
+   "hermandad": "el-valle-sevilla",
+   "titular": "María Santísima del Valle",
+   "autor": "Anónimo",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+   "cita": "La Virgen es de origen anónimo del siglo XVII"
+  },
+  {
+   "hermandad": "pasion-sevilla",
+   "titular": "Nuestra Señora de la Merced",
+   "autor": "Sebastián Santos",
+   "anio": "1966",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+   "cita": "fue realizada por Sebastián Santos Rojas en 1966"
+  },
+  {
+   "hermandad": "el-silencio-sevilla",
+   "titular": "Nuestro Padre Jesús Nazareno",
+   "autor": "Anónimo",
+   "anio": "1609",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+   "cita": "La imagen es de autor desconocido, ha sido atribuida tradicionalmente a Francisco de Ocampo"
+  },
+  {
+   "hermandad": "el-silencio-sevilla",
+   "titular": "María Santísima de la Concepción",
+   "autor": "Sebastián Santos",
+   "anio": "1954",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+   "cita": "es obra del escultor del siglo XX Sebastián Santos Rojas. Fue adquirida por la Hermandad en 1954"
+  },
+  {
+   "hermandad": "el-gran-poder-sevilla",
+   "titular": "María Santísima del Mayor Dolor y Traspaso",
+   "autor": "Anónimo",
+   "anio": "s. XVIII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+   "cita": "La imagen de la Virgen es de origen anónimo del siglo XVIII"
+  },
+  {
+   "hermandad": "el-calvario-sevilla",
+   "titular": "María Santísima de la Presentación",
+   "autor": "Juan de Astorga",
+   "anio": "primera mitad s. XIX",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+   "cita": "por (atribuida) Juan de Astorga"
+  },
+  {
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "titular": "Nuestro Padre Jesús de las Tres Caídas",
+   "autor": "Marcos Cabrera",
+   "anio": "",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+   "cita": "es atribuido a Marcos Cabrera"
+  },
+  {
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "titular": "María Santísima de la Esperanza de Triana",
+   "autor": "Anónimo",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+   "cita": "es una imagen religiosa de autor desconocido"
+  },
+  {
+   "hermandad": "los-gitanos-sevilla",
+   "titular": "Nuestro Padre Jesús de la Salud",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1938",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+   "cita": "Fue realizado por José Rodríguez y Fernández-Andes en 1938"
+  },
+  {
+   "hermandad": "los-gitanos-sevilla",
+   "titular": "María Santísima de las Angustias",
+   "autor": "José Rodríguez Fernández-Andes",
+   "anio": "1937",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+   "cita": "fue realizada por José Rodríguez y Fernández-Andes en 1937"
+  },
+  {
+   "hermandad": "la-carreteria-sevilla",
+   "titular": "Nuestra Señora de la Luz",
+   "autor": "Luis Antonio de los Arcos (taller de Pedro Roldán)",
+   "anio": "1677",
+   "atribucion": true,
+   "fuente": "https://hermandaddelacarreteria.org/maria-santisima-de-la-luz/",
+   "cita": "con toda seguridad salió del taller de Pedro Roldán y [...] los expertos se manifiestan partidarios de que el autor fue Luis Antonio de los Arcos"
+  },
+  {
+   "hermandad": "la-carreteria-sevilla",
+   "titular": "María Santísima del Mayor Dolor en su Soledad",
+   "autor": "Alonso Álvarez Albarrán",
+   "anio": "1629",
+   "atribucion": true,
+   "fuente": "https://hermandaddelacarreteria.org/nuestra-senora-del-mayor-dolores-en-su-soledad/",
+   "cita": "Hoy día está prácticamente admitido que fue esculpida por Alonso Álvarez Albarrán en 1629"
+  },
+  {
+   "hermandad": "san-isidoro-sevilla",
+   "titular": "Nuestro Padre Jesús de las Tres Caídas",
+   "autor": "Alonso Martínez",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+   "cita": "obra realizada por Alonso Martínez (siglo XVII)"
+  },
+  {
+   "hermandad": "san-isidoro-sevilla",
+   "titular": "María Santísima de Loreto",
+   "autor": "Anónimo",
+   "anio": "s. XVIII",
+   "atribucion": false,
+   "fuente": "http://www.conocersevilla.org/hermandades/penitencia/viernessanto/sanisidoro/index.html",
+   "cita": "La Virgen es de autor [...] desconoce al autor"
+  },
+  {
+   "hermandad": "la-o-sevilla",
+   "titular": "María Santísima de la O",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "1937",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+   "cita": "La imagen de la Virgen fue realizada por Castillo Lastrucci en 1937"
+  },
+  {
+   "hermandad": "san-buenaventura-sevilla",
+   "titular": "Crucificado titular",
+   "autor": "Manuel Cerquera",
+   "anio": "1935",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+   "cita": "el Cristo de la Salvación, tallado por Manuel Cerquera en 1935"
+  },
+  {
+   "hermandad": "san-buenaventura-sevilla",
+   "titular": "Dolorosa titular",
+   "autor": "Gabriel de Astorga",
+   "anio": "1851",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+   "cita": "La imagen de la Virgen es tallada en 1851 por el imaginero Gabriel de Astorga"
+  },
+  {
+   "hermandad": "montserrat-sevilla",
+   "titular": "Nuestra Señora de Montserrat",
+   "autor": "Gaspar de la Cueva",
+   "anio": "s. XVII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+   "cita": "La Virgen de Montserrat fue tallada por Gaspar de la Cueva en el siglo XVII"
+  },
+  {
+   "hermandad": "la-sagrada-mortaja-sevilla",
+   "titular": "Misterio de la Sagrada Mortaja",
+   "autor": "Cristóbal Pérez",
+   "anio": "1677",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+   "cita": "La imagen de Jesús fue tallada en 1677 por Cristóbal Pérez"
+  },
+  {
+   "hermandad": "los-servitas-sevilla",
+   "titular": "Santísimo Cristo de la Providencia",
+   "autor": "José Montes de Oca",
+   "anio": "1730",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+   "cita": "Las imágenes de Jesús muerto y la Virgen de los Dolores fueron talladas en 1730 por José Montes de Oca"
+  },
+  {
+   "hermandad": "los-servitas-sevilla",
+   "titular": "María Santísima de los Dolores",
+   "autor": "José Montes de Oca",
+   "anio": "1730",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+   "cita": "Las imágenes de Jesús muerto y la Virgen de los Dolores fueron talladas en 1730 por José Montes de Oca"
+  },
+  {
+   "hermandad": "la-trinidad-sevilla",
+   "titular": "Cristo de las Cinco Llagas",
+   "autor": "Luis Álvarez Duarte",
+   "anio": "2002",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+   "cita": "El nuevo Cristo fue realizado en 2002 por Álvarez Duarte"
+  },
+  {
+   "hermandad": "la-trinidad-sevilla",
+   "titular": "María Santísima de la Esperanza",
+   "autor": "Juan de Astorga",
+   "anio": "1820",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+   "cita": "La imagen de la Virgen de la Esperanza data de 1820 y fue realizada por Juan de Astorga"
+  },
+  {
+   "hermandad": "el-santo-entierro-sevilla",
+   "titular": "Cristo Yacente en la urna",
+   "autor": "Juan de Mesa",
+   "anio": "1619",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+   "cita": "La imagen es obra de Juan de Mesa, finalizada el 12 de marzo de 1619"
+  },
+  {
+   "hermandad": "el-santo-entierro-sevilla",
+   "titular": "Nuestra Señora de Villaviciosa",
+   "autor": "Antonio Cardoso de Quirós",
+   "anio": "1691",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+   "cita": "la Virgen de Villaviciosa es una talla de 1691 de Cardoso Quirós"
+  },
+  {
+   "hermandad": "la-resurreccion-sevilla",
+   "titular": "María Santísima de la Aurora",
+   "autor": "Antonio Dubé de Luque",
+   "anio": "1978",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+   "cita": "La Virgen de la Aurora su autor es Antonio Dubé de Luque (1978)"
+  },
+  {
+   "hermandad": "bellavista-sevilla",
+   "titular": "Nuestro Padre Jesús de la Salud y Remedios",
+   "autor": "Antonio Castillo Lastrucci",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+   "cita": "una figura de Cristo Cautivo realizada por Antonio Castillo Lastrucci [...] Se le dio el nombre de Jesús de la Salud y Remedios"
+  },
+  {
+   "hermandad": "bendicion-y-esperanza-sevilla",
+   "titular": "Jesús de la Bendición en el Santo Encuentro.",
+   "autor": "Juan Antonio Blanco Ramos",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+   "cita": "obra del escultor Juan Antonio Blanco Ramos"
+  },
+  {
+   "hermandad": "bendicion-y-esperanza-sevilla",
+   "titular": "Virgen de la Esperanza en su Soledad",
+   "autor": "Juan Antonio Blanco Ramos",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+   "cita": "realizada por el mismo escultor"
+  },
+  {
+   "hermandad": "pasion-y-muerte-sevilla",
+   "titular": "Santa María del Buen Aire",
+   "autor": "Anónimo (escuela barroca sevillana)",
+   "anio": "s. XVIII",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+   "cita": "obra de autor anónimo de la escuela barroca sevillana siglo XVIII"
+  },
+  {
+   "hermandad": "pasion-y-muerte-sevilla",
+   "titular": "Cristo de Pasión y Muerte",
+   "autor": "José Antonio Navarro Arteaga",
+   "anio": "1996",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+   "cita": "El Cristo es obra del escultor y hermano fundador de la corporación, José Antonio Navarro Arteaga en 1996"
+  },
+  {
+   "hermandad": "pasion-y-muerte-sevilla",
+   "titular": "Nuestra Señora del Desconsuelo y Visitación",
+   "autor": "José Antonio Navarro Arteaga",
+   "anio": "2001",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+   "cita": "también fue el hermano fundador e imaginero José Antonio Navarro Arteaga [...] realizada en el año 2001"
+  },
+  {
+   "hermandad": "pino-montano-sevilla",
+   "titular": "Nuestro Padre Jesús de Nazaret",
+   "autor": "Fernando Castejón López",
+   "anio": "1989",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+   "cita": "La talla de Jesús fue realizada por Fernando Castejón López en 1989"
+  },
+  {
+   "hermandad": "pino-montano-sevilla",
+   "titular": "María Santísima del Amor",
+   "autor": "Fernando Castejón López",
+   "anio": "1998",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+   "cita": "La Virgen del Amor es una talla de candelero realizada por Fernando Castejón en el año 1998"
+  },
+  {
+   "hermandad": "pino-montano-sevilla",
+   "titular": "San Marcos Evangelista",
+   "autor": "Fernando Castejón López",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+   "cita": "Las imágenes secundarias son todas obra de Fernando Castejón López"
+  },
+  {
+   "hermandad": "cristo-de-la-corona-sevilla",
+   "titular": "Santísimo Cristo de la Corona",
+   "autor": "Anónimo",
+   "anio": "último tercio s. XVI",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+   "cita": "es una talla de autor desconocido"
+  },
+  {
+   "hermandad": "padre-pio-sevilla",
+   "titular": "Nuestro Padre Jesús de la Salud y Clemencia",
+   "autor": "Fernando Murciano Abad",
+   "anio": "1996",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+   "cita": "La talla es obra del escultor Fernando Murciano Abad y fue realizada en 1996"
+  },
+  {
+   "hermandad": "padre-pio-sevilla",
+   "titular": "Santísima Virgen de la Divina Gracia",
+   "autor": "Luis Álvarez Duarte",
+   "anio": "1987",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+   "cita": "Fue tallada en 1987 por Luis Álvarez Duarte"
+  },
+  {
+   "hermandad": "la-milagrosa-sevilla",
+   "titular": "Jesús de la Esperanza",
+   "autor": "José Antonio Navarro Arteaga",
+   "anio": "2008",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+   "cita": "talla de José Antonio Navarro Arteaga realizada en el año 2008"
+  },
+  {
+   "hermandad": "la-milagrosa-sevilla",
+   "titular": "Virgen del Rosario",
+   "autor": "Francisco Buiza",
+   "anio": "1963",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+   "cita": "La Virgen fue esculpida por el insigne escultor Francisco Buiza en el año 1963"
+  },
+  {
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "titular": "N.P.J. Cautivo ante Pilato",
+   "autor": "Jesús Méndez Lastrucci",
+   "anio": "1991-1992",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+   "cita": "el Señor Cautivo ante Pilato obra de Jesús Méndez Lastrucci (realizada entre 1991 y 1992)"
+  },
+  {
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "titular": "Mª Stma. de los Dolores",
+   "autor": "José María Gamero Viñau",
+   "anio": "1987",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+   "cita": "La Virgen de los Dolores es obra de José María Gamero Viñau (1987)"
+  },
+  {
+   "hermandad": "divino-perdon-sevilla",
+   "titular": "Jesús del Divino Perdón",
+   "autor": "José Antonio Navarro Arteaga",
+   "anio": "2002",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+   "cita": "En 2002 es bendecida una nueva talla del Cristo [...] realizada por José Antonio Navarro Arteaga"
+  },
+  {
+   "hermandad": "divino-perdon-sevilla",
+   "titular": "Virgen de la Purísima Concepción",
+   "autor": "José Antonio Navarro Arteaga",
+   "anio": "2002",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+   "cita": "Ese mismo año se bendijo la talla de la Virgen, realizada también por José Antonio"
+  },
+  {
+   "hermandad": "el-despojado-silencio-blanco-granada",
+   "titular": "María Santísima del Dulce Nombre y San Juan",
+   "autor": "Miguel Ángel González Jurado",
+   "anio": "1994-1998",
+   "atribucion": false,
+   "fuente": "https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/",
+   "cita": "La imagen mariana de la Cofradía es encargada al Cordobés González Jurado el día de la Inmaculada de 1994"
+  },
+  {
+   "hermandad": "los-salesianos-granada",
+   "titular": "Nuestra Señora de la Salud",
+   "autor": "Antonio Díaz",
+   "anio": "1985-1986",
+   "atribucion": false,
+   "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
+   "cita": "En 1985 se encarga la ejecución de la titular mariana también a Antonio Díaz Fernández"
+  },
+  {
+   "hermandad": "la-aurora-granada",
+   "titular": "Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982)",
+   "autor": "Antonio Barbero Gor",
+   "anio": "1982",
+   "atribucion": false,
+   "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/",
+   "cita": "fue sustituida por una copia realizada “por puntos”, obra de Antonio Barbero Gor"
+  },
+  {
+   "hermandad": "la-caridad-almeria",
+   "titular": "María Santísima de las Penas",
+   "autor": "Juan Manuel Miñarro",
+   "anio": "2006-2007",
+   "atribucion": false,
+   "fuente": "https://cofradiasdealmeria.es/caridad/",
+   "cita": "Obra de D. Juan Manuel Miñarro López (Sevilla 2006-2007)"
+  },
+  {
+   "hermandad": "caridad-y-salud-jaen",
+   "titular": "Jesús de la Caridad ante Caifás",
+   "autor": "Miguel Cordero Romero",
+   "anio": "2016",
+   "atribucion": false,
+   "fuente": "https://www.hermandadcaridadysaludjaen.com/historia/",
+   "cita": "se bendice a nuestro Sagrado Titular Jesús de la Caridad, obra del joven imaginero Miguel Cordero Romero"
+  },
+  {
+   "hermandad": "el-silencio-jaen",
+   "titular": "María Santísima Madre de Dios",
+   "autor": "Israel Cornejo",
+   "anio": "2013",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Ja%C3%A9n)",
+   "cita": "Imagen realizada por Israel Cornejo Sánchez en el año 2013"
+  },
+  {
+   "hermandad": "el-cautivo-jaen",
+   "titular": "Nuestro Divino Redentor Jesús Cautivo",
+   "autor": "Francisco Romero Zafra",
+   "anio": "2012",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cautivo_(Ja%C3%A9n)",
+   "cita": "Obra de Francisco Romero Zafra en 2012"
+  },
+  {
+   "hermandad": "el-perdon-jaen",
+   "titular": "María Santísima de la Esperanza",
+   "autor": "Antonio Eslava Rubio",
+   "anio": "1952",
+   "atribucion": false,
+   "fuente": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
+   "cita": "La imagen de la Virgen de la Esperanza (1952) es de Antonio Eslava"
+  },
+  {
+   "hermandad": "mutilado-clemencia-malaga",
+   "titular": "Santísimo Cristo de la Clemencia",
+   "autor": "Jerónimo Gómez de Hermosilla",
+   "anio": "h. 1678-1716",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)",
+   "cita": "Cristo Crucificado muerto (h. 1678-1716), del escultor granadino afincado en Málaga, Jerónimo Gómez de Hermosilla"
+  },
+  {
+   "hermandad": "verdad-y-sagrario-malaga",
+   "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
+   "autor": "Mario Zambrano",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "a sus dos titulares, obras del escultor sevillano Mario Zambrano"
+  },
+  {
+   "hermandad": "verdad-y-sagrario-malaga",
+   "titular": "María Santísima del Sagrario",
+   "autor": "Mario Zambrano",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "a sus dos titulares, obras del escultor sevillano Mario Zambrano"
+  },
+  {
+   "hermandad": "luz-y-mar-malaga",
+   "titular": "Santísimo Cristo Luz del Mundo",
+   "autor": "Valerio Téllez Bermúdez",
+   "anio": "2016",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "En el año 2016 bendice a su titular cristifero Stmo Cristo, Luz del Mundo obra de D. Valerio Tellez Bermúdez"
+  },
+  {
+   "hermandad": "luz-y-mar-malaga",
+   "titular": "María Santísima del Mar",
+   "autor": "Liébana",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "La Virgen del Mar es obra de Liébana"
+  },
+  {
+   "hermandad": "medinaceli-martiricos-malaga",
+   "titular": "Jesús de Medinaceli",
+   "autor": "Israel Cornejo",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "procesionan al Señor de Medinaceli y a la Virgen de la Candelaría ambos obra de Israel Cornejo"
+  },
+  {
+   "hermandad": "medinaceli-martiricos-malaga",
+   "titular": "María Santísima de la Candelaria",
+   "autor": "Israel Cornejo",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+   "cita": "procesionan al Señor de Medinaceli y a la Virgen de la Candelaría ambos obra de Israel Cornejo"
+  },
+  {
+   "hermandad": "siete-palabras-sevilla",
+   "titular": "María Santísima de la Cabeza",
+   "autor": "Manuel Escamilla Cabezas (a partir de un ángel de Emilio Pizarro)",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)"
+  },
+  {
+   "hermandad": "la-carreteria-sevilla",
+   "titular": "Santísimo Cristo de la Salud",
+   "autor": "Atribuido a Francisco de Ocampo, s. XVII",
+   "anio": "",
+   "atribucion": true,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)"
+  },
+  {
+   "hermandad": "las-cigarreras-sevilla",
+   "titular": "María Santísima de la Victoria",
+   "autor": "anónima s. XVII (intervenida por Juan de Astorga, 1803)",
+   "anio": "",
+   "atribucion": false,
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)"
+  },
+  {
+   "hermandad": "los-panaderos-sevilla",
+   "titular": "María Santísima de Regla",
+   "autor": "anónima s. XVII (atribuida al círculo de Pedro Roldán)",
+   "anio": "",
+   "atribucion": true,
+   "fuente": "http://explicartesevilla.blogspot.com/2022/09/la-imagen-maria-santisima-de-regla.html"
+  }
+ ],
+ "sin_encontrar": [
+  {
+   "hermandad": "el-carmen-doloroso-sevilla",
+   "titular": "Nazareno"
+  },
+  {
+   "hermandad": "los-panaderos-sevilla",
+   "titular": "María Santísima de Regla"
+  },
+  {
+   "hermandad": "las-cigarreras-sevilla",
+   "titular": "María Santísima de la Victoria"
+  },
+  {
+   "hermandad": "la-carreteria-sevilla",
+   "titular": "Santísimo Cristo de la Salud"
+  },
+  {
+   "hermandad": "la-trinidad-sevilla",
+   "titular": "Sagrada Decisión"
+  },
+  {
+   "hermandad": "pasion-y-muerte-sevilla",
+   "titular": "Resurrección de Nuestro Señor"
+  },
+  {
+   "hermandad": "pino-montano-sevilla",
+   "titular": "San Isidro Labrador"
+  },
+  {
+   "hermandad": "la-mision-sevilla",
+   "titular": "Inmaculado Corazón de María"
+  },
+  {
+   "hermandad": "la-mision-sevilla",
+   "titular": "Santísimo Sacramento"
+  },
+  {
+   "hermandad": "la-mision-sevilla",
+   "titular": "Santo Cristo de la Misión"
+  },
+  {
+   "hermandad": "la-mision-sevilla",
+   "titular": "Ntra. Sra. del Amparo"
+  },
+  {
+   "hermandad": "padre-pio-sevilla",
+   "titular": "Santísimo Sacramento"
+  },
+  {
+   "hermandad": "padre-pio-sevilla",
+   "titular": "San Juan de la Cruz"
+  },
+  {
+   "hermandad": "la-milagrosa-sevilla",
+   "titular": "Virgen de la Medalla Milagrosa"
+  },
+  {
+   "hermandad": "la-milagrosa-sevilla",
+   "titular": "San Juan Evangelista"
+  },
+  {
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "titular": "Santísimo Sacramento"
+  },
+  {
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "titular": "San Antonio de Padua"
+  },
+  {
+   "hermandad": "divino-perdon-sevilla",
+   "titular": "Beata Ana María de Javouhey"
+  },
+  {
+   "hermandad": "el-sol-sevilla",
+   "titular": "María Santísima de la Salud"
+  },
+  {
+   "hermandad": "divino-maestro-lavatorio-jaen",
+   "titular": "María Santísima del Amor"
+  },
+  {
+   "hermandad": "desamparados-malaga",
+   "titular": "Nuestra Señora de los Desamparados"
+  },
+  {
+   "hermandad": "buen-camino-gamarra-malaga",
+   "titular": "Nuestra Purísima Madre del Buen Camino"
+  },
+  {
+   "hermandad": "dolores-del-puerto-de-la-torre-malaga",
+   "titular": "Santísimo Cristo de Hermandad y Caridad"
+  },
+  {
+   "hermandad": "dolores-del-puerto-de-la-torre-malaga",
+   "titular": "Nuestra Señora de los Dolores"
+  },
+  {
+   "hermandad": "dolores-de-churriana-malaga",
+   "titular": "Nuestro Padre Jesús Nazareno del Paso"
+  },
+  {
+   "hermandad": "dolores-de-churriana-malaga",
+   "titular": "Nuestra Señora de los Dolores"
+  },
+  {
+   "hermandad": "la-bendicion-huelva",
+   "titular": "Cristo de la Bendición"
+  }
+ ],
+ "notas": [
+  "Fuente general de las hermandades de Sevilla: el artículo de Wikipedia en español que figura como fuente_url en portal.json (texto leído el 2026-10-16 con la API de es.wikipedia). No se cotejó una a una cada dato con la web oficial de cada hermandad sevillana, así que no se han podido detectar contradicciones Wikipedia/fuente oficial salvo donde se indica.",
+  "la-borriquita-sevilla: Wikipedia atribuye el Cristo a Pedro Roldán pero escribe '(siglo XVI)', que no cuadra con Roldán (s. XVII); el nombre del portal dice 'anónimo s. XVII'. Se deja como atribución, sin año.",
+  "la-cena-sevilla 'Señor de la Humillación': Wikipedia no recoge ese título; se ha asociado al 'Santísimo Cristo de la Humildad y Paciencia' (autor desconocido, s. XVI, telas encoladas). Revisar el nombre en el portal antes de aplicar.",
+  "la-cena-sevilla Subterráneo: Wikipedia dice que fue 'erróneamente atribuida a Juan de Astorga' y que se reformó en el s. XIX.",
+  "la-amargura-sevilla: Wikipedia solo dice que es obra 'de un discípulo de Pedro Roldán', sin nombre.",
+  "las-penas-sevilla: el Cristo se ha atribuido tradicionalmente a Pedro Roldán; la hermandad lo sitúa en el entorno de sus colaboradores. La Virgen: hay quien la atribuye a Blas Molner; quizá de origen italiano.",
+  "las-aguas-sevilla Cristo: Wikipedia se contradice internamente: 'realizada por Antonio Illanes en el año 1940' y 'lo adapta Antonio Illanes Rodríguez en 1943 de uno anterior realizado en 1941'. Se ha dejado 1940.",
+  "el-cerro-sevilla: Wikipedia llama a la imagen 'Cristo del Desamparo y Abandono'; dos atribuciones (círculo de Ocampo, primera mitad del s. XVII; José de Arce, segunda mitad del s. XVII).",
+  "san-esteban-sevilla Desamparados: 1927 es el año de bendición; la hermandad no conserva contrato, la autoría consta en su libro de actas.",
+  "santa-cruz-sevilla Misericordias: talla anónima; por estilo atribuible a Pedro Roldán o a su escuela; otros autores la atribuyen a Francisco Ruiz Gijón.",
+  "el-valle-sevilla Cruz al hombro: varias atribuciones (estilo de los Roldán; Pérez Porto a Roldán; Banda y Vargas a la escuela de José de Arce). Virgen del Valle: atribuida a Martínez Montañés (González de León, Bermejo, Pérez Porto) y a Juan de Mesa (Hernández Díaz, Banda y Vargas, Bernales). No se elige.",
+  "el-silencio-sevilla Nazareno: atribuido tradicionalmente a Francisco de Ocampo; corrientes recientes lo atribuyen a Gaspar de la Cueva.",
+  "la-esperanza-de-triana-sevilla: Esperanza de autor desconocido; estudios apuntan a una posible atribución a Juan Bautista Patroni (Wikipedia escribe 'Petroni'); rostro intervenido por José Ordóñez en 1913.",
+  "siete-palabras-sevilla Cabeza: hay dos imágenes. La que va bajo palio (Nuestra Señora de la Cabeza) la hizo Manuel Escamilla Cabezas en 1956 transformando un ángel de Emilio Pizarro; la 'Virgen de la Cabeza Gloriosa' está atribuida a Roque Balduque (h. 1554). Se propone la de palio; confirmar cuál es la del portal.",
+  "montesion-sevilla Oración en el Huerto: el misterio original se concertó con Jerónimo Hernández (1578); en 1675 se encargó a Pedro Roldán un nuevo misterio, incluida la imagen del Señor; en 1942 Castillo Lastrucci le hizo cuerpo completo y en 1950 los apóstoles.",
+  "san-gonzalo-sevilla Salud: busto de Ortega Bru (1977); las manos son de Antonio Eslava Rubio, conservadas de la imagen anterior de Rafael Lafarque.",
+  "el-carmen-doloroso-sevilla 'Nazareno': según Wikipedia el titular cristífero es Nuestro Padre Jesús de la Paz (Francisco José Reyes Villadiego, 1990), que no es un nazareno; no se asigna hasta aclarar a qué imagen se refiere el portal.",
+  "bellavista-sevilla: Castillo Lastrucci la hizo para una hermandad de Jerez que no llegó a fundarse; se bendijo para esta hermandad en 1970 (año de bendición, no de hechura).",
+  "pino-montano-sevilla Jesús: Wikipedia da 1989 como año de la talla, pero también dice que el 1 de marzo de 1986 se bendijo una talla de Jesús de Nazaret de Castejón; remodelada por su autor en 2002. Virgen del Amor: la actual es de 1998 (hubo una anterior de terracota de 1984). San Marcos: es la figura del misterio; Wikipedia dice que todas las imágenes secundarias y 'el resto de imágenes de la cofradía' son de Castejón.",
+  "san-buenaventura-sevilla: 'Crucificado titular' = Cristo de la Salvación (titular desde 1967, no procesiona). 'Dolorosa titular' = Virgen de la Soledad, retocada por Sebastián Santos en 1954.",
+  "la-sagrada-mortaja-sevilla: el autor propuesto es el del Cristo; la Virgen de la Piedad está atribuida a La Roldana y el resto de figuras son de autor desconocido.",
+  "san-isidoro-sevilla Tres Caídas: la Wikipedia actual dice 'obra realizada por Alonso Martínez'; una versión anterior del artículo (copia en es-academic.com) decía 'atribuida a Alonso Martínez' y la fechaba en 1668. Loreto: Conocer Sevilla dice que se desconoce el autor; mascarilla retallada por Sebastián Santos en 1955.",
+  "el-despojado-silencio-blanco-granada: la misma ficha dice que 'la imagen de María Santísima del Dulce Nombre es bendecida [...] el 11 de marzo de 1989' (parece una imagen anterior) y que la actual se encargó a González Jurado en 1994 y se bendijo el 8-12-1998 junto con San Juan (encargado en 1995).",
+  "los-salesianos-granada Salud: bendecida en 1986 y retallada en 2009 por Israel Cornejo.",
+  "la-aurora-granada: copia por puntos (1982) del original de Diego de Siloé, que se venera en la parroquia de San José.",
+  "Jaén: cofradiasjaen.org está suspendido; se consultaron las copias de web.archive.org listadas en fichas.json (fuentes_nuevas) y, donde no daban el dato, Wikipedia o la web oficial de la hermandad.",
+  "el-cautivo-jaen: la copia archivada de cofradiasjaen.org da 2008 como año de hechura de la Virgen de la Trinidad (Wikipedia: 2009); para el Cautivo (2012, bendecido el 24-11-2012) se usa Wikipedia.",
+  "mutilado-clemencia-malaga: restaurado por Juan Manuel Miñarro (2019-2020).",
+  "luz-y-mar-malaga Mar: Wikipedia solo da el apellido 'Liébana', sin nombre ni año; dato incompleto.",
+  "SIN ENCONTRAR: la-carreteria-sevilla Santísimo Cristo de la Salud: Wikipedia dice 'talla atribuida a Francisco de Ocampo', mientras que la web oficial (https://hermandaddelacarreteria.org/santisimo-cristo-de-la-salud/) dice que 'nada se puede asegurar' y recoge atribuciones a Martínez Montañés, Matías de la Cruz y Juan de Oviedo. Contradicción: no se elige.",
+  "la-carreteria-sevilla Luz y Mayor Dolor: datos de la web oficial. La Luz, según la hermandad, era una de las Marías del concierto de 1677 con el taller de Roldán. El Mayor Dolor se apoya en un contrato de 1629 con Alonso Álvarez Albarrán para 'una Dolorosa' (por eso va como atribución, aunque sea firme). Wikipedia solo dice 's. XVII' y 'realizada en 1629', sin autor.",
+  "SIN ENCONTRAR (motivos): los-panaderos-sevilla Regla: atribuida a La Roldana sin documento; un inventario firmado por Rodríguez Ojeda la da a Gumersindo Jiménez Astorga (s. XIX), que pudo ser solo restaurador; otros la dan a Juan de Astorga. Wikipedia advierte que no es concluyente. No se elige.",
+  "SIN ENCONTRAR: las-cigarreras-sevilla Victoria: Wikipedia solo dice 'talla del siglo XVII, ejecutada muy probablemente entre 1611 y 1628', intervenida por Juan de Astorga en 1803. Webs no oficiales la dan como anónima (pedacitosdepasion.com) o recogen la atribución de Hernández Díaz a Juan de Mesa (rafaes.com). Sin fuente oficial ni Wikipedia con autor.",
+  "SIN ENCONTRAR: la-trinidad-sevilla 'Sagrada Decisión' es un grupo de varias figuras y Wikipedia se contradice dentro del mismo artículo (Dios 'talla anónima del siglo XVII' y Jesús 'de 1913' frente a Dios-Hijo 'anónimo del s. XVII vinculado al círculo de Duque Cornejo' y Dios-Padre 'se atribuye a Juan de Mesa').",
+  "SIN ENCONTRAR: pasion-y-muerte-sevilla 'Resurrección de Nuestro Señor': Wikipedia dice expresamente que es titular 'aunque no tiene talla que lo represente'. No hay autor posible; quizá debería salir de la lista de titulares con imagen.",
+  "SIN ENCONTRAR: los 'Santísimo Sacramento' (la-mision, padre-pio, dolores-de-torreblanca) y el 'Inmaculado Corazón de María' de la Misión son advocaciones del título, no imágenes procesionales; no tiene sentido buscar autor.",
+  "SIN ENCONTRAR: la-mision-sevilla Santo Cristo de la Misión: Wikipedia dice que en 1984 se encargó 'una imagen de nazareno' a José Manuel Bonilla Cornejo y que en 1988 se bendijo 'la talla del Santo Cristo de la Misión', pero no une ambas frases; probablemente es de Bonilla, sin confirmar. Ntra. Sra. del Amparo: procede del convento de Santa Rosalía, sin autor.",
+  "SIN ENCONTRAR: la-bendicion-huelva Cristo de la Bendición: la ficha del Ayuntamiento (semanasanta.huelva.es/la-bendicion/) solo da autor de las figuras del misterio (Juan Manuel Montaño Fernández: Caifás 2016, Anás y guardia 2019, Sanedrín y José de Arimatea 2020), no del Cristo. Montaño hace el mantenimiento del Cristo, lo que no prueba la autoría.",
+  "SIN ENCONTRAR: dolores-de-churriana-malaga: Wikipedia ('Corporaciones no agrupadas...') solo dice que el Nazareno del Paso y la Virgen de los Dolores 'datan del siglo XVIII', sin autor. buen-camino-gamarra-malaga: el mismo artículo menciona una dolorosa de Gamarra hecha por José María Hurtado en 2017 ('Encarnación y amor Divino'), pero no se puede confirmar que sea la Purísima Madre del Buen Camino. desamparados-malaga y dolores-del-puerto-de-la-torre-malaga: sin datos de autor.",
+  "SIN ENCONTRAR: divino-maestro-lavatorio-jaen María Santísima del Amor: ni la copia archivada de cofradiasjaen.org ni Wikipedia ni extrajaen.com dan autor (el Cristo y San Pedro son de Antonio José Martínez Rodríguez, 2015).",
+  "SIN ENCONTRAR: el-sol-sevilla 'María Santísima de la Salud' figura en el título de la hermandad (Hermandad Sacramental de la Inmaculada Concepción de María Santísima de la Salud), pero Wikipedia no describe esa imagen. La Virgen del Sol y las demás tallas son de José Manuel Bonilla Cornejo (Virgen del Sol, 1989).",
+  "Nombres normalizados con el listado de imagineros del portal cuando coinciden (p. ej. 'Antonio Illanes', 'Sebastián Santos', 'Antonio Díaz', 'Juan Manuel Miñarro', 'Israel Cornejo', 'Antonio Cardoso de Quirós'). 'José Rodríguez Fernández-Andes' no está en el portal; Wikipedia lo escribe de varias formas (Fernández-Andes, Fernández-Andés, Fernández Andés)."
+ ]
 }
