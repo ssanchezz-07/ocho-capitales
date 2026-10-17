@@ -501,6 +501,12 @@
     var params = new URLSearchParams(location.search);
     Object.keys(fields).forEach(function (k) { if (params.get(k)) fields[k].value = params.get(k); });
     var timer, PAGE = 50, limit = PAGE;
+    // Listados muy largos (marchas): se sirven las primeras filas y el resto se pide al filtrar o pedir más
+    var restoUrl = grid.getAttribute('data-resto'), extra = +grid.getAttribute('data-extra') || 0, restoOk = !restoUrl;
+    function conResto(fn) {
+      if (restoOk) return fn();
+      fetch(BASE + restoUrl).then(function (r) { return r.text(); }).then(function (t) { grid.insertAdjacentHTML('beforeend', t); cards = $$('.oc-entry', grid); }).catch(function () { }).then(function () { restoOk = true; fn(); });
+    }
     var more = $('[data-dir-more]', scope), moreBtn = more && $('button', more);
     // En móvil los desplegables empiezan plegados; la búsqueda queda siempre a la vista
     var mf = $('[data-morefilters]', bar);
@@ -517,6 +523,7 @@
         if (ok) n++;
         el.hidden = !ok || n > limit;
       });
+      if (!restoOk) n += extra;
       if (more) { more.hidden = n <= limit; if (moreBtn) moreBtn.textContent = 'Mostrar ' + Math.min(PAGE, n - limit) + ' más (quedan ' + (n - limit) + ')'; }
       if (count) count.textContent = n + (n === 1 ? ' resultado' : ' resultados');
       if (empty) empty.hidden = n !== 0;
@@ -525,17 +532,19 @@
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     }
     Object.keys(fields).forEach(function (k) {
-      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; apply(); }, 80); });
-      fields[k].addEventListener('change', function () { limit = PAGE; apply(); });
+      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; conResto(apply); }, 80); });
+      fields[k].addEventListener('change', function () { limit = PAGE; conResto(apply); });
     });
     if (moreBtn) moreBtn.addEventListener('click', function () {
       // el foco pasa al primer resultado nuevo para seguir leyendo con teclado o lector de pantalla
-      var first = limit; limit += PAGE; apply();
-      var vis = cards.filter(function (el) { return !el.hidden; }); var a = vis[first] && $('a', vis[first]); if (a) a.focus({ preventScroll: false });
+      var first = limit; limit += PAGE; conResto(function () {
+        apply();
+        var vis = cards.filter(function (el) { return !el.hidden; }); var a = vis[first] && $('a', vis[first]); if (a) a.focus({ preventScroll: false });
+      });
     });
     var reset = $('[data-dir-reset]', scope);
-    if (reset) reset.addEventListener('click', function () { Object.keys(fields).forEach(function (k) { fields[k].value = ''; }); limit = PAGE; apply(); fields.q && fields.q.focus(); });
-    apply();
+    if (reset) reset.addEventListener('click', function () { Object.keys(fields).forEach(function (k) { fields[k].value = ''; }); limit = PAGE; conResto(apply); fields.q && fields.q.focus(); });
+    if (restoUrl && Object.keys(fields).some(function (k) { return fields[k].value; })) conResto(apply); else apply();
   });
 
   // ---------- calendario (pestañas por capital) ----------
