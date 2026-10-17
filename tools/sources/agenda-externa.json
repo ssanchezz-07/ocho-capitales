@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 32
+  "Prensa (texto de noticias)": 36
  },
  "eventos": [
   {
@@ -4960,6 +4960,46 @@
    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
   },
   {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
    "fecha": "2026-10-16",
    "hora": "",
    "ciudad": "cordoba",
@@ -5051,6 +5091,22 @@
     "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
     "fuente": "Diario SUR",
     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
+   }
+  },
+  {
+   "a": {
+    "fecha": "2026-10-18",
+    "hora": "",
+    "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
+    "fuente": "El Día de Córdoba",
+    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
+   },
+   "b": {
+    "fecha": "2026-10-17",
+    "hora": "",
+    "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
+    "fuente": "Gente de Paz",
+    "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
    }
   }
  ]
