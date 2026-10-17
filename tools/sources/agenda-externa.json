@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 38
+  "Prensa (texto de noticias)": 39
  },
  "eventos": [
   {
@@ -5018,6 +5018,16 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/cordoba/lluvia-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008271798.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La lluvia impide la salida procesional de la Virgen del Carmen de Huelin por el Centro de Málaga",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/lluvia-impide-procesion-virgen-carmen-huelin-20261017192555-nt.html"
   },
   {
    "fecha": "2026-10-16",
