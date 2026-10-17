@@ -1,445 +1,451 @@
 {
-  "generado": "2026-10-16",
-  "hermandades": {
-    "san-esteban-sevilla": {
-      "url": "https://www.hermandadsanesteban.org/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de San Esteban 1926-2026; Nuestro Padre Jesús de la Salud y Buen Viaje"
-    },
-    "san-benito-sevilla": {
-      "url": "https://hermandaddesanbenito.net/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de San Benito; Nuestra Señora de la Encarnación"
-    },
-    "la-lanzada-sevilla": {
-      "url": "https://lanzada.org/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/miercoles-santo/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sagrada Lanzada Sevilla: Bienvenidos"
-    },
-    "bellavista-sevilla": {
-      "url": "https://www.dulcenombrebellavista.es/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Dulce Nombre de Bellavista | Semana Santa de Sevilla (EN MANTENIMIENTO: responde 503 con aviso de nuevo portal)"
-    },
-    "bendicion-y-esperanza-sevilla": {
-      "url": "https://bendicionyesperanza.es/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de Bendición y Esperanza"
-    },
-    "padre-pio-sevilla": {
-      "url": "http://hermandadpadrepio.com/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Página oficial de la Hermandad de Padre Pio"
-    },
-    "san-jose-obrero-sevilla": {
-      "url": "http://hermandadsanjoseobrerosevilla.blogspot.com/",
-      "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental de San José Obrero - Sevilla (blog; última entrada 2025-04)"
-    },
-    "lagrimas-y-favores-malaga": {
-      "url": "https://cofradiasfusionadas.org/",
-      "fuente": "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental y Reales Cofradías Fusionadas; María Santísima de Lágrimas y Favores (web de la corporación Fusionadas, común a sus secciones)"
-    },
-    "fusionadas-malaga": {
-      "url": "https://cofradiasfusionadas.org/",
-      "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental y Reales Cofradías Fusionadas"
-    },
-    "vera-cruz-malaga": {
-      "url": "https://cofradiasfusionadas.org/",
-      "fuente": "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Reales Cofradías Fusionadas; Santísimo Cristo de la Vera+Cruz y Sangre (web común de la corporación)"
-    },
-    "vineros-malaga": {
-      "url": "http://correonistas.es/",
-      "fuente": "https://agrupaciondecofradias.com/hermandades/vineros/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Inicio - Hermandad Sacramental de Viñeros; Plaza de los Viñeros, 5"
-    },
-    "huerto-malaga": {
-      "url": "https://archicofradiahuertoconcepcion.com/",
-      "fuente": "https://archicofradiahuertoconcepcion.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Archicofradía Huerto; huertoconcepcion@gmail.com"
-    },
-    "la-borriquilla-granada": {
-      "url": "https://www.borriquilla.es/",
-      "fuente": "https://www.borriquilla.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Ilustre Cofradía de la Entrada de Jesús en Jerusalén y Nuestra Señora de la Paz (Albayzin - Granada)"
-    },
-    "santa-cena-granada": {
-      "url": "https://santacenagranada.es/",
-      "fuente": "https://santacenagranada.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Santa Cena y Victoria Granada; Calle Escutia nº 3"
-    },
-    "la-sentencia-maravillas-granada": {
-      "url": "https://sentenciaymaravillas.com/",
-      "fuente": "https://sentenciaymaravillas.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sentencia y Maravillas"
-    },
-    "el-despojado-silencio-blanco-granada": {
-      "url": "https://www.despojado.org/",
-      "fuente": "https://www.despojado.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental de Jesús Despojado | Granada"
-    },
-    "el-trabajo-granada": {
-      "url": "https://trabajoyluz.es/",
-      "fuente": "https://trabajoyluz.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Trabajo y Luz"
-    },
-    "nuestra-senora-de-los-dolores-granada": {
-      "url": "https://virgendelosdolores.org/",
-      "fuente": "https://virgendelosdolores.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "DoloresGranada – Real Cofradía de Nuestra Señora de los Dolores"
-    },
-    "jesus-del-rescate-granada": {
-      "url": "https://rescategranada.com/",
-      "fuente": "https://rescategranada.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Cofradía de Nuestro Padre Jesús del Rescate | Granada"
-    },
-    "el-huerto-granada": {
-      "url": "https://hermandadelhuertogranada.com/",
-      "fuente": "https://hermandadelhuertogranada.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de la Oración en el Huerto | Oración – Amargura"
-    },
-    "cristo-de-san-agustin-granada": {
-      "url": "https://cristodesanagustin.com/",
-      "fuente": "https://cristodesanagustin.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad del Cristo de San Agustín - Sitio en Mantenimiento (EN MANTENIMIENTO)"
-    },
-    "la-lanzada-granada": {
-      "url": "https://lanzadagranada.org/",
-      "fuente": "https://lanzadagranada.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "INICIO - Hermandad de la Sagrada Lanzada de Granada"
-    },
-    "la-esperanza-granada": {
-      "url": "https://www.esperanzagranada.es/",
-      "fuente": "https://www.esperanzagranada.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Sitio Oficial de la Real Hermandad y Cofradía ... Gran Poder y Esperanza Granada"
-    },
-    "la-canilla-granada": {
-      "url": "https://www.cofradiadelahumildad.com/",
-      "fuente": "https://www.cofradiadelahumildad.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Cofradía de la Humildad – Web Oficial – Realejo-Granada"
-    },
-    "los-facundillos-granada": {
-      "url": "https://www.cofradiadelahumildad.com/",
-      "fuente": "https://www.cofradiadelahumildad.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Cofradía de la Humildad – Web Oficial (misma corporación que La Cañilla)"
-    },
-    "los-estudiantes-granada": {
-      "url": "https://estudiantesgranada.es/",
-      "fuente": "https://estudiantesgranada.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de los Estudiantes de Granada; Meditación, Remedios"
-    },
-    "paciencia-y-penas-granada": {
-      "url": "https://pacienciaypenas.es/",
-      "fuente": "https://pacienciaypenas.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental Paciencia y Penas"
-    },
-    "tres-caidas-y-rosario-granada": {
-      "url": "https://rosarioytrescaidas.com/",
-      "fuente": "https://trescaidasyrosario.blogspot.com/2020/06/cese-de-actividad-de-este-blog-estreno.html",
-      "comprobada": "2026-10-16",
-      "evidencia": "INICIO - HERMANDAD DEL ROSARIO Y TRES CAÍDAS"
-    },
-    "la-concha-granada": {
-      "url": "https://hermandaddelaconcepcion.es/",
-      "fuente": "https://hermandaddelaconcepcion.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de la Concepción – Semana Santa de Granada; Jesús del Amor y la Entrega"
-    },
-    "la-aurora-granada": {
-      "url": "https://perdonyaurora.com/",
-      "fuente": "http://cofradiadelaaurora.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Inicio - Hermandad de la Aurora (cofradiadelaaurora.com redirige aquí)"
-    },
-    "la-estrella-granada": {
-      "url": "https://pasionyestrella.com/",
-      "fuente": "https://pasionyestrella.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Inicio - Cofradia de La Estrella"
-    },
-    "el-silencio-granada": {
-      "url": "https://silenciogranada.es/",
-      "fuente": "https://silenciogranada.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Pontificia y Real Sacramental del Señor San José y Ánimas y Cofradía del Santísimo Cristo de la Misericordia (Silencio)"
-    },
-    "los-ferroviarios-granada": {
-      "url": "https://www.cofradiadelosferroviarios.org/",
-      "fuente": "https://www.cofradiadelosferroviarios.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Home - Ferroviarios; Santísimo Cristo de la Buena Muerte, Nuestra Señora del Amor y el Trabajo"
-    },
-    "los-favores-granada": {
-      "url": "https://hermandaddelosfavores.org/",
-      "fuente": "https://hermandaddelosfavores.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de los Favores"
-    },
-    "los-escolapios-granada": {
-      "url": "https://hermandadescolapios.com/",
-      "fuente": "https://hermandadescolapios.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de Los Escolapios (Granada); redirige a blog activo (oct 2026)"
-    },
-    "santo-entierro-granada": {
-      "url": "https://santosepulcrogranada.es/",
-      "fuente": "https://santosepulcrogranada.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Pontificia Real e Ilustre Hermandad del Santo Sepulcro y Nuestra Señora de la Soledad en el Calvario"
-    },
-    "santa-maria-de-la-alhambra-granada": {
-      "url": "https://www.hermandadalhambra.es/",
-      "fuente": "https://www.hermandadalhambra.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Cofradía Sta M Alhambra; Nuestra Señora de las Angustias Coronada de Santa María de la Alhambra (plantilla con texto de relleno)"
-    },
-    "la-paz-cordoba": {
-      "url": "https://hermandadpazyesperanza.com/",
-      "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Paz y Esperanza – En mantenimiento (EN MANTENIMIENTO: responde 503)"
-    },
-    "traslado-al-sepulcro-pro-hermandad-cordoba": {
-      "url": "http://www.trasladoalsepulcro.org/",
-      "fuente": "http://www.trasladoalsepulcro.org/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Página Oficial de la Pro-Hermandad del Traslado al Sepulcro. Córdoba."
-    },
-    "la-sagrada-cena-huelva": {
-      "url": "https://hermandadsagradacenahuelva.es/",
-      "fuente": "https://hermandadsagradacenahuelva.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Sacramental de la Sagrada Cena — Semana Santa de Huelva"
-    },
-    "el-cautivo-huelva": {
-      "url": "https://cautivohuelva.com/",
-      "fuente": "https://www.huelvacofrade.com/hermandades/cautivo.htm",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad del Cautivo | Huelva; contacto@cautivohuelva.com"
-    },
-    "el-santo-entierro-huelva": {
-      "url": "https://santoentierrohuelva.org/",
-      "fuente": "https://www.huelvacofrade.com/hermandades/santoentierro.htm",
-      "comprobada": "2026-10-16",
-      "evidencia": "HERMANDIA | SANTO ENTIERRO; Saluda de la Hermana Mayor"
-    },
-    "el-silencio-la-soledad-huelva": {
-      "url": "http://www.soledaddehuelva.es/",
-      "fuente": "https://www.huelvacofrade.com/hermandades/silencio.htm",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de la Soledad - Huelva; Cofradía de Nazarenos de Nuestra Señora en su Soledad - El Silencio"
-    },
-    "la-macarena-almeria": {
-      "url": "https://hermandadmacarenaalmeria.es/",
-      "fuente": "https://hermandadmacarenaalmeria.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de la Macarena de Almería"
-    },
-    "las-angustias-almeria": {
-      "url": "https://www.hermandaddelasangustias.es/",
-      "fuente": "https://www.hermandaddelasangustias.es/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de las Angustias – Almería"
-    },
-    "el-resucitado-almeria": {
-      "url": "http://resucitadoalmeria.blogspot.com/",
-      "fuente": "http://resucitadoalmeria.blogspot.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad de Jesucristo Resucitado, Señor de la Vida, y María Santísima del Triunfo (blog activo oct 2026)"
-    },
-    "divino-maestro-lavatorio-jaen": {
-      "url": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
-      "fuente": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
-      "comprobada": "2026-10-16",
-      "evidencia": "Hermandad Misionera de Jesús Divino Maestro (El Lavatorio) (blog; última entrada 2025-11)"
-    },
-    "la-clemencia-jaen": {
-      "url": "https://clemenciajaen.wixsite.com/clemenciajaen",
-      "fuente": "https://clemenciajaen.wixsite.com/clemenciajaen",
-      "comprobada": "2026-10-16",
-      "evidencia": "Agrupación Religiosa | Cofradía clemencia Jaén (sitio Wix, sin fechas visibles)"
-    }
+ "generado": "2026-10-16",
+ "hermandades": {
+  "san-esteban-sevilla": {
+   "url": "https://www.hermandadsanesteban.org/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de San Esteban 1926-2026; Nuestro Padre Jesús de la Salud y Buen Viaje"
   },
-  "redes": {
-    "el-perdon-cordoba": [
-      "https://www.instagram.com/hdadperdoncordoba/",
-      "https://www.tiktok.com/@hdadperdoncordoba"
-    ],
-    "la-piedad-cadiz": [
-      "https://www.facebook.com/PiedaddeCadiz/",
-      "https://www.instagram.com/piedadcadiz/"
-    ],
-    "la-columna-cadiz": [
-      "https://www.facebook.com/archicofradiacolumna",
-      "https://www.instagram.com/cofradiacolumnacadiz/"
-    ],
-    "las-cigarreras-cadiz": [
-      "https://www.facebook.com/HdadCigarreras/"
-    ],
-    "oracion-en-el-huerto-cadiz": [
-      "http://www.facebook.com/OracionenelHuertoCadiz",
-      "https://www.instagram.com/hdadoracioncadiz/"
-    ],
-    "la-expiracion-cadiz": [
-      "https://www.facebook.com/Cofrad%C3%ADa-del-Stmo-Xto-de-la-Expiraci%C3%B3n-y-Mar%C3%ADa-Stma-de-la-Victoria-163736740326372",
-      "https://www.instagram.com/expiracionyvictoria/"
-    ],
-    "siete-palabras-cadiz": [
-      "https://www.facebook.com/Hdad7palabras"
-    ],
-    "la-redencion-huelva": [
-      "https://www.instagram.com/hdadredencionhuelva/"
-    ],
-    "los-mutilados-huelva": [
-      "https://www.instagram.com/hdadmutiladoshuelva"
-    ],
-    "la-salud-huelva": [
-      "https://www.facebook.com/SentenciaYSaludHuelva/",
-      "https://www.instagram.com/lasaludhuelva"
-    ],
-    "la-lanzada-huelva": [
-      "https://www.facebook.com/hdadsagradalanzada.huelva/",
-      "https://www.instagram.com/hdadlanzada/"
-    ],
-    "los-estudiantes-huelva": [
-      "https://instagram.com/hdadlosestudianteshuelva",
-      "https://www.facebook.com/HdadEstudiantesHuelva/"
-    ],
-    "el-prendimiento-huelva": [
-      "https://www.facebook.com/PrendimientoHuelva",
-      "https://www.instagram.com/prendimientoyestrella/"
-    ],
-    "nuestra-senora-del-prado-huelva": [
-      "https://www.facebook.com/people/Hermandad-Prado-Huelva/61570085582776/?_rdr",
-      "https://www.instagram.com/hdadpradohuelva/"
-    ],
-    "los-angeles-almeria": [
-      "https://www.facebook.com/hermandad.losangeles/",
-      "https://www.instagram.com/hermandad_de_los_angeles/"
-    ],
-    "la-estrella-almeria": [
-      "https://www.facebook.com/HdadEstrellaAlmeria/",
-      "https://www.instagram.com/hermandadestrellalmeria/"
-    ],
-    "pasion-almeria": [
-      "https://www.facebook.com/hermandaddepasionalmeria",
-      "https://www.instagram.com/hermandadpasionalmeria/"
-    ],
-    "gran-poder-almeria": [
-      "https://www.facebook.com/granpoderalmeria",
-      "https://www.instagram.com/hdadgranpoderalm/"
-    ],
-    "la-coronacion-almeria": [
-      "https://www.facebook.com/HermandadYCofradiaDeLaCoronacionDeAlmeria/",
-      "https://www.instagram.com/coronacionalm/"
-    ],
-    "el-amor-almeria": [
-      "https://www.facebook.com/HdadAmorAlm",
-      "https://www.instagram.com/hdadamoralm/"
-    ],
-    "el-calvario-cristo-del-mar-almeria": [
-      "https://www.facebook.com/calvarioalmeria/",
-      "https://www.instagram.com/calvarioalmeria/"
-    ],
-    "rosario-del-mar-almeria": [
-      "https://www.facebook.com/Hermandad-Rosario-del-Mar-401650216712766/",
-      "https://www.instagram.com/rosarioypenasalmeria/"
-    ],
-    "la-caridad-almeria": [
-      "https://www.facebook.com/humildehermandadCaridad/",
-      "https://www.instagram.com/caridadypenas/"
-    ],
-    "divino-perdon-sevilla": [
-      "https://mobile.twitter.com/hdadivinoperdon"
-    ]
+  "san-benito-sevilla": {
+   "url": "https://hermandaddesanbenito.net/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/martes-santo/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de San Benito; Nuestra Señora de la Encarnación"
   },
-  "sin_encontrar": [
-    "divino-perdon-sevilla",
-    "resucitado-malaga",
-    "el-cautivo-granada",
-    "el-via-crucis-granada",
-    "los-gitanos-granada",
-    "el-nazareno-granada",
-    "los-salesianos-granada",
-    "las-chias-granada",
-    "la-resurreccion-granada",
-    "el-resucitado-granada",
-    "entrada-triunfal-cordoba",
-    "penas-de-santiago-cordoba",
-    "la-agonia-cordoba",
-    "el-perdon-cordoba",
-    "cristo-de-gracia-el-esparraguero-cordoba",
-    "la-buena-muerte-cordoba",
-    "lagrimas-cordoba",
-    "merced-obediencia-cadiz",
-    "la-piedad-cadiz",
-    "la-columna-cadiz",
-    "las-cigarreras-cadiz",
-    "oracion-en-el-huerto-cadiz",
-    "la-expiracion-cadiz",
-    "siete-palabras-cadiz",
-    "ecce-mater-tua-cadiz",
-    "la-resurreccion-cadiz",
-    "la-redencion-huelva",
-    "los-mutilados-huelva",
-    "la-salud-huelva",
-    "la-lanzada-huelva",
-    "los-estudiantes-huelva",
-    "el-prendimiento-huelva",
-    "nuestra-senora-del-prado-huelva",
-    "la-borriquita-almeria",
-    "los-angeles-almeria",
-    "la-estrella-almeria",
-    "pasion-almeria",
-    "gran-poder-almeria",
-    "la-coronacion-almeria",
-    "el-amor-almeria",
-    "el-calvario-cristo-del-mar-almeria",
-    "rosario-del-mar-almeria",
-    "cristo-de-la-escucha-almeria",
-    "la-caridad-almeria",
-    "el-gran-poder-jaen",
-    "mutilado-clemencia-malaga",
-    "desamparados-malaga",
-    "verdad-y-sagrario-malaga",
-    "luz-y-mar-malaga",
-    "buen-camino-gamarra-malaga",
-    "medinaceli-martiricos-malaga",
-    "dolores-del-puerto-de-la-torre-malaga",
-    "dolores-de-churriana-malaga",
-    "la-o-cordoba",
-    "la-sangre-de-el-higueron-cordoba",
-    "la-bendicion-huelva",
-    "la-unidad-almeria"
+  "la-lanzada-sevilla": {
+   "url": "https://lanzada.org/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/miercoles-santo/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sagrada Lanzada Sevilla: Bienvenidos"
+  },
+  "bellavista-sevilla": {
+   "url": "https://www.dulcenombrebellavista.es/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Dulce Nombre de Bellavista | Semana Santa de Sevilla (EN MANTENIMIENTO: responde 503 con aviso de nuevo portal)"
+  },
+  "bendicion-y-esperanza-sevilla": {
+   "url": "https://bendicionyesperanza.es/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de Bendición y Esperanza"
+  },
+  "padre-pio-sevilla": {
+   "url": "http://hermandadpadrepio.com/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Página oficial de la Hermandad de Padre Pio"
+  },
+  "san-jose-obrero-sevilla": {
+   "url": "http://hermandadsanjoseobrerosevilla.blogspot.com/",
+   "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/sabado-de-pasion/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sacramental de San José Obrero - Sevilla (blog; última entrada 2025-04)"
+  },
+  "lagrimas-y-favores-malaga": {
+   "url": "https://cofradiasfusionadas.org/",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sacramental y Reales Cofradías Fusionadas; María Santísima de Lágrimas y Favores (web de la corporación Fusionadas, común a sus secciones)"
+  },
+  "fusionadas-malaga": {
+   "url": "https://cofradiasfusionadas.org/",
+   "fuente": "https://es.wikipedia.org/wiki/Reales_Cofrad%C3%ADas_Fusionadas",
+   "comprobada": "2026-10-17",
+   "evidencia": "Reales Cofradías Fusionadas - Hermandad Sacramental y Reales Cofradías Fusionadas (web responde 200)"
+  },
+  "vera-cruz-malaga": {
+   "url": "https://cofradiasfusionadas.org/",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Reales Cofradías Fusionadas; Santísimo Cristo de la Vera+Cruz y Sangre (web común de la corporación)"
+  },
+  "vineros-malaga": {
+   "url": "http://correonistas.es/",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/vineros/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Inicio - Hermandad Sacramental de Viñeros; Plaza de los Viñeros, 5"
+  },
+  "huerto-malaga": {
+   "url": "https://archicofradiahuertoconcepcion.com/",
+   "fuente": "https://archicofradiahuertoconcepcion.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Archicofradía Huerto; huertoconcepcion@gmail.com"
+  },
+  "la-borriquilla-granada": {
+   "url": "https://www.borriquilla.es/",
+   "fuente": "https://www.borriquilla.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Ilustre Cofradía de la Entrada de Jesús en Jerusalén y Nuestra Señora de la Paz (Albayzin - Granada)"
+  },
+  "santa-cena-granada": {
+   "url": "https://santacenagranada.es/",
+   "fuente": "https://santacenagranada.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Santa Cena y Victoria Granada; Calle Escutia nº 3"
+  },
+  "la-sentencia-maravillas-granada": {
+   "url": "https://sentenciaymaravillas.com/",
+   "fuente": "https://sentenciaymaravillas.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sentencia y Maravillas"
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "url": "https://www.despojado.org/",
+   "fuente": "https://www.despojado.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sacramental de Jesús Despojado | Granada"
+  },
+  "el-trabajo-granada": {
+   "url": "https://trabajoyluz.es/",
+   "fuente": "https://trabajoyluz.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Trabajo y Luz"
+  },
+  "nuestra-senora-de-los-dolores-granada": {
+   "url": "https://virgendelosdolores.org/",
+   "fuente": "https://virgendelosdolores.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "DoloresGranada – Real Cofradía de Nuestra Señora de los Dolores"
+  },
+  "jesus-del-rescate-granada": {
+   "url": "https://rescategranada.com/",
+   "fuente": "https://rescategranada.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Cofradía de Nuestro Padre Jesús del Rescate | Granada"
+  },
+  "el-huerto-granada": {
+   "url": "https://hermandadelhuertogranada.com/",
+   "fuente": "https://hermandadelhuertogranada.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de la Oración en el Huerto | Oración – Amargura"
+  },
+  "cristo-de-san-agustin-granada": {
+   "url": "https://cristodesanagustin.com/",
+   "fuente": "https://cristodesanagustin.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad del Cristo de San Agustín - Sitio en Mantenimiento (EN MANTENIMIENTO)"
+  },
+  "la-lanzada-granada": {
+   "url": "https://lanzadagranada.org/",
+   "fuente": "https://lanzadagranada.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "INICIO - Hermandad de la Sagrada Lanzada de Granada"
+  },
+  "la-esperanza-granada": {
+   "url": "https://www.esperanzagranada.es/",
+   "fuente": "https://www.esperanzagranada.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Sitio Oficial de la Real Hermandad y Cofradía ... Gran Poder y Esperanza Granada"
+  },
+  "la-canilla-granada": {
+   "url": "https://www.cofradiadelahumildad.com/",
+   "fuente": "https://www.cofradiadelahumildad.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Cofradía de la Humildad – Web Oficial – Realejo-Granada"
+  },
+  "los-facundillos-granada": {
+   "url": "https://www.cofradiadelahumildad.com/",
+   "fuente": "https://www.cofradiadelahumildad.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Cofradía de la Humildad – Web Oficial (misma corporación que La Cañilla)"
+  },
+  "los-estudiantes-granada": {
+   "url": "https://estudiantesgranada.es/",
+   "fuente": "https://estudiantesgranada.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de los Estudiantes de Granada; Meditación, Remedios"
+  },
+  "paciencia-y-penas-granada": {
+   "url": "https://pacienciaypenas.es/",
+   "fuente": "https://pacienciaypenas.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sacramental Paciencia y Penas"
+  },
+  "tres-caidas-y-rosario-granada": {
+   "url": "https://rosarioytrescaidas.com/",
+   "fuente": "https://trescaidasyrosario.blogspot.com/2020/06/cese-de-actividad-de-este-blog-estreno.html",
+   "comprobada": "2026-10-16",
+   "evidencia": "INICIO - HERMANDAD DEL ROSARIO Y TRES CAÍDAS"
+  },
+  "la-concha-granada": {
+   "url": "https://hermandaddelaconcepcion.es/",
+   "fuente": "https://hermandaddelaconcepcion.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de la Concepción – Semana Santa de Granada; Jesús del Amor y la Entrega"
+  },
+  "la-aurora-granada": {
+   "url": "https://perdonyaurora.com/",
+   "fuente": "http://cofradiadelaaurora.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Inicio - Hermandad de la Aurora (cofradiadelaaurora.com redirige aquí)"
+  },
+  "la-estrella-granada": {
+   "url": "https://pasionyestrella.com/",
+   "fuente": "https://pasionyestrella.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Inicio - Cofradia de La Estrella"
+  },
+  "el-silencio-granada": {
+   "url": "https://silenciogranada.es/",
+   "fuente": "https://silenciogranada.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Pontificia y Real Sacramental del Señor San José y Ánimas y Cofradía del Santísimo Cristo de la Misericordia (Silencio)"
+  },
+  "los-ferroviarios-granada": {
+   "url": "https://www.cofradiadelosferroviarios.org/",
+   "fuente": "https://www.cofradiadelosferroviarios.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Home - Ferroviarios; Santísimo Cristo de la Buena Muerte, Nuestra Señora del Amor y el Trabajo"
+  },
+  "los-favores-granada": {
+   "url": "https://hermandaddelosfavores.org/",
+   "fuente": "https://hermandaddelosfavores.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de los Favores"
+  },
+  "los-escolapios-granada": {
+   "url": "https://hermandadescolapios.com/",
+   "fuente": "https://hermandadescolapios.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de Los Escolapios (Granada); redirige a blog activo (oct 2026)"
+  },
+  "santo-entierro-granada": {
+   "url": "https://santosepulcrogranada.es/",
+   "fuente": "https://santosepulcrogranada.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Pontificia Real e Ilustre Hermandad del Santo Sepulcro y Nuestra Señora de la Soledad en el Calvario"
+  },
+  "santa-maria-de-la-alhambra-granada": {
+   "url": "https://www.hermandadalhambra.es/",
+   "fuente": "https://www.hermandadalhambra.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Cofradía Sta M Alhambra; Nuestra Señora de las Angustias Coronada de Santa María de la Alhambra (plantilla con texto de relleno)"
+  },
+  "la-paz-cordoba": {
+   "url": "https://hermandadpazyesperanza.com/",
+   "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Paz y Esperanza – En mantenimiento (EN MANTENIMIENTO: responde 503)"
+  },
+  "traslado-al-sepulcro-pro-hermandad-cordoba": {
+   "url": "http://www.trasladoalsepulcro.org/",
+   "fuente": "http://www.trasladoalsepulcro.org/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Página Oficial de la Pro-Hermandad del Traslado al Sepulcro. Córdoba."
+  },
+  "la-sagrada-cena-huelva": {
+   "url": "https://hermandadsagradacenahuelva.es/",
+   "fuente": "https://hermandadsagradacenahuelva.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Sacramental de la Sagrada Cena — Semana Santa de Huelva"
+  },
+  "el-cautivo-huelva": {
+   "url": "https://cautivohuelva.com/",
+   "fuente": "https://www.huelvacofrade.com/hermandades/cautivo.htm",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad del Cautivo | Huelva; contacto@cautivohuelva.com"
+  },
+  "el-santo-entierro-huelva": {
+   "url": "https://santoentierrohuelva.org/",
+   "fuente": "https://www.huelvacofrade.com/hermandades/santoentierro.htm",
+   "comprobada": "2026-10-16",
+   "evidencia": "HERMANDIA | SANTO ENTIERRO; Saluda de la Hermana Mayor"
+  },
+  "el-silencio-la-soledad-huelva": {
+   "url": "http://www.soledaddehuelva.es/",
+   "fuente": "https://www.huelvacofrade.com/hermandades/silencio.htm",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de la Soledad - Huelva; Cofradía de Nazarenos de Nuestra Señora en su Soledad - El Silencio"
+  },
+  "la-macarena-almeria": {
+   "url": "https://hermandadmacarenaalmeria.es/",
+   "fuente": "https://hermandadmacarenaalmeria.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de la Macarena de Almería"
+  },
+  "las-angustias-almeria": {
+   "url": "https://www.hermandaddelasangustias.es/",
+   "fuente": "https://www.hermandaddelasangustias.es/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de las Angustias – Almería"
+  },
+  "el-resucitado-almeria": {
+   "url": "http://resucitadoalmeria.blogspot.com/",
+   "fuente": "http://resucitadoalmeria.blogspot.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad de Jesucristo Resucitado, Señor de la Vida, y María Santísima del Triunfo (blog activo oct 2026)"
+  },
+  "divino-maestro-lavatorio-jaen": {
+   "url": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
+   "fuente": "http://hermandadmisionerajesusdivinomaestro.blogspot.com/",
+   "comprobada": "2026-10-16",
+   "evidencia": "Hermandad Misionera de Jesús Divino Maestro (El Lavatorio) (blog; última entrada 2025-11)"
+  },
+  "la-clemencia-jaen": {
+   "url": "https://clemenciajaen.wixsite.com/clemenciajaen",
+   "fuente": "https://clemenciajaen.wixsite.com/clemenciajaen",
+   "comprobada": "2026-10-16",
+   "evidencia": "Agrupación Religiosa | Cofradía clemencia Jaén (sitio Wix, sin fechas visibles)"
+  },
+  "buen-camino-gamarra-malaga": {
+   "url": "https://buencaminogamarra.com/",
+   "fuente": "https://x.com/BuenCaminoMLG",
+   "comprobada": "2026-10-17",
+   "evidencia": "Grupo Parroquial del Buen Camino | Colegio Gamarra Málaga; perfil oficial en X enlaza linktr.ee (web responde 200)"
+  }
+ },
+ "redes": {
+  "el-perdon-cordoba": [
+   "https://www.instagram.com/hdadperdoncordoba/",
+   "https://www.tiktok.com/@hdadperdoncordoba"
+  ],
+  "la-piedad-cadiz": [
+   "https://www.facebook.com/PiedaddeCadiz/",
+   "https://www.instagram.com/piedadcadiz/"
+  ],
+  "la-columna-cadiz": [
+   "https://www.facebook.com/archicofradiacolumna",
+   "https://www.instagram.com/cofradiacolumnacadiz/"
+  ],
+  "las-cigarreras-cadiz": [
+   "https://www.facebook.com/HdadCigarreras/"
+  ],
+  "oracion-en-el-huerto-cadiz": [
+   "http://www.facebook.com/OracionenelHuertoCadiz",
+   "https://www.instagram.com/hdadoracioncadiz/"
+  ],
+  "la-expiracion-cadiz": [
+   "https://www.facebook.com/Cofrad%C3%ADa-del-Stmo-Xto-de-la-Expiraci%C3%B3n-y-Mar%C3%ADa-Stma-de-la-Victoria-163736740326372",
+   "https://www.instagram.com/expiracionyvictoria/"
+  ],
+  "siete-palabras-cadiz": [
+   "https://www.facebook.com/Hdad7palabras"
+  ],
+  "la-redencion-huelva": [
+   "https://www.instagram.com/hdadredencionhuelva/"
+  ],
+  "los-mutilados-huelva": [
+   "https://www.instagram.com/hdadmutiladoshuelva"
+  ],
+  "la-salud-huelva": [
+   "https://www.facebook.com/SentenciaYSaludHuelva/",
+   "https://www.instagram.com/lasaludhuelva"
+  ],
+  "la-lanzada-huelva": [
+   "https://www.facebook.com/hdadsagradalanzada.huelva/",
+   "https://www.instagram.com/hdadlanzada/"
+  ],
+  "los-estudiantes-huelva": [
+   "https://instagram.com/hdadlosestudianteshuelva",
+   "https://www.facebook.com/HdadEstudiantesHuelva/"
+  ],
+  "el-prendimiento-huelva": [
+   "https://www.facebook.com/PrendimientoHuelva",
+   "https://www.instagram.com/prendimientoyestrella/"
+  ],
+  "nuestra-senora-del-prado-huelva": [
+   "https://www.facebook.com/people/Hermandad-Prado-Huelva/61570085582776/?_rdr",
+   "https://www.instagram.com/hdadpradohuelva/"
+  ],
+  "los-angeles-almeria": [
+   "https://www.facebook.com/hermandad.losangeles/",
+   "https://www.instagram.com/hermandad_de_los_angeles/"
+  ],
+  "la-estrella-almeria": [
+   "https://www.facebook.com/HdadEstrellaAlmeria/",
+   "https://www.instagram.com/hermandadestrellalmeria/"
+  ],
+  "pasion-almeria": [
+   "https://www.facebook.com/hermandaddepasionalmeria",
+   "https://www.instagram.com/hermandadpasionalmeria/"
+  ],
+  "gran-poder-almeria": [
+   "https://www.facebook.com/granpoderalmeria",
+   "https://www.instagram.com/hdadgranpoderalm/"
+  ],
+  "la-coronacion-almeria": [
+   "https://www.facebook.com/HermandadYCofradiaDeLaCoronacionDeAlmeria/",
+   "https://www.instagram.com/coronacionalm/"
+  ],
+  "el-amor-almeria": [
+   "https://www.facebook.com/HdadAmorAlm",
+   "https://www.instagram.com/hdadamoralm/"
+  ],
+  "el-calvario-cristo-del-mar-almeria": [
+   "https://www.facebook.com/calvarioalmeria/",
+   "https://www.instagram.com/calvarioalmeria/"
+  ],
+  "rosario-del-mar-almeria": [
+   "https://www.facebook.com/Hermandad-Rosario-del-Mar-401650216712766/",
+   "https://www.instagram.com/rosarioypenasalmeria/"
+  ],
+  "la-caridad-almeria": [
+   "https://www.facebook.com/humildehermandadCaridad/",
+   "https://www.instagram.com/caridadypenas/"
+  ],
+  "divino-perdon-sevilla": [
+   "https://mobile.twitter.com/hdadivinoperdon"
   ]
+ },
+ "sin_encontrar": [
+  "divino-perdon-sevilla",
+  "resucitado-malaga",
+  "el-cautivo-granada",
+  "el-via-crucis-granada",
+  "los-gitanos-granada",
+  "el-nazareno-granada",
+  "los-salesianos-granada",
+  "las-chias-granada",
+  "la-resurreccion-granada",
+  "el-resucitado-granada",
+  "entrada-triunfal-cordoba",
+  "penas-de-santiago-cordoba",
+  "la-agonia-cordoba",
+  "el-perdon-cordoba",
+  "cristo-de-gracia-el-esparraguero-cordoba",
+  "la-buena-muerte-cordoba",
+  "lagrimas-cordoba",
+  "merced-obediencia-cadiz",
+  "la-piedad-cadiz",
+  "la-columna-cadiz",
+  "las-cigarreras-cadiz",
+  "oracion-en-el-huerto-cadiz",
+  "la-expiracion-cadiz",
+  "siete-palabras-cadiz",
+  "ecce-mater-tua-cadiz",
+  "la-resurreccion-cadiz",
+  "la-redencion-huelva",
+  "los-mutilados-huelva",
+  "la-salud-huelva",
+  "la-lanzada-huelva",
+  "los-estudiantes-huelva",
+  "el-prendimiento-huelva",
+  "nuestra-senora-del-prado-huelva",
+  "la-borriquita-almeria",
+  "los-angeles-almeria",
+  "la-estrella-almeria",
+  "pasion-almeria",
+  "gran-poder-almeria",
+  "la-coronacion-almeria",
+  "el-amor-almeria",
+  "el-calvario-cristo-del-mar-almeria",
+  "rosario-del-mar-almeria",
+  "cristo-de-la-escucha-almeria",
+  "la-caridad-almeria",
+  "el-gran-poder-jaen",
+  "mutilado-clemencia-malaga",
+  "desamparados-malaga",
+  "verdad-y-sagrario-malaga",
+  "luz-y-mar-malaga",
+  "buen-camino-gamarra-malaga",
+  "medinaceli-martiricos-malaga",
+  "dolores-del-puerto-de-la-torre-malaga",
+  "dolores-de-churriana-malaga",
+  "la-o-cordoba",
+  "la-sangre-de-el-higueron-cordoba",
+  "la-bendicion-huelva",
+  "la-unidad-almeria"
+ ]
 }

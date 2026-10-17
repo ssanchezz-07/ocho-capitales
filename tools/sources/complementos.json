@@ -1500,7 +1500,13 @@
     "comprobada": "2026-10-16"
    }
   },
-  "cristo-de-san-agustin-granada": {},
+  "cristo-de-san-agustin-granada": {
+   "web_oficial": {
+    "url": "https://cristodesanagustin.com/",
+    "fuente": "https://cristodesanagustin.com/",
+    "comprobada": "2026-10-16"
+   }
+  },
   "la-lanzada-granada": {
    "web_oficial": {
     "url": "https://lanzadagranada.org/",
@@ -1736,7 +1742,11 @@
    }
   },
   "la-paz-cordoba": {
-   "web_oficial": null,
+   "web_oficial": {
+    "url": "https://hermandadpazyesperanza.com/",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
+    "comprobada": "2026-10-16"
+   },
    "fuente_actual": {
     "url": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
     "antes": "https://www.hermandadesdecordoba.es/es/pagina/ver/4106-hermanad-de-la-paz.html",
@@ -4266,7 +4276,12 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "web_oficial": {
+    "url": "https://www.dulcenombrebellavista.es/",
+    "fuente": "https://www.hermandades-de-sevilla.org/hermandades/penitencia/viernes-de-dolores/",
+    "comprobada": "2026-10-16"
+   }
   },
   "bendicion-y-esperanza-sevilla": {
    "sevilla_wd": {
@@ -5253,6 +5268,11 @@
      "fuente": "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
      "revisado": "2026-10-16"
     }
+   },
+   "web_oficial": {
+    "url": "https://buencaminogamarra.com/",
+    "fuente": "https://x.com/BuenCaminoMLG",
+    "comprobada": "2026-10-17"
    }
   },
   "dolores-del-puerto-de-la-torre-malaga": {
