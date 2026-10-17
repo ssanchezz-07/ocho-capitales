@@ -1014,16 +1014,18 @@ select.oc-cityselect[hidden] { display: none; }
 [data-colgaduras][data-sel] .oc-colg-map { margin-bottom: 36px; }
 .oc-colg-svg, .oc-colg-hilos { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .oc-colg-svg { overflow: visible; }
-.oc-prov2 { fill: color-mix(in srgb, var(--c) var(--tint), var(--bg)); stroke: color-mix(in srgb, var(--ink) 48%, transparent); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; transition: fill 420ms var(--ease-out); }
+.oc-prov2 { fill: color-mix(in srgb, var(--c) calc(var(--tint) * 1.5), var(--bg)); stroke: var(--bg); stroke-width: 2px; vector-effect: non-scaling-stroke; stroke-linejoin: round; transition: fill 420ms var(--ease-out); }
 [data-colgaduras][data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) calc(var(--tint) * .55), var(--bg)); }
 [data-colgaduras][data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) calc(var(--tint) * 2.1), var(--bg)); }
 .oc-colg-hilos { overflow: visible; pointer-events: none; }
 .oc-hilo { fill: none; stroke: var(--gold); stroke-width: 1.2px; vector-effect: non-scaling-stroke; stroke-linecap: round; opacity: .75; transition: opacity 300ms var(--ease-out), stroke-width 300ms var(--ease-out); }
 [data-colgaduras][data-sel] .oc-hilo { opacity: .22; }
+.oc-colg-map svg { filter: drop-shadow(0 6px 10px rgb(28 15 43 / .16)); }
 [data-colgaduras][data-sel] .oc-hilo.is-on { opacity: 1; stroke-width: 2.2px; }
-.oc-punto { position: absolute; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--c), 0 0 0 4px rgb(255 255 255 / .75); pointer-events: none; z-index: 1; transition: transform 320ms var(--ease-out); }
+.oc-punto { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--c), 0 0 0 4px rgb(255 255 255 / .75); pointer-events: none; z-index: 1; transition: transform 320ms var(--ease-out); }
 .oc-punto.is-on { transform: scale(1.55); }
 .oc-colg-pie { position: absolute; left: 0; right: 0; bottom: -32px; display: flex; justify-content: center; padding-inline: 2px; pointer-events: none; z-index: 3; }
+.oc-colg-map, [data-colgaduras][data-sel] .oc-colg-map { margin-bottom: 36px; } /* hueco reservado al botón «Semana Santa de…»: al tocar una colgadura nada se mueve */
 .oc-colg-pie[data-lado="der"] { justify-content: flex-end; }
 .oc-colg-pie[data-lado="izq"] { justify-content: flex-start; }
 .oc-colg-ir { pointer-events: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--gold); background: color-mix(in srgb, var(--surface) 90%, transparent); -webkit-backdrop-filter: blur(12px) saturate(1.5); backdrop-filter: blur(12px) saturate(1.5); color: var(--primary); font-weight: 700; text-decoration: none; box-shadow: 0 10px 26px -12px rgb(20 8 29 / .55); transform-origin: var(--ox, 50%) var(--oy, 0%); }

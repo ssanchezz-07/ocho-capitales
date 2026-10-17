@@ -109,6 +109,13 @@
     box.remove(); if (card) card.classList.remove('has-img');
   }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
+  // La colgadura como miniatura solo en la primera noticia sin foto de cada capital y lista: repetida en todas es un muro.
+  $$('.oc-news-img.is-colg').forEach(function (box, i, all) {
+    var card = box.closest('.oc-news'), list = card && card.parentNode, city = card && (card.getAttribute('data-cities') || '').split(' ')[0];
+    if (!card || !list) return;
+    var seen = list.__colg || (list.__colg = {});
+    if (seen[city]) { box.remove(); card.classList.remove('has-img'); } else seen[city] = 1;
+  });
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
 
   // ---------- ciudad persistente ----------
