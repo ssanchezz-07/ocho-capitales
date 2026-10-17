@@ -653,6 +653,7 @@ function pageHome() {
 <section class="oc-hero2" aria-labelledby="hero-titulo">
   <h1 class="oc-hero2-title" id="hero-titulo">Ocho ciudades,<br>una Semana Santa</h1>
   ${leadHoy()}
+  <a class="oc-btn oc-hero2-cta" href="#hoy">Ver qué sale hoy</a>
   ${colgaduras()}
 </section>
 <section class="oc-news-home" aria-labelledby="ultimas-titulo" data-latest>
