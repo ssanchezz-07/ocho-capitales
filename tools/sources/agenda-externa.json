@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 36
+  "Prensa (texto de noticias)": 38
  },
  "eventos": [
   {
@@ -4998,6 +4998,26 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "La Hermandad de la Merced de Córdoba mantiene su salida extraordinaria con un recorrido alternativo por la amenaza de lluvia",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-hermandad-de-la-merced-de-cordoba-mantiene-su-salida-extraordinaria-con-un-recorrido-alternativo-por-la-amenaza-de-lluvia/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "La amenaza de lluvia obliga a recortar el recorrido de la procesión extraordinaria de la Virgen de la Merced de Córdoba",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/cordoba/lluvia-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008271798.html"
   },
   {
    "fecha": "2026-10-16",
