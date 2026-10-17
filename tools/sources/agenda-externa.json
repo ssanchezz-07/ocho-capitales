@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 30
+  "Prensa (texto de noticias)": 32
  },
  "eventos": [
   {
@@ -4928,6 +4928,26 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "besamanos",
+   "titulo": "Tras el besamanos realizado el miércoles y el jueves a la Divina Pastora de las Almas, en el que los fieles y devotos donaron litros de leche para Cáritas Parroquial, la ",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
   },
   {
    "fecha": "2026-10-16",
