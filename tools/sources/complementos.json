@@ -1173,6 +1173,76 @@
    "muerte": "1996",
    "lugar": "Santander",
    "wikipedia": "https://es.wikipedia.org/wiki/V%C3%ADctor_de_los_R%C3%ADos"
+  },
+  "José Rodríguez Fernández-Andes": {
+   "bio_relleno": {
+    "valor": "Imaginero sevillano (Sevilla, 1908 – Madrid, 1950). Se formó en la Escuela de Artes y Oficios de Sevilla con Antonio Illanes y Antonio Castillo Lastrucci y después en Madrid con Lorenzo Coullaut Valera. Su obra se reparte entre Sevilla, Hellín, Madrid, Cádiz y Huelva; en Sevilla destacan la Virgen de la Caridad y la de la Piedad del Baratillo y la Virgen de las Angustias y Jesús de la Salud de Los Gitanos.",
+    "vida": "1908-1950",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Jos%C3%A9_Rodr%C3%ADguez_Fern%C3%A1ndez-Andes"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Manuel Galiano Delgado": {
+   "bio_relleno": {
+    "valor": "Escultor español del siglo XX, autor sobre todo de imaginería procesional. Entre sus obras están la Virgen de los Desamparados (1923) de San Esteban y la Virgen de la Candelaria (1924), ambas en Sevilla. También fue restaurador, dorador y pintor: en 1928 restauró el Jesús del Silencio ante el desprecio de Herodes de la hermandad de la Amargura.",
+    "vida": "s. XX",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Manuel_Galiano"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Manuel Gutiérrez-Reyes Cano": {
+   "bio_relleno": {
+    "valor": "Escultor, imaginero y restaurador sevillano (Sevilla, 1845 – 1915). Hijo del también escultor Manuel Gutiérrez Cano, de quien recibió su primera formación, trabajó sobre todo en Sevilla entre la segunda mitad del siglo XIX y los primeros años del XX, compaginando la docencia con la imaginería, la restauración y las tallas para hermandades sevillanas.",
+    "vida": "1845-1915",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Manuel_Guti%C3%A9rrez-Reyes_Cano"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Antonio Perea Sánchez": {
+   "bio_relleno": {
+    "valor": "Pintor y escultor sevillano (Sevilla, 1911-1998). Talló en 1939, preso político en la cárcel de Sevilla, el Nuestro Padre Jesús Despojado de sus Vestiduras, titular de la hermandad sevillana de Jesús Despojado. Otras obras suyas son el Cristo yacente (1962) de Aracena y la Virgen en su Soledad (1957) de Beas de Segura.",
+    "vida": "1911-1998",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Antonio_Perea"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Cristóbal Ramos": {
+   "bio_relleno": {
+    "valor": "Escultor sevillano (Sevilla, 1725-1799), hijo del escultor Juan Isidoro Ramos. Trabajó en Sevilla en el siglo XVIII y su familia siguió en el oficio: su sobrino Cesáreo Ramos también realizó imágenes para hermandades de la ciudad.",
+    "vida": "1725-1799",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Crist%C3%B3bal_Ramos"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Gabriel de Astorga": {
+   "bio_relleno": {
+    "valor": "Escultor sevillano especializado en imaginería religiosa (Sevilla, 1804-1895), hijo de Juan de Astorga. Se formó en el taller paterno y en la Real Escuela de las Tres Nobles Artes, de la que fue miembro de mérito en 1848. Entre sus tallas figura la Virgen de la Soledad de la hermandad de la Soledad de San Buenaventura (Sevilla, 1851).",
+    "vida": "1804-1895",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Gabriel_de_Astorga_y_Miranda"
+    ],
+    "revisado": "2026-10-17"
+   }
+  },
+  "Gaspar de la Cueva": {
+   "bio_relleno": {
+    "valor": "Escultor sevillano del siglo XVII (Sevilla, 1587 – Perú, después de 1640), discípulo de Martínez Montañés. Hacia 1615 se embarcó al virreinato del Perú, donde fue pionero en difundir la escuela barroca realista sevillana; vivió en Lima y desde 1629 en Potosí, donde se conserva buena parte de su obra.",
+    "vida": "1587-después de 1640",
+    "fuentes": [
+     "https://es.wikipedia.org/wiki/Gaspar_de_la_Cueva"
+    ],
+    "revisado": "2026-10-17"
+   }
   }
  },
  "hermandades": {
