@@ -995,7 +995,7 @@ function pageCalendario() {
   <h2 class="oc-sr" id="agenda-titulo">Agenda cofrade</h2>
   <div class="oc-agenda-filters">
     <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-tipo-l">Tipo</span><ul class="oc-chips is-filter" aria-labelledby="ag-tipo-l" data-agenda-tipo>${GRUPOS.map(([v, l], i) => `<li><button type="button" data-v="${v}" aria-pressed="${i === 0}">${l}</button></li>`).join('')}</ul></div>
-    <div class="oc-field"><label for="ag-ciudad">Capital</label><select id="ag-ciudad" data-agenda-ciudad><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
+    <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-ciudad-l">Capital</span><ul class="oc-chips is-filter" aria-labelledby="ag-ciudad-l" data-agenda-ciudad><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false">${esc(c.nombre)}</button></li>`).join('')}</ul></div>
   </div>
   <div class="oc-agenda-grid">
     <div class="oc-month" data-month hidden>

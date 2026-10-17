@@ -652,9 +652,10 @@
         render();
       });
     });
-    citySel.value = st.c;
-    citySel.addEventListener('change', function () { st.c = citySel.value; render(); });
-    cityListeners.push(function (c) { st.c = c; citySel.value = c; render(); });
+    function paintCity() { $$('button', citySel).forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.v === st.c ? 'true' : 'false'); }); }
+    paintCity();
+    $$('button', citySel).forEach(function (b) { b.addEventListener('click', function () { st.c = b.dataset.v; paintCity(); render(); }); });
+    cityListeners.push(function (c) { st.c = c; paintCity(); render(); });
     monthBox.hidden = false;
     render();
   }
