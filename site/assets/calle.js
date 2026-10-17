@@ -96,7 +96,7 @@
     var obj = { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
     if (!animar || calm) { vb = obj; aplicarVista(); return; }
     var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now();
-    (function paso(t) { var k = Math.min(1, (t - t0) / 520), e = 1 - Math.pow(1 - k, 3); for (var p in obj) vb[p] = de[p] + (obj[p] - de[p]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(paso); })(t0);
+    (function paso(t) { var k = Math.max(0, Math.min(1, (t - t0) / 520)), e = 1 - Math.pow(1 - k, 3); for (var p in obj) vb[p] = de[p] + (obj[p] - de[p]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(paso); })(t0);
   }
 
   // ---------- gestos: arrastrar con inercia, rueda y pellizco anclados al dedo ----------
@@ -106,7 +106,7 @@
   function zoomAnimado(px, py, f) {
     if (calm) return zoomEn(px, py, f);
     var de = vb.w, t0 = performance.now();
-    (function p(t) { var k = Math.min(1, (t - t0) / 260), e = 1 - Math.pow(1 - k, 3), w = de * (1 + (f - 1) * e); zoomEn(px, py, w / vb.w); if (k < 1) requestAnimationFrame(p); })(t0);
+    (function p(t) { var k = Math.max(0, Math.min(1, (t - t0) / 260)), e = 1 - Math.pow(1 - k, 3), w = de * (1 + (f - 1) * e); zoomEn(px, py, w / vb.w); if (k < 1) requestAnimationFrame(p); })(t0);
   }
   // El plano no se captura al tocar: hasta que el dedo se mueve 6 px es un toque (y llega a la marca que haya debajo).
   svg.addEventListener('pointerdown', function (e) {
@@ -279,7 +279,7 @@
   function abrir(h) {
     sel = h; pintarFicha(h);
     ficha.hidden = false; requestAnimationFrame(function () { ficha.classList.add('is-open'); });
-    var p = enTramo(h.t.paso || h.t.cruz, T); if (p) { var w = Math.min(vb.w, 1800), r = vb.h / vb.w; var obj = { x: p.x - w / 2, y: p.y - w * r / 2, w: w, h: w * r }; if (calm) { vb = obj; aplicarVista(); } else { var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now(); (function s(t) { var k = Math.min(1, (t - t0) / 480), e = 1 - Math.pow(1 - k, 3); for (var q in obj) vb[q] = de[q] + (obj[q] - de[q]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(s); })(t0); } }
+    var p = enTramo(h.t.paso || h.t.cruz, T); if (p) { var w = Math.min(vb.w, 1800), r = vb.h / vb.w; var obj = { x: p.x - w / 2, y: p.y - w * r / 2, w: w, h: w * r }; if (calm) { vb = obj; aplicarVista(); } else { var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now(); (function s(t) { var k = Math.max(0, Math.min(1, (t - t0) / 480)), e = 1 - Math.pow(1 - k, 3); for (var q in obj) vb[q] = de[q] + (obj[q] - de[q]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(s); })(t0); } }
     $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { n.classList.toggle('is-sel', n.getAttribute('data-s') === h.s); });
     // la elegida, por encima de las demás (marca y recorrido), y el resto atenuado
     var gm = capas.marcas.querySelector('.oc-c-marca[data-s="' + h.s + '"]'); if (gm) capas.marcas.appendChild(gm);
@@ -396,12 +396,84 @@
     }
     return paradas;
   }
+  // ---------- tramos a pie por las calles del propio plano ----------
+  // Grafo ligero con las líneas de calles ya cargadas (nodos de coordenada idéntica = cruces). Las calles que acaban a pocos metros
+  // de otra (cruces que la simplificación quitó del trazado) se unen a ella. Si no hay camino verosímil, se deja la recta.
+  var grafo = null;
+  function crearGrafo() {
+    var id = {}, nx = [], ny = [], ady = [], segs = [], puntas = [];
+    function nodo(x, y) { var k = x + ',' + y, i = id[k]; if (i === undefined) { i = nx.length; id[k] = i; nx.push(x); ny.push(y); ady.push([]); } return i; }
+    function arista(a, b) { if (a === b) return; var d = Math.hypot(nx[a] - nx[b], ny[a] - ny[b]); ady[a].push([b, d]); ady[b].push([a, d]); }
+    [D.calles, D.principales].forEach(function (ls) {
+      ls.forEach(function (l) {
+        var prev = -1, primero = -1;
+        for (var i = 0; i < l.length; i += 2) { var n = nodo(l[i], l[i + 1]); if (primero < 0) primero = n; if (prev >= 0 && prev !== n) { arista(prev, n); segs.push([prev, n]); } prev = n; }
+        if (primero >= 0 && prev >= 0) { puntas.push(primero); if (prev !== primero) puntas.push(prev); }
+      });
+    });
+    var C = 25, cel = {};
+    function celdas(a, b, f) { var L = Math.hypot(nx[b] - nx[a], ny[b] - ny[a]), n = Math.max(1, Math.ceil(L / 12)); for (var s = 0; s <= n; s++) { f(Math.floor((nx[a] + (nx[b] - nx[a]) * s / n) / C) + ':' + Math.floor((ny[a] + (ny[b] - ny[a]) * s / n) / C)); } }
+    segs.forEach(function (s, i) { var vistos = {}; celdas(s[0], s[1], function (k) { if (vistos[k]) return; vistos[k] = 1; (cel[k] || (cel[k] = [])).push(i); }); });
+    var hechas = {};
+    puntas.forEach(function (p) {
+      if (hechas[p] || ady[p].length > 1) return; hechas[p] = 1;
+      var cx = Math.floor(nx[p] / C), cy = Math.floor(ny[p] / C), mejor = null;
+      for (var a = -1; a <= 1; a++) for (var b = -1; b <= 1; b++) (cel[(cx + a) + ':' + (cy + b)] || []).forEach(function (si) {
+        var A = segs[si][0], B = segs[si][1]; if (A === p || B === p) return;
+        var dx = nx[B] - nx[A], dy = ny[B] - ny[A], L2 = dx * dx + dy * dy || 1, t = Math.max(0, Math.min(1, ((nx[p] - nx[A]) * dx + (ny[p] - ny[A]) * dy) / L2));
+        var px = nx[A] + dx * t, py = ny[A] + dy * t, d = Math.hypot(nx[p] - px, ny[p] - py);
+        if (d <= 7 && (!mejor || d < mejor.d)) mejor = { d: d, A: A, B: B, t: t, px: px, py: py };
+      });
+      if (!mejor) return;
+      if (mejor.t <= 0.02) arista(p, mejor.A); else if (mejor.t >= 0.98) arista(p, mejor.B);
+      else { var q = nx.length; nx.push(mejor.px); ny.push(mejor.py); ady.push([]); arista(q, mejor.A); arista(q, mejor.B); arista(p, q); }
+    });
+    // Componentes conexas: las paradas se atan siempre a la red grande, no a un trozo de calle suelto.
+    var comp = new Array(nx.length), tam = [];
+    for (var s0 = 0; s0 < nx.length; s0++) {
+      if (comp[s0] !== undefined) continue;
+      var pila = [s0], c = tam.length, n = 0; comp[s0] = c;
+      while (pila.length) { var u0 = pila.pop(); n++; ady[u0].forEach(function (e) { if (comp[e[0]] === undefined) { comp[e[0]] = c; pila.push(e[0]); } }); }
+      tam.push(n);
+    }
+    var G = 60, rej = {};
+    nx.forEach(function (x, i) { if (!ady[i].length) return; var k = Math.floor(x / G) + ':' + Math.floor(ny[i] / G); (rej[k] || (rej[k] = [])).push(i); });
+    return { nx: nx, ny: ny, ady: ady, rej: rej, G: G, comp: comp, tam: tam };
+  }
+  function nodoCerca(g, x, y) {
+    var cx = Math.floor(x / g.G), cy = Math.floor(y / g.G), best = -1, bd = 1e9;
+    for (var a = -2; a <= 2; a++) for (var b = -2; b <= 2; b++) (g.rej[(cx + a) + ':' + (cy + b)] || []).forEach(function (i) { if (g.tam[g.comp[i]] < 300) return; var d = Math.hypot(g.nx[i] - x, g.ny[i] - y); if (d < bd) { bd = d; best = i; } });
+    return bd <= 120 ? best : -1;
+  }
+  // Camino por calles entre dos puntos del plano: [[x,y],…] o null si no hay uno verosímil (entonces se dibuja la recta).
+  function caminoPorCalles(a, b) {
+    if (!D.calles) return null;
+    if (!grafo) grafo = crearGrafo();
+    var g = grafo, recta = Math.hypot(b.x - a.x, b.y - a.y), s = nodoCerca(g, a.x, a.y), t = nodoCerca(g, b.x, b.y);
+    if (s < 0 || t < 0) return null;
+    var tope = recta * 2.6 + 500, dist = {}, de = {}, cola = [[0, s]]; dist[s] = 0;
+    while (cola.length) {
+      var mi = 0; for (var i = 1; i < cola.length; i++) if (cola[i][0] < cola[mi][0]) mi = i; // cola pequeña: basta el mínimo lineal
+      var cur = cola.splice(mi, 1)[0], d = cur[0], u = cur[1];
+      if (u === t) break; if (d > dist[u] || d > tope) continue;
+      g.ady[u].forEach(function (e) { var nd = d + e[1]; if (nd < (dist[e[0]] === undefined ? 1e9 : dist[e[0]])) { dist[e[0]] = nd; de[e[0]] = u; cola.push([nd, e[0]]); } });
+    }
+    if (dist[t] === undefined || dist[t] > tope) return null;
+    var ruta = [[b.x, b.y]], u2 = t; ruta.push([g.nx[t], g.ny[t]]);
+    while (u2 !== s) { u2 = de[u2]; ruta.push([g.nx[u2], g.ny[u2]]); }
+    ruta.push([a.x, a.y]); return ruta.reverse();
+  }
   function pintarRuta(paradas) {
     rParadas.textContent = '';
     var vieja = capas.mundo.querySelector('.oc-c-ruta-mia'); if (vieja) vieja.remove();
     if (!paradas.length) { var li0 = document.createElement('li'); li0.className = 'oc-ruta-vacia'; li0.textContent = 'A esas horas no queda ninguna cofradía por ver. Prueba a empezar antes.'; rParadas.appendChild(li0); return; }
     var g = el('g', { 'class': 'oc-c-ruta-mia' }); capas.mundo.insertBefore(g, capas.marcas);
-    g.appendChild(el('path', { 'class': 'oc-c-camino', d: paradas.map(function (p, i) { return (i ? 'L' : 'M') + p.c.x.toFixed(0) + ' ' + p.c.y.toFixed(0); }).join('') }));
+    g.appendChild(el('path', { 'class': 'oc-c-camino', d: paradas.map(function (p, i) {
+      if (!i) return 'M' + p.c.x.toFixed(0) + ' ' + p.c.y.toFixed(0);
+      var ruta = null; try { ruta = caminoPorCalles(paradas[i - 1].c, p.c); } catch (e) { ruta = null; }
+      if (!ruta) return 'L' + p.c.x.toFixed(0) + ' ' + p.c.y.toFixed(0);
+      return ruta.slice(1).map(function (q) { return 'L' + q[0].toFixed(0) + ' ' + q[1].toFixed(0); }).join('');
+    }).join('') }));
     var xs = [], ys = [];
     paradas.forEach(function (p, i) {
       xs.push(p.c.x); ys.push(p.c.y);
