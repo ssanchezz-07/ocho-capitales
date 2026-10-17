@@ -353,6 +353,21 @@ for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
     }
   }
 }
+// Lo mismo con los recorridos geolocalizados (site/data/recorridos/<ciudad>.json): la hora del punto «SALIDA» del itinerario oficial.
+{
+  const RD = path.join(__dirname, '..', 'site', 'data', 'recorridos');
+  if (fs.existsSync(RD)) {
+    const REC = {};
+    for (const f of fs.readdirSync(RD)) { try { Object.assign(REC, JSON.parse(fs.readFileSync(path.join(RD, f), 'utf8')).hermandades); } catch (e) { } }
+    for (const h of hermandades) {
+      const e = REC[h.slug]; if (!e || h.hora) continue;
+      const pts = e.tramos['cruz de guía'] || e.tramos.paso || Object.values(e.tramos)[0] || [];
+      const s = pts[0];
+      const t = s && (s.hora || s.fila);
+      if (t && /^\d{1,2}:\d{2}$/.test(t) && /^\(?(salida|sale)/i.test(s.lugar || '')) { h.hora = t; h.hora_fuente = e.fuente; }
+    }
+  }
+}
 // En las vísperas el orden de paso sigue la hora de salida publicada.
 const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
 for (const dia of ['Viernes de Dolores', 'Sábado de Pasión']) for (const ciudad of new Set(hermandades.map((h) => h.ciudad))) {
