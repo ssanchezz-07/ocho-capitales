@@ -1830,6 +1830,11 @@
      "valor": "La Orden Tercera de Servitas se estableció en la parroquia de San Lorenzo de Cádiz en 1727 y pocos años después levantó su capilla propia junto al templo. Su dolorosa titular, anónima del siglo XVIII, fue coronada canónicamente en 2011.",
      "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Orden Tercera de Servitas Esclavos de María Santísima de los Dolores Coronada",
+     "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1840,6 +1845,11 @@
      "valor": "Según los archivos diocesanos, la Esclavitud se fundó en Cádiz el 9 de marzo de 1628. En 1776 quedó establecida canónicamente en el convento de los Mercedarios Descalzos y agregada a la Orden de la Merced.",
      "fuente": "https://consejocofradiascadiz.es/merced-3/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Archicofradía de la Celeste y Real Esclavitud de Nuestra Señora de la Merced y Devota Sección de Penitencia de Nuestro Padre Jesús Nazareno de la Obediencia",
+     "fuente": "https://consejocofradiascadiz.es/merced-3/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1854,6 +1864,11 @@
      "valor": "Hizo su primera salida el 25 de marzo de 1945 desde la parroquia de San José, con un paso cedido por los Afligidos. En 1947 encargó a los talleres valencianos de Rafael Peris la imagen de la Virgen del Amparo.",
      "fuente": "https://consejocofradiascadiz.es/la-paz/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Cofradía Carmelitana de Penitencia y Sacramental Hermandad de Nazarenos de Nuestro Padre Jesús de la Paz en su Real y Triunfal Entrada en Jerusalén y Nuestra Madre y Señora María Santísima del Amparo y Bendito Patriarca Señor San José",
+     "fuente": "https://consejocofradiascadiz.es/la-paz/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1861,12 +1876,26 @@
    "web_oficial": {
     "url": "http://despojadocadiz.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/despojado/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad Salesiana de Penitencia de Nuestro Padre Jesús del Amor Despojado de sus Vestiduras y María Santísima de la Concepción",
+     "fuente": "https://consejocofradiascadiz.es/despojado/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "sagrada-cena-cadiz": {
    "web_oficial": {
     "url": "http://www.sagradacenacadiz.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/sagrada-cena/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Dominicana Hermandad Sacramental y Cofradía de Nazarenos de la Pura y Limpia Madre de Dios, Nuestro Padre Jesús del Milagro en la Sagrada Cena y María Santísima Reina de Todos los Santos",
+     "fuente": "https://consejocofradiascadiz.es/sagrada-cena/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "las-penas-cadiz": {
@@ -1879,6 +1908,11 @@
      "valor": "La Archicofradía del Pilar data de 1730 y la cofradía de Jesús de las Penas se erigió en 1955; ambas se fusionaron en 1977. Salió por primera vez el Lunes Santo de 1956 y desde 1964 la acompaña la Virgen de la Caridad.",
      "fuente": "https://consejocofradiascadiz.es/las-penas/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable y Real Archicofradía de Nuestra Señora del Pilar de Zaragoza, Nuestro Padre Jesús de las Penas y María Santísima de la Caridad",
+     "fuente": "https://consejocofradiascadiz.es/las-penas/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1886,12 +1920,26 @@
    "web_oficial": {
     "url": "http://www.humildadypacienciacadiz.com",
     "fuente": "https://consejocofradiascadiz.es/humildad-y-paciencia/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Venerable, Inmemorial, Pontificia y Nacional Cofradía de Penitencia del Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora de la Amargura",
+     "fuente": "https://consejocofradiascadiz.es/humildad-y-paciencia/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-palma-cadiz": {
    "web_oficial": {
     "url": "https://archicofradiadelapalma.webnode.es",
     "fuente": "https://consejocofradiascadiz.es/la-palma/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Primera Compañía Espiritual del Santo Rosario y Coro del Ave María, Venerable, Antigua, Ilustre, Franciscana, Lasaliana, Vicencia, Pontificia y Real Archicofradía Sacramental de Nuestra Señora de la Palma Coronada (Agregada a la del Santísimo Nombre de María de la Corte de Roma), Santísimo Cristo de la Misericordia y María Santísima de las Penas Coronada",
+     "fuente": "https://consejocofradiascadiz.es/la-palma/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "el-prendimiento-cadiz": {
@@ -1904,6 +1952,11 @@
      "valor": "Une la Real Congregación de la Vela, fundada en 1792 y responsable del jubileo circular de la ciudad, con la hermandad de penitencia creada en 1976; se fusionaron en 1979. Su Cristo del Prendimiento es obra del gaditano Alfonso Berraquero, bendecido en 1978.",
      "fuente": "https://consejocofradiascadiz.es/prendimiento/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real Congregación de la Vela y Mayor Culto al Santísimo Sacramento. Franciscana y Carmelitana Hermandad de Penitencia de Nuestro Padre Jesús en su Prendimiento, María Santísima del Patrocinio y Beato Fray Diego José de Cádiz",
+     "fuente": "https://consejocofradiascadiz.es/prendimiento/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1917,6 +1970,11 @@
      "valor": "El Lunes Santo de 1954 su titular salió de San Francisco con túnica blanca en lugar de la morada tradicional; la acogida fue tal que la mantuvo y desde entonces se le conoce como el Nazareno Blanco.",
      "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable y Seráfica Hermandad de Penitencia de Nuestro Padre Jesús Nazareno del Amor y Nuestra Señora de la Esperanza",
+     "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1924,12 +1982,26 @@
    "web_oficial": {
     "url": "http://veracruzcadiz.es",
     "fuente": "https://consejocofradiascadiz.es/vera-cruz/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Muy Ilustre, Antigua, Venerable, Franciscana Hermandad y Cofradía de Penitencia del Santísimo Cristo de la Vera Cruz y Nuestra Señora de la Soledad",
+     "fuente": "https://consejocofradiascadiz.es/vera-cruz/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-sanidad-cadiz": {
    "web_oficial": {
     "url": "http://sanidadcadiz.com",
     "fuente": "https://consejocofradiascadiz.es/sanidad/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Venerable y Nacional Cofradía de Penitencia de Nuestro Padre Jesús del Mayor Dolor y María Santísima de la Salud",
+     "fuente": "https://consejocofradiascadiz.es/sanidad/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-piedad-cadiz": {
@@ -1939,6 +2011,11 @@
      "valor": "Se fundó en 1731 en Santa Catalina y aprobó nuevas reglas en 1758. Su Crucificado es una de las pocas obras documentadas del escultor genovés Francesco Maria Maggio, de 1754.",
      "fuente": "https://consejocofradiascadiz.es/piedad/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable, Real, Militar y Nacional Cofradía del Santísimo Cristo de la Piedad y María Santísima de las Lágrimas",
+     "fuente": "https://consejocofradiascadiz.es/piedad/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1946,16 +2023,37 @@
    "web_oficial": {
     "url": "http://caidoydesamparados.blogspot.com",
     "fuente": "https://consejocofradiascadiz.es/jesus-caido/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental, Venerable y Marianista Cofradía de Penitencia de Nuestro Padre Jesús Caído y María Santísima de los Desamparados",
+     "fuente": "https://consejocofradiascadiz.es/jesus-caido/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "ecce-homo-cadiz": {
    "web_oficial": {
     "url": "http://www.archicofradiaeccehomocadiz.com",
     "fuente": "https://consejocofradiascadiz.es/ecce-homo/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real y Venerable Archicofradía de Nuestro Padre Jesús del Ecce-Homo, María Santísima de las Angustias y San Juan Evangelista",
+     "fuente": "https://consejocofradiascadiz.es/ecce-homo/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-columna-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Venerable, Real y Muy Ilustre Archicofradía de la Santísima Resurrección de Nuestro Señor Jesucristo y Penitencia de Nuestro Padre Jesús Atado a la Columna y Azotes y María Santísima de las Lágrimas, San Pedro Apóstol Penitente y San Juan Evangelista",
+     "fuente": "https://consejocofradiascadiz.es/columna/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "las-cigarreras-cadiz": {
    "web_oficial": null,
@@ -1964,6 +2062,11 @@
      "valor": "Los incendios del convento de Santo Domingo impiden fechar su fundación, aunque a finales del siglo XVIII ya existía. Se reorganizó en 1912 y volvió a sufrir los saqueos e incendios del convento en 1931 y 1936.",
      "fuente": "https://consejocofradiascadiz.es/cigarreras/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Venerable Cofradía de Penitencia de Nuestro Padre Jesús de la Salud, María Santísima de la Esperanza y Nuestra Señora del Amor Hermoso",
+     "fuente": "https://consejocofradiascadiz.es/cigarreras/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -1971,12 +2074,26 @@
    "web_oficial": {
     "url": "https://cofradiasentenciacadiz.wordpress.com",
     "fuente": "https://consejocofradiascadiz.es/sentencia/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Venerable, Mercedaria y Lasaliana Cofradía de Penitencia de Nuestro Padre Jesús de la Sentencia y Nuestra Señora del Buen Fin",
+     "fuente": "https://consejocofradiascadiz.es/sentencia/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "las-aguas-cadiz": {
    "web_oficial": {
     "url": "http://www.hermandaddelasaguas.com/la-hermandad",
     "fuente": "https://consejocofradiascadiz.es/las-aguas/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Gremial, Nacional y Marianista Hermandad Sacramental del Santísimo Cristo de las Aguas, Nuestra Señora de la Luz y Asociación de Discípulos de San Juan Evangelista y María Stma. de Guadalupe",
+     "fuente": "https://consejocofradiascadiz.es/las-aguas/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "el-caminito-cadiz": {
@@ -1989,6 +2106,11 @@
      "valor": "Las actas municipales recogen reglas de la Hermandad de las Angustias aprobadas en 1732, y el obispado le reconoce antigüedad de 1748. Se refundó como cofradía de penitencia en 1935.",
      "fuente": "https://consejocofradiascadiz.es/el-caminito/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Cofradía de Penitencia de Nuestra Señora de las Angustias y San Nicolás de Bari",
+     "fuente": "https://consejocofradiascadiz.es/el-caminito/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2002,6 +2124,11 @@
      "valor": "Nació de la devoción a un lienzo del encuentro de Jesús con su Madre encargado en 1719 y se fundó en 1726. Su primera salida documentada es de 1763 y desde 1937 procesiona el Jueves Santo.",
      "fuente": "https://consejocofradiascadiz.es/afligidos/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable, Real y Devota Cofradía de Penitencia de Nuestro Padre Jesús de los Afligidos y María Santísima de los Desconsuelos",
+     "fuente": "https://consejocofradiascadiz.es/afligidos/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2012,6 +2139,11 @@
      "valor": "Iglesia de Capuchinos",
      "fuente": "https://consejocofradiascadiz.es/oracion-en-el-huerto/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Cofradía de Penitencia de Nuestro Padre Jesús de la Oración en el Huerto y Nuestra Señora de Gracia y Esperanza",
+     "fuente": "https://consejocofradiascadiz.es/oracion-en-el-huerto/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2025,6 +2157,11 @@
      "valor": "Surgió de la devoción a un cuadro del Cautivo de Medinaceli que tenía un matrimonio gaditano; en 1938 encargaron una imagen del Señor y se fundó la cofradía, que procesiona de forma independiente desde 1942.",
      "fuente": "https://consejocofradiascadiz.es/medinaceli/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental, Esclavitud y Cofradía de Penitencia de Nuestro Padre Jesús Cautivo y Rescatado y María Santísima de la Trinidad",
+     "fuente": "https://consejocofradiascadiz.es/medinaceli/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2032,6 +2169,13 @@
    "web_oficial": {
     "url": "http://www.nazarenodesantamaria.com",
     "fuente": "https://consejocofradiascadiz.es/nazareno/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Inmemorial, Venerable, Pontificia y Real Cofradía de Nuestro Padre Jesús Nazareno, Santa Cruz de Jerusalén y María Santísima de los Dolores y Santa María Magdalena",
+     "fuente": "https://consejocofradiascadiz.es/nazareno/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "el-perdon-cadiz": {
@@ -2044,6 +2188,11 @@
      "valor": "Su Cristo del Perdón, de autor desconocido y posible escuela italiana, presidía la capilla del palacio de los marqueses de Montecorto y pasó a la parroquia de la Merced. La cofradía la impulsaron antiguos alumnos del colegio La Salle-Mirandilla.",
      "fuente": "https://consejocofradiascadiz.es/perdon/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable Cofradía de Penitencia del Santísimo Cristo del Perdón y María Santísima del Rosario en sus Misterios Dolorosos",
+     "fuente": "https://consejocofradiascadiz.es/perdon/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2051,10 +2200,24 @@
    "web_oficial": {
     "url": "http://descendimientocadiz.com",
     "fuente": "https://consejocofradiascadiz.es/descendimiento/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real y Venerable Hermandad y Cofradía de Penitencia del Santísimo Cristo del Descendimiento de la Santa Cruz, María Santísima en su Quinta Angustia y Nuestra Señora de los Dolores",
+     "fuente": "https://consejocofradiascadiz.es/descendimiento/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-expiracion-cadiz": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Muy Ilustre Venerable y Concepcionista Cofradía de Penitencia del Santísimo Cristo de la Expiración y María Santísima de la Victoria",
+     "fuente": "https://consejocofradiascadiz.es/expiracion/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "siete-palabras-cadiz": {
    "web_oficial": null,
@@ -2063,6 +2226,11 @@
      "valor": "Se fundó en marzo de 1944 y se reorganizó en agosto de 1983. Siempre ha procesionado el Viernes Santo; tras la reorganización, el sermón de las Siete Palabras se celebra aparte de la salida.",
      "fuente": "https://consejocofradiascadiz.es/siete-palabras/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable y Mercedaria Hermandad de Penitencia de las Siete Palabras del Santísimo Cristo de la Sed y María Santísima de la Piedad",
+     "fuente": "https://consejocofradiascadiz.es/siete-palabras/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2070,12 +2238,26 @@
    "web_oficial": {
     "url": "http://www.cofradiabuenamuerte.es",
     "fuente": "https://consejocofradiascadiz.es/buena-muerte/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Cofradía de Penitencia del Santísimo Cristo de la Buena Muerte y María Santísima del Mayor Dolor",
+     "fuente": "https://consejocofradiascadiz.es/buena-muerte/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "santo-entierro-cadiz": {
    "web_oficial": {
     "url": "http://cofradiasoledaddecadiz.es",
     "fuente": "https://consejocofradiascadiz.es/soledad/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Venerable y Real Cofradía de Nuestra Señora de la Soledad y Santo Entierro de Nuestro Señor Jesucristo",
+     "fuente": "https://consejocofradiascadiz.es/soledad/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-resurreccion-cadiz": {
@@ -2085,6 +2267,11 @@
      "valor": "La Archicofradía se agregó en 1662 a la cofradía de Jesús atado a la Columna y en 1769 ya procesionaba el Sábado de Gloria. Su Resucitado actual es obra de Luis González Rey (1993).",
      "fuente": "https://consejocofradiascadiz.es/resucitado/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Venerable, Real y Muy Ilustre Archicofradía de la Santísima Resurrección de Nuestro Señor Jesucristo y Penitencia de Nuestro Padre Jesús Atado a la Columna y Azotes y María Santísima de las Lágrimas, San Pedro Apóstol Penitente y San Juan Evangelista",
+     "fuente": "https://consejocofradiascadiz.es/resucitado/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2346,6 +2533,11 @@
      "valor": "Surgió en 1924 de la antigua cofradía del Niño Jesús de los Remedios y salió por primera vez el Domingo de Ramos de 1929 con un cortejo de niños hebreos. Perdida su imagen en la Guerra Civil, se reorganizó en 1948. El actual Señor de la Entrada es de Miguel Bejarano (1995-1996) y desde 2005 tiene su sede en el Espíritu Santo, en Altamira.",
      "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Ilustre Hermandad del Niño Jesús del Remedio y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria en su Entrada Triunfal en Jerusalén y Nuestra Señora de la Paz",
+     "fuente": "https://cofradiasdealmeria.es/penitencia/borriquita/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2356,11 +2548,23 @@
      "valor": "Nació en 1995 en el barrio de Los Ángeles por iniciativa de cofrades de la Macarena y el Silencio; se erigió canónicamente en 1999, año de su primera salida, y en 2001 bajó por primera vez a la Carrera Oficial. Fue la primera cofradía almeriense en salir desde su propia casa de hermandad.",
      "fuente": "https://cofradiasdealmeria.es/los-angeles/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia en su Crucifixión y María Santísima de los Ángeles",
+     "fuente": "https://cofradiasdealmeria.es/los-angeles/",
+     "revisado": "2026-10-17"
     }
    }
   },
   "la-estrella-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas y María Santísima de la Estrella",
+     "fuente": "https://cofradiasdealmeria.es/estrella/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-santa-cena-almeria": {
    "web_oficial": {
@@ -2372,6 +2576,11 @@
      "valor": "Se fundó en abril de 1983 y en 1986 se estableció en la parroquia de San Pedro, donde se bendijo su Jesús de la Última Cena, obra del sevillano Elías García. Su primera estación de penitencia fue en 1987.",
      "fuente": "https://cofradiasdealmeria.es/santa-cena/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Eucarística y Cofradía de Nazarenos de la Santa Cena y María Santísima de Fe y Caridad",
+     "fuente": "https://cofradiasdealmeria.es/santa-cena/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2382,22 +2591,55 @@
      "valor": "Procede de la asociación cultural Amigos de la Semana Santa (1992), formada sobre todo por cofrades de los Estudiantes. Sus reglas se aprobaron el 20 de febrero de 1995 y fue erigida ese mismo año en la antigua parroquia de Santa Teresa.",
      "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad de Nuestro Padre Jesús de Salud y Pasión en su Tercera Caída y María Santísima de los Desamparados",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/",
+     "revisado": "2026-10-17"
     }
    }
   },
   "gran-poder-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental de Nuestra Señora del Carmen, Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso y San Juan Evangelista",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-gran-poder/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-coronacion-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nuestro Padre Jesús de la Humildad y Paciencia, María Santísima de Gracia y Amparo y San Juan Evangelista",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-amor-almeria": {
-   "web_oficial": null
+   "web_oficial": null,
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Cofradía del Santísimo Cristo del Amor y Nuestra Señora del Primer Dolor",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-amor/",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-perdon-silencio-almeria": {
    "web_oficial": {
     "url": "https://www.elperdon.es",
     "fuente": "https://cofradiasdealmeria.es/hermandad-del-perdon/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad Juvenil del Santo Cristo del Perdón, Vía-crucis Penitencial del Silencio",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-perdon/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "el-calvario-cristo-del-mar-almeria": {
@@ -2407,6 +2649,11 @@
      "valor": "Nació en enero de 2007, cuando un grupo de fieles trasladó un crucificado a la parroquia de San Roque, donde fue bendecido con el nombre de Santísimo Cristo del Mar. Es una hermandad de inspiración marianista.",
      "fuente": "https://cofradiasdealmeria.es/calvario/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Marianista del Santísimo Cristo del Mar, María Santísima de las Lágrimas, San Juan Evangelista y Santa María Magdalena en el Monte Calvario",
+     "fuente": "https://cofradiasdealmeria.es/calvario/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2414,6 +2661,13 @@
    "web_oficial": {
     "url": "http://www.hermandaddelprendimiento.com",
     "fuente": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús en su Prendimiento, Jesús Cautivo de Medinaceli y Nuestra Señora de la Merced",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-macarena-almeria": {
@@ -2427,6 +2681,11 @@
      "valor": "Se erigió en la parroquia de San Ildefonso con la bendición de la Esperanza Macarena el 28 de mayo de 1988 y aprobó sus primeros estatutos en 1990. La Virgen del Rosario se incorporó como tercera titular en 2016.",
      "fuente": "https://cofradiasdealmeria.es/macarena/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Sentencia, María Santísima de la Esperanza Macarena y Nuestra Señora del Santo Rosario",
+     "fuente": "https://cofradiasdealmeria.es/macarena/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2434,6 +2693,13 @@
    "web_oficial": {
     "url": "http://www.cofradiadeestudiantes.com",
     "fuente": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre, Concepcionista y Universitaria Hermandad de Nazarenos de Ntro. Padre Jesús de la Oración en el Huerto y Ntra. Sra. del Amor y la Esperanza",
+     "fuente": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "rosario-del-mar-almeria": {
@@ -2443,6 +2709,11 @@
      "valor": "Surgió en 1995 de la asociación que logró reabrir al culto la capilla del Real Hospital Provincial de Santa María Magdalena, cerrada durante veinticinco años. Es una hermandad dominicana.",
      "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Dominicana y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas en el Abandono de sus Discípulos, María Santísima del Rosario del Mar en sus Misterios Dolorosos, Santa María Magdalena y Santo Domingo de Guzmán",
+     "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2450,6 +2721,13 @@
    "web_oficial": {
     "url": "http://nazarenoalmeriense.blogspot.com",
     "fuente": "https://cofradiasdealmeria.es/hermandad-del-encuentro/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Ilustre y Muy Antigua Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Nazareno, María Santísima de la Amargura y Santa Mujer Verónica",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-encuentro/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "las-angustias-almeria": {
@@ -2463,6 +2741,11 @@
      "valor": "Nació en 1911 como congregación jesuita de culto interno en torno a un crucificado. En 1941 se sumó la devoción a la Virgen de las Angustias, cuya imagen talló José Navas Parejo (1943), y en 1954 se bendijo el Cristo de la Buena Muerte de José María Hervás.",
      "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Congregación-hermandad de Nuestra Señora de las Angustias y el Santísimo Cristo de la Buena Muerte",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2476,6 +2759,11 @@
      "valor": "Conocida como la Hermandad del Silencio, nació en 1946 en el seno de la organización sindical de Almería; sus estatutos fundacionales se aprobaron en junio de ese año.",
      "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real e Ilustre y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Redención en su Sagrado Descendimiento y María Santísima del Consuelo",
+     "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2486,6 +2774,11 @@
      "valor": "Se constituyó como asociación el 23 de septiembre de 1995 y fue erigida canónicamente como hermandad diez años después, el 23 de septiembre de 2005, bajo el patronazgo de San Francisco de Asís.",
      "fuente": "https://cofradiasdealmeria.es/caridad/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Humilde Hermandad de San Francisco de Asís y Cofradía de Nazarenos del Santísimo Cristo de la Caridad en su Traslado al Sepulcro, María Santísima de las Penas y Santa Marta",
+     "fuente": "https://cofradiasdealmeria.es/caridad/",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -2503,6 +2796,13 @@
    "web_oficial": {
     "url": "http://sepulcro-almeria.blogspot.com",
     "fuente": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad del Santo Sepulcro y Nuestra Señora de los Dolores",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-soledad-almeria": {
@@ -2515,6 +2815,11 @@
      "valor": "Su documento más antiguo son unas reglas aprobadas en 1773: nació como hermandad de la Virgen de los Dolores bajo la tutela de la Orden Tercera Servita y ha atravesado la invasión francesa, la desamortización y las guerras del siglo XIX y XX.",
      "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Ilustre Hermandad del Santísimo Sacramento y Nuestra Señora de los Dolores",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2529,6 +2834,11 @@
      "valor": "Arranca en 2005 con un grupo de jóvenes del Higueral; desde 2007 se encargó de la procesión del Domingo de Resurrección y fue erigida canónicamente el 29 de julio de 2015 en la parroquia de Nuestra Señora de Montserrat.",
      "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad de Jesucristo Resucitado, Señor de la Vida y María Santísima del Triunfo",
+     "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -2541,7 +2851,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216121941/https://cofradiasjaen.org/divino-maestro/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-clemencia-jaen": {
@@ -2560,7 +2870,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117123425/https://cofradiasjaen.org/clemencia/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "el-gran-poder-jaen": {
@@ -2575,7 +2885,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260219061640/https://cofradiasjaen.org/gran-poder/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-borriquita-sevilla": {
@@ -2602,6 +2912,13 @@
     "web": "http://hermandaddelamor.net",
     "nombre_oficial": "",
     "fundacion": "1508"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Primitiva Archicofradía Pontificia y Real Hermandad de Nazarenos de la Sagrada Entrada de Jesús en Jerusalén, Santísimo Cristo del Amor, Nuestra Señora del Socorro y Santiago Apóstol",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "jesus-despojado-sevilla": {
@@ -2633,7 +2950,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Humilde y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Despojado de sus Vestiduras y María Santísima de los Dolores y Misericordia, Mayor Dolor de Nuestra Señora, San Juan Evangelista, San Bartolomé Apóstol y San Antonio María Claret",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-paz-sevilla": {
    "sevilla_wd": {
@@ -2646,6 +2970,13 @@
     "url": "https://www.hermandaddelapaz.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real y Fervorosa Hermandad Sacramental del Señor San Sebastián y Nuestra Señora del Prado y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria y María Santísima de la Paz",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-cena-sevilla": {
@@ -2669,7 +3000,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Antigua, Real, Ilustre y Fervorosa Hermandad Sacramental, Esclavitud de Nuestra Señora de la Encarnación, y Cofradía de Nazarenos de la Sagrada Cena, Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora del Subterráneo Reina de Cielos y Tierra",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-hiniesta-sevilla": {
    "sevilla_wd": {
@@ -2682,6 +3020,13 @@
     "url": "https://www.hermandaddelahiniesta.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad Sacramental de la Inmaculada Concepción y Franciscana, Primitiva y Cisterciense Cofradía de Nazarenos de la Piedad de Nuestra Señora, Santísimo Cristo de la Buena Muerte, Santa María Magdalena y María Santísima de la Hiniesta Dolorosa y Gloriosa Coronada",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "san-roque-sevilla": {
@@ -2713,7 +3058,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Fervorosa Archicofradía del Santísimo Sacramento, Pura y Limpia Concepción y Ánimas Benditas, Santo Crucifijo de San Agustín y Hermandad de Penitencia de Nuestro Padre Jesús de las Penas y Nuestra Señora de Gracia y Esperanza",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-estrella-sevilla": {
    "sevilla_wd": {
@@ -2726,6 +3078,13 @@
     "url": "https://hermandad-estrella.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre y Fervorosa Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas, María Santísima de la Estrella Coronada, Triunfo del Santo Lignum Crucis, San Francisco de Paula y Santas Justa y Rufina",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "la-amargura-sevilla": {
@@ -2749,7 +3108,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús del Silencio en el Desprecio de Herodes, María Santísima de la Amargura Coronada, San Juan Evangelista y Santa Ángela de la Cruz",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "san-pablo-sevilla": {
    "sevilla_wd": {
@@ -2780,7 +3146,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Fervorosa y Trinitaria Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo y Rescatado, Nuestra Señora del Rosario Doloroso, San Juan de Mata y San Ignacio de Loyola",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "redencion-sevilla": {
    "sevilla_wd": {
@@ -2804,6 +3177,11 @@
      "valor": "1955",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús de la Redención en el Beso de Judas, María Santísima del Rocío Coronada, Nuestra Señora del Carmen, San Fernando Rey y San Lucas Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -2846,7 +3224,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos del Santísimo Sacramento, Nuestro Padre Jesús Cautivo en el Abandono de sus Discípulos, y Nuestra Señora de las Mercedes Coronada y San Juan Evangelista en la Tercera Palabra, Inmaculada Milagrosa y Santa Genoveva",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "santa-marta-sevilla": {
    "sevilla_wd": {
@@ -2859,6 +3244,13 @@
     "url": "https://hermandaddesantamarta.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Muy Ilustre y Venerable Hermandad del Santísimo Sacramento, Inmaculada Concepción, Ánimas Benditas y Cofradía de Nazarenos del Santísimo Cristo de la Caridad en su traslado al Sepulcro, Nuestra Señora de las Penas y Santa Marta",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "san-gonzalo-sevilla": {
@@ -2882,7 +3274,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia y Real Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús en su Soberano Poder ante Caifás, Nuestra Señora de la Salud y San Juan Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "vera-cruz-sevilla": {
    "sevilla_wd": {
@@ -2905,7 +3304,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Muy Antigua, Siempre Ilustre, Venerable, Pontificia, Real, Fervorosa, Humilde y Seráfica Hermandad y Archicofradía de Nazarenos de la Santísima Veracruz, Sangre de Nuestro Señor Jesucristo y Tristezas de María Santísima",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "las-penas-sevilla": {
    "sevilla_wd": {
@@ -2924,6 +3330,11 @@
      "valor": "Su Nazareno caído recibía culto en la Casa Grande del Carmen y pasó a San Vicente tras la exclaustración de 1868. Los feligreses crearon la hermandad en 1875, salió por primera vez en 1878 y, tras desaparecer, se reorganizó en 1923.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas y María Santísima de los Dolores",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -2974,7 +3385,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre, Antigua y Fervorosa Hermandad de la Santa Cruz y Nuestra Señora del Rosario y Archicofradía de Nazarenos del Santísimo Cristo de las Aguas, Nuestra Madre y Señora del Mayor Dolor y María Santísima de Guadalupe",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-museo-sevilla": {
    "sevilla_wd": {
@@ -2997,7 +3415,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Fervorosa Hermandad del Santísimo Sacramento y Archicofradía de Nazarenos de la Sagrada Expiración de Nuestro Señor Jesucristo y María Santísima de las Aguas",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-cerro-sevilla": {
    "sevilla_wd": {
@@ -3028,7 +3453,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Fervorosa Hermandad Sacramental y Cofradía de Nazarenos del Santísimo Cristo del Desamparo y Abandono, Nuestro Padre Jesús de la Humildad y Nuestra Señora de los Dolores",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "los-javieres-sevilla": {
    "sevilla_wd": {
@@ -3047,6 +3479,11 @@
      "valor": "Se fundó en 1945 en la iglesia jesuita del Sagrado Corazón, impulsada por la congregación mariana «los Javieres», que encargó el Cristo de las Almas y la Virgen de Gracia y Amparo. Sus reglas se aprobaron en 1955.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos del Santísimo Cristo de las Almas, María Santísima de Gracia y Amparo, María Inmaculada y San Francisco Javier",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3080,6 +3517,11 @@
      "valor": "1926",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Buen Viaje, María Santísima Madre de los Desamparados, San Juan de Ribera y Protomártir San Esteban",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "web_oficial": {
@@ -3117,6 +3559,13 @@
     "url": "https://hermandaddelosestudiantes.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Patriarcal e Ilustrísima Hermandad y Archicofradía de Nazarenos del Santísimo Cristo de la Buena Muerte y María Santísima de la Angustia",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "san-benito-sevilla": {
@@ -3131,6 +3580,11 @@
      "valor": "Siglo XVI (primeras reglas aprobadas en 1554; reorganizada en 1921)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad del Santísimo Sacramento, Pontificia y Real Archicofradía de Nazarenos de la Sagrada Presentación de Jesús al Pueblo, Santísimo Cristo de la Sangre, Nuestra Señora de la Encarnación Coronada y San Benito Abad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "web_oficial": {
@@ -3182,6 +3636,11 @@
      "valor": "1921",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Ilustre y Fervorosa Hermandad de Nuestro Padre Jesús de la Salud, María Santísima de la Candelaria, Nuestra Señora del Subterráneo y San Nicolás de Bari",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3220,6 +3679,11 @@
      "valor": "Finales del siglo XVI",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Fervorosa, Ilustre y Antigua Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús ante Anás, Santo Cristo del Mayor Dolor, María Santísima del Dulce Nombre y San Juan Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3270,7 +3734,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Ilustre y Antigua Hermandad del Santísimo Sacramento y Nuestra Señora de la Paz, Fervorosa Cofradía de Nazarenos del Santísimo Cristo de las Misericordias, Santa María de la Antigua y Nuestra Señora de los Dolores",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-carmen-doloroso-sevilla": {
    "sevilla_wd": {
@@ -3289,6 +3760,11 @@
      "valor": "Nació en 1982 de un grupo de sevillanos que hacían el servicio militar en San Fernando y se reunieron en torno a la Virgen del Carmen. De vuelta a Sevilla se instalaron en la Misericordia y en 1987 pasaron a Omnium Sanctorum.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Carmelita de las Maravillas de María y Cofradía de Nazarenos de Nuestro Padre Jesús de la Paz y Nuestra Señora del Carmen en sus Misterios Dolorosos",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3313,6 +3789,13 @@
     "url": "https://hermandaddelased.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Hospitalaria Hermandad Sacramental de Congregantes de la Concepción Inmaculada de la Santísima Virgen María y Cofradía de Nazarenos del Santísimo Cristo de la Sed, Santa María de Consolación Madre de la Iglesia, San Juan Evangelista y San Juan de Dios",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "san-bernardo-sevilla": {
@@ -3336,7 +3819,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Fervorosa Hermandad Sacramental de la Pura y Limpia Concepción de la Santísima Virgen María, Ánimas Benditas del Purgatorio y Cofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima del Refugio, Santa Cruz, Nuestra Señora del Patrocinio, Santa Bárbara y San Bernardo",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-buen-fin-sevilla": {
    "sevilla_wd": {
@@ -3367,7 +3857,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre, Antigua, Fervorosa y Franciscana Hermandad Sacramental y Cofradía de Nazarenos del Santo Sudario, Santísimo Cristo del Buen Fin, Nuestra Señora de la Palma Coronada, San Francisco de Asís y San Antonio de Padua",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-lanzada-sevilla": {
    "sevilla_wd": {
@@ -3381,6 +3878,11 @@
      "valor": "Su origen es una sacramental de marineros de Triana de comienzos del siglo XVI que, a finales de ese siglo, se hizo de penitencia con la devoción a la Lanzada. Pasó por San Nicolás y San Basilio, y la invasión francesa calcinó sus antiguas tallas.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Imperial, Antigua, Ilustre y Fervorosa Hermandad del Santísimo Sacramento, Inmaculada Concepción de Nuestra Señora, Santa Espina de la corona de Nuestro Señor Jesucristo, Ánimas Benditas del Purgatorio, San Martín de Tours Obispo, Nuestra Señora de la Esperanza Divina Enfermera y Real Archicofradía de Nazarenos de la Sagrada Lanzada de Nuestro Señor Jesucristo, Nuestra Señora de Guía, San Juan Evangelista y María Santísima del Buen Fin",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "web_oficial": {
@@ -3444,7 +3946,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Antigua y Fervorosa Hermandad de la Santa Cruz y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia y Nuestra Señora de la Piedad, Patriarca Bendito Señor San José y María Santísima de la Caridad en su Soledad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "cristo-de-burgos-sevilla": {
    "sevilla_wd": {
@@ -3463,6 +3972,11 @@
      "valor": "Finales del siglo XVI (fecha exacta desconocida)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos del Santísimo Cristo de Burgos, Negaciones y Lágrimas de San Pedro y Madre de Dios de la Palma",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3493,6 +4007,11 @@
      "valor": "Es fruto de la unión de varias corporaciones a lo largo de los siglos; una de ellas, la Hermandad de Nuestra Señora de la Cabeza, se fundó en 1561 en la Casa Grande del Carmen, con muchos cofrades del gremio de curtidores.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad Sacramental de Nuestra Señora del Rosario, Ánimas Benditas del Purgatorio y Primitiva Archicofradía del Sagrado Corazón y Clavos de Jesús, Nuestro Padre Jesús de la Divina Misericordia, Santísimo Cristo de las Siete Palabras, María Santísima de los Remedios, Nuestra Señora de la Cabeza y San Juan Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3535,7 +4054,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre y Fervorosa Hermandad y Archicofradía de Nazarenos de Nuestro Padre Jesús del Soberano Poder en su Prendimiento, María Santísima de Regla Coronada y San Andrés Apóstol",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "los-negritos-sevilla": {
    "sevilla_wd": {
@@ -3558,7 +4084,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Muy Antigua, Pontificia y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Fundación y Nuestra Señora de los Ángeles Coronada",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-exaltacion-los-caballos-sevilla": {
    "sevilla_wd": {
@@ -3577,6 +4110,11 @@
      "valor": "Siglo XVI (fusionada con la Sacramental de Santa Catalina en 1966)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real e Ilustre Hermandad Sacramental Purísima Concepción Ánimas Benditas del Purgatorio, San Sebastián Mártir, Santa Catalina de Alejandría y Archicofradía de Nazarenos del Santísimo Cristo de la Exaltación y Nuestra Señora de las Lágrimas",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3601,6 +4139,13 @@
     "url": "https://www.columnayazotes.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real e Ilustre Hermandad y Cofradía de Nazarenos de la Sagrada Columna y Flagelos de Nuestro Señor Jesucristo y María Santísima de la Victoria Coronada",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "montesion-sevilla": {
@@ -3625,6 +4170,11 @@
      "valor": "1560",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre, Antigua y Dominica Hermandad y Archicofradía de Nazarenos de la Sagrada Oración de Nuestro Señor Jesucristo en el Huerto, Santísimo Cristo de la Salud, María Santísima del Rosario en sus Misterios Dolorosos Coronada y Santo Domingo de Guzmán",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3667,7 +4217,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia Hermandad y Archicofradía de Nazarenos del Dulce Nombre de Jesús, Sagrado Descendimiento de Nuestro Señor Jesucristo y Quinta Angustia de María Santísima Nuestra Señora",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-valle-sevilla": {
    "sevilla_wd": {
@@ -3706,7 +4263,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre y Primitiva Archicofradía de Nazarenos del Santísimo Cristo de la Coronación de Espinas, Nuestro Padre Jesús con la Cruz al Hombro, Nuestra Señora del Valle y Santa Mujer Verónica",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "pasion-sevilla": {
    "sevilla_wd": {
@@ -3729,7 +4293,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Archicofradía del Santísimo Sacramento, Pontificia y Real de Nazarenos de Nuestro Padre Jesús de la Pasión y Nuestra Madre y Señora de la Merced",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-silencio-sevilla": {
    "sevilla_wd": {
@@ -3760,7 +4331,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Primitiva Hermandad de los Nazarenos de Sevilla, Archicofradía Pontificia y Real Hermandad de Nuestro Padre Jesús Nazareno, Santa Cruz en Jerusalén y María Santísima de la Concepción",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "el-gran-poder-sevilla": {
    "sevilla_wd": {
@@ -3783,7 +4361,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia y Real Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-macarena-sevilla": {
    "sevilla_wd": {
@@ -3796,6 +4381,13 @@
     "url": "https://www.hermandaddelamacarena.es/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestra Señora del Santo Rosario, Nuestro Padre Jesús de la Sentencia y María Santísima de la Esperanza Macarena",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "el-calvario-sevilla": {
@@ -3815,6 +4407,11 @@
      "valor": "Refundada en 1887",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia y Real Hermandad y Cofradía de Nazarenos del Santísimo Cristo del Calvario y Nuestra Señora de la Presentación",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3857,7 +4454,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real e Ilustre Hermandad y Archicofradía de Nazarenos del Santísimo Sacramento, de la Pura y Limpia Concepción de la Santísima Virgen María, del Santísimo Cristo de las Tres Caídas, Nuestra Señora de la Esperanza y San Juan Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "los-gitanos-sevilla": {
    "sevilla_wd": {
@@ -3888,7 +4492,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Fervorosa Hermandad Sacramental, Ánimas Benditas y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y María Santísima de las Angustias Coronada",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-carreteria-sevilla": {
    "sevilla_wd": {
@@ -3919,7 +4530,14 @@
      "fuente": "https://hermandaddelacarreteria.org/nuestra-senora-del-mayor-dolores-en-su-soledad/",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia y Real Archicofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima de la Luz en el Sagrado Misterio de sus Tres Necesidades al pie de la Santa Cruz, San Francisco de Paula, Gloriosa Resurrección de Nuestro Señor Jesucristo y Nuestra Señora del Mayor Dolor en su Soledad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "san-isidoro-sevilla": {
    "sevilla_wd": {
@@ -3943,6 +4561,11 @@
      "valor": "1526 (unión actual de 1975)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Antigua e Ilustre Hermandad del Santísimo Sacramento, María Santísima de las Nieves y Ánimas Benditas del Purgatorio y Pontificia y Real Archicofradía de Nazarenos de Nuestro Padre Jesús de las Tres Caídas, Nuestra Señora de Loreto y Señor San Isidoro",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -3981,6 +4604,11 @@
      "valor": "1566",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real e Ilustre Archicofradía del Santísimo Sacramento, Nuestro Padre Jesús Nazareno y María Santísima de la O Coronada",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4023,7 +4651,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Franciscana Hermandad y Cofradía de Nazarenos de la Santa Cruz en el Monte Calvario, Santísimo Cristo de la Salvación y Nuestra Señora de la Soledad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "montserrat-sevilla": {
    "sevilla_wd": {
@@ -4042,6 +4677,11 @@
      "valor": "Finales del siglo XVI (reglas aprobadas en 1601; reorganizada en 1849)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Ilustre, Antigua y Primitiva Hermandad de Nuestra Señora del Rosario y Cofradía de Nazarenos del Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Señora de Montserrat",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4072,6 +4712,11 @@
      "valor": "Sus orígenes se vinculan a un antiguo hospital de la Piedad y a la tradición de una pequeña imagen de barro de la Virgen con su Hijo hallada en la torre de Santa Marina; hay datos de una hermandad de luz desde 1518.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Antigua, Real e Ilustre Hermandad de Nazarenos de Nuestro Padre Jesús Descendido de la Cruz en el Misterio de su Sagrada Mortaja y María Santísima de la Piedad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4096,6 +4741,13 @@
     "url": "https://hermandaddelcachorro.org/",
     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
     "comprobada": "2026-10-15"
+   },
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Pontificia, Real e Ilustre Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Expiración y Nuestra Madre y Señora del Patrocinio en su Dolor y Gloria",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
    }
   },
   "los-servitas-sevilla": {
@@ -4127,7 +4779,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Real, Ilustre y Venerable Hermandad de Nazarenos y Primitiva Cofradía Servita de Nuestra Señora de los Dolores, Santísimo Cristo de la Providencia, María Santísima de la Soledad y San Marcos Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "la-trinidad-sevilla": {
    "sevilla_wd": {
@@ -4146,6 +4805,11 @@
      "valor": "La fundaron hortelanos a comienzos del siglo XVI en el antiguo convento trinitario, hoy santuario de María Auxiliadora, con documentos de al menos 1507. Durante la invasión francesa se refugió en Santa Lucía y desde 1956 procesiona el Sábado Santo.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia, Real, Muy Ilustre y Trinitaria Hermandad Sacramental y Archicofradía de Nazarenos del Sagrado Decreto de la Santísima Trinidad, Santísimo Cristo de las Cinco Llagas, María Santísima de la Concepción, Nuestra Señora de la Esperanza y San Juan Bosco",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4184,6 +4848,11 @@
      "valor": "Hacia 1570",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Real Hermandad Sacramental del Santo Entierro de Nuestro Señor Jesucristo, Triunfo de la Santa Cruz y María Santísima de Villaviciosa",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4222,6 +4891,11 @@
      "valor": "Mediados del siglo XVI",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Pontificia y Real Hermandad Sacramental, Nuestra Señora de Roca-Amador, Ánimas Benditas, Beato Marcelo Spínola y Primitiva Cofradía de Nazarenos de María Santísima en su Soledad",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -4246,7 +4920,14 @@
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
      "revisado": "2026-10-16"
     }
-   ]
+   ],
+   "relleno": {
+    "nombre_oficial": {
+     "valor": "Ilustre y Lasaliana Hermandad Sacramental y Cofradía de Nazarenos de la Santa Cruz, Sagrada Resurrección de Nuestro Señor Jesucristo, Nuestra Señora de la Aurora, María Santísima del Amor, San Juan Bautista de la Salle y Santa Marina",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+     "revisado": "2026-10-17"
+    }
+   }
   },
   "bellavista-sevilla": {
    "sevilla_wd": {
@@ -4265,6 +4946,11 @@
      "valor": "1992 (reconocida como agrupación parroquial en 1995)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad de Penitencia y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Remedios y María Santísima del Dulce Nombre en sus Dolores y Compasión",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4343,6 +5029,11 @@
      "valor": "En Semana Santa sale un único paso, el del Cristo de Pasión y Muerte (canastilla neobarroca de Manuel Toledano, 2009). El palio de la Virgen del Desconsuelo y Visitación está aprobado pero aún sin realizar.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad de Santa María del Buen Aire y Cofradía de Nazarenos del Santísimo Cristo de Pasión y Muerte, Resurrección de Nuestro Señor y Nuestra Señora del Desconsuelo y Visitación",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4384,6 +5075,11 @@
      "valor": "Dos pasos: el misterio del Prendimiento según San Marcos, con Nuestro Padre Jesús de Nazaret, y el palio de plata de María Santísima del Amor.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de Nazaret, María Santísima del Amor, San Marcos Evangelista y San Isidro Labrador",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4447,6 +5143,11 @@
      "valor": "Un único paso, el del Santísimo Cristo de la Corona: diseño renacentista de Antonio Dubé de Luque en madera color caoba con relieves en bronce, completado por fases entre 2022 y 2024.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía del Santísimo Cristo de la Corona y Nuestra Señora del Rosario",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4472,6 +5173,11 @@
      "valor": "Dos pasos: el de Jesús de la Salud y Clemencia y el palio de la Virgen Madre de la Divina Gracia.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental de la Santa Cruz en el Monte Calvario y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Clemencia, Santísima Virgen Madre de la Divina Gracia y San Juan de la Cruz",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+     "revisado": "2026-10-17"
     }
    },
    "web_oficial": {
@@ -4520,6 +5226,11 @@
      "valor": "Parroquia de San José Obrero",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Humilde y Fervorosa Hermandad Sacramental y de Gloria de San José Obrero, San Francisco de Paula e Inmaculada Concepción y Cofradía de Nazarenos de Nuestro Padre Jesús de la Caridad y Nuestra Señora de los Dolores",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+     "revisado": "2026-10-17"
     }
    },
    "web_oficial": {
@@ -4545,6 +5256,11 @@
      "valor": "Parroquia de la Virgen de la Medalla Milagrosa (Ciudad Jardín)",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental, Nuestra Señora de la Medalla Milagrosa y Cofradía de Nazarenos de Nuestro Padre Jesús de la Esperanza en el Puente Cedrón, María Santísima del Rosario y San Juan Evangelista",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4583,6 +5299,11 @@
      "valor": "El paso de Cristo, neobarroco en cedro de Pedro M. Benítez Carrión, representa a Jesús interrogado por Pilato.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
      "revisado": "2026-10-15"
+    },
+    "nombre_oficial": {
+     "valor": "Humilde y Fervorosa Hermandad Sacramental del Santísimo Nombre de Jesús y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo ante Pilato, María Santísima de los Dolores y San Antonio de Padua",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4626,6 +5347,11 @@
      "valor": "Dos pasos: el misterio de Jesús del Divino Perdón (grupo de Navarro Arteaga estrenado en 2025, con el paso de los Hermanos Caballero aún en ejecución) y el palio de la Purísima Concepción.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Franciscana Hermandad de Penitencia y Cofradía de Nazarenos de María Santísima de la Purísima Concepción, Santo Cáliz de Nuestro Padre Jesús del Divino Perdón y Beata Ana María de Javouhey",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+     "revisado": "2026-10-17"
     }
    },
    "titulares_autor": [
@@ -4664,6 +5390,11 @@
      "valor": "Dos pasos: el del Cristo Varón de Dolores de la Divina Misericordia y un palio con la Virgen del Sol en sacra conversación con San Juan y la Magdalena.",
      "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad Sacramental de la Inmaculada Concepción de María Santísima de la Salud y Cofradía de Nazarenos del Triunfo de la Santa Cruz, Santo Cristo Varón de Dolores de la Divina Misericordia, Nuestra Señora del Sol, San Juan Evangelista y Santa María Magdalena",
+     "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -4910,6 +5641,11 @@
      "valor": "Dos pasos: el misterio de Jesús de la Paz en su Flagelación y el palio de María Santísima de la Unidad.",
      "fuente": "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa",
      "revisado": "2026-10-16"
+    },
+    "nombre_oficial": {
+     "valor": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Paz en su Flagelación y María Santísima de la Unidad",
+     "fuente": "https://cofradiasdealmeria.es/penitencia/unidad/",
+     "revisado": "2026-10-17"
     }
    }
   },
@@ -4924,7 +5660,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124045627/https://cofradiasjaen.org/resucitado/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "mutilado-clemencia-malaga": {
@@ -5096,35 +5832,35 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124063616/https://cofradiasjaen.org/borriquilla/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "santa-cena-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124065637/https://cofradiasjaen.org/santa-cena/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-estrella-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117120000/https://cofradiasjaen.org/piedad-y-estrella/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "el-huerto-vera-cruz-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260312004707/https://cofradiasjaen.org/oracion-en-el-huerto/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "caridad-y-salud-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216114753/https://cofradiasjaen.org/caridad-y-salud/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    },
    "titulares_autor": [
     {
@@ -5141,21 +5877,21 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251028040928/https://cofradiasjaen.org/amargura/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "los-estudiantes-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117133030/https://cofradiasjaen.org/estudiantes/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "el-silencio-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124044656/https://cofradiasjaen.org/humildad-y-silencio/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    },
    "titulares_autor": [
     {
@@ -5172,7 +5908,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124045858/https://cofradiasjaen.org/cautivo/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    },
    "titulares_autor": [
     {
@@ -5189,7 +5925,7 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    },
    "titulares_autor": [
     {
@@ -5206,49 +5942,49 @@
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216125541/https://cofradiasjaen.org/buena-muerte/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-lanzada-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260219053256/https://cofradiasjaen.org/lanzada/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-vera-cruz-los-civiles-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216125242/https://cofradiasjaen.org/vera-cruz/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-expiracion-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20260124045016/https://cofradiasjaen.org/expiracion/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "nuestro-padre-jesus-el-abuelo-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216121907/https://cofradiasjaen.org/ntro-padre-jesus/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "la-soledad-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251117125450/https://cofradiasjaen.org/soledad/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "el-santo-sepulcro-jaen": {
    "fuente_actual": {
     "url": "https://web.archive.org/web/20251216121355/https://cofradiasjaen.org/sepulcro/",
     "motivo": "La ficha oficial dejó de estar disponible; copia archivada",
-    "revisado": "2026-10-16"
+    "revisado": "2026-10-17"
    }
   },
   "buen-camino-gamarra-malaga": {

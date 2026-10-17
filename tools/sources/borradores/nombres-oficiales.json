@@ -1,0 +1,913 @@
+{
+ "la-borriquita-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Borriquita",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+  "propuesta": "Primitiva Archicofradía Pontificia y Real Hermandad de Nazarenos de la Sagrada Entrada de Jesús en Jerusalén, Santísimo Cristo del Amor, Nuestra Señora del Socorro y Santiago Apóstol.<ref>Juan Carrero Rodríguez, Francisco García Luque: Enciclopedia de la Semana Santa de Sevilla",
+  "web": "http://www.hermandaddelamor.net",
+  "nota": "La fuente_url apunta al artículo de El Amor: no sirve; buscar el artículo propio de La Borriquita."
+ },
+ "el-amor-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Amor",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+  "propuesta": "Primitiva Archicofradía Pontificia y Real Hermandad de Nazarenos de la Sagrada Entrada de Jesús en Jerusalén, Santísimo Cristo del Amor, Nuestra Señora del Socorro y Santiago Apóstol.<ref>Juan Carrero Rodríguez, Francisco García Luque: Enciclopedia de la Semana Santa de Sevilla",
+  "web": "http://www.hermandaddelamor.net",
+  "limpio": "Primitiva Archicofradía Pontificia y Real Hermandad de Nazarenos de la Sagrada Entrada de Jesús en Jerusalén, Santísimo Cristo del Amor, Nuestra Señora del Socorro y Santiago Apóstol"
+ },
+ "jesus-despojado-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Jesús Despojado",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)",
+  "propuesta": "Humilde y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Despojado de sus Vestiduras y María Santísima de los Dolores y Misericordia, Mayor Dolor de Nuestra Señora, San Juan Evangelista, San Bartolomé Apóstol y San Antonio María Claret",
+  "web": "http://www.jesusdespojado.org",
+  "limpio": "Humilde y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Despojado de sus Vestiduras y María Santísima de los Dolores y Misericordia, Mayor Dolor de Nuestra Señora, San Juan Evangelista, San Bartolomé Apóstol y San Antonio María Claret"
+ },
+ "la-paz-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Paz",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
+  "propuesta": "Real y Fervorosa Hermandad Sacramental del Señor San Sebastián y Nuestra Señora del Prado y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria y María Santísima de la Paz",
+  "web": "https://www.hermandaddelapaz.org",
+  "limpio": "Real y Fervorosa Hermandad Sacramental del Señor San Sebastián y Nuestra Señora del Prado y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria y María Santísima de la Paz"
+ },
+ "la-cena-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Cena",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+  "propuesta": "Antigua, Real, Ilustre y Fervorosa Hermandad Sacramental, Esclavitud de Nuestra Señora de la Encarnación, y Cofradía de Nazarenos de la Sagrada Cena, Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora del Subterráneo Reina de Cielos y Tierra",
+  "web": "https://lacenadesevilla.es/",
+  "limpio": "Antigua, Real, Ilustre y Fervorosa Hermandad Sacramental, Esclavitud de Nuestra Señora de la Encarnación, y Cofradía de Nazarenos de la Sagrada Cena, Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora del Subterráneo Reina de Cielos y Tierra"
+ },
+ "la-hiniesta-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Hiniesta",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
+  "propuesta": "Real e Ilustre Hermandad Sacramental de la Inmaculada Concepción y Franciscana, Primitiva y Cisterciense Cofradía de Nazarenos de la Piedad de Nuestra Señora, Santísimo Cristo de la Buena Muerte, Santa María Magdalena y María Santísima de la Hiniesta Dolorosa y Gloriosa Coronada",
+  "web": "http://www.hermandaddelahiniesta.es/",
+  "limpio": "Real e Ilustre Hermandad Sacramental de la Inmaculada Concepción y Franciscana, Primitiva y Cisterciense Cofradía de Nazarenos de la Piedad de Nuestra Señora, Santísimo Cristo de la Buena Muerte, Santa María Magdalena y María Santísima de la Hiniesta Dolorosa y Gloriosa Coronada"
+ },
+ "san-roque-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Roque",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+  "propuesta": "Real, Ilustre y Fervorosa Archicofradía del Santísimo Sacramento, Pura y Limpia Concepción y Ánimas Benditas, Santo Crucifijo de San Agustín y Hermandad de Penitencia de Nuestro Padre Jesús de las Penas y Nuestra Señora de Gracia y Esperanza",
+  "web": "http://www.hermandadsanroque.com/",
+  "limpio": "Real, Ilustre y Fervorosa Archicofradía del Santísimo Sacramento, Pura y Limpia Concepción y Ánimas Benditas, Santo Crucifijo de San Agustín y Hermandad de Penitencia de Nuestro Padre Jesús de las Penas y Nuestra Señora de Gracia y Esperanza"
+ },
+ "la-estrella-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Estrella",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
+  "web": "http://www.hermandad-estrella.org/",
+  "limpio": "Pontificia, Real, Ilustre y Fervorosa Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas, María Santísima de la Estrella Coronada, Triunfo del Santo Lignum Crucis, San Francisco de Paula y Santas Justa y Rufina"
+ },
+ "la-amargura-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Amargura",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+  "propuesta": "Pontificia, Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús del Silencio en el Desprecio de Herodes, María Santísima de la Amargura Coronada, San Juan Evangelista y Santa Ángela de la Cruz",
+  "web": "http://www.amargura.org/",
+  "limpio": "Pontificia, Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús del Silencio en el Desprecio de Herodes, María Santísima de la Amargura Coronada, San Juan Evangelista y Santa Ángela de la Cruz"
+ },
+ "san-pablo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Pablo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Pablo_(Sevilla)",
+  "propuesta": "Fervorosa y Trinitaria Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo y Rescatado, Nuestra Señora del Rosario Doloroso, San Juan de Mata y San Ignacio de Loyola. Desde 2008 realiza su estación de penitencia a la catedral de Sevilla el Lunes Santo",
+  "web": "http://www.jesuscautivoyrescatado.com",
+  "limpio": "Fervorosa y Trinitaria Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo y Rescatado, Nuestra Señora del Rosario Doloroso, San Juan de Mata y San Ignacio de Loyola"
+ },
+ "redencion-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Redención",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+  "propuesta": "Real e Ilustre Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús de la Redención en el Beso de Judas, María Santísima del Rocío Coronada, Nuestra Señora del Carmen, San Fernando Rey y San Lucas Evangelista.<ref>Juan Carrero Rodríguez, Francisco García Luque: Enciclopedia de la Semana Santa de Sevilla",
+  "web": "http://www.hermandadredencion.es",
+  "limpio": "Real e Ilustre Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús de la Redención en el Beso de Judas, María Santísima del Rocío Coronada, Nuestra Señora del Carmen, San Fernando Rey y San Lucas Evangelista"
+ },
+ "santa-genoveva-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Santa Genoveva",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Genoveva_(Sevilla)",
+  "propuesta": "el de Hermandad y Cofradía de Nazarenos del Santísimo Sacramento, Nuestro Padre Jesús Cautivo en el Abandono de sus Discípulos, y Nuestra Señora de las Mercedes Coronada y San Juan Evangelista en la Tercera Palabra, Inmaculada Milagrosa y Santa Genoveva, y realiza su estación de penitencia hasta la catedral de Sevilla el día de Lunes Santo durante los actos de celebración de la Semana Santa en Sevilla",
+  "web": "http://www.santagenoveva.com/",
+  "limpio": "Hermandad y Cofradía de Nazarenos del Santísimo Sacramento, Nuestro Padre Jesús Cautivo en el Abandono de sus Discípulos, y Nuestra Señora de las Mercedes Coronada y San Juan Evangelista en la Tercera Palabra, Inmaculada Milagrosa y Santa Genoveva"
+ },
+ "santa-marta-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Santa Marta",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
+  "web": "http://www.hermandaddesantamarta.org",
+  "limpio": "Real, Muy Ilustre y Venerable Hermandad del Santísimo Sacramento, Inmaculada Concepción, Ánimas Benditas y Cofradía de Nazarenos del Santísimo Cristo de la Caridad en su traslado al Sepulcro, Nuestra Señora de las Penas y Santa Marta"
+ },
+ "san-gonzalo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Gonzalo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+  "web": "https://www.hermandaddesangonzalo.es",
+  "limpio": "Pontificia y Real Hermandad del Santísimo Sacramento y Cofradía de Nazarenos de Nuestro Padre Jesús en su Soberano Poder ante Caifás, Nuestra Señora de la Salud y San Juan Evangelista"
+ },
+ "vera-cruz-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Vera Cruz",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+  "web": "https://web.archive.org/web/20150317073208/http://www.veracruzsevilla.org/",
+  "limpio": "Muy Antigua, Siempre Ilustre, Venerable, Pontificia, Real, Fervorosa, Humilde y Seráfica Hermandad y Archicofradía de Nazarenos de la Santísima Veracruz, Sangre de Nuestro Señor Jesucristo y Tristezas de María Santísima"
+ },
+ "las-penas-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Las Penas",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+  "limpio": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas y María Santísima de los Dolores"
+ },
+ "las-aguas-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Las Aguas",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+  "propuesta": "Real, Ilustre, Antigua y Fervorosa Hermandad de la Santa Cruz y Nuestra Señora del Rosario y Archicofradía de Nazarenos del Santísimo Cristo de las Aguas, Nuestra Madre y Señora del Mayor Dolor y María Santísima de Guadalupe, es una cofradía penitencial establecida en Sevilla y que forma parte de su Semana Santa",
+  "web": "http://www.hermandaddelasaguas.org/",
+  "limpio": "Real, Ilustre, Antigua y Fervorosa Hermandad de la Santa Cruz y Nuestra Señora del Rosario y Archicofradía de Nazarenos del Santísimo Cristo de las Aguas, Nuestra Madre y Señora del Mayor Dolor y María Santísima de Guadalupe"
+ },
+ "el-museo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Museo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Museo_(Sevilla)",
+  "web": "http://www.hermandaddelmuseo.org/",
+  "limpio": "Real, Ilustre y Fervorosa Hermandad del Santísimo Sacramento y Archicofradía de Nazarenos de la Sagrada Expiración de Nuestro Señor Jesucristo y María Santísima de las Aguas"
+ },
+ "el-cerro-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Cerro",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cerro_(Sevilla)",
+  "propuesta": "Fervorosa Hermandad Sacramental y Cofradía de Nazarenos del Santísimo Cristo del Desamparo y Abandono, Nuestro Padre Jesús de la Humildad y Nuestra Señora de los Dolores",
+  "web": "http://www.doloresdelcerro.com/",
+  "limpio": "Fervorosa Hermandad Sacramental y Cofradía de Nazarenos del Santísimo Cristo del Desamparo y Abandono, Nuestro Padre Jesús de la Humildad y Nuestra Señora de los Dolores"
+ },
+ "los-javieres-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Javieres",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+  "limpio": "Hermandad y Cofradía de Nazarenos del Santísimo Cristo de las Almas, María Santísima de Gracia y Amparo, María Inmaculada y San Francisco Javier"
+ },
+ "san-esteban-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Esteban",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+  "limpio": "Fervorosa Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Buen Viaje, María Santísima Madre de los Desamparados, San Juan de Ribera y Protomártir San Esteban"
+ },
+ "los-estudiantes-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Estudiantes",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Estudiantes_(Sevilla)",
+  "propuesta": "Pontificia, Patriarcal e Ilustrísima Hermandad y Archicofradía de Nazarenos del Santísimo Cristo de la Buena Muerte y María Santísima de la Angustia, es una cofradía católica instaurada en la ciudad de Sevilla, Andalucía, España",
+  "web": "https://hermandaddelosestudiantes.es/",
+  "limpio": "Pontificia, Patriarcal e Ilustrísima Hermandad y Archicofradía de Nazarenos del Santísimo Cristo de la Buena Muerte y María Santísima de la Angustia"
+ },
+ "san-benito-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Benito",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+  "propuesta": "Hermandad del Santísimo Sacramento, Pontificia y Real Archicofradía de Nazarenos de la Sagrada Presentación de Jesús al Pueblo, Santísimo Cristo de la Sangre, Nuestra Señora de la Encarnación Coronada y San Benito Abad. Realiza una procesión anual el Martes Santo",
+  "limpio": "Hermandad del Santísimo Sacramento, Pontificia y Real Archicofradía de Nazarenos de la Sagrada Presentación de Jesús al Pueblo, Santísimo Cristo de la Sangre, Nuestra Señora de la Encarnación Coronada y San Benito Abad"
+ },
+ "la-candelaria-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Candelaria",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+  "propuesta": "Ilustre y Fervorosa Hermandad de Nuestro Padre Jesús de la Salud, María Santísima de la Candelaria, Nuestra Señora del Subterráneo y San Nicolás de Bari. Procesiona en la Semana Santa",
+  "web": "http://www.hermandaddelacandelaria.com/}}",
+  "limpio": "Ilustre y Fervorosa Hermandad de Nuestro Padre Jesús de la Salud, María Santísima de la Candelaria, Nuestra Señora del Subterráneo y San Nicolás de Bari"
+ },
+ "dulce-nombre-la-bofeta-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Dulce Nombre («La Bofetá»)",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+  "web": "https://hermandaddeldulcenombre.org/",
+  "limpio": "Pontificia, Fervorosa, Ilustre y Antigua Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús ante Anás, Santo Cristo del Mayor Dolor, María Santísima del Dulce Nombre y San Juan Evangelista"
+ },
+ "santa-cruz-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Santa Cruz",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+  "propuesta": "Ilustre y Antigua Hermandad del Santísimo Sacramento y Nuestra Señora de la Paz, Fervorosa Cofradía de Nazarenos del Santísimo Cristo de las Misericordias, Santa María de la Antigua y Nuestra Señora de los Dolores, es una hermandad católica de Sevilla que procesiona en su Semana Santa, el Martes Santo",
+  "web": "http://www.hermandaddesantacruz.com/",
+  "limpio": "Ilustre y Antigua Hermandad del Santísimo Sacramento y Nuestra Señora de la Paz, Fervorosa Cofradía de Nazarenos del Santísimo Cristo de las Misericordias, Santa María de la Antigua y Nuestra Señora de los Dolores"
+ },
+ "el-carmen-doloroso-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Carmen Doloroso",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Carmen_(Sevilla)",
+  "web": "https://www.hermandaddelcarmen.es/",
+  "limpio": "Hermandad Carmelita de las Maravillas de María y Cofradía de Nazarenos de Nuestro Padre Jesús de la Paz y Nuestra Señora del Carmen en sus Misterios Dolorosos"
+ },
+ "la-sed-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Sed",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sed_(Sevilla)",
+  "propuesta": "“Hospitalaria Hermandad Sacramental de Congregantes de la Concepción Inmaculada de la Santísima Virgen María y Cofradía de Nazarenos del Santísimo Cristo de la Sed, Santa María de Consolación Madre de la Iglesia, San Juan Evangelista y San Juan de Dios”",
+  "web": "http://www.hermandaddelased.org/",
+  "limpio": "Hospitalaria Hermandad Sacramental de Congregantes de la Concepción Inmaculada de la Santísima Virgen María y Cofradía de Nazarenos del Santísimo Cristo de la Sed, Santa María de Consolación Madre de la Iglesia, San Juan Evangelista y San Juan de Dios"
+ },
+ "san-bernardo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Bernardo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+  "web": "https://www.hermandaddesanbernardo.com",
+  "limpio": "Real, Ilustre y Fervorosa Hermandad Sacramental de la Pura y Limpia Concepción de la Santísima Virgen María, Ánimas Benditas del Purgatorio y Cofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima del Refugio, Santa Cruz, Nuestra Señora del Patrocinio, Santa Bárbara y San Bernardo"
+ },
+ "el-buen-fin-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Buen Fin",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+  "web": "https://www.hermandadbuenfin.es",
+  "limpio": "Real, Ilustre, Antigua, Fervorosa y Franciscana Hermandad Sacramental y Cofradía de Nazarenos del Santo Sudario, Santísimo Cristo del Buen Fin, Nuestra Señora de la Palma Coronada, San Francisco de Asís y San Antonio de Padua"
+ },
+ "la-lanzada-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Lanzada",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+  "propuesta": "Imperial, Antigua, Ilustre y Fervorosa Hermandad del Santísimo Sacramento, Inmaculada Concepción de Nuestra Señora, Santa Espina de la corona de Nuestro Señor Jesucristo, Ánimas Benditas del Purgatorio, San Martín de Tours Obispo, Nuestra Señora de la Esperanza Divina Enfermera y Real Archicofradía de Nazarenos de la Sagrada Lanzada de Nuestro Señor Jesucristo, Nuestra Señora de Guía, San Juan Evangelista y María Santísima del Buen Fin",
+  "limpio": "Imperial, Antigua, Ilustre y Fervorosa Hermandad del Santísimo Sacramento, Inmaculada Concepción de Nuestra Señora, Santa Espina de la corona de Nuestro Señor Jesucristo, Ánimas Benditas del Purgatorio, San Martín de Tours Obispo, Nuestra Señora de la Esperanza Divina Enfermera y Real Archicofradía de Nazarenos de la Sagrada Lanzada de Nuestro Señor Jesucristo, Nuestra Señora de Guía, San Juan Evangelista y María Santísima del Buen Fin"
+ },
+ "el-baratillo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Baratillo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+  "web": "http://www.hermandadelbaratillo.es/",
+  "sinPatron": "La Hermandad del Baratillo es una cofradía católica de Sevilla, Andalucía, España. Tiene su sede en la capilla de la Piedad, también conocida como capilla del Baratillo. Su nombre oficial y completo es Antigua y Fervorosa Hermandad de la Santa Cruz y Cofradía de Nazarenos del Santísimo Cristo de la ",
+  "limpio": "Antigua y Fervorosa Hermandad de la Santa Cruz y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia y Nuestra Señora de la Piedad, Patriarca Bendito Señor San José y María Santísima de la Caridad en su Soledad"
+ },
+ "cristo-de-burgos-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Cristo de Burgos",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_Burgos_(Sevilla)",
+  "web": "http://www.cristodeburgos.org/",
+  "limpio": "Pontificia, Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos del Santísimo Cristo de Burgos, Negaciones y Lágrimas de San Pedro y Madre de Dios de la Palma"
+ },
+ "siete-palabras-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Siete Palabras",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+  "web": "https://www.siete-palabras.com",
+  "limpio": "Real e Ilustre Hermandad Sacramental de Nuestra Señora del Rosario, Ánimas Benditas del Purgatorio y Primitiva Archicofradía del Sagrado Corazón y Clavos de Jesús, Nuestro Padre Jesús de la Divina Misericordia, Santísimo Cristo de las Siete Palabras, María Santísima de los Remedios, Nuestra Señora de la Cabeza y San Juan Evangelista"
+ },
+ "los-panaderos-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Panaderos",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Panaderos_(Sevilla)",
+  "propuesta": "Pontificia, Real, Ilustre y Fervorosa Hermandad y Archicofradía de Nazarenos de Nuestro Padre Jesús del Soberano Poder en su Prendimiento, María Santísima de Regla Coronada y San Andrés Apóstol",
+  "web": "https://www.hdadpanaderos.es/",
+  "limpio": "Pontificia, Real, Ilustre y Fervorosa Hermandad y Archicofradía de Nazarenos de Nuestro Padre Jesús del Soberano Poder en su Prendimiento, María Santísima de Regla Coronada y San Andrés Apóstol"
+ },
+ "los-negritos-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Negritos",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Negritos_(Sevilla)",
+  "propuesta": "Muy Antigua, Pontificia y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Fundación y Nuestra Señora de los Ángeles Coronada",
+  "web": "http://www.hermandadlosnegritos.org/home/",
+  "limpio": "Muy Antigua, Pontificia y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Fundación y Nuestra Señora de los Ángeles Coronada"
+ },
+ "la-exaltacion-los-caballos-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Exaltación («Los Caballos»)",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+  "web": "http://www.laexaltacion.org/",
+  "limpio": "Pontificia, Real e Ilustre Hermandad Sacramental Purísima Concepción Ánimas Benditas del Purgatorio, San Sebastián Mártir, Santa Catalina de Alejandría y Archicofradía de Nazarenos del Santísimo Cristo de la Exaltación y Nuestra Señora de las Lágrimas"
+ },
+ "las-cigarreras-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Las Cigarreras",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Cigarreras_(Sevilla)",
+  "web": "http://www.columnayazotes.es/",
+  "sinPatron": "La Hermandad de las Cigarreras es una cofradía católica de Sevilla, Andalucía, España. Procesiona en la Semana Santa el Jueves Santo. El título oficial completo de la institución es Real e Ilustre Hermandad y Cofradía de Nazarenos de la Sagrada Columna y Flagelos de Nuestro Señor Jesucristo y María ",
+  "limpio": "Real e Ilustre Hermandad y Cofradía de Nazarenos de la Sagrada Columna y Flagelos de Nuestro Señor Jesucristo y María Santísima de la Victoria Coronada"
+ },
+ "montesion-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Montesión",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+  "propuesta": "Pontificia, Real, Ilustre, Antigua y Dominica Hermandad y Archicofradía de Nazarenos de la Sagrada Oración de Nuestro Señor Jesucristo en el Huerto, Santísimo Cristo de la Salud, María Santísima del Rosario en sus Misterios Dolorosos Coronada y Santo Domingo de Guzmán",
+  "web": "http://hermandaddemontesion.es/",
+  "limpio": "Pontificia, Real, Ilustre, Antigua y Dominica Hermandad y Archicofradía de Nazarenos de la Sagrada Oración de Nuestro Señor Jesucristo en el Huerto, Santísimo Cristo de la Salud, María Santísima del Rosario en sus Misterios Dolorosos Coronada y Santo Domingo de Guzmán"
+ },
+ "la-quinta-angustia-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Quinta Angustia",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+  "propuesta": "Pontificia Hermandad y Archicofradía de Nazarenos del Dulce Nombre de Jesús, Sagrado Descendimiento de Nuestro Señor Jesucristo y Quinta Angustia de María Santísima Nuestra Señora",
+  "web": "http://www.laquintaangustia.org/",
+  "limpio": "Pontificia Hermandad y Archicofradía de Nazarenos del Dulce Nombre de Jesús, Sagrado Descendimiento de Nuestro Señor Jesucristo y Quinta Angustia de María Santísima Nuestra Señora"
+ },
+ "el-valle-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Valle",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+  "propuesta": "Pontificia, Real, Ilustre y Primitiva Archicofradía de Nazarenos del Santísimo Cristo de la Coronación de Espinas, Nuestro Padre Jesús con la Cruz al Hombro, Nuestra Señora del Valle y Santa Mujer Verónica",
+  "web": "http://www.elvalle.org/",
+  "limpio": "Pontificia, Real, Ilustre y Primitiva Archicofradía de Nazarenos del Santísimo Cristo de la Coronación de Espinas, Nuestro Padre Jesús con la Cruz al Hombro, Nuestra Señora del Valle y Santa Mujer Verónica"
+ },
+ "pasion-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Pasión",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+  "propuesta": "Archicofradía del Santísimo Sacramento, Pontificia y Real de Nazarenos de Nuestro Padre Jesús de la Pasión y Nuestra Madre y Señora de la Merced",
+  "web": "http://www.hermandaddepasion.org/",
+  "limpio": "Archicofradía del Santísimo Sacramento, Pontificia y Real de Nazarenos de Nuestro Padre Jesús de la Pasión y Nuestra Madre y Señora de la Merced"
+ },
+ "el-silencio-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Silencio",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+  "propuesta": "Primitiva Hermandad de los Nazarenos de Sevilla, Archicofradía Pontificia y Real Hermandad de Nuestro Padre Jesús Nazareno, Santa Cruz en Jerusalén y María Santísima de la Concepción",
+  "web": "http://www.hermandaddeelsilencio.org/",
+  "limpio": "Primitiva Hermandad de los Nazarenos de Sevilla, Archicofradía Pontificia y Real Hermandad de Nuestro Padre Jesús Nazareno, Santa Cruz en Jerusalén y María Santísima de la Concepción"
+ },
+ "el-gran-poder-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Gran Poder",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+  "propuesta": "Pontificia y Real Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso",
+  "web": "http://www.gran-poder.es/",
+  "limpio": "Pontificia y Real Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso"
+ },
+ "la-macarena-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Macarena",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+  "propuesta": "Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestra Señora del Santo Rosario, Nuestro Padre Jesús de la Sentencia y María Santísima de la Esperanza Macarena",
+  "web": "http://www.hermandaddelamacarena.es/",
+  "limpio": "Real, Ilustre y Fervorosa Hermandad y Cofradía de Nazarenos de Nuestra Señora del Santo Rosario, Nuestro Padre Jesús de la Sentencia y María Santísima de la Esperanza Macarena"
+ },
+ "el-calvario-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Calvario",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+  "propuesta": "Pontificia y Real Hermandad y Cofradía de Nazarenos del Santísimo Cristo del Calvario y Nuestra Señora de la Presentación. Participa en la Semana Santa de Sevilla, realizando su estación de penitencia hacia la Catedral de Sevilla en la madrugada del Viernes Santo",
+  "web": "http://www.hermandaddelcalvario.org/",
+  "limpio": "Pontificia y Real Hermandad y Cofradía de Nazarenos del Santísimo Cristo del Calvario y Nuestra Señora de la Presentación"
+ },
+ "la-esperanza-de-triana-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Esperanza de Triana",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+  "propuesta": "Pontificia, Real e Ilustre Hermandad y Archicofradía de Nazarenos del Santísimo Sacramento, de la Pura y Limpia Concepción de la Santísima Virgen María, del Santísimo Cristo de las Tres Caídas, Nuestra Señora de la Esperanza y San Juan Evangelista",
+  "web": "https://esperanzadetriana.es",
+  "limpio": "Pontificia, Real e Ilustre Hermandad y Archicofradía de Nazarenos del Santísimo Sacramento, de la Pura y Limpia Concepción de la Santísima Virgen María, del Santísimo Cristo de las Tres Caídas, Nuestra Señora de la Esperanza y San Juan Evangelista"
+ },
+ "los-gitanos-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Gitanos",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+  "propuesta": "Real, Ilustre y Fervorosa Hermandad Sacramental, Ánimas Benditas y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y María Santísima de las Angustias Coronada",
+  "web": "http://www.hermandaddelosgitanos.com/",
+  "limpio": "Real, Ilustre y Fervorosa Hermandad Sacramental, Ánimas Benditas y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y María Santísima de las Angustias Coronada"
+ },
+ "la-carreteria-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Carretería",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Carreter%C3%ADa_(Sevilla)",
+  "propuesta": "Pontificia y Real Archicofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima de la Luz en el Sagrado Misterio de sus Tres Necesidades al pie de la Santa Cruz, San Francisco de Paula, Gloriosa Resurrección de Nuestro Señor Jesucristo y Nuestra Señora del Mayor Dolor en su Soledad",
+  "web": "https://www.hermandaddelacarreteria.org",
+  "limpio": "Pontificia y Real Archicofradía de Nazarenos del Santísimo Cristo de la Salud, María Santísima de la Luz en el Sagrado Misterio de sus Tres Necesidades al pie de la Santa Cruz, San Francisco de Paula, Gloriosa Resurrección de Nuestro Señor Jesucristo y Nuestra Señora del Mayor Dolor en su Soledad"
+ },
+ "san-isidoro-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Isidoro",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+  "propuesta": "Antigua e Ilustre Hermandad del Santísimo Sacramento, María Santísima de las Nieves y Ánimas Benditas del Purgatorio y Pontificia y Real Archicofradía de Nazarenos de Nuestro Padre Jesús de las Tres Caídas, Nuestra Señora de Loreto y Señor San Isidoro",
+  "web": "http://www.trescaidas.org",
+  "limpio": "Antigua e Ilustre Hermandad del Santísimo Sacramento, María Santísima de las Nieves y Ánimas Benditas del Purgatorio y Pontificia y Real Archicofradía de Nazarenos de Nuestro Padre Jesús de las Tres Caídas, Nuestra Señora de Loreto y Señor San Isidoro"
+ },
+ "la-o-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La O",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+  "web": "http://www.hermandad-de-la-o.org/",
+  "sinPatron": "La Hermandad de la O es una cofradía de Sevilla que procesiona en su Semana Santa la tarde del Viernes Santo, tiene su sede en la iglesia de Nuestra Señora de la O. El nombre completo de la corporación es: Pontificia, Real e Ilustre Archicofradía del Santísimo Sacramento, Nuestro Padre Jesús Nazaren",
+  "limpio": "Pontificia, Real e Ilustre Archicofradía del Santísimo Sacramento, Nuestro Padre Jesús Nazareno y María Santísima de la O Coronada"
+ },
+ "san-buenaventura-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San Buenaventura",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+  "propuesta": "Real, Ilustre y Franciscana Hermandad y Cofradía de Nazarenos de la Santa Cruz en el Monte Calvario, Santísimo Cristo de la Salvación y Nuestra Señora de la Soledad",
+  "web": "http://www.soledadsanbuenaventura.com/",
+  "limpio": "Real, Ilustre y Franciscana Hermandad y Cofradía de Nazarenos de la Santa Cruz en el Monte Calvario, Santísimo Cristo de la Salvación y Nuestra Señora de la Soledad"
+ },
+ "montserrat-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Montserrat",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+  "propuesta": "Pontificia, Real, Ilustre, Antigua y Primitiva Hermandad de Nuestra Señora del Rosario y Cofradía de Nazarenos del Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Señora de Montserrat",
+  "web": "http://www.hermandaddemontserrat.org/",
+  "limpio": "Pontificia, Real, Ilustre, Antigua y Primitiva Hermandad de Nuestra Señora del Rosario y Cofradía de Nazarenos del Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Señora de Montserrat"
+ },
+ "la-sagrada-mortaja-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Sagrada Mortaja",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+  "propuesta": "Antigua, Real e Ilustre Hermandad de Nazarenos de Nuestro Padre Jesús Descendido de la Cruz en el Misterio de su Sagrada Mortaja y María Santísima de la Piedad",
+  "web": "http://www.hermandadsagradamortaja.org",
+  "limpio": "Antigua, Real e Ilustre Hermandad de Nazarenos de Nuestro Padre Jesús Descendido de la Cruz en el Misterio de su Sagrada Mortaja y María Santísima de la Piedad"
+ },
+ "el-cachorro-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Cachorro",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+  "web": "https://hermandaddelcachorro.org",
+  "sinPatron": "La Hermandad del Cachorro es una Cofradía Católica afincada en el castizo barrio de Triana, Sevilla, Andalucía, España. Procesiona en la Semana Santa la tarde-noche del Viernes Santo, y tiene su sede canónica en la basílica menor del Santísimo Cristo de la Expiración, anexa a la antigua ermita de Nt",
+  "limpio": "Pontificia, Real e Ilustre Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Expiración y Nuestra Madre y Señora del Patrocinio en su Dolor y Gloria"
+ },
+ "los-servitas-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Los Servitas",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+  "propuesta": "Real, Ilustre y Venerable Hermandad de Nazarenos y Primitiva Cofradía Servita de Nuestra Señora de los Dolores, Santísimo Cristo de la Providencia, María Santísima de la Soledad y San Marcos Evangelista",
+  "web": "http://www.realhermandadservita.com",
+  "limpio": "Real, Ilustre y Venerable Hermandad de Nazarenos y Primitiva Cofradía Servita de Nuestra Señora de los Dolores, Santísimo Cristo de la Providencia, María Santísima de la Soledad y San Marcos Evangelista"
+ },
+ "la-trinidad-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Trinidad",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+  "propuesta": "el de Pontificia, Real, Muy Ilustre y Trinitaria Hermandad Sacramental y Archicofradía de Nazarenos del Sagrado Decreto de la Santísima Trinidad, Santísimo Cristo de las Cinco Llagas, María Santísima de la Concepción, Nuestra Señora de la Esperanza y San Juan Bosco",
+  "web": "http://www.hermandaddelatrinidad.es",
+  "limpio": "Pontificia, Real, Muy Ilustre y Trinitaria Hermandad Sacramental y Archicofradía de Nazarenos del Sagrado Decreto de la Santísima Trinidad, Santísimo Cristo de las Cinco Llagas, María Santísima de la Concepción, Nuestra Señora de la Esperanza y San Juan Bosco"
+ },
+ "el-santo-entierro-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Santo Entierro",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+  "propuesta": "Real Hermandad Sacramental del Santo Entierro de Nuestro Señor Jesucristo, Triunfo de la Santa Cruz y María Santísima de Villaviciosa, es una cofradía católica de Sevilla, Andalucía, España",
+  "web": "http://santoentierro.org/",
+  "limpio": "Real Hermandad Sacramental del Santo Entierro de Nuestro Señor Jesucristo, Triunfo de la Santa Cruz y María Santísima de Villaviciosa"
+ },
+ "la-soledad-de-san-lorenzo-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Soledad de San Lorenzo",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+  "propuesta": "Pontificia y Real Hermandad Sacramental, Nuestra Señora de Roca-Amador, Ánimas Benditas, Beato Marcelo Spínola y Primitiva Cofradía de Nazarenos de María Santísima en su Soledad",
+  "web": "http://www.hermandaddelasoledad.org/",
+  "limpio": "Pontificia y Real Hermandad Sacramental, Nuestra Señora de Roca-Amador, Ánimas Benditas, Beato Marcelo Spínola y Primitiva Cofradía de Nazarenos de María Santísima en su Soledad"
+ },
+ "la-resurreccion-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Resurrección",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+  "web": "https://www.hermandaddelaresurreccion.com/",
+  "sinPatron": "La Hermandad de la Sagrada Resurrección es una cofradía católica de Sevilla, Andalucía, España. Procesiona el Domingo de Resurrección. Su completo es Ilustre y Lasaliana Hermandad Sacramental y Cofradía de Nazarenos de la Santa Cruz, Sagrada Resurrección de Nuestro Señor Jesucristo, Nuestra Señora d",
+  "limpio": "Ilustre y Lasaliana Hermandad Sacramental y Cofradía de Nazarenos de la Santa Cruz, Sagrada Resurrección de Nuestro Señor Jesucristo, Nuestra Señora de la Aurora, María Santísima del Amor, San Juan Bautista de la Salle y Santa Marina"
+ },
+ "bellavista-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Bellavista",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista",
+  "propuesta": "Hermandad de Penitencia y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Remedios y María Santísima del Dulce Nombre en sus Dolores y Compasión",
+  "limpio": "Hermandad de Penitencia y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Remedios y María Santísima del Dulce Nombre en sus Dolores y Compasión"
+ },
+ "bendicion-y-esperanza-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Bendición y Esperanza",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+  "sinPatron": "La Hermandad de penitencia Bendición y Esperanza es una corporación católica ubicada en la Parroquia de Jesús Obrero de Sevilla, en el barrio del Polígono Sur. Realiza una procesión anual en la tarde del Viernes de Dolores, formando parte de las Vísperas de la Semana Santa de Sevilla. "
+ },
+ "pasion-y-muerte-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Pasión y Muerte",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)",
+  "web": "http://pasionymuerte-dyv.blogspot.com",
+  "sinPatron": "La Hermandad de Pasión y Muerte es una hermandad de confesión católica de carácter penitencial y glorioso. La cofradía participa en la Semana Santa de Sevilla. Realiza su estación de penitencia en la tarde del Viernes de Dolores por las calles del barrio de Triana. Tiene su sede en la Parroquia de N",
+  "limpio": "Hermandad de Santa María del Buen Aire y Cofradía de Nazarenos del Santísimo Cristo de Pasión y Muerte, Resurrección de Nuestro Señor y Nuestra Señora del Desconsuelo y Visitación"
+ },
+ "pino-montano-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Pino Montano",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+  "propuesta": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de Nazaret, María Santísima del Amor, San Marcos Evangelista y San Isidro Labrador",
+  "web": "https://{{url",
+  "limpio": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de Nazaret, María Santísima del Amor, San Marcos Evangelista y San Isidro Labrador"
+ },
+ "cristo-de-la-corona-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Cristo de la Corona",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+  "web": "https://cristocorona.blogspot.com/",
+  "sinPatron": "La Hermandad del Cristo de la Corona es una hermandad de culto católico de carácter penitencial de la Semana Santa de Sevilla, Andalucía, España. Procesiona en la tarde del Viernes de Dolores por el centro de la ciudad.  Está radicada en la Parroquia del Sagrario de la Catedral de Sevilla, Parroquia",
+  "limpio": "Hermandad y Cofradía del Santísimo Cristo de la Corona y Nuestra Señora del Rosario"
+ },
+ "padre-pio-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Padre Pío",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+  "propuesta": "Hermandad Sacramental de la Santa Cruz en el Monte Calvario y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Clemencia, Santísima Virgen Madre de la Divina Gracia y San Juan de la Cruz",
+  "web": "http://hermandadpadrepio.blogspot.com/",
+  "limpio": "Hermandad Sacramental de la Santa Cruz en el Monte Calvario y Cofradía de Nazarenos de Nuestro Padre Jesús de la Salud y Clemencia, Santísima Virgen Madre de la Divina Gracia y San Juan de la Cruz"
+ },
+ "san-jose-obrero-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "San José Obrero",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero",
+  "propuesta": "Humilde y Fervorosa Hermandad Sacramental y de Gloria de San José Obrero, San Francisco de Paula e Inmaculada Concepción y Cofradía de Nazarenos de Nuestro Padre Jesús de la Caridad y Nuestra Señora de los Dolores",
+  "limpio": "Humilde y Fervorosa Hermandad Sacramental y de Gloria de San José Obrero, San Francisco de Paula e Inmaculada Concepción y Cofradía de Nazarenos de Nuestro Padre Jesús de la Caridad y Nuestra Señora de los Dolores"
+ },
+ "la-milagrosa-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "La Milagrosa",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+  "propuesta": "Hermandad Sacramental, Nuestra Señora de la Medalla Milagrosa y Cofradía de Nazarenos de Nuestro Padre Jesús de la Esperanza en el Puente Cedrón, María Santísima del Rosario y San Juan Evangelista",
+  "limpio": "Hermandad Sacramental, Nuestra Señora de la Medalla Milagrosa y Cofradía de Nazarenos de Nuestro Padre Jesús de la Esperanza en el Puente Cedrón, María Santísima del Rosario y San Juan Evangelista"
+ },
+ "dolores-de-torreblanca-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Dolores de Torreblanca",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca",
+  "propuesta": "Humilde y Fervorosa Hermandad Sacramental del Santísimo Nombre de Jesús y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo ante Pilato, María Santísima de los Dolores y San Antonio de Padua",
+  "web": "http://www.hermandaddelosdolores.org/",
+  "limpio": "Humilde y Fervorosa Hermandad Sacramental del Santísimo Nombre de Jesús y Cofradía de Nazarenos de Nuestro Padre Jesús Cautivo ante Pilato, María Santísima de los Dolores y San Antonio de Padua"
+ },
+ "divino-perdon-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "Divino Perdón",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n",
+  "propuesta": "Franciscana Hermandad de Penitencia y Cofradía de Nazarenos de María Santísima de la Purísima Concepción, Santo Cáliz de Nuestro Padre Jesús del Divino Perdón y Beata Ana María de Javouhey",
+  "limpio": "Franciscana Hermandad de Penitencia y Cofradía de Nazarenos de María Santísima de la Purísima Concepción, Santo Cáliz de Nuestro Padre Jesús del Divino Perdón y Beata Ana María de Javouhey"
+ },
+ "el-sol-sevilla": {
+  "ciudad": "sevilla",
+  "nombre": "El Sol",
+  "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+  "propuesta": "Hermandad Sacramental de la Inmaculada Concepción de María Santísima de la Salud y Cofradía de Nazarenos del Triunfo de la Santa Cruz, Santo Cristo Varón de Dolores de la Divina Misericordia, Nuestra Señora del Sol, San Juan Evangelista y Santa María Magdalena",
+  "web": "http://www.hermandaddelsol.org/",
+  "limpio": "Hermandad Sacramental de la Inmaculada Concepción de María Santísima de la Salud y Cofradía de Nazarenos del Triunfo de la Santa Cruz, Santo Cristo Varón de Dolores de la Divina Misericordia, Nuestra Señora del Sol, San Juan Evangelista y Santa María Magdalena"
+ },
+ "servitas-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Servitas",
+  "fuente": "https://consejocofradiascadiz.es/servitas-cadiz/",
+  "titulo": "Orden Tercera de Servitas",
+  "limpio": "Venerable Orden Tercera de Servitas Esclavos de María Santísima de los Dolores Coronada"
+ },
+ "merced-obediencia-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Merced (Obediencia)",
+  "fuente": "https://consejocofradiascadiz.es/merced-3/",
+  "titulo": "Merced",
+  "limpio": "Venerable Archicofradía de la Celeste y Real Esclavitud de Nuestra Señora de la Merced y Devota Sección de Penitencia de Nuestro Padre Jesús Nazareno de la Obediencia"
+ },
+ "la-borriquita-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Borriquita",
+  "fuente": "https://consejocofradiascadiz.es/la-paz/",
+  "titulo": "Paz y Amparo",
+  "limpio": "Venerable Cofradía Carmelitana de Penitencia y Sacramental Hermandad de Nazarenos de Nuestro Padre Jesús de la Paz en su Real y Triunfal Entrada en Jerusalén y Nuestra Madre y Señora María Santísima del Amparo y Bendito Patriarca Señor San José"
+ },
+ "el-despojado-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "El Despojado",
+  "fuente": "https://consejocofradiascadiz.es/despojado/",
+  "titulo": "Despojado",
+  "limpio": "Hermandad Salesiana de Penitencia de Nuestro Padre Jesús del Amor Despojado de sus Vestiduras y María Santísima de la Concepción"
+ },
+ "sagrada-cena-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Sagrada Cena",
+  "fuente": "https://consejocofradiascadiz.es/sagrada-cena/",
+  "titulo": "Sagrada Cena",
+  "limpio": "Dominicana Hermandad Sacramental y Cofradía de Nazarenos de la Pura y Limpia Madre de Dios, Nuestro Padre Jesús del Milagro en la Sagrada Cena y María Santísima Reina de Todos los Santos"
+ },
+ "las-penas-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Las Penas",
+  "fuente": "https://consejocofradiascadiz.es/las-penas/",
+  "titulo": "Las Penas",
+  "limpio": "Venerable y Real Archicofradía de Nuestra Señora del Pilar de Zaragoza, Nuestro Padre Jesús de las Penas y María Santísima de la Caridad"
+ },
+ "humildad-y-paciencia-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Humildad y Paciencia",
+  "fuente": "https://consejocofradiascadiz.es/humildad-y-paciencia/",
+  "titulo": "Humildad y Paciencia",
+  "limpio": "Venerable, Inmemorial, Pontificia y Nacional Cofradía de Penitencia del Santísimo Cristo de la Humildad y Paciencia y Nuestra Señora de la Amargura"
+ },
+ "la-palma-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Palma",
+  "fuente": "https://consejocofradiascadiz.es/la-palma/",
+  "titulo": "La Palma",
+  "limpio": "Primera Compañía Espiritual del Santo Rosario y Coro del Ave María, Venerable, Antigua, Ilustre, Franciscana, Lasaliana, Vicencia, Pontificia y Real Archicofradía Sacramental de Nuestra Señora de la Palma Coronada (Agregada a la del Santísimo Nombre de María de la Corte de Roma), Santísimo Cristo de la Misericordia y María Santísima de las Penas Coronada"
+ },
+ "el-prendimiento-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "El Prendimiento",
+  "fuente": "https://consejocofradiascadiz.es/prendimiento/",
+  "titulo": "Prendimiento",
+  "limpio": "Real Congregación de la Vela y Mayor Culto al Santísimo Sacramento. Franciscana y Carmelitana Hermandad de Penitencia de Nuestro Padre Jesús en su Prendimiento, María Santísima del Patrocinio y Beato Fray Diego José de Cádiz"
+ },
+ "nazareno-del-amor-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Nazareno del Amor",
+  "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/",
+  "titulo": "Nazareno del Amor",
+  "limpio": "Venerable y Seráfica Hermandad de Penitencia de Nuestro Padre Jesús Nazareno del Amor y Nuestra Señora de la Esperanza"
+ },
+ "vera-cruz-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Vera+Cruz",
+  "fuente": "https://consejocofradiascadiz.es/vera-cruz/",
+  "titulo": "Vera Cruz",
+  "limpio": "Muy Ilustre, Antigua, Venerable, Franciscana Hermandad y Cofradía de Penitencia del Santísimo Cristo de la Vera Cruz y Nuestra Señora de la Soledad"
+ },
+ "la-sanidad-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Sanidad",
+  "fuente": "https://consejocofradiascadiz.es/sanidad/",
+  "titulo": "Sanidad",
+  "limpio": "Venerable y Nacional Cofradía de Penitencia de Nuestro Padre Jesús del Mayor Dolor y María Santísima de la Salud"
+ },
+ "la-piedad-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Piedad",
+  "fuente": "https://consejocofradiascadiz.es/piedad/",
+  "titulo": "Piedad",
+  "limpio": "Venerable, Real, Militar y Nacional Cofradía del Santísimo Cristo de la Piedad y María Santísima de las Lágrimas"
+ },
+ "jesus-caido-el-senor-del-parque-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Jesús Caído («El Señor del Parque»)",
+  "fuente": "https://consejocofradiascadiz.es/jesus-caido/",
+  "titulo": "Jesús Caído",
+  "limpio": "Hermandad Sacramental, Venerable y Marianista Cofradía de Penitencia de Nuestro Padre Jesús Caído y María Santísima de los Desamparados"
+ },
+ "ecce-homo-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Ecce-Homo",
+  "fuente": "https://consejocofradiascadiz.es/ecce-homo/",
+  "titulo": "Ecce-Homo",
+  "limpio": "Real y Venerable Archicofradía de Nuestro Padre Jesús del Ecce-Homo, María Santísima de las Angustias y San Juan Evangelista"
+ },
+ "la-columna-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Columna",
+  "fuente": "https://consejocofradiascadiz.es/columna/",
+  "titulo": "Columna",
+  "limpio": "Venerable, Real y Muy Ilustre Archicofradía de la Santísima Resurrección de Nuestro Señor Jesucristo y Penitencia de Nuestro Padre Jesús Atado a la Columna y Azotes y María Santísima de las Lágrimas, San Pedro Apóstol Penitente y San Juan Evangelista"
+ },
+ "las-cigarreras-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Las Cigarreras",
+  "fuente": "https://consejocofradiascadiz.es/cigarreras/",
+  "titulo": "Cigarreras",
+  "limpio": "Real, Ilustre y Venerable Cofradía de Penitencia de Nuestro Padre Jesús de la Salud, María Santísima de la Esperanza y Nuestra Señora del Amor Hermoso"
+ },
+ "la-sentencia-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Sentencia",
+  "fuente": "https://consejocofradiascadiz.es/sentencia/",
+  "titulo": "Sentencia",
+  "limpio": "Venerable, Mercedaria y Lasaliana Cofradía de Penitencia de Nuestro Padre Jesús de la Sentencia y Nuestra Señora del Buen Fin"
+ },
+ "las-aguas-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Las Aguas",
+  "fuente": "https://consejocofradiascadiz.es/las-aguas/",
+  "titulo": "Las Aguas",
+  "limpio": "Real, Gremial, Nacional y Marianista Hermandad Sacramental del Santísimo Cristo de las Aguas, Nuestra Señora de la Luz y Asociación de Discípulos de San Juan Evangelista y María Stma. de Guadalupe"
+ },
+ "el-caminito-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "El Caminito",
+  "fuente": "https://consejocofradiascadiz.es/el-caminito/",
+  "titulo": "El Caminito",
+  "limpio": "Venerable Cofradía de Penitencia de Nuestra Señora de las Angustias y San Nicolás de Bari"
+ },
+ "los-afligidos-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Los Afligidos",
+  "fuente": "https://consejocofradiascadiz.es/afligidos/",
+  "titulo": "Afligidos",
+  "limpio": "Venerable, Real y Devota Cofradía de Penitencia de Nuestro Padre Jesús de los Afligidos y María Santísima de los Desconsuelos"
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Oración en el Huerto",
+  "fuente": "https://consejocofradiascadiz.es/oracion-en-el-huerto/",
+  "titulo": "Oración en el Huerto",
+  "limpio": "Venerable Cofradía de Penitencia de Nuestro Padre Jesús de la Oración en el Huerto y Nuestra Señora de Gracia y Esperanza"
+ },
+ "medinaceli-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Medinaceli",
+  "fuente": "https://consejocofradiascadiz.es/medinaceli/",
+  "titulo": "Medinaceli",
+  "limpio": "Hermandad Sacramental, Esclavitud y Cofradía de Penitencia de Nuestro Padre Jesús Cautivo y Rescatado y María Santísima de la Trinidad"
+ },
+ "nazareno-de-santa-maria-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Nazareno de Santa María",
+  "fuente": "https://consejocofradiascadiz.es/nazareno/",
+  "titulo": "Nazareno",
+  "limpio": "Inmemorial, Venerable, Pontificia y Real Cofradía de Nuestro Padre Jesús Nazareno, Santa Cruz de Jerusalén y María Santísima de los Dolores y Santa María Magdalena"
+ },
+ "el-perdon-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "El Perdón",
+  "fuente": "https://consejocofradiascadiz.es/perdon/",
+  "titulo": "Perdón",
+  "limpio": "Venerable Cofradía de Penitencia del Santísimo Cristo del Perdón y María Santísima del Rosario en sus Misterios Dolorosos"
+ },
+ "el-descendimiento-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "El Descendimiento",
+  "fuente": "https://consejocofradiascadiz.es/descendimiento/",
+  "titulo": "Descendimiento",
+  "limpio": "Real y Venerable Hermandad y Cofradía de Penitencia del Santísimo Cristo del Descendimiento de la Santa Cruz, María Santísima en su Quinta Angustia y Nuestra Señora de los Dolores"
+ },
+ "la-expiracion-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Expiración",
+  "fuente": "https://consejocofradiascadiz.es/expiracion/",
+  "titulo": "Expiración",
+  "limpio": "Muy Ilustre Venerable y Concepcionista Cofradía de Penitencia del Santísimo Cristo de la Expiración y María Santísima de la Victoria"
+ },
+ "siete-palabras-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Siete Palabras",
+  "fuente": "https://consejocofradiascadiz.es/siete-palabras/",
+  "titulo": "Siete Palabras",
+  "limpio": "Venerable y Mercedaria Hermandad de Penitencia de las Siete Palabras del Santísimo Cristo de la Sed y María Santísima de la Piedad"
+ },
+ "la-buena-muerte-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Buena Muerte",
+  "fuente": "https://consejocofradiascadiz.es/buena-muerte/",
+  "titulo": "Buena Muerte",
+  "limpio": "Cofradía de Penitencia del Santísimo Cristo de la Buena Muerte y María Santísima del Mayor Dolor"
+ },
+ "santo-entierro-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "Santo Entierro",
+  "fuente": "https://consejocofradiascadiz.es/soledad/",
+  "titulo": "Soledad",
+  "limpio": "Venerable y Real Cofradía de Nuestra Señora de la Soledad y Santo Entierro de Nuestro Señor Jesucristo"
+ },
+ "la-resurreccion-cadiz": {
+  "ciudad": "cadiz",
+  "nombre": "La Resurrección",
+  "fuente": "https://consejocofradiascadiz.es/resucitado/",
+  "titulo": "Resucitado",
+  "limpio": "Venerable, Real y Muy Ilustre Archicofradía de la Santísima Resurrección de Nuestro Señor Jesucristo y Penitencia de Nuestro Padre Jesús Atado a la Columna y Azotes y María Santísima de las Lágrimas, San Pedro Apóstol Penitente y San Juan Evangelista"
+ },
+ "la-borriquita-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Borriquita",
+  "fuente": "https://cofradiasdealmeria.es/penitencia/borriquita/",
+  "limpio": "Ilustre Hermandad del Niño Jesús del Remedio y Cofradía de Nazarenos de Nuestro Padre Jesús de la Victoria en su Entrada Triunfal en Jerusalén y Nuestra Señora de la Paz"
+ },
+ "los-angeles-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Los Ángeles",
+  "fuente": "https://cofradiasdealmeria.es/los-angeles/",
+  "crudo": "HERMANDAD Y COFRADÍA DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA MISERICORDIA EN SU CRUCIFIXIÓN Y MARÍA SANTÍSIMA DE LOS ÁNGELES",
+  "limpio": "Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia en su Crucifixión y María Santísima de los Ángeles"
+ },
+ "la-estrella-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Estrella",
+  "fuente": "https://cofradiasdealmeria.es/estrella/",
+  "crudo": "REAL E ILUSTRE HERMANDAD SACRAMENTAL Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS DE LAS PENAS Y MARÍA SANTÍSIMA DE LA ESTRELLA",
+  "limpio": "Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas y María Santísima de la Estrella"
+ },
+ "la-santa-cena-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Santa Cena",
+  "fuente": "https://cofradiasdealmeria.es/santa-cena/",
+  "crudo": "HERMANDAD EUCARÍSTICA Y COFRADÍA DE NAZARENOS DE LA SANTA CENA Y MARÍA SANTÍSIMA DE FE Y CARIDAD",
+  "limpio": "Hermandad Eucarística y Cofradía de Nazarenos de la Santa Cena y María Santísima de Fe y Caridad"
+ },
+ "pasion-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Pasión",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/",
+  "crudo": "HERMANDAD DE NUESTRO PADRE JESÚS DE SALUD Y PASIÓN EN SU TERCERA CAÍDA Y MARÍA SANTÍSIMA DE LOS DESAMPARADOS",
+  "limpio": "Hermandad de Nuestro Padre Jesús de Salud y Pasión en su Tercera Caída y María Santísima de los Desamparados"
+ },
+ "gran-poder-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Gran Poder",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-gran-poder/",
+  "crudo": "HERMANDAD SACRAMENTAL DE NUESTRA SEÑORA DEL CARMEN, NUESTRO PADRE JESÚS DEL GRAN PODER Y MARÍA SANTÍSIMA DEL MAYOR DOLOR Y TRASPASO Y SAN JUAN EVANGELISTA",
+  "limpio": "Hermandad Sacramental de Nuestra Señora del Carmen, Nuestro Padre Jesús del Gran Poder y María Santísima del Mayor Dolor y Traspaso y San Juan Evangelista"
+ },
+ "la-coronacion-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Coronación",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/",
+  "crudo": "HERMANDAD Y COFRADÍA DE NUESTRO PADRE JESÚS DE LA HUMILDAD Y PACIENCIA, MARÍA SANTÍSIMA DE GRACIA Y AMPARO Y SAN JUAN EVANGELISTA",
+  "limpio": "Hermandad y Cofradía de Nuestro Padre Jesús de la Humildad y Paciencia, María Santísima de Gracia y Amparo y San Juan Evangelista"
+ },
+ "el-amor-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Amor",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-amor/",
+  "crudo": "REAL E ILUSTRE COFRADÍA DEL SANTÍSIMO CRISTO DEL AMOR Y NUESTRA SEÑORA DEL PRIMER DOLOR",
+  "limpio": "Real e Ilustre Cofradía del Santísimo Cristo del Amor y Nuestra Señora del Primer Dolor"
+ },
+ "el-perdon-silencio-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Perdón (Silencio)",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-perdon/",
+  "crudo": "HERMANDAD JUVENIL DEL SANTO CRISTO DEL PERDÓN, VÍA-CRUCIS PENITENCIAL DEL SILENCIO",
+  "limpio": "Hermandad Juvenil del Santo Cristo del Perdón, Vía-crucis Penitencial del Silencio"
+ },
+ "el-calvario-cristo-del-mar-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Calvario (Cristo del Mar)",
+  "fuente": "https://cofradiasdealmeria.es/calvario/",
+  "crudo": "HERMANDAD MARIANISTA DEL SANTÍSIMO CRISTO DEL MAR, MARÍA SANTÍSIMA DE LAS LÁGRIMAS, SAN JUAN EVANGELISTA Y SANTA MARÍA MAGDALENA EN EL MONTE CALVARIO",
+  "limpio": "Hermandad Marianista del Santísimo Cristo del Mar, María Santísima de las Lágrimas, San Juan Evangelista y Santa María Magdalena en el Monte Calvario"
+ },
+ "el-prendimiento-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Prendimiento",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/",
+  "crudo": "REAL E ILUSTRE HERMANDAD SACRAMENTAL Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS EN SU PRENDIMIENTO, JESÚS CAUTIVO DE MEDINACELI Y NUESTRA SEÑORA DE LA MERCED",
+  "limpio": "Real e Ilustre Hermandad Sacramental y Cofradía de Nazarenos de Nuestro Padre Jesús en su Prendimiento, Jesús Cautivo de Medinaceli y Nuestra Señora de la Merced"
+ },
+ "la-macarena-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Macarena",
+  "fuente": "https://cofradiasdealmeria.es/macarena/",
+  "crudo": "HERMANDAD Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS DE LA SENTENCIA, MARÍA SANTÍSIMA DE LA ESPERANZA MACARENA Y NUESTRA SEÑORA DEL SANTO ROSARIO",
+  "limpio": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Sentencia, María Santísima de la Esperanza Macarena y Nuestra Señora del Santo Rosario"
+ },
+ "los-estudiantes-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Los Estudiantes",
+  "fuente": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/",
+  "crudo": "REAL, ILUSTRE, CONCEPCIONISTA Y UNIVERSITARIA HERMANDAD DE NAZARENOS DE NTRO. PADRE JESÚS DE LA ORACIÓN EN EL HUERTO Y NTRA. SRA. DEL AMOR Y LA ESPERANZA",
+  "limpio": "Real, Ilustre, Concepcionista y Universitaria Hermandad de Nazarenos de Ntro. Padre Jesús de la Oración en el Huerto y Ntra. Sra. del Amor y la Esperanza"
+ },
+ "rosario-del-mar-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Rosario del Mar",
+  "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/",
+  "crudo": "HERMANDAD DOMINICANA Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS DE LAS PENAS EN EL ABANDONO DE SUS DISCIPULOS, MARÍA SANTÍSIMA DEL ROSARIO DEL MAR EN SUS MISTERIOS DOLOROSOS, SANTA MARÍA MAGDALENA Y SANTO DOMINGO DE GUZMÁN",
+  "limpio": "Hermandad Dominicana y Cofradía de Nazarenos de Nuestro Padre Jesús de las Penas en el Abandono de sus Discípulos, María Santísima del Rosario del Mar en sus Misterios Dolorosos, Santa María Magdalena y Santo Domingo de Guzmán"
+ },
+ "el-encuentro-jesus-nazareno-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Encuentro (Jesús Nazareno)",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-encuentro/",
+  "crudo": "ILUSTRE Y MUY ANTIGUA HERMANDAD Y COFRADÍA DE NAZARENOS DE NUESTRO PADRE JESÚS NAZARENO, MARÍA SANTÍSIMA DE LA AMARGURA Y SANTA MUJER VERÓNICA",
+  "limpio": "Ilustre y Muy Antigua Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús Nazareno, María Santísima de la Amargura y Santa Mujer Verónica"
+ },
+ "las-angustias-almeria": {
+  "ciudad": "almeria",
+  "nombre": "Las Angustias",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/",
+  "crudo": "REAL E ILUSTRE CONGREGACIÓN-HERMANDAD DE NUESTRA SEÑORA DE LAS ANGUSTIAS Y EL SANTÍSIMO CRISTO DE LA BUENA MUERTE",
+  "limpio": "Real e Ilustre Congregación-hermandad de Nuestra Señora de las Angustias y el Santísimo Cristo de la Buena Muerte"
+ },
+ "el-silencio-descendimiento-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Silencio (Descendimiento)",
+  "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/",
+  "crudo": "REAL E ILUSTRE Y FRANCISCANA HERMANDAD Y COFRADÍA DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA REDENCIÓN EN SU SAGRADO DESCENDIMIENTO Y MARÍA SANTÍSIMA DEL CONSUELO",
+  "limpio": "Real e Ilustre y Franciscana Hermandad y Cofradía de Nazarenos del Santísimo Cristo de la Redención en su Sagrado Descendimiento y María Santísima del Consuelo"
+ },
+ "la-caridad-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Caridad",
+  "fuente": "https://cofradiasdealmeria.es/caridad/",
+  "crudo": "HUMILDE HERMANDAD DE SAN FRANCISCO DE ASÍS Y COFRADÍA DE NAZARENOS DEL SANTÍSIMO CRISTO DE LA CARIDAD EN SU TRASLADO AL SEPULCRO, MARÍA SANTÍSIMA DE LAS PENAS Y SANTA MARTA",
+  "limpio": "Humilde Hermandad de San Francisco de Asís y Cofradía de Nazarenos del Santísimo Cristo de la Caridad en su Traslado al Sepulcro, María Santísima de las Penas y Santa Marta"
+ },
+ "el-santo-sepulcro-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Santo Sepulcro",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/",
+  "crudo": "REAL E ILUSTRE HERMANDAD DEL SANTO SEPULCRO Y NUESTRA SEÑORA DE LOS DOLORES",
+  "limpio": "Real e Ilustre Hermandad del Santo Sepulcro y Nuestra Señora de los Dolores"
+ },
+ "la-soledad-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Soledad",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/",
+  "crudo": "ILUSTRE HERMANDAD DEL SANTÍSIMO SACRAMENTO Y NUESTRA SEÑORA DE LOS DOLORES",
+  "limpio": "Ilustre Hermandad del Santísimo Sacramento y Nuestra Señora de los Dolores"
+ },
+ "el-resucitado-almeria": {
+  "ciudad": "almeria",
+  "nombre": "El Resucitado",
+  "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/",
+  "crudo": "HERMANDAD DE JESUCRISTO RESUCITADO, SEÑOR DE LA VIDA Y MARÍA SANTÍSIMA DEL TRIUNFO",
+  "limpio": "Hermandad de Jesucristo Resucitado, Señor de la Vida y María Santísima del Triunfo"
+ },
+ "la-unidad-almeria": {
+  "ciudad": "almeria",
+  "nombre": "La Unidad",
+  "fuente": "https://cofradiasdealmeria.es/penitencia/unidad/",
+  "limpio": "Hermandad y Cofradía de Nazarenos de Nuestro Padre Jesús de la Paz en su Flagelación y María Santísima de la Unidad"
+ }
+}
