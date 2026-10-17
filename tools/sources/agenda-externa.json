@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-16",
+ "generado": "2026-10-17",
  "fuentes": {
   "InfoCofrade": 363,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 70,
-  "Prensa (texto de noticias)": 33
+  "Prensa (texto de noticias)": 30
  },
  "eventos": [
   {
@@ -4770,16 +4770,6 @@
    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
   },
   {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "El viernes 16 de octubre está previsto que la banda de cornetas y tambores Coronación de Espinas ofrece un concierto extraordinario en el que dará a conocer la nueva marc",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
    "fecha": "2026-11-01",
    "hora": "",
    "ciudad": "granada",
@@ -4848,16 +4838,6 @@
    "nota": "",
    "fuente": "Cadena SER",
    "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "21:30",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
-   "nota": "",
-   "fuente": "Hermandad la Merced",
-   "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
   },
   {
    "fecha": "2026-10-18",
@@ -4954,6 +4934,26 @@
    "hora": "",
    "ciudad": "cordoba",
    "tipo": "coronacion",
+   "titulo": "El viernes 16 de octubre está previsto que la banda de cornetas y tambores Coronación de Espinas ofrece un concierto extraordinario en el que dará a conocer la nueva marc",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "21:30",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
+   "nota": "",
+   "fuente": "Hermandad la Merced",
+   "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
    "titulo": "Antes de la proccesión extraordinaria, la Banda de Cornetas y Tambores Coronación de Espinas estrenará este viernes (21:30) la marcha Eterna Merced, dedicada a la su titu",
    "nota": "",
    "fuente": "El Día de Córdoba",
@@ -4988,16 +4988,6 @@
    "nota": "",
    "fuente": "INRI Información",
    "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
-  },
-  {
-   "fecha": "2026-10-13",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Alejandro Martín Caballero designado cartelista de las Glorias de Sevilla 2027",
-   "nota": "",
-   "fuente": "ArteSacro",
-   "url": "https://www.artesacro.org/Noticia/Ver/169493/alejandro-martin-caballero-designado-cartelista-glorias-sevilla-2027"
   }
  ],
  "conflictos": [
@@ -5031,38 +5021,6 @@
     "titulo": "Sol: traslado de regreso de la Virgen del Sol, desde el santuario de la Victoria, donde ha presidido sus cultos, hasta su sede de la parroquia de",
     "fuente": "Diario SUR",
     "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html"
-   }
-  },
-  {
-   "a": {
-    "fecha": "2026-10-17",
-    "hora": "",
-    "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
-    "fuente": "ABC",
-    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-   },
-   "b": {
-    "fecha": "2026-10-16",
-    "hora": "21:30",
-    "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
-    "fuente": "Hermandad la Merced",
-    "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
-   }
-  },
-  {
-   "a": {
-    "fecha": "2026-10-17",
-    "hora": "",
-    "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
-    "fuente": "ABC",
-    "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-   },
-   "b": {
-    "fecha": "2026-10-16",
-    "hora": "",
-    "titulo": "Antes de la proccesión extraordinaria, la Banda de Cornetas y Tambores Coronación de Espinas estrenará este viernes (21:30) la marcha Eterna Merced, dedicada a la su titu",
-    "fuente": "El Día de Córdoba",
-    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
    }
   }
  ]
