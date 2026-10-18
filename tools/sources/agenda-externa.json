@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 21
+  "Prensa (texto de noticias)": 24
  },
  "eventos": [
   {
@@ -4508,6 +4508,36 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La procesión de la Divina Pastora de las Almas de Córdoba, en fotos",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/procesion-divina-pastora-almas-cordoba-fotos_3_2008277471.html"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora del Rosario procesionará hoy por las calles de Mairena del Aljarafe en su salida anual.",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-procesionara-hoy-por-las-calles-de-mairena-del-aljarafe-en-su-salida-anual/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "La Función Principal se celebrará hoy a las 12 horas.",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-procesionara-hoy-por-las-calles-de-mairena-del-aljarafe-en-su-salida-anual/"
   },
   {
    "fecha": "2026-10-17",
