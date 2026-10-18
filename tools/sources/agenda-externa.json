@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-17",
+ "generado": "2026-10-18",
  "fuentes": {
   "InfoCofrade": 364,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 39
+  "Prensa (texto de noticias)": 21
  },
  "eventos": [
   {
@@ -4360,26 +4360,6 @@
    "url": "https://www.laportadadeextremadura.com/caceres/ciudad-caceres/juan-miguel-martin-mena-disenara-el-cartel-oficial-de-la-semana-santa-de-caceres-de-2027_8811_102.html"
   },
   {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "magna",
-   "titulo": "Previous PostArcos de la Frontera celebra este sábado una magna con once hermandades",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "coronacion",
-   "titulo": "El Centenario de la Coronación Canónica de la Virgen de las Angustias de Vera, en imágenes",
-   "nota": "",
-   "fuente": "Diario de Almería",
-   "url": "https://www.diariodealmeria.es/provincia/vera/centenario-coronacion-canonica-virgen-angustias_3_2008206252.html"
-  },
-  {
    "fecha": "2026-11-09",
    "hora": "",
    "ciudad": "almeria",
@@ -4408,36 +4388,6 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-sevilla-de-2027/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Santa María de la Merced, en su palio, preparada para la procesión del 17 de octubre.",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Recorrido de la procesión extraordinaria de la Merced el 17 de octubre",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
   },
   {
    "fecha": "2026-11-01",
@@ -4480,16 +4430,6 @@
    "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
   },
   {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La formación participará este sábado tras el trono de la Virgen del Carmen de Huelin tanto a la ida a la Catedral como a la vuelta al templo de San Juan, donde finalizará",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
-  },
-  {
    "fecha": "2026-11-01",
    "hora": "",
    "ciudad": "granada",
@@ -4498,16 +4438,6 @@
    "nota": "",
    "fuente": "lavozdelsur.es",
    "url": "https://www.lavozdelsur.es/ediciones/granada/entre-autobuses-motos-y-coches-asi-ha-sido-el-accidentado-traslado-de-la-santa-cena-en-granada.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "jaen",
-   "tipo": "extraordinaria",
-   "titulo": "Todo listo para la procesión extraordinaria del Prendimiento de Úbeda de este sábado",
-   "nota": "",
-   "fuente": "Cadena SER",
-   "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
   },
   {
    "fecha": "2026-10-18",
@@ -4548,6 +4478,106 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "magna",
+   "titulo": "Previous PostArcos de la Frontera celebra este sábado una magna con once hermandades",
+   "nota": "",
+   "fuente": "INRI Información",
+   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "coronacion",
+   "titulo": "El Centenario de la Coronación Canónica de la Virgen de las Angustias de Vera, en imágenes",
+   "nota": "",
+   "fuente": "Diario de Almería",
+   "url": "https://www.diariodealmeria.es/provincia/vera/centenario-coronacion-canonica-virgen-angustias_3_2008206252.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Santa María de la Merced, en su palio, preparada para la procesión del 17 de octubre.",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "coronacion",
+   "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "Recorrido de la procesión extraordinaria de la Merced el 17 de octubre",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La formación participará este sábado tras el trono de la Virgen del Carmen de Huelin tanto a la ida a la Catedral como a la vuelta al templo de San Juan, donde finalizará",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "extraordinaria",
+   "titulo": "Todo listo para la procesión extraordinaria del Prendimiento de Úbeda de este sábado",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
   },
   {
    "fecha": "2026-10-17",
@@ -4600,16 +4630,6 @@
    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
   },
   {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
-  },
-  {
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "cordoba",
@@ -4630,31 +4650,11 @@
    "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
   },
   {
-   "fecha": "2026-11-07",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
-  },
-  {
    "fecha": "2026-10-17",
    "hora": "",
    "ciudad": "granada",
    "tipo": "procesion",
    "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
-  },
-  {
-   "fecha": "2026-11-07",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
@@ -4688,36 +4688,6 @@
    "nota": "",
    "fuente": "Diario Sur",
    "url": "https://www.diariosur.es/semana-santa/lluvia-impide-procesion-virgen-carmen-huelin-20261017192555-nt.html"
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "18:30",
-   "tipo": "culto",
-   "titulo": "Piedad: Conferencia 'Lo que representa Nuestra Señora de la Piedad en la Semana Santa de Málaga y su devoción popular', a cargo del deán de la Catedral, José Manuel Ferrary, por el centenario de la cofradía",
-   "nota": "En el Museum Jorge Rando."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Santo Traslado: Primer día de triduo en honor de la Virgen de la Soledad",
-   "nota": "En la parroquia de San Pablo."
-  },
-  {
-   "ciudad": "malaga",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/semana-santa/fin-semana-procesiones-puerto-torre-palo-perchel-20261002231356-nt.html",
-   "fecha": "2026-10-14",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Mutilado: Conferencia 'La vida cotidiana de los primeros cristianos', a cargo del sacerdote Francisco Aurioles",
-   "nota": "En el Aula Loyola (Sagrado Corazón)."
   },
   {
    "fecha": "2026-10-16",
@@ -4768,34 +4738,7 @@
    "nota": "",
    "fuente": "Diario Sur",
    "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
-  },
-  {
-   "fecha": "2026-10-14",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de 2027",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/13/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-2027/"
   }
  ],
- "conflictos": [
-  {
-   "a": {
-    "fecha": "2026-10-18",
-    "hora": "",
-    "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
-    "fuente": "El Día de Córdoba",
-    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
-   },
-   "b": {
-    "fecha": "2026-10-17",
-    "hora": "",
-    "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
-    "fuente": "Gente de Paz",
-    "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
-   }
-  }
- ]
+ "conflictos": []
 }
