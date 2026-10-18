@@ -1,7 +1,7 @@
 {
  "generado": "2026-10-18",
  "fuentes": {
-  "InfoCofrade": 364,
+  "InfoCofrade": 348,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
@@ -9,356 +9,6 @@
   "Prensa (texto de noticias)": 24
  },
  "eventos": [
-  {
-   "fecha": "2026-10-17",
-   "hora": "19:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario (Las Aguas)",
-   "nota": "Música: la Banda de Música Municipal de Mairena del Alcor.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "18:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de San Lucas Evangelista (Santa Aurelia)",
-   "nota": "Música: la Agrupación Musical Santa Cecilia.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino con Nuestra Señora de la Misericordia (Rochelambert)",
-   "nota": "Salida: 20:00",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "21:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario público con el Simpecado de la Hermandad del Rocío del Cerro del Águila",
-   "nota": "Salida: 21:00",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario público con el Simpecado de la Hermandad de la Alegría",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "19:00",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (San Pablo) de 17:00-21:00 (misa a las 19:00)",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a la Virgen del Amparo de 17:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Carmen (Santa Ana) de 09:30-13:30 y 18:00-20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (San Jerónimo) de 11:00-14:00 y 17:00-19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima del Amor (Pino Montano) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Salud (San Gonzalo) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de las Lágrimas (Exaltación) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a la Divina Pastora (San Antonio) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria de la Virgen de la Merced de Córdoba",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "16:00",
-   "ciudad": "jaen",
-   "tipo": "extraordinaria",
-   "titulo": "Procesión extraordinaria del Prendimiento de Úbeda",
-   "nota": "Música: la Agrupación Musical de Pasión de Linares y Banda de Cornetas y Tambores María Santísima del Amor.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora del Rosario de San Julián",
-   "nota": "Música: la Banda de Cornetas y Tambores Nuestra Señora del Sol, abriendo el cortejo, y la Banda de Música Villa de Guillena tras el paso.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "17:45",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Procesión de Nuestra Señora de las Nieves (Santa María la Blanca)",
-   "nota": "Música: la Banda de Música del Maestro Tejera.",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "11:15",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario con María Santísima del Rosario (Milagrosa)",
-   "nota": "Salida: 11:15",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "08:00",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario de la Aurora con María Santísima de la Paz",
-   "nota": "Salida: 08:00",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "11:30",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Rosario de la Aurora con María Santísima de la Esperanza, Reina de los Mártires (Juncal)",
-   "nota": "Salida: 11:30",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Rosario (San Pablo) de 12:00-14:30 y 17:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo de 10:00-14:00 y 17:00-21:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos a Nuestra Señora del Carmen (Santa Ana) de 09:30-13:30 y 18:00-20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Veneración a Nuestra Señora de los Desamparados (Alcosa) de 10:00-14:00 y 18:00-22:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "12:15",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Principal a María Santísima del Amor (Pino Montano) a las 12:15",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "12:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora de la Salud (San Gonzalo) a las 12:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "11:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Solemne a Nuestra Señora de las Lágrimas (Exaltación) a las 11:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "12:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Función Principal de Instituto a la Divina Pastora (San Antonio) a las 12:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "20:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Septenario a María Santísima del Rosario (Montesión) en San Martín a las 20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "coronacion",
-   "titulo": "Función Solemne por el Aniversario de la Coronación Canónica de María Santísima de la Victoria",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Macarena) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "11:15",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Acto de imposición de la medalla de la ciudad a Nuestra Señora del Amparo (Magdalena) a las 11:15",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-19",
    "hora": "20:30",
@@ -491,6 +141,16 @@
   },
   {
    "fecha": "2026-10-22",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Paz a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-22",
    "hora": "20:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -555,6 +215,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a Nuestra Señora de la Misericordia (Rochelambert) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Paz a las 19:45",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -691,6 +361,16 @@
   },
   {
    "fecha": "2026-10-24",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Paz a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
    "hora": "20:30",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -735,6 +415,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo a San Francisco de Paula (San José Obrero) a las 19:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -881,10 +571,30 @@
   },
   {
    "fecha": "2026-10-25",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
    "hora": "12:00",
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Misa de acción de gracias por el primer aniversario de la «Misión de la Esperanza» en la Parroquia de San Pío X a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-26",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -901,10 +611,40 @@
   },
   {
    "fecha": "2026-10-27",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-27",
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Cabildo de elecciones en la Hermandad de Santa Marta",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -951,10 +691,30 @@
   },
   {
    "fecha": "2026-10-30",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-30",
    "hora": "",
    "ciudad": "granada",
    "tipo": "culto",
    "titulo": "Encuentro Nacional de Hermandades de la Sagrada Cena en Granada",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-31",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1021,6 +781,16 @@
   },
   {
    "fecha": "2026-11-01",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
    "hora": "",
    "ciudad": "huelva",
    "tipo": "culto",
@@ -1063,9 +833,39 @@
    "fecha": "2026-11-02",
    "hora": "",
    "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Todos los Santos de 10:00-13:00 y 17:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "sevilla",
    "tipo": "traslado",
    "titulo": "Traslado de Nuestro Padre Jesús Nazareno de Estepa desde el cementerio a su templo",
    "nota": "Música: la Banda de Música del Maestro Tejera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Todos los Santos de 10:00-13:00 y 17:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-05",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
+   "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -1075,6 +875,16 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1100,6 +910,16 @@
    "url": "https://infocofrade.com/agenda/"
   },
   {
+   "fecha": "2026-11-07",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
    "fecha": "2026-11-08",
    "hora": "17:00",
    "ciudad": "sevilla",
@@ -1111,7 +931,7 @@
   },
   {
    "fecha": "2026-11-08",
-   "hora": "",
+   "hora": "18:00",
    "ciudad": "sevilla",
    "tipo": "procesion",
    "titulo": "Procesión de la Nuestra Señora de Todos los Santos",
@@ -1125,6 +945,26 @@
    "ciudad": "sevilla",
    "tipo": "coronacion",
    "titulo": "Misa estacional y coronación canónica de Nuestra Señora del Amparo (Magdalena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestra Señora del Carmen (San Gil) a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestra Señora de Todos los Santos a las 12:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
