@@ -1,15 +1,11 @@
 {
  "sevilla": {
   "puntos": 2000,
-  "situados": 1961,
+  "situados": 1959,
   "pct": 98,
   "calles_osm": 8815,
   "templos": 156,
   "no_situados": [
-   [
-    "Jesús del Gran",
-    6
-   ],
    [
     "S. Miguel Plaza",
     5
@@ -20,10 +16,6 @@
    ],
    [
     "Doña",
-    4
-   ],
-   [
-    "Doña María",
     4
    ],
    [
@@ -52,14 +44,6 @@
    ],
    [
     "de Chiva",
-    3
-   ],
-   [
-    "Av. Isabel la C.",
-    3
-   ],
-   [
-    "Ramón y Caj.",
     3
    ],
    [
@@ -105,6 +89,22 @@
    [
     "Pueblade Cazalla",
     2
+   ],
+   [
+    "Torrebermeja",
+    2
+   ],
+   [
+    "Torres Naharro",
+    2
+   ],
+   [
+    "Torrenueva",
+    2
+   ],
+   [
+    "Torrecuadrada",
+    2
    ]
   ]
  },
@@ -118,10 +118,6 @@
    [
     "Torre Sur",
     43
-   ],
-   [
-    "Alameda",
-    37
    ],
    [
     "Tribuna",
@@ -191,15 +187,11 @@
  },
  "granada": {
   "puntos": 358,
-  "situados": 327,
-  "pct": 91,
+  "situados": 333,
+  "pct": 93,
   "calles_osm": 5904,
   "templos": 67,
   "no_situados": [
-   [
-    "Gran Vía",
-    8
-   ],
    [
     "ENTRA",
     5
@@ -295,6 +287,10 @@
    [
     "Carrera del",
     1
+   ],
+   [
+    "S. Matías - Bajo",
+    1
    ]
   ]
  },
@@ -305,18 +301,6 @@
   "calles_osm": 4264,
   "templos": 75,
   "no_situados": [
-   [
-    "PUERTA DEL PERDÓN",
-    75
-   ],
-   [
-    "INTERIOR S.I.C.",
-    74
-   ],
-   [
-    "PUERTA DE LAS COFRADÍAS",
-    72
-   ],
    [
     "CTRA. PALMA DEL RIO",
     21
@@ -402,8 +386,20 @@
     4
    ],
    [
-    "DOCTOR MARAÑÓN",
+    "GENERAL CABALLERO DE RODAS",
     4
+   ],
+   [
+    "SIERRA DE HORNACHUELOS",
+    4
+   ],
+   [
+    "AV. ESCRITOR HOYOS DE NORIEGA",
+    3
+   ],
+   [
+    "PUERTA ALMODÓVAR",
+    3
    ]
   ]
  },
@@ -518,17 +514,13 @@
  },
  "huelva": {
   "puntos": 326,
-  "situados": 317,
-  "pct": 97,
+  "situados": 320,
+  "pct": 98,
   "calles_osm": 2051,
   "templos": 18,
   "no_situados": [
    [
     "stitución",
-    5
-   ],
-   [
-    "Av. Federico Molina",
     5
    ],
    [
@@ -545,10 +537,6 @@
    ],
    [
     "Vega",
-    2
-   ],
-   [
-    "Báez",
     2
    ],
    [
@@ -621,6 +609,14 @@
    ],
    [
     "Av. Manuel Pl. Ivonne Siurot",
+    1
+   ],
+   [
+    "Santuario Av. Manuel Cinta Siurot",
+    1
+   ],
+   [
+    "Av. Virgen Dolores",
     1
    ]
   ]

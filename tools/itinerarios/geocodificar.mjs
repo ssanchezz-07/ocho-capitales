@@ -66,6 +66,26 @@ const ESPECIAL = /^(salida|entrada|entra|encierro|recogida|templo|a su templo|a 
 // «Carrera oficial» de cada capital: la calle de OSM donde empieza (se busca por nombre, no por coordenadas fijas)
 const CARRERA = { sevilla: 'campana', malaga: 'alameda principal', granada: 'carrera de la virgen', cordoba: 'puerta del puente', cadiz: 'plaza de san juan de dios', huelva: 'plaza de las monjas', almeria: 'paseo de almeria', jaen: 'plaza de santa maria' };
 
+// Puntos fijos que OSM no da como calle. Córdoba: la carrera oficial entra por el Triunfo, atraviesa la Mezquita-Catedral (patio de los
+// Naranjos, interior, puertas) y sale a Cardenal Herrero. Coordenadas aproximadas (a escala de plano) de la Mezquita y de esas calles.
+const FIJOS = {
+  cordoba: {
+    'entrada c o': [37.87798, -4.77928],
+    'salida c o': [37.87982, -4.77989],
+    'patio naranjos': [37.87975, -4.77955],
+    'puerta del perdon': [37.87978, -4.78005],
+    'interior s i c': [37.87915, -4.77945],
+    'puerta de las cofradias': [37.87905, -4.77985],
+  },
+};
+// Nombres cortados o abreviados en los PDF que sí existen en OSM con su nombre completo (comprobado en tools/itinerarios/cache/osm-*.json)
+const ALIAS = {
+  sevilla: { 'jesus del gran': 'Jesús del Gran Poder', 'dona maria': 'Doña María Coronel', 'avenida isabel la c': 'Isabel la Católica', 'isabel la c': 'Isabel la Católica', 'ramon y caj': 'Ramón y Cajal', 'avenida ramon y cajal': 'Ramón y Cajal' },
+  granada: { 'gran via': 'Gran Vía de Colón' },
+  huelva: { 'federico molina': 'Avenida del Alcalde Federico Molina Orta', 'avenida federico molina': 'Avenida del Alcalde Federico Molina Orta', 'baez': 'Plaza de Quintero Báez' },
+  malaga: { 'alameda': 'Alameda Principal' },
+  cordoba: { 'conde cardenas': 'Conde de Cárdenas', 'doctor maranon': 'Doctor Gregorio Marañón' },
+};
 function situar(ix, ciudad, h, pts) {
   const sede = h && h.sede ? norm(h.sede) : '';
   // ancla: el primer punto del itinerario que es una calle reconocible (para elegir la sede y la catedral cercanas)
@@ -80,11 +100,20 @@ function situar(ix, ciudad, h, pts) {
   const res = pts.map((p) => {
     const l = norm(p.lugar);
     let pos = null, como = '';
-    if (ESPECIAL.test(l) || /^(salida|entrada|encierro)\b/.test(l)) { pos = pSede; como = 'sede'; }
+    const fijo = FIJOS[ciudad] && FIJOS[ciudad][l.replace(/ puerta perdon$/, '')];
+    // «Salida/Entrada <lugar>»: es ese lugar (una calle, la carrera oficial…), no la sede; solo «salida», «entrada templo/palio/casa hdad…» son la sede
+    const mm = /^(salida|entrada|encierro|sale)\s+(.+)$/.exec(l);
+    const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
+    if (fijo) { pos = fijo; como = 'carrera oficial'; }
+    else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
+      const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); pos = cercano(ix.calles.get(k), prev); como = 'calle';
+    }
+    else if (ESPECIAL.test(l) || /^(salida|entrada|encierro)\b/.test(l)) { pos = pSede; como = 'sede'; }
     else if (/catedral|s i c|estacion de penitencia/.test(l) && pCat) { pos = pCat; como = 'catedral'; }
     else if (/carrera oficial|^c oficial|^carrera$/.test(l)) { const g = ix.calles.get(norm(CARRERA[ciudad])) || ix.calles.get(nucleo(CARRERA[ciudad])); if (g) { pos = cercano(g, prev); como = 'carrera oficial'; } }
     else {
-      const cands = [l, nucleo(p.lugar)].filter(Boolean);
+      const al = [l, nucleo(p.lugar)].map((k) => ALIAS[ciudad] && ALIAS[ciudad][k]).find(Boolean);
+      const cands = [l, nucleo(p.lugar), ...(al ? [norm(al), nucleo(al)] : [])].filter(Boolean);
       let geos = null;
       for (const k of cands) if (ix.calles.has(k)) { geos = ix.calles.get(k); break; }
       if (!geos) { // nombre parcial: la calle cuyo núcleo contiene el del itinerario (o al revés), de al menos 5 letras
@@ -94,12 +123,12 @@ function situar(ix, ciudad, h, pts) {
       if (geos) { pos = cercano(geos, prev); como = 'calle'; }
     }
     if (pos) prev = pos; else sin.push(p.lugar);
-    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como };
+    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!fijo };
   });
   // saltos imposibles (una calle homónima en otro barrio): un punto a más de 900 m de sus vecinos, que están cerca entre sí, se descarta
   const m = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
   for (let pasada = 0; pasada < 2; pasada++) for (let i = 0; i < res.length; i++) {
-    if (res[i].lat == null || res[i].como === 'sede' || res[i].como === 'catedral') continue;
+    if (res[i].lat == null || res[i]._f || res[i].como === 'sede' || res[i].como === 'catedral') continue;
     let a = i - 1; while (a >= 0 && res[a].lat == null) a--;
     let b = i + 1; while (b < res.length && res[b].lat == null) b++;
     const da = a >= 0 ? m(res[i], res[a]) : 0, db = b < res.length ? m(res[i], res[b]) : 0;
@@ -111,7 +140,7 @@ function situar(ix, ciudad, h, pts) {
   if (sit.length > 4) {
     const med = (a) => a.slice().sort((x, y) => x - y)[Math.floor(a.length / 2)];
     const c = { lat: med(sit.map((p) => p.lat)), lon: med(sit.map((p) => p.lon)) };
-    for (const p of res) if (p.lat != null && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
+    for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
   // lo que no se pudo situar se estima entre el punto situado anterior y el siguiente (marcado como «estimado»)
   for (let i = 0; i < res.length; i++) {
@@ -120,6 +149,7 @@ function situar(ix, ciudad, h, pts) {
     let b = i + 1; while (b < res.length && res[b].lat == null) b++;
     if (a >= 0 && b < res.length) { const t = (i - a) / (b - a); res[i].lat = +(res[a].lat + (res[b].lat - res[a].lat) * t).toFixed(6); res[i].lon = +(res[a].lon + (res[b].lon - res[a].lon) * t).toFixed(6); res[i].como = 'estimado'; }
   }
+  for (const p of res) delete p._f;
   return { res, sin, sede: pSede };
 }
 
