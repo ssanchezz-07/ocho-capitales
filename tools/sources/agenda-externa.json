@@ -1,7 +1,7 @@
 {
  "generado": "2026-10-19",
  "fuentes": {
-  "InfoCofrade": 348,
+  "InfoCofrade": 352,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
@@ -431,6 +431,16 @@
   },
   {
    "fecha": "2026-10-24",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Sacramental en la Parroquia de San Vicente a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "concierto",
@@ -581,6 +591,16 @@
   },
   {
    "fecha": "2026-10-25",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Sacramental en la Parroquia de San Vicente a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
    "hora": "12:00",
    "ciudad": "sevilla",
    "tipo": "culto",
@@ -595,6 +615,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-26",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Sacramental en la Parroquia de San Vicente a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1156,6 +1186,16 @@
    "tipo": "culto",
    "titulo": "Triduo a San Andrés Apóstol (Panaderos) a las 20:15",
    "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Medalla Milagrosa (Ciudad Jardín)",
+   "nota": "Música: la Banda de Música de María Santísima de la Victoria de las Cigarreras.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
