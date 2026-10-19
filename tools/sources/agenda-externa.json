@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-18",
+ "generado": "2026-10-19",
  "fuentes": {
   "InfoCofrade": 348,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 24
+  "Prensa (texto de noticias)": 19
  },
  "eventos": [
   {
@@ -4280,16 +4280,6 @@
    "url": "https://www.lavozdelsur.es/ediciones/granada/entre-autobuses-motos-y-coches-asi-ha-sido-el-accidentado-traslado-de-la-santa-cena-en-granada.html"
   },
   {
-   "fecha": "2026-10-18",
-   "hora": "12:00",
-   "ciudad": "cordoba",
-   "tipo": "traslado",
-   "titulo": "La Virgen del Consuelo de Puente Genil recorrerá las calles en una procesión extraordinaria por el cincuentenario de su bendición",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-virgen-del-consuelo-de-puente-genil-recorrera-las-calles-en-una-procesion-extraordinaria-por-el-cincuentenario-de-su-bendicion/"
-  },
-  {
    "fecha": "2027-03-13",
    "hora": "",
    "ciudad": "malaga",
@@ -4320,16 +4310,6 @@
    "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
   },
   {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
-  },
-  {
    "fecha": "2026-11-07",
    "hora": "",
    "ciudad": "cordoba",
@@ -4348,6 +4328,26 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "12:00",
+   "ciudad": "cordoba",
+   "tipo": "traslado",
+   "titulo": "La Virgen del Consuelo de Puente Genil recorrerá las calles en una procesión extraordinaria por el cincuentenario de su bendición",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-virgen-del-consuelo-de-puente-genil-recorrera-las-calles-en-una-procesion-extraordinaria-por-el-cincuentenario-de-su-bendicion/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
   },
   {
    "fecha": "2026-10-18",
@@ -4588,26 +4588,6 @@
    "nota": "",
    "fuente": "El Día de Córdoba",
    "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "Paz y Esperanza Coronada",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/cordoba/paz-esperanza-coronada_0_2007854046.html"
-  },
-  {
-   "fecha": "2026-10-15",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "Y es que, hasta el año pasado, el rosario de las Glorias se celebraba en la mañana del tercer domingo de octubre, saliendo a primera hora desde la parroquia de los Santos",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
   }
  ],
  "conflictos": []
