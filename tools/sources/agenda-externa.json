@@ -5,7 +5,7 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 36,
+  "Prensa (agendas semanales)": 29,
   "Prensa (texto de noticias)": 19
  },
  "eventos": [
@@ -4068,76 +4068,6 @@
    "tipo": "culto",
    "titulo": "Conferencia sobre el palio de la Virgen de la Encarnación",
    "nota": "Salones de Jesús Divino Obrero"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "17:00",
-   "tipo": "acto",
-   "titulo": "Escuela de Flamenco Piedad y Esperanza",
-   "nota": "Barrio de Las Palmeras"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:45",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de María Santísima de la Caridad",
-   "nota": "Feligresía de San Andrés"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "20:45",
-   "tipo": "acto",
-   "titulo": "Gozos a Santa María de la Merced",
-   "nota": "Parroquia de San Antonio de Padua"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "21:00",
-   "tipo": "culto",
-   "titulo": "Rosario en el Resucitado",
-   "nota": "Parroquia de Santa Marina"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-9-octubre-cordoba/202610090730003501974.amp.html",
-   "fecha": "2026-10-09",
-   "hora": "21:15",
-   "tipo": "culto",
-   "titulo": "Cabildo extraordinario del Calvario",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
   },
   {
    "fecha": "2027-04-03",
