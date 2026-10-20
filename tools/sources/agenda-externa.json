@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 23,
-  "Prensa (texto de noticias)": 30
+  "Prensa (texto de noticias)": 35
  },
  "eventos": [
   {
@@ -4358,6 +4358,56 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/la-virgen-del-prado-volvera-a-encontrarse-con-sevilla-en-una-nueva-salida-de-gloria-por-el-corazon-de-la-ciudad/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "traslado",
+   "titulo": "Hoy, Natividad de la Virgen María, es la onomástica de la Virgen de la Caridad, que cierra sus cultos con una Eucaristía especial con la Coral Polifónica María del Carmen",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "culto",
+   "titulo": "Hoy comienza la novena en honor a la Virgen del Carmen",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2027-07-08",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "procesion",
+   "titulo": "La Iglesia de San Gabriel celebra los cultos a la patrona del Barrio de El Puente desde este miércoles 8 de julio y hasta su salida procesional del día 16 en horario de l",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "extraordinaria",
+   "titulo": "El Cristo de la Yedra recorrerá Montilla en una salida extraordinaria por el centenario de su incorporación al Viernes Santo",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/el-cristo-de-la-yedra-recorrera-montilla-en-una-salida-extraordinaria-por-el-centenario-de-su-incorporacion-al-viernes-santo/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Manuel Lamprea Ramírez, pregonero de las Glorias de Sevilla de 2027",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/sevilla/manuel-lamprea-ramirez-pregonero-de-las-glorias-de-sevilla-de-2027/"
   },
   {
    "fecha": "2026-10-18",
