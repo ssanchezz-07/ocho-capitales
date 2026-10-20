@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 23,
-  "Prensa (texto de noticias)": 39
+  "Prensa (agendas semanales)": 22,
+  "Prensa (texto de noticias)": 44
  },
  "eventos": [
   {
@@ -3832,6 +3832,36 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
+   "fecha": "2026-10-21",
+   "hora": "17:00",
+   "tipo": "acto",
+   "titulo": "Inicio del curso de costura de la Hermandad de la Merced",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
+   "fecha": "2026-10-21",
+   "hora": "18:30",
+   "tipo": "acto",
+   "titulo": "Recogida solidaria de la Hermandad del Rescatado",
+   "nota": "Hall del Colegio"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
+   "fecha": "2026-10-21",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo en honor al arcángel San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-20-octubre-cordoba/202610192200003511320.amp.html",
    "fecha": "2026-10-20",
    "hora": "19:30",
@@ -4018,46 +4048,6 @@
    "tipo": "culto",
    "titulo": "Triduo a Santa Teresa de Jesús",
    "nota": "Iglesia conventual de San José (San Cayetano)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "09:45",
-   "tipo": "culto",
-   "titulo": "Rosario matinal de María Santísima de la Paz y Esperanza Coronada",
-   "nota": "Iglesia conventual del Santo Ángel (Capuchinos)"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "10:00",
-   "tipo": "culto",
-   "titulo": "Cabildos ordinario y extraordinario de la Hermandad de las Lágrimas",
-   "nota": "Salones parroquiales | Plaza de la Marina Española, s/n"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-11-octubre-cordoba/202610102300003502125.amp.html",
-   "fecha": "2026-10-11",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
   },
   {
    "fecha": "2027-04-03",
@@ -4448,6 +4438,56 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La Real Federación prevé celebrar los traslados de Kerygma el próximo 28 de noviembre.",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Así lo ha comunicado el presidente de la Real Federación, Armando Javier Ortiz, durante el Pleno de Hermanos Mayores celebrado en la tarde-noche de este martes, 20 de oct",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Esta es la fecha de los traslados de Kerygma que se ha dado a conocer en el Pleno de la Federación, presidido por el Excmo. y Rvdmo. Sr. D. José María Gil Tamayo, Arzobis",
+   "nota": "",
+   "fuente": "COPE",
+   "url": "https://www.cope.es/emisoras/andalucia/granada-provincia/granada/cruz-de-guia/noticias/fecha-traslados-kerygma-dado-conocer-pleno-federacion-presidido-excmo-rvdmo-d-jose-maria-gil-tamayo-arzobispo-granada-20261020_3459430.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "10:00",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma en Granada se prevén para el 28 de noviembre desde la Catedral a pesar de las elecciones generales",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/los-traslados-de-kerygma-en-granada-se-preven-para-el-28-de-noviembre-desde-la-catedral-a-pesar-de-las-elecciones-generales/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Jesús del Amor y la Entrega presidirá el Vía Crucis Oficial de 2027 y la Virgen de las Angustias de Pinos Puente, la Vigilia de la Inmaculada",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/jesus-del-amor-y-la-entrega-presidira-el-via-crucis-oficial-de-2027-y-la-virgen-de-las-angustias-de-pinos-puente-la-vigilia-de-la-inmaculada/"
   },
   {
    "fecha": "2026-10-18",
