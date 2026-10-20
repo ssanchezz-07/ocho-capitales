@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 32,
-  "Prensa (texto de noticias)": 27
+  "Prensa (agendas semanales)": 23,
+  "Prensa (texto de noticias)": 30
  },
  "eventos": [
   {
@@ -4060,96 +4060,6 @@
    "nota": "Real Parroquia de San Lorenzo Mártir"
   },
   {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "10:00",
-   "tipo": "acto",
-   "titulo": "24 horas de adoración al Santísimo",
-   "nota": "Parroquia del Beato Álvaro de Córdoba"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Reunión del grupo joven de las Penas de Santiago",
-   "nota": "Casa de Hermandad"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "11:00",
-   "tipo": "acto",
-   "titulo": "Jornada de puertas abiertas del grupo joven de la Estrella",
-   "nota": "Casa de Hermandad de la Estrella"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "12:00",
-   "tipo": "acto",
-   "titulo": "Convivencia de los grupos jóvenes de las Penas y las Angustias",
-   "nota": "Casa de Hermandad de las Angustias"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:00",
-   "tipo": "procesion",
-   "titulo": "Rosario vespertino de María Santísima de la O",
-   "nota": "Parroquia de Nuestra Señora de la Aurora"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "extraordinaria",
-   "titulo": "Salida extraordinaria de la Virgen de la Alegría",
-   "nota": "Parroquia de Santa Marina"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Encarnación",
-   "nota": ""
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "20:00",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Mayor Dolor",
-   "nota": "Real Parroquia de San Lorenzo Mártir"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-10-octubre-cordoba/202610101000003502112.html",
-   "fecha": "2026-10-10",
-   "hora": "20:15",
-   "tipo": "culto",
-   "titulo": "Conferencia sobre el palio de la Virgen de la Encarnación",
-   "nota": "Salones de Jesús Divino Obrero"
-  },
-  {
    "fecha": "2027-04-03",
    "hora": "",
    "ciudad": "malaga",
@@ -4418,6 +4328,36 @@
    "nota": "",
    "fuente": "Diario de Cádiz",
    "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Rosario de la Macarena procesionará por Sevilla el domingo 25 de octubre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "magna",
+   "titulo": "La zona rural de Jerez vivirá una Magna histórica el próximo 7 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Prado volverá a encontrarse con Sevilla en una nueva salida de gloria por el corazón de la ciudad",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-virgen-del-prado-volvera-a-encontrarse-con-sevilla-en-una-nueva-salida-de-gloria-por-el-corazon-de-la-ciudad/"
   },
   {
    "fecha": "2026-10-18",
