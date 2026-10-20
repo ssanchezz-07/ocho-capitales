@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 23,
-  "Prensa (texto de noticias)": 35
+  "Prensa (texto de noticias)": 39
  },
  "eventos": [
   {
@@ -4408,6 +4408,46 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/sevilla/manuel-lamprea-ramirez-pregonero-de-las-glorias-de-sevilla-de-2027/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "11:30",
+   "ciudad": "sevilla",
+   "tipo": "cartel",
+   "titulo": "El acto de presentación del cartel inaugural de la FELISE 2026 se ha celebrado este martes 20 de octubre, a las 11:30 horas, en el Aula 1 de la Real Fábrica de Artillería",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "El periodista y presentador sevillano Roberto Leal será el encargado de pronunciar el pregón el miércoles 28 de octubre en el Espacio Fundación Unicaja.",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "extraordinaria",
+   "titulo": "Los hermanos deberán pronunciarse sobre la participación de la corporación en la Misa Pontifical de Acción de Gracias y en la posterior Procesión Extraordinaria previstas",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Rosario de la Macarena procesionará el domingo 25 de octubre",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
   },
   {
    "fecha": "2026-10-18",
