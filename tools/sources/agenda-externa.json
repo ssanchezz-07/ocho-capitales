@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-19",
+ "generado": "2026-10-20",
  "fuentes": {
   "InfoCofrade": 353,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 32,
-  "Prensa (texto de noticias)": 21
+  "Prensa (texto de noticias)": 24
  },
  "eventos": [
   {
@@ -4360,6 +4360,36 @@
    "url": "https://www.cope.es/emisoras/andalucia/malaga-provincia/malaga/noticias/agrupacion-cofradias-archidona-programa-procesion-magna-culminar-centenario-20261019_3456509.amp.html"
   },
   {
+   "fecha": "2027-01-16",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "pregon",
+   "titulo": "La Semana Santa del Realejo 2027 ya tiene pregonero, cartelista y presentadora",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/semana-santa-granada-2027-semana-santa-granada-realejo-granada-semana-santa-realejo-semana-santa-realejo-granada-pregon-realejo-2027_0_2008289692.html"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "20:30",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Durante los días 21, 22 y 23 de octubre se celebrará el Solemne Triduo en la Basílica de San Juan de Dios (Granada), a las 20:30 horas.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "El sábado, 24 de octubre, se celebrará la Solemne Procesión de Alabanza en honor a San Rafael.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
+  },
+  {
    "fecha": "2026-10-18",
    "hora": "12:00",
    "ciudad": "cordoba",
@@ -4588,36 +4618,6 @@
    "nota": "",
    "fuente": "Diario Sur",
    "url": "https://www.diariosur.es/semana-santa/lluvia-impide-procesion-virgen-carmen-huelin-20261017192555-nt.html"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "El viernes 16 de octubre está previsto que la banda de cornetas y tambores Coronación de Espinas ofrece un concierto extraordinario en el que dará a conocer la nueva marc",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "21:30",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "CONCIERTO DE «CORONACIÓN DE ESPINAS». ESTRENO DE LA MARCHA ETERNA MERCED",
-   "nota": "",
-   "fuente": "Hermandad la Merced",
-   "url": "https://www.hermandaddelamerced.org/concierto-de-coronacion-de-espinas-estreno-de-la-marcha-eterna-merced/"
-  },
-  {
-   "fecha": "2026-10-16",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "Antes de la proccesión extraordinaria, la Banda de Cornetas y Tambores Coronación de Espinas estrenará este viernes (21:30) la marcha Eterna Merced, dedicada a la su titu",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
   }
  ],
  "conflictos": []
