@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 32,
-  "Prensa (texto de noticias)": 24
+  "Prensa (texto de noticias)": 27
  },
  "eventos": [
   {
@@ -4388,6 +4388,36 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Este martes arranca la novena, que este año predicarán el marianista Rafael Iglesias, el párroco de María Auxiliadora de Puerto Real, Jesús Fabra;",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Los cultos seguirán tras la novena con la veneración a la Virgen para la que abrirá la iglesia todo el día 30 de octubre.",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "Esa tarde del 1 de noviembre será cuando la Virgen de la Palma procesione por las calles de la ciudad, poniendo el broche de oro al ciclo de procesiones de Gloria de la c",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
   },
   {
    "fecha": "2026-10-18",
