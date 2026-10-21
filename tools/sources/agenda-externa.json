@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-20",
+ "generado": "2026-10-21",
  "fuentes": {
   "InfoCofrade": 353,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 44
+  "Prensa (texto de noticias)": 39
  },
  "eventos": [
   {
@@ -4290,16 +4290,6 @@
    "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
   },
   {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "culto",
-   "titulo": "Este martes arranca la novena, que este año predicarán el marianista Rafael Iglesias, el párroco de María Auxiliadora de Puerto Real, Jesús Fabra;",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
-  },
-  {
    "fecha": "2026-10-30",
    "hora": "",
    "ciudad": "cadiz",
@@ -4350,26 +4340,6 @@
    "url": "https://eldiariocofrade.org/uncategorized/la-virgen-del-prado-volvera-a-encontrarse-con-sevilla-en-una-nueva-salida-de-gloria-por-el-corazon-de-la-ciudad/"
   },
   {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "traslado",
-   "titulo": "Hoy, Natividad de la Virgen María, es la onomástica de la Virgen de la Caridad, que cierra sus cultos con una Eucaristía especial con la Coral Polifónica María del Carmen",
-   "nota": "",
-   "fuente": "El Corto de Loja",
-   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "culto",
-   "titulo": "Hoy comienza la novena en honor a la Virgen del Carmen",
-   "nota": "",
-   "fuente": "El Corto de Loja",
-   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
    "fecha": "2027-07-08",
    "hora": "",
    "ciudad": "huelva",
@@ -4398,16 +4368,6 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/sevilla/manuel-lamprea-ramirez-pregonero-de-las-glorias-de-sevilla-de-2027/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "11:30",
-   "ciudad": "sevilla",
-   "tipo": "cartel",
-   "titulo": "El acto de presentación del cartel inaugural de la FELISE 2026 se ha celebrado este martes 20 de octubre, a las 11:30 horas, en el Aula 1 de la Real Fábrica de Artillería",
-   "nota": "",
-   "fuente": "Cadena SER",
-   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
   },
   {
    "fecha": "2026-10-28",
@@ -4450,16 +4410,6 @@
    "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
   },
   {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "Así lo ha comunicado el presidente de la Real Federación, Armando Javier Ortiz, durante el Pleno de Hermanos Mayores celebrado en la tarde-noche de este martes, 20 de oct",
-   "nota": "",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
-  },
-  {
    "fecha": "2026-11-28",
    "hora": "",
    "ciudad": "granada",
@@ -4488,6 +4438,56 @@
    "nota": "",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/golgota/jesus-del-amor-y-la-entrega-presidira-el-via-crucis-oficial-de-2027-y-la-virgen-de-las-angustias-de-pinos-puente-la-vigilia-de-la-inmaculada/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Este martes arranca la novena, que este año predicarán el marianista Rafael Iglesias, el párroco de María Auxiliadora de Puerto Real, Jesús Fabra;",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "traslado",
+   "titulo": "Hoy, Natividad de la Virgen María, es la onomástica de la Virgen de la Caridad, que cierra sus cultos con una Eucaristía especial con la Coral Polifónica María del Carmen",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "culto",
+   "titulo": "Hoy comienza la novena en honor a la Virgen del Carmen",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "11:30",
+   "ciudad": "sevilla",
+   "tipo": "cartel",
+   "titulo": "El acto de presentación del cartel inaugural de la FELISE 2026 se ha celebrado este martes 20 de octubre, a las 11:30 horas, en el Aula 1 de la Real Fábrica de Artillería",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Así lo ha comunicado el presidente de la Real Federación, Armando Javier Ortiz, durante el Pleno de Hermanos Mayores celebrado en la tarde-noche de este martes, 20 de oct",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
   },
   {
    "fecha": "2026-10-18",
@@ -4538,186 +4538,6 @@
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-procesionara-hoy-por-las-calles-de-mairena-del-aljarafe-en-su-salida-anual/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "magna",
-   "titulo": "Previous PostArcos de la Frontera celebra este sábado una magna con once hermandades",
-   "nota": "",
-   "fuente": "INRI Información",
-   "url": "https://inriinformacion.com/2026/10/11/todo-preparado-para-la-salida-extraordinaria-de-la-virgen-de-la-divina-gracia-de-padre-pio/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "coronacion",
-   "titulo": "El Centenario de la Coronación Canónica de la Virgen de las Angustias de Vera, en imágenes",
-   "nota": "",
-   "fuente": "Diario de Almería",
-   "url": "https://www.diariodealmeria.es/provincia/vera/centenario-coronacion-canonica-virgen-angustias_3_2008206252.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "Santa María de la Merced, en su palio, preparada para la procesión del 17 de octubre.",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "coronacion",
-   "titulo": "La Banda de cornetas y tambores Coronación de Espinas, que irá abriendo el cortejo el próximo sábado, estrenará durante la salida la nueva marcha 'Eterna Merced', que le ",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Recorrido de la procesión extraordinaria de la Merced el 17 de octubre",
-   "nota": "",
-   "fuente": "ABC",
-   "url": "https://www.abc.es/espana/andalucia/cordoba/semana-santa/horario-itinerario-estrenos-procesion-extraordinaria-merced-cordoba-20261014080221-nts.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La formación participará este sábado tras el trono de la Virgen del Carmen de Huelin tanto a la ida a la Catedral como a la vuelta al templo de San Juan, donde finalizará",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "jaen",
-   "tipo": "extraordinaria",
-   "titulo": "Todo listo para la procesión extraordinaria del Prendimiento de Úbeda de este sábado",
-   "nota": "",
-   "fuente": "Cadena SER",
-   "url": "https://cadenaser.com/andalucia/2026/10/14/todo-listo-para-la-procesion-extraordinaria-del-prendimiento-de-ubeda-de-este-sabado-radio-jaen/?outputTypeu003damp"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "Procesión de la Virgen de la Consolación y Sagrada Correa de Granada 2026: Horario e itinerario",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/agustinos-granada-hermandad-agustinos-granada-consolacion-granada-virgen-consolacion-granada-consolacion-y-sagrada-correa-granada-procesion-agustinos-granada_0_2008244770.amp.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "besamanos",
-   "titulo": "El sábado, 17 de octubre, la Sagrada Imagen será expuesta en Devoto Besamanos en horario de 10:00 a 18:00 horas.",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/san-agustin-granada-hermandad-san-agustin-granada-consolacion-granada-virgen-consolacion-granada-cultos-hermandad-san-agustin-granada-cofradia-san-agustin-granada_3_2008244663.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Santa María de la Merced luce preparada para su salida extraordinaria por el 50 aniversario de su llegada a la Hermandad",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/merced-luce-preparada-para-su-salida-extraordinaria-por-el-50-aniversario-de-su-llegada-a-la-hermandad/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "Horario y recorrido de la procesión de la Virgen de la Consolación y Sagrada Correa este sábado en Granada",
-   "nota": "",
-   "fuente": "Ideal",
-   "url": "https://www.ideal.es/semanasantagranada/horario-recorrido-procesion-virgen-consolacion-sagrada-correa-20261016095819-nt_amp.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "Día para la historia y para el recuerdo de la hermandad de la Merced.La corporación del Lunes Santo, si el tiempo lo permite, llevará a cabo este sábado a partir de las 1",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008263624.amp.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "besamanos",
-   "titulo": "Tras el besamanos realizado el miércoles y el jueves a la Divina Pastora de las Almas, en el que los fieles y devotos donaron litros de leche para Cáritas Parroquial, la ",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "La Divina Pastora procesiona este sábado por las calles de Motril",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "La Hermandad de la Merced de Córdoba mantiene su salida extraordinaria con un recorrido alternativo por la amenaza de lluvia",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/uncategorized/la-hermandad-de-la-merced-de-cordoba-mantiene-su-salida-extraordinaria-con-un-recorrido-alternativo-por-la-amenaza-de-lluvia/"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "extraordinaria",
-   "titulo": "La amenaza de lluvia obliga a recortar el recorrido de la procesión extraordinaria de la Virgen de la Merced de Córdoba",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/cordoba/lluvia-recorrido-procesion-extraordinaria-virgen-merced-cordoba_0_2008271798.html"
-  },
-  {
-   "fecha": "2026-10-17",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La lluvia impide la salida procesional de la Virgen del Carmen de Huelin por el Centro de Málaga",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/lluvia-impide-procesion-virgen-carmen-huelin-20261017192555-nt.html"
   }
  ],
  "conflictos": []
