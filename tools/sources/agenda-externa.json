@@ -4,7 +4,7 @@
   "InfoCofrade": 351,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 0,
+  "Federación de Granada": 2,
   "Prensa (agendas semanales)": 22,
   "Prensa (texto de noticias)": 48
  },
@@ -3790,6 +3790,26 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
@@ -4488,26 +4508,6 @@
    "nota": "",
    "fuente": "Portal de Cádiz",
    "url": "https://www.portaldecadiz.com/semana-santa/172983-el-cristo-de-la-vera-cruz-presidira-el-via-crucis-de-cadiz-en-2027-29-anos-despues-de-su-ultima-vez"
-  },
-  {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
    "fecha": "2026-10-20",
