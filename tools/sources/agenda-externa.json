@@ -1,54 +1,14 @@
 {
  "generado": "2026-10-21",
  "fuentes": {
-  "InfoCofrade": 353,
+  "InfoCofrade": 351,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 2,
+  "Federación de Granada": 0,
   "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 45
+  "Prensa (texto de noticias)": 48
  },
  "eventos": [
-  {
-   "fecha": "2026-10-20",
-   "hora": "20:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Septenario a María Santísima del Rosario (Montesión) en San Martín a las 20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora del Rosario (Macarena) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "20:00",
-   "ciudad": "jaen",
-   "tipo": "culto",
-   "titulo": "Triduo a la Virgen de Guadalupe, patrona de Úbeda, en la Iglesia de la Misericordia a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Exposición «Por el Arco de mi barrio», por los 40 años de la Hermandad del Rocío de la Macarena, en el apeadero de la Fundación Cajasol",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-21",
    "hora": "20:30",
@@ -241,6 +201,16 @@
   },
   {
    "fecha": "2026-10-23",
+   "hora": "21:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Presentación de las coronas de Coronación de Nuestra Señora del Amparo y el niño Jesús y concierto de la Banda de Música del Carmen de Salteras a las 21:00 en la Parroquia de la Magdalena",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-23",
    "hora": "21:15",
    "ciudad": "sevilla",
    "tipo": "concierto",
@@ -296,6 +266,16 @@
    "tipo": "procesion",
    "titulo": "Rosario vespertino con Nuestra Señora del Rosario (San Pablo)",
    "nota": "Música: el Coro de Campanilleros de Bormujos «Santo Domingo de Silos».",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino con María Santísima de la Paciencia (Parroquia de la Resurrección)",
+   "nota": "Música: la Banda de Música Juvenil de la Cruz Roja.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -1834,7 +1814,7 @@
    "hora": "",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Función principal de instituto a Nuestro Padre Jesús del Gran Poder",
+   "titulo": "Función Principal de Instituto a Nuestro Padre Jesús del Gran Poder",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -3810,26 +3790,6 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
-  },
-  {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
@@ -4498,6 +4458,56 @@
    "nota": "",
    "fuente": "Ahora Granada",
    "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "El Consejo de Hermandades elige la imagen que presidirá el Vía Crucis de Cádiz en 2027",
+   "nota": "",
+   "fuente": "Cádiz Directo",
+   "url": "https://www.cadizdirecto.com/cadiz/el-consejo-de-hermandades-elige-la-imagen-que-presidira-el-via-crucis-de-cadiz-en-2027/amp/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La Federación de Cofradías organiza traslado de pasos de 'Kerygma' en el día de reflexión",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/granada/andalucia-granada-federacion-cofradias-programa-dia-reflexion-traslado-pasos-muestra-kerygma/202610211327223513342.html"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "El Cristo de la Vera Cruz presidirá el Vía Crucis de Cádiz en 2027, 29 años después de su última vez",
+   "nota": "",
+   "fuente": "Portal de Cádiz",
+   "url": "https://www.portaldecadiz.com/semana-santa/172983-el-cristo-de-la-vera-cruz-presidira-el-via-crucis-de-cadiz-en-2027-29-anos-despues-de-su-ultima-vez"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
    "fecha": "2026-10-20",
