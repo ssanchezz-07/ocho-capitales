@@ -4,9 +4,9 @@
   "InfoCofrade": 353,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 2,
+  "Federación de Granada": 0,
   "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 39
+  "Prensa (texto de noticias)": 45
  },
  "eventos": [
   {
@@ -3810,26 +3810,6 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
-  },
-  {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
@@ -4438,6 +4418,86 @@
    "nota": "",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/golgota/jesus-del-amor-y-la-entrega-presidira-el-via-crucis-oficial-de-2027-y-la-virgen-de-las-angustias-de-pinos-puente-la-vigilia-de-la-inmaculada/"
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Comienza el triduo a los Patronos de Cádiz, San Servando y San Germán",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienza-triduo-patronos-cadiz-san_0_2008297286.html"
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La Real Federación de Hermandades y Cofradías de la Semana Santa de Granada ha dado a conocer este martes, tras el Pleno Extraordinario de Hermanos Mayores, que los trasl",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.amp.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La previsión de la organización sigue siendo celebrar los traslados el 28 de noviembre, siempre que las condiciones meteorológicas y las cuestiones relacionadas con la au",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.amp.html"
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "via-crucis",
+   "titulo": "Este es el Nazareno que presidirá el Vía Crucis Oficial de la Semana Santa de Granada 2027",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/via-crucis-granada-2027-semana-santa-granada-2027-semana-santa-2027-granada-semana-santa-2027-via-crucis-oficial-granada-2027-concha-granada-cristo-concha-granada_0_2008303823.html"
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "El traslado de los pasos se hará en cualquier caso por la mañana.",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "10:00",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "El pleno de hermanos mayores ha determinado plantear el 28 de noviembre, como estaba contemplado, para proceder con el traslado de las imágenes hasta sus respectivos temp",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
   },
   {
    "fecha": "2026-10-20",
