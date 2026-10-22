@@ -5,8 +5,8 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 17,
-  "Prensa (texto de noticias)": 52
+  "Prensa (agendas semanales)": 22,
+  "Prensa (texto de noticias)": 58
  },
  "eventos": [
   {
@@ -3792,6 +3792,56 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:00",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Presentación del libro sobre la iglesia de San Rafael",
+   "nota": "Fundación Caja Rural del Sur, avenida de la Libertad, 1"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a San Antonio María Claret",
+   "nota": "Real Iglesia de San Pablo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo en honor al arcángel San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-21-octubre-cordoba/202610202200003512720.amp.html",
    "fecha": "2026-10-21",
    "hora": "17:00",
@@ -4478,6 +4528,66 @@
    "nota": "",
    "fuente": "Mundo Cofrade",
    "url": "https://www.mundocofrade.es/articulo/actualidad/andres-lorite-vicepresidente-diputacion-sera-pregonero-semana-santa-cordoba-2027/20261022132039008429.html"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma se adelantan una hora y comenzarán a las nueve de la mañana.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados comenzarán a las nueve de la mañana desde la Catedral de Granada, según han acordado este jueves el Ayuntamiento, el Arzobispado y la Real Federación de Her",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Aunque el acuerdo permite avanzar en la organización, la celebración de los traslados el 28 de noviembre todavía está sujeta a determinadas circunstancias.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Granada fija el 28 de noviembre, a la 9 de la mañana, los traslados de las imágenes que participan en la exposición Kerygma",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/granada-fija-el-28-de-noviembre-a-la-9-de-la-manana-los-traslados-de-las-imagenes-que-participan-en-la-exposicion-kerygma/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Comunicado traslados",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/comunicado-traslados/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Cómpeta sacará a La Borriquita y la Virgen de las Angustias en una procesión histórica",
+   "nota": "",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/axarquia/competa-sacara-borriquita-virgen-angustias-procesion-historica-20261019134121-nt.html"
   },
   {
    "fecha": "2026-10-21",
