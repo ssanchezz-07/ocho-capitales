@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 17,
-  "Prensa (texto de noticias)": 51
+  "Prensa (texto de noticias)": 52
  },
  "eventos": [
   {
@@ -4468,6 +4468,16 @@
    "nota": "",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/andres-lorite-culmen-cofrade-es-ser-pregonero-semana-santa-ciudad/202610211034533512994.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "magna",
+   "titulo": "Andrés Lorite, vicepresidente de la Diputación, será el pregonero de la Semana Santa de Córdoba de 2027",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/andres-lorite-vicepresidente-diputacion-sera-pregonero-semana-santa-cordoba-2027/20261022132039008429.html"
   },
   {
    "fecha": "2026-10-21",
