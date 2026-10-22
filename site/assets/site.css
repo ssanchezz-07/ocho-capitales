@@ -1432,6 +1432,16 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-c-ruta.is-sel { stroke: #f0d79c; stroke-opacity: 1; stroke-width: 4.5px; }
 .has-sel .oc-c-ruta:not(.is-sel) { stroke-opacity: .28; }
 .oc-c-ruta.is-aprox { stroke-dasharray: 2 7; stroke-opacity: .6; filter: none; }
+/* Salidas extraordinarias: ida continua, regreso discontinuo (guiones largos, distintos de los puntos de «aprox») */
+.oc-c-ruta.is-regreso { stroke-dasharray: 11 7; }
+.oc-calle-dias-sep { flex: none; align-self: center; padding: 0 2px 0 10px; margin-left: 4px; border-left: 1px solid var(--line-strong); font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.oc-calle-dias button.is-extra { border-style: dashed; }
+.oc-calle-dias button.is-proxima { border: 1.5px solid var(--gold-ink); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold-ink) 18%, transparent); }
+.oc-calle-dias button.is-pasada { opacity: .55; font-weight: 500; }
+.oc-calle-dias button.is-extra[aria-selected="true"] { border-style: solid; opacity: 1; }
+.oc-calle-leyenda { position: absolute; left: 10px; top: 10px; margin: 0; display: flex; gap: 14px; padding: 6px 10px; border-radius: 8px; background: rgb(15 5 22 / .72); color: #f4e9ff; font-size: .74rem; pointer-events: none; }
+.oc-calle-leyenda span::before { content: ""; display: inline-block; width: 22px; height: 0; margin-right: 6px; vertical-align: middle; border-top: 3px solid #f0d79c; }
+.oc-calle-leyenda .is-regreso::before { border-top-style: dashed; }
 .has-sel .oc-c-marca:not(.is-sel) { opacity: .55; }
 .oc-c-guia { fill: none; stroke: rgb(240 215 156 / .75); stroke-width: 1.5px; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
 .oc-c-guia-punto { fill: #f0d79c; }
@@ -1493,6 +1503,17 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-proximos { list-style: none; margin: 0 0 14px; padding: 0; }
 .oc-calle-proximos li { display: flex; gap: 14px; padding: 9px 0; border-top: 1px solid var(--line); }
 .oc-calle-proximos b { font: 400 1.25rem/1.1 var(--display); color: var(--gold-ink); font-variant-numeric: tabular-nums; min-width: 3.2em; }
+.oc-calle-extra { margin: 0 0 6px; font-size: .9rem; color: var(--muted); }
+.oc-calle-extra::first-letter { text-transform: uppercase; }
+.oc-calle-iti { margin: 14px 0 0; border-top: 1px solid var(--line); padding-top: 10px; }
+.oc-calle-iti summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+.oc-calle-iti ol { list-style: none; margin: 0 0 8px; padding: 0; font-size: .9rem; line-height: 1.45; }
+.oc-calle-iti li { display: inline; }
+.oc-calle-iti li + li::before { content: " · "; color: var(--muted); }
+.oc-calle-iti li b { color: var(--gold-ink); font-variant-numeric: tabular-nums; margin-right: 4px; }
+.oc-calle-iti-t { margin: 10px 0 4px; font-size: .74rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.oc-calle-iti-acto { margin: 8px 0; font-weight: 600; }
+.oc-calle-iti-fuente { margin: 10px 0 0; font-size: .8rem; color: var(--muted); }
 .oc-calle-acc { display: flex; flex-wrap: wrap; gap: 8px; }
 .oc-calle-acc .oc-btn { margin: 0; border-radius: 999px; }
 .oc-calle-cerca { margin: 14px 0 0; padding: 12px 14px; border-radius: 14px; background: color-mix(in srgb, #4da3ff 12%, var(--surface)); font-size: .92rem; }

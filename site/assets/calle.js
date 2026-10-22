@@ -173,13 +173,17 @@
     delDia().forEach(function (h, i) {
       var pts = h.t.paso || h.t.cruz;
       // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
-      var d = '', da = '';
+      // salidas extraordinarias: el regreso (posición 7) va aparte, con trazo discontinuo
+      var d = '', da = '', dr = '', enR = false;
       pts.forEach(function (p, j) {
         if (!j) { d = 'M' + p[0] + ' ' + p[1]; return; }
         var q = pts[j - 1], recta = !p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150;
-        if (recta) { da += 'M' + q[0] + ' ' + q[1] + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; } else d += 'L' + p[0] + ' ' + p[1];
+        if (recta) { da += 'M' + q[0] + ' ' + q[1] + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = false; }
+        else if (p[7] && q[7]) { dr += (enR ? '' : 'M' + q[0] + ' ' + q[1]) + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = true; }
+        else { d += 'L' + p[0] + ' ' + p[1]; enR = false; }
       });
       var r = el('path', { 'class': 'oc-c-ruta', d: d, 'data-s': h.s }); capas.rutas.appendChild(r);
+      if (dr) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-regreso', d: dr, 'data-s': h.s }));
       if (da) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-aprox', d: da, 'data-s': h.s }));
       // marca de la hermandad: su titular (o su inicial bordada) en un medallón con galón de oro
       var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n });
@@ -298,17 +302,46 @@
     var est = document.createElement('p'); est.className = 'oc-calle-estado';
     est.textContent = !p ? '' : p.estado === 'antes' ? 'Sale a las ' + hhmm(pts[0][2]) + ' de ' + pts[0][3].toLowerCase().replace(/^salida$/, 'su templo') : p.estado === 'despues' ? 'Ya se ha recogido (' + hhmm(pts[pts.length - 1][2]) + ')' : 'Ahora, aproximadamente, por ' + pts[p.i][3];
     c.appendChild(est);
+    var x = h.x;
+    if (x) {
+      // salida extraordinaria: fecha y, entre la ida y el regreso, el acto en el templo de destino
+      var fIda = -1; for (var a = 0; a < pts.length; a++) if (!pts[a][7]) fIda = a;
+      var rIni = pts[fIda + 1];
+      if (p && x.acto && rIni && T >= pts[fIda][2] && T < rIni[2]) est.textContent = x.acto + ' (' + hhmm(pts[fIda][2]) + '–' + hhmm(rIni[2]) + ')';
+      var fe = document.createElement('p'); fe.className = 'oc-calle-extra';
+      var fl = new Date(x.fecha + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      fe.textContent = (x.fecha < hoyISO() ? 'Celebrada el ' : '') + fl + ' · ' + x.titulo;
+      c.insertBefore(fe, est);
+    }
     // próximo punto alcanzable: el siguiente del recorrido (o la salida si aún no ha salido)
     var i0 = p ? (p.estado === 'antes' ? 0 : Math.min(p.i + 1, pts.length - 1)) : 0;
     var ol = document.createElement('ol'); ol.className = 'oc-calle-proximos';
     var oficiales = pts.slice(i0).filter(function (q) { return !q[6]; });
-    oficiales.slice(0, 5).forEach(function (q) { var li = document.createElement('li'); var hh = document.createElement('b'); hh.textContent = hhmm(q[2]); var l = document.createElement('span'); l.textContent = q[3] + (q[5] ? ' (aprox.)' : ''); li.appendChild(hh); li.appendChild(l); ol.appendChild(li); });
+    oficiales.slice(0, 5).forEach(function (q) { var li = document.createElement('li'); var hh = document.createElement('b'); hh.textContent = (h.x && !q[4] ? '≈' : '') + hhmm(q[2]); var l = document.createElement('span'); l.textContent = q[3] + (q[5] ? ' (aprox.)' : ''); li.appendChild(hh); li.appendChild(l); ol.appendChild(li); });
     c.appendChild(ol);
     var dest = oficiales[Math.min(1, oficiales.length - 1)] || pts[pts.length - 1];
     var acc = document.createElement('div'); acc.className = 'oc-calle-acc';
     [['Cómo llegar · Google Maps', enlaceMapa(dest[0], dest[1], false)], ['Apple Maps', enlaceMapa(dest[0], dest[1], true)]].forEach(function (x, i) { var a = document.createElement('a'); a.className = 'oc-btn' + (i ? ' is-quiet' : ''); a.href = x[1]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = x[0]; acc.appendChild(a); });
     var f = document.createElement('a'); f.className = 'oc-btn is-quiet'; f.href = (window.OC_BASE || '/') + 'hermandad/' + h.s + '/'; f.textContent = 'Ver la hermandad'; acc.appendChild(f);
     c.appendChild(acc);
+    if (x) {
+      // itinerario completo, tal cual el cartel: solo las horas oficiales
+      var it = document.createElement('details'); it.className = 'oc-calle-iti';
+      var su = document.createElement('summary'); su.textContent = 'Itinerario completo'; it.appendChild(su);
+      var tramo = function (tit, lista, cls) {
+        var hh3 = document.createElement('p'); hh3.className = 'oc-calle-iti-t ' + cls; hh3.textContent = tit; it.appendChild(hh3);
+        var ul = document.createElement('ol');
+        lista.forEach(function (q) { var li = document.createElement('li'); if (q[1]) { var bb = document.createElement('b'); bb.textContent = q[1]; li.appendChild(bb); } li.appendChild(document.createTextNode(q[0])); ul.appendChild(li); });
+        it.appendChild(ul);
+      };
+      if (x.iti.ida) tramo('Ida', x.iti.ida, 'is-ida');
+      if (x.acto) { var ac = document.createElement('p'); ac.className = 'oc-calle-iti-acto'; ac.textContent = x.acto; it.appendChild(ac); }
+      if (x.iti.regreso) tramo('Regreso', x.iti.regreso, 'is-regreso');
+      var fu = document.createElement('p'); fu.className = 'oc-calle-iti-fuente'; fu.appendChild(document.createTextNode('Fuente: '));
+      if (x.url) { var fa = document.createElement('a'); fa.href = x.url; fa.target = '_blank'; fa.rel = 'noopener'; fa.textContent = x.fuente; fu.appendChild(fa); } else fu.appendChild(document.createTextNode(x.fuente));
+      fu.appendChild(document.createTextNode('. Las horas sin marcar en el plano son una estimación.')); it.appendChild(fu);
+      c.appendChild(it);
+    }
     if (yo) {
       // el punto del recorrido más cercano a ti que aún no ha pasado
       var mejor = null; for (var k = i0; k < pts.length; k++) { if (pts[k][6]) continue; var d = Math.hypot(pts[k][0] - yo.x, pts[k][1] - yo.y); if (!mejor || d < mejor.d) mejor = { d: d, q: pts[k] }; }
@@ -336,6 +369,7 @@
       // la pestaña elegida, a la vista en la tira deslizable (sin mover la página)
       if (si) { var tira = b.parentNode, x = b.offsetLeft - (tira.clientWidth - b.offsetWidth) / 2; if (tira.scrollWidth > tira.clientWidth) tira.scrollLeft = Math.max(0, x); }
     });
+    var ley = $('[data-leyenda]'); if (ley) ley.hidden = !delDia().some(function (h) { return h.x; });
     var L = limites(); rango.min = L[0]; rango.max = L[1];
     var hoy = fechas[d] === hoyISO(), ah = ahoraMin();
     $('[data-ahora]').hidden = !hoy;
@@ -510,9 +544,17 @@
     D = j; calcularLimites(); dibujarPlano();
     var hoy = hoyISO(), dHoy = null; for (var k in fechas) if (fechas[k] === hoy) dHoy = k;
     var botones = $$('[data-dia]').map(function (b) { return b.getAttribute('data-dia'); });
-    // ?dia=<jornada> (desde «Hoy» de la portada) manda; si no, la jornada de hoy; si no, la primera
+    // salidas extraordinarias: la próxima se destaca; las ya celebradas se apagan (se comprueba aquí, no al compilar)
+    var proxima = null;
+    $$('[data-fecha]').forEach(function (b) {
+      var f = b.getAttribute('data-fecha'), pasada = f < hoy;
+      b.classList.toggle('is-pasada', pasada);
+      if (!pasada && !proxima) { proxima = b.getAttribute('data-dia'); b.classList.add('is-proxima'); b.setAttribute('aria-label', b.textContent + ' (próxima salida)'); }
+      if (pasada) b.setAttribute('aria-label', b.textContent + ' (ya celebrada)');
+    });
+    // ?dia=<jornada> (desde «Hoy» de la portada) manda; si no, la jornada de hoy; si no, la próxima salida extraordinaria; si no, la primera
     var pedido = new URLSearchParams(location.search).get('dia');
-    ponerDia(pedido && botones.indexOf(pedido) >= 0 ? pedido : dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : botones[0]);
+    ponerDia(pedido && botones.indexOf(pedido) >= 0 ? pedido : dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : proxima || botones[0]);
     window.addEventListener('resize', function () { capas.yaEncuadrado = false; dibujarRutas(); actualizar(); });
   }).catch(function () { mapa.classList.add('is-error'); });
 })();

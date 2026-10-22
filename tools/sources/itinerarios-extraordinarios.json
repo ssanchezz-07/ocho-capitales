@@ -1,0 +1,63 @@
+{
+ "_leeme": "Salidas extraordinarias y magnas con itinerario, copiado literal de la fuente oficial. Mismo formato de puntos que itinerarios-2026.json ({lugar, hora}); «templo» solo ayuda a situar el punto en OpenStreetMap (nombre del templo en OSM). Tramos «ida» y «regreso» (si lo hay); «acto» es lo que ocurre entre ambos. Cadena: geocodificar.mjs → enrutar.mjs → build.mjs. Revisado: 2026-10-22.",
+ "salidas": {
+  "pasion-malaga-2026-11-14": {
+   "hermandad": "pasion-malaga",
+   "ciudad": "malaga",
+   "fecha": "2026-11-14",
+   "tipo": "extraordinaria",
+   "corto": "Pasión",
+   "titulo": "Salida extraordinaria de la Archicofradía de la Pasión",
+   "acto": "Acto Eucarístico en la Parroquia de San Juan",
+   "fuente": "Cartel oficial de la Archicofradía de la Pasión (Instagram @archipasionmlg)",
+   "fuente_url": "https://www.instagram.com/archipasionmlg/",
+   "tramos": {
+    "ida": [
+     { "lugar": "Parroquia de los Santos Mártires", "hora": "17:30", "templo": "Santos Martires" },
+     { "lugar": "Plaza de los Santos Mártires" },
+     { "lugar": "Santa Lucía" },
+     { "lugar": "Plaza Jesús de la Pasión" },
+     { "lugar": "Santa Lucía" },
+     { "lugar": "Granada" },
+     { "lugar": "Plaza Spínola" },
+     { "lugar": "Plaza del Carbón" },
+     { "lugar": "Plaza del Siglo" },
+     { "lugar": "Granada" },
+     { "lugar": "Plaza Jesús Castellanos" },
+     { "lugar": "San Agustín" },
+     { "lugar": "Císter" },
+     { "lugar": "Cañón" },
+     { "lugar": "Postigo de los Abades", "hora": "19:15" },
+     { "lugar": "Strachan" },
+     { "lugar": "Torre de Sandoval" },
+     { "lugar": "Bolsa" },
+     { "lugar": "Marqués de Larios" },
+     { "lugar": "Liborio García" },
+     { "lugar": "Nueva" },
+     { "lugar": "Plaza de Félix Sáenz" },
+     { "lugar": "San Juan" },
+     { "lugar": "Parroquia de San Juan", "hora": "20:45", "templo": "Iglesia de San Juan" }
+    ],
+    "regreso": [
+     { "lugar": "Parroquia de San Juan", "hora": "21:15", "templo": "Iglesia de San Juan" },
+     { "lugar": "Calderón de la Barca" },
+     { "lugar": "Fernán González" },
+     { "lugar": "Fajardo" },
+     { "lugar": "Compañía" },
+     { "lugar": "Pozos Dulces" },
+     { "lugar": "Plazuela Virgen de las Penas" },
+     { "lugar": "Arco de la Cabeza" },
+     { "lugar": "Andrés Pérez", "hora": "22:20" },
+     { "lugar": "Carretería" },
+     { "lugar": "Álamos" },
+     { "lugar": "Puerta Buenaventura" },
+     { "lugar": "Plaza del Teatro" },
+     { "lugar": "Méndez Núñez" },
+     { "lugar": "Comedias" },
+     { "lugar": "Plaza de los Santos Mártires" },
+     { "lugar": "Parroquia de los Santos Mártires", "hora": "23:35", "templo": "Santos Martires" }
+    ]
+   }
+  }
+ }
+}

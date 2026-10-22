@@ -71,7 +71,7 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
     return { largo: dist.get(t), nodos: ruta.reverse() };
   }
   let tramos = 0, porCalle = 0, rectas = 0, mismos = 0;
-  for (const h of Object.values(R.hermandades)) for (const pts of Object.values(h.tramos)) {
+  for (const h of [...Object.values(R.hermandades), ...Object.values(R.extraordinarias || {})]) for (const pts of Object.values(h.tramos)) {
     const v = pts.map((p, i) => [p, i]).filter(([p]) => p.lat != null);
     for (const [p] of v) delete p.via;
     for (let k = 0; k < v.length - 1; k++) {

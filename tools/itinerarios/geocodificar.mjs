@@ -11,6 +11,9 @@ import { fileURLToPath } from 'node:url';
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
 const ITI = JSON.parse(fs.readFileSync(path.join(RAIZ, 'tools', 'sources', 'itinerarios-2026.json'), 'utf8'));
+// Salidas extraordinarias y magnas: mismo formato de puntos, con tramos «ida» y «regreso» (van a «extraordinarias» en la salida)
+const fExt = path.join(RAIZ, 'tools', 'sources', 'itinerarios-extraordinarios.json');
+const EXT = fs.existsSync(fExt) ? JSON.parse(fs.readFileSync(fExt, 'utf8')).salidas : {};
 const D = JSON.parse(fs.readFileSync(path.join(RAIZ, 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const CACHE = path.join(DIR, 'cache'); fs.mkdirSync(CACHE, { recursive: true });
 const OUT = path.join(RAIZ, 'site', 'data', 'recorridos'); fs.mkdirSync(OUT, { recursive: true });
@@ -83,7 +86,7 @@ const ALIAS = {
   sevilla: { 'jesus del gran': 'Jesús del Gran Poder', 'dona maria': 'Doña María Coronel', 'avenida isabel la c': 'Isabel la Católica', 'isabel la c': 'Isabel la Católica', 'ramon y caj': 'Ramón y Cajal', 'avenida ramon y cajal': 'Ramón y Cajal' },
   granada: { 'gran via': 'Gran Vía de Colón' },
   huelva: { 'federico molina': 'Avenida del Alcalde Federico Molina Orta', 'avenida federico molina': 'Avenida del Alcalde Federico Molina Orta', 'baez': 'Plaza de Quintero Báez' },
-  malaga: { 'alameda': 'Alameda Principal' },
+  malaga: { 'alameda': 'Alameda Principal', 'plaza de los santos martires': 'Plaza de los Mártires Ciriaco y Paula', 'puerta buenaventura': 'Calle Puerta de Buenaventura', 'plaza spinola': 'Plaza de Spínola' },
   cordoba: { 'conde cardenas': 'Conde de Cárdenas', 'doctor maranon': 'Doctor Gregorio Marañón' },
 };
 function situar(ix, ciudad, h, pts) {
@@ -104,7 +107,10 @@ function situar(ix, ciudad, h, pts) {
     // «Salida/Entrada <lugar>»: es ese lugar (una calle, la carrera oficial…), no la sede; solo «salida», «entrada templo/palio/casa hdad…» son la sede
     const mm = /^(salida|entrada|encierro|sale)\s+(.+)$/.exec(l);
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
-    if (fijo) { pos = fijo; como = 'carrera oficial'; }
+    // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
+    const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
+    if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
+    else if (fijo) { pos = fijo; como = 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
       const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); pos = cercano(ix.calles.get(k), prev); como = 'calle';
     }
@@ -128,7 +134,7 @@ function situar(ix, ciudad, h, pts) {
   // saltos imposibles (una calle homónima en otro barrio): un punto a más de 900 m de sus vecinos, que están cerca entre sí, se descarta
   const m = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
   for (let pasada = 0; pasada < 2; pasada++) for (let i = 0; i < res.length; i++) {
-    if (res[i].lat == null || res[i]._f || res[i].como === 'sede' || res[i].como === 'catedral') continue;
+    if (res[i].lat == null || res[i]._f || res[i].como === 'sede' || res[i].como === 'catedral' || res[i].como === 'templo') continue;
     let a = i - 1; while (a >= 0 && res[a].lat == null) a--;
     let b = i + 1; while (b < res.length && res[b].lat == null) b++;
     const da = a >= 0 ? m(res[i], res[a]) : 0, db = b < res.length ? m(res[i], res[b]) : 0;
@@ -169,6 +175,18 @@ for (const ciudad of Object.keys(CENTRO)) {
       for (const s of sin) fallos[s] = (fallos[s] || 0) + 1;
     }
     out.hermandades[slug] = { dia: e.dia, fuente: e.fuente, tramos };
+  }
+  for (const [id, e] of Object.entries(EXT)) {
+    if (e.ciudad !== ciudad) continue;
+    const { tramos: src, ...meta } = e; const tramos = {};
+    for (const [tramo, pts] of Object.entries(src)) {
+      const { res, sin } = situar(ix, ciudad, H[e.hermandad], pts);
+      for (const p of res) delete p.templo;
+      tramos[tramo] = res; tot += res.length; ok += res.filter((p) => p.lat).length;
+      for (const s of sin) fallos[s] = (fallos[s] || 0) + 1;
+      console.log(' ', id, tramo, res.map((p) => p.lugar + ':' + (p.como || '¿?')).join(' · '));
+    }
+    (out.extraordinarias || (out.extraordinarias = {}))[id] = { ...meta, tramos };
   }
   fs.writeFileSync(path.join(OUT, ciudad + '.json'), JSON.stringify(out));
   informe[ciudad] = { puntos: tot, situados: ok, pct: tot ? Math.round(100 * ok / tot) : 0, calles_osm: ix.calles.size, templos: ix.templos.length, no_situados: Object.entries(fallos).sort((a, b) => b[1] - a[1]).slice(0, 25) };

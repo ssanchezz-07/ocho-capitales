@@ -1201,6 +1201,37 @@ function datosCalle(c) {
     const im = h.imagen;
     hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos });
   }
+  // Salidas extraordinarias y magnas (tools/sources/itinerarios-extraordinarios.json): una «jornada» propia con su fecha.
+  // Solo hay horas en algunos puntos del cartel: el resto se reparte por la distancia andada (posición 4 = 0, hora no oficial).
+  // Posición 7 = 1 en el regreso (se dibuja discontinuo). El ida y el regreso van seguidos en «paso»; entre ambos, el acto.
+  for (const [id, e] of Object.entries(R.extraordinarias || {})) {
+    const h = HERM[e.hermandad]; if (!h) continue;
+    const pts = [];
+    for (const [nom, tr] of Object.entries(e.tramos)) {
+      const reg = nom === 'regreso' ? 1 : 0, sit = tr.filter((p) => p.lat != null);
+      sit.forEach((p, i) => {
+        const [x, y] = xy(p.lat, p.lon);
+        pts.push([x, y, minDia(p.hora), limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0, 0, reg]);
+        if (p.via && sit[i + 1]) for (const [la, lo] of p.via) pts.push([...xy(la, lo), null, limpiaLugar(p.lugar), 0, 0, 1, reg]);
+      });
+    }
+    const acum = [0]; for (let i = 1; i < pts.length; i++) acum.push(acum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    const anc = pts.map((p, i) => (p[2] != null ? i : -1)).filter((i) => i >= 0);
+    if (anc.length < 2) continue;
+    for (let i = 1; i < anc.length; i++) if (pts[anc[i]][2] < pts[anc[i - 1]][2]) pts[anc[i]][2] += 1440;
+    pts.forEach((p, i) => {
+      if (p[2] != null) return;
+      const a = [...anc].reverse().find((k) => k < i) ?? anc[0], b = anc.find((k) => k > i) ?? anc[anc.length - 1];
+      const L = acum[b] - acum[a];
+      p[2] = Math.round((pts[a][2] + (L > 0 ? (pts[b][2] - pts[a][2]) * (acum[i] - acum[a]) / L : 0)) * 10) / 10;
+    });
+    const [Y, M, Dd] = e.fecha.split('-').map(Number);
+    const etiqueta = `${Dd} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M - 1]} · ${e.corto || h.nombre}`;
+    const iti = Object.fromEntries(Object.entries(e.tramos).map(([nom, tr]) => [nom, tr.map((p) => [p.lugar, p.hora || ''])]));
+    const im = h.imagen;
+    hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts },
+      x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti } });
+  }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
   return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
@@ -1212,12 +1243,17 @@ function pageCalle(c) {
   const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
   const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
   fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
-  const dias = [...new Set(datos.hermandades.map((h) => h.d))].sort((a, b) => dayIdx(a) - dayIdx(b));
-  const body = `<header class="oc-calle-head"><p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · Recorridos</p><h1 class="oc-title">En la calle</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada y hora, o pulsa reproducir.</p></header>
+  const dias = [...new Set(datos.hermandades.filter((h) => !h.x).map((h) => h.d))].sort((a, b) => dayIdx(a) - dayIdx(b));
+  // salidas extraordinarias y magnas: su propio grupo de pestañas, por fecha (calle.js apaga las ya celebradas)
+  const extras = datos.hermandades.filter((h) => h.x).sort((a, b) => a.x.fecha.localeCompare(b.x.fecha));
+  for (const h of extras) fechas[h.d] = h.x.fecha;
+  const tabExtra = (h) => `<button type="button" role="tab" aria-selected="false" class="is-extra" data-dia="${esc(h.d)}" data-fecha="${h.x.fecha}" title="${esc(h.x.titulo)}">${esc(h.d)}</button>`;
+  const body = `<header class="oc-calle-head"><p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · Recorridos</p><h1 class="oc-title">En la calle</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.</p></header>
 <section class="oc-calle" data-calle="${u('data/calle/' + c.slug + '.json')}" data-fechas='${esc(JSON.stringify(fechas))}' style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
-  <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}</div>
+  <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}${extras.length ? `<span class="oc-calle-dias-sep" aria-hidden="true">Extraordinarias y magnas</span>${extras.map(tabExtra).join('')}` : ''}</div>
   <div class="oc-calle-mapa" data-mapa><svg class="oc-calle-svg" aria-label="Plano de ${esc(c.nombre)} con los recorridos" role="img"></svg>
     <div class="oc-calle-ctl"><button class="oc-calle-btn" type="button" data-zoom="1" aria-label="Acercar">+</button><button class="oc-calle-btn" type="button" data-zoom="-1" aria-label="Alejar">−</button><button class="oc-calle-btn" type="button" data-yo aria-label="Mi ubicación"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3" stroke="currentColor" stroke-width="1.8"/></svg></button><button class="oc-calle-btn" type="button" data-encuadrar aria-label="Ver toda la jornada"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>
+    <p class="oc-calle-leyenda" data-leyenda hidden><span class="is-ida">Ida</span><span class="is-regreso">Regreso</span></p>
     <p class="oc-calle-osm">Plano: © colaboradores de OpenStreetMap</p>
   </div>
   <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
