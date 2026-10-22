@@ -1,94 +1,14 @@
 {
  "generado": "2026-10-22",
  "fuentes": {
-  "InfoCofrade": 349,
+  "InfoCofrade": 343,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 58
+  "Prensa (texto de noticias)": 60
  },
  "eventos": [
-  {
-   "fecha": "2026-10-22",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Misericordia (Rochelambert) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "19:45",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Paz a las 19:45",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:15",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a Nuestra Señora de la Palma (Buen Fin) a las 20:15",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Septenario a María Santísima del Rosario (Montesión) en San Martín a las 20:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:00",
-   "ciudad": "jaen",
-   "tipo": "culto",
-   "titulo": "Triduo a la Virgen de Guadalupe, patrona de Úbeda, en la Iglesia de la Misericordia a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a la Virgen del Rocío en la Hermandad del Rocío de Triana a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:00",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Sierra (San Roque) a las 20:00",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "19:30",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "Triduo a San Francisco de Paula (San José Obrero) a las 19:30",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
   {
    "fecha": "2026-10-23",
    "hora": "18:30",
@@ -206,6 +126,16 @@
    "tipo": "procesion",
    "titulo": "Procesión de Nuestra Señora de Guadalupe, patrona de Úbeda, desde de la Iglesia de la Misericordia",
    "nota": "Música: la Agrupación Musical Santa Cecilia.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "17:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de San Antonio María Claret",
+   "nota": "Música: la BCT San Juan Evangelista.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -376,6 +306,16 @@
    "tipo": "concierto",
    "titulo": "Certamen de Bandas «Trinidad, Bendición y Esperanza» en el Parque de María Luisa a partir de las 12:30",
    "nota": "Participan:",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "21:30",
+   "ciudad": "cadiz",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Banda de Cornetas y Tambores de Nuestra Señora del Rosario de Jerez de los Caballeros en la Parroquia de Omnium Sanctorum a las 21:30",
+   "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -4588,6 +4528,26 @@
    "nota": "",
    "fuente": "Diario SUR",
    "url": "https://www.diariosur.es/axarquia/competa-sacara-borriquita-virgen-angustias-procesion-historica-20261019134121-nt.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "traslado",
+   "titulo": "Granada fija el 28 de noviembre, a la 9 de la mañana, los traslados de las imágenes que participan en la exposición Kerygma",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
   },
   {
    "fecha": "2026-10-21",
