@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-21",
+ "generado": "2026-10-22",
  "fuentes": {
   "InfoCofrade": 349,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 17,
-  "Prensa (texto de noticias)": 52
+  "Prensa (texto de noticias)": 50
  },
  "eventos": [
   {
@@ -4350,16 +4350,6 @@
    "url": "https://hermandadesdegranada.com/golgota/jesus-del-amor-y-la-entrega-presidira-el-via-crucis-oficial-de-2027-y-la-virgen-de-las-angustias-de-pinos-puente-la-vigilia-de-la-inmaculada/"
   },
   {
-   "fecha": "2026-10-21",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "culto",
-   "titulo": "Comienza el triduo a los Patronos de Cádiz, San Servando y San Germán",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/semana_santa/comienza-triduo-patronos-cadiz-san_0_2008297286.html"
-  },
-  {
    "fecha": "2026-10-27",
    "hora": "",
    "ciudad": "granada",
@@ -4388,16 +4378,6 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/via-crucis-granada-2027-semana-santa-granada-2027-semana-santa-2027-granada-semana-santa-2027-via-crucis-oficial-granada-2027-concha-granada-cristo-concha-granada_0_2008303823.html"
-  },
-  {
-   "fecha": "2026-10-21",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "El traslado de los pasos se hará en cualquier caso por la mañana.",
-   "nota": "",
-   "fuente": "Ahora Granada",
-   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
   },
   {
    "fecha": "2026-11-28",
@@ -4480,6 +4460,26 @@
    "url": "https://www.diariosur.es/semana-santa/cuenta-atras-procesiones-extraordinarias-cristo-santo-traslado-20261021213506-nt.html"
   },
   {
+   "fecha": "2026-10-21",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Comienza el triduo a los Patronos de Cádiz, San Servando y San Germán",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienza-triduo-patronos-cadiz-san_0_2008297286.html"
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "El traslado de los pasos se hará en cualquier caso por la mañana.",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
+  },
+  {
    "fecha": "2026-10-20",
    "hora": "",
    "ciudad": "cadiz",
@@ -4528,56 +4528,6 @@
    "nota": "",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "12:00",
-   "ciudad": "cordoba",
-   "tipo": "traslado",
-   "titulo": "La Virgen del Consuelo de Puente Genil recorrerá las calles en una procesión extraordinaria por el cincuentenario de su bendición",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-virgen-del-consuelo-de-puente-genil-recorrera-las-calles-en-una-procesion-extraordinaria-por-el-cincuentenario-de-su-bendicion/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La Archicofradía de la Vera-Cruz llevará a cabo este domingo la salida procesional de la Divina Pastora de las Almas por las calles del Campo de la Verdad.",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-divina-pastora-almas-cordoba_0_2008267620.html"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "procesion",
-   "titulo": "La procesión de la Divina Pastora de las Almas de Córdoba, en fotos",
-   "nota": "",
-   "fuente": "El Día de Córdoba",
-   "url": "https://www.eldiadecordoba.es/semanasanta/procesion-divina-pastora-almas-cordoba-fotos_3_2008277471.html"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Nuestra Señora del Rosario procesionará hoy por las calles de Mairena del Aljarafe en su salida anual.",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-procesionara-hoy-por-las-calles-de-mairena-del-aljarafe-en-su-salida-anual/"
-  },
-  {
-   "fecha": "2026-10-18",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "culto",
-   "titulo": "La Función Principal se celebrará hoy a las 12 horas.",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/uncategorized/nuestra-senora-del-rosario-procesionara-hoy-por-las-calles-de-mairena-del-aljarafe-en-su-salida-anual/"
   }
  ],
  "conflictos": []
