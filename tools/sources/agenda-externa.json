@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-22",
+ "generado": "2026-10-23",
  "fuentes": {
   "InfoCofrade": 343,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 2,
+  "Federación de Granada": 0,
   "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 60
+  "Prensa (texto de noticias)": 57
  },
  "eventos": [
   {
@@ -3710,26 +3710,6 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
-  },
-  {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
@@ -4170,16 +4150,6 @@
    "url": "https://www.granadahoy.com/semanasanta/semana-santa-granada-2027-semana-santa-granada-realejo-granada-semana-santa-realejo-semana-santa-realejo-granada-pregon-realejo-2027_0_2008289692.html"
   },
   {
-   "fecha": "2026-10-22",
-   "hora": "20:30",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Durante los días 21, 22 y 23 de octubre se celebrará el Solemne Triduo en la Basílica de San Juan de Dios (Granada), a las 20:30 horas.",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
-  },
-  {
    "fecha": "2026-10-24",
    "hora": "",
    "ciudad": "granada",
@@ -4410,16 +4380,6 @@
    "url": "https://www.portaldecadiz.com/semana-santa/172983-el-cristo-de-la-vera-cruz-presidira-el-via-crucis-de-cadiz-en-2027-29-anos-despues-de-su-ultima-vez"
   },
   {
-   "fecha": "2026-10-22",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La Divina Pastora y la Virgen del Rosario salen a la calle este fin de semana",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/divina-pastora-virgen-rosario-salen-calle-fin-20261016225654-nt.html"
-  },
-  {
    "fecha": "2027-02-05",
    "hora": "",
    "ciudad": "cordoba",
@@ -4475,16 +4435,6 @@
    "ciudad": "granada",
    "tipo": "traslado",
    "titulo": "Los traslados de Kerygma se adelantan una hora y comenzarán a las nueve de la mañana.",
-   "nota": "",
-   "fuente": "Ideal",
-   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "Los traslados comenzarán a las nueve de la mañana desde la Catedral de Granada, según han acordado este jueves el Ayuntamiento, el Arzobispado y la Real Federación de Her",
    "nota": "",
    "fuente": "Ideal",
    "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
@@ -4548,6 +4498,56 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "20:30",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Durante los días 21, 22 y 23 de octubre se celebrará el Solemne Triduo en la Basílica de San Juan de Dios (Granada), a las 20:30 horas.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La Divina Pastora y la Virgen del Rosario salen a la calle este fin de semana",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/divina-pastora-virgen-rosario-salen-calle-fin-20261016225654-nt.html"
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados comenzarán a las nueve de la mañana desde la Catedral de Granada, según han acordado este jueves el Ayuntamiento, el Arzobispado y la Real Federación de Her",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
   },
   {
    "fecha": "2026-10-21",
