@@ -22,6 +22,8 @@ const TABLAS = [
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const iMax = process.argv.indexOf('--max');
 const MAX = iMax >= 0 ? +process.argv[iMax + 1] : Infinity;
+// Ritmo suave: YouTube devuelve 429 si se va deprisa (probado: 3 hilos a 250 ms bloquean enseguida)
+const HILOS = +(process.env.HILOS || 1), PAUSA = +(process.env.PAUSA || 1000);
 const dec = (s) => s.replace(/&#x([0-9a-f]+);/gi, (m, n) => String.fromCodePoint(parseInt(n, 16))).replace(/&#(\d+);/g, (m, n) => String.fromCodePoint(+n)).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 
 async function tabla(slug, formacion) {
@@ -84,12 +86,12 @@ async function obrero() {
       Object.assign(m, { leida: true, anio: f.anio, dedicatoria: f.dedicatoria, tipo: f.tipo, estreno: f.estreno, lugar: f.lugar, detalles: f.detalles });
       if (!m.autor && f.autoria) m.autor = f.autoria;
       fallos = Math.max(0, fallos - 1);
-    } catch (e) { fallos++; await sleep(3000); }
+    } catch (e) { fallos++; await sleep(/429|sin descripción/.test(String(e.message)) ? 20000 : 3000); }
     if (++n % 100 === 0) { guardar(); console.log(n, '/', pend.length, 'leídas; con año', marchas.filter((x) => x.anio).length, '· fallos', fallos); }
-    await sleep(250);
+    await sleep(PAUSA);
   }
 }
-await Promise.all([obrero(), obrero(), obrero()]);
+await Promise.all(Array.from({ length: HILOS }, () => obrero()));
 guardar();
 const con = (k) => marchas.filter((m) => m[k]).length;
 console.log(`${marchas.length} marchas; leídas ${con('leida')}; con año ${con('anio')}, dedicatoria ${con('dedicatoria')}, tipo ${con('tipo')}${fallos >= 25 ? ' · PARADO por fallos seguidos (YouTube limita); relanzar más tarde' : ''}`);
