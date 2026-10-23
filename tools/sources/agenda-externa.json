@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 34,
-  "Prensa (texto de noticias)": 67
+  "Prensa (texto de noticias)": 68
  },
  "eventos": [
   {
@@ -4748,6 +4748,16 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/pueblo-sevilla-prohibe-uso-ia-cartel-semana-20261022172556-nts.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma en Granada se fijan el sábado de reflexión y quedan pendientes de autorización de la Junta Electoral",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada/los-traslados-de-kerygma-se-fijan-el-sabado-de-reflexion-y-quedan-pendientes-de-autorizacion-de-la-junta-electoral/"
   },
   {
    "fecha": "2026-10-22",
