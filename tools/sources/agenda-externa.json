@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 34,
-  "Prensa (texto de noticias)": 65
+  "Prensa (texto de noticias)": 67
  },
  "eventos": [
   {
@@ -4728,6 +4728,26 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.html"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Dos procesiones y festival de música en el sábado penúltimo de octubre",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/dos-procesiones-festival-musica-sabado-penultimo-octubre-20261023163839-nt.html"
+  },
+  {
+   "fecha": "2026-12-30",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "cartel",
+   "titulo": "Un pueblo de Sevilla prohíbe el uso de IA en su cartel de la Semana Santa 2027",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/pueblo-sevilla-prohibe-uso-ia-cartel-semana-20261022172556-nts.html"
   },
   {
    "fecha": "2026-10-22",
