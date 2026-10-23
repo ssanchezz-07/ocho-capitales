@@ -1,12 +1,12 @@
 {
  "generado": "2026-10-23",
  "fuentes": {
-  "InfoCofrade": 343,
+  "InfoCofrade": 344,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 22,
-  "Prensa (texto de noticias)": 57
+  "Prensa (agendas semanales)": 34,
+  "Prensa (texto de noticias)": 65
  },
  "eventos": [
   {
@@ -321,11 +321,11 @@
   },
   {
    "fecha": "2026-10-24",
-   "hora": "",
+   "hora": "21:00",
    "ciudad": "sevilla",
    "tipo": "extraordinaria",
    "titulo": "Procesión extraordinaria del Santo Entierro de Paradas",
-   "nota": "",
+   "nota": "Música: la Banda de Cornetas y Tambores Presentación al Pueblo de Dos Hermanas.",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
   },
@@ -485,6 +485,16 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Triduo Sacramental en la Parroquia de San Vicente a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto, con carácter solidario, de la Banda de Música Ciudad de Dos Hermanas en el Convento de San Leandro a las 12:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -921,10 +931,10 @@
   },
   {
    "fecha": "2026-11-12",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras)",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -941,20 +951,10 @@
   },
   {
    "fecha": "2026-11-13",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras)",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-11-14",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -971,10 +971,10 @@
   },
   {
    "fecha": "2026-11-14",
-   "hora": "",
+   "hora": "20:00",
    "ciudad": "sevilla",
    "tipo": "culto",
-   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras)",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -995,16 +995,6 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestro Padre Jesús de la Humildad (Cerro del Águila)",
-   "nota": "",
-   "fuente": "InfoCofrade",
-   "url": "https://infocofrade.com/agenda/"
-  },
-  {
-   "fecha": "2026-11-15",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "besamanos",
-   "titulo": "Besamanos extraordinario a Nuestra Señora del Amparo",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -1735,6 +1725,26 @@
    "ciudad": "sevilla",
    "tipo": "culto",
    "titulo": "Función Principal de Instituto a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos al Santísimo Cristo de la Púrpura (Cigarreras) en la Capilla del Colegio Santa Ana de 13:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-10",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne al Santísimo Cristo de la Púrpura en la Capilla del Colegio Santa Ana a las 12:00",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
@@ -3732,6 +3742,136 @@
   {
    "ciudad": "cordoba",
    "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "17:30",
+   "tipo": "acto",
+   "titulo": "Curso de acólitos de la Hermandad de la Sangre",
+   "nota": "Salón de Reuniones del Convento del Santo Ángel (Capuchinos)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "18:30",
+   "tipo": "acto",
+   "titulo": "Recogida solidaria de la Hermandad del Rescatado",
+   "nota": "Hall del Colegio"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:00",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "acto",
+   "titulo": "Testimonio misionero de Miguel Rodríguez Gandía",
+   "nota": "Ermita de la Alegría"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Función solemne del Santísimo Redentor",
+   "nota": "Iglesia de Nuestra Señora de Gracia y San Eulogio"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a San Antonio María Claret",
+   "nota": "Real Iglesia de San Pablo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "acto",
+   "titulo": "Fiesta de regla en honor a San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Rosario ante la Virgen de la Alegría",
+   "nota": "Iglesia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "acto",
+   "titulo": "Salida de la XXII Peregrinación de Jóvenes Rocieros",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "21:15",
+   "tipo": "concierto",
+   "titulo": "Concierto de Cristo de Gracia",
+   "nota": "Puerta del Puente"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "21:30",
+   "tipo": "acto",
+   "titulo": "Inicio de los ensayos del coro de Navidad de la Merced",
+   "nota": "Casa de Hermandad de la Merced | Avenida Agrupación Córdoba, 11"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "23:30",
+   "tipo": "acto",
+   "titulo": "Serenata de felicitación al arcángel San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
    "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
    "fecha": "2026-10-22",
    "hora": "19:00",
@@ -3938,16 +4078,6 @@
    "tipo": "concierto",
    "titulo": "Concierto de la Coronación de Espinas",
    "nota": "Patio de la Casa de Hermandad de la Merced"
-  },
-  {
-   "ciudad": "cordoba",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-13-octubre-cordoba/202610131000003504441.amp.html",
-   "fecha": "2026-10-13",
-   "hora": "19:30",
-   "tipo": "culto",
-   "titulo": "Triduo a Santa Teresa de Jesús",
-   "nota": "Iglesia conventual de San José (San Cayetano)"
   },
   {
    "fecha": "2027-04-03",
@@ -4518,6 +4648,86 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/jose-manuel-pena-sutil-pregonero-de-la-hermandad-de-los-gitanos-para-la-cuaresma-de-2027/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen de la Granada 2027: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/virgen-de-la-granada-procesion-virgen-de-la-granada-virgen-de-la-granada-granada-virgen-granada-procesion-ermita-san-isidro-granada-san-isidro-granada_0_2008289795.html"
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "traslado",
+   "titulo": "La Real Federación de Hermandades y Cofradías de la Semana Santa de Granada ha dado a conocer este martes, tras el Pleno Extraordinario de Hermanos Mayores, que los trasl",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "traslado",
+   "titulo": "La previsión de la organización sigue siendo celebrar los traslados el 28 de noviembre, siempre que las condiciones meteorológicas y las cuestiones relacionadas con la au",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.html"
   },
   {
    "fecha": "2026-10-22",
