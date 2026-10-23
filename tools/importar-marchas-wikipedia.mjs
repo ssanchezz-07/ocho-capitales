@@ -52,7 +52,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
       if (!txt.startsWith('{')) continue;
       for (const r of JSON.parse(txt).query.search) {
         const t = norm(r.title); if (!t.includes(norm(CIUDAD[h.ciudad]))) continue;
-        const hit = toks.filter((w) => t.includes(w)).length; if (hit >= 1 && !/semana santa en|anexo/.test(t)) return 'https://es.wikipedia.org/wiki/' + encodeURIComponent(r.title.replace(/ /g, '_'));
+        // con una sola palabra en común se colaban artículos de otra hermandad («Dolores de San Juan» → «Dolores del Puente»)
+        const hit = toks.filter((w) => t.includes(w)).length; if (hit >= Math.min(2, toks.length) && !/semana santa en|anexo/.test(t)) return 'https://es.wikipedia.org/wiki/' + encodeURIComponent(r.title.replace(/ /g, '_'));
       }
       return '';
     }

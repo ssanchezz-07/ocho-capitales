@@ -381,8 +381,14 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
   const WM_FILE = path.join(__dirname, 'sources', f);
   if (!fs.existsSync(WM_FILE)) continue;
   const WM = JSON.parse(fs.readFileSync(WM_FILE, 'utf8'));
+  // Un mismo artículo emparejado con varias hermandades (búsqueda en Wikipedia demasiado laxa: «Dolores de San Juan» → artículo
+  // de los Dolores del Puente) solo vale para la que tiene todas sus palabras propias en el título del artículo.
+  const porUrl = {}; for (const [s, v] of Object.entries(WM)) if (v && v.fuente_url) (porUrl[v.fuente_url] ||= []).push(s);
+  const propias = (h) => norm0(h.nombre).replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length >= 4 && !['hermandad', 'cofradia', 'nuestra', 'nuestro', 'senora', 'santisimo', 'santisima', 'maria', 'jesus', 'cristo'].includes(w));
+  const encaja = (h, url) => { const t = norm0(decodeURIComponent(url.split('/wiki/')[1] || '')).replace(/_/g, ' '); return propias(h).every((w) => t.includes(w)); };
   for (const h of hermandades) {
     const wm = WM[h.slug];
+    if (wm && /wikipedia\.org\/wiki\//.test(wm.fuente_url || '') && porUrl[wm.fuente_url].length > 1 && !encaja(h, wm.fuente_url)) { if ((wm.marchas || []).length) console.warn('Marchas descartadas (artículo de otra hermandad):', h.slug, '←', decodeURIComponent(wm.fuente_url)); continue; }
     if (wm && wm.marchas && wm.marchas.length && !(h.marchas || []).length) { h.marchas = wm.marchas.map((m) => ({ titulo: m.titulo, autor: m.autor, anio: m.anio || '', tipo: '' })); h.marchas_fuente = wm.fuente_url; }
   }
 }
