@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 34,
-  "Prensa (texto de noticias)": 68
+  "Prensa (texto de noticias)": 71
  },
  "eventos": [
   {
@@ -4758,6 +4758,36 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-procesion-san-rafael-granada-procesion-granada-san-rafael-san-juan-de-dios-granada-granada-procesion-san-rafael-granada-san-rafael_0_2008327238.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "extraordinaria",
+   "titulo": "La Virgen del Consuelo de Puente Genil, protagonista un histórico desfile procesional extraordinario",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/provincia/virgen-consuelo-puente-genil-protagonista_0_2008332443.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "Horario y recorrido para la procesión del Rosario de la Macarena de este sábado",
+   "nota": "",
+   "fuente": "La Voz de Almería",
+   "url": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/684212/horario-recorrido-procesion-rosario-macarena-sabado.html"
+  },
+  {
+   "fecha": "2027-02-05",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "pregon",
+   "titulo": "La Hermandad de la Agonía designa a Inés Espejo como pregonera e Irene Pérez como cartelista del Martes Santo de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-agonia-designa-a-ines-espejo-como-pregonera-e-irene-perez-como-cartelista-del-martes-santo-de-2027/"
   },
   {
    "fecha": "2026-10-23",
