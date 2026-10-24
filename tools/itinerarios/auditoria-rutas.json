@@ -421,10 +421,7 @@
    "sinSituar": 0,
    "estimados": 0,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»",
-    "final del cortejo: la hora retrocede en «PLAZA SAN LORENZO» (10:10)",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»",
-    "6 tramos de más de 350 m en recta (sin calle)"
+    "final del cortejo: la hora retrocede en «PLAZA SAN LORENZO» (10:10)"
    ]
   },
   "penas-de-santiago-cordoba": {
@@ -433,11 +430,7 @@
    "puntos": 74,
    "sinSituar": 0,
    "estimados": 4,
-   "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-huerto-cordoba": {
    "dia": "Domingo de Ramos",
@@ -445,11 +438,7 @@
    "puntos": 69,
    "sinSituar": 0,
    "estimados": 1,
-   "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-rescatado-cordoba": {
    "dia": "Domingo de Ramos",
@@ -465,9 +454,7 @@
    "puntos": 73,
    "sinSituar": 0,
    "estimados": 4,
-   "avisos": [
-    "8 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "la-esperanza-cordoba": {
    "dia": "Domingo de Ramos",
@@ -476,11 +463,9 @@
    "sinSituar": 0,
    "estimados": 4,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
     "final del cortejo: 239 m/min entre «SALIDA» y «SAN PABLO»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
     "final del cortejo: salto de 1246 m de «SAN ANDRÉS» a «ENTRADA»",
-    "8 tramos de más de 350 m en recta (sin calle)"
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "el-amor-cordoba": {
@@ -490,7 +475,7 @@
    "sinSituar": 0,
    "estimados": 1,
    "avisos": [
-    "11 tramos de más de 350 m en recta (sin calle)"
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-merced-cordoba": {
@@ -510,9 +495,7 @@
    "sinSituar": 0,
    "estimados": 5,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "7 tramos de más de 350 m en recta (sin calle)"
+    "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-estrella-cordoba": {
@@ -558,9 +541,7 @@
    "sinSituar": 0,
    "estimados": 11,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "14 tramos de más de 350 m en recta (sin calle)"
+    "10 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-universitaria-cordoba": {
@@ -631,11 +612,7 @@
    "puntos": 95,
    "sinSituar": 0,
    "estimados": 8,
-   "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-calvario-cordoba": {
    "dia": "Miércoles Santo",
@@ -644,8 +621,7 @@
    "sinSituar": 0,
    "estimados": 1,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»",
-    "8 tramos de más de 350 m en recta (sin calle)"
+    "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-misericordia-cordoba": {
@@ -690,7 +666,7 @@
    "sinSituar": 1,
    "estimados": 1,
    "avisos": [
-    "10 tramos de más de 350 m en recta (sin calle)"
+    "6 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-caridad-cordoba": {
@@ -708,9 +684,7 @@
    "sinSituar": 0,
    "estimados": 0,
    "avisos": [
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "14 tramos de más de 350 m en recta (sin calle)"
+    "6 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-cena-cordoba": {
@@ -739,9 +713,7 @@
    "estimados": 4,
    "avisos": [
     "cruz de guía: 234 m/min entre «SALIDA» y «MARÍA AUXILIADORA»",
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "13 tramos de más de 350 m en recta (sin calle)"
+    "9 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-buena-muerte-cordoba": {
@@ -772,11 +744,9 @@
    "estimados": 2,
    "avisos": [
     "cruz de guía: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»",
-    "cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
     "final del cortejo: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»",
     "final del cortejo: 259 m/min entre «SALIDA» y «AVENIDA DEL 28 DE FEBRERO»",
-    "final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»",
-    "11 tramos de más de 350 m en recta (sin calle)"
+    "7 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-expiracion-cordoba": {
@@ -785,9 +755,7 @@
    "puntos": 58,
    "sinSituar": 0,
    "estimados": 0,
-   "avisos": [
-    "8 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-descendimiento-cordoba": {
    "dia": "Viernes Santo",
@@ -796,7 +764,7 @@
    "sinSituar": 0,
    "estimados": 3,
    "avisos": [
-    "8 tramos de más de 350 m en recta (sin calle)"
+    "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-conversion-cordoba": {
@@ -1442,7 +1410,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 10,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "lagrimas-y-favores-malaga": {
@@ -1450,7 +1418,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": []
   },
   "dulce-nombre-malaga": {
@@ -1458,7 +1426,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 19,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "salutacion-malaga": {
@@ -1466,7 +1434,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "humildad-malaga": {
@@ -1474,7 +1442,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "salud-malaga": {
@@ -1482,7 +1450,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "humildad-y-paciencia-malaga": {
@@ -1490,7 +1458,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 21,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "huerto-malaga": {
@@ -1506,8 +1474,9 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 14,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": [
+    "paso: salto de 1640 m de «Salida» a «Tribuna»",
     "paso: salto de 1800 m de «Comedias» a «Encierro»"
    ]
   },
@@ -1516,7 +1485,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 20,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "dolores-del-puente-malaga": {
@@ -1524,17 +1493,15 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "paso: salto de 2437 m de «Pte. Esperanza» a «Encierro»"
-   ]
+   "estimados": 1,
+   "avisos": []
   },
   "cautivo-malaga": {
    "dia": "Lunes Santo",
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 19,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "estudiantes-malaga": {
@@ -1542,7 +1509,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": []
   },
   "rocio-malaga": {
@@ -1550,7 +1517,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 18,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": []
   },
   "penas-malaga": {
@@ -1558,7 +1525,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "nueva-esperanza-malaga": {
@@ -1566,7 +1533,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 24,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "humillacion-y-estrella-malaga": {
@@ -1574,7 +1541,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 19,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 1,
    "avisos": [
     "paso: salto de 1307 m de «Pº Santo Domingo» a «Encierro»"
    ]
@@ -1584,7 +1551,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 18,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "sentencia-malaga": {
@@ -1592,7 +1559,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "fusionadas-malaga": {
@@ -1600,7 +1567,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "mediadora-malaga": {
@@ -1608,7 +1575,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 20,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 1,
    "avisos": [
     "paso: salto de 1255 m de «Ayala» a «Encierro»"
    ]
@@ -1618,7 +1585,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "sangre-malaga": {
@@ -1626,7 +1593,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 14,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "el-rico-malaga": {
@@ -1634,7 +1601,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "paloma-malaga": {
@@ -1642,7 +1609,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 12,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "sagrada-cena-malaga": {
@@ -1650,7 +1617,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 13,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "vineros-malaga": {
@@ -1658,7 +1625,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 13,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "santa-cruz-malaga": {
@@ -1666,7 +1633,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 14,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "vera-cruz-malaga": {
@@ -1674,7 +1641,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 13,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "mena-malaga": {
@@ -1682,17 +1649,15 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 3,
-   "avisos": [
-    "7 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 4,
+   "avisos": []
   },
   "zamarrilla-malaga": {
    "dia": "Jueves Santo",
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "misericordia-malaga": {
@@ -1708,7 +1673,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "descendimiento-malaga": {
@@ -1716,7 +1681,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "amor-malaga": {
@@ -1724,7 +1689,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 19,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "dolores-de-san-juan-malaga": {
@@ -1732,7 +1697,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 12,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": [
     "3 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -1742,7 +1707,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 15,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "piedad-malaga": {
@@ -1750,7 +1715,7 @@
    "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
    "puntos": 14,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": []
   },
   "santo-sepulcro-malaga": {
@@ -1886,7 +1851,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 2,
    "avisos": []
   },
   "la-cena-sevilla": {
@@ -1894,7 +1859,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 36,
    "sinSituar": 0,
-   "estimados": 12,
+   "estimados": 9,
    "avisos": []
   },
   "la-hiniesta-sevilla": {
@@ -1902,7 +1867,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 37,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": []
   },
   "la-paz-sevilla": {
@@ -1910,11 +1875,11 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 45,
    "sinSituar": 0,
-   "estimados": 13,
+   "estimados": 9,
    "avisos": [
     "cruz de guía: salto de 1703 m de «Salida Postigo del Aceite» a «Harinas»",
     "palio: la hora retrocede en «Pl. Triunfo» (20:00)",
-    "5 tramos de más de 350 m en recta (sin calle)"
+    "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-roque-sevilla": {
@@ -1922,7 +1887,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 3,
    "avisos": []
   },
   "la-estrella-sevilla": {
@@ -1930,9 +1895,9 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 33,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "la-amargura-sevilla": {
@@ -1940,7 +1905,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 24,
    "sinSituar": 1,
-   "estimados": 9,
+   "estimados": 6,
    "avisos": []
   },
   "el-amor-sevilla": {
@@ -1948,7 +1913,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 9,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "san-pablo-sevilla": {
@@ -1956,7 +1921,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 56,
    "sinSituar": 0,
-   "estimados": 9,
+   "estimados": 5,
    "avisos": [
     "cruz de guía: salto de 1512 m de «Luis Montoto» a «San Esteban»",
     "palio: salto de 1226 m de «Luis Montoto» a «San Esteban»",
@@ -1968,10 +1933,13 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 37,
    "sinSituar": 0,
-   "estimados": 21,
+   "estimados": 11,
    "avisos": [
     "cruz de guía: salto de 1363 m de «Encarnación» a «Aponte»",
-    "3 tramos de más de 350 m en recta (sin calle)"
+    "palio: salto de 1505 m de «Laffón Soto» a «Av. Ped. Romero»",
+    "palio: salto de 7531 m de «Av. Ped. Romero» a «Entrada»",
+    "palio: 502 m/min entre «Av. Ped. Romero» y «Entrada»",
+    "13 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "santa-marta-sevilla": {
@@ -1979,10 +1947,11 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 42,
    "sinSituar": 0,
-   "estimados": 11,
+   "estimados": 7,
    "avisos": [
+    "paso: salto de 1541 m de «Salida» a «PLAZA»",
     "palio: salto de 1221 m de «Río de la Plata» a «Avda. Roma»",
-    "6 tramos de más de 350 m en recta (sin calle)"
+    "5 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-gonzalo-sevilla": {
@@ -1990,7 +1959,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 44,
    "sinSituar": 0,
-   "estimados": 12,
+   "estimados": 7,
    "avisos": [
     "palio: salto de 1251 m de «San Jacinto» a «San Pablo»",
     "6 tramos de más de 350 m en recta (sin calle)"
@@ -2001,7 +1970,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 22,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 5,
    "avisos": [
     "4 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -2011,7 +1980,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 24,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "las-aguas-sevilla": {
@@ -2019,7 +1988,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 26,
    "sinSituar": 0,
-   "estimados": 10,
+   "estimados": 8,
    "avisos": []
   },
   "el-museo-sevilla": {
@@ -2027,7 +1996,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 12,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": []
   },
   "el-cerro-sevilla": {
@@ -2035,7 +2004,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 55,
    "sinSituar": 0,
-   "estimados": 8,
+   "estimados": 4,
    "avisos": [
     "cruz de guía: salto de 1233 m de «Salida» a «Afán de Ribera»",
     "cruz de guía: salto de 1246 m de «Avda. Ramón y Cajal» a «Enramadilla»",
@@ -2053,7 +2022,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 29,
    "sinSituar": 6,
-   "estimados": 3,
+   "estimados": 0,
    "avisos": [
     "palio: salto de 1309 m de «Carlos V» a «Constitución Imagen»",
     "palio: salto de 1703 m de «M. la Blanca Águilas» a «Ramón y Caj.»",
@@ -2066,11 +2035,11 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 35,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": [
     "cruz de guía: la hora retrocede en «SIERPES» (19:00)",
     "palio: la hora retrocede en «Francos» (22:00)",
-    "4 tramos de más de 350 m en recta (sin calle)"
+    "5 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "los-estudiantes-sevilla": {
@@ -2078,9 +2047,10 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 27,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 1,
    "avisos": [
     "cruz de guía: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»",
+    "cruz de guía: salto de 1270 m de «Miguel de Mañara» a «Entrada»",
     "palio: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»"
    ]
   },
@@ -2089,7 +2059,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 12,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 3,
    "avisos": [
     "cruz de guía: la hora retrocede en «Pl. Alianza» (20:00)",
     "cruz de guía: la hora retrocede en «Postigo» (22:30)"
@@ -2100,7 +2070,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 37,
    "sinSituar": 0,
-   "estimados": 11,
+   "estimados": 7,
    "avisos": [
     "4 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -2110,7 +2080,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 35,
    "sinSituar": 0,
-   "estimados": 6,
+   "estimados": 2,
    "avisos": []
   },
   "la-sed-sevilla": {
@@ -2118,12 +2088,12 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 40,
    "sinSituar": 3,
-   "estimados": 18,
+   "estimados": 12,
    "avisos": [
     "cruz de guía: salto de 2334 m de «Salida» a «Hospital San Juan»",
     "palio: salto de 2361 m de «Cardenal Lluch» a «Entrada»",
     "palio: acaba a 1823 m de donde sale",
-    "4 tramos de más de 350 m en recta (sin calle)"
+    "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-bernardo-sevilla": {
@@ -2131,7 +2101,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 39,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 3,
    "avisos": [
     "cruz de guía: salto de 1219 m de «Salida» a «Puente de San Bernardo»",
     "cruz de guía: salto de 1545 m de «San Bernardo» a «Entrada»",
@@ -2145,7 +2115,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 29,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": [
     "4 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -2155,7 +2125,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 25,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": [
     "3 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -2165,7 +2135,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 27,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": [
     "cruz de guía: salto de 1230 m de «Sales y Ferré» a «Entrada»",
     "palio: salto de 1230 m de «Sales y Ferré» a «Entrada»",
@@ -2177,7 +2147,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 11,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 4,
    "avisos": []
   },
   "los-negritos-sevilla": {
@@ -2185,7 +2155,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 31,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": [
     "cruz de guía: salto de 1363 m de «Salida» a «San Esteban»",
     "cruz de guía: salto de 1452 m de «Muro de los Navarros» a «Entrada»",
@@ -2199,7 +2169,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 31,
    "sinSituar": 0,
-   "estimados": 8,
+   "estimados": 5,
    "avisos": []
   },
   "las-cigarreras-sevilla": {
@@ -2207,9 +2177,10 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 30,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 2,
    "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
+    "palio: salto de 1302 m de «San Fernando» a «Jardines de Murillo»",
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "montesion-sevilla": {
@@ -2217,7 +2188,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 26,
    "sinSituar": 0,
-   "estimados": 6,
+   "estimados": 2,
    "avisos": [
     "palio: salto de 1371 m de «Francos» a «Álvarez»"
    ]
@@ -2227,7 +2198,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 28,
    "sinSituar": 0,
-   "estimados": 8,
+   "estimados": 4,
    "avisos": [
     "cruz de guía: salto de 1271 m de «Salida» a «CAMPANA»",
     "cruz de guía: salto de 1867 m de «Castelar» a «Entrada»",
@@ -2241,7 +2212,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 21,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "pasion-sevilla": {
@@ -2249,7 +2220,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 17,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "el-silencio-sevilla": {
@@ -2257,7 +2228,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 21,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "el-gran-poder-sevilla": {
@@ -2265,7 +2236,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 23,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 0,
    "avisos": []
   },
   "la-macarena-sevilla": {
@@ -2273,7 +2244,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 46,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": []
   },
   "el-calvario-sevilla": {
@@ -2281,7 +2252,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 4,
    "avisos": [
     "cruz de guía: salto de 1271 m de «Salida» a «CAMPANA»",
     "cruz de guía: la hora retrocede en «P. SAN» (6:00)",
@@ -2294,7 +2265,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 44,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 1,
    "avisos": []
   },
   "los-gitanos-sevilla": {
@@ -2302,7 +2273,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 38,
    "sinSituar": 0,
-   "estimados": 15,
+   "estimados": 11,
    "avisos": []
   },
   "la-carreteria-sevilla": {
@@ -2310,7 +2281,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 23,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "la-soledad-de-san-lorenzo-sevilla": {
@@ -2318,7 +2289,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 20,
    "sinSituar": 1,
-   "estimados": 6,
+   "estimados": 4,
    "avisos": []
   },
   "el-cachorro-sevilla": {
@@ -2326,7 +2297,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 48,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 0,
    "avisos": [
     "cruz de guía: salto de 1378 m de «Salida» a «Castilla»",
     "cruz de guía: salto de 1431 m de «Castilla» a «Entrada»",
@@ -2341,7 +2312,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 32,
    "sinSituar": 0,
-   "estimados": 12,
+   "estimados": 9,
    "avisos": [
     "cruz de guía: salto de 1285 m de «Salida» a «San Jorge»",
     "cruz de guía: salto de 1243 m de «Callao» a «Entrada»",
@@ -2353,7 +2324,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 20,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 2,
    "avisos": [
     "palio: salto de 1258 m de «Callao» a «Entrada»"
    ]
@@ -2363,7 +2334,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 22,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "el-sol-sevilla": {
@@ -2371,7 +2342,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 40,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 3,
    "avisos": []
   },
   "los-servitas-sevilla": {
@@ -2379,7 +2350,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 33,
    "sinSituar": 0,
-   "estimados": 9,
+   "estimados": 6,
    "avisos": [
     "cruz de guía: la hora retrocede en «P. SAN» (19:00)",
     "palio: salto de 1208 m de «Puerta de Jerez Cuesta Rosario» a «Avda. Carlos V»"
@@ -2390,7 +2361,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 40,
    "sinSituar": 0,
-   "estimados": 7,
+   "estimados": 3,
    "avisos": [
     "3 tramos de más de 350 m en recta (sin calle)"
    ]
@@ -2400,7 +2371,7 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 23,
    "sinSituar": 1,
-   "estimados": 7,
+   "estimados": 2,
    "avisos": [
     "cruz de guía: la hora retrocede en «PALOS» (20:28)"
    ]
@@ -2429,10 +2400,10 @@
    "dia": "Domingo de Ramos",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 11,
-   "sinSituar": 10,
-   "estimados": 0,
+   "sinSituar": 5,
+   "estimados": 2,
    "avisos": [
-    "10 de 11 puntos sin situar"
+    "5 de 11 puntos sin situar"
    ]
   },
   "la-candelaria-sevilla": {
@@ -2440,7 +2411,7 @@
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 22,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 3,
    "avisos": []
   },
   "los-javieres-sevilla": {
@@ -2448,7 +2419,7 @@
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 10,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "dulce-nombre-la-bofeta-sevilla": {
@@ -2456,7 +2427,7 @@
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 21,
    "sinSituar": 0,
-   "estimados": 6,
+   "estimados": 5,
    "avisos": []
   },
   "el-baratillo-sevilla": {
@@ -2464,9 +2435,9 @@
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 20,
    "sinSituar": 1,
-   "estimados": 7,
+   "estimados": 6,
    "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-buenaventura-sevilla": {
@@ -2474,7 +2445,7 @@
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 20,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   }
  }

@@ -79,6 +79,20 @@ const FIJOS = {
     'puerta del perdon': [37.87978, -4.78005],
     'interior s i c': [37.87915, -4.77945],
     'puerta de las cofradias': [37.87905, -4.77985],
+    // Puente romano (OSM man_made=bridge, vía Nominatim 2026-10-24); la caché solo tenía la «Calle Puente Romano», a 1 km
+    'puente romano': [37.87665, -4.77796],
+  },
+  // Sevilla: en las rejillas «P. SAN MIGUEL» y «P. PALOS» son las puertas de la Catedral (norm() las convierte en «paseo»)
+  // y «PLAZA» es la Plaza de San Francisco. Coordenadas de OpenStreetMap (nodos entrance de la Catedral, Overpass 2026-10-24).
+  sevilla: {
+    'paseo san miguel': [37.385514, -5.993809], 'p san miguel': [37.385514, -5.993809], 'puerta de san miguel': [37.385514, -5.993809],
+    'paseo palos': [37.386053, -5.992541], 'p palos': [37.386053, -5.992541], 'palos': [37.386053, -5.992541], 'puerta de palos': [37.386053, -5.992541],
+    'plaza': [37.38914, -5.99406],
+  },
+  // Málaga: la Tribuna Principal está en la Plaza de la Constitución (orden oficial: «Plaza de la Constitución, Tribuna Principal,
+  // Marqués de Larios»); coordenada de la plaza en OSM. (La «Tribuna de los Pobres» es otro punto y no se toca.)
+  malaga: {
+    'tribuna': [36.72088, -4.42172], 'tribuna principal': [36.72088, -4.42172],
   },
 };
 // Nombres cortados o abreviados en los PDF que sí existen en OSM con su nombre completo (comprobado en tools/itinerarios/cache/osm-*.json)
@@ -86,8 +100,8 @@ const ALIAS = {
   sevilla: { 'jesus del gran': 'Jesús del Gran Poder', 'dona maria': 'Doña María Coronel', 'avenida isabel la c': 'Isabel la Católica', 'isabel la c': 'Isabel la Católica', 'ramon y caj': 'Ramón y Cajal', 'avenida ramon y cajal': 'Ramón y Cajal' },
   granada: { 'gran via': 'Gran Vía de Colón' },
   huelva: { 'federico molina': 'Avenida del Alcalde Federico Molina Orta', 'avenida federico molina': 'Avenida del Alcalde Federico Molina Orta', 'baez': 'Plaza de Quintero Báez' },
-  malaga: { 'alameda': 'Alameda Principal', 'plaza de los santos martires': 'Plaza de los Mártires Ciriaco y Paula', 'puerta buenaventura': 'Calle Puerta de Buenaventura', 'plaza spinola': 'Plaza de Spínola' },
-  cordoba: { 'conde cardenas': 'Conde de Cárdenas', 'doctor maranon': 'Doctor Gregorio Marañón' },
+  malaga: { 'alameda': 'Alameda Principal', 'plaza de los santos martires': 'Plaza de los Mártires Ciriaco y Paula', 'puerta buenaventura': 'Calle Puerta de Buenaventura', 'plaza spinola': 'Plaza de Spínola', 'puente esperanza': 'Puente de la Esperanza' },
+  cordoba: { 'conde cardenas': 'Conde de Cárdenas', 'doctor maranon': 'Doctor Gregorio Marañón', 'diario cordoba': 'Calle Diario de Córdoba' },
 };
 function situar(ix, ciudad, h, pts) {
   const sede = h && h.sede ? norm(h.sede) : '';
@@ -119,7 +133,8 @@ function situar(ix, ciudad, h, pts) {
     else if (/carrera oficial|^c oficial|^carrera$/.test(l)) { const g = ix.calles.get(norm(CARRERA[ciudad])) || ix.calles.get(nucleo(CARRERA[ciudad])); if (g) { pos = cercano(g, prev); como = 'carrera oficial'; } }
     else {
       const al = [l, nucleo(p.lugar)].map((k) => ALIAS[ciudad] && ALIAS[ciudad][k]).find(Boolean);
-      const cands = [l, nucleo(p.lugar), ...(al ? [norm(al), nucleo(al)] : [])].filter(Boolean);
+      // el alias va primero: si no, el núcleo recortado («Pte. Esperanza» → «esperanza») casa con otra calle homónima
+      const cands = [...(al ? [norm(al), nucleo(al)] : []), l, nucleo(p.lugar)].filter(Boolean);
       let geos = null;
       for (const k of cands) if (ix.calles.has(k)) { geos = ix.calles.get(k); break; }
       if (!geos) { // nombre parcial: la calle cuyo núcleo contiene el del itinerario (o al revés), de al menos 5 letras

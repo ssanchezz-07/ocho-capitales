@@ -36,24 +36,7 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios de
 Fuente: Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)
 - paso: salto de 1283 m de «Avda. Andalucía» a «Plaza de la Constitución»
 
-## cordoba: 33 de 42 con avisos
-
-### la-soledad-cordoba (Viernes Santo)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»
-- final del cortejo: 259 m/min entre «SALIDA» y «AVENIDA DEL 28 DE FEBRERO»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 11 tramos de más de 350 m en recta (sin calle)
-
-### la-esperanza-cordoba (Domingo de Ramos)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: 239 m/min entre «SALIDA» y «SAN PABLO»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1246 m de «SAN ANDRÉS» a «ENTRADA»
-- 8 tramos de más de 350 m en recta (sin calle)
+## cordoba: 28 de 42 con avisos
 
 ### la-universitaria-cordoba (Martes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
@@ -71,13 +54,6 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 - final del cortejo: salto de 1323 m de «TORRES CABRERA» a «ENTRADA»
 - 4 tramos de más de 350 m en recta (sin calle)
 
-### entrada-triunfal-cordoba (Domingo de Ramos)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»
-- final del cortejo: la hora retrocede en «PLAZA SAN LORENZO» (10:10)
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»
-- 6 tramos de más de 350 m en recta (sin calle)
-
 ### la-pasion-cordoba (Miércoles Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - final del cortejo: salto de 1480 m de «SALIDA» a «PUERTA DE SEVILLA»
@@ -85,36 +61,18 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 - final del cortejo: 183 m/min entre «SAN BASILIO» y «ENTRADA»
 - 4 tramos de más de 350 m en recta (sin calle)
 
-### cristo-de-gracia-el-esparraguero-cordoba (Jueves Santo y Madrugada)
+### la-soledad-cordoba (Viernes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: 234 m/min entre «SALIDA» y «MARÍA AUXILIADORA»
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 13 tramos de más de 350 m en recta (sin calle)
-
-### penas-de-santiago-cordoba (Domingo de Ramos)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 4 tramos de más de 350 m en recta (sin calle)
-
-### el-huerto-cordoba (Domingo de Ramos)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 4 tramos de más de 350 m en recta (sin calle)
-
-### presentacion-al-pueblo-cordoba (Lunes Santo)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
+- cruz de guía: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»
+- final del cortejo: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»
+- final del cortejo: 259 m/min entre «SALIDA» y «AVENIDA DEL 28 DE FEBRERO»
 - 7 tramos de más de 350 m en recta (sin calle)
 
-### la-agonia-cordoba (Martes Santo)
+### la-esperanza-cordoba (Domingo de Ramos)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 14 tramos de más de 350 m en recta (sin calle)
+- final del cortejo: 239 m/min entre «SALIDA» y «SAN PABLO»
+- final del cortejo: salto de 1246 m de «SAN ANDRÉS» a «ENTRADA»
+- 4 tramos de más de 350 m en recta (sin calle)
 
 ### la-sangre-cordoba (Martes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
@@ -122,44 +80,36 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 - final del cortejo: salto de 2166 m de «PAZ Y ESPERANZA» a «ENTRADA»
 - 6 tramos de más de 350 m en recta (sin calle)
 
-### la-paz-cordoba (Miércoles Santo)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»
-- 4 tramos de más de 350 m en recta (sin calle)
-
 ### la-piedad-cordoba (Miércoles Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - final del cortejo: salto de 2101 m de «ESCRIBA LUBNA» a «PUENTE»
 - final del cortejo: 210 m/min entre «ESCRIBA LUBNA» y «PUENTE»
 - 12 tramos de más de 350 m en recta (sin calle)
 
-### jesus-caido-cordoba (Jueves Santo y Madrugada)
+### cristo-de-gracia-el-esparraguero-cordoba (Jueves Santo y Madrugada)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- final del cortejo: salto de 1417 m de «SAN FERNANDO» a «DIARIO CÓRDOBA»
-- 14 tramos de más de 350 m en recta (sin calle)
-
-### el-calvario-cordoba (Miércoles Santo)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- cruz de guía: salto de 1417 m de «SAN FERNANDO» a «DIARIO CORDOBA»
-- 8 tramos de más de 350 m en recta (sin calle)
+- cruz de guía: 234 m/min entre «SALIDA» y «MARÍA AUXILIADORA»
+- 9 tramos de más de 350 m en recta (sin calle)
 
 ### la-o-cordoba (Sábado de Pasión)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 7 tramos de más de 350 m en recta (sin calle)
 
-### vera-cruz-cordoba (Domingo de Ramos)
+### entrada-triunfal-cordoba (Domingo de Ramos)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- 8 tramos de más de 350 m en recta (sin calle)
+- final del cortejo: la hora retrocede en «PLAZA SAN LORENZO» (10:10)
 
 ### el-amor-cordoba (Domingo de Ramos)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- 11 tramos de más de 350 m en recta (sin calle)
+- 4 tramos de más de 350 m en recta (sin calle)
 
 ### la-merced-cordoba (Lunes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 4 tramos de más de 350 m en recta (sin calle)
+
+### presentacion-al-pueblo-cordoba (Lunes Santo)
+Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
+- 3 tramos de más de 350 m en recta (sin calle)
 
 ### la-sentencia-cordoba (Lunes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
@@ -169,6 +119,10 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 4 tramos de más de 350 m en recta (sin calle)
 
+### la-agonia-cordoba (Martes Santo)
+Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
+- 10 tramos de más de 350 m en recta (sin calle)
+
 ### el-buen-suceso-cordoba (Martes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 3 tramos de más de 350 m en recta (sin calle)
@@ -177,13 +131,21 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 4 tramos de más de 350 m en recta (sin calle)
 
+### el-calvario-cordoba (Miércoles Santo)
+Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
+- 3 tramos de más de 350 m en recta (sin calle)
+
 ### la-misericordia-cordoba (Miércoles Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 6 tramos de más de 350 m en recta (sin calle)
 
 ### jesus-nazareno-cordoba (Jueves Santo y Madrugada)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- 10 tramos de más de 350 m en recta (sin calle)
+- 6 tramos de más de 350 m en recta (sin calle)
+
+### jesus-caido-cordoba (Jueves Santo y Madrugada)
+Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
+- 6 tramos de más de 350 m en recta (sin calle)
 
 ### la-cena-cordoba (Jueves Santo y Madrugada)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
@@ -197,13 +159,9 @@ Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Cór
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
 - 6 tramos de más de 350 m en recta (sin calle)
 
-### la-expiracion-cordoba (Viernes Santo)
-Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- 8 tramos de más de 350 m en recta (sin calle)
-
 ### el-descendimiento-cordoba (Viernes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
-- 8 tramos de más de 350 m en recta (sin calle)
+- 3 tramos de más de 350 m en recta (sin calle)
 
 ### la-conversion-cordoba (Viernes Santo)
 Fuente: Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026
@@ -399,15 +357,12 @@ Fuente: Programa «Nazareno» de Canal Sur Radio, Semana Santa de Jaén 2026
 Fuente: Programa «Nazareno» de Canal Sur Radio, Semana Santa de Jaén 2026
 - 4 tramos de más de 350 m en recta (sin calle)
 
-## malaga: 6 de 45 con avisos
+## malaga: 4 de 45 con avisos
 
 ### pasion-malaga (Lunes Santo)
 Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
+- paso: salto de 1640 m de «Salida» a «Tribuna»
 - paso: salto de 1800 m de «Comedias» a «Encierro»
-
-### dolores-del-puente-malaga (Lunes Santo)
-Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
-- paso: salto de 2437 m de «Pte. Esperanza» a «Encierro»
 
 ### humillacion-y-estrella-malaga (Martes Santo)
 Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
@@ -416,10 +371,6 @@ Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
 ### mediadora-malaga (Miércoles Santo)
 Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
 - paso: salto de 1255 m de «Ayala» a «Encierro»
-
-### mena-malaga (Jueves Santo)
-Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
-- 7 tramos de más de 350 m en recta (sin calle)
 
 ### dolores-de-san-juan-malaga (Viernes Santo)
 Fuente: Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026
@@ -447,6 +398,14 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - palio: salto de 1403 m de «Castilla» a «Entrada»
 - paso: salto de 1714 m de «Zaragoza» a «Entrada»
 - 6 tramos de más de 350 m en recta (sin calle)
+
+### redencion-sevilla (Lunes Santo)
+Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
+- cruz de guía: salto de 1363 m de «Encarnación» a «Aponte»
+- palio: salto de 1505 m de «Laffón Soto» a «Av. Ped. Romero»
+- palio: salto de 7531 m de «Av. Ped. Romero» a «Entrada»
+- palio: 502 m/min entre «Av. Ped. Romero» y «Entrada»
+- 13 tramos de más de 350 m en recta (sin calle)
 
 ### san-bernardo-sevilla (Miércoles Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -484,7 +443,7 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - cruz de guía: salto de 2334 m de «Salida» a «Hospital San Juan»
 - palio: salto de 2361 m de «Cardenal Lluch» a «Entrada»
 - palio: acaba a 1823 m de donde sale
-- 4 tramos de más de 350 m en recta (sin calle)
+- 3 tramos de más de 350 m en recta (sin calle)
 
 ### el-calvario-sevilla (Madrugá)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -497,7 +456,7 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - cruz de guía: salto de 1703 m de «Salida Postigo del Aceite» a «Harinas»
 - palio: la hora retrocede en «Pl. Triunfo» (20:00)
-- 5 tramos de más de 350 m en recta (sin calle)
+- 3 tramos de más de 350 m en recta (sin calle)
 
 ### san-pablo-sevilla (Lunes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -505,11 +464,23 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - palio: salto de 1226 m de «Luis Montoto» a «San Esteban»
 - 11 tramos de más de 350 m en recta (sin calle)
 
+### santa-marta-sevilla (Lunes Santo)
+Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
+- paso: salto de 1541 m de «Salida» a «PLAZA»
+- palio: salto de 1221 m de «Río de la Plata» a «Avda. Roma»
+- 5 tramos de más de 350 m en recta (sin calle)
+
 ### san-benito-sevilla (Martes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - cruz de guía: la hora retrocede en «SIERPES» (19:00)
 - palio: la hora retrocede en «Francos» (22:00)
-- 4 tramos de más de 350 m en recta (sin calle)
+- 5 tramos de más de 350 m en recta (sin calle)
+
+### los-estudiantes-sevilla (Martes Santo)
+Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
+- cruz de guía: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»
+- cruz de guía: salto de 1270 m de «Miguel de Mañara» a «Entrada»
+- palio: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»
 
 ### cristo-de-burgos-sevilla (Miércoles Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -533,30 +504,20 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - palio: la hora retrocede en «Entrada» (0:50)
 - 3 tramos de más de 350 m en recta (sin calle)
 
-### redencion-sevilla (Lunes Santo)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- cruz de guía: salto de 1363 m de «Encarnación» a «Aponte»
-- 3 tramos de más de 350 m en recta (sin calle)
-
-### santa-marta-sevilla (Lunes Santo)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- palio: salto de 1221 m de «Río de la Plata» a «Avda. Roma»
-- 6 tramos de más de 350 m en recta (sin calle)
-
 ### san-gonzalo-sevilla (Lunes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - palio: salto de 1251 m de «San Jacinto» a «San Pablo»
 - 6 tramos de más de 350 m en recta (sin calle)
 
-### los-estudiantes-sevilla (Martes Santo)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- cruz de guía: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»
-- palio: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»
-
 ### santa-cruz-sevilla (Martes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - cruz de guía: la hora retrocede en «Pl. Alianza» (20:00)
 - cruz de guía: la hora retrocede en «Postigo» (22:30)
+
+### las-cigarreras-sevilla (Jueves Santo)
+Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
+- palio: salto de 1302 m de «San Fernando» a «Jardines de Murillo»
+- 4 tramos de más de 350 m en recta (sin calle)
 
 ### los-servitas-sevilla (Sábado Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -581,7 +542,7 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 
 ### la-estrella-sevilla (Domingo de Ramos)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- 3 tramos de más de 350 m en recta (sin calle)
+- 4 tramos de más de 350 m en recta (sin calle)
 
 ### vera-cruz-sevilla (Lunes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -596,10 +557,6 @@ Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - 4 tramos de más de 350 m en recta (sin calle)
 
 ### los-panaderos-sevilla (Miércoles Santo)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- 3 tramos de más de 350 m en recta (sin calle)
-
-### las-cigarreras-sevilla (Jueves Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - 3 tramos de más de 350 m en recta (sin calle)
 
@@ -629,8 +586,8 @@ Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
 
 ### jesus-despojado-sevilla (Domingo de Ramos)
 Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
-- 10 de 11 puntos sin situar
+- 5 de 11 puntos sin situar
 
 ### el-baratillo-sevilla (Miércoles Santo)
 Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
-- 3 tramos de más de 350 m en recta (sin calle)
+- 4 tramos de más de 350 m en recta (sin calle)
