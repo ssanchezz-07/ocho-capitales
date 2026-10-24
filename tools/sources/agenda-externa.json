@@ -5,7 +5,7 @@
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
-  "Prensa (agendas semanales)": 34,
+  "Prensa (agendas semanales)": 36,
   "Prensa (texto de noticias)": 71
  },
  "eventos": [
@@ -3088,6 +3088,26 @@
    "nota": "Ciudad de Granada",
    "fuente": "Real Federación de Hermandades y Cofradías de Granada",
    "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-25-octubre-cordoba/202610242200003516770.amp.html",
+   "fecha": "2026-10-25",
+   "hora": "09:00",
+   "tipo": "procesion",
+   "titulo": "Rosario de la aurora de María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-25-octubre-cordoba/202610242200003516770.amp.html",
+   "fecha": "2026-10-25",
+   "hora": "13:00",
+   "tipo": "culto",
+   "titulo": "Función principal en honor a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
   },
   {
    "ciudad": "cordoba",
