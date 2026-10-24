@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-23",
+ "generado": "2026-10-24",
  "fuentes": {
   "InfoCofrade": 344,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 34,
-  "Prensa (texto de noticias)": 68
+  "Prensa (texto de noticias)": 65
  },
  "eventos": [
   {
@@ -4560,16 +4560,6 @@
    "url": "https://www.diariosur.es/semana-santa/cuenta-atras-procesiones-extraordinarias-cristo-santo-traslado-20261021213506-nt.html"
   },
   {
-   "fecha": "2026-10-23",
-   "hora": "",
-   "ciudad": "cordoba",
-   "tipo": "pregon",
-   "titulo": "Andrés Lorite, pregonero de la Semana Santa 2027: \"No sé explicarme a mí mismo sin el hecho cofrade\"",
-   "nota": "",
-   "fuente": "Andalucía Información",
-   "url": "https://www.andaluciainformacion.es/articulo/cordoba/andres-lorite-culmen-cofrade-es-ser-pregonero-semana-santa-ciudad/202610211034533512994.html"
-  },
-  {
    "fecha": "2026-11-07",
    "hora": "",
    "ciudad": "cordoba",
@@ -4578,16 +4568,6 @@
    "nota": "",
    "fuente": "Mundo Cofrade",
    "url": "https://www.mundocofrade.es/articulo/actualidad/andres-lorite-vicepresidente-diputacion-sera-pregonero-semana-santa-cordoba-2027/20261022132039008429.html"
-  },
-  {
-   "fecha": "2026-10-23",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "Los traslados de Kerygma se adelantan una hora y comenzarán a las nueve de la mañana.",
-   "nota": "",
-   "fuente": "Ideal",
-   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
   },
   {
    "fecha": "2026-11-28",
@@ -4730,16 +4710,6 @@
    "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.html"
   },
   {
-   "fecha": "2026-10-23",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "Dos procesiones y festival de música en el sábado penúltimo de octubre",
-   "nota": "",
-   "fuente": "Ideal",
-   "url": "https://www.ideal.es/semanasantagranada/dos-procesiones-festival-musica-sabado-penultimo-octubre-20261023163839-nt.html"
-  },
-  {
    "fecha": "2026-12-30",
    "hora": "",
    "ciudad": "sevilla",
@@ -4758,6 +4728,36 @@
    "nota": "",
    "fuente": "101TV",
    "url": "https://www.101tv.es/granada/los-traslados-de-kerygma-se-fijan-el-sabado-de-reflexion-y-quedan-pendientes-de-autorizacion-de-la-junta-electoral/"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "pregon",
+   "titulo": "Andrés Lorite, pregonero de la Semana Santa 2027: \"No sé explicarme a mí mismo sin el hecho cofrade\"",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/andres-lorite-culmen-cofrade-es-ser-pregonero-semana-santa-ciudad/202610211034533512994.html"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma se adelantan una hora y comenzarán a las nueve de la mañana.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Dos procesiones y festival de música en el sábado penúltimo de octubre",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/dos-procesiones-festival-musica-sabado-penultimo-octubre-20261023163839-nt.html"
   },
   {
    "fecha": "2026-10-22",
@@ -4808,56 +4808,6 @@
    "nota": "",
    "fuente": "Ahora Granada",
    "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "culto",
-   "titulo": "Este martes arranca la novena, que este año predicarán el marianista Rafael Iglesias, el párroco de María Auxiliadora de Puerto Real, Jesús Fabra;",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "traslado",
-   "titulo": "Hoy, Natividad de la Virgen María, es la onomástica de la Virgen de la Caridad, que cierra sus cultos con una Eucaristía especial con la Coral Polifónica María del Carmen",
-   "nota": "",
-   "fuente": "El Corto de Loja",
-   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "culto",
-   "titulo": "Hoy comienza la novena en honor a la Virgen del Carmen",
-   "nota": "",
-   "fuente": "El Corto de Loja",
-   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "11:30",
-   "ciudad": "sevilla",
-   "tipo": "cartel",
-   "titulo": "El acto de presentación del cartel inaugural de la FELISE 2026 se ha celebrado este martes 20 de octubre, a las 11:30 horas, en el Aula 1 de la Real Fábrica de Artillería",
-   "nota": "",
-   "fuente": "Cadena SER",
-   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
-  },
-  {
-   "fecha": "2026-10-20",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "Así lo ha comunicado el presidente de la Real Federación, Armando Javier Ortiz, durante el Pleno de Hermanos Mayores celebrado en la tarde-noche de este martes, 20 de oct",
-   "nota": "",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
   }
  ],
  "conflictos": []
