@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 2,
   "Prensa (agendas semanales)": 34,
-  "Prensa (texto de noticias)": 67
+  "Prensa (texto de noticias)": 68
  },
  "eventos": [
   {
@@ -4748,6 +4748,16 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/jose-manuel-pena-pregonero-hermandad-gitanos-20261024121741-nts_amp.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Procesión de San Rafael Arcángel de Granada 2026: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-procesion-san-rafael-granada-procesion-granada-san-rafael-san-juan-de-dios-granada-granada-procesion-san-rafael-granada-san-rafael_0_2008327238.html"
   },
   {
    "fecha": "2026-10-23",
