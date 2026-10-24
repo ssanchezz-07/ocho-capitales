@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-20",
+ "generado": "2026-10-23",
  "fuente": "Marchas de Procesión (marchasdeprocesion.com), bases de datos de bandas de música, cornetas y tambores, agrupaciones musicales y capillas musicales de España",
  "url": "https://www.marchasdeprocesion.com/p/base-de-datos.html",
  "marchas": [
@@ -3310,7 +3310,7 @@
    "autor": "Óscar Sánchez Pérez",
    "formacion": "Banda de música",
    "video": "JDIUy3a04e0",
-   "leida": false,
+   "leida": true,
    "anio": "",
    "dedicatoria": "",
    "tipo": "",

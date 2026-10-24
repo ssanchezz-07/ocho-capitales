@@ -37,3 +37,4 @@ site/dist-cf/
 
 # Auditoría integral: informe interno (el repo es público)
 AUDITORIA-INTEGRAL.md
+/auditoria/
