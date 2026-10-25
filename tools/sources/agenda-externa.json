@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 64
+  "Prensa (texto de noticias)": 65
  },
  "eventos": [
   {
@@ -4088,6 +4088,16 @@
    "nota": "",
    "fuente": "Diario de Cádiz",
    "url": "https://www.diariodecadiz.es/sanfernando/dia-romeria-san-fernando-cerro-tradiciones_0_2008338645.html"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Gloria macarena de octubre con la Virgen del Rosario",
+   "nota": "",
+   "fuente": "Diario de Sevilla",
+   "url": "https://www.diariodesevilla.es/videos/video-gloria-macarena-octubre-virgen-rosario_8_2008339409.html"
   },
   {
    "fecha": "2026-10-24",
