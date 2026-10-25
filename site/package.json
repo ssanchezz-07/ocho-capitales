@@ -6,6 +6,7 @@
   "scripts": {
     "noticias": "node fetch-news.mjs",
     "build": "node build.mjs",
+    "datos": "node ../tools/traer-datos.mjs",
     "dev": "node fetch-news.mjs && node build.mjs && node serve.mjs"
   },
   "dependencies": {

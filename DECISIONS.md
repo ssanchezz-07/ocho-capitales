@@ -182,6 +182,38 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 - **Miniatura con las iniciales del medio** en las noticias sin foto: repetía el mismo problema de ruido que la colgadura.
 
 
+## 2026-10-25 · Alojamiento, dominio y velocidad (sesión de infraestructura)
+Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
+
+**Elegido: Cloudflare Pages como web principal; GitHub Pages sigue de copia** hasta que Cloudflare lleve una semana sin fallos.
+
+| | GitHub Pages (hoy) | Cloudflare Pages (plan gratis) |
+|---|---|---|
+| Caché en el navegador | `max-age=600` fijo para todo: cada 10 min se vuelve a preguntar por CSS, JS, fuentes e imágenes | La decidimos nosotros (`_headers`): CSS/JS con huella y fuentes un año `immutable`; imágenes una semana; noticias 5 min |
+| Compresión | gzip | Brotli: 10-41 % menos que gzip (índice de búsqueda −29 %, plano de Sevilla −24 %, `marchas/resto.html` −41 %) |
+| Cabeceras de seguridad | Solo HSTS; la CSP va en `<meta>` y no admite `frame-ancestors` | `nosniff`, `X-Frame-Options`, `frame-ancestors`, `Referrer-Policy`, `Permissions-Policy`, COOP |
+| Funciones | No hay | `/api/sugerencias` (erCuñao) con D1, ya escrito en `functions/` |
+| Límites | 1 GB de sitio, 100 GB/mes de tráfico (orientativo), 10 publicaciones/hora | Tráfico ilimitado; 20.000 archivos (hoy 10.795) y 25 MiB por archivo (el mayor, 3 MB); 500 compilaciones/mes **en la integración con Git** |
+| Dominio propio | Sí, con HTTPS | Sí, con HTTPS; y si el dominio está en Cloudflare, analítica gratis y redimensionado de imágenes |
+
+- **Despliegue:** subida directa desde Actions (`wrangler pages deploy`, trabajo `cloudflare` de `publicar.yml`), no la integración con Git de Cloudflare: el sitio ya se genera en Actions con las noticias del momento y así no se gastan las 500 compilaciones al mes. La documentación de Cloudflare no dice si las subidas directas cuentan para ese límite; por si acaso, la variable `CLOUDFLARE_CADA_HORAS = 2` reduce a 12 al día (360/mes).
+- **`news.json` fuera de main (K1):** el bot guarda noticias y agendas en la rama `datos`, que tiene siempre **un solo commit** reescrito en cada lectura (`tools/datos-rama.sh`). main deja de crecer ~100 MB al mes y deja de recibir 24 commits automáticos al día (menos choques al hacer `pull --rebase`). En local: `node tools/traer-datos.mjs`. **Falta, con el sí de Pablo:** limpiar las versiones antiguas del historial con `git filter-repo` (reescribe la historia: todas las sesiones tendrían que volver a clonar).
+- **Service worker** (`site/despliegue.mjs`): cachés con nombre fijo (antes se llamaba `oc-<fecha>` y cada publicación horaria borraba todo lo guardado para usar sin conexión); red primero con espera máxima de 2,5 s para páginas y datos (con poca cobertura se enseña la copia y se renueva detrás); recursos con huella y fuentes desde la copia sin preguntar; carcasa con las 8 colgaduras y las 2 fuentes; cachés con tope (120 páginas, 30 datos, 250 recursos); `navigationPreload`.
+- **Precarga** de las fuentes Karantina y Heebo (el titular de la portada es el LCP y espera a Karantina).
+- **Dominio:** empezar con `ocho-capitales.pages.dev` (gratis y ya reservado). Si se compra uno: `ochocapitales.es` (comprobado sin registrar; ~7 €/año en un registrador español, Cloudflare no vende `.es`) o `ochocapitales.com` (libre; ~10,5 $/año en Cloudflare a precio de coste). Recomendación: `.es`, por el público y el precio, con los DNS en Cloudflare (gratis).
+
+**Descartado**
+- Quedarse solo en GitHub Pages: no se puede cambiar la caché de 10 minutos ni añadir cabeceras, y no hay funciones para el buzón.
+- Vercel / Netlify gratis: sus planes gratuitos limitan el tráfico mensual (Cloudflare no) y el de Vercel es solo para uso no comercial; además Cloudflare ya tiene la base D1 y el proyecto creados.
+- Integración con Git de Cloudflare Pages: compilaría en sus servidores cada push (hasta 500/mes) sin las noticias frescas, que se leen en Actions.
+- Guardar `news.json` como artefacto o caché de Actions: caducan (90 días / 7 días sin uso) y se perdería el archivo de noticias.
+- Subdominios gratuitos de terceros (`eu.org`, `is-a.dev`, `js.org`): o tardan semanas en aprobarse, o son solo para proyectos de programación; `pages.dev` es igual de gratuito y más fiable.
+
+**Para la sesión de portada (no lo toco: es interfaz)**
+- Las miniaturas de noticias de la portada cargan la foto original del medio (300-400 KB, 1200 px) para una caja de 160×120: **~1 MB** de los 1,3 MB de la portada en móvil. Las primeras llevan `fetchpriority="high"`, que compite con el titular (el LCP real). Propuesta: quitar `fetchpriority="high"` (o dejar solo `loading="lazy"`) y, cuando haya dominio en Cloudflare, servirlas redimensionadas con `/cdn-cgi/image/width=320,format=auto/<url>` (5.000 transformaciones únicas al mes gratis).
+- La portada pasa ~2,5 s de CPU en móvil lento evaluando el HTML (106 SVG en línea y un script en línea de 11 KB): TBT 700 ms. Dibujar el mapa al entrar en pantalla o simplificar los SVG repetidos lo bajaría.
+- `search-index.json` incluye las 200 últimas noticias, así que cambia cada hora y se vuelve a descargar entero (424 KB gzip). Al partirlo (sesión de marchas), conviene dejar las noticias fuera: el buscador puede tomarlas de `news.json`.
+
 ## 2026-10-24 · Decisiones de Pablo sobre la auditoría integral
 - **Mutilado de Málaga** (`mutilado-clemencia-malaga`): se queda como víspera del Sábado de Pasión. Sustituye a la decisión de octubre de no añadirla (`MALAGA-VERIFICACION.md`).
 - **Marchas del foro de Patrimonio Musical (2008):** visibles como «sin verificar»; cada una se intenta confirmar en otra fuente y pasa a «verificada» con su fuente.

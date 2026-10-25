@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { detectarEventos } from './eventos.mjs';
+import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(DIR, process.env.DIST_DIR || 'dist');
@@ -12,6 +13,8 @@ const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
+// news.json y las agendas automáticas viven en la rama «datos», no en main (así el historial no crece cada hora)
+if (!fs.existsSync(NEWS_FILE)) console.warn('Aviso: falta site/data/news.json; para tener las noticias del día ejecuta «node tools/traer-datos.mjs» desde la raíz.');
 // Eventos verificados a mano (prioridad sobre los detectados en noticias).
 const EVENTOS_FILE = path.join(DIR, '..', 'portal-cofrade', 'data', 'eventos.json');
 const EVENTOS_VERIFICADOS = fs.existsSync(EVENTOS_FILE) ? JSON.parse(fs.readFileSync(EVENTOS_FILE, 'utf8')).eventos : [];
@@ -444,6 +447,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
+<link rel="preload" href="${u('assets/fonts/karantina-latin.woff2')}" as="font" type="font/woff2" crossorigin><link rel="preload" href="${u('assets/fonts/heebo-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
@@ -1147,27 +1151,10 @@ function pageOffline() {
   write('offline/index.html', layout({ title: 'Sin conexión', desc: 'Página de reserva sin conexión.', body, path: 'offline/' }));
 }
 function escribeSw() {
-  const lista = (d) => fs.existsSync(path.join(DIST, d)) ? fs.readdirSync(path.join(DIST, d)).map((x) => BASE + d + '/' + x) : [];
-  const shell = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, ...lista('assets/fonts').filter((f) => f.endsWith('.woff2'))];
-  fs.writeFileSync(path.join(DIST, 'sw.js'), `// Ocho Capitales: caché para usar el portal sin cobertura (en la calle, entre bullas). Generado por build.mjs.
-const V = 'oc-${Date.now()}', BASE = ${JSON.stringify(BASE)}, SHELL = ${JSON.stringify(shell)};
-self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
-self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
-self.addEventListener('fetch', (e) => {
-  const r = e.request; if (r.method !== 'GET') return;
-  const url = new URL(r.url); if (url.origin !== location.origin || !url.pathname.startsWith(BASE)) return;
-  if (r.mode === 'navigate') {
-    // páginas: red primero (datos al día) y, sin red, la última copia o la página de reserva
-    e.respondWith(fetch(r).then((res) => { if (res.ok) { const cp = res.clone(); caches.open(V).then((c) => c.put(r, cp)); } return res; }).catch(() => caches.match(r).then((m) => m || caches.match(BASE + 'offline/'))));
-  } else if (/\\.(?:json|ics)$/.test(url.pathname)) {
-    // datos (noticias, buscador, calendarios): red primero; la copia guardada solo sin conexión
-    e.respondWith(fetch(r).then((res) => { if (res.ok) { const cp = res.clone(); caches.open(V).then((c) => c.put(r, cp)); } return res; }).catch(() => caches.match(r)));
-  } else if (url.pathname.startsWith(BASE + 'assets/')) {
-    // recursos: copia guardada al instante y se refresca en segundo plano
-    e.respondWith(caches.open(V).then((c) => c.match(r).then((m) => { const net = fetch(r).then((res) => { if (res.ok) c.put(r, res.clone()); return res; }).catch(() => m); return m || net; })));
-  }
-});
-`);
+  // la carcasa: lo que se guarda al instalar para abrir al instante y sin conexión (el resto se guarda al visitarlo)
+  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
+    ...['karantina-latin.woff2', 'heebo-latin.woff2'].map((f) => BASE + 'assets/fonts/' + f), ...D.capitales.map((c) => BASE + 'assets/plates/colgadura-' + c.slug + '.webp'), BASE + 'assets/icon.svg'];
+  swDespliegue({ DIST, BASE, carcasa });
 }
 function page404() {
   write('404.html', layout({ title: 'Página no encontrada', desc: 'Esta página no existe.', body: `<div class="oc-emptystate is-404"><h1 class="oc-title">No encontramos esta página</h1><p>Puede que el enlace haya cambiado. Búscala o vuelve a la portada.</p><form class="oc-searchform" action="${u('buscar/')}" role="search"><label class="oc-label" for="q404">Buscar en ${BRAND}</label><div class="oc-searchform-row"><input id="q404" name="q" type="search" enterkeyhint="search"><button class="oc-btn" type="submit">${icon('search')}<span>Buscar</span></button></div></form><p><a class="oc-link" href="${u()}">${icon('back')}Volver a la portada</a></p></div>`, path: '404.html' }));
@@ -1199,7 +1186,7 @@ function extras() {
   }
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
   fs.writeFileSync(path.join(DIST, 'news.json'), JSON.stringify({ actualizado: NEWS.actualizado, items: NEWS.items.slice(0, 600).map(({ h, t, ...n }) => n) }));
-  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
+  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ id: BASE, name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', dir: 'ltr', categories: ['news', 'travel', 'lifestyle'], start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
   fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n${SITE ? 'Sitemap: ' + SITE + '/sitemap.xml\n' : ''}`);
   if (SITE) fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${SITE}/${p}</loc></url>`).join('\n')}\n</urlset>\n`);
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
@@ -1442,5 +1429,6 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
-searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw();
+searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); escribeCabeceras({ DIST, BASE, SITE });
+const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

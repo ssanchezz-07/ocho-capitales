@@ -3,6 +3,9 @@
 # GitHub retrasa o se salta muchas ejecuciones programadas: por eso se despierta 3 veces por hora
 # y el trabajo «comprobar» corta en segundos si las noticias se leyeron hace menos de 40 minutos.
 # Resultado: una actualización por hora aunque GitHub se salte dos de cada tres avisos, sin servicios externos.
+# Las noticias y agendas que lee el bot se guardan en la rama «datos» (un único commit que se reescribe), no en main:
+# así el historial no crece ~100 MB al mes y main solo tiene commits de personas (tools/datos-rama.sh).
+# Cloudflare Pages (trabajo «cloudflare») se activa solo al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID.
 name: Publicar Ocho Capitales
 
 on:
@@ -25,15 +28,14 @@ jobs:
     outputs:
       seguir: ${{ steps.edad.outputs.seguir }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          sparse-checkout: site/data/news.json
-          sparse-checkout-cone-mode: false
       - id: edad
         env:
           EVENTO: ${{ github.event_name }}
+          REPO: ${{ github.repository }}
         run: |
-          MIN=$(node -e "const n=require('./site/data/news.json'); console.log(Math.round((Date.now() - (n.actualizado || 0)) / 60000))")
+          # la última lectura está en la rama datos; si aún no existe, se sigue (primera vez)
+          git init -q d && (cd d && git fetch -q --depth=1 "https://github.com/$REPO" datos && git show FETCH_HEAD:site/data/news.json > ../news.json) || echo '{}' > news.json
+          MIN=$(node -e "const n=require('./news.json'); console.log(Math.round((Date.now() - (n.actualizado || 0)) / 60000))")
           echo "Última lectura de noticias: hace $MIN minutos (evento: $EVENTO)"
           if [ "$EVENTO" = "schedule" ] && [ "$MIN" -lt 40 ]; then echo "seguir=no" >> "$GITHUB_OUTPUT"; else echo "seguir=si" >> "$GITHUB_OUTPUT"; fi
   construir:
@@ -41,7 +43,7 @@ jobs:
     if: needs.comprobar.outputs.seguir == 'si'
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # guarda news.json y las agendas
+      contents: write   # guarda news.json y las agendas en la rama datos
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
@@ -52,6 +54,8 @@ jobs:
       - name: Instalar
         working-directory: site
         run: npm ci
+      - name: Traer noticias y agendas (rama datos)
+        run: bash tools/datos-rama.sh traer
       - name: Comprobar el detector de eventos
         working-directory: site
         run: node eventos.mjs
@@ -66,14 +70,12 @@ jobs:
         run: |
           node tools/agenda-externa.mjs
           node tools/detectar-cambios-bandas.mjs
-      - name: Guardar archivo de noticias
+      - name: Guardar noticias y agendas (rama datos)
+        # Si no se puede subir, se avisa y se publica igualmente con las noticias frescas.
         run: |
           git config user.name "Ocho Capitales bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/data/news.json tools/sources/agenda-externa.json tools/sources/agenda-cuerpos.json tools/sources/agenda-urls.json tools/sources/cambios-bandas.json
-          # Si otro commit ha llegado mientras se leían las noticias, se integra conservando el news.json recién leído.
-          # Si aun así no se puede subir, se avisa y se publica igualmente con las noticias frescas.
-          git diff --cached --quiet || (git commit -m "Noticias: actualización automática" && git pull --rebase -X theirs origin main && git push) || (git rebase --abort 2>/dev/null; echo "::warning::No se pudo guardar news.json en el repositorio; se publica igualmente")
+          bash tools/datos-rama.sh guardar || echo "::warning::No se pudieron guardar las noticias en la rama datos; se publica igualmente"
       - name: Generar sitio
         working-directory: site
         env:
@@ -88,17 +90,6 @@ jobs:
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: site/dist
-      - name: Publicar también en Cloudflare Pages (cuando esté configurado)
-        # Se activa al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID. Mientras, no hace nada.
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CF_URL: ${{ vars.CLOUDFLARE_URL }}
-        run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Cloudflare aún no configurado"; exit 0; fi
-          cd site && BASE_PATH=/ SITE_URL="${CF_URL:-https://ocho-capitales.pages.dev}" DIST_DIR=dist-cf node build.mjs && cd ..
-          sed -i 's#pages_build_output_dir = "site/dist"#pages_build_output_dir = "site/dist-cf"#' wrangler.toml
-          npx --yes wrangler@3 pages deploy site/dist-cf --project-name ocho-capitales --branch main
   desplegar:
     needs: construir
     runs-on: ubuntu-latest
@@ -111,3 +102,48 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+  cloudflare:
+    # Copia en Cloudflare Pages: caché larga, Brotli, cabeceras de seguridad (site/despliegue.mjs) y /api/sugerencias.
+    # No hace nada hasta que existan los secretos. Con la variable CLOUDFLARE_CADA_HORAS = 2 se publica cada dos horas
+    # (por si las subidas directas acabaran contando para el límite de 500 al mes del plan gratuito).
+    needs: construir
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - id: decidir
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          EVENTO: ${{ github.event_name }}
+          CADA: ${{ vars.CLOUDFLARE_CADA_HORAS || '1' }}
+        run: |
+          if [ -z "$TOKEN" ]; then echo "Cloudflare aún no configurado (faltan los secretos)"; echo "seguir=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          H=$(date -u +%H)
+          if [ "$EVENTO" = "schedule" ] && [ $((10#$H % CADA)) -ne 0 ]; then echo "Esta hora no toca (cada $CADA h)"; echo "seguir=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "seguir=si" >> "$GITHUB_OUTPUT"
+      - if: steps.decidir.outputs.seguir == 'si'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - if: steps.decidir.outputs.seguir == 'si'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Traer noticias y agendas (rama datos)
+        if: steps.decidir.outputs.seguir == 'si'
+        run: bash tools/datos-rama.sh traer
+      - name: Generar sitio para la raíz del dominio
+        if: steps.decidir.outputs.seguir == 'si'
+        working-directory: site
+        env:
+          BASE_PATH: /
+          SITE_URL: ${{ vars.CLOUDFLARE_URL || 'https://ocho-capitales.pages.dev' }}
+        run: node build.mjs
+      - name: Comprobar límites (20.000 archivos, 25 MiB por archivo)
+        if: steps.decidir.outputs.seguir == 'si'
+        run: node site/despliegue.mjs site/dist
+      - name: Subir a Cloudflare Pages
+        if: steps.decidir.outputs.seguir == 'si'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        # functions/ (sugerencias) y la base D1 se leen de wrangler.toml en la raíz
+        run: npx --yes wrangler@4.148.0 pages deploy site/dist --project-name ocho-capitales --branch main --commit-hash "$GITHUB_SHA" --commit-dirty=true
