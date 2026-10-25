@@ -20,7 +20,7 @@ Las reseñas están redactadas con palabras propias; cada ficha enlaza a su fuen
 | Sedes | varias vacías | Viñeros → Santa Catalina; Penas → Oratorio de Santa María Reina; Mena → San Carlos y Santo Domingo, etc. | ficha oficial |
 
 ## Decisiones
-- **Hermandad del Mutilado (Cristo de la Clemencia):** NO añadida. Procesiona el Sábado de Pasión y no consta en la nómina agrupada.
+- **Hermandad del Mutilado (Cristo de la Clemencia):** ~~NO añadida. Procesiona el Sábado de Pasión y no consta en la nómina agrupada.~~ **Decisión de Pablo (2026-10-24): se queda en el portal** como víspera del Sábado de Pasión, igual que el resto de corporaciones no agrupadas (`mutilado-clemencia-malaga`).
 - Resucitado: autor José Capuz (1946), según la página de Titulares de la Agrupación.
 - 36 fuentes de noticias (se añade el feed oficial de la Agrupación de Málaga).
 

@@ -1,109 +1,109 @@
 {
- "huelva": {
-  "puntos": 326,
-  "situados": 320,
-  "pct": 98,
-  "calles_osm": 2051,
-  "templos": 18,
+ "jaen": {
+  "puntos": 506,
+  "situados": 482,
+  "pct": 95,
+  "calles_osm": 1945,
+  "templos": 35,
   "no_situados": [
    [
-    "stitución",
-    5
+    "Venia",
+    7
    ],
    [
-    "Plaza Con",
-    4
+    "Roldán y Marín Venia",
+    3
    ],
    [
-    "Cristo Redención",
+    "Cuatro Torres / Constitución",
+    3
+   ],
+   [
+    "inicio",
+    3
+   ],
+   [
+    "Camarín",
+    3
+   ],
+   [
+    "Roldán",
     2
    ],
    [
-    "Plaza Espronceda Constitución",
+    "Bernabé",
     2
    ],
    [
-    "Vega",
+    "Muñoz",
     2
    ],
    [
-    "Molina",
+    "Bernabé Soriano mitad",
     2
    ],
    [
-    "Plaza San Salida Barrio Obrero Pedro",
+    "Ejido Alcantarilla",
+    2
+   ],
+   [
+    "Pz. San Ildefonso",
+    2
+   ],
+   [
+    "Pilar Imprenta",
+    2
+   ],
+   [
+    "Núñez de Sagrado Balboa Corazón",
+    2
+   ],
+   [
+    "Bernabé Roldán y Marín Soriano",
+    2
+   ],
+   [
+    "San Ildefonso",
+    2
+   ],
+   [
+    "final",
+    2
+   ],
+   [
+    "Sagrado",
+    2
+   ],
+   [
+    "Maestra (Inicio",
+    2
+   ],
+   [
+    "ENCUENTRO",
+    2
+   ],
+   [
+    "Almenas (Inicio",
+    2
+   ],
+   [
+    "Virgen Capilla",
+    2
+   ],
+   [
+    "Escuela Arte",
+    2
+   ],
+   [
+    "Espartería",
+    2
+   ],
+   [
+    "Pza. San Ildefonso",
     1
    ],
    [
-    "Rascón/ Hernán Concepción Bocas Cortés",
-    1
-   ],
-   [
-    "Gran Vía Plaza Monjas",
-    1
-   ],
-   [
-    "Plaza Con- Palos Gran Vía stitución",
-    1
-   ],
-   [
-    "Palos/La La Fuente Barrio Obrero Fuente",
-    1
-   ],
-   [
-    "Templo Plaza San Paseo Circun",
-    1
-   ],
-   [
-    "Pedro valación",
-    1
-   ],
-   [
-    "F Junipero Serra",
-    1
-   ],
-   [
-    "Plaza de San Pl. Quintero Pedro",
-    1
-   ],
-   [
-    "Plaza Con- stitución",
-    1
-   ],
-   [
-    "Manuel Siurot Av. Adoratrices",
-    1
-   ],
-   [
-    "Santuario",
-    1
-   ],
-   [
-    "Av. Virgen",
-    1
-   ],
-   [
-    "Plaza I. Alonso Barba Cazenave",
-    1
-   ],
-   [
-    "La Fuente Constitución",
-    1
-   ],
-   [
-    "San Andrés Palos/Palmera",
-    1
-   ],
-   [
-    "Av. Manuel Pl. Ivonne Siurot",
-    1
-   ],
-   [
-    "Santuario Av. Manuel Cinta Siurot",
-    1
-   ],
-   [
-    "Av. Virgen Dolores",
+    "Pza. Corazón María",
     1
    ]
   ]

@@ -37,7 +37,10 @@ def pagina(pg, dia_actual):
     izq = [w for w in words if HORA.match(w['text']) and w['x1'] < 0.13 * W]
     if len(izq) < 4: return [], dia_actual
     izq.sort(key=lambda w: w['top'])
-    der_x = 0.88 * W
+    # Límite derecho: la columna de horas del margen derecho si la hay (antes se cortaba al 88 % del ancho y la última
+    # columna perdía calles y horas: «Jesús del», «Plaza J de la»…)
+    der = [w for w in words if HORA.match(w['text']) and w['x0'] > 0.85 * W]
+    der_x = (min(w['x0'] for w in der) - 1) if len(der) >= 4 else W
     filas = [(w['top'], w['text']) for w in izq]
     y0, y1 = filas[0][0], filas[-1][0]
     paso = (y1 - y0) / max(1, len(filas) - 1)
@@ -82,17 +85,44 @@ def pagina(pg, dia_actual):
     cols.sort(key=lambda g: g['x0'])
     centros = [(c['x0'] + c['x1']) / 2 for c in cols]
     res = [{'dia': dia_actual, 'cabecera': c['text'], 'sub': c.get('sub', ''), 'puntos': []} for c in cols]
-    cuerpo = [w for w in words if y0 - paso / 2 <= w['top'] <= y1 + paso * 1.6 and margen_izq <= w['x0'] and w['x1'] <= der_x and not (HORA.match(w['text']) and (w['x1'] < 0.13 * W or w['x0'] > 0.87 * W))]
+    cuerpo = [w for w in words if y0 - paso / 2 <= w['top'] <= y1 + paso * 1.6 and margen_izq <= w['x0'] and w['x1'] <= der_x + 1 and not (HORA.match(w['text']) and (w['x1'] < 0.13 * W or w['x0'] > 0.87 * W))]
+    # fronteras entre columnas: a mitad de camino entre centros vecinos
+    fronteras = [(centros[i] + centros[i + 1]) / 2 for i in range(len(centros) - 1)]
+    col_de = lambda x: sum(1 for f in fronteras if x > f)
+    def partir(g, ws):
+        # un grupo que cae en dos columnas (celdas vecinas pegadas: «Méndez Núñez Adriano») se parte por la frontera;
+        # solo si es más ancho que su columna, para no romper un nombre largo que sobresale un poco
+        ks = [col_de((w['x0'] + w['x1']) / 2) for w in ws]
+        k0 = col_de((g['x0'] + g['x1']) / 2)
+        ancho = (cols[k0]['x1'] - cols[k0]['x0']) if cols[k0]['x1'] > cols[k0]['x0'] else 40
+        hueco = (fronteras[k0] - fronteras[k0 - 1]) if 0 < k0 < len(fronteras) else ancho * 2
+        if len(set(ks)) == 1 or (g['x1'] - g['x0']) <= max(ancho, hueco) * 1.05: return [g]
+        out = []
+        for k in sorted(set(ks)):
+            sub = [w for w, kk in zip(ws, ks) if kk == k]
+            out.append({'x0': sub[0]['x0'], 'x1': sub[-1]['x1'], 'top': min(x['top'] for x in sub), 'text': ' '.join(x['text'] for x in sub)})
+        return out
     for ln in lineas(cuerpo):
         top = ln[0]['top']
         fila = min(filas, key=lambda f: abs(f[0] - top))
-        for g in grupos_horizontales(ln, gap=5):
+        ln = sorted(ln, key=lambda w: w['x0'])
+        brutos, act = [], []
+        for w in ln:
+            if act and w['x0'] - act[-1]['x1'] > 5: brutos.append(act); act = []
+            act.append(w)
+        if act: brutos.append(act)
+        grupos_ln = []
+        for ws in brutos:
+            g = {'x0': ws[0]['x0'], 'x1': ws[-1]['x1'], 'top': min(x['top'] for x in ws), 'text': ' '.join(x['text'] for x in ws)}
+            grupos_ln += partir(g, ws)
+        for g in grupos_ln:
             cx = (g['x0'] + g['x1']) / 2
             k = min(range(len(centros)), key=lambda i: abs(centros[i] - cx))
             if abs(centros[k] - cx) > max(60, (cols[k]['x1'] - cols[k]['x0'])): continue
             t = g['text'].strip()
             m = re.search(r'\((\d{1,2}[:.]\d{2})\)', t)
-            p = {'fila': fila[1].replace('.', ':'), 'y': round(top, 1), 'lugar': re.sub(r'\s*\(\d{1,2}[:.]\d{2}\)\s*', ' ', t).strip()}
+            # «Salida (1:19))»: fuera la hora y los paréntesis sueltos que deja
+            p = {'fila': fila[1].replace('.', ':'), 'y': round(top, 1), 'lugar': re.sub(r'\s*[()]+\s*$|^\s*[()]+\s*', '', re.sub(r'\s*\(\d{1,2}[:.]\d{2}\)\s*', ' ', t)).strip()}
             if m: p['hora'] = m.group(1).replace('.', ':')
             res[k]['puntos'].append(p)
     for r in res:
