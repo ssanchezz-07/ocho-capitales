@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 63
+  "Prensa (texto de noticias)": 64
  },
  "eventos": [
   {
@@ -4078,6 +4078,16 @@
    "nota": "",
    "fuente": "Consejo General de Hermandades y Cofradías de Sevilla",
    "url": "https://www.hermandades-de-sevilla.org/consejo/sevilla-vivira-un-fin-de-semana-de-procesiones-de-gloria-con-las-salidas-de-guadalupe-la-sierra-y-el-rosario-de-la-macarena/"
+  },
+  {
+   "fecha": "2026-10-26",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "Día de Romería en San Fernando con el Cerro y sus tradiciones de siempre",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/sanfernando/dia-romeria-san-fernando-cerro-tradiciones_0_2008338645.html"
   },
   {
    "fecha": "2026-10-24",
