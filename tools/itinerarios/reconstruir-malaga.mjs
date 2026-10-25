@@ -109,6 +109,9 @@ async function reconstruir(idx) {
   const PRE = { 'Especerías': 'Especería', 'Molina Larios': 'Molina Lario', 'Par ras': 'Parras', 'Carreterías': 'Carretería', 'asa Hermandad': 'Casa Hermandad', 'Alameda': 'Alameda Principal', 'Larios': 'Marqués de Larios', 'Avenida del Ingeniero José María': 'Ingeniero José María Garnica', 'Rosa Magistrado': 'Rosa', 'Salvador Barberá': 'Magistrado Salvador Barberá', 'Pasaje de Campos': 'Pasaje Campos', 'Párroco Ruiz Furest': 'Párrocco Ruiz Furest' };
   const toks0 = toks.flatMap((t) => (t === 'Molina Lario Torre Sur' ? ['Molina Lario', 'Torre Sur'] : [PRE[t] || t]));
   for (let i = 0; i < toks0.length - 1; i++) if (/^(dr|doctor|dra)$/i.test(toks0[i].replace('.', ''))) { toks0[i + 1] = 'Doctor ' + toks0[i + 1].replace(/^Dr\.?\s*/i, ''); toks0.splice(i, 1); }
+  for (let i = 0; i < toks0.length; i++) toks0[i] = toks0[i].replace(/^Itinerario\s+/i, '');
+  // Si el itinerario empieza o acaba en una calle pero la hermandad tiene casa con punto fijado, la salida/entrada es la casa
+  if (CASAS[id] && CASAS[id].punto) { const esT = (x) => TEMPLO.test(sn(x)); if (!esT(toks0[0])) toks0.unshift('Casa Hermandad'); if (!esT(toks0[toks0.length - 1])) toks0.push('Casa Hermandad'); }
   toks.length = 0; toks.push(...toks0);
   const informe = { id, fuente: FUENTE_URL, cabecera: P.cabecera.replace(/\s+/g, ' ').slice(0, 160), errores: [], avisos: [], calles: toks };
   const pasos = []; // {lugar, tipo:'calle'|'marca'|'templo', nodos:Set|null, punto:[la,lo]|null}
@@ -116,9 +119,10 @@ async function reconstruir(idx) {
     const t = toks[i], s = sn(t);
     if (MARCA.test(s)) { pasos.push({ lugar: t, tipo: 'marca' }); continue; }
     if (TEMPLO.test(s)) {
+      if ((i === 0 || i === toks.length - 1) && !s.startsWith('casa hermandad') && CASAS[id] && CASAS[id].punto) { const cs = CASAS[id]; pasos.push({ lugar: t, tipo: 'templo', punto: cs.punto, osm: 'punto fijado con fuente', fuente_casa: cs.fuente }); continue; }
       if (s.startsWith('casa hermandad')) {
         const cs = CASAS[id];
-        if (cs) { const L = await lugarTemplo(cs.dir); if (L) { pasos.push({ lugar: t + ' (' + cs.dir.replace(/, Málaga$/, '') + ')', tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm, fuente_casa: cs.fuente }); informe.casa = cs; continue; } }
+        if (cs) { const L = cs.punto ? { lat: cs.punto[0], lon: cs.punto[1], osm: 'punto fijado con fuente' } : await lugarTemplo(cs.dir); if (L) { pasos.push({ lugar: t + ' (' + cs.dir.replace(/, Málaga$/, '') + ')', tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm, fuente_casa: cs.fuente }); informe.casa = cs; continue; } }
         pasos.push({ lugar: t, tipo: 'casa' }); continue;
       }
       const L = await lugarTemplo(ALIAS['@' + t] || t); if (!L) { informe.avisos.push('templo no localizado en OSM/Nominatim: ' + t + ' (salida/entrada aproximadas en la primera/última calle)'); informe.templo_sin_localizar = true; pasos.push({ lugar: t, tipo: 'casa' }); continue; }

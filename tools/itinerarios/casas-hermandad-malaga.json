@@ -25,7 +25,11 @@
  },
  "sangre-malaga": {
   "dir": "Calle Dos Aceras 10, Málaga",
-  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-14o-hito-casa-hermandad-de-la-sangre/"
+  "punto": [
+   36.724714,
+   -4.420694
+  ],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/sangre/ (casa hermandad en calle Dos Aceras, 10)"
  },
  "traslado-malaga": {
   "dir": "Calle Trinidad 72, Málaga",
@@ -132,7 +136,43 @@
   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
  },
  "esperanza-malaga": {
-  "dir": "Calle San Jacinto 1, Málaga",
-  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+  "dir": "Basílica de la Esperanza, Calle San Jacinto 1, Málaga",
+  "punto": [
+   36.718122,
+   -4.426973
+  ],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/esperanza/ (sede canónica: Basílica de la Esperanza, calle San Jacinto); punto OSM/Nominatim «Iglesia de la Esperanza, 1, Calle San Jacinto»"
+ },
+ "humildad-y-paciencia-malaga": {
+  "dir": "Plazuela María Santísima de Dolores y Esperanza 1, Málaga",
+  "punto": [
+   36.7087845,
+   -4.4422065
+  ],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741"
+ },
+ "estudiantes-malaga": {
+  "dir": "Calle Alcazabilla 3, Málaga",
+  "punto": [
+   36.720761,
+   -4.417485
+  ],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)"
+ },
+ "fusionadas-malaga": {
+  "dir": "Calle Postigo de San Juan 5, Málaga",
+  "punto": [
+   36.720642,
+   -4.423473
+  ],
+  "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/ (sede social en calle Postigo de San Juan, 5)"
+ },
+ "resucitado-malaga": {
+  "dir": "Iglesia de San Julián, Calle Nosquera 17, Málaga",
+  "punto": [
+   36.723413,
+   -4.422658
+  ],
+  "fuente": "Itinerario oficial 2026 (salida: Parroquia de San Julián); dirección calle Nosquera 17 por Nominatim: confirmar puerta"
  }
 }
