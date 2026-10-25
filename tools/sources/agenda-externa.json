@@ -1,7 +1,7 @@
 {
  "generado": "2026-10-25",
  "fuentes": {
-  "InfoCofrade": 279,
+  "InfoCofrade": 280,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
@@ -365,6 +365,16 @@
    "ciudad": "sevilla",
    "tipo": "besamanos",
    "titulo": "Besamanos a Nuestro Padre Jesús de la Humildad (Cerro del Águila)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Certamen «Repartiendo Esperanza» en el Parque Fernando Magallanes organizado por las Hermandades de la Esperanza Macarena y la Esperanza de Triana con carácter benéfico. 🎟️ Venta de entradas en http://www.giglon.com",
    "nota": "",
    "fuente": "InfoCofrade",
    "url": "https://infocofrade.com/agenda/"
