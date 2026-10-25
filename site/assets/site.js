@@ -779,6 +779,18 @@
     if (!idxPromise) idxPromise = fetch(BASE + 'search-index.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) { idx = j.map(function (e) { e.nn = norm(e.n); return e; }); return idx; }).catch(function (err) { idxPromise = null; throw err; });
     return idxPromise;
   }
+  // Las marchas van aparte (search-marchas.json, más de 7.000): se piden al escribir 3 letras y se suman al índice.
+  // Fila: [título, compositor, hermandad, formación, slug, capital, claves]
+  var mPromise = null;
+  function loadMarchas(q) {
+    if (norm(q || '').trim().length < 3) return null;
+    if (!mPromise) mPromise = Promise.all([loadIdx(), fetch(BASE + 'search-marchas.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })]).then(function (res) {
+      res[1].forEach(function (f) { idx.push({ t: 'm', n: f[0], nn: norm(f[0]), s: 'Marcha' + (f[1] ? ' de ' + f[1] : '') + (f[2] ? ', ' + f[2] : f[3] ? ' · ' + f[3] : ''), u: 'marcha/' + f[4] + '/', c: f[5], k: f[6] }); });
+    }).catch(function (err) { mPromise = null; throw err; });
+    return mPromise;
+  }
+  // Pinta con lo que haya y, si faltan las marchas, vuelve a pintar cuando lleguen
+  function conMarchas(q, pintar) { var p = loadMarchas(q); if (p) p.then(pintar, function () { }); }
   var TYPES = { c: 'Capitales', h: 'Hermandades', b: 'Bandas', i: 'Imagineros', m: 'Marchas', n: 'Noticias' };
   var ORDER = ['c', 'h', 'b', 'i', 'm', 'n'];
   var VACIAS = { el: 1, la: 1, los: 1, las: 1, de: 1, del: 1, y: 1 };
@@ -866,7 +878,8 @@
   if (ov) {
     ov.addEventListener('click', function (e) { if (e.target === ov) closeSearch(); });
     var st;
-    input.addEventListener('input', function () { clearTimeout(st); st = setTimeout(function () { loadIdx().then(function () { renderResults(results, input.value, 8); }, function () { results.innerHTML = failMsg; }); }, 60); });
+    var pintaBuscador = function () { renderResults(results, input.value, 8); };
+    input.addEventListener('input', function () { clearTimeout(st); st = setTimeout(function () { loadIdx().then(function () { pintaBuscador(); conMarchas(input.value, pintaBuscador); }, function () { results.innerHTML = failMsg; }); }, 60); });
     ov.addEventListener('keydown', function (e) {
       var items = $$('.oc-sr-item', results), i = items.indexOf(document.activeElement);
       if (e.key === 'Escape') { closeSearch(); return; }
@@ -885,7 +898,8 @@
     var spIn = $('input', sp), spOut = $('[data-search-page-results]');
     var q0s = new URLSearchParams(location.search).get('q') || '';
     spIn.value = q0s;
-    var run = function () { loadIdx().then(function () { renderResults(spOut, spIn.value, 30); history.replaceState(null, '', location.pathname + (spIn.value ? '?q=' + encodeURIComponent(spIn.value) : '')); }, function () { spOut.innerHTML = failMsg; }); };
+    var pintaPagina = function () { renderResults(spOut, spIn.value, 30); };
+    var run = function () { loadIdx().then(function () { pintaPagina(); conMarchas(spIn.value, pintaPagina); history.replaceState(null, '', location.pathname + (spIn.value ? '?q=' + encodeURIComponent(spIn.value) : '')); }, function () { spOut.innerHTML = failMsg; }); };
     sp.addEventListener('submit', function (e) { e.preventDefault(); run(); });
     var spt; spIn.addEventListener('input', function () { clearTimeout(spt); spt = setTimeout(run, 80); });
     if (q0s) run(); else spIn.focus({ preventScroll: true });

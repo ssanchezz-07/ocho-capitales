@@ -35,7 +35,9 @@ CREATE TABLE bandas (slug TEXT PRIMARY KEY, nombre TEXT, tipo TEXT, localidad TE
 CREATE TABLE acompanamientos (banda TEXT REFERENCES bandas(slug), hermandad TEXT REFERENCES hermandades(slug), rol TEXT, anio INTEGER);
 CREATE TABLE imagineros (slug TEXT PRIMARY KEY, nombre TEXT, vida TEXT, escuela TEXT, bio TEXT, fuente_url TEXT);
 CREATE TABLE obras (imaginero TEXT REFERENCES imagineros(slug), hermandad TEXT, titular TEXT, detalle TEXT, atribucion INTEGER);
-CREATE TABLE marchas (hermandad TEXT, titulo TEXT, autor TEXT, anio TEXT, tipo TEXT);
+-- Marchas dedicadas a una hermandad del portal (modelo único, tools/sources/marchas.json): estado = contrastada | dedicada | sin-verificar;
+-- fuentes = JSON {campo: [fuentes]} y urls = JSON {fuente: url}
+CREATE TABLE marchas (hermandad TEXT, titulo TEXT, autor TEXT, anio TEXT, tipo TEXT, slug TEXT, titular TEXT, estado TEXT, fuentes TEXT, urls TEXT);
 -- Catálogo general (no ligado a una hermandad): «Marchas de Procesión» (marchas más populares de España, con vídeo)
 -- y partituras procesionales de la Biblioteca Nacional (bne: enlace a su registro). Son filas separadas: no se cruzan.
 CREATE TABLE catalogo_marchas (titulo TEXT, autor TEXT, formacion TEXT, anio TEXT, dedicatoria TEXT, tipo TEXT, estreno TEXT,
@@ -55,12 +57,13 @@ for (const c of D.capitales) iC.run(c.slug, c.nombre, c.color, c.lema, (c.intro 
 const iH = ins('hermandades', ['slug', 'nombre', 'nombre_oficial', 'ciudad', 'dia', 'orden', 'sede', 'fundacion', 'historia', 'paso', 'musica', 'web', 'hora_salida', 'habito', 'fuente_url']);
 const iT = ins('titulares', ['hermandad', 'n', 'nombre', 'autor', 'imaginero', 'atribucion']);
 const iI = ins('imagenes', ['hermandad', 'uso', 'archivo', 'autor', 'licencia', 'pagina']);
-const iM = ins('marchas', ['hermandad', 'titulo', 'autor', 'anio', 'tipo']);
+const iM = ins('marchas', ['hermandad', 'titulo', 'autor', 'anio', 'tipo', 'slug', 'titular', 'estado', 'fuentes', 'urls']);
+const MU = leer('tools/sources/marchas.json', { marchas: [] });
+for (const m of MU.marchas) if (m.dedicatoria && m.dedicatoria.hermandad) iM.run(m.dedicatoria.hermandad, m.titulo, v(m.autor), v(m.anio), v(m.formacion), m.slug, v(m.dedicatoria.titular), m.dedicatoria.estado, v(m.fuentes), v(m.urls));
 const iP = ins('procedencia', ['tabla', 'clave', 'campo', 'fuente', 'fecha']);
 for (const h of D.hermandades) {
   iH.run(h.slug, h.nombre, v(h.nombre_oficial), h.ciudad, h.dia, h.orden, v(h.sede), v(h.fundacion), v(h.historia), v(h.paso), v(h.musica), v(h.web), v(h.hora), v(HAB[h.slug] && HAB[h.slug].texto), v(h.fuente_url));
   (h.titulares || []).forEach((t, i) => iT.run(h.slug, i, t.nombre, v(t.autor), v(t.imaginero), t.atrib ? 1 : 0));
-  (h.marchas || []).forEach((m) => iM.run(h.slug, m.titulo, v(m.autor), v(m.anio), v(m.tipo)));
   const x = IMG.hermandades[h.slug]; if (x) iI.run(h.slug, x.escudo ? 'escudo' : 'foto', x.pagina, x.autor, x.licencia, x.pagina);
   for (const [uso, t] of Object.entries((IMG.titulares || {})[h.slug] || {})) iI.run(h.slug, uso, t.pagina, t.autor, t.licencia, t.pagina);
   const c = (COMP.hermandades || {})[h.slug] || {};
@@ -79,7 +82,7 @@ const CAT = leer('tools/sources/marchas-espana.json', { marchas: [] }), BNE = le
 // Sin emparejar por título: la BNE no da el autor en el listado y hay muchas marchas homónimas («Esperanza»,
 // «Marcha fúnebre»…). Unirlas por el nombre atribuiría años y partituras a obras distintas.
 const iK = ins('catalogo_marchas', ['titulo', 'autor', 'formacion', 'anio', 'dedicatoria', 'tipo', 'estreno', 'video', 'bne', 'fuente', 'fuente_url']);
-for (const m of CAT.marchas) iK.run(m.titulo, v(m.autor), v(m.formacion), v(m.anio), v(m.dedicatoria), v(m.tipo), v(m.estreno), m.video ? 'https://www.youtube.com/watch?v=' + m.video : null, null, CAT.fuente, CAT.url);
+for (const m of MU.marchas) if (!(m.dedicatoria && m.dedicatoria.hermandad)) iK.run(m.titulo, v(m.autor), v(m.formacion), v(m.anio), v(m.dedicatoria && m.dedicatoria.texto), v(m.tipo), v(m.estreno), m.video ? 'https://www.youtube.com/watch?v=' + m.video : null, null, CAT.fuente, CAT.url);
 for (const b of BNE.marchas) iK.run(b.titulo, null, null, v(b.anio), null, b.tipo, null, null, b.url, BNE.fuente, BNE.url);
 const iE = ins('agenda',['fecha', 'ciudad', 'tipo', 'titulo', 'verificado', 'fuente']);
 for (const e of EVT.eventos || []) iE.run(v(e.fecha), v(e.ciudad), v(e.tipo), v(e.titulo), 1, v(e.fuente));

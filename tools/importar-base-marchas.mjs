@@ -38,8 +38,13 @@ async function tabla(slug, formacion) {
 }
 
 async function ficha(id) {
-  const h = await (await fetch(`https://www.youtube.com/watch?v=${id}&hl=es`, { headers: HDR })).text();
+  const r = await fetch(`https://www.youtube.com/watch?v=${id}&hl=es`, { headers: HDR });
+  if (r.status === 429) throw new Error('429');
+  const h = await r.text();
   const m = h.match(/"shortDescription":"((?:[^"\\]|\\.)*)"/);
+  // Vídeo borrado o privado: no es un bloqueo; se apunta para no enlazarlo
+  const st = h.match(/"playabilityStatus":\{"status":"(\w+)"(?:,"reason":"([^"]*)")?/);
+  if (!m && st && st[1] !== 'OK') return { caido: st[2] || st[1] };
   if (!m) throw new Error('sin descripción');
   const d = JSON.parse('"' + m[1] + '"');
   const campo = (n) => { const x = d.match(new RegExp(n + ':\\s*([^\\n]*)')); const v = x ? x[1].trim() : ''; return v === '-' ? '' : v; };
@@ -83,6 +88,7 @@ async function obrero() {
     const m = cola.shift();
     try {
       const f = await ficha(m.video);
+      if (f.caido) { Object.assign(m, { leida: true, caido: f.caido }); fallos = Math.max(0, fallos - 1); if (++n % 100 === 0) guardar(); await sleep(PAUSA); continue; }
       Object.assign(m, { leida: true, anio: f.anio, dedicatoria: f.dedicatoria, tipo: f.tipo, estreno: f.estreno, lugar: f.lugar, detalles: f.detalles });
       if (!m.autor && f.autoria) m.autor = f.autoria;
       fallos = Math.max(0, fallos - 1);

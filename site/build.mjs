@@ -90,30 +90,18 @@ function coloresHabito(texto) {
   }
   return out.slice(0, 8);
 }
-const MARCHAS = []; const MARCHA_SLUG = new Map(); const SLUGS_MARCHA = new Set();
-const ESP_FILE = path.join(DIR, '..', 'tools', 'sources', 'marchas-espana.json');
-const ESP = fs.existsSync(ESP_FILE) ? JSON.parse(fs.readFileSync(ESP_FILE, 'utf8')) : { marchas: [] };
-for (const h of D.hermandades) for (const m of h.marchas || []) {
-  let slug = slugify(m.titulo + ' ' + (m.autor || h.slug)); if (!slug) continue;
-  let n = 2; const base = slug; while (SLUGS_MARCHA.has(slug)) slug = base + '-' + n++;
-  SLUGS_MARCHA.add(slug); MARCHAS.push({ ...m, slug, h }); MARCHA_SLUG.set(h.slug + '|' + m.titulo + '|' + (m.autor || ''), slug);
-}
-{
-  const nt = (t) => norm(t).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
-  // Mismo compositor = comparten un apellido. Antes bastaba una palabra cualquiera de 4 letras y casaban «José Joaquín Méndez»
-  // con «José Manuel García Pulido»: la marcha de la hermandad heredaba el vídeo y el año de otra (la Soledad de Conil).
-  const PILA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo'.split(' '));
-  const ta = (t) => new Set(nt(t).split(' ').filter((w) => w.length >= 3 && !PILA.has(w) && !['del', 'los', 'las', 'san'].includes(w)));
-  const coincide = (a, b) => { const x = ta(a), y = ta(b); for (const w of x) if (y.has(w)) return true; return false; };
-  const sinVideo = new Map(); for (const m of MARCHAS) if (!m.video) { const k = nt(m.titulo); (sinVideo.get(k) || sinVideo.set(k, []).get(k)).push(m); }
-  for (const e of ESP.marchas) {
-    const hit = (sinVideo.get(nt(e.titulo)) || []).find((m) => !m.video && coincide(m.autor, e.autor));
-    if (hit) { hit.delCatalogo = true; hit.video = e.video; hit.dedicatoria = hit.dedicatoria || e.dedicatoria; hit.tipo = hit.tipo || e.formacion; hit.estreno = e.estreno; hit.detalles = e.detalles; hit.anio = hit.anio || e.anio; continue; }
-    let slug = slugify(e.titulo + ' ' + (e.autor || '')); if (!slug) continue;
-    let n = 2; const base = slug; while (SLUGS_MARCHA.has(slug)) slug = base + '-' + n++;
-    SLUGS_MARCHA.add(slug); MARCHAS.push({ titulo: e.titulo, autor: e.autor, anio: e.anio, tipo: e.formacion, video: e.video, dedicatoria: e.dedicatoria, estreno: e.estreno, detalles: e.detalles, lugar: e.lugar, tipoMarcha: e.tipo, slug, h: null, espana: true });
-  }
-}
+// Marchas: modelo único de tools/unificar-marchas.mjs (todas las bases unidas, con la fuente de cada campo y el estado de la dedicatoria).
+// m.h = hermandad a la que está dedicada (solo si la dedicatoria es de una hermandad del portal); m.est = contrastada | dedicada | sin-verificar.
+const MU = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'tools', 'sources', 'marchas.json'), 'utf8'));
+const FUENTES_M = MU.fuentes;
+const MARCHAS = MU.marchas.map((m) => {
+  const d = m.dedicatoria || null; const h = d && d.hermandad ? HERM[d.hermandad] || null : null;
+  return { ...m, tipo: m.formacion, tipoMarcha: m.tipo || '', dedicatoria: d ? d.texto : '', h, est: h ? d.estado : '', titularDed: d ? d.titular : '', espana: !h };
+});
+const MARCHA_SLUG = new Map(); const MARCHA_SLUGS = new Set(MARCHAS.map((m) => m.slug));
+// Las marchas de cada hermandad salen del modelo (no de portal.json): incluye las ligadas por la dedicatoria del catálogo
+for (const h of D.hermandades) h.marchas = [];
+for (const m of MARCHAS) if (m.h) { m.h.marchas.push({ titulo: m.titulo, autor: m.autor, anio: m.anio, tipo: m.tipo, slug: m.slug, est: m.est }); MARCHA_SLUG.set(m.h.slug + '|' + m.titulo + '|' + (m.autor || ''), m.slug); }
 const DAY_ORDER = D.dias_orden;
 const dayIdx = (d) => { const i = DAY_ORDER.indexOf(d); return i < 0 ? 99 : i; };
 const imagSlug = (name) => (name ? slugify(name) : '');
@@ -640,11 +628,11 @@ function plates(big) {
 function curiosidades() {
   const out = [];
   for (const i of D.imagineros) if (i.obras.length >= 6) out.push({ t: `${i.nombre} firma ${i.obras.length} de las imágenes que procesionan en el portal, repartidas en ${plural(i.ciudades.length, 'capital', 'capitales')}.`, u: u('imaginero/' + i.slug + '/'), l: 'Ver imaginero' });
-  for (const a of AUTORES.values()) if (a.marchas.length >= 5) out.push({ t: `${a.nombre} ha compuesto ${a.marchas.length} marchas dedicadas a hermandades, entre ellas «${a.marchas[0].titulo}».`, u: u('compositor/' + a.slug + '/'), l: 'Ver compositor' });
+  for (const a of AUTORES.values()) if (a.marchas.length >= 5) out.push({ t: `${a.nombre} tiene ${a.marchas.length} marchas en el catálogo, entre ellas «${a.marchas[0].titulo}».`, u: u('compositor/' + a.slug + '/'), l: 'Ver compositor' });
   for (const b of D.bandas) { const n = new Set(b.acompana.map((x) => x.hermandad_slug)).size; const k = new Set(b.acompana.map((x) => x.ciudad)).size; if (n >= 4) out.push({ t: `${b.nombre} acompaña a ${n} cofradías en ${plural(k, 'capital', 'capitales')}.`, u: u('banda/' + b.slug + '/'), l: 'Ver banda' }); }
   for (const h of D.hermandades) { const y = String(h.fundacion).match(/^(\d{4})$/); if (y && +y[1] <= 1650) out.push({ t: `${h.nombre} (${CAP[h.ciudad].nombre}) se fundó en ${y[1]}: hace ${new Date().getFullYear() - +y[1]} años.`, u: u('hermandad/' + h.slug + '/'), l: 'Ver hermandad' }); }
   for (const cp of D.capitales) for (const d of DAY_ORDER) { const n = D.hermandades.filter((h) => h.ciudad === cp.slug && h.dia === d).length; if (n >= 6) out.push({ t: `El ${d} salen ${n} hermandades en ${cp.nombre}.`, u: u('semana-santa/' + cp.slug + '/#' + slugify(d)), l: 'Ver la jornada' }); }
-  for (const m of MARCHAS) if (m.h && m.anio && m.autor && +m.anio <= 1960 && (!origenMarchas(m.h).foro || verificada(m.h, m.titulo))) out.push({ t: `«${m.titulo}», de ${m.autor}, se compuso en ${m.anio} y está dedicada a ${m.h.nombre} (${CAP[m.h.ciudad].nombre}).`, u: u('marcha/' + m.slug + '/'), l: 'Ver marcha' });
+  for (const m of MARCHAS) if (m.h && m.anio && m.autor && +m.anio <= 1960 && m.est !== 'sin-verificar') out.push({ t: `«${m.titulo}», de ${m.autor}, se compuso en ${m.anio} y está dedicada a ${m.h.nombre} (${CAP[m.h.ciudad].nombre}).`, u: u('marcha/' + m.slug + '/'), l: 'Ver marcha' });
   return out;
 }
 function pageHome() {
@@ -790,7 +778,8 @@ function pageHerm(h) {
   });
   const bandas = (h.bandas_slugs || []).filter((s) => BANDA[s]).map((s) => [BANDA[s].nombre, u('banda/' + s + '/')]);
   const musicaOf = (h.musica_oficial || []).length ? stackTable(['Paso o titular', 'Formación'], h.musica_oficial.map((m) => [esc(m.titular), esc(m.banda)])) + '<p class="oc-note">Acompañamiento musical oficial de 2026 publicado por la Agrupación.</p>' : '';
-  const marchas = (h.marchas || []).length ? stackTable(['Marcha', 'Compositor', 'Año', 'Formación'], h.marchas.map((m) => [MARCHA_SLUG.has(h.slug + '|' + m.titulo + '|' + (m.autor || '')) ? `<a href="${u('marcha/' + MARCHA_SLUG.get(h.slug + '|' + m.titulo + '|' + (m.autor || '')) + '/')}">${esc(m.titulo)}</a>${origenMarchas(h).foro && !verificada(h, m.titulo) ? ' <span class="oc-muted">(sin verificar)</span>' : ''}` : esc(m.titulo), esc(m.autor), esc(m.anio), esc(m.tipo)])) : '';
+  const RANGO = { contrastada: 0, dedicada: 1, 'sin-verificar': 2 };
+  const marchas = (h.marchas || []).length ? stackTable(['Marcha', 'Compositor', 'Año', 'Formación'], [...h.marchas].sort((x, y) => RANGO[x.est] - RANGO[y.est] || x.titulo.localeCompare(y.titulo, 'es')).map((m) => [`<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>${m.est === 'sin-verificar' ? ' <span class="oc-muted">(sin verificar)</span>' : ''}`, esc(m.autor), esc(m.anio), esc(m.tipo)])) : '';
   const isWiki = /wikipedia\.org/.test(h.fuente_url || '');
   let host = ''; try { host = h.fuente_url ? new URL(h.fuente_url).hostname.replace(/^www\./, '') : ''; } catch (e) { host = ''; }
   const fuente = h.fuente_url ? `<p class="oc-note">Fuente de los datos: <a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'artículo de Wikipedia (CC BY-SA 4.0)' : (/agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial en ' : 'información publicada en ') + esc(host)}</a>.</p>` : '';
@@ -816,7 +805,7 @@ ${section('Titulares e imagineros', titRows.length ? stackTable(['Titular', 'Aut
 ${section('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
 ${section('Acompañamiento musical', (h.acompanamiento ? acompHtml(h.acompanamiento) : (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : ''))) + (!h.acompanamiento && bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas) : ''))}
 ${(() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(hb.texto); return section('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col.length ? `<ul class="oc-swatches" aria-label="Colores mencionados">${col.map((x) => `<li><i style="background:${x.hex}" aria-hidden="true"></i><span>${esc(x.prenda)} ${esc(x.color)}</span></li>`).join('')}</ul>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad; los colores se han leído del texto, consulta la ficha para el detalle.</p>`); })()}
-${marchas ? (() => { const og = origenMarchas(h); const sinVer = og.foro && h.marchas.some((m) => !verificada(h, m.titulo)); const nv = h.marchas.filter((m) => verificada(h, m.titulo)).length; return section(sinVer ? 'Marchas asociadas' : 'Marchas dedicadas', marchas + `<p class="oc-note">${og.nota}${nv ? ` ${nv} de ${h.marchas.length} confirmadas en la base de datos de Patrimonio Musical.` : ''}${og.url ? ` <a href="${esc(og.url)}" target="_blank" rel="noopener nofollow">Ver la fuente</a>.` : ''}</p>`); })() : ''}
+${marchas ? (() => { const n = (e) => h.marchas.filter((m) => m.est === e).length; const nc = n('contrastada'), nd = n('dedicada'), ns = n('sin-verificar'); const partes = [nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean); return section(ns === h.marchas.length ? 'Marchas asociadas' : 'Marchas dedicadas', marchas + `<p class="oc-note">${partes.join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`); })() : ''}
 ${(() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return section('Escúchala y síguela', `<ul class="oc-linklist">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas: el resultado depende de lo que cada hermandad haya publicado.</p>`); })()}
 ${fuente}
 </article>
@@ -900,7 +889,7 @@ for (const [k, v] of AUTORES) if (v.marchas.length < 2) { v.marchas.forEach((m) 
 function pageCompositor(a) {
   const ms = [...a.marchas].sort((x, y) => (x.anio || '9999').localeCompare(y.anio || '9999') || x.titulo.localeCompare(y.titulo, 'es'));
   const q = encodeURIComponent(a.nombre + ' marchas procesionales');
-  const rows = ms.map((m) => [`<a href="${u('marcha/' + m.slug + '/')}"><strong>${esc(m.titulo)}</strong></a>`, esc(m.anio), esc(m.tipo), m.h ? `<a href="${u('hermandad/' + m.h.slug + '/')}">${esc(m.h.nombre)}</a> (${esc(CAP[m.h.ciudad].nombre)})` : esc(m.dedicatoria)]);
+  const rows = ms.map((m) => [`<a href="${u('marcha/' + m.slug + '/')}"><strong>${esc(m.titulo)}</strong></a>`, esc(m.anio), esc(m.tipo), m.h ? `<a href="${u('hermandad/' + m.h.slug + '/')}">${esc(m.h.nombre)}</a> (${esc(CAP[m.h.ciudad].nombre)})${m.est === 'sin-verificar' ? ' <span class="oc-muted">(sin verificar)</span>' : ''}` : esc(m.dedicatoria)]);
   const ciudades = [...new Set(ms.filter((m) => m.h).map((m) => CAP[m.h.ciudad].nombre))];
   const resumen = `${a.nombre}, compositor de marchas procesionales: ${plural(ms.length, 'marcha', 'marchas')}${ciudades.length ? ' dedicadas a cofradías de ' + ciudades.join(', ') : ''}.`;
   const lista = ms.map((m) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.anio), esc(m.tipo), m.h ? '' : m.dedicatoria ? 'dedicada a ' + esc(m.dedicatoria) : ''].filter(Boolean).join(' · '))).join('');
@@ -909,31 +898,43 @@ ${section('Marchas', `<ul class="oc-entries">${lista}</ul>`)}
 ${section('Escucha su música', `<ul class="oc-linklist"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener nofollow">Buscar en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener nofollow">Buscar en Spotify${icon('out')}</a></li></ul>`)}`;
   write(`compositor/${a.slug}/index.html`, layout({ title: a.nombre, desc: resumen.slice(0, 300), body, path: `compositor/${a.slug}/`, active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', u('marchas/')], [a.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: a.nombre, jobTitle: 'Compositor' } }));
 }
-// De dónde sale la relación marcha ↔ hermandad: el foro de 2008 es una lista de aficionados y no basta para afirmar la dedicatoria.
-// Marchas confirmadas en una segunda fuente (Patrimonio Musical): tools/sources/marchas-verificacion.json
-const VERIF_FILE = path.join(DIR, '..', 'tools', 'sources', 'marchas-verificacion.json');
-const VERIF = fs.existsSync(VERIF_FILE) ? JSON.parse(fs.readFileSync(VERIF_FILE, 'utf8')).hermandades : {};
-const verificada = (h, titulo) => (h && VERIF[h.slug] && VERIF[h.slug][titulo]) || null;
-function origenMarchas(h) {
-  const f = h.marchas_fuente || '';
-  if (/patrimoniomusical\.com\/foro/.test(f)) return { foro: true, url: f, nota: 'Marcha incluida en la lista «Marchas procesionales de Málaga» de un foro de aficionados (Patrimonio Musical, 2008). <strong>Dedicatoria sin verificar</strong> con la hermandad.' };
-  if (/wikipedia\.org/.test(f)) return { url: f, nota: 'Según la sección de marchas del artículo de Wikipedia de la hermandad (CC BY-SA 4.0).' };
-  return { url: h.fuente_url, nota: 'Según la ficha oficial publicada por la Federación o Agrupación de su capital.' };
+// De dónde sale cada dato de una marcha: el modelo único guarda, por campo, las fuentes que lo dan (con su URL).
+// La dedicatoria a una hermandad: contrastada (dos fuentes fiables), dedicada (una fiable) o sin verificar (solo el foro de 2008 o Wikipedia).
+const NOMBRE_F = { mdp: 'Marchas de Procesión', pm: 'Patrimonio Musical', fgr: 'Federación de Hermandades de Granada', wiki: 'Wikipedia', foro: 'foro de Patrimonio Musical (2008)', rev: 'revisión con fuente' };
+const FICHA_MDP = new Set(['anio', 'dedicatoria', 'tipo', 'estreno', 'lugar', 'detalles']);
+function enlaceFuente(m, f, campo) {
+  let url = (m.urls || {})[f] || (FUENTES_M[f] && FUENTES_M[f].url) || '';
+  if (f === 'mdp' && FICHA_MDP.has(campo) && m.urls.mdpFicha) url = m.urls.mdpFicha;
+  const nombre = f === 'rev' && m.revision && m.revision.at(-1).fuente ? m.revision.at(-1).fuente : NOMBRE_F[f] || f;
+  return url ? `<a href="${esc(url)}" target="_blank" rel="noopener nofollow">${esc(nombre)}</a>` : esc(nombre);
 }
+function fuentesMarcha(m) {
+  const grupos = [['Título y compositor', ['titulo', 'autor'], true], ['Año', ['anio'], m.anio], ['Formación', ['formacion'], m.tipo], ['Dedicatoria', ['dedicatoria'], m.h || m.dedicatoria], ['Grabación', ['video'], m.video], ['Tipo, estreno y lugar', ['tipo', 'estreno', 'lugar', 'detalles'], m.tipoMarcha || m.estreno || m.lugar]];
+  const filas = grupos.filter(([, , hay]) => hay).map(([et, cs]) => { const fs_ = [...new Set(cs.flatMap((c) => (m.fuentes || {})[c] || []))]; return fs_.length ? `<li><strong>${et}:</strong> ${fs_.map((f) => enlaceFuente(m, f, cs[0])).join(', ')}</li>` : ''; }).filter(Boolean);
+  return filas.length ? `<ul class="oc-fuentes">${filas.join('')}</ul>` : '';
+}
+const DEBIL = (m) => ((m.fuentes || {}).dedicatoria || []).filter((f) => f === 'foro' || f === 'wiki').map((f) => NOMBRE_F[f]).join(' y ') || 'una fuente sin contrastar';
+function notaDedicatoria(m) {
+  if (!m.h) return '';
+  if (m.est === 'contrastada') return `La dedicatoria a ${esc(m.h.nombre)} la dan dos fuentes independientes.`;
+  if (m.est === 'dedicada') return `La dedicatoria a ${esc(m.h.nombre)} la da una fuente fiable.`;
+  return `<strong>Dedicatoria sin verificar:</strong> solo la recoge el ${esc(DEBIL(m))}; no se ha podido confirmar en una fuente fiable.`;
+}
+const textoGrabacion = (m) => { const f = (m.fuentes || {}).video || []; return f.includes('mdp') ? 'Grabación del canal «Marchas de Procesión»' : f.includes('fgr') ? 'Grabación enlazada en la ficha de la Federación' : 'Grabación en YouTube'; };
 function pageMarcha(m) {
-  const h = m.h; const c = h ? CAP[h.ciudad] : null; let og = h ? origenMarchas(h) : null;
-  const ver = verificada(h, m.titulo);
-  if (ver) og = { url: og.url, foro: false, nota: `${og.foro ? 'Marcha de la lista «Marchas procesionales de Málaga» (foro de Patrimonio Musical, 2008),' : og.nota.replace(/\.$/, ',')} <strong>confirmada</strong> en la <a href="${esc(ver.url)}" target="_blank" rel="noopener nofollow">base de datos de Patrimonio Musical</a> (título, compositor y dedicatoria).` };
+  const h = m.h; const c = h ? CAP[h.ciudad] : null; const sinVer = h && m.est === 'sin-verificar';
   const q = encodeURIComponent(m.titulo + ' ' + (m.autor || '') + ' marcha procesional');
-  const enlaces = [m.video ? ['Escuchar en YouTube', 'https://www.youtube.com/watch?v=' + m.video] : ['Buscar en YouTube', `https://www.youtube.com/results?search_query=${q}`], ['Buscar en Spotify', `https://open.spotify.com/search/${q}`]];
   const otras = MARCHAS.filter((x) => x.slug !== m.slug && ((m.autor && x.autor === m.autor) || (h && x.h && x.h.slug === h.slug))).slice(0, 14);
-  const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, ${h ? (og.foro ? 'asociada a ' : 'dedicada a ') + h.nombre + ' (' + c.nombre + ')' + (og.foro ? ', sin verificar.' : '.') : (m.dedicatoria ? 'dedicada a ' + m.dedicatoria + '.' : '')}${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
+  const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, ${h ? (sinVer ? 'asociada a ' : 'dedicada a ') + h.nombre + ' (' + c.nombre + ')' + (sinVer ? ', sin verificar.' : '.') : (m.dedicatoria ? 'dedicada a ' + m.dedicatoria + '.' : '')}${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
   const yt = m.video ? 'https://www.youtube.com/watch?v=' + m.video : `https://www.youtube.com/results?search_query=${q}`;
-  const escucha = `<div class="oc-escucha"><a class="oc-escucha-play" href="${esc(yt)}" target="_blank" rel="noopener nofollow" aria-label="${m.video ? 'Escuchar' : 'Buscar'} «${esc(m.titulo)}» en YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></a><div class="oc-escucha-txt"><strong>${m.video ? 'Escúchala en YouTube' : 'Búscala en YouTube'}</strong><span>${m.video ? 'Grabación de «Marchas de Procesión»' : 'La grabación depende de la banda que la interprete'}</span><a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener nofollow">Buscar en Spotify${icon('out')}</a></div></div>`;
-  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo)], [h && og.foro ? 'Asociada a' : 'Dedicada a', h ? `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${og.foro ? ' <span class="oc-muted">(sin verificar)</span>' : ''}` : esc(m.dedicatoria)], ['Capital', h ? `<a href="${u('semana-santa/' + h.ciudad + '/')}">${esc(c.nombre)}</a>` : ''], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}</header>
+  const escucha = `<div class="oc-escucha"><a class="oc-escucha-play" href="${esc(yt)}" target="_blank" rel="noopener nofollow" aria-label="${m.video ? 'Escuchar' : 'Buscar'} «${esc(m.titulo)}» en YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></a><div class="oc-escucha-txt"><strong>${m.video ? 'Escúchala en YouTube' : 'Búscala en YouTube'}</strong><span>${m.video ? textoGrabacion(m) : 'La grabación depende de la banda que la interprete'}</span><a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener nofollow">Buscar en Spotify${icon('out')}</a></div></div>`;
+  const ded = h ? `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${m.titularDed ? ' · ' + esc(m.titularDed) : ''}${sinVer ? ' <span class="oc-muted">(sin verificar)</span>' : m.est === 'contrastada' ? ' <span class="oc-muted">(contrastada)</span>' : ''}` : esc(m.dedicatoria);
+  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo)], [sinVer ? 'Asociada a' : 'Dedicada a', ded], ['Capital', h ? `<a href="${u('semana-santa/' + h.ciudad + '/')}">${esc(c.nombre)}</a>` : ''], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}</header>
 ${otras.length ? section('Más marchas', `<ul class="oc-entries">${otras.map((x) => filaHerm(x.h, `<a href="${u('marcha/' + x.slug + '/')}">${esc(x.titulo)}</a>`, [esc(x.autor), esc(x.anio)].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
-<p class="oc-note">${m.espana ? 'Catálogo de marchas de España elaborado a partir de la base de datos de <a href="https://www.marchasdeprocesion.com/p/marchas-de-espana.html" target="_blank" rel="noopener nofollow">Marchas de Procesión</a>; solo se muestran los datos que su ficha tiene rellenos.' : og.nota + (og.url ? ` <a href="${esc(og.url)}" target="_blank" rel="noopener nofollow">Ver la fuente</a>.` : '') + (m.delCatalogo ? ' La grabación y la formación vienen del catálogo de <a href="https://www.marchasdeprocesion.com/p/marchas-de-espana.html" target="_blank" rel="noopener nofollow">Marchas de Procesión</a>.' : '')}</p>`;
+${section('Fuentes', `${fuentesMarcha(m)}<p class="oc-note">${notaDedicatoria(m)}${h ? ' ' : ''}Solo se muestran los datos que dan sus fuentes; si dos fuentes no coinciden, se enseña el de la oficial o se deja en blanco.</p>`)}`;
   write(`marcha/${m.slug}/index.html`, layout({ title: m.titulo + (m.autor ? ' · ' + m.autor : ''), desc: resumen.slice(0, 300), body, path: `marcha/${m.slug}/`, active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', u('marchas/')], [m.titulo, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicComposition', name: m.titulo, composer: m.autor ? { '@type': 'Person', name: m.autor } : undefined, dateCreated: m.anio || undefined } }));
+  // Direcciones antiguas de la misma marcha (duplicados del catálogo que se han unido): redirigen a esta
+  for (const a of m.alias || []) if (a && a !== m.slug && !MARCHA_SLUGS.has(a)) { write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u('marcha/' + m.slug + '/')}"><link rel="canonical" href="${u('marcha/' + m.slug + '/')}"><title>${BRAND}</title></head><body><p><a href="${u('marcha/' + m.slug + '/')}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
 }
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
@@ -1135,8 +1136,11 @@ function searchIndex() {
   for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
-  // todas las marchas: las dedicadas a una hermandad y las del catálogo de España (antes estas no se encontraban)
-  for (const m of MARCHAS) idx.push({ t: 'm', n: m.titulo, s: `Marcha${m.autor ? ' de ' + m.autor : ''}${m.h ? ', ' + m.h.nombre : m.tipo ? ' · ' + m.tipo.toLowerCase() : ''}`, u: 'marcha/' + m.slug + '/', c: m.h ? m.h.ciudad : '', k: norm([m.titulo, m.autor, m.dedicatoria, m.h ? m.h.nombre : ''].join(' ')) });
+  // Las marchas (más de 7.000) van en search-marchas.json, que el navegador pide solo al escribir 3 letras: el índice principal pesa poco.
+  // Cada fila: [título, compositor, hermandad, formación, slug, capital, claves]
+  const im = [];
+  for (const m of MARCHAS) im.push([m.titulo, m.autor || '', m.h ? m.h.nombre : '', m.h ? '' : (m.tipo || '').toLowerCase(), m.slug, m.h ? m.h.ciudad : '', norm([m.autor, m.dedicatoria, m.h ? m.h.nombre : ''].join(' '))]);
+  fs.writeFileSync(path.join(DIST, 'search-marchas.json'), JSON.stringify(im));
   for (const n of NEWS.items.slice(0, 200)) idx.push({ t: 'n', n: n.titulo, s: n.fuente + ', ' + fmtDay(n.ts, { day: 'numeric', month: 'short' }), u: n.url, d: n.ts, k: norm(n.titulo + ' ' + (n.extracto || '') + ' ' + n.ciudades.map((c) => CAP[c]?.nombre).join(' ')) });
   fs.writeFileSync(path.join(DIST, 'search-index.json'), JSON.stringify(idx));
 }
