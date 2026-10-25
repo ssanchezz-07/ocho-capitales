@@ -1,6 +1,7 @@
 # Decisiones de diseño y técnicas
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 2026-10-26 · Laboratorio de rutas: continuidad + GraphHopper (propuesta, sin adoptar)
 _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 
@@ -48,6 +49,37 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 - Contar foro + base de Patrimonio Musical como «contrastada»: son el mismo sitio, así que cuenta como una sola fuente fiable.
 - Añadir al portal las marchas que solo están en Patrimonio Musical: se usan para verificar y ligar, no se publican sus fichas.
 =======
+=======
+## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada (parada por el límite de 5 h al 95 %)
+Pablo vio la portada de esta rama en localhost:8093 (captura a ~916 px) y llegaron órdenes nuevas a través de la sesión que coordina. **No subir la portada hasta que Pablo la vea.** El push a main necesita su confirmación en el chat de esta sesión.
+1. **Recuperar intactas las láminas «Las ocho capitales»** (`plates(false)` en `site/build.mjs`, con foto teñida, número, latitud, sello y «N hermandades · N bandas») entre el mapa y la agenda. Pablo: «ME REFIERO A ESTE APARTADO, QUE ES PRECIOSO». Las sacamos de la portada el 25-oct; hay que devolverlas tal cual.
+2. **Arreglar lo que se ve en su captura:**
+   - El texto «Toca una bandera…» y la cuenta atrás quedan encima del mapa, sin jerarquía.
+   - Los hilos dorados cruzan el mapa con codos y se ven sucios. Propuesta: ocultarlos y dibujar solo el de la bandera elegida.
+   - Las banderas quedan cortadas arriba bajo la cabecera. El lienzo tiene altura fija y el bloque no cabe (por ejemplo, a 916 px de ancho con poca altura). Hay que dar altura según el contenido en Andalucía y altura de pantalla solo al bajar a la ciudad.
+   - Queda un hueco vacío entre el mapa y la agenda.
+   - Su captura salía sin el lienzo morado: puede que el navegador sirviera una CSS vieja (comprobar con Ctrl+F5 o dando de baja el service worker).
+   - Después, comparar con https://ssanchezz-07.github.io/ocho-capitales/ a 390, 768 y 1440 px, en claro y en oscuro, y mandar a Pablo capturas de antes y después.
+3. **Animaciones del mapa limpias:**
+   - Auditar con impeccable, `review-animations` y `design-motion-principles`.
+   - Grabar con Playwright y revisar fotograma a fotograma.
+   - Dejar un solo sistema de curvas, solo transformaciones y opacidad, y respetar `prefers-reduced-motion`.
+4. **Mapa con más detalle por capital** (Pablo: «lo veo simple»). Proponer **2 variantes con capturas** antes de rehacerlo:
+   - contornos IGN/CNIG (`es-atlas`) o Natural Earth;
+   - relieve suave, ríos Guadalquivir y Genil;
+   - silueta o emblema de cada capital en estilo «Colgaduras», con dibujo propio o fuente libre.
+   Anotar fuente y licencia aquí. Misma proyección que `tools/generar-mapa.mjs` y un SVG ligero.
+5. **Recorridos con el color del hábito de cada hermandad:**
+   - De dónde sale el color: `tools/sources/habitos.json`; si no está, la web oficial con fuente; sin fuente, el color actual.
+   - Guardarlo en un archivo de datos con su fuente.
+   - Traducirlo a una gama común que conviva con el diseño, separando los que se parecen (muchos morados, negros y blancos).
+   - Hábitos blancos o negros: un tono que se lea en claro y en oscuro.
+   - Muestra con su nombre en la ficha y la leyenda.
+   - Capturas de Sevilla y Málaga a 390 y 1440 px, en claro y en oscuro, y `design:accessibility-review`.
+6. **Prioridad de Pablo:** pulir lo que ya existe y lanzar. Nada de funciones nuevas grandes antes del lanzamiento.
+   - **Novedades para después del lanzamiento:** «Cerca de ti» (propuesta como tarea aparte) y «La noche entera».
+
+>>>>>>> 903371c (DECISIONS: punto para retomar la portada (láminas, hilos, altura, mapa, colores de hábito))
 ## 2026-10-25 · Portada inmersiva «Del mapa a la calle», Noticias con menos ruido y colgaduras sin repetir
 Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y que no se parezca a Palio App (solo Málaga), que enseña lo mismo que ya teníamos (`MARKETING/analisis-copias.md`). Crítica de impeccable con dos revisiones independientes: 22/40; el detector dio 89 avisos en la portada y 43 en Noticias.
 
