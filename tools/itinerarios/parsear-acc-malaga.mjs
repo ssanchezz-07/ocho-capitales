@@ -17,6 +17,7 @@ for (let i = 0; i < L.length; i++) {
   const esCabecera = (x) => { const t = x.trim(); if (!t) return false; if (/\d\d:\d\dh/.test(t)) return true; const l = t.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ]/g, ''); return l.length > 12 && l.replace(/[^A-ZÁÉÍÓÚÑ]/g, '').length / l.length > 0.7; };
   const esDia = (x) => DIAS.some((d) => new RegExp('^\s*' + d.split(' ').join('\s+'), 'i').test(x) && x.trim().length < 60);
   while (b + 1 < L.length && !esCabecera(L[b + 1]) && !esDia(L[b + 1]) && !/^\s*Itinerario/.test(L[b + 1])) { b++; if (L[b].trim()) txt += ' ' + L[b].trim(); }
+  txt = txt.replace(/\s+(Lunes|Martes|Mi.rcoles|Jueves|Viernes|S.bado)\s+Santo.*$/, '').replace(/\s+Domingo\s+de\s+(Ramos|Resurrecci.n).*$/, '').replace(/\s+TORRE SUR.*$/, '').replace(/\s+Estos horarios.*$/, '');
   txt = txt.replace(/-\s+(?=[a-záéíóúñ])/g, '').replace(/\s+/g, ' ').trim().replace(/[.,]\s*$/, '');
   const itinerario = txt.split(/\s*,\s*/).map((s) => s.replace(/^y\s+/i, '').trim()).filter(Boolean);
   out.push({ dia, cabecera: cab, itinerario });

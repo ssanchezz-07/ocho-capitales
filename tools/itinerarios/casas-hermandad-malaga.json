@@ -94,5 +94,45 @@
  "expiracion-malaga": {
   "dir": "Plaza de Enrique Navarro 1, Málaga",
   "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-3-parroquia-de-santo-domingo-casa-hermandad-museo-de-la-expiracion/"
+ },
+ "huerto-malaga": {
+  "dir": "Plazuela Virgen de la Concepción 1, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "mediadora-malaga": {
+  "dir": "Calle Ayala 34, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "nueva-esperanza-malaga": {
+  "dir": "Camino de los Castillejos, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "vineros-malaga": {
+  "dir": "Plaza de los Viñeros 5, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "santo-sepulcro-malaga": {
+  "dir": "Calle Alcazabilla 5, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "descendimiento-malaga": {
+  "dir": "Calle Manuel Martín Estévez 6, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "paloma-malaga": {
+  "dir": "Plaza de San Francisco, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "sentencia-malaga": {
+  "dir": "Calle Frailes 15, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "gitanos-malaga": {
+  "dir": "Calle Frailes 15, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
+ },
+ "esperanza-malaga": {
+  "dir": "Calle San Jacinto 1, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf"
  }
 }
