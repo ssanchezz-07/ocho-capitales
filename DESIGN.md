@@ -31,10 +31,15 @@ Código: `site/assets/site.css` (el bloque «Colgaduras», al final, manda sobre
 - Objetivos táctiles de 44 px como mínimo. Cabecera de 44 px y barra inferior de 54 px más el margen seguro.
 
 ## 4. Piezas
-- **Colgadura** (`assets/plates/colgadura-<capital>.webp`, 265×971): la seña de identidad. Está en la portada (las ocho), en la cabecera de cada capital (viaja con la transición de página), en la hoja «Tu capital», en la hoja «Más» y como miniatura de noticias sin foto.
-- **Chip de capital** (cabecera): un punto de su color y su nombre. Abre la hoja con las ocho colgaduras. En la portada no aparece, porque ya están las colgaduras.
+- **Colgadura** (`assets/plates/colgadura-<capital>.webp`, 265×971): la seña de identidad. Solo está en dos sitios: en la portada (las ocho, como banderas) y en la cabecera de cada capital (viaja con la transición de página). **No se repite en listas, tarjetas ni hojas.** Allí cada capital es un punto de su color con su nombre.
+- **Portada «Del mapa a la calle»:** un lienzo de terciopelo de borde a borde con las banderas, el mapa de Andalucía (hilos de oro de cada bandera a su capital) y la invitación «Toca una bandera y baja a su calle». Debajo, la agenda.
+  - Al elegir una bandera, la cámara baja al plano de su ciudad (`assets/plano.js`). El cielo del lienzo cambia con la hora.
+  - Abajo quedan la jornada (flechas), la hora (deslizador), «Entrar en la calle» y «Su Semana Santa».
+  - La bandera elegida asoma arriba como pestaña para volver; también se vuelve con «atrás» y con Escape.
+- **Chip de capital** (cabecera): un punto de su color y su nombre. Abre la hoja «Tu capital», que tiene ocho botones con su punto de color. En la portada no aparece, porque ya están las banderas. Es el mismo estado que las banderas y los filtros de Noticias.
 - **Hojas** (`.oc-sheet`): suben desde abajo, tienen asa y se cierran arrastrando (1:1, por distancia > 1/3 o por velocidad > 0,45 px/ms; si no, vuelven con resorte `cubic-bezier(.32,.72,0,1)`). También se cierran con Esc, al tocar fuera o con ✕.
-- **Barra inferior**: Hoy · Noticias · Calendario · Buscar · Más, con una píldora en la pestaña activa. Solo en pantallas < 960 px. Es la única vía al menú en el móvil (no hay hamburguesa).
+- **Barra inferior**: Inicio · Hoy · Noticias · Buscar · Más, con una píldora en la pestaña activa. El calendario está en «Más» y en la cabecera.
+- **Noticia** (listas): el titular primero; debajo, una línea con el medio y la hora (la capital, solo si la lista mezcla capitales) y «También en…» cuando otros medios cuentan lo mismo. La foto del medio va a la derecha; sin foto, solo texto. La primera con foto va destacada. Solo en pantallas < 960 px. Es la única vía al menú en el móvil (no hay hamburguesa).
 - **Migas**: completas en ≥ 760 px; en el móvil, solo «‹ nivel anterior».
 - **Jornadas de una capital**: en el móvil son un carrusel horizontal (`scroll-snap`) y la barra de días con píldora sigue a la jornada visible; en el escritorio, secciones en vertical con la barra pegada arriba.
 - **Imagen de hermandad**: díptico Cristo + Virgen, foto conjunta, un titular, sede rotulada «Sede: …» o estampa (colgadura + monograma + titulares). Siempre con crédito de Commons.
@@ -46,6 +51,12 @@ Código: `site/assets/site.css` (el bloque «Colgaduras», al final, manda sobre
 - Curvas: `--ease-out` `cubic-bezier(0.23, 1, 0.32, 1)` para entradas y respuestas; `cubic-bezier(.32,.72,0,1)` para hojas y carruseles. Nunca `ease-in` en la interfaz.
 - Duraciones: pulsar 100–160 ms (`scale(.95–.97)`), hojas 150–320 ms y cambios de altura 260 ms.
 - Transiciones entre páginas con `@view-transition`; revelado al hacer scroll con `animation-timeline: view()` (desactivado dentro de carruseles).
+- **Cámara de la portada** (de Andalucía a la ciudad, 820–900 ms): es un viaje por el espacio, así que usa `ease-in-out` cúbico. El centro avanza en línea y la escala en exponencial, y se puede interrumpir.
+  - Las banderas se recogen en 460 ms `--ease-out`, escalonadas cada 20 ms.
+  - El hilo se dibuja en 420 ms.
+  - El plano aparece con un fundido de 460 ms tras 260 ms.
+  - El cielo cambia de color en 500 ms lineal, solo al cambiar la hora.
+  - Con «reducir movimiento», todo pasa al instante.
 - Con `prefers-reduced-motion`, todo es instantáneo. Con `prefers-reduced-transparency`, sin cristal.
 - Nada se mueve en bucle (decisión: el tono es devoto).
 
