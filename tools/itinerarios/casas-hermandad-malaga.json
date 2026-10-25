@@ -1,0 +1,98 @@
+{
+ "pollinica-malaga": {
+  "dir": "Calle Parras 20, Málaga",
+  "fuente": "https://cofradiapollinicamalaga.es/contacto/"
+ },
+ "misericordia-malaga": {
+  "dir": "Calle La Serna 1, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-2-casa-hermandad-de-la-misericordia/"
+ },
+ "dolores-de-san-juan-malaga": {
+  "dir": "Pasaje Nuestra Señora de los Dolores 6, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-6-centro-martires-5o-hito-casa-hermandad-de-dolores-de-san-juan/"
+ },
+ "prendimiento-malaga": {
+  "dir": "Calle San Millán 23, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-6o-hito-casa-hermandad-del-prendimiento/"
+ },
+ "rescate-malaga": {
+  "dir": "Calle Agua 15, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-8o-hito-casa-hermandad-del-rescate/"
+ },
+ "sagrada-cena-malaga": {
+  "dir": "Calle Compañía 44, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-6-centro-martires-8o-hito-casa-hermandad-de-la-sagrada-cena/"
+ },
+ "sangre-malaga": {
+  "dir": "Calle Dos Aceras 10, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-14o-hito-casa-hermandad-de-la-sangre/"
+ },
+ "traslado-malaga": {
+  "dir": "Calle Trinidad 72, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/"
+ },
+ "rocio-malaga": {
+  "dir": "Calle Circo 3, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-4o-hito-casa-hermandad-del-rocio/"
+ },
+ "cautivo-malaga": {
+  "dir": "Calle Trinidad 95, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-3-casa-hermandad-del-cautivo/"
+ },
+ "crucifixion-malaga": {
+  "dir": "Calle Diego de Siloé 8, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-8o-hito-casa-hermandad-de-crucifixion/"
+ },
+ "zamarrilla-malaga": {
+  "dir": "Calle Martínez Maldonado 5, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-2-casa-hermandad-de-zamarrilla/"
+ },
+ "piedad-malaga": {
+  "dir": "Calle Alderete 3, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-11o-hito-casa-hermandad-de-la-piedad/"
+ },
+ "humildad-malaga": {
+  "dir": "Calle Agua 4, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-9o-hito-casa-hermandad-de-la-humildad/"
+ },
+ "el-rico-malaga": {
+  "dir": "Calle Victoria 12, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/"
+ },
+ "salesianos-malaga": {
+  "dir": "Calle Eduardo Domínguez Ávila 28, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-4o-hito-casa-hermandad-de-salesianos/"
+ },
+ "monte-calvario-malaga": {
+  "dir": "Calle Fernando el Católico 28, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-2o-hito-casa-hermandad-del-monte-calvario/"
+ },
+ "amor-malaga": {
+  "dir": "Calle Fernando el Católico 40, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-3o-hito-casa-hermandad-del-amor-y-la-caridad/"
+ },
+ "humillacion-y-estrella-malaga": {
+  "dir": "Calle Cañaveral 2, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-9-casas-de-hermandad-de-la-humillacion-y-del-huerto/"
+ },
+ "dolores-del-puente-malaga": {
+  "dir": "Plaza de la Religiosa Filipense Dolores Márquez 1, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-7-parroquia-de-santo-domingo/"
+ },
+ "mena-malaga": {
+  "dir": "Pasillo de Santo Domingo 16, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-6-casa-hermandad-de-mena/"
+ },
+ "salud-malaga": {
+  "dir": "Calle Trinidad 5, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-7-casa-hermandad-de-la-salud/"
+ },
+ "salutacion-malaga": {
+  "dir": "Calle Cabello 21, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-13o-hito-parroquia-de-san-felipe-neri/"
+ },
+ "expiracion-malaga": {
+  "dir": "Plaza de Enrique Navarro 1, Málaga",
+  "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-3-parroquia-de-santo-domingo-casa-hermandad-museo-de-la-expiracion/"
+ }
+}
