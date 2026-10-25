@@ -95,27 +95,12 @@
   }
   paintAgo();
 
-  // Imágenes de noticias que no cargan: se conserva el hueco con la marca para que la página no salte.
-  // Sin foto del medio (o rota), la miniatura es la colgadura de su capital: nunca un hueco.
-  function colgTile(city) {
-    var col = window.OC_COLORS && window.OC_COLORS[city];
-    if (!col) return '';
-    return '<div class="oc-news-img is-colg" aria-hidden="true" style="--c:' + col + '"><img src="' + BASE + 'assets/plates/colgadura-' + city + '.webp" alt="" width="265" height="971" loading="lazy" decoding="async"></div>';
-  }
+  // Foto de un medio que no carga: la noticia se queda solo con texto (la colgadura de la capital no se repite en las listas).
   function dropImg(img) {
     var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news');
-    var t = card && colgTile((card.getAttribute('data-cities') || '').split(' ')[0]);
-    if (t) { box.outerHTML = t; return; }
-    box.remove(); if (card) card.classList.remove('has-img');
+    box.remove(); if (card) card.classList.remove('has-img', 'is-destacada');
   }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
-  // La colgadura como miniatura solo en la primera noticia sin foto de cada capital y lista: repetida en todas es un muro.
-  $$('.oc-news-img.is-colg').forEach(function (box, i, all) {
-    var card = box.closest('.oc-news'), list = card && card.parentNode, city = card && (card.getAttribute('data-cities') || '').split(' ')[0];
-    if (!card || !list) return;
-    var seen = list.__colg || (list.__colg = {});
-    if (seen[city]) { box.remove(); card.classList.remove('has-img'); } else seen[city] = 1;
-  });
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
 
   // ---------- ciudad persistente ----------
@@ -281,52 +266,44 @@
     }
     checkTodayEmpty();
     cityListeners.push(checkTodayEmpty);
+  } else {
+    // Cuenta atrás de la portada: se corrige si la copia en caché se ha quedado atrás
+    var lead0 = $('[data-today-lead]'), pk = pickSlot(new Date());
+    if (lead0 && !pk.hoy) { var ramos0 = new Date(easter(pk.year) - 7 * 864e5); lead0.innerHTML = 'Faltan <strong>' + pk.days + '</strong> ' + (pk.days === 1 ? 'día' : 'días') + ' para el Domingo de Ramos <span>(' + ramos0.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' }) + ')</span>'; }
   }
 
-  // ---------- últimas noticias de la portada: seis de la ciudad elegida ----------
-  var latest = $('[data-latest-list]');
-  if (latest) {
-    var items = $$('.oc-news', latest), allLink = $('[data-latest-all]'), emptyL = $('[data-latest-empty]');
-    var filterLatest = function (c) {
-      latest.classList.add('is-filtered');
-      var n = 0;
-      items.forEach(function (it) { var ok = !c || (' ' + it.dataset.cities + ' ').indexOf(' ' + c + ' ') !== -1; it.hidden = !(ok && n < 6); if (ok) n++; });
-      if (emptyL) emptyL.hidden = n > 0;
-      var first = items.filter(function (it) { return !it.hidden; })[0], bl = $('[data-breaking-link]');
-      if (first && bl) { var a = $('.oc-news-title a', first); bl.href = a.href; bl.textContent = a.firstChild.textContent; }
-      if (allLink) { allLink.href = BASE + 'noticias/' + (c ? '?ciudad=' + c : ''); allLink.firstChild.textContent = c ? 'Noticias de ' + CITY_NAMES[c] : 'Todas las noticias'; }
-    };
-    filterLatest(getCity());
-    cityListeners.push(filterLatest);
-  }
-
-  // ---------- colgaduras: el selector de capital como un objeto que cuelga ----------
-  // Movimiento solo aquí: muelles que parten de donde está el elemento y heredan la velocidad del gesto
-  // (response = segundos hasta llegar; damping 1 = sin rebote, <1 = se balancea). Con «reducir movimiento», todo cambia al instante.
+  // ---------- portada: las banderas, Andalucía y, al elegir una, el plano de su ciudad («Del mapa a la calle») ----------
+  // Movimiento: muelles que parten de donde está el elemento y heredan la velocidad del gesto (response = segundos hasta llegar;
+  // damping 1 = sin rebote, <1 = se balancea) y una sola cámara que baja de Andalucía a la ciudad. Con «reducir movimiento», todo al instante.
   var colg = $('[data-colgaduras]');
   if (colg) (function () {
-    // El mapa y los hilos se dibujan aquí a partir de los datos de la página (provincias, capitales y su colgadura)
     var NS = 'http://www.w3.org/2000/svg', mapa = $('[data-colg-map]', colg), datos = {};
     try { datos = JSON.parse($('#oc-mapa').textContent); } catch (err) { }
     function el(tag, attrs) { var n = document.createElementNS(NS, tag); Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); }); return n; }
+    var svg = null;
     if (mapa && datos.prov) {
-      var svg = el('svg', { 'class': 'oc-colg-svg', viewBox: datos.vb, preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
+      svg = el('svg', { 'class': 'oc-colg-svg', viewBox: datos.vb, preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.prov.forEach(function (p) { var n = el('path', { 'class': 'oc-prov2', 'data-prov': p.s, d: p.d }); n.style.setProperty('--c', p.c); svg.appendChild(n); });
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
-      datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d:'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
-      mapa.insertBefore(svg, mapa.firstChild); mapa.insertBefore(hs, svg.nextSibling);
-      datos.caps.forEach(function (c) { var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; mapa.insertBefore(d, $('[data-colg-pie]', mapa)); });
+      datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
+      mapa.appendChild(svg); mapa.appendChild(hs);
+      // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía)
+      datos.caps.forEach(function (c) { var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d); });
     }
-    var items = $$('.oc-colg', colg), provs = $$('.oc-prov2', colg), hilos = $$('.oc-hilo', colg), puntos = $$('.oc-punto', colg), irs = $$('.oc-colg-ir', colg);
-    var row = $('.oc-colg-row', colg), pie = $('[data-colg-pie]', colg);
+    // Las banderas son enlaces a su capital (sin JavaScript funcionan así); con JavaScript, botones que bajan a su calle
+    var items = $$('.oc-colg', colg).map(function (a) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = a.className; b.dataset.colg = a.dataset.colg; b.setAttribute('style', a.getAttribute('style') || ''); b.setAttribute('aria-pressed', 'false');
+      while (a.firstChild) b.appendChild(a.firstChild); a.parentNode.replaceChild(b, a); return b;
+    });
+    var provs = $$('.oc-prov2', colg), hilos = $$('.oc-hilo', colg), puntos = $$('.oc-punto', colg);
+    var row = $('.oc-colg-row', colg);
     var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var EASE = 'cubic-bezier(0.23, 1, 0.32, 1)', DRAWER = 'cubic-bezier(0.32, 0.72, 0, 1)';
+    var DRAWER = 'cubic-bezier(0.32, 0.72, 0, 1)', EASE = 'cubic-bezier(0.23, 1, 0.32, 1)';
 
     function Spring(response, damping) { var w = 2 * Math.PI / response; this.k = w * w; this.c = 2 * damping * w; this.x = 0; this.v = 0; this.t = 0; }
     Spring.prototype.step = function (dt) { this.v += (-this.k * (this.x - this.t) - this.c * this.v) * dt; this.x += this.v * dt; };
     Spring.prototype.still = function () { return Math.abs(this.x - this.t) < 0.01 && Math.abs(this.v) < 0.05; };
-
-    var S = items.map(function (el) { return { el: el, rot: new Spring(0.5, 0.5), dy: new Spring(0.38, 1), sc: new Spring(0.2, 1), vivo: false }; });
+    var S = items.map(function (el) { return { el: el, rot: new Spring(0.5, 0.5), dy: new Spring(0.38, 1), sc: new Spring(0.2, 1) }; });
     var raf = 0, last = 0;
     function paint(s) { s.el.style.transform = 'translate3d(0,' + s.dy.x.toFixed(2) + 'px,0) rotate(' + s.rot.x.toFixed(2) + 'deg) scale(' + s.sc.x.toFixed(4) + ')'; }
     function tick(now) {
@@ -339,97 +316,171 @@
       raf = moving ? requestAnimationFrame(tick) : 0;
     }
     function wake() { if (!raf && !calm) { last = performance.now(); raf = requestAnimationFrame(tick); } }
-    function setTarget(s, rot, dy, sc) {
-      s.rot.t = rot; s.dy.t = dy; s.sc.t = sc;
-      if (calm) { s.rot.x = rot; s.dy.x = dy; s.sc.x = sc; s.rot.v = s.dy.v = s.sc.v = 0; paint(s); } else wake();
-    }
+    function setTarget(s, rot, dy, sc) { s.rot.t = rot; s.dy.t = dy; s.sc.t = sc; if (calm) { s.rot.x = rot; s.dy.x = dy; s.sc.x = sc; s.rot.v = s.dy.v = s.sc.v = 0; paint(s); } else wake(); }
 
-    // Hilo que se dibuja, botón que nace del punto de la capital y vuelve por el mismo camino
-    var pillAnim = null;
-    function hidePill(el, instant) {
-      if (pillAnim) { pillAnim.cancel(); pillAnim = null; }
-      if (!el || el.hidden) return;
-      if (instant || calm || !el.animate) { el.hidden = true; return; }
-      var a = el.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(0.94)' }], { duration: 160, easing: EASE });
-      a.onfinish = function () { el.hidden = true; }; pillAnim = a;
-    }
-    function showPill(el, dot) {
-      if (pillAnim) { pillAnim.cancel(); pillAnim = null; }
-      el.hidden = false;
-      if (calm || !el.animate) return;
-      var p = el.getBoundingClientRect(), d = dot.getBoundingClientRect();
-      el.style.setProperty('--ox', (d.left + d.width / 2 - p.left).toFixed(1) + 'px'); el.style.setProperty('--oy', (d.top + d.height / 2 - p.top).toFixed(1) + 'px');
-      pillAnim = el.animate([{ opacity: 0, transform: 'scale(0.9)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 300, easing: EASE });
-    }
-
-    var current = '';
-    function paintColg(city, animar) {
-      var prev = current; current = city || '';
-      if (current) colg.setAttribute('data-sel', current); else colg.removeAttribute('data-sel');
+    // ---- elegir: la bandera se mece, su hilo se dibuja hasta la capital y la cámara baja a la ciudad ----
+    var actual = '';
+    function pintarBanderas(city, animar) {
+      var prev = actual; actual = city || '';
+      if (actual) colg.setAttribute('data-sel', actual); else colg.removeAttribute('data-sel');
       S.forEach(function (s, i) {
-        var on = s.el.dataset.colg === current;
-        if (on) s.el.setAttribute('aria-current', 'true'); else s.el.removeAttribute('aria-current');
-        // la elegida cuelga un poco más; las demás se recogen apenas
-        setTarget(s, 0, on ? s.el.offsetHeight * 0.075 : (current ? -2 : 0), 1);
-        if (on && animar && !calm && prev !== current) { s.rot.v += 70; var vecino = S[i + (i % 2 ? -1 : 1)]; if (vecino) vecino.rot.v -= 22; wake(); }
+        var on = s.el.dataset.colg === actual;
+        s.el.setAttribute('aria-pressed', on ? 'true' : 'false'); s.el.parentNode.classList.toggle('is-elegida', on);
+        setTarget(s, 0, 0, 1);
+        if (on && animar && !calm && prev !== actual) { s.rot.v += 70; var vecino = S[i + (i % 2 ? -1 : 1)]; if (vecino) vecino.rot.v -= 22; wake(); }
       });
-      provs.forEach(function (p) { p.classList.toggle('is-on', p.dataset.prov === current); });
+      provs.forEach(function (p) { p.classList.toggle('is-on', p.dataset.prov === actual); });
+      puntos.forEach(function (p) { p.classList.toggle('is-on', p.dataset.punto === actual); });
       hilos.forEach(function (h) {
-        var on = h.dataset.hilo === current; h.classList.toggle('is-on', on);
+        var on = h.dataset.hilo === actual; h.classList.toggle('is-on', on);
         // Con trazo de grosor fijo, Chrome mide los guiones en píxeles de pantalla: se calcula la longitud real en pantalla
-        // (tramos verticales con el alto, horizontales con el ancho) y el guion solo existe mientras se dibuja.
-        if (on && animar && !calm && h.animate && prev !== current) {
-          var c = (datos.caps || []).filter(function (k) { return k.s === current; })[0], box = h.ownerSVGElement.getBoundingClientRect();
+        if (on && animar && !calm && h.animate && prev !== actual) {
+          var c = (datos.caps || []).filter(function (k) { return k.s === actual; })[0], box = h.ownerSVGElement.getBoundingClientRect();
           var len = c ? Math.ceil((c.l + Math.abs(c.y - c.l)) * box.height / 100 + Math.abs(c.x - c.b) * box.width / 100) + 2 : 0;
-          if (len) h.animate([{ strokeDasharray: len + ' ' + len, strokeDashoffset: len }, { strokeDasharray: len + ' ' + len, strokeDashoffset: 0 }], { duration: 560, easing: EASE });
+          if (len) h.animate([{ strokeDasharray: len + ' ' + len, strokeDashoffset: len }, { strokeDasharray: len + ' ' + len, strokeDashoffset: 0 }], { duration: 420, easing: EASE });
         }
       });
-      puntos.forEach(function (p) { p.classList.toggle('is-on', p.dataset.punto === current); });
-      var activo = current ? irs.filter(function (a) { return a.dataset.ir === current; })[0] : null;
-      irs.forEach(function (a) { if (a !== activo) hidePill(a, true); });
-      if (activo) { var dot = puntos.filter(function (p) { return p.dataset.punto === current; })[0]; pie.dataset.lado = parseFloat(dot.style.left) < 50 ? 'der' : 'izq'; if (activo.hidden) showPill(activo, dot); }
     }
 
-    // Toque: se hunde al pulsar (no al soltar) y elige al soltar; otro toque sobre la elegida la suelta
+    // ---- la ciudad ----
+    var portada = colg.closest('[data-portada]') || colg, host = $('[data-colg-plano]', colg), andBox = $('[data-colg-and]', colg), ciuBox = $('[data-colg-ciudad]', colg);
+    var rango = $('[data-colg-tiempo]', colg), horaEl = $('[data-colg-hora]', colg), jorEl = $('[data-colg-jornada]', colg), resEl = $('[data-colg-res]', colg), nomEl = $('[data-colg-nombre]', colg);
+    var entrarA = $('[data-colg-entrar]', colg), capA = $('[data-colg-capital]', colg), notaEl = $('[data-colg-nota]', colg), pieEl = $('[data-colg-pie]', colg);
+    var plano = null, D = null, J = [], dia = '', T = 0, cargas = {}, vbAnd = svg ? datos.vb.split(' ').map(Number) : null, vbAhora = vbAnd ? vbAnd.slice() : null, animAnd = 0;
+    var hoyISO = function () { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date()); };
+    var ahoraMin = function () { var f = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
+    function cargarPlano() { if (window.OCPlano) return Promise.resolve(); return new Promise(function (ok, ko) { var s = document.createElement('script'); s.src = datos.plano; s.onload = ok; s.onerror = ko; document.head.appendChild(s); }); }
+    function datosCiudad(c) { return cargas[c] || (cargas[c] = fetch(datos.ciudades[c].d).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function (e) { delete cargas[c]; throw e; })); }
+    function fechaDe(d) { if (datos.fechas[d]) return datos.fechas[d]; var h = D.hermandades.filter(function (x) { return x.d === d && x.x; })[0]; return h ? h.x.fecha : '9999'; }
+    function delDia(d) { return D.hermandades.filter(function (h) { return h.d === d; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); }
+    // Hoy, si es jornada; si no, la próxima salida extraordinaria de los 45 días siguientes; si no, la jornada con más cofradías
+    function jornadaInicial() {
+      var hoy = hoyISO(), j = J.filter(function (d) { return fechaDe(d) === hoy; })[0];
+      if (j) return { d: j, ahora: true };
+      var lim = new Date(Date.now() + 45 * 864e5).toISOString().slice(0, 10);
+      var ex = J.filter(function (d) { var f = fechaDe(d); return delDia(d).some(function (h) { return h.x; }) && f >= hoy && f <= lim; })[0];
+      if (ex) return { d: ex, ahora: false };
+      return { d: J.slice().sort(function (a, b) { return delDia(b).length - delDia(a).length; })[0], ahora: false };
+    }
+    function etiquetaJornada(d) {
+      var f = fechaDe(d); if (f === '9999') return d;
+      if (/·/.test(d)) return d;
+      return d + ' · ' + new Date(f + 'T12:00:00Z').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: 'UTC' }).replace('.', '');
+    }
+    function urlCalle(extra) { return datos.ciudades[actual].calle + '?dia=' + encodeURIComponent(dia) + '&t=' + Math.round(T) + (extra || ''); }
+    function ponerJornada(d, t) {
+      dia = d; var hs = delDia(d); plano.ponerDia(hs);
+      var L = OCPlano.limites(hs); rango.min = Math.floor(L[0]); rango.max = Math.ceil(L[1]);
+      T = t != null ? Math.max(L[0], Math.min(L[1], t)) : OCPlano.horaPico(hs); rango.value = T;
+      jorEl.textContent = etiquetaJornada(d);
+      var x = hs[0] && hs[0].x, cap = datos.ciudades[actual];
+      notaEl.textContent = x ? 'Itinerario oficial de la salida (' + x.fuente + '). Entre las horas del cartel, la posición es una estimación.' : 'Recorridos del itinerario oficial de ' + (cap.anio || 'la última Semana Santa') + '. La posición de cada cortejo es una estimación.';
+      ponerHora(T);
+    }
+    function ponerHora(t) {
+      T = t; plano.ponerHora(T);
+      var hh = OCPlano.hhmm(T); horaEl.textContent = hh; rango.setAttribute('aria-valuetext', hh);
+      var c = OCPlano.cielo(T); portada.style.setProperty('--cielo', c.fondo); portada.style.setProperty('--noche', c.noche.toFixed(2));
+      var n = plano.cuantas();
+      resEl.textContent = n.calle ? (n.calle === 1 ? '1 cofradía en la calle' : n.calle + ' cofradías en la calle') + (n.antes ? ' · ' + n.antes + ' por salir' : '') : n.antes ? (n.antes === 1 ? '1 cofradía por salir' : n.antes + ' cofradías por salir') : 'Todas recogidas a esta hora';
+      entrarA.href = urlCalle();
+    }
+    rango.addEventListener('input', function () { if (plano) ponerHora(+rango.value); });
+    $$('[data-colg-jor]', colg).forEach(function (b) { b.addEventListener('click', function () { if (!plano) return; var i = J.indexOf(dia) + +b.dataset.colgJor; ponerJornada(J[(i + J.length) % J.length]); plano.encuadrar(calm ? 0 : 520, margenes()); }); });
+    // cada medallón abre su ficha en «En la calle», a la misma jornada y hora
+    host.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('.oc-pl-marca'); if (a && actual) a.setAttribute('href', urlCalle('&h=' + encodeURIComponent(a.getAttribute('data-s')))); });
+    function margenes() { var p = pieEl.getBoundingClientRect().height; return { arriba: 64, abajo: Math.round(p) + 12, izq: 20, der: 20 }; }
+    // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial
+    function moverAnd(destino, ms) {
+      if (!svg) return; cancelAnimationFrame(animAnd);
+      if (calm || !ms) { vbAhora = destino.slice(); svg.setAttribute('viewBox', vbAhora.join(' ')); return; }
+      var de = vbAhora.slice(), t0 = performance.now();
+      (function paso(t) {
+        var k = Math.min(1, (t - t0) / ms), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        var w = de[2] * Math.pow(destino[2] / de[2], e), h = w * vbAnd[3] / vbAnd[2], cx = de[0] + de[2] / 2 + (destino[0] + destino[2] / 2 - de[0] - de[2] / 2) * e, cy = de[1] + de[3] / 2 + (destino[1] + destino[3] / 2 - de[1] - de[3] / 2) * e;
+        vbAhora = [cx - w / 2, cy - h / 2, w, h]; svg.setAttribute('viewBox', vbAhora.map(function (v) { return v.toFixed(2); }).join(' '));
+        if (k < 1) animAnd = requestAnimationFrame(paso);
+      })(t0);
+    }
+    function entrar(c, desdeHistoria) {
+      var cap = datos.ciudades[c];
+      if (!cap) { location.href = BASE + 'semana-santa/' + c + '/'; return; }
+      if (!desdeHistoria && location.hash !== '#' + c) history.pushState({ ocCiudad: c }, '', '#' + c);
+      pintarBanderas(c, !desdeHistoria); setCity(c);
+      // la bandera elegida sube hasta asomar por arriba (el 26 % de abajo, su fleco y su emblema) como pestaña para volver
+      var r0 = row.getBoundingClientRect(), top0 = portada.getBoundingClientRect().top; row.style.setProperty('--subir', Math.round(top0 - r0.top - r0.height * 0.74) + 'px');
+      portada.classList.add('is-ciudad'); root.classList.add('oc-en-ciudad'); andBox.hidden = true; ciuBox.hidden = false;
+      nomEl.textContent = cap.n; capA.href = cap.cap; resEl.textContent = 'Cargando su plano…'; jorEl.textContent = ''; horaEl.textContent = '--:--';
+      var p = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
+      if (p && vbAnd) { var w = vbAnd[2] / 22; moverAnd([p.x / 100 * vbAnd[2] - w / 2, p.y / 100 * vbAnd[3] - w * vbAnd[3] / vbAnd[2] / 2, w, w * vbAnd[3] / vbAnd[2]], 820); }
+      Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
+        if (actual !== c) return;
+        D = r[1]; host.textContent = ''; host.hidden = false;
+        plano = OCPlano.Plano(host, D);
+        var vistos = {}, dias = D.hermandades.map(function (h) { return h.d; }).filter(function (d) { return vistos[d] ? false : (vistos[d] = 1); });
+        J = dias.sort(function (a, b) { return fechaDe(a).localeCompare(fechaDe(b)); });
+        var ini = jornadaInicial(), a = ahoraMin();
+        ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null);
+        // la cámara empieza muy alta (toda la ciudad y sus alrededores) y baja hasta la jornada
+        var v = plano.vista(), ancho = v.w * 3; plano.volar({ x: v.x + v.w / 2 - ancho / 2, y: v.y + v.h / 2 - ancho * v.h / v.w / 2, w: ancho }, 0);
+        requestAnimationFrame(function () { portada.classList.add('is-plano'); plano.encuadrar(calm ? 0 : 900, margenes()); });
+      }).catch(function () {
+        if (actual !== c) return;
+        resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
+        entrarA.href = cap.calle;
+      });
+      if (!desdeHistoria) setTimeout(function () { nomEl.focus({ preventScroll: true }); }, calm ? 0 : 60);
+    }
+    var focoPendiente = '';
+    function salir(desdeHistoria) {
+      var antes = actual; if (!antes) return;
+      if (!desdeHistoria) { if (history.state && history.state.ocCiudad && !history.state.directo) { focoPendiente = antes; history.back(); return; } history.replaceState(null, '', location.pathname + location.search); }
+      pintarBanderas('', false); setCity('');
+      portada.classList.remove('is-plano', 'is-ciudad'); root.classList.remove('oc-en-ciudad'); portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
+      andBox.hidden = false; ciuBox.hidden = true;
+      if (vbAnd) moverAnd(vbAnd, 700);
+      var p0 = plano; plano = null; setTimeout(function () { if (!actual && p0) { host.hidden = true; host.textContent = ''; } }, calm ? 0 : 420);
+      // el foco vuelve a la bandera de la que se bajó (también cuando la salida pasa por el historial)
+      var b = items.filter(function (x) { return x.dataset.colg === antes; })[0]; if (b && (!desdeHistoria || focoPendiente === antes)) b.focus({ preventScroll: true }); focoPendiente = '';
+    }
+    function elegir(c) { if (actual === c) salir(); else if (actual) { salir(true); history.replaceState({ ocCiudad: c }, '', '#' + c); entrar(c, true); pintarBanderas(c, true); } else entrar(c); }
+    $('[data-colg-atras]', colg).addEventListener('click', function () { salir(); });
+    window.addEventListener('popstate', function () { var c = location.hash.slice(1); if (datos.ciudades && datos.ciudades[c]) { if (c !== actual) { if (actual) salir(true); entrar(c, true); } } else salir(true); });
+    portada.addEventListener('keydown', function (e) { if (e.key === 'Escape' && actual) salir(); });
+
+    // Toque: se hunde al pulsar (no al soltar) y elige al soltar
     items.forEach(function (el, i) {
       var s = S[i];
       el.addEventListener('pointerdown', function () { setTarget(s, s.rot.t, s.dy.t + 2, 0.965); });
-      var suelta = function () { setTarget(s, s.rot.t, s.dy.t - (s.sc.t < 1 ? 2 : 0), 1); };
+      var suelta = function () { setTarget(s, s.rot.t, 0, 1); };
       el.addEventListener('pointerup', suelta); el.addEventListener('pointercancel', suelta); el.addEventListener('pointerleave', function () { if (s.sc.t < 1) suelta(); });
-      // Con JS el enlace elige la ciudad (otro toque la suelta); con Ctrl/Cmd/botón central sigue siendo un enlace normal
-      el.addEventListener('click', function (e) { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return; e.preventDefault(); setCity(el.getAttribute('aria-current') === 'true' ? '' : el.dataset.colg); });
+      el.addEventListener('click', function () { elegir(el.dataset.colg); });
     });
-
     // Rozarlas: el movimiento del puntero empuja las colgaduras cercanas y siguen balanceándose con su inercia
     var px = null, pt = 0, vx = 0, down = false;
     function roza(e) {
-      if (calm) return;
+      if (calm || actual) return;
       var fino = e.pointerType === 'mouse'; if (!fino && !down) return;
       var now = e.timeStamp, x = e.clientX;
       if (px !== null && now > pt) { var inst = (x - px) / ((now - pt) / 1000); vx = vx * 0.6 + Math.max(-1800, Math.min(1800, inst)) * 0.4; }
       px = x; pt = now;
       var w = items[0] ? items[0].parentNode.getBoundingClientRect().width : 50;
-      S.forEach(function (s) {
-        var r = s.el.getBoundingClientRect(), cx = r.left + r.width / 2, d = (x - cx) / w, inf = Math.exp(-d * d / 1.1);
-        if (inf > 0.05) { s.rot.v += (vx / 1800) * 26 * inf; wake(); }
-      });
+      S.forEach(function (s) { var r = s.el.getBoundingClientRect(), cx = r.left + r.width / 2, d = (x - cx) / w, inf = Math.exp(-d * d / 1.1); if (inf > 0.05) { s.rot.v += (vx / 1800) * 26 * inf; wake(); } });
     }
     row.addEventListener('pointermove', roza);
     row.addEventListener('pointerdown', function (e) { down = true; px = e.clientX; pt = e.timeStamp; vx = 0; });
     ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (n) { row.addEventListener(n, function () { down = false; px = null; vx = 0; }); });
-
-    // Teclado: flechas entre colgaduras
+    // Teclado: flechas entre banderas
     row.addEventListener('keydown', function (e) {
       var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!k) return;
       var i = items.indexOf(document.activeElement); if (i < 0) return; e.preventDefault(); items[(i + k + items.length) % items.length].focus();
     });
-
-    cityListeners.push(function (c) { paintColg(c, true); });
-    paintColg(getCity(), false);
-
-    // Primera visita de la sesión: se despliegan de golpe, escalonadas, como al colgarlas en el balcón
+    pintarBanderas('', false);
+    // Enlace directo a una capital: /#malaga abre la portada ya en su calle
+    var h0 = location.hash.slice(1); if (datos.ciudades && datos.ciudades[h0]) { history.replaceState({ ocCiudad: h0, directo: true }, '', '#' + h0); entrar(h0, true); pintarBanderas(h0, false); }
+    // Primera visita de la sesión: se despliegan escalonadas, como al colgarlas en el balcón
     var visto = false; try { visto = sessionStorage.getItem('oc-colg') === '1'; sessionStorage.setItem('oc-colg', '1'); } catch (err) { }
-    if (!visto && !calm && items[0].animate) items.forEach(function (el, i) { el.animate([{ transform: 'scaleY(0.5)', opacity: 0 }, { transform: 'scaleY(1)', opacity: 1 }], { duration: 560, delay: 60 * i, easing: DRAWER, fill: 'backwards' }); });
+    if (!visto && !calm && !h0 && items[0] && items[0].animate) items.forEach(function (el, i) { el.animate([{ transform: 'scaleY(0.5)', opacity: 0 }, { transform: 'scaleY(1)', opacity: 1 }], { duration: 560, delay: 60 * i, easing: DRAWER, fill: 'backwards' }); });
   })();
 
   // ---------- favoritos ----------
@@ -735,27 +786,26 @@
     var list = $('[data-news-list]'), more = $('[data-news-more]'), emptyN = $('[data-news-empty]'), countN = $('[data-news-count]');
     var qIn = $('[data-f="q"]', nf), all = null, shown = 24;
     var city = new URLSearchParams(location.search).get('ciudad') || getCity();
+    var desdeUrl = !!new URLSearchParams(location.search).get('ciudad');
     if (city && !CITY_NAMES[city]) city = '';
     var COLORS = window.OC_COLORS || {};
     var cityTag = function (c) { return CITY_NAMES[c] ? '<span class="oc-city" style="--c:' + (COLORS[c] || 'var(--primary)') + '">' + esc(CITY_NAMES[c]) + '</span>' : ''; };
-    var STOPW = { el: 1, la: 1, los: 1, las: 1, de: 1, del: 1, y: 1, en: 1 };
-    var mono = function (f) {
-      var w = String(f || '').replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter(function (x) { return x && !STOPW[x.toLowerCase()]; });
-      if (!w.length) return '·';
-      if (w.length === 1) return /\d|^[A-ZÁÉÍÓÚÑ]{2,5}$/.test(w[0]) ? w[0].slice(0, 5) : w[0].slice(0, 2).toUpperCase();
-      return (w[0][0] + w[1][0]).toUpperCase();
-    };
-    var card = function (n) {
+    var ext = ' target="_blank" rel="nofollow noopener noreferrer"';
+    // Titular primero; debajo, medio y hora (la capital solo si se ven todas); «También en…» si otros medios cuentan lo mismo
+    var card = function (n, destacada) {
       var d = new Date(n.ts).toISOString();
-      var tile = n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : colgTile((n.ciudades || [])[0]);
-      return '<article class="oc-news' + (tile ? ' has-img' : '') + '">' + tile +
-        '<div class="oc-news-body"><p class="oc-news-meta">' + n.ciudades.map(cityTag).join('') + '<span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time></p><h3 class="oc-news-title"><a href="' + esc(n.url) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3>' + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div></article>';
+      var tile = n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="' + (destacada ? 'eager' : 'lazy') + '" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : '';
+      var o = n.otros || [], otros = o.length ? '<p class="oc-news-otros">También en ' + o.slice(0, 2).map(function (x) { return '<a href="' + esc(x.u) + '"' + ext + '>' + esc(x.f) + '</a>'; }).join(o.length === 2 ? ' y ' : ', ') + (o.length > 2 ? ' y ' + (o.length - 2) + ' más' : '') + '</p>' : '';
+      return '<article class="oc-news' + (tile ? ' has-img' : '') + (destacada && tile ? ' is-destacada' : '') + '"><div class="oc-news-body"><h3 class="oc-news-title"><a href="' + esc(n.url) + '"' + ext + '>' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3><p class="oc-news-meta"><span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time>' + (city ? '' : n.ciudades.map(cityTag).join('')) + '</p>' + otros + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div>' + tile + '</article>';
     };
     var paintChips = function () { $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); }); };
     var render = function () {
       var q = norm(qIn.value).trim().split(/\s+/).filter(Boolean);
       var r = all.filter(function (n) { var h = norm(n.titulo + ' ' + (n.extracto || '') + ' ' + n.fuente); return (!city || n.ciudades.indexOf(city) !== -1) && q.every(function (w) { return h.indexOf(w) !== -1; }); });
-      list.innerHTML = r.slice(0, shown).map(card).join('');
+      // la primera con foto de las seis primeras va destacada (sin búsqueda), como en la página compilada
+      var vis = r.slice(0, shown), k = qIn.value ? -1 : vis.slice(0, 6).findIndex(function (n) { return n.img; });
+      if (k > 0) vis.unshift(vis.splice(k, 1)[0]);
+      list.innerHTML = vis.map(function (n, i) { return card(n, i === 0 && k >= 0); }).join('');
       paintAgo(list);
       emptyN.hidden = r.length > 0; more.hidden = r.length <= shown;
       countN.textContent = r.length + (r.length === 1 ? ' noticia' : ' noticias') + (city ? ' de ' + CITY_NAMES[city] : '');
@@ -767,7 +817,10 @@
     var q0 = new URLSearchParams(location.search).get('q'); if (q0) qIn.value = q0;
     fetch(BASE + 'news.json').then(function (r) { return r.json(); }).then(function (j) {
       all = j.items; render();
-      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { city = b.dataset.v; shown = 24; render(); }); });
+      // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
+      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { city = b.dataset.v; shown = 24; setCity(city); render(); }); });
+      cityListeners.push(function (c) { if (c === city) return; city = c; shown = 24; render(); });
+      if (desdeUrl && city !== getCity()) setCity(city);
       var t; qIn.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { shown = 24; render(); }, 120); });
       more.addEventListener('click', function () { shown += 24; render(); });
     }).catch(function () { if (countN) countN.textContent = 'No se pudo cargar el archivo completo; se muestran las últimas noticias.'; more.hidden = true; });
@@ -829,12 +882,12 @@
     marks.forEach(function (m) { if (m[0] < last) return; out += esc(text.slice(last, m[0])) + '<mark>' + esc(text.slice(m[0], m[1])) + '</mark>'; last = m[1]; });
     return out + esc(text.slice(last));
   }
-  // Miniatura de cada resultado: foto del titular, colgadura de la capital o monograma en el color de su capital.
+  // Miniatura de cada resultado: foto del titular o monograma en el color de su capital.
   var ICONO_T = { b: '♪', i: '✦', m: '♫', n: '¶' };
   function miniatura(e) {
     var col = (window.OC_COLORS && e.c && window.OC_COLORS[e.c]) || 'var(--primary)';
-    if (e.i) return '<span class="oc-sr-thumb' + (e.t === 'c' ? ' is-colg' : '') + '" aria-hidden="true" style="--c:' + col + '"><img src="' + esc(e.i) + '" alt="" loading="lazy" decoding="async"></span>';
-    var ini = e.t === 'h' ? esc(String(e.n).replace(/^(La|El|Los|Las)\s+/i, '').charAt(0)) : (ICONO_T[e.t] || '·');
+    if (e.i) return '<span class="oc-sr-thumb" aria-hidden="true" style="--c:' + col + '"><img src="' + esc(e.i) + '" alt="" loading="lazy" decoding="async"></span>';
+    var ini = e.t === 'h' ? esc(String(e.n).replace(/^(La|El|Los|Las)\s+/i, '').charAt(0)) : e.t === 'c' ? esc(String(e.n).replace(/^Semana Santa de /, '').charAt(0)) : (ICONO_T[e.t] || '·');
     return '<span class="oc-sr-thumb is-mono" aria-hidden="true" style="--c:' + col + '">' + ini + '</span>';
   }
   // Recientes: lo último que abriste desde el buscador (solo en este navegador).

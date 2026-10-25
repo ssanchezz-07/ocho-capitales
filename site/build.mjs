@@ -29,6 +29,32 @@ const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 // Noticias: solo imágenes https y sin iconos/emojis de WordPress (no son fotos).
 const badImg = (s) => !s || !/^https:/.test(s) || /s\.w\.org\/images\/core\/emoji|gravatar|feeds\.feedburner/.test(s);
 const NEWS = { ...NEWS_RAW, items: NEWS_RAW.items.map((n) => ({ ...n, img: badImg(n.img) ? '' : n.img })) };
+// Medios con dos grafías («Diario SUR» y «Diario Sur», «101TV» y «101tv Sevilla»): se muestran con la más usada.
+// Solo se quita la capital del final si lo que queda es una sola palabra (así «Diario de Sevilla» y «Diario de Cádiz» no se juntan).
+{
+  const CIUD = /\s+(sevilla|malaga|granada|cordoba|cadiz|huelva|almeria|jaen)$/;
+  const clave = (f) => { const n = norm(f).trim().replace(/\.(es|com|net|org|info)$/, ''); const sin = n.replace(CIUD, ''); return (sin !== n && !/\s/.test(sin) ? sin : n).replace(/[^a-z0-9]/g, ''); };
+  const cuenta = {};
+  for (const n of NEWS.items) { const k = clave(n.fuente); (cuenta[k] = cuenta[k] || {})[n.fuente] = (cuenta[k][n.fuente] || 0) + 1; }
+  const mejor = Object.fromEntries(Object.entries(cuenta).map(([k, v]) => [k, Object.entries(v).sort((a, b) => /\.\w{2,4}$/.test(a[0]) - /\.\w{2,4}$/.test(b[0]) || b[1] - a[1] || a[0].length - b[0].length)[0][0]]));
+  for (const n of NEWS.items) n.fuente = mejor[clave(n.fuente)] || n.fuente;
+}
+// La misma noticia contada por varios medios (o repetida por el mismo) se agrupa: sale la más reciente y «También en…» las demás.
+// Mismo asunto = al menos el 60 % de las palabras con contenido del titular más corto en común, con 3 días de margen como máximo.
+{
+  const VACIAS = new Set(['para', 'como', 'este', 'esta', 'estos', 'estas', 'sobre', 'entre', 'desde', 'hasta', 'tras', 'pero', 'porque', 'cuando', 'donde', 'todo', 'todos', 'toda', 'todas', 'otro', 'otra', 'otros', 'otras', 'hermandad', 'hermandades', 'cofradia', 'cofradias', 'semana', 'santa', 'cofrade', 'cofrades', 'sevilla', 'malaga', 'granada', 'cordoba', 'cadiz', 'huelva', 'almeria', 'jaen', 'nuestra', 'senora', 'jesus', 'cristo', 'virgen', 'maria', 'santisimo', 'santisima', 'video', 'fotos', 'imagenes', 'directo', 'hoy', 'procesion', 'procesiones', 'horario', 'horarios', 'itinerario', 'itinerarios', 'recorrido', 'agenda', 'galeria', 'semana', 'octubre', 'noviembre', 'diciembre', 'enero', 'febrero', 'marzo', 'abril', 'cuaresma', 'salida', 'salidas']);
+  const pal = (t) => new Set(norm(t).replace(/[^a-z0-9ñ ]/g, ' ').split(/\s+/).filter((w) => w.length >= 4 && !VACIAS.has(w)));
+  const grupos = [];
+  const orden = [...NEWS.items].sort((a, b) => b.ts - a.ts);
+  for (const n of orden) {
+    const p = pal(n.titulo);
+    if (p.size < 3) { grupos.push({ cab: n, p }); continue; }
+    const g = grupos.find((x) => Math.abs(x.cab.ts - n.ts) <= 3 * 864e5 && x.p.size >= 3 && (() => { let c = 0; for (const w of p) if (x.p.has(w)) c++; return c / Math.min(p.size, x.p.size) >= 0.6 && c >= 3; })());
+    if (g) { n.dup = true; if (g.cab.url !== n.url) { (g.cab.otros = g.cab.otros || []); if (!g.cab.otros.some((o) => o.f === n.fuente) && n.fuente !== g.cab.fuente) g.cab.otros.push({ f: n.fuente, u: n.url }); } }
+    else grupos.push({ cab: n, p });
+  }
+  NEWS.items = NEWS.items.filter((n) => !n.dup);
+}
 
 // Imágenes alojadas en el sitio (WebP 160/480/960 generados con scripts/procesar-imagenes.mjs).
 // Si una hermandad o capital tiene entrada en data/imagenes.json, se sirve la copia local en vez de la de Wikimedia.
@@ -117,7 +143,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -181,6 +207,7 @@ const IC = {
   x: '<path d="M6 6l12 12M18 6 6 18"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  hoy: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
 };
 const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${IC[n]}</svg>`;
 
@@ -252,22 +279,13 @@ function entryHerm(h, extra = '', enCapital = false) {
 function entrySimple(href, title, sub, cities, extra = '') {
   return `<li class="oc-entry is-text"${extra}><div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${href}">${esc(title)}</a></h3>${sub ? `<p class="oc-entry-sub">${esc(sub)}</p>` : ''}${cities && cities.length ? `<p class="oc-entry-meta">${cities.map(cityTag).join('')}</p>` : ''}</div></li>`;
 }
-// Noticia: titular, medio, hora relativa y capital. Siempre enlaza al medio original.
-// Iniciales del medio para el recuadro de las noticias sin foto (o con foto rota): «Diario de Sevilla» → DS, «ABC» → ABC.
-const STOPW = new Set(['el', 'la', 'los', 'las', 'de', 'del', 'y', 'en']);
-function srcMono(f) {
-  const w = String(f || '').replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter((x) => x && !STOPW.has(x.toLowerCase()));
-  if (!w.length) return '·';
-  if (w.length === 1) return /\d|^[A-ZÁÉÍÓÚÑ]{2,5}$/.test(w[0]) ? w[0].slice(0, 5) : w[0].slice(0, 2).toUpperCase();
-  return (w[0][0] + w[1][0]).toUpperCase();
-}
-// Noticia: titular a la izquierda y recuadro fijo a la derecha (foto del medio o sus iniciales), para que todas tengan el mismo ritmo.
-function newsItem(n, { img = true, eager = false, tile = true } = {}) {
-  const col = CAP[n.ciudades[0]] ? CAP[n.ciudades[0]].color : '#4a1f6e';
-  let pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
-  // Sin foto del medio, la miniatura es la colgadura de su capital (terciopelo y emblema), nunca un hueco.
-  if (!pic && tile && CAP[n.ciudades[0]]) pic = `<div class="oc-news-img is-colg" aria-hidden="true" style="--c:${col}"><img src="${u('assets/plates/colgadura-' + n.ciudades[0] + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"></div>`;
-  return `<article class="oc-news${pic ? ' has-img' : ''}" data-cities="${n.ciudades.join(' ')}">${pic}<div class="oc-news-body"><p class="oc-news-meta">${n.ciudades.map(cityTag).join('')}<span class="oc-news-src">${esc(n.fuente)}</span>${timeTag(n.ts)}</p><h3 class="oc-news-title"><a href="${esc(n.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(n.titulo)}<span class="oc-sr"> (abre ${esc(n.fuente)} en otra pestaña)</span></a></h3>${n.extracto ? `<p class="oc-news-text">${esc(n.extracto)}</p>` : ''}</div></article>`;
+// Noticia: el titular primero y, debajo, una sola línea con el medio y la hora (la capital, solo si la lista mezcla capitales).
+// Si otros medios cuentan lo mismo, «También en…» con sus enlaces. Siempre lleva al medio original.
+// Foto del medio a la derecha si la hay; si no, solo texto: la colgadura de la capital no se repite en las listas.
+const otrosMedios = (n) => (n.otros && n.otros.length ? `<p class="oc-news-otros">También en ${n.otros.slice(0, 2).map((o) => `<a href="${esc(o.u)}" target="_blank" rel="nofollow noopener noreferrer">${esc(o.f)}</a>`).join(n.otros.length === 2 ? ' y ' : ', ')}${n.otros.length > 2 ? ` y ${n.otros.length - 2} más` : ''}</p>` : '');
+function newsItem(n, { img = true, eager = false, ciudad = true, destacada = false } = {}) {
+  const pic = img && n.img ? `<div class="oc-news-img" aria-hidden="true"><img src="${esc(n.img)}" alt="" width="160" height="120" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>` : '';
+  return `<article class="oc-news${pic ? ' has-img' : ''}${destacada ? ' is-destacada' : ''}" data-cities="${n.ciudades.join(' ')}"><div class="oc-news-body"><h3 class="oc-news-title"><a href="${esc(n.url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(n.titulo)}<span class="oc-sr"> (abre ${esc(n.fuente)} en otra pestaña)</span></a></h3><p class="oc-news-meta"><span class="oc-news-src">${esc(n.fuente)}</span>${timeTag(n.ts)}${ciudad ? n.ciudades.map(cityTag).join('') : ''}</p>${otrosMedios(n)}${n.extracto ? `<p class="oc-news-text">${esc(n.extracto)}</p>` : ''}</div>${pic}</article>`;
 }
 const newsFor = (city, n = 6) => NEWS.items.filter((x) => !city || x.ciudades.includes(city)).slice(0, n);
 
@@ -356,7 +374,12 @@ function agenda() {
   // Las agendas externas suelen traer la hora: si una noticia habla del mismo acto, se queda el de la agenda.
   const externos = eventosExternos(verif).filter((e) => !actoFuera(e));
   const noticias = eventosNoticias().filter((e) => !ya.has(clave(e)) && !actoFuera(e) && !externos.some((x) => mismoActo(x, e)));
-  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...noticias, ...externos].map((e) => (e.verificado ? e : { ...e, titulo: recorta(e.titulo), fuentes: e.fuentes && e.fuentes.some((f) => /^https?:\/\//.test(f.url)) ? e.fuentes.filter((f) => /^https?:\/\//.test(f.url)) : undefined }));
+  // Un pregón o un pregonero no es una procesión aunque la noticia la mencione; y el mismo acto detectado en dos capitales
+  // (una noticia mal etiquetada) se queda en la capital que nombra su título, o en la primera.
+  const detectados = [...noticias, ...externos].map((e) => (/\bpregon(ero|era|eros|eras)?\b/.test(norm(e.titulo)) && GRUPO_DE[e.tipo] === 'salidas' ? { ...e, tipo: 'pregon' } : e));
+  const nombraCap = (e) => norm(e.titulo).includes(norm((CAP[e.ciudad] || {}).nombre || '~'));
+  const unicos = detectados.filter((e, i) => !detectados.some((o, j) => j !== i && o.fecha === e.fecha && o.ciudad !== e.ciudad && GRUPO_DE[o.tipo] === GRUPO_DE[e.tipo] && mismoActo({ ...o, ciudad: e.ciudad }, e) && ((nombraCap(o) && !nombraCap(e)) || (nombraCap(o) === nombraCap(e) && j < i))));
+  const list = [...eventosLiturgicos([now.y - 1, now.y, now.y + 1]), ...verif, ...unicos].map((e) => (e.verificado ? e : { ...e, titulo: recorta(e.titulo), fuentes: e.fuentes && e.fuentes.some((f) => /^https?:\/\//.test(f.url)) ? e.fuentes.filter((f) => /^https?:\/\//.test(f.url)) : undefined }));
   // Dentro de cada día: lo litúrgico primero, luego salidas, vía crucis, cultos y el resto; a igual grupo, por hora y lo verificado antes.
   const GP = { liturgico: 0, salidas: 1, 'via-crucis': 2, cultos: 3, musica: 4, anuncios: 5 };
   const orden = (e) => GP[GRUPO_DE[e.tipo]] ?? 9;
@@ -386,11 +409,11 @@ function agendaItem(e) {
   const d = new Date(e.fecha + 'T12:00:00Z').getTime();
   const c = CAP[e.ciudad];
   const link = e.fuentes ? `<a href="${esc(e.fuentes[0].url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(e.titulo)}<span class="oc-sr"> (abre ${esc(e.fuentes[0].medio)})</span></a>` : esc(e.titulo);
-  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}${e.verificado ? '<span class="oc-ev-ok">Confirmado</span>' : ''}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(f.medio)).join(', ')}</p>` : ''}</div></li>`;
+  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}${e.verificado ? '<span class="oc-ev-ok">Confirmado</span>' : ''}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(String(f.medio).charAt(0).toUpperCase() + String(f.medio).slice(1))).join(', ')}</p>` : ''}</div></li>`;
 }
 
 // ---------- maqueta común ----------
-const NAV = [['noticias/', 'Noticias'], ['capitales/', 'Capitales'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros']];
+const NAV = [['hoy/', 'Hoy'], ['noticias/', 'Noticias'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros']];
 const OG_DEFAULT = 'assets/og.png';
 
 const REPO = 'ssanchezz-07/ocho-capitales';
@@ -457,7 +480,7 @@ ${body}${colabora(p, title)}
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
-  ${[[u(), p === '' || active === 'capitales/' || /^(hermandad|semana-santa|en-la-calle)\//.test(p), 'home', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('calendario/'), active === 'calendario/', 'cal', 'Calendario', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
+  ${[[u(), p === '', 'home', 'Inicio', ''], [u('hoy/'), p === 'hoy/' || active === 'capitales/' || /^(hermandad|semana-santa|en-la-calle)\//.test(p), 'hoy', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
   <button type="button" data-more aria-expanded="false" aria-controls="oc-more">${icon('more')}<span>Más</span></button>
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
@@ -472,15 +495,15 @@ ${body}${colabora(p, title)}
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
-    <ul class="oc-sheet-caps is-colg">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
-    <ul class="oc-sheet-list">${[['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros'], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l]) => `<li><a href="${u(h)}">${l}${icon('arrow')}</a></li>`).join('')}</ul>
+    <ul class="oc-sheet-caps is-puntos">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
+    <ul class="oc-sheet-list">${[['calendario/', 'Calendario'], ['en-la-calle/', 'En la calle', 'plano de los recorridos'], ['hermandades/', 'Hermandades', D.hermandades.length], ['bandas/', 'Bandas', D.bandas.length], ['marchas/', 'Marchas', MARCHAS.length], ['imagineros/', 'Imagineros', D.imagineros.length], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l, n]) => `<li><a href="${u(h)}"><span>${l}</span>${n != null ? `<small>${typeof n === 'number' ? n.toLocaleString('es-ES') : n}</small>` : ''}${icon('arrow')}</a></li>`).join('')}</ul>
   </div>
 </div>
 <div class="oc-sheet oc-citysheet" id="oc-city" hidden data-city-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-city-t">
     <div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-city-t">Tu capital</p><button class="oc-iconbtn" type="button" data-city-close aria-label="Cerrar">${icon('x')}</button></div>
     <p class="oc-citysheet-sub">«Hoy» te enseñará primero sus cofradías y el buscador la tendrá en cuenta. Puedes cambiarla cuando quieras.</p>
-    <ul class="oc-citysheet-grid">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></button></li>`).join('')}</ul>
+    <ul class="oc-citysheet-grid is-puntos">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span></button></li>`).join('')}</ul>
     <button class="oc-btn is-quiet oc-citysheet-todas" type="button" data-set-city="">Ver las ocho capitales</button>
   </div>
 </div>
@@ -579,7 +602,7 @@ function colgaduras() {
   const items = orden.map((c, i) => {
     const hermandades = hermsOf(c.slug).length;
     const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
-    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">Semana Santa de ${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
   }).join('');
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
@@ -587,14 +610,31 @@ function colgaduras() {
     prov: MAPA ? MAPA.provincias.map((p) => ({ s: p.slug, c: (CAP[p.slug] || {}).color || '#888', d: p.d })) : [],
     caps: carrilesHilos(orden.map((c, i) => { const { x, y } = pos(c); return { s: c.slug, c: c.color, x: +x.toFixed(2), y: +y.toFixed(2), b: +((i + 0.5) * 12.5).toFixed(2) }; })),
   };
-  const lista = orden.map((c) => `<a class="oc-colg-ir" data-ir="${c.slug}" href="${capHref(c)}" hidden>Semana Santa de ${esc(c.nombre)}${icon('arrow')}</a>`).join('');
+  // «Del mapa a la calle»: al elegir una bandera, Andalucía se acerca hasta el plano de esa ciudad (assets/plano.js, se carga
+  // entonces) con los cortejos donde irían a esa hora. Fechas de cada jornada de la próxima Semana Santa y año del itinerario.
+  const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P2 = easter(anio);
+  datos.fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) datos.fechas[d] = isoDay(P2 + sl.off * 864e5);
+  datos.fechas['Viernes de Dolores'] = isoDay(P2 - 9 * 864e5); datos.fechas['Sábado de Pasión'] = isoDay(P2 - 8 * 864e5);
+  datos.ciudades = Object.fromEntries(orden.map((c) => {
+    const fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json'); if (!fs.existsSync(fR)) return [c.slug, null];
+    return [c.slug, { n: c.nombre, d: u('data/calle/' + c.slug + '.json'), cap: capHref(c), calle: u('en-la-calle/' + c.slug + '/'), anio: JSON.parse(fs.readFileSync(fR, 'utf8')).anio || '' }];
+  }));
+  datos.plano = u('assets/plano.js') + '?v=' + HUELLA.plano;
   return `<div class="oc-colgaduras" data-colgaduras>
   <ol class="oc-colg-row" aria-label="Elige tu capital">${items}</ol>
-  <div class="oc-colg-map" data-colg-map>
-    <div class="oc-colg-pie" data-colg-pie aria-live="polite">${lista}</div>
+  <div class="oc-colg-map" data-colg-map></div>
+  <div class="oc-colg-plano" data-colg-plano hidden></div>
+  <div class="oc-colg-pie" data-colg-pie>
+    <div class="oc-colg-and" data-colg-and><p class="oc-colg-ayuda">Toca una bandera y baja a su calle</p>${leadHoy()}</div>
+    <div class="oc-colg-ciudad" data-colg-ciudad hidden>
+      <div class="oc-colg-cab"><button type="button" class="oc-colg-atras" data-colg-atras>${icon('back')}<span>Andalucía</span></button><h2 class="oc-colg-cap" data-colg-nombre tabindex="-1"></h2><p class="oc-colg-res" data-colg-res></p></div>
+      <div class="oc-colg-reloj"><div class="oc-colg-jornada" role="group" aria-label="Jornada"><button type="button" class="oc-colg-paso" data-colg-jor="-1" aria-label="Jornada anterior">${icon('back')}</button><span data-colg-jornada aria-live="polite"></span><button type="button" class="oc-colg-paso" data-colg-jor="1" aria-label="Jornada siguiente">${icon('arrow')}</button></div><div class="oc-colg-hora-w"><output class="oc-colg-hora" data-colg-hora>--:--</output><input class="oc-colg-tiempo" type="range" min="0" max="1" step="1" value="0" data-colg-tiempo aria-label="Hora de la jornada"></div></div>
+      <div class="oc-colg-acc"><a class="oc-btn" data-colg-entrar href="#">Entrar en la calle${icon('arrow')}</a><a class="oc-btn is-quiet" data-colg-capital href="#">Su Semana Santa</a></div>
+      <p class="oc-colg-nota" data-colg-nota></p>
+    </div>
   </div>
   <script type="application/json" id="oc-mapa">${JSON.stringify(datos).replace(/</g, '\\u003c')}</script>
-  <noscript><style>.oc-colg-map{display:none}</style></noscript>
+  <noscript><style>.oc-colg-map,.oc-colg-pie{display:none}</style></noscript>
 </div>`;
 }
 
@@ -641,52 +681,43 @@ function curiosidades() {
   for (const m of MARCHAS) if (m.h && m.anio && m.autor && +m.anio <= 1960 && m.est !== 'sin-verificar') out.push({ t: `«${m.titulo}», de ${m.autor}, se compuso en ${m.anio} y está dedicada a ${m.h.nombre} (${CAP[m.h.ciudad].nombre}).`, u: u('marcha/' + m.slug + '/'), l: 'Ver marcha' });
   return out;
 }
+function curiosidadDelDia() {
+  const L = curiosidades(); if (!L.length) return '';
+  const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length];
+  return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`;
+}
+// Portada (decisión de Pablo, 2026-10-24): solo las banderas con el mapa de Andalucía y, debajo, la agenda.
+// Lo que estaba aquí no se pierde: «Hoy» y la curiosidad del día van a /hoy/, las noticias a /noticias/, las capitales a
+// /capitales/ y el archivo (hermandades, bandas, marchas, imagineros) a la hoja «Más».
 function pageHome() {
-  const latest = NEWS.items.slice(0, 40);
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
-  // Rediseño «Colgaduras»: titular, cuenta atrás y ocho colgaduras (una por capital, de oeste a este) sobre el mapa.
-  // En temporada «Hoy» sube justo tras el mapa (lo decide el JS con data-season); fuera de ella, las noticias van primero.
   const body = `<div class="oc-home" data-home>
-<section class="oc-hero2" aria-labelledby="hero-titulo">
-  <h1 class="oc-hero2-title" id="hero-titulo">Ocho ciudades,<br>una Semana Santa</h1>
-  ${leadHoy()}
-  <a class="oc-btn oc-hero2-cta" href="#hoy">Ver qué sale hoy</a>
+<section class="oc-portada" aria-labelledby="hero-titulo" data-portada>
+  <h1 class="oc-sr" id="hero-titulo">Ocho Capitales: la Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén</h1>
   ${colgaduras()}
 </section>
-<section class="oc-news-home" aria-labelledby="ultimas-titulo" data-latest>
-  <h2 class="oc-news-home-title" id="ultimas-titulo"><span>Últimas noticias</span></h2>
-  <div class="oc-latest-list" data-latest-list>${latest.map((n) => newsItem(n, { img: true, tile: true })).join('')}</div>
-  <p class="oc-empty" data-latest-empty hidden>Aún no hay noticias recientes de tu ciudad.</p>
-  ${NEWS.actualizado ? `<p class="oc-note oc-updated">Leídas por última vez a las ${new Date(NEWS.actualizado).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' })} del ${fmtDay(NEWS.actualizado, { day: 'numeric', month: 'long' })} (<time data-ago datetime="${new Date(NEWS.actualizado).toISOString()}"></time>).</p>` : ''}
-  <a class="oc-link" href="${u('noticias/')}" data-latest-all>Todas las noticias${icon('arrow')}</a>
-</section>
-${todayPanel()}
-<section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
-<section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 4).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay eventos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
-<div class="oc-seal" aria-hidden="true">${STAR}</div>
-${(() => { const L = curiosidades(); if (!L.length) return ''; const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length]; return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`; })()}
-<section class="oc-section" aria-labelledby="archivo-titulo"><h2 class="oc-h2" id="archivo-titulo">El archivo cofrade</h2>
-<ul class="oc-tiles">
-<li><a class="oc-tile" href="${u('hermandades/')}"><b>${D.hermandades.length}</b><span><strong>Hermandades</strong><small>Sede, día de salida, titulares e historia.</small></span></a></li>
-<li><a class="oc-tile" href="${u('bandas/')}"><b>${D.bandas.length}</b><span><strong>Bandas</strong><small>Formaciones y las cofradías a las que acompañan.</small></span></a></li>
-<li><a class="oc-tile" href="${u('marchas/')}"><b>${MARCHAS.length}</b><span><strong>Marchas</strong><small>Compositor, año, formación y enlace para escucharlas.</small></span></a></li>
-<li><a class="oc-tile" href="${u('imagineros/')}"><b>${D.imagineros.length}</b><span><strong>Imagineros</strong><small>Escultores y sus obras en procesión.</small></span></a></li>
-<li><a class="oc-tile" href="${u('calendario/')}"><b>${evs.length}</b><span><strong>Agenda</strong><small>Eventos próximos y orden de paso por jornada.</small></span></a></li>
-</ul></section>
+<section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
   write('index.html', layout({ title: '', body, path: '', jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
+// Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
+function pageHoy() {
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Hoy</h1>${leadHoy()}</header>
+${todayPanel()}
+${curiosidadDelDia()}`;
+  write('hoy/index.html', layout({ title: 'Hoy: qué sale en las ocho capitales', desc: 'Las cofradías de cada jornada de la Semana Santa en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén, con su orden de paso y enlace al plano.', body, path: 'hoy/', active: 'hoy/', crumbs: [['Portada', u()], ['Hoy', '']] }));
+}
 
 function pageNews() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Noticias cofrades</h1><p class="oc-lead">Titulares de la prensa andaluza, agregadores y webs oficiales de hermandades y consejos. Cada noticia lleva a su medio. Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time>.</p></header>
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Noticias</h1><p class="oc-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada hora y con enlace al medio. Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time>.</p></header>
 <div class="oc-filters" data-news-filters>
   <div class="oc-field oc-field-grow"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
   <div class="oc-field"><span class="oc-label" id="nciudad">Capital</span><ul class="oc-chips is-filter" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false">${esc(c.nombre)}</button></li>`).join('')}</ul></div>
 </div>
 <h2 class="oc-sr">Listado de noticias</h2>
 <p class="oc-count" data-news-count aria-live="polite">${Math.min(NEWS.items.length, 600)} noticias</p>
-<div class="oc-newsgrid" data-news-list>${NEWS.items.slice(0, 24).map((n, i) => newsItem(n, { eager: i < 2 })).join('')}</div>
+<div class="oc-newsgrid" data-news-list>${(() => { const L = NEWS.items.slice(0, 24), k = L.slice(0, 6).findIndex((n) => n.img); const d = k < 0 ? null : L.splice(k, 1)[0]; return (d ? newsItem(d, { eager: true, destacada: true }) : '') + L.map((n, i) => newsItem(n, { eager: !d && i < 2 })).join(''); })()}</div>
 <p class="oc-empty" data-news-empty hidden>No hay noticias con esos filtros. Prueba con otra capital o borra la búsqueda.</p>
 <p class="oc-center"><button class="oc-btn is-quiet" type="button" data-news-more>Cargar más noticias</button></p>`;
   write('noticias/index.html', layout({ title: 'Noticias cofrades de hoy', desc: 'Noticias cofrades de hoy en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: hermandades, bandas, pregones y carteles, con enlace a cada medio.', body, path: 'noticias/', active: 'noticias/', crumbs: [['Portada', u()], ['Noticias', '']] }));
@@ -733,7 +764,7 @@ ${section('Bandas y música', chips(bandas.map((b) => [b.nombre, u('banda/' + b.
 ${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u('imaginero/' + i.slug + '/')])))}
 </aside>
 </div>
-${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n)).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
+${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
   write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 1240px) 100vw, 1200px', [500, 960, 1280]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
@@ -816,7 +847,7 @@ ${(() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana San
 ${fuente}
 </article>
 ${prev || next ? `<nav class="oc-prevnext" aria-label="Hermandades del mismo día">${prev ? `<a class="is-prev" href="${u('hermandad/' + prev.slug + '/')}"><span>Anterior el ${esc(h.dia)}</span><strong>${esc(prev.nombre)}</strong></a>` : '<span></span>'}${next ? `<a class="is-next" href="${u('hermandad/' + next.slug + '/')}"><span>Siguiente el ${esc(h.dia)}</span><strong>${esc(next.nombre)}</strong></a>` : ''}</nav>` : ''}
-${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n)).join('')}</div>`) : ''}`;
+${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div>`) : ''}`;
   write(`hermandad/${h.slug}/index.html`, layout({
     title: `${h.nombre} (${c.nombre})`, desc: `${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}`.slice(0, 300), body, path: `hermandad/${h.slug}/`, image: ogOf(im), active: 'hermandades/', head: h.diptico && h.diptico.juntos ? heroPreload(h.diptico.juntos, '(max-width: 960px) 100vw, 42vw', [500, 960]) : h.diptico && h.diptico.cristo && h.diptico.virgen ? heroPreload(h.diptico.cristo, '(max-width: 960px) 50vw, 21vw', [500, 960]) : heroPreload(im, '(max-width: 860px) 100vw, 40vw', [500, 960]),
     crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.dia, u('semana-santa/' + c.slug + '/#' + slugify(h.dia))], [h.nombre, '']],
@@ -1141,8 +1172,8 @@ function page404() {
 // ---------- índices y extras ----------
 function searchIndex() {
   const idx = [];
-  // i: miniatura (foto del titular o colgadura de la capital); c: capital, para el monograma de color si no hay foto
-  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'), u: 'semana-santa/' + c.slug + '/', i: u('assets/plates/colgadura-' + c.slug + '.webp'), c: c.slug, k: norm(c.nombre + ' semana santa capital') });
+  // i: miniatura (foto del titular); c: capital, para el monograma de color si no hay foto
+  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'), u: 'semana-santa/' + c.slug + '/', c: c.slug, k: norm(c.nombre + ' semana santa capital') });
   for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
@@ -1278,6 +1309,13 @@ function datosCalle(c) {
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
   return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
+// /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
+function pageCalleIndice() {
+  const caps = D.capitales.filter((c) => fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')));
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">En la calle</h1><p class="oc-lead">El plano de cada capital con los recorridos oficiales y dónde va cada cofradía a cada hora (posición estimada).</p></header>
+<ul class="oc-calle-indice">${caps.map((c) => `<li><a href="${u('en-la-calle/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span>${icon('arrow')}</a></li>`).join('')}</ul>`;
+  write('en-la-calle/index.html', layout({ title: 'En la calle: los recorridos en el plano', desc: 'Plano de los recorridos de las cofradías de las ocho capitales andaluzas, con la posición estimada de cada una a cada hora.', body, path: 'en-la-calle/', active: 'capitales/', crumbs: [['Portada', u()], ['En la calle', '']] }));
+}
 function pageCalle(c) {
   const datos = datosCalle(c); if (!datos) return;
   fs.mkdirSync(path.join(DIST, 'data', 'calle'), { recursive: true });
@@ -1290,7 +1328,7 @@ function pageCalle(c) {
   const extras = datos.hermandades.filter((h) => h.x).sort((a, b) => a.x.fecha.localeCompare(b.x.fecha));
   for (const h of extras) fechas[h.d] = h.x.fecha;
   const tabExtra = (h) => `<button type="button" role="tab" aria-selected="false" class="is-extra" data-dia="${esc(h.d)}" data-fecha="${h.x.fecha}" title="${esc(h.x.titulo)}">${esc(h.d)}</button>`;
-  const body = `<header class="oc-calle-head"><p class="oc-kicker" style="--c:${c.color}">${esc(c.nombre)} · Recorridos</p><h1 class="oc-title">En la calle</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.</p></header>
+  const body = `<header class="oc-calle-head"><h1 class="oc-title">En la calle · ${esc(c.nombre)}</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.</p></header>
 <section class="oc-calle" data-calle="${u('data/calle/' + c.slug + '.json')}" data-fechas='${esc(JSON.stringify(fechas))}' style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
   <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}${extras.length ? `<span class="oc-calle-dias-sep" aria-hidden="true">Extraordinarias y magnas</span>${extras.map(tabExtra).join('')}` : ''}</div>
   <div class="oc-calle-mapa" data-mapa><svg class="oc-calle-svg" aria-label="Plano de ${esc(c.nombre)} con los recorridos" role="img"></svg>
@@ -1299,6 +1337,8 @@ function pageCalle(c) {
     <p class="oc-calle-osm">Plano: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a></p>
   </div>
   <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
+  <h2 class="oc-h2">Cofradías de la jornada</h2>
+  <ol class="oc-calle-lista" data-lista aria-live="polite"></ol>
   <section class="oc-ruta" aria-labelledby="ruta-t">
     <h2 class="oc-h2" id="ruta-t">Tu ruta de penitencia</h2>
     <p class="oc-ruta-intro">Te propongo dónde ponerte en cada momento para ver las cofradías de la jornada, cuánto se anda entre un sitio y otro y dónde tomar algo o comprar agua cerca.</p>
@@ -1311,8 +1351,6 @@ function pageCalle(c) {
     <ol class="oc-ruta-paradas" data-ruta-paradas aria-live="polite"></ol>
     <p class="oc-note">La afluencia es una estimación según cuántas cofradías coinciden en la zona; los locales salen de OpenStreetMap y conviene confirmar su horario en Semana Santa.</p>
   </section>
-  <h2 class="oc-h2">Cofradías de la jornada</h2>
-  <ol class="oc-calle-lista" data-lista aria-live="polite"></ol>
   <div class="oc-sheet oc-calle-ficha" hidden data-ficha><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="calle-ficha-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="calle-ficha-t" data-ficha-titulo></p><button class="oc-iconbtn" type="button" data-ficha-cerrar aria-label="Cerrar">${icon('x')}</button></div><div data-ficha-cuerpo></div></div></div>
 </section>
 <p class="oc-note">Recorridos del último itinerario oficial publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
@@ -1388,11 +1426,11 @@ function datosCunao() {
 }
 
 fs.rmSync(DIST, { recursive: true, force: true });
-pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
+pageHome(); pageHoy(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
 // Direcciones de marchas ya publicadas que dejaron de existir (fichas unidas o registros que no eran marchas): a la misma obra o al listado
 for (const [a, b] of Object.entries(MU.redirecciones || {})) { if (MARCHA_SLUGS.has(a)) continue; const d = u(b ? 'marcha/' + b + '/' : 'marchas/'); write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
-// /hermandad/, /banda/, /marcha/, /imaginero/ y /en-la-calle/ sin nombre (URL recortada a mano): a su listado, no a un 404
-for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['marcha', 'marchas/'], ['imaginero', 'imagineros/'], ['en-la-calle', 'capitales/']]) {
+// /hermandad/, /banda/, /marcha/ e /imaginero/ sin nombre (URL recortada a mano): a su listado, no a un 404
+for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['marcha', 'marchas/'], ['imaginero', 'imagineros/']]) {
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);

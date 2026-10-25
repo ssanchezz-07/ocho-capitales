@@ -1685,3 +1685,180 @@ main ol:not([class]) { padding-left: 1.4em; }
   .oc-calle-ficha { align-items: stretch; justify-content: flex-end; }
   .oc-calle-ficha .oc-sheet-panel { width: min(380px, 92vw); max-height: none; border-radius: 14px 0 0 14px; }
 }
+
+/* =====================================================================
+   Portada inmersiva «Del mapa a la calle» (2026-10-25). Manda sobre lo anterior.
+   La portada es solo las banderas, Andalucía y la agenda. Al elegir una bandera, la cámara baja al plano de su ciudad
+   y el cielo cambia con la hora (tarde dorada, noche de terciopelo, Madrugá azul). Es su propio mundo, como «En la calle»:
+   terciopelo en claro y en oscuro.
+   ===================================================================== */
+.oc-home .oc-portada {
+  --cielo: #1c0e2a; --marfil: #f4eff9; --lila: #c9bddb; --oro: #e0b84f; --oro-claro: #f0d79c;
+  position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
+  height: clamp(560px, calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-bottom)), 880px);
+  margin: 0 calc(50% - 50vw); padding: 0 var(--gutter);
+  color: var(--marfil); background-color: var(--cielo); transition: background-color 500ms linear;
+}
+@media (min-width: 960px) { .oc-home .oc-portada { height: clamp(600px, calc(100svh - var(--header-h)), 900px); margin-top: -20px; } }
+html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw incluye la barra de desplazamiento) */
+.oc-portada .oc-colgaduras { position: static; width: min(100%, 720px); margin: 0 auto; }
+/* en el escritorio, banderas + mapa + invitación caben en la altura del lienzo */
+@media (min-width: 960px) { .oc-portada .oc-colgaduras { width: min(100%, 740px, calc((100svh - var(--header-h) - 190px) / 1.06)); } }
+/* en la calle, erCuñao se aparta para no tapar la hora; vuelve al subir a Andalucía */
+.oc-en-ciudad .oc-cunao-btn { opacity: 0; pointer-events: none; transform: scale(.9); }
+/* banderas: toda la columna es el botón (≥ 44 px de ancho en el móvil) */
+.oc-portada .oc-colg-row { position: relative; z-index: 4; }
+.oc-portada .oc-colg { width: 100%; padding: 0 4%; touch-action: manipulation; }
+.oc-portada .oc-colg-name { font-size: clamp(.8rem, 3vw, 1.3rem); }
+.oc-portada .oc-colg img { filter: drop-shadow(0 8px 10px rgb(0 0 0 / .45)); }
+.oc-portada .oc-colg:focus-visible { outline: 2px solid var(--oro-claro); outline-offset: 3px; }
+.oc-portada .oc-colg-slot { transition: transform 460ms var(--ease-out), opacity 300ms var(--ease-out); }
+.oc-portada .oc-colg-slot:nth-child(2) { transition-delay: 20ms; } .oc-portada .oc-colg-slot:nth-child(3) { transition-delay: 40ms; } .oc-portada .oc-colg-slot:nth-child(4) { transition-delay: 60ms; }
+.oc-portada .oc-colg-slot:nth-child(5) { transition-delay: 80ms; } .oc-portada .oc-colg-slot:nth-child(6) { transition-delay: 100ms; } .oc-portada .oc-colg-slot:nth-child(7) { transition-delay: 120ms; } .oc-portada .oc-colg-slot:nth-child(8) { transition-delay: 140ms; }
+/* en la ciudad, las banderas se recogen hacia arriba; la elegida queda asomando como pestaña para volver */
+.oc-portada.is-ciudad .oc-colg-slot { transform: translateY(calc(var(--subir, -100%) - 40%)); opacity: 0; pointer-events: none; }
+.oc-portada.is-ciudad .oc-colg-slot.is-elegida { transform: translateY(var(--subir, -74%)); opacity: 1; pointer-events: auto; transition-delay: 0ms; }
+/* Andalucía: provincias en terciopelo de cada capital, sobre el cielo */
+.oc-portada .oc-colgaduras .oc-colg-map, .oc-portada [data-colgaduras][data-sel] .oc-colg-map { margin: 2px 0 0; z-index: 2; transition: opacity 380ms var(--ease-out); }
+.oc-portada .oc-prov2 { fill: color-mix(in srgb, var(--c) 38%, #241238); stroke: rgb(240 215 156 / .3); stroke-width: 1.2px; }
+.oc-portada [data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) 22%, #241238); }
+.oc-portada [data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) 74%, #241238); }
+.oc-portada .oc-colg-map svg { filter: none; }
+.oc-portada .oc-hilo { stroke: var(--oro); opacity: .6; }
+.oc-portada .oc-punto { pointer-events: auto; cursor: pointer; width: 16px; height: 16px; margin: -8px 0 0 -8px; background: var(--oro); box-shadow: 0 0 0 3px var(--c), 0 0 0 4.5px rgb(240 215 156 / .7); }
+.oc-portada .oc-punto::after { content: ""; position: absolute; inset: -14px; border-radius: 50%; }
+@media (hover: hover) and (pointer: fine) { .oc-portada .oc-punto:hover { transform: scale(1.3); } }
+.oc-portada.is-ciudad .oc-colg-hilos, .oc-portada.is-ciudad .oc-punto { opacity: 0; transition: opacity 200ms var(--ease-out); pointer-events: none; }
+.oc-portada.is-plano .oc-colg-map { opacity: 0; pointer-events: none; }
+/* el plano de la ciudad ocupa todo el lienzo y aparece mientras Andalucía se acerca */
+.oc-colg-plano { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 460ms var(--ease-out) 260ms; }
+.oc-portada.is-plano .oc-colg-plano { opacity: 1; view-transition-name: oc-plano; }
+.oc-pl-svg { display: block; width: 100%; height: 100%; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+@media (hover: hover) and (pointer: fine) { .oc-pl-svg { cursor: grab; } .oc-pl-svg.is-arrastrando { cursor: grabbing; } }
+.oc-pl-calles { fill: none; stroke: rgb(205 186 230 / .2); stroke-width: 1.3; vector-effect: non-scaling-stroke; }
+.oc-pl-princ { fill: none; stroke: rgb(216 198 240 / calc(.32 + var(--noche, 0) * .14)); stroke-width: 2.3; vector-effect: non-scaling-stroke; }
+.oc-pl-ruta { fill: none; stroke: var(--hc); stroke-opacity: .2; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.oc-pl-ruta[data-estado="calle"] { stroke-opacity: .6; stroke-width: 2.6; }
+.oc-pl-cortejo { fill: none; stroke: var(--oro-claro); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 calc(3px + var(--noche, 0) * 5px) rgb(240 215 156 / .75)); }
+.oc-pl-marca { cursor: pointer; transition: opacity 200ms var(--ease-out); }
+.oc-pl-marca:focus { outline: none; }
+.oc-pl-marca:focus-visible .oc-pl-galon { stroke: #fff; stroke-width: 4; }
+.oc-pl-galon { fill: #1c0e2a; stroke: var(--oro); stroke-width: 2.5; filter: drop-shadow(0 2px 4px rgb(0 0 0 / .5)); }
+.oc-pl-marca[data-estado="calle"] .oc-pl-galon { stroke: var(--oro-claro); stroke-width: 3.5; }
+.oc-pl-fondo { fill: #3a1c55; }
+.oc-pl-ini { font: 400 22px/1 var(--display); fill: var(--oro-claro); text-anchor: middle; }
+.oc-pl-nombre { font: 600 11px/1 var(--sans); fill: var(--marfil); text-anchor: middle; paint-order: stroke; stroke: rgb(20 8 30 / .85); stroke-width: 3.5px; stroke-linejoin: round; opacity: 0; transition: opacity 160ms; }
+.con-nombres .oc-pl-marca[data-estado="calle"] .oc-pl-nombre { opacity: 1; }
+.oc-pl-marca[data-estado="antes"], .oc-pl-marca[data-estado="despues"] { opacity: .42; }
+.oc-pl-marca[data-estado="despues"] image { filter: grayscale(1); }
+/* pie: en Andalucía, la invitación y la cuenta atrás; en la ciudad, jornada, hora y la entrada a la calle */
+.oc-portada .oc-colg-pie { position: relative; inset: auto; z-index: 5; display: block; padding: 18px 0 0; pointer-events: auto; }
+.oc-colg-and { text-align: center; }
+.oc-colg-ayuda { margin: 0; font: 400 clamp(1.5rem, 6vw, 2.1rem)/1 var(--display); letter-spacing: .02em; text-transform: uppercase; color: var(--marfil); }
+.oc-portada .oc-hero2-count { margin: 8px 0 0; font-size: .95rem; letter-spacing: 0; color: var(--lila); }
+.oc-portada .oc-hero2-count strong { color: var(--oro-claro); }
+.oc-portada.is-ciudad .oc-colg-pie { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px var(--gutter) calc(14px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, var(--cielo) 62%, transparent); transition: background-color 500ms linear; }
+.oc-colg-ciudad { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; width: min(100%, 1180px); margin: 0 auto; }
+.oc-colg-cab { display: grid; grid-template-columns: minmax(0, 1fr); }
+.oc-colg-atras { all: unset; box-sizing: border-box; display: inline-flex; align-items: center; gap: 6px; width: max-content; min-height: 40px; padding-right: 8px; font-size: .95rem; font-weight: 600; color: var(--oro-claro); cursor: pointer; touch-action: manipulation; }
+.oc-colg-atras .oc-i { width: 18px; height: 18px; }
+.oc-colg-atras:focus-visible { outline: 2px solid var(--oro-claro); outline-offset: 2px; border-radius: 8px; }
+.oc-colg-cap { margin: 0; font: 400 clamp(3rem, 13vw, 4.6rem)/.84 var(--display); letter-spacing: .01em; text-transform: uppercase; color: var(--marfil); outline: none; }
+.oc-colg-res { margin: 6px 0 0; font-size: 1rem; color: var(--lila); font-variant-numeric: tabular-nums; min-height: 1.5em; }
+.oc-colg-reloj { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.oc-colg-jornada { display: flex; align-items: center; gap: 4px; font-weight: 600; font-size: 1rem; }
+.oc-colg-jornada span { flex: 1; min-width: 0; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.oc-colg-paso { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: rgb(255 255 255 / .1); color: var(--marfil); cursor: pointer; touch-action: manipulation; transition: transform 140ms var(--ease-out), background-color 160ms var(--ease-out); }
+.oc-colg-paso:active { transform: scale(.94); }
+@media (hover: hover) and (pointer: fine) { .oc-colg-paso:hover { background: rgb(255 255 255 / .18); } }
+.oc-colg-paso .oc-i { width: 20px; height: 20px; }
+.oc-colg-hora-w { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 14px; }
+.oc-colg-hora { font: 400 2.6rem/1 var(--display); color: var(--oro-claro); font-variant-numeric: tabular-nums; min-width: 2.6em; }
+.oc-colg-tiempo { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: pointer; margin: 0; }
+.oc-colg-tiempo::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: rgb(244 239 249 / .28); }
+.oc-colg-tiempo::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -12px; border-radius: 50%; background: var(--oro); border: 3px solid var(--oro-claro); box-shadow: 0 2px 8px rgb(0 0 0 / .45); }
+.oc-colg-tiempo::-moz-range-track { height: 4px; border-radius: 2px; background: rgb(244 239 249 / .28); }
+.oc-colg-tiempo::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--oro); border: 3px solid var(--oro-claro); }
+.oc-colg-tiempo:focus-visible { outline: 2px solid var(--oro-claro); outline-offset: 2px; border-radius: 8px; }
+.oc-colg-acc { display: flex; flex-wrap: wrap; gap: 8px; }
+.oc-portada .oc-btn { min-height: 46px; background: var(--oro); color: #1c0e2a; border-color: var(--oro); }
+@media (hover: hover) and (pointer: fine) { .oc-portada .oc-btn:hover { background: var(--oro-claro); border-color: var(--oro-claro); } }
+.oc-portada .oc-btn.is-quiet { background: rgb(255 255 255 / .1); color: var(--marfil); border-color: rgb(255 255 255 / .2); }
+@media (hover: hover) and (pointer: fine) { .oc-portada .oc-btn.is-quiet:hover { background: rgb(255 255 255 / .18); } }
+.oc-portada .oc-btn:focus-visible { outline: 2px solid var(--oro-claro); outline-offset: 2px; }
+.oc-colg-nota { margin: 0; font-size: .8rem; line-height: 1.4; color: var(--lila); }
+@media (max-width: 759px) {
+  .oc-colg-ciudad { grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 8px; }
+  .oc-colg-cab { grid-column: 1; }
+  .oc-colg-acc { grid-column: 2; grid-row: 1; align-self: end; flex-direction: column; align-items: stretch; }
+  .oc-colg-acc .oc-btn { padding-inline: 14px; }
+  .oc-colg-reloj, .oc-colg-nota { grid-column: 1 / -1; }
+  .oc-colg-cap { font-size: clamp(2.6rem, 12vw, 3.6rem); }
+}
+@media (min-width: 760px) {
+  .oc-colg-ciudad { grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); column-gap: 40px; align-items: end; }
+  .oc-colg-cab { grid-column: 1; grid-row: 1 / span 2; }
+  .oc-colg-reloj { grid-column: 2; grid-row: 1; }
+  .oc-colg-acc { grid-column: 2; grid-row: 2; }
+  .oc-colg-nota { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oc-home .oc-portada, .oc-portada .oc-colg-slot, .oc-colg-plano, .oc-portada .oc-colg-map { transition: none; }
+}
+/* agenda bajo la portada */
+.oc-home .oc-agenda-home { margin-top: clamp(28px, 5vw, 56px); }
+.oc-home .oc-agenda-home .oc-evs { display: grid; gap: 0 clamp(28px, 4vw, 56px); }
+@media (min-width: 900px) { .oc-home .oc-agenda-home .oc-evs { grid-template-columns: 1fr 1fr; } }
+/* el día de las fechas, legible (antes «25» se leía como un solo trazo por el tracking negativo) y el mes a 12 px */
+.oc-ev-date span { letter-spacing: 0; }
+.oc-ev-date { font-size: .78rem; }
+
+/* ---------- Noticias con menos ruido: titular, una línea de medio y hora, foto a la derecha ---------- */
+.oc-newsgrid .oc-news { grid-template-columns: minmax(0, 1fr); gap: 4px 16px; padding: 14px 0; }
+.oc-newsgrid .oc-news.has-img { grid-template-columns: minmax(0, 1fr) clamp(84px, 22vw, 128px); }
+.oc-newsgrid .oc-news.has-img .oc-news-body, .oc-newsgrid .oc-news-body { grid-column: 1; grid-row: 1; }
+.oc-newsgrid .oc-news-img { grid-column: 2; grid-row: 1; order: 0; aspect-ratio: 4 / 3; border-radius: 12px; }
+.oc-newsgrid .oc-news-title { margin: 0; font: 600 clamp(1.02rem, 3.6vw, 1.12rem)/1.32 var(--sans); letter-spacing: -.005em; text-wrap: pretty; }
+.oc-newsgrid .oc-news-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; margin: 6px 0 0; font: 500 .86rem/1.4 var(--sans); letter-spacing: 0; text-transform: none; color: var(--muted); }
+.oc-newsgrid .oc-news-src { font-weight: 600; color: var(--ink); }
+.oc-newsgrid .oc-news-meta time::before { content: "·"; margin-right: 8px; color: var(--muted); }
+.oc-newsgrid .oc-news-meta .oc-city { font-size: .8rem; }
+.oc-news-otros { position: relative; z-index: 1; margin: 4px 0 0; font-size: .86rem; line-height: 1.4; color: var(--muted); }
+.oc-news-otros a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .oc-news-otros a:hover { color: var(--primary); } }
+.oc-newsgrid .oc-news-text { margin-top: 6px; font-size: .95rem; -webkit-line-clamp: 2; line-clamp: 2; }
+@media (max-width: 759px) { .oc-newsgrid .oc-news:not(.is-destacada) .oc-news-text { display: none; } }
+/* la primera con foto, destacada: imagen grande arriba en el móvil y a la izquierda en el escritorio */
+.oc-newsgrid .oc-news.is-destacada { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr); padding: 6px 0 18px; }
+.oc-newsgrid .oc-news.is-destacada .oc-news-img { grid-column: 1; grid-row: 1; aspect-ratio: 16 / 9; border-radius: 16px; }
+.oc-newsgrid .oc-news.is-destacada .oc-news-body { grid-row: 2; }
+.oc-newsgrid .oc-news.is-destacada .oc-news-title { font: 700 clamp(1.3rem, 5vw, 1.9rem)/1.18 var(--sans); letter-spacing: -.015em; }
+@media (min-width: 900px) {
+  .oc-newsgrid .oc-news.is-destacada { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 32px; align-items: center; }
+  .oc-newsgrid .oc-news.is-destacada .oc-news-body { grid-column: 2; grid-row: 1; }
+}
+.oc-news-filters-chips, [data-news-filters] .oc-chips.is-filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+[data-news-filters] .oc-chips.is-filter::-webkit-scrollbar { display: none; }
+[data-news-filters] .oc-chips.is-filter li { flex: none; }
+
+/* ---------- capitales en listas y hojas: un punto de su color y su nombre (la colgadura vive en la portada y en su capital) ---------- */
+.oc-sheet-caps.is-puntos, .oc-citysheet-grid.is-puntos, .oc-calle-indice { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+@media (min-width: 640px) { .oc-citysheet-grid.is-puntos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.oc-sheet-caps.is-puntos a, .oc-citysheet-grid.is-puntos button, .oc-calle-indice a { box-sizing: border-box; display: flex; flex-direction: row; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 0 14px; border: 0; border-radius: 14px; background: var(--surface-2); color: var(--ink); font: 600 1rem/1.2 var(--sans); text-decoration: none; cursor: pointer; transition: transform 140ms var(--ease-out), background-color 160ms var(--ease-out); }
+.oc-sheet-caps.is-puntos a::before, .oc-sheet-caps.is-puntos a::after { display: none; }
+.oc-sheet-caps.is-puntos a:active, .oc-citysheet-grid.is-puntos button:active, .oc-calle-indice a:active { transform: scale(.97); }
+.oc-sheet-caps.is-puntos i, .oc-citysheet-grid.is-puntos i, .oc-calle-indice i { flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
+.oc-citysheet-grid.is-puntos [aria-pressed="true"] { background: var(--primary-soft); box-shadow: inset 0 0 0 2px var(--primary); color: var(--primary); }
+.oc-calle-indice { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 8px; margin-top: 8px; }
+.oc-calle-indice a { min-height: 60px; font-size: 1.1rem; }
+.oc-calle-indice a span { flex: 1; }
+.oc-calle-indice .oc-i { width: 18px; height: 18px; color: var(--muted); }
+@media (hover: hover) and (pointer: fine) { .oc-sheet-caps.is-puntos a:hover, .oc-calle-indice a:hover, .oc-citysheet-grid.is-puntos button:hover { background: color-mix(in srgb, var(--c) 14%, var(--surface-2)); } }
+.oc-sheet-list a span { flex: 1; }
+.oc-sheet-list a small { margin-right: 10px; font: 500 .9rem/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- En la calle: lo que la crítica señaló ---------- */
+.oc-calle-mapa { view-transition-name: oc-plano; }
+.oc-c-cruz-templo { stroke: rgb(205 186 230 / .42); } /* las cruces de los templos, en lila tenue: el oro es del cortejo */
+@media (max-width: 959px) { .oc-calle.has-ficha .oc-calle-reloj { bottom: calc(var(--ficha-h, 40dvh) + 10px); } }
+.oc-calle-head .oc-title { overflow-wrap: anywhere; }

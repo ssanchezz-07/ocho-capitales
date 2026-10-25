@@ -235,7 +235,7 @@
     capas.mundo && capas.mundo.querySelectorAll('.oc-c-parada').forEach(function (m) { m.setAttribute('transform', m.getAttribute('transform').replace(/scale\([^)]*\)/, 'scale(' + Z.toFixed(3) + ')')); });
   }
   function actualizar() {
-    hora.textContent = hhmm(T);
+    hora.textContent = hhmm(T); rango.setAttribute('aria-valuetext', hhmm(T));
     capas.cortejos.textContent = '';
     var filas = [];
     colocarMarcas();
@@ -259,11 +259,12 @@
       }
       var pts2 = h.t.paso || h.t.cruz, sal = pts2[0][2], fin = pts2[pts2.length - 1][2];
       var donde = est === 'calle' ? pts2[Math.min(paso.i + 1, pts2.length - 1)][3] : '';
-      filas.push({ h: h, est: est, txt: est === 'calle' ? 'Por ' + (pts2[paso.i][3] || donde) : est === 'antes' ? 'Sale a las ' + hhmm(sal) : 'Recogida a las ' + hhmm(fin) });
+      var por = pts2[paso ? paso.i : 0][3] || donde;
+      filas.push({ h: h, est: est, t: est === 'despues' ? fin : sal, txt: est === 'calle' ? (/^salida$/i.test(por) ? 'Saliendo de su templo' : /^(entrada|recogida)$/i.test(por) ? 'Entrando en su templo' : 'Por ' + por) : est === 'antes' ? 'Sale a las ' + hhmm(sal) : 'Recogida a las ' + hhmm(fin) });
     });
-    // lista: primero las que están en la calle, luego las que van a salir
+    // lista: primero las que están en la calle, luego las que van a salir y al final las recogidas; dentro de cada grupo, por hora
     var orden = { calle: 0, antes: 1, despues: 2, fuera: 3 };
-    filas.sort(function (a, b) { return orden[a.est] - orden[b.est]; });
+    filas.sort(function (a, b) { return orden[a.est] - orden[b.est] || a.t - b.t; });
     lista.textContent = '';
     filas.forEach(function (f) {
       var li = document.createElement('li'); li.className = 'oc-calle-item'; li.setAttribute('data-estado', f.est);
@@ -281,10 +282,13 @@
   }
 
   // ---------- ficha de una hermandad: dónde va, por dónde pasará y cómo llegar ----------
-  var ficha = $('[data-ficha]');
+  var ficha = $('[data-ficha]'), abridor = null;
   function abrir(h) {
     sel = h; pintarFicha(h);
-    ficha.hidden = false; requestAnimationFrame(function () { ficha.classList.add('is-open'); });
+    if (ficha.hidden) abridor = document.activeElement;
+    ficha.hidden = false; sec.classList.add('has-ficha'); requestAnimationFrame(function () { ficha.classList.add('is-open'); var pn = ficha.querySelector('.oc-sheet-panel'); if (pn) sec.style.setProperty('--ficha-h', pn.offsetHeight + 'px'); });
+    // el foco entra en la ficha (antes se quedaba detrás del diálogo)
+    var x = $('[data-ficha-cerrar]'); if (x) setTimeout(function () { x.focus({ preventScroll: true }); }, calm ? 0 : 40);
     var rp = h.t.paso || h.t.cruz; if (rp && rp.length) encuadrar(rp.map(function (q) { return q[0]; }), rp.map(function (q) { return q[1]; }), !calm);
     $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { n.classList.toggle('is-sel', n.getAttribute('data-s') === h.s); });
     // la elegida, por encima de las demás (marca y recorrido), y el resto atenuado
@@ -292,7 +296,7 @@
     var rr = capas.rutas.querySelector('.oc-c-ruta[data-s="' + h.s + '"]'); if (rr) capas.rutas.appendChild(rr);
     svg.classList.add('has-sel');
   }
-  function cerrar() { sel = null; svg.classList.remove('has-sel'); ficha.classList.remove('is-open'); setTimeout(function () { ficha.hidden = true; }, calm ? 0 : 200); $$('.is-sel').forEach(function (n) { n.classList.remove('is-sel'); }); }
+  function cerrar() { sel = null; svg.classList.remove('has-sel'); sec.classList.remove('has-ficha'); ficha.classList.remove('is-open'); setTimeout(function () { ficha.hidden = true; }, calm ? 0 : 200); $$('.is-sel').forEach(function (n) { n.classList.remove('is-sel'); }); if (abridor && abridor.focus && document.contains(abridor)) abridor.focus({ preventScroll: true }); abridor = null; }
   $('[data-ficha-cerrar]').addEventListener('click', cerrar);
   ficha.addEventListener('click', function (e) { if (e.target === ficha) cerrar(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !ficha.hidden) cerrar(); });
@@ -554,9 +558,14 @@
       if (!pasada && !proxima) { proxima = b.getAttribute('data-dia'); b.classList.add('is-proxima'); b.setAttribute('aria-label', b.textContent + ' (próxima salida)'); }
       if (pasada) b.setAttribute('aria-label', b.textContent + ' (ya celebrada)');
     });
-    // ?dia=<jornada> (desde «Hoy» de la portada) manda; si no, la jornada de hoy; si no, la próxima salida extraordinaria; si no, la primera
-    var pedido = new URLSearchParams(location.search).get('dia');
-    ponerDia(pedido && botones.indexOf(pedido) >= 0 ? pedido : dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : proxima || botones[0]);
+    // ?dia=<jornada> (desde la portada o desde «Hoy») manda; si no, la jornada de hoy; si no, la próxima salida extraordinaria;
+    // si no, la jornada con más cofradías (la primera, Viernes de Dolores, suele tener muy pocas)
+    var q = new URLSearchParams(location.search), pedido = q.get('dia');
+    var masLlena = botones.filter(function (d) { return !document.querySelector('[data-dia="' + d.replace(/"/g, '\\"') + '"][data-fecha]'); }).sort(function (a, b) { return D.hermandades.filter(function (h) { return h.d === b; }).length - D.hermandades.filter(function (h) { return h.d === a; }).length; })[0];
+    ponerDia(pedido && botones.indexOf(pedido) >= 0 ? pedido : dHoy && botones.indexOf(dHoy) >= 0 ? dHoy : proxima || masLlena || botones[0]);
+    // ?t=<minutos> y ?h=<hermandad>: se llega desde la portada a la misma hora y, si se tocó un medallón, con su ficha abierta
+    var tq = +q.get('t'); if (q.get('t') && isFinite(tq)) { T = Math.max(+rango.min, Math.min(+rango.max, tq)); rango.value = T; capas.yaEncuadrado = false; dibujarRutas(); actualizar(); }
+    var hq = q.get('h'), hh = hq && delDia().filter(function (x) { return x.s === hq; })[0]; if (hh) abrir(hh);
     window.addEventListener('resize', function () { capas.yaEncuadrado = false; dibujarRutas(); actualizar(); });
   }).catch(function () { mapa.classList.add('is-error'); });
 })();
