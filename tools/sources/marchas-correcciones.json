@@ -1,0 +1,80 @@
+{
+ "nota": "Correcciones a mano de las marchas ligadas a hermandades, comprobadas una a una (Playwright) en la base de datos de Patrimonio Musical. retirar: la relación marcha-hermandad no tiene fuente o la fuente la contradice. confirmar: la ficha de Patrimonio Musical la dedica expresamente a esa hermandad (el cotejo automático no la casó por diferencias de título o de año). anadir: marcha con dedicatoria expresa a la hermandad. Lo aplica site/build.mjs; lo lista tools/auditoria/marchas-malaga.mjs. Solo se guarda el enlace, no se reproduce la ficha.",
+ "retirar": {
+  "crucifixion-malaga": {
+   "Soledad del Mayor Dolor": "Caso visto por Pablo. Solo la cita el foro de 2008 y ninguna fuente documenta una marcha con ese título; la marcha de Manuel Bonilla Cascado dedicada a M.ª Stma. del Mayor Dolor en su Soledad se titula «Crucifixión» (1998, https://www.patrimoniomusical.com/bd-marcha-1753)."
+  },
+  "salesianos-malaga": {
+   "Stabat Mater": "Patrimonio Musical la dedica a la Hdad. Dolores del Puente (Málaga), no a Salesianos: https://www.patrimoniomusical.com/bd-marcha-1631"
+  },
+  "sangre-malaga": {
+   "Malacitana": "Patrimonio Musical la dedica «A Salvador García Sánchez, director de la Banda Municipal de Málaga», no a la Sangre: https://www.patrimoniomusical.com/bd-marcha-1627"
+  }
+ },
+ "confirmar": {
+  "humildad-y-paciencia-malaga": {
+   "Dolores y Esperanza": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1826"
+   }
+  },
+  "prendimiento-malaga": {
+   "Malagueña Virgen del Gran Perdón": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1684"
+   }
+  },
+  "gitanos-malaga": {
+   "Coronación de María Santísima de la O": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-686"
+   },
+   "Virgen de la O": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-598"
+   }
+  },
+  "dolores-del-puente-malaga": {
+   "Ofertorio": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1630",
+    "nota": "año en Patrimonio Musical: 1992"
+   },
+   "Marcha al Santísimo Cristo del Perdón": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1628",
+    "nota": "año en Patrimonio Musical: 1998"
+   },
+   "Nuestra Señora de los Dolores del Puente": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1817",
+    "nota": "año en Patrimonio Musical: 1992"
+   },
+   "Cristo del Perdón": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1700",
+    "nota": "solo la de Ginés Sánchez Torres; año en Patrimonio Musical: 1993",
+    "autor": "Ginés Sánchez Torres"
+   },
+   "Señora, ¿por qué lloras?": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-6655",
+    "nota": "año en Patrimonio Musical: 2014"
+   }
+  },
+  "misericordia-malaga": {
+   "Plegaria a la Virgen del Gran Poder": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-608"
+   },
+   "Señora del Gran Poder": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1749"
+   }
+  },
+  "esperanza-malaga": {
+   "Himno de la Coronación de la Esperanza": {
+    "url": "https://www.patrimoniomusical.com/bd-marcha-499"
+   }
+  }
+ },
+ "anadir": {
+  "crucifixion-malaga": [
+   {
+    "titulo": "Crucifixión",
+    "autor": "Manuel Bonilla Cascado",
+    "anio": "1998",
+    "url": "https://www.patrimoniomusical.com/bd-marcha-1753"
+   }
+  ]
+ }
+}
