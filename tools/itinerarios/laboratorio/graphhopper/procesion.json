@@ -1,0 +1,17 @@
+// Perfil «procesión» (a pie) para el laboratorio de rutas de Ocho Capitales.
+// Parte del foot.json de GraphHopper 11.1 y lo ajusta a un cortejo: calles peatonales y plazas sí,
+// autovías y vías rápidas nunca, escaleras casi nunca (un trono no baja escaleras), privadas casi nunca.
+{
+  "priority": [
+    { "if": "!foot_access", "multiply_by": "0" },
+    { "else": "", "multiply_by": "foot_priority" },
+    { "if": "road_class == MOTORWAY || road_class == TRUNK", "multiply_by": "0" },
+    { "if": "road_class == STEPS", "multiply_by": "0.05" },
+    { "if": "road_class == TRACK || road_class == PATH || road_class == BRIDLEWAY", "multiply_by": "0.3" },
+    { "if": "foot_road_access == PRIVATE", "multiply_by": "0.05" }
+  ],
+  "speed": [
+    { "if": "true", "limit_to": "foot_average_speed" }
+  ],
+  "distance_influence": 100
+}

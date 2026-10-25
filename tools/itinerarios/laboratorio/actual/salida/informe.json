@@ -1,0 +1,1118 @@
+{
+ "pollinica-malaga": {
+  "id": "pollinica-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "REAL COFRADÍA DE NUESTRO PADRE JESÚS A SU ENTRADA A JERUSALÉN, 09:50h 12:00h 14:00h 14:10h 16:15h MARÍA SANTÍSIMA DEL AMPARO Y SAN JUAN EVANGELISTA (Pollinica).",
+  "errores": [],
+  "avisos": [
+   "«Tribuna de los Pobres» no existe como calle en OSM: situada por Nominatim (0 m de la red)",
+   "enlace de 5 m entre «Plaza San Pedro Alcántara» y «Carretería»: OSM no las une (por la red, 133 m)",
+   "enlace de 22 m entre «Tribuna de los Pobres» y «Pasillo Santa Isabel»: OSM no las une (por la red, 235 m)",
+   "enlace de 7 m entre «Pasillo Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)",
+   "calles de la lista apenas pisadas: Plaza San Pedro Alcántara (24 m)"
+  ],
+  "calles": [
+   "Casa Hermandad",
+   "Parras",
+   "Plazuela Santísimo Cristo de la Sangre",
+   "Guerrero",
+   "Dos Aceras",
+   "Plaza San Pedro Alcántara",
+   "Carretería",
+   "Tribuna de los Pobres",
+   "Pasillo Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de La Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Postigo de los Abades",
+   "Estación de Penitencia en la S.I.C.B",
+   "Patio de los Naranjos",
+   "Císter",
+   "San Agustin",
+   "Echegaray",
+   "Granada",
+   "Méndez Núñez",
+   "Plaza de Uncibay",
+   "Casapalma",
+   "Cárcer",
+   "Madre de Dios",
+   "Montaño",
+   "Plaza de Montaño",
+   "Guerrero",
+   "Gaona",
+   "Plazuela Santísimo Cristo de la Sangre",
+   "Parras",
+   "Casa Hermandad"
+  ],
+  "casa": {
+   "dir": "Calle Parras 20, Málaga",
+   "fuente": "https://cofradiapollinicamalaga.es/contacto/"
+  },
+  "puertas": {
+   "salida": {
+    "lat": 36.7258912,
+    "lon": -4.4220276,
+    "nodo_osm": 9023249193,
+    "tipo": "main",
+    "dir_osm": "Calle Parras 20",
+    "criterio": "dirección de la sede (Calle Parras 20)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7258912,
+    "lon": -4.4220276,
+    "nodo_osm": 9023249193,
+    "tipo": "main",
+    "dir_osm": "Calle Parras 20",
+    "criterio": "dirección de la sede (Calle Parras 20)",
+    "edificio": null
+   }
+  },
+  "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), 111 m",
+  "salida": {
+   "lugar": "Casa Hermandad (Calle Parras 20)",
+   "osm": "20, Calle Parras, San Felipe Neri, Centro, Málaga, Málaga-Costa del Sol, Málaga, Andalucía, 29012, España",
+   "aprox_m": 14
+  },
+  "idas_y_vueltas": [
+   "Plaza San Pedro Alcántara",
+   "Calle Císter",
+   "Calle Granada",
+   "Calle Gaona"
+  ],
+  "retrocesos_eliminados": 0,
+  "largo_m": 3702,
+  "calles_no_recorridas": [
+   "Plaza San Pedro Alcántara (24 m)"
+  ],
+  "max_tramo_sin_calle_m": 111,
+  "ratio": 1.17,
+  "divide_en_catedral": true,
+  "media_vueltas": 8,
+  "horas_oficiales": {
+   "salida": [
+    "09:50"
+   ],
+   "tribuna": [
+    "12:00"
+   ],
+   "torre_sur": [
+    "14:00"
+   ],
+   "catedral": [
+    "14:10"
+   ],
+   "encierro": [
+    "16:15"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": false,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "pasion-malaga": {
+  "id": "pasion-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "REAL, MUY ILUSTRE Y VENERABLE ARCHICOFRADÍA SACRAMENTAL Y DE 16:50h 17:35h 19:35h 19:45h 23:25h NAZARENOS DE NUESTRO PADRE JESÚS DE LA PASIÓN Y MARÍA SANTÍSIMA ",
+  "errores": [],
+  "avisos": [
+   "calles de la lista apenas pisadas: Plaza Jesús de la Pasión (22 m)"
+  ],
+  "calles": [
+   "Iglesia de los Santos Mártires",
+   "Plaza de los Mártires",
+   "Santa Lucía",
+   "Plaza Jesús de la Pasión",
+   "Santa Lucía",
+   "Granada",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de La Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Postigo de los Abades",
+   "Estación de Penitencia en la S.I.C.B",
+   "Patio de los Naranjos",
+   "Císter",
+   "San Agustín",
+   "Plazuela de Jesús Castellanos",
+   "Granada",
+   "Méndez Núñez",
+   "Uncibay",
+   "Casapalma",
+   "Cárcer",
+   "Álamos",
+   "Carretería",
+   "Nosquera",
+   "Comedias",
+   "Plaza de los Mártires",
+   "Iglesia de los Santos Mártires"
+  ],
+  "puertas": {
+   "salida": {
+    "lat": 36.7222582,
+    "lon": -4.4226126,
+    "nodo_osm": 8285778880,
+    "tipo": "yes",
+    "dir_osm": "Plaza de los Mártires Ciriaco y Paula 2",
+    "criterio": "puerta del templo que da a la calle del itinerario (a 15 m)",
+    "edificio": "Iglesia de los Santos Martires"
+   },
+   "entrada": {
+    "lat": 36.7222582,
+    "lon": -4.4226126,
+    "nodo_osm": 8285778880,
+    "tipo": "yes",
+    "dir_osm": "Plaza de los Mártires Ciriaco y Paula 2",
+    "criterio": "puerta del templo que da a la calle del itinerario (a 15 m)",
+    "edificio": "Iglesia de los Santos Martires"
+   }
+  },
+  "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), 111 m",
+  "salida": {
+   "lugar": "Iglesia de los Santos Mártires",
+   "osm": "OSM: Iglesia de los Santos Martires",
+   "aprox_m": 2
+  },
+  "idas_y_vueltas": [
+   "Calle Mártires",
+   "Plaza Jesús de la Pasión",
+   "Calle Císter"
+  ],
+  "retrocesos_eliminados": 0,
+  "largo_m": 2932,
+  "calles_no_recorridas": [
+   "Plaza Jesús de la Pasión (22 m)"
+  ],
+  "max_tramo_sin_calle_m": 111,
+  "ratio": 1.28,
+  "divide_en_catedral": true,
+  "media_vueltas": 6,
+  "horas_oficiales": {
+   "salida": [
+    "16:50"
+   ],
+   "tribuna": [
+    "17:35"
+   ],
+   "torre_sur": [
+    "19:35"
+   ],
+   "catedral": [
+    "19:45"
+   ],
+   "encierro": [
+    "23:25"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": false,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "dolores-del-puente-malaga": {
+  "id": "dolores-del-puente-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "ANTIGUA COFRADÍA DEL SANTÍSIMO CRISTO DEL PERDÓN Y NUESTRA 17:30h 19:50h 21:50h 22:00h 00:30h SEÑORA DE LOS DOLORES. 02:30h Parroquia de Santo Domingo (Barrio d",
+  "errores": [],
+  "avisos": [
+   "«Plaza del Carbón» no existe como calle en OSM: situada por Nominatim (5 m de la red)",
+   "«Plaza de Fray Alonso de Santo Tomás» no conectada en OSM: el trazado pasa por su centro (a 37 m de la red)",
+   "«Plaza de la Religiosa Filipense Dolores Márquez» no conectada en OSM: el trazado pasa por su centro (a 27 m de la red)",
+   "«Plaza Fray Alonso de Santo Tomás» no conectada en OSM: el trazado pasa por su centro (a 37 m de la red)",
+   "enlace de 13 m entre «Zurrado res» y «Plaza Imagen»: OSM no las une (por la red, 262 m)",
+   "enlace de 3 m entre «Polvorista» y «Llano de Doña Trinidad»: OSM no las une (por la red, 226 m)",
+   "enlace de 7 m entre «Pasillo de Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)",
+   "calles de la lista apenas pisadas: Plaza Imagen (17 m), Llano de Doña Trinidad (23 m)"
+  ],
+  "calles": [
+   "Iglesia Santo Domingo Guzmán",
+   "Plaza de Fray Alonso de Santo Tomás",
+   "Pasillo de Santo Domingo",
+   "Plaza de la Religiosa Filipense Dolores Márquez",
+   "Cerrojo",
+   "Martinete",
+   "Zurrado res",
+   "Plaza Imagen",
+   "Polvorista",
+   "Llano de Doña Trinidad",
+   "Álvaro de Bazán",
+   "Mármoles",
+   "Puente de la Aurora",
+   "Pasillo de Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza La Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Postigo de los Abades",
+   "Estación de Penitencia en la S.I.C.B",
+   "Patio de los Naranjos",
+   "Císter",
+   "San Agustín",
+   "Duque de la Victoria",
+   "Plaza del Siglo",
+   "Plaza del Carbón",
+   "Granada",
+   "Plaza de la Constitución",
+   "Especería",
+   "Nueva",
+   "Plaza de Félix Sáenz",
+   "Sagasta",
+   "Plaza Arriola",
+   "Atarazanas",
+   "Prim",
+   "Puente de la Esperanza",
+   "San Jacinto",
+   "Plaza Fray Alonso de Santo Tomás",
+   "Iglesia de Santo Domingo Guzmán"
+  ],
+  "puertas": {
+   "salida": {
+    "lat": 36.7194071,
+    "lon": -4.4258805,
+    "nodo_osm": 8278934451,
+    "tipo": "main",
+    "dir_osm": "Pasillo de Santo Domingo 5",
+    "criterio": "dirección de la sede (Pasillo de Santo Domingo 5)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7194071,
+    "lon": -4.4258805,
+    "nodo_osm": 8278934451,
+    "tipo": "main",
+    "dir_osm": "Pasillo de Santo Domingo 5",
+    "criterio": "dirección de la sede (Pasillo de Santo Domingo 5)",
+    "edificio": null
+   }
+  },
+  "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), 111 m",
+  "salida": {
+   "lugar": "Iglesia Santo Domingo Guzmán",
+   "osm": "Iglesia de Santo Domingo, 5, Pasillo de Santo Domingo, Perchel Norte, El Perchel, Centro, Málaga, Málaga-Costa del Sol, ",
+   "aprox_m": 8
+  },
+  "idas_y_vueltas": [
+   "Plaza Imagen",
+   "Plaza de Doña Trinidad",
+   "Calle Císter"
+  ],
+  "retrocesos_eliminados": 14,
+  "largo_m": 4221,
+  "calles_no_recorridas": [
+   "Plaza Imagen (17 m)",
+   "Llano de Doña Trinidad (23 m)"
+  ],
+  "max_tramo_sin_calle_m": 111,
+  "ratio": 1.24,
+  "divide_en_catedral": true,
+  "media_vueltas": 10,
+  "horas_oficiales": {
+   "salida": [
+    "17:30"
+   ],
+   "tribuna": [
+    "19:50"
+   ],
+   "torre_sur": [
+    "21:50"
+   ],
+   "catedral": [
+    "22:00"
+   ],
+   "encierro": [
+    "00:30"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": false,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": false,
+   "tiene_vuelta": true
+  }
+ },
+ "el-rico-malaga": {
+  "id": "el-rico-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "REAL, EXCELENTÍSIMA, MUY ILUSTRE Y VENERABLE COFRADÍA DE CULTO 17:55h 21:04h 23:04h 01:05h Y PROCESIÓN, DE NUESTRO PADRE JESÚS NAZARENO bajo la advocación de \"E",
+  "errores": [],
+  "avisos": [
+   "«Plaza del Carbón» no existe como calle en OSM: situada por Nominatim (5 m de la red)"
+  ],
+  "calles": [
+   "Casa Hermandad (salida de los Tronos)",
+   "Victoria",
+   "Plaza Jesús El Rico",
+   "Alcazabilla",
+   "Cister",
+   "Santa María",
+   "Molina Lario",
+   "Plaza del Obispo (Liberación)",
+   "Molina Lario",
+   "Plaza del Carbón",
+   "Plaza del Siglo",
+   "Granada",
+   "Plaza de la Constitución",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda principal",
+   "Plaza de la Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Santa María",
+   "San Agustín",
+   "Duque de la Victoria",
+   "Plaza del Siglo",
+   "Calle Calderería",
+   "Plaza de Uncibay",
+   "Casapalma",
+   "Cárcer",
+   "Álamos",
+   "Plaza de la Merced",
+   "Plaza Jesús El Rico",
+   "Victoria",
+   "Victoria",
+   "Casa Hermandad"
+  ],
+  "salida_nazarenos": "Los nazarenos salen de «Parroquia Santiago (salida de nazarenos)» y van por Granada, Plaza de la Merced, El Chiclanero, Pasaje Campos hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad.",
+  "torre_sur_derivada": "La lista oficial no cita la Torre Sur; la ficha da su hora (23:04). Se sitúa en Molina Lario tras la Plaza de la Marina y ahí empieza el regreso.",
+  "casa": {
+   "dir": "Calle Victoria 12, Málaga",
+   "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/"
+  },
+  "puertas": {
+   "salida": {
+    "lat": 36.7234189,
+    "lon": -4.4164204,
+    "nodo_osm": 5267835421,
+    "tipo": "yes",
+    "dir_osm": "Calle Victoria 12",
+    "criterio": "dirección de la sede (Calle Victoria 12)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7234189,
+    "lon": -4.4164204,
+    "nodo_osm": 5267835421,
+    "tipo": "yes",
+    "dir_osm": "Calle Victoria 12",
+    "criterio": "dirección de la sede (Calle Victoria 12)",
+    "edificio": null
+   }
+  },
+  "salida": {
+   "lugar": "Casa Hermandad (salida de los Tronos) (Calle Victoria 12)",
+   "osm": "12, Calle Victoria, La Victoria, Centro, Málaga, Málaga-Costa del Sol, Málaga, Andalucía, 29012, España",
+   "aprox_m": 7
+  },
+  "idas_y_vueltas": [
+   "Plaza Jesús El Rico",
+   "Plaza del Obispo"
+  ],
+  "retrocesos_eliminados": 12,
+  "largo_m": 3361,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 0,
+  "ratio": 1.18,
+  "divide_en_catedral": true,
+  "media_vueltas": 3,
+  "horas_oficiales": {
+   "salida": [
+    "17:55"
+   ],
+   "tribuna": [
+    "21:04"
+   ],
+   "torre_sur": [
+    "23:04"
+   ],
+   "encierro": [
+    "01:05"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "paloma-malaga": {
+  "id": "paloma-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "REAL, MUY ILUSTRE, VENERABLE Y ANTIGUA HERMANDAD Y COFRADÍA 20:15h 22:07h 00:12h 01:45h DE NAZARENOS DE NUESTRO PADRE DE LA PUENTE DEL CEDRÓN Y MARÍA SANTÍSIMA ",
+  "errores": [],
+  "avisos": [
+   "«Tribuna de los Pobres» no existe como calle en OSM: situada por Nominatim (0 m de la red)",
+   "«Plaza del Carbón» no existe como calle en OSM: situada por Nominatim (5 m de la red)",
+   "salida: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa",
+   "entrada: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa",
+   "enlace de 22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»: OSM no las une (por la red, 235 m)",
+   "enlace de 7 m entre «Pasillo de Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)"
+  ],
+  "calles": [
+   "Capilla de María Santísima. de la Paloma",
+   "Plaza de San Francisco",
+   "Carretería",
+   "Tribuna de los Pobres",
+   "Pasillo de Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de La Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Plaza del Obispo",
+   "Molina Lario",
+   "Plaza del Siglo",
+   "Plaza del Carbón",
+   "Calderería",
+   "Plaza de Uncibay",
+   "Méndez Núñez",
+   "Tejón y Rodríguez",
+   "Carretería",
+   "Plaza de San Francisco",
+   "Capilla de María Santísima de la Paloma"
+  ],
+  "puertas": {
+   "salida": null,
+   "entrada": null
+  },
+  "salida": {
+   "lugar": "Capilla de María Santísima. de la Paloma",
+   "osm": "Museo de Historia Militar de Málaga, 1, Plaza San Francisco, La Goleta, Centro, Málaga, Málaga-Costa del Sol, Málaga, An",
+   "aprox_m": 3
+  },
+  "retrocesos_eliminados": 2,
+  "largo_m": 2645,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 22,
+  "ratio": 1.16,
+  "divide_en_catedral": true,
+  "media_vueltas": 0,
+  "horas_oficiales": {
+   "salida": [
+    "20:15"
+   ],
+   "tribuna": [
+    "22:07"
+   ],
+   "torre_sur": [
+    "00:12"
+   ],
+   "encierro": [
+    "01:45"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "fusionadas-malaga": {
+  "id": "fusionadas-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "HERMANDAD SACRAMENTAL Y REALES COFRADÍAS FUSIONADAS DE 17:15h 18:00h 20:00h 20:10h 23:50h JESÚS DE AZOTES Y COLUMNA, STMO, CRISTO DE LA EXALTACIÓN, STMO, CRISTO",
+  "errores": [],
+  "avisos": [
+   "enlace de 7 m entre «Pasillo Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)"
+  ],
+  "calles": [
+   "Casa Hermandad",
+   "Pasillo Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza Constitución",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de la Marina",
+   "Molina Lario",
+   "Postigo de los Abades",
+   "Estación de Penitencia SICB",
+   "Patio de los Naranjos",
+   "Císter",
+   "San Agustín",
+   "Echegaray",
+   "Granada",
+   "Méndez Núñez",
+   "Plaza de Uncibay",
+   "Méndez Núñez",
+   "Comedias",
+   "Nosquera",
+   "Carretería",
+   "Pasillo Santa Isabel",
+   "Casa Hermandad"
+  ],
+  "casa": {
+   "dir": "Calle Postigo de San Juan 5, Málaga",
+   "punto": [
+    36.720642,
+    -4.423473
+   ],
+   "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/ (sede social en calle Postigo de San Juan, 5)"
+  },
+  "puertas": {
+   "salida": {
+    "lat": 36.7206427,
+    "lon": -4.4234733,
+    "nodo_osm": 3767195826,
+    "tipo": "yes",
+    "dir_osm": "Calle Postigo de San Juan 5",
+    "criterio": "dirección de la sede (Calle Postigo de San Juan 5)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7206427,
+    "lon": -4.4234733,
+    "nodo_osm": 3767195826,
+    "tipo": "yes",
+    "dir_osm": "Calle Postigo de San Juan 5",
+    "criterio": "dirección de la sede (Calle Postigo de San Juan 5)",
+    "edificio": null
+   }
+  },
+  "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), 111 m",
+  "salida": {
+   "lugar": "Casa Hermandad (Calle Postigo de San Juan 5)",
+   "osm": "punto fijado con fuente",
+   "aprox_m": 0
+  },
+  "idas_y_vueltas": [
+   "Pasillo de Santa Isabel",
+   "Calle Císter",
+   "Calle Granada"
+  ],
+  "retrocesos_eliminados": 0,
+  "largo_m": 3171,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 111,
+  "ratio": 1.23,
+  "divide_en_catedral": true,
+  "media_vueltas": 8,
+  "horas_oficiales": {
+   "salida": [
+    "17:15"
+   ],
+   "tribuna": [
+    "18:00"
+   ],
+   "torre_sur": [
+    "20:00"
+   ],
+   "catedral": [
+    "20:10"
+   ],
+   "encierro": [
+    "23:50"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "resucitado-malaga": {
+  "id": "resucitado-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "SANTÍSIMO CRISTO RESUCITADO Y MARÍA STMA REINA DE LOS CIELOS. 10:00h 11:05h 13:00h 15:15h Parroquia de San Julián",
+  "errores": [],
+  "avisos": [],
+  "calles": [
+   "Parroquia de San Julián",
+   "Nosquera",
+   "Santa Lucía",
+   "Granada",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de la Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Plaza del Obispo",
+   "Molina Lario",
+   "Santa María",
+   "San Agustín",
+   "Echegaray",
+   "Granada",
+   "Méndez Núñez",
+   "Comedias",
+   "Nosquera",
+   "Parroquia de San Julián"
+  ],
+  "torre_sur_derivada": "La lista oficial no cita la Torre Sur; la ficha da su hora (13:00). Se sitúa en Molina Lario tras la Plaza de la Marina y ahí empieza el regreso.",
+  "puertas": {
+   "salida": {
+    "lat": 36.7234133,
+    "lon": -4.4226583,
+    "nodo_osm": 5267734993,
+    "tipo": "main",
+    "dir_osm": "Calle Nosquera 17",
+    "criterio": "dirección de la sede (Iglesia de San Julián, Calle Nosquera 17)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7234133,
+    "lon": -4.4226583,
+    "nodo_osm": 5267734993,
+    "tipo": "main",
+    "dir_osm": "Calle Nosquera 17",
+    "criterio": "dirección de la sede (Iglesia de San Julián, Calle Nosquera 17)",
+    "edificio": null
+   }
+  },
+  "salida": {
+   "lugar": "Parroquia de San Julián",
+   "osm": "punto fijado con fuente",
+   "aprox_m": 9
+  },
+  "retrocesos_eliminados": 2,
+  "largo_m": 2322,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 0,
+  "ratio": 1.2,
+  "divide_en_catedral": true,
+  "media_vueltas": 0,
+  "horas_oficiales": {
+   "salida": [
+    "10:00"
+   ],
+   "tribuna": [
+    "11:05"
+   ],
+   "torre_sur": [
+    "13:00"
+   ],
+   "encierro": [
+    "15:15"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "humildad-y-paciencia-malaga": {
+  "id": "humildad-y-paciencia-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "VENERABLE HERMANDAD CARMELITA Y COFRADÍA DE NAZARENOS DEL 15:35h 19:35h 21:35h 21:45h 02:15h SANTÍSIMO CRISTO DE LA HUMILDAD Y PACIENCIA, MARÍA SANTÍSIMA DE DOL",
+  "errores": [],
+  "avisos": [
+   "«Plaza del Carbón» no existe como calle en OSM: situada por Nominatim (5 m de la red)",
+   "«Plazuela Virgen de Dolores y Esperanza» no conectada en OSM: el trazado pasa por su centro (a 30 m de la red)",
+   "«Plazuela Virgen de Dolores y Esperanza» no conectada en OSM: el trazado pasa por su centro (a 30 m de la red)",
+   "salida: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa",
+   "entrada: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa"
+  ],
+  "calles": [
+   "Casa Hermandad",
+   "Plazuela Virgen de Dolores y Esperanza",
+   "Pedro de Paz",
+   "la Unión",
+   "Edison",
+   "Mendívil",
+   "Eslava",
+   "Senador Francisco Román",
+   "La Serna",
+   "Ancha del Carmen",
+   "Avenida de la Aurora",
+   "Puente de la Misericordia",
+   "Linaje",
+   "Alameda Colón",
+   "Alameda Principal",
+   "Ordóñez",
+   "Prim",
+   "Plaza Arriola",
+   "Sagasta",
+   "Moreno Carbonero",
+   "Plaza Enrique García-Herrera",
+   "Fernán González",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de la Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Postigo de los Abades",
+   "Estación de Penitencia en la S.I.C.B",
+   "Patio de los Naranjos",
+   "Císter",
+   "San Agustín",
+   "Duque de la Victoria",
+   "Plaza del Siglo",
+   "Plaza del Carbón",
+   "Granada",
+   "Plaza de la Constitución",
+   "Especería",
+   "Nueva",
+   "Puerta del Mar",
+   "Córdoba",
+   "Vendeja",
+   "Linaje",
+   "Puente de la Misericordia",
+   "Avenida de la Aurora",
+   "Ancha del Carmen",
+   "la Serna",
+   "Senador Francisco Román",
+   "Eslava",
+   "Medívil",
+   "Edison",
+   "la Unión",
+   "Reboul",
+   "Plazuela Virgen de Dolores y Esperanza",
+   "Casa Hermandad"
+  ],
+  "casa": {
+   "dir": "Plazuela María Santísima de Dolores y Esperanza 1, Málaga",
+   "punto": [
+    36.7087845,
+    -4.4422065
+   ],
+   "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741"
+  },
+  "puertas": {
+   "salida": null,
+   "entrada": null
+  },
+  "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), 111 m",
+  "salida": {
+   "lugar": "Casa Hermandad (Plazuela María Santísima de Dolores y Esperanza 1)",
+   "osm": "punto fijado con fuente",
+   "aprox_m": 26
+  },
+  "idas_y_vueltas": [
+   "Calle Pedro de Paz",
+   "Calle Prim",
+   "Calle Císter"
+  ],
+  "retrocesos_eliminados": 6,
+  "largo_m": 8208,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 111,
+  "ratio": 1.22,
+  "divide_en_catedral": true,
+  "media_vueltas": 10,
+  "horas_oficiales": {
+   "salida": [
+    "15:35"
+   ],
+   "tribuna": [
+    "19:35"
+   ],
+   "torre_sur": [
+    "21:35"
+   ],
+   "catedral": [
+    "21:45"
+   ],
+   "encierro": [
+    "02:15"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": false,
+   "tiene_vuelta": true
+  }
+ },
+ "estudiantes-malaga": {
+  "id": "estudiantes-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "COFRADÍA DEL SANTÍSIMO CRISTO CORONADO DE ESPINAS Y NUESTRA 17:30h 21:40h 23:40h 01:00h SEÑORA DE GRACIA Y ESPERANZA. Iglesia del Santo Cristo (Centro)",
+  "errores": [],
+  "avisos": [
+   "«Plaza del Carbón» no existe como calle en OSM: situada por Nominatim (5 m de la red)",
+   "«Tribuna de los Pobres» no existe como calle en OSM: situada por Nominatim (0 m de la red)",
+   "enlace de 22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»: OSM no las une (por la red, 235 m)",
+   "enlace de 7 m entre «Pasillo de Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)"
+  ],
+  "calles": [
+   "Casa Hermandad",
+   "Alcazabilla",
+   "Plaza de la Aduana",
+   "Císter",
+   "Santa María",
+   "Molina Lario",
+   "Plaza del Obispo",
+   "Molina Lario",
+   "Plaza del Siglo",
+   "Plaza del Carbón",
+   "Calderería",
+   "Plaza de Uncibay",
+   "Méndez Núñez",
+   "Tejón y Rodríguez",
+   "Carretería",
+   "Tribuna de los Pobres",
+   "Pasillo de Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Constitución",
+   "Tribuna Principal",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de La Marina",
+   "Molina Lario",
+   "Torre Sur",
+   "Plaza del Obispo",
+   "Molina Lario",
+   "Santa María",
+   "Císter",
+   "Plaza de la Aduana",
+   "Alcazabilla",
+   "Casa Hermandad"
+  ],
+  "casa": {
+   "dir": "Calle Alcazabilla 3, Málaga",
+   "punto": [
+    36.720761,
+    -4.417485
+   ],
+   "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)"
+  },
+  "puertas": {
+   "salida": {
+    "lat": 36.7207058,
+    "lon": -4.4173985,
+    "nodo_osm": 8283205349,
+    "tipo": "main",
+    "dir_osm": "Calle Alcazabilla 3",
+    "criterio": "dirección de la sede (Calle Alcazabilla 3)",
+    "edificio": null
+   },
+   "entrada": {
+    "lat": 36.7207058,
+    "lon": -4.4173985,
+    "nodo_osm": 8283205349,
+    "tipo": "main",
+    "dir_osm": "Calle Alcazabilla 3",
+    "criterio": "dirección de la sede (Calle Alcazabilla 3)",
+    "edificio": null
+   }
+  },
+  "salida": {
+   "lugar": "Casa Hermandad (Calle Alcazabilla 3)",
+   "osm": "punto fijado con fuente",
+   "aprox_m": 18
+  },
+  "idas_y_vueltas": [
+   "Calle Alcazabilla"
+  ],
+  "retrocesos_eliminados": 16,
+  "largo_m": 3329,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 22,
+  "ratio": 1.14,
+  "divide_en_catedral": true,
+  "media_vueltas": 2,
+  "horas_oficiales": {
+   "salida": [
+    "17:30"
+   ],
+   "tribuna": [
+    "21:40"
+   ],
+   "torre_sur": [
+    "23:40"
+   ],
+   "encierro": [
+    "01:00"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": true,
+   "tiene_vuelta": true
+  }
+ },
+ "esperanza-malaga": {
+  "id": "esperanza-malaga",
+  "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "cabecera": "PONTIFICIA Y REAL ARCHICOFRADÍA DEL DULCE NOMBRE DE JESÚS 21:45h 23:10h 01:25h NAZARENO DEL PASO Y MARÍA SANTÍSIMA DE LA ESPERANZA. Basílica Menor del Paso y la",
+  "errores": [],
+  "avisos": [
+   "enlace de 7 m entre «Pasillo de Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)"
+  ],
+  "calles": [
+   "Basílica del Paso y la Esperanza",
+   "Glorieta Lola Carrera",
+   "calle Hilera",
+   "Puente de la Esperanza",
+   "Manuel José García Caparrós",
+   "Pasillo de Santa Isabel",
+   "Cisneros",
+   "Especería",
+   "Plaza de la Constitución",
+   "Marqués de Larios",
+   "Martínez",
+   "Atarazanas",
+   "Torregorda",
+   "Alameda Principal",
+   "Plaza de la Marina",
+   "Molina Lario",
+   "Torre sur",
+   "Strachan",
+   "Torre de Sandoval",
+   "Bolsa",
+   "Marqués de Larios",
+   "Marín García",
+   "Dr. Don Felipe Sánchez de la Cuesta y Alarcón",
+   "Antonio Baena Gómez",
+   "Martínez",
+   "Puerta del Mar",
+   "Plaza de Félix Saénz",
+   "Sagasta",
+   "Plaza de Arriola",
+   "Atarazanas",
+   "Prim",
+   "Puente de la Esperanza",
+   "Hilera",
+   "Glorieta de Lola Carrera",
+   "Basílica del Paso y la Esperanza"
+  ],
+  "puertas": {
+   "salida": {
+    "lat": 36.7180692,
+    "lon": -4.4267828,
+    "nodo_osm": 8278211145,
+    "tipo": "yes",
+    "dir_osm": "Calle San Jacinto 1",
+    "criterio": "dirección de la sede (Basílica de la Esperanza, Calle San Jacinto 1)",
+    "edificio": "Iglesia de la Esperanza"
+   },
+   "entrada": {
+    "lat": 36.7180692,
+    "lon": -4.4267828,
+    "nodo_osm": 8278211145,
+    "tipo": "yes",
+    "dir_osm": "Calle San Jacinto 1",
+    "criterio": "dirección de la sede (Basílica de la Esperanza, Calle San Jacinto 1)",
+    "edificio": "Iglesia de la Esperanza"
+   }
+  },
+  "salida": {
+   "lugar": "Basílica del Paso y la Esperanza",
+   "osm": "punto fijado con fuente",
+   "aprox_m": 17
+  },
+  "idas_y_vueltas": [
+   "Glorieta Lola Carrera",
+   "Calle Marín García",
+   "Calle Alarcón"
+  ],
+  "retrocesos_eliminados": 2,
+  "largo_m": 5815,
+  "calles_no_recorridas": [],
+  "max_tramo_sin_calle_m": 7,
+  "ratio": 1.17,
+  "divide_en_catedral": true,
+  "media_vueltas": 14,
+  "horas_oficiales": {
+   "salida": [
+    "21:45"
+   ],
+   "tribuna": [
+    "23:10"
+   ],
+   "torre_sur": [
+    "01:25"
+   ],
+   "encierro": [
+    "03:45"
+   ]
+  },
+  "puerta": {
+   "errores": true,
+   "calles_ok": true,
+   "salida_ok": true,
+   "salto_ok": true,
+   "ratio_ok": true,
+   "retrocesos_ok": false,
+   "tiene_vuelta": true
+  }
+ }
+}

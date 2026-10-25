@@ -1,0 +1,33 @@
+# GraphHopper 11.1 para el laboratorio de rutas (Ocho Capitales). Se ejecuta desde C:\Users\pablo\Herramientas-IA\graphhopper\
+#   java -Xmx3g -jar graphhopper-web-11.1.jar server config.yml
+graphhopper:
+  datareader.file: andalucia-latest.osm.pbf
+  graph.location: grafo-andalucia
+  graph.encoded_values: foot_access, foot_priority, foot_average_speed, foot_road_access, road_class, road_environment, country
+  import.osm.ignored_highways: motorway, trunk
+  profiles:
+    - name: procesion
+      custom_model_files: [procesion.json]
+  # Sin CH ni LM: las rutas son cortas y así se pueden usar pass_through, custom_model por petición y cambios de perfil.
+  profiles_ch: []
+  profiles_lm: []
+  prepare.min_network_size: 200
+  routing.non_ch.max_waypoint_distance: 50000
+  routing.max_visited_nodes: 2000000
+  custom_models.directory: .
+  graph.dataaccess.default_type: RAM_STORE
+server:
+  application_connectors:
+    - type: http
+      port: 8989
+      bind_host: localhost
+  request_log:
+    appenders: []
+  admin_connectors:
+    - type: http
+      port: 8990
+      bind_host: localhost
+logging:
+  appenders:
+    - type: console
+      threshold: INFO
