@@ -185,6 +185,13 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 ## 2026-10-25 · Alojamiento, dominio y velocidad (sesión de infraestructura)
 Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
 
+> **Punto exacto (pausa del 2026-10-25, ~23:10, por el límite de uso):** todo está en la rama `claude/alojamiento-velocidad-18a2ee`, rebasada sobre `origin/main` (8860e2e), **sin subir**. Falta, en este orden:
+> 1. `node site/build.mjs` y comprobar a 390 y 1440 px (portada, Sevilla, buscar, noticias) con el SW nuevo.
+> 2. Dudoso: Lighthouse dio `NO_NAVSTART` en 1 de 4 pasadas con el SW nuevo y en 0 de 4 sin él (Sevilla, PC). Repetir con la CPU libre; si se repite, probar sin `navigationPreload`.
+> 3. `git fetch` + `git rebase origin/main`, `git push origin HEAD:main` y **vigilar la primera ejecución de «Publicar Ocho Capitales»**: crea la rama `datos` a partir del historial (`tools/datos-rama.sh traer`, rama ausente) y GitHub Pages debe seguir en verde. Si falla, revertir el commit.
+> 4. Avisar a las demás sesiones: tras su próximo rebase, `site/data/news.json` y las agendas desaparecen de su copia; `node tools/traer-datos.mjs` las trae.
+> 5. Actualizar la nota del proyecto (E11/E12) desde la sesión principal: esta sesión no puede editarla.
+
 **Elegido: Cloudflare Pages como web principal; GitHub Pages sigue de copia** hasta que Cloudflare lleve una semana sin fallos.
 
 | | GitHub Pages (hoy) | Cloudflare Pages (plan gratis) |
