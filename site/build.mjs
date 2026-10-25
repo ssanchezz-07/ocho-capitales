@@ -900,7 +900,7 @@ ${section('Escucha su música', `<ul class="oc-linklist"><li><a class="oc-btn is
 }
 // De dónde sale cada dato de una marcha: el modelo único guarda, por campo, las fuentes que lo dan (con su URL).
 // La dedicatoria a una hermandad: contrastada (dos fuentes fiables), dedicada (una fiable) o sin verificar (solo el foro de 2008 o Wikipedia).
-const NOMBRE_F = { mdp: 'Marchas de Procesión', pm: 'Patrimonio Musical', fgr: 'Federación de Hermandades de Granada', wiki: 'Wikipedia', foro: 'foro de Patrimonio Musical (2008)', rev: 'revisión con fuente' };
+const NOMBRE_F = { mdp: 'Marchas de Procesión', pm: 'Patrimonio Musical', fgr: 'Federación de Hermandades de Granada', wiki: 'Wikipedia', foro: 'foro de Patrimonio Musical (2008)', bne: 'Biblioteca Nacional de España', rev: 'revisión con fuente' };
 const FICHA_MDP = new Set(['anio', 'dedicatoria', 'tipo', 'estreno', 'lugar', 'detalles']);
 function enlaceFuente(m, f, campo) {
   let url = (m.urls || {})[f] || (FUENTES_M[f] && FUENTES_M[f].url) || '';
@@ -911,6 +911,8 @@ function enlaceFuente(m, f, campo) {
 function fuentesMarcha(m) {
   const grupos = [['Título y compositor', ['titulo', 'autor'], true], ['Año', ['anio'], m.anio], ['Formación', ['formacion'], m.tipo], ['Dedicatoria', ['dedicatoria'], m.h || m.dedicatoria], ['Grabación', ['video'], m.video], ['Tipo, estreno y lugar', ['tipo', 'estreno', 'lugar', 'detalles'], m.tipoMarcha || m.estreno || m.lugar]];
   const filas = grupos.filter(([, , hay]) => hay).map(([et, cs]) => { const fs_ = [...new Set(cs.flatMap((c) => (m.fuentes || {})[c] || []))]; return fs_.length ? `<li><strong>${et}:</strong> ${fs_.map((f) => enlaceFuente(m, f, cs[0])).join(', ')}</li>` : ''; }).filter(Boolean);
+  // Partituras en la Biblioteca Nacional: una por edición o manuscrito
+  if ((m.partituras || []).length) filas.push(`<li><strong>Partitura:</strong> ${m.partituras.slice(0, 4).map((p) => `<a href="${esc(p.url)}" target="_blank" rel="noopener nofollow">Biblioteca Nacional${p.fecha ? ' (' + esc(p.fecha) + (p.tipo ? ', ' + esc(p.tipo.replace(/^Música /, '')) : '') + ')' : ''}</a>`).join(', ')}</li>`);
   return filas.length ? `<ul class="oc-fuentes">${filas.join('')}</ul>` : '';
 }
 const DEBIL = (m) => ((m.fuentes || {}).dedicatoria || []).filter((f) => f === 'foro' || f === 'wiki').map((f) => NOMBRE_F[f]).join(' y ') || 'una fuente sin contrastar';
@@ -943,7 +945,7 @@ function pageDirMarchas() {
   const PRIMERAS = 300;
   write('marchas/resto.html', items.slice(PRIMERAS).join(''));
   pages.splice(pages.indexOf('marchas/resto.html'), 1);
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas procesionales de España: las dedicadas a hermandades y las de la base de datos de Marchas de Procesión, con compositor, formación, año y a quién van dedicadas cuando se sabe, y enlace para escucharlas.</p></header>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir data-resto="marchas/resto.html" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Marchas procesionales</h1><p class="oc-lead">${MARCHAS.length} marchas procesionales de España (bases de datos de Marchas de Procesión, Patrimonio Musical y la Biblioteca Nacional, fichas de las hermandades), con compositor, formación, año y a quién van dedicadas cuando una fuente lo dice. Cada ficha enlaza sus fuentes.</p></header>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir data-resto="marchas/resto.html" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
   write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
 function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…') {

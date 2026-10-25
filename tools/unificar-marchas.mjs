@@ -55,7 +55,7 @@ const TABLA = { 'Banda de música': 'bandas-musica', 'Banda de cornetas y tambor
 const urlTabla = (f) => `https://www.marchasdeprocesion.com/p/base-datos-${TABLA[f] || 'bandas-musica'}.html`;
 const urlPm = (id) => `https://www.patrimoniomusical.com/bd-marcha-${id}`;
 const urlYt = (v) => `https://www.youtube.com/watch?v=${v}`;
-const FIABLE = new Set(['fgr', 'pm', 'mdp', 'rev']);
+const FIABLE = new Set(['fgr', 'pm', 'mdp', 'bne', 'rev']);
 const OFICIAL = new Set(['fgr', 'rev']);
 
 // ---------- lugares: ¿de qué ciudad habla una dedicatoria? ----------
@@ -205,6 +205,38 @@ for (const [j, e] of ESP.marchas.entries()) {
   fuente(r, 'formacion', 'mdp'); ficha(r); catPorClave.set(kDup, r);
 }
 
+// ---------- 2b. Biblioteca Nacional (datos.bne.es, datos abiertos): partituras con compositor ----------
+// Confirma título y compositor; si una nota de la ficha trae la dedicatoria, cuenta como fuente de la dedicatoria.
+// La fecha es la de la partitura (edición o manuscrito), no siempre la de composición: no se usa como año.
+const BNE = leer(path.join(DIR, 'sources/marchas-bne.json'), { marchas: [] });
+// Subcampos de la BNE: [título, subtítulo…, mención de responsabilidad]. El compositor sale de la mención (nombre completo)
+// si parece un nombre de persona y casa con el autor del registro («Quirós, Miguel (1941-)»); si no, del autor del registro.
+const nombreBne = (o) => {
+  const sc = o.subcampos || [];
+  const ult = sc.length >= 2 ? String(sc.at(-1)).replace(/\[|\]/g, '').replace(/^(m[uú]sica|letra|arreglo|instrumentaci[oó]n|original)( de| y letra de)?\s+/i, '').split(/\s*[;,]\s*|\s+y\s+/)[0].trim() : '';
+  const pareceNombre = ult && !/[:]|marcha|procesi|para |por |siglo|banda|piano|op\.|n[ºo]\s/i.test(ult) && ult.split(' ').length <= 6 && /^[A-ZÁÉÍÓÚÑ]/.test(ult);
+  const inv = String(o.autor_bne || '').replace(/\s*\([^)]*\)\s*$/, '').split(',').map((x) => x.trim()).reverse().join(' ').trim();
+  return pareceNombre && (!inv || mismoAutor(ult, inv)) ? ult : inv;
+};
+const tituloBne = (o) => String((o.subcampos || [])[0] || o.titulo || '').replace(/\s*[:;/].*$/, '').replace(/\s*\.\s*$/, '').replace(/^\[|\]$/g, '').trim();
+// Partituras que no están en el catálogo: solo entran si el título es de Semana Santa (la BNE también trae Corpus, piezas de piano francesas…)
+const COFRADE = /procesi|semana santa|palio|cofrad|cristo|virgen|nuestra se[nñ]ora|nuestro padre|jes[uú]s|mar[ií]a sant|esperanza|soledad|dolor|angustia|amargura|macaren|triana|exaltaci|expiraci|buena muerte|piedad|penas|l[aá]grimas|nazareno|cautivo|pasi[oó]n|crucifix|sepulcro|calvario|saeta|cruz/i;
+const EXTRANJERO = /\b(marche|processionnelle|pour|et|und|the|for|marcia|funebre)\b/i;
+const porTituloR = new Map(); for (const r of R) { const k = nt(r.titulo); (porTituloR.get(k) || porTituloR.set(k, []).get(k)).push(r); }
+const bnePorClave = new Map();
+for (const o of BNE.marchas) {
+  if (!o.leida || !o.subcampos) continue;
+  const titulo = tituloBne(o); const autor = nombreBne(o);
+  if (!titulo || !autor) continue;
+  const ded = (o.notas || []).find((n) => /dedicad|dedicatoria/i.test(n));
+  let r = (porTituloR.get(nt(titulo)) || []).find((x) => mismoAutor(x.autor, autor)) || bnePorClave.get(nt(titulo) + '|' + [...apellidos(autor)].sort().join(' '));
+  if (!r && (!COFRADE.test((o.subcampos || []).join(' ')) || EXTRANJERO.test((o.subcampos || []).join(' ')))) continue;
+  if (!r) { r = nuevo({ slug: darSlug(titulo + ' ' + autor), titulo, autor }); bnePorClave.set(nt(titulo) + '|' + [...apellidos(autor)].sort().join(' '), r); (porTituloR.get(nt(titulo)) || porTituloR.set(nt(titulo), []).get(nt(titulo))).push(r); }
+  fuente(r, 'titulo', 'bne', o.url); fuente(r, 'autor', 'bne');
+  (r.partituras ||= []).push({ url: o.url, fecha: o.fecha || o.anio || '', tipo: o.tipo || '' });
+  if (ded) r._deds = [...(r._deds || []), { texto: ded.replace(/^.*?(dedicad[ao]s?|dedicatoria)\s*:?\s*/i, ''), loc: '', f: 'bne', url: o.url }];
+}
+
 // ---------- 3. Patrimonio Musical: segunda fuente (título comparable + apellido) ----------
 const pmIdx = new Map();
 if (PM) for (const [id, f] of Object.entries(PM)) if (f && f.t) { const k = nt(f.t); (pmIdx.get(k) || pmIdx.set(k, []).get(k)).push({ id, ...f }); }
@@ -265,7 +297,10 @@ for (const r of R) {
       // Hace falta una frase específica: el nombre de la hermandad, dos palabras de un titular, o una sola palabra que no sea
       // advocación corriente (las Mercedes, el Rosario o los Ángeles tienen hermandades de gloria que no están en el portal)
       const tk = new Set(contenido(d.texto));
-      const especifica = porNombre || FRASES[h.slug].some((f) => f.every((w) => tk.has(w)) && (f.length >= 2 || (!COMUN.has(f[0]) && P.hermandades.filter((x) => x.ciudad === h.ciudad && x.slug !== h.slug && FRASES[x.slug].some((g) => g.includes(f[0]))).length === 0)));
+      // (sí vale una advocación corriente si la hermandad se llama así: «Virgen de la Amargura de Jaén» → La Amargura de Jaén)
+      const unica = (w) => P.hermandades.filter((x) => x.ciudad === h.ciudad && x.slug !== h.slug && (FRASES[x.slug].some((g) => g.includes(w)) || NOMBRES[x.slug].some((g) => g.includes(w)))).length === 0;
+      const seLlamaAsi = (w) => NOMBRES[h.slug].some((n) => n.length === 1 && n[0] === w);
+      const especifica = porNombre || FRASES[h.slug].some((f) => f.every((w) => tk.has(w)) && (f.length >= 2 || ((!COMUN.has(f[0]) || seLlamaAsi(f[0])) && unica(f[0]))));
       if (!especifica) { informe.dudas.push([r.slug, h.slug, 'dedicatoria poco específica: ' + d.texto]); continue; }
       (porH.get(h.slug) || porH.set(h.slug, []).get(h.slug)).push(d);
     }
@@ -346,6 +381,7 @@ const limpio = R.map((r) => {
   o.fuentes = r.fuentes; o.urls = r.urls;
   for (const c of ['retiradas', 'discrepancias', 'alias']) if (r[c].length) o[c] = r[c];
   if (r.revision) o.revision = r.revision;
+  if (r.partituras) o.partituras = r.partituras;
   return o;
 });
 const cuenta = (f) => limpio.filter(f).length;
@@ -367,6 +403,7 @@ const FUENTES = {
   fgr: { nombre: 'Federación de Hermandades y Cofradías de Granada (ficha oficial, «Patrimonio musical»)', url: 'https://www.semanasantagranada.org/', fiable: true, oficial: true },
   wiki: { nombre: 'Wikipedia (sección de marchas de la hermandad)', url: 'https://es.wikipedia.org/', fiable: false },
   foro: { nombre: 'Foro de Patrimonio Musical: «Marchas procesionales de Málaga» (2008)', url: 'https://www.patrimoniomusical.com/foro/viewtopic.php?t=1959', fiable: false },
+  bne: { nombre: 'Biblioteca Nacional de España (datos.bne.es, partituras)', url: 'https://datos.bne.es/tema/XX536674.html', fiable: true },
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
 };
 fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');

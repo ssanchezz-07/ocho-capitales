@@ -23,8 +23,14 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
 ## Pendientes de la auditoría (M)
 - M5 (títulos en varias hermandades), M6 (duplicados del catálogo: ahora se unen solos, con alias), M8 («El Amor», formación), M10 (años: regla nueva), M13 («Padre Nostro»), M14 (Soledad del Sepulcro), M15 (Carretería 1977/1979: oficial 1979), M16 («In Cer»).
 
-## Punto exacto para seguir
-- Bloque 1 (modelo único, comprobador, índice partido): ver Historial.
+## Punto exacto para seguir (pausa por presupuesto, 2026-10-25, límite de 5 h al 83 %)
+- Bloque 1 subido (`fd49e4e`). Lo de después está en la rama `claude/marchas-verificadas-188492`, **sin subir**:
+  - BNE: el importador lee ahora el tema «Marchas procesionales» (XX536674, 1.633 registros) y guarda los subcampos (título, subtítulo, mención de responsabilidad). Relanzar `PYTHONIOENCODING=utf-8 uvx --with curl_cffi python -I tools/importar-marchas-bne.py` (reanudable) hasta que lea las 1.643 fichas.
+  - YouTube: relanzar `PAUSA=1500 node tools/importar-base-marchas.mjs` (reanudable) hasta 3.394.
+  - Unificador: la BNE es fuente fiable (título y compositor; dedicatoria si la trae en las notas; la fecha no se usa como año) y las partituras de Semana Santa que no están en el catálogo entran como marchas nuevas. Regla nueva: una advocación corriente vale si la hermandad se llama así y es la única de su ciudad con ella (+67 enlaces revisados a ojo).
+  - Ficha de marcha: fila «Partitura» con los registros de la BNE. Texto de /marchas/ actualizado.
+- Verificadores (subagentes) lanzados antes de la pausa: sus resultados quedan en `auditoria/lotes/resultado-1..4.json` (las 181 «sin verificar», lotes en `sin-verificar-1..4.json`) y `resultado-casos.json` (M13-M16, M8, «El Novio de la Muerte», 4 conflictos y 13 años). **No están aplicados.**
+- Siguiente: (1) terminar las dos importaciones; (2) revisar a mano una muestra de cada resultado y pasar los veredictos con URL a `tools/sources/marchas-revision.json` (confirmar / retirar / corregir; sin-fuente no se apunta); (3) `node tools/unificar-marchas.mjs` y `node tools/comprobar-marchas.mjs <sitemap>` con 0 errores; (4) build, Playwright a 390 y 1440, subir el bloque 2; (5) revisar las 313 dedicatorias del catálogo dudosas (casan con varias hermandades o son poco específicas); (6) revisión final por subagente de 20 marchas al azar.
 
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
