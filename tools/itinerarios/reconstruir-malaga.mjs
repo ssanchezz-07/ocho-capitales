@@ -81,7 +81,44 @@ const fNom = path.join(DIR, 'cache', 'nominatim-malaga.json');
 const NOM = fs.existsSync(fNom) ? JSON.parse(fs.readFileSync(fNom, 'utf8')) : {};
 const LUG = osm.elements.filter((e) => e.tags?.name && e.geometry && !ANDABLE.test(e.tags.highway || '') && (e.tags.amenity === 'place_of_worship' || /iglesia|parroquia|basilica|capilla|ermita|santuario|oratorio|abadia/.test(sn(e.tags.name))));
 const centro = (e) => { const g = e.geometry.filter(Boolean); return [g.reduce((a, q) => a + q.lat, 0) / g.length, g.reduce((a, q) => a + q.lon, 0) / g.length]; };
-function temploOSM(nom) { const k = sn(nom); const e = LUG.find((x) => sn(x.tags.name) === k) || LUG.find((x) => sn(x.tags.name).includes(k) || k.includes(sn(x.tags.name))); if (!e) return null; const [lat, lon] = centro(e); return { lat, lon, osm: 'OSM: ' + e.tags.name }; }
+function temploOSM(nom) { const k = sn(nom); const e = LUG.find((x) => sn(x.tags.name) === k) || LUG.find((x) => sn(x.tags.name).includes(k) || k.includes(sn(x.tags.name))); if (!e) return null; const [lat, lon] = centro(e); return { lat, lon, osm: 'OSM: ' + e.tags.name, way: e }; }
+
+// ---- puertas: nodos entrance/door de OSM (cache/osm-malaga-puertas.json, Overpass; la mayoría con la dirección del Catastro) ----
+// Descarga (Overpass): [out:json];(node["entrance"](36.679,-4.481,36.767,-4.366);node["door"](36.679,-4.481,36.767,-4.366););out body;
+//                      way["amenity"="place_of_worship"](36.679,-4.481,36.767,-4.366);out body geom;
+const fPu = path.join(DIR, 'cache', 'osm-malaga-puertas.json');
+const PUERTAS = fs.existsSync(fPu) ? JSON.parse(fs.readFileSync(fPu, 'utf8')).elements.filter((e) => e.type === 'node') : [];
+const rejP = new Map();
+for (const e of PUERTAS) { [e.x, e.y] = X(e.lat, e.lon); const k = Math.floor(e.x / C) + ':' + Math.floor(e.y / C); (rejP.get(k) || rejP.set(k, []).get(k)).push(e); }
+const puertasCerca = (la, lo, r) => { const [x, y] = X(la, lo), cx = Math.floor(x / C), cy = Math.floor(y / C), R = Math.ceil(r / C), out = []; for (let a = -R; a <= R; a++) for (let b = -R; b <= R; b++) for (const e of rejP.get((cx + a) + ':' + (cy + b)) || []) if (Math.hypot(e.x - x, e.y - y) <= r) out.push(e); return out; };
+const anillo = (w) => w.geometry.filter(Boolean).map((g) => X(g.lat, g.lon));
+const dAnillo = (R, x, y) => { let m = Infinity; for (let i = 1; i < R.length; i++) { const [ax, ay] = R[i - 1], [bx, by] = R[i], dx = bx - ax, dy = by - ay, L = dx * dx + dy * dy, t = L ? Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / L)) : 0; m = Math.min(m, Math.hypot(x - ax - t * dx, y - ay - t * dy)); } return m; };
+const dentro = (R, x, y) => { let c = false; for (let i = 0, j = R.length - 1; i < R.length; j = i++) if ((R[i][1] > y) !== (R[j][1] > y) && x < (R[j][0] - R[i][0]) * (y - R[i][1]) / (R[j][1] - R[i][1]) + R[i][0]) c = !c; return c; };
+const dirPartes = (dir) => { const m = dir && dir.match(/((?:calle|plaza|plazuela|pasillo|pasaje|avenida|paseo|camino|carretera|alameda|barrera)\b[^,\d]*?)\s+(\d+)/i); return m ? { calle: clave(m[1]), num: m[2] } : null; };
+const numDe = (e) => String(e.tags['addr:housenumber'] || '').split(/[;,]/).flatMap((s) => { const r = s.match(/^(\d+)-(\d+)$/); return r ? Array.from({ length: Math.min(+r[2] - +r[1], 40) + 1 }, (_, i) => String(+r[1] + i)) : [s.trim()]; });
+// Puerta de una sede (salida o entrada). p: {punto, way?, dir?}; vecina: clave de la primera (o última) calle del itinerario.
+// Criterios, por orden: 1) puerta con la dirección de la sede; 2) puerta del edificio del templo sobre la calle por la que sale (entra);
+// 3) única puerta del edificio. Si nada encaja, null (se queda el punto del templo y se avisa).
+function puerta(p, vecina) {
+  let w = p.way;
+  const [px, py] = X(...p.punto);
+  if (!w && !p.dir?.match(/^calle|^plaz|^pasillo|^pasaje|^avenida|^paseo|^camino|^barrera/i)) w = LUG.find((e) => dentro(anillo(e), px, py)); // una casa hermandad no es el templo de al lado
+  const R = w ? anillo(w) : null;
+  const cands = R ? puertasCerca(p.punto[0], p.punto[1], 160).filter((e) => dAnillo(R, e.x, e.y) < 4) : [];
+  const mejor = (l) => l.sort((a, b) => (b.tags.entrance === 'main') - (a.tags.entrance === 'main') || Math.hypot(a.x - px, a.y - py) - Math.hypot(b.x - px, b.y - py))[0];
+  const res = (e, criterio) => ({ lat: e.lat, lon: e.lon, nodo_osm: e.id, tipo: e.tags.entrance || e.tags.door, dir_osm: [e.tags['addr:street'] || e.tags['addr:place'], e.tags['addr:housenumber']].filter(Boolean).join(' '), criterio, edificio: w ? w.tags.name : null });
+  const via = (e) => clave(e.tags['addr:street'] || e.tags['addr:place'] || '');
+  const dp = dirPartes(p.dir);
+  if (dp) { const m = PUERTAS.filter((e) => Math.hypot(e.x - px, e.y - py) < 400).filter((e) => via(e) === dp.calle && numDe(e).includes(dp.num)); if (m.length) return res(mejor(m), 'dirección de la sede (' + p.dir.replace(/, Málaga$/, '') + ')'); }
+  if (R && vecina) { const m = cands.filter((e) => via(e) === vecina); if (m.length) return res(mejor(m), 'puerta del templo con dirección en la calle del itinerario'); }
+  if (R && vecina && porClave.has(vecina)) { // puerta del edificio pegada (< 20 m) a la calle o plaza por la que sale
+    const dCalle = (e) => { let m = Infinity; for (const n of porClave.get(vecina)) for (const [v, , cl] of ady[n]) if (cl === vecina) m = Math.min(m, dAnillo([[nodos[n][2], nodos[n][3]], [nodos[v][2], nodos[v][3]]], e.x, e.y)); return m; };
+    const m = cands.map((e) => [e, dCalle(e)]).filter(([, d]) => d < 20).sort((a, b) => a[1] - b[1]);
+    if (m.length) return res(m[0][0], `puerta del templo que da a la calle del itinerario (a ${Math.round(m[0][1])} m)`);
+  }
+  if (R && cands.length === 1) return res(cands[0], 'única puerta del edificio en OSM');
+  return null;
+}
 async function lugarTemplo(txt) {
   { const al = ALIAS['@' + txt]; const nom = al && al.startsWith('osm:') ? al.slice(4) : (al ? null : txt.replace(/\(.*?\)/g, '').trim()); if (nom) { const r = temploOSM(nom); if (r) return r; } if (al && al.startsWith('osm:')) return null; }
   const q = (ALIAS['@' + txt] || txt).replace(/\(.*?\)/g, '').trim();
@@ -110,23 +147,34 @@ async function reconstruir(idx) {
   const toks0 = toks.flatMap((t) => (t === 'Molina Lario Torre Sur' ? ['Molina Lario', 'Torre Sur'] : [PRE[t] || t]));
   for (let i = 0; i < toks0.length - 1; i++) if (/^(dr|doctor|dra)$/i.test(toks0[i].replace('.', ''))) { toks0[i + 1] = 'Doctor ' + toks0[i + 1].replace(/^Dr\.?\s*/i, ''); toks0.splice(i, 1); }
   for (let i = 0; i < toks0.length; i++) toks0[i] = toks0[i].replace(/^Itinerario\s+/i, '');
+  // salto de línea del PDF dentro del templo final: «Plaza de San Francisco y Capilla de María» + «Santísima de la Paloma» (Paloma)
+  for (let i = 0; i < toks0.length - 1; i++) { const m = toks0[i].match(/^(.*?)\s+y\s+(Capilla de Mar[ií]a)$/i); if (m && /^sant[ií]sima/i.test(toks0[i + 1])) toks0.splice(i, 2, m[1], m[2] + ' ' + toks0[i + 1]); }
   // Si el itinerario empieza o acaba en una calle pero la hermandad tiene casa con punto fijado, la salida/entrada es la casa
   if (CASAS[id] && CASAS[id].punto) { const esT = (x) => TEMPLO.test(sn(x)); if (!esT(toks0[0])) toks0.unshift('Casa Hermandad'); if (!esT(toks0[toks0.length - 1])) toks0.push('Casa Hermandad'); }
+  // Sin marca de Catedral/Torre Sur en la lista (El Rico, Resucitado) pero con hora oficial de Torre Sur: la Torre Sur está en Molina Lario,
+  // y el paso que lleva esa hora es el primero por Molina Lario tras la Plaza de la Marina (después de la Tribuna). Se marca como derivado.
+  let torreDerivada = false;
+  if (!toks0.some((t) => /^(torre sur|estacion de penitencia|patio de los naranjos|s i c b|catedral)/.test(sn(t))) && H?.horas?.torre_sur?.length) {
+    const iM = toks0.findIndex((t) => /^plaza de la marina$/.test(sn(t)));
+    const iL = iM >= 0 ? toks0.findIndex((t, i) => i > iM && /^molina lario$/.test(sn(t))) : -1;
+    if (iL > 0) { toks0.splice(iL + 1, 0, 'Torre Sur'); torreDerivada = true; }
+  }
   toks.length = 0; toks.push(...toks0);
   const informe = { id, fuente: FUENTE_URL, cabecera: P.cabecera.replace(/\s+/g, ' ').slice(0, 160), errores: [], avisos: [], calles: toks };
+  if (torreDerivada) informe.torre_sur_derivada = 'La lista oficial no cita la Torre Sur; la ficha da su hora (' + H.horas.torre_sur[0] + '). Se sitúa en Molina Lario tras la Plaza de la Marina y ahí empieza el regreso.';
   const pasos = []; // {lugar, tipo:'calle'|'marca'|'templo', nodos:Set|null, punto:[la,lo]|null}
   for (let i = 0; i < toks.length; i++) {
     const t = toks[i], s = sn(t);
     if (MARCA.test(s)) { pasos.push({ lugar: t, tipo: 'marca' }); continue; }
     if (TEMPLO.test(s)) {
-      if ((i === 0 || i === toks.length - 1) && !s.startsWith('casa hermandad') && CASAS[id] && CASAS[id].punto) { const cs = CASAS[id]; pasos.push({ lugar: t, tipo: 'templo', punto: cs.punto, osm: 'punto fijado con fuente', fuente_casa: cs.fuente }); continue; }
+      if ((i === 0 || i === toks.length - 1) && !s.startsWith('casa hermandad') && CASAS[id] && CASAS[id].punto) { const cs = CASAS[id]; pasos.push({ lugar: t, tipo: 'templo', punto: cs.punto, osm: 'punto fijado con fuente', fuente_casa: cs.fuente, dir: cs.dir }); continue; }
       if (s.startsWith('casa hermandad')) {
         const cs = CASAS[id];
-        if (cs) { const L = cs.punto ? { lat: cs.punto[0], lon: cs.punto[1], osm: 'punto fijado con fuente' } : await lugarTemplo(cs.dir); if (L) { pasos.push({ lugar: t + ' (' + cs.dir.replace(/, Málaga$/, '') + ')', tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm, fuente_casa: cs.fuente }); informe.casa = cs; continue; } }
+        if (cs) { const L = cs.punto ? { lat: cs.punto[0], lon: cs.punto[1], osm: 'punto fijado con fuente' } : await lugarTemplo(cs.dir); if (L) { pasos.push({ lugar: t + ' (' + cs.dir.replace(/, Málaga$/, '') + ')', tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm, fuente_casa: cs.fuente, dir: cs.dir, way: L.way }); informe.casa = cs; continue; } }
         pasos.push({ lugar: t, tipo: 'casa' }); continue;
       }
       const L = await lugarTemplo(ALIAS['@' + t] || t); if (!L) { informe.avisos.push('templo no localizado en OSM/Nominatim: ' + t + ' (salida/entrada aproximadas en la primera/última calle)'); informe.templo_sin_localizar = true; pasos.push({ lugar: t, tipo: 'casa' }); continue; }
-      pasos.push({ lugar: t, tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm }); continue;
+      const al = ALIAS['@' + t]; pasos.push({ lugar: t, tipo: 'templo', punto: [L.lat, L.lon], osm: L.osm, way: L.way, dir: al && !al.startsWith('osm:') ? al : (CASAS[id] && /^(iglesia|parroquia|bas[ií]lica|capilla|ermita|santuario|oratorio)/i.test(CASAS[id].dir) ? CASAS[id].dir : null) }); continue;
     }
     const [k, ns, c] = buscarCalle(t);
     if (!k) {
@@ -149,6 +197,13 @@ async function reconstruir(idx) {
   const lejos = (p, vecino) => { if (p.tipo !== 'templo' || !vecino?.nodos) return false; const [x, y] = X(...p.punto); let m = Infinity; for (const n of vecino.nodos) m = Math.min(m, Math.hypot(nodos[n][2] - x, nodos[n][3] - y)); return m > 350; };
   if (lejos(pIni, seq[0])) { informe.avisos.push(`«${pIni.lugar}» localizado en ${pIni.osm?.slice(0, 50)} está a >350 m de «${seq[0].lugar}»: descartado, salida aproximada`); pIni.tipo = 'casa'; pIni.punto = null; }
   if (pFin !== pIni && lejos(pFin, seq.at(-1))) { informe.avisos.push(`«${pFin.lugar}» está a >350 m de «${seq.at(-1).lugar}»: descartado, entrada aproximada`); pFin.tipo = 'casa'; pFin.punto = null; }
+  // puerta exacta (nodo entrance/door de OSM) para la salida y la entrada
+  for (const [p, vec, rol] of [[pIni, seq[0], 'salida'], [pFin, seq.at(-1), 'entrada']]) {
+    if (p.tipo !== 'templo' || (rol === 'entrada' && p === pIni)) continue;
+    const pu = puerta(p, vec?.clave);
+    if (pu) { p.puntoTemplo = p.punto; p.punto = [pu.lat, pu.lon]; p.puerta = pu; (informe.puertas = informe.puertas || {})[rol] = pu; }
+    else { (informe.puertas = informe.puertas || {})[rol] = null; informe.avisos.push(`${rol}: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa`); }
+  }
   const ancla = (p) => { const [n, d] = cercano(...p.punto); return { n, d }; };
   const N = seq.length, S = nodos.length;
   const nodoPunto = seq.map((p) => (p.tipo === 'punto' ? cercano(...p.punto)[0] : -1));
