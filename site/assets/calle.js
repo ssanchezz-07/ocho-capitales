@@ -87,7 +87,7 @@
     g.appendChild(frag);
   }
   // Huecos de la pantalla tapados por los controles (derecha) y por el reloj (abajo): lo encuadrado queda a la vista
-  function margenes() { var ancho = mapa.clientWidth < 600; return { arriba: 20, abajo: ancho ? 120 : 96, izq: 20, der: 68 }; }
+  function margenes() { var ancho = mapa.clientWidth < 600; return { arriba: 20, abajo: ancho ? (sel ? Math.round(window.innerHeight * 0.42) : 120) : 96, izq: 20, der: !ancho && sel ? 400 : 68 }; }
   function encuadrar(xs, ys, animar) {
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
     var m = margenes(), W = Math.max(1, mapa.clientWidth), H = Math.max(1, mapa.clientHeight), iw = Math.max(80, W - m.izq - m.der), ih = Math.max(80, H - m.arriba - m.abajo);
@@ -170,8 +170,9 @@
   function dibujarRutas() {
     capas.rutas.textContent = ''; capas.marcas.textContent = '';
     var xs = [], ys = [];
+    var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'];
     delDia().forEach(function (h, i) {
-      var pts = h.t.paso || h.t.cruz;
+      var pts = h.t.paso || h.t.cruz; h.hc = PAL[i % PAL.length];
       // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
       // salidas extraordinarias: el regreso (posición 7) va aparte, con trazo discontinuo
       var d = '', da = '', dr = '', enR = false;
@@ -182,11 +183,12 @@
         else if (p[7] && q[7]) { dr += (enR ? '' : 'M' + q[0] + ' ' + q[1]) + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = true; }
         else { d += 'L' + p[0] + ' ' + p[1]; enR = false; }
       });
-      var r = el('path', { 'class': 'oc-c-ruta', d: d, 'data-s': h.s }); capas.rutas.appendChild(r);
-      if (dr) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-regreso', d: dr, 'data-s': h.s }));
-      if (da) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-aprox', d: da, 'data-s': h.s }));
+      var st = '--hc:' + h.hc;
+      var r = el('path', { 'class': 'oc-c-ruta', d: d, 'data-s': h.s, style: st }); capas.rutas.appendChild(r);
+      if (dr) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-regreso', d: dr, 'data-s': h.s, style: st }));
+      if (da) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-aprox', d: da, 'data-s': h.s, style: st }));
       // marca de la hermandad: su titular (o su inicial bordada) en un medallón con galón de oro
-      var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n });
+      var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n, style: '--hc:' + h.hc });
       g.appendChild(el('circle', { 'class': 'oc-c-halo', r: '30' }));
       g.appendChild(el('circle', { 'class': 'oc-c-galon', r: '22' }));
       if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', { href: h.img, x: '-19', y: '-19', width: '38', height: '38', 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' })); }
@@ -283,7 +285,7 @@
   function abrir(h) {
     sel = h; pintarFicha(h);
     ficha.hidden = false; requestAnimationFrame(function () { ficha.classList.add('is-open'); });
-    var p = enTramo(h.t.paso || h.t.cruz, T); if (p) { var w = Math.min(vb.w, 1800), r = vb.h / vb.w; var obj = { x: p.x - w / 2, y: p.y - w * r / 2, w: w, h: w * r }; if (calm) { vb = obj; aplicarVista(); } else { var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now(); (function s(t) { var k = Math.max(0, Math.min(1, (t - t0) / 480)), e = 1 - Math.pow(1 - k, 3); for (var q in obj) vb[q] = de[q] + (obj[q] - de[q]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(s); })(t0); } }
+    var rp = h.t.paso || h.t.cruz; if (rp && rp.length) encuadrar(rp.map(function (q) { return q[0]; }), rp.map(function (q) { return q[1]; }), !calm);
     $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { n.classList.toggle('is-sel', n.getAttribute('data-s') === h.s); });
     // la elegida, por encima de las demás (marca y recorrido), y el resto atenuado
     var gm = capas.marcas.querySelector('.oc-c-marca[data-s="' + h.s + '"]'); if (gm) capas.marcas.appendChild(gm);

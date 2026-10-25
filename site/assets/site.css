@@ -1666,3 +1666,17 @@ main ol:not([class]) { padding-left: 1.4em; }
   html:has(.oc-calle) .oc-cunao-btn { left: 12px; right: auto; width: 48px; height: 48px; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 92px); }
   html:has(.oc-calle) .oc-cunao-bocadillo { display: none; }
 }
+
+/* ── Plano: un recorrido cada vez (2026-10-25) ──
+   Por defecto solo se ven los puntos de cada hermandad según la hora; al elegir una se dibuja
+   su recorrido completo en su color propio (ida continua, regreso discontinuo). La ficha no tapa el plano. */
+.oc-c-ruta { display: none; }
+.oc-c-ruta.is-sel { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: 1; stroke-width: 4.5px; }
+.oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
+.oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
+.oc-calle-ficha { background: transparent; pointer-events: none; }
+.oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }
+@media (min-width: 600px) {
+  .oc-calle-ficha { align-items: stretch; justify-content: flex-end; }
+  .oc-calle-ficha .oc-sheet-panel { width: min(380px, 92vw); max-height: none; border-radius: 14px 0 0 14px; }
+}
