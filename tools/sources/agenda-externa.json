@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 60
+  "Prensa (texto de noticias)": 63
  },
  "eventos": [
   {
@@ -4048,6 +4048,36 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/la-hermandad-de-la-agonia-designa-a-ines-espejo-como-pregonera-e-irene-perez-como-cartelista-del-martes-santo-de-2027/"
+  },
+  {
+   "fecha": "2027-03-20",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de la Victoria volverá a procesionar en Linares el 20 de marzo de 2027, Sábado de Vísperas",
+   "nota": "",
+   "fuente": "Info Linares",
+   "url": "https://www.infolinares.com/victoria-procesion-linares-2027/"
+  },
+  {
+   "fecha": "2027-06-19",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "La Banda de Música de Huécija-Alicún acompañará a la Esperanza de Vélez-Málaga en su salida extraordinaria del 19 de junio de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-banda-de-musica-de-huecija-alicun-acompanara-a-la-esperanza-de-velez-malaga-en-su-salida-extraordinaria-del-19-de-junio-de-2027/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "SEVILLA VIVIRÁ UN FIN DE SEMANA DE PROCESIONES DE GLORIA CON LAS SALIDAS DE GUADALUPE, LA SIERRA Y EL ROSARIO DE LA MACARENA",
+   "nota": "",
+   "fuente": "Consejo General de Hermandades y Cofradías de Sevilla",
+   "url": "https://www.hermandades-de-sevilla.org/consejo/sevilla-vivira-un-fin-de-semana-de-procesiones-de-gloria-con-las-salidas-de-guadalupe-la-sierra-y-el-rosario-de-la-macarena/"
   },
   {
    "fecha": "2026-10-24",
