@@ -1182,16 +1182,25 @@ function datosCalle(c) {
     const tramos = {};
     for (const [nom, pts] of Object.entries(e.tramos)) {
       // tiempo de cada punto: la hora exacta si la hay; si no, la franja de la rejilla. Pasada la medianoche, +24 h
-      let t0 = null; const out = [];
-      for (const p of pts) {
-        if (p.lat == null) continue;
-        let t = minDia(p.hora) ?? minDia(p.fila); if (t == null) continue;
-        if (t0 == null) t0 = t; else if (t < t0 - 180) t += 1440;
-        const [x, y] = xy(p.lat, p.lon);
-        const q = [x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0];
+      // Recorridos reconstruidos desde el itinerario oficial (tools/itinerarios/reconstruir-malaga.mjs): solo unos pocos puntos llevan hora
+      // oficial; el resto se reparte por distancia andada entre dos horas oficiales (queda marcado como no oficial).
+      const out = [];
+      const pl = pts.filter((p) => p.lat != null);
+      const tt = pl.map((p) => minDia(p.hora) ?? minDia(p.fila));
+      let prevT = null; for (let i = 0; i < tt.length; i++) { if (tt[i] == null) continue; if (prevT != null && tt[i] < prevT - 180) tt[i] += 1440; prevT = tt[i]; }
+      const xyp = pl.map((p) => xy(p.lat, p.lon)), acum = [0];
+      for (let i = 1; i < xyp.length; i++) acum.push(acum[i - 1] + Math.hypot(xyp[i][0] - xyp[i - 1][0], xyp[i][1] - xyp[i - 1][1]));
+      for (let i = 0; i < tt.length; i++) if (tt[i] == null) {
+        let a0 = i - 1; while (a0 >= 0 && tt[a0] == null) a0--; let b0 = i + 1; while (b0 < tt.length && tt[b0] == null) b0++;
+        if (a0 >= 0 && b0 < tt.length) tt[i] = tt[a0] + (tt[b0] - tt[a0]) * ((acum[i] - acum[a0]) / ((acum[b0] - acum[a0]) || 1));
+      }
+      pl.forEach((p, i) => {
+        const t = tt[i]; if (t == null) return;
+        const [x, y] = xyp[i];
+        const q = [x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0, 0, p.tramo === 'regreso' ? 1 : 0];
         if (p.via && p.via.length) Object.defineProperty(q, 'via', { value: p.via.map(([la, lo]) => xy(la, lo)) });
         out.push(q);
-      }
+      });
       // la rejilla puede repetir franjas: el tiempo nunca retrocede
       for (let i = 1; i < out.length; i++) if (out[i][2] < out[i - 1][2]) out[i][2] = out[i - 1][2];
       // Vértices por calle (tools/itinerarios/enrutar.mjs) entre cada par de puntos oficiales: la hora se reparte según la
@@ -1203,7 +1212,7 @@ function datosCalle(c) {
         const cad = [[a[0], a[1]], ...a.via, [b[0], b[1]]], tramo = [0];
         for (let k = 1; k < cad.length; k++) tramo.push(tramo[k - 1] + Math.hypot(cad[k][0] - cad[k - 1][0], cad[k][1] - cad[k - 1][1]));
         const L = tramo[tramo.length - 1] || 1;
-        for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, 0, 1]);
+        for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, 0, 1, a[7] || 0]);
       }
       if (conCalles.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = conCalles;
     }
