@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-24",
+ "generado": "2026-10-25",
  "fuentes": {
   "InfoCofrade": 279,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
-  "Federación de Granada": 2,
+  "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 71
+  "Prensa (texto de noticias)": 60
  },
  "eventos": [
   {
@@ -3070,16 +3070,6 @@
    "url": "https://elitinerario.es/agenda/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "concierto",
-   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
-   "nota": "Ciudad de Granada",
-   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
-   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
-  },
-  {
    "fecha": "2026-11-22",
    "hora": "",
    "ciudad": "granada",
@@ -3670,16 +3660,6 @@
    "url": "https://www.granadahoy.com/semanasanta/semana-santa-granada-2027-semana-santa-granada-realejo-granada-semana-santa-realejo-semana-santa-realejo-granada-pregon-realejo-2027_0_2008289692.html"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "El sábado, 24 de octubre, se celebrará la Solemne Procesión de Alabanza en honor a San Rafael.",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
-  },
-  {
    "fecha": "2026-10-30",
    "hora": "",
    "ciudad": "cadiz",
@@ -3738,16 +3718,6 @@
    "nota": "",
    "fuente": "El Corto de Loja",
    "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "extraordinaria",
-   "titulo": "El Cristo de la Yedra recorrerá Montilla en una salida extraordinaria por el centenario de su incorporación al Viernes Santo",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/el-cristo-de-la-yedra-recorrera-montilla-en-una-salida-extraordinaria-por-el-centenario-de-su-incorporacion-al-viernes-santo/"
   },
   {
    "fecha": "2026-10-25",
@@ -3970,26 +3940,6 @@
    "url": "https://hermandadesdegranada.com/golgota/comunicado-traslados/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "extraordinaria",
-   "titulo": "Cómpeta sacará a La Borriquita y la Virgen de las Angustias en una procesión histórica",
-   "nota": "",
-   "fuente": "Diario SUR",
-   "url": "https://www.diariosur.es/axarquia/competa-sacara-borriquita-virgen-angustias-procesion-historica-20261019134121-nt.html"
-  },
-  {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "almeria",
-   "tipo": "procesion",
-   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
-  },
-  {
    "fecha": "2026-11-28",
    "hora": "",
    "ciudad": "almeria",
@@ -4020,16 +3970,6 @@
    "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
-  },
-  {
    "fecha": "2026-12-12",
    "hora": "",
    "ciudad": "malaga",
@@ -4038,26 +3978,6 @@
    "nota": "",
    "fuente": "Gente de Paz",
    "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
-  },
-  {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
-  },
-  {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "procesion",
-   "titulo": "Procesión de la Virgen de la Granada 2027: Horario e itinerario",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/virgen-de-la-granada-procesion-virgen-de-la-granada-virgen-de-la-granada-granada-virgen-granada-procesion-ermita-san-isidro-granada-san-isidro-granada_0_2008289795.html"
   },
   {
    "fecha": "2026-10-27",
@@ -4100,16 +4020,6 @@
    "url": "https://www.101tv.es/granada/los-traslados-de-kerygma-se-fijan-el-sabado-de-reflexion-y-quedan-pendientes-de-autorizacion-de-la-junta-electoral/"
   },
   {
-   "fecha": "2026-10-24",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "extraordinaria",
-   "titulo": "Así es el bastón de mando del Medinaceli, una joya de artesanía con sello algecireño",
-   "nota": "",
-   "fuente": "Málaga Hoy",
-   "url": "https://www.europasur.es/algeciras/asi-es-baston-mando-medinaceli-joya-artesania-sello-algecireno_0_2008314668.html"
-  },
-  {
    "fecha": "2027-02-26",
    "hora": "",
    "ciudad": "sevilla",
@@ -4118,6 +4028,106 @@
    "nota": "",
    "fuente": "ABC",
    "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/jose-manuel-pena-pregonero-hermandad-gitanos-20261024121741-nts_amp.html"
+  },
+  {
+   "fecha": "2027-02-05",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "pregon",
+   "titulo": "La Hermandad de la Agonía designa a Inés Espejo como pregonera e Irene Pérez como cartelista del Martes Santo de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-agonia-designa-a-ines-espejo-como-pregonera-e-irene-perez-como-cartelista-del-martes-santo-de-2027/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "concierto",
+   "titulo": "Gala del Centenario en el Auditorio de Caja Rural.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/gala-del-centenario-en-el-auditorio-de-caja-rural/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "El sábado, 24 de octubre, se celebrará la Solemne Procesión de Alabanza en honor a San Rafael.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "extraordinaria",
+   "titulo": "El Cristo de la Yedra recorrerá Montilla en una salida extraordinaria por el centenario de su incorporación al Viernes Santo",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/el-cristo-de-la-yedra-recorrera-montilla-en-una-salida-extraordinaria-por-el-centenario-de-su-incorporacion-al-viernes-santo/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Cómpeta sacará a La Borriquita y la Virgen de las Angustias en una procesión histórica",
+   "nota": "",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/axarquia/competa-sacara-borriquita-virgen-angustias-procesion-historica-20261019134121-nt.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "La Virgen de la Victoria de Linares procesionará el próximo Sábado de Pasión por las calles de Linares en una jornada histórica",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen de la Granada 2027: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/virgen-de-la-granada-procesion-virgen-de-la-granada-virgen-de-la-granada-granada-virgen-granada-procesion-ermita-san-isidro-granada-san-isidro-granada_0_2008289795.html"
+  },
+  {
+   "fecha": "2026-10-24",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Así es el bastón de mando del Medinaceli, una joya de artesanía con sello algecireño",
+   "nota": "",
+   "fuente": "Málaga Hoy",
+   "url": "https://www.europasur.es/algeciras/asi-es-baston-mando-medinaceli-joya-artesania-sello-algecireno_0_2008314668.html"
   },
   {
    "fecha": "2026-10-24",
@@ -4148,16 +4158,6 @@
    "nota": "",
    "fuente": "La Voz de Almería",
    "url": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/684212/horario-recorrido-procesion-rosario-macarena-sabado.html"
-  },
-  {
-   "fecha": "2027-02-05",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "pregon",
-   "titulo": "La Hermandad de la Agonía designa a Inés Espejo como pregonera e Irene Pérez como cartelista del Martes Santo de 2027",
-   "nota": "",
-   "fuente": "Gente de Paz",
-   "url": "https://www.gentedepaz.es/la-hermandad-de-la-agonia-designa-a-ines-espejo-como-pregonera-e-irene-perez-como-cartelista-del-martes-santo-de-2027/"
   },
   {
    "fecha": "2026-10-23",
@@ -4218,26 +4218,6 @@
    "nota": "",
    "fuente": "Ideal",
    "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
-  },
-  {
-   "fecha": "2026-10-21",
-   "hora": "",
-   "ciudad": "cadiz",
-   "tipo": "culto",
-   "titulo": "Comienza el triduo a los Patronos de Cádiz, San Servando y San Germán",
-   "nota": "",
-   "fuente": "Diario de Cádiz",
-   "url": "https://www.diariodecadiz.es/semana_santa/comienza-triduo-patronos-cadiz-san_0_2008297286.html"
-  },
-  {
-   "fecha": "2026-10-21",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "El traslado de los pasos se hará en cualquier caso por la mañana.",
-   "nota": "",
-   "fuente": "Ahora Granada",
-   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
   }
  ],
  "conflictos": []
