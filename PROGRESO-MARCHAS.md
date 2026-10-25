@@ -30,6 +30,7 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
   - Unificador: la BNE es fuente fiable (título y compositor; dedicatoria si la trae en las notas; la fecha no se usa como año) y las partituras de Semana Santa que no están en el catálogo entran como marchas nuevas. Regla nueva: una advocación corriente vale si la hermandad se llama así y es la única de su ciudad con ella (+67 enlaces revisados a ojo).
   - Ficha de marcha: fila «Partitura» con los registros de la BNE. Texto de /marchas/ actualizado.
 - Verificadores (subagentes) lanzados antes de la pausa: sus resultados quedan en `auditoria/lotes/resultado-1..4.json` (las 181 «sin verificar», lotes en `sin-verificar-1..4.json`) y `resultado-casos.json` (M13-M16, M8, «El Novio de la Muerte», 4 conflictos y 13 años). **No están aplicados.**
+- Al pausar: YouTube 5.231 de 7.225 fichas leídas (476 vídeos borrados); BNE 250 de 1.643 fichas. Commit `0b5b6e2`.
 - Siguiente: (1) terminar las dos importaciones; (2) revisar a mano una muestra de cada resultado y pasar los veredictos con URL a `tools/sources/marchas-revision.json` (confirmar / retirar / corregir; sin-fuente no se apunta); (3) `node tools/unificar-marchas.mjs` y `node tools/comprobar-marchas.mjs <sitemap>` con 0 errores; (4) build, Playwright a 390 y 1440, subir el bloque 2; (5) revisar las 313 dedicatorias del catálogo dudosas (casan con varias hermandades o son poco específicas); (6) revisión final por subagente de 20 marchas al azar.
 
 ## Historial
