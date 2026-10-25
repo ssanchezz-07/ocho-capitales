@@ -27,7 +27,7 @@ function dp(pts, tol) {
 }
 
 for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWith('osm-'))) {
-  const ciudad = f.slice(4, -5);
+  const ciudad = f.slice(4, -5); if (process.argv[2] && process.argv[2] !== ciudad) continue;
   const rec = path.join(RAIZ, 'site', 'data', 'recorridos', ciudad + '.json');
   if (!fs.existsSync(rec)) continue;
   const R = JSON.parse(fs.readFileSync(rec, 'utf8'));

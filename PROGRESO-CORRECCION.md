@@ -70,3 +70,9 @@ _Sesión Málaga · 2026-10-25 · uso semanal al empezar 80 %, al parar ~83 % (t
 3. Subagente: revisar 5 recorridos al azar; si falla uno, repetir todos.
 4. Después: marchas de Málaga (sección 4) e imágenes (sección 5), luego las otras capitales.
 5. Ojo: si se vuelve a ejecutar tools/itinerarios/enrutar.mjs o build-data sobre site/data/recorridos/malaga.json, pueden pisar estos trazados; los puntos nuevos llevan «tramo» (ida/regreso) y «rol» (salida/entrada).
+
+## Validación punta a punta de las 3 de prueba (tras la auditoría)
+- **Datos → plano:** `site/data/planos/malaga.json` es solo el fondo de calles (recortado al recuadro de los recorridos); regenerado hoy con `node tools/itinerarios/plano.mjs malaga` (el script ahora admite una ciudad como argumento para no tocar Sevilla). Los trazados se leen directamente de `site/data/recorridos/malaga.json` al compilar (`site/build.mjs`), no del plano.
+- **Compilado y servido:** `site/dist/data/calle/malaga.json` contiene los puntos nuevos (Pollinica 18 puntos, Pasión 46, Dolores del Puente 18; primer punto = último = templo/casa de salida).
+- **Capturas:** PNG de ida (rojo continuo) y regreso (azul discontinuo) en `tools/itinerarios/cache/trazas-malaga/` (pollinica, pasion, dolores-del-puente). La página «En la calle» de Málaga carga con el trazado nuevo, pero **hoy no tiene selector de hermandad** (sección 3 de las órdenes, sin hacer), así que no hay captura del plano de la web con una hermandad sola.
+- **Ida/regreso:** cada punto lleva `tramo: 'ida'|'regreso'`; el cliente actual solo distingue `paso` y `cruz`, por lo que el dibujo discontinuo del regreso necesita el trabajo de interfaz de la sección 3. Calles leídas mal del PDF corregidas: «Zurrado res» → Zurradores; «Plaza Imagen» existe en OSM como calle Imagen (comprobada).
