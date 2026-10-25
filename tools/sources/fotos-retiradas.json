@@ -1,0 +1,10 @@
+{
+ "nota": "Fotos retiradas tras abrir su ficha de Wikimedia Commons (descripción y categorías, con Playwright): no son de esa hermandad o la ficha no permite asegurarlo. Clave: nombre del archivo en Commons. Lo aplica site/build.mjs (foto principal y díptico). Comprobado el 2026-10-25.",
+ "retiradas": {
+  "Malaga_ig_Sn_Juan_Bautista_f11.2_-Cristo_de_los_Azotes_y_Columna_capilla.jpg": "Gitanos (Málaga), díptico: es Jesús de Azotes y Columna de las Fusionadas (categoría «Jesús de Azotes y Columna, Málaga»), no la Columna de Gitanos. Caso visto por Pablo.",
+  "Nuestra_Señora_de_los_Dolores._José_María_Ponsoda_Bravo.jpg": "Huerto (Málaga), díptico: la ficha dice «Nuestra Señora de los Dolores de Sierra de Yeguas (Málaga)», no la Concepción Dolorosa del Huerto. Caso visto por Pablo.",
+  "Penas_-_Trono_del_Cristo_2.jpg": "Salesianos (Málaga), díptico: categoría «Cofradía de las Penas (Málaga)», 2016 Holy Tuesday; es el trono del Cristo de las Penas (Martes Santo), no el Santo Cristo de las Penas de Salesianos.",
+  "Resucitado_Guion.jpg": "Resucitado (Málaga), foto principal: categoría «Archicofradía del Huerto (Málaga)»; es un guion del Huerto, no la cofradía del Resucitado.",
+  "La_Virgen_de_los_Dolores_en_su_trono.jpg": "Expiración (Málaga), foto principal: «La Virgen de los Dolores de Málaga en la Procesión Magna», sin hermandad ni categoría que diga que es la de la Expiración (hay varias Dolorosas de los Dolores en Málaga)."
+ }
+}

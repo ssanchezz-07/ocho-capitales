@@ -37,12 +37,18 @@ const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'u
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
 const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina });
-for (const h of D.hermandades) if (IMGX.hermandades[h.slug]) h.imagen = localImg('h', h.slug, IMGX.hermandades[h.slug]);
+// Fotos retiradas tras comprobar su ficha en Commons (tools/sources/fotos-retiradas.json): no salen ni como foto principal ni en el díptico
+const FRET_FILE = path.join(DIR, '..', 'tools', 'sources', 'fotos-retiradas.json');
+const FRET = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')).retiradas : {};
+const archivoCommons = (u) => { try { return decodeURIComponent(String(u || '').split('?')[0].split('/').pop()).replace(/^File:/, '').replace(/^\d+px-/, ''); } catch { return ''; } };
+const fotoRetirada = (x) => !!x && !!(FRET[archivoCommons(x.pagina)] || FRET[archivoCommons(x.src)]);
+for (const h of D.hermandades) if (fotoRetirada(h.imagen)) h.imagen = null;
+for (const h of D.hermandades) if (IMGX.hermandades[h.slug] && !fotoRetirada(IMGX.hermandades[h.slug])) h.imagen = localImg('h', h.slug, IMGX.hermandades[h.slug]);
 for (const c of D.capitales) if (IMGX.capitales[c.slug]) c.imagen = localImg('c', c.slug, IMGX.capitales[c.slug]);
 // Díptico de titulares (petición de Pablo, 2026-10-15): el Cristo y la Virgen juntos, o una foto en la que salgan los dos.
 for (const h of D.hermandades) {
   const t = (IMGX.titulares || {})[h.slug]; if (!t) continue;
-  const im = (tipo) => (t[tipo] ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: t[tipo].titular } : null);
+  const im = (tipo) => (t[tipo] && !fotoRetirada(t[tipo]) ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: t[tipo].titular } : null);
   h.diptico = { cristo: im('cristo'), virgen: im('virgen'), juntos: im('juntos'), sede: im('sede') };
   // La miniatura de las listas pasa a ser el Cristo (o la Virgen, o el cortejo) en lugar del escudo; la sede, solo si no hay otra
   const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen || (!h.imagen ? h.diptico.sede : null);
