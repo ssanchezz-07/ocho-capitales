@@ -171,9 +171,13 @@ async function reconstruir(idx) {
   }
   if (meta < 0) { informe.errores.push('sin camino que cumpla todo el itinerario en el grafo (revisar nombres/ conexiones)'); return { id, informe }; }
   const cad = []; for (let st = meta; st >= 0; st = par[st]) cad.push(st); cad.reverse();
-  const nodosRuta = cad.map((st) => Math.floor(st / (N + 1)));
+  // posproceso: eliminar retrocesos A→B→A (se recorta el tramo de ida y vuelta) y recordar dónde cae cada posición original
+  const bruto = cad.map((st) => Math.floor(st / (N + 1))), nodosRuta = [], mapa = [];
+  for (const n of bruto) { if (nodosRuta.length >= 2 && nodosRuta.at(-2) === n) nodosRuta.pop(); else if (nodosRuta.at(-1) !== n) nodosRuta.push(n); mapa.push(nodosRuta.length - 1); }
+  for (let i = mapa.length - 2; i >= 0; i--) mapa[i] = Math.min(mapa[i], mapa[i + 1]); // una posición sobrevive solo si no fue recortada después
+  informe.retrocesos_eliminados = bruto.length - nodosRuta.length;
   const trazo = []; // primera posición en que se cumple cada elemento de seq
-  { let kk = 0; trazo.push({ paso: pIni, nodo: nodosRuta[0], pos: 0 }); for (let i = 1; i < cad.length; i++) { const k2 = cad[i] % (N + 1); while (kk < k2) { trazo.push({ paso: seq[kk], nodo: nodosRuta[i], pos: i }); kk++; } } }
+  { let kk = 0; trazo.push({ paso: pIni, nodo: nodosRuta[0], pos: 0 }); for (let i = 1; i < cad.length; i++) { const k2 = cad[i] % (N + 1); while (kk < k2) { trazo.push({ paso: seq[kk], nodo: nodosRuta[mapa[i]], pos: mapa[i] }); kk++; } } }
   trazo.push({ paso: pFin, nodo: nodosRuta.at(-1), pos: nodosRuta.length - 1 });
   // comprobaciones automáticas ----------------------------------------------------------
   const largo = nodosRuta.reduce((s, n, i) => s + (i ? dm(n, nodosRuta[i - 1]) : 0), 0); informe.largo_m = Math.round(largo);
