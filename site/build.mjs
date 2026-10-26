@@ -437,7 +437,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>${esc(fullTitle)}</title>
-<meta name="description" content="${esc(description.slice(0, 300))}">
+<meta name="description" content="${esc(description.slice(0, 300))}">${TEMP_PRUEBA ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <link rel="canonical" href="${esc(canonical)}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
@@ -455,7 +455,7 @@ ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
 <body>
-<a class="oc-skip" href="#contenido">Saltar al contenido</a>
+<a class="oc-skip" href="#contenido">Saltar al contenido</a>${TEMP_PRUEBA ? `<p class="oc-prueba" style="position:sticky;top:0;z-index:300;margin:0;padding:6px 12px;background:#b3261e;color:#fff;font:600 13px/1.3 system-ui;text-align:center">Compilación de prueba: temporada forzada a «${TEMP_PRUEBA}» (OC_TEMPORADA). No se publica.</p>` : ''}
 <header class="oc-header">
   <div class="oc-wrap oc-header-in">
     <a class="oc-logo" href="${u()}" aria-label="${BRAND}, portada">${WORDMARK}</a>
@@ -579,6 +579,10 @@ function leadHoy() {
 // «fuera» o «semana-santa» lo fuerzan a mano. Los recorridos se conservan en los datos aunque no se enseñen.
 const TEMP_FILE = path.join(DIR, 'data', 'temporada.json');
 const TEMP = fs.existsSync(TEMP_FILE) ? JSON.parse(fs.readFileSync(TEMP_FILE, 'utf8')) : { modo: 'auto' };
+// Modo de prueba para comprobar los recorridos fuera de temporada (tools/itinerarios/rutas/probar-plano.py):
+// OC_TEMPORADA=semana-santa node site/build.mjs. Solo en compilaciones locales: marca cada página con una franja y «noindex».
+const TEMP_PRUEBA = /^(fuera|semana-santa|auto)$/.test(process.env.OC_TEMPORADA || '') ? process.env.OC_TEMPORADA : '';
+if (TEMP_PRUEBA) TEMP.modo = TEMP_PRUEBA;
 function ventanaSS(y) { const f = (TEMP.semana_santa || {})[y], e = easter(y); return f ? [f.desde, f.hasta] : [isoDay(e - 9 * 864e5), isoDay(e)]; }
 function temporada() {
   const N = madridNow(), hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio = hoy > ventanaSS(N.y)[1] ? N.y + 1 : N.y, [desde, hasta] = ventanaSS(anio);

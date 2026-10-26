@@ -1,9 +1,9 @@
 # Ocho Capitales · rutas: comprueba el plano «En la calle» de una capital con Playwright a 390 y 1440 px, sobre site/dist
-# (antes: node site/build.mjs). Levanta su propio servidor estático en un puerto libre.
+# (lo compila antes en modo de prueba, con la temporada forzada a Semana Santa). Levanta su propio servidor estático en un puerto libre.
 # Comprueba: que el plano trae todos los recorridos de site/data/recorridos/<c>.json; que cada jornada dibuja los suyos;
 # que cada recorrido tiene sus puntos oficiales repartidos por el trazado (no amontonados) y, si tiene regreso, con geometría;
 # sin errores en la consola ni desbordamiento horizontal. Capturas: capturas/<c>/plano-<ancho>.png
-# Uso: python -I probar-plano.py <capital>
+# Uso: python -I probar-plano.py <capital> [--sin-compilar]
 import json, os, sys, threading, functools, http.server, socketserver
 os.environ.setdefault('PLAYWRIGHT_BROWSERS_PATH', r'C:\Users\pablo\Herramientas-IA\ms-playwright')
 from playwright.sync_api import sync_playwright
@@ -12,6 +12,13 @@ SITE = os.path.join(D, '..', '..', '..', 'site')
 if len(sys.argv) < 2: sys.exit('Uso: python -I probar-plano.py <capital>')
 c = sys.argv[1]
 OUT = os.path.join(D, 'capturas', c); os.makedirs(OUT, exist_ok=True)
+# Fuera de temporada el plano solo enseña las extraordinarias vigentes: para ver todos los recorridos se compila en modo de prueba
+# (OC_TEMPORADA=semana-santa: franja roja y «noindex» en cada página; no se publica). --sin-compilar usa el dist que haya.
+if '--sin-compilar' not in sys.argv:
+    import subprocess
+    print('Compilando en modo de prueba (temporada forzada a Semana Santa)…', flush=True)
+    r = subprocess.run(['node', os.path.join(SITE, 'build.mjs')], env={**os.environ, 'OC_TEMPORADA': 'semana-santa'}, capture_output=True, text=True, encoding='utf8')
+    if r.returncode: sys.exit('La compilación ha fallado:\n' + (r.stderr or r.stdout)[-2000:])
 R = json.load(open(os.path.join(SITE, 'data', 'recorridos', c + '.json'), encoding='utf8'))
 CAL = json.load(open(os.path.join(SITE, 'dist', 'data', 'calle', c + '.json'), encoding='utf8'))
 ok = []
