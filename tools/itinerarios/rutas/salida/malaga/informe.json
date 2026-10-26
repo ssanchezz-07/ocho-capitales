@@ -24252,9 +24252,9 @@
    "16 m entre «Mármoles» y «ermita de Zamarrilla»",
    "10 m entre «ermita de Zamarrilla» y «Martínez Maldonado»"
   ],
-  "ms_graphhopper": 213,
+  "ms_graphhopper": 165,
   "largo_m": 2195,
-  "ms_total": 604
+  "ms_total": 231
  },
  "pasion-malaga-2026-11-14": {
   "id": "pasion-malaga-2026-11-14",
@@ -24823,8 +24823,8 @@
    "27 m entre «Parroquia de San Juan» y «Calderón de la Barca»",
    "4 m entre «Calderón de la Barca» y «Fernán González»"
   ],
-  "ms_graphhopper": 418,
+  "ms_graphhopper": 1066,
   "largo_m": 2762,
-  "ms_total": 1635
+  "ms_total": 1437
  }
 }
