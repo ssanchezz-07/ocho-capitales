@@ -1,0 +1,564 @@
+{
+ "capital": "cordoba",
+ "nombre": "Córdoba",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "entrada-triunfal-cordoba": {
+   "nombre": "Entrada Triunfal",
+   "templo": {
+    "nombre": "Parroquia de San Lorenzo",
+    "lat": 37.8885515,
+    "lon": -4.7689037,
+    "osm": "way/96116159",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/",
+    "fuente_coordenadas": "OpenStreetMap way 96116159"
+   },
+   "casa_hermandad": null
+  },
+  "penas-de-santiago-cordoba": {
+   "nombre": "Penas de Santiago",
+   "templo": {
+    "nombre": "Iglesia de Santiago",
+    "lat": 37.8818226,
+    "lon": -4.769323,
+    "osm": "way/87051385",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/",
+    "fuente_coordenadas": "OpenStreetMap way 87051385"
+   },
+   "casa_hermandad": null
+  },
+  "vera-cruz-cordoba": {
+   "nombre": "Vera Cruz",
+   "templo": {
+    "nombre": "Parroquia de San José y Espíritu Santo",
+    "lat": 37.8747259,
+    "lon": -4.7746835,
+    "osm": "way/95800300",
+    "nombre_osm": "Parroquia San José Espíritu Santo",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/",
+    "fuente_coordenadas": "OpenStreetMap way 95800300"
+   },
+   "casa_hermandad": null
+  },
+  "el-rescatado-cordoba": {
+   "nombre": "El Rescatado",
+   "templo": {
+    "nombre": "Iglesia de Nuestra Señora de Gracia y San Eulogio",
+    "lat": 37.8911003,
+    "lon": -4.7657455,
+    "osm": "way/97672976",
+    "nombre_osm": "Iglesia de Nuestra Señora de Gracia",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-rescatado/",
+    "fuente_coordenadas": "OpenStreetMap way 97672976"
+   },
+   "casa_hermandad": null
+  },
+  "la-esperanza-cordoba": {
+   "nombre": "La Esperanza",
+   "templo": {
+    "nombre": "Parroquia de San Andrés Apóstol",
+    "lat": 37.88598,
+    "lon": -4.7729434,
+    "osm": "way/96231885",
+    "nombre_osm": "Iglesia de San Andrés",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "fuente_coordenadas": "OpenStreetMap way 96231885"
+   },
+   "casa_hermandad": null
+  },
+  "el-amor-cordoba": {
+   "nombre": "El Amor",
+   "templo": {
+    "nombre": "Parroquia de Jesús Divino Obrero",
+    "lat": 37.8671759,
+    "lon": -4.7729512,
+    "osm": "way/317514244",
+    "nombre_osm": "Parroquia de Jesús Divino Obrero",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-amor/",
+    "fuente_coordenadas": "OpenStreetMap way 317514244"
+   },
+   "casa_hermandad": null
+  },
+  "el-huerto-cordoba": {
+   "nombre": "El Huerto",
+   "templo": {
+    "nombre": "Parroquia de San Francisco y San Eulogio",
+    "lat": 37.881669,
+    "lon": -4.7752346,
+    "osm": "way/90528565",
+    "nombre_osm": "Iglesia de San Francisco y San Eulogio",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "fuente_coordenadas": "OpenStreetMap way 90528565"
+   },
+   "casa_hermandad": null
+  },
+  "la-merced-cordoba": {
+   "nombre": "La Merced",
+   "templo": {
+    "nombre": "Iglesia de San Antonio de Padua",
+    "lat": 37.8966654,
+    "lon": -4.7672113,
+    "osm": "way/96794207",
+    "nombre_osm": "Iglesia de San Antonio de Padua",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-merced/",
+    "fuente_coordenadas": "OpenStreetMap way 96794207"
+   },
+   "casa_hermandad": null
+  },
+  "la-estrella-cordoba": {
+   "nombre": "La Estrella",
+   "templo": {
+    "nombre": "Parroquia de San Fernando",
+    "lat": 37.8943262,
+    "lon": -4.7860484,
+    "osm": "way/296534580",
+    "nombre_osm": "Parroquia de San Fernando",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "fuente_coordenadas": "OpenStreetMap way 296534580"
+   },
+   "casa_hermandad": null
+  },
+  "la-sentencia-cordoba": {
+   "nombre": "La Sentencia",
+   "templo": {
+    "nombre": "Parroquia de San Nicolás de la Villa",
+    "lat": 37.8844724,
+    "lon": -4.7822858,
+    "osm": "way/96273338",
+    "nombre_osm": "Iglesia de San Nicolás de la Villa",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/",
+    "fuente_coordenadas": "OpenStreetMap way 96273338"
+   },
+   "casa_hermandad": {
+    "dir": "Pasaje Saravia 2, Córdoba",
+    "lat": 37.882314,
+    "lon": -4.781026,
+    "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+    "fuente_coordenadas": "punto de casas-hermandad-cordoba.json (sin coordenadas en la fuente: situado por su dirección)"
+   }
+  },
+  "via-crucis-cordoba": {
+   "nombre": "Vía Crucis",
+   "templo": {
+    "nombre": "Parroquia de San Juan y Todos los Santos",
+    "lat": 37.8825801,
+    "lon": -4.7834864,
+    "osm": "way/96231864",
+    "nombre_osm": "Iglesia de San Juan y Todos los Santos",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/",
+    "fuente_coordenadas": "OpenStreetMap way 96231864"
+   },
+   "casa_hermandad": null
+  },
+  "animas-cordoba": {
+   "nombre": "Ánimas",
+   "templo": {
+    "nombre": "Iglesia de San Lorenzo",
+    "lat": 37.8885515,
+    "lon": -4.7689037,
+    "osm": "way/96116159",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+    "fuente_coordenadas": "OpenStreetMap way 96116159"
+   },
+   "casa_hermandad": null
+  },
+  "la-agonia-cordoba": {
+   "nombre": "La Agonía",
+   "templo": {
+    "nombre": "Parroquia de Santa Victoria",
+    "lat": 37.909894,
+    "lon": -4.779361,
+    "osm": "node/1118777167",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/",
+    "fuente_coordenadas": "OpenStreetMap node/1118777167 «Parroquia de Santa Victoria» (Calle Párroco Agustín Molina 22); es la del barrio, no la iglesia de Santa Victoria del centro (la rejilla oficial 2026 acaba en Santas Flora y María, junto a ella)"
+   },
+   "casa_hermandad": null
+  },
+  "la-universitaria-cordoba": {
+   "nombre": "La Universitaria",
+   "templo": {
+    "nombre": "Iglesia de San Pedro de Alcántara",
+    "lat": 37.8797062,
+    "lon": -4.7819304,
+    "osm": "way/286801139",
+    "nombre_osm": "Iglesia de San Pedro de Alcántara",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-universitaria/",
+    "fuente_coordenadas": "OpenStreetMap way 286801139"
+   },
+   "casa_hermandad": null
+  },
+  "la-sangre-cordoba": {
+   "nombre": "La Sangre",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Monasterio Cisterciense de la Inmaculada Concepción»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-buen-suceso-cordoba": {
+   "nombre": "El Buen Suceso",
+   "templo": {
+    "nombre": "Iglesia de San Andrés",
+    "lat": 37.88598,
+    "lon": -4.7729434,
+    "osm": "way/96231885",
+    "nombre_osm": "Iglesia de San Andrés",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "fuente_coordenadas": "OpenStreetMap way 96231885"
+   },
+   "casa_hermandad": null
+  },
+  "la-santa-faz-cordoba": {
+   "nombre": "La Santa Faz",
+   "templo": {
+    "nombre": "Parroquia de San Juan y Todos los Santos",
+    "lat": 37.8825801,
+    "lon": -4.7834864,
+    "osm": "way/96231864",
+    "nombre_osm": "Iglesia de San Juan y Todos los Santos",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-santa-faz/",
+    "fuente_coordenadas": "OpenStreetMap way 96231864"
+   },
+   "casa_hermandad": null
+  },
+  "el-prendimiento-cordoba": {
+   "nombre": "El Prendimiento",
+   "templo": {
+    "nombre": "Santuario de María Auxiliadora",
+    "lat": 37.8885662,
+    "lon": -4.7678691,
+    "osm": "way/1321521750",
+    "nombre_osm": "Santuario Maria Auxiliadora",
+    "fuente": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 1321521750"
+   },
+   "casa_hermandad": null
+  },
+  "el-perdon-cordoba": {
+   "nombre": "El Perdón",
+   "templo": {
+    "nombre": "Iglesia de San Roque - Buen Pastor",
+    "lat": 37.880519,
+    "lon": -4.781312,
+    "osm": "node/13060087577",
+    "fuente": "Ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+    "fuente_coordenadas": "Dirección «Calle Buen Pastor 17» (dato de Pablo Sánchez, 2026-10-26); puerta de OpenStreetMap node/13060087577 con esa dirección. El edificio no está en OSM."
+   },
+   "casa_hermandad": null
+  },
+  "el-calvario-cordoba": {
+   "nombre": "El Calvario",
+   "templo": {
+    "nombre": "Real Parroquia de San Lorenzo Mártir",
+    "lat": 37.8885515,
+    "lon": -4.7689037,
+    "osm": "way/96116159",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-calvario/",
+    "fuente_coordenadas": "OpenStreetMap way 96116159"
+   },
+   "casa_hermandad": null
+  },
+  "la-paz-cordoba": {
+   "nombre": "La Paz",
+   "templo": {
+    "nombre": "Iglesia conventual del Santo Ángel",
+    "lat": 37.8880625,
+    "lon": -4.7768984,
+    "osm": "way/96268496",
+    "nombre_osm": "Iglesia Conventual del Santo Ángel",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/",
+    "fuente_coordenadas": "OpenStreetMap way 96268496"
+   },
+   "casa_hermandad": null
+  },
+  "la-misericordia-cordoba": {
+   "nombre": "La Misericordia",
+   "templo": {
+    "nombre": "Basílica Menor de San Pedro",
+    "lat": 37.882631,
+    "lon": -4.771848,
+    "osm": "relation/20017709",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+    "fuente_coordenadas": "OpenStreetMap relation/20017709 «Basílica de San Pedro» (centro por Nominatim)"
+   },
+   "casa_hermandad": null
+  },
+  "la-pasion-cordoba": {
+   "nombre": "La Pasión",
+   "templo": {
+    "nombre": "Iglesia de Nuestra Señora de la Paz",
+    "lat": 37.8761908,
+    "lon": -4.7844091,
+    "osm": "way/425999353",
+    "nombre_osm": "Parroquia de Nuestra Señora de la Paz",
+    "fuente": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/",
+    "fuente_coordenadas": "OpenStreetMap way 425999353"
+   },
+   "casa_hermandad": null
+  },
+  "la-piedad-cordoba": {
+   "nombre": "La Piedad",
+   "templo": {
+    "nombre": "Parroquia de San Antonio María Claret",
+    "lat": 37.882617,
+    "lon": -4.821774,
+    "fuente": "Ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+    "fuente_coordenadas": "Dirección de la Diócesis de Córdoba, «Patio Aneto, s/n» (https://www.diocesisdecordoba.es/parroquias/san-antonio-maria-claret); centro de la Plaza Patio Pico Aneto en OpenStreetMap (ways 1199751768 y 1249408938). El edificio no está en OSM: punto aproximado."
+   },
+   "casa_hermandad": null
+  },
+  "jesus-nazareno-cordoba": {
+   "nombre": "Jesús Nazareno",
+   "templo": {
+    "nombre": "Iglesia Hospital de Jesús Nazareno",
+    "lat": 37.888282,
+    "lon": -4.771465,
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+    "fuente_coordenadas": "Wikidata Q97626720 «Iglesia y Hospital de Jesús Nazareno» (https://www.wikidata.org/wiki/Q97626720); no está en OSM con nombre"
+   },
+   "casa_hermandad": null
+  },
+  "la-caridad-cordoba": {
+   "nombre": "La Caridad",
+   "templo": {
+    "nombre": "Parroquia de San Francisco y San Eulogio",
+    "lat": 37.881669,
+    "lon": -4.7752346,
+    "osm": "way/90528565",
+    "nombre_osm": "Iglesia de San Francisco y San Eulogio",
+    "fuente": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-caridad/",
+    "fuente_coordenadas": "OpenStreetMap way 90528565"
+   },
+   "casa_hermandad": null
+  },
+  "jesus-caido-cordoba": {
+   "nombre": "Jesús Caído",
+   "templo": {
+    "nombre": "Convento de San Cayetano",
+    "lat": 37.8929438,
+    "lon": -4.774852,
+    "osm": "way/1429060498",
+    "nombre_osm": "Iglesia de San Cayetano",
+    "fuente": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-caido/",
+    "fuente_coordenadas": "OpenStreetMap way 1429060498"
+   },
+   "casa_hermandad": null
+  },
+  "la-cena-cordoba": {
+   "nombre": "La Cena",
+   "templo": {
+    "nombre": "Parroquia Beato Álvaro de Córdoba",
+    "lat": 37.876706,
+    "lon": -4.798055,
+    "osm": "relation/17140024",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+    "fuente_coordenadas": "OpenStreetMap relation/17140024 «Iglesia Parroquial Beato Álvaro de Córdoba» (centro por Nominatim)"
+   },
+   "casa_hermandad": null
+  },
+  "las-angustias-cordoba": {
+   "nombre": "Las Angustias",
+   "templo": {
+    "nombre": "Iglesia de San Agustín",
+    "lat": 37.8893605,
+    "lon": -4.771646,
+    "osm": "way/100729013",
+    "nombre_osm": "Iglesia Conventual de San Agustin",
+    "fuente": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-las-angustias/",
+    "fuente_coordenadas": "OpenStreetMap way 100729013"
+   },
+   "casa_hermandad": null
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba": {
+   "nombre": "Cristo de Gracia («El Esparraguero»)",
+   "templo": {
+    "nombre": "Parroquia de Gracia",
+    "lat": 37.8911003,
+    "lon": -4.7657455,
+    "osm": "way/97672976",
+    "nombre_osm": "Iglesia de Nuestra Señora de Gracia",
+    "fuente": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/",
+    "fuente_coordenadas": "OpenStreetMap way 97672976"
+   },
+   "casa_hermandad": null
+  },
+  "la-buena-muerte-cordoba": {
+   "nombre": "La Buena Muerte",
+   "templo": {
+    "nombre": "Real Colegiata de San Hipólito",
+    "lat": 37.885863,
+    "lon": -4.783171,
+    "osm": "node/13471459220",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+    "fuente_coordenadas": "OpenStreetMap node/13471459220 «Colegiata de San Hipólito»"
+   },
+   "casa_hermandad": null
+  },
+  "la-soledad-cordoba": {
+   "nombre": "La Soledad",
+   "templo": {
+    "nombre": "Iglesia de Santa María de Guadalupe",
+    "lat": 37.8933541,
+    "lon": -4.7604741,
+    "osm": "way/556809635",
+    "nombre_osm": "Franciscanos",
+    "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/",
+    "fuente_coordenadas": "OpenStreetMap way 556809635"
+   },
+   "casa_hermandad": null
+  },
+  "la-expiracion-cordoba": {
+   "nombre": "La Expiración",
+   "templo": {
+    "nombre": "Real Iglesia de San Pablo",
+    "lat": 37.885441,
+    "lon": -4.775329,
+    "osm": "way/551114844",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+    "fuente_coordenadas": "OpenStreetMap way/551114844 «Iglesia de San Pablo» (el edificio de la iglesia; la otra vía con ese nombre, way/96231890, no lo es)"
+   },
+   "casa_hermandad": null
+  },
+  "el-descendimiento-cordoba": {
+   "nombre": "El Descendimiento",
+   "templo": {
+    "nombre": "Parroquia de San José y Espíritu Santo",
+    "lat": 37.8747259,
+    "lon": -4.7746835,
+    "osm": "way/95800300",
+    "nombre_osm": "Parroquia San José Espíritu Santo",
+    "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-descendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 95800300"
+   },
+   "casa_hermandad": null
+  },
+  "la-conversion-cordoba": {
+   "nombre": "La Conversión",
+   "templo": {
+    "nombre": "Iglesia del Rosario",
+    "lat": 37.8811324,
+    "lon": -4.8100005,
+    "osm": "way/95920982",
+    "nombre_osm": "Nuestra Señora del Rosario",
+    "fuente": "https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/",
+    "fuente_coordenadas": "OpenStreetMap way 95920982"
+   },
+   "casa_hermandad": null
+  },
+  "los-dolores-cordoba": {
+   "nombre": "Los Dolores",
+   "templo": {
+    "nombre": "Iglesia-Hospital de San Jacinto",
+    "lat": 37.887927,
+    "lon": -4.777196,
+    "osm": "relation/7662878",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf) («Santuario de Nuestra Señora de los Dolores»)",
+    "fuente_coordenadas": "OpenStreetMap relation/7662878 «Convento de San Jacinto. Virgen de los Dolores» (centro por Nominatim)"
+   },
+   "casa_hermandad": null
+  },
+  "santo-sepulcro-cordoba": {
+   "nombre": "Santo Sepulcro",
+   "templo": {
+    "nombre": "Iglesia del Colegio de Santa Catalina",
+    "lat": 37.883694,
+    "lon": -4.778512,
+    "osm": "way/96268499",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf) («Iglesia (La Compañía)»)",
+    "fuente_coordenadas": "OpenStreetMap way/96268499 «Iglesia del Salvador y Santo Domingo de Silos» (La Compañía, la iglesia del antiguo Colegio de Santa Catalina)"
+   },
+   "casa_hermandad": null
+  },
+  "el-resucitado-cordoba": {
+   "nombre": "El Resucitado",
+   "templo": {
+    "nombre": "Iglesia de Santa Marina de Aguas Santas",
+    "lat": 37.8899535,
+    "lon": -4.7746384,
+    "osm": "way/96804854",
+    "nombre_osm": "Iglesia de Santa Marina de Aguas Santas",
+    "fuente": "https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/",
+    "fuente_coordenadas": "OpenStreetMap way 96804854"
+   },
+   "casa_hermandad": null
+  },
+  "presentacion-al-pueblo-cordoba": {
+   "nombre": "Presentación al Pueblo",
+   "templo": {
+    "nombre": "Iglesia Parroquial de San Vicente Ferrer",
+    "lat": 37.8887511,
+    "lon": -4.7551482,
+    "osm": "way/654511412",
+    "nombre_osm": "Parroquia de San Vicente Ferrer",
+    "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/",
+    "fuente_coordenadas": "OpenStreetMap way 654511412"
+   },
+   "casa_hermandad": null
+  },
+  "lagrimas-cordoba": {
+   "nombre": "Lágrimas",
+   "templo": {
+    "nombre": "Iglesia de Nuestra Señora de la Asunción",
+    "lat": 37.8907337,
+    "lon": -4.8055224,
+    "osm": "way/96007191",
+    "nombre_osm": "Iglesia de Nuestra Señora de la Asunción",
+    "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/",
+    "fuente_coordenadas": "OpenStreetMap way 96007191"
+   },
+   "casa_hermandad": null
+  },
+  "dolores-de-alcolea-cordoba": {
+   "nombre": "Dolores de Alcolea",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora de los Ángeles",
+    "lat": 37.9329001,
+    "lon": -4.6737853,
+    "osm": "way/565860372",
+    "nombre_osm": "Parroquia de Nuestra Señora de Los Ángeles",
+    "fuente": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "fuente_coordenadas": "OpenStreetMap way 565860372"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Cabo Carmona Chamizo 57, Alcolea",
+    "lat": 37.932438,
+    "lon": -4.671625,
+    "fuente": "Dirección: web de la hermandad, https://doloresalcolea.es/contacto/ . Salida y entrada en la casa de hermandad: Sentir Córdoba, guía del Viernes de Dolores 2026 («Traslado de la Virgen a la Casa de Hermandad para su Estación de Penitencia»): https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026.html ; la web dice que el cortejo va por la Carretera de Madrid «en dirección a la Parroquia» (https://doloresalcolea.es/viernes-santo/) y la rejilla oficial empieza por Cabo Carmona Chamizo",
+    "fuente_coordenadas": "punto de casas-hermandad-cordoba.json (sin coordenadas en la fuente: situado por su dirección)"
+   }
+  },
+  "la-o-cordoba": {
+   "nombre": "La O",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora de la Aurora",
+    "lat": 37.899197,
+    "lon": -4.761388,
+    "osm": "way/96693634",
+    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+    "fuente_coordenadas": "OpenStreetMap way/96693634, junto a la Plaza Mahatma Gandhi. OSM la llama «Parroquia de la Asunción»; es la Aurora (confirmado por Pablo Sánchez, 2026-10-26)."
+   },
+   "casa_hermandad": null
+  },
+  "la-sangre-de-el-higueron-cordoba": {
+   "nombre": "La Sangre de El Higuerón",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («El Higuerón») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "traslado-al-sepulcro-pro-hermandad-cordoba": {
+   "nombre": "Traslado al Sepulcro (pro-hermandad)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Colonia de la Paz») no es un templo: falta situarla con fuente"
+   ]
+  }
+ }
+}

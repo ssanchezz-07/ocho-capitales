@@ -1,0 +1,215 @@
+{
+ "entrada-triunfal-cordoba": {
+  "casa_hermandad": null
+ },
+ "penas-de-santiago-cordoba": {
+  "casa_hermandad": null
+ },
+ "vera-cruz-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-rescatado-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-esperanza-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-amor-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-huerto-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-merced-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-estrella-cordoba": {
+  "casa_hermandad": null
+ },
+ "via-crucis-cordoba": {
+  "casa_hermandad": null
+ },
+ "animas-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-agonia-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Parroquia de Santa Victoria",
+   "lat": 37.909894,
+   "lon": -4.779361,
+   "osm": "node/1118777167",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/",
+   "fuente_coordenadas": "OpenStreetMap node/1118777167 «Parroquia de Santa Victoria» (Calle Párroco Agustín Molina 22); es la del barrio, no la iglesia de Santa Victoria del centro (la rejilla oficial 2026 acaba en Santas Flora y María, junto a ella)"
+  }
+ },
+ "la-universitaria-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-sangre-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-buen-suceso-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-santa-faz-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-prendimiento-cordoba": {
+  "casa_hermandad": null
+ },
+ "el-perdon-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Iglesia de San Roque - Buen Pastor",
+   "lat": 37.880519,
+   "lon": -4.781312,
+   "osm": "node/13060087577",
+   "fuente": "Ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+   "fuente_coordenadas": "Dirección «Calle Buen Pastor 17» (dato de Pablo Sánchez, 2026-10-26); puerta de OpenStreetMap node/13060087577 con esa dirección. El edificio no está en OSM."
+  }
+ },
+ "el-calvario-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-paz-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-misericordia-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Basílica Menor de San Pedro",
+   "lat": 37.882631,
+   "lon": -4.771848,
+   "osm": "relation/20017709",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+   "fuente_coordenadas": "OpenStreetMap relation/20017709 «Basílica de San Pedro» (centro por Nominatim)"
+  }
+ },
+ "la-pasion-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-piedad-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Parroquia de San Antonio María Claret",
+   "lat": 37.882617,
+   "lon": -4.821774,
+   "fuente": "Ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+   "fuente_coordenadas": "Dirección de la Diócesis de Córdoba, «Patio Aneto, s/n» (https://www.diocesisdecordoba.es/parroquias/san-antonio-maria-claret); centro de la Plaza Patio Pico Aneto en OpenStreetMap (ways 1199751768 y 1249408938). El edificio no está en OSM: punto aproximado."
+  }
+ },
+ "jesus-nazareno-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Iglesia Hospital de Jesús Nazareno",
+   "lat": 37.888282,
+   "lon": -4.771465,
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+   "fuente_coordenadas": "Wikidata Q97626720 «Iglesia y Hospital de Jesús Nazareno» (https://www.wikidata.org/wiki/Q97626720); no está en OSM con nombre"
+  }
+ },
+ "la-caridad-cordoba": {
+  "casa_hermandad": null
+ },
+ "jesus-caido-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-cena-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Parroquia Beato Álvaro de Córdoba",
+   "lat": 37.876706,
+   "lon": -4.798055,
+   "osm": "relation/17140024",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+   "fuente_coordenadas": "OpenStreetMap relation/17140024 «Iglesia Parroquial Beato Álvaro de Córdoba» (centro por Nominatim)"
+  }
+ },
+ "las-angustias-cordoba": {
+  "casa_hermandad": null
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-buena-muerte-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Real Colegiata de San Hipólito",
+   "lat": 37.885863,
+   "lon": -4.783171,
+   "osm": "node/13471459220",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+   "fuente_coordenadas": "OpenStreetMap node/13471459220 «Colegiata de San Hipólito»"
+  }
+ },
+ "la-soledad-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-expiracion-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Real Iglesia de San Pablo",
+   "lat": 37.885441,
+   "lon": -4.775329,
+   "osm": "way/551114844",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+   "fuente_coordenadas": "OpenStreetMap way/551114844 «Iglesia de San Pablo» (el edificio de la iglesia; la otra vía con ese nombre, way/96231890, no lo es)"
+  }
+ },
+ "el-descendimiento-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-conversion-cordoba": {
+  "casa_hermandad": null
+ },
+ "los-dolores-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Iglesia-Hospital de San Jacinto",
+   "lat": 37.887927,
+   "lon": -4.777196,
+   "osm": "relation/7662878",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf) («Santuario de Nuestra Señora de los Dolores»)",
+   "fuente_coordenadas": "OpenStreetMap relation/7662878 «Convento de San Jacinto. Virgen de los Dolores» (centro por Nominatim)"
+  }
+ },
+ "santo-sepulcro-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Iglesia del Colegio de Santa Catalina",
+   "lat": 37.883694,
+   "lon": -4.778512,
+   "osm": "way/96268499",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf) («Iglesia (La Compañía)»)",
+   "fuente_coordenadas": "OpenStreetMap way/96268499 «Iglesia del Salvador y Santo Domingo de Silos» (La Compañía, la iglesia del antiguo Colegio de Santa Catalina)"
+  }
+ },
+ "el-resucitado-cordoba": {
+  "casa_hermandad": null
+ },
+ "presentacion-al-pueblo-cordoba": {
+  "casa_hermandad": null
+ },
+ "lagrimas-cordoba": {
+  "casa_hermandad": null
+ },
+ "la-o-cordoba": {
+  "casa_hermandad": null,
+  "templo": {
+   "nombre": "Parroquia de Nuestra Señora de la Aurora",
+   "lat": 37.899197,
+   "lon": -4.761388,
+   "osm": "way/96693634",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación de Hermandades y Cofradías de Córdoba (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+   "fuente_coordenadas": "OpenStreetMap way/96693634, junto a la Plaza Mahatma Gandhi. OSM la llama «Parroquia de la Asunción»; es la Aurora (confirmado por Pablo Sánchez, 2026-10-26)."
+  },
+  "motivo_templo": "La ficha del portal da «Barrio de Fátima»; el templo sale del librito oficial y de la ficha de la Agrupación."
+ },
+ "la-sangre-de-el-higueron-cordoba": {
+  "casa_hermandad": null
+ },
+ "traslado-al-sepulcro-pro-hermandad-cordoba": {
+  "casa_hermandad": null
+ }
+}
