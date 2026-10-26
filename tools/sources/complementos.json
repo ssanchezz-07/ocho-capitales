@@ -6257,12 +6257,22 @@
    {
     "slug": "merced-obediencia-cadiz",
     "dia": "Sábado de Pasión",
-    "fuente": "https://www.gentedepaz.es/cadiz-se-prepara-para-vivir-la-semana-santa-2026-con-pasion-y-devocion-itinerario-y-horarios-de-la-semana-santa-de-cadiz-2026/"
+    "fuente": "https://www.gentedepaz.es/cadiz-se-prepara-para-vivir-la-semana-santa-2026-con-pasion-y-devocion-itinerario-y-horarios-de-la-semana-santa-de-cadiz-2026/",
+    "hora": "17:00",
+    "hora_fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8: salida de la cruz de guía)"
    },
    {
     "slug": "dolores-de-alcolea-cordoba",
     "dia": "Viernes Santo",
     "fuente": "https://doloresalcolea.es/cultos/"
+   },
+   {
+    "slug": "el-perdon-cadiz",
+    "dia": "Jueves Santo y Madrugada",
+    "hora": "00:50",
+    "orden": 5,
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (págs. 24 y 35: «MADRUGADA», salida 00:50)",
+    "nota": "Decisión de Pablo (2026-10-26): con la jornada gaditana de Jueves Santo y Madrugada."
    }
   ],
   "salidas_extra": [
@@ -6427,6 +6437,19 @@
     "sede": "Parroquia de San Ignacio de Loyola (Piedras Redondas)",
     "hora": "19:30",
     "fuente": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html"
+   },
+   {
+    "ciudad": "cadiz",
+    "dia": "Sábado de Pasión",
+    "nombre": "Humillación (Piedad)",
+    "titulares": [
+     "Nuestro Padre Jesús de la Humillación"
+    ],
+    "sede": "Iglesia de Santiago Apóstol",
+    "hora": "18:35",
+    "paso": "Un paso. La imagen es anónima, atribuida al círculo de Pedro Roldán. Es cotitular de la hermandad de la Piedad y en 2026 se incorporó por primera vez al Sábado de Pasión.",
+    "musica": "BCT Esencia (Sevilla).",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8; itinerario, pág. 32)"
    }
   ]
  }

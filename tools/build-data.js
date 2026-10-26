@@ -209,7 +209,7 @@ for (const c of raw) {
 const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 const HBY = new Map(hermandades.map((h) => [h.slug, h]));
 const V = COMP.visperas || {};
-for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; h.dia_fuente = c.fuente; } }
+for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; if (c.orden) h.orden = c.orden; h.dia_fuente = c.fuente; } }
 for (const s of V.salidas_extra || []) { const h = HBY.get(s.slug); if (h) (h.salidas = h.salidas || []).push({ dia: s.dia, titulares: s.titulares, hora: s.hora || '', sede: s.sede || '', nota: s.nota || '', fuente: s.fuente }); }
 for (const n of V.nuevas || []) {
   const slug = slugify(n.nombre + ' ' + n.ciudad);
