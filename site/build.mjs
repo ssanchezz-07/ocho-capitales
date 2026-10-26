@@ -1315,7 +1315,7 @@ function datosCalle(c) {
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {

@@ -1,0 +1,814 @@
+[
+ {
+  "hermandad": "la-borriquita-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-borriquita-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-borriquita-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "las-penas-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "las-penas-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "las-penas-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "sagrada-cena-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "sagrada-cena-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "sagrada-cena-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "el-despojado-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "el-despojado-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "el-despojado-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "humildad-y-paciencia-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "humildad-y-paciencia-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "humildad-y-paciencia-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "nazareno-del-amor-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "nazareno-del-amor-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "nazareno-del-amor-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-palma-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-palma-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-palma-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "el-prendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "el-prendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "el-prendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "vera-cruz-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "vera-cruz-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "vera-cruz-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-piedad-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-piedad-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-piedad-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "jesus-caido-el-senor-del-parque-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "jesus-caido-el-senor-del-parque-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "jesus-caido-el-senor-del-parque-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-columna-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-columna-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-columna-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "ecce-homo-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "ecce-homo-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "ecce-homo-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-sentencia-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-sentencia-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-sentencia-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "las-cigarreras-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "las-cigarreras-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "las-cigarreras-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "las-aguas-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "las-aguas-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "las-aguas-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "el-caminito-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "el-caminito-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "el-caminito-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "los-afligidos-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "los-afligidos-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "los-afligidos-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "oracion-en-el-huerto-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "oracion-en-el-huerto-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "oracion-en-el-huerto-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "nazareno-de-santa-maria-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "nazareno-de-santa-maria-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "nazareno-de-santa-maria-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "medinaceli-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "medinaceli-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "medinaceli-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "el-perdon-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "el-perdon-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "el-perdon-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "siete-palabras-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "siete-palabras-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "siete-palabras-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-expiracion-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-expiracion-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-expiracion-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "el-descendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "el-descendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "el-descendimiento-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-buena-muerte-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-buena-muerte-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-buena-muerte-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "ecce-mater-tua-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "ecce-mater-tua-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "ecce-mater-tua-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "santo-entierro-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "santo-entierro-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "santo-entierro-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ },
+ {
+  "hermandad": "la-sanidad-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 27,
+  "cerca_de": "Nueva",
+  "lat": 36.530265,
+  "lon": -6.292576
+ },
+ {
+  "hermandad": "la-sanidad-cadiz",
+  "tramo": "paso",
+  "tipo": "edificio",
+  "metros": 18,
+  "cerca_de": "Nueva",
+  "lat": 36.530122,
+  "lon": -6.292778,
+  "edificio": "way/844713222"
+ },
+ {
+  "hermandad": "la-sanidad-cadiz",
+  "tramo": "paso",
+  "tipo": "fuera de calle",
+  "metros": 21,
+  "cerca_de": "Nueva",
+  "lat": 36.530014,
+  "lon": -6.292929
+ }
+]

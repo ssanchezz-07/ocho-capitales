@@ -1,5 +1,25 @@
 # Decisiones de diseño y técnicas
 
+## 2026-10-26 · Fondo del plano fiel a la ciudad (Málaga, Córdoba y Cádiz)
+Pablo: «completar Málaga, Cádiz y Córdoba… con su mapa mejorado y fiel». Los recorridos ya se trazan sobre la red completa de OSM (GraphHopper), pero el fondo eran calles simplificadas: un recorrido por un callejón o una plaza que el fondo no dibujaba parecía cruzar manzanas.
+- **Datos:** `tools/itinerarios/fondo-osm.mjs <ciudad>` descarga de Overpass (OSM, ODbL, con permiso de Pablo; en `cache/`, fuera de git):
+  - en el recuadro de los recorridos: todas las vías (también peatonales, escaleras y callejones), plazas, agua, ríos, costa, playas, parques, templos y casas hermandad;
+  - aparte, los edificios a 40 m de algún recorrido.
+- **Fondo:** `plano.mjs` suma esas vías (los callejones conservan sus quiebros, con una tolerancia de 1,5 m) y añade las capas.
+  - Debajo de las calles: agua y ríos (Guadalquivir y Guadalmedina), costa, playas, parques y plazas como superficie.
+  - Encima: templos y casas hermandad como edificios, con galón de oro.
+  - Fuera los jardincillos y las plazoletas diminutas (no ayudan a situarse y pesaban).
+  - Lo dibujan «En la calle» (`calle.js`) y el plano de la portada (`plano.js`).
+- **Peso con gzip:** Málaga 201 KB, Córdoba 277 KB y Cádiz 70 KB. El service worker los guarda tras la primera visita.
+- **Comprobación de fidelidad** (`tools/itinerarios/comprobar-fondo.mjs <ciudad>` → `comprobacion-fondo-<ciudad>.json`): recorre cada recorrido cada 3 m y avisa en dos casos:
+  - el tramo atraviesa un edificio sin vía por dentro;
+  - el tramo pasa a más de 12 m de cualquier vía o plaza.
+  - Templos, soportales, arcos con paso (la Puerta de Tierra) y la salida y la entrada no cuentan.
+  - **Resultado:**
+    - Córdoba: 42 de 42 recorridos limpios.
+    - Málaga: 45 de 46 (un aviso en la plaza de Spínola).
+    - Cádiz: 4 de 33. **Un mismo tramo de la calle Nueva, compartido por 29 recorridos, cruza en diagonal entre manzanas**: es un fallo del trazado, no del fondo, y se pasa a la sesión de rutas de Cádiz con las coordenadas del informe.
+
 ## 2026-10-26 · Recorridos con el color del hábito de su hermandad
 Pablo: «que las rutas se asemejaran al color habitual de su hermandad, sin perder la línea de diseño».
 - **De dónde sale el color:** `tools/colores-habito.mjs` lee el texto de `tools/sources/habitos.json`, donde cada hermandad tiene su fuente oficial, y escribe `site/data/colores-habito.json` con el color, su nombre y la fuente. Nada se escribe a mano en el código.

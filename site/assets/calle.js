@@ -23,8 +23,14 @@
     var f = el('filter', { id: 'oc-brillo', x: '-50%', y: '-50%', width: '200%', height: '200%' }); f.appendChild(el('feGaussianBlur', { stdDeviation: '6' })); defs.appendChild(f);
     svg.appendChild(defs);
     capas.mundo = el('g', { 'class': 'oc-c-mundo' }); svg.appendChild(capas.mundo);
+    // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
+    var A = D.areas || {}, poli = function (ls) { var d = ''; (ls || []).forEach(function (l) { d += pathDe([l]) + 'Z'; }); return d; };
+    [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
+      .forEach(function (c) { if (c[1]) capas.mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
     capas.mundo.appendChild(el('path', { 'class': 'oc-c-calles', d: pathDe(D.calles) }));
     capas.mundo.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
+    // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
+    if (A.edificios) { capas.mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); capas.mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
     // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
     capas.nombres = el('g', { 'class': 'oc-c-nombres', 'aria-hidden': 'true' }); capas.mundo.appendChild(capas.nombres);
     capas.rutas = el('g', { 'class': 'oc-c-rutas' }); capas.mundo.appendChild(capas.rutas);

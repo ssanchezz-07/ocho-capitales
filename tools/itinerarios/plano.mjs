@@ -1,7 +1,10 @@
 // Ocho Capitales: plano propio de cada capital para el mapa «En la calle», con estética cofrade (sin teselas de terceros).
 // Toma las calles de OpenStreetMap ya descargadas por geocodificar.mjs, se queda con las del entorno de los recorridos,
 // las simplifica (Douglas-Peucker) y las proyecta a metros locales. © colaboradores de OpenStreetMap (ODbL).
-// Salida: site/data/planos/<ciudad>.json  { origen:[lat,lon], escala, calles:[[x,y,x,y…],…], principales:[…], templos:[{n,x,y}] }
+// Si existe cache/fondo-<ciudad>.json (tools/itinerarios/fondo-osm.mjs), el fondo es fiel a la ciudad: todas las vías peatonales,
+// escaleras y callejones, plazas como superficie, agua, ríos, costa, playas, parques y los edificios de templos y casas hermandad.
+// Salida: site/data/planos/<ciudad>.json  { origen:[lat,lon], escala, calles:[[x,y,x,y…],…], principales:[…], templos:[{n,x,y}],
+//   areas:{ plazas, agua, parques, playas:[[x,y…]], edificios:[{n,c:'templo'|'casa',p:[x,y…]}] }, rios:[…], costa:[…] }
 // Uso: node tools/itinerarios/plano.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,7 +14,7 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
 const OUT = path.join(RAIZ, 'site', 'data', 'planos'); fs.mkdirSync(OUT, { recursive: true });
 const PRINC = /^(primary|secondary|tertiary|trunk)(_link)?$/;
-const VALE = /^(primary|secondary|tertiary|trunk|residential|pedestrian|living_street|unclassified|footway|steps|service|road)(_link)?$/;
+const VALE = /^(primary|secondary|tertiary|trunk|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|corridor)(_link)?$/;
 
 function dp(pts, tol) {
   if (pts.length < 3) return pts;
@@ -40,14 +43,36 @@ for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWi
   const o = [(la0 + la1) / 2, (lo0 + lo1) / 2], kx = 111320 * Math.cos(o[0] * Math.PI / 180), ky = 110540;
   const xy = ([la, lo]) => [Math.round((lo - o[1]) * kx), Math.round((o[0] - la) * ky)];
   const osm = JSON.parse(fs.readFileSync(path.join(DIR, 'cache', f), 'utf8'));
+  // capas del fondo fiel (si se descargaron): se suman a las calles ya guardadas, sin repetir
+  const fFondo = path.join(DIR, 'cache', 'fondo-' + ciudad + '.json'), fondo = fs.existsSync(fFondo) ? JSON.parse(fs.readFileSync(fFondo, 'utf8')).elements : [];
+  const vistos = new Set(osm.elements.map((e) => e.type + e.id));
+  for (const e of fondo) if (e.tags && e.tags.highway && !vistos.has(e.type + e.id)) { vistos.add(e.type + e.id); osm.elements.push(e); }
+  const tol = fondo.length ? 1.5 : 2.5; // con el fondo fiel, los callejones conservan sus quiebros
   const calles = [], principales = [], templos = [];
+  const areas = { plazas: [], agua: [], parques: [], playas: [], edificios: [] }, rios = [], costa = [];
+  const dentro = (g) => g.some(([la, lo]) => la >= la0 && la <= la1 && lo >= lo0 && lo <= lo1);
+  const anillos = (e) => (e.type === 'way' ? [e.geometry || []] : (e.members || []).filter((mb) => mb.role !== 'inner' && mb.geometry).map((mb) => mb.geometry))
+    .map((g) => g.filter(Boolean).map((p) => [p.lat, p.lon])).filter((g) => g.length > 3 && dentro(g));
+  const cerrado = (g) => g.length > 3 && Math.abs(g[0][0] - g[g.length - 1][0]) < 1e-7 && Math.abs(g[0][1] - g[g.length - 1][1]) < 1e-7;
+  for (const e of fondo) {
+    const t = e.tags || {};
+    const plana = (g) => dp(g.map(xy), 1.2).flat();
+    const zona = t.place === 'square' || t['area:highway'] || ((t.highway === 'pedestrian' || t.highway === 'footway') && t.area === 'yes') ? 'plazas'
+      : t.natural === 'water' || t.waterway === 'riverbank' ? 'agua' : t.leisure === 'park' || t.leisure === 'garden' ? 'parques' : t.natural === 'beach' || t.natural === 'sand' ? 'playas' : null;
+    // sin los jardincillos y plazoletas diminutos (alcorques, isletas): pesan y no ayudan a situarse
+    const sup = (g) => { const p = g.map(xy); let s = 0; for (let i = 1; i < p.length; i++) s += p[i - 1][0] * p[i][1] - p[i][0] * p[i - 1][1]; return Math.abs(s / 2); };
+    if (zona) { for (const g of anillos(e)) if (cerrado(g) && sup(g) >= (zona === 'parques' ? 1500 : zona === 'plazas' ? 250 : 400)) areas[zona].push(plana(g)); continue; }
+    if (t.amenity === 'place_of_worship' || (t.building && /hermandad|cofrad/i.test(t.name || ''))) { for (const g of anillos(e)) if (cerrado(g)) areas.edificios.push({ n: t.name || '', c: t.amenity === 'place_of_worship' ? 'templo' : 'casa', p: plana(g) }); continue; }
+    if (/^(river|canal|stream)$/.test(t.waterway || '') && e.geometry) { const g = e.geometry.map((p) => [p.lat, p.lon]); if (dentro(g)) rios.push(dp(g.map(xy), 3).flat()); continue; }
+    if (t.natural === 'coastline' && e.geometry) { const g = e.geometry.map((p) => [p.lat, p.lon]); if (dentro(g)) costa.push(dp(g.map(xy), 3).flat()); }
+  }
   for (const e of osm.elements) {
     const t = e.tags || {};
     if (t.amenity === 'place_of_worship') { const c = e.center || (e.geometry && e.geometry[0]) || (e.lat ? { lat: e.lat, lon: e.lon } : null); if (c && c.lat >= la0 && c.lat <= la1 && c.lon >= lo0 && c.lon <= lo1) { const [x, y] = xy([c.lat, c.lon]); templos.push({ n: t.name, x, y }); } continue; }
     if (!e.geometry || !(VALE.test(t.highway || '') || t.place === 'square')) continue;
     const g = e.geometry.map((p) => [p.lat, p.lon]);
     if (!g.some(([la, lo]) => la >= la0 && la <= la1 && lo >= lo0 && lo <= lo1)) continue;
-    const s = dp(g.map(xy), 2.5).flat();
+    const s = dp(g.map(xy), tol).flat();
     (PRINC.test(t.highway || '') ? principales : calles).push(s);
   }
   // ---- nombres de calles para rotular el plano ----
@@ -91,6 +116,7 @@ for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWi
   }
   const [W, Hh] = xy([la0, lo1]).map((v, i) => i === 0 ? v * 2 : v * 2);
   const out = { ciudad, origen: o, kx, ky, ancho: Math.abs(W), alto: Math.abs(Hh), calles, principales, templos, etiquetas: aceptadas, licencia: '© colaboradores de OpenStreetMap (ODbL)' };
+  if (fondo.length) Object.assign(out, { areas, rios, costa });
   fs.writeFileSync(path.join(OUT, ciudad + '.json'), JSON.stringify(out));
-  console.log(ciudad, calles.length + principales.length, 'calles', templos.length, 'templos', (fs.statSync(path.join(OUT, ciudad + '.json')).size / 1024).toFixed(0) + ' KB');
+  console.log(ciudad, calles.length + principales.length, 'calles', templos.length, 'templos', fondo.length ? `· fondo fiel: ${areas.plazas.length} plazas, ${areas.agua.length} agua, ${areas.parques.length} parques, ${areas.edificios.length} templos y casas, ${rios.length} ríos, ${costa.length} costa` : '', (fs.statSync(path.join(OUT, ciudad + '.json')).size / 1024).toFixed(0) + ' KB');
 }

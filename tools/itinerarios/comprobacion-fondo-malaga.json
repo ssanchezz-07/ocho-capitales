@@ -1,0 +1,12 @@
+[
+ {
+  "hermandad": "pasion-malaga",
+  "tramo": "ida",
+  "tipo": "edificio",
+  "metros": 12,
+  "cerca_de": "Plaza Spínola",
+  "lat": 36.721703,
+  "lon": -4.420636,
+  "edificio": "way/373181220"
+ }
+]

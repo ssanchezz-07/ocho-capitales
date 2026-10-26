@@ -1908,3 +1908,13 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-calle-habito { margin: 6px 0 10px; font-size: .9rem; line-height: 1.45; color: var(--muted); }
 .oc-calle-habito i { display: inline-block; vertical-align: middle; width: 22px; height: 6px; margin: -2px 8px 0 0; border-radius: 3px; box-shadow: 0 0 0 1px rgb(0 0 0 / .25); }
 .oc-calle-habito a { color: inherit; text-underline-offset: 2px; }
+
+/* ---------- Fondo fiel del plano (OSM): agua, ríos, costa, playas, parques, plazas y edificios de templos y casas hermandad ---------- */
+.oc-c-agua { fill: rgb(70 104 176 / .34); }
+.oc-c-rio { fill: none; stroke: rgb(116 148 216 / .5); stroke-width: 2.4px; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.oc-c-costa { fill: none; stroke: rgb(150 180 236 / .6); stroke-width: 1.6px; vector-effect: non-scaling-stroke; }
+.oc-c-playa { fill: rgb(226 206 150 / .13); }
+.oc-c-parque { fill: rgb(96 152 108 / .22); }
+.oc-c-plaza { fill: rgb(216 198 240 / .13); stroke: rgb(216 198 240 / .24); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.oc-c-templo { fill: rgb(240 215 156 / .17); stroke: rgb(240 215 156 / .55); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.oc-c-casa { fill: rgb(240 215 156 / .09); stroke: rgb(240 215 156 / .42); stroke-width: 1px; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }

@@ -53,8 +53,14 @@
     var base = el('svg', { 'class': 'oc-pl-svg oc-pl-base', 'aria-hidden': 'true', focusable: 'false' }, host);
     var svg = el('svg', { 'class': 'oc-pl-svg oc-pl-capa', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, host);
     var mundo = el('g', {}, base);
+    // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
+    var A = D.areas || {}, poli = function (ls) { var d = ''; (ls || []).forEach(function (l) { d += pathDe([l]) + 'Z'; }); return d; };
+    [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
+      .forEach(function (c) { if (c[1]) mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
     el('path', { 'class': 'oc-pl-calles', d: pathDe(D.calles) }, mundo);
     el('path', { 'class': 'oc-pl-princ', d: pathDe(D.principales) }, mundo);
+    // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
+    if (A.edificios) { mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
     var gR = el('g', {}, mundo), capa = el('g', {}, svg), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
     var lim = [Infinity, Infinity, -Infinity, -Infinity];
     D.principales.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { lim[0] = Math.min(lim[0], l[i]); lim[1] = Math.min(lim[1], l[i + 1]); lim[2] = Math.max(lim[2], l[i]); lim[3] = Math.max(lim[3], l[i + 1]); } });
