@@ -126,7 +126,7 @@
     "lat": 36.7087845,
     "lon": -4.4422065,
     "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741",
-    "fuente_coordenadas": "punto dado por la fuente"
+    "fuente_coordenadas": "punto de casas-hermandad-malaga.json (sin coordenadas en la fuente: situado por su dirección)"
    }
   },
   "huerto-malaga": {
@@ -274,7 +274,7 @@
     "lat": 36.720761,
     "lon": -4.417485,
     "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)",
-    "fuente_coordenadas": "punto dado por la fuente"
+    "fuente_coordenadas": "punto de casas-hermandad-malaga.json (sin coordenadas en la fuente: situado por su dirección)"
    }
   },
   "rocio-malaga": {
@@ -485,7 +485,7 @@
     "lat": 36.724714,
     "lon": -4.420694,
     "fuente": "https://agrupaciondecofradias.com/hermandades/sangre/ (casa hermandad en calle Dos Aceras, 10)",
-    "fuente_coordenadas": "punto dado por la fuente"
+    "fuente_coordenadas": "punto de casas-hermandad-malaga.json (sin coordenadas en la fuente: situado por su dirección)"
    }
   },
   "expiracion-malaga": {

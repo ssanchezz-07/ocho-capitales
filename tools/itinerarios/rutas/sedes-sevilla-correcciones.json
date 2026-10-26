@@ -1,0 +1,133 @@
+{
+ "_leeme": "Correcciones a mano de site/data/sedes/sevilla.json. Templo: nombre de la ficha oficial (portal), edificio de OpenStreetMap elegido a mano porque OSM lo nombra de otra forma, comprobando que está en el barrio que da la ficha. null = sin edificio con fuente.",
+ "la-amargura-sevilla": {
+  "templo": {
+   "nombre": "San Juan de la Palma",
+   "lat": 37.395474,
+   "lon": -5.9910253,
+   "osm": "way/177876080",
+   "nombre_osm": "Iglesia de San Juan de la Palma",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 177876080 («Iglesia de San Juan de la Palma»)"
+  }
+ },
+ "los-javieres-sevilla": {
+  "templo": {
+   "nombre": "Omnium Sanctorum",
+   "lat": 37.3992161,
+   "lon": -5.991237,
+   "osm": "way/303650356",
+   "nombre_osm": "Real Parroquia de Omnium Sanctorum",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 303650356 («Real Parroquia de Omnium Sanctorum»)"
+  }
+ },
+ "la-o-sevilla": {
+  "templo": {
+   "nombre": "Iglesia de la O",
+   "lat": 37.3870973,
+   "lon": -6.0051,
+   "osm": "way/479671632",
+   "nombre_osm": "Iglesia Nuestra Señora de la O",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 479671632 («Iglesia Nuestra Señora de la O»)"
+  }
+ },
+ "la-macarena-sevilla": {
+  "templo": {
+   "nombre": "Basílica de la Macarena",
+   "lat": 37.402469,
+   "lon": -5.9894649,
+   "osm": "way/40660624",
+   "nombre_osm": "Basílica de Santa María de la Esperanza Macarena",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 40660624 («Basílica de Santa María de la Esperanza Macarena»)"
+  }
+ },
+ "el-cachorro-sevilla": {
+  "templo": {
+   "nombre": "Basílica del Patrocinio",
+   "lat": 37.3894793,
+   "lon": -6.0109426,
+   "osm": "way/163362242",
+   "nombre_osm": "Iglesia del Cachorro",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 163362242 («Iglesia del Cachorro»); la Basílica del Patrocinio es la del Cachorro"
+  }
+ },
+ "los-gitanos-sevilla": {
+  "templo": {
+   "nombre": "Santuario de los Gitanos",
+   "lat": 37.3949712,
+   "lon": -5.9840022,
+   "osm": "way/37525225",
+   "nombre_osm": "Templo Santuario de Jesús de la Salud y Santa María de las Angustias Coronada",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 37525225 («Templo Santuario de Jesús de la Salud y Santa María de las Angustias Coronada»)"
+  }
+ },
+ "el-baratillo-sevilla": {
+  "templo": {
+   "nombre": "Capilla del Baratillo",
+   "lat": 37.3862506,
+   "lon": -5.9974571,
+   "osm": "way/119581555",
+   "nombre_osm": "Capilla de Nuestra Señora de la Piedad",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 119581555 («Capilla de Nuestra Señora de la Piedad»); la capilla del Baratillo es la de Nuestra Señora de la Piedad, en el Arenal"
+  }
+ },
+ "la-trinidad-sevilla": {
+  "templo": {
+   "nombre": "Basílica de la Trinidad",
+   "lat": 37.3974212,
+   "lon": -5.9799856,
+   "osm": "way/66390631",
+   "nombre_osm": "Basílica de María Auxiliadora",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 66390631 («Basílica de María Auxiliadora»); la Basílica de la Trinidad es la de María Auxiliadora (Salesianos de la Trinidad)"
+  }
+ },
+ "las-cigarreras-sevilla": {
+  "templo": null,
+  "motivo_templo": "sede en revisión: la ficha da la Capilla de la Fábrica de Tabacos (Los Remedios), que según Wikipedia fue su sede de 1965 a 2024; desde 2024 estaría en la Iglesia de Nuestra Señora de los Remedios. Falta confirmarlo con la hermandad o el Consejo"
+ },
+ "las-aguas-sevilla": {
+  "templo": {
+   "nombre": "Capilla del Rosario",
+   "lat": 37.3845504,
+   "lon": -5.9964123,
+   "osm": "way/119581554",
+   "nombre_osm": "Capilla Nuestra Señora del Rosario",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 119581554 («Capilla Nuestra Señora del Rosario»); la del Arenal, junto a la calle Dos de Mayo (hay otra del mismo nombre en Triana)"
+  }
+ },
+ "la-sagrada-mortaja-sevilla": {
+  "templo": {
+   "nombre": "Convento de la Paz",
+   "lat": 37.3944964,
+   "lon": -5.98841,
+   "osm": "way/119440322",
+   "nombre_osm": "Convento Nuestra Señora de la Paz",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 119440322 («Convento Nuestra Señora de la Paz»)"
+  }
+ },
+ "cristo-de-burgos-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de San Pedro»: no está en OSM con ese nombre; casaba con «Parroquia de San Pedro y San Pablo», que está en otro barrio"
+ },
+ "el-cerro-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de Nuestra Señora de los Dolores» (Cerro del Águila): casaba con una iglesia homónima fuera del Cerro"
+ },
+ "los-panaderos-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Capilla de San Andrés»: no está en OSM; casaba con la parroquia de San Andrés, que es otro edificio"
+ },
+ "dolores-de-torreblanca-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de San Antonio de Padua» (Torreblanca): casaba con el convento homónimo del centro"
+ }
+}

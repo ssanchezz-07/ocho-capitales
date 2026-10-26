@@ -63,7 +63,7 @@ for (const h of P) {
     if (s?.punto) {
       const enTemplo = e.templo && (() => { const w = C.LUG.find((x) => `${x.type}/${x.id}` === e.templo.osm); return w && dentro(C.anillo(w), C.X(...s.punto)); })();
       if (enTemplo) e.falta.push('la casa hermandad está en el mismo edificio que el templo');
-      else e.casa_hermandad = { dir: cs.dir, lat: r7(s.punto[0]), lon: r7(s.punto[1]), ...(s.puerta ? { osm: 'node/' + s.puerta } : {}), fuente: cs.fuente, fuente_coordenadas: s.puerta ? `OpenStreetMap, puerta ${s.puerta} con esa dirección` : /Nominatim/.test(s.como) ? 'Nominatim (dirección), aproximado' : 'punto dado por la fuente' };
+      else e.casa_hermandad = { dir: cs.dir, lat: r7(s.punto[0]), lon: r7(s.punto[1]), ...(s.puerta ? { osm: 'node/' + s.puerta } : {}), fuente: cs.fuente, fuente_coordenadas: s.puerta ? `OpenStreetMap, puerta ${s.puerta} con esa dirección` : /Nominatim/.test(s.como) ? 'Nominatim (dirección), aproximado' : `punto de casas-hermandad-${c}.json (sin coordenadas en la fuente: situado por su dirección)` };
     } else e.falta.push(`casa hermandad «${cs.dir}»: dirección sin situar en OSM`);
   }
   if (e.templo) nT++; if (e.casa_hermandad) nC++;

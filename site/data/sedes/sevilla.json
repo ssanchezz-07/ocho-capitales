@@ -1,0 +1,854 @@
+{
+ "capital": "sevilla",
+ "nombre": "Sevilla",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "la-borriquita-sevilla": {
+   "nombre": "La Borriquita",
+   "templo": {
+    "nombre": "Iglesia del Salvador",
+    "lat": 37.3901391,
+    "lon": -5.9925702,
+    "osm": "way/18546585",
+    "nombre_osm": "Iglesia del Salvador",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 18546585"
+   },
+   "casa_hermandad": null
+  },
+  "el-amor-sevilla": {
+   "nombre": "El Amor",
+   "templo": {
+    "nombre": "Iglesia del Salvador",
+    "lat": 37.3901391,
+    "lon": -5.9925702,
+    "osm": "way/18546585",
+    "nombre_osm": "Iglesia del Salvador",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 18546585"
+   },
+   "casa_hermandad": null
+  },
+  "jesus-despojado-sevilla": {
+   "nombre": "Jesús Despojado",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de Molviedro»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-paz-sevilla": {
+   "nombre": "La Paz",
+   "templo": {
+    "nombre": "Parroquia de San Sebastián",
+    "lat": 37.3748799,
+    "lon": -5.9830591,
+    "osm": "way/265408673",
+    "nombre_osm": "Parroquia de San Sebastián",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Paz_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 265408673"
+   },
+   "casa_hermandad": null
+  },
+  "la-cena-sevilla": {
+   "nombre": "La Cena",
+   "templo": {
+    "nombre": "Iglesia de los Terceros",
+    "lat": 37.393777,
+    "lon": -5.9874648,
+    "osm": "way/180110804",
+    "nombre_osm": "Iglesia de Los Terceros",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Cena_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 180110804"
+   },
+   "casa_hermandad": null
+  },
+  "la-hiniesta-sevilla": {
+   "nombre": "La Hiniesta",
+   "templo": {
+    "nombre": "Parroquia de San Julián",
+    "lat": 37.3988023,
+    "lon": -5.9851692,
+    "osm": "way/238755108",
+    "nombre_osm": "Parroquia de San Julián",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Hiniesta_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 238755108"
+   },
+   "casa_hermandad": null
+  },
+  "san-roque-sevilla": {
+   "nombre": "San Roque",
+   "templo": {
+    "nombre": "Parroquia de San Roque",
+    "lat": 37.3911662,
+    "lon": -5.9838441,
+    "osm": "way/66427322",
+    "nombre_osm": "Iglesia de San Roque",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Roque_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 66427322"
+   },
+   "casa_hermandad": null
+  },
+  "la-estrella-sevilla": {
+   "nombre": "La Estrella",
+   "templo": {
+    "nombre": "Capilla de la Estrella",
+    "lat": 37.3837291,
+    "lon": -6.0046954,
+    "osm": "way/587542111",
+    "nombre_osm": "Capilla de la Estrella",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Estrella_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 587542111"
+   },
+   "casa_hermandad": null
+  },
+  "la-amargura-sevilla": {
+   "nombre": "La Amargura",
+   "templo": {
+    "nombre": "San Juan de la Palma",
+    "lat": 37.395474,
+    "lon": -5.9910253,
+    "osm": "way/177876080",
+    "nombre_osm": "Iglesia de San Juan de la Palma",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Amargura_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 177876080 («Iglesia de San Juan de la Palma»)"
+   },
+   "casa_hermandad": null
+  },
+  "san-pablo-sevilla": {
+   "nombre": "San Pablo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Pablo»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "redencion-sevilla": {
+   "nombre": "Redención",
+   "templo": {
+    "nombre": "Parroquia de Santiago",
+    "lat": 37.3913531,
+    "lon": -5.9864395,
+    "osm": "way/119565968",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Redenci%C3%B3n_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119565968"
+   },
+   "casa_hermandad": null
+  },
+  "santa-genoveva-sevilla": {
+   "nombre": "Santa Genoveva",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Santa Genoveva»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "santa-marta-sevilla": {
+   "nombre": "Santa Marta",
+   "templo": {
+    "nombre": "Parroquia de San Andrés",
+    "lat": 37.3943354,
+    "lon": -5.9939523,
+    "osm": "way/62021028",
+    "nombre_osm": "Iglesia de San Andrés",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 62021028"
+   },
+   "casa_hermandad": null
+  },
+  "san-gonzalo-sevilla": {
+   "nombre": "San Gonzalo",
+   "templo": {
+    "nombre": "Parroquia de San Gonzalo",
+    "lat": 37.3801458,
+    "lon": -6.0100764,
+    "osm": "way/780900774",
+    "nombre_osm": "Iglesia Parroquial de San Gonzalo",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Gonzalo_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 780900774"
+   },
+   "casa_hermandad": null
+  },
+  "vera-cruz-sevilla": {
+   "nombre": "Vera Cruz",
+   "templo": {
+    "nombre": "Capilla del Dulce Nombre de Jesús",
+    "lat": 37.3951111,
+    "lon": -5.9983588,
+    "osm": "way/140897070",
+    "nombre_osm": "Capilla del dulce nombre de Jesús",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Vera_Cruz_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 140897070"
+   },
+   "casa_hermandad": null
+  },
+  "las-penas-sevilla": {
+   "nombre": "Las Penas",
+   "templo": {
+    "nombre": "Parroquia de San Vicente",
+    "lat": 37.3944396,
+    "lon": -5.999232,
+    "osm": "way/118894826",
+    "nombre_osm": "Parroquia de San Vicente",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Penas_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 118894826"
+   },
+   "casa_hermandad": null
+  },
+  "las-aguas-sevilla": {
+   "nombre": "Las Aguas",
+   "templo": {
+    "nombre": "Capilla del Rosario",
+    "lat": 37.3845504,
+    "lon": -5.9964123,
+    "osm": "way/119581554",
+    "nombre_osm": "Capilla Nuestra Señora del Rosario",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Aguas_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119581554 («Capilla Nuestra Señora del Rosario»); la del Arenal, junto a la calle Dos de Mayo (hay otra del mismo nombre en Triana)"
+   },
+   "casa_hermandad": null
+  },
+  "el-museo-sevilla": {
+   "nombre": "El Museo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla del Museo»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-cerro-sevilla": {
+   "nombre": "El Cerro",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Nuestra Señora de los Dolores» (Cerro del Águila): casaba con una iglesia homónima fuera del Cerro"
+   ]
+  },
+  "los-javieres-sevilla": {
+   "nombre": "Los Javieres",
+   "templo": {
+    "nombre": "Omnium Sanctorum",
+    "lat": 37.3992161,
+    "lon": -5.991237,
+    "osm": "way/303650356",
+    "nombre_osm": "Real Parroquia de Omnium Sanctorum",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Javieres_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 303650356 («Real Parroquia de Omnium Sanctorum»)"
+   },
+   "casa_hermandad": null
+  },
+  "san-esteban-sevilla": {
+   "nombre": "San Esteban",
+   "templo": {
+    "nombre": "Parroquia de San Esteban",
+    "lat": 37.3898928,
+    "lon": -5.9861097,
+    "osm": "way/119564803",
+    "nombre_osm": "Parroquia de San Esteban",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Esteban_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119564803"
+   },
+   "casa_hermandad": null
+  },
+  "los-estudiantes-sevilla": {
+   "nombre": "Los Estudiantes",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de la Universidad»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "san-benito-sevilla": {
+   "nombre": "San Benito",
+   "templo": {
+    "nombre": "Iglesia de San Benito",
+    "lat": 37.3877454,
+    "lon": -5.979311,
+    "osm": "way/60335146",
+    "nombre_osm": "Iglesia de San Benito",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Benito_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 60335146"
+   },
+   "casa_hermandad": null
+  },
+  "la-candelaria-sevilla": {
+   "nombre": "La Candelaria",
+   "templo": {
+    "nombre": "Iglesia de San Nicolás",
+    "lat": 37.3886806,
+    "lon": -5.9893683,
+    "osm": "way/119429326",
+    "nombre_osm": "Iglesia de San Nicolás de Bari",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Candelaria_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119429326"
+   },
+   "casa_hermandad": null
+  },
+  "dulce-nombre-la-bofeta-sevilla": {
+   "nombre": "Dulce Nombre («La Bofetá»)",
+   "templo": {
+    "nombre": "Parroquia de San Lorenzo",
+    "lat": 37.3973623,
+    "lon": -5.9966557,
+    "osm": "way/119859348",
+    "nombre_osm": "Parroquia de San Lorenzo",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Dulce_Nombre_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119859348"
+   },
+   "casa_hermandad": null
+  },
+  "santa-cruz-sevilla": {
+   "nombre": "Santa Cruz",
+   "templo": {
+    "nombre": "Parroquia de Santa Cruz",
+    "lat": 37.3865483,
+    "lon": -5.9893868,
+    "osm": "way/119429974",
+    "nombre_osm": "Parroquia de Santa Cruz",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Cruz_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119429974"
+   },
+   "casa_hermandad": null
+  },
+  "el-carmen-doloroso-sevilla": {
+   "nombre": "El Carmen Doloroso",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Convento del Carmen / San Buenaventura»: varios edificios posibles en OSM: Capilla del Cármen | Parroquia de la Virgen del Carmen | Iglesia de San Buenaventura"
+   ]
+  },
+  "la-sed-sevilla": {
+   "nombre": "La Sed",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de la Concepción»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "san-bernardo-sevilla": {
+   "nombre": "San Bernardo",
+   "templo": {
+    "nombre": "Parroquia de San Bernardo",
+    "lat": 37.3824972,
+    "lon": -5.9818261,
+    "osm": "way/265935404",
+    "nombre_osm": "Iglesia de San Bernardo",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_San_Bernardo_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 265935404"
+   },
+   "casa_hermandad": null
+  },
+  "el-buen-fin-sevilla": {
+   "nombre": "El Buen Fin",
+   "templo": {
+    "nombre": "Iglesia de San Antonio de Padua",
+    "lat": 37.3984124,
+    "lon": -5.9988902,
+    "osm": "way/611597796",
+    "nombre_osm": "Convento de San Antonio de Padua",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Buen_Fin_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 611597796"
+   },
+   "casa_hermandad": null
+  },
+  "la-lanzada-sevilla": {
+   "nombre": "La Lanzada",
+   "templo": {
+    "nombre": "Parroquia de San Martín",
+    "lat": 37.3962538,
+    "lon": -5.9928842,
+    "osm": "way/40509107",
+    "nombre_osm": "Iglesia de San Martín",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Lanzada_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 40509107"
+   },
+   "casa_hermandad": null
+  },
+  "el-baratillo-sevilla": {
+   "nombre": "El Baratillo",
+   "templo": {
+    "nombre": "Capilla del Baratillo",
+    "lat": 37.3862506,
+    "lon": -5.9974571,
+    "osm": "way/119581555",
+    "nombre_osm": "Capilla de Nuestra Señora de la Piedad",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Baratillo_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119581555 («Capilla de Nuestra Señora de la Piedad»); la capilla del Baratillo es la de Nuestra Señora de la Piedad, en el Arenal"
+   },
+   "casa_hermandad": null
+  },
+  "cristo-de-burgos-sevilla": {
+   "nombre": "Cristo de Burgos",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Pedro»: no está en OSM con ese nombre; casaba con «Parroquia de San Pedro y San Pablo», que está en otro barrio"
+   ]
+  },
+  "siete-palabras-sevilla": {
+   "nombre": "Siete Palabras",
+   "templo": {
+    "nombre": "Parroquia de San Vicente",
+    "lat": 37.3944396,
+    "lon": -5.999232,
+    "osm": "way/118894826",
+    "nombre_osm": "Parroquia de San Vicente",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Siete_Palabras_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 118894826"
+   },
+   "casa_hermandad": null
+  },
+  "los-panaderos-sevilla": {
+   "nombre": "Los Panaderos",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de San Andrés»: no está en OSM; casaba con la parroquia de San Andrés, que es otro edificio"
+   ]
+  },
+  "los-negritos-sevilla": {
+   "nombre": "Los Negritos",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de los Ángeles»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-exaltacion-los-caballos-sevilla": {
+   "nombre": "La Exaltación («Los Caballos»)",
+   "templo": {
+    "nombre": "Iglesia de Santa Catalina",
+    "lat": 37.3931025,
+    "lon": -5.9882441,
+    "osm": "way/119440321",
+    "nombre_osm": "Iglesia de Santa Catalina",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Exaltaci%C3%B3n_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119440321"
+   },
+   "casa_hermandad": null
+  },
+  "las-cigarreras-sevilla": {
+   "nombre": "Las Cigarreras",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "sede en revisión: la ficha da la Capilla de la Fábrica de Tabacos (Los Remedios), que según Wikipedia fue su sede de 1965 a 2024; desde 2024 estaría en la Iglesia de Nuestra Señora de los Remedios. Falta confirmarlo con la hermandad o el Consejo"
+   ]
+  },
+  "montesion-sevilla": {
+   "nombre": "Montesión",
+   "templo": {
+    "nombre": "Capilla de Montesión",
+    "lat": 37.3968553,
+    "lon": -5.9913196,
+    "osm": "way/256158187",
+    "nombre_osm": "Capilla de Montesión",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Monte-Sion",
+    "fuente_coordenadas": "OpenStreetMap way 256158187"
+   },
+   "casa_hermandad": null
+  },
+  "la-quinta-angustia-sevilla": {
+   "nombre": "La Quinta Angustia",
+   "templo": {
+    "nombre": "Parroquia de la Magdalena",
+    "lat": 37.3905593,
+    "lon": -5.9983477,
+    "osm": "way/116689837",
+    "nombre_osm": "Iglesia de la Magdalena",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Quinta_Angustia_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 116689837"
+   },
+   "casa_hermandad": null
+  },
+  "el-valle-sevilla": {
+   "nombre": "El Valle",
+   "templo": {
+    "nombre": "Iglesia de la Anunciación",
+    "lat": 37.3924398,
+    "lon": -5.9925154,
+    "osm": "way/119556950",
+    "nombre_osm": "Iglesia de la Anunciación",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Valle_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119556950"
+   },
+   "casa_hermandad": null
+  },
+  "pasion-sevilla": {
+   "nombre": "Pasión",
+   "templo": {
+    "nombre": "Iglesia del Salvador",
+    "lat": 37.3901391,
+    "lon": -5.9925702,
+    "osm": "way/18546585",
+    "nombre_osm": "Iglesia del Salvador",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 18546585"
+   },
+   "casa_hermandad": null
+  },
+  "el-silencio-sevilla": {
+   "nombre": "El Silencio",
+   "templo": {
+    "nombre": "Iglesia de San Antonio Abad",
+    "lat": 37.3925143,
+    "lon": -5.9966959,
+    "osm": "way/120216507",
+    "nombre_osm": "Iglesia de Santo Antonio Abad",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Silencio_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 120216507"
+   },
+   "casa_hermandad": null
+  },
+  "el-gran-poder-sevilla": {
+   "nombre": "El Gran Poder",
+   "templo": {
+    "nombre": "Basílica del Gran Poder",
+    "lat": 37.397197,
+    "lon": -5.9960719,
+    "osm": "way/119859349",
+    "nombre_osm": "Basílica del Gran Poder",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_del_Gran_Poder",
+    "fuente_coordenadas": "OpenStreetMap way 119859349"
+   },
+   "casa_hermandad": null
+  },
+  "la-macarena-sevilla": {
+   "nombre": "La Macarena",
+   "templo": {
+    "nombre": "Basílica de la Macarena",
+    "lat": 37.402469,
+    "lon": -5.9894649,
+    "osm": "way/40660624",
+    "nombre_osm": "Basílica de Santa María de la Esperanza Macarena",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Macarena_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 40660624 («Basílica de Santa María de la Esperanza Macarena»)"
+   },
+   "casa_hermandad": null
+  },
+  "el-calvario-sevilla": {
+   "nombre": "El Calvario",
+   "templo": {
+    "nombre": "Parroquia de la Magdalena",
+    "lat": 37.3905593,
+    "lon": -5.9983477,
+    "osm": "way/116689837",
+    "nombre_osm": "Iglesia de la Magdalena",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Calvario_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 116689837"
+   },
+   "casa_hermandad": null
+  },
+  "la-esperanza-de-triana-sevilla": {
+   "nombre": "La Esperanza de Triana",
+   "templo": {
+    "nombre": "Capilla de los Marineros",
+    "lat": 37.3841056,
+    "lon": -6.001028,
+    "osm": "way/706244141",
+    "nombre_osm": "Capilla de los Marineros (Hermandad Esperanza de Triana)",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Esperanza_de_Triana",
+    "fuente_coordenadas": "OpenStreetMap way 706244141"
+   },
+   "casa_hermandad": null
+  },
+  "los-gitanos-sevilla": {
+   "nombre": "Los Gitanos",
+   "templo": {
+    "nombre": "Santuario de los Gitanos",
+    "lat": 37.3949712,
+    "lon": -5.9840022,
+    "osm": "way/37525225",
+    "nombre_osm": "Templo Santuario de Jesús de la Salud y Santa María de las Angustias Coronada",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Gitanos_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 37525225 («Templo Santuario de Jesús de la Salud y Santa María de las Angustias Coronada»)"
+   },
+   "casa_hermandad": null
+  },
+  "la-carreteria-sevilla": {
+   "nombre": "La Carretería",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de la Carretería»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "san-isidoro-sevilla": {
+   "nombre": "San Isidoro",
+   "templo": {
+    "nombre": "Iglesia de San Isidoro",
+    "lat": 37.389445,
+    "lon": -5.9907124,
+    "osm": "way/119418869",
+    "nombre_osm": "Iglesia de San Isidoro",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_las_Tres_Ca%C3%ADdas_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119418869"
+   },
+   "casa_hermandad": null
+  },
+  "la-o-sevilla": {
+   "nombre": "La O",
+   "templo": {
+    "nombre": "Iglesia de la O",
+    "lat": 37.3870973,
+    "lon": -6.0051,
+    "osm": "way/479671632",
+    "nombre_osm": "Iglesia Nuestra Señora de la O",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_O_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 479671632 («Iglesia Nuestra Señora de la O»)"
+   },
+   "casa_hermandad": null
+  },
+  "san-buenaventura-sevilla": {
+   "nombre": "San Buenaventura",
+   "templo": {
+    "nombre": "Convento de San Buenaventura",
+    "lat": 37.3889804,
+    "lon": -5.9973596,
+    "osm": "way/447270784",
+    "nombre_osm": "Iglesia de San Buenaventura",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Buenaventura_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 447270784"
+   },
+   "casa_hermandad": null
+  },
+  "montserrat-sevilla": {
+   "nombre": "Montserrat",
+   "templo": {
+    "nombre": "Capilla de Montserrat",
+    "lat": 37.3901425,
+    "lon": -5.9988264,
+    "osm": "way/119581549",
+    "nombre_osm": "Capilla de Montserrat",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Montserrat_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119581549"
+   },
+   "casa_hermandad": null
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "nombre": "La Sagrada Mortaja",
+   "templo": {
+    "nombre": "Convento de la Paz",
+    "lat": 37.3944964,
+    "lon": -5.98841,
+    "osm": "way/119440322",
+    "nombre_osm": "Convento Nuestra Señora de la Paz",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Sagrada_Mortaja_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119440322 («Convento Nuestra Señora de la Paz»)"
+   },
+   "casa_hermandad": null
+  },
+  "el-cachorro-sevilla": {
+   "nombre": "El Cachorro",
+   "templo": {
+    "nombre": "Basílica del Patrocinio",
+    "lat": 37.3894793,
+    "lon": -6.0109426,
+    "osm": "way/163362242",
+    "nombre_osm": "Iglesia del Cachorro",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 163362242 («Iglesia del Cachorro»); la Basílica del Patrocinio es la del Cachorro"
+   },
+   "casa_hermandad": null
+  },
+  "los-servitas-sevilla": {
+   "nombre": "Los Servitas",
+   "templo": {
+    "nombre": "Iglesia de San Marcos",
+    "lat": 37.3962869,
+    "lon": -5.9874254,
+    "osm": "way/68695386",
+    "nombre_osm": "Iglesia de San Marcos",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_los_Servitas_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 68695386"
+   },
+   "casa_hermandad": null
+  },
+  "la-trinidad-sevilla": {
+   "nombre": "La Trinidad",
+   "templo": {
+    "nombre": "Basílica de la Trinidad",
+    "lat": 37.3974212,
+    "lon": -5.9799856,
+    "osm": "way/66390631",
+    "nombre_osm": "Basílica de María Auxiliadora",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Trinidad_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 66390631 («Basílica de María Auxiliadora»); la Basílica de la Trinidad es la de María Auxiliadora (Salesianos de la Trinidad)"
+   },
+   "casa_hermandad": null
+  },
+  "el-santo-entierro-sevilla": {
+   "nombre": "El Santo Entierro",
+   "templo": {
+    "nombre": "Iglesia de San Gregorio",
+    "lat": 37.393004,
+    "lon": -5.9970807,
+    "osm": "way/120216504",
+    "nombre_osm": "Iglesia de San Gregorio",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Santo_Entierro_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 120216504"
+   },
+   "casa_hermandad": null
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "nombre": "La Soledad de San Lorenzo",
+   "templo": {
+    "nombre": "Parroquia de San Lorenzo",
+    "lat": 37.3973623,
+    "lon": -5.9966557,
+    "osm": "way/119859348",
+    "nombre_osm": "Parroquia de San Lorenzo",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Soledad_de_San_Lorenzo_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 119859348"
+   },
+   "casa_hermandad": null
+  },
+  "la-resurreccion-sevilla": {
+   "nombre": "La Resurrección",
+   "templo": {
+    "nombre": "Iglesia de Santa Marina",
+    "lat": 37.3990362,
+    "lon": -5.9876735,
+    "osm": "way/68695384",
+    "nombre_osm": "Iglesia de Santa Marina",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Resurrecci%C3%B3n_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 68695384"
+   },
+   "casa_hermandad": null
+  },
+  "bellavista-sevilla": {
+   "nombre": "Bellavista",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia del Sagrado Corazón de Jesús y Dulce Nombre de María»: varios edificios posibles en OSM: Iglesia del Sagrado Corazón de Jesús | Capilla del dulce nombre de Jesús"
+   ]
+  },
+  "bendicion-y-esperanza-sevilla": {
+   "nombre": "Bendición y Esperanza",
+   "templo": {
+    "nombre": "Parroquia Jesús Obrero del Polígono Sur",
+    "lat": 37.3591746,
+    "lon": -5.9699298,
+    "osm": "way/414322043",
+    "nombre_osm": "Parroquia Jesús Obrero",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza",
+    "fuente_coordenadas": "OpenStreetMap way 414322043"
+   },
+   "casa_hermandad": null
+  },
+  "pasion-y-muerte-sevilla": {
+   "nombre": "Pasión y Muerte",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Nuestra Señora del Buen Aire»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "pino-montano-sevilla": {
+   "nombre": "Pino Montano",
+   "templo": {
+    "nombre": "Parroquia de San Isidro Labrador",
+    "lat": 37.4235098,
+    "lon": -5.9635133,
+    "osm": "way/66775782",
+    "nombre_osm": "Parroquia de San Isidro Labrador",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 66775782"
+   },
+   "casa_hermandad": null
+  },
+  "la-mision-sevilla": {
+   "nombre": "La Misión",
+   "templo": {
+    "nombre": "Parroquia de San Antonio María Claret",
+    "lat": 37.3569076,
+    "lon": -5.9847526,
+    "osm": "way/855166175",
+    "nombre_osm": "Iglesia San Antonio María Claret",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 855166175"
+   },
+   "casa_hermandad": null
+  },
+  "cristo-de-la-corona-sevilla": {
+   "nombre": "Cristo de la Corona",
+   "templo": {
+    "nombre": "Parroquia del Sagrario",
+    "lat": 37.3863583,
+    "lon": -5.9938512,
+    "osm": "way/928784394",
+    "nombre_osm": "Capilla del Sagrario",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 928784394"
+   },
+   "casa_hermandad": null
+  },
+  "padre-pio-sevilla": {
+   "nombre": "Padre Pío",
+   "templo": {
+    "nombre": "Parroquia del Buen Pastor y San Juan de la Cruz",
+    "lat": 37.3720043,
+    "lon": -5.9408365,
+    "osm": "way/680121035",
+    "nombre_osm": "Parroquia El Buen Pastor y San Juan de la Cruz",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo",
+    "fuente_coordenadas": "OpenStreetMap way 680121035"
+   },
+   "casa_hermandad": null
+  },
+  "san-jose-obrero-sevilla": {
+   "nombre": "San José Obrero",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San José Obrero»: varios edificios posibles en OSM: Capilla de San José | Iglesia San José"
+   ]
+  },
+  "la-milagrosa-sevilla": {
+   "nombre": "La Milagrosa",
+   "templo": {
+    "nombre": "Parroquia de la Virgen de la Medalla Milagrosa",
+    "lat": 37.3769765,
+    "lon": -5.9669661,
+    "osm": "way/73404425",
+    "nombre_osm": "Parroquia de la Milagrosa",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa",
+    "fuente_coordenadas": "OpenStreetMap way 73404425"
+   },
+   "casa_hermandad": null
+  },
+  "dolores-de-torreblanca-sevilla": {
+   "nombre": "Dolores de Torreblanca",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Antonio de Padua» (Torreblanca): casaba con el convento homónimo del centro"
+   ]
+  },
+  "divino-perdon-sevilla": {
+   "nombre": "Divino Perdón",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia de la Beata Madre Ana María Javouhey y San José de Cluny»: varios edificios posibles en OSM: Capilla de San José | Parroquia de Santa Ana | Iglesia San José"
+   ]
+  },
+  "el-sol-sevilla": {
+   "nombre": "El Sol",
+   "templo": {
+    "nombre": "Parroquia de San Diego de Alcalá",
+    "lat": 37.3758774,
+    "lon": -5.9739361,
+    "osm": "way/1209785271",
+    "nombre_osm": "Parroquia de San Diego de Alcalá",
+    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sol_(Sevilla)",
+    "fuente_coordenadas": "OpenStreetMap way 1209785271"
+   },
+   "casa_hermandad": null
+  }
+ }
+}
