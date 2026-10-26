@@ -28,12 +28,10 @@
     var S = el('svg', { 'class': 'oc-globo-svg' }, capa);
     var saltar = document.createElement('button'); saltar.type = 'button'; saltar.className = 'oc-globo-saltar'; saltar.textContent = 'Saltar'; saltar.setAttribute('aria-label', 'Saltar la entrada');
     document.body.appendChild(capa); document.body.appendChild(saltar);
-    var esf = el('circle', { 'class': 'oc-globo-esfera' }, S), ret = el('path', { 'class': 'oc-globo-reticula' }, S), tierra = el('path', { 'class': 'oc-globo-tierra' }, S);
+    // solo siluetas (Pablo, 26-oct: «no quiero esos rellenos, quiero siluetas dentro del globo»): continentes y provincias a hilo de oro
+    var esf = el('circle', { 'class': 'oc-globo-esfera' }, S), brillo = el('path', { 'class': 'oc-globo-tierra-brillo' }, S), tierra = el('path', { 'class': 'oc-globo-tierra' }, S);
     var gP = el('g', {}, S), bor = el('circle', { 'class': 'oc-globo-borde' }, S);
-    var provs = datos.prov.map(function (p) { var n = el('path', { 'class': 'oc-globo-prov' }, gP); n.style.fill = p.c; return { r: anillosDe(p.d, P), n: n }; });
-    var RET = [], lo, la, l;
-    for (lo = -180; lo < 180; lo += 15) { l = []; for (la = -90; la <= 90; la += 3) l.push([lo, la]); RET.push(l); }
-    for (la = -75; la <= 75; la += 15) { l = []; for (lo = -180; lo <= 180; lo += 3) l.push([lo, la]); RET.push(l); }
+    var provs = datos.prov.map(function (p) { return { r: anillosDe(p.d, P), n: el('path', { 'class': 'oc-globo-prov' }, gP) }; });
     var MUNDO = [], W, H, destino;
     function medir() {
       W = innerWidth; H = innerHeight; S.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
@@ -43,18 +41,20 @@
       destino = { c: [lonc, latc], cx: r.left + r.width / 2, cy: r.top + r.height / 2, R: (P.sy * r.height / P.alto) / R0 };
     }
     medir();
-    var INI = [-40, 12], DUR = 3500;
+    // despacio: medio giro hasta tener Europa de frente y un acercamiento continuo hasta España y Andalucía
+    var INI = [-48, 14], DUR = 5000;
     function cuadro(t) {
-      var m = Math.min(W, H), k1 = ease(cl(t / 1700)), c = [INI[0] + (destino.c[0] - INI[0]) * k1, INI[1] + (destino.c[1] - INI[1]) * k1];
-      var k2 = ease(cl((t - 1300) / 1900)), Ri = m * 0.36, R = Ri * Math.pow(destino.R / Ri, k2);
+      var m = Math.min(W, H), k1 = ease(cl(t / 2200)), c = [INI[0] + (destino.c[0] - INI[0]) * k1, INI[1] + (destino.c[1] - INI[1]) * k1];
+      var k2 = ease(cl((t - 1500) / 2900)), Ri = m * 0.36, R = Ri * Math.pow(destino.R / Ri, k2);
       var cx = W / 2 + (destino.cx - W / 2) * k2, cy = H * 0.47 + (destino.cy - H * 0.47) * k2;
       [esf, bor].forEach(function (n) { n.setAttribute('cx', cx); n.setAttribute('cy', cy); n.setAttribute('r', R); });
-      ret.setAttribute('d', RET.map(function (q) { return linea(q, c, R, cx, cy, false); }).join('')); ret.style.opacity = 1 - k2;
-      tierra.setAttribute('d', MUNDO.map(function (q) { return linea(q, c, R, cx, cy, true); }).join('')); tierra.style.opacity = 1 - cl(k2 * 1.8); // la costa de 1:110m es basta de cerca: se va antes que Andalucía
+      // la costa de 1:110m es basta de cerca: se va cuando ya se ve España y llega Andalucía
+      var dT = MUNDO.map(function (q) { return linea(q, c, R, cx, cy, true); }).join(''), oT = 1 - cl((k2 - 0.62) / 0.22);
+      tierra.setAttribute('d', dT); brillo.setAttribute('d', dT); tierra.style.opacity = oT; brillo.style.opacity = oT * 0.5;
       provs.forEach(function (p) { p.n.setAttribute('d', p.r.map(function (q) { return linea(q, c, R, cx, cy, true); }).join('')); });
-      gP.style.opacity = cl(t / 700);
+      gP.style.opacity = cl((k2 - 0.35) / 0.3);
       // al final se funde con el mapa de verdad, que está debajo en el mismo sitio
-      capa.style.opacity = 1 - cl((t - 3000) / 500);
+      capa.style.opacity = 1 - cl((t - 4450) / 550);
     }
     var t0 = 0, raf = 0, hecho = false;
     function acabar() {
@@ -67,6 +67,8 @@
     capa.addEventListener('pointerdown', acabar); saltar.addEventListener('click', acabar); document.addEventListener('keydown', tecla);
     addEventListener('resize', function () { if (!hecho) medir(); });
     function anim(ts) { if (!t0) t0 = ts; var t = ts - t0; cuadro(t); if (t < DUR) raf = requestAnimationFrame(anim); else acabar(); }
+    // con «reducir movimiento»: una imagen quieta (Europa y Andalucía) y un fundido, sin cámara
+    if (o.quieto) { fetch(o.mundo).then(function (r) { return r.json(); }).then(function (j) { MUNDO = j.anillos || []; }).catch(function () { }).then(function () { if (hecho) return; cuadro(3000); capa.style.opacity = '1'; setTimeout(acabar, 1400); }); return; }
     cuadro(0);
     fetch(o.mundo).then(function (r) { return r.json(); }).then(function (j) { MUNDO = j.anillos || []; }).catch(function () { }).then(function () { if (!hecho) raf = requestAnimationFrame(anim); });
   };

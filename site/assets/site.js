@@ -289,13 +289,24 @@
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.appendChild(svg); mapa.appendChild(hs);
-      // Entrada de la primera visita: la cámara baja del globo a Andalucía (assets/globo.js). Una sola vez por navegador, nunca con
-      // «reducir movimiento», ni si se llega a una ciudad (#malaga), ni con la página ya desplazada o en modo de ahorro de datos.
+      // Entrada: la cámara baja del globo a Andalucía (assets/globo.js). Una vez por visita (Pablo, 26-oct: «sólo muéstralo una
+      // vez»), no si se llega a una ciudad (#malaga), con la página ya desplazada o en ahorro de datos; con «reducir movimiento»,
+      // una imagen quieta y un fundido. El globo pequeño junto al mapa la vuelve a poner.
       (function () {
-        var visto = '1'; try { visto = localStorage.getItem('oc-entrada') || ''; } catch (e) { }
-        if (visto || reduced || location.hash || scrollY > 40 || !datos.globo || (navigator.connection && navigator.connection.saveData)) return;
-        try { localStorage.setItem('oc-entrada', '1'); } catch (e) { }
-        var s = document.createElement('script'); s.src = datos.globo; s.onload = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo }); }; document.head.appendChild(s);
+        function globo() {
+          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, quieto: reduced }); };
+          if (window.OCGlobo) return ir();
+          var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; document.head.appendChild(s);
+        }
+        if (!datos.globo) return;
+        var otra = document.createElement('button'); otra.type = 'button'; otra.className = 'oc-colg-otra'; otra.setAttribute('aria-label', 'Ver otra vez la llegada desde el globo');
+        otra.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>';
+        otra.addEventListener('click', function () { var r = mapa.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) mapa.scrollIntoView({ block: 'center' }); globo(); });
+        mapa.appendChild(otra);
+        var visto = '1'; try { visto = sessionStorage.getItem('oc-entrada') || ''; } catch (e) { }
+        if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) return;
+        try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { }
+        globo();
       })();
       // ---- Mapa «Bordado» (elegido por Pablo, 26-oct): cada provincia, un repostero de terciopelo con cordón de oro, y junto a
       // cada capital su catedral bordada a puntadas. Ríos y sierras: Natural Earth (dominio público, tools/generar-mapa-detalle.mjs).
@@ -326,22 +337,18 @@
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-pelo' }));
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon-base' }));
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon' }));
+      // Sin ríos (Pablo, 26-oct: «quita los ríos»); las sierras quedan como un relieve suave
       if (datos.detalle) {
         var det = el('g', { 'class': 'oc-detalle', 'clip-path': 'url(#oc-and-clip)', 'aria-hidden': 'true' });
         datos.detalle.sierras.forEach(function (s) { det.appendChild(el('path', { 'class': 'oc-sierra', d: s.d })); });
-        datos.detalle.rios.forEach(function (r) { det.appendChild(el('path', { 'class': 'oc-rio-base', d: r.d })); det.appendChild(el('path', { 'class': 'oc-rio', d: r.d })); });
         svg.appendChild(det);
       }
-      // la catedral, al lado de su capital: en el lado contrario a su nombre (nombre debajo → catedral encima, y al revés)
+      // Cada capital con la misma gramática, para que se lea de un vistazo: su catedral de pie justo encima del punto y el
+      // nombre a la derecha, a su altura (antes la catedral cambiaba de lado según la ciudad y se confundía con la vecina)
       var ge = el('g', { 'class': 'oc-bd-catedrales', 'aria-hidden': 'true' }); svg.appendChild(ge);
-      // más grandes en pantallas estrechas, donde el mapa entero mide poco más de 350 px
-      var TAM = mapa.clientWidth < 520 ? 3.1 : 2.4, L = 32 * TAM;
+      var pxu = vbM[2] / Math.max(1, mapa.clientWidth), estrecho = mapa.clientWidth < 520, TAM = (estrecho ? 26 : 46) / 32 * pxu, L = 32 * TAM;
       (datos.caps || []).forEach(function (c) {
-        var px = c.x / 100 * vbM[2], py = c.y / 100 * vbM[3], x, y;
-        if (c.p === 'b') { x = px - L / 2; y = py - L - 12; }
-        else if (c.p === 't') { x = px - L / 2; y = py + 12; }
-        else if (c.p === 'l') { x = px + 14; y = py - L + 12; }
-        else { x = px - L - 14; y = py - L + 12; }
+        var px = c.x / 100 * vbM[2], py = c.y / 100 * vbM[3], x = px - L / 2, y = py - L - (estrecho ? 5 : 7) * pxu;
         var g = el('g', { transform: 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') scale(' + TAM + ')' });
         g.appendChild(el('path', { d: CATEDRAL[c.s] || '', 'class': 'oc-bd-emb-base' })); g.appendChild(el('path', { d: CATEDRAL[c.s] || '', 'class': 'oc-bd-emb' }));
         ge.appendChild(g);
@@ -351,7 +358,8 @@
       // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía), con su nombre al lado
       datos.caps.forEach(function (c) {
         var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d);
-        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; n.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(n);
+        var n = document.createElement('span'); // en el móvil, el nombre debajo del punto (a la derecha chocaba con la vecina), salvo Jaén, que tiene encima la catedral de Granada
+        n.className = 'oc-capnom ' + (estrecho && c.s !== 'jaen' ? 'is-b' : 'is-r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; n.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(n);
       });
     }
     // Las banderas son enlaces a su capital (sin JavaScript funcionan así); con JavaScript, botones que bajan a su calle

@@ -17,7 +17,7 @@
     var o1 = cl((p - 0.06) / 0.1) * (1 - cl((p - 0.42) / 0.1)), o2 = cl((p - 0.36) / 0.1) * (1 - cl((p - 0.7) / 0.08)), o3 = cl((p - 0.8) / 0.12);
     c1.style.opacity = o1; c1.style.transform = 'translateY(' + 10 * (1 - o1) + 'px)';
     c2.style.opacity = o2; c2.style.transform = 'translateY(' + 10 * (1 - o2) + 'px)';
-    c3.style.opacity = o3; c3.style.transform = 'translateY(' + 14 * (1 - o3) + 'px)';
+    c3.style.opacity = o3; c3.style.transform = 'translateY(' + 14 * (1 - o3) + 'px)'; c3.style.visibility = o3 > 0.05 ? '' : 'hidden'; // el botón no se toca mientras no se ve
     if (pista) pista.style.opacity = 1 - cl(p / 0.08);
   }
   var pend = false;

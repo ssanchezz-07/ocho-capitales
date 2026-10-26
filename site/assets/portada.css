@@ -93,11 +93,11 @@
 /* ---- entrada de la primera visita: del globo a Andalucía (assets/globo.js) ---- */
 .oc-globo { position: fixed; inset: 0; z-index: 200; background: radial-gradient(120% 90% at 50% 42%, #2a1240 0%, #14081d 60%, #0b0511 100%); cursor: pointer; }
 .oc-globo-svg { display: block; width: 100%; height: 100%; }
-.oc-globo-esfera { fill: #1e0d2c; }
+.oc-globo-esfera { fill: #1e0d2c; stroke: rgba(201, 161, 74, .18); stroke-width: 14px; }
 .oc-globo-borde { fill: none; stroke: #c9a14a; stroke-width: 1.2px; opacity: .85; }
-.oc-globo-reticula { fill: none; stroke: #c9a14a; stroke-width: .6px; stroke-dasharray: 1.6 2.4; opacity: .5; }
-.oc-globo-tierra { fill: none; stroke: #e7c877; stroke-width: 1px; stroke-linejoin: round; stroke-linecap: round; }
-.oc-globo-prov { stroke: #e7c877; stroke-width: .8px; stroke-linejoin: round; }
+.oc-globo-tierra { fill: none; stroke: #f0d68e; stroke-width: 1.15px; stroke-linejoin: round; stroke-linecap: round; }
+.oc-globo-tierra-brillo { fill: none; stroke: #c9a14a; stroke-width: 5px; stroke-linejoin: round; stroke-linecap: round; opacity: .5; }
+.oc-globo-prov { fill: none; stroke: #f0d68e; stroke-width: 1.3px; stroke-linejoin: round; }
 .oc-globo-saltar { position: fixed; z-index: 201; top: max(16px, env(safe-area-inset-top)); right: 16px; min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(201, 161, 74, .55); background: rgba(255, 255, 255, .08); color: #f4eff9; font: 500 15px/1 Heebo, system-ui, sans-serif; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .oc-globo-saltar:focus-visible { outline: 2px solid #e7c877; outline-offset: 2px; }
 
@@ -131,3 +131,16 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
   .oc-naz-fig { height: min(56svh, 460px); justify-self: center; }
   .oc-naz-txt { margin: 0 auto; text-align: center; }
 }
+
+/* volver a ver la llegada desde el globo: un globo pequeño en la esquina del mapa */
+.oc-colg-otra { position: absolute; z-index: 4; left: 4px; top: 4px; width: 44px; height: 44px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: #e7c877; opacity: .75; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: opacity .2s ease, transform .16s cubic-bezier(.2, .8, .2, 1); }
+.oc-colg-otra svg { width: 24px; height: 24px; }
+.oc-colg-otra:hover { opacity: 1; }
+.oc-colg-otra:active { transform: scale(.92); }
+.oc-colg-otra:focus-visible { outline: 2px solid #e7c877; outline-offset: 2px; opacity: 1; }
+.oc-portada.is-ciudad .oc-colg-otra { display: none; }
+
+/* el nazareno en la portada: algo más corto que en su página, con su botón */
+.oc-naz-js .oc-naz.is-portada, .oc-naz.is-portada.is-vivo { height: 240vh; }
+.oc-naz.is-portada { margin-top: 24px; }
+.oc-naz-btn { margin-top: 16px; }
