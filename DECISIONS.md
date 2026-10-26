@@ -66,7 +66,22 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
   - Resultado al mover la hora en Sevilla, en un navegador sin aceleración gráfica: de 29 a 71 fotogramas en el móvil y de 23 a 59 en el escritorio.
 - **Orden:** primero el hilo llega a la capital (360 ms), luego Andalucía se acerca (820 ms) y el plano aparece hacia los 700 ms. La altura crece en 420 ms: es la única animación de una propiedad de maquetación, y se queda porque solo ocurre al bajar o subir y oculta el salto de la página.
 
-**Mapa con más detalle: dos variantes para que elija Pablo.** Se ven en la portada con `?mapa=grabado` o `?mapa=relieve`; sin ese parámetro, el mapa de siempre. El parámetro se quita al elegir.
+**Mapa con carácter: tres diseños nuevos para que elija Pablo** (`?mapa=bordado`, `?mapa=azulejo` y `?mapa=cirios`). Pablo descartó «grabado» y «relieve» porque los veía «muy simples, sin gracia». Los nuevos salen del mundo cofrade y andaluz:
+- **Bordado:**
+  - cada provincia es un repostero de terciopelo, con su pelo;
+  - el contorno lleva un cordón de oro torcido;
+  - el emblema de su capital va bordado a puntadas en el centro (palio, campana, Alhambra, arcos de la Mezquita, horquilla, cinta, Alcazaba, cruz). Son dibujos propios, sin derechos de terceros;
+  - los ríos son hilo de oro.
+- **Azulejo:**
+  - cada provincia alicatada con estrellas de ocho puntas en el color de su capital (es la estrella del sello del portal), con cuartos de rueda en cobalto y llagas de cal;
+  - el nombre de cada capital va en una placa de azulejo, como los rótulos de las calles;
+  - los ríos, en cobalto vidriado.
+- **Cirios:**
+  - Andalucía de noche, con cada capital encendida por un cirio de luz cálida;
+  - la luz es fija, sin parpadeo (DESIGN.md: nada se mueve en bucle);
+  - los ríos son hilos de plata.
+
+Variantes anteriores (descartadas): **Mapa con más detalle: dos variantes para que elija Pablo.** Se ven en la portada con `?mapa=grabado` o `?mapa=relieve`; sin ese parámetro, el mapa de siempre. El parámetro se quita al elegir.
 - **Datos:** ríos (Guadalquivir, Genil, Guadalimar y Guadiana Menor) y sierras (Sierra Morena y Sierra Nevada) de **Natural Earth 1:10m, dominio público** (https://www.naturalearthdata.com/; capas `ne_10m_rivers_lake_centerlines`, `ne_10m_rivers_europe` y `ne_10m_geography_regions_polys`, descargadas con permiso de Pablo).
   - `tools/generar-mapa-detalle.mjs` los proyecta igual que las provincias (`tools/generar-mapa.mjs`) y escribe `site/data/mapa-detalle.json` (3 KB).
   - Los emblemas de las capitales salen de nuestras propias colgaduras (`assets/plates`).

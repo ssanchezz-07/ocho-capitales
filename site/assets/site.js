@@ -287,39 +287,82 @@
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.appendChild(svg); mapa.appendChild(hs);
-      // Detalle (ríos y sierras de Natural Earth), recortado al contorno de Andalucía; los rótulos van encima, sin recortar
+      // ---- Mapa con carácter: tres propuestas para elegir (prototipo, 26-oct; se queda una y se quita ?mapa=) ----
+      // Bordado: cada provincia, un repostero de terciopelo con cordón de oro y el emblema de su capital bordado.
+      // Azulejo: cada provincia alicatada con estrellas de ocho puntas en el color de su capital y placas de azulejo con su nombre.
+      // Cirios: Andalucía de noche, cada capital encendida por la luz de un cirio.
+      // Ríos y sierras: Natural Earth (dominio público), en la misma proyección (tools/generar-mapa-detalle.mjs).
+      var vbM = datos.vb.split(' ').map(Number), todo = datos.prov.map(function (p) { return p.d; }).join('');
+      var centro = function (d) { var n = d.match(/-?\d+(?:\.\d+)?/g).map(Number), sx = 0, sy = 0, k = 0; for (var i = 0; i + 1 < n.length; i += 2) { sx += n[i]; sy += n[i + 1]; k++; } return [sx / k, sy / k]; };
+      var EMB = {
+        sevilla: 'M3 9h18M4 9l2-4h12l2 4M4 9q2 2.5 4 0q2 2.5 4 0q2 2.5 4 0q2 2.5 4 0M5 9v11M19 9v11M9.5 9v11M14.5 9v11M3 20h18M12 2v3',
+        malaga: 'M12 2v3M7 17c0-7 1.5-11 5-11s5 4 5 11M5 17h14M10.5 19.5a1.5 1.5 0 0 0 3 0M9 10h6',
+        granada: 'M3 20V11h3V8h2v3h2V6h4v5h2V8h2v3h3v9zM10 20v-4a2 2 0 0 1 4 0v4M7 14h1M16 14h1',
+        cordoba: 'M2.5 20v-8a4.75 4.75 0 0 1 9.5 0v8M12 20v-8a4.75 4.75 0 0 1 9.5 0v8M2 20h20M4 12l2-1M8 12l-2-1M13.5 12l2-1M17.5 12l-2-1',
+        cadiz: 'M12 21v-9M12 12L6.5 4M12 12l5.5-8M5 4h3M16 4h3M9 21h6',
+        huelva: 'M12 4c-3 0-4.5 3-2.5 6.5L5 20M12 4c3 0 4.5 3 2.5 6.5L19 20M9.5 10.5h5M12 4v2',
+        almeria: 'M2 20v-7h3v-2h2v2h2V8h2v3h2V8h2v5h2v-2h2v2h3v7zM10.5 20v-3a1.5 1.5 0 0 1 3 0v3',
+        jaen: 'M12 3v18M6.5 8.5h11M12 3a1.4 1.4 0 1 0 0 .1M6.5 8.5a1.4 1.4 0 1 0 0 .1M17.5 8.5a1.4 1.4 0 1 0 0 .1M9.5 21h5'
+      };
+      var defs = el('defs', {}), clip = el('clipPath', { id: 'oc-and-clip' }); clip.appendChild(el('path', { d: todo })); defs.appendChild(clip);
+      // terciopelo: pelo fino en diagonal
+      var tp = el('pattern', { id: 'oc-terciopelo', width: '4', height: '4', patternUnits: 'userSpaceOnUse' }); tp.appendChild(el('path', { d: 'M0 4L4 0', 'class': 'oc-pelo' })); defs.appendChild(tp);
+      // azulejo de cada provincia: estrella de ocho puntas en su color sobre esmalte blanco, con cuartos de rueda en cobalto
+      datos.prov.forEach(function (p) {
+        var az = el('pattern', { id: 'oc-az-' + p.s, width: '34', height: '34', patternUnits: 'userSpaceOnUse' });
+        az.appendChild(el('rect', { width: '34', height: '34', 'class': 'oc-az-fondo' }));
+        ['M0 0h5.5a5.5 5.5 0 0 1-5.5 5.5z', 'M34 0v5.5a5.5 5.5 0 0 1-5.5-5.5z', 'M0 34v-5.5a5.5 5.5 0 0 1 5.5 5.5z', 'M34 34h-5.5a5.5 5.5 0 0 1 5.5-5.5z'].forEach(function (d) { az.appendChild(el('path', { d: d, 'class': 'oc-az-cobalto' })); });
+        var est = el('g', { transform: 'translate(17 17)' });
+        est.appendChild(el('rect', { x: '-9', y: '-9', width: '18', height: '18', fill: p.c }));
+        est.appendChild(el('rect', { x: '-9', y: '-9', width: '18', height: '18', fill: p.c, transform: 'rotate(45)' }));
+        est.appendChild(el('circle', { r: '3.2', 'class': 'oc-az-ocre' }));
+        az.appendChild(est); defs.appendChild(az);
+      });
+      var luz = el('radialGradient', { id: 'oc-cirio' });
+      [['0', '#fff3cf', '.95'], ['.18', '#ffd27a', '.6'], ['.5', '#e08a2a', '.2'], ['1', '#e08a2a', '0']].forEach(function (s) { luz.appendChild(el('stop', { offset: s[0], 'stop-color': s[1], 'stop-opacity': s[2] })); });
+      defs.appendChild(luz);
+      svg.insertBefore(defs, svg.firstChild);
+      var capa = function (cls) { var g = el('g', { 'class': 'oc-v ' + cls, 'aria-hidden': 'true' }); svg.appendChild(g); return g; };
+      // Bordado
+      var gb = capa('oc-v-bordado');
+      gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-pelo' }));
+      gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon-base' }));
+      gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon' }));
+      // Azulejo
+      var ga = capa('oc-v-azulejo');
+      datos.prov.forEach(function (p) { ga.appendChild(el('path', { d: p.d, fill: 'url(#oc-az-' + p.s + ')', 'class': 'oc-az-prov' })); });
+      ga.appendChild(el('path', { d: todo, 'class': 'oc-az-llaga' }));
+      // Cirios
+      var gc = capa('oc-v-cirios');
+      gc.appendChild(el('path', { d: todo, 'class': 'oc-ci-noche' }));
+      datos.caps.forEach(function (c) { gc.appendChild(el('circle', { cx: c.x / 100 * vbM[2], cy: c.y / 100 * vbM[3], r: '120', fill: 'url(#oc-cirio)', 'class': 'oc-ci-luz' })); });
+      // ríos y sierras, recortados al contorno (cada estilo los viste a su manera)
       if (datos.detalle) {
-        var defs = el('defs', {}), clip = el('clipPath', { id: 'oc-and-clip' });
-        datos.prov.forEach(function (p) { clip.appendChild(el('path', { d: p.d })); });
-        defs.appendChild(clip);
-        var pat = el('pattern', { id: 'oc-rayado', width: '7', height: '7', patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(38)' }); pat.appendChild(el('line', { x1: '0', y1: '0', x2: '0', y2: '7', 'class': 'oc-rayado-l' })); defs.appendChild(pat);
-        var mon = el('pattern', { id: 'oc-montes', width: '14', height: '9', patternUnits: 'userSpaceOnUse' }); mon.appendChild(el('path', { d: 'M1 8L5 2.5L9 8M8 8L11 4.5L14 8', 'class': 'oc-monte-l' })); defs.appendChild(mon);
-        var luz = el('radialGradient', { id: 'oc-luz', cx: '30%', cy: '20%', r: '80%' }); luz.appendChild(el('stop', { offset: '0', 'stop-color': '#fff', 'stop-opacity': '.16' })); luz.appendChild(el('stop', { offset: '1', 'stop-color': '#fff', 'stop-opacity': '0' })); defs.appendChild(luz);
-        var bl = el('filter', { id: 'oc-difuso', x: '-20%', y: '-20%', width: '140%', height: '140%' }); bl.appendChild(el('feGaussianBlur', { stdDeviation: '7' })); defs.appendChild(bl);
-        svg.insertBefore(defs, svg.firstChild);
-        // filete de la costa y la frontera: el contorno de Andalucía con un trazo ancho y tenue, bajo las provincias
-        var filete = el('g', { 'class': 'oc-filete' }); datos.prov.forEach(function (p) { filete.appendChild(el('path', { d: p.d })); }); svg.insertBefore(filete, defs.nextSibling);
-        var det = el('g', { 'class': 'oc-detalle', 'clip-path': 'url(#oc-and-clip)' });
-        det.appendChild(el('rect', { 'class': 'oc-rayado', x: '0', y: '0', width: '1000', height: '1000' }));
-        det.appendChild(el('rect', { 'class': 'oc-luz', x: '0', y: '0', width: '1000', height: '615' }));
-        datos.detalle.sierras.forEach(function (s) { det.appendChild(el('path', { 'class': 'oc-sierra-sombra', d: s.d, transform: 'translate(5 6)' })); det.appendChild(el('path', { 'class': 'oc-sierra', d: s.d })); });
-        datos.detalle.rios.forEach(function (r) { det.appendChild(el('path', { 'class': 'oc-rio-halo', d: r.d })); det.appendChild(el('path', { 'class': 'oc-rio', d: r.d, id: 'oc-rio-' + r.n.toLowerCase().replace(/\s+/g, '-') })); });
+        var det = el('g', { 'class': 'oc-detalle', 'clip-path': 'url(#oc-and-clip)', 'aria-hidden': 'true' });
+        datos.detalle.sierras.forEach(function (s) { det.appendChild(el('path', { 'class': 'oc-sierra', d: s.d })); });
+        datos.detalle.rios.forEach(function (r) { det.appendChild(el('path', { 'class': 'oc-rio-base', d: r.d })); det.appendChild(el('path', { 'class': 'oc-rio', d: r.d })); });
         svg.appendChild(det);
-        var rot = el('g', { 'class': 'oc-rotulos', 'aria-hidden': 'true' });
-        datos.detalle.sierras.forEach(function (s) { var tx = el('text', { 'class': 'oc-rot oc-rot-sierra', x: s.cx + (/Morena/.test(s.n) ? -70 : 80), y: s.cy + (/Morena/.test(s.n) ? -22 : 52) }); tx.textContent = s.n; rot.appendChild(tx); });
-        var rio = el('text', { 'class': 'oc-rot oc-rot-rio', dy: '-5' }), tp = el('textPath', { href: '#oc-rio-guadalquivir', startOffset: '40%' }); tp.textContent = 'Guadalquivir'; rio.appendChild(tp); rot.appendChild(rio);
-        [['Océano Atlántico', 120, 560], ['Mar Mediterráneo', 640, 560]].forEach(function (m) { var tx = el('text', { 'class': 'oc-rot oc-rot-mar', x: m[1], y: m[2] }); tx.textContent = m[0]; rot.appendChild(tx); });
-        svg.appendChild(rot);
       }
-      // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía)
+      // emblemas bordados en el centro de cada provincia (si caen sobre la capital, un poco más arriba)
+      var ge = el('g', { 'class': 'oc-v oc-v-bordado oc-bd-emblemas', 'aria-hidden': 'true' }); svg.appendChild(ge);
+      datos.prov.forEach(function (p) {
+        var c = centro(p.d), cap = (datos.caps || []).filter(function (k) { return k.s === p.s; })[0];
+        if (cap) { var px = cap.x / 100 * vbM[2], py = cap.y / 100 * vbM[3]; if (Math.hypot(px - c[0], py - c[1]) < 70) c[1] = py - 72; }
+        var g = el('g', { transform: 'translate(' + (c[0] - 36).toFixed(1) + ' ' + (c[1] - 42).toFixed(1) + ') scale(3)' });
+        g.appendChild(el('path', { d: EMB[p.s] || '', 'class': 'oc-bd-emb-base' })); g.appendChild(el('path', { d: EMB[p.s] || '', 'class': 'oc-bd-emb' }));
+        ge.appendChild(g);
+      });
+      // mares en cursiva, para los tres
+      var mares = el('g', { 'class': 'oc-v oc-mares', 'aria-hidden': 'true' }); svg.appendChild(mares);
+      [['Océano Atlántico', 120, 575], ['Mar Mediterráneo', 650, 585]].forEach(function (m) { var tx = el('text', { x: m[1], y: m[2] }); tx.textContent = m[0]; mares.appendChild(tx); });
+      // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía); con su nombre según el estilo
       datos.caps.forEach(function (c) {
         var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d);
-        // medallón con el emblema de su colgadura (variante «grabado») y nombre junto al punto
-        var e = document.createElement('span'); e.className = 'oc-emblema'; e.setAttribute('aria-hidden', 'true'); e.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%;background-image:url(' + BASE + 'assets/plates/colgadura-' + c.s + '.webp)'; e.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(e);
-        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; mapa.appendChild(n);
+        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; n.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(n);
+        var ll = document.createElement('span'); ll.className = 'oc-llama'; ll.setAttribute('aria-hidden', 'true'); ll.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; ll.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(ll);
       });
-      // prototipo para elegir estilo de mapa (se quita al decidir): ?mapa=grabado | ?mapa=relieve
-      var estilo = (location.search.match(/[?&]mapa=(grabado|relieve)/) || [])[1]; if (estilo) colg.setAttribute('data-mapa', estilo);
+      // prototipo para elegir estilo de mapa (se quita al decidir): ?mapa=bordado | azulejo | cirios
+      var estilo = (location.search.match(/[?&]mapa=(bordado|azulejo|cirios)/) || [])[1]; if (estilo) colg.setAttribute('data-mapa', estilo);
     }
     // Las banderas son enlaces a su capital (sin JavaScript funcionan así); con JavaScript, botones que bajan a su calle
     var items = $$('.oc-colg', colg).map(function (a) {
