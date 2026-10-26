@@ -2,7 +2,33 @@
 
 _Órdenes: `ORDENES-RUTAS-METODO-NUEVO.md` (Málaga primero, con el código). Herramientas en `tools/itinerarios/rutas/` (ver su `README.md`)._
 
-**Estado (2026-10-26, tarde): 45 de 45 con el método nuevo.** Cada corrección lleva su fuente; los tramos sin calles oficiales de 2026 van como «estimado». Pendiente: la revisión independiente de las 45 (se apunta abajo).
+**Estado (2026-10-26, 14:40): 45 de 45 con el método nuevo (`238c0b4` en `main`), pero la revisión independiente encontró 5 fallos y 6 dudas.** Paré con el límite de 5 horas al 81 %. **Punto exacto de retoma: arreglar la lista siguiente, volver a trazar, repetir la revisión y subir.**
+
+### Revisión independiente (subagente, 2026-10-26): 34 OK, 6 DUDA, 5 FALLO
+El revisor no había visto mi trabajo. Contrastó el PDF, la lista, la sucesión de calles y 18 capturas. Dossier: `scratchpad/dossier-malaga.md`, que se regenera con `dossier.mjs`; conviene pasar ese script a `rutas/`.
+
+**FALLO, por arreglar:**
+1. **Humildad y Paciencia, Mediadora y Expiración: Plaza Enrique García-Herrera.** Las tres van «Moreno Carbonero → Sebastián Souvirón → Félix Sáenz → San Juan → Marqués → Plaza». Arreglo: `cruzar` en la fila de la plaza, como en Lágrimas y Favores. GraphHopper no enruta por dentro del área (way 183856398).
+2. **Expiración: Puente de Tetuán.** El PDF dice «Avenida de Andalucía, Puente de Tetuán, Alameda Principal». El trazado da un rodeo de unos 480 m por Nazareno del Paso, Hilera, Pasillo de Santo Domingo y el Puente de la Misericordia. Arreglo: puntos de entrada en el Puente de Tetuán y en la Alameda.
+3. **Salesianos: bucle de unos 156 m.** Va Granada → Méndez Núñez → José Denis Belgrano → Granada → Méndez Núñez. El PDF salta de Granada a la Plaza Uncibay. Arreglo: `paso` por Méndez Núñez y `tramos` «estimado» en Plaza Uncibay.
+4. **Amor: María es un fondo de saco en OSM.** El trazado la recorre ida y vuelta (155 m), y al salir cambia el orden: el PDF dice «Conde de Tendilla, María, Ladrón de Guevara». Arreglo: unir Conde de Tendilla con María como tramo «estimado» y quitar el pico. Antes, mirar la geometría.
+5. **Pollinica:** al regreso pasa la puerta (Calle Parras 20) y vuelve, con un pico de unos 65 m. Mirar la entrada.
+
+**DUDA:**
+- **Lágrimas y Favores:** el último tramo, de Félix Sáenz a la puerta de San Juan, se dibuja recto. Debería ir enrutado por Calle San Juan y Postigo de San Juan. Además, «Compañía» (42 m), entre Puerta Nueva y Fajardo, no está en la lista.
+- **Cautivo:** el regreso da una vuelta de unos 280 m por la Plaza Bailén. Debería ir Trinidad → Barrera de la Trinidad → puerta.
+- **Fusionadas:** la sede es la «sede social» (Postigo de San Juan 5), pero el PDF empieza «Casa Hermandad, Pasillo Santa Isabel», y al salir hay un pico de 131 m por Cisneros. Hace falta una fuente de dónde salen los tronos.
+- **Sangre:** la lista añade «Casa Hermandad» (Dos Aceras 10) al principio, que no está en el PDF; el PDF empieza en la Plazuela del Cristo de la Sangre (San Felipe Neri). El tramo por Gaona (95 m) va sin marcar. Hace falta fuente, o marcarlo «estimado».
+- **Gitanos:** el tramo estimado va por García Briz y Muro de Puerta Nueva, y no por el Pasillo de Santa Isabel, que cita la fuente de 2020. Arreglo: `paso` por el Pasillo de Santa Isabel.
+- **Nueva Esperanza:** unos 125 m por la Rampa de la Aurora y dos plazas, sin marcar «estimado».
+
+**Notas generales:**
+- Igualar el punto en la Plaza Jesús de la Pasión en Dulce Nombre, Crucifixión, Santa Cruz, Viñeros y Vera Cruz (en Pasión y Humildad ya está).
+- Los cruces de la Alameda (43 m), del Pasillo del Matadero (47 m) y de la Avenida de Andalucía (55 m) están por debajo del umbral de 60 m de «estimado». Hay que decidir si se marcan.
+- **Mediadora:** la lista repite «Garnica»; en el PDF es una sola calle, «Avenida del Ingeniero José María Garnica». Hace falta un arreglo `juntar` con resultado explícito. Su sede está situada por Nominatim (Ayala 34) y el regreso da una vuelta por Cómico Riquelme y Orfila: confirmar la dirección de la casa hermandad con fuente.
+- **Horas:** el revisor las encontró bien asignadas.
+
+**Plano:** la sesión de portada ya dibuja los tramos «estimado» en discontinuo, con su leyenda, en la rama `claude/portada-inmersiva-91892d`, todavía sin subir a `main`.
 
 Corregido en esta tanda, cada cosa con su fuente en `tools/itinerarios/rutas/correcciones-malaga.json`:
 - **Pasión:** la Plaza de los Mártires y la Plaza Jesús de la Pasión, sin picos y sin retrocesos.
