@@ -39,17 +39,32 @@ node tools/itinerarios/listas-cadiz.mjs
 - **Jesús Caído** sale de San Francisco y vuelve a su **capilla del Parque Genovés**.
 - **Expiración** sale del **Carmen** (obras en la Castrense).
 
+## Cierre al 100 % (encargo del 2026-10-26, tarde) · EN CURSO
+- **Hecho y comprobado en local (sin subir todavía):**
+  - **Segunda fuente de 2026 para las 33:** cuadernillo «Semana Santa de la Bahía de Cádiz 2026» de Radio Cádiz (Cadena SER), págs. 3-46 → `tools/itinerarios/cadiz-2026-cruzdeguia.json` (`cruzdeguia-cadiz.mjs` + `leer-pdf-stdin.py`). Itinerarios: **32 de 33 idénticos** calle a calle al programa de Canal Sur. Cada hermandad lleva `segunda_fuente` en `listas-cadiz-2026.json`.
+  - **Descendimiento:** el cuadernillo trae «Columela» entre Palillero y San Francisco (ida), omitido en Canal Sur: añadido con nota. **Duda para Pablo:** al volver, Canal Sur dice «Plaza Palillero, Javier de Burgos, Barrié» y el cuadernillo «Plaza Palillero, Novena, Barrié (Izq.)». Se mantiene Canal Sur.
+  - **Entradas confirmadas** con el templo de 2026 del cuadernillo: Las Aguas (Oratorio de San Felipe, pág. 30), Expiración (Iglesia del Carmen) y el Perdón (Santa Iglesia Catedral, recogida 09:00). Servitas y Obediencia: la puerta de la Catedral (entrar por Arquitecto Acero) sigue deducida del orden de calles.
+  - **Plaza de Pío XII:** alias a la Plaza de la Catedral con fuente (GCatholic, la Catedral en «Plaza del Pío XII»), en `alias-calles-cadiz.json`.
+  - **Resurrección:** las horas de la tabla rotulada «2025» son las de 2026 (las mismas del cuadernillo, pág. 46). Anotado en sus horas.
+  - **Puertas:** `rutas/puertas-cadiz.mjs` sitúa la salida y la entrada en el punto medio de la fachada que da a la calle de la portada (`portada` de cada templo en `sedes-cadiz.json`, con fuente). Con cita expresa: Santiago, San Francisco, La Palma, San Antonio, San Pablo; deducidas de la fuente: San Lorenzo (Sagasta), San Felipe Neri (Santa Inés), San José (avenida). Sin cita (`sin_cita`): Merced, San Agustín, Carmen, Caminito, Capuchinos, Santa María, capilla del Caído (dirección postal y primera calle del itinerario). Santo Domingo y la Catedral, con su puerta de OSM.
+  - **Plaza de San Juan de Dios:** la recta de Nueva a Pelota atravesaba un edificio pequeño (way/844713222; aviso de la sesión de portada). Ahora pasa por la parte abierta de la plaza (`rectos_por`). Comprobador de edificios de la sesión de portada (`comprobar-fondo.mjs`, copia sin tocar): **33/33 sin cruces de edificio ni tramos fuera de calle**.
+  - Evaluador: 33 «nuevo». Publicado en local en `site/data/recorridos/cadiz.json`.
+- **Punto exacto para seguir** (parada por el límite de 5 horas al 81 %):
+  1. Leer el veredicto del revisor independiente de las 33 (lanzado en esta sesión). Si falla alguna: corregir, repetir `node lista-cadiz.mjs` → `node puertas-cadiz.mjs` → `node emparejar.mjs cadiz` → `node evaluar.mjs cadiz` → `node publicar.mjs cadiz`, y volver a revisar esa.
+  2. `node site/build.mjs` → `python -I probar-plano.py cadiz` (390 y 1440 px).
+  3. `git fetch` → `git rebase origin/main` → `git push origin HEAD:main` → avisar a Pablo del hash.
+
 ## Lista para Pablo (mirar cuando esté trazado)
 Ninguna hermandad se queda sin lista completa. Estas tienen algo que conviene mirar:
 | Hermandad | Qué mirar |
 |---|---|
 | **El Perdón** | Ahora en «Jueves Santo y Madrugada» (sale a las 00:50). La entrada en la Catedral sale del itinerario («…Arquitecto Acero, Plaza de la Catedral, a su Templo»), no de la prensa. |
-| **Las Aguas** | La prensa da la salida desde San Felipe Neri; la entrada la deduzco del itinerario («Torre, Santa Inés a su Templo»). |
-| **Expiración** | Entrada en el Carmen deducida del itinerario («Alameda Hermanas Carvia Bernal (Izq), a su Templo»). |
+| **Las Aguas** | Salida y entrada en San Felipe Neri: confirmadas (Cádiz Directo y cuadernillo de Radio Cádiz 2026). |
+| **Expiración** | Salida y entrada en el Carmen: confirmadas (Cádiz Directo y cuadernillo de Radio Cádiz 2026). |
 | **Jesús Caído** | El programa escribe «Plaza **Istmo.** Cristo de la Vera-Cruz» (por «Stmo.»); la calle limpia ya va corregida y anotada. Pasa por el interior del Parque Genovés (Paseo de las Palmeras). |
-| **Piedad, Afligidos** | «Plaza de Pío XII» es la Plaza de la Catedral (GCatholic da la Catedral en «Plaza del Pío XII»). OSM no tiene ese nombre: hará falta alias. |
+| **Piedad, Afligidos** | «Plaza de Pío XII» = Plaza de la Catedral (alias con fuente: GCatholic). Resuelto. |
 | **Ecce Mater Tua** | No hace estación de penitencia: todo el recorrido va como «ida». Tabla de horas con solo salida, Palillero y entrada. |
-| **La Resurrección** | La tabla de horas del programa dice **2025**, no 2026. Se usa con ese aviso. |
+| **La Resurrección** | Horas de 2026 confirmadas con el cuadernillo de Radio Cádiz (pág. 46); la tabla de Canal Sur dice «2025» por errata. |
 | **Despojado** | Sale y entra por el interior del Colegio Salesianos San Ignacio (Avda. María Auxiliadora 7). |
 | **Servitas y Obediencia** (vísperas) | Su itinerario pone «Plaza de la Catedral, Arquitecto Acero, (Estación)»: lo trazo entrando por Arquitecto Acero y saliendo por la puerta principal, como en 2025 (opción «catedral» de su lista). Es una lectura del orden de calles: confírmalo. Antes Servitas salía a 326 m de San Lorenzo. |
 

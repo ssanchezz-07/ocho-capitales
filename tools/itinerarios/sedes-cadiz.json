@@ -6,37 +6,350 @@
   "cadizdirecto-guia": "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
   "gcatholic-catedral": "https://gcatholic.org/churches/spain/1741",
   "gcatholic-castrense": "https://gcatholic.org/churches/europe-south/45762",
-  "museum-santiago": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz"
+  "museum-santiago": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+  "cruzdeguia": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
  },
  "templos": {
-  "san-lorenzo": { "nombre": "Parroquia de San Lorenzo Mártir", "canonica": ["San Lorenzo"], "osm": "way/154961230", "lat": 36.5316618, "lon": -6.3006919 },
-  "merced": { "nombre": "Parroquia de Nuestra Señora de la Merced", "canonica": ["Merced"], "osm": "way/162534924", "lat": 36.5284587, "lon": -6.2913912 },
-  "santiago": { "nombre": "Iglesia de Santiago Apóstol", "canonica": ["Santiago"], "osm": "way/542083000", "lat": 36.5297285, "lon": -6.2956818, "dir": "Plaza de la Catedral, s/n", "fuente_dir": "museum-santiago" },
-  "san-jose": { "nombre": "Parroquia de San José", "canonica": ["San José"], "osm": "way/148685979", "lat": 36.5138482, "lon": -6.2806872 },
-  "santo-domingo": { "nombre": "Iglesia Conventual de Santo Domingo", "canonica": ["Santo Domingo"], "osm": "way/154232628", "lat": 36.5288478, "lon": -6.2900719 },
-  "salesianos": { "nombre": "Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)", "canonica": ["María Auxiliadora"], "osm": "way/157632556", "lat": 36.5124457, "lon": -6.2782926, "dir": "Avenida María Auxiliadora 7", "fuente_dir": "OSM way/157632556 (addr:housenumber 7)" },
-  "san-agustin": { "nombre": "Parroquia de San Agustín", "canonica": ["San Agustín"], "osm": "way/66648043", "lat": 36.5321248, "lon": -6.2942315 },
-  "san-francisco": { "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)", "canonica": ["Remedios", "San Francisco"], "osm": "way/154222961", "lat": 36.5347933, "lon": -6.2957616 },
-  "la-palma": { "nombre": "Parroquia de Nuestra Señora de la Palma", "canonica": ["Palma"], "osm": "way/154961231", "lat": 36.5296879, "lon": -6.3017431 },
-  "carmen": { "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa", "canonica": ["Carmen"], "osm": "way/154222959", "lat": 36.5371411, "lon": -6.2997616 },
-  "san-antonio": { "nombre": "Iglesia Parroquial de San Antonio", "canonica": ["San Antonio"], "osm": "way/154222951", "lat": 36.5344664, "lon": -6.2994284 },
-  "san-pablo": { "nombre": "Iglesia de la Conversión de San Pablo", "canonica": ["San Pablo"], "osm": "way/494982467", "lat": 36.5331329, "lon": -6.296805 },
-  "caminito": { "nombre": "Capilla del Caminito (Nuestra Señora de las Angustias)", "canonica": ["Caminito"], "osm": "way/549941389", "lat": 36.5363418, "lon": -6.2945441, "nota": "En OSM figura como «Capilla de Nuestra Señora de las Angustias», en Calle Isabel la Católica, la primera y la última calle del itinerario del Caminito." },
-  "capuchinos": { "nombre": "Iglesia de Santa Catalina (Capuchinos)", "canonica": ["Santa Catalina"], "osm": "way/154960632", "lat": 36.528234, "lon": -6.3017476 },
-  "santa-maria": { "nombre": "Iglesia de Santa María", "canonica": ["Santa María"], "osm": "way/154232558", "lat": 36.5277467, "lon": -6.2917535 },
-  "santa-cruz": { "nombre": "Parroquia de Santa Cruz (Catedral Vieja)", "canonica": ["Santa Cruz"], "osm": "way/66648045", "lat": 36.5284195, "lon": -6.2944161, "nota": "Cerrada por obras en 2026: sus cinco hermandades salieron de otros templos." },
-  "santo-angel": { "nombre": "Real Parroquia Castrense del Santo Ángel Custodio", "canonica": ["Santo Ángel"], "osm": "way/712116375", "lat": 36.5336724, "lon": -6.3030263, "dir": "C/ Benito Pérez Galdós, 83", "fuente_dir": "gcatholic-castrense", "nota": "Con obras pendientes en 2026: la Expiración salió del Carmen." },
-  "san-felipe-neri": { "nombre": "Oratorio de San Felipe Neri", "osm": "way/141200818", "lat": 36.5328564, "lon": -6.2997983 },
-  "catedral": { "nombre": "Iglesia Catedral de Cádiz", "osm": "way/66648047", "lat": 36.5289521, "lon": -6.2953183, "dir": "Plaza del Pío XII (Plaza de la Catedral)", "fuente_dir": "gcatholic-catedral" },
-  "capilla-jesus-caido": { "nombre": "Capilla de Jesús Caído (junto al Parque Genovés)", "osm": "way/766688340", "lat": 36.5346087, "lon": -6.3044972, "nota": "En OSM, en la Avenida Doctor Gómez Ulla, la última calle del itinerario del Caído." }
+  "san-lorenzo": {
+   "nombre": "Parroquia de San Lorenzo Mártir",
+   "canonica": [
+    "San Lorenzo"
+   ],
+   "osm": "way/154961230",
+   "lat": 36.5316618,
+   "lon": -6.3006919,
+   "portada": {
+    "calle": "Calle Sagasta",
+    "fuente": "https://hitosdecadiz.blogspot.com/2023/10/portada-y-retablos-barrocos-de-la.html (deducción: fachadas a Sagasta y Armengual, y la de Armengual es la lateral)",
+    "cita": "La portada lateral a la c/ Armengual"
+   }
+  },
+  "merced": {
+   "nombre": "Parroquia de Nuestra Señora de la Merced",
+   "canonica": [
+    "Merced"
+   ],
+   "osm": "way/162534924",
+   "lat": 36.5284587,
+   "lon": -6.2913912,
+   "portada": {
+    "calle": "Plaza de la Merced",
+    "fuente": "dirección «Plaza de la Merced, s/n» (https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-la-merced) y primera calle del itinerario de la Sentencia y las Siete Palabras",
+    "sin_cita": true
+   }
+  },
+  "santiago": {
+   "nombre": "Iglesia de Santiago Apóstol",
+   "canonica": [
+    "Santiago"
+   ],
+   "osm": "way/542083000",
+   "lat": 36.5297285,
+   "lon": -6.2956818,
+   "dir": "Plaza de la Catedral, s/n",
+   "fuente_dir": "museum-santiago",
+   "portada": {
+    "calle": "Plaza de la Catedral",
+    "fuente": "https://es.wikipedia.org/wiki/Iglesia_de_Santiago_(Cádiz)",
+    "cita": "La fachada principal… hacia la plaza de la Catedral"
+   }
+  },
+  "san-jose": {
+   "nombre": "Parroquia de San José",
+   "canonica": [
+    "San José"
+   ],
+   "osm": "way/148685979",
+   "lat": 36.5138482,
+   "lon": -6.2806872,
+   "portada": {
+    "calle": "Avenida de Andalucía",
+    "fuente": "Cadizpedia (copia de archive.org): http://web.archive.org/web/20250624032132/https://cadizpedia.wikanda.es/wiki/Iglesia_de_San_Jos%C3%A9_(C%C3%A1diz), que no nombra la avenida; la Borriquita sale y entra por la «Avda. Andalucía» (itinerario oficial)",
+    "cita": "abierta hacia la avenida"
+   }
+  },
+  "santo-domingo": {
+   "nombre": "Iglesia Conventual de Santo Domingo",
+   "canonica": [
+    "Santo Domingo"
+   ],
+   "osm": "way/154232628",
+   "lat": 36.5288478,
+   "lon": -6.2900719
+  },
+  "salesianos": {
+   "nombre": "Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)",
+   "canonica": [
+    "María Auxiliadora"
+   ],
+   "osm": "way/157632556",
+   "lat": 36.5124457,
+   "lon": -6.2782926,
+   "dir": "Avenida María Auxiliadora 7",
+   "fuente_dir": "OSM way/157632556 (addr:housenumber 7)"
+  },
+  "san-agustin": {
+   "nombre": "Parroquia de San Agustín",
+   "canonica": [
+    "San Agustín"
+   ],
+   "osm": "way/66648043",
+   "lat": 36.5321248,
+   "lon": -6.2942315,
+   "portada": {
+    "calle": "Plaza de San Agustín",
+    "fuente": "dirección «Plaza de San Agustín, 1» (https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-san-agust%C3%ADn) y primera calle del itinerario; la portada principal está «a los pies del templo» (cadizcofrade.net)",
+    "sin_cita": true
+   }
+  },
+  "san-francisco": {
+   "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+   "canonica": [
+    "Remedios",
+    "San Francisco"
+   ],
+   "osm": "way/154222961",
+   "lat": 36.5347933,
+   "lon": -6.2957616,
+   "portada": {
+    "calle": "Plaza de San Francisco",
+    "fuente": "Cadizpedia (copia de archive.org): http://web.archive.org/web/20220527152027/https://cadizpedia.wikanda.es/wiki/Iglesia_Conventual_de_San_Francisco_(C%C3%A1diz)",
+    "cita": "Portada principal de la iglesia de San Francisco… en la plaza del mismo nombre"
+   }
+  },
+  "la-palma": {
+   "nombre": "Parroquia de Nuestra Señora de la Palma",
+   "canonica": [
+    "Palma"
+   ],
+   "osm": "way/154961231",
+   "lat": 36.5296879,
+   "lon": -6.3017431,
+   "portada": {
+    "calle": "Calle Virgen de la Palma",
+    "fuente": "https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-la-palma",
+    "cita": "La fachada está enmarcada por la calle de la Palma"
+   }
+  },
+  "carmen": {
+   "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa",
+   "canonica": [
+    "Carmen"
+   ],
+   "osm": "way/154222959",
+   "lat": 36.5371411,
+   "lon": -6.2997616,
+   "portada": {
+    "calle": "Paseo Alameda Hermanas Carvia Bernal",
+    "fuente": "Wikipedia: el templo «se encuentra en la Alameda Marqués de Comillas» (hoy Hermanas Carvia Bernal), primera calle del itinerario del Prendimiento y la Expiración",
+    "sin_cita": true
+   }
+  },
+  "san-antonio": {
+   "nombre": "Iglesia Parroquial de San Antonio",
+   "canonica": [
+    "San Antonio"
+   ],
+   "osm": "way/154222951",
+   "lat": 36.5344664,
+   "lon": -6.2994284,
+   "portada": {
+    "calle": "Plaza de San Antonio",
+    "fuente": "https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-san-antonio",
+    "cita": "La fachada principal, que se abre a la plaza del mismo nombre"
+   }
+  },
+  "san-pablo": {
+   "nombre": "Iglesia de la Conversión de San Pablo",
+   "canonica": [
+    "San Pablo"
+   ],
+   "osm": "way/494982467",
+   "lat": 36.5331329,
+   "lon": -6.296805,
+   "portada": {
+    "calle": "Calle Ancha",
+    "fuente": "https://es.wikipedia.org/wiki/Iglesia_de_la_Conversión_de_San_Pablo_(Cádiz) (pie de foto)",
+    "cita": "Fachada de la calle Ancha"
+   }
+  },
+  "caminito": {
+   "nombre": "Capilla del Caminito (Nuestra Señora de las Angustias)",
+   "canonica": [
+    "Caminito"
+   ],
+   "osm": "way/549941389",
+   "lat": 36.5363418,
+   "lon": -6.2945441,
+   "nota": "En OSM figura como «Capilla de Nuestra Señora de las Angustias», en Calle Isabel la Católica, la primera y la última calle del itinerario del Caminito.",
+   "portada": {
+    "calle": "Calle Isabel la Católica",
+    "fuente": "Cadizpedia: «se ubica al final de la calle Isabel la Católica», primera y última calle del itinerario",
+    "sin_cita": true
+   }
+  },
+  "capuchinos": {
+   "nombre": "Iglesia de Santa Catalina (Capuchinos)",
+   "canonica": [
+    "Santa Catalina"
+   ],
+   "osm": "way/154960632",
+   "lat": 36.528234,
+   "lon": -6.3017476,
+   "portada": {
+    "calle": "Plaza de Capuchinos",
+    "fuente": "dirección «Plaza de Capuchinos, s/n» (https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-capuchinos) y primera calle del itinerario del Huerto",
+    "sin_cita": true
+   }
+  },
+  "santa-maria": {
+   "nombre": "Iglesia de Santa María",
+   "canonica": [
+    "Santa María"
+   ],
+   "osm": "way/154232558",
+   "lat": 36.5277467,
+   "lon": -6.2917535,
+   "portada": {
+    "calle": "Calle Santa María",
+    "fuente": "dirección «Calle Santa María, s/n» (https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/iglesia-de-santa-mar%C3%ADa) y primera calle del itinerario del Nazareno",
+    "sin_cita": true
+   }
+  },
+  "santa-cruz": {
+   "nombre": "Parroquia de Santa Cruz (Catedral Vieja)",
+   "canonica": [
+    "Santa Cruz"
+   ],
+   "osm": "way/66648045",
+   "lat": 36.5284195,
+   "lon": -6.2944161,
+   "nota": "Cerrada por obras en 2026: sus cinco hermandades salieron de otros templos."
+  },
+  "santo-angel": {
+   "nombre": "Real Parroquia Castrense del Santo Ángel Custodio",
+   "canonica": [
+    "Santo Ángel"
+   ],
+   "osm": "way/712116375",
+   "lat": 36.5336724,
+   "lon": -6.3030263,
+   "dir": "C/ Benito Pérez Galdós, 83",
+   "fuente_dir": "gcatholic-castrense",
+   "nota": "Con obras pendientes en 2026: la Expiración salió del Carmen."
+  },
+  "san-felipe-neri": {
+   "nombre": "Oratorio de San Felipe Neri",
+   "osm": "way/141200818",
+   "lat": 36.5328564,
+   "lon": -6.2997983,
+   "portada": {
+    "calle": "Calle Santa Inés",
+    "fuente": "Cádiz Directo, guía 2026 (https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/)",
+    "cita": "salida y recogida por Santa Inés"
+   }
+  },
+  "catedral": {
+   "nombre": "Iglesia Catedral de Cádiz",
+   "osm": "way/66648047",
+   "lat": 36.5289521,
+   "lon": -6.2953183,
+   "dir": "Plaza del Pío XII (Plaza de la Catedral)",
+   "fuente_dir": "gcatholic-catedral"
+  },
+  "capilla-jesus-caido": {
+   "nombre": "Capilla de Jesús Caído (junto al Parque Genovés)",
+   "osm": "way/766688340",
+   "lat": 36.5346087,
+   "lon": -6.3044972,
+   "nota": "En OSM, en la Avenida Doctor Gómez Ulla, la última calle del itinerario del Caído.",
+   "portada": {
+    "calle": "Avenida Doctor Gómez Ulla",
+    "fuente": "sin fuente de la capilla; el itinerario oficial del Caído acaba en «Avda. Doctor Gómez Ulla, a su Templo»",
+    "sin_cita": true
+   }
+  }
  },
  "hermandades": {
-  "la-sanidad-cadiz": { "salida": "san-felipe-neri", "entrada": "san-felipe-neri", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«salir y recogerse en el Oratorio de San Felipe Neri» (Cádiz Directo, guía, 26-3-2026)" },
-  "las-aguas-cadiz": { "salida": "san-felipe-neri", "entrada": "san-felipe-neri", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026)", "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio." },
-  "medinaceli-cadiz": { "salida": "san-felipe-neri", "entrada": "san-francisco", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)" },
-  "el-perdon-cadiz": { "salida": "catedral", "entrada": "catedral", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026)", "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo»." },
-  "santo-entierro-cadiz": { "salida": "san-felipe-neri", "entrada": "san-felipe-neri", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«salida y regreso al Oratorio» (Cádiz Directo, 4-3-2026)" },
-  "jesus-caido-el-senor-del-parque-cadiz": { "salida": "san-francisco", "entrada": "capilla-jesus-caido", "fuente": ["cadizdirecto-modificaciones", "cadizdirecto-guia"], "cita": "«volverá a su capilla del Parque Genovés tras su salida desde San Francisco» (Cádiz Directo, 4-3-2026)" },
-  "la-expiracion-cadiz": { "salida": "carmen", "entrada": "carmen", "fuente": ["cadizdirecto-guia"], "cita": "«Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026)", "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen." }
- }
+  "la-sanidad-cadiz": {
+   "salida": "san-felipe-neri",
+   "entrada": "san-felipe-neri",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«salir y recogerse en el Oratorio de San Felipe Neri» (Cádiz Directo, guía, 26-3-2026)",
+   "templo_cruzdeguia": "«ORATORIO SAN FELIPE NERI» (pág. 21)"
+  },
+  "las-aguas-cadiz": {
+   "salida": "san-felipe-neri",
+   "entrada": "san-felipe-neri",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026)",
+   "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «ORATORIO DE SAN FELIPE» (pág. 30), y el itinerario acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio.",
+   "templo_cruzdeguia": "«ORATORIO DE SAN FELIPE» (pág. 30)"
+  },
+  "medinaceli-cadiz": {
+   "salida": "san-felipe-neri",
+   "entrada": "san-francisco",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)",
+   "templo_cruzdeguia": "«ORATORIO DE SAN FELIPE» (pág. 36)"
+  },
+  "el-perdon-cadiz": {
+   "salida": "catedral",
+   "entrada": "catedral",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026)",
+   "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «SANTA IGLESIA CATEDRAL» (pág. 38, recogida 09:00), y el itinerario acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo».",
+   "templo_cruzdeguia": "«SANTA IGLESIA CATEDRAL» (pág. 38)"
+  },
+  "santo-entierro-cadiz": {
+   "salida": "san-felipe-neri",
+   "entrada": "san-felipe-neri",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«salida y regreso al Oratorio» (Cádiz Directo, 4-3-2026)",
+   "templo_cruzdeguia": "«ORATORIO DE SAN FELIPE» (pág. 45)"
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "salida": "san-francisco",
+   "entrada": "capilla-jesus-caido",
+   "fuente": [
+    "cadizdirecto-modificaciones",
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«volverá a su capilla del Parque Genovés tras su salida desde San Francisco» (Cádiz Directo, 4-3-2026)",
+   "templo_cruzdeguia": "«IGLESIA CONVENTUAL DE SAN FRANCISCO» (pág. 24)"
+  },
+  "la-expiracion-cadiz": {
+   "salida": "carmen",
+   "entrada": "carmen",
+   "fuente": [
+    "cadizdirecto-guia",
+    "cruzdeguia"
+   ],
+   "cita": "«Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026)",
+   "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «IGLESIA NUESTRA SEÑORA DEL CARMEN» (pág. 40), y el itinerario acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen.",
+   "templo_cruzdeguia": "«IGLESIA NUESTRA SEÑORA DEL CARMEN» (pág. 40)"
+  }
+ },
+ "_nota_portadas": "«portada»: calle o plaza a la que da la puerta principal, con su fuente (revisión del 2026-10-26). Con «sin_cita», ninguna fuente lo dice expresamente: se usa la dirección postal o la calle por la que sale según el itinerario oficial. Santo Domingo usa su puerta de OSM (nodo 9221999175); Cadizpedia sitúa su portada principal en el Compás de Santo Domingo. La Catedral, la puerta principal de OSM (nodo 7063298453)."
 }

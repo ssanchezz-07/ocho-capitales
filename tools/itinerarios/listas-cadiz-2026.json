@@ -3,8 +3,7 @@
  "ciudad": "cadiz",
  "anio": 2026,
  "avisos": [
-  "ecce-mater-tua-cadiz: sin estación de penitencia en la Catedral",
-  "la-resurreccion-cadiz: la tabla de horas del programa dice 2025"
+  "ecce-mater-tua-cadiz: sin estación de penitencia en la Catedral"
  ],
  "hermandades": {
   "servitas-cadiz": {
@@ -157,6 +156,55 @@
      "palillero": "22:45",
      "entrada": "01:10"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 4,
+    "templo_2026": "PARROQUIA DE SAN LORENZO MÁRTIR",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "19:00"
+     ],
+     [
+      "Salida",
+      "19:20"
+     ],
+     [
+      "Catedral",
+      "20:45"
+     ],
+     [
+      "Catedral",
+      "21:05"
+     ],
+     [
+      "Candelaria",
+      "21:40"
+     ],
+     [
+      "Candelaria",
+      "22:00"
+     ],
+     [
+      "Palillero",
+      "22:25"
+     ],
+     [
+      "Palillero",
+      "22:45"
+     ],
+     [
+      "Recogida",
+      "00:40"
+     ],
+     [
+      "Recogida",
+      "01:10"
+     ]
+    ]
    }
   },
   "merced-obediencia-cadiz": {
@@ -331,6 +379,55 @@
      "palillero": "20:10",
      "entrada": "22:45"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 5,
+    "templo_2026": "PARROQUIA DE NTRA. SRA. DE LA MERCED",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:00"
+     ],
+     [
+      "Salida",
+      "17:20"
+     ],
+     [
+      "Catedral",
+      "18:30"
+     ],
+     [
+      "Catedral",
+      "18:50"
+     ],
+     [
+      "Candelaria",
+      "19:20"
+     ],
+     [
+      "Candelaria",
+      "19:40"
+     ],
+     [
+      "Palillero",
+      "19:50"
+     ],
+     [
+      "Palillero",
+      "20:10"
+     ],
+     [
+      "Recogida",
+      "22:25"
+     ],
+     [
+      "Recogida",
+      "22:45"
+     ]
+    ]
    }
   },
   "humillacion-piedad-cadiz": {
@@ -490,6 +587,55 @@
      "palillero": "23:20",
      "entrada": "00:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 6,
+    "templo_2026": "IGLESIA DE SANTIAGO APÓSTOL",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "18:35"
+     ],
+     [
+      "Salida",
+      "18:55"
+     ],
+     [
+      "Catedral",
+      "18:55"
+     ],
+     [
+      "Catedral",
+      "19:15"
+     ],
+     [
+      "Candelaria",
+      "19:45"
+     ],
+     [
+      "Candelaria",
+      "20:05"
+     ],
+     [
+      "Palillero",
+      "20:15"
+     ],
+     [
+      "Palillero",
+      "20:35"
+     ],
+     [
+      "Recogida",
+      "23:00"
+     ],
+     [
+      "Recogida",
+      "23:20"
+     ]
+    ]
    }
   },
   "la-borriquita-cadiz": {
@@ -720,6 +866,87 @@
      "palillero": "19:40",
      "entrada": "01:30"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 8,
+    "templo_2026": "PARROQUIA DE SAN JOSE (EXTRAMUROS)",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "13:30"
+     ],
+     [
+      "Salida",
+      "13:50"
+     ],
+     [
+      "Salida",
+      "14:20"
+     ],
+     [
+      "Nueva",
+      "16:30"
+     ],
+     [
+      "Nueva",
+      "16:55"
+     ],
+     [
+      "Nueva",
+      "17:20"
+     ],
+     [
+      "Catedral",
+      "17:30"
+     ],
+     [
+      "Catedral",
+      "17:55"
+     ],
+     [
+      "Catedral",
+      "18:20"
+     ],
+     [
+      "Candelaria",
+      "18:25"
+     ],
+     [
+      "Candelaria",
+      "18:50"
+     ],
+     [
+      "Candelaria",
+      "19:15"
+     ],
+     [
+      "Palillero",
+      "18:50"
+     ],
+     [
+      "Palillero",
+      "19:15"
+     ],
+     [
+      "Palillero",
+      "19:40"
+     ],
+     [
+      "Recogida",
+      "00:45"
+     ],
+     [
+      "Recogida",
+      "01:05"
+     ],
+     [
+      "Recogida",
+      "01:30"
+     ]
+    ]
    }
   },
   "las-penas-cadiz": {
@@ -909,6 +1136,87 @@
      "palillero": "20:20",
      "entrada": "23:15"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 10,
+    "templo_2026": "PARROQUIA DE SAN LORENZO MÁRTIR",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "15:00"
+     ],
+     [
+      "Salida",
+      "15:20"
+     ],
+     [
+      "Salida",
+      "15:45"
+     ],
+     [
+      "Nueva",
+      "17:20"
+     ],
+     [
+      "Nueva",
+      "17:40"
+     ],
+     [
+      "Nueva",
+      "18:00"
+     ],
+     [
+      "Catedral",
+      "18:20"
+     ],
+     [
+      "Catedral",
+      "18:40"
+     ],
+     [
+      "Catedral",
+      "19:00"
+     ],
+     [
+      "Candelaria",
+      "19:15"
+     ],
+     [
+      "Candelaria",
+      "19:35"
+     ],
+     [
+      "Candelaria",
+      "19:55"
+     ],
+     [
+      "Palillero",
+      "19:40"
+     ],
+     [
+      "Palillero",
+      "20:00"
+     ],
+     [
+      "Palillero",
+      "20:20"
+     ],
+     [
+      "Recogida",
+      "22:15"
+     ],
+     [
+      "Recogida",
+      "22:45"
+     ],
+     [
+      "Recogida",
+      "23:15"
+     ]
+    ]
    }
   },
   "sagrada-cena-cadiz": {
@@ -1106,6 +1414,87 @@
      "palillero": "21:00",
      "entrada": "00:15"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 11,
+    "templo_2026": "IGLESIA CONVENTUAL DE SANTO DOMINGO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:55"
+     ],
+     [
+      "Salida",
+      "17:20"
+     ],
+     [
+      "Salida",
+      "17:40"
+     ],
+     [
+      "Nueva",
+      "18:00"
+     ],
+     [
+      "Nueva",
+      "18:20"
+     ],
+     [
+      "Nueva",
+      "18:40"
+     ],
+     [
+      "Catedral",
+      "19:00"
+     ],
+     [
+      "Catedral",
+      "19:20"
+     ],
+     [
+      "Catedral",
+      "19:40"
+     ],
+     [
+      "Candelaria",
+      "19:55"
+     ],
+     [
+      "Candelaria",
+      "20:15"
+     ],
+     [
+      "Candelaria",
+      "20:35"
+     ],
+     [
+      "Palillero",
+      "20:20"
+     ],
+     [
+      "Palillero",
+      "20:40"
+     ],
+     [
+      "Palillero",
+      "21:00"
+     ],
+     [
+      "Recogida",
+      "23:30"
+     ],
+     [
+      "Recogida",
+      "23:55"
+     ],
+     [
+      "Recogida",
+      "00:15"
+     ]
+    ]
    }
   },
   "el-despojado-cadiz": {
@@ -1363,6 +1752,63 @@
      "palillero": "21:20",
      "entrada": "02:10"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 12,
+    "templo_2026": "IGLESIA DE MARÍA AUXILIADORA (EXTRAMUROS)",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "15:00"
+     ],
+     [
+      "Salida",
+      "15:20"
+     ],
+     [
+      "Nueva",
+      "18:40"
+     ],
+     [
+      "Nueva",
+      "19:00"
+     ],
+     [
+      "Catedral",
+      "19:40"
+     ],
+     [
+      "Catedral",
+      "20:00"
+     ],
+     [
+      "Candelaria",
+      "20:35"
+     ],
+     [
+      "Candelaria",
+      "20:55"
+     ],
+     [
+      "Palillero",
+      "21:00"
+     ],
+     [
+      "Palillero",
+      "21:20"
+     ],
+     [
+      "Recogida",
+      "01:50"
+     ],
+     [
+      "Recogida",
+      "02:10"
+     ]
+    ]
    }
   },
   "humildad-y-paciencia-cadiz": {
@@ -1534,6 +1980,87 @@
      "palillero": "22:05",
      "entrada": "01:35"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 14,
+    "templo_2026": "PARROQUIA DE SAN AGUSTÍN",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "18:40"
+     ],
+     [
+      "Salida",
+      "19:00"
+     ],
+     [
+      "Salida",
+      "19:20"
+     ],
+     [
+      "Nueva",
+      "19:00"
+     ],
+     [
+      "Nueva",
+      "19:20"
+     ],
+     [
+      "Nueva",
+      "19:45"
+     ],
+     [
+      "Catedral",
+      "20:00"
+     ],
+     [
+      "Catedral",
+      "20:20"
+     ],
+     [
+      "Catedral",
+      "20:45"
+     ],
+     [
+      "Candelaria",
+      "20:55"
+     ],
+     [
+      "Candelaria",
+      "21:15"
+     ],
+     [
+      "Candelaria",
+      "21:40"
+     ],
+     [
+      "Palillero",
+      "21:20"
+     ],
+     [
+      "Palillero",
+      "21:40"
+     ],
+     [
+      "Palillero",
+      "22:05"
+     ],
+     [
+      "Recogida",
+      "00:50"
+     ],
+     [
+      "Recogida",
+      "01:10"
+     ],
+     [
+      "Recogida",
+      "01:35"
+     ]
+    ]
    }
   },
   "nazareno-del-amor-cadiz": {
@@ -1711,6 +2238,87 @@
      "palillero": "20:45",
      "entrada": "00:05"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 15,
+    "templo_2026": "IGLESIA CONVENTUAL DE SAN FRANCISCO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:00"
+     ],
+     [
+      "Salida",
+      "16:40"
+     ],
+     [
+      "Salida",
+      "17:20"
+     ],
+     [
+      "Nueva",
+      "17:30"
+     ],
+     [
+      "Nueva",
+      "18:00"
+     ],
+     [
+      "Nueva",
+      "18:25"
+     ],
+     [
+      "Catedral",
+      "18:30"
+     ],
+     [
+      "Catedral",
+      "19:00"
+     ],
+     [
+      "Catedral",
+      "19:25"
+     ],
+     [
+      "Candelaria",
+      "19:25"
+     ],
+     [
+      "Candelaria",
+      "19:55"
+     ],
+     [
+      "Candelaria",
+      "20:20"
+     ],
+     [
+      "Palillero",
+      "19:50"
+     ],
+     [
+      "Palillero",
+      "20:20"
+     ],
+     [
+      "Palillero",
+      "20:45"
+     ],
+     [
+      "Recogida",
+      "22:35"
+     ],
+     [
+      "Recogida",
+      "23:25"
+     ],
+     [
+      "Recogida",
+      "00:05"
+     ]
+    ]
    }
   },
   "la-palma-cadiz": {
@@ -1946,6 +2554,87 @@
      "palillero": "21:40",
      "entrada": "00:30"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 16,
+    "templo_2026": "PARROQUIA DE NTRA. SRA. DE LA PALMA",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "14:45"
+     ],
+     [
+      "Salida",
+      "15:15"
+     ],
+     [
+      "Salida",
+      "15:45"
+     ],
+     [
+      "Nueva",
+      "18:25"
+     ],
+     [
+      "Nueva",
+      "18:50"
+     ],
+     [
+      "Nueva",
+      "19:20"
+     ],
+     [
+      "Catedral",
+      "19:25"
+     ],
+     [
+      "Catedral",
+      "19:50"
+     ],
+     [
+      "Catedral",
+      "20:20"
+     ],
+     [
+      "Candelaria",
+      "20:20"
+     ],
+     [
+      "Candelaria",
+      "20:45"
+     ],
+     [
+      "Candelaria",
+      "21:15"
+     ],
+     [
+      "Palillero",
+      "20:45"
+     ],
+     [
+      "Palillero",
+      "21:10"
+     ],
+     [
+      "Palillero",
+      "21:40"
+     ],
+     [
+      "Recogida",
+      "23:30"
+     ],
+     [
+      "Recogida",
+      "00:00"
+     ],
+     [
+      "Recogida",
+      "00:30"
+     ]
+    ]
    }
   },
   "el-prendimiento-cadiz": {
@@ -2129,6 +2818,87 @@
      "palillero": "22:30",
      "entrada": "01:05"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 18,
+    "templo_2026": "PARROQUIA DE NTRA. SRA. DEL CARMEN Y SANTA TERESA",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:45"
+     ],
+     [
+      "Salida",
+      "17:05"
+     ],
+     [
+      "Salida",
+      "17:30"
+     ],
+     [
+      "Nueva",
+      "19:20"
+     ],
+     [
+      "Nueva",
+      "19:40"
+     ],
+     [
+      "Nueva",
+      "20:10"
+     ],
+     [
+      "Catedral",
+      "20:20"
+     ],
+     [
+      "Catedral",
+      "20:40"
+     ],
+     [
+      "Catedral",
+      "21:10"
+     ],
+     [
+      "Candelaria",
+      "21:15"
+     ],
+     [
+      "Candelaria",
+      "21:35"
+     ],
+     [
+      "Candelaria",
+      "22:05"
+     ],
+     [
+      "Palillero",
+      "21:40"
+     ],
+     [
+      "Palillero",
+      "22:00"
+     ],
+     [
+      "Palillero",
+      "22:30"
+     ],
+     [
+      "Recogida",
+      "00:15"
+     ],
+     [
+      "Recogida",
+      "00:40"
+     ],
+     [
+      "Recogida",
+      "01:05"
+     ]
+    ]
    }
   },
   "vera-cruz-cadiz": {
@@ -2318,6 +3088,87 @@
      "palillero": "23:15",
      "entrada": "01:05"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 20,
+    "templo_2026": "IGLESIA CONVENTUAL DE SAN FRANCISCO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "19:15"
+     ],
+     [
+      "Salida",
+      "19:30"
+     ],
+     [
+      "Salida",
+      "19:55"
+     ],
+     [
+      "Nueva",
+      "20:15"
+     ],
+     [
+      "Nueva",
+      "20:35"
+     ],
+     [
+      "Nueva",
+      "20:55"
+     ],
+     [
+      "Catedral",
+      "21:15"
+     ],
+     [
+      "Catedral",
+      "21:35"
+     ],
+     [
+      "Catedral",
+      "21:55"
+     ],
+     [
+      "Candelaria",
+      "22:10"
+     ],
+     [
+      "Candelaria",
+      "22:30"
+     ],
+     [
+      "Candelaria",
+      "22:50"
+     ],
+     [
+      "Palillero",
+      "22:35"
+     ],
+     [
+      "Palillero",
+      "22:55"
+     ],
+     [
+      "Palillero",
+      "23:15"
+     ],
+     [
+      "Recogida",
+      "00:25"
+     ],
+     [
+      "Recogida",
+      "00:45"
+     ],
+     [
+      "Recogida",
+      "01:05"
+     ]
+    ]
    }
   },
   "la-sanidad-cadiz": {
@@ -2439,7 +3290,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -2450,7 +3302,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
@@ -2494,6 +3347,87 @@
      "palillero": "21:05",
      "entrada": "23:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 21,
+    "templo_2026": "ORATORIO SAN FELIPE NERI",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:30"
+     ],
+     [
+      "Salida",
+      "16:45"
+     ],
+     [
+      "Salida",
+      "17:00"
+     ],
+     [
+      "Nueva",
+      "18:30"
+     ],
+     [
+      "Nueva",
+      "18:40"
+     ],
+     [
+      "Nueva",
+      "18:50"
+     ],
+     [
+      "Catedral",
+      "19:15"
+     ],
+     [
+      "Catedral",
+      "19:30"
+     ],
+     [
+      "Catedral",
+      "19:45"
+     ],
+     [
+      "Candelaria",
+      "20:10"
+     ],
+     [
+      "Candelaria",
+      "20:25"
+     ],
+     [
+      "Candelaria",
+      "20:40"
+     ],
+     [
+      "Palillero",
+      "20:35"
+     ],
+     [
+      "Palillero",
+      "20:50"
+     ],
+     [
+      "Palillero",
+      "21:05"
+     ],
+     [
+      "Recogida",
+      "22:30"
+     ],
+     [
+      "Recogida",
+      "22:45"
+     ],
+     [
+      "Recogida",
+      "23:00"
+     ]
+    ]
    }
   },
   "la-piedad-cadiz": {
@@ -2672,6 +3606,87 @@
      "palillero": "21:55",
      "entrada": "00:55"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 22,
+    "templo_2026": "IGLESIA DE SANTIAGO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:30"
+     ],
+     [
+      "Salida",
+      "17:50"
+     ],
+     [
+      "Salida",
+      "18:15"
+     ],
+     [
+      "Nueva",
+      "18:55"
+     ],
+     [
+      "Nueva",
+      "19:15"
+     ],
+     [
+      "Nueva",
+      "19:35"
+     ],
+     [
+      "Catedral",
+      "19:55"
+     ],
+     [
+      "Catedral",
+      "20:15"
+     ],
+     [
+      "Catedral",
+      "20:35"
+     ],
+     [
+      "Candelaria",
+      "20:50"
+     ],
+     [
+      "Candelaria",
+      "21:10"
+     ],
+     [
+      "Candelaria",
+      "21:30"
+     ],
+     [
+      "Palillero",
+      "21:15"
+     ],
+     [
+      "Palillero",
+      "21:35"
+     ],
+     [
+      "Palillero",
+      "21:55"
+     ],
+     [
+      "Recogida",
+      "00:15"
+     ],
+     [
+      "Recogida",
+      "00:35"
+     ],
+     [
+      "Recogida",
+      "00:55"
+     ]
+    ]
    }
   },
   "jesus-caido-el-senor-del-parque-cadiz": {
@@ -2819,7 +3834,8 @@
     "osm": "way/154222961",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -2830,7 +3846,8 @@
     "osm": "way/766688340",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
@@ -2874,6 +3891,87 @@
      "palillero": "22:30",
      "entrada": "01:30"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 24,
+    "templo_2026": "IGLESIA CONVENTUAL DE SAN FRANCISCO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:30"
+     ],
+     [
+      "Salida",
+      "17:55"
+     ],
+     [
+      "Salida",
+      "18:25"
+     ],
+     [
+      "Nueva",
+      "19:20"
+     ],
+     [
+      "Nueva",
+      "19:45"
+     ],
+     [
+      "Nueva",
+      "20:10"
+     ],
+     [
+      "Catedral",
+      "20:20"
+     ],
+     [
+      "Catedral",
+      "20:45"
+     ],
+     [
+      "Catedral",
+      "21:10"
+     ],
+     [
+      "Candelaria",
+      "21:15"
+     ],
+     [
+      "Candelaria",
+      "21:40"
+     ],
+     [
+      "Candelaria",
+      "22:05"
+     ],
+     [
+      "Palillero",
+      "21:40"
+     ],
+     [
+      "Palillero",
+      "22:05"
+     ],
+     [
+      "Palillero",
+      "22:30"
+     ],
+     [
+      "Recogida",
+      "00:40"
+     ],
+     [
+      "Recogida",
+      "01:05"
+     ],
+     [
+      "Recogida",
+      "01:30"
+     ]
+    ]
    }
   },
   "la-columna-cadiz": {
@@ -3067,6 +4165,87 @@
      "palillero": "23:15",
      "entrada": "00:50"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 25,
+    "templo_2026": "PARROQUIA DE SAN ANTONIO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:30"
+     ],
+     [
+      "Salida",
+      "18:00"
+     ],
+     [
+      "Salida",
+      "18:35"
+     ],
+     [
+      "Nueva",
+      "20:10"
+     ],
+     [
+      "Nueva",
+      "20:30"
+     ],
+     [
+      "Nueva",
+      "20:55"
+     ],
+     [
+      "Catedral",
+      "21:10"
+     ],
+     [
+      "Catedral",
+      "21:30"
+     ],
+     [
+      "Catedral",
+      "21:55"
+     ],
+     [
+      "Candelaria",
+      "22:05"
+     ],
+     [
+      "Candelaria",
+      "22:25"
+     ],
+     [
+      "Candelaria",
+      "22:50"
+     ],
+     [
+      "Palillero",
+      "22:30"
+     ],
+     [
+      "Palillero",
+      "22:50"
+     ],
+     [
+      "Palillero",
+      "23:15"
+     ],
+     [
+      "Recogida",
+      "23:50"
+     ],
+     [
+      "Recogida",
+      "00:15"
+     ],
+     [
+      "Recogida",
+      "00:50"
+     ]
+    ]
    }
   },
   "ecce-homo-cadiz": {
@@ -3251,6 +4430,87 @@
      "palillero": "23:55",
      "entrada": "01:35"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 26,
+    "templo_2026": "IGLESIA DE SAN PABLO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "19:00"
+     ],
+     [
+      "Salida",
+      "19:20"
+     ],
+     [
+      "Salida",
+      "19:40"
+     ],
+     [
+      "Nueva",
+      "20:55"
+     ],
+     [
+      "Nueva",
+      "21:15"
+     ],
+     [
+      "Nueva",
+      "21:35"
+     ],
+     [
+      "Catedral",
+      "21:55"
+     ],
+     [
+      "Catedral",
+      "22:15"
+     ],
+     [
+      "Catedral",
+      "22:35"
+     ],
+     [
+      "Candelaria",
+      "22:50"
+     ],
+     [
+      "Candelaria",
+      "23:10"
+     ],
+     [
+      "Candelaria",
+      "23:30"
+     ],
+     [
+      "Palillero",
+      "23:15"
+     ],
+     [
+      "Palillero",
+      "23:35"
+     ],
+     [
+      "Palillero",
+      "23:55"
+     ],
+     [
+      "Recogida",
+      "00:55"
+     ],
+     [
+      "Recogida",
+      "01:15"
+     ],
+     [
+      "Recogida",
+      "01:35"
+     ]
+    ]
    }
   },
   "la-sentencia-cadiz": {
@@ -3469,6 +4729,87 @@
      "palillero": "21:10",
      "entrada": "01:40"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 27,
+    "templo_2026": "PARROQUIA DE NTRA. SRA. DE LA MERCED",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:15"
+     ],
+     [
+      "Salida",
+      "16:40"
+     ],
+     [
+      "Salida",
+      "17:15"
+     ],
+     [
+      "Nueva",
+      "17:45"
+     ],
+     [
+      "Nueva",
+      "18:10"
+     ],
+     [
+      "Nueva",
+      "18:40"
+     ],
+     [
+      "Catedral",
+      "18:45"
+     ],
+     [
+      "Catedral",
+      "19:10"
+     ],
+     [
+      "Catedral",
+      "19:40"
+     ],
+     [
+      "Candelaria",
+      "19:40"
+     ],
+     [
+      "Candelaria",
+      "20:05"
+     ],
+     [
+      "Candelaria",
+      "20:35"
+     ],
+     [
+      "Palillero",
+      "20:15"
+     ],
+     [
+      "Palillero",
+      "20:40"
+     ],
+     [
+      "Palillero",
+      "21:10"
+     ],
+     [
+      "Recogida",
+      "00:00"
+     ],
+     [
+      "Recogida",
+      "00:45"
+     ],
+     [
+      "Recogida",
+      "01:40"
+     ]
+    ]
    }
   },
   "las-cigarreras-cadiz": {
@@ -3667,6 +5008,87 @@
      "palillero": "22:00",
      "entrada": "02:25"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 28,
+    "templo_2026": "IGLESIA CONVENTUAL DE SANTO DOMINGO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:15"
+     ],
+     [
+      "Salida",
+      "17:35"
+     ],
+     [
+      "Salida",
+      "18:05"
+     ],
+     [
+      "Nueva",
+      "18:40"
+     ],
+     [
+      "Nueva",
+      "19:05"
+     ],
+     [
+      "Nueva",
+      "19:30"
+     ],
+     [
+      "Catedral",
+      "19:40"
+     ],
+     [
+      "Catedral",
+      "20:05"
+     ],
+     [
+      "Catedral",
+      "20:30"
+     ],
+     [
+      "Candelaria",
+      "20:35"
+     ],
+     [
+      "Candelaria",
+      "21:00"
+     ],
+     [
+      "Candelaria",
+      "21:25"
+     ],
+     [
+      "Palillero",
+      "21:10"
+     ],
+     [
+      "Palillero",
+      "21:35"
+     ],
+     [
+      "Palillero",
+      "22:00"
+     ],
+     [
+      "Recogida",
+      "01:25"
+     ],
+     [
+      "Recogida",
+      "01:55"
+     ],
+     [
+      "Recogida",
+      "02:25"
+     ]
+    ]
    }
   },
   "las-aguas-cadiz": {
@@ -3797,7 +5219,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -3808,12 +5231,13 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
     "cita": "«saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026)",
-    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio."
+    "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «ORATORIO DE SAN FELIPE» (pág. 30), y el itinerario acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio."
    },
    "horas": {
     "anio_de_la_tabla": "2026",
@@ -3853,6 +5277,87 @@
      "palillero": "22:40",
      "entrada": "01:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 30,
+    "templo_2026": "ORATORIO DE SAN FELIPE",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "16:40"
+     ],
+     [
+      "Salida",
+      "17:00"
+     ],
+     [
+      "Salida",
+      "17:20"
+     ],
+     [
+      "Nueva",
+      "19:30"
+     ],
+     [
+      "Nueva",
+      "19:50"
+     ],
+     [
+      "Nueva",
+      "20:10"
+     ],
+     [
+      "Catedral",
+      "20:30"
+     ],
+     [
+      "Catedral",
+      "20:50"
+     ],
+     [
+      "Catedral",
+      "21:10"
+     ],
+     [
+      "Candelaria",
+      "21:25"
+     ],
+     [
+      "Candelaria",
+      "21:45"
+     ],
+     [
+      "Candelaria",
+      "22:05"
+     ],
+     [
+      "Palillero",
+      "22:00"
+     ],
+     [
+      "Palillero",
+      "22:20"
+     ],
+     [
+      "Palillero",
+      "22:40"
+     ],
+     [
+      "Recogida",
+      "00:10"
+     ],
+     [
+      "Recogida",
+      "00:35"
+     ],
+     [
+      "Recogida",
+      "01:00"
+     ]
+    ]
    }
   },
   "el-caminito-cadiz": {
@@ -4046,6 +5551,63 @@
      "palillero": "23:10",
      "entrada": "01:30"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 31,
+    "templo_2026": "CAPILLA DE NTRA. SRA. DE LAS ANGUSTIAS",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "19:00"
+     ],
+     [
+      "Salida",
+      "19:20"
+     ],
+     [
+      "Nueva",
+      "20:25"
+     ],
+     [
+      "Nueva",
+      "20:50"
+     ],
+     [
+      "Catedral",
+      "21:20"
+     ],
+     [
+      "Catedral",
+      "21:45"
+     ],
+     [
+      "Candelaria",
+      "22:10"
+     ],
+     [
+      "Candelaria",
+      "22:35"
+     ],
+     [
+      "Palillero",
+      "22:45"
+     ],
+     [
+      "Palillero",
+      "23:10"
+     ],
+     [
+      "Recogida",
+      "00:40"
+     ],
+     [
+      "Recogida",
+      "01:30"
+     ]
+    ]
    }
   },
   "los-afligidos-cadiz": {
@@ -4233,6 +5795,63 @@
      "palillero": "23:05",
      "entrada": "00:05"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 32,
+    "templo_2026": "PARROQUIA DE SAN LORENZO MÁRTIR",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "18:20"
+     ],
+     [
+      "Salida",
+      "18:50"
+     ],
+     [
+      "Nueva",
+      "20:10"
+     ],
+     [
+      "Nueva",
+      "20:45"
+     ],
+     [
+      "Catedral",
+      "21:10"
+     ],
+     [
+      "Catedral",
+      "21:45"
+     ],
+     [
+      "Candelaria",
+      "22:05"
+     ],
+     [
+      "Candelaria",
+      "22:40"
+     ],
+     [
+      "Palillero",
+      "22:30"
+     ],
+     [
+      "Palillero",
+      "23:05"
+     ],
+     [
+      "Recogida",
+      "23:35"
+     ],
+     [
+      "Recogida",
+      "00:05"
+     ]
+    ]
    }
   },
   "oracion-en-el-huerto-cadiz": {
@@ -4491,6 +6110,87 @@
      "palillero": "00:00",
      "entrada": "03:30"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 34,
+    "templo_2026": "IGLESIA DE SANTA CATALINA (CAPUCHINOS)",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "18:00"
+     ],
+     [
+      "Salida",
+      "18:30"
+     ],
+     [
+      "Salida",
+      "19:00"
+     ],
+     [
+      "Nueva",
+      "20:50"
+     ],
+     [
+      "Nueva",
+      "21:15"
+     ],
+     [
+      "Nueva",
+      "21:40"
+     ],
+     [
+      "Catedral",
+      "21:50"
+     ],
+     [
+      "Catedral",
+      "22:15"
+     ],
+     [
+      "Catedral",
+      "22:40"
+     ],
+     [
+      "Candelaria",
+      "22:45"
+     ],
+     [
+      "Candelaria",
+      "23:10"
+     ],
+     [
+      "Candelaria",
+      "23:35"
+     ],
+     [
+      "Palillero",
+      "23:10"
+     ],
+     [
+      "Palillero",
+      "23:35"
+     ],
+     [
+      "Palillero",
+      "00:00"
+     ],
+     [
+      "Recogida",
+      "02:30"
+     ],
+     [
+      "Recogida",
+      "03:00"
+     ],
+     [
+      "Recogida",
+      "03:30"
+     ]
+    ]
    }
   },
   "nazareno-de-santa-maria-cadiz": {
@@ -4723,6 +6423,87 @@
      "palillero": "01:05",
      "entrada": "07:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 35,
+    "templo_2026": "IGLESIA CONVENTUAL DE SANTA MARÍA",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "19:50"
+     ],
+     [
+      "Salida",
+      "20:20"
+     ],
+     [
+      "Salida",
+      "21:00"
+     ],
+     [
+      "Nueva",
+      "21:45"
+     ],
+     [
+      "Nueva",
+      "22:15"
+     ],
+     [
+      "Nueva",
+      "22:45"
+     ],
+     [
+      "Catedral",
+      "22:45"
+     ],
+     [
+      "Catedral",
+      "23:15"
+     ],
+     [
+      "Catedral",
+      "23:45"
+     ],
+     [
+      "Candelaria",
+      "23:40"
+     ],
+     [
+      "Candelaria",
+      "00:10"
+     ],
+     [
+      "Candelaria",
+      "00:40"
+     ],
+     [
+      "Palillero",
+      "00:10"
+     ],
+     [
+      "Palillero",
+      "00:35"
+     ],
+     [
+      "Palillero",
+      "01:05"
+     ],
+     [
+      "Recogida",
+      "06:30"
+     ],
+     [
+      "Recogida",
+      "06:45"
+     ],
+     [
+      "Recogida",
+      "07:00"
+     ]
+    ]
    }
   },
   "medinaceli-cadiz": {
@@ -4864,7 +6645,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -4875,7 +6657,8 @@
     "osm": "way/154222961",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
@@ -4919,6 +6702,87 @@
      "palillero": "01:50",
      "entrada": "04:45"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 36,
+    "templo_2026": "ORATORIO DE SAN FELIPE",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "21:15"
+     ],
+     [
+      "Salida",
+      "21:30"
+     ],
+     [
+      "Salida",
+      "21:50"
+     ],
+     [
+      "Nueva",
+      "23:00"
+     ],
+     [
+      "Nueva",
+      "23:20"
+     ],
+     [
+      "Nueva",
+      "23:40"
+     ],
+     [
+      "Catedral",
+      "23:55"
+     ],
+     [
+      "Catedral",
+      "00:15"
+     ],
+     [
+      "Catedral",
+      "00:35"
+     ],
+     [
+      "Candelaria",
+      "00:45"
+     ],
+     [
+      "Candelaria",
+      "01:05"
+     ],
+     [
+      "Candelaria",
+      "01:25"
+     ],
+     [
+      "Palillero",
+      "01:10"
+     ],
+     [
+      "Palillero",
+      "01:30"
+     ],
+     [
+      "Palillero",
+      "01:50"
+     ],
+     [
+      "Recogida",
+      "04:00"
+     ],
+     [
+      "Recogida",
+      "04:20"
+     ],
+     [
+      "Recogida",
+      "04:45"
+     ]
+    ]
    }
   },
   "el-perdon-cadiz": {
@@ -5085,7 +6949,8 @@
     "fuente_dir": "https://gcatholic.org/churches/spain/1741",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -5098,12 +6963,13 @@
     "fuente_dir": "https://gcatholic.org/churches/spain/1741",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
     "cita": "«mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026)",
-    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo»."
+    "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «SANTA IGLESIA CATEDRAL» (pág. 38, recogida 09:00), y el itinerario acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo»."
    },
    "horas": {
     "anio_de_la_tabla": "2026",
@@ -5143,6 +7009,87 @@
      "palillero": "05:10",
      "entrada": "09:45"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 38,
+    "templo_2026": "SANTA IGLESIA CATEDRAL",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "00:50"
+     ],
+     [
+      "Salida",
+      "01:30"
+     ],
+     [
+      "Salida",
+      "01:30"
+     ],
+     [
+      "Nueva",
+      "02:00"
+     ],
+     [
+      "Nueva",
+      "02:20"
+     ],
+     [
+      "Nueva",
+      "02:45"
+     ],
+     [
+      "Catedral",
+      "03:00"
+     ],
+     [
+      "Catedral",
+      "03:20"
+     ],
+     [
+      "Catedral",
+      "03:45"
+     ],
+     [
+      "Candelaria",
+      "04:00"
+     ],
+     [
+      "Candelaria",
+      "04:20"
+     ],
+     [
+      "Candelaria",
+      "04:45"
+     ],
+     [
+      "Palillero",
+      "04:25"
+     ],
+     [
+      "Palillero",
+      "04:45"
+     ],
+     [
+      "Palillero",
+      "05:10"
+     ],
+     [
+      "Recogida",
+      "09:00"
+     ],
+     [
+      "Recogida",
+      "09:25"
+     ],
+     [
+      "Recogida",
+      "09:45"
+     ]
+    ]
    }
   },
   "siete-palabras-cadiz": {
@@ -5358,6 +7305,63 @@
      "palillero": "22:50",
      "entrada": "01:20"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 39,
+    "templo_2026": "PARROQUIA DE NTRA. SRA. DE LA MERCED",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "18:30"
+     ],
+     [
+      "Salida",
+      "18:50"
+     ],
+     [
+      "Nueva",
+      "20:05"
+     ],
+     [
+      "Nueva",
+      "20:25"
+     ],
+     [
+      "Catedral",
+      "21:05"
+     ],
+     [
+      "Catedral",
+      "21:25"
+     ],
+     [
+      "Candelaria",
+      "22:00"
+     ],
+     [
+      "Candelaria",
+      "22:20"
+     ],
+     [
+      "Palillero",
+      "22:30"
+     ],
+     [
+      "Palillero",
+      "22:50"
+     ],
+     [
+      "Recogida",
+      "01:00"
+     ],
+     [
+      "Recogida",
+      "01:20"
+     ]
+    ]
    }
   },
   "la-expiracion-cadiz": {
@@ -5497,7 +7501,8 @@
     "lon": -6.2997616,
     "osm": "way/154222959",
     "fuente": [
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -5507,12 +7512,13 @@
     "lon": -6.2997616,
     "osm": "way/154222959",
     "fuente": [
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
     "cita": "«Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026)",
-    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen."
+    "nota": "Entrada confirmada: el cuadernillo de Radio Cádiz 2026 da su templo de 2026, «IGLESIA NUESTRA SEÑORA DEL CARMEN» (pág. 40), y el itinerario acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen."
    },
    "horas": {
     "anio_de_la_tabla": "2026",
@@ -5552,6 +7558,87 @@
      "palillero": "23:45",
      "entrada": "03:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 40,
+    "templo_2026": "IGLESIA NUESTRA SEÑORA DEL CARMEN",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "17:15"
+     ],
+     [
+      "Salida",
+      "17:40"
+     ],
+     [
+      "Salida",
+      "18:05"
+     ],
+     [
+      "Nueva",
+      "20:30"
+     ],
+     [
+      "Nueva",
+      "20:55"
+     ],
+     [
+      "Nueva",
+      "21:20"
+     ],
+     [
+      "Catedral",
+      "21:30"
+     ],
+     [
+      "Catedral",
+      "21:55"
+     ],
+     [
+      "Catedral",
+      "22:20"
+     ],
+     [
+      "Candelaria",
+      "22:25"
+     ],
+     [
+      "Candelaria",
+      "22:55"
+     ],
+     [
+      "Candelaria",
+      "23:15"
+     ],
+     [
+      "Palillero",
+      "22:55"
+     ],
+     [
+      "Palillero",
+      "23:25"
+     ],
+     [
+      "Palillero",
+      "23:45"
+     ],
+     [
+      "Recogida",
+      "02:00"
+     ],
+     [
+      "Recogida",
+      "02:30"
+     ],
+     [
+      "Recogida",
+      "03:00"
+     ]
+    ]
    }
   },
   "el-descendimiento-cadiz": {
@@ -5591,6 +7678,11 @@
     {
      "texto": "Plaza Palillero",
      "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "",
+     "calle": "Columela",
+     "insertada": "falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma"
     },
     {
      "texto": "San Francisco (Dcha.)",
@@ -5678,6 +7770,9 @@
      "fin": true
     }
    ],
+   "erratas_del_programa": [
+    "falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma"
+   ],
    "sede_canonica": {
     "texto": "Parroquia de San Lorenzo Mártir.",
     "templo": "san-lorenzo",
@@ -5732,6 +7827,63 @@
      "palillero": "00:15",
      "entrada": "02:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 41,
+    "templo_2026": "PARROQUIA DE SAN LORENZO MÁRTIR",
+    "itinerario": "difiere desde el elemento 6: programa «san francisco, san agustin, san francisco», cuadernillo «columela, san francisco, san agustin»",
+    "horas": [
+     [
+      "Salida",
+      "19:30"
+     ],
+     [
+      "Salida",
+      "19:50"
+     ],
+     [
+      "Nueva",
+      "21:35"
+     ],
+     [
+      "Nueva",
+      "21:55"
+     ],
+     [
+      "Catedral",
+      "22:30"
+     ],
+     [
+      "Catedral",
+      "22:50"
+     ],
+     [
+      "Candelaria",
+      "23:25"
+     ],
+     [
+      "Candelaria",
+      "23:45"
+     ],
+     [
+      "Palillero",
+      "23:55"
+     ],
+     [
+      "Palillero",
+      "00:15"
+     ],
+     [
+      "Recogida",
+      "01:35"
+     ],
+     [
+      "Recogida",
+      "02:00"
+     ]
+    ]
    }
   },
   "la-buena-muerte-cadiz": {
@@ -5899,6 +8051,87 @@
      "palillero": "01:00",
      "entrada": "03:10"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 42,
+    "templo_2026": "PARROQUIA DE SAN AGUSTÍN",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "21:35"
+     ],
+     [
+      "Salida",
+      "21:50"
+     ],
+     [
+      "Salida",
+      "22:10"
+     ],
+     [
+      "Nueva",
+      "22:05"
+     ],
+     [
+      "Nueva",
+      "22:20"
+     ],
+     [
+      "Nueva",
+      "22:40"
+     ],
+     [
+      "Catedral",
+      "23:00"
+     ],
+     [
+      "Catedral",
+      "23:15"
+     ],
+     [
+      "Catedral",
+      "23:35"
+     ],
+     [
+      "Candelaria",
+      "23:55"
+     ],
+     [
+      "Candelaria",
+      "00:10"
+     ],
+     [
+      "Candelaria",
+      "00:30"
+     ],
+     [
+      "Palillero",
+      "00:25"
+     ],
+     [
+      "Palillero",
+      "00:40"
+     ],
+     [
+      "Palillero",
+      "01:00"
+     ],
+     [
+      "Recogida",
+      "02:10"
+     ],
+     [
+      "Recogida",
+      "02:30"
+     ],
+     [
+      "Recogida",
+      "03:10"
+     ]
+    ]
    }
   },
   "ecce-mater-tua-cadiz": {
@@ -6041,6 +8274,39 @@
      "palillero": "02:15",
      "entrada": "04:00"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 44,
+    "templo_2026": "IGLESIA DE SANTIAGO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "01:00"
+     ],
+     [
+      "Salida",
+      "01:15"
+     ],
+     [
+      "Palillero",
+      "02:00"
+     ],
+     [
+      "Palillero",
+      "02:15"
+     ],
+     [
+      "Recogida",
+      "03:45"
+     ],
+     [
+      "Recogida",
+      "04:00"
+     ]
+    ]
    }
   },
   "santo-entierro-cadiz": {
@@ -6178,7 +8444,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "entrada": {
@@ -6189,7 +8456,8 @@
     "osm": "way/141200818",
     "fuente": [
      "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
-     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/",
+     "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf"
     ]
    },
    "sede_2026": {
@@ -6233,6 +8501,87 @@
      "palillero": "20:20",
      "entrada": "22:20"
     }
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 45,
+    "templo_2026": "ORATORIO DE SAN FELIPE",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "15:50"
+     ],
+     [
+      "Salida",
+      "16:05"
+     ],
+     [
+      "Salida",
+      "16:20"
+     ],
+     [
+      "Nueva",
+      "18:00"
+     ],
+     [
+      "Nueva",
+      "18:10"
+     ],
+     [
+      "Nueva",
+      "18:25"
+     ],
+     [
+      "Catedral",
+      "18:50"
+     ],
+     [
+      "Catedral",
+      "19:00"
+     ],
+     [
+      "Catedral",
+      "19:15"
+     ],
+     [
+      "Candelaria",
+      "19:35"
+     ],
+     [
+      "Candelaria",
+      "19:45"
+     ],
+     [
+      "Candelaria",
+      "20:00"
+     ],
+     [
+      "Palillero",
+      "19:55"
+     ],
+     [
+      "Palillero",
+      "20:05"
+     ],
+     [
+      "Palillero",
+      "20:20"
+     ],
+     [
+      "Recogida",
+      "21:50"
+     ],
+     [
+      "Recogida",
+      "22:05"
+     ],
+     [
+      "Recogida",
+      "22:20"
+     ]
+    ]
    }
   },
   "la-resurreccion-cadiz": {
@@ -6358,7 +8707,7 @@
     ]
    },
    "horas": {
-    "anio_de_la_tabla": "2025",
+    "anio_de_la_tabla": "2026",
     "columnas": [
      "salida",
      "catedral_entrada",
@@ -6376,7 +8725,49 @@
      "catedral_entrada": "10:20",
      "catedral_salida": "12:50",
      "entrada": "14:45"
-    }
+    },
+    "nota": "La tabla del programa dice «2025», pero son las horas de 2026: las mismas del cuadernillo de Radio Cádiz 2026, pág. 46."
+   },
+   "segunda_fuente": {
+    "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
+    "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+    "pagina": 46,
+    "templo_2026": "PARROQUIA DE SAN ANTONIO",
+    "itinerario": "coincide calle a calle con el programa",
+    "horas": [
+     [
+      "Salida",
+      "09:00"
+     ],
+     [
+      "Salida",
+      "09:20"
+     ],
+     [
+      "Catedral Entrada",
+      "10:00"
+     ],
+     [
+      "Catedral Entrada",
+      "10:20"
+     ],
+     [
+      "Catedral Salida",
+      "12:30"
+     ],
+     [
+      "Catedral Salida",
+      "12:50"
+     ],
+     [
+      "Recogida",
+      "14:25"
+     ],
+     [
+      "Recogida",
+      "14:45"
+     ]
+    ]
    }
   }
  }

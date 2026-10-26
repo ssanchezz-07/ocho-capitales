@@ -33,9 +33,16 @@ const ERRATAS = [
   [/\)\s+(?=[A-ZÁÉÍÓÚ])/g, '), ', 'falta la coma tras el paréntesis'],
   [/,(?=\S)/g, ', ', 'falta el espacio tras la coma'],
 ];
+// Erratas y omisiones del programa, con su fuente. «de»→«a» cambia la calle limpia (el texto literal se conserva);
+// «insertar» añade una calle que el programa omite, entre «tras» y «antes».
 const ERRATAS_PABLO = {
   'siete-palabras-cadiz': [{ tras: 'Plaza San Agustín', de: 'San Agustín', a: 'San Francisco', nota: '«San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26)' }],
+  'el-descendimiento-cadiz': [{ tras: 'Plaza Palillero', antes: 'San Francisco', insertar: 'Columela', nota: 'falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma' }],
 };
+// Segunda fuente de 2026 (cruzdeguia-cadiz.mjs): cuadernillo de Radio Cádiz, con templo, itinerario y horas
+const fCG = path.join(DIR, 'cadiz-2026-cruzdeguia.json');
+const CG = fs.existsSync(fCG) ? JSON.parse(fs.readFileSync(fCG, 'utf8')) : null;
+const claveC = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\(.*?\)/g, " ").replace(/\b(plaza|calle|avda|avenida|de|del|la|las|el|los)\b|[.“”"]/g, " ").replace(/\s+/g, " ").trim();
 const CATEDRAL = /\(?\s*Estaci[oó]n de Penitencia en la S\.I\.C\.?\s*\)?/i;
 const LADO = [[/^(Izda?|Izqda?|Izq|izq|Lado Izda)\.?$/i, 'izquierda'], [/^(Dcha|Drcha|Dr-?cha)\.?$/i, 'derecha'], [/^centro$/i, 'centro'], [/^interior$/i, 'interior'],
   [/^lado Izda\.?$/i, 'izquierda'], [/^por el lado izquierdo$/i, 'izquierda']];
@@ -85,7 +92,14 @@ for (const h of crudo.hermandades) {
   const slug = SLUG[h.cabecera];
   const { out, erratas } = elementos(h.texto);
   // Erratas del programa confirmadas por Pablo: la calle limpia se corrige; el texto literal se conserva
-  for (const c of ERRATAS_PABLO[slug] || []) { const k = out.findIndex((e, i) => e.calle === c.de && out[i - 1]?.calle === c.tras); if (k < 0) throw new Error(`errata no encontrada: ${slug} ${c.de}`); out[k].calle = c.a; out[k].errata = c.nota; erratas.push(c.nota); }
+  // coincidencia con la segunda fuente, calle a calle, antes de corregir nada
+  const cg = CG?.hermandades[slug];
+  const seq = (o) => o.map((e) => (e.catedral ? 'EST' : e.fin ? 'FIN' : claveC(e.calle))), a1 = seq(out), a2 = cg ? seq(elementos(cg.itinerario_literal).out) : null;
+  let dif = null; if (a2 && a1.join('|') !== a2.join('|')) { let i = 0; while (i < a1.length && a1[i] === a2[i]) i++; dif = `desde el elemento ${i}: programa «${a1.slice(i, i + 3).join(', ')}», cuadernillo «${a2.slice(i, i + 3).join(', ')}»`; }
+  for (const c of ERRATAS_PABLO[slug] || []) {
+    if (c.insertar) { const k = out.findIndex((e, i) => e.calle === c.tras && out[i + 1]?.calle === c.antes); if (k < 0) throw new Error(`omisión no encontrada: ${slug} ${c.insertar}`); out.splice(k + 1, 0, { texto: '', calle: c.insertar, insertada: c.nota }); erratas.push(c.nota); continue; }
+    const k = out.findIndex((e, i) => e.calle === c.de && out[i - 1]?.calle === c.tras); if (k < 0) throw new Error(`errata no encontrada: ${slug} ${c.de}`); out[k].calle = c.a; out[k].errata = c.nota; erratas.push(c.nota);
+  }
   const ic = out.findIndex((e) => e.catedral);
   const ida = ic >= 0 ? out.slice(0, ic + 1) : out, regreso = ic >= 0 ? out.slice(ic + 1) : [];
   const canon = templo(h.ficha.sede_canonica), esp = S.hermandades[slug];
@@ -104,7 +118,14 @@ for (const h of crudo.hermandades) {
     entrada: esp ? sede(esp.entrada, esp.fuente.map((f) => S.fuentes[f])) : sede(canon, [fPrograma]),
     ...(esp ? { sede_2026: { cita: esp.cita, ...(esp.nota ? { nota: esp.nota } : {}) } } : {}),
     horas: hz ? { anio_de_la_tabla: hz.anio_tabla, columnas: hz.columnas, ...horas } : null,
+    ...(cg ? { segunda_fuente: { documento: CG.fuente, url: CG.url, pagina: cg.pagina, templo_2026: cg.templo, itinerario: dif ? 'difiere ' + dif : 'coincide calle a calle con el programa', horas: cg.horas } } : {}),
   };
+  // horas de la tabla rotulada con otro año: valen si el cuadernillo de 2026 da las mismas
+  if (hz && hz.anio_tabla && hz.anio_tabla !== '2026' && cg) {
+    const v = (k) => cg.horas.filter(([n]) => n === k).map(([, h]) => h.replace('.', ':').padStart(5, '0'));
+    const igual = r.horas.cruz_de_guia?.salida === v('Salida')[0] && r.horas.cruz_de_guia?.entrada === v('Recogida')[0] && r.horas.paso?.salida === v('Salida')[1];
+    if (igual) { r.horas.anio_de_la_tabla = '2026'; r.horas.nota = `La tabla del programa dice «${hz.anio_tabla}», pero son las horas de 2026: las mismas del cuadernillo de Radio Cádiz 2026, pág. ${cg.pagina}.`; hz.anio_tabla = '2026'; }
+  }
   if (hz && hz.anio_tabla && hz.anio_tabla !== '2026') avisos.push(`${slug}: la tabla de horas del programa dice ${hz.anio_tabla}`);
   if (!hz || !hz.columnas_ok) avisos.push(`${slug}: tabla de horas incompleta`);
   if (!out.length || !out[out.length - 1].fin) avisos.push(`${slug}: el itinerario no acaba en «a su Templo»`);

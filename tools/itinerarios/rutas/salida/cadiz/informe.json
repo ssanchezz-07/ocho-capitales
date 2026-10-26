@@ -9,20 +9,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -289,9 +289,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral) (nodos fachada de Arquitecto Acero, punto aproximado y 7063298453): sin calle, línea por dentro",
-  "ms_graphhopper": 148,
-  "largo_m": 2125,
-  "ms_total": 177
+  "ms_graphhopper": 131,
+  "largo_m": 2077,
+  "ms_total": 157
  },
  "merced-obediencia-cadiz": {
   "id": "merced-obediencia-cadiz",
@@ -304,20 +304,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -637,9 +637,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 83,
-  "largo_m": 2140,
-  "ms_total": 105
+  "ms_graphhopper": 74,
+  "largo_m": 2141,
+  "ms_total": 100
  },
  "la-borriquita-cadiz": {
   "id": "la-borriquita-cadiz",
@@ -652,25 +652,26 @@
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 78 m entre «Plaza San Juan de Dios» y «Plocia»: en OSM no se tocan",
-   "hueco de 84 m entre «Poeta Nieto» y «Avda. Andalucía»: en OSM no se tocan"
+   "hueco de 84 m entre «Poeta Nieto» y «Avda. Andalucía»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Avda. Andalucía» a 84 m"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.51379466666666,
-    -6.280755655555557
+    36.513885,
+    -6.280809
    ],
-   "como": "templo en OSM: Iglesia de San José",
-   "fuente": "OpenStreetMap way 148685979",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.51379466666666,
-    -6.280755655555557
+    36.513885,
+    -6.280809
    ],
-   "como": "templo en OSM: Iglesia de San José",
-   "fuente": "OpenStreetMap way 148685979",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -1200,9 +1201,9 @@
    "37 m entre «Acacias» y «Brunete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 186,
-  "largo_m": 7924,
-  "ms_total": 227
+  "ms_graphhopper": 155,
+  "largo_m": 7562,
+  "ms_total": 200
  },
  "las-penas-cadiz": {
   "id": "las-penas-cadiz",
@@ -1217,20 +1218,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -1565,9 +1566,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 49,
-  "largo_m": 2805,
-  "ms_total": 65
+  "ms_graphhopper": 77,
+  "largo_m": 2742,
+  "ms_total": 95
  },
  "sagrada-cena-cadiz": {
   "id": "sagrada-cena-cadiz",
@@ -1957,9 +1958,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 93,
-  "largo_m": 2818,
-  "ms_total": 115
+  "ms_graphhopper": 59,
+  "largo_m": 2822,
+  "ms_total": 85
  },
  "el-despojado-cadiz": {
   "id": "el-despojado-cadiz",
@@ -2607,9 +2608,9 @@
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 208,
-  "largo_m": 8191,
-  "ms_total": 251
+  "ms_graphhopper": 218,
+  "largo_m": 8196,
+  "ms_total": 266
  },
  "humildad-y-paciencia-cadiz": {
   "id": "humildad-y-paciencia-cadiz",
@@ -2622,20 +2623,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53214119999999,
-    -6.294105725
+    36.532301,
+    -6.29415
    ],
-   "como": "templo en OSM: Iglesia de San Agustín",
-   "fuente": "OpenStreetMap way 66648043",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53214119999999,
-    -6.294105725
+    36.532301,
+    -6.29415
    ],
-   "como": "templo en OSM: Iglesia de San Agustín",
-   "fuente": "OpenStreetMap way 66648043",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -2906,9 +2907,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 66,
-  "largo_m": 2190,
-  "ms_total": 80
+  "ms_graphhopper": 40,
+  "largo_m": 2081,
+  "ms_total": 57
  },
  "nazareno-del-amor-cadiz": {
   "id": "nazareno-del-amor-cadiz",
@@ -2916,26 +2917,25 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 12)",
   "avisos": [
    "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -3222,9 +3222,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 81,
-  "largo_m": 2236,
-  "ms_total": 99
+  "ms_graphhopper": 80,
+  "largo_m": 2176,
+  "ms_total": 98
  },
  "la-palma-cadiz": {
   "id": "la-palma-cadiz",
@@ -3237,20 +3237,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.52965073333333,
-    -6.301674366666666
+    36.52969,
+    -6.301851
    ],
-   "como": "templo en OSM: Iglesia de La Palma",
-   "fuente": "OpenStreetMap way 154961231",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.52965073333333,
-    -6.301674366666666
+    36.52969,
+    -6.301851
    ],
-   "como": "templo en OSM: Iglesia de La Palma",
-   "fuente": "OpenStreetMap way 154961231",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -3737,9 +3737,9 @@
    "34 m entre «Columela» y «Plaza Topete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 90,
-  "largo_m": 3364,
-  "ms_total": 122
+  "ms_graphhopper": 86,
+  "largo_m": 3358,
+  "ms_total": 114
  },
  "el-prendimiento-cadiz": {
   "id": "el-prendimiento-cadiz",
@@ -3752,20 +3752,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53722504666667,
-    -6.29981452
+    36.537351,
+    -6.299585
    ],
-   "como": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "fuente": "OpenStreetMap way 154222959",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53722504666667,
-    -6.29981452
+    36.537351,
+    -6.299585
    ],
-   "como": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "fuente": "OpenStreetMap way 154222959",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -4082,9 +4082,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 60,
-  "largo_m": 3242,
-  "ms_total": 79
+  "ms_graphhopper": 87,
+  "largo_m": 3058,
+  "ms_total": 105
  },
  "vera-cruz-cadiz": {
   "id": "vera-cruz-cadiz",
@@ -4092,26 +4092,25 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 14)",
   "avisos": [
    "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -4431,9 +4430,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 68,
-  "largo_m": 2196,
-  "ms_total": 88
+  "ms_graphhopper": 78,
+  "largo_m": 2136,
+  "ms_total": 101
  },
  "la-sanidad-cadiz": {
   "id": "la-sanidad-cadiz",
@@ -4446,20 +4445,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -4730,9 +4729,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 42,
-  "largo_m": 2476,
-  "ms_total": 53
+  "ms_graphhopper": 46,
+  "largo_m": 2469,
+  "ms_total": 61
  },
  "la-piedad-cadiz": {
   "id": "la-piedad-cadiz",
@@ -4747,20 +4746,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -5047,9 +5046,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 79,
-  "largo_m": 2336,
-  "ms_total": 93
+  "ms_graphhopper": 70,
+  "largo_m": 2327,
+  "ms_total": 92
  },
  "jesus-caido-el-senor-del-parque-cadiz": {
   "id": "jesus-caido-el-senor-del-parque-cadiz",
@@ -5057,26 +5056,25 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 16)",
   "avisos": [
    "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53463202857142,
-    -6.30452662857143
+    36.534684,
+    -6.304576
    ],
-   "como": "templo en OSM: Capilla de Jesús Caido",
-   "fuente": "OpenStreetMap way 766688340",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -5403,9 +5401,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 52,
-  "largo_m": 2754,
-  "ms_total": 70
+  "ms_graphhopper": 88,
+  "largo_m": 2685,
+  "ms_total": 111
  },
  "la-columna-cadiz": {
   "id": "la-columna-cadiz",
@@ -5418,20 +5416,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53451097727272,
-    -6.299391668181818
+    36.53457,
+    -6.299328
    ],
-   "como": "templo en OSM: Iglesia de San Antonio",
-   "fuente": "OpenStreetMap way 154222951",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53451097727272,
-    -6.299391668181818
+    36.53457,
+    -6.299328
    ],
-   "como": "templo en OSM: Iglesia de San Antonio",
-   "fuente": "OpenStreetMap way 154222951",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -5772,9 +5770,9 @@
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 70,
-  "largo_m": 2311,
-  "ms_total": 87
+  "ms_graphhopper": 105,
+  "largo_m": 2316,
+  "ms_total": 130
  },
  "ecce-homo-cadiz": {
   "id": "ecce-homo-cadiz",
@@ -5787,20 +5785,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.533133345454544,
-    -6.296866463636364
+    36.532967,
+    -6.296992
    ],
-   "como": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "fuente": "OpenStreetMap way 494982467",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.533133345454544,
-    -6.296866463636364
+    36.532967,
+    -6.296992
    ],
-   "como": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "fuente": "OpenStreetMap way 494982467",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -6102,9 +6100,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 77,
-  "largo_m": 1992,
-  "ms_total": 91
+  "ms_graphhopper": 40,
+  "largo_m": 2011,
+  "ms_total": 58
  },
  "la-sentencia-cadiz": {
   "id": "la-sentencia-cadiz",
@@ -6119,20 +6117,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -6531,9 +6529,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
-  "largo_m": 2736,
-  "ms_total": 77
+  "ms_graphhopper": 52,
+  "largo_m": 2741,
+  "ms_total": 78
  },
  "las-cigarreras-cadiz": {
   "id": "las-cigarreras-cadiz",
@@ -6936,9 +6934,9 @@
    "39 m entre «Plaza la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 84,
-  "largo_m": 3090,
-  "ms_total": 104
+  "ms_graphhopper": 71,
+  "largo_m": 3094,
+  "ms_total": 93
  },
  "las-aguas-cadiz": {
   "id": "las-aguas-cadiz",
@@ -6951,20 +6949,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -7272,9 +7270,9 @@
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 104,
-  "largo_m": 2575,
-  "ms_total": 120
+  "ms_graphhopper": 47,
+  "largo_m": 2568,
+  "ms_total": 63
  },
  "el-caminito-cadiz": {
   "id": "el-caminito-cadiz",
@@ -7287,20 +7285,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.536342887500005,
-    -6.2945391125
+    36.536338,
+    -6.294611
    ],
-   "como": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "fuente": "OpenStreetMap way 549941389",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.536342887500005,
-    -6.2945391125
+    36.536338,
+    -6.294611
    ],
-   "como": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "fuente": "OpenStreetMap way 549941389",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -7670,9 +7668,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 50,
-  "largo_m": 2736,
-  "ms_total": 78
+  "ms_graphhopper": 72,
+  "largo_m": 2740,
+  "ms_total": 96
  },
  "los-afligidos-cadiz": {
   "id": "los-afligidos-cadiz",
@@ -7688,20 +7686,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -8048,9 +8046,9 @@
    "34 m entre «Columela» y «Plaza Topete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 58,
-  "largo_m": 2484,
-  "ms_total": 75
+  "ms_graphhopper": 57,
+  "largo_m": 2421,
+  "ms_total": 77
  },
  "oracion-en-el-huerto-cadiz": {
   "id": "oracion-en-el-huerto-cadiz",
@@ -8065,20 +8063,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.528247028571435,
-    -6.301730142857141
+    36.528275,
+    -6.301767
    ],
-   "como": "templo en OSM: Iglesia de Santa Catalina",
-   "fuente": "OpenStreetMap way 154960632",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.528247028571435,
-    -6.301730142857141
+    36.528275,
+    -6.301767
    ],
-   "como": "templo en OSM: Iglesia de Santa Catalina",
-   "fuente": "OpenStreetMap way 154960632",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -8647,9 +8645,9 @@
    "34 m entre «Columela» y «Plaza Las Flores»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 103,
-  "largo_m": 3900,
-  "ms_total": 132
+  "ms_graphhopper": 90,
+  "largo_m": 3901,
+  "ms_total": 121
  },
  "nazareno-de-santa-maria-cadiz": {
   "id": "nazareno-de-santa-maria-cadiz",
@@ -8665,20 +8663,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.527753157142854,
-    -6.29174099047619
+    36.527726,
+    -6.291871
    ],
-   "como": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "fuente": "OpenStreetMap way 154232558",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.527753157142854,
-    -6.29174099047619
+    36.527726,
+    -6.291871
    ],
-   "como": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "fuente": "OpenStreetMap way 154232558",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -9141,9 +9139,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 92,
-  "largo_m": 3582,
-  "ms_total": 118
+  "ms_graphhopper": 126,
+  "largo_m": 3586,
+  "ms_total": 158
  },
  "medinaceli-cadiz": {
   "id": "medinaceli-cadiz",
@@ -9151,26 +9149,25 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 24)",
   "avisos": [
    "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.534841523529415,
-    -6.29590963235294
+    36.534635,
+    -6.296193
    ],
-   "como": "templo en OSM: Iglesia y Convento de San Francisco",
-   "fuente": "OpenStreetMap way 154222961",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -9506,8 +9503,8 @@
    "8 m entre «Sagasta» y «Plaza San Francisco»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 59,
-  "largo_m": 2638,
+  "ms_graphhopper": 64,
+  "largo_m": 2591,
   "ms_total": 79
  },
  "el-perdon-cadiz": {
@@ -9978,9 +9975,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 51,
-  "largo_m": 2880,
-  "ms_total": 75
+  "ms_graphhopper": 83,
+  "largo_m": 2884,
+  "ms_total": 111
  },
  "siete-palabras-cadiz": {
   "id": "siete-palabras-cadiz",
@@ -9994,20 +9991,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.528521627272724,
-    -6.291332181818181
+    36.528497,
+    -6.291255
    ],
-   "como": "templo en OSM: Iglesia de La Merced",
-   "fuente": "OpenStreetMap way 162534924",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -10406,9 +10403,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 103,
-  "largo_m": 2610,
-  "ms_total": 135
+  "ms_graphhopper": 60,
+  "largo_m": 2616,
+  "ms_total": 97
  },
  "la-expiracion-cadiz": {
   "id": "la-expiracion-cadiz",
@@ -10422,20 +10419,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53722504666667,
-    -6.29981452
+    36.537351,
+    -6.299585
    ],
-   "como": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "fuente": "OpenStreetMap way 154222959",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53722504666667,
-    -6.29981452
+    36.537351,
+    -6.299585
    ],
-   "como": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "fuente": "OpenStreetMap way 154222959",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -10765,36 +10762,35 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
-  "largo_m": 2995,
-  "ms_total": 74
+  "ms_graphhopper": 52,
+  "largo_m": 2969,
+  "ms_total": 72
  },
  "el-descendimiento-cadiz": {
   "id": "el-descendimiento-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 27)",
   "avisos": [
-   "hueco de 175 m entre «Plaza Palillero» y «San Francisco»: en OSM no se tocan",
    "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53169989166667,
-    -6.300590799999999
+    36.531539,
+    -6.300419
    ],
-   "como": "templo en OSM: Iglesia de San Lorenzo",
-   "fuente": "OpenStreetMap way 154961230",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -10885,6 +10881,20 @@
    },
    {
     "i": 7,
+    "lugar": "Columela",
+    "tipo": "calle",
+    "osm": "Calle Columela",
+    "vias": [
+     27184751,
+     29983940,
+     259662808
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
     "lugar": "San Francisco",
     "tipo": "calle",
     "osm": "Calle San Francisco",
@@ -10895,11 +10905,11 @@
      29983941
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 175,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 8,
+    "i": 9,
     "lugar": "Plaza San Agustín",
     "tipo": "calle",
     "osm": "Plaza de San Agustín",
@@ -10912,7 +10922,7 @@
     "forzado": false
    },
    {
-    "i": 9,
+    "i": 10,
     "lugar": "San Francisco",
     "tipo": "calle",
     "osm": "Calle San Francisco",
@@ -10927,7 +10937,7 @@
     "forzado": false
    },
    {
-    "i": 10,
+    "i": 11,
     "lugar": "Nueva",
     "tipo": "calle",
     "osm": "Calle Nueva",
@@ -10939,7 +10949,7 @@
     "forzado": false
    },
    {
-    "i": 12,
+    "i": 13,
     "lugar": "Pelota",
     "tipo": "calle",
     "osm": "Calle Pelota",
@@ -10953,7 +10963,7 @@
     "forzado": false
    },
    {
-    "i": 13,
+    "i": 14,
     "lugar": "Plaza de la Catedral",
     "tipo": "calle",
     "osm": "Plaza de la Catedral",
@@ -10967,7 +10977,7 @@
     "forzado": false
    },
    {
-    "i": 14,
+    "i": 15,
     "lugar": "Estación de Penitencia en la S.I.C.",
     "tipo": "catedral",
     "osm": "Catedral (por dentro)",
@@ -10977,7 +10987,7 @@
     "forzado": false
    },
    {
-    "i": 15,
+    "i": 16,
     "lugar": "Arquitecto Acero",
     "tipo": "calle",
     "osm": "Calle Arquitecto Acero",
@@ -10991,7 +11001,7 @@
     "forzado": false
    },
    {
-    "i": 16,
+    "i": 17,
     "lugar": "Plaza de la Catedral",
     "tipo": "calle",
     "osm": "Plaza de la Catedral",
@@ -11005,7 +11015,7 @@
     "forzado": false
    },
    {
-    "i": 17,
+    "i": 18,
     "lugar": "Compañía",
     "tipo": "calle",
     "osm": "Calle Compañía",
@@ -11017,7 +11027,7 @@
     "forzado": false
    },
    {
-    "i": 18,
+    "i": 19,
     "lugar": "Santiago",
     "tipo": "calle",
     "osm": "Calle Santiago",
@@ -11029,7 +11039,7 @@
     "forzado": false
    },
    {
-    "i": 19,
+    "i": 20,
     "lugar": "Plaza Candelaria",
     "tipo": "calle",
     "osm": "Plaza Candelaria",
@@ -11043,7 +11053,7 @@
     "forzado": false
    },
    {
-    "i": 20,
+    "i": 21,
     "lugar": "Montañés",
     "tipo": "calle",
     "osm": "Calle Montañés",
@@ -11055,7 +11065,7 @@
     "forzado": false
    },
    {
-    "i": 21,
+    "i": 22,
     "lugar": "Plaza Palillero",
     "tipo": "calle",
     "osm": "Plaza del Palillero",
@@ -11067,7 +11077,7 @@
     "forzado": false
    },
    {
-    "i": 22,
+    "i": 23,
     "lugar": "Javier de Burgos",
     "tipo": "calle",
     "osm": "Calle Javier de Burgos",
@@ -11081,7 +11091,7 @@
     "forzado": false
    },
    {
-    "i": 23,
+    "i": 24,
     "lugar": "Barrié",
     "tipo": "calle",
     "osm": "Calle Barrié",
@@ -11095,7 +11105,7 @@
     "forzado": false
    },
    {
-    "i": 24,
+    "i": 25,
     "lugar": "Sacramento",
     "tipo": "calle",
     "osm": "Calle Sacramento",
@@ -11110,7 +11120,7 @@
     "forzado": false
    },
    {
-    "i": 25,
+    "i": 26,
     "lugar": "Sagasta",
     "tipo": "calle",
     "osm": "Calle Sagasta",
@@ -11136,8 +11146,8 @@
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "ms_graphhopper": 90,
-  "largo_m": 2498,
-  "ms_total": 114
+  "largo_m": 2436,
+  "ms_total": 142
  },
  "la-buena-muerte-cadiz": {
   "id": "la-buena-muerte-cadiz",
@@ -11150,20 +11160,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53214119999999,
-    -6.294105725
+    36.532301,
+    -6.29415
    ],
-   "como": "templo en OSM: Iglesia de San Agustín",
-   "fuente": "OpenStreetMap way 66648043",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53214119999999,
-    -6.294105725
+    36.532301,
+    -6.29415
    ],
-   "como": "templo en OSM: Iglesia de San Agustín",
-   "fuente": "OpenStreetMap way 66648043",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -11420,9 +11430,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 30,
-  "largo_m": 1867,
-  "ms_total": 51
+  "ms_graphhopper": 56,
+  "largo_m": 1757,
+  "ms_total": 74
  },
  "ecce-mater-tua-cadiz": {
   "id": "ecce-mater-tua-cadiz",
@@ -11435,20 +11445,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -11677,9 +11687,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "120 m entre «Nueva» y «Pelota»"
   ],
-  "ms_graphhopper": 29,
-  "largo_m": 1649,
-  "ms_total": 47
+  "ms_graphhopper": 41,
+  "largo_m": 1641,
+  "ms_total": 64
  },
  "santo-entierro-cadiz": {
   "id": "santo-entierro-cadiz",
@@ -11692,20 +11702,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53280568823529,
-    -6.299805111764705
+    36.532963,
+    -6.299684
    ],
-   "como": "templo en OSM: Oratorio de San Felipe Neri",
-   "fuente": "OpenStreetMap way 141200818",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -12002,9 +12012,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 53,
-  "largo_m": 2598,
-  "ms_total": 75
+  "ms_graphhopper": 69,
+  "largo_m": 2591,
+  "ms_total": 88
  },
  "la-resurreccion-cadiz": {
   "id": "la-resurreccion-cadiz",
@@ -12014,20 +12024,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.53451097727272,
-    -6.299391668181818
+    36.53457,
+    -6.299328
    ],
-   "como": "templo en OSM: Iglesia de San Antonio",
-   "fuente": "OpenStreetMap way 154222951",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.53451097727272,
-    -6.299391668181818
+    36.53457,
+    -6.299328
    ],
-   "como": "templo en OSM: Iglesia de San Antonio",
-   "fuente": "OpenStreetMap way 154222951",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -12264,9 +12274,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza San Antonio»"
   ],
-  "ms_graphhopper": 43,
-  "largo_m": 1726,
-  "ms_total": 54
+  "ms_graphhopper": 44,
+  "largo_m": 1727,
+  "ms_total": 65
  },
  "humillacion-piedad-cadiz": {
   "id": "humillacion-piedad-cadiz",
@@ -12278,20 +12288,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "entrada": {
    "punto": [
-    36.529705577777776,
-    -6.2956937
+    36.52962,
+    -6.295649
    ],
-   "como": "templo en OSM: Iglesia de Santiago",
-   "fuente": "OpenStreetMap way 542083000",
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cadiz.json",
    "dir": null
   },
   "calles": [
@@ -12566,8 +12576,8 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "39 m entre «Compañía» y «Plaza de la Catedral»"
   ],
-  "ms_graphhopper": 48,
-  "largo_m": 1579,
-  "ms_total": 66
+  "ms_graphhopper": 69,
+  "largo_m": 1566,
+  "ms_total": 86
  }
 }

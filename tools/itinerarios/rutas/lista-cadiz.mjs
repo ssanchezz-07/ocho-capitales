@@ -45,10 +45,13 @@ for (const [id, h] of Object.entries(D.hermandades)) {
   // OSM solo tiene como vía el borde sur de la plaza: la plaza va como marca y Pelota se alcanza en recta desde Nueva.
   const rectos = [];
   calles.forEach((t, i) => { if (/^plaza (de )?san juan de dios$/i.test(t) && clave(calles[i - 1] || '') === 'nueva' && clave(calles[i + 1] || '') === 'pelota') { hitos.push(i); rectos.push(i + 1); } });
-  if (rectos.length) notas.push('Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía.');
+  // la recta pasa por la parte abierta de la plaza: al sur del edificio way/844713222 (lado norte) y al norte del Ayuntamiento
+  // y de San Juan de Dios (edificios de OSM del extracto de GraphHopper)
+  const rectos_por = Object.fromEntries(rectos.map((i) => [i, [[36.53000, -6.29268]]]));
+  if (rectos.length) notas.push('Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía.');
   out.hermandades[id] = {
     fuente: `${h.fuente.url} (itinerario, pág. ${h.fuente.pagina_itinerario}; ficha, pág. ${h.fuente.pagina_ficha})`,
-    calles, horas, ...(hitos.length ? { hitos } : {}), ...(rectos.length ? { rectos } : {}),
+    calles, horas, ...(hitos.length ? { hitos } : {}), ...(rectos.length ? { rectos, rectos_por } : {}),
     ...(idx.catedral_salida != null ? { regreso_desde: idx.catedral_salida } : {}),
     ...(alReves ? { catedral: { entra: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, sale: 7063298453, nombre: 'de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)' } } : {}),
     rejilla: false, notas,

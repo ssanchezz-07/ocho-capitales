@@ -7,10 +7,10 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "salida_m": 24,
+   "entrada_m": 24,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
@@ -18,7 +18,7 @@
    "pct_en_calles_lista": 82
   },
   "nuevo": {
-   "largo_m": 2125,
+   "largo_m": 2077,
    "comprobables": 18,
    "sin_dato": [],
    "recorridas": 18,
@@ -26,13 +26,13 @@
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 83
   },
   "decision": {
    "queda": "nuevo",
@@ -51,8 +51,8 @@
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 1,
@@ -65,7 +65,7 @@
    "pct_en_calles_lista": 85
   },
   "nuevo": {
-   "largo_m": 2140,
+   "largo_m": 2141,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
@@ -73,8 +73,8 @@
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 1,
@@ -95,50 +95,16 @@
  },
  "la-borriquita-cadiz": {
   "publicado": {
-   "largo_m": 8048,
+   "largo_m": 7928,
    "comprobables": 34,
    "sin_dato": [],
    "recorridas": 34,
    "en_orden": 31,
    "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
-   "sede_salida": "templo en OSM: Iglesia de San José",
-   "sede_entrada": "templo en OSM: Iglesia de San José",
-   "rectas_150": [],
-   "tramo_max_m": 174,
-   "retrocesos": 4,
-   "donde_retrocesos": [
-    [
-     36.523476,
-     -6.286706
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 75
-  },
-  "nuevo": {
-   "largo_m": 7924,
-   "comprobables": 34,
-   "sin_dato": [],
-   "recorridas": 34,
-   "en_orden": 31,
-   "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
-   "sede_salida": "templo en OSM: Iglesia de San José",
-   "sede_entrada": "templo en OSM: Iglesia de San José",
+   "salida_m": 20,
+   "entrada_m": 20,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 174,
    "retrocesos": 3,
@@ -158,38 +124,67 @@
    ],
    "pct_en_calles_lista": 75
   },
+  "nuevo": {
+   "largo_m": 7562,
+   "comprobables": 34,
+   "sin_dato": [],
+   "recorridas": 34,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 235,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.523476,
+     -6.286706
+    ],
+    [
+     36.529562,
+     -6.292509
+    ],
+    [
+     36.529562,
+     -6.292509
+    ],
+    [
+     36.514489,
+     -6.281603
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 4→3"
+    "empate"
    ]
   }
  },
  "las-penas-cadiz": {
   "publicado": {
-   "largo_m": 2929,
+   "largo_m": 2809,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "salida_m": 24,
+   "entrada_m": 24,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 77
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 80
   },
   "nuevo": {
-   "largo_m": 2805,
+   "largo_m": 2742,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
@@ -197,8 +192,8 @@
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
@@ -208,13 +203,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "sagrada-cena-cadiz": {
   "publicado": {
-   "largo_m": 2942,
+   "largo_m": 2822,
    "comprobables": 23,
    "sin_dato": [
     "Compás de Santo Domingo",
@@ -229,21 +224,17 @@
    "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
     [
      36.529562,
      -6.292509
     ]
    ],
-   "pct_en_calles_lista": 71
+   "pct_en_calles_lista": 72
   },
   "nuevo": {
-   "largo_m": 2818,
+   "largo_m": 2822,
    "comprobables": 23,
    "sin_dato": [
     "Compás de Santo Domingo",
@@ -270,13 +261,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 2→1"
+    "empate"
    ]
   }
  },
  "el-despojado-cadiz": {
   "publicado": {
-   "largo_m": 8316,
+   "largo_m": 8196,
    "comprobables": 39,
    "sin_dato": [
     "García de Sola"
@@ -290,7 +281,7 @@
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 174,
-   "retrocesos": 5,
+   "retrocesos": 4,
    "donde_retrocesos": [
     [
      36.513089,
@@ -305,10 +296,6 @@
      -6.292509
     ],
     [
-     36.529562,
-     -6.292509
-    ],
-    [
      36.512406,
      -6.279043
     ]
@@ -316,7 +303,7 @@
    "pct_en_calles_lista": 73
   },
   "nuevo": {
-   "largo_m": 8191,
+   "largo_m": 8196,
    "comprobables": 39,
    "sin_dato": [
     "García de Sola"
@@ -354,13 +341,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 5→4"
+    "empate"
    ]
   }
  },
  "humildad-y-paciencia-cadiz": {
   "publicado": {
-   "largo_m": 2315,
+   "largo_m": 2194,
    "comprobables": 18,
    "sin_dato": [
     "Beato Diego José de Cádiz"
@@ -368,50 +355,45 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Agustín",
-   "sede_entrada": "templo en OSM: Iglesia de San Agustín",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 72
-  },
-  "nuevo": {
-   "largo_m": 2190,
-   "comprobables": 18,
-   "sin_dato": [
-    "Beato Diego José de Cádiz"
-   ],
-   "recorridas": 18,
-   "en_orden": 18,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Agustín",
-   "sede_entrada": "templo en OSM: Iglesia de San Agustín",
+   "salida_m": 19,
+   "entrada_m": 19,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 76
   },
+  "nuevo": {
+   "largo_m": 2081,
+   "comprobables": 18,
+   "sin_dato": [
+    "Beato Diego José de Cádiz"
+   ],
+   "recorridas": 18,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 80
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "nazareno-del-amor-cadiz": {
   "publicado": {
-   "largo_m": 2360,
+   "largo_m": 2240,
    "comprobables": 20,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -419,34 +401,29 @@
    "recorridas": 20,
    "en_orden": 19,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
+   "salida_m": 52,
+   "entrada_m": 52,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 78
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 82
   },
   "nuevo": {
-   "largo_m": 2236,
+   "largo_m": 2176,
    "comprobables": 20,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
    "recorridas": 20,
-   "en_orden": 19,
+   "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
+   "salida_m": 19,
+   "entrada_m": 19,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 0,
@@ -456,35 +433,30 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "la-palma-cadiz": {
   "publicado": {
-   "largo_m": 3489,
+   "largo_m": 3368,
    "comprobables": 35,
    "sin_dato": [],
    "recorridas": 35,
    "en_orden": 32,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de La Palma",
-   "sede_entrada": "templo en OSM: Iglesia de La Palma",
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 83
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 86
   },
   "nuevo": {
-   "largo_m": 3364,
+   "largo_m": 3358,
    "comprobables": 35,
    "sin_dato": [],
    "recorridas": 35,
@@ -492,8 +464,8 @@
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de La Palma",
-   "sede_entrada": "templo en OSM: Iglesia de La Palma",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 0,
@@ -503,91 +475,81 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "el-prendimiento-cadiz": {
   "publicado": {
-   "largo_m": 3367,
+   "largo_m": 3246,
    "comprobables": 22,
    "sin_dato": [],
    "recorridas": 22,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 83
-  },
-  "nuevo": {
-   "largo_m": 3242,
-   "comprobables": 22,
-   "sin_dato": [],
-   "recorridas": 22,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
+   "salida_m": 26,
+   "entrada_m": 26,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 86
   },
+  "nuevo": {
+   "largo_m": 3058,
+   "comprobables": 22,
+   "sin_dato": [],
+   "recorridas": 22,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 88
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "vera-cruz-cadiz": {
   "publicado": {
-   "largo_m": 2320,
+   "largo_m": 2200,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
+   "salida_m": 52,
+   "entrada_m": 52,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 227,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 78
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 82
   },
   "nuevo": {
-   "largo_m": 2196,
+   "largo_m": 2136,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
-   "en_orden": 22,
+   "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
+   "salida_m": 19,
+   "entrada_m": 19,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 227,
    "retrocesos": 0,
@@ -597,13 +559,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "la-sanidad-cadiz": {
   "publicado": {
-   "largo_m": 2600,
+   "largo_m": 2480,
    "comprobables": 18,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -611,81 +573,71 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 79
-  },
-  "nuevo": {
-   "largo_m": 2476,
-   "comprobables": 18,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 18,
-   "en_orden": 18,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 84
+   "pct_en_calles_lista": 83
+  },
+  "nuevo": {
+   "largo_m": 2469,
+   "comprobables": 18,
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
+   "recorridas": 18,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "la-piedad-cadiz": {
   "publicado": {
-   "largo_m": 2460,
+   "largo_m": 2340,
    "comprobables": 20,
    "sin_dato": [],
    "recorridas": 20,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de Santiago",
-   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "salida_m": 12,
+   "entrada_m": 12,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 79
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
-   "largo_m": 2336,
+   "largo_m": 2327,
    "comprobables": 20,
    "sin_dato": [],
    "recorridas": 20,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de Santiago",
-   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 0,
@@ -695,773 +647,41 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "jesus-caido-el-senor-del-parque-cadiz": {
   "publicado": {
-   "largo_m": 2878,
+   "largo_m": 2758,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Capilla de Jesús Caido",
-   "rectas_150": [],
-   "tramo_max_m": 196,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 82
-  },
-  "nuevo": {
-   "largo_m": 2754,
-   "comprobables": 23,
-   "sin_dato": [],
-   "recorridas": 23,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia y Convento de San Francisco",
-   "sede_entrada": "templo en OSM: Capilla de Jesús Caido",
+   "salida_m": 52,
+   "entrada_m": 11,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 196,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 85
   },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "la-columna-cadiz": {
-  "publicado": {
-   "largo_m": 2435,
+  "nuevo": {
+   "largo_m": 2685,
    "comprobables": 23,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
+   "sin_dato": [],
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Antonio",
-   "sede_entrada": "templo en OSM: Iglesia de San Antonio",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 79
-  },
-  "nuevo": {
-   "largo_m": 2311,
-   "comprobables": 23,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 23,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Antonio",
-   "sede_entrada": "templo en OSM: Iglesia de San Antonio",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 83
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "ecce-homo-cadiz": {
-  "publicado": {
-   "largo_m": 2115,
-   "comprobables": 21,
-   "sin_dato": [],
-   "recorridas": 21,
-   "en_orden": 19,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 8,
-   "sede_salida": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "sede_entrada": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 78
-  },
-  "nuevo": {
-   "largo_m": 1992,
-   "comprobables": 21,
-   "sin_dato": [],
-   "recorridas": 21,
-   "en_orden": 20,
-   "no_recorridas": [],
-   "salida_m": 8,
-   "entrada_m": 8,
-   "sede_salida": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "sede_entrada": "templo en OSM: Iglesia de la Conversión de San Pablo",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 83
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "en orden 19→20",
-    "retrocesos 1→0"
-   ]
-  }
- },
- "la-sentencia-cadiz": {
-  "publicado": {
-   "largo_m": 2860,
-   "comprobables": 30,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 30,
-   "en_orden": 26,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 2,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.528569,
-     -6.290855
-    ]
-   ],
-   "pct_en_calles_lista": 75
-  },
-  "nuevo": {
-   "largo_m": 2736,
-   "comprobables": 30,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 30,
-   "en_orden": 26,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.528569,
-     -6.290855
-    ]
-   ],
-   "pct_en_calles_lista": 76
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 2→1"
-   ]
-  }
- },
- "las-cigarreras-cadiz": {
-  "publicado": {
-   "largo_m": 3214,
-   "comprobables": 23,
-   "sin_dato": [
-    "Compás de Santo Domingo",
-    "Beato Diego de Cádiz",
-    "Compas de Santo Domingo"
-   ],
-   "recorridas": 23,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
-   "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 67
-  },
-  "nuevo": {
-   "largo_m": 3090,
-   "comprobables": 23,
-   "sin_dato": [
-    "Compás de Santo Domingo",
-    "Beato Diego de Cádiz",
-    "Compas de Santo Domingo"
-   ],
-   "recorridas": 23,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
-   "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 2,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 68
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 3→2"
-   ]
-  }
- },
- "las-aguas-cadiz": {
-  "publicado": {
-   "largo_m": 2699,
-   "comprobables": 21,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 21,
-   "en_orden": 20,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 80
-  },
-  "nuevo": {
-   "largo_m": 2575,
-   "comprobables": 21,
-   "sin_dato": [
-    "Beato Diego de Cádiz"
-   ],
-   "recorridas": 21,
-   "en_orden": 20,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 84
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "el-caminito-cadiz": {
-  "publicado": {
-   "largo_m": 2860,
-   "comprobables": 25,
-   "sin_dato": [
-    "Conde O’Reilly"
-   ],
-   "recorridas": 25,
-   "en_orden": 25,
-   "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "sede_entrada": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 81
-  },
-  "nuevo": {
-   "largo_m": 2736,
-   "comprobables": 25,
-   "sin_dato": [
-    "Conde O’Reilly"
-   ],
-   "recorridas": 25,
-   "en_orden": 25,
-   "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "sede_entrada": "templo en OSM: Capilla de Nuestra Señora de las Angustias",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 85
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "los-afligidos-cadiz": {
-  "publicado": {
-   "largo_m": 2608,
-   "comprobables": 24,
-   "sin_dato": [],
-   "recorridas": 24,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
-   "rectas_150": [],
-   "tramo_max_m": 110,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 72
-  },
-  "nuevo": {
-   "largo_m": 2484,
-   "comprobables": 24,
-   "sin_dato": [],
-   "recorridas": 24,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
-   "rectas_150": [],
-   "tramo_max_m": 120,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 76
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "oracion-en-el-huerto-cadiz": {
-  "publicado": {
-   "largo_m": 4024,
-   "comprobables": 37,
-   "sin_dato": [
-    "Geólogo McPherson",
-    "Regimiento de Infantería",
-    "Geólogo McPherson"
-   ],
-   "recorridas": 37,
-   "en_orden": 36,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de Santa Catalina",
-   "sede_entrada": "templo en OSM: Iglesia de Santa Catalina",
-   "rectas_150": [],
-   "tramo_max_m": 110,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     36.528388,
-     -6.302143
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.528388,
-     -6.302143
-    ]
-   ],
-   "pct_en_calles_lista": 76
-  },
-  "nuevo": {
-   "largo_m": 3900,
-   "comprobables": 37,
-   "sin_dato": [
-    "Geólogo McPherson",
-    "Regimiento de Infantería",
-    "Geólogo McPherson"
-   ],
-   "recorridas": 37,
-   "en_orden": 36,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de Santa Catalina",
-   "sede_entrada": "templo en OSM: Iglesia de Santa Catalina",
-   "rectas_150": [],
-   "tramo_max_m": 120,
-   "retrocesos": 2,
-   "donde_retrocesos": [
-    [
-     36.528388,
-     -6.302143
-    ],
-    [
-     36.528388,
-     -6.302143
-    ]
-   ],
-   "pct_en_calles_lista": 78
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 3→2"
-   ]
-  }
- },
- "nazareno-de-santa-maria-cadiz": {
-  "publicado": {
-   "largo_m": 3706,
-   "comprobables": 32,
-   "sin_dato": [
-    "Jabonería",
-    "Compás de Santo Domingo"
-   ],
-   "recorridas": 32,
-   "en_orden": 30,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "sede_entrada": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 77
-  },
-  "nuevo": {
-   "largo_m": 3582,
-   "comprobables": 32,
-   "sin_dato": [
-    "Jabonería",
-    "Compás de Santo Domingo"
-   ],
-   "recorridas": 32,
-   "en_orden": 30,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "sede_entrada": "templo en OSM: Iglesia Conventual de Santa Maria",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 78
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "medinaceli-cadiz": {
-  "publicado": {
-   "largo_m": 2762,
-   "comprobables": 24,
-   "sin_dato": [],
-   "recorridas": 24,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 79
-  },
-  "nuevo": {
-   "largo_m": 2638,
-   "comprobables": 24,
-   "sin_dato": [],
-   "recorridas": 24,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Iglesia y Convento de San Francisco",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 83
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 1→0"
-   ]
-  }
- },
- "el-perdon-cadiz": {
-  "publicado": {
-   "largo_m": 3004,
-   "comprobables": 30,
-   "sin_dato": [],
-   "recorridas": 30,
-   "en_orden": 28,
-   "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
+   "salida_m": 19,
+   "entrada_m": 4,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 4,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529711,
-     -6.293356
-    ],
-    [
-     36.528211,
-     -6.294871
-    ]
-   ],
-   "pct_en_calles_lista": 79
-  },
-  "nuevo": {
-   "largo_m": 2880,
-   "comprobables": 30,
-   "sin_dato": [],
-   "recorridas": 30,
-   "en_orden": 28,
-   "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529711,
-     -6.293356
-    ],
-    [
-     36.528211,
-     -6.294871
-    ]
-   ],
-   "pct_en_calles_lista": 80
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 4→3"
-   ]
-  }
- },
- "siete-palabras-cadiz": {
-  "publicado": {
-   "largo_m": 2735,
-   "comprobables": 31,
-   "sin_dato": [],
-   "recorridas": 31,
-   "en_orden": 26,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 2,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.528569,
-     -6.290855
-    ]
-   ],
-   "pct_en_calles_lista": 82
-  },
-  "nuevo": {
-   "largo_m": 2610,
-   "comprobables": 31,
-   "sin_dato": [],
-   "recorridas": 31,
-   "en_orden": 26,
-   "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
-   "sede_salida": "templo en OSM: Iglesia de La Merced",
-   "sede_entrada": "templo en OSM: Iglesia de La Merced",
-   "rectas_150": [],
-   "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.528569,
-     -6.290855
-    ]
-   ],
-   "pct_en_calles_lista": 84
-  },
-  "decision": {
-   "queda": "nuevo",
-   "motivo": [
-    "retrocesos 2→1"
-   ]
-  }
- },
- "la-expiracion-cadiz": {
-  "publicado": {
-   "largo_m": 3120,
-   "comprobables": 23,
-   "sin_dato": [],
-   "recorridas": 23,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 83
-  },
-  "nuevo": {
-   "largo_m": 2995,
-   "comprobables": 23,
-   "sin_dato": [],
-   "recorridas": 23,
-   "en_orden": 23,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora del Carmen",
-   "rectas_150": [],
-   "tramo_max_m": 153,
+   "tramo_max_m": 196,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 87
@@ -1469,46 +689,45 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
- "el-descendimiento-cadiz": {
+ "la-columna-cadiz": {
   "publicado": {
-   "largo_m": 2623,
+   "largo_m": 2315,
    "comprobables": 23,
-   "sin_dato": [],
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 178,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 79
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
-   "largo_m": 2498,
+   "largo_m": 2316,
    "comprobables": 23,
-   "sin_dato": [],
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
-   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 178,
+   "tramo_max_m": 158,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 83
@@ -1516,28 +735,132 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
- "la-buena-muerte-cadiz": {
+ "ecce-homo-cadiz": {
   "publicado": {
-   "largo_m": 1991,
-   "comprobables": 17,
+   "largo_m": 1995,
+   "comprobables": 21,
+   "sin_dato": [],
+   "recorridas": 21,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 9,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "nuevo": {
+   "largo_m": 2011,
+   "comprobables": 21,
+   "sin_dato": [],
+   "recorridas": 21,
+   "en_orden": 20,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 19→20"
+   ]
+  }
+ },
+ "la-sentencia-cadiz": {
+  "publicado": {
+   "largo_m": 2740,
+   "comprobables": 30,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
-   "recorridas": 17,
-   "en_orden": 17,
+   "recorridas": 30,
+   "en_orden": 26,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Agustín",
-   "sede_entrada": "templo en OSM: Iglesia de San Agustín",
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 110,
+   "tramo_max_m": 158,
    "retrocesos": 1,
    "donde_retrocesos": [
+    [
+     36.528569,
+     -6.290855
+    ]
+   ],
+   "pct_en_calles_lista": 76
+  },
+  "nuevo": {
+   "largo_m": 2741,
+   "comprobables": 30,
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
+   "recorridas": 30,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.528569,
+     -6.290855
+    ]
+   ],
+   "pct_en_calles_lista": 76
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "las-cigarreras-cadiz": {
+  "publicado": {
+   "largo_m": 3094,
+   "comprobables": 23,
+   "sin_dato": [
+    "Compás de Santo Domingo",
+    "Beato Diego de Cádiz",
+    "Compas de Santo Domingo"
+   ],
+   "recorridas": 23,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.529562,
+     -6.292509
+    ],
     [
      36.529562,
      -6.292509
@@ -1546,7 +869,541 @@
    "pct_en_calles_lista": 68
   },
   "nuevo": {
-   "largo_m": 1867,
+   "largo_m": 3094,
+   "comprobables": 23,
+   "sin_dato": [
+    "Compás de Santo Domingo",
+    "Beato Diego de Cádiz",
+    "Compas de Santo Domingo"
+   ],
+   "recorridas": 23,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.529562,
+     -6.292509
+    ],
+    [
+     36.529562,
+     -6.292509
+    ]
+   ],
+   "pct_en_calles_lista": 68
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "las-aguas-cadiz": {
+  "publicado": {
+   "largo_m": 2579,
+   "comprobables": 21,
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
+   "recorridas": 21,
+   "en_orden": 20,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 84
+  },
+  "nuevo": {
+   "largo_m": 2568,
+   "comprobables": 21,
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
+   "recorridas": 21,
+   "en_orden": 20,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 84
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-caminito-cadiz": {
+  "publicado": {
+   "largo_m": 2740,
+   "comprobables": 25,
+   "sin_dato": [
+    "Conde O’Reilly"
+   ],
+   "recorridas": 25,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 85
+  },
+  "nuevo": {
+   "largo_m": 2740,
+   "comprobables": 25,
+   "sin_dato": [
+    "Conde O’Reilly"
+   ],
+   "recorridas": 25,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 85
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "los-afligidos-cadiz": {
+  "publicado": {
+   "largo_m": 2488,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 24,
+   "entrada_m": 24,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 110,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 76
+  },
+  "nuevo": {
+   "largo_m": 2421,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 110,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 77
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "publicado": {
+   "largo_m": 3904,
+   "comprobables": 37,
+   "sin_dato": [
+    "Geólogo McPherson",
+    "Regimiento de Infantería",
+    "Geólogo McPherson"
+   ],
+   "recorridas": 37,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 17,
+   "entrada_m": 17,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 110,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.528388,
+     -6.302143
+    ],
+    [
+     36.528388,
+     -6.302143
+    ]
+   ],
+   "pct_en_calles_lista": 78
+  },
+  "nuevo": {
+   "largo_m": 3901,
+   "comprobables": 37,
+   "sin_dato": [
+    "Geólogo McPherson",
+    "Regimiento de Infantería",
+    "Geólogo McPherson"
+   ],
+   "recorridas": 37,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 17,
+   "entrada_m": 17,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 110,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.528388,
+     -6.302143
+    ],
+    [
+     36.528388,
+     -6.302143
+    ]
+   ],
+   "pct_en_calles_lista": 78
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "nazareno-de-santa-maria-cadiz": {
+  "publicado": {
+   "largo_m": 3586,
+   "comprobables": 32,
+   "sin_dato": [
+    "Jabonería",
+    "Compás de Santo Domingo"
+   ],
+   "recorridas": 32,
+   "en_orden": 30,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 78
+  },
+  "nuevo": {
+   "largo_m": 3586,
+   "comprobables": 32,
+   "sin_dato": [
+    "Jabonería",
+    "Compás de Santo Domingo"
+   ],
+   "recorridas": 32,
+   "en_orden": 30,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 78
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "medinaceli-cadiz": {
+  "publicado": {
+   "largo_m": 2642,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 52,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 82
+  },
+  "nuevo": {
+   "largo_m": 2591,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 19,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-perdon-cadiz": {
+  "publicado": {
+   "largo_m": 2884,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 30,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.529562,
+     -6.292509
+    ],
+    [
+     36.529711,
+     -6.293356
+    ],
+    [
+     36.528211,
+     -6.294871
+    ]
+   ],
+   "pct_en_calles_lista": 80
+  },
+  "nuevo": {
+   "largo_m": 2884,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 30,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.529562,
+     -6.292509
+    ],
+    [
+     36.529711,
+     -6.293356
+    ],
+    [
+     36.528211,
+     -6.294871
+    ]
+   ],
+   "pct_en_calles_lista": 80
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "siete-palabras-cadiz": {
+  "publicado": {
+   "largo_m": 2615,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.528569,
+     -6.290855
+    ]
+   ],
+   "pct_en_calles_lista": 84
+  },
+  "nuevo": {
+   "largo_m": 2616,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.528569,
+     -6.290855
+    ]
+   ],
+   "pct_en_calles_lista": 84
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-expiracion-cadiz": {
+  "publicado": {
+   "largo_m": 3000,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 23,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 26,
+   "entrada_m": 26,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 87
+  },
+  "nuevo": {
+   "largo_m": 2969,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 23,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 88
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-descendimiento-cadiz": {
+  "publicado": {
+   "largo_m": 2502,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 24,
+   "entrada_m": 24,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "nuevo": {
+   "largo_m": 2436,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-buena-muerte-cadiz": {
+  "publicado": {
+   "largo_m": 1871,
    "comprobables": 17,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -1554,26 +1411,45 @@
    "recorridas": 17,
    "en_orden": 17,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Agustín",
-   "sede_entrada": "templo en OSM: Iglesia de San Agustín",
+   "salida_m": 19,
+   "entrada_m": 19,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 120,
+   "tramo_max_m": 110,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 72
   },
+  "nuevo": {
+   "largo_m": 1757,
+   "comprobables": 17,
+   "sin_dato": [
+    "Beato Diego de Cádiz"
+   ],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 77
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "ecce-mater-tua-cadiz": {
   "publicado": {
-   "largo_m": 1774,
+   "largo_m": 1653,
    "comprobables": 16,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -1581,23 +1457,18 @@
    "recorridas": 16,
    "en_orden": 15,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de Santiago",
-   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "salida_m": 12,
+   "entrada_m": 12,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 123,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 76
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
-   "largo_m": 1649,
+   "largo_m": 1641,
    "comprobables": 16,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -1605,10 +1476,10 @@
    "recorridas": 16,
    "en_orden": 15,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de Santiago",
-   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 123,
    "retrocesos": 0,
@@ -1618,54 +1489,49 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "santo-entierro-cadiz": {
   "publicado": {
-   "largo_m": 2722,
+   "largo_m": 2602,
    "comprobables": 21,
    "sin_dato": [],
    "recorridas": 21,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 82
-  },
-  "nuevo": {
-   "largo_m": 2598,
-   "comprobables": 21,
-   "sin_dato": [],
-   "recorridas": 21,
-   "en_orden": 21,
-   "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Oratorio de San Felipe Neri",
-   "sede_entrada": "templo en OSM: Oratorio de San Felipe Neri",
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 86
   },
+  "nuevo": {
+   "largo_m": 2591,
+   "comprobables": 21,
+   "sin_dato": [],
+   "recorridas": 21,
+   "en_orden": 21,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 85
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
@@ -1677,10 +1543,10 @@
    "recorridas": 18,
    "en_orden": 17,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Antonio",
-   "sede_entrada": "templo en OSM: Iglesia de San Antonio",
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 1,
@@ -1693,7 +1559,7 @@
    "pct_en_calles_lista": 87
   },
   "nuevo": {
-   "largo_m": 1726,
+   "largo_m": 1727,
    "comprobables": 18,
    "sin_dato": [],
    "recorridas": 18,
@@ -1701,8 +1567,8 @@
    "no_recorridas": [],
    "salida_m": 2,
    "entrada_m": 2,
-   "sede_salida": "templo en OSM: Iglesia de San Antonio",
-   "sede_entrada": "templo en OSM: Iglesia de San Antonio",
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 1,
@@ -1722,28 +1588,44 @@
   }
  },
  "humillacion-piedad-cadiz": {
-  "publicado": null,
-  "nuevo": {
+  "publicado": {
    "largo_m": 1579,
    "comprobables": 19,
    "sin_dato": [],
    "recorridas": 19,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "templo en OSM: Iglesia de Santiago",
-   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "salida_m": 12,
+   "entrada_m": 12,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 110,
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 80
   },
+  "nuevo": {
+   "largo_m": 1566,
+   "comprobables": 19,
+   "sin_dato": [],
+   "recorridas": 19,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 110,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 81
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "no había trazado publicado"
+    "empate"
    ]
   }
  }
