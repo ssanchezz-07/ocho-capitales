@@ -110,6 +110,11 @@ function unir(a, b) {
 }
 
 // recorrido de prensa («Salida, Valladares, …, Santa Flora y María y Entrada.») → elementos
+// Enlaces: [clave de A, clave de B, calle que va entre las dos, fuente]. Se inserta entre A y B (en los dos sentidos).
+const ENLACES = [
+  ['lope hoces', 'puerta almodovar', 'Tejón y Marín', 'Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar'],
+  ['san andres', 'santa maria gracia', 'Realejo', 'Listas oficiales 2026 de Ánimas, Entrada Triunfal, Calvario y Presentación al Pueblo («plaza de San Andrés, Realejo, Santa María de Gracia»). En OSM la plaza y Santa María de Gracia están a 133 m y el Realejo toca a las dos'],
+];
 const PRENSA = JSON.parse(fs.readFileSync(path.join(ITI, 'cordoba-prensa-2026.json'), 'utf8'));
 const tipoPrensa = (s) => {
   const k = sn(s);
@@ -165,6 +170,11 @@ for (const [id, h] of Object.entries(porId)) {
     origen: p && r ? 'prensa y rejilla' : p ? 'prensa' : 'rejilla',
     ...(r ? { rejilla: r.lugar, cruz: r.cruz, final: r.final, ...(r.hora ? { hora: r.hora } : {}), ...(r.hora_final ? { hora_final: r.hora_final } : {}) } : {}),
   }));
+  // calles de enlace entre dos seguidas de la lista que en el callejero no se tocan (con su fuente; ver ENLACES)
+  for (let i = u.length - 2; i >= 0; i--) for (const [a, b, c, fuente] of ENLACES) {
+    const ka = clave(u[i].lugar), kb = clave(u[i + 1].lugar);
+    if ((igual(ka, a) && igual(kb, b)) || (igual(ka, b) && igual(kb, a))) u.splice(i + 1, 0, { lugar: c, tipo: 'calle', origen: 'enlace', fuente });
+  }
   const iCat = u.findIndex((e) => e.tipo === 'catedral'), iSco = u.findIndex((e) => e.tipo === 'salida_co');
   const corte = iSco >= 0 ? iSco : u.findLastIndex((e) => e.tipo === 'catedral');
   if (iCat < 0) avisos.push(`${sid}: sin paso por la Catedral`);

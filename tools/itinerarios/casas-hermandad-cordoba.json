@@ -310,13 +310,13 @@
  "la-piedad-cordoba": {
   "templo": "Parroquia de San Antonio María Claret",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
-  "nota": "Sale por Sierra de Guadarrama (rejilla oficial y prensa). Para el regreso manda la rejilla oficial (confirmado por Pablo).",
-  "dir": "Calle Sierra Nevada 1, Córdoba",
+  "nota": "Las direcciones «Calle Las Lomas 14» y «Calle Sierra Nevada 1» que se dieron antes no sirven: según el Catastro, Lomas 14 es una vivienda (RC 0243613UG4904S) y Sierra Nevada 1 no existe. Para el regreso manda la rejilla oficial (confirmado por Pablo).",
+  "dir": "Patio Pico del Aneto s/n, Córdoba",
   "punto": [
-   37.882049,
-   -4.822745
+   37.882617,
+   -4.821774
   ],
-  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (el templo hace esquina con Sierra de Guadarrama, primera calle del recorrido oficial). Punto: el cruce de Sierra Nevada y Sierra de Guadarrama en OpenStreetMap; el edificio no está en OSM"
+  "fuente_punto": "Dirección: Diócesis de Córdoba, ficha de la parroquia (https://www.diocesisdecordoba.es/parroquias/san-antonio-maria-claret): «Patio Aneto, s/n 14005». Punto: centro de la «Plaza Patio Pico Aneto» de OpenStreetMap (ways 1199751768 y 1249408938; en el Catastro, «Patio Pico del Aneto»), a 10 m de Sierra de Guadarrama, primera calle del recorrido oficial"
  },
  "jesus-nazareno-cordoba": {
   "templo": "Iglesia Hospital de Jesús Nazareno",
@@ -407,7 +407,11 @@
    "dir": "Carretera de Madrid, Alcolea",
    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/"
   },
-  "falta": "El número 57 no está en OSM ni en Nominatim: la salida y la entrada quedan en la calle Cabo Carmona Chamizo (primera y última calle de la lista)."
+  "punto": [
+   37.932438,
+   -4.671625
+  ],
+  "fuente_punto": "Catastro, «CL CABO CARMONA CH 57 CORDOBA (ALCOLEA)», parcela 2997618UG5929N: centro de la parcela (Sede Electrónica del Catastro, servicio de coordenadas)"
  },
  "santo-sepulcro-cordoba": {
   "templo": "Iglesia (La Compañía)",

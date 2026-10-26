@@ -1,16 +1,115 @@
 {
- "presentacion-al-pueblo-cordoba": {
-  "puntos": {
-   "7": [
-    37.883867,
-    -4.759424
-   ]
+ "la-sentencia-cordoba": {
+  "calles": {
+   "27": {
+    "omitir": true,
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar."
+   }
   },
   "fuentes": [
    {
-    "fecha": "2026-10-26 10:00",
-    "fuente": "Rejilla oficial de la Agrupación 2026 y guía de El Debate 2026: Núñez de Balboa → Hermanos Pinzones → Francisco Pizarro",
-    "cambios": "punto de paso en el centro de la Calle Hermanos Pinzones (OSM way/45127414), para que el trazado la recorra"
+    "fecha": "2026-10-26 15:00",
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar.",
+    "cambios": "omitida: /ram[oó]n y cajal/i"
+   }
+  ]
+ },
+ "la-paz-cordoba": {
+  "calles": {
+   "10": {
+    "omitir": true,
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar."
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 15:00",
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar.",
+    "cambios": "omitida: /ram[oó]n y cajal/i"
+   }
+  ]
+ },
+ "los-dolores-cordoba": {
+  "calles": {
+   "9": {
+    "omitir": true,
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar."
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 15:00",
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar.",
+    "cambios": "omitida: /ram[oó]n y cajal/i"
+   }
+  ]
+ },
+ "animas-cordoba": {
+  "calles": {
+   "8": {
+    "omitir": true,
+    "fuente": "Revisión independiente (2026-10-26): el trazado subía a la Plaza del Potro desde Lineros y volvía (bucle de 64 m) antes de bajar por Enrique Romero de Torres. Se deja de trazar como calle; el cortejo pasa junto a ella."
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 15:00",
+    "fuente": "Revisión independiente (2026-10-26): el trazado subía a la Plaza del Potro desde Lineros y volvía (bucle de 64 m) antes de bajar por Enrique Romero de Torres. Se deja de trazar como calle; el cortejo pasa junto a ella.",
+    "cambios": "omitida: /plaza del potro/i"
+   }
+  ]
+ },
+ "jesus-caido-cordoba": {
+  "salida": {
+   "lat": 37.892579,
+   "lon": -4.774923,
+   "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26)."
+  },
+  "entrada": {
+   "lat": 37.892579,
+   "lon": -4.774923,
+   "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26)."
+  },
+  "calles": {
+   "1": {
+    "punto": [
+     37.89225,
+     -4.77478
+    ],
+    "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26)."
+   },
+   "37": {
+    "punto": [
+     37.89225,
+     -4.77478
+    ],
+    "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26)."
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 15:30",
+    "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26).",
+    "cambios": "salida y entrada en el borde norte de la Cuesta de San Cayetano; punto de paso a mitad de la Cuesta (ida y regreso)"
+   }
+  ]
+ },
+ "la-cena-cordoba": {
+  "salida": {
+   "lat": 37.877063,
+   "lon": -4.798392,
+   "fuente": "Lista oficial 2026: sale por la Avenida de Guerrita, que es la calle del templo según OSM/Nominatim. El punto de la sede (centro de la parroquia, relation 17140024) hacía salir por Pepete y José María Martorell (revisión independiente, 2026-10-26). Punto: Avenida Guerrita frente al templo (way 43113288)."
+  },
+  "entrada": {
+   "lat": 37.877063,
+   "lon": -4.798392,
+   "fuente": "Lista oficial 2026: sale por la Avenida de Guerrita, que es la calle del templo según OSM/Nominatim. El punto de la sede (centro de la parroquia, relation 17140024) hacía salir por Pepete y José María Martorell (revisión independiente, 2026-10-26). Punto: Avenida Guerrita frente al templo (way 43113288)."
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 15:30",
+    "fuente": "Lista oficial 2026: sale por la Avenida de Guerrita, que es la calle del templo según OSM/Nominatim. El punto de la sede (centro de la parroquia, relation 17140024) hacía salir por Pepete y José María Martorell (revisión independiente, 2026-10-26). Punto: Avenida Guerrita frente al templo (way 43113288).",
+    "cambios": "salida y entrada en la Avenida de Guerrita, frente al templo"
    }
   ]
  }

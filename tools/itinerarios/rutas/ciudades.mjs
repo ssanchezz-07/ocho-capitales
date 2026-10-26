@@ -5,6 +5,9 @@
 //             calles sino marcas del recorrido (tribuna, carrera oficial…): se dibujan como hito en la calle siguiente.
 //   regreso   expresión regular del primer elemento del regreso (si la lista no trae «regreso_desde»).
 //   catedral  estación de penitencia por dentro de un templo sin calle: { texto: regex, entra: nodo OSM, sale: nodo OSM, nombre }.
+//   plazasSinIntermedios  true: en las plazas dibujadas como área no se ponen puntos de paso intermedios (si no, se rodean enteras).
+//   despicar  metros: se quitan los picos de ida y vuelta por los mismos nodos de hasta esa longitud (no en la Catedral ni en las
+//             medias vueltas que pide la lista).
 export const CIUDADES = {
   malaga: {
     nombre: 'Málaga',
@@ -17,6 +20,8 @@ export const CIUDADES = {
   sevilla: { nombre: 'Sevilla' },
   cordoba: {
     nombre: 'Córdoba',
+    plazasSinIntermedios: true, // la Corredera, Electromecánicas, Ramón y Cajal… se cruzan; no se rodean
+    despicar: 160, // picos de ida y vuelta de hasta 160 m (p. ej. Plaza de Ramón y Cajal, a 40 m del eje Tesoro–Valladares) (revisión independiente del 2026-10-26)
     // «ENTRADA C.O.» y «SALIDA C.O.» de la rejilla oficial: marcas de la carrera oficial, no calles
     marcas: /^(entrada c o|salida c o|estacion en)\b/, // y «Estación en la Parroquia de Nuestra Señora de Fátima» (La O): parada, no calle
     regreso: /^salida c o\b/,

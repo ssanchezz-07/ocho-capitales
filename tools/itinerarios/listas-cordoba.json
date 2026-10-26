@@ -1516,6 +1516,7 @@
     "Capitulares",
     "San Pablo",
     "plaza de San Andrés",
+    "Realejo",
     "Santa María de Gracia",
     "PLAZA DE JUAN BERNIER",
     "plaza de San Lorenzo",
@@ -1819,6 +1820,13 @@
      "rejilla": "PLAZA DE SAN ANDRÉS",
      "cruz": "21:20",
      "final": "22:00",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Realejo",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Listas oficiales 2026 de Ánimas, Entrada Triunfal, Calvario y Presentación al Pueblo («plaza de San Andrés, Realejo, Santa María de Gracia»). En OSM la plaza y Santa María de Gracia están a 133 m y el Realejo toca a las dos",
      "tramo": "regreso"
     },
     {
@@ -2254,6 +2262,7 @@
     "plaza de Ramón y Cajal",
     "Tesoro",
     "Lope de Hoces",
+    "Tejón y Marín",
     "puerta de Almodóvaar",
     "Doctor Fleming",
     "Campo de los Santos Mártires",
@@ -2383,6 +2392,13 @@
      "rejilla": "LOPE DE HOCES",
      "cruz": "18:20",
      "final": "19:00",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Tejón y Marín",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar",
      "tramo": "ida"
     },
     {
@@ -3900,6 +3916,7 @@
     "San Felipe",
     "Tesoro",
     "Lope de Hoces",
+    "Tejón y Marín",
     "puerta de Almodóvar",
     "avenida Doctor Fleming",
     "SANTA TERESA JORNET",
@@ -4068,6 +4085,13 @@
      "rejilla": "LOPE DE HOCES",
      "cruz": "18:40",
      "final": "19:20",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Tejón y Marín",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar",
      "tramo": "ida"
     },
     {
@@ -4338,6 +4362,7 @@
     "Campo Santos Mártires",
     "Doctor Fleming",
     "Puerta de Almodóvar",
+    "Tejón y Marín",
     "Lope de Hoces",
     "plaza de la Trinidad",
     "plaza Ramón y Cajal",
@@ -4578,6 +4603,13 @@
      "rejilla": "PUERTA DE ALMODOVAR",
      "cruz": "23:10",
      "final": "23:40",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Tejón y Marín",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar",
      "tramo": "regreso"
     },
     {
@@ -6775,6 +6807,7 @@
     "Salida",
     "plaza de la Trinidad",
     "Lope de Hoces",
+    "Tejón y Marín",
     "PUERTA DE ALMODOVAR",
     "paseo de La Victoria",
     "pintor López Obrero",
@@ -6846,6 +6879,13 @@
      "rejilla": "LOPE DE HOCES",
      "cruz": "19:10",
      "final": "20:00",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Tejón y Marín",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar",
      "tramo": "ida"
     },
     {
@@ -7560,6 +7600,7 @@
     "Tesoro",
     "plaza de la Trinidad",
     "Lope de Hoces",
+    "Tejón y Marín",
     "puerta de Almodóvar",
     "Doctor Fleming",
     "Campo de los Santos Mártires",
@@ -7658,6 +7699,13 @@
      "rejilla": "LOPE DE HOCES",
      "cruz": "18:10",
      "final": "18:30",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Tejón y Marín",
+     "tipo": "calle",
+     "origen": "enlace",
+     "fuente": "Lista del Vía Crucis 2026 (El Debate y rejilla oficial: «puerta de Almodóvar, Tejón y Marín, Lope de Hoces») y Pablo Sánchez en el chat (2026-10-26): «discurren por la calle Tejón y Marín». En OSM, Tejón y Marín une Lope de Hoces con la Puerta de Almodóvar",
      "tramo": "ida"
     },
     {
@@ -9335,7 +9383,7 @@
    "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Antonio María Claret",
-    "dir": "Calle Sierra Nevada 1, Córdoba",
+    "dir": "Patio Pico del Aneto s/n, Córdoba",
     "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/"
    },
    "calles": [
@@ -14770,8 +14818,7 @@
    "sede": {
     "templo": "Casa Hermandad",
     "dir": "Calle Cabo Carmona Chamizo 57, Alcolea",
-    "fuente": "Dirección: web de la hermandad, https://doloresalcolea.es/contacto/ . Salida y entrada en la casa de hermandad: Sentir Córdoba, guía del Viernes de Dolores 2026 («Traslado de la Virgen a la Casa de Hermandad para su Estación de Penitencia»): https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026.html ; la web dice que el cortejo va por la Carretera de Madrid «en dirección a la Parroquia» (https://doloresalcolea.es/viernes-santo/) y la rejilla oficial empieza por Cabo Carmona Chamizo",
-    "falta": "El número 57 no está en OSM ni en Nominatim: la salida y la entrada quedan en la calle Cabo Carmona Chamizo (primera y última calle de la lista)."
+    "fuente": "Dirección: web de la hermandad, https://doloresalcolea.es/contacto/ . Salida y entrada en la casa de hermandad: Sentir Córdoba, guía del Viernes de Dolores 2026 («Traslado de la Virgen a la Casa de Hermandad para su Estación de Penitencia»): https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026.html ; la web dice que el cortejo va por la Carretera de Madrid «en dirección a la Parroquia» (https://doloresalcolea.es/viernes-santo/) y la rejilla oficial empieza por Cabo Carmona Chamizo"
    },
    "calles": [
     "Salida",

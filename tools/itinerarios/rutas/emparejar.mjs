@@ -134,6 +134,28 @@ export function motor(c) {
     throw new Error('rodeos sin resolver');
   }
 
+  // pico de ida y vuelta: el trazado llega a una punta y vuelve casi por el mismo sitio (a la misma distancia de la punta, a menos de
+  // 4 m; vale aunque vuelva por la otra calzada o por vértices distintos). Se corta en la base del pico.
+  function despicar(geo, max, proteger) {
+    const quitados = [];
+    for (let vuelta = 0; vuelta < 80; vuelta++) {
+      const G = geo.map((p) => X(...p)), S = [0]; for (let i = 1; i < G.length; i++) S.push(S[i - 1] + d2(G[i], G[i - 1]));
+      const en = (s) => { let i = 1; while (i < S.length - 1 && S[i] < s) i++; const t = S[i] > S[i - 1] ? (s - S[i - 1]) / (S[i] - S[i - 1]) : 0; return [G[i - 1][0] + (G[i][0] - G[i - 1][0]) * t, G[i - 1][1] + (G[i][1] - G[i - 1][1]) * t]; };
+      let hecho = false;
+      for (let j = 1; j < G.length - 1 && !hecho; j++) {
+        const u = [G[j][0] - G[j - 1][0], G[j][1] - G[j - 1][1]], v = [G[j + 1][0] - G[j][0], G[j + 1][1] - G[j][1]], lu = Math.hypot(...u), lv = Math.hypot(...v);
+        if (lu < 0.5 || lv < 0.5 || (u[0] * v[0] + u[1] * v[1]) / lu / lv > -0.85) continue; // no es una media vuelta
+        let L = 0; while (L + 2 <= S[j] && S[j] + L + 2 <= S.at(-1) && d2(en(S[j] - L - 2), en(S[j] + L + 2)) < 4) L += 2;
+        if (L < 6 || L > max || proteger.some((p) => d2(p, G[j]) < 40)) continue;
+        const a = S[j] - L, b = S[j] + L, base = LL(...en(a));
+        const ia = S.findIndex((s) => s > a), ib = S.findIndex((s) => s >= b);
+        geo.splice(ia, ib - ia, base); quitados.push(Math.round(L)); hecho = true;
+      }
+      if (!hecho) break;
+    }
+    return quitados;
+  }
+
   // ---- trazado completo de una hermandad ----
   async function trazar(id, { corr = C.leerCorrecciones()[id] || {} } = {}) {
     const t0 = performance.now();
@@ -189,6 +211,7 @@ export function motor(c) {
       if (i === 0 && sedeS && rSede.includes('salida')) { const sr = [segs[0][0], LL(...ent[0])]; sr.recto = true; segs[0] = sr; segs.push([]); pon(ent[0], f.i); }
       else if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
       if (forz[f.i] && !(i === 0 && sedeS)) partir();
+      // (opción de la capital «plazasSinIntermedios»: en una plaza dibujada como área no se ponen, o el trazado da la vuelta a todo el perímetro)
       // «cruzar» (corrección con fuente): plaza dibujada como área peatonal, que GraphHopper no enruta por dentro: se cruza en línea recta
       const cruza = !!corr.cruzar?.[f.i]; if (cruza) { segs.push([]); (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1})`); }
       // «cruzar_hasta» de la lista ({ índice: [lat, lon] | [[lat, lon], …] }): al entrar en ese elemento, en recta por esos puntos (una plaza que la red
@@ -197,7 +220,7 @@ export function motor(c) {
       // en la primera y la última calle no se ponen puntos intermedios cerca de la sede: el nodo de la calle más cercano a la puerta
       // puede quedar más allá de ella y el trazado pasaría la puerta para volver (pico)
       const cercaSede = (xy) => (i === 0 && sedeS && d2(xy, X(...sedeS.punto)) < 100) || (i === R.length - 1 && sedeE && d2(xy, X(...sedeE.punto)) < 100);
-      if (!cruza && f.tipo === 'calle' && ent[1] != null && sal[1] != null) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela
+      if (!cruza && f.tipo === 'calle' && ent[1] != null && sal[1] != null && !(C.cfg.plazasSinIntermedios && o.vias?.every((v) => C.VIAS[v].area))) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela
         const cam = caminoDentro(o, ent[1], sal[1]);
         if (cam) { let acc = 0, ult = 0; for (let k = 1; k < cam.length; k++) { acc += d2(NODOS[cam[k]].xy, NODOS[cam[k - 1]].xy); if (acc - ult > 120 && k < cam.length - 1 && !cercaSede(NODOS[cam[k]].xy)) { pon(NODOS[cam[k]].xy); ult = acc; } } }
       }
@@ -213,6 +236,14 @@ export function motor(c) {
     const geo = [];
     for (const s of segs) { if (s.recto) { for (const p of s) if (!geo.length || d2(X(...geo.at(-1)), X(...p)) >= 1) geo.push(p); continue; } if (s.length < 2) continue; const g = await rutaTramo(s, informe); if (geo.length && d2(X(...geo.at(-1)), X(...g[0])) < 1) g.shift(); geo.push(...g); }
     informe.ms_graphhopper = Math.round(performance.now() - tGH);
+    // opción de la capital «despicar» (metros): quita los picos de ida y vuelta por los mismos nodos de hasta esa longitud, salvo en
+    // las puertas de la Catedral y en las medias vueltas que pide la lista (A · plaza · A)
+    if (C.cfg.despicar) {
+      const proteger = [];
+      for (const f of R) if (f.tipo === 'catedral') proteger.push(f.opciones[0].entra, f.opciones[0].sale);
+      for (let i = 1; i < R.length - 1; i++) if (clave(R[i - 1].lugar) === clave(R[i + 1].lugar) && hitoPunto.get(R[i].i)) proteger.push(X(...hitoPunto.get(R[i].i)));
+      const q = despicar(geo, C.cfg.despicar, proteger); if (q.length) informe.picos_quitados_m = q;
+    }
     // GraphHopper engancha la sede a la calle más cercana: el trazado empieza y acaba en la puerta misma (unos metros de la puerta a la calle)
     if (geo.length && sedeS) { const dS = d2(X(...geo[0]), X(...sedeS.punto)); if (dS > 1.5 && dS < 60) geo.unshift(sedeS.punto); }
     if (geo.length && sedeE) { const dE = d2(X(...geo.at(-1)), X(...sedeE.punto)); if (dE > 1.5 && dE < 60) geo.push(sedeE.punto); }
