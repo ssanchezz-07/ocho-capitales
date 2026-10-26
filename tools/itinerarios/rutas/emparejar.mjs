@@ -277,7 +277,7 @@ export function motor(c) {
       if (quitados) informe.bucles_quitados_m = quitados;
     }
     // hitos: un elemento por cada elemento de la lista; las marcas sin geometría van al punto de la siguiente calle trazada
-    const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral', tramo: (C.cfg.regresoEnLaPuerta && f.tramos?.[k]) || f.tramo }); // opción «regresoEnLaPuerta»: el regreso empieza en la marca de salida de la Catedral, en su puerta for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
+    const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral', tramo: (C.cfg.regresoEnLaPuerta && f.tramos?.[k]) || f.tramo }); /* opción «regresoEnLaPuerta»: el regreso empieza en la marca de salida de la Catedral, en su puerta */ for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
     const hitos = L.calles.map((lugar, i) => { const f = porI.get(i); return { i, lugar, tipo: f?.tipo || 'hito', tramo: f?.tramo || 'ida', punto: hitoPunto.get(i) || null }; });
     for (let k = hitos.length - 1, sig = null; k >= 0; k--) { if (hitos[k].punto) sig = hitos[k].punto; else if (['hito', 'catedral'].includes(hitos[k].tipo)) hitos[k].punto = sig; }
     // posición de cada hito en la geometría: alineamiento en orden que minimiza la distancia total (programación dinámica),

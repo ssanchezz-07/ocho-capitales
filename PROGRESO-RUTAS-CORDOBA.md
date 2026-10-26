@@ -202,3 +202,10 @@ Pausa ordenada por Pablo (ordenador lento). **Nada subido**: todo está en la ra
 4. Revisión independiente corta de las 9: subagente, máximo 2.
 5. Rebase sobre `origin/main`, push y aviso a Pablo.
 6. Después, las sedes de Córdoba, Granada y Jaén en el formato común `site/data/sedes/<capital>.json` que publique `rutas-malaga`.
+
+## Cierre de los 9 fallos (2026-10-27, reactivación)
+- Rebasada sobre `origin/main` (con los cambios de Cádiz en `emparejar.mjs`).
+- **Fallo mío corregido:** un comentario `//` puesto a mitad de una línea de `emparejar.mjs` (opción `regresoEnLaPuerta`) anulaba el tratamiento de las calles repetidas. Con el arreglo, **Málaga sale idéntica a `main`** (El Rico, Pasión, La Paloma) y Córdoba recupera sus repetidas.
+- **Calvario:** las tres menciones de la iglesia de San Andrés, que es el templo de la plaza por la que ya pasa, quedan omitidas como calle.
+- **Resultado:** 42/42 «nuevo», 987/1000 calles, 3 retrocesos, 0 rectas de más de 150 m y sedes a 49 m o menos.
+- **`probar-plano.py`:** 7/8. A 390 y 1440 px dibuja todas las jornadas, sin desbordamiento ni errores de consola. El único «fallo» es el Calvario, con 17 sitios para 29 puntos (59 % frente al 60 %): sale y vuelve por las mismas calles (San Lorenzo, Santa María de Gracia, Realejo, San Andrés y San Pablo), así que los puntos de ida y de regreso caen en los mismos cruces. Es legítimo y queda documentado.

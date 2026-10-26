@@ -350,5 +350,28 @@
     "cambios": "Fuerteventura limitada al tramo útil"
    }
   ]
+ },
+ "el-calvario-cordoba": {
+  "calles": {
+   "4": {
+    "omitir": true,
+    "fuente": "La iglesia de San Andrés es el templo de la plaza de San Andrés, por la que ya pasa la lista; no es una calle (la lista oficial y la prensa la nombran tres veces). Sin esto los puntos se amontonaban en la plaza."
+   },
+   "26": {
+    "omitir": true,
+    "fuente": "La iglesia de San Andrés es el templo de la plaza de San Andrés, por la que ya pasa la lista; no es una calle (la lista oficial y la prensa la nombran tres veces). Sin esto los puntos se amontonaban en la plaza."
+   },
+   "27": {
+    "omitir": true,
+    "fuente": "La iglesia de San Andrés es el templo de la plaza de San Andrés, por la que ya pasa la lista; no es una calle (la lista oficial y la prensa la nombran tres veces). Sin esto los puntos se amontonaban en la plaza."
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Comprobación del plano (probar-plano.py): puntos amontonados en la plaza de San Andrés",
+    "cambios": "menciones de la iglesia de San Andrés omitidas como calle"
+   }
+  ]
  }
 }

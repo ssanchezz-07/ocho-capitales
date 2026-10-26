@@ -59,7 +59,7 @@
  },
  "lagrimas-cordoba": {
   "publicado": {
-   "largo_m": 3181,
+   "largo_m": 2911,
    "comprobables": 14,
    "sin_dato": [
     "Pintora María Blanchard"
@@ -72,10 +72,10 @@
    "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
    "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
    "rectas_150": [],
-   "tramo_max_m": 162,
+   "tramo_max_m": 184,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 92
+   "pct_en_calles_lista": 91
   },
   "nuevo": {
    "largo_m": 2911,
@@ -105,7 +105,7 @@
  },
  "entrada-triunfal-cordoba": {
   "publicado": {
-   "largo_m": 4169,
+   "largo_m": 4342,
    "comprobables": 23,
    "sin_dato": [
     "ESQ. SAN PEDRO - LINEROS"
@@ -235,7 +235,7 @@
  },
  "el-rescatado-cordoba": {
   "publicado": {
-   "largo_m": 5308,
+   "largo_m": 5243,
    "comprobables": 31,
    "sin_dato": [
     "PLAZA DE JUAN BERNIER"
@@ -251,13 +251,8 @@
    "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
    "rectas_150": [],
    "tramo_max_m": 151,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     37.890797,
-     -4.76584
-    ]
-   ],
+   "retrocesos": 0,
+   "donde_retrocesos": [],
    "pct_en_calles_lista": 92
   },
   "nuevo": {
@@ -284,7 +279,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
@@ -892,13 +887,13 @@
  },
  "la-santa-faz-cordoba": {
   "publicado": {
-   "largo_m": 3294,
+   "largo_m": 3070,
    "comprobables": 24,
    "sin_dato": [
     "Campo Santos Mártires"
    ],
    "recorridas": 23,
-   "en_orden": 22,
+   "en_orden": 21,
    "no_recorridas": [
     "paseo de La Victoria (0 m)"
    ],
@@ -910,7 +905,7 @@
    "tramo_max_m": 142,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 78
+   "pct_en_calles_lista": 84
   },
   "nuevo": {
    "largo_m": 3070,
@@ -1142,7 +1137,7 @@
  },
  "la-misericordia-cordoba": {
   "publicado": {
-   "largo_m": 3426,
+   "largo_m": 2779,
    "comprobables": 17,
    "sin_dato": [
     "Arco Bajo de la Corredera",
@@ -1160,7 +1155,7 @@
    "tramo_max_m": 151,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 90
+   "pct_en_calles_lista": 85
   },
   "nuevo": {
    "largo_m": 2779,
@@ -1238,7 +1233,7 @@
  },
  "la-piedad-cordoba": {
   "publicado": {
-   "largo_m": 12264,
+   "largo_m": 10879,
    "comprobables": 44,
    "sin_dato": [
     "Jardines de La Victoria",
@@ -1264,7 +1259,7 @@
      -4.790594
     ]
    ],
-   "pct_en_calles_lista": 71
+   "pct_en_calles_lista": 82
   },
   "nuevo": {
    "largo_m": 10879,
@@ -1388,11 +1383,11 @@
  },
  "jesus-caido-cordoba": {
   "publicado": {
-   "largo_m": 4848,
+   "largo_m": 4828,
    "comprobables": 31,
    "sin_dato": [],
    "recorridas": 31,
-   "en_orden": 29,
+   "en_orden": 28,
    "no_recorridas": [],
    "salida_m": 23,
    "entrada_m": 23,
@@ -1400,14 +1395,9 @@
    "sede_entrada": "templo en OSM: Iglesia de San Cayetano",
    "rectas_150": [],
    "tramo_max_m": 151,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     37.888726,
-     -4.774176
-    ]
-   ],
-   "pct_en_calles_lista": 93
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
   },
   "nuevo": {
    "largo_m": 4828,
@@ -1429,13 +1419,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  },
  "la-cena-cordoba": {
   "publicado": {
-   "largo_m": 6053,
+   "largo_m": 7084,
    "comprobables": 22,
    "sin_dato": [
     "JARDINES DE VALLELLANO",
@@ -1450,10 +1440,15 @@
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 213,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 96
+   "tramo_max_m": 345,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.879305,
+     -4.792779
+    ]
+   ],
+   "pct_en_calles_lista": 84
   },
   "nuevo": {
    "largo_m": 7083,
@@ -1538,7 +1533,7 @@
  },
  "cristo-de-gracia-el-esparraguero-cordoba": {
   "publicado": {
-   "largo_m": 5070,
+   "largo_m": 5005,
    "comprobables": 27,
    "sin_dato": [
     "plaza Santísimo Cristo de Gracia"
@@ -1556,7 +1551,7 @@
    "tramo_max_m": 183,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 92
+   "pct_en_calles_lista": 94
   },
   "nuevo": {
    "largo_m": 5005,
@@ -1822,7 +1817,7 @@
  },
  "la-conversion-cordoba": {
   "publicado": {
-   "largo_m": 8533,
+   "largo_m": 9589,
    "comprobables": 31,
    "sin_dato": [
     "Quesada y Chacón",
@@ -1844,7 +1839,7 @@
    "tramo_max_m": 300,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 71
+   "pct_en_calles_lista": 68
   },
   "nuevo": {
    "largo_m": 9589,
@@ -1880,13 +1875,13 @@
  },
  "los-dolores-cordoba": {
   "publicado": {
-   "largo_m": 4614,
+   "largo_m": 4613,
    "comprobables": 27,
    "sin_dato": [
     "plaza de las Tenddillas"
    ],
    "recorridas": 27,
-   "en_orden": 26,
+   "en_orden": 27,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -1896,7 +1891,7 @@
    "tramo_max_m": 132,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 79
+   "pct_en_calles_lista": 80
   },
   "nuevo": {
    "largo_m": 4613,
@@ -1920,7 +1915,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 26→27"
+    "empate"
    ]
   }
  },
@@ -1974,7 +1969,7 @@
  },
  "el-resucitado-cordoba": {
   "publicado": {
-   "largo_m": 3851,
+   "largo_m": 3825,
    "comprobables": 25,
    "sin_dato": [
     "Plaza Ruiz de Alda",
@@ -1991,7 +1986,7 @@
    "tramo_max_m": 151,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 84
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
    "largo_m": 3825,
