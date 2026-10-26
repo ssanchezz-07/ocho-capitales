@@ -146,7 +146,7 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['portada', 'portada.css']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -571,6 +571,21 @@ function leadHoy() {
     : `<p class="oc-hero2-count" data-today-lead>Faltan <strong>${pick.days}</strong> ${pick.days === 1 ? 'día' : 'días'} para el Domingo de Ramos <span>(${fmtDay(ramos, { day: 'numeric', month: 'long' })})</span></p>`;
 }
 
+// ---------- Temporada (site/data/temporada.json) ----------
+// «auto»: los recorridos se ven de Viernes de Dolores a Domingo de Resurrección (o entre las fechas que fije el archivo para ese año);
+// el resto del año la web está fuera de temporada: el plano enseña las sedes de las hermandades y solo las extraordinarias vigentes.
+// «fuera» o «semana-santa» lo fuerzan a mano. Los recorridos se conservan en los datos aunque no se enseñen.
+const TEMP_FILE = path.join(DIR, 'data', 'temporada.json');
+const TEMP = fs.existsSync(TEMP_FILE) ? JSON.parse(fs.readFileSync(TEMP_FILE, 'utf8')) : { modo: 'auto' };
+function ventanaSS(y) { const f = (TEMP.semana_santa || {})[y], e = easter(y); return f ? [f.desde, f.hasta] : [isoDay(e - 9 * 864e5), isoDay(e)]; }
+function temporada() {
+  const N = madridNow(), hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio = hoy > ventanaSS(N.y)[1] ? N.y + 1 : N.y, [desde, hasta] = ventanaSS(anio);
+  const modo = /^(fuera|semana-santa)$/.test(TEMP.modo) ? TEMP.modo : 'auto';
+  const en = modo === 'semana-santa' || (modo === 'auto' && hoy >= desde && hoy <= hasta);
+  return { fuera: !en, modo, anio, desde, hasta, ramos: isoDay(easter(anio) - 7 * 864e5) };
+}
+const TEMPORADA = temporada();
+
 // ---------- Colgaduras: las ocho capitales colgadas sobre el mapa ----------
 // En el orden del portal, como la maqueta aprobada; cada hilo baja a su capital.
 // Cada hilo baja recto desde su colgadura, corre en horizontal por su «carril» y baja a su capital. Se elige el reparto de carriles
@@ -624,6 +639,7 @@ function colgaduras() {
     return [c.slug, { n: c.nombre, d: u('data/calle/' + c.slug + '.json'), cap: capHref(c), calle: u('en-la-calle/' + c.slug + '/'), anio: JSON.parse(fs.readFileSync(fR, 'utf8')).anio || '' }];
   }));
   datos.plano = u('assets/plano.js') + '?v=' + HUELLA.plano;
+  datos.temporada = { modo: TEMPORADA.modo, desde: TEMPORADA.desde, hasta: TEMPORADA.hasta, anio: TEMPORADA.anio, ramos: TEMPORADA.ramos, proxima: u('proxima-semana-santa/') };
   // Ríos y sierras de Natural Earth (tools/generar-mapa-detalle.mjs), en la misma proyección que las provincias
   const fDet = path.join(DIR, 'data', 'mapa-detalle.json');
   if (fs.existsSync(fDet)) { const det = JSON.parse(fs.readFileSync(fDet, 'utf8')); datos.detalle = { rios: det.rios, sierras: det.sierras }; }
@@ -636,10 +652,12 @@ function colgaduras() {
     <div class="oc-colg-ciudad" data-colg-ciudad hidden>
       <div class="oc-colg-cab"><button type="button" class="oc-colg-atras" data-colg-atras>${icon('back')}<span>Andalucía</span></button><h2 class="oc-colg-cap" data-colg-nombre tabindex="-1"></h2><p class="oc-colg-res" data-colg-res></p></div>
       <div class="oc-colg-reloj"><div class="oc-colg-jornada" role="group" aria-label="Jornada"><button type="button" class="oc-colg-paso" data-colg-jor="-1" aria-label="Jornada anterior">${icon('back')}</button><span data-colg-jornada aria-live="polite"></span><button type="button" class="oc-colg-paso" data-colg-jor="1" aria-label="Jornada siguiente">${icon('arrow')}</button></div><div class="oc-colg-hora-w"><output class="oc-colg-hora" data-colg-hora>--:--</output><input class="oc-colg-tiempo" type="range" min="0" max="1" step="1" value="0" data-colg-tiempo aria-label="Hora de la jornada"></div></div>
-      <div class="oc-colg-acc"><a class="oc-btn" data-colg-entrar href="#">Entrar en la calle${icon('arrow')}</a><a class="oc-btn is-quiet" data-colg-capital href="#">Su Semana Santa</a></div>
+      <div class="oc-colg-acc" data-colg-acc-ss${TEMPORADA.fuera ? ' hidden' : ''}><a class="oc-btn" data-colg-entrar href="#">Entrar en la calle${icon('arrow')}</a><a class="oc-btn is-quiet" data-colg-capital href="#">Su Semana Santa</a></div>
+      <div class="oc-colg-acc" data-colg-acc-fuera${TEMPORADA.fuera ? '' : ' hidden'}><a class="oc-btn" data-colg-proxima href="${u('proxima-semana-santa/')}">Próxima Semana Santa ${TEMPORADA.anio}${icon('arrow')}</a><button type="button" class="oc-btn is-quiet" data-colg-extra aria-pressed="false">Extraordinarias<span class="oc-colg-extra-n" data-colg-extra-n></span></button></div>
       <p class="oc-colg-nota" data-colg-nota></p>
     </div>
   </div>
+  <div class="oc-sheet oc-sede-hoja" hidden data-sede-hoja><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-sede-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-sede-t" data-sede-titulo></p><button class="oc-iconbtn" type="button" data-sede-cerrar aria-label="Cerrar">${icon('x')}</button></div><div class="oc-sede-cuerpo" data-sede-cuerpo></div></div></div>
   <script type="application/json" id="oc-mapa">${JSON.stringify(datos).replace(/</g, '\\u003c')}</script>
   <noscript><style>.oc-colg-map,.oc-colg-pie{display:none}</style></noscript>
 </div>`;
@@ -707,7 +725,24 @@ function pageHome() {
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+}
+// Próxima Semana Santa (botón de la portada fuera de temporada): cuenta atrás, fechas de cada jornada y qué tendrá cada capital.
+// Los recorridos del año se publican aquí y en el plano en cuanto cada agrupación o consejo dé a conocer sus itinerarios oficiales.
+function pageProxima() {
+  const A = TEMPORADA.anio, e = easter(A), f = (off, o = { weekday: 'long', day: 'numeric', month: 'long' }) => fmtDay(e + off * 864e5, o);
+  const jornadas = SLOTS.map((s) => `<li><span>${esc(s.label)}</span><time datetime="${isoDay(e + s.off * 864e5)}">${esc(slotDate(s, A))}</time></li>`).join('');
+  const caps = D.capitales.map((c) => {
+    const n = hermsOf(c.slug).length, plano = tieneSedes(c.slug) && fs.existsSync(path.join(DIR, 'data', 'planos', c.slug + '.json'));
+    return `<li class="oc-prox-cap" id="${c.slug}" style="--c:${c.color}"><h3><i aria-hidden="true"></i>${esc(c.nombre)}</h3><p>${plural(n, 'hermandad', 'hermandades')} en la web. Recorridos y horarios de ${A}: en cuanto se publiquen los itinerarios oficiales.</p><p class="oc-prox-links">${plano ? `<a class="oc-link" href="${u('')}#${c.slug}">Sus hermandades en el plano${icon('arrow')}</a>` : ''}<a class="oc-link" href="${capHref(c)}">Su Semana Santa${icon('arrow')}</a></p></li>`;
+  }).join('');
+  const body = `<div class="oc-proxima" data-proxima>
+<header class="oc-pagehead"><p class="oc-kicker">Próxima Semana Santa</p><h1 class="oc-title">Semana Santa ${A}</h1><p class="oc-lead">Del Viernes de Dolores, ${esc(f(-9, { day: 'numeric', month: 'long' }))}, al Domingo de Resurrección, ${esc(f(0, { day: 'numeric', month: 'long' }))} de ${A}.</p>${leadHoy()}</header>
+<section aria-labelledby="prox-jornadas"><h2 class="oc-h2" id="prox-jornadas">Las jornadas</h2><ol class="oc-prox-jornadas">${jornadas}</ol></section>
+<section aria-labelledby="prox-caps"><h2 class="oc-h2" id="prox-caps">Qué tendrá cada capital</h2><ul class="oc-prox-caps">${caps}</ul></section>
+<p class="oc-note">Mientras tanto, las salidas extraordinarias anunciadas están en el plano de cada ciudad (portada) y en el <a href="${u('calendario/')}">calendario cofrade</a>.</p>
+</div>`;
+  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
 }
 // Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
 function pageHoy() {
@@ -1200,7 +1235,8 @@ const _calleDias = {};
 function calleDias(slug) {
   if (_calleDias[slug]) return _calleDias[slug];
   const f = path.join(DIR, 'data', 'recorridos', slug + '.json'), s = new Set();
-  if (fs.existsSync(f)) for (const k of Object.keys(JSON.parse(fs.readFileSync(f, 'utf8')).hermandades)) if (HERM[k]) s.add(HERM[k].dia);
+  // fuera de temporada los recorridos de la última Semana Santa no se enlazan
+  if (fs.existsSync(f) && !TEMPORADA.fuera) for (const k of Object.keys(JSON.parse(fs.readFileSync(f, 'utf8')).hermandades)) if (HERM[k]) s.add(HERM[k].dia);
   return (_calleDias[slug] = s);
 }
 // Algunos PDF escriben el nombre de la calle en vertical y llega troceado («P e ri o d is ta R a m ó n»):
@@ -1217,6 +1253,51 @@ function limpiaLugar(s) {
 const COLHAB_FILE = path.join(DIR, 'data', 'colores-habito.json');
 const COLHAB = fs.existsSync(COLHAB_FILE) ? JSON.parse(fs.readFileSync(COLHAB_FILE, 'utf8')) : {};
 const habito = (slug) => (COLHAB[slug] ? { col: COLHAB[slug].c, coln: COLHAB[slug].n, colf: COLHAB[slug].f } : {});
+// Sedes para el plano fuera de temporada: templo y casa hermandad de cada hermandad, cada punto con su fuente.
+// Si existe site/data/sedes/<ciudad>.json (lo cargan las sesiones de rutas), manda. Si no, de forma provisional: el punto de salida
+// del itinerario oficial (casa hermandad si así lo dice) y el templo de su ficha si OpenStreetMap tiene uno con ese mismo nombre.
+// Sin coordenada con fuente no hay símbolo.
+let _agendaHerm = null;
+function agendaDeHerm(slug) {
+  if (!_agendaHerm) {
+    const N = madridNow(), hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)), lim = isoDay(Date.UTC(N.y, N.m - 1, N.d) + 120 * 864e5);
+    _agendaHerm = {};
+    for (const e of agenda()) { if (e.tipo === 'liturgico' || e.fecha < hoy || e.fecha > lim) continue; const s = hermDeEvento(e); if (s) (_agendaHerm[s] = _agendaHerm[s] || []).push([e.fecha, e.hora || '', recorta(e.titulo, 90), TIPOS[e.tipo] || '']); }
+  }
+  return (_agendaHerm[slug] || []).slice(0, 3);
+}
+const SEDES_REVISADAS = new Set(['malaga', 'cordoba', 'cadiz']);
+const tieneSedes = (slug) => fs.existsSync(path.join(DIR, 'data', 'sedes', slug + '.json')) || (SEDES_REVISADAS.has(slug) && fs.existsSync(path.join(DIR, 'data', 'recorridos', slug + '.json')));
+const normSede = (s) => norm(String(s || '').replace(/\([^)]*\)/g, ' ')).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+function sedesCiudad(c, P, R, xy) {
+  const fS = path.join(DIR, 'data', 'sedes', c.slug + '.json');
+  const pto = (o) => (o && o.lat != null && o.lon != null ? [...xy(o.lat, o.lon), o.nombre || o.direccion || o.dir || '', o.fuente || o.fuente_url || ''] : null);
+  const out = [];
+  const meter = (slug, tp, cs) => {
+    const h = HERM[slug]; if (!h || h.ciudad !== c.slug || (!tp && !cs)) return;
+    // si la casa está en el mismo edificio que el templo (a menos de 25 m), un solo símbolo
+    if (tp && cs && Math.hypot(tp[0] - cs[0], tp[1] - cs[1]) < 25) cs = null;
+    const im = h.imagen;
+    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.find((w) => w >= 480) || im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug) });
+  };
+  if (fs.existsSync(fS)) {
+    const S = JSON.parse(fs.readFileSync(fS, 'utf8')), lista = Array.isArray(S) ? S : Array.isArray(S.hermandades) ? S.hermandades : Object.entries(S.hermandades || S).filter(([k]) => !k.startsWith('_')).map(([k, v]) => ({ slug: k, ...v }));
+    for (const e of lista) meter(e.slug || e.hermandad, pto(e.templo), pto(e.casa || e.casa_hermandad));
+    return out;
+  }
+  // lo provisional, solo en las capitales con los recorridos ya revisados; las demás esperan a su archivo de sedes
+  if (!SEDES_REVISADAS.has(c.slug)) return out;
+  const templos = new Map(); for (const t of P.templos || []) { const k = normSede(t.n); templos.set(k, templos.has(k) ? null : t); }
+  for (const [slug, e] of Object.entries(R.hermandades)) {
+    const h = HERM[slug]; if (!h) continue;
+    const sal = Object.values(e.tramos).flat().find((p) => p.rol === 'salida' && p.lat != null);
+    let tp = null, cs = null;
+    if (sal) { const q = [...xy(sal.lat, sal.lon), limpiaLugar(sal.lugar), e.fuente || '']; if (/casa\s+(de\s+)?hermandad/i.test(sal.lugar)) cs = q; else tp = q; }
+    if (!tp) { const t = templos.get(normSede(h.sede)); if (t) tp = [t.x, t.y, t.n, 'OpenStreetMap']; }
+    meter(slug, tp, cs);
+  }
+  return out;
+}
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
   if (!fs.existsSync(fP) || !fs.existsSync(fR)) return null;
@@ -1302,7 +1383,7 @@ function datosCalle(c) {
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {
@@ -1318,12 +1399,21 @@ function pageCalle(c) {
   const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
   const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
   fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
-  const dias = [...new Set(datos.hermandades.filter((h) => !h.x).map((h) => h.d))].sort((a, b) => dayIdx(a) - dayIdx(b));
+  // Fuera de temporada (site/data/temporada.json) no se enseñan los recorridos de la última Semana Santa: solo las extraordinarias vigentes
+  const FUERA = TEMPORADA.fuera, hoyC = isoDay(Date.UTC(N.y, N.m - 1, N.d));
+  const dias = FUERA ? [] : [...new Set(datos.hermandades.filter((h) => !h.x).map((h) => h.d))].sort((a, b) => dayIdx(a) - dayIdx(b));
   // salidas extraordinarias y magnas: su propio grupo de pestañas, por fecha (calle.js apaga las ya celebradas)
-  const extras = datos.hermandades.filter((h) => h.x).sort((a, b) => a.x.fecha.localeCompare(b.x.fecha));
+  const extras = datos.hermandades.filter((h) => h.x && (!FUERA || h.x.fecha >= hoyC)).sort((a, b) => a.x.fecha.localeCompare(b.x.fecha));
+  if (FUERA && !extras.length) {
+    const vacio = `<header class="oc-calle-head"><h1 class="oc-title">En la calle · ${esc(c.nombre)}</h1></header>
+<p class="oc-lead">Fuera de Semana Santa no se enseñan los recorridos de ${datos.anio}, y ahora mismo no hay ninguna salida extraordinaria anunciada en ${esc(c.nombre)}.</p>
+<p class="oc-calle-fuera">${tieneSedes(c.slug) ? `<a class="oc-btn" href="${u('')}#${c.slug}">Sus hermandades en el plano${icon('arrow')}</a> ` : ''}<a class="oc-btn is-quiet" href="${u('proxima-semana-santa/')}#${c.slug}">Semana Santa ${TEMPORADA.anio}</a></p>`;
+    write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: ${c.nombre}`, desc: `Salidas extraordinarias y recorridos de las cofradías de ${c.nombre} en el plano.`, body: vacio, path: `en-la-calle/${c.slug}/`, active: 'capitales/', crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
+    return;
+  }
   for (const h of extras) fechas[h.d] = h.x.fecha;
   const tabExtra = (h) => `<button type="button" role="tab" aria-selected="false" class="is-extra" data-dia="${esc(h.d)}" data-fecha="${h.x.fecha}" title="${esc(h.x.titulo)}">${esc(h.d)}</button>`;
-  const body = `<header class="oc-calle-head"><h1 class="oc-title">En la calle · ${esc(c.nombre)}</h1><p class="oc-lead">Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.</p></header>
+  const body = `<header class="oc-calle-head"><h1 class="oc-title">En la calle · ${esc(c.nombre)}</h1><p class="oc-lead">${FUERA ? `Las salidas extraordinarias anunciadas en ${esc(c.nombre)}, sobre su plano: dónde va la cofradía a cada hora. Fuera de Semana Santa no se enseñan los recorridos de ${datos.anio}.` : `Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.`}</p></header>
 <section class="oc-calle" data-calle="${u('data/calle/' + c.slug + '.json')}" data-fechas='${esc(JSON.stringify(fechas))}' style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
   <div class="oc-calle-dias" role="tablist" aria-label="Jornada">${dias.map((d, i) => `<button type="button" role="tab" aria-selected="${i ? 'false' : 'true'}" data-dia="${esc(d)}">${esc(d)}</button>`).join('')}${extras.length ? `<span class="oc-calle-dias-sep" aria-hidden="true">Extraordinarias y magnas</span>${extras.map(tabExtra).join('')}` : ''}</div>
   <div class="oc-calle-mapa" data-mapa><svg class="oc-calle-svg" aria-label="Plano de ${esc(c.nombre)} con los recorridos" role="img"></svg>
@@ -1348,7 +1438,7 @@ function pageCalle(c) {
   </section>
   <div class="oc-sheet oc-calle-ficha" hidden data-ficha><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="calle-ficha-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="calle-ficha-t" data-ficha-titulo></p><button class="oc-iconbtn" type="button" data-ficha-cerrar aria-label="Cerrar">${icon('x')}</button></div><div data-ficha-cuerpo></div></div></div>
 </section>
-<p class="oc-note">Recorridos del último itinerario oficial publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
+<p class="oc-note"${FUERA ? ' hidden' : ''}>Recorridos del último itinerario oficial publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
 <noscript><p class="oc-note">El mapa necesita JavaScript. Consulta los horarios en la página de <a href="${capHref(c)}">la Semana Santa de ${esc(c.nombre)}</a>.</p></noscript>`;
   write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
 }
@@ -1421,7 +1511,7 @@ function datosCunao() {
 }
 
 fs.rmSync(DIST, { recursive: true, force: true });
-pageHome(); pageHoy(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
+pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
 // Direcciones de marchas ya publicadas que dejaron de existir (fichas unidas o registros que no eran marchas): a la misma obra o al listado
 for (const [a, b] of Object.entries(MU.redirecciones || {})) { if (MARCHA_SLUGS.has(a)) continue; const d = u(b ? 'marcha/' + b + '/' : 'marchas/'); write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
 // /hermandad/, /banda/, /marcha/ e /imaginero/ sin nombre (URL recortada a mano): a su listado, no a un 404

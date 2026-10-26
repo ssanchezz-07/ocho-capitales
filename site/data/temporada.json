@@ -1,0 +1,7 @@
+{
+  "_nota": "Temporada de la web. «modo»: «auto» (por fechas), «fuera» (fuerza fuera de temporada: plano con las sedes y solo las extraordinarias vigentes) o «semana-santa» (fuerza los recorridos). En «auto», los recorridos se ven entre «desde» y «hasta» del año que toque; si un año no está aquí, va de Viernes de Dolores a Domingo de Resurrección.",
+  "modo": "auto",
+  "semana_santa": {
+    "2027": { "desde": "2027-03-19", "hasta": "2027-03-28", "nota": "Viernes de Dolores, 19 de marzo; Domingo de Resurrección, 28 de marzo de 2027" }
+  }
+}

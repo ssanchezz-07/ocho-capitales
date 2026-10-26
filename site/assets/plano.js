@@ -112,7 +112,70 @@
       });
       api.ponerHora(T);
     };
+    // ---- Sedes (fuera de temporada): un símbolo por hermandad en su templo (una espadaña) y otro en su casa hermandad (una fachada),
+    // en el color de su hábito y con el hilo de oro de las catedrales de la portada. Si se pisan en pantalla, se juntan con su número.
+    var gHilo = el('g', { 'class': 'oc-pl-hilos' }, mundo), gS = el('g', { 'class': 'oc-pl-sedes' }, capa), simbolos = [], alTocar = null, sel = '';
+    var ESPADANA = 'M-10 0V-17Q-10 -25 0 -29Q10 -25 10 -17V0Z', CAMPANA = 'M-3.6 -11V-16.5a3.6 3.6 0 0 1 7.2 0V-11Z', CRUZ = 'M0 -29V-36M-3 -33.2H3';
+    var FACHADA = 'M-9 0V-14L0 -21L9 -14V0Z', PUERTA = 'M-2.6 0V-5.6a2.6 2.6 0 0 1 5.2 0V0', BALCON = 'M-6 -10.5H6';
+    api.ponerSedes = function (lista, fn) {
+      gS.textContent = ''; gHilo.textContent = ''; simbolos = []; alTocar = fn; sel = '';
+      (lista || []).forEach(function (h) {
+        [['tp', h.tp], ['cs', h.cs]].forEach(function (k) {
+          if (!k[1]) return;
+          var templo = k[0] === 'tp', c = h.col || o.color || '#6b2fa3';
+          var etq = h.n + (templo ? ', templo: ' : ', casa hermandad: ') + (k[1][2] || '');
+          var g = el('g', { 'class': 'oc-pl-sede' + (templo ? '' : ' is-casa'), role: 'button', tabindex: '0', 'aria-label': etq, style: '--i:' + simbolos.length }, gS);
+          el('ellipse', { 'class': 'oc-pl-sede-sombra', rx: '11', ry: '3', cy: '1' }, g);
+          el('rect', { 'class': 'oc-pl-sede-toque', x: '-22', y: '-40', width: '44', height: '46' }, g);
+          if (templo) { el('path', { 'class': 'oc-pl-sede-cuerpo', d: ESPADANA, style: '--hc:' + c }, g); el('path', { 'class': 'oc-pl-sede-hueco', d: CAMPANA }, g); el('path', { 'class': 'oc-pl-sede-hilo', d: CRUZ }, g); }
+          else { el('path', { 'class': 'oc-pl-sede-cuerpo', d: FACHADA, style: '--hc:' + c }, g); el('path', { 'class': 'oc-pl-sede-hilo', d: PUERTA + BALCON }, g); }
+          var cnt = el('g', { 'class': 'oc-pl-sede-n' }, g); el('circle', { cx: '11', cy: templo ? '-27' : '-19', r: '8' }, cnt); var tn = el('text', { x: '11', y: templo ? '-23.6' : '-15.6' }, cnt);
+          var nom = el('text', { 'class': 'oc-pl-sede-nom', y: '15' }, g); nom.textContent = h.n.length > 24 ? h.n.slice(0, 23).replace(/\s+\S*$/, '') + '…' : h.n;
+          var s = { h: h, tipo: k[0], x: k[1][0], y: k[1][1], g: g, tn: tn, etq: etq, miembros: null };
+          g.addEventListener('click', function () { tocar(s); });
+          g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tocar(s); } });
+          simbolos.push(s);
+        });
+      });
+      // los de más al sur, delante
+      simbolos.sort(function (a, b) { return a.y - b.y; }).forEach(function (s) { gS.appendChild(s.g); });
+      colocar();
+    };
+    function tocar(s) {
+      var m = s.miembros || [s], xs = m.map(function (q) { return q.x; }), ys = m.map(function (q) { return q.y; });
+      // un grupo repartido por la ciudad: la cámara se acerca hasta separarlos; uno solo o todos en el mismo edificio: su hoja
+      if (Math.max.apply(null, xs) - Math.min.apply(null, xs) > 40 || Math.max.apply(null, ys) - Math.min.apply(null, ys) > 40) { var c = api.caja(xs, ys, { arriba: 70, abajo: 70, izq: 50, der: 50 }); c.w = Math.min(c.w, vb.w / 2.2); c.x = (Math.min.apply(null, xs) + Math.max.apply(null, xs)) / 2 - c.w / 2; c.y = (Math.min.apply(null, ys) + Math.max.apply(null, ys)) / 2 - c.w * H() / W() / 2; api.volar(c, 620); return; }
+      var vistos = {}, hs2 = m.map(function (q) { return q.h; }).filter(function (h) { return vistos[h.s] ? false : (vistos[h.s] = 1); });
+      if (alTocar) alTocar(hs2, s);
+    }
+    // marca la hermandad elegida: sus símbolos resaltados y un hilo de oro entre su templo y su casa hermandad
+    api.marcarSede = function (slug) {
+      sel = slug || ''; gHilo.textContent = '';
+      simbolos.forEach(function (s) { s.g.classList.toggle('is-sel', s.h.s === sel); });
+      var h = simbolos.filter(function (s) { return s.h.s === sel; })[0]; h = h && h.h;
+      if (h && h.tp && h.cs) el('path', { 'class': 'oc-pl-hilo-sede', d: 'M' + h.tp[0] + ' ' + h.tp[1] + 'L' + h.cs[0] + ' ' + h.cs[1] }, gHilo);
+    };
+    api.verSedes = function (si) { gS.style.display = si ? '' : 'none'; gHilo.style.display = si ? '' : 'none'; };
+    api.encuadrarSedes = function (ms, m) { if (!simbolos.length) return; api.volar(api.caja(simbolos.map(function (s) { return s.x; }), simbolos.map(function (s) { return s.y; }), m), ms); };
+    api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, (lim[2] - lim[0]) * 1.6)), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
+    function colocarSedes() {
+      if (!simbolos.length) return;
+      var R = 30 * Z, grupos = [];
+      simbolos.forEach(function (s) {
+        var g = null; for (var i = 0; i < grupos.length; i++) if (Math.abs(grupos[i][0].x - s.x) < R && Math.abs(grupos[i][0].y - s.y) < R) { g = grupos[i]; break; }
+        if (g) g.push(s); else grupos.push([s]);
+      });
+      grupos.forEach(function (gr) {
+        var r = gr[0], n = 0, v = {}, nombres = []; gr.forEach(function (q) { if (!v[q.h.s]) { v[q.h.s] = 1; n++; nombres.push(q.h.n); } });
+        gr.forEach(function (q, i) { q.miembros = gr; q.g.style.visibility = i ? 'hidden' : ''; });
+        r.g.setAttribute('transform', 'translate(' + r.x.toFixed(1) + ' ' + r.y.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
+        r.g.classList.toggle('is-grupo', n > 1); r.tn.textContent = n > 1 ? n : '';
+        r.g.setAttribute('aria-label', n > 1 ? n + ' hermandades: ' + nombres.join(', ') : r.etq);
+      });
+      gS.classList.toggle('con-nombres', Z < 2.4);
+    }
     function colocar() {
+      colocarSedes();
       var ms = [];
       hs.forEach(function (h) { var p = enTramo(ruta(h), T), g = marcas[h.s]; if (g && p) ms.push({ g: g, x: p.x, y: p.y }); });
       var R = 44 * Z; // si dos medallones se pisan en pantalla, se separan

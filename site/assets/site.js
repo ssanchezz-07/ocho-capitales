@@ -463,6 +463,72 @@
         if (k < 1) animAnd = requestAnimationFrame(paso);
       })(t0);
     }
+    // ---- fuera de temporada (site/data/temporada.json): el plano enseña las sedes de las hermandades; los recorridos de la última
+    // Semana Santa no se ven. «Extraordinarias» cambia a las salidas extraordinarias vigentes (próximas o en curso) de la ciudad.
+    var TEMP = datos.temporada || {}, FUERA = (function () { var h = hoyISO(); return TEMP.modo === 'fuera' || (TEMP.modo !== 'semana-santa' && !!TEMP.desde && !(h >= TEMP.desde && h <= TEMP.hasta)); })();
+    var accSS = $('[data-colg-acc-ss]', colg), accFuera = $('[data-colg-acc-fuera]', colg), extraB = $('[data-colg-extra]', colg), extraN = $('[data-colg-extra-n]', colg), proxA = $('[data-colg-proxima]', colg);
+    if (accSS) accSS.hidden = FUERA; if (accFuera) accFuera.hidden = !FUERA;
+    portada.classList.toggle('is-fuera', FUERA);
+    var extraOn = false, hoja = $('[data-sede-hoja]', colg), hojaT = hoja && $('[data-sede-titulo]', hoja), hojaC = hoja && $('[data-sede-cuerpo]', hoja), volverA = null;
+    function vigentes() { var h = hoyISO(); return D ? D.hermandades.filter(function (x) { return x.x && x.x.fecha >= h; }) : []; }
+    function modoSedes() {
+      extraOn = false; portada.classList.add('is-sedes'); if (extraB) { extraB.setAttribute('aria-pressed', 'false'); extraB.firstChild.nodeValue = 'Extraordinarias'; }
+      plano.ponerDia([]); plano.ponerSedes(D.sedes || [], abrirHoja); plano.verSedes(true);
+      portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
+      var n = (D.sedes || []).length, ex = vigentes(), dEx = {}; ex.forEach(function (h) { dEx[h.d] = 1; });
+      resEl.textContent = n ? (n === 1 ? '1 hermandad en el plano' : n + ' hermandades en el plano') : 'Aún no hay sedes con ubicación comprobada';
+      notaEl.textContent = n ? 'Cada espadaña es un templo; cada fachada, una casa hermandad. Toca una para ver su hermandad.' : '';
+      if (extraB) { var k = Object.keys(dEx).length; extraN.textContent = k ? ' · ' + k : ''; extraB.disabled = !k; extraB.title = k ? '' : 'No hay salidas extraordinarias anunciadas en ' + datos.ciudades[actual].n; }
+      if (proxA) proxA.href = TEMP.proxima + '#' + actual;
+    }
+    function modoExtra() {
+      var ex = vigentes(); if (!ex.length) return;
+      extraOn = true; portada.classList.remove('is-sedes'); extraB.setAttribute('aria-pressed', 'true'); extraB.firstChild.nodeValue = 'Volver a las sedes'; cerrarHoja(); plano.verSedes(false);
+      var v = {}; J = ex.map(function (h) { return h.d; }).filter(function (d) { return v[d] ? false : (v[d] = 1); }).sort(function (a, b) { return fechaDe(a).localeCompare(fechaDe(b)); });
+      var hoy = J.filter(function (d) { return fechaDe(d) === hoyISO(); })[0], a = ahoraMin();
+      ponerJornada(hoy || J[0], hoy ? (a < 300 ? a + 1440 : a) : null); plano.encuadrar(calm ? 0 : 700, margenes());
+    }
+    if (extraB) extraB.addEventListener('click', function () { if (!plano) return; if (extraOn) { modoSedes(); plano.encuadrarSedes(calm ? 0 : 700, margenes()); } else modoExtra(); });
+    // la hoja de una hermandad: foto, sede, día de salida, próximos cultos de la agenda y su ficha
+    var fmtF = function (f) { return new Date(f + 'T12:00:00Z').toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' }).replace(/\./g, ''); };
+    function fichaHerm(h) {
+      var a = (D.anio || '') + '', foto = h.foto || h.img;
+      return (foto ? '<img class="oc-sede-foto" src="' + esc(foto) + '" alt="" loading="lazy" decoding="async">' : '<span class="oc-sede-foto is-ini" aria-hidden="true">' + esc(h.ini) + '</span>') +
+        '<dl class="oc-sede-datos">' +
+        (h.tp ? '<div><dt>Templo</dt><dd>' + esc(h.tp[2] || h.sede) + '</dd></div>' : h.sede ? '<div><dt>Sede</dt><dd>' + esc(h.sede) + '</dd></div>' : '') +
+        (h.cs ? '<div><dt>Casa hermandad</dt><dd>' + esc(h.cs[2]) + '</dd></div>' : '') +
+        (h.d ? '<div><dt>Salida' + (a ? ' en ' + a : '') + '</dt><dd>' + esc(h.d) + '</dd></div>' : '') +
+        (h.col ? '<div><dt>Hábito</dt><dd><i class="oc-calle-habito" style="--hc:' + h.col + '"></i>' + esc(h.coln || '') + '</dd></div>' : '') +
+        '</dl>' +
+        (h.ev && h.ev.length ? '<h3 class="oc-sede-h">Próximos cultos y actos</h3><ul class="oc-sede-ev">' + h.ev.map(function (e) { return '<li><time datetime="' + e[0] + '">' + esc(fmtF(e[0])) + (e[1] ? ', ' + esc(e[1]) + ' h' : '') + '</time><span>' + esc(e[2]) + '</span></li>'; }).join('') + '</ul>' : '') +
+        '<a class="oc-btn" href="' + BASE + 'hermandad/' + h.s + '/">Ver su ficha' + '</a>' +
+        '<p class="oc-sede-fuente">Ubicación: ' + [h.tp, h.cs].filter(Boolean).map(function (p) { return /^https?:/.test(p[3]) ? '<a href="' + esc(p[3].split(' ')[0]) + '" target="_blank" rel="noopener nofollow">' + (p === h.cs ? 'casa hermandad' : 'templo') + '</a>' : esc(p[3]); }).join(' · ') + '</p>';
+    }
+    function abrirHoja(hs, s) {
+      if (!hoja) return; volverA = s && s.g;
+      var pinta = function (h) { plano.marcarSede(h.s); hojaT.textContent = h.n; hojaC.innerHTML = fichaHerm(h); hojaC.style.setProperty('--hc', h.col || D.color); };
+      if (hs.length === 1) pinta(hs[0]);
+      else {
+        plano.marcarSede(''); hojaT.textContent = hs.length + ' hermandades en ' + (s.tipo === 'cs' ? 'esta casa' : (s.h.tp ? s.h.tp[2] : 'este templo'));
+        hojaC.innerHTML = '<ul class="oc-sede-lista">' + hs.map(function (h, i) { return '<li><button type="button" data-i="' + i + '" style="--hc:' + (h.col || D.color) + '"><i aria-hidden="true"></i><span>' + esc(h.n) + '</span><small>' + esc(h.d) + '</small></button></li>'; }).join('') + '</ul>';
+        $$('[data-i]', hojaC).forEach(function (b) { b.addEventListener('click', function () { pinta(hs[+b.dataset.i]); var f = $('a, button', hojaC); if (f) f.focus(); }); });
+      }
+      openLayer(hoja, $('[data-sede-cerrar]', hoja));
+    }
+    function cerrarHoja() { if (!hoja || hoja.hidden) return; closeLayer(hoja); if (plano) plano.marcarSede(''); if (volverA) try { volverA.focus({ preventScroll: true }); } catch (e) { } volverA = null; }
+    if (hoja) {
+      // fuera de la portada, para que no herede sus colores de terciopelo
+      document.body.appendChild(hoja);
+      $('[data-sede-cerrar]', hoja).addEventListener('click', cerrarHoja);
+      hoja.addEventListener('click', function (e) { if (e.target === hoja) cerrarHoja(); });
+      hoja.addEventListener('keydown', function (e) { if (e.key === 'Escape') { e.stopPropagation(); cerrarHoja(); } trapFocus(hoja, e); });
+    }
+    function controles() {
+      var w = document.createElement('div'); w.className = 'oc-colg-zoom';
+      w.innerHTML = '<button type="button" data-z="0.5" aria-label="Acercar">+</button><button type="button" data-z="2" aria-label="Alejar">−</button><button type="button" data-z="0" aria-label="Ver toda la ciudad"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>';
+      $$('button', w).forEach(function (b) { b.addEventListener('click', function () { if (!plano) return; var z = +b.dataset.z; if (z) plano.zoom(z, calm ? 0 : 320); else if (FUERA && !extraOn) plano.encuadrarSedes(calm ? 0 : 520, margenes()); else plano.encuadrar(calm ? 0 : 520, margenes()); }); });
+      host.appendChild(w);
+    }
     function entrar(c, desdeHistoria) {
       var cap = datos.ciudades[c];
       if (!cap) { location.href = BASE + 'semana-santa/' + c + '/'; return; }
@@ -481,14 +547,13 @@
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
         D = r[1]; host.textContent = ''; host.hidden = false;
-        plano = OCPlano.Plano(host, D);
+        plano = OCPlano.Plano(host, D, { color: D.color }); controles(); extraOn = false;
         var vistos = {}, dias = D.hermandades.map(function (h) { return h.d; }).filter(function (d) { return vistos[d] ? false : (vistos[d] = 1); });
         J = dias.sort(function (a, b) { return fechaDe(a).localeCompare(fechaDe(b)); });
-        var ini = jornadaInicial(), a = ahoraMin();
-        ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null);
-        // la cámara empieza muy alta (toda la ciudad y sus alrededores) y baja hasta la jornada
+        if (FUERA) modoSedes(); else { var ini = jornadaInicial(), a = ahoraMin(); ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null); }
+        // la cámara empieza muy alta (toda la ciudad y sus alrededores) y baja hasta la jornada (o hasta sus sedes)
         var v = plano.vista(), ancho = v.w * 3; plano.volar({ x: v.x + v.w / 2 - ancho / 2, y: v.y + v.h / 2 - ancho * v.h / v.w / 2, w: ancho }, 0);
-        setTimeout(function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); plano.encuadrar(calm ? 0 : 900, margenes()); }, calm || desdeHistoria ? 0 : Math.max(0, 700 - (performance.now() - t0)));
+        setTimeout(function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); if (FUERA && !extraOn) plano.encuadrarSedes(calm ? 0 : 900, margenes()); else plano.encuadrar(calm ? 0 : 900, margenes()); }, calm || desdeHistoria ? 0 : Math.max(0, 700 - (performance.now() - t0)));
       }).catch(function () {
         if (actual !== c) return;
         resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
@@ -498,7 +563,7 @@
     }
     var focoPendiente = '';
     function salir(desdeHistoria) {
-      var antes = actual; if (!antes) return;
+      var antes = actual; if (!antes) return; cerrarHoja(); portada.classList.remove('is-sedes');
       if (!desdeHistoria) { if (history.state && history.state.ocCiudad && !history.state.directo) { focoPendiente = antes; history.back(); return; } history.replaceState(null, '', location.pathname + location.search); }
       pintarBanderas('', false); setCity('');
       portada.classList.remove('is-plano', 'is-ciudad', 'is-acercando'); root.classList.remove('oc-en-ciudad');
