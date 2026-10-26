@@ -1,8 +1,14 @@
 {
  "humildad-malaga": {
   "puntos": {
-   "8": [36.7242187, -4.420388],
-   "13": [36.7220759, -4.4219701]
+   "8": [
+    36.7242187,
+    -4.420388
+   ],
+   "13": [
+    36.7220759,
+    -4.4219701
+   ]
   },
   "fuentes": [
    {
@@ -12,5 +18,186 @@
    }
   ],
   "actualizado": "2026-10-26 12:00"
+ },
+ "pasion-malaga": {
+  "puntos": {
+   "2": [
+    36.7221593,
+    -4.4226332
+   ],
+   "3": [
+    36.7220759,
+    -4.4219701
+   ],
+   "31": [
+    36.7221593,
+    -4.4226332
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 13:55",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Iglesia de los Santos Mártires, Plaza de los Mártires, Santa Lucía … Comedias, Plaza de los Mártires»",
+    "cambios": "punto de paso dentro de la Plaza de los Mártires a la salida (antes de Santa Lucía, fila 3) y a la entrada (fila 32); puntos del trazado publicado, que sí la recorre"
+   },
+   {
+    "fecha": "2026-10-26 13:58",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 4), donde la lista entra y vuelve a Santa Lucía"
+   }
+  ],
+  "actualizado": "2026-10-26 13:58"
+ },
+ "el-rico-malaga": {
+  "puntos": {
+   "7": [
+    36.7202649,
+    -4.4202357
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 13:55",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Victoria, Plaza Jesús El Rico, Alcazabilla … Molina Lario, Plaza del Obispo (Liberación), Molina Lario … Plaza de la Merced, Plaza Jesús El Rico, Victoria»",
+    "cambios": "punto de paso en la Plaza Jesús El Rico (filas 3 y 32) y en la Plaza del Obispo (fila 8); puntos del trazado publicado, que sí las recorre"
+   },
+   {
+    "fecha": "2026-10-26 13:57",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista",
+    "cambios": "Plaza Jesús El Rico (filas 3 y 32) es el cruce de Victoria con Alcazabilla y María Guerrero: se pasa por ella sin pico de ida y vuelta. Queda solo el punto de la Plaza del Obispo (fila 8), donde la lista entra y sale (Molina Lario · Plaza del Obispo · Molina Lario)"
+   }
+  ],
+  "actualizado": "2026-10-26 13:57",
+  "calles": {
+   "2": {
+    "esquina": true,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+   },
+   "31": {
+    "esquina": true,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+   }
+  }
+ },
+ "servitas-malaga": {
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 13:55",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Carretería, Álamos, Puerta de Buenaventura … Nosquera, Muro de San Julián, Muro de las Catalinas … Muro de las Catalinas, Muro de San Julián, Nosquera»",
+    "cambios": "punto de paso en Álamos (fila 7) y en Muro de San Julián (filas 12 y 44); puntos del trazado publicado, que sí las recorre"
+   },
+   {
+    "fecha": "2026-10-26 13:57",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista",
+    "cambios": "Álamos (fila 7) y Muro de San Julián (filas 12 y 44) se tocan en la esquina: Carretería → Puerta de Buenaventura y Nosquera ↔ Muro de las Catalinas se unen en el arranque de esas calles. Se quitan los puntos forzados, que hacían un bucle"
+   }
+  ],
+  "actualizado": "2026-10-26 13:57",
+  "calles": {
+   "6": {
+    "esquina": true,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+   },
+   "11": {
+    "esquina": true,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+   },
+   "43": {
+    "esquina": true,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+   }
+  }
+ },
+ "prendimiento-malaga": {
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:00",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Miguel Bueno Lara, Alameda de Capuchinos, Plaza de Capuchinos, Capuchinos, Cruz del Molinillo»",
+    "cambios": "puntos de entrada en Alameda de Capuchinos, Plaza de Capuchinos, Calle Capuchinos y Cruz del Molinillo (filas 5-8), tomados del trazado publicado: el nombre «Capuchinos» abarca cuatro calles y el trazado zigzagueaba por las laterales"
+   }
+  ],
+  "actualizado": "2026-10-26 14:00",
+  "puntos": {
+   "4": [
+    36.7302864,
+    -4.4196243
+   ],
+   "5": [
+    36.7292823,
+    -4.4209524
+   ],
+   "6": [
+    36.7287247,
+    -4.4213308
+   ],
+   "7": [
+    36.7271968,
+    -4.4225077
+   ]
+  }
+ },
+ "descendimiento-malaga": {
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:00",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Cervantes, Paseo de Reding, Avenida Cervantes … Guillén Sotelo, Paseo de Reding, Plaza del General Torrijos»",
+    "cambios": "puntos de entrada en el Paseo de Reding y la Avenida de Cervantes (filas 5-6) y en el Paseo de Reding a la vuelta (fila 34), tomados del trazado publicado: el trazado se iba por Antonio Ordóñez en vez de recorrer el Paseo de Reding"
+   }
+  ],
+  "actualizado": "2026-10-26 14:00",
+  "puntos": {
+   "4": [
+    36.7209627,
+    -4.4097663
+   ],
+   "5": [
+    36.7210731,
+    -4.4124728
+   ],
+   "33": [
+    36.7211085,
+    -4.4126813
+   ]
+  }
+ },
+ "estudiantes-malaga": {
+  "salida": {
+   "lat": 36.7207058,
+   "lon": -4.4173985,
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
+  },
+  "entrada": {
+   "lat": 36.7207058,
+   "lon": -4.4173985,
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:01",
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)",
+    "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 10 m)"
+   }
+  ],
+  "actualizado": "2026-10-26 14:01"
+ },
+ "humildad-y-paciencia-malaga": {
+  "salida": {
+   "lat": 36.7087272,
+   "lon": -4.4421564,
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
+  },
+  "entrada": {
+   "lat": 36.7087272,
+   "lon": -4.4421564,
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:01",
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)",
+    "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 8 m)"
+   }
+  ],
+  "actualizado": "2026-10-26 14:01"
  }
 }

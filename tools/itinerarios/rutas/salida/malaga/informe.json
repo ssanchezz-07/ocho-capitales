@@ -485,9 +485,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 165,
-  "largo_m": 3519,
-  "ms_total": 409
+  "ms_graphhopper": 187,
+  "largo_m": 3524,
+  "ms_total": 471
  },
  "lagrimas-y-favores-malaga": {
   "id": "lagrimas-y-favores-malaga",
@@ -997,17 +997,15 @@
    "7 m entre «Santa Lucía» y «Comedias»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
-  "ms_graphhopper": 100,
+  "ms_graphhopper": 105,
   "largo_m": 3606,
-  "ms_total": 342
+  "ms_total": 371
  },
  "dulce-nombre-malaga": {
   "id": "dulce-nombre-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "hueco de 263 m entre «Plaza de la Constitución» y «Martínez»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -1206,6 +1204,20 @@
    },
    {
     "i": 15,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
     "lugar": "Martínez",
     "tipo": "calle",
     "osm": "Calle Martínez",
@@ -1214,11 +1226,11 @@
      1202569532
     ],
     "candidatas": 12,
-    "hueco_entrada_m": 263,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 16,
+    "i": 17,
     "lugar": "Atarazanas",
     "tipo": "calle",
     "osm": "Calle Atarazanas",
@@ -1234,7 +1246,7 @@
     "forzado": false
    },
    {
-    "i": 17,
+    "i": 18,
     "lugar": "Torregorda",
     "tipo": "calle",
     "osm": "Calle Torregorda",
@@ -1247,7 +1259,7 @@
     "forzado": false
    },
    {
-    "i": 18,
+    "i": 19,
     "lugar": "Alameda Principal",
     "tipo": "calle",
     "osm": "Alameda Principal",
@@ -1269,7 +1281,7 @@
     "forzado": false
    },
    {
-    "i": 19,
+    "i": 20,
     "lugar": "Plaza de La Marina",
     "tipo": "calle",
     "osm": "Plaza de la Marina",
@@ -1281,7 +1293,7 @@
     "forzado": false
    },
    {
-    "i": 20,
+    "i": 21,
     "lugar": "Molina Lario",
     "tipo": "calle",
     "osm": "Calle Molina Lario",
@@ -1296,7 +1308,7 @@
     "forzado": false
    },
    {
-    "i": 22,
+    "i": 23,
     "lugar": "Postigo de los Abades",
     "tipo": "calle",
     "osm": "Calle Postigo de los Abades",
@@ -1309,7 +1321,7 @@
     "forzado": false
    },
    {
-    "i": 23,
+    "i": 24,
     "lugar": "Estación de Penitencia en la S.I.C.B",
     "tipo": "catedral",
     "osm": "Catedral (por dentro)",
@@ -1319,7 +1331,7 @@
     "forzado": false
    },
    {
-    "i": 25,
+    "i": 26,
     "lugar": "Císter",
     "tipo": "calle",
     "osm": "Calle Císter",
@@ -1331,7 +1343,7 @@
     "forzado": false
    },
    {
-    "i": 26,
+    "i": 27,
     "lugar": "San Agustín",
     "tipo": "calle",
     "osm": "Calle San Agustín",
@@ -1344,7 +1356,7 @@
     "forzado": false
    },
    {
-    "i": 27,
+    "i": 28,
     "lugar": "Echegaray",
     "tipo": "calle",
     "osm": "Calle Echegaray",
@@ -1356,7 +1368,7 @@
     "forzado": false
    },
    {
-    "i": 28,
+    "i": 29,
     "lugar": "Granada",
     "tipo": "calle",
     "osm": "Calle Granada",
@@ -1370,7 +1382,7 @@
     "forzado": false
    },
    {
-    "i": 29,
+    "i": 30,
     "lugar": "Méndez Núñez",
     "tipo": "calle",
     "osm": "Calle Méndez Núñez",
@@ -1382,7 +1394,7 @@
     "forzado": false
    },
    {
-    "i": 30,
+    "i": 31,
     "lugar": "Plaza de Uncibay",
     "tipo": "calle",
     "osm": "Plaza Uncibay",
@@ -1394,7 +1406,7 @@
     "forzado": false
    },
    {
-    "i": 31,
+    "i": 32,
     "lugar": "Casapalma",
     "tipo": "calle",
     "osm": "Calle Casapalma",
@@ -1406,7 +1418,7 @@
     "forzado": false
    },
    {
-    "i": 32,
+    "i": 33,
     "lugar": "Cárcer",
     "tipo": "calle",
     "osm": "Calle Cárcer",
@@ -1419,7 +1431,7 @@
     "forzado": false
    },
    {
-    "i": 33,
+    "i": 34,
     "lugar": "Álamos",
     "tipo": "calle",
     "osm": "Calle Álamos",
@@ -1432,7 +1444,7 @@
     "forzado": false
    },
    {
-    "i": 34,
+    "i": 35,
     "lugar": "Plaza de la Merced",
     "tipo": "calle",
     "osm": "Plaza de la Merced",
@@ -1451,7 +1463,7 @@
     "forzado": false
    },
    {
-    "i": 35,
+    "i": 36,
     "lugar": "Madre de Dios",
     "tipo": "calle",
     "osm": "Calle Madre de Dios",
@@ -1464,7 +1476,7 @@
     "forzado": false
    },
    {
-    "i": 36,
+    "i": 37,
     "lugar": "Montaño",
     "tipo": "calle",
     "osm": "Calle Montaño",
@@ -1477,7 +1489,7 @@
     "forzado": false
    },
    {
-    "i": 38,
+    "i": 39,
     "lugar": "Dos Aceras",
     "tipo": "calle",
     "osm": "Calle Dos Aceras",
@@ -1489,7 +1501,7 @@
     "forzado": false
    },
    {
-    "i": 39,
+    "i": 40,
     "lugar": "Carrera de Capuchinos",
     "tipo": "calle",
     "osm": "Plaza Capuchinos",
@@ -1528,9 +1540,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 104,
-  "largo_m": 3828,
-  "ms_total": 340
+  "ms_graphhopper": 91,
+  "largo_m": 3862,
+  "ms_total": 325
  },
  "salutacion-malaga": {
   "id": "salutacion-malaga",
@@ -2095,9 +2107,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 322,
-  "largo_m": 3597,
-  "ms_total": 523
+  "ms_graphhopper": 171,
+  "largo_m": 3607,
+  "ms_total": 472
  },
  "humildad-malaga": {
   "id": "humildad-malaga",
@@ -2680,9 +2692,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 137,
+  "ms_graphhopper": 117,
   "largo_m": 4140,
-  "ms_total": 426
+  "ms_total": 425
  },
  "salud-malaga": {
   "id": "salud-malaga",
@@ -3197,9 +3209,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 96,
-  "largo_m": 3533,
-  "ms_total": 322
+  "ms_graphhopper": 133,
+  "largo_m": 3558,
+  "ms_total": 456
  },
  "humildad-y-paciencia-malaga": {
   "id": "humildad-y-paciencia-malaga",
@@ -3210,24 +3222,41 @@
    "hueco de 69 m entre «Prim» y «Plaza Arriola»: en OSM no se tocan",
    "hueco de 43 m entre «Puerta del Mar» y «Córdoba»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "salida": {
+    "lat": 36.7087272,
+    "lon": -4.4421564,
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
+   },
+   "entrada": {
+    "lat": 36.7087272,
+    "lon": -4.4421564,
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:01",
+     "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)",
+     "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 8 m)"
+    }
+   ],
+   "actualizado": "2026-10-26 14:01"
+  },
   "salida": {
    "punto": [
-    36.7087845,
-    -4.4422065
+    36.7087272,
+    -4.4421564
    ],
-   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
-   "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741",
-   "dir": "Plazuela María Santísima de Dolores y Esperanza 1, Málaga"
+   "como": "corrección de Pablo",
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
   },
   "entrada": {
    "punto": [
-    36.7087845,
-    -4.4422065
+    36.7087272,
+    -4.4421564
    ],
-   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
-   "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741",
-   "dir": "Plazuela María Santísima de Dolores y Esperanza 1, Málaga"
+   "como": "corrección de Pablo",
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)"
   },
   "calles": [
    {
@@ -4048,9 +4077,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 200,
-  "largo_m": 7811,
-  "ms_total": 441
+  "ms_graphhopper": 282,
+  "largo_m": 7819,
+  "ms_total": 603
  },
  "huerto-malaga": {
   "id": "huerto-malaga",
@@ -4626,16 +4655,44 @@
    "8 m entre «Plaza de la Legión Española» y «Huerta del Obispo»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 134,
-  "largo_m": 4085,
-  "ms_total": 692
+  "ms_graphhopper": 119,
+  "largo_m": 4098,
+  "ms_total": 460
  },
  "pasion-malaga": {
   "id": "pasion-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [],
-  "correcciones": null,
+  "correcciones": {
+   "puntos": {
+    "2": [
+     36.7221593,
+     -4.4226332
+    ],
+    "3": [
+     36.7220759,
+     -4.4219701
+    ],
+    "31": [
+     36.7221593,
+     -4.4226332
+    ]
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 13:55",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Iglesia de los Santos Mártires, Plaza de los Mártires, Santa Lucía … Comedias, Plaza de los Mártires»",
+     "cambios": "punto de paso dentro de la Plaza de los Mártires a la salida (antes de Santa Lucía, fila 3) y a la entrada (fila 32); puntos del trazado publicado, que sí la recorre"
+    },
+    {
+     "fecha": "2026-10-26 13:58",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía»",
+     "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 4), donde la lista entra y vuelve a Santa Lucía"
+    }
+   ],
+   "actualizado": "2026-10-26 13:58"
+  },
   "salida": {
    "punto": [
     36.7223262,
@@ -4679,7 +4736,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 3,
@@ -4690,8 +4747,8 @@
      184157884
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 2,
-    "forzado": false
+    "hueco_entrada_m": 0,
+    "forzado": true
    },
    {
     "i": 4,
@@ -5030,7 +5087,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    }
   ],
   "enlaces": [
@@ -5039,9 +5096,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 78,
-  "largo_m": 2573,
-  "ms_total": 506
+  "ms_graphhopper": 79,
+  "largo_m": 2800,
+  "ms_total": 496
  },
  "crucifixion-malaga": {
   "id": "crucifixion-malaga",
@@ -5554,9 +5611,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 99,
-  "largo_m": 3647,
-  "ms_total": 521
+  "ms_graphhopper": 124,
+  "largo_m": 3659,
+  "ms_total": 427
  },
  "dolores-del-puente-malaga": {
   "id": "dolores-del-puente-malaga",
@@ -6152,9 +6209,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 213,
-  "largo_m": 3909,
-  "ms_total": 670
+  "ms_graphhopper": 158,
+  "largo_m": 3916,
+  "ms_total": 519
  },
  "cautivo-malaga": {
   "id": "cautivo-malaga",
@@ -6668,9 +6725,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "7 m entre «Cisneros» y «Pasillo Santa Isabel»"
   ],
-  "ms_graphhopper": 124,
-  "largo_m": 4432,
-  "ms_total": 629
+  "ms_graphhopper": 85,
+  "largo_m": 4439,
+  "ms_total": 510
  },
  "estudiantes-malaga": {
   "id": "estudiantes-malaga",
@@ -6680,24 +6737,41 @@
    "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
    "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "salida": {
+    "lat": 36.7207058,
+    "lon": -4.4173985,
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
+   },
+   "entrada": {
+    "lat": 36.7207058,
+    "lon": -4.4173985,
+    "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:01",
+     "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)",
+     "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 10 m)"
+    }
+   ],
+   "actualizado": "2026-10-26 14:01"
+  },
   "salida": {
    "punto": [
-    36.720761,
-    -4.417485
+    36.7207058,
+    -4.4173985
    ],
-   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
-   "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)",
-   "dir": "Calle Alcazabilla 3, Málaga"
+   "como": "corrección de Pablo",
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
   },
   "entrada": {
    "punto": [
-    36.720761,
-    -4.417485
+    36.7207058,
+    -4.4173985
    ],
-   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
-   "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)",
-   "dir": "Calle Alcazabilla 3, Málaga"
+   "como": "corrección de Pablo",
+   "fuente": "OpenStreetMap, puerta (entrance=main) nodo 8283205349 con la dirección Calle Alcazabilla 3, la de la casa hermandad según la Agrupación (https://agrupaciondecofradias.com/hermandades/estudiantes/)"
   },
   "calles": [
    {
@@ -7122,9 +7196,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 121,
-  "largo_m": 3243,
-  "ms_total": 431
+  "ms_graphhopper": 92,
+  "largo_m": 3247,
+  "ms_total": 267
  },
  "rocio-malaga": {
   "id": "rocio-malaga",
@@ -7655,9 +7729,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 166,
-  "largo_m": 4415,
-  "ms_total": 639
+  "ms_graphhopper": 116,
+  "largo_m": 4420,
+  "ms_total": 506
  },
  "penas-malaga": {
   "id": "penas-malaga",
@@ -8079,9 +8153,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 278,
+  "ms_graphhopper": 145,
   "largo_m": 2692,
-  "ms_total": 521
+  "ms_total": 381
  },
  "nueva-esperanza-malaga": {
   "id": "nueva-esperanza-malaga",
@@ -8836,9 +8910,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 146,
-  "largo_m": 7476,
-  "ms_total": 552
+  "ms_graphhopper": 161,
+  "largo_m": 7513,
+  "ms_total": 557
  },
  "humillacion-y-estrella-malaga": {
   "id": "humillacion-y-estrella-malaga",
@@ -9375,9 +9449,9 @@
    "3 m entre «Plaza de la Religiosa Filipense Dolores Márquez» y «Padre Jorge Lamothe»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 209,
-  "largo_m": 3921,
-  "ms_total": 657
+  "ms_graphhopper": 114,
+  "largo_m": 3929,
+  "ms_total": 504
  },
  "rescate-malaga": {
   "id": "rescate-malaga",
@@ -9882,9 +9956,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 120,
-  "largo_m": 4221,
-  "ms_total": 550
+  "ms_graphhopper": 63,
+  "largo_m": 4229,
+  "ms_total": 400
  },
  "sentencia-malaga": {
   "id": "sentencia-malaga",
@@ -10270,9 +10344,9 @@
    "39 m entre «Calderería» y «Casapalma»",
    "5 m entre «Plaza de Jerónimo Cuervo» y «Ramos Marín»"
   ],
-  "ms_graphhopper": 134,
-  "largo_m": 3443,
-  "ms_total": 485
+  "ms_graphhopper": 91,
+  "largo_m": 3455,
+  "ms_total": 383
  },
  "fusionadas-malaga": {
   "id": "fusionadas-malaga",
@@ -10636,9 +10710,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 126,
+  "ms_graphhopper": 89,
   "largo_m": 3020,
-  "ms_total": 313
+  "ms_total": 232
  },
  "mediadora-malaga": {
   "id": "mediadora-malaga",
@@ -11400,9 +11474,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 197,
+  "ms_graphhopper": 187,
   "largo_m": 6523,
-  "ms_total": 702
+  "ms_total": 526
  },
  "salesianos-malaga": {
   "id": "salesianos-malaga",
@@ -11876,9 +11950,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 163,
+  "ms_graphhopper": 162,
   "largo_m": 4411,
-  "ms_total": 527
+  "ms_total": 450
  },
  "sangre-malaga": {
   "id": "sangre-malaga",
@@ -12373,9 +12447,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 110,
-  "largo_m": 3529,
-  "ms_total": 446
+  "ms_graphhopper": 125,
+  "largo_m": 3537,
+  "ms_total": 400
  },
  "el-rico-malaga": {
   "id": "el-rico-malaga",
@@ -12385,7 +12459,37 @@
    "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
    "hueco de 43 m entre «Plaza del Siglo» y «Calle Calderería»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "puntos": {
+    "7": [
+     36.7202649,
+     -4.4202357
+    ]
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 13:55",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Victoria, Plaza Jesús El Rico, Alcazabilla … Molina Lario, Plaza del Obispo (Liberación), Molina Lario … Plaza de la Merced, Plaza Jesús El Rico, Victoria»",
+     "cambios": "punto de paso en la Plaza Jesús El Rico (filas 3 y 32) y en la Plaza del Obispo (fila 8); puntos del trazado publicado, que sí las recorre"
+    },
+    {
+     "fecha": "2026-10-26 13:57",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista",
+     "cambios": "Plaza Jesús El Rico (filas 3 y 32) es el cruce de Victoria con Alcazabilla y María Guerrero: se pasa por ella sin pico de ida y vuelta. Queda solo el punto de la Plaza del Obispo (fila 8), donde la lista entra y sale (Molina Lario · Plaza del Obispo · Molina Lario)"
+    }
+   ],
+   "actualizado": "2026-10-26 13:57",
+   "calles": {
+    "2": {
+     "esquina": true,
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+    },
+    "31": {
+     "esquina": true,
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+    }
+   }
+  },
   "salida": {
    "punto": [
     36.7234189,
@@ -12511,7 +12615,7 @@
     ],
     "candidatas": 24,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 8,
@@ -12853,9 +12957,10 @@
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
    "39 m entre «Plaza de la Merced» y «Plaza Jesús El Rico»"
   ],
-  "ms_graphhopper": 167,
-  "largo_m": 3196,
-  "ms_total": 572
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 124,
+  "largo_m": 3242,
+  "ms_total": 497
  },
  "paloma-malaga": {
   "id": "paloma-malaga",
@@ -13213,9 +13318,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 107,
-  "largo_m": 2618,
-  "ms_total": 406
+  "ms_graphhopper": 57,
+  "largo_m": 2628,
+  "ms_total": 253
  },
  "sagrada-cena-malaga": {
   "id": "sagrada-cena-malaga",
@@ -13574,9 +13679,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "30 m entre «Tribuna de los Pobres» y «Puerta Nueva»"
   ],
-  "ms_graphhopper": 107,
-  "largo_m": 2684,
-  "ms_total": 510
+  "ms_graphhopper": 60,
+  "largo_m": 2717,
+  "ms_total": 400
  },
  "vineros-malaga": {
   "id": "vineros-malaga",
@@ -14010,9 +14115,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 138,
-  "largo_m": 2725,
-  "ms_total": 516
+  "ms_graphhopper": 99,
+  "largo_m": 2728,
+  "ms_total": 421
  },
  "santa-cruz-malaga": {
   "id": "santa-cruz-malaga",
@@ -14492,9 +14597,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 122,
-  "largo_m": 2810,
-  "ms_total": 498
+  "ms_graphhopper": 142,
+  "largo_m": 2820,
+  "ms_total": 423
  },
  "vera-cruz-malaga": {
   "id": "vera-cruz-malaga",
@@ -14946,9 +15051,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 108,
-  "largo_m": 2703,
-  "ms_total": 675
+  "ms_graphhopper": 83,
+  "largo_m": 2710,
+  "ms_total": 662
  },
  "mena-malaga": {
   "id": "mena-malaga",
@@ -15517,9 +15622,9 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "8 m entre «Cerezuela» y «Plaza Legión Española»"
   ],
-  "ms_graphhopper": 163,
-  "largo_m": 3934,
-  "ms_total": 815
+  "ms_graphhopper": 151,
+  "largo_m": 3944,
+  "ms_total": 520
  },
  "zamarrilla-malaga": {
   "id": "zamarrilla-malaga",
@@ -15979,9 +16084,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 108,
+  "ms_graphhopper": 73,
   "largo_m": 3846,
-  "ms_total": 516
+  "ms_total": 404
  },
  "misericordia-malaga": {
   "id": "misericordia-malaga",
@@ -16526,9 +16631,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 100,
-  "largo_m": 4006,
-  "ms_total": 533
+  "ms_graphhopper": 126,
+  "largo_m": 4021,
+  "ms_total": 493
  },
  "monte-calvario-malaga": {
   "id": "monte-calvario-malaga",
@@ -17173,19 +17278,41 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 224,
+  "ms_graphhopper": 139,
   "largo_m": 5134,
-  "ms_total": 723
+  "ms_total": 628
  },
  "descendimiento-malaga": {
   "id": "descendimiento-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 61 m entre «Guillén Sotelo» y «Paseo de Reding»: en OSM no se tocan"
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:00",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Cervantes, Paseo de Reding, Avenida Cervantes … Guillén Sotelo, Paseo de Reding, Plaza del General Torrijos»",
+     "cambios": "puntos de entrada en el Paseo de Reding y la Avenida de Cervantes (filas 5-6) y en el Paseo de Reding a la vuelta (fila 34), tomados del trazado publicado: el trazado se iba por Antonio Ordóñez en vez de recorrer el Paseo de Reding"
+    }
+   ],
+   "actualizado": "2026-10-26 14:00",
+   "puntos": {
+    "4": [
+     36.7209627,
+     -4.4097663
+    ],
+    "5": [
+     36.7210731,
+     -4.4124728
+    ],
+    "33": [
+     36.7211085,
+     -4.4126813
+    ]
+   }
+  },
   "salida": {
    "punto": [
     36.7201585,
@@ -17258,7 +17385,7 @@
     ],
     "candidatas": 2,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 5,
@@ -17277,7 +17404,7 @@
     ],
     "candidatas": 2,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 6,
@@ -17603,8 +17730,8 @@
      929335440
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 61,
-    "forzado": false
+    "hueco_entrada_m": 0,
+    "forzado": true
    },
    {
     "i": 34,
@@ -17651,9 +17778,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 96,
-  "largo_m": 3939,
-  "ms_total": 489
+  "ms_graphhopper": 106,
+  "largo_m": 3881,
+  "ms_total": 465
  },
  "amor-malaga": {
   "id": "amor-malaga",
@@ -18261,9 +18388,9 @@
    "38 m entre «Calderería» y «Méndez Núñez»",
    "11 m entre «Puerta de Buenaventura» y «Mariblanca»"
   ],
-  "ms_graphhopper": 99,
-  "largo_m": 5271,
-  "ms_total": 657
+  "ms_graphhopper": 138,
+  "largo_m": 5275,
+  "ms_total": 563
  },
  "dolores-de-san-juan-malaga": {
   "id": "dolores-de-san-juan-malaga",
@@ -18669,9 +18796,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 86,
-  "largo_m": 2803,
-  "ms_total": 640
+  "ms_graphhopper": 115,
+  "largo_m": 2806,
+  "ms_total": 584
  },
  "traslado-malaga": {
   "id": "traslado-malaga",
@@ -19079,9 +19206,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "7 m entre «Cisneros» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 126,
-  "largo_m": 3421,
-  "ms_total": 510
+  "ms_graphhopper": 106,
+  "largo_m": 3427,
+  "ms_total": 428
  },
  "piedad-malaga": {
   "id": "piedad-malaga",
@@ -19484,9 +19611,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 109,
-  "largo_m": 3570,
-  "ms_total": 434
+  "ms_graphhopper": 96,
+  "largo_m": 3577,
+  "ms_total": 407
  },
  "santo-sepulcro-malaga": {
   "id": "santo-sepulcro-malaga",
@@ -19919,16 +20046,44 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 113,
-  "largo_m": 3380,
-  "ms_total": 488
+  "ms_graphhopper": 123,
+  "largo_m": 3392,
+  "ms_total": 437
  },
  "servitas-malaga": {
   "id": "servitas-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [],
-  "correcciones": null,
+  "correcciones": {
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 13:55",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Carretería, Álamos, Puerta de Buenaventura … Nosquera, Muro de San Julián, Muro de las Catalinas … Muro de las Catalinas, Muro de San Julián, Nosquera»",
+     "cambios": "punto de paso en Álamos (fila 7) y en Muro de San Julián (filas 12 y 44); puntos del trazado publicado, que sí las recorre"
+    },
+    {
+     "fecha": "2026-10-26 13:57",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista",
+     "cambios": "Álamos (fila 7) y Muro de San Julián (filas 12 y 44) se tocan en la esquina: Carretería → Puerta de Buenaventura y Nosquera ↔ Muro de las Catalinas se unen en el arranque de esas calles. Se quitan los puntos forzados, que hacían un bucle"
+    }
+   ],
+   "actualizado": "2026-10-26 13:57",
+   "calles": {
+    "6": {
+     "esquina": true,
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+    },
+    "11": {
+     "esquina": true,
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+    },
+    "43": {
+     "esquina": true,
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) + OpenStreetMap (vías 1102524193, 61277412, 35772671): la calle empieza en el mismo cruce que une la anterior y la siguiente de la lista"
+    }
+   }
+  },
   "salida": {
    "punto": [
     36.7256285,
@@ -20580,9 +20735,9 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "22 m entre «Gaona» y «Plazuela Santísimo Cristo de la Sangre»"
   ],
-  "ms_graphhopper": 108,
-  "largo_m": 3709,
-  "ms_total": 624
+  "ms_graphhopper": 116,
+  "largo_m": 3718,
+  "ms_total": 504
  },
  "prendimiento-malaga": {
   "id": "prendimiento-malaga",
@@ -20592,7 +20747,34 @@
    "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
    "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:00",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Miguel Bueno Lara, Alameda de Capuchinos, Plaza de Capuchinos, Capuchinos, Cruz del Molinillo»",
+     "cambios": "puntos de entrada en Alameda de Capuchinos, Plaza de Capuchinos, Calle Capuchinos y Cruz del Molinillo (filas 5-8), tomados del trazado publicado: el nombre «Capuchinos» abarca cuatro calles y el trazado zigzagueaba por las laterales"
+    }
+   ],
+   "actualizado": "2026-10-26 14:00",
+   "puntos": {
+    "4": [
+     36.7302864,
+     -4.4196243
+    ],
+    "5": [
+     36.7292823,
+     -4.4209524
+    ],
+    "6": [
+     36.7287247,
+     -4.4213308
+    ],
+    "7": [
+     36.7271968,
+     -4.4225077
+    ]
+   }
+  },
   "salida": {
    "punto": [
     36.7290197,
@@ -20694,7 +20876,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 5,
@@ -20726,7 +20908,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 7,
@@ -20743,7 +20925,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 8,
@@ -21138,9 +21320,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 73,
-  "largo_m": 4575,
-  "ms_total": 594
+  "ms_graphhopper": 86,
+  "largo_m": 4560,
+  "ms_total": 490
  },
  "expiracion-malaga": {
   "id": "expiracion-malaga",
@@ -21734,9 +21916,9 @@
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 97,
-  "largo_m": 4888,
-  "ms_total": 452
+  "ms_graphhopper": 139,
+  "largo_m": 4902,
+  "ms_total": 559
  },
  "esperanza-malaga": {
   "id": "esperanza-malaga",
@@ -22293,9 +22475,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 76,
-  "largo_m": 2987,
-  "ms_total": 425
+  "ms_graphhopper": 90,
+  "largo_m": 3017,
+  "ms_total": 481
  },
  "gitanos-malaga": {
   "id": "gitanos-malaga",
@@ -22710,9 +22892,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 97,
-  "largo_m": 3401,
-  "ms_total": 477
+  "ms_graphhopper": 104,
+  "largo_m": 3413,
+  "ms_total": 560
  },
  "resucitado-malaga": {
   "id": "resucitado-malaga",
@@ -23020,8 +23202,8 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 84,
-  "largo_m": 2280,
-  "ms_total": 239
+  "ms_graphhopper": 86,
+  "largo_m": 2290,
+  "ms_total": 281
  }
 }

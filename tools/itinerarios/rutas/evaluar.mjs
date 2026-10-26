@@ -22,6 +22,7 @@ export function evaluador(c) {
 
   return function evaluar(id, traza) {
     const L = LISTAS[id], calles = L.calles, cat = catDe(L);
+    const corr = C.leerCorrecciones()[id] || {};
     const geo = [...traza.ida, ...traza.regreso.slice(1)].map((p) => X(...p)).filter((p, i, A) => !i || d2(p, A[i - 1]) > 0.5);
     // muestreo cada 4 m: qué calles con nombre hay debajo
     const muestras = []; let acc = 0;
@@ -38,7 +39,10 @@ export function evaluador(c) {
       if (L.hitos.has(i) || MARCA.test(s) || CATEDRAL.test(s)) continue;
       const k = claveTok(t);
       const enOSM = [...largoOSM.keys()].find((cc) => igual(cc, k));
-      if (enOSM) { const umbral = Math.min(15, 0.5 * largoOSM.get(enOSM)); const rs = rachas.filter((r) => igual(r.cl, k)); const m = rs.reduce((a, r) => a + r.m, 0); evals.push({ i, lugar: t, cl: enOSM, ok: m >= umbral, metros: Math.round(m) }); continue; }
+      // corrección «esquina» (con fuente): la lista nombra la calle porque el cortejo pasa por su esquina; basta con tocarla
+      // (cuenta en orden como un punto, porque no hay tramo que ordenar)
+      const esq = !!corr.calles?.[i]?.esquina;
+      if (enOSM) { const umbral = Math.min(15, 0.5 * largoOSM.get(enOSM)); const rs = rachas.filter((r) => igual(r.cl, k)); const m = rs.reduce((a, r) => a + r.m, 0); evals.push({ i, lugar: t, cl: enOSM, ok: m >= umbral || (esq && m > 0), metros: Math.round(m), ...(esq ? { punto: true, esquina: true } : {}) }); continue; }
       const al = ALIAS['@' + t]; const P = al?.startsWith('geo:') ? al.slice(4).split(',').map(Number) : NOM[t] ? [NOM[t].lat, NOM[t].lon] : null;
       if (P) { const q = X(...P); const dmin = Math.min(...geo.map((g, j) => (j ? dSeg(q, geo[j - 1], g) : Infinity))); evals.push({ i, lugar: t, punto: true, ok: dmin < 25, metros: null, dist_m: Math.round(dmin) }); continue; }
       evals.push({ i, lugar: t, sin_dato: true });
@@ -65,7 +69,7 @@ export function evaluador(c) {
     const mLista = muestras.reduce((a, s) => a + ([...s.cl].some((cc) => clLista.some((k) => igual(cc, k))) ? s.paso : 0), 0);
     return {
       largo_m: Math.round(largo), comprobables: comprobables.length, sin_dato: evals.filter((e) => e.sin_dato).map((e) => e.lugar),
-      recorridas: comprobables.filter((e) => e.ok).length, en_orden: lcs[A.length][B.length] + puntosOk, no_recorridas: comprobables.filter((e) => !e.ok).map((e) => e.lugar + (e.punto ? ` (punto, a ${e.dist_m} m)` : ` (${e.metros} m)`)),
+      recorridas: comprobables.filter((e) => e.ok).length, en_orden: lcs[A.length][B.length] + puntosOk, no_recorridas: comprobables.filter((e) => !e.ok).map((e) => e.lugar + (e.punto && !e.esquina ? ` (punto, a ${e.dist_m} m)` : ` (${e.metros} m)`)),
       salida_m: sS ? dSede(sS, geo[0]) : null, entrada_m: sE ? dSede(sE, geo.at(-1)) : null, sede_salida: sS?.como || null, sede_entrada: sE?.como || null,
       rectas_150: rectas, tramo_max_m: Math.round(tramoMax), retrocesos: retro, donde_retrocesos: dondeRetro,
       pct_en_calles_lista: largo ? Math.round(100 * mLista / largo) : 0,

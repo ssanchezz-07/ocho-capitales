@@ -2,7 +2,21 @@
 
 _Órdenes: `ORDENES-RUTAS-METODO-NUEVO.md` (Málaga primero, con el código). Herramientas en `tools/itinerarios/rutas/` (ver su `README.md`)._
 
-**Estado (2026-10-26): hecho.** Las 45 trazadas con el método nuevo y comparadas con lo publicado. **38 pasan al nuevo y 7 se quedan como estaban.**
+**Estado (2026-10-26, tarde): en curso, para dejar Málaga al 100 %.** Hay **43 de 45 con el método nuevo**. Faltan **Lágrimas y Favores y Monte Calvario**, a la espera de fuentes. Siguen pendientes los huecos de la lista con su fuente o marcados como «estimados», los lugares sin calle en OSM y la revisión independiente.
+
+Corregido en esta tanda, cada cosa con su fuente en `tools/itinerarios/rutas/correcciones-malaga.json`:
+- **Pasión:** la Plaza de los Mártires y la Plaza Jesús de la Pasión, sin picos y sin retrocesos.
+- **El Rico y Servitas:** la Plaza Jesús El Rico, Álamos y Muro de San Julián son esquinas en OSM; lo publicado las «recorría» con picos de ida y vuelta. En la Plaza del Obispo, punto de paso.
+- **Prendimiento y Descendimiento:** puntos de entrada en Capuchinos y en el Paseo de Reding. Antes se iban por calles paralelas. La «recta» de Descendimiento era un falso positivo en una avenida ancha.
+- **Dulce Nombre:** «Tribuna Principal Marqués de Larios» estaba pegado por un salto de línea del PDF. Se parte en `lista-malaga.mjs`.
+- **Puertas de OSM con la dirección exacta:** Estudiantes (Calle Alcazabilla 3) y Humildad y Paciencia (Plaza María Santísima de Dolores 1).
+- **Cambios en el código:**
+  - el trazado empieza y acaba en la puerta misma;
+  - opción `esquina` en el evaluador;
+  - opción `vias` en el emparejador.
+- **Dolores del Puente:** sale idéntico en tres ejecuciones seguidas (mismo hash). Es determinista.
+
+**Estado anterior (2026-10-26, mañana):** las 45 trazadas con el método nuevo y comparadas con lo publicado; 38 pasaron al nuevo y 7 se quedaron como estaban.
 
 ## Resultado
 Evaluador común sobre las 45 (lo publicado frente al nuevo):

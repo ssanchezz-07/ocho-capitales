@@ -10,10 +10,23 @@ import { RUTAS, ITI, fPublicado, sn } from './comun.mjs';
 const P = JSON.parse(fs.readFileSync(fPublicado('malaga'), 'utf8'));
 const fInf = path.join(ITI, 'cache', 'malaga-reconstruccion.json');
 const INF = fs.existsSync(fInf) ? JSON.parse(fs.readFileSync(fInf, 'utf8')) : {};
+// Arreglos de lectura del PDF (con la línea del PDF como fuente). Idempotentes: solo actúan si el error sigue en la lista.
+const ARREGLOS = {
+  'dulce-nombre-malaga': { partir: { 'Tribuna Principal Marqués de Larios': ['Tribuna Principal', 'Marqués de Larios'] }, nota: 'PDF de la Agrupación 2026, Dulce Nombre: «… Plaza de la Constitución, Tribuna Principal» y en la línea siguiente «Marqués de Larios, Martínez …», sin coma por el salto de línea; la lectura los había juntado en un solo elemento.' },
+};
+function arreglar(id, calles, horas, notas) {
+  const A = ARREGLOS[id]; if (!A) return;
+  for (const [junto, partes] of Object.entries(A.partir || {})) {
+    const i = calles.indexOf(junto); if (i < 0) continue;
+    calles.splice(i, 1, ...partes);
+    for (const k of Object.keys(horas).map(Number).sort((x, y) => y - x)) if (k > i) { horas[k + partes.length - 1] = horas[k]; delete horas[k]; }
+    notas.push(A.nota);
+  }
+}
 const out = { capital: 'malaga', fuente: 'https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf', origen: 'calles_oficiales publicadas (PDF de la Agrupación 2026, limpias por reconstruir-malaga.mjs) y horas de malaga-horarios-2026.json', hermandades: {} };
 for (const [id, h] of Object.entries(P.hermandades)) {
   if (!h.calles_oficiales) continue;
-  const calles = h.calles_oficiales, horas = {}; let k = 0;
+  const calles = [...h.calles_oficiales], horas = {}; let k = 0;
   for (const p of h.tramos.paso) {
     if (!p.hora) continue;
     let i = p.rol === 'salida' ? 0 : p.rol === 'entrada' ? calles.length - 1 : calles.findIndex((t, j) => j >= k && sn(t) === sn(p.lugar));
@@ -21,6 +34,7 @@ for (const [id, h] of Object.entries(P.hermandades)) {
     horas[i] = p.hora; k = i;
   }
   const notas = [INF[id]?.salida_nazarenos, INF[id]?.torre_sur_derivada].filter(Boolean);
+  arreglar(id, calles, horas, notas);
   out.hermandades[id] = { fuente: h.fuente, calles, horas, ...(notas.length ? { notas } : {}) };
 }
 fs.mkdirSync(path.join(RUTAS, 'listas'), { recursive: true });

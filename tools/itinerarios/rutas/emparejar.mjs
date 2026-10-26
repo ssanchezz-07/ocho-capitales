@@ -43,6 +43,8 @@ export function motor(c) {
       if (c?.punto) { T.push({ ...base, tipo: 'punto', opciones: [{ nombre: t + ' (corrección)', pts: [X(...c.punto)], nodos: [null], coste: 0 }] }); continue; }
       let ops = candidatas(t);
       if (c?.via) { const iv = VIA_POR_ID.get(+c.via); const con = ops.filter((o) => o.ids.includes(+c.via)); ops = con.length ? con : iv !== undefined ? agrupar(new Map([[iv, 0]])) : ops; ops.forEach((o) => (o.coste = 0)); }
+      // «vias»: las vías exactas de OSM (ids) cuando el nombre abarca varias calles distintas («Capuchinos» = Alameda, Plaza, Calle y Carrera)
+      if (c?.vias?.length) { const m = new Map(c.vias.map((v) => [VIA_POR_ID.get(+v), 0]).filter(([iv]) => iv !== undefined)); if (m.size) ops = agrupar(m); }
       const al = ALIAS['@' + t];
       if (!ops.length && al?.startsWith('geo:')) { const [la, lo] = al.slice(4).split(',').map(Number); T.push({ ...base, tipo: 'punto', opciones: [{ nombre: t + ' (punto con fuente, alias)', pts: [X(la, lo)], nodos: [null], coste: 0 }] }); continue; }
       // Nominatim da un punto aproximado: se anota como referencia (hito), pero no obliga al trazado a pasar por él
@@ -190,6 +192,9 @@ export function motor(c) {
     const geo = [];
     for (const s of segs) { if (s.length < 2) continue; const g = await rutaTramo(s, informe); if (geo.length && d2(X(...geo.at(-1)), X(...g[0])) < 1) g.shift(); geo.push(...g); }
     informe.ms_graphhopper = Math.round(performance.now() - tGH);
+    // GraphHopper engancha la sede a la calle más cercana: el trazado empieza y acaba en la puerta misma (unos metros de la puerta a la calle)
+    if (geo.length && sedeS) { const dS = d2(X(...geo[0]), X(...sedeS.punto)); if (dS > 1.5 && dS < 60) geo.unshift(sedeS.punto); }
+    if (geo.length && sedeE) { const dE = d2(X(...geo.at(-1)), X(...sedeE.punto)); if (dE > 1.5 && dE < 60) geo.push(sedeE.punto); }
     // hitos: un elemento por cada elemento de la lista; las marcas sin geometría van al punto de la siguiente calle trazada
     const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral' }); for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
     const hitos = L.calles.map((lugar, i) => { const f = porI.get(i); return { i, lugar, tipo: f?.tipo || 'hito', tramo: f?.tramo || 'ida', punto: hitoPunto.get(i) || null }; });
