@@ -1,0 +1,870 @@
+{
+ "capital": "malaga",
+ "nombre": "Málaga",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "pollinica-malaga": {
+   "nombre": "Pollinica",
+   "templo": {
+    "nombre": "Iglesia de San Agustín",
+    "lat": 36.7212563,
+    "lon": -4.4182719,
+    "osm": "way/183817350",
+    "nombre_osm": "Iglesia de San Agustín",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/pollinica/",
+    "fuente_coordenadas": "OpenStreetMap way 183817350"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Parras 20, Málaga",
+    "lat": 36.7258912,
+    "lon": -4.4220276,
+    "osm": "node/9023249193",
+    "fuente": "https://cofradiapollinicamalaga.es/contacto/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 9023249193 con esa dirección"
+   }
+  },
+  "lagrimas-y-favores-malaga": {
+   "nombre": "Lágrimas y Favores",
+   "templo": {
+    "nombre": "Parroquia de San Juan Bautista",
+    "lat": 36.7205053,
+    "lon": -4.4233662,
+    "osm": "way/373208280",
+    "nombre_osm": "Iglesia de San Juan",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/",
+    "fuente_coordenadas": "OpenStreetMap way 373208280"
+   },
+   "casa_hermandad": null
+  },
+  "dulce-nombre-malaga": {
+   "nombre": "Dulce Nombre",
+   "templo": {
+    "nombre": "Parroquia de la Divina Pastora y Santa Teresa",
+    "lat": 36.7294132,
+    "lon": -4.421908,
+    "osm": "way/488217908",
+    "nombre_osm": "Parroquía Divina Pastora y Santa Teresa",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dulce-nombre/",
+    "fuente_coordenadas": "OpenStreetMap way 488217908"
+   },
+   "casa_hermandad": null
+  },
+  "salutacion-malaga": {
+   "nombre": "Salutación",
+   "templo": {
+    "nombre": "Parroquia de la Santa Cruz y San Felipe Neri",
+    "lat": 36.7254951,
+    "lon": -4.4213442,
+    "osm": "way/191983609",
+    "nombre_osm": "Iglesia de San Felipe Neri",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/salutacion/",
+    "fuente_coordenadas": "OpenStreetMap way 191983609"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Cabello 21, Málaga",
+    "lat": 36.7255342,
+    "lon": -4.421501,
+    "osm": "node/6057280363",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-13o-hito-parroquia-de-san-felipe-neri/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 6057280363 con esa dirección"
+   }
+  },
+  "humildad-malaga": {
+   "nombre": "Humildad",
+   "templo": {
+    "nombre": "Basílica y Real Santuario de Santa María de la Victoria",
+    "lat": 36.7291463,
+    "lon": -4.4130506,
+    "osm": "way/243047263",
+    "nombre_osm": "Basílica y Santuario de Santa María de la Victoria",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/humildad/",
+    "fuente_coordenadas": "OpenStreetMap way 243047263"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Agua 4, Málaga",
+    "lat": 36.7258053,
+    "lon": -4.4144315,
+    "osm": "node/5768988967",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-9o-hito-casa-hermandad-de-la-humildad/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 5768988967 con esa dirección"
+   }
+  },
+  "salud-malaga": {
+   "nombre": "Salud",
+   "templo": {
+    "nombre": "Parroquia de San Pablo",
+    "lat": 36.7228487,
+    "lon": -4.4278427,
+    "osm": "way/429677461",
+    "nombre_osm": "Parroquia de San Pablo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/salud/",
+    "fuente_coordenadas": "OpenStreetMap way 429677461"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Trinidad 5, Málaga",
+    "lat": 36.722919,
+    "lon": -4.4263607,
+    "osm": "node/9373347537",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-7-casa-hermandad-de-la-salud/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 9373347537 con esa dirección"
+   }
+  },
+  "humildad-y-paciencia-malaga": {
+   "nombre": "Humildad y Paciencia",
+   "templo": {
+    "nombre": "Parroquia de San Vicente de Paúl",
+    "lat": 36.7086748,
+    "lon": -4.4434048,
+    "osm": "way/780876932",
+    "nombre_osm": "Parroquia San Vicente de Paul",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/",
+    "fuente_coordenadas": "OpenStreetMap way 780876932"
+   },
+   "casa_hermandad": {
+    "dir": "Plazuela María Santísima de Dolores y Esperanza 1, Málaga",
+    "lat": 36.7087845,
+    "lon": -4.4422065,
+    "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741",
+    "fuente_coordenadas": "punto dado por la fuente"
+   }
+  },
+  "huerto-malaga": {
+   "nombre": "Huerto",
+   "templo": {
+    "nombre": "Parroquia de los Santos Mártires Ciriaco y Paula",
+    "lat": 36.7221175,
+    "lon": -4.4223688,
+    "osm": "way/891447747",
+    "nombre_osm": "Iglesia de los Santos Martires",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/huerto/",
+    "fuente_coordenadas": "OpenStreetMap way 891447747"
+   },
+   "casa_hermandad": {
+    "dir": "Plazuela Virgen de la Concepción 1, Málaga",
+    "lat": 36.7212541,
+    "lon": -4.4261295,
+    "osm": "node/8857051370",
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8857051370 con esa dirección"
+   }
+  },
+  "prendimiento-malaga": {
+   "nombre": "Prendimiento",
+   "templo": {
+    "nombre": "Parroquia de la Divina Pastora y Santa Teresa",
+    "lat": 36.7294132,
+    "lon": -4.421908,
+    "osm": "way/488217908",
+    "nombre_osm": "Parroquía Divina Pastora y Santa Teresa",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/prendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 488217908"
+   },
+   "casa_hermandad": {
+    "dir": "Calle San Millán 23, Málaga",
+    "lat": 36.7290197,
+    "lon": -4.4199154,
+    "osm": "node/8616988639",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-6o-hito-casa-hermandad-del-prendimiento/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8616988639 con esa dirección"
+   }
+  },
+  "crucifixion-malaga": {
+   "nombre": "Crucifixión",
+   "templo": {
+    "nombre": "Parroquia del Buen Pastor",
+    "lat": 36.7269176,
+    "lon": -4.4187268,
+    "osm": "way/183819208",
+    "nombre_osm": "Parroquia del Buen Pastor",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/crucifixion/",
+    "fuente_coordenadas": "OpenStreetMap way 183819208"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Diego de Siloé 8, Málaga",
+    "lat": 36.726697,
+    "lon": -4.4182231,
+    "osm": "node/8959307503",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-8o-hito-casa-hermandad-de-crucifixion/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8959307503 con esa dirección"
+   }
+  },
+  "gitanos-malaga": {
+   "nombre": "Gitanos",
+   "templo": {
+    "nombre": "Parroquia de los Santos Mártires Ciriaco y Paula",
+    "lat": 36.7221175,
+    "lon": -4.4223688,
+    "osm": "way/891447747",
+    "nombre_osm": "Iglesia de los Santos Martires",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/columna-gitanos/",
+    "fuente_coordenadas": "OpenStreetMap way 891447747"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Frailes 15, Málaga",
+    "lat": 36.725291,
+    "lon": -4.4184151,
+    "osm": "node/8499971228",
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8499971228 con esa dirección"
+   }
+  },
+  "dolores-del-puente-malaga": {
+   "nombre": "Dolores del Puente",
+   "templo": {
+    "nombre": "Parroquia de San Carlos y Santo Domingo de Guzmán",
+    "lat": 36.719553,
+    "lon": -4.4260547,
+    "osm": "way/890640217",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dolores-del-puente/",
+    "fuente_coordenadas": "OpenStreetMap way 890640217"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "casa hermandad «Plaza de la Religiosa Filipense Dolores Márquez 1, Málaga»: dirección sin situar en OSM"
+   ]
+  },
+  "pasion-malaga": {
+   "nombre": "Pasión",
+   "templo": {
+    "nombre": "Parroquia de los Santos Mártires Ciriaco y Paula",
+    "lat": 36.7221175,
+    "lon": -4.4223688,
+    "osm": "way/891447747",
+    "nombre_osm": "Iglesia de los Santos Martires",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/pasion/",
+    "fuente_coordenadas": "OpenStreetMap way 891447747"
+   },
+   "casa_hermandad": null
+  },
+  "cautivo-malaga": {
+   "nombre": "Cautivo",
+   "templo": {
+    "nombre": "Parroquia de San Pablo",
+    "lat": 36.7228487,
+    "lon": -4.4278427,
+    "osm": "way/429677461",
+    "nombre_osm": "Parroquia de San Pablo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/cautivo/",
+    "fuente_coordenadas": "OpenStreetMap way 429677461"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Trinidad 95, Málaga",
+    "lat": 36.7243536,
+    "lon": -4.4310951,
+    "osm": "node/8575809628",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-3-casa-hermandad-del-cautivo/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8575809628 con esa dirección"
+   }
+  },
+  "estudiantes-malaga": {
+   "nombre": "Estudiantes",
+   "templo": {
+    "nombre": "Iglesia del Santo Cristo de la Salud",
+    "lat": 36.7214316,
+    "lon": -4.4225918,
+    "osm": "way/900776867",
+    "nombre_osm": "Iglesia del Santo Cristo de la Salud",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/",
+    "fuente_coordenadas": "OpenStreetMap way 900776867"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Alcazabilla 3, Málaga",
+    "lat": 36.720761,
+    "lon": -4.417485,
+    "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)",
+    "fuente_coordenadas": "punto dado por la fuente"
+   }
+  },
+  "rocio-malaga": {
+   "nombre": "Rocío",
+   "templo": {
+    "nombre": "Parroquia de San Lázaro",
+    "lat": 36.7268411,
+    "lon": -4.4134662,
+    "osm": "way/805973233",
+    "nombre_osm": "Iglesia San Lázaro",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/rocio/",
+    "fuente_coordenadas": "OpenStreetMap way 805973233"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Circo 3, Málaga",
+    "lat": 36.7274486,
+    "lon": -4.4151547,
+    "osm": "node/8489125036",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-4o-hito-casa-hermandad-del-rocio/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8489125036 con esa dirección"
+   }
+  },
+  "penas-malaga": {
+   "nombre": "Penas",
+   "templo": {
+    "nombre": "Oratorio de Santa María Reina y Madre",
+    "lat": 36.72223,
+    "lon": -4.42421,
+    "osm": "way/375503769",
+    "nombre_osm": "Iglesia de Santa María Reina y Madre",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/penas/",
+    "fuente_coordenadas": "OpenStreetMap way 375503769; el Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) da como salida «Oratorio de Santa María Reina y Madre»"
+   },
+   "casa_hermandad": null
+  },
+  "nueva-esperanza-malaga": {
+   "nombre": "Nueva Esperanza",
+   "templo": {
+    "nombre": "Parroquia de Santa Ana y San Joaquín",
+    "lat": 36.7252113,
+    "lon": -4.4445156,
+    "osm": "way/901297482",
+    "nombre_osm": "Iglesia de Santa Ana y San Joaquín",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/nueva-esperanza/",
+    "fuente_coordenadas": "OpenStreetMap way 901297482"
+   },
+   "casa_hermandad": {
+    "dir": "Camino de los Castillejos, Málaga",
+    "lat": 36.7255403,
+    "lon": -4.4451487,
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   }
+  },
+  "humillacion-y-estrella-malaga": {
+   "nombre": "Humillación y Estrella",
+   "templo": {
+    "nombre": "Parroquia de San Carlos y Santo Domingo de Guzmán",
+    "lat": 36.719553,
+    "lon": -4.4260547,
+    "osm": "way/890640217",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/estrella/",
+    "fuente_coordenadas": "OpenStreetMap way 890640217"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Cañaveral 2, Málaga",
+    "lat": 36.7211138,
+    "lon": -4.4262212,
+    "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-9-casas-de-hermandad-de-la-humillacion-y-del-huerto/",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   }
+  },
+  "rescate-malaga": {
+   "nombre": "Rescate",
+   "templo": null,
+   "casa_hermandad": {
+    "dir": "Calle Agua 15, Málaga",
+    "lat": 36.7256774,
+    "lon": -4.4139268,
+    "osm": "node/7538326558",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-8o-hito-casa-hermandad-del-rescate/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 7538326558 con esa dirección"
+   },
+   "falta": [
+    "templo «Capilla callejera en calle Agua»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "sentencia-malaga": {
+   "nombre": "Sentencia",
+   "templo": {
+    "nombre": "Parroquia de Santiago Apóstol",
+    "lat": 36.7223583,
+    "lon": -4.4175513,
+    "osm": "way/184154065",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sentencia/",
+    "fuente_coordenadas": "OpenStreetMap way 184154065"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Frailes 15, Málaga",
+    "lat": 36.725291,
+    "lon": -4.4184151,
+    "osm": "node/8499971228",
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8499971228 con esa dirección"
+   }
+  },
+  "mediadora-malaga": {
+   "nombre": "Mediadora",
+   "templo": {
+    "nombre": "Parroquia de San Patricio",
+    "lat": 36.7023448,
+    "lon": -4.438911,
+    "osm": "way/345175801",
+    "nombre_osm": "Parroquia de San Patricio",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/mediadora-de-la-salvacion/",
+    "fuente_coordenadas": "OpenStreetMap way 345175801"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Ayala 34, Málaga",
+    "lat": 36.7078566,
+    "lon": -4.4338606,
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   }
+  },
+  "salesianos-malaga": {
+   "nombre": "Salesianos",
+   "templo": null,
+   "casa_hermandad": {
+    "dir": "Calle Eduardo Domínguez Ávila 28, Málaga",
+    "lat": 36.7299685,
+    "lon": -4.4213861,
+    "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-4o-hito-casa-hermandad-de-salesianos/",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   },
+   "falta": [
+    "templo «Santuario de María Auxiliadora»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "fusionadas-malaga": {
+   "nombre": "Fusionadas",
+   "templo": {
+    "nombre": "Parroquia de San Juan Bautista",
+    "lat": 36.7205053,
+    "lon": -4.4233662,
+    "osm": "way/373208280",
+    "nombre_osm": "Iglesia de San Juan",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/",
+    "fuente_coordenadas": "OpenStreetMap way 373208280"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "la casa hermandad está en el mismo edificio que el templo"
+   ]
+  },
+  "paloma-malaga": {
+   "nombre": "Paloma",
+   "templo": {
+    "nombre": "Capilla de la Paloma",
+    "lat": 36.7239231,
+    "lon": -4.4228771,
+    "fuente": "https://agrupaciondecofradias.com/hermandades/paloma/",
+    "fuente_coordenadas": "aproximado: Nominatim de «Plaza de San Francisco», la dirección de la Guía Málaga Nazarena de la Agrupación; la capilla no está en OpenStreetMap"
+   },
+   "casa_hermandad": {
+    "dir": "Plaza de San Francisco, Málaga",
+    "lat": 36.7239231,
+    "lon": -4.4228771,
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   }
+  },
+  "el-rico-malaga": {
+   "nombre": "El Rico",
+   "templo": {
+    "nombre": "Parroquia de Santiago Apóstol",
+    "lat": 36.7223583,
+    "lon": -4.4175513,
+    "osm": "way/184154065",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/el-rico/",
+    "fuente_coordenadas": "OpenStreetMap way 184154065"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Victoria 12, Málaga",
+    "lat": 36.7234189,
+    "lon": -4.4164204,
+    "osm": "node/5267835421",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 5267835421 con esa dirección"
+   }
+  },
+  "sangre-malaga": {
+   "nombre": "Sangre",
+   "templo": {
+    "nombre": "Parroquia de la Santa Cruz y San Felipe Neri",
+    "lat": 36.7254951,
+    "lon": -4.4213442,
+    "osm": "way/191983609",
+    "nombre_osm": "Iglesia de San Felipe Neri",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sangre/",
+    "fuente_coordenadas": "OpenStreetMap way 191983609"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Dos Aceras 10, Málaga",
+    "lat": 36.724714,
+    "lon": -4.420694,
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sangre/ (casa hermandad en calle Dos Aceras, 10)",
+    "fuente_coordenadas": "punto dado por la fuente"
+   }
+  },
+  "expiracion-malaga": {
+   "nombre": "Expiración",
+   "templo": {
+    "nombre": "Parroquia de San Pedro",
+    "lat": 36.7161177,
+    "lon": -4.4282047,
+    "osm": "way/764352016",
+    "nombre_osm": "Iglesia de San Pedro",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/expiracion/",
+    "fuente_coordenadas": "OpenStreetMap way 764352016"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "la casa hermandad está en el mismo edificio que el templo"
+   ]
+  },
+  "sagrada-cena-malaga": {
+   "nombre": "Sagrada Cena",
+   "templo": {
+    "nombre": "Parroquia de los Santos Mártires Ciriaco y Paula",
+    "lat": 36.7221175,
+    "lon": -4.4223688,
+    "osm": "way/891447747",
+    "nombre_osm": "Iglesia de los Santos Martires",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sagrada-cena/",
+    "fuente_coordenadas": "OpenStreetMap way 891447747"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Compañía 44, Málaga",
+    "lat": 36.7215435,
+    "lon": -4.4246502,
+    "osm": "node/8416562052",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-6-centro-martires-8o-hito-casa-hermandad-de-la-sagrada-cena/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8416562052 con esa dirección"
+   }
+  },
+  "vineros-malaga": {
+   "nombre": "Viñeros",
+   "templo": null,
+   "casa_hermandad": {
+    "dir": "Plaza de los Viñeros 5, Málaga",
+    "lat": 36.7233565,
+    "lon": -4.4241653,
+    "osm": "node/8506985436",
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8506985436 con esa dirección"
+   },
+   "falta": [
+    "templo «Iglesia de Santa Catalina» (sede según la ficha): no está en OSM. Ojo: en 2026 salió de la Iglesia de la Aurora y Divina Providencia (PDF de la Agrupación); falta una fuente de su sede actual"
+   ]
+  },
+  "santa-cruz-malaga": {
+   "nombre": "Santa Cruz",
+   "templo": {
+    "nombre": "Parroquia de la Santa Cruz y San Felipe Neri",
+    "lat": 36.7254951,
+    "lon": -4.4213442,
+    "osm": "way/191983609",
+    "nombre_osm": "Iglesia de San Felipe Neri",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/santa-cruz/",
+    "fuente_coordenadas": "OpenStreetMap way 191983609"
+   },
+   "casa_hermandad": null
+  },
+  "vera-cruz-malaga": {
+   "nombre": "Vera+Cruz",
+   "templo": {
+    "nombre": "Parroquia de San Juan Bautista",
+    "lat": 36.7205053,
+    "lon": -4.4233662,
+    "osm": "way/373208280",
+    "nombre_osm": "Iglesia de San Juan",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/",
+    "fuente_coordenadas": "OpenStreetMap way 373208280"
+   },
+   "casa_hermandad": null
+  },
+  "mena-malaga": {
+   "nombre": "Mena",
+   "templo": {
+    "nombre": "Parroquia de San Carlos y Santo Domingo de Guzmán",
+    "lat": 36.719553,
+    "lon": -4.4260547,
+    "osm": "way/890640217",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/mena/",
+    "fuente_coordenadas": "OpenStreetMap way 890640217"
+   },
+   "casa_hermandad": {
+    "dir": "Pasillo de Santo Domingo 16, Málaga",
+    "lat": 36.7190612,
+    "lon": -4.4267719,
+    "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-6-casa-hermandad-de-mena/",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   }
+  },
+  "zamarrilla-malaga": {
+   "nombre": "Zamarrilla",
+   "templo": {
+    "nombre": "Ermita de Zamarrilla",
+    "lat": 36.7213651,
+    "lon": -4.4322415,
+    "osm": "way/176403346",
+    "nombre_osm": "Ermita de Zamarrilla",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/zamarrilla/",
+    "fuente_coordenadas": "OpenStreetMap way 176403346"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Martínez Maldonado 5, Málaga",
+    "lat": 36.7213754,
+    "lon": -4.4319464,
+    "osm": "node/8839274104",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-2-casa-hermandad-de-zamarrilla/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8839274104 con esa dirección"
+   }
+  },
+  "misericordia-malaga": {
+   "nombre": "Misericordia",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora del Carmen",
+    "lat": 36.7136,
+    "lon": -4.42954,
+    "osm": "way/776950399",
+    "nombre_osm": "Iglesia de El Carmen",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/misericordia/",
+    "fuente_coordenadas": "OpenStreetMap way 776950399 (Iglesia de El Carmen, El Perchel); la otra «Capilla Virgen del Carmen» de OSM está en Calle Garcerán, fuera del Perchel"
+   },
+   "casa_hermandad": {
+    "dir": "Calle La Serna 1, Málaga",
+    "lat": 36.7138514,
+    "lon": -4.4293298,
+    "osm": "node/6851271065",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-1-hito-2-casa-hermandad-de-la-misericordia/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 6851271065 con esa dirección"
+   }
+  },
+  "esperanza-malaga": {
+   "nombre": "Esperanza",
+   "templo": {
+    "nombre": "Basílica menor de la Esperanza",
+    "lat": 36.7180034,
+    "lon": -4.4267413,
+    "osm": "way/234937973",
+    "nombre_osm": "Iglesia de la Esperanza",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/esperanza/",
+    "fuente_coordenadas": "OpenStreetMap way 234937973"
+   },
+   "casa_hermandad": null
+  },
+  "monte-calvario-malaga": {
+   "nombre": "Monte Calvario",
+   "templo": {
+    "nombre": "Ermita del Monte Calvario",
+    "lat": 36.73129,
+    "lon": -4.41184,
+    "osm": "way/931988826",
+    "nombre_osm": "Ermita del Calvario y Vía Crucis",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/monte-calvario/",
+    "fuente_coordenadas": "OpenStreetMap way 931988826; el Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) sitúa ahí la salida («(Salida 15:00) Vía Dolorosa del Calvario»)"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Fernando el Católico 28, Málaga",
+    "lat": 36.7297869,
+    "lon": -4.4139298,
+    "osm": "node/4861669863",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-2o-hito-casa-hermandad-del-monte-calvario/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 4861669863 con esa dirección"
+   }
+  },
+  "descendimiento-malaga": {
+   "nombre": "Descendimiento",
+   "templo": null,
+   "casa_hermandad": {
+    "dir": "Calle Manuel Martín Estévez 6, Málaga",
+    "lat": 36.7201585,
+    "lon": -4.411439,
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "Nominatim (dirección), aproximado"
+   },
+   "falta": [
+    "templo «Capilla del Hospital Noble»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "dolores-de-san-juan-malaga": {
+   "nombre": "Dolores de San Juan",
+   "templo": {
+    "nombre": "Parroquia de San Juan Bautista",
+    "lat": 36.7205053,
+    "lon": -4.4233662,
+    "osm": "way/373208280",
+    "nombre_osm": "Iglesia de San Juan",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/dolores-de-san-juan/",
+    "fuente_coordenadas": "OpenStreetMap way 373208280"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "casa hermandad «Pasaje Nuestra Señora de los Dolores 6, Málaga»: dirección sin situar en OSM"
+   ]
+  },
+  "amor-malaga": {
+   "nombre": "Amor",
+   "templo": {
+    "nombre": "Basílica de Santa María de la Victoria",
+    "lat": 36.7291463,
+    "lon": -4.4130506,
+    "osm": "way/243047263",
+    "nombre_osm": "Basílica y Santuario de Santa María de la Victoria",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/amor/",
+    "fuente_coordenadas": "OpenStreetMap way 243047263"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Fernando el Católico 40, Málaga",
+    "lat": 36.7304981,
+    "lon": -4.414151,
+    "osm": "node/4863094954",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-3o-hito-casa-hermandad-del-amor-y-la-caridad/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 4863094954 con esa dirección"
+   }
+  },
+  "traslado-malaga": {
+   "nombre": "Traslado",
+   "templo": {
+    "nombre": "Parroquia de San Pablo",
+    "lat": 36.7228487,
+    "lon": -4.4278427,
+    "osm": "way/429677461",
+    "nombre_osm": "Parroquia de San Pablo",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/santo-traslado/",
+    "fuente_coordenadas": "OpenStreetMap way 429677461"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Trinidad 72, Málaga",
+    "lat": 36.72366,
+    "lon": -4.4294606,
+    "osm": "node/9363729474",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 9363729474 con esa dirección"
+   }
+  },
+  "piedad-malaga": {
+   "nombre": "Piedad",
+   "templo": {
+    "nombre": "Capilla de la Piedad",
+    "lat": 36.7270641,
+    "lon": -4.4230341,
+    "osm": "way/491894228",
+    "nombre_osm": "Capilla de Nuestra Señora de la Piedad",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/piedad/",
+    "fuente_coordenadas": "OpenStreetMap way 491894228"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Alderete 3, Málaga",
+    "lat": 36.7272053,
+    "lon": -4.4229889,
+    "osm": "node/8449049132",
+    "fuente": "https://agrupaciondecofradias.com/itinerario-3-capuchinos-molinillo-11o-hito-casa-hermandad-de-la-piedad/",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8449049132 con esa dirección"
+   }
+  },
+  "santo-sepulcro-malaga": {
+   "nombre": "Santo Sepulcro",
+   "templo": {
+    "nombre": "Capilla de Santa Ana de la Abadía del Císter",
+    "lat": 36.7208379,
+    "lon": -4.4179209,
+    "osm": "way/851897939",
+    "nombre_osm": "Abadía de Santa Ana",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/sepulcro/",
+    "fuente_coordenadas": "OpenStreetMap way 851897939"
+   },
+   "casa_hermandad": {
+    "dir": "Calle Alcazabilla 5, Málaga",
+    "lat": 36.7209693,
+    "lon": -4.4173681,
+    "osm": "node/8283205352",
+    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2018/02/Gu%C3%ADa-Malaga-Nazarena-Itinerarios-Urbanos-Cofrades.pdf",
+    "fuente_coordenadas": "OpenStreetMap, puerta 8283205352 con esa dirección"
+   }
+  },
+  "servitas-malaga": {
+   "nombre": "Servitas",
+   "templo": {
+    "nombre": "Parroquia de la Santa Cruz y San Felipe Neri",
+    "lat": 36.7254951,
+    "lon": -4.4213442,
+    "osm": "way/191983609",
+    "nombre_osm": "Iglesia de San Felipe Neri",
+    "fuente": "https://agrupaciondecofradias.com/hermandades/servitas/",
+    "fuente_coordenadas": "OpenStreetMap way 191983609"
+   },
+   "casa_hermandad": null
+  },
+  "resucitado-malaga": {
+   "nombre": "Resucitado",
+   "templo": {
+    "nombre": "Iglesia de San Julián",
+    "lat": 36.723413,
+    "lon": -4.422658,
+    "osm": "node/5267734993",
+    "fuente": "https://agrupaciondecofradias.com/titulares/",
+    "fuente_coordenadas": "puerta de OSM nodo 5267734993 (Calle Nosquera 17), la de la salida del Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); el edificio no está en OSM"
+   },
+   "casa_hermandad": null
+  },
+  "mutilado-clemencia-malaga": {
+   "nombre": "Mutilado (Clemencia)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Plaza de San Ignacio de Loyola (Centro)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "desamparados-malaga": {
+   "nombre": "Desamparados",
+   "templo": {
+    "nombre": "Parroquia de Santa María Goretti",
+    "lat": 36.7120843,
+    "lon": -4.4487312,
+    "osm": "way/643268899",
+    "nombre_osm": "Parroquia de Santa María Goretti",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/",
+    "fuente_coordenadas": "OpenStreetMap way 643268899"
+   },
+   "casa_hermandad": null
+  },
+  "verdad-y-sagrario-malaga": {
+   "nombre": "Verdad y Sagrario",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Carranque (calle Virgen del Rocío)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "luz-y-mar-malaga": {
+   "nombre": "Luz y Mar",
+   "templo": {
+    "nombre": "Parroquia Virgen del Camino",
+    "lat": 36.7020592,
+    "lon": -4.4497204,
+    "osm": "way/581379526",
+    "nombre_osm": "Parroquia Virgen del Camino",
+    "fuente": "https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/",
+    "fuente_coordenadas": "OpenStreetMap way 581379526"
+   },
+   "casa_hermandad": null
+  },
+  "buen-camino-gamarra-malaga": {
+   "nombre": "Buen Camino (Gamarra)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Colegio Gamarra») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "medinaceli-martiricos-malaga": {
+   "nombre": "Medinaceli (Martiricos)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Calle Poeta Bernardo de la Torre (Martiricos / La Roca)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "nombre": "Dolores del Puerto de la Torre",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Casa Hermandad (Puerto de la Torre)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "dolores-de-churriana-malaga": {
+   "nombre": "Dolores de Churriana",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Antonio Abad» (Churriana): Churriana queda fuera del callejero de OSM en caché, y la «Parroquia San Antonio» que casaba por nombre está en la ciudad, a unos 7 km"
+   ]
+  }
+ }
+}

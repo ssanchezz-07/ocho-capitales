@@ -1,0 +1,63 @@
+{
+ "_leeme": "Correcciones a mano de site/data/sedes/malaga.json, cada una con su fuente (sedes.mjs las aplica tal cual). templo/casa_hermandad: null = sin dato con fuente.",
+ "penas-malaga": {
+  "templo": {
+   "nombre": "Oratorio de Santa María Reina y Madre",
+   "lat": 36.72223,
+   "lon": -4.42421,
+   "osm": "way/375503769",
+   "nombre_osm": "Iglesia de Santa María Reina y Madre",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/penas/",
+   "fuente_coordenadas": "OpenStreetMap way 375503769; el Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) da como salida «Oratorio de Santa María Reina y Madre»"
+  }
+ },
+ "misericordia-malaga": {
+  "templo": {
+   "nombre": "Parroquia de Nuestra Señora del Carmen",
+   "lat": 36.7136,
+   "lon": -4.42954,
+   "osm": "way/776950399",
+   "nombre_osm": "Iglesia de El Carmen",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/misericordia/",
+   "fuente_coordenadas": "OpenStreetMap way 776950399 (Iglesia de El Carmen, El Perchel); la otra «Capilla Virgen del Carmen» de OSM está en Calle Garcerán, fuera del Perchel"
+  }
+ },
+ "monte-calvario-malaga": {
+  "templo": {
+   "nombre": "Ermita del Monte Calvario",
+   "lat": 36.73129,
+   "lon": -4.41184,
+   "osm": "way/931988826",
+   "nombre_osm": "Ermita del Calvario y Vía Crucis",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/monte-calvario/",
+   "fuente_coordenadas": "OpenStreetMap way 931988826; el Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf) sitúa ahí la salida («(Salida 15:00) Vía Dolorosa del Calvario»)"
+  }
+ },
+ "resucitado-malaga": {
+  "templo": {
+   "nombre": "Iglesia de San Julián",
+   "lat": 36.723413,
+   "lon": -4.422658,
+   "osm": "node/5267734993",
+   "fuente": "https://agrupaciondecofradias.com/titulares/",
+   "fuente_coordenadas": "puerta de OSM nodo 5267734993 (Calle Nosquera 17), la de la salida del Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); el edificio no está en OSM"
+  }
+ },
+ "dolores-de-churriana-malaga": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de San Antonio Abad» (Churriana): Churriana queda fuera del callejero de OSM en caché, y la «Parroquia San Antonio» que casaba por nombre está en la ciudad, a unos 7 km"
+ },
+ "vineros-malaga": {
+  "templo": null,
+  "motivo_templo": "templo «Iglesia de Santa Catalina» (sede según la ficha): no está en OSM. Ojo: en 2026 salió de la Iglesia de la Aurora y Divina Providencia (PDF de la Agrupación); falta una fuente de su sede actual"
+ },
+ "paloma-malaga": {
+  "templo": {
+   "nombre": "Capilla de la Paloma",
+   "lat": 36.7239231,
+   "lon": -4.4228771,
+   "fuente": "https://agrupaciondecofradias.com/hermandades/paloma/",
+   "fuente_coordenadas": "aproximado: Nominatim de «Plaza de San Francisco», la dirección de la Guía Málaga Nazarena de la Agrupación; la capilla no está en OpenStreetMap"
+  }
+ }
+}

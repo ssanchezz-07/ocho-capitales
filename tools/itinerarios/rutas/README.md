@@ -84,3 +84,24 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 | `probar-plano.py` | Prueba del plano con Playwright a 390 y 1440 px (`python -I probar-plano.py <capital>`) |
 | `probar-editor.py` | Prueba del editor con Playwright |
 | `salida/<capital>/` | `informe.json` y `evaluacion.json` se versionan; `trazas/`, no |
+
+## Sedes con coordenadas (`site/data/sedes/<capital>.json`, formato común de las 8 capitales)
+```json
+{
+  "capital": "malaga", "nombre": "Málaga", "actualizado": "2026-10-26", "_leeme": "…",
+  "hermandades": {
+    "<slug del portal>": {
+      "nombre": "Pasión",
+      "templo": { "nombre": "Parroquia de los Santos Mártires Ciriaco y Paula", "lat": 36.72, "lon": -4.42, "osm": "way/891447747",
+                  "nombre_osm": "Iglesia de los Santos Martires", "fuente": "<ficha oficial>", "fuente_coordenadas": "OpenStreetMap way 891447747" },
+      "casa_hermandad": { "dir": "Calle Frailes 15, Málaga", "lat": 36.72, "lon": -4.42, "osm": "node/…", "fuente": "<url>", "fuente_coordenadas": "…" },
+      "falta": ["lo que no se ha podido situar con fuente"]
+    }
+  }
+}
+```
+- `templo`: la sede canónica de la ficha del portal (`portal-cofrade/data/portal.json`, campo `sede` y su `fuente_url`), situada en el **centro de su edificio en OSM**. `null` si no hay edificio con fuente.
+- `casa_hermandad`: solo si es otro edificio; en su **puerta de OSM** con esa dirección (`casas-hermandad-<capital>.json`), o en el punto que dé la fuente.
+- `falta`: motivo de cada hueco. Sin fuente no hay punto.
+- Generar: `node sedes.mjs <capital>`. Correcciones a mano, con fuente: `sedes-<capital>-correcciones.json` (`{ "<slug>": { "templo": {…} | null, "motivo_templo"?, "casa_hermandad": {…} | null } }`).
+- El nombre se empareja por palabras significativas; si dos edificios empatan, no se elige. **Revisa siempre la lista que imprime** (en Málaga casaba una parroquia homónima a 7 km).
