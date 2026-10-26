@@ -287,8 +287,39 @@
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.appendChild(svg); mapa.appendChild(hs);
+      // Detalle (ríos y sierras de Natural Earth), recortado al contorno de Andalucía; los rótulos van encima, sin recortar
+      if (datos.detalle) {
+        var defs = el('defs', {}), clip = el('clipPath', { id: 'oc-and-clip' });
+        datos.prov.forEach(function (p) { clip.appendChild(el('path', { d: p.d })); });
+        defs.appendChild(clip);
+        var pat = el('pattern', { id: 'oc-rayado', width: '7', height: '7', patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(38)' }); pat.appendChild(el('line', { x1: '0', y1: '0', x2: '0', y2: '7', 'class': 'oc-rayado-l' })); defs.appendChild(pat);
+        var mon = el('pattern', { id: 'oc-montes', width: '14', height: '9', patternUnits: 'userSpaceOnUse' }); mon.appendChild(el('path', { d: 'M1 8L5 2.5L9 8M8 8L11 4.5L14 8', 'class': 'oc-monte-l' })); defs.appendChild(mon);
+        var luz = el('radialGradient', { id: 'oc-luz', cx: '30%', cy: '20%', r: '80%' }); luz.appendChild(el('stop', { offset: '0', 'stop-color': '#fff', 'stop-opacity': '.16' })); luz.appendChild(el('stop', { offset: '1', 'stop-color': '#fff', 'stop-opacity': '0' })); defs.appendChild(luz);
+        var bl = el('filter', { id: 'oc-difuso', x: '-20%', y: '-20%', width: '140%', height: '140%' }); bl.appendChild(el('feGaussianBlur', { stdDeviation: '7' })); defs.appendChild(bl);
+        svg.insertBefore(defs, svg.firstChild);
+        // filete de la costa y la frontera: el contorno de Andalucía con un trazo ancho y tenue, bajo las provincias
+        var filete = el('g', { 'class': 'oc-filete' }); datos.prov.forEach(function (p) { filete.appendChild(el('path', { d: p.d })); }); svg.insertBefore(filete, defs.nextSibling);
+        var det = el('g', { 'class': 'oc-detalle', 'clip-path': 'url(#oc-and-clip)' });
+        det.appendChild(el('rect', { 'class': 'oc-rayado', x: '0', y: '0', width: '1000', height: '1000' }));
+        det.appendChild(el('rect', { 'class': 'oc-luz', x: '0', y: '0', width: '1000', height: '615' }));
+        datos.detalle.sierras.forEach(function (s) { det.appendChild(el('path', { 'class': 'oc-sierra-sombra', d: s.d, transform: 'translate(5 6)' })); det.appendChild(el('path', { 'class': 'oc-sierra', d: s.d })); });
+        datos.detalle.rios.forEach(function (r) { det.appendChild(el('path', { 'class': 'oc-rio-halo', d: r.d })); det.appendChild(el('path', { 'class': 'oc-rio', d: r.d, id: 'oc-rio-' + r.n.toLowerCase().replace(/\s+/g, '-') })); });
+        svg.appendChild(det);
+        var rot = el('g', { 'class': 'oc-rotulos', 'aria-hidden': 'true' });
+        datos.detalle.sierras.forEach(function (s) { var tx = el('text', { 'class': 'oc-rot oc-rot-sierra', x: s.cx + (/Morena/.test(s.n) ? -70 : 80), y: s.cy + (/Morena/.test(s.n) ? -22 : 52) }); tx.textContent = s.n; rot.appendChild(tx); });
+        var rio = el('text', { 'class': 'oc-rot oc-rot-rio', dy: '-5' }), tp = el('textPath', { href: '#oc-rio-guadalquivir', startOffset: '40%' }); tp.textContent = 'Guadalquivir'; rio.appendChild(tp); rot.appendChild(rio);
+        [['Océano Atlántico', 120, 560], ['Mar Mediterráneo', 640, 560]].forEach(function (m) { var tx = el('text', { 'class': 'oc-rot oc-rot-mar', x: m[1], y: m[2] }); tx.textContent = m[0]; rot.appendChild(tx); });
+        svg.appendChild(rot);
+      }
       // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía)
-      datos.caps.forEach(function (c) { var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d); });
+      datos.caps.forEach(function (c) {
+        var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d);
+        // medallón con el emblema de su colgadura (variante «grabado») y nombre junto al punto
+        var e = document.createElement('span'); e.className = 'oc-emblema'; e.setAttribute('aria-hidden', 'true'); e.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%;background-image:url(' + BASE + 'assets/plates/colgadura-' + c.s + '.webp)'; e.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(e);
+        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; mapa.appendChild(n);
+      });
+      // prototipo para elegir estilo de mapa (se quita al decidir): ?mapa=grabado | ?mapa=relieve
+      var estilo = (location.search.match(/[?&]mapa=(grabado|relieve)/) || [])[1]; if (estilo) colg.setAttribute('data-mapa', estilo);
     }
     // Las banderas son enlaces a su capital (sin JavaScript funcionan así); con JavaScript, botones que bajan a su calle
     var items = $$('.oc-colg', colg).map(function (a) {
@@ -307,9 +338,11 @@
     var raf = 0, last = 0;
     function paint(s) { s.el.style.transform = 'translate3d(0,' + s.dy.x.toFixed(2) + 'px,0) rotate(' + s.rot.x.toFixed(2) + 'deg) scale(' + s.sc.x.toFixed(4) + ')'; }
     function tick(now) {
-      var dt = Math.min(0.032, (now - last) / 1000 || 0.016); last = now; var moving = false;
+      // el muelle se calcula en pasos fijos de 8 ms: con fotogramas lentos (móvil cargado, menos de 30 por segundo) un paso grande
+      // lo volvía inestable y la bandera temblaba sin parar (la escala llegaba a valores negativos)
+      var dt = Math.min(0.064, (now - last) / 1000 || 0.016); last = now; var moving = false, pasos = Math.ceil(dt / 0.008), h = dt / pasos;
       S.forEach(function (s) {
-        [s.rot, s.dy, s.sc].forEach(function (p) { p.step(dt); });
+        for (var k = 0; k < pasos; k++) [s.rot, s.dy, s.sc].forEach(function (p) { p.step(h); });
         if (s.rot.still() && s.dy.still() && s.sc.still()) { s.rot.x = s.rot.t; s.dy.x = s.dy.t; s.sc.x = s.sc.t; s.rot.v = s.dy.v = s.sc.v = 0; } else moving = true;
         paint(s);
       });

@@ -608,7 +608,7 @@ function colgaduras() {
   const datos = {
     vb: MAPA ? MAPA.viewBox : '0 0 100 60',
     prov: MAPA ? MAPA.provincias.map((p) => ({ s: p.slug, c: (CAP[p.slug] || {}).color || '#888', d: p.d })) : [],
-    caps: carrilesHilos(orden.map((c, i) => { const { x, y } = pos(c); return { s: c.slug, c: c.color, x: +x.toFixed(2), y: +y.toFixed(2), b: +((i + 0.5) * 12.5).toFixed(2) }; })),
+    caps: carrilesHilos(orden.map((c, i) => { const { x, y } = pos(c); return { s: c.slug, n: c.nombre, p: COORD[c.slug][2], c: c.color, x: +x.toFixed(2), y: +y.toFixed(2), b: +((i + 0.5) * 12.5).toFixed(2) }; })),
   };
   // «Del mapa a la calle»: al elegir una bandera, Andalucía se acerca hasta el plano de esa ciudad (assets/plano.js, se carga
   // entonces) con los cortejos donde irían a esa hora. Fechas de cada jornada de la próxima Semana Santa y año del itinerario.
@@ -620,6 +620,9 @@ function colgaduras() {
     return [c.slug, { n: c.nombre, d: u('data/calle/' + c.slug + '.json'), cap: capHref(c), calle: u('en-la-calle/' + c.slug + '/'), anio: JSON.parse(fs.readFileSync(fR, 'utf8')).anio || '' }];
   }));
   datos.plano = u('assets/plano.js') + '?v=' + HUELLA.plano;
+  // Ríos y sierras de Natural Earth (tools/generar-mapa-detalle.mjs), en la misma proyección que las provincias
+  const fDet = path.join(DIR, 'data', 'mapa-detalle.json');
+  if (fs.existsSync(fDet)) { const det = JSON.parse(fs.readFileSync(fDet, 'utf8')); datos.detalle = { rios: det.rios, sierras: det.sierras }; }
   return `<div class="oc-colgaduras" data-colgaduras>
   <ol class="oc-colg-row" aria-label="Elige tu capital">${items}</ol>
   <div class="oc-colg-map" data-colg-map></div>

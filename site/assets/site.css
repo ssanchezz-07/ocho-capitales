@@ -1874,3 +1874,48 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-c-cruz-templo { stroke: rgb(205 186 230 / .42); } /* las cruces de los templos, en lila tenue: el oro es del cortejo */
 @media (max-width: 959px) { .oc-calle.has-ficha .oc-calle-reloj { bottom: calc(var(--ficha-h, 40dvh) + 10px); } }
 .oc-calle-head .oc-title { overflow-wrap: anywhere; }
+
+/* ---------- Mapa con detalle: dos variantes para elegir (prototipo, 26-oct). Ríos y sierras: Natural Earth, dominio público ---------- */
+.oc-portada .oc-detalle, .oc-portada .oc-rotulos, .oc-portada .oc-filete, .oc-portada .oc-emblema, .oc-portada .oc-capnom { display: none; }
+.oc-portada [data-mapa] .oc-detalle, .oc-portada [data-mapa] .oc-rotulos, .oc-portada [data-mapa] .oc-filete, .oc-portada [data-mapa] .oc-capnom { display: block; }
+.oc-portada [data-mapa] .oc-detalle, .oc-portada [data-mapa] .oc-rotulos, .oc-portada [data-mapa] .oc-filete { display: inline; }
+.oc-filete path { fill: none; stroke: var(--oro); stroke-opacity: .16; stroke-width: 7px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.oc-rot { font-family: "Newsreader", Georgia, serif; font-style: italic; font-weight: 500; fill: rgb(244 239 249 / .72); text-anchor: middle; paint-order: stroke; stroke: rgb(20 8 30 / .55); stroke-width: 3px; letter-spacing: .02em; }
+.oc-rot-sierra { font-size: 19px; }
+.oc-rot-rio { font-size: 17px; text-anchor: start; fill: rgb(220 205 245 / .85); }
+.oc-rot-mar { font-size: 18px; letter-spacing: .14em; fill: rgb(244 239 249 / .42); stroke: none; }
+@media (max-width: 559px) { .oc-rot-sierra, .oc-rot-rio { display: none; } .oc-rot-mar { font-size: 24px; } }
+.oc-capnom { position: absolute; z-index: 2; transform: translate(12px, -50%); font: 400 clamp(.85rem, 1.6vw, 1.15rem)/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--marfil); text-shadow: 0 1px 2px rgb(0 0 0 / .7); pointer-events: none; white-space: nowrap; }
+.oc-capnom.is-l { transform: translate(calc(-100% - 12px), -50%); }
+.oc-capnom.is-t { transform: translate(-50%, calc(-100% - 12px)); }
+.oc-capnom.is-b { transform: translate(-50%, 12px); }
+@media (max-width: 559px) { .oc-portada [data-mapa] .oc-capnom { display: none; } }
+.oc-portada.is-ciudad .oc-capnom, .oc-portada.is-ciudad .oc-emblema { opacity: 0; transition: opacity 200ms var(--ease-out); }
+
+/* A · Grabado: rayado fino de grabado, montes dibujados como en los mapas antiguos, ríos en tinta clara y el emblema de cada colgadura en su capital */
+.oc-portada [data-mapa="grabado"] .oc-rayado { fill: url(#oc-rayado); }
+.oc-rayado-l { stroke: rgb(240 215 156 / .13); stroke-width: 1.1; }
+.oc-portada [data-mapa="grabado"] .oc-luz, .oc-portada [data-mapa="grabado"] .oc-sierra-sombra, .oc-portada [data-mapa="grabado"] .oc-rio-halo { display: none; }
+.oc-portada [data-mapa="grabado"] .oc-sierra { fill: url(#oc-montes); stroke: rgb(240 215 156 / .35); stroke-width: 1px; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
+.oc-monte-l { fill: none; stroke: rgb(240 215 156 / .7); stroke-width: 1.2; stroke-linejoin: round; }
+.oc-portada [data-mapa="grabado"] .oc-rio { fill: none; stroke: rgb(214 228 250 / .8); stroke-width: 1.5px; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.oc-portada [data-mapa="grabado"] .oc-prov2 { stroke: rgb(240 215 156 / .55); stroke-dasharray: 5 3; }
+.oc-portada [data-mapa="grabado"] .oc-emblema { display: block; position: absolute; z-index: 3; width: clamp(30px, 4.6vw, 42px); aspect-ratio: 1; margin: calc(clamp(30px, 4.6vw, 42px) / -2) 0 0 calc(clamp(30px, 4.6vw, 42px) / -2); border-radius: 50%; background-color: var(--c); background-size: 205% auto; background-position: 50% 6.5%; box-shadow: 0 0 0 2px var(--oro), 0 0 0 4px rgb(20 8 30 / .6), 0 4px 10px rgb(0 0 0 / .5); cursor: pointer; transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .oc-portada [data-mapa="grabado"] .oc-emblema:hover { transform: scale(1.12); } }
+.oc-portada [data-mapa="grabado"] .oc-punto { opacity: 0; }
+.oc-portada [data-mapa="grabado"] .oc-capnom { transform: translate(24px, -50%); }
+.oc-portada [data-mapa="grabado"] .oc-capnom.is-l { transform: translate(calc(-100% - 24px), -50%); }
+.oc-portada [data-mapa="grabado"] .oc-capnom.is-t { transform: translate(-50%, calc(-100% - 24px)); }
+.oc-portada [data-mapa="grabado"] .oc-capnom.is-b { transform: translate(-50%, 24px); }
+
+/* B · Relieve: luz suave desde el noroeste, sierras como relieve difuminado (luz y sombra) y ríos en oro con su halo */
+.oc-portada [data-mapa="relieve"] .oc-rayado { display: none; }
+.oc-portada [data-mapa="relieve"] .oc-luz { fill: url(#oc-luz); }
+.oc-portada [data-mapa="relieve"] .oc-sierra { fill: rgb(255 245 225 / .32); filter: url(#oc-difuso); }
+.oc-portada [data-mapa="relieve"] .oc-sierra-sombra { fill: rgb(0 0 0 / .38); filter: url(#oc-difuso); }
+.oc-portada [data-mapa="relieve"] .oc-rio-halo { fill: none; stroke: var(--oro); stroke-opacity: .2; stroke-width: 5px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.oc-portada [data-mapa="relieve"] .oc-rio { fill: none; stroke: var(--oro-claro); stroke-opacity: .9; stroke-width: 1.4px; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.oc-portada [data-mapa="relieve"] .oc-prov2 { stroke: rgb(20 8 30 / .55); stroke-width: 1.4px; }
+.oc-portada [data-mapa="relieve"] .oc-rot-rio { fill: var(--oro-claro); }
+/* mientras Andalucía se acerca a una capital, el relieve difuminado no se recalcula en cada fotograma */
+.oc-portada.is-acercando [data-mapa="relieve"] .oc-sierra, .oc-portada.is-acercando [data-mapa="relieve"] .oc-sierra-sombra { filter: none; opacity: .5; }

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 2026-10-26 · Laboratorio de rutas: continuidad + GraphHopper (propuesta, sin adoptar)
 _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 
@@ -53,6 +54,34 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 =======
 ## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada (parada por el límite de 5 h al 95 %)
 =======
+=======
+## 2026-10-26 · Animaciones del mapa de la portada y dos variantes con más detalle
+**Animaciones** (revisadas fotograma a fotograma y midiendo cuánto dura cada fotograma con Playwright):
+- **Fallo que ya estaba en la web publicada:** el muelle que mece las banderas se volvía inestable con fotogramas lentos (un móvil cargado, menos de 30 por segundo). La escala se disparaba (1,69 → −0,26 → 2,98) y la bandera temblaba sin parar.
+  - Ahora el muelle se calcula en pasos fijos de 8 ms y es estable a cualquier velocidad: tras pulsar va de 0,975 a 1 sin rebote.
+- **Tirones al bajar a la ciudad y al mover la hora**, porque se repintaban miles de calles en cada fotograma:
+  - el plano va en dos capas: la fija (calles y recorridos) y la que se mueve (cortejos y medallones);
+  - fuera los filtros SVG: las sombras y el brillo se dibujan con trazos y círculos;
+  - durante el vuelo de la cámara solo se dibujan las calles principales.
+  - Resultado al mover la hora en Sevilla, en un navegador sin aceleración gráfica: de 29 a 71 fotogramas en el móvil y de 23 a 59 en el escritorio.
+- **Orden:** primero el hilo llega a la capital (360 ms), luego Andalucía se acerca (820 ms) y el plano aparece hacia los 700 ms. La altura crece en 420 ms: es la única animación de una propiedad de maquetación, y se queda porque solo ocurre al bajar o subir y oculta el salto de la página.
+
+**Mapa con más detalle: dos variantes para que elija Pablo.** Se ven en la portada con `?mapa=grabado` o `?mapa=relieve`; sin ese parámetro, el mapa de siempre. El parámetro se quita al elegir.
+- **Datos:** ríos (Guadalquivir, Genil, Guadalimar y Guadiana Menor) y sierras (Sierra Morena y Sierra Nevada) de **Natural Earth 1:10m, dominio público** (https://www.naturalearthdata.com/; capas `ne_10m_rivers_lake_centerlines`, `ne_10m_rivers_europe` y `ne_10m_geography_regions_polys`, descargadas con permiso de Pablo).
+  - `tools/generar-mapa-detalle.mjs` los proyecta igual que las provincias (`tools/generar-mapa.mjs`) y escribe `site/data/mapa-detalle.json` (3 KB).
+  - Los emblemas de las capitales salen de nuestras propias colgaduras (`assets/plates`).
+  - Los rótulos «Océano Atlántico» y «Mar Mediterráneo» van en Newsreader cursiva, que ya está en el sitio.
+- **A · Grabado:**
+  - rayado fino de grabado y montes dibujados como en los mapas antiguos;
+  - ríos en tinta clara y fronteras punteadas en oro;
+  - un medallón con el emblema de cada colgadura sobre su capital y su nombre al lado.
+- **B · Relieve:**
+  - luz suave desde el noroeste;
+  - sierras como relieve difuminado, con luz y sombra;
+  - ríos en oro con su halo, y el nombre de cada capital junto a su punto.
+  - Mientras la cámara se acerca, el difuminado se desactiva para no frenar la animación.
+
+>>>>>>> 178d0c3 (Mapa de la portada: muelle estable con fotogramas lentos y dos variantes con ríos y sierras de Natural Earth (?mapa=grabado | relieve, para elegir))
 ## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada
 **Hecho el 26-oct (commit `c78cf21`): los puntos 1 y 2.** Las láminas han vuelto tal cual. La portada mide lo que su contenido en Andalucía y crece a la pantalla al bajar a la ciudad (420 ms). Las banderas, el mapa y la invitación caben en cualquier pantalla. Los hilos solo aparecen al elegir, y la cámara arranca cuando el hilo ha llegado a la capital (360 ms). Capturas de antes y después en `capturas-portada/` (fuera de git). Siguen pendientes los puntos 3 a 5.
 
