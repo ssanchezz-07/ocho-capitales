@@ -53,7 +53,7 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
 - Crucifixión (Málaga): falta la captura de Pablo; revisar sus marchas con fuentes.
 
 ## Pendiente para después de las 02:30 (27-oct)
-- **Bandas casi iguales a la AM Jesús Despojado de Jaén** (vistas por oc-diseno): «Agrupación Musical Nuestro Padre Jesús Despojado» (Jaén) y «Agrupación Musical Nuestro Padre Jesús Despojado de Jaén» (sin localidad), las dos en Almería (Prendimiento). Si una fuente confirma que son la misma que `agrupacion-musical-jesus-despojado-jaen`: unirlas en portal.json con sus acompañamientos, añadir sus direcciones a `tools/sources/bandas-redirecciones.json` y hacer que el comprobador detecte nombres casi iguales (con o sin «Nuestro Padre», con o sin «de <ciudad>»). La redirección de la «-2» ya está comprobada en local (lleva a la ficha buena); confirmar en la web publicada.
+- Bandas casi iguales a la AM Jesús Despojado de Jaén (Almería): por orden de Pablo, las une oc-diseno (27-oct). No es tarea de esta sesión.
 - Lectura de fichas de cofradiasyhermandades.es: en curso en segundo plano (`auditoria/cyh-marchas.json`, campo fichas); cuando acabe, regenerar partiendo de la versión publicada, comprobar, compilar y subir como bloque 9.
 
 ## Historial
