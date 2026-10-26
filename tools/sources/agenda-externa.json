@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 26,
-  "Prensa (texto de noticias)": 65
+  "Prensa (texto de noticias)": 67
  },
  "eventos": [
   {
@@ -4018,6 +4018,26 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/santa-cena-granada-extraordinaria-santa-cena-centenario-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-extraordinaria-santa-cena-granada-procesion_0_2008319396.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "La archicofradía de La Palma viene celebrando su tradicional Novena con la vista puesta en su tradicional salida del próximo día 1 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/cuenta-atras-procesiones-gloria-mas-esperadas-otono-gaditano/20261021102946008393.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "La zona rural de Jerez vivirá una Magna histórica el próximo 7 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/cuenta-atras-procesiones-gloria-mas-esperadas-otono-gaditano/20261021102946008393.html"
   },
   {
    "fecha": "2026-10-25",
