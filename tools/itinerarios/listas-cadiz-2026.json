@@ -562,30 +562,31 @@
     "anio_de_la_tabla": "2026",
     "columnas": [
      "salida",
-     "nueva",
      "catedral_entrada",
      "catedral_salida",
      "candelaria",
      "palillero",
-     "entrada"
+     "entrada",
+     "sin_rotulo"
     ],
+    "nota": "Columnas de la tabla del programa corregidas: «NUEVA» es la entrada en la Catedral (no pasa por Nueva); la última hora no tiene rótulo y no se usa. Coincide con el cuadernillo de Radio Cádiz 2026.",
     "cruz_de_guia": {
      "salida": "18:35",
-     "nueva": "18:55",
-     "catedral_entrada": "19:10",
-     "catedral_salida": "19:45",
-     "candelaria": "20:15",
-     "palillero": "23:00",
-     "entrada": "23:40"
+     "catedral_entrada": "18:55",
+     "catedral_salida": "19:10",
+     "candelaria": "19:45",
+     "palillero": "20:15",
+     "entrada": "23:00",
+     "sin_rotulo": "23:40"
     },
     "paso": {
      "salida": "18:55",
-     "nueva": "19:15",
-     "catedral_entrada": "19:30",
-     "catedral_salida": "20:05",
-     "candelaria": "20:35",
-     "palillero": "23:20",
-     "entrada": "00:00"
+     "catedral_entrada": "19:15",
+     "catedral_salida": "19:30",
+     "candelaria": "20:05",
+     "palillero": "20:35",
+     "entrada": "23:20",
+     "sin_rotulo": "00:00"
     }
    },
    "segunda_fuente": {
@@ -7010,6 +7011,7 @@
      "entrada": "09:45"
     }
    },
+   "duda": "Hora de salida del primer paso: 01:10 en el programa de Canal Sur (pág. 24) y 01:30 en el cuadernillo de Radio Cádiz 2026, que repite la del último paso (01:30 en los dos): se toma la de Canal Sur.",
    "segunda_fuente": {
     "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
     "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
@@ -7828,6 +7830,7 @@
      "entrada": "02:00"
     }
    },
+   "duda": "Regreso: el programa de Canal Sur dice «Plaza Palillero, Javier de Burgos, Barrié, Sacramento»; el cuadernillo de Radio Cádiz 2026 (pág. 41), «Plaza Palillero, Novena, Barrié (Izq.), Sacramento». Se sigue a Canal Sur; pendiente de confirmar por Pablo.",
    "segunda_fuente": {
     "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
     "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",

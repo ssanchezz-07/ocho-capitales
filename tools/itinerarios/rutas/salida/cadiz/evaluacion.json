@@ -1,21 +1,21 @@
 {
  "servitas-cadiz": {
   "publicado": {
-   "largo_m": 2125,
+   "largo_m": 2077,
    "comprobables": 18,
    "sin_dato": [],
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 24,
-   "entrada_m": 24,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
    "largo_m": 2077,
@@ -24,8 +24,8 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -43,7 +43,7 @@
  },
  "merced-obediencia-cadiz": {
   "publicado": {
-   "largo_m": 2140,
+   "largo_m": 2141,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
@@ -95,44 +95,14 @@
  },
  "la-borriquita-cadiz": {
   "publicado": {
-   "largo_m": 7928,
-   "comprobables": 34,
-   "sin_dato": [],
-   "recorridas": 34,
-   "en_orden": 31,
-   "no_recorridas": [],
-   "salida_m": 20,
-   "entrada_m": 20,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
-   "rectas_150": [],
-   "tramo_max_m": 174,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     36.523476,
-     -6.286706
-    ],
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 75
-  },
-  "nuevo": {
    "largo_m": 7562,
-   "comprobables": 34,
+   "comprobables": 32,
    "sin_dato": [],
-   "recorridas": 34,
-   "en_orden": 31,
+   "recorridas": 32,
+   "en_orden": 29,
    "no_recorridas": [],
-   "salida_m": 6,
-   "entrada_m": 6,
+   "salida_m": 41,
+   "entrada_m": 41,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -158,30 +128,60 @@
    ],
    "pct_en_calles_lista": 79
   },
+  "nuevo": {
+   "largo_m": 7040,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 253,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.523476,
+     -6.286706
+    ],
+    [
+     36.530365,
+     -6.291634
+    ],
+    [
+     36.529562,
+     -6.292509
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 4→3"
    ]
   }
  },
  "las-penas-cadiz": {
   "publicado": {
-   "largo_m": 2809,
+   "largo_m": 2742,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 24,
-   "entrada_m": 24,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 80
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
    "largo_m": 2742,
@@ -190,8 +190,8 @@
    "recorridas": 23,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -210,13 +210,10 @@
  "sagrada-cena-cadiz": {
   "publicado": {
    "largo_m": 2822,
-   "comprobables": 23,
-   "sin_dato": [
-    "Compás de Santo Domingo",
-    "Compás de Santo Domingo"
-   ],
-   "recorridas": 23,
-   "en_orden": 21,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
@@ -231,17 +228,14 @@
      -6.292509
     ]
    ],
-   "pct_en_calles_lista": 72
+   "pct_en_calles_lista": 75
   },
   "nuevo": {
-   "largo_m": 2822,
-   "comprobables": 23,
-   "sin_dato": [
-    "Compás de Santo Domingo",
-    "Compás de Santo Domingo"
-   ],
-   "recorridas": 23,
-   "en_orden": 21,
+   "largo_m": 2489,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
@@ -249,34 +243,29 @@
    "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ]
-   ],
-   "pct_en_calles_lista": 72
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 1→0"
    ]
   }
  },
  "el-despojado-cadiz": {
   "publicado": {
    "largo_m": 8196,
-   "comprobables": 39,
+   "comprobables": 38,
    "sin_dato": [
     "García de Sola"
    ],
-   "recorridas": 39,
-   "en_orden": 37,
+   "recorridas": 38,
+   "en_orden": 36,
    "no_recorridas": [],
-   "salida_m": 46,
-   "entrada_m": 46,
+   "salida_m": 122,
+   "entrada_m": 122,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -303,67 +292,65 @@
    "pct_en_calles_lista": 73
   },
   "nuevo": {
-   "largo_m": 8196,
-   "comprobables": 39,
+   "largo_m": 7238,
+   "comprobables": 38,
    "sin_dato": [
     "García de Sola"
    ],
-   "recorridas": 39,
-   "en_orden": 37,
+   "recorridas": 38,
+   "en_orden": 36,
    "no_recorridas": [],
-   "salida_m": 46,
-   "entrada_m": 46,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 174,
-   "retrocesos": 4,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
-     36.513089,
-     -6.27943
+     36.511649,
+     -6.278615
     ],
     [
      36.523476,
      -6.286706
     ],
     [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.512406,
-     -6.279043
+     36.511649,
+     -6.278615
     ]
    ],
-   "pct_en_calles_lista": 73
+   "pct_en_calles_lista": 74
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "salida 122→0 m",
+    "entrada 122→0 m",
+    "retrocesos 4→3"
    ]
   }
  },
  "humildad-y-paciencia-cadiz": {
   "publicado": {
-   "largo_m": 2194,
+   "largo_m": 2081,
    "comprobables": 18,
    "sin_dato": [
     "Beato Diego José de Cádiz"
    ],
    "recorridas": 18,
-   "en_orden": 18,
+   "en_orden": 17,
    "no_recorridas": [],
-   "salida_m": 19,
-   "entrada_m": 19,
+   "salida_m": 8,
+   "entrada_m": 8,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 153,
+   "tramo_max_m": 158,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 76
+   "pct_en_calles_lista": 80
   },
   "nuevo": {
    "largo_m": 2081,
@@ -393,16 +380,16 @@
  },
  "nazareno-del-amor-cadiz": {
   "publicado": {
-   "largo_m": 2240,
+   "largo_m": 2176,
    "comprobables": 20,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
    "recorridas": 20,
-   "en_orden": 19,
+   "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 52,
-   "entrada_m": 52,
+   "salida_m": 19,
+   "entrada_m": 19,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -439,14 +426,14 @@
  },
  "la-palma-cadiz": {
   "publicado": {
-   "largo_m": 3368,
+   "largo_m": 3358,
    "comprobables": 35,
    "sin_dato": [],
    "recorridas": 35,
    "en_orden": 32,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -462,8 +449,8 @@
    "recorridas": 35,
    "en_orden": 32,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -481,21 +468,21 @@
  },
  "el-prendimiento-cadiz": {
   "publicado": {
-   "largo_m": 3246,
+   "largo_m": 3058,
    "comprobables": 22,
    "sin_dato": [],
    "recorridas": 22,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 26,
-   "entrada_m": 26,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 86
+   "pct_en_calles_lista": 88
   },
   "nuevo": {
    "largo_m": 3058,
@@ -504,8 +491,8 @@
    "recorridas": 22,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 8,
-   "entrada_m": 8,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -523,14 +510,14 @@
  },
  "vera-cruz-cadiz": {
   "publicado": {
-   "largo_m": 2200,
+   "largo_m": 2136,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
-   "en_orden": 22,
+   "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 52,
-   "entrada_m": 52,
+   "salida_m": 19,
+   "entrada_m": 19,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -565,7 +552,7 @@
  },
  "la-sanidad-cadiz": {
   "publicado": {
-   "largo_m": 2480,
+   "largo_m": 2469,
    "comprobables": 18,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -573,8 +560,8 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -592,8 +579,8 @@
    "recorridas": 18,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 4,
-   "entrada_m": 4,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -611,14 +598,14 @@
  },
  "la-piedad-cadiz": {
   "publicado": {
-   "largo_m": 2340,
+   "largo_m": 2327,
    "comprobables": 20,
    "sin_dato": [],
    "recorridas": 20,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 12,
-   "entrada_m": 12,
+   "salida_m": 10,
+   "entrada_m": 10,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -653,23 +640,6 @@
  },
  "jesus-caido-el-senor-del-parque-cadiz": {
   "publicado": {
-   "largo_m": 2758,
-   "comprobables": 23,
-   "sin_dato": [],
-   "recorridas": 23,
-   "en_orden": 22,
-   "no_recorridas": [],
-   "salida_m": 52,
-   "entrada_m": 11,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
-   "rectas_150": [],
-   "tramo_max_m": 196,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 85
-  },
-  "nuevo": {
    "largo_m": 2685,
    "comprobables": 23,
    "sin_dato": [],
@@ -677,7 +647,24 @@
    "en_orden": 22,
    "no_recorridas": [],
    "salida_m": 19,
-   "entrada_m": 4,
+   "entrada_m": 5,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 196,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 87
+  },
+  "nuevo": {
+   "largo_m": 2680,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 23,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 19,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -695,7 +682,7 @@
  },
  "la-columna-cadiz": {
   "publicado": {
-   "largo_m": 2315,
+   "largo_m": 2316,
    "comprobables": 23,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -703,8 +690,8 @@
    "recorridas": 23,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 2,
+   "entrada_m": 2,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -741,14 +728,14 @@
  },
  "ecce-homo-cadiz": {
   "publicado": {
-   "largo_m": 1995,
+   "largo_m": 2011,
    "comprobables": 21,
    "sin_dato": [],
    "recorridas": 21,
-   "en_orden": 19,
+   "en_orden": 20,
    "no_recorridas": [],
    "salida_m": 7,
-   "entrada_m": 9,
+   "entrada_m": 7,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -758,14 +745,14 @@
    "pct_en_calles_lista": 83
   },
   "nuevo": {
-   "largo_m": 2011,
+   "largo_m": 1997,
    "comprobables": 21,
    "sin_dato": [],
    "recorridas": 21,
-   "en_orden": 20,
+   "en_orden": 19,
    "no_recorridas": [],
-   "salida_m": 4,
-   "entrada_m": 4,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -777,18 +764,18 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 19→20"
+    "empate"
    ]
   }
  },
  "la-sentencia-cadiz": {
   "publicado": {
-   "largo_m": 2740,
-   "comprobables": 30,
+   "largo_m": 2741,
+   "comprobables": 29,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
-   "recorridas": 30,
+   "recorridas": 29,
    "en_orden": 26,
    "no_recorridas": [],
    "salida_m": 7,
@@ -808,11 +795,11 @@
   },
   "nuevo": {
    "largo_m": 2741,
-   "comprobables": 30,
+   "comprobables": 29,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
-   "recorridas": 30,
+   "recorridas": 29,
    "en_orden": 26,
    "no_recorridas": [],
    "salida_m": 7,
@@ -840,14 +827,12 @@
  "las-cigarreras-cadiz": {
   "publicado": {
    "largo_m": 3094,
-   "comprobables": 23,
+   "comprobables": 24,
    "sin_dato": [
-    "Compás de Santo Domingo",
-    "Beato Diego de Cádiz",
-    "Compas de Santo Domingo"
+    "Beato Diego de Cádiz"
    ],
-   "recorridas": 23,
-   "en_orden": 22,
+   "recorridas": 24,
+   "en_orden": 23,
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
@@ -866,18 +851,16 @@
      -6.292509
     ]
    ],
-   "pct_en_calles_lista": 68
+   "pct_en_calles_lista": 72
   },
   "nuevo": {
-   "largo_m": 3094,
-   "comprobables": 23,
+   "largo_m": 2929,
+   "comprobables": 24,
    "sin_dato": [
-    "Compás de Santo Domingo",
-    "Beato Diego de Cádiz",
-    "Compas de Santo Domingo"
+    "Beato Diego de Cádiz"
    ],
-   "recorridas": 23,
-   "en_orden": 22,
+   "recorridas": 24,
+   "en_orden": 23,
    "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
@@ -888,15 +871,15 @@
    "retrocesos": 2,
    "donde_retrocesos": [
     [
-     36.529562,
-     -6.292509
+     36.530365,
+     -6.291634
     ],
     [
      36.529562,
      -6.292509
     ]
    ],
-   "pct_en_calles_lista": 68
+   "pct_en_calles_lista": 77
   },
   "decision": {
    "queda": "nuevo",
@@ -907,7 +890,7 @@
  },
  "las-aguas-cadiz": {
   "publicado": {
-   "largo_m": 2579,
+   "largo_m": 2568,
    "comprobables": 21,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -915,8 +898,8 @@
    "recorridas": 21,
    "en_orden": 20,
    "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -934,8 +917,8 @@
    "recorridas": 21,
    "en_orden": 20,
    "no_recorridas": [],
-   "salida_m": 4,
-   "entrada_m": 4,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -961,8 +944,8 @@
    "recorridas": 25,
    "en_orden": 25,
    "no_recorridas": [],
-   "salida_m": 4,
-   "entrada_m": 4,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -980,8 +963,8 @@
    "recorridas": 25,
    "en_orden": 25,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -999,21 +982,21 @@
  },
  "los-afligidos-cadiz": {
   "publicado": {
-   "largo_m": 2488,
+   "largo_m": 2421,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 24,
-   "entrada_m": 24,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 110,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 76
+   "pct_en_calles_lista": 77
   },
   "nuevo": {
    "largo_m": 2421,
@@ -1022,8 +1005,8 @@
    "recorridas": 24,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1041,15 +1024,15 @@
  },
  "oracion-en-el-huerto-cadiz": {
   "publicado": {
-   "largo_m": 3904,
-   "comprobables": 37,
+   "largo_m": 3901,
+   "comprobables": 35,
    "sin_dato": [
     "Geólogo McPherson",
     "Regimiento de Infantería",
     "Geólogo McPherson"
    ],
-   "recorridas": 37,
-   "en_orden": 36,
+   "recorridas": 35,
+   "en_orden": 34,
    "no_recorridas": [],
    "salida_m": 17,
    "entrada_m": 17,
@@ -1068,42 +1051,33 @@
      -6.302143
     ]
    ],
-   "pct_en_calles_lista": 78
+   "pct_en_calles_lista": 77
   },
   "nuevo": {
-   "largo_m": 3901,
-   "comprobables": 37,
+   "largo_m": 3610,
+   "comprobables": 35,
    "sin_dato": [
     "Geólogo McPherson",
     "Regimiento de Infantería",
     "Geólogo McPherson"
    ],
-   "recorridas": 37,
-   "en_orden": 36,
+   "recorridas": 35,
+   "en_orden": 34,
    "no_recorridas": [],
-   "salida_m": 17,
-   "entrada_m": 17,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 110,
-   "retrocesos": 2,
-   "donde_retrocesos": [
-    [
-     36.528388,
-     -6.302143
-    ],
-    [
-     36.528388,
-     -6.302143
-    ]
-   ],
-   "pct_en_calles_lista": 78
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 76
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 2→0"
    ]
   }
  },
@@ -1112,14 +1086,13 @@
    "largo_m": 3586,
    "comprobables": 32,
    "sin_dato": [
-    "Jabonería",
-    "Compás de Santo Domingo"
+    "Jabonería"
    ],
    "recorridas": 32,
    "en_orden": 30,
    "no_recorridas": [],
-   "salida_m": 8,
-   "entrada_m": 8,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1132,14 +1105,13 @@
    "largo_m": 3586,
    "comprobables": 32,
    "sin_dato": [
-    "Jabonería",
-    "Compás de Santo Domingo"
+    "Jabonería"
    ],
    "recorridas": 32,
    "en_orden": 30,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1157,21 +1129,21 @@
  },
  "medinaceli-cadiz": {
   "publicado": {
-   "largo_m": 2642,
+   "largo_m": 2591,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 52,
+   "salida_m": 0,
+   "entrada_m": 19,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
    "largo_m": 2591,
@@ -1180,7 +1152,7 @@
    "recorridas": 24,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 4,
+   "salida_m": 0,
    "entrada_m": 19,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
@@ -1200,10 +1172,10 @@
  "el-perdon-cadiz": {
   "publicado": {
    "largo_m": 2884,
-   "comprobables": 30,
+   "comprobables": 29,
    "sin_dato": [],
-   "recorridas": 30,
-   "en_orden": 28,
+   "recorridas": 29,
+   "en_orden": 27,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -1226,14 +1198,14 @@
      -6.294871
     ]
    ],
-   "pct_en_calles_lista": 80
+   "pct_en_calles_lista": 78
   },
   "nuevo": {
-   "largo_m": 2884,
-   "comprobables": 30,
+   "largo_m": 2624,
+   "comprobables": 29,
    "sin_dato": [],
-   "recorridas": 30,
-   "en_orden": 28,
+   "recorridas": 29,
+   "en_orden": 27,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -1241,33 +1213,25 @@
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 3,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.529562,
-     -6.292509
-    ],
-    [
-     36.529711,
-     -6.293356
-    ],
     [
      36.528211,
      -6.294871
     ]
    ],
-   "pct_en_calles_lista": 80
+   "pct_en_calles_lista": 81
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 3→1"
    ]
   }
  },
  "siete-palabras-cadiz": {
   "publicado": {
-   "largo_m": 2615,
+   "largo_m": 2616,
    "comprobables": 31,
    "sin_dato": [],
    "recorridas": 31,
@@ -1319,21 +1283,21 @@
  },
  "la-expiracion-cadiz": {
   "publicado": {
-   "largo_m": 3000,
+   "largo_m": 2969,
    "comprobables": 23,
    "sin_dato": [],
    "recorridas": 23,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 26,
-   "entrada_m": 26,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 87
+   "pct_en_calles_lista": 88
   },
   "nuevo": {
    "largo_m": 2969,
@@ -1342,8 +1306,8 @@
    "recorridas": 23,
    "en_orden": 23,
    "no_recorridas": [],
-   "salida_m": 8,
-   "entrada_m": 8,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1361,14 +1325,14 @@
  },
  "el-descendimiento-cadiz": {
   "publicado": {
-   "largo_m": 2502,
+   "largo_m": 2436,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 24,
-   "entrada_m": 24,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1384,8 +1348,8 @@
    "recorridas": 24,
    "en_orden": 22,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1403,23 +1367,23 @@
  },
  "la-buena-muerte-cadiz": {
   "publicado": {
-   "largo_m": 1871,
+   "largo_m": 1757,
    "comprobables": 17,
    "sin_dato": [
     "Beato Diego de Cádiz"
    ],
    "recorridas": 17,
-   "en_orden": 17,
+   "en_orden": 16,
    "no_recorridas": [],
-   "salida_m": 19,
-   "entrada_m": 19,
+   "salida_m": 8,
+   "entrada_m": 8,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 110,
+   "tramo_max_m": 158,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 72
+   "pct_en_calles_lista": 77
   },
   "nuevo": {
    "largo_m": 1757,
@@ -1449,7 +1413,7 @@
  },
  "ecce-mater-tua-cadiz": {
   "publicado": {
-   "largo_m": 1653,
+   "largo_m": 1641,
    "comprobables": 16,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -1457,15 +1421,15 @@
    "recorridas": 16,
    "en_orden": 15,
    "no_recorridas": [],
-   "salida_m": 12,
-   "entrada_m": 12,
+   "salida_m": 10,
+   "entrada_m": 10,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 123,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 82
   },
   "nuevo": {
    "largo_m": 1641,
@@ -1495,21 +1459,21 @@
  },
  "santo-entierro-cadiz": {
   "publicado": {
-   "largo_m": 2602,
+   "largo_m": 2591,
    "comprobables": 21,
    "sin_dato": [],
    "recorridas": 21,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 7,
-   "entrada_m": 7,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 153,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 86
+   "pct_en_calles_lista": 85
   },
   "nuevo": {
    "largo_m": 2591,
@@ -1518,8 +1482,8 @@
    "recorridas": 21,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 4,
-   "entrada_m": 4,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1537,28 +1501,6 @@
  },
  "la-resurreccion-cadiz": {
   "publicado": {
-   "largo_m": 1726,
-   "comprobables": 18,
-   "sin_dato": [],
-   "recorridas": 18,
-   "en_orden": 17,
-   "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
-   "rectas_150": [],
-   "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529422,
-     -6.295622
-    ]
-   ],
-   "pct_en_calles_lista": 87
-  },
-  "nuevo": {
    "largo_m": 1727,
    "comprobables": 18,
    "sin_dato": [],
@@ -1580,30 +1522,47 @@
    ],
    "pct_en_calles_lista": 87
   },
+  "nuevo": {
+   "largo_m": 1748,
+   "comprobables": 18,
+   "sin_dato": [],
+   "recorridas": 18,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 153,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 87
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 1→0"
    ]
   }
  },
  "humillacion-piedad-cadiz": {
   "publicado": {
-   "largo_m": 1579,
+   "largo_m": 1566,
    "comprobables": 19,
    "sin_dato": [],
    "recorridas": 19,
    "en_orden": 18,
    "no_recorridas": [],
-   "salida_m": 12,
-   "entrada_m": 12,
+   "salida_m": 10,
+   "entrada_m": 10,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 110,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 80
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
    "largo_m": 1566,

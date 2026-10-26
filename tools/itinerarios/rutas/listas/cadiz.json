@@ -133,11 +133,11 @@
    ],
    "horas": {
     "0": "18:55",
-    "3": "19:30",
-    "4": "20:05",
-    "7": "20:35",
-    "9": "23:20",
-    "21": "00:00"
+    "3": "19:15",
+    "4": "19:30",
+    "7": "20:05",
+    "9": "20:35",
+    "21": "23:20"
    },
    "regreso_desde": 4,
    "catedral": {
@@ -206,6 +206,8 @@
     "37": "01:05"
    },
    "hitos": [
+    36,
+    5,
     9
    ],
    "rectos": [
@@ -223,6 +225,7 @@
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 9).",
+    "La última «Avda. Andalucía» es la avenida ante San José (Ana de Viya en OSM): va como marca.",
     "Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía."
    ]
   },
@@ -330,6 +333,7 @@
     "28": "23:55"
    },
    "hitos": [
+    5,
     9
    ],
    "rectos": [
@@ -413,6 +417,7 @@
    "hitos": [
     1,
     44,
+    10,
     14
    ],
    "rectos": [
@@ -426,10 +431,15 @@
      ]
     ]
    },
+   "rectos_sede": [
+    "salida",
+    "entrada"
+   ],
    "regreso_desde": 18,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 10).",
+    "Salida y entrada en línea recta entre la puerta y la primera/última calle (plaza o patio que la red de rutas no recorre).",
     "Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía."
    ]
   },
@@ -1095,6 +1105,7 @@
     "34": "00:45"
    },
    "hitos": [
+    6,
     10
    ],
    "rectos": [
@@ -1159,6 +1170,7 @@
     "29": "01:55"
    },
    "hitos": [
+    3,
     7
    ],
    "rectos": [
@@ -1427,6 +1439,8 @@
     "43": "03:00"
    },
    "hitos": [
+    1,
+    42,
     16
    ],
    "rectos": [
@@ -1440,11 +1454,16 @@
      ]
     ]
    },
+   "rectos_sede": [
+    "salida",
+    "entrada"
+   ],
    "regreso_desde": 20,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 21).",
     "Erratas del programa corregidas al separar calles: falta la coma tras el paréntesis.",
+    "Salida y entrada en línea recta entre la puerta y la primera/última calle (plaza o patio que la red de rutas no recorre).",
     "Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía."
    ]
   },
@@ -1500,6 +1519,7 @@
     "37": "06:45"
    },
    "hitos": [
+    4,
     8
    ],
    "rectos": [
@@ -1632,13 +1652,21 @@
     "33": "09:25"
    },
    "hitos": [
-    5
+    5,
+    21
    ],
    "rectos": [
-    6
+    6,
+    22
    ],
    "rectos_por": {
     "6": [
+     [
+      36.53,
+      -6.29268
+     ]
+    ],
+    "22": [
      [
       36.53,
       -6.29268
@@ -2028,7 +2056,7 @@
     "Santiago",
     "Compañía",
     "Plaza de la Catedral",
-    "Estación de penitencia en la Catedral",
+    "Estación de Penitencia en la S.I.C.",
     "Plaza de la Catedral",
     "Compañía",
     "Santiago",
@@ -2047,6 +2075,11 @@
     "20": "14:45"
    },
    "regreso_desde": 11,
+   "catedral": {
+    "entra": 7063298453,
+    "sale": 7063298453,
+    "nombre": "entra y sale por la puerta principal (Plaza de la Catedral)"
+   },
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 30)."

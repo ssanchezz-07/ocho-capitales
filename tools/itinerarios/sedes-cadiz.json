@@ -63,8 +63,8 @@
    "lat": 36.5138482,
    "lon": -6.2806872,
    "portada": {
-    "calle": "Avenida de Andalucía",
-    "fuente": "Cadizpedia (copia de archive.org): http://web.archive.org/web/20250624032132/https://cadizpedia.wikanda.es/wiki/Iglesia_de_San_Jos%C3%A9_(C%C3%A1diz), que no nombra la avenida; la Borriquita sale y entra por la «Avda. Andalucía» (itinerario oficial)",
+    "calle": "Avenida Ana de Viya",
+    "fuente": "Cadizpedia (copia de archive.org): http://web.archive.org/web/20250624032132/https://cadizpedia.wikanda.es/wiki/Iglesia_de_San_Jos%C3%A9_(C%C3%A1diz) («abierta hacia la avenida»); dirección del Ayuntamiento «Calle Poeta Nieto – Avenida Ana de Viya»; en OSM la avenida que pasa ante el templo es Ana de Viya (way/296745693) y la Avenida de Andalucía empieza 70 m al norte",
     "cita": "abierta hacia la avenida"
    }
   },
@@ -86,7 +86,13 @@
    "lat": 36.5124457,
    "lon": -6.2782926,
    "dir": "Avenida María Auxiliadora 7",
-   "fuente_dir": "OSM way/157632556 (addr:housenumber 7)"
+   "fuente_dir": "OSM way/157632556 (addr:housenumber 7)",
+   "portada": {
+    "calle": "Avenida María Auxiliadora",
+    "fuente": "itinerario oficial 2026 (Canal Sur, pág. 32; Radio Cádiz, pág. 9): «Colegio Salesianos “San Ignacio” (interior), Avenida María Auxiliadora» y, al volver, «Avda. María Auxiliadora, Interior del Colegio Salesianos “San Ignacio” a su Templo»; dirección «Avenida María Auxiliadora 7» (OSM way/157632556)",
+    "sin_cita": true,
+    "nota": "Sale por el interior del colegio a la avenida: punto medio de la fachada del colegio que da a la Avenida María Auxiliadora."
+   }
   },
   "san-agustin": {
    "nombre": "Parroquia de San Agustín",

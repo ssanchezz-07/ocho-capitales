@@ -43,6 +43,11 @@ const ERRATAS_PABLO = {
 const fCG = path.join(DIR, 'cadiz-2026-cruzdeguia.json');
 const CG = fs.existsSync(fCG) ? JSON.parse(fs.readFileSync(fCG, 'utf8')) : null;
 const claveC = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\(.*?\)/g, " ").replace(/\b(plaza|calle|avda|avenida|de|del|la|las|el|los)\b|[.“”"]/g, " ").replace(/\s+/g, " ").trim();
+// Diferencias entre las dos fuentes de 2026 que quedan para Pablo (se mantiene el programa de Canal Sur)
+const DUDAS = {
+  'el-descendimiento-cadiz': 'Regreso: el programa de Canal Sur dice «Plaza Palillero, Javier de Burgos, Barrié, Sacramento»; el cuadernillo de Radio Cádiz 2026 (pág. 41), «Plaza Palillero, Novena, Barrié (Izq.), Sacramento». Se sigue a Canal Sur; pendiente de confirmar por Pablo.',
+  'el-perdon-cadiz': 'Hora de salida del primer paso: 01:10 en el programa de Canal Sur (pág. 24) y 01:30 en el cuadernillo de Radio Cádiz 2026, que repite la del último paso (01:30 en los dos): se toma la de Canal Sur.',
+};
 const CATEDRAL = /\(?\s*Estaci[oó]n de Penitencia en la S\.I\.C\.?\s*\)?/i;
 const LADO = [[/^(Izda?|Izqda?|Izq|izq|Lado Izda)\.?$/i, 'izquierda'], [/^(Dcha|Drcha|Dr-?cha)\.?$/i, 'derecha'], [/^centro$/i, 'centro'], [/^interior$/i, 'interior'],
   [/^lado Izda\.?$/i, 'izquierda'], [/^por el lado izquierdo$/i, 'izquierda']];
@@ -105,6 +110,13 @@ for (const h of crudo.hermandades) {
   const canon = templo(h.ficha.sede_canonica), esp = S.hermandades[slug];
   const fPrograma = `${crudo.url} (ficha, pág. ${h.ficha.pagina})`;
   const hz = h.ficha.horas, horas = {};
+  // Humillación (pág. 8): no pasa por Nueva y la columna rotulada «NUEVA» es la entrada en la Catedral; todo va una columna
+  // antes y la última (23:40 / 00:00) no tiene rótulo. Así cuadra con el cuadernillo de Radio Cádiz 2026 (pág. 6).
+  if (slug === 'humillacion-piedad-cadiz' && hz?.columnas?.[1] === 'nueva') {
+    const cols = ['salida', 'catedral_entrada', 'catedral_salida', 'candelaria', 'palillero', 'entrada', 'sin_rotulo'];
+    hz.filas = hz.filas.map((f) => Object.fromEntries(hz.columnas.map((c, i) => [cols[i], f[c]]).filter(([, v]) => v)));
+    hz.columnas = cols; hz.nota = 'Columnas de la tabla del programa corregidas: «NUEVA» es la entrada en la Catedral (no pasa por Nueva); la última hora no tiene rótulo y no se usa. Coincide con el cuadernillo de Radio Cádiz 2026.';
+  }
   if (hz) FILAS(hz.filas.length).forEach((k, i) => (horas[k] = hz.filas[i]));
   const r = {
     nombre_programa: h.cabecera, dia: DIA(h.dia), ficha_portal: SLUG[h.cabecera] !== null,
@@ -117,7 +129,8 @@ for (const h of crudo.hermandades) {
     salida: esp ? sede(esp.salida, esp.fuente.map((f) => S.fuentes[f])) : sede(canon, [fPrograma]),
     entrada: esp ? sede(esp.entrada, esp.fuente.map((f) => S.fuentes[f])) : sede(canon, [fPrograma]),
     ...(esp ? { sede_2026: { cita: esp.cita, ...(esp.nota ? { nota: esp.nota } : {}) } } : {}),
-    horas: hz ? { anio_de_la_tabla: hz.anio_tabla, columnas: hz.columnas, ...horas } : null,
+    horas: hz ? { anio_de_la_tabla: hz.anio_tabla, columnas: hz.columnas, ...(hz.nota ? { nota: hz.nota } : {}), ...horas } : null,
+    ...(DUDAS[slug] ? { duda: DUDAS[slug] } : {}),
     ...(cg ? { segunda_fuente: { documento: CG.fuente, url: CG.url, pagina: cg.pagina, templo_2026: cg.templo, itinerario: dif ? 'difiere ' + dif : 'coincide calle a calle con el programa', horas: cg.horas } } : {}),
   };
   // horas de la tabla rotulada con otro año: valen si el cuadernillo de 2026 da las mismas
