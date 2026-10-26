@@ -239,6 +239,10 @@
   "tramos": {
    "11": {
     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la ficha de Lágrimas y Favores da hora de Tribuna (16:00) aunque su lista salta de «Plaza de la Constitución» a «Martínez»; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): «Tribuna: 16.00 horas»; en 2020 (semanasantamalaga.info) «Plaza de la Constitución, Tribuna, Marqués de Larios, Martínez»"
+   },
+   "30": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Puerta Nueva, Fajardo»; en OSM se unen por Calle Compañía (42 m), que la lista no nombra",
+    "estimado": true
    }
   },
   "fuentes": [
@@ -261,6 +265,11 @@
     "fecha": "2026-10-26 14:15",
     "fuente": "OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal que toca Fernán González y Moreno Carbonero; GraphHopper no enruta por dentro de las áreas y daba 237 m de vuelta para 35 m",
     "cambios": "la plaza (filas 5 y 34) se cruza en línea recta; se quitan los puntos de entrada en Moreno Carbonero, que ya no hacen falta"
+   },
+   {
+    "fecha": "2026-10-26 14:49",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "tramo de Puerta Nueva a Fajardo (fila 31) por Compañía, estimado"
    }
   ],
   "actualizado": "2026-10-26 14:15",
@@ -693,11 +702,11 @@
  "fusionadas-malaga": {
   "tramos": {
    "1": {
-    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial. La ida y vuelta por Cisneros es intencionada: la lista obliga a ir de la sede al Pasillo de Santa Isabel y volver",
     "estimado": true
    },
    "26": {
-    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial. La ida y vuelta por Cisneros es intencionada: la lista obliga a ir de la sede al Pasillo de Santa Isabel y volver",
     "estimado": true
    }
   },

@@ -7,7 +7,7 @@
 //   aunque el evaluador dijera «revisar» o «publicado» (tras mirarlas en las capturas o corregirlas en el editor).
 import fs from 'node:fs';
 import path from 'node:path';
-import { ciudad, leerLista, dirSalida, fPublicado, sn, d2 } from './comun.mjs';
+import { ciudad, leerLista, dirSalida, fPublicado, sn, d2, TEMPLO } from './comun.mjs';
 
 const args = process.argv.slice(2), forzar = args.includes('--forzar');
 const [c, ...resto] = args.filter((a) => a !== '--forzar');
@@ -42,6 +42,18 @@ function aPuntos(id, traza, informe, lista) {
     if (sig && sig.pos > p.pos + 1) o.via = geo.slice(p.pos + 1, sig.pos).map(([a, b]) => [r6(a), r6(b)]);
     return o;
   });
+  // si el trazado sigue después del último punto de la lista (la lista acaba en una calle y la sede viene de una corrección) o empieza
+  // antes del primero, se añade el punto de la sede con su tramo enrutado; si no, el plano uniría en recto
+  const u0 = lista.calles.length - 1, sedeTxt = (i) => (TEMPLO.test(sn(lista.calles[i])) ? lista.calles[i] : null);
+  if (out.length && ps.at(-1).pos < geo.length - 1 && informe.entrada) {
+    const ul = out.at(-1); ul.via = geo.slice(ps.at(-1).pos + 1, -1).map(([a, b]) => [r6(a), r6(b)]);
+    const [lat, lon] = geo.at(-1); const hora = ul.hora; if (hora && lista.horas[u0] === hora) delete ul.hora;
+    out.push({ fila: '', lugar: sedeTxt(0) || 'Entrada', ...(lista.horas[u0] ? { hora: lista.horas[u0] } : {}), lat: r6(lat), lon: r6(lon), como: 'templo', tramo: 'regreso' });
+  }
+  if (out.length && ps[0].pos > 0 && informe.salida) {
+    const [lat, lon] = geo[0]; const hora = out[0].hora; if (hora && lista.horas[0] === hora) delete out[0].hora;
+    out.unshift({ fila: '', lugar: sedeTxt(0) || 'Salida', ...(lista.horas[0] ? { hora: lista.horas[0] } : {}), lat: r6(lat), lon: r6(lon), como: 'templo', tramo: 'ida', via: geo.slice(1, ps[0].pos).map(([a, b]) => [r6(a), r6(b)]) });
+  }
   // el primero y el último son la salida y la entrada; la hora de la salida y del encierro viene de los extremos de la lista
   if (out.length) {
     out[0].rol = 'salida'; out.at(-1).rol = 'entrada';

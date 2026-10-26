@@ -62,6 +62,7 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 - `regreso_desde`: índice donde empieza el regreso (se dibuja discontinuo). Si falta, la expresión `regreso` de `ciudades.mjs`.
 - `catedral` (opcional): `{ "entra": nodo OSM, "sale": nodo OSM, "nombre": "…" }` si esa hermandad entra o sale de la
   Catedral por otra puerta que la de `ciudades.mjs` (en Córdoba, unas salen por Santa Catalina y otras por el Perdón).
+- Correcciones (`correcciones-<capital>.json`, cada una con `fuente`): `puntos[i]` (entrada en el elemento i), `paso[i]` (puntos de paso antes de i), `calles[i]` = `{via | vias | punto | omitir | esquina}`, `cruzar[i]` (plaza o recta que GraphHopper no enruta: línea recta), `tramos[i]` = `{fuente, estimado}` (fuente del tramo que llega a i; sin fuente de este año, «estimado»), `salida`/`entrada` = `{lat, lon, fuente}`.
 - `rejilla: true` si la fuente solo da un punto cada media hora: los tramos que GraphHopper rellena entre calles que no se
   tocan se publican con `"como": "estimado"` y `"estimado": true`; nunca como oficiales.
 - Nombres que OSM escribe distinto: `../alias-calles-<capital>.json` (`{ "Nombre del itinerario": "Nombre en OSM",
@@ -78,5 +79,7 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 | `capturar.py` | Capturas de comparación |
 | `descargar-puertas.mjs` | Puertas y templos de Overpass |
 | `lista-malaga.mjs` | Genera `listas/malaga.json` desde lo publicado (PDF de la Agrupación 2026) |
+| `dossier.mjs` | Dossier para una revisión independiente: `node dossier.mjs <capital>` → `salida/<capital>/dossier.md` |
+| `probar-plano.py` | Prueba del plano con Playwright a 390 y 1440 px (`python -I probar-plano.py <capital>`) |
 | `probar-editor.py` | Prueba del editor con Playwright |
 | `salida/<capital>/` | `informe.json` y `evaluacion.json` se versionan; `trazas/`, no |

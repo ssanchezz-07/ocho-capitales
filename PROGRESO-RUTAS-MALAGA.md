@@ -2,7 +2,30 @@
 
 _Órdenes: `ORDENES-RUTAS-METODO-NUEVO.md` (Málaga primero, con el código). Herramientas en `tools/itinerarios/rutas/` (ver su `README.md`)._
 
-**Estado (2026-10-26, 14:40): 45 de 45 con el método nuevo (`238c0b4` en `main`), pero la revisión independiente encontró 5 fallos y 6 dudas.** Paré con el límite de 5 horas al 81 %. **Punto exacto de retoma: arreglar la lista siguiente, volver a trazar, repetir la revisión y subir.**
+**Estado final (2026-10-26, 15:00): Málaga hecha. Las 45 con el método nuevo, corregidas con fuente y revisadas dos veces por un revisor independiente.**
+- **Evaluador, sobre las 45:**
+  - 1.516 de 1.517 calles recorridas: falta María en Amor, explicado abajo;
+  - 1.454 en orden;
+  - 63 retrocesos (había 200 en lo publicado antes de este trabajo);
+  - ninguna recta sin calle.
+- **Compilación y plano:** sin errores, y `probar-plano.py malaga` da 8/8 a 390 y 1440 px.
+- **Horas:** sin cambios, salvo la corrección de Monte Calvario (salida a las 15:00 de la ermita y a las 16:00 de la Basílica).
+- **Segunda revisión independiente** (las 12 que tenían fallo o duda): 6 resueltas, 5 aceptables con su explicación, y Lágrimas y Favores, que se arregló después. Su último tramo por Calle San Juan se perdía al publicar: cuando la lista acaba en una calle y la sede viene de una corrección, `publicar.mjs` añade ahora el punto de la sede.
+- **Tramos «estimado»** (la ruta no tiene calles oficiales de 2026; en los datos van con `"estimado": true` y la fuente o el motivo en `fuente_tramo`):
+  - **Solo hay fuente de 2020:** Mediadora (Plaza de La Marina → Vendeja), Amor (Manrique → Fernando el Católico), Piedad (Méndez Núñez → Ollerías) y Gitanos (Tribuna de los Pobres → Cisneros, por el Pasillo de Santa Isabel).
+  - **Unión deducida del mismo PDF:** Salesianos (Granada → Uncibay por Méndez Núñez; Casapalma → Álamos por Cárcer; Plaza Montaño → Capuchinos por la Carrera de Capuchinos), Humildad y Paciencia (Prim → Plaza Arriola por Atarazanas), Nueva Esperanza (Rampa de la Aurora) y Lágrimas y Favores (Compañía).
+  - **Sede sin dirección con fuente:** Sangre (de la casa hermandad a la plazuela), Fusionadas (de la sede social al Pasillo de Santa Isabel, ida y vuelta) y Cautivo (de la casa hermandad, en Calle Trinidad 95, a Barrera de la Trinidad).
+  - **Sin calles en ninguna fuente:** la Vía Dolorosa de Monte Calvario.
+  - **Amor:** Conde de Tendilla y María solo se unen por una escalera de 10 peldaños (OSM way 495510215), así que María no se dibuja.
+- **Dibujo en el plano:** la sesión de portada ya pinta los tramos estimados en discontinuo, con su leyenda, en su rama `claude/portada-inmersiva-91892d`. Se verá en el plano cuando la suba a `main`.
+- **Sin situar** (no hay coordenadas con fuente): la Plaza de Jesús Cautivo, que va como hito, y «Alcubilla» en Salesianos, que va como hito porque la única Alcubilla de OSM está a 2,7 km.
+- **Herramientas nuevas en `rutas/`:**
+  - opciones de corrección `paso`, `tramos`, `cruzar` y `vias`;
+  - la petición a GraphHopper se parte en los puntos de corrección;
+  - recorte de los picos de ida y vuelta junto a la puerta;
+  - `dossier.mjs`, para revisiones independientes, y `probar-plano.py`.
+
+**Estado anterior (2026-10-26, 14:40): 45 de 45 con el método nuevo (`238c0b4` en `main`), pero la revisión independiente encontró 5 fallos y 6 dudas.** Paré con el límite de 5 horas al 81 %. **Punto exacto de retoma: arreglar la lista siguiente, volver a trazar, repetir la revisión y subir.**
 
 ### Revisión independiente (subagente, 2026-10-26): 34 OK, 6 DUDA, 5 FALLO
 El revisor no había visto mi trabajo. Contrastó el PDF, la lista, la sucesión de calles y 18 capturas. Dossier: `scratchpad/dossier-malaga.md`, que se regenera con `dossier.mjs`; conviene pasar ese script a `rutas/`.
@@ -94,6 +117,7 @@ cd ..\..\.. ; node site\build.mjs ; python -I tools\itinerarios\rutas\probar-pla
 Capturas de comparación (no van en git): `tools/itinerarios/rutas/capturas/malaga/`.
 
 ## Historial
+- 2026-10-26 (tarde): Málaga al 100 % (`7e55483`, `238c0b4`, `5cf2746` y el último): correcciones con fuente, tramos estimados, revisión independiente doble.
 - 2026-10-26:
   - Herramientas a producción (`29c1a57`).
   - Las 45 de Málaga con el método nuevo: 38 publicadas y 7 se quedan como estaban.

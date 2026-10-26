@@ -1,7 +1,7 @@
 {
  "pollinica-malaga": {
   "publicado": {
-   "largo_m": 3524,
+   "largo_m": 3413,
    "comprobables": 34,
    "sin_dato": [],
    "recorridas": 34,
@@ -13,7 +13,7 @@
    "sede_entrada": "puerta OSM 9023249193 con la dirección Calle Parras 20",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 2,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
      36.724152,
@@ -22,6 +22,10 @@
     [
      36.721677,
      -4.425256
+    ],
+    [
+     36.725909,
+     -4.422205
     ]
    ],
    "pct_en_calles_lista": 97
@@ -65,7 +69,7 @@
  },
  "lagrimas-y-favores-malaga": {
   "publicado": {
-   "largo_m": 3273,
+   "largo_m": 3445,
    "comprobables": 36,
    "sin_dato": [],
    "recorridas": 36,
@@ -84,7 +88,7 @@
      -4.422972
     ]
    ],
-   "pct_en_calles_lista": 83
+   "pct_en_calles_lista": 84
   },
   "nuevo": {
    "largo_m": 3445,
@@ -453,7 +457,7 @@
  },
  "pasion-malaga": {
   "publicado": {
-   "largo_m": 2680,
+   "largo_m": 2790,
    "comprobables": 27,
    "sin_dato": [],
    "recorridas": 27,
@@ -467,7 +471,7 @@
    "tramo_max_m": 155,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 92
+   "pct_en_calles_lista": 88
   },
   "nuevo": {
    "largo_m": 2790,

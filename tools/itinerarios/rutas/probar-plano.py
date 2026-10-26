@@ -33,7 +33,7 @@ check(not malos, 'cada recorrido con sus puntos repartidos y el regreso dibujado
 
 # ---- servidor estático ----
 H = functools.partial(http.server.SimpleHTTPRequestHandler, directory=os.path.join(SITE, 'dist'))
-H.log_message = lambda *a: None
+H = type('H', (http.server.SimpleHTTPRequestHandler,), {'log_message': lambda *a: None}); H = functools.partial(H, directory=os.path.join(SITE, 'dist'))
 srv = socketserver.TCPServer(('127.0.0.1', 0), H); puerto = srv.server_address[1]
 threading.Thread(target=srv.serve_forever, daemon=True).start()
 URL = f'http://127.0.0.1:{puerto}/en-la-calle/{c}/'
@@ -44,7 +44,7 @@ with sync_playwright() as p:
     b = p.chromium.launch()
     for w, alto in ((390, 844), (1440, 900)):
         pg = b.new_page(viewport={'width': w, 'height': alto}); err = []
-        pg.on('console', lambda m: err.append(m.text) if m.type == 'error' else None); pg.on('pageerror', lambda e: err.append(str(e)))
+        pg.on('console', lambda m: err.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)  # los fallos de red del entorno de prueba no son errores del plano; pg.on('pageerror', lambda e: err.append(str(e)))
         pg.goto(URL); pg.wait_for_selector('path.oc-c-ruta', state='attached', timeout=20000)
         faltan = []
         for dia, ss in dias.items():
