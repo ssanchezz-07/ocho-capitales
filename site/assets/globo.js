@@ -47,7 +47,7 @@
       // la luz de la vela llega de arriba a la izquierda: el otro lado del globo, en sombra
       var gs = el('radialGradient', { id: 'oc-gl-sombra', cx: '.36', cy: '.32', r: '.82' }, defs);
       [['.45', '#000', '0'], ['1', '#05020a', '.78']].forEach(function (s) { el('stop', { offset: s[0], 'stop-color': s[1], 'stop-opacity': s[2] }, gs); });
-      var n = {}; ['aura', 'aura2', 'mar', 'tierra', 'espana', 'sombra', 'galon'].forEach(function (k) { n[k] = el('path', { 'class': 'oc-gl-' + k }, S); });
+      var n = {}; ['aura', 'aura2', 'mar', 'tierra', 'tierra5', 'espana', 'sombra', 'galon'].forEach(function (k) { n[k] = el('path', { 'class': 'oc-gl-' + k }, S); });
       n.mar.setAttribute('fill', 'url(#oc-gl-mar)'); n.sombra.setAttribute('fill', 'url(#oc-gl-sombra)');
       var gP = el('g', {}, S), gC = el('g', {}, S);
       var provs = datos.prov.map(function (p) { var f = provinciaGeo(p, P), e = el('path', { 'class': 'oc-gl-prov' }, gP); e.style.fill = p.c; e.style.fillOpacity = 0; return { f: f, e: e, s: p.s }; });
@@ -71,10 +71,14 @@
         proy.rotate([-lon, -lat]).scale(k).translate([W / 2 + (dest.x - W / 2) * b, H * 0.47 + (dest.y - H * 0.47) * b]);
         var esf = ruta(esfera), cerca = k / m;
         n.aura.setAttribute('d', esf); n.aura2.setAttribute('d', esf); n.mar.setAttribute('d', esf);
-        n.tierra.setAttribute('d', ruta(cerca < 3.2 ? M.tierra110 : M.tierra50)); n.espana.setAttribute('d', ruta(M.espana));
+        // sin saltos: la costa de 1:110m se funde poco a poco con la de 1:50m, y al llegar la tierra deja paso a las provincias,
+        // que son las mismas del mapa de la portada (el fundido final no cambia ninguna forma)
+        var a5 = cl((cerca - 2) / 2.2), sale = 1 - cl((t - 4700) / 900);
+        n.tierra.setAttribute('d', a5 < 1 ? ruta(M.tierra110) : ''); n.tierra5.setAttribute('d', a5 > 0 ? ruta(M.tierra50) : ''); n.espana.setAttribute('d', ruta(M.espana));
+        n.tierra.style.opacity = ((1 - a5) * sale).toFixed(3); n.tierra5.style.opacity = (a5 * sale).toFixed(3); n.espana.style.opacity = sale.toFixed(3);
         n.sombra.setAttribute('d', cerca < 4.5 ? esf : ''); n.sombra.style.opacity = 1 - cl((cerca - 2.5) / 2);
-        n.galon.setAttribute('d', cerca > 5 ? ruta(M.espana) : ''); n.galon.style.opacity = cl((cerca - 5) / 3);
-        var vp = cerca > 7; provs.forEach(function (p) { p.e.setAttribute('d', vp ? ruta(p.f) : ''); });
+        n.galon.setAttribute('d', cerca > 5 ? ruta(M.espana) : ''); n.galon.style.opacity = (cl((cerca - 5) / 3) * sale).toFixed(3);
+        var vp = cerca > 6; provs.forEach(function (p) { p.e.setAttribute('d', vp ? ruta(p.f) : ''); p.e.style.strokeOpacity = cl((cerca - 6) / 2).toFixed(3); });
         caps.forEach(function (c) { var q = proy(c.ll); c.g.setAttribute('transform', 'translate(' + q[0].toFixed(1) + ' ' + q[1].toFixed(1) + ')'); });
         // al llegar: las provincias se tiñen una a una de oeste a este y se enciende su capital
         ORDEN.forEach(function (s, i) {
@@ -83,7 +87,8 @@
           caps.forEach(function (c) { if (c.s === s) c.g.setAttribute('opacity', cl((t - 4600 - i * 160) / 300).toFixed(3)); });
         });
         S.style.transform = 'scale(' + (0.92 + 0.08 * cl(t / 1000)) + ')'; S.style.opacity = cl(t / 700);
-        capa.style.opacity = 1 - cl((t - 5900) / 500);
+        n.mar.style.opacity = n.aura.style.opacity = n.aura2.style.opacity = (0.35 + 0.65 * sale).toFixed(3);
+        capa.style.opacity = 1 - cl((t - 5700) / 700);
       }
       // con «reducir movimiento»: España ya de frente, quieta, y un fundido
       if (o.quieto) { cuadro(3600); S.style.transform = 'none'; S.style.opacity = '1'; capa.style.opacity = '1'; setTimeout(acabar, 1600); return; }

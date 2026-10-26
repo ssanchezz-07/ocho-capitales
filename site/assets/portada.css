@@ -180,3 +180,31 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-gl-galon { fill: none; stroke: rgb(240 215 156 / .6); stroke-width: 1px; stroke-dasharray: 2 4; }
 .oc-gl-prov { stroke: #e9c97e; stroke-width: 1.2px; stroke-linejoin: round; }
 .oc-gl-cap circle { stroke: #c9a14a; stroke-width: 2px; }
+
+/* la hora de los planos es hora del día: un sol, una tarde o una luna delante de «18:30 h» */
+.oc-calle-hora[data-momento]::before, .oc-colg-hora[data-momento]::before { content: ""; display: inline-block; width: .62em; height: .62em; margin-right: .22em; vertical-align: .08em; border-radius: 50%; }
+.oc-calle-hora[data-momento="dia"]::before, .oc-colg-hora[data-momento="dia"]::before { background: radial-gradient(circle, #ffd56a 52%, transparent 56%), repeating-conic-gradient(#ffd56a 0 12deg, transparent 12deg 30deg); }
+.oc-calle-hora[data-momento="tarde"]::before, .oc-colg-hora[data-momento="tarde"]::before { background: linear-gradient(#f39a4a 50%, transparent 50%); border-radius: 50% 50% 0 0; height: .62em; }
+.oc-calle-hora[data-momento="noche"]::before, .oc-colg-hora[data-momento="noche"]::before { background: transparent; box-shadow: inset -.2em -.06em 0 0 #e9dcff; transform: rotate(-20deg); }
+.oc-gl-tierra5 { fill: #4a2668; stroke: #e2bf6e; stroke-width: 1.1px; stroke-linejoin: round; }
+
+/* ---- banderas: todas del mismo tamaño y el nombre legible (Pablo, 27-oct) ---- */
+.oc-portada .oc-colg { container-type: inline-size; }
+.oc-portada .oc-colg img { aspect-ratio: 265 / 971; height: auto; object-fit: cover; }
+/* letra a letra en vertical, pero grande (según el ancho de la bandera y las letras del nombre), con más contraste y una cartela suave detrás */
+.oc-home .oc-portada .oc-colg-name { top: 25%; bottom: 29%; font-size: min(34cqi, calc(190cqi / var(--n, 7))); line-height: .84; letter-spacing: 0; color: #fff6dc; text-shadow: 0 0 1px #1a0a10, 0 1px 1px #1a0a10, 0 0 6px rgb(10 4 16 / .7); }
+.oc-home .oc-portada .oc-colg-name::before { content: ""; position: absolute; z-index: -1; top: -3%; bottom: -3%; left: 26%; right: 26%; border-radius: 999px; background: rgb(10 4 16 / .34); filter: blur(5px); }
+
+/* ---- PC: dos columnas en pantallas anchas (banderas y cuenta atrás a la izquierda, el mapa grande a la derecha) ---- */
+@media (min-width: 1200px) and (min-aspect-ratio: 5/4) {
+  .oc-home .oc-portada .oc-colgaduras { display: grid; grid-template-columns: minmax(0, 41fr) minmax(0, 59fr); grid-template-rows: auto auto; column-gap: clamp(32px, 4vw, 80px); align-items: center; align-content: center; width: min(100% - 64px, 1720px, calc((100svh - var(--header-h) - 70px) * 2.75)); margin: 0 auto; padding-block: clamp(12px, 2.2vh, 28px); }
+  .oc-home .oc-portada .oc-colg-row { grid-column: 1; grid-row: 1; align-self: end; }
+  .oc-home .oc-portada .oc-colg-map { grid-column: 2; grid-row: 1 / span 2; width: 100%; margin: 0; }
+  .oc-home .oc-portada .oc-colg-pie { grid-column: 1; grid-row: 2; align-self: start; padding-top: 22px; }
+  .oc-home .oc-portada .oc-colg-hilos { display: none; }
+  .oc-home .oc-portada .oc-colg-ayuda { font-size: clamp(1.6rem, 2vw, 2.3rem); }
+}
+/* en el móvil la bandera es estrecha: más alto para el nombre y letra algo mayor, más apretada */
+@media (max-width: 759px) {
+  .oc-home .oc-portada .oc-colg-name { top: 23%; bottom: 26%; font-size: min(42cqi, calc(228cqi / var(--n, 7))); line-height: .78; }
+}

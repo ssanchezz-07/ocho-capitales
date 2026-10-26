@@ -453,7 +453,7 @@
     }
     function ponerHora(t) {
       T = t; plano.ponerHora(T);
-      var hh = OCPlano.hhmm(T); horaEl.textContent = hh; rango.setAttribute('aria-valuetext', hh);
+      var hh = OCPlano.hhmm(T), hd = ((Math.round(T) % 1440) + 1440) % 1440 / 60; horaEl.textContent = hh + ' h'; horaEl.setAttribute('data-momento', hd >= 21 || hd < 7 ? 'noche' : hd >= 18 ? 'tarde' : 'dia'); rango.setAttribute('aria-valuetext', hh + ' horas, ' + dia);
       var c = OCPlano.cielo(T); portada.style.setProperty('--cielo', c.fondo); portada.style.setProperty('--noche', c.noche.toFixed(2));
       var n = plano.cuantas();
       resEl.textContent = n.calle ? (n.calle === 1 ? '1 cofradía en la calle' : n.calle + ' cofradías en la calle') + (n.antes ? ' · ' + n.antes + ' por salir' : '') : n.antes ? (n.antes === 1 ? '1 cofradía por salir' : n.antes + ' cofradías por salir') : 'Todas recogidas a esta hora';

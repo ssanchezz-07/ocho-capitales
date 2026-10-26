@@ -253,7 +253,8 @@
     capas.mundo && capas.mundo.querySelectorAll('.oc-c-parada').forEach(function (m) { m.setAttribute('transform', m.getAttribute('transform').replace(/scale\([^)]*\)/, 'scale(' + Z.toFixed(3) + ')')); });
   }
   function actualizar() {
-    hora.textContent = hhmm(T); rango.setAttribute('aria-valuetext', hhmm(T));
+    // hora del día, no minutos de un vídeo: «18:30 h», con el sol, la tarde o la luna según la hora
+    var hd = ((Math.round(T) % 1440) + 1440) % 1440 / 60; hora.textContent = hhmm(T) + ' h'; hora.setAttribute('data-momento', hd >= 21 || hd < 7 ? 'noche' : hd >= 18 ? 'tarde' : 'dia'); rango.setAttribute('aria-valuetext', hhmm(T) + ' horas' + (dia ? ', ' + dia : ''));
     capas.cortejos.textContent = '';
     var filas = [];
     colocarMarcas();
@@ -416,10 +417,13 @@
   $$('[data-dia]').forEach(function (b) { b.addEventListener('click', function () { parar(); ponerDia(b.getAttribute('data-dia')); }); });
   rango.addEventListener('input', function () { parar(); T = +rango.value; actualizar(); });
   $('[data-ahora]').addEventListener('click', function () { parar(); var a = ahoraMin(); T = a < +rango.min - 180 ? a + 1440 : a; rango.value = T; actualizar(); });
-  function parar() { playing = false; cancelAnimationFrame(raf); sec.classList.remove('is-playing'); }
-  $('[data-play]').addEventListener('click', function () {
+  // el botón cambia de verdad su icono y su nombre (el truco de CSS «d: path()» no funciona en Safari)
+  var playB = $('[data-play]'), ICO_PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>', ICO_PAUSA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>';
+  function botonPlay() { playB.innerHTML = playing ? ICO_PAUSA : ICO_PLAY; playB.setAttribute('aria-label', playing ? 'Pausar' : 'Reproducir la jornada'); playB.setAttribute('aria-pressed', playing ? 'true' : 'false'); }
+  function parar() { playing = false; cancelAnimationFrame(raf); sec.classList.remove('is-playing'); botonPlay(); }
+  playB.addEventListener('click', function () {
     if (playing) return parar();
-    playing = true; sec.classList.add('is-playing');
+    playing = true; sec.classList.add('is-playing'); botonPlay();
     if (+rango.value >= +rango.max - 1) T = +rango.min;
     var t0 = performance.now(), base = T;
     (function paso(t) { if (!playing) return; T = base + (t - t0) / 1000 * 12; if (T >= +rango.max) { T = +rango.max; parar(); } rango.value = T; actualizar(); if (playing) raf = requestAnimationFrame(paso); })(t0);

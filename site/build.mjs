@@ -638,7 +638,7 @@ function colgaduras() {
   const items = orden.map((c, i) => {
     const hermandades = hermsOf(c.slug).length;
     const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
-    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true" style="--n:${[...c.nombre].length}">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
   }).join('');
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
@@ -741,10 +741,9 @@ function pageHome() {
   ${colgaduras()}
 </section>
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
-${TEMPORADA.fuera ? seccionNazareno(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 // El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
 // Va en la portada fuera de temporada (zona «Próxima Semana Santa», elegido por Pablo: el de oro sobre terciopelo) y en su página.
@@ -1506,7 +1505,7 @@ function pageCalle(c) {
 </section>
 <p class="oc-note"${FUERA ? ' hidden' : ''}>Recorridos del último itinerario oficial publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
 <noscript><p class="oc-note">El mapa necesita JavaScript. Consulta los horarios en la página de <a href="${capHref(c)}">la Semana Santa de ${esc(c.nombre)}</a>.</p></noscript>`;
-  write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
+  write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}"><script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
 }
 
 // ---------- erCuñao: datos compactos que consulta el asistente (sin IA, todo en el navegador) ----------
