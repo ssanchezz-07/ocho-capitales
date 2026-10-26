@@ -177,9 +177,11 @@ export function ciudad(c) {
     const e = ps.map((e) => [e, dC(e) - (e.tags.entrance === 'main' ? 5 : 0)]).sort((a, b) => a[1] - b[1])[0][0];
     return { punto: [e.lat, e.lon], como: `puerta OSM ${e.id} (${e.tags.entrance || e.tags.door}) del edificio, la más cercana a la calle por la que sale/entra`, puerta: e.id };
   }
-  const PUERTA_CATEDRAL = cfg.catedral ? { entra: PUERTAS.find((e) => e.id === cfg.catedral.entra), sale: PUERTAS.find((e) => e.id === cfg.catedral.sale), nombre: cfg.catedral.nombre } : { entra: null, sale: null };
+  // puerta de la catedral: nodo OSM (id) o, si la puerta no está en OSM, un punto { lat, lon, id: 'descripción' } con su nota
+  const puertaCat = (v) => (v && typeof v === 'object' ? v : PUERTAS.find((e) => e.id === v));
+  const PUERTA_CATEDRAL = cfg.catedral ? { entra: puertaCat(cfg.catedral.entra), sale: puertaCat(cfg.catedral.sale), nombre: cfg.catedral.nombre } : { entra: null, sale: null };
   // una hermandad puede entrar o salir por otra puerta que la de la capital (lista: "catedral": { "entra": nodo, "sale": nodo, "nombre": "…" })
-  const puertaCatedral = (L) => { const o = L?.catedral; if (!o) return PUERTA_CATEDRAL; const pu = (n, d) => (n ? PUERTAS.find((e) => e.id === n) || null : d); return { entra: pu(o.entra, PUERTA_CATEDRAL.entra), sale: pu(o.sale, PUERTA_CATEDRAL.sale), nombre: o.nombre || PUERTA_CATEDRAL.nombre }; };
+  const puertaCatedral = (L) => { const o = L?.catedral; if (!o) return PUERTA_CATEDRAL; const pu = (n, d) => (n ? puertaCat(n) || null : d); return { entra: pu(o.entra, PUERTA_CATEDRAL.entra), sale: pu(o.sale, PUERTA_CATEDRAL.sale), nombre: o.nombre || PUERTA_CATEDRAL.nombre }; };
 
   // Trazado publicado en site/data/recorridos/<c>.json, como {ida, regreso} en [lat, lon] (para compararlo con el nuevo)
   function publicado(id) {
