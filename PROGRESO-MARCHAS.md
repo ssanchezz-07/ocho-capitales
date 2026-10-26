@@ -25,7 +25,10 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
 - «El Novio de la Muerte» (Costa y Prado): retirada la dedicatoria al Cristo de la Buena Muerte (canción de varietés de 1921). La de Bachiller Aguilar sigue «sin verificar».
 
 ## Punto exacto para seguir
-- Bloque 2 subido (ver Historial). Siguiente: (1) terminar YouTube; (2) BNE si Pablo lo autoriza; (3) revisar las 308 dedicatorias dudosas del catálogo, empezando por Almería, Jaén, Huelva, Cádiz y Córdoba (las capitales con menos marchas); (4) revisión final por subagente de 20 marchas al azar.
+- Bloque 3 subido (`a6a9aeb`). **Revisión final por subagente de 20 marchas al azar** (4 contrastadas, 10 dedicadas, 6 revisadas a mano): **20 correctas, 0 errores** (`auditoria/lotes/resultado-muestra-20.json`, local).
+- Siguiente: las 151 dedicatorias dudosas de Sevilla, Málaga y Granada (`auditoria/lotes/dudas-C.json`), con 2 verificadores como mucho y vigilando el límite de 5 horas (85 %).
+- Al regenerar: `node tools/unificar-marchas.mjs` (acumula las redirecciones) y `node tools/comprobar-marchas.mjs <sitemap publicado>` con 0 errores.
+- Para otra sesión (datos de hermandades, no marchas): en `portal.json`, La Cena (Sevilla) tiene como titular «Señor de la Humillación» y le falta la Virgen de la Encarnación (titular de gloria); según el revisor, el titular es el Santísimo Cristo de la Humildad y Paciencia. Comprobar con la web oficial antes de cambiarlo.
 
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
