@@ -60,7 +60,7 @@ const EQUIV = {
   'conde vallellano': ['vallellano'], 'virgen perpetuo socorrro': ['perpetuo socorro', 'errata'], 'huerto san pedro real': ['huerto san pedro'],
   'mayor santa catalina': ['mayor santa marina', 'errata'], 'pintor bartolome blanco': ['parroco bartolome blanco', 'errata'],
   'san pablo plaza san andres': ['san pablo', 'errata'], 'santisimo cristo gracia': ['santo cristo gracia'],
-  'doctor maranon': ['doctor gregorio maranon'], 'isla fuerteventura': ['fuenteventura'],
+  'doctor maranon': ['doctor gregorio maranon'], 'isla fuerteventura': ['fuenteventura'], 'alfonso xii': ['alfonso xiii', 'errata'], // Esperanza: la rejilla oficial dice ALFONSO XIII
 };
 const igual = (a, b) => a === b || (a.length > 5 && b.length > 5 && lev(a, b) <= 1) // «SAN FERNADO» = «SAN FERNANDO» (errata del PDF)
   || EQUIV[a]?.[0] === b || EQUIV[b]?.[0] === a;

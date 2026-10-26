@@ -3,7 +3,7 @@
   "calles": {
    "27": {
     "omitir": true,
-    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar."
+    "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares y el trazado entraba y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura."
    }
   },
   "fuentes": [
@@ -11,8 +11,21 @@
     "fecha": "2026-10-26 15:00",
     "fuente": "Revisión independiente (2026-10-26): en OSM la Plaza de Ramón y Cajal queda a 40 m del eje Tesoro–Valladares, por Pérez de Castro, y el trazado entraba, rodeaba la plaza y volvía. Se deja de trazar como calle; el cortejo pasa por su embocadura. Revisar en el editor si se quiere marcar.",
     "cambios": "omitida: /ram[oó]n y cajal/i"
+   },
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026: «plaza de la Trinidad, plaza Ramón y Cajal, Valladares». De la Trinidad se llega a la esquina de Ramón y Cajal por la Calle Tesoro (OSM way 34751379); sin el punto bajaba por Horno de la Trinidad y volvía. Segunda revisión independiente (2026-10-26)",
+    "cambios": "punto de paso en Tesoro; Ramón y Cajal vuelve a la lista"
    }
-  ]
+  ],
+  "paso": {
+   "27": [
+    [
+     37.88292,
+     -4.78262
+    ]
+   ]
+  }
  },
  "la-paz-cordoba": {
   "calles": {
@@ -91,8 +104,26 @@
     "fecha": "2026-10-26 15:30",
     "fuente": "Listas oficiales 2026 (rejilla de la Agrupación y El Debate): sale por la Cuesta de San Cayetano y se recoge por ella. En OSM la Cuesta es un área (way 96799937) entre el templo y la Avenida de las Ollerías; sin estos puntos el trazado rodeaba la manzana por Alonso el Sabio (revisión independiente, 2026-10-26).",
     "cambios": "salida y entrada en el borde norte de la Cuesta de San Cayetano; punto de paso a mitad de la Cuesta (ida y regreso)"
+   },
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026: «plaza de Santa Marina, plaza de Don Gome, Santa Isabel, Enrique Redel». Punto en Santa Isabel (OSM way 86495459); sin él iba por la Plaza del Rector y la Calle Morales. Segunda revisión independiente (2026-10-26)",
+    "cambios": "punto de paso en Santa Isabel"
+   },
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Rejilla oficial 2026: la cruz de guía va «PLAZA DE SANTA MARINA, SANTA ISABEL, ENRIQUE REDEL» y el final del cortejo «PLAZA DE SANTA MARINA, PLAZA DE DON GOME, ENRIQUE REDEL»: Don Gome está al final de Santa Isabel, así que el punto de paso en Santa Isabel va antes de Don Gome.",
+    "cambios": "punto de paso en Santa Isabel antes de Don Gome"
    }
-  ]
+  ],
+  "paso": {
+   "6": [
+    [
+     37.88919,
+     -4.77476
+    ]
+   ]
+  }
  },
  "la-cena-cordoba": {
   "salida": {
@@ -110,6 +141,213 @@
     "fecha": "2026-10-26 15:30",
     "fuente": "Lista oficial 2026: sale por la Avenida de Guerrita, que es la calle del templo según OSM/Nominatim. El punto de la sede (centro de la parroquia, relation 17140024) hacía salir por Pepete y José María Martorell (revisión independiente, 2026-10-26). Punto: Avenida Guerrita frente al templo (way 43113288).",
     "cambios": "salida y entrada en la Avenida de Guerrita, frente al templo"
+   },
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Segunda revisión independiente (2026-10-26)",
+    "cambios": "Gran Vía Parque del regreso en el cruce con Guerrita"
+   }
+  ],
+  "calles": {
+   "30": {
+    "punto": [
+     37.8793,
+     -4.7928
+    ],
+    "fuente": "Lista oficial 2026: el regreso acaba «Gran Vía Parque, avenida de Guerrita». Punto de Gran Vía Parque en su cruce con Guerrita; sin él subía unos 200 m por la Gran Vía y volvía. Segunda revisión independiente (2026-10-26)"
+   }
+  }
+ },
+ "entrada-triunfal-cordoba": {
+  "calles": {
+   "7": {
+    "omitir": true,
+    "fuente": "«ESQ. SAN PEDRO - LINEROS» es una esquina, no una calle: se sustituye por un punto de paso en Don Rodrigo. Rejilla oficial 2026: «ESQ. SAN PEDRO - LINEROS» entre la plaza de San Pedro y Lineros; las une la Calle Don Rodrigo (OSM way 34935377), por donde pasan las otras cofradías de 2026 en ese tramo. Segunda revisión independiente (2026-10-26)"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Segunda revisión independiente (2026-10-26)",
+    "cambios": "punto en Don Rodrigo en vez de Calle de la Rosa"
+   }
+  ],
+  "paso": {
+   "8": [
+    [
+     37.8822,
+     -4.77162
+    ],
+    [
+     37.882,
+     -4.77255
+    ]
+   ]
+  }
+ },
+ "la-santa-faz-cordoba": {
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026 (El Debate): «Salida, plaza de la Trinidad, Lope de Hoces…». Punto en Lope de Hoces al oeste del templo (OSM way 1371354232); sin él salía por Montemayor y Pérez de Castro. Segunda revisión independiente (2026-10-26)",
+    "cambios": "punto de paso en Lope de Hoces"
+   },
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026 (El Debate): «plaza de la Trinidad, Lope de Hoces». GraphHopper evita el tramo central de Lope de Hoces y rodeaba por Montemayor, Pérez de Castro y Eduardo Dato; Lope de Hoces es recta y se dibuja de punta a punta.",
+    "cambios": "Lope de Hoces en línea recta"
+   }
+  ],
+  "cruzar": {
+   "2": true
+  }
+ },
+ "la-piedad-cordoba": {
+  "calles": {
+   "9": {
+    "vias": [
+     536174383,
+     139349900,
+     536174381,
+     536174389,
+     39375925,
+     39375927,
+     241719133
+    ],
+    "fuente": "Lista oficial 2026: «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431). Es de doble calzada: se limita a la calzada de ese sentido, porque con las dos el trazado zigzagueaba de una a otra (o se iba por la Calle Maryan). Revisión independiente (2026-10-26)."
+   },
+   "17": {
+    "vias": [
+     536178966
+    ],
+    "fuente": "Lista oficial 2026: «República Argentina, Jardines de la Victoria, Paseo de la Victoria, Pintor López Obrero». República Argentina y el Paseo son de doble calzada y el trazado iba y volvía por las dos: se limita República Argentina a su tramo sur (desde Antonio Maura, OSM way 536178966) y el Paseo a su tramo sur, junto a López Obrero (ways 376907862, 1253213206 y 36869039). Revisión independiente (2026-10-26)."
+   },
+   "18": {
+    "vias": [
+     36869039
+    ],
+    "fuente": "«Jardines de la Victoria» casa en OSM con el Paseo de la Victoria entero (nombre alternativo) y el trazado lo subía y bajaba: se limita al tramo sur, junto a Pintor López Obrero. Revisión independiente (2026-10-26)."
+   },
+   "19": {
+    "vias": [
+     36869039
+    ],
+    "fuente": "Lista oficial 2026: «República Argentina, Jardines de la Victoria, Paseo de la Victoria, Pintor López Obrero». República Argentina y el Paseo son de doble calzada y el trazado iba y volvía por las dos: se limita República Argentina a su tramo sur (desde Antonio Maura, OSM way 536178966) y el Paseo a su tramo sur, junto a López Obrero (ways 376907862, 1253213206 y 36869039). Revisión independiente (2026-10-26)."
+   },
+   "51": {
+    "vias": [
+     241719134,
+     39375929,
+     39375928,
+     919679104,
+     1220061208
+    ],
+    "fuente": "Lista oficial 2026: «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431). Es de doble calzada: se limita a la calzada de ese sentido, porque con las dos el trazado zigzagueaba de una a otra (o se iba por la Calle Maryan). Revisión independiente (2026-10-26)."
+   },
+   "53": {
+    "vias": [
+     241719134,
+     39375929,
+     39375928,
+     919679104,
+     1220061208
+    ],
+    "fuente": "Lista oficial 2026: «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431). Es de doble calzada: se limita a la calzada de ese sentido, porque con las dos el trazado zigzagueaba de una a otra (o se iba por la Calle Maryan). Revisión independiente (2026-10-26)."
+   },
+   "54": {
+    "vias": [
+     26316643,
+     536173542,
+     536173543
+    ],
+    "fuente": "Ingeniero Benito de Arana hasta su cruce con Sierra Morena (siguiente calle de la lista); sin limitarlo el trazado seguía 200 m al oeste y volvía. Segunda revisión independiente (2026-10-26)"
+   }
+  },
+  "tramos": {
+   "18": {
+    "fuente": "Del extremo sur de República Argentina al Paseo de la Victoria, por los Jardines: no está en OSM como vía; camino a pie más corto, no un dato oficial.",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Segunda revisión independiente (2026-10-26). Lista oficial 2026 (rejilla de la Agrupación, El Debate y Sentir Córdoba): «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431) en OSM. Sin este punto el trazado iba por la Calle Maryan, paralela.",
+    "cambios": "paso por el norte de República Argentina (tramo marcado estimado); A-431 en el regreso; Benito de Arana limitado"
+   }
+  ]
+ },
+ "la-conversion-cordoba": {
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026 (rejilla de la Agrupación, El Debate y Sentir Córdoba): «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431) en OSM. Sin este punto el trazado iba por la Calle Maryan, paralela. Segunda revisión independiente (2026-10-26)",
+    "cambios": "puntos de paso en la A-431 (ida)"
+   }
+  ],
+  "calles": {
+   "3": {
+    "vias": [
+     536174383,
+     139349900,
+     536174381,
+     536174389,
+     39375925,
+     39375927,
+     241719133
+    ],
+    "fuente": "Lista oficial 2026: «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431). Es de doble calzada: se limita a la calzada de ese sentido, porque con las dos el trazado zigzagueaba de una a otra (o se iba por la Calle Maryan). Revisión independiente (2026-10-26)."
+   },
+   "42": {
+    "vias": [
+     241719134,
+     39375929,
+     39375928,
+     919679104,
+     1220061208
+    ],
+    "fuente": "Lista oficial 2026: «carretera de Palma del Río» = Carretera de Córdoba a Lora del Río (A-431). Es de doble calzada: se limita a la calzada de ese sentido, porque con las dos el trazado zigzagueaba de una a otra (o se iba por la Calle Maryan). Revisión independiente (2026-10-26)."
+   }
+  }
+ },
+ "la-misericordia-cordoba": {
+  "cruzar": {
+   "4": true
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Lista oficial 2026: «Arco Bajo de la Corredera, plaza de la Corredera, Arco Alto de la Corredera»: se cruza la plaza de un arco al otro. En OSM es un área peatonal y GraphHopper la rodeaba entera. Revisión independiente (2026-10-26)",
+    "cambios": "plaza de la Corredera cruzada en línea recta"
+   }
+  ],
+  "calles": {
+   "3": {
+    "omitir": true,
+    "fuente": "La plaza de la Corredera se cruza de arco a arco (lista oficial 2026); como «calle» el trazado la rodeaba. Revisión independiente (2026-10-26)."
+   }
+  }
+ },
+ "lagrimas-cordoba": {
+  "calles": {
+   "12": {
+    "vias": [
+     520562789,
+     520562804,
+     537525121,
+     1250775628,
+     520562799,
+     95522377,
+     1250775629
+    ],
+    "fuente": "Calle Isla de Fuerteventura hasta su cruce con Isla Graciosa (siguiente calle de la lista); sin limitarla el trazado llegaba al final de la calle y volvía. Revisión propia (2026-10-27)"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-27",
+    "fuente": "Revisión propia (2026-10-27)",
+    "cambios": "Fuerteventura limitada al tramo útil"
    }
   ]
  }

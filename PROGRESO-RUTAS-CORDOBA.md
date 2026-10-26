@@ -168,3 +168,37 @@ Para rehacer: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar`, bu
 3. Volver a pasar la revisión independiente sobre esas 9.
 4. Build y Playwright a 390 y 1440 px.
 5. Rebase, push y aviso a Pablo.
+
+## Pausa (2026-10-27) · punto exacto
+Pausa ordenada por Pablo (ordenador lento). **Nada subido**: todo está en la rama `claude/rutas-cordoba-1f33f9`, rebasada sobre `origin/main` (6cddfb3) y con este commit encima.
+
+**Hecho en esta vuelta** (correcciones con fuente en `rutas/correcciones-cordoba.json`; alias en `alias-calles-cordoba.json`):
+- **Entrada Triunfal:** pasa por Don Rodrigo; «ESQ. SAN PEDRO - LINEROS» queda omitida y hay puntos de paso en Don Rodrigo.
+- **Sentencia:** punto de paso en Tesoro y Ramón y Cajal omitida. Sin bucles.
+- **Santa Faz:** Lope de Hoces en línea recta (`cruzar`). Sin rodeo por Montemayor.
+- **Piedad:**
+  - República Argentina limitada al tramo sur.
+  - «Jardines de la Victoria» y el Paseo de la Victoria, a su tramo sur; el cruce de los Jardines va como **estimado**.
+  - La A-431 va por una sola calzada en cada sentido.
+  - Benito de Arana llega solo hasta Sierra Morena.
+- **Jesús Caído:** punto de paso en Santa Isabel antes de Don Gome. Va por Santa Isabel.
+- **Cena:** fuera los alias de «Jardines de Vallellano» y Gran Vía Parque fijada en el cruce con Guerrita. Sin bucles.
+- **Conversión:** la A-431 va por una sola calzada (este en la ida, oeste en el regreso). Ya no va por Calle Maryan.
+- **Dolores:** alias «Torres Cabrera» = Calle del Conde Torres Cabrera.
+- **Misericordia:** la plaza de la Corredera queda omitida como calle y se cruza en recta de arco a arco.
+- **Lágrimas:** Isla de Fuerteventura limitada al tramo hasta Isla Graciosa.
+- **Esperanza:** «Alfonso XII» de la prensa = ALFONSO XIII de la rejilla (errata).
+- **Vía Crucis y demás:** «SALIDA C.O.» va con la Catedral y el regreso empieza en su puerta. Para eso hay una opción nueva solo para Córdoba en `emparejar.mjs` y `ciudades.mjs`: `regresoEnLaPuerta`.
+- **Prendimiento:** probé un paso por el Potro y creaba un bucle con la Ribera. Lo quité y queda como antes: pasa a 40 m del Potro, que era «dudosa».
+
+**Último trazado completo** (antes de quitar el paso del Prendimiento):
+- 42/42 «nuevo», 988/1000 calles, 3 retrocesos, 0 rectas, sedes a 49 m o menos.
+- Bucles grandes eliminados. Quedan algunos de 30-60 m en plazas y cruces, aceptados y anotados en la revisión.
+
+**Para retomar:**
+1. `cd tools/itinerarios && node listas-cordoba.mjs && cd rutas && node lista-cordoba.mjs && node emparejar.mjs cordoba && node evaluar.mjs cordoba`
+2. `node publicar.mjs cordoba && python -I capturar.py cordoba`, después `node site/build.mjs` y Playwright a 390 y 1440 px.
+3. Comprobar que Málaga sale idéntica: el código común cambió con `regresoEnLaPuerta`, que solo usa Córdoba.
+4. Revisión independiente corta de las 9: subagente, máximo 2.
+5. Rebase sobre `origin/main`, push y aviso a Pablo.
+6. Después, las sedes de Córdoba, Granada y Jaén en el formato común `site/data/sedes/<capital>.json` que publique `rutas-malaga`.

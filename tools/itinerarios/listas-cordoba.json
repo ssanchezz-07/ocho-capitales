@@ -476,7 +476,7 @@
     "plaza de San Lorenzo",
     "ARROYO SAN LORENZO",
     "Ronda de Andújar",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Bartolomé",
     "plaza de San Pedro",
     "ESQ. SAN PEDRO - LINEROS",
@@ -560,8 +560,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "10:30",
@@ -1492,7 +1493,7 @@
     "arroyo de San Lorenzo",
     "Ronda de Andújar",
     "PUERTA NUEVA",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza Vizconde de Miranda",
     "DON RODRIGO",
     "Lineros",
@@ -1607,8 +1608,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "17:00",
@@ -2254,7 +2256,7 @@
    "calles": [
     "Salida",
     "San Pablo",
-    "Alfonso XII",
+    "ALFONSO XIII",
     "Diego de León",
     "plaza de las Tendillas",
     "GONDOMAR",
@@ -2323,8 +2325,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XIII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XIII",
      "cruz": "17:00",
@@ -2930,7 +2933,7 @@
     "Arroyo de San Lorenzo",
     "Ronda de Andújar",
     "Puerta Nueva",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Pedro",
     "Don Rodrigo",
     "Lineros",
@@ -3073,8 +3076,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "17:50",
@@ -3378,7 +3382,7 @@
     "Hernando de Magallanes",
     "Campo Madre de Dios",
     "Puerta Nueva",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Pedro",
     "Don Rodrigo",
     "Lineros",
@@ -3553,8 +3557,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "18:30",
@@ -5082,7 +5087,7 @@
     "ARROYO DE SAN LORENZO",
     "Ronda de Andújar",
     "Puerta Nueva",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza Vizconde de Miranda",
     "Don Rodrigo",
     "plaza del Potro",
@@ -5165,8 +5170,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "20:50",
@@ -5834,7 +5840,7 @@
     "Lineros",
     "Don Rodrigo",
     "PLAZA DE SAN PEDRO",
-    "Alfonso XII",
+    "ALFONSO XII",
     "Ancha de la Magdalena",
     "PLAZA DE LA MAGDALENA",
     "Muñices",
@@ -6115,8 +6121,9 @@
      "tramo": "regreso"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "22:00",
@@ -6504,7 +6511,7 @@
     "Muñices",
     "plaza de la Magdalena",
     "Borja y Pavón",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Pedro",
     "Don Rodrigo",
     "Lineros",
@@ -6588,8 +6595,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "18:20",
@@ -7175,7 +7183,7 @@
     "Arroyo de San Lorenzo",
     "PLAZA JESÚS DEL PRENDIMIENTO",
     "Ronda de Andújar",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Bartolomé",
     "PLAZA VIZCONDE DE MIRANDA",
     "plaza de San Pedro",
@@ -7292,8 +7300,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "19:50",
@@ -11843,7 +11852,7 @@
     "Arroyo de San Lorenzo",
     "Ronda de Andújar",
     "glorieta de Puerta Nueva",
-    "Alfonso XII",
+    "ALFONSO XII",
     "plaza de San Pedro",
     "Don Rodrigo",
     "Lineros",
@@ -11949,8 +11958,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "20:30",
@@ -12870,7 +12880,7 @@
     "Golondrina",
     "plaza de la Magdalena",
     "FRANISCO DE BORJA PAVÓN",
-    "Alfonso XII",
+    "ALFONSO XII",
     "PLAZA DE SAN PEDRO",
     "Don Rodrigo",
     "Lineros",
@@ -13051,8 +13061,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "Alfonso XII",
+     "lugar": "ALFONSO XII",
      "tipo": "calle",
+     "prensa": "Alfonso XII",
      "origen": "prensa y rejilla",
      "rejilla": "ALFONSO XII",
      "cruz": "19:00",
