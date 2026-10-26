@@ -10938,16 +10938,14 @@
    },
    {
     "i": 23,
-    "lugar": "Javier de Burgos",
+    "lugar": "Novena",
     "tipo": "calle",
-    "osm": "Calle Javier de Burgos",
+    "osm": "Calle Novena",
     "vias": [
-     142067918,
-     142067919,
-     766321842
+     27184156
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 2,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -11005,9 +11003,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada): sin calle, línea por dentro",
-  "ms_graphhopper": 55,
-  "largo_m": 2451,
-  "ms_total": 73
+  "ms_graphhopper": 813,
+  "largo_m": 2555,
+  "ms_total": 846
  },
  "la-buena-muerte-cadiz": {
   "id": "la-buena-muerte-cadiz",

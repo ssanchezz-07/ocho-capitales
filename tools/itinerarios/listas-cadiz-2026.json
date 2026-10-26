@@ -7011,7 +7011,7 @@
      "entrada": "09:45"
     }
    },
-   "duda": "Hora de salida del primer paso: 01:10 en el programa de Canal Sur (pág. 24) y 01:30 en el cuadernillo de Radio Cádiz 2026, que repite la del último paso (01:30 en los dos): se toma la de Canal Sur.",
+   "duda": "Resuelto (2026-10-27): la cruz de guía sale a las 00:50 en las cuatro fuentes (Canal Sur, pág. 24; Andalucía Información, https://www.andaluciainformacion.es/articulo/cadiz-cofrade/guia-completa-semana-santa-cadiz-2026-horarios-itinerarios/202603251050453233593.html; Isla Pasión, https://islapasion.net/horarios-e-itinerarios-completos-de-la-semana-santa-de-cadiz-2026-guia-con-todas-las-hermandades-dia-a-dia/; OKDiario, https://okdiario.com/andalucia/procesiones-semana-santa-cadiz-2026-fechas-horario-recorrido-16449980). El plano usa, como en todas, la fila del primer paso, que en Canal Sur es «PASO DE MISTERIO» a las 01:10 (el cuadernillo de Radio Cádiz da 01:30 a ese paso).",
    "segunda_fuente": {
     "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
     "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
@@ -7751,7 +7751,8 @@
     },
     {
      "texto": "Javier de Burgos",
-     "calle": "Javier de Burgos"
+     "calle": "Novena",
+     "errata": "regreso «Plaza Palillero, Novena, Barrié» y no «Javier de Burgos» (Canal Sur): así lo dan el cuadernillo de Radio Cádiz 2026 (pág. 41) y Andalucía Información (https://www.andaluciainformacion.es/articulo/cadiz-cofrade/guia-completa-semana-santa-cadiz-2026-horarios-itinerarios/202603251050453233593.html); Isla Pasión tampoco nombra Javier de Burgos (resuelto por la sesión coordinadora a petición de Pablo, 2026-10-27)"
     },
     {
      "texto": "Barrié",
@@ -7773,6 +7774,7 @@
     }
    ],
    "erratas_del_programa": [
+    "regreso «Plaza Palillero, Novena, Barrié» y no «Javier de Burgos» (Canal Sur): así lo dan el cuadernillo de Radio Cádiz 2026 (pág. 41) y Andalucía Información (https://www.andaluciainformacion.es/articulo/cadiz-cofrade/guia-completa-semana-santa-cadiz-2026-horarios-itinerarios/202603251050453233593.html); Isla Pasión tampoco nombra Javier de Burgos (resuelto por la sesión coordinadora a petición de Pablo, 2026-10-27)",
     "falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma"
    ],
    "sede_canonica": {
@@ -7830,7 +7832,6 @@
      "entrada": "02:00"
     }
    },
-   "duda": "Regreso: el programa de Canal Sur dice «Plaza Palillero, Javier de Burgos, Barrié, Sacramento»; el cuadernillo de Radio Cádiz 2026 (pág. 41), «Plaza Palillero, Novena, Barrié (Izq.), Sacramento». Se sigue a Canal Sur; pendiente de confirmar por Pablo.",
    "segunda_fuente": {
     "documento": "Semana Santa de la Bahía de Cádiz 2026, Radio Cádiz (Cadena SER)",
     "url": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",

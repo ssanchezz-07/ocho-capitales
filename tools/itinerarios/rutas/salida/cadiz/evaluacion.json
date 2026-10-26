@@ -85,7 +85,7 @@
  },
  "la-borriquita-cadiz": {
   "publicado": {
-   "largo_m": 6766,
+   "largo_m": 6834,
    "comprobables": 31,
    "sin_dato": [],
    "recorridas": 31,
@@ -97,11 +97,15 @@
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 253,
-   "retrocesos": 2,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
      36.523476,
      -6.286706
+    ],
+    [
+     36.530365,
+     -6.291634
     ],
     [
      36.529422,
@@ -869,7 +873,7 @@
  },
  "la-sentencia-cadiz": {
   "publicado": {
-   "largo_m": 2647,
+   "largo_m": 2721,
    "comprobables": 29,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -890,7 +894,7 @@
      -6.295622
     ]
    ],
-   "pct_en_calles_lista": 76
+   "pct_en_calles_lista": 75
   },
   "nuevo": {
    "largo_m": 2721,
@@ -925,7 +929,7 @@
  },
  "las-cigarreras-cadiz": {
   "publicado": {
-   "largo_m": 2666,
+   "largo_m": 2734,
    "comprobables": 23,
    "sin_dato": [
     "Beato Diego de Cádiz"
@@ -939,14 +943,18 @@
    "sede_entrada": "templo en OSM: Convento de Nuestra Señora del Rosario y Santo Domingo",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 1,
+   "retrocesos": 2,
    "donde_retrocesos": [
+    [
+     36.530365,
+     -6.291634
+    ],
     [
      36.529422,
      -6.295622
     ]
    ],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 80
   },
   "nuevo": {
    "largo_m": 2734,
@@ -1209,7 +1217,7 @@
  },
  "nazareno-de-santa-maria-cadiz": {
   "publicado": {
-   "largo_m": 3520,
+   "largo_m": 3595,
    "comprobables": 32,
    "sin_dato": [
     "Jabonería"
@@ -1230,7 +1238,7 @@
      -6.295622
     ]
    ],
-   "pct_en_calles_lista": 80
+   "pct_en_calles_lista": 79
   },
   "nuevo": {
    "largo_m": 3595,
@@ -1284,7 +1292,7 @@
      -6.295622
     ]
    ],
-   "pct_en_calles_lista": 85
+   "pct_en_calles_lista": 84
   },
   "nuevo": {
    "largo_m": 2618,
@@ -1484,9 +1492,11 @@
    "largo_m": 2451,
    "comprobables": 24,
    "sin_dato": [],
-   "recorridas": 24,
-   "en_orden": 22,
-   "no_recorridas": [],
+   "recorridas": 23,
+   "en_orden": 21,
+   "no_recorridas": [
+    "Novena (0 m)"
+   ],
    "salida_m": 0,
    "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
@@ -1500,10 +1510,10 @@
      -6.295622
     ]
    ],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
-   "largo_m": 2451,
+   "largo_m": 2555,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
@@ -1527,7 +1537,8 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "calles recorridas 23→24",
+    "en orden 21→22"
    ]
   }
  },

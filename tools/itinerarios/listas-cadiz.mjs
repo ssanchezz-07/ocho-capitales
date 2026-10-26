@@ -37,7 +37,7 @@ const ERRATAS = [
 // «insertar» añade una calle que el programa omite, entre «tras» y «antes».
 const ERRATAS_PABLO = {
   'siete-palabras-cadiz': [{ tras: 'Plaza San Agustín', de: 'San Agustín', a: 'San Francisco', nota: '«San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26)' }],
-  'el-descendimiento-cadiz': [{ tras: 'Plaza Palillero', antes: 'San Francisco', insertar: 'Columela', nota: 'falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma' }],
+  'el-descendimiento-cadiz': [{ tras: 'Plaza Palillero', de: 'Javier de Burgos', a: 'Novena', nota: 'regreso «Plaza Palillero, Novena, Barrié» y no «Javier de Burgos» (Canal Sur): así lo dan el cuadernillo de Radio Cádiz 2026 (pág. 41) y Andalucía Información (https://www.andaluciainformacion.es/articulo/cadiz-cofrade/guia-completa-semana-santa-cadiz-2026-horarios-itinerarios/202603251050453233593.html); Isla Pasión tampoco nombra Javier de Burgos (resuelto por la sesión coordinadora a petición de Pablo, 2026-10-27)' }, { tras: 'Plaza Palillero', antes: 'San Francisco', insertar: 'Columela', nota: 'falta «Columela» entre la Plaza del Palillero y San Francisco (ida): la trae el cuadernillo de Radio Cádiz 2026, pág. 41, y es el mismo paso que hace La Palma' }],
 };
 // Segunda fuente de 2026 (cruzdeguia-cadiz.mjs): cuadernillo de Radio Cádiz, con templo, itinerario y horas
 const fCG = path.join(DIR, 'cadiz-2026-cruzdeguia.json');
@@ -45,8 +45,7 @@ const CG = fs.existsSync(fCG) ? JSON.parse(fs.readFileSync(fCG, 'utf8')) : null;
 const claveC = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\(.*?\)/g, " ").replace(/\b(plaza|calle|avda|avenida|de|del|la|las|el|los)\b|[.“”"]/g, " ").replace(/\s+/g, " ").trim();
 // Diferencias entre las dos fuentes de 2026 que quedan para Pablo (se mantiene el programa de Canal Sur)
 const DUDAS = {
-  'el-descendimiento-cadiz': 'Regreso: el programa de Canal Sur dice «Plaza Palillero, Javier de Burgos, Barrié, Sacramento»; el cuadernillo de Radio Cádiz 2026 (pág. 41), «Plaza Palillero, Novena, Barrié (Izq.), Sacramento». Se sigue a Canal Sur; pendiente de confirmar por Pablo.',
-  'el-perdon-cadiz': 'Hora de salida del primer paso: 01:10 en el programa de Canal Sur (pág. 24) y 01:30 en el cuadernillo de Radio Cádiz 2026, que repite la del último paso (01:30 en los dos): se toma la de Canal Sur.',
+  'el-perdon-cadiz': 'Resuelto (2026-10-27): la cruz de guía sale a las 00:50 en las cuatro fuentes (Canal Sur, pág. 24; Andalucía Información, https://www.andaluciainformacion.es/articulo/cadiz-cofrade/guia-completa-semana-santa-cadiz-2026-horarios-itinerarios/202603251050453233593.html; Isla Pasión, https://islapasion.net/horarios-e-itinerarios-completos-de-la-semana-santa-de-cadiz-2026-guia-con-todas-las-hermandades-dia-a-dia/; OKDiario, https://okdiario.com/andalucia/procesiones-semana-santa-cadiz-2026-fechas-horario-recorrido-16449980). El plano usa, como en todas, la fila del primer paso, que en Canal Sur es «PASO DE MISTERIO» a las 01:10 (el cuadernillo de Radio Cádiz da 01:30 a ese paso).',
 };
 const CATEDRAL = /\(?\s*Estaci[oó]n de Penitencia en la S\.I\.C\.?\s*\)?/i;
 const LADO = [[/^(Izda?|Izqda?|Izq|izq|Lado Izda)\.?$/i, 'izquierda'], [/^(Dcha|Drcha|Dr-?cha)\.?$/i, 'derecha'], [/^centro$/i, 'centro'], [/^interior$/i, 'interior'],
