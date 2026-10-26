@@ -287,6 +287,14 @@
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.appendChild(svg); mapa.appendChild(hs);
+      // Entrada de la primera visita: la cámara baja del globo a Andalucía (assets/globo.js). Una sola vez por navegador, nunca con
+      // «reducir movimiento», ni si se llega a una ciudad (#malaga), ni con la página ya desplazada o en modo de ahorro de datos.
+      (function () {
+        var visto = '1'; try { visto = localStorage.getItem('oc-entrada') || ''; } catch (e) { }
+        if (visto || reduced || location.hash || scrollY > 40 || !datos.globo || (navigator.connection && navigator.connection.saveData)) return;
+        try { localStorage.setItem('oc-entrada', '1'); } catch (e) { }
+        var s = document.createElement('script'); s.src = datos.globo; s.onload = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo }); }; document.head.appendChild(s);
+      })();
       // ---- Mapa «Bordado» (elegido por Pablo, 26-oct): cada provincia, un repostero de terciopelo con cordón de oro, y junto a
       // cada capital su catedral bordada a puntadas. Ríos y sierras: Natural Earth (dominio público, tools/generar-mapa-detalle.mjs).
       // Las catedrales son dibujos propios y esquemáticos (sin derechos de terceros), en una cuadrícula de 32 con el suelo en y=30.
