@@ -7,20 +7,13 @@
 //   aunque el evaluador dijera «revisar» o «publicado» (tras mirarlas en las capturas o corregirlas en el editor).
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { ciudad, leerLista, dirSalida, fPublicado, sn, d2, TEMPLO } from './comun.mjs';
 
-const args = process.argv.slice(2), forzar = args.includes('--forzar');
-const [c, ...resto] = args.filter((a) => a !== '--forzar');
-const C = ciudad(c), L = leerLista(c);
-const ids = resto.length ? Object.keys(L).filter((id) => resto.some((s) => id === s || id === s + '-' + c)) : Object.keys(L);
-const EV = JSON.parse(fs.readFileSync(path.join(dirSalida(c), 'evaluacion.json'), 'utf8'));
-const INF = JSON.parse(fs.readFileSync(path.join(dirSalida(c), 'informe.json'), 'utf8'));
-const fR = fPublicado(c), R = fs.existsSync(fR) ? JSON.parse(fs.readFileSync(fR, 'utf8')) : { ciudad: C.nombre, anio: 2026, hermandades: {} };
-const hoy = new Date().toISOString().slice(0, 10);
 const r6 = (x) => +x.toFixed(6);
 const HUECO_MAX = 60;
 
-function aPuntos(id, traza, informe, lista) {
+export function aPuntos(C, id, traza, informe, lista) {
   const geo = [...traza.ida, ...traza.regreso.slice(1)];
   const ps = traza.puntos.filter((p) => p.pos != null && p.pos >= 0 && !['omitida', 'sin_osm', 'homonimo'].includes(p.tipo));
   const hueco = new Map((informe.calles || []).map((k) => [k.i, k.hueco_entrada_m]));
@@ -63,14 +56,23 @@ function aPuntos(id, traza, informe, lista) {
   return out;
 }
 
-{
+// ---- línea de órdenes ----
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+const args = process.argv.slice(2), forzar = args.includes('--forzar');
+const [c, ...resto] = args.filter((a) => a !== '--forzar');
+const C = ciudad(c), L = leerLista(c);
+const ids = resto.length ? Object.keys(L).filter((id) => resto.some((s) => id === s || id === s + '-' + c)) : Object.keys(L);
+const EV = JSON.parse(fs.readFileSync(path.join(dirSalida(c), 'evaluacion.json'), 'utf8'));
+const INF = JSON.parse(fs.readFileSync(path.join(dirSalida(c), 'informe.json'), 'utf8'));
+const fR = fPublicado(c), R = fs.existsSync(fR) ? JSON.parse(fs.readFileSync(fR, 'utf8')) : { ciudad: C.nombre, anio: 2026, hermandades: {} };
+const hoy = new Date().toISOString().slice(0, 10);
   const hechas = [], saltadas = [];
   for (const id of ids) {
     const d = EV[id]?.decision, fT = path.join(dirSalida(c), 'trazas', id + '.json');
     if (!fs.existsSync(fT) || !INF[id] || INF[id].error) { saltadas.push(`${id}: sin trazado nuevo`); continue; }
     if (!forzar && d?.queda !== 'nuevo') { saltadas.push(`${id}: el evaluador dice «${d?.queda || 'sin evaluar'}» (${(d?.motivo || []).join(' · ')})`); continue; }
     const traza = JSON.parse(fs.readFileSync(fT, 'utf8'));
-    const puntos = aPuntos(id, traza, INF[id], L[id]);
+    const puntos = aPuntos(C, id, traza, INF[id], L[id]);
     if (puntos.length < 2) { saltadas.push(`${id}: menos de 2 puntos`); continue; }
     const h = R.hermandades[id] || (R.hermandades[id] = {});
     h.tramos = { paso: puntos }; h.fuente = L[id].fuente; h.calles_oficiales = L[id].calles; h.reconstruido = hoy; h.metodo = 'continuidad + GraphHopper';

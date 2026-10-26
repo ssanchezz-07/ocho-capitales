@@ -79,6 +79,7 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 | `capturar.py` | Capturas de comparación |
 | `descargar-puertas.mjs` | Puertas y templos de Overpass |
 | `lista-malaga.mjs` | Genera `listas/malaga.json` desde lo publicado (PDF de la Agrupación 2026) |
+| `extraordinarias.mjs` | Salidas extraordinarias y magnas (`tools/sources/itinerarios-extraordinarios.json`) con el método nuevo: `node extraordinarias.mjs <capital> [id …]` → «extraordinarias» de `site/data/recorridos/<capital>.json`. Correcciones con el id de la salida en `correcciones-<capital>.json` |
 | `dossier.mjs` | Dossier para una revisión independiente: `node dossier.mjs <capital>` → `salida/<capital>/dossier.md` |
 | `probar-plano.py` | Prueba del plano con Playwright a 390 y 1440 px (`python -I probar-plano.py <capital>`) |
 | `probar-editor.py` | Prueba del editor con Playwright |

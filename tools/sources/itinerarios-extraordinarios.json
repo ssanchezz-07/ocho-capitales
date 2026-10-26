@@ -1,5 +1,5 @@
 {
- "_leeme": "Salidas extraordinarias y magnas con itinerario, copiado literal de la fuente oficial. Mismo formato de puntos que itinerarios-2026.json ({lugar, hora}); «templo» solo ayuda a situar el punto en OpenStreetMap (nombre del templo en OSM). Tramos «ida» y «regreso» (si lo hay); «acto» es lo que ocurre entre ambos. Cadena: geocodificar.mjs → enrutar.mjs → build.mjs. Revisado: 2026-10-22.",
+ "_leeme": "Salidas extraordinarias y magnas con itinerario, copiado literal de la fuente oficial. Mismo formato de puntos que itinerarios-2026.json ({lugar, hora}); «templo» solo ayuda a situar el punto en OpenStreetMap (nombre del templo en OSM). Tramos «ida» y «regreso» (si lo hay); «acto» es lo que ocurre entre ambos. Cadena: tools/itinerarios/rutas/extraordinarias.mjs <capital> (método nuevo) → build.mjs. Revisado: 2026-10-22.",
  "salidas": {
   "pasion-malaga-2026-11-14": {
    "hermandad": "pasion-malaga",
@@ -13,49 +13,208 @@
    "fuente_url": "https://www.instagram.com/archipasionmlg/",
    "tramos": {
     "ida": [
-     { "lugar": "Parroquia de los Santos Mártires", "hora": "17:30", "templo": "Santos Martires" },
-     { "lugar": "Plaza de los Santos Mártires" },
-     { "lugar": "Santa Lucía" },
-     { "lugar": "Plaza Jesús de la Pasión" },
-     { "lugar": "Santa Lucía" },
-     { "lugar": "Granada" },
-     { "lugar": "Plaza Spínola" },
-     { "lugar": "Plaza del Carbón" },
-     { "lugar": "Plaza del Siglo" },
-     { "lugar": "Granada" },
-     { "lugar": "Plaza Jesús Castellanos" },
-     { "lugar": "San Agustín" },
-     { "lugar": "Císter" },
-     { "lugar": "Cañón" },
-     { "lugar": "Postigo de los Abades", "hora": "19:15" },
-     { "lugar": "Strachan" },
-     { "lugar": "Torre de Sandoval" },
-     { "lugar": "Bolsa" },
-     { "lugar": "Marqués de Larios" },
-     { "lugar": "Liborio García" },
-     { "lugar": "Nueva" },
-     { "lugar": "Plaza de Félix Sáenz" },
-     { "lugar": "San Juan" },
-     { "lugar": "Parroquia de San Juan", "hora": "20:45", "templo": "Iglesia de San Juan" }
+     {
+      "lugar": "Parroquia de los Santos Mártires",
+      "hora": "17:30",
+      "templo": "Santos Martires"
+     },
+     {
+      "lugar": "Plaza de los Santos Mártires"
+     },
+     {
+      "lugar": "Santa Lucía"
+     },
+     {
+      "lugar": "Plaza Jesús de la Pasión"
+     },
+     {
+      "lugar": "Santa Lucía"
+     },
+     {
+      "lugar": "Granada"
+     },
+     {
+      "lugar": "Plaza Spínola"
+     },
+     {
+      "lugar": "Plaza del Carbón"
+     },
+     {
+      "lugar": "Plaza del Siglo"
+     },
+     {
+      "lugar": "Granada"
+     },
+     {
+      "lugar": "Plaza Jesús Castellanos"
+     },
+     {
+      "lugar": "San Agustín"
+     },
+     {
+      "lugar": "Císter"
+     },
+     {
+      "lugar": "Cañón"
+     },
+     {
+      "lugar": "Postigo de los Abades",
+      "hora": "19:15"
+     },
+     {
+      "lugar": "Strachan"
+     },
+     {
+      "lugar": "Torre de Sandoval"
+     },
+     {
+      "lugar": "Bolsa"
+     },
+     {
+      "lugar": "Marqués de Larios"
+     },
+     {
+      "lugar": "Liborio García"
+     },
+     {
+      "lugar": "Nueva"
+     },
+     {
+      "lugar": "Plaza de Félix Sáenz"
+     },
+     {
+      "lugar": "San Juan"
+     },
+     {
+      "lugar": "Parroquia de San Juan",
+      "hora": "20:45",
+      "templo": "Iglesia de San Juan"
+     }
     ],
     "regreso": [
-     { "lugar": "Parroquia de San Juan", "hora": "21:15", "templo": "Iglesia de San Juan" },
-     { "lugar": "Calderón de la Barca" },
-     { "lugar": "Fernán González" },
-     { "lugar": "Fajardo" },
-     { "lugar": "Compañía" },
-     { "lugar": "Pozos Dulces" },
-     { "lugar": "Plazuela Virgen de las Penas" },
-     { "lugar": "Arco de la Cabeza" },
-     { "lugar": "Andrés Pérez", "hora": "22:20" },
-     { "lugar": "Carretería" },
-     { "lugar": "Álamos" },
-     { "lugar": "Puerta Buenaventura" },
-     { "lugar": "Plaza del Teatro" },
-     { "lugar": "Méndez Núñez" },
-     { "lugar": "Comedias" },
-     { "lugar": "Plaza de los Santos Mártires" },
-     { "lugar": "Parroquia de los Santos Mártires", "hora": "23:35", "templo": "Santos Martires" }
+     {
+      "lugar": "Parroquia de San Juan",
+      "hora": "21:15",
+      "templo": "Iglesia de San Juan"
+     },
+     {
+      "lugar": "Calderón de la Barca"
+     },
+     {
+      "lugar": "Fernán González"
+     },
+     {
+      "lugar": "Fajardo"
+     },
+     {
+      "lugar": "Compañía"
+     },
+     {
+      "lugar": "Pozos Dulces"
+     },
+     {
+      "lugar": "Plazuela Virgen de las Penas"
+     },
+     {
+      "lugar": "Arco de la Cabeza"
+     },
+     {
+      "lugar": "Andrés Pérez",
+      "hora": "22:20"
+     },
+     {
+      "lugar": "Carretería"
+     },
+     {
+      "lugar": "Álamos"
+     },
+     {
+      "lugar": "Puerta Buenaventura"
+     },
+     {
+      "lugar": "Plaza del Teatro"
+     },
+     {
+      "lugar": "Méndez Núñez"
+     },
+     {
+      "lugar": "Comedias"
+     },
+     {
+      "lugar": "Plaza de los Santos Mártires"
+     },
+     {
+      "lugar": "Parroquia de los Santos Mártires",
+      "hora": "23:35",
+      "templo": "Santos Martires"
+     }
+    ]
+   }
+  },
+  "traslado-malaga-2026-11-07": {
+   "hermandad": "traslado-malaga",
+   "ciudad": "malaga",
+   "fecha": "2026-11-07",
+   "tipo": "extraordinaria",
+   "corto": "Santo Traslado",
+   "titulo": "Procesión extraordinaria por el 75 aniversario de la bendición del Señor del Santo Traslado",
+   "fuente": "Hermandad del Santo Traslado y Soledad de San Pablo (Instagram oficial @soledaddesanpablo): «Itinerario para la procesión extraordinaria por el 75 aniversario de la bendición del Señor del Santo Traslado». 7 de noviembre, 17.00 horas, Casa Hermandad. Cartel: «Salida (17.00h), Trinidad, Carril, Mármoles, ermita de Zamarrilla, Martínez Maldonado, Pelayo, plaza Bailén, barrera de la Trinidad, Trinidad, Sevilla, Regente, Juan de Herrera, Francisco Monje, Avenida de Fátima y Trinidad».",
+   "fuente_url": "https://www.instagram.com/soledaddesanpablo/",
+   "_nota": "Solo hay hora de salida. Es un circuito: sale de la Casa Hermandad y vuelve a ella por Trinidad (el cartel acaba en «y Trinidad»; el texto sitúa la salida en la Casa Hermandad). Sin ida y regreso separados ni acto intermedio: un solo tramo. La ermita de Zamarrilla es un punto de paso.",
+   "tramos": {
+    "ida": [
+     {
+      "lugar": "Casa Hermandad",
+      "hora": "17:00"
+     },
+     {
+      "lugar": "Trinidad"
+     },
+     {
+      "lugar": "Carril"
+     },
+     {
+      "lugar": "Mármoles"
+     },
+     {
+      "lugar": "ermita de Zamarrilla"
+     },
+     {
+      "lugar": "Martínez Maldonado"
+     },
+     {
+      "lugar": "Pelayo"
+     },
+     {
+      "lugar": "plaza Bailén"
+     },
+     {
+      "lugar": "barrera de la Trinidad"
+     },
+     {
+      "lugar": "Trinidad"
+     },
+     {
+      "lugar": "Sevilla"
+     },
+     {
+      "lugar": "Regente"
+     },
+     {
+      "lugar": "Juan de Herrera"
+     },
+     {
+      "lugar": "Francisco Monje"
+     },
+     {
+      "lugar": "Avenida de Fátima"
+     },
+     {
+      "lugar": "Trinidad"
+     },
+     {
+      "lugar": "Casa Hermandad"
+     }
     ]
    }
   }

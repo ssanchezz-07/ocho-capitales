@@ -738,5 +738,54 @@
    }
   ],
   "actualizado": "2026-10-26 14:43"
+ },
+ "traslado-malaga-2026-11-07": {
+  "calles": {
+   "4": {
+    "punto": [
+     36.7213992,
+     -4.4320419
+    ],
+    "fuente": "Cartel oficial (@soledaddesanpablo): «Mármoles, ermita de Zamarrilla, Martínez Maldonado»; OpenStreetMap: Ermita de Zamarrilla (way 176403346), puerta nodo 7242288666"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26",
+    "fuente": "OpenStreetMap way 176403346",
+    "cambios": "la ermita de Zamarrilla (fila 5) es un punto de paso en su edificio; por el nombre casaba con la Calle Zamarrilla"
+   },
+   {
+    "fecha": "2026-10-26",
+    "fuente": "PDF de la Agrupación 2026 (Cautivo)",
+    "cambios": "fuente del paso por la Plaza Montes (fila 3)"
+   }
+  ],
+  "actualizado": "2026-10-26",
+  "tramos": {
+   "2": {
+    "fuente": "De Trinidad a Carril por la Plaza Montes: es la unión que da el itinerario oficial 2026 de la Agrupación para el Cautivo («Trinidad, Plaza Montes, Carril»), https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf"
+   }
+  }
+ },
+ "pasion-malaga-2026-11-14": {
+  "puntos": {
+   "3": [
+    36.7220759,
+    -4.4219701
+   ],
+   "10": [
+    36.7220797,
+    -4.4182495
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26",
+    "fuente": "Cartel oficial de la Archicofradía de la Pasión (Instagram @archipasionmlg): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada … Granada, Plaza Jesús Castellanos, San Agustín»",
+    "cambios": "puntos de paso en la Plaza Jesús de la Pasión (fila 4) y la Plazuela de Jesús Castellanos (fila 11), los mismos que en el recorrido de Semana Santa; alias: la «Plaza de los Santos Mártires» es la Plaza de los Mártires Ciriaco y Paula en OSM"
+   }
+  ],
+  "actualizado": "2026-10-26"
  }
 }

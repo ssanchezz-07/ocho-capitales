@@ -23940,5 +23940,891 @@
   "ms_graphhopper": 59,
   "largo_m": 2218,
   "ms_total": 155
+ },
+ "traslado-malaga-2026-11-07": {
+  "id": "traslado-malaga-2026-11-07",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.instagram.com/soledaddesanpablo/",
+  "avisos": [
+   "hueco de 43 m entre «Trinidad» y «Carril»: en OSM no se tocan"
+  ],
+  "correcciones": {
+   "calles": {
+    "4": {
+     "punto": [
+      36.7213992,
+      -4.4320419
+     ],
+     "fuente": "Cartel oficial (@soledaddesanpablo): «Mármoles, ermita de Zamarrilla, Martínez Maldonado»; OpenStreetMap: Ermita de Zamarrilla (way 176403346), puerta nodo 7242288666"
+    }
+   },
+   "salida": {
+    "lat": 36.72366,
+    "lon": -4.4294606,
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/ (puerta OSM 9363729474 con la dirección Calle Trinidad 72)"
+   },
+   "entrada": {
+    "lat": 36.72366,
+    "lon": -4.4294606,
+    "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/ (puerta OSM 9363729474 con la dirección Calle Trinidad 72)"
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26",
+     "fuente": "OpenStreetMap way 176403346",
+     "cambios": "la ermita de Zamarrilla (fila 5) es un punto de paso en su edificio; por el nombre casaba con la Calle Zamarrilla"
+    },
+    {
+     "fecha": "2026-10-26",
+     "fuente": "PDF de la Agrupación 2026 (Cautivo)",
+     "cambios": "fuente del paso por la Plaza Montes (fila 3)"
+    }
+   ],
+   "actualizado": "2026-10-26",
+   "tramos": {
+    "2": {
+     "fuente": "De Trinidad a Carril por la Plaza Montes: es la unión que da el itinerario oficial 2026 de la Agrupación para el Cautivo («Trinidad, Plaza Montes, Carril»), https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf"
+    }
+   }
+  },
+  "salida": {
+   "punto": [
+    36.72366,
+    -4.4294606
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/ (puerta OSM 9363729474 con la dirección Calle Trinidad 72)"
+  },
+  "entrada": {
+   "punto": [
+    36.72366,
+    -4.4294606
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "https://agrupaciondecofradias.com/itinerario-2-trinidad-hito-5-casa-hermandad-del-santo-traslado/ (puerta OSM 9363729474 con la dirección Calle Trinidad 72)"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Trinidad",
+    "tipo": "calle",
+    "osm": "Calle Trinidad",
+    "vias": [
+     36071905,
+     36071914,
+     61340014,
+     176405153,
+     176405154,
+     36078990,
+     344495219,
+     344497099,
+     1050008657,
+     532966580
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Carril",
+    "tipo": "calle",
+    "osm": "Calle Carril",
+    "vias": [
+     36079123
+    ],
+    "candidatas": 11,
+    "hueco_entrada_m": 43,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Mármoles",
+    "tipo": "calle",
+    "osm": "Calle Mármoles",
+    "vias": [
+     35836696,
+     98847255,
+     190509812,
+     295024811,
+     497223838,
+     532612645,
+     532612665,
+     532612666,
+     532612667,
+     532612668,
+     532612669,
+     532615190,
+     1202721775
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "ermita de Zamarrilla",
+    "tipo": "punto",
+    "osm": "ermita de Zamarrilla (corrección)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 16,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Martínez Maldonado",
+    "tipo": "calle",
+    "osm": "Calle Martínez Maldonado",
+    "vias": [
+     98847177,
+     98847186,
+     195495847,
+     256589578,
+     360259905,
+     360259906,
+     360259907,
+     360259908,
+     360259909,
+     360826355,
+     931795434,
+     934705775,
+     934705776,
+     934705777
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 10,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Pelayo",
+    "tipo": "calle",
+    "osm": "Calle Pelayo",
+    "vias": [
+     98869991
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "plaza Bailén",
+    "tipo": "calle",
+    "osm": "Calle Bailén",
+    "vias": [
+     98865108,
+     344497098,
+     344497100,
+     529677158,
+     890126841,
+     890126842
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "barrera de la Trinidad",
+    "tipo": "calle",
+    "osm": "Calle Trinidad",
+    "vias": [
+     36071905,
+     36071914,
+     61340014,
+     176405153,
+     176405154,
+     36078990
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Trinidad",
+    "tipo": "calle",
+    "osm": "Calle Trinidad",
+    "vias": [
+     36071905,
+     36071914,
+     61340014,
+     176405153,
+     176405154,
+     36078990,
+     344495219,
+     344497099,
+     1050008657,
+     532966580
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Sevilla",
+    "tipo": "calle",
+    "osm": "Calle Sevilla",
+    "vias": [
+     36071442
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Regente",
+    "tipo": "calle",
+    "osm": "Calle La Regente",
+    "vias": [
+     36071678,
+     195493142
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Juan de Herrera",
+    "tipo": "calle",
+    "osm": "Calle Juan de Herrera",
+    "vias": [
+     36071774
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Francisco Monje",
+    "tipo": "calle",
+    "osm": "Calle Francisco Monje",
+    "vias": [
+     34436607
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Avenida de Fátima",
+    "tipo": "calle",
+    "osm": "Avenida Fátima",
+    "vias": [
+     176405149,
+     176405150,
+     359277406
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Trinidad",
+    "tipo": "calle",
+    "osm": "Calle Trinidad",
+    "vias": [
+     36071905,
+     36071914,
+     61340014,
+     176405153,
+     176405154,
+     36078990,
+     344495219,
+     344497099,
+     1050008657,
+     532966580
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "16 m entre «Mármoles» y «ermita de Zamarrilla»",
+   "10 m entre «ermita de Zamarrilla» y «Martínez Maldonado»"
+  ],
+  "ms_graphhopper": 213,
+  "largo_m": 2195,
+  "ms_total": 604
+ },
+ "pasion-malaga-2026-11-14": {
+  "id": "pasion-malaga-2026-11-14",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.instagram.com/archipasionmlg/",
+  "avisos": [],
+  "correcciones": {
+   "calles": {
+    "23": {
+     "punto": [
+      36.72050532352941,
+      -4.423366211764707
+     ],
+     "fuente": "OpenStreetMap way 373208280"
+    },
+    "24": {
+     "punto": [
+      36.72050532352941,
+      -4.423366211764707
+     ],
+     "fuente": "OpenStreetMap way 373208280"
+    }
+   },
+   "puntos": {
+    "3": [
+     36.7220759,
+     -4.4219701
+    ],
+    "10": [
+     36.7220797,
+     -4.4182495
+    ]
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26",
+     "fuente": "Cartel oficial de la Archicofradía de la Pasión (Instagram @archipasionmlg): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada … Granada, Plaza Jesús Castellanos, San Agustín»",
+     "cambios": "puntos de paso en la Plaza Jesús de la Pasión (fila 4) y la Plazuela de Jesús Castellanos (fila 11), los mismos que en el recorrido de Semana Santa; alias: la «Plaza de los Santos Mártires» es la Plaza de los Mártires Ciriaco y Paula en OSM"
+    }
+   ],
+   "actualizado": "2026-10-26"
+  },
+  "salida": {
+   "punto": [
+    36.7223262,
+    -4.4223654
+   ],
+   "como": "templo en OSM: Iglesia de los Santos Martires → puerta OSM 8285778881 (main) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 891447747",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    36.7223262,
+    -4.4223654
+   ],
+   "como": "templo en OSM: Iglesia de los Santos Martires → puerta OSM 8285778881 (main) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 891447747",
+   "dir": null
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plaza de los Santos Mártires",
+    "tipo": "calle",
+    "osm": "Calle Mártires",
+    "vias": [
+     61497725,
+     176390472,
+     61499658
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Santa Lucía",
+    "tipo": "calle",
+    "osm": "Calle Santa Lucía",
+    "vias": [
+     61273790
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Plaza Jesús de la Pasión",
+    "tipo": "calle",
+    "osm": "Plaza Jesús de la Pasión",
+    "vias": [
+     184157884
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": true
+   },
+   {
+    "i": 4,
+    "lugar": "Santa Lucía",
+    "tipo": "calle",
+    "osm": "Calle Santa Lucía",
+    "vias": [
+     61273790
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Plaza Spínola",
+    "tipo": "calle",
+    "osm": "Plaza de Spínola",
+    "vias": [
+     184025082
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 23,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Plaza Jesús Castellanos",
+    "tipo": "calle",
+    "osm": "Plazuela Jesús Castellanos",
+    "vias": [
+     531972124
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": true
+   },
+   {
+    "i": 11,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Cañón",
+    "tipo": "calle",
+    "osm": "Calle Cañón",
+    "vias": [
+     368620394
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Strachan",
+    "tipo": "calle",
+    "osm": "Calle Strachan",
+    "vias": [
+     61274892
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Torre de Sandoval",
+    "tipo": "calle",
+    "osm": "Calle Torre de Sandoval",
+    "vias": [
+     45408588
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Bolsa",
+    "tipo": "calle",
+    "osm": "Calle Bolsa",
+    "vias": [
+     445592150,
+     445592563,
+     532196425,
+     571013995
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Liborio García",
+    "tipo": "calle",
+    "osm": "Calle Liborio García",
+    "vias": [
+     61274816
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Nueva",
+    "tipo": "calle",
+    "osm": "Calle Nueva",
+    "vias": [
+     61496896,
+     176388409,
+     176388411,
+     551272855
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Plaza de Félix Sáenz",
+    "tipo": "calle",
+    "osm": "Plaza de Félix Sáenz",
+    "vias": [
+     61326130
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "San Juan",
+    "tipo": "calle",
+    "osm": "Calle San Juan",
+    "vias": [
+     61498471,
+     176388413,
+     176388417,
+     318104528
+    ],
+    "candidatas": 7,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Parroquia de San Juan",
+    "tipo": "punto",
+    "osm": "Parroquia de San Juan (corrección)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 18,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Parroquia de San Juan",
+    "tipo": "punto",
+    "osm": "Parroquia de San Juan (corrección)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Calderón de la Barca",
+    "tipo": "calle",
+    "osm": "Calle Calderón de la Barca",
+    "vias": [
+     550176682
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 27,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Fernán González",
+    "tipo": "calle",
+    "osm": "Calle Fernán González",
+    "vias": [
+     45408586
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 4,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Fajardo",
+    "tipo": "calle",
+    "osm": "Calle Fajardo",
+    "vias": [
+     61274382
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Compañía",
+    "tipo": "calle",
+    "osm": "Calle Compañía",
+    "vias": [
+     135476530,
+     1344358714
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Pozos Dulces",
+    "tipo": "calle",
+    "osm": "Calle Pozos Dulces",
+    "vias": [
+     61497727
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Plazuela Virgen de las Penas",
+    "tipo": "calle",
+    "osm": "Plazuela Virgen de las Penas",
+    "vias": [
+     61497728,
+     86575989
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Arco de la Cabeza",
+    "tipo": "calle",
+    "osm": "Calle Arco de la Cabeza",
+    "vias": [
+     176389608
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Andrés Pérez",
+    "tipo": "calle",
+    "osm": "Calle Andrés Pérez",
+    "vias": [
+     61497723,
+     61497724,
+     915846900,
+     916184147,
+     1072184026
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 33,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 34,
+    "lugar": "Álamos",
+    "tipo": "calle",
+    "osm": "Calle Álamos",
+    "vias": [
+     27618005,
+     1102524193
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 35,
+    "lugar": "Puerta Buenaventura",
+    "tipo": "calle",
+    "osm": "Calle Puerta de Buenaventura",
+    "vias": [
+     495685788
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 36,
+    "lugar": "Plaza del Teatro",
+    "tipo": "calle",
+    "osm": "Plaza del Teatro",
+    "vias": [
+     27618319
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 37,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     36228324
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 38,
+    "lugar": "Comedias",
+    "tipo": "calle",
+    "osm": "Calle Comedias",
+    "vias": [
+     61276347,
+     1072184931
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 39,
+    "lugar": "Plaza de los Santos Mártires",
+    "tipo": "calle",
+    "osm": "Calle Mártires",
+    "vias": [
+     61497725,
+     176390472,
+     61499658
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "23 m entre «Plaza Spínola» y «Plaza del Carbón»",
+   "17 m entre «Plaza del Carbón» y «Plaza del Siglo»",
+   "18 m entre «San Juan» y «Parroquia de San Juan»",
+   "27 m entre «Parroquia de San Juan» y «Calderón de la Barca»",
+   "4 m entre «Calderón de la Barca» y «Fernán González»"
+  ],
+  "ms_graphhopper": 418,
+  "largo_m": 2762,
+  "ms_total": 1635
  }
 }
