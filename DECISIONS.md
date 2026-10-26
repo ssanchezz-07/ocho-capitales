@@ -184,11 +184,6 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 
 ## 2026-10-25 · Alojamiento, dominio y velocidad (sesión de infraestructura)
 
-> **Punto exacto (pausa del 2026-10-26 por lentitud del PC):** rama `claude/alojamiento-velocidad-18a2ee`, rebasada sobre `origin/main` (6cddfb3), **sin subir**.
-> - Hecho y verificado: compilación sin errores; Playwright a 390 y 1440 px (portada, Sevilla, buscar, noticias, colabora, En la calle de Málaga): 0 errores de consola, sin desbordes, service worker activo. Compila también con `BASE_PATH=/ocho-capitales/` (en Git Bash, con `MSYS_NO_PATHCONV=1`).
-> - Cambio de criterio: `news.json` y las agendas **no se borran de main** (protocolo, regla 5, y nueve sesiones activas); el bot deja de subirlas a main y las guarda en la rama `datos`.
-> - Siguiente: (1) que `escribeCabeceras` solo se llame con `BASE === '/'` (en GitHub Pages `_headers` se serviría como archivo); (2) subir y vigilar la primera ejecución de «Publicar Ocho Capitales» (crea la rama `datos`; GitHub Pages en verde, si no, revertir); (3) orden `EQUIPO/ORDEN-oc-alojamiento.md`: Colabora por correo, GitHub invisible, filtro de noticias (apartado 5), guía del dominio y velocidad.
-> - `site/dist-gh/` (prueba, fuera de git) no se pudo borrar: archivos bloqueados; borrarlo al volver.
 Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
 
 
