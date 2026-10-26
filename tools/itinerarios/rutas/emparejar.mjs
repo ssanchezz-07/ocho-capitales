@@ -191,6 +191,9 @@ export function motor(c) {
       if (forz[f.i] && !(i === 0 && sedeS)) partir();
       // «cruzar» (corrección con fuente): plaza dibujada como área peatonal, que GraphHopper no enruta por dentro: se cruza en línea recta
       const cruza = !!corr.cruzar?.[f.i]; if (cruza) { segs.push([]); (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1})`); }
+      // «cruzar_hasta» de la lista ({ índice: [lat, lon] | [[lat, lon], …] }): al entrar en ese elemento, en recta por esos puntos (una plaza que la red
+      // no cruza por dentro, p. ej. de la Plaza de San Francisco a la calle San Francisco en Cádiz) y de ahí sigue normal
+      const hasta = L.cruzar_hasta?.[f.i]; if (hasta && !cruza) { for (const q of Array.isArray(hasta[0]) ? hasta : [hasta]) { segs.push([]); pon(X(...q)); } (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1}, lista)`); }
       // en la primera y la última calle no se ponen puntos intermedios cerca de la sede: el nodo de la calle más cercano a la puerta
       // puede quedar más allá de ella y el trazado pasaría la puerta para volver (pico)
       const cercaSede = (xy) => (i === 0 && sedeS && d2(xy, X(...sedeS.punto)) < 100) || (i === R.length - 1 && sedeE && d2(xy, X(...sedeE.punto)) < 100);

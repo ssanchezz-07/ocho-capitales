@@ -62,6 +62,8 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
   (`{ índice: [[lat, lon], …] }`) la recta pasa por esos puntos, para no atravesar un edificio de la plaza.
 - `rectos_sede` (opcional): `["salida"]`, `["entrada"]` o los dos: de la puerta a la primera calle (o de la última a la puerta)
   en línea recta, cuando entre ellas hay una plaza o un patio que la red de rutas no recorre.
+- `cruzar_hasta` (opcional): `{ índice: [lat, lon] | [[lat, lon], …] }`: al entrar en ese elemento, en recta por esos puntos (una plaza que la red de
+  rutas no cruza por dentro) y de ahí sigue normal.
 - `regreso_desde`: índice donde empieza el regreso (se dibuja discontinuo). Si falta, la expresión `regreso` de `ciudades.mjs`.
 - `catedral` (opcional): `{ "entra": nodo OSM, "sale": nodo OSM, "nombre": "…" }` si esa hermandad entra o sale de la
   Catedral por otra puerta que la de `ciudades.mjs` (en Córdoba, unas salen por Santa Catalina y otras por el Perdón).
