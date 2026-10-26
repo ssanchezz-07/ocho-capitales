@@ -65,15 +65,15 @@ Desde `tools/itinerarios/`:
 ### Lista para Pablo · qué mirar en el editor
 Se abre con `tools/itinerarios/editor/Abrir editor de rutas.bat`; se elige Córdoba.
 
-**Salida y entrada sin fijar** (templo sin edificio localizable: el trazado empieza y acaba en la primera y la última calle). Usar «Cambiar la salida» y «Cambiar la entrada», con la fuente:
-- **La O:** Iglesia de Nuestra Señora de la Aurora. ¿Es la «Parroquia de la Asunción» de OSM, junto a la Plaza Mahatma Gandhi?
-- **Perdón:** Iglesia de San Roque, calle Buen Pastor.
-- **Piedad:** Parroquia de San Antonio María Claret (Las Palmeras).
-- **Soledad:** Parroquia de Santa María de Guadalupe.
+**Las 4 sedes que faltaban, ya fijadas** con las direcciones que dio Pablo en el chat el 2026-10-26. Salida y entrada quedan a 0-6 m:
+- **La O:** Plaza Mahatma Gandhi s/n. Punto: centro de la plaza en OSM, porque el edificio no figura con ese nombre.
+- **Perdón:** Calle Buen Pastor 17. Punto: puerta de OSM con esa dirección (node 13060087577).
+- **Soledad:** Avenida del Veintiocho de Febrero 10. Punto: el templo «Franciscanos» de OSM (way 556809635), a 14 m de la calle 28 de Febrero. Pablo apunta que en años recientes ha salido de su casa de hermandad de Cronista Rey Díaz, pero El Debate 2026 dice que salió del templo, y se toma el templo.
+- **Piedad:** Calle Las Lomas 14. **Punto aproximado:** el número no consta en OSM y se toma el punto de Las Lomas más cercano a Sierra de Guadarrama. **Mirarlo en el editor.**
 
 **Publicadas tras revisarlas** (pierden un paso corto que el trazado anterior sí pisaba):
 - Rescatado, Ánimas y Cristo de Gracia: la glorieta de Puerta Nueva. El trazado pasa por el cruce, no rodea la glorieta.
-- **Presentación al Pueblo:** no entra en el bucle de **Hermanos Pinzones** (Núñez de Balboa → Hermanos Pinzones → Francisco Pizarro). Es la más clara de las seis: conviene fijar un punto en Hermanos Pinzones.
+- **Presentación al Pueblo, resuelto:** un punto de paso en el centro de Hermanos Pinzones (`rutas/correcciones-cordoba.json`, con fuente) hace que recorra las 40 calles. Deja un pequeño pico en ese punto. Comprobado en OSM que Hermanos Pinzones no linda con la parroquia de San Vicente Ferrer: es la 7.ª calle de la lista, entre Núñez de Balboa y Francisco Pizarro.
 - Santa Faz: paseo de la Victoria (15 m).
 - Prendimiento: plaza del Potro (15 m).
 
@@ -93,9 +93,11 @@ Se abre con `tools/itinerarios/editor/Abrir editor de rutas.bat`; se elige Córd
 
 **Datos que conviene confirmar:**
 - **Prendimiento:** sale del Santuario de María Auxiliadora, aunque el librito pone San Andrés.
-- **Piedad:** la rejilla da el regreso a su templo; la prensa la recoge en los Jardines del Obispo.
+- **Piedad:** la rejilla da el regreso a su templo y la prensa la recoge en los Jardines del Obispo. Pablo confirmó el 2026-10-26 que vale la rejilla oficial.
 - **Sentencia:** el punto de la casa de hermandad está en el centro del pasaje Saravia, porque falta el número.
 - **Resucitado:** solo hay rejilla de la cruz de guía, sin lista de prensa.
 
-## Punto exacto (2026-10-26, uso de 5 h al 88 %: parada según las órdenes)
-Córdoba publicada entera. Lo siguiente es la revisión de Pablo en el editor (lista de arriba); con sus correcciones: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar … --forzar`, build y Playwright.
+## Punto exacto (2026-10-26)
+- **Córdoba publicada entera.**
+- **Segunda vuelta:** se fijaron las 4 sedes y Hermanos Pinzones. Las 42 se trazaron otra vez con el arreglo de colocación de puntos de Málaga (57bdbe1) y el evaluador las deja en «nuevo». Comprobado con Playwright a 1440 y 390 px, sin errores de consola.
+- **Lo siguiente:** que Pablo revise el resto de la lista en el editor. Con sus correcciones: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar … --forzar`, build y Playwright.

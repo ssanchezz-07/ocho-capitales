@@ -1,0 +1,17 @@
+{
+ "presentacion-al-pueblo-cordoba": {
+  "puntos": {
+   "7": [
+    37.883867,
+    -4.759424
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 10:00",
+    "fuente": "Rejilla oficial de la Agrupación 2026 y guía de El Debate 2026: Núñez de Balboa → Hermanos Pinzones → Francisco Pizarro",
+    "cambios": "punto de paso en el centro de la Calle Hermanos Pinzones (OSM way/45127414), para que el trazado la recorra"
+   }
+  ]
+ }
+}

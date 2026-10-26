@@ -2,8 +2,12 @@
  "la-o-cordoba": {
   "templo": "Parroquia de Nuestra Señora de la Aurora",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
-  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor.",
-  "nota": "Candidato sin confirmar: «Parroquia de la Asunción» (OSM way/96693634), a unos 80 m de la Plaza Mahatma Gandhi, primera calle de la rejilla. La Ermita de la Aurora del centro (Wikidata Q125411058) queda lejos del recorrido."
+  "dir": "Plaza Mahatma Gandhi s/n, Córdoba",
+  "punto": [
+   37.898876,
+   -4.761295
+  ],
+  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (la puerta da a la Plaza Mahatma Gandhi). Punto: centro de la plaza en OpenStreetMap (way/96693630); el edificio no está en OSM con ese nombre"
  },
  "lagrimas-cordoba": {
   "templo": "Parroquia de la Asunción de Nuestra Señora",
@@ -250,7 +254,13 @@
  "el-perdon-cordoba": {
   "templo": "Iglesia de San Roque - Buen Pastor",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
-  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor."
+  "dir": "Calle Buen Pastor 17, Córdoba",
+  "punto": [
+   37.880519,
+   -4.781312
+  ],
+  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26). Punto: puerta de OpenStreetMap node/13060087577 con la dirección «Calle del Buen Pastor 17»",
+  "nota": "Capilla de San Roque (antiguo hospital de San Roque)."
  },
  "la-paz-cordoba": {
   "templo": "Iglesia Conventual del Santo Ángel (Capuchinos)",
@@ -299,8 +309,13 @@
  "la-piedad-cordoba": {
   "templo": "Parroquia de San Antonio María Claret",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
-  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor.",
-  "nota": "La guía de El Debate dice que se recoge a las 00.25 en los Jardines del Obispo; la rejilla oficial y el librito dan el regreso hasta su templo (entrada 03.50). Se sigue la rejilla oficial."
+  "nota": "La guía de El Debate dice que se recoge a las 00.25 en los Jardines del Obispo; la rejilla oficial y el librito dan el regreso hasta su templo (entrada 03.50). Se sigue la rejilla oficial.",
+  "dir": "Calle Las Lomas 14, Córdoba",
+  "punto": [
+   37.880047,
+   -4.81867
+  ],
+  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (sale de Las Lomas hacia Sierra de Guadarrama). Punto APROXIMADO: el de la Calle Las Lomas (OSM) más cercano a Sierra de Guadarrama; el número 14 no consta en OSM"
  },
  "jesus-nazareno-cordoba": {
   "templo": "Iglesia Hospital de Jesús Nazareno",
@@ -402,7 +417,14 @@
  "la-soledad-cordoba": {
   "templo": "Iglesia de Santa María de Guadalupe",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/",
-  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor."
+  "dir": "Avenida del Veintiocho de Febrero 10, Córdoba",
+  "punto": [
+   37.893402,
+   -4.760461
+  ],
+  "osm": "W556809635",
+  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26). Punto: templo de OpenStreetMap way/556809635 «Franciscanos» (place_of_worship), a 14 m de la Calle 28 de Febrero",
+  "nota": "Pablo indica que en años recientes ha salido de su casa de hermandad (Calle Cronista Rey Díaz); la guía de El Debate 2026 dice que salió y se recogió en la parroquia. Se toma la parroquia."
  },
  "la-expiracion-cordoba": {
   "templo": "Real Iglesia de San Pablo",

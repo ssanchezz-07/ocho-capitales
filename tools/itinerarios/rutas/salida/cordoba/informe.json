@@ -4,13 +4,29 @@
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
   "avisos": [
-   "salida: sede sin localizar (empieza en la primera calle)",
-   "entrada: sede sin localizar (acaba en la última calle)",
    "hueco de 55 m entre «C/ ARCOS DE LA FRONTERA» y «C/ESCRITOR GÓMEZ DE RIVERA»: en OSM no se tocan",
    "hueco de 45 m entre «AV. CARLOS III» y «C/ VEREDA DE LA ALCAIDÍA»: en OSM no se tocan",
    "hueco de 261 m entre «C/ VEREDA DE LA ALCAIDÍA» y «C/ ESCRITOR JOSÉ DE LOS HEROS»: en OSM no se tocan"
   ],
   "correcciones": null,
+  "salida": {
+   "punto": [
+    37.898876,
+    -4.761295
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    37.898876,
+    -4.761295
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
   "calles": [
    {
     "i": 1,
@@ -333,9 +349,9 @@
    "10 m entre «PZA. MAHATMA GANDHI» y «AV. BLAS INFANTE»",
    "10 m entre «AV. VIRGEN DE FÁTIMA» y «PZA. MAHATMA GANDHI»"
   ],
-  "ms_graphhopper": 108,
-  "largo_m": 3815,
-  "ms_total": 203
+  "ms_graphhopper": 12724,
+  "largo_m": 3991,
+  "ms_total": 12898
  },
  "lagrimas-cordoba": {
   "id": "lagrimas-cordoba",
@@ -596,9 +612,9 @@
    "9 m entre «PASAJE BATALLA DE LEPANTO» y «ISLA MALLORCA»",
    "8 m entre «AVENIDA DEL MEDITERRANEO» y «PLAZA MARINA ESPAÑOLA»"
   ],
-  "ms_graphhopper": 62,
+  "ms_graphhopper": 128,
   "largo_m": 3671,
-  "ms_total": 125
+  "ms_total": 278
  },
  "entrada-triunfal-cordoba": {
   "id": "entrada-triunfal-cordoba",
@@ -980,9 +996,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 119,
+  "ms_graphhopper": 220,
   "largo_m": 4154,
-  "ms_total": 201
+  "ms_total": 394
  },
  "penas-de-santiago-cordoba": {
   "id": "penas-de-santiago-cordoba",
@@ -1352,9 +1368,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 98,
+  "ms_graphhopper": 54,
   "largo_m": 3213,
-  "ms_total": 169
+  "ms_total": 149
  },
  "el-huerto-cordoba": {
   "id": "el-huerto-cordoba",
@@ -1631,9 +1647,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 40,
+  "ms_graphhopper": 115,
   "largo_m": 2629,
-  "ms_total": 106
+  "ms_total": 258
  },
  "el-rescatado-cordoba": {
   "id": "el-rescatado-cordoba",
@@ -2111,9 +2127,9 @@
    "3 m entre «Santa María de Gracia» y «PLAZA DE JUAN BERNIER»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 116,
+  "ms_graphhopper": 189,
   "largo_m": 5438,
-  "ms_total": 212
+  "ms_total": 410
  },
  "vera-cruz-cordoba": {
   "id": "vera-cruz-cordoba",
@@ -2426,9 +2442,9 @@
    "20 m entre «Triunfo» y «puente Romano»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 59,
+  "ms_graphhopper": 179,
   "largo_m": 3128,
-  "ms_total": 115
+  "ms_total": 356
  },
  "la-esperanza-cordoba": {
   "id": "la-esperanza-cordoba",
@@ -2799,9 +2815,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 77,
+  "ms_graphhopper": 104,
   "largo_m": 4238,
-  "ms_total": 162
+  "ms_total": 297
  },
  "el-amor-cordoba": {
   "id": "el-amor-cordoba",
@@ -2809,7 +2825,8 @@
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
   "avisos": [
    "«Calahorra» sin equivalente en OSM: no se traza (no se inventa)",
-   "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan"
+   "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Pasaje Cristo del Amor» a 34 m"
   ],
   "correcciones": null,
   "salida": {
@@ -3076,9 +3093,9 @@
    "24 m entre «plaza de Santa Teresa» y «Rosario»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 103,
+  "ms_graphhopper": 200,
   "largo_m": 3794,
-  "ms_total": 154
+  "ms_total": 339
  },
  "la-merced-cordoba": {
   "id": "la-merced-cordoba",
@@ -3653,9 +3670,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 90,
+  "ms_graphhopper": 209,
   "largo_m": 7089,
-  "ms_total": 198
+  "ms_total": 463
  },
  "presentacion-al-pueblo-cordoba": {
   "id": "presentacion-al-pueblo-cordoba",
@@ -3672,7 +3689,21 @@
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
    "hueco de 219 m entre «plaza de San Lorenzo» y «plaza de San Juan de Letrán»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "puntos": {
+    "7": [
+     37.883867,
+     -4.759424
+    ]
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 10:00",
+     "fuente": "Rejilla oficial de la Agrupación 2026 y guía de El Debate 2026: Núñez de Balboa → Hermanos Pinzones → Francisco Pizarro",
+     "cambios": "punto de paso en el centro de la Calle Hermanos Pinzones (OSM way/45127414), para que el trazado la recorra"
+    }
+   ]
+  },
   "salida": {
    "punto": [
     37.88875107777778,
@@ -3778,8 +3809,8 @@
      45127414
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 20,
-    "forzado": false
+    "hueco_entrada_m": 0,
+    "forzado": true
    },
    {
     "i": 8,
@@ -4265,7 +4296,6 @@
    }
   ],
   "enlaces": [
-   "20 m entre «Nuñez de Balboa» y «Hermanos Pinzones»",
    "12 m entre «Hermanos Pinzones» y «Francisco Pizarro»",
    "16 m entre «Puerta Nueva» y «Alfonso XII»",
    "14 m entre «TRIUNFO» y «Torrijos»",
@@ -4273,9 +4303,9 @@
    "21 m entre «PÁRROCO BARTOLOME BLANCO» y «plaza de Cañero»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 87,
-  "largo_m": 7061,
-  "ms_total": 215
+  "ms_graphhopper": 242,
+  "largo_m": 7129,
+  "ms_total": 514
  },
  "la-estrella-cordoba": {
   "id": "la-estrella-cordoba",
@@ -4776,9 +4806,9 @@
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 172,
+  "ms_graphhopper": 204,
   "largo_m": 7060,
-  "ms_total": 263
+  "ms_total": 409
  },
  "la-sentencia-cordoba": {
   "id": "la-sentencia-cordoba",
@@ -5143,9 +5173,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
+  "ms_graphhopper": 61,
   "largo_m": 4183,
-  "ms_total": 113
+  "ms_total": 186
  },
  "via-crucis-cordoba": {
   "id": "via-crucis-cordoba",
@@ -5559,9 +5589,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
+  "ms_graphhopper": 91,
   "largo_m": 3479,
-  "ms_total": 125
+  "ms_total": 209
  },
  "animas-cordoba": {
   "id": "animas-cordoba",
@@ -5904,9 +5934,9 @@
    "14 m entre «TRIUNFO» y «TORRIJOS»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 87,
+  "ms_graphhopper": 177,
   "largo_m": 4299,
-  "ms_total": 149
+  "ms_total": 261
  },
  "la-agonia-cordoba": {
   "id": "la-agonia-cordoba",
@@ -5915,7 +5945,8 @@
   "avisos": [
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
    "hueco de 58 m entre «Alonso el Sabio» y «glorieta Almogávares»: en OSM no se tocan",
-   "hueco de 438 m entre «Fuente de la Salud» y «Dean Francisco Xavier»: en OSM no se tocan"
+   "hueco de 438 m entre «Fuente de la Salud» y «Dean Francisco Xavier»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «plaza del Santuario de la Fuensanta» a 50 m"
   ],
   "correcciones": null,
   "salida": {
@@ -6371,9 +6402,9 @@
    "34 m entre «puerta del Colodro» y «Alonso el Sabio»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 86,
+  "ms_graphhopper": 115,
   "largo_m": 6874,
-  "ms_total": 185
+  "ms_total": 310
  },
  "la-universitaria-cordoba": {
   "id": "la-universitaria-cordoba",
@@ -6791,9 +6822,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 100,
+  "ms_graphhopper": 105,
   "largo_m": 4445,
-  "ms_total": 242
+  "ms_total": 387
  },
  "la-sangre-cordoba": {
   "id": "la-sangre-cordoba",
@@ -6805,7 +6836,8 @@
    "hueco de 60 m entre «Carbonell y Morand» y «Capitulares»: en OSM no se tocan",
    "hueco de 45 m entre «San Fernando» y «RONDA DE ISASA»: en OSM no se tocan",
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
-   "hueco de 60 m entre «Capitulares» y «Carbonell y Morand»: en OSM no se tocan"
+   "hueco de 60 m entre «Capitulares» y «Carbonell y Morand»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Conde de Torres Cabrera» a 103 m"
   ],
   "correcciones": null,
   "salida": {
@@ -7064,9 +7096,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 48,
+  "ms_graphhopper": 95,
   "largo_m": 3599,
-  "ms_total": 148
+  "ms_total": 234
  },
  "el-buen-suceso-cordoba": {
   "id": "el-buen-suceso-cordoba",
@@ -7370,9 +7402,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 53,
+  "ms_graphhopper": 37,
   "largo_m": 3689,
-  "ms_total": 140
+  "ms_total": 143
  },
  "la-santa-faz-cordoba": {
   "id": "la-santa-faz-cordoba",
@@ -7745,9 +7777,9 @@
    "4 m entre «plaza Ramón y Cajal» y «Tesoro»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 79,
+  "ms_graphhopper": 52,
   "largo_m": 3035,
-  "ms_total": 180
+  "ms_total": 174
  },
  "el-prendimiento-cordoba": {
   "id": "el-prendimiento-cordoba",
@@ -8214,17 +8246,15 @@
    "3 m entre «Santa María de Gracia» y «plaza de Juan Bernier»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 110,
+  "ms_graphhopper": 130,
   "largo_m": 4565,
-  "ms_total": 222
+  "ms_total": 244
  },
  "el-perdon-cordoba": {
   "id": "el-perdon-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
   "avisos": [
-   "salida: sede sin localizar (empieza en la primera calle)",
-   "entrada: sede sin localizar (acaba en la última calle)",
    "hueco de 211 m entre «Lope de Hoces» y «puerta de Almodóvar»: en OSM no se tocan",
    "hueco de 47 m entre «puerta de Almodóvar» y «Doctor Fleming»: en OSM no se tocan",
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
@@ -8232,6 +8262,24 @@
    "hueco de 66 m entre «plaza de san Juan» y «Valladares»: en OSM no se tocan"
   ],
   "correcciones": null,
+  "salida": {
+   "punto": [
+    37.880519,
+    -4.781312
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    37.880519,
+    -4.781312
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
   "calles": [
    {
     "i": 1,
@@ -8613,9 +8661,9 @@
    "28 m entre «Valladares» y «Buen Pastor»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 69,
-  "largo_m": 4099,
-  "ms_total": 190
+  "ms_graphhopper": 116,
+  "largo_m": 4202,
+  "ms_total": 222
  },
  "la-paz-cordoba": {
   "id": "la-paz-cordoba",
@@ -9157,9 +9205,9 @@
    "25 m entre «puerta del Rincón» y «plaza de Colón»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 79,
+  "ms_graphhopper": 122,
   "largo_m": 4911,
-  "ms_total": 217
+  "ms_total": 340
  },
  "el-calvario-cordoba": {
   "id": "el-calvario-cordoba",
@@ -9534,9 +9582,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 72,
+  "ms_graphhopper": 83,
   "largo_m": 4107,
-  "ms_total": 153
+  "ms_total": 185
  },
  "la-misericordia-cordoba": {
   "id": "la-misericordia-cordoba",
@@ -9865,9 +9913,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 69,
+  "ms_graphhopper": 60,
   "largo_m": 3422,
-  "ms_total": 150
+  "ms_total": 151
  },
  "la-pasion-cordoba": {
   "id": "la-pasion-cordoba",
@@ -10141,17 +10189,15 @@
    "24 m entre «Caballerizas Reales» y «San Basilio»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 97,
+  "ms_graphhopper": 95,
   "largo_m": 2143,
-  "ms_total": 188
+  "ms_total": 194
  },
  "la-piedad-cordoba": {
   "id": "la-piedad-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
   "avisos": [
-   "salida: sede sin localizar (empieza en la primera calle)",
-   "entrada: sede sin localizar (acaba en la última calle)",
    "«carretera de Palma del Río»: la única calle de OSM con ese nombre está lejos de sus vecinas (homónimo): no se traza",
    "«PLAZA DE TOROS»: la única calle de OSM con ese nombre está lejos de sus vecinas (homónimo): no se traza",
    "«CTRA PALMA DEL RIO»: la única calle de OSM con ese nombre está lejos de sus vecinas (homónimo): no se traza",
@@ -10168,6 +10214,24 @@
    "hueco de 1163 m entre «ESCRIBA LUBNA» y «INGENIERO BENITO ARANDA»: en OSM no se tocan"
   ],
   "correcciones": null,
+  "salida": {
+   "punto": [
+    37.880047,
+    -4.81867
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    37.880047,
+    -4.81867
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-cordoba.json",
+   "dir": null
+  },
   "calles": [
    {
     "i": 1,
@@ -10865,9 +10929,9 @@
    "7 m entre «TRIUNFO» y «Amador de los Ríos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 154,
-  "largo_m": 12005,
-  "ms_total": 339
+  "ms_graphhopper": 214,
+  "largo_m": 13731,
+  "ms_total": 642
  },
  "jesus-nazareno-cordoba": {
   "id": "jesus-nazareno-cordoba",
@@ -11159,9 +11223,9 @@
    "16 m entre «Hermanos López Diéguez» y «Arroyo de San Andrés»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 41,
+  "ms_graphhopper": 140,
   "largo_m": 3968,
-  "ms_total": 106
+  "ms_total": 246
  },
  "la-caridad-cordoba": {
   "id": "la-caridad-cordoba",
@@ -11476,9 +11540,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 60,
+  "ms_graphhopper": 111,
   "largo_m": 3193,
-  "ms_total": 134
+  "ms_total": 250
  },
  "jesus-caido-cordoba": {
   "id": "jesus-caido-cordoba",
@@ -11487,7 +11551,8 @@
   "avisos": [
    "hueco de 119 m entre «PLAZA DE SANTA MARINA» y «PLAZA DE DON GOME»: en OSM no se tocan",
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
-   "hueco de 86 m entre «PASAJE DE LA ESTRELLA» y «plaza de Santa Marina»: en OSM no se tocan"
+   "hueco de 86 m entre «PASAJE DE LA ESTRELLA» y «plaza de Santa Marina»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Iglesia Conventual de San José (San Cayetano)» a 50 m, «Cuesta de San Cayetano» a 51 m, «Iglesia Conventual de San José (San Cayetano)» a 50 m"
   ],
   "correcciones": null,
   "salida": {
@@ -11974,9 +12039,9 @@
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 87,
+  "ms_graphhopper": 197,
   "largo_m": 5380,
-  "ms_total": 181
+  "ms_total": 419
  },
  "la-cena-cordoba": {
   "id": "la-cena-cordoba",
@@ -11987,7 +12052,8 @@
    "hueco de 174 m entre «JARDINES DE VALLELLANO» y «Doctor Marañón»: en OSM no se tocan",
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
    "hueco de 174 m entre «Doctor Marañón» y «Jardines de Vallellano»: en OSM no se tocan",
-   "hueco de 67 m entre «Jardines de Vallellano» y «avenida Conde Vallellano»: en OSM no se tocan"
+   "hueco de 67 m entre «Jardines de Vallellano» y «avenida Conde Vallellano»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «avenida de Guerrita» a 70 m"
   ],
   "correcciones": null,
   "salida": {
@@ -12467,9 +12533,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 56,
+  "ms_graphhopper": 145,
   "largo_m": 7750,
-  "ms_total": 136
+  "ms_total": 515
  },
  "las-angustias-cordoba": {
   "id": "las-angustias-cordoba",
@@ -12860,9 +12926,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 68,
+  "ms_graphhopper": 128,
   "largo_m": 4163,
-  "ms_total": 168
+  "ms_total": 425
  },
  "cristo-de-gracia-el-esparraguero-cordoba": {
   "id": "cristo-de-gracia-el-esparraguero-cordoba",
@@ -13301,9 +13367,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 50,
+  "ms_graphhopper": 171,
   "largo_m": 5070,
-  "ms_total": 131
+  "ms_total": 441
  },
  "la-buena-muerte-cordoba": {
   "id": "la-buena-muerte-cordoba",
@@ -13653,9 +13719,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 81,
+  "ms_graphhopper": 127,
   "largo_m": 3023,
-  "ms_total": 132
+  "ms_total": 389
  },
  "santo-sepulcro-cordoba": {
   "id": "santo-sepulcro-cordoba",
@@ -13899,17 +13965,15 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 84,
+  "ms_graphhopper": 75,
   "largo_m": 2927,
-  "ms_total": 133
+  "ms_total": 251
  },
  "la-soledad-cordoba": {
   "id": "la-soledad-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
   "avisos": [
-   "salida: sede sin localizar (empieza en la primera calle)",
-   "entrada: sede sin localizar (acaba en la última calle)",
    "hueco de 49 m entre «Ángela Romero de Torres» y «Tras la puerta»: en OSM no se tocan",
    "hueco de 51 m entre «Murcia» y «Antón de Montoro»: en OSM no se tocan",
    "hueco de 50 m entre «Antón de Montoro» y «Golondrina»: en OSM no se tocan",
@@ -13917,6 +13981,24 @@
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan"
   ],
   "correcciones": null,
+  "salida": {
+   "punto": [
+    37.89335411428572,
+    -4.760474100000001
+   ],
+   "como": "templo en OSM: Franciscanos",
+   "fuente": "OpenStreetMap way 556809635",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    37.89335411428572,
+    -4.760474100000001
+   ],
+   "como": "templo en OSM: Franciscanos",
+   "fuente": "OpenStreetMap way 556809635",
+   "dir": null
+  },
   "calles": [
    {
     "i": 1,
@@ -14429,9 +14511,9 @@
    "27 m entre «plaza Cristo de Gracia» y «avenida de Rabanales»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 59,
-  "largo_m": 6737,
-  "ms_total": 170
+  "ms_graphhopper": 141,
+  "largo_m": 6400,
+  "ms_total": 427
  },
  "la-expiracion-cordoba": {
   "id": "la-expiracion-cordoba",
@@ -14439,7 +14521,8 @@
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
   "avisos": [
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
-   "hueco de 53 m entre «Arco de San Francisco» y «Huerto San Pedro el Real»: en OSM no se tocan"
+   "hueco de 53 m entre «Arco de San Francisco» y «Huerto San Pedro el Real»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Real Iglesia de San Pablo» a 31 m, «Compás de San Pablo» a 34 m, «Real Iglesia de San Pablo» a 31 m"
   ],
   "correcciones": null,
   "salida": {
@@ -14727,9 +14810,9 @@
    "29 m entre «TUNDIDORES» y «Diario de Córdoba»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
+  "ms_graphhopper": 100,
   "largo_m": 2738,
-  "ms_total": 103
+  "ms_total": 240
  },
  "el-descendimiento-cordoba": {
   "id": "el-descendimiento-cordoba",
@@ -14991,9 +15074,9 @@
    "6 m entre «Ronda de Isasa» y «PUENTE ROMANO ENTRADA»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 37,
+  "ms_graphhopper": 118,
   "largo_m": 2902,
-  "ms_total": 78
+  "ms_total": 252
  },
  "la-conversion-cordoba": {
   "id": "la-conversion-cordoba",
@@ -15574,9 +15657,9 @@
    "5 m entre «avenida de la Fábrica» y «plaza de Electromecánicas»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 113,
+  "ms_graphhopper": 227,
   "largo_m": 9795,
-  "ms_total": 232
+  "ms_total": 504
  },
  "los-dolores-cordoba": {
   "id": "los-dolores-cordoba",
@@ -16025,9 +16108,9 @@
    "21 m entre «Torres Cabrera» y «Osario»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 54,
+  "ms_graphhopper": 168,
   "largo_m": 4824,
-  "ms_total": 153
+  "ms_total": 340
  },
  "dolores-de-alcolea-cordoba": {
   "id": "dolores-de-alcolea-cordoba",
@@ -16035,7 +16118,8 @@
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
   "avisos": [
    "«PRACTICANTE PEDRO BERNÁ» sin equivalente en OSM: no se traza (no se inventa)",
-   "hueco de 105 m entre «CABO CARMONA CHAMIZO» y «CARRETERA DE MADRID»: en OSM no se tocan"
+   "hueco de 105 m entre «CABO CARMONA CHAMIZO» y «CARRETERA DE MADRID»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «CABO CARMONA CHAMIZO» a 117 m"
   ],
   "correcciones": null,
   "salida": {
@@ -16198,9 +16282,9 @@
    "34 m entre «GENERAL PEDRO A. ECHEVARRÍA» y «SIERRA DE HORNACHUELOS»",
    "24 m entre «SIERRA DE HORNACHUELOS» y «CARRETERA DE MADRID»"
   ],
-  "ms_graphhopper": 25,
+  "ms_graphhopper": 34,
   "largo_m": 1348,
-  "ms_total": 59
+  "ms_total": 102
  },
  "el-resucitado-cordoba": {
   "id": "el-resucitado-cordoba",
@@ -16214,7 +16298,8 @@
    "hueco de 48 m entre «CONDE Y LUQUE» y «BLANCO BELMONTE»: en OSM no se tocan",
    "hueco de 125 m entre «ÁNGEL DE SAAVEDRA» y «PLAZA DE LA COMPAÑÍA»: en OSM no se tocan",
    "hueco de 102 m entre «CLAUDIO MARCELO» y «ALFAROS»: en OSM no se tocan",
-   "hueco de 110 m entre «ALFAROS» y «PLAZA DEL CONDE DE PRIEGO»: en OSM no se tocan"
+   "hueco de 110 m entre «ALFAROS» y «PLAZA DEL CONDE DE PRIEGO»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «PLAZA DEL CONDE DE PRIEGO» a 35 m"
   ],
   "correcciones": null,
   "salida": {
@@ -16505,8 +16590,8 @@
    }
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 64,
+  "ms_graphhopper": 51,
   "largo_m": 3944,
-  "ms_total": 117
+  "ms_total": 143
  }
 }
