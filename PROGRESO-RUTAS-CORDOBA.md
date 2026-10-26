@@ -62,42 +62,59 @@ Desde `tools/itinerarios/`:
 - **Ganancias:** la Piedad pasa de 34/42 a 41/42 calles y Dolores de Alcolea de 0/10 a 10/10. La Sentencia, el Vía Crucis, la Expiración y el Descendimiento recorren de 2 a 3 calles más que antes.
 - **Comprobado en el navegador** (servidor propio en el puerto 8197) a 1440 y 390 px: plano con ida continua y regreso discontinuo, panel con las horas oficiales y nota de fuente con enlace. Sin desbordamiento horizontal en móvil (375 px de contenido en 390). Sin errores de consola del sitio.
 
-### Lista para Pablo · qué mirar en el editor
-Se abre con `tools/itinerarios/editor/Abrir editor de rutas.bat`; se elige Córdoba.
+### Estado de la revisión (2026-10-26, tercera vuelta)
+Se puede abrir el editor con `tools/itinerarios/editor/Abrir editor de rutas.bat` y elegir Córdoba.
 
-**Las 4 sedes que faltaban, ya fijadas** con las direcciones que dio Pablo en el chat el 2026-10-26. Salida y entrada quedan a 0-6 m:
-- **La O:** Plaza Mahatma Gandhi s/n. Punto: centro de la plaza en OSM, porque el edificio no figura con ese nombre.
-- **Perdón:** Calle Buen Pastor 17. Punto: puerta de OSM con esa dirección (node 13060087577).
-- **Soledad:** Avenida del Veintiocho de Febrero 10. Punto: el templo «Franciscanos» de OSM (way 556809635), a 14 m de la calle 28 de Febrero. Pablo apunta que en años recientes ha salido de su casa de hermandad de Cronista Rey Díaz, pero El Debate 2026 dice que salió del templo, y se toma el templo.
-- **Piedad:** Calle Las Lomas 14. **Punto aproximado:** el número no consta en OSM y se toma el punto de Las Lomas más cercano a Sierra de Guadarrama. **Mirarlo en el editor.**
+Las respuestas que Pablo pegó en el chat se comprobaron una a una en OpenStreetMap. Solo se aplicó lo que cuadra con el mapa y con el orden de las listas oficiales.
 
-**Publicadas tras revisarlas** (pierden un paso corto que el trazado anterior sí pisaba):
-- Rescatado, Ánimas y Cristo de Gracia: la glorieta de Puerta Nueva. El trazado pasa por el cruce, no rodea la glorieta.
-- **Presentación al Pueblo, resuelto:** un punto de paso en el centro de Hermanos Pinzones (`rutas/correcciones-cordoba.json`, con fuente) hace que recorra las 40 calles. Deja un pequeño pico en ese punto. Comprobado en OSM que Hermanos Pinzones no linda con la parroquia de San Vicente Ferrer: es la 7.ª calle de la lista, entre Núñez de Balboa y Francisco Pizarro.
-- Santa Faz: paseo de la Victoria (15 m).
-- Prendimiento: plaza del Potro (15 m).
+**Sedes: las 42 localizadas.** Salida y entrada quedan a 0-31 m.
+- **La O:** Plaza Mahatma Gandhi s/n. El punto es el centro de la plaza.
+  - El edificio que OSM llama «Parroquia de la Asunción» (way 96693634) está **a 20 m de esta plaza**, no en la Plaza de la Marina Española (a 3,9 km), como decía la respuesta pegada.
+  - Puede que sea la propia Aurora mal nombrada en OSM. **Pendiente de confirmar.**
+- **Perdón:** Calle Buen Pastor 17. El punto es la puerta de OSM con esa dirección (node 13060087577).
+- **Soledad:** el templo «Franciscanos» de OSM (way 556809635), en la calle 28 de Febrero. Confirmado que en 2026 salió del templo.
+- **Piedad:** Calle Sierra Nevada 1, en la esquina con Sierra de Guadarrama, que es su primera calle oficial. El punto es ese cruce, porque el edificio no está en OSM.
+  - En OSM, Las Lomas queda a unos 230-270 m de Sierra Nevada y de Sierra de Guadarrama, así que no forman una sola manzana. Para el trazado no cambia nada.
+- **Sentencia:** casa de hermandad en el Pasaje Saravia 2. El punto es la puerta de OSM con esa dirección (node 13653571571).
+- **Prendimiento:** Santuario de María Auxiliadora (confirmado).
 
-**Tramos largos que rellena GraphHopper** (las dos calles seguidas de la lista no se tocan en OSM; el camino es el más corto a pie, no un dato oficial):
-- **Piedad:** Electromecánicas → Escriba Lubna (739 m) y Escriba Lubna → Ingeniero Benito Aranda (1.163 m), por la Carretera de Palma del Río, que OSM tiene a trozos y con otros nombres (A-431).
-- **Conversión:** plaza de Electromecánicas → Manuel Fuentes Bocanegra (976 m) y José María Martorell → avenida de la Fábrica (831 m).
-- **Agonía:** Fuente de la Salud → Deán Francisco Xavier (438 m).
-- **Estrella:** Paseo de las Margaritas → Alonso de Burgos (326 m). Faltan los Jardines de la Agricultura, que no son calle en OSM.
-- **Lope de Hoces → Puerta de Almodóvar** (211 m), que sale igual en Esperanza, Sentencia, Santa Faz y Perdón.
+**Confirmado por Pablo:**
+- La glorieta de Puerta Nueva se cruza por el centro.
+- «General Pedro A. Echevarría» es Soldado Pedro Agustín de Echevarría.
+- «Cuesta del Colodro» es Puerta del Colodro.
+- El regreso de la Piedad sigue la rejilla oficial.
 
-**Lugares de la lista sin calle en OSM** (no se trazan; no se inventa): Calahorra (Vera Cruz, Amor, Descendimiento), jardines de Fray Ricardo y Paz y Esperanza (Sangre), Jardines de la Merced (Paz), Arco de Caballerizas (Pasión), plaza Ruiz de Alda (Resucitado), Practicante Pedro Berná (Dolores de Alcolea), Soldado Diego García Paredes y «puerta de San Catalina» (Presentación).
+**Lugares resueltos con alias** (comprobado que tocan a sus vecinas de la lista):
+- **Jardines de Fray Ricardo:** Plaza de las Doblas (Sangre).
+- **Paz y Esperanza:** Plaza de Capuchinos (Sangre).
+- **Jardines de la Merced:** Plaza de Colón (Paz).
+- **Jardines de Vallellano:** Avenida Conde de Vallellano (Cena y Conversión).
+- **Soldado Diego García Paredes:** Calle Soldado García Paredes (Presentación, que ahora recorre 41/41).
+- **Arco de Caballerizas:** punto en el cruce de Caballerizas Reales con Enmedio, que es su sitio en la lista (Enmedio → Arco → Caballerizas Reales). La Pasión recorre ahora 17/17.
 
-**Nombres que OSM escribe distinto**, resueltos con `alias-calles-cordoba.json`:
-- «Cuesta del Colodro» es la Calle Puerta del Colodro de OSM. Una guía la llama así y otra, «puerta del Colodro», en el mismo punto.
-- «General Pedro A. Echevarría», en Alcolea, es la Calle Soldado Pedro Agustín de Echevarría de OSM. Es el mismo nombre con el título cambiado. **Confirmar.**
-- Erratas: «Pablo Picaso», «Borja y Pavón», «Pintora María Blandchard», «Fuenteventura», «Doctor Marañón» y «puerta de Almodóvaar».
+**No aplicados porque no cuadran con el mapa o con la lista:**
+- **Plaza Ruiz de Alda = Plaza de Santa Marina (Resucitado):** en la lista va entre el Pasaje de la Estrella y Alfaros. La Plaza de Santa Marina está a 216 m de Alfaros, mientras que el Pasaje de la Estrella y Alfaros están a 154 m entre sí. Sigue sin trazarse.
+- **Conversión, «de Electromecánicas a Manuel Fuentes Bocanegra por Manolete y Antonio Maura»:** la lista pone Bocanegra antes de la Avenida de Manolete. Se deja el tramo automático.
+- **Jardines de la Agricultura (Estrella), «Avenida de América o de los Mozárabes»:** ninguna de las dos toca a la vez el Paseo de las Margaritas y Alonso de Burgos. Pablo dio el tramo por bueno.
+- **Calahorra:** la respuesta («Acera del Arrecife o la Bajada del Puente») no es concreta. El trazado ya pasa entre la Bajada del Puente y el Puente Romano, que es donde está la torre.
 
-**Datos que conviene confirmar:**
-- **Prendimiento:** sale del Santuario de María Auxiliadora, aunque el librito pone San Andrés.
-- **Piedad:** la rejilla da el regreso a su templo y la prensa la recoge en los Jardines del Obispo. Pablo confirmó el 2026-10-26 que vale la rejilla oficial.
-- **Sentencia:** el punto de la casa de hermandad está en el centro del pasaje Saravia, porque falta el número.
-- **Resucitado:** solo hay rejilla de la cruz de guía, sin lista de prensa.
+**Dados por buenos por Pablo** (el tramo lo rellena GraphHopper):
+- **Piedad:** de Electromecánicas a Escriba Lubna y a Ingeniero Benito Aranda, por la Carretera de Palma del Río.
+- **Conversión:** de José María Martorell a la avenida de la Fábrica.
+- **Agonía:** de Fuente de la Salud a Deán Francisco Xavier.
+- **Estrella:** del Paseo de las Margaritas a Alonso de Burgos.
+- **De Lope de Hoces a la Puerta de Almodóvar:** el trazado ya va por Tejón y Marín, como dijo Pablo.
+
+**Quedan solo con la rejilla oficial** (sin lista de calles completa), por decisión de Pablo: La O, Lágrimas, Dolores de Alcolea y Resucitado.
+
+**Siguen sin calle en OSM** (no se trazan; no se inventa):
+- Practicante Pedro Berná, en Alcolea (Pablo: déjalo así).
+- Plaza Ruiz de Alda.
+- «puerta de San Catalina», errata de la prensa.
 
 ## Punto exacto (2026-10-26)
-- **Córdoba publicada entera.**
-- **Segunda vuelta:** se fijaron las 4 sedes y Hermanos Pinzones. Las 42 se trazaron otra vez con el arreglo de colocación de puntos de Málaga (57bdbe1) y el evaluador las deja en «nuevo». Comprobado con Playwright a 1440 y 390 px, sin errores de consola.
-- **Lo siguiente:** que Pablo revise el resto de la lista en el editor. Con sus correcciones: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar … --forzar`, build y Playwright.
+**Córdoba publicada entera.** Tercera vuelta: datos de Pablo comprobados y aplicados, 42 hermandades retrazadas, todas «nuevo» en el evaluador. Comprobado con Playwright a 1440 y 390 px, sin errores de consola.
+
+**Único pendiente:** confirmar si el edificio de OSM junto a la Plaza Mahatma Gandhi es la Aurora (La O) y qué es hoy la Plaza Ruiz de Alda.
+
+Para rehacer: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar`, build y Playwright.

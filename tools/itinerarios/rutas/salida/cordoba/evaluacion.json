@@ -1,16 +1,16 @@
 {
  "la-o-cordoba": {
   "publicado": {
-   "largo_m": 3815,
+   "largo_m": 3991,
    "comprobables": 16,
    "sin_dato": [
     "C/ VEREDA DE LA ALCAIDÍA"
    ],
    "recorridas": 16,
-   "en_orden": 15,
+   "en_orden": 16,
    "no_recorridas": [],
-   "salida_m": 59,
-   "entrada_m": 67,
+   "salida_m": 2,
+   "entrada_m": 2,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -67,8 +67,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 15→16",
-    "entrada 67→2 m"
+    "empate"
    ]
   }
  },
@@ -544,37 +543,16 @@
  },
  "presentacion-al-pueblo-cordoba": {
   "publicado": {
-   "largo_m": 7061,
-   "comprobables": 40,
-   "sin_dato": [
-    "SOLDADO DIEGO GARCÍA PAREDES",
-    "puerta de San Catalina"
-   ],
-   "recorridas": 39,
-   "en_orden": 39,
-   "no_recorridas": [
-    "Hermanos Pinzones (0 m)"
-   ],
-   "salida_m": 10,
-   "entrada_m": 10,
-   "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
-   "sede_entrada": "templo en OSM: Parroquia de San Vicente Ferrer",
-   "rectas_150": [],
-   "tramo_max_m": 157,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 92
-  },
-  "nuevo": {
    "largo_m": 7129,
-   "comprobables": 40,
+   "comprobables": 41,
    "sin_dato": [
-    "SOLDADO DIEGO GARCÍA PAREDES",
     "puerta de San Catalina"
    ],
    "recorridas": 40,
-   "en_orden": 40,
-   "no_recorridas": [],
+   "en_orden": 41,
+   "no_recorridas": [
+    "SOLDADO DIEGO GARCÍA PAREDES (12 m)"
+   ],
    "salida_m": 10,
    "entrada_m": 10,
    "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
@@ -590,11 +568,34 @@
    ],
    "pct_en_calles_lista": 92
   },
+  "nuevo": {
+   "largo_m": 7106,
+   "comprobables": 41,
+   "sin_dato": [
+    "puerta de San Catalina"
+   ],
+   "recorridas": 41,
+   "en_orden": 41,
+   "no_recorridas": [],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "sede_entrada": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "rectas_150": [],
+   "tramo_max_m": 157,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.883867,
+     -4.759424
+    ]
+   ],
+   "pct_en_calles_lista": 93
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "calles recorridas 39→40",
-    "en orden 39→40"
+    "calles recorridas 40→41"
    ]
   }
  },
@@ -692,8 +693,8 @@
    "recorridas": 22,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 30,
+   "entrada_m": 30,
    "sede_salida": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "sede_entrada": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "rectas_150": [],
@@ -708,7 +709,7 @@
    "pct_en_calles_lista": 79
   },
   "nuevo": {
-   "largo_m": 4183,
+   "largo_m": 4123,
    "comprobables": 22,
    "sin_dato": [
     "Campo Santos Mártires"
@@ -716,8 +717,8 @@
    "recorridas": 22,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 3,
-   "entrada_m": 3,
+   "salida_m": 1,
+   "entrada_m": 1,
    "sede_salida": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "sede_entrada": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "rectas_150": [],
@@ -979,14 +980,13 @@
  "la-sangre-cordoba": {
   "publicado": {
    "largo_m": 3599,
-   "comprobables": 16,
-   "sin_dato": [
-    "jardines de Fray Ricardo",
-    "Paz y Esperanza"
-   ],
-   "recorridas": 16,
+   "comprobables": 18,
+   "sin_dato": [],
+   "recorridas": 17,
    "en_orden": 15,
-   "no_recorridas": [],
+   "no_recorridas": [
+    "jardines de Fray Ricardo (0 m)"
+   ],
    "salida_m": 2,
    "entrada_m": 2,
    "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
@@ -1011,27 +1011,22 @@
    "pct_en_calles_lista": 93
   },
   "nuevo": {
-   "largo_m": 3599,
-   "comprobables": 16,
-   "sin_dato": [
-    "jardines de Fray Ricardo",
-    "Paz y Esperanza"
+   "largo_m": 3617,
+   "comprobables": 18,
+   "sin_dato": [],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [
+    "jardines de Fray Ricardo (15 m)"
    ],
-   "recorridas": 16,
-   "en_orden": 15,
-   "no_recorridas": [],
    "salida_m": 2,
    "entrada_m": 2,
    "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
    "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
    "rectas_150": [],
    "tramo_max_m": 154,
-   "retrocesos": 3,
+   "retrocesos": 2,
    "donde_retrocesos": [
-    [
-     37.887332,
-     -4.778366
-    ],
     [
      37.88541,
      -4.776177
@@ -1046,7 +1041,8 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "en orden 15→16",
+    "retrocesos 3→2"
    ]
   }
  },
@@ -1222,16 +1218,16 @@
  },
  "el-perdon-cordoba": {
   "publicado": {
-   "largo_m": 3972,
+   "largo_m": 4202,
    "comprobables": 25,
    "sin_dato": [
     "Campo de los Santos Mártires"
    ],
    "recorridas": 25,
-   "en_orden": 23,
+   "en_orden": 24,
    "no_recorridas": [],
-   "salida_m": 91,
-   "entrada_m": 121,
+   "salida_m": 1,
+   "entrada_m": 1,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1247,7 +1243,7 @@
      -4.781718
     ]
    ],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
    "largo_m": 4202,
@@ -1280,22 +1276,19 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 23→24",
-    "salida 91→1 m",
-    "entrada 121→1 m"
+    "empate"
    ]
   }
  },
  "la-paz-cordoba": {
   "publicado": {
    "largo_m": 4911,
-   "comprobables": 29,
+   "comprobables": 30,
    "sin_dato": [
     "Gondomar",
-    "Campo Santos Mártires",
-    "JARDINES DE LA MERCED"
+    "Campo Santos Mártires"
    ],
-   "recorridas": 28,
+   "recorridas": 29,
    "en_orden": 27,
    "no_recorridas": [
     "PUERTA DE ALMODÓVAR (14 m)"
@@ -1317,13 +1310,12 @@
   },
   "nuevo": {
    "largo_m": 4911,
-   "comprobables": 29,
+   "comprobables": 30,
    "sin_dato": [
     "Gondomar",
-    "Campo Santos Mártires",
-    "JARDINES DE LA MERCED"
+    "Campo Santos Mártires"
    ],
-   "recorridas": 28,
+   "recorridas": 29,
    "en_orden": 27,
    "no_recorridas": [
     "PUERTA DE ALMODÓVAR (14 m)"
@@ -1453,14 +1445,12 @@
  "la-pasion-cordoba": {
   "publicado": {
    "largo_m": 2143,
-   "comprobables": 15,
+   "comprobables": 17,
    "sin_dato": [
-    "Arco de Caballerizas",
-    "Campo Santos Mártires",
-    "Arco de Caballerizas"
+    "Campo Santos Mártires"
    ],
-   "recorridas": 15,
-   "en_orden": 15,
+   "recorridas": 17,
+   "en_orden": 17,
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
@@ -1473,15 +1463,13 @@
    "pct_en_calles_lista": 93
   },
   "nuevo": {
-   "largo_m": 2143,
-   "comprobables": 15,
+   "largo_m": 2148,
+   "comprobables": 17,
    "sin_dato": [
-    "Arco de Caballerizas",
-    "Campo Santos Mártires",
-    "Arco de Caballerizas"
+    "Campo Santos Mártires"
    ],
-   "recorridas": 15,
-   "en_orden": 15,
+   "recorridas": 17,
+   "en_orden": 17,
    "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
@@ -1502,55 +1490,6 @@
  },
  "la-piedad-cordoba": {
   "publicado": {
-   "largo_m": 12005,
-   "comprobables": 44,
-   "sin_dato": [
-    "Jardines de La Victoria",
-    "SANTA TERESA JOURNET",
-    "CAMPO SANTOS MÁRTIRES",
-    "PLAZA DE TOROS",
-    "PUENTE",
-    "INGENIERO BENITO ARANDA"
-   ],
-   "recorridas": 41,
-   "en_orden": 39,
-   "no_recorridas": [
-    "carretera de Palma del Río (0 m)",
-    "CTRA PALMA DEL RIO (0 m)",
-    "CTRA PALMA DEL RIO (0 m)"
-   ],
-   "salida_m": 270,
-   "entrada_m": 309,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
-   "rectas_150": [],
-   "tramo_max_m": 240,
-   "retrocesos": 5,
-   "donde_retrocesos": [
-    [
-     37.882263,
-     -4.820577
-    ],
-    [
-     37.88161,
-     -4.809723
-    ],
-    [
-     37.881812,
-     -4.790594
-    ],
-    [
-     37.881261,
-     -4.786404
-    ],
-    [
-     37.881647,
-     -4.793847
-    ]
-   ],
-   "pct_en_calles_lista": 66
-  },
-  "nuevo": {
    "largo_m": 13731,
    "comprobables": 44,
    "sin_dato": [
@@ -1568,8 +1507,8 @@
     "CTRA PALMA DEL RIO (0 m)",
     "CTRA PALMA DEL RIO (0 m)"
    ],
-   "salida_m": 0,
-   "entrada_m": 0,
+   "salida_m": 421,
+   "entrada_m": 421,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
@@ -1599,12 +1538,57 @@
    ],
    "pct_en_calles_lista": 61
   },
+  "nuevo": {
+   "largo_m": 12271,
+   "comprobables": 44,
+   "sin_dato": [
+    "Jardines de La Victoria",
+    "SANTA TERESA JOURNET",
+    "CAMPO SANTOS MÁRTIRES",
+    "PLAZA DE TOROS",
+    "PUENTE",
+    "INGENIERO BENITO ARANDA"
+   ],
+   "recorridas": 41,
+   "en_orden": 40,
+   "no_recorridas": [
+    "carretera de Palma del Río (0 m)",
+    "CTRA PALMA DEL RIO (0 m)",
+    "CTRA PALMA DEL RIO (0 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 240,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     37.88161,
+     -4.809723
+    ],
+    [
+     37.881812,
+     -4.790594
+    ],
+    [
+     37.881261,
+     -4.786404
+    ],
+    [
+     37.881647,
+     -4.793847
+    ]
+   ],
+   "pct_en_calles_lista": 67
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 39→40",
-    "salida 270→0 m",
-    "entrada 309→0 m"
+    "salida 421→0 m",
+    "entrada 421→0 m",
+    "retrocesos 5→4"
    ]
   }
  },
@@ -1755,14 +1739,12 @@
  "la-cena-cordoba": {
   "publicado": {
    "largo_m": 7750,
-   "comprobables": 22,
+   "comprobables": 24,
    "sin_dato": [
-    "JARDINES DE VALLELLANO",
-    "Jardines de Vallellano",
     "Alcalde Veasco Navarro"
    ],
-   "recorridas": 22,
-   "en_orden": 22,
+   "recorridas": 24,
+   "en_orden": 24,
    "no_recorridas": [],
    "salida_m": 22,
    "entrada_m": 22,
@@ -1796,51 +1778,37 @@
    "pct_en_calles_lista": 81
   },
   "nuevo": {
-   "largo_m": 7750,
-   "comprobables": 22,
+   "largo_m": 6326,
+   "comprobables": 24,
    "sin_dato": [
-    "JARDINES DE VALLELLANO",
-    "Jardines de Vallellano",
     "Alcalde Veasco Navarro"
    ],
-   "recorridas": 22,
-   "en_orden": 22,
+   "recorridas": 24,
+   "en_orden": 23,
    "no_recorridas": [],
    "salida_m": 22,
    "entrada_m": 22,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 346,
-   "retrocesos": 5,
+   "tramo_max_m": 213,
+   "retrocesos": 2,
    "donde_retrocesos": [
     [
-     37.877324,
-     -4.787058
-    ],
-    [
-     37.877324,
-     -4.787058
-    ],
-    [
-     37.875416,
-     -4.786423
-    ],
-    [
-     37.878498,
-     -4.786139
+     37.878881,
+     -4.785931
     ],
     [
      37.879485,
      -4.787495
     ]
    ],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 91
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 5→2"
    ]
   }
  },
@@ -2032,21 +2000,21 @@
  },
  "la-soledad-cordoba": {
   "publicado": {
-   "largo_m": 6249,
+   "largo_m": 6400,
    "comprobables": 36,
    "sin_dato": [],
    "recorridas": 36,
-   "en_orden": 34,
+   "en_orden": 35,
    "no_recorridas": [],
-   "salida_m": 354,
-   "entrada_m": 465,
+   "salida_m": 6,
+   "entrada_m": 6,
    "sede_salida": "templo en OSM: Franciscanos",
    "sede_entrada": "templo en OSM: Franciscanos",
    "rectas_150": [],
    "tramo_max_m": 200,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 96
+   "pct_en_calles_lista": 95
   },
   "nuevo": {
    "largo_m": 6400,
@@ -2068,9 +2036,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 34→35",
-    "salida 354→6 m",
-    "entrada 465→6 m"
+    "empate"
    ]
   }
  },
@@ -2218,17 +2184,15 @@
  },
  "la-conversion-cordoba": {
   "publicado": {
-   "largo_m": 9472,
-   "comprobables": 30,
+   "largo_m": 9795,
+   "comprobables": 32,
    "sin_dato": [
     "Manuel Fuentes Bocanegra",
     "PERPETUO SOCORRO",
-    "Jardines de Vallellano",
-    "jardines de Vallellano",
     "PERPETUO SOCORRO"
    ],
-   "recorridas": 28,
-   "en_orden": 25,
+   "recorridas": 30,
+   "en_orden": 28,
    "no_recorridas": [
     "carretera de Palma del Río (0 m)",
     "carretera de Palma del Río (0 m)"
@@ -2241,20 +2205,18 @@
    "tramo_max_m": 300,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 50
+   "pct_en_calles_lista": 59
   },
   "nuevo": {
-   "largo_m": 9795,
-   "comprobables": 30,
+   "largo_m": 8819,
+   "comprobables": 32,
    "sin_dato": [
     "Manuel Fuentes Bocanegra",
     "PERPETUO SOCORRO",
-    "Jardines de Vallellano",
-    "jardines de Vallellano",
     "PERPETUO SOCORRO"
    ],
-   "recorridas": 28,
-   "en_orden": 26,
+   "recorridas": 30,
+   "en_orden": 28,
    "no_recorridas": [
     "carretera de Palma del Río (0 m)",
     "carretera de Palma del Río (0 m)"
@@ -2265,14 +2227,23 @@
    "sede_entrada": "templo en OSM: Nuestra Señora del Rosario",
    "rectas_150": [],
    "tramo_max_m": 300,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 52
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.878881,
+     -4.785931
+    ],
+    [
+     37.878881,
+     -4.785931
+    ]
+   ],
+   "pct_en_calles_lista": 65
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 25→26"
+    "empate"
    ]
   }
  },

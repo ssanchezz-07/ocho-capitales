@@ -1,4 +1,5 @@
 {
+ "@Arco de Caballerizas": "geo:37.876541,-4.783424",
  "@Basílica Menor de San Pedro": "geo:37.882631,-4.771848",
  "@Iglesia (La Compañía)": "osm:Iglesia del Salvador y Santo Domingo de Silos",
  "@Iglesia Conventual de San José (San Cayetano)": "osm:Iglesia de San Cayetano",
@@ -15,7 +16,7 @@
  "@Parroquia de Nuestra Señora de la Aurora": "geo:37.898876,-4.761295",
  "@Parroquia de Nuestra Señora de la Paz": "osm:Parroquia de Nuestra Señora de la Paz",
  "@Parroquia de San Andrés": "osm:Iglesia de San Andrés",
- "@Parroquia de San Antonio María Claret": "geo:37.880047,-4.81867",
+ "@Parroquia de San Antonio María Claret": "geo:37.882049,-4.822745",
  "@Parroquia de San Antonio de Padua": "osm:Iglesia de San Antonio de Padua",
  "@Parroquia de San Fernando": "osm:Parroquia de San Fernando",
  "@Parroquia de San Francisco y San Eulogio": "osm:Iglesia de San Francisco y San Eulogio",
@@ -55,9 +56,16 @@
  "FRANISCO DE BORJA PAVÓN": "Calle Francisco de Borja Pavón",
  "FUENTEVENTURA": "Calle Isla de Fuerteventura",
  "GENERAL PEDRO A. ECHEVARRÍA": "Calle Soldado Pedro Agustín de Echevarría",
+ "JARDINES DE LA MERCED": "Plaza de Colón",
+ "JARDINES DE VALLELLANO": "Avenida Conde de Vallellano",
+ "Jardines de Vallellano": "Avenida Conde de Vallellano",
  "PINTORA MARIA BLANDCHARD": "Calle Pintora Blanchard",
  "PZA. STMO CRISTO DE LAS PENAS": "Plaza Santísimo CRISTO DE LAS PENAS",
  "Pablo Picaso": "Calle de Pablo Ruiz Picasso",
+ "Paz y Esperanza": "Plaza de Capuchinos",
+ "SOLDADO DIEGO GARCÍA PAREDES": "Calle Soldado García Paredes",
  "TRINITARIO P. MANUEL FUENTES": "Calle Trinitario Padre Manuel Fuentes",
+ "jardines de Fray Ricardo": "Plaza de las Doblas",
+ "jardines de Vallellano": "Avenida Conde de Vallellano",
  "puerta de Almodóvaar": "Calle Puerta de Almodóvar"
 }

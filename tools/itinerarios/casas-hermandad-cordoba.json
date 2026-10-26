@@ -143,13 +143,13 @@
    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/"
   },
   "punto": [
-   37.88227,
-   -4.781368
+   37.882314,
+   -4.781026
   ],
-  "dir": "Pasaje Saravia, Córdoba",
+  "dir": "Pasaje Saravia 2, Córdoba",
   "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
-  "fuente_punto": "OpenStreetMap way/437566665 y way/1253213191 «Pasaje Saravia» (punto medio del pasaje: el número de la casa no consta)",
-  "nota": "Sale y se recoge en su casa de hermandad del pasaje de Saravia, no en San Nicolás de la Villa (sede canónica). La rejilla oficial empieza por Barroso y Ángel de Saavedra, junto al pasaje."
+  "fuente_punto": "Número: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26). Punto: puerta de OpenStreetMap node/13653571571 con la dirección «Pasaje Saravia 2»",
+  "nota": "Sale y se recoge en su casa de hermandad (Pasaje Saravia 2), no en San Nicolás de la Villa (sede canónica). La rejilla oficial empieza por Barroso y Ángel de Saavedra, junto al pasaje."
  },
  "via-crucis-cordoba": {
   "templo": "Parroquia de San Juan y Todos los Santos (Trinidad)",
@@ -309,13 +309,13 @@
  "la-piedad-cordoba": {
   "templo": "Parroquia de San Antonio María Claret",
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
-  "nota": "La guía de El Debate dice que se recoge a las 00.25 en los Jardines del Obispo; la rejilla oficial y el librito dan el regreso hasta su templo (entrada 03.50). Se sigue la rejilla oficial.",
-  "dir": "Calle Las Lomas 14, Córdoba",
+  "nota": "Sale por Sierra de Guadarrama (rejilla oficial y prensa). Para el regreso manda la rejilla oficial (confirmado por Pablo).",
+  "dir": "Calle Sierra Nevada 1, Córdoba",
   "punto": [
-   37.880047,
-   -4.81867
+   37.882049,
+   -4.822745
   ],
-  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (sale de Las Lomas hacia Sierra de Guadarrama). Punto APROXIMADO: el de la Calle Las Lomas (OSM) más cercano a Sierra de Guadarrama; el número 14 no consta en OSM"
+  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (el templo hace esquina con Sierra de Guadarrama, primera calle del recorrido oficial). Punto: el cruce de Sierra Nevada y Sierra de Guadarrama en OpenStreetMap; el edificio no está en OSM"
  },
  "jesus-nazareno-cordoba": {
   "templo": "Iglesia Hospital de Jesús Nazareno",
