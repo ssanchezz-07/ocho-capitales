@@ -1208,6 +1208,9 @@ function datosCalle(c) {
       const pl = pts.filter((p) => p.lat != null);
       const tt = pl.map((p) => minDia(p.hora) ?? minDia(p.fila));
       let prevT = null; for (let i = 0; i < tt.length; i++) { if (tt[i] == null) continue; if (prevT != null && tt[i] < prevT - 180) tt[i] += 1440; prevT = tt[i]; }
+      // En una jornada «… y Madrugada» (Cádiz, Córdoba), la que sale pasada la medianoche va detrás de la tarde, no al principio
+      const t0 = tt.find((t) => t != null);
+      if (/ y madrugada$/i.test(h.dia) && t0 != null && t0 < 720) for (let i = 0; i < tt.length; i++) if (tt[i] != null) tt[i] += 1440;
       const xyp = pl.map((p) => xy(p.lat, p.lon)), acum = [0];
       for (let i = 1; i < xyp.length; i++) acum.push(acum[i - 1] + Math.hypot(xyp[i][0] - xyp[i - 1][0], xyp[i][1] - xyp[i - 1][1]));
       for (let i = 0; i < tt.length; i++) if (tt[i] == null) {
