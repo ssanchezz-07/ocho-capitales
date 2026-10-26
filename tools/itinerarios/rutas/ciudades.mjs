@@ -35,7 +35,7 @@ export const CIUDADES = {
     marcas: /^estacion de penitencia/,
     // quitar idas y vueltas cortas de GraphHopper sobre la calzada paralela (emparejar.mjs; revisión independiente del 2026-10-26)
     sinBucles: true,
-    catedral: { texto: /^estacion de penitencia en la s i c$/, entra: 7063298453, sale: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, nombre: 'de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero' },
+    catedral: { texto: /^estacion de penitencia en la s i c$/, entra: 7063298453, sale: { id: 'puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada', lat: 36.52905, lon: -6.295776 }, nombre: 'de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero' },
   },
   huelva: { nombre: 'Huelva' },
   jaen: { nombre: 'Jaén' },

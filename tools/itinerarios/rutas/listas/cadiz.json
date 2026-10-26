@@ -39,9 +39,9 @@
    "regreso_desde": 9,
    "catedral": {
     "entra": {
-     "id": "fachada de Arquitecto Acero, punto aproximado",
-     "lat": 36.52899,
-     "lon": -6.29567
+     "id": "puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada",
+     "lat": 36.52905,
+     "lon": -6.295776
     },
     "sale": 7063298453,
     "nombre": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)"
@@ -93,9 +93,9 @@
    "regreso_desde": 10,
    "catedral": {
     "entra": {
-     "id": "fachada de Arquitecto Acero, punto aproximado",
-     "lat": 36.52899,
-     "lon": -6.29567
+     "id": "puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada",
+     "lat": 36.52905,
+     "lon": -6.295776
     },
     "sale": 7063298453,
     "nombre": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)"
@@ -142,9 +142,9 @@
    "regreso_desde": 4,
    "catedral": {
     "entra": {
-     "id": "fachada de Arquitecto Acero, punto aproximado",
-     "lat": 36.52899,
-     "lon": -6.29567
+     "id": "puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada",
+     "lat": 36.52905,
+     "lon": -6.295776
     },
     "sale": 7063298453,
     "nombre": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)"
@@ -208,7 +208,8 @@
    "hitos": [
     36,
     5,
-    9
+    9,
+    25
    ],
    "rectos": [
     10
@@ -1171,7 +1172,8 @@
    },
    "hitos": [
     3,
-    7
+    7,
+    26
    ],
    "rectos": [
     8
@@ -1533,11 +1535,24 @@
      ]
     ]
    },
+   "cruzar_hasta": {
+    "24": [
+     [
+      36.5345,
+      -6.296
+     ],
+     [
+      36.53433,
+      -6.2957
+     ]
+    ]
+   },
    "regreso_desde": 12,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 22).",
     "Erratas del programa corregidas al separar calles: punto en lugar de coma.",
+    "Plaza de San Francisco: cruzada en recta de Tinte a la calle San Francisco (área que la red de rutas no recorre).",
     "Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía."
    ]
   },
@@ -1596,11 +1611,24 @@
      ]
     ]
    },
+   "cruzar_hasta": {
+    "5": [
+     [
+      36.5345,
+      -6.296
+     ],
+     [
+      36.53433,
+      -6.2957
+     ]
+    ]
+   },
    "regreso_desde": 14,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 24).",
     "Sede 2026: «se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)",
+    "Plaza de San Francisco: cruzada en recta de Tinte a la calle San Francisco (área que la red de rutas no recorre).",
     "Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía."
    ]
   },

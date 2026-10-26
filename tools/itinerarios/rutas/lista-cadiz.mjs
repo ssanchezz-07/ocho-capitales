@@ -55,6 +55,11 @@ for (const [id, h] of Object.entries(D.hermandades)) {
   // Andalucía» es la avenida ante el templo y va como marca (si no, la traza sube y baja 84 m).
   if (id === 'la-borriquita-cadiz') { const k = calles.length - 2; if (/^avda. andaluc/i.test(calles[k]) && clave(calles[k - 1]) === 'poeta nieto') { hitos.push(k); notas.push('La última «Avda. Andalucía» es la avenida ante San José (Ana de Viya en OSM): va como marca.'); } }
   if (rectos_sede.length) notas.push('Salida y entrada en línea recta entre la puerta y la primera/última calle (plaza o patio que la red de rutas no recorre).');
+  // Tinte → Plaza San Francisco → San Francisco (Nazareno, Medinaceli): la plaza es un área que la red de rutas no cruza y
+  // GraphHopper atajaba por Rosario y Beato Diego; se cruza en recta por el lado abierto de la plaza (al norte del bloque de pisos way/543992134) hasta el arranque de la calle San Francisco
+  const cruzar_hasta = {};
+  calles.forEach((t, i) => { if (/^plaza (de )?san francisco$/i.test(t) && clave(calles[i - 1] || '') === 'tinte' && clave(calles[i + 1] || '') === 'san francisco') cruzar_hasta[i] = [[36.5345, -6.296], [36.53433, -6.2957]]; });
+  if (Object.keys(cruzar_hasta).length) notas.push('Plaza de San Francisco: cruzada en recta de Tinte a la calle San Francisco (área que la red de rutas no recorre).');
   const rectos = [];
   calles.forEach((t, i) => {
     if (!/^plaza (de )?san juan de dios$/i.test(t)) return;
@@ -63,18 +68,20 @@ for (const [id, h] of Object.entries(D.hermandades)) {
     if (a === 'nueva' && /^(pelota|pomponio mela)$/.test(b)) { hitos.push(i); rectos.push(i + 1); return; }
     // Plocia, Lázaro Dou o San Juan de Dios → Avda. 4 de Diciembre: se pasa por la esquina norte, sin entrar en la plaza
     // (OSM solo tiene como vía su borde sur; la revisión vio entradas y vueltas de 30-85 m)
-    if (/^(plocia|lazaro dou|san juan dios)$/.test(a) && /diciembre/.test(b)) hitos.push(i);
+    if (/^(plocia|lazaro dou|san juan dios)$/.test(a) && /diciembre/.test(b)) { hitos.push(i); return; }
+    // Nueva → Plocia (Borriquita, Cigarreras, al volver): por la esquina norte, sin bajar a la plaza (la revisión vio un bucle de 80 m)
+    if (a === 'nueva' && b === 'plocia') hitos.push(i);
   });
   // la recta pasa por la parte abierta de la plaza: al sur del edificio way/844713222 (lado norte) y al norte del Ayuntamiento
   // y de San Juan de Dios (edificios de OSM del extracto de GraphHopper)
-  const rectos_por = Object.fromEntries(rectos.map((i) => [i, [[36.53000, -6.29268]]]));
+  const rectos_por = Object.fromEntries(rectos.filter((i) => /^(pelota|pomponio mela)$/.test(clave(calles[i]))).map((i) => [i, [[36.53000, -6.29268]]]));
   if (rectos.length) notas.push('Plaza de San Juan de Dios: de Nueva a Pelota de frente, sin rodeo (Pablo, 2026-10-26), por la parte abierta de la plaza; OSM no tiene la plaza como vía.');
   out.hermandades[id] = {
     fuente: `${h.fuente.url} (itinerario, pág. ${h.fuente.pagina_itinerario}; ficha, pág. ${h.fuente.pagina_ficha})`,
-    calles, horas, ...(hitos.length ? { hitos } : {}), ...(rectos.length ? { rectos, rectos_por } : {}), ...(rectos_sede.length ? { rectos_sede } : {}),
+    calles, horas, ...(hitos.length ? { hitos } : {}), ...(rectos.length ? { rectos, rectos_por } : {}), ...(rectos_sede.length ? { rectos_sede } : {}), ...(Object.keys(cruzar_hasta).length ? { cruzar_hasta } : {}),
     ...(idx.catedral_salida != null ? { regreso_desde: idx.catedral_salida } : {}),
     ...(porPrincipal ? { catedral: { entra: 7063298453, sale: 7063298453, nombre: 'entra y sale por la puerta principal (Plaza de la Catedral)' } } : {}),
-    ...(alReves ? { catedral: { entra: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, sale: 7063298453, nombre: 'de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)' } } : {}),
+    ...(alReves ? { catedral: { entra: { id: 'puerta de Arquitecto Acero, punto aproximado en la calle ante la fachada', lat: 36.52905, lon: -6.295776 }, sale: 7063298453, nombre: 'de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)' } } : {}),
     rejilla: false, notas,
   };
 }

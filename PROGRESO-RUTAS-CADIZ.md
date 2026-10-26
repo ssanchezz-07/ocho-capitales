@@ -60,8 +60,14 @@ node tools/itinerarios/listas-cadiz.mjs
   - Puertas: salida y entrada en la calle de la portada (`puertas-cadiz.mjs`; en plazas, en la fachada).
   - Comprobado: evaluador 33 «nuevo», edificios 33/33 (`comprobar-fondo.mjs`), Playwright 8/8 a 390 y 1440 px.
 - **Dudas para Pablo** (el coordinador se las pasa): Descendimiento, regreso por **Javier de Burgos** (Canal Sur, lo publicado) o **Novena** (Radio Cádiz); Perdón, salida 01:10 (Canal Sur, publicado) frente a 01:30 (Radio Cádiz).
+- **Revisión independiente n.º 2 (12 a fondo + 6 al azar, 2026-10-26): 3 FALLO → corregidos y subidos.**
+  - Nazareno de Santa María y Medinaceli atajaban unos 105 m por Rosario y Beato Diego: la Plaza de San Francisco se cruza en recta por su lado abierto (`cruzar_hasta`, opción nueva de lista en `emparejar.mjs`).
+  - Horquilla de 35-44 m en la puerta de Arquitecto Acero (31 de 33): la puerta va ahora sobre la calle, ante la fachada (punto aproximado, sin puerta en OSM).
+  - Borriquita y Cigarreras: sin el bucle de 80 m al volver por la Plaza de San Juan de Dios (Nueva → Plocia por la esquina, la plaza como marca).
+  - Comprobado: evaluador 33 «nuevo», edificios 33/33, ninguna ida y vuelta > 25 m salvo la de la Resurrección (la pide su itinerario) y dos de 25 m justos (Borriquita y Cigarreras al entrar en la Avda. 4 de Diciembre), compilación sin errores, Playwright 8/8.
+  - Menores que quedan (< 25 m): V de ~25 m en el Compás de Santo Domingo (Cena, Cigarreras), espolones de 7-14 m, pico de 9 m en Plaza Candelaria; García Carrera solo se cruza (Despojado).
 - **Punto exacto para seguir:**
-  1. Revisión independiente n.º 2 (12 corregidas + 6 al azar) lanzada el 26-oct por la tarde: aplicar lo que salga, compilar, Playwright, subir y **parar**.
+  1. Dudas de Pablo (Descendimiento, Perdón): las pasa el coordinador. Si contesta, cambiar `listas-cadiz.mjs` (ERRATAS_PABLO / DUDAS) y regenerar.
   2. Después (cuando el coordinador lo active): sedes de Cádiz, Huelva y Almería en `site/data/sedes/<capital>.json` con `node tools/itinerarios/rutas/sedes.mjs <capital>` (formato de `rutas-malaga`, `34355d3`). Cádiz: pasar `sedes-cadiz.json` a `rutas/sedes-cadiz-correcciones.json` (templo = sede canónica; las de Santa Cruz, en Santa Cruz aunque en 2026 salieran de otros templos, con nota). Huelva y Almería: callejeros copiados a la caché (`cache/osm-huelva.json`, `cache/osm-almeria.json`); el de Huelva solo tiene 18 templos: hace falta una descarga de Overpass del término municipal (`cache/templos-<capital>.json`, se dejó lanzada). Casas hermandad: con fuente, una a una (las fichas del Consejo de Cádiz no dan dirección).
 
 ## Lista para Pablo (mirar cuando esté trazado)
