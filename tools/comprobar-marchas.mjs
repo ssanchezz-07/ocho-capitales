@@ -56,7 +56,7 @@ for (const m of U.marchas) for (const a of m.alias || []) if (slugs.has(a) && a 
 const sm = process.argv[2];
 if (sm && fs.existsSync(sm)) {
   const vivos = [...fs.readFileSync(sm, 'utf8').matchAll(/\/marcha\/([^/<]+)\//g)].map((x) => x[1]);
-  const al = new Set(U.marchas.flatMap((m) => m.alias || []));
+  const al = new Set([...U.marchas.flatMap((m) => m.alias || []), ...Object.keys(U.redirecciones || {})]);
   const perdidas = vivos.filter((s) => !slugs.has(s) && !al.has(s));
   if (perdidas.length) errores.push(`${perdidas.length} direcciones publicadas se pierden: ${perdidas.slice(0, 5).join(', ')}`);
   else console.log(`direcciones publicadas: ${vivos.length}, todas cubiertas`);

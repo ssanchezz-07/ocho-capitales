@@ -917,6 +917,8 @@ function enlaceFuente(m, f, campo) {
 function fuentesMarcha(m) {
   const grupos = [['Título y compositor', ['titulo', 'autor'], true], ['Año', ['anio'], m.anio], ['Formación', ['formacion'], m.tipo], ['Dedicatoria', ['dedicatoria'], m.h || m.dedicatoria], ['Grabación', ['video'], m.video], ['Tipo, estreno y lugar', ['tipo', 'estreno', 'lugar', 'detalles'], m.tipoMarcha || m.estreno || m.lugar]];
   const filas = grupos.filter(([, , hay]) => hay).map(([et, cs]) => { const fs_ = [...new Set(cs.flatMap((c) => (m.fuentes || {})[c] || []))]; return fs_.length ? `<li><strong>${et}:</strong> ${fs_.map((f) => enlaceFuente(m, f, cs[0])).join(', ')}</li>` : ''; }).filter(Boolean);
+  // Fuente que solo dice de qué hermandad es la marcha (la dedicatoria la dan las de arriba)
+  if (m.urls && m.urls.desambigua) { const rv = (m.revision || []).find((x) => x.url === m.urls.desambigua); filas.push(`<li><strong>Hermandad:</strong> <a href="${esc(m.urls.desambigua)}" target="_blank" rel="noopener nofollow">${esc((rv && rv.fuente) || 'fuente')}</a></li>`); }
   // Partituras en la Biblioteca Nacional: una por edición o manuscrito
   if ((m.partituras || []).length) filas.push(`<li><strong>Partitura:</strong> ${m.partituras.slice(0, 4).map((p) => `<a href="${esc(p.url)}" target="_blank" rel="noopener nofollow">Biblioteca Nacional${p.fecha ? ' (' + esc(p.fecha) + (p.tipo ? ', ' + esc(p.tipo.replace(/^Música /, '')) : '') + ')' : ''}</a>`).join(', ')}</li>`);
   return filas.length ? `<ul class="oc-fuentes">${filas.join('')}</ul>` : '';
@@ -1384,6 +1386,8 @@ function datosCunao() {
 
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
+// Direcciones de marchas ya publicadas que dejaron de existir (fichas unidas o registros que no eran marchas): a la misma obra o al listado
+for (const [a, b] of Object.entries(MU.redirecciones || {})) { if (MARCHA_SLUGS.has(a)) continue; const d = u(b ? 'marcha/' + b + '/' : 'marchas/'); write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
 // /hermandad/, /banda/, /marcha/, /imaginero/ y /en-la-calle/ sin nombre (URL recortada a mano): a su listado, no a un 404
 for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['marcha', 'marchas/'], ['imaginero', 'imagineros/'], ['en-la-calle', 'capitales/']]) {
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);

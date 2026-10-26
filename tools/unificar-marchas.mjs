@@ -225,7 +225,9 @@ const nombreBne = (o) => {
   const ult = sc.length >= 2 ? String(sc.at(-1)).replace(/\[|\]/g, '').replace(/^(m[uú]sica|letra|arreglo|instrumentaci[oó]n|original)( de| y letra de)?\s+/i, '').split(/\s*[;,]\s*|\s+y\s+/)[0].trim() : '';
   const pareceNombre = ult && !/[:]|marcha|procesi|para |por |siglo|banda|piano|op\.|n[ºo]\s/i.test(ult) && ult.split(' ').length <= 6 && /^[A-ZÁÉÍÓÚÑ]/.test(ult);
   const inv = String(o.autor_bne || '').replace(/\s*\([^)]*\)\s*$/, '').split(',').map((x) => x.trim()).reverse().join(' ').trim();
-  return pareceNombre && (!inv || mismoAutor(ult, inv)) ? ult : inv;
+  // sin autor en el registro no hay compositor fiable (el último subcampo puede ser un subtítulo o la banda de un disco)
+  if (!inv) return '';
+  return pareceNombre && mismoAutor(ult, inv) ? ult : inv;
 };
 const tituloBne = (o) => String((o.subcampos || [])[0] || o.titulo || '').replace(/\s*[:;/].*$/, '').replace(/\s*\.\s*$/, '').replace(/^\[|\]$/g, '').trim();
 // Partituras que no están en el catálogo: solo entran si el título es de Semana Santa (la BNE también trae Corpus, piezas de piano francesas…)
@@ -234,7 +236,8 @@ const EXTRANJERO = /\b(marche|processionnelle|pour|et|und|the|for|marcia|funebre
 const porTituloR = new Map(); for (const r of R) { const k = nt(r.titulo); (porTituloR.get(k) || porTituloR.set(k, []).get(k)).push(r); }
 const bnePorClave = new Map();
 for (const o of BNE.marchas) {
-  if (!o.leida || !o.subcampos) continue;
+  // solo partituras (impresas o manuscritas): el tema también trae discos y recopilaciones
+  if (!o.leida || !o.subcampos || !/impresa|manuscrita/i.test(o.tipo || '')) continue;
   const titulo = tituloBne(o); const autor = nombreBne(o);
   if (!titulo || !autor) continue;
   const ded = (o.notas || []).find((n) => /dedicad|dedicatoria/i.test(n));
@@ -367,9 +370,12 @@ for (const v of REV) {
     const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
     const otrasF = prev ? (r.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f) && f !== 'rev' && host(r.urls[f === 'mdp' ? 'mdpFicha' : f] || (FUENTES_URL[f] || '')) !== host(v.fuente)) : [];
     r.retiradas = r.retiradas.filter((x) => x.hermandad !== h.slug);
-    r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: v.titular || (prev && prev.titular) || '', texto: v.texto || (prev && prev.texto) || '', estado: otrasF.length ? 'contrastada' : 'dedicada' };
-    if (!prev) r.fuentes.dedicatoria = [];
-    fuente(r, 'dedicatoria', 'rev', v.fuente);
+    const antes = r.dedicatoria;
+    r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: v.titular || (prev && prev.titular) || '', texto: v.texto || (antes && antes.texto) || '', estado: otrasF.length ? 'contrastada' : 'dedicada' };
+    // «ligar»: la dedicatoria del catálogo ya decía el texto; la revisión solo resuelve a qué hermandad es, así que su fuente se queda
+    if (!prev && !(v.accion === 'ligar' && antes && !antes.hermandad)) r.fuentes.dedicatoria = [];
+    // solo_desambigua: la fuente (p. ej. un blog cofrade) solo dice de qué hermandad es; la dedicatoria la siguen dando las fuentes del catálogo
+    if (v.solo_desambigua && v.accion === 'ligar' && antes && !antes.hermandad) r.urls.desambigua = v.fuente; else fuente(r, 'dedicatoria', 'rev', v.fuente);
   } else if (v.accion === 'retirar') {
     const hs = v.hermandad || (r.dedicatoria && r.dedicatoria.hermandad);
     if (r.dedicatoria && r.dedicatoria.hermandad === hs) { r.dedicatoria = null; delete r.fuentes.dedicatoria; }
@@ -423,6 +429,21 @@ for (const r of R) if (r.autor) { const k = claveAutor(r.autor); const m = forma
 const tildes = (s) => (s.normalize('NFD').match(/[̀-ͯ]/g) || []).length;
 for (const r of R) if (r.autor) { const m = formas.get(claveAutor(r.autor)); const mejor = [...m].sort((a, b) => tildes(b[0]) - tildes(a[0]) || b[1] - a[1])[0][0]; r.autor = mejor; }
 
+// ---------- 7b. direcciones ya publicadas que dejan de existir: redirigen a la misma obra o al listado ----------
+// Se acumulan de una pasada a otra en «redirecciones». Con --previo <marchas.json> se añaden las de otro modelo (p. ej. el publicado).
+const PREVIOS = [PREV]; { const i = process.argv.indexOf('--previo'); if (i > 0) PREVIOS.push(JSON.parse(fs.readFileSync(process.argv[i + 1], 'utf8'))); }
+const vivas = new Set(R.flatMap((r) => [r.slug, ...r.alias]));
+const redirecciones = {};
+for (const pv of PREVIOS) {
+  for (const [a, b] of Object.entries(pv.redirecciones || {})) if (!vivas.has(a)) redirecciones[a] = b;
+  for (const m of pv.marchas || []) for (const s of [m.slug, ...(m.alias || [])]) {
+    if (!s || vivas.has(s) || s in redirecciones) continue;
+    const dest = R.find((r) => nt(r.titulo) === nt(m.titulo) && mismoAutor(r.autor, m.autor));
+    redirecciones[s] = dest ? dest.slug : '';
+  }
+}
+for (const [a, b] of Object.entries(redirecciones)) if (b && !vivas.has(b)) redirecciones[a] = '';
+
 // ---------- 8. salida ----------
 const limpio = R.map((r) => {
   const o = { slug: r.slug, titulo: r.titulo, autor: r.autor, anio: r.anio, formacion: r.formacion, video: r.video };
@@ -458,7 +479,7 @@ const FUENTES = {
   bne: { nombre: 'Biblioteca Nacional de España (datos.bne.es, partituras)', url: 'https://datos.bne.es/tema/XX536674.html', fiable: true },
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
 };
-fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');
+fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"redirecciones":' + JSON.stringify(redirecciones) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');
 fs.mkdirSync(path.join(RAIZ, 'auditoria'), { recursive: true });
 fs.writeFileSync(path.join(RAIZ, 'auditoria/marchas-informe.json'), JSON.stringify({ ...informe, revision_sin_usar: sinUsar }, null, 1));
 console.log(JSON.stringify(resumen, null, 1));

@@ -9,17 +9,16 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
 4. `node tools/comprobar-marchas.mjs [sitemap.xml]`: tiene que dar 0 errores antes de subir.
 5. `node site/build.mjs`, comprobar a 390 y 1440 px, subir.
 
-## Estado (2026-10-26)
+## Estado (2026-10-26, bloque 3)
 | Qué | Hecho | Total | Falta |
 |---|---|---|---|
-| Fichas de YouTube de Marchas de Procesión leídas | en curso (5.231 → …) | 7.225 | relanzar el importador hasta terminar |
-| Partituras de la BNE leídas | 250 | 1.643 | bloqueado: hace falta permiso para leer la BNE con huella de navegador (decide Pablo) |
-| Marchas en el modelo único | 7.520 | — | — |
-| Ligadas a hermandades | 1.613 en 219 hermandades | — | — |
-| Contrastadas / una fuente fiable / sin verificar | 181 / 1.363 / 69 | — | las 69 «sin verificar» ya se buscaron una vez sin fuente (lotes 1-4) |
-| Enlaces retirados con motivo y fuente | 12 marchas | — | — |
-| Revisiones a mano con fuente | 142 | — | — |
-| Dedicatorias del catálogo dudosas (varias hermandades o poco específicas) | 0 revisadas | 308 | revisar a mano (solo con fuente) |
+| Fichas de YouTube de Marchas de Procesión | 7.224 leídas (869 vídeos borrados) | 7.225 | 1 que falla |
+| Registros de la BNE | 1.642 leídos (312 partituras usadas) | 1.643 | — |
+| Marchas en el modelo único | 7.529 | — | — |
+| Ligadas a hermandades | 1.713 en 230 hermandades | — | — |
+| Contrastadas / una fuente fiable / sin verificar | 197 / 1.448 / 68 | — | las 68 ya se buscaron sin fuente |
+| Revisiones a mano con fuente | 193 | — | — |
+| Dedicatorias del catálogo dudosas revisadas | 93 (Almería, Jaén, Cádiz, Huelva, Córdoba) | 244 | 151 de Sevilla, Málaga y Granada (lote dudas-C.json) |
 
 ## Pendientes de la auditoría (M)
 - **Cerrados:** M5 (títulos en varias hermandades: cada marcha tiene su compositor y sus fuentes; no hay ninguna con el mismo título y compositor en dos hermandades), M6 (duplicados del catálogo: se unen con alias), M8 («El Amor» es de agrupación musical), M10 (años: regla nueva), M13 (se queda «Patre Nostro»: ninguna fuente da «Padre Nostro»), M14 («La Soledad del Sepulcro», Moreno Ramos 1996, y «Soledad del Santo Sepulcro», Gutiérrez 2001; duplicado unido), M15 (Virgen de la Carretería: 1979, web oficial), M16 («In Cer»: en el patrimonio musical de los Gitanos según la Federación).
@@ -31,3 +30,4 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
 - 2026-10-26: bloque 2: 142 revisiones a mano con fuente (sin verificar 181 → 69), compositor más estricto, duplicados unidos, BNE como fuente (250 fichas), M5-M16 cerrados.
+- 2026-10-26: bloque 3: importaciones de YouTube y BNE terminadas (solo partituras de la BNE), 93 dedicatorias dudosas revisadas (+50 ligadas con fuente en Jaén, Cádiz, Huelva, Córdoba y Almería), correcciones de la sesión de Málaga, redirecciones permanentes de direcciones retiradas.

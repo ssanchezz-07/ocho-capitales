@@ -1574,7 +1574,7 @@
    "fuente": "https://archicofradiadelasangre.es/marchas-procesionales-dedicadas/",
    "nombre_fuente": "Web oficial de la Archicofradía de la Sangre (Marchas dedicadas)",
    "fecha": "2026-10-26",
-   "nota": "",
+   "nota": "Discrepancia: Patrimonio Musical (bd-marcha-1627) la dedica a Salvador García Sánchez, director de la Banda Municipal de Málaga; manda la web oficial de la Archicofradía, que la incluye entre sus marchas dedicadas",
    "campos": {}
   },
   {
@@ -1600,6 +1600,543 @@
    "fecha": "2026-10-26",
    "nota": "",
    "campos": {}
+  },
+  {
+   "slug": "amargura-de-la-concepcion-francisco-cano-ruiz",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-329",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "amargura-madre-de-dios-francisco-cano-ruiz",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-328",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "amargura-reina-de-la-madruga-jesus-manuel-perojil-villar",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5104",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "calle-amargura-jesus-manuel-perojil-villar",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5100",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-soberana-juan-velazquez-sanchez",
+   "hermandad": "la-esperanza-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-128",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "flor-de-san-pedro-jesus-manuel-perojil-villar",
+   "hermandad": "la-borriquita-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5107",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "madre-de-la-caridad-jesus-manuel-perojil-villar",
+   "hermandad": "la-fe-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5111",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-de-la-amargura-jesus-manuel-perojil-villar",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5101",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "mi-amargura-nazarena-jesus-manuel-perojil-villar",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5103",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "plaza-nina-jesus-manuel-perojil-villar",
+   "hermandad": "el-nazareno-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5102",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la sitúa en Huelva capital; la guía oficial de Semana Santa 2026 del Ayuntamiento solo tiene una Virgen de la Amargura (El Nazareno)",
+   "campos": {}
+  },
+  {
+   "slug": "santisimo-cristo-de-la-caridad-pedro-gamez-laserna",
+   "hermandad": "la-caridad-cordoba",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2013",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Cristo de la Caridad de Córdoba en 1941: la otra hermandad con ese titular (La Conversión) es de 2004",
+   "campos": {}
+  },
+  {
+   "slug": "santisimo-cristo-de-las-penas-jose-timoteo-franco",
+   "hermandad": "penas-de-santiago-cordoba",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2176",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-del-silencio-jesus-manuel-perojil-villar",
+   "hermandad": "el-silencio-la-soledad-huelva",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5109",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "vida-de-un-alma-luis-bedmar-encinas",
+   "hermandad": "el-amor-cordoba",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1042",
+   "nombre_fuente": "Patrimonio Musical, ficha de marcha",
+   "fecha": "2026-10-26",
+   "nota": "Cristo del Amor de Córdoba: un solo Cristo del Amor en el programa oficial de Semana Santa",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-del-mayor-dolor-manuel-bonilla",
+   "hermandad": "crucifixion-malaga",
+   "accion": "retirar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1753",
+   "nombre_fuente": "Patrimonio Musical (comprobado por la sesión de Málaga)",
+   "fecha": "2026-10-26",
+   "nota": "Solo la cita el foro de 2008 y ninguna fuente documenta una marcha con ese título; la de Manuel Bonilla Cascado dedicada a la Virgen del Mayor Dolor en su Soledad se titula «Crucifixión» (1998)",
+   "campos": {}
+  },
+  {
+   "slug": "al-senor-de-cadiz-alberto-barea-tejada",
+   "hermandad": "nazareno-de-santa-maria-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=900293",
+   "nombre_fuente": "cofradiasyhermandades.es, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la Cofradía de Ntro. Padre Jesús Nazareno, Santa Cruz de Jerusalén, Mª Stma. de los Dolores y Sta. Mª Magdalena de Cádiz.",
+   "campos": {}
+  },
+  {
+   "slug": "amargura-manuel-marvizon-carvallo",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-de-jaen-juan-jose-puntas-fernandez",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-de-nuestra-fe-juan-manuel-velazquez-ruiz",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-es-tu-dolor-alejandro-huete-sanchez",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-madre-de-la-iglesia-manuel-vilchez-martinez",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-soberana-juan-rafael-vilchez-checa",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "amargura-madre-protectora-francisco-del-toro-zamora",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "angustias-amor-de-madre-francisco-jose-sanchez-sutil",
+   "hermandad": "la-buena-muerte-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_7512.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Buena Muerte",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "angustias-madre-carlos-cervero-alemany",
+   "hermandad": "la-buena-muerte-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_7512.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Buena Muerte",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "caridad-de-san-lorenzo-oscar-mosteiro-mesa",
+   "hermandad": "las-penas-cadiz",
+   "accion": "ligar",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf",
+   "nombre_fuente": "Guía «Cruz de Guía» Semana Santa 2026 (Radio Cádiz / Cadena SER), PDF",
+   "fecha": "2026-10-26",
+   "nota": "La guía sitúa a Las Penas (Mª Stma. de la Caridad) en San Lorenzo; el vídeo de Composiciones Cofrades (youtube xf-375kvMmA) dice «Compuesta para: La Virgen de la Caridad», Cádiz. Identificación por tí",
+   "campos": {}
+  },
+  {
+   "slug": "en-tu-cielo-de-esperanza-jacinto-manuel-rojas-guisado",
+   "hermandad": "el-perdon-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_5761.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad del Perdón",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "en-tu-realeza-amargura-martin-salas-martinez",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "esperanza-alberto-barea-tejada",
+   "hermandad": "el-perdon-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_5761.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad del Perdón",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "esperanza-franciscana-gabriel-vadillo-gonzalez",
+   "hermandad": "nazareno-del-amor-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=AfP0tMfRgf0",
+   "nombre_fuente": "YouTube, canal cofrade La Venia",
+   "fecha": "2026-10-26",
+   "nota": "Coincide con la guía Cruz de Guía 2026: Nazareno del Amor y Ntra. Sra. de la Esperanza en la Iglesia Conventual de San Francisco (de ahí «franciscana»).",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-verde-olivo-francisco-jose-sanchez-sutil",
+   "hermandad": "el-perdon-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_5761.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad del Perdón",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "fe-y-caridad-javier-tapia-jimenez",
+   "hermandad": "la-santa-cena-almeria",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=-8IIL4fA9zQ",
+   "nombre_fuente": "YouTube oficial de la Hermandad de la Santa Cena de Almería",
+   "fecha": "2026-10-26",
+   "nota": "Publicado por el canal de la propia hermandad (autor Javier Tapia, 2009, Banda de Berja).",
+   "campos": {}
+  },
+  {
+   "slug": "fides-et-charitas-jacinto-manuel-rojas-guisado",
+   "hermandad": "la-santa-cena-almeria",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=BXd1efHgzew",
+   "nombre_fuente": "YouTube oficial de la Hermandad de la Santa Cena de Almería",
+   "fecha": "2026-10-26",
+   "nota": "Canal de la propia hermandad; año 2016 (estrenada Domingo de Ramos 2016). La BD da 2015.",
+   "campos": {}
+  },
+  {
+   "slug": "himno-a-la-reina-de-la-amargura-juan-rafael-vilchez-checa",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "jaen-llora-tu-amargura-juan-manuel-cutino-garrido",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "la-amargura-francisco-pastor-bueno",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "la-misericordia-de-dios-jose-ribera-tordera",
+   "hermandad": "la-palma-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=OhozjB_JtJM",
+   "nombre_fuente": "YouTube, canal cofrade La Venia",
+   "fecha": "2026-10-26",
+   "nota": "Nombra expresamente la Archicofradía de la Palma.",
+   "campos": {}
+  },
+  {
+   "slug": "madre-de-la-paz-francisco-cano-ruiz",
+   "hermandad": "la-borriquilla-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Borriquita",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "madre-y-reina-de-la-victoria-juan-rafael-vilchez-checa",
+   "hermandad": "el-resucitado-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6295.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Cofradía del Resucitado",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "nazareno-de-santa-maria-jose-manuel-garcia-pulido",
+   "hermandad": "nazareno-de-santa-maria-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=HLsyHATPCPY",
+   "nombre_fuente": "YouTube, canal cofrade La Venia",
+   "fecha": "2026-10-26",
+   "nota": "El título nombra Santa María, sede del Nazareno (guía Cruz de Guía 2026: Iglesia Conventual de Santa María).",
+   "campos": {}
+  },
+  {
+   "slug": "no-llores-amargura-javier-calvo-gavino",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "nuestra-senora-de-la-amargura-pedro-vicedo-beneyto",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "regidor-perpetuo-abel-moreno-gomez",
+   "hermandad": "nazareno-de-santa-maria-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=cOfZyT4MyZY",
+   "nombre_fuente": "YouTube, canal Chico Marrero (imágenes de Canal Cádiz TV)",
+   "fecha": "2026-10-26",
+   "nota": "Presentación de la marcha, estrenada en el Gran Teatro Falla (concierto de la Tertulia «Al Palo»). Canal particular; otro vídeo (umr4l6Ca7DM) también dice «dedicada al Nazareno de Cádiz».",
+   "campos": {}
+  },
+  {
+   "slug": "santa-maria-de-la-amargura-alfonso-lozano-ruiz",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "sentir-de-amargura-jose-ramon-estepa-munoz",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "soberana-y-jaenera-pedro-morales-munoz",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "soledad-madre-de-la-vera-cruz-jorge-marcial-ortiz",
+   "hermandad": "vera-cruz-cadiz",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=wmgumK6A58A",
+   "nombre_fuente": "YouTube oficial de la Hdad. Vera Cruz Cádiz",
+   "fecha": "2026-10-26",
+   "nota": "Estreno el 6-4-2019 en San Francisco; el compositor lo confirma en su canal (youtube dbN4_IdZB5g).",
+   "campos": {}
+  },
+  {
+   "slug": "victoria-del-santo-reino-ignacio-borrego-gonzalez",
+   "hermandad": "el-resucitado-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6295.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Cofradía del Resucitado",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "virgen-de-la-amargura-juan-rafael-vilchez-checa",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "virgen-de-la-amargura-reina-del-salvador-sebastian-cabrera-checa",
+   "hermandad": "la-amargura-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_6940.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Amargura",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
+  },
+  {
+   "slug": "virgen-de-las-angustias-jose-sapena-matarredona",
+   "hermandad": "la-buena-muerte-jaen",
+   "accion": "ligar",
+   "fuente": "https://musicaprocesionaldejaen.blogspot.com/2012/04/blog-post_7512.html",
+   "nombre_fuente": "Blog «Música Procesional de Jaén», ficha de la Hermandad de la Buena Muerte",
+   "fecha": "2026-10-26",
+   "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
+   "campos": {},
+   "solo_desambigua": true
   }
  ]
 }
