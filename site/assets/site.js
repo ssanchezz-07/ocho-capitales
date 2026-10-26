@@ -705,9 +705,12 @@
     var timer, PAGE = 50, limit = PAGE;
     // Listados muy largos (marchas): se sirven las primeras filas y el resto se pide al filtrar o pedir más
     var restoUrl = grid.getAttribute('data-resto'), extra = +grid.getAttribute('data-extra') || 0, restoOk = !restoUrl;
+    // Una sola petición aunque se escriba deprisa: antes, cada tecla pedía el resto y se añadía varias veces (marchas repetidas)
+    var restoP = null;
     function conResto(fn) {
       if (restoOk) return fn();
-      fetch(BASE + restoUrl).then(function (r) { return r.text(); }).then(function (t) { grid.insertAdjacentHTML('beforeend', t); cards = $$('.oc-entry', grid); }).catch(function () { }).then(function () { restoOk = true; fn(); });
+      if (!restoP) restoP = fetch(BASE + restoUrl).then(function (r) { return r.text(); }).then(function (t) { grid.insertAdjacentHTML('beforeend', t); cards = $$('.oc-entry', grid); }).catch(function () { }).then(function () { restoOk = true; });
+      restoP.then(fn);
     }
     var more = $('[data-dir-more]', scope), moreBtn = more && $('button', more);
     // En móvil los desplegables empiezan plegados; la búsqueda queda siempre a la vista

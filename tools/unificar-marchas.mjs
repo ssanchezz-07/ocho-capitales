@@ -35,7 +35,9 @@ export const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, 
 const slugify = (s) => norm(s).replace(/ /g, '-').replace(/-+/g, '-').slice(0, 80).replace(/-$/, '');
 // Título comparable: sin artículos ni tratamientos («Nuestra Señora del Mayor Dolor» = «Ntra. Sra. del Mayor Dolor»)
 const nt = (t) => norm(t).replace(/\b(a|al|la|el|los|las|de|del|y|en|ntra|nuestra|senora|sra|nuestro|padre|n|p|stma|santisima|santisimo|maria)\b/g, ' ').replace(/\s+/g, ' ').trim();
-const PILA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo'.split(' '));
+const PILA_VIEJA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo'.split(' '));
+// Nombres de pila para comparar compositores (la lista vieja se conserva tal cual para reproducir las direcciones antiguas)
+const PILA = new Set([...PILA_VIEJA, ...'desiderio paco pepe manolo manuela isidro narciso celestino eloy bienvenido dionisio nicolas ezequiel ismael sixto adolfo alfonso fernando gustavo hector jacinto julio marco nicolas octavio patricio ricardo roberto teodoro tomas valentin vicente victor alvaro cristian eugenio federico gregorio hugo jaime jorge leopoldo luciano maximo moises norberto ramiro rodrigo samuel silvestre virgilio'.split(' ')]);
 const apellidos = (a) => new Set(norm(a).split(' ').filter((w) => w.length >= 3 && !PILA.has(w) && !['del', 'los', 'las', 'san'].includes(w)));
 // Mismo compositor: un apellido poco corriente en común, o dos apellidos, o un apellido corriente y el mismo nombre de pila
 // («Eloy García» = «Eloy García López», pero «Eloy García López» ≠ «Manuel López Farfán»)
@@ -52,7 +54,10 @@ const mismoAutor = (a, b) => {
   const soloX = x.filter((w) => !y.some((v) => igualAp(w, v))), soloY = y.filter((v) => !x.some((w) => igualAp(w, v)));
   if (soloX.length && soloY.length) return false;
   // nombres de pila completos y distintos: otra persona (Perfecto Artola Prats y su hijo Desiderio Artola Tena)
-  if (pila(a).length > 2 && pila(b).length > 2 && pila(a) !== pila(b) && !igualAp(pila(a), pila(b))) return false;
+  // (se comparan todos los nombres de pila conocidos: «Vicente Micó» = «José Vicente Micó Álvarez»; varios autores en otro orden, también)
+  const pilas = (n) => norm(n).split(' ').filter((w) => PILA.has(w) && !CORRIENTES.has(w));
+  const pa = pilas(a), pb = pilas(b);
+  if (pa.length && pb.length && !pa.some((w) => pb.includes(w))) return false;
   if (comun.some((w) => !CORRIENTES.has(w)) || comun.length >= 2) return true;
   return pila(a) && pila(a) === pila(b);
 };
@@ -64,17 +69,19 @@ const TABLA = { 'Banda de música': 'bandas-musica', 'Banda de cornetas y tambor
 const urlTabla = (f) => `https://www.marchasdeprocesion.com/p/base-datos-${TABLA[f] || 'bandas-musica'}.html`;
 const urlPm = (id) => `https://www.patrimoniomusical.com/bd-marcha-${id}`;
 const urlYt = (v) => `https://www.youtube.com/watch?v=${v}`;
-const FIABLE = new Set(['fgr', 'pm', 'mdp', 'bne', 'rev']);
+const FIABLE = new Set(['fgr', 'pm', 'mdp', 'bne', 'part', 'cyh', 'rev']);
 const OFICIAL = new Set(['fgr', 'rev']);
 
 // ---------- lugares: ¿de qué ciudad habla una dedicatoria? ----------
 // Municipios andaluces que también son advocaciones o palabras corrientes: no cuentan como lugar si no van tras «de»/entre paréntesis
 const AMBIGUOS = new Set(['la victoria', 'victoria', 'gines', 'fuentes', 'dos torres', 'pilas', 'la puebla', 'santiago', 'rota', 'olivares', 'la luisiana', 'el bosque', 'los corrales', 'la paz', 'paterna', 'la guardia', 'cuevas', 'la rambla', 'villanueva', 'los barrios', 'la carolina', 'la zubia', 'gador', 'la herradura']);
 const FUERA = ['madrid', 'toledo', 'murcia', 'cartagena', 'lorca', 'cieza', 'jumilla', 'caravaca', 'albacete', 'hellin', 'tobarra', 'cuenca', 'ciudad real', 'puertollano', 'valdepenas', 'badajoz', 'merida', 'caceres', 'plasencia', 'zafra', 'salamanca', 'zamora', 'valladolid', 'leon', 'burgos', 'palencia', 'segovia', 'avila', 'soria', 'logrono', 'bilbao', 'zaragoza', 'huesca', 'teruel', 'valencia', 'alicante', 'elche', 'orihuela', 'crevillente', 'castellon', 'barcelona', 'tarragona', 'ferrol', 'vigo', 'pontevedra', 'oviedo', 'gijon', 'santander', 'pamplona', 'ceuta', 'melilla', 'tenerife', 'las palmas', 'mallorca', 'guadalajara', 'getafe', 'mostoles', 'ponferrada', 'astorga', 'benavente', 'calahorra', 'lisboa', 'olivenza', 'jerez de los caballeros', 'don benito', 'almendralejo', 'villafranca de los barros', 'talavera', 'yecla', 'totana', 'mula', 'moratalla', 'alhama de murcia', 'aguilas', 'torrevieja'];
+// Municipios que son también nombres corrientes de las dedicatorias: no se detectan nunca como lugar (María, en Almería, es «María Santísima»)
+const NUNCA_LUGAR = new Set(['maria']);
 const LUGARES = [
   ...Object.keys(MUNI).map((m) => ({ n: norm(m), cap: null, prov: MUNI[m] })),
   ...FUERA.map((n) => ({ n, cap: null, prov: 'fuera' })),
-].filter((l) => l.n.length >= 3).sort((a, b) => b.n.length - a.n.length);
+].filter((l) => l.n.length >= 3 && !NUNCA_LUGAR.has(l.n)).sort((a, b) => b.n.length - a.n.length);
 // Lugares nombrados en un texto: capitales y otros municipios (los ambiguos solo tras «de» o entre paréntesis)
 function lugares(texto) {
   const t = ' ' + norm(texto) + ' ';
@@ -130,6 +137,14 @@ function mejorHermandad(texto, ciudad) {
   if (nom.size) return { top: 99, cand: [...nom].map((s) => HERM[s]), porNombre: true };
   let top = 0, cand = [];
   for (const h of P.hermandades) if (h.ciudad === ciudad) { const p = puntua(texto, h); if (p > top) { top = p; cand = [h]; } else if (p && p === top) cand.push(h); }
+  // Empate de titulares (dos «Jesús Nazareno del Paso» en Málaga): desempata el nombre oficial si una sola comparte más palabras
+  // con la dedicatoria («Al Dulce Nombre de Jesús Nazareno del Paso» → Archicofradía del Dulce Nombre… del Paso y la Esperanza)
+  if (cand.length > 1) {
+    const tk = new Set(contenido(texto));
+    const sc = cand.map((h) => contenido(h.nombre_oficial).filter((w) => tk.has(w)).length);
+    const mx = Math.max(...sc);
+    if (sc.filter((x) => x === mx).length === 1 && mx > top) cand = [cand[sc.indexOf(mx)]];
+  }
   return { top, cand };
 }
 // Lo que dice una dedicatoria de una hermandad concreta:
@@ -145,8 +160,19 @@ function clasifica(texto, localidad, h) {
   const { caps, otros } = lugares(texto);
   if ([...caps].some((c) => c !== ciudad) && !caps.has(ciudad)) return { e: 'otra', m: 'nombra otra capital' };
   if (otros.size && !caps.has(ciudad) && !(localidad && CAPN[norm(localidad)] === ciudad)) return { e: 'otra', m: `nombra ${[...otros][0]}` };
+  // Nombra un templo que no es la sede de la hermandad («Virgen de Guadalupe de la iglesia de San Buenaventura»): es otra imagen
+  const templo = sinTildes(texto).match(/\b(?:iglesia|parroquia|capilla|convento|basilica|ermita|monasterio)\s+(?:de\s+|del\s+)?(?:la\s+|el\s+|los\s+|las\s+)?(?:san\s+|santa\s+|santo\s+|nuestra\s+senora\s+de\s+(?:la\s+|los\s+)?)?([a-z]{4,})/);
+  if (templo && !norm(h.sede).includes(templo[1])) return { e: 'otra', m: `nombra otro templo (${templo[0]})` };
   const { top, cand, porNombre } = mejorHermandad(texto, ciudad);
   if (porNombre) return cand.some((x) => x.slug === h.slug) ? { e: 'casa' } : { e: 'otra', m: `nombra a ${cand[0].nombre} (${CAP[ciudad]})`, otra: cand[0].slug };
+  // Nombra un barrio o un lugar que no es de esta hermandad («Virgen del Dulce Nombre de Bellavista»): es otra imagen
+  const permitidas = new Set([...FRASES[h.slug].flat(), ...NOMBRES[h.slug].flat(), ...contenido(h.sede), ...contenido(h.nombre_oficial), ...(h.titulares || []).flatMap((t) => contenido(t.nombre)), ...Object.keys(CAPN), 'andalucia']);
+  // (solo en la frase principal, hasta la primera coma o «para…»: «…por las calles de Roma» es la ocasión, no la imagen;
+  // sin números romanos ni palabras de aniversario; «Pinomontano» = «Pino Montano»)
+  for (const f of [...FRASES[h.slug], ...NOMBRES[h.slug]]) permitidas.add(f.join(''));
+  const principal = String(texto).split(/,|\s(?:para|con motivo|en conmemoraci[oó]n|por su|en el)\s/)[0];
+  const raro = [...principal.matchAll(/\b(?:de|del)\s+((?:[A-ZÁÉÍÓÚÑ][\wáéíóúñü]+\s?){1,3})/g)].flatMap((x) => contenido(x[1])).find((w) => !permitidas.has(w) && !COMUN.has(w) && !/^[ivxlc]+$/.test(w) && !/^(aniversario|centenario|coronacion|fundacion|bendicion|hechura|canonica|cincuentenario)$/.test(w));
+  if (raro) return { e: 'otra', m: `nombra «${raro}», que no es de ${h.nombre}` };
   const mine = puntua(texto, h);
   if (top > mine && cand.length === 1) return { e: 'otra', m: `nombra a ${cand[0].nombre} (${CAP[ciudad]})`, otra: cand[0].slug };
   if (mine) return { e: 'casa' };
@@ -168,7 +194,7 @@ const darSlugB = (base) => { let s = slugB(base); if (!s) return ''; let n = 2; 
 const viejoLig = [], viejoCat = [];
 {
   const ntB = (t) => norm(t);
-  const ta = (t) => new Set(norm(t).split(' ').filter((w) => w.length >= 3 && !PILA.has(w) && !['del', 'los', 'las', 'san'].includes(w)));
+  const ta = (t) => new Set(norm(t).split(' ').filter((w) => w.length >= 3 && !PILA_VIEJA.has(w) && !['del', 'los', 'las', 'san'].includes(w)));
   const coincideB = (a, b) => { const x = ta(a), y = ta(b); for (const w of x) if (y.has(w)) return true; return false; };
   const sinVideo = new Map();
   for (const h of P.hermandades) for (const m of h.marchas || []) { const o = { m, video: m.video, slug: darSlugB(m.titulo + ' ' + (m.autor || h.slug)) }; viejoLig.push(o.slug); if (!o.video) { const k = ntB(m.titulo); (sinVideo.get(k) || sinVideo.set(k, []).get(k)).push(o); } }
@@ -249,6 +275,52 @@ for (const o of BNE.marchas) {
   if (ded) r._deds = [...(r._deds || []), { texto: ded.replace(/^.*?(dedicad[ao]s?|dedicatoria)\s*:?\s*/i, ''), loc: '', f: 'bne', url: o.url }];
 }
 
+// ---------- 2c. Repertorio de bandas a partir de sus partituras (tools/sources/repertorio-*.json) ----------
+// La cabecera de la partitura da título, compositor, año y, a veces, la dedicatoria. Las partituras no se publican.
+const REPS = process.env.SIN_REPERTORIO ? [] : fs.readdirSync(path.join(DIR, 'sources')).filter((f) => /^repertorio-.*\.json$/.test(f)).map((f) => leer(path.join(DIR, 'sources', f)));
+for (const rp of REPS) for (const x of rp.marchas) {
+  let r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor));
+  if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
+  fuente(r, 'titulo', 'part'); fuente(r, 'autor', 'part');
+  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) });
+  if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f: 'part' }];
+  if (x.dedicatoria) r._deds = [...(r._deds || []), { texto: x.dedicatoria, loc: '', f: 'part', url: '' }];
+}
+
+// ---------- 2d. cofradiasyhermandades.es: listado de las 8 capitales (auditoria/cyh-marchas.json, local; tools/importar-marchas-cyh.mjs) ----------
+// Solo para cruzar y completar: si la marcha ya está (título comparable + compositor), su ficha se cita y completa formación,
+// año y capital de la dedicatoria. Las que no están solo entran si la dedicatoria de su ficha nombra una hermandad del portal.
+// Interruptores para subir por bloques: SIN_CYH=1, SIN_NUEVAS_PM=1, SIN_REPERTORIO=1 dejan fuera esas importaciones
+const CYH = process.env.SIN_CYH ? null : leer(path.join(RAIZ, 'auditoria', 'cyh-marchas.json'), null);
+const urlCyh = (id) => `https://www.cofradiasyhermandades.es/fichamarcha.php?mm=${id}`;
+const tituloCyh = (t) => { const s = String(t || '').replace(/^[¡!¿?«»"'\s]+|[¡!¿?«»"'\s]+$/g, (m) => m.trim()).trim(); return s === s.toUpperCase() ? s.toLowerCase().replace(/(^|[\s(¡¿«"'])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|El|Y|E|En|A|Al|Su|Sus|Mi|Tu)\b(?!$)/g, (w, x, i) => (i ? w.toLowerCase() : w)) : s; };
+const cyhSinCasar = [];
+if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v.marchas) {
+  if (!x.titulo) continue;
+  const r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor));
+  if (!r) { cyhSinCasar.push({ ...x, capital: cap }); continue; }
+  fuente(r, 'titulo', 'cyh', urlCyh(x.id)); if (x.autor) fuente(r, 'autor', 'cyh');
+  if (x.formacion.length === 1) { if (!r.formacion) { r.formacion = x.formacion[0]; fuente(r, 'formacion', 'cyh'); } else if (norm(r.formacion) === norm(x.formacion[0])) fuente(r, 'formacion', 'cyh'); }
+  if (/^\d{4}$/.test(x.anio)) r._anios = [...(r._anios || []), { v: x.anio, f: 'cyh', url: urlCyh(x.id) }];
+  (r._ciudadesCyh ||= new Set()).add(cap);
+  const f = CYH.fichas && CYH.fichas[x.id];
+  if (f && f.dedicatoria) r._deds = [...(r._deds || []), { texto: f.dedicatoria, loc: CAP[cap], f: 'cyh', url: urlCyh(x.id) }];
+}
+// Marchas que no teníamos: entran solo si su ficha (leída con --fichas) dedica la marcha a una hermandad del portal
+if (CYH) for (const x of cyhSinCasar) {
+  const f = CYH.fichas && CYH.fichas[x.id];
+  if (!f || !f.dedicatoria) continue;
+  const h = (() => { const { top, cand } = mejorHermandad(f.dedicatoria, x.capital); return top && cand.length === 1 ? cand[0] : null; })();
+  if (!h || clasifica(f.dedicatoria, CAP[x.capital], h).e !== 'casa') continue;
+  const titulo = tituloCyh(x.titulo);
+  const r = nuevo({ slug: darSlug(titulo + ' ' + x.autor), titulo, autor: x.autor, formacion: x.formacion.length === 1 ? x.formacion[0] : '' });
+  fuente(r, 'titulo', 'cyh', urlCyh(x.id)); if (x.autor) fuente(r, 'autor', 'cyh'); if (r.formacion) fuente(r, 'formacion', 'cyh');
+  if (/^\d{4}$/.test(x.anio)) r._anios = [{ v: x.anio, f: 'cyh', url: urlCyh(x.id) }];
+  r._deds = [{ texto: f.dedicatoria, loc: CAP[x.capital], f: 'cyh', url: urlCyh(x.id) }];
+  r._ciudadesCyh = new Set([x.capital]); r._soloNueva = true;
+  (porTituloR.get(nt(titulo)) || porTituloR.set(nt(titulo), []).get(nt(titulo))).push(r);
+}
+
 // ---------- 3. Patrimonio Musical: segunda fuente (título comparable + apellido) ----------
 const pmIdx = new Map();
 if (PM) for (const [id, f] of Object.entries(PM)) if (f && f.t) { const k = nt(f.t); (pmIdx.get(k) || pmIdx.set(k, []).get(k)).push({ id, ...f }); }
@@ -259,6 +331,24 @@ for (const r of R) {
     if (!fs_.length) continue;
     r._pm = fs_.map((f) => ({ id: f.id, y: f.y, d: f.d, u: f.u }));
   } else if (prevPm.has(r.slug)) r._pmPrev = prevPm.get(r.slug);
+}
+// Marchas de Patrimonio Musical que no teníamos (orden del 27-oct): entran solo si su ficha las dedica a una hermandad del
+// portal en su capital (campo de dedicatoria + localidad), con el enlace a la ficha; el resto de la base sigue siendo de uso interno.
+if (PM && !process.env.SIN_NUEVAS_PM) {
+  const casadas = new Set(R.flatMap((r) => (r._pm || []).map((f) => f.id)));
+  const titulo = (t) => tituloCyh(t);
+  for (const [id, f] of Object.entries(PM)) {
+    if (!f || !f.t || !f.a || casadas.has(id) || !f.d) continue;
+    const loc = (f.u || '').split(' - ').length >= 3 ? f.u.split(' - ').pop() : '';
+    const cap = CAPN[norm(loc)]; if (!cap) continue;
+    const { top, cand } = mejorHermandad(f.d, cap); if (!top || cand.length !== 1) continue;
+    const h = cand[0]; if (clasifica(f.d, loc, h).e !== 'casa') continue;
+    if ((porTituloR.get(nt(f.t)) || []).some((y) => mismoAutor(y.autor, f.a))) continue;
+    const r = nuevo({ slug: darSlug(titulo(f.t) + ' ' + f.a), titulo: titulo(f.t), autor: f.a });
+    fuente(r, 'titulo', 'pm', urlPm(id)); fuente(r, 'autor', 'pm');
+    r._pm = [{ id, y: f.y, d: f.d, u: f.u }]; r._soloNueva = true;
+    (porTituloR.get(nt(f.t)) || porTituloR.set(nt(f.t), []).get(nt(f.t))).push(r);
+  }
 }
 
 // ---------- 4. dedicatorias: verificar las ligadas y ligar las del catálogo que nombran una hermandad ----------
@@ -355,7 +445,7 @@ for (const r of R) {
 // ---------- 6. revisión a mano (con fuente abierta): manda sobre todo lo anterior ----------
 const sinUsar = [];
 for (const v of REV) {
-  const r = R.find((x) => (v.slug ? x.slug === v.slug : nt(x.titulo) === nt(v.titulo) && (!v.autor || mismoAutor(x.autor, v.autor)) && (!v.hermandad || (x.dedicatoria && x.dedicatoria.hermandad === v.hermandad) || x._h === v.hermandad || x.retiradas.some((y) => y.hermandad === v.hermandad))));
+  const r = R.find((x) => (v.slug ? x.slug === v.slug || x.alias.includes(v.slug) : nt(x.titulo) === nt(v.titulo) && (!v.autor || mismoAutor(x.autor, v.autor)) && (!v.hermandad || (x.dedicatoria && x.dedicatoria.hermandad === v.hermandad) || x._h === v.hermandad || x.retiradas.some((y) => y.hermandad === v.hermandad))));
   if (!r) { sinUsar.push(v); continue; }
   const src = { f: 'rev', url: v.fuente };
   r.urls['rev'] = v.fuente; (r.revision ||= []).push({ fecha: v.fecha, nota: v.nota || '', url: v.fuente, fuente: v.nombre_fuente || '' });
@@ -400,7 +490,14 @@ for (const v of REV) {
         if (b === a || fuera.has(b) || !mismoAutor(a.autor, b.autor)) continue;
         if (a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion)) continue;
         // dos dedicatorias distintas = pueden ser dos obras con el mismo título
-        if (a.dedicatoria && b.dedicatoria && (a.dedicatoria.hermandad || b.dedicatoria.hermandad ? a.dedicatoria.hermandad !== b.dedicatoria.hermandad : norm(a.dedicatoria.texto) !== norm(b.dedicatoria.texto))) continue;
+        // (una ligada y otra solo con texto: se unen si ese texto no la dedica a otra hermandad u otro lugar)
+        if (a.dedicatoria && b.dedicatoria) {
+          const ha = a.dedicatoria.hermandad, hb = b.dedicatoria.hermandad;
+          if (ha && hb && ha !== hb) continue;
+          if (!ha && !hb && norm(a.dedicatoria.texto) !== norm(b.dedicatoria.texto)) continue;
+          if ((ha && !hb && b.dedicatoria.texto && clasifica(b.dedicatoria.texto, '', HERM[ha]).e === 'otra') || (hb && !ha && a.dedicatoria.texto && clasifica(a.dedicatoria.texto, '', HERM[hb]).e === 'otra')) continue;
+          if (hb && !ha) { const d = a.dedicatoria; a.dedicatoria = b.dedicatoria; b.dedicatoria = d; }
+        }
         for (const [c, fs_] of Object.entries(b.fuentes)) for (const f of fs_) fuente(a, c, f);
         for (const [k, u] of Object.entries(b.urls)) a.urls[k] = a.urls[k] || u;
         for (const c of ['anio', 'formacion', 'video', 'tipo', 'estreno', 'lugar', 'detalles']) if (!a[c] && b[c]) a[c] = b[c];
@@ -409,6 +506,7 @@ for (const v of REV) {
         a.alias.push(b.slug, ...b.alias); a.retiradas.push(...b.retiradas); a.discrepancias.push(...b.discrepancias);
         if (b.revision) (a.revision ||= []).push(...b.revision);
         if (b.partituras) (a.partituras ||= []).push(...b.partituras);
+        if (b.repertorio) (a.repertorio ||= []).push(...b.repertorio);
         fuera.add(b); (informe.pares ||= []).push([a.slug, b.slug, a.formacion, b.formacion]);
       }
     }
@@ -421,6 +519,25 @@ for (const v of REV) {
 // La revisión cuenta como el sitio de su enlace: hecha con una ficha de Patrimonio Musical, es Patrimonio Musical.
 const clavesFiables = (r) => new Set((r.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f)).map((f) => { if (f !== 'rev') return f; const u = r.urls.rev || ''; let h = ''; try { h = new URL(u).hostname.replace(/^www./, ''); } catch (e) { /* sin url */ } return h === 'patrimoniomusical.com' ? 'pm' : u && u === r.urls.mdpFicha ? 'mdp' : 'rev:' + h; }));
 for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = clavesFiables(r).size; r.dedicatoria.estado = n >= 2 ? 'contrastada' : n === 1 ? 'dedicada' : 'sin-verificar'; }
+
+// Las marchas que solo vienen de Patrimonio Musical o de Cofradías y Hermandades entran únicamente si quedan ligadas a una hermandad
+for (let i = R.length - 1; i >= 0; i--) if (R[i]._soloNueva && !(R[i].dedicatoria && R[i].dedicatoria.hermandad)) R.splice(i, 1);
+
+// ---------- 6d. capital de la dedicatoria: la de la hermandad; si no, la de Cofradías y Hermandades o la de Patrimonio Musical ----------
+for (const r of R) {
+  let c = '', fu = '';
+  if (r.dedicatoria && r.dedicatoria.hermandad) { c = r.dedicatoria.ciudad; fu = (r.fuentes.dedicatoria || [])[0] || ''; }
+  else if (r._ciudadesCyh && r._ciudadesCyh.size === 1) { c = [...r._ciudadesCyh][0]; fu = 'cyh'; }
+  else if ((r._pm || []).length === 1 && r._pm[0].u) { const l = norm(r._pm[0].u.split(' - ').pop()); if (CAPN[l]) { c = CAPN[l]; fu = 'pm'; } }
+  if (c) { r.ciudad = c; r.fuentes.ciudad = [fu]; }
+}
+// Fichas de Cofradías y Hermandades que conviene abrir (para la dedicatoria): las que no teníamos y las nuestras sin hermandad
+if (CYH) {
+  const ids = new Set(cyhSinCasar.map((x) => x.id));
+  for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v.marchas) { const r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor)); if (r && !(r.dedicatoria && r.dedicatoria.hermandad)) ids.add(x.id); }
+  for (const id of Object.keys(CYH.fichas || {})) ids.delete(id);
+  fs.writeFileSync(path.join(RAIZ, 'auditoria', 'cyh-fichas-pendientes.json'), JSON.stringify([...ids]));
+}
 
 // ---------- 7. compositores escritos de varias formas (M7): una sola forma por persona ----------
 const claveAutor = (a) => norm(a).split(' ').filter((w) => !['de', 'del', 'la', 'y'].includes(w)).join(' ');
@@ -446,7 +563,7 @@ for (const [a, b] of Object.entries(redirecciones)) if (b && !vivas.has(b)) redi
 
 // ---------- 8. salida ----------
 const limpio = R.map((r) => {
-  const o = { slug: r.slug, titulo: r.titulo, autor: r.autor, anio: r.anio, formacion: r.formacion, video: r.video };
+  const o = { slug: r.slug, titulo: r.titulo, autor: r.autor, anio: r.anio, formacion: r.formacion, video: r.video, ...(r.ciudad ? { ciudad: r.ciudad } : {}) };
   if (r.videos) o.videos = r.videos.filter((v) => v !== r.video);
   for (const c of ['tipo', 'estreno', 'lugar', 'detalles']) if (r[c]) o[c] = r[c];
   if (r.dedicatoria) o.dedicatoria = r.dedicatoria;
@@ -454,6 +571,7 @@ const limpio = R.map((r) => {
   for (const c of ['retiradas', 'discrepancias', 'alias']) if (r[c].length) o[c] = r[c];
   if (r.revision) o.revision = r.revision;
   if (r.partituras) o.partituras = r.partituras;
+  if (r.repertorio) o.repertorio = r.repertorio;
   return o;
 });
 const cuenta = (f) => limpio.filter(f).length;
@@ -476,6 +594,8 @@ const FUENTES = {
   fgr: { nombre: 'Federación de Hermandades y Cofradías de Granada (ficha oficial, «Patrimonio musical»)', url: 'https://www.semanasantagranada.org/', fiable: true, oficial: true },
   wiki: { nombre: 'Wikipedia (sección de marchas de la hermandad)', url: 'https://es.wikipedia.org/', fiable: false },
   foro: { nombre: 'Foro de Patrimonio Musical: «Marchas procesionales de Málaga» (2008)', url: 'https://www.patrimoniomusical.com/foro/viewtopic.php?t=1959', fiable: false },
+  cyh: { nombre: 'Cofradías y Hermandades (buscador de marchas)', url: 'https://www.cofradiasyhermandades.es/marchas.php', fiable: true },
+  part: { nombre: 'Partituras de la banda, aportadas por Pablo Sánchez', url: '', fiable: true, privada: true },
   bne: { nombre: 'Biblioteca Nacional de España (datos.bne.es, partituras)', url: 'https://datos.bne.es/tema/XX536674.html', fiable: true },
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
 };

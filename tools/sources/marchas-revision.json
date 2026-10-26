@@ -3117,6 +3117,42 @@
    "fecha": "2026-10-26",
    "nota": "La fuente nombra la hermandad",
    "campos": {}
+  },
+  {
+   "slug": "cristo-de-la-expiracion-alberto-jurado",
+   "hermandad": "expiracion-malaga",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1616",
+   "nombre_fuente": "Patrimonio Musical",
+   "fecha": "2026-10-27",
+   "nota": "El foro de 2008 escribe «Alberto Jurado»; la ficha da Antonio Jurado Pérez (misma marcha, misma hermandad)",
+   "campos": {
+    "autor": "Antonio Jurado Pérez"
+   }
+  },
+  {
+   "slug": "soledades-de-la-virgen-de-los-dolores-alberto-jurado",
+   "hermandad": "expiracion-malaga",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1617",
+   "nombre_fuente": "Patrimonio Musical",
+   "fecha": "2026-10-27",
+   "nota": "El foro de 2008 escribe «Alberto Jurado»; la ficha da Antonio Jurado Pérez (misma marcha, misma hermandad)",
+   "campos": {
+    "autor": "Antonio Jurado Pérez"
+   }
+  },
+  {
+   "slug": "rosa-de-dos-barrios-alberto-perez",
+   "hermandad": "zamarrilla-malaga",
+   "accion": "corregir",
+   "fuente": "https://www.youtube.com/watch?v=LqJeIMu0G28",
+   "nombre_fuente": "Marchas de Procesión (ficha del vídeo)",
+   "fecha": "2026-10-27",
+   "nota": "El foro da solo «Alberto Pérez»; la ficha da los dos autores",
+   "campos": {
+    "autor": "Antonio Ojeda Ortiz y Juan Alberto Pérez Pérez"
+   }
   }
  ]
 }

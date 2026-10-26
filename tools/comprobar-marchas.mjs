@@ -24,7 +24,7 @@ for (const m of U.marchas) {
   if (!m.titulo) err(m, 'sin título');
   // cada dato que se enseña tiene al menos una fuente, y cada fuente un enlace
   for (const c of ['titulo', 'autor', 'anio', 'formacion', 'video']) if (m[c] && !(m.fuentes[c] || []).length) err(m, `«${c}» sin fuente`);
-  for (const fs_ of Object.values(m.fuentes)) for (const f of fs_) if (!m.urls[f] && !(U.fuentes[f] && U.fuentes[f].url)) err(m, `fuente «${f}» sin enlace`);
+  for (const fs_ of Object.values(m.fuentes)) for (const f of fs_) if (!m.urls[f] && !(U.fuentes[f] && (U.fuentes[f].url || U.fuentes[f].privada))) err(m, `fuente «${f}» sin enlace`);
   if (m.video && caidos.has(m.video)) err(m, 'enlaza un vídeo retirado de YouTube');
   if (m.anio && !/^\d{4}$/.test(m.anio)) err(m, `año raro: ${m.anio}`);
   if (m.anio && (+m.anio < 1800 || +m.anio > new Date().getFullYear() + 1)) av(m, `año fuera de rango: ${m.anio}`);
@@ -49,6 +49,31 @@ for (const m of U.marchas) {
   }
   for (const r of m.retiradas || []) if (!r.motivo || !r.fuente) err(m, `retirada de ${r.hermandad} sin motivo o sin fuente`);
   for (const r of m.revision || []) if (!/^https?:\/\//.test(r.url || '')) err(m, 'revisión a mano sin URL de la fuente');
+}
+// Duplicados (orden de Pablo, 27-oct: «No pueden haber marchas ni dedicatorias duplicadas»): la misma obra no puede estar en
+// dos fichas. Misma obra = mismo título (sin artículo inicial) y mismo compositor (apellidos que casan sin contradecirse y
+// nombres de pila compatibles, también con varios autores en otro orden) y formación igual o sin indicar. Dos versiones para
+// formaciones distintas sí son fichas distintas (se distinguen por la formación).
+{
+  const kt = (t) => norm(t).replace(/^(el|la|los|las|a la|al|a)\s+/, '');
+  const PILA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo desiderio paco bienvenido dionisio nicolas'.split(' '));
+  const ap = (a) => norm(a).split(' ').filter((w) => w.length >= 3 && !PILA.has(w) && !['del', 'los', 'las', 'san'].includes(w));
+  const pil = (a) => norm(a).split(' ').filter((w) => PILA.has(w));
+  const misma = (a, b) => {
+    const x = ap(a.autor), y = ap(b.autor);
+    if (!x.some((w) => y.includes(w))) return false;
+    if (x.some((w) => !y.includes(w)) && y.some((w) => !x.includes(w))) return false;
+    const pa = pil(a.autor), pb = pil(b.autor); if (pa.length && pb.length && !pa.some((w) => pb.includes(w))) return false;
+    if (a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion)) return false;
+    const ha = a.dedicatoria && a.dedicatoria.hermandad, hb = b.dedicatoria && b.dedicatoria.hermandad;
+    return !(ha && hb && ha !== hb);
+  };
+  const g = new Map(); for (const m of U.marchas) { const k = kt(m.titulo); if (k) (g.get(k) || g.set(k, []).get(k)).push(m); }
+  let dups = 0;
+  for (const v of g.values()) for (let i = 0; i < v.length; i++) for (let j = i + 1; j < v.length; j++) if (misma(v[i], v[j])) { dups++; err(v[i], `duplicada con ${v[j].slug} («${v[j].titulo}», ${v[j].autor})`); }
+  // dedicatorias repetidas: en una hermandad, la misma obra no puede salir dos veces
+  const porH = new Map(); for (const m of U.marchas) if (m.dedicatoria && m.dedicatoria.hermandad) { const k = m.dedicatoria.hermandad + '|' + kt(m.titulo) + '|' + ap(m.autor).sort().join(' ') + '|' + norm(m.formacion); if (porH.has(k)) err(m, `dedicatoria repetida en ${m.dedicatoria.hermandad} (también ${porH.get(k)})`); else porH.set(k, m.slug); }
+  console.log(`duplicados: ${dups}`);
 }
 // alias: no chocan con otra marcha
 for (const m of U.marchas) for (const a of m.alias || []) if (slugs.has(a) && a !== m.slug) err(m, `alias ${a} es la dirección de otra marcha`);
