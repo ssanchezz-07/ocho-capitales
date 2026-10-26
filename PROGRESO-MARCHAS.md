@@ -31,6 +31,16 @@ Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a part
 - Al regenerar: `node tools/unificar-marchas.mjs` (acumula las redirecciones) y `node tools/comprobar-marchas.mjs <sitemap publicado>` con 0 errores.
 - Para otra sesión (datos de hermandades, no marchas): en `portal.json`, La Cena (Sevilla) tiene como titular «Señor de la Humillación» y le falta la Virgen de la Encarnación (titular de gloria); según el revisor, el titular es el Santísimo Cristo de la Humildad y Paciencia. Comprobar con la web oficial antes de cambiarlo.
 
+## Orden del 27-oct (`EQUIPO/ORDEN-marchas-27-oct.md`): punto exacto (en pausa: el PC iba lento)
+Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que faltan; (3) repertorio de la banda del Paso y Esperanza desde las partituras; (4) Crucifixión de Málaga (falta la captura de Pablo); (5) formación y capital en todas, contando antes y después.
+
+**Hecho del paso 1 (solo estudio, sin importar nada):**
+- `robots.txt`: permite todo salvo `/cgi-bin/`. No publican condiciones de uso ni aviso legal (en `info.php` solo hay contacto: info@cofradiasyhermandades.es, Palencia, +34 979 700 141). Aun así, por el derecho sui generis de las bases de datos: solo cruzar y completar nuestras marchas y las de las 8 capitales, citando cada ficha; para más, borrador de correo a Pablo (pendiente de redactar).
+- `marchas.php`: formulario POST (sesión con cookie; tras el POST redirige y hay que seguir la redirección). Campos: `aplicar=1`, `comunidad` (Andalucía = 1), `provincia` (Almería 5, Cádiz 12, Córdoba 17, Granada 20, Huelva 23, Jaén 26, Málaga 33, Sevilla 43), `localidad` (sus códigos salen al elegir la provincia: **pendiente** sacar el de cada capital), `compositor`, `titulo`, `desde`, `hasta` y casillas de formación `bm`, `am`, `bct`, `bdt` (dulzainas), `cm` (capilla), `sc` (sin clasificar). Paginación: botón `pagina=N`, 30 por página. Andalucía: 11.130 marchas; total de la web, unas 16.000.
+- Cada fila del listado da: formación (icono BM/AM/BCT/BDT/CM), título, compositor, localidad y año, y enlace a `fichamarcha.php?mm=<id>`. La ficha trae además «Marcha dedicada a: la imagen <titular> de <localidad>» y el nombre oficial de la hermandad: sirve para la capital y la dedicatoria.
+
+**Siguiente al reactivar:** sacar el código de localidad de las 8 capitales (una petición por provincia, 3 s entre peticiones); leer el listado de cada capital (unas 30 marchas por página, ritmo lento) a `auditoria/` (local, no se sube); cruzar con `tools/sources/marchas.json` por título y compositor para completar formación y capital; abrir solo las fichas de las que casen con hermandades del portal. Después, los pasos 2 a 5.
+
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
 - 2026-10-26: bloque 2: 142 revisiones a mano con fuente (sin verificar 181 → 69), compositor más estricto, duplicados unidos, BNE como fuente (250 fichas), M5-M16 cerrados.
