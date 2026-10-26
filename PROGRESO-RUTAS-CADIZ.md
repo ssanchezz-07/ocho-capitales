@@ -4,14 +4,9 @@
 
 ## Estado (2026-10-26)
 - **Fase 1 (datos): hecha.** Las 33 salidas procesionales de Cádiz de 2026 tienen lista oficial de calles completa, literal y en orden, separada en ida (hasta la Catedral) y regreso, con horas de paso y sede de salida y entrada con fuente.
-- **Fase 2 (trazado): trazada y evaluada, SIN publicar.** Rama rebasada sobre `origin/main` (herramientas de Málaga, `29c1a57`). Las 32 con ficha en el portal están trazadas con el método nuevo. Evaluador: **30 «nuevo»** (empatan o mejoran en todo a lo publicado) y **2 «revisar»** (Servitas y Obediencia, ver abajo). Capturas revisadas a ojo: bien.
-- **Parada por presupuesto** (límite de 5 horas al 84 %, tope 85 %), el 26-oct a las 10:35.
-- **Punto exacto para seguir** (desde `tools/itinerarios/rutas/`, con GraphHopper en marcha):
-  1. Copiar la caché si falta: `cache/osm-cadiz.json` de la carpeta original (`osm-cadiz-puertas.json` ya está en la caché del worktree).
-  2. `node lista-cadiz.mjs` → `node emparejar.mjs cadiz` → `node evaluar.mjs cadiz` (todas a la vez: evaluar con ids sueltos también vale, mezcla).
-  3. `node publicar.mjs cadiz` (las 30 «nuevo») y `node publicar.mjs cadiz servitas merced-obediencia --forzar`.
-  4. `node site/build.mjs` → Playwright a 390 y 1440 px en `/en-la-calle/cadiz/` (comprobar que salen la Sanidad y el Miércoles Santo).
-  5. `git fetch` → `git rebase origin/main` → `git push origin HEAD:main` y avisar a Pablo del hash.
+- **Fase 2 (trazado): hecha y publicada.** Las 32 con ficha en el portal, trazadas con el método nuevo y publicadas en `site/data/recorridos/cadiz.json`. Evaluador: **32 «nuevo»** (empatan o mejoran en todo a lo publicado). Capturas revisadas a ojo. `node site/build.mjs` sin errores; `probar-plano.py cadiz` con Playwright a 390 y 1440 px: **8/8** (32 recorridos, 10 jornadas, sin desbordamiento ni errores de consola). Entra la **Sanidad**, que antes no estaba.
+- **Queda:** la Humillación (sin ficha en el portal) y la revisión de Pablo en el editor (lista de abajo).
+- **Regenerar** (desde `tools/itinerarios/rutas/`, con GraphHopper en marcha y `cache/osm-cadiz.json` copiado de la carpeta original): `node lista-cadiz.mjs` → `node emparejar.mjs cadiz` → `node evaluar.mjs cadiz` → `node publicar.mjs cadiz` → `node site/build.mjs` → `python -I probar-plano.py cadiz`.
 
 ### Cómo se traza Cádiz (lo propio de la capital)
 - `rutas/lista-cadiz.mjs` genera `rutas/listas/cadiz.json` desde `listas-cadiz-2026.json`. Horas: fila del primer paso (salida, Nueva, Catedral, Candelaria, Palillero, entrada).
@@ -58,7 +53,7 @@ Ninguna hermandad se queda sin lista completa. Estas tienen algo que conviene mi
 | **Ecce Mater Tua** | No hace estación de penitencia: todo el recorrido va como «ida». Tabla de horas con solo salida, Palillero y entrada. |
 | **La Resurrección** | La tabla de horas del programa dice **2025**, no 2026. Se usa con ese aviso. |
 | **Despojado** | Sale y entra por el interior del Colegio Salesianos San Ignacio (Avda. María Auxiliadora 7). |
-| **Servitas y Obediencia** (vísperas) | Su itinerario pone «Plaza de la Catedral, Arquitecto Acero, (Estación)»: parece que entran por Arquitecto Acero y salen por la principal, como en 2025. El trazado solo pisa la esquina de Arquitecto Acero (por eso el evaluador dice «revisar»); en todo lo demás mejora mucho lo publicado (Servitas salía a 326 m de San Lorenzo). |
+| **Servitas y Obediencia** (vísperas) | Su itinerario pone «Plaza de la Catedral, Arquitecto Acero, (Estación)»: lo trazo entrando por Arquitecto Acero y saliendo por la puerta principal, como en 2025 (opción «catedral» de su lista). Es una lectura del orden de calles: confírmalo. Antes Servitas salía a 326 m de San Lorenzo. |
 | **Todas (Carrera Oficial)** | Pequeño gancho en la **Plaza de San Juan de Dios** entre Nueva y Pelota: OSM no une bien esas calles con la plaza (hueco de 96 m). Mirar en el editor si merece un punto de paso. |
 | **Palma y Huerto** | «Virgen de las Penas» y «Plaza Pinto» no están en OSM con ese nombre: no se trazan (no se inventa). |
 

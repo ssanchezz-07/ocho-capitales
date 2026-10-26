@@ -16,8 +16,10 @@ const fuera = [];
 for (const [id, h] of Object.entries(D.hermandades)) {
   if (!h.ficha_portal) { fuera.push(id); continue; }
   const calles = [h.salida.nombre], idx = { salida: 0 };
-  // por dentro de la Catedral (puerta principal → Arquitecto Acero) solo si el itinerario sigue por Arquitecto Acero (ciudades.mjs)
-  const porDentro = h.regreso[0]?.calle === 'Arquitecto Acero';
+  // Por dentro de la Catedral: puerta principal → Arquitecto Acero si el itinerario sigue por Arquitecto Acero (ciudades.mjs);
+  // al revés si llega por Arquitecto Acero y sigue por la Plaza de la Catedral (las vísperas, como en 2025). Si no, solo marca.
+  const alReves = h.ida.at(-2)?.calle === 'Arquitecto Acero' && /catedral/i.test(h.regreso[0]?.calle || '');
+  const porDentro = h.regreso[0]?.calle === 'Arquitecto Acero' || alReves;
   for (const e of [...h.ida, ...h.regreso]) {
     if (e.fin) continue;
     if (e.catedral) { idx.catedral_entrada = calles.length; calles.push(porDentro ? 'Estación de Penitencia en la S.I.C.' : 'Estación de penitencia en la Catedral'); idx.catedral_salida = calles.length; continue; }
@@ -43,6 +45,7 @@ for (const [id, h] of Object.entries(D.hermandades)) {
     fuente: `${h.fuente.url} (itinerario, pág. ${h.fuente.pagina_itinerario}; ficha, pág. ${h.fuente.pagina_ficha})`,
     calles, horas, ...(hitos.length ? { hitos } : {}),
     ...(idx.catedral_salida != null ? { regreso_desde: idx.catedral_salida } : {}),
+    ...(alReves ? { catedral: { entra: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, sale: 7063298453, nombre: 'de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)' } } : {}),
     rejilla: false, notas,
   };
 }

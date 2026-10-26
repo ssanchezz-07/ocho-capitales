@@ -38,38 +38,30 @@
    "pct_en_calles_lista": 53
   },
   "nuevo": {
-   "largo_m": 1928,
+   "largo_m": 2125,
    "comprobables": 18,
    "sin_dato": [],
-   "recorridas": 17,
-   "en_orden": 17,
-   "no_recorridas": [
-    "Arquitecto Acero (12 m)"
-   ],
+   "recorridas": 18,
+   "en_orden": 18,
+   "no_recorridas": [],
    "salida_m": 3,
    "entrada_m": 3,
    "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
    "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
    "rectas_150": [],
    "tramo_max_m": 153,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     36.529422,
-     -6.295622
-    ]
-   ],
-   "pct_en_calles_lista": 85
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 82
   },
   "decision": {
-   "queda": "revisar",
+   "queda": "nuevo",
    "motivo": [
-    "peor: deja de recorrer: Arquitecto Acero",
-    "mejor: calles recorridas 16→17",
-    "mejor: en orden 16→17",
-    "mejor: salida 326→3 m",
-    "mejor: entrada 648→3 m",
-    "mejor: retrocesos 4→1"
+    "calles recorridas 16→18",
+    "en orden 16→18",
+    "salida 326→3 m",
+    "entrada 648→3 m",
+    "retrocesos 4→0"
    ]
   }
  },
@@ -105,39 +97,31 @@
    "pct_en_calles_lista": 71
   },
   "nuevo": {
-   "largo_m": 1943,
+   "largo_m": 2140,
    "comprobables": 24,
    "sin_dato": [],
-   "recorridas": 23,
-   "en_orden": 19,
-   "no_recorridas": [
-    "Arquitecto Acero (12 m)"
-   ],
+   "recorridas": 24,
+   "en_orden": 20,
+   "no_recorridas": [],
    "salida_m": 7,
    "entrada_m": 7,
    "sede_salida": "templo en OSM: Iglesia de La Merced",
    "sede_entrada": "templo en OSM: Iglesia de La Merced",
    "rectas_150": [],
    "tramo_max_m": 158,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.529422,
-     -6.295622
-    ],
     [
      36.528569,
      -6.290855
     ]
    ],
-   "pct_en_calles_lista": 88
+   "pct_en_calles_lista": 85
   },
   "decision": {
-   "queda": "revisar",
+   "queda": "nuevo",
    "motivo": [
-    "peor: calles recorridas 24→23",
-    "peor: deja de recorrer: Arquitecto Acero",
-    "mejor: retrocesos 3→2"
+    "retrocesos 3→1"
    ]
   }
  },

@@ -126,6 +126,16 @@
     "forzado": false
    },
    {
+    "i": 8,
+    "lugar": "Estación de Penitencia en la S.I.C.",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 20,
+    "forzado": false
+   },
+   {
     "i": 9,
     "lugar": "Plaza de la Catedral",
     "tipo": "calle",
@@ -136,7 +146,7 @@
      1423954453
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -278,9 +288,10 @@
    "39 m entre «Compañía» y «Plaza de la Catedral»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 216,
-  "largo_m": 1928,
-  "ms_total": 248
+  "por_la_catedral": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral) (nodos fachada de Arquitecto Acero, punto aproximado y 7063298453): sin calle, línea por dentro",
+  "ms_graphhopper": 320,
+  "largo_m": 2125,
+  "ms_total": 426
  },
  "merced-obediencia-cadiz": {
   "id": "merced-obediencia-cadiz",
@@ -410,6 +421,16 @@
     "forzado": false
    },
    {
+    "i": 9,
+    "lugar": "Estación de Penitencia en la S.I.C.",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 20,
+    "forzado": false
+   },
+   {
     "i": 10,
     "lugar": "Plaza de la Catedral",
     "tipo": "calle",
@@ -420,7 +441,7 @@
      1423954453
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -612,12 +633,13 @@
     "forzado": false
    }
   ],
+  "por_la_catedral": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral) (nodos fachada de Arquitecto Acero, punto aproximado y 7063298453): sin calle, línea por dentro",
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 68,
-  "largo_m": 1943,
-  "ms_total": 91
+  "ms_graphhopper": 135,
+  "largo_m": 2140,
+  "ms_total": 191
  },
  "la-borriquita-cadiz": {
   "id": "la-borriquita-cadiz",
@@ -1192,9 +1214,9 @@
    "37 m entre «Acacias» y «Brunete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 135,
+  "ms_graphhopper": 296,
   "largo_m": 8048,
-  "ms_total": 181
+  "ms_total": 458
  },
  "las-penas-cadiz": {
   "id": "las-penas-cadiz",
@@ -1571,9 +1593,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 57,
+  "ms_graphhopper": 142,
   "largo_m": 2929,
-  "ms_total": 73
+  "ms_total": 187
  },
  "sagrada-cena-cadiz": {
   "id": "sagrada-cena-cadiz",
@@ -1977,9 +1999,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 70,
+  "ms_graphhopper": 137,
   "largo_m": 2942,
-  "ms_total": 94
+  "ms_total": 191
  },
  "el-despojado-cadiz": {
   "id": "el-despojado-cadiz",
@@ -1992,7 +2014,8 @@
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 80 m entre «Plaza las Flores» y «Compañía»: en OSM no se tocan",
-   "hueco de 48 m entre «Plaza de la Catedral» y «Pelota»: en OSM no se tocan"
+   "hueco de 48 m entre «Plaza de la Catedral» y «Pelota»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)» a 46 m, «Colegio Salesianos San Ignacio» a 110 m, «Avenida María Auxiliadora» a 110 m, «Interior del Colegio Salesianos San Ignacio» a 46 m, «Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)» a 46 m"
   ],
   "correcciones": null,
   "salida": {
@@ -2640,9 +2663,9 @@
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 178,
+  "ms_graphhopper": 346,
   "largo_m": 8316,
-  "ms_total": 247
+  "ms_total": 442
  },
  "humildad-y-paciencia-cadiz": {
   "id": "humildad-y-paciencia-cadiz",
@@ -2953,9 +2976,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 50,
+  "ms_graphhopper": 61,
   "largo_m": 2315,
-  "ms_total": 68
+  "ms_total": 100
  },
  "nazareno-del-amor-cadiz": {
   "id": "nazareno-del-amor-cadiz",
@@ -2963,7 +2986,8 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 12)",
   "avisos": [
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
   "correcciones": null,
   "salida": {
@@ -3282,9 +3306,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 71,
+  "ms_graphhopper": 79,
   "largo_m": 2360,
-  "ms_total": 92
+  "ms_total": 117
  },
  "la-palma-cadiz": {
   "id": "la-palma-cadiz",
@@ -3801,9 +3825,9 @@
    "34 m entre «Columela» y «Plaza Topete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 95,
+  "ms_graphhopper": 186,
   "largo_m": 3489,
-  "ms_total": 122
+  "ms_total": 243
  },
  "el-prendimiento-cadiz": {
   "id": "el-prendimiento-cadiz",
@@ -4160,9 +4184,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 76,
+  "ms_graphhopper": 79,
   "largo_m": 3367,
-  "ms_total": 93
+  "ms_total": 112
  },
  "vera-cruz-cadiz": {
   "id": "vera-cruz-cadiz",
@@ -4170,7 +4194,8 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 14)",
   "avisos": [
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
   "correcciones": null,
   "salida": {
@@ -4522,9 +4547,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 56,
+  "ms_graphhopper": 144,
   "largo_m": 2320,
-  "ms_total": 91
+  "ms_total": 194
  },
  "la-sanidad-cadiz": {
   "id": "la-sanidad-cadiz",
@@ -4835,9 +4860,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 37,
+  "ms_graphhopper": 111,
   "largo_m": 2600,
-  "ms_total": 52
+  "ms_total": 150
  },
  "la-piedad-cadiz": {
   "id": "la-piedad-cadiz",
@@ -5166,9 +5191,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 43,
+  "ms_graphhopper": 181,
   "largo_m": 2460,
-  "ms_total": 59
+  "ms_total": 240
  },
  "jesus-caido-el-senor-del-parque-cadiz": {
   "id": "jesus-caido-el-senor-del-parque-cadiz",
@@ -5176,7 +5201,8 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 16)",
   "avisos": [
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
   "correcciones": null,
   "salida": {
@@ -5535,9 +5561,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 5561,
+  "ms_graphhopper": 163,
   "largo_m": 2878,
-  "ms_total": 5688
+  "ms_total": 247
  },
  "la-columna-cadiz": {
   "id": "la-columna-cadiz",
@@ -5918,9 +5944,9 @@
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 37,
+  "ms_graphhopper": 101,
   "largo_m": 2435,
-  "ms_total": 54
+  "ms_total": 168
  },
  "ecce-homo-cadiz": {
   "id": "ecce-homo-cadiz",
@@ -6262,9 +6288,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 72,
+  "ms_graphhopper": 74,
   "largo_m": 2117,
-  "ms_total": 89
+  "ms_total": 137
  },
  "la-sentencia-cadiz": {
   "id": "la-sentencia-cadiz",
@@ -6705,9 +6731,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 75,
+  "ms_graphhopper": 131,
   "largo_m": 2860,
-  "ms_total": 107
+  "ms_total": 216
  },
  "las-cigarreras-cadiz": {
   "id": "las-cigarreras-cadiz",
@@ -7124,9 +7150,9 @@
   "enlaces": [
    "39 m entre «Plaza la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 77,
+  "ms_graphhopper": 87,
   "largo_m": 3214,
-  "ms_total": 100
+  "ms_total": 169
  },
  "las-aguas-cadiz": {
   "id": "las-aguas-cadiz",
@@ -7474,9 +7500,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
-  "ms_graphhopper": 85,
+  "ms_graphhopper": 173,
   "largo_m": 2699,
-  "ms_total": 108
+  "ms_total": 239
  },
  "el-caminito-cadiz": {
   "id": "el-caminito-cadiz",
@@ -7886,9 +7912,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 13878,
+  "ms_graphhopper": 99,
   "largo_m": 2860,
-  "ms_total": 13915
+  "ms_total": 200
  },
  "los-afligidos-cadiz": {
   "id": "los-afligidos-cadiz",
@@ -8278,9 +8304,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "34 m entre «Columela» y «Plaza Topete»"
   ],
-  "ms_graphhopper": 32,
+  "ms_graphhopper": 79,
   "largo_m": 2608,
-  "ms_total": 47
+  "ms_total": 146
  },
  "oracion-en-el-huerto-cadiz": {
   "id": "oracion-en-el-huerto-cadiz",
@@ -8871,9 +8897,9 @@
    "18 m entre «Pastora» y «Hermano Ignacio»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 74,
+  "ms_graphhopper": 168,
   "largo_m": 4024,
-  "ms_total": 101
+  "ms_total": 256
  },
  "nazareno-de-santa-maria-cadiz": {
   "id": "nazareno-de-santa-maria-cadiz",
@@ -9379,9 +9405,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 56,
+  "ms_graphhopper": 166,
   "largo_m": 3706,
-  "ms_total": 80
+  "ms_total": 303
  },
  "medinaceli-cadiz": {
   "id": "medinaceli-cadiz",
@@ -9389,7 +9415,8 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 24)",
   "avisos": [
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
   "correcciones": null,
   "salida": {
@@ -9757,9 +9784,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "8 m entre «Sagasta» y «Plaza San Francisco»"
   ],
-  "ms_graphhopper": 89,
+  "ms_graphhopper": 166,
   "largo_m": 2762,
-  "ms_total": 107
+  "ms_total": 233
  },
  "el-perdon-cadiz": {
   "id": "el-perdon-cadiz",
@@ -10243,9 +10270,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 50,
+  "ms_graphhopper": 103,
   "largo_m": 3004,
-  "ms_total": 75
+  "ms_total": 223
  },
  "siete-palabras-cadiz": {
   "id": "siete-palabras-cadiz",
@@ -10671,9 +10698,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 37,
+  "ms_graphhopper": 91,
   "largo_m": 2735,
-  "ms_total": 64
+  "ms_total": 178
  },
  "la-expiracion-cadiz": {
   "id": "la-expiracion-cadiz",
@@ -11044,9 +11071,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 71,
+  "ms_graphhopper": 121,
   "largo_m": 3120,
-  "ms_total": 86
+  "ms_total": 180
  },
  "el-descendimiento-cadiz": {
   "id": "el-descendimiento-cadiz",
@@ -11428,9 +11455,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 45,
+  "ms_graphhopper": 122,
   "largo_m": 2623,
-  "ms_total": 62
+  "ms_total": 206
  },
  "la-buena-muerte-cadiz": {
   "id": "la-buena-muerte-cadiz",
@@ -11727,9 +11754,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 55,
+  "ms_graphhopper": 149,
   "largo_m": 1991,
-  "ms_total": 70
+  "ms_total": 235
  },
  "ecce-mater-tua-cadiz": {
   "id": "ecce-mater-tua-cadiz",
@@ -11998,9 +12025,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 34,
+  "ms_graphhopper": 101,
   "largo_m": 1774,
-  "ms_total": 53
+  "ms_total": 182
  },
  "santo-entierro-cadiz": {
   "id": "santo-entierro-cadiz",
@@ -12337,9 +12364,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 34,
+  "ms_graphhopper": 102,
   "largo_m": 2722,
-  "ms_total": 50
+  "ms_total": 199
  },
  "la-resurreccion-cadiz": {
   "id": "la-resurreccion-cadiz",
@@ -12599,8 +12626,8 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza San Antonio»"
   ],
-  "ms_graphhopper": 34,
+  "ms_graphhopper": 77,
   "largo_m": 1726,
-  "ms_total": 45
+  "ms_total": 135
  }
 }
