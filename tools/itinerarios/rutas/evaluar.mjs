@@ -15,13 +15,13 @@ const SEDE_MAX = 60;
 
 export function evaluador(c) {
   const C = ciudad(c);
-  const { LISTAS, ALIAS, NOM, VIAS, X, MARCA, CATEDRAL, viasCerca, sedeDe, anillo, PUERTA_CATEDRAL } = C;
+  const { LISTAS, ALIAS, NOM, VIAS, X, MARCA, CATEDRAL, viasCerca, sedeDe, anillo, puertaCatedral } = C;
   const largoOSM = new Map(); for (const v of VIAS) for (const [cl] of v.nombres) largoOSM.set(cl, (largoOSM.get(cl) || 0) + v.pts.reduce((a, p, j, P) => a + (j ? d2(p, P[j - 1]) : 0), 0));
   const claveTok = (t) => { const al = ALIAS[t]; return clave(al && !al.startsWith('geo:') && !al.startsWith('osm:') ? al : t); };
-  const cat = PUERTA_CATEDRAL.entra && PUERTA_CATEDRAL.sale && [X(PUERTA_CATEDRAL.entra.lat, PUERTA_CATEDRAL.entra.lon), X(PUERTA_CATEDRAL.sale.lat, PUERTA_CATEDRAL.sale.lon)];
+  const catDe = (L) => { const P = puertaCatedral(L); return P.entra && P.sale && [X(P.entra.lat, P.entra.lon), X(P.sale.lat, P.sale.lon)]; };
 
   return function evaluar(id, traza) {
-    const L = LISTAS[id], calles = L.calles;
+    const L = LISTAS[id], calles = L.calles, cat = catDe(L);
     const geo = [...traza.ida, ...traza.regreso.slice(1)].map((p) => X(...p)).filter((p, i, A) => !i || d2(p, A[i - 1]) > 0.5);
     // muestreo cada 4 m: qué calles con nombre hay debajo
     const muestras = []; let acc = 0;

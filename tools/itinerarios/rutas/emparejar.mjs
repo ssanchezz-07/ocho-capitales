@@ -26,19 +26,19 @@ async function ghRuta(puntos) {
 
 export function motor(c) {
   const C = ciudad(c);
-  const { X, LL, ALIAS, NOM, NODOS, VIA_POR_ID, MARCA, REGRESO, CATEDRAL, candidatas, agrupar, caminoDentro, sedeDe, puertaHacia, PUERTA_CATEDRAL } = C;
+  const { X, LL, ALIAS, NOM, NODOS, VIA_POR_ID, MARCA, REGRESO, CATEDRAL, candidatas, agrupar, caminoDentro, sedeDe, puertaHacia, puertaCatedral } = C;
   const largoGeo = (g) => g.reduce((s, p, i) => s + (i ? d2(X(...p), X(...g[i - 1])) : 0), 0);
 
   // ---- 1) fichas: qué es cada elemento de la lista ----
   function fichas(L, corr, informe) {
-    const calles = L.calles, T = [];
+    const calles = L.calles, T = [], PUERTA_CATEDRAL = puertaCatedral(L);
     const iVuelta = L.regreso_desde ?? (REGRESO ? calles.findIndex((t) => REGRESO.test(sn(t))) : -1);
     for (let i = 0; i < calles.length; i++) {
       const t = calles[i], s = sn(t), c = corr.calles?.[i];
       const base = { i, lugar: t, tramo: iVuelta >= 0 && i >= iVuelta ? 'regreso' : 'ida' };
       if (c?.omitir) { informe.avisos.push(`«${t}» omitida por corrección (${c.fuente || 'sin fuente'})`); T.push({ ...base, tipo: 'omitida' }); continue; }
       if ((i === 0 || i === calles.length - 1) && (TEMPLO.test(s) || s.startsWith('casa hermandad'))) { T.push({ ...base, tipo: i === 0 ? 'salida' : 'entrada' }); continue; }
-      if (CATEDRAL.test(s)) { const prev = T.at(-1); if (prev?.tipo === 'catedral') { prev.hasta = i; continue; } if (PUERTA_CATEDRAL.entra && PUERTA_CATEDRAL.sale) { T.push({ ...base, tipo: 'catedral', hasta: i, opciones: [{ nombre: 'Catedral (por dentro)', entra: X(PUERTA_CATEDRAL.entra.lat, PUERTA_CATEDRAL.entra.lon), sale: X(PUERTA_CATEDRAL.sale.lat, PUERTA_CATEDRAL.sale.lon), coste: 0 }] }); continue; } }
+      if (CATEDRAL.test(s)) { const prev = T.at(-1); if (prev?.tipo === 'catedral') { prev.hasta = i; continue; } if (PUERTA_CATEDRAL.entra && PUERTA_CATEDRAL.sale) { T.push({ ...base, tipo: 'catedral', hasta: i, opciones: [{ nombre: 'Catedral (por dentro)', entra: X(PUERTA_CATEDRAL.entra.lat, PUERTA_CATEDRAL.entra.lon), sale: X(PUERTA_CATEDRAL.sale.lat, PUERTA_CATEDRAL.sale.lon), coste: 0, pc: PUERTA_CATEDRAL }] }); continue; } }
       if (L.hitos.has(i) || MARCA.test(s)) { T.push({ ...base, tipo: 'hito' }); continue; }
       if (c?.punto) { T.push({ ...base, tipo: 'punto', opciones: [{ nombre: t + ' (corrección)', pts: [X(...c.punto)], nodos: [null], coste: 0 }] }); continue; }
       let ops = candidatas(t);
@@ -172,7 +172,7 @@ export function motor(c) {
       if (i > 0 && ch.estados[i - 1].gap > 40) informe.avisos.push(`hueco de ${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»: en OSM no se tocan`);
       // OSM no une dos calles seguidas de la lista que están a 3-40 m: enlace recto (anotado) en vez de un rodeo con media vuelta
       if (i > 0 && ch.estados[i - 1].gap > 3 && ch.estados[i - 1].gap <= 40 && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
-      if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${PUERTA_CATEDRAL.nombre} (nodos ${PUERTA_CATEDRAL.entra.id} y ${PUERTA_CATEDRAL.sale.id}): sin calle, línea por dentro`; continue; }
+      if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${o.pc.nombre} (nodos ${o.pc.entra.id} y ${o.pc.sale.id}): sin calle, línea por dentro`; continue; }
       // desde la sede se va directo al primer cruce (el punto de la calle más cercano a la puerta puede quedar «detrás» y obligar a dar la vuelta)
       if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
       if (f.tipo === 'calle' && ent[1] != null && sal[1] != null) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela

@@ -58,6 +58,8 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 - `horas`: índice de `calles` → hora oficial. Las demás se reparten por la distancia andada en el plano.
 - `hitos`: índices que son marcas y no calles (tribuna, carrera oficial…). También vale `marcas` en `ciudades.mjs`.
 - `regreso_desde`: índice donde empieza el regreso (se dibuja discontinuo). Si falta, la expresión `regreso` de `ciudades.mjs`.
+- `catedral` (opcional): `{ "entra": nodo OSM, "sale": nodo OSM, "nombre": "…" }` si esa hermandad entra o sale de la
+  Catedral por otra puerta que la de `ciudades.mjs` (en Córdoba, unas salen por Santa Catalina y otras por el Perdón).
 - `rejilla: true` si la fuente solo da un punto cada media hora: los tramos que GraphHopper rellena entre calles que no se
   tocan se publican con `"como": "estimado"` y `"estimado": true`; nunca como oficiales.
 - Nombres que OSM escribe distinto: `../alias-calles-<capital>.json` (`{ "Nombre del itinerario": "Nombre en OSM",

@@ -178,6 +178,8 @@ export function ciudad(c) {
     return { punto: [e.lat, e.lon], como: `puerta OSM ${e.id} (${e.tags.entrance || e.tags.door}) del edificio, la más cercana a la calle por la que sale/entra`, puerta: e.id };
   }
   const PUERTA_CATEDRAL = cfg.catedral ? { entra: PUERTAS.find((e) => e.id === cfg.catedral.entra), sale: PUERTAS.find((e) => e.id === cfg.catedral.sale), nombre: cfg.catedral.nombre } : { entra: null, sale: null };
+  // una hermandad puede entrar o salir por otra puerta que la de la capital (lista: "catedral": { "entra": nodo, "sale": nodo, "nombre": "…" })
+  const puertaCatedral = (L) => { const o = L?.catedral; if (!o) return PUERTA_CATEDRAL; const pu = (n, d) => (n ? PUERTAS.find((e) => e.id === n) || null : d); return { entra: pu(o.entra, PUERTA_CATEDRAL.entra), sale: pu(o.sale, PUERTA_CATEDRAL.sale), nombre: o.nombre || PUERTA_CATEDRAL.nombre }; };
 
   // Trazado publicado en site/data/recorridos/<c>.json, como {ida, regreso} en [lat, lon] (para compararlo con el nuevo)
   function publicado(id) {
@@ -189,7 +191,7 @@ export function ciudad(c) {
     return { ida: geo.slice(0, k + 1), regreso: geo.slice(k), puntos: pts };
   }
 
-  const C = { c, cfg, nombre: cfg.nombre, O, kx, ky, X, LL, ALIAS, CASAS, NOM, LISTAS, MARCA, REGRESO, CATEDRAL, VIAS, NODOS, VIA_POR_ID, CLAVES, porClave, viasCerca, clavesParecidas, candidatas, agrupar, caminoDentro, LUG, PUERTAS, anillo, sedeDe, puertaHacia, PUERTA_CATEDRAL, publicado, leerCorrecciones: () => leerCorrecciones(c), fCorr: fCorrecciones(c) };
+  const C = { c, cfg, nombre: cfg.nombre, O, kx, ky, X, LL, ALIAS, CASAS, NOM, LISTAS, MARCA, REGRESO, CATEDRAL, VIAS, NODOS, VIA_POR_ID, CLAVES, porClave, viasCerca, clavesParecidas, candidatas, agrupar, caminoDentro, LUG, PUERTAS, anillo, sedeDe, puertaHacia, PUERTA_CATEDRAL, puertaCatedral, publicado, leerCorrecciones: () => leerCorrecciones(c), fCorr: fCorrecciones(c) };
   cache.set(c, C);
   return C;
 }
