@@ -18,7 +18,7 @@ export const CIUDADES = {
   cordoba: {
     nombre: 'Córdoba',
     // «ENTRADA C.O.» y «SALIDA C.O.» de la rejilla oficial: marcas de la carrera oficial, no calles
-    marcas: /^(entrada c o|salida c o)\b/,
+    marcas: /^(entrada c o|salida c o|estacion en)\b/, // y «Estación en la Parroquia de Nuestra Señora de Fátima» (La O): parada, no calle
     regreso: /^salida c o\b/,
     // Torrijos → puerta del Perdón (Patio de los Naranjos) → Catedral por dentro → puerta de Santa Catalina (Magistral González
     // Francés). Las que salen otra vez por el Perdón lo llevan en su lista («catedral»).

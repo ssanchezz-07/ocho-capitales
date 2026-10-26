@@ -4,20 +4,17 @@
  "nota": "Cada lista une dos fuentes de 2026: el recorrido calle a calle de la guía de El Debate (manda en el orden y en los nombres) y la rejilla oficial de la Agrupación (cruz de guía y final del cortejo, un punto cada 10 minutos: aporta las horas, las marcas de la carrera oficial y las calles que la prensa no nombra). «origen» dice de dónde sale cada elemento; «diferencias», qué calles da solo una de las dos.",
  "avisos": [
   "la-o-cordoba: sin paso por la Catedral",
-  "la-o-cordoba: sin recorrido de prensa; solo la rejilla oficial",
   "lagrimas-cordoba: sin paso por la Catedral",
-  "lagrimas-cordoba: sin recorrido de prensa; solo la rejilla oficial",
   "dolores-de-alcolea-cordoba: sin paso por la Catedral",
-  "dolores-de-alcolea-cordoba: sin recorrido de prensa; solo la rejilla oficial",
-  "el-resucitado-cordoba: la rejilla no trae columna de final del cortejo; solo la cruz de guía",
-  "el-resucitado-cordoba: sin recorrido de prensa; solo la rejilla oficial"
+  "el-resucitado-cordoba: la rejilla no trae columna de final del cortejo; solo la cruz de guía"
  ],
  "hermandades": {
   "la-o-cordoba": {
    "dia": "SÁBADO DE PASIÓN",
    "cabecera": "LA O",
    "fuentes": [
-    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
+    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/",
+    "Sentir Córdoba, guía de 2026: https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html"
    ],
    "horario_prensa": null,
    "salida_perdon": false,
@@ -28,46 +25,36 @@
    },
    "calles": [
     "SALIDA",
-    "PZA. MAHATMA GANDHI",
-    "AV. BLAS INFANTE",
-    "AV. VIRGEN DE FÁTIMA",
-    "C/ NTRA. SEÑORA DE LA MERCED",
-    "C/ HISTORIADOR JAÉN MORENTE",
-    "C/ ARCOS DE LA FRONTERA",
-    "C/ESCRITOR GÓMEZ DE RIVERA",
-    "AV. ESCRITOR HOYOS DE NORIEGA",
-    "AV. VIRGEN DE FÁTIMA",
-    "C/ARCOS DE LA FRONTERA",
-    "AV. CARLOS III",
-    "C/ VEREDA DE LA ALCAIDÍA",
-    "C/ ESCRITOR JOSÉ DE LOS HEROS",
-    "C/ HISTORIADOR JAÉN MORENTE",
-    "C/ARCOS DE LA FRONTERA",
-    "AV. VIRGEN DE FÁTIMA",
-    "PZA. MAHATMA GANDHI",
-    "ENTRADA"
+    "Salida Parroquia Nuestra Señora de la Aurora",
+    "Plaza Mahatma Gandhi",
+    "Avenida Blas Infante",
+    "Avenida Virgen de Fátima",
+    "Nuestra Señora de la Merced",
+    "Historiador Jaén Morente",
+    "Arcos de la Frontera",
+    "Doctor Nevado del Rey",
+    "Escritor Gómez de Rivera",
+    "Plaza Amanecer de Fátima",
+    "Escritor Hoyos Noriega",
+    "Avenida Virgen de Fátima",
+    "Arcos de la Frontera",
+    "Estación en la Parroquia de Nuestra Señora de Fátima",
+    "Avenida Carlos III",
+    "Vereda de la Alcaidía",
+    "Escritor José de Heros",
+    "Historiador Jaén Morente",
+    "Arcos de la Frontera",
+    "Avenida Virgen de Fátima",
+    "Plaza Mahatma Gandhi",
+    "Entrada"
    ],
    "diferencias": {
-    "solo_prensa": [],
-    "solo_rejilla": [
-     "PZA. MAHATMA GANDHI",
-     "AV. BLAS INFANTE",
-     "AV. VIRGEN DE FÁTIMA",
-     "C/ NTRA. SEÑORA DE LA MERCED",
-     "C/ HISTORIADOR JAÉN MORENTE",
-     "C/ ARCOS DE LA FRONTERA",
-     "C/ESCRITOR GÓMEZ DE RIVERA",
-     "AV. ESCRITOR HOYOS DE NORIEGA",
-     "AV. VIRGEN DE FÁTIMA",
-     "C/ARCOS DE LA FRONTERA",
-     "AV. CARLOS III",
-     "C/ VEREDA DE LA ALCAIDÍA",
-     "C/ ESCRITOR JOSÉ DE LOS HEROS",
-     "C/ HISTORIADOR JAÉN MORENTE",
-     "C/ARCOS DE LA FRONTERA",
-     "AV. VIRGEN DE FÁTIMA",
-     "PZA. MAHATMA GANDHI"
-    ]
+    "solo_prensa": [
+     "Doctor Nevado del Rey",
+     "Plaza Amanecer de Fátima",
+     "Estación en la Parroquia de Nuestra Señora de Fátima"
+    ],
+    "solo_rejilla": []
    },
    "elementos": [
     {
@@ -82,162 +69,186 @@
      "tramo": "ida"
     },
     {
-     "lugar": "PZA. MAHATMA GANDHI",
+     "lugar": "Salida Parroquia Nuestra Señora de la Aurora",
+     "tipo": "salida",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Plaza Mahatma Gandhi",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PZA. MAHATMA GANDHI",
      "cruz": "18:10",
      "final": "18:40",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. BLAS INFANTE",
+     "lugar": "Avenida Blas Infante",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. BLAS INFANTE",
      "cruz": "18:20",
      "final": "18:50",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. VIRGEN DE FÁTIMA",
+     "lugar": "Avenida Virgen de Fátima",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. VIRGEN DE FÁTIMA",
      "cruz": "18:40",
      "final": "19:00",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ NTRA. SEÑORA DE LA MERCED",
+     "lugar": "Nuestra Señora de la Merced",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ NTRA. SEÑORA DE LA MERCED",
      "cruz": "18:50",
      "final": "19:10",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ HISTORIADOR JAÉN MORENTE",
+     "lugar": "Historiador Jaén Morente",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ HISTORIADOR JAÉN MORENTE",
      "cruz": "19:10",
      "final": "19:30",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ ARCOS DE LA FRONTERA",
+     "lugar": "Arcos de la Frontera",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ ARCOS DE LA FRONTERA",
      "cruz": "19:20",
      "final": "19:40",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ESCRITOR GÓMEZ DE RIVERA",
+     "lugar": "Doctor Nevado del Rey",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Escritor Gómez de Rivera",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ESCRITOR GÓMEZ DE RIVERA",
      "cruz": "19:30",
      "final": "19:50",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. ESCRITOR HOYOS DE NORIEGA",
+     "lugar": "Plaza Amanecer de Fátima",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Escritor Hoyos Noriega",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. ESCRITOR HOYOS DE NORIEGA",
      "cruz": "19:40",
      "final": "20:00",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. VIRGEN DE FÁTIMA",
+     "lugar": "Avenida Virgen de Fátima",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. VIRGEN DE FÁTIMA",
      "cruz": null,
      "final": "20:40",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ARCOS DE LA FRONTERA",
+     "lugar": "Arcos de la Frontera",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ARCOS DE LA FRONTERA",
      "cruz": "20:10",
      "final": "20:50",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. CARLOS III",
+     "lugar": "Estación en la Parroquia de Nuestra Señora de Fátima",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Avenida Carlos III",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. CARLOS III",
      "cruz": "20:40",
      "final": "21:20",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ VEREDA DE LA ALCAIDÍA",
+     "lugar": "Vereda de la Alcaidía",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ VEREDA DE LA ALCAIDÍA",
      "cruz": "21:00",
      "final": "21:40",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ ESCRITOR JOSÉ DE LOS HEROS",
+     "lugar": "Escritor José de Heros",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ ESCRITOR JOSÉ DE LOS HEROS",
      "cruz": "21:10",
      "final": "21:50",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ HISTORIADOR JAÉN MORENTE",
+     "lugar": "Historiador Jaén Morente",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ HISTORIADOR JAÉN MORENTE",
      "cruz": "21:20",
      "final": "22:00",
      "tramo": "ida"
     },
     {
-     "lugar": "C/ARCOS DE LA FRONTERA",
+     "lugar": "Arcos de la Frontera",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "C/ARCOS DE LA FRONTERA",
      "cruz": "21:50",
      "final": "22:30",
      "tramo": "ida"
     },
     {
-     "lugar": "AV. VIRGEN DE FÁTIMA",
+     "lugar": "Avenida Virgen de Fátima",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AV. VIRGEN DE FÁTIMA",
      "cruz": "22:00",
      "final": "22:40",
      "tramo": "ida"
     },
     {
-     "lugar": "PZA. MAHATMA GANDHI",
+     "lugar": "Plaza Mahatma Gandhi",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PZA. MAHATMA GANDHI",
      "cruz": "22:30",
      "final": "23:10",
      "tramo": "ida"
     },
     {
-     "lugar": "ENTRADA",
+     "lugar": "Entrada",
      "tipo": "entrada",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ENTRADA",
      "cruz": "23:00",
      "final": "23:30",
@@ -251,7 +262,8 @@
    "dia": "SÁBADO DE PASIÓN",
    "cabecera": "LÁGRIMAS",
    "fuentes": [
-    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
+    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/",
+    "Sentir Córdoba, guía de 2026: https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html"
    ],
    "horario_prensa": null,
    "salida_perdon": false,
@@ -261,49 +273,35 @@
     "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/"
    },
    "calles": [
-    "SALIDA",
+    "Salida",
     "PLAZA MARINA ESPAÑOLA",
-    "AVENIDA DEL MEDITERRANEO",
-    "PINTORA MARIA BLANDCHARD",
-    "AVENIDA DEL MEDITERRANEO",
-    "PASAJE BATALLA DE LEPANTO",
-    "ISLA MALLORCA",
-    "ISLA FORMENTERA",
-    "ISLA DE HIERRO",
-    "ISLA DE MADEIRA",
-    "ISLA DE LANZAROTE",
-    "ISLA MALANTE",
-    "FUENTEVENTURA",
-    "ISLA GRACIOSA",
-    "AVENIDA DEL MEDITERRANEO",
-    "PLAZA MARINA ESPAÑOLA",
-    "ENTRADA"
+    "Avenida del Mediterráneo",
+    "Pintora María Blanchard",
+    "Avenida del Mediterráneo",
+    "Pasaje Batalla de Lepanto",
+    "Isla Mallorca",
+    "Isla Formentera",
+    "Isla del Hierro",
+    "Isla Madeira",
+    "Isla Lanzarote",
+    "Isla Malante",
+    "Avenida Isla Fuerteventura",
+    "Isla Graciosa",
+    "Avenida del Mediterráneo",
+    "Plaza de la Marina Española",
+    "Entrada"
    ],
    "diferencias": {
     "solo_prensa": [],
     "solo_rejilla": [
-     "PLAZA MARINA ESPAÑOLA",
-     "AVENIDA DEL MEDITERRANEO",
-     "PINTORA MARIA BLANDCHARD",
-     "AVENIDA DEL MEDITERRANEO",
-     "PASAJE BATALLA DE LEPANTO",
-     "ISLA MALLORCA",
-     "ISLA FORMENTERA",
-     "ISLA DE HIERRO",
-     "ISLA DE MADEIRA",
-     "ISLA DE LANZAROTE",
-     "ISLA MALANTE",
-     "FUENTEVENTURA",
-     "ISLA GRACIOSA",
-     "AVENIDA DEL MEDITERRANEO",
      "PLAZA MARINA ESPAÑOLA"
     ]
    },
    "elementos": [
     {
-     "lugar": "SALIDA",
+     "lugar": "Salida",
      "tipo": "salida",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "SALIDA",
      "cruz": "19:00",
      "final": "19:10",
@@ -321,135 +319,135 @@
      "tramo": "ida"
     },
     {
-     "lugar": "AVENIDA DEL MEDITERRANEO",
+     "lugar": "Avenida del Mediterráneo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AVENIDA DEL MEDITERRANEO",
      "cruz": "19:20",
      "final": "19:30",
      "tramo": "ida"
     },
     {
-     "lugar": "PINTORA MARIA BLANDCHARD",
+     "lugar": "Pintora María Blanchard",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PINTORA MARIA BLANDCHARD",
      "cruz": "19:50",
      "final": "20:00",
      "tramo": "ida"
     },
     {
-     "lugar": "AVENIDA DEL MEDITERRANEO",
+     "lugar": "Avenida del Mediterráneo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AVENIDA DEL MEDITERRANEO",
      "cruz": "20:00",
      "final": "20:10",
      "tramo": "ida"
     },
     {
-     "lugar": "PASAJE BATALLA DE LEPANTO",
+     "lugar": "Pasaje Batalla de Lepanto",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PASAJE BATALLA DE LEPANTO",
      "cruz": "20:20",
      "final": "20:30",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA MALLORCA",
+     "lugar": "Isla Mallorca",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA MALLORCA",
      "cruz": "20:30",
      "final": "20:40",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA FORMENTERA",
+     "lugar": "Isla Formentera",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA FORMENTERA",
      "cruz": "20:40",
      "final": "20:50",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA DE HIERRO",
+     "lugar": "Isla del Hierro",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA DE HIERRO",
      "cruz": "20:50",
      "final": "21:00",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA DE MADEIRA",
+     "lugar": "Isla Madeira",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA DE MADEIRA",
      "cruz": "21:00",
      "final": "21:10",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA DE LANZAROTE",
+     "lugar": "Isla Lanzarote",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA DE LANZAROTE",
      "cruz": "21:10",
      "final": "21:20",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA MALANTE",
+     "lugar": "Isla Malante",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA MALANTE",
      "cruz": "21:20",
      "final": "21:30",
      "tramo": "ida"
     },
     {
-     "lugar": "FUENTEVENTURA",
+     "lugar": "Avenida Isla Fuerteventura",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "FUENTEVENTURA",
      "cruz": "21:30",
      "final": "21:40",
      "tramo": "ida"
     },
     {
-     "lugar": "ISLA GRACIOSA",
+     "lugar": "Isla Graciosa",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ISLA GRACIOSA",
      "cruz": "21:50",
      "final": "22:00",
      "tramo": "ida"
     },
     {
-     "lugar": "AVENIDA DEL MEDITERRANEO",
+     "lugar": "Avenida del Mediterráneo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "AVENIDA DEL MEDITERRANEO",
      "cruz": "22:00",
      "final": "22:10",
      "tramo": "ida"
     },
     {
-     "lugar": "PLAZA MARINA ESPAÑOLA",
+     "lugar": "Plaza de la Marina Española",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PLAZA MARINA ESPAÑOLA",
      "cruz": "22:30",
      "final": "22:40",
      "tramo": "ida"
     },
     {
-     "lugar": "ENTRADA",
+     "lugar": "Entrada",
      "tipo": "entrada",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ENTRADA",
      "cruz": "22:50",
      "final": "23:00",
@@ -13891,6 +13889,8 @@
     "avenida de la Fábrica",
     "plaza de Electromecánicas",
     "carretera de Palma del Río",
+    "Quesada y Chacón",
+    "Viejo Almodovar",
     "Manuel Fuentes Bocanegra",
     "avenida de Manolete",
     "Antonio Maura",
@@ -13926,13 +13926,18 @@
     "Gran Vía Parque",
     "avenida de Manolete",
     "José María Martorell",
+    "Quesada Chacón",
     "carretera de Palma del Río",
     "avenida de la Fábrica",
     "plaza de Electromecánicas",
     "Entrada"
    ],
    "diferencias": {
-    "solo_prensa": [],
+    "solo_prensa": [
+     "Quesada y Chacón",
+     "Viejo Almodovar",
+     "Quesada Chacón"
+    ],
     "solo_rejilla": [
      "DOCTOR GREGORIO MARAÑÓN",
      "TRIUNFO",
@@ -13984,6 +13989,18 @@
      "rejilla": "CTRA. PALMA DEL RIO",
      "cruz": "17:50",
      "final": "18:20",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Quesada y Chacón",
+     "tipo": "calle",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Viejo Almodovar",
+     "tipo": "calle",
+     "origen": "prensa",
      "tramo": "ida"
     },
     {
@@ -14300,6 +14317,12 @@
      "rejilla": "JOSE MARIA MARTORELL",
      "cruz": "1:40",
      "final": "2:00",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Quesada Chacón",
+     "tipo": "calle",
+     "origen": "prensa",
      "tramo": "regreso"
     },
     {
@@ -14739,51 +14762,46 @@
    "dia": "VIERNES SANTO",
    "cabecera": "DOLORES (Alcolea)",
    "fuentes": [
-    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
+    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/",
+    "Sentir Córdoba, guía de 2026: https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-de-cordoba-2026_3.html"
    ],
    "horario_prensa": null,
    "salida_perdon": false,
    "sede": {
-    "templo": "Parroquia Nuestra Señora de los Ángeles (Alcolea)",
-    "dir": "Carretera de Madrid, Alcolea",
-    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/"
+    "templo": "Casa Hermandad",
+    "dir": "Calle Cabo Carmona Chamizo 57, Alcolea",
+    "fuente": "Dirección: web de la hermandad, https://doloresalcolea.es/contacto/ . Salida y entrada en la casa de hermandad: Sentir Córdoba, guía del Viernes de Dolores 2026 («Traslado de la Virgen a la Casa de Hermandad para su Estación de Penitencia»): https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026.html ; la web dice que el cortejo va por la Carretera de Madrid «en dirección a la Parroquia» (https://doloresalcolea.es/viernes-santo/) y la rejilla oficial empieza por Cabo Carmona Chamizo",
+    "falta": "El número 57 no está en OSM ni en Nominatim: la salida y la entrada quedan en la calle Cabo Carmona Chamizo (primera y última calle de la lista)."
    },
    "calles": [
-    "SALIDA",
-    "CABO CARMONA CHAMIZO",
-    "PRACTICANTE PEDRO BERNÁ",
-    "CARRETERA DE MADRID",
-    "HAZA DEL DEMONIO",
+    "Salida",
+    "Cabo Carmona Chamizo",
+    "Practicante Pedro Berná",
+    "Carretera de Madrid",
+    "Haza del Demonio",
     "CTRA. DE MADRID (Paralela)",
-    "GENERAL CABALLERO DE RODAS",
-    "GENERAL PEDRO A. ECHEVARRÍA",
-    "SIERRA DE HORNACHUELOS",
-    "CARRETERA DE MADRID",
-    "ACEQUIA",
-    "CABO CARMONA CHAMIZO",
-    "ENTRADA"
+    "Paralela a la Carretera de Madrid",
+    "General Caballero Rodas",
+    "General Pedro A. Echevarría",
+    "Sierra de Hornachuelos",
+    "Carretera de Madrid",
+    "Acequia",
+    "Cabo Carmona Chamizo",
+    "Entrada"
    ],
    "diferencias": {
-    "solo_prensa": [],
+    "solo_prensa": [
+     "Paralela a la Carretera de Madrid"
+    ],
     "solo_rejilla": [
-     "CABO CARMONA CHAMIZO",
-     "PRACTICANTE PEDRO BERNÁ",
-     "CARRETERA DE MADRID",
-     "HAZA DEL DEMONIO",
-     "CTRA. DE MADRID (Paralela)",
-     "GENERAL CABALLERO DE RODAS",
-     "GENERAL PEDRO A. ECHEVARRÍA",
-     "SIERRA DE HORNACHUELOS",
-     "CARRETERA DE MADRID",
-     "ACEQUIA",
-     "CABO CARMONA CHAMIZO"
+     "CTRA. DE MADRID (Paralela)"
     ]
    },
    "elementos": [
     {
-     "lugar": "SALIDA",
+     "lugar": "Salida",
      "tipo": "salida",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "SALIDA",
      "cruz": "19:30",
      "final": "19:50",
@@ -14792,36 +14810,36 @@
      "tramo": "ida"
     },
     {
-     "lugar": "CABO CARMONA CHAMIZO",
+     "lugar": "Cabo Carmona Chamizo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CABO CARMONA CHAMIZO",
      "cruz": "19:40",
      "final": "20:00",
      "tramo": "ida"
     },
     {
-     "lugar": "PRACTICANTE PEDRO BERNÁ",
+     "lugar": "Practicante Pedro Berná",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PRACTICANTE PEDRO BERNÁ",
      "cruz": "20:00",
      "final": "20:20",
      "tramo": "ida"
     },
     {
-     "lugar": "CARRETERA DE MADRID",
+     "lugar": "Carretera de Madrid",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CARRETERA DE MADRID",
      "cruz": "20:10",
      "final": "20:30",
      "tramo": "ida"
     },
     {
-     "lugar": "HAZA DEL DEMONIO",
+     "lugar": "Haza del Demonio",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "HAZA DEL DEMONIO",
      "cruz": "20:30",
      "final": "20:50",
@@ -14837,63 +14855,69 @@
      "tramo": "ida"
     },
     {
-     "lugar": "GENERAL CABALLERO DE RODAS",
+     "lugar": "Paralela a la Carretera de Madrid",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "General Caballero Rodas",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "GENERAL CABALLERO DE RODAS",
      "cruz": "21:40",
      "final": "22:00",
      "tramo": "ida"
     },
     {
-     "lugar": "GENERAL PEDRO A. ECHEVARRÍA",
+     "lugar": "General Pedro A. Echevarría",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "GENERAL PEDRO A. ECHEVARRÍA",
      "cruz": "22:00",
      "final": "22:20",
      "tramo": "ida"
     },
     {
-     "lugar": "SIERRA DE HORNACHUELOS",
+     "lugar": "Sierra de Hornachuelos",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "SIERRA DE HORNACHUELOS",
      "cruz": "22:10",
      "final": "22:30",
      "tramo": "ida"
     },
     {
-     "lugar": "CARRETERA DE MADRID",
+     "lugar": "Carretera de Madrid",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CARRETERA DE MADRID",
      "cruz": "22:30",
      "final": "22:50",
      "tramo": "ida"
     },
     {
-     "lugar": "ACEQUIA",
+     "lugar": "Acequia",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ACEQUIA",
      "cruz": "22:40",
      "final": "23:00",
      "tramo": "ida"
     },
     {
-     "lugar": "CABO CARMONA CHAMIZO",
+     "lugar": "Cabo Carmona Chamizo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CABO CARMONA CHAMIZO",
      "cruz": "22:50",
      "final": "23:10",
      "tramo": "ida"
     },
     {
-     "lugar": "ENTRADA",
+     "lugar": "Entrada",
      "tipo": "entrada",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ENTRADA",
      "cruz": "23:30",
      "final": "23:50",
@@ -14907,7 +14931,8 @@
    "dia": "DOMINGO DE RESURRECCIÓN",
    "cabecera": "RESUCITADO",
    "fuentes": [
-    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
+    "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/",
+    "Sentir Córdoba, guía de 2026: https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-2026-domingo-de.html"
    ],
    "horario_prensa": null,
    "salida_perdon": true,
@@ -14917,62 +14942,62 @@
     "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)"
    },
    "calles": [
-    "SALIDA",
-    "PLAZA DEL CONDE DE PRIEGO",
+    "Salida",
+    "Plaza Conde de Priego",
     "PASAJE DE LA ESTRELLA",
-    "PLAZA RUIZ DE ALDA",
-    "ALFAROS",
-    "CAPITULARES",
-    "DIARIO DE CÓRDOBA",
-    "SAN FERNANDO",
-    "CRUZ DEL RASTRO",
-    "RONDA DE ISASA",
+    "Plaza Ruiz de Alda",
+    "Puerta del Rincón",
+    "Alfaros",
+    "Capitulares",
+    "Diario Córdoba",
+    "San Fernando",
+    "Cruz del Rastro",
+    "Ronda de Isasa",
     "ENTRADA C.O.",
     "PUERTA DE LAS COFRADÍAS",
     "SALIDA C.O. (PUERTA PERDÓN)",
-    "JUDERÍA",
-    "DEANES",
-    "CONDE Y LUQUE",
-    "BLANCO BELMONTE",
-    "ÁNGEL DE SAAVEDRA",
-    "PLAZA DE LA COMPAÑÍA",
-    "CONDE DE CÁRDENAS",
-    "MARÍA CRISTINA",
-    "CLAUDIO MARCELO",
-    "ALFAROS",
-    "PLAZA DEL CONDE DE PRIEGO",
-    "ENTRADA"
+    "Entrada C.O",
+    "Cardenal Herreros",
+    "Judería",
+    "Deanes",
+    "Conde y Luque",
+    "Plaza Agrupación de Cofradías",
+    "Blanco Belmonte",
+    "Ángel de Saavedra",
+    "Juan Valera",
+    "Santa Victoria",
+    "Plaza de la Compañía",
+    "Conde de Cárdenas",
+    "María Cristina",
+    "Claudio Marcelo",
+    "Capitulares",
+    "Alfaros",
+    "Puerta del Rincón",
+    "Plaza Conde de Priego",
+    "Entrada"
    ],
    "diferencias": {
-    "solo_prensa": [],
+    "solo_prensa": [
+     "Puerta del Rincón",
+     "Cardenal Herreros",
+     "Plaza Agrupación de Cofradías",
+     "Juan Valera",
+     "Santa Victoria",
+     "Capitulares",
+     "Puerta del Rincón"
+    ],
     "solo_rejilla": [
-     "PLAZA DEL CONDE DE PRIEGO",
-     "PASAJE DE LA ESTRELLA",
-     "PLAZA RUIZ DE ALDA",
-     "ALFAROS",
-     "CAPITULARES",
-     "DIARIO DE CÓRDOBA",
-     "SAN FERNANDO",
-     "CRUZ DEL RASTRO",
-     "RONDA DE ISASA",
-     "JUDERÍA",
-     "DEANES",
-     "CONDE Y LUQUE",
-     "BLANCO BELMONTE",
-     "ÁNGEL DE SAAVEDRA",
-     "PLAZA DE LA COMPAÑÍA",
-     "CONDE DE CÁRDENAS",
-     "MARÍA CRISTINA",
-     "CLAUDIO MARCELO",
-     "ALFAROS",
-     "PLAZA DEL CONDE DE PRIEGO"
+     "PASAJE DE LA ESTRELLA"
     ]
    },
+   "catedral_prensa": [
+    "Catedral"
+   ],
    "elementos": [
     {
-     "lugar": "SALIDA",
+     "lugar": "Salida",
      "tipo": "salida",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "SALIDA",
      "cruz": "9:30",
      "final": null,
@@ -14980,9 +15005,9 @@
      "tramo": "ida"
     },
     {
-     "lugar": "PLAZA DEL CONDE DE PRIEGO",
+     "lugar": "Plaza Conde de Priego",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PLAZA DEL CONDE DE PRIEGO",
      "cruz": "9:40",
      "final": null,
@@ -14998,63 +15023,69 @@
      "tramo": "ida"
     },
     {
-     "lugar": "PLAZA RUIZ DE ALDA",
+     "lugar": "Plaza Ruiz de Alda",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "PLAZA RUIZ DE ALDA",
      "cruz": "10:00",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "ALFAROS",
+     "lugar": "Puerta del Rincón",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "ida"
+    },
+    {
+     "lugar": "Alfaros",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "ALFAROS",
      "cruz": "10:10",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "CAPITULARES",
+     "lugar": "Capitulares",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CAPITULARES",
      "cruz": "10:40",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "DIARIO DE CÓRDOBA",
+     "lugar": "Diario Córdoba",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "DIARIO DE CÓRDOBA",
      "cruz": "10:50",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "SAN FERNANDO",
+     "lugar": "San Fernando",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "SAN FERNANDO",
      "cruz": "11:00",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "CRUZ DEL RASTRO",
+     "lugar": "Cruz del Rastro",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CRUZ DEL RASTRO",
      "cruz": "11:30",
      "final": null,
      "tramo": "ida"
     },
     {
-     "lugar": "RONDA DE ISASA",
+     "lugar": "Ronda de Isasa",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "RONDA DE ISASA",
      "cruz": "11:40",
      "final": null,
@@ -15091,108 +15122,150 @@
      "tramo": "ida"
     },
     {
-     "lugar": "JUDERÍA",
+     "lugar": "Entrada C.O",
+     "tipo": "entrada",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Cardenal Herreros",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Judería",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "JUDERÍA",
      "cruz": "13:00",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "DEANES",
+     "lugar": "Deanes",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "DEANES",
      "cruz": "13:10",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "CONDE Y LUQUE",
+     "lugar": "Conde y Luque",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CONDE Y LUQUE",
      "cruz": "13:20",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "BLANCO BELMONTE",
+     "lugar": "Plaza Agrupación de Cofradías",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Blanco Belmonte",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "BLANCO BELMONTE",
      "cruz": "13:30",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "ÁNGEL DE SAAVEDRA",
+     "lugar": "Ángel de Saavedra",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ÁNGEL DE SAAVEDRA",
      "cruz": "13:40",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "PLAZA DE LA COMPAÑÍA",
+     "lugar": "Juan Valera",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Santa Victoria",
+     "tipo": "calle",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Plaza de la Compañía",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "PLAZA DE LA COMPAÑÍA",
      "cruz": "13:50",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "CONDE DE CÁRDENAS",
+     "lugar": "Conde de Cárdenas",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CONDE DE CÁRDENAS",
      "cruz": "14:00",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "MARÍA CRISTINA",
+     "lugar": "María Cristina",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "MARÍA CRISTINA",
      "cruz": "14:10",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "CLAUDIO MARCELO",
+     "lugar": "Claudio Marcelo",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "CLAUDIO MARCELO",
      "cruz": "14:20",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "ALFAROS",
+     "lugar": "Capitulares",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Alfaros",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "ALFAROS",
      "cruz": "14:30",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "PLAZA DEL CONDE DE PRIEGO",
+     "lugar": "Puerta del Rincón",
      "tipo": "calle",
-     "origen": "rejilla",
+     "origen": "prensa",
+     "tramo": "regreso"
+    },
+    {
+     "lugar": "Plaza Conde de Priego",
+     "tipo": "calle",
+     "origen": "prensa y rejilla",
      "rejilla": "PLAZA DEL CONDE DE PRIEGO",
      "cruz": "15:00",
      "final": null,
      "tramo": "regreso"
     },
     {
-     "lugar": "ENTRADA",
+     "lugar": "Entrada",
      "tipo": "entrada",
-     "origen": "rejilla",
+     "origen": "prensa y rejilla",
      "rejilla": "ENTRADA",
      "cruz": "15:10",
      "final": null,

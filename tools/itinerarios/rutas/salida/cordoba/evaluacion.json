@@ -1,45 +1,14 @@
 {
  "la-o-cordoba": {
   "publicado": {
-   "largo_m": 3991,
-   "comprobables": 16,
-   "sin_dato": [
-    "C/ VEREDA DE LA ALCAIDÍA"
-   ],
-   "recorridas": 16,
-   "en_orden": 16,
-   "no_recorridas": [],
-   "salida_m": 18,
-   "entrada_m": 18,
-   "sede_salida": "templo en OSM: Parroquia de la Asunción",
-   "sede_entrada": "templo en OSM: Parroquia de la Asunción",
-   "rectas_150": [],
-   "tramo_max_m": 162,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     37.897525,
-     -4.753104
-    ],
-    [
-     37.896144,
-     -4.756669
-    ],
-    [
-     37.8958,
-     -4.756644
-    ]
-   ],
-   "pct_en_calles_lista": 83
-  },
-  "nuevo": {
    "largo_m": 3855,
-   "comprobables": 16,
+   "comprobables": 17,
    "sin_dato": [
-    "C/ VEREDA DE LA ALCAIDÍA"
+    "Plaza Amanecer de Fátima",
+    "Vereda de la Alcaidía"
    ],
-   "recorridas": 16,
-   "en_orden": 16,
+   "recorridas": 17,
+   "en_orden": 17,
    "no_recorridas": [],
    "salida_m": 4,
    "entrada_m": 4,
@@ -64,20 +33,47 @@
    ],
    "pct_en_calles_lista": 83
   },
+  "nuevo": {
+   "largo_m": 2864,
+   "comprobables": 17,
+   "sin_dato": [
+    "Plaza Amanecer de Fátima",
+    "Vereda de la Alcaidía"
+   ],
+   "recorridas": 17,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Parroquia de la Asunción",
+   "sede_entrada": "templo en OSM: Parroquia de la Asunción",
+   "rectas_150": [],
+   "tramo_max_m": 180,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.897525,
+     -4.753104
+    ]
+   ],
+   "pct_en_calles_lista": 94
+  },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 3→1"
    ]
   }
  },
  "lagrimas-cordoba": {
   "publicado": {
    "largo_m": 3671,
-   "comprobables": 15,
-   "sin_dato": [],
-   "recorridas": 15,
-   "en_orden": 14,
+   "comprobables": 14,
+   "sin_dato": [
+    "Pintora María Blanchard"
+   ],
+   "recorridas": 14,
+   "en_orden": 13,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -95,10 +91,12 @@
    "pct_en_calles_lista": 92
   },
   "nuevo": {
-   "largo_m": 3671,
-   "comprobables": 15,
-   "sin_dato": [],
-   "recorridas": 15,
+   "largo_m": 3430,
+   "comprobables": 14,
+   "sin_dato": [
+    "Pintora María Blanchard"
+   ],
+   "recorridas": 14,
    "en_orden": 14,
    "no_recorridas": [],
    "salida_m": 0,
@@ -110,8 +108,8 @@
    "retrocesos": 1,
    "donde_retrocesos": [
     [
-     37.893234,
-     -4.80161
+     37.89091,
+     -4.80211
     ]
    ],
    "pct_en_calles_lista": 92
@@ -119,7 +117,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "en orden 13→14"
    ]
   }
  },
@@ -543,16 +541,14 @@
  },
  "presentacion-al-pueblo-cordoba": {
   "publicado": {
-   "largo_m": 7129,
+   "largo_m": 7106,
    "comprobables": 41,
    "sin_dato": [
     "puerta de San Catalina"
    ],
-   "recorridas": 40,
+   "recorridas": 41,
    "en_orden": 41,
-   "no_recorridas": [
-    "SOLDADO DIEGO GARCÍA PAREDES (12 m)"
-   ],
+   "no_recorridas": [],
    "salida_m": 10,
    "entrada_m": 10,
    "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
@@ -566,7 +562,7 @@
      -4.759424
     ]
    ],
-   "pct_en_calles_lista": 92
+   "pct_en_calles_lista": 93
   },
   "nuevo": {
    "largo_m": 7106,
@@ -595,7 +591,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "calles recorridas 40→41"
+    "empate"
    ]
   }
  },
@@ -685,7 +681,7 @@
  },
  "la-sentencia-cordoba": {
   "publicado": {
-   "largo_m": 4183,
+   "largo_m": 4123,
    "comprobables": 22,
    "sin_dato": [
     "Campo Santos Mártires"
@@ -693,8 +689,8 @@
    "recorridas": 22,
    "en_orden": 21,
    "no_recorridas": [],
-   "salida_m": 30,
-   "entrada_m": 30,
+   "salida_m": 1,
+   "entrada_m": 1,
    "sede_salida": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "sede_entrada": "punto fijado con fuente (casas-hermandad-cordoba.json)",
    "rectas_150": [],
@@ -979,13 +975,13 @@
  },
  "la-sangre-cordoba": {
   "publicado": {
-   "largo_m": 3599,
+   "largo_m": 3617,
    "comprobables": 18,
    "sin_dato": [],
    "recorridas": 17,
-   "en_orden": 15,
+   "en_orden": 16,
    "no_recorridas": [
-    "jardines de Fray Ricardo (0 m)"
+    "jardines de Fray Ricardo (15 m)"
    ],
    "salida_m": 2,
    "entrada_m": 2,
@@ -993,12 +989,8 @@
    "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
    "rectas_150": [],
    "tramo_max_m": 154,
-   "retrocesos": 3,
+   "retrocesos": 2,
    "donde_retrocesos": [
-    [
-     37.887332,
-     -4.778366
-    ],
     [
      37.88541,
      -4.776177
@@ -1041,8 +1033,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 15→16",
-    "retrocesos 3→2"
+    "empate"
    ]
   }
  },
@@ -1444,7 +1435,7 @@
  },
  "la-pasion-cordoba": {
   "publicado": {
-   "largo_m": 2143,
+   "largo_m": 2148,
    "comprobables": 17,
    "sin_dato": [
     "Campo Santos Mártires"
@@ -1490,7 +1481,7 @@
  },
  "la-piedad-cordoba": {
   "publicado": {
-   "largo_m": 13731,
+   "largo_m": 12271,
    "comprobables": 44,
    "sin_dato": [
     "Jardines de La Victoria",
@@ -1507,18 +1498,14 @@
     "CTRA PALMA DEL RIO (0 m)",
     "CTRA PALMA DEL RIO (0 m)"
    ],
-   "salida_m": 421,
-   "entrada_m": 421,
+   "salida_m": 0,
+   "entrada_m": 0,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
    "tramo_max_m": 240,
-   "retrocesos": 5,
+   "retrocesos": 4,
    "donde_retrocesos": [
-    [
-     37.882263,
-     -4.820577
-    ],
     [
      37.88161,
      -4.809723
@@ -1536,7 +1523,7 @@
      -4.793847
     ]
    ],
-   "pct_en_calles_lista": 61
+   "pct_en_calles_lista": 67
   },
   "nuevo": {
    "largo_m": 12271,
@@ -1586,9 +1573,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "salida 421→0 m",
-    "entrada 421→0 m",
-    "retrocesos 5→4"
+    "empate"
    ]
   }
  },
@@ -1738,44 +1723,32 @@
  },
  "la-cena-cordoba": {
   "publicado": {
-   "largo_m": 7750,
+   "largo_m": 6326,
    "comprobables": 24,
    "sin_dato": [
     "Alcalde Veasco Navarro"
    ],
    "recorridas": 24,
-   "en_orden": 24,
+   "en_orden": 23,
    "no_recorridas": [],
    "salida_m": 22,
    "entrada_m": 22,
    "sede_salida": "punto fijado (alias)",
    "sede_entrada": "punto fijado (alias)",
    "rectas_150": [],
-   "tramo_max_m": 346,
-   "retrocesos": 5,
+   "tramo_max_m": 213,
+   "retrocesos": 2,
    "donde_retrocesos": [
     [
-     37.877324,
-     -4.787058
-    ],
-    [
-     37.877324,
-     -4.787058
-    ],
-    [
-     37.875416,
-     -4.786423
-    ],
-    [
-     37.878498,
-     -4.786139
+     37.878881,
+     -4.785931
     ],
     [
      37.879485,
      -4.787495
     ]
    ],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 91
   },
   "nuevo": {
    "largo_m": 6326,
@@ -1808,7 +1781,7 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 5→2"
+    "empate"
    ]
   }
  },
@@ -2184,15 +2157,17 @@
  },
  "la-conversion-cordoba": {
   "publicado": {
-   "largo_m": 9795,
-   "comprobables": 32,
+   "largo_m": 8819,
+   "comprobables": 33,
    "sin_dato": [
+    "Quesada y Chacón",
     "Manuel Fuentes Bocanegra",
     "PERPETUO SOCORRO",
-    "PERPETUO SOCORRO"
+    "PERPETUO SOCORRO",
+    "Quesada Chacón"
    ],
-   "recorridas": 30,
-   "en_orden": 28,
+   "recorridas": 31,
+   "en_orden": 29,
    "no_recorridas": [
     "carretera de Palma del Río (0 m)",
     "carretera de Palma del Río (0 m)"
@@ -2203,20 +2178,31 @@
    "sede_entrada": "templo en OSM: Nuestra Señora del Rosario",
    "rectas_150": [],
    "tramo_max_m": 300,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 59
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.878881,
+     -4.785931
+    ],
+    [
+     37.878881,
+     -4.785931
+    ]
+   ],
+   "pct_en_calles_lista": 65
   },
   "nuevo": {
-   "largo_m": 8819,
-   "comprobables": 32,
+   "largo_m": 8844,
+   "comprobables": 33,
    "sin_dato": [
+    "Quesada y Chacón",
     "Manuel Fuentes Bocanegra",
     "PERPETUO SOCORRO",
-    "PERPETUO SOCORRO"
+    "PERPETUO SOCORRO",
+    "Quesada Chacón"
    ],
-   "recorridas": 30,
-   "en_orden": 28,
+   "recorridas": 31,
+   "en_orden": 29,
    "no_recorridas": [
     "carretera de Palma del Río (0 m)",
     "carretera de Palma del Río (0 m)"
@@ -2310,15 +2296,16 @@
    "largo_m": 1348,
    "comprobables": 10,
    "sin_dato": [
-    "PRACTICANTE PEDRO BERNÁ"
+    "Practicante Pedro Berná",
+    "Paralela a la Carretera de Madrid"
    ],
    "recorridas": 10,
    "en_orden": 9,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
-   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
    "rectas_150": [],
    "tramo_max_m": 154,
    "retrocesos": 1,
@@ -2331,65 +2318,42 @@
    "pct_en_calles_lista": 72
   },
   "nuevo": {
-   "largo_m": 1348,
+   "largo_m": 2604,
    "comprobables": 10,
    "sin_dato": [
-    "PRACTICANTE PEDRO BERNÁ"
+    "Practicante Pedro Berná",
+    "Paralela a la Carretera de Madrid"
    ],
    "recorridas": 10,
    "en_orden": 9,
    "no_recorridas": [],
-   "salida_m": 5,
-   "entrada_m": 5,
-   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
-   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
    "rectas_150": [],
-   "tramo_max_m": 154,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     37.931095,
-     -4.674533
-    ]
-   ],
-   "pct_en_calles_lista": 72
+   "tramo_max_m": 158,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 1→0"
    ]
   }
  },
  "el-resucitado-cordoba": {
   "publicado": {
-   "largo_m": 3944,
-   "comprobables": 20,
-   "sin_dato": [],
-   "recorridas": 20,
-   "en_orden": 20,
-   "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
-   "sede_salida": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
-   "sede_entrada": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
-   "rectas_150": [],
-   "tramo_max_m": 151,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     37.889177,
-     -4.776662
-    ]
-   ],
-   "pct_en_calles_lista": 81
-  },
-  "nuevo": {
    "largo_m": 3888,
-   "comprobables": 20,
-   "sin_dato": [],
-   "recorridas": 20,
-   "en_orden": 20,
+   "comprobables": 25,
+   "sin_dato": [
+    "Plaza Ruiz de Alda",
+    "Cardenal Herreros"
+   ],
+   "recorridas": 25,
+   "en_orden": 25,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -2399,12 +2363,32 @@
    "tramo_max_m": 151,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 81
+   "pct_en_calles_lista": 85
+  },
+  "nuevo": {
+   "largo_m": 3830,
+   "comprobables": 25,
+   "sin_dato": [
+    "Plaza Ruiz de Alda",
+    "Cardenal Herreros"
+   ],
+   "recorridas": 25,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "sede_entrada": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 84
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 1→0"
+    "empate"
    ]
   }
  }

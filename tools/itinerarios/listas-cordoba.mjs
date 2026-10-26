@@ -60,6 +60,7 @@ const EQUIV = {
   'conde vallellano': ['vallellano'], 'virgen perpetuo socorrro': ['perpetuo socorro', 'errata'], 'huerto san pedro real': ['huerto san pedro'],
   'mayor santa catalina': ['mayor santa marina', 'errata'], 'pintor bartolome blanco': ['parroco bartolome blanco', 'errata'],
   'san pablo plaza san andres': ['san pablo', 'errata'], 'santisimo cristo gracia': ['santo cristo gracia'],
+  'doctor maranon': ['doctor gregorio maranon'], 'isla fuerteventura': ['fuenteventura'],
 };
 const igual = (a, b) => a === b || (a.length > 5 && b.length > 5 && lev(a, b) <= 1) // «SAN FERNADO» = «SAN FERNANDO» (errata del PDF)
   || EQUIV[a]?.[0] === b || EQUIV[b]?.[0] === a;
@@ -114,13 +115,13 @@ const tipoPrensa = (s) => {
   const k = sn(s);
   if (/^entrad?a? en (co|c o|carrera oficial)\b/.test(k)) return 'entrada_co';
   if (/^salida (de )?(co|c o|carrera oficial)\b/.test(k)) return 'salida_co';
-  if (/^(puerta del? perdon|puerta de (las )?(cofradias|palmas)|(puerta|salida) (de |e )?santa catalina|interior( de la)? sic|patio de los naranjos)\b/.test(k)) return 'catedral';
+  if (/^(puerta del? perdon|puerta de (las )?(cofradias|palmas)|(puerta|salida) (de |e )?santa catalina|interior( de la)? sic|patio de los naranjos|catedral$)\b/.test(k)) return 'catedral';
   if (/^salida\b/.test(k)) return 'salida'; // «Salida», «Salida desde su templo»
   if (/^entrada\b/.test(k)) return 'entrada';
   return 'calle';
 };
 function prensa(txt) {
-  const partes = txt.replace(/\.\s*$/, '').split(/,|\.\s+(?=[A-ZÁÉÍÓÚÑ])/).map((t) => t.trim()).filter(Boolean) // «Caravaca de la Cruz. Ronda del Marrubial»
+  const partes = txt.replace(/\.\s*$/, '').split(/,|(?<!\b[A-ZÁÉÍÓÚÑ])\.\s+(?=[A-ZÁÉÍÓÚÑ])/) /* no parte «Pedro A. Echevarría» */.map((t) => t.trim()).filter(Boolean) // «Caravaca de la Cruz. Ronda del Marrubial»
     // «María Auxiliadora y plaza Santísimo Cristo de Gracia», «Santa Flora y María y Entrada»: se parte solo si tras la «y» viene un tipo de vía
     .flatMap((t) => t.split(/\s+y\s+(?=(?:plaza|plazuela|calle|avenida|avda|paseo|glorieta|ronda|cuesta|puerta|entrada)\b)/i));
   const s = partes.map((lugar) => ({ lugar, k: clave(lugar), tipo: tipoPrensa(lugar) }));
@@ -174,7 +175,7 @@ for (const [id, h] of Object.entries(porId)) {
   if (!sede) avisos.push(`${sid}: sin sede en casas-hermandad-cordoba.json`);
   salida[sid] = {
     dia: h.dia, cabecera: h.cab,
-    fuentes: [FUENTE + (id === 'el-perdon' ? ' (columna de la cruz de guía transcrita a mano del PDF)' : ''), ...(pr ? [`El Debate · La Voz de Córdoba, guía de 2026: ${pr.url}`] : [])],
+    fuentes: [FUENTE + (id === 'el-perdon' ? ' (columna de la cruz de guía transcrita a mano del PDF)' : ''), ...(pr ? [`${pr.medio || 'El Debate · La Voz de Córdoba'}, guía de 2026: ${pr.url}`] : [])],
     horario_prensa: pr?.horario ?? null,
     // sale del Patio de los Naranjos por la puerta del Perdón: «SALIDA C.O. (PUERTA PERDÓN)» o la acotación «(P. PERDÓN)» de la rejilla
     salida_perdon: [...(h.cruz || []), ...(h.final || [])].some((p) => /\(P(UERTA)?\.? ?PERD/i.test(p.lugar)),

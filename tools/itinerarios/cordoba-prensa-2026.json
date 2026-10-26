@@ -184,12 +184,58 @@
   "la-conversion-cordoba": {
    "url": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
    "horario": "La hermandad sale a las 17.20 horas desde la iglesia de Nuestra Señora del Rosario y se recoge en el mismo templo a las 03.10 horas.",
-   "recorrido": "Salida, avenida de la Fábrica, plaza de Electromecánicas, carretera de Palma del Río, Manuel Fuentes Bocanegra, avenida de Manolete, Antonio Maura, Camino de los Sastres, Virgen del Perpetuo Socorrro, avenida del Aeropuerto, Jardines de Vallellano, avenida del Doctor Fleming, Campo Santo de los Mártires, Santa Teresa de Jornet, Ronda de Isasa, Entrada en CO, Torrijos, puerta del Perdón, Interior SIC, Puerta de las Palmas, puerta de Santa Catalina, Salida CO, Magistral González Francés, Corregidor Luis de la Cerda, Amador de los Ríos, Campo Santo de los Mártires, jardines de Vallellano, avenida del Aeropuerto, Camino de los Sastres, plaza de Costasol, Antonio Maura, Gran Vía Parque, avenida de Manolete, José María Martorell, carretera de Palma del Río, avenida de la Fábrica, plaza de Electromecánicas y Entrada."
+   "recorrido": "Salida, avenida de la Fábrica, plaza de Electromecánicas, carretera de Palma del Río, Quesada y Chacón, Viejo Almodovar, Manuel Fuentes Bocanegra, avenida de Manolete, Antonio Maura, Camino de los Sastres, Virgen del Perpetuo Socorrro, avenida del Aeropuerto, Jardines de Vallellano, avenida del Doctor Fleming, Campo Santo de los Mártires, Santa Teresa de Jornet, Ronda de Isasa, Entrada en CO, Torrijos, puerta del Perdón, Interior SIC, Puerta de las Palmas, puerta de Santa Catalina, Salida CO, Magistral González Francés, Corregidor Luis de la Cerda, Amador de los Ríos, Campo Santo de los Mártires, jardines de Vallellano, avenida del Aeropuerto, Camino de los Sastres, plaza de Costasol, Antonio Maura, Gran Vía Parque, avenida de Manolete, José María Martorell, Quesada Chacón, carretera de Palma del Río, avenida de la Fábrica, plaza de Electromecánicas y Entrada.",
+   "recorrido_original": "Salida, avenida de la Fábrica, plaza de Electromecánicas, carretera de Palma del Río, Manuel Fuentes Bocanegra, avenida de Manolete, Antonio Maura, Camino de los Sastres, Virgen del Perpetuo Socorrro, avenida del Aeropuerto, Jardines de Vallellano, avenida del Doctor Fleming, Campo Santo de los Mártires, Santa Teresa de Jornet, Ronda de Isasa, Entrada en CO, Torrijos, puerta del Perdón, Interior SIC, Puerta de las Palmas, puerta de Santa Catalina, Salida CO, Magistral González Francés, Corregidor Luis de la Cerda, Amador de los Ríos, Campo Santo de los Mártires, jardines de Vallellano, avenida del Aeropuerto, Camino de los Sastres, plaza de Costasol, Antonio Maura, Gran Vía Parque, avenida de Manolete, José María Martorell, carretera de Palma del Río, avenida de la Fábrica, plaza de Electromecánicas y Entrada.",
+   "completado_con": {
+    "medio": "Sentir Córdoba",
+    "url": "https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-de-cordoba-2026_3.html",
+    "insertadas": [
+     [
+      "carretera de Palma del Río",
+      "Manuel Fuentes Bocanegra",
+      [
+       "Quesada y Chacón",
+       "Viejo Almodovar"
+      ]
+     ],
+     [
+      "José María Martorell",
+      "carretera de Palma del Río",
+      [
+       "Quesada Chacón"
+      ]
+     ]
+    ]
+   }
   },
   "los-dolores-cordoba": {
    "url": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
    "horario": "La hermandad sale de la iglesia de San Jacinto a las 18.50 horas y se recoge en el mismo templo a las 01.15 horas.",
    "recorrido": "Salida, plaza de Capuchinos, Conde de Torres Cabrera, San Zoilo, plaza de San Miguel, Cruz Conde, plaza de las Tenddillas, Conde de Gondomar, San Felipe, plaza Ramón y Cajal, plaza de la Trinidad, Pintor López Obrero, avenida del Doctor Fleming, Campo Santo de los Mártires, Ronda de Isasa, Entrada en CO, Torrijos, Puerta del Perdón, Interior SIC, Puerta de las Palmas, puerta de Santa Catalina, Salida CO, cardenal Herrero, Judería, Deanes, plaza Agrupación de Cofradías, Blanco Belmonte, Jesús y María, plaza de las Tendillas, San Álvaro, plaza de San Miguel, Torres Cabrera, Osario, Entrada."
+  },
+  "la-o-cordoba": {
+   "medio": "Sentir Córdoba",
+   "url": "https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
+   "horario": null,
+   "recorrido": "Salida Parroquia Nuestra Señora de la Aurora, Plaza Mahatma Gandhi, Avenida Blas Infante, Avenida Virgen de Fátima, Nuestra Señora de la Merced, Historiador Jaén Morente, Arcos de la Frontera, Doctor Nevado del Rey, Escritor Gómez de Rivera, Plaza Amanecer de Fátima, Escritor Hoyos Noriega, Avenida Virgen de Fátima, Arcos de la Frontera, Estación en la Parroquia de Nuestra Señora de Fátima, Avenida Carlos III, Vereda de la Alcaidía, Escritor José de Heros, Historiador Jaén Morente, Arcos de la Frontera, Avenida Virgen de Fátima, Plaza Mahatma Gandhi y Entrada"
+  },
+  "lagrimas-cordoba": {
+   "medio": "Sentir Córdoba",
+   "url": "https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
+   "horario": null,
+   "recorrido": "Salida, Avenida del Mediterráneo, Pintora María Blanchard, Avenida del Mediterráneo, Pasaje Batalla de Lepanto, Isla Mallorca, Isla Formentera, Isla del Hierro, Isla Madeira, Isla Lanzarote, Isla Malante, Avenida Isla Fuerteventura, Isla Graciosa, Avenida del Mediterráneo, Plaza de la Marina Española y Entrada"
+  },
+  "dolores-de-alcolea-cordoba": {
+   "medio": "Sentir Córdoba",
+   "url": "https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-de-cordoba-2026_3.html",
+   "horario": null,
+   "recorrido": "Salida, Cabo Carmona Chamizo, Practicante Pedro Berná, Carretera de Madrid, Haza del Demonio, Paralela a la Carretera de Madrid, General Caballero Rodas, General Pedro A. Echevarría, Sierra de Hornachuelos, Carretera de Madrid, Acequia, Cabo Carmona Chamizo y Entrada"
+  },
+  "el-resucitado-cordoba": {
+   "medio": "Sentir Córdoba",
+   "url": "https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-2026-domingo-de.html",
+   "horario": null,
+   "recorrido": "Salida, Plaza Conde de Priego, Plaza Ruiz de Alda, Puerta del Rincón, Alfaros, Capitulares, Diario Córdoba, San Fernando, Cruz del Rastro, Ronda de Isasa, Entrada C.O, Catedral, Salida C.O (Puerta del Perdón), Cardenal Herreros, Judería, Deanes, Conde y Luque, Plaza Agrupación de Cofradías, Blanco Belmonte, Ángel de Saavedra, Juan Valera, Santa Victoria, Plaza de la Compañía, Conde de Cárdenas, María Cristina, Claudio Marcelo, Capitulares, Alfaros, Puerta del Rincón, Plaza Conde de Priego y Entrada"
   }
  }
 }

@@ -2,11 +2,9 @@
  "la-o-cordoba": {
   "id": "la-o-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
-  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
+  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
   "avisos": [
-   "hueco de 55 m entre «C/ ARCOS DE LA FRONTERA» y «C/ESCRITOR GÓMEZ DE RIVERA»: en OSM no se tocan",
-   "hueco de 45 m entre «AV. CARLOS III» y «C/ VEREDA DE LA ALCAIDÍA»: en OSM no se tocan",
-   "hueco de 261 m entre «C/ VEREDA DE LA ALCAIDÍA» y «C/ ESCRITOR JOSÉ DE LOS HEROS»: en OSM no se tocan"
+   "«Plaza Amanecer de Fátima» sin equivalente en OSM: no se traza (no se inventa)"
   ],
   "correcciones": null,
   "salida": {
@@ -30,7 +28,7 @@
   "calles": [
    {
     "i": 1,
-    "lugar": "PZA. MAHATMA GANDHI",
+    "lugar": "Plaza Mahatma Gandhi",
     "tipo": "calle",
     "osm": "Plaza Mahatma Gandhi",
     "vias": [
@@ -42,7 +40,7 @@
    },
    {
     "i": 2,
-    "lugar": "AV. BLAS INFANTE",
+    "lugar": "Avenida Blas Infante",
     "tipo": "calle",
     "osm": "Avenida Blas Infante",
     "vias": [
@@ -63,7 +61,7 @@
    },
    {
     "i": 3,
-    "lugar": "AV. VIRGEN DE FÁTIMA",
+    "lugar": "Avenida Virgen de Fátima",
     "tipo": "calle",
     "osm": "Avenida Virgen de Fátima",
     "vias": [
@@ -81,7 +79,7 @@
    },
    {
     "i": 4,
-    "lugar": "C/ NTRA. SEÑORA DE LA MERCED",
+    "lugar": "Nuestra Señora de la Merced",
     "tipo": "calle",
     "osm": "Calle Nuestra Señora de la Merced",
     "vias": [
@@ -99,7 +97,7 @@
    },
    {
     "i": 5,
-    "lugar": "C/ HISTORIADOR JAÉN MORENTE",
+    "lugar": "Historiador Jaén Morente",
     "tipo": "calle",
     "osm": "Calle Historiador Jaén Morente",
     "vias": [
@@ -114,7 +112,7 @@
    },
    {
     "i": 6,
-    "lugar": "C/ ARCOS DE LA FRONTERA",
+    "lugar": "Arcos de la Frontera",
     "tipo": "calle",
     "osm": "Calle de Arcos de la Frontera",
     "vias": [
@@ -132,7 +130,22 @@
    },
    {
     "i": 7,
-    "lugar": "C/ESCRITOR GÓMEZ DE RIVERA",
+    "lugar": "Doctor Nevado del Rey",
+    "tipo": "calle",
+    "osm": "Calle Doctor Nevado del Rey",
+    "vias": [
+     209336787,
+     248107851,
+     296932518,
+     517092078
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Escritor Gómez de Rivera",
     "tipo": "calle",
     "osm": "Calle Escritor Gómez de Rivera",
     "vias": [
@@ -143,12 +156,12 @@
      389246242
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 55,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "AV. ESCRITOR HOYOS DE NORIEGA",
+    "i": 10,
+    "lugar": "Escritor Hoyos Noriega",
     "tipo": "calle",
     "osm": "Calle Escritor Hoyos Noriega",
     "vias": [
@@ -162,8 +175,8 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "AV. VIRGEN DE FÁTIMA",
+    "i": 11,
+    "lugar": "Avenida Virgen de Fátima",
     "tipo": "calle",
     "osm": "Avenida Virgen de Fátima",
     "vias": [
@@ -180,8 +193,8 @@
     "forzado": false
    },
    {
-    "i": 10,
-    "lugar": "C/ARCOS DE LA FRONTERA",
+    "i": 12,
+    "lugar": "Arcos de la Frontera",
     "tipo": "calle",
     "osm": "Calle de Arcos de la Frontera",
     "vias": [
@@ -198,8 +211,8 @@
     "forzado": false
    },
    {
-    "i": 11,
-    "lugar": "AV. CARLOS III",
+    "i": 14,
+    "lugar": "Avenida Carlos III",
     "tipo": "calle",
     "osm": "Avenida de Carlos III",
     "vias": [
@@ -258,32 +271,32 @@
     "forzado": false
    },
    {
-    "i": 12,
-    "lugar": "C/ VEREDA DE LA ALCAIDÍA",
+    "i": 15,
+    "lugar": "Vereda de la Alcaidía",
     "tipo": "calle",
-    "osm": "Plaza de la Alcaidía",
+    "osm": "Calle de la Vereda de la Alcaldía",
     "vias": [
-     97009654
+     96956661
     ],
-    "candidatas": 1,
-    "hueco_entrada_m": 45,
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 13,
-    "lugar": "C/ ESCRITOR JOSÉ DE LOS HEROS",
+    "i": 16,
+    "lugar": "Escritor José de Heros",
     "tipo": "calle",
     "osm": "Calle Escritor José de los Heros",
     "vias": [
      50157239
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 261,
+    "hueco_entrada_m": 21,
     "forzado": false
    },
    {
-    "i": 14,
-    "lugar": "C/ HISTORIADOR JAÉN MORENTE",
+    "i": 17,
+    "lugar": "Historiador Jaén Morente",
     "tipo": "calle",
     "osm": "Calle Historiador Jaén Morente",
     "vias": [
@@ -297,8 +310,8 @@
     "forzado": false
    },
    {
-    "i": 15,
-    "lugar": "C/ARCOS DE LA FRONTERA",
+    "i": 18,
+    "lugar": "Arcos de la Frontera",
     "tipo": "calle",
     "osm": "Calle de Arcos de la Frontera",
     "vias": [
@@ -315,8 +328,8 @@
     "forzado": false
    },
    {
-    "i": 16,
-    "lugar": "AV. VIRGEN DE FÁTIMA",
+    "i": 19,
+    "lugar": "Avenida Virgen de Fátima",
     "tipo": "calle",
     "osm": "Avenida Virgen de Fátima",
     "vias": [
@@ -333,8 +346,8 @@
     "forzado": false
    },
    {
-    "i": 17,
-    "lugar": "PZA. MAHATMA GANDHI",
+    "i": 20,
+    "lugar": "Plaza Mahatma Gandhi",
     "tipo": "calle",
     "osm": "Plaza Mahatma Gandhi",
     "vias": [
@@ -346,18 +359,21 @@
    }
   ],
   "enlaces": [
-   "10 m entre «PZA. MAHATMA GANDHI» y «AV. BLAS INFANTE»",
-   "10 m entre «AV. VIRGEN DE FÁTIMA» y «PZA. MAHATMA GANDHI»"
+   "10 m entre «Plaza Mahatma Gandhi» y «Avenida Blas Infante»",
+   "21 m entre «Vereda de la Alcaidía» y «Escritor José de Heros»",
+   "10 m entre «Avenida Virgen de Fátima» y «Plaza Mahatma Gandhi»"
   ],
-  "ms_graphhopper": 119,
-  "largo_m": 3855,
-  "ms_total": 219
+  "ms_graphhopper": 208,
+  "largo_m": 2864,
+  "ms_total": 388
  },
  "lagrimas-cordoba": {
   "id": "lagrimas-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
-  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
-  "avisos": [],
+  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
+  "avisos": [
+   "«Pintora María Blanchard» sin equivalente en OSM: no se traza (no se inventa)"
+  ],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -392,7 +408,7 @@
    },
    {
     "i": 2,
-    "lugar": "AVENIDA DEL MEDITERRANEO",
+    "lugar": "Avenida del Mediterráneo",
     "tipo": "calle",
     "osm": "Avenida del Mediterráneo",
     "vias": [
@@ -410,20 +426,8 @@
     "forzado": false
    },
    {
-    "i": 3,
-    "lugar": "PINTORA MARIA BLANDCHARD",
-    "tipo": "calle",
-    "osm": "Calle Pintora Blanchard",
-    "vias": [
-     138943423
-    ],
-    "candidatas": 1,
-    "hueco_entrada_m": 0,
-    "forzado": false
-   },
-   {
     "i": 4,
-    "lugar": "AVENIDA DEL MEDITERRANEO",
+    "lugar": "Avenida del Mediterráneo",
     "tipo": "calle",
     "osm": "Avenida del Mediterráneo",
     "vias": [
@@ -442,7 +446,7 @@
    },
    {
     "i": 5,
-    "lugar": "PASAJE BATALLA DE LEPANTO",
+    "lugar": "Pasaje Batalla de Lepanto",
     "tipo": "calle",
     "osm": "Pasaje Batalla de lepanto",
     "vias": [
@@ -454,7 +458,7 @@
    },
    {
     "i": 6,
-    "lugar": "ISLA MALLORCA",
+    "lugar": "Isla Mallorca",
     "tipo": "calle",
     "osm": "Calle Isla de Mallorca",
     "vias": [
@@ -467,7 +471,7 @@
    },
    {
     "i": 7,
-    "lugar": "ISLA FORMENTERA",
+    "lugar": "Isla Formentera",
     "tipo": "calle",
     "osm": "Calle Isla Formentera",
     "vias": [
@@ -486,7 +490,7 @@
    },
    {
     "i": 8,
-    "lugar": "ISLA DE HIERRO",
+    "lugar": "Isla del Hierro",
     "tipo": "calle",
     "osm": "Calle Isla del Hierro",
     "vias": [
@@ -499,7 +503,7 @@
    },
    {
     "i": 9,
-    "lugar": "ISLA DE MADEIRA",
+    "lugar": "Isla Madeira",
     "tipo": "calle",
     "osm": "Calle Isla Madeira",
     "vias": [
@@ -511,7 +515,7 @@
    },
    {
     "i": 10,
-    "lugar": "ISLA DE LANZAROTE",
+    "lugar": "Isla Lanzarote",
     "tipo": "calle",
     "osm": "Calle Isla de Lanzarote",
     "vias": [
@@ -524,7 +528,7 @@
    },
    {
     "i": 11,
-    "lugar": "ISLA MALANTE",
+    "lugar": "Isla Malante",
     "tipo": "calle",
     "osm": "Calle Isla Malante",
     "vias": [
@@ -538,7 +542,7 @@
    },
    {
     "i": 12,
-    "lugar": "FUENTEVENTURA",
+    "lugar": "Avenida Isla Fuerteventura",
     "tipo": "calle",
     "osm": "Calle Isla de Fuerteventura",
     "vias": [
@@ -563,7 +567,7 @@
    },
    {
     "i": 13,
-    "lugar": "ISLA GRACIOSA",
+    "lugar": "Isla Graciosa",
     "tipo": "calle",
     "osm": "Calle Isla Graciosa",
     "vias": [
@@ -576,7 +580,7 @@
    },
    {
     "i": 14,
-    "lugar": "AVENIDA DEL MEDITERRANEO",
+    "lugar": "Avenida del Mediterráneo",
     "tipo": "calle",
     "osm": "Avenida del Mediterráneo",
     "vias": [
@@ -595,7 +599,7 @@
    },
    {
     "i": 15,
-    "lugar": "PLAZA MARINA ESPAÑOLA",
+    "lugar": "Plaza de la Marina Española",
     "tipo": "calle",
     "osm": "Plaza Marina Española",
     "vias": [
@@ -607,14 +611,15 @@
    }
   ],
   "enlaces": [
-   "8 m entre «PLAZA MARINA ESPAÑOLA» y «AVENIDA DEL MEDITERRANEO»",
-   "9 m entre «AVENIDA DEL MEDITERRANEO» y «PASAJE BATALLA DE LEPANTO»",
-   "9 m entre «PASAJE BATALLA DE LEPANTO» y «ISLA MALLORCA»",
-   "8 m entre «AVENIDA DEL MEDITERRANEO» y «PLAZA MARINA ESPAÑOLA»"
+   "8 m entre «PLAZA MARINA ESPAÑOLA» y «Avenida del Mediterráneo»",
+   "9 m entre «Avenida del Mediterráneo» y «Pasaje Batalla de Lepanto»",
+   "9 m entre «Pasaje Batalla de Lepanto» y «Isla Mallorca»",
+   "8 m entre «Avenida del Mediterráneo» y «Plaza de la Marina Española»"
   ],
-  "ms_graphhopper": 240,
-  "largo_m": 3671,
-  "ms_total": 302
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 91,
+  "largo_m": 3430,
+  "ms_total": 145
  },
  "entrada-triunfal-cordoba": {
   "id": "entrada-triunfal-cordoba",
@@ -996,9 +1001,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 174,
+  "ms_graphhopper": 53,
   "largo_m": 4154,
-  "ms_total": 249
+  "ms_total": 128
  },
  "penas-de-santiago-cordoba": {
   "id": "penas-de-santiago-cordoba",
@@ -1368,9 +1373,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 94,
+  "ms_graphhopper": 74,
   "largo_m": 3213,
-  "ms_total": 171
+  "ms_total": 175
  },
  "el-huerto-cordoba": {
   "id": "el-huerto-cordoba",
@@ -1647,9 +1652,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 64,
+  "ms_graphhopper": 98,
   "largo_m": 2629,
-  "ms_total": 125
+  "ms_total": 171
  },
  "el-rescatado-cordoba": {
   "id": "el-rescatado-cordoba",
@@ -2127,9 +2132,9 @@
    "3 m entre «Santa María de Gracia» y «PLAZA DE JUAN BERNIER»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 159,
+  "ms_graphhopper": 120,
   "largo_m": 5438,
-  "ms_total": 242
+  "ms_total": 226
  },
  "vera-cruz-cordoba": {
   "id": "vera-cruz-cordoba",
@@ -2442,9 +2447,9 @@
    "20 m entre «Triunfo» y «puente Romano»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 102,
+  "ms_graphhopper": 119,
   "largo_m": 3128,
-  "ms_total": 162
+  "ms_total": 199
  },
  "la-esperanza-cordoba": {
   "id": "la-esperanza-cordoba",
@@ -2815,9 +2820,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 115,
+  "ms_graphhopper": 58,
   "largo_m": 4238,
-  "ms_total": 193
+  "ms_total": 175
  },
  "el-amor-cordoba": {
   "id": "el-amor-cordoba",
@@ -3093,9 +3098,9 @@
    "24 m entre «plaza de Santa Teresa» y «Rosario»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 76,
+  "ms_graphhopper": 63,
   "largo_m": 3794,
-  "ms_total": 126
+  "ms_total": 114
  },
  "la-merced-cordoba": {
   "id": "la-merced-cordoba",
@@ -3670,9 +3675,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 120,
+  "ms_graphhopper": 111,
   "largo_m": 7089,
-  "ms_total": 218
+  "ms_total": 204
  },
  "presentacion-al-pueblo-cordoba": {
   "id": "presentacion-al-pueblo-cordoba",
@@ -4314,9 +4319,9 @@
    "21 m entre «PÁRROCO BARTOLOME BLANCO» y «plaza de Cañero»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 162,
+  "ms_graphhopper": 108,
   "largo_m": 7106,
-  "ms_total": 276
+  "ms_total": 252
  },
  "la-estrella-cordoba": {
   "id": "la-estrella-cordoba",
@@ -4817,9 +4822,9 @@
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 170,
+  "ms_graphhopper": 212,
   "largo_m": 7060,
-  "ms_total": 283
+  "ms_total": 306
  },
  "la-sentencia-cordoba": {
   "id": "la-sentencia-cordoba",
@@ -5184,9 +5189,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 103,
+  "ms_graphhopper": 83,
   "largo_m": 4123,
-  "ms_total": 184
+  "ms_total": 185
  },
  "via-crucis-cordoba": {
   "id": "via-crucis-cordoba",
@@ -5600,9 +5605,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 75,
+  "ms_graphhopper": 45,
   "largo_m": 3479,
-  "ms_total": 162
+  "ms_total": 165
  },
  "animas-cordoba": {
   "id": "animas-cordoba",
@@ -5945,9 +5950,9 @@
    "14 m entre «TRIUNFO» y «TORRIJOS»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 108,
+  "ms_graphhopper": 67,
   "largo_m": 4299,
-  "ms_total": 188
+  "ms_total": 133
  },
  "la-agonia-cordoba": {
   "id": "la-agonia-cordoba",
@@ -6413,9 +6418,9 @@
    "34 m entre «puerta del Colodro» y «Alonso el Sabio»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 79,
+  "ms_graphhopper": 109,
   "largo_m": 6874,
-  "ms_total": 188
+  "ms_total": 284
  },
  "la-universitaria-cordoba": {
   "id": "la-universitaria-cordoba",
@@ -6833,9 +6838,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 93,
+  "ms_graphhopper": 114,
   "largo_m": 4445,
-  "ms_total": 183
+  "ms_total": 276
  },
  "la-sangre-cordoba": {
   "id": "la-sangre-cordoba",
@@ -7133,9 +7138,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 63,
+  "ms_graphhopper": 48,
   "largo_m": 3617,
-  "ms_total": 124
+  "ms_total": 120
  },
  "el-buen-suceso-cordoba": {
   "id": "el-buen-suceso-cordoba",
@@ -7439,9 +7444,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 89,
+  "ms_graphhopper": 43,
   "largo_m": 3689,
-  "ms_total": 146
+  "ms_total": 100
  },
  "la-santa-faz-cordoba": {
   "id": "la-santa-faz-cordoba",
@@ -7814,9 +7819,9 @@
    "4 m entre «plaza Ramón y Cajal» y «Tesoro»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 94,
+  "ms_graphhopper": 65,
   "largo_m": 3035,
-  "ms_total": 168
+  "ms_total": 148
  },
  "el-prendimiento-cordoba": {
   "id": "el-prendimiento-cordoba",
@@ -8283,9 +8288,9 @@
    "3 m entre «Santa María de Gracia» y «plaza de Juan Bernier»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 74,
+  "ms_graphhopper": 112,
   "largo_m": 4565,
-  "ms_total": 202
+  "ms_total": 199
  },
  "el-perdon-cordoba": {
   "id": "el-perdon-cordoba",
@@ -8698,9 +8703,9 @@
    "28 m entre «Valladares» y «Buen Pastor»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 85,
+  "ms_graphhopper": 70,
   "largo_m": 4202,
-  "ms_total": 159
+  "ms_total": 170
  },
  "la-paz-cordoba": {
   "id": "la-paz-cordoba",
@@ -9280,9 +9285,9 @@
    "25 m entre «puerta del Rincón» y «plaza de Colón»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 76,
+  "ms_graphhopper": 63,
   "largo_m": 4911,
-  "ms_total": 168
+  "ms_total": 186
  },
  "el-calvario-cordoba": {
   "id": "el-calvario-cordoba",
@@ -9657,9 +9662,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 97,
+  "ms_graphhopper": 75,
   "largo_m": 4107,
-  "ms_total": 174
+  "ms_total": 154
  },
  "la-misericordia-cordoba": {
   "id": "la-misericordia-cordoba",
@@ -9988,9 +9993,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 67,
+  "ms_graphhopper": 77,
   "largo_m": 3422,
-  "ms_total": 131
+  "ms_total": 141
  },
  "la-pasion-cordoba": {
   "id": "la-pasion-cordoba",
@@ -10282,9 +10287,9 @@
    "29 m entre «Arco de Caballerizas» y «San Basilio»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 153,
+  "ms_graphhopper": 52,
   "largo_m": 2148,
-  "ms_total": 246
+  "ms_total": 155
  },
  "la-piedad-cordoba": {
   "id": "la-piedad-cordoba",
@@ -11022,9 +11027,9 @@
    "7 m entre «TRIUNFO» y «Amador de los Ríos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 194,
+  "ms_graphhopper": 146,
   "largo_m": 12271,
-  "ms_total": 477
+  "ms_total": 390
  },
  "jesus-nazareno-cordoba": {
   "id": "jesus-nazareno-cordoba",
@@ -11316,9 +11321,9 @@
    "16 m entre «Hermanos López Diéguez» y «Arroyo de San Andrés»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 73,
+  "ms_graphhopper": 78,
   "largo_m": 3968,
-  "ms_total": 136
+  "ms_total": 133
  },
  "la-caridad-cordoba": {
   "id": "la-caridad-cordoba",
@@ -11633,9 +11638,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 63,
+  "ms_graphhopper": 87,
   "largo_m": 3193,
-  "ms_total": 148
+  "ms_total": 193
  },
  "jesus-caido-cordoba": {
   "id": "jesus-caido-cordoba",
@@ -12132,9 +12137,9 @@
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 100,
+  "ms_graphhopper": 145,
   "largo_m": 5380,
-  "ms_total": 236
+  "ms_total": 294
  },
  "la-cena-cordoba": {
   "id": "la-cena-cordoba",
@@ -12646,9 +12651,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 77,
+  "ms_graphhopper": 74,
   "largo_m": 6326,
-  "ms_total": 184
+  "ms_total": 214
  },
  "las-angustias-cordoba": {
   "id": "las-angustias-cordoba",
@@ -13039,9 +13044,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 84,
+  "ms_graphhopper": 74,
   "largo_m": 4163,
-  "ms_total": 165
+  "ms_total": 204
  },
  "cristo-de-gracia-el-esparraguero-cordoba": {
   "id": "cristo-de-gracia-el-esparraguero-cordoba",
@@ -13480,9 +13485,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 56,
+  "ms_graphhopper": 86,
   "largo_m": 5070,
-  "ms_total": 134
+  "ms_total": 200
  },
  "la-buena-muerte-cordoba": {
   "id": "la-buena-muerte-cordoba",
@@ -13832,9 +13837,9 @@
    "14 m entre «Triunfo» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 72,
+  "ms_graphhopper": 97,
   "largo_m": 3023,
-  "ms_total": 134
+  "ms_total": 178
  },
  "santo-sepulcro-cordoba": {
   "id": "santo-sepulcro-cordoba",
@@ -14078,9 +14083,9 @@
    "14 m entre «TRIUNFO» y «Torrijos»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 58,
+  "ms_graphhopper": 78,
   "largo_m": 2927,
-  "ms_total": 118
+  "ms_total": 150
  },
  "la-soledad-cordoba": {
   "id": "la-soledad-cordoba",
@@ -14624,9 +14629,9 @@
    "27 m entre «plaza Cristo de Gracia» y «avenida de Rabanales»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 98,
+  "ms_graphhopper": 116,
   "largo_m": 6400,
-  "ms_total": 204
+  "ms_total": 236
  },
  "la-expiracion-cordoba": {
   "id": "la-expiracion-cordoba",
@@ -14923,9 +14928,9 @@
    "29 m entre «TUNDIDORES» y «Diario de Córdoba»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 71,
+  "ms_graphhopper": 66,
   "largo_m": 2738,
-  "ms_total": 137
+  "ms_total": 154
  },
  "el-descendimiento-cordoba": {
   "id": "el-descendimiento-cordoba",
@@ -15187,20 +15192,21 @@
    "6 m entre «Ronda de Isasa» y «PUENTE ROMANO ENTRADA»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 99,
+  "ms_graphhopper": 101,
   "largo_m": 2902,
-  "ms_total": 165
+  "ms_total": 216
  },
  "la-conversion-cordoba": {
   "id": "la-conversion-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
   "avisos": [
+   "«Quesada y Chacón» sin equivalente en OSM: no se traza (no se inventa)",
    "«carretera de Palma del Río»: la única calle de OSM con ese nombre está lejos de sus vecinas (homónimo): no se traza",
    "«carretera de Palma del Río»: la única calle de OSM con ese nombre está lejos de sus vecinas (homónimo): no se traza",
-   "hueco de 976 m entre «plaza de Electromecánicas» y «Manuel Fuentes Bocanegra»: en OSM no se tocan",
+   "hueco de 864 m entre «plaza de Electromecánicas» y «Viejo Almodovar»: en OSM no se tocan",
    "hueco de 40 m entre «Torrijos» y «PUERTA DEL PERDÓN»: en OSM no se tocan",
-   "hueco de 831 m entre «José María Martorell» y «avenida de la Fábrica»: en OSM no se tocan"
+   "hueco de 727 m entre «Quesada Chacón» y «avenida de la Fábrica»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
@@ -15249,7 +15255,23 @@
     "forzado": false
    },
    {
-    "i": 4,
+    "i": 5,
+    "lugar": "Viejo Almodovar",
+    "tipo": "calle",
+    "osm": "Calle Camino Viejo de Almodóvar",
+    "vias": [
+     99912425,
+     553083312,
+     553083315,
+     923763320,
+     1224758227
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 864,
+    "forzado": false
+   },
+   {
+    "i": 6,
     "lugar": "Manuel Fuentes Bocanegra",
     "tipo": "calle",
     "osm": "Calle Manuel Fuentes \"Bocanegra\"",
@@ -15260,11 +15282,11 @@
      1222066418
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 976,
+    "hueco_entrada_m": 24,
     "forzado": false
    },
    {
-    "i": 5,
+    "i": 7,
     "lugar": "avenida de Manolete",
     "tipo": "calle",
     "osm": "Avenida Manolete",
@@ -15278,7 +15300,7 @@
     "forzado": false
    },
    {
-    "i": 6,
+    "i": 8,
     "lugar": "Antonio Maura",
     "tipo": "calle",
     "osm": "Calle Antonio Maura",
@@ -15291,7 +15313,7 @@
     "forzado": false
    },
    {
-    "i": 7,
+    "i": 9,
     "lugar": "Camino de los Sastres",
     "tipo": "calle",
     "osm": "Camino de los Sastres",
@@ -15303,7 +15325,7 @@
     "forzado": false
    },
    {
-    "i": 8,
+    "i": 10,
     "lugar": "PERPETUO SOCORRO",
     "tipo": "calle",
     "osm": "Calle de la Virgen del Perpetuo Socorro",
@@ -15316,7 +15338,7 @@
     "forzado": false
    },
    {
-    "i": 9,
+    "i": 11,
     "lugar": "avenida del Aeropuerto",
     "tipo": "calle",
     "osm": "Avenida del Aeropuerto",
@@ -15367,7 +15389,7 @@
     "forzado": false
    },
    {
-    "i": 10,
+    "i": 12,
     "lugar": "Jardines de Vallellano",
     "tipo": "calle",
     "osm": "Avenida Conde de Vallellano",
@@ -15391,7 +15413,7 @@
     "forzado": false
    },
    {
-    "i": 11,
+    "i": 13,
     "lugar": "DOCTOR GREGORIO MARAÑÓN",
     "tipo": "calle",
     "osm": "Calle Doctor Gregorio Marañón",
@@ -15403,7 +15425,7 @@
     "forzado": false
    },
    {
-    "i": 12,
+    "i": 14,
     "lugar": "avenida del Doctor Fleming",
     "tipo": "calle",
     "osm": "Avenida del Doctor Fleming",
@@ -15416,7 +15438,7 @@
     "forzado": false
    },
    {
-    "i": 13,
+    "i": 15,
     "lugar": "Campo Santo de los Mártires",
     "tipo": "calle",
     "osm": "Calle Campo Santo de los Mártires",
@@ -15434,7 +15456,7 @@
     "forzado": false
    },
    {
-    "i": 14,
+    "i": 16,
     "lugar": "Santa Teresa de Jornet",
     "tipo": "calle",
     "osm": "Pasaje Santa Teresa Jornet",
@@ -15446,7 +15468,7 @@
     "forzado": false
    },
    {
-    "i": 15,
+    "i": 17,
     "lugar": "Ronda de Isasa",
     "tipo": "calle",
     "osm": "Calle Ronda de Isasa",
@@ -15459,7 +15481,7 @@
     "forzado": false
    },
    {
-    "i": 17,
+    "i": 19,
     "lugar": "TRIUNFO",
     "tipo": "calle",
     "osm": "Plaza del Triunfo",
@@ -15471,7 +15493,7 @@
     "forzado": false
    },
    {
-    "i": 18,
+    "i": 20,
     "lugar": "Torrijos",
     "tipo": "calle",
     "osm": "Calle de Torrijos",
@@ -15483,7 +15505,7 @@
     "forzado": false
    },
    {
-    "i": 19,
+    "i": 21,
     "lugar": "PUERTA DEL PERDÓN",
     "tipo": "catedral",
     "osm": "Catedral (por dentro)",
@@ -15493,7 +15515,7 @@
     "forzado": false
    },
    {
-    "i": 24,
+    "i": 26,
     "lugar": "Magistral González Francés",
     "tipo": "calle",
     "osm": "Calle del Magistral González Francés",
@@ -15507,7 +15529,7 @@
     "forzado": false
    },
    {
-    "i": 25,
+    "i": 27,
     "lugar": "Corregidor Luis de la Cerda",
     "tipo": "calle",
     "osm": "Calle del Corregidor Luis de la Cerda",
@@ -15520,7 +15542,7 @@
     "forzado": false
    },
    {
-    "i": 26,
+    "i": 28,
     "lugar": "Amador de los Ríos",
     "tipo": "calle",
     "osm": "Calle Amador de los Ríos",
@@ -15532,7 +15554,7 @@
     "forzado": false
    },
    {
-    "i": 27,
+    "i": 29,
     "lugar": "Campo Santo de los Mártires",
     "tipo": "calle",
     "osm": "Calle Campo Santo de los Mártires",
@@ -15550,7 +15572,7 @@
     "forzado": false
    },
    {
-    "i": 28,
+    "i": 30,
     "lugar": "DOCTOR FLEMING",
     "tipo": "calle",
     "osm": "Avenida del Doctor Fleming",
@@ -15563,7 +15585,7 @@
     "forzado": false
    },
    {
-    "i": 29,
+    "i": 31,
     "lugar": "DOCTOR GREGORIO MARAÑÓN",
     "tipo": "calle",
     "osm": "Calle Doctor Gregorio Marañón",
@@ -15575,7 +15597,7 @@
     "forzado": false
    },
    {
-    "i": 30,
+    "i": 32,
     "lugar": "jardines de Vallellano",
     "tipo": "calle",
     "osm": "Avenida Conde de Vallellano",
@@ -15599,7 +15621,7 @@
     "forzado": false
    },
    {
-    "i": 31,
+    "i": 33,
     "lugar": "avenida del Aeropuerto",
     "tipo": "calle",
     "osm": "Avenida del Aeropuerto",
@@ -15650,7 +15672,7 @@
     "forzado": false
    },
    {
-    "i": 32,
+    "i": 34,
     "lugar": "PERPETUO SOCORRO",
     "tipo": "calle",
     "osm": "Calle de la Virgen del Perpetuo Socorro",
@@ -15663,7 +15685,7 @@
     "forzado": false
    },
    {
-    "i": 33,
+    "i": 35,
     "lugar": "Camino de los Sastres",
     "tipo": "calle",
     "osm": "Camino de los Sastres",
@@ -15675,7 +15697,7 @@
     "forzado": false
    },
    {
-    "i": 34,
+    "i": 36,
     "lugar": "plaza de Costasol",
     "tipo": "calle",
     "osm": "Plaza Costa Sol",
@@ -15691,7 +15713,7 @@
     "forzado": false
    },
    {
-    "i": 35,
+    "i": 37,
     "lugar": "Antonio Maura",
     "tipo": "calle",
     "osm": "Calle Antonio Maura",
@@ -15704,7 +15726,7 @@
     "forzado": false
    },
    {
-    "i": 36,
+    "i": 38,
     "lugar": "Gran Vía Parque",
     "tipo": "calle",
     "osm": "Gran Vía Parque",
@@ -15727,7 +15749,7 @@
     "forzado": false
    },
    {
-    "i": 37,
+    "i": 39,
     "lugar": "avenida de Manolete",
     "tipo": "calle",
     "osm": "Avenida Manolete",
@@ -15741,7 +15763,7 @@
     "forzado": false
    },
    {
-    "i": 38,
+    "i": 40,
     "lugar": "José María Martorell",
     "tipo": "calle",
     "osm": "Calle José María Martorell",
@@ -15755,7 +15777,34 @@
     "forzado": false
    },
    {
-    "i": 40,
+    "i": 41,
+    "lugar": "Quesada Chacón",
+    "tipo": "calle",
+    "osm": "Avenida Escriba Lubna",
+    "vias": [
+     96916902,
+     96916907,
+     96988351,
+     99912433,
+     100000667,
+     100239273,
+     100239278,
+     206647307,
+     742273166,
+     742273167,
+     742273168,
+     742273169,
+     845990395,
+     936702335,
+     936702338,
+     1220061246
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 43,
     "lugar": "avenida de la Fábrica",
     "tipo": "calle",
     "osm": "Avenida de la Fábrica",
@@ -15765,11 +15814,11 @@
      536174385
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 831,
+    "hueco_entrada_m": 727,
     "forzado": false
    },
    {
-    "i": 41,
+    "i": 44,
     "lugar": "plaza de Electromecánicas",
     "tipo": "calle",
     "osm": "Plaza Electromecánicas",
@@ -15783,6 +15832,7 @@
   ],
   "enlaces": [
    "5 m entre «avenida de la Fábrica» y «plaza de Electromecánicas»",
+   "24 m entre «Viejo Almodovar» y «Manuel Fuentes Bocanegra»",
    "18 m entre «avenida de Manolete» y «Antonio Maura»",
    "26 m entre «Antonio Maura» y «Camino de los Sastres»",
    "11 m entre «Ronda de Isasa» y «TRIUNFO»",
@@ -15790,9 +15840,9 @@
    "5 m entre «avenida de la Fábrica» y «plaza de Electromecánicas»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 81,
-  "largo_m": 8819,
-  "ms_total": 265
+  "ms_graphhopper": 159,
+  "largo_m": 8844,
+  "ms_total": 449
  },
  "los-dolores-cordoba": {
   "id": "los-dolores-cordoba",
@@ -16241,42 +16291,24 @@
    "21 m entre «Torres Cabrera» y «Osario»"
   ],
   "por_la_catedral": "de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral (nodos 11613100948 y 3151300073): sin calle, línea por dentro",
-  "ms_graphhopper": 70,
+  "ms_graphhopper": 73,
   "largo_m": 4824,
-  "ms_total": 137
+  "ms_total": 190
  },
  "dolores-de-alcolea-cordoba": {
   "id": "dolores-de-alcolea-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
-  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
+  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-de-cordoba-2026_3.html",
   "avisos": [
-   "«PRACTICANTE PEDRO BERNÁ» sin equivalente en OSM: no se traza (no se inventa)",
-   "hueco de 105 m entre «CABO CARMONA CHAMIZO» y «CARRETERA DE MADRID»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «CABO CARMONA CHAMIZO» a 117 m"
+   "«Practicante Pedro Berná» sin equivalente en OSM: no se traza (no se inventa)",
+   "salida: sede sin localizar (empieza en la primera calle)",
+   "entrada: sede sin localizar (acaba en la última calle)"
   ],
   "correcciones": null,
-  "salida": {
-   "punto": [
-    37.93290005555556,
-    -4.673785322222222
-   ],
-   "como": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
-   "fuente": "OpenStreetMap way 565860372",
-   "dir": null
-  },
-  "entrada": {
-   "punto": [
-    37.93290005555556,
-    -4.673785322222222
-   ],
-   "como": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
-   "fuente": "OpenStreetMap way 565860372",
-   "dir": null
-  },
   "calles": [
    {
     "i": 1,
-    "lugar": "CABO CARMONA CHAMIZO",
+    "lugar": "Cabo Carmona Chamizo",
     "tipo": "calle",
     "osm": "Calle Cabo Carmona Chamizo",
     "vias": [
@@ -16288,19 +16320,25 @@
    },
    {
     "i": 3,
-    "lugar": "CARRETERA DE MADRID",
+    "lugar": "Carretera de Madrid",
     "tipo": "calle",
     "osm": "Carretera de Madrid",
     "vias": [
-     223704367
+     158508556,
+     158508558,
+     180730442,
+     180730463,
+     180730496,
+     223704329,
+     857773115
     ],
     "candidatas": 3,
-    "hueco_entrada_m": 105,
+    "hueco_entrada_m": 18,
     "forzado": false
    },
    {
     "i": 4,
-    "lugar": "HAZA DEL DEMONIO",
+    "lugar": "Haza del Demonio",
     "tipo": "calle",
     "osm": "Calle Haza del Demonio",
     "vias": [
@@ -16325,7 +16363,19 @@
    },
    {
     "i": 6,
-    "lugar": "GENERAL CABALLERO DE RODAS",
+    "lugar": "Paralela a la Carretera de Madrid",
+    "tipo": "calle",
+    "osm": "Carretera de Madrid",
+    "vias": [
+     223704367
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "General Caballero Rodas",
     "tipo": "calle",
     "osm": "Calle General Caballero Rodas",
     "vias": [
@@ -16336,8 +16386,8 @@
     "forzado": false
    },
    {
-    "i": 7,
-    "lugar": "GENERAL PEDRO A. ECHEVARRÍA",
+    "i": 8,
+    "lugar": "General Pedro A. Echevarría",
     "tipo": "calle",
     "osm": "Calle Soldado Pedro Agustín de Echevarría",
     "vias": [
@@ -16349,8 +16399,8 @@
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "SIERRA DE HORNACHUELOS",
+    "i": 9,
+    "lugar": "Sierra de Hornachuelos",
     "tipo": "calle",
     "osm": "Calle Sierra de Hornachuelos",
     "vias": [
@@ -16361,8 +16411,8 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "CARRETERA DE MADRID",
+    "i": 10,
+    "lugar": "Carretera de Madrid",
     "tipo": "calle",
     "osm": "Carretera de Madrid",
     "vias": [
@@ -16379,8 +16429,8 @@
     "forzado": false
    },
    {
-    "i": 10,
-    "lugar": "ACEQUIA",
+    "i": 11,
+    "lugar": "Acequia",
     "tipo": "calle",
     "osm": "Calle Acequia",
     "vias": [
@@ -16398,8 +16448,8 @@
     "forzado": false
    },
    {
-    "i": 11,
-    "lugar": "CABO CARMONA CHAMIZO",
+    "i": 12,
+    "lugar": "Cabo Carmona Chamizo",
     "tipo": "calle",
     "osm": "Calle Cabo Carmona Chamizo",
     "vias": [
@@ -16411,26 +16461,23 @@
    }
   ],
   "enlaces": [
-   "32 m entre «CTRA. DE MADRID (Paralela)» y «GENERAL CABALLERO DE RODAS»",
-   "34 m entre «GENERAL PEDRO A. ECHEVARRÍA» y «SIERRA DE HORNACHUELOS»",
-   "24 m entre «SIERRA DE HORNACHUELOS» y «CARRETERA DE MADRID»"
+   "18 m entre «Cabo Carmona Chamizo» y «Carretera de Madrid»",
+   "32 m entre «Paralela a la Carretera de Madrid» y «General Caballero Rodas»",
+   "34 m entre «General Pedro A. Echevarría» y «Sierra de Hornachuelos»",
+   "24 m entre «Sierra de Hornachuelos» y «Carretera de Madrid»"
   ],
-  "ms_graphhopper": 23,
-  "largo_m": 1348,
-  "ms_total": 60
+  "ms_graphhopper": 119,
+  "largo_m": 2604,
+  "ms_total": 208
  },
  "el-resucitado-cordoba": {
   "id": "el-resucitado-cordoba",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
-  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
+  "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-2026-domingo-de.html",
   "avisos": [
-   "hueco de 246 m entre «RONDA DE ISASA» y «PUERTA DE LAS COFRADÍAS»: en OSM no se tocan",
-   "hueco de 40 m entre «PUERTA DE LAS COFRADÍAS» y «JUDERÍA»: en OSM no se tocan",
-   "hueco de 48 m entre «CONDE Y LUQUE» y «BLANCO BELMONTE»: en OSM no se tocan",
-   "hueco de 125 m entre «ÁNGEL DE SAAVEDRA» y «PLAZA DE LA COMPAÑÍA»: en OSM no se tocan",
-   "hueco de 102 m entre «CLAUDIO MARCELO» y «ALFAROS»: en OSM no se tocan",
-   "hueco de 110 m entre «ALFAROS» y «PLAZA DEL CONDE DE PRIEGO»: en OSM no se tocan",
-   "puntos de la lista lejos del trazado: «PLAZA DEL CONDE DE PRIEGO» a 35 m"
+   "«Plaza Ruiz de Alda» sin equivalente en OSM: no se traza (no se inventa)",
+   "hueco de 246 m entre «Ronda de Isasa» y «PUERTA DE LAS COFRADÍAS»: en OSM no se tocan",
+   "puntos de la lista lejos del trazado: «Plaza Conde de Priego» a 35 m"
   ],
   "correcciones": null,
   "salida": {
@@ -16454,7 +16501,7 @@
   "calles": [
    {
     "i": 1,
-    "lugar": "PLAZA DEL CONDE DE PRIEGO",
+    "lugar": "Plaza Conde de Priego",
     "tipo": "calle",
     "osm": "Calle Conde de Priego",
     "vias": [
@@ -16481,8 +16528,8 @@
     "forzado": false
    },
    {
-    "i": 3,
-    "lugar": "PLAZA RUIZ DE ALDA",
+    "i": 4,
+    "lugar": "Puerta del Rincón",
     "tipo": "calle",
     "osm": "Calle Puerta del Rincón",
     "vias": [
@@ -16496,8 +16543,8 @@
     "forzado": false
    },
    {
-    "i": 4,
-    "lugar": "ALFAROS",
+    "i": 5,
+    "lugar": "Alfaros",
     "tipo": "calle",
     "osm": "Calle Alfaros",
     "vias": [
@@ -16510,8 +16557,8 @@
     "forzado": false
    },
    {
-    "i": 5,
-    "lugar": "CAPITULARES",
+    "i": 6,
+    "lugar": "Capitulares",
     "tipo": "calle",
     "osm": "Calle Capitulares",
     "vias": [
@@ -16523,8 +16570,8 @@
     "forzado": false
    },
    {
-    "i": 6,
-    "lugar": "DIARIO DE CÓRDOBA",
+    "i": 7,
+    "lugar": "Diario Córdoba",
     "tipo": "calle",
     "osm": "Calle Diario de Córdoba",
     "vias": [
@@ -16535,8 +16582,8 @@
     "forzado": false
    },
    {
-    "i": 7,
-    "lugar": "SAN FERNANDO",
+    "i": 8,
+    "lugar": "San Fernando",
     "tipo": "calle",
     "osm": "Calle San Fernando",
     "vias": [
@@ -16548,8 +16595,8 @@
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "CRUZ DEL RASTRO",
+    "i": 9,
+    "lugar": "Cruz del Rastro",
     "tipo": "calle",
     "osm": "Plaza Cruz del Rastro",
     "vias": [
@@ -16563,8 +16610,8 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "RONDA DE ISASA",
+    "i": 10,
+    "lugar": "Ronda de Isasa",
     "tipo": "calle",
     "osm": "Calle Ronda de Isasa",
     "vias": [
@@ -16576,7 +16623,7 @@
     "forzado": false
    },
    {
-    "i": 11,
+    "i": 12,
     "lugar": "PUERTA DE LAS COFRADÍAS",
     "tipo": "catedral",
     "osm": "Catedral (por dentro)",
@@ -16586,20 +16633,34 @@
     "forzado": false
    },
    {
-    "i": 13,
-    "lugar": "JUDERÍA",
+    "i": 14,
+    "lugar": "Cardenal Herreros",
+    "tipo": "calle",
+    "osm": "Calle del Cardenal Herrero",
+    "vias": [
+     36169682,
+     279256945,
+     550912405
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Judería",
     "tipo": "calle",
     "osm": "Calle Judería",
     "vias": [
      34861611
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 40,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 14,
-    "lugar": "DEANES",
+    "i": 16,
+    "lugar": "Deanes",
     "tipo": "calle",
     "osm": "Calle Deanes",
     "vias": [
@@ -16611,8 +16672,8 @@
     "forzado": false
    },
    {
-    "i": 15,
-    "lugar": "CONDE Y LUQUE",
+    "i": 17,
+    "lugar": "Conde y Luque",
     "tipo": "calle",
     "osm": "Calle Conde y Luque",
     "vias": [
@@ -16623,8 +16684,23 @@
     "forzado": false
    },
    {
-    "i": 16,
-    "lugar": "BLANCO BELMONTE",
+    "i": 18,
+    "lugar": "Plaza Agrupación de Cofradías",
+    "tipo": "calle",
+    "osm": "Plaza Agrupación de Cofradías",
+    "vias": [
+     36276763,
+     277064371,
+     670879857,
+     670879858
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Blanco Belmonte",
     "tipo": "calle",
     "osm": "Calle Blanco Belmonte",
     "vias": [
@@ -16633,12 +16709,12 @@
      1284606822
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 48,
+    "hueco_entrada_m": 1,
     "forzado": false
    },
    {
-    "i": 17,
-    "lugar": "ÁNGEL DE SAAVEDRA",
+    "i": 20,
+    "lugar": "Ángel de Saavedra",
     "tipo": "calle",
     "osm": "Calle Ángel de Saavedra",
     "vias": [
@@ -16655,8 +16731,35 @@
     "forzado": false
    },
    {
-    "i": 18,
-    "lugar": "PLAZA DE LA COMPAÑÍA",
+    "i": 21,
+    "lugar": "Juan Valera",
+    "tipo": "calle",
+    "osm": "Calle Juan Valera",
+    "vias": [
+     301595732
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Santa Victoria",
+    "tipo": "calle",
+    "osm": "Calle Santa Victoria",
+    "vias": [
+     301595734,
+     1204280044,
+     1422564712,
+     1422564713
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Plaza de la Compañía",
     "tipo": "calle",
     "osm": "Plaza de la Compañía",
     "vias": [
@@ -16665,12 +16768,12 @@
      301596022
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 125,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 19,
-    "lugar": "CONDE DE CÁRDENAS",
+    "i": 24,
+    "lugar": "Conde de Cárdenas",
     "tipo": "calle",
     "osm": "Calle Conde de Cárdenas",
     "vias": [
@@ -16682,8 +16785,8 @@
     "forzado": false
    },
    {
-    "i": 20,
-    "lugar": "MARÍA CRISTINA",
+    "i": 25,
+    "lugar": "María Cristina",
     "tipo": "calle",
     "osm": "Calle María Cristina",
     "vias": [
@@ -16695,8 +16798,8 @@
     "forzado": false
    },
    {
-    "i": 21,
-    "lugar": "CLAUDIO MARCELO",
+    "i": 26,
+    "lugar": "Claudio Marcelo",
     "tipo": "calle",
     "osm": "Calle Claudio Marcelo",
     "vias": [
@@ -16707,8 +16810,21 @@
     "forzado": false
    },
    {
-    "i": 22,
-    "lugar": "ALFAROS",
+    "i": 27,
+    "lugar": "Capitulares",
+    "tipo": "calle",
+    "osm": "Calle Capitulares",
+    "vias": [
+     23646752,
+     728205430
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Alfaros",
     "tipo": "calle",
     "osm": "Calle Alfaros",
     "vias": [
@@ -16717,12 +16833,27 @@
      459447209
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 102,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
-    "i": 23,
-    "lugar": "PLAZA DEL CONDE DE PRIEGO",
+    "i": 29,
+    "lugar": "Puerta del Rincón",
+    "tipo": "calle",
+    "osm": "Calle Puerta del Rincón",
+    "vias": [
+     86495624,
+     100182254,
+     563409245,
+     922859320
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Plaza Conde de Priego",
     "tipo": "calle",
     "osm": "Calle Conde de Priego",
     "vias": [
@@ -16731,16 +16862,16 @@
      922859320
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 110,
+    "hueco_entrada_m": 0,
     "forzado": false
    }
   ],
   "enlaces": [
-   "27 m entre «PASAJE DE LA ESTRELLA» y «PLAZA RUIZ DE ALDA»"
+   "27 m entre «PASAJE DE LA ESTRELLA» y «Puerta del Rincón»"
   ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 69,
-  "largo_m": 3888,
-  "ms_total": 138
+  "ms_graphhopper": 60,
+  "largo_m": 3830,
+  "ms_total": 172
  }
 }
