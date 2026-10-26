@@ -916,7 +916,7 @@ function enlaceFuente(m, f, campo) {
 }
 function fuentesMarcha(m) {
   const grupos = [['Título y compositor', ['titulo', 'autor'], true], ['Año', ['anio'], m.anio], ['Formación', ['formacion'], m.tipo], ['Dedicatoria', ['dedicatoria'], m.h || m.dedicatoria], ['Grabación', ['video'], m.video], ['Tipo, estreno y lugar', ['tipo', 'estreno', 'lugar', 'detalles'], m.tipoMarcha || m.estreno || m.lugar]];
-  const filas = grupos.filter(([, , hay]) => hay).map(([et, cs]) => { const fs_ = [...new Set(cs.flatMap((c) => (m.fuentes || {})[c] || []))]; return fs_.length ? `<li><strong>${et}:</strong> ${fs_.map((f) => enlaceFuente(m, f, cs[0])).join(', ')}</li>` : ''; }).filter(Boolean);
+  const filas = grupos.filter(([, , hay]) => hay).map(([et, cs]) => { const fs_ = [...new Set(cs.flatMap((c) => (m.fuentes || {})[c] || []))]; const enl = [...new Set(fs_.map((f) => enlaceFuente(m, f, cs[0])))]; const vistos = new Set(); const unicos = enl.filter((e) => { const h = (e.match(/href="([^"]+)"/) || [])[1] || e; if (vistos.has(h)) return false; vistos.add(h); return true; }); return unicos.length ? `<li><strong>${et}:</strong> ${unicos.join(', ')}</li>` : ''; }).filter(Boolean);
   // Fuente que solo dice de qué hermandad es la marcha (la dedicatoria la dan las de arriba)
   if (m.urls && m.urls.desambigua) { const rv = (m.revision || []).find((x) => x.url === m.urls.desambigua); filas.push(`<li><strong>Hermandad:</strong> <a href="${esc(m.urls.desambigua)}" target="_blank" rel="noopener nofollow">${esc((rv && rv.fuente) || 'fuente')}</a></li>`); }
   // Partituras en la Biblioteca Nacional: una por edición o manuscrito
