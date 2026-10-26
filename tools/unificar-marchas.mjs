@@ -282,7 +282,7 @@ for (const rp of REPS) for (const x of rp.marchas) {
   let r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor));
   if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
   fuente(r, 'titulo', 'part'); fuente(r, 'autor', 'part');
-  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) });
+  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', 'part');
   if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f: 'part' }];
   if (x.dedicatoria) r._deds = [...(r._deds || []), { texto: x.dedicatoria, loc: '', f: 'part', url: '' }];
 }

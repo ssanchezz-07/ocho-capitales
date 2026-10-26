@@ -1026,7 +1026,7 @@ const FICHA_MDP = new Set(['anio', 'dedicatoria', 'tipo', 'estreno', 'lugar', 'd
 function enlaceFuente(m, f, campo) {
   let url = f === 'part' ? '' : (m.urls || {})[f] || (FUENTES_M[f] && FUENTES_M[f].url) || ''; // las partituras de una banda son privadas: sin enlace
   if (f === 'mdp' && FICHA_MDP.has(campo) && m.urls.mdpFicha) url = m.urls.mdpFicha;
-  const nombre = f === 'rev' && m.revision && m.revision.at(-1).fuente ? m.revision.at(-1).fuente : NOMBRE_F[f] || f;
+  const nombre = f === 'rev' && m.revision && m.revision.at(-1).fuente ? m.revision.at(-1).fuente : NOMBRE_F[f] || (FUENTES_M[f] && FUENTES_M[f].nombre) || f;
   return url ? `<a href="${esc(url)}" target="_blank" rel="noopener nofollow">${esc(nombre)}</a>` : esc(nombre);
 }
 function fuentesMarcha(m) {
