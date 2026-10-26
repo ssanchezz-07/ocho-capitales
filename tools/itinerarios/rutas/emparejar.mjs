@@ -170,8 +170,9 @@ export function motor(c) {
       const sal = i === R.length - 1 ? (sedeE ? masCerca(o, X(...sedeE.punto)) : [salidas(o).at(-1)[0], salidas(o).at(-1)[1]]) : [ch.estados[i].pa, ch.estados[i].na];
       informe.calles.push({ i: f.i, lugar: f.lugar, tipo: f.tipo, osm: o.nombre, vias: o.ids || null, candidatas: f.opciones.length, hueco_entrada_m: i ? Math.round(ch.estados[i - 1].gap) : null, forzado: !!forz[f.i] });
       if (i > 0 && ch.estados[i - 1].gap > 40) informe.avisos.push(`hueco de ${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»: en OSM no se tocan`);
-      // OSM no une dos calles seguidas de la lista que están a 3-40 m: enlace recto (anotado) en vez de un rodeo con media vuelta
-      if (i > 0 && ch.estados[i - 1].gap > 3 && ch.estados[i - 1].gap <= 40 && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
+      // OSM no une dos calles seguidas de la lista que están a 3-40 m: enlace recto (anotado) en vez de un rodeo con media vuelta.
+      // La lista puede pedirlo también hasta 200 m («rectos»: índices), para cruzar una plaza abierta que OSM no tiene como vía.
+      if (i > 0 && ch.estados[i - 1].gap > 3 && (ch.estados[i - 1].gap <= 40 || ((L.rectos || []).includes(f.i) && ch.estados[i - 1].gap <= 200)) && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
       if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${o.pc.nombre} (nodos ${o.pc.entra.id} y ${o.pc.sale.id}): sin calle, línea por dentro`; continue; }
       // desde la sede se va directo al primer cruce (el punto de la calle más cercano a la puerta puede quedar «detrás» y obligar a dar la vuelta)
       if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
