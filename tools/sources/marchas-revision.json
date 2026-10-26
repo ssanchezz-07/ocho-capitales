@@ -2137,6 +2137,986 @@
    "nota": "Blog «Música Procesional de Jaén»: la lista entre las marchas dedicadas de esta cofradía (solo sirve para elegir la hermandad)",
    "campos": {},
    "solo_desambigua": true
+  },
+  {
+   "slug": "dios-te-salve-rosario-pascual-gonzalez-moreno-y-david-hurtado-torres",
+   "hermandad": "san-pablo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3344",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "a-la-gloria-de-maria-juan-manuel-cutino-garrido",
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3400",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "al-santisimo-cristo-del-amor-manuel-lopez-farfan",
+   "hermandad": "el-amor-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-857",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "amor-en-nazaret-abel-moreno-gomez",
+   "hermandad": "pino-montano-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5166",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "amparanos-senora-juan-carlos-sempere-bomboi",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4475",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "angel-de-la-aurora-miguel-angel-font-morgado",
+   "hermandad": "la-resurreccion-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4474",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "angeles-de-esperanza-jose-manuel-jodar-marin",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3714",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "angustias-de-sevilla-jacinto-manuel-rojas-guisado",
+   "hermandad": "los-gitanos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3486",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "auxilio-y-esperanza-victor-arturo-lopez-lopez",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3872",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "blanca-paz-pedro-morales-munoz",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2916",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "coronacion-de-la-paz-david-hurtado-torres",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4939",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "coronacion-de-la-victoria-daniel-albarran-acosta",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5358",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-del-amor-manuel-berna-garcia",
+   "hermandad": "el-amor-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-756",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-del-calvario-jose-albero-frances",
+   "hermandad": "el-calvario-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-204",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "dolores-de-torreblanca-pablo-molina-bautista",
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-43",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "dolores-reina-de-torreblanca-pablo-perea-garrido",
+   "hermandad": "dolores-de-torreblanca-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5720",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "domina-angelorum-alberto-fernandez-palacios-garcia",
+   "hermandad": "los-negritos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4420",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "encarnacion-cristobal-lopez-gandara",
+   "hermandad": "san-benito-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5076",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "esos-tus-ojos-david-hurtado-torres",
+   "hermandad": "san-pablo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4585",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-de-la-trinidad-jose-albero-frances",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3226",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-de-la-trinidad-coronada-abel-moreno-gomez",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2341",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-salesiana-jose-manuel-bernal-montero",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2348",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "himno-para-la-coronacion-de-la-paz-manuel-bernal-nieto",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4946",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-de-las-penas-antonio-pantion-perez",
+   "hermandad": "las-penas-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-283",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-blanca-estela-carlos-puelles-cervantes",
+   "hermandad": "san-gonzalo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4096",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-esperanza-blanca-manuel-ramos-rincon",
+   "hermandad": "la-trinidad-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3442",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-paz-daniel-albarran-acosta",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4557",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-soledad-pedro-morales-munoz",
+   "hermandad": "la-soledad-de-san-lorenzo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-236",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-soledad-de-san-lorenzo-jacinto-manuel-rojas-guisado",
+   "hermandad": "la-soledad-de-san-lorenzo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4534",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "la-victoria-de-la-fe-francisco-javier-gonzalez-rios",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4280",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "lagrimas-del-cielo-jose-velez-garcia",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5496",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "los-angeles-te-coronan-david-torres-fernandez",
+   "hermandad": "los-negritos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5655",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "luz-de-nuestra-fe-jesus-joaquin-espinosa-de-los-los-monteros-perez",
+   "hermandad": "santa-genoveva-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4616",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "luz-de-sevilla-juan-garcia-sanchez",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5263",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "madre-cigarrera-cristobal-lopez-gandara",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4545",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "madre-de-dios-de-la-victoria-pedro-morales-munoz",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3113",
+   "nombre_fuente": "Patrimonio Musical, ficha de la marcha",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "madre-de-dios-del-socorro-jacinto-manuel-rojas-guisado",
+   "hermandad": "el-amor-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3934",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-del-refugio-cristobal-lopez-gandara",
+   "hermandad": "san-bernardo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5391",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-del-rocio-joaquin-caballero-payan",
+   "hermandad": "redencion-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3521",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-del-socorro-jose-miguel-alvarez-gutierrez",
+   "hermandad": "el-amor-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-426",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-en-su-soledad-jose-albero-frances",
+   "hermandad": "la-soledad-de-san-lorenzo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3447",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "mercedes-jose-leon-alapont",
+   "hermandad": "santa-genoveva-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5394",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "mercedes-para-un-barrio-jesus-ramon-munoz-gil",
+   "hermandad": "santa-genoveva-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3930",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "nuestra-senora-del-socorro-jose-albero-frances",
+   "hermandad": "el-amor-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3448",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "nuestro-padre-jesus-cautivo-miguel-quiros-parejo",
+   "hermandad": "santa-genoveva-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-138",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "pasa-la-virgen-del-cerro-ismael-jimenez-gomez",
+   "hermandad": "el-cerro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-663",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "pasion-1615-antonio-moreno-pozo",
+   "hermandad": "pasion-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4849",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "patrocinio-de-triana-juan-garcia-sanchez",
+   "hermandad": "el-cachorro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4883",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "patrocinio-madre-de-triana-jose-ramon-rico-munoz",
+   "hermandad": "el-cachorro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4146",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "refugio-de-pecadores-y-reina-de-san-bernardo-enrique-cisma-riscardo",
+   "hermandad": "san-bernardo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4423",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "regina-pacis-manuel-borrego-hernandez",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-180",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-cielos-y-tierra-francisco-javier-gonzalez-rios",
+   "hermandad": "la-cena-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4191",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-las-cigarreras-juan-carlos-sempere-bomboi",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4064",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-san-roman-arrorro-gines-sanchez-torres",
+   "hermandad": "los-gitanos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-290",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-santa-catalina-abel-moreno-gomez",
+   "hermandad": "la-exaltacion-los-caballos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5563",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-del-amor-pedro-morales-munoz",
+   "hermandad": "pino-montano-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-887",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "reina-del-porvenir-juan-antonio-carmona-paez",
+   "hermandad": "la-paz-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4287",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "sagrada-victoria-alberto-barea-tejada",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4431",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "salve-a-la-virgen-de-los-dolores-jose-antonio-martin-avalos",
+   "hermandad": "el-cerro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-662",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-de-la-aurora-antonio-torres-vergara",
+   "hermandad": "la-resurreccion-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4297",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-de-los-dolores-coronada-francisco-del-toro-zamora",
+   "hermandad": "el-cerro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-661",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-del-amor-javier-calvo-gavino",
+   "hermandad": "pino-montano-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2762",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-del-cerro-gines-sanchez-torres",
+   "hermandad": "el-cerro-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-296",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-del-rosario-doloroso-jacinto-manuel-rojas-guisado",
+   "hermandad": "san-pablo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3320",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-victoriosa-victor-arturo-lopez-lopez",
+   "hermandad": "las-cigarreras-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4067",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha)",
+   "fecha": "2026-10-26",
+   "nota": "La ficha nombra la hermandad (campo «Dedicatoria Hdad. Sevilla»)",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-el-galileo-manuel-alejandro-gonzalez-cruz",
+   "hermandad": "san-pablo-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=VDfjb8sMFB0",
+   "nombre_fuente": "Marchas de Procesión (descripción YouTube)",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "que-grande-ser-de-ti-francisco-jose-carrasco-benitez",
+   "hermandad": "los-gitanos-sevilla",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=93FgFUVVTtk",
+   "nombre_fuente": "Marchas de Procesión (descripción YouTube)",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "25-anos-tras-tu-palio-concha-rafael-ballesteros-garcia",
+   "hermandad": "la-concha-granada",
+   "accion": "ligar",
+   "fuente": "https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/",
+   "nombre_fuente": "Federación de Cofradías de Granada, ficha de la Hermandad del Amor y la Entrega y Concepción (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "amor-y-concepcion-jaime-moreno-martinez",
+   "hermandad": "la-concha-granada",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=4FVcp8gIl3Y",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "coronacion-de-la-soledad-jose-antonio-molero-luque",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5000",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5000",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-de-la-sangre-salvador-vazquez-sanchez",
+   "hermandad": "sangre-malaga",
+   "accion": "ligar",
+   "fuente": "https://archicofradiadelasangre.es/marchas-procesionales-dedicadas/",
+   "nombre_fuente": "Archicofradía de la Sangre de Málaga (web oficial), Marchas procesionales dedicadas",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "danos-tu-paz-jose-luis-perez-zambrana",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "ligar",
+   "fuente": "https://malaga.eu/visorcontenido/ANUDocumentDisplayer/177112/COMUNICADO.pdf",
+   "nombre_fuente": "Ayuntamiento de Málaga, comunicado del concierto de Cuaresma de la Banda Municipal (27-03-2025)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "dolorosa-concepcion-cristobal-lopez-gandara",
+   "hermandad": "la-concha-granada",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=dcKPER_-OfQ",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "dulce-nombre-de-esperanza-jose-manuel-garcia-pulido",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4446",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4446",
+   "fecha": "2026-10-26",
+   "nota": "Esperanza Coronada de Málaga o XXV aniversario de su coronación (1988): la Esperanza del Perchel",
+   "campos": {}
+  },
+  {
+   "slug": "en-tus-manos-soledad-alfonso-lopez-cortes",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4999",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4999",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-reina-de-malaga-narciso-perez-espinosa",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4404",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4404",
+   "fecha": "2026-10-26",
+   "nota": "Esperanza Coronada de Málaga o XXV aniversario de su coronación (1988): la Esperanza del Perchel",
+   "campos": {}
+  },
+  {
+   "slug": "flor-de-lis-jose-luis-perez-zambrana",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4998",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4998",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "frente-a-ti-eloy-garcia-lopez",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4996",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4996",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "la-esperanza-alfonso-lopez-cortes",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5005",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5005",
+   "fecha": "2026-10-26",
+   "nota": "Esperanza Coronada de Málaga o XXV aniversario de su coronación (1988): la Esperanza del Perchel",
+   "campos": {}
+  },
+  {
+   "slug": "la-esperanza-de-malaga-luis-dominguez-dominguez",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=llPnBEBGCGc",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "Esperanza Coronada de Málaga o XXV aniversario de su coronación (1988): la Esperanza del Perchel",
+   "campos": {}
+  },
+  {
+   "slug": "la-soledad-sergio-bueno-de-la-pena",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4542",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4542",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "la-virgen-de-la-paz-narciso-perez-espinosa",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=PIduJp_LptM",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "la-virgen-de-la-soledad-juan-manuel-parra-urbano",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4615",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4615",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "nana-del-dios-te-salve-plegaria-jose-luis-de-la-torre-castellano",
+   "hermandad": "los-salesianos-granada",
+   "accion": "ligar",
+   "fuente": "https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/",
+   "nombre_fuente": "Federación de Cofradías de Granada, ficha de la Hermandad Salesiana (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "regina-maris-francisco-javier-criado-jimenez",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5004",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5004",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "reina-coronada-juan-manuel-parra-urbano",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4256",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4256",
+   "fecha": "2026-10-26",
+   "nota": "Esperanza Coronada de Málaga o XXV aniversario de su coronación (1988): la Esperanza del Perchel",
+   "campos": {}
+  },
+  {
+   "slug": "reina-y-madre-de-churriana-jose-ignacio-fortis-perez",
+   "hermandad": "dolores-de-churriana-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=LQsjZhnKSrs",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-victor-manuel-ferrer-castillo",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4630",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4630",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-coronada-narciso-perez-espinosa",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5001",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5001",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-de-mena-jose-antonio-molero-luque",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4607",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4607",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-de-mena-coronada-antonio-gonzalez-ecija",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5002",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5002",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-marinera-sergio-infante-perez",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5003",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-5003",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "suspiros-en-la-tribuna-de-los-pobres-pedro-gordillo-rosa",
+   "hermandad": "sangre-malaga",
+   "accion": "ligar",
+   "fuente": "https://archicofradiadelasangre.es/marchas-procesionales-dedicadas/",
+   "nombre_fuente": "Archicofradía de la Sangre de Málaga (web oficial), Marchas procesionales dedicadas",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "tu-coronacion-soledad-de-mena-francisco-cano-ruiz",
+   "hermandad": "mena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4997",
+   "nombre_fuente": "Patrimonio Musical, ficha bd-marcha-4997",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria nombra la Soledad de Mena",
+   "campos": {}
+  },
+  {
+   "slug": "la-humildad-carlos-puelles-cervantes-y-bienvenido-puelles-oliver",
+   "hermandad": "la-canilla-granada",
+   "accion": "ligar",
+   "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
+   "nombre_fuente": "Federación de Cofradías de Granada, ficha de la Cofradía del Señor de la Humildad (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-luis-marquez-salaverri",
+   "hermandad": "la-canilla-granada",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=xtAlfM6-UCg",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "dulcis-nomen-iesus-francisco-jesus-flores-matute",
+   "hermandad": "esperanza-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=TrwZxiBdUw0",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
+  },
+  {
+   "slug": "siervos-de-maria-santisima-de-los-dolores-manuel-mari-beffa",
+   "hermandad": "servitas-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.youtube.com/watch?v=Ssl5BoNi9Hc",
+   "nombre_fuente": "YouTube, canal Marchas de Procesión (descripción)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente nombra la hermandad",
+   "campos": {}
   }
  ]
 }
