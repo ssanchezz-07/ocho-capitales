@@ -257,3 +257,12 @@ a { text-underline-offset: .18em; }
 .vx-play { display: inline-flex; align-items: center; gap: 6px; min-height: 22px; padding: 0 9px 0 7px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 10%, transparent); color: var(--primary); font-size: .74rem; font-weight: 700; letter-spacing: .03em; }
 .vx-play::before { content: ""; width: 0; height: 0; border-left: 7px solid currentColor; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
 @media (max-width: 640px) { .vx-autores ul { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter); margin: 0 calc(var(--gutter) * -1); padding: 4px var(--gutter) 12px; scrollbar-width: none; } .vx-autores ul::-webkit-scrollbar { display: none; } .vx-autores li { flex: 0 0 72%; scroll-snap-align: start; } }
+
+/* ---------- 5. Fuentes de las fichas: una línea por fuente, con lo que aporta ---------- */
+.oc-fuentes { display: grid; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
+.oc-fuentes li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin: 0; padding: 11px 14px 11px 34px; position: relative; border-radius: 14px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .05); font-size: .95rem; line-height: 1.4; }
+.oc-fuentes li::before { content: ""; position: absolute; left: 14px; top: 1.05em; width: 8px; height: 8px; border-radius: 50%; background: var(--oro); box-shadow: 0 0 0 3px color-mix(in srgb, var(--oro) 22%, transparent); }
+.oc-fuentes a { font-weight: 700; color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.oc-fuentes span { color: var(--muted); }
+.oc-fuentes span::before { content: "· "; color: var(--gold-ink); }
+.oc-fuentes strong { font-weight: 600; }
