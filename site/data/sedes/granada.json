@@ -1,0 +1,342 @@
+{
+ "capital": "granada",
+ "nombre": "Granada",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "la-borriquilla-granada": {
+   "nombre": "La Borriquilla",
+   "templo": {
+    "nombre": "Iglesia de San Andrés",
+    "lat": 37.1811503,
+    "lon": -3.599297,
+    "osm": "way/158416828",
+    "nombre_osm": "Iglesia de San Andrés",
+    "fuente": "https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/",
+    "fuente_coordenadas": "OpenStreetMap way 158416828"
+   },
+   "casa_hermandad": null
+  },
+  "santa-cena-granada": {
+   "nombre": "Santa Cena",
+   "templo": {
+    "nombre": "Iglesia de Santo Domingo",
+    "lat": 37.1729469,
+    "lon": -3.5944476,
+    "osm": "way/155265056",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/",
+    "fuente_coordenadas": "OpenStreetMap way 155265056"
+   },
+   "casa_hermandad": null
+  },
+  "la-sentencia-maravillas-granada": {
+   "nombre": "La Sentencia («Maravillas»)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («San Pedro y San Pablo (Albaicín)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "nombre": "El Despojado («Silencio Blanco»)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Emilio»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-cautivo-granada": {
+   "nombre": "El Cautivo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla junto al convento de la Encarnación; sale del Sagrario»: varios edificios posibles en OSM: Iglesia del Sagrario | Parroquia de la Encarnación"
+   ]
+  },
+  "el-trabajo-granada": {
+   "nombre": "El Trabajo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia del Corpus Christi»: OSM solo tiene el «Convento del Santísimo Corpus»; sin confirmar que sea el mismo templo"
+   ]
+  },
+  "nuestra-senora-de-los-dolores-granada": {
+   "nombre": "Nuestra Señora de los Dolores",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («San Pedro y San Pablo») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "jesus-del-rescate-granada": {
+   "nombre": "Jesús del Rescate",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia del Corpus Christi»: OSM solo tiene el «Convento del Santísimo Corpus»; sin confirmar que sea el mismo templo"
+   ]
+  },
+  "el-huerto-granada": {
+   "nombre": "El Huerto",
+   "templo": {
+    "nombre": "Monasterio de las Comendadoras de Santiago",
+    "lat": 37.1722216,
+    "lon": -3.5936358,
+    "osm": "way/163211650",
+    "nombre_osm": "Convento de las Comendadoras de Santiago",
+    "fuente": "https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/",
+    "fuente_coordenadas": "OpenStreetMap way 163211650"
+   },
+   "casa_hermandad": null
+  },
+  "cristo-de-san-agustin-granada": {
+   "nombre": "Cristo de San Agustín",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Monasterio del Santo Ángel Custodio»: OSM solo tiene la «Parroquia Santo Ángel Custodio», otro templo, a 2 km; sin confirmar"
+   ]
+  },
+  "la-lanzada-granada": {
+   "nombre": "La Lanzada",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Nuestra Señora de los Dolores»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-via-crucis-granada": {
+   "nombre": "El Vía Crucis",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Albaicín») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "la-esperanza-granada": {
+   "nombre": "La Esperanza",
+   "templo": {
+    "nombre": "Iglesia de San Gil y Santa Ana",
+    "lat": 37.1774808,
+    "lon": -3.5945034,
+    "osm": "way/182781569",
+    "nombre_osm": "Iglesia de San Gil y Santa Ana",
+    "fuente": "https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/",
+    "fuente_coordenadas": "OpenStreetMap way 182781569"
+   },
+   "casa_hermandad": null
+  },
+  "la-canilla-granada": {
+   "nombre": "La Cañilla",
+   "templo": {
+    "nombre": "Iglesia de Santo Domingo",
+    "lat": 37.1729469,
+    "lon": -3.5944476,
+    "osm": "way/155265056",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
+    "fuente_coordenadas": "OpenStreetMap way 155265056"
+   },
+   "casa_hermandad": null
+  },
+  "los-gitanos-granada": {
+   "nombre": "Los Gitanos",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Abadía del Sacromonte»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "los-estudiantes-granada": {
+   "nombre": "Los Estudiantes",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Colegiata de los Santos Justo y Pastor»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "paciencia-y-penas-granada": {
+   "nombre": "Paciencia y Penas",
+   "templo": {
+    "nombre": "Iglesia de San Matías",
+    "lat": 37.17368,
+    "lon": -3.5964634,
+    "osm": "way/118183617",
+    "nombre_osm": "Iglesia de San Matías",
+    "fuente": "https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/",
+    "fuente_coordenadas": "OpenStreetMap way 118183617"
+   },
+   "casa_hermandad": null
+  },
+  "tres-caidas-y-rosario-granada": {
+   "nombre": "Tres Caídas y Rosario",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («Santa Isabel la Real / Santo Domingo») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "el-nazareno-granada": {
+   "nombre": "El Nazareno",
+   "templo": {
+    "nombre": "Convento de San José",
+    "lat": 37.1750243,
+    "lon": -3.5971262,
+    "osm": "way/1255242560",
+    "nombre_osm": "Convento de San José de Carmelitas Descalzas",
+    "fuente": "https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/",
+    "fuente_coordenadas": "OpenStreetMap way 1255242560"
+   },
+   "casa_hermandad": null
+  },
+  "los-salesianos-granada": {
+   "nombre": "Los Salesianos",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia de María Auxiliadora»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-concha-granada": {
+   "nombre": "La Concha",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Monasterio de la Concepción»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-aurora-granada": {
+   "nombre": "La Aurora",
+   "templo": {
+    "nombre": "Iglesia de la Aurora y San Miguel Bajo",
+    "lat": 37.1807987,
+    "lon": -3.5967401,
+    "osm": "way/100268334",
+    "nombre_osm": "Iglesia de San Miguel Bajo",
+    "fuente": "https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/",
+    "fuente_coordenadas": "OpenStreetMap way 100268334"
+   },
+   "casa_hermandad": null
+  },
+  "la-estrella-granada": {
+   "nombre": "La Estrella",
+   "templo": {
+    "nombre": "Iglesia de San Cristóbal",
+    "lat": 37.1835725,
+    "lon": -3.5964266,
+    "osm": "way/423971605",
+    "nombre_osm": "Iglesia de San Cristóbal",
+    "fuente": "https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/",
+    "fuente_coordenadas": "OpenStreetMap way 423971605"
+   },
+   "casa_hermandad": null
+  },
+  "el-silencio-granada": {
+   "nombre": "El Silencio",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («San Pedro y San Pablo (Paseo de los Tristes)») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "los-ferroviarios-granada": {
+   "nombre": "Los Ferroviarios",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Juan de Letrán»: OSM solo tiene una «Ermita de San Juan de Letrán»; sin confirmar que sea la parroquia"
+   ]
+  },
+  "los-favores-granada": {
+   "nombre": "Los Favores",
+   "templo": {
+    "nombre": "Parroquia de San Cecilio",
+    "lat": 37.1735272,
+    "lon": -3.5906359,
+    "osm": "way/118170982",
+    "nombre_osm": "Iglesia de San Cecilio",
+    "fuente": "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/",
+    "fuente_coordenadas": "OpenStreetMap way 118170982"
+   },
+   "casa_hermandad": null
+  },
+  "los-escolapios-granada": {
+   "nombre": "Los Escolapios",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia de San José de Calasanz»: en OSM solo casa con la «Iglesia de San José» del Albaicín, que es otra; sin confirmar"
+   ]
+  },
+  "santo-entierro-granada": {
+   "nombre": "Santo Entierro",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "la sede de la ficha («San Gil y Santa Ana») no es un templo: falta situarla con fuente"
+   ]
+  },
+  "las-chias-granada": {
+   "nombre": "Las Chías",
+   "templo": {
+    "nombre": "Monasterio de San Jerónimo",
+    "lat": 37.1791962,
+    "lon": -3.6038459,
+    "osm": "way/218338744",
+    "nombre_osm": "Iglesia de San Jerónimo",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/",
+    "fuente_coordenadas": "OpenStreetMap way 218338744"
+   },
+   "casa_hermandad": null
+  },
+  "santa-maria-de-la-alhambra-granada": {
+   "nombre": "Santa María de la Alhambra",
+   "templo": {
+    "nombre": "Iglesia de Santa María de la Alhambra",
+    "lat": 37.1764192,
+    "lon": -3.5892785,
+    "osm": "way/117369758",
+    "nombre_osm": "Iglesia de Santa María de la Alhambra",
+    "fuente": "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/",
+    "fuente_coordenadas": "OpenStreetMap way 117369758"
+   },
+   "casa_hermandad": null
+  },
+  "la-resurreccion-granada": {
+   "nombre": "La Resurrección",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Miguel»: el único edificio de OSM con ese nombre está a 4 km del centro; sin confirmar que sea el suyo"
+   ]
+  },
+  "el-resucitado-granada": {
+   "nombre": "El Resucitado",
+   "templo": {
+    "nombre": "Parroquia Regina Mundi; sale del Sagrario",
+    "lat": 37.1758939,
+    "lon": -3.5989979,
+    "osm": "way/124069121",
+    "nombre_osm": "Iglesia del Sagrario",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/",
+    "fuente_coordenadas": "OpenStreetMap way 124069121"
+   },
+   "casa_hermandad": null
+  },
+  "los-facundillos-granada": {
+   "nombre": "Los Facundillos",
+   "templo": {
+    "nombre": "Iglesia de Santo Domingo",
+    "lat": 37.1729469,
+    "lon": -3.5944476,
+    "osm": "way/155265056",
+    "nombre_osm": "Iglesia de Santo Domingo",
+    "fuente": "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/",
+    "fuente_coordenadas": "OpenStreetMap way 155265056"
+   },
+   "casa_hermandad": null
+  }
+ }
+}

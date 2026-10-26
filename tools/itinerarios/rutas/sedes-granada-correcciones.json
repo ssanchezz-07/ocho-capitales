@@ -1,0 +1,26 @@
+{
+ "la-resurreccion-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de San Miguel»: el único edificio de OSM con ese nombre está a 4 km del centro; sin confirmar que sea el suyo"
+ },
+ "cristo-de-san-agustin-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Monasterio del Santo Ángel Custodio»: OSM solo tiene la «Parroquia Santo Ángel Custodio», otro templo, a 2 km; sin confirmar"
+ },
+ "los-escolapios-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Iglesia de San José de Calasanz»: en OSM solo casa con la «Iglesia de San José» del Albaicín, que es otra; sin confirmar"
+ },
+ "los-ferroviarios-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia de San Juan de Letrán»: OSM solo tiene una «Ermita de San Juan de Letrán»; sin confirmar que sea la parroquia"
+ },
+ "el-trabajo-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Parroquia del Corpus Christi»: OSM solo tiene el «Convento del Santísimo Corpus»; sin confirmar que sea el mismo templo"
+ },
+ "jesus-del-rescate-granada": {
+  "templo": null,
+  "motivo_templo": "templo «Iglesia del Corpus Christi»: OSM solo tiene el «Convento del Santísimo Corpus»; sin confirmar que sea el mismo templo"
+ }
+}

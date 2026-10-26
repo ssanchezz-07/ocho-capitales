@@ -1,0 +1,266 @@
+{
+ "capital": "jaen",
+ "nombre": "Jaén",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "la-borriquilla-jaen": {
+   "nombre": "La Borriquilla",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora de Belén y San Roque",
+    "lat": 37.7713737,
+    "lon": -3.7860988,
+    "osm": "way/235726192",
+    "nombre_osm": "Iglesia de San Roque",
+    "fuente": "https://web.archive.org/web/20260124063616/https://cofradiasjaen.org/borriquilla/",
+    "fuente_coordenadas": "OpenStreetMap way 235726192"
+   },
+   "casa_hermandad": null
+  },
+  "santa-cena-jaen": {
+   "nombre": "Santa Cena",
+   "templo": {
+    "nombre": "Iglesia parroquial de San Juan Pablo II",
+    "lat": 37.7854086,
+    "lon": -3.7930753,
+    "osm": "way/1422647441",
+    "nombre_osm": "Parroquia de San Juan Pablo II",
+    "fuente": "https://web.archive.org/web/20260124065637/https://cofradiasjaen.org/santa-cena/",
+    "fuente_coordenadas": "OpenStreetMap way 1422647441"
+   },
+   "casa_hermandad": null
+  },
+  "la-estrella-jaen": {
+   "nombre": "La Estrella",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 37.7646967,
+    "lon": -3.7928657,
+    "osm": "way/186948834",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://web.archive.org/web/20251117120000/https://cofradiasjaen.org/piedad-y-estrella/",
+    "fuente_coordenadas": "OpenStreetMap way 186948834"
+   },
+   "casa_hermandad": null
+  },
+  "el-huerto-vera-cruz-jaen": {
+   "nombre": "El Huerto (Vera-Cruz)",
+   "templo": {
+    "nombre": "Basílica Menor de San Ildefonso",
+    "lat": 37.7665191,
+    "lon": -3.7865077,
+    "osm": "way/960001635",
+    "nombre_osm": "Basílica Menor de San Ildefonso",
+    "fuente": "https://web.archive.org/web/20260312004707/https://cofradiasjaen.org/oracion-en-el-huerto/",
+    "fuente_coordenadas": "OpenStreetMap way 960001635"
+   },
+   "casa_hermandad": null
+  },
+  "caridad-y-salud-jaen": {
+   "nombre": "Caridad y Salud",
+   "templo": {
+    "nombre": "Parroquia Santa María Madre de la Iglesia",
+    "lat": 37.7820352,
+    "lon": -3.8143509,
+    "osm": "way/203187431",
+    "nombre_osm": "Iglesia Santa María Madre de la Iglesia",
+    "fuente": "https://web.archive.org/web/20251216114753/https://cofradiasjaen.org/caridad-y-salud/",
+    "fuente_coordenadas": "OpenStreetMap way 203187431"
+   },
+   "casa_hermandad": null
+  },
+  "la-amargura-jaen": {
+   "nombre": "La Amargura",
+   "templo": {
+    "nombre": "Parroquia de El Salvador",
+    "lat": 37.778415,
+    "lon": -3.7927518,
+    "osm": "way/194826162",
+    "nombre_osm": "Iglesia El Salvador",
+    "fuente": "https://web.archive.org/web/20251028040928/https://cofradiasjaen.org/amargura/",
+    "fuente_coordenadas": "OpenStreetMap way 194826162"
+   },
+   "casa_hermandad": null
+  },
+  "los-estudiantes-jaen": {
+   "nombre": "Los Estudiantes",
+   "templo": {
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 37.7646967,
+    "lon": -3.7928657,
+    "osm": "way/186948834",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://web.archive.org/web/20251117133030/https://cofradiasjaen.org/estudiantes/",
+    "fuente_coordenadas": "OpenStreetMap way 186948834"
+   },
+   "casa_hermandad": null
+  },
+  "divino-maestro-lavatorio-jaen": {
+   "nombre": "Divino Maestro (Lavatorio)",
+   "templo": {
+    "nombre": "Iglesia parroquial de Nuestra Señora de la Merced",
+    "lat": 37.7646967,
+    "lon": -3.7928657,
+    "osm": "way/186948834",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://web.archive.org/web/20251216121941/https://cofradiasjaen.org/divino-maestro/",
+    "fuente_coordenadas": "OpenStreetMap way 186948834"
+   },
+   "casa_hermandad": null
+  },
+  "la-clemencia-jaen": {
+   "nombre": "La Clemencia",
+   "templo": {
+    "nombre": "Iglesia de Santa María Magdalena",
+    "lat": 37.7719732,
+    "lon": -3.796571,
+    "osm": "way/198065983",
+    "nombre_osm": "Iglesia de la Magdalena",
+    "fuente": "https://web.archive.org/web/20251117123425/https://cofradiasjaen.org/clemencia/",
+    "fuente_coordenadas": "OpenStreetMap way 198065983"
+   },
+   "casa_hermandad": null
+  },
+  "el-silencio-jaen": {
+   "nombre": "El Silencio",
+   "templo": {
+    "nombre": "Iglesia parroquial de Cristo Rey",
+    "lat": 37.7746059,
+    "lon": -3.7894801,
+    "osm": "way/196657678",
+    "nombre_osm": "Iglesia de Cristo Rey",
+    "fuente": "https://web.archive.org/web/20260124044656/https://cofradiasjaen.org/humildad-y-silencio/",
+    "fuente_coordenadas": "OpenStreetMap way 196657678"
+   },
+   "casa_hermandad": null
+  },
+  "el-cautivo-jaen": {
+   "nombre": "El Cautivo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Santa Isabel de Portugal»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-perdon-jaen": {
+   "nombre": "El Perdón",
+   "templo": {
+    "nombre": "Parroquia de Cristo Rey",
+    "lat": 37.7746059,
+    "lon": -3.7894801,
+    "osm": "way/196657678",
+    "nombre_osm": "Iglesia de Cristo Rey",
+    "fuente": "https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/",
+    "fuente_coordenadas": "OpenStreetMap way 196657678"
+   },
+   "casa_hermandad": null
+  },
+  "la-buena-muerte-jaen": {
+   "nombre": "La Buena Muerte",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Santa Iglesia Catedral de Jaén»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-lanzada-jaen": {
+   "nombre": "La Lanzada",
+   "templo": {
+    "nombre": "Parroquia de La Inmaculada y San Pedro Pascual",
+    "lat": 37.7601425,
+    "lon": -3.7942322,
+    "osm": "way/192592121",
+    "nombre_osm": "Iglesia de San Pedro Pascual",
+    "fuente": "https://web.archive.org/web/20260219053256/https://cofradiasjaen.org/lanzada/",
+    "fuente_coordenadas": "OpenStreetMap way 192592121"
+   },
+   "casa_hermandad": null
+  },
+  "el-gran-poder-jaen": {
+   "nombre": "El Gran Poder",
+   "templo": {
+    "nombre": "Iglesia parroquial de la Santa Cruz",
+    "lat": 37.7789683,
+    "lon": -3.8019605,
+    "osm": "way/417609541",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://web.archive.org/web/20260219061640/https://cofradiasjaen.org/gran-poder/",
+    "fuente_coordenadas": "OpenStreetMap way 417609541"
+   },
+   "casa_hermandad": null
+  },
+  "la-vera-cruz-los-civiles-jaen": {
+   "nombre": "La Vera-Cruz («los Civiles»)",
+   "templo": {
+    "nombre": "Basílica Menor de San Ildefonso",
+    "lat": 37.7665191,
+    "lon": -3.7865077,
+    "osm": "way/960001635",
+    "nombre_osm": "Basílica Menor de San Ildefonso",
+    "fuente": "https://web.archive.org/web/20251216125242/https://cofradiasjaen.org/vera-cruz/",
+    "fuente_coordenadas": "OpenStreetMap way 960001635"
+   },
+   "casa_hermandad": null
+  },
+  "la-expiracion-jaen": {
+   "nombre": "La Expiración",
+   "templo": {
+    "nombre": "Iglesia de San Bartolomé",
+    "lat": 37.7679847,
+    "lon": -3.7911667,
+    "osm": "way/467565890",
+    "nombre_osm": "Iglesia de San Bartolomé",
+    "fuente": "https://web.archive.org/web/20260124045016/https://cofradiasjaen.org/expiracion/",
+    "fuente_coordenadas": "OpenStreetMap way 467565890"
+   },
+   "casa_hermandad": null
+  },
+  "nuestro-padre-jesus-el-abuelo-jaen": {
+   "nombre": "Nuestro Padre Jesús «El Abuelo»",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia de San José de los Descalzos y Santuario de Nuestro Padre Jesús»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-soledad-jaen": {
+   "nombre": "La Soledad",
+   "templo": {
+    "nombre": "Basílica Parroquial de San Ildefonso",
+    "lat": 37.7665191,
+    "lon": -3.7865077,
+    "osm": "way/960001635",
+    "nombre_osm": "Basílica Menor de San Ildefonso",
+    "fuente": "https://web.archive.org/web/20251117125450/https://cofradiasjaen.org/soledad/",
+    "fuente_coordenadas": "OpenStreetMap way 960001635"
+   },
+   "casa_hermandad": null
+  },
+  "el-santo-sepulcro-jaen": {
+   "nombre": "El Santo Sepulcro",
+   "templo": {
+    "nombre": "Iglesia parroquial de San Juan y San Pedro",
+    "lat": 37.7700794,
+    "lon": -3.7936538,
+    "osm": "way/197397875",
+    "nombre_osm": "Iglesia de San Juan",
+    "fuente": "https://web.archive.org/web/20251216121355/https://cofradiasjaen.org/sepulcro/",
+    "fuente_coordenadas": "OpenStreetMap way 197397875"
+   },
+   "casa_hermandad": null
+  },
+  "el-resucitado-jaen": {
+   "nombre": "El Resucitado",
+   "templo": {
+    "nombre": "Basílica de San Ildefonso",
+    "lat": 37.7665191,
+    "lon": -3.7865077,
+    "osm": "way/960001635",
+    "nombre_osm": "Basílica Menor de San Ildefonso",
+    "fuente": "https://web.archive.org/web/20260124045627/https://cofradiasjaen.org/resucitado/",
+    "fuente_coordenadas": "OpenStreetMap way 960001635"
+   },
+   "casa_hermandad": null
+  }
+ }
+}
