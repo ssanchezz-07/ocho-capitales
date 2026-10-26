@@ -166,7 +166,7 @@ export function motor(c) {
     const pon = (xy, i) => { const ll = LL(...xy); const s = segs.at(-1); if (!s.length || d2(X(...s.at(-1)), xy) > 5) s.push(ll); if (i !== undefined && !hitoPunto.has(i)) hitoPunto.set(i, ll); };
     // si la lista empieza por una marca (p. ej. «(Salida 15:00) Vía Dolorosa…») y la sede viene de una corrección, la marca va en la sede
     if (sedeS) pon(X(...sedeS.punto), fS?.i ?? (L.hitos.has(0) ? 0 : -1));
-    informe.calles = [];
+    informe.calles = []; let salUltima = null;
     for (let i = 0; i < R.length; i++) {
       const f = R[i], o = f.opciones[ch.elegidas[i]];
       const ent = i === 0 ? (sedeS ? masCerca(o, X(...sedeS.punto)) : [entradas(o)[0][0], entradas(o)[0][1]]) : [ch.estados[i - 1].pb, ch.estados[i - 1].nb];
@@ -183,7 +183,11 @@ export function motor(c) {
       const partir = () => { const u = segs.at(-1).at(-1); if (u) segs.push([u]); };
       for (const p of corr.paso?.[f.i] || []) { pon(X(...p)); partir(); }
       // desde la sede se va directo al primer cruce (el punto de la calle más cercano a la puerta puede quedar «detrás» y obligar a dar la vuelta)
-      if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
+      // «rectos_sede» de la lista: de la puerta a la primera calle (y de la última a la puerta) en línea recta, sin GraphHopper,
+      // cuando entre las dos hay una plaza o un patio que la red de rutas no tiene como vía
+      const rSede = L.rectos_sede || [];
+      if (i === 0 && sedeS && rSede.includes('salida')) { const sr = [segs[0][0], LL(...ent[0])]; sr.recto = true; segs[0] = sr; segs.push([]); pon(ent[0], f.i); }
+      else if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
       if (forz[f.i] && !(i === 0 && sedeS)) partir();
       // «cruzar» (corrección con fuente): plaza dibujada como área peatonal, que GraphHopper no enruta por dentro: se cruza en línea recta
       const cruza = !!corr.cruzar?.[f.i]; if (cruza) { segs.push([]); (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1})`); }
@@ -194,11 +198,13 @@ export function motor(c) {
         const cam = caminoDentro(o, ent[1], sal[1]);
         if (cam) { let acc = 0, ult = 0; for (let k = 1; k < cam.length; k++) { acc += d2(NODOS[cam[k]].xy, NODOS[cam[k - 1]].xy); if (acc - ult > 120 && k < cam.length - 1 && !cercaSede(NODOS[cam[k]].xy)) { pon(NODOS[cam[k]].xy); ult = acc; } } }
       }
-      if (!(i === R.length - 1 && sedeE)) pon(sal[0]);
+      if (!(i === R.length - 1 && sedeE) || rSede.includes('entrada')) pon(sal[0]);
+      if (i === R.length - 1) salUltima = sal[0];
       // media vuelta real (A · plaza · A): se deja girar ahí partiendo la petición
       if (i > 0 && i < R.length - 1 && clave(R[i - 1].lugar) === clave(R[i + 1].lugar)) segs.push([segs.at(-1).at(-1)]);
     }
-    if (sedeE) pon(X(...sedeE.punto), fE?.i);
+    if (sedeE && (L.rectos_sede || []).includes('entrada') && salUltima) { const sr = [LL(...salUltima), sedeE.punto]; sr.recto = true; segs.push(sr, []); if (fE) hitoPunto.set(fE.i, sedeE.punto); }
+    else if (sedeE) pon(X(...sedeE.punto), fE?.i);
     // ---- GraphHopper por tramos ----
     const tGH = performance.now();
     const geo = [];
@@ -217,6 +223,25 @@ export function motor(c) {
     const conFijo = (tr) => tr.some((q) => fijos.some((F) => d2(X(...q), F) < 15));
     if (sedeE && geo.length > 6) for (let k = mitad; k < geo.length - 2; k++) if (cerca(geo[k], sedeE.punto) && idaYVuelta(geo.slice(k, -1)) && !conFijo(geo.slice(k, -1))) { geo.splice(k + 1, geo.length - k - 2); informe.pico_recortado = (informe.pico_recortado || []).concat('entrada'); break; }
     if (sedeS && geo.length > 6) for (let k = mitad; k > 1; k--) if (cerca(geo[k], sedeS.punto) && idaYVuelta(geo.slice(1, k + 1).reverse()) && !conFijo(geo.slice(1, k + 1))) { geo.splice(1, k - 1); informe.pico_recortado = (informe.pico_recortado || []).concat('salida'); break; }
+    // Opción de la capital «sinBucles» (ciudades.mjs): quita los bucles cortos (< 250 m) en los que la traza vuelve al mismo
+    // punto (< 2 m): GraphHopper engancha un punto de paso a la acera o la calzada paralela y baja, sube y vuelve a bajar.
+    // Se conserva el bucle si dentro hay un punto de la lista que no está en el resto de la traza.
+    if (C.cfg.sinBucles) {
+      const req = [...hitoPunto.values()].map((p) => X(...p));
+      let quitados = 0;
+      for (let j = 0; j < geo.length; j++) {
+        let acc = 0;
+        for (let k = j + 1; k < geo.length && acc < 250; k++) {
+          acc += d2(X(...geo[k]), X(...geo[k - 1]));
+          if (k - j < 3 || d2(X(...geo[k]), X(...geo[j])) >= 2) continue;
+          const dentro = geo.slice(j + 1, k).map((p) => X(...p)), fuera = [...geo.slice(0, j + 1), ...geo.slice(k)].map((p) => X(...p));
+          const cerca = (P, A) => A.some((q) => d2(P, q) < 8);
+          if (req.some((P) => cerca(P, dentro) && !cerca(P, fuera))) break;
+          geo.splice(j + 1, k - j); quitados += Math.round(acc); break;
+        }
+      }
+      if (quitados) informe.bucles_quitados_m = quitados;
+    }
     // hitos: un elemento por cada elemento de la lista; las marcas sin geometría van al punto de la siguiente calle trazada
     const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral' }); for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
     const hitos = L.calles.map((lugar, i) => { const f = porI.get(i); return { i, lugar, tipo: f?.tipo || 'hito', tramo: f?.tramo || 'ida', punto: hitoPunto.get(i) || null }; });
