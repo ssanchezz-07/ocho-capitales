@@ -1116,10 +1116,28 @@ function pageDirHerm() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Hermandades</h1><p class="oc-lead">Las ${D.hermandades.length} hermandades de las ocho capitales. Filtra por ciudad, día o cualquier dato.</p></header>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de las ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
 }
+// Siglas del tipo de formación para el sello de las tarjetas de bandas
+const SIGLA_TIPO = { 'Banda de cornetas y tambores': 'CT', 'Agrupación musical': 'AM', 'Banda de música': 'BM', 'Capilla musical': 'CM', 'Música militar': 'MM', 'Formación musical': 'FM' };
+function entryBanda(b) {
+  const cs = [...new Set(b.acompana.map((a) => a.ciudad))];
+  const herms = new Set(b.acompana.filter((a) => HERM[a.hermandad_slug]).map((a) => a.hermandad_slug)).size;
+  const col = CAP[b.origen] ? CAP[b.origen].color : '';
+  const rep = (REPERTORIO.get(b.slug) || []).length;
+  const meta = [b.tipo ? `<span class="nx-tema">${esc(b.tipo)}</span>` : '', b.localidad ? `<span class="vx-autor">${esc(b.localidad)}</span>` : ''].join('');
+  const acomp = herms ? `<p class="vx-ded">Acompaña a <b>${plural(herms, 'cofradía', 'cofradías')}</b></p>` : '';
+  const pie = cs.map(cityTag).join('') + (rep ? `<span class="vx-play is-rep">${plural(rep, 'marcha', 'marchas')} en su repertorio</span>` : '');
+  return `<li class="oc-entry vx-m" data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(SIGLA_TIPO[b.tipo] || inicialesM(b.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('banda/' + b.slug + '/')}">${esc(b.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${acomp}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+}
 function pageDirBandas() {
   const tipos = [...new Set(D.bandas.map((b) => b.tipo))].sort();
-  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((b) => { const cs = [...new Set(b.acompana.map((a) => a.ciudad))]; return entrySimple(u('banda/' + b.slug + '/'), b.nombre, [b.tipo, b.localidad].filter(Boolean).join(', '), cs, ` data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"`); }).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Bandas y formaciones</h1><p class="oc-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p></header>${dirFilters(false, tipos, D.bandas.length, true, 'Nombre, localidad, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
+  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map(entryBanda).join('');
+  const nAcomp = D.bandas.reduce((s, b) => s + b.acompana.filter((a) => HERM[a.hermandad_slug]).length, 0);
+  const nCap = new Set(D.bandas.flatMap((b) => b.acompana.map((a) => a.ciudad))).size;
+  // Por tipo: cuántas hay y la que más cofradías acompaña de cada tipo
+  const porTipo = tipos.map((t) => { const bs = D.bandas.filter((b) => b.tipo === t); const top = [...bs].sort((x, y) => new Set(y.acompana.map((a) => a.hermandad_slug)).size - new Set(x.acompana.map((a) => a.hermandad_slug)).size || x.nombre.localeCompare(y.nombre, 'es'))[0]; return { t, n: bs.length, top }; }).sort((x, y) => y.n - x.n);
+  const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Bandas</h1><p class="nx-lead">Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.</p><p class="nx-pulso"><span><b>${D.bandas.length}</b> formaciones</span><span><b>${nAcomp}</b> acompañamientos</span><span><b>${nCap}</b> capitales</span></p></div></header>
+<section class="nx-caps vx-tipos" aria-labelledby="vx-tipos-t"><h2 class="nx-h" id="vx-tipos-t">Por tipo</h2><ul>${porTipo.map(({ t, n, top }) => `<li class="nx-cap vida-entra" style="--c:var(--nazareno)"><button type="button" class="nx-cap-nombre" data-filtro-tipo="${slugify(t)}" aria-label="Ver las ${n} formaciones de tipo ${esc(t)}"><span>${esc(t)}</span><b>${n}</b></button>${top ? `<h3 class="nx-cap-tit"><a class="nx-a" href="${u('banda/' + top.slug + '/')}">${esc(top.nombre)}</a></h3><p class="nx-meta"><span class="nx-src">${esc(top.localidad || '')}</span></p>` : ''}</li>`).join('')}</ul></section>
+<h2 class="nx-h vx-todas">Todas las formaciones</h2>${dirFilters(false, tipos, D.bandas.length, true, 'Nombre, localidad, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('bandas/index.html', layout({ title: 'Bandas', desc: 'Bandas de cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades andaluzas.', body, path: 'bandas/', active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', '']] }));
 }
 function pageDirImag() {

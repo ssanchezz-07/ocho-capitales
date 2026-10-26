@@ -266,3 +266,5 @@ a { text-underline-offset: .18em; }
 .oc-fuentes span { color: var(--muted); }
 .oc-fuentes span::before { content: "· "; color: var(--gold-ink); }
 .oc-fuentes strong { font-weight: 600; }
+.vx-tipos .nx-cap-nombre span { font-size: 1.35rem; letter-spacing: .03em; }
+.vx-play.is-rep::before { width: 7px; height: 7px; border: 0; border-radius: 50%; background: currentColor; }

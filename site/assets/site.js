@@ -695,11 +695,12 @@
   });
 
   // ---------- directorios ----------
-  // Tarjetas «Por capital» de los listados (marchas…): filtran el listado de abajo por esa capital
+  // Tarjetas «Por capital» y «Por tipo» de los listados (marchas, bandas…): filtran el listado de abajo
   document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-filtro-ciudad]'); if (!b) return;
-    var sel = document.getElementById('fc'); if (!sel) return;
-    sel.value = b.getAttribute('data-filtro-ciudad'); sel.dispatchEvent(new Event('change', { bubbles: true }));
+    var b = e.target.closest && e.target.closest('[data-filtro-ciudad], [data-filtro-tipo]'); if (!b) return;
+    var porTipo = b.hasAttribute('data-filtro-tipo'), sel = document.getElementById(porTipo ? 'ft' : 'fc'); if (!sel) return;
+    var md = document.querySelector('[data-morefilters]'); if (md) md.open = true;
+    sel.value = b.getAttribute(porTipo ? 'data-filtro-tipo' : 'data-filtro-ciudad'); sel.dispatchEvent(new Event('change', { bubbles: true }));
     var bar = document.querySelector('[data-dir-filters]'); if (bar) bar.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   });
   $$('[data-dir-filters]').forEach(function (bar) {
