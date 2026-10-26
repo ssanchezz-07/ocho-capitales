@@ -1,0 +1,3120 @@
+{
+ "pollinica-malaga": {
+  "publicado": {
+   "largo_m": 3702,
+   "comprobables": 34,
+   "sin_dato": [],
+   "recorridas": 34,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 14,
+   "entrada_m": 14,
+   "sede_salida": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "sede_entrada": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 7,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.721948,
+     -4.419446
+    ],
+    [
+     36.72186,
+     -4.419595
+    ],
+    [
+     36.724745,
+     -4.420754
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 3519,
+   "comprobables": 34,
+   "sin_dato": [],
+   "recorridas": 34,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "sede_entrada": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.724152,
+     -4.421315
+    ],
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 7→2"
+   ]
+  }
+ },
+ "lagrimas-y-favores-malaga": {
+  "publicado": {
+   "largo_m": 3742,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 35,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": null,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 91,
+   "retrocesos": 16,
+   "donde_retrocesos": [
+    [
+     36.720858,
+     -4.4223
+    ],
+    [
+     36.718478,
+     -4.422804
+    ],
+    [
+     36.718511,
+     -4.42288
+    ],
+    [
+     36.718478,
+     -4.422804
+    ],
+    [
+     36.718511,
+     -4.42288
+    ],
+    [
+     36.718478,
+     -4.422804
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720742,
+     -4.42414
+    ],
+    [
+     36.720725,
+     -4.424213
+    ],
+    [
+     36.720742,
+     -4.42414
+    ],
+    [
+     36.720725,
+     -4.424213
+    ],
+    [
+     36.720742,
+     -4.42414
+    ]
+   ],
+   "pct_en_calles_lista": 82
+  },
+  "nuevo": {
+   "largo_m": 3606,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 34,
+   "en_orden": 32,
+   "no_recorridas": [
+    "Plaza Enrique García Herrera (punto, a 27 m)",
+    "Plaza Enrique García Herrera (punto, a 27 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": null,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 145,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.719566,
+     -4.424134
+    ],
+    [
+     36.719154,
+     -4.422972
+    ],
+    [
+     36.720885,
+     -4.42238
+    ],
+    [
+     36.719566,
+     -4.424134
+    ]
+   ],
+   "pct_en_calles_lista": 86
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: calles recorridas 36→34",
+    "peor: en orden 35→32",
+    "peor: deja de recorrer: Plaza Enrique García Herrera, Plaza Enrique García Herrera",
+    "mejor: retrocesos 16→4"
+   ]
+  }
+ },
+ "dulce-nombre-malaga": {
+  "publicado": {
+   "largo_m": 3924,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Parroquía Divina Pastora y Santa Teresa",
+   "sede_entrada": "templo en OSM: Parroquía Divina Pastora y Santa Teresa",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 91
+  },
+  "nuevo": {
+   "largo_m": 3828,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Parroquía Divina Pastora y Santa Teresa",
+   "sede_entrada": "templo en OSM: Parroquía Divina Pastora y Santa Teresa",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 89
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 4→0"
+   ]
+  }
+ },
+ "salutacion-malaga": {
+  "publicado": {
+   "largo_m": 3874,
+   "comprobables": 37,
+   "sin_dato": [
+    "Convento RR.MM Carmelitas"
+   ],
+   "recorridas": 37,
+   "en_orden": 37,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.724745,
+     -4.420754
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 3597,
+   "comprobables": 37,
+   "sin_dato": [
+    "Convento RR.MM Carmelitas"
+   ],
+   "recorridas": 37,
+   "en_orden": 37,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ],
+    [
+     36.72542,
+     -4.420635
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 5→2"
+   ]
+  }
+ },
+ "humildad-malaga": {
+  "publicado": {
+   "largo_m": 4289,
+   "comprobables": 35,
+   "sin_dato": [],
+   "recorridas": 35,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 16,
+   "entrada_m": 16,
+   "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "sede_entrada": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "rectas_150": [],
+   "tramo_max_m": 115,
+   "retrocesos": 9,
+   "donde_retrocesos": [
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 4140,
+   "comprobables": 35,
+   "sin_dato": [],
+   "recorridas": 35,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "sede_entrada": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "rectas_150": [],
+   "tramo_max_m": 172,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 9→0"
+   ]
+  }
+ },
+ "salud-malaga": {
+  "publicado": {
+   "largo_m": 3591,
+   "comprobables": 33,
+   "sin_dato": [],
+   "recorridas": 33,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Parroquia de San Pablo",
+   "sede_entrada": "templo en OSM: Parroquia de San Pablo",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 3533,
+   "comprobables": 33,
+   "sin_dato": [],
+   "recorridas": 33,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "templo en OSM: Parroquia de San Pablo",
+   "sede_entrada": "templo en OSM: Parroquia de San Pablo",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.722246,
+     -4.427887
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 4→1"
+   ]
+  }
+ },
+ "humildad-y-paciencia-malaga": {
+  "publicado": {
+   "largo_m": 8207,
+   "comprobables": 56,
+   "sin_dato": [],
+   "recorridas": 54,
+   "en_orden": 54,
+   "no_recorridas": [
+    "Plazuela Virgen de Dolores y Esperanza (0 m)",
+    "Plazuela Virgen de Dolores y Esperanza (0 m)"
+   ],
+   "salida_m": 26,
+   "entrada_m": 26,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 10,
+   "donde_retrocesos": [
+    [
+     36.7089,
+     -4.443328
+    ],
+    [
+     36.717799,
+     -4.42504
+    ],
+    [
+     36.717801,
+     -4.424996
+    ],
+    [
+     36.717799,
+     -4.42504
+    ],
+    [
+     36.717801,
+     -4.424996
+    ],
+    [
+     36.717799,
+     -4.42504
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 7811,
+   "comprobables": 56,
+   "sin_dato": [],
+   "recorridas": 56,
+   "en_orden": 56,
+   "no_recorridas": [],
+   "salida_m": 12,
+   "entrada_m": 12,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 174,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.715788,
+     -4.42746
+    ],
+    [
+     36.716735,
+     -4.425299
+    ],
+    [
+     36.71958,
+     -4.42414
+    ],
+    [
+     36.715788,
+     -4.42746
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "calles recorridas 54→56",
+    "en orden 54→56",
+    "retrocesos 10→4"
+   ]
+  }
+ },
+ "huerto-malaga": {
+  "publicado": {
+   "largo_m": 4343,
+   "comprobables": 41,
+   "sin_dato": [],
+   "recorridas": 41,
+   "en_orden": 38,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "puerta OSM 8857051370 con la dirección Plazuela Virgen de la Concepción 1",
+   "sede_entrada": "puerta OSM 8857051370 con la dirección Plazuela Virgen de la Concepción 1",
+   "rectas_150": [],
+   "tramo_max_m": 71,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.719034,
+     -4.425907
+    ],
+    [
+     36.718799,
+     -4.425336
+    ],
+    [
+     36.718628,
+     -4.425451
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 4085,
+   "comprobables": 41,
+   "sin_dato": [],
+   "recorridas": 41,
+   "en_orden": 40,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "puerta OSM 8857051370 con la dirección Plazuela Virgen de la Concepción 1",
+   "sede_entrada": "puerta OSM 8857051370 con la dirección Plazuela Virgen de la Concepción 1",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.721206,
+     -4.42602
+    ],
+    [
+     36.71891,
+     -4.426892
+    ],
+    [
+     36.721206,
+     -4.42602
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 38→40"
+   ]
+  }
+ },
+ "pasion-malaga": {
+  "publicado": {
+   "largo_m": 2928,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 27,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de los Santos Martires",
+   "sede_entrada": "templo en OSM: Iglesia de los Santos Martires",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 6,
+   "donde_retrocesos": [
+    [
+     36.722011,
+     -4.422817
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.722011,
+     -4.422817
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 2573,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 25,
+   "en_orden": 24,
+   "no_recorridas": [
+    "Plaza de los Mártires (0 m)",
+    "Plaza de los Mártires (0 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de los Santos Martires",
+   "sede_entrada": "templo en OSM: Iglesia de los Santos Martires",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: calles recorridas 27→25",
+    "peor: en orden 26→24",
+    "peor: deja de recorrer: Plaza de los Mártires, Plaza de los Mártires",
+    "mejor: retrocesos 6→0"
+   ]
+  }
+ },
+ "crucifixion-malaga": {
+  "publicado": {
+   "largo_m": 3665,
+   "comprobables": 35,
+   "sin_dato": [],
+   "recorridas": 35,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 26,
+   "entrada_m": 26,
+   "sede_salida": "puerta OSM 8959307503 con la dirección Calle Diego de Siloé 8",
+   "sede_entrada": "puerta OSM 8959307503 con la dirección Calle Diego de Siloé 8",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 3647,
+   "comprobables": 35,
+   "sin_dato": [],
+   "recorridas": 35,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8959307503 con la dirección Calle Diego de Siloé 8",
+   "sede_entrada": "puerta OSM 8959307503 con la dirección Calle Diego de Siloé 8",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 97
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "dolores-del-puente-malaga": {
+  "publicado": {
+   "largo_m": 4220,
+   "comprobables": 41,
+   "sin_dato": [],
+   "recorridas": 40,
+   "en_orden": 39,
+   "no_recorridas": [
+    "Plaza de la Religiosa Filipense Dolores Márquez (0 m)"
+   ],
+   "salida_m": 8,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8278934451 con la dirección Pasillo de Santo Domingo 5",
+   "sede_entrada": "templo en OSM: Iglesia de Santo Domingo",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 9,
+   "donde_retrocesos": [
+    [
+     36.721114,
+     -4.42717
+    ],
+    [
+     36.720908,
+     -4.428011
+    ],
+    [
+     36.720911,
+     -4.427976
+    ],
+    [
+     36.720908,
+     -4.428011
+    ],
+    [
+     36.720911,
+     -4.427976
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 3909,
+   "comprobables": 41,
+   "sin_dato": [],
+   "recorridas": 41,
+   "en_orden": 40,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 0,
+   "sede_salida": "puerta OSM 8278934451 con la dirección Pasillo de Santo Domingo 5",
+   "sede_entrada": "templo en OSM: Iglesia de Santo Domingo",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.719045,
+     -4.425951
+    ],
+    [
+     36.721601,
+     -4.428473
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "calles recorridas 40→41",
+    "en orden 39→40",
+    "retrocesos 9→2"
+   ]
+  }
+ },
+ "cautivo-malaga": {
+  "publicado": {
+   "largo_m": 4213,
+   "comprobables": 33,
+   "sin_dato": [
+    "Plaza de Jesús Cautivo",
+    "Plaza de Jesús Cautivo"
+   ],
+   "recorridas": 33,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 17,
+   "entrada_m": 17,
+   "sede_salida": "puerta OSM 8575809628 con la dirección Calle Trinidad 95",
+   "sede_entrada": "puerta OSM 8575809628 con la dirección Calle Trinidad 95",
+   "rectas_150": [],
+   "tramo_max_m": 89,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 100
+  },
+  "nuevo": {
+   "largo_m": 4432,
+   "comprobables": 33,
+   "sin_dato": [
+    "Plaza de Jesús Cautivo",
+    "Plaza de Jesús Cautivo"
+   ],
+   "recorridas": 33,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "puerta OSM 8575809628 con la dirección Calle Trinidad 95",
+   "sede_entrada": "puerta OSM 8575809628 con la dirección Calle Trinidad 95",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 97
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "estudiantes-malaga": {
+  "publicado": {
+   "largo_m": 3329,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 27,
+   "entrada_m": 27,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.721004,
+     -4.417283
+    ],
+    [
+     36.721004,
+     -4.417283
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "nuevo": {
+   "largo_m": 3243,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 30,
+   "no_recorridas": [],
+   "salida_m": 16,
+   "entrada_m": 16,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.720273,
+     -4.420084
+    ],
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 29→30"
+   ]
+  }
+ },
+ "rocio-malaga": {
+  "publicado": {
+   "largo_m": 4519,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 20,
+   "entrada_m": 20,
+   "sede_salida": "puerta OSM 8489125036 con la dirección Calle Circo 3",
+   "sede_entrada": "puerta OSM 8489125036 con la dirección Calle Circo 3",
+   "rectas_150": [],
+   "tramo_max_m": 115,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.721948,
+     -4.419446
+    ],
+    [
+     36.72186,
+     -4.419595
+    ],
+    [
+     36.727581,
+     -4.414881
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 4415,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "puerta OSM 8489125036 con la dirección Calle Circo 3",
+   "sede_entrada": "puerta OSM 8489125036 con la dirección Calle Circo 3",
+   "rectas_150": [],
+   "tramo_max_m": 172,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.721677,
+     -4.425256
+    ],
+    [
+     36.727551,
+     -4.414278
+    ],
+    [
+     36.727581,
+     -4.414881
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "penas-malaga": {
+  "publicado": {
+   "largo_m": 2829,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Santa María Reina y Madre",
+   "sede_entrada": "templo en OSM: Iglesia de Santa María Reina y Madre",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.723063,
+     -4.423418
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 2692,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Santa María Reina y Madre",
+   "sede_entrada": "templo en OSM: Iglesia de Santa María Reina y Madre",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 5→0"
+   ]
+  }
+ },
+ "nueva-esperanza-malaga": {
+  "publicado": {
+   "largo_m": 7401,
+   "comprobables": 48,
+   "sin_dato": [],
+   "recorridas": 48,
+   "en_orden": 47,
+   "no_recorridas": [],
+   "salida_m": 18,
+   "entrada_m": 18,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 137,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 7476,
+   "comprobables": 48,
+   "sin_dato": [],
+   "recorridas": 48,
+   "en_orden": 47,
+   "no_recorridas": [],
+   "salida_m": 18,
+   "entrada_m": 18,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 165,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.722662,
+     -4.42609
+    ],
+    [
+     36.721439,
+     -4.438619
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "humillacion-y-estrella-malaga": {
+  "publicado": {
+   "largo_m": 4189,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 35,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 13,
+   "sede_salida": "puerta OSM 8278934451 con la dirección Pasillo de Santo Domingo 5",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 84,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 3921,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 2,
+   "sede_salida": "puerta OSM 8278934451 con la dirección Pasillo de Santo Domingo 5",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.71891,
+     -4.426892
+    ],
+    [
+     36.721601,
+     -4.428473
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 35→36"
+   ]
+  }
+ },
+ "rescate-malaga": {
+  "publicado": {
+   "largo_m": 4329,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "puerta OSM 7538326558 con la dirección Calle Agua 15",
+   "sede_entrada": "puerta OSM 7538326558 con la dirección Calle Agua 15",
+   "rectas_150": [],
+   "tramo_max_m": 115,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.722483,
+     -4.41668
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "nuevo": {
+   "largo_m": 4221,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "puerta OSM 7538326558 con la dirección Calle Agua 15",
+   "sede_entrada": "puerta OSM 7538326558 con la dirección Calle Agua 15",
+   "rectas_150": [],
+   "tramo_max_m": 165,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "sentencia-malaga": {
+  "publicado": {
+   "largo_m": 3500,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 27,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 13,
+   "entrada_m": 13,
+   "sede_salida": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 3443,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 27,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "fusionadas-malaga": {
+  "publicado": {
+   "largo_m": 3170,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 23,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 8,
+   "donde_retrocesos": [
+    [
+     36.72076,
+     -4.425156
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.721948,
+     -4.419446
+    ],
+    [
+     36.72186,
+     -4.419595
+    ],
+    [
+     36.72076,
+     -4.425156
+    ]
+   ],
+   "pct_en_calles_lista": 94
+  },
+  "nuevo": {
+   "largo_m": 3020,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 23,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.720618,
+     -4.425142
+    ]
+   ],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 8→1"
+   ]
+  }
+ },
+ "mediadora-malaga": {
+  "publicado": {
+   "largo_m": 6335,
+   "comprobables": 41,
+   "sin_dato": [
+    "Garnica"
+   ],
+   "recorridas": 41,
+   "en_orden": 40,
+   "no_recorridas": [],
+   "salida_m": 43,
+   "entrada_m": 43,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.718736,
+     -4.419679
+    ],
+    [
+     36.718688,
+     -4.419717
+    ],
+    [
+     36.718736,
+     -4.419679
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 6523,
+   "comprobables": 41,
+   "sin_dato": [
+    "Garnica"
+   ],
+   "recorridas": 41,
+   "en_orden": 41,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 170,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.708833,
+     -4.432837
+    ],
+    [
+     36.71958,
+     -4.42414
+    ]
+   ],
+   "pct_en_calles_lista": 88
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 40→41",
+    "retrocesos 3→2"
+   ]
+  }
+ },
+ "salesianos-malaga": {
+  "publicado": {
+   "largo_m": 4286,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 29,
+   "en_orden": 28,
+   "no_recorridas": [
+    "Alcubilla (punto, a 2581 m)"
+   ],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 7,
+   "donde_retrocesos": [
+    [
+     36.721948,
+     -4.419446
+    ],
+    [
+     36.72186,
+     -4.419595
+    ],
+    [
+     36.72544,
+     -4.420545
+    ],
+    [
+     36.725446,
+     -4.420632
+    ],
+    [
+     36.72544,
+     -4.420545
+    ],
+    [
+     36.725446,
+     -4.420632
+    ],
+    [
+     36.72544,
+     -4.420545
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 4411,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 29,
+   "en_orden": 28,
+   "no_recorridas": [
+    "Alcubilla (punto, a 2581 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.72809,
+     -4.421733
+    ],
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 7→2"
+   ]
+  }
+ },
+ "sangre-malaga": {
+  "publicado": {
+   "largo_m": 3674,
+   "comprobables": 34,
+   "sin_dato": [
+    "Plazuela Cristo de la Sangre"
+   ],
+   "recorridas": 34,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 6,
+   "donde_retrocesos": [
+    [
+     36.72565,
+     -4.421321
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 3529,
+   "comprobables": 34,
+   "sin_dato": [
+    "Plazuela Cristo de la Sangre"
+   ],
+   "recorridas": 34,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.725682,
+     -4.421214
+    ],
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 6→2"
+   ]
+  }
+ },
+ "el-rico-malaga": {
+  "publicado": {
+   "largo_m": 3360,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "sede_entrada": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "rectas_150": [],
+   "tramo_max_m": 89,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.722483,
+     -4.41668
+    ],
+    [
+     36.720264,
+     -4.420251
+    ],
+    [
+     36.722483,
+     -4.41668
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "nuevo": {
+   "largo_m": 3196,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "sede_entrada": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.720273,
+     -4.420084
+    ],
+    [
+     36.723147,
+     -4.417217
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: en orden 31→29",
+    "mejor: retrocesos 3→2"
+   ]
+  }
+ },
+ "paloma-malaga": {
+  "publicado": {
+   "largo_m": 2645,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 2618,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "sagrada-cena-malaga": {
+  "publicado": {
+   "largo_m": 2728,
+   "comprobables": 25,
+   "sin_dato": [],
+   "recorridas": 25,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 16,
+   "entrada_m": 16,
+   "sede_salida": "puerta OSM 8416562052 con la dirección Calle Compañía 44",
+   "sede_entrada": "puerta OSM 8416562052 con la dirección Calle Compañía 44",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 2684,
+   "comprobables": 25,
+   "sin_dato": [],
+   "recorridas": 25,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 17,
+   "entrada_m": 17,
+   "sede_salida": "puerta OSM 8416562052 con la dirección Calle Compañía 44",
+   "sede_entrada": "puerta OSM 8416562052 con la dirección Calle Compañía 44",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "vineros-malaga": {
+  "publicado": {
+   "largo_m": 2820,
+   "comprobables": 29,
+   "sin_dato": [],
+   "recorridas": 29,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de la Aurora y Divina Providencia",
+   "sede_entrada": "puerta OSM 8506985436 con la dirección Plaza de los Viñeros 5",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 7,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.722029,
+     -4.421929
+    ],
+    [
+     36.722012,
+     -4.421914
+    ],
+    [
+     36.723405,
+     -4.424146
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 2725,
+   "comprobables": 29,
+   "sin_dato": [],
+   "recorridas": 29,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de la Aurora y Divina Providencia",
+   "sede_entrada": "puerta OSM 8506985436 con la dirección Plaza de los Viñeros 5",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ],
+    [
+     36.72216,
+     -4.421964
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 7→2"
+   ]
+  }
+ },
+ "santa-cruz-malaga": {
+  "publicado": {
+   "largo_m": 2959,
+   "comprobables": 32,
+   "sin_dato": [
+    "Plazuela Cristo de la Sangre"
+   ],
+   "recorridas": 32,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 10,
+   "donde_retrocesos": [
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.722069,
+     -4.418223
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 2810,
+   "comprobables": 32,
+   "sin_dato": [
+    "Plazuela Cristo de la Sangre"
+   ],
+   "recorridas": 32,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 10→0"
+   ]
+  }
+ },
+ "vera-cruz-malaga": {
+  "publicado": {
+   "largo_m": 2810,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 6,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.722029,
+     -4.421929
+    ],
+    [
+     36.722012,
+     -4.421914
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 2703,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.72216,
+     -4.421964
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 6→1"
+   ]
+  }
+ },
+ "mena-malaga": {
+  "publicado": {
+   "largo_m": 3982,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 35,
+   "en_orden": 34,
+   "no_recorridas": [
+    "Plaza Fray Alonso de Santo Tomás (0 m)",
+    "Plaza Fray Alonso de Santo Tomás (0 m)"
+   ],
+   "salida_m": 19,
+   "entrada_m": 19,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.718628,
+     -4.425451
+    ],
+    [
+     36.718799,
+     -4.425336
+    ],
+    [
+     36.717814,
+     -4.427342
+    ]
+   ],
+   "pct_en_calles_lista": 98
+  },
+  "nuevo": {
+   "largo_m": 3934,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "calles recorridas 35→37",
+    "en orden 34→36",
+    "retrocesos 3→0"
+   ]
+  }
+ },
+ "zamarrilla-malaga": {
+  "publicado": {
+   "largo_m": 4686,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Ermita de Zamarrilla",
+   "sede_entrada": "puerta OSM 8839274104 con la dirección Calle Martínez Maldonado 5",
+   "rectas_150": [],
+   "tramo_max_m": 128,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.721478,
+     -4.431869
+    ],
+    [
+     36.721479,
+     -4.431986
+    ]
+   ],
+   "pct_en_calles_lista": 86
+  },
+  "nuevo": {
+   "largo_m": 3846,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 27,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Ermita de Zamarrilla",
+   "sede_entrada": "puerta OSM 8839274104 con la dirección Calle Martínez Maldonado 5",
+   "rectas_150": [],
+   "tramo_max_m": 165,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 26→27",
+    "retrocesos 2→0"
+   ]
+  }
+ },
+ "misericordia-malaga": {
+  "publicado": {
+   "largo_m": 4475,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "puerta OSM 6851271065 con la dirección Calle La Serna 1",
+   "sede_entrada": "puerta OSM 6851271065 con la dirección Calle La Serna 1",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 12,
+   "donde_retrocesos": [
+    [
+     36.713842,
+     -4.429198
+    ],
+    [
+     36.71389,
+     -4.42926
+    ],
+    [
+     36.713842,
+     -4.429198
+    ],
+    [
+     36.71389,
+     -4.42926
+    ],
+    [
+     36.719476,
+     -4.421666
+    ],
+    [
+     36.719479,
+     -4.421578
+    ],
+    [
+     36.719476,
+     -4.421666
+    ],
+    [
+     36.719479,
+     -4.421578
+    ],
+    [
+     36.71389,
+     -4.42926
+    ],
+    [
+     36.713842,
+     -4.429198
+    ],
+    [
+     36.71389,
+     -4.42926
+    ],
+    [
+     36.713842,
+     -4.429198
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "nuevo": {
+   "largo_m": 4006,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "puerta OSM 6851271065 con la dirección Calle La Serna 1",
+   "sede_entrada": "puerta OSM 6851271065 con la dirección Calle La Serna 1",
+   "rectas_150": [],
+   "tramo_max_m": 170,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.715788,
+     -4.42746
+    ],
+    [
+     36.716735,
+     -4.425299
+    ],
+    [
+     36.718511,
+     -4.42288
+    ],
+    [
+     36.715788,
+     -4.42746
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 12→4"
+   ]
+  }
+ },
+ "monte-calvario-malaga": {
+  "publicado": {
+   "largo_m": 6737,
+   "comprobables": 42,
+   "sin_dato": [
+    "(Salida 15:00) Vía Dolorosa del Calvario",
+    "Basílica y Santuario de Santa María de la Victoria (Salida 16:00)",
+    "Madre de Dios Mariblanca"
+   ],
+   "recorridas": 42,
+   "en_orden": 38,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": 16,
+   "sede_salida": null,
+   "sede_entrada": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 11,
+   "donde_retrocesos": [
+    [
+     36.727054,
+     -4.413914
+    ],
+    [
+     36.730256,
+     -4.413721
+    ],
+    [
+     36.730198,
+     -4.413716
+    ],
+    [
+     36.730256,
+     -4.413721
+    ],
+    [
+     36.730198,
+     -4.413716
+    ],
+    [
+     36.730256,
+     -4.413721
+    ],
+    [
+     36.725491,
+     -4.42115
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 73
+  },
+  "nuevo": {
+   "largo_m": 5134,
+   "comprobables": 42,
+   "sin_dato": [
+    "(Salida 15:00) Vía Dolorosa del Calvario",
+    "Basílica y Santuario de Santa María de la Victoria (Salida 16:00)",
+    "Madre de Dios Mariblanca"
+   ],
+   "recorridas": 40,
+   "en_orden": 37,
+   "no_recorridas": [
+    "Plaza de María (0 m)",
+    "Guerrero (0 m)"
+   ],
+   "salida_m": null,
+   "entrada_m": 0,
+   "sede_salida": null,
+   "sede_entrada": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "rectas_150": [],
+   "tramo_max_m": 165,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     36.728367,
+     -4.412581
+    ],
+    [
+     36.727095,
+     -4.413606
+    ],
+    [
+     36.72278,
+     -4.417532
+    ],
+    [
+     36.722801,
+     -4.417524
+    ],
+    [
+     36.72484,
+     -4.419754
+    ]
+   ],
+   "pct_en_calles_lista": 88
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: calles recorridas 42→40",
+    "peor: deja de recorrer: Plaza de María, Guerrero",
+    "mejor: retrocesos 11→5"
+   ]
+  }
+ },
+ "descendimiento-malaga": {
+  "publicado": {
+   "largo_m": 4233,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     36.720447,
+     -4.415496
+    ],
+    [
+     36.720493,
+     -4.415518
+    ],
+    [
+     36.720447,
+     -4.415496
+    ],
+    [
+     36.720493,
+     -4.415518
+    ],
+    [
+     36.720447,
+     -4.415496
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 3939,
+   "comprobables": 32,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 32,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [
+    190
+   ],
+   "tramo_max_m": 190,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.720962,
+     -4.40975
+    ],
+    [
+     36.721037,
+     -4.411698
+    ],
+    [
+     36.719966,
+     -4.411946
+    ],
+    [
+     36.719973,
+     -4.412019
+    ]
+   ],
+   "pct_en_calles_lista": 90
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: rectas > 150 m 0→1",
+    "mejor: en orden 31→32",
+    "mejor: retrocesos 5→4"
+   ]
+  }
+ },
+ "amor-malaga": {
+  "publicado": {
+   "largo_m": 5049,
+   "comprobables": 43,
+   "sin_dato": [],
+   "recorridas": 43,
+   "en_orden": 41,
+   "no_recorridas": [],
+   "salida_m": 16,
+   "entrada_m": 36,
+   "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "sede_entrada": "puerta OSM 4863094954 con la dirección Calle Fernando el Católico 40",
+   "rectas_150": [],
+   "tramo_max_m": 115,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.72944,
+     -4.413372
+    ],
+    [
+     36.722483,
+     -4.41668
+    ],
+    [
+     36.72562,
+     -4.418684
+    ],
+    [
+     36.725684,
+     -4.418767
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 5271,
+   "comprobables": 43,
+   "sin_dato": [],
+   "recorridas": 43,
+   "en_orden": 41,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
+   "sede_entrada": "puerta OSM 4863094954 con la dirección Calle Fernando el Católico 40",
+   "rectas_150": [],
+   "tramo_max_m": 172,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.730198,
+     -4.413716
+    ],
+    [
+     36.729125,
+     -4.413781
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 4→2"
+   ]
+  }
+ },
+ "dolores-de-san-juan-malaga": {
+  "publicado": {
+   "largo_m": 2889,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan",
+   "rectas_150": [],
+   "tramo_max_m": 111,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ],
+    [
+     36.720735,
+     -4.419378
+    ],
+    [
+     36.720738,
+     -4.419314
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 2803,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Juan",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.719154,
+     -4.422972
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 4→1"
+   ]
+  }
+ },
+ "traslado-malaga": {
+  "publicado": {
+   "largo_m": 3508,
+   "comprobables": 26,
+   "sin_dato": [],
+   "recorridas": 26,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "puerta OSM 9363729474 con la dirección Calle Trinidad 72",
+   "sede_entrada": "puerta OSM 9363729474 con la dirección Calle Trinidad 72",
+   "rectas_150": [],
+   "tramo_max_m": 77,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 100
+  },
+  "nuevo": {
+   "largo_m": 3421,
+   "comprobables": 26,
+   "sin_dato": [],
+   "recorridas": 26,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "puerta OSM 9363729474 con la dirección Calle Trinidad 72",
+   "sede_entrada": "puerta OSM 9363729474 con la dirección Calle Trinidad 72",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 100
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "piedad-malaga": {
+  "publicado": {
+   "largo_m": 3593,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 27,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 14,
+   "entrada_m": 14,
+   "sede_salida": "puerta OSM 8449049132 con la dirección Calle Alderete 3",
+   "sede_entrada": "puerta OSM 8449049132 con la dirección Calle Alderete 3",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 3570,
+   "comprobables": 27,
+   "sin_dato": [],
+   "recorridas": 27,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "puerta OSM 8449049132 con la dirección Calle Alderete 3",
+   "sede_entrada": "puerta OSM 8449049132 con la dirección Calle Alderete 3",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "santo-sepulcro-malaga": {
+  "publicado": {
+   "largo_m": 3461,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 30,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8283205352 con la dirección Calle Alcazabilla 5",
+   "sede_entrada": "puerta OSM 8283205352 con la dirección Calle Alcazabilla 5",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 6,
+   "donde_retrocesos": [
+    [
+     36.718412,
+     -4.421562
+    ],
+    [
+     36.718407,
+     -4.421454
+    ],
+    [
+     36.718412,
+     -4.421562
+    ],
+    [
+     36.718407,
+     -4.421454
+    ],
+    [
+     36.718412,
+     -4.421562
+    ],
+    [
+     36.717803,
+     -4.423917
+    ]
+   ],
+   "pct_en_calles_lista": 99
+  },
+  "nuevo": {
+   "largo_m": 3380,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 30,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8283205352 con la dirección Calle Alcazabilla 5",
+   "sede_entrada": "puerta OSM 8283205352 con la dirección Calle Alcazabilla 5",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 6→1"
+   ]
+  }
+ },
+ "servitas-malaga": {
+  "publicado": {
+   "largo_m": 3820,
+   "comprobables": 47,
+   "sin_dato": [],
+   "recorridas": 47,
+   "en_orden": 45,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 95,
+   "retrocesos": 7,
+   "donde_retrocesos": [
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.724247,
+     -4.420443
+    ],
+    [
+     36.724213,
+     -4.420377
+    ],
+    [
+     36.72358,
+     -4.422426
+    ],
+    [
+     36.72358,
+     -4.422426
+    ]
+   ],
+   "pct_en_calles_lista": 100
+  },
+  "nuevo": {
+   "largo_m": 3709,
+   "comprobables": 47,
+   "sin_dato": [],
+   "recorridas": 47,
+   "en_orden": 43,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "templo en OSM: Iglesia de San Felipe Neri",
+   "sede_entrada": "templo en OSM: Iglesia de San Felipe Neri",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.72542,
+     -4.420635
+    ]
+   ],
+   "pct_en_calles_lista": 100
+  },
+  "decision": {
+   "queda": "revisar",
+   "motivo": [
+    "peor: en orden 45→43",
+    "mejor: retrocesos 7→1"
+   ]
+  }
+ },
+ "prendimiento-malaga": {
+  "publicado": {
+   "largo_m": 4723,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 34,
+   "no_recorridas": [],
+   "salida_m": 9,
+   "entrada_m": 9,
+   "sede_salida": "puerta OSM 8616988639 con la dirección Calle San Millán 23",
+   "sede_entrada": "puerta OSM 8616988639 con la dirección Calle San Millán 23",
+   "rectas_150": [],
+   "tramo_max_m": 118,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 4575,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 33,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "puerta OSM 8616988639 con la dirección Calle San Millán 23",
+   "sede_entrada": "puerta OSM 8616988639 con la dirección Calle San Millán 23",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.730294,
+     -4.419614
+    ],
+    [
+     36.729524,
+     -4.420645
+    ],
+    [
+     36.727777,
+     -4.421932
+    ],
+    [
+     36.721677,
+     -4.425256
+    ]
+   ],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "publicado",
+   "motivo": [
+    "peor: retrocesos 0→4"
+   ]
+  }
+ },
+ "expiracion-malaga": {
+  "publicado": {
+   "largo_m": 4152,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 36,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 6,
+   "sede_salida": "templo en OSM: Iglesia de San Pedro",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 96,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.719476,
+     -4.421666
+    ],
+    [
+     36.719479,
+     -4.421578
+    ],
+    [
+     36.719476,
+     -4.421666
+    ],
+    [
+     36.719479,
+     -4.421578
+    ]
+   ],
+   "pct_en_calles_lista": 100
+  },
+  "nuevo": {
+   "largo_m": 4888,
+   "comprobables": 37,
+   "sin_dato": [],
+   "recorridas": 37,
+   "en_orden": 37,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 8,
+   "sede_salida": "templo en OSM: Iglesia de San Pedro",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 170,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     36.716673,
+     -4.427094
+    ],
+    [
+     36.71958,
+     -4.42414
+    ],
+    [
+     36.718511,
+     -4.42288
+    ]
+   ],
+   "pct_en_calles_lista": 82
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 36→37",
+    "retrocesos 4→3"
+   ]
+  }
+ },
+ "esperanza-malaga": {
+  "publicado": {
+   "largo_m": 3061,
+   "comprobables": 31,
+   "sin_dato": [
+    "Dr. Don Felipe Sánchez de la Cuesta y Alarcón"
+   ],
+   "recorridas": 31,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 17,
+   "entrada_m": 17,
+   "sede_salida": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "sede_entrada": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "rectas_150": [],
+   "tramo_max_m": 65,
+   "retrocesos": 6,
+   "donde_retrocesos": [
+    [
+     36.717708,
+     -4.427135
+    ],
+    [
+     36.717724,
+     -4.427123
+    ],
+    [
+     36.717678,
+     -4.427181
+    ],
+    [
+     36.717708,
+     -4.427135
+    ],
+    [
+     36.717724,
+     -4.427123
+    ],
+    [
+     36.717678,
+     -4.427181
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 2987,
+   "comprobables": 31,
+   "sin_dato": [
+    "Dr. Don Felipe Sánchez de la Cuesta y Alarcón"
+   ],
+   "recorridas": 31,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "sede_entrada": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.717708,
+     -4.427135
+    ],
+    [
+     36.717724,
+     -4.427123
+    ]
+   ],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 6→2"
+   ]
+  }
+ },
+ "gitanos-malaga": {
+  "publicado": {
+   "largo_m": 3508,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 30,
+   "en_orden": 27,
+   "no_recorridas": [],
+   "salida_m": 13,
+   "entrada_m": 13,
+   "sede_salida": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     36.721948,
+     -4.419446
+    ],
+    [
+     36.72186,
+     -4.419595
+    ]
+   ],
+   "pct_en_calles_lista": 97
+  },
+  "nuevo": {
+   "largo_m": 3401,
+   "comprobables": 30,
+   "sin_dato": [],
+   "recorridas": 30,
+   "en_orden": 27,
+   "no_recorridas": [],
+   "salida_m": 6,
+   "entrada_m": 6,
+   "sede_salida": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 98
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "retrocesos 2→0"
+   ]
+  }
+ },
+ "resucitado-malaga": {
+  "publicado": {
+   "largo_m": 2320,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 9,
+   "entrada_m": 9,
+   "sede_salida": "punto fijado con fuente",
+   "sede_entrada": "punto fijado con fuente",
+   "rectas_150": [],
+   "tramo_max_m": 91,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 2280,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "punto fijado con fuente",
+   "sede_entrada": "punto fijado con fuente",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ }
+}

@@ -193,9 +193,22 @@ export function motor(c) {
     const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral' }); for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
     const hitos = L.calles.map((lugar, i) => { const f = porI.get(i); return { i, lugar, tipo: f?.tipo || 'hito', tramo: f?.tramo || 'ida', punto: hitoPunto.get(i) || null }; });
     for (let k = hitos.length - 1, sig = null; k >= 0; k--) { if (hitos[k].punto) sig = hitos[k].punto; else if (['hito', 'catedral'].includes(hitos[k].tipo)) hitos[k].punto = sig; }
-    // posición de cada hito en la geometría, siempre hacia delante (una calle que se pisa dos veces no confunde el orden)
-    const G = geo.map((p) => X(...p)); let k0 = 0;
-    for (const h of hitos) { if (!h.punto) continue; const P = X(...h.punto); let best = -1, bd = Infinity; for (let j = k0; j < G.length; j++) { const d = d2(G[j], P); if (d < bd) { bd = d; best = j; } if (bd < 8 && d > bd + 25) break; } h.pos = best; h.dist_m = Math.round(bd); k0 = best; }
+    // posición de cada hito en la geometría: alineamiento en orden que minimiza la distancia total (programación dinámica),
+    // así una calle que se pisa dos veces o un templo de salida que es también el de entrada no confunden el orden
+    const G = geo.map((p) => X(...p)), H = hitos.filter((h) => h.punto), n = G.length;
+    if (H.length && n) {
+      let prev = new Float64Array(n).fill(0); const de = [];
+      for (const h of H) {
+        const P = X(...h.punto), cur = new Float64Array(n), arg = new Int32Array(n);
+        let mejor = Infinity, jm = 0;
+        for (let j = 0; j < n; j++) { if (prev[j] < mejor) { mejor = prev[j]; jm = j; } cur[j] = mejor + d2(G[j], P); arg[j] = jm; }
+        de.push(arg); prev = cur;
+      }
+      let j = prev.indexOf(Math.min(...prev));
+      for (let k = H.length - 1; k >= 0; k--) { H[k].pos = j; H[k].dist_m = Math.round(d2(G[j], X(...H[k].punto))); j = de[k][j]; }
+      const lejos = H.filter((h) => h.dist_m > 30).map((h) => `«${h.lugar}» a ${h.dist_m} m`);
+      if (lejos.length) informe.avisos.push('puntos de la lista lejos del trazado: ' + lejos.join(', '));
+    }
     // ida / regreso: se corta en el primer hito de regreso
     const pv = hitos.find((h) => h.tramo === 'regreso' && h.pos != null);
     const corte = pv ? pv.pos : geo.length - 1;

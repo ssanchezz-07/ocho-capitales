@@ -1,0 +1,16 @@
+{
+ "humildad-malaga": {
+  "puntos": {
+   "8": [36.7242187, -4.420388],
+   "13": [36.7220759, -4.4219701]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 12:00",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «… Peña, Mariblanca, Álamos, Puerta de Buenaventura … Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía …»",
+    "cambios": "punto de paso en Álamos (fila 9) y en la Plaza Jesús de la Pasión (fila 14), que el trazado nuevo se saltaba; puntos tomados del trazado publicado, que sí las recorre"
+   }
+  ],
+  "actualizado": "2026-10-26 12:00"
+ }
+}
