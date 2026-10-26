@@ -1015,6 +1015,7 @@
   "cabecera": "PONTIFICIA Y REAL ARCHICOFRADÍA DEL DULCE NOMBRE DE JESÚS 21:45h 23:10h 01:25h NAZARENO DEL PASO Y MARÍA SANTÍSIMA DE LA ESPERANZA. Basílica Menor del Paso y la",
   "errores": [],
   "avisos": [
+   "«Dr. Don Felipe Sánchez de la Cuesta y Alarcón» casa con «Calle Alarcón», a 1172 m de sus calles vecinas: homónimo, omitida del trazado",
    "enlace de 7 m entre «Pasillo de Santa Isabel» y «Cisneros»: OSM no las une (por la red, 166 m)"
   ],
   "calles": [
@@ -1080,17 +1081,15 @@
    "aprox_m": 17
   },
   "idas_y_vueltas": [
-   "Glorieta Lola Carrera",
-   "Calle Marín García",
-   "Calle Alarcón"
+   "Glorieta Lola Carrera"
   ],
   "retrocesos_eliminados": 2,
-  "largo_m": 5815,
+  "largo_m": 3061,
   "calles_no_recorridas": [],
   "max_tramo_sin_calle_m": 7,
-  "ratio": 1.17,
+  "ratio": 1.19,
   "divide_en_catedral": true,
-  "media_vueltas": 14,
+  "media_vueltas": 6,
   "horas_oficiales": {
    "salida": [
     "21:45"
@@ -1111,7 +1110,7 @@
    "salida_ok": true,
    "salto_ok": true,
    "ratio_ok": true,
-   "retrocesos_ok": false,
+   "retrocesos_ok": true,
    "tiene_vuelta": true
   }
  }

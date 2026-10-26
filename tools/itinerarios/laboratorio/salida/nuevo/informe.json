@@ -1,0 +1,4863 @@
+{
+ "pollinica-malaga": {
+  "id": "pollinica-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "hueco de 42 m entre «Dos Aceras» y «Plaza San Pedro Alcántara»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7258912,
+    -4.4220276
+   ],
+   "como": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "fuente": "https://cofradiapollinicamalaga.es/contacto/"
+  },
+  "entrada": {
+   "punto": [
+    36.7258912,
+    -4.4220276
+   ],
+   "como": "puerta OSM 9023249193 con la dirección Calle Parras 20",
+   "fuente": "https://cofradiapollinicamalaga.es/contacto/"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Parras",
+    "tipo": "calle",
+    "osm": "Calle Parras",
+    "vias": [
+     135476536
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Plazuela Santísimo Cristo de la Sangre",
+    "tipo": "calle",
+    "osm": "Plazuela Santísimo Cristo de la Sangre",
+    "vias": [
+     491921375,
+     503088977
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Guerrero",
+    "tipo": "calle",
+    "osm": "Calle Guerrero",
+    "vias": [
+     176397865
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Dos Aceras",
+    "tipo": "calle",
+    "osm": "Calle Dos Aceras",
+    "vias": [
+     27617970
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Plaza San Pedro Alcántara",
+    "tipo": "calle",
+    "osm": "Plaza San Pedro Alcántara",
+    "vias": [
+     61652801,
+     550177085
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 42,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Tribuna de los Pobres",
+    "tipo": "punto",
+    "osm": "Tribuna de los Pobres (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Pasillo Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 22,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Plaza de La Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Estación de Penitencia en la S.I.C.B",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 12,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 33,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "San Agustin",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Echegaray",
+    "tipo": "calle",
+    "osm": "Calle Echegaray",
+    "vias": [
+     61281295
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     916600783
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Plaza de Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Casapalma",
+    "tipo": "calle",
+    "osm": "Calle Casapalma",
+    "vias": [
+     495661745
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Cárcer",
+    "tipo": "calle",
+    "osm": "Calle Cárcer",
+    "vias": [
+     61292419,
+     404007980
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Madre de Dios",
+    "tipo": "calle",
+    "osm": "Calle Madre de Dios",
+    "vias": [
+     27618035,
+     37995353
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 33,
+    "lugar": "Montaño",
+    "tipo": "calle",
+    "osm": "Calle Montaño",
+    "vias": [
+     27584404,
+     972227343
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 35,
+    "lugar": "Guerrero",
+    "tipo": "calle",
+    "osm": "Calle Guerrero",
+    "vias": [
+     176397865
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 36,
+    "lugar": "Gaona",
+    "tipo": "calle",
+    "osm": "Calle Gaona",
+    "vias": [
+     491921378
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 37,
+    "lugar": "Plazuela Santísimo Cristo de la Sangre",
+    "tipo": "calle",
+    "osm": "Plazuela Santísimo Cristo de la Sangre",
+    "vias": [
+     491921375,
+     503088977
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 22,
+    "forzado": false
+   },
+   {
+    "i": 38,
+    "lugar": "Parras",
+    "tipo": "calle",
+    "osm": "Calle Parras",
+    "vias": [
+     135476536
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "5 m entre «Plaza San Pedro Alcántara» y «Carretería»",
+   "22 m entre «Tribuna de los Pobres» y «Pasillo Santa Isabel»",
+   "7 m entre «Pasillo Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "5 m entre «Montaño» y «Guerrero»",
+   "22 m entre «Gaona» y «Plazuela Santísimo Cristo de la Sangre»"
+  ],
+  "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 501,
+  "largo_m": 3519,
+  "ms_total": 1213
+ },
+ "pasion-malaga": {
+  "id": "pasion-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7223262,
+    -4.4223654
+   ],
+   "como": "templo en OSM: Iglesia de los Santos Martires → puerta OSM 8285778881 (main) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 891447747"
+  },
+  "entrada": {
+   "punto": [
+    36.7223262,
+    -4.4223654
+   ],
+   "como": "templo en OSM: Iglesia de los Santos Martires → puerta OSM 8285778881 (main) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 891447747"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plaza de los Mártires",
+    "tipo": "calle",
+    "osm": "Calle Mártires",
+    "vias": [
+     61497725,
+     176390472,
+     61499658
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Santa Lucía",
+    "tipo": "calle",
+    "osm": "Calle Santa Lucía",
+    "vias": [
+     61273790
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Plaza Jesús de la Pasión",
+    "tipo": "calle",
+    "osm": "Plaza Jesús de la Pasión",
+    "vias": [
+     184157884
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Santa Lucía",
+    "tipo": "calle",
+    "osm": "Calle Santa Lucía",
+    "vias": [
+     61273790
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Plaza de La Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Estación de Penitencia en la S.I.C.B",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 12,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 33,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Plazuela de Jesús Castellanos",
+    "tipo": "calle",
+    "osm": "Plazuela Jesús Castellanos",
+    "vias": [
+     531972124
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     916600783
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Casapalma",
+    "tipo": "calle",
+    "osm": "Calle Casapalma",
+    "vias": [
+     495661745
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Cárcer",
+    "tipo": "calle",
+    "osm": "Calle Cárcer",
+    "vias": [
+     61292419,
+     404007980
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Álamos",
+    "tipo": "calle",
+    "osm": "Calle Álamos",
+    "vias": [
+     27618005,
+     1102524193
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Nosquera",
+    "tipo": "calle",
+    "osm": "Calle Nosquera",
+    "vias": [
+     61278202,
+     184153055
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Comedias",
+    "tipo": "calle",
+    "osm": "Calle Comedias",
+    "vias": [
+     61276347,
+     1072184931
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Plaza de los Mártires",
+    "tipo": "calle",
+    "osm": "Calle Mártires",
+    "vias": [
+     61497725,
+     176390472,
+     61499658
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+  ],
+  "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 466,
+  "largo_m": 2573,
+  "ms_total": 1451
+ },
+ "dolores-del-puente-malaga": {
+  "id": "dolores-del-puente-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7194071,
+    -4.4258805
+   ],
+   "como": "puerta OSM 8278934451 con la dirección Pasillo de Santo Domingo 5",
+   "fuente": "alias-calles-malaga.json"
+  },
+  "entrada": {
+   "punto": [
+    36.7193527,
+    -4.4261522
+   ],
+   "como": "templo en OSM: Iglesia de Santo Domingo → puerta OSM 8278934446 (yes) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 890640217"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plaza de Fray Alonso de Santo Tomás",
+    "tipo": "calle",
+    "osm": "Plaza Fray Alonso de Santo Tomás",
+    "vias": [
+     343436039
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Pasillo de Santo Domingo",
+    "tipo": "calle",
+    "osm": "Pasillo de Santo Domingo",
+    "vias": [
+     560505524,
+     277000195
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 4,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Plaza de la Religiosa Filipense Dolores Márquez",
+    "tipo": "calle",
+    "osm": "Plaza Religiosa Felipense Dolores Márquez",
+    "vias": [
+     343436044
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Cerrojo",
+    "tipo": "calle",
+    "osm": "Calle Cerrojo",
+    "vias": [
+     132695028,
+     234938777,
+     234939140,
+     256708241
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Martinete",
+    "tipo": "calle",
+    "osm": "Calle Martinete",
+    "vias": [
+     957123177
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Zurrado res",
+    "tipo": "calle",
+    "osm": "Calle Zurradores",
+    "vias": [
+     234932382,
+     234938776
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza Imagen",
+    "tipo": "calle",
+    "osm": "Plaza Imagen",
+    "vias": [
+     184177724
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 13,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Polvorista",
+    "tipo": "calle",
+    "osm": "Calle Polvorista",
+    "vias": [
+     234932381
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Llano de Doña Trinidad",
+    "tipo": "calle",
+    "osm": "Plaza de Doña Trinidad",
+    "vias": [
+     953557011,
+     1303742632
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Álvaro de Bazán",
+    "tipo": "calle",
+    "osm": "Calle Álvaro de Bazán",
+    "vias": [
+     135476777
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Mármoles",
+    "tipo": "calle",
+    "osm": "Calle Mármoles",
+    "vias": [
+     35836696,
+     98847255,
+     190509812,
+     295024811,
+     497223838,
+     532612645,
+     532612665,
+     532612666,
+     532612667,
+     532612668,
+     532612669,
+     532615190,
+     1202721775
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Puente de la Aurora",
+    "tipo": "calle",
+    "osm": "Puente de la Aurora",
+    "vias": [
+     34436467,
+     277000207,
+     36071467,
+     256705712,
+     496485333,
+     565149705
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Pasillo de Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Plaza La Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Estación de Penitencia en la S.I.C.B",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 12,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 33,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Duque de la Victoria",
+    "tipo": "calle",
+    "osm": "Calle Duque de la Victoria",
+    "vias": [
+     61281219
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 34,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 35,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 36,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 37,
+    "lugar": "Nueva",
+    "tipo": "calle",
+    "osm": "Calle Nueva",
+    "vias": [
+     61496896,
+     176388409,
+     176388411,
+     551272855
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 38,
+    "lugar": "Plaza de Félix Sáenz",
+    "tipo": "calle",
+    "osm": "Plaza de Félix Sáenz",
+    "vias": [
+     61326130
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 39,
+    "lugar": "Sagasta",
+    "tipo": "calle",
+    "osm": "Calle Sagasta",
+    "vias": [
+     61279142,
+     61500766,
+     388064159
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 40,
+    "lugar": "Plaza Arriola",
+    "tipo": "calle",
+    "osm": "Plaza de Arriola",
+    "vias": [
+     61279128
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 41,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 42,
+    "lugar": "Prim",
+    "tipo": "calle",
+    "osm": "Calle Prim",
+    "vias": [
+     146544715
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 43,
+    "lugar": "Puente de la Esperanza",
+    "tipo": "calle",
+    "osm": "Puente de la Esperanza",
+    "vias": [
+     149953122,
+     277000197
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 44,
+    "lugar": "San Jacinto",
+    "tipo": "calle",
+    "osm": "Calle San Jacinto",
+    "vias": [
+     234932378,
+     343435958
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 15,
+    "forzado": false
+   },
+   {
+    "i": 45,
+    "lugar": "Plaza Fray Alonso de Santo Tomás",
+    "tipo": "calle",
+    "osm": "Plaza Fray Alonso de Santo Tomás",
+    "vias": [
+     343436039
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 30,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "4 m entre «Plaza de Fray Alonso de Santo Tomás» y «Pasillo de Santo Domingo»",
+   "5 m entre «Plaza de la Religiosa Filipense Dolores Márquez» y «Cerrojo»",
+   "13 m entre «Zurrado res» y «Plaza Imagen»",
+   "5 m entre «Plaza Imagen» y «Polvorista»",
+   "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza La Marina» y «Molina Lario»",
+   "15 m entre «Puente de la Esperanza» y «San Jacinto»",
+   "30 m entre «San Jacinto» y «Plaza Fray Alonso de Santo Tomás»"
+  ],
+  "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 495,
+  "largo_m": 3909,
+  "ms_total": 1155
+ },
+ "el-rico-malaga": {
+  "id": "el-rico-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
+   "hueco de 43 m entre «Plaza del Siglo» y «Calle Calderería»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7234189,
+    -4.4164204
+   ],
+   "como": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/"
+  },
+  "entrada": {
+   "punto": [
+    36.7234189,
+    -4.4164204
+   ],
+   "como": "puerta OSM 5267835421 con la dirección Calle Victoria 12",
+   "fuente": "https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Victoria",
+    "tipo": "calle",
+    "osm": "Calle Victoria",
+    "vias": [
+     34435272,
+     35773179,
+     36226756,
+     190792398,
+     190792406,
+     315765582,
+     315765583,
+     435720576,
+     490175892,
+     490175893,
+     899482972,
+     948232978,
+     1147926266,
+     1147926267,
+     1147926268,
+     1153422818,
+     1235568536,
+     35842470
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Plaza Jesús El Rico",
+    "tipo": "calle",
+    "osm": "Plaza Jesús El Rico",
+    "vias": [
+     35772671,
+     191382434,
+     191382435,
+     900848669
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Alcazabilla",
+    "tipo": "calle",
+    "osm": "Calle Alcazabilla",
+    "vias": [
+     61492662
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Cister",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 23,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Santa María",
+    "tipo": "calle",
+    "osm": "Calle Santa María",
+    "vias": [
+     27594198,
+     27594200
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza del Obispo (Liberación)",
+    "tipo": "calle",
+    "osm": "Plaza del Obispo",
+    "vias": [
+     183870994
+    ],
+    "candidatas": 24,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Alameda principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Plaza de la Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Santa María",
+    "tipo": "calle",
+    "osm": "Calle Santa María",
+    "vias": [
+     27594198,
+     27594200
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Duque de la Victoria",
+    "tipo": "calle",
+    "osm": "Calle Duque de la Victoria",
+    "vias": [
+     61281219
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Calle Calderería",
+    "tipo": "calle",
+    "osm": "Calle Calderería",
+    "vias": [
+     452983251
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 43,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Plaza de Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Casapalma",
+    "tipo": "calle",
+    "osm": "Calle Casapalma",
+    "vias": [
+     495661745
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Cárcer",
+    "tipo": "calle",
+    "osm": "Calle Cárcer",
+    "vias": [
+     61292419,
+     404007980
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Álamos",
+    "tipo": "calle",
+    "osm": "Calle Álamos",
+    "vias": [
+     27618005,
+     1102524193
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Plaza de la Merced",
+    "tipo": "calle",
+    "osm": "Plaza de la Merced",
+    "vias": [
+     61294555,
+     113431926,
+     445866116,
+     544994609,
+     544995095,
+     630361668,
+     890968491,
+     1153422817
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Plaza Jesús El Rico",
+    "tipo": "calle",
+    "osm": "Plaza Jesús El Rico",
+    "vias": [
+     35772671,
+     191382434,
+     191382435,
+     900848669
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 39,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Victoria",
+    "tipo": "calle",
+    "osm": "Calle Victoria",
+    "vias": [
+     34435272,
+     35773179,
+     36226756,
+     190792398,
+     190792406,
+     315765582,
+     315765583,
+     435720576,
+     490175892,
+     490175893,
+     899482972,
+     948232978,
+     1147926266,
+     1147926267,
+     1147926268,
+     1153422818,
+     1235568536,
+     35842470
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "23 m entre «Alcazabilla» y «Cister»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "39 m entre «Plaza de la Merced» y «Plaza Jesús El Rico»"
+  ],
+  "ms_graphhopper": 1183,
+  "largo_m": 3196,
+  "ms_total": 1595
+ },
+ "paloma-malaga": {
+  "id": "paloma-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
+   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7239231,
+    -4.4228771
+   ],
+   "como": "dirección por Nominatim (caché)",
+   "fuente": "alias-calles-malaga.json"
+  },
+  "entrada": {
+   "punto": [
+    36.7239231,
+    -4.4228771
+   ],
+   "como": "dirección por Nominatim (caché)",
+   "fuente": "alias-calles-malaga.json"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plaza de San Francisco",
+    "tipo": "calle",
+    "osm": "Plaza San Francisco",
+    "vias": [
+     306100511,
+     584350532
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Tribuna de los Pobres",
+    "tipo": "punto",
+    "osm": "Tribuna de los Pobres (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Pasillo de Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 22,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Plaza de La Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Plaza del Obispo",
+    "tipo": "calle",
+    "osm": "Plaza del Obispo",
+    "vias": [
+     183870994
+    ],
+    "candidatas": 24,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Calderería",
+    "tipo": "calle",
+    "osm": "Calle Calderería",
+    "vias": [
+     452983251
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 43,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Plaza de Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     36228324
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Tejón y Rodríguez",
+    "tipo": "calle",
+    "osm": "Calle Tejón y Rodríguez",
+    "vias": [
+     36228136,
+     1185661836
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Plaza de San Francisco",
+    "tipo": "calle",
+    "osm": "Plaza San Francisco",
+    "vias": [
+     306100511,
+     584350532
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
+   "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+  ],
+  "ms_graphhopper": 190,
+  "largo_m": 2618,
+  "ms_total": 402
+ },
+ "fusionadas-malaga": {
+  "id": "fusionadas-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.720642,
+    -4.423473
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/ (sede social en calle Postigo de San Juan, 5)"
+  },
+  "entrada": {
+   "punto": [
+    36.720642,
+    -4.423473
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/fusionadas/ (sede social en calle Postigo de San Juan, 5)"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Pasillo Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Plaza Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Plaza de la Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Estación de Penitencia SICB",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 12,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 33,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Echegaray",
+    "tipo": "calle",
+    "osm": "Calle Echegaray",
+    "vias": [
+     61281295
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     916600783
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Plaza de Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     36228324
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Comedias",
+    "tipo": "calle",
+    "osm": "Calle Comedias",
+    "vias": [
+     61276347,
+     1072184931
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Nosquera",
+    "tipo": "calle",
+    "osm": "Calle Nosquera",
+    "vias": [
+     61278202,
+     184153055
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Pasillo Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "7 m entre «Pasillo Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de la Marina» y «Molina Lario»"
+  ],
+  "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 345,
+  "largo_m": 3020,
+  "ms_total": 535
+ },
+ "resucitado-malaga": {
+  "id": "resucitado-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "hueco de 118 m entre «Granada» y «Méndez Núñez»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.723413,
+    -4.422658
+   ],
+   "como": "punto fijado con fuente",
+   "fuente": "Itinerario oficial 2026 (salida: Parroquia de San Julián, sale a calle Nosquera). Puerta: nodo OSM 5267734993 (entrance=main, Calle Nosquera 17), a ~14 m de las coordenadas de Wikipedia (36°43′24″N 4°25′21″O). https://agrupaciondecofradias.com/sede/ dice que la iglesia «presenta dos portadas» sin indicar la calle: a confirmar a ojo."
+  },
+  "entrada": {
+   "punto": [
+    36.723413,
+    -4.422658
+   ],
+   "como": "punto fijado con fuente",
+   "fuente": "Itinerario oficial 2026 (salida: Parroquia de San Julián, sale a calle Nosquera). Puerta: nodo OSM 5267734993 (entrance=main, Calle Nosquera 17), a ~14 m de las coordenadas de Wikipedia (36°43′24″N 4°25′21″O). https://agrupaciondecofradias.com/sede/ dice que la iglesia «presenta dos portadas» sin indicar la calle: a confirmar a ojo."
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Nosquera",
+    "tipo": "calle",
+    "osm": "Calle Nosquera",
+    "vias": [
+     61278202,
+     184153055
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Santa Lucía",
+    "tipo": "calle",
+    "osm": "Calle Santa Lucía",
+    "vias": [
+     61273790
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 27,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Plaza de la Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Plaza del Obispo",
+    "tipo": "calle",
+    "osm": "Plaza del Obispo",
+    "vias": [
+     183870994
+    ],
+    "candidatas": 24,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Santa María",
+    "tipo": "calle",
+    "osm": "Calle Santa María",
+    "vias": [
+     27594198,
+     27594200
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Echegaray",
+    "tipo": "calle",
+    "osm": "Calle Echegaray",
+    "vias": [
+     61281295
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     36228324
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 118,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Comedias",
+    "tipo": "calle",
+    "osm": "Calle Comedias",
+    "vias": [
+     61276347,
+     1072184931
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Nosquera",
+    "tipo": "calle",
+    "osm": "Calle Nosquera",
+    "vias": [
+     61278202,
+     184153055
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "27 m entre «Nosquera» y «Santa Lucía»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de la Marina» y «Molina Lario»"
+  ],
+  "ms_graphhopper": 224,
+  "largo_m": 2280,
+  "ms_total": 615
+ },
+ "humildad-y-paciencia-malaga": {
+  "id": "humildad-y-paciencia-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
+   "hueco de 69 m entre «Prim» y «Plaza Arriola»: en OSM no se tocan",
+   "hueco de 43 m entre «Puerta del Mar» y «Córdoba»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7087845,
+    -4.4422065
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741"
+  },
+  "entrada": {
+   "punto": [
+    36.7087845,
+    -4.4422065
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/ (y humildadypaciencia.org); punto = edificio de la hermandad en OSM, way 570329741"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plazuela Virgen de Dolores y Esperanza",
+    "tipo": "calle",
+    "osm": "Plaza María Santísima de Dolores",
+    "vias": [
+     787085844
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Pedro de Paz",
+    "tipo": "calle",
+    "osm": "Calle Pedro de Paz",
+    "vias": [
+     233192064,
+     233192070,
+     373876684,
+     373876685,
+     373876686,
+     1190835109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 29,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "la Unión",
+    "tipo": "calle",
+    "osm": "Calle La Unión",
+    "vias": [
+     191099606,
+     344515363,
+     357818511,
+     359284804,
+     359284805,
+     359507074,
+     359507075,
+     359507076,
+     675882655,
+     675882656,
+     787068685,
+     1190835335
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Edison",
+    "tipo": "calle",
+    "osm": "Calle Edison",
+    "vias": [
+     23162026,
+     35916323,
+     1201356845
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Mendívil",
+    "tipo": "calle",
+    "osm": "Calle Mendívil",
+    "vias": [
+     23162024,
+     35916356,
+     75996724,
+     191457582,
+     358086113,
+     764152294,
+     764152295
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 18,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Eslava",
+    "tipo": "calle",
+    "osm": "Calle Eslava",
+    "vias": [
+     35916429,
+     343432619,
+     348881800,
+     348881802,
+     1189807227
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Senador Francisco Román",
+    "tipo": "calle",
+    "osm": "Calle Senador Francisco Román",
+    "vias": [
+     348528080
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "La Serna",
+    "tipo": "calle",
+    "osm": "Calle La Serna",
+    "vias": [
+     35915738,
+     373208234
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Ancha del Carmen",
+    "tipo": "calle",
+    "osm": "Calle Ancha del Carmen",
+    "vias": [
+     35915951,
+     645310515
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Avenida de la Aurora",
+    "tipo": "calle",
+    "osm": "Avenida de la Aurora",
+    "vias": [
+     190796499,
+     358055199,
+     585610407,
+     832892264,
+     839879314,
+     839879316
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Puente de la Misericordia",
+    "tipo": "calle",
+    "osm": "Puente de la Misericordia",
+    "vias": [
+     23162043,
+     277000202
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Linaje",
+    "tipo": "calle",
+    "osm": "Calle Linaje",
+    "vias": [
+     35900161,
+     817140099,
+     1266100695
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Alameda Colón",
+    "tipo": "calle",
+    "osm": "Alameda de Colón",
+    "vias": [
+     34474997,
+     367453371,
+     591569082,
+     614779081,
+     621979905,
+     621979906,
+     770855633,
+     930763810,
+     931536312,
+     931536313,
+     931536314
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Ordóñez",
+    "tipo": "calle",
+    "osm": "Calle Ordóñez",
+    "vias": [
+     549574119,
+     565930941
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Prim",
+    "tipo": "calle",
+    "osm": "Calle Prim",
+    "vias": [
+     146544715
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Plaza Arriola",
+    "tipo": "calle",
+    "osm": "Plaza de Arriola",
+    "vias": [
+     61279128
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 69,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Sagasta",
+    "tipo": "calle",
+    "osm": "Calle Sagasta",
+    "vias": [
+     61279142,
+     61500766,
+     388064159
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Moreno Carbonero",
+    "tipo": "calle",
+    "osm": "Calle Moreno Carbonero",
+    "vias": [
+     61278960
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Plaza Enrique García-Herrera",
+    "tipo": "calle",
+    "osm": "Plaza Enrique García-Herrera",
+    "vias": [
+     183856398
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Fernán González",
+    "tipo": "calle",
+    "osm": "Calle Fernán González",
+    "vias": [
+     45408586
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Plaza de la Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Plaza de la Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 34,
+    "lugar": "Postigo de los Abades",
+    "tipo": "calle",
+    "osm": "Calle Postigo de los Abades",
+    "vias": [
+     35836492,
+     419482037
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 35,
+    "lugar": "Estación de Penitencia en la S.I.C.B",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 12,
+    "forzado": false
+   },
+   {
+    "i": 37,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 33,
+    "forzado": false
+   },
+   {
+    "i": 38,
+    "lugar": "San Agustín",
+    "tipo": "calle",
+    "osm": "Calle San Agustín",
+    "vias": [
+     27594196,
+     1072180653
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 39,
+    "lugar": "Duque de la Victoria",
+    "tipo": "calle",
+    "osm": "Calle Duque de la Victoria",
+    "vias": [
+     61281219
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 40,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 42,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     452983249,
+     692875000,
+     692875001
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 43,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 44,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 45,
+    "lugar": "Nueva",
+    "tipo": "calle",
+    "osm": "Calle Nueva",
+    "vias": [
+     61496896,
+     176388409,
+     176388411,
+     551272855
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 46,
+    "lugar": "Puerta del Mar",
+    "tipo": "calle",
+    "osm": "Calle Puerta del Mar",
+    "vias": [
+     35903166,
+     184108281,
+     656659021
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 16,
+    "forzado": false
+   },
+   {
+    "i": 47,
+    "lugar": "Córdoba",
+    "tipo": "calle",
+    "osm": "Calle Córdoba",
+    "vias": [
+     27617819,
+     402281056,
+     654492155,
+     765527988
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 43,
+    "forzado": false
+   },
+   {
+    "i": 48,
+    "lugar": "Vendeja",
+    "tipo": "calle",
+    "osm": "Calle Vendeja",
+    "vias": [
+     35901888
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 49,
+    "lugar": "Linaje",
+    "tipo": "calle",
+    "osm": "Calle Linaje",
+    "vias": [
+     35900161,
+     817140099,
+     1266100695
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 50,
+    "lugar": "Puente de la Misericordia",
+    "tipo": "calle",
+    "osm": "Puente de la Misericordia",
+    "vias": [
+     23162043,
+     277000202
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 51,
+    "lugar": "Avenida de la Aurora",
+    "tipo": "calle",
+    "osm": "Avenida de la Aurora",
+    "vias": [
+     190796499,
+     358055199,
+     585610407,
+     832892264,
+     839879314,
+     839879316
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 52,
+    "lugar": "Ancha del Carmen",
+    "tipo": "calle",
+    "osm": "Calle Ancha del Carmen",
+    "vias": [
+     35915951,
+     645310515
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 53,
+    "lugar": "la Serna",
+    "tipo": "calle",
+    "osm": "Calle La Serna",
+    "vias": [
+     35915738,
+     373208234
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 54,
+    "lugar": "Senador Francisco Román",
+    "tipo": "calle",
+    "osm": "Calle Senador Francisco Román",
+    "vias": [
+     348528080
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 55,
+    "lugar": "Eslava",
+    "tipo": "calle",
+    "osm": "Calle Eslava",
+    "vias": [
+     35916429,
+     343432619,
+     348881800,
+     348881802,
+     1189807227
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 56,
+    "lugar": "Medívil",
+    "tipo": "calle",
+    "osm": "Calle Mendívil",
+    "vias": [
+     23162024,
+     35916356,
+     75996724,
+     191457582,
+     358086113,
+     764152294,
+     764152295
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 57,
+    "lugar": "Edison",
+    "tipo": "calle",
+    "osm": "Calle Edison",
+    "vias": [
+     23162026,
+     35916323,
+     1201356845
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 18,
+    "forzado": false
+   },
+   {
+    "i": 58,
+    "lugar": "la Unión",
+    "tipo": "calle",
+    "osm": "Calle La Unión",
+    "vias": [
+     191099606,
+     344515363,
+     357818511,
+     359284804,
+     359284805,
+     359507074,
+     359507075,
+     359507076,
+     675882655,
+     675882656,
+     787068685,
+     1190835335
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 59,
+    "lugar": "Reboul",
+    "tipo": "calle",
+    "osm": "Calle Reboul",
+    "vias": [
+     35773484,
+     343435954,
+     343435955,
+     359507069,
+     359507643,
+     373871876,
+     373871879,
+     373871883,
+     373871886,
+     1266118956
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 60,
+    "lugar": "Plazuela Virgen de Dolores y Esperanza",
+    "tipo": "calle",
+    "osm": "Plaza María Santísima de Dolores",
+    "vias": [
+     787085844
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 8,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "29 m entre «Plazuela Virgen de Dolores y Esperanza» y «Pedro de Paz»",
+   "18 m entre «Edison» y «Mendívil»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "16 m entre «Nueva» y «Puerta del Mar»",
+   "18 m entre «Medívil» y «Edison»",
+   "8 m entre «Reboul» y «Plazuela Virgen de Dolores y Esperanza»"
+  ],
+  "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
+  "cortes_media_vuelta": 1,
+  "ms_graphhopper": 463,
+  "largo_m": 7811,
+  "ms_total": 1137
+ },
+ "estudiantes-malaga": {
+  "id": "estudiantes-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [
+   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
+   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.720761,
+    -4.417485
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)"
+  },
+  "entrada": {
+   "punto": [
+    36.720761,
+    -4.417485
+   ],
+   "como": "punto fijado con fuente (casas-hermandad-malaga.json)",
+   "fuente": "https://agrupaciondecofradias.com/hermandades/estudiantes/ (casa hermandad en calle Alcazabilla, 3)"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Alcazabilla",
+    "tipo": "calle",
+    "osm": "Calle Alcazabilla",
+    "vias": [
+     61492662
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Plaza de la Aduana",
+    "tipo": "calle",
+    "osm": "Plaza de la Aduana",
+    "vias": [
+     532448598
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Santa María",
+    "tipo": "calle",
+    "osm": "Calle Santa María",
+    "vias": [
+     27594198,
+     27594200
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Plaza del Obispo",
+    "tipo": "calle",
+    "osm": "Plaza del Obispo",
+    "vias": [
+     183870994
+    ],
+    "candidatas": 24,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Plaza del Siglo",
+    "tipo": "calle",
+    "osm": "Plaza del Siglo",
+    "vias": [
+     184107523
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Calderería",
+    "tipo": "calle",
+    "osm": "Calle Calderería",
+    "vias": [
+     452983251
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 43,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Plaza de Uncibay",
+    "tipo": "calle",
+    "osm": "Plaza Uncibay",
+    "vias": [
+     183870992
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Méndez Núñez",
+    "tipo": "calle",
+    "osm": "Calle Méndez Núñez",
+    "vias": [
+     36228324
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Tejón y Rodríguez",
+    "tipo": "calle",
+    "osm": "Calle Tejón y Rodríguez",
+    "vias": [
+     36228136,
+     1185661836
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Carretería",
+    "tipo": "calle",
+    "osm": "Calle Carretería",
+    "vias": [
+     584516573,
+     692874996,
+     692874997,
+     989194622,
+     989194623,
+     1102524194,
+     1102524195,
+     1102524196,
+     1189948999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Tribuna de los Pobres",
+    "tipo": "punto",
+    "osm": "Tribuna de los Pobres (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Pasillo de Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 22,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Plaza de La Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Plaza del Obispo",
+    "tipo": "calle",
+    "osm": "Plaza del Obispo",
+    "vias": [
+     183870994
+    ],
+    "candidatas": 24,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Santa María",
+    "tipo": "calle",
+    "osm": "Calle Santa María",
+    "vias": [
+     27594198,
+     27594200
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Císter",
+    "tipo": "calle",
+    "osm": "Calle Císter",
+    "vias": [
+     531965509
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 33,
+    "lugar": "Plaza de la Aduana",
+    "tipo": "calle",
+    "osm": "Plaza de la Aduana",
+    "vias": [
+     532448598
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 34,
+    "lugar": "Alcazabilla",
+    "tipo": "calle",
+    "osm": "Calle Alcazabilla",
+    "vias": [
+     61492662
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
+   "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+  ],
+  "ms_graphhopper": 443,
+  "largo_m": 3243,
+  "ms_total": 795
+ },
+ "esperanza-malaga": {
+  "id": "esperanza-malaga",
+  "metodo": "continuidad + GraphHopper 11.1 (perfil procesion)",
+  "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+  "avisos": [],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.7180692,
+    -4.4267828
+   ],
+   "como": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "fuente": "alias-calles-malaga.json"
+  },
+  "entrada": {
+   "punto": [
+    36.7180692,
+    -4.4267828
+   ],
+   "como": "puerta OSM 8278211145 con la dirección Calle San Jacinto 1",
+   "fuente": "alias-calles-malaga.json"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Glorieta Lola Carrera",
+    "tipo": "calle",
+    "osm": "Glorieta Lola Carrera",
+    "vias": [
+     35777852,
+     190796496,
+     191454939,
+     372823132,
+     372823134,
+     372823137
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "calle Hilera",
+    "tipo": "calle",
+    "osm": "Calle Hilera",
+    "vias": [
+     23161457,
+     77765949,
+     149953111,
+     183856409,
+     190796497,
+     191454914,
+     191454931,
+     191454936,
+     196873633,
+     196873636,
+     196873639,
+     196873642,
+     359524724,
+     359524728,
+     359524731,
+     359524736,
+     360980744,
+     360980745,
+     360980746,
+     360980747,
+     360980748,
+     360980749,
+     360980750,
+     360980751,
+     372818266,
+     372818267,
+     372818268,
+     372818269,
+     372818270,
+     372818271,
+     372818272,
+     372818273,
+     372818274,
+     372818275,
+     372818276,
+     373181162,
+     586298332,
+     760004442,
+     760004443,
+     833462419,
+     1184490256,
+     1185468977,
+     1185468979,
+     1185659794,
+     1188462842
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Puente de la Esperanza",
+    "tipo": "calle",
+    "osm": "Puente de la Esperanza",
+    "vias": [
+     149953122,
+     277000197
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Manuel José García Caparrós",
+    "tipo": "calle",
+    "osm": "Calle Manuel José García Caparrós",
+    "vias": [
+     35903681,
+     302279748
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Pasillo de Santa Isabel",
+    "tipo": "calle",
+    "osm": "Pasillo de Santa Isabel",
+    "vias": [
+     35903052,
+     190816352,
+     358195690,
+     587013326,
+     1189949001
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Cisneros",
+    "tipo": "calle",
+    "osm": "Calle Cisneros",
+    "vias": [
+     43512909
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Especería",
+    "tipo": "calle",
+    "osm": "Calle Especería",
+    "vias": [
+     34435279
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Plaza de la Constitución",
+    "tipo": "calle",
+    "osm": "Plaza de la Constitución",
+    "vias": [
+     392521109
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Torregorda",
+    "tipo": "calle",
+    "osm": "Calle Torregorda",
+    "vias": [
+     35903288,
+     549572462
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Alameda Principal",
+    "tipo": "calle",
+    "osm": "Alameda Principal",
+    "vias": [
+     146196600,
+     146544718,
+     191454927,
+     358055149,
+     549574121,
+     553295965,
+     627718562,
+     832977695,
+     832977696,
+     838607006,
+     1280111588
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Plaza de la Marina",
+    "tipo": "calle",
+    "osm": "Plaza de la Marina",
+    "vias": [
+     436795864
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Molina Lario",
+    "tipo": "calle",
+    "osm": "Calle Molina Lario",
+    "vias": [
+     35836418,
+     357575329,
+     692874998,
+     692874999
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 11,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Strachan",
+    "tipo": "calle",
+    "osm": "Calle Strachan",
+    "vias": [
+     61274892
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Torre de Sandoval",
+    "tipo": "calle",
+    "osm": "Calle Torre de Sandoval",
+    "vias": [
+     45408588
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Bolsa",
+    "tipo": "calle",
+    "osm": "Calle Bolsa",
+    "vias": [
+     445592150,
+     445592563,
+     532196425,
+     571013995
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Marqués de Larios",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Larios",
+    "vias": [
+     98772458,
+     532211894,
+     669143069
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Marín García",
+    "tipo": "calle",
+    "osm": "Calle Marín García",
+    "vias": [
+     61424031
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Dr. Don Felipe Sánchez de la Cuesta y Alarcón",
+    "tipo": "calle",
+    "osm": "Calle Doctor Felipe Sánchez de la Cuesta y Alarcón",
+    "vias": [
+     61274847
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Antonio Baena Gómez",
+    "tipo": "calle",
+    "osm": "Calle Antonio Baena Gómez",
+    "vias": [
+     61291538
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Martínez",
+    "tipo": "calle",
+    "osm": "Calle Martínez",
+    "vias": [
+     27617828,
+     1202569532
+    ],
+    "candidatas": 12,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Puerta del Mar",
+    "tipo": "calle",
+    "osm": "Calle Puerta del Mar",
+    "vias": [
+     35903166,
+     184108281,
+     656659021
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 26,
+    "lugar": "Plaza de Félix Saénz",
+    "tipo": "calle",
+    "osm": "Plaza de Félix Sáenz",
+    "vias": [
+     61326130
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 27,
+    "lugar": "Sagasta",
+    "tipo": "calle",
+    "osm": "Calle Sagasta",
+    "vias": [
+     61279142,
+     61500766,
+     388064159
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 28,
+    "lugar": "Plaza de Arriola",
+    "tipo": "calle",
+    "osm": "Plaza de Arriola",
+    "vias": [
+     61279128
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 29,
+    "lugar": "Atarazanas",
+    "tipo": "calle",
+    "osm": "Calle Atarazanas",
+    "vias": [
+     27131168,
+     190816353,
+     190816355,
+     860388029,
+     860388709
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 30,
+    "lugar": "Prim",
+    "tipo": "calle",
+    "osm": "Calle Prim",
+    "vias": [
+     146544715
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 31,
+    "lugar": "Puente de la Esperanza",
+    "tipo": "calle",
+    "osm": "Puente de la Esperanza",
+    "vias": [
+     149953122,
+     277000197
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 32,
+    "lugar": "Hilera",
+    "tipo": "calle",
+    "osm": "Calle Hilera",
+    "vias": [
+     23161457,
+     77765949,
+     149953111,
+     183856409,
+     190796497,
+     191454914,
+     191454931,
+     191454936,
+     196873633,
+     196873636,
+     196873639,
+     196873642,
+     359524724,
+     359524728,
+     359524731,
+     359524736,
+     360980744,
+     360980745,
+     360980746,
+     360980747,
+     360980748,
+     360980749,
+     360980750,
+     360980751,
+     372818266,
+     372818267,
+     372818268,
+     372818269,
+     372818270,
+     372818271,
+     372818272,
+     372818273,
+     372818274,
+     372818275,
+     372818276,
+     373181162,
+     586298332,
+     760004442,
+     760004443,
+     833462419,
+     1184490256,
+     1185468977,
+     1185468979,
+     1185659794,
+     1188462842
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 33,
+    "lugar": "Glorieta de Lola Carrera",
+    "tipo": "calle",
+    "osm": "Glorieta Lola Carrera",
+    "vias": [
+     35777852,
+     190796496,
+     191454939,
+     372823132,
+     372823134,
+     372823137
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
+   "3 m entre «Martínez» y «Atarazanas»",
+   "11 m entre «Plaza de la Marina» y «Molina Lario»"
+  ],
+  "ms_graphhopper": 309,
+  "largo_m": 2987,
+  "ms_total": 671
+ }
+}

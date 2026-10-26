@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// COPIA DE LABORATORIO del método actual (carpeta original, 2026-10-25): mismas reglas; solo cambian las rutas de entrada/salida.
+// COPIA DE LABORATORIO del método actual (origin/main bdf9903, 2026-10-26): mismas reglas; solo cambian las rutas de entrada/salida.
 const LAB = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(LAB, '..', '..');
 const RAIZ = path.join(DIR, '..', '..');
@@ -173,7 +173,7 @@ async function reconstruir(idx) {
   }
   toks.length = 0; toks.push(...toks0);
   const informe = { id, fuente: FUENTE_URL, cabecera: P.cabecera.replace(/\s+/g, ' ').slice(0, 160), errores: [], avisos: [], calles: toks };
-  if (soloNazarenos) informe.salida_nazarenos = 'Los nazarenos salen de «' + soloNazarenos[0] + '» y van por ' + soloNazarenos.slice(1).join(', ') + ' hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad.';
+  if (soloNazarenos) informe.salida_nazarenos = 'Los nazarenos salen de «' + soloNazarenos[0] + '»' + (soloNazarenos.length > 1 ? ' y van por ' + soloNazarenos.slice(1).join(', ') : '') + ' hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad.';
   if (torreDerivada) informe.torre_sur_derivada = 'La lista oficial no cita la Torre Sur; la ficha da su hora (' + H.horas.torre_sur[0] + '). Se sitúa en Molina Lario tras la Plaza de la Marina y ahí empieza el regreso.';
   const pasos = []; // {lugar, tipo:'calle'|'marca'|'templo', nodos:Set|null, punto:[la,lo]|null}
   for (let i = 0; i < toks.length; i++) {
@@ -206,6 +206,22 @@ async function reconstruir(idx) {
   // al pasar por una arista suya; los puntos (plazas sin calle en OSM) al llegar a su nodo. Se busca el camino más corto que cumple todas.
   const seq = [];
   for (const p of cal) { if (p.tipo === 'calle' || p.tipo === 'punto') { if (p.tipo === 'calle' && !p.nodos.size) continue; if (p.tipo === 'calle' && ![...p.nodos].some((n) => comp[n] === PRINCIPAL)) { const ns = [...p.nodos]; const la = ns.reduce((a, n) => a + nodos[n][0], 0) / ns.length, lo = ns.reduce((a, n) => a + nodos[n][1], 0) / ns.length; const [nn, dd] = cercano(la, lo); if (nn >= 0 && dd < 120) { informe.avisos.push(`«${p.lugar}» no conectada en OSM: el trazado pasa por su centro (a ${Math.round(dd)} m de la red)`); p.tipo = 'punto'; p.punto = [la, lo]; delete p.clave; } else { informe.avisos.push(`«${p.lugar}» no conectada a la red en OSM: omitida`); continue; } } if (seq.length && seq.at(-1).clave && seq.at(-1).clave === p.clave) continue; seq.push(p); } }
+  // Un punto situado por Nominatim (calle que OSM no tiene) que cae lejos de sus vecinas de la lista es un homónimo de otro barrio
+  // («Alcubilla» → La Alcubilla, Bailén-Miraflores): se descarta con aviso en vez de llevar el trazado hasta allí.
+  for (let i = seq.length - 1; i >= 0; i--) {
+    const p = seq[i];
+    if (p.tipo === 'calle' && p.nodos) { // calle homónima de otro barrio: todos sus tramos lejos de las vecinas
+      const pts = (q) => !q ? [] : q.nodos ? [...q.nodos].map((n) => [nodos[n][2], nodos[n][3]]) : q.punto ? [X(...q.punto)] : [];
+      const vec = [...pts(seq[i - 1]), ...pts(seq[i + 1])]; if (!vec.length) continue;
+      let d = Infinity; for (const n of p.nodos) for (const [vx, vy] of vec) { const dd = Math.hypot(nodos[n][2] - vx, nodos[n][3] - vy); if (dd < d) d = dd; }
+      if (d > 600) { informe.avisos.push(`«${p.lugar}» casa con «${nombres.get(p.clave) || p.clave}», a ${Math.round(d)} m de sus calles vecinas: homónimo, omitida del trazado`); seq.splice(i, 1); }
+      continue;
+    }
+    if (p.tipo !== 'punto' || /punto fijado/.test(p.osm || '')) continue;
+    const [x, y] = X(...p.punto); const dVec = (q) => !q ? Infinity : q.nodos ? Math.min(...[...q.nodos].map((n) => Math.hypot(nodos[n][2] - x, nodos[n][3] - y))) : q.punto ? Math.hypot(X(...q.punto)[0] - x, X(...q.punto)[1] - y) : Infinity;
+    const d = Math.min(dVec(seq[i - 1]), dVec(seq[i + 1]));
+    if (d > 600) { informe.avisos.push(`«${p.lugar}» situado por Nominatim en ${String(p.osm || '').slice(0, 60)}, a ${Math.round(d)} m de sus calles vecinas: homónimo, omitido del trazado`); seq.splice(i, 1); }
+  }
   const pIni = cal[0], pFin = cal[cal.length - 1];
   const lejos = (p, vecino) => { if (p.tipo !== 'templo' || !vecino?.nodos) return false; const [x, y] = X(...p.punto); let m = Infinity; for (const n of vecino.nodos) m = Math.min(m, Math.hypot(nodos[n][2] - x, nodos[n][3] - y)); return m > 350; };
   if (lejos(pIni, seq[0])) { informe.avisos.push(`«${pIni.lugar}» localizado en ${pIni.osm?.slice(0, 50)} está a >350 m de «${seq[0].lugar}»: descartado, salida aproximada`); pIni.tipo = 'casa'; pIni.punto = null; }
@@ -284,6 +300,8 @@ async function reconstruir(idx) {
     if (!previo || perdidas.size < previo.np || (perdidas.size === previo.np && largoR < previo.largo)) previo = { cad, bruto, nodosRuta, mapa, np: perdidas.size, largo: largoR, intento };
     // Repetir sin el pico obliga a seguir la calle, pero en el casco antiguo produce rodeos absurdos (probado el 2026-10-25 en
     // Lágrimas, Rescate, El Rico y Sangre): se queda el primer intento y las calles apenas pisadas salen como aviso para revisar a mano.
+    // una ida y vuelta larga (> 300 m en esa calle) no es una plaza delante del templo: es un casamiento con un tramo lejano; se recorta
+    { const mB = metrosPorCalle(bruto); for (const c of [...perdidas]) if ((mB.get(c) || 0) > 300) perdidas.delete(c); }
     if (perdidas.size) { // la ida y vuelta era necesaria (la lista pasa por esa calle): no se recorta si es de una calle que se perdería
       nodosRuta = []; mapa = [];
       for (const n of bruto) { const pisa = nodosRuta.length >= 2 && nodosRuta.at(-2) === n && ady[nodosRuta.at(-1)].some((e) => e[0] === n && perdidas.has(e[2])); if (nodosRuta.length >= 2 && nodosRuta.at(-2) === n && !pisa) nodosRuta.pop(); else if (nodosRuta.at(-1) !== n) nodosRuta.push(n); mapa.push(nodosRuta.length - 1); }
