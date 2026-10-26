@@ -1,12 +1,12 @@
 {
- "generado": "2026-10-25",
+ "generado": "2026-10-26",
  "fuentes": {
   "InfoCofrade": 280,
   "El Itinerario": 27,
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 66
+  "Prensa (texto de noticias)": 59
  },
  "eventos": [
   {
@@ -3690,16 +3690,6 @@
    "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
   },
   {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Rosario de la Macarena procesionará por Sevilla el domingo 25 de octubre",
-   "nota": "",
-   "fuente": "Mundo Cofrade",
-   "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
-  },
-  {
    "fecha": "2026-11-07",
    "hora": "",
    "ciudad": "sevilla",
@@ -3710,16 +3700,6 @@
    "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
   },
   {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Prado volverá a encontrarse con Sevilla en una nueva salida de gloria por el corazón de la ciudad",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/uncategorized/la-virgen-del-prado-volvera-a-encontrarse-con-sevilla-en-una-nueva-salida-de-gloria-por-el-corazon-de-la-ciudad/"
-  },
-  {
    "fecha": "2027-07-08",
    "hora": "",
    "ciudad": "huelva",
@@ -3728,16 +3708,6 @@
    "nota": "",
    "fuente": "El Corto de Loja",
    "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
-  },
-  {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "Manuel Lamprea Ramírez, pregonero de las Glorias de Sevilla de 2027",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/sevilla/manuel-lamprea-ramirez-pregonero-de-las-glorias-de-sevilla-de-2027/"
   },
   {
    "fecha": "2026-10-28",
@@ -3755,16 +3725,6 @@
    "ciudad": "huelva",
    "tipo": "extraordinaria",
    "titulo": "Los hermanos deberán pronunciarse sobre la participación de la corporación en la Misa Pontifical de Acción de Gracias y en la posterior Procesión Extraordinaria previstas",
-   "nota": "",
-   "fuente": "el diario cofrade",
-   "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
-  },
-  {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "huelva",
-   "tipo": "procesion",
-   "titulo": "La Virgen del Rosario de la Macarena procesionará el domingo 25 de octubre",
    "nota": "",
    "fuente": "el diario cofrade",
    "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
@@ -4070,16 +4030,6 @@
    "url": "https://www.gentedepaz.es/la-banda-de-musica-de-huecija-alicun-acompanara-a-la-esperanza-de-velez-malaga-en-su-salida-extraordinaria-del-19-de-junio-de-2027/"
   },
   {
-   "fecha": "2026-10-25",
-   "hora": "",
-   "ciudad": "sevilla",
-   "tipo": "procesion",
-   "titulo": "SEVILLA VIVIRÁ UN FIN DE SEMANA DE PROCESIONES DE GLORIA CON LAS SALIDAS DE GUADALUPE, LA SIERRA Y EL ROSARIO DE LA MACARENA",
-   "nota": "",
-   "fuente": "Consejo General de Hermandades y Cofradías de Sevilla",
-   "url": "https://www.hermandades-de-sevilla.org/consejo/sevilla-vivira-un-fin-de-semana-de-procesiones-de-gloria-con-las-salidas-de-guadalupe-la-sierra-y-el-rosario-de-la-macarena/"
-  },
-  {
    "fecha": "2026-10-26",
    "hora": "",
    "ciudad": "cadiz",
@@ -4088,6 +4038,56 @@
    "nota": "",
    "fuente": "Diario de Cádiz",
    "url": "https://www.diariodecadiz.es/sanfernando/dia-romeria-san-fernando-cerro-tradiciones_0_2008338645.html"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Rosario de la Macarena procesionará por Sevilla el domingo 25 de octubre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Prado volverá a encontrarse con Sevilla en una nueva salida de gloria por el corazón de la ciudad",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-virgen-del-prado-volvera-a-encontrarse-con-sevilla-en-una-nueva-salida-de-gloria-por-el-corazon-de-la-ciudad/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Manuel Lamprea Ramírez, pregonero de las Glorias de Sevilla de 2027",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/sevilla/manuel-lamprea-ramirez-pregonero-de-las-glorias-de-sevilla-de-2027/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Rosario de la Macarena procesionará el domingo 25 de octubre",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
+  },
+  {
+   "fecha": "2026-10-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "SEVILLA VIVIRÁ UN FIN DE SEMANA DE PROCESIONES DE GLORIA CON LAS SALIDAS DE GUADALUPE, LA SIERRA Y EL ROSARIO DE LA MACARENA",
+   "nota": "",
+   "fuente": "Consejo General de Hermandades y Cofradías de Sevilla",
+   "url": "https://www.hermandades-de-sevilla.org/consejo/sevilla-vivira-un-fin-de-semana-de-procesiones-de-gloria-con-las-salidas-de-guadalupe-la-sierra-y-el-rosario-de-la-macarena/"
   },
   {
    "fecha": "2026-10-25",
@@ -4258,36 +4258,6 @@
    "nota": "",
    "fuente": "Ideal",
    "url": "https://www.ideal.es/semanasantagranada/dos-procesiones-festival-musica-sabado-penultimo-octubre-20261023163839-nt.html"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "20:30",
-   "ciudad": "granada",
-   "tipo": "culto",
-   "titulo": "Durante los días 21, 22 y 23 de octubre se celebrará el Solemne Triduo en la Basílica de San Juan de Dios (Granada), a las 20:30 horas.",
-   "nota": "",
-   "fuente": "Granada Hoy",
-   "url": "https://www.granadahoy.com/semanasanta/san-rafael-granada-san-rafael-procesion-granada-procesion-san-rafael-granada-san-juan-de-dios-granada-procesion-san-juan-de-dios-granada-hermandad-san-juan-de-dios-granada_0_2008289592.html"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "",
-   "ciudad": "malaga",
-   "tipo": "procesion",
-   "titulo": "La Divina Pastora y la Virgen del Rosario salen a la calle este fin de semana",
-   "nota": "",
-   "fuente": "Diario Sur",
-   "url": "https://www.diariosur.es/semana-santa/divina-pastora-virgen-rosario-salen-calle-fin-20261016225654-nt.html"
-  },
-  {
-   "fecha": "2026-10-22",
-   "hora": "",
-   "ciudad": "granada",
-   "tipo": "traslado",
-   "titulo": "Los traslados comenzarán a las nueve de la mañana desde la Catedral de Granada, según han acordado este jueves el Ayuntamiento, el Arzobispado y la Real Federación de Her",
-   "nota": "",
-   "fuente": "Ideal",
-   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
   }
  ],
  "conflictos": []
