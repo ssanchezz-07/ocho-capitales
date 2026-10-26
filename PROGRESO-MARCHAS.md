@@ -39,6 +39,8 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
 - `marchas.php`: formulario POST (sesión con cookie; tras el POST redirige y hay que seguir la redirección). Campos: `aplicar=1`, `comunidad` (Andalucía = 1), `provincia` (Almería 5, Cádiz 12, Córdoba 17, Granada 20, Huelva 23, Jaén 26, Málaga 33, Sevilla 43), `localidad` (sus códigos salen al elegir la provincia: **pendiente** sacar el de cada capital), `compositor`, `titulo`, `desde`, `hasta` y casillas de formación `bm`, `am`, `bct`, `bdt` (dulzainas), `cm` (capilla), `sc` (sin clasificar). Paginación: botón `pagina=N`, 30 por página. Andalucía: 11.130 marchas; total de la web, unas 16.000.
 - Cada fila del listado da: formación (icono BM/AM/BCT/BDT/CM), título, compositor, localidad y año, y enlace a `fichamarcha.php?mm=<id>`. La ficha trae además «Marcha dedicada a: la imagen <titular> de <localidad>» y el nombre oficial de la hermandad: sirve para la capital y la dedicatoria.
 
+**Escrito, sin ejecutar todavía (pausa del 27-oct):** `tools/importar-marchas-cyh.mjs` (lee el listado de las 8 capitales con 3 s entre peticiones y lo guarda en `auditoria/cyh-marchas.json`, local). Al reactivar: `node tools/importar-marchas-cyh.mjs` en segundo plano y comprobar la primera capital antes de dejarlo seguir.
+
 **Siguiente al reactivar:** sacar el código de localidad de las 8 capitales (una petición por provincia, 3 s entre peticiones); leer el listado de cada capital (unas 30 marchas por página, ritmo lento) a `auditoria/` (local, no se sube); cruzar con `tools/sources/marchas.json` por título y compositor para completar formación y capital; abrir solo las fichas de las que casen con hermandades del portal. Después, los pasos 2 a 5.
 
 ## Historial
