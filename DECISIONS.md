@@ -338,3 +338,14 @@ Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
 - **Entrada inmersiva:** Pablo eligió las dos (26-oct): A, el globo baja a Andalucía en la primera visita (con continentes de Natural Earth 1:110m, descarga aprobada); B, el nazareno que se dibuja con el scroll en «Próxima Semana Santa». Prototipos en `capturas-portada/entrada/`.
 - **Extraordinarias con solo hora de salida** (Santo Traslado, Santa Cena de Granada): la posición se estima con el paso medio (mediana) de las cofradías de esa ciudad en 2026, en metros por minuto, y se dice en la nota. Las hermandades sin ficha (Amparo de Sevilla, de gloria) salen con el nombre de su itinerario.
 - **Entradas construidas:** el globo (`site/assets/globo.js` + `mundo.json`, 32 KB, solo se descarga en la primera visita; aterriza en el mapa Bordado en su sitio y se funde con él; se salta tocando, con «Saltar» o Escape) y el nazareno (`site/assets/nazareno.js`, cabecera de «Próxima Semana Santa», 300vh con escena fija). Sin JS o con «reducir movimiento» el nazareno se ve terminado y el globo no sale. La costa de 1:110m se desvanece al acercarse porque de cerca es basta.
+
+## RETOMAR AQUÍ (26-oct, parado al 93 % del límite de 5 horas)
+Encargo de Pablo (vía coordinadora), literal: «¿Cuándo se ve el globo terráqueo?? Sólo muéstrale una vez y el nazareno cuando se ve, está escondido ese apartado, ¿no? Revisar».
+1. **Globo** (`site/assets/site.js`, bloque «Entrada de la primera visita», tras `mapa.appendChild(svg)`):
+   - una vez por visita con `sessionStorage` (no `localStorage` `oc-entrada`), corto y se puede saltar;
+   - un control discreto en la portada para volver a verlo (un globo pequeño junto al mapa);
+   - con movimiento reducido, una versión estática o un fundido, nunca nada.
+2. **Nazareno:** también en la portada, en la zona «Próxima Semana Santa 2027», bajo el mapa o las láminas, y que se dibuje al bajar. Que siga en `/proxima-semana-santa/`. Reutilizar el SVG `NAZ` de `pageProxima()` y `assets/nazareno.js` (ahora busca un solo `[data-nazareno]`).
+3. Comprobar en móvil y PC, también en una ventana nueva sin datos guardados, y mandar capturas o un vídeo corto a Pablo.
+Pendiente de subir: `bc80c39` (modo de prueba `OC_TEMPORADA`); necesita el sí de Pablo en este chat.
+Después, el inventario: la ficha lateral de «En la calle» en PC, la zona táctil de «Ver el máximo / Evitar la bulla», el CPU de la portada en móviles lentos, las miniaturas de noticias y Sevilla en los hábitos.
