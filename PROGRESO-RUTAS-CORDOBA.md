@@ -117,3 +117,54 @@ Las respuestas que Pablo pegó en el chat se comprobaron una a una en OpenStreet
 **Nada pendiente de datos.** Mejora opcional: corregir en OpenStreetMap el nombre de la Parroquia de la Aurora (way 96693634).
 
 Para rehacer: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar`, build y Playwright.
+
+## Cuarta vuelta (2026-10-26, tarde) · PARADA por el límite de 5 horas (92 %)
+**Hecho en local, sin subir:** commits 281d28b y 085f64b, más la republicación del trazado con el código combinado de Málaga 238c0b4.
+- **Listas completas de calles** de La O, Lágrimas, Dolores de Alcolea y Resucitado, del blog Sentir Córdoba (guías de 2026; `tools/itinerarios/sentir-cordoba.mjs`).
+- **Conversión:** su tramo de entrada queda cerrado con fuente («Quesada y Chacón, Viejo Almodóvar»).
+- **Alcolea:** sale de su casa de hermandad. Fuentes: la web de la hermandad, Sentir Córdoba y el Catastro (Cabo Carmona Chamizo 57, parcela 2997618UG5929N).
+- **Piedad:** sale del Patio Pico Aneto (dirección de la Diócesis de Córdoba). Según el Catastro, Lomas 14 es una vivienda y Sierra Nevada 1 no existe.
+- **Enlaces con fuente:** Tejón y Marín, entre Lope de Hoces y la Puerta de Almodóvar, y el Realejo, entre la plaza de San Andrés y Santa María de Gracia.
+- **Alias:** la Carretera de Palma del Río es la Carretera de Córdoba a Lora del Río (A-431). También las erratas de la Estrella.
+- **Opciones de Córdoba en `ciudades.mjs`:** `plazasSinIntermedios` y `despicar: 160`. Retrocesos de 42 a 4. Málaga sale idéntica.
+- **Correcciones con fuente** (`rutas/correcciones-cordoba.json`):
+  - Ramón y Cajal omitida en Sentencia, Paz y Dolores; el Potro, en Ánimas.
+  - Jesús Caído baja la Cuesta de San Cayetano; la Cena sale por la Avenida de Guerrita.
+- **Evaluador:** 42 «nuevo», 989 de 1.003 calles recorridas y sedes a 49 m o menos. Compilación sin errores. **Falta la prueba con Playwright** de esta vuelta.
+- **Puertas exactas de OSM:** 18 sedes. En el resto, OSM no tiene nodo de puerta en el edificio.
+
+**Segunda revisión independiente:** 24 revisadas, con 13 OK, 2 dudosas y 9 fallos. Los 9 fallos, con la corrección que propone el revisor (coordenadas aproximadas, por comprobar en OSM):
+1. **Entrada Triunfal:** de la plaza de San Pedro a Lineros va por Calle de la Rosa y Carlos Rubio. Debería ir por Don Rodrigo: alias de «ESQ. SAN PEDRO - LINEROS» o punto en 37.8822,-4.7716.
+2. **Rescatado:** bucle de unos 225 m al final, porque los puntos 36, 37 y 38 coinciden en la plaza Cristo de Gracia. El segundo «plaza Cristo de Gracia» tiene que ser la llegada al templo.
+3. **Sentencia:** en el regreso baja por Horno de la Trinidad y vuelve. En vez de omitir Ramón y Cajal, ponerle punto en la esquina Tesoro–Valladares (37.8830,-4.7823).
+4. **Santa Faz:**
+   - Sale por Montemayor y Pérez de Castro: falta un punto de Lope de Hoces al oeste del templo (37.88276,-4.78380).
+   - Bucle de 25 m en el Paseo de la Victoria.
+5. **Piedad:**
+   - Bucle de unos 800 m entre los Jardines de la Victoria y el Paseo de la Victoria: puntos de República Argentina y del Paseo en el norte (37.8855,-4.7850).
+   - Ida y vuelta de unos 420 m por Ingeniero Benito de Arana: el punto 54 debe ir hacia 37.8813,-4.8190.
+   - Unos 400 m por Calle Maryan en vez de la A-431: punto hacia 37.8822,-4.8065.
+6. **Jesús Caído:** va por la Plaza del Rector y Morales en vez de Santa Isabel: punto hacia 37.8892,-4.7747.
+7. **Cena:**
+   - Bucle por las dos calzadas de Vallellano: fundir los puntos de «Conde Vallellano» y «Jardines de Vallellano».
+   - Bucle de unos 400 m por la Gran Vía Parque en el regreso: punto en el cruce con Guerrita (37.8793,-4.7928).
+8. **Conversión:**
+   - Va por Calle Maryan en vez de la A-431: punto hacia 37.8822,-4.8065.
+   - Picos en Vallellano, igual que en la Cena.
+9. **Dolores:**
+   - «Torres Cabrera» no se empareja: alias a «Calle del Conde Torres Cabrera». Por eso da un rodeo de unos 310 m por Osario.
+   - Micro-bucle de unos 50 m en la plaza de San Miguel.
+
+**Dudosas:**
+- **Vía Crucis y Dolores:** «SALIDA C.O.» debe ir en la Puerta de Santa Catalina, para que el regreso empiece allí.
+- **Prendimiento:** que pase por el Potro hasta la Ribera.
+- **Esperanza:** su «Alfonso XII» es Alfonso XIII.
+
+**Mejora pendiente en el evaluador** (código común, a acordar con Málaga): detectar la misma calle recorrida en sentidos opuestos a menos de 40 m (bucles por calzadas dobles).
+
+**Siguiente paso, tras la renovación del límite (16:30 UTC):**
+1. Aplicar los 9 puntos.
+2. `node rutas/emparejar.mjs cordoba`, `evaluar` y `publicar`.
+3. Volver a pasar la revisión independiente sobre esas 9.
+4. Build y Playwright a 390 y 1440 px.
+5. Rebase, push y aviso a Pablo.
