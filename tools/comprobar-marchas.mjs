@@ -35,7 +35,9 @@ for (const m of U.marchas) {
     const h = HERM[d.hermandad];
     if (!h) { err(m, `dedicada a una hermandad que no está en el portal: ${d.hermandad}`); continue; }
     if (d.ciudad !== h.ciudad) err(m, `ciudad de la dedicatoria (${d.ciudad}) distinta de la de la hermandad (${h.ciudad})`);
-    const fiables = new Set((m.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f)));
+    // un sitio = una fuente: la revisión hecha con una ficha de Patrimonio Musical cuenta como Patrimonio Musical
+    const sitio = (f) => { if (f !== 'rev') return f; const u = m.urls.rev || ''; let h = ''; try { h = new URL(u).hostname.replace(/^www\./, ''); } catch (e) { /* sin url */ } return h === 'patrimoniomusical.com' ? 'pm' : u && u === m.urls.mdpFicha ? 'mdp' : 'rev:' + h; };
+    const fiables = new Set((m.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f)).map(sitio));
     const esperado = fiables.size >= 2 ? 'contrastada' : fiables.size === 1 ? 'dedicada' : 'sin-verificar';
     if (d.estado !== esperado) err(m, `estado «${d.estado}» y sus fuentes dicen «${esperado}»`);
     // la dedicatoria no puede nombrar otra capital y no la suya

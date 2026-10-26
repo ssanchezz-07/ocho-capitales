@@ -1,0 +1,1605 @@
+{
+ "nota": "Revisión a mano con fuente abierta (sesión de marchas). accion: confirmar (la fuente dice expresamente la dedicatoria), retirar (la fuente la dedica a otra o la desmiente), corregir (solo datos). campos: datos que da la fuente. Las comprobaciones las hicieron verificadores con la cita literal guardada en auditoria/lotes (local) y se revisaron a mano.",
+ "revisiones": [
+  {
+   "slug": "rosario-de-gloria-mater-amabilis-jose-de-la-vega-sanchez",
+   "hermandad": "las-aguas-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-3107",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-3107)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2008"
+   }
+  },
+  {
+   "slug": "mayor-dolor-en-tu-calvario-francisco-jose-ortiz-moron",
+   "hermandad": "las-aguas-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=9jJOF5Qk4xM",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Ntra. Sra. del Rosario (Cádiz), 6-4-2020",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "aguas-manuel-jesus-guerrero-marin",
+   "hermandad": "las-aguas-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=qR_cjtKpMAs",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Ntra. Sra. del Rosario (Cádiz), 20-9-2025",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "gracia-y-amparo-gabriel-rios-amores",
+   "hermandad": "los-javieres-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://javieres.com/patrimoniomusical/",
+   "nombre_fuente": "Web de la Hermandad de los Javieres (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-de-la-salud-y-buen-viaje-antonio-amodeo",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "a-la-virgen-de-los-desamparados-jose-albero-frances",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Nuestra Señora de los Desamparados"
+   }
+  },
+  {
+   "slug": "a-un-angel-costalero-desamparados-joaquin-ruiz-gonzalez",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "senor-de-san-esteban-emilio-munoz-serna",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Emilio Muñoz Serna"
+   }
+  },
+  {
+   "slug": "tus-lagrimas-por-sevilla-jose-m-sanchez-molero",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-de-la-moreria-miguel-a-lanzarote-fernandez",
+   "hermandad": "san-esteban-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandadsanesteban.org/marchas-audio/",
+   "nombre_fuente": "Web de la Hermandad de San Esteban (Marchas/Audio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-ante-anas-jorge-aguila-ordonez-sergio-muniz-carmona",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=FbIswHayzbY",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Ntra. Sra. del Rosario (Cádiz), 3-12-2024",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "mirada-de-dulce-nombre-david-alvarez-garcia",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=e9uFQnI2tWA",
+   "nombre_fuente": "Canal oficial de YouTube del compositor (DAVID ÁLVAREZ Compositor), 3-11-2015",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2009"
+   }
+  },
+  {
+   "slug": "ante-anas-el-hijo-de-dios-cristobal-lopez-gandara",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://lascigarreras.net/repertorio/ante-anas-el-hijo-de-dios/",
+   "nombre_fuente": "Web oficial de la Banda de Las Cigarreras (repertorio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "y-dijo-anas-pedro-manuel-pacheco-palomo",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://lascigarreras.net/repertorio/y-dijo-anas/",
+   "nombre_fuente": "Web oficial de la Banda de Las Cigarreras (repertorio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "la-otra-mejilla-francisco-javier-gonzalez-rios",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://lascigarreras.net/repertorio/la-otra-mejilla/",
+   "nombre_fuente": "Web oficial de la Banda de Las Cigarreras (repertorio)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "stmo-cristo-de-las-misericordias-pedro-brana-martinez",
+   "hermandad": "santa-cruz-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-878",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-878)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1957",
+    "titulo": "Santísimo Cristo de las Misericordias"
+   }
+  },
+  {
+   "slug": "misericordia-senor-jose-albero-frances",
+   "hermandad": "santa-cruz-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-217",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-217)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Misericordia Señor para mis Dolores"
+   }
+  },
+  {
+   "slug": "rosario-de-san-vicente-alberto-barea-tejada",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "misericordia-en-tus-palabras-francisco-jose-martinez-perez",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "siete-palabras-de-nuestro-senor-isaac-gomez-y-jorge-aguila",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "septem-verba-christi-manuel-alejandro-gonzalez",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "escapulario-carmesi-emilio-jose-escalante-romero",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "en-tu-calvario-enrique-leon-serrano",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "misericordia-de-tus-palabras-francisco-moraza-cienfuegos",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "noche-carmesi-jose-manuel-ortega-leon",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=oXHgcKAVVVI",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Esencia (Sevilla), 17-9-2018",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "sagrados-clavos-jose-bazalo",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=54u6CDmBFLE",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Esencia (Sevilla), 10-4-2024",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "José Bazalo Valero",
+    "anio": "2024"
+   }
+  },
+  {
+   "slug": "madre-de-los-remedios-jose-bazalo",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.youtube.com/watch?v=_VWMAgOwIVQ",
+   "nombre_fuente": "Canal oficial de YouTube de la BCT Esencia (Sevilla), 3-11-2024",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "José Bazalo Valero",
+    "titulo": "Madre de los Remedios"
+   }
+  },
+  {
+   "slug": "siete-palabras-francisco-del-toro",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-de-la-divina-misericordia-jesus-gomez-rodriguez-y-juan-manuel-martinez-lara",
+   "hermandad": "siete-palabras-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://siete-palabras.com/patrimonio-musical/",
+   "nombre_fuente": "Web de la Hermandad de las Siete Palabras (Patrimonio musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "salve-reina-de-los-panaderos-luis-miguel-villalba-angel",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hdadpanaderos.es/musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de los Panaderos (pestaña Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-en-su-prendimiento-pedro-manuel-pacheco",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hdadpanaderos.es/musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de los Panaderos (pestaña Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "maria-reina-y-madre-pedro-manuel-pacheco",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hdadpanaderos.es/musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de los Panaderos (pestaña Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "prendido-francisco-javier-torres-simon",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hdadpanaderos.es/musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de los Panaderos (pestaña Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-salvador-y-soberano-jose-maria-sanchez-martin",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hdadpanaderos.es/musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de los Panaderos (pestaña Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "solea-dame-la-mano-manuel-font-de-anta",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "retirar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-380",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-380)",
+   "fecha": "2026-10-26",
+   "nota": "La fuente la dedica a otra: A los presos de la antigua Cárcel del Pópulo de Sevilla (no a una hermandad)",
+   "campos": {}
+  },
+  {
+   "slug": "campanilleros-de-una-esperanza-alberto-barea-y-jose-manuel-toscano",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-7591",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-7591)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Alberto Barea Tejada y José Manuel Toscano Pérez"
+   }
+  },
+  {
+   "slug": "caido-vas-por-triana-manuel-hernandez-garrido",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/articulo-53",
+   "nombre_fuente": "Patrimonio Musical, artículo de investigación de Esteban Romera Domínguez, 24-5-2006",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-caido-en-triana-jose-albero",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/articulo-53",
+   "nombre_fuente": "Patrimonio Musical, artículo de investigación de Esteban Romera Domínguez, 24-5-2006",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "José Albero Francés"
+   }
+  },
+  {
+   "slug": "la-pasion-manuel-alejandro-gonzalez-cruz",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://humildadysoledad.es/2026/02/16/marcha-la-pasion-de-las-tres-caidas-repertorio-2026/",
+   "nombre_fuente": "Web oficial de la Banda de CC. y TT. Humildad y Soledad (Córdoba), 16-2-2026",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "el-alma-de-triana-francisco-ortiz-moron",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/sevi-qel-alma-de-trianaq-nueva-marcha-de-las-tres-caidas-de-triana-201110070046_noticia.html",
+   "nombre_fuente": "ABC de Sevilla (Pasión en Sevilla), 7-10-2011",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "arrepentimiento-manuel-jesus-guerrero-marin",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "retirar",
+   "fuente": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/sevi-banda-tres-caidas-video-marcha-201301240023_noticia.html",
+   "nombre_fuente": "ABC de Sevilla (Pasión en Sevilla), 24-1-2013",
+   "fecha": "2026-10-26",
+   "nota": "La fuente la dedica a otra: Hermandad de San Pedro Apóstol de Estepa (Sevilla)",
+   "campos": {}
+  },
+  {
+   "slug": "se-arrodilla-triana-manuel-jesus-guerrero-marin-y-jose-manuel-sanchez-crespillo",
+   "hermandad": "la-esperanza-de-triana-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://inriinformacion.com/2024/02/04/asi-suena-la-nueva-marcha-de-tres-caidas-se-arrodilla-triana/",
+   "nombre_fuente": "INRI Información, Carlos Iglesia, 4-2-2024",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "marcha-funebre-carreteria-jose-font-marimont",
+   "hermandad": "la-carreteria-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelacarreteria.org/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Carretería (Patrimonio > Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Carretería"
+   }
+  },
+  {
+   "slug": "nuestra-senora-del-mayor-dolor-en-su-soledad-gines-sanchez-torres",
+   "hermandad": "la-carreteria-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelacarreteria.org/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Carretería (Patrimonio > Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1993"
+   }
+  },
+  {
+   "slug": "al-pie-de-tu-santa-cruz-francisco-javier-gonzalez-rios",
+   "hermandad": "la-carreteria-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelacarreteria.org/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Carretería (Patrimonio > Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "la-carreteria-pedro-manuel-pacheco-palomo",
+   "hermandad": "la-carreteria-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelacarreteria.org/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Carretería (Patrimonio > Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Carretería",
+    "anio": "2009"
+   }
+  },
+  {
+   "slug": "virgen-de-la-o-jose-gardey-cuevas-luis-rivas-gomez-pedro-gamez-laserna",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1961"
+   }
+  },
+  {
+   "slug": "nazareno-de-la-o-pedro-pacheco-y-eusebio-alvarez-ossorio",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-de-la-o-abel-moreno-gomez",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1989"
+   }
+  },
+  {
+   "slug": "cruz-de-carey-manuel-esteban-marin",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1997"
+   }
+  },
+  {
+   "slug": "santa-maria-de-la-o-pedro-morales-munoz",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "a-la-voz-de-mi-capataz-manuel-rodriguez-pedrinazzi",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2002"
+   }
+  },
+  {
+   "slug": "la-o-francisco-japon",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "callejuela-de-la-o-francisco-joaquin-perez-garrido-paco-lola",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "o-de-triana-francisco-jose-gomez-calado",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1233",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-1233)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-de-la-o-coronacion-manuel-marvizon-carvallo",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Virgen de la O (Coronación)"
+   }
+  },
+  {
+   "slug": "santisimo-sacramento-francisco-pizarro",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "melodias-de-la-o-juan-manuel-fernandez",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "nazareno-de-la-o-francisco-jose-carrasco-benitez",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "coplas-de-carey-juan-manuel-fernandez-y-valiente-carranza",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "o-de-esperanza-francisco-javier-barbero",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "y-en-triana-la-o-jesus-j-espinosa-de-los-monteros",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-la-o-antonio-david-rodriguez-gomez",
+   "hermandad": "la-o-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Patrimonio artístico > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "humildad-perfecto-artola",
+   "hermandad": "humildad-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1779",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-1779)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Cristo de la Humildad",
+    "autor": "Perfecto Artola Prats",
+    "anio": "1982"
+   }
+  },
+  {
+   "slug": "gran-amor-jose-luis-arias",
+   "hermandad": "salud-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1731",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-1731)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Santísimo Cristo de la Esperanza en su Gran Amor",
+    "autor": "José Luis Arias Bermúdez",
+    "anio": "1999"
+   }
+  },
+  {
+   "slug": "dolores-y-esperanza-sergio-bueno",
+   "hermandad": "humildad-y-paciencia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1826",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-1826)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Virgen de Dolores y Esperanza",
+    "anio": "2005"
+   }
+  },
+  {
+   "slug": "eucaristia-rafael-hernandez",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1795",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Rafael Hernández Moreno"
+   }
+  },
+  {
+   "slug": "himno-del-santo-grial-adaptado-por-perfecto-artola",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1782",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Perfecto Artola Prats"
+   }
+  },
+  {
+   "slug": "hombres-de-trono-de-la-virgen-de-la-paz-jose-antonio-molero",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1620",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "pasa-la-virgen-de-la-paz-juan-r-galvez",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1711",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Juan Ramón Gálvez Martín"
+   }
+  },
+  {
+   "slug": "pax-malacitana-francisco-javier-moreno",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1667",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-la-paz-sergio-pastor",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1829",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-nuestra-paz-sergio-bueno",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1827",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Sergio Bueno de la Peña"
+   }
+  },
+  {
+   "slug": "senor-de-la-cena-jose-ramon-valino",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1737",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "José Ramón Valiño Cabrerizo"
+   }
+  },
+  {
+   "slug": "virgen-de-la-paz-rafael-hernandez",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1802",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Rafael Hernández Moreno"
+   }
+  },
+  {
+   "slug": "nuestro-padre-jesus-de-vineros-rafael-hernandez",
+   "hermandad": "vineros-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-600",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Jesús de Viñeros"
+   }
+  },
+  {
+   "slug": "amargura-coronada-abel-moreno",
+   "hermandad": "zamarrilla-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-768",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "rosa-de-zamarrilla-jesus-gomez",
+   "hermandad": "zamarrilla-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1274",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "mater-misericordie-desiderio-artola",
+   "hermandad": "misericordia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-607",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Mater Misericordiae",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1994"
+   }
+  },
+  {
+   "slug": "misericordia-perfecto-artola",
+   "hermandad": "misericordia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-507",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1992"
+   }
+  },
+  {
+   "slug": "plegaria-a-la-virgen-del-gran-poder-desiderio-artola",
+   "hermandad": "misericordia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-608",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Plegaria a Nuestra Señora del Gran Poder",
+    "autor": "Desiderio Artola Tena",
+    "anio": "1991"
+   }
+  },
+  {
+   "slug": "senora-del-gran-poder-luis-dominguez",
+   "hermandad": "misericordia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5890",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Señora de la Misericordia, Señora del Gran Poder",
+    "autor": "Luis Domínguez Domínguez",
+    "anio": "2005"
+   }
+  },
+  {
+   "slug": "esperanza-isidro-belmonte",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1706",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Isidro Belmonte Ferrer"
+   }
+  },
+  {
+   "slug": "esperanza-coronada-pedro-morales",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-261",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "esperanza-perchelera-miguel-perez",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-541",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "himno-de-la-coronacion-de-la-esperanza-perfecto-artola",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-499",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Himno de Coronación de la Virgen de la Esperanza",
+    "autor": "Perfecto Artola Prats",
+    "anio": "1988"
+   }
+  },
+  {
+   "slug": "jesus-nazareno-del-paso-francisco-haro",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-605",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Nazareno del Paso",
+    "autor": "Francisco Miguel Haro Sánchez",
+    "anio": "1996"
+   }
+  },
+  {
+   "slug": "la-esperanza-de-malaga-luis-rodriguez",
+   "hermandad": "esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-7052",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Luis Domínguez Domínguez",
+    "anio": "2004"
+   }
+  },
+  {
+   "slug": "cristo-yacente-del-calvario-rafael-huertas",
+   "hermandad": "monte-calvario-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1803",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Cristo Yacente en el Monte Calvario",
+    "autor": "Rafael Huertas Soria"
+   }
+  },
+  {
+   "slug": "monte-calvario-gabriel-robles",
+   "hermandad": "monte-calvario-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1694",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Santa María del Monte Calvario",
+    "autor": "Gabriel Robles Ojeda",
+    "anio": "2004"
+   }
+  },
+  {
+   "slug": "soledad-del-sepulcro-antonio-j-gutierrez",
+   "hermandad": "santo-sepulcro-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4700",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Soledad del Santo Sepulcro",
+    "autor": "Antonio Jesús Gutiérrez Martínez",
+    "anio": "2001"
+   }
+  },
+  {
+   "slug": "al-pie-de-la-cruz-ivan-pozo-mesa",
+   "hermandad": "el-descendimiento-cordoba",
+   "accion": "confirmar",
+   "fuente": "https://www.descendimientocordoba.org/musical/",
+   "nombre_fuente": "Web de la Hermandad del Descendimiento de Córdoba, Patrimonio Musical",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Iván Poza"
+   }
+  },
+  {
+   "slug": "sagrado-descendimiento-norberto-tapia-martinez",
+   "hermandad": "el-descendimiento-cordoba",
+   "accion": "confirmar",
+   "fuente": "https://www.descendimientocordoba.org/musical/",
+   "nombre_fuente": "Web de la Hermandad del Descendimiento de Córdoba, Patrimonio Musical",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "entrada-de-jesus-en-jerusalen-jose-cuadrado",
+   "hermandad": "la-borriquilla-jaen",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1323",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-de-la-paz-francisco-javier-alonso-delgado",
+   "hermandad": "la-borriquilla-jaen",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4462",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha de marcha)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "soledad-del-sepulcro-antonio-j-gutierrez",
+   "hermandad": "santo-sepulcro-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-autor-150",
+   "nombre_fuente": "Patrimonio Musical – ficha de autor Antonio Jesús Gutiérrez Martínez",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Soledad del Santo Sepulcro",
+    "autor": "Antonio Jesús Gutiérrez Martínez",
+    "anio": "2001"
+   }
+  },
+  {
+   "slug": "soledad-del-sepulcro-francisco-javier-moreno",
+   "hermandad": "santo-sepulcro-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-588",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-588",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "La Soledad del Sepulcro",
+    "anio": "1996"
+   }
+  },
+  {
+   "slug": "soledad-del-santo-sepulcro-antonio-jesus-gutierrez-martinez",
+   "hermandad": "santo-sepulcro-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-4700",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-4700",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2001"
+   }
+  },
+  {
+   "slug": "virgen-de-la-carreteria-jose-albero-frances",
+   "hermandad": "la-carreteria-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelacarreteria.org/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Carretería (Patrimonio > Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1979"
+   }
+  },
+  {
+   "slug": "el-amor-manuel-herrera-raya",
+   "hermandad": "",
+   "accion": "corregir",
+   "fuente": "https://www.marchasdeprocesion.com/p/base-datos-agrupaciones-musicales.html",
+   "nombre_fuente": "Marchas de Procesión – base de datos de agrupaciones musicales (y vídeo Jo2r_YQrEJo)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "formacion": "Agrupación musical"
+   }
+  },
+  {
+   "slug": "el-novio-de-la-muerte-fidel-prado-duque-y-juan-costa-casals",
+   "hermandad": "mena-malaga",
+   "accion": "retirar",
+   "fuente": "https://theobjective.com/cultura/2024-03-31/el-novio-de-la-muerte/",
+   "nombre_fuente": "The Objective, artículo de Luis Reyes (31-03-2024)",
+   "fecha": "2026-10-26",
+   "nota": "Se compuso en 1921 como canción de varietés (Juan Costa y Fidel Prado) y después se asoció a la Legión; ninguna fuente fiable la dedica al Cristo de la Buena Muerte",
+   "campos": {}
+  },
+  {
+   "slug": "el-dulce-nombre-manuel-lopez-farfan",
+   "hermandad": "dulce-nombre-la-bofeta-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-903",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-903",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1925"
+   }
+  },
+  {
+   "slug": "la-virgen-de-regla-jose-miguel-lopez-rueda",
+   "hermandad": "los-panaderos-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2911",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-2911",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2008"
+   }
+  },
+  {
+   "slug": "aquella-virgen-manuel-gomez-de-arribas",
+   "hermandad": "misericordia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelao.es/patrimonio-artistico-musica/",
+   "nombre_fuente": "Web oficial de la Hermandad de la O (Sevilla) – Música, «Marchas dedicadas a nuestros titulares»",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "1962"
+   }
+  },
+  {
+   "slug": "soledad-luis-carlos-martin-martin-consuegra",
+   "hermandad": "las-chias-granada",
+   "accion": "confirmar",
+   "fuente": "https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/",
+   "nombre_fuente": "Federación de Cofradías de Granada – Hdad. de la Soledad Coronada y Descendimiento, «Patrimonio musical»",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2010"
+   }
+  },
+  {
+   "slug": "cruces-macarenas-juan-rafael-vilchez-checa",
+   "hermandad": "la-macarena-almeria",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5243",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-5243 (con su grabación)",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical da 2005 y registra una grabación de 2005; el 2008 no puede ser el año de composición",
+   "campos": {
+    "anio": "2005"
+   }
+  },
+  {
+   "slug": "desamparados-antonio-escobar-perera",
+   "hermandad": "jesus-caido-el-senor-del-parque-cadiz",
+   "accion": "retirar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-920",
+   "nombre_fuente": "Patrimonio Musical – fichas bd-marcha-920 y bd-marcha-690",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical la dedica a la Asociación de los Desamparados (Cádiz), no a Jesús Caído",
+   "campos": {}
+  },
+  {
+   "slug": "dulce-nombre-de-jesus-pedro-morales-munoz",
+   "hermandad": "la-quinta-angustia-sevilla",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-245",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-245 (con su grabación)",
+   "fecha": "2026-10-26",
+   "nota": "Patrimonio Musical da 1982 y registra una grabación de 1982; el 1985 no puede ser el año de composición",
+   "campos": {
+    "anio": "1982"
+   }
+  },
+  {
+   "slug": "esperanza-nuestra-macarena-jose-manuel-bernal-montero",
+   "hermandad": "la-macarena-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelamacarena.es/patrimonio-musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Macarena – Patrimonio musical",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2009"
+   }
+  },
+  {
+   "slug": "macarena-emperatriz-del-mundo-francisco-jesus-flores-matute",
+   "hermandad": "la-macarena-sevilla",
+   "accion": "confirmar",
+   "fuente": "https://www.hermandaddelamacarena.es/patrimonio-musical/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Macarena – Patrimonio musical",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "anio": "2014"
+   }
+  },
+  {
+   "slug": "salud-anhelada-francisco-de-asis-manzanero-osuna",
+   "hermandad": "san-gonzalo-sevilla",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5170",
+   "nombre_fuente": "Patrimonio Musical – ficha bd-marcha-5170 (+ web oficial de San Gonzalo, /coronacion/)",
+   "fecha": "2026-10-26",
+   "nota": "Compuesta en 2011; se estrenó en la coronación de 2017",
+   "campos": {
+    "anio": "2011"
+   }
+  },
+  {
+   "slug": "desamparados-abraham-pena-escobar",
+   "hermandad": "jesus-caido-el-senor-del-parque-cadiz",
+   "accion": "retirar",
+   "fuente": "https://www.youtube.com/watch?v=B5et1N7FlDE",
+   "nombre_fuente": "Marchas de Procesión (YouTube, ficha vacía) + base de cornetas y tambores de MdP",
+   "fecha": "2026-10-26",
+   "nota": "La dedicatoria y los años venían de fichas de otro compositor (Antonio Escobar Perera)",
+   "campos": {}
+  },
+  {
+   "slug": "concepcion-perfecto-artola",
+   "hermandad": "huerto-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-503",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 503)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "nuestro-padre-jesus-de-la-oracion-del-huerto-francisco-javier-moreno",
+   "hermandad": "huerto-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-992",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 992)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Nuestro Padre Jesús Orando en el Huerto",
+    "autor": "Francisco Javier Moreno Ramos",
+    "anio": "1994"
+   }
+  },
+  {
+   "slug": "gran-perdon-gabriel-robles-ojeda",
+   "hermandad": "prendimiento-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.prendimientoygranperdon.com/portal/musical/",
+   "nombre_fuente": "Web oficial de la Hermandad del Prendimiento (sección Musical)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "malaguena-virgen-del-gran-perdon-gabriel-robles-ojeda",
+   "hermandad": "prendimiento-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1684",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1684)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Malagueña del Gran Perdón",
+    "anio": "2003"
+   }
+  },
+  {
+   "slug": "al-cristo-de-los-gitanos-francisco-cano",
+   "hermandad": "gitanos-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-327",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 327)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Francisco Cano Ruiz"
+   }
+  },
+  {
+   "slug": "coronacion-de-maria-santisima-de-la-o-jose-maria-puyana",
+   "hermandad": "gitanos-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-686",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 686)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "virgen-de-la-o-rafael-hernandez",
+   "hermandad": "gitanos-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-598",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 598)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "dolorosa-del-puente-desiderio-artola-tena",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-606",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 606)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "dolores-del-puente-guillermo-urrestarazu-capellan",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "la-azucena-dolorosa-pablo-martinez-recio",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-6316",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 6316)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "azucena-de-santo-domingo-pedro-s-bonillo-ortega",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "cristo-del-perdon-jose-f-jurado",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "paso-a-la-virgen-de-los-dolores-la-del-puente-jose-lopez-garcia",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Paso a la Virgen de los Dolores"
+   }
+  },
+  {
+   "slug": "misa-de-bendicion-del-santisimo-cristo-del-perdon-antonio-rozas-matabuena",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Misa del Cristo del Perdón",
+    "anio": "1987"
+   }
+  },
+  {
+   "slug": "misa-de-coronacion-francisco-martin-jaime",
+   "hermandad": "dolores-del-puente-malaga",
+   "accion": "confirmar",
+   "fuente": "https://doloresdelpuente.es/musica/",
+   "nombre_fuente": "Web oficial de la Cofradía de los Dolores del Puente (Patrimonio > Música)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Francisco Martín-Jaime"
+   }
+  },
+  {
+   "slug": "alma-de-la-trinidad-eloy-garcia",
+   "hermandad": "cautivo-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-759",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 759)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Eloy García López"
+   }
+  },
+  {
+   "slug": "madre-trinitaria-jose-aguilar-lima",
+   "hermandad": "cautivo-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-544",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 544)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "reina-de-la-trinidad-jose-aguilar-lima",
+   "hermandad": "cautivo-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1712",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1712)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "trinidad-miguel-perez",
+   "hermandad": "cautivo-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2526",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 2526)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Miguel Pérez Díaz"
+   }
+  },
+  {
+   "slug": "a-ti-rocio-francisco-javier-alonso-jimenez",
+   "hermandad": "rocio-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5269",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 5269)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Salvador Vázquez Sánchez",
+    "titulo": "A ti, Rocío"
+   }
+  },
+  {
+   "slug": "jesus-nazareno-del-perdon-miguel-perez",
+   "hermandad": "nueva-esperanza-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1773",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1773)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Nazareno del Perdón",
+    "autor": "Miguel Pérez Díaz",
+    "anio": "1997"
+   }
+  },
+  {
+   "slug": "virgen-del-rosario-perfecto-artola",
+   "hermandad": "sentencia-malaga",
+   "accion": "confirmar",
+   "fuente": "https://hermandaddelasentencia.com/historia-de-la-hermandad/",
+   "nombre_fuente": "Web oficial de la Hermandad de la Sentencia (Historia)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Perfecto Artola Prats",
+    "anio": "1989"
+   }
+  },
+  {
+   "slug": "exaltacion-perfecto-artola",
+   "hermandad": "fusionadas-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1036",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1036)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Cristo de la Exaltación",
+    "autor": "Perfecto Artola Prats",
+    "anio": "1989"
+   }
+  },
+  {
+   "slug": "fusionadas-de-san-juan-perfecto-artola",
+   "hermandad": "fusionadas-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1036",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1036)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Cristo de la Exaltación",
+    "autor": "Perfecto Artola Prats",
+    "anio": "1989"
+   }
+  },
+  {
+   "slug": "vera-cruz-y-lagrimas-perfecto-artola",
+   "hermandad": "fusionadas-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1790",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1790)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "maria-santisima-del-amor-martin-del-pino",
+   "hermandad": "el-rico-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-1741",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 1741)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "autor": "Juan Miguel Villalba García"
+   }
+  },
+  {
+   "slug": "nuestro-padre-jesus-el-rico-pedro-gutierrez",
+   "hermandad": "el-rico-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-536",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 536)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "malacitana-antonio-rozas",
+   "hermandad": "sangre-malaga",
+   "accion": "confirmar",
+   "fuente": "https://archicofradiadelasangre.es/marchas-procesionales-dedicadas/",
+   "nombre_fuente": "Web oficial de la Archicofradía de la Sangre (Marchas dedicadas)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  },
+  {
+   "slug": "expiracion-perfecto-artola",
+   "hermandad": "expiracion-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-493",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 493)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {
+    "titulo": "Cristo de la Expiración",
+    "autor": "Perfecto Artola Prats",
+    "anio": "1991"
+   }
+  },
+  {
+   "slug": "la-virgen-de-los-dolores-jose-andreu",
+   "hermandad": "expiracion-malaga",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2879",
+   "nombre_fuente": "Base de datos de Patrimonio Musical (ficha 2879)",
+   "fecha": "2026-10-26",
+   "nota": "",
+   "campos": {}
+  }
+ ]
+}

@@ -41,9 +41,18 @@ const apellidos = (a) => new Set(norm(a).split(' ').filter((w) => w.length >= 3 
 // («Eloy García» = «Eloy García López», pero «Eloy García López» ≠ «Manuel López Farfán»)
 const CORRIENTES = new Set('garcia lopez martinez sanchez fernandez perez gonzalez rodriguez gomez moreno jimenez ruiz hernandez diaz munoz alvarez romero alonso gutierrez navarro torres dominguez vazquez ramos gil ramirez serrano blanco molina morales suarez ortega delgado castro ortiz rubio marin sanz nunez iglesias medina garrido cortes castillo santos lozano guerrero cano prieto mendez cruz calvo gallego vidal leon marquez herrera pena flores cabrera campos vega fuentes carrasco diez reyes caballero nieto aguilar pascual santana herrero montero lorenzo hidalgo gimenez ibanez ferrer duran santiago benitez mora vicente vargas arias carmona crespo roman pastor soto saez velasco moya soler parra esteban bravo gallardo rojas'.split(' '));
 const pila = (a) => norm(a).split(' ')[0] || '';
+// Si cada nombre tiene un apellido que el otro no tiene, son personas distintas («Manuel López Farfán» ≠ «Manuel Miguel López Martínez»).
+// Erratas de una letra en apellidos largos cuentan como el mismo (Albero/Abero, Puyuelo/Poyuelo).
+const lev1 = (x, y) => { if (Math.abs(x.length - y.length) > 1) return false; let i = 0, j = 0, d = 0; while (i < x.length && j < y.length) { if (x[i] === y[j]) { i++; j++; continue; } if (++d > 1) return false; if (x.length > y.length) i++; else if (y.length > x.length) j++; else { i++; j++; } } return d + (x.length - i) + (y.length - j) <= 1; };
+const igualAp = (x, y) => x === y || (x.length >= 5 && y.length >= 5 && lev1(x, y));
 const mismoAutor = (a, b) => {
-  const x = apellidos(a), y = apellidos(b); const comun = [...x].filter((w) => y.has(w));
+  const x = [...apellidos(a)], y = [...apellidos(b)];
+  const comun = x.filter((w) => y.some((v) => igualAp(w, v)));
   if (!comun.length) return false;
+  const soloX = x.filter((w) => !y.some((v) => igualAp(w, v))), soloY = y.filter((v) => !x.some((w) => igualAp(w, v)));
+  if (soloX.length && soloY.length) return false;
+  // nombres de pila completos y distintos: otra persona (Perfecto Artola Prats y su hijo Desiderio Artola Tena)
+  if (pila(a).length > 2 && pila(b).length > 2 && pila(a) !== pila(b) && !igualAp(pila(a), pila(b))) return false;
   if (comun.some((w) => !CORRIENTES.has(w)) || comun.length >= 2) return true;
   return pila(a) && pila(a) === pila(b);
 };
@@ -350,10 +359,13 @@ for (const v of REV) {
   for (const [c, val] of Object.entries(v.campos || {})) {
     if (c === 'titulo' && r.titulo !== val) r.discrepancias.push({ campo: 'titulo', valores: [{ valor: r.titulo, fuente: (r.fuentes.titulo || [])[0] || '' }], elegido: 'rev' });
     r[c] = val; r.fuentes[c] = ['rev'];
+    if (c === 'anio') for (const d of r.discrepancias) if (d.campo === 'anio') d.elegido = 'rev';
   }
   if (v.accion === 'confirmar' || v.accion === 'ligar') {
     const h = HERM[v.hermandad]; const prev = r.dedicatoria && r.dedicatoria.hermandad === h.slug ? r.dedicatoria : null;
-    const otrasF = prev ? (r.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f) && f !== 'rev') : [];
+    // Otra fuente fiable distinta de la revisada (si la revisión se hizo con la ficha de Patrimonio Musical, PM no cuenta dos veces)
+    const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+    const otrasF = prev ? (r.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f) && f !== 'rev' && host(r.urls[f === 'mdp' ? 'mdpFicha' : f] || (FUENTES_URL[f] || '')) !== host(v.fuente)) : [];
     r.retiradas = r.retiradas.filter((x) => x.hermandad !== h.slug);
     r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: v.titular || (prev && prev.titular) || '', texto: v.texto || (prev && prev.texto) || '', estado: otrasF.length ? 'contrastada' : 'dedicada' };
     if (!prev) r.fuentes.dedicatoria = [];
@@ -364,6 +376,45 @@ for (const v of REV) {
     if (!r.retiradas.some((x) => x.hermandad === hs)) r.retiradas.push({ hermandad: hs, origen: r._o || '', url: r._oUrl || '', motivo: v.nota, fuente: v.fuente });
   }
 }
+
+// ---------- 6b. la misma obra en dos fichas (p. ej. tras corregir el título con su fuente): se une en una ----------
+// Mismo título comparable, mismo compositor y formación compatible. Queda la ficha ligada a una hermandad (o la de más fuentes);
+// la dirección de la otra pasa a alias y redirige.
+{
+  const peso = (r) => (r.dedicatoria && r.dedicatoria.hermandad ? 100 : 0) + Object.values(r.fuentes).flat().length;
+  // título casi literal (solo sin artículo inicial): «Padre Nuestro» y «Señora» no pueden quedar en la misma clave
+  const tk = (t) => norm(t).replace(/^(el|la|los|las|a la|al|a)s+/, '');
+  const grupos = new Map(); for (const r of R) { const k = tk(r.titulo); if (!k) continue; (grupos.get(k) || grupos.set(k, []).get(k)).push(r); }
+  const fuera = new Set();
+  for (const g of grupos.values()) {
+    if (g.length < 2) continue;
+    for (const a of [...g].sort((x, y) => peso(y) - peso(x))) {
+      if (fuera.has(a)) continue;
+      for (const b of g) {
+        if (b === a || fuera.has(b) || !mismoAutor(a.autor, b.autor)) continue;
+        if (a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion)) continue;
+        // dos dedicatorias distintas = pueden ser dos obras con el mismo título
+        if (a.dedicatoria && b.dedicatoria && (a.dedicatoria.hermandad || b.dedicatoria.hermandad ? a.dedicatoria.hermandad !== b.dedicatoria.hermandad : norm(a.dedicatoria.texto) !== norm(b.dedicatoria.texto))) continue;
+        for (const [c, fs_] of Object.entries(b.fuentes)) for (const f of fs_) fuente(a, c, f);
+        for (const [k, u] of Object.entries(b.urls)) a.urls[k] = a.urls[k] || u;
+        for (const c of ['anio', 'formacion', 'video', 'tipo', 'estreno', 'lugar', 'detalles']) if (!a[c] && b[c]) a[c] = b[c];
+        if (!a.dedicatoria && b.dedicatoria) a.dedicatoria = b.dedicatoria;
+        if (b.video && b.video !== a.video) (a.videos ||= []).includes(b.video) || a.videos.push(b.video);
+        a.alias.push(b.slug, ...b.alias); a.retiradas.push(...b.retiradas); a.discrepancias.push(...b.discrepancias);
+        if (b.revision) (a.revision ||= []).push(...b.revision);
+        if (b.partituras) (a.partituras ||= []).push(...b.partituras);
+        fuera.add(b); (informe.pares ||= []).push([a.slug, b.slug, a.formacion, b.formacion]);
+      }
+    }
+  }
+  for (let i = R.length - 1; i >= 0; i--) if (fuera.has(R[i])) R.splice(i, 1);
+  informe.unidas = fuera.size;
+}
+
+// ---------- 6c. estado de cada dedicatoria, al final (tras revisiones y uniones): sitios fiables distintos ----------
+// La revisión cuenta como el sitio de su enlace: hecha con una ficha de Patrimonio Musical, es Patrimonio Musical.
+const clavesFiables = (r) => new Set((r.fuentes.dedicatoria || []).filter((f) => FIABLE.has(f)).map((f) => { if (f !== 'rev') return f; const u = r.urls.rev || ''; let h = ''; try { h = new URL(u).hostname.replace(/^www./, ''); } catch (e) { /* sin url */ } return h === 'patrimoniomusical.com' ? 'pm' : u && u === r.urls.mdpFicha ? 'mdp' : 'rev:' + h; }));
+for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = clavesFiables(r).size; r.dedicatoria.estado = n >= 2 ? 'contrastada' : n === 1 ? 'dedicada' : 'sin-verificar'; }
 
 // ---------- 7. compositores escritos de varias formas (M7): una sola forma por persona ----------
 const claveAutor = (a) => norm(a).split(' ').filter((w) => !['de', 'del', 'la', 'y'].includes(w)).join(' ');
@@ -397,6 +448,7 @@ const resumen = {
 };
 const porCiudad = {}; for (const m of limpio) if (m.dedicatoria && m.dedicatoria.hermandad) porCiudad[m.dedicatoria.ciudad] = (porCiudad[m.dedicatoria.ciudad] || 0) + 1;
 resumen.por_ciudad = porCiudad;
+const FUENTES_URL = {};
 const FUENTES = {
   mdp: { nombre: 'Marchas de Procesión (base de datos y ficha de cada vídeo)', url: 'https://www.marchasdeprocesion.com/p/base-de-datos.html', fiable: true },
   pm: { nombre: 'Patrimonio Musical (base de datos de marchas)', url: 'https://www.patrimoniomusical.com/', fiable: true },
