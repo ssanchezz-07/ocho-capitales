@@ -1735,19 +1735,26 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-portada.is-ciudad .oc-punto { opacity: 0; transition: opacity 200ms var(--ease-out); pointer-events: none; }
 .oc-portada.is-plano .oc-colg-map { opacity: 0; pointer-events: none; }
 /* el plano de la ciudad ocupa todo el lienzo y aparece mientras Andalucía se acerca */
-.oc-colg-plano { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 460ms var(--ease-out) 260ms; }
+.oc-colg-plano { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 420ms var(--ease-out); will-change: opacity; }
 .oc-portada.is-plano .oc-colg-plano { opacity: 1; view-transition-name: oc-plano; }
-.oc-pl-svg { display: block; width: 100%; height: 100%; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.oc-pl-svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.oc-pl-base { pointer-events: none; }
 @media (hover: hover) and (pointer: fine) { .oc-pl-svg { cursor: grab; } .oc-pl-svg.is-arrastrando { cursor: grabbing; } }
 .oc-pl-calles { fill: none; stroke: rgb(205 186 230 / .2); stroke-width: 1.3; vector-effect: non-scaling-stroke; }
 .oc-pl-princ { fill: none; stroke: rgb(216 198 240 / calc(.32 + var(--noche, 0) * .14)); stroke-width: 2.3; vector-effect: non-scaling-stroke; }
 .oc-pl-ruta { fill: none; stroke: var(--hc); stroke-opacity: .2; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
 .oc-pl-ruta[data-estado="calle"] { stroke-opacity: .6; stroke-width: 2.6; }
-.oc-pl-cortejo { fill: none; stroke: var(--oro-claro); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 calc(3px + var(--noche, 0) * 5px) rgb(240 215 156 / .75)); }
+.oc-pl-cortejo { fill: none; stroke: var(--oro-claro); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+/* el brillo del cortejo, más intenso de noche, con un trazo ancho y tenue (sin filtros: se repinta en cada paso de la hora) */
+.oc-pl-cortejo-halo { fill: none; stroke: var(--oro-claro); stroke-opacity: calc(.14 + var(--noche, 0) * .16); stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+/* durante el vuelo de la cámara se dibujan solo las calles principales; las demás aparecen al llegar */
+.oc-pl-svg .oc-pl-calles { transition: opacity 200ms var(--ease-out); }
+.oc-pl-svg.is-volando .oc-pl-calles { opacity: 0; transition: none; }
+.oc-pl-sombra { fill: rgb(0 0 0 / .4); }
 .oc-pl-marca { cursor: pointer; transition: opacity 200ms var(--ease-out); }
 .oc-pl-marca:focus { outline: none; }
 .oc-pl-marca:focus-visible .oc-pl-galon { stroke: #fff; stroke-width: 4; }
-.oc-pl-galon { fill: #1c0e2a; stroke: var(--oro); stroke-width: 2.5; filter: drop-shadow(0 2px 4px rgb(0 0 0 / .5)); }
+.oc-pl-galon { fill: #1c0e2a; stroke: var(--oro); stroke-width: 2.5; }
 .oc-pl-marca[data-estado="calle"] .oc-pl-galon { stroke: var(--oro-claro); stroke-width: 3.5; }
 .oc-pl-fondo { fill: #3a1c55; }
 .oc-pl-ini { font: 400 22px/1 var(--display); fill: var(--oro-claro); text-anchor: middle; }

@@ -39,11 +39,14 @@
 
   function Plano(host, D, o) {
     o = o || {};
-    var svg = el('svg', { 'class': 'oc-pl-svg', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, host);
-    var mundo = el('g', {}, svg);
+    // Dos capas con la misma vista: abajo lo fijo (calles y recorridos) y arriba lo que se mueve (cortejos y medallones).
+    // Al cambiar la hora solo se repinta la de arriba; repintar miles de calles en cada paso daba tirones.
+    var base = el('svg', { 'class': 'oc-pl-svg oc-pl-base', 'aria-hidden': 'true', focusable: 'false' }, host);
+    var svg = el('svg', { 'class': 'oc-pl-svg oc-pl-capa', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, host);
+    var mundo = el('g', {}, base);
     el('path', { 'class': 'oc-pl-calles', d: pathDe(D.calles) }, mundo);
     el('path', { 'class': 'oc-pl-princ', d: pathDe(D.principales) }, mundo);
-    var gR = el('g', {}, mundo), gC = el('g', {}, mundo), gM = el('g', {}, mundo);
+    var gR = el('g', {}, mundo), capa = el('g', {}, svg), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
     var lim = [Infinity, Infinity, -Infinity, -Infinity];
     D.principales.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { lim[0] = Math.min(lim[0], l[i]); lim[1] = Math.min(lim[1], l[i + 1]); lim[2] = Math.max(lim[2], l[i]); lim[3] = Math.max(lim[3], l[i + 1]); } });
     var vb = { x: lim[0], y: lim[1], w: lim[2] - lim[0], h: lim[3] - lim[1] }, Z = 1, T = 0, hs = [], marcas = {}, anim = 0;
@@ -51,7 +54,7 @@
     var W = function () { return Math.max(1, host.clientWidth); }, H = function () { return Math.max(1, host.clientHeight); };
     function aplicar(centro) {
       var cy = vb.y + vb.h / 2; vb.h = vb.w * H() / W(); if (centro) vb.y = cy - vb.h / 2;
-      svg.setAttribute('viewBox', vb.x.toFixed(1) + ' ' + vb.y.toFixed(1) + ' ' + vb.w.toFixed(1) + ' ' + vb.h.toFixed(1)); Z = vb.w / W(); colocar();
+      var v = vb.x.toFixed(1) + ' ' + vb.y.toFixed(1) + ' ' + vb.w.toFixed(1) + ' ' + vb.h.toFixed(1); base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); Z = vb.w / W(); colocar();
     }
     api.vista = function () { return { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; };
     api.caja = function (xs, ys, m) {
@@ -63,12 +66,13 @@
     // Vuelo de cámara: parte de lo que se ve ahora (se puede interrumpir), el centro avanza en línea y la escala en exponencial
     api.volar = function (c, ms) {
       cancelAnimationFrame(anim);
-      if (calm || !ms) { vb.x = c.x; vb.y = c.y; vb.w = c.w; aplicar(); return; }
+      if (calm || !ms) { vb.x = c.x; vb.y = c.y; vb.w = c.w; aplicar(); base.classList.remove('is-volando'); return; }
       var de = { cx: vb.x + vb.w / 2, cy: vb.y + vb.h / 2, w: vb.w }, a = { cx: c.x + c.w / 2, cy: c.y + c.w * H() / W() / 2, w: c.w }, t0 = performance.now();
+      base.classList.add('is-volando');
       (function paso(t) {
         var k = Math.min(1, (t - t0) / ms), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2, w = de.w * Math.pow(a.w / de.w, e);
         vb.w = w; vb.x = de.cx + (a.cx - de.cx) * e - w / 2; vb.y = de.cy + (a.cy - de.cy) * e - w * H() / W() / 2; aplicar();
-        if (k < 1) anim = requestAnimationFrame(paso);
+        if (k < 1) anim = requestAnimationFrame(paso); else base.classList.remove('is-volando');
       })(t0);
     };
     api.encuadrar = function (ms, m) {
@@ -77,13 +81,14 @@
       if (xs.length) api.volar(api.caja(xs, ys, m), ms);
     };
     api.ponerDia = function (lista) {
-      hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {};
+      hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {}; estados = {};
       hs.forEach(function (h, i) {
         var hc = PAL[i % PAL.length], d = '', pts = ruta(h);
         pts.forEach(function (p, j) { var q = pts[j - 1]; d += (!j || (!p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150)) ? 'M' + p[0] + ' ' + p[1] : 'L' + p[0] + ' ' + p[1]; });
         el('path', { 'class': 'oc-pl-ruta', d: d, 'data-s': h.s, style: '--hc:' + hc }, gR);
         // Cada medallón lleva a la ficha completa en «En la calle» (enlace real, también con teclado)
         var a = el('a', { 'class': 'oc-pl-marca', href: o.enlace ? o.enlace(h) : '#', 'aria-label': h.n, 'data-s': h.s }, gM);
+        el('circle', { 'class': 'oc-pl-sombra', r: '22', cy: '2' }, a);
         el('circle', { 'class': 'oc-pl-galon', r: '21' }, a);
         if (h.img) { var cp = el('clipPath', { id: 'oc-pl-' + h.s }, a); el('circle', { r: '18' }, cp); el('image', { href: h.img, x: '-18', y: '-18', width: '36', height: '36', 'clip-path': 'url(#oc-pl-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, a); }
         else { el('circle', { 'class': 'oc-pl-fondo', r: '18' }, a); el('text', { 'class': 'oc-pl-ini', y: '7' }, a).textContent = h.ini; }
@@ -109,13 +114,14 @@
       hs.forEach(function (h) {
         var pts = ruta(h), paso = enTramo(pts, T), cruz = h.t.cruz ? enTramo(h.t.cruz, T) : null, est = estado(h, T);
         if (marcas[h.s]) marcas[h.s].setAttribute('data-estado', est);
-        Array.prototype.forEach.call(gR.querySelectorAll('[data-s="' + h.s + '"]'), function (r) { r.setAttribute('data-estado', est); });
+        if (estados[h.s] !== est) { estados[h.s] = est; Array.prototype.forEach.call(gR.querySelectorAll('[data-s="' + h.s + '"]'), function (r) { r.setAttribute('data-estado', est); }); }
         // el cortejo ocupa la calle desde el paso hasta la cruz de guía (solo si la cruz va por el recorrido conocido)
         if (est === 'calle' && h.t.paso && cruz && paso) {
           var d = 'M' + paso.x + ' ' + paso.y, best = paso.i, bd = Infinity;
           for (var j = paso.i; j < Math.min(pts.length, paso.i + 600); j++) { var dd = Math.hypot(pts[j][0] - cruz.x, pts[j][1] - cruz.y); if (dd < bd) { bd = dd; best = j; } }
           for (var k = paso.i + 1; k <= best; k++) d += 'L' + pts[k][0] + ' ' + pts[k][1];
           if (bd < 80) d += 'L' + cruz.x + ' ' + cruz.y;
+          el('path', { 'class': 'oc-pl-cortejo-halo', d: d }, gC);
           el('path', { 'class': 'oc-pl-cortejo', d: d }, gC);
         }
       });
@@ -124,7 +130,7 @@
     api.cuantas = function () { var n = { calle: 0, antes: 0, despues: 0 }; hs.forEach(function (h) { var e = estado(h, T); if (n[e] != null) n[e]++; }); return n; };
     // Con ratón se puede mover el plano arrastrando; con el dedo, la página sigue desplazándose (el plano completo está en «En la calle»)
     var arr = null, finArr = 0;
-    svg.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse' || e.button) return; cancelAnimationFrame(anim); arr = { x: e.clientX, y: e.clientY, m: false }; });
+    svg.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse' || e.button) return; cancelAnimationFrame(anim); base.classList.remove('is-volando'); arr = { x: e.clientX, y: e.clientY, m: false }; });
     svg.addEventListener('pointermove', function (e) {
       if (!arr) return; var dx = e.clientX - arr.x, dy = e.clientY - arr.y;
       if (!arr.m && Math.hypot(dx, dy) < 6) return; if (!arr.m) { arr.m = true; try { svg.setPointerCapture(e.pointerId); } catch (er) { } svg.classList.add('is-arrastrando'); }
