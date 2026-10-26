@@ -1,0 +1,462 @@
+{
+ "la-o-cordoba": {
+  "templo": "Parroquia de Nuestra Señora de la Aurora",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor.",
+  "nota": "Candidato sin confirmar: «Parroquia de la Asunción» (OSM way/96693634), a unos 80 m de la Plaza Mahatma Gandhi, primera calle de la rejilla. La Ermita de la Aurora del centro (Wikidata Q125411058) queda lejos del recorrido."
+ },
+ "lagrimas-cordoba": {
+  "templo": "Parroquia de la Asunción de Nuestra Señora",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/",
+  "punto": [
+   37.89073,
+   -4.805536
+  ],
+  "osm": "W96007191",
+  "dir": "Pasaje Marino Conde de Alcaudete, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96007191 «Iglesia de Nuestra Señora de la Asunción» (calle por Nominatim)"
+ },
+ "entrada-triunfal-cordoba": {
+  "templo": "Parroquia de San Lorenzo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.888562,
+   -4.768865
+  ],
+  "osm": "W96116159",
+  "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96116159 «Iglesia de San Lorenzo» (calle por Nominatim)"
+ },
+ "penas-de-santiago-cordoba": {
+  "templo": "Parroquia de Santiago Apóstol",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.881834,
+   -4.769409
+  ],
+  "osm": "W87051385",
+  "dir": "Calle Ronquillo Briceño, Córdoba",
+  "fuente_punto": "OpenStreetMap way/87051385 «Iglesia de Santiago» (calle por Nominatim)"
+ },
+ "el-huerto-cordoba": {
+  "templo": "Parroquia de San Francisco y San Eulogio",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.881687,
+   -4.775325
+  ],
+  "osm": "W90528565",
+  "dir": "Pasaje de la Axerquía, Córdoba",
+  "fuente_punto": "OpenStreetMap way/90528565 «Iglesia de San Francisco y San Eulogio» (calle por Nominatim)"
+ },
+ "el-rescatado-cordoba": {
+  "templo": "Parroquia de Nuestra Señora de Gracia (Trinitarios)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.891109,
+   -4.765767
+  ],
+  "osm": "W97672976",
+  "dir": "Plaza Cristo de Gracia, Córdoba",
+  "fuente_punto": "OpenStreetMap way/97672976 «Iglesia de Nuestra Señora de Gracia» (calle por Nominatim)"
+ },
+ "vera-cruz-cordoba": {
+  "templo": "Parroquia de San José y Espíritu Santo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.874736,
+   -4.774647
+  ],
+  "osm": "W95800300",
+  "dir": "Paseo Cristo del Descendimiento, Córdoba",
+  "fuente_punto": "OpenStreetMap way/95800300 «Parroquia San José Espíritu Santo» (calle por Nominatim)"
+ },
+ "la-esperanza-cordoba": {
+  "templo": "Parroquia de San Andrés",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.885973,
+   -4.773034
+  ],
+  "osm": "W96231885",
+  "dir": "Calle Torre de San Andrés, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96231885 «Iglesia de San Andrés» (calle por Nominatim)"
+ },
+ "el-amor-cordoba": {
+  "templo": "Parroquia de Jesús Divino Obrero",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.86712,
+   -4.773039
+  ],
+  "osm": "W317514244",
+  "dir": "Plaza de Jesús Divino Obrero, Córdoba",
+  "fuente_punto": "OpenStreetMap way/317514244 «Parroquia de Jesús Divino Obrero» (calle por Nominatim)"
+ },
+ "la-merced-cordoba": {
+  "templo": "Parroquia de San Antonio de Padua",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-merced/",
+  "punto": [
+   37.896654,
+   -4.76716
+  ],
+  "osm": "W96794207",
+  "dir": "Calle Espiel, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96794207 «Iglesia de San Antonio de Padua» (calle por Nominatim)"
+ },
+ "presentacion-al-pueblo-cordoba": {
+  "templo": "Parroquia de San Vicente Ferrer",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/",
+  "punto": [
+   37.888844,
+   -4.755168
+  ],
+  "osm": "W654511412",
+  "dir": "Calle Párroco Bartolomé Blanco, Córdoba",
+  "fuente_punto": "OpenStreetMap way/654511412 «Parroquia de San Vicente Ferrer» (calle por Nominatim)"
+ },
+ "la-estrella-cordoba": {
+  "templo": "Parroquia de San Fernando",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+  "punto": [
+   37.894296,
+   -4.785996
+  ],
+  "osm": "W296534580",
+  "dir": "Calle Goya 24, Córdoba",
+  "fuente_punto": "OpenStreetMap way/296534580 «Parroquia de San Fernando» (calle por Nominatim)"
+ },
+ "la-sentencia-cordoba": {
+  "templo": "Parroquia de San Nicolás de la Villa",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/",
+  "punto": [
+   37.884454,
+   -4.782257
+  ],
+  "osm": "W96273338",
+  "dir": "Calle Duque de Fernán Núñez 21, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96273338 «Iglesia de San Nicolás de la Villa» (calle por Nominatim)",
+  "casa_hermandad": {
+   "dir": "Pasaje Saravia, Córdoba",
+   "punto": [
+    37.88227,
+    -4.781368
+   ],
+   "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "fuente_punto": "OpenStreetMap way/437566665 y way/1253213191 «Pasaje Saravia» (punto medio del pasaje: el número de la casa no consta)"
+  },
+  "nota": "Sale y se recoge en su casa de hermandad del pasaje de Saravia, no en San Nicolás de la Villa (sede canónica). La rejilla oficial empieza por Barroso y Ángel de Saavedra, junto al pasaje."
+ },
+ "via-crucis-cordoba": {
+  "templo": "Parroquia de San Juan y Todos los Santos (Trinidad)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/",
+  "punto": [
+   37.882591,
+   -4.783513
+  ],
+  "osm": "W96231864",
+  "dir": "Plaza de la Trinidad, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96231864 «Iglesia de San Juan y Todos los Santos» (calle por Nominatim)"
+ },
+ "animas-cordoba": {
+  "templo": "Parroquia de San Lorenzo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+  "punto": [
+   37.888562,
+   -4.768865
+  ],
+  "osm": "W96116159",
+  "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96116159 «Iglesia de San Lorenzo» (calle por Nominatim)"
+ },
+ "la-agonia-cordoba": {
+  "templo": "Parroquia de Santa Victoria",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/",
+  "punto": [
+   37.909894,
+   -4.779361
+  ],
+  "fuente_punto": "OpenStreetMap node/1118777167 «Parroquia de Santa Victoria» (dirección en sus etiquetas addr:*)",
+  "osm": "N1118777167",
+  "dir": "Calle Párroco Agustín Molina 22, Córdoba",
+  "salida": {
+   "templo": "Santuario de Nuestra Señora de la Fuensanta",
+   "punto": [
+    37.881181,
+    -4.762192
+   ],
+   "osm": "W97139190",
+   "fuente": "El Debate, 31-03-2026: «La Agonía abre un nuevo Martes Santo en Córdoba con una estampa histórica de salida» (salida excepcional desde la Fuensanta en 2026): https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/agonia-abre-nuevo-martes-santo-cordoba-estampa-historica-salida_402074.html; la rejilla oficial empieza en PLZ. SANTUARIO FUENSANTA",
+   "fuente_punto": "OpenStreetMap way/97139190 «Santuario de la Fuensanta»"
+  },
+  "nota": "En 2026 sale de la Fuensanta y se recoge en su parroquia: la rejilla oficial acaba en Santas Flora y María, junto a Santa Victoria del barrio (no la iglesia de Santa Victoria del centro)."
+ },
+ "la-universitaria-cordoba": {
+  "templo": "Iglesia del Juramento de San Rafael",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-universitaria/",
+  "punto": [
+   37.888453,
+   -4.770065
+  ],
+  "osm": "W87264400",
+  "dir": "Plazuela de Don Arias, Córdoba",
+  "fuente_punto": "OpenStreetMap way/87264400 «Iglesia de San Rafael» (calle por Nominatim)"
+ },
+ "la-sangre-cordoba": {
+  "templo": "Iglesia Conventual del Santo Ángel (Capuchinos)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-sangre/",
+  "punto": [
+   37.888051,
+   -4.776935
+  ],
+  "osm": "W96268496",
+  "dir": "Plaza de Capuchinos, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96268496 «Iglesia Conventual del Santo Ángel» (calle por Nominatim)"
+ },
+ "el-buen-suceso-cordoba": {
+  "templo": "Parroquia de San Andrés",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+  "punto": [
+   37.885973,
+   -4.773034
+  ],
+  "osm": "W96231885",
+  "dir": "Calle Torre de San Andrés, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96231885 «Iglesia de San Andrés» (calle por Nominatim)"
+ },
+ "la-santa-faz-cordoba": {
+  "templo": "Parroquia de San Juan y Todos los Santos (Trinidad)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-santa-faz/",
+  "punto": [
+   37.882591,
+   -4.783513
+  ],
+  "osm": "W96231864",
+  "dir": "Plaza de la Trinidad, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96231864 «Iglesia de San Juan y Todos los Santos» (calle por Nominatim)"
+ },
+ "el-prendimiento-cordoba": {
+  "templo": "Santuario de María Auxiliadora",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/",
+  "punto": [
+   37.88856,
+   -4.767866
+  ],
+  "osm": "W1321521750",
+  "dir": "Calle María Auxiliadora, Córdoba",
+  "fuente_punto": "OpenStreetMap way/1321521750 «Santuario Maria Auxiliadora» (calle por Nominatim)",
+  "nota": "El librito oficial pone «Parroquia de San Andrés», pero la ficha de la Agrupación da el Santuario de María Auxiliadora y la rejilla oficial sale por Santo Domingo Savio y María Auxiliadora: se toma el Santuario. Revisar."
+ },
+ "el-perdon-cordoba": {
+  "templo": "Iglesia de San Roque - Buen Pastor",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor."
+ },
+ "la-paz-cordoba": {
+  "templo": "Iglesia Conventual del Santo Ángel (Capuchinos)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.888051,
+   -4.776935
+  ],
+  "osm": "W96268496",
+  "dir": "Plaza de Capuchinos, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96268496 «Iglesia Conventual del Santo Ángel» (calle por Nominatim)"
+ },
+ "el-calvario-cordoba": {
+  "templo": "Parroquia de San Lorenzo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-calvario/",
+  "punto": [
+   37.888562,
+   -4.768865
+  ],
+  "osm": "W96116159",
+  "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96116159 «Iglesia de San Lorenzo» (calle por Nominatim)"
+ },
+ "la-misericordia-cordoba": {
+  "templo": "Basílica Menor de San Pedro",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.882631,
+   -4.771848
+  ],
+  "osm": "R20017709",
+  "dir": "Córdoba",
+  "fuente_punto": "OpenStreetMap relation/20017709 «Basílica de San Pedro» (calle por Nominatim)"
+ },
+ "la-pasion-cordoba": {
+  "templo": "Parroquia de Nuestra Señora de la Paz",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/",
+  "punto": [
+   37.876177,
+   -4.784407
+  ],
+  "osm": "W425999353",
+  "dir": "Calle San Basilio, Córdoba",
+  "fuente_punto": "OpenStreetMap way/425999353 «Parroquia de Nuestra Señora de la Paz» (calle por Nominatim)"
+ },
+ "la-piedad-cordoba": {
+  "templo": "Parroquia de San Antonio María Claret",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor.",
+  "nota": "La guía de El Debate dice que se recoge a las 00.25 en los Jardines del Obispo; la rejilla oficial y el librito dan el regreso hasta su templo (entrada 03.50). Se sigue la rejilla oficial."
+ },
+ "jesus-nazareno-cordoba": {
+  "templo": "Iglesia Hospital de Jesús Nazareno",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.888282,
+   -4.771465
+  ],
+  "fuente_punto": "Wikidata Q97626720 (https://www.wikidata.org/wiki/Q97626720)"
+ },
+ "la-caridad-cordoba": {
+  "templo": "Parroquia de San Francisco",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.881687,
+   -4.775325
+  ],
+  "osm": "W90528565",
+  "dir": "Pasaje de la Axerquía, Córdoba",
+  "fuente_punto": "OpenStreetMap way/90528565 «Iglesia de San Francisco y San Eulogio» (calle por Nominatim)"
+ },
+ "jesus-caido-cordoba": {
+  "templo": "Iglesia Conventual de San José (San Cayetano)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.892918,
+   -4.774792
+  ],
+  "osm": "W1429060498",
+  "dir": "Cuesta de San Cayetano, Córdoba",
+  "fuente_punto": "OpenStreetMap way/1429060498 «Iglesia de San Cayetano» (calle por Nominatim)"
+ },
+ "la-cena-cordoba": {
+  "templo": "Parroquia del Beato Álvaro de Córdoba",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.876706,
+   -4.798055
+  ],
+  "osm": "R17140024",
+  "dir": "Calle de Vicente Aleixandre, Córdoba",
+  "fuente_punto": "OpenStreetMap relation/17140024 «Iglesia Parroquial Beato Álvaro de Córdoba» (calle por Nominatim)"
+ },
+ "las-angustias-cordoba": {
+  "templo": "Iglesia de San Agustín",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.889404,
+   -4.771659
+  ],
+  "osm": "W100729013",
+  "dir": "Calle de San Agustín, Córdoba",
+  "fuente_punto": "OpenStreetMap way/100729013 «Iglesia Conventual de San Agustin» (calle por Nominatim)"
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "templo": "Parroquia de Nuestra Señora de Gracia (Trinitarios)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.891109,
+   -4.765767
+  ],
+  "osm": "W97672976",
+  "dir": "Plaza Cristo de Gracia, Córdoba",
+  "fuente_punto": "OpenStreetMap way/97672976 «Iglesia de Nuestra Señora de Gracia» (calle por Nominatim)"
+ },
+ "la-buena-muerte-cordoba": {
+  "templo": "Real Colegiata de San Hipólito",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+  "punto": [
+   37.885863,
+   -4.783171
+  ],
+  "osm": "N13471459220",
+  "dir": "Plaza de San Ignacio de Loyola, Córdoba",
+  "fuente_punto": "OpenStreetMap node/13471459220 «Colegiata de San Hipólito» (calle por Nominatim)"
+ },
+ "dolores-de-alcolea-cordoba": {
+  "templo": "Parroquia Nuestra Señora de los Ángeles (Alcolea)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+  "punto": [
+   37.932957,
+   -4.673811
+  ],
+  "osm": "W565860372",
+  "dir": "Carretera de Madrid, Alcolea",
+  "fuente_punto": "OpenStreetMap way/565860372 «Parroquia de Nuestra Señora de Los Ángeles» (calle por Nominatim)"
+ },
+ "santo-sepulcro-cordoba": {
+  "templo": "Iglesia (La Compañía)",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/",
+  "punto": [
+   37.883694,
+   -4.778512
+  ],
+  "osm": "W96268499",
+  "dir": "Calle Juan de Mena, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96268499 «Iglesia del Salvador y Santo Domingo de Silos» (calle por Nominatim)"
+ },
+ "la-soledad-cordoba": {
+  "templo": "Iglesia de Santa María de Guadalupe",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/",
+  "falta": "Templo sin edificio localizable en OpenStreetMap ni en Wikidata: la salida se fija a mano en el editor."
+ },
+ "la-expiracion-cordoba": {
+  "templo": "Real Iglesia de San Pablo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-expiracion/",
+  "punto": [
+   37.885441,
+   -4.775329
+  ],
+  "osm": "W551114844",
+  "dir": "Calle San Pablo, Córdoba",
+  "fuente_punto": "OpenStreetMap way/551114844 «Iglesia de San Pablo» (calle por Nominatim)"
+ },
+ "el-descendimiento-cordoba": {
+  "templo": "Parroquia de San José y Espíritu Santo",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-descendimiento/",
+  "punto": [
+   37.874736,
+   -4.774647
+  ],
+  "osm": "W95800300",
+  "dir": "Paseo Cristo del Descendimiento, Córdoba",
+  "fuente_punto": "OpenStreetMap way/95800300 «Parroquia San José Espíritu Santo» (calle por Nominatim)"
+ },
+ "la-conversion-cordoba": {
+  "templo": "Iglesia de Nuestra Señora del Rosario",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/",
+  "punto": [
+   37.881127,
+   -4.810034
+  ],
+  "osm": "W95920982",
+  "dir": "Calle D. Federico Ledoux, Córdoba",
+  "fuente_punto": "OpenStreetMap way/95920982 «Nuestra Señora del Rosario» (calle por Nominatim)"
+ },
+ "los-dolores-cordoba": {
+  "templo": "Santuario de Nuestra Señora de los Dolores",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/",
+  "punto": [
+   37.887927,
+   -4.777196
+  ],
+  "osm": "R7662878",
+  "dir": "Plaza de Capuchinos, Córdoba",
+  "fuente_punto": "OpenStreetMap relation/7662878 «Convento de San Jacinto. Virgen de los Dolores» (calle por Nominatim)"
+ },
+ "el-resucitado-cordoba": {
+  "templo": "Parroquia de Santa Marina",
+  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf)",
+  "punto": [
+   37.889909,
+   -4.774779
+  ],
+  "osm": "W96804854",
+  "dir": "Plaza del Rector, Córdoba",
+  "fuente_punto": "OpenStreetMap way/96804854 «Iglesia de Santa Marina de Aguas Santas» (calle por Nominatim)"
+ }
+}
