@@ -72,7 +72,7 @@
     ]
    ],
    "pct_en_calles_lista": 97,
-   "ms": 2472
+   "ms": 7390
   }
  },
  "pasion-malaga": {
@@ -138,7 +138,7 @@
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 95,
-   "ms": 2503
+   "ms": 2087
   }
  },
  "dolores-del-puente-malaga": {
@@ -224,7 +224,7 @@
     ]
    ],
    "pct_en_calles_lista": 95,
-   "ms": 2668
+   "ms": 2257
   }
  },
  "el-rico-malaga": {
@@ -284,7 +284,7 @@
     ]
    ],
    "pct_en_calles_lista": 99,
-   "ms": 2679
+   "ms": 2151
   }
  },
  "paloma-malaga": {
@@ -327,7 +327,7 @@
     ]
    ],
    "pct_en_calles_lista": 98,
-   "ms": 1902
+   "ms": 1927
   }
  },
  "fusionadas-malaga": {
@@ -403,7 +403,7 @@
     ]
    ],
    "pct_en_calles_lista": 94,
-   "ms": 1436
+   "ms": 2604
   }
  },
  "resucitado-malaga": {
@@ -441,7 +441,7 @@
    "retrocesos": 0,
    "donde_retrocesos": [],
    "pct_en_calles_lista": 92,
-   "ms": 1850
+   "ms": 1829
   }
  },
  "humildad-y-paciencia-malaga": {
@@ -540,7 +540,7 @@
     ]
    ],
    "pct_en_calles_lista": 95,
-   "ms": 2489
+   "ms": 2594
   }
  },
  "estudiantes-malaga": {
@@ -596,7 +596,7 @@
     ]
    ],
    "pct_en_calles_lista": 98,
-   "ms": 2190
+   "ms": 2042
   }
  },
  "esperanza-malaga": {
@@ -672,7 +672,7 @@
     ]
    ],
    "pct_en_calles_lista": 96,
-   "ms": 1765
+   "ms": 1602
   }
  }
 }

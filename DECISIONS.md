@@ -1,5 +1,24 @@
 # Decisiones de diseño y técnicas
 
+## 2026-10-26 · Laboratorio de rutas: continuidad + GraphHopper (propuesta, sin adoptar)
+_Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
+
+**Elegido para el laboratorio**
+- **GraphHopper 11.1 en local, sin Docker** (`C:\Users\pablo\Herramientas-IA\graphhopper\`), con un solo grafo de Andalucía (Geofabrik) para las 8 capitales. Sin CH ni LM, porque las rutas son cortas y así funcionan `pass_through` y los ajustes por petición.
+- **Perfil «procesión»:** autovías y vías rápidas fuera; escaleras casi prohibidas (un trono no baja escaleras).
+- **Emparejamiento por continuidad (Viterbi):** las candidatas por nombre aproximado se agrupan en piezas conexas, y se elige la cadena en la que cada calle toca a la siguiente. Los huecos cuestan caro; una homónima lejana se descarta con aviso.
+- **Enlace recto anotado (3-40 m)** donde OSM no une dos calles seguidas de la lista. Es la misma idea que el método actual (≤ 35 m), pero visible en el informe.
+- **Nominatim solo como referencia** de plazas sin calle en OSM: es aproximado y no obliga al trazado.
+- **Correcciones de Pablo** en `tools/itinerarios/laboratorio/correcciones-malaga.json`, con fuente obligatoria. El proceso las respeta al regenerar.
+- **Editor local** con servidor Node y plano SVG propio. No se publica.
+- **Evaluador común** que compara nombres de forma exacta, para no favorecer al método nuevo.
+
+**Descartado**
+- **Docker:** no hace falta, porque ya hay Java 21.
+- **Leaflet o teselas para el editor:** se mantiene la decisión del 17-oct de plano propio también en la herramienta interna.
+- **Puntos de Nominatim como paso obligatorio:** producían picos de ida y vuelta.
+- **Dejar `pass_through` siempre activo:** en las medias vueltas reales (calle · plaza · misma calle) GraphHopper daba un rodeo. Ahí se parte la petición para dejar girar.
+
 ## 2026-10-25 · Marchas: modelo único y verificación de dedicatorias (sesión de marchas)
 **Elegido**
 - **Un solo modelo** (`tools/sources/marchas.json`, generado por `tools/unificar-marchas.mjs`): cada marcha con título, compositor, año, formación, vídeo, dedicatoria (hermandad, titular, ciudad, texto) y, **por campo**, las fuentes que lo dan con su URL. `build.mjs` y la base SQLite solo leen ese fichero; las marchas de cada hermandad ya no salen de `portal.json`.

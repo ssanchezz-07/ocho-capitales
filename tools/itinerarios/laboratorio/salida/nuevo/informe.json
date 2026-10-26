@@ -483,9 +483,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 501,
+  "ms_graphhopper": 440,
   "largo_m": 3519,
-  "ms_total": 1213
+  "ms_total": 959
  },
  "pasion-malaga": {
   "id": "pasion-malaga",
@@ -894,9 +894,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 466,
+  "ms_graphhopper": 437,
   "largo_m": 2573,
-  "ms_total": 1451
+  "ms_total": 1049
  },
  "dolores-del-puente-malaga": {
   "id": "dolores-del-puente-malaga",
@@ -1490,9 +1490,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 495,
+  "ms_graphhopper": 627,
   "largo_m": 3909,
-  "ms_total": 1155
+  "ms_total": 1180
  },
  "el-rico-malaga": {
   "id": "el-rico-malaga",
@@ -1968,9 +1968,9 @@
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
    "39 m entre «Plaza de la Merced» y «Plaza Jesús El Rico»"
   ],
-  "ms_graphhopper": 1183,
+  "ms_graphhopper": 291,
   "largo_m": 3196,
-  "ms_total": 1595
+  "ms_total": 1064
  },
  "paloma-malaga": {
   "id": "paloma-malaga",
@@ -2326,9 +2326,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 190,
+  "ms_graphhopper": 479,
   "largo_m": 2618,
-  "ms_total": 402
+  "ms_total": 909
  },
  "fusionadas-malaga": {
   "id": "fusionadas-malaga",
@@ -2690,9 +2690,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 345,
+  "ms_graphhopper": 704,
   "largo_m": 3020,
-  "ms_total": 535
+  "ms_total": 1105
  },
  "resucitado-malaga": {
   "id": "resucitado-malaga",
@@ -2998,9 +2998,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 224,
+  "ms_graphhopper": 300,
   "largo_m": 2280,
-  "ms_total": 615
+  "ms_total": 621
  },
  "humildad-y-paciencia-malaga": {
   "id": "humildad-y-paciencia-malaga",
@@ -3847,9 +3847,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades (nodo 8280808444) a la del Patio de los Naranjos (nodo 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 463,
+  "ms_graphhopper": 1108,
   "largo_m": 7811,
-  "ms_total": 1137
+  "ms_total": 1574
  },
  "estudiantes-malaga": {
   "id": "estudiantes-malaga",
@@ -4299,9 +4299,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 443,
+  "ms_graphhopper": 333,
   "largo_m": 3243,
-  "ms_total": 795
+  "ms_total": 817
  },
  "esperanza-malaga": {
   "id": "esperanza-malaga",
@@ -4856,8 +4856,8 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 309,
+  "ms_graphhopper": 222,
   "largo_m": 2987,
-  "ms_total": 671
+  "ms_total": 692
  }
 }

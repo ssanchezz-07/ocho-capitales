@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor de rutas</title>
+<style>
+  :root { --fondo: #f6f3ee; --papel: #fffdf9; --tinta: #23201c; --suave: #6f675d; --linea: #e2dbd0; --rojo: #c0392b; --azul: #1f4e9c; --verde: #1e8449; --ambar: #c87f0a; --morado: #7d3c98; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--fondo); color: var(--tinta); font: 15px/1.45 system-ui, "Segoe UI", sans-serif; }
+  body { display: grid; grid-template-rows: auto 1fr; }
+  header { display: flex; gap: 14px; align-items: center; padding: 10px 16px; background: var(--papel); border-bottom: 1px solid var(--linea); flex-wrap: wrap; }
+  header h1 { font-size: 17px; margin: 0 8px 0 0; }
+  select, input[type=text], button { font: inherit; }
+  select { padding: 6px 8px; border: 1px solid var(--linea); border-radius: 8px; background: #fff; min-width: 240px; }
+  .estado { font-size: 13px; padding: 3px 10px; border-radius: 99px; background: #eee; }
+  .estado.ok { background: #e3f4e8; color: var(--verde); } .estado.mal { background: #fde8e6; color: var(--rojo); }
+  label.chk { display: flex; gap: 6px; align-items: center; font-size: 14px; color: var(--suave); cursor: pointer; }
+  main { display: grid; grid-template-columns: 400px 1fr; min-height: 0; }
+  aside { overflow: auto; border-right: 1px solid var(--linea); background: var(--papel); padding: 12px 14px 40px; }
+  details.ayuda { background: #f1ece3; border-radius: 10px; padding: 8px 12px; margin-bottom: 12px; font-size: 14px; }
+  details.ayuda summary { cursor: pointer; font-weight: 600; }
+  details.ayuda ol { margin: 6px 0 2px; padding-left: 20px; } details.ayuda li { margin: 4px 0; }
+  .fuente { font-size: 12px; color: var(--suave); margin: 0 0 8px; word-break: break-all; }
+  ol.calles { list-style: none; margin: 0; padding: 0; }
+  ol.calles li { border: 1px solid transparent; border-radius: 10px; padding: 6px 8px; margin: 2px 0; cursor: pointer; display: grid; grid-template-columns: 30px 1fr; gap: 0 6px; }
+  ol.calles li:hover { background: #f6f1e8; }
+  ol.calles li.sel { border-color: var(--ambar); background: #fff7e8; }
+  ol.calles .n { font-variant-numeric: tabular-nums; color: var(--suave); font-size: 13px; padding-top: 1px; }
+  ol.calles .nom { font-weight: 600; }
+  ol.calles .sub { grid-column: 2; font-size: 12.5px; color: var(--suave); }
+  ol.calles li.hito .nom { font-weight: 400; color: var(--suave); font-style: italic; }
+  ol.calles li.aviso .sub { color: var(--rojo); }
+  .sello { display: inline-block; font-size: 11px; padding: 0 7px; border-radius: 99px; background: #efe2f5; color: var(--morado); margin-left: 6px; vertical-align: 1px; font-weight: 600; }
+  .sello.pend { background: #fff0d6; color: var(--ambar); }
+  .acciones { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  button { border: 1px solid var(--linea); background: #fff; border-radius: 8px; padding: 6px 11px; cursor: pointer; color: var(--tinta); }
+  button:hover { border-color: #c9bfae; } button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--ambar); outline-offset: 1px; }
+  button.principal { background: var(--azul); border-color: var(--azul); color: #fff; font-weight: 600; }
+  button.principal:disabled { opacity: .45; cursor: default; }
+  button.activo { background: var(--ambar); border-color: var(--ambar); color: #fff; }
+  .mapa { position: relative; min-height: 0; display: grid; grid-template-rows: 1fr auto; }
+  svg { width: 100%; height: 100%; display: block; background: #fbfaf7; touch-action: none; cursor: grab; user-select: none; }
+  svg.arrastrando { cursor: grabbing; } svg.modo { cursor: crosshair; }
+  .barra { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .leyenda { position: absolute; top: 10px; right: 10px; background: rgba(255,253,249,.94); border: 1px solid var(--linea); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; }
+  .leyenda div { display: flex; align-items: center; gap: 8px; } .leyenda i { display: inline-block; width: 26px; height: 0; border-top: 3px solid; }
+  .aviso-modo { position: absolute; top: 54px; left: 10px; background: var(--ambar); color: #fff; padding: 7px 12px; border-radius: 8px; font-weight: 600; display: none; max-width: 520px; }
+  footer.guardar { display: flex; gap: 10px; align-items: center; padding: 10px 14px; background: var(--papel); border-top: 1px solid var(--linea); flex-wrap: wrap; }
+  footer.guardar input { flex: 1 1 320px; padding: 7px 10px; border: 1px solid var(--linea); border-radius: 8px; }
+  #pendientes { font-size: 14px; color: var(--suave); min-width: 150px; }
+  #mensaje { font-size: 14px; }
+  .avisos { font-size: 12.5px; color: var(--suave); margin-top: 14px; } .avisos li { margin: 3px 0; }
+  .cargando { position: absolute; inset: 0; display: none; place-items: center; background: rgba(251,250,247,.6); font-weight: 600; }
+  path.calle { fill: none; stroke: #d6d0c6; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+  path.toque { fill: none; stroke: transparent; stroke-width: 12; vector-effect: non-scaling-stroke; pointer-events: none; }
+  svg.modo-elegir path.toque { pointer-events: stroke; cursor: pointer; }
+  svg.modo-elegir path.toque:hover + path.calle, path.toque:hover { stroke: rgba(200,127,10,.35); }
+  path.cand { fill: none; stroke: var(--ambar); stroke-width: 6; stroke-opacity: .55; vector-effect: non-scaling-stroke; pointer-events: none; }
+  path.cand.buena { stroke: var(--verde); stroke-opacity: .7; }
+  path.actual { fill: none; stroke: var(--rojo); stroke-opacity: .3; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; }
+  path.ida, path.regreso { fill: none; stroke: var(--azul); stroke-width: 2.6; stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; }
+  path.regreso { stroke-dasharray: 7 4; }
+  circle.paso { fill: #fff; stroke: var(--azul); stroke-width: 2; vector-effect: non-scaling-stroke; cursor: move; }
+  circle.paso.sel { stroke: var(--ambar); stroke-width: 3; } circle.paso.movido { fill: var(--ambar); }
+  text.num { font-size: 11px; fill: var(--azul); pointer-events: none; font-weight: 700; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Editor de rutas</h1>
+  <label class="sr" for="herm">Hermandad</label>
+  <select id="herm" aria-label="Hermandad"></select>
+  <span id="estado" class="estado">Comprobando el trazador…</span>
+  <label class="chk"><input type="checkbox" id="verActual" checked> Ver el trazado actual (rojo)</label>
+</header>
+<main>
+  <aside>
+    <details class="ayuda" id="ayuda" open>
+      <summary>Cómo se usa (4 pasos)</summary>
+      <ol>
+        <li>Elige la hermandad arriba. A la izquierda está su <b>lista oficial de calles</b>; en el plano, el recorrido nuevo en <b style="color:var(--azul)">azul</b> (discontinuo, el regreso).</li>
+        <li>Si una calle está mal, <b>púlsala en la lista</b>: en el plano se ven en naranja las calles con ese nombre. Pulsa <b>«Elegir la calle buena»</b> y luego la calle correcta en el plano.</li>
+        <li>Puedes <b>arrastrar los círculos</b> (puntos de paso) o cambiar la <b>salida</b> y la <b>entrada</b> con los botones de arriba del plano.</li>
+        <li>Abajo, escribe <b>de dónde sale</b> la corrección (enlace del itinerario, cartel, foto…) y pulsa <b>«Guardar y volver a trazar»</b>.</li>
+      </ol>
+    </details>
+    <p class="fuente" id="fuente"></p>
+    <ol class="calles" id="lista" aria-label="Lista oficial de calles"></ol>
+    <ul class="avisos" id="avisos"></ul>
+  </aside>
+  <section class="mapa">
+    <svg id="svg" role="img" aria-label="Plano del recorrido">
+      <g id="gCalles"></g><g id="gCand"></g><g id="gActual"></g><g id="gNuevo"></g><g id="gPuntos"></g>
+    </svg>
+    <div class="barra">
+      <button id="bSalida" title="Después, pulsa en el plano el sitio de salida">Cambiar la salida</button>
+      <button id="bEntrada" title="Después, pulsa en el plano el sitio de entrada">Cambiar la entrada</button>
+      <button id="bVista">Ver todo el recorrido</button>
+    </div>
+    <div class="aviso-modo" id="avisoModo"></div>
+    <div class="leyenda" aria-hidden="true">
+      <div><i style="border-color:var(--azul)"></i> nuevo (ida)</div>
+      <div><i style="border-color:var(--azul);border-top-style:dashed"></i> nuevo (regreso)</div>
+      <div><i style="border-color:rgba(192,57,43,.4);border-top-width:7px"></i> actual</div>
+      <div><i style="border-color:var(--ambar);border-top-width:5px"></i> calles con ese nombre</div>
+      <div><span style="color:var(--verde);font-size:16px">●</span> salida &nbsp; <span>■</span> entrada</div>
+    </div>
+    <div class="cargando" id="cargando">Trazando…</div>
+    <footer class="guardar">
+      <span id="pendientes">Sin cambios</span>
+      <label class="sr" for="fuenteCorr">De dónde sale la corrección</label>
+      <input type="text" id="fuenteCorr" placeholder="¿De dónde sale? Enlace del itinerario, cartel, foto, nota…">
+      <button class="principal" id="bGuardar" disabled>Guardar y volver a trazar</button>
+      <button id="bDescartar" disabled>Descartar cambios</button>
+      <span id="mensaje" role="status"></span>
+    </footer>
+  </section>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const NS = 'http://www.w3.org/2000/svg';
+let D = null, sel = null, modo = null, vb = null;
+let pend = { calles: {}, puntos: {} };
+const hayPend = () => Object.keys(pend.calles).length + Object.keys(pend.puntos).length + ('salida' in pend) + ('entrada' in pend) + (pend.borrar_todo ? 1 : 0);
+
+// ---- proyección (metros) ----
+let O = [36.72, -4.42], KX = 1, KY = 110540;
+const P = ([la, lo]) => [(lo - O[1]) * KX, (O[0] - la) * KY];
+const IP = ([x, y]) => [+(O[0] - y / KY).toFixed(7), +(O[1] + x / KX).toFixed(7)];
+const dPath = (pts) => pts.map((p, i) => (i ? 'L' : 'M') + P(p).map((v) => v.toFixed(1)).join(' ')).join('');
+const el = (tag, at = {}, padre) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (padre) padre.appendChild(e); return e; };
+
+async function estado() {
+  try { const r = await (await fetch('/api/estado')).json(); const e = $('#estado'); e.textContent = r.trazador ? 'Trazador encendido' : 'Trazador apagado: abre «Abrir editor de rutas.bat»'; e.className = 'estado ' + (r.trazador ? 'ok' : 'mal'); return r; }
+  catch { $('#estado').textContent = 'El editor no responde'; $('#estado').className = 'estado mal'; }
+}
+async function iniciar() {
+  const r = await estado();
+  const s = $('#herm'); s.innerHTML = r.hermandades.map((h) => `<option value="${h.id}">${h.nombre}</option>`).join('');
+  try { const u = localStorage.getItem('editor-herm'); if (u && r.hermandades.some((h) => h.id === u)) s.value = u; if (localStorage.getItem('editor-ayuda') === 'cerrada') $('#ayuda').open = false; } catch {}
+  s.onchange = () => { if (hayPend() && !confirm('Tienes cambios sin guardar. ¿Cambiar de hermandad y perderlos?')) { s.value = D.id; return; } try { localStorage.setItem('editor-herm', s.value); } catch {} cargar(s.value); };
+  $('#ayuda').ontoggle = () => { try { localStorage.setItem('editor-ayuda', $('#ayuda').open ? 'abierta' : 'cerrada'); } catch {} };
+  cargar(s.value);
+  setInterval(estado, 15000);
+}
+async function cargar(id, metodo = 'GET', body) {
+  $('#cargando').style.display = 'grid';
+  try {
+    const r = await fetch('/api/hermandad/' + id, metodo === 'GET' ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    D = await r.json(); if (D.error && !D.filas) throw new Error(D.error);
+    pend = { calles: {}, puntos: {} }; sel = null; ponModo(null);
+    const c = D.caja; O = [(c[0] + c[2]) / 2, (c[1] + c[3]) / 2]; KX = 111320 * Math.cos(O[0] * Math.PI / 180);
+    pintarTodo(true);
+    $('#mensaje').textContent = D.error ? '⚠ ' + D.error : metodo === 'POST' ? 'Guardado y trazado de nuevo ✓' : '';
+  } catch (e) { $('#mensaje').textContent = '⚠ No se pudo trazar: ' + e.message; }
+  $('#cargando').style.display = 'none';
+}
+
+// ---- pintar ----
+function pintarTodo(encuadrar) {
+  $('#fuente').innerHTML = `Lista oficial: <a href="${D.fuente}" target="_blank" rel="noopener">itinerario 2026 de la Agrupación</a> · ${D.nuevo ? (D.nuevo.largo_m / 1000).toFixed(2).replace('.', ',') + ' km' : ''}`;
+  const gC = $('#gCalles'); gC.innerHTML = '';
+  for (const v of D.fondo) { const d = dPath(v.p); const t = el('path', { d, class: 'toque', 'data-via': v.id, 'data-n': v.n || '' }, gC); el('path', { d, class: 'calle' }, gC); t.onclick = (ev) => { if (modo?.tipo === 'elegir') { ev.stopPropagation(); elegirVia(v); } }; }
+  pintarTrazos(); pintarLista(); pintarCand(); pintarPuntos(); pintarAvisos(); pintarPend();
+  if (encuadrar || !vb) verTodo();
+}
+function pintarTrazos() {
+  const gA = $('#gActual'); gA.innerHTML = '';
+  if (D.actual && $('#verActual').checked) el('path', { d: dPath([...D.actual.ida, ...D.actual.regreso]), class: 'actual' }, gA);
+  const gN = $('#gNuevo'); gN.innerHTML = '';
+  if (D.nuevo) { el('path', { d: dPath(D.nuevo.ida), class: 'ida' }, gN); el('path', { d: dPath(D.nuevo.regreso), class: 'regreso' }, gN); }
+}
+function pintarLista() {
+  const ol = $('#lista'); ol.innerHTML = '';
+  for (const f of D.filas) {
+    const li = document.createElement('li'); li.tabIndex = 0;
+    const corr = pend.calles[f.i] !== undefined ? pend.calles[f.i] : f.correccion;
+    const esHito = !['calle', 'punto', 'catedral', 'salida', 'entrada'].includes(f.tipo);
+    const sinOSM = ['sin_osm', 'homonimo', 'omitida'].includes(f.tipo);
+    li.className = (esHito && !sinOSM ? 'hito ' : '') + (sinOSM ? 'aviso ' : '') + (sel === f.i ? 'sel' : '');
+    const sub = f.tipo === 'calle' ? 'En el plano: ' + (f.osm || '—') + (f.candidatas.length > 1 ? ` · ${f.candidatas.length} calles con ese nombre` : '')
+      : f.tipo === 'punto' ? 'Punto situado: ' + (f.osm || '') : f.tipo === 'catedral' ? 'Por dentro de la Catedral' : f.tipo === 'salida' ? 'Salida: ' + (D.nuevo?.salida?.como || 'sin localizar') : f.tipo === 'entrada' ? 'Entrada: ' + (D.nuevo?.entrada?.como || 'sin localizar')
+      : f.tipo === 'sin_osm' ? 'No está en el plano de OSM: no se traza' : f.tipo === 'homonimo' ? 'La única calle con ese nombre está lejos: no se traza' : f.tipo === 'omitida' ? 'Omitida por corrección' : 'Marca del recorrido (sin calle propia)';
+    const sello = (pend.calles[f.i] !== undefined || pend.puntos[f.i] !== undefined) ? '<span class="sello pend">sin guardar</span>' : (f.correccion || f.punto_movido) ? '<span class="sello">corregida</span>' : '';
+    li.innerHTML = `<span class="n">${f.i + 1}</span><span class="nom">${f.lugar}${sello}</span><span class="sub">${sub}</span>`;
+    if (sel === f.i) {
+      const ac = document.createElement('div'); ac.className = 'acciones';
+      const b = (txt, fn, cls = '') => { const x = document.createElement('button'); x.textContent = txt; x.className = cls; x.onclick = (e) => { e.stopPropagation(); fn(); }; ac.appendChild(x); };
+      if (f.tipo !== 'salida' && f.tipo !== 'entrada' && f.tipo !== 'catedral') {
+        b('Elegir la calle buena en el plano', () => ponModo({ tipo: 'elegir', i: f.i, txt: `Pulsa en el plano la calle buena para «${f.lugar}» (vale cualquier calle, aunque OSM la llame de otra forma). Esc para cancelar.` }), modo?.tipo === 'elegir' ? 'activo' : '');
+        b('Situar a mano (no está en el plano)', () => ponModo({ tipo: 'situar', i: f.i, txt: `Pulsa en el plano el sitio de «${f.lugar}». Esc para cancelar.` }), modo?.tipo === 'situar' ? 'activo' : '');
+        b('No trazar esta calle', () => { pend.calles[f.i] = { omitir: true }; repintar(); });
+      }
+      if (f.tipo === 'salida') b('Cambiar la salida', () => $('#bSalida').click());
+      if (f.tipo === 'entrada') b('Cambiar la entrada', () => $('#bEntrada').click());
+      if (f.correccion || f.punto_movido || pend.calles[f.i] !== undefined || pend.puntos[f.i] !== undefined) b('Quitar mi corrección', () => { pend.calles[f.i] = null; pend.puntos[f.i] = null; if (!f.correccion) delete pend.calles[f.i]; if (!f.punto_movido) delete pend.puntos[f.i]; repintar(); });
+      li.appendChild(ac);
+    }
+    li.onclick = () => { sel = sel === f.i ? null : f.i; if (modo && modo.i !== sel) ponModo(null); repintar(); if (sel !== null && f.punto) centrar(f.punto); };
+    li.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); li.click(); } };
+    ol.appendChild(li);
+  }
+  const s = ol.querySelector('li.sel'); if (s) s.scrollIntoView({ block: 'nearest' });
+}
+function pintarCand() {
+  const g = $('#gCand'); g.innerHTML = '';
+  const f = D.filas.find((x) => x.i === sel); if (!f) return;
+  for (const c of f.candidatas) c.lineas.forEach((l, k) => {
+    const d = dPath(l); el('path', { d, class: 'cand' + (c.elegida ? ' buena' : '') }, g);
+    // por encima del resto: al elegir, una calle candidata gana a la que se cruza con ella
+    const t = el('path', { d, class: 'toque', 'data-via': c.ids[k] }, g); t.onclick = (ev) => { if (modo?.tipo === 'elegir') { ev.stopPropagation(); elegirVia({ id: c.ids[k], n: c.nombre }); } };
+  });
+}
+function pintarPuntos() {
+  const g = $('#gPuntos'); g.innerHTML = '';
+  const r = radio();
+  for (const f of D.filas) {
+    if (!f.punto || !['calle', 'punto'].includes(f.tipo)) continue;
+    const movido = pend.puntos[f.i] || f.punto_movido;
+    const pt = pend.puntos[f.i] || f.punto;
+    const [x, y] = P(pt);
+    const c = el('circle', { cx: x, cy: y, r, class: 'paso' + (sel === f.i ? ' sel' : '') + (movido ? ' movido' : ''), tabindex: -1 }, g);
+    el('title', {}, c).textContent = `${f.i + 1}. ${f.lugar} (arrástralo para moverlo)`;
+    const t = el('text', { x: x + r * 1.3, y: y - r * 0.9, class: 'num' }, g); t.textContent = f.i + 1;
+    arrastrable(c, (p) => { pend.puntos[f.i] = IP(p); c.setAttribute('cx', p[0]); c.setAttribute('cy', p[1]); t.setAttribute('x', p[0] + r * 1.3); t.setAttribute('y', p[1] - r * 0.9); }, () => { sel = f.i; repintar(); });
+  }
+  const sal = pend.salida || (D.nuevo?.ida[0] && { lat: D.nuevo.ida[0][0], lon: D.nuevo.ida[0][1] });
+  const ent = pend.entrada || (D.nuevo?.regreso.length && { lat: D.nuevo.regreso.at(-1)[0], lon: D.nuevo.regreso.at(-1)[1] });
+  if (ent) { const [x, y] = P([ent.lat, ent.lon]); const q = el('rect', { x: x - r, y: y - r, width: 2 * r, height: 2 * r, fill: '#111' }, g); el('title', {}, q).textContent = 'Entrada'; }
+  if (sal) { const [x, y] = P([sal.lat, sal.lon]); const q = el('circle', { cx: x, cy: y, r: r * 1.25, fill: 'var(--verde)', stroke: '#fff', 'stroke-width': 2, 'vector-effect': 'non-scaling-stroke' }, g); el('title', {}, q).textContent = 'Salida'; }
+}
+function pintarAvisos() { const u = $('#avisos'); const a = [...(D.nuevo?.avisos || []), ...(D.nuevo?.enlaces || []).map((x) => 'Enlace recto (OSM no une estas calles): ' + x)]; u.innerHTML = a.length ? '<b>Avisos del trazado</b>' + a.map((x) => `<li>${x}</li>`).join('') : ''; }
+function pintarPend() {
+  const n = hayPend();
+  $('#pendientes').textContent = n ? `${n} cambio${n > 1 ? 's' : ''} sin guardar` : 'Sin cambios';
+  $('#bGuardar').disabled = !n; $('#bDescartar').disabled = !n;
+}
+const repintar = () => { pintarLista(); pintarCand(); pintarPuntos(); pintarPend(); };
+
+// ---- vista: mover y acercar ----
+const svg = $('#svg');
+function aplicarVista() { svg.setAttribute('viewBox', vb.join(' ')); pintarPuntos(); }
+function radio() { const w = svg.clientWidth || 800; return vb ? 7 * vb[2] / w : 7; }
+function verTodo() { const pts = D.nuevo ? [...D.nuevo.ida, ...D.nuevo.regreso] : D.actual ? [...D.actual.ida, ...D.actual.regreso] : []; if (!pts.length) return; const xy = pts.map(P); const x0 = Math.min(...xy.map((p) => p[0])), x1 = Math.max(...xy.map((p) => p[0])), y0 = Math.min(...xy.map((p) => p[1])), y1 = Math.max(...xy.map((p) => p[1])); const m = 80, w = svg.clientWidth || 800, h = svg.clientHeight || 600; let W = x1 - x0 + 2 * m, H = y1 - y0 + 2 * m; if (W / H < w / h) W = H * w / h; else H = W * h / w; vb = [(x0 + x1) / 2 - W / 2, (y0 + y1) / 2 - H / 2, W, H]; aplicarVista(); }
+function centrar(pt) { const [x, y] = P(pt); vb = [x - vb[2] / 2, y - vb[3] / 2, vb[2], vb[3]]; aplicarVista(); }
+const aSVG = (ev) => { const p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY; const q = p.matrixTransform(svg.getScreenCTM().inverse()); return [q.x, q.y]; };
+svg.addEventListener('wheel', (ev) => { ev.preventDefault(); const [x, y] = aSVG(ev); const k = Math.exp(ev.deltaY * 0.0015); vb = [x - (x - vb[0]) * k, y - (y - vb[1]) * k, vb[2] * k, vb[3] * k]; aplicarVista(); }, { passive: false });
+let pan = null;
+const modoClic = () => modo && ['situar', 'salida', 'entrada'].includes(modo.tipo);
+svg.addEventListener('pointerdown', (ev) => { if (ev.target.closest('circle.paso') && !modoClic()) return; pan = { x: ev.clientX, y: ev.clientY, vb: [...vb], movido: false }; });
+window.addEventListener('pointermove', (ev) => { if (!pan) return; const dx = ev.clientX - pan.x, dy = ev.clientY - pan.y; if (Math.hypot(dx, dy) > 3) { pan.movido = true; svg.classList.add('arrastrando'); } const k = vb[2] / svg.clientWidth; vb = [pan.vb[0] - dx * k, pan.vb[1] - dy * k, vb[2], vb[3]]; svg.setAttribute('viewBox', vb.join(' ')); });
+window.addEventListener('pointerup', (ev) => { if (!pan) return; const fue = pan.movido; pan = null; svg.classList.remove('arrastrando'); if (fue) { pintarPuntos(); return; } if (modoClic() && ev.target.closest('svg')) clicPlano(aSVG(ev)); });
+function arrastrable(c, mover, alPulsar) {
+  c.addEventListener('pointerdown', (ev) => { if (modoClic()) return; // en modo «pulsar en el plano», el clic sitúa el punto aunque caiga sobre un círculo
+    ev.stopPropagation(); c.setPointerCapture(ev.pointerId); let movio = false;
+    const mv = (e) => { movio = true; mover(aSVG(e)); pintarPend(); };
+    const up = () => { c.removeEventListener('pointermove', mv); c.removeEventListener('pointerup', up); if (movio) pintarLista(); else alPulsar(); };
+    c.addEventListener('pointermove', mv); c.addEventListener('pointerup', up); });
+}
+
+// ---- modos (elegir calle, situar punto, salida, entrada) ----
+function ponModo(m) {
+  modo = m; svg.classList.toggle('modo', !!m && m.tipo !== 'elegir'); svg.classList.toggle('modo-elegir', m?.tipo === 'elegir');
+  $('#avisoModo').style.display = m ? 'block' : 'none'; $('#avisoModo').textContent = m?.txt || '';
+  $('#bSalida').classList.toggle('activo', m?.tipo === 'salida'); $('#bEntrada').classList.toggle('activo', m?.tipo === 'entrada');
+  if (D) pintarLista();
+}
+function elegirVia(v) { pend.calles[modo.i] = { via: v.id, nombre_osm: v.n || null }; ponModo(null); repintar(); $('#mensaje').textContent = `Elegida «${v.n || 'calle sin nombre en OSM'}». Escribe la fuente y guarda.`; }
+function clicPlano(p) {
+  const [lat, lon] = IP(p);
+  if (modo.tipo === 'situar') pend.calles[modo.i] = { punto: [lat, lon] };
+  if (modo.tipo === 'salida') pend.salida = { lat, lon };
+  if (modo.tipo === 'entrada') pend.entrada = { lat, lon };
+  ponModo(null); repintar();
+}
+$('#bSalida').onclick = () => ponModo(modo?.tipo === 'salida' ? null : { tipo: 'salida', txt: 'Pulsa en el plano la puerta por la que sale. Esc para cancelar.' });
+$('#bEntrada').onclick = () => ponModo(modo?.tipo === 'entrada' ? null : { tipo: 'entrada', txt: 'Pulsa en el plano la puerta por la que entra. Esc para cancelar.' });
+$('#bVista').onclick = verTodo;
+$('#verActual').onchange = pintarTrazos;
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') ponModo(null); });
+window.addEventListener('resize', () => D && verTodo());
+window.addEventListener('beforeunload', (e) => { if (hayPend()) { e.preventDefault(); e.returnValue = ''; } });
+
+// ---- guardar ----
+$('#bGuardar').onclick = async () => {
+  const fuente = $('#fuenteCorr').value.trim();
+  if (!fuente) { $('#mensaje').textContent = '⚠ Escribe de dónde sale la corrección (un enlace o una nota): así no se inventa nada.'; $('#fuenteCorr').focus(); return; }
+  const cambios = { calles: {}, puntos: pend.puntos, fuente };
+  const que = [];
+  for (const [i, v] of Object.entries(pend.calles)) { cambios.calles[i] = v && { ...v, fuente }; que.push(`${+i + 1}. ${D.filas[i].lugar}`); }
+  for (const i of Object.keys(pend.puntos)) que.push(`punto ${+i + 1}`);
+  for (const k of ['salida', 'entrada']) if (k in pend) { cambios[k] = pend[k] && { ...pend[k], fuente }; que.push(k); }
+  cambios.resumen = que.join(', ');
+  await cargar(D.id, 'POST', cambios);
+  $('#fuenteCorr').value = '';
+};
+$('#bDescartar').onclick = () => { pend = { calles: {}, puntos: {} }; ponModo(null); repintar(); $('#mensaje').textContent = 'Cambios descartados.'; };
+iniciar();
+</script>
+</body>
+</html>

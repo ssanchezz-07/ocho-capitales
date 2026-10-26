@@ -152,7 +152,7 @@ export async function trazar(id, { corr = leerCorrecciones()[id] || {} } = {}) {
   }
   // salida y entrada: puerta del edificio que da a la primera / última calle
   const op0 = R[0].opciones[ch.elegidas[0]], opN = R.at(-1).opciones[ch.elegidas.at(-1)];
-  for (const [sd, op, rol] of [[sedeS, op0, 'salida'], [sedeE, opN, 'entrada']]) { if (!sd || sd.como === 'corrección de Pablo') continue; const pu = puertaHacia(sd, op); if (pu) { sd.punto_edificio = sd.punto; sd.punto = pu.punto; sd.como += ' → ' + pu.como; } informe[rol] = { punto: sd.punto, como: sd.como, fuente: sd.fuente || null }; }
+  for (const [sd, op, rol] of [[sedeS, op0, 'salida'], [sedeE, opN, 'entrada']]) { if (!sd) continue; if (sd.como === 'corrección de Pablo') { informe[rol] = { punto: sd.punto, como: sd.como, fuente: sd.fuente || null }; continue; } const pu = puertaHacia(sd, op); if (pu) { sd.punto_edificio = sd.punto; sd.punto = pu.punto; sd.como += ' → ' + pu.como; } informe[rol] = { punto: sd.punto, como: sd.como, fuente: sd.fuente || null }; }
   // ---- puntos de paso ----
   const segs = [[]]; const hitoPunto = new Map(); // índice original → [la,lo]
   const pon = (xy, i) => { const ll = LL(...xy); const s = segs.at(-1); if (!s.length || d2(X(...s.at(-1)), xy) > 5) s.push(ll); if (i !== undefined && !hitoPunto.has(i)) hitoPunto.set(i, ll); };
