@@ -1474,7 +1474,8 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; border: 1px solid rgb(255 255 255 / .22); background: rgb(30 14 44 / .6); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); color: #fff; font: 600 1.3rem/1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-calle-btn:active { transform: scale(.94); }
 .oc-calle-btn svg { width: 22px; height: 22px; }
-.oc-calle-osm { position: absolute; left: 10px; bottom: 8px; margin: 0; font-size: .68rem; color: rgb(255 255 255 / .55); pointer-events: none; }
+.oc-calle-osm { position: absolute; left: 10px; bottom: 8px; margin: 0; font-size: .68rem; color: rgb(255 255 255 / .72); pointer-events: none; }
+.oc-calle-osm a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
 .oc-calle-mapa.is-error::after { content: "No se pudo cargar el plano. Comprueba la conexión."; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; }
 /* reloj: reproducir la jornada y arrastrar la hora */
 .oc-calle-reloj { position: sticky; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 8px); z-index: 4; display: flex; align-items: center; gap: 12px; margin: -34px 8px 0; padding: 10px 14px 10px 10px; border-radius: 22px; background: color-mix(in srgb, var(--surface) 88%, transparent); -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); box-shadow: 0 18px 40px -24px rgb(20 8 29 / .6); }
