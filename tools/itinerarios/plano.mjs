@@ -45,8 +45,8 @@ for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWi
   const osm = JSON.parse(fs.readFileSync(path.join(DIR, 'cache', f), 'utf8'));
   // capas del fondo fiel (si se descargaron): se suman a las calles ya guardadas, sin repetir
   const fFondo = path.join(DIR, 'cache', 'fondo-' + ciudad + '.json'), fondo = fs.existsSync(fFondo) ? JSON.parse(fs.readFileSync(fFondo, 'utf8')).elements : [];
-  const vistos = new Set(osm.elements.map((e) => e.type + e.id));
-  for (const e of fondo) if (e.tags && e.tags.highway && !vistos.has(e.type + e.id)) { vistos.add(e.type + e.id); osm.elements.push(e); }
+  // con fondo, sus vías y templos sustituyen a los de la caché antigua: todo sale del mismo extracto que los recorridos (GraphHopper)
+  if (fondo.length) osm.elements = fondo.filter((e) => e.type === 'way' && e.tags && (e.tags.highway || e.tags.amenity === 'place_of_worship'));
   const tol = fondo.length ? 1.5 : 2.5; // con el fondo fiel, los callejones conservan sus quiebros
   const calles = [], principales = [], templos = [];
   const areas = { plazas: [], agua: [], parques: [], playas: [], edificios: [] }, rios = [], costa = [];

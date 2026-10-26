@@ -2,7 +2,11 @@
 
 ## 2026-10-26 · Fondo del plano fiel a la ciudad (Málaga, Córdoba y Cádiz)
 Pablo: «completar Málaga, Cádiz y Córdoba… con su mapa mejorado y fiel». Los recorridos ya se trazan sobre la red completa de OSM (GraphHopper), pero el fondo eran calles simplificadas: un recorrido por un callejón o una plaza que el fondo no dibujaba parecía cruzar manzanas.
-- **Datos:** `tools/itinerarios/fondo-osm.mjs <ciudad>` descarga de Overpass (OSM, ODbL, con permiso de Pablo; en `cache/`, fuera de git):
+- **Datos: el mismo extracto que los recorridos.** `tools/itinerarios/fondo-pbf.mjs` lee `C:\Users\pablo\Herramientas-IA\graphhopper\andalucia-latest.osm.pbf` (Geofabrik, 26-oct), el mismo con el que GraphHopper traza los recorridos. Así fondo y recorridos coinciden al metro.
+  - Lo lee un lector propio, sin dependencias y sin modificar el archivo: lo usa el servidor de GraphHopper.
+  - Da el mismo formato que antes en `cache/` (fuera de git).
+  - Las descargas de Overpass (`fondo-osm.mjs`, primera versión) quedan como `cache/overpass-*.json`. No se usan: el `.pbf` tiene todas las capas.
+- **Primera versión (descartada):** `tools/itinerarios/fondo-osm.mjs <ciudad>` descargaba de Overpass (OSM, ODbL, con permiso de Pablo):
   - en el recuadro de los recorridos: todas las vías (también peatonales, escaleras y callejones), plazas, agua, ríos, costa, playas, parques, templos y casas hermandad;
   - aparte, los edificios a 40 m de algún recorrido.
 - **Fondo:** `plano.mjs` suma esas vías (los callejones conservan sus quiebros, con una tolerancia de 1,5 m) y añade las capas.
