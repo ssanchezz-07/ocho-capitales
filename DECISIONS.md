@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 2026-10-26 · Laboratorio de rutas: continuidad + GraphHopper (propuesta, sin adoptar)
 _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 
@@ -51,6 +52,11 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 =======
 =======
 ## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada (parada por el límite de 5 h al 95 %)
+=======
+## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada
+**Hecho el 26-oct (commit `c78cf21`): los puntos 1 y 2.** Las láminas han vuelto tal cual. La portada mide lo que su contenido en Andalucía y crece a la pantalla al bajar a la ciudad (420 ms). Las banderas, el mapa y la invitación caben en cualquier pantalla. Los hilos solo aparecen al elegir, y la cámara arranca cuando el hilo ha llegado a la capital (360 ms). Capturas de antes y después en `capturas-portada/` (fuera de git). Siguen pendientes los puntos 3 a 5.
+
+>>>>>>> 1de5567 (DECISIONS: láminas en la portada y arreglos de la captura de Pablo hechos)
 Pablo vio la portada de esta rama en localhost:8093 (captura a ~916 px) y llegaron órdenes nuevas a través de la sesión que coordina. **No subir la portada hasta que Pablo la vea.** El push a main necesita su confirmación en el chat de esta sesión.
 1. **Recuperar intactas las láminas «Las ocho capitales»** (`plates(false)` en `site/build.mjs`, con foto teñida, número, latitud, sello y «N hermandades · N bandas») entre el mapa y la agenda. Pablo: «ME REFIERO A ESTE APARTADO, QUE ES PRECIOSO». Las sacamos de la portada el 25-oct; hay que devolverlas tal cual.
 2. **Arreglar lo que se ve en su captura:**
@@ -94,7 +100,7 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
   - «Hoy» (cuenta atrás, jornadas por capital) y la curiosidad del día van a la página nueva `/hoy/`, y la barra inferior pasa a ser Inicio · Hoy · Noticias · Buscar · Más.
   - El calendario va a «Más» y a la cabecera.
   - El archivo (hermandades, bandas, marchas e imagineros) va a «Más», con sus cifras.
-  - Las planchas de capitales siguen en `/capitales/`.
+  - Las láminas «Las ocho capitales» **se quedan en la portada** entre el mapa y la agenda (Pablo, 26-oct: «ese apartado es precioso»).
   - `/en-la-calle/` deja de redirigir y pasa a ser la página para elegir ciudad.
 - **Noticias:** el titular va primero y debajo una sola línea con el medio y la hora. La capital solo aparece si se ven todas. Sin extracto en el móvil y con una noticia destacada (la primera con foto de las seis primeras).
   - **La misma noticia de varios medios se agrupa** (`build.mjs`, al cargar `news.json`): sale la más reciente con «También en…» y sus enlaces. Cuentan como el mismo asunto si comparten al menos el 60 % de las palabras con contenido del titular más corto (tres palabras como mínimo) y tienen 3 días de margen como máximo. Fuera las palabras genéricas (procesión, horario, itinerario, nombres de capital…). Con las noticias de hoy: 2.312 → 1.805, en 226 grupos.
