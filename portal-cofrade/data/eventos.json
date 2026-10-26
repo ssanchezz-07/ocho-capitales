@@ -79,13 +79,31 @@
    ]
   },
   {
+   "fecha": "2026-11-01",
+   "hora": "17:00",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Salida extraordinaria de la Santa Cena por su centenario fundacional",
+   "nota": "Desde la Catedral hasta su sede, Santa Cruz la Real; recorrido en «En la calle».",
+   "fuentes": [
+    {
+     "medio": "Granada es Noticia",
+     "url": "https://www.granadaesnoticia.com/provincia/la-santa-cena-recorrera-granada-en-una-salida-extraordinaria-por-su-centenario-fundacional"
+    }
+   ]
+  },
+  {
    "fecha": "2026-11-07",
-   "hora": "19:00",
+   "hora": "17:00",
    "ciudad": "malaga",
    "tipo": "extraordinaria",
    "titulo": "Procesión extraordinaria del Señor del Santo Traslado (Soledad de San Pablo)",
-   "nota": "75 aniversario de su bendición. Desde la parroquia de San Pablo, barrio de la Trinidad.",
+   "nota": "75 aniversario de su bendición. Desde la Casa Hermandad (calle Trinidad), barrio de la Trinidad; recorrido en «En la calle».",
    "fuentes": [
+    {
+     "medio": "Hermandad del Santo Traslado y Soledad de San Pablo (Instagram)",
+     "url": "https://www.instagram.com/soledaddesanpablo/"
+    },
     {
      "medio": "101TV",
      "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026"
@@ -125,6 +143,52 @@
     {
      "medio": "101TV",
      "url": "https://www.101tv.es/malaga-semana-santa/estas-son-todas-las-procesiones-extraordinarias-que-hay-en-malaga-en-otono-de-2026"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "19:30",
+   "ciudad": "almeria",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria del Señor de las Penas (Rosario del Mar)",
+   "nota": "25 aniversario de su bendición. Desde el Santuario de la Virgen del Mar. Itinerario aún sin publicar.",
+   "fuentes": [
+    {
+     "medio": "La Voz de Almería",
+     "url": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/641458/procesion-extraordinaria-celebrar-25-aniversario-penas-rosario-mar.html"
+    },
+    {
+     "medio": "CofradíasTV",
+     "url": "https://cofradiastv.com/senor-penas-rosario-mar-procesion-extraordinaria-2026"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Regreso procesional del Señor de la Salud y Buen Viaje desde la Catedral (San Esteban)",
+   "nota": "Centenario de la hermandad. Traslado a la Catedral el 21 de noviembre por la tarde; el 22, misa de Cristo Rey (11:00) y regreso por la tarde. Horario e itinerario sin publicar.",
+   "fuentes": [
+    {
+     "medio": "101TV",
+     "url": "https://www.101tv.es/sevilla-semana-santa/estas-son-las-salidas-extraordinarias-que-se-celebraran-en-sevilla-en-lo-que-resta-de-2026/"
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "09:00",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Traslados de regreso de las imágenes de la exposición «Kerygma» a sus templos",
+   "nota": "Desde la Catedral. Fecha pendiente de la autorización de la Junta Electoral (alternativa: 5 de diciembre); recorridos sin publicar.",
+   "fuentes": [
+    {
+     "medio": "Gente de Paz",
+     "url": "https://www.gentedepaz.es/granada-fija-el-28-de-noviembre-a-la-9-de-la-manana-los-traslados-de-las-imagenes-que-participan-en-la-exposicion-kerygma"
     }
    ]
   }

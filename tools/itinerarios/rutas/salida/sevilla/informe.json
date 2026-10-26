@@ -1,0 +1,387 @@
+{
+ "amparo-sevilla-2026-11-08": {
+  "id": "amparo-sevilla-2026-11-08",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.101tv.es/sevilla-semana-santa/horarios-recorridos-y-bandas-de-la-procesion-de-la-virgen-del-amparo-de-la-magdalena-con-motivo-de-su-coronacion-canonica",
+  "avisos": [],
+  "correcciones": {
+   "calles": {},
+   "salida": {
+    "lat": 37.3901714,
+    "lon": -5.9986394,
+    "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+   },
+   "entrada": {
+    "lat": 37.3901714,
+    "lon": -5.9986394,
+    "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26",
+     "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m",
+     "cambios": "salida y entrada en Cristo del Calvario, junto al templo (antes, el centro del edificio)"
+    }
+   ],
+   "actualizado": "2026-10-26"
+  },
+  "salida": {
+   "punto": [
+    37.3901714,
+    -5.9986394
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+  },
+  "entrada": {
+   "punto": [
+    37.3901714,
+    -5.9986394
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Cristo del Calvario",
+    "tipo": "calle",
+    "osm": "Calle Cristo del Calvario",
+    "vias": [
+     19124191
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "San Pablo",
+    "tipo": "calle",
+    "osm": "Calle San Pablo",
+    "vias": [
+     331354687,
+     331354689,
+     331354690,
+     401767811,
+     1326415405
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Plaza de la Magdalena",
+    "tipo": "calle",
+    "osm": "Plaza de la Magdalena",
+    "vias": [
+     37246856,
+     37246858,
+     976693852,
+     976693854
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Rioja",
+    "tipo": "calle",
+    "osm": "Calle Rioja",
+    "vias": [
+     37246857
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Tetuán",
+    "tipo": "calle",
+    "osm": "Calle Tetuán",
+    "vias": [
+     22743764
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     761673866
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza de San Francisco",
+    "tipo": "calle",
+    "osm": "Plaza de San Francisco",
+    "vias": [
+     331354695,
+     460349351,
+     760265071,
+     761678377,
+     1374515334
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Granada",
+    "tipo": "calle",
+    "osm": "Calle Granada",
+    "vias": [
+     761673866
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Tetuán",
+    "tipo": "calle",
+    "osm": "Calle Tetuán",
+    "vias": [
+     22743764
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Albareda",
+    "tipo": "calle",
+    "osm": "Calle Albareda",
+    "vias": [
+     18979106,
+     56767128
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Carlos Cañal",
+    "tipo": "calle",
+    "osm": "Calle Carlos Cañal",
+    "vias": [
+     18978227,
+     331354675,
+     331354676
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Zaragoza",
+    "tipo": "calle",
+    "osm": "Calle Zaragoza",
+    "vias": [
+     28117513,
+     331354693,
+     379377383
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Gravina",
+    "tipo": "calle",
+    "osm": "Calle Gravina",
+    "vias": [
+     37375825,
+     367123478,
+     367123479,
+     367123480,
+     367123481
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Alfonso XII",
+    "tipo": "calle",
+    "osm": "Calle Alfonso XII",
+    "vias": [
+     19095795,
+     331354673,
+     332019191
+    ],
+    "candidatas": 4,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "El Silencio",
+    "tipo": "calle",
+    "osm": "Calle de \"El Silencio\"",
+    "vias": [
+     19095805,
+     37375822
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Monsalves",
+    "tipo": "calle",
+    "osm": "Calle Monsalves",
+    "vias": [
+     19095806,
+     331354684
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Plaza del Museo",
+    "tipo": "calle",
+    "osm": "Plaza del Museo",
+    "vias": [
+     26707232,
+     28081502
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Miguel de Carvajal",
+    "tipo": "calle",
+    "osm": "Calle Miguel de Carvajal",
+    "vias": [
+     26707226
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Bailén",
+    "tipo": "calle",
+    "osm": "Calle Bailén",
+    "vias": [
+     18979795,
+     19124166,
+     37376927,
+     67661825,
+     239209576,
+     286090200
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Pedro del Toro",
+    "tipo": "calle",
+    "osm": "Calle Pedro del Toro",
+    "vias": [
+     19124185
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Gravina",
+    "tipo": "calle",
+    "osm": "Calle Gravina",
+    "vias": [
+     37375825,
+     367123478,
+     367123479,
+     367123480,
+     367123481
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "San Pedro Mártir",
+    "tipo": "calle",
+    "osm": "Calle San Pedro Mártir",
+    "vias": [
+     19124173,
+     28081223
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Rafael G. Abreu",
+    "tipo": "calle",
+    "osm": "Calle Rafael González Abreu",
+    "vias": [
+     19124176
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Canalejas",
+    "tipo": "calle",
+    "osm": "Calle Canalejas",
+    "vias": [
+     239209577,
+     239209578,
+     380824802
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Cristo del Calvario",
+    "tipo": "calle",
+    "osm": "Calle Cristo del Calvario",
+    "vias": [
+     19124191
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "ms_graphhopper": 166,
+  "largo_m": 2908,
+  "ms_total": 373
+ }
+}

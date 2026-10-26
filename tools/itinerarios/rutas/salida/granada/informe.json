@@ -1,0 +1,427 @@
+{
+ "santa-cena-granada-2026-11-01": {
+  "id": "santa-cena-granada-2026-11-01",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.granadaesnoticia.com/provincia/la-santa-cena-recorrera-granada-en-una-salida-extraordinaria-por-su-centenario-fundacional",
+  "avisos": [
+   "«Plaza de las Pasiegas» sin equivalente en OSM: no se traza (no se inventa)",
+   "hueco de 60 m entre «Marqués de Gerona» y «Paz»: en OSM no se tocan"
+  ],
+  "correcciones": {
+   "calles": {},
+   "salida": {
+    "lat": 37.17660078817204,
+    "lon": -3.599113725806451,
+    "fuente": "OpenStreetMap way 124069145 («Catedral»)"
+   }
+  },
+  "salida": {
+   "punto": [
+    37.17660078817204,
+    -3.599113725806451
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "OpenStreetMap way 124069145 («Catedral»)"
+  },
+  "entrada": {
+   "punto": [
+    37.1731069,
+    -3.5947723
+   ],
+   "como": "templo en OSM: Iglesia de Santo Domingo → puerta OSM 13930508990 (yes) del edificio, la más cercana a la calle por la que sale/entra",
+   "fuente": "OpenStreetMap way 155265056",
+   "dir": null
+  },
+  "calles": [
+   {
+    "i": 2,
+    "lugar": "Marqués de Gerona",
+    "tipo": "calle",
+    "osm": "Calle Marqués de Gerona",
+    "vias": [
+     30155491,
+     124067307
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Paz",
+    "tipo": "calle",
+    "osm": "Calle Paz",
+    "vias": [
+     117383606,
+     850740821
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 60,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Puentezuelas",
+    "tipo": "calle",
+    "osm": "Calle Puentezuelas",
+    "vias": [
+     124052625
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Recogidas",
+    "tipo": "calle",
+    "osm": "Calle Recogidas",
+    "vias": [
+     24379187,
+     27680105,
+     161424714,
+     370072097,
+     370072145,
+     376306174,
+     376306181,
+     629865687,
+     629865693,
+     850391940,
+     852348513,
+     852348514,
+     853201340,
+     1110881020,
+     1526393030
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Puerta Real de España",
+    "tipo": "calle",
+    "osm": "Calle Puerta Real de España",
+    "vias": [
+     6065718,
+     24379213,
+     130416692,
+     130416694,
+     161424708,
+     161424709
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Reyes Católicos",
+    "tipo": "calle",
+    "osm": "Calle Reyes Católicos",
+    "vias": [
+     158054244,
+     161424711,
+     376306183,
+     472086220,
+     472086221,
+     472086223
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 1,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Plaza del Carmen",
+    "tipo": "calle",
+    "osm": "Calle Escudo del Carmen",
+    "vias": [
+     42781708,
+     42781715,
+     42781717,
+     106407130,
+     877409268,
+     156932696,
+     106407134,
+     624265057
+    ],
+    "candidatas": 16,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Reyes Católicos",
+    "tipo": "calle",
+    "osm": "Calle Reyes Católicos",
+    "vias": [
+     158054244,
+     161424711,
+     376306183,
+     472086220,
+     472086221,
+     472086223
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Plaza Isabel la Católica",
+    "tipo": "calle",
+    "osm": "Plaza de Isabel la Católica",
+    "vias": [
+     6066195,
+     157520952,
+     589472310,
+     757056279,
+     883105512,
+     883105513
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Pavaneras",
+    "tipo": "calle",
+    "osm": "Calle Pavaneras",
+    "vias": [
+     6065716,
+     157287589,
+     516904978
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Santa Escolástica",
+    "tipo": "calle",
+    "osm": "Calle Cementerio de Santa Escolástica",
+    "vias": [
+     6067232,
+     157287599,
+     157287586,
+     160107396,
+     912767452,
+     912767453
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 18,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Plaza Fortuny",
+    "tipo": "calle",
+    "osm": "Plaza de Fortuny",
+    "vias": [
+     513660221,
+     585064042,
+     826055814
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Plaza del Realejo",
+    "tipo": "calle",
+    "osm": "Plaza del Realejo",
+    "vias": [
+     43686791,
+     513660222,
+     585064047,
+     45728332,
+     118176103,
+     138470528,
+     157375139,
+     157375140,
+     180020118,
+     702695279,
+     702695280,
+     746632102,
+     157287590,
+     157287601,
+     513660219,
+     746632101,
+     746632103,
+     746632104
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Santiago",
+    "tipo": "calle",
+    "osm": "Calle Santiago",
+    "vias": [
+     118183619,
+     118183645,
+     157294169,
+     513660224,
+     806664229,
+     884077048,
+     884077049,
+     118183627
+    ],
+    "candidatas": 7,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Jarrería",
+    "tipo": "calle",
+    "osm": "Calle Jarrería",
+    "vias": [
+     118183624
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Molinos",
+    "tipo": "calle",
+    "osm": "Calle Molinos",
+    "vias": [
+     45728323,
+     118170992
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Huete",
+    "tipo": "calle",
+    "osm": "Calle Huete",
+    "vias": [
+     45728329
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Campo del Príncipe",
+    "tipo": "calle",
+    "osm": "Plaza Campo del Príncipe",
+    "vias": [
+     43687688,
+     118176092,
+     118183634,
+     118183644,
+     161955943,
+     161955944,
+     161955945,
+     161955946,
+     869031074
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "Molinos",
+    "tipo": "calle",
+    "osm": "Calle Molinos",
+    "vias": [
+     45728323,
+     118170992
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 25,
+    "forzado": false
+   },
+   {
+    "i": 23,
+    "lugar": "Plaza del Realejo",
+    "tipo": "calle",
+    "osm": "Plaza del Realejo",
+    "vias": [
+     43686791,
+     513660222,
+     585064047,
+     45728332,
+     118176103,
+     138470528,
+     157375139,
+     157375140,
+     180020118,
+     702695279,
+     702695280,
+     746632102,
+     157287590,
+     157287601,
+     513660219,
+     746632101,
+     746632103,
+     746632104
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Carnicería",
+    "tipo": "calle",
+    "osm": "Calle Carnicería",
+    "vias": [
+     118183618
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 7,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Plaza de Santo Domingo",
+    "tipo": "calle",
+    "osm": "Plaza de Santo Domingo",
+    "vias": [
+     155265058,
+     155265062,
+     316344356,
+     505920194,
+     530891284,
+     118183626,
+     118183635,
+     155265060,
+     872209836,
+     872209837,
+     872209838,
+     161464127
+    ],
+    "candidatas": 5,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "7 m entre «Puentezuelas» y «Recogidas»",
+   "5 m entre «Reyes Católicos» y «Plaza del Carmen»",
+   "5 m entre «Plaza del Carmen» y «Reyes Católicos»",
+   "18 m entre «Pavaneras» y «Santa Escolástica»",
+   "25 m entre «Campo del Príncipe» y «Molinos»",
+   "7 m entre «Plaza del Realejo» y «Carnicería»"
+  ],
+  "ms_graphhopper": 216,
+  "largo_m": 2633,
+  "ms_total": 413
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "amparo-sevilla-2026-11-08": {
+  "salida": {
+   "lat": 37.3901714,
+   "lon": -5.9986394,
+   "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+  },
+  "entrada": {
+   "lat": 37.3901714,
+   "lon": -5.9986394,
+   "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m"
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26",
+    "fuente": "101TV Sevilla (19-oct-2026): sale de «la puerta principal de la parroquia de la Magdalena» y el recorrido empieza y acaba en «Cristo del Calvario»; la puerta no está en OpenStreetMap: punto de Calle Cristo del Calvario más cercano al templo (OSM way 116689837), a 5 m",
+    "cambios": "salida y entrada en Cristo del Calvario, junto al templo (antes, el centro del edificio)"
+   }
+  ],
+  "actualizado": "2026-10-26"
+ }
+}

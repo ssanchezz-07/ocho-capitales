@@ -217,6 +217,209 @@
      }
     ]
    }
+  },
+  "amparo-sevilla-2026-11-08": {
+   "hermandad": "amparo-sevilla",
+   "nombre_hermandad": "Real, Venerable e Ilustre Hermandad de Nuestra Señora del Amparo (parroquia de Santa María Magdalena)",
+   "ciudad": "sevilla",
+   "fecha": "2026-11-08",
+   "tipo": "coronación",
+   "corto": "Amparo",
+   "titulo": "Procesión de alabanzas por la coronación canónica de la Virgen del Amparo",
+   "acto": "Recepción de la Corporación Municipal en el Ayuntamiento (plaza de San Francisco)",
+   "fuente": "101TV Sevilla (19-oct-2026): «La salida está prevista a las 17.00 horas» desde «la puerta principal de la parroquia de la Magdalena»; recorrido «Cristo del Calvario, San Pablo, la plaza de la Magdalena, Rioja, Tetuán, Granada, la plaza de San Francisco … Granada, Tetuán, Albareda, Carlos Cañal, Zaragoza, Gravina, Alfonso XII, El Silencio, Monsalves, la plaza del Museo … Miguel de Carvajal, Bailén, Pedro del Toro, Gravina, San Pedro Mártir, Rafael G. Abreu, Canalejas y Cristo del Calvario», «para regresar a su templo a las 22.45 horas». Coincide con Viva Sevilla (6-oct-2026).",
+   "fuente_url": "https://www.101tv.es/sevilla-semana-santa/horarios-recorridos-y-bandas-de-la-procesion-de-la-virgen-del-amparo-de-la-magdalena-con-motivo-de-su-coronacion-canonica",
+   "_nota": "Fuente de prensa, no de la hermandad (su web no lo publica). Un solo tramo: la fuente no separa ida y regreso. La hermandad no tiene ficha en el portal (es de gloria).",
+   "tramos": {
+    "ida": [
+     {
+      "lugar": "Parroquia de Santa María Magdalena",
+      "hora": "17:00",
+      "templo": "Magdalena"
+     },
+     {
+      "lugar": "Cristo del Calvario"
+     },
+     {
+      "lugar": "San Pablo"
+     },
+     {
+      "lugar": "Plaza de la Magdalena"
+     },
+     {
+      "lugar": "Rioja"
+     },
+     {
+      "lugar": "Tetuán"
+     },
+     {
+      "lugar": "Granada"
+     },
+     {
+      "lugar": "Plaza de San Francisco"
+     },
+     {
+      "lugar": "Granada"
+     },
+     {
+      "lugar": "Tetuán"
+     },
+     {
+      "lugar": "Albareda"
+     },
+     {
+      "lugar": "Carlos Cañal"
+     },
+     {
+      "lugar": "Zaragoza"
+     },
+     {
+      "lugar": "Gravina"
+     },
+     {
+      "lugar": "Alfonso XII"
+     },
+     {
+      "lugar": "El Silencio"
+     },
+     {
+      "lugar": "Monsalves"
+     },
+     {
+      "lugar": "Plaza del Museo"
+     },
+     {
+      "lugar": "Miguel de Carvajal"
+     },
+     {
+      "lugar": "Bailén"
+     },
+     {
+      "lugar": "Pedro del Toro"
+     },
+     {
+      "lugar": "Gravina"
+     },
+     {
+      "lugar": "San Pedro Mártir"
+     },
+     {
+      "lugar": "Rafael G. Abreu"
+     },
+     {
+      "lugar": "Canalejas"
+     },
+     {
+      "lugar": "Cristo del Calvario"
+     },
+     {
+      "lugar": "Parroquia de Santa María Magdalena",
+      "hora": "22:45",
+      "templo": "Magdalena"
+     }
+    ]
+   }
+  },
+  "santa-cena-granada-2026-11-01": {
+   "hermandad": "santa-cena-granada",
+   "ciudad": "granada",
+   "fecha": "2026-11-01",
+   "tipo": "extraordinaria",
+   "corto": "Santa Cena",
+   "titulo": "Salida extraordinaria por el centenario fundacional de la Santa Cena",
+   "acto": "Ante el monumento pétreo al Señor de los Favores (Campo del Príncipe)",
+   "fuente": "Granada es Noticia (26-oct-2026): «Salida: 17:00 horas», Santa Iglesia Catedral de Granada. Recorrido completo: «Santa Iglesia Catedral, Plaza de las Pasiegas, calle Marqués de Gerona, calle Paz, calle Puentezuelas, calle Recogidas, Puerta Real de España, calle Reyes Católicos, Plaza del Carmen (Ayuntamiento), calle Reyes Católicos, Plaza Isabel la Católica, calle Pavaneras, calle Santa Escolástica, Plaza Fortuny, Plaza del Realejo, calle Santiago, calle Jarrería, calle Molinos, calle Huete, Campo del Príncipe (monumento pétreo al Señor de los Favores), Campo del Príncipe, Misericordia Coronada, calle Molinos, Plaza del Realejo, calle Carnicería, Plaza de Santo Domingo e iglesia de Santa Cruz la Real».",
+   "fuente_url": "https://www.granadaesnoticia.com/provincia/la-santa-cena-recorrera-granada-en-una-salida-extraordinaria-por-su-centenario-fundacional",
+   "_nota": "Solo hay hora de salida. «Misericordia Coronada» va como hito (no es una calle de OSM). Sale de la Catedral y se recoge en su sede, Santa Cruz la Real.",
+   "tramos": {
+    "ida": [
+     {
+      "lugar": "Santa Iglesia Catedral",
+      "hora": "17:00",
+      "templo": "Catedral"
+     },
+     {
+      "lugar": "Plaza de las Pasiegas"
+     },
+     {
+      "lugar": "Marqués de Gerona"
+     },
+     {
+      "lugar": "Paz"
+     },
+     {
+      "lugar": "Puentezuelas"
+     },
+     {
+      "lugar": "Recogidas"
+     },
+     {
+      "lugar": "Puerta Real de España"
+     },
+     {
+      "lugar": "Reyes Católicos"
+     },
+     {
+      "lugar": "Plaza del Carmen"
+     },
+     {
+      "lugar": "Reyes Católicos"
+     },
+     {
+      "lugar": "Plaza Isabel la Católica"
+     },
+     {
+      "lugar": "Pavaneras"
+     },
+     {
+      "lugar": "Santa Escolástica"
+     },
+     {
+      "lugar": "Plaza Fortuny"
+     },
+     {
+      "lugar": "Plaza del Realejo"
+     },
+     {
+      "lugar": "Santiago"
+     },
+     {
+      "lugar": "Jarrería"
+     },
+     {
+      "lugar": "Molinos"
+     },
+     {
+      "lugar": "Huete"
+     },
+     {
+      "lugar": "Campo del Príncipe"
+     },
+     {
+      "lugar": "Campo del Príncipe"
+     },
+     {
+      "lugar": "Misericordia Coronada",
+      "hito": true
+     },
+     {
+      "lugar": "Molinos"
+     },
+     {
+      "lugar": "Plaza del Realejo"
+     },
+     {
+      "lugar": "Carnicería"
+     },
+     {
+      "lugar": "Plaza de Santo Domingo"
+     },
+     {
+      "lugar": "Iglesia de Santa Cruz la Real",
+      "templo": "Santa Cruz la Real"
+     }
+    ]
+   }
   }
  }
 }

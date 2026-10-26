@@ -7,7 +7,7 @@
 // Uso: node extraordinarias.mjs <capital> [id …]
 import fs from 'node:fs';
 import path from 'node:path';
-import { ciudad, ITI, RAIZ, fPublicado, sn, TEMPLO } from './comun.mjs';
+import { ciudad, ITI, RAIZ, fPublicado, sn, TEMPLO, d2 } from './comun.mjs';
 import { motor, guardarTraza } from './emparejar.mjs';
 import { aPuntos } from './publicar.mjs';
 
@@ -26,16 +26,18 @@ for (const id of ids) {
   let regreso_desde;
   for (const [nom, tr] of Object.entries(e.tramos)) {
     if (nom === 'regreso') regreso_desde = calles.length;
-    for (const p of tr) { if (p.hora) horas[calles.length] = p.hora; calles.push(p.lugar); }
+    for (const p of tr) { if (p.hora) horas[calles.length] = p.hora; if (p.hito) hitos.push(calles.length); calles.push(p.lugar); } // «hito»: un acto o un punto de la fuente que no es una calle
   }
-  C.LISTAS[id] = { calles, horas, hitos: new Set(hitos), fuente: e.fuente_url || e.fuente, ...(regreso_desde != null ? { regreso_desde } : {}) };
   // correcciones automáticas: sede de casa hermandad (las de la hermandad) y templos intermedios (el del acto) situados en su
   // edificio; las de correcciones-<capital>.json mandan
   const auto = { calles: {} };
   const sedeH = (t) => C.sedeDe(e.hermandad, t);
+  const pts0 = Object.values(e.tramos).flat();
+  for (const [k, i] of [['salida', 0], ['entrada', calles.length - 1]]) { const p = i ? pts0.at(-1) : pts0[0]; if (p.templo && !auto[k] && !TEMPLO.test(sn(calles[i]))) { if (!hitos.includes(i)) hitos.push(i); const s = C.sedeDe(id, p.templo); if (s?.edificio) { const pu = C.PUERTAS.filter((d) => d.tags.entrance === 'main' && d2(d.xy, C.X(...s.punto)) < 80).sort((a, b) => d2(a.xy, C.X(...s.punto)) - d2(b.xy, C.X(...s.punto)))[0]; auto[k] = { lat: (pu || { lat: s.punto[0] }).lat, lon: (pu || { lon: s.punto[1] }).lon, fuente: `${s.fuente}${pu ? ', puerta ' + pu.id : ''} («${p.templo}»)` }; } } }
   if (sn(calles[0]).startsWith('casa hermandad')) { const s = sedeH(calles[0]); if (s) auto.salida = { lat: s.punto[0], lon: s.punto[1], fuente: `${s.fuente} (${s.como})` }; }
   if (sn(calles.at(-1)).startsWith('casa hermandad')) { const s = sedeH(calles.at(-1)); if (s) auto.entrada = { lat: s.punto[0], lon: s.punto[1], fuente: `${s.fuente} (${s.como})` }; }
   calles.forEach((t, i) => { if (i > 0 && i < calles.length - 1 && esSede(t)) { const tp = e.tramos.ida.concat(e.tramos.regreso || []).find((p) => p.lugar === t && p.templo)?.templo; const s = C.sedeDe(id, tp || t); if (s) auto.calles[i] = { punto: s.punto, fuente: s.fuente }; } });
+  C.LISTAS[id] = { calles, horas, hitos: new Set(hitos), fuente: e.fuente_url || e.fuente, ...(regreso_desde != null ? { regreso_desde } : {}) };
   const fc = C.leerCorrecciones()[id] || {};
   const corr = { ...auto, ...fc, calles: { ...auto.calles, ...(fc.calles || {}) } };
   const r = await trazar(id, { corr });
