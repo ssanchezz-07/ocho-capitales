@@ -4,10 +4,11 @@
   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
   "dir": "Plaza Mahatma Gandhi s/n, Córdoba",
   "punto": [
-   37.898876,
-   -4.761295
+   37.899197,
+   -4.761388
   ],
-  "fuente_punto": "Dirección: Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26) (la puerta da a la Plaza Mahatma Gandhi). Punto: centro de la plaza en OpenStreetMap (way/96693630); el edificio no está en OSM con ese nombre"
+  "fuente_punto": "Edificio de OpenStreetMap way/96693634, junto a la Plaza Mahatma Gandhi. En OSM figura como «Parroquia de la Asunción», pero es la Parroquia de la Aurora: lo confirmó Pablo Sánchez, en el chat de la sesión «Rutas · Córdoba» (2026-10-26). Hay que corregir el nombre en OSM",
+  "osm": "W96693634"
  },
  "lagrimas-cordoba": {
   "templo": "Parroquia de la Asunción de Nuestra Señora",

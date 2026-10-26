@@ -9,10 +9,10 @@
    "recorridas": 16,
    "en_orden": 16,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
+   "salida_m": 18,
+   "entrada_m": 18,
+   "sede_salida": "templo en OSM: Parroquia de la Asunción",
+   "sede_entrada": "templo en OSM: Parroquia de la Asunción",
    "rectas_150": [],
    "tramo_max_m": 162,
    "retrocesos": 3,
@@ -33,7 +33,7 @@
    "pct_en_calles_lista": 83
   },
   "nuevo": {
-   "largo_m": 3991,
+   "largo_m": 3855,
    "comprobables": 16,
    "sin_dato": [
     "C/ VEREDA DE LA ALCAIDÍA"
@@ -41,10 +41,10 @@
    "recorridas": 16,
    "en_orden": 16,
    "no_recorridas": [],
-   "salida_m": 2,
-   "entrada_m": 2,
-   "sede_salida": "punto fijado (alias)",
-   "sede_entrada": "punto fijado (alias)",
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Parroquia de la Asunción",
+   "sede_entrada": "templo en OSM: Parroquia de la Asunción",
    "rectas_150": [],
    "tramo_max_m": 162,
    "retrocesos": 3,
@@ -2364,12 +2364,10 @@
  "el-resucitado-cordoba": {
   "publicado": {
    "largo_m": 3944,
-   "comprobables": 19,
-   "sin_dato": [
-    "PLAZA RUIZ DE ALDA"
-   ],
-   "recorridas": 19,
-   "en_orden": 19,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 20,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -2384,16 +2382,14 @@
      -4.776662
     ]
    ],
-   "pct_en_calles_lista": 74
+   "pct_en_calles_lista": 81
   },
   "nuevo": {
-   "largo_m": 3944,
-   "comprobables": 19,
-   "sin_dato": [
-    "PLAZA RUIZ DE ALDA"
-   ],
-   "recorridas": 19,
-   "en_orden": 19,
+   "largo_m": 3888,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 20,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -2401,19 +2397,14 @@
    "sede_entrada": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
    "rectas_150": [],
    "tramo_max_m": 151,
-   "retrocesos": 1,
-   "donde_retrocesos": [
-    [
-     37.889177,
-     -4.776662
-    ]
-   ],
-   "pct_en_calles_lista": 74
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 81
   },
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "empate"
+    "retrocesos 1→0"
    ]
   }
  }

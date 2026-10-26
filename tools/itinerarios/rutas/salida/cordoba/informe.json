@@ -11,20 +11,20 @@
   "correcciones": null,
   "salida": {
    "punto": [
-    37.898876,
-    -4.761295
+    37.89919738571428,
+    -4.761388457142857
    ],
-   "como": "punto fijado (alias)",
-   "fuente": "alias-calles-cordoba.json",
+   "como": "templo en OSM: Parroquia de la Asunción",
+   "fuente": "OpenStreetMap way 96693634",
    "dir": null
   },
   "entrada": {
    "punto": [
-    37.898876,
-    -4.761295
+    37.89919738571428,
+    -4.761388457142857
    ],
-   "como": "punto fijado (alias)",
-   "fuente": "alias-calles-cordoba.json",
+   "como": "templo en OSM: Parroquia de la Asunción",
+   "fuente": "OpenStreetMap way 96693634",
    "dir": null
   },
   "calles": [
@@ -349,9 +349,9 @@
    "10 m entre «PZA. MAHATMA GANDHI» y «AV. BLAS INFANTE»",
    "10 m entre «AV. VIRGEN DE FÁTIMA» y «PZA. MAHATMA GANDHI»"
   ],
-  "ms_graphhopper": 465,
-  "largo_m": 3991,
-  "ms_total": 559
+  "ms_graphhopper": 119,
+  "largo_m": 3855,
+  "ms_total": 219
  },
  "lagrimas-cordoba": {
   "id": "lagrimas-cordoba",
@@ -16424,8 +16424,6 @@
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.hermandadesdecordoba.es/itinerario-2026/",
   "avisos": [
-   "«PLAZA RUIZ DE ALDA» sin equivalente en OSM: no se traza (no se inventa)",
-   "hueco de 153 m entre «PASAJE DE LA ESTRELLA» y «ALFAROS»: en OSM no se tocan",
    "hueco de 246 m entre «RONDA DE ISASA» y «PUERTA DE LAS COFRADÍAS»: en OSM no se tocan",
    "hueco de 40 m entre «PUERTA DE LAS COFRADÍAS» y «JUDERÍA»: en OSM no se tocan",
    "hueco de 48 m entre «CONDE Y LUQUE» y «BLANCO BELMONTE»: en OSM no se tocan",
@@ -16483,6 +16481,21 @@
     "forzado": false
    },
    {
+    "i": 3,
+    "lugar": "PLAZA RUIZ DE ALDA",
+    "tipo": "calle",
+    "osm": "Calle Puerta del Rincón",
+    "vias": [
+     86495624,
+     100182254,
+     563409245,
+     922859320
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 27,
+    "forzado": false
+   },
+   {
     "i": 4,
     "lugar": "ALFAROS",
     "tipo": "calle",
@@ -16493,7 +16506,7 @@
      459447209
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 153,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -16722,9 +16735,12 @@
     "forzado": false
    }
   ],
+  "enlaces": [
+   "27 m entre «PASAJE DE LA ESTRELLA» y «PLAZA RUIZ DE ALDA»"
+  ],
   "por_la_catedral": "de la puerta del Perdón al Patio de los Naranjos y salida por la misma puerta (nodos 11613100948 y 11613100948): sin calle, línea por dentro",
-  "ms_graphhopper": 61,
-  "largo_m": 3944,
-  "ms_total": 127
+  "ms_graphhopper": 69,
+  "largo_m": 3888,
+  "ms_total": 138
  }
 }
