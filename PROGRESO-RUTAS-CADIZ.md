@@ -87,3 +87,12 @@ Ninguna hermandad se queda sin lista completa. Estas tienen algo que conviene mi
 ## Falta
 - **Direcciones postales** de la mayoría de templos: GCatholic y la diócesis no las dan en abierto; Nominatim solo da la calle más cercana, y no la uso como dirección. Cada sede va con su edificio de OSM y su fuente; la dirección solo donde una fuente la da (Santiago, Catedral, Salesianos, Castrense).
 - **Puertas OSM** de casi todos los templos de Cádiz: no están mapeadas. El trazado tendrá que usar el edificio y la primera o la última calle.
+
+## Sedes con coordenadas (para el plano fuera de temporada) · 2026-10-27
+- **Subidas** (`3cbb437..f0148fe`), formato común `site/data/sedes/<capital>.json` con `node tools/itinerarios/rutas/sedes.mjs <capital>`:
+  - **Cádiz: 33 de 33 templos.** 26 por la ficha del portal y su edificio de OSM; 7 en `rutas/sedes-cadiz-correcciones.json` con la «Sede Canónica» del programa de Canal Sur 2026. Las de Santa Cruz, en su sede canónica.
+  - **Huelva: 15 de 28.** Los 13 que faltan no están en OSM: Sagrado Corazón (Cena, Tres Caídas, Victoria), Cristo Sacerdote, San Sebastián (Mutilados, Estudiantes), capillas del Cautivo, Calvario, Esperanza y Prado, Iglesia del Cristo de la Misericordia, Parroquia de los Dolores y Santa María Madre de la Iglesia. Para situarlos haría falta su dirección con fuente (web de la hermandad o diócesis) y aceptar un punto en la calle en vez del edificio de OSM.
+  - **Almería: 22 de 23.** Falta San Antonio (Ciudad Jardín): dos «San Antonio de Padua» en OSM, sin fuente que diga cuál.
+  - **Casas hermandad: ninguna** en las tres. Las fichas del Consejo de Cádiz no dan dirección; queda pendiente buscarla en la web de cada hermandad.
+- Revisión al azar del 10 %: 7 de 7 correctas (ficha y edificio). Portada con Playwright a 390 y 1440 px: 33, 15 y 22 símbolos de sede, sin desbordamiento ni errores.
+- Caché: `cache/templos-huelva.json` y `cache/templos-almeria.json` (Overpass del 27-oct).
