@@ -468,7 +468,8 @@
     function alturaCiudad() { var cab = $('.oc-header'), tab = $('.oc-tabbar'); return Math.round(Math.min(880, Math.max(560, innerHeight - (cab ? cab.offsetHeight : 0) - (tab && tab.offsetParent ? tab.offsetHeight : 0)))); }
     function ponerAltura(h, animar) { var desde = portada.offsetHeight; portada.style.height = desde + 'px'; if (animar && !calm) void portada.offsetHeight; portada.style.height = h + 'px'; }
     window.addEventListener('resize', function () { if (actual) portada.style.height = alturaCiudad() + 'px'; });
-    function margenes() { var p = pieEl.getBoundingClientRect().height; return { arriba: 64, abajo: Math.round(p) + 12, izq: 20, der: 20 }; }
+    // la parte del plano que se ve: entre la cabecera de la portada y el pie, sin la columna de los controles
+    function margenes() { var p = pieEl.getBoundingClientRect().height; portada.style.setProperty('--pie', Math.round(p) + 'px'); return { arriba: 58, abajo: Math.round(p) + 16, izq: 16, der: 64 }; }
     // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial
     function moverAnd(destino, ms) {
       if (!svg) return; cancelAnimationFrame(animAnd);
@@ -495,7 +496,8 @@
       portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
       var n = (D.sedes || []).length, ex = vigentes(), dEx = {}; ex.forEach(function (h) { dEx[h.d] = 1; });
       resEl.textContent = n ? (n === 1 ? '1 hermandad en el plano' : n + ' hermandades en el plano') : 'Aún no hay sedes con ubicación comprobada';
-      notaEl.textContent = n ? 'Cada espadaña es un templo; cada fachada, una casa hermandad. Toca una para ver su hermandad.' : '';
+      // leyenda corta: qué es cada símbolo, qué es el color y qué es un número
+      notaEl.innerHTML = n ? '<span class="oc-ley"><svg viewBox="-12 -38 24 40" aria-hidden="true"><path class="oc-ley-t" d="M-10 0V-17Q-10 -25 0 -29Q10 -25 10 -17V0Z"/></svg>Templo</span><span class="oc-ley"><svg viewBox="-12 -26 24 28" aria-hidden="true"><path class="oc-ley-c" d="M-9 0V-14L0 -21L9 -14V0Z"/></svg>Casa hermandad</span><span class="oc-ley"><i class="oc-ley-n" aria-hidden="true">3</i>Varias juntas: toca para separarlas</span><span class="oc-ley is-txt">El color es el de su hábito.</span>' : '';
       if (extraB) { var k = Object.keys(dEx).length; extraN.textContent = k ? ' · ' + k : ''; extraB.disabled = !k; extraB.title = k ? '' : 'No hay salidas extraordinarias anunciadas en ' + datos.ciudades[actual].n; }
       if (proxA) proxA.href = TEMP.proxima + '#' + actual;
     }

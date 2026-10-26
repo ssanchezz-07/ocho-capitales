@@ -61,7 +61,7 @@
     el('path', { 'class': 'oc-pl-princ', d: pathDe(D.principales) }, mundo);
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
     if (A.edificios) { mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
-    var gR = el('g', {}, mundo), capa = el('g', {}, svg), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
+    var gR = el('g', {}, mundo), capa = el('g', {}, svg), gE = el('g', { 'class': 'oc-pl-etq', 'aria-hidden': 'true' }, capa), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
     var lim = [Infinity, Infinity, -Infinity, -Infinity];
     D.principales.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { lim[0] = Math.min(lim[0], l[i]); lim[1] = Math.min(lim[1], l[i + 1]); lim[2] = Math.max(lim[2], l[i]); lim[3] = Math.max(lim[3], l[i + 1]); } });
     var vb = { x: lim[0], y: lim[1], w: lim[2] - lim[0], h: lim[3] - lim[1] }, Z = 1, T = 0, hs = [], marcas = {}, anim = 0;
@@ -86,8 +86,9 @@
       base.classList.add('is-volando');
       (function paso(t) {
         var k = Math.min(1, (t - t0) / ms), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2, w = de.w * Math.pow(a.w / de.w, e);
-        vb.w = w; vb.x = de.cx + (a.cx - de.cx) * e - w / 2; vb.y = de.cy + (a.cy - de.cy) * e - w * H() / W() / 2; aplicar();
-        if (k < 1) anim = requestAnimationFrame(paso); else base.classList.remove('is-volando');
+        vb.w = w; vb.x = de.cx + (a.cx - de.cx) * e - w / 2; vb.y = de.cy + (a.cy - de.cy) * e - w * H() / W() / 2;
+        if (k >= 1) base.classList.remove('is-volando'); aplicar();
+        if (k < 1) anim = requestAnimationFrame(paso);
       })(t0);
     };
     api.encuadrar = function (ms, m) {
@@ -129,7 +130,8 @@
           el('rect', { 'class': 'oc-pl-sede-toque', x: '-22', y: '-40', width: '44', height: '46' }, g);
           if (templo) { el('path', { 'class': 'oc-pl-sede-cuerpo', d: ESPADANA, style: '--hc:' + c }, g); el('path', { 'class': 'oc-pl-sede-hueco', d: CAMPANA }, g); el('path', { 'class': 'oc-pl-sede-hilo', d: CRUZ }, g); }
           else { el('path', { 'class': 'oc-pl-sede-cuerpo', d: FACHADA, style: '--hc:' + c }, g); el('path', { 'class': 'oc-pl-sede-hilo', d: PUERTA + BALCON }, g); }
-          var cnt = el('g', { 'class': 'oc-pl-sede-n' }, g); el('circle', { cx: '11', cy: templo ? '-27' : '-19', r: '8' }, cnt); var tn = el('text', { x: '11', y: templo ? '-23.6' : '-15.6' }, cnt);
+          // agrupadas: un medallón de oro con el número de hermandades (al tocarlo, la cámara se acerca y se separan)
+          var cnt = el('g', { 'class': 'oc-pl-sede-n' }, g); el('circle', { cy: '-14', r: '14' }, cnt); var tn = el('text', { y: '-9.6' }, cnt);
           var nom = el('text', { 'class': 'oc-pl-sede-nom', y: '15' }, g); nom.textContent = h.n.length > 24 ? h.n.slice(0, 23).replace(/\s+\S*$/, '') + '…' : h.n;
           var s = { h: h, tipo: k[0], x: k[1][0], y: k[1][1], g: g, tn: tn, etq: etq, miembros: null };
           g.addEventListener('click', function () { tocar(s); });
@@ -156,11 +158,22 @@
       if (h && h.tp && h.cs) el('path', { 'class': 'oc-pl-hilo-sede', d: 'M' + h.tp[0] + ' ' + h.tp[1] + 'L' + h.cs[0] + ' ' + h.cs[1] }, gHilo);
     };
     api.verSedes = function (si) { gS.style.display = si ? '' : 'none'; gHilo.style.display = si ? '' : 'none'; };
-    api.encuadrarSedes = function (ms, m) { if (!simbolos.length) return; api.volar(api.caja(simbolos.map(function (s) { return s.x; }), simbolos.map(function (s) { return s.y; }), m), ms); };
+    // encuadre en la zona con más sedes: sin las más alejadas (una parroquia de las afueras dejaba media pantalla de mar o de campo)
+    api.encuadrarSedes = function (ms, m) {
+      // sin sedes todavía (capitales cuyo archivo de sedes está en camino): toda la ciudad del plano
+      if (!simbolos.length) { api.volar(api.caja([lim[0], lim[2]], [lim[1], lim[3]], m), ms); return; }
+      // fuera solo las muy apartadas del centro (más de 2,5 veces la distancia mediana y de 800 m): el resto entra entero
+      var med = function (v) { v = v.slice().sort(function (a, b) { return a - b; }); return v[Math.floor(v.length / 2)]; };
+      var cx = med(simbolos.map(function (s) { return s.x; })), cy = med(simbolos.map(function (s) { return s.y; }));
+      var ds = simbolos.map(function (s) { return Math.hypot(s.x - cx, s.y - cy); }), lim2 = Math.max(800, 2.5 * med(ds));
+      var dentro = simbolos.filter(function (s, i) { return ds[i] <= lim2; });
+      api.volar(api.caja(dentro.map(function (s) { return s.x; }), dentro.map(function (s) { return s.y; }), m), ms);
+    };
     api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, (lim[2] - lim[0]) * 1.6)), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
     function colocarSedes() {
       if (!simbolos.length) return;
-      var R = 30 * Z, grupos = [];
+      // más pequeños al alejar (hasta un 60 %), para que la ciudad entera no quede tapada
+      var f = Z <= 1.6 ? 1 : Math.max(0.6, 1 - (Z - 1.6) * 0.07), Zs = Z * f, R = 30 * Zs, grupos = [];
       simbolos.forEach(function (s) {
         var g = null; for (var i = 0; i < grupos.length; i++) if (Math.abs(grupos[i][0].x - s.x) < R && Math.abs(grupos[i][0].y - s.y) < R) { g = grupos[i]; break; }
         if (g) g.push(s); else grupos.push([s]);
@@ -168,14 +181,31 @@
       grupos.forEach(function (gr) {
         var r = gr[0], n = 0, v = {}, nombres = []; gr.forEach(function (q) { if (!v[q.h.s]) { v[q.h.s] = 1; n++; nombres.push(q.h.n); } });
         gr.forEach(function (q, i) { q.miembros = gr; q.g.style.visibility = i ? 'hidden' : ''; });
-        r.g.setAttribute('transform', 'translate(' + r.x.toFixed(1) + ' ' + r.y.toFixed(1) + ') scale(' + Z.toFixed(3) + ')');
+        r.g.setAttribute('transform', 'translate(' + r.x.toFixed(1) + ' ' + r.y.toFixed(1) + ') scale(' + Zs.toFixed(3) + ')');
         r.g.classList.toggle('is-grupo', n > 1); r.tn.textContent = n > 1 ? n : '';
         r.g.setAttribute('aria-label', n > 1 ? n + ' hermandades: ' + nombres.join(', ') : r.etq);
       });
       gS.classList.toggle('con-nombres', Z < 2.4);
     }
+    // nombres de las calles (del plano, OpenStreetMap): los que caben en su tramo a esta escala, sin pisarse; durante el vuelo, ninguno
+    var ETQ = (D.etiquetas || []).slice().sort(function (a, b) { return (b[5] || 0) - (a[5] || 0); }).slice(0, 240).map(function (e) { var t = el('text', { 'class': 'oc-pl-calle-n' + (e[4] ? ' is-princ' : ''), dy: '.35em' }, gE); t.textContent = e[3]; t.style.display = 'none'; return { e: e, t: t, w: e[3].length * 5.8 + 10 }; });
+    function colocarEtiquetas() {
+      if (!ETQ.length) return;
+      var volando = base.classList.contains('is-volando'), puestos = [], x0 = vb.x, y0 = vb.y, x1 = vb.x + vb.w, y1 = vb.y + vb.h;
+      gE.style.display = volando ? 'none' : ''; if (volando) return;
+      ETQ.forEach(function (q) {
+        var e = q.e, vis = Z < 7 && e[0] > x0 && e[0] < x1 && e[1] > y0 && e[1] < y1 && (e[5] || 0) / Z > q.w * 1.15;
+        if (vis) {
+          var a = e[2] * Math.PI / 180, hw = (q.w * Math.abs(Math.cos(a)) + 14 * Math.abs(Math.sin(a))) / 2 * Z, hh = (q.w * Math.abs(Math.sin(a)) + 14 * Math.abs(Math.cos(a))) / 2 * Z;
+          for (var i = 0; i < puestos.length; i++) { var p = puestos[i]; if (Math.abs(p[0] - e[0]) < p[2] + hw && Math.abs(p[1] - e[1]) < p[3] + hh) { vis = false; break; } }
+          if (vis) puestos.push([e[0], e[1], hw, hh]);
+        }
+        q.t.style.display = vis ? '' : 'none';
+        if (vis) q.t.setAttribute('transform', 'translate(' + e[0] + ' ' + e[1] + ') rotate(' + e[2] + ') scale(' + Z.toFixed(3) + ')');
+      });
+    }
     function colocar() {
-      colocarSedes();
+      colocarEtiquetas(); colocarSedes();
       var ms = [];
       hs.forEach(function (h) { var p = enTramo(ruta(h), T), g = marcas[h.s]; if (g && p) ms.push({ g: g, x: p.x, y: p.y }); });
       var R = 44 * Z; // si dos medallones se pisan en pantalla, se separan
@@ -218,6 +248,56 @@
     svg.addEventListener('pointerup', soltar); svg.addEventListener('pointercancel', soltar);
     // un arrastre no abre el medallón que quedó debajo al soltar
     svg.addEventListener('click', function (e) { if (performance.now() - finArr < 250) { e.preventDefault(); e.stopPropagation(); } }, true);
+    // ---- Gestos en el móvil: un dedo sigue bajando por la página; dos dedos mueven y amplían el plano; doble toque acerca ----
+    var maxW = function () { return (lim[2] - lim[0]) * 1.6; }, wLim = function (w) { return Math.max(250, Math.min(maxW(), w)); };
+    // amplía (f < 1) o aleja alrededor de un punto de la pantalla (px, py, relativos al plano)
+    function zoomEn(f, px, py, ms) {
+      var w = wLim(vb.w * f), wx = vb.x + px * Z, wy = vb.y + py * Z, k = w / vb.w;
+      api.volar({ x: wx - (wx - vb.x) * k, y: wy - (wy - vb.y) * k, w: w }, ms);
+    }
+    var aviso = document.createElement('div'); host.appendChild(aviso); aviso.className = 'oc-pl-aviso'; aviso.setAttribute('role', 'status'); aviso.textContent = 'Usa dos dedos para mover y ampliar el plano';
+    var gesto = null, toque = null, ultimo = null, tAviso = 0;
+    svg.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 2) {
+        e.preventDefault(); cancelAnimationFrame(anim); base.classList.remove('is-volando'); toque = null;
+        var a = e.touches[0], b = e.touches[1], r = svg.getBoundingClientRect();
+        gesto = { d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) || 1, mx: (a.clientX + b.clientX) / 2 - r.left, my: (a.clientY + b.clientY) / 2 - r.top, x: vb.x, y: vb.y, w: vb.w, Z: Z, r: r };
+      } else if (e.touches.length === 1) toque = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: performance.now(), movido: false };
+    }, { passive: false });
+    svg.addEventListener('touchmove', function (e) {
+      if (gesto && e.touches.length === 2) {
+        e.preventDefault();
+        var a = e.touches[0], b = e.touches[1], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) || 1;
+        var mx = (a.clientX + b.clientX) / 2 - gesto.r.left, my = (a.clientY + b.clientY) / 2 - gesto.r.top, w = wLim(gesto.w * gesto.d / d), z = w / W();
+        // el punto del plano que estaba entre los dedos sigue entre los dedos
+        vb.x = gesto.x + gesto.mx * gesto.Z - mx * z; vb.y = gesto.y + gesto.my * gesto.Z - my * z; vb.w = w; aplicar();
+        return;
+      }
+      if (toque && e.touches.length === 1) {
+        var dx = e.touches[0].clientX - toque.x, dy = e.touches[0].clientY - toque.y;
+        if (Math.hypot(dx, dy) > 10) toque.movido = true;
+        // un dedo que intenta mover el plano de lado: se avisa de que son dos dedos (la página sigue bajando con uno)
+        if (Math.abs(dx) > 24 && Math.abs(dx) > Math.abs(dy) * 1.4 && performance.now() - tAviso > 4000) { tAviso = performance.now(); aviso.classList.add('is-on'); setTimeout(function () { aviso.classList.remove('is-on'); }, 1800); }
+      }
+    }, { passive: false });
+    svg.addEventListener('touchend', function (e) {
+      if (gesto && e.touches.length < 2) { gesto = null; finArr = performance.now(); return; }
+      if (!toque || e.touches.length) return;
+      var p = e.changedTouches[0], ahora = performance.now(), tap = !toque.movido && ahora - toque.t < 300; toque = null;
+      if (!tap) { ultimo = null; return; }
+      // doble toque: acerca alrededor del dedo (y no abre lo que haya debajo)
+      if (ultimo && ahora - ultimo.t < 320 && Math.hypot(p.clientX - ultimo.x, p.clientY - ultimo.y) < 30) {
+        e.preventDefault(); ultimo = null; finArr = ahora; var r = svg.getBoundingClientRect(); zoomEn(0.5, p.clientX - r.left, p.clientY - r.top, 320); return;
+      }
+      ultimo = { t: ahora, x: p.clientX, y: p.clientY };
+    }, { passive: false });
+    svg.addEventListener('touchcancel', function () { gesto = null; toque = null; });
+    // en el ordenador: pellizco del panel táctil (llega como rueda con Ctrl) y Ctrl + rueda amplían donde está el puntero
+    svg.addEventListener('wheel', function (e) {
+      if (!e.ctrlKey) return; e.preventDefault(); var r = svg.getBoundingClientRect();
+      zoomEn(Math.exp(Math.max(-1, Math.min(1, e.deltaY * 0.01))), e.clientX - r.left, e.clientY - r.top, 0);
+    }, { passive: false });
+    svg.addEventListener('dblclick', function (e) { var r = svg.getBoundingClientRect(); zoomEn(e.shiftKey ? 2 : 0.5, e.clientX - r.left, e.clientY - r.top, 320); });
     aplicar();
     if (window.ResizeObserver) new ResizeObserver(function () { aplicar(true); }).observe(host);
     return api;
