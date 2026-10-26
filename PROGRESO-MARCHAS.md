@@ -43,6 +43,15 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
 
 **Siguiente al reactivar:** sacar el código de localidad de las 8 capitales (una petición por provincia, 3 s entre peticiones); leer el listado de cada capital (unas 30 marchas por página, ritmo lento) a `auditoria/` (local, no se sube); cruzar con `tools/sources/marchas.json` por título y compositor para completar formación y capital; abrir solo las fichas de las que casen con hermandades del portal. Después, los pasos 2 a 5.
 
+## Punto exacto (27-oct, tras el bloque 6)
+- Subido: bloque 6 (duplicados 13 → 0; `a608a3e`).
+- **Bloque 7 (preparado, sin subir):** `node tools/unificar-marchas.mjs` SIN interruptores incluye: 570 marchas de Patrimonio Musical ligadas a hermandades (solo las que su ficha dedica a una hermandad del portal), el repertorio de la banda del Paso y la Esperanza (`tools/sources/repertorio-paso-esperanza.json`, 57 marchas desde las partituras; añadir el archivo al commit) y el cruce con cofradiasyhermandades.es (formación, año y capital; `auditoria/cyh-marchas.json`, local). Antes de subir: 1 verificador con 20 de las 570 nuevas al azar; comprobador 0 errores (unificar partiendo de la versión publicada: `git show origin/main:tools/sources/marchas.json > tools/sources/marchas.json` antes de unificar, para que las redirecciones solo cuenten direcciones publicadas); build; Playwright 390/1440.
+- Lector de cofradiasyhermandades.es: 6 capitales leídas (Almería 224, Cádiz 379, Córdoba 461, Granada 630, Huelva 458, Jaén 414); relanzado para Málaga y Sevilla. Después: `node tools/importar-marchas-cyh.mjs --fichas` (lee las fichas que el unificador apunta en `auditoria/cyh-fichas-pendientes.json`, 3 s entre peticiones) para dedicatorias → bloque 8.
+- Formación y capital: antes 282 sin formación y 4.679 sin ciudad; recontar tras el bloque 7.
+- Pedido a oc-diseno (mensaje): mostrar `m.repertorio` y `m.ciudad` en las plantillas.
+- Borrador de correo a cofradiasyhermandades.es: en la carpeta de notas compartidas (`correo-cofradiasyhermandades.md`).
+- Crucifixión (Málaga): falta la captura de Pablo; revisar sus marchas con fuentes.
+
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
 - 2026-10-26: bloque 2: 142 revisiones a mano con fuente (sin verificar 181 → 69), compositor más estricto, duplicados unidos, BNE como fuente (250 fichas), M5-M16 cerrados.
