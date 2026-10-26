@@ -37,6 +37,15 @@
   function pathDe(ls) { var d = ''; for (var i = 0; i < ls.length; i++) { var l = ls[i]; d += 'M' + l[0] + ' ' + l[1]; for (var j = 2; j < l.length; j += 2) d += 'L' + l[j] + ' ' + l[j + 1]; } return d; }
   var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'];
 
+  // Mismo tono en la misma jornada (hay muchos morados y negros): las siguientes se separan en luz y un poco de tono
+  function variar(hex, k) {
+    var r = parseInt(hex.slice(1, 3), 16) / 255, g = parseInt(hex.slice(3, 5), 16) / 255, b = parseInt(hex.slice(5, 7), 16) / 255;
+    var mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn, s = d ? d / (1 - Math.abs(2 * l - 1)) : 0, h = 0;
+    if (d) h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h *= 60;
+    var paso = [[0, 0], [0.13, 10], [-0.13, -10], [0.22, -18], [-0.2, 18]][k % 5]; l = Math.min(0.88, Math.max(0.42, l + paso[0])); h = (h + paso[1] + 360) % 360;
+    var c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs((h / 60) % 2 - 1)), m = l - c / 2, q = h < 60 ? [c, x, 0] : h < 120 ? [x, c, 0] : h < 180 ? [0, c, x] : h < 240 ? [0, x, c] : h < 300 ? [x, 0, c] : [c, 0, x];
+    return '#' + q.map(function (v) { return ('0' + Math.round((v + m) * 255).toString(16)).slice(-2); }).join('');
+  }
   function Plano(host, D, o) {
     o = o || {};
     // Dos capas con la misma vista: abajo lo fijo (calles y recorridos) y arriba lo que se mueve (cortejos y medallones).
@@ -81,9 +90,9 @@
       if (xs.length) api.volar(api.caja(xs, ys, m), ms);
     };
     api.ponerDia = function (lista) {
-      hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {}; estados = {};
+      hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {}; estados = {}; var usados = {};
       hs.forEach(function (h, i) {
-        var hc = PAL[i % PAL.length], d = '', pts = ruta(h);
+        var base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1, hc = k > 1 ? variar(base, k - 1) : base, d = '', pts = ruta(h);
         pts.forEach(function (p, j) { var q = pts[j - 1]; d += (!j || (!p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150)) ? 'M' + p[0] + ' ' + p[1] : 'L' + p[0] + ' ' + p[1]; });
         el('path', { 'class': 'oc-pl-ruta', d: d, 'data-s': h.s, style: '--hc:' + hc }, gR);
         // Cada medallón lleva a la ficha completa en «En la calle» (enlace real, también con teclado)

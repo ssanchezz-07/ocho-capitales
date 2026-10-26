@@ -1226,6 +1226,10 @@ function limpiaLugar(s) {
   s = s.replace(/(Salida|Entrada|Recogida)\s*\d{1,2}[:.]\d{2}/gi, ' ');
   return s.replace(/\s+/g, ' ').trim();
 }
+// Color del hábito de cada hermandad para su recorrido (tools/colores-habito.mjs, desde tools/sources/habitos.json con fuente)
+const COLHAB_FILE = path.join(DIR, 'data', 'colores-habito.json');
+const COLHAB = fs.existsSync(COLHAB_FILE) ? JSON.parse(fs.readFileSync(COLHAB_FILE, 'utf8')) : {};
+const habito = (slug) => (COLHAB[slug] ? { col: COLHAB[slug].c, coln: COLHAB[slug].n, colf: COLHAB[slug].f } : {});
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
   if (!fs.existsSync(fP) || !fs.existsSync(fR)) return null;
@@ -1276,7 +1280,7 @@ function datosCalle(c) {
     }
     if (!Object.keys(tramos).length) continue;
     const im = h.imagen;
-    hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos });
+    hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos, ...habito(slug) });
   }
   // Salidas extraordinarias y magnas (tools/sources/itinerarios-extraordinarios.json): una «jornada» propia con su fecha.
   // Solo hay horas en algunos puntos del cartel: el resto se reparte por la distancia andada (posición 4 = 0, hora no oficial).
@@ -1306,7 +1310,7 @@ function datosCalle(c) {
     const etiqueta = `${Dd} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M - 1]} · ${e.corto || h.nombre}`;
     const iti = Object.fromEntries(Object.entries(e.tramos).map(([nom, tr]) => [nom, tr.map((p) => [p.lugar, p.hora || ''])]));
     const im = h.imagen;
-    hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts },
+    hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts }, ...habito(e.hermandad),
       x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti } });
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 2026-10-26 · Laboratorio de rutas: continuidad + GraphHopper (propuesta, sin adoptar)
 _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 
@@ -55,6 +56,23 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
 ## 2026-10-25 (noche) · RETOMAR AQUÍ: encargos nuevos de Pablo para la portada (parada por el límite de 5 h al 95 %)
 =======
 =======
+=======
+## 2026-10-26 · Recorridos con el color del hábito de su hermandad
+Pablo: «que las rutas se asemejaran al color habitual de su hermandad, sin perder la línea de diseño».
+- **De dónde sale el color:** `tools/colores-habito.mjs` lee el texto de `tools/sources/habitos.json`, donde cada hermandad tiene su fuente oficial, y escribe `site/data/colores-habito.json` con el color, su nombre y la fuente. Nada se escribe a mano en el código.
+  - Manda el color del capirote; si es blanco o negro, el de la túnica; si los dos son neutros, ese neutro. Los botones o el cíngulo no cuentan (antes Salutación salía morada por sus botones).
+  - «Color vino» cuenta como burdeos.
+- **Cobertura: 99 de 232 hermandades.** Las otras 133 tienen el texto del hábito vacío, y Sevilla no está en el archivo. Esas conservan el color de la paleta: no se inventa. Pendiente: buscar sus hábitos en webs oficiales o en la guía de cada capital, con la fuente, y volver a ejecutar la herramienta.
+- **Gama común:** cada color del hábito se traduce a un tono parecido en luz y saturación, que convive con el terciopelo y el oro. Por ejemplo:
+  - morado #b78ee3, burdeos #d4677f, rojo #e8735a, azul #6f9de8, verde #62c08a;
+  - el negro pasa a pizarra (#a9a3ba) y el blanco a marfil (#efe4c8).
+  - Todos los tonos contrastan al menos 5,3:1 con el fondo del plano.
+  - Si dos hermandades de la misma jornada caen en el mismo tono (muchas son moradas o negras), las siguientes se separan en luz y en algo de tono (`variar()` en `calle.js` y en `plano.js`).
+- **Igual que antes:** ida continua y regreso discontinuo.
+- **En la ficha de «En la calle»** hay una muestra del color con su nombre y la fuente, por ejemplo «su hábito, burdeos (fuente)».
+- También se usa en el plano de la portada.
+
+>>>>>>> 4751c48 (Recorridos con el color del hábito de su hermandad (99 con fuente), en una gama común y separados si coinciden en la jornada; muestra en la ficha)
 ## 2026-10-26 · Animaciones del mapa de la portada y dos variantes con más detalle
 **Animaciones** (revisadas fotograma a fotograma y midiendo cuánto dura cada fotograma con Playwright):
 - **Fallo que ya estaba en la web publicada:** el muelle que mece las banderas se volvía inestable con fotogramas lentos (un móvil cargado, menos de 30 por segundo). La escala se disparaba (1,69 → −0,26 → 2,98) y la bandera temblaba sin parar.

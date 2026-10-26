@@ -167,12 +167,21 @@
   var delDia = function () { return D.hermandades.filter(function (h) { return h.d === dia; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); };
   function limites() { var a = Infinity, b = -Infinity; delDia().forEach(function (h) { for (var k in h.t) { var p = h.t[k]; a = Math.min(a, p[0][2]); b = Math.max(b, p[p.length - 1][2]); } }); return [a - 30, b + 30]; }
 
+  // Mismo tono en la misma jornada (hay muchos morados y negros): las siguientes se separan en luz y un poco de tono
+  function variar(hex, k) {
+    var r = parseInt(hex.slice(1, 3), 16) / 255, g = parseInt(hex.slice(3, 5), 16) / 255, b = parseInt(hex.slice(5, 7), 16) / 255;
+    var mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn, s = d ? d / (1 - Math.abs(2 * l - 1)) : 0, h = 0;
+    if (d) h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h *= 60;
+    var paso = [[0, 0], [0.13, 10], [-0.13, -10], [0.22, -18], [-0.2, 18]][k % 5]; l = Math.min(0.88, Math.max(0.42, l + paso[0])); h = (h + paso[1] + 360) % 360;
+    var c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs((h / 60) % 2 - 1)), m = l - c / 2, q = h < 60 ? [c, x, 0] : h < 120 ? [x, c, 0] : h < 180 ? [0, c, x] : h < 240 ? [0, x, c] : h < 300 ? [x, 0, c] : [c, 0, x];
+    return '#' + q.map(function (v) { return ('0' + Math.round((v + m) * 255).toString(16)).slice(-2); }).join('');
+  }
   function dibujarRutas() {
     capas.rutas.textContent = ''; capas.marcas.textContent = '';
     var xs = [], ys = [];
-    var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'];
+    var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'], usados = {};
     delDia().forEach(function (h, i) {
-      var pts = h.t.paso || h.t.cruz; h.hc = PAL[i % PAL.length];
+      var pts = h.t.paso || h.t.cruz, base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1; h.hc = k > 1 ? variar(base, k - 1) : base; // el color de su hábito; sin dato, la paleta
       // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
       // salidas extraordinarias: el regreso (posición 7) va aparte, con trazo discontinuo
       var d = '', da = '', dr = '', enR = false;
@@ -308,6 +317,13 @@
     var est = document.createElement('p'); est.className = 'oc-calle-estado';
     est.textContent = !p ? '' : p.estado === 'antes' ? 'Sale a las ' + hhmm(pts[0][2]) + ' de ' + pts[0][3].toLowerCase().replace(/^salida$/, 'su templo') : p.estado === 'despues' ? 'Ya se ha recogido (' + hhmm(pts[pts.length - 1][2]) + ')' : 'Ahora, aproximadamente, por ' + pts[p.i][3];
     c.appendChild(est);
+    if (h.coln) {
+      var hb = document.createElement('p'); hb.className = 'oc-calle-habito';
+      var mu = document.createElement('i'); mu.setAttribute('aria-hidden', 'true'); mu.style.background = h.hc; hb.appendChild(mu);
+      hb.appendChild(document.createTextNode('Color del recorrido: su hábito, ' + h.coln));
+      if (h.colf) { hb.appendChild(document.createTextNode(' (')); var fa = document.createElement('a'); fa.href = h.colf; fa.target = '_blank'; fa.rel = 'noopener'; fa.textContent = 'fuente'; hb.appendChild(fa); hb.appendChild(document.createTextNode(')')); }
+      c.appendChild(hb);
+    }
     var x = h.x;
     if (x) {
       // salida extraordinaria: fecha y, entre la ida y el regreso, el acto en el templo de destino

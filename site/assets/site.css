@@ -1903,3 +1903,8 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-capnom.is-t { transform: translate(-50%, calc(-100% - 14px)); }
 .oc-capnom.is-b { transform: translate(-50%, 14px); }
 .oc-portada.is-ciudad .oc-capnom { opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease-out); }
+
+/* muestra del color del hábito en la ficha de «En la calle» */
+.oc-calle-habito { margin: 6px 0 10px; font-size: .9rem; line-height: 1.45; color: var(--muted); }
+.oc-calle-habito i { display: inline-block; vertical-align: middle; width: 22px; height: 6px; margin: -2px 8px 0 0; border-radius: 3px; box-shadow: 0 0 0 1px rgb(0 0 0 / .25); }
+.oc-calle-habito a { color: inherit; text-underline-offset: 2px; }
