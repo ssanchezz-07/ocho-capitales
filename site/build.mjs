@@ -146,9 +146,12 @@ const hermsOf = (city) => D.hermandades.filter((h) => h.ciudad === city);
 const pages = [];
 
 import { createHash } from 'node:crypto';
+import vm from 'node:vm';
+// Noticias: el mismo dibujante que usa el navegador (assets/noticias.js), para que la página compilada y la filtrada sean idénticas
+const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(DIR, 'assets', 'noticias.js'), 'utf8'), sb); return sb.OCNoticias; })();
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'mundo.json'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'mundo.json'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'" + (FORM_CLAVE ? ' https://api.web3forms.com' : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -451,6 +454,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 <link rel="preload" href="${u('assets/fonts/karantina-latin.woff2')}" as="font" type="font/woff2" crossorigin><link rel="preload" href="${u('assets/fonts/heebo-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
+<link rel="stylesheet" href="${u('assets/vida.css')}?v=${HUELLA.vida}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
@@ -770,17 +774,22 @@ ${curiosidadDelDia()}`;
 }
 
 function pageNews() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Noticias</h1><p class="oc-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada hora y con enlace al medio. Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time>.</p></header>
-<div class="oc-filters" data-news-filters>
-  <div class="oc-field oc-field-grow"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
-  <div class="oc-field"><span class="oc-label" id="nciudad">Capital</span><ul class="oc-chips is-filter" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false">${esc(c.nombre)}</button></li>`).join('')}</ul></div>
+  const items = NEWS.items.slice(0, 600);
+  const medios = new Set(items.map((n) => n.fuente)).size;
+  const desde = items.length ? Math.min(...items.map((n) => n.ts)) : Date.now();
+  const names = Object.fromEntries(D.capitales.map((c) => [c.slug, c.nombre])), colors = Object.fromEntries(D.capitales.map((c) => [c.slug, c.color]));
+  const v = NX.vista(items, { names, colors, capitales: D.capitales.map((c) => c.slug), now: NEWS.actualizado || Date.now() });
+  // Cabecera de terciopelo (morado nazareno; toma el color de la capital elegida), con galón y flecos de oro
+  const body = `<header class="nx-head" data-nx-head><div class="nx-head-in"><h1 class="oc-title nx-title">Noticias</h1><p class="nx-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada hora y con enlace al medio.</p><p class="nx-pulso"><span><i aria-hidden="true"></i>Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time></span><span><b>${medios}</b> medios</span><span><b>${items.length}</b> noticias desde el ${fmtDay(desde, { day: 'numeric', month: 'long' })}</span></p></div></header>
+<div class="nx-filtros" data-news-filters>
+  <div class="oc-field nx-buscar"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
+  <div class="nx-chips-fila"><span class="oc-sr" id="nciudad">Capital</span><ul class="nx-chips" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false" style="--c:${c.color}"><i aria-hidden="true"></i>${esc(c.nombre)}</button></li>`).join('')}</ul><button class="nx-toggle" type="button" data-f="oficiales" aria-pressed="false">Solo fuentes oficiales</button></div>
 </div>
-<h2 class="oc-sr">Listado de noticias</h2>
-<p class="oc-count" data-news-count aria-live="polite">${Math.min(NEWS.items.length, 600)} noticias</p>
-<div class="oc-newsgrid" data-news-list>${(() => { const L = NEWS.items.slice(0, 24), k = L.slice(0, 6).findIndex((n) => n.img); const d = k < 0 ? null : L.splice(k, 1)[0]; return (d ? newsItem(d, { eager: true, destacada: true }) : '') + L.map((n, i) => newsItem(n, { eager: !d && i < 2 })).join(''); })()}</div>
+<p class="oc-count nx-count" data-news-count aria-live="polite">${v.total} noticias</p>
+<div class="nx-lista" data-news-list>${v.html}</div>
 <p class="oc-empty" data-news-empty hidden>No hay noticias con esos filtros. Prueba con otra capital o borra la búsqueda.</p>
-<p class="oc-center"><button class="oc-btn is-quiet" type="button" data-news-more>Cargar más noticias</button></p>`;
-  write('noticias/index.html', layout({ title: 'Noticias cofrades de hoy', desc: 'Noticias cofrades de hoy en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: hermandades, bandas, pregones y carteles, con enlace a cada medio.', body, path: 'noticias/', active: 'noticias/', crumbs: [['Portada', u()], ['Noticias', '']] }));
+<p class="oc-center nx-mas"><button class="oc-btn is-quiet vida-toque" type="button" data-news-more${v.quedan ? '' : ' hidden'}>Ver más noticias <span data-news-quedan>${v.quedan ? `(quedan ${v.quedan})` : ''}</span></button></p>`;
+  write('noticias/index.html', layout({ title: 'Noticias cofrades de hoy', desc: 'Noticias cofrades de hoy en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: hermandades, bandas, pregones y carteles, con enlace a cada medio.', body, path: 'noticias/', active: 'noticias/', head: `<script src="${u('assets/noticias.js')}?v=${HUELLA.noticias}" defer></script>`, crumbs: [['Portada', u()], ['Noticias', '']] }));
 }
 
 function pageCapitales() {
@@ -1222,7 +1231,7 @@ function pageOffline() {
 }
 function escribeSw() {
   // la carcasa: lo que se guarda al instalar para abrir al instante y sin conexión (el resto se guarda al visitarlo)
-  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
+  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/vida.css?v=' + HUELLA.vida, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
     ...['karantina-latin.woff2', 'heebo-latin.woff2'].map((f) => BASE + 'assets/fonts/' + f), ...D.capitales.map((c) => BASE + 'assets/plates/colgadura-' + c.slug + '.webp'), BASE + 'assets/icon.svg'];
   swDespliegue({ DIST, BASE, carcasa });
 }

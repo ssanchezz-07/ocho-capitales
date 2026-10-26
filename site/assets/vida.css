@@ -1,0 +1,202 @@
+/* =====================================================================================================
+   Ocho Capitales · «Vida» (oc-diseno, desde el 27-oct-2026). Se carga después de site.css y manda sobre él.
+   1) Sistema de movimiento común: un solo juego de curvas y duraciones, entradas al hacer scroll, toque y estados de carga.
+   2) Materiales de la colgadura: terciopelo (grano y brillo de pelo), luz de cera, galón bordado y flecos de oro.
+   3) Páginas: Noticias (.nx-*). El resto se irá añadiendo aquí, por bloques.
+   Con «reducir movimiento» no se mueve nada: solo cambian opacidad y color. El hover se limita a punteros finos.
+   ===================================================================================================== */
+
+/* ---------- 1. Movimiento ---------- */
+:root {
+  --m-toque: 90ms;      /* al pulsar (respuesta inmediata) */
+  --m-suelta: 220ms;    /* al soltar (vuelve con calma) */
+  --m-rapido: 180ms;    /* color, borde, estados */
+  --m-base: 260ms;      /* elevación, cambios de tarjeta */
+  --m-entrada: 560ms;   /* entradas al hacer scroll y el momento de cada cabecera (no es interfaz de uso frecuente) */
+  --e-salida: cubic-bezier(.23, 1, .32, 1);     /* entradas y respuestas */
+  --e-hoja: cubic-bezier(.32, .72, 0, 1);       /* hojas, carruseles, viajes */
+  --e-ida-vuelta: cubic-bezier(.77, 0, .175, 1); /* desplazamientos de un sitio a otro */
+  --escalon: 45ms;      /* escalonado de grupos */
+  /* materiales */
+  --oro: #c9a14a; --oro-claro: #ecd393; --oro-hondo: #8e6a22;
+  --grano: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --galon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='12'%3E%3Crect width='28' height='1.3' fill='%23c9a14a'/%3E%3Crect y='10.7' width='28' height='1.3' fill='%23c9a14a'/%3E%3Cpath d='M0 6 7 2.6 14 6 7 9.4ZM14 6 21 2.6 28 6 21 9.4Z' fill='none' stroke='%23d9b763' stroke-width='.9'/%3E%3Ccircle cx='7' cy='6' r='1.15' fill='%23f0d79c'/%3E%3Ccircle cx='21' cy='6' r='1.15' fill='%23f0d79c'/%3E%3C/svg%3E");
+}
+/* Roseta bordada (ornamento propio): ocho pétalos de hilo de oro, para cabeceras de terciopelo */
+:root { --roseta: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%20fill='none'%20stroke='rgba(217,183,99,.42)'%20stroke-width='1.1'%3E%3Cg%20transform='rotate(0%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(45%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(90%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(135%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(180%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(225%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(270%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(315%20100%20100)'%3E%3Cpath%20d='M100%2072C89%2054%2089%2034%20100%2014C111%2034%20111%2054%20100%2072Z'/%3E%3Cpath%20d='M100%2064C95%2053%2095%2041%20100%2028C105%2041%20105%2053%20100%2064Z'%20stroke-width='.7'/%3E%3Ccircle%20cx='100'%20cy='8'%20r='2.2'%20fill='rgba(236,211,147,.55)'%20stroke='none'/%3E%3C/g%3E%3Cg%20transform='rotate(22%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(67%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(112%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(157%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(202%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(247%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(292%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Cg%20transform='rotate(337%20100%20100)'%3E%3Cpath%20d='M100%2070C96%2063%2096%2056%20100%2048C104%2056%20104%2063%20100%2070Z'%20stroke-width='.6'/%3E%3C/g%3E%3Ccircle%20cx='100'%20cy='100'%20r='20'/%3E%3Ccircle%20cx='100'%20cy='100'%20r='27'%20stroke-dasharray='1.5%203'/%3E%3Ccircle%20cx='100'%20cy='100'%20r='8'%20fill='rgba(236,211,147,.35)'%20stroke='none'/%3E%3Ccircle%20cx='100'%20cy='100'%20r='97'%20stroke-dasharray='.8%204.2'/%3E%3C/svg%3E"); }
+@property --nx-c { syntax: "<color>"; inherits: true; initial-value: #2b1140; }
+
+/* Entrada al hacer scroll: parte de un estado ya visible (nunca de la nada) y se apoya en la línea de tiempo del scroll. */
+@keyframes vida-entra { from { opacity: .5; transform: translateY(14px) scale(.99); filter: blur(1px); } to { opacity: 1; transform: none; filter: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .vida-entra { animation: vida-entra var(--e-salida) both; animation-timeline: view(); animation-range: entry calc(var(--i, 0) * 3%) entry calc(55% + var(--i, 0) * 3%); }
+  }
+}
+/* Toque: se hunde al instante y vuelve con calma (asimétrico) */
+.vida-toque { transition: transform var(--m-suelta) var(--e-salida); }
+.vida-toque:active { transform: scale(.97); transition-duration: var(--m-toque); }
+/* Carga: la luz de una vela que pasa (solo mientras se espera) */
+@keyframes vida-cera { from { background-position: 130% 0; } to { background-position: -30% 0; } }
+.vida-carga { border-radius: 12px; background: linear-gradient(100deg, var(--surface-2) 35%, color-mix(in srgb, var(--oro) 26%, var(--surface-2)) 50%, var(--surface-2) 65%) 0 0 / 260% 100%; animation: vida-cera 1.5s var(--e-ida-vuelta) infinite; }
+@media (prefers-reduced-motion: reduce) { .vida-carga { animation: none; } .vida-toque, .vida-toque:active { transform: none; } }
+
+/* Superficies del navegador con la paleta (selección, cursor, desplazamiento) */
+::selection { background: color-mix(in srgb, var(--oro) 42%, transparent); color: inherit; }
+:root { accent-color: var(--primary); caret-color: var(--primary); scrollbar-color: color-mix(in srgb, var(--primary) 35%, transparent) transparent; }
+a { text-underline-offset: .18em; }
+
+/* ---------- 2. Materiales ---------- */
+/* Terciopelo: el color de la capital (--c) oscurecido, con brillo de pelo, luz de cera desde arriba y grano */
+.vida-terciopelo { --tc: color-mix(in oklab, var(--c, #2b1140) 74%, #12061c); position: relative; isolation: isolate; color: #fbf6ee;
+  background:
+    radial-gradient(120% 90% at 12% -10%, rgb(255 214 150 / .2), transparent 55%),
+    linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%),
+    radial-gradient(140% 120% at 100% 120%, rgb(0 0 0 / .45), transparent 60%),
+    var(--tc); }
+.vida-terciopelo::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: var(--grano); opacity: .16; mix-blend-mode: soft-light; pointer-events: none; }
+/* Galón bordado: banda de oro (en horizontal) */
+.vida-galon { display: block; height: 12px; background: var(--galon) repeat-x center / 28px 12px; }
+
+/* ---------- 3. Noticias ---------- */
+.nx-head { --c: var(--nx-c); position: relative; margin: 6px 0 40px; padding: clamp(30px, 5.2vw, 60px) clamp(22px, 4.4vw, 56px) clamp(34px, 4.8vw, 56px); border-radius: 24px 24px 6px 6px; box-shadow: 0 2px 6px rgb(20 6 30 / .18), 0 26px 50px -28px rgb(20 6 30 / .7); transition: --nx-c 600ms var(--e-salida); }
+.nx-head { --tc: color-mix(in oklab, var(--nx-c) 74%, #12061c); isolation: isolate; color: #fbf6ee; background: radial-gradient(120% 90% at 12% -10%, rgb(255 214 150 / .22), transparent 55%), linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%), radial-gradient(140% 120% at 100% 120%, rgb(0 0 0 / .45), transparent 60%), var(--tc); }
+.nx-head::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: var(--grano); opacity: .16; mix-blend-mode: soft-light; pointer-events: none; }
+.nx-head-in::after { content: ""; position: absolute; z-index: -1; top: 50%; left: calc(100% + clamp(10px, 6vw, 120px)); width: clamp(280px, 32vw, 460px); aspect-ratio: 1; translate: 0 -50%; background: var(--roseta) center / contain no-repeat; pointer-events: none; }
+@media (max-width: 900px) { .nx-head-in { position: static; } .nx-head-in::after { top: -40px; left: auto; right: -70px; width: 230px; translate: none; opacity: .7; } .nx-head { overflow: hidden; overflow: clip; } }
+@keyframes nx-roseta { from { opacity: 0; transform: rotate(-24deg) scale(.92); } }
+@media (prefers-reduced-motion: no-preference) { .nx-head-in::after { animation: nx-roseta 1100ms var(--e-salida) 120ms both; } }
+/* galón abajo y flecos que cuelgan del borde, como un repostero */
+.nx-head::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -13px; height: 26px; pointer-events: none;
+  background: var(--galon) repeat-x 0 0 / 28px 12px, repeating-linear-gradient(90deg, var(--oro) 0 1.4px, transparent 1.4px 4.2px) 0 12px / 100% 14px no-repeat;
+  -webkit-mask: linear-gradient(#000 0 12px, rgb(0 0 0 / .95) 12px, transparent 26px); mask: linear-gradient(#000 0 12px, rgb(0 0 0 / .95) 12px, transparent 26px); transform-origin: 50% 0; }
+.nx-head-in { position: relative; max-width: 62ch; }
+.nx-title { margin: 0 0 10px; font-size: clamp(4rem, 15vw, 8.6rem); line-height: .82; letter-spacing: .01em; color: #fbf6ee; text-shadow: 0 2px 0 rgb(0 0 0 / .18), 0 18px 40px rgb(0 0 0 / .3); }
+.nx-title::after { content: ""; display: block; width: min(220px, 55%); height: 12px; margin-top: 14px; background: var(--galon) repeat-x 0 0 / 28px 12px; transform-origin: 0 50%; }
+.nx-lead { margin: 0 0 18px; font-size: clamp(1.02rem, .95rem + .4vw, 1.2rem); line-height: 1.5; color: rgb(251 246 238 / .86); }
+.nx-pulso { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; font-size: .9rem; }
+.nx-pulso span { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 0 13px; border-radius: 999px; background: rgb(255 255 255 / .08); border: 1px solid rgb(236 211 147 / .28); color: rgb(251 246 238 / .92); }
+.nx-pulso b { font: 400 1.25rem/1 var(--display); letter-spacing: .02em; color: var(--oro-claro); font-variant-numeric: tabular-nums; }
+.nx-pulso i { width: 8px; height: 8px; border-radius: 50%; background: var(--oro-claro); box-shadow: 0 0 0 3px rgb(236 211 147 / .22); }
+/* el momento de la cabecera: el galón se borda y los flecos caen (una vez, al llegar) */
+@keyframes nx-borda { from { transform: scaleX(0); } }
+@keyframes nx-cae { from { transform: scaleY(.25); opacity: 0; } }
+@keyframes nx-sube { from { opacity: 0; transform: translateY(14px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .nx-title::after { animation: nx-borda 700ms var(--e-salida) 180ms both; }
+  .nx-head::after { animation: nx-cae 620ms var(--e-hoja) 320ms both; }
+  .nx-title { animation: nx-sube var(--m-entrada) var(--e-salida) both; }
+  .nx-lead { animation: nx-sube var(--m-entrada) var(--e-salida) 70ms both; }
+  .nx-pulso { animation: nx-sube var(--m-entrada) var(--e-salida) 140ms both; }
+}
+
+/* filtros: pegados arriba al bajar */
+.nx-filtros { position: sticky; top: calc(var(--header-h) - 1px); z-index: 20; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 18px; margin: 0 calc(var(--gutter) * -1) 6px; padding: 12px var(--gutter); background: color-mix(in srgb, var(--bg) 86%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+@media (prefers-reduced-transparency: reduce) { .nx-filtros { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+.nx-buscar { flex: 1 1 260px; max-width: 420px; margin: 0; }
+.nx-buscar input { border-radius: 999px; padding-left: 18px; background: var(--surface); }
+.nx-chips-fila { flex: 999 1 520px; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.nx-chips { display: flex; gap: 6px; margin: 0; padding: 2px; list-style: none; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; min-width: 0; }
+.nx-chips::-webkit-scrollbar { display: none; }
+.nx-chips li { flex: none; scroll-snap-align: start; }
+.nx-chips button, .nx-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 15px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); color: var(--ink); font: 600 .95rem/1 var(--sans); white-space: nowrap; cursor: pointer; touch-action: manipulation;
+  transition: background-color var(--m-rapido) var(--e-salida), color var(--m-rapido) var(--e-salida), border-color var(--m-rapido) var(--e-salida), box-shadow var(--m-rapido) var(--e-salida), transform var(--m-suelta) var(--e-salida); }
+.nx-chips button:active, .nx-toggle:active { transform: scale(.96); transition-duration: var(--m-toque); }
+.nx-chips i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+.nx-chips button[aria-pressed="true"] { --tc: color-mix(in oklab, var(--c, #2b1140) 74%, #12061c); border-color: transparent; background: var(--tc); color: #fbf6ee; box-shadow: inset 0 0 0 1px rgb(236 211 147 / .55), 0 6px 14px -8px rgb(10 3 16 / .55); }
+.nx-chips button[aria-pressed="true"] i { background: var(--oro-claro); }
+.nx-toggle { flex: none; margin-left: auto; }
+@media (max-width: 760px) { .nx-chips-fila { flex-wrap: wrap; } .nx-chips { flex: 1 1 100%; margin: 0 calc(var(--gutter) * -1); padding: 2px var(--gutter); scroll-padding: 0 var(--gutter); } .nx-toggle { margin-left: 0; } .nx-pulso { gap: 6px; font-size: .84rem; } .nx-pulso span { min-height: 30px; padding: 0 11px; } }
+.nx-toggle::before { content: ""; width: 16px; height: 16px; border-radius: 5px; border: 1.5px solid var(--line-strong); transition: background-color var(--m-rapido) var(--e-salida), border-color var(--m-rapido) var(--e-salida); }
+.nx-toggle[aria-pressed="true"] { border-color: var(--oro-hondo); background: color-mix(in srgb, var(--oro) 16%, var(--surface)); }
+.nx-toggle[aria-pressed="true"]::before { border-color: var(--oro-hondo); background: var(--oro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%231d1030' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px no-repeat; }
+@media (hover: hover) and (pointer: fine) { .nx-chips button:hover, .nx-toggle:hover { border-color: var(--primary); } }
+.nx-count { margin: 10px 0 18px; color: var(--muted); font-size: .92rem; }
+
+/* encabezados de sección con filete de oro */
+.nx-h { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font: 400 clamp(1.7rem, 1.3rem + 1.4vw, 2.35rem)/1 var(--display); letter-spacing: .05em; text-transform: uppercase; color: var(--primary); }
+.nx-h::after { content: ""; flex: 1; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; opacity: .85; }
+
+/* portada: destacada + «Lo último» */
+.nx-portada { display: grid; gap: 28px; margin-bottom: 52px; }
+@media (min-width: 960px) { .nx-portada { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: start; } .nx-portada.is-sin-foto { grid-template-columns: minmax(0, 1fr); } }
+.nx-destacada { --tc: color-mix(in oklab, var(--c, #2b1140) 70%, #10051a); position: relative; display: grid; min-height: clamp(380px, 52vw, 560px); overflow: hidden; border-radius: 24px; background: var(--tc); color: #fbf6ee; isolation: isolate; box-shadow: 0 2px 6px rgb(20 6 30 / .16), 0 30px 60px -34px rgb(20 6 30 / .75); }
+.nx-destacada-foto { position: absolute; inset: 0; z-index: -2; }
+.nx-destacada-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transform: scale(1.02); transition: transform 900ms var(--e-salida); }
+.nx-destacada::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, var(--tc) 8%, color-mix(in srgb, var(--tc) 82%, transparent) 34%, transparent 72%), radial-gradient(90% 60% at 0% 100%, rgb(255 214 150 / .16), transparent 60%); }
+.nx-destacada::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; }
+.nx-destacada.is-sin-foto { min-height: 0; background: radial-gradient(120% 90% at 12% -10%, rgb(255 214 150 / .2), transparent 55%), var(--tc); }
+.nx-destacada-txt { align-self: end; padding: clamp(22px, 3.4vw, 40px) clamp(22px, 3.4vw, 40px) clamp(30px, 3.8vw, 46px); max-width: 52rem; }
+.nx-destacada-tit { margin: 0 0 12px; font: 700 clamp(1.5rem, 1.1rem + 1.7vw, 2.45rem)/1.12 var(--sans); letter-spacing: -.012em; text-wrap: balance; }
+.nx-destacada .nx-a { color: #fff; text-decoration: none; }
+.nx-destacada .nx-a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.nx-destacada .nx-meta, .nx-destacada .nx-src { color: rgb(251 246 238 / .88); }
+.nx-destacada .nx-ext { color: rgb(251 246 238 / .82); -webkit-line-clamp: 3; line-clamp: 3; }
+.nx-destacada .oc-city { color: #fbf6ee; }
+.nx-destacada .nx-otros { position: relative; z-index: 2; color: rgb(251 246 238 / .8); }
+.nx-destacada .nx-otros a { color: var(--oro-claro); }
+@media (hover: hover) and (pointer: fine) { .nx-destacada:hover .nx-destacada-foto img { transform: scale(1.06); } .nx-destacada:hover .nx-a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--oro-claro); } }
+
+.nx-ultimo ol { margin: 0; padding: 0; list-style: none; }
+.nx-ultimo li { position: relative; display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 2px 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.nx-ultimo li:first-child { border-top: 0; padding-top: 4px; }
+.nx-hora { font: 400 2rem/.9 var(--display); letter-spacing: .02em; color: var(--gold-ink); font-variant-numeric: tabular-nums; }
+.nx-ultimo-tit { margin: 0 0 6px; font: 600 1.06rem/1.3 var(--sans); letter-spacing: -.006em; }
+.nx-ultimo .nx-a, .nx-cap .nx-a, .nx-card .nx-a { color: var(--ink); text-decoration: none; }
+.nx-ultimo .nx-a::after, .nx-cap-tit .nx-a::after, .nx-card .nx-a::after { content: ""; position: absolute; inset: 0; }
+@media (hover: hover) and (pointer: fine) { .nx-ultimo li:hover .nx-a, .nx-cap:hover .nx-a, .nx-card:hover .nx-a { color: var(--primary); } }
+
+/* metadatos */
+.nx-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 0; font-size: .85rem; color: var(--muted); }
+.nx-src { font-weight: 700; color: var(--ink); overflow-wrap: anywhere; }
+.nx-meta time { font-variant-numeric: tabular-nums; }
+.nx-oficial { display: inline-flex; align-items: center; min-height: 20px; padding: 0 8px; border-radius: 999px; border: 1px solid var(--oro-hondo); color: var(--gold-ink); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.nx-ext { margin: 8px 0 0; color: var(--muted); font-size: .96rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.nx-otros { margin: 6px 0 0; font-size: .85rem; color: var(--muted); }
+.nx-otros a { position: relative; z-index: 2; color: var(--primary); }
+
+/* «En cada capital»: la última de cada una, con su terciopelo */
+.nx-caps { margin-bottom: 52px; }
+.nx-caps ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .nx-caps ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .nx-caps ul { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter); margin: 0 calc(var(--gutter) * -1); padding: 4px var(--gutter) 14px; scrollbar-width: none; } .nx-caps ul::-webkit-scrollbar { display: none; } .nx-cap { flex: 0 0 78%; scroll-snap-align: start; } }
+.nx-cap { position: relative; display: flex; flex-direction: column; overflow: hidden; border-radius: 20px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06), 0 12px 26px -18px rgb(20 6 30 / .35); transition: transform var(--m-base) var(--e-salida), box-shadow var(--m-base) var(--e-salida); }
+.nx-cap-nombre { --tc: color-mix(in oklab, var(--c) 74%, #12061c); position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 64px; padding: 12px 16px 22px; border: 0; color: #fbf6ee; text-align: left; cursor: pointer;
+  background: var(--galon) repeat-x 0 100% / 28px 12px, radial-gradient(120% 140% at 0% 0%, rgb(255 214 150 / .2), transparent 60%), var(--tc); }
+.nx-cap-nombre span { font: 400 1.75rem/1 var(--display); letter-spacing: .05em; text-transform: uppercase; }
+.nx-cap-nombre b { display: grid; place-items: center; min-width: 34px; height: 26px; padding: 0 8px; border-radius: 999px; background: rgb(255 255 255 / .12); box-shadow: inset 0 0 0 1px rgb(236 211 147 / .4); font: 600 .82rem/1 var(--sans); font-variant-numeric: tabular-nums; }
+.nx-cap-tit { margin: 14px 16px 8px; font: 600 1.02rem/1.32 var(--sans); display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.nx-cap .nx-meta { margin: auto 16px 16px; }
+@media (hover: hover) and (pointer: fine) { .nx-cap:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgb(20 6 30 / .08), 0 22px 36px -20px rgb(20 6 30 / .45); } }
+
+/* archivo por días */
+.nx-dia { margin: 0 0 40px; }
+.nx-dia-t { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 14px; font: 400 clamp(2rem, 1.5rem + 1.6vw, 2.8rem)/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--primary); }
+.nx-dia-t::first-letter { color: var(--gold-ink); }
+.nx-dia-t small { font: 500 .95rem/1.2 var(--sans); letter-spacing: 0; text-transform: none; color: var(--muted); }
+.nx-dia-n { margin-left: auto; align-self: center; display: grid; place-items: center; min-width: 32px; height: 26px; padding: 0 9px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font: 600 .82rem/1 var(--sans); }
+.nx-grid { display: grid; gap: 12px; align-items: start; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); }
+.nx-card { position: relative; display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 4px 14px; align-items: start; padding: 14px 16px 15px; border-radius: 18px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .05), 0 10px 24px -20px rgb(20 6 30 / .4); transition: transform var(--m-base) var(--e-salida), box-shadow var(--m-base) var(--e-salida); }
+.nx-card.has-foto { grid-template-columns: minmax(0, 1fr) 116px; }
+.nx-card.has-foto .nx-foto { grid-column: 2; grid-row: 1; }
+.nx-card.has-foto .nx-body { grid-column: 1; grid-row: 1; }
+.nx-card::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 0; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--oro), var(--oro-claro), var(--oro)); transform: scaleX(0); transform-origin: 0 50%; transition: transform var(--m-base) var(--e-salida); }
+@media (hover: hover) and (pointer: fine) { .nx-card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgb(20 6 30 / .07), 0 18px 32px -20px rgb(20 6 30 / .5); } .nx-card:hover::after { transform: scaleX(1); } }
+.nx-card:active { transform: scale(.985); transition-duration: var(--m-toque); }
+.nx-tit { margin: 0 0 7px; font: 600 1.06rem/1.3 var(--sans); letter-spacing: -.006em; overflow-wrap: anywhere; text-wrap: pretty; }
+.nx-foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: var(--surface-2); }
+.nx-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* sello del medio: monograma dorado sobre el terciopelo de su capital, con anillo de oro */
+.nx-sello { --tc: color-mix(in oklab, var(--c, #2b1140) 72%, #12061c); position: relative; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; isolation: isolate; background: radial-gradient(90% 90% at 30% 20%, rgb(255 214 150 / .25), transparent 60%), var(--tc); box-shadow: inset 0 0 0 2px var(--oro), inset 0 0 0 4px var(--tc), inset 0 0 0 5px rgb(236 211 147 / .45), 0 6px 14px -8px rgb(10 3 16 / .45); }
+.nx-sello span { font: 400 1.45rem/1 var(--display); letter-spacing: .04em; color: var(--oro-claro); text-transform: uppercase; }
+.nx-mas { margin: 6px 0 20px; }
+.nx-mas .oc-btn { border-radius: 999px; min-height: 50px; padding: 0 24px; }
+.nx-mas [data-news-quedan] { color: var(--muted); font-weight: 500; }
+@media (max-width: 480px) { .nx-card.has-foto { grid-template-columns: minmax(0, 1fr) 96px; } .nx-card { padding: 13px 14px; } .nx-ultimo li { grid-template-columns: 62px minmax(0, 1fr); } .nx-hora { font-size: 1.7rem; } }
+/* cambio de capital o de fuente: el archivo se funde con un leve desenfoque */
+::view-transition-old(nx-lista) { animation: 160ms var(--e-salida) both nx-vt-sale; }
+::view-transition-new(nx-lista) { animation: 320ms var(--e-salida) both nx-vt-entra; }
+@keyframes nx-vt-sale { to { opacity: 0; filter: blur(4px); } }
+@keyframes nx-vt-entra { from { opacity: 0; filter: blur(4px); transform: translateY(8px); } }
+.nx-lista { view-transition-name: nx-lista; }
+.nx-head { view-transition-name: nx-head; }

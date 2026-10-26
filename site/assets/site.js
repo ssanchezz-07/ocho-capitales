@@ -97,6 +97,8 @@
 
   // Foto de un medio que no carga: la noticia se queda solo con texto (la colgadura de la capital no se repite en las listas).
   function dropImg(img) {
+    var nx = img.closest('.nx-foto, .nx-destacada-foto');
+    if (nx) { var card = nx.closest('.nx-card, .nx-destacada'); if (nx.classList.contains('nx-foto')) { var src = card && card.querySelector('.nx-src'); nx.className = 'nx-sello'; nx.innerHTML = '<span>' + esc(window.OCNoticias ? window.OCNoticias.iniciales(src ? src.textContent : '') : '·') + '</span>'; card.classList.remove('has-foto'); } else if (card) { card.classList.add('is-sin-foto'); nx.remove(); } return; }
     var box = img.closest('.oc-news-img'); if (!box) return; var card = box.closest('.oc-news');
     box.remove(); if (card) card.classList.remove('has-img', 'is-destacada');
   }
@@ -919,45 +921,46 @@
     }
   }
 
-  // ---------- página de noticias ----------
+  // ---------- página de noticias (dibuja assets/noticias.js, el mismo que en la página compilada) ----------
   var nf = $('[data-news-filters]');
-  if (nf) {
-    var list = $('[data-news-list]'), more = $('[data-news-more]'), emptyN = $('[data-news-empty]'), countN = $('[data-news-count]');
-    var qIn = $('[data-f="q"]', nf), all = null, shown = 24;
+  if (nf && window.OCNoticias) {
+    var list = $('[data-news-list]'), more = $('[data-news-more]'), emptyN = $('[data-news-empty]'), countN = $('[data-news-count]'), quedanN = $('[data-news-quedan]'), headN = $('[data-nx-head]');
+    var qIn = $('[data-f="q"]', nf), ofiB = $('[data-f="oficiales"]', nf), all = null, shown = 24, oficiales = false;
+    var CAPS = $$('[data-f="ciudad"] button', nf).map(function (b) { return b.dataset.v; }).filter(Boolean);
     var city = new URLSearchParams(location.search).get('ciudad') || getCity();
     var desdeUrl = !!new URLSearchParams(location.search).get('ciudad');
     if (city && !CITY_NAMES[city]) city = '';
     var COLORS = window.OC_COLORS || {};
-    var cityTag = function (c) { return CITY_NAMES[c] ? '<span class="oc-city" style="--c:' + (COLORS[c] || 'var(--primary)') + '">' + esc(CITY_NAMES[c]) + '</span>' : ''; };
-    var ext = ' target="_blank" rel="nofollow noopener noreferrer"';
-    // Titular primero; debajo, medio y hora (la capital solo si se ven todas); «También en…» si otros medios cuentan lo mismo
-    var card = function (n, destacada) {
-      var d = new Date(n.ts).toISOString();
-      var tile = n.img ? '<div class="oc-news-img" aria-hidden="true"><img src="' + esc(n.img) + '" alt="" width="160" height="120" loading="' + (destacada ? 'eager' : 'lazy') + '" decoding="async" referrerpolicy="no-referrer" data-hide-broken></div>' : '';
-      var o = n.otros || [], otros = o.length ? '<p class="oc-news-otros">También en ' + o.slice(0, 2).map(function (x) { return '<a href="' + esc(x.u) + '"' + ext + '>' + esc(x.f) + '</a>'; }).join(o.length === 2 ? ' y ' : ', ') + (o.length > 2 ? ' y ' + (o.length - 2) + ' más' : '') + '</p>' : '';
-      return '<article class="oc-news' + (tile ? ' has-img' : '') + (destacada && tile ? ' is-destacada' : '') + '"><div class="oc-news-body"><h3 class="oc-news-title"><a href="' + esc(n.url) + '"' + ext + '>' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a></h3><p class="oc-news-meta"><span class="oc-news-src">' + esc(n.fuente) + '</span><time datetime="' + d + '" data-ago></time>' + (city ? '' : n.ciudades.map(cityTag).join('')) + '</p>' + otros + (n.extracto ? '<p class="oc-news-text">' + esc(n.extracto) + '</p>' : '') + '</div>' + tile + '</article>';
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var paintChips = function () {
+      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); });
+      ofiB.setAttribute('aria-pressed', oficiales ? 'true' : 'false');
+      // el terciopelo de la cabecera toma el color de la capital elegida
+      if (headN) { if (city && COLORS[city]) headN.style.setProperty('--nx-c', COLORS[city]); else headN.style.removeProperty('--nx-c'); }
     };
-    var paintChips = function () { $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); }); };
     var render = function () {
-      var q = norm(qIn.value).trim().split(/\s+/).filter(Boolean);
-      var r = all.filter(function (n) { var h = norm(n.titulo + ' ' + (n.extracto || '') + ' ' + n.fuente); return (!city || n.ciudades.indexOf(city) !== -1) && q.every(function (w) { return h.indexOf(w) !== -1; }); });
-      // la primera con foto de las seis primeras va destacada (sin búsqueda), como en la página compilada
-      var vis = r.slice(0, shown), k = qIn.value ? -1 : vis.slice(0, 6).findIndex(function (n) { return n.img; });
-      if (k > 0) vis.unshift(vis.splice(k, 1)[0]);
-      list.innerHTML = vis.map(function (n, i) { return card(n, i === 0 && k >= 0); }).join('');
+      var v = window.OCNoticias.vista(all, { city: city, q: qIn.value, oficiales: oficiales, shown: shown, names: CITY_NAMES, colors: COLORS, capitales: CAPS });
+      list.innerHTML = v.html;
       paintAgo(list);
-      emptyN.hidden = r.length > 0; more.hidden = r.length <= shown;
-      countN.textContent = r.length + (r.length === 1 ? ' noticia' : ' noticias') + (city ? ' de ' + CITY_NAMES[city] : '');
+      emptyN.hidden = v.total > 0; more.hidden = v.quedan <= 0;
+      if (quedanN) quedanN.textContent = v.quedan ? '(quedan ' + v.quedan + ')' : '';
+      countN.textContent = v.total + (v.total === 1 ? ' noticia' : ' noticias') + (city ? ' de ' + CITY_NAMES[city] : '') + (oficiales ? ' de fuentes oficiales' : '');
       paintChips();
-      var p = new URLSearchParams(); if (city) p.set('ciudad', city); if (qIn.value) p.set('q', qIn.value);
+      var p = new URLSearchParams(); if (city) p.set('ciudad', city); if (qIn.value) p.set('q', qIn.value); if (oficiales) p.set('oficiales', '1');
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     };
+    // cambiar de capital o de fuente es un cambio de vista: transición entre los dos estados (si el navegador la tiene)
+    var cambiar = function (fn) { if (document.startViewTransition && !reduce) document.startViewTransition(function () { fn(); render(); }); else { fn(); render(); } };
+    var irA = function (c) { cambiar(function () { city = c; shown = 24; setCity(city); }); var y = nf.getBoundingClientRect().top + scrollY - 70; if (y < scrollY) scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); };
     paintChips();
-    var q0 = new URLSearchParams(location.search).get('q'); if (q0) qIn.value = q0;
+    var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1';
     fetch(BASE + 'news.json').then(function (r) { return r.json(); }).then(function (j) {
-      all = j.items; render();
+      all = j.items;
+      if (city || q0 || oficiales) render(); else { paintChips(); paintAgo(list); }
       // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
-      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { city = b.dataset.v; shown = 24; setCity(city); render(); }); });
+      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { irA(b.dataset.v); }); });
+      ofiB.addEventListener('click', function () { cambiar(function () { oficiales = !oficiales; shown = 24; }); });
+      list.addEventListener('click', function (e) { var b = e.target.closest('[data-ver-ciudad]'); if (b) irA(b.dataset.verCiudad); });
       cityListeners.push(function (c) { if (c === city) return; city = c; shown = 24; render(); });
       if (desdeUrl && city !== getCity()) setCity(city);
       var t; qIn.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { shown = 24; render(); }, 120); });
