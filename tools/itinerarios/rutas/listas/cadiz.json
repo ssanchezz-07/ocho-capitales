@@ -105,6 +105,55 @@
     "Horas: fila «paso» de la tabla del programa (pág. 8)."
    ]
   },
+  "humillacion-piedad-cadiz": {
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 8)",
+   "calles": [
+    "Iglesia de Santiago Apóstol",
+    "Plaza de la Catedral",
+    "Arquitecto Acero",
+    "Estación de Penitencia en la S.I.C.",
+    "Plaza de la Catedral",
+    "Compañía",
+    "Santiago",
+    "Plaza Candelaria",
+    "Montañés",
+    "Plaza Palillero",
+    "Novena",
+    "Ancha",
+    "Sagasta",
+    "Cervantes",
+    "Gaspar del Pino",
+    "San Miguel",
+    "Sacramento",
+    "Barrié",
+    "Plaza Topete",
+    "Compañía",
+    "Plaza de la Catedral",
+    "Iglesia de Santiago Apóstol"
+   ],
+   "horas": {
+    "0": "18:55",
+    "3": "19:30",
+    "4": "20:05",
+    "7": "20:35",
+    "9": "23:20",
+    "21": "00:00"
+   },
+   "regreso_desde": 4,
+   "catedral": {
+    "entra": {
+     "id": "fachada de Arquitecto Acero, punto aproximado",
+     "lat": 36.52899,
+     "lon": -6.29567
+    },
+    "sale": 7063298453,
+    "nombre": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)"
+   },
+   "rejilla": false,
+   "notas": [
+    "Horas: fila «paso» de la tabla del programa (pág. 8)."
+   ]
+  },
   "la-borriquita-cadiz": {
    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 9)",
    "calles": [
@@ -156,10 +205,17 @@
     "19": "19:15",
     "37": "01:05"
    },
+   "hitos": [
+    9
+   ],
+   "rectos": [
+    10
+   ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 9)."
+    "Horas: fila «paso» de la tabla del programa (pág. 9).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "las-penas-cadiz": {
@@ -202,10 +258,17 @@
     "20": "20:00",
     "26": "22:45"
    },
+   "hitos": [
+    10
+   ],
+   "rectos": [
+    11
+   ],
    "regreso_desde": 14,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 9)."
+    "Horas: fila «paso» de la tabla del programa (pág. 9).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "sagrada-cena-cadiz": {
@@ -250,11 +313,18 @@
     "19": "20:40",
     "28": "23:55"
    },
+   "hitos": [
+    9
+   ],
+   "rectos": [
+    10
+   ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 10).",
-    "Erratas del programa corregidas al separar calles: falta la coma tras el paréntesis."
+    "Erratas del programa corregidas al separar calles: falta la coma tras el paréntesis.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "el-despojado-cadiz": {
@@ -318,12 +388,17 @@
    },
    "hitos": [
     1,
-    44
+    44,
+    14
+   ],
+   "rectos": [
+    15
    ],
    "regreso_desde": 18,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 10)."
+    "Horas: fila «paso» de la tabla del programa (pág. 10).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "humildad-y-paciencia-cadiz": {
@@ -362,10 +437,17 @@
     "14": "21:40",
     "22": "01:10"
    },
+   "hitos": [
+    4
+   ],
+   "rectos": [
+    5
+   ],
    "regreso_desde": 8,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 11)."
+    "Horas: fila «paso» de la tabla del programa (pág. 11).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "nazareno-del-amor-cadiz": {
@@ -406,10 +488,17 @@
     "16": "20:20",
     "24": "23:25"
    },
+   "hitos": [
+    6
+   ],
+   "rectos": [
+    7
+   ],
    "regreso_desde": 10,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 12)."
+    "Horas: fila «paso» de la tabla del programa (pág. 12).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-palma-cadiz": {
@@ -464,10 +553,17 @@
     "26": "21:10",
     "38": "00:00"
    },
+   "hitos": [
+    16
+   ],
+   "rectos": [
+    17
+   ],
    "regreso_desde": 20,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 12)."
+    "Horas: fila «paso» de la tabla del programa (pág. 12).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "el-prendimiento-cadiz": {
@@ -509,10 +605,17 @@
     "18": "22:00",
     "25": "00:40"
    },
+   "hitos": [
+    8
+   ],
+   "rectos": [
+    9
+   ],
    "regreso_desde": 12,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 14)."
+    "Horas: fila «paso» de la tabla del programa (pág. 14).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "vera-cruz-cadiz": {
@@ -555,10 +658,17 @@
     "16": "22:55",
     "26": "00:45"
    },
+   "hitos": [
+    6
+   ],
+   "rectos": [
+    7
+   ],
    "regreso_desde": 10,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 14)."
+    "Horas: fila «paso» de la tabla del programa (pág. 14).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-sanidad-cadiz": {
@@ -597,11 +707,18 @@
     "17": "20:50",
     "22": "22:45"
    },
+   "hitos": [
+    7
+   ],
+   "rectos": [
+    8
+   ],
    "regreso_desde": 11,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 15).",
-    "Sede 2026: «salir y recogerse en el Oratorio de San Felipe Neri» (Cádiz Directo, guía, 26-3-2026)"
+    "Sede 2026: «salir y recogerse en el Oratorio de San Felipe Neri» (Cádiz Directo, guía, 26-3-2026)",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-piedad-cadiz": {
@@ -641,10 +758,17 @@
     "15": "21:35",
     "23": "00:35"
    },
+   "hitos": [
+    5
+   ],
+   "rectos": [
+    6
+   ],
    "regreso_desde": 9,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 15)."
+    "Horas: fila «paso» de la tabla del programa (pág. 15).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "jesus-caido-el-senor-del-parque-cadiz": {
@@ -691,13 +815,18 @@
    },
    "hitos": [
     1,
-    26
+    26,
+    9
+   ],
+   "rectos": [
+    10
    ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 16).",
-    "Sede 2026: «volverá a su capilla del Parque Genovés tras su salida desde San Francisco» (Cádiz Directo, 4-3-2026)"
+    "Sede 2026: «volverá a su capilla del Parque Genovés tras su salida desde San Francisco» (Cádiz Directo, 4-3-2026)",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-columna-cadiz": {
@@ -741,10 +870,17 @@
     "23": "22:50",
     "27": "00:15"
    },
+   "hitos": [
+    13
+   ],
+   "rectos": [
+    14
+   ],
    "regreso_desde": 17,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 16)."
+    "Horas: fila «paso» de la tabla del programa (pág. 16).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "ecce-homo-cadiz": {
@@ -785,10 +921,17 @@
     "19": "23:35",
     "24": "01:15"
    },
+   "hitos": [
+    9
+   ],
+   "rectos": [
+    10
+   ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 17)."
+    "Horas: fila «paso» de la tabla del programa (pág. 17).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-sentencia-cadiz": {
@@ -839,10 +982,17 @@
     "20": "20:40",
     "34": "00:45"
    },
+   "hitos": [
+    10
+   ],
+   "rectos": [
+    11
+   ],
    "regreso_desde": 14,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 18)."
+    "Horas: fila «paso» de la tabla del programa (pág. 18).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "las-cigarreras-cadiz": {
@@ -888,10 +1038,17 @@
     "17": "21:35",
     "29": "01:55"
    },
+   "hitos": [
+    7
+   ],
+   "rectos": [
+    8
+   ],
    "regreso_desde": 11,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 18)."
+    "Horas: fila «paso» de la tabla del programa (pág. 18).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "las-aguas-cadiz": {
@@ -933,11 +1090,18 @@
     "19": "22:20",
     "25": "00:35"
    },
+   "hitos": [
+    9
+   ],
+   "rectos": [
+    10
+   ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 20).",
-    "Sede 2026: «saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio."
+    "Sede 2026: «saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "el-caminito-cadiz": {
@@ -985,12 +1149,17 @@
     "30": "01:30"
    },
    "hitos": [
-    28
+    28,
+    11
+   ],
+   "rectos": [
+    12
    ],
    "regreso_desde": 15,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 20)."
+    "Horas: fila «paso» de la tabla del programa (pág. 20).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "los-afligidos-cadiz": {
@@ -1034,11 +1203,18 @@
     "21": "23:05",
     "27": "00:05"
    },
+   "hitos": [
+    11
+   ],
+   "rectos": [
+    12
+   ],
    "regreso_desde": 15,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 21).",
-    "Erratas del programa corregidas al separar calles: falta el espacio tras la coma."
+    "Erratas del programa corregidas al separar calles: falta el espacio tras la coma.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "oracion-en-el-huerto-cadiz": {
@@ -1098,11 +1274,18 @@
     "26": "23:35",
     "43": "03:00"
    },
+   "hitos": [
+    16
+   ],
+   "rectos": [
+    17
+   ],
    "regreso_desde": 20,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 21).",
-    "Erratas del programa corregidas al separar calles: falta la coma tras el paréntesis."
+    "Erratas del programa corregidas al separar calles: falta la coma tras el paréntesis.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "nazareno-de-santa-maria-cadiz": {
@@ -1156,11 +1339,18 @@
     "18": "00:35",
     "37": "06:45"
    },
+   "hitos": [
+    8
+   ],
+   "rectos": [
+    9
+   ],
    "regreso_desde": 12,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 22).",
-    "Erratas del programa corregidas al separar calles: punto en lugar de coma."
+    "Erratas del programa corregidas al separar calles: punto en lugar de coma.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "medinaceli-cadiz": {
@@ -1204,11 +1394,18 @@
     "20": "01:30",
     "27": "04:20"
    },
+   "hitos": [
+    10
+   ],
+   "rectos": [
+    11
+   ],
    "regreso_desde": 14,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 24).",
-    "Sede 2026: «se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)"
+    "Sede 2026: «se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "el-perdon-cadiz": {
@@ -1258,11 +1455,18 @@
     "15": "04:45",
     "33": "09:25"
    },
+   "hitos": [
+    5
+   ],
+   "rectos": [
+    6
+   ],
    "regreso_desde": 9,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 24).",
-    "Sede 2026: «mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo»."
+    "Sede 2026: «mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo».",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "siete-palabras-cadiz": {
@@ -1295,7 +1499,7 @@
     "Columela",
     "San Francisco",
     "Plaza San Agustín",
-    "San Agustín",
+    "San Francisco",
     "Nueva",
     "Plaza San Juan de Dios",
     "San Juan de Dios",
@@ -1313,10 +1517,18 @@
     "23": "22:50",
     "34": "01:20"
    },
+   "hitos": [
+    13
+   ],
+   "rectos": [
+    14
+   ],
    "regreso_desde": 17,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 26)."
+    "Horas: fila «paso» de la tabla del programa (pág. 26).",
+    "Erratas del programa corregidas al separar calles: «San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-expiracion-cadiz": {
@@ -1359,11 +1571,18 @@
     "18": "23:25",
     "26": "02:30"
    },
+   "hitos": [
+    8
+   ],
+   "rectos": [
+    9
+   ],
    "regreso_desde": 12,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 26).",
-    "Sede 2026: «Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen."
+    "Sede 2026: «Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026) La entrada no la dice la prensa; el itinerario oficial acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "el-descendimiento-cadiz": {
@@ -1406,10 +1625,17 @@
     "21": "00:15",
     "26": "02:00"
    },
+   "hitos": [
+    11
+   ],
+   "rectos": [
+    12
+   ],
    "regreso_desde": 15,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 27)."
+    "Horas: fila «paso» de la tabla del programa (pág. 27).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-buena-muerte-cadiz": {
@@ -1447,10 +1673,17 @@
     "14": "00:40",
     "21": "02:30"
    },
+   "hitos": [
+    4
+   ],
+   "rectos": [
+    5
+   ],
    "regreso_desde": 8,
    "rejilla": false,
    "notas": [
-    "Horas: fila «paso» de la tabla del programa (pág. 27)."
+    "Horas: fila «paso» de la tabla del programa (pág. 27).",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "ecce-mater-tua-cadiz": {
@@ -1482,10 +1715,17 @@
     "6": "02:15",
     "19": "04:00"
    },
+   "hitos": [
+    16
+   ],
+   "rectos": [
+    17
+   ],
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 28).",
-    "El itinerario oficial no pasa por la Catedral (no hace estación de penitencia): todo va en «ida»."
+    "El itinerario oficial no pasa por la Catedral (no hace estación de penitencia): todo va en «ida».",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "santo-entierro-cadiz": {
@@ -1526,12 +1766,19 @@
     "19": "20:05",
     "24": "22:05"
    },
+   "hitos": [
+    9
+   ],
+   "rectos": [
+    10
+   ],
    "regreso_desde": 13,
    "rejilla": false,
    "notas": [
     "Horas: fila «paso» de la tabla del programa (pág. 28).",
     "Sede 2026: «salida y regreso al Oratorio» (Cádiz Directo, 4-3-2026)",
-    "Erratas del programa corregidas al separar calles: falta la coma; falta la coma tras el paréntesis."
+    "Erratas del programa corregidas al separar calles: falta la coma; falta la coma tras el paréntesis.",
+    "Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía."
    ]
   },
   "la-resurreccion-cadiz": {

@@ -4,8 +4,8 @@
 
 ## Estado (2026-10-26)
 - **Fase 1 (datos): hecha.** Las 33 salidas procesionales de Cádiz de 2026 tienen lista oficial de calles completa, literal y en orden, separada en ida (hasta la Catedral) y regreso, con horas de paso y sede de salida y entrada con fuente.
-- **Fase 2 (trazado): hecha y publicada.** Las 32 con ficha en el portal, trazadas con el método nuevo y publicadas en `site/data/recorridos/cadiz.json`. Evaluador: **32 «nuevo»** (empatan o mejoran en todo a lo publicado). Capturas revisadas a ojo. `node site/build.mjs` sin errores; `probar-plano.py cadiz` con Playwright a 390 y 1440 px: **8/8** (32 recorridos, 10 jornadas, sin desbordamiento ni errores de consola). Entra la **Sanidad**, que antes no estaba.
-- **Queda:** la Humillación (sin ficha en el portal) y la revisión de Pablo en el editor (lista de abajo).
+- **Fase 2 (trazado): hecha y publicada.** Las **33** salidas, trazadas con el método nuevo y publicadas en `site/data/recorridos/cadiz.json` (la Humillación desde el 2026-10-26, con ficha propia). Evaluador: **33 «nuevo»**. `node site/build.mjs` sin errores; `probar-plano.py cadiz` con Playwright a 390 y 1440 px. Entran la **Sanidad** y la **Humillación**, que antes no estaban.
+- **Decisiones de Pablo (2026-10-26), ya aplicadas:** Siete Palabras «San Agustín» = San Francisco (errata); Plaza de San Juan de Dios cruzada de frente de Nueva a Pelota; «Virgen de las Penas» = la vía de la Taberna Las Banderas (OSM «Calle San Pablo», way/39723962); «Plaza Pinto» = Plaza del Tío de la Tiza; el Perdón en «Jueves Santo y Madrugada»; Humillación con ficha propia «Humillación (Piedad)» (alta en `tools/sources/complementos.json`, `visperas.nuevas`).
 - **Regenerar** (desde `tools/itinerarios/rutas/`, con GraphHopper en marcha y `cache/osm-cadiz.json` copiado de la carpeta original): `node lista-cadiz.mjs` → `node emparejar.mjs cadiz` → `node evaluar.mjs cadiz` → `node publicar.mjs cadiz` → `node site/build.mjs` → `python -I probar-plano.py cadiz`.
 
 ### Cómo se traza Cádiz (lo propio de la capital)
@@ -43,19 +43,15 @@ node tools/itinerarios/listas-cadiz.mjs
 Ninguna hermandad se queda sin lista completa. Estas tienen algo que conviene mirar:
 | Hermandad | Qué mirar |
 |---|---|
-| **Humillación** (Sábado de Pasión, sale de Santiago) | Es una salida nueva de 2026 (cotitular de la Piedad). **No tiene ficha en el portal** (`portal.json`), así que el plano no puede mostrarla hasta que la tenga. ¿Ficha propia o dentro de la Piedad? Decisión tuya. |
-| **El Perdón** | El programa la pone en la **Madrugada**; el portal, en Viernes Santo (sale a las 00:50). La entrada en la Catedral sale del itinerario («…Arquitecto Acero, Plaza de la Catedral, a su Templo»), no de la prensa. |
+| **El Perdón** | Ahora en «Jueves Santo y Madrugada» (sale a las 00:50). La entrada en la Catedral sale del itinerario («…Arquitecto Acero, Plaza de la Catedral, a su Templo»), no de la prensa. |
 | **Las Aguas** | La prensa da la salida desde San Felipe Neri; la entrada la deduzco del itinerario («Torre, Santa Inés a su Templo»). |
 | **Expiración** | Entrada en el Carmen deducida del itinerario («Alameda Hermanas Carvia Bernal (Izq), a su Templo»). |
-| **Siete Palabras** | El regreso dice «Plaza San Agustín, **San Agustín**, Nueva»: parece errata por «San Francisco» (así lo hacen todas las demás). Se deja literal; mirar en el editor. |
 | **Jesús Caído** | El programa escribe «Plaza **Istmo.** Cristo de la Vera-Cruz» (por «Stmo.»); la calle limpia ya va corregida y anotada. Pasa por el interior del Parque Genovés (Paseo de las Palmeras). |
 | **Piedad, Afligidos** | «Plaza de Pío XII» es la Plaza de la Catedral (GCatholic da la Catedral en «Plaza del Pío XII»). OSM no tiene ese nombre: hará falta alias. |
 | **Ecce Mater Tua** | No hace estación de penitencia: todo el recorrido va como «ida». Tabla de horas con solo salida, Palillero y entrada. |
 | **La Resurrección** | La tabla de horas del programa dice **2025**, no 2026. Se usa con ese aviso. |
 | **Despojado** | Sale y entra por el interior del Colegio Salesianos San Ignacio (Avda. María Auxiliadora 7). |
 | **Servitas y Obediencia** (vísperas) | Su itinerario pone «Plaza de la Catedral, Arquitecto Acero, (Estación)»: lo trazo entrando por Arquitecto Acero y saliendo por la puerta principal, como en 2025 (opción «catedral» de su lista). Es una lectura del orden de calles: confírmalo. Antes Servitas salía a 326 m de San Lorenzo. |
-| **Todas (Carrera Oficial)** | Pequeño gancho en la **Plaza de San Juan de Dios** entre Nueva y Pelota: OSM no une bien esas calles con la plaza (hueco de 96 m). Mirar en el editor si merece un punto de paso. |
-| **Palma y Huerto** | «Virgen de las Penas» y «Plaza Pinto» no están en OSM con ese nombre: no se trazan (no se inventa). |
 
 ## Falta
 - **Direcciones postales** de la mayoría de templos: GCatholic y la diócesis no las dan en abierto; Nominatim solo da la calle más cercana, y no la uso como dirección. Cada sede va con su edificio de OSM y su fuente; la dirección solo donde una fuente la da (Santiago, Catedral, Salesianos, Castrense).

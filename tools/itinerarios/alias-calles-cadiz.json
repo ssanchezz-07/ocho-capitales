@@ -38,6 +38,10 @@
   "Avda. 4 de diciembre de 1977": "el propio programa la escribe también «Avda. Cuatro de diciembre de 1977» (Prendimiento)",
   "Obispo José María Rancés": "mismo nombre abreviado en OSM",
   "Stmo. Cristo el Perdón": "mismo nombre en OSM («del Perdón»)",
-  "sedes": "sedes-cadiz.json; Catedral: puerta principal, nodo OSM 7063298453; Salesianos: OSM way/157632556"
- }
+  "sedes": "sedes-cadiz.json; Catedral: puerta principal, nodo OSM 7063298453; Salesianos: OSM way/157632556",
+  "Virgen de las Penas": "Pablo (2026-10-26): es la vía pequeña de la Taberna Las Banderas, que une Hermano Ignacio con Virgen de la Palma; en OSM es «Calle San Pablo» (way/39723962), la única que las une",
+  "Plaza Pinto": "Pablo (2026-10-26): «Plaza Pinto» es el nombre antiguo de la Plaza del Tío de la Tiza (las dos hermandades la ponen entre Pastora y Hermano Ignacio)"
+ },
+ "Virgen de las Penas": "Calle San Pablo",
+ "Plaza Pinto": "Plaza Tío de la Tiza"
 }

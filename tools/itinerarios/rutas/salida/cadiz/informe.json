@@ -289,9 +289,9 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral) (nodos fachada de Arquitecto Acero, punto aproximado y 7063298453): sin calle, línea por dentro",
-  "ms_graphhopper": 320,
+  "ms_graphhopper": 148,
   "largo_m": 2125,
-  "ms_total": 426
+  "ms_total": 177
  },
  "merced-obediencia-cadiz": {
   "id": "merced-obediencia-cadiz",
@@ -637,9 +637,9 @@
   "enlaces": [
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 135,
+  "ms_graphhopper": 83,
   "largo_m": 2140,
-  "ms_total": 191
+  "ms_total": 105
  },
  "la-borriquita-cadiz": {
   "id": "la-borriquita-cadiz",
@@ -648,7 +648,7 @@
   "avisos": [
    "hueco de 78 m entre «Plocia» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 114 m entre «Plaza San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 78 m entre «Plaza San Juan de Dios» y «Plocia»: en OSM no se tocan",
@@ -809,21 +809,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -834,7 +819,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -1209,14 +1194,15 @@
   ],
   "enlaces": [
    "9 m entre «Plaza Constitución» y «Cuesta de las Calesas»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "9 m entre «Cuesta de las Calesas» y «Plaza de la Constitución»",
    "37 m entre «Acacias» y «Brunete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 296,
-  "largo_m": 8048,
-  "ms_total": 458
+  "ms_graphhopper": 186,
+  "largo_m": 7924,
+  "ms_total": 227
  },
  "las-penas-cadiz": {
   "id": "las-penas-cadiz",
@@ -1225,7 +1211,7 @@
   "avisos": [
    "hueco de 80 m entre «Plaza Topete» y «Compañía»: en OSM no se tocan",
    "hueco de 43 m entre «Plaza de la Catedral» y «Cobos»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -1372,21 +1358,6 @@
     "forzado": false
    },
    {
-    "i": 10,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 11,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -1397,7 +1368,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -1590,12 +1561,13 @@
   ],
   "enlaces": [
    "39 m entre «Compañía» y «Plaza de la Catedral»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 142,
-  "largo_m": 2929,
-  "ms_total": 187
+  "ms_graphhopper": 49,
+  "largo_m": 2805,
+  "ms_total": 65
  },
  "sagrada-cena-cadiz": {
   "id": "sagrada-cena-cadiz",
@@ -1604,7 +1576,7 @@
   "avisos": [
    "hueco de 118 m entre «Lázaro Dou» y «Plaza de San Juan de Dios»: en OSM no se tocan",
    "hueco de 114 m entre «Plaza de San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza de San Juan de Dios»: en OSM no se tocan"
   ],
@@ -1738,21 +1710,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -1763,7 +1720,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -1995,13 +1952,14 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 137,
-  "largo_m": 2942,
-  "ms_total": 191
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 93,
+  "largo_m": 2818,
+  "ms_total": 115
  },
  "el-despojado-cadiz": {
   "id": "el-despojado-cadiz",
@@ -2011,7 +1969,7 @@
    "hueco de 84 m entre «Poeta Nieto» y «Avda. Andalucía»: en OSM no se tocan",
    "hueco de 118 m entre «Lázaro Dou» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 114 m entre «Plaza San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 80 m entre «Plaza las Flores» y «Compañía»: en OSM no se tocan",
    "hueco de 48 m entre «Plaza de la Catedral» y «Pelota»: en OSM no se tocan",
@@ -2221,21 +2179,6 @@
     "forzado": false
    },
    {
-    "i": 14,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 15,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -2246,7 +2189,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -2656,6 +2599,7 @@
   ],
   "enlaces": [
    "9 m entre «Plaza de la Constitución» y «Cuesta de las Calesas»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "34 m entre «Columela» y «Plaza las Flores»",
    "39 m entre «Compañía» y «Plaza de la Catedral»",
@@ -2663,16 +2607,16 @@
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 346,
-  "largo_m": 8316,
-  "ms_total": 442
+  "ms_graphhopper": 208,
+  "largo_m": 8191,
+  "ms_total": 251
  },
  "humildad-y-paciencia-cadiz": {
   "id": "humildad-y-paciencia-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 11)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -2736,21 +2680,6 @@
     "forzado": false
    },
    {
-    "i": 4,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 5,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -2761,7 +2690,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -2972,20 +2901,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 61,
-  "largo_m": 2315,
-  "ms_total": 100
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 66,
+  "largo_m": 2190,
+  "ms_total": 80
  },
  "nazareno-del-amor-cadiz": {
   "id": "nazareno-del-amor-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 12)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
@@ -3065,21 +2995,6 @@
     "forzado": false
    },
    {
-    "i": 6,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 7,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -3090,7 +3005,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -3302,23 +3217,22 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 79,
-  "largo_m": 2360,
-  "ms_total": 117
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 81,
+  "largo_m": 2236,
+  "ms_total": 99
  },
  "la-palma-cadiz": {
   "id": "la-palma-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 12)",
   "avisos": [
-   "«Virgen de las Penas» sin equivalente en OSM: no se traza (no se inventa)",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "hueco de 40 m entre «Hermano Ignacio» y «Virgen de la Palma»: en OSM no se tocan"
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
@@ -3546,21 +3460,6 @@
     "forzado": false
    },
    {
-    "i": 16,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 17,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -3571,7 +3470,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -3806,6 +3705,18 @@
     "forzado": false
    },
    {
+    "i": 36,
+    "lugar": "Virgen de las Penas",
+    "tipo": "calle",
+    "osm": "Calle San Pablo",
+    "vias": [
+     39723962
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
     "i": 37,
     "lugar": "Virgen de la Palma",
     "tipo": "calle",
@@ -3814,27 +3725,28 @@
      103155690
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 40,
+    "hueco_entrada_m": 0,
     "forzado": false
    }
   ],
   "enlaces": [
    "8 m entre «Cristo de la Misericordia» y «Martínez Campos»",
    "34 m entre «Plaza Topete» y «Columela»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "34 m entre «Columela» y «Plaza Topete»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 186,
-  "largo_m": 3489,
-  "ms_total": 243
+  "ms_graphhopper": 90,
+  "largo_m": 3364,
+  "ms_total": 122
  },
  "el-prendimiento-cadiz": {
   "id": "el-prendimiento-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 14)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -3959,21 +3871,6 @@
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 9,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -3984,7 +3881,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -4181,19 +4078,20 @@
   ],
   "enlaces": [
    "7 m entre «Plaza Argüelles» y «Plaza de España»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 79,
-  "largo_m": 3367,
-  "ms_total": 112
+  "ms_graphhopper": 60,
+  "largo_m": 3242,
+  "ms_total": 79
  },
  "vera-cruz-cadiz": {
   "id": "vera-cruz-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 14)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m, «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
@@ -4273,21 +4171,6 @@
     "forzado": false
    },
    {
-    "i": 6,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 7,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -4298,7 +4181,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -4543,20 +4426,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 144,
-  "largo_m": 2320,
-  "ms_total": 194
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 68,
+  "largo_m": 2196,
+  "ms_total": 88
  },
  "la-sanidad-cadiz": {
   "id": "la-sanidad-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 15)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -4660,21 +4544,6 @@
     "forzado": false
    },
    {
-    "i": 7,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 8,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -4685,7 +4554,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -4856,13 +4725,14 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 111,
-  "largo_m": 2600,
-  "ms_total": 150
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 42,
+  "largo_m": 2476,
+  "ms_total": 53
  },
  "la-piedad-cadiz": {
   "id": "la-piedad-cadiz",
@@ -4870,7 +4740,7 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 15)",
   "avisos": [
    "hueco de 43 m entre «Plaza de Pío XII» y «Cobos»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 43 m entre «Cobos» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
@@ -4947,21 +4817,6 @@
     "forzado": false
    },
    {
-    "i": 5,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 6,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -4972,7 +4827,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -5187,20 +5042,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 181,
-  "largo_m": 2460,
-  "ms_total": 240
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 79,
+  "largo_m": 2336,
+  "ms_total": 93
  },
  "jesus-caido-el-senor-del-parque-cadiz": {
   "id": "jesus-caido-el-senor-del-parque-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 16)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
@@ -5321,21 +5177,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -5346,7 +5187,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -5557,20 +5398,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 163,
-  "largo_m": 2878,
-  "ms_total": 247
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 52,
+  "largo_m": 2754,
+  "ms_total": 70
  },
  "la-columna-cadiz": {
   "id": "la-columna-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 16)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -5758,21 +5600,6 @@
     "forzado": false
    },
    {
-    "i": 13,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 14,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -5783,7 +5610,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -5940,20 +5767,21 @@
   ],
   "enlaces": [
    "4 m entre «Plaza de San Antonio» y «Ancha»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 101,
-  "largo_m": 2435,
-  "ms_total": 168
+  "ms_graphhopper": 70,
+  "largo_m": 2311,
+  "ms_total": 87
  },
  "ecce-homo-cadiz": {
   "id": "ecce-homo-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 17)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -6082,21 +5910,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -6107,7 +5920,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -6285,12 +6098,13 @@
   ],
   "enlaces": [
    "32 m entre «Barrié» y «José del Toro»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 74,
-  "largo_m": 2117,
-  "ms_total": 137
+  "ms_graphhopper": 77,
+  "largo_m": 1992,
+  "ms_total": 91
  },
  "la-sentencia-cadiz": {
   "id": "la-sentencia-cadiz",
@@ -6298,7 +6112,7 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 18)",
   "avisos": [
    "hueco de 114 m entre «San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza de San Juan de Dios»: en OSM no se tocan"
   ],
@@ -6421,21 +6235,6 @@
     "forzado": false
    },
    {
-    "i": 10,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 11,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -6446,7 +6245,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -6727,13 +6526,14 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 131,
-  "largo_m": 2860,
-  "ms_total": 216
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 54,
+  "largo_m": 2736,
+  "ms_total": 77
  },
  "las-cigarreras-cadiz": {
   "id": "las-cigarreras-cadiz",
@@ -6742,7 +6542,7 @@
   "avisos": [
    "hueco de 78 m entre «Plocia» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 114 m entre «Plaza San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza de San Juan de Dios»: en OSM no se tocan",
    "hueco de 78 m entre «Plaza de San Juan de Dios» y «Plocia»: en OSM no se tocan"
@@ -6853,21 +6653,6 @@
     "forzado": false
    },
    {
-    "i": 7,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 8,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -6878,7 +6663,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -7146,20 +6931,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 87,
-  "largo_m": 3214,
-  "ms_total": 169
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 84,
+  "largo_m": 3090,
+  "ms_total": 104
  },
  "las-aguas-cadiz": {
   "id": "las-aguas-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 20)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -7291,21 +7077,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -7316,7 +7087,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -7495,21 +7266,22 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza de San Antonio»"
   ],
-  "ms_graphhopper": 173,
-  "largo_m": 2699,
-  "ms_total": 239
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 104,
+  "largo_m": 2575,
+  "ms_total": 120
  },
  "el-caminito-cadiz": {
   "id": "el-caminito-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 34; ficha, pág. 20)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -7668,21 +7440,6 @@
     "forzado": false
    },
    {
-    "i": 11,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 12,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -7693,7 +7450,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -7909,12 +7666,13 @@
   "enlaces": [
    "17 m entre «Isabel la Católica» y «Honduras»",
    "7 m entre «Plaza Argüelles» y «Plaza de España»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 99,
-  "largo_m": 2860,
-  "ms_total": 200
+  "ms_graphhopper": 50,
+  "largo_m": 2736,
+  "ms_total": 78
  },
  "los-afligidos-cadiz": {
   "id": "los-afligidos-cadiz",
@@ -7924,7 +7682,7 @@
    "hueco de 80 m entre «Plaza Topete» y «Compañía»: en OSM no se tocan",
    "hueco de 59 m entre «Santiago» y «Plaza Pío XII»: en OSM no se tocan",
    "hueco de 43 m entre «Plaza Pío XII» y «Cobos»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -8083,21 +7841,6 @@
     "forzado": false
    },
    {
-    "i": 11,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 12,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -8108,7 +7851,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -8299,27 +8042,25 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "34 m entre «Columela» y «Plaza Topete»"
   ],
-  "ms_graphhopper": 79,
-  "largo_m": 2608,
-  "ms_total": 146
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 58,
+  "largo_m": 2484,
+  "ms_total": 75
  },
  "oracion-en-el-huerto-cadiz": {
   "id": "oracion-en-el-huerto-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 21)",
   "avisos": [
-   "«Plaza Pinto» sin equivalente en OSM: no se traza (no se inventa)",
-   "«Virgen de las Penas» sin equivalente en OSM: no se traza (no se inventa)",
    "hueco de 80 m entre «Plaza de las Flores» y «Compañía»: en OSM no se tocan",
    "hueco de 43 m entre «Plaza Catedral» y «Cobos»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
-   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "hueco de 40 m entre «Hermano Ignacio» y «Virgen de la Palma»: en OSM no se tocan"
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
+   "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
   "salida": {
@@ -8561,21 +8302,6 @@
     "forzado": false
    },
    {
-    "i": 16,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 17,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -8586,7 +8312,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -8802,6 +8528,18 @@
     "forzado": false
    },
    {
+    "i": 34,
+    "lugar": "Plaza Pinto",
+    "tipo": "calle",
+    "osm": "Plaza Tío de la Tiza",
+    "vias": [
+     82917959
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
     "i": 35,
     "lugar": "Hermano Ignacio",
     "tipo": "calle",
@@ -8810,7 +8548,19 @@
      82917963
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 18,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 36,
+    "lugar": "Virgen de las Penas",
+    "tipo": "calle",
+    "osm": "Calle San Pablo",
+    "vias": [
+     39723962
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -8822,7 +8572,7 @@
      103155690
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 40,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -8892,14 +8642,14 @@
   ],
   "enlaces": [
    "39 m entre «Compañía» y «Plaza Catedral»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
-   "34 m entre «Columela» y «Plaza Las Flores»",
-   "18 m entre «Pastora» y «Hermano Ignacio»"
+   "34 m entre «Columela» y «Plaza Las Flores»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 168,
-  "largo_m": 4024,
-  "ms_total": 256
+  "ms_graphhopper": 103,
+  "largo_m": 3900,
+  "ms_total": 132
  },
  "nazareno-de-santa-maria-cadiz": {
   "id": "nazareno-de-santa-maria-cadiz",
@@ -8907,7 +8657,7 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 22)",
   "avisos": [
    "hueco de 114 m entre «San Juan de Dios» y «Avda. 4 de diciembre de 1977»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
    "hueco de 66 m entre «Concepción Arenal» y «Santa María»: en OSM no se tocan"
@@ -9016,21 +8766,6 @@
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 9,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -9041,7 +8776,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -9402,19 +9137,20 @@
   ],
   "enlaces": [
    "16 m entre «Jabonería» y «San Juan de Dios»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 166,
-  "largo_m": 3706,
-  "ms_total": 303
+  "ms_graphhopper": 92,
+  "largo_m": 3582,
+  "ms_total": 118
  },
  "medinaceli-cadiz": {
   "id": "medinaceli-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 24)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "puntos de la lista lejos del trazado: «Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)» a 36 m"
   ],
@@ -9549,21 +9285,6 @@
     "forzado": false
    },
    {
-    "i": 10,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 11,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -9574,7 +9295,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -9779,14 +9500,15 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "8 m entre «Sagasta» y «Plaza San Francisco»"
   ],
-  "ms_graphhopper": 166,
-  "largo_m": 2762,
-  "ms_total": 233
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 59,
+  "largo_m": 2638,
+  "ms_total": 79
  },
  "el-perdon-cadiz": {
   "id": "el-perdon-cadiz",
@@ -9794,7 +9516,7 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 24)",
   "avisos": [
    "hueco de 43 m entre «Plaza de la Catedral» y «Cobos»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza de San Juan de Dios»: en OSM no se tocan"
   ],
@@ -9871,21 +9593,6 @@
     "forzado": false
    },
    {
-    "i": 5,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 6,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -9896,7 +9603,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -10266,22 +9973,22 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 103,
-  "largo_m": 3004,
-  "ms_total": 223
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 51,
+  "largo_m": 2880,
+  "ms_total": 75
  },
  "siete-palabras-cadiz": {
   "id": "siete-palabras-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 26)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
-   "hueco de 154 m entre «Plaza San Agustín» y «Nueva»: en OSM no se tocan",
    "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -10440,21 +10147,6 @@
     "forzado": false
    },
    {
-    "i": 13,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 14,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -10465,7 +10157,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -10625,6 +10317,21 @@
     "forzado": false
    },
    {
+    "i": 27,
+    "lugar": "San Francisco",
+    "tipo": "calle",
+    "osm": "Calle San Francisco",
+    "vias": [
+     27184864,
+     27185046,
+     27185076,
+     29983941
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
     "i": 28,
     "lugar": "Nueva",
     "tipo": "calle",
@@ -10633,7 +10340,7 @@
      118879631
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 154,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -10694,20 +10401,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 91,
-  "largo_m": 2735,
-  "ms_total": 178
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 103,
+  "largo_m": 2610,
+  "ms_total": 135
  },
  "la-expiracion-cadiz": {
   "id": "la-expiracion-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 26)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza de San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan",
    "hueco de 121 m entre «Buenos Aires» y «Alameda Hermanas Carvia Bernal»: en OSM no se tocan"
   ],
@@ -10832,21 +10540,6 @@
     "forzado": false
    },
    {
-    "i": 8,
-    "lugar": "Plaza de San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 9,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -10857,7 +10550,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -11067,13 +10760,14 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 121,
-  "largo_m": 3120,
-  "ms_total": 180
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 54,
+  "largo_m": 2995,
+  "ms_total": 74
  },
  "el-descendimiento-cadiz": {
   "id": "el-descendimiento-cadiz",
@@ -11081,7 +10775,7 @@
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 27)",
   "avisos": [
    "hueco de 175 m entre «Plaza Palillero» y «San Francisco»: en OSM no se tocan",
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -11245,21 +10939,6 @@
     "forzado": false
    },
    {
-    "i": 11,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 12,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -11270,7 +10949,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -11452,19 +11131,20 @@
   ],
   "enlaces": [
    "34 m entre «Plaza Topete» y «Columela»",
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
   "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
-  "ms_graphhopper": 122,
-  "largo_m": 2623,
-  "ms_total": 206
+  "ms_graphhopper": 90,
+  "largo_m": 2498,
+  "ms_total": 114
  },
  "la-buena-muerte-cadiz": {
   "id": "la-buena-muerte-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 27)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -11528,21 +11208,6 @@
     "forzado": false
    },
    {
-    "i": 4,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 5,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -11553,7 +11218,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -11750,20 +11415,21 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 149,
-  "largo_m": 1991,
-  "ms_total": 235
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 30,
+  "largo_m": 1867,
+  "ms_total": 51
  },
  "ecce-mater-tua-cadiz": {
   "id": "ecce-mater-tua-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 28)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -11979,21 +11645,6 @@
     "forzado": false
    },
    {
-    "i": 16,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 17,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -12004,7 +11655,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -12023,18 +11674,19 @@
    }
   ],
   "enlaces": [
-   "39 m entre «Plaza de la Catedral» y «Compañía»"
+   "39 m entre «Plaza de la Catedral» y «Compañía»",
+   "120 m entre «Nueva» y «Pelota»"
   ],
-  "ms_graphhopper": 101,
-  "largo_m": 1774,
-  "ms_total": 182
+  "ms_graphhopper": 29,
+  "largo_m": 1649,
+  "ms_total": 47
  },
  "santo-entierro-cadiz": {
   "id": "santo-entierro-cadiz",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 35; ficha, pág. 28)",
   "avisos": [
-   "hueco de 96 m entre «Nueva» y «Plaza San Juan de Dios»: en OSM no se tocan",
+   "hueco de 120 m entre «Nueva» y «Pelota»: en OSM no se tocan",
    "hueco de 48 m entre «Pelota» y «Plaza de la Catedral»: en OSM no se tocan"
   ],
   "correcciones": null,
@@ -12164,21 +11816,6 @@
     "forzado": false
    },
    {
-    "i": 9,
-    "lugar": "Plaza San Juan de Dios",
-    "tipo": "calle",
-    "osm": "Plaza de San Juan de Dios",
-    "vias": [
-     39724020,
-     39724022,
-     766573082,
-     1068406726
-    ],
-    "candidatas": 2,
-    "hueco_entrada_m": 96,
-    "forzado": false
-   },
-   {
     "i": 10,
     "lugar": "Pelota",
     "tipo": "calle",
@@ -12189,7 +11826,7 @@
      711504181
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 120,
     "forzado": false
    },
    {
@@ -12360,13 +11997,14 @@
     "forzado": false
    }
   ],
-  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
   "enlaces": [
+   "120 m entre «Nueva» y «Pelota»",
    "39 m entre «Plaza de la Catedral» y «Compañía»"
   ],
-  "ms_graphhopper": 102,
-  "largo_m": 2722,
-  "ms_total": 199
+  "por_la_catedral": "de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero (nodos 7063298453 y fachada de Arquitecto Acero, punto aproximado): sin calle, línea por dentro",
+  "ms_graphhopper": 53,
+  "largo_m": 2598,
+  "ms_total": 75
  },
  "la-resurreccion-cadiz": {
   "id": "la-resurreccion-cadiz",
@@ -12626,8 +12264,310 @@
    "39 m entre «Plaza de la Catedral» y «Compañía»",
    "4 m entre «Ancha» y «Plaza San Antonio»"
   ],
-  "ms_graphhopper": 77,
+  "ms_graphhopper": 43,
   "largo_m": 1726,
-  "ms_total": 135
+  "ms_total": 54
+ },
+ "humillacion-piedad-cadiz": {
+  "id": "humillacion-piedad-cadiz",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (itinerario, pág. 32; ficha, pág. 8)",
+  "avisos": [
+   "hueco de 80 m entre «Plaza Topete» y «Compañía»: en OSM no se tocan"
+  ],
+  "correcciones": null,
+  "salida": {
+   "punto": [
+    36.529705577777776,
+    -6.2956937
+   ],
+   "como": "templo en OSM: Iglesia de Santiago",
+   "fuente": "OpenStreetMap way 542083000",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    36.529705577777776,
+    -6.2956937
+   ],
+   "como": "templo en OSM: Iglesia de Santiago",
+   "fuente": "OpenStreetMap way 542083000",
+   "dir": null
+  },
+  "calles": [
+   {
+    "i": 1,
+    "lugar": "Plaza de la Catedral",
+    "tipo": "calle",
+    "osm": "Plaza de la Catedral",
+    "vias": [
+     756247890,
+     775436087,
+     1423954453
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 2,
+    "lugar": "Arquitecto Acero",
+    "tipo": "calle",
+    "osm": "Calle Arquitecto Acero",
+    "vias": [
+     66648041,
+     766650935,
+     1068406737
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Estación de Penitencia en la S.I.C.",
+    "tipo": "catedral",
+    "osm": "Catedral (por dentro)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 20,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Plaza de la Catedral",
+    "tipo": "calle",
+    "osm": "Plaza de la Catedral",
+    "vias": [
+     756247890,
+     775436087,
+     1423954453
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 5,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Compañía",
+    "tipo": "calle",
+    "osm": "Calle Compañía",
+    "vias": [
+     27185126
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 39,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Santiago",
+    "tipo": "calle",
+    "osm": "Calle Santiago",
+    "vias": [
+     39724012
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Plaza Candelaria",
+    "tipo": "calle",
+    "osm": "Plaza Candelaria",
+    "vias": [
+     39724008,
+     39724016,
+     985155256
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 8,
+    "lugar": "Montañés",
+    "tipo": "calle",
+    "osm": "Calle Montañés",
+    "vias": [
+     766321840
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "Plaza Palillero",
+    "tipo": "calle",
+    "osm": "Plaza del Palillero",
+    "vias": [
+     27184761
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Novena",
+    "tipo": "calle",
+    "osm": "Calle Novena",
+    "vias": [
+     27184156
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Ancha",
+    "tipo": "calle",
+    "osm": "Calle Ancha",
+    "vias": [
+     23950150
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Sagasta",
+    "tipo": "calle",
+    "osm": "Calle Sagasta",
+    "vias": [
+     27143775,
+     30838936,
+     30838937,
+     143182140,
+     259662807,
+     552202784,
+     767666956,
+     1068406756
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Cervantes",
+    "tipo": "calle",
+    "osm": "Calle Cervantes",
+    "vias": [
+     23950267
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Gaspar del Pino",
+    "tipo": "calle",
+    "osm": "Gaspar del Pino",
+    "vias": [
+     259526622,
+     259527651,
+     259527652,
+     259527653
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "San Miguel",
+    "tipo": "calle",
+    "osm": "Calle San Miguel",
+    "vias": [
+     29983944,
+     548139427,
+     766534054
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Sacramento",
+    "tipo": "calle",
+    "osm": "Calle Sacramento",
+    "vias": [
+     23950646,
+     225807070,
+     766741554,
+     767666949
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Barrié",
+    "tipo": "calle",
+    "osm": "Calle Barrié",
+    "vias": [
+     29983943,
+     766321841,
+     766741555
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Plaza Topete",
+    "tipo": "calle",
+    "osm": "Plaza Topete",
+    "vias": [
+     102478333
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Compañía",
+    "tipo": "calle",
+    "osm": "Calle Compañía",
+    "vias": [
+     27185126
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 80,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Plaza de la Catedral",
+    "tipo": "calle",
+    "osm": "Plaza de la Catedral",
+    "vias": [
+     756247890,
+     775436087,
+     1423954453
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 39,
+    "forzado": false
+   }
+  ],
+  "por_la_catedral": "de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral) (nodos fachada de Arquitecto Acero, punto aproximado y 7063298453): sin calle, línea por dentro",
+  "enlaces": [
+   "39 m entre «Plaza de la Catedral» y «Compañía»",
+   "39 m entre «Compañía» y «Plaza de la Catedral»"
+  ],
+  "ms_graphhopper": 48,
+  "largo_m": 1579,
+  "ms_total": 66
  }
 }

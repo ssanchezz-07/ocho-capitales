@@ -3,7 +3,6 @@
  "ciudad": "cadiz",
  "anio": 2026,
  "avisos": [
-  "humillacion-cadiz: no tiene ficha en el portal (portal.json); no se puede publicar en el plano hasta que la tenga",
   "ecce-mater-tua-cadiz: sin estación de penitencia en la Catedral",
   "la-resurreccion-cadiz: la tabla de horas del programa dice 2025"
  ],
@@ -334,10 +333,10 @@
     }
    }
   },
-  "humillacion-cadiz": {
+  "humillacion-piedad-cadiz": {
    "nombre_programa": "HUMILLACIÓN",
    "dia": "Sábado de Pasión",
-   "ficha_portal": false,
+   "ficha_portal": true,
    "fuente": {
     "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
     "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
@@ -5269,7 +5268,8 @@
     },
     {
      "texto": "San Agustín",
-     "calle": "San Agustín"
+     "calle": "San Francisco",
+     "errata": "«San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26)"
     },
     {
      "texto": "Nueva",
@@ -5300,6 +5300,9 @@
      "texto": "a su Templo",
      "fin": true
     }
+   ],
+   "erratas_del_programa": [
+    "«San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26)"
    ],
    "sede_canonica": {
     "texto": "Parroquia de Ntra. Sra. de la Merced.",

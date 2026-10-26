@@ -11,9 +11,9 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 const crudo = JSON.parse(fs.readFileSync(path.join(DIR, 'cache', 'cadiz-2026-crudo.json'), 'utf8'));
 const S = JSON.parse(fs.readFileSync(path.join(DIR, 'sedes-cadiz.json'), 'utf8'));
 
-// Cabecera del programa → ficha del portal (portal-cofrade/data/portal.json). La Humillación no tiene ficha.
+// Cabecera del programa → ficha del portal (portal-cofrade/data/portal.json). La Humillación tiene ficha desde el 2026-10-26 («Humillación (Piedad)», alta en tools/sources/complementos.json).
 const SLUG = {
-  'SERVITAS': 'servitas-cadiz', 'NAZARENO DE LA OBEDIENCIA': 'merced-obediencia-cadiz', 'HUMILLACIÓN': null,
+  'SERVITAS': 'servitas-cadiz', 'NAZARENO DE LA OBEDIENCIA': 'merced-obediencia-cadiz', 'HUMILLACIÓN': 'humillacion-piedad-cadiz',
   'LA BORRIQUITA': 'la-borriquita-cadiz', 'LAS PENAS': 'las-penas-cadiz', 'SAGRADA CENA': 'sagrada-cena-cadiz',
   'DESPOJADO': 'el-despojado-cadiz', 'HUMILDAD Y PACIENCIA': 'humildad-y-paciencia-cadiz', 'NAZARENO DEL AMOR': 'nazareno-del-amor-cadiz',
   'LA PALMA': 'la-palma-cadiz', 'EL PRENDIMIENTO': 'el-prendimiento-cadiz', 'VERA+CRUZ': 'vera-cruz-cadiz', 'SANIDAD': 'la-sanidad-cadiz',
@@ -33,6 +33,9 @@ const ERRATAS = [
   [/\)\s+(?=[A-ZÁÉÍÓÚ])/g, '), ', 'falta la coma tras el paréntesis'],
   [/,(?=\S)/g, ', ', 'falta el espacio tras la coma'],
 ];
+const ERRATAS_PABLO = {
+  'siete-palabras-cadiz': [{ tras: 'Plaza San Agustín', de: 'San Agustín', a: 'San Francisco', nota: '«San Agustín» por «San Francisco» (la calle que une la Plaza de San Agustín con Nueva; confirmado por Pablo el 2026-10-26)' }],
+};
 const CATEDRAL = /\(?\s*Estaci[oó]n de Penitencia en la S\.I\.C\.?\s*\)?/i;
 const LADO = [[/^(Izda?|Izqda?|Izq|izq|Lado Izda)\.?$/i, 'izquierda'], [/^(Dcha|Drcha|Dr-?cha)\.?$/i, 'derecha'], [/^centro$/i, 'centro'], [/^interior$/i, 'interior'],
   [/^lado Izda\.?$/i, 'izquierda'], [/^por el lado izquierdo$/i, 'izquierda']];
@@ -79,8 +82,10 @@ const FILAS = (n) => (n === 1 ? ['cruz_de_guia'] : n === 2 ? ['cruz_de_guia', 'p
 const res = {}, avisos = [];
 for (const h of crudo.hermandades) {
   if (!(h.cabecera in SLUG)) throw new Error('cabecera sin ficha: ' + h.cabecera);
-  const slug = SLUG[h.cabecera] ?? 'humillacion-cadiz';
+  const slug = SLUG[h.cabecera];
   const { out, erratas } = elementos(h.texto);
+  // Erratas del programa confirmadas por Pablo: la calle limpia se corrige; el texto literal se conserva
+  for (const c of ERRATAS_PABLO[slug] || []) { const k = out.findIndex((e, i) => e.calle === c.de && out[i - 1]?.calle === c.tras); if (k < 0) throw new Error(`errata no encontrada: ${slug} ${c.de}`); out[k].calle = c.a; out[k].errata = c.nota; erratas.push(c.nota); }
   const ic = out.findIndex((e) => e.catedral);
   const ida = ic >= 0 ? out.slice(0, ic + 1) : out, regreso = ic >= 0 ? out.slice(ic + 1) : [];
   const canon = templo(h.ficha.sede_canonica), esp = S.hermandades[slug];

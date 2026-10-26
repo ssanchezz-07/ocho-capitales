@@ -4,7 +4,7 @@
 //   como marca y la sede de entrada. «a su Templo» se sustituye por el nombre de la sede de entrada.
 // - horas: las de la fila del primer paso (o de la cruz de guía si la tabla solo tiene una fila), en salida, calle Nueva,
 //   Catedral (entrada y salida), Plaza Candelaria, Palillero y entrada.
-// - La Humillación (salida nueva de 2026) no tiene ficha en el portal: se queda fuera hasta que la tenga.
+// - Solo entran las que tienen ficha en el portal (la Humillación, salida nueva de 2026, la tiene desde el 2026-10-26).
 // Uso: node lista-cadiz.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -41,9 +41,14 @@ for (const [id, h] of Object.entries(D.hermandades)) {
   // marcas que no son calles de OSM: el interior del colegio y del parque, y la Plaza del Stmo. Cristo de la Vera Cruz
   // (junto a San Francisco), que OSM no tiene y que el parecido de nombres emparejaría con «Calle Cruz», a 600 m
   const hitos = calles.map((t, i) => (/^(colegio salesianos|interior del|plaza stmo\. cristo de la vera)/i.test(t) ? i : -1)).filter((i) => i >= 0);
+  // Nueva → Plaza de San Juan de Dios → Pelota: se cruza la plaza de frente, en línea recta, sin rodeo (Pablo, 2026-10-26).
+  // OSM solo tiene como vía el borde sur de la plaza: la plaza va como marca y Pelota se alcanza en recta desde Nueva.
+  const rectos = [];
+  calles.forEach((t, i) => { if (/^plaza (de )?san juan de dios$/i.test(t) && clave(calles[i - 1] || '') === 'nueva' && clave(calles[i + 1] || '') === 'pelota') { hitos.push(i); rectos.push(i + 1); } });
+  if (rectos.length) notas.push('Plaza de San Juan de Dios: de Nueva a Pelota en línea recta, de frente (Pablo, 2026-10-26); OSM no tiene la plaza como vía.');
   out.hermandades[id] = {
     fuente: `${h.fuente.url} (itinerario, pág. ${h.fuente.pagina_itinerario}; ficha, pág. ${h.fuente.pagina_ficha})`,
-    calles, horas, ...(hitos.length ? { hitos } : {}),
+    calles, horas, ...(hitos.length ? { hitos } : {}), ...(rectos.length ? { rectos } : {}),
     ...(idx.catedral_salida != null ? { regreso_desde: idx.catedral_salida } : {}),
     ...(alReves ? { catedral: { entra: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, sale: 7063298453, nombre: 'de la puerta de Arquitecto Acero a la principal (Plaza de la Catedral)' } } : {}),
     rejilla: false, notas,
