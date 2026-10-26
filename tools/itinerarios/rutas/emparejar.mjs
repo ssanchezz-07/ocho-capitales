@@ -9,7 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { ciudad, argumentos, dirSalida, sn, clave, TEMPLO, d2 } from './comun.mjs';
+import { ciudad, argumentos, dirSalida, sn, clave, TEMPLO, d2, dSeg } from './comun.mjs';
 
 export const GH = process.env.GH_URL || 'http://localhost:8989';
 const gapCoste = (d) => (d <= 3 ? 0 : d <= 40 ? 2 * d : d <= 400 ? 6 * d : 20 * d);
@@ -178,14 +178,20 @@ export function motor(c) {
       if (i > 0 && ch.estados[i - 1].gap > 3 && (ch.estados[i - 1].gap <= 40 || ((L.rectos || []).includes(f.i) && ch.estados[i - 1].gap <= 200)) && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
       if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${o.pc.nombre} (nodos ${o.pc.entra.id} y ${o.pc.sale.id}): sin calle, línea por dentro`; continue; }
       // «paso» (corrección con fuente): puntos de paso antes de entrar en este elemento, para seguir el camino que da la fuente
-      for (const p of corr.paso?.[f.i] || []) pon(X(...p));
+      // en los puntos de corrección se parte la petición: GraphHopper puede girar ahí (con pass_through daría la vuelta a la manzana)
+      const partir = () => { const u = segs.at(-1).at(-1); if (u) segs.push([u]); };
+      for (const p of corr.paso?.[f.i] || []) { pon(X(...p)); partir(); }
       // desde la sede se va directo al primer cruce (el punto de la calle más cercano a la puerta puede quedar «detrás» y obligar a dar la vuelta)
       if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
+      if (forz[f.i] && !(i === 0 && sedeS)) partir();
       // «cruzar» (corrección con fuente): plaza dibujada como área peatonal, que GraphHopper no enruta por dentro: se cruza en línea recta
       const cruza = !!corr.cruzar?.[f.i]; if (cruza) { segs.push([]); (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1})`); }
+      // en la primera y la última calle no se ponen puntos intermedios cerca de la sede: el nodo de la calle más cercano a la puerta
+      // puede quedar más allá de ella y el trazado pasaría la puerta para volver (pico)
+      const cercaSede = (xy) => (i === 0 && sedeS && d2(xy, X(...sedeS.punto)) < 100) || (i === R.length - 1 && sedeE && d2(xy, X(...sedeE.punto)) < 100);
       if (!cruza && f.tipo === 'calle' && ent[1] != null && sal[1] != null) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela
         const cam = caminoDentro(o, ent[1], sal[1]);
-        if (cam) { let acc = 0, ult = 0; for (let k = 1; k < cam.length; k++) { acc += d2(NODOS[cam[k]].xy, NODOS[cam[k - 1]].xy); if (acc - ult > 120 && k < cam.length - 1) { pon(NODOS[cam[k]].xy); ult = acc; } } }
+        if (cam) { let acc = 0, ult = 0; for (let k = 1; k < cam.length; k++) { acc += d2(NODOS[cam[k]].xy, NODOS[cam[k - 1]].xy); if (acc - ult > 120 && k < cam.length - 1 && !cercaSede(NODOS[cam[k]].xy)) { pon(NODOS[cam[k]].xy); ult = acc; } } }
       }
       if (!(i === R.length - 1 && sedeE)) pon(sal[0]);
       // media vuelta real (A · plaza · A): se deja girar ahí partiendo la petición
@@ -200,6 +206,16 @@ export function motor(c) {
     // GraphHopper engancha la sede a la calle más cercana: el trazado empieza y acaba en la puerta misma (unos metros de la puerta a la calle)
     if (geo.length && sedeS) { const dS = d2(X(...geo[0]), X(...sedeS.punto)); if (dS > 1.5 && dS < 60) geo.unshift(sedeS.punto); }
     if (geo.length && sedeE) { const dE = d2(X(...geo.at(-1)), X(...sedeE.punto)); if (dE > 1.5 && dE < 60) geo.push(sedeE.punto); }
+    // pico junto a la puerta: GraphHopper engancha a veces la puerta a un tramo al que solo llega pasándola y volviendo por el mismo sitio.
+    // Si el trazado ya pasa a < 12 m de la puerta y lo que sigue es una ida y vuelta (la vuelta a < 18 m de la ida), se corta ahí.
+    // Solo en la mitad final (entrada) o inicial (salida), para no tocar las vueltas reales a una plaza.
+    const idaYVuelta = (tr) => { if (tr.length < 3) return false; const P = tr.map((q) => X(...q)); let m = 0; for (let j = 1; j < P.length; j++) if (d2(P[j], P[0]) > d2(P[m], P[0])) m = j; if (d2(P[m], P[0]) < 25) return false; const ida = P.slice(0, m + 1); return P.slice(m).every((q) => ida.some((r, j) => j && dSeg(q, ida[j - 1], r) < 18)); }; // 18 m: la vuelta puede ir por la otra acera
+    const cerca = (q, P) => d2(X(...q), X(...P)) < 20, mitad = Math.floor(geo.length / 2);
+    // no se recorta lo que pasa por un punto de corrección (p. ej. la vuelta a la Plaza de los Mártires, que rodea la puerta)
+    const fijos = [...Object.values(corr.puntos || {}), ...Object.values(corr.paso || {}).flat()].map((p) => X(...p));
+    const conFijo = (tr) => tr.some((q) => fijos.some((F) => d2(X(...q), F) < 15));
+    if (sedeE && geo.length > 6) for (let k = mitad; k < geo.length - 2; k++) if (cerca(geo[k], sedeE.punto) && idaYVuelta(geo.slice(k, -1)) && !conFijo(geo.slice(k, -1))) { geo.splice(k + 1, geo.length - k - 2); informe.pico_recortado = (informe.pico_recortado || []).concat('entrada'); break; }
+    if (sedeS && geo.length > 6) for (let k = mitad; k > 1; k--) if (cerca(geo[k], sedeS.punto) && idaYVuelta(geo.slice(1, k + 1).reverse()) && !conFijo(geo.slice(1, k + 1))) { geo.splice(1, k - 1); informe.pico_recortado = (informe.pico_recortado || []).concat('salida'); break; }
     // hitos: un elemento por cada elemento de la lista; las marcas sin geometría van al punto de la siguiente calle trazada
     const porI = new Map(T.map((f) => [f.i, f])); for (const f of T) if (f.tipo === 'catedral') for (let k = f.i + 1; k <= f.hasta; k++) porI.set(k, { ...f, i: k, tipo: 'catedral' }); for (const f of T) if (f.repetida != null) porI.set(f.repetida, { ...f, i: f.repetida, tipo: 'repetida' });
     const hitos = L.calles.map((lugar, i) => { const f = porI.get(i); return { i, lugar, tipo: f?.tipo || 'hito', tramo: f?.tramo || 'ida', punto: hitoPunto.get(i) || null }; });

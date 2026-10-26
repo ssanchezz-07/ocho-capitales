@@ -201,14 +201,22 @@
     "fecha": "2026-10-26 14:11",
     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
     "cambios": "tramo de «Prim» a «Plaza Arriola» (fila 18) estimado"
+   },
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Moreno Carbonero, Plaza Enrique García-Herrera, Fernán González»; OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal; GraphHopper no enruta por dentro y el trazado daba la vuelta por Sebastián Souvirón, Félix Sáenz, San Juan y Marqués",
+    "cambios": "la Plaza Enrique García-Herrera (fila 21) se cruza en línea recta"
    }
   ],
-  "actualizado": "2026-10-26 14:11",
+  "actualizado": "2026-10-26 14:33",
   "tramos": {
    "17": {
     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Prim» a «Plaza Arriola»; en el mismo PDF, Dolores del Puente va «Plaza Arriola, Atarazanas, Prim»: la unión es por Atarazanas. Deducción, no fuente de esta hermandad",
     "estimado": true
    }
+  },
+  "cruzar": {
+   "20": true
   }
  },
  "lagrimas-y-favores-malaga": {
@@ -336,12 +344,24 @@
     "fecha": "2026-10-26 14:11",
     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Cortina del Muelle, Boquete del Muelle, Plaza de la Marina, Plaza Poeta Alfonso Canales, Vendeja». El PDF de 2026 salta de «Plaza de La Marina» a «Vendeja»",
     "cambios": "tramo de «Plaza de La Marina» a «Vendeja» (fila 40) estimado: solo hay fuente de 2020"
+   },
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Moreno Carbonero, Plaza Enrique García-Herrera, Fernán González»; OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal; GraphHopper no enruta por dentro y el trazado daba la vuelta por Sebastián Souvirón, Félix Sáenz, San Juan y Marqués",
+    "cambios": "la Plaza Enrique García-Herrera (fila 18) se cruza en línea recta"
    }
   ],
-  "actualizado": "2026-10-26 14:11"
+  "actualizado": "2026-10-26 14:33",
+  "cruzar": {
+   "17": true
+  }
  },
  "amor-malaga": {
   "tramos": {
+   "4": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Conde de Tendilla, María, Ladrón de Guevara»; en OSM la única unión sin escalones es por Fernando el Católico hasta Ladrón de Guevara, que toca María en su esquina",
+    "estimado": true
+   },
    "45": {
     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
     "estimado": true
@@ -352,9 +372,42 @@
     "fecha": "2026-10-26 14:11",
     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
     "cambios": "tramo de «Manrique» a «Fernando el Católico» (fila 46) estimado: solo hay fuente de 2020"
+   },
+   {
+    "fecha": "2026-10-26 14:36",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf); OpenStreetMap way 495510215 (escalera)",
+    "cambios": "María (fila 4) no se recorre: desde Conde de Tendilla solo se llega por una escalera; el trazado va por Fernando el Católico a Ladrón de Guevara (tramo estimado), sin el pico de 155 m"
+   },
+   {
+    "fecha": "2026-10-26 14:39",
+    "fuente": "OpenStreetMap way 495510215 (escalera de 10 peldaños)",
+    "cambios": "Conde de Tendilla (fila 3) sin la escalera: el trazado salía por lo alto de la escalera y daba la vuelta por María"
+   },
+   {
+    "fecha": "2026-10-26 14:39",
+    "fuente": "OpenStreetMap way 495510215 y 35842317",
+    "cambios": "Ladrón de Guevara (fila 5) cuenta como esquina; el tramo Conde de Tendilla → María → Ladrón de Guevara sigue «estimado»"
    }
   ],
-  "actualizado": "2026-10-26 14:11"
+  "actualizado": "2026-10-26 14:36",
+  "calles": {
+   "2": {
+    "vias": [
+     35842340,
+     36200682
+    ],
+    "fuente": "OpenStreetMap: Conde de Tendilla sin su tramo de escalera (way 495510215, highway=steps)"
+   },
+   "3": {
+    "omitir": true,
+    "esquina": true,
+    "fuente": "OpenStreetMap: Conde de Tendilla y Calle María se unen por una escalera de 10 peldaños (way 495510215, highway=steps); un trono no baja escaleras"
+   },
+   "4": {
+    "esquina": true,
+    "fuente": "OpenStreetMap: sin la escalera de Conde de Tendilla (way 495510215), Ladrón de Guevara solo se toca en su esquina con Fernando el Católico"
+   }
+  }
  },
  "piedad-malaga": {
   "tramos": {
@@ -384,9 +437,22 @@
     "fecha": "2026-10-26 14:11",
     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/lunes-santo/ (no hay fuente de 2026 con estas calles): «Carretería, Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros». El PDF de 2026 salta de «Tribuna de los Pobres» a «Cisneros»",
     "cambios": "tramo de «Tribuna de los Pobres» a «Cisneros» (fila 8) estimado: solo hay fuente de 2020"
+   },
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario de 2020 de la Agrupación (https://semanasantamalaga.info/itinerarios/lunes-santo/): «Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros»",
+    "cambios": "el tramo estimado de Tribuna de los Pobres a Cisneros (fila 8) va por el Pasillo de Santa Isabel, como dice la fuente de 2020"
    }
   ],
-  "actualizado": "2026-10-26 14:11"
+  "actualizado": "2026-10-26 14:33",
+  "paso": {
+   "7": [
+    [
+     36.72126,
+     -4.4251683
+    ]
+   ]
+  }
  },
  "salesianos-malaga": {
   "paso": {
@@ -398,6 +464,10 @@
    ]
   },
   "tramos": {
+   "26": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Echegaray, Granada, Plaza Uncibay» salta de Granada a la Plaza Uncibay; en el mismo PDF, Dulce Nombre va «Granada, Méndez Núñez, Plaza de Uncibay»: la unión es por Méndez Núñez. Deducción",
+    "estimado": true
+   },
    "28": {
     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Casapalma» a «Álamos»; en el mismo PDF, las demás van «Casapalma, Cárcer, Álamos»: la unión es por Cárcer. Deducción, no fuente de esta hermandad",
     "estimado": true
@@ -417,9 +487,30 @@
     "fecha": "2026-10-26 14:11",
     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
     "cambios": "tramo de «Casapalma» a «Álamos» (fila 29) estimado"
+   },
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "de Granada a la Plaza Uncibay por Méndez Núñez (fila 27), estimado: el trazado hacía un bucle por José Denis Belgrano"
+   },
+   {
+    "fecha": "2026-10-26 14:36",
+    "fuente": "Trazado de Dulce Nombre (misma unión Granada → Méndez Núñez → Plaza de Uncibay en el PDF)",
+    "cambios": "Méndez Núñez por sus dos extremos, sin el bucle por José Denis Belgrano"
+   },
+   {
+    "fecha": "2026-10-26 14:39",
+    "fuente": "Trazado de Dulce Nombre",
+    "cambios": "en Méndez Núñez solo el punto de llegada a la Plaza de Uncibay"
    }
   ],
-  "actualizado": "2026-10-26 14:11"
+  "actualizado": "2026-10-26 14:33",
+  "puntos": {
+   "26": [
+    36.7222761,
+    -4.4198129
+   ]
+  }
  },
  "monte-calvario-malaga": {
   "tramos": {
@@ -441,5 +532,202 @@
    }
   ],
   "actualizado": "2026-10-26 14:11"
+ },
+ "expiracion-malaga": {
+  "cruzar": {
+   "3": true,
+   "4": true,
+   "11": true
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Moreno Carbonero, Plaza Enrique García-Herrera, Fernán González»; OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal; GraphHopper no enruta por dentro y el trazado daba la vuelta por Sebastián Souvirón, Félix Sáenz, San Juan y Marqués",
+    "cambios": "la Plaza Enrique García-Herrera (fila 12) se cruza en línea recta"
+   },
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Avenida de Andalucía, Puente de Tetuán, Alameda Principal»; OpenStreetMap: calzada del Puente de Tetuán de Avenida de Andalucía a Alameda (way 831693880)",
+    "cambios": "entrada en el Puente de Tetuán y en la Alameda Principal (filas 5-6) por sus extremos: el trazado daba un rodeo de unos 480 m por el Puente de la Misericordia"
+   },
+   {
+    "fecha": "2026-10-26 14:36",
+    "fuente": "OpenStreetMap: calzada norte del Puente de Tetuán (way 832977699); por la sur GraphHopper no pasa en ese sentido",
+    "cambios": "el Puente de Tetuán por su calzada norte"
+   },
+   {
+    "fecha": "2026-10-26 14:39",
+    "fuente": "OpenStreetMap: Puente de Tetuán, calzada norte (way 832977699), recta de 79 m",
+    "cambios": "el puente (fila 5) se cruza en línea recta de un extremo a otro: GraphHopper lo cruzaba dos veces por las dos calzadas"
+   },
+   {
+    "fecha": "2026-10-26 14:40",
+    "fuente": "Itinerario oficial 2026 (PDF de la Agrupación): «Cristo de la Expiración, Avenida de Andalucía, Puente de Tetuán»; la avenida es recta hasta el puente",
+    "cambios": "Avenida de Andalucía (fila 4) en línea recta hasta el puente: GraphHopper llegaba al puente rodeando por Nazareno del Paso, Hilera y Pasillo de Santo Domingo"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33",
+  "puntos": {
+   "4": [
+    36.7167542,
+    -4.4264038
+   ],
+   "5": [
+    36.7169226,
+    -4.4255267
+   ]
+  }
+ },
+ "nueva-esperanza-malaga": {
+  "tramos": {
+   "39": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Puente de la Aurora, Rivera del Guadalmedina»; en OSM se unen por la Rampa de la Aurora (unos 125 m que no nombra la lista)",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "tramo de Puente de la Aurora a Rivera del Guadalmedina (fila 40) estimado"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "sangre-malaga": {
+  "tramos": {
+   "1": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista empieza en la Plazuela Cristo de la Sangre; los tronos salen de la casa hermandad (Calle Dos Aceras 10, casas-hermandad-malaga.json): el tramo hasta la plazuela no lo da el PDF",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "tramo de la casa hermandad a la Plazuela Cristo de la Sangre (fila 2) estimado"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "dulce-nombre-malaga": {
+  "puntos": {
+   "10": [
+    36.7220759,
+    -4.4219701
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 11), como en Pasión y Humildad"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "crucifixion-malaga": {
+  "puntos": {
+   "13": [
+    36.7220759,
+    -4.4219701
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 14), como en Pasión y Humildad"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "santa-cruz-malaga": {
+  "puntos": {
+   "11": [
+    36.7220759,
+    -4.4219701
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza de Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 12), como en Pasión y Humildad"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "vineros-malaga": {
+  "puntos": {
+   "27": [
+    36.7220759,
+    -4.4219701
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza de Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 28), como en Pasión y Humildad"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "vera-cruz-malaga": {
+  "puntos": {
+   "25": [
+    36.7220759,
+    -4.4219701
+   ]
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:33",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Santa Lucía, Plaza de Jesús de la Pasión, Santa Lucía»",
+    "cambios": "punto de paso en la Plaza Jesús de la Pasión (fila 26), como en Pasión y Humildad"
+   }
+  ],
+  "actualizado": "2026-10-26 14:33"
+ },
+ "fusionadas-malaga": {
+  "tramos": {
+   "1": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial",
+    "estimado": true
+   },
+   "26": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:43",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Casa Hermandad, Pasillo Santa Isabel, Cisneros … Carretería, Pasillo Santa Isabel, Casa Hermandad». La única dirección con fuente es la sede social (Postigo de San Juan 5, Agrupación); no hay fuente de dónde salen los tronos, así que el tramo entre la sede y el Pasillo de Santa Isabel no es oficial",
+    "cambios": "tramos de la sede social al Pasillo de Santa Isabel (salida y entrada) estimados"
+   }
+  ],
+  "actualizado": "2026-10-26 14:43"
+ },
+ "cautivo-malaga": {
+  "tramos": {
+   "1": {
+    "fuente": "Itinerario oficial 2026 (PDF de la Agrupación): «Casa Hermandad, Barrera de la Trinidad … Barrera de la Trinidad y Casa Hermandad». La casa hermandad está en Calle Trinidad 95 (Agrupación; puerta OSM 8575809628) y no hay fuente de una salida a Barrera de la Trinidad: la unión por la Plaza Bailén no es oficial",
+    "estimado": true
+   },
+   "38": {
+    "fuente": "Itinerario oficial 2026 (PDF de la Agrupación): «Casa Hermandad, Barrera de la Trinidad … Barrera de la Trinidad y Casa Hermandad». La casa hermandad está en Calle Trinidad 95 (Agrupación; puerta OSM 8575809628) y no hay fuente de una salida a Barrera de la Trinidad: la unión por la Plaza Bailén no es oficial",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:43",
+    "fuente": "Itinerario oficial 2026 (PDF de la Agrupación): «Casa Hermandad, Barrera de la Trinidad … Barrera de la Trinidad y Casa Hermandad». La casa hermandad está en Calle Trinidad 95 (Agrupación; puerta OSM 8575809628) y no hay fuente de una salida a Barrera de la Trinidad: la unión por la Plaza Bailén no es oficial",
+    "cambios": "tramos de la casa hermandad a Barrera de la Trinidad (salida y entrada) estimados"
+   }
+  ],
+  "actualizado": "2026-10-26 14:43"
  }
 }

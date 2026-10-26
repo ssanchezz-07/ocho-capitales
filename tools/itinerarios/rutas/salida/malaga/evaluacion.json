@@ -27,7 +27,7 @@
    "pct_en_calles_lista": 97
   },
   "nuevo": {
-   "largo_m": 3524,
+   "largo_m": 3413,
    "comprobables": 34,
    "sin_dato": [],
    "recorridas": 34,
@@ -39,7 +39,7 @@
    "sede_entrada": "puerta OSM 9023249193 con la dirección Calle Parras 20",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 2,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
      36.724152,
@@ -48,6 +48,10 @@
     [
      36.721677,
      -4.425256
+    ],
+    [
+     36.725909,
+     -4.422205
     ]
    ],
    "pct_en_calles_lista": 97
@@ -61,86 +65,26 @@
  },
  "lagrimas-y-favores-malaga": {
   "publicado": {
-   "largo_m": 3742,
+   "largo_m": 3273,
    "comprobables": 36,
    "sin_dato": [],
    "recorridas": 36,
    "en_orden": 34,
    "no_recorridas": [],
-   "salida_m": 3,
+   "salida_m": 0,
    "entrada_m": null,
    "sede_salida": "templo en OSM: Iglesia de San Juan",
    "sede_entrada": null,
    "rectas_150": [],
-   "tramo_max_m": 91,
-   "retrocesos": 16,
+   "tramo_max_m": 138,
+   "retrocesos": 1,
    "donde_retrocesos": [
     [
-     36.720858,
-     -4.4223
-    ],
-    [
-     36.718478,
-     -4.422804
-    ],
-    [
-     36.718511,
-     -4.42288
-    ],
-    [
-     36.718478,
-     -4.422804
-    ],
-    [
-     36.718511,
-     -4.42288
-    ],
-    [
-     36.718478,
-     -4.422804
-    ],
-    [
-     36.720738,
-     -4.419314
-    ],
-    [
-     36.720735,
-     -4.419378
-    ],
-    [
-     36.720738,
-     -4.419314
-    ],
-    [
-     36.720735,
-     -4.419378
-    ],
-    [
-     36.720738,
-     -4.419314
-    ],
-    [
-     36.720742,
-     -4.42414
-    ],
-    [
-     36.720725,
-     -4.424213
-    ],
-    [
-     36.720742,
-     -4.42414
-    ],
-    [
-     36.720725,
-     -4.424213
-    ],
-    [
-     36.720742,
-     -4.42414
+     36.719154,
+     -4.422972
     ]
    ],
-   "pct_en_calles_lista": 97
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
    "largo_m": 3445,
@@ -167,13 +111,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "retrocesos 16→1"
+    "empate"
    ]
   }
  },
  "dulce-nombre-malaga": {
   "publicado": {
-   "largo_m": 3862,
+   "largo_m": 3868,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -190,7 +134,7 @@
    "pct_en_calles_lista": 97
   },
   "nuevo": {
-   "largo_m": 3862,
+   "largo_m": 3868,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -321,7 +265,7 @@
  },
  "salud-malaga": {
   "publicado": {
-   "largo_m": 3558,
+   "largo_m": 3563,
    "comprobables": 33,
    "sin_dato": [],
    "recorridas": 33,
@@ -373,7 +317,7 @@
  },
  "humildad-y-paciencia-malaga": {
   "publicado": {
-   "largo_m": 7819,
+   "largo_m": 7630,
    "comprobables": 56,
    "sin_dato": [],
    "recorridas": 56,
@@ -385,7 +329,7 @@
    "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
    "rectas_150": [],
    "tramo_max_m": 174,
-   "retrocesos": 4,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
      36.715788,
@@ -396,18 +340,14 @@
      -4.425299
     ],
     [
-     36.71958,
-     -4.42414
-    ],
-    [
      36.715788,
      -4.42746
     ]
    ],
-   "pct_en_calles_lista": 95
+   "pct_en_calles_lista": 96
   },
   "nuevo": {
-   "largo_m": 7825,
+   "largo_m": 7630,
    "comprobables": 56,
    "sin_dato": [],
    "recorridas": 56,
@@ -419,7 +359,7 @@
    "sede_entrada": "punto fijado con fuente (casas-hermandad-malaga.json)",
    "rectas_150": [],
    "tramo_max_m": 174,
-   "retrocesos": 4,
+   "retrocesos": 3,
    "donde_retrocesos": [
     [
      36.715788,
@@ -430,15 +370,11 @@
      -4.425299
     ],
     [
-     36.71958,
-     -4.42414
-    ],
-    [
      36.715788,
      -4.42746
     ]
    ],
-   "pct_en_calles_lista": 95
+   "pct_en_calles_lista": 96
   },
   "decision": {
    "queda": "nuevo",
@@ -449,7 +385,7 @@
  },
  "huerto-malaga": {
   "publicado": {
-   "largo_m": 4098,
+   "largo_m": 4104,
    "comprobables": 41,
    "sin_dato": [],
    "recorridas": 41,
@@ -517,11 +453,11 @@
  },
  "pasion-malaga": {
   "publicado": {
-   "largo_m": 2800,
+   "largo_m": 2680,
    "comprobables": 27,
    "sin_dato": [],
    "recorridas": 27,
-   "en_orden": 26,
+   "en_orden": 25,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -531,14 +467,14 @@
    "tramo_max_m": 155,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 89
+   "pct_en_calles_lista": 92
   },
   "nuevo": {
-   "largo_m": 2800,
+   "largo_m": 2790,
    "comprobables": 27,
    "sin_dato": [],
    "recorridas": 27,
-   "en_orden": 26,
+   "en_orden": 25,
    "no_recorridas": [],
    "salida_m": 0,
    "entrada_m": 0,
@@ -548,7 +484,7 @@
    "tramo_max_m": 155,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 89
+   "pct_en_calles_lista": 88
   },
   "decision": {
    "queda": "nuevo",
@@ -559,7 +495,7 @@
  },
  "crucifixion-malaga": {
   "publicado": {
-   "largo_m": 3659,
+   "largo_m": 3665,
    "comprobables": 35,
    "sin_dato": [],
    "recorridas": 35,
@@ -576,7 +512,7 @@
    "pct_en_calles_lista": 97
   },
   "nuevo": {
-   "largo_m": 3659,
+   "largo_m": 3665,
    "comprobables": 35,
    "sin_dato": [],
    "recorridas": 35,
@@ -601,7 +537,7 @@
  },
  "dolores-del-puente-malaga": {
   "publicado": {
-   "largo_m": 3916,
+   "largo_m": 3828,
    "comprobables": 41,
    "sin_dato": [],
    "recorridas": 41,
@@ -613,12 +549,8 @@
    "sede_entrada": "templo en OSM: Iglesia de Santo Domingo",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.719045,
-     -4.425951
-    ],
     [
      36.721601,
      -4.428473
@@ -627,7 +559,7 @@
    "pct_en_calles_lista": 95
   },
   "nuevo": {
-   "largo_m": 3921,
+   "largo_m": 3828,
    "comprobables": 41,
    "sin_dato": [],
    "recorridas": 41,
@@ -639,12 +571,8 @@
    "sede_entrada": "templo en OSM: Iglesia de Santo Domingo",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.719045,
-     -4.425951
-    ],
     [
      36.721601,
      -4.428473
@@ -661,7 +589,7 @@
  },
  "cautivo-malaga": {
   "publicado": {
-   "largo_m": 4439,
+   "largo_m": 4444,
    "comprobables": 33,
    "sin_dato": [],
    "recorridas": 33,
@@ -703,7 +631,7 @@
  },
  "estudiantes-malaga": {
   "publicado": {
-   "largo_m": 3248,
+   "largo_m": 3198,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -726,7 +654,7 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 98
+   "pct_en_calles_lista": 99
   },
   "nuevo": {
    "largo_m": 3198,
@@ -881,7 +809,7 @@
  },
  "nueva-esperanza-malaga": {
   "publicado": {
-   "largo_m": 7513,
+   "largo_m": 7463,
    "comprobables": 48,
    "sin_dato": [],
    "recorridas": 48,
@@ -941,7 +869,7 @@
  },
  "humillacion-y-estrella-malaga": {
   "publicado": {
-   "largo_m": 3929,
+   "largo_m": 3934,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -1001,7 +929,7 @@
  },
  "rescate-malaga": {
   "publicado": {
-   "largo_m": 4229,
+   "largo_m": 4179,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1053,7 +981,7 @@
  },
  "sentencia-malaga": {
   "publicado": {
-   "largo_m": 3455,
+   "largo_m": 3406,
    "comprobables": 27,
    "sin_dato": [],
    "recorridas": 27,
@@ -1157,11 +1085,9 @@
  },
  "mediadora-malaga": {
   "publicado": {
-   "largo_m": 6523,
+   "largo_m": 6232,
    "comprobables": 41,
-   "sin_dato": [
-    "Garnica"
-   ],
+   "sin_dato": [],
    "recorridas": 41,
    "en_orden": 41,
    "no_recorridas": [],
@@ -1171,25 +1097,19 @@
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
    "tramo_max_m": 170,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
     [
      36.708833,
      -4.432837
-    ],
-    [
-     36.71958,
-     -4.42414
     ]
    ],
-   "pct_en_calles_lista": 88
+   "pct_en_calles_lista": 89
   },
   "nuevo": {
-   "largo_m": 6523,
+   "largo_m": 6232,
    "comprobables": 41,
-   "sin_dato": [
-    "Garnica"
-   ],
+   "sin_dato": [],
    "recorridas": 41,
    "en_orden": 41,
    "no_recorridas": [],
@@ -1199,18 +1119,14 @@
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
    "tramo_max_m": 170,
-   "retrocesos": 2,
+   "retrocesos": 1,
    "donde_retrocesos": [
     [
      36.708833,
      -4.432837
-    ],
-    [
-     36.71958,
-     -4.42414
     ]
    ],
-   "pct_en_calles_lista": 88
+   "pct_en_calles_lista": 89
   },
   "decision": {
    "queda": "nuevo",
@@ -1221,7 +1137,7 @@
  },
  "salesianos-malaga": {
   "publicado": {
-   "largo_m": 4411,
+   "largo_m": 4526,
    "comprobables": 29,
    "sin_dato": [],
    "recorridas": 29,
@@ -1233,7 +1149,7 @@
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 2,
+   "retrocesos": 4,
    "donde_retrocesos": [
     [
      36.72809,
@@ -1242,39 +1158,51 @@
     [
      36.721677,
      -4.425256
-    ]
-   ],
-   "pct_en_calles_lista": 94
-  },
-  "nuevo": {
-   "largo_m": 4701,
-   "comprobables": 29,
-   "sin_dato": [],
-   "recorridas": 29,
-   "en_orden": 28,
-   "no_recorridas": [],
-   "salida_m": 0,
-   "entrada_m": 0,
-   "sede_salida": "dirección por Nominatim (caché)",
-   "sede_entrada": "dirección por Nominatim (caché)",
-   "rectas_150": [],
-   "tramo_max_m": 155,
-   "retrocesos": 3,
-   "donde_retrocesos": [
-    [
-     36.72809,
-     -4.421733
     ],
     [
-     36.721677,
-     -4.425256
+     36.727423,
+     -4.421012
     ],
     [
      36.726405,
      -4.420345
     ]
    ],
-   "pct_en_calles_lista": 94
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 4526,
+   "comprobables": 29,
+   "sin_dato": [],
+   "recorridas": 29,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "dirección por Nominatim (caché)",
+   "sede_entrada": "dirección por Nominatim (caché)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     36.72809,
+     -4.421733
+    ],
+    [
+     36.721677,
+     -4.425256
+    ],
+    [
+     36.727423,
+     -4.421012
+    ],
+    [
+     36.726405,
+     -4.420345
+    ]
+   ],
+   "pct_en_calles_lista": 96
   },
   "decision": {
    "queda": "nuevo",
@@ -1285,7 +1213,7 @@
  },
  "sangre-malaga": {
   "publicado": {
-   "largo_m": 3537,
+   "largo_m": 3487,
    "comprobables": 34,
    "sin_dato": [
     "Plazuela Cristo de la Sangre"
@@ -1310,7 +1238,7 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 96
+   "pct_en_calles_lista": 97
   },
   "nuevo": {
    "largo_m": 3487,
@@ -1349,7 +1277,7 @@
  },
  "el-rico-malaga": {
   "publicado": {
-   "largo_m": 3242,
+   "largo_m": 3291,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1409,7 +1337,7 @@
  },
  "paloma-malaga": {
   "publicado": {
-   "largo_m": 2628,
+   "largo_m": 2578,
    "comprobables": 24,
    "sin_dato": [],
    "recorridas": 24,
@@ -1428,7 +1356,7 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 98
+   "pct_en_calles_lista": 99
   },
   "nuevo": {
    "largo_m": 2579,
@@ -1461,7 +1389,7 @@
  },
  "sagrada-cena-malaga": {
   "publicado": {
-   "largo_m": 2717,
+   "largo_m": 2667,
    "comprobables": 25,
    "sin_dato": [],
    "recorridas": 25,
@@ -1503,7 +1431,7 @@
  },
  "vineros-malaga": {
   "publicado": {
-   "largo_m": 2728,
+   "largo_m": 2740,
    "comprobables": 29,
    "sin_dato": [],
    "recorridas": 29,
@@ -1529,7 +1457,7 @@
    "pct_en_calles_lista": 96
   },
   "nuevo": {
-   "largo_m": 2734,
+   "largo_m": 2740,
    "comprobables": 29,
    "sin_dato": [],
    "recorridas": 29,
@@ -1563,7 +1491,7 @@
  },
  "santa-cruz-malaga": {
   "publicado": {
-   "largo_m": 2820,
+   "largo_m": 2826,
    "comprobables": 32,
    "sin_dato": [
     "Plazuela Cristo de la Sangre"
@@ -1582,7 +1510,7 @@
    "pct_en_calles_lista": 96
   },
   "nuevo": {
-   "largo_m": 2820,
+   "largo_m": 2826,
    "comprobables": 32,
    "sin_dato": [
     "Plazuela Cristo de la Sangre"
@@ -1609,7 +1537,7 @@
  },
  "vera-cruz-malaga": {
   "publicado": {
-   "largo_m": 2710,
+   "largo_m": 2722,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1631,7 +1559,7 @@
    "pct_en_calles_lista": 95
   },
   "nuevo": {
-   "largo_m": 2716,
+   "largo_m": 2722,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1661,7 +1589,7 @@
  },
  "mena-malaga": {
   "publicado": {
-   "largo_m": 3944,
+   "largo_m": 3894,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -1703,7 +1631,7 @@
  },
  "zamarrilla-malaga": {
   "publicado": {
-   "largo_m": 3846,
+   "largo_m": 3796,
    "comprobables": 28,
    "sin_dato": [],
    "recorridas": 28,
@@ -1821,68 +1749,40 @@
  },
  "monte-calvario-malaga": {
   "publicado": {
-   "largo_m": 6737,
+   "largo_m": 5386,
    "comprobables": 41,
    "sin_dato": [
     "Madre de Dios Mariblanca"
    ],
    "recorridas": 41,
-   "en_orden": 37,
+   "en_orden": 38,
    "no_recorridas": [],
    "salida_m": null,
-   "entrada_m": 16,
+   "entrada_m": 0,
    "sede_salida": null,
    "sede_entrada": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
    "rectas_150": [],
-   "tramo_max_m": 130,
-   "retrocesos": 11,
+   "tramo_max_m": 165,
+   "retrocesos": 4,
    "donde_retrocesos": [
     [
-     36.727054,
-     -4.413914
+     36.728367,
+     -4.412581
     ],
     [
-     36.730256,
-     -4.413721
+     36.72278,
+     -4.417532
     ],
     [
-     36.730198,
-     -4.413716
+     36.722801,
+     -4.417524
     ],
     [
-     36.730256,
-     -4.413721
-    ],
-    [
-     36.730198,
-     -4.413716
-    ],
-    [
-     36.730256,
-     -4.413721
-    ],
-    [
-     36.725491,
-     -4.42115
-    ],
-    [
-     36.720735,
-     -4.419378
-    ],
-    [
-     36.720738,
-     -4.419314
-    ],
-    [
-     36.720735,
-     -4.419378
-    ],
-    [
-     36.720738,
-     -4.419314
+     36.72484,
+     -4.419754
     ]
    ],
-   "pct_en_calles_lista": 71
+   "pct_en_calles_lista": 83
   },
   "nuevo": {
    "largo_m": 5386,
@@ -1923,14 +1823,13 @@
   "decision": {
    "queda": "nuevo",
    "motivo": [
-    "en orden 37→38",
-    "retrocesos 11→4"
+    "empate"
    ]
   }
  },
  "descendimiento-malaga": {
   "publicado": {
-   "largo_m": 3881,
+   "largo_m": 3942,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1941,9 +1840,13 @@
    "sede_salida": "dirección por Nominatim (caché)",
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
-   "tramo_max_m": 173,
-   "retrocesos": 2,
+   "tramo_max_m": 190,
+   "retrocesos": 3,
    "donde_retrocesos": [
+    [
+     36.721037,
+     -4.411698
+    ],
     [
      36.719966,
      -4.411946
@@ -1953,10 +1856,10 @@
      -4.412019
     ]
    ],
-   "pct_en_calles_lista": 95
+   "pct_en_calles_lista": 91
   },
   "nuevo": {
-   "largo_m": 3887,
+   "largo_m": 3942,
    "comprobables": 32,
    "sin_dato": [],
    "recorridas": 32,
@@ -1967,9 +1870,13 @@
    "sede_salida": "dirección por Nominatim (caché)",
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
-   "tramo_max_m": 173,
-   "retrocesos": 2,
+   "tramo_max_m": 190,
+   "retrocesos": 3,
    "donde_retrocesos": [
+    [
+     36.721037,
+     -4.411698
+    ],
     [
      36.719966,
      -4.411946
@@ -1979,7 +1886,7 @@
      -4.412019
     ]
    ],
-   "pct_en_calles_lista": 95
+   "pct_en_calles_lista": 91
   },
   "decision": {
    "queda": "nuevo",
@@ -1990,12 +1897,14 @@
  },
  "amor-malaga": {
   "publicado": {
-   "largo_m": 5275,
+   "largo_m": 5005,
    "comprobables": 43,
    "sin_dato": [],
-   "recorridas": 43,
-   "en_orden": 41,
-   "no_recorridas": [],
+   "recorridas": 42,
+   "en_orden": 40,
+   "no_recorridas": [
+    "María (0 m)"
+   ],
    "salida_m": 0,
    "entrada_m": 0,
    "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
@@ -2005,23 +1914,25 @@
    "retrocesos": 2,
    "donde_retrocesos": [
     [
-     36.730198,
-     -4.413716
+     36.730804,
+     -4.414295
     ],
     [
      36.729125,
      -4.413781
     ]
    ],
-   "pct_en_calles_lista": 96
+   "pct_en_calles_lista": 95
   },
   "nuevo": {
-   "largo_m": 5230,
+   "largo_m": 5005,
    "comprobables": 43,
    "sin_dato": [],
-   "recorridas": 43,
-   "en_orden": 41,
-   "no_recorridas": [],
+   "recorridas": 42,
+   "en_orden": 40,
+   "no_recorridas": [
+    "María (0 m)"
+   ],
    "salida_m": 0,
    "entrada_m": 0,
    "sede_salida": "templo en OSM: Basílica y Santuario de Santa María de la Victoria",
@@ -2031,8 +1942,8 @@
    "retrocesos": 2,
    "donde_retrocesos": [
     [
-     36.730198,
-     -4.413716
+     36.730804,
+     -4.414295
     ],
     [
      36.729125,
@@ -2050,7 +1961,7 @@
  },
  "dolores-de-san-juan-malaga": {
   "publicado": {
-   "largo_m": 2806,
+   "largo_m": 2811,
    "comprobables": 28,
    "sin_dato": [],
    "recorridas": 28,
@@ -2102,7 +2013,7 @@
  },
  "traslado-malaga": {
   "publicado": {
-   "largo_m": 3427,
+   "largo_m": 3432,
    "comprobables": 26,
    "sin_dato": [],
    "recorridas": 26,
@@ -2144,7 +2055,7 @@
  },
  "piedad-malaga": {
   "publicado": {
-   "largo_m": 3577,
+   "largo_m": 3527,
    "comprobables": 27,
    "sin_dato": [],
    "recorridas": 27,
@@ -2196,7 +2107,7 @@
  },
  "santo-sepulcro-malaga": {
   "publicado": {
-   "largo_m": 3392,
+   "largo_m": 3342,
    "comprobables": 31,
    "sin_dato": [],
    "recorridas": 31,
@@ -2215,7 +2126,7 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 95
+   "pct_en_calles_lista": 96
   },
   "nuevo": {
    "largo_m": 3342,
@@ -2300,7 +2211,7 @@
  },
  "prendimiento-malaga": {
   "publicado": {
-   "largo_m": 4560,
+   "largo_m": 4529,
    "comprobables": 36,
    "sin_dato": [],
    "recorridas": 36,
@@ -2323,10 +2234,10 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 97
+   "pct_en_calles_lista": 94
   },
   "nuevo": {
-   "largo_m": 4510,
+   "largo_m": 4529,
    "comprobables": 36,
    "sin_dato": [],
    "recorridas": 36,
@@ -2349,7 +2260,7 @@
      -4.425256
     ]
    ],
-   "pct_en_calles_lista": 97
+   "pct_en_calles_lista": 94
   },
   "decision": {
    "queda": "nuevo",
@@ -2360,7 +2271,7 @@
  },
  "expiracion-malaga": {
   "publicado": {
-   "largo_m": 4902,
+   "largo_m": 4184,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -2372,25 +2283,17 @@
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
    "tramo_max_m": 170,
-   "retrocesos": 3,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.716673,
-     -4.427094
-    ],
-    [
-     36.71958,
-     -4.42414
-    ],
     [
      36.718511,
      -4.42288
     ]
    ],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 93
   },
   "nuevo": {
-   "largo_m": 4902,
+   "largo_m": 4184,
    "comprobables": 37,
    "sin_dato": [],
    "recorridas": 37,
@@ -2402,22 +2305,14 @@
    "sede_entrada": "dirección por Nominatim (caché)",
    "rectas_150": [],
    "tramo_max_m": 170,
-   "retrocesos": 3,
+   "retrocesos": 1,
    "donde_retrocesos": [
-    [
-     36.716673,
-     -4.427094
-    ],
-    [
-     36.71958,
-     -4.42414
-    ],
     [
      36.718511,
      -4.42288
     ]
    ],
-   "pct_en_calles_lista": 82
+   "pct_en_calles_lista": 93
   },
   "decision": {
    "queda": "nuevo",
@@ -2492,7 +2387,7 @@
  },
  "gitanos-malaga": {
   "publicado": {
-   "largo_m": 3413,
+   "largo_m": 3533,
    "comprobables": 30,
    "sin_dato": [],
    "recorridas": 30,
@@ -2504,12 +2399,17 @@
    "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 98
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.72126,
+     -4.425169
+    ]
+   ],
+   "pct_en_calles_lista": 100
   },
   "nuevo": {
-   "largo_m": 3413,
+   "largo_m": 3533,
    "comprobables": 30,
    "sin_dato": [],
    "recorridas": 30,
@@ -2521,9 +2421,14 @@
    "sede_entrada": "puerta OSM 8499971228 con la dirección Calle Frailes 15",
    "rectas_150": [],
    "tramo_max_m": 155,
-   "retrocesos": 0,
-   "donde_retrocesos": [],
-   "pct_en_calles_lista": 98
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     36.72126,
+     -4.425169
+    ]
+   ],
+   "pct_en_calles_lista": 100
   },
   "decision": {
    "queda": "nuevo",
@@ -2534,7 +2439,7 @@
  },
  "resucitado-malaga": {
   "publicado": {
-   "largo_m": 2290,
+   "largo_m": 2218,
    "comprobables": 20,
    "sin_dato": [],
    "recorridas": 20,
@@ -2545,10 +2450,10 @@
    "sede_salida": "punto fijado con fuente",
    "sede_entrada": "punto fijado con fuente",
    "rectas_150": [],
-   "tramo_max_m": 155,
+   "tramo_max_m": 159,
    "retrocesos": 0,
    "donde_retrocesos": [],
-   "pct_en_calles_lista": 92
+   "pct_en_calles_lista": 93
   },
   "nuevo": {
    "largo_m": 2218,

@@ -1057,7 +1057,6 @@
     "Cómico Riquelme",
     "Ayala",
     "Ingeniero José María Garnica",
-    "Garnica",
     "Cuarteles",
     "Plaza de Toros Vieja",
     "Ancha del Carmen",
@@ -1104,11 +1103,14 @@
    ],
    "horas": {
     "0": "16:00",
-    "23": "19:20",
-    "31": "21:20",
-    "33": "21:30",
-    "47": "01:30"
-   }
+    "22": "19:20",
+    "30": "21:20",
+    "32": "21:30",
+    "46": "01:30"
+   },
+   "notas": [
+    "PDF de la Agrupación 2026, Mediadora: «Avenida del Ingeniero José María» y, en la línea siguiente, «Garnica»: es una sola calle (Avenida del Ingeniero José María Garnica); la lectura la había partido en dos."
+   ]
   },
   "salesianos-malaga": {
    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
