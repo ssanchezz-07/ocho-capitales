@@ -695,6 +695,13 @@
   });
 
   // ---------- directorios ----------
+  // Tarjetas «Por capital» de los listados (marchas…): filtran el listado de abajo por esa capital
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-filtro-ciudad]'); if (!b) return;
+    var sel = document.getElementById('fc'); if (!sel) return;
+    sel.value = b.getAttribute('data-filtro-ciudad'); sel.dispatchEvent(new Event('change', { bubbles: true }));
+    var bar = document.querySelector('[data-dir-filters]'); if (bar) bar.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  });
   $$('[data-dir-filters]').forEach(function (bar) {
     var scope = bar.parentNode;
     var grid = $('[data-dir]', scope);
