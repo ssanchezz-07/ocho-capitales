@@ -38,3 +38,6 @@ site/dist-cf/
 # Auditoría integral: informe interno (el repo es público)
 AUDITORIA-INTEGRAL.md
 /auditoria/
+
+# Rutas: trazas regenerables (salida/<capital>/trazas)
+tools/itinerarios/rutas/salida/*/trazas/

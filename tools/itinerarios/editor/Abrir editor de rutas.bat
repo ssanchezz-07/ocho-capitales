@@ -10,5 +10,5 @@ if errorlevel 1 (
 )
 rem 2) Abre el editor en el navegador y arranca su servidor.
 start "" http://localhost:8765
-node servidor.mjs
+node servidor.mjs %1
 pause

@@ -2,6 +2,8 @@
 
 _Laboratorio en la rama `claude/rutas-graphhopper-628422`, sin subir a `main` y sin tocar `site/data/recorridos/*.json`. Encargo de Pablo: «lanza una sesión que pruebe GraphHopper, el emparejamiento de calles por continuidad y el editor de correcciones con 10 hermandades, comparándolo con lo actual». Y al reactivarlo: «espera su resultado antes de empezar las otras 7 capitales»._
 
+> **En producción desde el 2026-10-26:** el método pasó a `tools/itinerarios/rutas/` (para cualquier capital; comandos en su `README.md`). El editor (`tools/itinerarios/editor/`) ya usa esas herramientas y guarda en `rutas/correcciones-<capital>.json`. Lo de abajo describe el laboratorio tal como quedó.
+
 **Estado (2026-10-26): terminado.** Las 10 están trazadas con el método nuevo, el editor funciona (14/14 comprobaciones con Playwright) y la comparación está abajo. GraphHopper y el editor están apagados.
 
 ## En una frase

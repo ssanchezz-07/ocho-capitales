@@ -70,17 +70,19 @@
 <body>
 <header>
   <h1>Editor de rutas</h1>
+  <label class="sr" for="cap">Capital</label>
+  <select id="cap" aria-label="Capital" style="min-width:130px"></select>
   <label class="sr" for="herm">Hermandad</label>
   <select id="herm" aria-label="Hermandad"></select>
   <span id="estado" class="estado">Comprobando el trazador…</span>
-  <label class="chk"><input type="checkbox" id="verActual" checked> Ver el trazado actual (rojo)</label>
+  <label class="chk"><input type="checkbox" id="verActual" checked> Ver lo publicado (rojo)</label>
 </header>
 <main>
   <aside>
     <details class="ayuda" id="ayuda" open>
       <summary>Cómo se usa (4 pasos)</summary>
       <ol>
-        <li>Elige la hermandad arriba. A la izquierda está su <b>lista oficial de calles</b>; en el plano, el recorrido nuevo en <b style="color:var(--azul)">azul</b> (discontinuo, el regreso).</li>
+        <li>Elige la capital y la hermandad arriba. A la izquierda está su <b>lista oficial de calles</b>; en el plano, el recorrido nuevo en <b style="color:var(--azul)">azul</b> (discontinuo, el regreso).</li>
         <li>Si una calle está mal, <b>púlsala en la lista</b>: en el plano se ven en naranja las calles con ese nombre. Pulsa <b>«Elegir la calle buena»</b> y luego la calle correcta en el plano.</li>
         <li>Puedes <b>arrastrar los círculos</b> (puntos de paso) o cambiar la <b>salida</b> y la <b>entrada</b> con los botones de arriba del plano.</li>
         <li>Abajo, escribe <b>de dónde sale</b> la corrección (enlace del itinerario, cartel, foto…) y pulsa <b>«Guardar y volver a trazar»</b>.</li>
@@ -103,7 +105,7 @@
     <div class="leyenda" aria-hidden="true">
       <div><i style="border-color:var(--azul)"></i> nuevo (ida)</div>
       <div><i style="border-color:var(--azul);border-top-style:dashed"></i> nuevo (regreso)</div>
-      <div><i style="border-color:rgba(192,57,43,.4);border-top-width:7px"></i> actual</div>
+      <div><i style="border-color:rgba(192,57,43,.4);border-top-width:7px"></i> publicado</div>
       <div><i style="border-color:var(--ambar);border-top-width:5px"></i> calles con ese nombre</div>
       <div><span style="color:var(--verde);font-size:16px">●</span> salida &nbsp; <span>■</span> entrada</div>
     </div>
@@ -121,7 +123,7 @@
 <script>
 const $ = (s) => document.querySelector(s);
 const NS = 'http://www.w3.org/2000/svg';
-let D = null, sel = null, modo = null, vb = null;
+let D = null, sel = null, modo = null, vb = null, CAP = null;
 let pend = { calles: {}, puntos: {} };
 const hayPend = () => Object.keys(pend.calles).length + Object.keys(pend.puntos).length + ('salida' in pend) + ('entrada' in pend) + (pend.borrar_todo ? 1 : 0);
 
@@ -138,17 +140,27 @@ async function estado() {
 }
 async function iniciar() {
   const r = await estado();
-  const s = $('#herm'); s.innerHTML = r.hermandades.map((h) => `<option value="${h.id}">${h.nombre}</option>`).join('');
-  try { const u = localStorage.getItem('editor-herm'); if (u && r.hermandades.some((h) => h.id === u)) s.value = u; if (localStorage.getItem('editor-ayuda') === 'cerrada') $('#ayuda').open = false; } catch {}
+  const sc = $('#cap'), s = $('#herm');
+  sc.innerHTML = r.capitales.map((c) => `<option value="${c.c}">${c.nombre}</option>`).join('');
+  try { const u = localStorage.getItem('editor-cap'); if (u && r.capitales.some((c) => c.c === u)) sc.value = u; if (localStorage.getItem('editor-ayuda') === 'cerrada') $('#ayuda').open = false; } catch {}
+  if (r.capital && r.capitales.some((c) => c.c === r.capital)) sc.value = r.capital; // capital pedida al arrancar el editor
+  async function hermandades() {
+    const hs = await (await fetch('/api/hermandades?capital=' + sc.value)).json();
+    s.innerHTML = hs.map((h) => `<option value="${h.id}">${h.nombre}</option>`).join('');
+    try { const u = localStorage.getItem('editor-herm'); if (u && hs.some((h) => h.id === u)) s.value = u; } catch {}
+    cargar(s.value);
+  }
+  sc.onchange = () => { if (hayPend() && !confirm('Tienes cambios sin guardar. ¿Cambiar de capital y perderlos?')) { sc.value = CAP; return; } try { localStorage.setItem('editor-cap', sc.value); } catch {} hermandades(); };
   s.onchange = () => { if (hayPend() && !confirm('Tienes cambios sin guardar. ¿Cambiar de hermandad y perderlos?')) { s.value = D.id; return; } try { localStorage.setItem('editor-herm', s.value); } catch {} cargar(s.value); };
   $('#ayuda').ontoggle = () => { try { localStorage.setItem('editor-ayuda', $('#ayuda').open ? 'abierta' : 'cerrada'); } catch {} };
-  cargar(s.value);
+  hermandades();
   setInterval(estado, 15000);
 }
 async function cargar(id, metodo = 'GET', body) {
   $('#cargando').style.display = 'grid';
   try {
-    const r = await fetch('/api/hermandad/' + id, metodo === 'GET' ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    CAP = $('#cap').value;
+    const r = await fetch('/api/' + CAP + '/hermandad/' + id, metodo === 'GET' ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     D = await r.json(); if (D.error && !D.filas) throw new Error(D.error);
     pend = { calles: {}, puntos: {} }; sel = null; ponModo(null);
     const c = D.caja; O = [(c[0] + c[2]) / 2, (c[1] + c[3]) / 2]; KX = 111320 * Math.cos(O[0] * Math.PI / 180);
