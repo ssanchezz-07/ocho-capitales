@@ -1,0 +1,305 @@
+{
+ "capital": "almeria",
+ "nombre": "Almería",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "la-borriquita-almeria": {
+   "nombre": "La Borriquita",
+   "templo": {
+    "nombre": "Parroquia del Espíritu Santo",
+    "lat": 36.8398847,
+    "lon": -2.4562901,
+    "osm": "way/592746024",
+    "nombre_osm": "Parroquia del Espíritu Santo",
+    "fuente": "https://cofradiasdealmeria.es/borriquita/",
+    "fuente_coordenadas": "OpenStreetMap way 592746024"
+   },
+   "casa_hermandad": null
+  },
+  "los-angeles-almeria": {
+   "nombre": "Los Ángeles",
+   "templo": {
+    "nombre": "Parroquia de Santa María de los Ángeles",
+    "lat": 36.8499102,
+    "lon": -2.4579876,
+    "osm": "node/7195209589",
+    "nombre_osm": "Parroquia de Nuestra Señora de los Ángeles",
+    "fuente_coordenadas": "OpenStreetMap node 7195209589",
+    "fuente": "https://cofradiasdealmeria.es/los-angeles/ · en OSM «Parroquia de Nuestra Señora de los Ángeles», única con ese nombre en Almería"
+   },
+   "casa_hermandad": null
+  },
+  "la-estrella-almeria": {
+   "nombre": "La Estrella",
+   "templo": {
+    "nombre": "Parroquia de San Isidro (Regiones Devastadas)",
+    "lat": 36.8444283,
+    "lon": -2.4507929,
+    "osm": "way/893133825",
+    "nombre_osm": "Iglesia de San Isidro Labrador",
+    "fuente_coordenadas": "OpenStreetMap way 893133825",
+    "fuente": "https://cofradiasdealmeria.es/estrella/ · en OSM «Iglesia de San Isidro Labrador», única parroquia de San Isidro en Almería (la otra es la Capilla de San Isidro de los Partidores)"
+   },
+   "casa_hermandad": null
+  },
+  "la-santa-cena-almeria": {
+   "nombre": "La Santa Cena",
+   "templo": {
+    "nombre": "Iglesia de San Pedro",
+    "lat": 36.8397386,
+    "lon": -2.4645633,
+    "osm": "way/159003495",
+    "nombre_osm": "Parroquia San Pedro",
+    "fuente": "https://cofradiasdealmeria.es/santa-cena/",
+    "fuente_coordenadas": "OpenStreetMap way 159003495"
+   },
+   "casa_hermandad": null
+  },
+  "pasion-almeria": {
+   "nombre": "Pasión",
+   "templo": {
+    "nombre": "Parroquia de Santa Teresa (Oliveros)",
+    "lat": 36.834809,
+    "lon": -2.4606681,
+    "osm": "node/329418863",
+    "nombre_osm": "Parroquia de Santa Teresa de Jesús",
+    "fuente_coordenadas": "OpenStreetMap node 329418863",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-pasion/ · en OSM «Parroquia de Santa Teresa de Jesús»"
+   },
+   "casa_hermandad": null
+  },
+  "gran-poder-almeria": {
+   "nombre": "Gran Poder",
+   "templo": {
+    "nombre": "Parroquia de San Pío X",
+    "lat": 36.8270602,
+    "lon": -2.448746,
+    "osm": "way/445982378",
+    "nombre_osm": "Iglesia de San Pío X",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-gran-poder/",
+    "fuente_coordenadas": "OpenStreetMap way 445982378"
+   },
+   "casa_hermandad": null
+  },
+  "la-coronacion-almeria": {
+   "nombre": "La Coronación",
+   "templo": {
+    "nombre": "Parroquia de Santa María Magdalena",
+    "lat": 36.8467718,
+    "lon": -2.4388865,
+    "osm": "way/998389781",
+    "nombre_osm": "Iglesia Parroquial de Santa María Magdalena",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/",
+    "fuente_coordenadas": "OpenStreetMap way 998389781"
+   },
+   "casa_hermandad": null
+  },
+  "el-amor-almeria": {
+   "nombre": "El Amor",
+   "templo": {
+    "nombre": "Iglesia de San Sebastián",
+    "lat": 36.8422434,
+    "lon": -2.4623252,
+    "osm": "way/1286324718",
+    "nombre_osm": "Iglesia de San Sebastián",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-amor/",
+    "fuente_coordenadas": "OpenStreetMap way 1286324718"
+   },
+   "casa_hermandad": null
+  },
+  "el-perdon-silencio-almeria": {
+   "nombre": "El Perdón (Silencio)",
+   "templo": {
+    "nombre": "Iglesia de San Ildefonso",
+    "lat": 36.8462193,
+    "lon": -2.4604042,
+    "osm": "way/1185319467",
+    "nombre_osm": "Iglesia de San Ildefonso de Toledo",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-perdon/",
+    "fuente_coordenadas": "OpenStreetMap way 1185319467"
+   },
+   "casa_hermandad": null
+  },
+  "el-calvario-cristo-del-mar-almeria": {
+   "nombre": "El Calvario (Cristo del Mar)",
+   "templo": {
+    "nombre": "Iglesia de San Roque",
+    "lat": 36.8375915,
+    "lon": -2.477453,
+    "osm": "way/653809766",
+    "nombre_osm": "Iglesia de San Roque",
+    "fuente": "https://cofradiasdealmeria.es/calvario/",
+    "fuente_coordenadas": "OpenStreetMap way 653809766"
+   },
+   "casa_hermandad": null
+  },
+  "el-prendimiento-almeria": {
+   "nombre": "El Prendimiento",
+   "templo": {
+    "nombre": "Catedral de la Encarnación",
+    "lat": 36.8380555,
+    "lon": -2.467446,
+    "osm": "relation/3870268",
+    "nombre_osm": "Catedral de la Encarnación",
+    "fuente_coordenadas": "OpenStreetMap relation 3870268 (centro de su recuadro)",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+   },
+   "casa_hermandad": null
+  },
+  "la-macarena-almeria": {
+   "nombre": "La Macarena",
+   "templo": {
+    "nombre": "Parroquia de San Ildefonso",
+    "lat": 36.8462193,
+    "lon": -2.4604042,
+    "osm": "way/1185319467",
+    "nombre_osm": "Iglesia de San Ildefonso de Toledo",
+    "fuente_coordenadas": "OpenStreetMap way 1185319467",
+    "fuente": "https://cofradiasdealmeria.es/macarena/ · en OSM «Iglesia de San Ildefonso de Toledo»"
+   },
+   "casa_hermandad": null
+  },
+  "los-estudiantes-almeria": {
+   "nombre": "Los Estudiantes",
+   "templo": {
+    "nombre": "Catedral de la Encarnación",
+    "lat": 36.8380555,
+    "lon": -2.467446,
+    "osm": "relation/3870268",
+    "nombre_osm": "Catedral de la Encarnación",
+    "fuente_coordenadas": "OpenStreetMap relation 3870268 (centro de su recuadro)",
+    "fuente": "https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+   },
+   "casa_hermandad": null
+  },
+  "rosario-del-mar-almeria": {
+   "nombre": "Rosario del Mar",
+   "templo": {
+    "nombre": "Santuario de la Virgen del Mar",
+    "lat": 36.8373007,
+    "lon": -2.4646721,
+    "osm": "relation/9797145",
+    "nombre_osm": "Parroquia Virgen del Mar",
+    "fuente_coordenadas": "OpenStreetMap relation 9797145 (centro de su recuadro)",
+    "fuente": "https://cofradiasdealmeria.es/rosario-del-mar/ · en OSM «Parroquia Virgen del Mar»"
+   },
+   "casa_hermandad": null
+  },
+  "el-encuentro-jesus-nazareno-almeria": {
+   "nombre": "El Encuentro (Jesús Nazareno)",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Antonio (Ciudad Jardín)»: OSM tiene dos «Iglesia de San Antonio de Padua» en Almería (way/448384888 y way/509504733); sin fuente que diga cuál"
+   ]
+  },
+  "las-angustias-almeria": {
+   "nombre": "Las Angustias",
+   "templo": {
+    "nombre": "Iglesia de San Juan",
+    "lat": 36.8384479,
+    "lon": -2.4716357,
+    "osm": "way/27162956",
+    "nombre_osm": "Iglesia San Juan Evangelista",
+    "fuente_coordenadas": "OpenStreetMap way 27162956",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-las-angustias/ · en OSM «Iglesia San Juan Evangelista»"
+   },
+   "casa_hermandad": null
+  },
+  "el-silencio-descendimiento-almeria": {
+   "nombre": "El Silencio (Descendimiento)",
+   "templo": {
+    "nombre": "Parroquia de San Agustín",
+    "lat": 36.8447715,
+    "lon": -2.4636152,
+    "osm": "way/158857832",
+    "nombre_osm": "Parroquia San Agustín",
+    "fuente": "https://cofradiasdealmeria.es/cofradia-del-silencio/",
+    "fuente_coordenadas": "OpenStreetMap way 158857832"
+   },
+   "casa_hermandad": null
+  },
+  "cristo-de-la-escucha-almeria": {
+   "nombre": "Cristo de la Escucha",
+   "templo": {
+    "nombre": "Catedral de la Encarnación",
+    "lat": 36.8380555,
+    "lon": -2.467446,
+    "osm": "relation/3870268",
+    "nombre_osm": "Catedral de la Encarnación",
+    "fuente_coordenadas": "OpenStreetMap relation 3870268 (centro de su recuadro)",
+    "fuente": "null"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "templo sin enlace a la ficha oficial"
+   ]
+  },
+  "la-caridad-almeria": {
+   "nombre": "La Caridad",
+   "templo": {
+    "nombre": "Parroquia de Santa Teresa (Oliveros)",
+    "lat": 36.834809,
+    "lon": -2.4606681,
+    "osm": "node/329418863",
+    "nombre_osm": "Parroquia de Santa Teresa de Jesús",
+    "fuente_coordenadas": "OpenStreetMap node 329418863",
+    "fuente": "https://cofradiasdealmeria.es/caridad/ · en OSM «Parroquia de Santa Teresa de Jesús»"
+   },
+   "casa_hermandad": null
+  },
+  "el-santo-sepulcro-almeria": {
+   "nombre": "El Santo Sepulcro",
+   "templo": {
+    "nombre": "Iglesia de San Pedro",
+    "lat": 36.8397386,
+    "lon": -2.4645633,
+    "osm": "way/159003495",
+    "nombre_osm": "Parroquia San Pedro",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/",
+    "fuente_coordenadas": "OpenStreetMap way 159003495"
+   },
+   "casa_hermandad": null
+  },
+  "la-soledad-almeria": {
+   "nombre": "La Soledad",
+   "templo": {
+    "nombre": "Iglesia de Santiago",
+    "lat": 36.8411725,
+    "lon": -2.4651276,
+    "osm": "way/159004126",
+    "nombre_osm": "Parroquia de Santiago Apóstol",
+    "fuente_coordenadas": "OpenStreetMap way 159004126",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-la-soledad/ · en OSM «Parroquia de Santiago Apóstol»"
+   },
+   "casa_hermandad": null
+  },
+  "el-resucitado-almeria": {
+   "nombre": "El Resucitado",
+   "templo": {
+    "nombre": "Parroquia de Montserrat",
+    "lat": 36.8392523,
+    "lon": -2.4531455,
+    "osm": "way/592738094",
+    "nombre_osm": "Parroquia Nuestra Señora de Montserrat",
+    "fuente": "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/",
+    "fuente_coordenadas": "OpenStreetMap way 592738094"
+   },
+   "casa_hermandad": null
+  },
+  "la-unidad-almeria": {
+   "nombre": "La Unidad",
+   "templo": {
+    "nombre": "Parroquia de San Ignacio de Loyola",
+    "lat": 36.8587706,
+    "lon": -2.4515205,
+    "osm": "way/1503661096",
+    "nombre_osm": "Iglesia de San Ignacio de Loyola",
+    "fuente": "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html",
+    "fuente_coordenadas": "OpenStreetMap way 1503661096"
+   },
+   "casa_hermandad": null
+  }
+ }
+}
