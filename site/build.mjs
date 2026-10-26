@@ -10,6 +10,8 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(DIR, process.env.DIST_DIR || 'dist');
 const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
+// Colabora: clave pública de Web3Forms (alias del correo del portal; no revela la dirección). Variable de GitHub FORMULARIO_CLAVE.
+const FORM_CLAVE = /^[0-9a-f-]{36}$/i.test((process.env.FORMULARIO_CLAVE || '').trim()) ? process.env.FORMULARIO_CLAVE.trim() : '';
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
@@ -146,10 +148,10 @@ const pages = [];
 import { createHash } from 'node:crypto';
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'mundo.json'], ['nazareno', 'nazareno.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'mundo.json'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
-  const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'", "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
+  const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'" + (FORM_CLAVE ? ' https://api.web3forms.com' : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
   return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">');
 }
 function write(rel, html) {
@@ -419,10 +421,10 @@ function agendaItem(e) {
 const NAV = [['hoy/', 'Hoy'], ['noticias/', 'Noticias'], ['calendario/', 'Calendario'], ['hermandades/', 'Hermandades'], ['bandas/', 'Bandas'], ['marchas/', 'Marchas'], ['imagineros/', 'Imagineros']];
 const OG_DEFAULT = 'assets/og.png';
 
-const REPO = 'ssanchezz-07/ocho-capitales';
-const issueUrl = (titulo, cuerpo) => `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(titulo)}&body=${encodeURIComponent(cuerpo)}`;
+// Pie de las fichas: lleva al formulario de Colabora con la página, el nombre y la capital ya puestos
+const capitalDe = (p) => { const [tipo, slug] = String(p).split('/'); return tipo === 'hermandad' && HERM[slug] ? HERM[slug].ciudad : ''; };
 const colabora = (p, t) => /^(hermandad|banda|imaginero|marcha|compositor)\//.test(p)
-  ? `<p class="oc-note oc-colabora">¿Falta algún dato o hay un error? <a href="${esc(issueUrl('Corrección: ' + (t || p), 'Página: ' + abs(p) + '\n\n¿Qué hay que corregir o añadir?\n\n\nEnlace a la fuente que lo confirma:\n'))}" target="_blank" rel="noopener">Sugerir una corrección</a> (se abre en GitHub con esta página ya indicada).</p>` : '';
+  ? `<p class="oc-note oc-colabora">¿Falta algún dato o hay un error? <a href="${esc(u('colabora/') + '?' + new URLSearchParams({ pagina: '/' + p, nombre: t || '', ...(capitalDe(p) ? { capital: capitalDe(p) } : {}) }))}">Sugerir una corrección</a>: te lo agradecemos y lo revisamos con su fuente.</p>` : '';
 function layout({ title, desc, body, path: p = '', image = '', jsonld = null, active = '', crumbs: cr = null, wide = false, head = '' }) {
   const fullTitle = title ? `${title} | ${BRAND}` : `${BRAND}: Semana Santa de Andalucía hoy, noticias y hermandades`;
   const description = desc || TAGLINE;
@@ -1162,17 +1164,35 @@ function pageFavoritos() {
   write('favoritos/index.html', layout({ title: 'Mis favoritos', desc: 'Tus hermandades, bandas e imagineros guardados.', body, path: 'favoritos/', crumbs: [['Portada', u()], ['Mis favoritos', '']] }));
 }
 function pageColabora() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Colabora</h1><p class="oc-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntalo. Lo más rápido es decírselo a erCuñao (el botón de abajo a la derecha): no hace falta ninguna cuenta. Si prefieres dejarlo por escrito en público, abajo tienes cómo hacerlo con una cuenta gratuita de GitHub.</p></header>
+  // destino del formulario: Web3Forms si hay clave; con FORMULARIO_DESTINO=api, la función /api/sugerencias de Cloudflare (D1)
+  const destino = process.env.FORMULARIO_DESTINO === 'api' ? 'api' : FORM_CLAVE ? 'web3forms' : '';
+  const opc = (xs) => xs.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('');
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Colabora</h1><p class="oc-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntanoslo aquí: no hace falta registrarse. Cada aportación se revisa con su fuente antes de publicarla.</p></header>
+<style>.oc-colabora-form{display:grid;gap:18px;max-width:46rem;margin-block:8px 32px}.oc-colabora-fila{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}.oc-colabora-form textarea{width:100%;min-height:9rem;padding:12px 14px;border:1px solid var(--field-line);border-radius:var(--r);background:var(--bg);color:var(--ink);font:inherit;resize:vertical}.oc-colabora-form .oc-field small{color:var(--muted);font-size:.85rem}.oc-trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.oc-colabora-estado{padding:14px 16px;border-radius:var(--r);border:1px solid var(--field-line);font-weight:600}.oc-colabora-estado.is-ok{border-color:#2f7d4f;background:color-mix(in srgb,#2f7d4f 10%,transparent)}.oc-colabora-estado.is-error{border-color:#b3261e;background:color-mix(in srgb,#b3261e 9%,transparent)}.oc-colabora-estado:focus{outline:2px solid var(--ink);outline-offset:2px}</style>
+<form class="oc-colabora-form" data-colabora data-destino="${destino}"${FORM_CLAVE ? ` data-clave="${esc(FORM_CLAVE)}"` : ''} novalidate>
+  <p class="oc-note" data-pagina-aviso hidden>Sobre la página <span></span></p>
+  <div class="oc-colabora-fila">
+    <div class="oc-field"><label for="c-tipo">Qué quieres enviar</label><select id="c-tipo" name="tipo">${opc([['Corrección', 'Una corrección'], ['Dato nuevo', 'Un dato nuevo'], ['Foto', 'Una foto o su enlace'], ['Otra cosa', 'Otra cosa']])}</select></div>
+    <div class="oc-field"><label for="c-capital">Capital</label><select id="c-capital" name="capital"><option value="">General o varias</option>${D.capitales.map((x) => `<option value="${x.slug}">${esc(x.nombre)}</option>`).join('')}</select></div>
+  </div>
+  <div class="oc-field"><label for="c-herm">Hermandad, banda o página <small>(opcional)</small></label><input id="c-herm" name="hermandad" maxlength="120" autocomplete="off" list="c-herms"><datalist id="c-herms">${D.hermandades.map((h) => `<option value="${esc(h.nombre)}">`).join('')}</datalist></div>
+  <div class="oc-field"><label for="c-msg">Tu aportación</label><textarea id="c-msg" name="mensaje" maxlength="2000" required placeholder="Qué hay que corregir o añadir. Cuanto más concreto, mejor."></textarea></div>
+  <div class="oc-colabora-fila">
+    <div class="oc-field"><label for="c-fuente">Enlace a la fuente <small>(opcional)</small></label><input id="c-fuente" name="fuente" type="url" inputmode="url" maxlength="300" placeholder="https://"><small>Web de la hermandad, prensa o redes oficiales.</small></div>
+    <div class="oc-field"><label for="c-correo">Tu correo, si quieres respuesta <small>(opcional)</small></label><input id="c-correo" name="correo" type="email" maxlength="120" autocomplete="email"><small>Solo para contestarte. No se publica.</small></div>
+  </div>
+  <input type="hidden" name="pagina" value="">
+  <div class="oc-trampa" aria-hidden="true"><label>No rellenar <input name="web" tabindex="-1" autocomplete="off"></label><input type="checkbox" name="botcheck" tabindex="-1"></div>
+  <div><button class="oc-btn" type="submit">Enviar aportación${icon('arrow')}</button></div>
+  <p class="oc-colabora-estado" data-estado role="status" aria-live="polite" tabindex="-1" hidden></p>
+</form>
 <div class="oc-prose">
-<h2 class="oc-h2">Cómo avisar de un error o aportar un dato</h2>
-<ol><li>En cada ficha (hermandad, banda, imaginero, marcha) encontrarás el enlace <strong>«Sugerir una corrección»</strong>.</li><li>Se abre una incidencia en GitHub con la página ya indicada (necesitas una cuenta gratuita de GitHub).</li><li>Explica qué cambiar y, si puedes, enlaza la fuente (web de la hermandad, prensa, redes oficiales).</li></ol>
-<p><a class="oc-btn" href="${esc(issueUrl('Aportación: ', 'Sección o dato:\n\nQué aportas:\n\nEnlace a la fuente:\n'))}" target="_blank" rel="noopener">Abrir una incidencia nueva${icon('out')}</a></p>
 <h2 class="oc-h2">Qué se puede aportar</h2>
-<ul><li>Bandas que acompañan a cada paso este año (con el enlace del anuncio de la hermandad).</li><li>Cultos, traslados, rosarios y salidas extraordinarias con fecha y hora.</li><li>Marchas dedicadas: título, compositor, año y formación.</li><li>Hábito de nazareno, imagineros y datos históricos de una hermandad.</li></ul>
+<ul><li>Bandas que acompañan a cada paso este año (con el enlace del anuncio de la hermandad).</li><li>Cultos, traslados, rosarios y salidas extraordinarias con fecha y hora.</li><li>Marchas dedicadas: título, compositor, año y formación.</li><li>Hábito de nazareno, imagineros, fotos con licencia libre y datos históricos de una hermandad.</li></ul>
 <h2 class="oc-h2">Cómo se revisa</h2>
-<p>Todo dato nuevo necesita una fuente. Los actos detectados automáticamente se muestran sin la marca «Confirmado» hasta que alguien comprueba el horario. El código y los datos están abiertos en <a href="https://github.com/${REPO}" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>Todo dato nuevo necesita una fuente que se pueda consultar. Los actos detectados automáticamente se muestran sin la marca «Confirmado» hasta que alguien comprueba el horario. Tu correo, si lo das, solo se usa para responderte.</p>
 </div>`;
-  write('colabora/index.html', layout({ title: 'Colabora', desc: 'Cómo avisar de un error o aportar un dato a Ocho Capitales.', body, path: 'colabora/', crumbs: [['Portada', u()], ['Colabora', '']] }));
+  write('colabora/index.html', layout({ title: 'Colabora', desc: 'Cómo avisar de un error o aportar un dato a Ocho Capitales.', body, path: 'colabora/', head: `<script src="${u('assets/colabora.js')}?v=${HUELLA.colabora}" defer></script>`, crumbs: [['Portada', u()], ['Colabora', '']] }));
 }
 function pageAcerca() {
   const imgs = D.hermandades.filter((h) => h.imagen).map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)} (${esc(CAP[h.ciudad].nombre)})</a>: ${credit(h.imagen)}</li>`).join('') + D.capitales.filter((c) => c.imagen).map((c) => `<li>${esc(c.nombre)}: ${credit(c.imagen)}</li>`).join('');

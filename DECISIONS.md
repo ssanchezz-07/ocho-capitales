@@ -182,6 +182,23 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 - **Miniatura con las iniciales del medio** en las noticias sin foto: repetía el mismo problema de ruido que la colgadura.
 
 
+## 2026-10-26 · Colabora por correo y GitHub invisible (oc-alojamiento)
+Pablo: «que lo que envíen en la página se envíe a mi correo ochocapitales@gmail.com … que el consumidor no vea nada de GitHub».
+
+**Elegido**
+- **Web3Forms** como servicio de envío mientras la web esté en GitHub Pages: la clave es pública por diseño y hace de alias del correo (la dirección no aparece nunca en la página), 250 envíos al mes gratis, campo trampa `botcheck`. Pablo la crea con su correo y la pega como variable `FORMULARIO_CLAVE` (`GUIA-ALOJAMIENTO.md`, paso 0).
+- **Formulario propio** en `/colabora/` (`site/assets/colabora.js`, solo se carga ahí): tipo, capital, hermandad (con lista), texto, fuente y correo de respuesta opcionales. Asunto fijo `[Ocho Capitales] Tipo · Capital · Hermandad`. Antispam: campo trampa, 3 s mínimos en la página y 5 envíos al día por navegador. Sin clave, el formulario avisa de que el envío llegará en unos días.
+- El pie de cada ficha («Sugerir una corrección») y erCuñao (cuando no puede guardar) llevan al formulario con la página, el nombre, la capital o el texto ya puestos.
+- **Alternativa Cloudflare** con un ajuste: variable `FORMULARIO_DESTINO=api` → el mismo formulario envía a `/api/sugerencias` (D1). El envío por correo desde Cloudflare (Email Routing) necesita el dominio en Cloudflare: se hará entonces.
+- Fuera el flujo semanal `sugerencias-semanales.yml` (publicaba las sugerencias en una incidencia pública).
+- User-Agent de los lectores de Nominatim con `ochocapitales@gmail.com`; `site/package.json` pasa a llamarse `ocho-capitales`.
+
+**Descartado**
+- FormSubmit: sin cuenta, pero el primer envío tiene que ir a la dirección en claro y recomienda no quitar su reCAPTCHA (otra pantalla para el público).
+- `mailto:`: publica la dirección y depende del programa de correo de cada uno.
+
+**Para oc-diseno:** el formulario usa `.oc-field`, `.oc-btn` y `.oc-note`; sus pocos estilos propios (`textarea`, mensajes de éxito y error, campo trampa) van en un `<style>` dentro de la página. Si quieres, pásalos a `site.css` / `vida.css` con el movimiento del resto.
+
 ## 2026-10-25 · Alojamiento, dominio y velocidad (sesión de infraestructura)
 
 Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.

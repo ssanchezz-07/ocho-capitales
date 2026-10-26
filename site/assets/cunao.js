@@ -719,12 +719,13 @@
   function enviarSugerencia(a) {
     const b = burbuja('cunao', 'Apuntado, cuñao…');
     fetch(BASE + 'api/sugerencias', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texto: a.texto, pagina: location.pathname, hermandad: a.hermandad }) })
-      .then((r) => { if (!r.ok) throw 0; b.firstChild.textContent = 'Recibido. Gracias: el lunes se repasan todas las sugerencias de la semana.'; })
+      .then((r) => { if (!r.ok) throw 0; b.firstChild.textContent = 'Recibido. Gracias: la revisamos con su fuente antes de publicarla.'; })
       .catch(() => {
-        // sin servidor de sugerencias (alojamiento estático): se ofrece abrir el aviso en GitHub ya rellenado
+        // sin servidor de sugerencias (alojamiento estático): se abre el formulario de Colabora con el texto ya puesto
         b.textContent = '';
         const f = document.createElement('div'); f.appendChild(el('p', null, 'No he podido guardarla desde aquí. Puedes enviarla en un momento:'));
-        const d = el('div', 'oc-cunao-acc'); d.appendChild(enlace('Enviar la sugerencia', 'https://github.com/ssanchezz-07/ocho-capitales/issues/new?labels=sugerencia&title=' + encodeURIComponent('Sugerencia: ' + a.texto.slice(0, 60)) + '&body=' + encodeURIComponent(a.texto + '\n\nPágina: ' + location.href), 'oc-cunao-link')); f.appendChild(d);
+        const q = new URLSearchParams({ texto: a.texto, pagina: location.pathname }); if (a.hermandad) q.set('nombre', a.hermandad);
+        const d = el('div', 'oc-cunao-acc'); d.appendChild(enlace('Enviar la sugerencia', BASE + 'colabora/?' + q, 'oc-cunao-link')); f.appendChild(d);
         b.appendChild(f);
       });
   }

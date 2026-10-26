@@ -88,7 +88,7 @@ export function escribeCabeceras({ DIST, BASE, SITE }) {
       'Strict-Transport-Security: max-age=31536000',
     ]],
     // siempre se piden con ?v=<huella> (build.mjs): una versión nueva es otra URL
-    ...['site.css', 'site.js', 'calle.js', 'cunao.js'].map((f) => [b + 'assets/' + f, ['Cache-Control: ' + fijo]]),
+    ...['site.css', 'site.js', 'calle.js', 'plano.js', 'cunao.js', 'colabora.js'].map((f) => [b + 'assets/' + f, ['Cache-Control: ' + fijo]]),
     [b + 'assets/fonts/*', ['Cache-Control: ' + fijo]],
     // imágenes con nombre fijo: una semana, y renovación en segundo plano durante un mes
     [b + 'assets/img/*', ['Cache-Control: public, max-age=604800, stale-while-revalidate=2592000']],

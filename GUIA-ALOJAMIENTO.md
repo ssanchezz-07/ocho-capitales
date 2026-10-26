@@ -10,6 +10,16 @@ Ya existen en tu cuenta de Cloudflare: el proyecto de Pages `ocho-capitales` (va
 
 ---
 
+## Paso 0 · Que Colabora te llegue al correo (5 minutos, ya, sin Cloudflare)
+El formulario de `/colabora/` (y el enlace «Sugerir una corrección» de cada ficha, y erCuñao cuando no puede guardar algo) envía cada aportación a **ochocapitales@gmail.com** a través de **Web3Forms** (gratis, 250 envíos al mes). Tu dirección **no aparece** en la página: Web3Forms te da una clave que hace de alias.
+1. Entra en https://web3forms.com → **Create your Access Key** → escribe `ochocapitales@gmail.com` → te llega un correo con la clave (un código de 36 caracteres con guiones). Ese es el único paso de activación.
+2. GitHub → `ssanchezz-07/ocho-capitales` → **Settings** → **Secrets and variables** → **Actions** → pestaña **Variables** → **New repository variable**: nombre `FORMULARIO_CLAVE`, valor la clave. (Va en *Variables*, no en *Secrets*: Web3Forms la diseña para ir en la página y no revela tu correo.)
+3. Dime **«formulario listo»**: publico, mando un envío de prueba y me confirmas que te ha llegado.
+
+Cada correo llega con el asunto `[Ocho Capitales] Tipo · Capital · Hermandad` (por ejemplo `[Ocho Capitales] Corrección · Málaga · Pollinica`), con el texto, el enlace a la fuente y la página desde la que se envió. Si la persona deja su correo, al pulsar «Responder» le contestas a ella. Reenvíamelo tal cual y lo derivo a la sesión que toque.
+
+Hasta que pongas la clave, el formulario se ve pero avisa de que el envío estará disponible en unos días.
+
 ## Paso 1 · Token de Cloudflare (la llave para que GitHub suba la web)
 1. Entra en https://dash.cloudflare.com → arriba a la derecha, tu icono → **Perfil** → **Tokens de API** → **Crear token**.
 2. Busca la plantilla **«Editar Cloudflare Pages»** (*Edit Cloudflare Pages*) → **Usar plantilla**. Si no aparece, **Crear token personalizado** con un único permiso: *Cuenta → Cloudflare Pages → Editar*.
@@ -20,8 +30,9 @@ Ya existen en tu cuenta de Cloudflare: el proyecto de Pages `ocho-capitales` (va
 En https://dash.cloudflare.com → **Workers y Pages** → a la derecha, **ID de cuenta** → copiar. (No es secreto, pero va en el mismo sitio.)
 
 ## Paso 3 · Dos contraseñas largas que inventas tú
-- **`RESUMEN_TOKEN`**: la que usa el resumen semanal de sugerencias para leer el buzón. Mínimo 32 caracteres al azar (el gestor de contraseñas de tu navegador o de Windows puede generarla).
+- **`RESUMEN_TOKEN`**: protege la lectura del buzón de erCuñao guardado en Cloudflare. Mínimo 32 caracteres al azar (el gestor de contraseñas de tu navegador o de Windows puede generarla).
 - **`SAL`**: otra distinta, también larga. Sirve para que la cifra de las IP del buzón no se pueda deshacer.
+(Ya no hay resumen semanal en una incidencia pública de GitHub: las aportaciones te llegan por correo, paso 0.)
 Guárdalas en tu gestor de contraseñas.
 
 ## Paso 4 · Pegar en GitHub (Settings → Secrets)
@@ -33,14 +44,13 @@ Pestaña **Secrets** → **New repository secret**, uno a uno:
 |---|---|
 | `CLOUDFLARE_API_TOKEN` | el token del paso 1 |
 | `CLOUDFLARE_ACCOUNT_ID` | el ID del paso 2 |
-| `RESUMEN_TOKEN` | la primera contraseña del paso 3 |
-| `SUGERENCIAS_URL` | `https://ocho-capitales.pages.dev/api/sugerencias` |
 
 Pestaña **Variables** (opcional, solo si cambias algo):
 
 | Nombre | Valor | Para qué |
 |---|---|---|
 | `CLOUDFLARE_URL` | `https://ocho-capitales.pages.dev` (o tu dominio cuando lo tengas) | la dirección que se pone en el mapa del sitio y en los enlaces canónicos |
+| `FORMULARIO_DESTINO` | `api` | solo si un día prefieres que Colabora guarde en la base de Cloudflare (D1) en vez de enviar por correo |
 | `CLOUDFLARE_CADA_HORAS` | `2` | solo si Cloudflare avisa de que te acercas a 500 despliegues al mes (ver «Si algo falla») |
 
 ## Paso 5 · Pegar en el proyecto de Cloudflare Pages

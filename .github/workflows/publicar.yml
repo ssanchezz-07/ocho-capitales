@@ -82,6 +82,7 @@ jobs:
           # Con dominio propio, cambia BASE_PATH a "/" y SITE_URL a tu dominio.
           BASE_PATH: /${{ github.event.repository.name }}/
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}   # Colabora → correo del portal (Web3Forms; ver GUIA-ALOJAMIENTO.md)
         run: node build.mjs
       - name: Base de datos y auditoría
         # SQLite con todo lo verificado y su procedencia; la auditoría (datos/auditoria.json) lista huecos y posibles errores
@@ -136,6 +137,8 @@ jobs:
         env:
           BASE_PATH: /
           SITE_URL: ${{ vars.CLOUDFLARE_URL || 'https://ocho-capitales.pages.dev' }}
+          FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}
+          FORMULARIO_DESTINO: ${{ vars.FORMULARIO_DESTINO }}   # «api»: /api/sugerencias de Cloudflare en vez de Web3Forms
         run: node build.mjs
       - name: Comprobar límites (20.000 archivos, 25 MiB por archivo)
         if: steps.decidir.outputs.seguir == 'si'

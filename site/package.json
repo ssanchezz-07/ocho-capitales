@@ -1,8 +1,8 @@
 {
-  "name": "infocofrade",
+  "name": "ocho-capitales",
   "private": true,
   "type": "module",
-  "description": "InfoCofrade: portal estático de noticias y enciclopedia de la Semana Santa andaluza",
+  "description": "Ocho Capitales: portal de la Semana Santa de las ocho capitales andaluzas",
   "scripts": {
     "noticias": "node fetch-news.mjs",
     "build": "node build.mjs",

@@ -128,7 +128,7 @@ async function lugarTemplo(txt) {
   if (NOM[q] !== undefined) return NOM[q];
   const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=3&viewbox=-4.55,36.78,-4.33,36.66&bounded=1&q=' + encodeURIComponent(q + ', Málaga');
   await new Promise((r) => setTimeout(r, 1100));
-  const res = await (await fetch(url, { headers: { 'User-Agent': 'OchoCapitales-verificacion/1.0 (pablossanchez.02@gmail.com)' } })).json();
+  const res = await (await fetch(url, { headers: { 'User-Agent': 'OchoCapitales-verificacion/1.0 (ochocapitales@gmail.com)' } })).json();
   NOM[q] = res[0] ? { lat: +res[0].lat, lon: +res[0].lon, osm: res[0].display_name.slice(0, 120) } : null;
   fs.writeFileSync(fNom, JSON.stringify(NOM, null, 1));
   return NOM[q];
