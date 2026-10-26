@@ -1,0 +1,6380 @@
+{
+ "_nota": "Listas oficiales de calles 2026 de Cádiz (Programa de Canal Sur Radio con los itinerarios del Consejo), con sede de salida y entrada y horas de paso. Generado por tools/itinerarios/listas-cadiz.mjs; no editar a mano: las correcciones van en correcciones-cadiz.json.",
+ "ciudad": "cadiz",
+ "anio": 2026,
+ "avisos": [
+  "humillacion-cadiz: no tiene ficha en el portal (portal.json); no se puede publicar en el plano hasta que la tenga",
+  "ecce-mater-tua-cadiz: sin estación de penitencia en la Catedral",
+  "la-resurreccion-cadiz: la tabla de horas del programa dice 2025"
+ ],
+ "hermandades": {
+  "servitas-cadiz": {
+   "nombre_programa": "SERVITAS",
+   "dia": "Viernes de Dolores",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 6
+   },
+   "itinerario_literal": "Sagasta (Izda.), Hospital de Mujeres (Dcha.), Plaza de la Libertad, Plaza Topete, Compañía, Plaza de la Catedral, Arquitecto Acero, (Estación de Penitencia en la S.I.C.), Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza del Palillero, Novena, Ancha, San José (Izq.), Mateo de Alba, Sagasta (Izq.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Sagasta (Izda.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Hospital de Mujeres (Dcha.)",
+     "lado": "derecha",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Plaza de la Libertad",
+     "calle": "Plaza de la Libertad"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza del Palillero",
+     "calle": "Plaza del Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Mateo de Alba",
+     "calle": "Mateo de Alba"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Lorenzo Mártir.",
+    "templo": "san-lorenzo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 6)"
+   },
+   "salida": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 6)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 6)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:00",
+     "catedral_entrada": "20:45",
+     "catedral_salida": "21:05",
+     "candelaria": "21:40",
+     "palillero": "22:25",
+     "entrada": "00:40"
+    },
+    "paso": {
+     "salida": "19:20",
+     "catedral_entrada": "21:05",
+     "catedral_salida": "21:25",
+     "candelaria": "22:00",
+     "palillero": "22:45",
+     "entrada": "01:10"
+    }
+   }
+  },
+  "merced-obediencia-cadiz": {
+   "nombre_programa": "NAZARENO DE LA OBEDIENCIA",
+   "dia": "Sábado de Pasión",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 8
+   },
+   "itinerario_literal": "Merced, Plaza de las Canastas, Jesús de la Sentencia, San Juan de Dios, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, Arquitecto Acero, (Estación de Penitencia en la S.I.C.), Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza del Palillero, Columela (Drcha.), San Francisco (Drcha.), Plaza San Agustín, San Francisco, Nueva, Plaza de San Juan de Dios, San Juan de Dios, Jesús de la Sentencia, Plaza de las Canastas, Merced, a su Templo.",
+   "ida": [
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza del Palillero",
+     "calle": "Plaza del Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Nuestra Señora de la Merced.",
+    "templo": "merced",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+   },
+   "salida": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+    ]
+   },
+   "entrada": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:00",
+     "catedral_entrada": "18:30",
+     "catedral_salida": "18:45",
+     "candelaria": "19:20",
+     "palillero": "19:50",
+     "entrada": "22:25"
+    },
+    "paso": {
+     "salida": "17:20",
+     "catedral_entrada": "18:50",
+     "catedral_salida": "19:05",
+     "candelaria": "19:40",
+     "palillero": "20:10",
+     "entrada": "22:45"
+    }
+   }
+  },
+  "humillacion-cadiz": {
+   "nombre_programa": "HUMILLACIÓN",
+   "dia": "Sábado de Pasión",
+   "ficha_portal": false,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 8
+   },
+   "itinerario_literal": "Plaza de la Catedral, Arquitecto Acero (Estación de Penitencia en la S.I.C.), Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, Sagasta, Cervantes, Gaspar del Pino, San Miguel, Sacramento, Barrié, Plaza Topete, Compañía, Plaza de la Catedral, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Sagasta",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Cervantes",
+     "calle": "Cervantes"
+    },
+    {
+     "texto": "Gaspar del Pino",
+     "calle": "Gaspar del Pino"
+    },
+    {
+     "texto": "San Miguel",
+     "calle": "San Miguel"
+    },
+    {
+     "texto": "Sacramento",
+     "calle": "Sacramento"
+    },
+    {
+     "texto": "Barrié",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia de Santiago Apóstol.",
+    "templo": "santiago",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+   },
+   "salida": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+    ]
+   },
+   "entrada": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "18:35",
+     "nueva": "18:55",
+     "catedral_entrada": "19:10",
+     "catedral_salida": "19:45",
+     "candelaria": "20:15",
+     "palillero": "23:00",
+     "entrada": "23:40"
+    },
+    "paso": {
+     "salida": "18:55",
+     "nueva": "19:15",
+     "catedral_entrada": "19:30",
+     "catedral_salida": "20:05",
+     "candelaria": "20:35",
+     "palillero": "23:20",
+     "entrada": "00:00"
+    }
+   }
+  },
+  "la-borriquita-cadiz": {
+   "nombre_programa": "LA BORRIQUITA",
+   "dia": "Domingo de Ramos",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 9
+   },
+   "itinerario_literal": "Avda. Andalucía, Plaza Constitución, Cuesta de las Calesas, Plocia, Plaza San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza del Palillero, Columela (Drcha.), San Francisco (Drcha.), Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Plocia, Cuesta de las Calesas, Plaza de la Constitución, Acacias, Brunete, Avda. Francisco García de Sola, García Carrera, Escalzo, Avda. María Auxiliadora, Poeta Nieto, Avda. Andalucía a su Templo.",
+   "ida": [
+    {
+     "texto": "Avda. Andalucía",
+     "calle": "Avda. Andalucía"
+    },
+    {
+     "texto": "Plaza Constitución",
+     "calle": "Plaza Constitución"
+    },
+    {
+     "texto": "Cuesta de las Calesas",
+     "calle": "Cuesta de las Calesas"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza del Palillero",
+     "calle": "Plaza del Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Cuesta de las Calesas",
+     "calle": "Cuesta de las Calesas"
+    },
+    {
+     "texto": "Plaza de la Constitución",
+     "calle": "Plaza de la Constitución"
+    },
+    {
+     "texto": "Acacias",
+     "calle": "Acacias"
+    },
+    {
+     "texto": "Brunete",
+     "calle": "Brunete"
+    },
+    {
+     "texto": "Avda. Francisco García de Sola",
+     "calle": "Avda. Francisco García de Sola"
+    },
+    {
+     "texto": "García Carrera",
+     "calle": "García Carrera"
+    },
+    {
+     "texto": "Escalzo",
+     "calle": "Escalzo"
+    },
+    {
+     "texto": "Avda. María Auxiliadora",
+     "calle": "Avda. María Auxiliadora"
+    },
+    {
+     "texto": "Poeta Nieto",
+     "calle": "Poeta Nieto"
+    },
+    {
+     "texto": "Avda. Andalucía",
+     "calle": "Avda. Andalucía"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San José.",
+    "templo": "san-jose",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+   },
+   "salida": {
+    "templo": "san-jose",
+    "nombre": "Parroquia de San José",
+    "lat": 36.5138482,
+    "lon": -6.2806872,
+    "osm": "way/148685979",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-jose",
+    "nombre": "Parroquia de San José",
+    "lat": 36.5138482,
+    "lon": -6.2806872,
+    "osm": "way/148685979",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "13:30",
+     "nueva": "16:30",
+     "catedral_entrada": "17:30",
+     "catedral_salida": "17:45",
+     "candelaria": "18:25",
+     "palillero": "18:50",
+     "entrada": "00:45"
+    },
+    "paso": {
+     "salida": "13:50",
+     "nueva": "16:55",
+     "catedral_entrada": "17:55",
+     "catedral_salida": "18:10",
+     "candelaria": "18:50",
+     "palillero": "19:15",
+     "entrada": "01:05"
+    },
+    "ultimo_paso": {
+     "salida": "14:20",
+     "nueva": "17:20",
+     "catedral_entrada": "18:20",
+     "catedral_salida": "18:35",
+     "candelaria": "19:15",
+     "palillero": "19:40",
+     "entrada": "01:30"
+    }
+   }
+  },
+  "las-penas-cadiz": {
+   "nombre_programa": "LAS PENAS",
+   "dia": "Domingo de Ramos",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 9
+   },
+   "itinerario_literal": "Sagasta (Dcha.), Hospital de Mujeres (Drcha.), Plaza Libertad, Plaza Topete, Compañía, Plaza de la Catedral, Cobos, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Izq.), Hospital de Mujeres (Izq.), Sagasta (Drcha.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Sagasta (Dcha.)",
+     "lado": "derecha",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Hospital de Mujeres (Drcha.)",
+     "lado": "derecha",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Plaza Libertad",
+     "calle": "Plaza Libertad"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Hospital de Mujeres (Izq.)",
+     "lado": "izquierda",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Sagasta (Drcha.)",
+     "lado": "derecha",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Lorenzo Mártir.",
+    "templo": "san-lorenzo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+   },
+   "salida": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 9)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "15:00",
+     "nueva": "17:20",
+     "catedral_entrada": "18:20",
+     "catedral_salida": "18:35",
+     "candelaria": "19:15",
+     "palillero": "19:40",
+     "entrada": "22:15"
+    },
+    "paso": {
+     "salida": "15:20",
+     "nueva": "17:40",
+     "catedral_entrada": "18:40",
+     "catedral_salida": "18:55",
+     "candelaria": "19:35",
+     "palillero": "20:00",
+     "entrada": "22:45"
+    },
+    "ultimo_paso": {
+     "salida": "15:45",
+     "nueva": "18:00",
+     "catedral_entrada": "19:00",
+     "catedral_salida": "19:15",
+     "candelaria": "19:55",
+     "palillero": "20:20",
+     "entrada": "23:15"
+    }
+   }
+  },
+  "sagrada-cena-cadiz": {
+   "nombre_programa": "SAGRADA CENA",
+   "dia": "Domingo de Ramos",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 10
+   },
+   "itinerario_literal": "Compás de Santo Domingo, Plocia, Callejón de los Negros, Lázaro Dou, Plaza de San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Drcha.), San Francisco (Drcha.) Plaza San Agustín, San Francisco, Nueva, Plaza de San Juan de Dios, Sopranis, Compás de Santo Domingo, a su Templo.",
+   "ida": [
+    {
+     "texto": "Compás de Santo Domingo",
+     "calle": "Compás de Santo Domingo"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Callejón de los Negros",
+     "calle": "Callejón de los Negros"
+    },
+    {
+     "texto": "Lázaro Dou",
+     "calle": "Lázaro Dou"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Sopranis",
+     "calle": "Sopranis"
+    },
+    {
+     "texto": "Compás de Santo Domingo",
+     "calle": "Compás de Santo Domingo"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "erratas_del_programa": [
+    "falta la coma tras el paréntesis"
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Conventual de Santo Domingo.",
+    "templo": "santo-domingo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+   },
+   "salida": {
+    "templo": "santo-domingo",
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288478,
+    "lon": -6.2900719,
+    "osm": "way/154232628",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+    ]
+   },
+   "entrada": {
+    "templo": "santo-domingo",
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288478,
+    "lon": -6.2900719,
+    "osm": "way/154232628",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:55",
+     "nueva": "18:00",
+     "catedral_entrada": "19:00",
+     "catedral_salida": "19:15",
+     "candelaria": "19:55",
+     "palillero": "20:20",
+     "entrada": "23:30"
+    },
+    "paso": {
+     "salida": "17:20",
+     "nueva": "18:20",
+     "catedral_entrada": "19:20",
+     "catedral_salida": "19:35",
+     "candelaria": "20:15",
+     "palillero": "20:40",
+     "entrada": "23:55"
+    },
+    "ultimo_paso": {
+     "salida": "17:40",
+     "nueva": "18:40",
+     "catedral_entrada": "19:40",
+     "catedral_salida": "19:55",
+     "candelaria": "20:35",
+     "palillero": "21:00",
+     "entrada": "00:15"
+    }
+   }
+  },
+  "el-despojado-cadiz": {
+   "nombre_programa": "DESPOJADO",
+   "dia": "Domingo de Ramos",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 10
+   },
+   "itinerario_literal": "Colegio Salesianos “San Ignacio” (interior), Avenida María Auxiliadora, Poeta Nieto, Avda. Andalucía, Plaza de la Constitución, Cuesta de las Calesas, Plocia, Callejón de los Negros, Lázaro Dou, Plaza San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Izq.), Plaza las Flores, Compañía, Plaza de la Catedral, Pelota, Plaza San Juan de Dios, Sopranis, Santo Domingo, Perla de Cádiz, Cuesta de las Calesas, Plaza de la Constitución, Avda. Bahía Blanca, Acacias, Plaza San Severiano, Brunete, García de Sola, Avda. García Carrera, Escalzo, Avda. María Auxiliadora, Interior del Colegio Salesianos “San Ignacio” a su Templo.",
+   "ida": [
+    {
+     "texto": "Colegio Salesianos “San Ignacio” (interior)",
+     "lado": "interior",
+     "calle": "Colegio Salesianos San Ignacio"
+    },
+    {
+     "texto": "Avenida María Auxiliadora",
+     "calle": "Avenida María Auxiliadora"
+    },
+    {
+     "texto": "Poeta Nieto",
+     "calle": "Poeta Nieto"
+    },
+    {
+     "texto": "Avda. Andalucía",
+     "calle": "Avda. Andalucía"
+    },
+    {
+     "texto": "Plaza de la Constitución",
+     "calle": "Plaza de la Constitución"
+    },
+    {
+     "texto": "Cuesta de las Calesas",
+     "calle": "Cuesta de las Calesas"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Callejón de los Negros",
+     "calle": "Callejón de los Negros"
+    },
+    {
+     "texto": "Lázaro Dou",
+     "calle": "Lázaro Dou"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza las Flores",
+     "calle": "Plaza las Flores"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Sopranis",
+     "calle": "Sopranis"
+    },
+    {
+     "texto": "Santo Domingo",
+     "calle": "Santo Domingo"
+    },
+    {
+     "texto": "Perla de Cádiz",
+     "calle": "Perla de Cádiz"
+    },
+    {
+     "texto": "Cuesta de las Calesas",
+     "calle": "Cuesta de las Calesas"
+    },
+    {
+     "texto": "Plaza de la Constitución",
+     "calle": "Plaza de la Constitución"
+    },
+    {
+     "texto": "Avda. Bahía Blanca",
+     "calle": "Avda. Bahía Blanca"
+    },
+    {
+     "texto": "Acacias",
+     "calle": "Acacias"
+    },
+    {
+     "texto": "Plaza San Severiano",
+     "calle": "Plaza San Severiano"
+    },
+    {
+     "texto": "Brunete",
+     "calle": "Brunete"
+    },
+    {
+     "texto": "García de Sola",
+     "calle": "García de Sola"
+    },
+    {
+     "texto": "Avda. García Carrera",
+     "calle": "Avda. García Carrera"
+    },
+    {
+     "texto": "Escalzo",
+     "calle": "Escalzo"
+    },
+    {
+     "texto": "Avda. María Auxiliadora",
+     "calle": "Avda. María Auxiliadora"
+    },
+    {
+     "texto": "Interior del Colegio Salesianos “San Ignacio”",
+     "calle": "Interior del Colegio Salesianos San Ignacio"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Santuario María Auxiliadora Coronada.",
+    "templo": "salesianos",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+   },
+   "salida": {
+    "templo": "salesianos",
+    "nombre": "Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)",
+    "lat": 36.5124457,
+    "lon": -6.2782926,
+    "osm": "way/157632556",
+    "dir": "Avenida María Auxiliadora 7",
+    "fuente_dir": "OSM way/157632556 (addr:housenumber 7)",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+    ]
+   },
+   "entrada": {
+    "templo": "salesianos",
+    "nombre": "Santuario de María Auxiliadora (Colegio Salesianos San Ignacio)",
+    "lat": 36.5124457,
+    "lon": -6.2782926,
+    "osm": "way/157632556",
+    "dir": "Avenida María Auxiliadora 7",
+    "fuente_dir": "OSM way/157632556 (addr:housenumber 7)",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "15:00",
+     "nueva": "18:40",
+     "catedral_entrada": "19:40",
+     "catedral_salida": "19:55",
+     "candelaria": "20:35",
+     "palillero": "21:00",
+     "entrada": "01:50"
+    },
+    "paso": {
+     "salida": "15:20",
+     "nueva": "19:00",
+     "catedral_entrada": "20:00",
+     "catedral_salida": "20:15",
+     "candelaria": "20:55",
+     "palillero": "21:20",
+     "entrada": "02:10"
+    }
+   }
+  },
+  "humildad-y-paciencia-cadiz": {
+   "nombre_programa": "HUMILDAD Y PACIENCIA",
+   "dia": "Domingo de Ramos",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 11
+   },
+   "itinerario_literal": "Plaza de San Agustín, San Francisco (Dcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Dcha.), San Pedro, Beato Diego José de Cádiz, San Francisco (Dcha.), Plaza de San Agustín, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Dcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Beato Diego José de Cádiz",
+     "calle": "Beato Diego José de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Agustín.",
+    "templo": "san-agustin",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 11)"
+   },
+   "salida": {
+    "templo": "san-agustin",
+    "nombre": "Parroquia de San Agustín",
+    "lat": 36.5321248,
+    "lon": -6.2942315,
+    "osm": "way/66648043",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 11)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-agustin",
+    "nombre": "Parroquia de San Agustín",
+    "lat": 36.5321248,
+    "lon": -6.2942315,
+    "osm": "way/66648043",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 11)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "18:40",
+     "nueva": "19:00",
+     "catedral_entrada": "20:00",
+     "catedral_salida": "20:15",
+     "candelaria": "20:55",
+     "palillero": "21:20",
+     "entrada": "00:50"
+    },
+    "paso": {
+     "salida": "19:00",
+     "nueva": "19:20",
+     "catedral_entrada": "20:20",
+     "catedral_salida": "20:35",
+     "candelaria": "21:15",
+     "palillero": "21:40",
+     "entrada": "01:10"
+    },
+    "ultimo_paso": {
+     "salida": "19:20",
+     "nueva": "19:45",
+     "catedral_entrada": "20:45",
+     "catedral_salida": "21:00",
+     "candelaria": "21:40",
+     "palillero": "22:05",
+     "entrada": "01:35"
+    }
+   }
+  },
+  "nazareno-del-amor-cadiz": {
+   "nombre_programa": "NAZARENO DEL AMOR",
+   "dia": "Lunes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 12
+   },
+   "itinerario_literal": "Plaza de San Francisco, San Francisco, Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José, San Pedro, Beato Diego de Cádiz, Rosario, (Izq.), Plaza de San Francisco, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de San Francisco",
+     "calle": "Plaza de San Francisco"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "Rosario, (Izq.)",
+     "calle": "Rosario",
+     "lado": "izquierda"
+    },
+    {
+     "texto": "Plaza de San Francisco",
+     "calle": "Plaza de San Francisco"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Conventual de Nuestra Señora de los Remedios, de los PP. Franciscanos de Cádiz.",
+    "templo": "san-francisco",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+   },
+   "salida": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:00",
+     "nueva": "17:30",
+     "catedral_entrada": "18:30",
+     "catedral_salida": "18:45",
+     "candelaria": "19:25",
+     "palillero": "19:50",
+     "entrada": "22:35"
+    },
+    "paso": {
+     "salida": "16:40",
+     "nueva": "18:00",
+     "catedral_entrada": "19:00",
+     "catedral_salida": "19:15",
+     "candelaria": "19:55",
+     "palillero": "20:20",
+     "entrada": "23:25"
+    },
+    "ultimo_paso": {
+     "salida": "17:20",
+     "nueva": "18:25",
+     "catedral_entrada": "19:25",
+     "catedral_salida": "19:40",
+     "candelaria": "20:20",
+     "palillero": "20:45",
+     "entrada": "00:05"
+    }
+   }
+  },
+  "la-palma-cadiz": {
+   "nombre_programa": "LA PALMA",
+   "dia": "Lunes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 12
+   },
+   "itinerario_literal": "Virgen de la Palma, Cristo de la Misericordia, Martínez Campos, Rosa, Sagasta, Hospital de Mujeres, Plaza de la Libertad, Plaza Topete, Columela (Izq.), Plaza Palillero, Columela, San Francisco (Drcha.), Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Izq.), Plaza Topete, Plaza de la Libertad, Hospital de Mujeres, Torre, Rosa, Pastora, Plaza del Tío de la Tiza, Hermano Ignacio, Virgen de las Penas, Virgen de la Palma, a su Templo.",
+   "ida": [
+    {
+     "texto": "Virgen de la Palma",
+     "calle": "Virgen de la Palma"
+    },
+    {
+     "texto": "Cristo de la Misericordia",
+     "calle": "Cristo de la Misericordia"
+    },
+    {
+     "texto": "Martínez Campos",
+     "calle": "Martínez Campos"
+    },
+    {
+     "texto": "Rosa",
+     "calle": "Rosa"
+    },
+    {
+     "texto": "Sagasta",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Hospital de Mujeres",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Plaza de la Libertad",
+     "calle": "Plaza de la Libertad"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Plaza de la Libertad",
+     "calle": "Plaza de la Libertad"
+    },
+    {
+     "texto": "Hospital de Mujeres",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Torre",
+     "calle": "Torre"
+    },
+    {
+     "texto": "Rosa",
+     "calle": "Rosa"
+    },
+    {
+     "texto": "Pastora",
+     "calle": "Pastora"
+    },
+    {
+     "texto": "Plaza del Tío de la Tiza",
+     "calle": "Plaza del Tío de la Tiza"
+    },
+    {
+     "texto": "Hermano Ignacio",
+     "calle": "Hermano Ignacio"
+    },
+    {
+     "texto": "Virgen de las Penas",
+     "calle": "Virgen de las Penas"
+    },
+    {
+     "texto": "Virgen de la Palma",
+     "calle": "Virgen de la Palma"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Ntra. Sra. de la Palma.",
+    "templo": "la-palma",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+   },
+   "salida": {
+    "templo": "la-palma",
+    "nombre": "Parroquia de Nuestra Señora de la Palma",
+    "lat": 36.5296879,
+    "lon": -6.3017431,
+    "osm": "way/154961231",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+    ]
+   },
+   "entrada": {
+    "templo": "la-palma",
+    "nombre": "Parroquia de Nuestra Señora de la Palma",
+    "lat": 36.5296879,
+    "lon": -6.3017431,
+    "osm": "way/154961231",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 12)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "14:45",
+     "nueva": "18:25",
+     "catedral_entrada": "19:25",
+     "catedral_salida": "19:40",
+     "candelaria": "20:20",
+     "palillero": "20:45",
+     "entrada": "23:30"
+    },
+    "paso": {
+     "salida": "15:15",
+     "nueva": "18:50",
+     "catedral_entrada": "19:50",
+     "catedral_salida": "20:05",
+     "candelaria": "20:45",
+     "palillero": "21:10",
+     "entrada": "00:00"
+    },
+    "ultimo_paso": {
+     "salida": "15:45",
+     "nueva": "19:20",
+     "catedral_entrada": "20:20",
+     "catedral_salida": "20:35",
+     "candelaria": "21:15",
+     "palillero": "21:40",
+     "entrada": "00:30"
+    }
+   }
+  },
+  "el-prendimiento-cadiz": {
+   "nombre_programa": "EL PRENDIMIENTO",
+   "dia": "Lunes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 32,
+    "pagina_ficha": 14
+   },
+   "itinerario_literal": "Alameda Hermanas Carvia Bernal, Alameda Clara Campoamor (lado Izda.), Plaza Argüelles, Plaza de España, Avda. Cuatro de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Drcha.), Enrique de las Marinas, Bendición de Dios (Drcha.), Alameda Hermanas Carvia Bernal, a su Templo.",
+   "ida": [
+    {
+     "texto": "Alameda Hermanas Carvia Bernal",
+     "calle": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "texto": "Alameda Clara Campoamor (lado Izda.)",
+     "lado": "izquierda",
+     "calle": "Alameda Clara Campoamor"
+    },
+    {
+     "texto": "Plaza Argüelles",
+     "calle": "Plaza Argüelles"
+    },
+    {
+     "texto": "Plaza de España",
+     "calle": "Plaza de España"
+    },
+    {
+     "texto": "Avda. Cuatro de diciembre de 1977",
+     "calle": "Avda. Cuatro de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Enrique de las Marinas",
+     "calle": "Enrique de las Marinas"
+    },
+    {
+     "texto": "Bendición de Dios (Drcha.)",
+     "lado": "derecha",
+     "calle": "Bendición de Dios"
+    },
+    {
+     "texto": "Alameda Hermanas Carvia Bernal",
+     "calle": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Ntra. Sra. del Carmen y Santa Teresa.",
+    "templo": "carmen",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+   },
+   "salida": {
+    "templo": "carmen",
+    "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa",
+    "lat": 36.5371411,
+    "lon": -6.2997616,
+    "osm": "way/154222959",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+    ]
+   },
+   "entrada": {
+    "templo": "carmen",
+    "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa",
+    "lat": 36.5371411,
+    "lon": -6.2997616,
+    "osm": "way/154222959",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:45",
+     "nueva": "19:20",
+     "catedral_entrada": "20:20",
+     "catedral_salida": "20:35",
+     "candelaria": "21:15",
+     "palillero": "21:40",
+     "entrada": "00:15"
+    },
+    "paso": {
+     "salida": "17:05",
+     "nueva": "19:40",
+     "catedral_entrada": "20:40",
+     "catedral_salida": "20:55",
+     "candelaria": "21:35",
+     "palillero": "22:00",
+     "entrada": "00:40"
+    },
+    "ultimo_paso": {
+     "salida": "17:30",
+     "nueva": "20:10",
+     "catedral_entrada": "21:10",
+     "catedral_salida": "21:25",
+     "candelaria": "22:05",
+     "palillero": "22:30",
+     "entrada": "01:05"
+    }
+   }
+  },
+  "vera-cruz-cadiz": {
+   "nombre_programa": "VERA+CRUZ",
+   "dia": "Lunes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 14
+   },
+   "itinerario_literal": "Plaza de San Francisco, San Francisco, Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Barrié (Dcha.), Valverde, Cánovas del Castillo (Izq.), San José (Dcha.), San Pedro, Sagasta (Izq.), Tinte (Dcha.), Plaza de San Francisco, a su Templo",
+   "ida": [
+    {
+     "texto": "Plaza de San Francisco",
+     "calle": "Plaza de San Francisco"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Dcha.)",
+     "lado": "derecha",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Valverde",
+     "calle": "Valverde"
+    },
+    {
+     "texto": "Cánovas del Castillo (Izq.)",
+     "lado": "izquierda",
+     "calle": "Cánovas del Castillo"
+    },
+    {
+     "texto": "San José (Dcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Tinte (Dcha.)",
+     "lado": "derecha",
+     "calle": "Tinte"
+    },
+    {
+     "texto": "Plaza de San Francisco",
+     "calle": "Plaza de San Francisco"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Conventual de Nuestra Señora de los Remedios, de los PP. Franciscanos de Cádiz.",
+    "templo": "san-francisco",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+   },
+   "salida": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 14)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:15",
+     "nueva": "20:15",
+     "catedral_entrada": "21:15",
+     "catedral_salida": "21:30",
+     "candelaria": "22:10",
+     "palillero": "22:35",
+     "entrada": "00:25"
+    },
+    "paso": {
+     "salida": "19:30",
+     "nueva": "20:35",
+     "catedral_entrada": "21:35",
+     "catedral_salida": "21:50",
+     "candelaria": "22:30",
+     "palillero": "22:55",
+     "entrada": "00:45"
+    },
+    "ultimo_paso": {
+     "salida": "19:55",
+     "nueva": "20:55",
+     "catedral_entrada": "21:55",
+     "catedral_salida": "22:10",
+     "candelaria": "22:50",
+     "palillero": "23:15",
+     "entrada": "01:05"
+    }
+   }
+  },
+  "la-sanidad-cadiz": {
+   "nombre_programa": "SANIDAD",
+   "dia": "Martes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 15
+   },
+   "itinerario_literal": "Santa Inés, San José (Drcha.), San Pedro, Beato Diego de Cádiz, San Francisco (Drcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Izq.), Santa Inés a su Templo.",
+   "ida": [
+    {
+     "texto": "Santa Inés",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Santa Inés",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Santa Cruz.",
+    "templo": "santa-cruz",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 15)"
+   },
+   "salida": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«salir y recogerse en el Oratorio de San Felipe Neri» (Cádiz Directo, guía, 26-3-2026)"
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:30",
+     "nueva": "18:30",
+     "catedral_entrada": "19:15",
+     "catedral_salida": "19:30",
+     "candelaria": "20:10",
+     "palillero": "20:35",
+     "entrada": "22:30"
+    },
+    "paso": {
+     "salida": "16:45",
+     "nueva": "18:40",
+     "catedral_entrada": "19:30",
+     "catedral_salida": "19:45",
+     "candelaria": "20:25",
+     "palillero": "20:50",
+     "entrada": "22:45"
+    },
+    "ultimo_paso": {
+     "salida": "17:00",
+     "nueva": "18:50",
+     "catedral_entrada": "19:45",
+     "catedral_salida": "20:00",
+     "candelaria": "20:40",
+     "palillero": "21:05",
+     "entrada": "23:00"
+    }
+   }
+  },
+  "la-piedad-cadiz": {
+   "nombre_programa": "PIEDAD",
+   "dia": "Martes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 15
+   },
+   "itinerario_literal": "Plaza de Pío XII, Cobos, Cristóbal Colon, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Drcha.), San Francisco (Dcha.), Plaza San Agustín, San Francisco, Cristóbal Colón, Cobos, Plaza de la Catedral, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de Pío XII",
+     "calle": "Plaza de Pío XII"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colon",
+     "calle": "Cristóbal Colon"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia de Santiago Apóstol.",
+    "templo": "santiago",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 15)"
+   },
+   "salida": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 15)"
+    ]
+   },
+   "entrada": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 15)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:30",
+     "nueva": "18:55",
+     "catedral_entrada": "19:55",
+     "catedral_salida": "20:10",
+     "candelaria": "20:50",
+     "palillero": "21:15",
+     "entrada": "00:15"
+    },
+    "paso": {
+     "salida": "17:50",
+     "nueva": "19:15",
+     "catedral_entrada": "20:15",
+     "catedral_salida": "20:30",
+     "candelaria": "21:10",
+     "palillero": "21:35",
+     "entrada": "00:35"
+    },
+    "ultimo_paso": {
+     "salida": "18:15",
+     "nueva": "19:35",
+     "catedral_entrada": "20:35",
+     "catedral_salida": "20:50",
+     "candelaria": "21:30",
+     "palillero": "21:55",
+     "entrada": "00:55"
+    }
+   }
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "nombre_programa": "JESÚS CAÍDO",
+   "dia": "Martes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 16
+   },
+   "itinerario_literal": "Plaza Istmo. Cristo de la Vera-Cruz, Plaza San Francisco, Rosario, Marqués de Valdeiñigo, San Francisco (Dcha.), Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Izq.), Cervantes, Plaza del Mentidero, (por el lado izquierdo), Beni de Cádiz, Interior del Parque Genovés, (Paseo de las Palmeras), Avda. Doctor Gómez Ulla, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza Istmo. Cristo de la Vera-Cruz",
+     "calle": "Plaza Stmo. Cristo de la Vera-Cruz",
+     "errata": "«Istmo.» por «Stmo.»"
+    },
+    {
+     "texto": "Plaza San Francisco",
+     "calle": "Plaza San Francisco"
+    },
+    {
+     "texto": "Rosario",
+     "calle": "Rosario"
+    },
+    {
+     "texto": "Marqués de Valdeiñigo",
+     "calle": "Marqués de Valdeiñigo"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Cervantes",
+     "calle": "Cervantes"
+    },
+    {
+     "texto": "Plaza del Mentidero, (por el lado izquierdo)",
+     "calle": "Plaza del Mentidero",
+     "lado": "izquierda"
+    },
+    {
+     "texto": "Beni de Cádiz",
+     "calle": "Beni de Cádiz"
+    },
+    {
+     "texto": "Interior del Parque Genovés, (Paseo de las Palmeras)",
+     "calle": "Interior del Parque Genovés",
+     "aclaracion": "Paseo de las Palmeras"
+    },
+    {
+     "texto": "Avda. Doctor Gómez Ulla",
+     "calle": "Avda. Doctor Gómez Ulla"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Conventual de Nuestra Señora de los Remedios, de los PP. Franciscanos de Cádiz.",
+    "templo": "san-francisco",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 16)"
+   },
+   "salida": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "capilla-jesus-caido",
+    "nombre": "Capilla de Jesús Caído (junto al Parque Genovés)",
+    "lat": 36.5346087,
+    "lon": -6.3044972,
+    "osm": "way/766688340",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«volverá a su capilla del Parque Genovés tras su salida desde San Francisco» (Cádiz Directo, 4-3-2026)"
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:30",
+     "nueva": "19:20",
+     "catedral_entrada": "20:20",
+     "catedral_salida": "20:35",
+     "candelaria": "21:15",
+     "palillero": "21:40",
+     "entrada": "00:40"
+    },
+    "paso": {
+     "salida": "17:55",
+     "nueva": "19:45",
+     "catedral_entrada": "20:45",
+     "catedral_salida": "21:00",
+     "candelaria": "21:40",
+     "palillero": "22:05",
+     "entrada": "01:05"
+    },
+    "ultimo_paso": {
+     "salida": "18:25",
+     "nueva": "20:10",
+     "catedral_entrada": "21:10",
+     "catedral_salida": "21:25",
+     "candelaria": "22:05",
+     "palillero": "22:30",
+     "entrada": "01:30"
+    }
+   }
+  },
+  "la-columna-cadiz": {
+   "nombre_programa": "COLUMNA",
+   "dia": "Martes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 16
+   },
+   "itinerario_literal": "Plaza de San Antonio (centro), Ancha, San José (Izqda.), Plaza de Mina, Tinte, Plaza San Francisco, Rosario, Beato Diego de Cádiz (Izqda.), San Francisco (Drcha.), Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, Plaza de San Antonio (centro), a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de San Antonio (centro)",
+     "lado": "centro",
+     "calle": "Plaza de San Antonio"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izqda.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Plaza de Mina",
+     "calle": "Plaza de Mina"
+    },
+    {
+     "texto": "Tinte",
+     "calle": "Tinte"
+    },
+    {
+     "texto": "Plaza San Francisco",
+     "calle": "Plaza San Francisco"
+    },
+    {
+     "texto": "Rosario",
+     "calle": "Rosario"
+    },
+    {
+     "texto": "Beato Diego de Cádiz (Izqda.)",
+     "lado": "izquierda",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Plaza de San Antonio (centro)",
+     "lado": "centro",
+     "calle": "Plaza de San Antonio"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Parroquial de San Antonio.",
+    "templo": "san-antonio",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 16)"
+   },
+   "salida": {
+    "templo": "san-antonio",
+    "nombre": "Iglesia Parroquial de San Antonio",
+    "lat": 36.5344664,
+    "lon": -6.2994284,
+    "osm": "way/154222951",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 16)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-antonio",
+    "nombre": "Iglesia Parroquial de San Antonio",
+    "lat": 36.5344664,
+    "lon": -6.2994284,
+    "osm": "way/154222951",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 16)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:30",
+     "nueva": "20:10",
+     "catedral_entrada": "21:10",
+     "catedral_salida": "21:25",
+     "candelaria": "22:05",
+     "palillero": "22:30",
+     "entrada": "23:50"
+    },
+    "paso": {
+     "salida": "18:00",
+     "nueva": "20:30",
+     "catedral_entrada": "21:30",
+     "catedral_salida": "21:45",
+     "candelaria": "22:25",
+     "palillero": "22:50",
+     "entrada": "00:15"
+    },
+    "ultimo_paso": {
+     "salida": "18:35",
+     "nueva": "20:55",
+     "catedral_entrada": "21:55",
+     "catedral_salida": "22:10",
+     "candelaria": "22:50",
+     "palillero": "23:15",
+     "entrada": "00:50"
+    }
+   }
+  },
+  "ecce-homo-cadiz": {
+   "nombre_programa": "ECCE-HOMO",
+   "dia": "Martes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 17
+   },
+   "itinerario_literal": "Ancha (Izq.), Novena, Barrié (Izq.), José del Toro (Drcha.), Cardenal Zapata (Izq.), Plaza San Agustín, San Francisco (Drcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Drcha.), Cánovas del Castillo, Sagasta (Izq.), Ancha (izq.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Ancha (Izq.)",
+     "lado": "izquierda",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Izq.)",
+     "lado": "izquierda",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "José del Toro (Drcha.)",
+     "lado": "derecha",
+     "calle": "José del Toro"
+    },
+    {
+     "texto": "Cardenal Zapata (Izq.)",
+     "lado": "izquierda",
+     "calle": "Cardenal Zapata"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Cánovas del Castillo",
+     "calle": "Cánovas del Castillo"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Ancha (izq.)",
+     "lado": "izquierda",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia de la Conversión de San Pablo.",
+    "templo": "san-pablo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 17)"
+   },
+   "salida": {
+    "templo": "san-pablo",
+    "nombre": "Iglesia de la Conversión de San Pablo",
+    "lat": 36.5331329,
+    "lon": -6.296805,
+    "osm": "way/494982467",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 17)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-pablo",
+    "nombre": "Iglesia de la Conversión de San Pablo",
+    "lat": 36.5331329,
+    "lon": -6.296805,
+    "osm": "way/494982467",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 17)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:00",
+     "nueva": "20:55",
+     "catedral_entrada": "21:55",
+     "catedral_salida": "22:10",
+     "candelaria": "22:50",
+     "palillero": "23:15",
+     "entrada": "00:55"
+    },
+    "paso": {
+     "salida": "19:20",
+     "nueva": "21:15",
+     "catedral_entrada": "22:15",
+     "catedral_salida": "22:30",
+     "candelaria": "23:10",
+     "palillero": "23:35",
+     "entrada": "01:15"
+    },
+    "ultimo_paso": {
+     "salida": "19:40",
+     "nueva": "21:35",
+     "catedral_entrada": "22:35",
+     "catedral_salida": "22:50",
+     "candelaria": "23:30",
+     "palillero": "23:55",
+     "entrada": "01:35"
+    }
+   }
+  },
+  "la-sentencia-cadiz": {
+   "nombre_programa": "LA SENTENCIA",
+   "dia": "Miércoles Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 18
+   },
+   "itinerario_literal": "Plaza de la Merced, Merced, Plaza de las Canastas, Jesús de la Sentencia, San Juan de Dios, Plaza de San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Barrié (Drcha.), Valverde, Beato Diego de Cádiz, San Francisco (Dcha.), Plaza San Agustín, San Francisco, Nueva, Plaza de San Juan de Dios, San Juan de Dios, Jesús de la Sentencia, Plaza de las Canastas, Merced, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de la Merced",
+     "calle": "Plaza de la Merced"
+    },
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Drcha.)",
+     "lado": "derecha",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Valverde",
+     "calle": "Valverde"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Ntra. Sra. de la Merced.",
+    "templo": "merced",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+   },
+   "salida": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+    ]
+   },
+   "entrada": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:15",
+     "nueva": "17:45",
+     "catedral_entrada": "18:45",
+     "catedral_salida": "19:00",
+     "candelaria": "19:40",
+     "palillero": "20:15",
+     "entrada": "00:00"
+    },
+    "paso": {
+     "salida": "16:40",
+     "nueva": "18:10",
+     "catedral_entrada": "19:10",
+     "catedral_salida": "19:25",
+     "candelaria": "20:05",
+     "palillero": "20:40",
+     "entrada": "00:45"
+    },
+    "ultimo_paso": {
+     "salida": "17:15",
+     "nueva": "18:40",
+     "catedral_entrada": "19:40",
+     "catedral_salida": "19:55",
+     "candelaria": "20:35",
+     "palillero": "21:10",
+     "entrada": "01:40"
+    }
+   }
+  },
+  "las-cigarreras-cadiz": {
+   "nombre_programa": "LAS CIGARRERAS",
+   "dia": "Miércoles Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 18
+   },
+   "itinerario_literal": "Compás de Santo Domingo, Plocia, Plaza San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Barrié (Drcha.), Valverde, Beato Diego de Cádiz, San Francisco (Drcha.), Plaza de San Agustín, San Francisco, Nueva, Plaza de San Juan de Dios, Plocia, Compas de Santo Domingo, su Templo.",
+   "ida": [
+    {
+     "texto": "Compás de Santo Domingo",
+     "calle": "Compás de Santo Domingo"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza la Catedral",
+     "calle": "Plaza la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza la Catedral",
+     "calle": "Plaza la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Drcha.)",
+     "lado": "derecha",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Valverde",
+     "calle": "Valverde"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Plocia",
+     "calle": "Plocia"
+    },
+    {
+     "texto": "Compas de Santo Domingo",
+     "calle": "Compas de Santo Domingo"
+    },
+    {
+     "texto": "su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Conventual de Santo Domingo.",
+    "templo": "santo-domingo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+   },
+   "salida": {
+    "templo": "santo-domingo",
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288478,
+    "lon": -6.2900719,
+    "osm": "way/154232628",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+    ]
+   },
+   "entrada": {
+    "templo": "santo-domingo",
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288478,
+    "lon": -6.2900719,
+    "osm": "way/154232628",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:15",
+     "nueva": "18:40",
+     "catedral_entrada": "19:40",
+     "catedral_salida": "19:55",
+     "candelaria": "20:35",
+     "palillero": "21:10",
+     "entrada": "01:25"
+    },
+    "paso": {
+     "salida": "17:35",
+     "nueva": "19:05",
+     "catedral_entrada": "20:05",
+     "catedral_salida": "20:20",
+     "candelaria": "21:00",
+     "palillero": "21:35",
+     "entrada": "01:55"
+    },
+    "ultimo_paso": {
+     "salida": "18:05",
+     "nueva": "19:30",
+     "catedral_entrada": "20:30",
+     "catedral_salida": "20:45",
+     "candelaria": "21:25",
+     "palillero": "22:00",
+     "entrada": "02:25"
+    }
+   }
+  },
+  "las-aguas-cadiz": {
+   "nombre_programa": "LAS AGUAS",
+   "dia": "Miércoles Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 20
+   },
+   "itinerario_literal": "Santa Inés, San José, San Pedro, Beato Diego de Cádiz, San Francisco, Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, Plaza de San Antonio, Torre, Santa Inés a su Templo.",
+   "ida": [
+    {
+     "texto": "Santa Inés",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "San José",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Plaza de San Antonio",
+     "calle": "Plaza de San Antonio"
+    },
+    {
+     "texto": "Torre",
+     "calle": "Torre"
+    },
+    {
+     "texto": "Santa Inés",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Santa Cruz.",
+    "templo": "santa-cruz",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20)"
+   },
+   "salida": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«saldrán este año desde el Oratorio de San Felipe Neri» (Cádiz Directo, 4-3-2026)",
+    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Torre, Santa Inés a su Templo», la calle del Oratorio."
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "16:40",
+     "nueva": "19:30",
+     "catedral_entrada": "20:30",
+     "catedral_salida": "20:45",
+     "candelaria": "21:25",
+     "palillero": "22:00",
+     "entrada": "00:10"
+    },
+    "paso": {
+     "salida": "17:00",
+     "nueva": "19:50",
+     "catedral_entrada": "20:50",
+     "catedral_salida": "21:05",
+     "candelaria": "21:45",
+     "palillero": "22:20",
+     "entrada": "00:35"
+    },
+    "ultimo_paso": {
+     "salida": "17:20",
+     "nueva": "20:10",
+     "catedral_entrada": "21:10",
+     "catedral_salida": "21:25",
+     "candelaria": "22:05",
+     "palillero": "22:40",
+     "entrada": "01:00"
+    }
+   }
+  },
+  "el-caminito-cadiz": {
+   "nombre_programa": "CAMINITO",
+   "dia": "Miércoles Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 20
+   },
+   "itinerario_literal": "Isabel la Católica, Honduras, Costa Rica, Conde O’Reilly, Plaza Argüelles, Plaza de España, Avda. 4 de diciembre de 1977, Sánchez Barcaiztegui, San Francisco (Izq.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Dcha.), Plaza de Mina, Tinte, Plaza de San Francisco, Plaza Stmo. Cristo de la Vera Cruz, Isabel la Católica, a su Templo.",
+   "ida": [
+    {
+     "texto": "Isabel la Católica",
+     "calle": "Isabel la Católica"
+    },
+    {
+     "texto": "Honduras",
+     "calle": "Honduras"
+    },
+    {
+     "texto": "Costa Rica",
+     "calle": "Costa Rica"
+    },
+    {
+     "texto": "Conde O’Reilly",
+     "calle": "Conde O’Reilly"
+    },
+    {
+     "texto": "Plaza Argüelles",
+     "calle": "Plaza Argüelles"
+    },
+    {
+     "texto": "Plaza de España",
+     "calle": "Plaza de España"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Sánchez Barcaiztegui",
+     "calle": "Sánchez Barcaiztegui"
+    },
+    {
+     "texto": "San Francisco (Izq.)",
+     "lado": "izquierda",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Dcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Plaza de Mina",
+     "calle": "Plaza de Mina"
+    },
+    {
+     "texto": "Tinte",
+     "calle": "Tinte"
+    },
+    {
+     "texto": "Plaza de San Francisco",
+     "calle": "Plaza de San Francisco"
+    },
+    {
+     "texto": "Plaza Stmo. Cristo de la Vera Cruz",
+     "calle": "Plaza Stmo. Cristo de la Vera Cruz"
+    },
+    {
+     "texto": "Isabel la Católica",
+     "calle": "Isabel la Católica"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Capilla del Caminito.",
+    "templo": "caminito",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20)"
+   },
+   "salida": {
+    "templo": "caminito",
+    "nombre": "Capilla del Caminito (Nuestra Señora de las Angustias)",
+    "lat": 36.5363418,
+    "lon": -6.2945441,
+    "osm": "way/549941389",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20)"
+    ]
+   },
+   "entrada": {
+    "templo": "caminito",
+    "nombre": "Capilla del Caminito (Nuestra Señora de las Angustias)",
+    "lat": 36.5363418,
+    "lon": -6.2945441,
+    "osm": "way/549941389",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:00",
+     "nueva": "20:25",
+     "catedral_entrada": "21:20",
+     "catedral_salida": "21:35",
+     "candelaria": "22:10",
+     "palillero": "22:45",
+     "entrada": "00:40"
+    },
+    "paso": {
+     "salida": "19:20",
+     "nueva": "20:50",
+     "catedral_entrada": "21:45",
+     "catedral_salida": "22:00",
+     "candelaria": "22:35",
+     "palillero": "23:10",
+     "entrada": "01:30"
+    }
+   }
+  },
+  "los-afligidos-cadiz": {
+   "nombre_programa": "AFLIGIDOS",
+   "dia": "Jueves Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 34,
+    "pagina_ficha": 21
+   },
+   "itinerario_literal": "Sagasta (Izq.), Hospital de Mujeres (Dcha.), Plaza Libertad, Plaza Topete, Compañía,Santiago, Plaza Pío XII, Cobos, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Izq.), Plaza Topete (Drcha.), Plaza Libertad, Hospital de Mujeres, Sagasta (Izq.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Hospital de Mujeres (Dcha.)",
+     "lado": "derecha",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Plaza Libertad",
+     "calle": "Plaza Libertad"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Pío XII",
+     "calle": "Plaza Pío XII"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza Topete (Drcha.)",
+     "lado": "derecha",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Plaza Libertad",
+     "calle": "Plaza Libertad"
+    },
+    {
+     "texto": "Hospital de Mujeres",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "erratas_del_programa": [
+    "falta el espacio tras la coma"
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Lorenzo Mártir.",
+    "templo": "san-lorenzo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+   },
+   "salida": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "18:20",
+     "nueva": "20:10",
+     "catedral_entrada": "21:10",
+     "catedral_salida": "21:25",
+     "candelaria": "22:05",
+     "palillero": "22:30",
+     "entrada": "23:35"
+    },
+    "paso": {
+     "salida": "18:50",
+     "nueva": "20:45",
+     "catedral_entrada": "21:45",
+     "catedral_salida": "22:00",
+     "candelaria": "22:40",
+     "palillero": "23:05",
+     "entrada": "00:05"
+    }
+   }
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "nombre_programa": "ORACIÓN EN EL HUERTO",
+   "dia": "Jueves Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 21
+   },
+   "itinerario_literal": "Plaza de Capuchinos, Geólogo McPherson, Arricruz, Avda. Campo del Sur, Sagasta, Regimiento de Infantería, Puerto Chico, Desamparados, Plaza de la Libertad, Plaza de las Flores, Compañía, Plaza Catedral, Cobos, Cristóbal Colon, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Izq.), Plaza Las Flores, Plaza de la Libertad, Hospital de Mujeres, San José (Izq.) Rosa (Drcha.), Pastora, Plaza Pinto, Hermano Ignacio, Virgen de las Penas, Virgen de la Palma, Cristo de la Misericordia, Pericón de Cádiz, Arricruz, Geólogo McPherson, Plaza de Capuchinos, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de Capuchinos",
+     "calle": "Plaza de Capuchinos"
+    },
+    {
+     "texto": "Geólogo McPherson",
+     "calle": "Geólogo McPherson"
+    },
+    {
+     "texto": "Arricruz",
+     "calle": "Arricruz"
+    },
+    {
+     "texto": "Avda. Campo del Sur",
+     "calle": "Avda. Campo del Sur"
+    },
+    {
+     "texto": "Sagasta",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Regimiento de Infantería",
+     "calle": "Regimiento de Infantería"
+    },
+    {
+     "texto": "Puerto Chico",
+     "calle": "Puerto Chico"
+    },
+    {
+     "texto": "Desamparados",
+     "calle": "Desamparados"
+    },
+    {
+     "texto": "Plaza de la Libertad",
+     "calle": "Plaza de la Libertad"
+    },
+    {
+     "texto": "Plaza de las Flores",
+     "calle": "Plaza de las Flores"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza Catedral",
+     "calle": "Plaza Catedral"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colon",
+     "calle": "Cristóbal Colon"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza Las Flores",
+     "calle": "Plaza Las Flores"
+    },
+    {
+     "texto": "Plaza de la Libertad",
+     "calle": "Plaza de la Libertad"
+    },
+    {
+     "texto": "Hospital de Mujeres",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Rosa (Drcha.)",
+     "lado": "derecha",
+     "calle": "Rosa"
+    },
+    {
+     "texto": "Pastora",
+     "calle": "Pastora"
+    },
+    {
+     "texto": "Plaza Pinto",
+     "calle": "Plaza Pinto"
+    },
+    {
+     "texto": "Hermano Ignacio",
+     "calle": "Hermano Ignacio"
+    },
+    {
+     "texto": "Virgen de las Penas",
+     "calle": "Virgen de las Penas"
+    },
+    {
+     "texto": "Virgen de la Palma",
+     "calle": "Virgen de la Palma"
+    },
+    {
+     "texto": "Cristo de la Misericordia",
+     "calle": "Cristo de la Misericordia"
+    },
+    {
+     "texto": "Pericón de Cádiz",
+     "calle": "Pericón de Cádiz"
+    },
+    {
+     "texto": "Arricruz",
+     "calle": "Arricruz"
+    },
+    {
+     "texto": "Geólogo McPherson",
+     "calle": "Geólogo McPherson"
+    },
+    {
+     "texto": "Plaza de Capuchinos",
+     "calle": "Plaza de Capuchinos"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "erratas_del_programa": [
+    "falta la coma tras el paréntesis"
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia de Santa Catalina (Capuchinos).",
+    "templo": "capuchinos",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+   },
+   "salida": {
+    "templo": "capuchinos",
+    "nombre": "Iglesia de Santa Catalina (Capuchinos)",
+    "lat": 36.528234,
+    "lon": -6.3017476,
+    "osm": "way/154960632",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+    ]
+   },
+   "entrada": {
+    "templo": "capuchinos",
+    "nombre": "Iglesia de Santa Catalina (Capuchinos)",
+    "lat": 36.528234,
+    "lon": -6.3017476,
+    "osm": "way/154960632",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "18:00",
+     "nueva": "20:50",
+     "catedral_entrada": "21:50",
+     "catedral_salida": "22:05",
+     "candelaria": "22:45",
+     "palillero": "23:10",
+     "entrada": "02:30"
+    },
+    "paso": {
+     "salida": "18:30",
+     "nueva": "21:15",
+     "catedral_entrada": "22:15",
+     "catedral_salida": "22:30",
+     "candelaria": "23:10",
+     "palillero": "23:35",
+     "entrada": "03:00"
+    },
+    "ultimo_paso": {
+     "salida": "19:00",
+     "nueva": "21:40",
+     "catedral_entrada": "22:40",
+     "catedral_salida": "22:55",
+     "candelaria": "23:35",
+     "palillero": "00:00",
+     "entrada": "03:30"
+    }
+   }
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "nombre_programa": "EL NAZARENO",
+   "dia": "Jueves Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 22
+   },
+   "itinerario_literal": "Santa María, Jabonería, San Juan de Dios, Plaza de San Juan de Dios, Avda. 4 de diciembre de 1977, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Drcha.), Plaza de Mina. Tinte, Plaza San Francisco, San Francisco, Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Sopranis, Compás de Santo Domingo, Santo Domingo, Mirador, Publico, Concepción Arenal, Santa María, a su Templo.",
+   "ida": [
+    {
+     "texto": "Santa María",
+     "calle": "Santa María"
+    },
+    {
+     "texto": "Jabonería",
+     "calle": "Jabonería"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Avda. 4 de diciembre de 1977",
+     "calle": "Avda. 4 de diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Plaza de Mina",
+     "calle": "Plaza de Mina"
+    },
+    {
+     "texto": "Tinte",
+     "calle": "Tinte"
+    },
+    {
+     "texto": "Plaza San Francisco",
+     "calle": "Plaza San Francisco"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Sopranis",
+     "calle": "Sopranis"
+    },
+    {
+     "texto": "Compás de Santo Domingo",
+     "calle": "Compás de Santo Domingo"
+    },
+    {
+     "texto": "Santo Domingo",
+     "calle": "Santo Domingo"
+    },
+    {
+     "texto": "Mirador",
+     "calle": "Mirador"
+    },
+    {
+     "texto": "Publico",
+     "calle": "Publico"
+    },
+    {
+     "texto": "Concepción Arenal",
+     "calle": "Concepción Arenal"
+    },
+    {
+     "texto": "Santa María",
+     "calle": "Santa María"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "erratas_del_programa": [
+    "punto en lugar de coma"
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia de Santa María.",
+    "templo": "santa-maria",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 22)"
+   },
+   "salida": {
+    "templo": "santa-maria",
+    "nombre": "Iglesia de Santa María",
+    "lat": 36.5277467,
+    "lon": -6.2917535,
+    "osm": "way/154232558",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 22)"
+    ]
+   },
+   "entrada": {
+    "templo": "santa-maria",
+    "nombre": "Iglesia de Santa María",
+    "lat": 36.5277467,
+    "lon": -6.2917535,
+    "osm": "way/154232558",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 22)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:50",
+     "nueva": "21:45",
+     "catedral_entrada": "22:45",
+     "catedral_salida": "23:00",
+     "candelaria": "23:40",
+     "palillero": "00:10",
+     "entrada": "06:30"
+    },
+    "paso": {
+     "salida": "20:20",
+     "nueva": "22:15",
+     "catedral_entrada": "23:15",
+     "catedral_salida": "23:30",
+     "candelaria": "00:10",
+     "palillero": "00:35",
+     "entrada": "06:45"
+    },
+    "ultimo_paso": {
+     "salida": "21:00",
+     "nueva": "22:45",
+     "catedral_entrada": "23:45",
+     "catedral_salida": "00:00",
+     "candelaria": "00:40",
+     "palillero": "01:05",
+     "entrada": "07:00"
+    }
+   }
+  },
+  "medinaceli-cadiz": {
+   "nombre_programa": "MEDINACELI",
+   "dia": "Jueves Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 24
+   },
+   "itinerario_literal": "Santa Inés, San José (Drcha.), Plaza de Mina, Tinte, Plaza San Francisco, San Francisco, Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Drcha.), San Pedro, Sagasta (Izq.), Plaza San Francisco a su Templo.",
+   "ida": [
+    {
+     "texto": "Santa Inés",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Plaza de Mina",
+     "calle": "Plaza de Mina"
+    },
+    {
+     "texto": "Tinte",
+     "calle": "Tinte"
+    },
+    {
+     "texto": "Plaza San Francisco",
+     "calle": "Plaza San Francisco"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "San Pedro",
+     "calle": "San Pedro"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Plaza San Francisco",
+     "calle": "Plaza San Francisco"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Santa Cruz.",
+    "templo": "santa-cruz",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 24)"
+   },
+   "salida": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "san-francisco",
+    "nombre": "Iglesia Conventual de Nuestra Señora de los Remedios (San Francisco)",
+    "lat": 36.5347933,
+    "lon": -6.2957616,
+    "osm": "way/154222961",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«se recogerá en la iglesia de San Francisco en la madrugada del Viernes Santo» (Cádiz Directo, 4-3-2026)"
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "21:15",
+     "nueva": "23:00",
+     "catedral_entrada": "23:55",
+     "catedral_salida": "00:10",
+     "candelaria": "00:45",
+     "palillero": "01:10",
+     "entrada": "04:00"
+    },
+    "paso": {
+     "salida": "21:30",
+     "nueva": "23:20",
+     "catedral_entrada": "00:15",
+     "catedral_salida": "00:30",
+     "candelaria": "01:05",
+     "palillero": "01:30",
+     "entrada": "04:20"
+    },
+    "ultimo_paso": {
+     "salida": "21:50",
+     "nueva": "23:40",
+     "catedral_entrada": "00:35",
+     "catedral_salida": "00:50",
+     "candelaria": "01:25",
+     "palillero": "01:50",
+     "entrada": "04:45"
+    }
+   }
+  },
+  "el-perdon-cadiz": {
+   "nombre_programa": "EL PERDÓN",
+   "dia": "Madrugada",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 24
+   },
+   "itinerario_literal": "Plaza de la Catedral, Cobos, Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Columela (Drcha.), San Francisco (Drcha.), Plaza de San Agustín, San Francisco, Nueva, Plaza de San Juan de Dios, Pomponio Mela, Fabio Rufino, San Antonio Abad, Posadilla, Plaza San Martín, Obispo José María Rancés, Plaza Fray Félix, Stmo. Cristo el Perdón, Campo del Sur, Arquitecto Acero, Plaza de la Catedral, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Cobos",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Pomponio Mela",
+     "calle": "Pomponio Mela"
+    },
+    {
+     "texto": "Fabio Rufino",
+     "calle": "Fabio Rufino"
+    },
+    {
+     "texto": "San Antonio Abad",
+     "calle": "San Antonio Abad"
+    },
+    {
+     "texto": "Posadilla",
+     "calle": "Posadilla"
+    },
+    {
+     "texto": "Plaza San Martín",
+     "calle": "Plaza San Martín"
+    },
+    {
+     "texto": "Obispo José María Rancés",
+     "calle": "Obispo José María Rancés"
+    },
+    {
+     "texto": "Plaza Fray Félix",
+     "calle": "Plaza Fray Félix"
+    },
+    {
+     "texto": "Stmo. Cristo el Perdón",
+     "calle": "Stmo. Cristo el Perdón"
+    },
+    {
+     "texto": "Campo del Sur",
+     "calle": "Campo del Sur"
+    },
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Santa Cruz.",
+    "templo": "santa-cruz",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 24)"
+   },
+   "salida": {
+    "templo": "catedral",
+    "nombre": "Santa Iglesia Catedral",
+    "lat": 36.5289521,
+    "lon": -6.2953183,
+    "osm": "way/66648047",
+    "dir": "Plaza del Pío XII (Plaza de la Catedral)",
+    "fuente_dir": "https://gcatholic.org/churches/spain/1741",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "catedral",
+    "nombre": "Santa Iglesia Catedral",
+    "lat": 36.5289521,
+    "lon": -6.2953183,
+    "osm": "way/66648047",
+    "dir": "Plaza del Pío XII (Plaza de la Catedral)",
+    "fuente_dir": "https://gcatholic.org/churches/spain/1741",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«mantendrá su salida desde la Catedral, modificando parte del recorrido» (Cádiz Directo, 4-3-2026)",
+    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Arquitecto Acero, Plaza de la Catedral, a su Templo»."
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "00:50",
+     "nueva": "02:00",
+     "catedral_entrada": "03:00",
+     "catedral_salida": "03:20",
+     "candelaria": "04:00",
+     "palillero": "04:25",
+     "entrada": "09:00"
+    },
+    "paso": {
+     "salida": "01:10",
+     "nueva": "02:20",
+     "catedral_entrada": "03:20",
+     "catedral_salida": "03:40",
+     "candelaria": "04:20",
+     "palillero": "04:45",
+     "entrada": "09:25"
+    },
+    "ultimo_paso": {
+     "salida": "01:30",
+     "nueva": "02:45",
+     "catedral_entrada": "03:45",
+     "catedral_salida": "04:00",
+     "candelaria": "04:45",
+     "palillero": "05:10",
+     "entrada": "09:45"
+    }
+   }
+  },
+  "siete-palabras-cadiz": {
+   "nombre_programa": "SIETE PALABRAS",
+   "dia": "Viernes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 26
+   },
+   "itinerario_literal": "Plaza de la Merced, Merced, Plaza de las Canastas, Jesús de la Sentencia, San Juan de Dios, Plaza San Juan de Dios, Pelota, Marqués de Cádiz, Ruiz de Bustamante, Cobos (Drcha.), Cristóbal Colón, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Palillero, Columela (Drcha.), San Francisco (Dcha.), Plaza San Agustín, San Agustín, Nueva, Plaza San Juan de Dios (Centro), San Juan de Dios, Jesús de la Sentencia, Plaza de las Canastas, Merced, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de la Merced",
+     "calle": "Plaza de la Merced"
+    },
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Marqués de Cádiz",
+     "calle": "Marqués de Cádiz"
+    },
+    {
+     "texto": "Ruiz de Bustamante",
+     "calle": "Ruiz de Bustamante"
+    },
+    {
+     "texto": "Cobos (Drcha.)",
+     "lado": "derecha",
+     "calle": "Cobos"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Palillero",
+     "calle": "Palillero"
+    },
+    {
+     "texto": "Columela (Drcha.)",
+     "lado": "derecha",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Agustín",
+     "calle": "San Agustín"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios (Centro)",
+     "lado": "centro",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "San Juan de Dios",
+     "calle": "San Juan de Dios"
+    },
+    {
+     "texto": "Jesús de la Sentencia",
+     "calle": "Jesús de la Sentencia"
+    },
+    {
+     "texto": "Plaza de las Canastas",
+     "calle": "Plaza de las Canastas"
+    },
+    {
+     "texto": "Merced",
+     "calle": "Merced"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Ntra. Sra. de la Merced.",
+    "templo": "merced",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26)"
+   },
+   "salida": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26)"
+    ]
+   },
+   "entrada": {
+    "templo": "merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
+    "lat": 36.5284587,
+    "lon": -6.2913912,
+    "osm": "way/162534924",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "18:30",
+     "nueva": "20:05",
+     "catedral_entrada": "21:05",
+     "catedral_salida": "21:20",
+     "candelaria": "22:00",
+     "palillero": "22:30",
+     "entrada": "01:00"
+    },
+    "paso": {
+     "salida": "18:50",
+     "nueva": "20:25",
+     "catedral_entrada": "21:25",
+     "catedral_salida": "21:40",
+     "candelaria": "22:20",
+     "palillero": "22:50",
+     "entrada": "01:20"
+    }
+   }
+  },
+  "la-expiracion-cadiz": {
+   "nombre_programa": "EXPIRACIÓN",
+   "dia": "Viernes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 26
+   },
+   "itinerario_literal": "Alameda Hermanas Carvia Bernal (Drcha.), Alameda Apodaca (Drcha.), Fermín Salvochea, Plaza de España (Drcha.), Avda. 4 de Diciembre de 1977, Cristóbal Colón, Nueva, Plaza de San Juan de Dios, Pelota, Plaza de la Catedral (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Palillero, Novena, Ancha, San José (Drcha.), Plaza de Mina, Calderón de la Barca, Buenos Aires (Drcha), Alameda Hermanas Carvia Bernal (Izq), a su Templo.",
+   "ida": [
+    {
+     "texto": "Alameda Hermanas Carvia Bernal (Drcha.)",
+     "lado": "derecha",
+     "calle": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "texto": "Alameda Apodaca (Drcha.)",
+     "lado": "derecha",
+     "calle": "Alameda Apodaca"
+    },
+    {
+     "texto": "Fermín Salvochea",
+     "calle": "Fermín Salvochea"
+    },
+    {
+     "texto": "Plaza de España (Drcha.)",
+     "lado": "derecha",
+     "calle": "Plaza de España"
+    },
+    {
+     "texto": "Avda. 4 de Diciembre de 1977",
+     "calle": "Avda. 4 de Diciembre de 1977"
+    },
+    {
+     "texto": "Cristóbal Colón",
+     "calle": "Cristóbal Colón"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza de San Juan de Dios",
+     "calle": "Plaza de San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Palillero",
+     "calle": "Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Plaza de Mina",
+     "calle": "Plaza de Mina"
+    },
+    {
+     "texto": "Calderón de la Barca",
+     "calle": "Calderón de la Barca"
+    },
+    {
+     "texto": "Buenos Aires (Drcha)",
+     "lado": "derecha",
+     "calle": "Buenos Aires"
+    },
+    {
+     "texto": "Alameda Hermanas Carvia Bernal (Izq)",
+     "lado": "izquierda",
+     "calle": "Alameda Hermanas Carvia Bernal"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia castrense del Santo Ángel Custodio.",
+    "templo": "santo-angel",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26)"
+   },
+   "salida": {
+    "templo": "carmen",
+    "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa",
+    "lat": 36.5371411,
+    "lon": -6.2997616,
+    "osm": "way/154222959",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "carmen",
+    "nombre": "Parroquia de Nuestra Señora del Carmen y Santa Teresa",
+    "lat": 36.5371411,
+    "lon": -6.2997616,
+    "osm": "way/154222959",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«Expiración repite salida desde la iglesia del Carmen por las obras pendientes en la Castrense» (Cádiz Directo, 26-3-2026)",
+    "nota": "La entrada no la dice la prensa; el itinerario oficial acaba en «Alameda Hermanas Carvia Bernal (Izq), a su Templo», donde está el Carmen."
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "17:15",
+     "nueva": "20:30",
+     "catedral_entrada": "21:30",
+     "catedral_salida": "21:45",
+     "candelaria": "22:25",
+     "palillero": "22:55",
+     "entrada": "02:00"
+    },
+    "paso": {
+     "salida": "17:40",
+     "nueva": "20:55",
+     "catedral_entrada": "21:55",
+     "catedral_salida": "22:10",
+     "candelaria": "22:55",
+     "palillero": "23:25",
+     "entrada": "02:30"
+    },
+    "ultimo_paso": {
+     "salida": "18:05",
+     "nueva": "21:20",
+     "catedral_entrada": "22:20",
+     "catedral_salida": "22:35",
+     "candelaria": "23:15",
+     "palillero": "23:45",
+     "entrada": "03:00"
+    }
+   }
+  },
+  "el-descendimiento-cadiz": {
+   "nombre_programa": "DESCENDIMIENTO",
+   "dia": "Viernes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 27
+   },
+   "itinerario_literal": "Sagasta (Izq.), Hospital de Mujeres (Dcha.), Plaza la Libertad, Plaza Topete, Columela, Plaza Palillero, San Francisco (Dcha.), Plaza San Agustín, San Francisco, Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Javier de Burgos, Barrié, Sacramento (Dcha.), Sagasta (Izq.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "Hospital de Mujeres (Dcha.)",
+     "lado": "derecha",
+     "calle": "Hospital de Mujeres"
+    },
+    {
+     "texto": "Plaza la Libertad",
+     "calle": "Plaza la Libertad"
+    },
+    {
+     "texto": "Plaza Topete",
+     "calle": "Plaza Topete"
+    },
+    {
+     "texto": "Columela",
+     "calle": "Columela"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza San Agustín",
+     "calle": "Plaza San Agustín"
+    },
+    {
+     "texto": "San Francisco",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Javier de Burgos",
+     "calle": "Javier de Burgos"
+    },
+    {
+     "texto": "Barrié",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Sacramento (Dcha.)",
+     "lado": "derecha",
+     "calle": "Sacramento"
+    },
+    {
+     "texto": "Sagasta (Izq.)",
+     "lado": "izquierda",
+     "calle": "Sagasta"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Lorenzo Mártir.",
+    "templo": "san-lorenzo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+   },
+   "salida": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-lorenzo",
+    "nombre": "Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316618,
+    "lon": -6.3006919,
+    "osm": "way/154961230",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "19:30",
+     "nueva": "21:35",
+     "catedral_entrada": "22:30",
+     "catedral_salida": "22:45",
+     "candelaria": "23:25",
+     "palillero": "23:55",
+     "entrada": "01:35"
+    },
+    "paso": {
+     "salida": "19:50",
+     "nueva": "21:55",
+     "catedral_entrada": "22:50",
+     "catedral_salida": "23:05",
+     "candelaria": "23:45",
+     "palillero": "00:15",
+     "entrada": "02:00"
+    }
+   }
+  },
+  "la-buena-muerte-cadiz": {
+   "nombre_programa": "BUENA MUERTE",
+   "dia": "Viernes Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 27
+   },
+   "itinerario_literal": "Plaza de San Agustín, San Francisco (Drcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Barrié (Dcha.), Valverde, Beato Diego de Cádiz, San Francisco (Dcha.), Plaza de San Agustín, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Dcha.)",
+     "lado": "derecha",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Valverde",
+     "calle": "Valverde"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "San Francisco (Dcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Plaza de San Agustín",
+     "calle": "Plaza de San Agustín"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de San Agustín.",
+    "templo": "san-agustin",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+   },
+   "salida": {
+    "templo": "san-agustin",
+    "nombre": "Parroquia de San Agustín",
+    "lat": 36.5321248,
+    "lon": -6.2942315,
+    "osm": "way/66648043",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-agustin",
+    "nombre": "Parroquia de San Agustín",
+    "lat": 36.5321248,
+    "lon": -6.2942315,
+    "osm": "way/66648043",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 27)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "21:35",
+     "nueva": "22:05",
+     "catedral_entrada": "23:00",
+     "catedral_salida": "23:15",
+     "candelaria": "23:55",
+     "palillero": "00:25",
+     "entrada": "02:10"
+    },
+    "paso": {
+     "salida": "21:50",
+     "nueva": "22:20",
+     "catedral_entrada": "23:15",
+     "catedral_salida": "23:30",
+     "candelaria": "00:10",
+     "palillero": "00:40",
+     "entrada": "02:30"
+    },
+    "ultimo_paso": {
+     "salida": "22:10",
+     "nueva": "22:40",
+     "catedral_entrada": "23:35",
+     "catedral_salida": "23:50",
+     "candelaria": "00:30",
+     "palillero": "01:00",
+     "entrada": "03:10"
+    }
+   }
+  },
+  "ecce-mater-tua-cadiz": {
+   "nombre_programa": "ECCE-MATER-TUA",
+   "dia": "Sábado Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 28
+   },
+   "itinerario_literal": "Plaza de la Catedral, Compañía, Santiago, Plaza de Candelaria, Montañés, Plaza del Palillero, Novena, Barrié (Drcha.), Valverde, Beato Diego de Cádiz, Rosario (Dcha.), Plaza Mendizábal, Sánchez Barcaiztegui, San Francisco (Drcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza de Candelaria",
+     "calle": "Plaza de Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza del Palillero",
+     "calle": "Plaza del Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Barrié (Drcha.)",
+     "lado": "derecha",
+     "calle": "Barrié"
+    },
+    {
+     "texto": "Valverde",
+     "calle": "Valverde"
+    },
+    {
+     "texto": "Beato Diego de Cádiz",
+     "calle": "Beato Diego de Cádiz"
+    },
+    {
+     "texto": "Rosario (Dcha.)",
+     "lado": "derecha",
+     "calle": "Rosario"
+    },
+    {
+     "texto": "Plaza Mendizábal",
+     "calle": "Plaza Mendizábal"
+    },
+    {
+     "texto": "Sánchez Barcaiztegui",
+     "calle": "Sánchez Barcaiztegui"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "regreso": [],
+   "sin_estacion": "El itinerario oficial no pasa por la Catedral (no hace estación de penitencia): todo va en «ida».",
+   "sede_canonica": {
+    "texto": "Iglesia de Santiago Apóstol.",
+    "templo": "santiago",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28)"
+   },
+   "salida": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28)"
+    ]
+   },
+   "entrada": {
+    "templo": "santiago",
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297285,
+    "lon": -6.2956818,
+    "osm": "way/542083000",
+    "dir": "Plaza de la Catedral, s/n",
+    "fuente_dir": "https://www.museum.de/en/museen/iglesia-de-santiago-cadiz",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2026",
+    "columnas": [
+     "salida",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "01:00",
+     "palillero": "02:00",
+     "entrada": "03:45"
+    },
+    "paso": {
+     "salida": "01:15",
+     "palillero": "02:15",
+     "entrada": "04:00"
+    }
+   }
+  },
+  "santo-entierro-cadiz": {
+   "nombre_programa": "SANTO ENTIERRO",
+   "dia": "Sábado Santo",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 28
+   },
+   "itinerario_literal": "Santa Inés (Izq.), San José (Drcha.), Ancha (Drcha.), Novena, Plaza del Palillero Columela (Izq.), San Francisco (Drcha.), Nueva, Plaza San Juan de Dios, Pelota, Plaza de la Catedral, (Estación de Penitencia en la S.I.C.), Arquitecto Acero, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, San José (Izq.) Santa Inés (Izq.) a su Templo.",
+   "ida": [
+    {
+     "texto": "Santa Inés (Izq.)",
+     "lado": "izquierda",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "San José (Drcha.)",
+     "lado": "derecha",
+     "calle": "San José"
+    },
+    {
+     "texto": "Ancha (Drcha.)",
+     "lado": "derecha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Plaza del Palillero",
+     "calle": "Plaza del Palillero"
+    },
+    {
+     "texto": "Columela (Izq.)",
+     "lado": "izquierda",
+     "calle": "Columela"
+    },
+    {
+     "texto": "San Francisco (Drcha.)",
+     "lado": "derecha",
+     "calle": "San Francisco"
+    },
+    {
+     "texto": "Nueva",
+     "calle": "Nueva"
+    },
+    {
+     "texto": "Plaza San Juan de Dios",
+     "calle": "Plaza San Juan de Dios"
+    },
+    {
+     "texto": "Pelota",
+     "calle": "Pelota"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Arquitecto Acero",
+     "calle": "Arquitecto Acero"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "San José (Izq.)",
+     "lado": "izquierda",
+     "calle": "San José"
+    },
+    {
+     "texto": "Santa Inés (Izq.)",
+     "lado": "izquierda",
+     "calle": "Santa Inés"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "erratas_del_programa": [
+    "falta la coma",
+    "falta la coma tras el paréntesis"
+   ],
+   "sede_canonica": {
+    "texto": "Parroquia de Santa Cruz.",
+    "templo": "santa-cruz",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28)"
+   },
+   "salida": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "entrada": {
+    "templo": "san-felipe-neri",
+    "nombre": "Oratorio de San Felipe Neri",
+    "lat": 36.5328564,
+    "lon": -6.2997983,
+    "osm": "way/141200818",
+    "fuente": [
+     "https://www.cadizdirecto.com/cadiz/la-semana-santa-2026-de-cadiz-ya-tiene-horarios-y-recorridos-conoce-todas-las-modificaciones",
+     "https://www.cadizdirecto.com/cadiz/guia-de-la-semana-santa-de-cadiz-2026-desde-las-visperas-hasta-el-resucitado/"
+    ]
+   },
+   "sede_2026": {
+    "cita": "«salida y regreso al Oratorio» (Cádiz Directo, 4-3-2026)"
+   },
+   "horas": {
+    "anio_de_la_tabla": null,
+    "columnas": [
+     "salida",
+     "nueva",
+     "catedral_entrada",
+     "catedral_salida",
+     "candelaria",
+     "palillero",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "15:50",
+     "nueva": "18:00",
+     "catedral_entrada": "18:50",
+     "catedral_salida": "19:05",
+     "candelaria": "19:35",
+     "palillero": "19:55",
+     "entrada": "21:50"
+    },
+    "paso": {
+     "salida": "16:05",
+     "nueva": "18:10",
+     "catedral_entrada": "19:00",
+     "catedral_salida": "19:15",
+     "candelaria": "19:45",
+     "palillero": "20:05",
+     "entrada": "22:05"
+    },
+    "ultimo_paso": {
+     "salida": "16:20",
+     "nueva": "18:25",
+     "catedral_entrada": "19:15",
+     "catedral_salida": "19:30",
+     "candelaria": "20:00",
+     "palillero": "20:20",
+     "entrada": "22:20"
+    }
+   }
+  },
+  "la-resurreccion-cadiz": {
+   "nombre_programa": "LA RESURRECCIÓN",
+   "dia": "Domingo de Resurrección",
+   "ficha_portal": true,
+   "fuente": {
+    "documento": "Programa de la Semana Santa de Cádiz 2026, Canal Sur Radio (itinerarios del Consejo)",
+    "url": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf",
+    "pagina_itinerario": 35,
+    "pagina_ficha": 30
+   },
+   "itinerario_literal": "Plaza San Antonio (Drcha.), Ancha, Novena, Palillero, Montañés, Plaza Candelaria, Santiago, Compañía, Plaza de la Catedral, ESTACIÓN DE PENITENCIA EN LA S.I.C, Plaza de la Catedral, Compañía, Santiago, Plaza Candelaria, Montañés, Plaza Palillero, Novena, Ancha, Plaza San Antonio (Izq.), a su Templo.",
+   "ida": [
+    {
+     "texto": "Plaza San Antonio (Drcha.)",
+     "lado": "derecha",
+     "calle": "Plaza San Antonio"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Palillero",
+     "calle": "Palillero"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Estación de Penitencia en la S.I.C.",
+     "catedral": true
+    }
+   ],
+   "regreso": [
+    {
+     "texto": "Plaza de la Catedral",
+     "calle": "Plaza de la Catedral"
+    },
+    {
+     "texto": "Compañía",
+     "calle": "Compañía"
+    },
+    {
+     "texto": "Santiago",
+     "calle": "Santiago"
+    },
+    {
+     "texto": "Plaza Candelaria",
+     "calle": "Plaza Candelaria"
+    },
+    {
+     "texto": "Montañés",
+     "calle": "Montañés"
+    },
+    {
+     "texto": "Plaza Palillero",
+     "calle": "Plaza Palillero"
+    },
+    {
+     "texto": "Novena",
+     "calle": "Novena"
+    },
+    {
+     "texto": "Ancha",
+     "calle": "Ancha"
+    },
+    {
+     "texto": "Plaza San Antonio (Izq.)",
+     "lado": "izquierda",
+     "calle": "Plaza San Antonio"
+    },
+    {
+     "texto": "a su Templo",
+     "fin": true
+    }
+   ],
+   "sede_canonica": {
+    "texto": "Iglesia Parroquial de San Antonio.",
+    "templo": "san-antonio",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 30)"
+   },
+   "salida": {
+    "templo": "san-antonio",
+    "nombre": "Iglesia Parroquial de San Antonio",
+    "lat": 36.5344664,
+    "lon": -6.2994284,
+    "osm": "way/154222951",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 30)"
+    ]
+   },
+   "entrada": {
+    "templo": "san-antonio",
+    "nombre": "Iglesia Parroquial de San Antonio",
+    "lat": 36.5344664,
+    "lon": -6.2994284,
+    "osm": "way/154222951",
+    "fuente": [
+     "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 30)"
+    ]
+   },
+   "horas": {
+    "anio_de_la_tabla": "2025",
+    "columnas": [
+     "salida",
+     "catedral_entrada",
+     "catedral_salida",
+     "entrada"
+    ],
+    "cruz_de_guia": {
+     "salida": "09:00",
+     "catedral_entrada": "10:00",
+     "catedral_salida": "12:30",
+     "entrada": "14:25"
+    },
+    "paso": {
+     "salida": "09:20",
+     "catedral_entrada": "10:20",
+     "catedral_salida": "12:50",
+     "entrada": "14:45"
+    }
+   }
+  }
+ }
+}
