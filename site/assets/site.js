@@ -935,7 +935,8 @@
   var nf = $('[data-news-filters]');
   if (nf && window.OCNoticias) {
     var list = $('[data-news-list]'), more = $('[data-news-more]'), emptyN = $('[data-news-empty]'), countN = $('[data-news-count]'), quedanN = $('[data-news-quedan]'), headN = $('[data-nx-head]');
-    var qIn = $('[data-f="q"]', nf), ofiB = $('[data-f="oficiales"]', nf), all = null, shown = 24, oficiales = false;
+    var qIn = $('[data-f="q"]', nf), ofiB = $('[data-f="oficiales"]', nf), all = null, shown = 24, oficiales = false, tema = '';
+    var NOMBRE_TEMA = {}; (window.OCNoticias.TEMAS || []).forEach(function (t) { NOMBRE_TEMA[t[0]] = t[1]; });
     var CAPS = $$('[data-f="ciudad"] button', nf).map(function (b) { return b.dataset.v; }).filter(Boolean);
     var city = new URLSearchParams(location.search).get('ciudad') || getCity();
     var desdeUrl = !!new URLSearchParams(location.search).get('ciudad');
@@ -945,31 +946,33 @@
     var paintChips = function () {
       $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === city ? 'true' : 'false'); });
       ofiB.setAttribute('aria-pressed', oficiales ? 'true' : 'false');
+      $$('[data-f="tema"] button', nf).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === tema ? 'true' : 'false'); });
       // el terciopelo de la cabecera toma el color de la capital elegida
       if (headN) { if (city && COLORS[city]) headN.style.setProperty('--nx-c', COLORS[city]); else headN.style.removeProperty('--nx-c'); }
     };
     var render = function () {
-      var v = window.OCNoticias.vista(all, { city: city, q: qIn.value, oficiales: oficiales, shown: shown, names: CITY_NAMES, colors: COLORS, capitales: CAPS });
+      var v = window.OCNoticias.vista(all, { city: city, q: qIn.value, oficiales: oficiales, tema: tema, shown: shown, names: CITY_NAMES, colors: COLORS, capitales: CAPS });
       list.innerHTML = v.html;
       paintAgo(list);
       emptyN.hidden = v.total > 0; more.hidden = v.quedan <= 0;
       if (quedanN) quedanN.textContent = v.quedan ? '(quedan ' + v.quedan + ')' : '';
-      countN.textContent = v.total + (v.total === 1 ? ' noticia' : ' noticias') + (city ? ' de ' + CITY_NAMES[city] : '') + (oficiales ? ' de fuentes oficiales' : '');
+      countN.textContent = v.total + (v.total === 1 ? ' noticia' : ' noticias') + (city ? ' de ' + CITY_NAMES[city] : '') + (tema ? ' · ' + NOMBRE_TEMA[tema] : '') + (oficiales ? ' de fuentes oficiales' : '');
       paintChips();
-      var p = new URLSearchParams(); if (city) p.set('ciudad', city); if (qIn.value) p.set('q', qIn.value); if (oficiales) p.set('oficiales', '1');
+      var p = new URLSearchParams(); if (city) p.set('ciudad', city); if (qIn.value) p.set('q', qIn.value); if (oficiales) p.set('oficiales', '1'); if (tema) p.set('tema', tema);
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     };
     // cambiar de capital o de fuente es un cambio de vista: transición entre los dos estados (si el navegador la tiene)
     var cambiar = function (fn) { if (document.startViewTransition && !reduce) document.startViewTransition(function () { fn(); render(); }); else { fn(); render(); } };
     var irA = function (c) { cambiar(function () { city = c; shown = 24; setCity(city); }); var y = nf.getBoundingClientRect().top + scrollY - 70; if (y < scrollY) scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); };
     paintChips();
-    var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1';
+    var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1'; tema = NOMBRE_TEMA[u0.get('tema')] ? u0.get('tema') : '';
     fetch(BASE + 'news.json').then(function (r) { return r.json(); }).then(function (j) {
       all = j.items;
-      if (city || q0 || oficiales) render(); else { paintChips(); paintAgo(list); }
+      if (city || q0 || oficiales || tema) render(); else { paintChips(); paintAgo(list); }
       // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
       $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { irA(b.dataset.v); }); });
       ofiB.addEventListener('click', function () { cambiar(function () { oficiales = !oficiales; shown = 24; }); });
+      $$('[data-f="tema"] button', nf).forEach(function (b) { b.addEventListener('click', function () { cambiar(function () { tema = b.dataset.v; shown = 24; }); }); });
       list.addEventListener('click', function (e) { var b = e.target.closest('[data-ver-ciudad]'); if (b) irA(b.dataset.verCiudad); });
       cityListeners.push(function (c) { if (c === city) return; city = c; shown = 24; render(); });
       if (desdeUrl && city !== getCity()) setCity(city);

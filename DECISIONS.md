@@ -1,5 +1,36 @@
 # Decisiones de diseño y técnicas
 
+## 2026-10-27 · Noticias: qué entra y cómo se presenta (oc-diseno, por orden de Pablo)
+Pablo: «hay noticias que no son del ecosistema cofrade, hay que perfeccionar qué tipo de info se mete y cómo acogerla».
+
+**Elegido.** Un solo criterio en `site/filtro-noticias.mjs`. Se aplica al leer las noticias (`fetch-news.mjs`) y al compilar (`build.mjs`, también sobre el archivo ya guardado, sin tocar `data/news.json`). Las dudosas, fuera.
+1. **Webs oficiales** de hermandades, agrupaciones, consejos y federaciones: siempre dentro, salvo avisos de lotería y entradas vacías.
+2. **Medios cofrades** (Mundo Cofrade, Gente de Paz, El Pespunte, ArteSacro, Kerygma…): siempre son cofrades, pero tienen que ser de una de las ocho capitales.
+3. **Diócesis:** solo si hablan de cofradías.
+4. **Prensa generalista y Google Noticias.** Tienen que cumplir las tres condiciones:
+   - **vocabulario cofrade claro:** palabras propias, días de la Semana Santa, una advocación o el nombre de una hermandad;
+   - **que sea de una de las ocho capitales:** por su nombre (no cuentan «Vélez-Málaga», «provincia de…» ni «un pueblo de…»), por la hermandad o por el canal de la capital; lo de toda Andalucía también vale;
+   - **nunca política, sucesos, deporte, toros, ferias ni comercio**, aunque nombren de pasada a una hermandad.
+5. **Otro pueblo o ciudad** (Jerez, Osuna, Antequera, Cartagena…) sin nombrar una capital: fuera.
+6. **Temas:** salidas, cultos y traslados, coronaciones, música, patrimonio y estrenos, cabildos y cargos, pregones y carteles, agenda. Hay una fila de filtros por tema, cada noticia lleva su etiqueta y la destacada prefiere un tema importante (coronación, salida, pregón, estreno).
+
+**Medido sobre el archivo del 26-oct (2.396 noticias):** entran 1.682 y salen 714.
+- **Por qué salen:**
+  - 271 son de otro pueblo o ciudad, y otras 86 lo mismo pero de medios cofrades;
+  - 203 no tienen vocabulario cofrade;
+  - 91 no son de ninguna capital;
+  - 39 tratan de un tema ajeno;
+  - 20 son avisos o páginas que no son noticias.
+- **Muestras al azar, revisadas a mano:**
+  - de 60 que entran, ninguna es ajena al mundo cofrade;
+  - de 60 que salen, 2 cofrades de capital se perdían por fallos de las listas, ya corregidos («el Puerto» de la Torre, «archicofradía»).
+- **Lo que se queda fuera a sabiendas** (por la regla de «las dudosas, fuera»): noticias cofrades de capital que no dicen de qué ciudad son y cuya hermandad tiene el mismo nombre en varias capitales. Por ejemplo, «El Santo Entierro volverá por el Postigo», o los temas de toda España como la SGAE sin mencionar Andalucía.
+- Comprobación: `node site/filtro-noticias.mjs [--fuera|--dentro]`.
+
+**Descartado:**
+- «ante la duda, se queda» (el criterio del 26-oct): dejaba dentro el rugby del alcalde de Cádiz, el PP, accidentes y pueblos;
+- asignar la capital por el medio (por ejemplo, Diario de Sevilla = Sevilla): metía los pueblos de la provincia.
+
 ## 2026-10-26 · Fondo del plano fiel a la ciudad (Málaga, Córdoba y Cádiz)
 Pablo: «completar Málaga, Cádiz y Córdoba… con su mapa mejorado y fiel». Los recorridos ya se trazan sobre la red completa de OSM (GraphHopper), pero el fondo eran calles simplificadas: un recorrido por un callejón o una plaza que el fondo no dibujaba parecía cruzar manzanas.
 - **Datos: el mismo extracto que los recorridos.** `tools/itinerarios/fondo-pbf.mjs` lee `C:\Users\pablo\Herramientas-IA\graphhopper\andalucia-latest.osm.pbf` (Geofabrik, 26-oct), el mismo con el que GraphHopper traza los recorridos. Así fondo y recorridos coinciden al metro.

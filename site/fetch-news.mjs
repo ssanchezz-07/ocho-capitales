@@ -6,7 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { XMLParser } from 'fast-xml-parser';
 import { detectarEventos } from './eventos.mjs';
-import { relevante } from './filtro-noticias.mjs';
+import { clasificar } from './filtro-noticias.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const FUENTES = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'fuentes.json'), 'utf8'));
@@ -92,9 +92,9 @@ async function main() {
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { items: [], fuentes: {} };
   // Las noticias guardadas con HTML a medias se descartan para volver a leerlas limpias
   prev.items = prev.items.filter((n) => !/<|&lt;/.test(n.extracto + n.titulo));
-  // Google Noticias trae de todo: fuera lo que no es cofrade ni religioso (filtro-noticias.mjs), también de lo ya guardado
+  // Criterio editorial (filtro-noticias.mjs): solo lo cofrade de las ocho capitales; también se aplica a lo ya guardado
   const antes = prev.items.length;
-  prev.items = prev.items.filter((n) => n.tipo !== 'agregador' || relevante(n.titulo + ' ' + (n.extracto || ''), n.fuente));
+  prev.items = prev.items.filter((n) => clasificar(n).entra);
   let ajenas = antes - prev.items.length;
   const seen = new Set(prev.items.flatMap((n) => [n.h, n.t]));
   const nuevos = [];
@@ -116,7 +116,6 @@ async function main() {
           if (f.tipo === 'agregador') {
             fuente = it.fuente || 'Google Noticias';
             if (it.fuente && titulo.endsWith(' - ' + it.fuente)) titulo = titulo.slice(0, -(it.fuente.length + 3)).trim();
-            if (!relevante(titulo, fuente)) { ajenas++; continue; }
           } else {
             extracto = recorta(it.desc);
             if (norm(extracto) === norm(titulo)) extracto = '';
@@ -131,6 +130,7 @@ async function main() {
           seen.add(h); seen.add(t);
           let cs = ciudades(titulo + ' ' + extracto);
           if (!cs.length && f.ciudad) cs = [f.ciudad];
+          if (!clasificar({ titulo, extracto, fuente, tipo: f.tipo, ciudades: cs }).entra) { ajenas++; continue; }
           const img = f.tipo === 'agregador' ? '' : (/^https?:\/\//.test(it.img) ? it.img : '');
           // Eventos con fecha leídos del texto completo de la fuente (no se guarda el texto, solo fecha, tipo y una frase corta).
           const ev = detectarEventos(titulo + '. ' + (it.cuerpo || extracto), ts).map((e) => ({ f: e.fecha, t: e.tipo, s: e.frase.slice(0, 160) }));

@@ -200,3 +200,11 @@ a { text-underline-offset: .18em; }
 @keyframes nx-vt-entra { from { opacity: 0; filter: blur(4px); transform: translateY(8px); } }
 .nx-lista { view-transition-name: nx-lista; }
 .nx-head { view-transition-name: nx-head; }
+
+/* Temas de Noticias (salidas, cultos, música…): fila propia de filtros y etiqueta en cada noticia */
+.nx-temas { flex-basis: 100%; }
+.nx-chips.is-tema button { border-color: transparent; background: transparent; color: var(--muted); }
+.nx-chips.is-tema button[aria-pressed="true"] { background: color-mix(in srgb, var(--oro) 18%, var(--surface)); color: var(--ink); box-shadow: inset 0 0 0 1px var(--oro-hondo); }
+@media (hover: hover) and (pointer: fine) { .nx-chips.is-tema button:hover { border-color: transparent; color: var(--ink); background: color-mix(in srgb, var(--oro) 10%, transparent); } }
+.nx-tema { display: inline-flex; align-items: center; min-height: 20px; padding: 0 8px; border-radius: 999px; background: color-mix(in srgb, var(--oro) 17%, transparent); color: var(--gold-ink); font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.nx-destacada .nx-tema { background: rgb(236 211 147 / .18); color: var(--oro-claro); }

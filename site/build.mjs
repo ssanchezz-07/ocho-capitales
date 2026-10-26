@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { detectarEventos } from './eventos.mjs';
+import { clasificar, TEMAS } from './filtro-noticias.mjs';
 import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -34,6 +35,9 @@ const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 // Noticias: solo imágenes https y sin iconos/emojis de WordPress (no son fotos).
 const badImg = (s) => !s || !/^https:/.test(s) || /s\.w\.org\/images\/core\/emoji|gravatar|feeds\.feedburner/.test(s);
 const NEWS = { ...NEWS_RAW, items: NEWS_RAW.items.map((n) => ({ ...n, img: badImg(n.img) ? '' : n.img })) };
+// Criterio editorial (filtro-noticias.mjs): solo lo cofrade de las ocho capitales, etiquetado por temas y capital.
+// Se aplica también al archivo ya guardado, sin tocar data/news.json (lo escribe el lector de noticias).
+NEWS.items = NEWS.items.flatMap((n) => { const c = clasificar(n); return c.entra ? [{ ...n, ciudades: c.ciudades, temas: c.temas }] : []; });
 // Medios con dos grafías («Diario SUR» y «Diario Sur», «101TV» y «101tv Sevilla»): se muestran con la más usada.
 // Solo se quita la capital del final si lo que queda es una sola palabra (así «Diario de Sevilla» y «Diario de Cádiz» no se juntan).
 {
@@ -790,7 +794,7 @@ function pageNews() {
   const body = `<header class="nx-head" data-nx-head><div class="nx-head-in"><h1 class="oc-title nx-title">Noticias</h1><p class="nx-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada hora y con enlace al medio.</p><p class="nx-pulso"><span><i aria-hidden="true"></i>Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time></span><span><b>${medios}</b> medios</span><span><b>${items.length}</b> noticias desde el ${fmtDay(desde, { day: 'numeric', month: 'long' })}</span></p></div></header>
 <div class="nx-filtros" data-news-filters>
   <div class="oc-field nx-buscar"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
-  <div class="nx-chips-fila"><span class="oc-sr" id="nciudad">Capital</span><ul class="nx-chips" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false" style="--c:${c.color}"><i aria-hidden="true"></i>${esc(c.nombre)}</button></li>`).join('')}</ul><button class="nx-toggle" type="button" data-f="oficiales" aria-pressed="false">Solo fuentes oficiales</button></div>
+  <div class="nx-chips-fila"><span class="oc-sr" id="nciudad">Capital</span><ul class="nx-chips" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false" style="--c:${c.color}"><i aria-hidden="true"></i>${esc(c.nombre)}</button></li>`).join('')}</ul><button class="nx-toggle" type="button" data-f="oficiales" aria-pressed="false">Solo fuentes oficiales</button></div><div class="nx-chips-fila nx-temas"><span class="oc-sr" id="ntema">Tema</span><ul class="nx-chips is-tema" data-f="tema" aria-labelledby="ntema"><li><button type="button" data-v="" aria-pressed="true">Todos los temas</button></li>${NX.TEMAS.map(([k, l]) => `<li><button type="button" data-v="${k}" aria-pressed="false">${l}</button></li>`).join('')}</ul></div>
 </div>
 <p class="oc-count nx-count" data-news-count aria-live="polite">${v.total} noticias</p>
 <div class="nx-lista" data-news-list>${v.html}</div>
