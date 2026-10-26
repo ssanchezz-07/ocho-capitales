@@ -27,7 +27,7 @@
   "santa-cruz": { "nombre": "Parroquia de Santa Cruz (Catedral Vieja)", "canonica": ["Santa Cruz"], "osm": "way/66648045", "lat": 36.5284195, "lon": -6.2944161, "nota": "Cerrada por obras en 2026: sus cinco hermandades salieron de otros templos." },
   "santo-angel": { "nombre": "Real Parroquia Castrense del Santo Ángel Custodio", "canonica": ["Santo Ángel"], "osm": "way/712116375", "lat": 36.5336724, "lon": -6.3030263, "dir": "C/ Benito Pérez Galdós, 83", "fuente_dir": "gcatholic-castrense", "nota": "Con obras pendientes en 2026: la Expiración salió del Carmen." },
   "san-felipe-neri": { "nombre": "Oratorio de San Felipe Neri", "osm": "way/141200818", "lat": 36.5328564, "lon": -6.2997983 },
-  "catedral": { "nombre": "Santa Iglesia Catedral", "osm": "way/66648047", "lat": 36.5289521, "lon": -6.2953183, "dir": "Plaza del Pío XII (Plaza de la Catedral)", "fuente_dir": "gcatholic-catedral" },
+  "catedral": { "nombre": "Iglesia Catedral de Cádiz", "osm": "way/66648047", "lat": 36.5289521, "lon": -6.2953183, "dir": "Plaza del Pío XII (Plaza de la Catedral)", "fuente_dir": "gcatholic-catedral" },
   "capilla-jesus-caido": { "nombre": "Capilla de Jesús Caído (junto al Parque Genovés)", "osm": "way/766688340", "lat": 36.5346087, "lon": -6.3044972, "nota": "En OSM, en la Avenida Doctor Gómez Ulla, la última calle del itinerario del Caído." }
  },
  "hermandades": {

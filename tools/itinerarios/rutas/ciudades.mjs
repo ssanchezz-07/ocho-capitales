@@ -25,7 +25,16 @@ export const CIUDADES = {
     catedral: { texto: /^(puerta del perdon|puerta (de )?(las )?cofradias|interior s i c|patio (de los )?naranjos)/, entra: 11613100948, sale: 3151300073, nombre: 'de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral' },
   },
   granada: { nombre: 'Granada' },
-  cadiz: { nombre: 'Cádiz' },
+  // La estación de penitencia es una marca; la lista trae «regreso_desde» (listas/cadiz.json). Cuando el itinerario sigue
+  // por «Arquitecto Acero» (casi todas), se entra por la puerta principal (Plaza de la Catedral) y se sale por la de
+  // Arquitecto Acero: en 2025 se hizo al revés «de forma excepcional» por el Año Jubilar (planomato.com, Nazareno de la
+  // Obediencia 2025). Esa puerta no está en OSM: punto en la fachada que da a la calle (aproximado). lista-cadiz.mjs solo
+  // escribe «Estación de Penitencia en la S.I.C.» en esos casos; en los demás, «… en la Catedral» (marca, sin línea por dentro).
+  cadiz: {
+    nombre: 'Cádiz',
+    marcas: /^estacion de penitencia/,
+    catedral: { texto: /^estacion de penitencia en la s i c$/, entra: 7063298453, sale: { id: 'fachada de Arquitecto Acero, punto aproximado', lat: 36.52899, lon: -6.29567 }, nombre: 'de la puerta principal (Plaza de la Catedral) a la de Arquitecto Acero' },
+  },
   huelva: { nombre: 'Huelva' },
   jaen: { nombre: 'Jaén' },
   almeria: { nombre: 'Almería' },

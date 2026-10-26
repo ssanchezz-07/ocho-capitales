@@ -4,8 +4,20 @@
 
 ## Estado (2026-10-26)
 - **Fase 1 (datos): hecha.** Las 33 salidas procesionales de Cádiz de 2026 tienen lista oficial de calles completa, literal y en orden, separada en ida (hasta la Catedral) y regreso, con horas de paso y sede de salida y entrada con fuente.
-- **Fase 2 (trazado): esperando.** Empieza cuando la sesión de Málaga suba a `main` las herramientas generalizadas (`git fetch` y `git log origin/main`). A las 08:30 del 26-oct `origin/main` aún no las tenía (último commit: `3c8528a`, noticias).
-- **Punto exacto para seguir:** `git fetch` → si están las herramientas, `git rebase origin/main` → trazar con `tools/itinerarios/listas-cadiz-2026.json` como entrada → evaluador → capturas → `node site/build.mjs` → Playwright 390/1440 → subir.
+- **Fase 2 (trazado): trazada y evaluada, SIN publicar.** Rama rebasada sobre `origin/main` (herramientas de Málaga, `29c1a57`). Las 32 con ficha en el portal están trazadas con el método nuevo. Evaluador: **30 «nuevo»** (empatan o mejoran en todo a lo publicado) y **2 «revisar»** (Servitas y Obediencia, ver abajo). Capturas revisadas a ojo: bien.
+- **Parada por presupuesto** (límite de 5 horas al 84 %, tope 85 %), el 26-oct a las 10:35.
+- **Punto exacto para seguir** (desde `tools/itinerarios/rutas/`, con GraphHopper en marcha):
+  1. Copiar la caché si falta: `cache/osm-cadiz.json` de la carpeta original (`osm-cadiz-puertas.json` ya está en la caché del worktree).
+  2. `node lista-cadiz.mjs` → `node emparejar.mjs cadiz` → `node evaluar.mjs cadiz` (todas a la vez: evaluar con ids sueltos también vale, mezcla).
+  3. `node publicar.mjs cadiz` (las 30 «nuevo») y `node publicar.mjs cadiz servitas merced-obediencia --forzar`.
+  4. `node site/build.mjs` → Playwright a 390 y 1440 px en `/en-la-calle/cadiz/` (comprobar que salen la Sanidad y el Miércoles Santo).
+  5. `git fetch` → `git rebase origin/main` → `git push origin HEAD:main` y avisar a Pablo del hash.
+
+### Cómo se traza Cádiz (lo propio de la capital)
+- `rutas/lista-cadiz.mjs` genera `rutas/listas/cadiz.json` desde `listas-cadiz-2026.json`. Horas: fila del primer paso (salida, Nueva, Catedral, Candelaria, Palillero, entrada).
+- `alias-calles-cadiz.json`: sedes → templo de OSM (o punto: Catedral, puerta principal nodo 7063298453; Salesianos) y nombres que OSM escribe distinto, cada uno con su fuente en `_fuentes` (Plaza de Pío XII = Plaza de la Catedral; Alameda Apodaca = Clara Campoamor; Plaza de las Flores = Plaza Topete; Avda. 4/Cuatro de Diciembre…).
+- **Catedral por dentro** (`rutas/ciudades.mjs`): si el itinerario sigue por Arquitecto Acero tras la estación (todas menos las vísperas y la Resurrección), se entra por la puerta principal y se sale por la de Arquitecto Acero. Fuente: en 2025 se hizo al revés «de forma excepcional» por el Año Jubilar ([planomato, Obediencia 2025](https://www.planomato.com/es/cadiz/p/nazareno-obediencia)). Esa puerta no está en OSM: punto aproximado en la fachada. Para ello `comun.mjs` admite ahora una puerta de catedral como punto `{lat, lon, id}` además de nodo OSM (Málaga no cambia).
+- La «Plaza Stmo. Cristo de la Vera Cruz» (junto a San Francisco) no está en OSM y el parecido de nombres la llevaba a «Calle Cruz», a 600 m: va como marca sin trazar.
 
 ## Archivos
 | Archivo | Qué es |
@@ -46,6 +58,9 @@ Ninguna hermandad se queda sin lista completa. Estas tienen algo que conviene mi
 | **Ecce Mater Tua** | No hace estación de penitencia: todo el recorrido va como «ida». Tabla de horas con solo salida, Palillero y entrada. |
 | **La Resurrección** | La tabla de horas del programa dice **2025**, no 2026. Se usa con ese aviso. |
 | **Despojado** | Sale y entra por el interior del Colegio Salesianos San Ignacio (Avda. María Auxiliadora 7). |
+| **Servitas y Obediencia** (vísperas) | Su itinerario pone «Plaza de la Catedral, Arquitecto Acero, (Estación)»: parece que entran por Arquitecto Acero y salen por la principal, como en 2025. El trazado solo pisa la esquina de Arquitecto Acero (por eso el evaluador dice «revisar»); en todo lo demás mejora mucho lo publicado (Servitas salía a 326 m de San Lorenzo). |
+| **Todas (Carrera Oficial)** | Pequeño gancho en la **Plaza de San Juan de Dios** entre Nueva y Pelota: OSM no une bien esas calles con la plaza (hueco de 96 m). Mirar en el editor si merece un punto de paso. |
+| **Palma y Huerto** | «Virgen de las Penas» y «Plaza Pinto» no están en OSM con ese nombre: no se trazan (no se inventa). |
 
 ## Falta
 - **Direcciones postales** de la mayoría de templos: GCatholic y la diócesis no las dan en abierto; Nominatim solo da la calle más cercana, y no la uso como dirección. Cada sede va con su edificio de OSM y su fuente; la dirección solo donde una fuente la da (Santiago, Catedral, Salesianos, Castrense).
