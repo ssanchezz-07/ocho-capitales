@@ -28,7 +28,7 @@ export const sn = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''
 const TIPO = /\b(calle|plaza|plazuela|plza|pza|avenida|avda|paseo|pasillo|pasaje|camino|carrera|callejon|calleja|rampa|glorieta|llano|c)\b/g;
 export const clave = (s) => sn(s).replace(TIPO, ' ').replace(/\b(de|del|la|las|los|el)\b/g, ' ').replace(/\s+/g, ' ').trim();
 export const tipoDe = (s) => { const m = sn(s).match(/^(plaza|plazuela|avenida|paseo|pasillo|pasaje|glorieta|llano|puente|alameda|rampa)\b/); return m ? (m[1] === 'plazuela' ? 'plaza' : m[1]) : null; };
-export const TEMPLO = /^(iglesia|parroquia|basilica|capilla|oratorio|santuario|ermita|abadia|casa hermandad|templo|seminario)/;
+export const TEMPLO = /^(real )?(iglesia|parroquia|basilica|capilla|oratorio|santuario|ermita|abadia|casa hermandad|templo|seminario|colegiata)/; // «Real Iglesia de San Pablo», «Real Colegiata de San Hipólito» (Córdoba)
 const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|track)(_link)?$/;
 export const d2 = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 export const dSeg = (p, a, b) => { const dx = b[0] - a[0], dy = b[1] - a[1], L = dx * dx + dy * dy, t = L ? Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / L)) : 0; return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dy); };
@@ -72,7 +72,7 @@ export function ciudad(c) {
     const anda = ANDABLE.test(t.highway || ''), plaza = t.place === 'square' || (t.highway === 'pedestrian' && t.area === 'yes');
     if (!anda && !plaza) continue;
     if (t.access === 'private' || t.foot === 'no') continue;
-    const nombres = []; for (const [k, co] of [['name', 0], ['official_name', 3], ['alt_name', 5], ['old_name', 8], ['short_name', 5]]) if (t[k]) for (const n of t[k].split(';')) { const cl = clave(n); if (cl && !nombres.some((x) => x[0] === cl)) nombres.push([cl, co]); }
+    const nombres = []; for (const [k, co] of [['name', 0], ['official_name', 3], ['alt_name', 5], ['old_name', 8], ['short_name', 5], ['bridge:name', 3]]) if (t[k]) for (const n of t[k].split(';')) { const cl = clave(n); if (cl && !nombres.some((x) => x[0] === cl)) nombres.push([cl, co]); }
     const v = { id: e.id, nombre: t.name || null, nombres, tipo: tipoDe(t.name || ''), highway: t.highway || 'plaza', area: plaza, pts: [], nodos: [] };
     for (const g of e.geometry) { if (!g) continue; const i = nodo(g.lat, g.lon); v.nodos.push(i); v.pts.push(NODOS[i].xy); NODOS[i].vias.push(VIAS.length); }
     VIAS.push(v);
