@@ -1,0 +1,307 @@
+{
+ "capital": "huelva",
+ "nombre": "Huelva",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "la-borriquita-huelva": {
+   "nombre": "La Borriquita",
+   "templo": {
+    "nombre": "Parroquia de San Pedro",
+    "lat": 37.2600727,
+    "lon": -6.9506939,
+    "osm": "way/55826913",
+    "nombre_osm": "San Pedro",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-borriquita/",
+    "fuente_coordenadas": "OpenStreetMap way 55826913"
+   },
+   "casa_hermandad": null
+  },
+  "la-sagrada-cena-huelva": {
+   "nombre": "La Sagrada Cena",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia del Sagrado Corazón»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-redencion-huelva": {
+   "nombre": "La Redención",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Cristo Sacerdote»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "los-mutilados-huelva": {
+   "nombre": "Los Mutilados",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Sebastián»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-perdon-huelva": {
+   "nombre": "El Perdón",
+   "templo": {
+    "nombre": "Parroquia de Santa Teresa",
+    "lat": 37.2800763,
+    "lon": -6.9411824,
+    "osm": "way/127053537",
+    "nombre_osm": "Santa Teresa",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-perdon/",
+    "fuente_coordenadas": "OpenStreetMap way 127053537"
+   },
+   "casa_hermandad": null
+  },
+  "el-cautivo-huelva": {
+   "nombre": "El Cautivo",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla del Cautivo»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-calvario-huelva": {
+   "nombre": "El Calvario",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de Jesús del Calvario»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "las-tres-caidas-huelva": {
+   "nombre": "Las Tres Caídas",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia del Sagrado Corazón»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-salud-huelva": {
+   "nombre": "La Salud",
+   "templo": {
+    "nombre": "Parroquia de San Francisco",
+    "lat": 37.2568305,
+    "lon": -6.9494092,
+    "osm": "way/328395530",
+    "nombre_osm": "San Francisco",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/",
+    "fuente_coordenadas": "OpenStreetMap way 328395530"
+   },
+   "casa_hermandad": null
+  },
+  "la-lanzada-huelva": {
+   "nombre": "La Lanzada",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de los Dolores»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "los-estudiantes-huelva": {
+   "nombre": "Los Estudiantes",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de San Sebastián»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "pasion-huelva": {
+   "nombre": "Pasión",
+   "templo": {
+    "nombre": "Parroquia Mayor de San Pedro",
+    "lat": 37.2600727,
+    "lon": -6.9506939,
+    "osm": "way/55826913",
+    "nombre_osm": "San Pedro",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-sacramental-de-pasion/",
+    "fuente_coordenadas": "OpenStreetMap way 55826913"
+   },
+   "casa_hermandad": null
+  },
+  "el-prendimiento-huelva": {
+   "nombre": "El Prendimiento",
+   "templo": {
+    "nombre": "Parroquia del Carmen",
+    "lat": 37.2778648,
+    "lon": -6.9475694,
+    "osm": "way/99694741",
+    "nombre_osm": "Parroquia Nuestra señora del Carmen",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-prendimiento-y-la-estrella/",
+    "fuente_coordenadas": "OpenStreetMap way 99694741"
+   },
+   "casa_hermandad": null
+  },
+  "la-santa-cruz-huelva": {
+   "nombre": "La Santa Cruz",
+   "templo": {
+    "nombre": "Parroquia de la Purísima Concepción",
+    "lat": 37.257708,
+    "lon": -6.9529494,
+    "osm": "way/297096316",
+    "nombre_osm": "Parroquia de la Purísima Concepción",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/",
+    "fuente_coordenadas": "OpenStreetMap way 297096316"
+   },
+   "casa_hermandad": null
+  },
+  "la-victoria-huelva": {
+   "nombre": "La Victoria",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia del Sagrado Corazón»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-esperanza-huelva": {
+   "nombre": "La Esperanza",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de Santa María de la Esperanza»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "vera-cruz-y-oracion-huelva": {
+   "nombre": "Vera Cruz y Oración",
+   "templo": {
+    "nombre": "Parroquia de la Purísima Concepción",
+    "lat": 37.257708,
+    "lon": -6.9529494,
+    "osm": "way/297096316",
+    "nombre_osm": "Parroquia de la Purísima Concepción",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-veracruz-y-oracion-en-el-huerto/",
+    "fuente_coordenadas": "OpenStreetMap way 297096316"
+   },
+   "casa_hermandad": null
+  },
+  "la-misericordia-huelva": {
+   "nombre": "La Misericordia",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Iglesia del Cristo de la Misericordia»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-buena-muerte-huelva": {
+   "nombre": "La Buena Muerte",
+   "templo": {
+    "nombre": "Iglesia de Santa María de Gracia",
+    "lat": 37.2572093,
+    "lon": -6.9507715,
+    "osm": "way/328394497",
+    "nombre_osm": "Santa María de Gracia",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/",
+    "fuente_coordenadas": "OpenStreetMap way 328394497"
+   },
+   "casa_hermandad": null
+  },
+  "los-judios-la-merced-huelva": {
+   "nombre": "Los Judíos (La Merced)",
+   "templo": {
+    "nombre": "Catedral de la Merced",
+    "lat": 37.2630613,
+    "lon": -6.9525451,
+    "osm": "way/328394498",
+    "nombre_osm": "Catedral de la Merced",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-de-los-judios/",
+    "fuente_coordenadas": "OpenStreetMap way 328394498"
+   },
+   "casa_hermandad": null
+  },
+  "el-nazareno-huelva": {
+   "nombre": "El Nazareno",
+   "templo": {
+    "nombre": "Parroquia de la Purísima Concepción",
+    "lat": 37.257708,
+    "lon": -6.9529494,
+    "osm": "way/297096316",
+    "nombre_osm": "Parroquia de la Purísima Concepción",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-nazareno/",
+    "fuente_coordenadas": "OpenStreetMap way 297096316"
+   },
+   "casa_hermandad": null
+  },
+  "la-fe-huelva": {
+   "nombre": "La Fe",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Parroquia de Santa María Madre de la Iglesia»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "el-descendimiento-huelva": {
+   "nombre": "El Descendimiento",
+   "templo": {
+    "nombre": "Parroquia de San Pedro",
+    "lat": 37.2600727,
+    "lon": -6.9506939,
+    "osm": "way/55826913",
+    "nombre_osm": "San Pedro",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 55826913"
+   },
+   "casa_hermandad": null
+  },
+  "el-santo-entierro-huelva": {
+   "nombre": "El Santo Entierro",
+   "templo": {
+    "nombre": "Ermita de la Soledad",
+    "lat": 37.2600597,
+    "lon": -6.9489457,
+    "osm": "way/130994174",
+    "nombre_osm": "Ermita de la Soledad",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/",
+    "fuente_coordenadas": "OpenStreetMap way 130994174"
+   },
+   "casa_hermandad": null
+  },
+  "el-silencio-la-soledad-huelva": {
+   "nombre": "El Silencio (La Soledad)",
+   "templo": {
+    "nombre": "Parroquia de la Purísima Concepción",
+    "lat": 37.257708,
+    "lon": -6.9529494,
+    "osm": "way/297096316",
+    "nombre_osm": "Parroquia de la Purísima Concepción",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-silencio/",
+    "fuente_coordenadas": "OpenStreetMap way 297096316"
+   },
+   "casa_hermandad": null
+  },
+  "el-resucitado-huelva": {
+   "nombre": "El Resucitado",
+   "templo": {
+    "nombre": "Parroquia del Pilar",
+    "lat": 37.270065,
+    "lon": -6.9376914,
+    "osm": "way/839702284",
+    "nombre_osm": "Parroquia del Pilar",
+    "fuente": "https://consejohermandadeshuelva.es/hermandad-del-resucitado/",
+    "fuente_coordenadas": "OpenStreetMap way 839702284"
+   },
+   "casa_hermandad": null
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "nombre": "Nuestra Señora del Prado",
+   "templo": null,
+   "casa_hermandad": null,
+   "falta": [
+    "templo «Capilla de Nuestra Señora del Prado en su Dolor»: ningún edificio de OSM con ese nombre"
+   ]
+  },
+  "la-bendicion-huelva": {
+   "nombre": "La Bendición",
+   "templo": {
+    "nombre": "Iglesia de San Rafael",
+    "lat": 37.2602837,
+    "lon": -6.9288131,
+    "osm": "way/730870746",
+    "nombre_osm": "Parroquia de San Rafael Arcángel",
+    "fuente_coordenadas": "OpenStreetMap way 730870746",
+    "fuente": "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/ · en OSM «Parroquia de San Rafael Arcángel», única con ese nombre en Huelva"
+   },
+   "casa_hermandad": null
+  }
+ }
+}

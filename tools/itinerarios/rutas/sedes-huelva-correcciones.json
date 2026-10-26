@@ -1,0 +1,13 @@
+{
+ "la-bendicion-huelva": {
+  "templo": {
+   "nombre": "Iglesia de San Rafael",
+   "lat": 37.2602837,
+   "lon": -6.9288131,
+   "osm": "way/730870746",
+   "nombre_osm": "Parroquia de San Rafael Arcángel",
+   "fuente_coordenadas": "OpenStreetMap way 730870746",
+   "fuente": "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/ · en OSM «Parroquia de San Rafael Arcángel», única con ese nombre en Huelva"
+  }
+ }
+}
