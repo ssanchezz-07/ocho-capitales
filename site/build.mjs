@@ -151,7 +151,7 @@ import vm from 'node:vm';
 const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(DIR, 'assets', 'noticias.js'), 'utf8'), sb); return sb.OCNoticias; })();
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'mundo.json'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'" + (FORM_CLAVE ? ' https://api.web3forms.com' : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
@@ -649,7 +649,7 @@ function colgaduras() {
     return [c.slug, { n: c.nombre, d: u('data/calle/' + c.slug + '.json'), cap: capHref(c), calle: u('en-la-calle/' + c.slug + '/'), anio: JSON.parse(fs.readFileSync(fR, 'utf8')).anio || '' }];
   }));
   datos.plano = u('assets/plano.js') + '?v=' + HUELLA.plano;
-  if (P) { datos.proy = { ...P, ancho: MAPA.ancho, alto: MAPA.alto }; datos.globo = u('assets/globo.js') + '?v=' + HUELLA.globo; datos.mundo = u('assets/mundo.json') + '?v=' + HUELLA.mundo; }
+  if (P) { datos.proy = { ...P, ancho: MAPA.ancho, alto: MAPA.alto }; datos.globo = u('assets/globo.js') + '?v=' + HUELLA.globo; datos.mundo = u('assets/globo-datos.json') + '?v=' + HUELLA.mundo; datos.vendor = [u('assets/vendor/d3-array.min.js') + '?v=' + HUELLA.d3a, u('assets/vendor/d3-geo.min.js') + '?v=' + HUELLA.d3g]; }
   datos.temporada = { modo: TEMPORADA.modo, desde: TEMPORADA.desde, hasta: TEMPORADA.hasta, anio: TEMPORADA.anio, ramos: TEMPORADA.ramos, proxima: u('proxima-semana-santa/') };
   // Ríos y sierras de Natural Earth (tools/generar-mapa-detalle.mjs), en la misma proyección que las provincias
   const fDet = path.join(DIR, 'data', 'mapa-detalle.json');

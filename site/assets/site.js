@@ -294,7 +294,7 @@
       // una imagen quieta y un fundido. El globo pequeño junto al mapa la vuelve a poner.
       (function () {
         function globo() {
-          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, quieto: reduced }); };
+          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); };
           if (window.OCGlobo) return ir();
           var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; document.head.appendChild(s);
         }

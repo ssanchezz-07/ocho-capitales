@@ -93,11 +93,6 @@
 /* ---- entrada de la primera visita: del globo a Andalucía (assets/globo.js) ---- */
 .oc-globo { position: fixed; inset: 0; z-index: 200; background: radial-gradient(120% 90% at 50% 42%, #2a1240 0%, #14081d 60%, #0b0511 100%); cursor: pointer; }
 .oc-globo-svg { display: block; width: 100%; height: 100%; }
-.oc-globo-esfera { fill: #1e0d2c; stroke: rgba(201, 161, 74, .18); stroke-width: 14px; }
-.oc-globo-borde { fill: none; stroke: #c9a14a; stroke-width: 1.2px; opacity: .85; }
-.oc-globo-tierra { fill: none; stroke: #f0d68e; stroke-width: 1.15px; stroke-linejoin: round; stroke-linecap: round; }
-.oc-globo-tierra-brillo { fill: none; stroke: #c9a14a; stroke-width: 5px; stroke-linejoin: round; stroke-linecap: round; opacity: .5; }
-.oc-globo-prov { fill: none; stroke: #f0d68e; stroke-width: 1.3px; stroke-linejoin: round; }
 .oc-globo-saltar { position: fixed; z-index: 201; top: max(16px, env(safe-area-inset-top)); right: 16px; min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(201, 161, 74, .55); background: rgba(255, 255, 255, .08); color: #f4eff9; font: 500 15px/1 Heebo, system-ui, sans-serif; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .oc-globo-saltar:focus-visible { outline: 2px solid #e7c877; outline-offset: 2px; }
 
@@ -176,3 +171,12 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-ley-c { fill: #f4ecdc; stroke: var(--gold); stroke-width: 2px; }
 .oc-ley-n { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: #1c0e2a; border: 1.5px solid var(--gold); color: #f6e2a8; font: 700 10px/1 Heebo, system-ui, sans-serif; font-style: normal; }
 .oc-ley.is-txt { white-space: normal; }
+/* el globo «Terciopelo y oro» (assets/globo.js) */
+.oc-globo-svg { transform-origin: 50% 47%; }
+.oc-gl-aura { fill: none; stroke: rgb(255 214 150 / .14); stroke-width: 34px; }
+.oc-gl-aura2 { fill: none; stroke: rgb(255 214 150 / .2); stroke-width: 12px; }
+.oc-gl-tierra { fill: #4a2668; stroke: #e2bf6e; stroke-width: 1.1px; stroke-linejoin: round; }
+.oc-gl-espana { fill: #4a2668; stroke: #c9a14a; stroke-width: 1.7px; stroke-linejoin: round; }
+.oc-gl-galon { fill: none; stroke: rgb(240 215 156 / .6); stroke-width: 1px; stroke-dasharray: 2 4; }
+.oc-gl-prov { stroke: #e9c97e; stroke-width: 1.2px; stroke-linejoin: round; }
+.oc-gl-cap circle { stroke: #c9a14a; stroke-width: 2px; }
