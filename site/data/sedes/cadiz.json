@@ -1,0 +1,440 @@
+{
+ "capital": "cadiz",
+ "nombre": "Cádiz",
+ "actualizado": "2026-10-26",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "hermandades": {
+  "servitas-cadiz": {
+   "nombre": "Servitas",
+   "templo": {
+    "nombre": "Capilla del Sagrario de los Dolores, en la Parroquia de San Lorenzo Mártir",
+    "lat": 36.5316999,
+    "lon": -6.3005908,
+    "osm": "way/154961230",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 6: «Sede Canónica»)",
+    "fuente_coordenadas": "OpenStreetMap way 154961230"
+   },
+   "casa_hermandad": null
+  },
+  "merced-obediencia-cadiz": {
+   "nombre": "Merced (Obediencia)",
+   "templo": {
+    "nombre": "Parroquia de la Merced",
+    "lat": 36.5285216,
+    "lon": -6.2913322,
+    "osm": "way/162534924",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://consejocofradiascadiz.es/merced-3/",
+    "fuente_coordenadas": "OpenStreetMap way 162534924"
+   },
+   "casa_hermandad": null
+  },
+  "humillacion-piedad-cadiz": {
+   "nombre": "Humillación (Piedad)",
+   "templo": {
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297056,
+    "lon": -6.2956937,
+    "osm": "way/542083000",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8; itinerario, pág. 32)",
+    "fuente_coordenadas": "OpenStreetMap way 542083000"
+   },
+   "casa_hermandad": null
+  },
+  "la-borriquita-cadiz": {
+   "nombre": "La Borriquita",
+   "templo": {
+    "nombre": "Iglesia de San José",
+    "lat": 36.5137947,
+    "lon": -6.2807557,
+    "osm": "way/148685979",
+    "nombre_osm": "Iglesia de San José",
+    "fuente": "https://consejocofradiascadiz.es/la-paz/",
+    "fuente_coordenadas": "OpenStreetMap way 148685979"
+   },
+   "casa_hermandad": null
+  },
+  "el-despojado-cadiz": {
+   "nombre": "El Despojado",
+   "templo": {
+    "nombre": "Santuario de María Auxiliadora Coronada (Colegio Salesianos San Ignacio)",
+    "lat": 36.5123733,
+    "lon": -6.2784924,
+    "osm": "way/157632556",
+    "nombre_osm": "Colegio Salesianos San Ignacio",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10: «Sede Canónica»); en OSM solo está el colegio, Avenida María Auxiliadora 7",
+    "fuente_coordenadas": "OpenStreetMap way 157632556"
+   },
+   "casa_hermandad": null
+  },
+  "sagrada-cena-cadiz": {
+   "nombre": "Sagrada Cena",
+   "templo": {
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288235,
+    "lon": -6.2900939,
+    "osm": "way/154232628",
+    "nombre_osm": "Convento de Nuestra Señora del Rosario y Santo Domingo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10: «Sede Canónica»)",
+    "fuente_coordenadas": "OpenStreetMap way 154232628"
+   },
+   "casa_hermandad": null
+  },
+  "las-penas-cadiz": {
+   "nombre": "Las Penas",
+   "templo": {
+    "nombre": "Iglesia de San Lorenzo",
+    "lat": 36.5316999,
+    "lon": -6.3005908,
+    "osm": "way/154961230",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://consejocofradiascadiz.es/las-penas/",
+    "fuente_coordenadas": "OpenStreetMap way 154961230"
+   },
+   "casa_hermandad": null
+  },
+  "humildad-y-paciencia-cadiz": {
+   "nombre": "Humildad y Paciencia",
+   "templo": {
+    "nombre": "Iglesia de San Agustín",
+    "lat": 36.5321412,
+    "lon": -6.2941057,
+    "osm": "way/66648043",
+    "nombre_osm": "Iglesia de San Agustín",
+    "fuente": "https://consejocofradiascadiz.es/humildad-y-paciencia/",
+    "fuente_coordenadas": "OpenStreetMap way 66648043"
+   },
+   "casa_hermandad": null
+  },
+  "la-palma-cadiz": {
+   "nombre": "La Palma",
+   "templo": {
+    "nombre": "Parroquia de la Palma",
+    "lat": 36.5296507,
+    "lon": -6.3016744,
+    "osm": "way/154961231",
+    "nombre_osm": "Iglesia de La Palma",
+    "fuente": "https://consejocofradiascadiz.es/la-palma/",
+    "fuente_coordenadas": "OpenStreetMap way 154961231"
+   },
+   "casa_hermandad": null
+  },
+  "el-prendimiento-cadiz": {
+   "nombre": "El Prendimiento",
+   "templo": {
+    "nombre": "Capilla del Beato Diego; sale del Carmen",
+    "lat": 36.537225,
+    "lon": -6.2998145,
+    "osm": "way/154222959",
+    "nombre_osm": "Iglesia de Nuestra Señora del Carmen",
+    "fuente": "https://consejocofradiascadiz.es/prendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 154222959"
+   },
+   "casa_hermandad": null
+  },
+  "nazareno-del-amor-cadiz": {
+   "nombre": "Nazareno del Amor",
+   "templo": {
+    "nombre": "Convento de San Francisco",
+    "lat": 36.5348415,
+    "lon": -6.2959096,
+    "osm": "way/154222961",
+    "nombre_osm": "Iglesia y Convento de San Francisco",
+    "fuente": "https://consejocofradiascadiz.es/nazareno-del-amor/",
+    "fuente_coordenadas": "OpenStreetMap way 154222961"
+   },
+   "casa_hermandad": null
+  },
+  "vera-cruz-cadiz": {
+   "nombre": "Vera+Cruz",
+   "templo": {
+    "nombre": "Convento de San Francisco",
+    "lat": 36.5348415,
+    "lon": -6.2959096,
+    "osm": "way/154222961",
+    "nombre_osm": "Iglesia y Convento de San Francisco",
+    "fuente": "https://consejocofradiascadiz.es/vera-cruz/",
+    "fuente_coordenadas": "OpenStreetMap way 154222961"
+   },
+   "casa_hermandad": null
+  },
+  "la-sanidad-cadiz": {
+   "nombre": "La Sanidad",
+   "templo": {
+    "nombre": "Iglesia de Santa Cruz",
+    "lat": 36.5283284,
+    "lon": -6.2942755,
+    "osm": "way/66648045",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://consejocofradiascadiz.es/sanidad/",
+    "fuente_coordenadas": "OpenStreetMap way 66648045"
+   },
+   "casa_hermandad": null
+  },
+  "la-piedad-cadiz": {
+   "nombre": "La Piedad",
+   "templo": {
+    "nombre": "Iglesia de Santiago",
+    "lat": 36.5297056,
+    "lon": -6.2956937,
+    "osm": "way/542083000",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://consejocofradiascadiz.es/piedad/",
+    "fuente_coordenadas": "OpenStreetMap way 542083000"
+   },
+   "casa_hermandad": null
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "nombre": "Jesús Caído («El Señor del Parque»)",
+   "templo": {
+    "nombre": "Capilla de Jesús Caído",
+    "lat": 36.534632,
+    "lon": -6.3045266,
+    "osm": "way/766688340",
+    "nombre_osm": "Capilla de Jesús Caido",
+    "fuente": "https://consejocofradiascadiz.es/jesus-caido/",
+    "fuente_coordenadas": "OpenStreetMap way 766688340"
+   },
+   "casa_hermandad": null
+  },
+  "ecce-homo-cadiz": {
+   "nombre": "Ecce-Homo",
+   "templo": {
+    "nombre": "Iglesia de la Conversión de San Pablo",
+    "lat": 36.5331333,
+    "lon": -6.2968665,
+    "osm": "way/494982467",
+    "nombre_osm": "Iglesia de la Conversión de San Pablo",
+    "fuente": "https://consejocofradiascadiz.es/ecce-homo/",
+    "fuente_coordenadas": "OpenStreetMap way 494982467"
+   },
+   "casa_hermandad": null
+  },
+  "la-columna-cadiz": {
+   "nombre": "La Columna",
+   "templo": {
+    "nombre": "Iglesia de San Antonio",
+    "lat": 36.534511,
+    "lon": -6.2993917,
+    "osm": "way/154222951",
+    "nombre_osm": "Iglesia de San Antonio",
+    "fuente": "https://consejocofradiascadiz.es/columna/",
+    "fuente_coordenadas": "OpenStreetMap way 154222951"
+   },
+   "casa_hermandad": null
+  },
+  "las-cigarreras-cadiz": {
+   "nombre": "Las Cigarreras",
+   "templo": {
+    "nombre": "Iglesia Conventual de Santo Domingo",
+    "lat": 36.5288235,
+    "lon": -6.2900939,
+    "osm": "way/154232628",
+    "nombre_osm": "Convento de Nuestra Señora del Rosario y Santo Domingo",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18: «Sede Canónica»)",
+    "fuente_coordenadas": "OpenStreetMap way 154232628"
+   },
+   "casa_hermandad": null
+  },
+  "la-sentencia-cadiz": {
+   "nombre": "La Sentencia",
+   "templo": {
+    "nombre": "Iglesia de la Merced",
+    "lat": 36.5285216,
+    "lon": -6.2913322,
+    "osm": "way/162534924",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://consejocofradiascadiz.es/sentencia/",
+    "fuente_coordenadas": "OpenStreetMap way 162534924"
+   },
+   "casa_hermandad": null
+  },
+  "las-aguas-cadiz": {
+   "nombre": "Las Aguas",
+   "templo": {
+    "nombre": "Iglesia de Santa Cruz",
+    "lat": 36.5283284,
+    "lon": -6.2942755,
+    "osm": "way/66648045",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://consejocofradiascadiz.es/las-aguas/",
+    "fuente_coordenadas": "OpenStreetMap way 66648045"
+   },
+   "casa_hermandad": null
+  },
+  "el-caminito-cadiz": {
+   "nombre": "El Caminito",
+   "templo": {
+    "nombre": "Capilla del Caminito",
+    "lat": 36.5363429,
+    "lon": -6.2945391,
+    "osm": "way/549941389",
+    "nombre_osm": "Capilla de Nuestra Señora de las Angustias",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20: «Sede Canónica»); en OSM, «Capilla de Nuestra Señora de las Angustias», su nombre formal (Cadizpedia)",
+    "fuente_coordenadas": "OpenStreetMap way 549941389"
+   },
+   "casa_hermandad": null
+  },
+  "los-afligidos-cadiz": {
+   "nombre": "Los Afligidos",
+   "templo": {
+    "nombre": "Iglesia de San Lorenzo",
+    "lat": 36.5316999,
+    "lon": -6.3005908,
+    "osm": "way/154961230",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://consejocofradiascadiz.es/afligidos/",
+    "fuente_coordenadas": "OpenStreetMap way 154961230"
+   },
+   "casa_hermandad": null
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "nombre": "Oración en el Huerto",
+   "templo": {
+    "nombre": "Iglesia de Santa Catalina (Capuchinos)",
+    "lat": 36.528247,
+    "lon": -6.3017301,
+    "osm": "way/154960632",
+    "nombre_osm": "Iglesia de Santa Catalina",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21: «Sede Canónica»)",
+    "fuente_coordenadas": "OpenStreetMap way 154960632"
+   },
+   "casa_hermandad": null
+  },
+  "medinaceli-cadiz": {
+   "nombre": "Medinaceli",
+   "templo": {
+    "nombre": "Iglesia de Santa Cruz",
+    "lat": 36.5283284,
+    "lon": -6.2942755,
+    "osm": "way/66648045",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://consejocofradiascadiz.es/medinaceli/",
+    "fuente_coordenadas": "OpenStreetMap way 66648045"
+   },
+   "casa_hermandad": null
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "nombre": "Nazareno de Santa María",
+   "templo": {
+    "nombre": "Convento de Santa María",
+    "lat": 36.5277532,
+    "lon": -6.291741,
+    "osm": "way/154232558",
+    "nombre_osm": "Iglesia Conventual de Santa Maria",
+    "fuente": "https://consejocofradiascadiz.es/nazareno/",
+    "fuente_coordenadas": "OpenStreetMap way 154232558"
+   },
+   "casa_hermandad": null
+  },
+  "el-perdon-cadiz": {
+   "nombre": "El Perdón",
+   "templo": {
+    "nombre": "Iglesia de Santa Cruz",
+    "lat": 36.5283284,
+    "lon": -6.2942755,
+    "osm": "way/66648045",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://consejocofradiascadiz.es/perdon/",
+    "fuente_coordenadas": "OpenStreetMap way 66648045"
+   },
+   "casa_hermandad": null
+  },
+  "el-descendimiento-cadiz": {
+   "nombre": "El Descendimiento",
+   "templo": {
+    "nombre": "Iglesia de San Lorenzo",
+    "lat": 36.5316999,
+    "lon": -6.3005908,
+    "osm": "way/154961230",
+    "nombre_osm": "Iglesia de San Lorenzo",
+    "fuente": "https://consejocofradiascadiz.es/descendimiento/",
+    "fuente_coordenadas": "OpenStreetMap way 154961230"
+   },
+   "casa_hermandad": null
+  },
+  "la-expiracion-cadiz": {
+   "nombre": "La Expiración",
+   "templo": {
+    "nombre": "Parroquia castrense del Santo Ángel Custodio",
+    "lat": 36.533711,
+    "lon": -6.3030147,
+    "osm": "way/712116375",
+    "nombre_osm": "Iglesia del Santo Ángel Custodio",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26: «Sede Canónica»); en 2026 salió del Carmen por obras en la Castrense",
+    "fuente_coordenadas": "OpenStreetMap way 712116375"
+   },
+   "casa_hermandad": null
+  },
+  "siete-palabras-cadiz": {
+   "nombre": "Siete Palabras",
+   "templo": {
+    "nombre": "Iglesia de la Merced",
+    "lat": 36.5285216,
+    "lon": -6.2913322,
+    "osm": "way/162534924",
+    "nombre_osm": "Iglesia de La Merced",
+    "fuente": "https://consejocofradiascadiz.es/siete-palabras/",
+    "fuente_coordenadas": "OpenStreetMap way 162534924"
+   },
+   "casa_hermandad": null
+  },
+  "la-buena-muerte-cadiz": {
+   "nombre": "La Buena Muerte",
+   "templo": {
+    "nombre": "Iglesia de San Agustín",
+    "lat": 36.5321412,
+    "lon": -6.2941057,
+    "osm": "way/66648043",
+    "nombre_osm": "Iglesia de San Agustín",
+    "fuente": "https://consejocofradiascadiz.es/buena-muerte/",
+    "fuente_coordenadas": "OpenStreetMap way 66648043"
+   },
+   "casa_hermandad": null
+  },
+  "ecce-mater-tua-cadiz": {
+   "nombre": "Ecce Mater Tua",
+   "templo": {
+    "nombre": "Iglesia de Santiago Apóstol",
+    "lat": 36.5297056,
+    "lon": -6.2956937,
+    "osm": "way/542083000",
+    "nombre_osm": "Iglesia de Santiago",
+    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28: «Sede Canónica»)",
+    "fuente_coordenadas": "OpenStreetMap way 542083000"
+   },
+   "casa_hermandad": null,
+   "falta": [
+    "templo sin enlace a la ficha oficial"
+   ]
+  },
+  "santo-entierro-cadiz": {
+   "nombre": "Santo Entierro",
+   "templo": {
+    "nombre": "Iglesia de Santa Cruz",
+    "lat": 36.5283284,
+    "lon": -6.2942755,
+    "osm": "way/66648045",
+    "nombre_osm": "Iglesia de Santa Cruz",
+    "fuente": "https://consejocofradiascadiz.es/soledad/",
+    "fuente_coordenadas": "OpenStreetMap way 66648045"
+   },
+   "casa_hermandad": null
+  },
+  "la-resurreccion-cadiz": {
+   "nombre": "La Resurrección",
+   "templo": {
+    "nombre": "Iglesia de San Antonio",
+    "lat": 36.534511,
+    "lon": -6.2993917,
+    "osm": "way/154222951",
+    "nombre_osm": "Iglesia de San Antonio",
+    "fuente": "https://consejocofradiascadiz.es/resucitado/",
+    "fuente_coordenadas": "OpenStreetMap way 154222951"
+   },
+   "casa_hermandad": null
+  }
+ }
+}

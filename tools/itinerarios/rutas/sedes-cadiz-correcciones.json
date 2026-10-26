@@ -1,0 +1,90 @@
+{
+ "servitas-cadiz": {
+  "templo": {
+   "nombre": "Capilla del Sagrario de los Dolores, en la Parroquia de San Lorenzo Mártir",
+   "lat": 36.5316999,
+   "lon": -6.3005908,
+   "osm": "way/154961230",
+   "nombre_osm": "Iglesia de San Lorenzo",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 6: «Sede Canónica»)",
+   "fuente_coordenadas": "OpenStreetMap way 154961230"
+  }
+ },
+ "el-despojado-cadiz": {
+  "templo": {
+   "nombre": "Santuario de María Auxiliadora Coronada (Colegio Salesianos San Ignacio)",
+   "lat": 36.5123733,
+   "lon": -6.2784924,
+   "osm": "way/157632556",
+   "nombre_osm": "Colegio Salesianos San Ignacio",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10: «Sede Canónica»); en OSM solo está el colegio, Avenida María Auxiliadora 7",
+   "fuente_coordenadas": "OpenStreetMap way 157632556"
+  }
+ },
+ "sagrada-cena-cadiz": {
+  "templo": {
+   "nombre": "Iglesia Conventual de Santo Domingo",
+   "lat": 36.5288235,
+   "lon": -6.2900939,
+   "osm": "way/154232628",
+   "nombre_osm": "Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 10: «Sede Canónica»)",
+   "fuente_coordenadas": "OpenStreetMap way 154232628"
+  }
+ },
+ "las-cigarreras-cadiz": {
+  "templo": {
+   "nombre": "Iglesia Conventual de Santo Domingo",
+   "lat": 36.5288235,
+   "lon": -6.2900939,
+   "osm": "way/154232628",
+   "nombre_osm": "Convento de Nuestra Señora del Rosario y Santo Domingo",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 18: «Sede Canónica»)",
+   "fuente_coordenadas": "OpenStreetMap way 154232628"
+  }
+ },
+ "el-caminito-cadiz": {
+  "templo": {
+   "nombre": "Capilla del Caminito",
+   "lat": 36.5363429,
+   "lon": -6.2945391,
+   "osm": "way/549941389",
+   "nombre_osm": "Capilla de Nuestra Señora de las Angustias",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 20: «Sede Canónica»); en OSM, «Capilla de Nuestra Señora de las Angustias», su nombre formal (Cadizpedia)",
+   "fuente_coordenadas": "OpenStreetMap way 549941389"
+  }
+ },
+ "oracion-en-el-huerto-cadiz": {
+  "templo": {
+   "nombre": "Iglesia de Santa Catalina (Capuchinos)",
+   "lat": 36.528247,
+   "lon": -6.3017301,
+   "osm": "way/154960632",
+   "nombre_osm": "Iglesia de Santa Catalina",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 21: «Sede Canónica»)",
+   "fuente_coordenadas": "OpenStreetMap way 154960632"
+  }
+ },
+ "la-expiracion-cadiz": {
+  "templo": {
+   "nombre": "Parroquia castrense del Santo Ángel Custodio",
+   "lat": 36.533711,
+   "lon": -6.3030147,
+   "osm": "way/712116375",
+   "nombre_osm": "Iglesia del Santo Ángel Custodio",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 26: «Sede Canónica»); en 2026 salió del Carmen por obras en la Castrense",
+   "fuente_coordenadas": "OpenStreetMap way 712116375"
+  }
+ },
+ "ecce-mater-tua-cadiz": {
+  "templo": {
+   "nombre": "Iglesia de Santiago Apóstol",
+   "lat": 36.5297056,
+   "lon": -6.2956937,
+   "osm": "way/542083000",
+   "nombre_osm": "Iglesia de Santiago",
+   "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 28: «Sede Canónica»)",
+   "fuente_coordenadas": "OpenStreetMap way 542083000"
+  }
+ }
+}
