@@ -42,6 +42,29 @@ const filas = (h) => [...h.matchAll(/<article class="marcha-card">([\s\S]*?)<\/a
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { capitales: {}, fichas: {} };
 const guardar = () => { fs.mkdirSync(path.dirname(OUT), { recursive: true }); fs.writeFileSync(OUT, JSON.stringify({ fuente: B + 'marchas.php', leido: new Date().toISOString().slice(0, 10), ...prev }, null, 1)); };
 
+// --fichas: abre las fichas que el unificador apunta en auditoria/cyh-fichas-pendientes.json y guarda solo dos hechos:
+// la imagen a la que está dedicada y el nombre de su hermandad (los dos enlaces de «Marcha dedicada a»)
+if (process.argv.includes('--fichas')) {
+  const pend = JSON.parse(fs.readFileSync(path.join(RAIZ, 'auditoria', 'cyh-fichas-pendientes.json'), 'utf8')).filter((id) => !(prev.fichas || {})[id]);
+  prev.fichas ||= {};
+  console.log('fichas por leer', pend.length);
+  let n = 0;
+  for (const id of pend) {
+    try {
+      const h = await pedir(B + 'fichamarcha.php?mm=' + id);
+      const i = h.indexOf('Marcha dedicada a');
+      const tramo = i < 0 ? '' : h.slice(i, i + 3000).split(/<div class="col-md|<h2|audio-block/)[0];
+      const imagen = dec((tramo.match(/fichaimagineriaytallas\.php[^"]*">([\s\S]*?)<\/a>/) || [])[1] || '');
+      const hermandad = dec((tramo.match(/fichacofradia[^"]*">([\s\S]*?)<\/a>/) || [])[1] || '');
+      prev.fichas[id] = { imagen, hermandad, dedicatoria: [imagen, hermandad && `(${hermandad})`].filter(Boolean).join(' ') };
+    } catch (e) { console.log('fallo', id, e.message); }
+    if (++n % 50 === 0) { guardar(); console.log(n, '/', pend.length); }
+  }
+  guardar();
+  console.log('fichas leídas', Object.keys(prev.fichas).length);
+  process.exit(0);
+}
+
 await pedir(B + 'marchas.php');
 for (const [cap, [prov, nombre]] of Object.entries(PROVINCIAS)) {
   if (prev.capitales[cap] && prev.capitales[cap].completa) continue;
@@ -54,8 +77,13 @@ for (const [cap, [prov, nombre]] of Object.entries(PROVINCIAS)) {
   const out = filas(pag);
   const paginas = Math.ceil(total / 30);
   console.log(cap, 'localidad', loc, '·', total, 'marchas ·', paginas, 'páginas');
-  for (let p = 2; p <= paginas; p++) { pag = await pedir(B + 'marchas.php', { pagina: String(p) }); const f = filas(pag); if (!f.length) break; out.push(...f); if (p % 10 === 0) console.log(' ', cap, p, '/', paginas); }
-  prev.capitales[cap] = { localidad: loc, total, completa: out.length >= total - 1, marchas: out };
+  // La paginación reenvía los filtros (campos ocultos del formulario): sin ellos, la página 2 en adelante sale sin filtrar
+  for (let p = 2; p <= paginas; p++) { pag = await pedir(B + 'marchas.php', { ...filtro(prov, loc), pagina: String(p) }); const f = filas(pag); if (!f.length) break; out.push(...f); if (p % 10 === 0) console.log(' ', cap, p, '/', paginas); }
+  // sin repetidas, y solo las de esa localidad (comprobación de que el filtro se ha aplicado)
+  const vistas = new Set(); const unicas = out.filter((m) => m.id && !vistas.has(m.id) && vistas.add(m.id));
+  const fuera = unicas.filter((m) => !m.lugar.split(' · ').includes(nombre)).length; // una marcha puede tener varias localidades («Sevilla · Almería»)
+  if (fuera) console.log(' ', cap, fuera, 'marchas de otra localidad: el filtro no se aplicó bien');
+  prev.capitales[cap] = { localidad: loc, total, completa: unicas.length >= total - 1 && !fuera, marchas: unicas };
   guardar();
   console.log(cap, 'leídas', out.length);
 }
