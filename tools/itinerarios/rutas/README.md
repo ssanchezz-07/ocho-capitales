@@ -58,7 +58,8 @@ entrada a la sede (máx. 60 m), rectas de más de 150 m fuera de la red y retroc
 - `horas`: índice de `calles` → hora oficial. Las demás se reparten por la distancia andada en el plano.
 - `hitos`: índices que son marcas y no calles (tribuna, carrera oficial…). También vale `marcas` en `ciudades.mjs`.
 - `rectos` (opcional): índices de calles a las que se llega en línea recta desde la anterior (hasta 200 m), para cruzar una plaza
-  abierta que OSM no tiene como vía (en Cádiz, Nueva → Plaza de San Juan de Dios → Pelota).
+  abierta que OSM no tiene como vía (en Cádiz, Nueva → Plaza de San Juan de Dios → Pelota). Con `rectos_por`
+  (`{ índice: [[lat, lon], …] }`) la recta pasa por esos puntos, para no atravesar un edificio de la plaza.
 - `regreso_desde`: índice donde empieza el regreso (se dibuja discontinuo). Si falta, la expresión `regreso` de `ciudades.mjs`.
 - `catedral` (opcional): `{ "entra": nodo OSM, "sale": nodo OSM, "nombre": "…" }` si esa hermandad entra o sale de la
   Catedral por otra puerta que la de `ciudades.mjs` (en Córdoba, unas salen por Santa Catalina y otras por el Perdón).

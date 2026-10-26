@@ -174,8 +174,9 @@ export function motor(c) {
       informe.calles.push({ i: f.i, lugar: f.lugar, tipo: f.tipo, osm: o.nombre, vias: o.ids || null, candidatas: f.opciones.length, hueco_entrada_m: i ? Math.round(ch.estados[i - 1].gap) : null, forzado: !!forz[f.i] });
       if (i > 0 && ch.estados[i - 1].gap > 40) informe.avisos.push(`hueco de ${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»: en OSM no se tocan`);
       // OSM no une dos calles seguidas de la lista que están a 3-40 m: enlace recto (anotado) en vez de un rodeo con media vuelta.
-      // La lista puede pedirlo también hasta 200 m («rectos»: índices), para cruzar una plaza abierta que OSM no tiene como vía.
-      if (i > 0 && ch.estados[i - 1].gap > 3 && (ch.estados[i - 1].gap <= 40 || ((L.rectos || []).includes(f.i) && ch.estados[i - 1].gap <= 200)) && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
+      // La lista puede pedirlo también hasta 200 m («rectos»: índices), para cruzar una plaza abierta que OSM no tiene como vía,
+      // y pasar en recta por puntos fijados («rectos_por»: { índice: [[lat, lon], …] }) para no atravesar un edificio.
+      if (i > 0 && ch.estados[i - 1].gap > 3 && (ch.estados[i - 1].gap <= 40 || ((L.rectos || []).includes(f.i) && ch.estados[i - 1].gap <= 200)) && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); const por = L.rectos_por?.[f.i]; if (por) { const sr = por.map(([la, lo]) => [la, lo]); sr.recto = true; segs.push(sr); } segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
       if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${o.pc.nombre} (nodos ${o.pc.entra.id} y ${o.pc.sale.id}): sin calle, línea por dentro`; continue; }
       // «paso» (corrección con fuente): puntos de paso antes de entrar en este elemento, para seguir el camino que da la fuente
       // en los puntos de corrección se parte la petición: GraphHopper puede girar ahí (con pass_through daría la vuelta a la manzana)
@@ -201,7 +202,7 @@ export function motor(c) {
     // ---- GraphHopper por tramos ----
     const tGH = performance.now();
     const geo = [];
-    for (const s of segs) { if (s.length < 2) continue; const g = await rutaTramo(s, informe); if (geo.length && d2(X(...geo.at(-1)), X(...g[0])) < 1) g.shift(); geo.push(...g); }
+    for (const s of segs) { if (s.recto) { for (const p of s) if (!geo.length || d2(X(...geo.at(-1)), X(...p)) >= 1) geo.push(p); continue; } if (s.length < 2) continue; const g = await rutaTramo(s, informe); if (geo.length && d2(X(...geo.at(-1)), X(...g[0])) < 1) g.shift(); geo.push(...g); }
     informe.ms_graphhopper = Math.round(performance.now() - tGH);
     // GraphHopper engancha la sede a la calle más cercana: el trazado empieza y acaba en la puerta misma (unos metros de la puerta a la calle)
     if (geo.length && sedeS) { const dS = d2(X(...geo[0]), X(...sedeS.punto)); if (dS > 1.5 && dS < 60) geo.unshift(sedeS.punto); }

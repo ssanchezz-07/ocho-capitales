@@ -177,6 +177,26 @@ export function ciudad(c) {
     const e = ps.map((e) => [e, dC(e) - (e.tags.entrance === 'main' ? 5 : 0)]).sort((a, b) => a[1] - b[1])[0][0];
     return { punto: [e.lat, e.lon], como: `puerta OSM ${e.id} (${e.tags.entrance || e.tags.door}) del edificio, la más cercana a la calle por la que sale/entra`, puerta: e.id };
   }
+  // Puerta que no está en OSM: punto medio de la fachada de un edificio (anillo R) que da a una calle (candidata). Fachada = lados
+  // del contorno que quedan a la distancia mínima de esa calle (+6 m), seguidos; se toma el tramo seguido más largo.
+  // La usa puertas-cadiz.mjs con la calle de la portada según una fuente.
+  function fachadaHacia(R, cand) {
+    const segs = cand.vias.flatMap((i) => VIAS[i].pts.slice(1).map((p, j) => [VIAS[i].pts[j], p]));
+    if (!segs.length || R.length < 3) return null;
+    const dC = (p) => Math.min(...segs.map(([a, b]) => dSeg(p, a, b)));
+    const lados = []; for (let i = 1; i < R.length; i++) lados.push({ a: R[i - 1], b: R[i], L: d2(R[i - 1], R[i]), d: dC([(R[i - 1][0] + R[i][0]) / 2, (R[i - 1][1] + R[i][1]) / 2]) });
+    const umbral = Math.min(...lados.map((l) => l.d)) + 6;
+    const n = lados.length, k0 = lados.findIndex((l) => l.d > umbral); // se empieza a contar tras un lado lejano (el contorno es cerrado)
+    let mejor = null, run = null;
+    for (let s = 1; s <= n; s++) {
+      const l = lados[(Math.max(k0, 0) + s) % n];
+      if (l.d <= umbral) { run = run || { lados: [], L: 0 }; run.lados.push(l); run.L += l.L; if (!mejor || run.L > mejor.L) mejor = run; } else run = null;
+    }
+    if (!mejor) return null;
+    let falta = mejor.L / 2, p = mejor.lados[0].a;
+    for (const l of mejor.lados) { if (falta <= l.L) { const t = l.L ? falta / l.L : 0; p = [l.a[0] + (l.b[0] - l.a[0]) * t, l.a[1] + (l.b[1] - l.a[1]) * t]; break; } falta -= l.L; }
+    return { punto: LL(...p), como: `punto medio de la fachada que da a «${cand.nombre}» (${Math.round(mejor.L)} m; la puerta no está en OSM)`, fachada: true };
+  }
   // puerta de la catedral: nodo OSM (id) o, si la puerta no está en OSM, un punto { lat, lon, id: 'descripción' } con su nota
   const puertaCat = (v) => (v && typeof v === 'object' ? v : PUERTAS.find((e) => e.id === v));
   const PUERTA_CATEDRAL = cfg.catedral ? { entra: puertaCat(cfg.catedral.entra), sale: puertaCat(cfg.catedral.sale), nombre: cfg.catedral.nombre } : { entra: null, sale: null };
@@ -193,7 +213,7 @@ export function ciudad(c) {
     return { ida: geo.slice(0, k + 1), regreso: geo.slice(k), puntos: pts };
   }
 
-  const C = { c, cfg, nombre: cfg.nombre, O, kx, ky, X, LL, ALIAS, CASAS, NOM, LISTAS, MARCA, REGRESO, CATEDRAL, VIAS, NODOS, VIA_POR_ID, CLAVES, porClave, viasCerca, clavesParecidas, candidatas, agrupar, caminoDentro, LUG, PUERTAS, anillo, sedeDe, puertaHacia, PUERTA_CATEDRAL, puertaCatedral, publicado, leerCorrecciones: () => leerCorrecciones(c), fCorr: fCorrecciones(c) };
+  const C = { c, cfg, nombre: cfg.nombre, fachadaHacia, O, kx, ky, X, LL, ALIAS, CASAS, NOM, LISTAS, MARCA, REGRESO, CATEDRAL, VIAS, NODOS, VIA_POR_ID, CLAVES, porClave, viasCerca, clavesParecidas, candidatas, agrupar, caminoDentro, LUG, PUERTAS, anillo, sedeDe, puertaHacia, PUERTA_CATEDRAL, puertaCatedral, publicado, leerCorrecciones: () => leerCorrecciones(c), fCorr: fCorrecciones(c) };
   cache.set(c, C);
   return C;
 }
