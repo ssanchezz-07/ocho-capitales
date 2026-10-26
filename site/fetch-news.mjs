@@ -1,4 +1,4 @@
-// InfoCofrade — lector de noticias.
+// Ocho Capitales — lector de noticias.
 // Lee las fuentes RSS/Atom de ../portal-cofrade/data/fuentes.json y actualiza data/news.json
 // (titular, extracto corto, imagen y enlace a la fuente original; nunca el texto completo).
 import fs from 'node:fs';
@@ -6,12 +6,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { XMLParser } from 'fast-xml-parser';
 import { detectarEventos } from './eventos.mjs';
+import { relevante } from './filtro-noticias.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const FUENTES = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'fuentes.json'), 'utf8'));
 const PORTAL = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const OUT = path.join(DIR, 'data', 'news.json');
-const UA = 'Mozilla/5.0 (compatible; InfoCofrade/1.0; +https://github.com)';
+const UA = 'Mozilla/5.0 (compatible; OchoCapitales/1.0; +mailto:ochocapitales@gmail.com)';
 const RETENCION_DIAS = 365;
 const MAX_ITEMS = 2500;
 
@@ -91,6 +92,10 @@ async function main() {
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { items: [], fuentes: {} };
   // Las noticias guardadas con HTML a medias se descartan para volver a leerlas limpias
   prev.items = prev.items.filter((n) => !/<|&lt;/.test(n.extracto + n.titulo));
+  // Google Noticias trae de todo: fuera lo que no es cofrade ni religioso (filtro-noticias.mjs), también de lo ya guardado
+  const antes = prev.items.length;
+  prev.items = prev.items.filter((n) => n.tipo !== 'agregador' || relevante(n.titulo + ' ' + (n.extracto || ''), n.fuente));
+  let ajenas = antes - prev.items.length;
   const seen = new Set(prev.items.flatMap((n) => [n.h, n.t]));
   const nuevos = [];
   const estado = {};
@@ -111,6 +116,7 @@ async function main() {
           if (f.tipo === 'agregador') {
             fuente = it.fuente || 'Google Noticias';
             if (it.fuente && titulo.endsWith(' - ' + it.fuente)) titulo = titulo.slice(0, -(it.fuente.length + 3)).trim();
+            if (!relevante(titulo, fuente)) { ajenas++; continue; }
           } else {
             extracto = recorta(it.desc);
             if (norm(extracto) === norm(titulo)) extracto = '';
@@ -153,7 +159,7 @@ async function main() {
   const all = prev.items.concat(nuevos).filter((n) => n.ts >= limite).sort((a, b) => b.ts - a.ts).slice(0, MAX_ITEMS);
   fs.writeFileSync(OUT, JSON.stringify({ actualizado: Date.now(), items: all, fuentes: estado }));
   const ok = Object.values(estado).filter((x) => x.ok).length;
-  console.log(`Noticias: ${nuevos.length} nuevas, ${all.length} en total. Fuentes correctas: ${ok}/${FUENTES.length}.`);
+  console.log(`Noticias: ${nuevos.length} nuevas, ${all.length} en total, ${ajenas} ajenas descartadas. Fuentes correctas: ${ok}/${FUENTES.length}.`);
   for (const [k, v] of Object.entries(estado)) if (!v.ok) console.log('  ✗', k, '—', v.error);
 }
 // Salida explícita: en GitHub Actions alguna conexión keep-alive dejaba el proceso vivo ~10 min

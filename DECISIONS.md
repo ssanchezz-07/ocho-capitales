@@ -182,6 +182,20 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 - **Miniatura con las iniciales del medio** en las noticias sin foto: repetía el mismo problema de ruido que la colgadura.
 
 
+## 2026-10-26 · Filtro de noticias conectado (oc-alojamiento)
+Google Noticias (20 de las 60 fuentes) entraba sin filtrar y colaba toros, ferias, Mercadona, PSOE, vacunas u obras.
+
+**Elegido** (`site/filtro-noticias.mjs`, conectado en `site/fetch-news.mjs` para lo nuevo y lo ya guardado): ante la duda, se queda.
+1. Los medios cofrades y religiosos pasan siempre (Mundo Cofrade, Gente de Paz, El Pespunte, ArteSacro, Isla Pasión, agrupaciones, federaciones, consejos, diócesis…).
+2. Una palabra cofrade fuerte basta (además de las de antes: traslado, Kerygma, prioste, salida extraordinaria, hermano/a mayor, trabajadera, «Primer golpe», SGAE…).
+3. Sin palabra fuerte y con un tema claramente ajeno (lista `AJENO`), fuera.
+4. El resto pasa si tiene vocabulario cofrade o religioso amplio (también catedral, misa, parroquia, agrupación, cartel…) o el nombre de una hermandad.
+
+**Medido sobre el archivo del 26-oct (1.890 de Google Noticias):** el filtro de la carpeta principal quitaba 248, con muchas cofrades dentro (traslados de Kerygma, el prioste de la Pastora, la SGAE y las marchas, la Catedral de Granada…). El nuevo quita 110, revisadas una a una: todas ajenas salvo 4 dudosas que no se pueden decidir solo por el titular («Siempre nos quedará el Amor», «Otro reconocimiento para Ramón Velázquez», «Creemos que la experiencia con la que contamos es un grado», «El veranillo eterno de San Miguel»). Lectura real: 60/60 fuentes, 121 ajenas descartadas y 9 nuevas.
+Comprobación: `node site/filtro-noticias.mjs` lista lo que quitaría del archivo actual sin cambiar nada.
+
+**Descartado:** filtrar también la prensa y las webs oficiales con este criterio (la prensa ya pasa por su propio filtro y las oficiales son cofrades).
+
 ## 2026-10-26 · Colabora por correo y GitHub invisible (oc-alojamiento)
 Pablo: «que lo que envíen en la página se envíe a mi correo ochocapitales@gmail.com … que el consumidor no vea nada de GitHub».
 
