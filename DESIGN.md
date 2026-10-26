@@ -32,6 +32,12 @@ Código: `site/assets/site.css` (el bloque «Colgaduras», al final, manda sobre
 
 ## 4. Piezas
 - **Colgadura** (`assets/plates/colgadura-<capital>.webp`, 265×971): la seña de identidad. Solo está en dos sitios: en la portada (las ocho, como banderas) y en la cabecera de cada capital (viaja con la transición de página). **No se repite en listas, tarjetas ni hojas.** Allí cada capital es un punto de su color con su nombre.
+- **Mapa de Andalucía «Bordado»** (portada):
+  - cada provincia es terciopelo de su capital, con pelo fino y un cordón de oro fino a puntadas;
+  - junto a cada capital va su catedral bordada (dibujo propio);
+  - ríos de hilo de oro y sierras en sombra (Natural Earth);
+  - mares en Newsreader cursiva;
+  - los puntos de las capitales son pequeños nudos de oro.
 - **Portada «Del mapa a la calle»:** un lienzo de terciopelo de borde a borde con las banderas, el mapa de Andalucía (hilos de oro de cada bandera a su capital) y la invitación «Toca una bandera y baja a su calle». Debajo, la agenda.
   - Al elegir una bandera, la cámara baja al plano de su ciudad (`assets/plano.js`). El cielo del lienzo cambia con la hora.
   - Abajo quedan la jornada (flechas), la hora (deslizador), «Entrar en la calle» y «Su Semana Santa».

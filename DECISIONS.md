@@ -66,7 +66,15 @@ _Detalle y cifras en `LABORATORIO-RUTAS.md`. Pablo decide si se adopta._
   - Resultado al mover la hora en Sevilla, en un navegador sin aceleración gráfica: de 29 a 71 fotogramas en el móvil y de 23 a 59 en el escritorio.
 - **Orden:** primero el hilo llega a la capital (360 ms), luego Andalucía se acerca (820 ms) y el plano aparece hacia los 700 ms. La altura crece en 420 ms: es la única animación de una propiedad de maquetación, y se queda porque solo ocurre al bajar o subir y oculta el salto de la página.
 
-**Mapa con carácter: tres diseños nuevos para que elija Pablo** (`?mapa=bordado`, `?mapa=azulejo` y `?mapa=cirios`). Pablo descartó «grabado» y «relieve» porque los veía «muy simples, sin gracia». Los nuevos salen del mundo cofrade y andaluz:
+**Elegido: «Bordado»** (Pablo, 26-oct), con sus tres cambios:
+- **El cordón del borde, más fino** (3 px de hilo oscuro y 1,3 px de oro a puntadas): grueso saturaba el mapa.
+- **En lugar del emblema, la catedral de cada ciudad bordada a puntadas.** La propuso Pablo. Son dibujos propios y esquemáticos: la Giralda con la nave, la Manquita con su torre sin acabar, la fachada de los tres arcos de Granada, la Mezquita-Catedral con el alminar, la cúpula de Cádiz entre dos torres, la Merced de Huelva, la catedral-fortaleza de Almería con almenas y la fachada renacentista de Jaén.
+  - Cada catedral va junto a su punto, en el lado contrario a su nombre: si el nombre va debajo, la catedral va encima, y en Córdoba, que lleva el nombre encima, debajo.
+  - En el móvil son algo más grandes.
+- **Puntos pequeños**, como un nudo de oro (10 px; 7 px en el móvil). La zona para tocarlos sigue siendo de 44 px.
+- Se quitaron el azulejo, los cirios y el interruptor `?mapa=`.
+
+Las tres propuestas que se presentaron (ya retiradas, salvo el Bordado): **Mapa con carácter: tres diseños nuevos para que elija Pablo** (`?mapa=bordado`, `?mapa=azulejo` y `?mapa=cirios`). Pablo descartó «grabado» y «relieve» porque los veía «muy simples, sin gracia». Los nuevos salen del mundo cofrade y andaluz:
 - **Bordado:**
   - cada provincia es un repostero de terciopelo, con su pelo;
   - el contorno lleva un cordón de oro torcido;

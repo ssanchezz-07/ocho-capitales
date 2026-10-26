@@ -287,82 +287,62 @@
       var hs = el('svg', { 'class': 'oc-colg-hilos', viewBox: '0 0 100 100', preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false' });
       datos.caps.forEach(function (c) { hs.appendChild(el('path', { 'class': 'oc-hilo', 'data-hilo': c.s, d: 'M' + c.b + ' 0 V' + c.l + ' H' + c.x + ' V' + c.y })); });
       mapa.appendChild(svg); mapa.appendChild(hs);
-      // ---- Mapa con carácter: tres propuestas para elegir (prototipo, 26-oct; se queda una y se quita ?mapa=) ----
-      // Bordado: cada provincia, un repostero de terciopelo con cordón de oro y el emblema de su capital bordado.
-      // Azulejo: cada provincia alicatada con estrellas de ocho puntas en el color de su capital y placas de azulejo con su nombre.
-      // Cirios: Andalucía de noche, cada capital encendida por la luz de un cirio.
-      // Ríos y sierras: Natural Earth (dominio público), en la misma proyección (tools/generar-mapa-detalle.mjs).
+      // ---- Mapa «Bordado» (elegido por Pablo, 26-oct): cada provincia, un repostero de terciopelo con cordón de oro, y junto a
+      // cada capital su catedral bordada a puntadas. Ríos y sierras: Natural Earth (dominio público, tools/generar-mapa-detalle.mjs).
+      // Las catedrales son dibujos propios y esquemáticos (sin derechos de terceros), en una cuadrícula de 32 con el suelo en y=30.
       var vbM = datos.vb.split(' ').map(Number), todo = datos.prov.map(function (p) { return p.d; }).join('');
-      var centro = function (d) { var n = d.match(/-?\d+(?:\.\d+)?/g).map(Number), sx = 0, sy = 0, k = 0; for (var i = 0; i + 1 < n.length; i += 2) { sx += n[i]; sy += n[i + 1]; k++; } return [sx / k, sy / k]; };
-      var EMB = {
-        sevilla: 'M3 9h18M4 9l2-4h12l2 4M4 9q2 2.5 4 0q2 2.5 4 0q2 2.5 4 0q2 2.5 4 0M5 9v11M19 9v11M9.5 9v11M14.5 9v11M3 20h18M12 2v3',
-        malaga: 'M12 2v3M7 17c0-7 1.5-11 5-11s5 4 5 11M5 17h14M10.5 19.5a1.5 1.5 0 0 0 3 0M9 10h6',
-        granada: 'M3 20V11h3V8h2v3h2V6h4v5h2V8h2v3h3v9zM10 20v-4a2 2 0 0 1 4 0v4M7 14h1M16 14h1',
-        cordoba: 'M2.5 20v-8a4.75 4.75 0 0 1 9.5 0v8M12 20v-8a4.75 4.75 0 0 1 9.5 0v8M2 20h20M4 12l2-1M8 12l-2-1M13.5 12l2-1M17.5 12l-2-1',
-        cadiz: 'M12 21v-9M12 12L6.5 4M12 12l5.5-8M5 4h3M16 4h3M9 21h6',
-        huelva: 'M12 4c-3 0-4.5 3-2.5 6.5L5 20M12 4c3 0 4.5 3 2.5 6.5L19 20M9.5 10.5h5M12 4v2',
-        almeria: 'M2 20v-7h3v-2h2v2h2V8h2v3h2V8h2v5h2v-2h2v2h3v7zM10.5 20v-3a1.5 1.5 0 0 1 3 0v3',
-        jaen: 'M12 3v18M6.5 8.5h11M12 3a1.4 1.4 0 1 0 0 .1M6.5 8.5a1.4 1.4 0 1 0 0 .1M17.5 8.5a1.4 1.4 0 1 0 0 .1M9.5 21h5'
+      var CATEDRAL = {
+        // la Giralda y la nave gótica
+        sevilla: 'M3 30h28M9 30V10h6v20M10 10V6h4v4M11 6V3.5h2V6M12 3.5V1M12 14v3M12 20v3M15 30V18h14v12M18 30v-4a2 2 0 0 1 4 0v4M24 30v-4a2 2 0 0 1 4 0v4M17 18v-2.5M21 18v-2.5M25 18v-2.5M29 18v-2.5',
+        // «la Manquita»: una sola torre acabada
+        malaga: 'M2 30h29M4 30V9h6v21M5 9V6.5h4V9M5 6.5q2-3.5 4 0M7 3v1M10 30V14h16v16M10 14l8-4 8 4M15.5 30v-5a2.5 2.5 0 0 1 5 0v5M13 18v2M23 18v2M26 30V18h5v12',
+        // la fachada de los tres grandes arcos
+        granada: 'M2 30h29M6 30V10h20v20M5 10h22M10 10V7h12v3M16 7V4.5M8 30V18a2 2 0 0 1 4 0v12M14 30V15a2 2 0 0 1 4 0v15M20 30V18a2 2 0 0 1 4 0v12M26 30V13h5v17',
+        // la Mezquita-Catedral: arcos de herradura y la torre del alminar
+        cordoba: 'M1 30h30M2 30V20h20v10M2 18.5h20M4 30v-4a2.2 2.2 0 1 1 4 0v4M10 30v-4a2.2 2.2 0 1 1 4 0v4M16 30v-4a2.2 2.2 0 1 1 4 0v4M23 30V8h6v22M24 8V5h4v3M25 5V3h2v2M26 3V1M26 12v3',
+        // la cúpula dorada entre dos torres
+        cadiz: 'M1 30h30M8 30V17h16v13M9 17a7 7 0 0 1 14 0M14.5 10V7.5h3V10M16 7.5V5M3 30V12h5v18M24 30V12h5v18M3.5 12l2-3 2 3M24.5 12l2-3 2 3M14 30v-4a2 2 0 0 1 4 0v4',
+        // la Merced: fachada barroca con dos torres
+        huelva: 'M1 30h30M8 30V14h16v16M8 14l8-5 8 5M3 30V9h5v21M24 30V9h5v21M3 9q2.5-4 5 0M24 9q2.5-4 5 0M14 30v-5a2 2 0 0 1 4 0v5M16 18a1.3 1.3 0 1 0 .1 0',
+        // la catedral-fortaleza, con almenas
+        almeria: 'M1 30h30M3 30V14h20v16M3 14v-2h2.5v2M8 14v-2h2.5v2M13 14v-2h2.5v2M18 14v-2h2.5v2M23 30V8h6v22M23 8V6h2v2M27 8V6h2v2M11 30v-4a2 2 0 0 1 4 0v4M7 19v3M19 19v3',
+        // la fachada renacentista entre dos torres con cupulín
+        jaen: 'M1 30h30M9 30V13h14v17M9 13h14M11 13v-1.5M14 13v-1.5M18 13v-1.5M21 13v-1.5M3 30V10h6v20M23 30V10h6v20M3.5 10a2.5 2.5 0 0 1 5 0M23.5 10a2.5 2.5 0 0 1 5 0M6 7.5V5.5M26 7.5V5.5M12 30v-5a1.5 1.5 0 0 1 3 0v5M17 30v-5a1.5 1.5 0 0 1 3 0v5'
       };
       var defs = el('defs', {}), clip = el('clipPath', { id: 'oc-and-clip' }); clip.appendChild(el('path', { d: todo })); defs.appendChild(clip);
-      // terciopelo: pelo fino en diagonal
       var tp = el('pattern', { id: 'oc-terciopelo', width: '4', height: '4', patternUnits: 'userSpaceOnUse' }); tp.appendChild(el('path', { d: 'M0 4L4 0', 'class': 'oc-pelo' })); defs.appendChild(tp);
-      // azulejo de cada provincia: estrella de ocho puntas en su color sobre esmalte blanco, con cuartos de rueda en cobalto
-      datos.prov.forEach(function (p) {
-        var az = el('pattern', { id: 'oc-az-' + p.s, width: '34', height: '34', patternUnits: 'userSpaceOnUse' });
-        az.appendChild(el('rect', { width: '34', height: '34', 'class': 'oc-az-fondo' }));
-        ['M0 0h5.5a5.5 5.5 0 0 1-5.5 5.5z', 'M34 0v5.5a5.5 5.5 0 0 1-5.5-5.5z', 'M0 34v-5.5a5.5 5.5 0 0 1 5.5 5.5z', 'M34 34h-5.5a5.5 5.5 0 0 1 5.5-5.5z'].forEach(function (d) { az.appendChild(el('path', { d: d, 'class': 'oc-az-cobalto' })); });
-        var est = el('g', { transform: 'translate(17 17)' });
-        est.appendChild(el('rect', { x: '-9', y: '-9', width: '18', height: '18', fill: p.c }));
-        est.appendChild(el('rect', { x: '-9', y: '-9', width: '18', height: '18', fill: p.c, transform: 'rotate(45)' }));
-        est.appendChild(el('circle', { r: '3.2', 'class': 'oc-az-ocre' }));
-        az.appendChild(est); defs.appendChild(az);
-      });
-      var luz = el('radialGradient', { id: 'oc-cirio' });
-      [['0', '#fff3cf', '.95'], ['.18', '#ffd27a', '.6'], ['.5', '#e08a2a', '.2'], ['1', '#e08a2a', '0']].forEach(function (s) { luz.appendChild(el('stop', { offset: s[0], 'stop-color': s[1], 'stop-opacity': s[2] })); });
-      defs.appendChild(luz);
       svg.insertBefore(defs, svg.firstChild);
-      var capa = function (cls) { var g = el('g', { 'class': 'oc-v ' + cls, 'aria-hidden': 'true' }); svg.appendChild(g); return g; };
-      // Bordado
-      var gb = capa('oc-v-bordado');
+      var gb = el('g', { 'class': 'oc-bordado', 'aria-hidden': 'true' }); svg.appendChild(gb);
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-pelo' }));
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon-base' }));
       gb.appendChild(el('path', { d: todo, 'class': 'oc-bd-cordon' }));
-      // Azulejo
-      var ga = capa('oc-v-azulejo');
-      datos.prov.forEach(function (p) { ga.appendChild(el('path', { d: p.d, fill: 'url(#oc-az-' + p.s + ')', 'class': 'oc-az-prov' })); });
-      ga.appendChild(el('path', { d: todo, 'class': 'oc-az-llaga' }));
-      // Cirios
-      var gc = capa('oc-v-cirios');
-      gc.appendChild(el('path', { d: todo, 'class': 'oc-ci-noche' }));
-      datos.caps.forEach(function (c) { gc.appendChild(el('circle', { cx: c.x / 100 * vbM[2], cy: c.y / 100 * vbM[3], r: '120', fill: 'url(#oc-cirio)', 'class': 'oc-ci-luz' })); });
-      // ríos y sierras, recortados al contorno (cada estilo los viste a su manera)
       if (datos.detalle) {
         var det = el('g', { 'class': 'oc-detalle', 'clip-path': 'url(#oc-and-clip)', 'aria-hidden': 'true' });
         datos.detalle.sierras.forEach(function (s) { det.appendChild(el('path', { 'class': 'oc-sierra', d: s.d })); });
         datos.detalle.rios.forEach(function (r) { det.appendChild(el('path', { 'class': 'oc-rio-base', d: r.d })); det.appendChild(el('path', { 'class': 'oc-rio', d: r.d })); });
         svg.appendChild(det);
       }
-      // emblemas bordados en el centro de cada provincia (si caen sobre la capital, un poco más arriba)
-      var ge = el('g', { 'class': 'oc-v oc-v-bordado oc-bd-emblemas', 'aria-hidden': 'true' }); svg.appendChild(ge);
-      datos.prov.forEach(function (p) {
-        var c = centro(p.d), cap = (datos.caps || []).filter(function (k) { return k.s === p.s; })[0];
-        if (cap) { var px = cap.x / 100 * vbM[2], py = cap.y / 100 * vbM[3]; if (Math.hypot(px - c[0], py - c[1]) < 70) c[1] = py - 72; }
-        var g = el('g', { transform: 'translate(' + (c[0] - 36).toFixed(1) + ' ' + (c[1] - 42).toFixed(1) + ') scale(3)' });
-        g.appendChild(el('path', { d: EMB[p.s] || '', 'class': 'oc-bd-emb-base' })); g.appendChild(el('path', { d: EMB[p.s] || '', 'class': 'oc-bd-emb' }));
+      // la catedral, al lado de su capital: en el lado contrario a su nombre (nombre debajo → catedral encima, y al revés)
+      var ge = el('g', { 'class': 'oc-bd-catedrales', 'aria-hidden': 'true' }); svg.appendChild(ge);
+      // más grandes en pantallas estrechas, donde el mapa entero mide poco más de 350 px
+      var TAM = mapa.clientWidth < 520 ? 3.1 : 2.4, L = 32 * TAM;
+      (datos.caps || []).forEach(function (c) {
+        var px = c.x / 100 * vbM[2], py = c.y / 100 * vbM[3], x, y;
+        if (c.p === 'b') { x = px - L / 2; y = py - L - 12; }
+        else if (c.p === 't') { x = px - L / 2; y = py + 12; }
+        else if (c.p === 'l') { x = px + 14; y = py - L + 12; }
+        else { x = px - L - 14; y = py - L + 12; }
+        var g = el('g', { transform: 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') scale(' + TAM + ')' });
+        g.appendChild(el('path', { d: CATEDRAL[c.s] || '', 'class': 'oc-bd-emb-base' })); g.appendChild(el('path', { d: CATEDRAL[c.s] || '', 'class': 'oc-bd-emb' }));
         ge.appendChild(g);
       });
-      // mares en cursiva, para los tres
-      var mares = el('g', { 'class': 'oc-v oc-mares', 'aria-hidden': 'true' }); svg.appendChild(mares);
+      var mares = el('g', { 'class': 'oc-mares', 'aria-hidden': 'true' }); svg.appendChild(mares);
       [['Océano Atlántico', 120, 575], ['Mar Mediterráneo', 650, 585]].forEach(function (m) { var tx = el('text', { x: m[1], y: m[2] }); tx.textContent = m[0]; mares.appendChild(tx); });
-      // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía); con su nombre según el estilo
+      // los puntos de las capitales también eligen (antes el mapa parecía tocable y no respondía), con su nombre al lado
       datos.caps.forEach(function (c) {
         var d = document.createElement('span'); d.className = 'oc-punto'; d.setAttribute('data-punto', c.s); d.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; d.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(d);
-        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = '--c:' + c.c + ';left:' + c.x + '%;top:' + c.y + '%'; n.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(n);
-        var ll = document.createElement('span'); ll.className = 'oc-llama'; ll.setAttribute('aria-hidden', 'true'); ll.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; ll.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(ll);
+        var n = document.createElement('span'); n.className = 'oc-capnom is-' + (c.p || 'r'); n.setAttribute('aria-hidden', 'true'); n.textContent = c.n || ''; n.style.cssText = 'left:' + c.x + '%;top:' + c.y + '%'; n.addEventListener('click', function () { elegir(c.s); }); mapa.appendChild(n);
       });
-      // prototipo para elegir estilo de mapa (se quita al decidir): ?mapa=bordado | azulejo | cirios
-      var estilo = (location.search.match(/[?&]mapa=(bordado|azulejo|cirios)/) || [])[1]; if (estilo) colg.setAttribute('data-mapa', estilo);
     }
     // Las banderas son enlaces a su capital (sin JavaScript funcionan así); con JavaScript, botones que bajan a su calle
     var items = $$('.oc-colg', colg).map(function (a) {

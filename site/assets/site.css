@@ -1875,58 +1875,31 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 @media (max-width: 959px) { .oc-calle.has-ficha .oc-calle-reloj { bottom: calc(var(--ficha-h, 40dvh) + 10px); } }
 .oc-calle-head .oc-title { overflow-wrap: anywhere; }
 
-/* ---------- Mapa con carácter: tres propuestas para elegir (prototipo, 26-oct; se queda una y se quita ?mapa=) ---------- */
-.oc-portada .oc-v, .oc-portada .oc-detalle, .oc-portada .oc-capnom, .oc-portada .oc-llama { display: none; }
-.oc-portada [data-mapa] .oc-detalle, .oc-portada [data-mapa] .oc-mares { display: inline; }
-.oc-portada [data-mapa] .oc-capnom { display: block; }
-.oc-portada [data-mapa="bordado"] .oc-v-bordado, .oc-portada [data-mapa="azulejo"] .oc-v-azulejo, .oc-portada [data-mapa="cirios"] .oc-v-cirios { display: inline; }
-.oc-portada [data-mapa="cirios"] .oc-llama { display: block; }
+/* ---------- Mapa «Bordado» (elegido por Pablo, 26-oct): terciopelo con su pelo, cordón de oro fino y la catedral de cada capital
+   bordada a puntadas junto a su punto. Ríos y sierras de Natural Earth (dominio público). ---------- */
+.oc-portada .oc-prov2 { fill: color-mix(in srgb, var(--c) 64%, #12081c); stroke: none; }
+.oc-portada [data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) 40%, #12081c); }
+.oc-portada [data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) 80%, #12081c); }
+.oc-bd-pelo { fill: url(#oc-terciopelo); }
+.oc-pelo { stroke: rgb(0 0 0 / .26); stroke-width: .9; }
+/* cordón fino: un hilo oscuro debajo y el oro a puntadas encima (más grueso saturaba el mapa) */
+.oc-bd-cordon-base { fill: none; stroke: #4a3008; stroke-width: 3px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.oc-bd-cordon { fill: none; stroke: #f0d79c; stroke-width: 1.3px; stroke-dasharray: 1.8 2; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.oc-bd-emb-base { fill: none; stroke: rgb(30 14 2 / .6); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.oc-bd-emb { fill: none; stroke: #ecc76c; stroke-width: 1.1; stroke-dasharray: 1 .7; stroke-linecap: round; stroke-linejoin: round; }
+.oc-sierra, .oc-rio, .oc-rio-base { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.oc-sierra { fill: rgb(0 0 0 / .2); }
+.oc-rio-base { stroke: rgb(30 14 2 / .5); stroke-width: 3px; }
+.oc-rio { stroke: #f0d79c; stroke-width: 1.3px; stroke-dasharray: 3 2.5; }
 .oc-mares text { font: italic 500 19px/1 "Newsreader", Georgia, serif; letter-spacing: .16em; fill: rgb(244 239 249 / .5); text-anchor: middle; }
 @media (max-width: 559px) { .oc-mares text { font-size: 26px; } }
-.oc-capnom { position: absolute; z-index: 3; transform: translate(14px, -50%); font: 400 clamp(.78rem, 1.5vw, 1.1rem)/1 var(--display); letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; cursor: pointer; }
+.oc-portada .oc-punto { background: #f0d79c; box-shadow: 0 0 0 2px #4a3008, 0 0 0 4px #e0b84f, 0 3px 6px rgb(0 0 0 / .5); }
+/* puntos pequeños (un nudo de oro): el protagonismo es de la catedral; la zona para tocar sigue siendo de 44 px (::after) */
+.oc-portada .oc-punto { width: 10px; height: 10px; margin: -5px 0 0 -5px; box-shadow: 0 0 0 1.5px #4a3008, 0 0 0 3px #e0b84f, 0 2px 4px rgb(0 0 0 / .5); }
+.oc-portada .oc-punto::after { inset: -17px; }
+@media (max-width: 559px) { .oc-portada .oc-punto { width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; box-shadow: 0 0 0 1.2px #4a3008, 0 0 0 2.4px #e0b84f; } .oc-portada .oc-punto::after { inset: -18px; } }
+.oc-capnom { position: absolute; z-index: 3; transform: translate(14px, -50%); font: 400 clamp(.78rem, 1.5vw, 1.1rem)/1 var(--display); letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; cursor: pointer; color: #f6e2a8; text-shadow: 0 1px 0 #3a2406, 0 0 6px rgb(0 0 0 / .8); }
 .oc-capnom.is-l { transform: translate(calc(-100% - 14px), -50%); }
 .oc-capnom.is-t { transform: translate(-50%, calc(-100% - 14px)); }
 .oc-capnom.is-b { transform: translate(-50%, 14px); }
-.oc-portada.is-ciudad .oc-capnom, .oc-portada.is-ciudad .oc-llama { opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease-out); }
-.oc-sierra, .oc-rio, .oc-rio-base { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
-
-/* A · Bordado: terciopelo con su pelo, cordón de oro torcido en los contornos y el emblema de cada capital bordado a puntadas */
-.oc-portada [data-mapa="bordado"] .oc-prov2 { fill: color-mix(in srgb, var(--c) 64%, #12081c); stroke: none; }
-.oc-bd-pelo { fill: url(#oc-terciopelo); }
-.oc-pelo { stroke: rgb(0 0 0 / .26); stroke-width: .9; }
-.oc-bd-cordon-base { fill: none; stroke: #4a3008; stroke-width: 5.5px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.oc-bd-cordon { fill: none; stroke: #f0d79c; stroke-width: 2.6px; stroke-dasharray: 2.4 2.6; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.oc-bd-emb-base { fill: none; stroke: rgb(30 14 2 / .55); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-.oc-bd-emb { fill: none; stroke: #ecc76c; stroke-width: 1.35; stroke-dasharray: 1.1 .8; stroke-linecap: round; stroke-linejoin: round; }
-.oc-portada [data-mapa="bordado"] .oc-rio-base { stroke: rgb(30 14 2 / .5); stroke-width: 3.4px; }
-.oc-portada [data-mapa="bordado"] .oc-rio { stroke: #f0d79c; stroke-width: 1.5px; stroke-dasharray: 3 2.5; }
-.oc-portada [data-mapa="bordado"] .oc-sierra { fill: rgb(0 0 0 / .2); }
-.oc-portada [data-mapa="bordado"] .oc-capnom { color: #f6e2a8; text-shadow: 0 1px 0 #3a2406, 0 0 6px rgb(0 0 0 / .8); }
-.oc-portada [data-mapa="bordado"] .oc-punto { background: #f0d79c; box-shadow: 0 0 0 2px #4a3008, 0 0 0 4px #e0b84f, 0 3px 6px rgb(0 0 0 / .5); }
-
-/* B · Azulejo: provincias alicatadas (estrella de ocho puntas en el color de su capital), llagas de cal y placas de azulejo con el nombre */
-.oc-portada [data-mapa="azulejo"] .oc-prov2 { stroke: none; }
-.oc-az-fondo { fill: #efe5cf; }
-.oc-az-cobalto { fill: #22459a; }
-.oc-az-ocre { fill: #e2a838; }
-.oc-az-llaga { fill: none; stroke: #f8f2e4; stroke-width: 4px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.oc-portada [data-mapa="azulejo"] .oc-rio-base { stroke: #f8f2e4; stroke-width: 5px; }
-.oc-portada [data-mapa="azulejo"] .oc-rio { stroke: #22459a; stroke-width: 2.2px; }
-.oc-portada [data-mapa="azulejo"] .oc-sierra { display: none; }
-.oc-portada [data-mapa="azulejo"] .oc-capnom { padding: 4px 8px 3px; border-radius: 2px; background: #f7f1e3; color: #1c3c8c; border: 2px solid #1c3c8c; box-shadow: 0 0 0 2px #f7f1e3, 0 0 0 4px #e2a838, 0 5px 10px rgb(0 0 0 / .45); font-size: clamp(.72rem, 1.4vw, 1rem); }
-.oc-portada [data-mapa="azulejo"] .oc-punto { background: #22459a; box-shadow: 0 0 0 3px #f8f2e4, 0 0 0 4.5px #e2a838; }
-@media (max-width: 559px) { .oc-portada [data-mapa="azulejo"] .oc-capnom { padding: 2px 4px 1px; border-width: 1.5px; font-size: .62rem; } }
-
-/* C · Cirios: Andalucía de noche y cada capital encendida por un cirio (luz fija, sin parpadeo: nada se mueve en bucle) */
-.oc-portada [data-mapa="cirios"] .oc-prov2 { fill: color-mix(in srgb, var(--c) 30%, #0c0515); stroke: rgb(240 215 156 / .22); stroke-width: 1px; }
-.oc-ci-noche { fill: rgb(6 2 12 / .18); }
-.oc-ci-luz { mix-blend-mode: screen; }
-.oc-portada [data-mapa="cirios"] .oc-rio-base { display: none; }
-.oc-portada [data-mapa="cirios"] .oc-rio { stroke: rgb(214 224 255 / .5); stroke-width: 1.3px; }
-.oc-portada [data-mapa="cirios"] .oc-sierra { fill: rgb(0 0 0 / .3); }
-.oc-portada [data-mapa="cirios"] .oc-punto { opacity: 0; }
-.oc-llama { position: absolute; z-index: 3; width: 14px; height: 30px; margin: -26px 0 0 -7px; cursor: pointer; }
-.oc-llama::before { content: ""; position: absolute; left: 1px; top: 0; width: 12px; height: 18px; border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%; background: radial-gradient(ellipse at 50% 72%, #fff 0 18%, #ffe6a6 34%, #f6ad45 66%, rgb(246 173 69 / 0) 72%); box-shadow: 0 0 16px 5px rgb(255 190 95 / .55); }
-.oc-llama::after { content: ""; position: absolute; left: 4px; top: 17px; width: 6px; height: 13px; border-radius: 1px; background: linear-gradient(90deg, #d8ccb2, #f6eedb 45%, #cbbd9f); }
-.oc-portada [data-mapa="cirios"] .oc-capnom { color: #ffe7b0; text-shadow: 0 0 10px rgb(255 175 70 / .7), 0 1px 2px #000; }
-.oc-portada [data-mapa="cirios"] .oc-capnom:not(.is-t) { margin-top: 4px; }
+.oc-portada.is-ciudad .oc-capnom { opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease-out); }
