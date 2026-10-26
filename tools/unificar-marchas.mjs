@@ -351,6 +351,17 @@ if (PM && !process.env.SIN_NUEVAS_PM) {
   }
 }
 
+// Segunda pasada de Cofradías y Hermandades para las marchas nuevas de Patrimonio Musical (se crean después del primer cruce):
+// formación, año y capital, con su ficha
+if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v.marchas) {
+  const r = (porTituloR.get(nt(x.titulo)) || []).find((y) => y._soloNueva && !(y.urls && y.urls.cyh) && mismoAutor(y.autor, x.autor));
+  if (!r) continue;
+  fuente(r, 'titulo', 'cyh', urlCyh(x.id)); if (x.autor) fuente(r, 'autor', 'cyh');
+  if (x.formacion.length === 1 && !r.formacion) { r.formacion = x.formacion[0]; fuente(r, 'formacion', 'cyh'); }
+  if (/^\d{4}$/.test(x.anio)) r._anios = [...(r._anios || []), { v: x.anio, f: 'cyh', url: urlCyh(x.id) }];
+  (r._ciudadesCyh ||= new Set()).add(cap);
+}
+
 // ---------- 4. dedicatorias: verificar las ligadas y ligar las del catálogo que nombran una hermandad ----------
 const informe = { retiradas: [], nuevas: [], dudas: [] };
 const ponDed = (r, h, estado, fuentes, texto) => {
@@ -545,6 +556,23 @@ const formas = new Map();
 for (const r of R) if (r.autor) { const k = claveAutor(r.autor); const m = formas.get(k) || formas.set(k, new Map()).get(k); m.set(r.autor, (m.get(r.autor) || 0) + 1); }
 const tildes = (s) => (s.normalize('NFD').match(/[̀-ͯ]/g) || []).length;
 for (const r of R) if (r.autor) { const m = formas.get(claveAutor(r.autor)); const mejor = [...m].sort((a, b) => tildes(b[0]) - tildes(a[0]) || b[1] - a[1])[0][0]; r.autor = mejor; }
+
+// ---------- 7a. las partituras no se citan en la web (Pablo, 27-oct): lo que SOLO dicen ellas no se publica ----------
+// Regla firme: todo dato con una fuente que se pueda abrir. Fuera las marchas cuya única fuente es la partitura y, en las demás,
+// el año o la dedicatoria que solo da la partitura. El repertorio (qué marchas toca la banda) sí se muestra.
+const soloPartitura = (fs_) => (fs_ || []).length > 0 && fs_.every((f) => f === 'part');
+const fueraPart = [];
+for (let i = R.length - 1; i >= 0; i--) {
+  const r = R[i];
+  if (soloPartitura(r.fuentes.titulo)) { fueraPart.push(r.slug); R.splice(i, 1); continue; }
+  if (soloPartitura(r.fuentes.anio)) { r.anio = ''; delete r.fuentes.anio; }
+  if (soloPartitura(r.fuentes.dedicatoria)) { r.dedicatoria = null; delete r.fuentes.dedicatoria; if (soloPartitura(r.fuentes.ciudad)) { delete r.ciudad; delete r.fuentes.ciudad; } }
+  for (const c of ['titulo', 'autor', 'anio', 'dedicatoria', 'ciudad']) if (r.fuentes[c]) r.fuentes[c] = r.fuentes[c].filter((f) => f !== 'part');
+}
+informe.solo_partitura = fueraPart;
+// Tras unir fichas: una discrepancia de año heredada sin fuente elegida toma la del año que se muestra (o el año queda en blanco)
+for (const r of R) for (const d of r.discrepancias) if (d.campo === 'anio' && !d.elegido && r.anio) { if ((r.fuentes.anio || []).length) d.elegido = r.fuentes.anio.join('+'); else r.anio = ''; }
+for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = clavesFiables(r).size; r.dedicatoria.estado = n >= 2 ? 'contrastada' : n === 1 ? 'dedicada' : 'sin-verificar'; }
 
 // ---------- 7b. direcciones ya publicadas que dejan de existir: redirigen a la misma obra o al listado ----------
 // Se acumulan de una pasada a otra en «redirecciones». Con --previo <marchas.json> se añaden las de otro modelo (p. ej. el publicado).
