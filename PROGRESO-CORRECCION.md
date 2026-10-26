@@ -93,3 +93,82 @@ _Sesión Málaga · 2026-10-25 · uso semanal al empezar 80 %, al parar ~83 % (t
 - `site/build.mjs`: los puntos sin hora oficial ya no se descartan (antes solo sobrevivían los que tenían hora y el trazado por calles se perdía): se reparte la hora por distancia entre dos horas oficiales (puntos no oficiales). Los puntos llevan el flag de **regreso** (posición 7) que `site/assets/calle.js` ya sabía pintar discontinuo; la leyenda Ida/Regreso ya existía.
 - Comprobado en local (build + navegador, sin errores): Pollinica 187 vértices (9:50 → 16:15), Pasión 229, Dolores del Puente 310; en la página de Domingo de Ramos hay 9 trazos de regreso discontinuos y la ficha de Pollinica lista Plaza San Pedro Alcántara → Carretería → Tribuna de los Pobres → Pasillo Santa Isabel → Cisneros.
 - **Sin hacer:** nodo `entrance` de OSM para la puerta exacta; direcciones de las 6 sedes aproximadas; capturas y revisión automática de las 45; selector de hermandades del día con circulitos; prueba con Playwright a 1440/390 de una jornada completa. Por eso **NO está** «listo para publicar» en sentido estricto: lo ya comprobado es seguro de publicar (mejor que lo anterior), lo demás queda para después del 29-oct.
+
+## Actualización 5 · Málaga: puertas, ida/regreso, marchas, fotos y plano (2026-10-25, noche; uso semanal 0 → ~5 %)
+**Recorridos** (commit `2f73cc1`)
+- Las 6 sedes aproximadas ya estaban resueltas en `3f92560`. Ahora la salida y la entrada van a la **puerta de OSM** (nodos `entrance`/`door`, caché `tools/itinerarios/cache/osm-malaga-puertas.json`, consulta Overpass en el código): **67 de 88** salidas/entradas con puerta. Criterio en el informe (`puertas` de `cache/malaga-reconstruccion.json`).
+- **Falta (sin puerta en OSM que encaje, se queda el edificio):** Humildad (Victoria: la plaza del Santuario no está conectada), Salud (San Pablo: el edificio no tiene puertas en OSM), Monte Calvario (ermita sin puertas), Humildad y Paciencia (OSM la llama «Plaza María Santísima de Dolores 1»), Nueva Esperanza (dirección sin número), Mediadora (Ayala 34 no está), Salesianos (28 no está), Paloma (dirección sin número), Mena (Pasillo de Santo Domingo 16 no está), Descendimiento (Manuel Martín Estévez 6 no está), y las entradas de Humillación y Estrella (Cañaveral 2 no está) y Expiración (OSM solo tiene Plaza Enrique Navarro 2).
+- **San Julián (Resucitado):** puerta = nodo OSM 5267734993, calle Nosquera 17 (el itinerario sale a Nosquera; a ~14 m de las coordenadas de Wikipedia). La web de la Agrupación (https://agrupaciondecofradias.com/sede/, leída con Playwright) dice que la iglesia «presenta dos portadas» sin decir a qué calle da cada una. **Falta confirmarlo a ojo** (Pablo o una foto).
+- **El Rico y Resucitado:** ida/regreso separados en la Torre Sur, derivada (la lista no la cita; la ficha da su hora: 23:04 y 13:00); en Molina Lario tras la Plaza de la Marina. Ni la prensa (El Español, Miércoles Santo) ni la Agrupación separan ida y regreso. El Español da salida de El Rico a las 17:45 y el PDF oficial a las 17:55: se queda la oficial.
+- **Paloma corregida:** el salto de línea del PDF partía «Capilla de María / Santísima de la Paloma» y la entrada caía en un homónimo a 3 km (6,0 → 2,6 km).
+- «Miguel Bueno Lara» (Prendimiento) = Calle Miguel de Buero Lara en OSM (toca la Plaza Maestro Artola). Sigue sin equivalente: Plaza de Jesús Cautivo (Cautivo).
+- **Revisadas a ojo las 45 capturas** (láminas de 9): todas cuadran con su lista salvo Paloma, ya corregida.
+- Sin hacer: hora de la Tribuna en El Rico (su lista no cita «Tribuna Principal»); salida de los tronos de El Rico desde su casa hermandad (calle Victoria) no sale como punto propio.
+
+**Marchas** (commit `a82b6f8`)
+- Script `tools/auditoria/marchas-malaga.mjs`: 349 marchas ligadas a hermandades de Málaga + 120 del catálogo con dedicatoria en Málaga, cruzadas con `portal.json` y la base de Patrimonio Musical.
+- Correcciones en `tools/sources/marchas-correcciones.json` (aplicadas en `build.mjs`), cada ficha leída con Playwright:
+  - Retiradas: **«Soledad del Mayor Dolor» (Crucifixión, caso de Pablo)**: no existe con ese título; la marcha de Manuel Bonilla Cascado para M.ª Stma. del Mayor Dolor en su Soledad se titula «Crucifixión» (1998, bd-marcha-1753), que se añade. «Stabat Mater» de Salesianos (es de Dolores del Puente, bd-marcha-1631). «Malacitana» de la Sangre (dedicada a Salvador García Sánchez, bd-marcha-1627).
+  - «Dolorosa de la Cruz Verde» (Germán San Antonio) **es real**: Patrimonio Musical la dedica a la Hdad. Crucifixión (bd-marcha-1698); la Crucifixión tiene su sede en la Cruz Verde. Se queda.
+  - Confirmadas 12 que el cotejo automático no casaba (Gitanos ×2, Dolores del Puente ×5, Misericordia ×2, Humildad y Paciencia, Prendimiento, Esperanza).
+  - Las que solo cita Wikipedia pasan a «sin verificar» (también en Sevilla).
+- Resultado Málaga: 298 confirmadas, 35 «sin verificar» del foro, 11 sin segunda fuente (Wikipedia, Dolores del Puente), 1 dudosa: **«Mayor Dolor» (Perfecto Artola, Fusionadas)**: Patrimonio Musical tiene «Virgen del Mayor Dolor» de Artola (1983, bd-marcha-506) dedicada a «Virgen del Mayor Dolor (Málaga)» sin decir de qué hermandad; se queda «sin verificar». Ojo: el portal no tiene a la Virgen del Mayor Dolor entre los titulares de Fusionadas (Patrimonio Musical sí la cita: bd-marcha-4901).
+- Años distintos entre Wikipedia y Patrimonio Musical en 5 marchas de Dolores del Puente (anotados en las correcciones); no se han cambiado.
+
+**Imágenes** (commit `a2e341a`)
+- Revisadas con Playwright las **79 fichas de Commons** de las fotos de Málaga (descripción y categorías). Retiradas 5 (`tools/sources/fotos-retiradas.json`): Gitanos (Cristo = Azotes y Columna de Fusionadas), Huerto (Virgen = Dolorosa de Sierra de Yeguas), Salesianos (Cristo = trono de las Penas), Resucitado (guion del Huerto), Expiración (Dolorosa de la Magna sin hermandad). El resto nombra a su hermandad en la categoría o la descripción.
+- `FOTOS-QUE-FALTAN.md` (sección Málaga): 41 hermandades con algún titular sin foto; listo para pedírselas a Pablo.
+- Quedan en `site/assets/img/` los WebP de las 5 retiradas, sin uso.
+
+**Plano** (commit `2bdb99a`)
+- Probado con Playwright a 390 y 1440 px en las 8 jornadas (45 cofradías, 0 errores de consola). Arreglados dos desbordamientos horizontales en móvil (lista de cofradías: 63 px el Viernes Santo; URL de la fuente: 5 px).
+- Observaciones sin tocar: en PC la ficha lateral tapa ~400 px de la derecha del plano y los botones de zoom; el texto «Sale a las 17:55 de parroquia santiago (salida de nazarenos)» sale en minúsculas.
+
+**Revisión del subagente:** ver «Actualización 6».
+
+## Punto exacto para retomar (Málaga)
+1. Confirmar a ojo la puerta de San Julián (Resucitado).
+2. Puertas que faltan (lista de arriba): dirección exacta con número en la web de cada hermandad.
+3. «Mayor Dolor» de Fusionadas: buscar fuente expresa; añadir la Virgen del Mayor Dolor a los titulares de Fusionadas si una fuente oficial lo confirma.
+4. Pedir a Pablo las fotos de `FOTOS-QUE-FALTAN.md`.
+5. Después, Málaga queda lista; seguir con Sevilla con el mismo método.
+
+## Marchas → sesión de marchas
+Orden de Pablo (reenviada por la sesión principal, 2026-10-25): las marchas de las 8 capitales pasan a una sesión dedicada. Esta sesión ya no toca archivos de marchas.
+- **Hecho y verificado aquí** (commit `a82b6f8`, en `main` local, sin subir): `tools/auditoria/marchas-malaga.mjs` (cruce de las dedicatorias de Málaga con `portal.json` y Patrimonio Musical), `tools/sources/marchas-correcciones.json` (3 retiradas, 12 confirmadas y 1 añadida, cada ficha leída con Playwright) y en `site/build.mjs` la aplicación de esas correcciones, las confirmaciones por compositor y las marchas de Wikipedia como «sin verificar». Detalle en la «Actualización 5» de arriba.
+- **Punto exacto para la sesión de marchas:**
+  1. «Mayor Dolor» (Perfecto Artola, Fusionadas): Patrimonio Musical solo dice «Virgen del Mayor Dolor (Málaga)» (bd-marcha-506). Se queda «sin verificar».
+  2. Los 35 «sin verificar» del foro de 2008 y los 11 de Wikipedia de Dolores del Puente: buscar segunda fuente.
+  3. Años distintos entre Wikipedia y Patrimonio Musical en 5 marchas de Dolores del Puente (anotados en `marchas-correcciones.json`).
+  4. El portal no tiene a la Virgen del Mayor Dolor entre los titulares de Fusionadas.
+- El revisor independiente comprobó 5 marchas al azar (Expiración, Humildad, Monte Calvario, Estudiantes y Rocío) contra Patrimonio Musical: las 5 están bien.
+
+## Actualización 6 · La Paloma, El Rico y revisión de las 45 (2026-10-26; 5 h al 0 %, semanal 14 %)
+**Revisor independiente (5 recorridos y 5 marchas al azar):** las 5 marchas, bien. Recorridos: señaló 3 fallos (Sangre, Cautivo y Resucitado) → según las órdenes, **revisadas las 45**.
+- **Cautivo, encierro 02:30:** el revisor se equivocó. En la imagen de la página 4 del PDF, el 02:30 está en la columna «Encierro» de la fila del Cautivo (la capa de texto lo descoloca).
+- **Resucitado:** volvía por Santa Lucía (calle de la ida) en vez de por Méndez Núñez y Comedias. Corregido: ver regla 2.
+- **Sangre:** sale de su casa (Dos Aceras 10), sube por Guerrero a la Plazuela del Cristo de la Sangre y vuelve; el recorte de retrocesos borraba esa ida y vuelta. Corregido: ver regla 4.
+
+**La Paloma (orden de Pablo).** Itinerario oficial 2026 (PDF de la Agrupación, https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): Capilla de M.ª Stma. de la Paloma, Plaza de San Francisco, Carretería, **Tribuna de los Pobres, Pasillo de Santa Isabel**, Cisneros, Especería, Plaza de la Constitución, Tribuna Principal, Marqués de Larios, Martínez, Atarazanas, Torregorda, Alameda Principal, Plaza de la Marina, Molina Lario, Torre Sur, Plaza del Obispo, Molina Lario, Plaza del Siglo, Plaza del Carbón, Calderería, Plaza de Uncibay, Méndez Núñez, Tejón y Rodríguez, Carretería, Plaza de San Francisco y Capilla. Horas: 20:15 / 22:07 / 00:12 / 01:45.
+- **Estaba mal:** de Carretería atajaba por García Briz y Muro de Puerta Nueva hasta Cisneros, sin pasar por la Tribuna de los Pobres ni por el Pasillo de Santa Isabel; antes, además, la entrada caía en un homónimo a 3 km (corregido en `2f73cc1`).
+- **Ahora:** Carretería → Tribuna de los Pobres → Pasillo de Santa Isabel (118 m) → Cisneros … calle a calle como la lista. Comprobado en la captura y en el plano (390 y 1440 px).
+
+**El Rico (orden de Pablo: sale y se encierra en su casa hermandad).** El PDF lo confirma: «Parroquia Santiago (salida de nazarenos) … Casa Hermandad (salida de los Tronos)». Ahora sale a las 17:55 y se encierra a la 01:05 en la casa hermandad de calle Victoria 12-14 (Agrupación, https://agrupaciondecofradias.com/itinerario-4-victoria-merced-11o-hito-casa-hermandad-de-el-rico/, leído con Playwright); primer y último punto a 7 m de su puerta de OSM. El tramo de los nazarenos desde Santiago queda anotado en el informe (`salida_nazarenos`). Misma regla para **Salesianos** (nazarenos desde el Santuario; tronos desde su casa hermandad, calle Eduardo Domínguez Ávila 28, «frente al Santuario», confirmado con Playwright). Las demás que acaban en «… y Casa Hermandad» salen de su templo según el PDF y se quedan así.
+
+**Reglas nuevas del reconstructor** (`tools/itinerarios/reconstruir-malaga.mjs`):
+1. Una calle de la lista cuenta como recorrida si el trazado avanza por ella (25 m o el 40 % de su longitud), no si solo la cruza.
+2. Solo cuestan como «de la lista» la calle que toca, la anterior y la siguiente: el regreso ya no reutiliza calles de la ida.
+3. Enlaces cortos (< 35 m) entre dos calles consecutivas que OSM no une (p. ej. Cisneros acaba a 7 m del Pasillo de Santa Isabel), anotados en el informe; paso por la Catedral en la estación de penitencia (puerta de Postigo de los Abades → puerta del Patio de los Naranjos en calle Císter, nodos OSM 8280808444 y 2834229789). «Postigo de los Abades» pasa a ser calle.
+4. No se recorta una ida y vuelta corta (≤ 300 m) si al quitarla desaparece una calle de la lista (plaza delante del templo, Plazuela de la Sangre); las largas se recortan y quedan como aviso.
+5. Homónimos: una calle o un punto de Nominatim a más de 600 m de sus vecinas de la lista se omite con aviso («Alcubilla» de Salesianos → La Alcubilla de Bailén-Miraflores; «Dr. Don Felipe Sánchez de la Cuesta y Alarcón» de la Esperanza → calle Alarcón, a 1,2 km). «Rivera del Guadalmedina» = Calle Ribera del Guadalmedina (Nueva Esperanza bajaba de 12,4 a 7,4 km).
+6. Tribuna de los Pobres = escalinata al arranque de Carretería junto al Puente de la Aurora (https://www.change.org/p/ayto-de-m%C3%A1laga-restauraci%C3%B3n-de-la-tribuna-de-los-pobres-m%C3%A1laga, Playwright).
+- Descartado: repetir la búsqueda prohibiendo los picos (obligaba a seguir la calle, pero producía bucles absurdos en Lágrimas, Rescate, El Rico y Sangre).
+- Resultado: 45/45 sin errores; láminas de las 45 revisadas a ojo tras la última pasada.
+
+**Falta (avisos que quedan, para revisar a mano con fuente):**
+- **Lágrimas y Favores:** la lista dice «Plaza de Félix Sáenz, Nueva, Especería, Plaza de la Constitución, Martínez» sin citar Larios; el trazado sube por Nueva y vuelve por ella (lectura literal). Confirmar en prensa si baja por Larios.
+- Calles que se recorren menos que el umbral (casi siempre reales: Císter 6 m a la salida del Patio de los Naranjos, Granada 17 m, plazas pequeñas de ~22 m). Lista completa en `cache/malaga-reconstruccion.json` (`calles_no_recorridas`, `idas_y_vueltas`).
+- «Alcubilla» (Salesianos) y «Dr. Don Felipe Sánchez de la Cuesta y Alarcón» (Esperanza) sin localizar en OSM: omitidas del trazado.
+- Plaza de Jesús Cautivo (Cautivo): no está en OSM.
+
+**Crédito de OpenStreetMap** (aviso de la sesión de marketing): enlace «© colaboradores de OpenStreetMap» → https://www.openstreetmap.org/copyright, siempre visible en el plano (PC y móvil), y párrafo con la licencia ODbL en `/acerca/#mapas`.

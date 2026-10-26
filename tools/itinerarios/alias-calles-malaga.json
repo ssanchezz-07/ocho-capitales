@@ -20,5 +20,8 @@
  "Plazuela Virgen de Dolores y Esperanza": "Plaza María Santísima de Dolores",
  "Itinerario Basílica del Paso y la Esperanza": "Basílica del Paso y la Esperanza",
  "Miguel Bueno Lara": "Miguel de Buero Lara",
- "@Capilla de María Santísima de la Paloma": "Plaza de San Francisco, Málaga"
+ "@Capilla de María Santísima de la Paloma": "Plaza de San Francisco, Málaga",
+ "@Tribuna de los Pobres": "geo:36.72165,-4.42501",
+ "_Tribuna de los Pobres": "Escalinata entre el Puente de la Aurora y el arranque de calle Carretería (https://www.change.org/p/ayto-de-m%C3%A1laga-restauraci%C3%B3n-de-la-tribuna-de-los-pobres-m%C3%A1laga, leído con Playwright). Punto = extremo oeste de Calle Carretería en OSM, a 22 m del Pasillo de Santa Isabel junto al Puente de la Aurora.",
+ "Rivera del Guadalmedina": "Ribera del Guadalmedina"
 }

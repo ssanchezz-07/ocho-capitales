@@ -19,7 +19,7 @@ const ORDEN = ['pollinica', 'lagrimas-y-favores', 'dulce-nombre', 'salutacion', 
 const ALIAS = JSON.parse(fs.existsSync(path.join(DIR, 'alias-calles-malaga.json')) ? fs.readFileSync(path.join(DIR, 'alias-calles-malaga.json'), 'utf8') : '{}');
 // Puntos del itinerario que no son calles (marcas del recorrido): se conservan como hitos sin geometría propia.
 const CASAS = fs.existsSync(path.join(DIR, 'casas-hermandad-malaga.json')) ? JSON.parse(fs.readFileSync(path.join(DIR, 'casas-hermandad-malaga.json'), 'utf8')) : {};
-const MARCA = /^(tribuna|s i c b|torre sur|postigo de los abades|estacion de penitencia|patio de los naranjos)/;
+const MARCA = /^(tribuna(?! de los pobres)|s i c b|torre sur|estacion de penitencia|patio de los naranjos)/;
 const TEMPLO = /^(iglesia|parroquia|basilica|capilla|oratorio|santuario|ermita|abadia|casa hermandad|templo|seminario|via dolorosa)/;
 
 const sn = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\(.*?\)/g, ' ').replace(/[.,;:]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -120,6 +120,7 @@ function puerta(p, vecina) {
   return null;
 }
 async function lugarTemplo(txt) {
+  if (/^geo:/.test(txt)) { const [la, lo] = txt.slice(4).split(',').map(Number); return { lat: la, lon: lo, osm: 'punto fijado con fuente (alias-calles-malaga.json)' }; }
   { const al = ALIAS['@' + txt]; const nom = al && al.startsWith('osm:') ? al.slice(4) : (al ? null : txt.replace(/\(.*?\)/g, '').trim()); if (nom) { const r = temploOSM(nom); if (r) return r; } if (al && al.startsWith('osm:')) return null; }
   const q = (ALIAS['@' + txt] || txt).replace(/\(.*?\)/g, '').trim();
   if (NOM[q] !== undefined) return NOM[q];
@@ -139,7 +140,12 @@ function buscarCalle(token) {
   if (cands.length === 1) return [cands[0], porClave.get(cands[0])];
   return [null, null, cands];
 }
+// Enlaces temporales entre dos calles consecutivas de la lista que están a < 35 m pero OSM no une (p. ej. Cisneros acaba a ~20 m
+// del Pasillo de Santa Isabel sin tocarlo). Solo valen para la hermandad en curso y quedan anotados en su informe.
+let ENLACES = [];
+const quitarEnlaces = () => { for (const [i, j] of ENLACES) { ady[i] = ady[i].filter((e) => !(e[0] === j && e[3] === 'enlace')); ady[j] = ady[j].filter((e) => !(e[0] === i && e[3] === 'enlace')); } ENLACES = []; };
 async function reconstruir(idx) {
+  quitarEnlaces();
   const id = ORDEN[idx], P = PDF[idx], H = HOR.find((f) => sn(f.cabecera).slice(0, 40) === sn(P.cabecera.replace(/\d\d:\d\dh/g, '').replace(/\s+/g, ' ')).slice(0, 40)) || HOR[idx];
   const FIN = /^(.*?)\s+(?:y|e)\s+(?:a su\s+)?(templo|casa hermandad|iglesia.*|parroquia.*|bas[ií]lica.*|capilla.*|oratorio.*|santuario.*|ermita.*|abad[ií]a.*)\.?$/i;
   const toks = P.itinerario.flatMap((t0, i, arr) => { const m = i === arr.length - 1 ? t0.match(FIN) : null; if (!m) return [t0.replace(/\.$/, '').trim()]; const esCasa = /^casa hermandad$/i.test(m[2]); const dest = esCasa ? 'Casa Hermandad' : /^templo$/i.test(m[2]) ? (/^casa hermandad/i.test(arr[0]) ? 'Casa Hermandad' : arr[0]) : m[2]; return [m[1].trim(), dest.replace(/\.$/, '').trim()]; });
@@ -147,6 +153,10 @@ async function reconstruir(idx) {
   const toks0 = toks.flatMap((t) => (t === 'Molina Lario Torre Sur' ? ['Molina Lario', 'Torre Sur'] : [PRE[t] || t]));
   for (let i = 0; i < toks0.length - 1; i++) if (/^(dr|doctor|dra)$/i.test(toks0[i].replace('.', ''))) { toks0[i + 1] = 'Doctor ' + toks0[i + 1].replace(/^Dr\.?\s*/i, ''); toks0.splice(i, 1); }
   for (let i = 0; i < toks0.length; i++) toks0[i] = toks0[i].replace(/^Itinerario\s+/i, '');
+  // Salida doble (El Rico, Salesianos): «Templo (salida de nazarenos)», …, «Casa Hermandad (salida de los tronos)». El cortejo con los
+  // tronos sale de la casa hermandad: el recorrido empieza ahí y el tramo anterior (solo nazarenos) se anota en el informe.
+  let soloNazarenos = null;
+  { const iT = toks0.findIndex((t) => /\(salida (?:de )?(?:los )?tronos\)/i.test(t)); if (iT > 0) { soloNazarenos = toks0.slice(0, iT); toks0.splice(0, iT); } }
   // salto de línea del PDF dentro del templo final: «Plaza de San Francisco y Capilla de María» + «Santísima de la Paloma» (Paloma)
   for (let i = 0; i < toks0.length - 1; i++) { const m = toks0[i].match(/^(.*?)\s+y\s+(Capilla de Mar[ií]a)$/i); if (m && /^sant[ií]sima/i.test(toks0[i + 1])) toks0.splice(i, 2, m[1], m[2] + ' ' + toks0[i + 1]); }
   // Si el itinerario empieza o acaba en una calle pero la hermandad tiene casa con punto fijado, la salida/entrada es la casa
@@ -161,6 +171,7 @@ async function reconstruir(idx) {
   }
   toks.length = 0; toks.push(...toks0);
   const informe = { id, fuente: FUENTE_URL, cabecera: P.cabecera.replace(/\s+/g, ' ').slice(0, 160), errores: [], avisos: [], calles: toks };
+  if (soloNazarenos) informe.salida_nazarenos = 'Los nazarenos salen de «' + soloNazarenos[0] + '»' + (soloNazarenos.length > 1 ? ' y van por ' + soloNazarenos.slice(1).join(', ') : '') + ' hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad.';
   if (torreDerivada) informe.torre_sur_derivada = 'La lista oficial no cita la Torre Sur; la ficha da su hora (' + H.horas.torre_sur[0] + '). Se sitúa en Molina Lario tras la Plaza de la Marina y ahí empieza el regreso.';
   const pasos = []; // {lugar, tipo:'calle'|'marca'|'templo', nodos:Set|null, punto:[la,lo]|null}
   for (let i = 0; i < toks.length; i++) {
@@ -193,6 +204,22 @@ async function reconstruir(idx) {
   // al pasar por una arista suya; los puntos (plazas sin calle en OSM) al llegar a su nodo. Se busca el camino más corto que cumple todas.
   const seq = [];
   for (const p of cal) { if (p.tipo === 'calle' || p.tipo === 'punto') { if (p.tipo === 'calle' && !p.nodos.size) continue; if (p.tipo === 'calle' && ![...p.nodos].some((n) => comp[n] === PRINCIPAL)) { const ns = [...p.nodos]; const la = ns.reduce((a, n) => a + nodos[n][0], 0) / ns.length, lo = ns.reduce((a, n) => a + nodos[n][1], 0) / ns.length; const [nn, dd] = cercano(la, lo); if (nn >= 0 && dd < 120) { informe.avisos.push(`«${p.lugar}» no conectada en OSM: el trazado pasa por su centro (a ${Math.round(dd)} m de la red)`); p.tipo = 'punto'; p.punto = [la, lo]; delete p.clave; } else { informe.avisos.push(`«${p.lugar}» no conectada a la red en OSM: omitida`); continue; } } if (seq.length && seq.at(-1).clave && seq.at(-1).clave === p.clave) continue; seq.push(p); } }
+  // Un punto situado por Nominatim (calle que OSM no tiene) que cae lejos de sus vecinas de la lista es un homónimo de otro barrio
+  // («Alcubilla» → La Alcubilla, Bailén-Miraflores): se descarta con aviso en vez de llevar el trazado hasta allí.
+  for (let i = seq.length - 1; i >= 0; i--) {
+    const p = seq[i];
+    if (p.tipo === 'calle' && p.nodos) { // calle homónima de otro barrio: todos sus tramos lejos de las vecinas
+      const pts = (q) => !q ? [] : q.nodos ? [...q.nodos].map((n) => [nodos[n][2], nodos[n][3]]) : q.punto ? [X(...q.punto)] : [];
+      const vec = [...pts(seq[i - 1]), ...pts(seq[i + 1])]; if (!vec.length) continue;
+      let d = Infinity; for (const n of p.nodos) for (const [vx, vy] of vec) { const dd = Math.hypot(nodos[n][2] - vx, nodos[n][3] - vy); if (dd < d) d = dd; }
+      if (d > 600) { informe.avisos.push(`«${p.lugar}» casa con «${nombres.get(p.clave) || p.clave}», a ${Math.round(d)} m de sus calles vecinas: homónimo, omitida del trazado`); seq.splice(i, 1); }
+      continue;
+    }
+    if (p.tipo !== 'punto' || /punto fijado/.test(p.osm || '')) continue;
+    const [x, y] = X(...p.punto); const dVec = (q) => !q ? Infinity : q.nodos ? Math.min(...[...q.nodos].map((n) => Math.hypot(nodos[n][2] - x, nodos[n][3] - y))) : q.punto ? Math.hypot(X(...q.punto)[0] - x, X(...q.punto)[1] - y) : Infinity;
+    const d = Math.min(dVec(seq[i - 1]), dVec(seq[i + 1]));
+    if (d > 600) { informe.avisos.push(`«${p.lugar}» situado por Nominatim en ${String(p.osm || '').slice(0, 60)}, a ${Math.round(d)} m de sus calles vecinas: homónimo, omitido del trazado`); seq.splice(i, 1); }
+  }
   const pIni = cal[0], pFin = cal[cal.length - 1];
   const lejos = (p, vecino) => { if (p.tipo !== 'templo' || !vecino?.nodos) return false; const [x, y] = X(...p.punto); let m = Infinity; for (const n of vecino.nodos) m = Math.min(m, Math.hypot(nodos[n][2] - x, nodos[n][3] - y)); return m > 350; };
   if (lejos(pIni, seq[0])) { informe.avisos.push(`«${pIni.lugar}» localizado en ${pIni.osm?.slice(0, 50)} está a >350 m de «${seq[0].lugar}»: descartado, salida aproximada`); pIni.tipo = 'casa'; pIni.punto = null; }
@@ -204,42 +231,100 @@ async function reconstruir(idx) {
     if (pu) { p.puntoTemplo = p.punto; p.punto = [pu.lat, pu.lon]; p.puerta = pu; (informe.puertas = informe.puertas || {})[rol] = pu; }
     else { (informe.puertas = informe.puertas || {})[rol] = null; informe.avisos.push(`${rol}: sin puerta en OSM que encaje (dirección o calle del itinerario); se usa el punto del templo/casa`); }
   }
+  // Estación de penitencia: se entra en la Catedral por su puerta de calle Postigo de los Abades (nodo OSM 8280808444) y se sale
+  // por el Patio de los Naranjos a calle Císter (puerta, nodo 2834229789). El plano no tiene paso por dentro: se añade ese enlace.
+  if (toks.some((t) => /^(estacion de penitencia|patio de los naranjos|s i c b)/.test(sn(t)))) {
+    const pA = PUERTAS.find((e) => e.id === 8280808444), pB = PUERTAS.find((e) => e.id === 2834229789);
+    if (pA && pB) { const [a] = cercano(pA.lat, pA.lon), [c] = cercano(pB.lat, pB.lon); const dd = dm(a, c); ady[a].push([c, dd, '', 'enlace']); ady[c].push([a, dd, '', 'enlace']); ENLACES.push([a, c]); informe.por_la_catedral = `de la puerta de Postigo de los Abades a la del Patio de los Naranjos (calle Císter), ${Math.round(dd)} m`; }
+  }
+  { const L0 = LISTA; LISTA = null;
+    for (let i = 0; i + 1 < seq.length; i++) {
+      const a = seq[i], c = seq[i + 1], ns = (p) => p.nodos || (p.tipo === 'punto' ? [cercano(...p.punto)[0]] : null); const na = ns(a), nc = ns(c); if (!na || !nc) continue;
+      let best = null; for (const x of na) { if (comp[x] !== PRINCIPAL) continue; for (const y of nc) { if (comp[y] !== PRINCIPAL) continue; const dd = dm(x, y); if (!best || dd < best[2]) best = [x, y, dd]; } }
+      if (!best || best[2] < 1 || best[2] > 35) continue;
+      const { dist: dr } = dijkstra([best[0]], 400); const red = dr.has(best[1]) ? dr.get(best[1]) : Infinity;
+      if (red > Math.max(80, 3 * best[2])) { ady[best[0]].push([best[1], best[2], '', 'enlace']); ady[best[1]].push([best[0], best[2], '', 'enlace']); ENLACES.push([best[0], best[1]]); informe.avisos.push(`enlace de ${Math.round(best[2])} m entre «${a.lugar}» y «${c.lugar}»: OSM no las une (por la red, ${red === Infinity ? 'más de 400' : Math.round(red)} m)`); }
+    }
+    LISTA = L0; }
   const ancla = (p) => { const [n, d] = cercano(...p.punto); return { n, d }; };
   const N = seq.length, S = nodos.length;
   const nodoPunto = seq.map((p) => (p.tipo === 'punto' ? cercano(...p.punto)[0] : -1));
-  const dist = new Float64Array(S * (N + 1)).fill(Infinity), par = new Int32Array(S * (N + 1)).fill(-1);
-  const h = new Heap(); let meta = -1;
+  // Una calle de la lista solo cuenta como recorrida si el trazado AVANZA por ella (no basta cruzarla en una esquina):
+  // umbral = min(25 m, 40 % de su longitud en la red). Progreso por calle en B escalones (cada arista suma al menos uno).
+  const B = 5, largoCalle = new Map();
+  for (let i = 0; i < nodos.length; i++) for (const [v, w0, cl] of ady[i]) if (cl) largoCalle.set(cl, (largoCalle.get(cl) || 0) + w0 / 2);
+  const umbral = seq.map((p) => (p.clave ? Math.min(25, 0.4 * (largoCalle.get(p.clave) || 0)) : 0));
+  const K = (N + 1) * B, nodoDe = (st) => Math.floor(st / K), kDe = (st) => Math.floor(st / B) % (N + 1);
+  const dist = new Float64Array(S * K), par = new Int32Array(S * K);
   const inicio = [];
   if (pIni.tipo === 'templo') { const a = ancla(pIni); inicio.push(a.n); informe.salida = { lugar: pIni.lugar, osm: pIni.osm, aprox_m: Math.round(a.d) }; }
   else { for (const n of seq[0]?.nodos || []) if (comp[n] === PRINCIPAL) inicio.push(n); informe.salida = { lugar: pIni.lugar, sede_aprox: true }; }
   const finNodo = (pFin.tipo === 'templo' && pFin !== pIni) ? ancla(pFin).n : -1;
   if (!inicio.length || inicio.some((n) => n < 0)) { informe.errores.push('sin nodo de salida en la red'); return { id, informe }; }
-  for (const n of inicio) { const st = n * (N + 1); dist[st] = 0; h.push(st, 0); }
-  while (h.size) {
-    const [d, st] = h.pop(); if (d > dist[st]) continue;
-    const u = Math.floor(st / (N + 1)), k = st % (N + 1);
-    if (k === N && (finNodo < 0 || u === finNodo)) { meta = st; break; }
-    for (const [v, w0, cl] of ady[u]) {
-      const w = LISTA.has(cl) ? w0 : w0 * 4;
-      let k2 = k; if (k < N && seq[k].clave && seq[k].clave === cl) k2 = k + 1;
-      while (k2 < N && seq[k2].tipo === 'punto' && nodoPunto[k2] === v) k2++; // un punto se cumple al llegar a su nodo
-      const s2 = v * (N + 1) + k2, nd = d + w;
-      if (nd < dist[s2]) { dist[s2] = nd; par[s2] = st; h.push(s2, nd); }
+  // metros recorridos por cada calle en un trazado (una arista puede ser de dos calles a la vez)
+  const metrosPorCalle = (ruta) => { const m = new Map(); for (let i = 1; i < ruta.length; i++) { const cls = new Set(); let w = 0; for (const e of ady[ruta[i - 1]]) if (e[0] === ruta[i] && e[2]) { cls.add(e[2]); w = e[1]; } for (const c of cls) m.set(c, (m.get(c) || 0) + w); } return m; };
+  // Si al quitar los retrocesos se pierde una calle de la lista (el buscador la «pisó» con un pico de ida y vuelta),
+  // se repite la búsqueda sin las aristas de ese pico, hasta 3 veces: así tiene que recorrerla de verdad.
+  const prohibidas = new Set(); let cad, bruto, nodosRuta, mapa, previo = null;
+  for (let intento = 0; ; intento++) {
+    dist.fill(Infinity); par.fill(-1); const h = new Heap(); let meta = -1;
+    for (const n of inicio) { const st = n * K; dist[st] = 0; h.push(st, 0); }
+    while (h.size) {
+      const [d, st] = h.pop(); if (d > dist[st]) continue;
+      const u = nodoDe(st), k = kDe(st), b = st % B;
+      if (k === N && (finNodo < 0 || u === finNodo)) { meta = st; break; }
+      for (const [v, w0, cl, tipoArista] of ady[u]) {
+        if (prohibidas.size && prohibidas.has(u + '>' + v)) continue;
+        // solo es «de la lista» la calle que toca ahora, la anterior y la siguiente: así el regreso no reutiliza calles de la ida
+        const enVentana = cl && (cl === seq[k]?.clave || cl === seq[k - 1]?.clave || cl === seq[k + 1]?.clave);
+        const w = enVentana || tipoArista === 'enlace' ? w0 : w0 * 4;
+        let k2 = k, b2 = 0;
+        if (k < N && seq[k].clave && seq[k].clave === cl) { const T = umbral[k], acc = b * T / B + w0; if (acc >= T) k2 = k + 1; else b2 = Math.min(B - 1, Math.max(b + 1, Math.floor(acc * B / T))); }
+        while (k2 < N && seq[k2].tipo === 'punto' && nodoPunto[k2] === v) { k2++; b2 = 0; } // un punto se cumple al llegar a su nodo
+        const s2 = (v * (N + 1) + k2) * B + b2, nd = d + w;
+        if (nd < dist[s2]) { dist[s2] = nd; par[s2] = st; h.push(s2, nd); }
+      }
     }
-    while (k < N && seq[k].tipo === 'punto' && nodoPunto[k] === u && false) { }
+    if (meta < 0 && previo) break; // sin el pico no hay camino: el pico era real (plaza sin salida); se queda el mejor intento
+    if (meta < 0) { informe.errores.push('sin camino que cumpla todo el itinerario en el grafo (revisar nombres/ conexiones)'); return { id, informe }; }
+    cad = []; for (let st = meta; st >= 0; st = par[st]) cad.push(st); cad.reverse();
+    // posproceso: eliminar retrocesos A→B→A (se recorta el tramo de ida y vuelta) y recordar dónde cae cada posición original
+    bruto = cad.map(nodoDe); nodosRuta = []; mapa = []; const picos = [];
+    for (const n of bruto) { if (nodosRuta.length >= 2 && nodosRuta.at(-2) === n) picos.push([n, nodosRuta.pop()]); else if (nodosRuta.at(-1) !== n) nodosRuta.push(n); mapa.push(nodosRuta.length - 1); }
+    for (let i = mapa.length - 2; i >= 0; i--) mapa[i] = Math.min(mapa[i], mapa[i + 1]); // una posición sobrevive solo si no fue recortada después
+    const m = metrosPorCalle(nodosRuta);
+    const perdidas = new Set(seq.map((p, i) => (p.clave && (m.get(p.clave) || 0) < umbral[i] * 0.99 ? p.clave : null)).filter(Boolean));
+    const largoR = nodosRuta.reduce((a, n, i) => a + (i ? dm(n, nodosRuta[i - 1]) : 0), 0);
+    if (!previo || perdidas.size < previo.np || (perdidas.size === previo.np && largoR < previo.largo)) previo = { cad, bruto, nodosRuta, mapa, np: perdidas.size, largo: largoR, intento };
+    // Repetir sin el pico obliga a seguir la calle, pero en el casco antiguo produce rodeos absurdos (probado el 2026-10-25 en
+    // Lágrimas, Rescate, El Rico y Sangre): se queda el primer intento y las calles apenas pisadas salen como aviso para revisar a mano.
+    // una ida y vuelta larga (> 300 m en esa calle) no es una plaza delante del templo: es un casamiento con un tramo lejano; se recorta
+    { const mB = metrosPorCalle(bruto); for (const c of [...perdidas]) if ((mB.get(c) || 0) > 300) perdidas.delete(c); }
+    if (perdidas.size) { // la ida y vuelta era necesaria (la lista pasa por esa calle): no se recorta si es de una calle que se perdería
+      nodosRuta = []; mapa = [];
+      for (const n of bruto) { const pisa = nodosRuta.length >= 2 && nodosRuta.at(-2) === n && ady[nodosRuta.at(-1)].some((e) => e[0] === n && perdidas.has(e[2])); if (nodosRuta.length >= 2 && nodosRuta.at(-2) === n && !pisa) nodosRuta.pop(); else if (nodosRuta.at(-1) !== n) nodosRuta.push(n); mapa.push(nodosRuta.length - 1); }
+      for (let i = mapa.length - 2; i >= 0; i--) mapa[i] = Math.min(mapa[i], mapa[i + 1]);
+      informe.idas_y_vueltas = [...perdidas].map((c) => nombres.get(c) || c);
+      previo = { ...previo, nodosRuta, mapa };
+    }
+    if (!perdidas.size || intento >= 0) break;
+    let nuevo = false;
+    // el pico fue a → c → a: se prohíbe solo la vuelta (c → a), para que entre en la calle y tenga que seguir por ella
+    for (const [a, c] of picos) if (ady[a].some((e) => e[0] === c && perdidas.has(e[2])) && !prohibidas.has(c + '>' + a)) { prohibidas.add(c + '>' + a); nuevo = true; }
+    if (!nuevo) break;
   }
-  if (meta < 0) { informe.errores.push('sin camino que cumpla todo el itinerario en el grafo (revisar nombres/ conexiones)'); return { id, informe }; }
-  const cad = []; for (let st = meta; st >= 0; st = par[st]) cad.push(st); cad.reverse();
-  // posproceso: eliminar retrocesos A→B→A (se recorta el tramo de ida y vuelta) y recordar dónde cae cada posición original
-  const bruto = cad.map((st) => Math.floor(st / (N + 1))), nodosRuta = [], mapa = [];
-  for (const n of bruto) { if (nodosRuta.length >= 2 && nodosRuta.at(-2) === n) nodosRuta.pop(); else if (nodosRuta.at(-1) !== n) nodosRuta.push(n); mapa.push(nodosRuta.length - 1); }
-  for (let i = mapa.length - 2; i >= 0; i--) mapa[i] = Math.min(mapa[i], mapa[i + 1]); // una posición sobrevive solo si no fue recortada después
+  ({ cad, bruto, nodosRuta, mapa } = previo); if (previo.intento) informe.repeticiones = previo.intento;
   informe.retrocesos_eliminados = bruto.length - nodosRuta.length;
+  if (process.env.DEPURAR === id) console.log(cad.map((st, i) => { const u = nodoDe(st), v = i ? nodoDe(cad[i - 1]) : -1; const e = v >= 0 ? ady[v].find((x) => x[0] === u) : null; return (e ? (e[2] || e[3] || "-") : "") + "@" + kDe(st) + "." + (st % B); }).join(" "));
   const trazo = []; // primera posición en que se cumple cada elemento de seq
-  { let kk = 0; trazo.push({ paso: pIni, nodo: nodosRuta[0], pos: 0 }); for (let i = 1; i < cad.length; i++) { const k2 = cad[i] % (N + 1); while (kk < k2) { trazo.push({ paso: seq[kk], nodo: nodosRuta[mapa[i]], pos: mapa[i] }); kk++; } } }
+  { let kk = 0; trazo.push({ paso: pIni, nodo: nodosRuta[0], pos: 0 }); for (let i = 1; i < cad.length; i++) { const k2 = kDe(cad[i]); while (kk < k2) { trazo.push({ paso: seq[kk], nodo: nodosRuta[mapa[i]], pos: mapa[i] }); kk++; } } }
   trazo.push({ paso: pFin, nodo: nodosRuta.at(-1), pos: nodosRuta.length - 1 });
   // comprobaciones automáticas ----------------------------------------------------------
   const largo = nodosRuta.reduce((s, n, i) => s + (i ? dm(n, nodosRuta[i - 1]) : 0), 0); informe.largo_m = Math.round(largo);
+  // 0) cada calle de la lista se recorre de verdad (metros sobre sus aristas en el trazado final, tras quitar retrocesos)
+  { const m = new Map(); for (let i = 1; i < nodosRuta.length; i++) { const cls = new Set(); let w = 0; for (const e of ady[nodosRuta[i - 1]]) if (e[0] === nodosRuta[i] && e[2]) { cls.add(e[2]); w = e[1]; } for (const c of cls) m.set(c, (m.get(c) || 0) + w); } // una arista puede ser de dos calles a la vez
+    informe.calles_no_recorridas = seq.map((p, i) => (p.clave && (m.get(p.clave) || 0) < umbral[i] * 0.99 ? `${p.lugar} (${Math.round(m.get(p.clave) || 0)} m)` : null)).filter(Boolean);
+    if (informe.calles_no_recorridas.length) informe.avisos.push('calles de la lista apenas pisadas: ' + informe.calles_no_recorridas.join(', ')); }
   // 1) salto en recta > 150 m entre vértices consecutivos
   let mx = 0; for (let i = 1; i < nodosRuta.length; i++) { const e = ady[nodosRuta[i - 1]].find((x) => x[0] === nodosRuta[i]); const d = dm(nodosRuta[i], nodosRuta[i - 1]); if (!e || !e[2]) mx = Math.max(mx, d); } informe.max_tramo_sin_calle_m = Math.round(mx); if (mx > 150) informe.avisos.push(`tramo de ${Math.round(mx)} m sin calle con nombre`);
   // 3) detour: el trazado no puede ser absurdamente más largo que la suma de rectas entre puntos
@@ -274,7 +359,7 @@ async function reconstruir(idx) {
   const posVuelta = (() => { const q = puntos.find((x) => x.tramo === 'regreso'); return q ? q.pos : nodosRuta.length; })();
   fs.mkdirSync(path.join(DIR, 'cache', 'trazas-malaga'), { recursive: true });
   fs.writeFileSync(path.join(DIR, 'cache', 'trazas-malaga', id + '.json'), JSON.stringify({ ida: nodosRuta.slice(0, posVuelta + 1).map((n) => [nodos[n][0], nodos[n][1]]), regreso: nodosRuta.slice(posVuelta).map((n) => [nodos[n][0], nodos[n][1]]), puntos: puntos.map((x) => ({ lugar: x.lugar, lat: nodos[x.nodo][0], lon: nodos[x.nodo][1], tramo: x.tramo })) }));
-  informe.puerta = { errores: informe.errores.length === 0, salida_ok: informe.salida?.sede_aprox ? null : (informe.salida?.aprox_m ?? 999) < 60, salto_ok: informe.max_tramo_sin_calle_m <= 150, ratio_ok: informe.ratio < 1.7, retrocesos_ok: uturns <= 8, tiene_vuelta: iVuelta >= 0 };
+  informe.puerta = { errores: informe.errores.length === 0, calles_ok: !(informe.calles_no_recorridas || []).length, salida_ok: informe.salida?.sede_aprox ? null : (informe.salida?.aprox_m ?? 999) < 60, salto_ok: informe.max_tramo_sin_calle_m <= 150, ratio_ok: informe.ratio < 1.7, retrocesos_ok: uturns <= 8, tiene_vuelta: iVuelta >= 0 };
   // via: vértices entre punto y punto siguiente
   const out = puntos.map((pt, i) => {
     const nx = puntos[i + 1]; const o = { fila: '', lugar: pt.lugar, ...(pt.hora ? { hora: pt.hora } : {}), lat: nodos[pt.nodo][0], lon: nodos[pt.nodo][1], como: pt.como, tramo: pt.tramo, ...(pt.rol ? { rol: pt.rol } : {}) };
