@@ -430,7 +430,7 @@
       T = t != null ? Math.max(L[0], Math.min(L[1], t)) : OCPlano.horaPico(hs); rango.value = T;
       jorEl.textContent = etiquetaJornada(d);
       var x = hs[0] && hs[0].x, cap = datos.ciudades[actual];
-      notaEl.textContent = x ? 'Itinerario oficial de la salida. Entre las horas del cartel, la posición es una estimación.' : 'Recorridos del itinerario oficial de ' + (cap.anio || 'la última Semana Santa') + '. La posición de cada cortejo es una estimación.';
+      notaEl.textContent = x ? (x.vel ? 'Itinerario oficial de la salida. Solo se conoce la hora de salida: la posición supone el paso medio de las cofradías de la ciudad y es una estimación.' : 'Itinerario oficial de la salida. Entre las horas del cartel, la posición es una estimación.') : 'Recorridos del itinerario oficial de ' + (cap.anio || 'la última Semana Santa') + '. La posición de cada cortejo es una estimación.';
       ponerHora(T);
     }
     function ponerHora(t) {

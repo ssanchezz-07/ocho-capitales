@@ -370,7 +370,7 @@
       if (x.iti.regreso) tramo('Regreso', x.iti.regreso, 'is-regreso');
       var fu = document.createElement('p'); fu.className = 'oc-calle-iti-fuente'; fu.appendChild(document.createTextNode('Fuente: '));
       if (x.url) { var fa = document.createElement('a'); fa.href = x.url; fa.target = '_blank'; fa.rel = 'noopener'; fa.textContent = x.fuente; fu.appendChild(fa); } else fu.appendChild(document.createTextNode(x.fuente));
-      fu.appendChild(document.createTextNode('. Las horas sin marcar en el plano son una estimación.')); it.appendChild(fu);
+      fu.appendChild(document.createTextNode(x.vel ? '. Solo se conoce la hora de salida: la posición supone el paso medio de las cofradías de la ciudad (unos ' + x.vel + ' metros por minuto) y es una estimación.' : '. Las horas sin marcar en el plano son una estimación.')); it.appendChild(fu);
       c.appendChild(it);
     }
     if (yo) {

@@ -1353,8 +1353,13 @@ function datosCalle(c) {
   // Salidas extraordinarias y magnas (tools/sources/itinerarios-extraordinarios.json): una «jornada» propia con su fecha.
   // Solo hay horas en algunos puntos del cartel: el resto se reparte por la distancia andada (posición 4 = 0, hora no oficial).
   // Posición 7 = 1 en el regreso (se dibuja discontinuo). El ida y el regreso van seguidos en «paso»; entre ambos, el acto.
+  // Paso medio de las cofradías de la ciudad en la última Semana Santa (metros por minuto, mediana): para las extraordinarias
+  // de las que solo se conoce la hora de salida, la posición se estima con él (y se dice que es una estimación).
+  const pasos = hs.map((h) => { const p = h.t.paso || h.t.cruz; let L = 0; for (let i = 1; i < p.length; i++) L += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); const dt = p[p.length - 1][2] - p[0][2]; return dt > 60 ? L / dt : null; }).filter(Boolean).sort((a, b) => a - b);
+  const VEL = pasos.length >= 5 ? pasos[Math.floor(pasos.length / 2)] : null;
   for (const [id, e] of Object.entries(R.extraordinarias || {})) {
-    const h = HERM[e.hermandad]; if (!h) continue;
+    // una hermandad sin ficha (de gloria, por ejemplo) sale con el nombre que trae su itinerario
+    const h = HERM[e.hermandad] || (e.nombre_hermandad ? { nombre: e.nombre_hermandad } : null); if (!h) continue;
     const pts = [];
     for (const [nom, tr] of Object.entries(e.tramos)) {
       const reg = nom === 'regreso' ? 1 : 0, sit = tr.filter((p) => p.lat != null);
@@ -1366,6 +1371,8 @@ function datosCalle(c) {
     }
     const acum = [0]; for (let i = 1; i < pts.length; i++) acum.push(acum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
     const anc = pts.map((p, i) => (p[2] != null ? i : -1)).filter((i) => i >= 0);
+    let vel = null;
+    if (anc.length === 1 && VEL && pts.length > 1) { vel = VEL; const a0 = anc[0]; pts.forEach((p, i) => { if (i > a0) p[2] = Math.round((pts[a0][2] + (acum[i] - acum[a0]) / vel) * 10) / 10; }); anc.push(pts.length - 1); }
     if (anc.length < 2) continue;
     for (let i = 1; i < anc.length; i++) if (pts[anc[i]][2] < pts[anc[i - 1]][2]) pts[anc[i]][2] += 1440;
     pts.forEach((p, i) => {
@@ -1379,7 +1386,7 @@ function datosCalle(c) {
     const iti = Object.fromEntries(Object.entries(e.tramos).map(([nom, tr]) => [nom, tr.map((p) => [p.lugar, p.hora || ''])]));
     const im = h.imagen;
     hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts }, ...habito(e.hermandad),
-      x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti } });
+      x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti, ...(vel ? { vel: Math.round(vel) } : {}) } });
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
