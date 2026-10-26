@@ -686,9 +686,9 @@ function curiosidadDelDia() {
   const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length];
   return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`;
 }
-// Portada (decisión de Pablo, 2026-10-24): solo las banderas con el mapa de Andalucía y, debajo, la agenda.
-// Lo que estaba aquí no se pierde: «Hoy» y la curiosidad del día van a /hoy/, las noticias a /noticias/, las capitales a
-// /capitales/ y el archivo (hermandades, bandas, marchas, imagineros) a la hoja «Más».
+// Portada (decisiones de Pablo, 24 y 26-oct): las banderas con el mapa de Andalucía, las láminas «Las ocho capitales»
+// tal cual estaban («ese apartado es precioso») y la agenda. Lo demás no se pierde: «Hoy» y la curiosidad del día van a
+// /hoy/, las noticias a /noticias/ y el archivo (hermandades, bandas, marchas, imagineros) a la hoja «Más».
 function pageHome() {
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
@@ -697,6 +697,7 @@ function pageHome() {
   <h1 class="oc-sr" id="hero-titulo">Ocho Capitales: la Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén</h1>
   ${colgaduras()}
 </section>
+<section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
   write('index.html', layout({ title: '', body, path: '', jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));

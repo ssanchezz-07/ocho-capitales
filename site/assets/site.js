@@ -374,7 +374,7 @@
       T = t != null ? Math.max(L[0], Math.min(L[1], t)) : OCPlano.horaPico(hs); rango.value = T;
       jorEl.textContent = etiquetaJornada(d);
       var x = hs[0] && hs[0].x, cap = datos.ciudades[actual];
-      notaEl.textContent = x ? 'Itinerario oficial de la salida (' + x.fuente + '). Entre las horas del cartel, la posición es una estimación.' : 'Recorridos del itinerario oficial de ' + (cap.anio || 'la última Semana Santa') + '. La posición de cada cortejo es una estimación.';
+      notaEl.textContent = x ? 'Itinerario oficial de la salida. Entre las horas del cartel, la posición es una estimación.' : 'Recorridos del itinerario oficial de ' + (cap.anio || 'la última Semana Santa') + '. La posición de cada cortejo es una estimación.';
       ponerHora(T);
     }
     function ponerHora(t) {
@@ -389,6 +389,11 @@
     $$('[data-colg-jor]', colg).forEach(function (b) { b.addEventListener('click', function () { if (!plano) return; var i = J.indexOf(dia) + +b.dataset.colgJor; ponerJornada(J[(i + J.length) % J.length]); plano.encuadrar(calm ? 0 : 520, margenes()); }); });
     // cada medallón abre su ficha en «En la calle», a la misma jornada y hora
     host.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('.oc-pl-marca'); if (a && actual) a.setAttribute('href', urlCalle('&h=' + encodeURIComponent(a.getAttribute('data-s')))); });
+    // En Andalucía la portada mide lo que su contenido; en la ciudad, la pantalla (entre la cabecera y la barra inferior)
+    var alturaAnd = 0;
+    function alturaCiudad() { var cab = $('.oc-header'), tab = $('.oc-tabbar'); return Math.round(Math.min(880, Math.max(560, innerHeight - (cab ? cab.offsetHeight : 0) - (tab && tab.offsetParent ? tab.offsetHeight : 0)))); }
+    function ponerAltura(h, animar) { var desde = portada.offsetHeight; portada.style.height = desde + 'px'; if (animar && !calm) void portada.offsetHeight; portada.style.height = h + 'px'; }
+    window.addEventListener('resize', function () { if (actual) portada.style.height = alturaCiudad() + 'px'; });
     function margenes() { var p = pieEl.getBoundingClientRect().height; return { arriba: 64, abajo: Math.round(p) + 12, izq: 20, der: 20 }; }
     // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial
     function moverAnd(destino, ms) {
@@ -409,10 +414,14 @@
       pintarBanderas(c, !desdeHistoria); setCity(c);
       // la bandera elegida sube hasta asomar por arriba (el 26 % de abajo, su fleco y su emblema) como pestaña para volver
       var r0 = row.getBoundingClientRect(), top0 = portada.getBoundingClientRect().top; row.style.setProperty('--subir', Math.round(top0 - r0.top - r0.height * 0.74) + 'px');
-      portada.classList.add('is-ciudad'); root.classList.add('oc-en-ciudad'); andBox.hidden = true; ciuBox.hidden = false;
+      if (!portada.classList.contains('is-ciudad')) alturaAnd = portada.offsetHeight;
+      portada.classList.add('is-ciudad'); root.classList.add('oc-en-ciudad'); andBox.hidden = true;
+      ponerAltura(alturaCiudad(), !desdeHistoria); ciuBox.hidden = false;
       nomEl.textContent = cap.n; capA.href = cap.cap; resEl.textContent = 'Cargando su plano…'; jorEl.textContent = ''; horaEl.textContent = '--:--';
       var p = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
-      if (p && vbAnd) { var w = vbAnd[2] / 22; moverAnd([p.x / 100 * vbAnd[2] - w / 2, p.y / 100 * vbAnd[3] - w * vbAnd[3] / vbAnd[2] / 2, w, w * vbAnd[3] / vbAnd[2]], 820); }
+      // primero el hilo llega a su capital; entonces Andalucía se acerca a ella (el gesto señala adónde va la cámara)
+      if (p && vbAnd) setTimeout(function () { if (actual !== c) return; portada.classList.add('is-acercando'); var w = vbAnd[2] / 22; moverAnd([p.x / 100 * vbAnd[2] - w / 2, p.y / 100 * vbAnd[3] - w * vbAnd[3] / vbAnd[2] / 2, w, w * vbAnd[3] / vbAnd[2]], 820); }, calm || desdeHistoria ? 0 : 360);
+      var t0 = performance.now();
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
         D = r[1]; host.textContent = ''; host.hidden = false;
@@ -423,7 +432,7 @@
         ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null);
         // la cámara empieza muy alta (toda la ciudad y sus alrededores) y baja hasta la jornada
         var v = plano.vista(), ancho = v.w * 3; plano.volar({ x: v.x + v.w / 2 - ancho / 2, y: v.y + v.h / 2 - ancho * v.h / v.w / 2, w: ancho }, 0);
-        requestAnimationFrame(function () { portada.classList.add('is-plano'); plano.encuadrar(calm ? 0 : 900, margenes()); });
+        setTimeout(function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); plano.encuadrar(calm ? 0 : 900, margenes()); }, calm || desdeHistoria ? 0 : Math.max(0, 700 - (performance.now() - t0)));
       }).catch(function () {
         if (actual !== c) return;
         resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
@@ -436,7 +445,8 @@
       var antes = actual; if (!antes) return;
       if (!desdeHistoria) { if (history.state && history.state.ocCiudad && !history.state.directo) { focoPendiente = antes; history.back(); return; } history.replaceState(null, '', location.pathname + location.search); }
       pintarBanderas('', false); setCity('');
-      portada.classList.remove('is-plano', 'is-ciudad'); root.classList.remove('oc-en-ciudad'); portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
+      portada.classList.remove('is-plano', 'is-ciudad', 'is-acercando'); root.classList.remove('oc-en-ciudad');
+      if (alturaAnd) { ponerAltura(alturaAnd, !desdeHistoria); setTimeout(function () { if (!actual) portada.style.height = ''; }, calm || desdeHistoria ? 0 : 440); } else portada.style.height = ''; portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
       andBox.hidden = false; ciuBox.hidden = true;
       if (vbAnd) moverAnd(vbAnd, 700);
       var p0 = plano; plano = null; setTimeout(function () { if (!actual && p0) { host.hidden = true; host.textContent = ''; } }, calm ? 0 : 420);

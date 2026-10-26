@@ -1694,14 +1694,15 @@ main ol:not([class]) { padding-left: 1.4em; }
    ===================================================================== */
 .oc-home .oc-portada {
   --cielo: #1c0e2a; --marfil: #f4eff9; --lila: #c9bddb; --oro: #e0b84f; --oro-claro: #f0d79c;
-  position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
-  height: clamp(560px, calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-bottom)), 880px);
-  margin: 0 calc(50% - 50vw); padding: 0 var(--gutter);
-  color: var(--marfil); background-color: var(--cielo); transition: background-color 500ms linear;
+  position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start;
+  margin: 0 calc(50% - 50vw); padding: clamp(20px, 3vw, 32px) var(--gutter) clamp(24px, 3vw, 36px);
+  color: var(--marfil); background-color: var(--cielo); transition: background-color 500ms linear, height 420ms var(--ease-out);
 }
-@media (min-width: 960px) { .oc-home .oc-portada { height: clamp(600px, calc(100svh - var(--header-h)), 900px); margin-top: -20px; } }
+@media (min-width: 960px) { .oc-home .oc-portada { margin-top: -20px; } }
+/* las banderas, el mapa y la invitación caben siempre en la pantalla (a cualquier anchura y altura) */
+.oc-portada .oc-colgaduras { width: min(100%, 720px, calc((100svh - var(--header-h) - var(--tabbar-h) - 170px) / 1.06)); }
 html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw incluye la barra de desplazamiento) */
-.oc-portada .oc-colgaduras { position: static; width: min(100%, 720px); margin: 0 auto; }
+.oc-portada .oc-colgaduras { position: static; margin: 0 auto; }
 /* en el escritorio, banderas + mapa + invitación caben en la altura del lienzo */
 @media (min-width: 960px) { .oc-portada .oc-colgaduras { width: min(100%, 740px, calc((100svh - var(--header-h) - 190px) / 1.06)); } }
 /* en la calle, erCuñao se aparta para no tapar la hora; vuelve al subir a Andalucía */
@@ -1724,11 +1725,14 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-portada [data-sel] .oc-prov2 { fill: color-mix(in srgb, var(--c) 22%, #241238); }
 .oc-portada [data-sel] .oc-prov2.is-on { fill: color-mix(in srgb, var(--c) 74%, #241238); }
 .oc-portada .oc-colg-map svg { filter: none; }
-.oc-portada .oc-hilo { stroke: var(--oro); opacity: .6; }
+/* los hilos solo aparecen al elegir: el de la bandera elegida se dibuja hasta su capital (antes cruzaban el mapa con codos) */
+.oc-portada .oc-hilo, .oc-portada [data-sel] .oc-hilo { stroke: var(--oro-claro); opacity: 0; }
+.oc-portada .oc-hilo.is-on, .oc-portada [data-sel] .oc-hilo.is-on { opacity: 1; stroke-width: 2.2px; }
+.oc-portada.is-acercando .oc-colg-hilos { opacity: 0; transition: opacity 160ms var(--ease-out); }
 .oc-portada .oc-punto { pointer-events: auto; cursor: pointer; width: 16px; height: 16px; margin: -8px 0 0 -8px; background: var(--oro); box-shadow: 0 0 0 3px var(--c), 0 0 0 4.5px rgb(240 215 156 / .7); }
 .oc-portada .oc-punto::after { content: ""; position: absolute; inset: -14px; border-radius: 50%; }
 @media (hover: hover) and (pointer: fine) { .oc-portada .oc-punto:hover { transform: scale(1.3); } }
-.oc-portada.is-ciudad .oc-colg-hilos, .oc-portada.is-ciudad .oc-punto { opacity: 0; transition: opacity 200ms var(--ease-out); pointer-events: none; }
+.oc-portada.is-ciudad .oc-punto { opacity: 0; transition: opacity 200ms var(--ease-out); pointer-events: none; }
 .oc-portada.is-plano .oc-colg-map { opacity: 0; pointer-events: none; }
 /* el plano de la ciudad ocupa todo el lienzo y aparece mientras Andalucía se acerca */
 .oc-colg-plano { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 460ms var(--ease-out) 260ms; }
@@ -1757,6 +1761,7 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-colg-ayuda { margin: 0; font: 400 clamp(1.5rem, 6vw, 2.1rem)/1 var(--display); letter-spacing: .02em; text-transform: uppercase; color: var(--marfil); }
 .oc-portada .oc-hero2-count { margin: 8px 0 0; font-size: .95rem; letter-spacing: 0; color: var(--lila); }
 .oc-portada .oc-hero2-count strong { color: var(--oro-claro); }
+.oc-portada .oc-hero2-count span { color: var(--lila); }
 .oc-portada.is-ciudad .oc-colg-pie { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px var(--gutter) calc(14px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, var(--cielo) 62%, transparent); transition: background-color 500ms linear; }
 .oc-colg-ciudad { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; width: min(100%, 1180px); margin: 0 auto; }
 .oc-colg-cab { display: grid; grid-template-columns: minmax(0, 1fr); }
