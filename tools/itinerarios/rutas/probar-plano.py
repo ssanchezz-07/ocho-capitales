@@ -47,11 +47,14 @@ with sync_playwright() as p:
         pg.on('console', lambda m: err.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)  # los fallos de red del entorno de prueba no son errores del plano; pg.on('pageerror', lambda e: err.append(str(e)))
         pg.goto(URL); pg.wait_for_selector('path.oc-c-ruta', state='attached', timeout=20000)
         faltan = []
+        ocultas = []
         for dia, ss in dias.items():
+            # fuera de temporada (site/data/temporada.json) el plano solo enseña las extraordinarias vigentes: se prueban las jornadas visibles
+            if not pg.locator(f'button[data-dia="{dia}"]').count(): ocultas.append(dia); continue
             pg.locator(f'button[data-dia="{dia}"]').click(); pg.wait_for_timeout(600)
             vis = set(pg.evaluate("[...document.querySelectorAll('path.oc-c-ruta:not(.is-regreso):not(.is-aprox)')].filter(e => e.getTotalLength() > 50).map(e => e.dataset.s)"))
             if ss - vis: faltan.append(f"{dia}: {', '.join(sorted(ss - vis))}")
-        check(not faltan, f'{w}px: cada jornada dibuja todos sus recorridos ({len(dias)} jornadas)' + ('' if not faltan else ': ' + '; '.join(faltan)))
+        check(not faltan and len(ocultas) < len(dias), f'{w}px: cada jornada visible dibuja todos sus recorridos ({len(dias) - len(ocultas)} de {len(dias)} jornadas' + (f'; {len(ocultas)} ocultas fuera de temporada' if ocultas else '') + ')' + ('' if not faltan else ': ' + '; '.join(faltan)))
         sw = pg.evaluate('document.documentElement.scrollWidth'); check(sw <= w, f'{w}px: sin desbordamiento horizontal ({sw} px)')
         check(not err, f'{w}px: sin errores en la consola' + ('' if not err else ': ' + ' | '.join(err[:3])))
         pg.locator('.oc-calle-mapa').scroll_into_view_if_needed(); pg.wait_for_timeout(300)
