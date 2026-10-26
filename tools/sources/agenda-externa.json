@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 59
+  "Prensa (texto de noticias)": 60
  },
  "eventos": [
   {
@@ -4038,6 +4038,16 @@
    "nota": "",
    "fuente": "Diario de Cádiz",
    "url": "https://www.diariodecadiz.es/sanfernando/dia-romeria-san-fernando-cerro-tradiciones_0_2008338645.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión Extraordinaria de la Santa Cena de Granada 2026: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/extraordinaria-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-centenario-santa-cena-granada-santa-cena-granada-centenario-santa-cena-extraordinaria-santa-cena-recorrido-santa-cena-granada-horario-santa-cena-granada_0_2008340117.html"
   },
   {
    "fecha": "2026-10-25",
