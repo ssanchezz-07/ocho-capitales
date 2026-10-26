@@ -176,6 +176,8 @@ for (const [id, h] of Object.entries(porId)) {
     dia: h.dia, cabecera: h.cab,
     fuentes: [FUENTE + (id === 'el-perdon' ? ' (columna de la cruz de guía transcrita a mano del PDF)' : ''), ...(pr ? [`El Debate · La Voz de Córdoba, guía de 2026: ${pr.url}`] : [])],
     horario_prensa: pr?.horario ?? null,
+    // sale del Patio de los Naranjos por la puerta del Perdón: «SALIDA C.O. (PUERTA PERDÓN)» o la acotación «(P. PERDÓN)» de la rejilla
+    salida_perdon: [...(h.cruz || []), ...(h.final || [])].some((p) => /\(P(UERTA)?\.? ?PERD/i.test(p.lugar)),
     sede: sede ? { templo: sede.templo, dir: sede.dir ?? null, fuente: sede.fuente, ...(sede.salida ? { salida: sede.salida.templo } : {}), ...(sede.falta ? { falta: sede.falta } : {}) } : null,
     calles: u.map((e) => e.lugar),
     diferencias: { solo_prensa: soloPrensa, solo_rejilla: soloRejilla },

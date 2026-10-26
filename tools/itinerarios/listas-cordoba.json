@@ -20,6 +20,7 @@
     "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
    ],
    "horario_prensa": null,
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Nuestra Señora de la Aurora",
     "dir": null,
@@ -254,6 +255,7 @@
     "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
    ],
    "horario_prensa": null,
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de la Asunción de Nuestra Señora",
     "dir": "Pasaje Marino Conde de Alcaudete, Córdoba",
@@ -466,6 +468,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale desde San Lorenzo a las 9.45 horas y hará su entrada en el mismo templo a las 16.00 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Lorenzo",
     "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
@@ -829,6 +832,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La procesión sale de Santiago a las 16.00 horas y se recoge en el mismo templo a las 22.00 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Santiago Apóstol",
     "dir": "Calle Ronquillo Briceño, Córdoba",
@@ -1186,6 +1190,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.00 horas y se recoge a las 22.40 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Francisco y San Eulogio",
     "dir": "Pasaje de la Axerquía, Córdoba",
@@ -1477,6 +1482,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale de su templo a las 16.05 horas y se recoge a las 23.15 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Nuestra Señora de Gracia (Trinitarios)",
     "dir": "Plaza Cristo de Gracia, Córdoba",
@@ -1908,6 +1914,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale a las 18.00 horas, recogiéndose en la misma parroquia de San José y Espíritu Santo a las 23.50 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San José y Espíritu Santo",
     "dir": "Paseo Cristo del Descendimiento, Córdoba",
@@ -2233,6 +2240,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale desde San Andrés a las 16.30 horas y se recoge en el mismo templo a las 23.10 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Andrés",
     "dir": "Calle Torre de San Andrés, Córdoba",
@@ -2590,6 +2598,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html"
    ],
    "horario_prensa": "La hermandad sale desde la parroquia de Jesús Divino Obrero a las 17.30 horas y se recoge en el mismo templo a las 00.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Jesús Divino Obrero",
     "dir": "Plaza de Jesús Divino Obrero, Córdoba",
@@ -2891,6 +2900,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La hermandad sale desde la parroquia de San Antonio de Padua a las 15.45 horas y se recoge en el mismo templo a las 00.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Antonio de Padua",
     "dir": "Calle Espiel, Córdoba",
@@ -3335,6 +3345,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La hermandad sale a las 16.00 horas desde la parroquia de San Vicente Ferrer y se recoge en el mismo templo a las 01.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Vicente Ferrer",
     "dir": "Calle Párroco Bartolomé Blanco, Córdoba",
@@ -3871,6 +3882,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La cofradía se pone en la calle desde las 16.15 horas desde la parroquia de San Fernando y se recoge a las 01.10 en el mismo templo.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Fernando",
     "dir": "Calle Goya 24, Córdoba",
@@ -4298,10 +4310,11 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La hermandad sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia a las 00.10 horas.",
+   "salida_perdon": false,
    "sede": {
-    "templo": "Parroquia de San Nicolás de la Villa",
-    "dir": "Calle Duque de Fernán Núñez 21, Córdoba",
-    "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/"
+    "templo": "Casa Hermandad",
+    "dir": "Pasaje Saravia, Córdoba",
+    "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    },
    "calles": [
     "Salida",
@@ -4645,6 +4658,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La estación de penitencia se inicia a las 20.15 horas desde la parroquia de San Juan y todos los Santos (Trinidad) y se recoge en el mismo punto a las 01.05 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Juan y Todos los Santos (Trinidad)",
     "dir": "Plaza de la Trinidad, Córdoba",
@@ -5027,6 +5041,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html"
    ],
    "horario_prensa": "La hermandad sale desde San Lorenzo a las 19.34 horas y se recoge en el mismo templo a las 01.24 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Lorenzo",
     "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
@@ -5348,6 +5363,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad sale desde el pocito de La Fuensanta a las 16.50 horas y llegará a la parroquia de Santa Victoria a las 01.50 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Santa Victoria",
     "dir": "Calle Párroco Agustín Molina 22, Córdoba",
@@ -5754,6 +5770,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.10 desde la iglesia del Juramento y finaliza en el mismo templo a las 23.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia del Juramento de San Rafael",
     "dir": "Plazuela de Don Arias, Córdoba",
@@ -6149,6 +6166,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad sale de la iglesia conventual de Capuchinos a las 17.00 horas y se recoge en el mismo lugar a las 23.15 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia Conventual del Santo Ángel (Capuchinos)",
     "dir": "Plaza de Capuchinos, Córdoba",
@@ -6445,6 +6463,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.10 desde San Andrés y se recoge en el mismo templo a las 23.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Andrés",
     "dir": "Calle Torre de San Andrés, Córdoba",
@@ -6749,6 +6768,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad se pone en la calle a las 19.00 horas desde la parroquia de San Juan y todos los Santos (La Trinidad) y se recoge en el mismo templo a las 00.20 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Juan y Todos los Santos (Trinidad)",
     "dir": "Plaza de la Trinidad, Córdoba",
@@ -7104,6 +7124,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html"
    ],
    "horario_prensa": "La hermandad sale desde el colegio de Salesianos a las 18.30 horas y se recoge a las 01.55 en el mismo punto.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Santuario de María Auxiliadora",
     "dir": "Calle María Auxiliadora, Córdoba",
@@ -7529,6 +7550,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": null,
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia de San Roque - Buen Pastor",
     "dir": null,
@@ -7908,6 +7930,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.15 desde la iglesia conventual del Santo Ángel y se recoge en el mismo templo a las 00.45 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia Conventual del Santo Ángel (Capuchinos)",
     "dir": "Plaza de Capuchinos, Córdoba",
@@ -8348,6 +8371,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": "La hermandad sale a as 18.00 horas desde la parroquia de San Lorenzo y se recoge en el mismo templo a las 00.55 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Lorenzo",
     "dir": "Pasaje Cristo Remedio de Ánimas, Córdoba",
@@ -8703,6 +8727,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": "La cofradía sale a las 19.10 horas desde la Basílica menor de San Pedro y se recoge en el mismo templo a las 00.10 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Basílica Menor de San Pedro",
     "dir": "Córdoba",
@@ -9018,6 +9043,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": "La hermandad sale a las 20.35 desde la parroquia de Nuestra Señora de la Paz y se recoge en el mismo templo a las 01.00 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de Nuestra Señora de la Paz",
     "dir": "Calle San Basilio, Córdoba",
@@ -9310,6 +9336,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.20 horas desde la parroquia de San Antonio María Claret y se recoge a las 00.25 horas en los Jardines del Obispo.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Antonio María Claret",
     "dir": null,
@@ -9951,6 +9978,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.20 horas desde la iglesia hospital de Jesús Nazareno y se recoge en el mismo templo a las 22.50 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia Hospital de Jesús Nazareno",
     "dir": null,
@@ -10266,6 +10294,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale desde la parroquia de San Francisco y San Eulogio a las 17.00 y se recoge en el mismo templo a las 22.15 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San Francisco",
     "dir": "Pasaje de la Axerquía, Córdoba",
@@ -10580,6 +10609,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.15 horas desde la iglesia conventual de San Cayetano y se recoge en el mismo punto a las 00.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia Conventual de San José (San Cayetano)",
     "dir": "Cuesta de San Cayetano, Córdoba",
@@ -11009,6 +11039,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale a las 18.15 horas desde la parroquia del beato Álvaro de Córdoba y se recoge en el mismo templo a las 01.40 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia del Beato Álvaro de Córdoba",
     "dir": "Calle de Vicente Aleixandre, Córdoba",
@@ -11374,6 +11405,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale a las 19.00 horas desde la iglesia conventual de San Agustín y se recoge en el mismo lugar a las 01.15 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia de San Agustín",
     "dir": "Calle de San Agustín, Córdoba",
@@ -11755,6 +11787,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad sale a las 19.15 horas desde la parroquia de Nuestra Señora de Gracia y se recoge en el mismo templo a las 03.00 horas.",
+   "salida_perdon": true,
    "sede": {
     "templo": "Parroquia de Nuestra Señora de Gracia (Trinitarios)",
     "dir": "Plaza Cristo de Gracia, Córdoba",
@@ -12155,6 +12188,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html"
    ],
    "horario_prensa": "La hermandad se pone en la calle a las 00.00 horas desde la Real Colegiata de San Hipólito y llega al mismo templo a las 05.20 horas.",
+   "salida_perdon": true,
    "sede": {
     "templo": "Real Colegiata de San Hipólito",
     "dir": "Plaza de San Ignacio de Loyola, Córdoba",
@@ -12507,6 +12541,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La salida es a las 18.25 horas desde la parroquia del Salvador y Santo Domingo de Silos (La Compañía) y se recoge en el mismo templo a las 22.35 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia (La Compañía)",
     "dir": "Calle Juan de Mena, Córdoba",
@@ -12771,6 +12806,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La salida será a las 17.00 desde la parroquia de Santa María de Guadalupe y se recogerá en el mismo templo a las 00.30 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia de Santa María de Guadalupe",
     "dir": null,
@@ -13251,6 +13287,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La cofradía sale a las 19.00 horas y se recoge a las 23.40 horas en Real Iglesia de San Pablo.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Real Iglesia de San Pablo",
     "dir": "Calle San Pablo, Córdoba",
@@ -13553,6 +13590,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La hermandad sale a las 19.50 horas desde la parroquia de San José y Espíritu Santo y se recoge en el mismo templo a las 00.50 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia de San José y Espíritu Santo",
     "dir": "Paseo Cristo del Descendimiento, Córdoba",
@@ -13846,6 +13884,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La hermandad sale a las 17.20 horas desde la iglesia de Nuestra Señora del Rosario y se recoge en el mismo templo a las 03.10 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Iglesia de Nuestra Señora del Rosario",
     "dir": "Calle D. Federico Ledoux, Córdoba",
@@ -14315,6 +14354,7 @@
     "El Debate · La Voz de Córdoba, guía de 2026: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html"
    ],
    "horario_prensa": "La hermandad sale de la iglesia de San Jacinto a las 18.50 horas y se recoge en el mismo templo a las 01.15 horas.",
+   "salida_perdon": false,
    "sede": {
     "templo": "Santuario de Nuestra Señora de los Dolores",
     "dir": "Plaza de Capuchinos, Córdoba",
@@ -14706,6 +14746,7 @@
     "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
    ],
    "horario_prensa": null,
+   "salida_perdon": false,
    "sede": {
     "templo": "Parroquia Nuestra Señora de los Ángeles (Alcolea)",
     "dir": "Carretera de Madrid, Alcolea",
@@ -14873,6 +14914,7 @@
     "Agrupación de Hermandades y Cofradías de Córdoba, itinerario oficial 2026 (rejilla de horarios, «Itinerario Córdoba 2026.pdf»): https://www.hermandadesdecordoba.es/itinerario-2026/"
    ],
    "horario_prensa": null,
+   "salida_perdon": true,
    "sede": {
     "templo": "Parroquia de Santa Marina",
     "dir": "Plaza del Rector, Córdoba",

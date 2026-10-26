@@ -127,24 +127,24 @@
   "fuente_punto": "OpenStreetMap way/296534580 «Parroquia de San Fernando» (calle por Nominatim)"
  },
  "la-sentencia-cordoba": {
-  "templo": "Parroquia de San Nicolás de la Villa",
-  "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/",
-  "punto": [
-   37.884454,
-   -4.782257
-  ],
-  "osm": "W96273338",
-  "dir": "Calle Duque de Fernán Núñez 21, Córdoba",
-  "fuente_punto": "OpenStreetMap way/96273338 «Iglesia de San Nicolás de la Villa» (calle por Nominatim)",
-  "casa_hermandad": {
-   "dir": "Pasaje Saravia, Córdoba",
+  "templo": "Casa Hermandad",
+  "sede_canonica": {
+   "templo": "Parroquia de San Nicolás de la Villa",
    "punto": [
-    37.88227,
-    -4.781368
+    37.884454,
+    -4.782257
    ],
-   "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
-   "fuente_punto": "OpenStreetMap way/437566665 y way/1253213191 «Pasaje Saravia» (punto medio del pasaje: el número de la casa no consta)"
+   "osm": "W96273338",
+   "dir": "Calle Duque de Fernán Núñez 21, Córdoba",
+   "fuente": "Librito oficial de itinerarios y horarios 2026 de la Agrupación (https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf); ficha de la Agrupación: https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/"
   },
+  "punto": [
+   37.88227,
+   -4.781368
+  ],
+  "dir": "Pasaje Saravia, Córdoba",
+  "fuente": "El Debate, guía del Lunes Santo 2026: «sale a las 18.15 horas desde su casa de hermandad y se recoge en el mismo lugar en el pasaje de Saravia»: https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+  "fuente_punto": "OpenStreetMap way/437566665 y way/1253213191 «Pasaje Saravia» (punto medio del pasaje: el número de la casa no consta)",
   "nota": "Sale y se recoge en su casa de hermandad del pasaje de Saravia, no en San Nicolás de la Villa (sede canónica). La rejilla oficial empieza por Barroso y Ángel de Saavedra, junto al pasaje."
  },
  "via-crucis-cordoba": {

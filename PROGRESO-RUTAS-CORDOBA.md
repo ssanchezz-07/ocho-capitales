@@ -38,5 +38,64 @@ Recuento: 1.042 calles en las 42 listas; 797 las dan las dos fuentes, 20 solo la
 - **Sede sin edificio localizable** (ni en OSM ni en Wikidata): **La O** (Parroquia de Nuestra Señora de la Aurora; posible candidata, sin confirmar, la «Parroquia de la Asunción» de OSM a unos 80 m de la Plaza Mahatma Gandhi), **Perdón** (Iglesia de San Roque, calle Buen Pastor), **Piedad** (Parroquia de San Antonio María Claret) y **Soledad** (Santa María de Guadalupe). La salida se fija a mano en el editor.
 - Dirección con número: solo la tienen San Fernando (Goya 24), San Nicolás de la Villa (Duque de Fernán Núñez 21) y Santa Victoria (Párroco Agustín Molina 22). En el resto, la calle del templo según OSM.
 
-## Fase 2 · Trazado
-Pendiente: rebase sobre `origin/main` (herramientas de Málaga en 29c1a57), trazado, evaluador, capturas, compilación y Playwright.
+## Fase 2 · Trazado (2026-10-26, hecha y publicada)
+
+**Las 42 hermandades están trazadas con el método nuevo y publicadas** en `site/data/recorridos/cordoba.json`.
+
+### Cómo se rehace
+Desde `tools/itinerarios/`:
+1. `node listas-cordoba.mjs` → `listas-cordoba.json`.
+2. `node --dns-result-order=ipv4first callejero-extra-cordoba.mjs` (una vez por caché) → añade a `cache/osm-cordoba.json` Alcolea, el Puente Romano y la Carretera Palma del Río. Antes hay que copiar a `cache/` el `osm-cordoba.json` de la carpeta original y lanzar `node rutas/descargar-puertas.mjs cordoba`.
+3. Desde `rutas/`: `node lista-cordoba.mjs` → `listas/cordoba.json` y alias. Después `node emparejar.mjs cordoba`, `node evaluar.mjs cordoba`, `python -I capturar.py cordoba` y `node publicar.mjs cordoba`.
+4. `node site/build.mjs`.
+
+### Qué se ha añadido al código común (sin cambiar Málaga: Pasión, La Paloma y El Rico salen idénticas)
+- **Lista:** opción `catedral` por hermandad. En Córdoba se entra por la puerta del Perdón y se sale por la de Santa Catalina; la Buena Muerte, el Resucitado y el Cristo de Gracia salen otra vez por el Perdón.
+- **`TEMPLO`:** acepta «Real Iglesia…» y «Real Colegiata…».
+- **Nombres de vía:** se lee también `bridge:name`. El Puente Romano está en OSM como puente sin nombre de calle.
+- **Aviso:** Dolores del Puente (Málaga) no sale igual dos veces seguidas ni siquiera con el código de `main` sin tocar. No es por estos cambios.
+
+### Resultado (evaluador común, frente a lo que había publicado)
+- **Hasta 36 «nuevo» y 6 «revisar».** Las 6 «revisar» se publicaron tras mirar las capturas: ganan mucho en retrocesos (por ejemplo, 12→2 en el Rescatado y 11→2 en el Prendimiento) y pierden un paso corto cada una.
+- **Sin ninguna recta de más de 150 m.**
+- **Sedes:** las 38 localizadas quedan a 0-31 m de la salida y de la entrada.
+- **Ganancias:** la Piedad pasa de 34/42 a 41/42 calles y Dolores de Alcolea de 0/10 a 10/10. La Sentencia, el Vía Crucis, la Expiración y el Descendimiento recorren de 2 a 3 calles más que antes.
+- **Comprobado en el navegador** (servidor propio en el puerto 8197) a 1440 y 390 px: plano con ida continua y regreso discontinuo, panel con las horas oficiales y nota de fuente con enlace. Sin desbordamiento horizontal en móvil (375 px de contenido en 390). Sin errores de consola del sitio.
+
+### Lista para Pablo · qué mirar en el editor
+Se abre con `tools/itinerarios/editor/Abrir editor de rutas.bat`; se elige Córdoba.
+
+**Salida y entrada sin fijar** (templo sin edificio localizable: el trazado empieza y acaba en la primera y la última calle). Usar «Cambiar la salida» y «Cambiar la entrada», con la fuente:
+- **La O:** Iglesia de Nuestra Señora de la Aurora. ¿Es la «Parroquia de la Asunción» de OSM, junto a la Plaza Mahatma Gandhi?
+- **Perdón:** Iglesia de San Roque, calle Buen Pastor.
+- **Piedad:** Parroquia de San Antonio María Claret (Las Palmeras).
+- **Soledad:** Parroquia de Santa María de Guadalupe.
+
+**Publicadas tras revisarlas** (pierden un paso corto que el trazado anterior sí pisaba):
+- Rescatado, Ánimas y Cristo de Gracia: la glorieta de Puerta Nueva. El trazado pasa por el cruce, no rodea la glorieta.
+- **Presentación al Pueblo:** no entra en el bucle de **Hermanos Pinzones** (Núñez de Balboa → Hermanos Pinzones → Francisco Pizarro). Es la más clara de las seis: conviene fijar un punto en Hermanos Pinzones.
+- Santa Faz: paseo de la Victoria (15 m).
+- Prendimiento: plaza del Potro (15 m).
+
+**Tramos largos que rellena GraphHopper** (las dos calles seguidas de la lista no se tocan en OSM; el camino es el más corto a pie, no un dato oficial):
+- **Piedad:** Electromecánicas → Escriba Lubna (739 m) y Escriba Lubna → Ingeniero Benito Aranda (1.163 m), por la Carretera de Palma del Río, que OSM tiene a trozos y con otros nombres (A-431).
+- **Conversión:** plaza de Electromecánicas → Manuel Fuentes Bocanegra (976 m) y José María Martorell → avenida de la Fábrica (831 m).
+- **Agonía:** Fuente de la Salud → Deán Francisco Xavier (438 m).
+- **Estrella:** Paseo de las Margaritas → Alonso de Burgos (326 m). Faltan los Jardines de la Agricultura, que no son calle en OSM.
+- **Lope de Hoces → Puerta de Almodóvar** (211 m), que sale igual en Esperanza, Sentencia, Santa Faz y Perdón.
+
+**Lugares de la lista sin calle en OSM** (no se trazan; no se inventa): Calahorra (Vera Cruz, Amor, Descendimiento), jardines de Fray Ricardo y Paz y Esperanza (Sangre), Jardines de la Merced (Paz), Arco de Caballerizas (Pasión), plaza Ruiz de Alda (Resucitado), Practicante Pedro Berná (Dolores de Alcolea), Soldado Diego García Paredes y «puerta de San Catalina» (Presentación).
+
+**Nombres que OSM escribe distinto**, resueltos con `alias-calles-cordoba.json`:
+- «Cuesta del Colodro» es la Calle Puerta del Colodro de OSM. Una guía la llama así y otra, «puerta del Colodro», en el mismo punto.
+- «General Pedro A. Echevarría», en Alcolea, es la Calle Soldado Pedro Agustín de Echevarría de OSM. Es el mismo nombre con el título cambiado. **Confirmar.**
+- Erratas: «Pablo Picaso», «Borja y Pavón», «Pintora María Blandchard», «Fuenteventura», «Doctor Marañón» y «puerta de Almodóvaar».
+
+**Datos que conviene confirmar:**
+- **Prendimiento:** sale del Santuario de María Auxiliadora, aunque el librito pone San Andrés.
+- **Piedad:** la rejilla da el regreso a su templo; la prensa la recoge en los Jardines del Obispo.
+- **Sentencia:** el punto de la casa de hermandad está en el centro del pasaje Saravia, porque falta el número.
+- **Resucitado:** solo hay rejilla de la cruz de guía, sin lista de prensa.
+
+## Punto exacto (2026-10-26, uso de 5 h al 88 %: parada según las órdenes)
+Córdoba publicada entera. Lo siguiente es la revisión de Pablo en el editor (lista de arriba); con sus correcciones: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar … --forzar`, build y Playwright.

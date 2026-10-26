@@ -15,7 +15,15 @@ export const CIUDADES = {
     catedral: { texto: /^(s i c b|sicb|estacion de penitencia|patio de los naranjos)/, entra: 8280808444, sale: 2834229789, nombre: 'de la puerta de Postigo de los Abades a la del Patio de los Naranjos' },
   },
   sevilla: { nombre: 'Sevilla' },
-  cordoba: { nombre: 'Córdoba' },
+  cordoba: {
+    nombre: 'Córdoba',
+    // «ENTRADA C.O.» y «SALIDA C.O.» de la rejilla oficial: marcas de la carrera oficial, no calles
+    marcas: /^(entrada c o|salida c o)\b/,
+    regreso: /^salida c o\b/,
+    // Torrijos → puerta del Perdón (Patio de los Naranjos) → Catedral por dentro → puerta de Santa Catalina (Magistral González
+    // Francés). Las que salen otra vez por el Perdón lo llevan en su lista («catedral»).
+    catedral: { texto: /^(puerta del perdon|puerta (de )?(las )?cofradias|interior s i c|patio (de los )?naranjos)/, entra: 11613100948, sale: 3151300073, nombre: 'de la puerta del Perdón a la de Santa Catalina, por el Patio de los Naranjos y la Catedral' },
+  },
   granada: { nombre: 'Granada' },
   cadiz: { nombre: 'Cádiz' },
   huelva: { nombre: 'Huelva' },

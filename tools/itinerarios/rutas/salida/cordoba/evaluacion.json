@@ -1,0 +1,2438 @@
+{
+ "la-o-cordoba": {
+  "publicado": {
+   "largo_m": 3815,
+   "comprobables": 16,
+   "sin_dato": [
+    "C/ VEREDA DE LA ALCAIDÍA"
+   ],
+   "recorridas": 16,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 162,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.897525,
+     -4.753104
+    ],
+    [
+     37.896144,
+     -4.756669
+    ],
+    [
+     37.8958,
+     -4.756644
+    ]
+   ],
+   "pct_en_calles_lista": 83
+  },
+  "nuevo": {
+   "largo_m": 3815,
+   "comprobables": 16,
+   "sin_dato": [
+    "C/ VEREDA DE LA ALCAIDÍA"
+   ],
+   "recorridas": 16,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 162,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.897525,
+     -4.753104
+    ],
+    [
+     37.896144,
+     -4.756669
+    ],
+    [
+     37.8958,
+     -4.756644
+    ]
+   ],
+   "pct_en_calles_lista": 83
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "lagrimas-cordoba": {
+  "publicado": {
+   "largo_m": 3671,
+   "comprobables": 15,
+   "sin_dato": [],
+   "recorridas": 15,
+   "en_orden": 14,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
+   "rectas_150": [],
+   "tramo_max_m": 162,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.893234,
+     -4.80161
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 3671,
+   "comprobables": 15,
+   "sin_dato": [],
+   "recorridas": 15,
+   "en_orden": 14,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de la Asunción",
+   "rectas_150": [],
+   "tramo_max_m": 162,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.893234,
+     -4.80161
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "entrada-triunfal-cordoba": {
+  "publicado": {
+   "largo_m": 4154,
+   "comprobables": 23,
+   "sin_dato": [
+    "ESQ. SAN PEDRO - LINEROS"
+   ],
+   "recorridas": 23,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "nuevo": {
+   "largo_m": 4154,
+   "comprobables": 23,
+   "sin_dato": [
+    "ESQ. SAN PEDRO - LINEROS"
+   ],
+   "recorridas": 23,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "penas-de-santiago-cordoba": {
+  "publicado": {
+   "largo_m": 3213,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Santiago",
+   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 3213,
+   "comprobables": 24,
+   "sin_dato": [],
+   "recorridas": 24,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Santiago",
+   "sede_entrada": "templo en OSM: Iglesia de Santiago",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-huerto-cordoba": {
+  "publicado": {
+   "largo_m": 2629,
+   "comprobables": 17,
+   "sin_dato": [],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "sede_entrada": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 2629,
+   "comprobables": 17,
+   "sin_dato": [],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "sede_entrada": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-rescatado-cordoba": {
+  "publicado": {
+   "largo_m": 5438,
+   "comprobables": 30,
+   "sin_dato": [
+    "PLAZA DE JUAN BERNIER"
+   ],
+   "recorridas": 29,
+   "en_orden": 27,
+   "no_recorridas": [
+    "PUERTA NUEVA (0 m)"
+   ],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.882755,
+     -4.770804
+    ],
+    [
+     37.890797,
+     -4.76584
+    ]
+   ],
+   "pct_en_calles_lista": 88
+  },
+  "nuevo": {
+   "largo_m": 5438,
+   "comprobables": 30,
+   "sin_dato": [
+    "PLAZA DE JUAN BERNIER"
+   ],
+   "recorridas": 29,
+   "en_orden": 27,
+   "no_recorridas": [
+    "PUERTA NUEVA (0 m)"
+   ],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.882755,
+     -4.770804
+    ],
+    [
+     37.890797,
+     -4.76584
+    ]
+   ],
+   "pct_en_calles_lista": 88
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "vera-cruz-cordoba": {
+  "publicado": {
+   "largo_m": 3128,
+   "comprobables": 19,
+   "sin_dato": [
+    "Calahorra",
+    "Romero de Torres"
+   ],
+   "recorridas": 19,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia San José Espíritu Santo",
+   "sede_entrada": "templo en OSM: Parroquia San José Espíritu Santo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 89
+  },
+  "nuevo": {
+   "largo_m": 3128,
+   "comprobables": 19,
+   "sin_dato": [
+    "Calahorra",
+    "Romero de Torres"
+   ],
+   "recorridas": 19,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia San José Espíritu Santo",
+   "sede_entrada": "templo en OSM: Parroquia San José Espíritu Santo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 89
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-esperanza-cordoba": {
+  "publicado": {
+   "largo_m": 4238,
+   "comprobables": 22,
+   "sin_dato": [
+    "GONDOMAR",
+    "Campo de los Santos Mártires"
+   ],
+   "recorridas": 20,
+   "en_orden": 20,
+   "no_recorridas": [
+    "Alfonso XII (0 m)",
+    "Lope de Hoces (14 m)"
+   ],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Andrés",
+   "sede_entrada": "templo en OSM: Iglesia de San Andrés",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 76
+  },
+  "nuevo": {
+   "largo_m": 4238,
+   "comprobables": 22,
+   "sin_dato": [
+    "GONDOMAR",
+    "Campo de los Santos Mártires"
+   ],
+   "recorridas": 20,
+   "en_orden": 20,
+   "no_recorridas": [
+    "Alfonso XII (0 m)",
+    "Lope de Hoces (14 m)"
+   ],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Andrés",
+   "sede_entrada": "templo en OSM: Iglesia de San Andrés",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 76
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-amor-cordoba": {
+  "publicado": {
+   "largo_m": 3794,
+   "comprobables": 17,
+   "sin_dato": [
+    "Calahorra"
+   ],
+   "recorridas": 17,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "templo en OSM: Parroquia de Jesús Divino Obrero",
+   "sede_entrada": "templo en OSM: Parroquia de Jesús Divino Obrero",
+   "rectas_150": [],
+   "tramo_max_m": 204,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "nuevo": {
+   "largo_m": 3794,
+   "comprobables": 17,
+   "sin_dato": [
+    "Calahorra"
+   ],
+   "recorridas": 17,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 8,
+   "entrada_m": 8,
+   "sede_salida": "templo en OSM: Parroquia de Jesús Divino Obrero",
+   "sede_entrada": "templo en OSM: Parroquia de Jesús Divino Obrero",
+   "rectas_150": [],
+   "tramo_max_m": 204,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-merced-cordoba": {
+  "publicado": {
+   "largo_m": 7089,
+   "comprobables": 33,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [
+    "Puerta Nueva (0 m)"
+   ],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "templo en OSM: Iglesia de San Antonio de Padua",
+   "sede_entrada": "templo en OSM: Iglesia de San Antonio de Padua",
+   "rectas_150": [],
+   "tramo_max_m": 191,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.884566,
+     -4.775944
+    ],
+    [
+     37.89713,
+     -4.767095
+    ],
+    [
+     37.896797,
+     -4.766572
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 7089,
+   "comprobables": 33,
+   "sin_dato": [],
+   "recorridas": 32,
+   "en_orden": 31,
+   "no_recorridas": [
+    "Puerta Nueva (0 m)"
+   ],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "templo en OSM: Iglesia de San Antonio de Padua",
+   "sede_entrada": "templo en OSM: Iglesia de San Antonio de Padua",
+   "rectas_150": [],
+   "tramo_max_m": 191,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.884566,
+     -4.775944
+    ],
+    [
+     37.89713,
+     -4.767095
+    ],
+    [
+     37.896797,
+     -4.766572
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "presentacion-al-pueblo-cordoba": {
+  "publicado": {
+   "largo_m": 7061,
+   "comprobables": 40,
+   "sin_dato": [
+    "SOLDADO DIEGO GARCÍA PAREDES",
+    "puerta de San Catalina"
+   ],
+   "recorridas": 39,
+   "en_orden": 39,
+   "no_recorridas": [
+    "Hermanos Pinzones (0 m)"
+   ],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "sede_entrada": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "rectas_150": [],
+   "tramo_max_m": 157,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 7061,
+   "comprobables": 40,
+   "sin_dato": [
+    "SOLDADO DIEGO GARCÍA PAREDES",
+    "puerta de San Catalina"
+   ],
+   "recorridas": 39,
+   "en_orden": 39,
+   "no_recorridas": [
+    "Hermanos Pinzones (0 m)"
+   ],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "sede_entrada": "templo en OSM: Parroquia de San Vicente Ferrer",
+   "rectas_150": [],
+   "tramo_max_m": 157,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-estrella-cordoba": {
+  "publicado": {
+   "largo_m": 7060,
+   "comprobables": 26,
+   "sin_dato": [
+    "Jardines de la Agricultura",
+    "paza San Ignacio de Loyola",
+    "ALONSO AGUILAR",
+    "Claudio Marceo",
+    "Tendilas"
+   ],
+   "recorridas": 25,
+   "en_orden": 26,
+   "no_recorridas": [
+    "Lope de Hoces (14 m)"
+   ],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia de San Fernando",
+   "sede_entrada": "templo en OSM: Parroquia de San Fernando",
+   "rectas_150": [],
+   "tramo_max_m": 168,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.89492,
+     -4.783762
+    ],
+    [
+     37.893717,
+     -4.782688
+    ],
+    [
+     37.89167,
+     -4.783141
+    ]
+   ],
+   "pct_en_calles_lista": 69
+  },
+  "nuevo": {
+   "largo_m": 7060,
+   "comprobables": 26,
+   "sin_dato": [
+    "Jardines de la Agricultura",
+    "paza San Ignacio de Loyola",
+    "ALONSO AGUILAR",
+    "Claudio Marceo",
+    "Tendilas"
+   ],
+   "recorridas": 25,
+   "en_orden": 26,
+   "no_recorridas": [
+    "Lope de Hoces (14 m)"
+   ],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia de San Fernando",
+   "sede_entrada": "templo en OSM: Parroquia de San Fernando",
+   "rectas_150": [],
+   "tramo_max_m": 168,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.89492,
+     -4.783762
+    ],
+    [
+     37.893717,
+     -4.782688
+    ],
+    [
+     37.89167,
+     -4.783141
+    ]
+   ],
+   "pct_en_calles_lista": 69
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-sentencia-cordoba": {
+  "publicado": {
+   "largo_m": 4183,
+   "comprobables": 22,
+   "sin_dato": [
+    "Campo Santos Mártires"
+   ],
+   "recorridas": 22,
+   "en_orden": 21,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-cordoba.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-cordoba.json)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882723,
+     -4.783219
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "nuevo": {
+   "largo_m": 4183,
+   "comprobables": 22,
+   "sin_dato": [
+    "Campo Santos Mártires"
+   ],
+   "recorridas": 22,
+   "en_orden": 21,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "punto fijado con fuente (casas-hermandad-cordoba.json)",
+   "sede_entrada": "punto fijado con fuente (casas-hermandad-cordoba.json)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882723,
+     -4.783219
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "via-crucis-cordoba": {
+  "publicado": {
+   "largo_m": 3479,
+   "comprobables": 25,
+   "sin_dato": [
+    "CAMPO SANTOS MÁRTIRES"
+   ],
+   "recorridas": 25,
+   "en_orden": 24,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "rectas_150": [],
+   "tramo_max_m": 144,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     37.882632,
+     -4.781718
+    ],
+    [
+     37.877861,
+     -4.779753
+    ],
+    [
+     37.878946,
+     -4.781621
+    ],
+    [
+     37.882724,
+     -4.78318
+    ]
+   ],
+   "pct_en_calles_lista": 76
+  },
+  "nuevo": {
+   "largo_m": 3479,
+   "comprobables": 25,
+   "sin_dato": [
+    "CAMPO SANTOS MÁRTIRES"
+   ],
+   "recorridas": 25,
+   "en_orden": 24,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "rectas_150": [],
+   "tramo_max_m": 144,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     37.882632,
+     -4.781718
+    ],
+    [
+     37.877861,
+     -4.779753
+    ],
+    [
+     37.878946,
+     -4.781621
+    ],
+    [
+     37.882724,
+     -4.78318
+    ]
+   ],
+   "pct_en_calles_lista": 76
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "animas-cordoba": {
+  "publicado": {
+   "largo_m": 4299,
+   "comprobables": 21,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 20,
+   "no_recorridas": [
+    "Puerta Nueva (0 m)"
+   ],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882755,
+     -4.770804
+    ]
+   ],
+   "pct_en_calles_lista": 86
+  },
+  "nuevo": {
+   "largo_m": 4299,
+   "comprobables": 21,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 20,
+   "no_recorridas": [
+    "Puerta Nueva (0 m)"
+   ],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882755,
+     -4.770804
+    ]
+   ],
+   "pct_en_calles_lista": 86
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-agonia-cordoba": {
+  "publicado": {
+   "largo_m": 6874,
+   "comprobables": 26,
+   "sin_dato": [
+    "Conquistador Ordoño",
+    "Pintor Monrroy",
+    "Santa Flora y María"
+   ],
+   "recorridas": 26,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 12,
+   "sede_salida": "templo en OSM: Santuario de la Fuensanta",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.896208,
+     -4.774158
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "nuevo": {
+   "largo_m": 6874,
+   "comprobables": 26,
+   "sin_dato": [
+    "Conquistador Ordoño",
+    "Pintor Monrroy",
+    "Santa Flora y María"
+   ],
+   "recorridas": 26,
+   "en_orden": 25,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 12,
+   "sede_salida": "templo en OSM: Santuario de la Fuensanta",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 155,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.896208,
+     -4.774158
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-universitaria-cordoba": {
+  "publicado": {
+   "largo_m": 4445,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de San Rafael",
+   "sede_entrada": "templo en OSM: Iglesia de San Rafael",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 90
+  },
+  "nuevo": {
+   "largo_m": 4445,
+   "comprobables": 28,
+   "sin_dato": [],
+   "recorridas": 28,
+   "en_orden": 28,
+   "no_recorridas": [],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de San Rafael",
+   "sede_entrada": "templo en OSM: Iglesia de San Rafael",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 90
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-sangre-cordoba": {
+  "publicado": {
+   "largo_m": 3599,
+   "comprobables": 16,
+   "sin_dato": [
+    "jardines de Fray Ricardo",
+    "Paz y Esperanza"
+   ],
+   "recorridas": 16,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "rectas_150": [],
+   "tramo_max_m": 154,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.887332,
+     -4.778366
+    ],
+    [
+     37.88541,
+     -4.776177
+    ],
+    [
+     37.88541,
+     -4.776177
+    ]
+   ],
+   "pct_en_calles_lista": 93
+  },
+  "nuevo": {
+   "largo_m": 3599,
+   "comprobables": 16,
+   "sin_dato": [
+    "jardines de Fray Ricardo",
+    "Paz y Esperanza"
+   ],
+   "recorridas": 16,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "rectas_150": [],
+   "tramo_max_m": 154,
+   "retrocesos": 3,
+   "donde_retrocesos": [
+    [
+     37.887332,
+     -4.778366
+    ],
+    [
+     37.88541,
+     -4.776177
+    ],
+    [
+     37.88541,
+     -4.776177
+    ]
+   ],
+   "pct_en_calles_lista": 93
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-buen-suceso-cordoba": {
+  "publicado": {
+   "largo_m": 3689,
+   "comprobables": 19,
+   "sin_dato": [],
+   "recorridas": 19,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Andrés",
+   "sede_entrada": "templo en OSM: Iglesia de San Andrés",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "nuevo": {
+   "largo_m": 3689,
+   "comprobables": 19,
+   "sin_dato": [],
+   "recorridas": 19,
+   "en_orden": 18,
+   "no_recorridas": [],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Andrés",
+   "sede_entrada": "templo en OSM: Iglesia de San Andrés",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-santa-faz-cordoba": {
+  "publicado": {
+   "largo_m": 3035,
+   "comprobables": 23,
+   "sin_dato": [
+    "Campo Santos Mártires"
+   ],
+   "recorridas": 22,
+   "en_orden": 20,
+   "no_recorridas": [
+    "paseo de La Victoria (15 m)"
+   ],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "rectas_150": [],
+   "tramo_max_m": 142,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.880821,
+     -4.784889
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "nuevo": {
+   "largo_m": 3035,
+   "comprobables": 23,
+   "sin_dato": [
+    "Campo Santos Mártires"
+   ],
+   "recorridas": 22,
+   "en_orden": 20,
+   "no_recorridas": [
+    "paseo de La Victoria (15 m)"
+   ],
+   "salida_m": 7,
+   "entrada_m": 7,
+   "sede_salida": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "sede_entrada": "templo en OSM: Iglesia de San Juan y Todos los Santos",
+   "rectas_150": [],
+   "tramo_max_m": 142,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.880821,
+     -4.784889
+    ]
+   ],
+   "pct_en_calles_lista": 79
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-prendimiento-cordoba": {
+  "publicado": {
+   "largo_m": 4565,
+   "comprobables": 29,
+   "sin_dato": [
+    "plaza de Juan Bernier"
+   ],
+   "recorridas": 28,
+   "en_orden": 26,
+   "no_recorridas": [
+    "plaza del Potro (15 m)"
+   ],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "templo en OSM: Santuario Maria Auxiliadora",
+   "sede_entrada": "templo en OSM: Santuario Maria Auxiliadora",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.889218,
+     -4.767393
+    ],
+    [
+     37.880813,
+     -4.774592
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 4565,
+   "comprobables": 29,
+   "sin_dato": [
+    "plaza de Juan Bernier"
+   ],
+   "recorridas": 28,
+   "en_orden": 26,
+   "no_recorridas": [
+    "plaza del Potro (15 m)"
+   ],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "templo en OSM: Santuario Maria Auxiliadora",
+   "sede_entrada": "templo en OSM: Santuario Maria Auxiliadora",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.889218,
+     -4.767393
+    ],
+    [
+     37.880813,
+     -4.774592
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-perdon-cordoba": {
+  "publicado": {
+   "largo_m": 3972,
+   "comprobables": 25,
+   "sin_dato": [
+    "Campo de los Santos Mártires"
+   ],
+   "recorridas": 25,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.882723,
+     -4.783219
+    ],
+    [
+     37.882632,
+     -4.781718
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
+  "nuevo": {
+   "largo_m": 4099,
+   "comprobables": 25,
+   "sin_dato": [
+    "Campo de los Santos Mártires"
+   ],
+   "recorridas": 25,
+   "en_orden": 24,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.882723,
+     -4.783219
+    ],
+    [
+     37.882632,
+     -4.781718
+    ]
+   ],
+   "pct_en_calles_lista": 82
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 23→24"
+   ]
+  }
+ },
+ "la-paz-cordoba": {
+  "publicado": {
+   "largo_m": 4911,
+   "comprobables": 29,
+   "sin_dato": [
+    "Gondomar",
+    "Campo Santos Mártires",
+    "JARDINES DE LA MERCED"
+   ],
+   "recorridas": 28,
+   "en_orden": 27,
+   "no_recorridas": [
+    "PUERTA DE ALMODÓVAR (14 m)"
+   ],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "rectas_150": [],
+   "tramo_max_m": 134,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882884,
+     -4.784695
+    ]
+   ],
+   "pct_en_calles_lista": 87
+  },
+  "nuevo": {
+   "largo_m": 4911,
+   "comprobables": 29,
+   "sin_dato": [
+    "Gondomar",
+    "Campo Santos Mártires",
+    "JARDINES DE LA MERCED"
+   ],
+   "recorridas": 28,
+   "en_orden": 27,
+   "no_recorridas": [
+    "PUERTA DE ALMODÓVAR (14 m)"
+   ],
+   "salida_m": 2,
+   "entrada_m": 2,
+   "sede_salida": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "sede_entrada": "templo en OSM: Iglesia Conventual del Santo Ángel",
+   "rectas_150": [],
+   "tramo_max_m": 134,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.882884,
+     -4.784695
+    ]
+   ],
+   "pct_en_calles_lista": 87
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-calvario-cordoba": {
+  "publicado": {
+   "largo_m": 4107,
+   "comprobables": 21,
+   "sin_dato": [
+    "IGLESIA DE SAN ANDRES",
+    "IGLESIA SAN ANDRES",
+    "Iglesia de San Andrés Iglesia de San Andrés"
+   ],
+   "recorridas": 21,
+   "en_orden": 20,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 4107,
+   "comprobables": 21,
+   "sin_dato": [
+    "IGLESIA DE SAN ANDRES",
+    "IGLESIA SAN ANDRES",
+    "Iglesia de San Andrés Iglesia de San Andrés"
+   ],
+   "recorridas": 21,
+   "en_orden": 20,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Lorenzo",
+   "sede_entrada": "templo en OSM: Iglesia de San Lorenzo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-misericordia-cordoba": {
+  "publicado": {
+   "largo_m": 3422,
+   "comprobables": 17,
+   "sin_dato": [
+    "Arco Bajo de la Corredera",
+    "Arco Alto de la Corredera",
+    "Don Rorigo"
+   ],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 91
+  },
+  "nuevo": {
+   "largo_m": 3422,
+   "comprobables": 17,
+   "sin_dato": [
+    "Arco Bajo de la Corredera",
+    "Arco Alto de la Corredera",
+    "Don Rorigo"
+   ],
+   "recorridas": 17,
+   "en_orden": 16,
+   "no_recorridas": [],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 91
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-pasion-cordoba": {
+  "publicado": {
+   "largo_m": 2143,
+   "comprobables": 15,
+   "sin_dato": [
+    "Arco de Caballerizas",
+    "Campo Santos Mártires",
+    "Arco de Caballerizas"
+   ],
+   "recorridas": 15,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de la Paz",
+   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de la Paz",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "nuevo": {
+   "largo_m": 2143,
+   "comprobables": 15,
+   "sin_dato": [
+    "Arco de Caballerizas",
+    "Campo Santos Mártires",
+    "Arco de Caballerizas"
+   ],
+   "recorridas": 15,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de la Paz",
+   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de la Paz",
+   "rectas_150": [],
+   "tramo_max_m": 130,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-piedad-cordoba": {
+  "publicado": {
+   "largo_m": 12005,
+   "comprobables": 44,
+   "sin_dato": [
+    "Jardines de La Victoria",
+    "SANTA TERESA JOURNET",
+    "CAMPO SANTOS MÁRTIRES",
+    "PLAZA DE TOROS",
+    "PUENTE",
+    "INGENIERO BENITO ARANDA"
+   ],
+   "recorridas": 41,
+   "en_orden": 39,
+   "no_recorridas": [
+    "carretera de Palma del Río (0 m)",
+    "CTRA PALMA DEL RIO (0 m)",
+    "CTRA PALMA DEL RIO (0 m)"
+   ],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 240,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     37.882263,
+     -4.820577
+    ],
+    [
+     37.88161,
+     -4.809723
+    ],
+    [
+     37.881812,
+     -4.790594
+    ],
+    [
+     37.881261,
+     -4.786404
+    ],
+    [
+     37.881647,
+     -4.793847
+    ]
+   ],
+   "pct_en_calles_lista": 66
+  },
+  "nuevo": {
+   "largo_m": 12005,
+   "comprobables": 44,
+   "sin_dato": [
+    "Jardines de La Victoria",
+    "SANTA TERESA JOURNET",
+    "CAMPO SANTOS MÁRTIRES",
+    "PLAZA DE TOROS",
+    "PUENTE",
+    "INGENIERO BENITO ARANDA"
+   ],
+   "recorridas": 41,
+   "en_orden": 39,
+   "no_recorridas": [
+    "carretera de Palma del Río (0 m)",
+    "CTRA PALMA DEL RIO (0 m)",
+    "CTRA PALMA DEL RIO (0 m)"
+   ],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 240,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     37.882263,
+     -4.820577
+    ],
+    [
+     37.88161,
+     -4.809723
+    ],
+    [
+     37.881812,
+     -4.790594
+    ],
+    [
+     37.881261,
+     -4.786404
+    ],
+    [
+     37.881647,
+     -4.793847
+    ]
+   ],
+   "pct_en_calles_lista": 66
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "jesus-nazareno-cordoba": {
+  "publicado": {
+   "largo_m": 3968,
+   "comprobables": 19,
+   "sin_dato": [],
+   "recorridas": 19,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "nuevo": {
+   "largo_m": 3968,
+   "comprobables": 19,
+   "sin_dato": [],
+   "recorridas": 19,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 15,
+   "entrada_m": 15,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-caridad-cordoba": {
+  "publicado": {
+   "largo_m": 3193,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "sede_entrada": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "nuevo": {
+   "largo_m": 3193,
+   "comprobables": 20,
+   "sin_dato": [],
+   "recorridas": 20,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "sede_entrada": "templo en OSM: Iglesia de San Francisco y San Eulogio",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "jesus-caido-cordoba": {
+  "publicado": {
+   "largo_m": 5380,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 27,
+   "entrada_m": 27,
+   "sede_salida": "templo en OSM: Iglesia de San Cayetano",
+   "sede_entrada": "templo en OSM: Iglesia de San Cayetano",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.888726,
+     -4.774176
+    ],
+    [
+     37.889541,
+     -4.775109
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
+  "nuevo": {
+   "largo_m": 5380,
+   "comprobables": 31,
+   "sin_dato": [],
+   "recorridas": 31,
+   "en_orden": 29,
+   "no_recorridas": [],
+   "salida_m": 27,
+   "entrada_m": 27,
+   "sede_salida": "templo en OSM: Iglesia de San Cayetano",
+   "sede_entrada": "templo en OSM: Iglesia de San Cayetano",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 2,
+   "donde_retrocesos": [
+    [
+     37.888726,
+     -4.774176
+    ],
+    [
+     37.889541,
+     -4.775109
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-cena-cordoba": {
+  "publicado": {
+   "largo_m": 7750,
+   "comprobables": 22,
+   "sin_dato": [
+    "JARDINES DE VALLELLANO",
+    "Jardines de Vallellano",
+    "Alcalde Veasco Navarro"
+   ],
+   "recorridas": 22,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 22,
+   "entrada_m": 22,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 346,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     37.877324,
+     -4.787058
+    ],
+    [
+     37.877324,
+     -4.787058
+    ],
+    [
+     37.875416,
+     -4.786423
+    ],
+    [
+     37.878498,
+     -4.786139
+    ],
+    [
+     37.879485,
+     -4.787495
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
+  "nuevo": {
+   "largo_m": 7750,
+   "comprobables": 22,
+   "sin_dato": [
+    "JARDINES DE VALLELLANO",
+    "Jardines de Vallellano",
+    "Alcalde Veasco Navarro"
+   ],
+   "recorridas": 22,
+   "en_orden": 22,
+   "no_recorridas": [],
+   "salida_m": 22,
+   "entrada_m": 22,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 346,
+   "retrocesos": 5,
+   "donde_retrocesos": [
+    [
+     37.877324,
+     -4.787058
+    ],
+    [
+     37.877324,
+     -4.787058
+    ],
+    [
+     37.875416,
+     -4.786423
+    ],
+    [
+     37.878498,
+     -4.786139
+    ],
+    [
+     37.879485,
+     -4.787495
+    ]
+   ],
+   "pct_en_calles_lista": 81
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "las-angustias-cordoba": {
+  "publicado": {
+   "largo_m": 4163,
+   "comprobables": 24,
+   "sin_dato": [
+    "Reja de Don Gome",
+    "paseo e la Ribera"
+   ],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 13,
+   "entrada_m": 13,
+   "sede_salida": "templo en OSM: Iglesia Conventual de San Agustin",
+   "sede_entrada": "templo en OSM: Iglesia Conventual de San Agustin",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "nuevo": {
+   "largo_m": 4163,
+   "comprobables": 24,
+   "sin_dato": [
+    "Reja de Don Gome",
+    "paseo e la Ribera"
+   ],
+   "recorridas": 24,
+   "en_orden": 23,
+   "no_recorridas": [],
+   "salida_m": 13,
+   "entrada_m": 13,
+   "sede_salida": "templo en OSM: Iglesia Conventual de San Agustin",
+   "sede_entrada": "templo en OSM: Iglesia Conventual de San Agustin",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 94
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "cristo-de-gracia-el-esparraguero-cordoba": {
+  "publicado": {
+   "largo_m": 5070,
+   "comprobables": 27,
+   "sin_dato": [
+    "plaza Santísimo Cristo de Gracia"
+   ],
+   "recorridas": 26,
+   "en_orden": 26,
+   "no_recorridas": [
+    "glorieta de Puerta Nueva (0 m)"
+   ],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "rectas_150": [],
+   "tramo_max_m": 183,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 5070,
+   "comprobables": 27,
+   "sin_dato": [
+    "plaza Santísimo Cristo de Gracia"
+   ],
+   "recorridas": 26,
+   "en_orden": 26,
+   "no_recorridas": [
+    "glorieta de Puerta Nueva (0 m)"
+   ],
+   "salida_m": 1,
+   "entrada_m": 1,
+   "sede_salida": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "sede_entrada": "templo en OSM: Iglesia de Nuestra Señora de Gracia",
+   "rectas_150": [],
+   "tramo_max_m": 183,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-buena-muerte-cordoba": {
+  "publicado": {
+   "largo_m": 3023,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 22,
+   "en_orden": 23,
+   "no_recorridas": [
+    "Alonso de Burgos (14 m)"
+   ],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 134,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "nuevo": {
+   "largo_m": 3023,
+   "comprobables": 23,
+   "sin_dato": [],
+   "recorridas": 22,
+   "en_orden": 23,
+   "no_recorridas": [
+    "Alonso de Burgos (14 m)"
+   ],
+   "salida_m": 4,
+   "entrada_m": 4,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 134,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 83
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "santo-sepulcro-cordoba": {
+  "publicado": {
+   "largo_m": 2927,
+   "comprobables": 15,
+   "sin_dato": [],
+   "recorridas": 15,
+   "en_orden": 14,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia del Salvador y Santo Domingo de Silos",
+   "sede_entrada": "templo en OSM: Iglesia del Salvador y Santo Domingo de Silos",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "nuevo": {
+   "largo_m": 2927,
+   "comprobables": 15,
+   "sin_dato": [],
+   "recorridas": 15,
+   "en_orden": 14,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia del Salvador y Santo Domingo de Silos",
+   "sede_entrada": "templo en OSM: Iglesia del Salvador y Santo Domingo de Silos",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 93
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-soledad-cordoba": {
+  "publicado": {
+   "largo_m": 6249,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 34,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 200,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 96
+  },
+  "nuevo": {
+   "largo_m": 6737,
+   "comprobables": 36,
+   "sin_dato": [],
+   "recorridas": 36,
+   "en_orden": 35,
+   "no_recorridas": [],
+   "salida_m": null,
+   "entrada_m": null,
+   "sede_salida": null,
+   "sede_entrada": null,
+   "rectas_150": [],
+   "tramo_max_m": 200,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 95
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 34→35"
+   ]
+  }
+ },
+ "la-expiracion-cordoba": {
+  "publicado": {
+   "largo_m": 2738,
+   "comprobables": 17,
+   "sin_dato": [
+    "Compás de San Pablo",
+    "Arco de San Francisco"
+   ],
+   "recorridas": 17,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 31,
+   "entrada_m": 31,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.885479,
+     -4.776137
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "nuevo": {
+   "largo_m": 2738,
+   "comprobables": 17,
+   "sin_dato": [
+    "Compás de San Pablo",
+    "Arco de San Francisco"
+   ],
+   "recorridas": 17,
+   "en_orden": 17,
+   "no_recorridas": [],
+   "salida_m": 31,
+   "entrada_m": 31,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.885479,
+     -4.776137
+    ]
+   ],
+   "pct_en_calles_lista": 92
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-descendimiento-cordoba": {
+  "publicado": {
+   "largo_m": 2902,
+   "comprobables": 15,
+   "sin_dato": [
+    "Calahorra",
+    "PUENTE ROMANO ENTRADA",
+    "Calahorra"
+   ],
+   "recorridas": 15,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia San José Espíritu Santo",
+   "sede_entrada": "templo en OSM: Parroquia San José Espíritu Santo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     37.874308,
+     -4.77366
+    ],
+    [
+     37.875154,
+     -4.774572
+    ],
+    [
+     37.875154,
+     -4.774572
+    ],
+    [
+     37.874308,
+     -4.77366
+    ]
+   ],
+   "pct_en_calles_lista": 78
+  },
+  "nuevo": {
+   "largo_m": 2902,
+   "comprobables": 15,
+   "sin_dato": [
+    "Calahorra",
+    "PUENTE ROMANO ENTRADA",
+    "Calahorra"
+   ],
+   "recorridas": 15,
+   "en_orden": 15,
+   "no_recorridas": [],
+   "salida_m": 3,
+   "entrada_m": 3,
+   "sede_salida": "templo en OSM: Parroquia San José Espíritu Santo",
+   "sede_entrada": "templo en OSM: Parroquia San José Espíritu Santo",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 4,
+   "donde_retrocesos": [
+    [
+     37.874308,
+     -4.77366
+    ],
+    [
+     37.875154,
+     -4.774572
+    ],
+    [
+     37.875154,
+     -4.774572
+    ],
+    [
+     37.874308,
+     -4.77366
+    ]
+   ],
+   "pct_en_calles_lista": 78
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "la-conversion-cordoba": {
+  "publicado": {
+   "largo_m": 9472,
+   "comprobables": 30,
+   "sin_dato": [
+    "Manuel Fuentes Bocanegra",
+    "PERPETUO SOCORRO",
+    "Jardines de Vallellano",
+    "jardines de Vallellano",
+    "PERPETUO SOCORRO"
+   ],
+   "recorridas": 28,
+   "en_orden": 25,
+   "no_recorridas": [
+    "carretera de Palma del Río (0 m)",
+    "carretera de Palma del Río (0 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Nuestra Señora del Rosario",
+   "sede_entrada": "templo en OSM: Nuestra Señora del Rosario",
+   "rectas_150": [],
+   "tramo_max_m": 300,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 50
+  },
+  "nuevo": {
+   "largo_m": 9795,
+   "comprobables": 30,
+   "sin_dato": [
+    "Manuel Fuentes Bocanegra",
+    "PERPETUO SOCORRO",
+    "Jardines de Vallellano",
+    "jardines de Vallellano",
+    "PERPETUO SOCORRO"
+   ],
+   "recorridas": 28,
+   "en_orden": 26,
+   "no_recorridas": [
+    "carretera de Palma del Río (0 m)",
+    "carretera de Palma del Río (0 m)"
+   ],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Nuestra Señora del Rosario",
+   "sede_entrada": "templo en OSM: Nuestra Señora del Rosario",
+   "rectas_150": [],
+   "tramo_max_m": 300,
+   "retrocesos": 0,
+   "donde_retrocesos": [],
+   "pct_en_calles_lista": 52
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "en orden 25→26"
+   ]
+  }
+ },
+ "los-dolores-cordoba": {
+  "publicado": {
+   "largo_m": 4824,
+   "comprobables": 26,
+   "sin_dato": [
+    "plaza de las Tenddillas",
+    "Torres Cabrera"
+   ],
+   "recorridas": 26,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 132,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.885758,
+     -4.77974
+    ]
+   ],
+   "pct_en_calles_lista": 80
+  },
+  "nuevo": {
+   "largo_m": 4824,
+   "comprobables": 26,
+   "sin_dato": [
+    "plaza de las Tenddillas",
+    "Torres Cabrera"
+   ],
+   "recorridas": 26,
+   "en_orden": 26,
+   "no_recorridas": [],
+   "salida_m": 10,
+   "entrada_m": 10,
+   "sede_salida": "punto fijado (alias)",
+   "sede_entrada": "punto fijado (alias)",
+   "rectas_150": [],
+   "tramo_max_m": 132,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.885758,
+     -4.77974
+    ]
+   ],
+   "pct_en_calles_lista": 80
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "dolores-de-alcolea-cordoba": {
+  "publicado": {
+   "largo_m": 1348,
+   "comprobables": 10,
+   "sin_dato": [
+    "PRACTICANTE PEDRO BERNÁ"
+   ],
+   "recorridas": 10,
+   "en_orden": 9,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "rectas_150": [],
+   "tramo_max_m": 154,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.931095,
+     -4.674533
+    ]
+   ],
+   "pct_en_calles_lista": 72
+  },
+  "nuevo": {
+   "largo_m": 1348,
+   "comprobables": 10,
+   "sin_dato": [
+    "PRACTICANTE PEDRO BERNÁ"
+   ],
+   "recorridas": 10,
+   "en_orden": 9,
+   "no_recorridas": [],
+   "salida_m": 5,
+   "entrada_m": 5,
+   "sede_salida": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "sede_entrada": "templo en OSM: Parroquia de Nuestra Señora de Los Ángeles",
+   "rectas_150": [],
+   "tramo_max_m": 154,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.931095,
+     -4.674533
+    ]
+   ],
+   "pct_en_calles_lista": 72
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ },
+ "el-resucitado-cordoba": {
+  "publicado": {
+   "largo_m": 3944,
+   "comprobables": 19,
+   "sin_dato": [
+    "PLAZA RUIZ DE ALDA"
+   ],
+   "recorridas": 19,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "sede_entrada": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.889177,
+     -4.776662
+    ]
+   ],
+   "pct_en_calles_lista": 74
+  },
+  "nuevo": {
+   "largo_m": 3944,
+   "comprobables": 19,
+   "sin_dato": [
+    "PLAZA RUIZ DE ALDA"
+   ],
+   "recorridas": 19,
+   "en_orden": 19,
+   "no_recorridas": [],
+   "salida_m": 0,
+   "entrada_m": 0,
+   "sede_salida": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "sede_entrada": "templo en OSM: Iglesia de Santa Marina de Aguas Santas",
+   "rectas_150": [],
+   "tramo_max_m": 151,
+   "retrocesos": 1,
+   "donde_retrocesos": [
+    [
+     37.889177,
+     -4.776662
+    ]
+   ],
+   "pct_en_calles_lista": 74
+  },
+  "decision": {
+   "queda": "nuevo",
+   "motivo": [
+    "empate"
+   ]
+  }
+ }
+}
