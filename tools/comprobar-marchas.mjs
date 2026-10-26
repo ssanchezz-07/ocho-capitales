@@ -75,6 +75,11 @@ for (const m of U.marchas) {
   const porH = new Map(); for (const m of U.marchas) if (m.dedicatoria && m.dedicatoria.hermandad) { const k = m.dedicatoria.hermandad + '|' + kt(m.titulo) + '|' + ap(m.autor).sort().join(' ') + '|' + norm(m.formacion); if (porH.has(k)) err(m, `dedicatoria repetida en ${m.dedicatoria.hermandad} (también ${porH.get(k)})`); else porH.set(k, m.slug); }
   console.log(`duplicados: ${dups}`);
 }
+// Bandas: dos fichas con el mismo nombre y la misma localidad son la misma banda partida en dos (Jesús Despojado, 27-oct)
+{
+  const vistas = new Map();
+  for (const b of P.bandas) { const k = norm(b.nombre) + '|' + norm(b.localidad); if (vistas.has(k)) errores.push(`banda duplicada: ${b.slug} y ${vistas.get(k)} («${b.nombre}», ${b.localidad})`); else vistas.set(k, b.slug); }
+}
 // alias: no chocan con otra marcha
 for (const m of U.marchas) for (const a of m.alias || []) if (slugs.has(a) && a !== m.slug) err(m, `alias ${a} es la dirección de otra marcha`);
 // direcciones publicadas: siguen existiendo o redirigen

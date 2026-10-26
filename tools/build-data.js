@@ -293,8 +293,9 @@ const bandOut = [...bandas.values()].map((b) => {
   const origen = (capitales.find((c) => norm0(c.nombre) === loc) || {}).slug || LOCS[loc] || '';
   return { ...b, slug: base, origen };
 }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
-// slugs de banda únicos
-const bs = new Set(); for (const b of bandOut) { let s = b.slug, i = 2; while (bs.has(s)) s = b.slug + '-' + i++; bs.add(s); b.slug = s; }
+// La misma banda (mismo nombre y misma localidad) que acompaña en varias capitales es una sola ficha: se juntan sus
+// acompañamientos. Antes salía partida en dos («…-jaen» y «…-jaen-2», la Agrupación Musical Jesús Despojado).
+{ const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) p.acompana.push(...(b.acompana || [])); else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
 // ids de banda por hermandad
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));
 for (const h of hermandades) h.bandas_slugs = h.bandas.map((n) => bandBySlugName.get(n.toLowerCase())).filter(Boolean);
