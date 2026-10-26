@@ -68,9 +68,7 @@ Se puede abrir el editor con `tools/itinerarios/editor/Abrir editor de rutas.bat
 Las respuestas que Pablo pegó en el chat se comprobaron una a una en OpenStreetMap. Solo se aplicó lo que cuadra con el mapa y con el orden de las listas oficiales.
 
 **Sedes: las 42 localizadas.** Salida y entrada quedan a 0-31 m.
-- **La O:** Plaza Mahatma Gandhi s/n. El punto es el centro de la plaza.
-  - El edificio que OSM llama «Parroquia de la Asunción» (way 96693634) está **a 20 m de esta plaza**, no en la Plaza de la Marina Española (a 3,9 km), como decía la respuesta pegada.
-  - Puede que sea la propia Aurora mal nombrada en OSM. **Pendiente de confirmar.**
+- **La O:** Parroquia de la Aurora, en la Plaza Mahatma Gandhi. El punto es el edificio de OSM way 96693634, que OSM llama por error «Parroquia de la Asunción»; Pablo confirmó que es la Aurora. **Habría que corregir ese nombre en OSM.**
 - **Perdón:** Calle Buen Pastor 17. El punto es la puerta de OSM con esa dirección (node 13060087577).
 - **Soledad:** el templo «Franciscanos» de OSM (way 556809635), en la calle 28 de Febrero. Confirmado que en 2026 salió del templo.
 - **Piedad:** Calle Sierra Nevada 1, en la esquina con Sierra de Guadarrama, que es su primera calle oficial. El punto es ese cruce, porque el edificio no está en OSM.
@@ -89,11 +87,13 @@ Las respuestas que Pablo pegó en el chat se comprobaron una a una en OpenStreet
 - **Paz y Esperanza:** Plaza de Capuchinos (Sangre).
 - **Jardines de la Merced:** Plaza de Colón (Paz).
 - **Jardines de Vallellano:** Avenida Conde de Vallellano (Cena y Conversión).
+- **Plaza Ruiz de Alda:** hoy es la Plaza Puerta del Rincón (dato de Pablo). En OSM toca Alfaros y queda a 27 m del Pasaje de la Estrella. El Resucitado recorre ahora 20/20.
 - **Soldado Diego García Paredes:** Calle Soldado García Paredes (Presentación, que ahora recorre 41/41).
 - **Arco de Caballerizas:** punto en el cruce de Caballerizas Reales con Enmedio, que es su sitio en la lista (Enmedio → Arco → Caballerizas Reales). La Pasión recorre ahora 17/17.
 
 **No aplicados porque no cuadran con el mapa o con la lista:**
-- **Plaza Ruiz de Alda = Plaza de Santa Marina (Resucitado):** en la lista va entre el Pasaje de la Estrella y Alfaros. La Plaza de Santa Marina está a 216 m de Alfaros, mientras que el Pasaje de la Estrella y Alfaros están a 154 m entre sí. Sigue sin trazarse.
+- **Plaza Ruiz de Alda = Plaza de Santa Marina (Resucitado):** en la lista va entre el Pasaje de la Estrella y Alfaros, y la Plaza de Santa Marina está a 216 m de Alfaros. Después Pablo dio el dato bueno: es la Plaza Puerta del Rincón.
+- **Conversión, «entra por Periodista Quesada Chacón y Camino de los Sastres hasta Manuel Fuentes Bocanegra»:** Periodista Quesada Chacón no está en OSM. Camino de los Sastres queda a 619 m de Bocanegra y en la lista oficial va después de Antonio Maura. Se deja el tramo automático.
 - **Conversión, «de Electromecánicas a Manuel Fuentes Bocanegra por Manolete y Antonio Maura»:** la lista pone Bocanegra antes de la Avenida de Manolete. Se deja el tramo automático.
 - **Jardines de la Agricultura (Estrella), «Avenida de América o de los Mozárabes»:** ninguna de las dos toca a la vez el Paseo de las Margaritas y Alonso de Burgos. Pablo dio el tramo por bueno.
 - **Calahorra:** la respuesta («Acera del Arrecife o la Bajada del Puente») no es concreta. El trazado ya pasa entre la Bajada del Puente y el Puente Romano, que es donde está la torre.
@@ -109,12 +109,11 @@ Las respuestas que Pablo pegó en el chat se comprobaron una a una en OpenStreet
 
 **Siguen sin calle en OSM** (no se trazan; no se inventa):
 - Practicante Pedro Berná, en Alcolea (Pablo: déjalo así).
-- Plaza Ruiz de Alda.
 - «puerta de San Catalina», errata de la prensa.
 
 ## Punto exacto (2026-10-26)
 **Córdoba publicada entera.** Tercera vuelta: datos de Pablo comprobados y aplicados, 42 hermandades retrazadas, todas «nuevo» en el evaluador. Comprobado con Playwright a 1440 y 390 px, sin errores de consola.
 
-**Único pendiente:** confirmar si el edificio de OSM junto a la Plaza Mahatma Gandhi es la Aurora (La O) y qué es hoy la Plaza Ruiz de Alda.
+**Nada pendiente de datos.** Mejora opcional: corregir en OpenStreetMap el nombre de la Parroquia de la Aurora (way 96693634).
 
 Para rehacer: `node rutas/emparejar.mjs cordoba <id>`, `evaluar`, `publicar`, build y Playwright.
