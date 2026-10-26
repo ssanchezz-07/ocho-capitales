@@ -1,5 +1,6 @@
 // Ocho Capitales: trae a tu copia local las noticias y agendas que el bot lee cada hora.
-// Desde el 2026-10-25 no están en main sino en la rama «datos» (un único commit que se reescribe; ver tools/datos-rama.sh).
+// Desde el 2026-10-26 el bot las guarda en la rama «datos» (un único commit que se reescribe; ver tools/datos-rama.sh);
+// las copias de main se quedan fijas en esa fecha.
 // Uso: node tools/traer-datos.mjs   (desde la raíz del proyecto; luego, node site/build.mjs)
 import fs from 'node:fs';
 import path from 'node:path';

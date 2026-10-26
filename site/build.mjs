@@ -13,7 +13,7 @@ const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
-// news.json y las agendas automáticas viven en la rama «datos», no en main (así el historial no crece cada hora)
+// news.json y las agendas automáticas: el bot las guarda en la rama «datos» (así el historial de main no crece cada hora)
 if (!fs.existsSync(NEWS_FILE)) console.warn('Aviso: falta site/data/news.json; para tener las noticias del día ejecuta «node tools/traer-datos.mjs» desde la raíz.');
 // Eventos verificados a mano (prioridad sobre los detectados en noticias).
 const EVENTOS_FILE = path.join(DIR, '..', 'portal-cofrade', 'data', 'eventos.json');
@@ -1429,6 +1429,6 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
-searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); escribeCabeceras({ DIST, BASE, SITE });
+searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

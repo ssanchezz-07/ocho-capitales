@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Ocho Capitales: los archivos que escribe el bot cada hora (noticias y agendas) viven en la rama «datos», no en main.
+# Ocho Capitales: los archivos que escribe el bot cada hora (noticias y agendas) se guardan en la rama «datos», no en main.
 # La rama tiene siempre un único commit que se reescribe, así el historial no crece (~100 MB al mes cuando iban en main).
+# En main siguen las copias del 2026-10-26 (para no romper las copias locales de nadie), pero ya no se actualizan.
 # Uso (en GitHub Actions, desde la raíz del repo):
 #   bash tools/datos-rama.sh traer     → copia los archivos de la rama datos a su sitio
 #   bash tools/datos-rama.sh guardar   → sube los archivos actuales a la rama datos (un solo commit, forzado)
@@ -14,15 +15,8 @@ case "${1:-}" in
       for f in $ARCHIVOS; do mkdir -p "$(dirname "$f")"; git show "FETCH_HEAD:$f" > "$f" 2>/dev/null || { rm -f "$f"; echo "::notice::$f no está en la rama datos"; }; done
       echo "Datos traídos de la rama datos ($(git log -1 --format=%cd FETCH_HEAD))"
     else
-      # Primera vez: la última versión que hubo en main antes de sacarlos de ahí
-      echo "::notice::Aún no existe la rama datos: se parte de la última versión guardada en main"
-      git fetch -q --unshallow origin main 2>/dev/null || true
-      H=$(git rev-list -n1 HEAD -- site/data/news.json)
-      for f in $ARCHIVOS; do
-        mkdir -p "$(dirname "$f")"
-        if [ -f "$f" ]; then continue; fi
-        git show "$H^:$f" > "$f" 2>/dev/null || { rm -f "$f"; echo "::notice::$f no está en el historial"; }
-      done
+      # Primera vez: se parte de las copias que hay en main
+      echo "::notice::Aún no existe la rama datos: se parte de las copias de main"
     fi
     ;;
   guardar)

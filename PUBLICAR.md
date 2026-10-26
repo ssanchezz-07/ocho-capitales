@@ -4,7 +4,7 @@
 Ocho Capitales se publica como **sitio estático**: páginas HTML ya generadas que se sirven desde la red de GitHub.
 - **Coste:** 0 €. GitHub Pages y GitHub Actions son gratuitos para repositorios públicos.
 - **Fluidez:** sin base de datos ni PHP; cada página se descarga ya hecha. Aguanta los picos de Semana Santa.
-- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada hora**, guarda `site/data/news.json` (en la rama `datos`, que se reescribe en cada lectura para que el historial no crezca) y vuelve a publicar. En local, `node tools/traer-datos.mjs` trae las noticias del día.
+- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada hora**, guarda `site/data/news.json` (en la rama `datos`, que se reescribe en cada lectura para que el historial no crezca; la copia de `main` ya no se actualiza) y vuelve a publicar. En local, `node tools/traer-datos.mjs` trae las noticias del día.
 - **La portada se recalcula sola:** la jornada de «Hoy» sale de la fecha de Pascua, así que cada año se ajusta sin tocar nada.
 
 ### Pasos (una sola vez)

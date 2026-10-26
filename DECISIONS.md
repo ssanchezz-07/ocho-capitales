@@ -183,14 +183,14 @@ Contexto: Pablo quiere que la web sea «vida, inmersión y facilidad de uso», y
 
 
 ## 2026-10-25 · Alojamiento, dominio y velocidad (sesión de infraestructura)
+
+> **Punto exacto (pausa del 2026-10-26 por lentitud del PC):** rama `claude/alojamiento-velocidad-18a2ee`, rebasada sobre `origin/main` (6cddfb3), **sin subir**.
+> - Hecho y verificado: compilación sin errores; Playwright a 390 y 1440 px (portada, Sevilla, buscar, noticias, colabora, En la calle de Málaga): 0 errores de consola, sin desbordes, service worker activo. Compila también con `BASE_PATH=/ocho-capitales/` (en Git Bash, con `MSYS_NO_PATHCONV=1`).
+> - Cambio de criterio: `news.json` y las agendas **no se borran de main** (protocolo, regla 5, y nueve sesiones activas); el bot deja de subirlas a main y las guarda en la rama `datos`.
+> - Siguiente: (1) que `escribeCabeceras` solo se llame con `BASE === '/'` (en GitHub Pages `_headers` se serviría como archivo); (2) subir y vigilar la primera ejecución de «Publicar Ocho Capitales» (crea la rama `datos`; GitHub Pages en verde, si no, revertir); (3) orden `EQUIPO/ORDEN-oc-alojamiento.md`: Colabora por correo, GitHub invisible, filtro de noticias (apartado 5), guía del dominio y velocidad.
+> - `site/dist-gh/` (prueba, fuera de git) no se pudo borrar: archivos bloqueados; borrarlo al volver.
 Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
 
-> **Punto exacto (pausa del 2026-10-25, ~23:10, por el límite de uso):** todo está en la rama `claude/alojamiento-velocidad-18a2ee`, rebasada sobre `origin/main` (8860e2e), **sin subir**. Falta, en este orden:
-> 1. `node site/build.mjs` y comprobar a 390 y 1440 px (portada, Sevilla, buscar, noticias) con el SW nuevo.
-> 2. Dudoso: Lighthouse dio `NO_NAVSTART` en 1 de 4 pasadas con el SW nuevo y en 0 de 4 sin él (Sevilla, PC). Repetir con la CPU libre; si se repite, probar sin `navigationPreload`.
-> 3. `git fetch` + `git rebase origin/main`, `git push origin HEAD:main` y **vigilar la primera ejecución de «Publicar Ocho Capitales»**: crea la rama `datos` a partir del historial (`tools/datos-rama.sh traer`, rama ausente) y GitHub Pages debe seguir en verde. Si falla, revertir el commit.
-> 4. Avisar a las demás sesiones: tras su próximo rebase, `site/data/news.json` y las agendas desaparecen de su copia; `node tools/traer-datos.mjs` las trae.
-> 5. Actualizar la nota del proyecto (E11/E12) desde la sesión principal: esta sesión no puede editarla.
 
 **Elegido: Cloudflare Pages como web principal; GitHub Pages sigue de copia** hasta que Cloudflare lleve una semana sin fallos.
 
@@ -204,7 +204,7 @@ Medidas en `INFORME-VELOCIDAD.md`; pasos para Pablo en `GUIA-ALOJAMIENTO.md`.
 | Dominio propio | Sí, con HTTPS | Sí, con HTTPS; y si el dominio está en Cloudflare, analítica gratis y redimensionado de imágenes |
 
 - **Despliegue:** subida directa desde Actions (`wrangler pages deploy`, trabajo `cloudflare` de `publicar.yml`), no la integración con Git de Cloudflare: el sitio ya se genera en Actions con las noticias del momento y así no se gastan las 500 compilaciones al mes. La documentación de Cloudflare no dice si las subidas directas cuentan para ese límite; por si acaso, la variable `CLOUDFLARE_CADA_HORAS = 2` reduce a 12 al día (360/mes).
-- **`news.json` fuera de main (K1):** el bot guarda noticias y agendas en la rama `datos`, que tiene siempre **un solo commit** reescrito en cada lectura (`tools/datos-rama.sh`). main deja de crecer ~100 MB al mes y deja de recibir 24 commits automáticos al día (menos choques al hacer `pull --rebase`). En local: `node tools/traer-datos.mjs`. **Falta, con el sí de Pablo:** limpiar las versiones antiguas del historial con `git filter-repo` (reescribe la historia: todas las sesiones tendrían que volver a clonar).
+- **Noticias fuera de main (K1):** el bot guarda noticias y agendas en la rama `datos`, que tiene siempre **un solo commit** reescrito en cada lectura (`tools/datos-rama.sh`). main deja de crecer ~100 MB al mes y deja de recibir 24 commits automáticos al día (menos choques al hacer `pull --rebase`). Las copias de `main` se quedan fijas a 2026-10-26 y no se borran: con nueve sesiones trabajando, borrarlas habría dado conflictos a todas (y el protocolo dice que nadie toque `news.json`). En local, las del día: `node tools/traer-datos.mjs`. **Falta, con el sí de Pablo:** limpiar las versiones antiguas del historial con `git filter-repo` (reescribe la historia: todas las sesiones tendrían que volver a clonar).
 - **Service worker** (`site/despliegue.mjs`): cachés con nombre fijo (antes se llamaba `oc-<fecha>` y cada publicación horaria borraba todo lo guardado para usar sin conexión); red primero con espera máxima de 2,5 s para páginas y datos (con poca cobertura se enseña la copia y se renueva detrás); recursos con huella y fuentes desde la copia sin preguntar; carcasa con las 8 colgaduras y las 2 fuentes; cachés con tope (120 páginas, 30 datos, 250 recursos); `navigationPreload`.
 - **Precarga** de las fuentes Karantina y Heebo (el titular de la portada es el LCP y espera a Karantina).
 - **Dominio:** empezar con `ocho-capitales.pages.dev` (gratis y ya reservado). Si se compra uno: `ochocapitales.es` (comprobado sin registrar; ~7 €/año en un registrador español, Cloudflare no vende `.es`) o `ochocapitales.com` (libre; ~10,5 $/año en Cloudflare a precio de coste). Recomendación: `.es`, por el público y el precio, con los DNS en Cloudflare (gratis).
