@@ -209,3 +209,22 @@ Pausa ordenada por Pablo (ordenador lento). **Nada subido**: todo está en la ra
 - **Calvario:** las tres menciones de la iglesia de San Andrés, que es el templo de la plaza por la que ya pasa, quedan omitidas como calle.
 - **Resultado:** 42/42 «nuevo», 987/1000 calles, 3 retrocesos, 0 rectas de más de 150 m y sedes a 49 m o menos.
 - **`probar-plano.py`:** 7/8. A 390 y 1440 px dibuja todas las jornadas, sin desbordamiento ni errores de consola. El único «fallo» es el Calvario, con 17 sitios para 29 puntos (59 % frente al 60 %): sale y vuelve por las mismas calles (San Lorenzo, Santa María de Gracia, Realejo, San Andrés y San Pablo), así que los puntos de ida y de regreso caen en los mismos cruces. Es legítimo y queda documentado.
+
+## Subidas del 2026-10-27
+- **a459718:** Córdoba, recorridos. Cerrados los 9 fallos de la segunda revisión.
+- **0d3de54:** sedes de Córdoba (`site/data/sedes/cordoba.json`).
+  - 41 de 44 templos y 2 casas hermandad: la Sentencia, en el Pasaje Saravia 2, y Dolores de Alcolea, en Cabo Carmona Chamizo 57.
+  - Correcciones con fuente en `rutas/sedes-cordoba-correcciones.json`.
+  - Faltan la Sangre (el monasterio que da la ficha no está en OSM) y dos pro hermandades: el Higuerón y Colonia de la Paz.
+- **b174489:** sedes de Granada y Jaén.
+  - **Granada:** 14 de 33.
+    - Seis emparejamientos dudosos con OSM se dejan sin punto, con su motivo (`rutas/sedes-granada-correcciones.json`): Resurrección, Cristo de San Agustín, Escolapios, Ferroviarios, Trabajo y Rescate.
+    - Siete fichas dan un barrio o un nombre que no es un templo.
+  - **Jaén:** 18 de 21. Faltan Cautivo (Santa Isabel de Portugal), Buena Muerte (Catedral) y el Abuelo.
+- **Pendiente:** cerrar la revisión al azar del 10 % y, después, situar con fuente las sedes que faltan de Granada (web de cada hermandad o de la Federación).
+- **Revisión al azar del 10 % (subagente, 2026-10-27): 11 de 11 correctas.**
+  - Muestra: Córdoba, 5 templos y las 2 casas hermandad; Granada, 2; Jaén, 2.
+  - Dos reservas menores:
+    - **La O:** OSM llama al edificio «Parroquia de la Asunción»; que es la Aurora lo confirmó Pablo.
+    - **Casa de los Dolores de Alcolea:** el punto es el centro de la parcela del Catastro, porque OSM no tiene el número 57.
+  - Sin homónimos lejanos.
