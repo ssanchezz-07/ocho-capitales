@@ -23,5 +23,8 @@
  "@Capilla de María Santísima de la Paloma": "Plaza de San Francisco, Málaga",
  "@Tribuna de los Pobres": "geo:36.72165,-4.42501",
  "_Tribuna de los Pobres": "Escalinata entre el Puente de la Aurora y el arranque de calle Carretería (https://www.change.org/p/ayto-de-m%C3%A1laga-restauraci%C3%B3n-de-la-tribuna-de-los-pobres-m%C3%A1laga, leído con Playwright). Punto = extremo oeste de Calle Carretería en OSM, a 22 m del Pasillo de Santa Isabel junto al Puente de la Aurora.",
- "Rivera del Guadalmedina": "Ribera del Guadalmedina"
+ "Rivera del Guadalmedina": "Ribera del Guadalmedina",
+ "@Plaza del Carbón": "geo:36.7217721,-4.4203901",
+ "_fuente @Plaza del Carbón": "Nominatim (caché): «Fuentes de la Plaza del Carbón, Calle Granada» y OpenStreetMap way 184107522 (centro 36.72176, -4.42046); desde la reforma de 2005 forma un solo espacio con las plazas del Siglo y Spínola",
+ "Plaza Enrique García Herrera": "Plaza Enrique García-Herrera"
 }

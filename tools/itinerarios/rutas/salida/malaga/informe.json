@@ -485,22 +485,87 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 187,
+  "ms_graphhopper": 241,
   "largo_m": 3524,
-  "ms_total": 471
+  "ms_total": 519
  },
  "lagrimas-y-favores-malaga": {
   "id": "lagrimas-y-favores-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "entrada: sede sin localizar (acaba en la última calle)",
    "hueco de 263 m entre «Plaza de la Constitución» y «Martínez»: en OSM no se tocan",
-   "hueco de 67 m entre «Molina Lario» y «S.I.C.B»: en OSM no se tocan",
-   "hueco de 40 m entre «Puerta Nueva» y «Fajardo»: en OSM no se tocan"
+   "hueco de 67 m entre «Molina Lario» y «S.I.C.B»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "paso": {
+    "11": [
+     [
+      36.7208675,
+      -4.4217157
+     ],
+     [
+      36.7196273,
+      -4.4215927
+     ],
+     [
+      36.7184155,
+      -4.4214572
+     ]
+    ]
+   },
+   "tramos": {
+    "11": {
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la ficha de Lágrimas y Favores da hora de Tribuna (16:00) aunque su lista salta de «Plaza de la Constitución» a «Martínez»; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): «Tribuna: 16.00 horas»; en 2020 (semanasantamalaga.info) «Plaza de la Constitución, Tribuna, Marqués de Larios, Martínez»"
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la ficha de Lágrimas y Favores da hora de Tribuna (16:00) aunque su lista salta de «Plaza de la Constitución» a «Martínez»; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): «Tribuna: 16.00 horas»; en 2020 (semanasantamalaga.info) «Plaza de la Constitución, Tribuna, Marqués de Larios, Martínez»",
+     "cambios": "de la Plaza de la Constitución a Martínez por la Tribuna Principal y Marqués de Larios (fila 12); antes iba por Especería y Nueva"
+    },
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): sede «Parroquia de San Juan Bautista (Centro)»; la lista empieza en la «Iglesia de San Juan» y acaba en la calle San Juan; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): encierro a las 22:15; en 2020, «San Juan, a su Templo». Puerta: la misma de la salida (OSM 3767195826)",
+     "cambios": "entrada en la Iglesia de San Juan (la lista acaba en la calle San Juan)"
+    },
+    {
+     "fecha": "2026-10-26 14:14",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Plaza Enrique García Herrera, Moreno Carbonero, Sagasta» a la ida y «Puerta Nueva, Fajardo, Cisneros … Plaza Enrique García Herrera, Moreno Carbonero, Sebastián Souvirón» a la vuelta",
+     "cambios": "puntos de entrada en Moreno Carbonero y Sagasta (filas 6-7), Fajardo (fila 31) y Moreno Carbonero y Sebastián Souvirón (filas 35-36), tomados del trazado publicado: el nuevo daba la vuelta por Marqués y San Juan y se saltaba Fajardo"
+    },
+    {
+     "fecha": "2026-10-26 14:15",
+     "fuente": "OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal que toca Fernán González y Moreno Carbonero; GraphHopper no enruta por dentro de las áreas y daba 237 m de vuelta para 35 m",
+     "cambios": "la plaza (filas 5 y 34) se cruza en línea recta; se quitan los puntos de entrada en Moreno Carbonero, que ya no hacen falta"
+    }
+   ],
+   "actualizado": "2026-10-26 14:15",
+   "entrada": {
+    "lat": 36.7206427,
+    "lon": -4.4234733,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): sede «Parroquia de San Juan Bautista (Centro)»; la lista empieza en la «Iglesia de San Juan» y acaba en la calle San Juan; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): encierro a las 22:15; en 2020, «San Juan, a su Templo». Puerta: la misma de la salida (OSM 3767195826)"
+   },
+   "puntos": {
+    "6": [
+     36.7188492,
+     -4.4238464
+    ],
+    "30": [
+     36.7213595,
+     -4.4241885
+    ],
+    "35": [
+     36.7191873,
+     -4.4239686
+    ]
+   },
+   "cruzar": {
+    "4": true,
+    "33": true
+   }
+  },
   "salida": {
    "punto": [
     36.7206427,
@@ -509,6 +574,14 @@
    "como": "templo en OSM: Iglesia de San Juan → puerta OSM 3767195826 (yes) del edificio, la más cercana a la calle por la que sale/entra",
    "fuente": "OpenStreetMap way 373208280",
    "dir": null
+  },
+  "entrada": {
+   "punto": [
+    36.7206427,
+    -4.4234733
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): sede «Parroquia de San Juan Bautista (Centro)»; la lista empieza en la «Iglesia de San Juan» y acaba en la calle San Juan; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): encierro a las 22:15; en 2020, «San Juan, a su Templo». Puerta: la misma de la salida (OSM 3767195826)"
   },
   "calles": [
    {
@@ -586,7 +659,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 7,
@@ -804,6 +877,16 @@
     "forzado": false
    },
    {
+    "i": 23,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 24,
     "lugar": "Granada",
     "tipo": "calle",
@@ -814,7 +897,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -897,8 +980,8 @@
      61274382
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 40,
-    "forzado": false
+    "hueco_entrada_m": 0,
+    "forzado": true
    },
    {
     "i": 31,
@@ -960,7 +1043,7 @@
     ],
     "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": false
+    "forzado": true
    },
    {
     "i": 36,
@@ -994,12 +1077,18 @@
    "4 m entre «Calderón de la Barca» y «Fernán González»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Santa Lucía» y «Comedias»"
   ],
+  "plazas_cruzadas": [
+   "Plaza Enrique García Herrera (fila 5)",
+   "Plaza Enrique García Herrera (fila 34)"
+  ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
-  "ms_graphhopper": 105,
-  "largo_m": 3606,
-  "ms_total": 371
+  "ms_graphhopper": 196,
+  "largo_m": 3445,
+  "ms_total": 505
  },
  "dulce-nombre-malaga": {
   "id": "dulce-nombre-malaga",
@@ -1540,9 +1629,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 91,
+  "ms_graphhopper": 106,
   "largo_m": 3862,
-  "ms_total": 325
+  "ms_total": 354
  },
  "salutacion-malaga": {
   "id": "salutacion-malaga",
@@ -2107,9 +2196,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 171,
+  "ms_graphhopper": 136,
   "largo_m": 3607,
-  "ms_total": 472
+  "ms_total": 391
  },
  "humildad-malaga": {
   "id": "humildad-malaga",
@@ -2692,17 +2781,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 117,
+  "ms_graphhopper": 89,
   "largo_m": 4140,
-  "ms_total": 425
+  "ms_total": 449
  },
  "salud-malaga": {
   "id": "salud-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -3037,6 +3124,16 @@
     "forzado": false
    },
    {
+    "i": 26,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 27,
     "lugar": "Granada",
     "tipo": "calle",
@@ -3047,7 +3144,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -3205,20 +3302,21 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "24 m entre «Císter» y «Duque de la Victoria»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Cisneros» y «Pasillo de Santa Isabel»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 133,
-  "largo_m": 3558,
-  "ms_total": 456
+  "ms_graphhopper": 115,
+  "largo_m": 3563,
+  "ms_total": 343
  },
  "humildad-y-paciencia-malaga": {
   "id": "humildad-y-paciencia-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
    "hueco de 69 m entre «Prim» y «Plaza Arriola»: en OSM no se tocan",
    "hueco de 43 m entre «Puerta del Mar» y «Córdoba»: en OSM no se tocan"
   ],
@@ -3238,9 +3336,20 @@
      "fecha": "2026-10-26 14:01",
      "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)",
      "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 8 m)"
+    },
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+     "cambios": "tramo de «Prim» a «Plaza Arriola» (fila 18) estimado"
     }
    ],
-   "actualizado": "2026-10-26 14:01"
+   "actualizado": "2026-10-26 14:11",
+   "tramos": {
+    "17": {
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Prim» a «Plaza Arriola»; en el mismo PDF, Dolores del Puente va «Plaza Arriola, Atarazanas, Prim»: la unión es por Atarazanas. Deducción, no fuente de esta hermandad",
+     "estimado": true
+    }
+   }
   },
   "salida": {
    "punto": [
@@ -3786,6 +3895,16 @@
     "forzado": false
    },
    {
+    "i": 41,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 42,
     "lugar": "Granada",
     "tipo": "calle",
@@ -3796,7 +3915,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -4071,23 +4190,23 @@
    "18 m entre «Edison» y «Mendívil»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "16 m entre «Nueva» y «Puerta del Mar»",
    "18 m entre «Medívil» y «Edison»",
    "8 m entre «Reboul» y «Plazuela Virgen de Dolores y Esperanza»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 282,
-  "largo_m": 7819,
-  "ms_total": 603
+  "ms_graphhopper": 155,
+  "largo_m": 7825,
+  "ms_total": 371
  },
  "huerto-malaga": {
   "id": "huerto-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -4431,6 +4550,16 @@
     "forzado": false
    },
    {
+    "i": 27,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 28,
     "lugar": "Granada",
     "tipo": "calle",
@@ -4441,7 +4570,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -4650,14 +4779,16 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "15 m entre «Puente de la Esperanza» y «San Jacinto»",
    "6 m entre «San Jacinto» y «Plaza de la Legión Española»",
    "8 m entre «Plaza de la Legión Española» y «Huerta del Obispo»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 119,
-  "largo_m": 4098,
-  "ms_total": 460
+  "ms_graphhopper": 135,
+  "largo_m": 4104,
+  "ms_total": 510
  },
  "pasion-malaga": {
   "id": "pasion-malaga",
@@ -5096,9 +5227,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 79,
+  "ms_graphhopper": 84,
   "largo_m": 2800,
-  "ms_total": 496
+  "ms_total": 463
  },
  "crucifixion-malaga": {
   "id": "crucifixion-malaga",
@@ -5611,17 +5742,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 124,
+  "ms_graphhopper": 137,
   "largo_m": 3659,
-  "ms_total": 427
+  "ms_total": 426
  },
  "dolores-del-puente-malaga": {
   "id": "dolores-del-puente-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -6039,6 +6168,16 @@
     "forzado": false
    },
    {
+    "i": 33,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 34,
     "lugar": "Granada",
     "tipo": "calle",
@@ -6049,7 +6188,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -6204,24 +6343,22 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "15 m entre «Puente de la Esperanza» y «San Jacinto»",
    "30 m entre «San Jacinto» y «Plaza Fray Alonso de Santo Tomás»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 158,
-  "largo_m": 3916,
-  "ms_total": 519
+  "ms_graphhopper": 114,
+  "largo_m": 3921,
+  "ms_total": 465
  },
  "cautivo-malaga": {
   "id": "cautivo-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza de Jesús Cautivo» sin equivalente en OSM: no se traza (no se inventa)",
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "«Plaza de Jesús Cautivo» sin equivalente en OSM: no se traza (no se inventa)"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -6581,6 +6718,16 @@
     "forzado": false
    },
    {
+    "i": 27,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 28,
     "lugar": "Granada",
     "tipo": "calle",
@@ -6591,7 +6738,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -6723,20 +6870,19 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Cisneros» y «Pasillo Santa Isabel»"
   ],
-  "ms_graphhopper": 85,
-  "largo_m": 4439,
-  "ms_total": 510
+  "ms_graphhopper": 82,
+  "largo_m": 4444,
+  "ms_total": 389
  },
  "estudiantes-malaga": {
   "id": "estudiantes-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": {
    "salida": {
     "lat": 36.7207058,
@@ -6878,6 +7024,16 @@
     "forzado": false
    },
    {
+    "i": 9,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 10,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -6886,7 +7042,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -7191,14 +7347,16 @@
    }
   ],
   "enlaces": [
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 92,
-  "largo_m": 3247,
-  "ms_total": 267
+  "ms_graphhopper": 77,
+  "largo_m": 3198,
+  "ms_total": 251
  },
  "rocio-malaga": {
   "id": "rocio-malaga",
@@ -7729,9 +7887,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 116,
+  "ms_graphhopper": 72,
   "largo_m": 4420,
-  "ms_total": 506
+  "ms_total": 335
  },
  "penas-malaga": {
   "id": "penas-malaga",
@@ -8153,18 +8311,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 145,
+  "ms_graphhopper": 68,
   "largo_m": 2692,
-  "ms_total": 381
+  "ms_total": 209
  },
  "nueva-esperanza-malaga": {
   "id": "nueva-esperanza-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -8587,6 +8742,16 @@
     "forzado": false
    },
    {
+    "i": 30,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 31,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -8595,7 +8760,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -8908,19 +9073,19 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 161,
-  "largo_m": 7513,
-  "ms_total": 557
+  "ms_graphhopper": 110,
+  "largo_m": 7463,
+  "ms_total": 386
  },
  "humillacion-y-estrella-malaga": {
   "id": "humillacion-y-estrella-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -9271,6 +9436,16 @@
     "forzado": false
    },
    {
+    "i": 26,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 27,
     "lugar": "Granada",
     "tipo": "calle",
@@ -9281,7 +9456,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -9445,22 +9620,21 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "18 m entre «Puente de la Esperanza» y «Pasillo de Santo Domingo»",
    "3 m entre «Plaza de la Religiosa Filipense Dolores Márquez» y «Padre Jorge Lamothe»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 114,
-  "largo_m": 3929,
-  "ms_total": 504
+  "ms_graphhopper": 130,
+  "largo_m": 3934,
+  "ms_total": 399
  },
  "rescate-malaga": {
   "id": "rescate-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -9812,6 +9986,16 @@
     "forzado": false
    },
    {
+    "i": 25,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 26,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -9820,7 +10004,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -9954,20 +10138,19 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
-   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+   "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»"
   ],
-  "ms_graphhopper": 63,
-  "largo_m": 4229,
-  "ms_total": 400
+  "ms_graphhopper": 101,
+  "largo_m": 4179,
+  "ms_total": 367
  },
  "sentencia-malaga": {
   "id": "sentencia-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -10260,6 +10443,16 @@
     "forzado": false
    },
    {
+    "i": 23,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 24,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -10268,7 +10461,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -10341,12 +10534,14 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "39 m entre «Calderería» y «Casapalma»",
    "5 m entre «Plaza de Jerónimo Cuervo» y «Ramos Marín»"
   ],
-  "ms_graphhopper": 91,
-  "largo_m": 3455,
-  "ms_total": 383
+  "ms_graphhopper": 109,
+  "largo_m": 3406,
+  "ms_total": 328
  },
  "fusionadas-malaga": {
   "id": "fusionadas-malaga",
@@ -10710,9 +10905,9 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 89,
+  "ms_graphhopper": 55,
   "largo_m": 3020,
-  "ms_total": 232
+  "ms_total": 165
  },
  "mediadora-malaga": {
   "id": "mediadora-malaga",
@@ -10722,7 +10917,22 @@
    "hueco de 144 m entre «Plaza de La Marina» y «Vendeja»: en OSM no se tocan",
    "puntos de la lista lejos del trazado: «Cómico Riquelme» a 75 m"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "tramos": {
+    "39": {
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Cortina del Muelle, Boquete del Muelle, Plaza de la Marina, Plaza Poeta Alfonso Canales, Vendeja». El PDF de 2026 salta de «Plaza de La Marina» a «Vendeja»",
+     "estimado": true
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Cortina del Muelle, Boquete del Muelle, Plaza de la Marina, Plaza Poeta Alfonso Canales, Vendeja». El PDF de 2026 salta de «Plaza de La Marina» a «Vendeja»",
+     "cambios": "tramo de «Plaza de La Marina» a «Vendeja» (fila 40) estimado: solo hay fuente de 2020"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.7078566,
@@ -11476,19 +11686,50 @@
   "cortes_media_vuelta": 1,
   "ms_graphhopper": 187,
   "largo_m": 6523,
-  "ms_total": 526
+  "ms_total": 418
  },
  "salesianos-malaga": {
   "id": "salesianos-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Alcubilla» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
    "hueco de 50 m entre «Granada» y «Plaza Uncibay»: en OSM no se tocan",
    "hueco de 64 m entre «Casapalma» y «Álamos»: en OSM no se tocan",
    "hueco de 85 m entre «Plaza Montaño» y «Plaza de Capuchinos»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "paso": {
+    "32": [
+     [
+      36.7274226,
+      -4.4210114
+     ]
+    ]
+   },
+   "tramos": {
+    "28": {
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Casapalma» a «Álamos»; en el mismo PDF, las demás van «Casapalma, Cárcer, Álamos»: la unión es por Cárcer. Deducción, no fuente de esta hermandad",
+     "estimado": true
+    },
+    "32": {
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Dos Aceras, Plaza Montaño, Dos Aceras, Carrera de Capuchinos, Plaza de Capuchinos» («Alcubilla», en la lista de 2026, no está en OSM ni en 2020). El PDF de 2026 salta de «Alcubilla» a «Plaza de Capuchinos»",
+     "estimado": true
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Dos Aceras, Plaza Montaño, Dos Aceras, Carrera de Capuchinos, Plaza de Capuchinos» («Alcubilla», en la lista de 2026, no está en OSM ni en 2020). El PDF de 2026 salta de «Alcubilla» a «Plaza de Capuchinos»",
+     "cambios": "tramo de «Alcubilla» a «Plaza de Capuchinos» (fila 33) estimado: solo hay fuente de 2020; se sigue por la Carrera de Capuchinos"
+    },
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+     "cambios": "tramo de «Casapalma» a «Álamos» (fila 29) estimado"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.7299685,
@@ -11950,18 +12191,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 162,
-  "largo_m": 4411,
-  "ms_total": 450
+  "ms_graphhopper": 63,
+  "largo_m": 4701,
+  "ms_total": 292
  },
  "sangre-malaga": {
   "id": "sangre-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -12354,6 +12592,16 @@
     "forzado": false
    },
    {
+    "i": 30,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 31,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -12362,7 +12610,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -12445,18 +12693,20 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo Santa Isabel»",
    "7 m entre «Pasillo Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
-   "11 m entre «Plaza de la Marina» y «Molina Lario»"
+   "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»"
   ],
-  "ms_graphhopper": 125,
-  "largo_m": 3537,
-  "ms_total": 400
+  "ms_graphhopper": 157,
+  "largo_m": 3487,
+  "ms_total": 362
  },
  "el-rico-malaga": {
   "id": "el-rico-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
+   "hueco de 42 m entre «Molina Lario» y «Plaza del Carbón»: en OSM no se tocan",
    "hueco de 43 m entre «Plaza del Siglo» y «Calle Calderería»: en OSM no se tocan"
   ],
   "correcciones": {
@@ -12633,6 +12883,16 @@
     "forzado": false
    },
    {
+    "i": 9,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 42,
+    "forzado": false
+   },
+   {
     "i": 10,
     "lugar": "Plaza del Siglo",
     "tipo": "calle",
@@ -12641,7 +12901,7 @@
      184107523
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 17,
     "forzado": false
    },
    {
@@ -12953,23 +13213,21 @@
   ],
   "enlaces": [
    "23 m entre «Alcazabilla» y «Cister»",
+   "17 m entre «Plaza del Carbón» y «Plaza del Siglo»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
    "39 m entre «Plaza de la Merced» y «Plaza Jesús El Rico»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 124,
-  "largo_m": 3242,
-  "ms_total": 497
+  "ms_graphhopper": 110,
+  "largo_m": 3291,
+  "ms_total": 491
  },
  "paloma-malaga": {
   "id": "paloma-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -13230,6 +13488,16 @@
     "forzado": false
    },
    {
+    "i": 20,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 21,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -13238,7 +13506,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -13316,20 +13584,19 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
-   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+   "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»"
   ],
-  "ms_graphhopper": 57,
-  "largo_m": 2628,
-  "ms_total": 253
+  "ms_graphhopper": 54,
+  "largo_m": 2579,
+  "ms_total": 237
  },
  "sagrada-cena-malaga": {
   "id": "sagrada-cena-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -13569,6 +13836,16 @@
     "forzado": false
    },
    {
+    "i": 19,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 20,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -13577,7 +13854,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -13677,19 +13954,19 @@
   "enlaces": [
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "30 m entre «Tribuna de los Pobres» y «Puerta Nueva»"
   ],
-  "ms_graphhopper": 60,
-  "largo_m": 2717,
-  "ms_total": 400
+  "ms_graphhopper": 38,
+  "largo_m": 2667,
+  "ms_total": 241
  },
  "vineros-malaga": {
   "id": "vineros-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -13986,6 +14263,16 @@
     "forzado": false
    },
    {
+    "i": 24,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 25,
     "lugar": "Granada",
     "tipo": "calle",
@@ -13996,7 +14283,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -14111,13 +14398,15 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Santa Lucía» y «Comedias»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 99,
-  "largo_m": 2728,
-  "ms_total": 421
+  "ms_graphhopper": 94,
+  "largo_m": 2734,
+  "ms_total": 307
  },
  "santa-cruz-malaga": {
   "id": "santa-cruz-malaga",
@@ -14597,17 +14886,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 142,
+  "ms_graphhopper": 91,
   "largo_m": 2820,
-  "ms_total": 423
+  "ms_total": 376
  },
  "vera-cruz-malaga": {
   "id": "vera-cruz-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -14866,6 +15153,16 @@
     "forzado": false
    },
    {
+    "i": 22,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 23,
     "lugar": "Granada",
     "tipo": "calle",
@@ -14876,7 +15173,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -15046,23 +15343,22 @@
    "4 m entre «Calderón de la Barca» y «Fernán González»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Santa Lucía» y «Comedias»",
    "4 m entre «Fernán González» y «Calderón de la Barca»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 83,
-  "largo_m": 2710,
-  "ms_total": 662
+  "ms_graphhopper": 62,
+  "largo_m": 2716,
+  "ms_total": 466
  },
  "mena-malaga": {
   "id": "mena-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -15370,6 +15666,16 @@
     "forzado": false
    },
    {
+    "i": 24,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 25,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -15378,7 +15684,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -15619,21 +15925,20 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "8 m entre «Cerezuela» y «Plaza Legión Española»"
   ],
-  "ms_graphhopper": 151,
-  "largo_m": 3944,
-  "ms_total": 520
+  "ms_graphhopper": 71,
+  "largo_m": 3894,
+  "ms_total": 331
  },
  "zamarrilla-malaga": {
   "id": "zamarrilla-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -15917,6 +16222,16 @@
     "forzado": false
    },
    {
+    "i": 20,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 21,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -15925,7 +16240,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -16082,11 +16397,13 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 73,
-  "largo_m": 3846,
-  "ms_total": 404
+  "ms_graphhopper": 71,
+  "largo_m": 3796,
+  "ms_total": 299
  },
  "misericordia-malaga": {
   "id": "misericordia-malaga",
@@ -16631,22 +16948,44 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 126,
+  "ms_graphhopper": 92,
   "largo_m": 4021,
-  "ms_total": 493
+  "ms_total": 355
  },
  "monte-calvario-malaga": {
   "id": "monte-calvario-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«(Salida 15:00) Vía Dolorosa del Calvario» sin equivalente en OSM: no se traza (no se inventa)",
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "salida: sede sin localizar (empieza en la primera calle)",
-   "hueco de 163 m entre «Plaza del Santuario» y «Basílica y Santuario de Santa María de la Victoria (Salida 16:00)»: en OSM no se tocan",
-   "hueco de 163 m entre «Basílica y Santuario de Santa María de la Victoria (Salida 16:00)» y «Plaza del Santuario»: en OSM no se tocan"
-  ],
-  "correcciones": null,
+  "avisos": [],
+  "correcciones": {
+   "tramos": {
+    "1": {
+     "fuente": "Ninguna fuente da las calles de la Vía Dolorosa del Calvario (ni el PDF de 2026 ni el itinerario de 2020): camino a pie más corto de la ermita a la Glorieta Padre Manuel Gámez",
+     "estimado": true
+    }
+   },
+   "salida": {
+    "lat": 36.7313077,
+    "lon": -4.4118313,
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «(Salida 15:00) Vía Dolorosa del Calvario, Glorieta Padre Manuel Gámez, Amargura…»; OpenStreetMap: Ermita del Calvario y Vía Crucis (way 931988826), puerta nodo 8640012584"
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «(Salida 15:00) Vía Dolorosa del Calvario, Glorieta Padre Manuel Gámez, Amargura…»; OpenStreetMap: Ermita del Calvario y Vía Crucis (way 931988826), puerta nodo 8640012584",
+     "cambios": "salida en la puerta de la Ermita del Calvario; la bajada por la Vía Dolorosa (hasta la fila 2) va como estimada"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
+  "salida": {
+   "punto": [
+    36.7313077,
+    -4.4118313
+   ],
+   "como": "corrección de Pablo",
+   "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «(Salida 15:00) Vía Dolorosa del Calvario, Glorieta Padre Manuel Gámez, Amargura…»; OpenStreetMap: Ermita del Calvario y Vía Crucis (way 931988826), puerta nodo 8640012584"
+  },
   "entrada": {
    "punto": [
     36.7290331,
@@ -16710,34 +17049,6 @@
     "forzado": false
    },
    {
-    "i": 5,
-    "lugar": "Basílica y Santuario de Santa María de la Victoria (Salida 16:00)",
-    "tipo": "calle",
-    "osm": "Calle Victoria",
-    "vias": [
-     34435272,
-     35773179,
-     36226756,
-     190792398,
-     190792406,
-     315765582,
-     315765583,
-     435720576,
-     490175892,
-     490175893,
-     899482972,
-     948232978,
-     1147926266,
-     1147926267,
-     1147926268,
-     1153422818,
-     1235568536
-    ],
-    "candidatas": 1,
-    "hueco_entrada_m": 163,
-    "forzado": false
-   },
-   {
     "i": 6,
     "lugar": "Plaza del Santuario",
     "tipo": "calle",
@@ -16746,7 +17057,7 @@
      243047447
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 163,
+    "hueco_entrada_m": 0,
     "forzado": false
    },
    {
@@ -16809,32 +17120,19 @@
    },
    {
     "i": 10,
-    "lugar": "Plaza de María",
+    "lugar": "Plaza de María Guerrero",
     "tipo": "calle",
     "osm": "Plaza María Guerrero",
     "vias": [
      27584441,
      544990123
     ],
-    "candidatas": 20,
+    "candidatas": 3,
     "hueco_entrada_m": 0,
     "forzado": false
    },
    {
     "i": 11,
-    "lugar": "Guerrero",
-    "tipo": "calle",
-    "osm": "Plaza María Guerrero",
-    "vias": [
-     27584441,
-     544990123
-    ],
-    "candidatas": 6,
-    "hueco_entrada_m": 0,
-    "forzado": false
-   },
-   {
-    "i": 12,
     "lugar": "Granada",
     "tipo": "calle",
     "osm": "Calle Granada",
@@ -16848,7 +17146,7 @@
     "forzado": false
    },
    {
-    "i": 13,
+    "i": 12,
     "lugar": "Plazuela de Jesús Castellanos",
     "tipo": "calle",
     "osm": "Plazuela Jesús Castellanos",
@@ -16860,7 +17158,7 @@
     "forzado": false
    },
    {
-    "i": 14,
+    "i": 13,
     "lugar": "Granada",
     "tipo": "calle",
     "osm": "Calle Granada",
@@ -16874,7 +17172,7 @@
     "forzado": false
    },
    {
-    "i": 15,
+    "i": 14,
     "lugar": "Plaza del Siglo",
     "tipo": "calle",
     "osm": "Plaza del Siglo",
@@ -16886,7 +17184,17 @@
     "forzado": false
    },
    {
-    "i": 17,
+    "i": 15,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
+    "i": 16,
     "lugar": "Granada",
     "tipo": "calle",
     "osm": "Calle Granada",
@@ -16896,11 +17204,11 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
-    "i": 18,
+    "i": 17,
     "lugar": "Plaza de la Constitución",
     "tipo": "calle",
     "osm": "Plaza de la Constitución",
@@ -16912,7 +17220,7 @@
     "forzado": false
    },
    {
-    "i": 20,
+    "i": 19,
     "lugar": "Marqués de Larios",
     "tipo": "calle",
     "osm": "Calle Marqués de Larios",
@@ -16926,7 +17234,7 @@
     "forzado": false
    },
    {
-    "i": 21,
+    "i": 20,
     "lugar": "Martínez",
     "tipo": "calle",
     "osm": "Calle Martínez",
@@ -16939,7 +17247,7 @@
     "forzado": false
    },
    {
-    "i": 22,
+    "i": 21,
     "lugar": "Atarazanas",
     "tipo": "calle",
     "osm": "Calle Atarazanas",
@@ -16955,7 +17263,7 @@
     "forzado": false
    },
    {
-    "i": 23,
+    "i": 22,
     "lugar": "Torregorda",
     "tipo": "calle",
     "osm": "Calle Torregorda",
@@ -16968,7 +17276,7 @@
     "forzado": false
    },
    {
-    "i": 24,
+    "i": 23,
     "lugar": "Alameda Principal",
     "tipo": "calle",
     "osm": "Alameda Principal",
@@ -16990,7 +17298,7 @@
     "forzado": false
    },
    {
-    "i": 25,
+    "i": 24,
     "lugar": "Plaza de La Marina",
     "tipo": "calle",
     "osm": "Plaza de la Marina",
@@ -17002,7 +17310,7 @@
     "forzado": false
    },
    {
-    "i": 26,
+    "i": 25,
     "lugar": "Molina Lario",
     "tipo": "calle",
     "osm": "Calle Molina Lario",
@@ -17017,7 +17325,7 @@
     "forzado": false
    },
    {
-    "i": 28,
+    "i": 27,
     "lugar": "Postigo de los Abades",
     "tipo": "calle",
     "osm": "Calle Postigo de los Abades",
@@ -17030,7 +17338,7 @@
     "forzado": false
    },
    {
-    "i": 29,
+    "i": 28,
     "lugar": "Estación de Penitencia en la S.I.C.B",
     "tipo": "catedral",
     "osm": "Catedral (por dentro)",
@@ -17040,7 +17348,7 @@
     "forzado": false
    },
    {
-    "i": 31,
+    "i": 30,
     "lugar": "Císter",
     "tipo": "calle",
     "osm": "Calle Císter",
@@ -17052,7 +17360,7 @@
     "forzado": false
    },
    {
-    "i": 32,
+    "i": 31,
     "lugar": "San Agustín",
     "tipo": "calle",
     "osm": "Calle San Agustín",
@@ -17065,7 +17373,7 @@
     "forzado": false
    },
    {
-    "i": 33,
+    "i": 32,
     "lugar": "Plazuela de Jesús Castellanos",
     "tipo": "calle",
     "osm": "Plazuela Jesús Castellanos",
@@ -17077,7 +17385,7 @@
     "forzado": false
    },
    {
-    "i": 34,
+    "i": 33,
     "lugar": "Granada",
     "tipo": "calle",
     "osm": "Calle Granada",
@@ -17091,7 +17399,7 @@
     "forzado": false
    },
    {
-    "i": 35,
+    "i": 34,
     "lugar": "Méndez Núñez",
     "tipo": "calle",
     "osm": "Calle Méndez Núñez",
@@ -17103,7 +17411,7 @@
     "forzado": false
    },
    {
-    "i": 36,
+    "i": 35,
     "lugar": "Plaza de Uncibay",
     "tipo": "calle",
     "osm": "Plaza Uncibay",
@@ -17115,7 +17423,7 @@
     "forzado": false
    },
    {
-    "i": 37,
+    "i": 36,
     "lugar": "Casapalma",
     "tipo": "calle",
     "osm": "Calle Casapalma",
@@ -17127,7 +17435,7 @@
     "forzado": false
    },
    {
-    "i": 38,
+    "i": 37,
     "lugar": "Cárcer",
     "tipo": "calle",
     "osm": "Calle Cárcer",
@@ -17140,7 +17448,7 @@
     "forzado": false
    },
    {
-    "i": 39,
+    "i": 38,
     "lugar": "Madre de Dios Mariblanca",
     "tipo": "calle",
     "osm": "Calle Mariblanca",
@@ -17154,7 +17462,7 @@
     "forzado": false
    },
    {
-    "i": 40,
+    "i": 39,
     "lugar": "Peña",
     "tipo": "calle",
     "osm": "Calle Peña",
@@ -17166,7 +17474,7 @@
     "forzado": false
    },
    {
-    "i": 41,
+    "i": 40,
     "lugar": "Cruz Verde",
     "tipo": "calle",
     "osm": "Calle Cruz Verde",
@@ -17178,7 +17486,7 @@
     "forzado": false
    },
    {
-    "i": 42,
+    "i": 41,
     "lugar": "Altozano",
     "tipo": "calle",
     "osm": "Calle Altozano",
@@ -17192,7 +17500,7 @@
     "forzado": false
    },
    {
-    "i": 43,
+    "i": 42,
     "lugar": "Párrocco Ruiz Furest",
     "tipo": "calle",
     "osm": "Calle Párrocco Ruiz Furest",
@@ -17205,7 +17513,7 @@
     "forzado": false
    },
    {
-    "i": 44,
+    "i": 43,
     "lugar": "Puerto Parejo",
     "tipo": "calle",
     "osm": "Calle Puerto Parejo",
@@ -17218,7 +17526,7 @@
     "forzado": false
    },
    {
-    "i": 45,
+    "i": 44,
     "lugar": "Manrique",
     "tipo": "calle",
     "osm": "Calle Manrique",
@@ -17231,7 +17539,7 @@
     "forzado": false
    },
    {
-    "i": 46,
+    "i": 45,
     "lugar": "Tejeros",
     "tipo": "calle",
     "osm": "Calle Tejeros",
@@ -17244,7 +17552,7 @@
     "forzado": false
    },
    {
-    "i": 47,
+    "i": 46,
     "lugar": "Mitjana",
     "tipo": "calle",
     "osm": "Calle Mitjana",
@@ -17256,7 +17564,7 @@
     "forzado": false
    },
    {
-    "i": 48,
+    "i": 47,
     "lugar": "Rampa del Santuario",
     "tipo": "calle",
     "osm": "Plaza del Santuario",
@@ -17270,7 +17578,9 @@
   ],
   "enlaces": [
    "5 m entre «Plaza del Santuario» y «Compás de la Victoria»",
-   "5 m entre «Guerrero» y «Granada»",
+   "5 m entre «Plaza de María Guerrero» y «Granada»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "10 m entre «Peña» y «Cruz Verde»",
@@ -17278,17 +17588,15 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 139,
-  "largo_m": 5134,
-  "ms_total": 628
+  "ms_graphhopper": 150,
+  "largo_m": 5386,
+  "ms_total": 632
  },
  "descendimiento-malaga": {
   "id": "descendimiento-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": {
    "fuentes": [
     {
@@ -17509,6 +17817,16 @@
     "forzado": false
    },
    {
+    "i": 14,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 15,
     "lugar": "Granada",
     "tipo": "calle",
@@ -17519,7 +17837,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -17771,6 +18089,8 @@
    }
   ],
   "enlaces": [
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "7 m entre «Paseo de Reding» y «Plaza del General Torrijos»",
@@ -17778,21 +18098,33 @@
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 106,
-  "largo_m": 3881,
-  "ms_total": 465
+  "ms_graphhopper": 152,
+  "largo_m": 3887,
+  "ms_total": 557
  },
  "amor-malaga": {
   "id": "amor-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan",
    "hueco de 117 m entre «Manrique» y «Fernando el Católico»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "tramos": {
+    "45": {
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
+     "estimado": true
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
+     "cambios": "tramo de «Manrique» a «Fernando el Católico» (fila 46) estimado: solo hay fuente de 2020"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.7292811,
@@ -18044,6 +18376,16 @@
     "forzado": false
    },
    {
+    "i": 17,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 18,
     "lugar": "Granada",
     "tipo": "calle",
@@ -18054,7 +18396,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -18214,6 +18556,16 @@
     "forzado": false
    },
    {
+    "i": 32,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 33,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -18222,7 +18574,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -18383,22 +18735,24 @@
    }
   ],
   "enlaces": [
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "38 m entre «Calderería» y «Méndez Núñez»",
    "11 m entre «Puerta de Buenaventura» y «Mariblanca»"
   ],
-  "ms_graphhopper": 138,
-  "largo_m": 5275,
-  "ms_total": 563
+  "ms_graphhopper": 139,
+  "largo_m": 5230,
+  "ms_total": 599
  },
  "dolores-de-san-juan-malaga": {
   "id": "dolores-de-san-juan-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -18715,6 +19069,16 @@
     "forzado": false
    },
    {
+    "i": 26,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 27,
     "lugar": "Granada",
     "tipo": "calle",
@@ -18725,7 +19089,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -18792,21 +19156,21 @@
   "enlaces": [
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "4 m entre «Fernán González» y «Calderón de la Barca»"
   ],
   "por_la_catedral": "de la puerta de Postigo de los Abades a la del Patio de los Naranjos (nodos 8280808444 y 2834229789): sin calle, línea por dentro",
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 115,
-  "largo_m": 2806,
-  "ms_total": 584
+  "ms_graphhopper": 102,
+  "largo_m": 2811,
+  "ms_total": 536
  },
  "traslado-malaga": {
   "id": "traslado-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia"
-  ],
+  "avisos": [],
   "correcciones": null,
   "salida": {
    "punto": [
@@ -19079,6 +19443,16 @@
     "forzado": false
    },
    {
+    "i": 20,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 21,
     "lugar": "Granada",
     "tipo": "calle",
@@ -19089,7 +19463,7 @@
      692875001
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 0,
+    "hueco_entrada_m": 5,
     "forzado": false
    },
    {
@@ -19204,22 +19578,37 @@
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "5 m entre «Plaza del Carbón» y «Granada»",
    "7 m entre «Cisneros» y «Pasillo de Santa Isabel»"
   ],
-  "ms_graphhopper": 106,
-  "largo_m": 3427,
-  "ms_total": 428
+  "ms_graphhopper": 134,
+  "largo_m": 3432,
+  "ms_total": 381
  },
  "piedad-malaga": {
   "id": "piedad-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan",
    "hueco de 103 m entre «Méndez Núñez» y «Ollerías»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "tramos": {
+    "27": {
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Plaza Uncibay, Méndez Núñez, Tejón y Rodríguez, Ollerías». El PDF de 2026 salta de «Méndez Núñez» a «Ollerías»",
+     "estimado": true
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Plaza Uncibay, Méndez Núñez, Tejón y Rodríguez, Ollerías». El PDF de 2026 salta de «Méndez Núñez» a «Ollerías»",
+     "cambios": "tramo de «Méndez Núñez» a «Ollerías» (fila 28) estimado: solo hay fuente de 2020"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.7272053,
@@ -19526,6 +19915,16 @@
     "forzado": false
    },
    {
+    "i": 23,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 24,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -19534,7 +19933,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -19609,22 +20008,44 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
-   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+   "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»"
   ],
-  "ms_graphhopper": 96,
-  "largo_m": 3577,
-  "ms_total": 407
+  "ms_graphhopper": 92,
+  "largo_m": 3527,
+  "ms_total": 353
  },
  "santo-sepulcro-malaga": {
   "id": "santo-sepulcro-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
   "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan",
    "hueco de 118 m entre «Martínez» y «Torregorda»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "paso": {
+    "21": [
+     [
+      36.7183083,
+      -4.4234798
+     ]
+    ]
+   },
+   "tramos": {
+    "21": {
+     "fuente": "El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260403/) (Viernes Santo 2026): «Martínez, Atarazanas, Torregorda»; el PDF salta de Martínez a Torregorda"
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260403/) (Viernes Santo 2026): «Martínez, Atarazanas, Torregorda»; el PDF salta de Martínez a Torregorda",
+     "cambios": "de Martínez a Torregorda por Atarazanas (fila 22); antes iba por Puerta del Mar y Alhóndiga"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.7209693,
@@ -19721,6 +20142,16 @@
     "forzado": false
    },
    {
+    "i": 7,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 8,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -19729,7 +20160,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -20042,13 +20473,15 @@
    }
   ],
   "enlaces": [
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»",
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 123,
-  "largo_m": 3392,
-  "ms_total": 437
+  "ms_graphhopper": 91,
+  "largo_m": 3342,
+  "ms_total": 365
  },
  "servitas-malaga": {
   "id": "servitas-malaga",
@@ -20735,18 +21168,15 @@
    "11 m entre «Plaza de La Marina» y «Molina Lario»",
    "22 m entre «Gaona» y «Plazuela Santísimo Cristo de la Sangre»"
   ],
-  "ms_graphhopper": 116,
+  "ms_graphhopper": 89,
   "largo_m": 3718,
-  "ms_total": 504
+  "ms_total": 387
  },
  "prendimiento-malaga": {
   "id": "prendimiento-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "«Plaza del Carbón» no es una calle en OSM: punto aproximado de Nominatim (caché), solo como referencia",
-   "hueco de 43 m entre «Plaza del Siglo» y «Calderería»: en OSM no se tocan"
-  ],
+  "avisos": [],
   "correcciones": {
    "fuentes": [
     {
@@ -21168,6 +21598,16 @@
     "forzado": false
    },
    {
+    "i": 27,
+    "lugar": "Plaza del Carbón",
+    "tipo": "punto",
+    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "vias": null,
+    "candidatas": 1,
+    "hueco_entrada_m": 17,
+    "forzado": false
+   },
+   {
     "i": 28,
     "lugar": "Calderería",
     "tipo": "calle",
@@ -21176,7 +21616,7 @@
      452983251
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 43,
+    "hueco_entrada_m": 27,
     "forzado": false
    },
    {
@@ -21318,11 +21758,13 @@
    "22 m entre «Tribuna de los Pobres» y «Pasillo de Santa Isabel»",
    "7 m entre «Pasillo de Santa Isabel» y «Cisneros»",
    "3 m entre «Martínez» y «Atarazanas»",
-   "11 m entre «Plaza de La Marina» y «Molina Lario»"
+   "11 m entre «Plaza de La Marina» y «Molina Lario»",
+   "17 m entre «Plaza del Siglo» y «Plaza del Carbón»",
+   "27 m entre «Plaza del Carbón» y «Calderería»"
   ],
-  "ms_graphhopper": 86,
-  "largo_m": 4560,
-  "ms_total": 490
+  "ms_graphhopper": 56,
+  "largo_m": 4510,
+  "ms_total": 349
  },
  "expiracion-malaga": {
   "id": "expiracion-malaga",
@@ -21916,9 +22358,9 @@
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
   "cortes_media_vuelta": 1,
-  "ms_graphhopper": 139,
+  "ms_graphhopper": 154,
   "largo_m": 4902,
-  "ms_total": 559
+  "ms_total": 411
  },
  "esperanza-malaga": {
   "id": "esperanza-malaga",
@@ -22475,9 +22917,9 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 90,
+  "ms_graphhopper": 63,
   "largo_m": 3017,
-  "ms_total": 481
+  "ms_total": 282
  },
  "gitanos-malaga": {
   "id": "gitanos-malaga",
@@ -22486,7 +22928,22 @@
   "avisos": [
    "hueco de 114 m entre «Tribuna de los Pobres» y «Cisneros»: en OSM no se tocan"
   ],
-  "correcciones": null,
+  "correcciones": {
+   "tramos": {
+    "7": {
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/lunes-santo/ (no hay fuente de 2026 con estas calles): «Carretería, Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros». El PDF de 2026 salta de «Tribuna de los Pobres» a «Cisneros»",
+     "estimado": true
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/lunes-santo/ (no hay fuente de 2026 con estas calles): «Carretería, Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros». El PDF de 2026 salta de «Tribuna de los Pobres» a «Cisneros»",
+     "cambios": "tramo de «Tribuna de los Pobres» a «Cisneros» (fila 8) estimado: solo hay fuente de 2020"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.725291,
@@ -22892,18 +23349,36 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de La Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 104,
+  "ms_graphhopper": 83,
   "largo_m": 3413,
-  "ms_total": 560
+  "ms_total": 322
  },
  "resucitado-malaga": {
   "id": "resucitado-malaga",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
   "fuente_lista": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
-  "avisos": [
-   "hueco de 118 m entre «Granada» y «Méndez Núñez»: en OSM no se tocan"
-  ],
-  "correcciones": null,
+  "avisos": [],
+  "correcciones": {
+   "puntos": {
+    "20": [
+     36.7219579,
+     -4.4194571
+    ]
+   },
+   "tramos": {
+    "20": {
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Echegaray, Granada, Méndez Núñez, Comedias» (literal). En OSM Granada y Méndez Núñez no se tocan; se entra en Méndez Núñez por el mismo sitio que Dulce Nombre, cuya lista dice lo mismo («Echegaray, Granada, Méndez Núñez»)"
+    }
+   },
+   "fuentes": [
+    {
+     "fecha": "2026-10-26 14:11",
+     "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Echegaray, Granada, Méndez Núñez, Comedias» (literal). En OSM Granada y Méndez Núñez no se tocan; se entra en Méndez Núñez por el mismo sitio que Dulce Nombre, cuya lista dice lo mismo («Echegaray, Granada, Méndez Núñez»)",
+     "cambios": "entrada en Méndez Núñez (fila 21) como en Dulce Nombre; antes rodeaba por Calderería y Uncibay"
+    }
+   ],
+   "actualizado": "2026-10-26 14:11"
+  },
   "salida": {
    "punto": [
     36.723413,
@@ -23167,8 +23642,8 @@
      36228324
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 118,
-    "forzado": false
+    "hueco_entrada_m": 0,
+    "forzado": true
    },
    {
     "i": 21,
@@ -23202,8 +23677,8 @@
    "3 m entre «Martínez» y «Atarazanas»",
    "11 m entre «Plaza de la Marina» y «Molina Lario»"
   ],
-  "ms_graphhopper": 86,
-  "largo_m": 2290,
-  "ms_total": 281
+  "ms_graphhopper": 81,
+  "largo_m": 2218,
+  "ms_total": 248
  }
 }

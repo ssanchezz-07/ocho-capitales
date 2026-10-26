@@ -1235,7 +1235,7 @@ function datosCalle(c) {
         const cad = [[a[0], a[1]], ...a.via, [b[0], b[1]]], tramo = [0];
         for (let k = 1; k < cad.length; k++) tramo.push(tramo[k - 1] + Math.hypot(cad[k][0] - cad[k - 1][0], cad[k][1] - cad[k - 1][1]));
         const L = tramo[tramo.length - 1] || 1;
-        for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, 0, 1, a[7] || 0]);
+        for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, a[5] || 0, 1, a[7] || 0]); // posición 5: tramo «estimado» (sin calles oficiales), como su punto
       }
       if (conCalles.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = conCalles;
     }

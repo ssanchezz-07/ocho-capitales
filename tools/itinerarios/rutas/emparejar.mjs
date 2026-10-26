@@ -164,7 +164,8 @@ export function motor(c) {
     // ---- puntos de paso ----
     const segs = [[]]; const hitoPunto = new Map(); // índice de la lista → [la,lo]
     const pon = (xy, i) => { const ll = LL(...xy); const s = segs.at(-1); if (!s.length || d2(X(...s.at(-1)), xy) > 5) s.push(ll); if (i !== undefined && !hitoPunto.has(i)) hitoPunto.set(i, ll); };
-    if (sedeS) pon(X(...sedeS.punto), fS?.i ?? -1);
+    // si la lista empieza por una marca (p. ej. «(Salida 15:00) Vía Dolorosa…») y la sede viene de una corrección, la marca va en la sede
+    if (sedeS) pon(X(...sedeS.punto), fS?.i ?? (L.hitos.has(0) ? 0 : -1));
     informe.calles = [];
     for (let i = 0; i < R.length; i++) {
       const f = R[i], o = f.opciones[ch.elegidas[i]];
@@ -176,9 +177,13 @@ export function motor(c) {
       // La lista puede pedirlo también hasta 200 m («rectos»: índices), para cruzar una plaza abierta que OSM no tiene como vía.
       if (i > 0 && ch.estados[i - 1].gap > 3 && (ch.estados[i - 1].gap <= 40 || ((L.rectos || []).includes(f.i) && ch.estados[i - 1].gap <= 200)) && f.tipo !== 'catedral' && R[i - 1].tipo !== 'catedral') { pon(ch.estados[i - 1].pa); segs.push([]); (informe.enlaces = informe.enlaces || []).push(`${Math.round(ch.estados[i - 1].gap)} m entre «${R[i - 1].lugar}» y «${f.lugar}»`); }
       if (f.tipo === 'catedral') { pon(o.entra, f.i); segs.push([]); pon(o.sale); for (let k = f.i + 1; k <= f.hasta; k++) hitoPunto.set(k, LL(...o.sale)); informe.por_la_catedral = `${o.pc.nombre} (nodos ${o.pc.entra.id} y ${o.pc.sale.id}): sin calle, línea por dentro`; continue; }
+      // «paso» (corrección con fuente): puntos de paso antes de entrar en este elemento, para seguir el camino que da la fuente
+      for (const p of corr.paso?.[f.i] || []) pon(X(...p));
       // desde la sede se va directo al primer cruce (el punto de la calle más cercano a la puerta puede quedar «detrás» y obligar a dar la vuelta)
       if (i === 0 && sedeS) hitoPunto.set(f.i, LL(...ent[0])); else pon(ent[0], f.i);
-      if (f.tipo === 'calle' && ent[1] != null && sal[1] != null) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela
+      // «cruzar» (corrección con fuente): plaza dibujada como área peatonal, que GraphHopper no enruta por dentro: se cruza en línea recta
+      const cruza = !!corr.cruzar?.[f.i]; if (cruza) { segs.push([]); (informe.plazas_cruzadas = informe.plazas_cruzadas || []).push(`${f.lugar} (fila ${f.i + 1})`); }
+      if (!cruza && f.tipo === 'calle' && ent[1] != null && sal[1] != null) { // puntos intermedios por la propia calle, para que GraphHopper no se vaya por una paralela
         const cam = caminoDentro(o, ent[1], sal[1]);
         if (cam) { let acc = 0, ult = 0; for (let k = 1; k < cam.length; k++) { acc += d2(NODOS[cam[k]].xy, NODOS[cam[k - 1]].xy); if (acc - ult > 120 && k < cam.length - 1) { pon(NODOS[cam[k]].xy); ult = acc; } } }
       }

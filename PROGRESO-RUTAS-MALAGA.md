@@ -2,7 +2,7 @@
 
 _Órdenes: `ORDENES-RUTAS-METODO-NUEVO.md` (Málaga primero, con el código). Herramientas en `tools/itinerarios/rutas/` (ver su `README.md`)._
 
-**Estado (2026-10-26, tarde): en curso, para dejar Málaga al 100 %.** Hay **43 de 45 con el método nuevo**. Faltan **Lágrimas y Favores y Monte Calvario**, a la espera de fuentes. Siguen pendientes los huecos de la lista con su fuente o marcados como «estimados», los lugares sin calle en OSM y la revisión independiente.
+**Estado (2026-10-26, tarde): 45 de 45 con el método nuevo.** Cada corrección lleva su fuente; los tramos sin calles oficiales de 2026 van como «estimado». Pendiente: la revisión independiente de las 45 (se apunta abajo).
 
 Corregido en esta tanda, cada cosa con su fuente en `tools/itinerarios/rutas/correcciones-malaga.json`:
 - **Pasión:** la Plaza de los Mártires y la Plaza Jesús de la Pasión, sin picos y sin retrocesos.

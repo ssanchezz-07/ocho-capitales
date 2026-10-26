@@ -655,7 +655,14 @@
     "12": "20:30",
     "20": "22:35",
     "38": "02:30"
-   }
+   },
+   "hitos": [
+    2,
+    36
+   ],
+   "notas": [
+    "La «Plaza de Jesús Cautivo» (filas 3 y 37) no está en OSM ni en el callejero consultado: va como hito en el paso de Barrera de la Trinidad a Trinidad, que es donde la sitúa la lista, junto a la casa hermandad. No se dibuja ninguna calle inventada."
+   ]
   },
   "estudiantes-malaga": {
    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
@@ -1148,8 +1155,12 @@
     "21": "22:04",
     "34": "00:45"
    },
+   "hitos": [
+    31
+   ],
    "notas": [
-    "Los nazarenos salen de «Santuario María Auxiliadora (salida nazarenos)» hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad."
+    "Los nazarenos salen de «Santuario María Auxiliadora (salida nazarenos)» hasta la casa hermandad, de donde salen los tronos: el recorrido se dibuja desde la casa hermandad.",
+    "«Alcubilla» no está en OSM cerca del recorrido ni en el itinerario de 2020 (semanasantamalaga.info: «Plaza Montaño, Dos Aceras, Carrera de Capuchinos»); la única Alcubilla de Málaga en OSM está en Bailén-Miraflores, a unos 2,7 km: va como hito, sin situarla."
    ]
   },
   "sangre-malaga": {
@@ -1637,8 +1648,7 @@
     "Compás de la Victoria",
     "Plaza de la Victoria",
     "Victoria",
-    "Plaza de María",
-    "Guerrero",
+    "Plaza de María Guerrero",
     "Granada",
     "Plazuela de Jesús Castellanos",
     "Granada",
@@ -1679,12 +1689,22 @@
     "Basílica y Santuario de Santa María de la Victoria"
    ],
    "horas": {
-    "0": "16:00",
-    "19": "18:40",
-    "27": "20:45",
-    "29": "20:50",
-    "49": "00:00"
-   }
+    "0": "15:00",
+    "5": "16:00",
+    "18": "18:40",
+    "26": "20:45",
+    "28": "20:50",
+    "48": "00:00"
+   },
+   "hitos": [
+    0,
+    5
+   ],
+   "notas": [
+    "PDF de la Agrupación 2026, Monte Calvario: «Victoria, Plaza de María, Guerrero, Granada», con una coma de más: es la Plaza de María Guerrero (OSM way 27584441), entre Victoria y la Plaza de la Merced.",
+    "PDF de la Agrupación 2026, Monte Calvario: «(Salida 15:00) Vía Dolorosa del Calvario … Basílica y Santuario de Santa María de la Victoria (Salida 16:00)». La salida de la ermita es a las 15:00 y la de la Basílica, a las 16:00; antes la de las 16:00 iba en la ermita.",
+    "La Vía Dolorosa (fila 1) es la bajada desde la Ermita del Calvario y la Basílica (fila 6) es la parada de las 16:00, no calles: van como hitos."
+   ]
   },
   "descendimiento-malaga": {
    "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",

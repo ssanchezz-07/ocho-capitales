@@ -18,11 +18,19 @@ const INF = JSON.parse(fs.readFileSync(path.join(dirSalida(c), 'informe.json'), 
 const fR = fPublicado(c), R = fs.existsSync(fR) ? JSON.parse(fs.readFileSync(fR, 'utf8')) : { ciudad: C.nombre, anio: 2026, hermandades: {} };
 const hoy = new Date().toISOString().slice(0, 10);
 const r6 = (x) => +x.toFixed(6);
+const HUECO_MAX = 60;
 
 function aPuntos(id, traza, informe, lista) {
   const geo = [...traza.ida, ...traza.regreso.slice(1)];
   const ps = traza.puntos.filter((p) => p.pos != null && p.pos >= 0 && !['omitida', 'sin_osm', 'homonimo'].includes(p.tipo));
   const hueco = new Map((informe.calles || []).map((k) => [k.i, k.hueco_entrada_m]));
+  // Salto de más de HUECO_MAX m entre dos calles seguidas de la lista (no se tocan): GraphHopper rellena el camino a pie más corto.
+  // Si una corrección da la fuente del tramo («tramos»: { "<índice de la calle siguiente>": { fuente, estimado? } }) se anota;
+  // si no hay fuente, o la fuente no es de este año («estimado»: true), el tramo se publica como «estimado».
+  const corr = C.leerCorrecciones()[id] || {}, tramoDe = new Map();
+  const conTramo = new Set(Object.keys(corr.tramos || {}).map(Number)); // un tramo con corrección cuenta aunque no haya hueco (la Vía Dolorosa sale de la sede)
+  for (const k of [...(informe.calles || []), ...[...conTramo].filter((i) => !(informe.calles || []).some((x) => x.i === i)).map((i) => ({ i }))]) if (((k.hueco_entrada_m ?? 0) > HUECO_MAX && k.tipo !== 'catedral') || conTramo.has(k.i)) { // la entrada en la catedral va por su puerta, no es un salto
+    const t = corr.tramos?.[k.i]; const prev = [...ps].reverse().find((p) => p.i < k.i); if (prev) tramoDe.set(prev.i, { estimado: !t || !!t.estimado, fuente: t?.fuente || null }); }
   const out = ps.map((p, j) => {
     const sig = ps[j + 1], esSede = p.tipo === 'salida' || p.tipo === 'entrada';
     let lugar = p.lugar; const dir = p.tipo === 'salida' ? informe.salida?.dir : p.tipo === 'entrada' ? informe.entrada?.dir : null;
@@ -30,6 +38,7 @@ function aPuntos(id, traza, informe, lista) {
     const [lat, lon] = geo[p.pos];
     const o = { fila: '', lugar, ...(lista.horas[p.i] ? { hora: lista.horas[p.i] } : {}), lat: r6(lat), lon: r6(lon), como: esSede ? 'templo' : ['hito', 'catedral'].includes(p.tipo) ? 'hito' : 'calle', tramo: p.tramo };
     if (lista.rejilla && sig && (hueco.get(sig.i) ?? 0) > 40) { o.como = 'estimado'; o.estimado = true; }
+    const tr = tramoDe.get(p.i); if (tr) { if (tr.estimado) { o.como = 'estimado'; o.estimado = true; } if (tr.fuente) o.fuente_tramo = tr.fuente; }
     if (sig && sig.pos > p.pos + 1) o.via = geo.slice(p.pos + 1, sig.pos).map(([a, b]) => [r6(a), r6(b)]);
     return o;
   });

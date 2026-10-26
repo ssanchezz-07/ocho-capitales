@@ -196,8 +196,250 @@
     "fecha": "2026-10-26 14:01",
     "fuente": "OpenStreetMap, puerta (entrance=main) nodo 7358300371, «Plaza María Santísima de Dolores 1», la dirección de la casa hermandad (Plazuela María Santísima de Dolores y Esperanza 1, según la Agrupación: https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/)",
     "cambios": "salida y entrada en la puerta de la casa hermandad (antes, punto del edificio a 8 m)"
+   },
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "tramo de «Prim» a «Plaza Arriola» (fila 18) estimado"
    }
   ],
-  "actualizado": "2026-10-26 14:01"
+  "actualizado": "2026-10-26 14:11",
+  "tramos": {
+   "17": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Prim» a «Plaza Arriola»; en el mismo PDF, Dolores del Puente va «Plaza Arriola, Atarazanas, Prim»: la unión es por Atarazanas. Deducción, no fuente de esta hermandad",
+    "estimado": true
+   }
+  }
+ },
+ "lagrimas-y-favores-malaga": {
+  "paso": {
+   "11": [
+    [
+     36.7208675,
+     -4.4217157
+    ],
+    [
+     36.7196273,
+     -4.4215927
+    ],
+    [
+     36.7184155,
+     -4.4214572
+    ]
+   ]
+  },
+  "tramos": {
+   "11": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la ficha de Lágrimas y Favores da hora de Tribuna (16:00) aunque su lista salta de «Plaza de la Constitución» a «Martínez»; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): «Tribuna: 16.00 horas»; en 2020 (semanasantamalaga.info) «Plaza de la Constitución, Tribuna, Marqués de Larios, Martínez»"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la ficha de Lágrimas y Favores da hora de Tribuna (16:00) aunque su lista salta de «Plaza de la Constitución» a «Martínez»; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): «Tribuna: 16.00 horas»; en 2020 (semanasantamalaga.info) «Plaza de la Constitución, Tribuna, Marqués de Larios, Martínez»",
+    "cambios": "de la Plaza de la Constitución a Martínez por la Tribuna Principal y Marqués de Larios (fila 12); antes iba por Especería y Nueva"
+   },
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): sede «Parroquia de San Juan Bautista (Centro)»; la lista empieza en la «Iglesia de San Juan» y acaba en la calle San Juan; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): encierro a las 22:15; en 2020, «San Juan, a su Templo». Puerta: la misma de la salida (OSM 3767195826)",
+    "cambios": "entrada en la Iglesia de San Juan (la lista acaba en la calle San Juan)"
+   },
+   {
+    "fecha": "2026-10-26 14:14",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Plaza Enrique García Herrera, Moreno Carbonero, Sagasta» a la ida y «Puerta Nueva, Fajardo, Cisneros … Plaza Enrique García Herrera, Moreno Carbonero, Sebastián Souvirón» a la vuelta",
+    "cambios": "puntos de entrada en Moreno Carbonero y Sagasta (filas 6-7), Fajardo (fila 31) y Moreno Carbonero y Sebastián Souvirón (filas 35-36), tomados del trazado publicado: el nuevo daba la vuelta por Marqués y San Juan y se saltaba Fajardo"
+   },
+   {
+    "fecha": "2026-10-26 14:15",
+    "fuente": "OpenStreetMap: la Plaza Enrique García-Herrera (way 183856398) es un área peatonal que toca Fernán González y Moreno Carbonero; GraphHopper no enruta por dentro de las áreas y daba 237 m de vuelta para 35 m",
+    "cambios": "la plaza (filas 5 y 34) se cruza en línea recta; se quitan los puntos de entrada en Moreno Carbonero, que ya no hacen falta"
+   }
+  ],
+  "actualizado": "2026-10-26 14:15",
+  "entrada": {
+   "lat": 36.7206427,
+   "lon": -4.4234733,
+   "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): sede «Parroquia de San Juan Bautista (Centro)»; la lista empieza en la «Iglesia de San Juan» y acaba en la calle San Juan; El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260329/horarios-recorridos-domingo-ramos-semana-santa-malaga/1003744179950_0.html): encierro a las 22:15; en 2020, «San Juan, a su Templo». Puerta: la misma de la salida (OSM 3767195826)"
+  },
+  "puntos": {
+   "6": [
+    36.7188492,
+    -4.4238464
+   ],
+   "30": [
+    36.7213595,
+    -4.4241885
+   ],
+   "35": [
+    36.7191873,
+    -4.4239686
+   ]
+  },
+  "cruzar": {
+   "4": true,
+   "33": true
+  }
+ },
+ "santo-sepulcro-malaga": {
+  "paso": {
+   "21": [
+    [
+     36.7183083,
+     -4.4234798
+    ]
+   ]
+  },
+  "tramos": {
+   "21": {
+    "fuente": "El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260403/) (Viernes Santo 2026): «Martínez, Atarazanas, Torregorda»; el PDF salta de Martínez a Torregorda"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "El Español, horarios y recorridos 2026 (https://www.elespanol.com/malaga/cultura/cofradias/20260403/) (Viernes Santo 2026): «Martínez, Atarazanas, Torregorda»; el PDF salta de Martínez a Torregorda",
+    "cambios": "de Martínez a Torregorda por Atarazanas (fila 22); antes iba por Puerta del Mar y Alhóndiga"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "resucitado-malaga": {
+  "puntos": {
+   "20": [
+    36.7219579,
+    -4.4194571
+   ]
+  },
+  "tramos": {
+   "20": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Echegaray, Granada, Méndez Núñez, Comedias» (literal). En OSM Granada y Méndez Núñez no se tocan; se entra en Méndez Núñez por el mismo sitio que Dulce Nombre, cuya lista dice lo mismo («Echegaray, Granada, Méndez Núñez»)"
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «Echegaray, Granada, Méndez Núñez, Comedias» (literal). En OSM Granada y Méndez Núñez no se tocan; se entra en Méndez Núñez por el mismo sitio que Dulce Nombre, cuya lista dice lo mismo («Echegaray, Granada, Méndez Núñez»)",
+    "cambios": "entrada en Méndez Núñez (fila 21) como en Dulce Nombre; antes rodeaba por Calderería y Uncibay"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "mediadora-malaga": {
+  "tramos": {
+   "39": {
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Cortina del Muelle, Boquete del Muelle, Plaza de la Marina, Plaza Poeta Alfonso Canales, Vendeja». El PDF de 2026 salta de «Plaza de La Marina» a «Vendeja»",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Cortina del Muelle, Boquete del Muelle, Plaza de la Marina, Plaza Poeta Alfonso Canales, Vendeja». El PDF de 2026 salta de «Plaza de La Marina» a «Vendeja»",
+    "cambios": "tramo de «Plaza de La Marina» a «Vendeja» (fila 40) estimado: solo hay fuente de 2020"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "amor-malaga": {
+  "tramos": {
+   "45": {
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Puerto Parejo, Manrique, Tejeros, Mitjana, Fernando el Católico». El PDF de 2026 salta de «Manrique» a «Fernando el Católico»",
+    "cambios": "tramo de «Manrique» a «Fernando el Católico» (fila 46) estimado: solo hay fuente de 2020"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "piedad-malaga": {
+  "tramos": {
+   "27": {
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Plaza Uncibay, Méndez Núñez, Tejón y Rodríguez, Ollerías». El PDF de 2026 salta de «Méndez Núñez» a «Ollerías»",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/viernes-santo/ (no hay fuente de 2026 con estas calles): «Plaza Uncibay, Méndez Núñez, Tejón y Rodríguez, Ollerías». El PDF de 2026 salta de «Méndez Núñez» a «Ollerías»",
+    "cambios": "tramo de «Méndez Núñez» a «Ollerías» (fila 28) estimado: solo hay fuente de 2020"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "gitanos-malaga": {
+  "tramos": {
+   "7": {
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/lunes-santo/ (no hay fuente de 2026 con estas calles): «Carretería, Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros». El PDF de 2026 salta de «Tribuna de los Pobres» a «Cisneros»",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/lunes-santo/ (no hay fuente de 2026 con estas calles): «Carretería, Tribuna de los Pobres, Puerta Nueva, Pasillo de Santa Isabel, Cisneros». El PDF de 2026 salta de «Tribuna de los Pobres» a «Cisneros»",
+    "cambios": "tramo de «Tribuna de los Pobres» a «Cisneros» (fila 8) estimado: solo hay fuente de 2020"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "salesianos-malaga": {
+  "paso": {
+   "32": [
+    [
+     36.7274226,
+     -4.4210114
+    ]
+   ]
+  },
+  "tramos": {
+   "28": {
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): la lista salta de «Casapalma» a «Álamos»; en el mismo PDF, las demás van «Casapalma, Cárcer, Álamos»: la unión es por Cárcer. Deducción, no fuente de esta hermandad",
+    "estimado": true
+   },
+   "32": {
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Dos Aceras, Plaza Montaño, Dos Aceras, Carrera de Capuchinos, Plaza de Capuchinos» («Alcubilla», en la lista de 2026, no está en OSM ni en 2020). El PDF de 2026 salta de «Alcubilla» a «Plaza de Capuchinos»",
+    "estimado": true
+   }
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario de 2020 de la Agrupación recogido en https://semanasantamalaga.info/itinerarios/miercoles-santo/ (no hay fuente de 2026 con estas calles): «Dos Aceras, Plaza Montaño, Dos Aceras, Carrera de Capuchinos, Plaza de Capuchinos» («Alcubilla», en la lista de 2026, no está en OSM ni en 2020). El PDF de 2026 salta de «Alcubilla» a «Plaza de Capuchinos»",
+    "cambios": "tramo de «Alcubilla» a «Plaza de Capuchinos» (fila 33) estimado: solo hay fuente de 2020; se sigue por la Carrera de Capuchinos"
+   },
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf)",
+    "cambios": "tramo de «Casapalma» a «Álamos» (fila 29) estimado"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
+ },
+ "monte-calvario-malaga": {
+  "tramos": {
+   "1": {
+    "fuente": "Ninguna fuente da las calles de la Vía Dolorosa del Calvario (ni el PDF de 2026 ni el itinerario de 2020): camino a pie más corto de la ermita a la Glorieta Padre Manuel Gámez",
+    "estimado": true
+   }
+  },
+  "salida": {
+   "lat": 36.7313077,
+   "lon": -4.4118313,
+   "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «(Salida 15:00) Vía Dolorosa del Calvario, Glorieta Padre Manuel Gámez, Amargura…»; OpenStreetMap: Ermita del Calvario y Vía Crucis (way 931988826), puerta nodo 8640012584"
+  },
+  "fuentes": [
+   {
+    "fecha": "2026-10-26 14:11",
+    "fuente": "Itinerario oficial 2026 de la Agrupación de Cofradías (https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf): «(Salida 15:00) Vía Dolorosa del Calvario, Glorieta Padre Manuel Gámez, Amargura…»; OpenStreetMap: Ermita del Calvario y Vía Crucis (way 931988826), puerta nodo 8640012584",
+    "cambios": "salida en la puerta de la Ermita del Calvario; la bajada por la Vía Dolorosa (hasta la fila 2) va como estimada"
+   }
+  ],
+  "actualizado": "2026-10-26 14:11"
  }
 }
