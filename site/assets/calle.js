@@ -190,18 +190,21 @@
       var pts = h.t.paso || h.t.cruz, base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1; h.hc = k > 1 ? variar(base, k - 1) : base; // el color de su hábito; sin dato, la paleta
       // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
       // salidas extraordinarias: el regreso (posición 7) va aparte, con trazo discontinuo
-      var d = '', da = '', dr = '', enR = false;
+      var d = '', da = '', dr = '', de = '', enR = false, enE = false;
       pts.forEach(function (p, j) {
         if (!j) { d = 'M' + p[0] + ' ' + p[1]; return; }
         var q = pts[j - 1], recta = !p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150;
-        if (recta) { da += 'M' + q[0] + ' ' + q[1] + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = false; }
-        else if (p[7] && q[7]) { dr += (enR ? '' : 'M' + q[0] + ' ' + q[1]) + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = true; }
-        else { d += 'L' + p[0] + ' ' + p[1]; enR = false; }
+        if (recta) { da += 'M' + q[0] + ' ' + q[1] + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = enE = false; }
+        else if (p[7] && q[7]) { dr += (enR ? '' : 'M' + q[0] + ' ' + q[1]) + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enR = true; enE = false; }
+        // tramo estimado: el itinerario no da sus calles; se dibuja en discontinuo fino (leyenda «Tramo estimado»)
+        else if (q[5]) { de += (enE ? '' : 'M' + q[0] + ' ' + q[1]) + 'L' + p[0] + ' ' + p[1]; d += 'M' + p[0] + ' ' + p[1]; enE = true; enR = false; }
+        else { d += 'L' + p[0] + ' ' + p[1]; enR = enE = false; }
       });
       var st = '--hc:' + h.hc;
       var r = el('path', { 'class': 'oc-c-ruta', d: d, 'data-s': h.s, style: st }); capas.rutas.appendChild(r);
       if (dr) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-regreso', d: dr, 'data-s': h.s, style: st }));
       if (da) capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-aprox', d: da, 'data-s': h.s, style: st }));
+      if (de) { capas.rutas.appendChild(el('path', { 'class': 'oc-c-ruta is-estimado', d: de, 'data-s': h.s, style: st })); h.est = true; }
       // marca de la hermandad: su titular (o su inicial bordada) en un medallón con galón de oro
       var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n, style: '--hc:' + h.hc });
       g.appendChild(el('circle', { 'class': 'oc-c-halo', r: '30' }));
@@ -397,7 +400,13 @@
       // la pestaña elegida, a la vista en la tira deslizable (sin mover la página)
       if (si) { var tira = b.parentNode, x = b.offsetLeft - (tira.clientWidth - b.offsetWidth) / 2; if (tira.scrollWidth > tira.clientWidth) tira.scrollLeft = Math.max(0, x); }
     });
-    var ley = $('[data-leyenda]'); if (ley) ley.hidden = !delDia().some(function (h) { return h.x; });
+    var ley = $('[data-leyenda]');
+    if (ley) {
+      // ida y regreso, en las salidas extraordinarias; «tramo estimado», si alguna cofradía de la jornada lo tiene
+      var hay = delDia(), extra = hay.some(function (h) { return h.x; }), est = hay.some(function (h) { return (h.t.paso || h.t.cruz || []).some(function (p) { return p[5]; }); });
+      ley.hidden = !extra && !est;
+      $$('.is-ida, .is-regreso', ley).forEach(function (s) { s.hidden = !extra; }); var se = $('.is-estimado', ley); if (se) se.hidden = !est;
+    }
     var L = limites(); rango.min = L[0]; rango.max = L[1];
     var hoy = fechas[d] === hoyISO(), ah = ahoraMin();
     $('[data-ahora]').hidden = !hoy;
