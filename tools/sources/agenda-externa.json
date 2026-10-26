@@ -6,7 +6,7 @@
   "Agrupación de Almería": 0,
   "Federación de Granada": 1,
   "Prensa (agendas semanales)": 36,
-  "Prensa (texto de noticias)": 60
+  "Prensa (texto de noticias)": 61
  },
  "eventos": [
   {
@@ -4048,6 +4048,16 @@
    "nota": "",
    "fuente": "Granada Hoy",
    "url": "https://www.granadahoy.com/semanasanta/extraordinaria-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-centenario-santa-cena-granada-santa-cena-granada-centenario-santa-cena-extraordinaria-santa-cena-recorrido-santa-cena-granada-horario-santa-cena-granada_0_2008340117.html"
+  },
+  {
+   "fecha": "2027-06-19",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "La Pro-Hermandad de la Confianza encarga a Raúl Muñoz Gallardo el cartel de su primera salida procesional",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-pro-hermandad-de-la-confianza-encarga-a-raul-munoz-gallardo-el-cartel-de-su-primera-salida-procesional/"
   },
   {
    "fecha": "2026-10-25",
