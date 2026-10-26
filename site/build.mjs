@@ -741,12 +741,13 @@ function pageHome() {
   ${colgaduras()}
 </section>
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
+${TEMPORADA.fuera ? seccionNazareno(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 // El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
-// Va en la portada fuera de temporada (zona «Próxima Semana Santa», elegido por Pablo: el de oro sobre terciopelo) y en su página.
+// En la portada fuera de temporada se dibuja al bajar; en «Próxima Semana Santa» ya está hecho, sólido (Pablo, 27-oct: «si no es muy repetitivo»).
 const NAZ_SVG = `<svg class="oc-naz-fig" viewBox="0 0 240 560" role="img" aria-label="Un nazareno con su cirio encendido">
   <defs><radialGradient id="naz-luz" cx="62" cy="96" r="230" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset=".35" stop-color="#e7a43c" stop-opacity=".18"/><stop offset="1" stop-color="#e7a43c" stop-opacity="0"/></radialGradient><radialGradient id="naz-llama" cx="62" cy="90" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6d6"/><stop offset=".5" stop-color="#ffcf6b"/><stop offset="1" stop-color="#f08a24"/></radialGradient></defs>
   <g class="oc-naz-rel"><path d="M88 220C62 250 50 330 46 420C44 470 46 510 50 530Q120 548 190 530C194 510 196 470 194 420C190 330 178 250 152 220Z" fill="#1d0b2c"/><path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" fill="#2b1140"/><path d="M120 24L95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152Z" fill="#4a1f6b"/><path d="M104 150q6-4 12 0q-6 4-12 0ZM124 150q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/><path d="M112 196h16v10q0 10-8 14q-8-4-8-14Z" fill="#c9a14a"/><path d="M58 470V112Q62 106 66 112V470Z" fill="#efe6d2"/></g>
@@ -756,7 +757,7 @@ const NAZ_SVG = `<svg class="oc-naz-fig" viewBox="0 0 240 560" role="img" aria-l
 const NAZ_HEAD = () => `<script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('oc-naz-js')</script><script src="${u('assets/nazareno.js')}?v=${HUELLA.nazareno}" defer></script>`;
 function seccionNazareno(enPortada) {
   const A = TEMPORADA.anio, e = easter(A), f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'long' }), H = enPortada ? 'h2' : 'h1';
-  return `<section class="oc-naz${enPortada ? ' is-portada' : ''}" data-nazareno aria-labelledby="naz-t"><div class="oc-naz-escena">${NAZ_SVG}
+  return `<section class="oc-naz${enPortada ? ' is-portada' : ''}"${enPortada ? ' data-nazareno' : ''} aria-labelledby="naz-t"><div class="oc-naz-escena">${NAZ_SVG}
   <div class="oc-naz-txt"><p class="oc-naz-frase" data-naz="1">Cada año, el mismo silencio.</p><p class="oc-naz-frase" data-naz="2">El mismo antifaz. La misma cera.</p>
   <header data-naz="3"><p class="oc-kicker">Próxima Semana Santa</p><${H} class="oc-naz-titulo" id="naz-t">Semana Santa ${A}</${H}><p class="oc-naz-fechas">Del Viernes de Dolores, ${esc(f(-9))}, al Domingo de Resurrección, ${esc(f(0))}.</p>${leadHoy()}${enPortada ? `<a class="oc-btn oc-naz-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : ''}</header></div>
   <p class="oc-naz-pista" aria-hidden="true">Baja para dibujarlo</p></div></section>`;
@@ -776,7 +777,7 @@ ${seccionNazareno(false)}
 <section aria-labelledby="prox-caps"><h2 class="oc-h2" id="prox-caps">Qué tendrá cada capital</h2><ul class="oc-prox-caps">${caps}</ul></section>
 <p class="oc-note">Mientras tanto, las salidas extraordinarias anunciadas están en el plano de cada ciudad (portada) y en el <a href="${u('calendario/')}">calendario cofrade</a>.</p>
 </div>`;
-  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${NAZ_HEAD()}`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
+  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
 }
 // Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
 function pageHoy() {
