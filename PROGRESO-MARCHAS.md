@@ -56,6 +56,10 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
 - Bandas casi iguales a la AM Jesús Despojado de Jaén (Almería): por orden de Pablo, las une oc-diseno (27-oct). No es tarea de esta sesión.
 - Lectura de fichas de cofradiasyhermandades.es: en curso en segundo plano (`auditoria/cyh-marchas.json`, campo fichas); cuando acabe, regenerar partiendo de la versión publicada, comprobar, compilar y subir como bloque 9.
 
+## Encargos para el bloque 9 (27-oct, vistos por oc-diseno al unir la AM N. P. Jesús Despojado, 7d6c3c4)
+1. **Ocho bandas casi duplicadas** («… de <localidad>» sin localidad junto a la misma con localidad): Dulce Nombre de Jesús de Granada; M.ª Stma. de la Cabeza de Exfiliana; N.ª Sra. del Mar de Huércal de Almería; CT Monte Calvario de Martos; CT Santa Cruz de Almería; BM Los Iris de Instinción; BM Santa Cecilia de Sorbas; Capilla Sacra Redemptio de Almería. Unir **solo con fuente**, con redirección (`tools/sources/bandas-redirecciones.json`), usando `UNIR_BANDAS` de `tools/build-data.js`; después, pasar a error la regla de nombres casi iguales del comprobador. Sin decidir (solo con fuente): si la AM «Jesús Despojado» de Jaén (la de la Amargura) es la misma que «Nuestro Padre Jesús Despojado».
+2. **Desfase portal.json / build-data.js:** regenerar cambia hoy 15 hermandades y 19 bandas. Pasar al origen (fuentes o script) los arreglos que solo están en portal.json, hasta que regenerar dé exactamente lo publicado, y añadir una comprobación que avise si se separan.
+
 ## Historial
 - 2026-10-25: modelo único, comprobador, buscador con marchas aparte. Importación de YouTube relanzada en segundo plano.
 - 2026-10-26: bloque 2: 142 revisiones a mano con fuente (sin verificar 181 → 69), compositor más estricto, duplicados unidos, BNE como fuente (250 fichas), M5-M16 cerrados.
