@@ -295,14 +295,14 @@ const bandOut = [...bandas.values()].map((b) => {
 }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 // Nombre con la localidad pegada al final y sin localidad («AM Nuestro Padre Jesús Despojado de Jaén», sin localidad) es la misma
 // ficha que la que tiene ese nombre y esa localidad: pasa a su nombre, localidad y dirección (27-oct).
-const ALIAS_BANDA = new Map(); // nombre antiguo → dirección de la ficha a la que se unió
+const ALIAS_BANDA = new Map(); const ALIAS_CLAVE = new Map(); // (nombre|localidad antiguos → dirección) // nombre antiguo → dirección de la ficha a la que se unió
 // Solo las comprobadas a mano (cada nueva, con su redirección en tools/sources/bandas-redirecciones.json); el comprobador avisa de las demás
 const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado de jaen']);
 { const k = (n, l) => norm0(n) + '|' + norm0(l); const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
   for (const b of bandOut) { if (b.localidad || !UNIR_BANDAS.has(norm0(b.nombre))) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (!m) continue; const otra = hay.get(k(m[1], m[2])); if (otra && otra !== b) { ALIAS_BANDA.set(b.nombre.toLowerCase(), otra.slug); b.nombre = otra.nombre; b.localidad = otra.localidad; b.slug = otra.slug; b.origen = otra.origen; } } }
 // La misma banda (mismo nombre y misma localidad) que acompaña en varias capitales es una sola ficha: se juntan sus
 // acompañamientos. Antes salía partida en dos («…-jaen» y «…-jaen-2», la Agrupación Musical Jesús Despojado).
-{ const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) p.acompana.push(...(b.acompana || [])); else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
+{ const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) { p.acompana.push(...(b.acompana || [])); if (b.nombre !== p.nombre) { ALIAS_BANDA.set(b.nombre.toLowerCase(), p.slug); ALIAS_CLAVE.set((b.nombre + '|' + b.localidad).toLowerCase(), p.slug); } } else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
 for (const b of bandOut) { const vis = new Map(); for (const a of b.acompana || []) { const kk = a.hermandad_slug + '|' + (a.rol || ''); const p = vis.get(kk); if (!p || (!p.fuente && a.fuente)) vis.set(kk, a); } b.acompana = [...vis.values()]; }
 // ids de banda por hermandad
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));
@@ -311,6 +311,7 @@ for (const h of hermandades) h.bandas_slugs = h.bandas.map((n) => bandBySlugName
 
 // enlazar el acompañamiento de cada hermandad con la ficha de cada banda
 const bandKey = new Map(bandOut.map((b) => [(b.nombre + '|' + b.localidad).toLowerCase(), b.slug]));
+for (const [k, sl] of ALIAS_CLAVE) if (!bandKey.has(k)) bandKey.set(k, sl);
 for (const h of hermandades) if (h.acompanamiento) {
   const link = (pasos) => pasos.forEach((p) => p.bandas.forEach((b) => { if (b.banda) b.slug = bandKey.get((b.nombre + '|' + b.localidad).toLowerCase()) || ''; }));
   link(h.acompanamiento.pasos); if (h.acompanamiento.novedades2027) link(h.acompanamiento.novedades2027.pasos);
@@ -405,7 +406,7 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });
-fs.writeFileSync(path.join(dest, 'portal.json'), JSON.stringify(out));
+fs.writeFileSync(process.env.PORTAL_OUT || path.join(dest, 'portal.json'), JSON.stringify(out)); // PORTAL_OUT: para comprobar sin tocar el publicado (tools/comprobar-origen.mjs)
 console.log('capitales', capitales.length, 'hermandades', hermandades.length, 'imagineros', imgOut.length, 'bandas', bandOut.length);
 console.log('imagineros top:', imgOut.slice(0, 12).map((i) => i.nombre + '(' + i.obras.length + ')').join(', '));
 console.log('imagineros con 1 obra:', imgOut.filter((i) => i.obras.length === 1).length);
