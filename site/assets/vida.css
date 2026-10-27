@@ -404,3 +404,8 @@ a { text-underline-offset: .18em; }
 /* Ficha de capital: la cabecera deja ver «lo de hoy» en la primera pantalla (antes, media pantalla en el móvil y más en el escritorio) */
 @media (max-width: 759px) { .oc-caphero:not(.is-compact) { min-height: min(34svh, 300px); padding-top: 72px; } }
 @media (min-width: 760px) { .oc-caphero:not(.is-compact) { min-height: min(40svh, 380px); padding-top: 56px; padding-bottom: 40px; } }
+/* Contraste (pasada completa, 27-oct): las etiquetas de tema pequeñas llegan a 4,5:1 en claro y en oscuro; dentro de la
+   noticia destacada (terciopelo), «Oficial» y el tema van en oro claro y no en el oro oscuro pensado para fondo blanco */
+.nx-tema { color: color-mix(in oklab, var(--gold-ink) 82%, var(--ink)); }
+.nx-destacada .nx-tema { background: rgb(236 211 147 / .12); color: #f6e7bf; }
+.nx-destacada .nx-oficial { color: var(--oro-claro); border-color: rgb(236 211 147 / .6); }
