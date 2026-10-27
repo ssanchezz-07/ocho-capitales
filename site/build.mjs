@@ -1167,9 +1167,22 @@ function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, t
 // Tras cada listado: el navegador muestra 50 y este botón carga 50 más (sin JS se ven todos).
 const dirMore = '<p class="oc-dirmore" data-dir-more hidden><button class="oc-btn is-quiet" type="button">Mostrar 50 más</button></p>';
 const dirEmpty = '<p class="oc-empty" data-dir-empty hidden>Ningún resultado con esos filtros. <button class="oc-textbtn" type="button" data-dir-reset>Quitar filtros</button></p>';
+// Tarjeta de la lista de Hermandades (lenguaje de Noticias): foto de la hermandad o su sello en el color de su capital
+function entryHermVx(h) {
+  const c = CAP[h.ciudad], im = h.imagen;
+  const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true" style="--c:${c.color}"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+  const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
+  const meta = `${cityTag(h.ciudad)}<span>${esc(h.dia)}</span>${h.hora ? `<span class="vx-autor">${esc(fmtHora(h.hora))} h</span>` : ''}`;
+  return `<li class="oc-entry vx-m ix-obra" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
+}
 function pageDirHerm() {
-  const items = [...D.hermandades].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((h) => entryHerm(h, ` data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, CAP[h.ciudad].nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Hermandades</h1><p class="oc-lead">Las ${D.hermandades.length} hermandades de las ocho capitales. Filtra por ciudad, día o cualquier dato.</p></header>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
+  const items = [...D.hermandades].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map(entryHermVx).join('');
+  const conFoto = D.hermandades.filter((h) => h.imagen).length;
+  // Por capital: cuántas hay, en su terciopelo; al pulsar, se filtra la lista
+  const caps = D.capitales.map((c) => { const hs = D.hermandades.filter((h) => h.ciudad === c.slug); return { c, n: hs.length, dias: new Set(hs.map((h) => h.dia)).size }; }).filter((x) => x.n);
+  const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Hermandades</h1><p class="nx-lead">Las hermandades de las ocho capitales andaluzas: su día, su sede, sus titulares y su historia.</p><p class="nx-pulso"><span><b>${D.hermandades.length}</b> hermandades</span><span><b>${caps.length}</b> capitales</span><span><b>${conFoto}</b> con foto</span></p></div></header>
+<section class="nx-caps vx-tipos hx-caps" aria-labelledby="hx-caps-t"><h2 class="nx-h" id="hx-caps-t">Por capital</h2><ul>${caps.map(({ c, n, dias }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} hermandades de ${esc(c.nombre)}"><span>${esc(c.nombre)}</span><b>${n}</b></button><h3 class="nx-cap-tit"><a class="nx-a" href="${u('semana-santa/' + c.slug + '/')}">Su Semana Santa, día a día</a></h3><p class="nx-meta"><span class="nx-src">${plural(dias, 'jornada', 'jornadas')}</span></p></li>`).join('')}</ul></section>
+<h2 class="nx-h vx-todas">Todas las hermandades</h2>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de las ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
 }
 // Siglas del tipo de formación para el sello de las tarjetas de bandas
