@@ -208,3 +208,18 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 @media (max-width: 759px) {
   .oc-home .oc-portada .oc-colg-name { top: 23%; bottom: 26%; font-size: min(42cqi, calc(228cqi / var(--n, 7))); line-height: .78; }
 }
+
+/* ---- transición de Andalucía a la ciudad (una sola cámara, site.js «volarCamara») ---- */
+.oc-pl-provincia { stroke: rgb(240 215 156 / .75); stroke-width: 1.5px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+/* al elegir, las demás provincias se apagan; los dibujos del mapa (catedrales, mares) se van para que la cámara entre limpia */
+.oc-portada [data-colgaduras][data-sel] .oc-prov2:not(.is-on) { opacity: .28; transition: opacity .45s ease; }
+.oc-portada.is-ciudad .oc-bd-catedrales, .oc-portada.is-ciudad .oc-mares, .oc-portada.is-ciudad .oc-detalle { opacity: 0; transition: opacity .3s ease; }
+/* al llegar, las calles menores aparecen con un fundido (no de golpe) */
+.oc-portada .oc-pl-svg .oc-pl-calles { transition: opacity .6s ease; }
+@media (prefers-reduced-motion: reduce) { .oc-portada [data-colgaduras][data-sel] .oc-prov2:not(.is-on), .oc-portada .oc-pl-svg .oc-pl-calles { transition: none; } }
+/* el hilo de la bandera no acompaña a la cámara: en la ciudad, fuera */
+.oc-portada.is-ciudad .oc-colg-hilos { opacity: 0; transition: opacity .2s ease; }
+/* durante el vuelo de la portada solo se pintan las calles principales, el agua y la provincia: el resto llega al final */
+.oc-portada .oc-pl-base.is-volando .oc-pl-calles, .oc-portada .oc-pl-base.is-volando .oc-c-plaza, .oc-portada .oc-pl-base.is-volando .oc-c-parque, .oc-portada .oc-pl-base.is-volando .oc-c-playa, .oc-portada .oc-pl-base.is-volando .oc-c-templo, .oc-portada .oc-pl-base.is-volando .oc-c-casa { display: none; }
+/* al bajar a la ciudad, fuera el cordón discontinuo y el terciopelo del mapa: ampliados miles de veces son carísimos de pintar */
+.oc-portada.is-ciudad .oc-bd-cordon, .oc-portada.is-ciudad .oc-bd-cordon-base, .oc-portada.is-ciudad .oc-bd-pelo { display: none; }

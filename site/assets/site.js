@@ -549,31 +549,93 @@
       $$('button', w).forEach(function (b) { b.addEventListener('click', function () { if (!plano) return; var z = +b.dataset.z; if (z) plano.zoom(z, calm ? 0 : 320); else if (FUERA && !extraOn) plano.encuadrarSedes(calm ? 0 : 520, margenes()); else plano.encuadrar(calm ? 0 : 520, margenes()); }); });
       host.appendChild(w);
     }
+    // ---- Una sola cámara de Andalucía a la ciudad (Pablo, 27-oct: «se ve feísimo, nada inmersivo ni transformante») ----
+    // La cámara vive en metros del plano. Mientras se ve el mapa de Andalucía, se pinta con el mismo encuadre convertido a sus
+    // píxeles: los dos enseñan el mismo sitio en el mismo punto de la pantalla, así que el relevo es un fundido sin cambio de
+    // escala. La provincia elegida queda debajo de las calles (es el mapa que se convierte en plano) y se apaga al llegar; las
+    // calles menores, los rótulos y las sedes, al final. Al volver, lo mismo al revés. Se puede interrumpir en cualquier momento.
+    // REPINTA: el plano se repinta en cada fotograma (solo las calles principales); con «transform» el navegador dejaba huecos
+    // sin pintar en el móvil mientras ampliaba
+    var REPINTA = true;
+    var Pm = datos.proy, vuelo = 0, f2 = function (v) { return v.toFixed(2); };
+    function rects() { return { m: svg.getBoundingClientRect(), h: host.getBoundingClientRect() }; }
+    function andAPlano(v, R) {
+      var Z = v[2] / R.m.width * D.kx / Pm.sx, lon = Pm.lon0 + (v[0] - Pm.pad) / Pm.sx, lat = Pm.lat1 - (v[1] - Pm.pad) / Pm.sy;
+      return { x: (lon - D.origen[1]) * D.kx - (R.m.left - R.h.left) * Z, y: (D.origen[0] - lat) * D.ky - (R.m.top - R.h.top) * Z, w: R.h.width * Z };
+    }
+    function planoAAnd(c, R) {
+      var Z = c.w / R.h.width, X = c.x + (R.m.left - R.h.left) * Z, Y = c.y + (R.m.top - R.h.top) * Z, w = R.m.width * Z * Pm.sx / D.kx;
+      var lon = D.origen[1] + X / D.kx, lat = D.origen[0] - Y / D.ky;
+      return [Pm.pad + (lon - Pm.lon0) * Pm.sx, Pm.pad + (Pm.lat1 - lat) * Pm.sy, w, w * vbAnd[3] / vbAnd[2]];
+    }
+    // la provincia del mapa de Andalucía, pasada a metros del plano
+    function provinciaEnMetros(c) {
+      var p = (datos.prov || []).filter(function (q) { return q.s === c; })[0]; if (!p) return '';
+      return p.d.replace(/(-?[\d.]+)[ ,](-?[\d.]+)/g, function (_, a, b) { var lon = Pm.lon0 + (+a - Pm.pad) / Pm.sx, lat = Pm.lat1 - (+b - Pm.pad) / Pm.sy; return Math.round((lon - D.origen[1]) * D.kx) + ' ' + Math.round((D.origen[0] - lat) * D.ky); });
+    }
+    var cl = function (x) { return Math.max(0, Math.min(1, x)); }, suave = function (k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
+    // vuela de «de» a «a» (encuadres del plano, en metros): centro en línea y escala en exponencial, con el mapa siguiéndola
+    // «hacia» puede ser una función: el destino se recalcula en cada fotograma (la portada cambia de alto mientras tanto)
+    function volarCamara(de, hacia, ms, ida, fin, refFijo) {
+      cancelAnimationFrame(vuelo);
+      var t0 = performance.now(), Wc = plano.ancho(), prov = plano.provincia(), capas = plano.capas(), ref = refFijo || (ida ? null : { x: de.x, y: de.y, w: de.w }), fijo = !!ref;
+      var quitarTransform = function () { capas.forEach(function (n) { n.style.transform = ''; n.style.willChange = ''; n.style.overflow = ''; }); };
+      // a la vuelta se parte del dibujo que ya está en pantalla, sin repintarlo
+      if (ref) { base0(); }
+      function base0() { capas.forEach(function (n) { n.style.willChange = 'transform'; n.style.transformOrigin = '0 0'; n.style.overflow = 'visible'; }); }
+      host.style.transition = 'none'; mapa.style.transition = 'none';
+      (function paso(t) {
+        if (!plano) return;
+        var k = ms ? Math.min(1, (t - t0) / ms) : 1, e = suave(k), R = rects(), q = R.h.height / R.h.width, a = typeof hacia === 'function' ? hacia() : hacia;
+        var w = de.w * Math.pow(a.w / de.w, e), dcx = de.x + de.w / 2, dcy = de.y + de.w * q / 2, acx = a.x + a.w / 2, acy = a.y + a.w * q / 2;
+        var c = { w: w, x: dcx + (acx - dcx) * e - w / 2, y: dcy + (acy - dcy) * e - w * q / 2 };
+        // el relevo, por escala: del mapa al plano entre 4 y 1,4 veces el ancho de la ciudad; mientras no se ve, el plano no se pinta
+        var r = Math.log(w / Wc), op = cl((Math.log(4) - r) / (Math.log(4) - Math.log(1.4)));
+        // el plano no se vuelve a pintar en cada fotograma: se pinta con un encuadre de referencia y se mueve con «transform»
+        // (barato, en la tarjeta gráfica); solo se repinta cuando ha crecido o encogido bastante, para que no se vea borroso
+        if (op > 0 && k < 1 && !REPINTA) {
+          var s = ref ? ref.w / c.w : 0;
+          if (!ref || (!fijo && (s > 1.8 || s < 0.55))) { quitarTransform(); ref = { x: c.x, y: c.y, w: c.w }; plano.fijar(ref, true); capas.forEach(function (n) { n.style.willChange = 'transform'; n.style.transformOrigin = '0 0'; n.style.overflow = 'visible'; }); s = 1; }
+          var tx = (ref.x - c.x) / c.w * R.h.width, ty = (ref.y - c.y) / c.w * R.h.width;
+          capas.forEach(function (n) { n.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + s.toFixed(4) + ')'; });
+        }
+        if (op > 0 && k < 1 && REPINTA) plano.fijar(c, true);
+        if (svg && op < 1) { vbAhora = planoAAnd(c, R); svg.setAttribute('viewBox', vbAhora.map(f2).join(' ')); }
+        host.style.opacity = op.toFixed(3); mapa.style.opacity = (1 - op).toFixed(3);
+        // la provincia se apaga al acercarse a las calles
+        if (prov) prov.style.opacity = (0.85 - 0.72 * cl((k - 0.62) / 0.38)).toFixed(3);
+        if (k < 1) vuelo = requestAnimationFrame(paso); else { quitarTransform(); host.style.transition = ''; mapa.style.transition = ''; if (fin) fin(); }
+      })(t0);
+    }
     function entrar(c, desdeHistoria) {
       var cap = datos.ciudades[c];
       if (!cap) { location.href = BASE + 'semana-santa/' + c + '/'; return; }
       if (!desdeHistoria && location.hash !== '#' + c) history.pushState({ ocCiudad: c }, '', '#' + c);
-      pintarBanderas(c, !desdeHistoria); setCity(c);
-      // la bandera elegida sube hasta asomar por arriba (el 26 % de abajo, su fleco y su emblema) como pestaña para volver
-      var r0 = row.getBoundingClientRect(), top0 = portada.getBoundingClientRect().top; row.style.setProperty('--subir', Math.round(top0 - r0.top - r0.height * 0.74) + 'px');
+      pintarBanderas(c, !desdeHistoria); setCity(c); cancelAnimationFrame(vuelo);
       if (!portada.classList.contains('is-ciudad')) alturaAnd = portada.offsetHeight;
-      portada.classList.add('is-ciudad'); root.classList.add('oc-en-ciudad'); andBox.hidden = true;
+      // fuera de temporada, sin reloj desde el primer momento (antes asomaba «Cargando…» con el deslizador y la página saltaba)
+      portada.classList.add('is-ciudad'); portada.classList.toggle('is-sedes', FUERA); root.classList.add('oc-en-ciudad'); andBox.hidden = true;
       ponerAltura(alturaCiudad(), !desdeHistoria); ciuBox.hidden = false;
-      nomEl.textContent = cap.n; capA.href = cap.cap; resEl.textContent = 'Cargando su plano…'; jorEl.textContent = ''; horaEl.textContent = '--:--';
-      var p = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
-      // primero el hilo llega a su capital; entonces Andalucía se acerca a ella (el gesto señala adónde va la cámara)
-      if (p && vbAnd) setTimeout(function () { if (actual !== c) return; portada.classList.add('is-acercando'); var w = vbAnd[2] / 22; moverAnd([p.x / 100 * vbAnd[2] - w / 2, p.y / 100 * vbAnd[3] - w * vbAnd[3] / vbAnd[2] / 2, w, w * vbAnd[3] / vbAnd[2]], 820); }, calm || desdeHistoria ? 0 : 360);
-      var t0 = performance.now();
+      nomEl.textContent = cap.n; capA.href = cap.cap; resEl.textContent = ''; jorEl.textContent = ''; horaEl.textContent = ''; notaEl.textContent = '';
+      var directo = calm || desdeHistoria;
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
-        D = r[1]; host.textContent = ''; host.hidden = false;
+        D = r[1]; host.textContent = ''; host.hidden = false; host.style.opacity = '0';
         plano = OCPlano.Plano(host, D, { color: D.color }); controles(); extraOn = false;
         var vistos = {}, dias = D.hermandades.map(function (h) { return h.d; }).filter(function (d) { return vistos[d] ? false : (vistos[d] = 1); });
         J = dias.sort(function (a, b) { return fechaDe(a).localeCompare(fechaDe(b)); });
-        if (FUERA) modoSedes(); else { var ini = jornadaInicial(), a = ahoraMin(); ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null); }
-        // la cámara empieza muy alta (toda la ciudad y sus alrededores) y baja hasta la jornada (o hasta sus sedes)
-        var v = plano.vista(), ancho = v.w * 3; plano.volar({ x: v.x + v.w / 2 - ancho / 2, y: v.y + v.h / 2 - ancho * v.h / v.w / 2, w: ancho }, 0);
-        setTimeout(function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); if (FUERA && !extraOn) plano.encuadrarSedes(calm ? 0 : 900, margenes()); else plano.encuadrar(calm ? 0 : 900, margenes()); }, calm || desdeHistoria ? 0 : Math.max(0, 700 - (performance.now() - t0)));
+        if (FUERA) { modoSedes(); plano.verSedes(false); } else { var ini = jornadaInicial(), a = ahoraMin(); ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null); }
+        var capC = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
+        plano.provincia(provinciaEnMetros(c), capC ? capC.c : D.color);
+        var destino = function () { var m = margenes(); return FUERA ? plano.encuadrarSedes(0, m, true) : plano.encuadrar(0, m, true); };
+        var llegar = function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); host.style.opacity = ''; mapa.style.opacity = ''; var d = destino(); if (d) plano.fijar(d, false); if (FUERA) plano.verSedes(true); };
+        if (directo || !svg) { llegar(); return; }
+        // la cámara arranca en el fotograma siguiente a crear el plano (el tirón de crearlo no cae en mitad del vuelo)
+        // el plano se pinta una sola vez, en su encuadre final, antes de que arranque la cámara (pintarlo en pleno relevo daba un
+        // tirón); durante el vuelo solo se escala con «transform» desde ese dibujo
+        var d0 = destino(); if (d0) plano.fijar(d0, true);
+        host.style.opacity = '0.01';
+        requestAnimationFrame(function () { requestAnimationFrame(function () { if (actual !== c || !plano) return; cancelAnimationFrame(animAnd); volarCamara(andAPlano(vbAhora, rects()), destino, 1500, true, llegar, d0); }); });
       }).catch(function () {
         if (actual !== c) return;
         resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
@@ -583,19 +645,30 @@
     }
     var focoPendiente = '';
     function salir(desdeHistoria) {
-      var antes = actual; if (!antes) return; cerrarHoja(); portada.classList.remove('is-sedes');
+      var antes = actual; if (!antes) return; cerrarHoja();
       if (!desdeHistoria) { if (history.state && history.state.ocCiudad && !history.state.directo) { focoPendiente = antes; history.back(); return; } history.replaceState(null, '', location.pathname + location.search); }
       pintarBanderas('', false); setCity('');
-      portada.classList.remove('is-plano', 'is-ciudad', 'is-acercando'); root.classList.remove('oc-en-ciudad');
-      if (alturaAnd) { ponerAltura(alturaAnd, !desdeHistoria); setTimeout(function () { if (!actual) portada.style.height = ''; }, calm || desdeHistoria ? 0 : 440); } else portada.style.height = ''; portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
-      andBox.hidden = false; ciuBox.hidden = true;
-      if (vbAnd) moverAnd(vbAnd, 700);
-      var p0 = plano; plano = null; setTimeout(function () { if (!actual && p0) { host.hidden = true; host.textContent = ''; } }, calm ? 0 : 420);
+      var p0 = plano;
+      var limpiar = function () {
+        if (actual) return; cancelAnimationFrame(vuelo);
+        portada.classList.remove('is-plano', 'is-ciudad', 'is-acercando', 'is-sedes'); root.classList.remove('oc-en-ciudad');
+        if (alturaAnd) { ponerAltura(alturaAnd, !desdeHistoria); setTimeout(function () { if (!actual) portada.style.height = ''; }, calm || desdeHistoria ? 0 : 440); } else portada.style.height = '';
+        portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
+        andBox.hidden = false; ciuBox.hidden = true;
+        if (vbAnd) { vbAhora = vbAnd.slice(); svg.setAttribute('viewBox', vbAnd.join(' ')); }
+        mapa.style.opacity = ''; host.style.opacity = ''; host.hidden = true; host.textContent = ''; if (plano === p0) plano = null;
+      };
+      // la misma cámara, al revés: de la ciudad a toda Andalucía, y entonces vuelven las banderas
+      if (p0 && svg && !calm && !desdeHistoria) { portada.classList.remove('is-plano'); p0.verSedes(false); volarCamara(p0.vista(), andAPlano(vbAnd, rects()), 1200, false, limpiar); }
+      else limpiar();
       // el foco vuelve a la bandera de la que se bajó (también cuando la salida pasa por el historial)
       var b = items.filter(function (x) { return x.dataset.colg === antes; })[0]; if (b && (!desdeHistoria || focoPendiente === antes)) b.focus({ preventScroll: true }); focoPendiente = '';
     }
     function elegir(c) { if (actual === c) salir(); else if (actual) { salir(true); history.replaceState({ ocCiudad: c }, '', '#' + c); entrar(c, true); pintarBanderas(c, true); } else entrar(c); }
     $('[data-colg-atras]', colg).addEventListener('click', function () { salir(); });
+    // el plano y los datos se piden ya al acercar el dedo o el ratón (o al enfocar), para que la cámara no tenga que esperar
+    var precargar = function (c) { if (datos.ciudades && datos.ciudades[c]) { cargarPlano().catch(function () { }); datosCiudad(c).catch(function () { }); } };
+    items.concat(puntos).forEach(function (el2) { var c = el2.dataset.colg || el2.dataset.punto; ['pointerdown', 'mouseenter', 'focus'].forEach(function (ev) { el2.addEventListener(ev, function () { precargar(c); }, { passive: true }); }); });
     window.addEventListener('popstate', function () { var c = location.hash.slice(1); if (datos.ciudades && datos.ciudades[c]) { if (c !== actual) { if (actual) salir(true); entrar(c, true); } } else salir(true); });
     portada.addEventListener('keydown', function (e) { if (e.key === 'Escape' && actual) salir(); });
 

@@ -91,10 +91,11 @@
         if (k < 1) anim = requestAnimationFrame(paso);
       })(t0);
     };
-    api.encuadrar = function (ms, m) {
+    // con «soloCaja», devuelven el encuadre sin mover la cámara (la portada lo usa como destino de su vuelo)
+    api.encuadrar = function (ms, m, soloCaja) {
       var xs = [], ys = [], vivos = hs.filter(function (h) { return estado(h, T) === 'calle'; });
       (vivos.length ? vivos : hs).forEach(function (h) { ruta(h).forEach(function (p) { xs.push(p[0]); ys.push(p[1]); }); });
-      if (xs.length) api.volar(api.caja(xs, ys, m), ms);
+      if (!xs.length) return null; if (soloCaja) return api.caja(xs, ys, m); api.volar(api.caja(xs, ys, m), ms);
     };
     api.ponerDia = function (lista) {
       hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {}; estados = {}; var usados = {};
@@ -157,17 +158,25 @@
       var h = simbolos.filter(function (s) { return s.h.s === sel; })[0]; h = h && h.h;
       if (h && h.tp && h.cs) el('path', { 'class': 'oc-pl-hilo-sede', d: 'M' + h.tp[0] + ' ' + h.tp[1] + 'L' + h.cs[0] + ' ' + h.cs[1] }, gHilo);
     };
+    // Para el vuelo de la portada (site.js lleva la cámara fotograma a fotograma): fija el encuadre sin animación; con «volando»,
+    // solo las calles principales y sin rótulos, como en el vuelo propio
+    api.fijar = function (c, volando) { cancelAnimationFrame(anim); vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); };
+    api.ancho = function () { return lim[2] - lim[0]; };
+    api.capas = function () { return [base, svg]; };
+    // la provincia de la ciudad, debajo de todo: es el mapa de Andalucía que se convierte en el plano
+    var provEl = null;
+    api.provincia = function (d, color) { if (!arguments.length) return provEl; if (!provEl) { provEl = el('path', { 'class': 'oc-pl-provincia' }); mundo.insertBefore(provEl, mundo.firstChild); } provEl.setAttribute('d', d || ''); provEl.style.fill = color || ''; return provEl; };
     api.verSedes = function (si) { gS.style.display = si ? '' : 'none'; gHilo.style.display = si ? '' : 'none'; };
     // encuadre en la zona con más sedes: sin las más alejadas (una parroquia de las afueras dejaba media pantalla de mar o de campo)
-    api.encuadrarSedes = function (ms, m) {
+    api.encuadrarSedes = function (ms, m, soloCaja) {
       // sin sedes todavía (capitales cuyo archivo de sedes está en camino): toda la ciudad del plano
-      if (!simbolos.length) { api.volar(api.caja([lim[0], lim[2]], [lim[1], lim[3]], m), ms); return; }
+      if (!simbolos.length) { if (soloCaja) return api.caja([lim[0], lim[2]], [lim[1], lim[3]], m); api.volar(api.caja([lim[0], lim[2]], [lim[1], lim[3]], m), ms); return; }
       // fuera solo las muy apartadas del centro (más de 2,5 veces la distancia mediana y de 800 m): el resto entra entero
       var med = function (v) { v = v.slice().sort(function (a, b) { return a - b; }); return v[Math.floor(v.length / 2)]; };
       var cx = med(simbolos.map(function (s) { return s.x; })), cy = med(simbolos.map(function (s) { return s.y; }));
       var ds = simbolos.map(function (s) { return Math.hypot(s.x - cx, s.y - cy); }), lim2 = Math.max(800, 2.5 * med(ds));
       var dentro = simbolos.filter(function (s, i) { return ds[i] <= lim2; });
-      api.volar(api.caja(dentro.map(function (s) { return s.x; }), dentro.map(function (s) { return s.y; }), m), ms);
+      var cj = api.caja(dentro.map(function (s) { return s.x; }), dentro.map(function (s) { return s.y; }), m); if (soloCaja) return cj; api.volar(cj, ms);
     };
     api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, (lim[2] - lim[0]) * 1.6)), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
     function colocarSedes() {
