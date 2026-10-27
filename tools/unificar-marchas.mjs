@@ -69,7 +69,7 @@ const TABLA = { 'Banda de música': 'bandas-musica', 'Banda de cornetas y tambor
 const urlTabla = (f) => `https://www.marchasdeprocesion.com/p/base-datos-${TABLA[f] || 'bandas-musica'}.html`;
 const urlPm = (id) => `https://www.patrimoniomusical.com/bd-marcha-${id}`;
 const urlYt = (v) => `https://www.youtube.com/watch?v=${v}`;
-const FIABLE = new Set(['fgr', 'pm', 'mdp', 'bne', 'part', 'cyh', 'rev']);
+const FIABLE = new Set(['fgr', 'pm', 'mdp', 'bne', 'part', 'banda', 'cyh', 'rev']);
 const OFICIAL = new Set(['fgr', 'rev']);
 
 // ---------- lugares: ¿de qué ciudad habla una dedicatoria? ----------
@@ -281,10 +281,13 @@ const REPS = process.env.SIN_REPERTORIO ? [] : fs.readdirSync(path.join(DIR, 'so
 for (const rp of REPS) for (const x of rp.marchas) {
   let r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor));
   if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
-  fuente(r, 'titulo', 'part'); fuente(r, 'autor', 'part');
-  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', 'part');
-  if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f: 'part' }];
-  if (x.dedicatoria) r._deds = [...(r._deds || []), { texto: x.dedicatoria, loc: '', f: 'part', url: '' }];
+  // excepción de Pablo («publicar»): una marcha estrenada por la banda sin otra fuente se publica citando a la banda, sin enlace
+  const f = x.publicar ? 'banda' : 'part';
+  fuente(r, 'titulo', f); fuente(r, 'autor', f);
+  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', f);
+  if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f }];
+  if (x.formacion && !r.formacion) { r.formacion = x.formacion; fuente(r, 'formacion', f); }
+  if (x.dedicatoria) r._deds = [...(r._deds || []), { texto: x.dedicatoria, loc: '', f, url: '' }];
 }
 
 // ---------- 2d. cofradiasyhermandades.es: listado de las 8 capitales (auditoria/cyh-marchas.json, local; tools/importar-marchas-cyh.mjs) ----------
@@ -688,6 +691,7 @@ const FUENTES = {
   foro: { nombre: 'Foro de Patrimonio Musical: «Marchas procesionales de Málaga» (2008)', url: 'https://www.patrimoniomusical.com/foro/viewtopic.php?t=1959', fiable: false },
   cyh: { nombre: 'Cofradías y Hermandades (buscador de marchas)', url: 'https://www.cofradiasyhermandades.es/marchas.php', fiable: true },
   part: { nombre: 'Partituras de la banda, aportadas por Pablo Sánchez', url: '', fiable: true, privada: true },
+  banda: { nombre: 'Banda de Cornetas y Tambores del Paso y la Esperanza (Málaga), que la estrenó', url: '', fiable: true, privada: true },
   bne: { nombre: 'Biblioteca Nacional de España (datos.bne.es, partituras)', url: 'https://datos.bne.es/tema/XX536674.html', fiable: true },
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
 };

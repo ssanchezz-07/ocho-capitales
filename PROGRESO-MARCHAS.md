@@ -79,3 +79,4 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
 - 2026-10-27: portal.json y build-data.js vuelven a coincidir (un solo origen); comprobador de origen.
 - 2026-10-27: bloque 9, paso 2: 8 bandas casi duplicadas unidas con redirección; comprobador con error para nombres casi iguales (182aed8).
 - 2026-10-27: bloque 9, paso 3: dedicatorias de las fichas de cofradiasyhermandades.es (enlaces 2.377 → 5.323, marchas 8.078 → 10.089), sin perder ningún enlace publicado; muestra de 20: 20 correctas.
+- 2026-10-27: «El pan de nuestra vida (Fénix)» (A. López Cortés, 2026, a Jesús de la Pasión de Málaga) publicada con la banda como fuente y el aviso «pronto aparecerá el enlace». Cuando haya vídeo o noticia, poner su enlace y quitar `publicar`.
