@@ -80,7 +80,7 @@ for (const m of U.marchas) {
   const vistas = new Map();
   for (const b of P.bandas) { const k = norm(b.nombre) + '|' + norm(b.localidad); if (vistas.has(k)) errores.push(`banda duplicada: ${b.slug} y ${vistas.get(k)} («${b.nombre}», ${b.localidad})`); else vistas.set(k, b.slug); }
   // nombres casi iguales: el mismo con la localidad pegada al final y sin localidad («… Despojado de Jaén», sin localidad)
-  for (const b of P.bandas) { if (b.localidad) continue; const m = b.nombre.match(/^(.*)s+des+(S.*)$/); if (m && vistas.has(norm(m[1]) + '|' + norm(m[2]))) avisos.push(`banda casi repetida: ${b.slug} y ${vistas.get(norm(m[1]) + '|' + norm(m[2]))} («${b.nombre}» sin localidad)`); }
+  for (const b of P.bandas) { if (b.localidad) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (m && vistas.has(norm(m[1]) + '|' + norm(m[2]))) errores.push(`banda casi repetida: ${b.slug} y ${vistas.get(norm(m[1]) + '|' + norm(m[2]))} («${b.nombre}» sin localidad)`); }
 }
 // alias: no chocan con otra marcha
 for (const m of U.marchas) for (const a of m.alias || []) if (slugs.has(a) && a !== m.slug) err(m, `alias ${a} es la dirección de otra marcha`);

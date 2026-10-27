@@ -297,7 +297,9 @@ const bandOut = [...bandas.values()].map((b) => {
 // ficha que la que tiene ese nombre y esa localidad: pasa a su nombre, localidad y dirección (27-oct).
 const ALIAS_BANDA = new Map(); const ALIAS_CLAVE = new Map(); // (nombre|localidad antiguos → dirección) // nombre antiguo → dirección de la ficha a la que se unió
 // Solo las comprobadas a mano (cada nueva, con su redirección en tools/sources/bandas-redirecciones.json); el comprobador avisa de las demás
-const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado de jaen']);
+// (27-oct) Las 8 de Almería y Granada: el nombre oficial que dan sus fuentes de acompañamiento (cofradiasdealmeria.es…) lleva el pueblo,
+// el mismo que la localidad de la otra ficha: es la misma banda.
+const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado de jaen', 'agrupacion musical dulce nombre de jesus de granada', 'agrupacion musical maria santisima de la cabeza de exfiliana', 'agrupacion musical nuestra senora del mar de huercal de almeria', 'banda de cornetas y tambores monte calvario de martos', 'banda de cornetas y tambores santa cruz de almeria', 'banda de musica los iris de instincion', 'banda de musica santa cecilia de sorbas', 'capilla musical sacra redemptio de almeria']);
 { const k = (n, l) => norm0(n) + '|' + norm0(l); const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
   for (const b of bandOut) { if (b.localidad || !UNIR_BANDAS.has(norm0(b.nombre))) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (!m) continue; const otra = hay.get(k(m[1], m[2])); if (otra && otra !== b) { ALIAS_BANDA.set(b.nombre.toLowerCase(), otra.slug); b.nombre = otra.nombre; b.localidad = otra.localidad; b.slug = otra.slug; b.origen = otra.origen; } } }
 // La misma banda (mismo nombre y misma localidad) que acompaña en varias capitales es una sola ficha: se juntan sus
