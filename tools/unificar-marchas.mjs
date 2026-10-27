@@ -59,7 +59,7 @@ const mismoAutor = (a, b) => {
   const pa = pilas(a), pb = pilas(b);
   if (pa.length && pb.length && !pa.some((w) => pb.includes(w))) return false;
   if (comun.some((w) => !CORRIENTES.has(w)) || comun.length >= 2) return true;
-  return pila(a) && pila(a) === pila(b);
+  return (pa.length && pb.length && pa.some((w) => pb.includes(w))) || (pila(a) && pila(a) === pila(b)); // apellido corriente: comparten un nombre de pila («David Álvarez» = «Francisco David Álvarez Barroso»)
 };
 
 const CAP = Object.fromEntries(P.capitales.map((c) => [c.slug, c.nombre]));
@@ -343,7 +343,9 @@ if (PM && !process.env.SIN_NUEVAS_PM) {
     const cap = CAPN[norm(loc)]; if (!cap) continue;
     const { top, cand } = mejorHermandad(f.d, cap); if (!top || cand.length !== 1) continue;
     const h = cand[0]; if (clasifica(f.d, loc, h).e !== 'casa') continue;
-    if ((porTituloR.get(nt(f.t)) || []).some((y) => mismoAutor(y.autor, f.a))) continue;
+    // si ya hay ficha de la misma obra (p. ej. creada desde Cofradías y Hermandades), Patrimonio Musical se suma a ella
+    const ya = (porTituloR.get(nt(f.t)) || []).find((y) => mismoAutor(y.autor, f.a));
+    if (ya) { if (ya._soloNueva && !(ya._pm || []).some((x) => x.id === id)) { ya._pm = [...(ya._pm || []), { id, y: f.y, d: f.d, u: f.u }]; fuente(ya, 'titulo', 'pm', urlPm(id)); fuente(ya, 'autor', 'pm'); } continue; }
     const r = nuevo({ slug: darSlug(titulo(f.t) + ' ' + f.a), titulo: titulo(f.t), autor: f.a });
     fuente(r, 'titulo', 'pm', urlPm(id)); fuente(r, 'autor', 'pm');
     r._pm = [{ id, y: f.y, d: f.d, u: f.u }]; r._soloNueva = true;
@@ -573,6 +575,68 @@ informe.solo_partitura = fueraPart;
 // Tras unir fichas: una discrepancia de año heredada sin fuente elegida toma la del año que se muestra (o el año queda en blanco)
 for (const r of R) for (const d of r.discrepancias) if (d.campo === 'anio' && !d.elegido && r.anio) { if ((r.fuentes.anio || []).length) d.elegido = r.fuentes.anio.join('+'); else r.anio = ''; }
 for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = clavesFiables(r).size; r.dedicatoria.estado = n >= 2 ? 'contrastada' : n === 1 ? 'dedicada' : 'sin-verificar'; }
+
+// ---------- 7a2. los enlaces ya publicados no se pierden (orden del 27-oct) ----------
+// Una fuente nueva SUMA: si su dedicatoria choca con un enlace publicado, se queda el publicado y la nueva se anota como
+// discrepancia. Solo una revisión a mano (accion «retirar», con fuente) quita un enlace publicado.
+{
+  const PUBL = new Map(); for (const m of PREV.marchas || []) if (m.dedicatoria && m.dedicatoria.hermandad) for (const s of [m.slug, ...(m.alias || [])]) PUBL.set(s, m);
+  const retiradoAMano = (r, h) => REV.some((v) => v.accion === 'retirar' && (v.slug === r.slug || r.alias.includes(v.slug)) && (!v.hermandad || v.hermandad === h));
+  let repuestos = 0;
+  for (const r of R) {
+    const p = [r.slug, ...r.alias].map((s) => PUBL.get(s)).find(Boolean);
+    if (!p || (r.dedicatoria && r.dedicatoria.hermandad) || retiradoAMano(r, p.dedicatoria.hermandad) || !HERM[p.dedicatoria.hermandad]) continue;
+    if (r.dedicatoria && r.dedicatoria.texto) r.discrepancias.push({ campo: 'dedicatoria', valores: [{ valor: r.dedicatoria.texto, fuente: (r.fuentes.dedicatoria || []).join('+') }], elegido: 'publicada' });
+    r.dedicatoria = { ...p.dedicatoria };
+    r.fuentes.dedicatoria = (p.fuentes.dedicatoria || []).filter((f) => p.urls[f] || FUENTES[f]);
+    for (const f of r.fuentes.dedicatoria) if (p.urls[f] && !r.urls[f]) r.urls[f] = p.urls[f];
+    r.retiradas = r.retiradas.filter((x) => x.hermandad !== p.dedicatoria.hermandad);
+    repuestos++;
+  }
+  // Marchas ligadas publicadas que ya no salen (ni con su dirección ni como alias): vuelven tal como estaban publicadas
+  const vivas = new Set(R.flatMap((r) => [r.slug, ...r.alias]));
+  const yaRepuestas = new Set();
+  for (const p of PUBL.values()) {
+    if (vivas.has(p.slug) || yaRepuestas.has(p.slug) || !HERM[p.dedicatoria.hermandad]) continue;
+    yaRepuestas.add(p.slug);
+    // la misma obra ya está con otra dirección y la misma hermandad: se une a ella y la dirección publicada queda como principal
+    const misma = R.find((r) => nt(r.titulo) === nt(p.titulo) && mismoAutor(r.autor, p.autor) && r.dedicatoria && r.dedicatoria.hermandad === p.dedicatoria.hermandad);
+    if (misma) {
+      misma.alias.push(misma.slug); misma.slug = p.slug;
+      for (const [c, fs_] of Object.entries(p.fuentes || {})) for (const f of fs_) fuente(misma, c, f);
+      for (const [k, u] of Object.entries(p.urls || {})) misma.urls[k] = misma.urls[k] || u;
+      repuestos++; continue;
+    }
+    R.push({ ...p, tipo: p.tipo || '', estreno: p.estreno || '', lugar: p.lugar || '', detalles: p.detalles || '', fuentes: { ...p.fuentes }, urls: { ...p.urls }, retiradas: p.retiradas || [], discrepancias: p.discrepancias || [], alias: p.alias || [] });
+    repuestos++;
+  }
+  informe.repuestos = repuestos;
+}
+
+// Fusión final (tras reponer): la misma obra (título sin artículo, mismo compositor, formación compatible, misma hermandad o
+// ninguna) queda en una ficha; manda la que tiene dirección publicada
+{
+  const tk = (t) => norm(t).replace(/^(el|la|los|las|a la|al|a)\s+/, '');
+  const publicadas = new Set((PREV.marchas || []).map((m) => m.slug));
+  const g = new Map(); for (const r of R) { const k = tk(r.titulo); if (k) (g.get(k) || g.set(k, []).get(k)).push(r); }
+  const fuera = new Set();
+  for (const v of g.values()) for (const a of [...v].sort((x, y) => (publicadas.has(y.slug) ? 1 : 0) - (publicadas.has(x.slug) ? 1 : 0))) {
+    if (fuera.has(a)) continue;
+    for (const b of v) {
+      if (b === a || fuera.has(b) || !mismoAutor(a.autor, b.autor)) continue;
+      if (a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion)) continue;
+      const ha = a.dedicatoria && a.dedicatoria.hermandad, hb = b.dedicatoria && b.dedicatoria.hermandad;
+      if (ha && hb && ha !== hb) continue;
+      for (const [c, fs_] of Object.entries(b.fuentes)) for (const f of fs_) fuente(a, c, f);
+      for (const [k, u] of Object.entries(b.urls)) a.urls[k] = a.urls[k] || u;
+      for (const c of ['anio', 'formacion', 'video']) if (!a[c] && b[c]) a[c] = b[c];
+      if (!ha && hb) a.dedicatoria = b.dedicatoria;
+      a.alias.push(b.slug, ...b.alias); fuera.add(b);
+    }
+  }
+  for (let i = R.length - 1; i >= 0; i--) if (fuera.has(R[i])) R.splice(i, 1);
+  informe.unidas_final = fuera.size;
+}
 
 // ---------- 7b. direcciones ya publicadas que dejan de existir: redirigen a la misma obra o al listado ----------
 // Se acumulan de una pasada a otra en «redirecciones». Con --previo <marchas.json> se añaden las de otro modelo (p. ej. el publicado).

@@ -56,7 +56,7 @@ for (const m of U.marchas) {
 // formaciones distintas sí son fichas distintas (se distinguen por la formación).
 {
   const kt = (t) => norm(t).replace(/^(el|la|los|las|a la|al|a)\s+/, '');
-  const PILA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo desiderio paco bienvenido dionisio nicolas'.split(' '));
+  const PILA = new Set('jose juan manuel francisco antonio miguel jesus javier luis pedro rafael carlos angel alberto david daniel pablo sergio maria ramon joaquin alejandro fernando jorge vicente andres enrique alfonso emilio eduardo salvador cristobal diego mario victor ignacio gabriel abel ivan oscar raul ruben sebastian perfecto agustin ana isaac primitivo benjamin gines gonzalo desiderio paco bienvenido dionisio nicolas adolfo alfonso fernando gustavo hector jacinto julio ricardo roberto tomas vicente victor alvaro jaime jorge'.split(' '));
   const ap = (a) => norm(a).split(' ').filter((w) => w.length >= 3 && !PILA.has(w) && !['del', 'los', 'las', 'san'].includes(w));
   const pil = (a) => norm(a).split(' ').filter((w) => PILA.has(w));
   const misma = (a, b) => {
