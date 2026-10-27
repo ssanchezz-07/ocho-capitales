@@ -29,10 +29,12 @@ const MAP = {
   'los-servitas': 'Hermandad de los Servitas (Sevilla)', 'la-trinidad': 'Hermandad de la Trinidad (Sevilla)', 'el-santo-entierro': 'Hermandad del Santo Entierro (Sevilla)',
   'la-soledad-de-san-lorenzo': 'Hermandad de la Soledad de San Lorenzo (Sevilla)', 'la-resurreccion': 'Hermandad de la Resurrección (Sevilla)',
 };
+// el año viene a veces con punto de millar en la ficha de Wikipedia («1.535» → «1535»)
+const anio = (s) => String(s).replace(/\b(\d)\.(\d{3})\b/g, '$1$2');
 for (const [k, title] of Object.entries(MAP)) {
   const ib = W[title];
   if (!ib) throw new Error('Sin ficha Wikipedia: ' + title);
-  E[k + '-sevilla'] = { url: wurl(title), fuente: 'wikipedia', sIfEmpty: ib.residencia || ib.sede || '', fIfEmpty: okFund(ib['fundación']) ? ib['fundación'] : '' };
+  E[k + '-sevilla'] = { url: wurl(title), fuente: 'wikipedia', sIfEmpty: ib.residencia || ib.sede || '', fIfEmpty: okFund(ib['fundación']) ? anio(ib['fundación']) : '' };
 }
 // Hermandades de Vísperas (no incluidas antes)
 const V = [

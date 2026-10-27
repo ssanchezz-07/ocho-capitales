@@ -416,8 +416,7 @@
       {
        "nombre": "Sin acompañamiento musical",
        "localidad": "",
-       "tipo": "Banda de música",
-       "es_banda": true,
+       "es_banda": false,
        "nota": "",
        "novedad": false,
        "redes": []

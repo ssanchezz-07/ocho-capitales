@@ -27,6 +27,9 @@ const TAGLINE = 'La Semana Santa de las ocho capitales andaluzas: qué sale hoy,
 const TZ = 'Europe/Madrid';
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// nombre legible de una fuente web por su dominio («es.wikipedia.org» → «Wikipedia»)
+const WEBS = { 'wikipedia.org': 'Wikipedia', 'wikidata.org': 'Wikidata', 'ecured.cu': 'EcuRed', 'iaph.es': 'Instituto Andaluz del Patrimonio Histórico', 'unia.es': 'Universidad Internacional de Andalucía', 'depo.gal': 'Museo de Pontevedra', 'almudi.org': 'Almudi', 'rah.es': 'Real Academia de la Historia' };
+const nombreWeb = (url) => { let h = ''; try { h = new URL(url).hostname.replace(/^www\./, ''); } catch (e) { return url; } const k = Object.keys(WEBS).find((d) => h === d || h.endsWith('.' + d)); return k ? WEBS[k] : h; };
 const u = (p = '') => BASE + String(p).replace(/^\//, '');
 const abs = (p) => (SITE ? SITE + '/' + String(p).replace(/^\//, '') : u(p));
 const slugify = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -994,7 +997,7 @@ function filaHerm(h, titulo, sub, extra = '') {
 }
 function pageImag(i) {
   const obras = i.obras.map((o) => { const h = HERM[o.hermandad_slug]; return filaHerm(h, h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular), [h ? esc(h.nombre) : esc(o.hermandad), o.atrib ? 'atribución' : '', esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim())].filter(Boolean).join(' · ')); }).join('');
-  let body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:var(--primary)">Imaginero${i.vida ? ' · ' + esc(i.vida) : ''}</p><h1 class="oc-title">${esc(i.nombre)}</h1>${cifras([[i.obras.length, 'obra en el portal', 'obras en el portal'], [i.ciudades.length, 'capital', 'capitales']])}${facts([['Escuela', esc(i.escuela)], ['Capitales', i.ciudades.map((s) => CAP[s] ? `<a href="${u('semana-santa/' + s + '/')}">${esc(CAP[s].nombre)}</a>` : '').filter(Boolean).join(', ')]], 'is-key')}<div class="oc-actions">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></header>${i.bio ? `<section class="oc-section"><h2 class="oc-h2">Biografía</h2><div class="oc-prose">${para(i.bio)}</div>${i.fuente_url ? `<ul class="oc-fuentes"><li><a href="${esc(i.fuente_url)}" target="_blank" rel="noopener">${/wikipedia/.test(i.fuente_url) ? 'Wikipedia' : 'Wikidata'}</a><span>biografía</span></li></ul>` : ''}</section>` : ''}${section('Obras en la Semana Santa andaluza', obras ? `<ul class="oc-entries">${obras}</ul>` : '')}`;
+  let body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:var(--primary)">Imaginero${i.vida ? ' · ' + esc(i.vida) : ''}</p><h1 class="oc-title">${esc(i.nombre)}</h1>${cifras([[i.obras.length, 'obra en el portal', 'obras en el portal'], [i.ciudades.length, 'capital', 'capitales']])}${facts([['Escuela', esc(i.escuela)], ['Capitales', i.ciudades.map((s) => CAP[s] ? `<a href="${u('semana-santa/' + s + '/')}">${esc(CAP[s].nombre)}</a>` : '').filter(Boolean).join(', ')]], 'is-key')}<div class="oc-actions">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></header>${i.bio ? `<section class="oc-section"><h2 class="oc-h2">Biografía</h2><div class="oc-prose">${para(i.bio)}</div>${(i.fuentes || (i.fuente_url ? [i.fuente_url] : [])).length ? `<ul class="oc-fuentes">${(i.fuentes || [i.fuente_url]).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}${section('Obras en la Semana Santa andaluza', obras ? `<ul class="oc-entries">${obras}</ul>` : '')}`;
   const qi = encodeURIComponent(i.nombre + ' imaginero');
   body += `${section('Más sobre su obra', `<ul class="oc-linklist"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul>`)}`;
   write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en la Semana Santa de Andalucía. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
@@ -1564,7 +1567,8 @@ function datosCunao() {
   // Tablas compartidas: bandas e imagineros se citan por índice para que el JSON siga siendo ligero
   const B = [], bIdx = new Map();
   const banda = (slug, nombre) => { const k = slug || 'n:' + nombre; if (!bIdx.has(k)) { const b = slug && BANDA[slug]; bIdx.set(k, B.length); B.push([b ? b.slug : '', b ? b.nombre : nombre, b ? b.tipo || '' : '', b ? b.localidad || '' : '']); } return bIdx.get(k); };
-  const I = D.imagineros.map((i) => [i.slug, i.nombre, i.vida || '', i.escuela || '']);
+  // con la primera frase de su biografía (solo las que tienen fuente): «¿De dónde era León Ortega?»
+  const I = D.imagineros.map((i) => [i.slug, i.nombre, i.vida || '', i.escuela || '', i.bio && i.fuente_url ? (i.bio.match(/^.+?\.(?=\s|$)/) || [i.bio])[0] : '']);
   const iIdx = new Map(D.imagineros.map((i, k) => [i.slug, k]));
   const hhmm = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? m[1].padStart(2, '0') + ':' + m[2] : ''; };
   const lugarOk = (s) => /[a-záéíóúñ]{3}/i.test(s || '') && !/^(.)\1+$/.test(s);
@@ -1576,16 +1580,17 @@ function datosCunao() {
     for (const [slug, e] of Object.entries(j.hermandades)) {
       if (!HERM[slug]) continue;
       const k = e.tramos.paso ? 'paso' : e.tramos.palio ? 'palio' : Object.keys(e.tramos)[0]; if (!k) continue;
-      const pts = []; let prev = '';
+      const pts = [], calles = []; let prev = '';
       for (const p of e.tramos[k]) {
-        const t = hhmm(p.hora) || hhmm(p.fila); if (!t) continue;
+        // calles sin hora publicada (Málaga solo da hora en unos pocos puntos): sirven para «¿pasa por Larios?», sin hora
+        const t = hhmm(p.hora) || hhmm(p.fila); if (!t) { const l = limpiaLugar(p.lugar || '').trim(); if (lugarOk(l) && !calles.includes(l)) calles.push(l); continue; }
         const l = limpiaLugar(p.lugar).replace(/\s*\(\d{1,2}[,.:]\d{2}\)/g, '').replace(/\b\d{1,2}[:.]\d{2}\b/g, '').replace(/\s+/g, ' ').trim();
         const cof = /carrera|catedral/.test(p.como || '') || /carrera|c\. ?oficial|catedral|campana|tribuna/i.test(l) ? 1 : 0;
         if (!lugarOk(l) && pts.length) continue;
         if (l === prev && pts.length) continue; prev = l;
         pts.push([t, lugarOk(l) ? l : '', p.hora ? 1 : 0, cof]);
       }
-      if (pts.length >= 2) R[c.slug].r[slug] = { k, f: e.fuente || '', p: pts };
+      if (pts.length >= 2) R[c.slug].r[slug] = { k, f: e.fuente || '', p: pts, ...(calles.length ? { c: calles.filter((l) => !pts.some((p) => p[1] === l)) } : {}) };
     }
   }
   const resumen = (c, s) => {
@@ -1609,7 +1614,7 @@ function datosCunao() {
     return o;
   });
   fs.mkdirSync(path.join(DIST, 'data', 'cunao'), { recursive: true });
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 2, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs }));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 2, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
   // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, marchas dedicadas y las seis noticias más recientes
   for (const c of D.capitales) {
     const hi = {}, pa = {}, m = {};
@@ -1625,7 +1630,9 @@ function datosCunao() {
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
-{ const f = path.join(DIR, '..', 'tools', 'sources', 'bandas-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (BANDA[a]) continue; const d = u('banda/' + b + '/'); write(`banda/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la banda</a></p></body></html>`); pages.pop(); } }
+{ const f = path.join(DIR, '..', 'tools', 'sources', 'bandas-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (BANDA[a]) continue; const d = u(b ? 'banda/' + b + '/' : 'bandas/'); /* sin destino: no era una banda → al listado */ write(`banda/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la banda</a></p></body></html>`); pages.pop(); } }
+// Imagineros que dejaron de existir (tools/sources/imagineros-redirecciones.json): a la ficha buena o al listado
+{ const f = path.join(DIR, '..', 'tools', 'sources', 'imagineros-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (IMAG[a]) continue; const d = u(b && IMAG[b] ? 'imaginero/' + b + '/' : 'imagineros/'); write(`imaginero/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir al imaginero</a></p></body></html>`); pages.pop(); } }
 // Direcciones de marchas ya publicadas que dejaron de existir (fichas unidas o registros que no eran marchas): a la misma obra o al listado
 for (const [a, b] of Object.entries(MU.redirecciones || {})) { if (MARCHA_SLUGS.has(a)) continue; const d = u(b ? 'marcha/' + b + '/' : 'marchas/'); write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
 // /hermandad/, /banda/, /marcha/ e /imaginero/ sin nombre (URL recortada a mano): a su listado, no a un 404

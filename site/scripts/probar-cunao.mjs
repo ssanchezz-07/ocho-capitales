@@ -96,12 +96,12 @@ caso('día + hermandad', motor(), '¿a qué hora sale el Cautivo el lunes en Má
 
 console.log('— Recorridos (itinerarios)');
 m = motor();
-caso('por dónde pasa el Cautivo de Málaga', m, '¿Por dónde pasa el Cautivo de Málaga?', y(contiene('Recorrido de Cautivo (Málaga)', 'Salida'), enlace(/en-la-calle\/malaga\/\?dia=Lunes%20Santo/)));
+caso('por dónde pasa el Cautivo de Málaga', m, '¿Por dónde pasa el Cautivo de Málaga?', y(contiene('Recorrido de Cautivo (Málaga)', CIU.malaga.r['cautivo-malaga'].p[0][1]), enlace(/en-la-calle\/malaga\/\?dia=Lunes%20Santo/)));
 caso('contexto: ¿y cuándo entra?', m, '¿y cuándo entra?', contiene('Cautivo (Málaga) se recoge'));
 caso('Macarena por la Campana', motor(), '¿Cuándo pasa la Macarena de Sevilla por la Campana?', contiene('La Macarena pasa por Campana', CIU.sevilla.r['la-macarena-sevilla'].p.find((p) => /campana/i.test(p[1]))[0]));
 caso('carrera oficial', motor(), '¿a qué hora llega a la carrera oficial la Macarena de Sevilla?', contiene('llega a Campana'));
-{ const porLarios = Object.entries(CIU.malaga.r).filter(([s, R]) => HP[s].dia === 'Domingo de Ramos' && R.p.some((p) => /larios/i.test(p[1]))).map(([s]) => HP[s].nombre);
-  caso('qué cofradías pasan por Larios', motor(), '¿Qué cofradías pasan por Larios en Málaga el Domingo de Ramos?', contiene('Por Larios', ...porLarios)); }
+{ const porLarios = Object.entries(CIU.malaga.r).filter(([s, R]) => HP[s].dia === 'Domingo de Ramos' && (R.p.some((p) => /larios/i.test(p[1])) || (R.c || []).some((l) => /larios/i.test(l)))).map(([s]) => HP[s].nombre);
+  caso('qué cofradías pasan por Larios', motor(), '¿Qué cofradías pasan por Larios en Málaga el Domingo de Ramos?', y(contiene(/Por (Marqués de )?Larios/, ...porLarios), () => (porLarios.length ? true : 'ninguna cofradía con Larios en los datos'))); }
 caso('pasa por (lugar tras el nombre)', motor(), '¿cuándo pasa por la Campana la Macarena de Sevilla?', contiene('La Macarena pasa por Campana'));
 caso('pasa por Sierpes', motor(), '¿a qué hora pasa el Gran Poder de Sevilla por Sierpes?', (r, t) => { const p = CIU.sevilla.r['el-gran-poder-sevilla'].p.find((x) => /sierpes/i.test(x[1])); return p ? (t.includes('pasa por') && t.includes(p[0]) ? true : 'no da la hora ' + p[0]) : (/No veo/.test(t) ? true : 'debía decir que no lo ve'); });
 caso('dónde la veo cerca', motor(), '¿Dónde puedo ver la Esperanza de Triana cerca de mí?', enlace(/en-la-calle\/sevilla\/\?dia=Madrug/));
@@ -134,6 +134,17 @@ caso('pide sugerencia', motor(), 'quiero avisar de un error', contiene('cuéntam
 { const x = motor(); pregunta(x, 'quiero avisar de un error');
   caso('envía la sugerencia', x, 'La hora de la Pollinica está mal', (r) => (r.accion && r.accion.tipo === 'sugerencia' ? true : 'no prepara el envío')); }
 caso('pronombre sin contexto', motor(), '¿y su banda?', contiene('¿De qué cofradía'));
+
+// Las 7 preguntas mal respondidas de la auditoría (C1-C7, 27-oct)
+console.log('— Auditoría C1-C7');
+caso('C1 imaginero por nombre completo', motor(), '¿De dónde era Antonio León Ortega?', y(contiene('Antonio León Ortega', 'Ayamonte'), (r, t) => (/Torreblanca/.test(t) ? 'empareja con Torreblanca' : true)));
+caso('C2 este fin de semana', motor(), '¿Hay alguna procesión este fin de semana?', y(contiene('fin de semana'), (r, t) => (/Buen Fin/.test(t) ? 'empareja con el Buen Fin' : true)));
+caso('C3 Semana Santa de otro año', motor(), '¿Cuándo es la Semana Santa de 2028?', contiene('2028', '9 de abril de 2028', '16 de abril de 2028'));
+caso('C4 Sábado de Pasión no es la hermandad de Pasión', motor(), 'El Sábado de Pasión en Sevilla', contiene('El Sábado de Pasión en Sevilla salen'));
+{ const fund = PORTAL.hermandades.filter((h) => h.ciudad === 'cordoba' && /\b\d{4}\b/.test(h.fundacion || '')).sort((a, b) => +/\d{4}/.exec(a.fundacion)[0] - +/\d{4}/.exec(b.fundacion)[0])[0];
+  caso('C5 la más antigua de Córdoba', motor(), '¿Cuál es la hermandad más antigua de Córdoba?', contiene('la más antigua de Córdoba es ' + fund.nombre)); }
+caso('C6 una curiosidad', motor(), 'Dime una curiosidad', (r, t) => (D.cu.some((k) => t.includes(k[0])) ? true : 'no da una curiosidad'));
+caso('C7 la Humillación de Cádiz', motor(), '¿Sale la Humillación de Cádiz?', contiene('Humillación (Piedad) (Cádiz)'));
 
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal}).`);
 process.exit(mal ? 1 : 0);

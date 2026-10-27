@@ -44,7 +44,7 @@ function enlazar(nombre) {
 }
 
 const TIPO = (n) => /Cornetas y Tambores|Cornetas|Tambores/i.test(n) ? 'Banda de cornetas y tambores' : /Agrupaci[oó]n/i.test(n) ? 'Agrupación musical' : /Capilla|Coral|Quinteto|Trío|Tr[ií]o|Escolan/i.test(n) ? 'Capilla musical' : /Guerra|Unidad de M[uú]sica|Legi[oó]n/i.test(n) ? 'Música militar' : 'Banda de música';
-const NO_BANDA = /^(capilla musical(?! granamusic)|silencio|un tambor|quinteto|tr[ií]o|coral|grupo vocal|escolan[ií]a$|cornet[ií]n|propia|sin m[uú]sica)/i;
+const NO_BANDA = /^(capilla musical(?! granamusic)|silencio|un tambor|quinteto|tr[ií]o|coral|grupo vocal|escolan[ií]a$|cornet[ií]n|propia|sin m[uú]sica|sin acompa[nñ]amiento)/i;
 const unknownLoc = new Map();
 const CORTA = { sevilla: true, granada: false }[ciudad] ?? true; // en Granada «de Armilla» forma parte del nombre; en Sevilla «de Sevilla» lo añade la guía
 const CANON = [

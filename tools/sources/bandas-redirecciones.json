@@ -1,5 +1,5 @@
 {
- "nota": "Direcciones de bandas que se unieron con otra ficha: build.mjs redirige la vieja a la buena.",
+ "nota": "Direcciones de bandas que se unieron con otra ficha: build.mjs redirige la vieja a la buena. Sin destino (\"\"): no era una banda; va al listado de bandas.",
  "redirecciones": {
   "agrupacion-musical-jesus-despojado-jaen-2": "agrupacion-musical-jesus-despojado-jaen",
   "agrupacion-musical-nuestro-padre-jesus-de-la-salud-los-gitanos-sevilla-2": "agrupacion-musical-nuestro-padre-jesus-de-la-salud-los-gitanos-sevilla",
@@ -11,6 +11,7 @@
   "banda-de-cornetas-y-tambores-santa-cruz-de-almeria": "banda-de-cornetas-y-tambores-santa-cruz-almeria",
   "banda-de-musica-los-iris-de-instincion": "banda-de-musica-los-iris-instincion",
   "banda-de-musica-santa-cecilia-de-sorbas": "banda-de-musica-santa-cecilia-sorbas",
-  "capilla-musical-sacra-redemptio-de-almeria": "capilla-musical-sacra-redemptio-almeria"
+  "capilla-musical-sacra-redemptio-de-almeria": "capilla-musical-sacra-redemptio-almeria",
+  "sin-acompanamiento-musical": ""
  }
 }
