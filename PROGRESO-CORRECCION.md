@@ -178,3 +178,4 @@ Orden de Pablo (reenviada por la sesión principal, 2026-10-25): las marchas de 
 - F4: 7 autores añadidos a `site/data/imagenes.json` desde la ficha de Commons. Las 4 de Córdoba copiadas de otras webs sin autor, fuera.
 - `FOTOS-QUE-FALTAN.md` con las 7 capitales: 41 hermandades sin ninguna foto.
 - Dudas que se quedan: Jesús Caído (Córdoba), Virgen oscura pero reconocible (se queda); la foto de ficha del Cristo de Gracia es la fachada de la iglesia (se queda como foto de la ficha, no como Cristo).
+- Revisión independiente de 20 fotos al azar (7 capitales): 18 correctas, 0 fallos de hermandad o ciudad, 2 válidas pero en las que la Virgen apenas se ve (Rosario del Mar y Borriquita de Almería), anotadas en FOTOS-QUE-FALTAN.md.

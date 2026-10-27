@@ -249,6 +249,8 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Almería
 
+Foto mejor (la que hay es de esa hermandad, pero la Virgen apenas se ve, de lejos y tapada por la candelería): **Rosario del Mar** (María Santísima del Rosario del Mar) y **La Borriquita** (Nuestra Señora de la Paz).
+
 1 sin ninguna foto; 16 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
