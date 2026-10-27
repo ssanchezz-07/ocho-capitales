@@ -393,3 +393,14 @@ a { text-underline-offset: .18em; }
 .ix-foto.is-sello { --tc: color-mix(in oklab, var(--c, #2b1140) 72%, #12061c); display: grid; place-items: center; border-radius: 50%; background: radial-gradient(90% 90% at 30% 20%, rgb(255 214 150 / .25), transparent 60%), var(--tc); box-shadow: inset 0 0 0 2px var(--oro), inset 0 0 0 4px var(--tc), inset 0 0 0 5px rgb(236 211 147 / .45); }
 .ix-foto.is-sello span { font: 400 1.4rem/1 var(--display); letter-spacing: .04em; color: var(--oro-claro); }
 @media (prefers-reduced-motion: no-preference) { @supports (animation-timeline: view()) { .ix .ix-obras > li { animation: vida-entra var(--e-salida) both; animation-timeline: view(); animation-range: entry 0% entry 40%; } } }
+
+/* ---------- 8. Fallos conocidos (27-oct) ---------- */
+/* Favoritos: el enlace de la fila se extiende a toda la fila (::after) y tapaba «Quitar»: el botón va por encima */
+.oc-fav-quitar { position: relative; z-index: 2; transition: background-color var(--m-rapido) var(--e-salida), border-color var(--m-rapido) var(--e-salida), transform var(--m-suelta) var(--e-salida); }
+.oc-fav-quitar:active { transform: scale(.96); transition-duration: var(--m-toque); }
+@media (hover: hover) and (pointer: fine) { .oc-fav-quitar:hover { border-color: var(--primary); background: var(--primary-soft); } }
+/* erCuñao: en el móvil, el botón flotante algo más pequeño y pegado al borde, para no tapar el final de las líneas */
+@media (max-width: 959px) { .oc-cunao-btn { width: 52px; height: 52px; right: max(8px, env(safe-area-inset-right)); bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 10px); } .oc-cunao-bocadillo { font-size: .84rem; padding: 8px 12px; } }
+/* Ficha de capital: la cabecera deja ver «lo de hoy» en la primera pantalla (antes, media pantalla en el móvil y más en el escritorio) */
+@media (max-width: 759px) { .oc-caphero:not(.is-compact) { min-height: min(34svh, 300px); padding-top: 72px; } }
+@media (min-width: 760px) { .oc-caphero:not(.is-compact) { min-height: min(40svh, 380px); padding-top: 56px; padding-bottom: 40px; } }

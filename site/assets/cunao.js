@@ -861,4 +861,8 @@
   form.addEventListener('submit', (e) => { e.preventDefault(); const t = q.value; q.value = ''; preguntar(t); });
   // el bocadillo del botón se presenta una vez por sesión y se retira solo
   try { if (!sessionStorage.getItem('oc-cunao')) { btn.classList.add('is-saludo'); sessionStorage.setItem('oc-cunao', '1'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); } } catch (e) { }
+  // en cuanto se baja o se toca la página, el bocadillo se retira: no tapa el texto de la primera pantalla
+  const retira = () => { btn.classList.remove('is-saludo'); removeEventListener('scroll', alBajar); };
+  const alBajar = () => { if (scrollY > 40) retira(); };
+  addEventListener('scroll', alBajar, { passive: true }); addEventListener('pointerdown', (e) => { if (!btn.contains(e.target)) retira(); }, { once: true, passive: true });
 })(this);
