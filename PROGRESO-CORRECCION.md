@@ -172,3 +172,9 @@ Orden de Pablo (reenviada por la sesión principal, 2026-10-25): las marchas de 
 - Plaza de Jesús Cautivo (Cautivo): no está en OSM.
 
 **Crédito de OpenStreetMap** (aviso de la sesión de marketing): enlace «© colaboradores de OpenStreetMap» → https://www.openstreetmap.org/copyright, siempre visible en el plano (PC y móvil), y párrafo con la licencia ODbL en `/acerca/#mapas`.
+
+## Imágenes de las 8 capitales (2026-10-27, sesión oc-malaga)
+- Las 476 fichas de Commons de las 506 fotos, contrastadas con la API de Commons (descripción, categorías y autor); las dudosas, a ojo. Las categorías nombran a la hermandad en casi todas. Los fallos estaban en otra ciudad (El Puerto, San Fernando, Chiclana, Roquetas, Úbeda, Andújar, Moguer, Granada de Nicaragua), otra imagen, bandas, nazarenos o una garita. Todo en `tools/sources/fotos-retiradas.json` (retiradas, retiradas_en, no_portada, titular_corregido), con motivo; lo aplica `site/build.mjs`.
+- F4: 7 autores añadidos a `site/data/imagenes.json` desde la ficha de Commons. Las 4 de Córdoba copiadas de otras webs sin autor, fuera.
+- `FOTOS-QUE-FALTAN.md` con las 7 capitales: 41 hermandades sin ninguna foto.
+- Dudas que se quedan: Jesús Caído (Córdoba), Virgen oscura pero reconocible (se queda); la foto de ficha del Cristo de Gracia es la fachada de la iglesia (se queda como foto de la ficha, no como Cristo).

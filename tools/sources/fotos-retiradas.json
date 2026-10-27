@@ -1,10 +1,77 @@
 {
- "nota": "Fotos retiradas tras abrir su ficha de Wikimedia Commons (descripción y categorías, con Playwright): no son de esa hermandad o la ficha no permite asegurarlo. Clave: nombre del archivo en Commons. Lo aplica site/build.mjs (foto principal y díptico). Comprobado el 2026-10-25.",
+ "nota": "Fotos revisadas contra su ficha de Wikimedia Commons (descripción y categorías; Málaga con Playwright el 2026-10-25, el resto con la API de Commons el 2026-10-27, más revisión a ojo de las dudosas). retiradas: el archivo no vale para nadie (otra ciudad, otra hermandad, banda o nazarenos). retiradas_en «slug|rol»: no vale para esa hermandad o ese papel. no_portada: foto de cortejo que no encabeza la ficha si hay foto de un titular. titular_corregido «slug|rol»: nombre correcto del titular de la foto. Lo aplica site/build.mjs.",
  "retiradas": {
   "Malaga_ig_Sn_Juan_Bautista_f11.2_-Cristo_de_los_Azotes_y_Columna_capilla.jpg": "Gitanos (Málaga), díptico: es Jesús de Azotes y Columna de las Fusionadas (categoría «Jesús de Azotes y Columna, Málaga»), no la Columna de Gitanos. Caso visto por Pablo.",
   "Nuestra_Señora_de_los_Dolores._José_María_Ponsoda_Bravo.jpg": "Huerto (Málaga), díptico: la ficha dice «Nuestra Señora de los Dolores de Sierra de Yeguas (Málaga)», no la Concepción Dolorosa del Huerto. Caso visto por Pablo.",
   "Penas_-_Trono_del_Cristo_2.jpg": "Salesianos (Málaga), díptico: categoría «Cofradía de las Penas (Málaga)», 2016 Holy Tuesday; es el trono del Cristo de las Penas (Martes Santo), no el Santo Cristo de las Penas de Salesianos.",
   "Resucitado_Guion.jpg": "Resucitado (Málaga), foto principal: categoría «Archicofradía del Huerto (Málaga)»; es un guion del Huerto, no la cofradía del Resucitado.",
-  "La_Virgen_de_los_Dolores_en_su_trono.jpg": "Expiración (Málaga), foto principal: «La Virgen de los Dolores de Málaga en la Procesión Magna», sin hermandad ni categoría que diga que es la de la Expiración (hay varias Dolorosas de los Dolores en Málaga)."
+  "La_Virgen_de_los_Dolores_en_su_trono.jpg": "Expiración (Málaga), foto principal: «La Virgen de los Dolores de Málaga en la Procesión Magna», sin hermandad ni categoría que diga que es la de la Expiración (hay varias Dolorosas de los Dolores en Málaga).",
+  "Comienzo_de_La_Borriquita.JPG": "Borriquita (Cádiz): la ficha dice «Semana Santa en El Puerto de Santa María, Calle Cañas»; es la Borriquita de El Puerto.",
+  "Los_Afligidos,_paso_de_palio_con_crespón.JPG": "Afligidos (Cádiz): «Lunes Santo. Semana Santa en El Puerto de Santa María»; es de El Puerto, no de Cádiz (además, casi negra).",
+  "El_Nazareno_San_Fernando.jpg": "Nazareno de Santa María (Cádiz): categoría «Jesús Nazareno, San Fernando»; es el Nazareno de San Fernando.",
+  "Virgen_de_los_Dolores,_Hdad._del_Nazareno.jpg": "Nazareno de Santa María (Cádiz): «María Santísima de los Dolores del Nazareno, from Chiclana de la Frontera»; es de Chiclana.",
+  "BuenaMuerteElParador.jpg": "Angustias (Almería): «Holy Week in Roquetas de Mar»; es el Cristo de la Buena Muerte de El Parador (Roquetas).",
+  "Soledad_Ubeda.jpg": "Soledad (Jaén): «Virgen de la Soledad, de Úbeda (Jaén)»; es la de Úbeda.",
+  "Imagen_de_Cristo_Yacente_de_la_Hermandad_del_Santo_Sepulcro_de_Andújar.jpg": "Soledad (Jaén): «Cristo Yacente de la Hermandad del Santo Sepulcro de Andújar»; es de Andújar.",
+  "LunesSantoa.jpg": "Cautivo (Huelva): categoría «Hermandad del Cristo de los Remedios (Moguer)»; es de Moguer (además, casi negra).",
+  "Jesús_del_Santo_Entierro.jpg": "Santo Entierro (Granada): «Procesión de Jesús del Santo Entierro el viernes santo en Granada, Nicaragua».",
+  "Cenahuelva.jpg": "Sagrada Cena (Huelva): «Agrupación Musical Cristo del Amor»; es una banda desfilando, no los titulares.",
+  "JesusNazarenoHuelva.jpg": "Nazareno (Huelva): «Bct. Jesús Nazareno»; es la banda de cornetas (músicos y público de noche), no el titular.",
+  "Virgen_de_la_Luz_en_su_retablo.jpg": "Carretería (Sevilla): «Virgen de la Luz en la iglesia de San Esteban», categoría «Hermandad de Nuestra Señora de la Luz»; es otra Virgen de la Luz (San Esteban), no la de la Carretería.",
+  "Cena_Nazareno.jpg": "Sagrada Cena (Málaga): nazarenos del cortejo, no los titulares (revisión a ojo).",
+  "Mena_Cruz_Guia.jpg": "Mena (Málaga): la cruz guía y los nazarenos, no los titulares (revisión a ojo).",
+  "Señor_del_Calvario.jpg": "El Calvario (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
+  "Nuestro_Padre_Jesús_Nazaren.jpg": "Jesús Nazareno (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
+  "Paso_del_Cristo_de_la_Buena_Muerte.jpg": "La Buena Muerte (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
+  "María_Santísima_de_la_Soledad.jpg": "La Soledad (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable."
+ },
+ "retiradas_en": {
+  "el-descendimiento-cadiz|virgen": {
+   "archivo": "Virgen_de_los_Dolores,_Cádiz.jpg",
+   "motivo": "La ficha dice que es «the original titular image of the Third Order of Servites of Cádiz» (Montes de Oca, 1729), en una hornacina de San Lorenzo: es de los Servitas, no la Virgen de los Dolores del Descendimiento."
+  },
+  "servitas-cadiz|virgen": {
+   "archivo": "Virgen_de_los_Dolores,_Cádiz.jpg",
+   "motivo": "La misma ficha: la imagen original de los Servitas, hoy en una hornacina exterior de San Lorenzo; no consta que sea la titular que procesiona."
+  },
+  "servitas-cadiz|ficha": {
+   "archivo": "SERVITAS_DE_CÁDIZ.jpg",
+   "motivo": "La hornacina exterior de San Lorenzo con la imagen antigua de los Servitas; no consta que sea la titular que procesiona."
+  },
+  "la-estrella-almeria|virgen": {
+   "archivo": "Rosario_del_Mar_05.jpg",
+   "motivo": "«Rosario del Mar 05»: Nuestro Padre Jesús de las Penas, de la hermandad del Rosario del Mar; no es la Virgen de la Estrella."
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba|cristo": {
+   "archivo": "Cordoba_-_Iglesia_de_Nuestra_Señora_de_Gracia_(Trinitariios)_0.jpg",
+   "motivo": "Es la fachada de la iglesia de los Trinitarios, no el Cristo de Gracia (sigue como foto de la ficha)."
+  },
+  "la-estrella-granada|virgen": {
+   "archivo": "Cofradía_de_Nazarenos_de_Nuestro_Padre_Jesús_de_la_Pasión_y_María_Santísima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG",
+   "motivo": "La foto es el paso de Nuestro Padre Jesús de la Pasión de noche (revisión a ojo), no la Virgen de la Estrella."
+  },
+  "la-sanidad-cadiz|sede": {
+   "archivo": "Iglesia_de_Santa_Cruz.jpg",
+   "motivo": "«Iglesia de Santa Cruz»: en primer plano sale una garita de la muralla (categoría «Bartizans in Cádiz»), no el templo."
+  },
+  "santo-entierro-cadiz|sede": {
+   "archivo": "Iglesia_de_Santa_Cruz.jpg",
+   "motivo": "La misma foto de la garita de la muralla delante de Santa Cruz."
+  }
+ },
+ "no_portada": {
+  "Hábito_Cofradía_de_los_Estudiantes.jpg": "los-estudiantes-granada: Hábito de los nazarenos; es de esa hermandad, pero no un titular.",
+  "Cofradía_de_la_Oración_de_Nuestro_Señor_en_el_Huerto_de_los_Olivos_y_María_Santísima_de_la_Amargura,_Granada,_Semana_Santa_2009_(1).JPG": "el-huerto-granada: nazarenos y cruz guía; es de esa hermandad, pero no un titular.",
+  "Cortejo_de_palmas_de_la_Borriquilla_en_Granada.jpg": "la-borriquilla-granada: cortejo de palmas; es de esa hermandad, pero no un titular.",
+  "Cofradía_del_Santo_Sepulcro_(3757739379).jpg": "santo-sepulcro-cordoba: acólitos del cortejo; es de esa hermandad, pero no un titular.",
+  "La_Estrella_Alm_04.jpg": "la-estrella-almeria: nazarenos por la calle; es de esa hermandad, pero no un titular.",
+  "Salesianos_-_Estandarte.jpg": "salesianos-malaga: estandarte; es de esa hermandad, pero no un titular.",
+  "Vera+Cruz_Lectura.jpg": "vera-cruz-malaga: nazarenos en la lectura; es de esa hermandad, pero no un titular."
+ },
+ "titular_corregido": {
+  "dolores-de-torreblanca-sevilla|cristo": {
+   "titular": "Nuestro Padre Jesús Cautivo ante Pilato",
+   "motivo": "La foto es «Misterio Cautivo ante Pilato Torreblanca» y estaba rotulada «Santísimo Sacramento»."
+  }
  }
 }

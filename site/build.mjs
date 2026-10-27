@@ -78,20 +78,24 @@ const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf
 const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina });
 // Fotos retiradas tras comprobar su ficha en Commons (tools/sources/fotos-retiradas.json): no salen ni como foto principal ni en el díptico
 const FRET_FILE = path.join(DIR, '..', 'tools', 'sources', 'fotos-retiradas.json');
-const FRET = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')).retiradas : {};
+const FRET_ALL = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')) : {};
+const FRET = FRET_ALL.retiradas || {};
+// retiradas_en: «slug|rol» → la foto no vale para ESA hermandad o ese papel (sí para otra); no_portada: foto de cortejo, que no
+// encabeza la ficha si hay foto de un titular; titular_corregido: «slug|rol» → nombre correcto del titular que sale en la foto.
+const FRET_EN = FRET_ALL.retiradas_en || {}, NO_PORTADA = FRET_ALL.no_portada || {}, TIT_OK = FRET_ALL.titular_corregido || {};
 const archivoCommons = (u) => { try { return decodeURIComponent(String(u || '').split('?')[0].split('/').pop()).replace(/^File:/, '').replace(/^\d+px-/, ''); } catch { return ''; } };
-const fotoRetirada = (x) => !!x && !!(FRET[archivoCommons(x.pagina)] || FRET[archivoCommons(x.src)]);
-for (const h of D.hermandades) if (fotoRetirada(h.imagen)) h.imagen = null;
-for (const h of D.hermandades) if (IMGX.hermandades[h.slug] && !fotoRetirada(IMGX.hermandades[h.slug])) h.imagen = localImg('h', h.slug, IMGX.hermandades[h.slug]);
+const fotoRetirada = (x, slug, rol) => !!x && !!(FRET[archivoCommons(x.pagina)] || FRET[archivoCommons(x.src)] || (slug && FRET_EN[slug + '|' + rol]));
+for (const h of D.hermandades) if (fotoRetirada(h.imagen, h.slug, 'ficha')) h.imagen = null;
+for (const h of D.hermandades) if (IMGX.hermandades[h.slug] && !fotoRetirada(IMGX.hermandades[h.slug], h.slug, 'ficha')) h.imagen = localImg('h', h.slug, IMGX.hermandades[h.slug]);
 for (const c of D.capitales) if (IMGX.capitales[c.slug]) c.imagen = localImg('c', c.slug, IMGX.capitales[c.slug]);
 // Díptico de titulares (petición de Pablo, 2026-10-15): el Cristo y la Virgen juntos, o una foto en la que salgan los dos.
 for (const h of D.hermandades) {
   const t = (IMGX.titulares || {})[h.slug]; if (!t) continue;
-  const im = (tipo) => (t[tipo] && !fotoRetirada(t[tipo]) ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: t[tipo].titular } : null);
+  const im = (tipo) => (t[tipo] && !fotoRetirada(t[tipo], h.slug, tipo) ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: (TIT_OK[h.slug + '|' + tipo] || {}).titular || t[tipo].titular } : null);
   h.diptico = { cristo: im('cristo'), virgen: im('virgen'), juntos: im('juntos'), sede: im('sede') };
   // La miniatura de las listas pasa a ser el Cristo (o la Virgen, o el cortejo) en lugar del escudo; la sede, solo si no hay otra
   const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen || (!h.imagen ? h.diptico.sede : null);
-  if (lead && (!h.imagen || h.imagen.escudo)) h.imagen = lead;
+  if (lead && (!h.imagen || h.imagen.escudo || NO_PORTADA[archivoCommons(h.imagen.pagina)])) h.imagen = lead;
 }
 
 // Salidas adicionales de vísperas (p. ej. la Virgen de los Dolores de la Lanzada de Huelva el Viernes de Dolores):
