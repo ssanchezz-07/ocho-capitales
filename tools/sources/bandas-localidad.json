@@ -1,0 +1,162 @@
+{
+ "nota": "Localidad de las bandas que la guía de acompañamiento da sin pueblo, buscada con fuente (27-oct). Clave: nombre normalizado. Las capillas musicales también acompañan pasos y se quedan como formación musical.",
+ "bandas": {
+  "agrupacion musical bentomiz de arenas de malaga": {
+   "nombre": "Agrupación Musical Bentomiz de Arenas de Málaga",
+   "localidad": "Arenas",
+   "fuente": "https://www.instagram.com/ambentomiz"
+  },
+  "agrupacion musical cristo de gracia": {
+   "nombre": "Agrupación Musical Cristo de Gracia",
+   "localidad": "Córdoba",
+   "fuente": "https://www.amstmocristodegracia.es/"
+  },
+  "agrupacion musical nuestro padre jesus de fe en su sagrada cena": {
+   "nombre": "Agrupación Musical Nuestro Padre Jesús de Fe en su Sagrada Cena",
+   "localidad": "Córdoba",
+   "fuente": "https://www.facebook.com/amsagradacenacordoba"
+  },
+  "agrupacion musical santo tomas de villanueva": {
+   "nombre": "Agrupación Musical Santo Tomás de Villanueva",
+   "localidad": "Ciudad Real",
+   "fuente": "https://www.facebook.com/SantoTomasVillanuevaCiudadReal"
+  },
+  "asociacion musical el castillo de seron": {
+   "nombre": "Asociación Musical El Castillo de Serón",
+   "localidad": "Serón",
+   "fuente": "https://www.bandaseron.es/Nuestra-Asociación"
+  },
+  "asociacion musico cultural la mezquita de alboloduy": {
+   "nombre": "Asociación Músico Cultural La Mezquita de Alboloduy",
+   "localidad": "Alboloduy",
+   "fuente": "https://bandalamezquitadealboloduy.blogspot.com/contacto.html"
+  },
+  "asociacion musico-cultural sebastian valero de huelma": {
+   "nombre": "Asociación Músico-Cultural Sebastián Valero de Huelma",
+   "localidad": "Huelma",
+   "fuente": "https://www.facebook.com/sebastianvalerohuelma"
+  },
+  "banda de cornetas y tambores maestro valero de aguilar": {
+   "nombre": "Banda de Cornetas y Tambores Maestro Valero de Aguilar",
+   "localidad": "Aguilar de la Frontera",
+   "fuente": "https://www.dailymotion.com/user/gransimba"
+  },
+  "banda de cornetas y tambores nuestra senora del carmen de almeria": {
+   "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Carmen de Almería",
+   "localidad": "Almería",
+   "fuente": "https://www.facebook.com/BandaCarmenDeAlmeria"
+  },
+  "banda de cornetas y tambores sentencia de cuevas del almanzora": {
+   "nombre": "Banda de Cornetas y Tambores Sentencia de Cuevas del Almanzora",
+   "localidad": "Cuevas del Almanzora",
+   "fuente": "https://www.instagram.com/bctsentencia"
+  },
+  "banda de cornetas y tambores veracruz de utrera": {
+   "nombre": "Banda de Cornetas y Tambores Veracruz de Utrera",
+   "localidad": "Utrera",
+   "fuente": "https://www.facebook.com/bctveracruzutrera"
+  },
+  "banda de musica de albaida del aljarafe": {
+   "nombre": "Banda de Música de Albaida del Aljarafe",
+   "localidad": "Albaida del Aljarafe",
+   "fuente": "https://bandadealbaida.es"
+  },
+  "banda de musica de alhama de almeria": {
+   "nombre": "Banda de Música de Alhama de Almería",
+   "localidad": "Alhama de Almería",
+   "fuente": "https://www.instagram.com/bmalhamadealmeria"
+  },
+  "banda de musica de barbate": {
+   "nombre": "Banda de Música de Barbate",
+   "localidad": "Barbate",
+   "fuente": "https://www.facebook.com/BandaBarbate"
+  },
+  "banda de musica de lora del rio": {
+   "nombre": "Banda de Música de Lora del Río",
+   "localidad": "Lora del Río",
+   "fuente": "https://www.facebook.com/bmloradelrio"
+  },
+  "banda de musica huecija-alicun": {
+   "nombre": "Banda de Música Huécija-Alicún",
+   "localidad": "Huécija",
+   "fuente": "https://www.instagram.com/bmhuecijaalicun"
+  },
+  "banda municipal de bollullos": {
+   "nombre": "Banda Municipal de Bollullos",
+   "localidad": "Bollullos Par del Condado",
+   "fuente": "https://cigarrerascadiz.es/banda-municipal-de-musica/"
+  },
+  "banda municipal de musica de albox": {
+   "nombre": "Banda Municipal de Música de Albox",
+   "localidad": "Albox",
+   "fuente": "https://www.facebook.com/BandaAlbox"
+  },
+  "banda municipal de musica de almeria": {
+   "nombre": "Banda Municipal de Música de Almería",
+   "localidad": "Almería",
+   "fuente": "https://almeriaciudad.es/cultura/banda-municipal-de-musica-de-almeria"
+  },
+  "banda municipal de musica de berja": {
+   "nombre": "Banda Municipal de Música de Berja",
+   "localidad": "Berja",
+   "fuente": "https://www.instagram.com/bmmberja"
+  },
+  "banda municipal de rota": {
+   "nombre": "Banda Municipal de Rota",
+   "localidad": "Rota",
+   "fuente": "https://rota-cofrade.net/bandamusicamunicipalderota.html"
+  },
+  "banda sinfonica de la asociacion cultural de nijar": {
+   "nombre": "Banda Sinfónica de la Asociación Cultural de Níjar",
+   "localidad": "Níjar",
+   "fuente": "https://www.youtube.com/@bandadenijar"
+  },
+  "capilla cristo de san agustin": {
+   "nombre": "Capilla Cristo de San Agustín",
+   "localidad": "Granada",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sant%C3%ADsimo_Cristo_de_San_Agust%C3%ADn_(Granada)",
+   "nota": "capilla musical de la propia hermandad (no es una banda)"
+  },
+  "capilla lignum crucis": {
+   "nombre": "Capilla Lignum Crucis",
+   "localidad": "San Fernando",
+   "fuente": "https://cofradiastv.com/la-capilla-musical-lignum-crucis-de-san-fernando-cierra-las-actuaciones-para-la-semana-santa-de-2022",
+   "nota": "capilla musical de viento madera (oboe, clarinete, fagot); no es una banda"
+  },
+  "capilla musical calvarium": {
+   "nombre": "Capilla Musical Calvarium",
+   "localidad": "Sevilla",
+   "fuente": "https://ccapillamusicalvarium.blogspot.com",
+   "nota": "capilla musical (trío de capilla y grupo de cámara de viento madera con voces); no es una banda"
+  },
+  "capilla musical virgen de consolacion": {
+   "nombre": "Capilla musical Virgen de Consolación",
+   "localidad": "Granada",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Sant%C3%ADsimo_Cristo_de_San_Agust%C3%ADn_(Granada)",
+   "nota": "capilla musical de la propia hermandad (no es una banda)"
+  },
+  "capilla musical y escolania": {
+   "nombre": "Capilla Musical y Escolanía",
+   "localidad": "Sevilla",
+   "fuente": "https://escolania.es",
+   "nota": "capilla musical (cuarteto de viento madera) más escolanía (coro de niños); no es una banda"
+  },
+  "capilla san pablo": {
+   "nombre": "Capilla San Pablo",
+   "localidad": "Cádiz",
+   "fuente": "https://capillamusicalsanpablo.blogspot.com/p/historia.html",
+   "nota": "capilla musical de viento madera (oboe, clarinete, fagot); no es una banda"
+  },
+  "capilla santo angel custodio y grupo vocal polifonico magnum ensemble": {
+   "nombre": "Capilla Santo Ángel Custodio y grupo vocal polifónico Magnum Ensemble",
+   "localidad": "Granada",
+   "fuente": "https://www.facebook.com/capillasantoangelcustodio",
+   "nota": "dos grupos: capilla musical (instrumental) y grupo vocal polifónico; no son una banda"
+  },
+  "filarmonica de conil": {
+   "nombre": "Filarmónica de Conil",
+   "localidad": "Conil de la Frontera",
+   "fuente": "https://www.facebook.com/banda.ciudaddeconil"
+  }
+ }
+}

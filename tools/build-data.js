@@ -290,6 +290,11 @@ const imgOut = [...imagineros.values()].map((im) => ({
 })).sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es'));
 
 const norm0 = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+// Localidad buscada aparte, con su fuente, para las bandas que la guía de acompañamiento da sin pueblo (tools/sources/bandas-localidad.json).
+// Su dirección cambia (lleva la localidad): la vieja va a tools/sources/bandas-redirecciones.json.
+const LOCB = (() => { const f = path.join(__dirname, 'sources', 'bandas-localidad.json'); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).bandas || {} : {}; })();
+const SIN_LOC = new Set(); // nombres que tenían la localidad vacía en la guía (para enlazar sus acompañamientos)
+for (const b of bandas.values()) { const x = !b.localidad && LOCB[norm0(b.nombre)]; if (x && x.localidad) { SIN_LOC.add(b.nombre); b.localidad = x.localidad; b.localidad_fuente = x.fuente; } }
 const bandOut = [...bandas.values()].map((b) => {
   const base = slugify(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
   const loc = norm0(b.localidad); const LOCS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'localidades.json'), 'utf8'));
@@ -308,6 +313,8 @@ const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado d
 // La misma banda (mismo nombre y misma localidad) que acompaña en varias capitales es una sola ficha: se juntan sus
 // acompañamientos. Antes salía partida en dos («…-jaen» y «…-jaen-2», la Agrupación Musical Jesús Despojado).
 { const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) { p.acompana.push(...(b.acompana || [])); if (b.nombre !== p.nombre) { ALIAS_BANDA.set(b.nombre.toLowerCase(), p.slug); ALIAS_CLAVE.set((b.nombre + '|' + b.localidad).toLowerCase(), p.slug); } } else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
+// el acompañamiento de la guía sigue nombrándolas sin localidad: se enlaza con su ficha nueva
+for (const n of SIN_LOC) { const b = bandOut.find((x) => x.nombre === n && x.localidad_fuente); if (b) ALIAS_CLAVE.set((n + '|').toLowerCase(), b.slug); }
 for (const b of bandOut) { const vis = new Map(); for (const a of b.acompana || []) { const kk = a.hermandad_slug + '|' + (a.rol || ''); const p = vis.get(kk); if (!p || (!p.fuente && a.fuente)) vis.set(kk, a); } b.acompana = [...vis.values()]; }
 // ids de banda por hermandad
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));

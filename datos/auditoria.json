@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-27T08:45:57.600Z",
+ "generado": "2026-10-27T09:04:53.689Z",
  "totales": {
   "capitales": 8,
   "hermandades": 307,
@@ -18,8 +18,8 @@
   "extraordinarias": 4,
   "agenda": 437,
   "noticias": 2396,
-  "fuentes": 27536,
-  "correcciones": 380
+  "fuentes": 27566,
+  "correcciones": 410
  },
  "hermandades_sin": {
   "historia": [
@@ -544,38 +544,7 @@
   "hermandad": 4766,
   "video": 3666
  },
- "bandas_sin_localidad": [
-  "agrupacion-musical-bentomiz-de-arenas-de-malaga",
-  "agrupacion-musical-cristo-de-gracia",
-  "agrupacion-musical-nuestro-padre-jesus-de-fe-en-su-sagrada-cena",
-  "agrupacion-musical-santo-tomas-de-villanueva",
-  "asociacion-musical-el-castillo-de-seron",
-  "asociacion-musico-cultural-la-mezquita-de-alboloduy",
-  "asociacion-musico-cultural-sebastian-valero-de-huelma",
-  "banda-de-cornetas-y-tambores-maestro-valero-de-aguilar",
-  "banda-de-cornetas-y-tambores-nuestra-senora-del-carmen-de-almeria",
-  "banda-de-cornetas-y-tambores-sentencia-de-cuevas-del-almanzora",
-  "banda-de-cornetas-y-tambores-veracruz-de-utrera",
-  "banda-de-musica-de-albaida-del-aljarafe",
-  "banda-de-musica-de-alhama-de-almeria",
-  "banda-de-musica-de-barbate",
-  "banda-de-musica-de-lora-del-rio",
-  "banda-de-musica-huecija-alicun",
-  "banda-municipal-de-bollullos",
-  "banda-municipal-de-musica-de-albox",
-  "banda-municipal-de-musica-de-almeria",
-  "banda-municipal-de-musica-de-berja",
-  "banda-municipal-de-rota",
-  "banda-sinfonica-de-la-asociacion-cultural-de-nijar",
-  "capilla-cristo-de-san-agustin",
-  "capilla-lignum-crucis",
-  "capilla-musical-calvarium",
-  "capilla-musical-virgen-de-consolacion",
-  "capilla-musical-y-escolania",
-  "capilla-san-pablo",
-  "capilla-santo-angel-custodio-y-grupo-vocal-polifonico-magnum-ensemble",
-  "filarmonica-de-conil"
- ],
+ "bandas_sin_localidad": [],
  "dias_raros": [],
  "webs_duplicadas": [
   {
