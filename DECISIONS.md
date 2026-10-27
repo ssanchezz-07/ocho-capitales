@@ -414,3 +414,4 @@ Plan (no empezado):
 4. **Volver** («← Andalucía») = lo mismo al revés; interrumpible; 1,2-1,8 s; con movimiento reducido, un fundido corto.
 5. Grabar vídeo en móvil (390) y PC (1440, 1920) con Playwright, revisar fotograma a fotograma y mandarlo a Pablo **antes de subir**.
 Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
+- **Detalle del fallo** (oc-marketing, notas compartidas fallo-portada-toque-capital.md, fallo-portada-toque-malaga.mp4 y .png; móvil 390×844): (1) durante 0,3 s se ve el pie «Cargando su plano…» con flechas y deslizador, y la página salta (el reloj se ve antes de saber el modo: ocultarlo fuera de temporada desde el principio); (2) el plano aparece diminuto y centrado sobre negro y luego salta a tamaño completo (es el vuelo desde «ancho × 3»: sustituirlo por la cámara continua desde la caja de la provincia); (3) las calles y los rótulos aparecen de golpe (dibujarlos con fundido o trazo).
