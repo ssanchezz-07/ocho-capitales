@@ -618,6 +618,15 @@
       ponerAltura(alturaCiudad(), !desdeHistoria); ciuBox.hidden = false;
       nomEl.textContent = cap.n; capA.href = cap.cap; resEl.textContent = ''; jorEl.textContent = ''; horaEl.textContent = ''; notaEl.textContent = '';
       var directo = calm || desdeHistoria;
+      // la bandera tocada baja hasta el nombre de la ciudad y se queda como su emblema (las demás se recogen)
+      var emb = $('[data-colg-emblema]', colg), bt = items.filter(function (x) { return x.dataset.colg === c; })[0], bi = bt && $('img', bt);
+      if (emb && bi) {
+        var r0 = bi.getBoundingClientRect(), im = document.createElement('img'); im.src = bi.currentSrc || bi.src; im.alt = ''; emb.textContent = ''; emb.appendChild(im);
+        if (!directo && emb.animate && r0.width) {
+          var r1 = emb.getBoundingClientRect();
+          if (r1.width) emb.animate([{ transform: 'translate(' + (r0.left - r1.left) + 'px,' + (r0.top - r1.top) + 'px) scale(' + (r0.width / r1.width) + ')', transformOrigin: '0 0' }, { transform: 'none', transformOrigin: '0 0' }], { duration: 720, easing: 'cubic-bezier(.2,.8,.2,1)' });
+        }
+      }
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
         D = r[1]; host.textContent = ''; host.hidden = false; host.style.opacity = '0';

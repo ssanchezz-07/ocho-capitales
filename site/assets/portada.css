@@ -223,3 +223,12 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-portada .oc-pl-base.is-volando .oc-pl-calles, .oc-portada .oc-pl-base.is-volando .oc-c-plaza, .oc-portada .oc-pl-base.is-volando .oc-c-parque, .oc-portada .oc-pl-base.is-volando .oc-c-playa, .oc-portada .oc-pl-base.is-volando .oc-c-templo, .oc-portada .oc-pl-base.is-volando .oc-c-casa { display: none; }
 /* al bajar a la ciudad, fuera el cordón discontinuo y el terciopelo del mapa: ampliados miles de veces son carísimos de pintar */
 .oc-portada.is-ciudad .oc-bd-cordon, .oc-portada.is-ciudad .oc-bd-cordon-base, .oc-portada.is-ciudad .oc-bd-pelo { display: none; }
+
+/* la bandera tocada baja hasta el nombre de la ciudad y se queda como su emblema */
+.oc-portada .oc-colg-cab { grid-template-columns: auto minmax(0, 1fr); column-gap: 12px; align-items: end; }
+.oc-portada .oc-colg-cab > .oc-colg-atras { grid-column: 1 / -1; justify-self: start; }
+.oc-portada .oc-colg-cab > .oc-colg-emblema { grid-column: 1; grid-row: 2 / span 2; align-self: end; }
+.oc-portada .oc-colg-cab > .oc-colg-cap, .oc-portada .oc-colg-cab > .oc-colg-res { grid-column: 2; }
+.oc-colg-emblema { display: block; width: clamp(20px, 2.2vw, 30px); }
+.oc-colg-emblema:empty { display: none; }
+.oc-colg-emblema img { display: block; width: 100%; height: auto; aspect-ratio: 265 / 971; filter: drop-shadow(0 4px 6px rgb(0 0 0 / .45)); }
