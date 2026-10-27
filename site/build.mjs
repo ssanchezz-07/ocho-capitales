@@ -1023,10 +1023,33 @@ function filaHerm(h, titulo, sub, extra = '') {
   return `<li class="oc-entry${thumb ? '' : ' is-text'}"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title">${titulo}</h3>${sub ? `<p class="oc-entry-sub">${sub}</p>` : ''}${h ? `<p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>` : ''}</div></li>`;
 }
 function pageImag(i) {
-  const obras = i.obras.map((o) => { const h = HERM[o.hermandad_slug]; return filaHerm(h, h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular), [h ? esc(h.nombre) : esc(o.hermandad), o.atrib ? 'atribución' : '', esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim())].filter(Boolean).join(' · ')); }).join('');
-  let body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:var(--primary)">Imaginero${i.vida ? ' · ' + esc(i.vida) : ''}</p><h1 class="oc-title">${esc(i.nombre)}</h1>${cifras([[i.obras.length, 'obra en el portal', 'obras en el portal'], [i.ciudades.length, 'capital', 'capitales']])}${facts([['Escuela', esc(i.escuela)], ['Capitales', i.ciudades.map((s) => CAP[s] ? `<a href="${u('semana-santa/' + s + '/')}">${esc(CAP[s].nombre)}</a>` : '').filter(Boolean).join(', ')]], 'is-key')}<div class="oc-actions">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></header>${i.bio ? `<section class="oc-section"><h2 class="oc-h2">Biografía</h2><div class="oc-prose">${para(i.bio)}</div>${(i.fuentes || (i.fuente_url ? [i.fuente_url] : [])).length ? `<ul class="oc-fuentes">${(i.fuentes || [i.fuente_url]).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}${section('Obras en la Semana Santa andaluza', obras ? `<ul class="oc-entries">${obras}</ul>` : '')}`;
+  // Con el lenguaje de Noticias (oc-diseno, 27-oct): cabecera de terciopelo del color de su capital principal, datos en tarjetas
+  // (época, escuela, capitales) y cada obra como una ficha con la imagen de su hermandad. Estilos .ix-* y .fx-* en assets/vida.css.
+  const cp = capPrincipal(i), col = CAP[cp] ? CAP[cp].color : '#3a1a5c', siglo = sigloImag(i);
+  const obraCard = (o) => {
+    const h = HERM[o.hermandad_slug], c = h ? CAP[h.ciudad] : null;
+    const det = esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
+    const foto = h && h.imagen ? `<div class="ix-foto${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true"${c ? ` style="--c:${c.color}"` : ''}><span>${esc(inicialesM(String(o.titular).split(',')[0]))}</span></div>`;
+    const titulo = h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular);
+    const meta = [h ? `<span class="vx-autor">${esc(h.nombre)}</span>` : (o.hermandad ? `<span class="vx-autor">${esc(o.hermandad)}</span>` : ''), det ? `<span>${det}</span>` : '', o.atrib ? '<span class="nx-tema">Atribución</span>' : ''].join('');
+    return `<li class="oc-entry vx-m ix-obra">${foto}<div class="vx-body"><h3 class="vx-tit">${titulo}</h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${h ? `<p class="vx-pie">${cityTag(h.ciudad)}<span class="oc-muted">${esc(h.dia)}</span></p>` : ''}</div></li>`;
+  };
+  const dato = (cls, etq, inner) => (inner ? `<div class="fx-dato ${cls}"><dt>${etq}</dt><dd>${inner}</dd></div>` : '');
+  const datos = [
+    dato('is-salida', 'Época', `<b class="fx-grande">${esc(siglo.replace('Siglo ', 's. '))}</b>${i.vida ? `<span>${esc(i.vida)}</span>` : ''}`),
+    dato('is-escuela', 'Escuela', i.escuela ? `<b class="fx-medio">${esc(i.escuela)}</b>` : ''),
+    dato('is-capitales', 'En las capitales', i.ciudades.length ? `<b class="fx-medio">${i.ciudades.map((s) => (CAP[s] ? `<a href="${u('semana-santa/' + s + '/')}">${esc(CAP[s].nombre)}</a>` : '')).filter(Boolean).join(', ')}</b>` : ''),
+    dato('is-obras', 'Obras en el portal', `<b class="fx-grande">${i.obras.length}</b><span>${plural(new Set(i.obras.map((o) => o.hermandad_slug)).size, 'hermandad', 'hermandades')}</span>`),
+  ].join('');
+  const fuentesBio = (i.fuentes || (i.fuente_url ? [i.fuente_url] : []));
   const qi = encodeURIComponent(i.nombre + ' imaginero');
-  body += `${section('Más sobre su obra', `<ul class="oc-linklist"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul>`)}`;
+  const body = `<article class="fx ix" style="--c:${col}">
+<header class="nx-head vx-head ix-head" style="--nx-c:${col}"><div class="nx-head-in"><p class="fx-kicker">Imaginero${siglo !== 'Sin datar' ? ' · ' + esc(siglo.toLowerCase()) : ''}</p><h1 class="oc-title nx-title${i.nombre.length > 26 ? ' is-long' : ''}">${esc(i.nombre)}</h1>${i.vida ? `<p class="nx-lead">${esc(i.vida)}${i.escuela ? ' · ' + esc(i.escuela) : ''}</p>` : (i.escuela ? `<p class="nx-lead">${esc(i.escuela)}</p>` : '')}<div class="oc-actions fx-acc">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></div></header>
+<dl class="fx-datos" aria-label="Datos del imaginero">${datos}</dl>
+${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><div class="oc-prose fx-prosa">${para(i.bio)}</div>${fuentesBio.length ? `<ul class="oc-fuentes">${fuentesBio.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}
+${i.obras.length ? `<section class="oc-section fx-sec"><h2 class="nx-h">Sus obras</h2><ul class="oc-entries vx-grid ix-obras">${i.obras.map(obraCard).join('')}</ul></section>` : ''}
+<section class="oc-section fx-sec"><h2 class="nx-h">Más sobre su obra</h2><ul class="oc-linklist fx-enlaces"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul></section>
+</article>`;
   write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en la Semana Santa de Andalucía. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
 }
 
@@ -1129,14 +1152,14 @@ ${topAut.length ? `<section class="vx-autores" aria-labelledby="vx-aut-t"><h2 cl
 <h2 class="nx-h vx-todas">Todas las marchas</h2>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir data-resto="marchas/resto.html" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
   write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
-function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…') {
+function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…', etqTipo = 'Tipo') {
   return `<div class="oc-filters" data-dir-filters>
   <div class="oc-field oc-field-grow"><label for="fq">Filtrar</label><input id="fq" type="search" data-f="q" placeholder="${esc(ph)}" autocomplete="off" enterkeyhint="search"></div>
   <details class="oc-morefilters" open data-morefilters><summary>Más filtros</summary><div class="oc-morefilters-body">
   ${bandas ? `<div class="oc-field"><label for="fo">De la provincia de</label><select id="fo" data-f="origen"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>` : ''}
   <div class="oc-field"><label for="fc">${bandas ? 'Acompaña en' : 'Capital'}</label><select id="fc" data-f="ciudad"><option value="">Todas</option>${D.capitales.map((c) => `<option value="${c.slug}">${esc(c.nombre)}</option>`).join('')}</select></div>
   ${withDay ? `<div class="oc-field"><label for="fd">Día</label><select id="fd" data-f="dia"><option value="">Todos</option>${DAY_ORDER.filter((d) => D.hermandades.some((h) => h.dia === d)).map((d) => `<option value="${slugify(d)}">${esc(d)}</option>`).join('')}</select></div>` : ''}
-  ${tipos ? `<div class="oc-field"><label for="ft">Tipo</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}
+  ${tipos ? `<div class="oc-field"><label for="ft">${etqTipo}</label><select id="ft" data-f="tipo"><option value="">Todos</option>${tipos.map((t) => `<option value="${slugify(t)}">${esc(t)}</option>`).join('')}</select></div>` : ''}
   </div></details>
 </div>
 <p class="oc-count" aria-live="polite" data-dir-count>${total} resultados</p>`;
@@ -1173,10 +1196,35 @@ function pageDirBandas() {
 <h2 class="nx-h vx-todas">Todas las formaciones</h2>${dirFilters(false, tipos, D.bandas.length, true, 'Nombre, localidad, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('bandas/index.html', layout({ title: 'Bandas', desc: 'Bandas de cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades andaluzas.', body, path: 'bandas/', active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', '']] }));
 }
+// Época de un imaginero: el siglo de su madurez (nacimiento + 30) o, si no hay fechas de vida, el del primer año de sus obras
+const ROMANO = { 15: 'XV', 16: 'XVI', 17: 'XVII', 18: 'XVIII', 19: 'XIX', 20: 'XX', 21: 'XXI' };
+function sigloImag(i) {
+  const v = String(i.vida || ''), y = +(v.match(/\d{4}/) || [])[0];
+  let a = y ? (/^n\./.test(v) ? y + 30 : y + 30) : 0;
+  if (!a) { const ys = i.obras.map((o) => +(String(o.detalle || '').match(/\b(1[4-9]\d\d|20[0-2]\d)\b/) || [])[1]).filter(Boolean).sort((p, q) => p - q); a = ys[0] || 0; }
+  const s = a ? Math.min(21, Math.floor((a - 1) / 100) + 1) : 0;
+  return s && ROMANO[s] ? 'Siglo ' + ROMANO[s] : 'Sin datar';
+}
+const capPrincipal = (i) => { const n = {}; for (const o of i.obras) { const h = HERM[o.hermandad_slug]; if (h) n[h.ciudad] = (n[h.ciudad] || 0) + 1; } return Object.entries(n).sort((a, b) => b[1] - a[1])[0]?.[0] || i.ciudades[0] || ''; };
+function entryImag(i) {
+  const cp = capPrincipal(i), col = CAP[cp] ? CAP[cp].color : '', siglo = sigloImag(i);
+  const meta = [i.vida ? `<span class="vx-autor">${esc(i.vida)}</span>` : '', siglo !== 'Sin datar' ? `<span class="nx-tema">${esc(siglo)}</span>` : ''].join('');
+  const obra = i.obras[0] ? `<p class="vx-ded">${plural(i.obras.length, 'obra', 'obras')}: <b>${esc(String(i.obras[0].titular).split(',')[0])}</b>${i.obras.length > 1 ? ' y más' : ''}</p>` : '';
+  const pie = i.ciudades.map(cityTag).join('') + (i.escuela ? `<span class="vx-play is-rep">${esc(i.escuela.replace(/\s*\(.*\)$/, ''))}</span>` : '');
+  return `<li class="oc-entry vx-m" data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}" data-tipo="${slugify(siglo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(i.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('imaginero/' + i.slug + '/')}">${esc(i.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${obra}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+}
 function pageDirImag() {
-  const items = [...D.imagineros].sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es')).map((i) => entrySimple(u('imaginero/' + i.slug + '/'), i.nombre, `${plural(i.obras.length, 'obra', 'obras')}${i.vida ? ', ' + i.vida : ''}`, i.ciudades, ` data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}"`)).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Imagineros</h1><p class="oc-lead">Los escultores de las imágenes que procesionan, ordenados por número de obras en el portal.</p></header>${dirFilters(false, null, D.imagineros.length, false, 'Nombre, obra, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
-  write('imagineros/index.html', layout({ title: 'Imagineros', desc: 'Los escultores e imagineros de la Semana Santa andaluza y sus obras.', body, path: 'imagineros/', active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', '']] }));
+  const lista = [...D.imagineros].sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es'));
+  const items = lista.map(entryImag).join('');
+  const nObras = D.imagineros.reduce((s, i) => s + i.obras.length, 0);
+  const nCap = new Set(D.imagineros.flatMap((i) => i.ciudades)).size;
+  // Por siglo: cuántos hay y el de más obra de cada uno
+  const orden = ['Siglo XV', 'Siglo XVI', 'Siglo XVII', 'Siglo XVIII', 'Siglo XIX', 'Siglo XX', 'Siglo XXI', 'Sin datar'];
+  const siglos = orden.map((t) => { const is = lista.filter((i) => sigloImag(i) === t); return { t, n: is.length, top: is[0] }; }).filter((x) => x.n);
+  const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Imagineros</h1><p class="nx-lead">Los escultores de las imágenes que procesionan: su época, su escuela y sus obras en las ocho capitales.</p><p class="nx-pulso"><span><b>${D.imagineros.length}</b> imagineros</span><span><b>${nObras}</b> obras</span><span><b>${nCap}</b> capitales</span></p></div></header>
+<section class="nx-caps vx-tipos" aria-labelledby="vx-siglos-t"><h2 class="nx-h" id="vx-siglos-t">Por época</h2><ul>${siglos.map(({ t, n, top }) => `<li class="nx-cap vida-entra" style="--c:var(--nazareno)"><button type="button" class="nx-cap-nombre" data-filtro-tipo="${slugify(t)}" aria-label="Ver los ${n} imagineros de ${esc(t.toLowerCase())}"><span>${esc(t)}</span><b>${n}</b></button>${top ? `<h3 class="nx-cap-tit"><a class="nx-a" href="${u('imaginero/' + top.slug + '/')}">${esc(top.nombre)}</a></h3><p class="nx-meta"><span class="nx-src">${plural(top.obras.length, 'obra', 'obras')}</span>${top.vida ? `<span>${esc(top.vida)}</span>` : ''}</p>` : ''}</li>`).join('')}</ul></section>
+<h2 class="nx-h vx-todas">Todos los imagineros</h2>${dirFilters(false, siglos.map((x) => x.t), D.imagineros.length, false, 'Nombre, obra, hermandad…', 'Época')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
+  write('imagineros/index.html', layout({ title: 'Imagineros', desc: 'Los escultores e imagineros de la Semana Santa andaluza: su época, su escuela y sus obras en las ocho capitales.', body, path: 'imagineros/', active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', '']] }));
 }
 // iCalendar: un archivo con todo lo próximo y uno por capital. Hora de Madrid; sin hora = acto de día completo.
 // Los títulos y notas vienen de fuentes externas: se eliminan saltos de línea y caracteres de control antes de escapar, para que no puedan añadir líneas al .ics.
