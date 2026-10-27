@@ -102,6 +102,7 @@
       hs.forEach(function (h, i) {
         var base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1, hc = k > 1 ? variar(base, k - 1) : base, d = '', pts = ruta(h);
         pts.forEach(function (p, j) { var q = pts[j - 1]; d += (!j || (!p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150)) ? 'M' + p[0] + ' ' + p[1] : 'L' + p[0] + ' ' + p[1]; });
+        el('path', { 'class': 'oc-pl-ruta-filo', d: d }, gR); // filo oscuro debajo: el recorrido se separa de las calles
         el('path', { 'class': 'oc-pl-ruta', d: d, 'data-s': h.s, style: '--hc:' + hc }, gR);
         // Cada medallón lleva a la ficha completa en «En la calle» (enlace real, también con teclado)
         var a = el('a', { 'class': 'oc-pl-marca', href: o.enlace ? o.enlace(h) : '#', 'aria-label': h.n, 'data-s': h.s }, gM);

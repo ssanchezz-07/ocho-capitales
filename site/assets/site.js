@@ -603,7 +603,8 @@
         if (svg && op < 1) { vbAhora = planoAAnd(c, R); svg.setAttribute('viewBox', vbAhora.map(f2).join(' ')); }
         host.style.opacity = op.toFixed(3); mapa.style.opacity = (1 - op).toFixed(3);
         // la provincia se apaga al acercarse a las calles
-        if (prov) prov.style.opacity = (0.85 - 0.72 * cl((k - 0.62) / 0.38)).toFixed(3);
+        // ida: se apaga del todo al llegar; vuelta: no hay provincia (se quitó al llegar) y la pone el mapa
+        if (prov && ida) prov.style.opacity = (0.85 * (1 - cl((k - 0.55) / 0.45))).toFixed(3);
         if (k < 1) vuelo = requestAnimationFrame(paso); else { quitarTransform(); host.style.transition = ''; mapa.style.transition = ''; if (fin) fin(); }
       })(t0);
     }
@@ -637,7 +638,7 @@
         var capC = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
         plano.provincia(provinciaEnMetros(c), capC ? capC.c : D.color);
         var destino = function () { var m = margenes(); return FUERA ? plano.encuadrarSedes(0, m, true) : plano.encuadrar(0, m, true); };
-        var llegar = function () { if (actual !== c || !plano) return; portada.classList.add('is-plano'); host.style.opacity = ''; mapa.style.opacity = ''; var d = destino(); if (d) plano.fijar(d, false); if (FUERA) plano.verSedes(true); };
+        var llegar = function () { if (actual !== c || !plano) return; plano.provincia('', ''); portada.classList.add('is-plano'); host.style.opacity = ''; mapa.style.opacity = ''; var d = destino(); if (d) plano.fijar(d, false); if (FUERA) plano.verSedes(true); };
         if (directo || !svg) { llegar(); return; }
         // la cámara arranca en el fotograma siguiente a crear el plano (el tirón de crearlo no cae en mitad del vuelo)
         // el plano se pinta una sola vez, en su encuadre final, antes de que arranque la cámara (pintarlo en pleno relevo daba un

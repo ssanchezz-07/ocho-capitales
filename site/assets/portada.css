@@ -232,3 +232,8 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-colg-emblema { display: block; width: clamp(20px, 2.2vw, 30px); }
 .oc-colg-emblema:empty { display: none; }
 .oc-colg-emblema img { display: block; width: 100%; height: auto; aspect-ratio: 265 / 971; filter: drop-shadow(0 4px 6px rgb(0 0 0 / .45)); }
+
+/* los recorridos del plano de la portada, más visibles: con su color, más gruesos y con un filo oscuro debajo */
+.oc-portada .oc-pl-ruta { stroke-opacity: .5; stroke-width: 3px; }
+.oc-portada .oc-pl-ruta[data-estado="calle"] { stroke-opacity: 1; stroke-width: 4.5px; }
+.oc-pl-ruta-filo { fill: none; stroke: rgb(16 6 24 / .6); stroke-width: 7.5px; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
