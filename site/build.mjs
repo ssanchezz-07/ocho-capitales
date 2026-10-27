@@ -900,7 +900,12 @@ function pageHerm(h) {
   const RANGO = { contrastada: 0, dedicada: 1, 'sin-verificar': 2 };
   const isWiki = /wikipedia\.org/.test(h.fuente_url || '');
   let host = ''; try { host = h.fuente_url ? new URL(h.fuente_url).hostname.replace(/^www\./, '') : ''; } catch (e) { host = ''; }
-  const fuente = h.fuente_url ? `<ul class="oc-fuentes"><li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}</span></li></ul>` : '';
+  // además de la ficha, la fuente de cada campo rellenado o corregido aparte (complementos.json, fichas-correcciones.json)
+  const ETQ = { fundacion: 'fundación', sede: 'sede', nombre_oficial: 'nombre oficial', web: 'web oficial', historia: 'historia', paso: 'pasos', titulares: 'titulares' };
+  const porUrl = new Map(); for (const [c, url] of Object.entries(h.relleno_fuentes || {})) if (url && url !== h.fuente_url) (porUrl.get(url) || porUrl.set(url, []).get(url)).push(ETQ[c] || c);
+  for (const t of h.titulares || []) if (t.nombre_fuente && t.nombre_fuente !== h.fuente_url) (porUrl.get(t.nombre_fuente) || porUrl.set(t.nombre_fuente, []).get(t.nombre_fuente)).push('titulares');
+  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(nombreWeb(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
+  const fuente = h.fuente_url || otras ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}</span></li>` : ''}${otras}</ul>` : '';
   const vecinos = D.hermandades.filter((x) => x.ciudad === h.ciudad && x.dia === h.dia).sort((a, b) => a.orden - b.orden);
   const idx = vecinos.findIndex((x) => x.slug === h.slug);
   const prev = vecinos[idx - 1]; const next = vecinos[idx + 1];

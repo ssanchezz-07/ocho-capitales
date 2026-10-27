@@ -415,6 +415,20 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
     if (wm && wm.marchas && wm.marchas.length && !(h.marchas || []).length) { h.marchas = wm.marchas.map((m) => ({ titulo: m.titulo, autor: m.autor, anio: m.anio || '', tipo: '' })); h.marchas_fuente = wm.fuente_url; }
   }
 }
+// Correcciones de ficha con fuente (tools/sources/fichas-correcciones.json): mandan sobre la ficha original y guardan su fuente
+{
+  const f = path.join(__dirname, 'sources', 'fichas-correcciones.json');
+  const FC = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).fichas : {};
+  for (const [slug, campos] of Object.entries(FC)) {
+    const h = hermandades.find((x) => x.slug === slug); if (!h) { console.warn('Corrección de una ficha que no está:', slug); continue; }
+    for (const [campo, c] of Object.entries(campos)) {
+      if (campo === 'titulares_renombrar') { for (const [viejo, n] of Object.entries(c)) { const t = h.titulares.find((x) => x.nombre === viejo); if (t) { t.nombre = n.nombre; t.nombre_fuente = n.fuente; } } continue; }
+      if (campo === 'titulares') { if (!h.titulares.length) { h.titulares = c.valor.map((n) => ({ nombre: n, autor: '', imaginero: '', atrib: false, nombre_fuente: c.fuente })); } continue; }
+      h[campo] = c.valor;
+      if (c.fuente && campo !== 'fuente_url') (h.relleno_fuentes = h.relleno_fuentes || {})[campo] = c.fuente;
+    }
+  }
+}
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });

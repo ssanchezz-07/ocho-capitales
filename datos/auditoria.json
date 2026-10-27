@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-27T09:04:53.689Z",
+ "generado": "2026-10-27T09:16:23.290Z",
  "totales": {
   "capitales": 8,
   "hermandades": 307,
   "sedes": 274,
-  "titulares": 625,
+  "titulares": 628,
   "imagenes": 506,
   "habitos": 232,
   "bandas": 234,
@@ -18,7 +18,7 @@
   "extraordinarias": 4,
   "agenda": 437,
   "noticias": 2396,
-  "fuentes": 27566,
+  "fuentes": 27583,
   "correcciones": 410
  },
  "hermandades_sin": {
@@ -82,7 +82,6 @@
    "verdad-y-sagrario-malaga",
    "luz-y-mar-malaga",
    "medinaceli-martiricos-malaga",
-   "dolores-del-puerto-de-la-torre-malaga",
    "dolores-de-churriana-malaga",
    "la-o-cordoba",
    "la-sangre-de-el-higueron-cordoba",
@@ -95,17 +94,12 @@
   "nombre_oficial": [
    "la-borriquita-sevilla",
    "bendicion-y-esperanza-sevilla",
-   "ecce-mater-tua-cadiz",
-   "cristo-de-la-escucha-almeria",
    "desamparados-malaga",
    "verdad-y-sagrario-malaga",
    "luz-y-mar-malaga",
    "buen-camino-gamarra-malaga",
-   "medinaceli-martiricos-malaga",
-   "dolores-del-puerto-de-la-torre-malaga",
    "dolores-de-churriana-malaga",
    "la-o-cordoba",
-   "la-sangre-de-el-higueron-cordoba",
    "traslado-al-sepulcro-pro-hermandad-cordoba",
    "humillacion-piedad-cadiz"
   ],
@@ -186,10 +180,7 @@
    "la-clemencia-jaen",
    "verdad-y-sagrario-malaga"
   ],
-  "fuente_url": [
-   "ecce-mater-tua-cadiz",
-   "cristo-de-la-escucha-almeria"
-  ]
+  "fuente_url": []
  },
  "sin_imagen": [
   "dolores-de-alcolea-cordoba",
@@ -484,6 +475,18 @@
    "nombre": "Nuestra Señora de los Dolores"
   },
   {
+   "hermandad": "la-sangre-de-el-higueron-cordoba",
+   "nombre": "Santísimo Cristo de la Sangre"
+  },
+  {
+   "hermandad": "la-sangre-de-el-higueron-cordoba",
+   "nombre": "Nuestro Padre Jesús Nazareno de la Compasión"
+  },
+  {
+   "hermandad": "la-sangre-de-el-higueron-cordoba",
+   "nombre": "San Isidro Labrador"
+  },
+  {
    "hermandad": "la-bendicion-huelva",
    "nombre": "Cristo de la Bendición"
   },
@@ -595,7 +598,7 @@
    "marchas_dedicadas": 344,
    "sin_foto": 5,
    "sin_sede": 3,
-   "titulares_sin_autor": 0
+   "titulares_sin_autor": 3
   },
   {
    "capital": "cadiz",
