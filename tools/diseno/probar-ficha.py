@@ -31,7 +31,7 @@ with sync_playwright() as p:
                       // secciones: tras bajar hasta cada una, su título se ve (opacidad > 0.5)
                       const secs = [...document.querySelectorAll('.fx-sec > .nx-h')];
                       const ov = document.documentElement.scrollWidth - innerWidth;
-                      const anim = getAnimationsCount = document.getAnimations().filter(a => a.playState === 'running').length;
+                      const anim = document.getAnimations().filter(a => a.playState === 'running' && a.animationName !== 'oc-cab').length; // oc-cab: solo la sombra de la cabecera al bajar, sin movimiento
                       return { hero: !!hero, media: !!media, datos, secs: secs.length, ov, anim, titulo: (document.querySelector('.fx-title') || {}).textContent || '' };
                     }''')
                     vis = pg.evaluate('''async () => { let peor = 1; for (const s of document.querySelectorAll('.fx-sec > .nx-h, .fx-dato, .fx-titulares li')) { s.scrollIntoView({block: 'center'}); await new Promise(r => setTimeout(r, 40)); peor = Math.min(peor, +getComputedStyle(s).opacity); } scrollTo(0, 0); return peor; }''')
