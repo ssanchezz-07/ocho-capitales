@@ -10,15 +10,12 @@ Ya existen en tu cuenta de Cloudflare: el proyecto de Pages `ocho-capitales` (va
 
 ---
 
-## Paso 0 · Que Colabora te llegue al correo (5 minutos, ya, sin Cloudflare)
-El formulario de `/colabora/` (y el enlace «Sugerir una corrección» de cada ficha, y erCuñao cuando no puede guardar algo) envía cada aportación a **ochocapitales@gmail.com** a través de **Web3Forms** (gratis, 250 envíos al mes). Tu dirección **no aparece** en la página: Web3Forms te da una clave que hace de alias.
-1. Entra en https://web3forms.com → **Create your Access Key** → escribe `ochocapitales@gmail.com` → te llega un correo con la clave (un código de 36 caracteres con guiones). Ese es el único paso de activación.
-2. GitHub → `ssanchezz-07/ocho-capitales` → **Settings** → **Secrets and variables** → **Actions** → pestaña **Variables** → **New repository variable**: nombre `FORMULARIO_CLAVE`, valor la clave. (Va en *Variables*, no en *Secrets*: Web3Forms la diseña para ir en la página y no revela tu correo.)
-3. Dime **«formulario listo»**: publico, mando un envío de prueba y me confirmas que te ha llegado.
+## Paso 0 · Colabora llega a tu correo: HECHO (2026-10-27)
+El formulario de `/colabora/` (y el enlace «Sugerir una corrección» de cada ficha, y erCuñao cuando no puede guardar algo) envía cada aportación a **ochocapitales@gmail.com** a través de **Web3Forms** (gratis, 250 envíos al mes). Tu dirección **no aparece** en la página: la clave de Web3Forms hace de alias y es pública por diseño (no da acceso a nada).
+- La clave que creaste va por defecto en `site/build.mjs` (`FORM_CLAVE`). Si algún día la cambias, ponla como variable `FORMULARIO_CLAVE` en GitHub (Settings → Secrets and variables → Actions → Variables): la variable manda.
+- Envío de prueba hecho el 27-oct con el asunto `[Ocho Capitales] Prueba de activación` (Web3Forms respondió que se envió). Mira tu bandeja y la carpeta de spam; si está en spam, márcalo como «No es spam».
 
 Cada correo llega con el asunto `[Ocho Capitales] Tipo · Capital · Hermandad` (por ejemplo `[Ocho Capitales] Corrección · Málaga · Pollinica`), con el texto, el enlace a la fuente y la página desde la que se envió. Si la persona deja su correo, al pulsar «Responder» le contestas a ella. Reenvíamelo tal cual y lo derivo a la sesión que toque.
-
-Hasta que pongas la clave, el formulario se ve pero avisa de que el envío estará disponible en unos días.
 
 ## Paso 1 · Token de Cloudflare (la llave para que GitHub suba la web)
 1. Entra en https://dash.cloudflare.com → arriba a la derecha, tu icono → **Perfil** → **Tokens de API** → **Crear token**.

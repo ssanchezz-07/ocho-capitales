@@ -12,7 +12,8 @@ const DIST = path.join(DIR, process.env.DIST_DIR || 'dist');
 const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 // Colabora: clave pública de Web3Forms (alias del correo del portal; no revela la dirección). Variable de GitHub FORMULARIO_CLAVE.
-const FORM_CLAVE = /^[0-9a-f-]{36}$/i.test((process.env.FORMULARIO_CLAVE || '').trim()) ? process.env.FORMULARIO_CLAVE.trim() : '';
+// La de ochocapitales@gmail.com va por defecto (Pablo, 2026-10-27); la variable, si existe, manda.
+const FORM_CLAVE = /^[0-9a-f-]{36}$/i.test((process.env.FORMULARIO_CLAVE || '').trim()) ? process.env.FORMULARIO_CLAVE.trim() : 'f0d03380-0d78-434f-a777-0114181a2ea7';
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
