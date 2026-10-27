@@ -2,7 +2,7 @@
  "nota": "Correcciones de fichas de hermandad con su fuente (27-oct, inventario H1, H6, fechas en conflicto, La Cena y La Borriquita de Sevilla). Mandan sobre la ficha original: build-data.js las aplica al final y guarda la fuente de cada campo (relleno_fuentes). Formato: slug → campo → {valor, fuente, nota}. «titulares_renombrar»: nombre antiguo → {nombre, fuente}. «titulares»: lista de nombres, solo si la ficha no trae ninguno.",
  "fichas": {
   "el-nazareno-huelva": { "fundacion": { "valor": "1583", "fuente": "https://hermandadnazarenohuelva.com/cronologia/", "nota": "cronología de la web oficial" } },
-  "el-descendimiento-cadiz": { "fundacion": { "valor": "hacia 1664", "fuente": "http://descendimientocadiz.com/hermandad/historia/", "nota": "web oficial; el Consejo de Cádiz da «hacia 1668»" } },
+  "el-descendimiento-cadiz": { "fundacion": { "valor": "hacia 1664", "fuente": "http://descendimientocadiz.com/hermandad/historia/", "nota": "web oficial; el Consejo de Cádiz da «hacia 1668». Pablo, 27-oct: se queda la de la web oficial" } },
   "la-resurreccion-sevilla": { "fundacion": { "valor": "1969", "fuente": "https://www.hermandaddelaresurreccion.com/historia/", "nota": "web oficial (reglas de 1972)" } },
   "servitas-cadiz": { "fundacion": { "valor": "1727 (primeras reglas en 1731)", "fuente": "https://servitascadiz.es/?page_id=19", "nota": "«reglas de 1735» no tenía respaldo: 1735 es el año de las primeras procesiones claustrales" } },
   "luz-y-mar-malaga": { "fundacion": { "valor": "2000", "fuente": "https://www.elespanol.com/malaga/cultura/cofradias/20250412/luz-mar-grupo-parroquial-san-andres-cumple-anos-raices-carnavaleras-solo-pensamos-hacer-barrio/1003743711145_0.html", "nota": "nace como asociación de fieles en 2000; «2013» no tenía respaldo" } },
@@ -35,7 +35,10 @@
   },
   "ecce-mater-tua-cadiz": {
    "fuente_url": { "valor": "https://semanasantacadiz.com/ecce-mater/", "nota": "es autónoma del Consejo de Cádiz, que no tiene ficha suya; confirma 1953 y la primera salida en 1956" },
-   "nombre_oficial": { "valor": "Sección de Penitencia de las Congregaciones Marianas Ecce Mater Tua", "fuente": "https://contenidos.ondacadiz.es/ficha-cofradia/ecce-mater-tua" }
+   "nombre_oficial": { "valor": "Sección de Penitencia de las Congregaciones Marianas Ecce Mater Tua", "fuente": "https://contenidos.ondacadiz.es/ficha-cofradia/ecce-mater-tua" },
+   "dia": { "valor": "Sábado Santo", "fuente": "https://okdiario.com/andalucia/procesiones-semana-santa-cadiz-2026-fechas-horario-recorrido-16449980", "nota": "sale la madrugada del Sábado Santo (confirmado por Pablo el 27-oct; Onda Cádiz lo ponía en Viernes Santo)" },
+   "hora": { "valor": "01:00", "fuente": "https://okdiario.com/andalucia/procesiones-semana-santa-cadiz-2026-fechas-horario-recorrido-16449980", "nota": "de 1.00 a 3.45, madrugada del Sábado Santo de 2026" },
+   "hora_fuente": { "valor": "https://okdiario.com/andalucia/procesiones-semana-santa-cadiz-2026-fechas-horario-recorrido-16449980" }
   },
   "cristo-de-la-escucha-almeria": {
    "fuente_url": { "valor": "https://semanasantadeandalucia.es/hermandades/hermandad-del-santo-cristo-de-la-escucha/", "nota": "no tiene ficha en cofradiasdealmeria.es" },
