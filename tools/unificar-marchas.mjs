@@ -283,6 +283,7 @@ for (const rp of REPS) for (const x of rp.marchas) {
   if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
   // excepción de Pablo («publicar»): una marcha estrenada por la banda sin otra fuente se publica citando a la banda, sin enlace
   const f = x.publicar ? 'banda' : 'part';
+  if (x.publicar && x.url) r.urls.banda = x.url; // enlace público de la banda (p. ej. el vídeo del estreno en su canal)
   fuente(r, 'titulo', f); fuente(r, 'autor', f);
   (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', f);
   if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f }];

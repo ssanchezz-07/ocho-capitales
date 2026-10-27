@@ -1109,7 +1109,7 @@ function notaDedicatoria(m) {
   if (m.est === 'dedicada') return `La dedicatoria a ${esc(m.h.nombre)} la da una fuente fiable.`;
   return `<strong>Dedicatoria sin verificar:</strong> solo la recoge el ${esc(DEBIL(m))}; no se ha podido confirmar en una fuente fiable.`;
 }
-const textoGrabacion = (m) => { const f = (m.fuentes || {}).video || []; return f.includes('mdp') ? 'Grabación del canal «Marchas de Procesión»' : f.includes('fgr') ? 'Grabación enlazada en la ficha de la Federación' : 'Grabación en YouTube'; };
+const textoGrabacion = (m) => { const f = (m.fuentes || {}).video || []; const rev = f.includes('rev') && m.revision && m.revision.at(-1).fuente; return f.includes('mdp') ? 'Grabación del canal «Marchas de Procesión»' : f.includes('fgr') ? 'Grabación enlazada en la ficha de la Federación' : rev && /^canal /.test(rev) ? 'Grabación del ' + rev : 'Grabación en YouTube'; };
 function pageMarcha(m) {
   const h = m.h; const c = h ? CAP[h.ciudad] : null; const sinVer = h && m.est === 'sin-verificar';
   const q = encodeURIComponent(m.titulo + ' ' + (m.autor || '') + ' marcha procesional');

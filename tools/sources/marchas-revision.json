@@ -3153,6 +3153,18 @@
    "campos": {
     "autor": "Antonio Ojeda Ortiz y Juan Alberto Pérez Pérez"
    }
+  },
+  {
+   "slug": "el-pan-de-nuestra-vida-fenix-alfonso-lopez-cortes",
+   "hermandad": "pasion-malaga",
+   "accion": "corregir",
+   "fuente": "https://www.youtube.com/watch?v=qsZ5x379CbE",
+   "nombre_fuente": "canal oficial de la banda (BCT Paso y Esperanza)",
+   "fecha": "2026-10-27",
+   "nota": "Vídeo del estreno en el canal de YouTube de la Banda de Cornetas y Tambores del Paso y la Esperanza (Málaga): «El pan de nuestra vida | Estreno | Concierto Jesús de la Pasión»",
+   "campos": {
+    "video": "qsZ5x379CbE"
+   }
   }
  ]
 }
