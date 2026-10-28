@@ -45,7 +45,7 @@ Pablo activó R2. Yo creé el depósito `ocho-capitales-datos`, le puse la regla
 2. **Crear depósito** (*Create bucket*) → nombre exacto `ocho-capitales-datos` → ubicación automática → **Crear**.
 3. Dentro del depósito → **Configuración** → **Dominios personalizados** → **Añadir** → `datos.ochocapitales.com` → **Continuar** → **Conectar dominio**. (La regla CORS, que deja a la web leerlo, la pone sola la publicación.)
 
-## Paso 4 · Pegar en GitHub: secretos HECHOS (28-oct); falta la variable `NOTICIAS_URL`, después del paso 3
+## Paso 4 · Pegar en GitHub: HECHO (28-oct; secretos y variable `NOTICIAS_URL`)
 https://github.com/ssanchezz-07/ocho-capitales → **Settings** → **Secrets and variables** → **Actions**.
 
 Pestaña **Secrets** → **New repository secret** (dos):

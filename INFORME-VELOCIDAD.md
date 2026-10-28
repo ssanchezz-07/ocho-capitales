@@ -96,6 +96,17 @@ Lighthouse móvil (simulado), dos pasadas por página, la misma versión de la w
   - el HTML llega antes (TTFB 465 ms frente a 614 ms) y el TBT es menor.
 - **El LCP sale peor en Cloudflare por el «retraso de pintado»:** 3,5 s frente a 1,5 s en la portada. Es el tiempo entre que la imagen ya ha llegado y que la página la pinta. No es la red: la imagen tarda lo mismo en llegar en los dos. Hay que mirar por qué la entrada de la portada (globo y animaciones) tarda más en pintar con las cabeceras de Cloudflare. Se lo paso a la sesión de portada.
 
+### 3.6 Repetición tras el arreglo del globo (`88355fd`) y sin COOP (`9685407`), 28-oct
+Portada, Lighthouse móvil, tres pasadas en cada sitio con perfil limpio:
+
+| Sitio | Nota | LCP | Retraso de pintado | TBT |
+|---|---|---|---|---|
+| Cloudflare | 64-73 | 3,4-5,1 s | 1,7-4,1 s | 60-770 ms |
+| GitHub Pages | 72-79 | 4,0-4,2 s | 1,8-3,2 s | 100-310 ms |
+
+- **Cloudflare y GitHub Pages dan lo mismo** dentro del ruido. La variación está en el retraso de pintado de la propia portada (sus animaciones), no en el alojamiento. Sin COOP no ha vuelto a salir el error NO_NAVSTART de Lighthouse (0 de 6; antes, 1 de cada 3 o 4 en Cloudflare). Queda quitada.
+- Lo que sí gana Cloudflare es lo que Lighthouse en frío no ve: visitas repetidas, poca cobertura y sin conexión (apartado 3.1).
+
 ## 4. Pendiente
 - Lighthouse en producción en Cloudflare, móvil y PC, cuando Pablo publique (E12).
 - Fotos de noticias redimensionadas y TBT de la portada (sesión de portada).
