@@ -48,6 +48,14 @@ let d = { n: 0, horas: Infinity };
 try { d = await despliegues(); console.log(`Este mes: ${d.n} despliegues; el último hace ${d.horas === Infinity ? '—' : d.horas.toFixed(1) + ' h'}`); }
 catch (e) { console.log('::warning::No se pudieron contar los despliegues de Cloudflare: ' + e.message); }
 const diario = d.horas >= 20;
+// Si se cambió una variable de GitHub (p. ej. NOTICIAS_URL), la web publicada aún no la lleva: hay que volver a publicar
+async function configuracionAlDia() {
+  try {
+    const html = await (await fetch((E.WEB_URL || 'https://ocho-capitales.pages.dev').replace(/\/?$/, '/') + 'noticias/')).text();
+    return E.NOTICIAS_URL ? html.includes('OC_NOTICIAS=' + JSON.stringify(E.NOTICIAS_URL)) : !html.includes('OC_NOTICIAS=');
+  } catch { return true; }
+}
+if (d.n < TOPE && !(await configuracionAlDia())) salida(true, 'la web publicada no lleva la configuración actual (variables de GitHub)');
 if (E.EVENTO === 'schedule') {
   if (E.NOTICIAS_URL) salida(diario, diario ? 'el de cada día' : 'las noticias van por R2; la web ya se publicó hoy');
   salida(d.n < TOPE || diario, d.n < TOPE ? 'programado' : `tope de ${TOPE} al mes`);
