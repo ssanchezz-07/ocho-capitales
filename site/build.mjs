@@ -13,6 +13,9 @@ const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 // Colabora: clave pública de Web3Forms (alias del correo del portal; no revela la dirección). Variable de GitHub FORMULARIO_CLAVE.
 // La de ochocapitales@gmail.com va por defecto (Pablo, 2026-10-27); la variable, si existe, manda.
+// Noticias frescas sin volver a publicar la web: el flujo sube news.json a R2 cada hora y la página de Noticias lo pide ahí
+// (si falla, usa el news.json de la compilación). Variable de GitHub NOTICIAS_URL, p. ej. https://datos.ochocapitales.com/news.json
+const NOTICIAS_URL = /^https:\/\/[^\s"'<>]+$/.test(process.env.NOTICIAS_URL || '') ? process.env.NOTICIAS_URL : '';
 const FORM_CLAVE = /^[0-9a-f-]{36}$/i.test((process.env.FORMULARIO_CLAVE || '').trim()) ? process.env.FORMULARIO_CLAVE.trim() : 'f0d03380-0d78-434f-a777-0114181a2ea7';
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
@@ -169,7 +172,7 @@ const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(
 const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 function conCsp(html) {
   const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
-  const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'" + (FORM_CLAVE ? ' https://api.web3forms.com' : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
+  const csp = ["default-src 'self'", "script-src 'self' " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self'" + (FORM_CLAVE ? ' https://api.web3forms.com' : '') + (NOTICIAS_URL ? ' ' + new URL(NOTICIAS_URL).origin : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
   return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">');
 }
 function write(rel, html) {
@@ -456,7 +459,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description.slice(0, 300))}">${TEMP_PRUEBA ? '<meta name="robots" content="noindex, nofollow">' : ''}
-<link rel="canonical" href="${esc(canonical)}">
+<link rel="canonical" href="${esc(canonical)}">${process.env.REDIRIGIR ? `<meta http-equiv="refresh" content="0;url=${esc(canonical)}">` : ''}
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e1030">
@@ -471,7 +474,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 <link rel="stylesheet" href="${u('assets/vida.css')}?v=${HUELLA.vida}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
-<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
+<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${NOTICIAS_URL ? 'window.OC_NOTICIAS=' + JSON.stringify(NOTICIAS_URL) + ';' : ''}window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
 <body>
 <a class="oc-skip" href="#contenido">Saltar al contenido</a>${TEMP_PRUEBA ? `<p class="oc-prueba" style="position:sticky;top:0;z-index:300;margin:0;padding:6px 12px;background:#b3261e;color:#fff;font:600 13px/1.3 system-ui;text-align:center">Compilación de prueba: temporada forzada a «${TEMP_PRUEBA}» (OC_TEMPORADA). No se publica.</p>` : ''}

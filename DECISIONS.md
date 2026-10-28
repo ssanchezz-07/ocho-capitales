@@ -234,6 +234,35 @@ Comprobación: `node site/filtro-noticias.mjs` lista lo que quitaría del archiv
 
 **Descartado:** filtrar también la prensa y las webs oficiales con este criterio (la prensa ya pasa por su propio filtro y las oficiales son cofrades).
 
+## 2026-10-28 · Publicar muchas veces sin esperas: noticias por R2 y web solo cuando cambia (oc-alojamiento)
+Pablo: «poder actualizar la página muchas veces, sin esperas». Dominio decidido por él: **ochocapitales.com en Cloudflare Registrar** (sin comprar aún).
+
+**Medido:** desde el 26-oct el bot ya no hace push a main (va a la rama `datos`). Lo que más publica son las sesiones: 49 ejecuciones el 26-oct y 22 el 27-oct, más 5-6 programadas al día. Que `wrangler pages deploy` cuente o no para las 500 «builds» del plan gratuito sigue sin confirmar (documentación y foros no lo aclaran).
+
+**Elegido**
+- **Noticias a R2** (depósito `ocho-capitales-datos`, dominio `datos.ochocapitales.com`):
+  - cada lectura sube solo `news.json` (`wrangler r2 object put`, caché de 2 min con renovación en segundo plano) y fija el CORS (`tools/r2-cors.json`);
+  - la página de Noticias lo pide ahí (`window.OC_NOTICIAS`, solo con la variable `NOTICIAS_URL`);
+  - si falla, usa el `news.json` de la compilación, y solo repinta si hay noticias más nuevas que las ya pintadas;
+  - probado con Playwright: R2 más nuevo, R2 caído y R2 igual, a 390 y 1440 px.
+  - R2 frente a Function+KV/D1: cada petición a una Function cuenta contra las 100.000 diarias de Workers gratis; R2 detrás de la caché casi no se toca.
+- **La web entera a Cloudflare solo cuando cambia** (`tools/cloudflare-decidir.mjs`):
+  - no se sube si el push solo toca documentos (`.md`, `EQUIPO/`, `MARKETING/`…);
+  - con R2 activo, de las ejecuciones programadas solo se sube una al día (portada, «Hoy» y agenda);
+  - tope de 450 al mes (`CLOUDFLARE_TOPE_MES`) por si las subidas directas cuentan: al llegar, solo la diaria;
+  - sustituye a `CLOUDFLARE_CADA_HORAS`.
+- **GitHub Pages de copia;** con la variable `GITHUB_REDIRIGE_A` cada página lleva a la misma del dominio (`<meta refresh>` y canónico allí; probado en compilación).
+- **erCuñao** ya no guarda en D1: lleva siempre al formulario de Colabora (todo llega al correo). Así sobran los secretos `RESUMEN_TOKEN` y `SAL` del proyecto de Pages.
+
+**Descartado**
+- Pasar ya a Workers con archivos estáticos (`wrangler deploy` con `assets`): solo si el panel muestra que las subidas directas cuentan para las 500 o nos acercamos a 20.000 archivos (hoy ~12.000). Paso 7 de la guía.
+- Esperar o agrupar publicaciones (cada 2 h, etc.): contradice «sin esperas».
+
+**Toqué de otras áreas (mínimo, sin diseño):**
+- `site/assets/site.js` (bloque de Noticias, de dónde lee el JSON);
+- `site/build.mjs` (una variable en el script de cabecera, la CSP y la redirección de GitHub);
+- `site/assets/cunao.js` (salida de sugerencias).
+
 ## 2026-10-26 · Colabora por correo y GitHub invisible (oc-alojamiento)
 Pablo: «que lo que envíen en la página se envíe a mi correo ochocapitales@gmail.com … que el consumidor no vea nada de GitHub».
 

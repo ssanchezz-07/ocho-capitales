@@ -6,6 +6,8 @@
 # Las noticias y agendas que lee el bot se guardan en la rama «datos» (un único commit que se reescribe), no en main:
 # así el historial no crece ~100 MB al mes y main solo tiene commits de personas (tools/datos-rama.sh).
 # Cloudflare Pages (trabajo «cloudflare») se activa solo al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID.
+# Con la variable NOTICIAS_URL, cada lectura sube solo news.json a R2 (la página de Noticias lo pide ahí) y la web entera
+# se vuelve a subir a Cloudflare solo cuando cambia de verdad (tools/cloudflare-decidir.mjs). GUIA-ALOJAMIENTO.md.
 name: Publicar Ocho Capitales
 
 on:
@@ -79,11 +81,26 @@ jobs:
       - name: Generar sitio
         working-directory: site
         env:
-          # Con dominio propio, cambia BASE_PATH a "/" y SITE_URL a tu dominio.
+          # Copia de seguridad en GitHub Pages. Con GITHUB_REDIRIGE_A (p. ej. https://ochocapitales.com) cada página
+          # lleva al visitante a la misma página del dominio, con el canónico allí.
           BASE_PATH: /${{ github.event.repository.name }}/
-          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          SITE_URL: ${{ vars.GITHUB_REDIRIGE_A || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+          REDIRIGIR: ${{ vars.GITHUB_REDIRIGE_A && '1' || '' }}
           FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}   # Colabora → correo del portal (Web3Forms; ver GUIA-ALOJAMIENTO.md)
+          NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
+      - name: Noticias a R2 (sin volver a publicar la web)
+        # Solo con la variable NOTICIAS_URL y los secretos de Cloudflare. Si falla, la página usa el news.json de la web.
+        if: ${{ vars.NOTICIAS_URL != '' }}
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CUBO: ${{ vars.R2_CUBO || 'ocho-capitales-datos' }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Faltan los secretos de Cloudflare"; exit 0; fi
+          npx --yes wrangler@4.148.0 r2 bucket cors set "$CUBO" --file tools/r2-cors.json --force || echo "::warning::No se pudo fijar el CORS de $CUBO"
+          npx --yes wrangler@4.148.0 r2 object put "$CUBO/news.json" --file site/dist/news.json --remote             --content-type "application/json; charset=utf-8" --cache-control "public, max-age=120, stale-while-revalidate=3600"
       - name: Base de datos y auditoría
         # SQLite con todo lo verificado y su procedencia; la auditoría (datos/auditoria.json) lista huecos y posibles errores
         continue-on-error: true
@@ -104,26 +121,27 @@ jobs:
       - id: deploy
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
   cloudflare:
-    # Copia en Cloudflare Pages: caché larga, Brotli, cabeceras de seguridad (site/despliegue.mjs) y /api/sugerencias.
-    # No hace nada hasta que existan los secretos. Con la variable CLOUDFLARE_CADA_HORAS = 2 se publica cada dos horas
-    # (por si las subidas directas acabaran contando para el límite de 500 al mes del plan gratuito).
+    # Web en Cloudflare Pages: caché larga, Brotli, cabeceras de seguridad (site/despliegue.mjs) y /api/sugerencias.
+    # Solo se sube cuando cambia algo que sale en la web (tools/cloudflare-decidir.mjs): los documentos no cuentan y,
+    # con las noticias en R2, la lectura de cada hora tampoco (una vez al día, para la portada y «Hoy»).
     needs: construir
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - id: decidir
         env:
           TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CUENTA: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           EVENTO: ${{ github.event_name }}
-          CADA: ${{ vars.CLOUDFLARE_CADA_HORAS || '1' }}
-        run: |
-          if [ -z "$TOKEN" ]; then echo "Cloudflare aún no configurado (faltan los secretos)"; echo "seguir=no" >> "$GITHUB_OUTPUT"; exit 0; fi
-          H=$(date -u +%H)
-          if [ "$EVENTO" = "schedule" ] && [ $((10#$H % CADA)) -ne 0 ]; then echo "Esta hora no toca (cada $CADA h)"; echo "seguir=no" >> "$GITHUB_OUTPUT"; exit 0; fi
-          echo "seguir=si" >> "$GITHUB_OUTPUT"
-      - if: steps.decidir.outputs.seguir == 'si'
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+          ANTES: ${{ github.event.before }}
+          DESPUES: ${{ github.event.after }}
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
+          TOPE: ${{ vars.CLOUDFLARE_TOPE_MES || '450' }}
+        run: node tools/cloudflare-decidir.mjs
       - if: steps.decidir.outputs.seguir == 'si'
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -139,6 +157,7 @@ jobs:
           SITE_URL: ${{ vars.CLOUDFLARE_URL || 'https://ocho-capitales.pages.dev' }}
           FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}
           FORMULARIO_DESTINO: ${{ vars.FORMULARIO_DESTINO }}   # «api»: /api/sugerencias de Cloudflare en vez de Web3Forms
+          NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
       - name: Comprobar límites (20.000 archivos, 25 MiB por archivo)
         if: steps.decidir.outputs.seguir == 'si'

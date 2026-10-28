@@ -1060,9 +1060,13 @@
     var irA = function (c) { cambiar(function () { city = c; shown = 24; setCity(city); }); var y = nf.getBoundingClientRect().top + scrollY - 70; if (y < scrollY) scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); };
     paintChips();
     var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1'; tema = NOMBRE_TEMA[u0.get('tema')] ? u0.get('tema') : '';
-    fetch(BASE + 'news.json').then(function (r) { return r.json(); }).then(function (j) {
+    // las noticias frescas vienen de OC_NOTICIAS (R2, se actualiza cada hora sin volver a publicar la web); si falla, las de la compilación
+    var pintado = $$('time[datetime]', list).reduce(function (m, t) { return Math.max(m, +new Date(t.getAttribute('datetime')) || 0); }, 0);
+    var leer = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+    (window.OC_NOTICIAS ? leer(window.OC_NOTICIAS).catch(function () { return leer(BASE + 'news.json'); }) : leer(BASE + 'news.json')).then(function (j) {
       all = j.items;
-      if (city || q0 || oficiales || tema) render(); else { paintChips(); paintAgo(list); }
+      var nuevas = all.some(function (n) { return n.ts > pintado; });
+      if (city || q0 || oficiales || tema || nuevas) render(); else { paintChips(); paintAgo(list); }
       // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
       $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { irA(b.dataset.v); }); });
       ofiB.addEventListener('click', function () { cambiar(function () { oficiales = !oficiales; shown = 24; }); });

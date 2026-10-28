@@ -792,17 +792,12 @@
     return f;
   }
   function enviarSugerencia(a) {
-    const b = burbuja('cunao', 'Apuntado, cuñao…');
-    fetch(BASE + 'api/sugerencias', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texto: a.texto, pagina: location.pathname, hermandad: a.hermandad }) })
-      .then((r) => { if (!r.ok) throw 0; b.firstChild.textContent = 'Recibido. Gracias: la revisamos con su fuente antes de publicarla.'; })
-      .catch(() => {
-        // sin servidor de sugerencias (alojamiento estático): se abre el formulario de Colabora con el texto ya puesto
-        b.textContent = '';
-        const f = document.createElement('div'); f.appendChild(el('p', null, 'No he podido guardarla desde aquí. Puedes enviarla en un momento:'));
-        const q = new URLSearchParams({ texto: a.texto, pagina: location.pathname }); if (a.hermandad) q.set('nombre', a.hermandad);
-        const d = el('div', 'oc-cunao-acc'); d.appendChild(enlace('Enviar la sugerencia', BASE + 'colabora/?' + q, 'oc-cunao-link')); f.appendChild(d);
-        b.appendChild(f);
-      });
+    // todo lo que se sugiere llega al correo del portal: se abre el formulario de Colabora con el texto ya puesto
+    const b = burbuja('cunao', '');
+    const f = document.createElement('div'); f.appendChild(el('p', null, 'Apuntado, cuñao. Envíala desde aquí y la revisamos con su fuente:'));
+    const q = new URLSearchParams({ texto: a.texto, pagina: location.pathname }); if (a.hermandad) q.set('nombre', a.hermandad);
+    const d = el('div', 'oc-cunao-acc'); d.appendChild(enlace('Enviar la sugerencia', BASE + 'colabora/?' + q, 'oc-cunao-link')); f.appendChild(d);
+    b.textContent = ''; b.appendChild(f);
   }
   function cargar() {
     if (motor) return Promise.resolve();

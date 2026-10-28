@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": ["https://ochocapitales.com", "https://www.ochocapitales.com", "https://ocho-capitales.pages.dev", "https://ssanchezz-07.github.io", "http://localhost:8080"],
+        "methods": ["GET", "HEAD"]
+      },
+      "maxAgeSeconds": 86400
+    }
+  ]
+}
