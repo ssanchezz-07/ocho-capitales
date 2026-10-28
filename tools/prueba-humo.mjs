@@ -35,7 +35,8 @@ try {
     for (const [nombre, dir] of PAGINAS) {
       const p = await ctx.newPage(); const errores = [];
       p.on('pageerror', (e) => errores.push('JS: ' + String(e.message || e).slice(0, 160)));
-      p.on('console', (m) => { if (m.type() !== 'error') return; const u = m.location().url || ''; if (u && !u.startsWith(origen)) return; errores.push('consola: ' + m.text().slice(0, 160)); });
+      // Cloudflare Web Analytics (lo inyecta el borde en el dominio): sus avisos no son fallos de la web
+      p.on('console', (m) => { if (m.type() !== 'error') return; const u = m.location().url || ''; if (u && !u.startsWith(origen)) return; if (/cloudflareinsights/i.test(m.text())) return; errores.push('consola: ' + m.text().slice(0, 160)); });
       p.on('requestfailed', (r) => { if (r.url().startsWith(origen) && !/net::ERR_ABORTED/.test(r.failure()?.errorText || '')) errores.push('recurso: ' + r.url().replace(origen, '') + ' ' + r.failure()?.errorText); });
       let estado = 0;
       try { const r = await p.goto(BASE + dir, { waitUntil: 'load', timeout: 45000 }); estado = r ? r.status() : 0; await p.waitForTimeout(1200); }

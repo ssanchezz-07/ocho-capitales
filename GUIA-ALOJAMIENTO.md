@@ -99,6 +99,7 @@ Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en 
    - las noticias llegan de `datos.ochocapitales.com`;
    - Colabora envía al correo;
    - Lighthouse en móvil.
+- **Web Analytics** (activado por el coordinador el 28-oct en la zona, con instalación automática): Cloudflare inyecta su script en cada página del dominio. La web ya lo permite en su política de seguridad (`static.cloudflareinsights.com` y `cloudflareinsights.com`, desde `el 28-oct`). La prueba de humo no cuenta sus avisos como fallos, así que un fallo de la analítica nunca hace volver atrás la web. Comprobar en el paso 8 que las visitas aparecen en **Análisis** → **Web Analytics**.
 9. **Después:** dar de alta `https://ochocapitales.com` en Google Search Console con el mapa del sitio (`/sitemap.xml`).
 
 **Si algo sale mal:** quita el dominio de `ocho-capitales` y vuelve a ponérselo a `ocho-capitales-espera` (pasos 2 y 3 al revés), y borra las dos variables del paso 6. En unos minutos está como antes.
