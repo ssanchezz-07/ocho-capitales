@@ -2,6 +2,7 @@
 # Hecho el 2026-10-16: base D1 «ocho-capitales» (weur) con datos/sugerencias.sql y proyecto de Pages «ocho-capitales»
 # con la base enlazada como DB. 2026-10-28: Pablo puso en GitHub CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID; primera
 # publicación en ocho-capitales.pages.dev (el dominio ochocapitales.com sigue en la landing hasta el lanzamiento).
+# Noticias: depósito R2 «ocho-capitales-datos» en https://datos.ochocapitales.com (variable NOTICIAS_URL del flujo).
 # Lo sube el trabajo «cloudflare» de .github/workflows/publicar.yml (site/dist generado con BASE_PATH=/). Guía: GUIA-ALOJAMIENTO.md.
 name = "ocho-capitales"
 pages_build_output_dir = "site/dist"
