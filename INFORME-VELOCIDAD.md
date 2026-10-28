@@ -28,7 +28,7 @@ Service worker de antes: la caché se llamaba `oc-<fecha de compilación>`, así
 
 ## 2. Qué se ha cambiado (infraestructura, sin tocar el diseño)
 1. **Service worker nuevo** (`site/despliegue.mjs`): cachés con nombre fijo que sobreviven a las publicaciones; red primero con un máximo de 2,5 s de espera si hay copia; recursos con huella y fuentes desde la copia sin preguntar; carcasa precargada (CSS, JS, 2 fuentes, 8 colgaduras, página «Sin conexión»); topes de tamaño; *navigation preload*.
-2. **`_headers` y `_redirects` para Cloudflare Pages**: CSS/JS con huella y fuentes un año `immutable`; imágenes una semana con renovación en segundo plano; noticias 5 min; `sw.js` sin caché; `nosniff`, `X-Frame-Options`, `frame-ancestors`, `Referrer-Policy`, `Permissions-Policy`, COOP y HSTS; `/ocho-capitales/*` → `/*` (enlaces viejos de GitHub).
+2. **`_headers` y `_redirects` para Cloudflare Pages**: CSS/JS con huella y fuentes un año `immutable`; imágenes una semana con renovación en segundo plano; noticias 5 min; `sw.js` sin caché; `nosniff`, `X-Frame-Options`, `frame-ancestors`, `Referrer-Policy`, `Permissions-Policy` y HSTS (COOP quitada el 28-oct: sospecha de que afectaba a la medición del LCP, sin uso en una web estática); `/ocho-capitales/*` → `/*` (enlaces viejos de GitHub).
 3. **Precarga de las fuentes** Karantina (titular, que es el LCP de la portada) y Heebo.
 4. **Manifiesto de la PWA** con `id`, `dir` y categorías (instalable igual que antes, con identidad estable).
 5. **El bot deja de subir `news.json` a main** (rama `datos`, un commit que se reescribe).

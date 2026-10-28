@@ -83,7 +83,6 @@ export function escribeCabeceras({ DIST, BASE, SITE }) {
       'Referrer-Policy: strict-origin-when-cross-origin',
       'X-Frame-Options: DENY',
       "Content-Security-Policy: frame-ancestors 'none'",
-      'Cross-Origin-Opener-Policy: same-origin',
       'Permissions-Policy: camera=(), microphone=(), payment=(), usb=()',
       'Strict-Transport-Security: max-age=31536000',
     ]],
