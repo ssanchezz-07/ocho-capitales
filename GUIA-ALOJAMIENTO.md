@@ -29,7 +29,7 @@ Cada correo llega con el asunto `[Ocho Capitales] Tipo · Capital · Hermandad` 
 ## Paso 1 · El dominio ochocapitales.com: HECHO (28-oct)
 La zona está activa en tu cuenta de Cloudflare (plan gratis). Comprueba solo que la **renovación automática** está encendida: **Registro de dominios** → `ochocapitales.com`.
 
-## Paso 2 · Una llave (token) para que GitHub suba la web y las noticias
+## Paso 2 · Una llave (token) para que GitHub suba la web y las noticias: HECHO (28-oct)
 1. Arriba a la derecha, tu icono → **Perfil** → **Tokens de API** → **Crear token** → **Crear token personalizado**.
 2. Nombre: `ocho-capitales-github`. Permisos (dos líneas):
    - *Cuenta* → **Cloudflare Pages** → **Editar**
@@ -42,7 +42,7 @@ La zona está activa en tu cuenta de Cloudflare (plan gratis). Comprueba solo qu
 2. **Crear depósito** (*Create bucket*) → nombre exacto `ocho-capitales-datos` → ubicación automática → **Crear**.
 3. Dentro del depósito → **Configuración** → **Dominios personalizados** → **Añadir** → `datos.ochocapitales.com` → **Continuar** → **Conectar dominio**. (La regla CORS, que deja a la web leerlo, la pone sola la publicación.)
 
-## Paso 4 · Pegar en GitHub
+## Paso 4 · Pegar en GitHub: secretos HECHOS (28-oct); falta la variable `NOTICIAS_URL`, después del paso 3
 https://github.com/ssanchezz-07/ocho-capitales → **Settings** → **Secrets and variables** → **Actions**.
 
 Pestaña **Secrets** → **New repository secret** (dos):
@@ -63,7 +63,10 @@ Pestaña **Variables** → **New repository variable** (dos):
 ## Paso 5 · Nada de dominio en «ocho-capitales» todavía
 No conectes `ochocapitales.com` al proyecto `ocho-capitales` hasta el día del lanzamiento: ahora lo tiene la landing.
 
-## Paso 6 · Decir «publica en Cloudflare»
+## Paso 6 · Primera publicación: HECHA (28-oct, `fc5460e`)
+https://ocho-capitales.pages.dev publicada. La red de seguridad pasó antes y después de subirla, y las cabeceras de caché y seguridad están comprobadas.
+
+### Cómo era el paso 6
 Escríbeme **«publica en Cloudflare»**. Hago la primera publicación y compruebo que:
 - `https://ocho-capitales.pages.dev` abre;
 - las noticias llegan desde `datos.ochocapitales.com`;

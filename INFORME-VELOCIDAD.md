@@ -80,6 +80,22 @@ Mismo PC y mismo servidor local para las dos versiones. **Con mucho ruido**: hab
 
 Lo único claro en la primera visita: **el salto de diseño (CLS) de la portada baja de 0,114 a 0,029** (de «mejorable» a «bueno») gracias a la precarga de las fuentes. El LCP no mejora en local; en la primera visita, lo que más lo bajaría son las fotos de noticias (sección 1). La primera visita real se medirá en producción cuando Cloudflare esté publicado (etapa E12).
 
+## 3.5 En producción: Cloudflare frente a GitHub Pages (28-oct, primera publicación)
+Lighthouse móvil (simulado), dos pasadas por página, la misma versión de la web en los dos sitios.
+
+| Página | Sitio | Nota | FCP | LCP | TBT |
+|---|---|---|---|---|---|
+| Portada | Cloudflare | 74-76 | 1,8 s | 5,2 s | 60-120 ms |
+| Portada | GitHub Pages | 74-82 | 1,6-1,8 s | 2,7-3,7 s | 290-310 ms |
+| Sevilla | Cloudflare | 90 | 1,4 s | 3,5-3,6 s | 30 ms |
+| Sevilla | GitHub Pages | 85-93 | 1,4-1,8 s | 2,6-2,8 s | 150-320 ms |
+
+- **La red va mejor en Cloudflare:**
+  - HTTP/3 y Brotli;
+  - caché de un año en CSS, JS y fuentes (en GitHub, 28 de 33 recursos sin caché larga);
+  - el HTML llega antes (TTFB 465 ms frente a 614 ms) y el TBT es menor.
+- **El LCP sale peor en Cloudflare por el «retraso de pintado»:** 3,5 s frente a 1,5 s en la portada. Es el tiempo entre que la imagen ya ha llegado y que la página la pinta. No es la red: la imagen tarda lo mismo en llegar en los dos. Hay que mirar por qué la entrada de la portada (globo y animaciones) tarda más en pintar con las cabeceras de Cloudflare. Se lo paso a la sesión de portada.
+
 ## 4. Pendiente
 - Lighthouse en producción en Cloudflare, móvil y PC, cuando Pablo publique (E12).
 - Fotos de noticias redimensionadas y TBT de la portada (sesión de portada).
