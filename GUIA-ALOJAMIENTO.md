@@ -2,7 +2,7 @@
 
 Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que necesita tu cuenta: crear una llave, el almacén de noticias y pegar dos cosas en GitHub. Unos 15 minutos. Ninguna clave pasa por el chat.
 
-**Hasta el lanzamiento** (decisión de Pablo, 28-oct): `ochocapitales.com` muestra la landing de espera. Es el proyecto de Pages `ocho-capitales-espera`, que lleva marketing: está publicada en https://ocho-capitales-espera.pages.dev desde el 28-oct y sus pasos están en `MARKETING/landing/PUBLICAR.md`. El dominio se le conecta cuando Pablo diga «publica» (lo hace marketing por la API, con `www` redirigido a la raíz). Comprobado el 28-oct: la zona `ochocapitales.com` y los dos proyectos están en la misma cuenta de Cloudflare, así que el cambio del día del lanzamiento vale tal cual. La web completa se publica en **`https://ocho-capitales.pages.dev`** y el dominio se le pasa el día del lanzamiento (apartado «Día del lanzamiento»).
+**Hasta el lanzamiento** (decisión de Pablo, 28-oct): `ochocapitales.com` muestra la landing de espera. Es el proyecto de Pages `ocho-capitales-espera`, que lleva marketing: está publicada en https://ocho-capitales-espera.pages.dev desde el 28-oct y sus pasos están en `MARKETING/landing/PUBLICAR.md`. Desde el 28-oct (Pablo: «Publica landing»), `ochocapitales.com` y `www` están conectados a la landing: dos CNAME a `ocho-capitales-espera.pages.dev` (con proxy), una regla que lleva `www` a la raíz con 301 y un certificado que Cloudflare renueva solo. Comprobado el 28-oct: la zona `ochocapitales.com` y los dos proyectos están en la misma cuenta de Cloudflare, así que el cambio del día del lanzamiento vale tal cual. La web completa se publica en **`https://ocho-capitales.pages.dev`** y el dominio se le pasa el día del lanzamiento (apartado «Día del lanzamiento»).
 
 **Qué ganas:**
 - La web carga desde la red de Cloudflare con compresión Brotli (10-41 % menos que hoy).
@@ -37,7 +37,10 @@ La zona está activa en tu cuenta de Cloudflare (plan gratis). Comprueba solo qu
 3. **Recursos de la cuenta**: *Incluir → tu cuenta*. **Continuar** → **Crear token** → cópialo (solo se enseña una vez). No lo pegues en el chat.
 4. Copia también el **ID de cuenta**: **Workers y Pages** → columna de la derecha → **ID de cuenta**.
 
-## Paso 3 · El almacén de noticias (R2)
+## Paso 3 · El almacén de noticias (R2): HECHO (28-oct)
+Pablo activó R2. Yo creé el depósito `ocho-capitales-datos`, le puse la regla CORS y le conecté `datos.ochocapitales.com`, con el certificado activo. Solo falta la variable `NOTICIAS_URL` (paso 4).
+
+### Cómo se hizo
 1. **R2** (*Almacenamiento de objetos*) → si te lo pide, actívalo. Es gratis hasta 10 GB y 10 millones de lecturas al mes (usaremos unos pocos MB), pero Cloudflare pide tener un método de pago: el mismo del dominio.
 2. **Crear depósito** (*Create bucket*) → nombre exacto `ocho-capitales-datos` → ubicación automática → **Crear**.
 3. Dentro del depósito → **Configuración** → **Dominios personalizados** → **Añadir** → `datos.ochocapitales.com` → **Continuar** → **Conectar dominio**. (La regla CORS, que deja a la web leerlo, la pone sola la publicación.)
@@ -85,7 +88,7 @@ Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en 
 2. **Quitar el dominio de la landing:** **Workers y Pages** → `ocho-capitales-espera` → **Dominios personalizados** → en `ochocapitales.com` (y `www`, si lo tiene), los tres puntos → **Eliminar dominio**. Durante unos minutos el dominio no muestra nada.
 3. **Ponérselo a la web:** **Workers y Pages** → `ocho-capitales` → **Dominios personalizados** → **Configurar un dominio personalizado** → `ochocapitales.com` → **Activar dominio**. Repite con `www.ochocapitales.com`.
 4. **Esperar al certificado:** en esa misma pantalla, los dos dominios pasan a **Activo** (de 1 a 15 minutos; como mucho, una hora).
-5. **Que `www` lleve a la raíz:** **ochocapitales.com** (zona) → **Reglas** → **Reglas de redirección** → **Crear regla** → plantilla «Redirect from WWW to root» → **Implementar**. (Así hay una sola dirección: `https://ochocapitales.com`.)
+5. **Los dos registros DNS:** la landing los tiene a mano (CNAME `ochocapitales.com` y `www` → `ocho-capitales-espera.pages.dev`). Si al activar el dominio en el paso 3 Cloudflare no los cambia solo, en **ochocapitales.com** → **DNS** → **Registros**, edita los dos CNAME para que apunten a `ocho-capitales.pages.dev` (con proxy, la nube naranja). La regla que lleva `www` a la raíz ya existe y sirve igual. El CNAME `datos` (noticias en R2) no se toca.
 6. **GitHub, dos variables** (Settings → Secrets and variables → Actions → Variables):
    - `CLOUDFLARE_URL` = `https://ochocapitales.com`: canónicos, mapa del sitio y avisos a Google con el dominio, y `pages.dev` deja de indexarse;
    - `GITHUB_REDIRIGE_A` = `https://ochocapitales.com`: cada página de `ssanchezz-07.github.io/ocho-capitales/…` lleva a la misma página del dominio.
