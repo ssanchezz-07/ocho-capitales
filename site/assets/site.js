@@ -305,8 +305,10 @@
         mapa.appendChild(otra);
         var visto = '1'; try { visto = sessionStorage.getItem('oc-entrada') || ''; } catch (e) { }
         if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) return;
-        try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { }
-        globo();
+        // arranca cuando la página ya ha cargado (con sus imágenes): antes competía con el pintado de la imagen principal y
+        // retrasaba el LCP en móviles lentos. Si mientras tanto se ha bajado por la página o elegido una ciudad, no sale.
+        var arrancar = function () { setTimeout(function () { if (scrollY > 40 || location.hash || actual) return; try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { } globo(); }, 80); };
+        if (document.readyState === 'complete') arrancar(); else addEventListener('load', arrancar, { once: true });
       })();
       // ---- Mapa «Bordado» (elegido por Pablo, 26-oct): cada provincia, un repostero de terciopelo con cordón de oro, y junto a
       // cada capital su catedral bordada a puntadas. Ríos y sierras: Natural Earth (dominio público, tools/generar-mapa-detalle.mjs).
