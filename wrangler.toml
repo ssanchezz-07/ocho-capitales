@@ -1,7 +1,7 @@
 # Ocho Capitales en Cloudflare Pages (plan gratuito). La web estática sale de site/dist y functions/ añade /api/sugerencias.
 # Hecho el 2026-10-16: base D1 «ocho-capitales» (weur) con datos/sugerencias.sql y proyecto de Pages «ocho-capitales»
-# con la base enlazada como DB. Falta (lo hace Pablo, son claves): el secreto RESUMEN_TOKEN del proyecto y, en GitHub,
-# CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID. El primer despliegue, solo con «publica».
+# con la base enlazada como DB. 2026-10-28: Pablo puso en GitHub CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID; primera
+# publicación en ocho-capitales.pages.dev (el dominio ochocapitales.com sigue en la landing hasta el lanzamiento).
 # Lo sube el trabajo «cloudflare» de .github/workflows/publicar.yml (site/dist generado con BASE_PATH=/). Guía: GUIA-ALOJAMIENTO.md.
 name = "ocho-capitales"
 pages_build_output_dir = "site/dist"
