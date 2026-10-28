@@ -104,6 +104,22 @@ Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en 
 
 En tu PC, para tener las noticias del día: `node tools/traer-datos.mjs` (desde la carpeta del proyecto).
 
+## La red de seguridad: ninguna actualización rompe la web
+Cada vez que se publica (un cambio de cualquier sesión o la lectura de noticias), antes de subir nada se comprueba la web entera:
+1. **Los datos:** las marchas (`tools/comprobar-marchas.mjs`) y que `portal.json` sale de sus fuentes (`tools/comprobar-origen.mjs`), con 0 errores.
+2. **Los enlaces:** que ningún enlace de la web lleve a una página o archivo que no existe (hoy, casi un millón de enlaces, 0 rotos).
+3. **El tamaño:** menos de 20.000 archivos (aviso desde 18.000; hoy ~13.700) y ninguno de más de 25 MB.
+4. **Un navegador de verdad:** abre portada, Hoy, Noticias, una hermandad, una marcha, Buscar y el plano de Málaga, en móvil (390 px) y en ordenador (1440 px). No puede haber errores ni nada que se salga por los lados.
+
+**Si algo falla, no se publica**: queda en línea la versión anterior, que funcionaba. En Cloudflare, además, se repite la prueba del navegador después de subir; si falla ahí, **la web vuelve sola a la versión anterior** en segundos.
+Las noticias se validan antes de subirlas a R2 (forma, cantidad, fecha y tamaño). Si no pasan, se queda el archivo anterior, y la página siempre tiene además las noticias que van dentro de la web.
+
+**Cómo se ve en GitHub:** pestaña **Actions** → «Publicar Ocho Capitales».
+- **Verde:** publicado.
+- **Rojo:** no se ha publicado nada nuevo y la web sigue como estaba. Entra en la ejecución → trabajo `construir` o `cloudflare` → paso «Red de seguridad»: arriba sale en rojo qué ha fallado (por ejemplo, «Enlace roto /colabora-rota/» o «Hoy a 390px: JS: …»). Reenvíamelo y lo arreglamos.
+
+Para probar un cambio delicado sin riesgo, súbelo a una rama que empiece por `prueba-red/`: pasa todas las comprobaciones y no publica nada.
+
 ## Si algo falla
 - **«cloudflare» en rojo con «Authentication error»:** al token le falta un permiso del paso 2 o está mal copiado. Créalo de nuevo y vuelve a pegarlo.
 - **«Noticias a R2» con aviso:**

@@ -234,6 +234,20 @@ Comprobación: `node site/filtro-noticias.mjs` lista lo que quitaría del archiv
 
 **Descartado:** filtrar también la prensa y las webs oficiales con este criterio (la prensa ya pasa por su propio filtro y las oficiales son cofrades).
 
+## 2026-10-28 · Red de seguridad: ninguna actualización rompe la web (oc-alojamiento)
+Pablo: «que todo funcione y compile sin errores garantizando que futuras actualizaciones no den errores».
+
+**Elegido** (`tools/red-seguridad.sh`, en `publicar.yml` antes de cada publicación, en GitHub Pages y en Cloudflare):
+- Comprobaciones antes de publicar: `comprobar-marchas` y `comprobar-origen` (0 errores), enlaces internos rotos sobre la web generada (`tools/comprobar-enlaces.mjs`: ~1 millón de enlaces en 12 s, hoy 0 rotos), límites (20.000 archivos, aviso desde 18.000; 25 MiB) y prueba de humo con Chromium (`tools/prueba-humo.mjs`: portada, Hoy, Noticias, una hermandad y una marcha sacadas de sus listados, Buscar y plano de Málaga, a 390 y 1440 px, sin errores de la propia web ni desbordes).
+- Si algo falla, el trabajo queda en rojo y no se publica: sigue la versión anterior.
+- En Cloudflare: se apunta el despliegue publicado (`tools/cloudflare-volver.mjs`), se sube, se repite la prueba de humo contra la web real y, si falla dos veces, vuelta automática al anterior (API de rollback de Pages). **Sin probar todavía:** necesita las claves de Cloudflare.
+- `news.json` se valida antes de subir a R2 (`tools/validar-noticias.mjs`: forma, 50-1.000 noticias, fecha de menos de 3 días, 20 KB-5 MB); si no pasa, se queda el anterior.
+- Ramas `prueba-red/…`: pasan todas las comprobaciones sin publicar ni guardar datos. Cada rama tiene su propio grupo de concurrencia, así que no desplaza las publicaciones de main.
+
+**Probado en GitHub Actions** (28-oct): `prueba-red/ok` en verde (navegador 20 s + red 25 s). En `prueba-red/fallo` (un enlace roto y un error de JavaScript provocados), `construir` en rojo con los dos fallos señalados (`Enlace roto /ocho-capitales/colabora-rota/`, `Hoy a 390px y 1440px: JS: fallo provocado…`). GitHub Pages y Cloudflare no se tocaron. Ramas de prueba borradas.
+
+**Pendiente:** Actions avisa de que `actions/checkout`, `setup-node` y las de Pages usan Node 20 (obsoleto); son las actualizaciones de Dependabot por revisar.
+
 ## 2026-10-28 · Publicar muchas veces sin esperas: noticias por R2 y web solo cuando cambia (oc-alojamiento)
 Pablo: «poder actualizar la página muchas veces, sin esperas». Dominio decidido por él: **ochocapitales.com en Cloudflare Registrar** (sin comprar aún).
 
