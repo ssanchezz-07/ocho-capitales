@@ -8,11 +8,14 @@
 # Cloudflare Pages (trabajo «cloudflare») se activa solo al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID.
 # Con la variable NOTICIAS_URL, cada lectura sube solo news.json a R2 (la página de Noticias lo pide ahí) y la web entera
 # se vuelve a subir a Cloudflare solo cuando cambia de verdad (tools/cloudflare-decidir.mjs). GUIA-ALOJAMIENTO.md.
+# Red de seguridad (tools/red-seguridad.sh): antes de publicar se comprueban datos, enlaces, límites y una prueba de humo con
+# navegador; si algo falla, no se publica y se queda la versión anterior. En Cloudflare, otra prueba después de subir y, si
+# falla, vuelta automática al despliegue anterior. Las ramas «prueba-red/…» pasan las comprobaciones sin publicar nada.
 name: Publicar Ocho Capitales
 
 on:
   push:
-    branches: [main]
+    branches: [main, "prueba-red/**"]
   schedule:
     - cron: "7,27,47 * * * *"
   workflow_dispatch:
@@ -21,7 +24,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: publicar
+  group: publicar-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -74,6 +77,7 @@ jobs:
           node tools/detectar-cambios-bandas.mjs
       - name: Guardar noticias y agendas (rama datos)
         # Si no se puede subir, se avisa y se publica igualmente con las noticias frescas.
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "Ocho Capitales bot"
           git config user.email "actions@users.noreply.github.com"
@@ -89,9 +93,19 @@ jobs:
           FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}   # Colabora → correo del portal (Web3Forms; ver GUIA-ALOJAMIENTO.md)
           NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
+      - name: Instalar el navegador de las pruebas
+        run: |
+          npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Red de seguridad (si falla, no se publica)
+        env:
+          PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
+          SIN_HUMO: ${{ vars.GITHUB_REDIRIGE_A && '1' || '' }}   # con la redirección al dominio, cada página se va del sitio
+        run: bash tools/red-seguridad.sh site/dist "/${{ github.event.repository.name }}/"
       - name: Noticias a R2 (sin volver a publicar la web)
-        # Solo con la variable NOTICIAS_URL y los secretos de Cloudflare. Si falla, la página usa el news.json de la web.
-        if: ${{ vars.NOTICIAS_URL != '' }}
+        # Solo en main, con la variable NOTICIAS_URL y los secretos de Cloudflare, y si news.json pasa la validación.
+        # Si no, se queda el anterior en R2; la página tiene además el respaldo que va dentro de la web.
+        if: ${{ vars.NOTICIAS_URL != '' && github.ref == 'refs/heads/main' }}
         continue-on-error: true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -99,8 +113,9 @@ jobs:
           CUBO: ${{ vars.R2_CUBO || 'ocho-capitales-datos' }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Faltan los secretos de Cloudflare"; exit 0; fi
+          node tools/validar-noticias.mjs site/dist/news.json || { echo "::warning::news.json no pasa la validación: se queda el anterior en R2"; exit 0; }
           npx --yes wrangler@4.148.0 r2 bucket cors set "$CUBO" --file tools/r2-cors.json --force || echo "::warning::No se pudo fijar el CORS de $CUBO"
-          npx --yes wrangler@4.148.0 r2 object put "$CUBO/news.json" --file site/dist/news.json --remote             --content-type "application/json; charset=utf-8" --cache-control "public, max-age=120, stale-while-revalidate=3600"
+          npx --yes wrangler@4.148.0 r2 object put "$CUBO/news.json" --file site/dist/news.json --remote --content-type "application/json; charset=utf-8" --cache-control "public, max-age=120, stale-while-revalidate=3600"
       - name: Base de datos y auditoría
         # SQLite con todo lo verificado y su procedencia; la auditoría (datos/auditoria.json) lista huecos y posibles errores
         continue-on-error: true
@@ -110,6 +125,7 @@ jobs:
           path: site/dist
   desplegar:
     needs: construir
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -121,6 +137,7 @@ jobs:
       - id: deploy
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
   cloudflare:
+    if: github.ref == 'refs/heads/main'
     # Web en Cloudflare Pages: caché larga, Brotli, cabeceras de seguridad (site/despliegue.mjs) y /api/sugerencias.
     # Solo se sube cuando cambia algo que sale en la web (tools/cloudflare-decidir.mjs): los documentos no cuentan y,
     # con las noticias en R2, la lectura de cada hora tampoco (una vez al día, para la portada y «Hoy»).
@@ -159,9 +176,23 @@ jobs:
           FORMULARIO_DESTINO: ${{ vars.FORMULARIO_DESTINO }}   # «api»: /api/sugerencias de Cloudflare en vez de Web3Forms
           NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
-      - name: Comprobar límites (20.000 archivos, 25 MiB por archivo)
+      - name: Instalar el navegador de las pruebas
         if: steps.decidir.outputs.seguir == 'si'
-        run: node site/despliegue.mjs site/dist
+        run: |
+          npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Red de seguridad (si falla, no se publica)
+        if: steps.decidir.outputs.seguir == 'si'
+        env:
+          PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
+        run: bash tools/red-seguridad.sh site/dist /
+      - name: Apuntar el despliegue publicado ahora
+        id: antes
+        if: steps.decidir.outputs.seguir == 'si'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node tools/cloudflare-volver.mjs apuntar
       - name: Subir a Cloudflare Pages
         if: steps.decidir.outputs.seguir == 'si'
         env:
@@ -169,3 +200,21 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         # functions/ (sugerencias) y la base D1 se leen de wrangler.toml en la raíz
         run: npx --yes wrangler@4.148.0 pages deploy site/dist --project-name ocho-capitales --branch main --commit-hash "$GITHUB_SHA" --commit-dirty=true
+      - name: Prueba de humo en la web publicada
+        id: despues
+        if: steps.decidir.outputs.seguir == 'si'
+        continue-on-error: true
+        env:
+          PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
+          URL: ${{ vars.CLOUDFLARE_URL || 'https://ocho-capitales.pages.dev' }}
+        run: |
+          sleep 20   # lo que tarda Cloudflare en servir el despliegue nuevo en todas partes
+          node tools/prueba-humo.mjs "$URL/" || { sleep 30; node tools/prueba-humo.mjs "$URL/"; }
+      - name: Si falla, volver al despliegue anterior
+        if: steps.decidir.outputs.seguir == 'si' && steps.despues.outcome == 'failure'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          node tools/cloudflare-volver.mjs volver "${{ steps.antes.outputs.anterior }}"
+          exit 1   # el trabajo queda en rojo para que se vea

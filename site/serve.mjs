@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import zlib from 'node:zlib';
-const DIST = path.join(path.dirname(fileURLToPath(import.meta.url)), 'dist');
+const DIST = path.join(path.dirname(fileURLToPath(import.meta.url)), process.env.DIST_DIR || 'dist');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.xml': 'application/xml', '.txt': 'text/plain', '.png': 'image/png' };
 const PORT = process.env.PORT || 8080;
 // Con BASE_PATH (p. ej. /ocho-capitales/) se sirve igual que en GitHub Pages.

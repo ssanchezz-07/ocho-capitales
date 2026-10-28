@@ -1,6 +1,8 @@
 # Guía de alojamiento: Ocho Capitales en ochocapitales.com (Cloudflare)
 
-Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que necesita tu cuenta: comprar el dominio, crear una llave, pegar dos cosas en GitHub y conectar el dominio. Unos 20 minutos. Ninguna clave pasa por el chat.
+Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que necesita tu cuenta: crear una llave, el almacén de noticias y pegar dos cosas en GitHub. Unos 15 minutos. Ninguna clave pasa por el chat.
+
+**Hasta el lanzamiento** (decisión de Pablo, 28-oct): `ochocapitales.com` muestra la landing de espera (proyecto de Pages `ocho-capitales-espera`, lo lleva marketing). La web completa se publica en **`https://ocho-capitales.pages.dev`** y el dominio se le pasa el día del lanzamiento (apartado «Día del lanzamiento»).
 
 **Qué ganas:**
 - La web carga desde la red de Cloudflare con compresión Brotli (10-41 % menos que hoy).
@@ -10,7 +12,7 @@ Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que nece
 
 Datos en `INFORME-VELOCIDAD.md`; el porqué, en `DECISIONS.md`.
 
-**Qué no cambia:** la web de GitHub (`ssanchezz-07.github.io/ocho-capitales`) sigue igual, como copia de seguridad. Cuando quieras (paso 8), lleva a la gente a ochocapitales.com.
+**Qué no cambia:** la web de GitHub (`ssanchezz-07.github.io/ocho-capitales`) sigue igual, como copia de seguridad. El día del lanzamiento lleva a la gente a ochocapitales.com.
 
 Ya existen en tu cuenta de Cloudflare el proyecto de Pages `ocho-capitales` (vacío) y la base de datos D1 `ocho-capitales`.
 
@@ -24,9 +26,8 @@ El formulario de `/colabora/` (y el enlace «Sugerir una corrección» de cada f
 
 Cada correo llega con el asunto `[Ocho Capitales] Tipo · Capital · Hermandad` (por ejemplo `[Ocho Capitales] Corrección · Málaga · Pollinica`), con el texto, el enlace a la fuente y la página desde la que se envió. Si la persona deja su correo, al pulsar «Responder» le contestas a ella. Reenvíamelo tal cual y lo derivo a la sesión que toque.
 
-## Paso 1 · Comprar ochocapitales.com (lo haces tú)
-https://dash.cloudflare.com → **Registro de dominios** (*Domain Registration*) → **Registrar dominios** → busca `ochocapitales.com` → **Comprar**. A precio de coste: ~10,5 $ el primer año y las renovaciones (sube unos 0,7 $ desde el 1-nov-2026). Activa la **renovación automática**.
-Comprobado el 25-oct: libre. Al comprarlo en Cloudflare, el dominio y sus DNS quedan ya en tu cuenta; no hay que tocar servidores DNS.
+## Paso 1 · El dominio ochocapitales.com: HECHO (28-oct)
+La zona está activa en tu cuenta de Cloudflare (plan gratis). Comprueba solo que la **renovación automática** está encendida: **Registro de dominios** → `ochocapitales.com`.
 
 ## Paso 2 · Una llave (token) para que GitHub suba la web y las noticias
 1. Arriba a la derecha, tu icono → **Perfil** → **Tokens de API** → **Crear token** → **Crear token personalizado**.
@@ -55,15 +56,16 @@ Pestaña **Variables** → **New repository variable** (dos):
 
 | Nombre (exacto) | Valor |
 |---|---|
-| `CLOUDFLARE_URL` | `https://ochocapitales.com` |
 | `NOTICIAS_URL` | `https://datos.ochocapitales.com/news.json` |
 
-## Paso 5 · Conectar el dominio a la web
-**Workers y Pages** → `ocho-capitales` → **Dominios personalizados** → **Configurar un dominio personalizado** → `ochocapitales.com` → **Activar dominio**. Repite con `www.ochocapitales.com`. Cloudflare crea los registros y el certificado solo (de minutos a una hora).
+(La variable `CLOUDFLARE_URL` **todavía no**: se crea el día del lanzamiento. Mientras no exista, la web se anuncia a Google como `ocho-capitales.pages.dev`.)
+
+## Paso 5 · Nada de dominio en «ocho-capitales» todavía
+No conectes `ochocapitales.com` al proyecto `ocho-capitales` hasta el día del lanzamiento: ahora lo tiene la landing.
 
 ## Paso 6 · Decir «publica en Cloudflare»
 Escríbeme **«publica en Cloudflare»**. Hago la primera publicación y compruebo que:
-- `https://ochocapitales.com` abre;
+- `https://ocho-capitales.pages.dev` abre;
 - las noticias llegan desde `datos.ochocapitales.com`;
 - la caché y las cabeceras son las previstas.
 
@@ -74,8 +76,26 @@ Después te paso Lighthouse en móvil, antes y después.
 ## Paso 7 · Mirar el contador una vez (2 minutos, una semana después)
 **Workers y Pages** → `ocho-capitales` → **Implementaciones**. Si el panel cuenta las subidas como «compilaciones» del tope de 500 al mes, dímelo y paso la web a *Workers con archivos estáticos*: mismo dominio, sin ese tope. Mientras tanto, la publicación se frena sola en 450 al mes (variable `CLOUDFLARE_TOPE_MES`).
 
-## Paso 8 · Llevar la web de GitHub al dominio (cuando Cloudflare lleve unos días bien)
-GitHub → Variables → `GITHUB_REDIRIGE_A` = `https://ochocapitales.com`. Desde la siguiente publicación, cada página de `ssanchezz-07.github.io/ocho-capitales/…` lleva a la misma página de ochocapitales.com, y Google pasa a mirar el dominio. Para deshacerlo, borra la variable.
+## Día del lanzamiento · Pasar ochocapitales.com de la landing a la web (unos 20 minutos)
+Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en Cuaresma ni en Semana Santa. Lo hacemos juntos: tú pulsas en Cloudflare y GitHub, y yo compruebo.
+1. **Antes:** la última publicación de «ocho-capitales» en verde (GitHub → Actions) y `https://ocho-capitales.pages.dev` bien.
+2. **Quitar el dominio de la landing:** **Workers y Pages** → `ocho-capitales-espera` → **Dominios personalizados** → en `ochocapitales.com` (y `www`, si lo tiene), los tres puntos → **Eliminar dominio**. Durante unos minutos el dominio no muestra nada.
+3. **Ponérselo a la web:** **Workers y Pages** → `ocho-capitales` → **Dominios personalizados** → **Configurar un dominio personalizado** → `ochocapitales.com` → **Activar dominio**. Repite con `www.ochocapitales.com`.
+4. **Esperar al certificado:** en esa misma pantalla, los dos dominios pasan a **Activo** (de 1 a 15 minutos; como mucho, una hora).
+5. **Que `www` lleve a la raíz:** **ochocapitales.com** (zona) → **Reglas** → **Reglas de redirección** → **Crear regla** → plantilla «Redirect from WWW to root» → **Implementar**. (Así hay una sola dirección: `https://ochocapitales.com`.)
+6. **GitHub, dos variables** (Settings → Secrets and variables → Actions → Variables):
+   - `CLOUDFLARE_URL` = `https://ochocapitales.com`: canónicos, mapa del sitio y avisos a Google con el dominio, y `pages.dev` deja de indexarse;
+   - `GITHUB_REDIRIGE_A` = `https://ochocapitales.com`: cada página de `ssanchezz-07.github.io/ocho-capitales/…` lleva a la misma página del dominio.
+7. **Publicar:** GitHub → **Actions** → «Publicar Ocho Capitales» → **Run workflow**, o dime «publica». La red de seguridad comprueba la web antes y después de subirla.
+8. **Comprobar** (lo hago yo; te lo cuento en una línea):
+   - `https://ochocapitales.com` abre la portada con candado;
+   - `www.ochocapitales.com` y una página de `github.io` llevan al dominio;
+   - las noticias llegan de `datos.ochocapitales.com`;
+   - Colabora envía al correo;
+   - Lighthouse en móvil.
+9. **Después:** dar de alta `https://ochocapitales.com` en Google Search Console con el mapa del sitio (`/sitemap.xml`).
+
+**Si algo sale mal:** quita el dominio de `ocho-capitales` y vuelve a ponérselo a `ocho-capitales-espera` (pasos 2 y 3 al revés), y borra las dos variables del paso 6. En unos minutos está como antes.
 
 ## Cómo se publica a partir de ahora (para que lo sepas)
 1. **Cada hora** GitHub lee las noticias y las agendas y las guarda en la rama `datos`. Sube solo `news.json` a R2, y la página de Noticias lo coge de ahí al momento. Si R2 fallara, usa las noticias que van dentro de la web. La copia de GitHub Pages se actualiza igual que antes.
