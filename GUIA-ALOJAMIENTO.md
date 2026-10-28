@@ -2,7 +2,7 @@
 
 Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que necesita tu cuenta: crear una llave, el almacén de noticias y pegar dos cosas en GitHub. Unos 15 minutos. Ninguna clave pasa por el chat.
 
-**Hasta el lanzamiento** (decisión de Pablo, 28-oct): `ochocapitales.com` muestra la landing de espera (proyecto de Pages `ocho-capitales-espera`, lo lleva marketing). La web completa se publica en **`https://ocho-capitales.pages.dev`** y el dominio se le pasa el día del lanzamiento (apartado «Día del lanzamiento»).
+**Hasta el lanzamiento** (decisión de Pablo, 28-oct): `ochocapitales.com` muestra la landing de espera. Es el proyecto de Pages `ocho-capitales-espera`, que lleva marketing: está publicada en https://ocho-capitales-espera.pages.dev desde el 28-oct y sus pasos están en `MARKETING/landing/PUBLICAR.md`. El dominio se le conecta cuando Pablo diga «publica». La web completa se publica en **`https://ocho-capitales.pages.dev`** y el dominio se le pasa el día del lanzamiento (apartado «Día del lanzamiento»).
 
 **Qué ganas:**
 - La web carga desde la red de Cloudflare con compresión Brotli (10-41 % menos que hoy).
