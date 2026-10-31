@@ -1,0 +1,4444 @@
+{
+ "generado": "2026-10-31",
+ "fuentes": {
+  "InfoCofrade": 298,
+  "El Itinerario": 26,
+  "Agrupación de Almería": 0,
+  "Federación de Granada": 1,
+  "Prensa (agendas semanales)": 27,
+  "Prensa (texto de noticias)": 85
+ },
+ "eventos": [
+  {
+   "fecha": "2026-11-01",
+   "hora": "18:30",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Rosario (Siete Palabras)",
+   "nota": "Música: la BCT Esencia, abriendo el cortejo y la Banda de Música del Maestro Tejera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "18:30",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Rosario (Santa Catalina)",
+   "nota": "Música: la Banda de Música Ciudad de Dos Hermanas.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "07:30",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario de la Aurora con María Santísima del Rosario (Montesión)",
+   "nota": "Salida: 07:30",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Carmen (Santo Ángel) de 10:30-13:30 y 18:30-20:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Veneración al Santísimo Cristo de la Paz (Humeros) de 10:30-14:00 y 18:00-21:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "13:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función solemne de acción de gracias por el 175º. aniversario de Nuestra Señora de la Soledad de San Buenaventura a las 13:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "10:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora del Rosario (Siete Palabras) a las 10:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena extraordinaria a Nuestra Señora del Amparo a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Novena a Nuestra Señora de Todos los Santos a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "13:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Misa solemne en conmemoración del dogma de la asunción de la Virgen María en la Capilla de los Marineros a las 13:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "10:30",
+   "ciudad": "huelva",
+   "tipo": "culto",
+   "titulo": "Peregrinación extraordinaria de la Hermandad del Rocío de Triana a la Parroquia de la Asunción de Almonte",
+   "nota": "Salida a las 10:30 desde la Ermita del Santo Cristo.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Encuentro Nacional de Hermandades de la Sagrada Cena en Granada",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión del Santísimo Cristo de las Misericordias de Chipiona",
+   "nota": "Música: la Banda de Cornetas y Tambores Nuestra Señora del Sol.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Santa María de Guadalupe (Jerez)",
+   "nota": "Música: la Banda de Música de Julián Cerdán de Sanlúcar de Barrameda.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria del paso de la Santa Cena de Granada",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Todos los Santos de 10:00-13:00 y 17:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Carmen (Santo Ángel) de 10:30-13:30 y 18:30-20:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Veneración al Santísimo Cristo de la Paz (Humeros) de 10:30-14:00 y 18:00-21:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "culto",
+   "titulo": "Peregrinación extraordinaria de la Hermandad del Rocío del Cerro del Águila a la Parroquia de la Asunción de Almonte",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado de Nuestro Padre Jesús Nazareno de Estepa desde el cementerio a su templo",
+   "nota": "Música: la Banda de Música del Maestro Tejera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Todos los Santos de 10:00-13:00 y 17:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-05",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación a Nuestra Señora del Prado (Parroquia del Salvador) a cargo de Eduardo Osborne",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Cabildo de elecciones en la Hermandad del Dulce Nombre",
+   "nota": "Se presentan dos candidaturas, las presididas por Antonio Langeheldt Marín y Carlos Pereyra Barrios.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "19:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora del Carmen (San Gil) a las 19:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "17:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión triunfal de Nuestra Señora del Amparo Coronada",
+   "nota": "Música: la BCT Nuestra Señora de la Victoria de las Cigarreras, abriendo el cortejo hasta el Ayuntamiento, y la Banda de Música de Nuestra Señora del Carmen de Salteras.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "18:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Nuestra Señora de Todos los Santos",
+   "nota": "Música: la Banda de Música del Maestro Tejera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Misa estacional y coronación canónica de Nuestra Señora del Amparo (Magdalena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestra Señora del Carmen (San Gil) a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestra Señora de Todos los Santos a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Certamen de bandas organizado por la Hermandad del Divino Perdón de Alcosa con fines benéficos, a partir de las 12:30 en la Plaza Maestro Sánchez Rosa",
+   "nota": "Participan: Agrupación Musical Juvenil Sagrada Presentación de San Benito, Banda de Cornetas y Tambores Nuestra Señora del Sol, Agrupación Musical Fuente Clara de Aznalcóllar, Agrupación Musical Pasión y Resurrección, Agrupación Musical de la Estrella de Dos Hermanas, Banda de Cornetas y Tambores de la Vera+Cruz de Los",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-09",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Consejo de Cofradías: Elección del cartelista del Junio Eucarístico 2027",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Humildad (Cerro del Águila) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Humildad (Cerro del Águila) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Humildad (Cerro del Águila) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función solemne a Nuestro Padre Jesús de la Humildad (Cerro del Águila) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Victoria (Cigarreras) en la Capilla del Colegio Santa Ana a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación de la juventud del Martes Santo en la Hermandad de los Javieres a cargo de Víctor Manuel Cáscales Vallejo",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Humildad (Cerro del Águila)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Estepa por el CD de la Hermandad",
+   "nota": "Música: la Agrupación Musical Santa María Magdalena de Arahal.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Humildad (Cerro del Águila)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Certamen «Repartiendo Esperanza» en el Parque Fernando Magallanes organizado por las Hermandades de la Esperanza Macarena y la Esperanza de Triana con carácter benéfico. 🎟️ Venta de entradas en http://www.giglon.com",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "11:00",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado de Nuestro Padre Jesús de la Salud y Buen Viaje (San Esteban) a la Catedral",
+   "nota": "Música: la Capilla Musical de la Banda de Música de Santa Ana de Dos Hermanas.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús de la Salud y Buen Viaje (San Esteban)",
+   "nota": "Música: la Agrupación Musical Virgen de los Reyes.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "11:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función por la festividad de Cristo Rey ante Nuestro Padre Jesús de la Salud y Buen Viaje (San Esteban) en la Catedral a las 11:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función solemne al Santísimo Cristo del Mayor Dolor (Dulce Nombre)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-27",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Andrés Apóstol (Panaderos) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Medalla Milagrosa (Ciudad Jardín)",
+   "nota": "Música: la Banda de Música de María Santísima de la Victoria de las Cigarreras.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "18:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino con María Santísima de la Purísima Concepción (Alcosa)",
+   "nota": "Salida: 18:00.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Andrés Apóstol (Panaderos) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-29",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a San Andrés Apóstol (Panaderos) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-11-30",
+   "hora": "20:30",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a San Andrés Apóstol (Panaderos) a las 20:30",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Cabeza (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Cabeza (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Cabeza (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Cabildo de elecciones en la Hermandad del Museo",
+   "nota": "Primera convocatoria: 18:00.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-04",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-05",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Divina Gracia de Padre Pío a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-05",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Glorioso a María Santísima de la Concepción (Silencio) a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Rocío (Redención)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Los Ángeles (Los Negritos)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-06",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Divina Gracia de Padre Pío a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-06",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Glorioso a María Santísima de la Concepción (Silencio) a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Rocío Coronada (Redención)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Los Ángeles Coronada (Los Negritos)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Concepción (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Divina Gracia de Padre Pío a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "19:45",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo Glorioso a María Santísima de la Concepción (Silencio) a las 19:45",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Vigilia a María Santísima de la Concepción (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos extraordinario a Nuestro Padre Jesús del Soberano Poder en su Prendimiento y María Santísima de Regla Coronada (Los Panaderos) con motivo del 425 aniversario fundacional",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Divina Gracia (Padre Pío) de 10:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Subterráneo (Sagrada Cena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Rocío Coronada (Redención)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de las Penas (Santa Marta)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos María Santísima de las Tristezas (Vera+Cruz)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Cabeza (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de los Ángeles Coronada (Los Negritos)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Concepción (Silencio) comenzando tras la Función Solemne de las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Soledad (Servitas)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Concepción (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a la Divina Pastora de Santa Marina",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal a María Santísima de la Divina Gracia de Padre Pío a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a María Santísima de la Concepción (Silencio) a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a María Santísima de la Concepción (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de la Virgen de la Luna de Escacena (Huelva)",
+   "nota": "Música: la Banda de Música de Santa Ana de Dos Hermanas.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-09",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Encarnación (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-09",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Concepción (Silencio)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Aniversario de la Coronación canónica de Nuestra Señora de la Encarnación (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Encarnación (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario vespertino con Nuestra Señora de la Esperanza de la Trinidad",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "17:30",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado de Nuestra Señora de la Encarnación (San Benito) a las Hermanitas de los Pobres",
+   "nota": "Salida 17:30.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de Guadalupe (Las Aguas)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima del Amor (Resurrección)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Cabildo de elecciones en la Hermandad del Amor",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Esperanza de la Trinidad",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Esperanza (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Gracia y Esperanza (San Roque)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Esperanza, Divina Enfermera (Lanzada)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Esperanza Macarena",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Esperanza de Triana",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de Esperanza de la Trinidad",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Esperanza (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Esperanza de la Trinidad",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Esperanza (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora de la Esperanza (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación de la navidad en la Hermandad de las Aguas a cargo de Marisa Atienza Ramos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-12-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Cabildo de elecciones en la Hermandad de los Desamparados (Parque Alcosa)",
+   "nota": "Primera convocatoria: 19:00",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-04",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos al Santísimo Cristo de la Púrpura (Cigarreras) en la Capilla del Colegio Santa Ana de 13:00-20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-10",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne al Santísimo Cristo de la Púrpura en la Capilla del Colegio Santa Ana a las 12:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación a Nuestra Señora de la Encarnación (San Benito) a cargo de Rafael González",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-19",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Encarnación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Acto de presentación de la pregonera universitaria, Mª de los Reyes Delgado, y del cartel del pregón en la Hermandad de los Estudiantes",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-20",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Encarnación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-21",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de la Encarnación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-01-22",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Nuestra Señora de la Encarnación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Candelaria",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-09",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Señor en su Sagrada Presentación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-09",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos al Santísimo Cristo de las Tres Caídas de Triana",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-10",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Señor en su Sagrada Presentación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-10",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-11",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Señor en su Sagrada Presentación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-11",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús de la Salud y Remedios (Bellavista)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo del Desamparo y Abandono (Cerro del Águila)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Señor en su Sagrada Presentación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Banda de Cornetas y Tambores de las Tres Caídas de Triana en el Convento de Capuchinos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Sangre (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-13",
+   "hora": "20:15",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Señor en su Sagrada Presentación (San Benito) a las 20:15",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Pregón de Nuestra Señora de la Cabeza (San Juan de la Palma) a cargo de Nacho Sánchez",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-14",
+   "hora": "13:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto al Señor en su Sagrada Presentación (San Benito) a las 13:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función principal de instituto al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Cabildo de elecciones en la Hermandad de las Nieves",
+   "nota": "Primera convocatoria: 12:00.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de las Siete Palabras",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Agrupación Musical Nuestro Padre Jesús de la Redención en el Convento de Capuchinos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapié a Nuestro Padre Jesús Nazareno (La O)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Quinario al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado de los titulares de la Hermandad de la Estrella de vuelta a su Capilla",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo de las Siete Palabras y María Santísima de los Remedios",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapié a Nuestro Padre Jesús Nazareno (La O)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo Yacente (Santo Entierro)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-26",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Agrupación Musical de la Estrella de Dos Hermanas en el Convento de Capuchinos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-27",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "Procesión del Grupo de Fieles de Nuestro Padre Jesús del Consuelo (Sevilla-Este)",
+   "nota": "Música: la Agrupación Musical de la Sentencia de Jerez de la Frontera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-27",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Nuestro Padre Jesús de las Penas (Estrella)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-27",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-27",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Agrupación Musical de la Victoria de Arahal",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Nuestro Padre Jesús de las Penas (Estrella)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-02-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de las Cinco Llagas (Trinidad)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-04",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Divina Misericordia (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús Cautivo (Santa Genoveva)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Valle",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés a Nuestro Padre Jesús Nazareno (El Silencio)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Divina Misericordia (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "concierto",
+   "titulo": "Concierto de la Agrupación Musical Nuestro Padre Jesús de la Salud (Gitanos) del Convento de Capuchinos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Estrella",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Valle",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés a Nuestro Padre Jesús Nazareno (El Silencio)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestro Padre Jesús de la Divina Misericordia (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Estrella",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Veneración a Nuestra Señora de los Desamparados (San Esteban)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Valle",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-09",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Pregón universitario a cargo de Mª de los Reyes Delgado García",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús de la Bendición en el Santo Encuentro (Polígono-Sur)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de la Paz (Rochelambert)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús Cautivo ante Pilato (Torreblanca)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús de la Victoria (Paz)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús Cautivo (Santa Genoveva)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo del Buen Fin",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de la Exaltación",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de Burgos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con Nuestro Padre Jesús Atado a la Columna (Cigarreras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo de la Expiración y María Santísima de las Aguas (Museo)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Sed",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo del Buen Fin y Nuestra Señora de la Palma",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos al Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Señora de Montserrat",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo Yacente y María Santísima de Villaviciosa (Santo Entierro)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "12:00",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Pregón de la Semana Santa de Sevilla en el Teatro de la Maestranza a las 12:00",
+   "nota": "Pendiente elección del pregonero/a.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Sagrada Cena",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés a Nuestro Padre Jesús de la Redención",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Caridad (Santa Marta)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de las Penas (San Vicente)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo de la Expiración y María Santísima de las Aguas (Museo)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora del Carmen (Omnium Sanctorum)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Sed",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo del Buen Fin y Nuestra Señora de la Palma",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo de la Sagrada Lanzada y María Santísima del Buen Fin",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de Burgos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de las Tres Caídas de San Isidoro",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos al Santísimo Cristo de la Conversión del Buen Ladrón y Nuestra Señora de Montserrat",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima de la Piedad (Sagrada Mortaja)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo Yacente y María Santísima de Villaviciosa (Santo Entierro)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Aurora (Resurrección)",
+   "nota": "Al término traslado de la imagen al paso.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de la Sangre y posterior subida a su paso",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado del Santísimo Cristo de la Sagrada Lanzada a su paso procesional",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Exaltación del Sábado de Pasión en la Hermandad de los Dolores de Torreblanca a cargo de Miguel Ángel Castillo López",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado del Santísimo Cristo de la Caridad (Santa Marta) a su paso procesional",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo del Descendimiento y María Santísima de la Quinta Angustia",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Salida procesional de la Agrupación Parroquial de Paz y Misericordia de Rochelambert",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de la Vera+Cruz",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "via-crucis",
+   "titulo": "Vía+Crucis con el Santísimo Cristo de la Sed",
+   "nota": "A su término, traslado al paso.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés y besamanos al Santísimo Cristo del Descendimiento y María Santísima de la Quinta Angustia",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés a Nuestro Padre Jesús Descendido de la Cruz (Sagrada Mortaja)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a María Santísima en su Soledad (San Lorenzo)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado del Santísimo Cristo del Calvario a su paso",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Divina Misericordia (Siete Palabras) y posterior traslado a su paso procesional",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-20",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-21",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Salud (Gitanos)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-22",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-22",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado de Nuestro Padre Jesús de la Salud de los Gitanos a su paso",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-23",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "Traslado del Santísimo Cristo Yacente (Santo Entierro) a su paso procesional",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-23",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús del Gran Poder",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besapiés al Santísimo Cristo de la Expiración (Cachorro)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús Nazareno (La O)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-03-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de la Alegría (San Bartolomé)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-04-04",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función solemne a Nuestro Padre Jesús de la Divina Misericordia (Siete Palabras)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-05",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de Araceli (San Andrés) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-06",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de Araceli (San Andrés) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "Pregón de las glorias de María en la Hermandad de la Paz a cargo de José María Garrido Mateos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-07",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Triduo a Nuestra Señora de Araceli (San Andrés) a las 20:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-08",
+   "hora": "20:00",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Araceli",
+   "nota": "Salida: 20:00.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-08",
+   "hora": "18:00",
+   "ciudad": "sevilla",
+   "tipo": "culto",
+   "titulo": "Función Principal de Instituto a Nuestra Señora de Araceli (San Andrés) a las 18:00",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de María Auxiliadora de los Salesianos de Nervión",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos extraordinario a la Divina Pastora de Capuchinos en la Capilla de San José",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos extraordinario a la Divina Pastora de Capuchinos en la Capilla de San José",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-27",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión del Corpus Christi de la Catedral de Sevilla",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-05-30",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Divina Pastora de Capuchinos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-06-04",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-06-05",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de Arahal",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-06-05",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de María Santísima Consuelo de las Tristezas (Ronda)",
+   "nota": "Música: la Banda de Música de la Puebla del Río.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-07-02",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-07-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Coronación Canónica de Nuestra Señora de Guaditoca de Guadalcanal",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-07-16",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Carmen (Santa Catalina)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-07-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Carmen (Santo Ángel)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-06",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de los Reyes, Patrona de Sevilla",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Águila de Alcalá de Guadaira",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Asunción de Dos Hermanas",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de los Reyes de Mairena del Alcor",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Santa María de la Mesa de Utrera",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Virgen de los Reyes de Villanueva del Ariscal",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión del Corpus Christi de Salteras",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Asunción de Cantillana",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Asunción de Estepa",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de los Remedios de El Real de la Jara",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Robledo de Constantina",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de las Virtudes de La Puebla de Cazalla",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-08-15",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de las Huertas de La Puebla de los Infantes",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Divina Pastora de Cantillana",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Estrella de Coria del Río",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Loreto de Espartinas",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Valle de Écija",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Espino de El Pedroso",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Consuelo de Alcolea del Río",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Gracia de El Ronquillo",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Regla de Chipiona",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de los Milagros de El Puerto de Santa María",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-08",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Victoria de Málaga",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión del Corpus Christi de la Parroquia de San Bernardo",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-17",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "traslado",
+   "titulo": "Traslado de la Virgen de los Dolores (Servitas) de Cádiz a la Catedral",
+   "nota": "Música: la Banda de Música Maestro Tejera.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-18",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Divina Pastora de Triana",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-18",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de la Virgen de los Dolores (Servitas) de Cádiz",
+   "nota": "Música: la Banda de Música del Maestro Dueñas de El Puerto de Santa María.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-19",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de la Divina Pastora de Santa Marina",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-24",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestra Señora de las Mercedes de Santa Genoveva",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Valvanera (San Benito)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-25",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de los Reyes, Patrona de los Sastres",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-09-25",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "coronacion",
+   "titulo": "Coronación Canónica de María Santísima de la Piedad (Sanlúcar la Mayor)",
+   "nota": "Música: Banda Municipal de Música de Lepe y la Banda de Música del Carmen de Salteras.",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-10-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Nuestro Padre Jesús de la Sentencia (Macarena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-10-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Santa Lucía",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-10-03",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de la Encarnación (Sagrada Cena)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-10-17",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Rosario de San Julián",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-10-31",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús Nazareno de La Puebla de Cazalla (Sevilla)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Rosario de San Vicente",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Rosario de Santa Catalina",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Rosario de la Aurora con Nuestra Señora del Rosario (Montesión)",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-11-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora de Todos los Santos",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2027-11-14",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Procesión de Nuestra Señora del Amparo",
+   "nota": "",
+   "fuente": "InfoCofrade",
+   "url": "https://infocofrade.com/agenda/"
+  },
+  {
+   "fecha": "2026-10-02",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a María Stma. de Gracia",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-03",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a María Stma. de Gracia",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-03",
+   "hora": "21:00",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Traslado de Vuelta de María Stma. de Gracia",
+   "nota": "Traslado de Vuelta de María Stma. de Gracia",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-06",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Veneración al Stmo. Cristo de Hermandad y Caridad",
+   "nota": "Parroquia Nuestra Señora de los Dolores",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-07",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Veneración al Stmo. Cristo de Hermandad y Caridad",
+   "nota": "Parroquia Nuestra Señora de los Dolores",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-07",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Traslado ida de Ntra. Sra. del Sol",
+   "nota": "Traslado ida de Ntra. Sra. del Sol",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-08",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Veneración al Stmo. Cristo de Hermandad y Caridad",
+   "nota": "Parroquia Nuestra Señora de los Dolores",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-08",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. del Sol",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-09",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. del Sol",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-10",
+   "hora": "19:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. del Sol",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-11",
+   "hora": "12:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Función Solemne a Ntra. Sra. del Sol",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "09:30",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Rosario de Ntra. Sra. Mediadora de la Salvación",
+   "nota": "Rosario de Ntra. Sra. Mediadora de la Salvación",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Besamanos a Ntra. Sra. del Sol",
+   "nota": "Santuario de la Victoria",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "19:00",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Traslado vuelta de Ntra. Sra. del Sol",
+   "nota": "Traslado vuelta de Ntra. Sra. del Sol",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "20:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "19:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a María Stma. de la Estrella",
+   "nota": "Iglesia de Santo Domingo de Guzmán",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "20:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "09:00",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Besamano a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Besamano a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "19:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a María Stma. de la Estrella",
+   "nota": "Iglesia de Santo Domingo de Guzmán",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-17",
+   "hora": "20:00",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Solemne Eucaristía a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "08:00",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Rosario de María Stma. del Amor Doloroso",
+   "nota": "Rosario de María Stma. del Amor Doloroso",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "09:00",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Besamano a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "11:30",
+   "ciudad": "malaga",
+   "tipo": "culto",
+   "titulo": "Triduo a María Stma. de la Estrella",
+   "nota": "Iglesia de Santo Domingo de Guzmán",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-10-18",
+   "hora": "17:00",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Besamano a Ntra. Sra. de la Soledad",
+   "nota": "Parroquia San Pablo",
+   "fuente": "El Itinerario",
+   "url": "https://elitinerario.es/agenda/"
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "culto",
+   "titulo": "Misa de clausura del Centenario en la Basílica de San Juan de Dios.",
+   "nota": "Ciudad de Granada",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/culto/misa-de-clausura-del-centenario-en-la-basilica-de-san-juan-de-dios/"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-31-octubre-cordoba/202610311330463523162.amp.html",
+   "fecha": "2026-10-31",
+   "hora": "13:00",
+   "tipo": "culto",
+   "titulo": "Misa de acción de gracias y convivencia de la Merced",
+   "nota": "Casa de Hermandad de la Merced (convivencia)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-31-octubre-cordoba/202610311330463523162.amp.html",
+   "fecha": "2026-10-31",
+   "hora": "19:00",
+   "tipo": "acto",
+   "titulo": "Sabatina de difuntos de la Sentencia",
+   "nota": "Ermita de la Alegría"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-31-octubre-cordoba/202610311330463523162.amp.html",
+   "fecha": "2026-10-31",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Función solemne por el aniversario de la coronación de la Virgen del Rosario",
+   "nota": "Real Iglesia de San Pablo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-30-octubre-cordoba/202610292300353522173.amp.html",
+   "fecha": "2026-10-30",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Rezo del Rosario ante la Virgen de la Alegría",
+   "nota": "Iglesia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-30-octubre-cordoba/202610292300353522173.amp.html",
+   "fecha": "2026-10-30",
+   "hora": "20:30",
+   "tipo": "acto",
+   "titulo": "Charla formativa en la Confianza",
+   "nota": "Local de la Pro-Hermandad de la Confianza | Calle Julio Pellicer, 11"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-29-octubre-cordoba/202610282200003520113.amp.html",
+   "fecha": "2026-10-29",
+   "hora": "18:30",
+   "tipo": "acto",
+   "titulo": "Última jornada de la campaña solidaria del Amor",
+   "nota": "Casa de Hermandad del Amor"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-27-octubre-cordoba/202610262304093518729.amp.html",
+   "fecha": "2026-10-27",
+   "hora": "19:00",
+   "tipo": "acto",
+   "titulo": "Proyección de la sexta temporada de \"The Chosen\"",
+   "nota": "Centro Parroquial Carmen Márquez Criado | Calle Tejón y Marín, 9"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-25-octubre-cordoba/202610242200003516770.amp.html",
+   "fecha": "2026-10-25",
+   "hora": "09:00",
+   "tipo": "procesion",
+   "titulo": "Rosario de la aurora de María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-25-octubre-cordoba/202610242200003516770.amp.html",
+   "fecha": "2026-10-25",
+   "hora": "13:00",
+   "tipo": "culto",
+   "titulo": "Función principal en honor a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "17:30",
+   "tipo": "acto",
+   "titulo": "Curso de acólitos de la Hermandad de la Sangre",
+   "nota": "Salón de Reuniones del Convento del Santo Ángel (Capuchinos)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "18:30",
+   "tipo": "acto",
+   "titulo": "Recogida solidaria de la Hermandad del Rescatado",
+   "nota": "Hall del Colegio"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:00",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "acto",
+   "titulo": "Testimonio misionero de Miguel Rodríguez Gandía",
+   "nota": "Ermita de la Alegría"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Función solemne del Santísimo Redentor",
+   "nota": "Iglesia de Nuestra Señora de Gracia y San Eulogio"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a San Antonio María Claret",
+   "nota": "Real Iglesia de San Pablo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "acto",
+   "titulo": "Fiesta de regla en honor a San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Rosario ante la Virgen de la Alegría",
+   "nota": "Iglesia de Santa Marina"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "20:00",
+   "tipo": "acto",
+   "titulo": "Salida de la XXII Peregrinación de Jóvenes Rocieros",
+   "nota": ""
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "21:15",
+   "tipo": "concierto",
+   "titulo": "Concierto de Cristo de Gracia",
+   "nota": "Puerta del Puente"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "21:30",
+   "tipo": "acto",
+   "titulo": "Inicio de los ensayos del coro de Navidad de la Merced",
+   "nota": "Casa de Hermandad de la Merced | Avenida Agrupación Córdoba, 11"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-23-octubre-cordoba/202610231014153515606.html",
+   "fecha": "2026-10-23",
+   "hora": "23:30",
+   "tipo": "acto",
+   "titulo": "Serenata de felicitación al arcángel San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:00",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima del Amor",
+   "nota": "Parroquia de Nuestra Señora de la Paz (San Basilio)"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Triduo a María Santísima de la Caridad",
+   "nota": "Parroquia de San Andrés Apóstol"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "19:30",
+   "tipo": "culto",
+   "titulo": "Presentación del libro sobre la iglesia de San Rafael",
+   "nota": "Fundación Caja Rural del Sur, avenida de la Libertad, 1"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo a San Antonio María Claret",
+   "nota": "Real Iglesia de San Pablo"
+  },
+  {
+   "ciudad": "cordoba",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/agenda-cofrade-22-octubre-cordoba/202610221250053514585.amp.html",
+   "fecha": "2026-10-22",
+   "hora": "20:00",
+   "tipo": "culto",
+   "titulo": "Triduo en honor al arcángel San Rafael",
+   "nota": "Iglesia del Juramento de San Rafael"
+  },
+  {
+   "fecha": "2027-04-03",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "pregon",
+   "titulo": "el 3 de abril habrá un pregón especial de esta efeméride, a cargo del periodista Santi Souvirón;",
+   "nota": "",
+   "fuente": "Diario SUR",
+   "url": "https://www.diariosur.es/semana-santa/glorias-malaga-celebraran-besamanos-magno-motivo-anos-20261006222715-nt.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Procesiones en Málaga en el puente del Pilar, dónde y a qué hora salen las cofradías",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/procesiones-en-malaga-en-el-puente-del-pilar-donde-y-a-que-hora-salen-las-cofradias/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La programación continuará después de la procesión y tendrá otra de sus citas destacadas el 28 de noviembre, cuando María Santísima Reina de Nuestra Alegría salga en un r",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/cordoba/virgen-alegria-sale-sabado-forma-extraordinaria-horario-recorrido/202610101000003502069.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "El próximo 7 de noviembre, el Señor del Santo Traslado recorrerá las calles del barrio de la Trinidad.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Una semana después, el 14 de noviembre, será el turno de Nuestro Padre Jesús de la Pasión, que procesionará por la feligresía de las iglesias de los Santos Mártires y San",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/fervor-cofrade-en-pleno-otono-con-la-extraordinaria-de-los-dolores-del-puerto-de-la-torre-y-la-virgen-del-rosario/"
+  },
+  {
+   "fecha": "2027-02-06",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "cartel",
+   "titulo": "Juan Miguel Martín Mena diseñará el cartel oficial de la Semana Santa de Cáceres de 2027",
+   "nota": "",
+   "fuente": "La Portada de Extremadura",
+   "url": "https://www.laportadadeextremadura.com/caceres/ciudad-caceres/juan-miguel-martin-mena-disenara-el-cartel-oficial-de-la-semana-santa-de-caceres-de-2027_8811_102.html"
+  },
+  {
+   "fecha": "2026-11-09",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "extraordinaria",
+   "titulo": "coronada el 9 de noviembre, el día de su anual procesión, pero que contará con un carácter extraordinario en el itinerario, y el Señor de la Salud y Buen Viaje de San Est",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/padre-pio-culmina-aniversario-parroquia-procesion-extraordinaria-20261011163838-nts.html"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "José Manuel Carmona Meléndez, pregonero de la Semana Santa 2027 de Chiclana",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/chiclana/jose-manuel-carmona-melendez-pregonero_0_2008232415.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "magna",
+   "titulo": "Alejandro Martín Caballero será el cartelista de las Glorias de Sevilla de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/alejandro-martin-caballero-sera-el-cartelista-de-las-glorias-de-sevilla-de-2027/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "El traslado era además el primer paso de cara a la salida extraordinaria que tendrá el próximo 1 de noviembre por las calles de Granada.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada-semana-santa/el-traslado-de-la-santa-cena-de-granada-se-topa-con-el-trafico-en-la-gran-via/"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "via-crucis",
+   "titulo": "Chiclana ya tiene nombres propios para su Semana Santa y sus Glorias de 2027: pregoneros, carteles y una gran distinción",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/chiclana/chiclana-tiene-nombres-propios-semana-santa-glorias-2027-pregoneros-carteles-gran-distincion/202610141230263505896.html"
+  },
+  {
+   "fecha": "2027-07-16",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Aunque la efigie hace su salida procesional el domingo posterior a su festividad, el 16 de julio, desde la parroquia de San Patricio, esta recibe culto durante todo el añ",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/virgen-carmen-huelin-preside-sabado-rosario-glorias-malaga-20261008141320-nt.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Entre autobuses, motos y coches: así ha sido el accidentado traslado de la Santa Cena en Granada",
+   "nota": "",
+   "fuente": "lavozdelsur.es",
+   "url": "https://www.lavozdelsur.es/ediciones/granada/entre-autobuses-motos-y-coches-asi-ha-sido-el-accidentado-traslado-de-la-santa-cena-en-granada.html"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "pregon",
+   "titulo": "Dos meses y cinco días de secreto: así se enteró Andrés Camino de que sería pregonero en la Semana Santa de Málaga",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/dos-meses-y-cinco-dias-de-secreto-asi-se-entero-andres-camino-de-que-seria-pregonero-en-malaga/"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "traslado",
+   "titulo": "El Císter cumple 50 años y prepara un aniversario con cultos extraordinarios, música y exposiciones",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/cister-cumple-50-anos-prepara_0_2008259591.amp.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "El traslado de la Santa Cena de Granada, expuesto al tráfico en plena Gran Vía: una sucesión de escenas inadmisibles que exige responsabilidades",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/el-traslado-de-la-santa-cena-de-granada-expuesto-al-trafico-en-plena-gran-via-una-sucesion-de-escenas-inadmisibles-que-exige-responsabilidades/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-merced-modifica-el-recorrido-de-su-salida-extraordinaria-por-las-previsiones-meteorologicas-adversas/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "La Asociación del Amparo de Fray Isidoro aplaza su salida procesional al 7 de noviembre «por motivos de seguridad»",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/cristina-medina-y-rafa-torres-anunciaran-la-semana-santa-de-triana-de-2027-con-el-pregon-y-el-cartel/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "cartel",
+   "titulo": "Los primeros actos oficiales arrancan el 28 de noviembre con la presentación del cartel anunciador, obra del artista Jonathan Sánchez Aguilera, y la marcha oficial compue",
+   "nota": "",
+   "fuente": "COPE",
+   "url": "https://www.cope.es/emisoras/andalucia/malaga-provincia/malaga/noticias/agrupacion-cofradias-archidona-programa-procesion-magna-culminar-centenario-20261019_3456509.amp.html"
+  },
+  {
+   "fecha": "2026-12-08",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "besamanos",
+   "titulo": "Posteriormente, la misa de apertura se celebra el 8 de diciembre, coincidiendo con el puente festivo en el que se organiza un besamanos magno.",
+   "nota": "",
+   "fuente": "COPE",
+   "url": "https://www.cope.es/emisoras/andalucia/malaga-provincia/malaga/noticias/agrupacion-cofradias-archidona-programa-procesion-magna-culminar-centenario-20261019_3456509.amp.html"
+  },
+  {
+   "fecha": "2027-01-16",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "pregon",
+   "titulo": "La Semana Santa del Realejo 2027 ya tiene pregonero, cartelista y presentadora",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/semana-santa-granada-2027-semana-santa-granada-realejo-granada-semana-santa-realejo-semana-santa-realejo-granada-pregon-realejo-2027_0_2008289692.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "procesion",
+   "titulo": "Esa tarde del 1 de noviembre será cuando la Virgen de la Palma procesione por las calles de la ciudad, poniendo el broche de oro al ciclo de procesiones de Gloria de la c",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "magna",
+   "titulo": "La zona rural de Jerez vivirá una Magna histórica el próximo 7 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/manuel-lamprea-ramirez-sera-pregonero-glorias-sevilla-2027/20261020093714008372.html"
+  },
+  {
+   "fecha": "2027-07-08",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "procesion",
+   "titulo": "La Iglesia de San Gabriel celebra los cultos a la patrona del Barrio de El Puente desde este miércoles 8 de julio y hasta su salida procesional del día 16 en horario de l",
+   "nota": "",
+   "fuente": "El Corto de Loja",
+   "url": "https://www.elcortodigital.es/cultura/cofrade/el-cartelista-gaditano-antoine-cas-sera-el-autor-del-cartel-anunciador-de-la-semana-santa-de-loja-2027/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "extraordinaria",
+   "titulo": "Los hermanos deberán pronunciarse sobre la participación de la corporación en la Misa Pontifical de Acción de Gracias y en la posterior Procesión Extraordinaria previstas",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-entrega-convoca-a-sus-hermanos-para-abordar-la-planificacion-de-2027-y-una-posible-participacion-en-la-procesion-extraordinaria-en-la-barca-de-la-florida/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La Real Federación prevé celebrar los traslados de Kerygma el próximo 28 de noviembre.",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/la-real-federacion-preve-celebrar-los-traslados-de-kerygma-el-proximo-28-de-noviembre/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Esta es la fecha de los traslados de Kerygma que se ha dado a conocer en el Pleno de la Federación, presidido por el Excmo. y Rvdmo. Sr. D. José María Gil Tamayo, Arzobis",
+   "nota": "",
+   "fuente": "COPE",
+   "url": "https://www.cope.es/emisoras/andalucia/granada-provincia/granada/cruz-de-guia/noticias/fecha-traslados-kerygma-dado-conocer-pleno-federacion-presidido-excmo-rvdmo-d-jose-maria-gil-tamayo-arzobispo-granada-20261020_3459430.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "10:00",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma en Granada se prevén para el 28 de noviembre desde la Catedral a pesar de las elecciones generales",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/los-traslados-de-kerygma-en-granada-se-preven-para-el-28-de-noviembre-desde-la-catedral-a-pesar-de-las-elecciones-generales/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Jesús del Amor y la Entrega presidirá el Vía Crucis Oficial de 2027 y la Virgen de las Angustias de Pinos Puente, la Vigilia de la Inmaculada",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/jesus-del-amor-y-la-entrega-presidira-el-via-crucis-oficial-de-2027-y-la-virgen-de-las-angustias-de-pinos-puente-la-vigilia-de-la-inmaculada/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La previsión de la organización sigue siendo celebrar los traslados el 28 de noviembre, siempre que las condiciones meteorológicas y las cuestiones relacionadas con la au",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.amp.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "10:00",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "El pleno de hermanos mayores ha determinado plantear el 28 de noviembre, como estaba contemplado, para proceder con el traslado de las imágenes hasta sus respectivos temp",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/la-junta-electoral-debera-autorizar-si-el-sabado-de-reflexion-pueden-hacerse-los-traslados-por-kerygma/"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "El Consejo de Hermandades elige la imagen que presidirá el Vía Crucis de Cádiz en 2027",
+   "nota": "",
+   "fuente": "Cádiz Directo",
+   "url": "https://www.cadizdirecto.com/cadiz/el-consejo-de-hermandades-elige-la-imagen-que-presidira-el-via-crucis-de-cadiz-en-2027/amp/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La Federación de Cofradías organiza traslado de pasos de 'Kerygma' en el día de reflexión",
+   "nota": "",
+   "fuente": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/articulo/granada/andalucia-granada-federacion-cofradias-programa-dia-reflexion-traslado-pasos-muestra-kerygma/202610211327223513342.html"
+  },
+  {
+   "fecha": "2027-02-15",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "via-crucis",
+   "titulo": "El Cristo de la Vera Cruz presidirá el Vía Crucis de Cádiz en 2027, 29 años después de su última vez",
+   "nota": "",
+   "fuente": "Portal de Cádiz",
+   "url": "https://www.portaldecadiz.com/semana-santa/172983-el-cristo-de-la-vera-cruz-presidira-el-via-crucis-de-cadiz-en-2027-29-anos-despues-de-su-ultima-vez"
+  },
+  {
+   "fecha": "2027-02-05",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "pregon",
+   "titulo": "La Hermandad de la Caridad ensayará la salida de la Catedral por la Puerta de las Palmas para dar mayor fluidez al Jueves Santo",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-caridad-ensayara-la-salida-de-la-catedral-por-la-puerta-de-las-palmas-para-dar-mayor-fluidez-al-jueves-santo/"
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "traslado",
+   "titulo": "Antes de la salida, los días 2, 3 y 4 de noviembre, el Cristo del Santo Traslado presidirá un triduo extraordinario, que oficiará el deán de la Catedral, José Manuel Ferr",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/cuenta-atras-procesiones-extraordinarias-cristo-santo-traslado-20261021213506-nt.html"
+  },
+  {
+   "fecha": "2027-01-30",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Esta procesión se enmarca en el cincuentenario de la bendición del Señor, que se cumplirá el 30 de enero de 2027, aunque la corporación ha decidido adelantar la salida co",
+   "nota": "",
+   "fuente": "Diario Sur",
+   "url": "https://www.diariosur.es/semana-santa/cuenta-atras-procesiones-extraordinarias-cristo-santo-traslado-20261021213506-nt.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "magna",
+   "titulo": "Andrés Lorite, vicepresidente de la Diputación, será el pregonero de la Semana Santa de Córdoba de 2027",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/andres-lorite-vicepresidente-diputacion-sera-pregonero-semana-santa-cordoba-2027/20261022132039008429.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Aunque el acuerdo permite avanzar en la organización, la celebración de los traslados el 28 de noviembre todavía está sujeta a determinadas circunstancias.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/traslados-kerygma-adelantan-hora-comenzaran-nueve-manana-20261022160110-nt.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Granada fija el 28 de noviembre, a la 9 de la mañana, los traslados de las imágenes que participan en la exposición Kerygma",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/granada-fija-el-28-de-noviembre-a-la-9-de-la-manana-los-traslados-de-las-imagenes-que-participan-en-la-exposicion-kerygma/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Comunicado traslados",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/comunicado-traslados/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "traslado",
+   "titulo": "Granada fija el 28 de noviembre, a la 9 de la mañana, los traslados de las imágenes que participan en la exposición Kerygma",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/juan-miguel-martin-mena-realizara-el-cartel-anunciador-de-la-feria-de-abril-de-mairena-del-alcor-de-2027/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/jose-manuel-pena-sutil-pregonero-de-la-hermandad-de-los-gitanos-para-la-cuaresma-de-2027/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-agenda-de-procesiones-de-sevilla-del-23-al-25-de-octubre-el-rosario-de-la-macarena-guadalupe-y-la-sierra-entre-las-citas-del-fin-de-semana/"
+  },
+  {
+   "fecha": "2026-12-12",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de Belén visitará Santa María de Guadalupe en su salida procesional del 12 de diciembre",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/paloma-saborido-pregonera-de-la-semana-santa-de-malaga-y-coordinadora-de-la-procesion-del-cachorro-y-la-esperanza-en-roma-sera-la-numero-dos-del-pp-al-congreso-por-malaga/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "huelva",
+   "tipo": "traslado",
+   "titulo": "La previsión de la organización sigue siendo celebrar los traslados el 28 de noviembre, siempre que las condiciones meteorológicas y las cuestiones relacionadas con la au",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslados-kerygma-granada-traslados-catedral-kerygma-granada-kerygma-granada-kerigma-granada-horarios-traslados-kerygma-granada-regreso-kerygma-granada_0_2008298092.html"
+  },
+  {
+   "fecha": "2026-12-30",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "cartel",
+   "titulo": "Un pueblo de Sevilla prohíbe el uso de IA en su cartel de la Semana Santa 2027",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/pueblo-sevilla-prohibe-uso-ia-cartel-semana-20261022172556-nts.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de Kerygma en Granada se fijan el sábado de reflexión y quedan pendientes de autorización de la Junta Electoral",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada/los-traslados-de-kerygma-se-fijan-el-sabado-de-reflexion-y-quedan-pendientes-de-autorizacion-de-la-junta-electoral/"
+  },
+  {
+   "fecha": "2027-02-26",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "José Manuel Peña será el pregonero de la hermandad de Los Gitanos de 2027",
+   "nota": "",
+   "fuente": "ABC",
+   "url": "https://www.abc.es/sevilla/pasionensevilla/noticias-semana-santa-sevilla/jose-manuel-pena-pregonero-hermandad-gitanos-20261024121741-nts_amp.html"
+  },
+  {
+   "fecha": "2027-02-05",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "pregon",
+   "titulo": "La Hermandad de la Agonía designa a Inés Espejo como pregonera e Irene Pérez como cartelista del Martes Santo de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-hermandad-de-la-agonia-designa-a-ines-espejo-como-pregonera-e-irene-perez-como-cartelista-del-martes-santo-de-2027/"
+  },
+  {
+   "fecha": "2027-03-20",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "procesion",
+   "titulo": "Nuestra Señora de la Victoria volverá a procesionar en Linares el 20 de marzo de 2027, Sábado de Vísperas",
+   "nota": "",
+   "fuente": "Info Linares",
+   "url": "https://www.infolinares.com/victoria-procesion-linares-2027/"
+  },
+  {
+   "fecha": "2027-06-19",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "La Banda de Música de Huécija-Alicún acompañará a la Esperanza de Vélez-Málaga en su salida extraordinaria del 19 de junio de 2027",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-banda-de-musica-de-huecija-alicun-acompanara-a-la-esperanza-de-velez-malaga-en-su-salida-extraordinaria-del-19-de-junio-de-2027/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Procesión Extraordinaria de la Santa Cena de Granada 2026: Horario e itinerario",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/extraordinaria-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-centenario-santa-cena-granada-santa-cena-granada-centenario-santa-cena-extraordinaria-santa-cena-recorrido-santa-cena-granada-horario-santa-cena-granada_0_2008340117.html"
+  },
+  {
+   "fecha": "2027-06-19",
+   "hora": "",
+   "ciudad": "malaga",
+   "tipo": "extraordinaria",
+   "titulo": "La Pro-Hermandad de la Confianza encarga a Raúl Muñoz Gallardo el cartel de su primera salida procesional",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/la-pro-hermandad-de-la-confianza-encarga-a-raul-munoz-gallardo-el-cartel-de-su-primera-salida-procesional/"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "La Agrupación Parroquial del Santísimo Cristo de la Redención y Nuestra Señora de los Dolores de Mesas de Asta formará parte de la Magna Rural de Jerez que se celebrará e",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/redencion-mesas-asta-suma-magna-rural-jerez/20261026122458008465.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "¿Por qué la Santa Cena de Granada procesionará este domingo?.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/santa-cena-granada-extraordinaria-santa-cena-centenario-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-extraordinaria-santa-cena-granada-procesion_0_2008319396.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "La cofradía protagonizará una salida extraordinaria el próximo domingo, 1 de noviembre.",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/santa-cena-granada-extraordinaria-santa-cena-centenario-santa-cena-granada-procesion-extraordinaria-santa-cena-granada-extraordinaria-santa-cena-granada-procesion_0_2008319396.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "La archicofradía de La Palma viene celebrando su tradicional Novena con la vista puesta en su tradicional salida del próximo día 1 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/cuenta-atras-procesiones-gloria-mas-esperadas-otono-gaditano/20261021102946008393.html"
+  },
+  {
+   "fecha": "2026-11-07",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "magna",
+   "titulo": "La zona rural de Jerez vivirá una Magna histórica el próximo 7 de noviembre",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/cuenta-atras-procesiones-gloria-mas-esperadas-otono-gaditano/20261021102946008393.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "La Santa Cena llegará al monumento dedicado a Los Favores en su salida extraordinaria del 1 de noviembre",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/la-santa-cena-llegara-al-monumento-dedicado-a-los-favores-en-su-salida-extraordinaria-del-1-de-noviembre/"
+  },
+  {
+   "fecha": "2027-03-13",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "traslado",
+   "titulo": "La Hermandad del Cristo de la Caridad de la Barriada de Los Ángeles, Córdoba, aprueba un nuevo escudo, fija su salida el 13 de marzo, en la víspera del Domingo de Pasión ",
+   "nota": "",
+   "fuente": "Gente de Paz",
+   "url": "https://www.gentedepaz.es/hermandad-del-cristo-de-la-caridad-de-la-barriada-de-los-angeles-cordoba-aprueba-un-nuevo-escudo-fija-su-salida-el-13-de-marzo-en-la-vispera-del-domingo-de-pasion-y-reforma-el-paso/"
+  },
+  {
+   "fecha": "2026-11-08",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "coronacion",
+   "titulo": "Una marcha malagueña para coronar a la Virgen del Amparo de Sevilla",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/malaga-semana-santa/una-marcha-malaguena-para-coronar-a-la-virgen-del-amparo-de-sevilla/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "almeria",
+   "tipo": "traslado",
+   "titulo": "El cementerio de Vera se prepara para recibir a la Virgen de las Angustias en el Día de Todos los Santos",
+   "nota": "",
+   "fuente": "Diario de Almería",
+   "url": "https://www.diariodealmeria.es/provincia/vera/cementerio-vera-prepara-recibir-virgen_0_2008366208.html"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "pregon",
+   "titulo": "Juan Manuel Galisteo Lorite pregonará la Semana Santa de Jaén de 2027",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/28/juan-manuel-galisteo-lorite-pregonara-la-semana-santa-de-jaen-de-2027-radio-jaen/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "La segunda, el domingo 1 de noviembre, cuando la corporación celebrará su salida extraordinaria por el centro de la ciudad y el Realejo, con cuatro formaciones musicales ",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/santa-cena-granada-prepara-salida-extraordinaria-horarios-20261028174146-nt.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "12:30",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "El domingo 1 de noviembre, antes de la procesión, está prevista una Eucaristía a las 12.30 horas en la Catedral.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/santa-cena-granada-prepara-salida-extraordinaria-horarios-20261028174146-nt.html"
+  },
+  {
+   "fecha": "2027-02-10",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "via-crucis",
+   "titulo": "Juan Manuel Galisteo recibe con \"ilusión y humildad\" su designación como pregonero de la Semana Santa de Jaén en 2027",
+   "nota": "",
+   "fuente": "COPE",
+   "url": "https://www.cope.es/emisoras/andalucia/jaen-provincia/jaen/noticias/juan-manuel-galisteo-recibe-ilusion-humildad-designacion-pregonero-semana-santa-jaen-2027-20261029_3464873.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "La Virgen del Sacromonte de Granada saldrá en procesión extraordinaria en 2027 por el III Congreso Nacional Gitano",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/gitanos-granada-hermandad-gitanos-granada-procesion-gitanos-granada-virgen-gitanos-granada-gitanos-semana-santa-granada_0_2008373028.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "Habrá salida extraordinaria de La Virgen del Sacromonte en 2027",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/habra-salida-extraordinaria-de-la-virgen-del-sacromonte-en-2027/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "procesion",
+   "titulo": "¿Por qué saldrá en procesión la Santa Cena de Granada este domingo?",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslado-santa-cena-granada-traslado-santa-cena-santa-cena-granada-extraordinaria-traslado-extraordinaria-santa-cena-centenario-santa-cena-granada_0_2008355898.html"
+  },
+  {
+   "fecha": "2027-04-11",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "pregon",
+   "titulo": "María del Carmen Bermejo Cuesta será la pregonera de Glorias en Jaén",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/29/maria-del-carmen-bermejo-cuesta-sera-la-pregonera-de-glorias-en-jaen-radio-jaen/?outputTypeu003damp"
+  },
+  {
+   "fecha": "2026-10-31",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "El Grupo Parroquial Cautivo y Victoria llevará a cabo este sábado la salida procesional de su titular mariana, que estará acompañada por la Banda de Música de La Algaba",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-virgen-victoria-cordoba_0_2008380263.html"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "besamanos",
+   "titulo": "Además, el Grupo Parroquial Cautivo y Victoria, que celebrará el besamanos a su titular mariana el 28 y 29 de noviembre, días en los que se llevarán a cabo también la per",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-procesion-virgen-victoria-cordoba_0_2008380263.html"
+  },
+  {
+   "fecha": "2026-11-05",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "via-crucis",
+   "titulo": "El sueño del Vía Crucis de Granada ya tiene color: morado oscuro para el palio y negro para el manto",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/via-crucis-granada-hermandad-via-crucis-granada-virgen-reyes-granada-palio-reyes-granada-hermandad-via-crucis-via-crucis-virgen-reyes_0_2008381675.html"
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "11:00",
+   "ciudad": "sevilla",
+   "tipo": "traslado",
+   "titulo": "El sábado 21 de noviembre a las 11:00 será el traslado de la imagen a la Catedral.",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/sevilla/salida-extraordinaria-de-san-esteban-horarios-e-itinerarios/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "procesion",
+   "titulo": "La peana histórica de la Virgen del Rosario recupera su esplendor para la procesión del 1 de noviembre",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/sevilla/salida-extraordinaria-de-san-esteban-horarios-e-itinerarios/"
+  },
+  {
+   "fecha": "2027-03-14",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "pregon",
+   "titulo": "El encargado de anunciar la llegada de la Semana Santa será Juan Manuel Galisteo Lorite, que asumirá la responsabilidad de pronunciar el pregón oficial el próximo 14 de m",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-semana-santa-de-jaen-2027-toma-forma-con-la-eleccion-del-pregonero-el-via-crucis-y-el-cartel-oficial/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "procesion",
+   "titulo": "La peana histórica de la Virgen del Rosario recupera su esplendor para la procesión del 1 de noviembre",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-semana-santa-de-jaen-2027-toma-forma-con-la-eleccion-del-pregonero-el-via-crucis-y-el-cartel-oficial/"
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "via-crucis",
+   "titulo": "La Reina Isabel la Católica inspirará la nueva corona “imperial” de la Virgen de los Reyes de Granada",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/isabel-la-catolica-granada-via-crucis-granada-hermandad-via-crucis-granada-reyes-granada-virgen-reyes-granada-via-crucis-granada-procesion-virgen-de-los-reyes-granada_0_2008387871.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "El Vía Crucis aprueba la nueva corona para la Virgen de los Reyes y cambiar el color del palio y el manto",
+   "nota": "",
+   "fuente": "Ahora Granada",
+   "url": "https://www.ahoragranada.com/noticias/el-via-crucis-aprueba-la-nueva-corona-para-la-virgen-de-los-reyes-y-cambiar-el-color-del-palio-y-el-manto/"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Los traslados de regreso de Kerygma se organizarán en cuatro rutas el 28 de noviembre",
+   "nota": "",
+   "fuente": "Real Federación de Hermandades y Cofradías de Granada",
+   "url": "https://hermandadesdegranada.com/golgota/los-traslados-de-regreso-de-kerygma-se-organizaran-en-cuatro-rutas-el-28-de-noviembre/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "procesion",
+   "titulo": "María Santísima del Rosario volverá a recorrer las calles de Santa Catalina este 1 de noviembre",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/maria-santisima-del-rosario-volvera-a-recorrer-las-calles-de-santa-catalina-este-1-de-noviembre/"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "jaen",
+   "tipo": "procesion",
+   "titulo": "La Hermandad del Vía Crucis define el futuro ajuar de la Virgen de los Reyes y aprueba la corona diseñada por Álvaro Abril",
+   "nota": "",
+   "fuente": "el diario cofrade",
+   "url": "https://eldiariocofrade.org/uncategorized/la-hermandad-del-via-crucis-define-el-futuro-ajuar-de-la-virgen-de-los-reyes-y-aprueba-la-corona-disenada-por-alvaro-abril/"
+  },
+  {
+   "fecha": "2026-10-31",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "La procesión de la Virgen de la Victoria de Córdoba, en fotos",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/procesion-virgen-victoria-cordoba-fotos_3_2008392873.html"
+  },
+  {
+   "fecha": "2026-11-01",
+   "hora": "",
+   "ciudad": "cordoba",
+   "tipo": "procesion",
+   "titulo": "Horario y recorrido de la procesión de la Virgen del Amparo de Córdoba",
+   "nota": "",
+   "fuente": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/semanasanta/horario-recorrido-virgen-amparo-cordoba_0_2008390093.html"
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "culto",
+   "titulo": "Los cultos seguirán tras la novena con la veneración a la Virgen para la que abrirá la iglesia todo el día 30 de octubre.",
+   "nota": "",
+   "fuente": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/semana_santa/comienzan-cultos-virgen-palma-cara_0_2008289359.html"
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "",
+   "ciudad": "cadiz",
+   "tipo": "besamanos",
+   "titulo": "Finalmente hay que añadir que con motivo del solemne besamanos de Nuestra Señora de la Palma Coronada, Reina y Patrona de la Viña, se informa de los siguientes horarios p",
+   "nota": "",
+   "fuente": "Mundo Cofrade",
+   "url": "https://www.mundocofrade.es/articulo/actualidad/1-noviembre-dia-que-barrio-vina-reluce-mas-que-sol-h/20261030120008008533.html"
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "Antes habrá otro traslado el 29 de octubre, de nuevo a la Catedral.",
+   "nota": "",
+   "fuente": "101TV",
+   "url": "https://www.101tv.es/granada-semana-santa/el-traslado-de-la-santa-cena-de-granada-se-topa-con-el-trafico-en-la-gran-via/"
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "traslado",
+   "titulo": "La primera cita será este jueves 29 de octubre, con el traslado desde Santo Domingo hasta la Catedral.",
+   "nota": "",
+   "fuente": "Ideal",
+   "url": "https://www.ideal.es/semanasantagranada/santa-cena-granada-prepara-salida-extraordinaria-horarios-20261028174146-nt.html"
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "",
+   "ciudad": "granada",
+   "tipo": "extraordinaria",
+   "titulo": "La Hermandad de la Santa Cena de Granada celebra este jueves, 29 de octubre, el Traslado Extraordinario del paso procesional previo a la Solemne Procesión Extraordinaria ",
+   "nota": "",
+   "fuente": "Granada Hoy",
+   "url": "https://www.granadahoy.com/semanasanta/traslado-santa-cena-granada-traslado-santa-cena-santa-cena-granada-extraordinaria-traslado-extraordinaria-santa-cena-centenario-santa-cena-granada_0_2008355898.html"
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "",
+   "ciudad": "sevilla",
+   "tipo": "pregon",
+   "titulo": "El periodista y presentador sevillano Roberto Leal será el encargado de pronunciar el pregón el miércoles 28 de octubre en el Espacio Fundación Unicaja.",
+   "nota": "",
+   "fuente": "Cadena SER",
+   "url": "https://cadenaser.com/andalucia/2026/10/20/presentado-el-cartel-de-la-feria-del-libro-de-sevilla-obra-de-manuel-leon-radio-sevilla/"
+  }
+ ],
+ "conflictos": []
+}
