@@ -287,6 +287,7 @@ const shareBtn = () => `<button class="oc-btn is-quiet" type="button" data-share
 const timeTag = (ts) => { const d = new Date(ts); return `<time datetime="${d.toISOString()}" data-ago>${fmtDay(d.getTime() + 0, { day: 'numeric', month: 'short' })}</time>`; };
 
 // Hora siempre como HH:MM («0:00» → «00:00»)
+const mil = (n) => String(n).replace(/\B(?=(\d{3})+$)/g, '.');
 const fmtHora = (s) => String(s || '').replace(/\b(\d{1,2})[:.](\d{2})\b/g, (_, a, b) => a.padStart(2, '0') + ':' + b);
 function entryHerm(h, extra = '', enCapital = false) {
   const c = CAP[h.ciudad];
@@ -436,7 +437,7 @@ function agendaItem(e) {
   const d = new Date(e.fecha + 'T12:00:00Z').getTime();
   const c = CAP[e.ciudad];
   const link = e.fuentes ? `<a href="${esc(e.fuentes[0].url)}" target="_blank" rel="nofollow noopener noreferrer">${esc(e.titulo)}<span class="oc-sr"> (abre ${esc(e.fuentes[0].medio)})</span></a>` : esc(e.titulo);
-  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}${e.verificado ? '<span class="oc-ev-ok">Confirmado</span>' : ''}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(String(f.medio).charAt(0).toUpperCase() + String(f.medio).slice(1))).join(', ')}</p>` : ''}</div></li>`;
+  return `<li class="oc-ev" data-grupo="${GRUPO_DE[e.tipo]}" data-ciudad="${e.ciudad}" data-fecha="${e.fecha}"${c ? ` style="--c:${c.color}"` : ''}><time class="oc-ev-date" datetime="${e.fecha}"><span>${fmtDay(d, { day: 'numeric' })}</span>${fmtDay(d, { month: 'short' }).replace('.', '')}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${GRUPO_DE[e.tipo]}">${TIPOS[e.tipo]}</span>${c ? cityTag(e.ciudad) : '<span>Todas las capitales</span>'}${e.verificado ? '<span class="oc-ev-ok">Confirmado</span>' : ''}</p><p class="oc-ev-title">${link}</p>${e.nota ? `<p class="oc-ev-note">${esc(e.nota)}</p>` : ''}${e.fuentes ? `<p class="oc-ev-note">Fuente: ${e.fuentes.map((f) => esc(String(f.medio).charAt(0).toUpperCase() + String(f.medio).slice(1))).join(', ')}</p>` : ''}</div></li>`;
 }
 
 // ---------- maqueta común ----------
@@ -563,6 +564,10 @@ function slotShort(s, year) {
   const f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'short' }).replace('.', '');
   return s.span ? fmtDay(e + s.off * 864e5, { day: 'numeric' }) + '-' + f(s.off + 1) : f(s.off);
 }
+// Fila de una cofradía en el orden de paso (Hoy y Calendario): sello con su número, nombre, sede y la hora en dorado.
+function filaPaso(h, extra = '') {
+  return `<li><span class="hy-fila"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}${h.extra ? ` <small>${esc(h.extra.titulares)}</small>` : ''}</a>${extra ? `<span class="hy-dia-nota">${esc(extra)}</span>` : ''}${h.sede ? `<span class="hy-sede">${esc(h.sede)}</span>` : ''}</span>${h.hora ? `<time class="hy-hora">${esc(fmtHora(h.hora))}</time>` : ''}</li>`;
+}
 function todayPanel() {
   const now = madridNow();
   const pick = pickSlot(now);
@@ -570,20 +575,23 @@ function todayPanel() {
   const tabs = SLOTS.map((s) => `<button type="button" role="tab" id="tab-${s.id}" aria-controls="dia-${s.id}" aria-selected="${s.id === pick.id}" tabindex="${s.id === pick.id ? 0 : -1}" data-slot="${s.id}">${esc(s.label)}<small>${slotShort(s, year)}</small></button>`).join('');
   const panels = SLOTS.map((s) => {
     const list = conSalidas(D.hermandades).filter((h) => s.dias.includes(h.dia));
+    let k = 0;
     const groups = D.capitales.map((c) => {
       const hs = list.filter((h) => h.ciudad === c.slug).sort((a, b) => dayIdx(a.dia) - dayIdx(b.dia) || a.orden - b.orden);
       if (!hs.length) return '';
-      const anchor = slugify(hs[0].dia);
-      return `<section class="oc-group" data-city="${c.slug}" style="--c:${c.color}"><h4 class="oc-group-title"><a href="${u('semana-santa/' + c.slug + '/#' + anchor)}">${esc(c.nombre)}</a><span>${plural(hs.length, 'hermandad', 'hermandades')}</span></h4><ol class="oc-group-list">${hs.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${h.extra ? `<span class="oc-group-day">${esc(h.extra.titulares)}</span>` : s.span ? `<span class="oc-group-day">${esc(h.dia)}</span>` : ''}${h.sede || h.hora ? `<span class="oc-group-sede">${h.hora ? esc(fmtHora(h.hora)) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol>${hs.length > 3 ? `<a class="oc-group-more" href="${u('semana-santa/' + c.slug + '/#' + anchor)}">Ver las ${hs.length} de ${esc(c.nombre)}</a>` : ''}${calleDias(c.slug).has(hs[0].dia) ? `<a class="oc-group-plano" href="${u('en-la-calle/' + c.slug + '/')}?dia=${encodeURIComponent(hs[0].dia)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/></svg>En el plano</a>` : ''}</section>`;
+      const anchor = slugify(hs[0].dia), base = u('semana-santa/' + c.slug + '/#' + anchor), plano = calleDias(c.slug).has(hs[0].dia);
+      const mas = hs.length > 3 ? `<a class="hy-mas" href="${base}">Ver las ${hs.length} de ${esc(c.nombre)}${icon('arrow')}</a>` : '';
+      const enPlano = plano ? `<a class="hy-plano" href="${u('en-la-calle/' + c.slug + '/')}?dia=${encodeURIComponent(hs[0].dia)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/></svg>En el plano</a>` : '';
+      return `<section class="hy-cap" data-city="${c.slug}" style="--c:${c.color};--i:${k++}"><h4 class="hy-cap-nombre"><a href="${base}">${esc(c.nombre)}</a><span><b>${hs.length}</b> ${hs.length === 1 ? 'hermandad' : 'hermandades'}</span></h4><ol class="hy-paso">${hs.map((h) => filaPaso(h, !h.extra && s.span ? h.dia : '')).join('')}</ol>${mas || enPlano ? `<p class="hy-pie">${mas}${enPlano}</p>` : ''}</section>`;
     }).join('');
-    return `<div class="oc-daypanel" role="tabpanel" id="dia-${s.id}" aria-labelledby="tab-${s.id}" data-panel="${s.id}" tabindex="0"${s.id === pick.id ? '' : ' hidden'}><h3 class="oc-daytitle">${esc(s.label)} <span data-slot-date="${s.id}">${esc(slotDate(s, year))}</span></h3>${groups}<p class="oc-empty" data-today-empty hidden>Tu ciudad no tiene salidas documentadas esta jornada. Prueba otro día o elige «8 capitales».</p></div>`;
+    return `<div class="hy-panel" role="tabpanel" id="dia-${s.id}" aria-labelledby="tab-${s.id}" data-panel="${s.id}" tabindex="0"${s.id === pick.id ? '' : ' hidden'}><h3 class="nx-h hy-dia"><span>${esc(s.label)} <small data-slot-date="${s.id}">${esc(slotDate(s, year))}</small></span></h3><div class="hy-caps">${groups}</div><p class="oc-empty" data-today-empty hidden>Tu ciudad no tiene salidas documentadas esta jornada. Prueba otro día o elige «8 capitales».</p></div>`;
   }).join('');
-  return `<section class="oc-today" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
-  <h2 class="oc-today-title" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Así sale Semana Santa ${year}`}</h2>
-  <p class="oc-today-sub">Orden de paso según la última configuración documentada; consulta los horarios oficiales de este año.</p>
-  <p class="oc-today-showing" data-today-showing hidden><span>Mostrando solo <strong data-today-city></strong>.</span> <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
-  <div class="oc-daytabs" role="tablist" aria-label="Jornadas">${tabs}</div>
+  return `<section class="hy-hoy" id="hoy" aria-labelledby="hoy-titulo" data-today data-build-slot="${pick.id}" data-year="${year}">
+  <h2 class="oc-sr" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Así sale Semana Santa ${year}`}</h2>
+  <div class="hy-tabs" role="tablist" aria-label="Jornadas">${tabs}</div>
+  <p class="hy-mostrando" data-today-showing hidden><span>Mostrando solo <strong data-today-city></strong>.</span> <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
   ${panels}
+  <p class="hy-nota">Orden de paso según la última configuración documentada; consulta los horarios oficiales de este año.</p>
 </section>`;
 }
 
@@ -739,7 +747,7 @@ function curiosidades() {
 function curiosidadDelDia() {
   const L = curiosidades(); if (!L.length) return '';
   const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length];
-  return `<aside class="oc-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a class="oc-link" href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`;
+  return `<aside class="hy-curio" aria-label="Curiosidad del día">${STAR}<p>${esc(k.t)}</p><a href="${k.u}">${esc(k.l)}${icon('arrow')}</a></aside>`;
 }
 // Portada (decisiones de Pablo, 24 y 26-oct): las banderas con el mapa de Andalucía, las láminas «Las ocho capitales»
 // tal cual estaban («ese apartado es precioso») y la agenda. Lo demás no se pierde: «Hoy» y la curiosidad del día van a
@@ -793,7 +801,8 @@ ${seccionNazareno(false)}
 }
 // Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
 function pageHoy() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Hoy</h1>${leadHoy()}</header>
+  const cofradias = new Set(conSalidas(D.hermandades).filter((h) => SLOTS.some((s) => s.dias.includes(h.dia))).map((h) => h.slug)).size;
+  const body = `<header class="nx-head vx-head hy-head" data-head-capital><div class="nx-head-in"><h1 class="oc-title nx-title">Hoy</h1>${leadHoy()}<p class="nx-pulso"><span><b>${cofradias}</b> hermandades</span><span><b>${D.capitales.length}</b> capitales</span><span><b>${SLOTS.length}</b> jornadas</span></p></div></header>
 ${todayPanel()}
 ${curiosidadDelDia()}`;
   write('hoy/index.html', layout({ title: 'Hoy: qué sale en las ocho capitales', desc: 'Las cofradías de cada jornada de la Semana Santa en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén, con su orden de paso y enlace al plano.', body, path: 'hoy/', active: 'hoy/', crumbs: [['Portada', u()], ['Hoy', '']] }));
@@ -1282,35 +1291,36 @@ function pageCalendario() {
   const today = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const proximos = EV.filter((e) => e.fecha >= today).slice(0, 14);
   const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '', ...(e.hora ? { hr: e.hora } : {}), ...(hermDeEvento(e) ? { h: hermDeEvento(e), hn: HERM[hermDeEvento(e)].nombre, hu: u('hermandad/' + hermDeEvento(e) + '/') } : {}), ...(e.verificado ? { v: 1 } : {}) }))).replace(/</g, '\\u003c');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Calendario cofrade</h1><p class="oc-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p></header>
-<section class="oc-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
+  const porVenir = EV.filter((e) => e.fecha >= today);
+  const body = `<header class="nx-head vx-head cx-head" data-head-capital><div class="nx-head-in"><h1 class="oc-title nx-title">Calendario cofrade</h1><p class="nx-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p><p class="nx-pulso"><span><b>${mil(porVenir.length)}</b> actos por venir</span><span><b>${mil(porVenir.filter((e) => e.verificado).length)}</b> confirmados</span><span><b>${D.capitales.length}</b> capitales</span></p></div></header>
+<section class="cx-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
   <h2 class="oc-sr" id="agenda-titulo">Agenda cofrade</h2>
-  <div class="oc-agenda-filters">
-    <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-tipo-l">Tipo</span><ul class="oc-chips is-filter" aria-labelledby="ag-tipo-l" data-agenda-tipo>${GRUPOS.map(([v, l], i) => `<li><button type="button" data-v="${v}" aria-pressed="${i === 0}">${l}</button></li>`).join('')}</ul></div>
-    <div class="oc-field oc-field-grow"><span class="oc-label" id="ag-ciudad-l">Capital</span><ul class="oc-chips is-filter" aria-labelledby="ag-ciudad-l" data-agenda-ciudad><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false">${esc(c.nombre)}</button></li>`).join('')}</ul></div>
+  <div class="cx-filtros">
+    <div class="cx-filtro"><span class="cx-etq" id="ag-tipo-l">Tipo</span><ul class="nx-chips" aria-labelledby="ag-tipo-l" data-agenda-tipo>${GRUPOS.map(([v, l], i) => `<li><button type="button" data-v="${v}" aria-pressed="${i === 0}">${l}</button></li>`).join('')}</ul></div>
+    <div class="cx-filtro"><span class="cx-etq" id="ag-ciudad-l">Capital</span><ul class="nx-chips" aria-labelledby="ag-ciudad-l" data-agenda-ciudad><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false" style="--c:${c.color}"><i></i>${esc(c.nombre)}</button></li>`).join('')}</ul></div>
   </div>
-  <div class="oc-agenda-grid">
-    <div class="oc-month" data-month hidden>
-      <div class="oc-month-nav"><button class="oc-iconbtn" type="button" data-month-prev aria-label="Mes anterior">${icon('back')}</button><p class="oc-month-title" data-month-title aria-live="polite"></p><button class="oc-iconbtn" type="button" data-month-next aria-label="Mes siguiente">${icon('arrow')}</button></div>
+  <div class="cx-rejilla">
+    <div class="cx-mes" data-month hidden>
+      <div class="cx-mes-nav"><button class="oc-iconbtn" type="button" data-month-prev aria-label="Mes anterior">${icon('back')}</button><p class="cx-mes-tit" data-month-title aria-live="polite"></p><button class="oc-iconbtn" type="button" data-month-next aria-label="Mes siguiente">${icon('arrow')}</button></div>
       <div class="oc-month-week" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
       <div class="oc-month-days" data-month-days></div>
       <p class="oc-month-legend"><span><i class="oc-dot is-liturgico"></i>Litúrgico</span><span><i class="oc-dot is-salidas"></i>Procesiones</span><span><i class="oc-dot is-cultos"></i>Cultos</span><span><i class="oc-dot is-otros"></i>Conciertos y anuncios</span></p>
     </div>
-    <div class="oc-agenda-list">
-      <div class="oc-agenda-listhead"><h3 class="oc-h3" data-agenda-list-title>Próximos eventos</h3><button class="oc-textbtn" type="button" data-agenda-reset hidden>Ver próximos</button></div>
+    <div class="cx-lista">
+      <div class="cx-lista-cab"><h3 class="nx-h" data-agenda-list-title>Próximos eventos</h3><button class="oc-textbtn" type="button" data-agenda-reset hidden>Ver próximos</button></div>
       <ol class="oc-evs" data-agenda-list>${proximos.map(agendaItem).join('')}</ol>
       <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
+      <p class="hy-nota">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias de cada mañana. Confirma siempre en la fuente enlazada.</p>
     </div>
   </div>
-  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias de cada mañana. Confirma siempre en la fuente enlazada.</p>
-  <div class="oc-subscribe"><h3 class="oc-h3">Llévatela a tu calendario</h3><p class="oc-note">Suscríbete y tu móvil se actualizará solo con los nuevos actos. En Google Calendar: «Otros calendarios» → «Desde URL» y pega el enlace. En iPhone o Mac: Ajustes → Calendario → Cuentas → Añadir calendario suscrito.</p><ul class="oc-linklist"><li><a class="oc-btn" href="${u('agenda.ics')}" download>Toda la agenda (.ics)</a></li>${D.capitales.map((c) => `<li><a class="oc-btn is-quiet" href="${u('agenda-' + c.slug + '.ics')}" download>${esc(c.nombre)}</a></li>`).join('')}</ul></div>
+  <div class="cx-suscribe"><h3>Llévatela a tu calendario</h3><p>Suscríbete y tu móvil se actualizará solo con los nuevos actos. En Google Calendar: «Otros calendarios» → «Desde URL» y pega el enlace. En iPhone o Mac: Ajustes → Calendario → Cuentas → Añadir calendario suscrito.</p><ul class="cx-ics"><li><a class="is-toda" href="${u('agenda.ics')}" download>Toda la agenda</a></li>${D.capitales.map((c) => `<li><a href="${u('agenda-' + c.slug + '.ics')}" download style="--c:${c.color}"><i></i>${esc(c.nombre)}</a></li>`).join('')}</ul></div>
   <script type="application/json" id="oc-eventos">${data}</script>
   <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
 </section>
-<h2 class="oc-h2 oc-section" id="orden-de-paso">Orden de paso por capital</h2>
-<p class="oc-note">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
-<div class="oc-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}">${esc(c.nombre)}</a>`).join('')}</div>
-${D.capitales.map((c, i) => `<section class="oc-cal" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h2 class="oc-h2"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a></h2><div class="oc-cal-days">${byDay(conSalidas(hermsOf(c.slug))).map(([d, list]) => `<section class="oc-cal-day"><h3 class="oc-h3">${esc(d)}</h3><ol class="oc-order">${list.map((h) => `<li><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}${h.extra ? ` <small>(${esc(h.extra.titulares)})</small>` : ''}</a>${h.sede || h.hora ? `<span>${h.hora ? esc(fmtHora(h.hora)) + ' h' + (h.sede ? ', ' : '') : ''}${esc(h.sede)}</span>` : ''}</li>`).join('')}</ol></section>`).join('')}</div></section>`).join('')}`;
+<section class="cx-orden" aria-labelledby="orden-de-paso"><h2 class="nx-h" id="orden-de-paso">Orden de paso por capital</h2>
+<p class="hy-nota">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
+<div class="cx-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}" style="--c:${c.color}"><i></i>${esc(c.nombre)}</a>`).join('')}</div>
+${D.capitales.map((c, i) => { const dias = byDay(conSalidas(hermsOf(c.slug))); return `<section class="cx-cap" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h3 class="hy-cap-nombre cx-cap-nombre"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a><span><b>${dias.length}</b> ${dias.length === 1 ? 'jornada' : 'jornadas'}</span></h3><div class="cx-dias">${dias.map(([d, list]) => `<section class="cx-dia"><h4>${esc(d)}<span>${list.length}</span></h4><ol class="hy-paso">${list.map((h) => filaPaso(h)).join('')}</ol></section>`).join('')}</div></section>`; }).join('')}</section>`;
   // Datos estructurados solo para los actos confirmados (los detectados pueden cambiar de hora o no celebrarse).
   const offMadrid = (f) => { const p = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Madrid', timeZoneName: 'shortOffset' }).formatToParts(new Date(f + 'T12:00:00Z')).find((x) => x.type === 'timeZoneName').value; const m = p.match(/([+-])(\d+)/); return m ? m[1] + m[2].padStart(2, '0') + ':00' : '+01:00'; };
   const eventLd = EV.filter((e) => e.verificado && e.fecha >= today).map((e) => ({ '@context': 'https://schema.org', '@type': 'Event', name: e.titulo, startDate: e.hora ? e.fecha + 'T' + e.hora + ':00' + offMadrid(e.fecha) : e.fecha, eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', location: { '@type': 'Place', name: CAP[e.ciudad].nombre, address: { '@type': 'PostalAddress', addressLocality: CAP[e.ciudad].nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } }, description: e.nota || undefined, isAccessibleForFree: true, url: abs('calendario/') }));

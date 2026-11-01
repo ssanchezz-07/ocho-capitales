@@ -212,6 +212,12 @@
     var yy = off > 0 ? y + 1 : y;
     return { id: 'ramos', hoy: false, year: yy, days: Math.round((easter(yy) - 7 * 864e5 - today) / 864e5) };
   }
+  // Hoy y Calendario: la cabecera toma el terciopelo de la capital elegida
+  var headCap = $('[data-head-capital]');
+  if (headCap) {
+    var tintaCab = function (c) { var C = window.OC_COLORS || {}; if (c && C[c]) headCap.style.setProperty('--nx-c', C[c]); else headCap.style.removeProperty('--nx-c'); };
+    tintaCab(getCity()); cityListeners.push(tintaCab);
+  }
   var today = $('[data-today]');
   if (today) {
     var tabs = $$('[role="tab"]', today);
@@ -232,7 +238,7 @@
     var checkTodayEmpty = function () {
       var c = getCity();
       $$('[data-panel]', today).forEach(function (p) {
-        var has = !c || !!$('.oc-group[data-city="' + c + '"]', p);
+        var has = !c || !!$('.hy-cap[data-city="' + c + '"]', p);
         var em = $('[data-today-empty]', p);
         if (em) { em.hidden = has; if (!has) em.textContent = (CITY_NAMES[c] || 'Tu ciudad') + ' no tiene salidas documentadas en esta jornada. Prueba otro día o elige «8 capitales».'; }
       });
@@ -889,7 +895,7 @@
       var title = e.u ? '<a href="' + esc(e.u) + '" target="_blank" rel="nofollow noopener noreferrer">' + esc(e.n) + '<span class="oc-sr"> (abre ' + esc(e.m) + ')</span></a>' : esc(e.n);
       var hora = e.hr ? '<span class="oc-ev-hora">' + esc(e.hr) + ' h</span>' : '';
       var herm = e.hn ? '<p class="oc-ev-note">Hermandad: <a href="' + esc(e.hu) + '">' + esc(e.hn) + '</a></p>' : '';
-      return '<li class="oc-ev"><time class="oc-ev-date" datetime="' + e.f + '"><span>' + d.getUTCDate() + '</span>' + MESES_L[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-' + e.g + '">' + esc(TIPOS_AG[e.t] || e.t) + '</span>' + city + (e.v ? '<span class="oc-ev-ok">Confirmado</span>' : '') + hora + '</p><p class="oc-ev-title">' + title + '</p>' + herm + (e.o ? '<p class="oc-ev-note">' + esc(e.o) + '</p>' : '') + (e.m ? '<p class="oc-ev-note">Fuente: ' + esc(e.m) + '</p>' : '') + '<p class="oc-ev-note"><button class="oc-textbtn" type="button" data-ics="' + EVS.indexOf(e) + '">Añadir al calendario</button></p></div></li>';
+      return '<li class="oc-ev"' + (e.c && COLS[e.c] ? ' style="--c:' + COLS[e.c] + '"' : '') + '><time class="oc-ev-date" datetime="' + e.f + '"><span>' + d.getUTCDate() + '</span>' + MESES_L[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-' + e.g + '">' + esc(TIPOS_AG[e.t] || e.t) + '</span>' + city + (e.v ? '<span class="oc-ev-ok">Confirmado</span>' : '') + hora + '</p><p class="oc-ev-title">' + title + '</p>' + herm + (e.o ? '<p class="oc-ev-note">' + esc(e.o) + '</p>' : '') + (e.m ? '<p class="oc-ev-note">Fuente: ' + esc(e.m) + '</p>' : '') + '<p class="oc-ev-note"><button class="oc-textbtn" type="button" data-ics="' + EVS.indexOf(e) + '">Añadir al calendario</button></p></div></li>';
     };
     var renderList = function () {
       var r;
@@ -943,14 +949,21 @@
       var b = ev.target.closest('[data-ics]'); if (!b) return;
       var e = EVS[+b.dataset.ics]; if (e) window.ocIcs([e], 'ocho-capitales-' + e.f);
     });
-    var render = function () { renderMonth(); renderList(); };
+    // Al cambiar de mes los días entran desde su lado; al filtrar, la lista se asienta. Con «reducir movimiento», nada.
+    var CURVA = 'cubic-bezier(.23, 1, .32, 1)';
+    var render = function (lado) {
+      renderMonth(); renderList();
+      if (reduced || lado === 0 || !daysBox.animate) return;
+      if (lado) daysBox.animate([{ opacity: .3, transform: 'translateX(' + lado * 14 + 'px)' }, { opacity: 1, transform: 'none' }], { duration: 220, easing: CURVA });
+      listBox.animate([{ opacity: .4, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], { duration: 200, easing: CURVA });
+    };
     daysBox.addEventListener('click', function (e) {
       var b = e.target.closest('[data-day]'); if (!b || b.disabled) return;
       st.sel = st.sel === b.dataset.day ? '' : b.dataset.day; render();
       if (st.sel && window.matchMedia('(max-width: 959px)').matches) listTitle.scrollIntoView({ block: 'start', behavior: reduced ? 'auto' : 'smooth' });
     });
-    $('[data-month-prev]', ag).addEventListener('click', function () { st.m--; if (st.m < 0) { st.m = 11; st.y--; } st.sel = ''; render(); });
-    $('[data-month-next]', ag).addEventListener('click', function () { st.m++; if (st.m > 11) { st.m = 0; st.y++; } st.sel = ''; render(); });
+    $('[data-month-prev]', ag).addEventListener('click', function () { st.m--; if (st.m < 0) { st.m = 11; st.y--; } st.sel = ''; render(-1); });
+    $('[data-month-next]', ag).addEventListener('click', function () { st.m++; if (st.m > 11) { st.m = 0; st.y++; } st.sel = ''; render(1); });
     resetBtn.addEventListener('click', function () { st.sel = ''; render(); });
     $$('[data-agenda-tipo] button', ag).forEach(function (b) {
       b.addEventListener('click', function () {
@@ -964,7 +977,7 @@
     $$('button', citySel).forEach(function (b) { b.addEventListener('click', function () { st.c = b.dataset.v; paintCity(); render(); }); });
     cityListeners.push(function (c) { st.c = c; paintCity(); render(); });
     monthBox.hidden = false;
-    render();
+    render(0);
   }
 
   // ---------- capital: jornada visible resaltada en la barra de días ----------

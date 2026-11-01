@@ -9,6 +9,7 @@ PAGINAS = {
     'hermandad-esperanza': '/hermandad/esperanza-malaga/',
     'hermandad-sin-foto': '/hermandad/bellavista-sevilla/',
     'noticias': '/noticias/',
+    'hoy': '/hoy/',
     'calendario': '/calendario/',
     'marchas': '/marchas/',
     'marcha': '/marcha/15-anos-marco-antonio-sanchez-garcia/',
