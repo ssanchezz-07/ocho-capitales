@@ -9,7 +9,7 @@
 import { EmailMessage } from 'cloudflare:email';
 
 const REPO = 'ssanchezz-07/ocho-capitales', NOTICIAS = 'https://datos.ochocapitales.com/news.json';
-const DE = 'avisos@ochocapitales.com', PARA = 'ochocapitales@gmail.com';
+const DE = 'info@ochocapitales.com', PARA = 'ochocapitales@gmail.com';
 
 const partes = (ms) => Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(ms).map((p) => [p.type, p.value]));
 const dia = (p) => `${p.year}-${p.month}-${p.day}`;
@@ -42,9 +42,13 @@ async function correo(env, asunto, texto) {
 const aviso = (detalle) => `A las 8:30 no está la publicación de las 7:00.\n${detalle}\n\nLa web sigue con las noticias anteriores. GitHub lo sigue reintentando durante la mañana.\nMira: https://github.com/${REPO}/actions\nReenvía este correo a la sesión de alojamiento.`;
 
 export default {
+  // Prueba del correo: solo con la variable PRUEBA_CORREO y workers.dev activados a mano; en uso normal, no responde.
+  async fetch(req, env) {
+    if (!env.PRUEBA_CORREO || new URL(req.url).searchParams.get('clave') !== env.PRUEBA_CORREO) return new Response('no', { status: 404 });
+    try { await correo(env, '[Ocho Capitales] Prueba del vigia de noticias', 'PRUEBA (no hay que hacer nada).\n\n' + aviso('última publicación: de prueba')); return new Response('enviado'); } catch (e) { return new Response('error: ' + String(e), { status: 500 }); }
+  },
   async scheduled(evento, env, ctx) {
     const ahora = evento.scheduledTime, p = partes(ahora), hm = `${p.hour}:${p.minute}`;
-    if (env.PRUEBA_CORREO === 'si') return correo(env, '[Ocho Capitales] Prueba del vigia de noticias', 'PRUEBA (no hay que hacer nada).\n\n' + aviso('última publicación: de prueba'));
     if (!['07:00', '07:30', '08:30'].includes(hm)) return;
     const lanza = async () => { const r = await lanzar(env); if (r !== 'lanzada' && r !== 'sin GITHUB_TOKEN') await correo(env, '[Ocho Capitales] El vigia no puede lanzar las noticias', `${r}. Puede que el token de GitHub haya caducado (GUIA-ALOJAMIENTO.md).`); };
     if (hm === '07:00') { await lanza(); return; }
