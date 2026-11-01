@@ -429,6 +429,31 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
     }
   }
 }
+// Orden oficial de paso (tools/sources/orden-paso.json), con la hora de salida y la de carrera oficial. Va después de las correcciones de
+// ficha, que pueden cambiar el día. Las que no están en la lista de su jornada quedan detrás. Sin orden oficial, el de la ficha; en las
+// vísperas no hay carrera oficial: por hora de salida. El orden queda sin repetidos (1, 2, 3…) en cada jornada.
+{
+  const f = path.join(__dirname, 'sources', 'orden-paso.json');
+  const OP = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).jornadas : {};
+  const porJ = new Map(); for (const h of hermandades) { const k = h.ciudad + '|' + h.dia; (porJ.get(k) || porJ.set(k, []).get(k)).push(h); }
+  for (const [k, l] of porJ) {
+    const of = OP[k];
+    if (of) {
+      for (const e of of.orden) if (!l.some((h) => h.slug === e.hermandad)) console.warn('orden-paso: no está en', k, e.hermandad);
+      for (const h of l) {
+        const i = of.orden.findIndex((e) => e.hermandad === h.slug);
+        h.orden = i >= 0 ? i + 1 : 1000 + h.orden;
+        if (i < 0) continue;
+        const e = of.orden[i];
+        if (e.salida) { h.hora = e.salida; h.hora_fuente = of.fuente; }
+        if (e.carrera) { h.hora_carrera = e.carrera; h.lugar_carrera = of.carrera; h.carrera_fuente = of.fuente; }
+      }
+    } else if (/^(Viernes de Dolores|Sábado de Pasión)$/.test(k.split('|')[1])) {
+      l.sort((a, b) => (mins(a.hora) ?? 9999) - (mins(b.hora) ?? 9999)).forEach((h, i) => { h.orden = i + 1; });
+    }
+    l.sort((a, b) => a.orden - b.orden).forEach((h, i) => { h.orden = i + 1; });
+  }
+}
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });

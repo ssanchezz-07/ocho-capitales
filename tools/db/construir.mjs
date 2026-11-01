@@ -41,7 +41,7 @@ CREATE TABLE meta (clave TEXT PRIMARY KEY, valor TEXT);
 CREATE TABLE capitales (slug TEXT PRIMARY KEY, nombre TEXT, color TEXT, lema TEXT, intro TEXT, imagen TEXT);
 -- Fichas de hermandad (portal.json ← tools/build-data.js). sede = texto de la ficha; las coordenadas, en «sedes».
 CREATE TABLE hermandades (slug TEXT PRIMARY KEY, capital TEXT REFERENCES capitales(slug), nombre TEXT, nombre_oficial TEXT, dia TEXT, orden INTEGER,
-  sede TEXT, fundacion TEXT, historia TEXT, paso TEXT, musica TEXT, web TEXT, hora_salida TEXT, fuente_url TEXT);
+  sede TEXT, fundacion TEXT, historia TEXT, paso TEXT, musica TEXT, web TEXT, hora_salida TEXT, hora_carrera TEXT, lugar_carrera TEXT, fuente_url TEXT);
 CREATE TABLE sedes (hermandad TEXT REFERENCES hermandades(slug), capital TEXT, tipo TEXT, nombre TEXT, lat REAL, lon REAL, fuente TEXT, fuente_coordenadas TEXT);
 CREATE TABLE titulares (hermandad TEXT REFERENCES hermandades(slug), capital TEXT, n INTEGER, nombre TEXT, autor TEXT, imaginero TEXT, atribucion INTEGER, autor_fuente TEXT);
 CREATE TABLE imagenes (hermandad TEXT, capital TEXT, uso TEXT, archivo TEXT, autor TEXT, licencia TEXT, pagina TEXT);
@@ -79,13 +79,13 @@ const corr = (archivo, tipo, clave, h, detalle, f, fecha) => iX.run(archivo, tip
 const iC = ins('capitales', ['slug', 'nombre', 'color', 'lema', 'intro', 'imagen']);
 for (const c of D.capitales) iC.run(c.slug, c.nombre, v(c.color), v(c.lema), v((c.intro || []).join('\n\n')), IMG.capitales[c.slug] ? IMG.capitales[c.slug].pagina : null);
 
-const iH = ins('hermandades', ['slug', 'capital', 'nombre', 'nombre_oficial', 'dia', 'orden', 'sede', 'fundacion', 'historia', 'paso', 'musica', 'web', 'hora_salida', 'fuente_url']);
+const iH = ins('hermandades', ['slug', 'capital', 'nombre', 'nombre_oficial', 'dia', 'orden', 'sede', 'fundacion', 'historia', 'paso', 'musica', 'web', 'hora_salida', 'hora_carrera', 'lugar_carrera', 'fuente_url']);
 const iT = ins('titulares', ['hermandad', 'capital', 'n', 'nombre', 'autor', 'imaginero', 'atribucion', 'autor_fuente']);
 const iI = ins('imagenes', ['hermandad', 'capital', 'uso', 'archivo', 'autor', 'licencia', 'pagina']);
 const iHa = ins('habitos', ['hermandad', 'capital', 'texto', 'fuente_url']);
 for (const h of D.hermandades) {
-  iH.run(h.slug, h.ciudad, h.nombre, v(h.nombre_oficial), h.dia, h.orden, v(h.sede), v(h.fundacion), v(h.historia), v(h.paso), v(h.musica), v(h.web), v(h.hora), v(h.fuente_url));
-  fuente('hermandades', h.slug, h.slug, 'ficha', h.fuente_url); fuente('hermandades', h.slug, h.slug, 'web', h.web_fuente); fuente('hermandades', h.slug, h.slug, 'hora_salida', h.hora_fuente);
+  iH.run(h.slug, h.ciudad, h.nombre, v(h.nombre_oficial), h.dia, h.orden, v(h.sede), v(h.fundacion), v(h.historia), v(h.paso), v(h.musica), v(h.web), v(h.hora), v(h.hora_carrera), v(h.lugar_carrera), v(h.fuente_url));
+  fuente('hermandades', h.slug, h.slug, 'ficha', h.fuente_url); fuente('hermandades', h.slug, h.slug, 'web', h.web_fuente); fuente('hermandades', h.slug, h.slug, 'hora_salida', h.hora_fuente); fuente('hermandades', h.slug, h.slug, 'hora_carrera', h.carrera_fuente);
   for (const [campo, f] of Object.entries(h.relleno_fuentes || {})) fuente('hermandades', h.slug, h.slug, campo, f);
   (h.titulares || []).forEach((t, i) => { iT.run(h.slug, h.ciudad, i, t.nombre, v(t.autor), v(t.imaginero), t.atrib ? 1 : 0, v(t.autor_fuente)); fuente('titulares', h.slug + '#' + i, h.slug, 'autor', t.autor_fuente); });
   const x = IMG.hermandades[h.slug]; if (x) { iI.run(h.slug, h.ciudad, x.escudo ? 'escudo' : 'foto', x.pagina, v(x.autor), v(x.licencia), x.pagina); fuente('imagenes', h.slug, h.slug, x.escudo ? 'escudo' : 'foto', x.pagina); }

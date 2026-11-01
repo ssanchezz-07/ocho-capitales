@@ -82,6 +82,33 @@ for (const m of U.marchas) {
   // nombres casi iguales: el mismo con la localidad pegada al final y sin localidad («… Despojado de Jaén», sin localidad)
   for (const b of P.bandas) { if (b.localidad) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (m && vistas.has(norm(m[1]) + '|' + norm(m[2]))) errores.push(`banda casi repetida: ${b.slug} y ${vistas.get(norm(m[1]) + '|' + norm(m[2]))} («${b.nombre}» sin localidad)`); }
 }
+// Orden de paso (tools/sources/orden-paso.json): dentro de una jornada, el orden oficial va por la hora de CARRERA OFICIAL, no por la de
+// salida (La Paz sale antes que la Borriquita y pasa después). Error si la hora de carrera no sube, si el orden se repite o si se pasa por
+// carrera antes de salir. Sin hora de carrera solo se puede comparar la salida: aviso, porque a veces será legítimo.
+{
+  const mins = (t) => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
+  // ¿b va antes que a? Un salto de más de 12 horas hacia atrás es que se ha pasado la medianoche, no un desorden
+  const antes = (a, b) => { const d = mins(b) - mins(a); return d < 0 && d > -720; };
+  const OP = JSON.parse(fs.readFileSync(path.join(DIR, 'sources/orden-paso.json'), 'utf8')).jornadas;
+  const J = new Map(); for (const h of P.hermandades) { const k = h.ciudad + '|' + h.dia; (J.get(k) || J.set(k, []).get(k)).push(h); }
+  for (const k of Object.keys(OP)) if (!J.has(k)) errores.push(`orden-paso.json: jornada que no existe: ${k}`);
+  let conCarrera = 0, sinCarrera = 0;
+  for (const [k, l] of J) {
+    l.sort((a, b) => a.orden - b.orden);
+    // una jornada con orden oficial tiene que recogerlas todas: las demás irían al final sin fuente
+    if (OP[k]) for (const h of l) if (!OP[k].orden.some((e) => e.hermandad === h.slug)) errores.push(`orden-paso.json: falta ${h.slug} en ${k}`);
+    if (new Set(l.map((h) => h.orden)).size !== l.length) errores.push(`orden repetido en ${k}`);
+    const con = l.filter((h) => h.hora_carrera); if (con.length) conCarrera++;
+    for (let i = 1; i < con.length; i++) if (antes(con[i - 1].hora_carrera, con[i].hora_carrera)) errores.push(`orden de paso de ${k}: ${con[i].nombre} (${con[i].hora_carrera}) va tras ${con[i - 1].nombre} (${con[i - 1].hora_carrera}) en carrera oficial`);
+    for (const h of con) if (h.hora && antes(h.hora, h.hora_carrera)) errores.push(`${h.slug}: pasa por carrera oficial (${h.hora_carrera}) antes de salir (${h.hora})`);
+    if (!con.length) {
+      const sal = l.filter((h) => h.hora); let salto = false;
+      for (let i = 1; i < sal.length; i++) if (antes(sal[i - 1].hora, sal[i].hora)) { salto = true; avisos.push(`orden y hora no encajan en ${k}: ${sal[i].nombre} (${sal[i].hora}) va tras ${sal[i - 1].nombre} (${sal[i - 1].hora}), y no hay hora de carrera oficial`); }
+      if (salto) sinCarrera++;
+    }
+  }
+  console.log(`orden de paso: ${conCarrera} jornadas con hora de carrera oficial; ${sinCarrera} sin ella y con salidas desordenadas (aviso)`);
+}
 // alias: no chocan con otra marcha
 for (const m of U.marchas) for (const a of m.alias || []) if (slugs.has(a) && a !== m.slug) err(m, `alias ${a} es la dirección de otra marcha`);
 // direcciones publicadas: siguen existiendo o redirigen

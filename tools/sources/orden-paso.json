@@ -1,0 +1,685 @@
+{
+ "nota": "Orden oficial de paso de cada jornada, con la hora de salida del templo y la de paso por la carrera oficial (2026). Sevilla: nómina del Consejo (venia en La Campana). Málaga: horario de la Agrupación (Tribuna Principal). Una jornada que esté aquí tiene que traer todas sus hermandades. Lo aplica build-data.js. Las que no están en la lista de su jornada van detrás, en su orden.",
+ "jornadas": {
+  "sevilla|Domingo de Ramos": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "la-borriquita-sevilla",
+     "salida": "14:15",
+     "carrera": "15:35"
+    },
+    {
+     "hermandad": "la-cena-sevilla",
+     "salida": "14:00",
+     "carrera": "15:55"
+    },
+    {
+     "hermandad": "jesus-despojado-sevilla",
+     "salida": "14:20",
+     "carrera": "16:31"
+    },
+    {
+     "hermandad": "la-hiniesta-sevilla",
+     "salida": "13:45",
+     "carrera": "17:01"
+    },
+    {
+     "hermandad": "la-paz-sevilla",
+     "salida": "13:00",
+     "carrera": "17:47"
+    },
+    {
+     "hermandad": "san-roque-sevilla",
+     "salida": "16:00",
+     "carrera": "18:49"
+    },
+    {
+     "hermandad": "la-estrella-sevilla",
+     "salida": "16:30",
+     "carrera": "19:24"
+    },
+    {
+     "hermandad": "la-amargura-sevilla",
+     "salida": "19:00",
+     "carrera": "20:34"
+    },
+    {
+     "hermandad": "el-amor-sevilla",
+     "salida": "20:15",
+     "carrera": "21:16"
+    }
+   ]
+  },
+  "sevilla|Lunes Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "san-pablo-sevilla",
+     "salida": "11:15",
+     "carrera": "16:25"
+    },
+    {
+     "hermandad": "redencion-sevilla",
+     "salida": "14:45",
+     "carrera": "16:59"
+    },
+    {
+     "hermandad": "santa-genoveva-sevilla",
+     "salida": "12:25",
+     "carrera": "17:46"
+    },
+    {
+     "hermandad": "santa-marta-sevilla",
+     "salida": "18:10",
+     "carrera": "18:47"
+    },
+    {
+     "hermandad": "san-gonzalo-sevilla",
+     "salida": "15:00",
+     "carrera": "19:19"
+    },
+    {
+     "hermandad": "vera-cruz-sevilla",
+     "salida": "19:35",
+     "carrera": "20:35"
+    },
+    {
+     "hermandad": "las-penas-sevilla",
+     "salida": "20:00",
+     "carrera": "21:06"
+    },
+    {
+     "hermandad": "las-aguas-sevilla",
+     "salida": "18:15",
+     "carrera": "21:38"
+    },
+    {
+     "hermandad": "el-museo-sevilla",
+     "salida": "20:40",
+     "carrera": "22:09"
+    }
+   ]
+  },
+  "sevilla|Martes Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "el-cerro-sevilla",
+     "salida": "11:40",
+     "carrera": "16:40"
+    },
+    {
+     "hermandad": "san-esteban-sevilla",
+     "salida": "14:40",
+     "carrera": "17:45"
+    },
+    {
+     "hermandad": "la-candelaria-sevilla",
+     "salida": "15:30",
+     "carrera": "18:32"
+    },
+    {
+     "hermandad": "san-benito-sevilla",
+     "salida": "16:00",
+     "carrera": "19:25"
+    },
+    {
+     "hermandad": "los-javieres-sevilla",
+     "salida": "19:50",
+     "carrera": "20:44"
+    },
+    {
+     "hermandad": "dulce-nombre-la-bofeta-sevilla",
+     "salida": "19:22",
+     "carrera": "21:09"
+    },
+    {
+     "hermandad": "los-estudiantes-sevilla",
+     "salida": "18:30",
+     "carrera": "21:49"
+    },
+    {
+     "hermandad": "santa-cruz-sevilla",
+     "salida": "20:05",
+     "carrera": "22:55"
+    }
+   ]
+  },
+  "sevilla|Miércoles Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "el-carmen-doloroso-sevilla",
+     "salida": "14:45",
+     "carrera": "16:43"
+    },
+    {
+     "hermandad": "el-buen-fin-sevilla",
+     "salida": "15:00",
+     "carrera": "17:12"
+    },
+    {
+     "hermandad": "la-sed-sevilla",
+     "salida": "12:00",
+     "carrera": "17:47"
+    },
+    {
+     "hermandad": "san-bernardo-sevilla",
+     "salida": "14:15",
+     "carrera": "18:36"
+    },
+    {
+     "hermandad": "la-lanzada-sevilla",
+     "salida": "17:50",
+     "carrera": "19:43"
+    },
+    {
+     "hermandad": "el-baratillo-sevilla",
+     "salida": "17:10",
+     "carrera": "20:14"
+    },
+    {
+     "hermandad": "los-panaderos-sevilla",
+     "salida": "19:45",
+     "carrera": "21:23"
+    },
+    {
+     "hermandad": "cristo-de-burgos-sevilla",
+     "salida": "19:25",
+     "carrera": "22:01"
+    },
+    {
+     "hermandad": "siete-palabras-sevilla",
+     "salida": "20:50",
+     "carrera": "22:26"
+    }
+   ]
+  },
+  "sevilla|Jueves Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "los-negritos-sevilla",
+     "salida": "15:00",
+     "carrera": "17:40"
+    },
+    {
+     "hermandad": "la-exaltacion-los-caballos-sevilla",
+     "salida": "15:20",
+     "carrera": "18:18"
+    },
+    {
+     "hermandad": "las-cigarreras-sevilla",
+     "salida": "17:00",
+     "carrera": "18:53"
+    },
+    {
+     "hermandad": "montesion-sevilla",
+     "salida": "17:30",
+     "carrera": "19:28"
+    },
+    {
+     "hermandad": "la-quinta-angustia-sevilla",
+     "salida": "19:36",
+     "carrera": "20:16"
+    },
+    {
+     "hermandad": "el-valle-sevilla",
+     "salida": "19:30",
+     "carrera": "20:54"
+    },
+    {
+     "hermandad": "pasion-sevilla",
+     "salida": "20:20",
+     "carrera": "21:36"
+    }
+   ]
+  },
+  "sevilla|Madrugá": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "el-silencio-sevilla",
+     "salida": "00:45",
+     "carrera": "01:00"
+    },
+    {
+     "hermandad": "el-gran-poder-sevilla",
+     "salida": "00:35",
+     "carrera": "01:39"
+    },
+    {
+     "hermandad": "la-macarena-sevilla",
+     "salida": "00:00",
+     "carrera": "02:50"
+    },
+    {
+     "hermandad": "el-calvario-sevilla",
+     "salida": "04:05",
+     "carrera": "04:38"
+    },
+    {
+     "hermandad": "la-esperanza-de-triana-sevilla",
+     "salida": "01:19",
+     "carrera": "05:06"
+    },
+    {
+     "hermandad": "los-gitanos-sevilla",
+     "salida": "02:30",
+     "carrera": "06:32"
+    }
+   ]
+  },
+  "sevilla|Viernes Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "la-carreteria-sevilla",
+     "salida": "16:40",
+     "carrera": "18:20"
+    },
+    {
+     "hermandad": "san-buenaventura-sevilla",
+     "salida": "17:50",
+     "carrera": "18:50"
+    },
+    {
+     "hermandad": "el-cachorro-sevilla",
+     "salida": "15:35",
+     "carrera": "19:09"
+    },
+    {
+     "hermandad": "la-o-sevilla",
+     "salida": "18:00",
+     "carrera": "20:27"
+    },
+    {
+     "hermandad": "san-isidoro-sevilla",
+     "salida": "19:40",
+     "carrera": "21:08"
+    },
+    {
+     "hermandad": "montserrat-sevilla",
+     "salida": "20:30",
+     "carrera": "21:42"
+    },
+    {
+     "hermandad": "la-sagrada-mortaja-sevilla",
+     "salida": "20:00",
+     "carrera": "22:16"
+    }
+   ]
+  },
+  "sevilla|Sábado Santo": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "el-sol-sevilla",
+     "salida": "12:45",
+     "carrera": "17:15"
+    },
+    {
+     "hermandad": "los-servitas-sevilla",
+     "salida": "15:15",
+     "carrera": "17:36"
+    },
+    {
+     "hermandad": "la-trinidad-sevilla",
+     "salida": "15:05",
+     "carrera": "18:08"
+    },
+    {
+     "hermandad": "el-santo-entierro-sevilla",
+     "salida": "18:45",
+     "carrera": "19:03"
+    },
+    {
+     "hermandad": "la-soledad-de-san-lorenzo-sevilla",
+     "salida": "18:50",
+     "carrera": "19:43"
+    }
+   ]
+  },
+  "sevilla|Viernes de Dolores": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/nomina_previas.pdf",
+   "orden": [
+    {
+     "hermandad": "bendicion-y-esperanza-sevilla",
+     "salida": "17:00"
+    },
+    {
+     "hermandad": "pino-montano-sevilla",
+     "salida": "17:45"
+    },
+    {
+     "hermandad": "la-mision-sevilla",
+     "salida": "18:15"
+    },
+    {
+     "hermandad": "bellavista-sevilla",
+     "salida": "18:30"
+    },
+    {
+     "hermandad": "cristo-de-la-corona-sevilla",
+     "salida": "19:00"
+    },
+    {
+     "hermandad": "pasion-y-muerte-sevilla",
+     "salida": "20:00"
+    }
+   ]
+  },
+  "sevilla|Sábado de Pasión": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/nomina_previas.pdf",
+   "orden": [
+    {
+     "hermandad": "padre-pio-sevilla",
+     "salida": "15:10"
+    },
+    {
+     "hermandad": "la-milagrosa-sevilla",
+     "salida": "16:30"
+    },
+    {
+     "hermandad": "dolores-de-torreblanca-sevilla",
+     "salida": "16:45"
+    },
+    {
+     "hermandad": "san-jose-obrero-sevilla",
+     "salida": "16:55"
+    },
+    {
+     "hermandad": "divino-perdon-sevilla",
+     "salida": "17:30"
+    }
+   ]
+  },
+  "malaga|Domingo de Ramos": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "pollinica-malaga",
+     "carrera": "12:00",
+     "salida": "09:50"
+    },
+    {
+     "hermandad": "lagrimas-y-favores-malaga",
+     "carrera": "16:00",
+     "salida": "15:00"
+    },
+    {
+     "hermandad": "dulce-nombre-malaga",
+     "carrera": "16:40",
+     "salida": "14:15"
+    },
+    {
+     "hermandad": "salutacion-malaga",
+     "carrera": "17:25",
+     "salida": "14:30"
+    },
+    {
+     "hermandad": "humildad-malaga",
+     "carrera": "18:05",
+     "salida": "15:15"
+    },
+    {
+     "hermandad": "salud-malaga",
+     "carrera": "18:50",
+     "salida": "16:20"
+    },
+    {
+     "hermandad": "humildad-y-paciencia-malaga",
+     "carrera": "19:35",
+     "salida": "15:35"
+    },
+    {
+     "hermandad": "huerto-malaga",
+     "carrera": "20:10",
+     "salida": "17:45"
+    },
+    {
+     "hermandad": "prendimiento-malaga",
+     "carrera": "21:00",
+     "salida": "16:30"
+    }
+   ]
+  },
+  "malaga|Lunes Santo": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "pasion-malaga",
+     "carrera": "17:35",
+     "salida": "16:50"
+    },
+    {
+     "hermandad": "crucifixion-malaga",
+     "carrera": "18:25",
+     "salida": "15:55"
+    },
+    {
+     "hermandad": "gitanos-malaga",
+     "carrera": "19:00",
+     "salida": "16:45"
+    },
+    {
+     "hermandad": "dolores-del-puente-malaga",
+     "carrera": "19:50",
+     "salida": "17:30"
+    },
+    {
+     "hermandad": "cautivo-malaga",
+     "carrera": "20:30",
+     "salida": "17:30"
+    },
+    {
+     "hermandad": "estudiantes-malaga",
+     "carrera": "21:40",
+     "salida": "17:30"
+    }
+   ]
+  },
+  "malaga|Martes Santo": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "rocio-malaga",
+     "carrera": "17:40",
+     "salida": "15:00"
+    },
+    {
+     "hermandad": "penas-malaga",
+     "carrera": "18:40",
+     "salida": "17:45"
+    },
+    {
+     "hermandad": "nueva-esperanza-malaga",
+     "carrera": "19:30",
+     "salida": "15:45"
+    },
+    {
+     "hermandad": "humillacion-y-estrella-malaga",
+     "carrera": "20:20",
+     "salida": "17:45"
+    },
+    {
+     "hermandad": "rescate-malaga",
+     "carrera": "21:10",
+     "salida": "17:45"
+    },
+    {
+     "hermandad": "sentencia-malaga",
+     "carrera": "22:00",
+     "salida": "19:15"
+    }
+   ]
+  },
+  "malaga|Miércoles Santo": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "fusionadas-malaga",
+     "carrera": "18:00",
+     "salida": "17:15"
+    },
+    {
+     "hermandad": "mediadora-malaga",
+     "carrera": "19:20",
+     "salida": "16:00"
+    },
+    {
+     "hermandad": "salesianos-malaga",
+     "carrera": "19:54",
+     "salida": "17:15"
+    },
+    {
+     "hermandad": "sangre-malaga",
+     "carrera": "20:19",
+     "salida": "18:00"
+    },
+    {
+     "hermandad": "el-rico-malaga",
+     "carrera": "21:04",
+     "salida": "17:55"
+    },
+    {
+     "hermandad": "paloma-malaga",
+     "carrera": "22:07",
+     "salida": "20:15"
+    },
+    {
+     "hermandad": "expiracion-malaga",
+     "carrera": "23:10",
+     "salida": "21:15"
+    }
+   ]
+  },
+  "malaga|Jueves Santo": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "sagrada-cena-malaga",
+     "carrera": "17:40",
+     "salida": "17:00"
+    },
+    {
+     "hermandad": "vineros-malaga",
+     "carrera": "18:35",
+     "salida": "17:15"
+    },
+    {
+     "hermandad": "santa-cruz-malaga",
+     "carrera": "19:25",
+     "salida": "17:35"
+    },
+    {
+     "hermandad": "vera-cruz-malaga",
+     "carrera": "19:55",
+     "salida": "19:00"
+    },
+    {
+     "hermandad": "mena-malaga",
+     "carrera": "20:20",
+     "salida": "18:55"
+    },
+    {
+     "hermandad": "zamarrilla-malaga",
+     "carrera": "21:35",
+     "salida": "19:30"
+    },
+    {
+     "hermandad": "misericordia-malaga",
+     "carrera": "22:25",
+     "salida": "19:50"
+    },
+    {
+     "hermandad": "esperanza-malaga",
+     "salida": "21:45",
+     "carrera": "23:10"
+    }
+   ]
+  },
+  "malaga|Viernes Santo": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "monte-calvario-malaga",
+     "carrera": "18:40",
+     "salida": "16:00"
+    },
+    {
+     "hermandad": "descendimiento-malaga",
+     "carrera": "19:20",
+     "salida": "16:30"
+    },
+    {
+     "hermandad": "amor-malaga",
+     "carrera": "20:00",
+     "salida": "16:50"
+    },
+    {
+     "hermandad": "dolores-de-san-juan-malaga",
+     "carrera": "20:50",
+     "salida": "19:05"
+    },
+    {
+     "hermandad": "traslado-malaga",
+     "carrera": "21:30",
+     "salida": "19:30"
+    },
+    {
+     "hermandad": "piedad-malaga",
+     "carrera": "22:15",
+     "salida": "19:30"
+    },
+    {
+     "hermandad": "santo-sepulcro-malaga",
+     "carrera": "22:40",
+     "salida": "19:20"
+    },
+    {
+     "hermandad": "servitas-malaga",
+     "carrera": "23:40",
+     "salida": "22:15"
+    }
+   ]
+  },
+  "sevilla|Domingo de Resurrección": {
+   "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf",
+   "carrera": "La Campana",
+   "orden": [
+    {
+     "hermandad": "la-resurreccion-sevilla",
+     "salida": "08:15",
+     "carrera": "10:55"
+    }
+   ]
+  },
+  "malaga|Domingo de Resurrección": {
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "carrera": "Tribuna Principal",
+   "orden": [
+    {
+     "hermandad": "resucitado-malaga",
+     "salida": "10:00",
+     "carrera": "11:05"
+    }
+   ]
+  }
+ }
+}

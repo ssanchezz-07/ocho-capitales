@@ -30,6 +30,7 @@
    "fuente_url": { "valor": "https://web.archive.org/web/20190406084455/https://hermandaddelamor.net/senor-de-la-sagrada-entrada-en-jerusalen", "nota": "ficha del titular en la web oficial de la Hermandad del Amor, de la que la Borriquita es parte desde la fusión de 1618 (la web está en mantenimiento: copia de archive.org); antes apuntaba al artículo de Wikipedia del Amor" },
    "fundacion": { "valor": "unida al Amor en 1618", "fuente": "https://web.archive.org/web/20180209134215/http://hermandaddelamor.net/2018/01/29/iv-centenario-triptico-la-exposicion/", "nota": "IV centenario de la fusión (1618-2018)" }
   },
+  "el-sol-sevilla": { "dia": { "valor": "Sábado Santo", "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "nota": "nómina oficial del Consejo de 2026: hace estación a la Catedral el Sábado Santo (salida 12:45, venia 17:15); no está en la nómina de los días previos" } },
   "la-cena-sevilla": {
    "titulares_renombrar": { "Señor de la Humillación": { "nombre": "Santísimo Cristo de la Humildad y Paciencia", "fuente": "https://lacenadesevilla.es/cristo-de-la-humildad-y-paciencia/" } }
   },

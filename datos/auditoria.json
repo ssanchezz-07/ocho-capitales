@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-27T09:33:13.956Z",
+ "generado": "2026-11-01T23:38:46.453Z",
  "totales": {
   "capitales": 8,
   "hermandades": 307,
@@ -18,8 +18,8 @@
   "extraordinarias": 4,
   "agenda": 437,
   "noticias": 2396,
-  "fuentes": 27586,
-  "correcciones": 410
+  "fuentes": 27707,
+  "correcciones": 430
  },
  "hermandades_sin": {
   "historia": [
@@ -104,17 +104,6 @@
    "humillacion-piedad-cadiz"
   ],
   "hora_salida": [
-   "el-valle-sevilla",
-   "cristo-de-la-corona-sevilla",
-   "huerto-malaga",
-   "prendimiento-malaga",
-   "gitanos-malaga",
-   "expiracion-malaga",
-   "misericordia-malaga",
-   "esperanza-malaga",
-   "santo-sepulcro-malaga",
-   "servitas-malaga",
-   "resucitado-malaga",
    "cristo-de-san-agustin-granada",
    "el-nazareno-granada",
    "los-ferroviarios-granada",
@@ -543,8 +532,8 @@
   "autor": 17,
   "anio": 3311,
   "formacion": 169,
-  "hermandad": 4766,
-  "video": 3666
+  "hermandad": 4765,
+  "video": 3665
  },
  "bandas_sin_localidad": [],
  "dias_raros": [],
@@ -576,7 +565,7 @@
    "capital": "malaga",
    "nombre": "Málaga",
    "hermandades": 53,
-   "marchas_dedicadas": 1031,
+   "marchas_dedicadas": 1032,
    "sin_foto": 3,
    "sin_sede": 6,
    "titulares_sin_autor": 13
