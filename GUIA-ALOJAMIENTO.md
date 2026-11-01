@@ -113,7 +113,16 @@ En tu PC, para tener las noticias del día: `node tools/traer-datos.mjs` (desde 
 
 ## Las noticias de las 7:00: cómo se asegura
 - **Avisos de GitHub:** hay uno cada 10 minutos de 5 a 9:59 UTC. Vale el primero a partir de las 7:00 de Madrid (cubre invierno y verano, `tools/noticias-hoy.mjs`); los demás ven que la publicación ya está en R2 y no hacen nada. Si una falla, el siguiente la reintenta, hasta las 11:00 de Madrid en invierno y las 12:00 en verano. **Por sí solos no bastan:** GitHub se salta la mayoría (de 72 avisos al día arrancaban unos 5, con huecos de hasta 8 horas), así que sin el vigía la publicación puede salir horas tarde o no salir ese día. Además, GitHub puede apagar los avisos de un repositorio sin actividad durante 60 días.
-- **Vigía de Cloudflare** (`workers/vigia-noticias`, **pendiente de instalar; hace falta para cumplir «a las 7:00 sin fallo»**): lanza la publicación a las 7:00 exactas, la reintenta a las 7:30 y, si a las 8:30 no está, avisa a `ochocapitales@gmail.com`. Es gratis (el plan da 100.000 peticiones al día y usa 5).
+- **Vigía de Cloudflare** (`ocho-capitales-vigia`, código en `workers/vigia-noticias`, instalado el 1-nov con el sí de Pablo): lanza la publicación a las 7:00 exactas, la reintenta a las 7:30 y, si a las 8:30 no está, avisa a `ochocapitales@gmail.com`. También avisa si GitHub rechaza su llave. Es gratis y sin acceso público; usa los 5 Cron Triggers del plan.
+
+**Última llave, para que el vigía pueda lanzar (5 minutos):**
+1. Entra en https://github.com/settings/personal-access-tokens/new
+2. **Token name:** `ocho-capitales-vigia`. **Expiration:** la más larga que deje (apúntate la fecha: al caducar, el vigía te avisará por correo).
+3. **Repository access:** *Only select repositories* → `ocho-capitales`.
+4. **Permissions** → **Actions**: *Read and write*. Nada más.
+5. **Generate token** y cópialo. No lo pegues en el chat.
+6. Entra en https://dash.cloudflare.com → **Cómputo** → **Workers y Pages** → `ocho-capitales-vigia` → **Configuración** → **Variables y secretos** → **Añadir** → tipo **Secreto**, nombre `GITHUB_TOKEN`, valor el token → **Guardar/Implementar**.
+7. Dime «token puesto».
 
 ## La red de seguridad: ninguna actualización rompe la web
 Cada vez que se publica (un cambio de cualquier sesión o la lectura de noticias), antes de subir nada se comprueba la web entera:
