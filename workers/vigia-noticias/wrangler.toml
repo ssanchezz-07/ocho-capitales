@@ -1,0 +1,13 @@
+# Vigía de las noticias de las 7:00 (ver index.js). Se despliega aparte de la web: cd workers/vigia-noticias && npx wrangler@4.148.0 deploy
+# Cron en UTC: 5:00/5:30/6:30 en verano y 6:00/6:30/7:30 en invierno; el código solo actúa a las 7:00, 7:30 y 8:30 de Madrid.
+name = "ocho-capitales-vigia"
+main = "index.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+[triggers]
+crons = ["0 5 * * *", "30 5 * * *", "0 6 * * *", "30 6 * * *", "30 7 * * *"]
+
+[[send_email]]
+name = "CORREO"
+destination_address = "ochocapitales@gmail.com"

@@ -13,14 +13,14 @@ const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 // Colabora: clave pública de Web3Forms (alias del correo del portal; no revela la dirección). Variable de GitHub FORMULARIO_CLAVE.
 // La de ochocapitales@gmail.com va por defecto (Pablo, 2026-10-27); la variable, si existe, manda.
-// Noticias frescas sin volver a publicar la web: el flujo sube news.json a R2 cada hora y la página de Noticias lo pide ahí
+// Noticias frescas sin volver a publicar la web: el flujo sube news.json a R2 cada mañana a las 7 y la página de Noticias lo pide ahí
 // (si falla, usa el news.json de la compilación). Variable de GitHub NOTICIAS_URL, p. ej. https://datos.ochocapitales.com/news.json
 const NOTICIAS_URL = /^https:\/\/[^\s"'<>]+$/.test(process.env.NOTICIAS_URL || '') ? process.env.NOTICIAS_URL : '';
 const FORM_CLAVE = /^[0-9a-f-]{36}$/i.test((process.env.FORMULARIO_CLAVE || '').trim()) ? process.env.FORMULARIO_CLAVE.trim() : 'f0d03380-0d78-434f-a777-0114181a2ea7';
 const D = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'portal-cofrade', 'data', 'portal.json'), 'utf8'));
 const NEWS_FILE = path.join(DIR, 'data', 'news.json');
 const NEWS_RAW = fs.existsSync(NEWS_FILE) ? JSON.parse(fs.readFileSync(NEWS_FILE, 'utf8')) : { items: [], actualizado: 0 };
-// news.json y las agendas automáticas: el bot las guarda en la rama «datos» (así el historial de main no crece cada hora)
+// news.json y las agendas automáticas: el bot las guarda en la rama «datos» (así el historial de main no crece con cada lectura)
 if (!fs.existsSync(NEWS_FILE)) console.warn('Aviso: falta site/data/news.json; para tener las noticias del día ejecuta «node tools/traer-datos.mjs» desde la raíz.');
 // Eventos verificados a mano (prioridad sobre los detectados en noticias).
 const EVENTOS_FILE = path.join(DIR, '..', 'portal-cofrade', 'data', 'eventos.json');
@@ -806,7 +806,7 @@ function pageNews() {
   const names = Object.fromEntries(D.capitales.map((c) => [c.slug, c.nombre])), colors = Object.fromEntries(D.capitales.map((c) => [c.slug, c.color]));
   const v = NX.vista(items, { names, colors, capitales: D.capitales.map((c) => c.slug), now: NEWS.actualizado || Date.now() });
   // Cabecera de terciopelo (morado nazareno; toma el color de la capital elegida), con galón y flecos de oro
-  const body = `<header class="nx-head" data-nx-head><div class="nx-head-in"><h1 class="oc-title nx-title">Noticias</h1><p class="nx-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada hora y con enlace al medio.</p><p class="nx-pulso"><span><i aria-hidden="true"></i>Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time></span><span><b>${medios}</b> medios</span><span><b>${items.length}</b> noticias desde el ${fmtDay(desde, { day: 'numeric', month: 'long' })}</span></p></div></header>
+  const body = `<header class="nx-head" data-nx-head><div class="nx-head-in"><h1 class="oc-title nx-title">Noticias</h1><p class="nx-lead">Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada mañana a las 7 y con enlace al medio.</p><p class="nx-pulso"><span><i aria-hidden="true"></i>Actualizado <time data-ago datetime="${new Date(NEWS.actualizado || Date.now()).toISOString()}">${fmtDay(NEWS.actualizado || Date.now(), { day: 'numeric', month: 'long' })}</time></span><span><b>${medios}</b> medios</span><span><b>${items.length}</b> noticias desde el ${fmtDay(desde, { day: 'numeric', month: 'long' })}</span></p></div></header>
 <div class="nx-filtros" data-news-filters>
   <div class="oc-field nx-buscar"><label for="nq">Buscar en las noticias</label><input id="nq" type="search" data-f="q" placeholder="Hermandad, medio, tema…" autocomplete="off" enterkeyhint="search"></div>
   <div class="nx-chips-fila"><span class="oc-sr" id="nciudad">Capital</span><ul class="nx-chips" data-f="ciudad" aria-labelledby="nciudad"><li><button type="button" data-v="" aria-pressed="true">Todas</button></li>${D.capitales.map((c) => `<li><button type="button" data-v="${c.slug}" aria-pressed="false" style="--c:${c.color}"><i aria-hidden="true"></i>${esc(c.nombre)}</button></li>`).join('')}</ul><button class="nx-toggle" type="button" data-f="oficiales" aria-pressed="false">Solo fuentes oficiales</button></div><div class="nx-chips-fila nx-temas"><span class="oc-sr" id="ntema">Tema</span><ul class="nx-chips is-tema" data-f="tema" aria-labelledby="ntema"><li><button type="button" data-v="" aria-pressed="true">Todos los temas</button></li>${NX.TEMAS.map(([k, l]) => `<li><button type="button" data-v="${k}" aria-pressed="false">${l}</button></li>`).join('')}</ul></div>
@@ -1302,7 +1302,7 @@ function pageCalendario() {
       <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
     </div>
   </div>
-  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias cada hora. Confirma siempre en la fuente enlazada.</p>
+  <p class="oc-note">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias de cada mañana. Confirma siempre en la fuente enlazada.</p>
   <div class="oc-subscribe"><h3 class="oc-h3">Llévatela a tu calendario</h3><p class="oc-note">Suscríbete y tu móvil se actualizará solo con los nuevos actos. En Google Calendar: «Otros calendarios» → «Desde URL» y pega el enlace. En iPhone o Mac: Ajustes → Calendario → Cuentas → Añadir calendario suscrito.</p><ul class="oc-linklist"><li><a class="oc-btn" href="${u('agenda.ics')}" download>Toda la agenda (.ics)</a></li>${D.capitales.map((c) => `<li><a class="oc-btn is-quiet" href="${u('agenda-' + c.slug + '.ics')}" download>${esc(c.nombre)}</a></li>`).join('')}</ul></div>
   <script type="application/json" id="oc-eventos">${data}</script>
   <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
@@ -1381,7 +1381,7 @@ function pageAcerca() {
 <li><strong>Jaén:</strong> fichas oficiales de la Agrupación de Cofradías y Hermandades de la Ciudad de Jaén.</li>
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
-<h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada hora de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
+<h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada mañana a las 7:00 de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
 <h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Todas las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }

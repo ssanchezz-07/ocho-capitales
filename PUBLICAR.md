@@ -4,7 +4,7 @@
 Ocho Capitales se publica como **sitio estático**: páginas HTML ya generadas que se sirven desde la red de GitHub.
 - **Coste:** 0 €. GitHub Pages y GitHub Actions son gratuitos para repositorios públicos.
 - **Fluidez:** sin base de datos ni PHP; cada página se descarga ya hecha. Aguanta los picos de Semana Santa.
-- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada hora**, guarda `site/data/news.json` (en la rama `datos`, que se reescribe en cada lectura para que el historial no crezca; la copia de `main` ya no se actualiza) y vuelve a publicar. En local, `node tools/traer-datos.mjs` trae las noticias del día.
+- **Noticias al día:** el flujo `.github/workflows/publicar.yml` («Publicar Ocho Capitales») lee las 60 fuentes **cada día a las 7:00**, guarda `site/data/news.json` (en la rama `datos`, que se reescribe en cada lectura para que el historial no crezca; la copia de `main` ya no se actualiza) y vuelve a publicar. En local, `node tools/traer-datos.mjs` trae las noticias del día.
 - **La portada se recalcula sola:** la jornada de «Hoy» sale de la fecha de Pascua, así que cada año se ajusta sin tocar nada.
 
 ### Pasos (una sola vez)
@@ -19,7 +19,7 @@ Ocho Capitales se publica como **sitio estático**: páginas HTML ya generadas q
 4. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 5. Pestaña **Actions** → «Publicar Ocho Capitales» → **Run workflow**. En 2–3 minutos el sitio está en:
    `https://TU_USUARIO.github.io/ocho-capitales/`
-6. A partir de ahí se actualiza solo cada hora. Si cambias datos o diseño, basta con `git push`.
+6. A partir de ahí las noticias se actualizan solas cada día a las 7:00. Si cambias datos o diseño, basta con `git push`.
 
 ### Dominio propio (opcional, ~10 €/año)
 Compra el dominio (comprueba antes que no exista una web cofrade con el mismo nombre), añádelo en **Settings → Pages → Custom domain** y en `.github/workflows/publicar.yml` cambia:
@@ -52,7 +52,7 @@ El contexto de producto está en `PRODUCT.md`. Estilos en `site/assets/site.css`
 - **En tu PC:** `local\iniciar-portal.bat` (panel de administración, edición de fichas). Tras cambiar datos: `local\actualizar-datos.bat`.
 - **En internet:** WordPress necesita PHP y base de datos; no hay alojamiento gratuito fiable para ello. Si algún día lo quieres público, un hosting de 3–5 €/mes + `portal-cofrade.zip` funciona tal cual (ver `GUIA-INSTALACION.md`).
 
-## Que se actualice de verdad cada hora (despertador externo, gratis)
+## Histórico: despertador externo (sustituido por el vigía de `GUIA-ALOJAMIENTO.md`)
 GitHub retrasa o se salta las ejecuciones programadas (`schedule`) cuando sus servidores van cargados: en octubre de 2026 hubo huecos de hasta 8 horas. La solución es que un servicio externo dispare la publicación cada hora:
 
 1. **Permiso para el despertador** (lo crea Pablo): GitHub → foto de perfil → *Settings* → *Developer settings* → *Personal access tokens* → *Fine-grained tokens* → *Generate new token*.

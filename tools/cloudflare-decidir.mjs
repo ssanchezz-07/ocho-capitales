@@ -3,7 +3,7 @@
 // - Sin los secretos de Cloudflare: no.
 // - A mano (workflow_dispatch): sí.
 // - Push: sí, salvo que solo cambien documentos (.md, EQUIPO/, MARKETING/…), que no salen en la web.
-// - Programado: si las noticias van por R2 (NOTICIAS_URL), una vez al día (portada, «Hoy» y agenda al día); si no, cada vez.
+// - Programado: solo llega hasta aquí la lectura de las 7:00 (tools/noticias-hoy.mjs): se publica (portada, «Hoy» y agenda al día).
 // - Tope: si este mes ya van TOPE despliegues (por defecto 450 de los 500 del plan gratuito, por si las subidas directas
 //   cuentan), solo el diario. Si la API de Cloudflare no responde, se publica (no se bloquea por no poder contar).
 import fs from 'node:fs';
@@ -14,7 +14,7 @@ const salida = (seguir, motivo) => {
   if (E.GITHUB_OUTPUT) fs.appendFileSync(E.GITHUB_OUTPUT, `seguir=${seguir ? 'si' : 'no'}\n`);
   process.exit(0);
 };
-const DOCS = [/\.(md|txt)$/i, /^EQUIPO\//, /^MARKETING\//, /^auditoria\//, /^graphify-out\//, /^\.claude\//];
+const DOCS = [/\.(md|txt)$/i, /^EQUIPO\//, /^MARKETING\//, /^auditoria\//, /^graphify-out\//, /^\.claude\//, /^workers\//];
 
 async function despliegues() {
   // despliegues de este mes y horas desde el último
@@ -42,7 +42,7 @@ async function soloDocumentos() {
 }
 
 if (!E.TOKEN || !E.CUENTA) salida(false, 'faltan los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID');
-if (E.EVENTO === 'workflow_dispatch') salida(true, 'lanzado a mano');
+if (E.EVENTO === 'workflow_dispatch' && E.ORIGEN !== 'vigia') salida(true, 'lanzado a mano');
 const TOPE = +E.TOPE || 450;
 let d = { n: 0, horas: Infinity };
 try { d = await despliegues(); console.log(`Este mes: ${d.n} despliegues; el último hace ${d.horas === Infinity ? '—' : d.horas.toFixed(1) + ' h'}`); }
@@ -56,9 +56,8 @@ async function configuracionAlDia() {
   } catch { return true; }
 }
 if (d.n < TOPE && !(await configuracionAlDia())) salida(true, 'la web publicada no lleva la configuración actual (variables de GitHub)');
-if (E.EVENTO === 'schedule') {
-  if (E.NOTICIAS_URL) salida(diario, diario ? 'el de cada día' : 'las noticias van por R2; la web ya se publicó hoy');
-  salida(d.n < TOPE || diario, d.n < TOPE ? 'programado' : `tope de ${TOPE} al mes`);
+if (E.EVENTO === 'schedule' || E.ORIGEN === 'vigia') {
+  salida(d.n < TOPE || diario, d.n < TOPE ? 'el de cada día' : `tope de ${TOPE} al mes`);
 }
 if (await soloDocumentos()) salida(false, 'solo cambian documentos que no salen en la web');
 if (d.n >= TOPE && !diario) { console.log(`::warning::Cloudflare: ${d.n} despliegues este mes (tope ${TOPE}); este cambio saldrá con el despliegue diario`); salida(false, 'tope del mes'); }

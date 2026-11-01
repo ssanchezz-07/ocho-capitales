@@ -1,13 +1,14 @@
 # Ocho Capitales: actualiza noticias y publica el sitio en GitHub Pages (gratis).
 # Se ejecuta al subir cambios, a mano desde la pestaña «Actions» y por horario.
-# GitHub retrasa o se salta muchas ejecuciones programadas: por eso se despierta 3 veces por hora
-# y el trabajo «comprobar» corta en segundos si las noticias se leyeron hace menos de 40 minutos.
-# Resultado: una actualización por hora aunque GitHub se salte dos de cada tres avisos, sin servicios externos.
+# Noticias: una publicación al día, a las 7:00 de España (Pablo). La hora exacta depende del vigía de Cloudflare
+# (workers/vigia-noticias; sin él puede salir horas tarde o no salir). GitHub retrasa o se salta muchos avisos programados: por eso, además, hay avisos cada 10 minutos desde las 5 UTC y el
+# trabajo «comprobar» corta en segundos salvo que sean más de las 7:00 en Madrid y la publicación del día no esté en R2
+# (tools/noticias-hoy.mjs). Los push publican la web con las noticias ya guardadas, sin leer otras.
 # Las noticias y agendas que lee el bot se guardan en la rama «datos» (un único commit que se reescribe), no en main:
 # así el historial no crece ~100 MB al mes y main solo tiene commits de personas (tools/datos-rama.sh).
 # Cloudflare Pages (trabajo «cloudflare») se activa solo al añadir los secretos CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID.
-# Con la variable NOTICIAS_URL, cada lectura sube solo news.json a R2 (la página de Noticias lo pide ahí) y la web entera
-# se vuelve a subir a Cloudflare solo cuando cambia de verdad (tools/cloudflare-decidir.mjs). GUIA-ALOJAMIENTO.md.
+# Con la variable NOTICIAS_URL, la lectura de las 7:00 sube news.json a R2 (la página de Noticias lo pide ahí) y la web entera
+# se sube a Cloudflare con esa lectura y cuando cambia de verdad (tools/cloudflare-decidir.mjs). GUIA-ALOJAMIENTO.md.
 # Red de seguridad (tools/red-seguridad.sh): antes de publicar se comprueban datos, enlaces, límites y una prueba de humo con
 # navegador; si algo falla, no se publica y se queda la versión anterior. En Cloudflare, otra prueba después de subir y, si
 # falla, vuelta automática al despliegue anterior. Las ramas «prueba-red/…» pasan las comprobaciones sin publicar nada.
@@ -17,8 +18,13 @@ on:
   push:
     branches: [main, "prueba-red/**"]
   schedule:
-    - cron: "7,27,47 * * * *"
+    - cron: "3,13,23,33,43,53 5-9 * * *"
   workflow_dispatch:
+    inputs:
+      origen:
+        description: "manual o vigia"
+        required: false
+        default: manual
 
 permissions:
   contents: read
@@ -33,16 +39,19 @@ jobs:
     outputs:
       seguir: ${{ steps.edad.outputs.seguir }}
     steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          sparse-checkout: tools/noticias-hoy.mjs
+          sparse-checkout-cone-mode: false
       - id: edad
         env:
           EVENTO: ${{ github.event_name }}
           REPO: ${{ github.repository }}
+          NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: |
-          # la última lectura está en la rama datos; si aún no existe, se sigue (primera vez)
+          # lo publicado está en R2; si no responde, se mira la rama datos
           git init -q d && (cd d && git fetch -q --depth=1 "https://github.com/$REPO" datos && git show FETCH_HEAD:site/data/news.json > ../news.json) || echo '{}' > news.json
-          MIN=$(node -e "const n=require('./news.json'); console.log(Math.round((Date.now() - (n.actualizado || 0)) / 60000))")
-          echo "Última lectura de noticias: hace $MIN minutos (evento: $EVENTO)"
-          if [ "$EVENTO" = "schedule" ] && [ "$MIN" -lt 40 ]; then echo "seguir=no" >> "$GITHUB_OUTPUT"; else echo "seguir=si" >> "$GITHUB_OUTPUT"; fi
+          node tools/noticias-hoy.mjs
   construir:
     needs: comprobar
     if: needs.comprobar.outputs.seguir == 'si'
@@ -65,23 +74,18 @@ jobs:
         working-directory: site
         run: node eventos.mjs
       - name: Leer noticias
+        if: github.event_name != 'push'
         working-directory: site
         timeout-minutes: 3
         continue-on-error: true   # si una fuente se cuelga, se publica con las noticias anteriores
         run: node fetch-news.mjs
       - name: Leer agendas cofrades
+        if: github.event_name != 'push'
         timeout-minutes: 3
         continue-on-error: true   # si una agenda falla, se conserva la última buena
         run: |
           node tools/agenda-externa.mjs
           node tools/detectar-cambios-bandas.mjs
-      - name: Guardar noticias y agendas (rama datos)
-        # Si no se puede subir, se avisa y se publica igualmente con las noticias frescas.
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config user.name "Ocho Capitales bot"
-          git config user.email "actions@users.noreply.github.com"
-          bash tools/datos-rama.sh guardar || echo "::warning::No se pudieron guardar las noticias en la rama datos; se publica igualmente"
       - name: Generar sitio
         working-directory: site
         env:
@@ -93,6 +97,9 @@ jobs:
           FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}   # Colabora → correo del portal (Web3Forms; ver GUIA-ALOJAMIENTO.md)
           NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
+      - name: Validar las noticias (si no valen, no se publica y se queda lo anterior)
+        if: github.event_name != 'push'
+        run: node tools/validar-noticias.mjs site/dist/news.json
       - name: Instalar el navegador de las pruebas
         run: |
           npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1
@@ -102,24 +109,24 @@ jobs:
           PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
           SIN_HUMO: ${{ vars.GITHUB_REDIRIGE_A && '1' || '' }}   # con la redirección al dominio, cada página se va del sitio
         run: bash tools/red-seguridad.sh site/dist "/${{ github.event.repository.name }}/"
-      - name: Noticias a R2 (sin volver a publicar la web)
-        # Solo en main, con la variable NOTICIAS_URL y los secretos de Cloudflare, y si news.json pasa la validación.
-        # Si no, se queda el anterior en R2; la página tiene además el respaldo que va dentro de la web.
-        if: ${{ vars.NOTICIAS_URL != '' && github.ref == 'refs/heads/main' }}
-        continue-on-error: true
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CUBO: ${{ vars.R2_CUBO || 'ocho-capitales-datos' }}
+      - name: Guardar noticias y agendas (rama datos)
+        # Si no se puede subir, se avisa y se publica igualmente con las noticias frescas.
+        if: github.ref == 'refs/heads/main' && github.event_name != 'push'
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Faltan los secretos de Cloudflare"; exit 0; fi
-          node tools/validar-noticias.mjs site/dist/news.json || { echo "::warning::news.json no pasa la validación: se queda el anterior en R2"; exit 0; }
-          npx --yes wrangler@4.148.0 r2 bucket cors set "$CUBO" --file tools/r2-cors.json --force || echo "::warning::No se pudo fijar el CORS de $CUBO"
-          npx --yes wrangler@4.148.0 r2 object put "$CUBO/news.json" --file site/dist/news.json --remote --content-type "application/json; charset=utf-8" --cache-control "public, max-age=120, stale-while-revalidate=3600"
+          git config user.name "Ocho Capitales bot"
+          git config user.email "actions@users.noreply.github.com"
+          bash tools/datos-rama.sh guardar || echo "::warning::No se pudieron guardar las noticias en la rama datos; se publica igualmente"
       - name: Base de datos y auditoría
         # SQLite con todo lo verificado y su procedencia; la auditoría (datos/auditoria.json) lista huecos y posibles errores
         continue-on-error: true
         run: node tools/db/construir.mjs
+      - name: Dejar news.json para el último paso
+        if: github.ref == 'refs/heads/main' && github.event_name != 'push'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: noticias
+          path: site/dist/news.json
+          retention-days: 1
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: site/dist
@@ -140,7 +147,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     # Web en Cloudflare Pages: caché larga, Brotli, cabeceras de seguridad (site/despliegue.mjs) y /api/sugerencias.
     # Solo se sube cuando cambia algo que sale en la web (tools/cloudflare-decidir.mjs): los documentos no cuentan y,
-    # con las noticias en R2, la lectura de cada hora tampoco (una vez al día, para la portada y «Hoy»).
+    # además se sube con la lectura de las 7:00 (portada, «Hoy» y agenda al día).
     needs: construir
     runs-on: ubuntu-latest
     permissions:
@@ -152,6 +159,7 @@ jobs:
           TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CUENTA: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           EVENTO: ${{ github.event_name }}
+          ORIGEN: ${{ inputs.origen }}
           ANTES: ${{ github.event.before }}
           DESPUES: ${{ github.event.after }}
           REPO: ${{ github.repository }}
@@ -219,3 +227,23 @@ jobs:
         run: |
           node tools/cloudflare-volver.mjs volver "${{ steps.antes.outputs.anterior }}"
           exit 1   # el trabajo queda en rojo para que se vea
+  noticias:
+    # Último paso: la fecha de R2 es la marca de «publicada hoy». Solo se escribe si la web ya salió bien; si no, se reintenta.
+    needs: [desplegar, cloudflare]
+    if: ${{ vars.NOTICIAS_URL != '' && github.ref == 'refs/heads/main' && github.event_name != 'push' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: noticias
+      - name: Noticias a R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CUBO: ${{ vars.R2_CUBO || 'ocho-capitales-datos' }}
+        run: |
+          npx --yes wrangler@4.148.0 r2 bucket cors set "$CUBO" --file tools/r2-cors.json --force || echo "::warning::No se pudo fijar el CORS de $CUBO"
+          npx --yes wrangler@4.148.0 r2 object put "$CUBO/news.json" --file news.json --remote --content-type "application/json; charset=utf-8" --cache-control "public, max-age=120, stale-while-revalidate=3600"

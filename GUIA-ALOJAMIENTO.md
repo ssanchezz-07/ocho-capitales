@@ -8,7 +8,7 @@ Para Pablo. Todo lo técnico está hecho y probado; aquí solo queda lo que nece
 - La web carga desde la red de Cloudflare con compresión Brotli (10-41 % menos que hoy).
 - El móvil guarda CSS, fuentes e imágenes en vez de volver a preguntar cada 10 minutos.
 - Puedes actualizar la web tantas veces como quieras, sin esperas: cada cambio real sale al momento.
-- Las noticias se renuevan cada hora sin volver a subir la web entera. Van a un almacén aparte (R2), en `datos.ochocapitales.com`.
+- Las noticias se renuevan cada día a las 7:00. Van a un almacén aparte (R2), en `datos.ochocapitales.com`.
 
 Datos en `INFORME-VELOCIDAD.md`; el porqué, en `DECISIONS.md`.
 
@@ -105,11 +105,15 @@ Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en 
 **Si algo sale mal:** quita el dominio de `ocho-capitales` y vuelve a ponérselo a `ocho-capitales-espera` (pasos 2 y 3 al revés), y borra las dos variables del paso 6. En unos minutos está como antes.
 
 ## Cómo se publica a partir de ahora (para que lo sepas)
-1. **Cada hora** GitHub lee las noticias y las agendas y las guarda en la rama `datos`. Sube solo `news.json` a R2, y la página de Noticias lo coge de ahí al momento. Si R2 fallara, usa las noticias que van dentro de la web. La copia de GitHub Pages se actualiza igual que antes.
-2. **La web entera** solo se sube a Cloudflare cuando cambia algo que sale en ella. Los documentos internos (`.md`, `EQUIPO/`…) no la suben. Además se sube una vez al día, para que la portada, «Hoy» y la agenda estén al día.
+1. **Cada día a las 7:00 de España** (Pablo, 1-nov) se leen las noticias y las agendas, se guardan en la rama `datos`, se valida `news.json` y se publica la web, en GitHub Pages y en Cloudflare; al final se sube a R2. Si una fuente cae, se publica con las demás; si el archivo no pasa la validación o falla algo, no se publica, sigue lo anterior y se reintenta.
+2. **La web entera** se sube además cuando cambia algo que sale en ella; esas subidas no leen noticias. Los documentos internos (`.md`, `EQUIPO/`…) no la suben.
 3. Antes de subir se comprueban los límites de Cloudflare: 20.000 archivos y 25 MiB por archivo; hoy hay ~12.000 archivos y el mayor ocupa 3 MB.
 
 En tu PC, para tener las noticias del día: `node tools/traer-datos.mjs` (desde la carpeta del proyecto).
+
+## Las noticias de las 7:00: cómo se asegura
+- **Avisos de GitHub:** hay uno cada 10 minutos de 5 a 9:59 UTC. Vale el primero a partir de las 7:00 de Madrid (cubre invierno y verano, `tools/noticias-hoy.mjs`); los demás ven que la publicación ya está en R2 y no hacen nada. Si una falla, el siguiente la reintenta, hasta las 11:00 de Madrid en invierno y las 12:00 en verano. **Por sí solos no bastan:** GitHub se salta la mayoría (de 72 avisos al día arrancaban unos 5, con huecos de hasta 8 horas), así que sin el vigía la publicación puede salir horas tarde o no salir ese día. Además, GitHub puede apagar los avisos de un repositorio sin actividad durante 60 días.
+- **Vigía de Cloudflare** (`workers/vigia-noticias`, **pendiente de instalar; hace falta para cumplir «a las 7:00 sin fallo»**): lanza la publicación a las 7:00 exactas, la reintenta a las 7:30 y, si a las 8:30 no está, avisa a `ochocapitales@gmail.com`. Es gratis (el plan da 100.000 peticiones al día y usa 5).
 
 ## La red de seguridad: ninguna actualización rompe la web
 Cada vez que se publica (un cambio de cualquier sesión o la lectura de noticias), antes de subir nada se comprueba la web entera:
@@ -119,7 +123,7 @@ Cada vez que se publica (un cambio de cualquier sesión o la lectura de noticias
 4. **Un navegador de verdad:** abre portada, Hoy, Noticias, una hermandad, una marcha, Buscar y el plano de Málaga, en móvil (390 px) y en ordenador (1440 px). No puede haber errores ni nada que se salga por los lados.
 
 **Si algo falla, no se publica**: queda en línea la versión anterior, que funcionaba. En Cloudflare, además, se repite la prueba del navegador después de subir; si falla ahí, **la web vuelve sola a la versión anterior** en segundos.
-Las noticias se validan antes de subirlas a R2 (forma, cantidad, fecha y tamaño). Si no pasan, se queda el archivo anterior, y la página siempre tiene además las noticias que van dentro de la web.
+Las noticias se validan antes de publicar nada (forma, cantidad, fecha y tamaño). Si no pasan, no se publica y sigue el archivo anterior, y la página siempre tiene además las noticias que van dentro de la web.
 
 **Cómo se ve en GitHub:** pestaña **Actions** → «Publicar Ocho Capitales».
 - **Verde:** publicado.
