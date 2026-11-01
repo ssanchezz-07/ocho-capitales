@@ -3165,6 +3165,37 @@
    "campos": {
     "video": "qsZ5x379CbE"
    }
+  },
+  {
+   "slug": "el-dia-del-senor-alfonso-lopez-cortes",
+   "hermandad": "sagrada-cena-malaga",
+   "accion": "ligar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-7049",
+   "nombre_fuente": "Patrimonio Musical (ficha de la marcha)",
+   "fecha": "2026-11-02",
+   "nota": "Dedicada a la Hermandad de la Cena de Málaga (Patrimonio Musical y Cofradías y Hermandades). Formación: original para cornetas y tambores con arreglos para banda de música y agrupación musical, según Pablo Sánchez (2-nov), músico de la banda del Paso y la Esperanza, que la tiene en repertorio; ni Patrimonio Musical ni Cofradías y Hermandades lo dicen así.",
+   "texto": "Hermandad de la Cena de Málaga",
+   "campos": {
+    "formacion": "Banda de cornetas y tambores",
+    "arreglos": "banda de música y agrupación musical"
+   },
+   "fuente_campos": "part",
+   "discrepancia": {
+    "campo": "formacion",
+    "valores": [
+     {
+      "valor": "cornetas y tambores, agrupación musical o banda de música, indistintamente",
+      "fuente": "pm",
+      "url": "https://www.patrimoniomusical.com/bd-marcha-7049"
+     },
+     {
+      "valor": "Banda de música",
+      "fuente": "cyh",
+      "url": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=900612"
+     }
+    ],
+    "elegido": "part"
+   }
   }
  ]
 }

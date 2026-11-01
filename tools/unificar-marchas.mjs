@@ -461,6 +461,7 @@ for (const r of R) {
 
 // ---------- 6. revisión a mano (con fuente abierta): manda sobre todo lo anterior ----------
 const sinUsar = [];
+const FUENTES_URL = {};
 for (const v of REV) {
   const r = R.find((x) => (v.slug ? x.slug === v.slug || x.alias.includes(v.slug) : nt(x.titulo) === nt(v.titulo) && (!v.autor || mismoAutor(x.autor, v.autor)) && (!v.hermandad || (x.dedicatoria && x.dedicatoria.hermandad === v.hermandad) || x._h === v.hermandad || x.retiradas.some((y) => y.hermandad === v.hermandad))));
   if (!r) { sinUsar.push(v); continue; }
@@ -468,9 +469,11 @@ for (const v of REV) {
   r.urls['rev'] = v.fuente; (r.revision ||= []).push({ fecha: v.fecha, nota: v.nota || '', url: v.fuente, fuente: v.nombre_fuente || '' });
   for (const [c, val] of Object.entries(v.campos || {})) {
     if (c === 'titulo' && r.titulo !== val) r.discrepancias.push({ campo: 'titulo', valores: [{ valor: r.titulo, fuente: (r.fuentes.titulo || [])[0] || '' }], elegido: 'rev' });
-    r[c] = val; r.fuentes[c] = ['rev'];
+    // fuente_campos: los campos los da otra fuente que la de la revisión (p. ej. «part»: la partitura y la palabra de la banda)
+    r[c] = val; r.fuentes[c] = [v.fuente_campos || 'rev'];
     if (c === 'anio') for (const d of r.discrepancias) if (d.campo === 'anio') d.elegido = 'rev';
   }
+  if (v.discrepancia) r.discrepancias.push(v.discrepancia);
   if (v.accion === 'confirmar' || v.accion === 'ligar') {
     const h = HERM[v.hermandad]; const prev = r.dedicatoria && r.dedicatoria.hermandad === h.slug ? r.dedicatoria : null;
     // Otra fuente fiable distinta de la revisada (si la revisión se hizo con la ficha de Patrimonio Musical, PM no cuenta dos veces)
@@ -661,7 +664,7 @@ for (const [a, b] of Object.entries(redirecciones)) if (b && !vivas.has(b)) redi
 const limpio = R.map((r) => {
   const o = { slug: r.slug, titulo: r.titulo, autor: r.autor, anio: r.anio, formacion: r.formacion, video: r.video, ...(r.ciudad ? { ciudad: r.ciudad } : {}) };
   if (r.videos) o.videos = r.videos.filter((v) => v !== r.video);
-  for (const c of ['tipo', 'estreno', 'lugar', 'detalles']) if (r[c]) o[c] = r[c];
+  for (const c of ['tipo', 'estreno', 'lugar', 'detalles', 'arreglos']) if (r[c]) o[c] = r[c];
   if (r.dedicatoria) o.dedicatoria = r.dedicatoria;
   o.fuentes = r.fuentes; o.urls = r.urls;
   for (const c of ['retiradas', 'discrepancias', 'alias']) if (r[c].length) o[c] = r[c];
@@ -683,7 +686,6 @@ const resumen = {
 };
 const porCiudad = {}; for (const m of limpio) if (m.dedicatoria && m.dedicatoria.hermandad) porCiudad[m.dedicatoria.ciudad] = (porCiudad[m.dedicatoria.ciudad] || 0) + 1;
 resumen.por_ciudad = porCiudad;
-const FUENTES_URL = {};
 const FUENTES = {
   mdp: { nombre: 'Marchas de Procesión (base de datos y ficha de cada vídeo)', url: 'https://www.marchasdeprocesion.com/p/base-de-datos.html', fiable: true },
   pm: { nombre: 'Patrimonio Musical (base de datos de marchas)', url: 'https://www.patrimoniomusical.com/', fiable: true },
