@@ -726,6 +726,23 @@
   })();
 
   // ---------- favoritos ----------
+  // «Añadir al calendario» y «Mi Semana Santa»: se genera un .ics en el propio navegador
+  var icsEsc = function (t) { return String(t || '').replace(/\r\n|\r|\n/g, '\\n').replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '').replace(/\\(?!n)/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,'); };
+  window.ocIcs = function (evs, nombre) {
+    var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Ocho Capitales//ES', 'CALSCALE:GREGORIAN', 'BEGIN:VTIMEZONE', 'TZID:Europe/Madrid', 'BEGIN:STANDARD', 'DTSTART:19701025T030000', 'TZOFFSETFROM:+0200', 'TZOFFSETTO:+0100', 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'END:STANDARD', 'BEGIN:DAYLIGHT', 'DTSTART:19700329T020000', 'TZOFFSETFROM:+0100', 'TZOFFSETTO:+0200', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU', 'END:DAYLIGHT', 'END:VTIMEZONE'];
+    evs.forEach(function (e) {
+      var dia = e.f.replace(/-/g, ''), hh = e.hr ? e.hr.split(':') : null;
+      L.push('BEGIN:VEVENT', 'UID:' + dia + '-' + (e.n || '').length + (e.c || '') + Math.abs(String(e.n).split('').reduce(function (a, c) { return a * 31 + c.charCodeAt(0) | 0; }, 7)) + '@ocho-capitales', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, ''));
+      if (hh) { L.push('DTSTART;TZID=Europe/Madrid:' + dia + 'T' + hh[0].padStart(2, '0') + hh[1] + '00', 'DTEND;TZID=Europe/Madrid:' + dia + 'T' + String(Math.min(23, +hh[0] + 1)).padStart(2, '0') + hh[1] + '00'); }
+      else { var sig = new Date(Date.parse(e.f + 'T12:00:00Z') + 864e5).toISOString().slice(0, 10).replace(/-/g, ''); L.push('DTSTART;VALUE=DATE:' + dia, 'DTEND;VALUE=DATE:' + sig); }
+      L.push('SUMMARY:' + icsEsc(e.n), 'LOCATION:' + icsEsc(CITY_NAMES[e.c] || ''));
+      if (e.u) L.push('DESCRIPTION:' + icsEsc('Fuente: ' + e.m + ' ' + e.u));
+      L.push('END:VEVENT');
+    });
+    L.push('END:VCALENDAR');
+    var blob = new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = (nombre || 'acto') + '.ics'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  };
   var favs = store.json('oc-favs', {});
   function paintFavs() {
     $$('[data-fav]').forEach(function (b) {
@@ -751,27 +768,42 @@
       var f = favs[k], type = k.split(':')[0];
       return '<li class="oc-entry is-text"><div class="oc-entry-body"><h3 class="oc-entry-title"><a href="' + esc(f.u) + '">' + esc(f.n) + '</a></h3><p class="oc-entry-meta">' + esc(labels[type] || type) + '</p></div><button type="button" class="oc-fav-quitar" data-fav-quitar="' + esc(k) + '" aria-label="Quitar ' + esc(f.n) + ' de favoritos">Quitar</button></li>';
     }).join('');
-    $('[data-fav-empty]').hidden = keys.length > 0;
-    // Quitar un favorito desde la propia lista (la fila desaparece y «Mi Semana Santa» se recalcula al recargar)
+    var cuentaFavs = function () {
+      var n = Object.keys(favs).length;
+      $('[data-fav-empty]').hidden = n > 0;
+      $('[data-fav-pulso]').hidden = !n;
+      $('[data-fav-n]').textContent = n;
+      $('[data-fav-n-txt]').textContent = n === 1 ? 'guardado' : 'guardados';
+    };
+    cuentaFavs();
+    // Quitar un favorito desde la propia lista: la fila desaparece, «Mi Semana Santa» se recalcula y el foco pasa a la fila vecina
     favList.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-fav-quitar]'); if (!b) return;
+      var b = e.target.closest('[data-fav-quitar]'); if (!b || !favs[b.dataset.favQuitar]) return;
       delete favs[b.dataset.favQuitar];
       try { localStorage.setItem('oc-favs', JSON.stringify(favs)); } catch (err) { }
-      var li = b.closest('li'); if (li) li.remove();
-      $('[data-fav-empty]').hidden = Object.keys(favs).length > 0;
+      var li = b.closest('li'), vecina = li && (li.nextElementSibling || li.previousElementSibling);
+      var fin = function () {
+        if (li) li.remove();
+        cuentaFavs(); pintaMiSS();
+        var foco = vecina ? $('[data-fav-quitar]', vecina) : $('.fv-acc a');
+        if (foco) foco.focus();
+      };
+      if (li && li.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) li.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'scale(.97)' }], { duration: 160, easing: 'ease-out' }).onfinish = fin;
+      else fin();
     });
     // Mi Semana Santa: las hermandades guardadas ordenadas por jornada, con sus fechas del próximo año
-    var miss = $('[data-mi-ss]');
+    var miss = $('[data-mi-ss]'), pintaMiSS = function () { };
     if (miss) {
       var SS = {}; try { SS = JSON.parse($('#oc-ss').textContent); } catch (e) { }
-      var mine = keys.filter(function (k) { return k.indexOf('hermandad:') === 0 && SS.herms && SS.herms[k.split(':')[1]]; }).map(function (k) { var s = k.split(':')[1], h = SS.herms[s]; return { slug: s, n: favs[k].n, u: favs[k].u, d: h.d, o: h.o || 99, c: h.c, f: SS.dias[h.d] || '' }; })
-        .filter(function (x) { return x.f; }).sort(function (a, b) { return a.f.localeCompare(b.f) || a.o - b.o; });
-      if (mine.length) {
-        miss.hidden = false;
-        var MES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-        $('[data-mi-ss-list]').innerHTML = mine.map(function (x) { var d = new Date(x.f + 'T12:00:00Z'); return '<li class="oc-ev"><time class="oc-ev-date" datetime="' + x.f + '"><span>' + d.getUTCDate() + '</span>' + MES[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-salidas">' + esc(x.d) + '</span><span>' + esc(SS.ciudades[x.c] || '') + '</span></p><p class="oc-ev-title"><a href="' + esc(x.u) + '">' + esc(x.n) + '</a></p></div></li>'; }).join('');
-        $('[data-mi-ss-ics]').addEventListener('click', function () { window.ocIcs(mine.map(function (x) { return { f: x.f, n: 'Salida de ' + x.n + ' (' + x.d + ')', c: x.c, u: location.origin + x.u, m: 'Ocho Capitales' }; }), 'mi-semana-santa-' + SS.anio); });
-      }
+      var MES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'], mine = [];
+      pintaMiSS = function () {
+        mine = Object.keys(favs).filter(function (k) { return k.indexOf('hermandad:') === 0 && SS.herms && SS.herms[k.split(':')[1]]; }).map(function (k) { var s = k.split(':')[1], h = SS.herms[s]; return { slug: s, n: favs[k].n, u: favs[k].u, d: h.d, o: h.o || 99, c: h.c, f: SS.dias[h.d] || '' }; })
+          .filter(function (x) { return x.f; }).sort(function (a, b) { return a.f.localeCompare(b.f) || a.o - b.o; });
+        miss.hidden = !mine.length;
+        $('[data-mi-ss-list]').innerHTML = mine.map(function (x) { var d = new Date(x.f + 'T12:00:00Z'); return '<li class="oc-ev"' + (window.OC_COLORS && OC_COLORS[x.c] ? ' style="--c:' + OC_COLORS[x.c] + '"' : '') + '><time class="oc-ev-date" datetime="' + x.f + '"><span>' + d.getUTCDate() + '</span>' + MES[d.getUTCMonth()].slice(0, 3) + '</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-salidas">' + esc(x.d) + '</span><span>' + esc(SS.ciudades[x.c] || '') + '</span></p><p class="oc-ev-title"><a href="' + esc(x.u) + '">' + esc(x.n) + '</a></p></div></li>'; }).join('');
+      };
+      pintaMiSS();
+      $('[data-mi-ss-ics]').addEventListener('click', function () { window.ocIcs(mine.map(function (x) { return { f: x.f, n: 'Salida de ' + x.n + ' (' + x.d + ')', c: x.c, u: location.origin + x.u, m: 'Ocho Capitales' }; }), 'mi-semana-santa-' + SS.anio); });
     }
   }
 
@@ -927,23 +959,6 @@
         html += '<button type="button" class="oc-mday' + (k === hoy ? ' is-today' : '') + (k === st.sel ? ' is-selected' : '') + (evs.length ? ' has-ev' : '') + '" data-day="' + k + '" aria-label="' + label + '" aria-pressed="' + (k === st.sel) + '"' + (evs.length ? '' : ' disabled') + '><span>' + d + '</span><i class="oc-dots">' + groups.slice(0, 3).map(function (g) { return '<b class="oc-dot is-' + g + '"></b>'; }).join('') + '</i></button>';
       }
       daysBox.innerHTML = html;
-    };
-    // «Añadir al calendario»: se genera un .ics con ese acto en el propio navegador
-    var icsEsc = function (t) { return String(t || '').replace(/\r\n|\r|\n/g, '\\n').replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '').replace(/\\(?!n)/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,'); };
-    window.ocIcs = function (evs, nombre) {
-      var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Ocho Capitales//ES', 'CALSCALE:GREGORIAN', 'BEGIN:VTIMEZONE', 'TZID:Europe/Madrid', 'BEGIN:STANDARD', 'DTSTART:19701025T030000', 'TZOFFSETFROM:+0200', 'TZOFFSETTO:+0100', 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'END:STANDARD', 'BEGIN:DAYLIGHT', 'DTSTART:19700329T020000', 'TZOFFSETFROM:+0100', 'TZOFFSETTO:+0200', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU', 'END:DAYLIGHT', 'END:VTIMEZONE'];
-      evs.forEach(function (e) {
-        var dia = e.f.replace(/-/g, ''), hh = e.hr ? e.hr.split(':') : null;
-        L.push('BEGIN:VEVENT', 'UID:' + dia + '-' + (e.n || '').length + (e.c || '') + Math.abs(String(e.n).split('').reduce(function (a, c) { return a * 31 + c.charCodeAt(0) | 0; }, 7)) + '@ocho-capitales', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, ''));
-        if (hh) { L.push('DTSTART;TZID=Europe/Madrid:' + dia + 'T' + hh[0].padStart(2, '0') + hh[1] + '00', 'DTEND;TZID=Europe/Madrid:' + dia + 'T' + String(Math.min(23, +hh[0] + 1)).padStart(2, '0') + hh[1] + '00'); }
-        else { var sig = new Date(Date.parse(e.f + 'T12:00:00Z') + 864e5).toISOString().slice(0, 10).replace(/-/g, ''); L.push('DTSTART;VALUE=DATE:' + dia, 'DTEND;VALUE=DATE:' + sig); }
-        L.push('SUMMARY:' + icsEsc(e.n), 'LOCATION:' + icsEsc(CITY_NAMES[e.c] || ''));
-        if (e.u) L.push('DESCRIPTION:' + icsEsc('Fuente: ' + e.m + ' ' + e.u));
-        L.push('END:VEVENT');
-      });
-      L.push('END:VCALENDAR');
-      var blob = new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
-      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = (nombre || 'acto') + '.ics'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
     };
     listBox.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-ics]'); if (!b) return;
