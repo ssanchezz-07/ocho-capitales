@@ -105,7 +105,7 @@ Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en 
 **Si algo sale mal:** quita el dominio de `ocho-capitales` y vuelve a ponérselo a `ocho-capitales-espera` (pasos 2 y 3 al revés), y borra las dos variables del paso 6. En unos minutos está como antes.
 
 ## Cómo se publica a partir de ahora (para que lo sepas)
-1. **Cada día a las 7:00 de España** (Pablo, 1-nov) se leen las noticias y las agendas, se guardan en la rama `datos`, se valida `news.json` y se publica la web, en GitHub Pages y en Cloudflare; al final se sube a R2. Si una fuente cae, se publica con las demás; si el archivo no pasa la validación o falla algo, no se publica, sigue lo anterior y se reintenta.
+1. **Cada día a las 7:00 de España** (Pablo, 1-nov) se leen las noticias y las agendas, se valida `news.json`, pasa la red de seguridad, se guardan en la rama `datos` y se publica la web, en GitHub Pages y en Cloudflare; al final se sube a R2, que es la marca de «publicada hoy». Si una fuente cae, se publica con las demás; si el archivo no pasa la validación o falla algo, sigue lo anterior y se reintenta.
 2. **La web entera** se sube además cuando cambia algo que sale en ella; esas subidas no leen noticias. Los documentos internos (`.md`, `EQUIPO/`…) no la suben.
 3. Antes de subir se comprueban los límites de Cloudflare: 20.000 archivos y 25 MiB por archivo; hoy hay ~12.000 archivos y el mayor ocupa 3 MB.
 
