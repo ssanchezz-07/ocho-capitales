@@ -467,3 +467,12 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 - **Emblema:** la bandera tocada baja (FLIP con transform) hasta el nombre de la ciudad y se queda a su lado como emblema; las demás se recogen.
 - **27-oct (Pablo: «El verde ese, ¿por qué sale ahí?»):** el relleno de la provincia que usa la transición se quedaba pintado con su costa simplificada cortando la ciudad. Ahora se apaga del todo durante el vuelo y se borra al llegar. Recorridos del plano de la portada más visibles: con su color, más gruesos y con un filo oscuro debajo.
 - **28-oct, LCP (aviso de oc-alojamiento):** el globo de la primera visita cargaba d3 y sus datos y animaba mientras se pintaba la imagen principal; en móviles lentos sumaba hasta 0,9 s al LCP (medido con CPU ×4 y red lenta: Cloudflare y GitHub Pages igual sin globo, unos 3 s). Ahora arranca tras el evento «load»; con el cambio, el LCP con globo es igual que sin él. Las cabeceras de Cloudflare no influyen.
+
+## Hoy y Calendario con el lenguaje de Noticias (1 y 2-nov, oc-diseno, publicado en af31829)
+- **Elegido:** cabecera de terciopelo compartida (`.nx-head.vx-head`), que toma el color de la capital con `data-head-capital`; clases propias `.hy-*` y `.cx-*` en `vida.css`, secciones 9 y 10; orden de paso común (`filaPaso`, `.hy-paso`) en las dos páginas.
+- **Terciopelo con capital al 60 %, no al 74 % de Noticias:** con Almería, Huelva y Córdoba el oro no llegaba a AA (el auditor lo rechazó dos veces). Medido: oro 4,61:1 o más en las 8 capitales. Las cifras de `.nx-pulso` llevan velo oscuro solo en cabeceras con `data-head-capital`; Noticias sigue pendiente.
+- **Descartado:** tocar `.oc-ev*` de forma global, porque también lo usa la agenda de la portada, cuyo plano y portada no son de este equipo. Va acotado con `:is(.cx-lista, .oc-miss)`.
+- **Descartado:** corregir el orden de paso de Sevilla en la plantilla; viene de `orden` en los datos y se ha pasado a Coordinación.
+
+## RETOMAR AQUÍ (2-nov, sesión oc-diseno del sobremesa)
+`EQUIPO/` y la nota del proyecto no se pueden editar desde este worktree, así que el punto de retomar queda aquí. Sigue: Buscar (hecha, pendiente del auditor y del sí de Pablo), Favoritos (estado vacío que invite a guardar, `Quitar`) y Colabora (sin tocar `data-colabora` ni su lógica). Sin hacer de P2/P3: 5 transiciones de ancho/alto en `site.css`, pestaña activa en fichas, colores de `vida.css` a tokens, contraste de `.nx-pulso b` en Noticias, pasada completa final.

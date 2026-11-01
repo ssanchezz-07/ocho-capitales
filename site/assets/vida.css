@@ -432,7 +432,7 @@ a { text-underline-offset: .18em; }
 
 @media (min-width: 1100px) { .hy-tabs { overflow: visible; } .hy-tabs [role="tab"] { flex: 1 1 0; min-width: 0; padding-inline: 6px; font-size: 1.16rem; letter-spacing: .03em; white-space: normal; text-align: center; } }
 /* con la capital elegida, el terciopelo también aguanta el oro en las capitales claras */
-.nx-head.hy-head, .nx-head.cx-head { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); }
+.nx-head.hy-head, .nx-head.cx-head, .nx-head.sx-head { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); }
 .nx-head[data-head-capital] .nx-pulso span { background: rgb(10 3 16 / .3); }
 .hy-mostrando { margin: -14px 0 18px; color: var(--muted); }
 .hy-panel { min-width: 0; outline-offset: 6px; }
@@ -577,3 +577,48 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 /* Entradas al hacer scroll de Hoy y Calendario: parten de un estado visible, como en Noticias (el .oc-evs antiguo salía de opacidad 0) */
 @media (prefers-reduced-motion: no-preference) { @supports (animation-timeline: view()) { .hy-cap, .cx-dia, :is(.cx-lista, .oc-miss) .oc-evs > li { animation: vida-entra var(--e-salida) both; animation-timeline: view(); animation-range: entry 0% entry 40%; } } }
 @media (prefers-reduced-motion: reduce) { :is(.cx-lista, .oc-miss) .oc-evs > li { animation: none; } }
+
+/* ---------- 11. Buscar (.sx-*): el buscador sobre el terciopelo, resultados con galón y accesos bordados ---------- */
+.nx-head .sx-form { max-width: 640px; margin: 0 0 8px; }
+.nx-head .sx-form .oc-label { color: rgb(251 246 238 / .9); font-size: .8rem; font-weight: 500; }
+.nx-head .sx-form input { border-color: transparent; background: #fbf6ee; color: #1d1030; box-shadow: 0 0 0 1px rgb(236 211 147 / .6), 0 10px 22px -14px rgb(10 3 16 / .8); transition: box-shadow var(--m-rapido) var(--e-salida); }
+.nx-head .sx-form input:focus { border-color: transparent; outline: 3px solid transparent; box-shadow: 0 0 0 3px var(--oro-claro), 0 10px 22px -14px rgb(10 3 16 / .8); }
+.nx-head .sx-form .oc-btn { border: 0; background: var(--oro-claro); color: #1d1030; transition: transform var(--m-suelta) var(--e-salida), filter var(--m-rapido) var(--e-salida); }
+.nx-head .sx-form .oc-btn:focus-visible { outline-color: var(--oro-claro); }
+.nx-head .sx-form .oc-btn:active { transform: scale(.96); transition-duration: var(--m-toque); }
+@media (hover: hover) and (pointer: fine) { .nx-head .sx-form .oc-btn:hover { filter: brightness(1.08); } }
+@media (prefers-reduced-motion: no-preference) { .sx-form { animation: nx-sube var(--m-entrada) var(--e-salida) 60ms both; } }
+
+/* resultados: un grupo por tipo, con su galón; al escribir no se anima nada, porque se repinta con cada letra */
+.sx-results { display: grid; gap: 8px; margin-bottom: 26px; }
+.sx-results:empty { display: none; }
+.sx-results .oc-hint { margin: 0; color: var(--muted); }
+.sx-results .oc-sr-group { grid-column: 1 / -1; justify-content: flex-start; gap: 12px; margin: 18px 0 6px; font: 400 clamp(1.4rem, 1.2rem + .8vw, 1.8rem)/1 var(--display); letter-spacing: .05em; text-transform: uppercase; color: var(--primary); }
+.sx-results .oc-sr-group:first-child { margin-top: 0; }
+.sx-results .oc-sr-group::after { content: ""; flex: 1; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; opacity: .85; }
+.sx-results .oc-sr-group .oc-muted { font: 500 .95rem/1 var(--sans); letter-spacing: 0; text-transform: none; }
+.sx-results .oc-sr-item { min-width: 0; padding: 10px 14px; border-radius: 14px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06), 0 10px 20px -18px rgb(20 6 30 / .35); transition: background-color var(--m-rapido) var(--e-salida), transform var(--m-suelta) var(--e-salida); }
+.sx-results .oc-sr-item:active { transform: scale(.985); transition-duration: var(--m-toque); }
+@media (min-width: 760px) { .sx-results { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; } }
+
+/* explora: las colgaduras de cada capital y los accesos de terciopelo */
+.sx-explora { margin-top: 0; }
+.sx-explora .oc-explora-caps a { min-height: 44px; font: 400 1.16rem/1.1 var(--display); letter-spacing: .05em; text-transform: uppercase; }
+.sx-explora .oc-explora-caps img { transition: transform var(--m-suelta) var(--e-salida); }
+@media (hover: hover) and (pointer: fine) { .sx-explora .oc-explora-caps a:hover img { transform: translateY(-5px); } }
+.sx-dir { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 22px 0 0; padding: 0; }
+.sx-dir a { --tc: color-mix(in oklab, #2b1140 78%, #12061c); position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; min-height: 96px; height: 100%; padding: 14px 16px 24px; border-radius: 18px; color: #fbf6ee; text-decoration: none;
+  background: radial-gradient(120% 130% at 10% -30%, rgb(255 214 150 / .22), transparent 60%), linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%), var(--tc); box-shadow: 0 12px 24px -18px rgb(20 6 30 / .6); transition: transform var(--m-suelta) var(--e-salida), box-shadow var(--m-rapido) var(--e-salida); }
+.sx-dir a::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--grano) 0 0 / 96px 96px; opacity: .5; pointer-events: none; }
+.sx-dir a::after { content: ""; position: absolute; inset: auto 0 6px; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; opacity: .85; pointer-events: none; }
+.sx-dir-nombre { grid-column: 1; font: 400 clamp(1.3rem, 1.15rem + .7vw, 1.65rem)/1.05 var(--display); letter-spacing: .05em; text-transform: uppercase; overflow-wrap: anywhere; }
+.sx-dir b { grid-column: 1; font: 400 clamp(1.9rem, 1.6rem + 1.2vw, 2.6rem)/1 var(--display); letter-spacing: .02em; color: var(--oro-claro); }
+.sx-dir small { grid-column: 1; font-size: .88rem; line-height: 1.25; color: rgb(251 246 238 / .9); }
+.sx-dir .oc-i { grid-column: 2; grid-row: 1 / span 2; width: 20px; height: 20px; color: var(--oro-claro); transition: transform var(--m-suelta) var(--e-salida); }
+.sx-dir a:active { transform: scale(.97); transition-duration: var(--m-toque); }
+@media (hover: hover) and (pointer: fine) { .sx-dir a:hover { box-shadow: 0 16px 28px -16px rgb(20 6 30 / .75); } .sx-dir a:hover .oc-i { transform: translateX(4px); } }
+@media (min-width: 760px) { .sx-dir { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .sx-explora .oc-explora-caps li { animation: nx-sube var(--m-entrada) var(--e-salida) calc(var(--i) * var(--escalon) + 100ms) both; }
+  @supports (animation-timeline: view()) { .sx-dir li { animation: vida-entra var(--e-salida) both; animation-timeline: view(); animation-range: entry 0% entry 40%; } }
+}
