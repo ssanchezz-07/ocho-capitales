@@ -432,7 +432,7 @@ a { text-underline-offset: .18em; }
 
 @media (min-width: 1100px) { .hy-tabs { overflow: visible; } .hy-tabs [role="tab"] { flex: 1 1 0; min-width: 0; padding-inline: 6px; font-size: 1.16rem; letter-spacing: .03em; white-space: normal; text-align: center; } }
 /* con la capital elegida, el terciopelo también aguanta el oro en las capitales claras */
-.nx-head.hy-head, .nx-head.cx-head, .nx-head.sx-head, .nx-head.fv-head { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); }
+.nx-head.hy-head, .nx-head.cx-head, .nx-head.sx-head, .nx-head.fv-head, .nx-head.cl-head { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); }
 .nx-head[data-head-capital] .nx-pulso span { background: rgb(10 3 16 / .3); }
 .hy-mostrando { margin: -14px 0 18px; color: var(--muted); }
 .hy-panel { min-width: 0; outline-offset: 6px; }
@@ -658,4 +658,48 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 @media (prefers-reduced-motion: no-preference) {
   .fv-vacio { animation: nx-sube var(--m-entrada) var(--e-salida) 80ms both; }
   .fv-lista .oc-entry { animation: nx-sube var(--m-entrada) var(--e-salida) both; }
+}
+
+/* ---------- 13. Colabora (.cl-* y .oc-colabora-*): el formulario en su tarjeta y, al lado, qué aportar y cómo se revisa ---------- */
+.cl-rejilla { display: grid; gap: 26px; margin-bottom: 30px; }
+@media (min-width: 980px) { .cl-rejilla { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; gap: 30px; } .cl-lado { position: sticky; top: calc(var(--header-h) + 16px); } }
+.oc-colabora-form { display: grid; gap: 18px; min-width: 0; padding: 22px clamp(16px, 3vw, 28px) 26px; border-radius: 20px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06), 0 12px 26px -18px rgb(20 6 30 / .35); }
+.oc-colabora-form .nx-h { margin: 0; }
+.oc-colabora-fila { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.oc-colabora-form .oc-field { min-width: 0; }
+.oc-colabora-form .oc-field label { font-size: .8rem; }
+.oc-colabora-form .oc-field label small { font-size: .85rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
+.oc-colabora-form .oc-field > small { display: block; margin-top: 2px; color: var(--muted); font-size: .85rem; }
+.oc-colabora-form .oc-field input, .oc-colabora-form .oc-field select { border-color: var(--field-line); background-color: var(--bg); }
+.oc-colabora-form .oc-field select { height: 48px; padding-left: 20px; border-radius: 999px; font-size: 16px; }
+.oc-colabora-form textarea { display: block; width: 100%; min-height: 9rem; padding: 14px 20px; border: 1px solid var(--field-line); border-radius: 20px; background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; resize: vertical; transition: border-color var(--m-rapido) var(--e-salida), box-shadow var(--m-rapido) var(--e-salida); }
+.oc-colabora-form textarea::placeholder, .oc-colabora-form input::placeholder { color: var(--muted); opacity: 1; }
+.oc-colabora-form .oc-field :is(input, select, textarea):focus { border-color: var(--primary); outline: 2px solid var(--primary); outline-offset: 2px; box-shadow: none; }
+/* la flecha de los desplegables también se lee en oscuro */
+:root[data-theme="dark"] .oc-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8adc2' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8adc2' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); } }
+.oc-colabora-form > div > .oc-btn { --tc: color-mix(in oklab, #2b1140 78%, #12061c); min-height: 50px; padding-inline: 24px; border: 0; border-radius: 999px; background: radial-gradient(120% 130% at 10% -30%, rgb(255 214 150 / .22), transparent 60%), var(--tc); color: #fbf6ee; box-shadow: inset 0 0 0 1px rgb(236 211 147 / .6), 0 10px 20px -14px rgb(20 6 30 / .7); transition: transform var(--m-suelta) var(--e-salida), box-shadow var(--m-rapido) var(--e-salida), opacity var(--m-rapido) var(--e-salida); }
+.oc-colabora-form > div > .oc-btn .oc-i { color: var(--oro-claro); transition: transform var(--m-suelta) var(--e-salida); }
+.oc-colabora-form > div > .oc-btn:active { transform: scale(.97); transition-duration: var(--m-toque); }
+.oc-colabora-form > div > .oc-btn:disabled { opacity: .65; cursor: progress; }
+@media (hover: hover) and (pointer: fine) { .oc-colabora-form > div > .oc-btn:hover .oc-i { transform: translateX(4px); } }
+.oc-trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.oc-colabora-estado { margin: 0; padding: 14px 16px; border: 1px solid var(--field-line); border-radius: 14px; font-weight: 600; }
+.oc-colabora-estado.is-ok { border-color: #2f7d4f; background: color-mix(in srgb, #2f7d4f 10%, transparent); }
+.oc-colabora-estado.is-error { border-color: #b3261e; background: color-mix(in srgb, #b3261e 9%, transparent); }
+.oc-colabora-estado:focus { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.cl-lado { display: grid; gap: 22px; min-width: 0; }
+.cl-lista { list-style: none; display: grid; gap: 10px; margin: 0; padding: 0; }
+.cl-lista li { position: relative; padding-left: 20px; line-height: 1.5; }
+.cl-lista li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold-ink); }
+.cl-revisa { --tc: color-mix(in oklab, #2b1140 78%, #12061c); position: relative; isolation: isolate; overflow: hidden; padding: 20px 20px 38px; border-radius: 20px; color: #fbf6ee;
+  background: radial-gradient(120% 130% at 10% -30%, rgb(255 214 150 / .22), transparent 60%), linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%), var(--tc); box-shadow: 0 12px 24px -18px rgb(20 6 30 / .6); }
+.cl-revisa::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--grano) 0 0 / 96px 96px; opacity: .5; pointer-events: none; }
+.cl-revisa::after { content: ""; position: absolute; inset: auto 0 10px; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; opacity: .85; pointer-events: none; }
+.cl-revisa h2 { margin: 0 0 8px; font: 400 clamp(1.5rem, 1.3rem + .8vw, 1.9rem)/1.05 var(--display); letter-spacing: .05em; text-transform: uppercase; color: var(--oro-claro); }
+.cl-revisa p { margin: 0; line-height: 1.5; color: rgb(251 246 238 / .92); }
+@media (prefers-reduced-motion: no-preference) {
+  .oc-colabora-form { animation: nx-sube var(--m-entrada) var(--e-salida) 60ms both; }
+  .cl-lado { animation: nx-sube var(--m-entrada) var(--e-salida) 120ms both; }
 }

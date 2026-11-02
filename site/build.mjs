@@ -1358,16 +1358,17 @@ function pageColabora() {
   // destino del formulario: Web3Forms si hay clave; con FORMULARIO_DESTINO=api, la función /api/sugerencias de Cloudflare (D1)
   const destino = process.env.FORMULARIO_DESTINO === 'api' ? 'api' : FORM_CLAVE ? 'web3forms' : '';
   const opc = (xs) => xs.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('');
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Colabora</h1><p class="oc-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntanoslo aquí: no hace falta registrarse. Cada aportación se revisa con su fuente antes de publicarla.</p></header>
-<style>.oc-colabora-form{display:grid;gap:18px;max-width:46rem;margin-block:8px 32px}.oc-colabora-fila{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}.oc-colabora-form textarea{width:100%;min-height:9rem;padding:12px 14px;border:1px solid var(--field-line);border-radius:var(--r);background:var(--bg);color:var(--ink);font:inherit;resize:vertical}.oc-colabora-form .oc-field small{color:var(--muted);font-size:.85rem}.oc-trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.oc-colabora-estado{padding:14px 16px;border-radius:var(--r);border:1px solid var(--field-line);font-weight:600}.oc-colabora-estado.is-ok{border-color:#2f7d4f;background:color-mix(in srgb,#2f7d4f 10%,transparent)}.oc-colabora-estado.is-error{border-color:#b3261e;background:color-mix(in srgb,#b3261e 9%,transparent)}.oc-colabora-estado:focus{outline:2px solid var(--ink);outline-offset:2px}</style>
+  const body = `<header class="nx-head vx-head cl-head" data-head-capital><div class="nx-head-in"><h1 class="oc-title nx-title">Colabora</h1><p class="nx-lead">Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntanoslo aquí: no hace falta registrarse. Cada aportación se revisa con su fuente antes de publicarla.</p></div></header>
+<div class="cl-rejilla">
 <form class="oc-colabora-form" data-colabora data-destino="${destino}"${FORM_CLAVE ? ` data-clave="${esc(FORM_CLAVE)}"` : ''} novalidate>
+  <h2 class="nx-h">Tu aportación</h2>
   <p class="oc-note" data-pagina-aviso hidden>Sobre la página <span></span></p>
   <div class="oc-colabora-fila">
     <div class="oc-field"><label for="c-tipo">Qué quieres enviar</label><select id="c-tipo" name="tipo">${opc([['Corrección', 'Una corrección'], ['Dato nuevo', 'Un dato nuevo'], ['Foto', 'Una foto o su enlace'], ['Otra cosa', 'Otra cosa']])}</select></div>
     <div class="oc-field"><label for="c-capital">Capital</label><select id="c-capital" name="capital"><option value="">General o varias</option>${D.capitales.map((x) => `<option value="${x.slug}">${esc(x.nombre)}</option>`).join('')}</select></div>
   </div>
   <div class="oc-field"><label for="c-herm">Hermandad, banda o página <small>(opcional)</small></label><input id="c-herm" name="hermandad" maxlength="120" autocomplete="off" list="c-herms"><datalist id="c-herms">${D.hermandades.map((h) => `<option value="${esc(h.nombre)}">`).join('')}</datalist></div>
-  <div class="oc-field"><label for="c-msg">Tu aportación</label><textarea id="c-msg" name="mensaje" maxlength="2000" required placeholder="Qué hay que corregir o añadir. Cuanto más concreto, mejor."></textarea></div>
+  <div class="oc-field"><label for="c-msg">Qué quieres contarnos</label><textarea id="c-msg" name="mensaje" maxlength="2000" required placeholder="Qué hay que corregir o añadir. Cuanto más concreto, mejor."></textarea></div>
   <div class="oc-colabora-fila">
     <div class="oc-field"><label for="c-fuente">Enlace a la fuente <small>(opcional)</small></label><input id="c-fuente" name="fuente" type="url" inputmode="url" maxlength="300" placeholder="https://"><small>Web de la hermandad, prensa o redes oficiales.</small></div>
     <div class="oc-field"><label for="c-correo">Tu correo, si quieres respuesta <small>(opcional)</small></label><input id="c-correo" name="correo" type="email" maxlength="120" autocomplete="email"><small>Solo para contestarte. No se publica.</small></div>
@@ -1377,11 +1378,12 @@ function pageColabora() {
   <div><button class="oc-btn" type="submit">Enviar aportación${icon('arrow')}</button></div>
   <p class="oc-colabora-estado" data-estado role="status" aria-live="polite" tabindex="-1" hidden></p>
 </form>
-<div class="oc-prose">
-<h2 class="oc-h2">Qué se puede aportar</h2>
-<ul><li>Bandas que acompañan a cada paso este año (con el enlace del anuncio de la hermandad).</li><li>Cultos, traslados, rosarios y salidas extraordinarias con fecha y hora.</li><li>Marchas dedicadas: título, compositor, año y formación.</li><li>Hábito de nazareno, imagineros, fotos con licencia libre y datos históricos de una hermandad.</li></ul>
-<h2 class="oc-h2">Cómo se revisa</h2>
-<p>Todo dato nuevo necesita una fuente que se pueda consultar. Los actos detectados automáticamente se muestran sin la marca «Confirmado» hasta que alguien comprueba el horario. Tu correo, si lo das, solo se usa para responderte.</p>
+<aside class="cl-lado">
+<section><h2 class="nx-h">Qué se puede aportar</h2>
+<ul class="cl-lista"><li>Bandas que acompañan a cada paso este año (con el enlace del anuncio de la hermandad).</li><li>Cultos, traslados, rosarios y salidas extraordinarias con fecha y hora.</li><li>Marchas dedicadas: título, compositor, año y formación.</li><li>Hábito de nazareno, imagineros, fotos con licencia libre y datos históricos de una hermandad.</li></ul></section>
+<section class="cl-revisa"><h2>Cómo se revisa</h2>
+<p>Todo dato nuevo necesita una fuente que se pueda consultar. Los actos detectados automáticamente se muestran sin la marca «Confirmado» hasta que alguien comprueba el horario. Tu correo, si lo das, solo se usa para responderte.</p></section>
+</aside>
 </div>`;
   write('colabora/index.html', layout({ title: 'Colabora', desc: 'Cómo avisar de un error o aportar un dato a Ocho Capitales.', body, path: 'colabora/', head: `<script src="${u('assets/colabora.js')}?v=${HUELLA.colabora}" defer></script>`, crumbs: [['Portada', u()], ['Colabora', '']] }));
 }
