@@ -135,3 +135,17 @@ Pablo, en su iPhone: «en la portada, al clicar en la capital tarda bastante».
 | Noticias, plano | 3 | 1 |
 
 FCP y LCP varían ±1 s entre pasadas en esta máquina, así que no se comparan. Lo medible y estable es la petición de menos por página.
+
+## RETOMAR AQUÍ (martes 3-nov, desde las 16:00)
+Encargo de coordinación: aligerar las tres plantillas con más nodos: Hermandades (3.818), Hoy (3.224) y Calendario (3.115).
+1. **Medir antes:** INP y tiempo hasta poder tocar, en WebKit y en Chromium con la CPU 4×. Hacer 5 pasadas por caso y quedarse con la mediana, porque los tiempos varían ±1 s.
+   - Scripts de medida en el scratchpad, carpeta `pw/`: `tabla.mjs`, `anim.mjs`, `cascada.mjs` y `safari.mjs`.
+   - Playwright 1.48.2 y WebKit ya están instalados allí. Usar Chrome con `NAVEGADOR`.
+2. **Probar primero** `content-visibility: auto` con `contain-intrinsic-size` en las secciones por día o por capital.
+3. **Si no basta,** pintar el resto bajo demanda, como en Marchas, sin romper:
+   - el buscador de la página;
+   - los enlaces con `#ancla`;
+   - el uso sin JavaScript.
+4. **Coordinarse con Diseño (sobremesa):** ha rediseñado Hoy y Calendario. Solo rendimiento, sin cambiar el aspecto.
+5. **Para subir:** auditor-web, prueba de humo, comprobación a 390 y 1440 px, y avisar al subir.
+- **Pendiente de otros:** Portada publica el toque más rápido en las banderas (`304b091`) con el sí de Pablo, y aligera `data/calle` (causa 3).
