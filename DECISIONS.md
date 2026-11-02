@@ -474,5 +474,11 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 - **Descartado:** tocar `.oc-ev*` de forma global, porque también lo usa la agenda de la portada, cuyo plano y portada no son de este equipo. Va acotado con `:is(.cx-lista, .oc-miss)`.
 - **Descartado:** corregir el orden de paso de Sevilla en la plantilla; viene de `orden` en los datos y se ha pasado a Coordinación.
 
+## Buscar, Favoritos, Colabora y hora de carrera (2-nov, oc-diseno, auditor-diseno APTO en las cuatro)
+- **Hora de carrera en vez de solo la salida:** el orden de paso es el de carrera oficial, así que esa hora va en oro con su etiqueta y la salida debajo. **Descartado** dejar las dos al mismo tamaño: no se veía cuál explica el orden. Sin dato (seis capitales y las vísperas), solo la salida. Las salidas extra no heredan la carrera (`!h.extra`).
+- **Buscar sin cifras en la cabecera:** ya están en los accesos; repetirlas no aportaba nada. Al escribir no se anima nada porque se repinta con cada letra.
+- **Favoritos:** `window.ocIcs` estaba dentro del bloque del Calendario y en Favoritos no existía, de modo que «Descargar mi Semana Santa» no hacía nada; ahora es global. «Mi Semana Santa» se recalcula al quitar y el foco pasa a la fila vecina.
+- **Colabora:** estilos en línea pasados a `vida.css`; `colabora.js` sin tocar. Las pruebas interceptan `api.web3forms.com`: nunca se envía nada de verdad.
+
 ## RETOMAR AQUÍ (2-nov, sesión oc-diseno del sobremesa)
-`EQUIPO/` y la nota del proyecto no se pueden editar desde este worktree, así que el punto de retomar queda aquí. Sigue: Buscar (hecha, pendiente del auditor y del sí de Pablo), Favoritos (estado vacío que invite a guardar, `Quitar`) y Colabora (sin tocar `data-colabora` ni su lógica). Sin hacer de P2/P3: 5 transiciones de ancho/alto en `site.css`, pestaña activa en fichas, colores de `vida.css` a tokens, contraste de `.nx-pulso b` en Noticias, pasada completa final.
+`EQUIPO/` y la nota del proyecto no se pueden editar desde este worktree, así que el punto de retomar queda aquí. Las cinco páginas están hechas. Sin hacer de P2/P3: 5 transiciones de ancho/alto en `site.css`, pestaña activa en fichas, colores de `vida.css` a tokens, contraste de `.nx-pulso b` en Noticias, enlaces del pie de 36 px, pasada completa final.

@@ -8,6 +8,7 @@ ok = []
 def check(c, t): ok.append(bool(c)); print(('OK   ' if c else 'FALLO') + ' ' + t)
 TACTIL = """(sel) => [...document.querySelectorAll(sel)].filter(e => e.offsetParent).map(e => { const r = e.getBoundingClientRect(); return [Math.round(r.width), Math.round(r.height), (e.textContent || e.getAttribute('aria-label') || '').trim().slice(0, 24)]; }).filter(([w, h]) => h < 44 || w < 44)"""
 OCULTO = """() => [...document.querySelectorAll('.hy-cap, .cx-dia, .cx-lista .oc-ev, .hy-curio, .cx-suscribe')].filter(e => e.offsetParent && +getComputedStyle(e).opacity < .5).length"""
+ORDEN = """() => [...document.querySelectorAll('#cal-sevilla .cx-dia')].flatMap(d => { const hs = [...d.querySelectorAll('.hy-horas')].filter(x => x.querySelector('.hy-hora-et').textContent === 'Carrera').map(x => { const [h, m] = x.querySelector('time').textContent.split(':').map(Number); return (h < 7 ? h + 24 : h) * 60 + m; }); return hs.some((v, i) => i && v < hs[i - 1]) ? [d.querySelector('h4').textContent] : []; })"""
 def errores(pg):
     err = []
     pg.on('console', lambda m: err.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)
@@ -51,7 +52,12 @@ with sync_playwright() as p:
             pg.locator('.oc-mday.has-ev').first.click(); pg.wait_for_timeout(300)
             check('eventos del' in pg.locator('[data-agenda-list-title]').inner_text().lower(), f'{tag} Calendario: elegir un día')
             pg.locator('[data-agenda-reset]').click(); pg.wait_for_timeout(200)
+            pg.locator('#caltab-sevilla').click(); pg.wait_for_timeout(300)
+            ord_mal = pg.evaluate(ORDEN)
+            check(not ord_mal, f'{tag} Sevilla: las horas de carrera van en orden {ord_mal[:3]}')
+            check('La Campana' in pg.locator('#cal-sevilla .hy-carrera').inner_text() and pg.locator('#cal-sevilla .hy-hora-et', has_text='Carrera').count() > 40, f'{tag} Sevilla: carrera con etiqueta y lugar')
             pg.locator('#caltab-cadiz').click(); pg.wait_for_timeout(300)
+            check(pg.locator('#cal-cadiz .hy-hora-et', has_text='Carrera').count() == 0 and pg.locator('#cal-cadiz .hy-carrera').count() == 0, f'{tag} Cádiz: sin dato de carrera no se inventa')
             check(pg.locator('#cal-cadiz').is_visible() and pg.locator('[data-cal]:not([hidden])').count() == 1 and pg.locator('#cal-cadiz .hy-paso li').count() > 5, f'{tag} Calendario: orden de paso de Cádiz')
             t = pg.evaluate(TACTIL, '[data-agenda-tipo] button, [data-agenda-ciudad] button, [data-month-prev], [data-month-next], .cx-ics a, .cx-captabs a, .oc-mday.has-ev')
             check(not t, f'{tag} Calendario: zonas táctiles de 44 px {t[:3]}')
