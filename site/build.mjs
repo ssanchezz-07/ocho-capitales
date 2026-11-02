@@ -868,6 +868,14 @@ function byDay(list) {
   return Object.entries(g).sort((a, b) => dayIdx(a[0]) - dayIdx(b[0])).map(([d, hs]) => [d, hs.sort((a, b) => a.orden - b.orden)]);
 }
 
+// Fuentes de la historia y de la cifra oficial de hermandades de la capital, con el formato de las fichas
+function fuentesCap(c) {
+  const li = (url, txt, que) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(txt)}</a><span>${que}</span></li>`;
+  const items = (c.intro_fuentes || []).map((url) => li(url, /wikipedia\.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : new URL(url).hostname.replace(/^www\./, ''), 'historia'));
+  if (c.cifra) items.push(li(c.cifra.fuente[1], c.cifra.fuente[0], 'cifra de hermandades'));
+  return items.length ? `<ul class="oc-fuentes">${items.join('')}</ul>` : '';
+}
+
 function pageCapital(c) {
   const hs = hermsOf(c.slug);
   const groups = byDay(conSalidas(hs));
@@ -891,7 +899,7 @@ ${fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')) ? `<a cl
 ${groups.map(([d, list]) => `<section class="oc-section oc-day" id="${slugify(d)}"><h2 class="oc-h2">${esc(d)} <small>${plural(list.length, 'hermandad', 'hermandades')}</small></h2><ol class="oc-entries is-ordered">${list.map((h) => entryHerm(h, '', true)).join('')}</ol></section>`).join('')}
 </div>
 <aside class="oc-split-side">
-<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div></section>
+<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div>${fuentesCap(c)}</section>
 ${section('Datos clave', datos)}
 ${section('Imprescindibles', claves)}
 ${section('Bandas y música', chips(bandas.map((b) => [b.nombre, u('banda/' + b.slug + '/')])))}
