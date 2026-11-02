@@ -49,6 +49,8 @@ try {
       const t = Date.now();
       await p.locator(`.oc-tabbar a[href="${new URL(destino).pathname}"]`).first().click({ timeout: LIM.toque, noWaitAfter: true }).catch(() => e.push('la barra de abajo no se puede tocar (algo la tapa)'));
       await p.waitForURL((u) => u.href === destino, { timeout: LIM.toque, waitUntil: 'commit' }).then(() => { if (Date.now() - t > LIM.toque) e.push('el toque tarda ' + (Date.now() - t) + ' ms'); }).catch(() => e.push(`un toque en la barra de abajo no lleva a ${new URL(destino).pathname} en ${LIM.toque} ms`));
+      // se espera a que cargue la página de destino: cerrar la pestaña a media carga deja colgado al navegador de pruebas
+      await p.waitForLoadState('load', { timeout: 45000 }).catch(() => {});
     }
     // Marchas: elegir una capital tiene que dar resultados (descarga la lista completa)
     if (nombre === 'Marchas') {
