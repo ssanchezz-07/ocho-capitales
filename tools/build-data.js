@@ -20,14 +20,16 @@ const CITY_NAMES = { sevilla:'Sevilla', malaga:'Málaga', granada:'Granada', cor
 
 // Cifra oficial de hermandades de cada capital (revisada el 2-nov-2026 en la nómina de su consejo, federación o agrupación).
 // Es la que se enseña en /capitales/, en la cabecera de cada capital, en sus datos clave y en el buscador. «web» explica
-// por qué la web tiene más fichas que la cifra oficial. La cifra de bandas no se enseña (decisión de Pablo).
+// por qué la web tiene más fichas que la cifra oficial.
+// Córdoba: la página de agrupadas muestra el contador «3» encima de 4 fichas (Lágrimas, Presentación, Dolores de Alcolea
+// y La O); se cuentan las 4 fichas. Sevilla: la lista está en las páginas por día que cuelgan de la URL de la fuente. La cifra de bandas no se enseña (decisión de Pablo).
 const CIFRAS = {
   sevilla: { n: 71, nombre: 'hermandades', texto: '71 de penitencia en el Consejo: 60 de Domingo de Ramos a Resurrección y 11 en las Vísperas, el Viernes de Dolores y el Sábado de Pasión', fuente: ['Consejo General de Hermandades y Cofradías', 'https://www.hermandades-de-sevilla.org/hermandades/penitencia/'], web: 'La Borriquita tiene ficha propia, aunque sale con la Hermandad del Amor.' },
-  malaga: { n: 43, nombre: 'hermandades', texto: '43 en la Agrupación de Cofradías, que sacan 45 cofradías a la calle (las Fusionadas salen tres días)', fuente: ['Agrupación de Cofradías', 'https://agrupaciondecofradias.com/hermandades/'], web: 'Recoge también 8 cofradías de las Vísperas que no pertenecen a la Agrupación.' },
+  malaga: { n: 43, nombre: 'hermandades', texto: '43 en la Agrupación de Cofradías, contando las Fusionadas como una sola; en la calle son 45 cofradías, porque las Fusionadas salen tres días', fuente: ['Agrupación de Cofradías', 'https://agrupaciondecofradias.com/hermandades/'], web: 'Recoge también 8 cofradías de las Vísperas que no pertenecen a la Agrupación.' },
   granada: { n: 32, nombre: 'cofradías', texto: '32 en la Real Federación, que forman 34 cortejos', fuente: ['Real Federación de Hermandades y Cofradías', 'https://hermandadesdegranada.com/'], web: 'La Cañilla tiene dos fichas: la del Martes Santo y la de los Facundillos, el Domingo de Resurrección.' },
   cordoba: { n: 42, nombre: 'hermandades', texto: '42 en la Agrupación: 38 en la carrera oficial por días y 4 agrupadas que procesionan aparte', fuente: ['Agrupación de Hermandades y Cofradías', 'https://www.hermandadesdecordoba.es/hermandades-agrupadas/'], web: 'Recoge también la Sangre de El Higuerón y la pro-hermandad del Traslado al Sepulcro, que no pertenecen a la Agrupación.' },
   cadiz: { n: 31, nombre: 'hermandades', texto: '31 de penitencia en el Consejo Local: 29 de Domingo de Ramos a Resurrección y 2 en las Vísperas', fuente: ['Consejo Local de Hermandades y Cofradías', 'https://consejocofradiascadiz.es/hermandades-y-cofradias-penitencia'], web: 'Recoge también Ecce Mater Tua y la Humillación, que no figuran en la nómina del Consejo.' },
-  huelva: { n: 27, nombre: 'hermandades', texto: '27 de penitencia en el Consejo: 26 de Domingo de Ramos a Resurrección y 1 en las Vísperas', fuente: ['Consejo de Hermandades y Cofradías', 'https://consejohermandadeshuelva.es/'], web: 'Recoge también La Bendición, del Sábado de Pasión, que no figura en la nómina del Consejo.' },
+  huelva: { n: 27, nombre: 'hermandades', texto: '27 de penitencia en el Consejo: 26 de Domingo de Ramos a Resurrección y 1 en las Vísperas', fuente: ['Consejo de Hermandades y Cofradías', 'https://consejohermandadeshuelva.es/hermandades-semana-santa-huelva/'], web: 'Recoge también La Bendición, del Sábado de Pasión, que no figura en la nómina del Consejo.' },
   almeria: { n: 22, nombre: 'hermandades', texto: '22 de penitencia en la Agrupación: 21 de Domingo de Ramos a Resurrección y 1 el Sábado de Pasión', fuente: ['Agrupación de Hermandades y Cofradías', 'https://cofradiasdealmeria.es/penitencia/'], web: 'Recoge también el vía crucis del Cristo de la Escucha, que no figura en la nómina de la Agrupación.' },
   jaen: { n: 21, nombre: 'cofradías', texto: '21 de Pasión en la Agrupación, de Domingo de Ramos a Resurrección', fuente: ['Agrupación de Cofradías y Hermandades', 'https://cofradiasjaen.org/'], web: '' },
 };
@@ -483,6 +485,34 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
     l.sort((a, b) => a.orden - b.orden).forEach((h, i) => { h.orden = i + 1; });
   }
 }
+// Un templo, un nombre (revisado el 2-nov-2026 en la ficha oficial de cada hermandad en su consejo, federación o agrupación).
+// No se unifican templos distintos con nombre parecido: en Sevilla, la Capilla de San Andrés (Panaderos) no es la parroquia,
+// ni San Antonio de Padua del Buen Fin es la parroquia de Torreblanca; en Granada, el Corpus Christi del Zaidín no es el de la Magdalena.
+const TEMPLOS = {
+  malaga: {
+    'Parroquia de la Santa Cruz y San Felipe Neri (Centro Histórico)': 'Parroquia de la Santa Cruz y San Felipe Neri (calle Gaona)',
+    'Parroquia de la Santa Cruz y San Felipe Neri (El Molinillo)': 'Parroquia de la Santa Cruz y San Felipe Neri (calle Gaona)',
+    'Basílica de Santa María de la Victoria (La Victoria)': 'Basílica y Real Santuario de Santa María de la Victoria (La Victoria)',
+  },
+  granada: {
+    'Iglesia de Santo Domingo (Realejo)': 'Iglesia de Santo Domingo',
+    'San Pedro y San Pablo (Albaicín)': 'Iglesia de San Pedro y San Pablo', 'San Pedro y San Pablo': 'Iglesia de San Pedro y San Pablo', 'San Pedro y San Pablo (Paseo de los Tristes)': 'Iglesia de San Pedro y San Pablo',
+    'Iglesia de San Gil y Santa Ana (Plaza Nueva)': 'Iglesia de San Gil y Santa Ana', 'San Gil y Santa Ana': 'Iglesia de San Gil y Santa Ana',
+  },
+  cordoba: {
+    'Parroquia de San Lorenzo': 'Real Parroquia de San Lorenzo Mártir', 'Iglesia de San Lorenzo': 'Real Parroquia de San Lorenzo Mártir',
+    'Parroquia de San José y Espíritu Santo (Campo de la Verdad)': 'Parroquia de San José y Espíritu Santo',
+    'Iglesia de San Andrés': 'Parroquia de San Andrés Apóstol',
+  },
+  cadiz: { 'Iglesia de la Merced': 'Parroquia de la Merced', 'Iglesia de Santiago Apóstol': 'Iglesia de Santiago' },
+  huelva: {
+    'Parroquia de San Pedro': 'Parroquia Mayor de San Pedro',
+    'Parroquia del Sagrado Corazón (Polvorín)': 'Parroquia del Sagrado Corazón de Jesús (El Polvorín)', 'Parroquia del Sagrado Corazón': 'Parroquia del Sagrado Corazón de Jesús (El Polvorín)',
+  },
+  almeria: { 'Iglesia de San Ildefonso': 'Parroquia de San Ildefonso' },
+  jaen: { 'Basílica Menor de San Ildefonso': 'Basílica de San Ildefonso', 'Basílica Parroquial de San Ildefonso': 'Basílica de San Ildefonso' },
+};
+for (const h of hermandades) { const t = (TEMPLOS[h.ciudad] || {})[h.sede]; if (t) h.sede = t; }
 const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });

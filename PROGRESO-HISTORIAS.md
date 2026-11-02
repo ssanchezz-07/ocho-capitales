@@ -70,3 +70,19 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
 - Historias vacías (0): —
 - Historias de menos de 200 caracteres (8): caridad-y-salud-jaen, la-amargura-jaen, la-buena-muerte-jaen, la-lanzada-jaen, la-expiracion-jaen, nuestro-padre-jesus-el-abuelo-jaen, la-soledad-jaen, el-santo-sepulcro-jaen
 
+
+## Hecho el 2-nov (rama `claude/historias`, sin subir a main)
+- `ec9ec20` Cifras oficiales (auditor-datos: APTO con 5 reparos menores, arreglados en el commit de templos).
+- `17fd3d9` Historia de las 8 capitales revisada frase a frase contra Wikipedia (texto plano de la API, buscado frase a frase) y, en Huelva y Almería, la fuente oficial. Fuentes bajo «Historia» en cada capital (`fuentesCap` en `site/build.mjs`, campo `intro_fuentes`).
+- Templos: tabla `TEMPLOS` en `tools/build-data.js` (15 grupos unificados con el nombre de la ficha oficial de cada hermandad). Reparos del auditor: Málaga (cómo sale el 43), Huelva (URL con la lista), nota de Córdoba (contador «3» sobre 4 fichas), chips de /hermandades/ etiquetados como «fichas en la web».
+
+## Pendiente para otras sesiones (no son de esta)
+- **Rutas:** `site/data/sedes/*.json` y `site/data/planos/*.json` usan los nombres viejos de templo en el plano (p. ej. Córdoba «Iglesia de San Lorenzo»). Conviene aplicar la tabla `TEMPLOS`.
+- **Datos/rutas:** Almería, El Calvario: la Agrupación lo pone en Lunes Santo y la web en Miércoles Santo.
+- Jaén: la Agrupación enlaza «Oración en el Huerto» y «Vera Cruz» a la misma página; la web tiene dos fichas. Confirmar que son dos cofradías.
+
+## RETOMAR AQUÍ (fase 3: historias de hermandades)
+1. Lista de partida: el recuento de arriba (historias de menos de 200 caracteres por capital; 1 vacía: `humillacion-piedad-cadiz`, sin nombre oficial ni fuente propia salvo el PDF de Canal Sur).
+2. Método que ha funcionado: bajar el texto de la fuente (curl, o la API de Wikipedia `action=query&prop=extracts&explaintext=1`; Málaga y Huelva necesitan navegador) y buscar cada frase con grep. Sin fuente abierta → «pendiente», no se escribe.
+3. Por lotes de capital, cada uno con su commit y el `auditor-datos` (Sonnet, 20 al azar). Empezar por Sevilla (62 cortas, todas con ficha de Wikipedia).
+4. Las historias de hermandad salen de `tools/enrich-<capital>.js` y de `tools/sources/fichas-correcciones.json`; ver cómo se mezclan en `build-data.js` antes de tocar.
