@@ -212,13 +212,14 @@ for (const c of raw) {
 const cap1 = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 const HBY = new Map(hermandades.map((h) => [h.slug, h]));
 const V = COMP.visperas || {};
-for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) h.hora = c.hora; if (c.orden) h.orden = c.orden; h.dia_fuente = c.fuente; } }
+for (const c of V.correcciones_dia || []) { const h = HBY.get(c.slug); if (h) { h.dia = c.dia; if (c.hora) { h.hora = c.hora; h.hora_fuente = c.hora_fuente || c.fuente; } if (c.orden) h.orden = c.orden; h.dia_fuente = c.fuente; } }
 for (const s of V.salidas_extra || []) { const h = HBY.get(s.slug); if (h) (h.salidas = h.salidas || []).push({ dia: s.dia, titulares: s.titulares, hora: s.hora || '', sede: s.sede || '', nota: s.nota || '', fuente: s.fuente }); }
 for (const n of V.nuevas || []) {
   const slug = slugify(n.nombre + ' ' + n.ciudad);
   if (HBY.has(slug)) continue;
   const orden = hermandades.filter((h) => h.ciudad === n.ciudad && h.dia === n.dia).length + 1;
   const h = { slug, nombre: n.nombre, ciudad: n.ciudad, dia: n.dia, orden, sede: n.sede || '', fundacion: '', titulares: (n.titulares || []).map((t) => ({ nombre: t, autor: '', imaginero: '', atrib: false })), paso: n.paso || '', musica: n.musica || '', historia: '', nombre_oficial: n.nombre_oficial || '', fuente_url: n.fuente, web: '', imagen: null, marchas: [], musica_oficial: [], bandas: [], bandas_slugs: [], hora: n.hora || '', visperas: true };
+  if (n.hora) h.hora_fuente = n.hora_fuente || n.fuente;
   hermandades.push(h); HBY.set(slug, h);
 }
 
@@ -369,10 +370,11 @@ for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
   if (fs.existsSync(ITF)) {
     const IT = JSON.parse(fs.readFileSync(ITF, 'utf8')).hermandades;
     for (const h of hermandades) {
-      const e = IT[h.slug]; if (!e || h.hora) continue;
+      const e = IT[h.slug]; if (!e || h.hora_fuente) continue;
       const pts = e.tramos['cruz de guía'] || e.tramos.paso || Object.values(e.tramos)[0] || [];
       const s = pts.find((p) => p.hora && /salida/i.test(p.lugar)) || pts.find((p) => p.hora);
-      if (s && s === pts.find((p) => p.hora) && /salida/i.test(s.lugar)) { h.hora = s.hora; h.hora_fuente = e.fuente; }
+      // Sin hora, la toma; con hora sin fuente, solo la respalda si coincide con la salida del itinerario
+      if (s && s === pts.find((p) => p.hora) && /salida/i.test(s.lugar) && (!h.hora || h.hora === s.hora)) { h.hora = s.hora; h.hora_fuente = e.fuente; }
     }
   }
 }

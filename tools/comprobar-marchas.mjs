@@ -92,6 +92,11 @@ for (const m of U.marchas) {
   const OP = JSON.parse(fs.readFileSync(path.join(DIR, 'sources/orden-paso.json'), 'utf8')).jornadas;
   const J = new Map(); for (const h of P.hermandades) { const k = h.ciudad + '|' + h.dia; (J.get(k) || J.set(k, []).get(k)).push(h); }
   for (const k of Object.keys(OP)) if (!J.has(k)) errores.push(`orden-paso.json: jornada que no existe: ${k}`);
+  // toda hora publicada dice de dónde sale (y así de qué año es)
+  for (const h of P.hermandades) {
+    if (h.hora && !h.hora_fuente) errores.push(`${h.slug}: hora de salida ${h.hora} sin fuente`);
+    if (h.hora_carrera && !h.carrera_fuente) errores.push(`${h.slug}: hora de carrera ${h.hora_carrera} sin fuente`);
+  }
   let conCarrera = 0, sinCarrera = 0;
   for (const [k, l] of J) {
     l.sort((a, b) => a.orden - b.orden);

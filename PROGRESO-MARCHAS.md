@@ -1,5 +1,19 @@
 # Progreso · marchas (sesión especializada, desde 2026-10-25)
 
+## RETOMAR AQUÍ (2026-11-02, tarde)
+**Hecho y subido:** las 19 horas que no tenían `hora_fuente` (reserva del auditor de diseño, 78d7a23) ya la tienen.
+- Se cotejó cada una con su fuente de 2026 y no cambió ninguna hora. Málaga: malagaguia y El Español. Córdoba: Cordópolis, y para la Presentación al Pueblo el itinerario oficial. Huelva: 1minutohuelva y huelvabuenasnoticias. Almería: La Voz, cuya frase sobre La Unidad («La tarde empezará 19:30 horas») es la prueba más floja. Cádiz: el PDF de Canal Sur en copia local, salida de la cruz de guía.
+- El comprobador da error si una hora de salida o de carrera no tiene fuente. auditor-datos: APTO.
+
+**Pendiente:**
+- El enlace al PDF de Canal Sur de Cádiz (`…1774544876433CADIZ_26.pdf`) da 404 y lo usan muchas fichas de Cádiz. Hay que buscar otro enlace del mismo programa o enlazar una copia.
+- La Unidad (Almería): falta una segunda fuente; Movelia también da 19:30.
+- Plano de Cádiz (equipo de rutas): la salida es la del paso, unos 20 minutos más tarde que la de la cruz de guía.
+- `ANIO_HORARIOS` en `site/build.mjs`: subirlo al cargar los horarios de 2027.
+- **«¡A esta es!»** (Francisco González Peña y Feliciano Perejón, 2010, dedicada al Rosario de la Sagrada Cena de Huelva). Pablo dice que es de cornetas y tambores. La única base que la recoge con formación, Cofradías y Hermandades (`fichamarcha.php?mm=903504`), la da como agrupación musical. Patrimonio Musical y Marchas de Procesión no tienen esta marcha, y la búsqueda en la web no dio nada. **No se ha cambiado.** Hace falta una fuente, o que Pablo la confirme como músico, como se hizo con «El Día del Señor» (fuente `part`).
+  - Ojo: el comentario de Pablo del 1-nov («a esta es es de cornetas y tambores… se han hecho arreglos para banda de música y agrupación») se aplicó a «El Día del Señor». Ese cambio se sostiene porque Patrimonio Musical la da para «cornetas y tambores, agrupación musical o banda de música, indistintamente». Pero si Pablo se refería a «¡A esta es!», hay que revisarlo.
+- Formaciones que chocan entre bases: solo 2 marchas en las que Cofradías y Hermandades dice cornetas y tambores y la web dice agrupación musical. Son «Sentimiento Gitano» (Miraut, Gitanos de Granada; la web sigue al foro de Granada) y «Compasión» (Juan José Martín, Tres Caídas de Huelva; la web sigue a Marchas de Procesión). Las dos bases se contradicen y falta una tercera fuente, así que no se han cambiado. Ojo: el unificador no deja constancia de estos choques. Se queda con la primera formación y descarta la otra en silencio.
+
 Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a partir de sus bases de datos, sin inventar nada. Fuentes: las de `ORDENES-CORRECCION.md` §4 (Pablo, 2026-10-25: «esas deberían bastar de momento, pero hay que verificar autores, dedicatorias, etc.»).
 
 ## Cómo se trabaja
