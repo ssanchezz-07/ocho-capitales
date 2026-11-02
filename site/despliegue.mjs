@@ -46,10 +46,31 @@ function redPrimero(e, nombre, reserva) {
     red.then((res) => { clearTimeout(t); da(res); }, () => { clearTimeout(t); copia.then((m) => m || (reserva ? caches.match(reserva) : undefined)).then((m) => { da(m); if (!hecho) { hecho = true; ok(Response.error()); } }); });
   });
 }
+// Precarga para Safari (no tiene speculationrules): al apoyar el dedo en un enlace, la página pide aquí la siguiente
+// (cabecera X-OC-Precarga). Si se navega a ella en los 15 s siguientes, se sirve esa misma respuesta sin volver a esperar a la red.
+const RECIEN = new Map(), VIGENCIA = 15000;
+function precarga(e, url) {
+  const k = url.href.split('#')[0];
+  if (!RECIEN.has(k)) {
+    const p = fetch(k, { credentials: 'same-origin' }).then((res) => { guarda(PAGINAS, new Request(k), res); return res; });
+    RECIEN.set(k, { t: Date.now(), p });
+    p.catch(() => RECIEN.delete(k)); setTimeout(() => RECIEN.delete(k), VIGENCIA);
+    e.waitUntil(p.then(() => {}, () => {}));
+  }
+  return new Response(null, { status: 204 });
+}
 self.addEventListener('fetch', (e) => {
   const r = e.request; if (r.method !== 'GET') return;
   const url = new URL(r.url); if (url.origin !== location.origin || !url.pathname.startsWith(BASE)) return;
   if (url.pathname.startsWith(BASE + 'api/')) return;
+  if (r.headers.get('X-OC-Precarga')) { e.respondWith(precarga(e, url)); return; }
+  const pre = r.mode === 'navigate' && RECIEN.get(url.href.split('#')[0]);
+  if (pre && Date.now() - pre.t < VIGENCIA) {
+    RECIEN.delete(url.href.split('#')[0]);
+    if (e.preloadResponse) e.waitUntil(Promise.resolve(e.preloadResponse).catch(() => {}));
+    e.respondWith(pre.p.then((res) => (res.redirected ? fetch(r) : res)).catch(() => redPrimero(e, PAGINAS, BASE + 'offline/')));
+    return;
+  }
   if (r.mode === 'navigate') {
     // páginas: al día si hay red; con poca cobertura, la última copia; sin nada, la página de reserva
     e.respondWith(redPrimero(e, PAGINAS, BASE + 'offline/'));
@@ -87,7 +108,11 @@ export function escribeCabeceras({ DIST, BASE, SITE }) {
       'Strict-Transport-Security: max-age=31536000',
     ]],
     // siempre se piden con ?v=<huella> (build.mjs): una versión nueva es otra URL
-    ...['site.css', 'site.js', 'calle.js', 'plano.js', 'cunao.js', 'colabora.js'].map((f) => [b + 'assets/' + f, ['Cache-Control: ' + fijo]]),
+    // todo lo que se pide con ?v=<huella> (HUELLA en build.mjs): si cambia, cambia la dirección. Antes vida.css, portada.css y los
+    // del globo iban con max-age=0: en cada visita, una ida y vuelta para preguntar si habían cambiado (vida.css, además, frena el pintado)
+    ...['site.css', 'site.js', 'calle.js', 'plano.js', 'cunao.js', 'colabora.js', 'vida.css', 'portada.css', 'noticias.js', 'nazareno.js', 'globo.js', 'globo-datos.json']
+      .map((f) => [b + 'assets/' + f, ['Cache-Control: ' + fijo]]),
+    [b + 'assets/vendor/*', ['Cache-Control: ' + fijo]],
     [b + 'assets/fonts/*', ['Cache-Control: ' + fijo]],
     // imágenes con nombre fijo: una semana, y renovación en segundo plano durante un mes
     [b + 'assets/img/*', ['Cache-Control: public, max-age=604800, stale-while-revalidate=2592000']],

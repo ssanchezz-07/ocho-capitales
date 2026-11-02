@@ -215,11 +215,12 @@ a { text-underline-offset: .18em; }
 ::view-transition-old(root) { animation: 90ms cubic-bezier(.4, 0, 1, 1) both oc-vt-out; }
 ::view-transition-new(root) { animation: 200ms var(--e-salida) both vida-vt-entra; }
 @keyframes vida-vt-entra { from { opacity: 0; transform: translateY(6px); } }
-/* En el móvil, la cabecera y la barra inferior no desenfocan lo que pasa por debajo: es lo que más cuesta en cada fotograma del scroll */
+/* En el móvil, la cabecera y la barra inferior no desenfocan lo que pasa por debajo: es lo que más cuesta en cada fotograma del scroll.
+   Y sin desenfoque van opacas: al 97 % se transparentaba lo de debajo (en la portada, las letras de las banderas y «Toca una bandera…» sobre el logo) */
 @media (max-width: 759px), (pointer: coarse) {
   .oc-header, .oc-tabbar, .oc-daynav { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
-  .oc-header, .oc-tabbar { background: color-mix(in srgb, var(--surface) 97%, transparent) !important; }
-  .oc-daynav { background: color-mix(in srgb, var(--bg) 97%, transparent) !important; }
+  .oc-header, .oc-tabbar { background: var(--surface) !important; }
+  .oc-daynav { background: var(--bg) !important; }
 }
 
 /* ---------- 4. Listados con el lenguaje de Noticias: Marchas (.vx-*) ---------- */

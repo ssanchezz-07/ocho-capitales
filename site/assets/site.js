@@ -1367,5 +1367,22 @@
   // modo sin cobertura: copia de las páginas visitadas (service worker)
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', function () { navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(function () { }); });
+    // Precarga en Safari y demás navegadores sin speculationrules: al apoyar el dedo (o pasar el ratón) por un enlace de la web,
+    // el service worker pide ya la página y la sirve al soltar (sw.js, precarga). En Chrome lo hacen las reglas de la cabecera.
+    var sinReglas = !(window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules'));
+    if (sinReglas) {
+      var pedidas = {};
+      var precargar = function (e) {
+        if (!navigator.serviceWorker.controller) return;
+        var a = e.target && e.target.closest && e.target.closest('a[href]');
+        if (!a || a.target || a.hasAttribute('download') || a.origin !== location.origin || a.pathname.indexOf(BASE) !== 0) return;
+        if (/^(assets|data)\//.test(a.pathname.slice(BASE.length)) || /\.[a-z0-9]{2,5}$/i.test(a.pathname)) return;
+        var u = a.href.split('#')[0]; if (u === location.href.split('#')[0] || pedidas[u]) return;
+        pedidas[u] = 1; setTimeout(function () { delete pedidas[u]; }, 15000);
+        fetch(u, { headers: { 'X-OC-Precarga': '1' } }).catch(function () { delete pedidas[u]; });
+      };
+      document.addEventListener('touchstart', precargar, { passive: true });
+      document.addEventListener('mouseover', precargar, { passive: true });
+    }
   }
 })();
