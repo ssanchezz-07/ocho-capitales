@@ -488,7 +488,9 @@
     var plano = null, D = null, J = [], dia = '', T = 0, cargas = {}, vbAnd = svg ? datos.vb.split(' ').map(Number) : null, vbAhora = vbAnd ? vbAnd.slice() : null, animAnd = 0;
     var hoyISO = function () { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date()); };
     var ahoraMin = function () { var f = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
-    function cargarPlano() { if (window.OCPlano) return Promise.resolve(); return new Promise(function (ok, ko) { var s = document.createElement('script'); s.src = datos.plano; s.onload = ok; s.onerror = ko; document.head.appendChild(s); }); }
+    // una sola petición de plano.js aunque se pida a la vez al precargar y al tocar
+    var planoP = null;
+    function cargarPlano() { if (window.OCPlano) return Promise.resolve(); return planoP || (planoP = new Promise(function (ok, ko) { var s = document.createElement('script'); s.src = datos.plano; s.onload = ok; s.onerror = function (e) { planoP = null; ko(e); }; document.head.appendChild(s); })); }
     function datosCiudad(c) { return cargas[c] || (cargas[c] = traer(datos.ciudades[c].d).catch(function (e) { delete cargas[c]; throw e; })); }
     function fechaDe(d) { if (datos.fechas[d]) return datos.fechas[d]; var h = D.hermandades.filter(function (x) { return x.d === d && x.x; })[0]; return h ? h.x.fecha : '9999'; }
     function delDia(d) { return D.hermandades.filter(function (h) { return h.d === d; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); }
@@ -535,13 +537,14 @@
     window.addEventListener('resize', function () { if (actual) portada.style.height = alturaCiudad() + 'px'; });
     // la parte del plano que se ve: entre la cabecera de la portada y el pie, sin la columna de los controles
     function margenes() { var p = pieEl.getBoundingClientRect().height; portada.style.setProperty('--pie', Math.round(p) + 'px'); return { arriba: 58, abajo: Math.round(p) + 16, izq: 16, der: 64 }; }
-    // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial
+    // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial.
+    // Arranca deprisa y frena (responde al dedo en el mismo fotograma)
     function moverAnd(destino, ms) {
       if (!svg) return; cancelAnimationFrame(animAnd);
       if (calm || !ms) { vbAhora = destino.slice(); svg.setAttribute('viewBox', vbAhora.join(' ')); return; }
       var de = vbAhora.slice(), t0 = performance.now();
       (function paso(t) {
-        var k = Math.min(1, (t - t0) / ms), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        var k = cl((t - t0) / ms), e = 1 - Math.pow(1 - k, 3);
         var w = de[2] * Math.pow(destino[2] / de[2], e), h = w * vbAnd[3] / vbAnd[2], cx = de[0] + de[2] / 2 + (destino[0] + destino[2] / 2 - de[0] - de[2] / 2) * e, cy = de[1] + de[3] / 2 + (destino[1] + destino[3] / 2 - de[1] - de[3] / 2) * e;
         vbAhora = [cx - w / 2, cy - h / 2, w, h]; svg.setAttribute('viewBox', vbAhora.map(function (v) { return v.toFixed(2); }).join(' '));
         if (k < 1) animAnd = requestAnimationFrame(paso);
@@ -641,7 +644,8 @@
     var cl = function (x) { return Math.max(0, Math.min(1, x)); }, suave = function (k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
     // vuela de «de» a «a» (encuadres del plano, en metros): centro en línea y escala en exponencial, con el mapa siguiéndola
     // «hacia» puede ser una función: el destino se recalcula en cada fotograma (la portada cambia de alto mientras tanto)
-    function volarCamara(de, hacia, ms, ida, fin, refFijo) {
+    // «lanzado»: el mapa ya se estaba acercando, así que la cámara sale con velocidad y frena, sin pararse a arrancar de nuevo
+    function volarCamara(de, hacia, ms, ida, fin, refFijo, lanzado) {
       cancelAnimationFrame(vuelo);
       var t0 = performance.now(), Wc = plano.ancho(), prov = plano.provincia(), capas = plano.capas(), ref = refFijo || (ida ? null : { x: de.x, y: de.y, w: de.w }), fijo = !!ref;
       var quitarTransform = function () { capas.forEach(function (n) { n.style.transform = ''; n.style.willChange = ''; n.style.overflow = ''; }); };
@@ -651,7 +655,7 @@
       host.style.transition = 'none'; mapa.style.transition = 'none';
       (function paso(t) {
         if (!plano) return;
-        var k = ms ? Math.min(1, (t - t0) / ms) : 1, e = suave(k), R = rects(), q = R.h.height / R.h.width, a = typeof hacia === 'function' ? hacia() : hacia;
+        var k = ms ? cl((t - t0) / ms) : 1, e = lanzado ? 1 - Math.pow(1 - k, 3) : suave(k), R = rects(), q = R.h.height / R.h.width, a = typeof hacia === 'function' ? hacia() : hacia;
         var w = de.w * Math.pow(a.w / de.w, e), dcx = de.x + de.w / 2, dcy = de.y + de.w * q / 2, acx = a.x + a.w / 2, acy = a.y + a.w * q / 2;
         var c = { w: w, x: dcx + (acx - dcx) * e - w / 2, y: dcy + (acy - dcy) * e - w * q / 2 };
         // el relevo, por escala: del mapa al plano entre 4 y 1,4 veces el ancho de la ciudad; mientras no se ve, el plano no se pinta
@@ -693,6 +697,16 @@
           if (r1.width) emb.animate([{ transform: 'translate(' + (r0.left - r1.left) + 'px,' + (r0.top - r1.top) + 'px) scale(' + (r0.width / r1.width) + ')', transformOrigin: '0 0' }, { transform: 'none', transformOrigin: '0 0' }], { duration: 720, easing: 'cubic-bezier(.2,.8,.2,1)' });
         }
       }
+      // sin esperar a los datos: el mapa empieza ya a acercarse a la capital y la cámara sigue desde ahí cuando llegan
+      // (Pablo, 2-nov: en el iPhone tardaba en reaccionar al tocar una bandera)
+      var capT = (datos.caps || []).filter(function (k) { return k.s === c; })[0], tAcerca = 0;
+      if (!directo && svg && capT) {
+        // la capital, al centro de la parte del plano que se verá (los mismos márgenes que margenes(), con la altura de la ciudad)
+        var mR = svg.getBoundingClientRect(), pR = portada.getBoundingClientRect(), pieH = pieEl.getBoundingClientRect().height;
+        var vx = pR.left + 16 + (pR.width - 80) / 2, vy = pR.top + 58 + (alturaCiudad() - 58 - pieH - 16) / 2;
+        var wA = vbAnd[2] / 2.4, hA = wA * vbAnd[3] / vbAnd[2], cxA = capT.x / 100 * vbAnd[2], cyA = capT.y / 100 * vbAnd[3];
+        if (mR.width) { moverAnd([cxA - (vx - mR.left) / mR.width * wA, cyA - (vy - mR.top) / mR.height * hA, wA, hA], 900); tAcerca = performance.now(); }
+      }
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
         D = r[1]; host.textContent = ''; host.hidden = false; host.style.opacity = '0';
@@ -710,7 +724,7 @@
         // tirón); durante el vuelo solo se escala con «transform» desde ese dibujo
         var d0 = destino(); if (d0) plano.fijar(d0, true);
         host.style.opacity = '0.01';
-        requestAnimationFrame(function () { requestAnimationFrame(function () { if (actual !== c || !plano) return; cancelAnimationFrame(animAnd); volarCamara(andAPlano(vbAhora, rects()), destino, 1500, true, llegar, d0); }); });
+        requestAnimationFrame(function () { requestAnimationFrame(function () { if (actual !== c || !plano) return; cancelAnimationFrame(animAnd); volarCamara(andAPlano(vbAhora, rects()), destino, 1000, true, llegar, d0, tAcerca && performance.now() - tAcerca < 900); }); });
       }).catch(function () {
         if (actual !== c) return;
         resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
@@ -725,7 +739,7 @@
       pintarBanderas('', false); setCity('');
       var p0 = plano;
       var limpiar = function () {
-        if (actual) return; cancelAnimationFrame(vuelo);
+        if (actual) return; cancelAnimationFrame(vuelo); cancelAnimationFrame(animAnd);
         portada.classList.remove('is-plano', 'is-ciudad', 'is-acercando', 'is-sedes'); root.classList.remove('oc-en-ciudad');
         if (alturaAnd) { ponerAltura(alturaAnd, !desdeHistoria); setTimeout(function () { if (!actual) portada.style.height = ''; }, calm || desdeHistoria ? 0 : 440); } else portada.style.height = '';
         portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
@@ -744,6 +758,12 @@
     // el plano y los datos se piden ya al acercar el dedo o el ratón (o al enfocar), para que la cámara no tenga que esperar
     var precargar = function (c) { if (datos.ciudades && datos.ciudades[c]) { cargarPlano().catch(function () { }); datosCiudad(c).catch(function () { }); } };
     items.concat(puntos).forEach(function (el2) { var c = el2.dataset.colg || el2.dataset.punto; ['pointerdown', 'mouseenter', 'focus'].forEach(function (ev) { el2.addEventListener(ev, function () { precargar(c); }, { passive: true }); }); });
+    // plano.js (pequeño, el mismo para las ocho) se trae en un rato libre, cuando ya ha pasado la entrada del globo
+    if (datos.plano && !(navigator.connection && navigator.connection.saveData)) (function luego() {
+      if (root.classList.contains('oc-entrando') || $('.oc-globo')) return setTimeout(luego, 2000);
+      var ir = function () { cargarPlano().catch(function () { }); };
+      if (window.requestIdleCallback) requestIdleCallback(ir, { timeout: 5000 }); else setTimeout(ir, 2500);
+    })();
     window.addEventListener('popstate', function () { var c = location.hash.slice(1); if (datos.ciudades && datos.ciudades[c]) { if (c !== actual) { if (actual) salir(true); entrar(c, true); } } else salir(true); });
     portada.addEventListener('keydown', function (e) { if (e.key === 'Escape' && actual) salir(); });
 
