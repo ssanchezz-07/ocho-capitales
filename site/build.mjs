@@ -165,8 +165,8 @@ const DAY_ORDER = D.dias_orden;
 const dayIdx = (d) => { const i = DAY_ORDER.indexOf(d); return i < 0 ? 99 : i; };
 const imagSlug = (name) => (name ? slugify(name) : '');
 const hermsOf = (city) => D.hermandades.filter((h) => h.ciudad === city);
-// Cifra oficial de hermandades de la capital (la de su consejo o agrupación); si falta, las fichas de la web
-const cifraCap = (c) => (c.cifra ? plural(c.cifra.n, c.cifra.nombre === 'cofradías' ? 'cofradía' : 'hermandad', c.cifra.nombre) : plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'));
+// Hermandades de la capital: el total de la web con lo oficial entre paréntesis (CIFRAS en tools/build-data.js); si falta, las fichas
+const cifraCap = (c) => (c.cifra ? c.cifra.corto : plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'));
 const pages = [];
 
 import { createHash } from 'node:crypto';
