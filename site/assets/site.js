@@ -536,13 +536,16 @@
     function ponerAltura(h, animar) { var desde = portada.offsetHeight; portada.style.height = desde + 'px'; if (animar && !calm) void portada.offsetHeight; portada.style.height = h + 'px'; }
     window.addEventListener('resize', function () { if (actual) portada.style.height = alturaCiudad() + 'px'; });
     // la parte del plano que se ve: entre la cabecera de la portada y el pie, sin la columna de los controles
-    function margenes() { var p = pieEl.getBoundingClientRect().height; portada.style.setProperty('--pie', Math.round(p) + 'px'); return { arriba: 58, abajo: Math.round(p) + 16, izq: 16, der: 64 }; }
+    var pieUlt = 0;
+    function margenes() { var p = pieEl.getBoundingClientRect().height; pieUlt = Math.round(p); portada.style.setProperty('--pie', pieUlt + 'px'); return { arriba: 58, abajo: pieUlt + 16, izq: 16, der: 64 }; }
     // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial.
     // Arranca deprisa y frena (responde al dedo en el mismo fotograma)
+    var acerca = null;
     function moverAnd(destino, ms) {
-      if (!svg) return; cancelAnimationFrame(animAnd);
+      if (!svg) return; cancelAnimationFrame(animAnd); acerca = null;
       if (calm || !ms) { vbAhora = destino.slice(); svg.setAttribute('viewBox', vbAhora.join(' ')); return; }
       var de = vbAhora.slice(), t0 = performance.now();
+      acerca = { t0: t0, ms: ms, l: Math.log(destino[2] / de[2]) };
       (function paso(t) {
         var k = cl((t - t0) / ms), e = 1 - Math.pow(1 - k, 3);
         var w = de[2] * Math.pow(destino[2] / de[2], e), h = w * vbAnd[3] / vbAnd[2], cx = de[0] + de[2] / 2 + (destino[0] + destino[2] / 2 - de[0] - de[2] / 2) * e, cy = de[1] + de[3] / 2 + (destino[1] + destino[3] / 2 - de[1] - de[3] / 2) * e;
@@ -644,8 +647,11 @@
     var cl = function (x) { return Math.max(0, Math.min(1, x)); }, suave = function (k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
     // vuela de «de» a «a» (encuadres del plano, en metros): centro en línea y escala en exponencial, con el mapa siguiéndola
     // «hacia» puede ser una función: el destino se recalcula en cada fotograma (la portada cambia de alto mientras tanto)
-    // «lanzado»: el mapa ya se estaba acercando, así que la cámara sale con velocidad y frena, sin pararse a arrancar de nuevo
-    function volarCamara(de, hacia, ms, ida, fin, refFijo, lanzado) {
+    // la velocidad de zoom del acercamiento previo ahora mismo (logaritmo del ancho por milisegundo; 0 si ya acabó)
+    function velAnd() { if (!acerca) return 0; var k = (performance.now() - acerca.t0) / acerca.ms; return k >= 1 ? 0 : 3 * Math.pow(1 - cl(k), 2) * acerca.l / acerca.ms; }
+    // «v0»: el mapa ya se estaba acercando a esa velocidad; la cámara la hereda (curva de Hermite) y frena, sin escalón en el relevo
+    function volarCamara(de, hacia, ms, ida, fin, refFijo, v0) {
+      var a0 = typeof hacia === 'function' ? hacia() : hacia, lr = Math.log(a0.w / de.w), n = v0 && Math.abs(lr) > 1e-3 ? Math.max(0, Math.min(3, v0 * ms / lr)) : -1;
       cancelAnimationFrame(vuelo);
       var t0 = performance.now(), Wc = plano.ancho(), prov = plano.provincia(), capas = plano.capas(), ref = refFijo || (ida ? null : { x: de.x, y: de.y, w: de.w }), fijo = !!ref;
       var quitarTransform = function () { capas.forEach(function (n) { n.style.transform = ''; n.style.willChange = ''; n.style.overflow = ''; }); };
@@ -655,7 +661,7 @@
       host.style.transition = 'none'; mapa.style.transition = 'none';
       (function paso(t) {
         if (!plano) return;
-        var k = ms ? cl((t - t0) / ms) : 1, e = lanzado ? 1 - Math.pow(1 - k, 3) : suave(k), R = rects(), q = R.h.height / R.h.width, a = typeof hacia === 'function' ? hacia() : hacia;
+        var k = ms ? cl((t - t0) / ms) : 1, e = n >= 0 ? n * k + (3 - 2 * n) * k * k + (n - 2) * k * k * k : suave(k), R = rects(), q = R.h.height / R.h.width, a = typeof hacia === 'function' ? hacia() : hacia;
         var w = de.w * Math.pow(a.w / de.w, e), dcx = de.x + de.w / 2, dcy = de.y + de.w * q / 2, acx = a.x + a.w / 2, acy = a.y + a.w * q / 2;
         var c = { w: w, x: dcx + (acx - dcx) * e - w / 2, y: dcy + (acy - dcy) * e - w * q / 2 };
         // el relevo, por escala: del mapa al plano entre 4 y 1,4 veces el ancho de la ciudad; mientras no se ve, el plano no se pinta
@@ -699,13 +705,14 @@
       }
       // sin esperar a los datos: el mapa empieza ya a acercarse a la capital y la cámara sigue desde ahí cuando llegan
       // (Pablo, 2-nov: en el iPhone tardaba en reaccionar al tocar una bandera)
-      var capT = (datos.caps || []).filter(function (k) { return k.s === c; })[0], tAcerca = 0;
+      var capT = (datos.caps || []).filter(function (k) { return k.s === c; })[0];
       if (!directo && svg && capT) {
-        // la capital, al centro de la parte del plano que se verá (los mismos márgenes que margenes(), con la altura de la ciudad)
-        var mR = svg.getBoundingClientRect(), pR = portada.getBoundingClientRect(), pieH = pieEl.getBoundingClientRect().height;
+        // la capital, al centro de la parte del plano que se verá (los mismos márgenes que margenes(), con la altura de la ciudad).
+        // El pie aún está vacío: vale el alto que tuvo en la última ciudad o, la primera vez en el móvil, el que suele tener
+        var mR = svg.getBoundingClientRect(), pR = portada.getBoundingClientRect(), pieH = pieUlt || (pR.width < 700 ? 340 : pieEl.getBoundingClientRect().height);
         var vx = pR.left + 16 + (pR.width - 80) / 2, vy = pR.top + 58 + (alturaCiudad() - 58 - pieH - 16) / 2;
         var wA = vbAnd[2] / 2.4, hA = wA * vbAnd[3] / vbAnd[2], cxA = capT.x / 100 * vbAnd[2], cyA = capT.y / 100 * vbAnd[3];
-        if (mR.width) { moverAnd([cxA - (vx - mR.left) / mR.width * wA, cyA - (vy - mR.top) / mR.height * hA, wA, hA], 900); tAcerca = performance.now(); }
+        if (mR.width) moverAnd([cxA - (vx - mR.left) / mR.width * wA, cyA - (vy - mR.top) / mR.height * hA, wA, hA], 900);
       }
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
@@ -724,7 +731,7 @@
         // tirón); durante el vuelo solo se escala con «transform» desde ese dibujo
         var d0 = destino(); if (d0) plano.fijar(d0, true);
         host.style.opacity = '0.01';
-        requestAnimationFrame(function () { requestAnimationFrame(function () { if (actual !== c || !plano) return; cancelAnimationFrame(animAnd); volarCamara(andAPlano(vbAhora, rects()), destino, 1000, true, llegar, d0, tAcerca && performance.now() - tAcerca < 900); }); });
+        requestAnimationFrame(function () { requestAnimationFrame(function () { if (actual !== c || !plano) return; var v0 = velAnd(); cancelAnimationFrame(animAnd); acerca = null; volarCamara(andAPlano(vbAhora, rects()), destino, 1000, true, llegar, d0, v0); }); });
       }).catch(function () {
         if (actual !== c) return;
         resEl.textContent = 'No se ha podido cargar el plano. Comprueba la conexión o entra en su página.';
