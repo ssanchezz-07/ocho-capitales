@@ -10,8 +10,13 @@
 - La Unidad (Almería): falta una segunda fuente; Movelia también da 19:30.
 - Plano de Cádiz (equipo de rutas): la salida es la del paso, unos 20 minutos más tarde que la de la cruz de guía.
 - `ANIO_HORARIOS` en `site/build.mjs`: subirlo al cargar los horarios de 2027.
-- **«¡A esta es!»** (Francisco González Peña y Feliciano Perejón, 2010, dedicada al Rosario de la Sagrada Cena de Huelva). Pablo dice que es de cornetas y tambores. La única base que la recoge con formación, Cofradías y Hermandades (`fichamarcha.php?mm=903504`), la da como agrupación musical. Patrimonio Musical y Marchas de Procesión no tienen esta marcha, y la búsqueda en la web no dio nada. **No se ha cambiado.** Hace falta una fuente, o que Pablo la confirme como músico, como se hizo con «El Día del Señor» (fuente `part`).
-  - Ojo: el comentario de Pablo del 1-nov («a esta es es de cornetas y tambores… se han hecho arreglos para banda de música y agrupación») se aplicó a «El Día del Señor». Ese cambio se sostiene porque Patrimonio Musical la da para «cornetas y tambores, agrupación musical o banda de música, indistintamente». Pero si Pablo se refería a «¡A esta es!», hay que revisarlo.
+- Hay 64 pares de título y autor repetidos en `marchas.json`. Ya estaban en main; los ha visto el auditor y falta revisarlos.
+- Hay dos fichas de la misma banda: `banda-de-cornetas-y-tambores-tres-caidas-de-triana-sevilla` y `…-santisimo-cristo-de-las-tres-caidas-esperanza-de-triana-sevilla`. Habría que unirlas con `bandas-redirecciones.json`.
+
+**Hecho (2-nov, tarde):** «A esta es».
+- Son dos marchas distintas. La de cornetas y tambores es de Manuel A. González y Antonio J. Castaño, del repertorio de Tres Caídas de Triana (su web: repertorio y disco «La Pasión», de 2009). Se ha dado de alta con la fuente `tct`, en `tools/sources/repertorio-tres-caidas-triana.json`. La de Huelva, de González Peña y Perejón (2010, agrupación musical, Cofradías y Hermandades), sigue aparte y sin tocar.
+- «El Día del Señor»: el comentario de Pablo era sobre «A esta es». La formación de esta marcha se atribuye ahora a Patrimonio Musical («indistintamente por cornetas y tambores, agrupación musical o banda de música»); la web dice «también para…».
+- Títulos de Cofradías y Hermandades: la primera palabra va en mayúscula tras «¡» (4 títulos).
 - Formaciones que chocan entre bases: solo 2 marchas en las que Cofradías y Hermandades dice cornetas y tambores y la web dice agrupación musical. Son «Sentimiento Gitano» (Miraut, Gitanos de Granada; la web sigue al foro de Granada) y «Compasión» (Juan José Martín, Tres Caídas de Huelva; la web sigue a Marchas de Procesión). Las dos bases se contradicen y falta una tercera fuente, así que no se han cambiado. Ojo: el unificador no deja constancia de estos choques. Se queda con la primera formación y descarta la otra en silencio.
 
 Orden de Pablo: importar y verificar todas las marchas de las 8 capitales a partir de sus bases de datos, sin inventar nada. Fuentes: las de `ORDENES-CORRECCION.md` §4 (Pablo, 2026-10-25: «esas deberían bastar de momento, pero hay que verificar autores, dedicatorias, etc.»).

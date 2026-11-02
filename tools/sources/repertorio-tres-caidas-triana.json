@@ -1,0 +1,16 @@
+{
+ "banda": "banda-de-cornetas-y-tambores-tres-caidas-de-triana-sevilla",
+ "nombre_banda": "Banda de Cornetas y Tambores Tres Caídas de Triana (Sevilla)",
+ "clave": "tct",
+ "fuente": "Tres Caídas de Triana, web oficial de la banda (repertorio y discografía)",
+ "url": "https://trescaidasdetriana.es/repertorio/repertorio-actual/",
+ "revisado": "2026-11-02",
+ "nota": "Repertorio publicado por la propia banda. Solo se pone lo que dice su web; sin año ni dedicatoria si no los da.",
+ "marchas": [
+  {
+   "titulo": "A esta es",
+   "autor": "Manuel A. González · Antonio J. Castaño",
+   "formacion": "Banda de cornetas y tambores"
+  }
+ ]
+}

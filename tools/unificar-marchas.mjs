@@ -278,11 +278,16 @@ for (const o of BNE.marchas) {
 // ---------- 2c. Repertorio de bandas a partir de sus partituras (tools/sources/repertorio-*.json) ----------
 // La cabecera de la partitura da título, compositor, año y, a veces, la dedicatoria. Las partituras no se publican.
 const REPS = process.env.SIN_REPERTORIO ? [] : fs.readdirSync(path.join(DIR, 'sources')).filter((f) => /^repertorio-.*\.json$/.test(f)).map((f) => leer(path.join(DIR, 'sources', f)));
+// Un repertorio con «clave» es público (la web de la propia banda): es una fuente con su enlace, no partituras privadas
+const FUENTES_REP = {};
+for (const rp of REPS) if (rp.clave) { FUENTES_REP[rp.clave] = { nombre: rp.fuente, url: rp.url, fiable: true }; FIABLE.add(rp.clave); }
 for (const rp of REPS) for (const x of rp.marchas) {
-  let r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor));
+  // con la misma formación: dos marchas de igual título y apellido común pueden ser distintas (p. ej. «¡A esta es!» de agrupación y la de cornetas)
+  let r = (porTituloR.get(nt(x.titulo)) || []).find((y) => mismoAutor(y.autor, x.autor) && (!x.formacion || !y.formacion || norm(y.formacion) === norm(x.formacion)));
   if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
   // excepción de Pablo («publicar»): una marcha estrenada por la banda sin otra fuente se publica citando a la banda, sin enlace
-  const f = x.publicar ? 'banda' : 'part';
+  const f = rp.clave || (x.publicar ? 'banda' : 'part');
+  if (rp.clave) r.urls[f] = rp.url;
   if (x.publicar && x.url) r.urls.banda = x.url; // enlace público de la banda (p. ej. el vídeo del estreno en su canal)
   fuente(r, 'titulo', f); fuente(r, 'autor', f);
   (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', f);
@@ -297,7 +302,7 @@ for (const rp of REPS) for (const x of rp.marchas) {
 // Interruptores para subir por bloques: SIN_CYH=1, SIN_NUEVAS_PM=1, SIN_REPERTORIO=1 dejan fuera esas importaciones
 const CYH = process.env.SIN_CYH ? null : leer(path.join(RAIZ, 'auditoria', 'cyh-marchas.json'), null);
 const urlCyh = (id) => `https://www.cofradiasyhermandades.es/fichamarcha.php?mm=${id}`;
-const tituloCyh = (t) => { const s = String(t || '').replace(/^[¡!¿?«»"'\s]+|[¡!¿?«»"'\s]+$/g, (m) => m.trim()).trim(); return s === s.toUpperCase() ? s.toLowerCase().replace(/(^|[\s(¡¿«"'])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|El|Y|E|En|A|Al|Su|Sus|Mi|Tu)\b(?!$)/g, (w, x, i) => (i ? w.toLowerCase() : w)) : s; };
+const tituloCyh = (t) => { const s = String(t || '').replace(/^[¡!¿?«»"'\s]+|[¡!¿?«»"'\s]+$/g, (m) => m.trim()).trim(); return s === s.toUpperCase() ? s.toLowerCase().replace(/(^|[\s(¡¿«"'])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|El|Y|E|En|A|Al|Su|Sus|Mi|Tu)\b(?!$)/g, (w, x, i, s) => (/^[¡¿«"'\s]*$/.test(s.slice(0, i)) ? w : w.toLowerCase())) : s; };
 const cyhSinCasar = [];
 if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v.marchas) {
   if (!x.titulo) continue;
@@ -697,6 +702,7 @@ const FUENTES = {
   banda: { nombre: 'Banda de Cornetas y Tambores del Paso y la Esperanza (Málaga), que la estrenó', url: '', fiable: true, privada: true },
   bne: { nombre: 'Biblioteca Nacional de España (datos.bne.es, partituras)', url: 'https://datos.bne.es/tema/XX536674.html', fiable: true },
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
+  ...FUENTES_REP,
 };
 fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"redirecciones":' + JSON.stringify(redirecciones) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');
 fs.mkdirSync(path.join(RAIZ, 'auditoria'), { recursive: true });

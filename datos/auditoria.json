@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-02T07:36:40.702Z",
+ "generado": "2026-11-02T19:17:34.108Z",
  "totales": {
   "capitales": 8,
   "hermandades": 307,
@@ -11,14 +11,14 @@
   "acompanamientos": 525,
   "imagineros": 172,
   "obras": 482,
-  "marchas": 10090,
+  "marchas": 10091,
   "partituras_bne": 1643,
   "itinerarios": 8821,
   "recorridos": 7764,
   "extraordinarias": 4,
   "agenda": 437,
   "noticias": 2396,
-  "fuentes": 27726,
+  "fuentes": 27727,
   "correcciones": 430
  },
  "hermandades_sin": {
@@ -530,10 +530,10 @@
  ],
  "marchas_sin": {
   "autor": 17,
-  "anio": 3311,
+  "anio": 3312,
   "formacion": 169,
-  "hermandad": 4765,
-  "video": 3665
+  "hermandad": 4766,
+  "video": 3666
  },
  "bandas_sin_localidad": [],
  "dias_raros": [],

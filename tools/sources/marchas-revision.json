@@ -3173,13 +3173,13 @@
    "fuente": "https://www.patrimoniomusical.com/bd-marcha-7049",
    "nombre_fuente": "Patrimonio Musical (ficha de la marcha)",
    "fecha": "2026-11-02",
-   "nota": "Dedicada a la Hermandad de la Cena de Málaga (Patrimonio Musical y Cofradías y Hermandades). Formación: original para cornetas y tambores con arreglos para banda de música y agrupación musical, según Pablo Sánchez (2-nov), músico de la banda del Paso y la Esperanza, que la tiene en repertorio; ni Patrimonio Musical ni Cofradías y Hermandades lo dicen así.",
+   "nota": "Dedicada a la Hermandad de la Cena de Málaga (Patrimonio Musical y Cofradías y Hermandades). Formación: Patrimonio Musical dice que se concibió para interpretarse indistintamente por cornetas y tambores, agrupación musical o banda de música; Cofradías y Hermandades la da como banda de música.",
    "texto": "Hermandad de la Cena de Málaga",
    "campos": {
     "formacion": "Banda de cornetas y tambores",
-    "arreglos": "banda de música y agrupación musical"
+    "arreglos": "agrupación musical y banda de música"
    },
-   "fuente_campos": "part",
+   "fuente_campos": "pm",
    "discrepancia": {
     "campo": "formacion",
     "valores": [
@@ -3194,7 +3194,7 @@
       "url": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=900612"
      }
     ],
-    "elegido": "part"
+    "elegido": "pm"
    }
   }
  ]
