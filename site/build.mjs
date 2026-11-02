@@ -818,8 +818,8 @@ function pageProxima() {
   const A = TEMPORADA.anio, e = easter(A), f = (off, o = { weekday: 'long', day: 'numeric', month: 'long' }) => fmtDay(e + off * 864e5, o);
   const jornadas = SLOTS.map((s) => `<li><span>${esc(s.label)}</span><time datetime="${isoDay(e + s.off * 864e5)}">${esc(slotDate(s, A))}</time></li>`).join('');
   const caps = D.capitales.map((c) => {
-    const n = hermsOf(c.slug).length, plano = tieneSedes(c.slug) && fs.existsSync(path.join(DIR, 'data', 'planos', c.slug + '.json'));
-    return `<li class="oc-prox-cap" id="${c.slug}" style="--c:${c.color}"><h3><i aria-hidden="true"></i>${esc(c.nombre)}</h3><p>${plural(n, 'hermandad', 'hermandades')} en la web. Recorridos y horarios de ${A}: en cuanto se publiquen los itinerarios oficiales.</p><p class="oc-prox-links">${plano ? `<a class="oc-link" href="${u('')}#${c.slug}">Sus hermandades en el plano${icon('arrow')}</a>` : ''}<a class="oc-link" href="${capHref(c)}">Su Semana Santa${icon('arrow')}</a></p></li>`;
+    const plano = tieneSedes(c.slug) && fs.existsSync(path.join(DIR, 'data', 'planos', c.slug + '.json'));
+    return `<li class="oc-prox-cap" id="${c.slug}" style="--c:${c.color}"><h3><i aria-hidden="true"></i>${esc(c.nombre)}</h3><p>${cifraCap(c)}. Recorridos y horarios de ${A}: en cuanto se publiquen los itinerarios oficiales.</p><p class="oc-prox-links">${plano ? `<a class="oc-link" href="${u('')}#${c.slug}">Sus hermandades en el plano${icon('arrow')}</a>` : ''}<a class="oc-link" href="${capHref(c)}">Su Semana Santa${icon('arrow')}</a></p></li>`;
   }).join('');
   const body = `<div class="oc-proxima" data-proxima>
 ${seccionNazareno(false)}
