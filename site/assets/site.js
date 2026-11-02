@@ -541,7 +541,7 @@
         (h.tp ? '<div><dt>Templo</dt><dd>' + esc(h.tp[2] || h.sede) + '</dd></div>' : h.sede ? '<div><dt>Sede</dt><dd>' + esc(h.sede) + '</dd></div>' : '') +
         (h.cs ? '<div><dt>Casa hermandad</dt><dd>' + esc(h.cs[2]) + '</dd></div>' : '') +
         (h.d ? '<div><dt>Salida' + (a ? ' en ' + a : '') + '</dt><dd>' + esc(h.d) + '</dd></div>' : '') +
-        (h.col ? '<div><dt>Hábito</dt><dd><i class="oc-calle-habito" style="--hc:' + h.col + '"></i>' + esc(h.coln || '') + '</dd></div>' : '') +
+        (h.col ? '<div><dt>Hábito</dt><dd><i class="oc-calle-habito" style="--hc:' + h.col + '"></i>' + esc((h.coln || '').replace(/^\S/, function (c) { return c.toLocaleUpperCase('es'); })) + '</dd></div>' : '') +
         '</dl>' +
         (h.ev && h.ev.length ? '<h3 class="oc-sede-h">Próximos cultos y actos</h3><ul class="oc-sede-ev">' + h.ev.map(function (e) { return '<li><time datetime="' + e[0] + '">' + esc(fmtF(e[0])) + (e[1] ? ', ' + esc(e[1]) + ' h' : '') + '</time><span>' + esc(e[2]) + '</span></li>'; }).join('') + '</ul>' : '') +
         '<a class="oc-btn" href="' + BASE + 'hermandad/' + h.s + '/">Ver su ficha' + '</a>' +

@@ -133,12 +133,23 @@ const HABITOS = fs.existsSync(HABITOS_FILE) ? JSON.parse(fs.readFileSync(HABITOS
 // Colores que aparecen junto a cada prenda en el texto del hábito («túnica negra con escapulario y antifaz verde»)
 const COLORES = { negro: '#1b1b1f', negra: '#1b1b1f', blanco: '#f5f3ee', blanca: '#f5f3ee', crema: '#efe3c2', hueso: '#e8dfc8', marfil: '#efe6cf', morado: '#5b2a86', morada: '#5b2a86', purpura: '#6a1b6e', violeta: '#6a3d9a', azul: '#1f3f8f', celeste: '#7fb2e5', verde: '#1f6b3a', rojo: '#b3202a', roja: '#b3202a', granate: '#6e1424', burdeos: '#5a1020', gris: '#8a8a90', amarillo: '#e6b800', oro: '#c9a227', dorado: '#c9a227', marron: '#6b4423', beige: '#d9c8a5', naranja: '#d9741a', rosa: '#d98aa6', plata: '#bfc3c9', vino: '#5a1020', turquesa: '#2a9d9a', cardenal: '#8b1a2b' };
 const PRENDAS = ['tunica', 'capa', 'antifaz', 'capirote', 'capuchon', 'botonadura', 'cingulo', 'cinturon', 'escapulario', 'fajin', 'morrion'];
+// El color se escribe como en castellano: con su tilde y concertado con la prenda («túnica negra», «capirote morado»)
+const PRENDAS_F = new Set(['tunica', 'capa', 'botonadura']);
+const COLOR_GENERO = { negro: 'negra', blanco: 'blanca', morado: 'morada', rojo: 'roja', amarillo: 'amarilla', dorado: 'dorada' };
+const COLOR_TILDE = { marron: 'marrón', purpura: 'púrpura' };
+function colorDe(prenda, c) {
+  const masc = Object.keys(COLOR_GENERO).find((k) => k === c || COLOR_GENERO[k] === c);
+  if (masc) return PRENDAS_F.has(prenda) ? COLOR_GENERO[masc] : masc;
+  return COLOR_TILDE[c] || c;
+}
+// Primera letra en mayúscula sin tocar el resto, saltando comillas, paréntesis o signos de apertura
+const mayus = (t) => String(t || '').replace(/^([^\p{L}]*)(\p{L})/u, (_, a, b) => a + b.toLocaleUpperCase('es'));
 function coloresHabito(texto) {
   const t = norm(texto).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ');
   const out = []; const vistos = new Set();
   for (const p of PRENDAS) {
     const re = new RegExp('\\b' + p + 's?\\b[^.]{0,36}?\\b(' + Object.keys(COLORES).join('|') + ')\\b', 'g');
-    let m; while ((m = re.exec(t))) { const k = p + '|' + m[1]; if (vistos.has(k)) continue; vistos.add(k); out.push({ prenda: p === 'tunica' ? 'túnica' : p === 'cingulo' ? 'cíngulo' : p === 'cinturon' ? 'cinturón' : p === 'capuchon' ? 'capuchón' : p === 'morrion' ? 'morrión' : p === 'fajin' ? 'fajín' : p, color: m[1].replace(/a$/, (x) => x), hex: COLORES[m[1]] }); }
+    let m; while ((m = re.exec(t))) { const color = colorDe(p, m[1]), k = p + '|' + color; if (vistos.has(k)) continue; vistos.add(k); out.push({ prenda: p === 'tunica' ? 'túnica' : p === 'cingulo' ? 'cíngulo' : p === 'cinturon' ? 'cinturón' : p === 'capuchon' ? 'capuchón' : p === 'morrion' ? 'morrión' : p === 'fajin' ? 'fajín' : p, color, hex: COLORES[m[1]] }); }
   }
   return out.slice(0, 8);
 }
@@ -980,7 +991,7 @@ function pageHerm(h) {
     const pie = (m.est === 'sin-verificar' ? '<span class="oc-muted">Sin verificar</span>' : '') + (g && g.video ? '<span class="vx-play">Grabación</span>' : '');
     return `<li class="oc-entry vx-m"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
   }).join('')}</ul>` : '';
-  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(hb.texto); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col.length ? `<ul class="oc-swatches" aria-label="Colores mencionados">${col.map((x) => `<li><i style="background:${x.hex}" aria-hidden="true"></i><span>${esc(x.prenda)} ${esc(x.color)}</span></li>`).join('')}</ul>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad; los colores se han leído del texto, consulta la ficha para el detalle.</p>`); })();
+  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(hb.texto); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col.length ? `<ul class="oc-swatches" aria-label="Colores mencionados">${col.map((x) => `<li><i style="background:${x.hex}" aria-hidden="true"></i><span>${esc(mayus(`${x.prenda} ${x.color}`))}</span></li>`).join('')}</ul>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad; los colores se han leído del texto, consulta la ficha para el detalle.</p>`); })();
   const marchasSec = marchasFx ? (() => { const n = (e) => h.marchas.filter((m) => m.est === e).length; const nc = n('contrastada'), nd = n('dedicada'), ns = n('sin-verificar'); const partes = [nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean); return sec(ns === h.marchas.length ? 'Marchas asociadas' : 'Marchas dedicadas', marchasFx + `<p class="oc-note">${partes.join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`, 'fx-sec-marchas'); })() : '';
   const enlaces = (() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return sec('Escúchala y síguela', `<ul class="oc-linklist fx-enlaces">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas: el resultado depende de lo que cada hermandad haya publicado.</p>`); })();
   const body = `<article class="oc-ficha fx" style="--c:${c.color}">
