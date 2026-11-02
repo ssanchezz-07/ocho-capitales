@@ -302,7 +302,7 @@
         // la capa del HTML (oc-entrando) se quita cuando el globo ya está encima, o si algo falla
         function soltar() { document.documentElement.classList.remove('oc-entrando'); }
         function globo() {
-          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); };
+          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); else soltar(); };
           if (window.OCGlobo) return ir();
           var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; s.onerror = soltar; document.head.appendChild(s);
         }
@@ -315,7 +315,8 @@
         if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) { soltar(); return; }
         // arranca cuando la página ya ha cargado (con sus imágenes): antes competía con el pintado de la imagen principal y
         // retrasaba el LCP en móviles lentos. Si mientras tanto se ha bajado por la página o elegido una ciudad, no sale.
-        var ya = false, arrancar = function () { if (ya) return; ya = true; if (location.hash || actual) { soltar(); return; } try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { } globo(); };
+        var ya = false, arrancar = function () { if (ya) return; ya = true; if (location.hash || actual || !document.documentElement.classList.contains('oc-entrando')) { soltar(); return; } // si la capa ya se retiró (9 s), no salta el globo sobre la web
+          try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { } globo(); };
         // con la capa puesta no se ve la web: se espera a «load», pero en una red lenta no más de 1,8 s
         if (document.readyState === 'complete') arrancar(); else { addEventListener('load', arrancar, { once: true }); setTimeout(arrancar, 1800); }
       })();
