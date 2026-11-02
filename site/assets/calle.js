@@ -581,7 +581,26 @@
     pintarRuta(planificar(+rInicio.value, +$('[data-ruta-horas]').value, modo));
   });
 
-  fetch(sec.getAttribute('data-calle')).then(function (r) { return r.json(); }).then(function (j) {
+  // Los datos del plano, con tiempo máximo: con mala cobertura la petición no se queda colgada. Si falla, un botón lo reintenta.
+  function pedirDatos(url, ms) {
+    var ac = window.AbortController ? new AbortController() : null, t;
+    var tope = new Promise(function (ok, ko) { t = setTimeout(function () { if (ac) ac.abort(); ko(new Error('tiempo')); }, ms); });
+    return Promise.race([tope, fetch(url, ac ? { signal: ac.signal } : {}).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })])
+      .then(function (j) { clearTimeout(t); return j; }, function (e) { clearTimeout(t); throw e; });
+  }
+  var arrancado = false;
+  function cargar() {
+    var viejo = mapa.querySelector('.oc-calle-reintentar'); if (viejo) viejo.remove();
+    mapa.classList.remove('is-error'); mapa.setAttribute('aria-busy', 'true');
+    pedirDatos(sec.getAttribute('data-calle'), 30000).then(function (j) { mapa.removeAttribute('aria-busy'); if (!arrancado) { arrancado = true; empezar(j); } }, function () {
+      mapa.removeAttribute('aria-busy'); mapa.classList.add('is-error');
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'oc-calle-reintentar';
+      b.textContent = navigator.onLine === false ? 'Sin conexión. Toca para volver a intentarlo.' : 'No se ha podido cargar el plano. Toca para volver a intentarlo.';
+      b.addEventListener('click', cargar); mapa.appendChild(b);
+    });
+  }
+  cargar();
+  function empezar(j) {
     D = j; calcularLimites(); dibujarPlano();
     var hoy = hoyISO(), dHoy = null; for (var k in fechas) if (fechas[k] === hoy) dHoy = k;
     var botones = $$('[data-dia]').map(function (b) { return b.getAttribute('data-dia'); });
@@ -602,5 +621,5 @@
     var tq = +q.get('t'); if (q.get('t') && isFinite(tq)) { T = Math.max(+rango.min, Math.min(+rango.max, tq)); rango.value = T; capas.yaEncuadrado = false; dibujarRutas(); actualizar(); }
     var hq = q.get('h'), hh = hq && delDia().filter(function (x) { return x.s === hq; })[0]; if (hh) abrir(hh);
     window.addEventListener('resize', function () { capas.yaEncuadrado = false; dibujarRutas(); actualizar(); });
-  }).catch(function () { mapa.classList.add('is-error'); });
+  }
 })();

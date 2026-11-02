@@ -243,3 +243,8 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-home .oc-portada::before { content: ""; position: absolute; inset: 0; z-index: 0; background: var(--oc-cielo); background-size: var(--oc-cielo-t); pointer-events: none; transition: opacity .6s ease; }
 .oc-home .oc-portada.is-ciudad::before { opacity: 0; }
 .oc-home .oc-portada.is-ciudad { background: var(--cielo, #14081d); }
+
+/* En la calle: si los datos del plano no llegan, un botón real (no solo un aviso) para volver a intentarlo */
+[data-mapa].oc-calle-mapa.is-error::after { content: none; }
+.oc-calle-reintentar { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 24px; border: 0; background: rgb(10 4 16 / .6); color: #fff; font: 500 16px/1.4 Heebo, system-ui, sans-serif; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.oc-calle-reintentar:focus-visible { outline: 2px solid #e7c877; outline-offset: -4px; }

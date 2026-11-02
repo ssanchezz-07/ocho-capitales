@@ -41,7 +41,9 @@
     capa.addEventListener('click', function (e) { acabar(); if (window.ocDebajo) window.ocDebajo(e); }); saltar.addEventListener('click', acabar); document.addEventListener('keydown', tecla);
 
     var cargas = window.d3 && window.d3.geoOrthographic ? Promise.resolve() : script(o.vendor[0]).then(function () { return script(o.vendor[1]); });
-    Promise.all([cargas, fetch(o.mundo).then(function (r) { return r.json(); })]).then(function (r) {
+    // con mala cobertura nada se queda esperando: si en 8 s no han llegado las piezas, la entrada se cierra y se ve la portada
+    var tope = new Promise(function (ok, ko) { setTimeout(ko, 8000); });
+    Promise.race([tope, Promise.all([cargas, fetch(o.mundo).then(function (r) { if (!r.ok) throw r.status; return r.json(); })])]).then(function (r) {
       if (hecho) return;
       var d3 = window.d3, M = r[1];
       var defs = el('defs', {}, S);
