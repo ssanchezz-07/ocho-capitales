@@ -165,6 +165,8 @@ const DAY_ORDER = D.dias_orden;
 const dayIdx = (d) => { const i = DAY_ORDER.indexOf(d); return i < 0 ? 99 : i; };
 const imagSlug = (name) => (name ? slugify(name) : '');
 const hermsOf = (city) => D.hermandades.filter((h) => h.ciudad === city);
+// Cifra oficial de hermandades de la capital (la de su consejo o agrupación); si falta, las fichas de la web
+const cifraCap = (c) => (c.cifra ? plural(c.cifra.n, c.cifra.nombre === 'cofradías' ? 'cofradía' : 'hermandad', c.cifra.nombre) : plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'));
 const pages = [];
 
 import { createHash } from 'node:crypto';
@@ -677,9 +679,8 @@ function colgaduras() {
   };
   // Cada colgadura es un enlace a la página de su capital (sin JavaScript sigue funcionando); con JS elige la ciudad y anima.
   const items = orden.map((c, i) => {
-    const hermandades = hermsOf(c.slug).length;
     const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
-    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true" style="--n:${[...c.nombre].length}">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${plural(hermandades, 'hermandad', 'hermandades')}</span></a></li>`;
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true" style="--n:${[...c.nombre].length}">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${cifraCap(c)}</span></a></li>`;
   }).join('');
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
@@ -748,9 +749,8 @@ function fondoLegible(hex, min = 4.8) {
 }
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
-    const bandas = D.bandas.filter((b) => b.origen === c.slug).length;
     const img = c.imagen ? imgTag(c.imagen, '', { sizes: '(max-width: 1000px) 50vw, 25vw', widths: [330, 500] }) : '';
-    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${plural(hermsOf(c.slug).length, 'hermandad', 'hermandades')}${bandas ? ' · ' + plural(bandas, 'banda', 'bandas') : ''}</p></div></article></li>`;
+    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${cifraCap(c)}</p></div></article></li>`;
   }).join('')}</ul>`;
 }
 
@@ -881,7 +881,7 @@ function pageCapital(c) {
   const body = `<header class="oc-caphero${c.imagen ? ' has-img' : ''}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
   ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 1240px) 100vw, 1200px', widths: [500, 960, 1280], eager: true })}</div>` : ''}
   <img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" style="view-transition-name:colg-${c.slug}">
-  <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${plural(hs.length, 'hermandad', 'hermandades')} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
+  <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${cifraCap(c)} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
 </header>
 ${c.imagen ? `<p class="oc-caphero-credit">${credit(c.imagen)}</p>` : ''}
 ${fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')) ? `<a class="oc-calle-acceso" href="${u('en-la-calle/' + c.slug + '/')}"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-5 12 5 12-5v29l-12 5-12-5-12 5z"/><path d="M18 7v29M30 12v29"/><circle cx="24" cy="22" r="4" fill="currentColor" stroke="none"/></svg><div><strong>En la calle</strong><span>Recorridos sobre el plano y dónde va cada cofradía, hora a hora</span></div></a>` : ''}
@@ -899,7 +899,7 @@ ${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u
 </aside>
 </div>
 ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
-  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Las ${hs.length} hermandades de ${c.nombre} por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 1240px) 100vw, 1200px', [500, 960, 1280]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
+  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Sus hermandades por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 1240px) 100vw, 1200px', [500, 960, 1280]), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
 const IGUSER = (r) => String(r).replace(/^@/, '');
@@ -1470,7 +1470,7 @@ function page404() {
 function searchIndex() {
   const idx = [];
   // i: miniatura (foto del titular); c: capital, para el monograma de color si no hay foto
-  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'), u: 'semana-santa/' + c.slug + '/', c: c.slug, k: norm(c.nombre + ' semana santa capital') });
+  for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: cifraCap(c), u: 'semana-santa/' + c.slug + '/', c: c.slug, k: norm(c.nombre + ' semana santa capital') });
   for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });

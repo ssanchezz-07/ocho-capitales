@@ -18,6 +18,30 @@ const slugify = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 const CITY_NAMES = { sevilla:'Sevilla', malaga:'Málaga', granada:'Granada', cordoba:'Córdoba', cadiz:'Cádiz', huelva:'Huelva', almeria:'Almería', jaen:'Jaén' };
 
+// Cifra oficial de hermandades de cada capital (revisada el 2-nov-2026 en la nómina de su consejo, federación o agrupación).
+// Es la que se enseña en /capitales/, en la cabecera de cada capital, en sus datos clave y en el buscador. «web» explica
+// por qué la web tiene más fichas que la cifra oficial. La cifra de bandas no se enseña (decisión de Pablo).
+const CIFRAS = {
+  sevilla: { n: 71, nombre: 'hermandades', texto: '71 de penitencia en el Consejo: 60 de Domingo de Ramos a Resurrección y 11 en las Vísperas, el Viernes de Dolores y el Sábado de Pasión', fuente: ['Consejo General de Hermandades y Cofradías', 'https://www.hermandades-de-sevilla.org/hermandades/penitencia/'], web: 'La Borriquita tiene ficha propia, aunque sale con la Hermandad del Amor.' },
+  malaga: { n: 43, nombre: 'hermandades', texto: '43 en la Agrupación de Cofradías, que sacan 45 cofradías a la calle (las Fusionadas salen tres días)', fuente: ['Agrupación de Cofradías', 'https://agrupaciondecofradias.com/hermandades/'], web: 'Recoge también 8 cofradías de las Vísperas que no pertenecen a la Agrupación.' },
+  granada: { n: 32, nombre: 'cofradías', texto: '32 en la Real Federación, que forman 34 cortejos', fuente: ['Real Federación de Hermandades y Cofradías', 'https://hermandadesdegranada.com/'], web: 'La Cañilla tiene dos fichas: la del Martes Santo y la de los Facundillos, el Domingo de Resurrección.' },
+  cordoba: { n: 42, nombre: 'hermandades', texto: '42 en la Agrupación: 38 en la carrera oficial por días y 4 agrupadas que procesionan aparte', fuente: ['Agrupación de Hermandades y Cofradías', 'https://www.hermandadesdecordoba.es/hermandades-agrupadas/'], web: 'Recoge también la Sangre de El Higuerón y la pro-hermandad del Traslado al Sepulcro, que no pertenecen a la Agrupación.' },
+  cadiz: { n: 31, nombre: 'hermandades', texto: '31 de penitencia en el Consejo Local: 29 de Domingo de Ramos a Resurrección y 2 en las Vísperas', fuente: ['Consejo Local de Hermandades y Cofradías', 'https://consejocofradiascadiz.es/hermandades-y-cofradias-penitencia'], web: 'Recoge también Ecce Mater Tua y la Humillación, que no figuran en la nómina del Consejo.' },
+  huelva: { n: 27, nombre: 'hermandades', texto: '27 de penitencia en el Consejo: 26 de Domingo de Ramos a Resurrección y 1 en las Vísperas', fuente: ['Consejo de Hermandades y Cofradías', 'https://consejohermandadeshuelva.es/'], web: 'Recoge también La Bendición, del Sábado de Pasión, que no figura en la nómina del Consejo.' },
+  almeria: { n: 22, nombre: 'hermandades', texto: '22 de penitencia en la Agrupación: 21 de Domingo de Ramos a Resurrección y 1 el Sábado de Pasión', fuente: ['Agrupación de Hermandades y Cofradías', 'https://cofradiasdealmeria.es/penitencia/'], web: 'Recoge también el vía crucis del Cristo de la Escucha, que no figura en la nómina de la Agrupación.' },
+  jaen: { n: 21, nombre: 'cofradías', texto: '21 de Pasión en la Agrupación, de Domingo de Ramos a Resurrección', fuente: ['Agrupación de Cofradías y Hermandades', 'https://cofradiasjaen.org/'], web: '' },
+};
+const LEMAS = { sevilla: 'La Semana Santa por antonomasia: 71 hermandades, pasos a costal y la Madrugá.' };
+// Datos clave con la cifra oficial: sustituye la fila de hermandades o cofradías y añade la fuente y la nota de la web
+const datosCap = (id, datos) => {
+  const k = CIFRAS[id]; if (!k) return datos;
+  const fila = [k.nombre === 'cofradías' ? 'Cofradías' : 'Hermandades', k.texto + ' (fuente: ' + k.fuente[0] + ')'];
+  const out = datos.map((r) => (/^(Hermandades|Cofradías)/.test(r[0]) ? fila : r));
+  if (!out.includes(fila)) out.unshift(fila);
+  if (k.web) out.splice(out.indexOf(fila) + 1, 0, ['En esta web', k.web]);
+  return out;
+};
+
 // ---------- Días normalizados ----------
 const DAY_ORDER = ['Viernes de Dolores','Sábado de Pasión','Vísperas','Domingo de Ramos','Lunes Santo','Martes Santo','Miércoles Santo','Jueves Santo','Jueves Santo y Madrugada','Madrugá','Viernes Santo','Sábado Santo','Domingo de Resurrección','Hermandades agrupadas'];
 const normDay = (d) => (d === 'Madrugada' ? 'Madrugá' : d);
@@ -153,8 +177,9 @@ for (const c of raw) {
     c.dias = c.dias.filter((d) => d.hs.length);
   }
   capitales.push({
-    slug: c.id, nombre: c.nombre || CITY_NAMES[c.id], color: c.color, lema: c.lema,
-    intro: c.intro, datos: c.id === 'sevilla' ? c.datos.map((r) => (r[0].startsWith('Hermandades') ? ['Hermandades', '60 en la Semana Santa y 12 en las Vísperas (Viernes de Dolores y Sábado de Pasión)'] : r)) : c.id === 'cordoba' ? c.datos.map((r) => (r[0] === 'Hermandades' ? ['Hermandades', '41 en la Agrupación: 38 en la carrera oficial por días y 3 agrupadas aparte (fuente: Agrupación)'] : r)) : c.id === 'malaga' ? c.datos.map((r) => (r[0] === 'Cofradías' ? ['Cofradías', '43 en la Agrupación de Cofradías (fuente: Agrupación)'] : r)) : c.datos, claves: c.claves,
+    slug: c.id, nombre: c.nombre || CITY_NAMES[c.id], color: c.color, lema: LEMAS[c.id] || c.lema,
+    cifra: CIFRAS[c.id] ? { n: CIFRAS[c.id].n, nombre: CIFRAS[c.id].nombre, texto: CIFRAS[c.id].texto, fuente: CIFRAS[c.id].fuente } : null,
+    intro: c.intro, datos: datosCap(c.id, c.datos), claves: c.claves,
     dias: c.dias.map((d) => normDay(d.dia)), imagen: imgOf('capital:' + c.id),
   });
   for (const dia of c.dias) {
