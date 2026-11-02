@@ -31,12 +31,14 @@
     var hecho = false, raf = 0;
     function acabar() {
       if (hecho) return; hecho = true; cancelAnimationFrame(raf);
+      capa.style.pointerEvents = 'none'; // mientras se funde ya no se come ningún toque
       capa.style.transition = 'opacity .3s ease'; capa.style.opacity = '0'; saltar.remove();
       document.removeEventListener('keydown', tecla);
       setTimeout(function () { capa.remove(); fin(); }, 320);
     }
     function tecla(e) { if (e.key === 'Escape') acabar(); }
-    capa.addEventListener('pointerdown', acabar); saltar.addEventListener('click', acabar); document.addEventListener('keydown', tecla);
+    // El toque que cierra el globo también vale para la barra de pestañas o la cabecera que haya debajo: un solo toque basta.
+    capa.addEventListener('click', function (e) { acabar(); if (window.ocDebajo) window.ocDebajo(e); }); saltar.addEventListener('click', acabar); document.addEventListener('keydown', tecla);
 
     var cargas = window.d3 && window.d3.geoOrthographic ? Promise.resolve() : script(o.vendor[0]).then(function () { return script(o.vendor[1]); });
     Promise.all([cargas, fetch(o.mundo).then(function (r) { return r.json(); })]).then(function (r) {
