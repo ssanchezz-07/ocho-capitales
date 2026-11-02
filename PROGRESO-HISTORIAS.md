@@ -77,8 +77,11 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
 - Templos: tabla `TEMPLOS` en `tools/build-data.js` (15 grupos unificados con el nombre de la ficha oficial de cada hermandad). Reparos del auditor: Málaga (cómo sale el 43), Huelva (URL con la lista), nota de Córdoba (contador «3» sobre 4 fichas), chips de /hermandades/ etiquetados como «fichas en la web».
 
 ## Pendiente para otras sesiones (no son de esta)
-- **Rutas:** `site/data/sedes/*.json` y `site/data/planos/*.json` usan los nombres viejos de templo en el plano (p. ej. Córdoba «Iglesia de San Lorenzo»). Conviene aplicar la tabla `TEMPLOS`.
-- **Datos/rutas:** Almería, El Calvario: la Agrupación lo pone en Lunes Santo y la web en Miércoles Santo.
+- Templos en sedes y planos: hecho. La tabla está en `tools/sources/templos.json`. La usan `build-data.js`, `tools/itinerarios/plano.mjs` (etiquetas de OpenStreetMap) y el campo `nombre` de `site/data/sedes/*.json`; `nombre_osm` no se toca. `sedes.mjs` toma el nombre de `portal.json`, así que al regenerar se mantiene.
+- **Almería, El Calvario (Cristo del Mar): sale el Miércoles Santo** (confirmado por Pablo en el chat el 2-nov; Coordinación había decidido lo mismo). Revisar cuando salgan los horarios de 2027:
+  - Miércoles Santo: horarios 2026 de la Agrupación en el programa «Pasión» de Canal Sur (PDF «ALMERIA 26», en `tools/sources/itinerarios-2026.json`) y la ficha de la hermandad, https://cofradiasdealmeria.es/calvario/ («El miércoles Santo de 2017, sería la primera ocasión…»).
+  - Lunes Santo: el menú de https://cofradiasdealmeria.es/penitencia/ (junto a Gran Poder y Pasión).
+  - https://cofradiasdealmeria.es/horarios-e-itinerarios/ no tiene PDF de 2026 para desempatar. No se escribe a la Agrupación por ahora.
 - Jaén: la Agrupación enlaza «Oración en el Huerto» y «Vera Cruz» a la misma página; la web tiene dos fichas. Confirmar que son dos cofradías.
 
 ## RETOMAR AQUÍ (fase 3: historias de hermandades)

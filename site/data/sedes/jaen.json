@@ -46,7 +46,7 @@
   "el-huerto-vera-cruz-jaen": {
    "nombre": "El Huerto (Vera-Cruz)",
    "templo": {
-    "nombre": "Basílica Menor de San Ildefonso",
+    "nombre": "Basílica de San Ildefonso",
     "lat": 37.7665191,
     "lon": -3.7865077,
     "osm": "way/960001635",
@@ -98,7 +98,7 @@
   "divino-maestro-lavatorio-jaen": {
    "nombre": "Divino Maestro (Lavatorio)",
    "templo": {
-    "nombre": "Iglesia parroquial de Nuestra Señora de la Merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
     "lat": 37.7646967,
     "lon": -3.7928657,
     "osm": "way/186948834",
@@ -124,7 +124,7 @@
   "el-silencio-jaen": {
    "nombre": "El Silencio",
    "templo": {
-    "nombre": "Iglesia parroquial de Cristo Rey",
+    "nombre": "Parroquia de Cristo Rey",
     "lat": 37.7746059,
     "lon": -3.7894801,
     "osm": "way/196657678",
@@ -192,7 +192,7 @@
   "la-vera-cruz-los-civiles-jaen": {
    "nombre": "La Vera-Cruz («los Civiles»)",
    "templo": {
-    "nombre": "Basílica Menor de San Ildefonso",
+    "nombre": "Basílica de San Ildefonso",
     "lat": 37.7665191,
     "lon": -3.7865077,
     "osm": "way/960001635",
@@ -226,7 +226,7 @@
   "la-soledad-jaen": {
    "nombre": "La Soledad",
    "templo": {
-    "nombre": "Basílica Parroquial de San Ildefonso",
+    "nombre": "Basílica de San Ildefonso",
     "lat": 37.7665191,
     "lon": -3.7865077,
     "osm": "way/960001635",

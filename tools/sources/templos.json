@@ -1,0 +1,47 @@
+{
+ "_leeme": "Un templo, un nombre (revisado el 2-nov-2026 en la ficha oficial de cada hermandad en su consejo, federación o agrupación). Por ciudad: nombre que aparece en fichas, sedes u OpenStreetMap → nombre canónico. Lo usan tools/build-data.js (fichas), tools/itinerarios/plano.mjs (etiquetas del plano) y las sedes de site/data/sedes. No se unen templos distintos de nombre parecido: en Sevilla, la Capilla de San Andrés (Panaderos) no es la parroquia de San Andrés ni San Antonio de Padua del Buen Fin es la parroquia de Torreblanca; en Granada, el Corpus Christi del Zaidín no es el de la Magdalena.",
+ "malaga": {
+  "Parroquia de la Santa Cruz y San Felipe Neri (Centro Histórico)": "Parroquia de la Santa Cruz y San Felipe Neri (El Molinillo)",
+  "Basílica de Santa María de la Victoria (La Victoria)": "Basílica y Real Santuario de Santa María de la Victoria (La Victoria)",
+  "Parroquia de la Santa Cruz y San Felipe Neri (calle Gaona)": "Parroquia de la Santa Cruz y San Felipe Neri (El Molinillo)"
+ },
+ "granada": {
+  "Iglesia de Santo Domingo (Realejo)": "Iglesia de Santo Domingo",
+  "San Pedro y San Pablo (Albaicín)": "Iglesia Parroquial de San Pedro y San Pablo",
+  "San Pedro y San Pablo": "Iglesia Parroquial de San Pedro y San Pablo",
+  "San Pedro y San Pablo (Paseo de los Tristes)": "Iglesia Parroquial de San Pedro y San Pablo",
+  "Iglesia de San Gil y Santa Ana (Plaza Nueva)": "Iglesia Parroquial de San Gil y Santa Ana",
+  "San Gil y Santa Ana": "Iglesia Parroquial de San Gil y Santa Ana",
+  "Iglesia de San Pedro y San Pablo": "Iglesia Parroquial de San Pedro y San Pablo",
+  "Iglesia de San Gil y Santa Ana": "Iglesia Parroquial de San Gil y Santa Ana"
+ },
+ "cordoba": {
+  "Parroquia de San Lorenzo": "Real Parroquia de San Lorenzo Mártir",
+  "Iglesia de San Lorenzo": "Real Parroquia de San Lorenzo Mártir",
+  "Parroquia de San José y Espíritu Santo (Campo de la Verdad)": "Parroquia de San José y Espíritu Santo",
+  "Iglesia de San Andrés": "Parroquia de San Andrés Apóstol",
+  "Parroquia de Gracia (Trinitarios)": "Parroquia de Nuestra Señora de Gracia y San Eulogio",
+  "Iglesia de Nuestra Señora de Gracia y San Eulogio (Padres Trinitarios)": "Parroquia de Nuestra Señora de Gracia y San Eulogio",
+  "Iglesia de San Antonio de Padua (Parroquia del Buen Pastor)": "Parroquia de San Antonio de Padua"
+ },
+ "cadiz": {
+  "Iglesia de la Merced": "Parroquia de Nuestra Señora de la Merced",
+  "Iglesia de Santiago Apóstol": "Iglesia de Santiago",
+  "Parroquia de la Merced": "Parroquia de Nuestra Señora de la Merced"
+ },
+ "huelva": {
+  "Parroquia de San Pedro": "Parroquia Mayor de San Pedro",
+  "Parroquia del Sagrado Corazón (Polvorín)": "Parroquia del Sagrado Corazón de Jesús (El Polvorín)",
+  "Parroquia del Sagrado Corazón": "Parroquia del Sagrado Corazón de Jesús (El Polvorín)"
+ },
+ "almeria": {
+  "Iglesia de San Ildefonso": "Parroquia de San Ildefonso",
+  "Catedral": "Catedral de la Encarnación"
+ },
+ "jaen": {
+  "Basílica Menor de San Ildefonso": "Basílica de San Ildefonso",
+  "Basílica Parroquial de San Ildefonso": "Basílica de San Ildefonso",
+  "Iglesia parroquial de Nuestra Señora de la Merced": "Parroquia de Nuestra Señora de la Merced",
+  "Iglesia parroquial de Cristo Rey": "Parroquia de Cristo Rey"
+ }
+}

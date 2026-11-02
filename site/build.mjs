@@ -872,7 +872,7 @@ function byDay(list) {
 function fuentesCap(c) {
   const li = (url, txt, que) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(txt)}</a><span>${que}</span></li>`;
   const items = (c.intro_fuentes || []).map((url) => li(url, /wikipedia\.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : new URL(url).hostname.replace(/^www\./, ''), 'historia'));
-  if (c.cifra) items.push(li(c.cifra.fuente[1], c.cifra.fuente[0], 'cifra de hermandades'));
+  if (c.cifra && !(c.intro_fuentes || []).includes(c.cifra.fuente[1])) items.push(li(c.cifra.fuente[1], c.cifra.fuente[0], 'cifra de hermandades'));
   return items.length ? `<ul class="oc-fuentes">${items.join('')}</ul>` : '';
 }
 

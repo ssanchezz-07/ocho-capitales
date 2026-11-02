@@ -9,6 +9,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+// Un templo, un nombre: la misma tabla que las fichas (tools/sources/templos.json), aplicada a los nombres de OpenStreetMap
+const TEMPLOS = JSON.parse(fs.readFileSync(new URL('../sources/templos.json', import.meta.url), 'utf8'));
+const canon = (ciudad, n) => (TEMPLOS[ciudad] || {})[n] || n;
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
@@ -62,13 +65,13 @@ for (const f of fs.readdirSync(path.join(DIR, 'cache')).filter((f) => f.startsWi
     // sin los jardincillos y plazoletas diminutos (alcorques, isletas): pesan y no ayudan a situarse
     const sup = (g) => { const p = g.map(xy); let s = 0; for (let i = 1; i < p.length; i++) s += p[i - 1][0] * p[i][1] - p[i][0] * p[i - 1][1]; return Math.abs(s / 2); };
     if (zona) { for (const g of anillos(e)) if (cerrado(g) && sup(g) >= (zona === 'parques' ? 1500 : zona === 'plazas' ? 250 : 400)) areas[zona].push(plana(g)); continue; }
-    if (t.amenity === 'place_of_worship' || (t.building && /hermandad|cofrad/i.test(t.name || ''))) { for (const g of anillos(e)) if (cerrado(g)) areas.edificios.push({ n: t.name || '', c: t.amenity === 'place_of_worship' ? 'templo' : 'casa', p: plana(g) }); continue; }
+    if (t.amenity === 'place_of_worship' || (t.building && /hermandad|cofrad/i.test(t.name || ''))) { for (const g of anillos(e)) if (cerrado(g)) areas.edificios.push({ n: canon(ciudad, t.name || ''), c: t.amenity === 'place_of_worship' ? 'templo' : 'casa', p: plana(g) }); continue; }
     if (/^(river|canal|stream)$/.test(t.waterway || '') && e.geometry) { const g = e.geometry.map((p) => [p.lat, p.lon]); if (dentro(g)) rios.push(dp(g.map(xy), 3).flat()); continue; }
     if (t.natural === 'coastline' && e.geometry) { const g = e.geometry.map((p) => [p.lat, p.lon]); if (dentro(g)) costa.push(dp(g.map(xy), 3).flat()); }
   }
   for (const e of osm.elements) {
     const t = e.tags || {};
-    if (t.amenity === 'place_of_worship') { const c = e.center || (e.geometry && e.geometry[0]) || (e.lat ? { lat: e.lat, lon: e.lon } : null); if (c && c.lat >= la0 && c.lat <= la1 && c.lon >= lo0 && c.lon <= lo1) { const [x, y] = xy([c.lat, c.lon]); templos.push({ n: t.name, x, y }); } continue; }
+    if (t.amenity === 'place_of_worship') { const c = e.center || (e.geometry && e.geometry[0]) || (e.lat ? { lat: e.lat, lon: e.lon } : null); if (c && c.lat >= la0 && c.lat <= la1 && c.lon >= lo0 && c.lon <= lo1) { const [x, y] = xy([c.lat, c.lon]); templos.push({ n: canon(ciudad, t.name), x, y }); } continue; }
     if (!e.geometry || !(VALE.test(t.highway || '') || t.place === 'square')) continue;
     const g = e.geometry.map((p) => [p.lat, p.lon]);
     if (!g.some(([la, lo]) => la >= la0 && la <= la1 && lo >= lo0 && lo <= lo1)) continue;

@@ -7,7 +7,7 @@
   "entrada-triunfal-cordoba": {
    "nombre": "Entrada Triunfal",
    "templo": {
-    "nombre": "Parroquia de San Lorenzo",
+    "nombre": "Real Parroquia de San Lorenzo Mártir",
     "lat": 37.8885515,
     "lon": -4.7689037,
     "osm": "way/96116159",
@@ -156,7 +156,7 @@
   "animas-cordoba": {
    "nombre": "Ánimas",
    "templo": {
-    "nombre": "Iglesia de San Lorenzo",
+    "nombre": "Real Parroquia de San Lorenzo Mártir",
     "lat": 37.8885515,
     "lon": -4.7689037,
     "osm": "way/96116159",
@@ -202,7 +202,7 @@
   "el-buen-suceso-cordoba": {
    "nombre": "El Buen Suceso",
    "templo": {
-    "nombre": "Iglesia de San Andrés",
+    "nombre": "Parroquia de San Andrés Apóstol",
     "lat": 37.88598,
     "lon": -4.7729434,
     "osm": "way/96231885",

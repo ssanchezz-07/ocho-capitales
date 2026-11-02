@@ -7,7 +7,7 @@
   "la-borriquita-huelva": {
    "nombre": "La Borriquita",
    "templo": {
-    "nombre": "Parroquia de San Pedro",
+    "nombre": "Parroquia Mayor de San Pedro",
     "lat": 37.2600727,
     "lon": -6.9506939,
     "osm": "way/55826913",
@@ -233,7 +233,7 @@
   "el-descendimiento-huelva": {
    "nombre": "El Descendimiento",
    "templo": {
-    "nombre": "Parroquia de San Pedro",
+    "nombre": "Parroquia Mayor de San Pedro",
     "lat": 37.2600727,
     "lon": -6.9506939,
     "osm": "way/55826913",

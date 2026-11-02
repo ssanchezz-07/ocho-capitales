@@ -20,7 +20,7 @@
   "merced-obediencia-cadiz": {
    "nombre": "Merced (Obediencia)",
    "templo": {
-    "nombre": "Parroquia de la Merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
     "lat": 36.5285216,
     "lon": -6.2913322,
     "osm": "way/162534924",
@@ -33,7 +33,7 @@
   "humillacion-piedad-cadiz": {
    "nombre": "Humillación (Piedad)",
    "templo": {
-    "nombre": "Iglesia de Santiago Apóstol",
+    "nombre": "Iglesia de Santiago",
     "lat": 36.5297056,
     "lon": -6.2956937,
     "osm": "way/542083000",
@@ -241,7 +241,7 @@
   "la-sentencia-cadiz": {
    "nombre": "La Sentencia",
    "templo": {
-    "nombre": "Iglesia de la Merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
     "lat": 36.5285216,
     "lon": -6.2913322,
     "osm": "way/162534924",
@@ -371,7 +371,7 @@
   "siete-palabras-cadiz": {
    "nombre": "Siete Palabras",
    "templo": {
-    "nombre": "Iglesia de la Merced",
+    "nombre": "Parroquia de Nuestra Señora de la Merced",
     "lat": 36.5285216,
     "lon": -6.2913322,
     "osm": "way/162534924",
@@ -397,7 +397,7 @@
   "ecce-mater-tua-cadiz": {
    "nombre": "Ecce Mater Tua",
    "templo": {
-    "nombre": "Iglesia de Santiago Apóstol",
+    "nombre": "Iglesia de Santiago",
     "lat": 36.5297056,
     "lon": -6.2956937,
     "osm": "way/542083000",
