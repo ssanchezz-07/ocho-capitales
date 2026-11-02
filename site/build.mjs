@@ -130,28 +130,21 @@ const HERM = Object.fromEntries(D.hermandades.map((h) => [h.slug, h]));
 // Marchas dedicadas: una por título+compositor+hermandad, con ficha propia
 const HABITOS_FILE = path.join(DIR, '..', 'tools', 'sources', 'habitos.json');
 const HABITOS = fs.existsSync(HABITOS_FILE) ? JSON.parse(fs.readFileSync(HABITOS_FILE, 'utf8')) : {};
-// Colores que aparecen junto a cada prenda en el texto del hábito («túnica negra con escapulario y antifaz verde»)
-const COLORES = { negro: '#1b1b1f', negra: '#1b1b1f', blanco: '#f5f3ee', blanca: '#f5f3ee', crema: '#efe3c2', hueso: '#e8dfc8', marfil: '#efe6cf', morado: '#5b2a86', morada: '#5b2a86', purpura: '#6a1b6e', violeta: '#6a3d9a', azul: '#1f3f8f', celeste: '#7fb2e5', verde: '#1f6b3a', rojo: '#b3202a', roja: '#b3202a', granate: '#6e1424', burdeos: '#5a1020', gris: '#8a8a90', amarillo: '#e6b800', oro: '#c9a227', dorado: '#c9a227', marron: '#6b4423', beige: '#d9c8a5', naranja: '#d9741a', rosa: '#d98aa6', plata: '#bfc3c9', vino: '#5a1020', turquesa: '#2a9d9a', cardenal: '#8b1a2b' };
-const PRENDAS = ['tunica', 'capa', 'antifaz', 'capirote', 'capuchon', 'botonadura', 'cingulo', 'cinturon', 'escapulario', 'fajin', 'morrion'];
-// El color se escribe como en castellano: con su tilde y concertado con la prenda («túnica negra», «capirote morado»)
-const PRENDAS_F = new Set(['tunica', 'capa', 'botonadura']);
-const COLOR_GENERO = { negro: 'negra', blanco: 'blanca', morado: 'morada', rojo: 'roja', amarillo: 'amarilla', dorado: 'dorada' };
-const COLOR_TILDE = { marron: 'marrón', purpura: 'púrpura' };
-function colorDe(prenda, c) {
-  const masc = Object.keys(COLOR_GENERO).find((k) => k === c || COLOR_GENERO[k] === c);
-  if (masc) return PRENDAS_F.has(prenda) ? COLOR_GENERO[masc] : masc;
-  return COLOR_TILDE[c] || c;
-}
+// Colores del hábito por sección y prenda (tools/sources/habitos-colores.json, transcritos del texto de habitos.json; se comprueban con tools/diseno/comprobar-habitos-colores.mjs)
+const HABCOL_FILE = path.join(DIR, '..', 'tools', 'sources', 'habitos-colores.json');
+const HABCOL = fs.existsSync(HABCOL_FILE) ? JSON.parse(fs.readFileSync(HABCOL_FILE, 'utf8')) : {};
+// Tonos sobrios de cada color cofrade; el esparto es material, con su color natural
+const COLORES = { negro: '#1b1b1f', blanco: '#f5f3ee', 'blanco roto': '#ece6d6', crema: '#efe3c2', marfil: '#efe6cf', hueso: '#e8dfc8', beige: '#d9c8a5', esparto: '#c4a46a', gris: '#8a8a90', morado: '#5b2a86', malva: '#9c7bb0', burdeos: '#5a1020', vino: '#641a2c', guinda: '#6b0f24', corinto: '#6e1a2e', granate: '#6e1424', rojo: '#b3202a', azul: '#1f3f8f', 'azul marino': '#1b2a4e', 'azul noche': '#1a2340', 'azul real': '#23409a', 'azul pavo real': '#1f5f78', azulino: '#5b8fd1', celeste: '#7fb2e5', turquesa: '#2a9d9a', verde: '#1f6b3a', 'verde oscuro': '#17452a', marrón: '#6b4423', dorado: '#c9a227', amarillo: '#e6b800' };
+// El color se escribe concertado con la prenda («túnica negra», «capirote morado»)
+const PRENDAS_F = new Set(['túnica', 'sotana', 'capa', 'botonadura', 'botonera', 'faja', 'correa']);
+const COLOR_GENERO = { negro: 'negra', blanco: 'blanca', morado: 'morada', rojo: 'roja', amarillo: 'amarilla', dorado: 'dorada', azulino: 'azulina' };
+const colorDe = (prenda, c) => c === 'esparto' ? 'de esparto' : c.split(' y ').map((x) => (PRENDAS_F.has(prenda) && COLOR_GENERO[x]) || x).join(' y ');
+const muestra = (c) => { const cs = c.split(' y ').map((x) => COLORES[x] || '#8a8a90'); return cs.length > 1 ? `linear-gradient(90deg, ${cs[0]} 50%, ${cs[1]} 50%)` : cs[0]; };
 // Primera letra en mayúscula sin tocar el resto, saltando comillas, paréntesis o signos de apertura
 const mayus = (t) => String(t || '').replace(/^([^\p{L}]*)(\p{L})/u, (_, a, b) => a + b.toLocaleUpperCase('es'));
-function coloresHabito(texto) {
-  const t = norm(texto).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ');
-  const out = []; const vistos = new Set();
-  for (const p of PRENDAS) {
-    const re = new RegExp('\\b' + p + 's?\\b[^.]{0,36}?\\b(' + Object.keys(COLORES).join('|') + ')\\b', 'g');
-    let m; while ((m = re.exec(t))) { const color = colorDe(p, m[1]), k = p + '|' + color; if (vistos.has(k)) continue; vistos.add(k); out.push({ prenda: p === 'tunica' ? 'túnica' : p === 'cingulo' ? 'cíngulo' : p === 'cinturon' ? 'cinturón' : p === 'capuchon' ? 'capuchón' : p === 'morrion' ? 'morrión' : p === 'fajin' ? 'fajín' : p, color, hex: COLORES[m[1]] }); }
-  }
-  return out.slice(0, 8);
+function coloresHabito(slug) {
+  const secs = HABCOL[slug] || [];
+  return secs.filter(([, p]) => Object.keys(p).length).map(([nombre, p]) => `<div class="oc-habito-sec">${nombre ? `<p class="oc-habito-sec-t">${esc(nombre)}</p>` : ''}<ul class="oc-swatches" aria-label="Colores del hábito${nombre ? ', ' + esc(nombre.toLowerCase()) : ''}">${Object.entries(p).map(([pr, c]) => `<li><i style="background:${muestra(c)}" aria-hidden="true"></i><span>${esc(mayus(`${pr} ${colorDe(pr, c)}`))}</span></li>`).join('')}</ul></div>`).join('');
 }
 // Marchas: modelo único de tools/unificar-marchas.mjs (todas las bases unidas, con la fuente de cada campo y el estado de la dedicatoria).
 // m.h = hermandad a la que está dedicada (solo si la dedicatoria es de una hermandad del portal); m.est = contrastada | dedicada | sin-verificar.
@@ -991,7 +984,7 @@ function pageHerm(h) {
     const pie = (m.est === 'sin-verificar' ? '<span class="oc-muted">Sin verificar</span>' : '') + (g && g.video ? '<span class="vx-play">Grabación</span>' : '');
     return `<li class="oc-entry vx-m"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
   }).join('')}</ul>` : '';
-  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(hb.texto); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col.length ? `<ul class="oc-swatches" aria-label="Colores mencionados">${col.map((x) => `<li><i style="background:${x.hex}" aria-hidden="true"></i><span>${esc(mayus(`${x.prenda} ${x.color}`))}</span></li>`).join('')}</ul>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad; los colores se han leído del texto, consulta la ficha para el detalle.</p>`); })();
+  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad${col ? '; debajo, el color de cada prenda tal como lo describe' : ''}.</p>`); })();
   const marchasSec = marchasFx ? (() => { const n = (e) => h.marchas.filter((m) => m.est === e).length; const nc = n('contrastada'), nd = n('dedicada'), ns = n('sin-verificar'); const partes = [nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean); return sec(ns === h.marchas.length ? 'Marchas asociadas' : 'Marchas dedicadas', marchasFx + `<p class="oc-note">${partes.join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`, 'fx-sec-marchas'); })() : '';
   const enlaces = (() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return sec('Escúchala y síguela', `<ul class="oc-linklist fx-enlaces">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas: el resultado depende de lo que cada hermandad haya publicado.</p>`); })();
   const body = `<article class="oc-ficha fx" style="--c:${c.color}">
