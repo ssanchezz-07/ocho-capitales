@@ -1175,14 +1175,15 @@ ${section('Fuentes', `${fuentesMarcha(m)}<p class="oc-note">${notaDedicatoria(m)
 // Marcha en los listados: sello (iniciales del compositor sobre el terciopelo de su capital), compositor, año, formación,
 // a quién va dedicada y si hay grabación. Conserva la clase oc-entry y los data-* que lee el filtro común.
 const inicialesM = (s) => { const p = String(s || '').split(/\s+/).filter((w) => w && !/^(de|del|la|las|los|el|y|e)$/i.test(w)); return p.length ? (p[0][0] + (p.length > 1 ? p.at(-1)[0] : '')).toUpperCase() : '·'; };
-// data-t: el título, para que el filtro ponga primero las marchas cuyo título coincide. data-q: lo que se busca, que es
-// lo que se ve en la fila (título, compositor, dedicatoria y formación). Las bandas del repertorio no: no salen en la fila.
+// data-t: el título, para que el filtro ponga primero las marchas cuyo título coincide. data-q: título, compositor, dedicatoria
+// y formación. data-b: bandas que la tocan (repertorio); si la búsqueda solo coincide por ellas, la fila sale al final con «La toca: …».
+const bandasMarcha = (m) => (m.repertorio || []).filter((r) => r && BANDA[r.banda]).map((r) => BANDA[r.banda].nombre);
 function entryMarcha(m) {
   const c = ciudadMarcha(m), col = c ? CAP[c].color : '';
   const meta = [m.autor ? `<span class="vx-autor">${esc(m.autor)}</span>` : '', m.anio ? `<span>${esc(m.anio)}</span>` : '', m.tipo ? `<span class="nx-tema">${esc(m.tipo)}</span>` : ''].join('');
   const ded = m.h ? `<p class="vx-ded">${m.est === 'sin-verificar' ? 'Asociada a' : 'Dedicada a'} <b>${esc(m.h.nombre)}</b></p>` : m.dedicatoria ? `<p class="vx-ded">Dedicada ${/^(a|al)\s/i.test(m.dedicatoria) ? esc(m.dedicatoria[0].toLowerCase() + m.dedicatoria.slice(1)) : 'a ' + esc(m.dedicatoria)}</p>` : ''; /* «A la Macarena» → «Dedicada a la Macarena» */
   const pie = (c ? cityTag(c) : '') + (m.video ? '<span class="vx-play">Grabación</span>' : '');
-  return `<li class="oc-entry vx-m" data-t="${esc(norm(m.titulo))}" data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}" data-ciudad="${c}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${ded}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m" data-t="${esc(norm(m.titulo))}" data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}"${bandasMarcha(m).length ? ` data-b="${esc(bandasMarcha(m).join('|'))}"` : ''} data-ciudad="${c}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${ded}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
@@ -1194,14 +1195,16 @@ function pageDirMarchas() {
   const PRIMERAS = 50;
   const ordenadas = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
   const formaciones = [...new Set(ordenadas.map((m) => m.tipo || ''))];
+  const bandas = []; // nombres de las bandas del repertorio, una vez; cada fila lleva sus números en la posición 9 (solo si tiene)
   const filaJson = (m) => {
     const ded = m.h ? [m.est === 'sin-verificar' ? 2 : 1, m.h.nombre] : m.dedicatoria ? [3, m.dedicatoria] : [0];
-    return [m.slug, m.titulo, m.autor || '', m.anio || '', formaciones.indexOf(m.tipo || ''), ciudadMarcha(m) || '', ded, m.video ? 1 : 0, inicialesM(m.autor || m.titulo)];
+    const bs = bandasMarcha(m).map((b) => (bandas.includes(b) ? bandas : (bandas.push(b), bandas)).indexOf(b));
+    return [m.slug, m.titulo, m.autor || '', m.anio || '', formaciones.indexOf(m.tipo || ''), ciudadMarcha(m) || '', ded, m.video ? 1 : 0, inicialesM(m.autor || m.titulo), ...(bs.length ? [bs] : [])];
   };
   const caps = Object.fromEntries(D.capitales.map((c) => [c.slug, [c.color, c.nombre]]));
   const forms = formaciones.map((t) => [t, slugify(t || 'sin-formacion')]);
   fs.mkdirSync(path.join(DIST, 'marchas'), { recursive: true });
-  fs.writeFileSync(path.join(DIST, 'marchas', 'resto.json'), JSON.stringify({ caps, forms, filas: ordenadas.slice(PRIMERAS).map(filaJson) }));
+  fs.writeFileSync(path.join(DIST, 'marchas', 'resto.json'), JSON.stringify((() => { const filas = ordenadas.slice(PRIMERAS).map(filaJson); return { caps, forms, bandas, filas }; })()));
   const conVideo = MARCHAS.filter((m) => m.video).length, conHerm = MARCHAS.filter((m) => m.h).length;
   // Por capital: cuántas marchas tiene cada una y una con grabación como muestra (la primera, por orden alfabético, de las mejor documentadas)
   const porCap = D.capitales.map((c) => { const ms = MARCHAS.filter((m) => ciudadMarcha(m) === c.slug); const ej = [...ms].sort((x, y) => (!!y.video - !!x.video) || ((y.est === 'contrastada') - (x.est === 'contrastada')) || x.titulo.localeCompare(y.titulo, 'es'))[0]; return { c, n: ms.length, ej }; }).filter((x) => x.n);

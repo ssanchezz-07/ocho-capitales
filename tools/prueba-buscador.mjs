@@ -21,12 +21,14 @@ const CASOS = [
   { q: 'amarguras', ciudad: 'sevilla', palabras: ['amarguras'], ciudadVisible: 'Sevilla', min: 1 },
   { q: 'la madrugá', palabras: ['madruga'], min: 6 },
   { q: 'Cristo de la Sangre', primero: 'cristo de la sangre', palabras: ['cristo', 'sangre'], min: 5 },
-  { q: 'Tres Caídas', palabras: ['tres', 'caidas'], min: 5 },
+  // bandas del repertorio: las que salen solo por la banda van al final, con «La toca: …» (hoy solo hay repertorio de dos bandas)
+  { q: 'Tres Caídas', palabras: ['tres', 'caidas'], min: 5, toca: 'tres caidas', tocaAlFinal: true },
+  { q: 'Paso y Esperanza', palabras: ['paso', 'esperanza'], min: 30, toca: 'paso esperanza', tocaAlFinal: true },
+  { q: 'esperanza macarena', palabras: ['esperanza', 'macarena'], min: 2, tocaAlFinal: true },
   { q: 'Cigarreras', primero: 'cigarreras', palabras: ['cigarreras'], min: 4 },
   { q: 'Cebrián', palabras: ['cebrian'], min: 7 },
   { q: 'farfan', palabras: ['farfan'], min: 21 },
   { q: 'esperanza', tipo: 'banda-de-musica', palabras: ['esperanza'], min: 5 },
-  { q: 'esperanza macarena', palabras: ['esperanza', 'macarena'], min: 2 },
   { q: 'amarg', prefijo: 'amarg', min: 5 },
   { q: 'amarguas', palabras: [], min: 1, algunaPalabra: 'amarguras' },
   { q: 'cigareras', palabras: [], min: 1, algunaPalabra: 'cigarreras' },
@@ -48,7 +50,7 @@ export async function pruebaBuscador(p, base) {
     }
     return null;
   };
-  const filas = () => p.$$eval('[data-dir] .oc-entry:not([hidden])', (ls) => ls.map((l) => ({ t: l.querySelector('.vx-tit')?.textContent || '', todo: [...l.querySelectorAll('*')].filter((e) => !e.children.length).map((e) => e.textContent).join(' ') })));
+  const filas = () => p.$$eval('[data-dir] .oc-entry:not([hidden])', (ls) => ls.map((l) => ({ t: l.querySelector('.vx-tit')?.textContent || '', toca: l.querySelector('.vx-toca')?.textContent || '', todo: [...l.querySelectorAll('*')].filter((e) => !e.children.length || e.matches('.vx-toca')).map((e) => e.textContent).join(' ') })));
   for (const c of CASOS) {
     const nombre = `«${c.q}»${c.ciudad ? ' + ' + c.ciudad : ''}${c.tipo ? ' + ' + c.tipo : ''}`;
     const mal = (m) => fallos.push(`buscador ${nombre}: ${m}`);
@@ -68,7 +70,14 @@ export async function pruebaBuscador(p, base) {
     if (c.prefijo) { const sin = fs.find((f) => !empiezaPalabra(f.todo, c.prefijo)); if (sin) mal(`sale «${sin.t}», sin ninguna palabra que empiece por «${c.prefijo}»`); }
     if (c.algunaPalabra && !fs.some((f) => tiene(f.todo, c.algunaPalabra))) mal(`con una letra mal no encuentra «${c.algunaPalabra}»`);
     if (c.ciudadVisible) { const sin = fs.find((f) => !f.todo.includes(c.ciudadVisible)); if (sin) mal(`sale «${sin.t}», que no es de ${c.ciudadVisible}`); }
-    if (c.vacio && !(await p.locator('[data-dir-empty]').first().isVisible().catch(() => false))) mal('no avisa de que no hay resultados');
+    if (c.toca) {
+      // hay que llegar al final de la lista para ver las que salen por la banda
+      for (let k = 0; k < 10 && (await p.locator('[data-dir-more]:not([hidden]) button').count()); k++) { await p.locator('[data-dir-more] button').first().click(); await p.waitForTimeout(400); }
+      const todas = await filas();
+      if (!todas.some((f) => c.toca.split(' ').every((w) => tiene(f.toca, w)))) mal(`ninguna fila dice «La toca: …» con «${c.toca}»`);
+    }
+    if (c.tocaAlFinal) { const fs2 = await filas(), i = fs2.findIndex((f) => f.toca); if (i !== -1 && fs2.slice(i).some((f) => !f.toca)) mal('las que salen por la banda no van al final'); }
+    if (c.vacio &&!(await p.locator('[data-dir-empty]').first().isVisible().catch(() => false))) mal('no avisa de que no hay resultados');
   }
   // volver a la página con los filtros en la dirección (compartir un enlace o volver atrás) da lo mismo que escribirlos
   await p.goto(base + 'marchas/?q=amarguras&ciudad=sevilla', { waitUntil: 'load' });

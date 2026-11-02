@@ -901,14 +901,14 @@
       if (count) count.textContent = 'Buscando en todas las marchas…';
       if (!restoP) restoP = traer(BASE + restoUrl, 20000)
         .then(function (j) {
-          caps = j.caps || {}; var forms = j.forms || [], src = j.filas || [], lista = [], i = 0;
+          caps = j.caps || {}; var forms = j.forms || [], nombresB = j.bandas || [], src = j.filas || [], lista = [], i = 0;
           // fila: [slug, título, compositor, año, nº de formación, capital, dedicatoria, grabación, iniciales] (build.mjs, pageDirMarchas)
           // Por tandas, cediendo el turno entre ellas: el móvil sigue respondiendo a los toques mientras prepara las 10.000
           return new Promise(function (listo) {
             (function tanda() {
               for (var fin = Math.min(src.length, i + 1500); i < fin; i++) {
-                var f = src[i], fm = forms[f[4]] || ['', 'sin-formacion'];
-                lista.push({ f: f, i: i, tipo: fm[0], ciudad: f[5], tipoS: fm[1], t: ' ' + palabras(f[1]) + ' ', a: ' ' + palabras(f[1] + ' ' + f[2] + ' ' + (f[6][1] || '') + ' ' + fm[0]) + ' ' });
+                var f = src[i], fm = forms[f[4]] || ['', 'sin-formacion'], bs = (f[9] || []).map(function (k) { return nombresB[k]; }).filter(Boolean);
+                lista.push({ f: f, i: i, tipo: fm[0], ciudad: f[5], tipoS: fm[1], t: ' ' + palabras(f[1]) + ' ', a: ' ' + palabras(f[1] + ' ' + f[2] + ' ' + (f[6][1] || '') + ' ' + fm[0]) + ' ', b: bs, ab: bs.length ? palabras(bs.join(' ')) + ' ' : '' });
               }
               if (i < src.length) setTimeout(tanda, 0); else { filas = lista; restoOk = true; fallo = false; listo(); }
             })();
@@ -933,8 +933,18 @@
     // Las filas que ya trae la página, con sus palabras preparadas una sola vez (título aparte, para ponerlo primero)
     var propias = cards.map(function (el, k) {
       var tit = el.dataset.t || norm(($('a', el) || el).textContent);
-      return { el: el, k: k, ciudad: el.dataset.ciudad, dia: el.dataset.dia, tipoS: el.dataset.tipo, origen: el.dataset.origen, t: ' ' + palabras(tit) + ' ', a: ' ' + palabras(el.dataset.q || el.textContent) + ' ' };
+      var bs = (el.dataset.b || '').split('|').filter(Boolean);
+      return { el: el, k: k, ciudad: el.dataset.ciudad, dia: el.dataset.dia, tipoS: el.dataset.tipo, origen: el.dataset.origen, t: ' ' + palabras(tit) + ' ', a: ' ' + palabras(el.dataset.q || el.textContent) + ' ', b: bs, ab: bs.length ? palabras(bs.join(' ')) + ' ' : '' };
     });
+    // «La toca: …» en las filas que salen solo por una banda de su repertorio, con las palabras buscadas en negrita
+    function lineaToca(el, bandas, b) {
+      var p = $('.vx-toca', el);
+      if (!bandas) { if (p) p.remove(); return; }
+      var marca = function (nombre) { return nombre.split(' ').map(function (w) { var k = palabras(w); return k && b.palabras.some(function (q) { return k === q || k.indexOf(q) === 0; }) ? '<b>' + esc(w) + '</b>' : esc(w); }).join(' '); };
+      var cuales = bandas.filter(function (n) { return b.nivel(' ' + palabras(n) + ' ') || b.palabras.some(function (q) { return (' ' + palabras(n) + ' ').indexOf(' ' + q) !== -1; }); });
+      if (!p) { p = document.createElement('p'); p.className = 'vx-ded vx-toca'; var body = $('.vx-body', el); body.insertBefore(p, $('.vx-pie', body)); }
+      p.innerHTML = 'La toca: ' + (cuales.length ? cuales : bandas).map(marca).join(', ');
+    }
     var vistas = [];
     function apply() {
       var b = buscaPalabras(fields.q && fields.q.value);
@@ -944,7 +954,13 @@
       // Todas las palabras tienen que estar (Y). Palabra completa; la última, mientras se escribe, también vale como principio de palabra.
       // Si hay coincidencias con palabras completas, las de solo principio se descartan: «señor» no trae «Señora».
       var hay = [], completas = 0;
-      todas.forEach(function (x) { if (!pasa(x)) return; var nv = b.nivel(x.a); if (nv) { hay.push({ x: x, nv: nv, s: b.orden(x) }); if (nv === 2) completas++; } });
+      // Si solo coincide contando las bandas que la tocan, va al final (orden 4) y se explica con «La toca: …»
+      todas.forEach(function (x) {
+        if (!pasa(x)) return;
+        var nv = b.nivel(x.a), banda = false;
+        if (!nv && x.ab && b.palabras.length) { nv = b.nivel(x.a + x.ab); banda = !!nv; }
+        if (nv) { hay.push({ x: x, nv: nv, s: banda ? 4 : b.orden(x), banda: banda }); if (nv === 2) completas++; }
+      });
       if (completas && b.ultima.length >= 5) hay = hay.filter(function (h) { return h.nv === 2; });
       // Sin nada: se aceptan principios de palabra en cualquier posición y una letra de más, de menos o cambiada en las largas («cigareras»)
       if (!hay.length && b.palabras.length) todas.forEach(function (x) { if (pasa(x) && b.casi(x.a)) hay.push({ x: x, nv: 1, s: b.orden(x) }); });
@@ -953,7 +969,7 @@
       var n = hay.length;
       vistas.forEach(function (el) { el.hidden = true; });
       cards.forEach(function (el) { el.hidden = true; });
-      vistas = hay.slice(0, limit).map(function (h) { var x = h.x, el = x.el || hechas[x.i] || (hechas[x.i] = filaMarcha(x)); el.hidden = false; return el; });
+      vistas = hay.slice(0, limit).map(function (h) { var x = h.x, el = x.el || hechas[x.i] || (hechas[x.i] = filaMarcha(x)); el.hidden = false; if (x.b && x.b.length) lineaToca(el, h.banda ? x.b : null, b); return el; });
       vistas.forEach(function (el) { grid.appendChild(el); }); // en el orden de arriba
       if (!restoOk) n += extra;
       if (more) { more.hidden = n <= limit; if (moreBtn) moreBtn.textContent = 'Mostrar ' + Math.min(PAGE, n - limit) + ' más (quedan ' + (n - limit) + ')'; }
