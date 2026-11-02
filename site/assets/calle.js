@@ -589,15 +589,21 @@
       .then(function (j) { clearTimeout(t); return j; }, function (e) { clearTimeout(t); throw e; });
   }
   var arrancado = false;
-  function cargar() {
+  function cargar(e) {
     var viejo = mapa.querySelector('.oc-calle-reintentar'); if (viejo) viejo.remove();
+    var reintento = !!e;
     mapa.classList.remove('is-error'); mapa.setAttribute('aria-busy', 'true');
-    pedirDatos(sec.getAttribute('data-calle'), 30000).then(function (j) { mapa.removeAttribute('aria-busy'); if (!arrancado) { arrancado = true; empezar(j); } }, function () {
+    pedirDatos(sec.getAttribute('data-calle'), 30000).then(function (j) {
+      mapa.removeAttribute('aria-busy'); if (arrancado) return;
+      arrancado = true; try { empezar(j); } catch (err) { arrancado = false; fallo(); }
+    }, fallo);
+    function fallo() {
       mapa.removeAttribute('aria-busy'); mapa.classList.add('is-error');
       var b = document.createElement('button'); b.type = 'button'; b.className = 'oc-calle-reintentar';
       b.textContent = navigator.onLine === false ? 'Sin conexión. Toca para volver a intentarlo.' : 'No se ha podido cargar el plano. Toca para volver a intentarlo.';
       b.addEventListener('click', cargar); mapa.appendChild(b);
-    });
+      if (reintento) b.focus({ preventScroll: true }); // si falla otra vez tras tocar, el foco (y el lector de pantalla) vuelve al aviso
+    }
   }
   cargar();
   function empezar(j) {
