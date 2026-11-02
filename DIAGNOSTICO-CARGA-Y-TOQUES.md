@@ -79,4 +79,8 @@ En cada pestaña nueva, durante los primeros segundos, cualquier toque en la por
 ## RETOMAR AQUÍ
 1. Avisar a Portada de la causa 1 y del plano (causa 3); los arreglos de esas dos son suyos. **Hecho:** a través de coordinación.
 2. Mañana por la tarde, en este orden: causa 2 (Marchas), causa 5 (speculationrules), causa 4 (`site.js`/`cunao.js` por secciones). Medir antes y después con el mismo método (INP del toque a los 1,3 s, TBT y LCP).
-3. Auditor-web y protocolo de subida (build, 390/1440 px, aviso).
+3. Auditor-web y protocolo de subida (build, 390/1440 px, aviso). Todo, antes del sábado 14-nov.
+4. **Lanzamiento del sábado 14-nov:** lista de comprobación en `GUIA-ALOJAMIENTO.md` → «Día del lanzamiento».
+   - **Jueves 5:** ensayo con `prueba.ochocapitales.com`.
+   - **11-12-nov:** repetir la prueba de carga de la landing.
+   - **Pendiente de otros:** la hora, de marketing; el «sí» al HSTS, de Pablo.

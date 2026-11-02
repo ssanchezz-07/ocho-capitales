@@ -83,7 +83,33 @@ Después te paso Lighthouse en móvil, antes y después.
 **Workers y Pages** → `ocho-capitales` → **Implementaciones**. Si el panel cuenta las subidas como «compilaciones» del tope de 500 al mes, dímelo y paso la web a *Workers con archivos estáticos*: mismo dominio, sin ese tope. Mientras tanto, la publicación se frena sola en 450 al mes (variable `CLOUDFLARE_TOPE_MES`).
 
 ## Día del lanzamiento · Pasar ochocapitales.com de la landing a la web (unos 20 minutos)
-Fecha: la que diga Pablo. Mejor un martes o miércoles por la mañana, nunca en Cuaresma ni en Semana Santa. Lo hacemos juntos: tú pulsas en Cloudflare y GitHub, y yo compruebo.
+**Fecha: sábado 14-nov** (Pablo, 2-nov: coincide con la extraordinaria de la Pasión). La hora la pasa marketing con la de salida de la extraordinaria y su fuente. El cambio se hace solo con el «sí» de Pablo en el chat ese día. Lo hacemos juntos: tú pulsas en Cloudflare y GitHub, y yo compruebo.
+
+### Lista de comprobación del 14-nov
+**Antes del día**
+- [ ] **Jueves 5 · ensayo:** se conecta `prueba.ochocapitales.com` al proyecto `ocho-capitales`, se mide cuánto tarda el certificado, se prueban las redirecciones y se quita. La landing no se toca.
+- [ ] **Jueves 12 · vídeo con enlace a ochocapitales.com:** la landing aguanta. Comprobado el 2-nov:
+  - es estática en Pages, sin límite de visitas;
+  - con 60 visitas a la vez, las 60 dieron 200;
+  - `www` y `http` llevan a `https://ochocapitales.com/` con un 301;
+  - los enlaces con `?utm_…` y cualquier ruta abren la landing.
+
+  Repetir la prueba el 11 o el 12.
+- [ ] **Antes del 14:** subidos los arreglos de velocidad (Marchas, precarga, `site.js`/`cunao.js`) y, de Portada, el toque que se pierde con el globo.
+- [ ] **HSTS de la zona** (Cloudflare → SSL/TLS → Edge Certificates): solo con el «sí» de Pablo. La web ya manda `Strict-Transport-Security: max-age=31536000`, sin `includeSubDomains` ni `preload`. Activarlo en la zona cubriría también la landing y `datos`. Si Pablo dice sí, empezar sin `preload`, porque `preload` es difícil de deshacer.
+
+**El día 14**
+- [ ] **7:00-7:15:** la publicación de noticias del día está en R2 y verde en Actions. El cambio, nunca mientras se publica: comprobar que no hay ninguna ejecución en marcha.
+- [ ] Pasos 1 a 8 de abajo, a la hora acordada.
+- [ ] **Redirecciones:**
+  - `www` → raíz: la regla ya existe;
+  - `github.io` → dominio: variable `GITHUB_REDIRIGE_A`;
+  - `ocho-capitales.pages.dev` → dominio: con una *Bulk Redirect* de la cuenta (Pages no deja redirigir por nombre en `_redirects`). Solo el nombre exacto, sin subdominios, para que las vistas previas de cada subida sigan abriendo. Las pruebas de después de subir ya usan `CLOUDFLARE_URL`, así que no les afecta.
+- [ ] **Analítica:** a los 10 minutos salen visitas en **Análisis → Web Analytics** del dominio, y la consola no da errores de CSP.
+- [ ] **Noticias:** `/noticias/` muestra las de las 7:00 leídas de `datos.ochocapitales.com`.
+- [ ] **Vuelta atrás preparada:** se sabe cómo volver (apartado «Si algo sale mal») y en cuánto tiempo (el que salga en el ensayo del jueves 5).
+- [ ] **Aviso a marketing:** las redes guardan la vista previa de la landing («Algo se está encendiendo»). Al lanzar, refrescarla en el depurador de cada red. Además, la imagen de compartir de la landing apunta a `ocho-capitales-espera.pages.dev`: mejor que apunte al dominio.
+- [ ] **El domingo 15, a las 7:00:** primera publicación de noticias con el dominio. El vigía no cambia; solo hay que mirar que la portada del dominio tiene la hora nueva.
 1. **Antes:** la última publicación de «ocho-capitales» en verde (GitHub → Actions) y `https://ocho-capitales.pages.dev` bien.
 2. **Quitar el dominio de la landing:** **Workers y Pages** → `ocho-capitales-espera` → **Dominios personalizados** → en `ochocapitales.com` (y `www`, si lo tiene), los tres puntos → **Eliminar dominio**. Durante unos minutos el dominio no muestra nada.
 3. **Ponérselo a la web:** **Workers y Pages** → `ocho-capitales` → **Dominios personalizados** → **Configurar un dominio personalizado** → `ochocapitales.com` → **Activar dominio**. Repite con `www.ochocapitales.com`.
