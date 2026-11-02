@@ -301,15 +301,16 @@
       (function () {
         // la capa del HTML (oc-entrando) se quita cuando el globo ya está encima, o si algo falla
         function soltar() { document.documentElement.classList.remove('oc-entrando'); }
-        function globo() {
-          var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); else soltar(); };
+        function globo(otraVez) {
+          // a la llegada, si mientras bajaba globo.js se tocó para saltar (o pasaron los 9 s), el globo ya no sale encima de la web
+          var ir = function () { if (!otraVez && !document.documentElement.classList.contains('oc-entrando')) return; if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); else soltar(); };
           if (window.OCGlobo) return ir();
           var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; s.onerror = soltar; document.head.appendChild(s);
         }
         if (!datos.globo) { soltar(); return; }
         var otra = document.createElement('button'); otra.type = 'button'; otra.className = 'oc-colg-otra'; otra.setAttribute('aria-label', 'Ver otra vez la llegada desde el globo');
         otra.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>';
-        otra.addEventListener('click', function () { var r = mapa.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) mapa.scrollIntoView({ block: 'center' }); globo(); });
+        otra.addEventListener('click', function () { var r = mapa.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) mapa.scrollIntoView({ block: 'center' }); globo(true); });
         mapa.appendChild(otra);
         var visto = '1'; try { visto = sessionStorage.getItem('oc-entrada') || ''; } catch (e) { }
         if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) { soltar(); return; }
