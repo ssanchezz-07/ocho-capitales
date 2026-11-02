@@ -12,6 +12,47 @@
     set: function (k, v) { try { if (v == null || v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { } },
     json: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   };
+  // ---------- búsqueda por palabras (filtros de los listados) ----------
+  // «¡El Día del Señor!» → «el dia del senor»: sin tildes, mayúsculas ni signos
+  var palabras = function (s) { return norm(s).replace(/[^a-z0-9]+/g, ' ').trim(); };
+  var VACIAS = { a: 1, al: 1, de: 1, del: 1, el: 1, la: 1, las: 1, lo: 1, los: 1, y: 1, e: 1, en: 1, o: 1, u: 1, un: 1, una: 1, por: 1, con: 1 };
+  // ¿a y b se diferencian en una sola letra (de más, de menos, cambiada o dos seguidas al revés)?
+  var unaLetra = function (a, b) {
+    var la = a.length, lb = b.length; if (Math.abs(la - lb) > 1 || a === b) return false;
+    var i = 0; while (i < la && i < lb && a[i] === b[i]) i++;
+    if (la === lb) return a.slice(i + 1) === b.slice(i + 1) || (a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2));
+    return la > lb ? a.slice(i + 1) === b.slice(i) : a.slice(i) === b.slice(i + 1);
+  };
+  // Prepara una búsqueda. nivel(texto): 2 = todas las palabras completas, 1 = la última solo como principio de palabra, 0 = no.
+  // orden(fila): 0 título exacto, 1 título que empieza así, 2 todas en el título, 3 el resto.
+  function buscaPalabras(texto) {
+    var todas = palabras(texto).split(' ').filter(Boolean);
+    var utiles = todas.filter(function (w) { return !VACIAS[w]; });
+    if (!utiles.length) utiles = todas; // «a», «la»…: si solo hay palabras vacías, cuentan
+    var frase = todas.join(' '), ultima = utiles[utiles.length - 1] || '';
+    var nivel = function (s) {
+      var pre = false;
+      for (var i = 0; i < utiles.length; i++) {
+        if (s.indexOf(' ' + utiles[i] + ' ') !== -1) continue;
+        if (i === utiles.length - 1 && s.indexOf(' ' + utiles[i]) !== -1) { pre = true; continue; }
+        return 0;
+      }
+      return pre ? 1 : 2;
+    };
+    return {
+      palabras: utiles, ultima: ultima, nivel: nivel,
+      orden: function (x) { if (!frase) return 3; var t = x.t; return t === ' ' + frase + ' ' ? 0 : t.indexOf(' ' + frase) === 0 ? 1 : nivel(t) ? 2 : 3; },
+      casi: function (s) {
+        var ws = null;
+        return utiles.every(function (w) {
+          if (s.indexOf(' ' + w + ' ') !== -1) return true;
+          if (w.length < 5) return false;
+          ws = ws || s.trim().split(' ');
+          return ws.some(function (v) { return unaLetra(w, v); });
+        });
+      }
+    };
+  }
   // JSON con tiempo máximo, contando también la descarga del cuerpo: con mala cobertura una petición colgada
   // no deja la página esperando para siempre (al vencer se cancela y la promesa falla)
   var traer = function (url, ms) {
@@ -864,7 +905,10 @@
           // Por tandas, cediendo el turno entre ellas: el móvil sigue respondiendo a los toques mientras prepara las 10.000
           return new Promise(function (listo) {
             (function tanda() {
-              for (var fin = Math.min(src.length, i + 1500); i < fin; i++) { var f = src[i], fm = forms[f[4]] || ['', 'sin-formacion']; lista.push({ f: f, tipo: fm[0], tipoS: fm[1], q: norm(f[1] + ' ' + f[2] + ' ' + (f[6][1] || '') + ' ' + fm[0]) }); }
+              for (var fin = Math.min(src.length, i + 1500); i < fin; i++) {
+                var f = src[i], fm = forms[f[4]] || ['', 'sin-formacion'];
+                lista.push({ f: f, i: i, tipo: fm[0], ciudad: f[5], tipoS: fm[1], t: ' ' + palabras(f[1]) + ' ', a: ' ' + palabras(f[1] + ' ' + f[2] + ' ' + (f[6][1] || '') + ' ' + fm[0]) + ' ' });
+              }
               if (i < src.length) setTimeout(tanda, 0); else { filas = lista; restoOk = true; fallo = false; listo(); }
             })();
           });
@@ -885,29 +929,31 @@
     // En móvil los desplegables empiezan plegados; la búsqueda queda siempre a la vista
     var mf = $('[data-morefilters]', bar);
     if (mf && window.matchMedia('(max-width: 640px)').matches && !Object.keys(fields).some(function (k) { return k !== 'q' && fields[k].value; })) mf.open = false;
+    // Las filas que ya trae la página, con sus palabras preparadas una sola vez (título aparte, para ponerlo primero)
+    var propias = cards.map(function (el, k) {
+      var tit = el.dataset.t || norm(($('a', el) || el).textContent);
+      return { el: el, k: k, ciudad: el.dataset.ciudad, dia: el.dataset.dia, tipoS: el.dataset.tipo, origen: el.dataset.origen, t: ' ' + palabras(tit) + ' ', a: ' ' + palabras(el.dataset.q || el.textContent) + ' ' };
+    });
+    var vistas = [];
     function apply() {
-      var q = norm(fields.q && fields.q.value).trim().split(/\s+/).filter(Boolean);
+      var b = buscaPalabras(fields.q && fields.q.value);
       var c = fields.ciudad ? fields.ciudad.value : '', d = fields.dia ? fields.dia.value : '', t = fields.tipo ? fields.tipo.value : '', o = fields.origen ? fields.origen.value : '';
-      var n = 0;
-      var vale = function (hay, ciudad, dia, tipo, origen) {
-        return q.every(function (w) { return hay.indexOf(w) !== -1; })
-          && (!c || (' ' + ciudad + ' ').indexOf(' ' + c + ' ') !== -1)
-          && (!d || dia === d) && (!t || tipo === t) && (!o || origen === o);
-      };
-      cards.forEach(function (el) {
-        var ok = vale(el.dataset.q || norm(el.textContent), el.dataset.ciudad, el.dataset.dia, el.dataset.tipo, el.dataset.origen);
-        if (ok) n++;
-        el.hidden = !ok || n > limit;
-      });
-      if (restoOk && filas.length) {
-        var vistas = [];
-        filas.forEach(function (x, i) {
-          var ok = vale(x.q, x.f[5], '', x.tipoS, ''), el = hechas[i];
-          if (ok) n++;
-          if (ok && n <= limit) { if (!el) el = hechas[i] = filaMarcha(x); el.hidden = false; vistas.push(el); } else if (el) el.hidden = true;
-        });
-        vistas.forEach(function (el) { grid.appendChild(el); }); // en orden alfabético, detrás de las primeras
-      }
+      var pasa = function (x) { return (!c || (' ' + x.ciudad + ' ').indexOf(' ' + c + ' ') !== -1) && (!d || x.dia === d) && (!t || x.tipoS === t) && (!o || x.origen === o); };
+      var todas = restoOk && filas.length ? propias.concat(filas) : propias;
+      // Todas las palabras tienen que estar (Y). Palabra completa; la última, mientras se escribe, también vale como principio de palabra.
+      // Si hay coincidencias con palabras completas, las de solo principio se descartan: «señor» no trae «Señora».
+      var hay = [], completas = 0;
+      todas.forEach(function (x) { if (!pasa(x)) return; var nv = b.nivel(x.a); if (nv) { hay.push({ x: x, nv: nv, s: b.orden(x) }); if (nv === 2) completas++; } });
+      if (completas && b.ultima.length >= 5) hay = hay.filter(function (h) { return h.nv === 2; });
+      // Sin nada: se prueba con una letra de más, de menos o cambiada en las palabras largas («cigareras», «amarguas»)
+      if (!hay.length && b.palabras.length) todas.forEach(function (x) { if (pasa(x) && b.casi(x.a)) hay.push({ x: x, nv: 1, s: b.orden(x) }); });
+      // Orden: título exacto → título que empieza así → todas las palabras en el título → el resto; a igualdad, alfabético
+      if (b.palabras.length) hay.sort(function (p, q) { return p.s - q.s || q.nv - p.nv || (p.x.el ? p.x.k : 1e6 + p.x.i) - (q.x.el ? q.x.k : 1e6 + q.x.i); });
+      var n = hay.length;
+      vistas.forEach(function (el) { el.hidden = true; });
+      cards.forEach(function (el) { el.hidden = true; });
+      vistas = hay.slice(0, limit).map(function (h) { var x = h.x, el = x.el || hechas[x.i] || (hechas[x.i] = filaMarcha(x)); el.hidden = false; return el; });
+      vistas.forEach(function (el) { grid.appendChild(el); }); // en el orden de arriba
       if (!restoOk) n += extra;
       if (more) { more.hidden = n <= limit; if (moreBtn) moreBtn.textContent = 'Mostrar ' + Math.min(PAGE, n - limit) + ' más (quedan ' + (n - limit) + ')'; }
       if (count) count.textContent = !restoOk && fallo ? 'No se ha podido cargar la lista completa. Revisa la conexión y vuelve a probar.' : n + (n === 1 ? ' resultado' : ' resultados');
@@ -923,7 +969,7 @@
     }
     var urlT;
     Object.keys(fields).forEach(function (k) {
-      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; conResto(apply); }, 80); });
+      fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; conResto(apply); }, restoUrl ? 180 : 80); }); // con 10.000 marchas, se espera a que se deje de teclear
       fields[k].addEventListener('change', function () { limit = PAGE; conResto(apply); });
     });
     if (moreBtn) moreBtn.addEventListener('click', function () {

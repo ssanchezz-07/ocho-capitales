@@ -6,6 +6,7 @@
 // Playwright: el del proyecto o el de la carpeta PLAYWRIGHT_DIR (en GitHub Actions se instala aparte, sin tocar package.json).
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
+import { pruebaBuscador } from './prueba-buscador.mjs';
 
 const BASE = (process.argv[2] || 'http://localhost:8080/').replace(/\/?$/, '/');
 const require = createRequire(import.meta.url);
@@ -86,6 +87,8 @@ try {
       const desborda = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth).catch(() => 0);
       if (desborda > 1) errores.push(`se sale ${desborda}px por los lados`);
       if (ancho === 390 && estado === 200) for (const e of await soltura(p, nombre)) errores.push(e);
+      // el filtro de Marchas, con una batería de búsquedas reales (tools/prueba-buscador.mjs); a 1440 px, que va más deprisa
+      if (ancho === 1440 && nombre === 'Marchas' && estado === 200) for (const e of await pruebaBuscador(p, BASE)) errores.push(e);
       const linea = `${nombre} (/${dir}) a ${ancho}px`;
       if (errores.length) { fallos.push(linea); for (const e of [...new Set(errores)].slice(0, 5)) console.log(`::error::${linea}: ${e}`); }
       else console.log(`✓ ${linea}`);
