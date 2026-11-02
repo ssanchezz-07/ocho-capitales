@@ -12,6 +12,12 @@
     set: function (k, v) { try { if (v == null || v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { } },
     json: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   };
+  // fetch con tiempo máximo: con mala cobertura una petición colgada no deja la página esperando para siempre
+  var traer = function (url, ms) {
+    if (!window.AbortController) return fetch(url);
+    var ac = new AbortController(), t = setTimeout(function () { ac.abort(); }, ms || 15000);
+    return fetch(url, { signal: ac.signal }).then(function (r) { clearTimeout(t); return r; }, function (e) { clearTimeout(t); throw e; });
+  };
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var CITY_NAMES = {};
   $$('[data-city-select] option').forEach(function (o) { if (o.value) CITY_NAMES[o.value] = o.textContent; });
@@ -72,9 +78,11 @@
   }
 
   // ---------- fechas relativas ----------
-  var rtf = window.Intl && Intl.RelativeTimeFormat ? new Intl.RelativeTimeFormat('es', { numeric: 'auto' }) : null;
+  // se crea la primera vez que hace falta: crearlo al arrancar costaba ~20 ms en cada página, aunque no tuviera fechas
+  var rtf;
   function ago(iso) {
     var d = (new Date(iso) - Date.now()) / 1000, a = Math.abs(d);
+    if (rtf === undefined) rtf = window.Intl && Intl.RelativeTimeFormat ? new Intl.RelativeTimeFormat('es', { numeric: 'auto' }) : null;
     if (!rtf) return new Date(iso).toLocaleDateString('es-ES');
     if (a < 60) return 'ahora';
     if (a < 3600) return rtf.format(Math.round(d / 60), 'minute');
@@ -437,7 +445,7 @@
     var hoyISO = function () { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date()); };
     var ahoraMin = function () { var f = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
     function cargarPlano() { if (window.OCPlano) return Promise.resolve(); return new Promise(function (ok, ko) { var s = document.createElement('script'); s.src = datos.plano; s.onload = ok; s.onerror = ko; document.head.appendChild(s); }); }
-    function datosCiudad(c) { return cargas[c] || (cargas[c] = fetch(datos.ciudades[c].d).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function (e) { delete cargas[c]; throw e; })); }
+    function datosCiudad(c) { return cargas[c] || (cargas[c] = traer(datos.ciudades[c].d).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function (e) { delete cargas[c]; throw e; })); }
     function fechaDe(d) { if (datos.fechas[d]) return datos.fechas[d]; var h = D.hermandades.filter(function (x) { return x.d === d && x.x; })[0]; return h ? h.x.fecha : '9999'; }
     function delDia(d) { return D.hermandades.filter(function (h) { return h.d === d; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); }
     // Hoy, si es jornada; si no, la próxima salida extraordinaria de los 45 días siguientes; si no, la jornada con más cofradías
@@ -839,14 +847,37 @@
     var params = new URLSearchParams(location.search);
     Object.keys(fields).forEach(function (k) { if (params.get(k)) fields[k].value = params.get(k); });
     var timer, PAGE = 50, limit = PAGE;
-    // Listados muy largos (marchas): se sirven las primeras filas y el resto se pide al filtrar o pedir más
+    // Listados muy largos (marchas): la página trae las primeras filas; el resto llega como datos (resto.json)
+    // y solo se pintan las filas que se ven. Antes llegaban 6 MB de HTML y casi 10.000 filas de golpe: el móvil se quedaba pillado.
     var restoUrl = grid.getAttribute('data-resto'), extra = +grid.getAttribute('data-extra') || 0, restoOk = !restoUrl;
-    // Una sola petición aunque se escriba deprisa: antes, cada tecla pedía el resto y se añadía varias veces (marchas repetidas)
-    var restoP = null;
+    // Una sola petición aunque se escriba deprisa; si falla, se avisa y el siguiente toque lo reintenta
+    var restoP = null, fallo = false, filas = [], caps = {}, hechas = {};
     function conResto(fn) {
       if (restoOk) return fn();
-      if (!restoP) restoP = fetch(BASE + restoUrl).then(function (r) { return r.text(); }).then(function (t) { grid.insertAdjacentHTML('beforeend', t); cards = $$('.oc-entry', grid); }).catch(function () { }).then(function () { restoOk = true; });
-      restoP.then(fn);
+      if (count) count.textContent = 'Buscando en todas las marchas…';
+      if (!restoP) restoP = traer(BASE + restoUrl, 20000).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (j) {
+          caps = j.caps || {}; var forms = j.forms || [], src = j.filas || [], lista = [], i = 0;
+          // fila: [slug, título, compositor, año, nº de formación, capital, dedicatoria, grabación, iniciales] (build.mjs, pageDirMarchas)
+          // Por tandas, cediendo el turno entre ellas: el móvil sigue respondiendo a los toques mientras prepara las 10.000
+          return new Promise(function (listo) {
+            (function tanda() {
+              for (var fin = Math.min(src.length, i + 1500); i < fin; i++) { var f = src[i], fm = forms[f[4]] || ['', 'sin-formacion']; lista.push({ f: f, tipo: fm[0], tipoS: fm[1], q: norm(f[1] + ' ' + f[2] + ' ' + (f[6][1] || '') + ' ' + fm[0]) }); }
+              if (i < src.length) setTimeout(tanda, 0); else { filas = lista; restoOk = true; fallo = false; listo(); }
+            })();
+          });
+        }).catch(function () { fallo = true; restoP = null; });
+      var p = restoP; p.then(fn);
+    }
+    function filaMarcha(x) {
+      var f = x.f, cap = caps[f[5]], li = document.createElement('li'), c = cap ? ' style="--c:' + esc(cap[0]) + '"' : '', d = f[6];
+      var meta = (f[2] ? '<span class="vx-autor">' + esc(f[2]) + '</span>' : '') + (f[3] ? '<span>' + esc(f[3]) + '</span>' : '') + (x.tipo ? '<span class="nx-tema">' + esc(x.tipo) + '</span>' : '');
+      var ded = d[0] === 3 ? esc(d[1]) : d[0] ? (d[0] === 2 ? 'Asociada a' : 'Dedicada a') + ' <b>' + esc(d[1]) + '</b>' : '';
+      var pie = (cap ? '<span class="oc-city"' + c + '>' + esc(cap[1]) + '</span>' : '') + (f[7] ? '<span class="vx-play">Grabación</span>' : '');
+      li.className = 'oc-entry vx-m';
+      li.innerHTML = '<span class="vx-sello" aria-hidden="true"' + c + '><span>' + esc(f[8]) + '</span></span><div class="vx-body"><h3 class="vx-tit"><a href="' + BASE + 'marcha/' + esc(f[0]) + '/">' + esc(f[1]) + '</a></h3>'
+        + (meta ? '<p class="vx-meta">' + meta + '</p>' : '') + (ded ? '<p class="vx-ded">' + ded + '</p>' : '') + (pie ? '<p class="vx-pie">' + pie + '</p>' : '') + '</div>';
+      return li;
     }
     var more = $('[data-dir-more]', scope), moreBtn = more && $('button', more);
     // En móvil los desplegables empiezan plegados; la búsqueda queda siempre a la vista
@@ -856,22 +887,39 @@
       var q = norm(fields.q && fields.q.value).trim().split(/\s+/).filter(Boolean);
       var c = fields.ciudad ? fields.ciudad.value : '', d = fields.dia ? fields.dia.value : '', t = fields.tipo ? fields.tipo.value : '', o = fields.origen ? fields.origen.value : '';
       var n = 0;
+      var vale = function (hay, ciudad, dia, tipo, origen) {
+        return q.every(function (w) { return hay.indexOf(w) !== -1; })
+          && (!c || (' ' + ciudad + ' ').indexOf(' ' + c + ' ') !== -1)
+          && (!d || dia === d) && (!t || tipo === t) && (!o || origen === o);
+      };
       cards.forEach(function (el) {
-        var hay = el.dataset.q || norm(el.textContent);
-        var ok = q.every(function (w) { return hay.indexOf(w) !== -1; })
-          && (!c || (' ' + el.dataset.ciudad + ' ').indexOf(' ' + c + ' ') !== -1)
-          && (!d || el.dataset.dia === d) && (!t || el.dataset.tipo === t) && (!o || el.dataset.origen === o);
+        var ok = vale(el.dataset.q || norm(el.textContent), el.dataset.ciudad, el.dataset.dia, el.dataset.tipo, el.dataset.origen);
         if (ok) n++;
         el.hidden = !ok || n > limit;
       });
+      if (restoOk && filas.length) {
+        var vistas = [];
+        filas.forEach(function (x, i) {
+          var ok = vale(x.q, x.f[5], '', x.tipoS, ''), el = hechas[i];
+          if (ok) n++;
+          if (ok && n <= limit) { if (!el) el = hechas[i] = filaMarcha(x); el.hidden = false; vistas.push(el); } else if (el) el.hidden = true;
+        });
+        vistas.forEach(function (el) { grid.appendChild(el); }); // en orden alfabético, detrás de las primeras
+      }
       if (!restoOk) n += extra;
       if (more) { more.hidden = n <= limit; if (moreBtn) moreBtn.textContent = 'Mostrar ' + Math.min(PAGE, n - limit) + ' más (quedan ' + (n - limit) + ')'; }
-      if (count) count.textContent = n + (n === 1 ? ' resultado' : ' resultados');
+      if (count) count.textContent = !restoOk && fallo ? 'No se ha podido cargar la lista completa. Revisa la conexión y vuelve a probar.' : n + (n === 1 ? ' resultado' : ' resultados');
       if (empty) empty.hidden = n !== 0;
-      var p = new URLSearchParams();
-      Object.keys(fields).forEach(function (k) { if (fields[k].value) p.set(k, fields[k].value); });
-      history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+      // La dirección (para compartir o volver con los filtros) se apunta después y solo si cambia:
+      // replaceState en cada tecla tardaba casi 1 s con un móvil lento y dejaba el campo pillado
+      clearTimeout(urlT); urlT = setTimeout(function () {
+        var p = new URLSearchParams();
+        Object.keys(fields).forEach(function (k) { if (fields[k].value) p.set(k, fields[k].value); });
+        var dir = location.pathname + (p.toString() ? '?' + p : '');
+        if (dir !== location.pathname + location.search) history.replaceState(null, '', dir);
+      }, 600);
     }
+    var urlT;
     Object.keys(fields).forEach(function (k) {
       fields[k].addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; conResto(apply); }, 80); });
       fields[k].addEventListener('change', function () { limit = PAGE; conResto(apply); });
@@ -880,7 +928,7 @@
       // el foco pasa al primer resultado nuevo para seguir leyendo con teclado o lector de pantalla
       var first = limit; limit += PAGE; conResto(function () {
         apply();
-        var vis = cards.filter(function (el) { return !el.hidden; }); var a = vis[first] && $('a', vis[first]); if (a) a.focus({ preventScroll: false });
+        var vis = $$('.oc-entry', grid).filter(function (el) { return !el.hidden; }); var a = vis[first] && $('a', vis[first]); if (a) a.focus({ preventScroll: false });
       });
     });
     var reset = $('[data-dir-reset]', scope);
@@ -1080,6 +1128,8 @@
       if (headN) { if (city && COLORS[city]) headN.style.setProperty('--nx-c', COLORS[city]); else headN.style.removeProperty('--nx-c'); }
     };
     var render = function () {
+      // los filtros responden desde el primer toque; si las noticias aún no han llegado, se marca la elección y se avisa
+      if (!all) { paintChips(); if (countN) countN.textContent = fallidas ? 'No se han podido cargar todas las noticias. Revisa la conexión y recarga la página.' : 'Cargando las noticias…'; return; }
       var v = window.OCNoticias.vista(all, { city: city, q: qIn.value, oficiales: oficiales, tema: tema, shown: shown, names: CITY_NAMES, colors: COLORS, capitales: CAPS });
       list.innerHTML = v.html;
       paintAgo(list);
@@ -1097,27 +1147,31 @@
     var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1'; tema = NOMBRE_TEMA[u0.get('tema')] ? u0.get('tema') : '';
     // las noticias frescas vienen de OC_NOTICIAS (R2, se actualiza cada hora sin volver a publicar la web); si falla, las de la compilación
     var pintado = $$('time[datetime]', list).reduce(function (m, t) { return Math.max(m, +new Date(t.getAttribute('datetime')) || 0); }, 0);
-    var leer = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+    var leer = function (url) { return traer(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+    var fallidas = false, tocado = false;
+    // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
+    $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { tocado = true; irA(b.dataset.v); }); });
+    ofiB.addEventListener('click', function () { tocado = true; cambiar(function () { oficiales = !oficiales; shown = 24; }); });
+    $$('[data-f="tema"] button', nf).forEach(function (b) { b.addEventListener('click', function () { tocado = true; cambiar(function () { tema = b.dataset.v; shown = 24; }); }); });
+    list.addEventListener('click', function (e) { var b = e.target.closest('[data-ver-ciudad]'); if (b) { tocado = true; irA(b.dataset.verCiudad); } });
+    cityListeners.push(function (c) { if (c === city) return; city = c; shown = 24; tocado = true; render(); });
+    var t; qIn.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { shown = 24; tocado = true; render(); }, 120); });
+    more.addEventListener('click', function () { shown += 24; tocado = true; render(); });
     (window.OC_NOTICIAS ? leer(window.OC_NOTICIAS).catch(function () { return leer(BASE + 'news.json'); }) : leer(BASE + 'news.json')).then(function (j) {
       all = j.items;
       var nuevas = all.some(function (n) { return n.ts > pintado; });
-      if (city || q0 || oficiales || tema || nuevas) render(); else { paintChips(); paintAgo(list); }
-      // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
-      $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { irA(b.dataset.v); }); });
-      ofiB.addEventListener('click', function () { cambiar(function () { oficiales = !oficiales; shown = 24; }); });
-      $$('[data-f="tema"] button', nf).forEach(function (b) { b.addEventListener('click', function () { cambiar(function () { tema = b.dataset.v; shown = 24; }); }); });
-      list.addEventListener('click', function (e) { var b = e.target.closest('[data-ver-ciudad]'); if (b) irA(b.dataset.verCiudad); });
-      cityListeners.push(function (c) { if (c === city) return; city = c; shown = 24; render(); });
+      if (city || q0 || oficiales || tema || nuevas || tocado) render(); else { paintChips(); paintAgo(list); }
       if (desdeUrl && city !== getCity()) setCity(city);
-      var t; qIn.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { shown = 24; render(); }, 120); });
-      more.addEventListener('click', function () { shown += 24; render(); });
-    }).catch(function () { if (countN) countN.textContent = 'No se pudo cargar el archivo completo; se muestran las últimas noticias.'; more.hidden = true; });
+    }).catch(function () {
+      fallidas = true; more.hidden = true;
+      if (countN) countN.textContent = tocado ? 'No se han podido cargar todas las noticias. Revisa la conexión y recarga la página.' : 'No se pudo cargar el archivo completo; se muestran las últimas noticias.';
+    });
   }
 
   // ---------- buscador instantáneo ----------
   var idx = null, idxPromise = null;
   function loadIdx() {
-    if (!idxPromise) idxPromise = fetch(BASE + 'search-index.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) { idx = j.map(function (e) { e.nn = norm(e.n); return e; }); return idx; }).catch(function (err) { idxPromise = null; throw err; });
+    if (!idxPromise) idxPromise = traer(BASE + 'search-index.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) { idx = j.map(function (e) { e.nn = norm(e.n); return e; }); return idx; }).catch(function (err) { idxPromise = null; throw err; });
     return idxPromise;
   }
   // Las marchas van aparte (search-marchas.json, más de 7.000): se piden al escribir 3 letras y se suman al índice.
@@ -1125,7 +1179,7 @@
   var mPromise = null;
   function loadMarchas(q) {
     if (norm(q || '').trim().length < 3) return null;
-    if (!mPromise) mPromise = Promise.all([loadIdx(), fetch(BASE + 'search-marchas.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })]).then(function (res) {
+    if (!mPromise) mPromise = Promise.all([loadIdx(), traer(BASE + 'search-marchas.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })]).then(function (res) {
       res[1].forEach(function (f) { idx.push({ t: 'm', n: f[0], nn: norm(f[0]), s: 'Marcha' + (f[1] ? ' de ' + f[1] : '') + (f[2] ? ', ' + f[2] : f[3] ? ' · ' + f[3] : ''), u: 'marcha/' + f[4] + '/', c: f[5], k: f[6] }); });
     }).catch(function (err) { mPromise = null; throw err; });
     return mPromise;

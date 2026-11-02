@@ -170,8 +170,14 @@ const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
 const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+// Precarga de la página siguiente (Chrome y Edge; los demás lo ignoran): las pestañas de abajo se piden en cuanto se ven,
+// y cualquier otro enlace de la web al empezar a tocarlo. Solo se descarga el HTML (prefetch, sin ejecutar nada).
+const ESPECULA = `<script type="speculationrules">${JSON.stringify({ prefetch: [
+  { where: { and: [{ selector_matches: '.oc-tabbar a' }, { href_matches: u('*') }] }, eagerness: 'eager' },
+  { where: { and: [{ href_matches: u('*') }, { not: { href_matches: [u('*.json'), u('*.xml'), u('data/*'), u('assets/*')] } }, { not: { selector_matches: '[target], [download], [rel~="nofollow"]' } }] }, eagerness: 'moderate' },
+] })}</script>`;
 function conCsp(html) {
-  const hashes = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
+  const hashes = [...html.matchAll(/<script(?: type="speculationrules")?>([\s\S]*?)<\/script>/g)].map((m) => "'sha256-" + createHash('sha256').update(m[1]).digest('base64') + "'");
   // Cloudflare Web Analytics (zona ochocapitales.com, auto-instalado en el borde): su script y su envío de datos
   const csp = ["default-src 'self'", "script-src 'self' https://static.cloudflareinsights.com " + [...new Set(hashes)].join(' '), "style-src 'self' 'unsafe-inline'", "img-src 'self' https: data:", "font-src 'self'", "connect-src 'self' https://cloudflareinsights.com" + (FORM_CLAVE ? ' https://api.web3forms.com' : '') + (NOTICIAS_URL ? ' ' + new URL(NOTICIAS_URL).origin : ''), "manifest-src 'self'", "worker-src 'self'", "object-src 'none'", "base-uri 'self'", "form-action 'self'"].join('; ');
   return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">');
@@ -472,6 +478,7 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
+${ESPECULA}
 <link rel="preload" href="${u('assets/fonts/karantina-latin.woff2')}" as="font" type="font/woff2" crossorigin><link rel="preload" href="${u('assets/fonts/heebo-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 <link rel="stylesheet" href="${u('assets/vida.css')}?v=${HUELLA.vida}">
@@ -1174,10 +1181,21 @@ function entryMarcha(m) {
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
   const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map(entryMarcha);
-  // Con miles de marchas la página sirve las primeras filas; el resto va en marchas/resto.html y se pide al filtrar o al pedir «mostrar más»
-  const PRIMERAS = 300;
-  write('marchas/resto.html', items.slice(PRIMERAS).join(''));
-  pages.splice(pages.indexOf('marchas/resto.html'), 1);
+  // Con miles de marchas la página sirve las primeras filas; el resto va en marchas/resto.json (datos, no HTML: 6 MB → menos de 1 MB)
+  // y se pide al filtrar o al pedir «mostrar más». El navegador solo pinta las filas que se ven (site.js, filaMarcha).
+  // Cada fila: [slug, título, compositor, año, nº de formación, capital, dedicatoria, grabación (1/0), iniciales]
+  // dedicatoria: [0] sin dedicatoria · [1|2, hermandad] «Dedicada a|Asociada a <b>hermandad</b>» · [3, texto] «Dedicada a la Macarena»
+  const PRIMERAS = 50;
+  const ordenadas = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
+  const formaciones = [...new Set(ordenadas.map((m) => m.tipo || ''))];
+  const filaJson = (m) => {
+    const ded = m.h ? [m.est === 'sin-verificar' ? 2 : 1, m.h.nombre] : m.dedicatoria ? [3, 'Dedicada ' + (/^(a|al)\s/i.test(m.dedicatoria) ? m.dedicatoria[0].toLowerCase() + m.dedicatoria.slice(1) : 'a ' + m.dedicatoria)] : [0];
+    return [m.slug, m.titulo, m.autor || '', m.anio || '', formaciones.indexOf(m.tipo || ''), ciudadMarcha(m) || '', ded, m.video ? 1 : 0, inicialesM(m.autor || m.titulo)];
+  };
+  const caps = Object.fromEntries(D.capitales.map((c) => [c.slug, [c.color, c.nombre]]));
+  const forms = formaciones.map((t) => [t, slugify(t || 'sin-formacion')]);
+  fs.mkdirSync(path.join(DIST, 'marchas'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'marchas', 'resto.json'), JSON.stringify({ caps, forms, filas: ordenadas.slice(PRIMERAS).map(filaJson) }));
   const conVideo = MARCHAS.filter((m) => m.video).length, conHerm = MARCHAS.filter((m) => m.h).length;
   // Por capital: cuántas marchas tiene cada una y una con grabación como muestra (la primera, por orden alfabético, de las mejor documentadas)
   const porCap = D.capitales.map((c) => { const ms = MARCHAS.filter((m) => ciudadMarcha(m) === c.slug); const ej = [...ms].sort((x, y) => (!!y.video - !!x.video) || ((y.est === 'contrastada') - (x.est === 'contrastada')) || x.titulo.localeCompare(y.titulo, 'es'))[0]; return { c, n: ms.length, ej }; }).filter((x) => x.n);
@@ -1185,7 +1203,7 @@ function pageDirMarchas() {
   const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Marchas</h1><p class="nx-lead">${MARCHAS.length} marchas procesionales de España (bases de datos de Marchas de Procesión, Patrimonio Musical y la Biblioteca Nacional, fichas de las hermandades), con compositor, formación, año y a quién van dedicadas cuando una fuente lo dice. Cada ficha enlaza sus fuentes.</p><p class="nx-pulso"><span><b>${MARCHAS.length}</b> marchas</span><span><b>${AUTORES.size}</b> compositores</span><span><b>${conVideo}</b> con grabación</span><span><b>${conHerm}</b> dedicadas a hermandades del portal</span></p></div></header>
 ${porCap.length ? `<section class="nx-caps" aria-labelledby="vx-caps-t"><h2 class="nx-h" id="vx-caps-t">Por capital</h2><ul>${porCap.map(({ c, n, ej }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} marchas de ${esc(c.nombre)}"><span>${esc(c.nombre)}</span><b>${n}</b></button>${ej ? `<h3 class="nx-cap-tit"><a class="nx-a" href="${u('marcha/' + ej.slug + '/')}">${esc(ej.titulo)}</a></h3><p class="nx-meta"><span class="nx-src">${esc(ej.autor || '')}</span>${ej.video ? '<span class="vx-play">Grabación</span>' : ''}</p>` : ''}</li>`).join('')}</ul></section>` : ''}
 ${topAut.length ? `<section class="vx-autores" aria-labelledby="vx-aut-t"><h2 class="nx-h" id="vx-aut-t">Compositores con más marchas</h2><ul>${topAut.map((a) => `<li><a href="${u('compositor/' + a.slug + '/')}"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(a.nombre))}</span></span><span class="vx-aut-n">${esc(a.nombre)}</span><b>${a.marchas.length}</b></a></li>`).join('')}</ul></section>` : ''}
-<h2 class="nx-h vx-todas">Todas las marchas</h2>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir data-resto="marchas/resto.html" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
+<h2 class="nx-h vx-todas">Todas las marchas</h2>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir data-resto="marchas/resto.json" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
   write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
 function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…', etqTipo = 'Tipo') {

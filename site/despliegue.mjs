@@ -97,6 +97,7 @@ export function escribeCabeceras({ DIST, BASE, SITE }) {
     [b + 'news.json', ['Cache-Control: public, max-age=300, stale-while-revalidate=3600']],
     [b + 'search-index.json', ['Cache-Control: public, max-age=3600, stale-while-revalidate=86400']],
     [b + 'search-marchas.json', ['Cache-Control: public, max-age=3600, stale-while-revalidate=86400']],
+    [b + 'marchas/resto.json', ['Cache-Control: public, max-age=3600, stale-while-revalidate=86400']],
     [b + 'data/*', ['Cache-Control: public, max-age=3600, stale-while-revalidate=86400']],
     [b + 'manifest.webmanifest', ['Cache-Control: public, max-age=86400']],
     // el service worker se comprueba siempre: así llega enseguida cualquier arreglo
