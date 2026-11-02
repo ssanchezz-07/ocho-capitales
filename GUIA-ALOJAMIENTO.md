@@ -100,7 +100,10 @@ Después te paso Lighthouse en móvil, antes y después.
 
 **El día 14**
 - [ ] **7:00-7:15:** la publicación de noticias del día está en R2 y verde en Actions. El cambio, nunca mientras se publica: comprobar que no hay ninguna ejecución en marcha.
-- [ ] Pasos 1 a 8 de abajo, a la hora acordada.
+- [ ] Pasos 1 a 8 de abajo, **por la mañana**: hacia las 9:30, con margen para volver atrás.
+  - Marketing publica a las 16:30. La Pasión sale a las 17:30 de los Santos Mártires (dato de `site/data/recorridos/malaga.json`, que cita el cartel de @archipasionmlg; Marketing pide comprobarlo antes de anunciarlo).
+  - **Hora límite: 14:00** con la web ya en el dominio. Si a esa hora no está, se vuelve a la landing y Marketing aplaza su publicación.
+- [ ] **Antes de las 16:30, en el dominio:** `/en-la-calle/malaga/` abre el plano con la extraordinaria de la Pasión. Probar a 390 px con un toque. El 2-nov ya figuraba en `pages.dev`.
 - [ ] **Redirecciones:**
   - `www` → raíz: la regla ya existe;
   - `github.io` → dominio: variable `GITHUB_REDIRIGE_A`;
