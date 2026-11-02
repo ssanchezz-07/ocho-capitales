@@ -46,6 +46,7 @@
         var ws = null;
         return utiles.every(function (w) {
           if (s.indexOf(' ' + w + ' ') !== -1) return true;
+          if (w.length >= 3 && s.indexOf(' ' + w) !== -1) return true; // «nazar jesus»: principio de palabra en cualquier sitio
           if (w.length < 5) return false;
           ws = ws || s.trim().split(' ');
           return ws.some(function (v) { return unaLetra(w, v); });
@@ -945,7 +946,7 @@
       var hay = [], completas = 0;
       todas.forEach(function (x) { if (!pasa(x)) return; var nv = b.nivel(x.a); if (nv) { hay.push({ x: x, nv: nv, s: b.orden(x) }); if (nv === 2) completas++; } });
       if (completas && b.ultima.length >= 5) hay = hay.filter(function (h) { return h.nv === 2; });
-      // Sin nada: se prueba con una letra de más, de menos o cambiada en las palabras largas («cigareras», «amarguas»)
+      // Sin nada: se aceptan principios de palabra en cualquier posición y una letra de más, de menos o cambiada en las largas («cigareras»)
       if (!hay.length && b.palabras.length) todas.forEach(function (x) { if (pasa(x) && b.casi(x.a)) hay.push({ x: x, nv: 1, s: b.orden(x) }); });
       // Orden: título exacto → título que empieza así → todas las palabras en el título → el resto; a igualdad, alfabético
       if (b.palabras.length) hay.sort(function (p, q) { return p.s - q.s || q.nv - p.nv || (p.x.el ? p.x.k : 1e6 + p.x.i) - (q.x.el ? q.x.k : 1e6 + q.x.i); });
