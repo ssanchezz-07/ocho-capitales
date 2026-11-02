@@ -103,3 +103,35 @@ En cada pestaña nueva, durante los primeros segundos, cualquier toque en la por
    - **Jueves 5:** ensayo con `prueba.ochocapitales.com`.
    - **11-12-nov:** repetir la prueba de carga de la landing.
    - **Pendiente de otros:** la hora, de marketing; el «sí» al HSTS, de Pablo.
+
+## 3-nov: tocar una capital en la portada y repaso de plantillas (subido en `24ea474`)
+Pablo, en su iPhone: «en la portada, al clicar en la capital tarda bastante».
+
+**Toque en la bandera.** Medido en la web publicada a 390 px:
+- Chromium con la CPU 4×: de 2,3 a 3,4 s hasta ver el plano. Casi igual con caché vacía, con caché llena y con 4G normal: **no es la red**.
+- WebKit (el motor de Safari): unos 2 s.
+- Desglose con Málaga: los datos llegan a los 0,5 s, el plano está montado a los 1,3 s, y después hay 1,5 s de animación (`volarCamara`) que no empezaba hasta que llegaban los datos.
+- Lo arregla Portada (`304b091`, pendiente del sí de Pablo): la cámara arranca al tocar y sigue en 1 s al llegar los datos.
+- Queda la causa 3, el peso de `data/calle`, que también lleva Portada.
+
+**Hecho aquí:**
+- **Caché de un año** (`immutable`) para todo lo versionado con `?v=`. Antes `vida.css`, que frena el pintado y está en todas las páginas, junto con `portada.css`, `noticias.js`, `nazareno.js`, `globo.js`, `globo-datos.json` y `vendor/*`, iban con `max-age=0`: en cada visita, una ida y vuelta solo para preguntar si habían cambiado.
+- **Precarga para Safari**, que no tiene `speculationrules`. Con el dedo apoyado 50 ms sin moverse (o el ratón 65 ms encima), el service worker pide la página. Si se navega a ella en 15 s, la sirve sin volver a esperar a la red. Si tarda más de 2,5 s, se ve la copia. No guarda lo que solo se ha precargado y respeta el «ahorro de datos».
+  - Medido en WebKit con 500 ms de retraso por página: tocar una capital pasa de ~2,0 s a ~1,5 s de media con un toque de 150 ms. Con la espera de 50 ms la ganancia es algo menor.
+- **Cabecera y barra inferior opacas en el móvil.** Con un 97 % de opacidad y sin desenfoque se transparentaban «Toca una bandera…» y las letras de las banderas sobre el logo (captura de Pablo).
+
+**Plantillas en la web publicada:**
+- **Página del HTML:** 5–45 KB comprimido. Lo más pesado: Hermandades (45 KB, 3.818 nodos), Calendario (35 KB, 3.115 nodos) y Hoy (17 KB, 3.224 nodos).
+- **Imágenes:** en webp, con `loading=lazy` fuera de la primera pantalla y `fetchpriority=high` en la principal.
+- **Fuentes:** con `preload` y `font-display: swap`.
+- **Compresión:** Brotli en HTML, CSS, JS y JSON.
+
+**Visitas repetidas** (Chromium, CPU 4×, 4G lento, sin service worker), peticiones que van a la red:
+
+| Plantilla | Antes | Después |
+|---|---|---|
+| Portada | 4 | 1 |
+| Hoy, Calendario, Buscar, capital, hermandad, Hermandades, Marchas, imaginero, Favoritos | 2 | 1 |
+| Noticias, plano | 3 | 1 |
+
+FCP y LCP varían ±1 s entre pasadas en esta máquina, así que no se comparan. Lo medible y estable es la petición de menos por página.
