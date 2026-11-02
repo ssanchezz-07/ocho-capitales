@@ -1181,15 +1181,15 @@ function entryMarcha(m) {
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
   const items = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es')).map(entryMarcha);
-  // Con miles de marchas la página sirve las primeras filas; el resto va en marchas/resto.json (datos, no HTML: 6 MB → menos de 1 MB)
+  // Con miles de marchas la página sirve las primeras filas; el resto va en marchas/resto.json (datos, no HTML: de 6,4 MB a ~1,5 MB; ~380 KB comprimido)
   // y se pide al filtrar o al pedir «mostrar más». El navegador solo pinta las filas que se ven (site.js, filaMarcha).
   // Cada fila: [slug, título, compositor, año, nº de formación, capital, dedicatoria, grabación (1/0), iniciales]
-  // dedicatoria: [0] sin dedicatoria · [1|2, hermandad] «Dedicada a|Asociada a <b>hermandad</b>» · [3, texto] «Dedicada a la Macarena»
+  // dedicatoria: [0] sin dedicatoria · [1|2, hermandad] «Dedicada a|Asociada a <b>hermandad</b>» · [3, texto] la dedicatoria tal cual: el navegador le añade «Dedicada a…» al pintarla, y se busca sin ese prefijo, como en las filas de la página
   const PRIMERAS = 50;
   const ordenadas = [...MARCHAS].sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
   const formaciones = [...new Set(ordenadas.map((m) => m.tipo || ''))];
   const filaJson = (m) => {
-    const ded = m.h ? [m.est === 'sin-verificar' ? 2 : 1, m.h.nombre] : m.dedicatoria ? [3, 'Dedicada ' + (/^(a|al)\s/i.test(m.dedicatoria) ? m.dedicatoria[0].toLowerCase() + m.dedicatoria.slice(1) : 'a ' + m.dedicatoria)] : [0];
+    const ded = m.h ? [m.est === 'sin-verificar' ? 2 : 1, m.h.nombre] : m.dedicatoria ? [3, m.dedicatoria] : [0];
     return [m.slug, m.titulo, m.autor || '', m.anio || '', formaciones.indexOf(m.tipo || ''), ciudadMarcha(m) || '', ded, m.video ? 1 : 0, inicialesM(m.autor || m.titulo)];
   };
   const caps = Object.fromEntries(D.capitales.map((c) => [c.slug, [c.color, c.nombre]]));

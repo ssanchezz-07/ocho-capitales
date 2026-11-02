@@ -12,11 +12,13 @@
     set: function (k, v) { try { if (v == null || v === '') localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { } },
     json: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   };
-  // fetch con tiempo máximo: con mala cobertura una petición colgada no deja la página esperando para siempre
+  // JSON con tiempo máximo, contando también la descarga del cuerpo: con mala cobertura una petición colgada
+  // no deja la página esperando para siempre (al vencer se cancela y la promesa falla)
   var traer = function (url, ms) {
-    if (!window.AbortController) return fetch(url);
-    var ac = new AbortController(), t = setTimeout(function () { ac.abort(); }, ms || 15000);
-    return fetch(url, { signal: ac.signal }).then(function (r) { clearTimeout(t); return r; }, function (e) { clearTimeout(t); throw e; });
+    var ac = window.AbortController ? new AbortController() : null, t = ac && setTimeout(function () { ac.abort(); }, ms || 15000);
+    var fin = function () { if (t) clearTimeout(t); };
+    return fetch(url, ac ? { signal: ac.signal } : undefined).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) { fin(); return j; }, function (e) { fin(); throw e; });
   };
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var CITY_NAMES = {};
@@ -445,7 +447,7 @@
     var hoyISO = function () { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date()); };
     var ahoraMin = function () { var f = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
     function cargarPlano() { if (window.OCPlano) return Promise.resolve(); return new Promise(function (ok, ko) { var s = document.createElement('script'); s.src = datos.plano; s.onload = ok; s.onerror = ko; document.head.appendChild(s); }); }
-    function datosCiudad(c) { return cargas[c] || (cargas[c] = traer(datos.ciudades[c].d).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function (e) { delete cargas[c]; throw e; })); }
+    function datosCiudad(c) { return cargas[c] || (cargas[c] = traer(datos.ciudades[c].d).catch(function (e) { delete cargas[c]; throw e; })); }
     function fechaDe(d) { if (datos.fechas[d]) return datos.fechas[d]; var h = D.hermandades.filter(function (x) { return x.d === d && x.x; })[0]; return h ? h.x.fecha : '9999'; }
     function delDia(d) { return D.hermandades.filter(function (h) { return h.d === d; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); }
     // Hoy, si es jornada; si no, la próxima salida extraordinaria de los 45 días siguientes; si no, la jornada con más cofradías
@@ -855,7 +857,7 @@
     function conResto(fn) {
       if (restoOk) return fn();
       if (count) count.textContent = 'Buscando en todas las marchas…';
-      if (!restoP) restoP = traer(BASE + restoUrl, 20000).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      if (!restoP) restoP = traer(BASE + restoUrl, 20000)
         .then(function (j) {
           caps = j.caps || {}; var forms = j.forms || [], src = j.filas || [], lista = [], i = 0;
           // fila: [slug, título, compositor, año, nº de formación, capital, dedicatoria, grabación, iniciales] (build.mjs, pageDirMarchas)
@@ -872,7 +874,7 @@
     function filaMarcha(x) {
       var f = x.f, cap = caps[f[5]], li = document.createElement('li'), c = cap ? ' style="--c:' + esc(cap[0]) + '"' : '', d = f[6];
       var meta = (f[2] ? '<span class="vx-autor">' + esc(f[2]) + '</span>' : '') + (f[3] ? '<span>' + esc(f[3]) + '</span>' : '') + (x.tipo ? '<span class="nx-tema">' + esc(x.tipo) + '</span>' : '');
-      var ded = d[0] === 3 ? esc(d[1]) : d[0] ? (d[0] === 2 ? 'Asociada a' : 'Dedicada a') + ' <b>' + esc(d[1]) + '</b>' : '';
+      var ded = d[0] === 3 ? 'Dedicada ' + esc(/^(a|al)\s/i.test(d[1]) ? d[1][0].toLowerCase() + d[1].slice(1) : 'a ' + d[1]) : d[0] ? (d[0] === 2 ? 'Asociada a' : 'Dedicada a') + ' <b>' + esc(d[1]) + '</b>' : '';
       var pie = (cap ? '<span class="oc-city"' + c + '>' + esc(cap[1]) + '</span>' : '') + (f[7] ? '<span class="vx-play">Grabación</span>' : '');
       li.className = 'oc-entry vx-m';
       li.innerHTML = '<span class="vx-sello" aria-hidden="true"' + c + '><span>' + esc(f[8]) + '</span></span><div class="vx-body"><h3 class="vx-tit"><a href="' + BASE + 'marcha/' + esc(f[0]) + '/">' + esc(f[1]) + '</a></h3>'
@@ -1147,7 +1149,7 @@
     var u0 = new URLSearchParams(location.search), q0 = u0.get('q'); if (q0) qIn.value = q0; oficiales = u0.get('oficiales') === '1'; tema = NOMBRE_TEMA[u0.get('tema')] ? u0.get('tema') : '';
     // las noticias frescas vienen de OC_NOTICIAS (R2, se actualiza cada hora sin volver a publicar la web); si falla, las de la compilación
     var pintado = $$('time[datetime]', list).reduce(function (m, t) { return Math.max(m, +new Date(t.getAttribute('datetime')) || 0); }, 0);
-    var leer = function (url) { return traer(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+    var leer = function (url) { return traer(url); };
     var fallidas = false, tocado = false;
     // elegir capital aquí es elegirla en toda la web (el chip de la cabecera la muestra)
     $$('[data-f="ciudad"] button', nf).forEach(function (b) { b.addEventListener('click', function () { tocado = true; irA(b.dataset.v); }); });
@@ -1171,7 +1173,7 @@
   // ---------- buscador instantáneo ----------
   var idx = null, idxPromise = null;
   function loadIdx() {
-    if (!idxPromise) idxPromise = traer(BASE + 'search-index.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) { idx = j.map(function (e) { e.nn = norm(e.n); return e; }); return idx; }).catch(function (err) { idxPromise = null; throw err; });
+    if (!idxPromise) idxPromise = traer(BASE + 'search-index.json').then(function (j) { idx = j.map(function (e) { e.nn = norm(e.n); return e; }); return idx; }).catch(function (err) { idxPromise = null; throw err; });
     return idxPromise;
   }
   // Las marchas van aparte (search-marchas.json, más de 7.000): se piden al escribir 3 letras y se suman al índice.
@@ -1179,7 +1181,7 @@
   var mPromise = null;
   function loadMarchas(q) {
     if (norm(q || '').trim().length < 3) return null;
-    if (!mPromise) mPromise = Promise.all([loadIdx(), traer(BASE + 'search-marchas.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })]).then(function (res) {
+    if (!mPromise) mPromise = Promise.all([loadIdx(), traer(BASE + 'search-marchas.json')]).then(function (res) {
       res[1].forEach(function (f) { idx.push({ t: 'm', n: f[0], nn: norm(f[0]), s: 'Marcha' + (f[1] ? ' de ' + f[1] : '') + (f[2] ? ', ' + f[2] : f[3] ? ' · ' + f[3] : ''), u: 'marcha/' + f[4] + '/', c: f[5], k: f[6] }); });
     }).catch(function (err) { mPromise = null; throw err; });
     return mPromise;

@@ -54,11 +54,17 @@ try {
     }
     // Marchas: elegir una capital tiene que dar resultados (descarga la lista completa)
     if (nombre === 'Marchas') {
-      await p.goBack({ waitUntil: 'load' }).catch(() => {});
+      if (destino) await p.goBack({ waitUntil: 'load' }).catch(() => {}); // solo si el toque de antes llevó a otra página
       const total = await p.locator('[data-dir-count]').first().textContent().catch(() => ''), t = Date.now();
       await p.locator('[data-filtro-ciudad]').first().click({ timeout: LIM.toque }).catch(() => e.push('no se puede tocar una capital en Marchas'));
-      await p.waitForFunction((antes) => { const x = document.querySelector('[data-dir-count]')?.textContent || ''; return /^\d+ resultados?$/.test(x) && x !== antes; }, total, { timeout: LIM.filtro })
-        .catch(() => e.push(`filtrar Marchas por capital no termina en ${LIM.filtro} ms (${Date.now() - t} ms)`));
+      // se mira cada 200 ms (waitForFunction no vale: la CSP de la web, bien puesta, no deja evaluar texto como código)
+      let listo = false;
+      while (!listo && Date.now() - t < LIM.filtro) {
+        const x = await p.locator('[data-dir-count]').first().textContent().catch(() => '');
+        listo = /^\d+ resultados?$/.test(x || '') && x !== total;
+        if (!listo) await p.waitForTimeout(200);
+      }
+      if (!listo) e.push(`filtrar Marchas por capital no termina en ${LIM.filtro} ms`);
     }
     return e;
   };
