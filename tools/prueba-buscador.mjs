@@ -77,7 +77,7 @@ export async function pruebaBuscador(p, base) {
       if (!todas.some((f) => c.toca.split(' ').every((w) => tiene(f.toca, w)))) mal(`ninguna fila dice «La toca: …» con «${c.toca}»`);
     }
     if (c.tocaAlFinal) { const fs2 = await filas(), i = fs2.findIndex((f) => f.toca); if (i !== -1 && fs2.slice(i).some((f) => !f.toca)) mal('las que salen por la banda no van al final'); }
-    if (c.vacio &&!(await p.locator('[data-dir-empty]').first().isVisible().catch(() => false))) mal('no avisa de que no hay resultados');
+    if (c.vacio && !(await p.locator('[data-dir-empty]').first().isVisible().catch(() => false))) mal('no avisa de que no hay resultados');
   }
   // volver a la página con los filtros en la dirección (compartir un enlace o volver atrás) da lo mismo que escribirlos
   await p.goto(base + 'marchas/?q=amarguras&ciudad=sevilla', { waitUntil: 'load' });
