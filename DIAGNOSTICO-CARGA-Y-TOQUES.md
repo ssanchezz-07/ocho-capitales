@@ -76,7 +76,26 @@ En cada pestaña nueva, durante los primeros segundos, cualquier toque en la por
 | Plano (Sevilla) | 0,7 s | 0,7 s | 0,7 s | **3,9 s** | 425 ms |
 | Marchas | 0,8 s | 1,0 s | 2,1 s | **2,4 s** | 292 ms |
 
+## Arreglado el 2-nov (subido en `1478615`, auditor-web APTO, prueba de humo verde a 390 y 1440 px)
+- **Causa 2 (Marchas):**
+  - La página trae 50 filas en lugar de 300. El resto llega como datos (`marchas/resto.json`, unos 380 KB comprimidos, en lugar de 6,4 MB de HTML) y solo se pintan las filas que se ven. La preparación va por tandas.
+  - La dirección se apunta 600 ms después y solo si cambia.
+  - Tocar una capital con la caché vacía: de 10,2 s (con 4,5 s seguidos bloqueado) a 1,1 s en local y 2,6 s en la web publicada con 4G lento (la descarga de 342 KB); la tarea más larga, 0,22 s. Escribir: de 2,8 s por letra a 0,34 s.
+- **Causa 5:** precarga con `speculationrules`. Las pestañas de abajo se piden en cuanto se ven y el resto de enlaces al empezar a tocarlos; la CSP lo firma con hash. El HTML grande de Hoy y Calendario se queda así: el coste de la carga estaba en la red, no en procesarlo.
+- **Causa 4:** el arranque de `site.js` pesaba menos de lo que parecía. Lo caro era crear `Intl.RelativeTimeFormat` en cada página, y ahora se crea solo al usarlo. erCuñao se queda como está: cargarlo más tarde haría que su botón no respondiera al primer toque.
+- **Barrido de 19 tipos de página** (390 px, CPU 4×, 4G lento, caché vacía): sin errores de consola, enlaces rotos ni cargas eternas.
+  - Todas las peticiones de `site.js` pasan por `traer()`, con tiempo máximo que incluye la descarga.
+  - Si fallan, sale un aviso y el siguiente toque reintenta.
+  - Los filtros de Noticias responden desde el primer toque.
+- **Red de seguridad:** `tools/prueba-humo.mjs` comprueba ahora la soltura a 390 px con CPU 4×:
+  - LCP < 5 s;
+  - ninguna tarea de más de 2 s;
+  - el toque en la barra de abajo navega en menos de 4 s;
+  - filtrar Marchas termina en menos de 10 s.
+- **Portada** arregló la causa 1 y los tiempos máximos de `globo.js` y `calle.js`; la causa 3 (plano de Sevilla) la lleva ella.
+
 ## RETOMAR AQUÍ
+0. **Vigilar:** que el LCP de 5 s de la prueba de soltura no dé fallos de ruido en GitHub, (la precarga ya se comprobó en producción el 2-nov: la consola sale limpia).
 1. Avisar a Portada de la causa 1 y del plano (causa 3); los arreglos de esas dos son suyos. **Hecho:** a través de coordinación.
 2. Mañana por la tarde, en este orden: causa 2 (Marchas), causa 5 (speculationrules), causa 4 (`site.js`/`cunao.js` por secciones). Medir antes y después con el mismo método (INP del toque a los 1,3 s, TBT y LCP).
 3. Auditor-web y protocolo de subida (build, 390/1440 px, aviso). Todo, antes del sábado 14-nov.
