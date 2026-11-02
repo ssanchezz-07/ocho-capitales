@@ -480,5 +480,7 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 - **Favoritos:** `window.ocIcs` estaba dentro del bloque del Calendario y en Favoritos no existía, de modo que «Descargar mi Semana Santa» no hacía nada; ahora es global. «Mi Semana Santa» se recalcula al quitar y el foco pasa a la fila vecina.
 - **Colabora:** estilos en línea pasados a `vida.css`; `colabora.js` sin tocar. Las pruebas interceptan `api.web3forms.com`: nunca se envía nada de verdad.
 
+- **Aviso «Horarios de 2026» en Hoy y Calendario (2-nov):** solo fuera de temporada, para que no parezcan horas de 2027. **Al cargar los horarios de 2027 hay que subir `ANIO_HORARIOS` en `build.mjs`.** Descartado deducirlo de `hora_fuente`: 19 horas no tienen fuente.
+
 ## RETOMAR AQUÍ (2-nov, sesión oc-diseno del sobremesa)
 `EQUIPO/` y la nota del proyecto no se pueden editar desde este worktree, así que el punto de retomar queda aquí. Las cinco páginas están hechas. Sin hacer de P2/P3: 5 transiciones de ancho/alto en `site.css`, pestaña activa en fichas, colores de `vida.css` a tokens, contraste de `.nx-pulso b` en Noticias, enlaces del pie de 36 px, pasada completa final.

@@ -4,6 +4,7 @@ import os, sys, datetime
 os.environ.setdefault('PLAYWRIGHT_BROWSERS_PATH', os.path.expandvars(r'%LOCALAPPDATA%\ms-playwright'))
 from playwright.sync_api import sync_playwright
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8091'
+AVISO = 0 if os.environ.get('OC_TEMPORADA') == 'semana-santa' else 1  # el aviso de horarios solo sale fuera de temporada
 ok = []
 def check(c, t): ok.append(bool(c)); print(('OK   ' if c else 'FALLO') + ' ' + t)
 TACTIL = """(sel) => [...document.querySelectorAll(sel)].filter(e => e.offsetParent).map(e => { const r = e.getBoundingClientRect(); return [Math.round(r.width), Math.round(r.height), (e.textContent || e.getAttribute('aria-label') || '').trim().slice(0, 24)]; }).filter(([w, h]) => h < 44 || w < 44)"""
@@ -34,6 +35,7 @@ with sync_playwright() as p:
             check(not t, f'{tag} Hoy: zonas táctiles de 44 px {t[:3]}')
             filas = pg.evaluate("[...document.querySelectorAll('.hy-paso li')].filter(e => e.offsetParent).map(e => e.getBoundingClientRect().height)")
             check(min(filas) >= 44, f'{tag} Hoy: filas de {round(min(filas))} px o más')
+            check(pg.locator('.hy-aviso').count() == AVISO and (not AVISO or '2026' in pg.locator('.hy-aviso').inner_text()), f'{tag} Hoy: aviso de horarios ({AVISO})')
             check(pg.evaluate('document.documentElement.scrollWidth - innerWidth') <= 0, f'{tag} Hoy: sin desbordamiento')
             check(pg.evaluate(OCULTO) == 0, f'{tag} Hoy: nada se queda invisible')
             check(not err, f'{tag} Hoy: sin errores' + ('' if not err else ': ' + err[0])); pg.close()
@@ -61,6 +63,7 @@ with sync_playwright() as p:
             check(pg.locator('#cal-cadiz').is_visible() and pg.locator('[data-cal]:not([hidden])').count() == 1 and pg.locator('#cal-cadiz .hy-paso li').count() > 5, f'{tag} Calendario: orden de paso de Cádiz')
             t = pg.evaluate(TACTIL, '[data-agenda-tipo] button, [data-agenda-ciudad] button, [data-month-prev], [data-month-next], .cx-ics a, .cx-captabs a, .oc-mday.has-ev')
             check(not t, f'{tag} Calendario: zonas táctiles de 44 px {t[:3]}')
+            check(pg.locator('.hy-aviso').count() == AVISO, f'{tag} Calendario: aviso de horarios ({AVISO})')
             check(pg.evaluate('document.documentElement.scrollWidth - innerWidth') <= 0, f'{tag} Calendario: sin desbordamiento')
             check(pg.evaluate(OCULTO) == 0, f'{tag} Calendario: nada se queda invisible')
             check(not err, f'{tag} Calendario: sin errores' + ('' if not err else ': ' + err[0])); pg.close()

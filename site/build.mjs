@@ -573,6 +573,9 @@ function horasPaso(h) {
   if (h.hora_carrera && !h.extra) return `<span class="hy-horas"><span class="hy-hora-et">Carrera</span><time class="hy-hora">${esc(fmtHora(h.hora_carrera))}</time>${h.hora ? `<span class="hy-hora-sale">Sale ${esc(fmtHora(h.hora))}</span>` : ''}</span>`;
   return h.hora ? `<span class="hy-horas"><span class="hy-hora-et">Salida</span><time class="hy-hora">${esc(fmtHora(h.hora))}</time></span>` : '';
 }
+// Los horarios cargados son de esta Semana Santa: fuera de temporada se avisa para que no parezcan los del año que viene
+const ANIO_HORARIOS = 2026;
+const avisoHorarios = () => { const { year } = pickSlot(madridNow()); return !TEMPORADA.fuera || year <= ANIO_HORARIOS ? '' : `<p class="hy-aviso">Horarios de ${ANIO_HORARIOS}; los de ${year} se publican en Cuaresma.</p>`; };
 const notaCarrera = (hs) => { const h = hs.find((x) => x.lugar_carrera); return h ? `<p class="hy-carrera">Carrera: hora de paso por ${esc(h.lugar_carrera)}, que marca el orden. Sin ese dato, se indica la salida.</p>` : ''; };
 function todayPanel() {
   const now = madridNow();
@@ -596,6 +599,7 @@ function todayPanel() {
   <h2 class="oc-sr" id="hoy-titulo" data-today-title>${pick.hoy ? 'Hoy en la calle' : `Así sale Semana Santa ${year}`}</h2>
   <div class="hy-tabs" role="tablist" aria-label="Jornadas">${tabs}</div>
   <p class="hy-mostrando" data-today-showing hidden><span>Mostrando solo <strong data-today-city></strong>.</span> <button type="button" class="oc-textbtn" data-set-city="">Ver las ocho capitales</button></p>
+  ${avisoHorarios()}
   ${panels}
   <p class="hy-nota">Orden de paso según la última configuración documentada; consulta los horarios oficiales de este año.</p>
 </section>`;
@@ -1324,6 +1328,7 @@ function pageCalendario() {
   <script type="application/json" id="oc-tipos">${JSON.stringify(TIPOS)}</script>
 </section>
 <section class="cx-orden" aria-labelledby="orden-de-paso"><h2 class="nx-h" id="orden-de-paso">Orden de paso por capital</h2>
+${avisoHorarios()}
 <p class="hy-nota">Según la última configuración documentada. Consulta siempre los horarios oficiales del año.</p>
 <div class="cx-captabs" role="tablist" aria-label="Capital" data-cal-tabs>${D.capitales.map((c, i) => `<a role="tab" id="caltab-${c.slug}" href="#cal-${c.slug}" aria-controls="cal-${c.slug}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-city="${c.slug}" style="--c:${c.color}"><i></i>${esc(c.nombre)}</a>`).join('')}</div>
 ${D.capitales.map((c, i) => { const dias = byDay(conSalidas(hermsOf(c.slug))); return `<section class="cx-cap" id="cal-${c.slug}" role="tabpanel" aria-labelledby="caltab-${c.slug}" data-cal${i === 0 ? '' : ' hidden'} style="--c:${c.color}"><h3 class="hy-cap-nombre cx-cap-nombre"><a href="${u('semana-santa/' + c.slug + '/')}">Semana Santa de ${esc(c.nombre)}</a><span><b>${dias.length}</b> ${dias.length === 1 ? 'jornada' : 'jornadas'}</span></h3>${notaCarrera(dias.flatMap(([, list]) => list))}<div class="cx-dias">${dias.map(([d, list]) => `<section class="cx-dia"><h4>${esc(d)}<span>${list.length}</span></h4><ol class="hy-paso">${list.map((h) => filaPaso(h)).join('')}</ol></section>`).join('')}</div></section>`; }).join('')}</section>`;
