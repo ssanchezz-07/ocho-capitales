@@ -1369,20 +1369,28 @@
     window.addEventListener('load', function () { navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(function () { }); });
     // Precarga en Safari y demás navegadores sin speculationrules: al apoyar el dedo (o pasar el ratón) por un enlace de la web,
     // el service worker pide ya la página y la sirve al soltar (sw.js, precarga). En Chrome lo hacen las reglas de la cabecera.
+    // Solo con intención: el dedo apoyado 50 ms sin moverse (si arrastra es scroll) o el ratón 65 ms encima; nunca con «ahorro de datos».
     var sinReglas = !(window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules'));
-    if (sinReglas) {
-      var pedidas = {};
-      var precargar = function (e) {
-        if (!navigator.serviceWorker.controller) return;
+    var ahorro = navigator.connection && navigator.connection.saveData;
+    if (sinReglas && !ahorro) {
+      var pedidas = {}, espera = 0;
+      var enlace = function (e) {
         var a = e.target && e.target.closest && e.target.closest('a[href]');
-        if (!a || a.target || a.hasAttribute('download') || a.origin !== location.origin || a.pathname.indexOf(BASE) !== 0) return;
-        if (/^(assets|data)\//.test(a.pathname.slice(BASE.length)) || /\.[a-z0-9]{2,5}$/i.test(a.pathname)) return;
-        var u = a.href.split('#')[0]; if (u === location.href.split('#')[0] || pedidas[u]) return;
+        if (!a || a.target || a.hasAttribute('download') || a.origin !== location.origin || a.pathname.indexOf(BASE) !== 0) return null;
+        if (/^(assets|data)\//.test(a.pathname.slice(BASE.length)) || /\.[a-z0-9]{2,5}$/i.test(a.pathname)) return null;
+        var u = a.href.split('#')[0]; return u === location.href.split('#')[0] || pedidas[u] ? null : u;
+      };
+      var pedir = function (u) {
+        if (!navigator.serviceWorker.controller || pedidas[u]) return;
         pedidas[u] = 1; setTimeout(function () { delete pedidas[u]; }, 15000);
         fetch(u, { headers: { 'X-OC-Precarga': '1' } }).catch(function () { delete pedidas[u]; });
       };
-      document.addEventListener('touchstart', precargar, { passive: true });
-      document.addEventListener('mouseover', precargar, { passive: true });
+      var cancela = function () { clearTimeout(espera); };
+      var tras = function (ms) { return function (e) { var u = enlace(e); cancela(); if (u) espera = setTimeout(function () { pedir(u); }, ms); }; };
+      document.addEventListener('touchstart', tras(50), { passive: true });
+      document.addEventListener('touchmove', cancela, { passive: true });
+      document.addEventListener('mouseover', tras(65), { passive: true });
+      document.addEventListener('mouseout', cancela, { passive: true });
     }
   }
 })();

@@ -30,7 +30,7 @@ self.addEventListener('activate', (e) => {
 });
 // Guarda una copia y recorta la caché a su máximo (se van las más antiguas)
 function guarda(nombre, r, res) {
-  if (!res || !res.ok || res.type === 'opaque') return;
+  if (!res || !res.ok || res.type === 'opaque' || res.redirected) return; // una redirigida no vale para servir una navegación sin red
   const cp = res.clone();
   caches.open(nombre).then((c) => c.put(r, cp).then(() => c.keys()).then((ks) => Promise.all(ks.slice(0, Math.max(0, ks.length - MAX[nombre])).map((k) => c.delete(k))))).catch(() => {});
 }
@@ -48,16 +48,26 @@ function redPrimero(e, nombre, reserva) {
 }
 // Precarga para Safari (no tiene speculationrules): al apoyar el dedo en un enlace, la página pide aquí la siguiente
 // (cabecera X-OC-Precarga). Si se navega a ella en los 15 s siguientes, se sirve esa misma respuesta sin volver a esperar a la red.
+// Lo precargado no se guarda en la caché de páginas hasta que se visita de verdad (no desplaza a las visitadas).
 const RECIEN = new Map(), VIGENCIA = 15000;
 function precarga(e, url) {
   const k = url.href.split('#')[0];
   if (!RECIEN.has(k)) {
-    const p = fetch(k, { credentials: 'same-origin' }).then((res) => { guarda(PAGINAS, new Request(k), res); return res; });
-    RECIEN.set(k, { t: Date.now(), p });
-    p.catch(() => RECIEN.delete(k)); setTimeout(() => RECIEN.delete(k), VIGENCIA);
-    e.waitUntil(p.then(() => {}, () => {}));
+    const entrada = { t: Date.now(), p: fetch(k, { credentials: 'same-origin' }) };
+    RECIEN.set(k, entrada);
+    const quita = () => { if (RECIEN.get(k) === entrada) RECIEN.delete(k); };
+    entrada.p.catch(quita); setTimeout(quita, VIGENCIA);
+    e.waitUntil(entrada.p.then(() => {}, () => {}));
   }
   return new Response(null, { status: 204 });
+}
+// Navegación a una página precargada: su respuesta si llega bien y a tiempo; si no (error, redirigida o más de ESPERA ms), lo de siempre
+function dePrecarga(e, pre) {
+  const r = e.request;
+  const tarde = new Promise((_, no) => setTimeout(() => no(new Error('tarde')), ESPERA));
+  return Promise.race([pre.p.then((res) => { if (!res.ok || res.redirected) throw new Error(String(res.status)); return res; }), tarde])
+    .then((res) => { guarda(PAGINAS, r, res); return res; })
+    .catch(() => redPrimero(e, PAGINAS, BASE + 'offline/'));
 }
 self.addEventListener('fetch', (e) => {
   const r = e.request; if (r.method !== 'GET') return;
@@ -67,8 +77,7 @@ self.addEventListener('fetch', (e) => {
   const pre = r.mode === 'navigate' && RECIEN.get(url.href.split('#')[0]);
   if (pre && Date.now() - pre.t < VIGENCIA) {
     RECIEN.delete(url.href.split('#')[0]);
-    if (e.preloadResponse) e.waitUntil(Promise.resolve(e.preloadResponse).catch(() => {}));
-    e.respondWith(pre.p.then((res) => (res.redirected ? fetch(r) : res)).catch(() => redPrimero(e, PAGINAS, BASE + 'offline/')));
+    e.respondWith(dePrecarga(e, pre));
     return;
   }
   if (r.mode === 'navigate') {
