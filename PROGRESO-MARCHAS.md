@@ -10,6 +10,7 @@
 - La Unidad (Almería): falta una segunda fuente; Movelia también da 19:30.
 - Plano de Cádiz (equipo de rutas): la salida es la del paso, unos 20 minutos más tarde que la de la cruz de guía.
 - `ANIO_HORARIOS` en `site/build.mjs`: subirlo al cargar los horarios de 2027.
+- Repertorios de bandas (lo pide Alojamiento, 2-nov): el filtro de Marchas ya busca por la banda que toca cada marcha (`repertorio`), pero solo hay datos de Paso y Esperanza (41) y de Tres Caídas de Triana (1). Se cargan con un `tools/sources/repertorio-<banda>.json` con `clave`, `fuente` y `url` públicos, como el de Tres Caídas: la web o el repertorio publicado de cada banda, o los programas de conciertos. Sin código nuevo. Empezar por las bandas con repertorio en su web (Cigarreras, Rosario de Cádiz…), y solo marchas que la fuente nombre.
 - Hay 64 pares de título y autor repetidos en `marchas.json`. Ya estaban en main; los ha visto el auditor y falta revisarlos.
 - Hay dos fichas de la misma banda: `banda-de-cornetas-y-tambores-tres-caidas-de-triana-sevilla` y `…-santisimo-cristo-de-las-tres-caidas-esperanza-de-triana-sevilla`. Habría que unirlas con `bandas-redirecciones.json`.
 
