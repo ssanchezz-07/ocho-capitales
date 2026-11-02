@@ -299,22 +299,25 @@
       // vez»), no si se llega a una ciudad (#malaga), con la página ya desplazada o en ahorro de datos; con «reducir movimiento»,
       // una imagen quieta y un fundido. El globo pequeño junto al mapa la vuelve a poner.
       (function () {
+        // la capa del HTML (oc-entrando) se quita cuando el globo ya está encima, o si algo falla
+        function soltar() { document.documentElement.classList.remove('oc-entrando'); }
         function globo() {
           var ir = function () { if (window.OCGlobo) window.OCGlobo({ datos: datos, svg: svg, mundo: datos.mundo, vendor: datos.vendor, quieto: reduced }); };
           if (window.OCGlobo) return ir();
-          var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; document.head.appendChild(s);
+          var s = document.createElement('script'); s.src = datos.globo; s.onload = ir; s.onerror = soltar; document.head.appendChild(s);
         }
-        if (!datos.globo) return;
+        if (!datos.globo) { soltar(); return; }
         var otra = document.createElement('button'); otra.type = 'button'; otra.className = 'oc-colg-otra'; otra.setAttribute('aria-label', 'Ver otra vez la llegada desde el globo');
         otra.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>';
         otra.addEventListener('click', function () { var r = mapa.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) mapa.scrollIntoView({ block: 'center' }); globo(); });
         mapa.appendChild(otra);
         var visto = '1'; try { visto = sessionStorage.getItem('oc-entrada') || ''; } catch (e) { }
-        if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) return;
+        if (visto || location.hash || scrollY > 40 || (navigator.connection && navigator.connection.saveData)) { soltar(); return; }
         // arranca cuando la página ya ha cargado (con sus imágenes): antes competía con el pintado de la imagen principal y
         // retrasaba el LCP en móviles lentos. Si mientras tanto se ha bajado por la página o elegido una ciudad, no sale.
-        var arrancar = function () { setTimeout(function () { if (scrollY > 40 || location.hash || actual) return; try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { } globo(); }, 80); };
-        if (document.readyState === 'complete') arrancar(); else addEventListener('load', arrancar, { once: true });
+        var ya = false, arrancar = function () { if (ya) return; ya = true; if (location.hash || actual) { soltar(); return; } try { sessionStorage.setItem('oc-entrada', '1'); } catch (e) { } globo(); };
+        // con la capa puesta no se ve la web: se espera a «load», pero en una red lenta no más de 1,8 s
+        if (document.readyState === 'complete') arrancar(); else { addEventListener('load', arrancar, { once: true }); setTimeout(arrancar, 1800); }
       })();
       // ---- Mapa «Bordado» (elegido por Pablo, 26-oct): cada provincia, un repostero de terciopelo con cordón de oro, y junto a
       // cada capital su catedral bordada a puntadas. Ríos y sierras: Natural Earth (dominio público, tools/generar-mapa-detalle.mjs).

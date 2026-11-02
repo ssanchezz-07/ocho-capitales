@@ -762,6 +762,15 @@ function curiosidadDelDia() {
 // Portada (decisiones de Pablo, 24 y 26-oct): las banderas con el mapa de Andalucía, las láminas «Las ocho capitales»
 // tal cual estaban («ese apartado es precioso») y la agenda. Lo demás no se pierde: «Hoy» y la curiosidad del día van a
 // /hoy/, las noticias a /noticias/ y el archivo (hermandades, bandas, marchas, imagineros) a la hoja «Más».
+// Cielo de la portada y de la entrada (Pablo, 1-nov: «el fondo debe ser el mismo oscuro y estrellado»), el de la landing: va en línea en
+// el HTML para pintarse desde el primer byte. La capa tapa la web hasta que entra el globo («no puede verse la web antes que la
+// animación»); si algo falla, se retira sola a los 9 s (animación CSS, sin depender de JavaScript). Solo una vez por visita.
+const CIELO_ESTRELLAS = (() => {
+  const capa = (n, tam, r, semilla) => { const o = []; let s = semilla; const az = () => (s = (s * 9301 + 49297) % 233280) / 233280; for (let i = 0; i < n; i++) o.push(`radial-gradient(${r}px ${r}px at ${(az() * 100).toFixed(1)}% ${(az() * 100).toFixed(1)}%,rgba(251,243,223,${(0.45 + az() * 0.55).toFixed(2)}) 98%,transparent)`); return { o, tam }; };
+  const cs = [capa(9, 330, 1, 7), capa(6, 530, 1.5, 41), capa(3, 760, 2, 113)];
+  return { img: cs.flatMap((c) => c.o).join(',') + ',radial-gradient(120% 90% at 50% 38%,#1a0a2a 0%,#0e0517 58%,#07030c 100%)', tam: cs.flatMap((c) => c.o.map(() => `${c.tam}px ${c.tam}px`)).join(',') + ',100% 100%' };
+})();
+const HEAD_ENTRADA = `<style>:root{--oc-cielo:${CIELO_ESTRELLAS.img};--oc-cielo-t:${CIELO_ESTRELLAS.tam}}html.oc-entrando{overflow:hidden;background:#07030c}html.oc-entrando::after{content:"";position:fixed;inset:0;z-index:199;background:var(--oc-cielo);background-size:var(--oc-cielo-t);animation:oc-entrada-fin .01s linear 9s forwards}@keyframes oc-entrada-fin{to{opacity:0;visibility:hidden}}</style><script>try{if(!sessionStorage.getItem('oc-entrada')&&!location.hash&&!(navigator.connection&&navigator.connection.saveData))document.documentElement.classList.add('oc-entrando')}catch(e){}</script>`;
 function pageHome() {
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
@@ -774,7 +783,7 @@ function pageHome() {
 ${TEMPORADA.fuera ? seccionNazareno(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 // El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
 // En la portada fuera de temporada se dibuja al bajar; en «Próxima Semana Santa» ya está hecho, sólido (Pablo, 27-oct: «si no es muy repetitivo»).

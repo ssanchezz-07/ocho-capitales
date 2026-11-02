@@ -27,6 +27,7 @@
     var S = el('svg', { 'class': 'oc-globo-svg' }, capa);
     var saltar = document.createElement('button'); saltar.type = 'button'; saltar.className = 'oc-globo-saltar'; saltar.textContent = 'Saltar'; saltar.setAttribute('aria-label', 'Saltar la entrada');
     document.body.appendChild(capa); document.body.appendChild(saltar);
+    document.documentElement.classList.remove('oc-entrando'); // la capa del HTML deja paso al globo, con el mismo cielo
     var hecho = false, raf = 0;
     function acabar() {
       if (hecho) return; hecho = true; cancelAnimationFrame(raf);
@@ -87,7 +88,8 @@
           caps.forEach(function (c) { if (c.s === s) c.g.setAttribute('opacity', cl((t - 4600 - i * 160) / 300).toFixed(3)); });
         });
         S.style.transform = 'scale(' + (0.92 + 0.08 * cl(t / 1000)) + ')'; S.style.opacity = cl(t / 700);
-        n.mar.style.opacity = n.aura.style.opacity = n.aura2.style.opacity = (0.35 + 0.65 * sale).toFixed(3);
+        // al llegar, el mar del globo se va y queda el mismo cielo estrellado de la portada
+        n.mar.style.opacity = n.aura.style.opacity = n.aura2.style.opacity = sale.toFixed(3);
         capa.style.opacity = 1 - cl((t - 5700) / 700);
       }
       // con «reducir movimiento»: España ya de frente, quieta, y un fundido
