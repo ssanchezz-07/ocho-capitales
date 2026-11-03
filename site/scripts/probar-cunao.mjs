@@ -215,7 +215,9 @@ const titulo = (t) => MU.filter((m) => m.titulo.toLowerCase() === t.toLowerCase(
 { const am = titulo('Amarguras'); caso('M1 quién compuso Amarguras', motor(), '¿Quién compuso Amarguras?', am.length === 1 ? contiene('«Amarguras» es de ' + am[0].autor) : contiene('marchas que se llaman así', am[0].autor)); }
 { const md = titulo('La Madrugá'); caso('M2 quién compuso «La Madrugá» (sin tilde)', motor(), 'quien compuso la madruga', md.length ? contiene(md[0].autor) : contiene('no la encuentro')); }
 { const n = MU.filter((m) => m.autor === 'Abel Moreno Gómez').length; caso('M3 marchas de Abel Moreno', motor(), 'marchas de Abel Moreno', contiene('De Abel Moreno Gómez tengo ' + n + ' marchas')); }
-caso('M4 marcha que no está (Sanctae Crucis)', motor(), '¿Quién compuso Sanctae Crucis?', y(contiene('no la encuentro'), sugiere));
+{ const sc = titulo('Sanctae Crucis'); // marcha de la campaña: si ya está en el catálogo, su compositor; si no, que lo diga
+  caso('M4 Sanctae Crucis (campaña)', motor(), '¿Quién compuso Sanctae Crucis?', sc.length ? contiene(sc[0].autor) : y(contiene('no la encuentro'), sugiere)); }
+caso('M4b marcha que no existe', motor(), '¿Quién compuso Zumbaflor del Oriente Perdido?', (r, t) => (MU.some((m) => /zumbaflor/i.test(m.titulo)) ? true : y(contiene('no la encuentro'), sugiere)(r, t)));
 caso('M5 repertorio: Tres Caídas (cornetas)', motor(), '¿Qué marchas de cornetas toca Tres Caídas?', contiene('Tres Caídas de Triana'));
 caso('M6 CCTT = cornetas y tambores', motor(), 'que marchas toca la cctt tres caidas de triana', contiene('Tres Caídas de Triana'));
 { const n = MU.filter((m) => (m.repertorio || []).some((r) => r.banda === 'banda-de-cornetas-y-tambores-del-paso-y-la-esperanza-malaga')).length;
