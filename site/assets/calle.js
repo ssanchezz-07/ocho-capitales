@@ -130,7 +130,13 @@
     g.appendChild(frag);
   }
   // Huecos de la pantalla tapados por los controles (derecha) y por el reloj (abajo): lo encuadrado queda a la vista
-  function margenes() { var ancho = mapa.clientWidth < 600; return { arriba: 20, abajo: ancho ? (sel ? Math.round(window.innerHeight * 0.42) : 120) : 96, izq: 20, der: !ancho && sel ? 400 : 68 }; }
+  // El reloj se mide: en pantallas anchas ocupa unos 150 px del plano y el medallón (con su nombre, ~44 px) quedaba debajo.
+  var relojEl = sec.querySelector('.oc-calle-reloj');
+  function margenes() {
+    var ancho = mapa.clientWidth < 600, abajo = ancho ? (sel ? Math.round(window.innerHeight * 0.42) : 120) : 96;
+    if (relojEl && !relojEl.hidden) { var rm = mapa.getBoundingClientRect(), rr = relojEl.getBoundingClientRect(); if (rr.height && rr.top < rm.bottom && rr.top > rm.top + rm.height / 2) abajo = Math.max(abajo, Math.min(Math.round(rm.bottom - rr.top) + 44, Math.round(rm.height * 0.35))); } // solo si está abajo (con la ficha, en tableta, sube)
+    return { arriba: 20, abajo: abajo, izq: 20, der: !ancho && sel ? 400 : 68 };
+  }
   function encuadrar(xs, ys, animar) {
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
     var m = margenes(), W = Math.max(1, mapa.clientWidth), H = Math.max(1, mapa.clientHeight), iw = Math.max(80, W - m.izq - m.der), ih = Math.max(80, H - m.arriba - m.abajo);
