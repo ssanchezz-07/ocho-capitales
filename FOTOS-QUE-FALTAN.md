@@ -65,7 +65,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Sevilla (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-10 sin ninguna foto de titular; 33 con algún titular sin foto.
+9 sin ninguna foto de titular; 34 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -86,7 +86,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Lanzada | Miércoles Santo | Virgen: María Santísima de Guía |
 | Cristo de Burgos | Miércoles Santo | Virgen: Madre de Dios de la Palma |
 | Siete Palabras | Miércoles Santo | Virgen: María Santísima de la Cabeza / María Santísima de los Remedios |
-| Los Panaderos | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús en su Prendimiento; Virgen: María Santísima de Regla |
+| Los Panaderos | Miércoles Santo | Virgen: María Santísima de Regla |
 | Los Negritos | Jueves Santo | Virgen: Nuestra Señora de los Ángeles |
 | La Exaltación («Los Caballos») | Jueves Santo | Cristo: Exaltación de Cristo en la Cruz |
 | Las Cigarreras | Jueves Santo | Cristo: Jesús atado a la Columna |

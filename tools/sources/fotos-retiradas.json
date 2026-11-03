@@ -410,6 +410,38 @@
   "la-expiracion-cadiz|ficha": {
    "archivo": "Cristo_de_la_Expiración.JPG",
    "motivo": "La misma foto del cartel."
+  },
+  "las-penas-sevilla|ficha": {
+   "archivo": "SemanaSantaSevillaPenas2.jpg",
+   "motivo": "La misma foto de noche, muy oscura."
+  },
+  "humildad-malaga|ficha": {
+   "archivo": "Humildad_malaga.png",
+   "motivo": "La misma foto de 334 px: no da la calidad."
+  },
+  "dolores-del-puente-malaga|ficha": {
+   "archivo": "Doloresdelpuentecoronada_cristodelperdon.jpg",
+   "motivo": "La misma foto con licencia no fiable."
+  },
+  "misericordia-malaga|ficha": {
+   "archivo": "Granpoder.jpg",
+   "motivo": "La misma foto del palio de lejos."
+  },
+  "piedad-malaga|ficha": {
+   "archivo": "Piedad_Malaga.jpg",
+   "motivo": "La misma foto, original pequeño: no da la calidad."
+  },
+  "pasion-almeria|ficha": {
+   "archivo": "Pasión_01.jpg",
+   "motivo": "La misma foto del paso de noche y de lejos."
+  },
+  "la-coronacion-almeria|ficha": {
+   "archivo": "Coronación_02.jpg",
+   "motivo": "Palio de lejos en la calle: no se ve a la Virgen."
+  },
+  "cristo-de-la-escucha-almeria|ficha": {
+   "archivo": "Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
+   "motivo": "La misma foto de la capilla, con el Cristo diminuto."
   }
  },
  "no_portada": {
