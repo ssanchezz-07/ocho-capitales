@@ -760,7 +760,7 @@ function fondoLegible(hex, min = 4.8) {
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
     const img = c.imagen ? imgTag(c.imagen, '', { sizes: '(max-width: 1000px) 50vw, 25vw', widths: [330, 500] }) : '';
-    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p>` : ''}<p class="oc-plate-meta">${cifraCap(c)}</p></div></article></li>`;
+    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p><p class="oc-plate-meta">${cifraCap(c)}</p>` : ''}</div></article></li>`; // portada (big = false) sin la cifra: Pablo, 4-nov, ya está en la ficha de cada capital
   }).join('')}</ul>`;
 }
 
