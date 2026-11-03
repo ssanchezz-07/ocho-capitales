@@ -461,6 +461,18 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
     }
   }
 }
+// Historias de hermandad revisadas contra su fuente (tools/sources/historias.json, fase 3 de PROGRESO-HISTORIAS.md): mandan sobre
+// la reseña original. Cada historia guarda sus fuentes (se enlazan debajo de «Historia»). «pendiente»: no hay fuente abierta que la complete.
+{
+  const f = path.join(__dirname, 'sources', 'historias.json');
+  const HI = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).historias : {};
+  for (const [slug, x] of Object.entries(HI)) {
+    const h = hermandades.find((y) => y.slug === slug); if (!h) { console.warn('historias.json: no está la ficha', slug); continue; }
+    if (x.texto) { h.historia = x.texto; h.historia_fuentes = x.fuentes; } else if (x.estado === 'pendiente') h.historia_pendiente = true;
+  }
+  // Sin revisar: la reseña salió de la ficha enlazada (o del relleno con su fuente)
+  for (const h of hermandades) if (h.historia && !h.historia_fuentes) { const u = (h.relleno_fuentes || {}).historia || h.fuente_url; h.historia_fuentes = u ? [u] : []; }
+}
 // Orden oficial de paso (tools/sources/orden-paso.json), con la hora de salida y la de carrera oficial. Va después de las correcciones de
 // ficha, que pueden cambiar el día. Las que no están en la lista de su jornada quedan detrás. Sin orden oficial, el de la ficha; en las
 // vísperas no hay carrera oficial: por hora de salida. El orden queda sin repetidos (1, 2, 3…) en cada jornada.

@@ -1048,7 +1048,7 @@ function pageHerm(h) {
   <div class="fx-media">${media || estampaHtml(h, c)}</div>
 </header>
 ${datos ? `<dl class="fx-datos" aria-label="Datos de la hermandad">${datos}</dl>` : ''}
-${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa">${para(h.historia)}</div>`) : ''}
+${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa">${h.historia.split(/\n\n+/).map(para).join('')}</div>${(h.historia_fuentes || []).length ? `<ul class="oc-fuentes">${h.historia_fuentes.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('')}</ul>` : ''}`) : ''}
 ${sec('Titulares e imagineros', titCards)}
 ${sec('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
 ${sec('Música', musicaFicha, 'fx-musica')}
