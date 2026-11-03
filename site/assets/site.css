@@ -1636,8 +1636,9 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 .oc-cunao-lista { list-style: none; margin: 0; padding: 0; }
 .oc-cunao-lista li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
 .oc-cunao-lista li:first-child { border-top: 0; }
+.oc-cunao-lista a, .oc-cunao-lista b { min-width: 0; overflow-wrap: anywhere; }
 .oc-cunao-lista a { color: var(--primary); font-weight: 600; text-decoration: none; }
-.oc-cunao-lista span { flex: none; color: var(--gold-ink); font-variant-numeric: tabular-nums; font-weight: 600; font-size: .9rem; }
+.oc-cunao-lista span { flex: 0 1 auto; min-width: 0; max-width: 62%; text-align: right; overflow-wrap: anywhere; color: var(--gold-ink); font-variant-numeric: tabular-nums; font-weight: 600; font-size: .9rem; }
 .oc-cunao-chips, .oc-cunao-acc { display: flex; flex-wrap: wrap; gap: 6px; }
 .oc-cunao-chips button { min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent); background: var(--surface); color: var(--primary); font: 600 .86rem/1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-cunao-chips button:active { transform: scale(.96); }

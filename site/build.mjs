@@ -2238,20 +2238,75 @@ function datosCunao() {
     if ((h.marchas || []).length) o.nm = h.marchas.length;
     if ((h.salidas || []).length) o.x = h.salidas.map((s) => [s.dia, hhmm(s.hora), s.sede || '', s.titulares || '']);
     const r = resumen(h.ciudad, h.slug); if (r) o.r = r;
+    // hora oficial de paso por la carrera oficial (nómina de la capital), si la hay
+    if (hhmm(h.hora_carrera)) { o.hc = hhmm(h.hora_carrera); o.lc = h.lugar_carrera || ''; }
+    if (HABITOS[h.slug] && HABITOS[h.slug].texto) o.ha = 1;
     return o;
   });
-  fs.mkdirSync(path.join(DIST, 'data', 'cunao'), { recursive: true });
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 2, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
-  // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, marchas dedicadas y las seis noticias más recientes
+  // Todas las bandas (no solo las que acompañan a alguna hermandad): «¿qué toca X?», «¿de dónde es X?»
+  D.bandas.forEach((b) => banda(b.slug));
+  // Repertorio publicado de cada banda (pocas lo tienen): índice de banda → [título, autor, año, ficha]
+  const rp = {};
+  for (const [bs, l] of REPERTORIO) if (BANDA[bs]) rp[banda(bs)] = l.map((x) => [x.m.titulo, x.m.autor || '', x.m.anio || '', x.m.slug]);
+  // Formación con dos letras (BM banda de música, CT cornetas y tambores, AM agrupación musical, CM capilla musical)
+  const FORM = { 'Banda de música': 'BM', 'Banda de cornetas y tambores': 'CT', 'Agrupación musical': 'AM', 'Capilla musical': 'CM' };
+  fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'm'), { recursive: true });
+  fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'h'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 3, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
+  // Marchas (todo el catálogo, ~10.000): en trozos por la inicial del título, sin el artículo («La Madrugá» → m/m.json).
+  // Solo se piden cuando la pregunta es de marchas. Fila: [título, autor (índice), año, formación, dedicada a (slug de hermandad o texto), ficha]
+  const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };
+  const AU = [], auIdx = new Map(), trozos = {};
+  for (const m of MARCHAS) {
+    const a = m.autor || ''; if (!auIdx.has(a)) { auIdx.set(a, AU.length); AU.push([a, m.autorSlug || '', '']); }
+    const k = inicialM(m.titulo), ai = auIdx.get(a);
+    if (!AU[ai][2].includes(k)) AU[ai][2] += k;
+    if (!AU[ai][1] && m.autorSlug) AU[ai][1] = m.autorSlug;
+    (trozos[k] || (trozos[k] = [])).push([m.titulo, ai, m.anio || '', FORM[m.formacion] || '', m.h ? m.h.slug : (m.dedicatoria || '').slice(0, 90), m.slug]);
+  }
+  for (const [k, l] of Object.entries(trozos)) fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'm', k + '.json'), JSON.stringify(l));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'm', 'autores.json'), JSON.stringify(AU));
+  // Agenda de los próximos 90 días (cultos, salidas extraordinarias, conciertos…) para «¿qué hay este fin de semana?»
+  const hoyIso = isoDay(Date.UTC(N.y, N.m - 1, N.d)), hasta = isoDay(Date.UTC(N.y, N.m - 1, N.d) + 90 * 864e5);
+  const AG = agenda().filter((e) => e.fecha >= hoyIso && e.fecha <= hasta && GRUPO_DE[e.tipo] !== 'liturgico' && CAP[e.ciudad]);
+  // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, hábito, marchas dedicadas, agenda y las seis noticias más recientes
   for (const c of D.capitales) {
-    const hi = {}, pa = {}, m = {};
+    const hi = {}, pa = {}, m = {}, ha = {}, on = {};
     for (const h of hermsOf(c.slug)) {
       if (h.historia) hi[h.slug] = h.historia; if (h.paso) pa[h.slug] = h.paso;
-      if ((h.marchas || []).length) m[h.slug] = h.marchas.map((x) => [x.titulo, x.autor || '', x.anio || '', MARCHA_SLUG.get(h.slug + '|' + x.titulo + '|' + (x.autor || '')) || '']);
+      // hábito: [texto oficial, su fuente]; sin texto, al menos la fuente oficial donde mirarlo
+      if (HABITOS[h.slug] && (HABITOS[h.slug].texto || /^https?:\/\//.test(HABITOS[h.slug].fuente_url || ''))) ha[h.slug] = [HABITOS[h.slug].texto || '', /^https?:\/\//.test(HABITOS[h.slug].fuente_url || '') ? HABITOS[h.slug].fuente_url : ''];
+      if (h.nombre_oficial) on[h.slug] = h.nombre_oficial;
+      if ((h.marchas || []).length) m[h.slug] = h.marchas.map((x) => [x.titulo, x.autor || '', x.anio || '', MARCHA_SLUG.get(h.slug + '|' + x.titulo + '|' + (x.autor || '')) || '', FORM[x.tipo] || '']);
     }
     const no = NEWS.items.filter((n) => (n.ciudades || []).includes(c.slug)).sort((a, b) => b.ts - a.ts).slice(0, 6).map((n) => [n.titulo, n.url, n.fuente || '', n.ts]);
-    fs.writeFileSync(path.join(DIST, 'data', 'cunao', c.slug + '.json'), JSON.stringify({ anio: R[c.slug] ? R[c.slug].anio : null, r: R[c.slug] ? R[c.slug].r : {}, hi, pa, m, no }));
+    const ag = AG.filter((e) => e.ciudad === c.slug).slice(0, 40).map((e) => [e.fecha, e.hora || '', e.tipo, e.titulo, hermDeEvento(e) || '']);
+    fs.writeFileSync(path.join(DIST, 'data', 'cunao', c.slug + '.json'), JSON.stringify({ anio: R[c.slug] ? R[c.slug].anio : null, r: R[c.slug] ? R[c.slug].r : {}, hi, pa, ha, on, m, no, ag }));
   }
+  // Ficha en texto de cada hermandad para la IA (opción 2, /api/cunao): solo datos del portal, con su enlace
+  for (const h of D.hermandades) {
+    const c = CAP[h.ciudad] ? CAP[h.ciudad].nombre : h.ciudad, l = [];
+    l.push(`${h.nombre} (${c}). Nombre oficial: ${h.nombre_oficial || 'sin dato'}.`);
+    l.push(`Sale ${h.dia === 'Madrugá' ? 'la Madrugá' : 'el ' + h.dia}${hhmm(h.hora) ? ' a las ' + hhmm(h.hora) : ''}${h.sede ? ' desde ' + h.sede : ''}. Orden de salida en su jornada: ${h.orden}.`);
+    for (const s of h.salidas || []) l.push(`También sale ${s.dia}${s.hora ? ' a las ' + s.hora : ''}${s.titulares ? ' con ' + s.titulares : ''}.`);
+    if (h.fundacion) l.push(`Fundación: ${h.fundacion}.`);
+    if (hhmm(h.hora_carrera)) l.push(`Paso por la carrera oficial (${h.lugar_carrera || 'carrera oficial'}): ${hhmm(h.hora_carrera)}.`);
+    const r = R[h.ciudad] && R[h.ciudad].r[h.slug];
+    if (r) l.push(`Recorrido (itinerario ${R[h.ciudad].anio}, hora aproximada si lleva ≈): ${r.p.map((p) => `${p[1] || '?'} ${p[2] ? '' : '≈'}${p[0]}`).join('; ')}.`);
+    if ((h.titulares || []).length) l.push('Titulares: ' + h.titulares.map((t) => t.nombre + (t.autor ? ` (autor: ${t.autor})` : ' (autor sin documentar)')).join('; ') + '.');
+    if (h.paso) l.push('Pasos: ' + h.paso);
+    const ac = h.acompanamiento && h.acompanamiento.pasos || [];
+    if (ac.length) l.push(`Música (${h.acompanamiento.anio || ''}): ` + ac.map((p) => `${p.paso}: ${p.bandas.map((b) => b.nombre).join(', ')}`).join('; ') + '.');
+    else if ((h.bandas || []).length) l.push('Bandas: ' + h.bandas.join(', ') + '.');
+    if (h.musica) l.push('Música: ' + h.musica);
+    if ((h.marchas || []).length) l.push(`Marchas dedicadas (${h.marchas.length}): ` + h.marchas.slice(0, 15).map((x) => `«${x.titulo}»${x.autor ? ' de ' + x.autor : ''}${x.anio ? ' (' + x.anio + ')' : ''}`).join('; ') + '.');
+    if (HABITOS[h.slug] && HABITOS[h.slug].texto) l.push('Hábito de los nazarenos: ' + HABITOS[h.slug].texto);
+    if (h.historia) l.push('Historia: ' + h.historia);
+    if (h.web) l.push('Web oficial: ' + h.web);
+    fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'h', h.slug + '.json'), JSON.stringify({ s: h.slug, n: h.nombre, c, u: u('hermandad/' + h.slug + '/'), t: l.join('\n') }));
+  }
+  // Fechas de la próxima Semana Santa para la IA (sin cargar el índice entero en el servidor)
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'ia.json'), JSON.stringify({ anio, fechas, programa: anio - 1 }));
 }
 
 fs.rmSync(DIST, { recursive: true, force: true });

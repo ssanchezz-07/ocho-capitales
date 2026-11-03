@@ -8,6 +8,7 @@
 #   2. Enlaces internos rotos en la web generada (tools/comprobar-enlaces.mjs), y que cada ficha lleve a su apartado de fuentes
 #      en «Fuentes y metodología», con alguna fuente dentro (tools/comprobar-fuentes-fichas.mjs).
 #   3. Límites de Cloudflare Pages: menos de 20.000 archivos (aviso desde 18.000) y ninguno de más de 25 MiB.
+#   3b. erCuñao: la batería de preguntas reales (site/scripts/probar-cunao.mjs) contesta con datos del portal, sin fallos.
 #   4. Prueba de humo con un navegador de verdad (tools/prueba-humo.mjs), servida en local.
 # Uso: bash tools/red-seguridad.sh <carpeta de la web> <base, «/» o «/ocho-capitales/»>
 # Necesita Playwright en PLAYWRIGHT_DIR (el flujo lo instala aparte) o en el proyecto.
@@ -25,6 +26,7 @@ paso "Fuentes de los textos";    node tools/comprobar-fuentes-textos.mjs;       
 paso "Enlaces internos";          node tools/comprobar-enlaces.mjs "$DIST" "$BASE"; fin $? "enlaces internos"
 paso "Fuentes de las fichas";   node tools/comprobar-fuentes-fichas.mjs "$DIST" "$BASE"; fin $? "fuentes de las fichas"
 paso "Límites de Cloudflare";     node site/despliegue.mjs "$DIST";                 fin $? "límites de archivos"
+paso "erCuñao: batería";        node site/scripts/probar-cunao.mjs;               fin $? "erCuñao (preguntas)"
 
 if [ -n "${SIN_HUMO:-}" ]; then echo "Prueba de humo omitida (cada página redirige al dominio)"; else
 paso "Prueba de humo"
