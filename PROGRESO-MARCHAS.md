@@ -3,6 +3,24 @@
 ## RETOMAR AQUÍ (2026-11-03, noche · EN PAUSA por prioridades de Pablo: 1 imágenes, 2 historias, 3 marketing)
 Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada sobre origin/main `3ec5d4b`. **No hay nada subido de este bloque.**
 
+**0. LO PRIMERO al volver (coordinación, 2026-11-04): bandas con dos fichas**, encontradas por la pasada final de Alojamiento.
+- Seguras:
+  - Julián Cerdán (Sanlúcar);
+  - Maestro Tejera (Sevilla);
+  - Santa Cecilia (Aguilar).
+- Sospechosas, que hay que confirmar con fuente antes de unir:
+  - Amueci (Écija);
+  - la Consolación (Huelva);
+  - Jesús de la Pasión (Linares);
+  - Maestro Paco Tenorio (Arriate).
+- Qué hay que hacer:
+  - Unir cada pareja con su fuente, sin juntar nada que no la tenga.
+  - Llevar el repertorio, las marchas dedicadas y las hermandades a la ficha que queda.
+  - Redirigir con 301 el slug que desaparece y añadirlo a `alias`.
+  - Revisar si las 301 van en `_redirects` o con la meta-refresh de build.mjs.
+- Añadir a `tools/comprobar-marchas.mjs` un aviso de bandas con nombre casi igual en la misma localidad, quitando «banda», «agrupación musical», «CC.TT.», «de» y similares, con lev ≤ 2.
+- Después, lo mismo que antes de subir el bloque A: el auditor y el sí de Pablo.
+
 **A. Duplicados, bloque 1: hecho, auditado (auditor-datos: APTO) y en commit, falta el sí de Pablo para subir** (commits `135c4e9` y `03aa152`):
 - 0 errores, las 10.098 direcciones publicadas cubiertas (con el sitemap de pages.dev), buscador en verde y 13.977 archivos.
 - Antes de subir: `git fetch`, `git rebase origin/main`, `node tools/unificar-marchas.mjs` (con `auditoria/` copiada; ver abajo), `node site/build.mjs`, `comprobar-marchas` (con el sitemap publicado), `comprobar-origen` y la batería del buscador. Después, el sí de Pablo y `git push origin HEAD:main`.
