@@ -1,5 +1,5 @@
 {
- "nota": "Textos fijos de site/build.mjs (descripciones de página y entradillas) revisados el 3-nov-2026 (EQUIPO/ORDEN-VERIFICAR-TEXTOS.md). tipo «web»: solo describe la propia web; «afirmacion»: afirma un hecho y lleva fuentes. Lo comprueba tools/comprobar-fuentes-textos.mjs: un texto nuevo sin registrar para la publicación.",
+ "nota": "Textos fijos de site/build.mjs (descripciones de página y entradillas) revisados el 3-nov-2026 (EQUIPO/ORDEN-VERIFICAR-TEXTOS.md). tipo «web»: solo describe la propia web; «afirmacion»: afirma un hecho y lleva fuentes. Lo comprueba tools/comprobar-fuentes-textos.mjs: un texto nuevo sin registrar para la publicación. Las plantillas con ${…} se registran tal cual: lo que rellenan sale de los datos, que llevan su fuente.",
  "textos": [
   {
    "texto": "Las cofradías de cada jornada de la Semana Santa en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén, con su orden de paso y enlace al plano.",
@@ -80,6 +80,180 @@
    "texto": "El plano de cada capital con los recorridos publicados y dónde va cada cofradía a cada hora (posición estimada).",
    "tipo": "web",
    "fuentes": []
+  },
+  {
+   "texto": "Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${c.lema} Sus hermandades por días, con su historia, titulares, imagineros y bandas.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${resumen}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en las hermandades de las ocho capitales del portal. ${i.bio || ''}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Directorio de ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "De dónde salen los datos y las noticias de ${BRAND}.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Salidas extraordinarias y recorridos de las cofradías de ${c.nombre} en el plano.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Lo que cuentan la prensa andaluza y las webs de hermandades y consejos, cada mañana a las 7 y con enlace al medio.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${esc(i.vida)}${i.escuela ? ' · ' + esc(i.escuela) : ''}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${esc(i.escuela)}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${esc(resumen)}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${MARCHAS.length} marchas procesionales (bases de datos de Marchas de Procesión, Patrimonio Musical, Cofradías y Hermandades y la Biblioteca Nacional, la Federación de Granada, Wikipedia y webs de hermandades y bandas), con compositor, formación, año y a quién van dedicadas cuando una fuente lo dice. Cada ficha enlaza sus fuentes.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Las hermandades de las ocho capitales andaluzas: su día, su sede, sus titulares y su historia.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Los escultores de las imágenes que procesionan: su época, su escuela y sus obras en las ocho capitales.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Hermandades, imágenes, imagineros, bandas, marchas y noticias de las ocho capitales. Da igual con o sin tildes.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Tus hermandades, bandas, imagineros y capitales, a mano. Se guardan solo en este dispositivo, sin registro.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Este portal se mejora con lo que sabe la gente cofrade. Si algo está mal o falta, cuéntanoslo aquí: no hace falta registrarse. Cada aportación se revisa con su fuente antes de publicarla.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${BRAND} reúne en un solo sitio la actualidad y la historia de la Semana Santa de las ocho capitales andaluzas.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Fuera de Semana Santa no se enseñan los recorridos de ${datos.anio}, y ahora mismo no hay ninguna salida extraordinaria anunciada en ${esc(c.nombre)}.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "${FUERA ? `Las salidas extraordinarias anunciadas en ${esc(c.nombre)}, sobre su plano: dónde va la cofradía a cada hora. Fuera de Semana Santa no se enseñan los recorridos de ${datos.anio}.` : `Dónde va cada cofradía, minuto a minuto, sobre el plano de ${esc(c.nombre)}. Elige jornada${extras.length ? ' o salida extraordinaria' : ''} y hora, o pulsa reproducir.`}",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Comienza la Cuaresma.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Miércoles_de_Ceniza"
+   ]
+  },
+  {
+   "texto": "Viernes anterior al Domingo de Ramos.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Viernes_de_Dolores"
+   ]
+  },
+  {
+   "texto": "Comienza la Semana Santa.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Domingo_de_Ramos"
+   ]
+  },
+  {
+   "texto": "Misa de la Cena del Señor, que abre el Triduo Pascual.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Triduo_Pascual"
+   ]
+  },
+  {
+   "texto": "Pasión y muerte del Señor.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Viernes_Santo"
+   ]
+  },
+  {
+   "texto": "Pascua de Resurrección.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Pascua"
+   ]
+  },
+  {
+   "texto": "Sevilla y Granada mantienen en jueves la procesión del Corpus.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Corpus_Christi"
+   ]
   }
  ]
 }

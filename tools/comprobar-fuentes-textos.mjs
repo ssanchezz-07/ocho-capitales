@@ -22,9 +22,14 @@ for (const c of D.capitales) {
 }
 for (const h of D.hermandades) if (h.historia && !conFuente(h.historia_fuentes)) mal(`${h.slug}: la historia no tiene fuente`);
 
-// Textos fijos de build.mjs: se comparan tal cual están escritos en el código
+// Textos fijos de build.mjs: se comparan tal cual están escritos en el código (con sus ${…} si los llevan): descripciones de
+// página, entradillas (oc-lead y nx-lead) y notas del calendario litúrgico (add(días, 'Título', 'Nota'))
 const src = fs.readFileSync('site/build.mjs', 'utf8');
-const fijos = [...src.matchAll(/\bdesc: '((?:[^'\\]|\\.)+)'/g), ...src.matchAll(/class="oc-lead">([^<$]+)</g)].map((m) => m[1]);
+const fijos = [
+  ...src.matchAll(/\bdesc: '((?:[^'\\]|\\.)+)'/g), ...src.matchAll(/\bdesc: `([^`]+)`/g),
+  ...src.matchAll(/class="(?:oc|nx)-lead">((?:[^<]|<(?!\/p>))+)<\/p>/g),
+  ...src.matchAll(/\badd\(-?\d+, '[^']+', '((?:[^'\\]|\\.)+)'\)/g),
+].map((m) => m[1]);
 const porTexto = new Map(REG.map((r) => [r.texto, r]));
 for (const t of new Set(fijos)) {
   const r = porTexto.get(t);

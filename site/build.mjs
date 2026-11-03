@@ -892,7 +892,14 @@ function pageCapital(c) {
   const bandas = D.bandas.filter((b) => b.acompana.some((a) => a.ciudad === c.slug));
   const imag = D.imagineros.filter((i) => i.ciudades.includes(c.slug));
   // Fuentes de los datos clave y de los imprescindibles, sin repetir, con el formato de las fichas
-  const fuentesDe = (listas, que) => { const us = [...new Set(listas.flat())]; return us.length ? `<ul class="oc-fuentes">${us.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>${que}</span></li>`).join('')}</ul>` : ''; };
+  const fuentesDe = (listas, que) => { const us = [...new Set(listas.flat())]; return us.length ? `<ul class="oc-fuentes">${us.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(etiquetaFuente(f, us))}</a><span>${que}</span></li>`).join('')}</ul>` : ''; };
+  // Con dos enlaces de la misma web, la etiqueta lleva el título del artículo (Wikipedia) o un número para distinguirlos
+  function etiquetaFuente(f, us) {
+    const wiki = /wikipedia\.org\/wiki\/(.+)$/.exec(f); const base = (g) => (/wikipedia\.org/.test(g) ? 'Wikipedia' : nombreWeb(g));
+    const mismas = us.filter((g) => base(g) === base(f));
+    if (wiki) return `Wikipedia${mismas.length > 1 ? ': ' + decodeURIComponent(wiki[1]).replace(/_/g, ' ') : ''} (CC BY-SA 4.0)`;
+    return base(f) + (mismas.length > 1 ? ` (${mismas.indexOf(f) + 1})` : '');
+  }
   const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') + fuentesDe(c.datos_fuentes || [], 'datos clave') : '';
   const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` + fuentesDe(c.claves_fuentes || [], 'imprescindibles') : '';
   const news = newsFor(c.slug, 6);
