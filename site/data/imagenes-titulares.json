@@ -582,12 +582,18 @@
   },
   "paloma-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Puente_del_Cedr%C3%B3n.jpg",
-    "titulo": "File:Nuestro Padre Jesús de la Puente del Cedrón.jpg",
-    "autor": "Modestojdelgado",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_Jesus.jpg",
+    "titulo": "File:Paloma Trono de Jesus.jpg",
+    "autor": "Pedro J Pacheco",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús de la Puente del Cedrón"
+    "titular": "Nuestro Padre Jesús de la Puente del Cedrón",
+    "recorte": [
+     0.53,
+     0.03,
+     0.15,
+     0.3
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg",
@@ -3194,13 +3200,18 @@
   },
   "pasion-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_-_M%C3%A1laga.jpg",
-    "titulo": "File:Pasión - Málaga.jpg",
-    "autor": "Escuzao",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pasion_-_Catedral_de_Malaga_2.jpg",
+    "titulo": "File:Pasion - Catedral de Malaga 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de la Pasión",
-    "foco": "50% 25%"
+    "recorte": [
+     0.38,
+     0.49,
+     0.24,
+     0.24
+    ]
    }
   },
   "estudiantes-malaga": {
@@ -3253,13 +3264,18 @@
   },
   "santa-cruz-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_M%C3%A1laga.jpg",
-    "titulo": "File:Santa Cruz Málaga.jpg",
-    "autor": "Escuzao",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_Trono_2.jpg",
+    "titulo": "File:Santa Cruz Trono 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de los Dolores en su Amparo y Misericordia",
-    "foco": "50% 30%"
+    "recorte": [
+     0.25,
+     0.1,
+     0.5,
+     0.45
+    ]
    }
   },
   "misericordia-malaga": {

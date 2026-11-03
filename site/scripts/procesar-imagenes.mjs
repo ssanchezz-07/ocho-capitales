@@ -64,6 +64,8 @@ async function processOne(kind, slug, meta) {
   const base = () => { const s = sharp(orig, { failOn: 'none' }).rotate(); return rc ? s.extract(rc) : s; };
   const srcW = rc ? rc.width : fullW;
   const widths = WIDTHS.filter((w, i) => w <= srcW || i === 0);
+  // Entre 480 y 960 px de original, también una versión a su ancho natural: no se pierde nitidez en la ficha
+  if (srcW > widths.at(-1) + 60 && srcW < WIDTHS.at(-1)) widths.push(srcW);
   let outW = 0, outH = 0;
   for (const w of widths) {
     const file = path.join(OUT_DIR, `${kind}-${slug}-${w}.webp`);

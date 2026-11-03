@@ -4,22 +4,21 @@ Pablo ofrece fotos de su galería. Esta lista dice, por capital y hermandad, qu�
 
 Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermandad y el titular (por ejemplo `malaga-gitanos-columna.jpg`). Mejor en vertical, de frente o de tres cuartos, y sin caras de personas en primer plano.
 
-## Málaga (revisado el 2026-10-25 contra Commons; el 2026-11-03, a ojo en la hoja del plano: los tronos y palios de lejos, recortados al titular cuando la foto da para ello, y fuera los que no)
+## Málaga (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-Siguen fuera las cinco retiradas el 25-oct (detalle en `tools/sources/fotos-retiradas.json`).
-
-16 sin ninguna foto de titular; 23 con algún titular sin foto.
+20 sin ninguna foto de titular; 21 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
 | Pollinica | Domingo de Ramos | Virgen: María Santísima del Amparo |
-| Dulce Nombre | Domingo de Ramos | Virgen: Nuestro Padre Jesús de la Soledad / María Santísima del Dulce Nombre |
+| Dulce Nombre | Domingo de Ramos | Virgen: María Santísima del Dulce Nombre |
 | Salutación | Domingo de Ramos | Virgen: María Santísima del Patrocinio Reina de los Cielos |
-| Humildad | Domingo de Ramos | Virgen: Nuestra Madre y Señora de la Merced |
+| Humildad | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo de la Humildad en su Presentación al Pueblo / San Juan Evangelista; Virgen: Nuestra Madre y Señora de la Merced |
 | Huerto | Domingo de Ramos | Cristo: Nuestro Padre Jesús Orando en el Huerto / Ángel Egudiel |
 | Prendimiento | Domingo de Ramos | Cristo: Nuestro Padre Jesús del Prendimiento |
 | Crucifixión | Lunes Santo | Virgen: María Santísima del Mayor Dolor en su Soledad |
 | Gitanos | Lunes Santo | Cristo: Nuestro Padre Jesús de la Columna |
+| Dolores del Puente | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo del Perdón; Virgen: Nuestra Señora de los Dolores Coronada |
 | Pasión | Lunes Santo | Virgen: María Santísima del Amor Doloroso |
 | Estudiantes | Lunes Santo | Virgen: Nuestra Señora de Gracia y Esperanza |
 | Rocío | Martes Santo | Cristo: Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario |
@@ -38,10 +37,11 @@ Siguen fuera las cinco retiradas el 25-oct (detalle en `tools/sources/fotos-reti
 | Santa Cruz | Jueves Santo | Cristo: Santa Cruz / Santísimo Cristo de la Victoria |
 | Vera+Cruz | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Vera+Cruz y Sangre / San Juan Evangelista; Virgen: Nuestra Señora del Mayor Dolor Reina de los Ángeles |
 | Mena | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Buena Muerte y Ánimas; Virgen: Nuestra Señora de la Soledad Coronada |
-| Misericordia | Jueves Santo | Cristo: Nuestro Padre Jesús de la Misericordia |
+| Misericordia | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Misericordia; Virgen: Nuestra Señora del Gran Poder |
 | Esperanza | Jueves Santo | Cristo: Jesús Nazareno del Paso |
 | Monte Calvario | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo Yacente de la Paz y Unidad; Virgen: Nuestra Señora de Fe y Consuelo / Santa María del Monte Calvario |
 | Descendimiento | Viernes Santo | **ninguna foto**; Cristo: Sagrado Descendimiento; Virgen: Nuestra Señora del Santo Sudario / María Santísima de las Angustias |
+| Piedad | Viernes Santo | **ninguna foto**; Virgen: Nuestra Señora de la Piedad |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Santo Sepulcro; Virgen: Nuestra Señora de la Soledad |
 | Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado |
 | Desamparados | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Señora de los Desamparados |
@@ -63,12 +63,13 @@ Cada foto se ha contrastado con su ficha de Wikimedia Commons (descripción y ca
 
 En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de cortejo (nazarenos, palmas, estandartes) siguen en la ficha, pero ya no encabezan si hay foto de un titular.
 
-## Sevilla (revisado el 2026-11-03)
+## Sevilla (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-10 sin ninguna foto de titular; 32 con algún titular sin foto.
+10 sin ninguna foto de titular; 33 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
+| Jesús Despojado | Domingo de Ramos | Virgen: María Santísima de los Dolores y Misericordia |
 | La Hiniesta | Domingo de Ramos | Cristo: Cristo de la Buena Muerte |
 | La Estrella | Domingo de Ramos | Virgen: María Santísima de la Estrella |
 | La Amargura | Domingo de Ramos | Cristo: Cristo del Silencio en el Desprecio de Herodes / San Juan Evangelista |
@@ -140,7 +141,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Sangre de El Higuerón | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo de la Sangre / Nuestro Padre Jesús Nazareno de la Compasión / San Isidro Labrador |
 | Traslado al Sepulcro (pro-hermandad) | Sábado de Pasión | **ninguna foto**; titulares (el portal no tiene sus nombres) |
 
-## Granada (revisado el 2026-11-03: cada foto contra su ficha de Commons; fuera templos, cortejos, pasos de lejos, una foto de Granada de Nicaragua y otra sin licencia)
+## Granada (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
 12 sin ninguna foto de titular; 10 con algún titular sin foto.
 
@@ -205,51 +206,55 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Resurrección | Domingo de Resurrección | solo la foto de la sede; Cristo: Cristo Resucitado |
 | Humillación (Piedad) | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Humillación |
 
-## Huelva (revisado el 2026-11-03)
+## Huelva (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-12 sin ninguna foto de titular; 5 con algún titular sin foto.
+14 sin ninguna foto de titular; 6 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
 | La Sagrada Cena | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo del Amor / Apostolado; Virgen: María Santísima del Rosario en sus Misterios Dolorosos |
 | La Redención | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Redención; Virgen: María Santísima del Dulce Nombre |
 | Los Mutilados | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo de la Victoria Despojado; Virgen: Nuestra Señora de la Paz |
+| El Perdón | Lunes Santo | Virgen: Nuestra Señora de los Dolores |
 | El Cautivo | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de la Misericordia |
 | El Calvario | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Calvario; Virgen: María Santísima del Rocío y Esperanza |
 | La Lanzada | Martes Santo | Virgen: María Santísima titular |
 | Los Estudiantes | Martes Santo | Virgen: Nuestra Señora del Valle |
 | El Prendimiento | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Prendimiento / Misterio del Prendimiento; Virgen: María Santísima de la Estrella |
+| La Esperanza | Miércoles Santo | Virgen: Nuestra Señora de la Esperanza Coronada |
 | Vera Cruz y Oración | Jueves Santo | **ninguna foto**; Cristo: Oración en el Huerto; Virgen: Nuestra Madre y Señora de los Dolores Coronada |
 | La Misericordia | Jueves Santo | Virgen: María Santísima de la Concepción |
 | La Buena Muerte | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte |
 | El Nazareno | Madrugá | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno; Virgen: María Santísima de la Amargura |
 | La Fe | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Fe; Virgen: Nuestra Señora de la Caridad |
-| El Santo Entierro | Viernes Santo | Virgen: Nuestra Señora de las Angustias |
+| El Santo Entierro | Viernes Santo | **ninguna foto**; Cristo: Cristo yacente; Virgen: Nuestra Señora de las Angustias |
+| El Silencio (La Soledad) | Viernes Santo | **ninguna foto**; Virgen: Nuestra Señora en su Soledad |
 | El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado; Virgen: María Santísima de la Luz |
 | Nuestra Señora del Prado | Viernes de Dolores | **ninguna foto**; Virgen: Nuestra Señora del Prado en su Dolor |
 | La Bendición | Sábado de Pasión | **ninguna foto**; Cristo: Cristo de la Bendición |
 
-## Almería (revisado el 2026-11-03)
+## Almería (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-5 sin ninguna foto de titular; 13 con algún titular sin foto.
+9 sin ninguna foto de titular; 10 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
 | La Borriquita | Domingo de Ramos | **ninguna foto**; Cristo: Jesús de la Victoria en su Entrada en Jerusalén; Virgen: Nuestra Señora de la Paz |
 | La Estrella | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Estrella |
 | La Santa Cena | Domingo de Ramos | **ninguna foto**; Cristo: Santa Cena; Virgen: María Santísima de Fe y Caridad |
-| Pasión | Lunes Santo | Virgen: María Santísima de los Desamparados |
+| Pasión | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de Salud y Pasión; Virgen: María Santísima de los Desamparados |
 | Gran Poder | Lunes Santo | Virgen: Nuestra Señora del Carmen / María Santísima del Mayor Dolor y Traspaso |
-| La Coronación | Martes Santo | Cristo: Jesús de la Humildad y Paciencia en su Coronación de Espinas |
+| La Coronación | Martes Santo | **ninguna foto**; Cristo: Jesús de la Humildad y Paciencia en su Coronación de Espinas; Virgen: María Santísima de Gracia y Amparo |
 | El Amor | Martes Santo | Virgen: Nuestra Señora del Primer Dolor |
 | El Calvario (Cristo del Mar) | Miércoles Santo | Virgen: Nuestra Señora de las Lágrimas |
 | El Prendimiento | Miércoles Santo | Cristo: Nuestro Padre Jesús en su Prendimiento / Jesús Cautivo de Medinaceli |
 | La Macarena | Miércoles Santo | Virgen: María Santísima de la Esperanza Macarena |
 | Los Estudiantes | Miércoles Santo | Cristo: Oración en el Huerto |
-| Rosario del Mar | Jueves Santo | Virgen: María Santísima del Rosario del Mar |
+| Rosario del Mar | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas en el Abandono; Virgen: María Santísima del Rosario del Mar |
 | El Encuentro (Jesús Nazareno) | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno / Santa Mujer Verónica; Virgen: María Santísima de la Amargura |
 | Las Angustias | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte |
 | El Silencio (Descendimiento) | Jueves Santo | Virgen: Nuestra Madre María Santísima del Consuelo |
+| Cristo de la Escucha | Madrugá | **ninguna foto**; Cristo: Cristo de la Escucha |
 | El Santo Sepulcro | Viernes Santo | Cristo: Cristo yacente |
 | La Soledad | Viernes Santo | Cristo: San Juan Evangelista |
 | El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Jesucristo Resucitado, Señor de la Vida |
