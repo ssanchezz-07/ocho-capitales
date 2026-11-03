@@ -75,6 +75,31 @@ for (const m of U.marchas) {
   // dedicatorias repetidas: en una hermandad, la misma obra no puede salir dos veces
   const porH = new Map(); for (const m of U.marchas) if (m.dedicatoria && m.dedicatoria.hermandad) { const k = m.dedicatoria.hermandad + '|' + kt(m.titulo) + '|' + ap(m.autor).sort().join(' ') + '|' + norm(m.formacion); if (porH.has(k)) err(m, `dedicatoria repetida en ${m.dedicatoria.hermandad} (también ${porH.get(k)})`); else porH.set(k, m.slug); }
   console.log(`duplicados: ${dups}`);
+  // Versiones (la misma obra en otra formación, dentro de una ficha): cada una con su formación, distinta de la de la ficha, y con
+  // fuente; la dirección de la ficha que se unió sigue viva como alias (redirige)
+  for (const m of U.marchas) for (const v of m.versiones || []) {
+    if (!v.formacion || norm(v.formacion) === norm(m.formacion)) err(m, `versión sin formación o con la misma de la ficha (${v.formacion || '—'})`);
+    if (!(v.fuentes || []).length) err(m, `versión para ${v.formacion} sin fuente`);
+    if (v.slug && !(m.alias || []).includes(v.slug)) err(m, `la dirección de la versión ${v.slug} no redirige a la ficha`);
+  }
+  // Probables duplicados que quedan por revisar a mano: mismo título y compositor escrito casi igual («Lembergh» / «Lembherg»,
+  // «Gálvez Vera» / «Gálvez Martín»). No se unen solos (pueden ser dos personas: Sánchez Molero y Sánchez Martín); se avisan.
+  {
+    const lev1 = (a, b) => { let p = Array.from({ length: b.length + 1 }, (_, j) => j); for (let i = 1; i <= a.length; i++) { const q = [i]; for (let j = 1; j <= b.length; j++) q[j] = Math.min(p[j] + 1, q[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); p = q; } return p[b.length]; };
+    const parecidos = (a, b) => {
+      const x = ap(a), y = ap(b); if (!x.length || !y.length || norm(a) === norm(b)) return false;
+      if (x[0] !== y[0] && !(x[0].length >= 5 && lev1(x[0], y[0]) <= 2)) return false; // el primer apellido casa
+      const px = pil(a), py = pil(b); if (px.length && py.length && px[0] !== py[0]) return false; // el primer nombre de pila, también
+      return true;
+    };
+    let prob = 0;
+    for (const v of g.values()) for (let i = 0; i < v.length; i++) for (let j = i + 1; j < v.length; j++) {
+      const a = v[i], b = v[j];
+      if (misma(a, b) || !parecidos(a.autor, b.autor)) continue;
+      prob++; av(a, `¿la misma obra que ${b.slug}? («${b.titulo}», ${b.autor}${b.anio ? ', ' + b.anio : ''}, ${b.formacion || 'sin formación'}) frente a ${a.autor}${a.anio ? ', ' + a.anio : ''}, ${a.formacion || 'sin formación'}: revisar con fuente`);
+    }
+    console.log(`probables duplicados por revisar: ${prob}`);
+  }
   // Altas nuevas (Pablo, 3-nov: «para añadir nuevas primero tengo que saber las que tengo para no duplicar»): cada marcha que no
   // estaba en origin/main se compara con todas las demás de forma más laxa que arriba: título sin tildes, signos, artículos ni
   // espacios («Iesu Christe» = «Iesuchriste»), con una o dos letras de diferencia, y un apellido del compositor que casa con una

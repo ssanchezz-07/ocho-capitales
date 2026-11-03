@@ -509,7 +509,8 @@ for (const v of REV) {
 {
   const peso = (r) => (r.dedicatoria && r.dedicatoria.hermandad ? 100 : 0) + Object.values(r.fuentes).flat().length;
   // título casi literal (solo sin artículo inicial): «Padre Nuestro» y «Señora» no pueden quedar en la misma clave
-  const tk = (t) => norm(t).replace(/^(el|la|los|las|a la|al|a)s+/, '');
+  // solo el artículo: «¡A la Gloria!» y «¡Gloria!» son títulos distintos
+  const tk = (t) => norm(t).replace(/^(el|la|los|las)\s+/, '');
   const grupos = new Map(); for (const r of R) { const k = tk(r.titulo); if (!k) continue; (grupos.get(k) || grupos.set(k, []).get(k)).push(r); }
   const fuera = new Set();
   for (const g of grupos.values()) {
@@ -518,15 +519,24 @@ for (const v of REV) {
       if (fuera.has(a)) continue;
       for (const b of g) {
         if (b === a || fuera.has(b) || !mismoAutor(a.autor, b.autor)) continue;
-        if (a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion)) continue;
+        // Pablo, 2-nov: «una marcha puede tocarse en diversos estilos porque lo han adaptado». La misma obra en otra formación
+        // es una versión de la misma ficha, no otra marcha. Si los dos años se conocen y no coinciden, no se juntan: se apuntan.
+        const otraForm = a.formacion && b.formacion && norm(a.formacion) !== norm(b.formacion);
+        if (a.anio && b.anio && a.anio !== b.anio) { (informe.dudas_union ||= []).push([a.slug, b.slug, 'años distintos', a.anio, b.anio]); continue; }
         // dos dedicatorias distintas = pueden ser dos obras con el mismo título
         // (una ligada y otra solo con texto: se unen si ese texto no la dedica a otra hermandad u otro lugar)
         if (a.dedicatoria && b.dedicatoria) {
           const ha = a.dedicatoria.hermandad, hb = b.dedicatoria.hermandad;
-          if (ha && hb && ha !== hb) continue;
+          if (ha && hb && ha !== hb) { if (otraForm) (informe.dudas_union ||= []).push([a.slug, b.slug, 'dedicada a hermandades distintas', ha, hb]); continue; }
           if (!ha && !hb && norm(a.dedicatoria.texto) !== norm(b.dedicatoria.texto)) continue;
           if ((ha && !hb && b.dedicatoria.texto && clasifica(b.dedicatoria.texto, '', HERM[ha]).e === 'otra') || (hb && !ha && a.dedicatoria.texto && clasifica(a.dedicatoria.texto, '', HERM[hb]).e === 'otra')) continue;
           if (hb && !ha) { const d = a.dedicatoria; a.dedicatoria = b.dedicatoria; b.dedicatoria = d; }
+        }
+        // versión en otra formación: la ficha que queda guarda la formación, el año, la grabación y las bandas de cada versión
+        if (otraForm) {
+          (a.versiones ||= []).push({ formacion: b.formacion, ...(b.anio ? { anio: b.anio } : {}), ...(norm(b.autor) !== norm(a.autor) ? { autor: b.autor } : {}), ...(b.video ? { video: b.video } : {}), ...(b.repertorio ? { bandas: [...new Set(b.repertorio.map((x) => x.banda))] } : {}), fuentes: [...new Set(b.fuentes.formacion || [])], slug: b.slug });
+          for (const v of b.versiones || []) a.versiones.push(v);
+          delete b.fuentes.formacion; b.formacion = '';
         }
         for (const [c, fs_] of Object.entries(b.fuentes)) for (const f of fs_) fuente(a, c, f);
         for (const [k, u] of Object.entries(b.urls)) a.urls[k] = a.urls[k] || u;
@@ -674,6 +684,8 @@ for (const [a, b] of Object.entries(redirecciones)) if (b && !vivas.has(b)) redi
 const limpio = R.map((r) => {
   const o = { slug: r.slug, titulo: r.titulo, autor: r.autor, anio: r.anio, formacion: r.formacion, video: r.video, ...(r.ciudad ? { ciudad: r.ciudad } : {}) };
   if (r.videos) o.videos = r.videos.filter((v) => v !== r.video);
+  // versiones en otras formaciones: la ficha dice «también para …» (si una revisión no lo ha escrito ya con su fuente)
+  if (r.versiones && r.versiones.length) { o.versiones = r.versiones; if (!r.arreglos) r.arreglos = [...new Set(r.versiones.map((v) => v.formacion.toLowerCase()))].join(' y '); }
   for (const c of ['tipo', 'estreno', 'lugar', 'detalles', 'arreglos']) if (r[c]) o[c] = r[c];
   if (r.dedicatoria) o.dedicatoria = r.dedicatoria;
   o.fuentes = r.fuentes; o.urls = r.urls;

@@ -1,6 +1,23 @@
 # Progreso · marchas (sesión especializada, desde 2026-10-25)
 
-## RETOMAR AQUÍ (2026-11-03, noche · sesión nueva de Marchas, worktree `marchas-campana`)
+## RETOMAR AQUÍ (2026-11-03, noche · duplicados, bloque 1)
+**Hecho en este bloque (subir con el sí de Pablo):**
+- Versiones (regla de Pablo, 2-nov): la misma obra en otra formación (mismo título sin artículo y mismo compositor) es ahora una ficha con `versiones` (formación, año, autor o arreglista si cambia, vídeo, bandas, fuentes y la dirección antigua, que redirige). La ficha dice «también para …». Hay 70 fichas con versiones y 75 direcciones que redirigen; las 10.098 publicadas siguen cubiertas.
+- No se juntan, y van a `auditoria/marchas-informe.json` → `dudas_union`, si los dos años se conocen y no coinciden (Al Cielo el Rey de Triana, 2000/2012; Sentencia de Cebrero, 2015/2025) o si están dedicadas a hermandades distintas.
+- Arreglado en `unificar-marchas.mjs` 6b: la expresión del artículo inicial había perdido la barra (`s+`). Ahora solo quita «el/la/los/las»: «¡A la Gloria!» y «¡Gloria!» son títulos distintos.
+- Dos duplicados de la misma formación, unidos con revisión y fuente: «Buena Muerte» (Calvo Gaviño; Cofradías y Hermandades 901322) y «Nuestra Señora del Amor y del Trabajo» (de la Torre; Patrimonio Musical 7427).
+- `comprobar-marchas`: comprueba las versiones y avisa de los **34 probables duplicados** (mismo título, compositor escrito casi igual). Se ven con `node tools/comprobar-marchas.mjs --avisos | grep "misma obra que"`.
+
+**Siguiente (por orden):**
+1. Revisar los 34 probables, uno a uno con fuente (Patrimonio Musical, Cofradías y Hermandades, web de la hermandad). Ojo: algunos son dos personas distintas (Sánchez Molero y Sánchez Martín, Gómez Rodríguez y Gámez Varo). Se unen con una revisión `corregir` (autor bueno, con su fuente) y se juntan solos.
+2. «Domine Iesuchriste» y «Domine Iesu Christe» (Calvo Gaviño, 2011, mismo vídeo): la primera está dedicada a la Canilla y la segunda a los Facundillos (Granada). Hay que ver cuál es la buena.
+3. «Cádiz Cofrade» (Abel Moreno, 1995, banda de música y agrupación musical): no se juntan porque las dedicatorias tienen textos distintos.
+4. Las 17 marchas sin compositor.
+5. Repertorios: El Carmen (bctcarmenmalaga.es/repertorio, 23 propias) y Cigarreras (lascigarreras.net/repertorio).
+6. Pendiente de Pablo: año y dedicatoria de las partituras de «Jesús Lacerado» y «Siervos de tu Humildad».
+7. Para Diseño: pintar en la ficha la lista `versiones` (formación, vídeo, bandas). Hoy solo sale «también para …». El filtro por formación de /marchas/ solo mira la formación principal.
+
+## Anterior (2026-11-03, tarde · marchas de la campaña, ya publicado en `65e1b93`)
 **Hecho (sin subir hasta el sí de Pablo):** las 7 marchas de la campaña que faltaban (`EQUIPO/CAMPANA-WEB.md`), cada una con la publicación de su banda como fuente y el vídeo del estreno de su canal oficial:
 - Sanctae Crucis (López Gándara, 2025) y Yo soy la luz del mundo (M. A. González Cruz, 2026): fichas de lascigarreras.net (`repertorio-cigarreras.json`).
 - El Rezo (M. J. Guerrero Marín, 2024, a las Penas de la Estrella): vídeo del canal de Rosario de Cádiz.

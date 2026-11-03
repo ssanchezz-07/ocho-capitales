@@ -3196,6 +3196,28 @@
     ],
     "elegido": "pm"
    }
+  },
+  {
+   "slug": "nuestra-senora-del-amor-y-trabajo-jose-luis-de-la-torre-castellano",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-7427",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha-7427)",
+   "fecha": "2026-11-03",
+   "nota": "Duplicado: es la misma obra que «Nuestra Señora del Amor y del Trabajo» (mismo compositor, año y formación; las dos fichas citaban la misma ficha de Patrimonio Musical, que da el título con «del»). Se corrige el título y se une.",
+   "campos": {
+    "titulo": "Nuestra Señora del Amor y del Trabajo"
+   }
+  },
+  {
+   "slug": "buenamuerte-javier-calvo-gavino",
+   "accion": "corregir",
+   "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=901322",
+   "nombre_fuente": "Cofradías y Hermandades (ficha de la marcha)",
+   "fecha": "2026-11-03",
+   "nota": "Duplicado: es la misma obra que «Buena Muerte» de Javier Calvo Gaviño (mismo compositor, formación y vídeo, 7ipSyr3hfzg). La ficha da el título «Buena Muerte» (2008). Se corrige el título y se une.",
+   "campos": {
+    "titulo": "Buena Muerte"
+   }
   }
  ]
 }

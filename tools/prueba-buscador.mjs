@@ -17,7 +17,7 @@ const CASOS = [
   { q: 'El día del Señor', ciudad: 'malaga', tipo: 'banda-de-cornetas-y-tambores', palabras: ['dia', 'senor'], max: 5 },
   { q: 'señor', palabras: ['senor'], min: 5 },
   { q: 'A esta es', primeros: ['a esta es', 'a esta es'], palabras: ['esta', 'es'], min: 3 },
-  { q: 'Amarguras', primero: 'amarguras', palabras: ['amarguras'], min: 5 },
+  { q: 'Amarguras', primero: 'amarguras', palabras: ['amarguras'], min: 4 }, // 4 desde el 3-nov: la de Font de Anta para capilla es una versión de la de banda, en la misma ficha
   { q: 'amarguras', ciudad: 'sevilla', palabras: ['amarguras'], ciudadVisible: 'Sevilla', min: 1 },
   { q: 'la madrugá', palabras: ['madruga'], min: 6 },
   { q: 'Cristo de la Sangre', primero: 'cristo de la sangre', palabras: ['cristo', 'sangre'], min: 5 },
