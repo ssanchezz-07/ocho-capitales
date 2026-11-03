@@ -364,7 +364,13 @@
     "autor": "Antonio España from Madrid, España",
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "titular": "Santísimo Cristo de la Esperanza en su Gran Amor"
+    "titular": "Santísimo Cristo de la Esperanza en su Gran Amor",
+    "recorte": [
+     0.55,
+     0.02,
+     0.3,
+     0.55
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Salud_-_Maria_Santisima_de_la_Salud.jpg",
@@ -372,7 +378,13 @@
     "autor": "Pedro J Pacheco",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de la Salud"
+    "titular": "María Santísima de la Salud",
+    "recorte": [
+     0.36,
+     0.12,
+     0.2,
+     0.4
+    ]
    }
   },
   "humildad-y-paciencia-malaga": {
@@ -395,12 +407,18 @@
   },
   "huerto-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_los_Dolores._Jos%C3%A9_Mar%C3%ADa_Ponsoda_Bravo.jpg",
-    "titulo": "File:Nuestra Señora de los Dolores. José María Ponsoda Bravo.jpg",
-    "autor": "Nachoprados",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg",
+    "titulo": "File:Huerto - Trono Concepcion.jpg",
+    "autor": "Pedro J Pacheco",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Concepción Dolorosa"
+    "titular": "Nuestra Señora de la Concepción Dolorosa",
+    "recorte": [
+     0.33,
+     0.2,
+     0.24,
+     0.48
+    ]
    }
   },
   "gitanos-malaga": {
@@ -418,7 +436,13 @@
     "autor": "Pedro J Pacheco",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de la O"
+    "titular": "María Santísima de la O",
+    "recorte": [
+     0.3,
+     0.12,
+     0.4,
+     0.4
+    ]
    }
   },
   "cautivo-malaga": {
@@ -449,6 +473,15 @@
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "titular": "María Santísima de las Penas"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Penas_-_Trono_del_Cristo_3.jpg",
+    "titulo": "File:Penas - Trono del Cristo 3.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de la Agonía",
+    "foco": "50% 20%"
    }
   },
   "humillacion-y-estrella-malaga": {
@@ -532,7 +565,13 @@
     "autor": "Antonio España from Madrid, España",
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "titular": "María Santísima de la Paloma"
+    "titular": "María Santísima de la Paloma",
+    "recorte": [
+     0.35,
+     0.15,
+     0.22,
+     0.4
+    ]
    }
   },
   "el-rico-malaga": {
@@ -2862,6 +2901,218 @@
      0.08,
      0.6,
      0.55
+    ]
+   }
+  },
+  "pollinica-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_Padre_Jesus_2.jpg",
+    "titulo": "File:Pollinica - Trono Padre Jesus 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús a su Entrada en Jerusalén",
+    "foco": "50% 20%"
+   }
+  },
+  "humildad-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Humildad_malaga.png",
+    "titulo": "File:Humildad malaga.png",
+    "autor": "Escuzao",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Santísimo Cristo de la Humildad en su Presentación al Pueblo"
+   }
+  },
+  "prendimiento-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Prendimiento_-_Perdon.jpg",
+    "titulo": "File:Prendimiento - Perdon.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima del Gran Perdón",
+    "recorte": [
+     0.32,
+     0.16,
+     0.25,
+     0.5
+    ]
+   }
+  },
+  "crucifixion-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Crucifixi%C3%B3n_en_calle_Larios_(4475804089).jpg",
+    "titulo": "File:Crucifixión en calle Larios (4475804089).jpg",
+    "autor": "Antonio España from Madrid, España",
+    "licencia": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "titular": "Santísimo Cristo de la Crucifixión",
+    "recorte": [
+     0.33,
+     0.3,
+     0.2,
+     0.4
+    ]
+   }
+  },
+  "dolores-del-puente-malaga": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Doloresdelpuentecoronada_cristodelperdon.jpg",
+    "titulo": "File:Doloresdelpuentecoronada cristodelperdon.jpg",
+    "autor": "Composision de la cofradia cc",
+    "licencia": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "titular": "Nuestra Señora de los Dolores Coronada y Santísimo Cristo del Perdón"
+   }
+  },
+  "pasion-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_-_M%C3%A1laga.jpg",
+    "titulo": "File:Pasión - Málaga.jpg",
+    "autor": "Escuzao",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestro Padre Jesús de la Pasión",
+    "foco": "50% 25%"
+   }
+  },
+  "estudiantes-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg",
+    "titulo": "File:Ntro Padre Jesús Coronado de Espinas (Estudiantes) - Málaga - Lunes Santo (7047577553).jpg",
+    "autor": "Antonio España from Madrid, España",
+    "licencia": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "titular": "Santísimo Cristo Coronado de Espinas",
+    "recorte": [
+     0.15,
+     0.04,
+     0.5,
+     0.96
+    ]
+   }
+  },
+  "nueva-esperanza-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nueva_Esperanza_-_Trono_del_Nazareno.jpg",
+    "titulo": "File:Nueva Esperanza - Trono del Nazareno.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Jesús Nazareno del Perdón",
+    "recorte": [
+     0.36,
+     0.07,
+     0.2,
+     0.4
+    ]
+   }
+  },
+  "vineros-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg",
+    "titulo": "File:Viñeros Trono 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús Nazareno de Viñeros",
+    "recorte": [
+     0.46,
+     0.05,
+     0.15,
+     0.3
+    ]
+   }
+  },
+  "santa-cruz-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_M%C3%A1laga.jpg",
+    "titulo": "File:Santa Cruz Málaga.jpg",
+    "autor": "Escuzao",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestra Señora de los Dolores en su Amparo y Misericordia",
+    "foco": "50% 30%"
+   }
+  },
+  "misericordia-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Granpoder.jpg",
+    "titulo": "File:Granpoder.jpg",
+    "autor": "Alberto Medina Kilgore",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestra Señora del Gran Poder",
+    "foco": "50% 40%"
+   }
+  },
+  "esperanza-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanza_Trono_3.jpg",
+    "titulo": "File:Esperanza Trono 3.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima de la Esperanza Coronada",
+    "recorte": [
+     0.48,
+     0.04,
+     0.25,
+     0.5
+    ]
+   }
+  },
+  "amor-malaga": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Amor_y_Nuestra_Se%C3%B1ora_de_la_Caridad.jpg",
+    "titulo": "File:Cristo del Amor y Nuestra Señora de la Caridad.jpg",
+    "autor": "Angeltorrico",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Santísimo Cristo del Amor y Nuestra Señora de la Caridad"
+   }
+  },
+  "traslado-malaga": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Santo_Traslado_Traslado_2.jpg",
+    "titulo": "File:Santo Traslado Traslado 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santo Traslado al Sepulcro",
+    "recorte": [
+     0.48,
+     0,
+     0.3,
+     0.6
+    ]
+   }
+  },
+  "piedad-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Malaga.jpg",
+    "titulo": "File:Piedad Malaga.jpg",
+    "autor": "Escuzao",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestra Señora de la Piedad"
+   }
+  },
+  "servitas-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Servitas_Trono.jpg",
+    "titulo": "File:Servitas Trono.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima de los Dolores",
+    "recorte": [
+     0.12,
+     0,
+     0.4,
+     0.36
     ]
    }
   }

@@ -82,6 +82,70 @@
   "la-canilla-granada|virgen": {
    "archivo": "Nuestra_Señora_de_la_Soledad,_Granada.jpg",
    "motivo": "La ficha de Commons dice «Monasterio de San Jerónimo… titular de la Pontificia y Real Hermandad de Nuestra Señora de la Soledad y Descendimiento» (GPS en San Jerónimo): es la Soledad de las Chías, no la de la Cañilla. Pasa a las Chías."
+  },
+  "mediadora-malaga|ficha": {
+   "archivo": "Mediadora02.jpg",
+   "motivo": "Paso de palio en el que la Virgen no se ve."
+  },
+  "salesianos-malaga|ficha": {
+   "archivo": "Salesianos_-_Estandarte.jpg",
+   "motivo": "Estandarte con nazarenos; no es un titular."
+  },
+  "vera-cruz-malaga|ficha": {
+   "archivo": "Vera+Cruz_Lectura.jpg",
+   "motivo": "Un nazareno leyendo; no es un titular."
+  },
+  "monte-calvario-malaga|ficha": {
+   "archivo": "Málaga-Mural_azulejos_Sta_María_del_Monte_Calvario.JPG",
+   "motivo": "Mural de azulejos con la Virgen, no la imagen titular."
+  },
+  "descendimiento-malaga|ficha": {
+   "archivo": "Descendimiento_de_Málaga.jpg",
+   "motivo": "Misterio a contraluz: las figuras salen negras."
+  },
+  "santo-sepulcro-malaga|ficha": {
+   "archivo": "2v.jpg",
+   "motivo": "De noche y oscura: no se distingue el titular."
+  },
+  "buen-camino-gamarra-malaga|sede": {
+   "archivo": "Colegio_Gamarra.jpg",
+   "motivo": "Edificio del colegio en lugar de un titular."
+  },
+  "dolores-de-churriana-malaga|sede": {
+   "archivo": "San_Antonio_Abad_Church,_Churriana.jpg",
+   "motivo": "Fachada del templo en lugar de un titular."
+  },
+  "penas-malaga|virgen": {
+   "archivo": "Manto_de_flores_de_la_Virgen_de_las_Penas_-_Martes_Santo_-_Málaga_-_(7047570859).jpg",
+   "motivo": "El manto de flores tapa a la Virgen: no se ve la titular."
+  },
+  "expiracion-malaga|cristo": {
+   "archivo": "Expiracion_Holy_Week_Malaga_2012.jpg",
+   "motivo": "De noche y de lejos: el Cristo casi no se ve."
+  },
+  "humillacion-y-estrella-malaga|cristo": {
+   "archivo": "Cristo_de_la_Humillación_y_Perdón,_lateral_izquierdo_del_trono.jpg",
+   "motivo": "Trono visto de lejos entre los nazarenos; 720 px."
+  },
+  "humillacion-y-estrella-malaga|virgen": {
+   "archivo": "María_Santísima_de_la_Estrella_en_su_salida_procesional_del_martes_santo.jpg",
+   "motivo": "Palio de lejos entre el público; 720 px."
+  },
+  "sangre-malaga|virgen": {
+   "archivo": "Consolacion.jpg",
+   "motivo": "Palio de lejos entre la candelería; no se ve la cara."
+  },
+  "desamparados-malaga|virgen": {
+   "archivo": "Nuestra_señora_de_los_Desamparados.jpg",
+   "motivo": "Palio de lejos y oscuro."
+  },
+  "humillacion-y-estrella-malaga|ficha": {
+   "archivo": "Estrella_-_Humillación.jpg",
+   "motivo": "Trono visto de lejos entre los nazarenos."
+  },
+  "paloma-malaga|virgen": {
+   "archivo": "Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg",
+   "motivo": "Palio de lejos: ni recortado se ve a la Virgen entre la candelería."
   }
  },
  "no_portada": {
