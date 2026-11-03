@@ -499,25 +499,13 @@
    "archivo": "Huerto_(Córdoba).jpg",
    "motivo": "La misma foto."
   },
-  "la-borriquita-sevilla|cristo": {
-   "archivo": "SemanaSantaSevillaLaBorriquita2.jpg",
-   "motivo": "Autor «supuesto» en Commons (Lobillo, «own assumed») y la descripción nombra a otro fotógrafo: licencia no fiable."
-  },
   "la-borriquita-sevilla|ficha": {
    "archivo": "SemanaSantaSevillaLaBorriquita2.jpg",
    "motivo": "La misma foto."
   },
-  "el-cerro-sevilla|cristo": {
-   "archivo": "SemanaSantaSevillaElCerro1.jpg",
-   "motivo": "Autor «supuesto» en Commons (Lobillo, «own assumed»): licencia no fiable."
-  },
   "el-cerro-sevilla|ficha": {
    "archivo": "SemanaSantaSevillaElCerro1.jpg",
    "motivo": "La misma foto."
-  },
-  "redencion-sevilla|virgen": {
-   "archivo": "SemanaSantaSevillaBeso1.jpg",
-   "motivo": "Autor «supuesto» en Commons (Lobillo, «own assumed»): licencia no fiable."
   },
   "el-museo-sevilla|ficha": {
    "archivo": "SemanaSantaSevillaMuseo2.jpg",
@@ -562,6 +550,14 @@
   "medinaceli-cadiz|cristo": {
    "archivo": "Paso_del_Cristo_de_Medinaceli_de_Cádiz.jpg",
    "motivo": "De noche: no se distingue la cara; original de 720 px."
+  },
+  "el-amor-almeria|ficha": {
+   "archivo": "Procesión_Amor_01.jpg",
+   "motivo": "La misma foto del palio de lejos retirada como Virgen."
+  },
+  "la-piedad-cordoba|ficha": {
+   "archivo": "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
+   "motivo": "La misma foto pequeña retirada como Virgen."
   }
  },
  "no_portada": {

@@ -90,7 +90,7 @@ const archivoCommons = (u) => { try { return decodeURIComponent(String(u || '').
 const fotoRetirada = (x, slug, rol) => !!x && !!(FRET[archivoCommons(x.pagina)] || FRET[archivoCommons(x.src)] || (slug && FRET_EN[slug + '|' + rol]));
 for (const h of D.hermandades) if (fotoRetirada(h.imagen, h.slug, 'ficha')) h.imagen = null;
 for (const h of D.hermandades) if (IMGX.hermandades[h.slug] && !fotoRetirada(IMGX.hermandades[h.slug], h.slug, 'ficha')) h.imagen = localImg('h', h.slug, IMGX.hermandades[h.slug]);
-for (const c of D.capitales) if (IMGX.capitales[c.slug]) c.imagen = localImg('c', c.slug, IMGX.capitales[c.slug]);
+for (const c of D.capitales) if (IMGX.capitales[c.slug] && !fotoRetirada(IMGX.capitales[c.slug], null, 'capital')) c.imagen = localImg('c', c.slug, IMGX.capitales[c.slug]);
 // Díptico de titulares (petición de Pablo, 2026-10-15): el Cristo y la Virgen juntos, o una foto en la que salgan los dos.
 for (const h of D.hermandades) {
   const t = (IMGX.titulares || {})[h.slug]; if (!t) continue;

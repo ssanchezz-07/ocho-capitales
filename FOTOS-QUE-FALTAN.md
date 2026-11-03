@@ -55,7 +55,7 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 ## Otras capitales (revisado el 2026-10-27)
 
 Cada foto se ha contrastado con su ficha de Wikimedia Commons (descripción y categorías) y las dudosas, a ojo. Retiradas por no ser de esa hermandad o de esa ciudad (detalle y motivo en `tools/sources/fotos-retiradas.json`):
-- **Otra ciudad:** Borriquita y Afligidos de Cádiz (son de El Puerto de Santa María), Nazareno de Santa María de Cádiz (Cristo de San Fernando, Virgen de Chiclana), Angustias de Almería (Roquetas de Mar), Soledad de Jaén (Cristo de Andújar, Virgen de Úbeda), Cautivo de Huelva (Moguer) y Santo Entierro de Granada (¡Granada de Nicaragua!).
+- **Otra ciudad:** Borriquita y Afligidos de Cádiz (son de El Puerto de Santa María), Nazareno de Santa María de Cádiz (Cristo de San Fernando, Virgen de Chiclana), Angustias de Almería (Roquetas de Mar), Soledad de Jaén (Cristo de Andújar, Virgen de Úbeda; desde el 3-nov la Virgen ya es la Soledad de Jaén, de la propia cofradía), Cautivo de Huelva (Moguer) y Santo Entierro de Granada (¡Granada de Nicaragua!).
 - **Otra imagen:** Virgen del Descendimiento y de los Servitas de Cádiz (la imagen antigua de los Servitas en una hornacina), Virgen de la Estrella de Almería (era el Cristo del Rosario del Mar), Virgen de la Estrella de Granada (era el paso del Cristo), Virgen de la Carretería de Sevilla (otra Virgen de la Luz, la de San Esteban) y Cristo de Gracia de Córdoba (era la fachada de la iglesia).
 - **No son los titulares:** Sagrada Cena de Huelva (una banda), Nazareno de Huelva (la banda de cornetas), y las sedes de la Sanidad y el Santo Entierro de Cádiz (una garita de la muralla).
 - **Sin autor que citar:** El Calvario, Jesús Nazareno, La Buena Muerte y La Soledad de Córdoba (copiadas de otras webs).
@@ -65,22 +65,20 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Sevilla (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-19 sin ninguna foto de titular; 32 con algún titular sin foto.
+17 sin ninguna foto de titular; 32 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
-| La Borriquita | Domingo de Ramos | **ninguna foto**; Cristo: Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII |
 | Jesús Despojado | Domingo de Ramos | Virgen: María Santísima de los Dolores y Misericordia |
 | La Hiniesta | Domingo de Ramos | Cristo: Cristo de la Buena Muerte |
 | San Roque | Domingo de Ramos | Virgen: María Santísima de Gracia y Esperanza |
 | La Estrella | Domingo de Ramos | Virgen: María Santísima de la Estrella |
 | La Amargura | Domingo de Ramos | Cristo: Cristo del Silencio en el Desprecio de Herodes / San Juan Evangelista |
-| Redención | Lunes Santo | Virgen: María Santísima del Rocío |
 | Santa Genoveva | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de las Mercedes |
 | Santa Marta | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Caridad en su Traslado al Sepulcro |
 | Las Penas | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de los Dolores |
 | El Museo | Lunes Santo | Cristo: Santísimo Cristo de la Expiración |
-| El Cerro | Martes Santo | **ninguna foto**; Cristo: Santísimo Cristo de los Desamparados; Virgen: María Santísima de los Dolores |
+| El Cerro | Martes Santo | Virgen: María Santísima de los Dolores |
 | Los Estudiantes | Martes Santo | Virgen: María Santísima de la Angustia |
 | San Benito | Martes Santo | **ninguna foto**; Cristo: Presentación de Jesús al Pueblo / Santísimo Cristo de la Sangre; Virgen: María Santísima de la Encarnación |
 | La Candelaria | Martes Santo | Cristo: Nuestro Padre Jesús de la Salud |

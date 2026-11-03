@@ -55,7 +55,7 @@ async function processOne(kind, slug, meta) {
   const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 0 : 1280);
   if (!src) throw new Error('no encontrado en Commons');
   // La caché lleva el nombre del archivo de Commons: si una hermandad cambia de foto, no se reutiliza el original anterior
-  const clave = title.replace(/^File:/, '').replace(/[^w.-]+/g, '_').slice(0, 80);
+  const clave = title.replace(/^File:/, '').replace(/[^\w.-]+/g, '_').slice(0, 80);
   const orig = await download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
   const img = sharp(orig, { failOn: 'none' }).rotate();
   const m = await img.metadata();

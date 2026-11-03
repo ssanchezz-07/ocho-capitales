@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T21:41:49.274Z",
+ "generado": "2026-11-03T21:58:04.641Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -2972,17 +2972,18 @@
   },
   "cadiz": {
    "w": 960,
-   "h": 720,
+   "h": 638,
    "widths": [
     160,
     480,
     960
    ],
    "escudo": false,
-   "autor": "Emilio J. Rodríguez Posada",
-   "licencia": "CC BY-SA 3.0",
-   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Comienzo_de_La_Borriquita.JPG"
+   "autor": "Logut",
+   "licencia": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_en_la_Cruz_de_la_Iglesia_San_Francisco_de_C%C3%A1diz.JPG",
+   "foco": "40% 50%"
   }
  },
  "titulares": {
@@ -6692,7 +6693,7 @@
      480
     ],
     "escudo": false,
-    "autor": "Foto realizada y propiedad de Ángel Chacón",
+    "autor": "Ángel Chacón (sjaces)",
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg",
@@ -7127,9 +7128,9 @@
      960
     ],
     "escudo": false,
-    "autor": "Ángel Cachón",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "autor": "Ángel Chacón (sjaces)",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso2.jpg",
     "titular": "Santísimo Cristo de la Redención en el Beso de Judas"
    },
@@ -7142,9 +7143,9 @@
      960
     ],
     "escudo": false,
-    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "autor": "Ángel Chacón (sjaces)",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso1.jpg",
     "titular": "María Santísima del Rocío"
    }
@@ -8512,9 +8513,9 @@
      614
     ],
     "escudo": false,
-    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "autor": "Ángel Chacón (sjaces)",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaLaBorriquita2.jpg",
     "recorte": [
      0.12,
@@ -8554,9 +8555,9 @@
      751
     ],
     "escudo": false,
-    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "autor": "Ángel Chacón (sjaces)",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaElCerro1.jpg",
     "recorte": [
      0.2,
@@ -9223,6 +9224,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Buen_Fin,Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma.jpg\"|\"\"|\"\""
+  },
+  "redencion-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso2.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso1.jpg\"|\"\"|\"\""
   },
   "dolores-de-torreblanca-sevilla": {
    "w": 960,
