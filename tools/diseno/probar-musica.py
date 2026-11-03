@@ -7,8 +7,8 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8091'
 CAPT = sys.argv[2] if len(sys.argv) > 2 else ''
 # la Aurora (grabación de Marketing), muchas bandas por pasos, novedades de 2027 y una con pocas marchas (sin «Ver todas»)
 FICHAS = ['la-aurora-granada', 'san-pablo-sevilla', 'fusionadas-malaga', 'el-rico-malaga', 'amor-malaga', 'mena-malaga', 'la-sed-sevilla']
-# en la ficha resumida, los pasos de los titulares van antes que la Cruz de Guía (auditor, 3-nov)
-PASOS = {'mena-malaga': ['Cristo', 'Virgen'], 'la-sed-sevilla': ['Paso de Cristo', 'Paso de Palio']}
+# en la ficha resumida, los pasos de los titulares van antes que la Cruz de Guía (auditor, 3-nov); la banda propia, siempre (Pablo, «ponla»)
+PASOS = {'fusionadas-malaga': ['Cruz de Guía', 'Azotes y Columna', 'Exaltación', 'Ánimas de Ciegos', 'Virgen'], 'mena-malaga': ['Cristo', 'Virgen'], 'la-sed-sevilla': ['Paso de Cristo', 'Paso de Palio']}
 import json
 HAB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'sources', 'habitos.json'), encoding='utf8'))
 ok = []
