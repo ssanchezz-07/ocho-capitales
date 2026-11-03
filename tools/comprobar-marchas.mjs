@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..');
@@ -74,6 +75,30 @@ for (const m of U.marchas) {
   // dedicatorias repetidas: en una hermandad, la misma obra no puede salir dos veces
   const porH = new Map(); for (const m of U.marchas) if (m.dedicatoria && m.dedicatoria.hermandad) { const k = m.dedicatoria.hermandad + '|' + kt(m.titulo) + '|' + ap(m.autor).sort().join(' ') + '|' + norm(m.formacion); if (porH.has(k)) err(m, `dedicatoria repetida en ${m.dedicatoria.hermandad} (también ${porH.get(k)})`); else porH.set(k, m.slug); }
   console.log(`duplicados: ${dups}`);
+  // Altas nuevas (Pablo, 3-nov: «para añadir nuevas primero tengo que saber las que tengo para no duplicar»): cada marcha que no
+  // estaba en origin/main se compara con todas las demás de forma más laxa que arriba: título sin tildes, signos, artículos ni
+  // espacios («Iesu Christe» = «Iesuchriste»), con una o dos letras de diferencia, y un apellido del compositor que casa con una
+  // letra de margen («Marín» = «Martín»). Si se parece, es error: o se completa la ficha que ya existe, o se apunta el par en
+  // tools/sources/marchas-distintas.json con la fuente que dice que son obras distintas.
+  let previas = null;
+  try { previas = new Set(JSON.parse(execFileSync('git', ['show', 'origin/main:tools/sources/marchas.json'], { cwd: RAIZ, maxBuffer: 1 << 30, encoding: 'utf8' })).marchas.flatMap((m) => [m.slug, ...(m.alias || [])])); }
+  catch (e) { avisos.push('altas nuevas: no se pudo leer origin/main, no se comparan'); }
+  if (previas) {
+    const DIST = fs.existsSync(path.join(DIR, 'sources/marchas-distintas.json')) ? JSON.parse(fs.readFileSync(path.join(DIR, 'sources/marchas-distintas.json'), 'utf8')).pares : [];
+    const distintas = (a, b) => DIST.some((p) => p.fuente && ((p.a === a && p.b === b) || (p.a === b && p.b === a)));
+    const k2 = (t) => norm(t).replace(/\b(el|la|los|las|lo|un|una|de|del|y|a|al|en)\b/g, ' ').replace(/\s+/g, '');
+    const lev = (a, b) => { let p = Array.from({ length: b.length + 1 }, (_, j) => j); for (let i = 1; i <= a.length; i++) { const q = [i]; for (let j = 1; j <= b.length; j++) q[j] = Math.min(p[j] + 1, q[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); p = q; } return p[b.length]; };
+    const tituloParecido = (a, b) => a === b || (Math.min(a.length, b.length) >= 6 && lev(a, b) <= (a.length >= 12 ? 2 : 1));
+    const autorParecido = (a, b) => { const x = ap(a), y = ap(b); return x.some((w) => y.some((z) => w === z || (w.length >= 5 && lev(w, z) <= 1))); };
+    const todas = U.marchas.map((m) => ({ m, k: k2(m.titulo) }));
+    let altas = 0, parecidas = 0;
+    for (const { m, k } of todas) {
+      if (previas.has(m.slug)) continue;
+      altas++;
+      for (const o of todas) if (o.m !== m && tituloParecido(k, o.k) && autorParecido(m.autor, o.m.autor) && !distintas(m.slug, o.m.slug)) { parecidas++; err(m, `alta nueva parecida a ${o.m.slug} («${o.m.titulo}», ${o.m.autor}): completa esa ficha o apunta el par en marchas-distintas.json con su fuente`); }
+    }
+    console.log(`altas nuevas frente a origin/main: ${altas} · parecidas a una que ya estaba: ${parecidas}`);
+  }
 }
 // Bandas: dos fichas con el mismo nombre y la misma localidad son la misma banda partida en dos (Jesús Despojado, 27-oct)
 {
