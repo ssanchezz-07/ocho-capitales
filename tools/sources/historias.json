@@ -1756,6 +1756,295 @@
    "revisado": "2026-11-03",
    "estado": "completa",
    "nota": "Su fuente_url era un artículo de horarios de Cordópolis sin historia y no tiene ficha en la Agrupación; se usa la página «Historia» de su web propia (de hacia 2007) y una noticia de Cordópolis de 2019. La reseña anterior llama a la Virgen «Salud y Consuelo»: ambas fuentes dicen «Salud y Traspaso». portal.json da 2007 como fundación; la web la fecha el 27 de octubre de 2004 (2007 es la bendición de la Virgen)."
+  },
+  "servitas-cadiz": {
+   "texto": "La Orden Servita nació en Florencia, donde siete caballeros decidieron el Viernes Santo de 1233 crear una fundación para meditar sobre el dolor de María, y el papa Inocencio IV aprobó en 1242 las primeras constituciones de su Orden Terciaria. En Cádiz, el 13 de marzo de 1727 el prior general fray Pedro María Pieri Senensis expidió la patente para fundarla en la parroquia de San Lorenzo, de la que era párroco Andrés Cortés de Cárdenas; el propio obispo fue el primer gaditano que vistió el escapulario servita. En pocos años la Venerable Orden Tercera levantó capilla propia anexa al templo gracias a los bienes que le dejó al morir María Paula Enríquez, camarera de la Virgen durante más de 25 años.\n\nLa Orden conserva dos dolorosas. La primitiva, obra del sevillano José Montes de Oca en 1729 y pensada para el culto interno, ocupa desde 1939 una hornacina en la fachada de la capilla, en la calle Sagasta. La titular, anónima del siglo XVIII y con el busto tallado en madera de tilo, preside el altar mayor; la restauró en Sevilla Manuel Gutiérrez Cano en 1905 y, entre 2006 y 2007, Pedro E. Manzano Beltrán. Fue coronada canónicamente en la Catedral el 17 de septiembre de 2011. Tras unos años saliendo el Viernes Santo, desde 2016 ha vuelto a procesionar el Viernes de Dolores, como hacía tradicionalmente.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/servitas-cadiz/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "merced-obediencia-cadiz": {
+   "texto": "Según los archivos diocesanos, la Esclavitud de Nuestra Señora de la Merced se fundó en Cádiz el 9 de marzo de 1628. Vivió una etapa de esplendor entre 1658 y 1663, cuando Pedro Ximénez de Guzmán, regidor perpetuo de la ciudad, y su esposa Isabel Peláez, protectores de la orden mercedaria, fundaron un rico patronato. Tras un tiempo de decadencia, fray Ambrosio de San Cayetano la estableció canónicamente el 23 de octubre de 1776 en el convento de los Mercedarios Descalzos, y sus primitivas reglas se aprobaron en 1777. La quema del convento acabó con su patrimonio y su archivo, por lo que apenas hay datos hasta 1937.\n\nEl 8 de marzo de 1936 la parroquia de la Merced fue asaltada e incendiada y desapareció la imagen de la Virgen, del siglo XVII. Tras un primer encargo a Miguel Láinez Capote que no satisfizo a la junta, en 1942 talló la actual Virgen de la Merced Luis Jiménez Fernández, miembro de la junta de gobierno. Recibió culto en Santa Cruz hasta que volvió a su parroquia, consagrada de nuevo el 4 de julio de 1948. La restauró Luis González Rey en 1994. Es copatrona de Cádiz desde 1885.\n\nEl Nazareno de la Obediencia, una talla de tamaño menor que el natural, llegó a la corporación en la década de los cincuenta, donado a la parroquia por una señora y entregado por el párroco José Sánchez Ortega. Láinez Capote le hizo cuerpo y nueva hechura, y la propia archicofradía atribuye su cabeza a Cosme Velázquez Merino. En 2015 se incorporó al título de la Archicofradía.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/merced-3/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da dos fechas para la restauración de la Virgen por González Rey: 1993 (resumen) y 1994 (relato detallado, con la vuelta a la parroquia en mayo de 1994); se usa 1994. La atribución a Cosme Velázquez Merino es de la propia corporación."
+  },
+  "la-borriquita-cadiz": {
+   "texto": "La hermandad nació el Viernes Santo de 1944 en la iglesia de San Lorenzo, cuando tres jóvenes, Anselmo Rodríguez Gutiérrez, Manuel Piniella y Ramón Gutiérrez, propusieron a Emilio L. Bartús Loreto, secretario primero de la Hermandad de la Expiración, crear una cofradía de la Entrada en Jerusalén, misterio que entonces no existía en la ciudad. Se encargó la imagen del Señor al escultor Miguel José Laínez Capote y se buscó sede en San José, la única parroquia que había entonces extramuros. El obispo Tomás Gutiérrez Diez la erigió el 6 de julio de 1944, y el 25 de marzo de 1945 hizo su primera salida desde San José, con un paso cedido por los Afligidos, recogiéndose en San Lorenzo.\n\nEn 1947 la junta encargó a los talleres valencianos de Rafael Peris el busto de la Virgen del Amparo, de autor desconocido, hecho a partir de unas manos antiguas que guardaba Bartús; se bendijo el 14 de marzo de 1948 y el pueblo la llama «la Guapa de Cádiz». El Señor de la Paz, de 1944, fue reformado por completo por Francisco Buiza en 1978, de modo que su aspecto actual se debe a este, aunque conserva en su interior la mascarilla primitiva. En 2006 obtuvo el título de sacramental. En 2016, tras la marcha de los carmelitas, dejó la capilla-oratorio de la calle Vea Murguía y se trasladó a la parroquia de San José, y en 2017 incorporó a San José como titular.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/la-paz/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-despojado-cadiz": {
+   "texto": "La hermandad se fundó el 15 de mayo de 2007 por decreto del obispo Antonio Ceballos Atienza, y el 20 de mayo se leyó el decreto de erección canónica en la iglesia de María Auxiliadora. Su primera junta de gobierno tomó posesión el 3 de junio, con Luis Manuel Rivero Ramos como primer hermano mayor; ese día se presentó el escudo, diseñado por Juan Carlos Romero Pérez e inspirado en el de la Congregación Salesiana, cuyo lema «Da mihi animas caetera tolle» conserva. En la Cuaresma de 2008 celebró su primer triduo y su primera función principal.\n\nEl misterio representa la estación del vía crucis en la que Jesús es despojado de sus vestiduras. Las dos imágenes titulares son del escultor cordobés Francisco Romero Zafra: el Señor del Amor Despojado y María Santísima de la Concepción, bendecida el 8 de diciembre de 2010, cuya advocación se eligió por la devoción de San Juan Bosco a la Inmaculada. El Señor procesiona sobre el antiguo paso del Cristo de la Misericordia, que la comunidad salesiana había adquirido para la procesión de San Juan Bosco del 24 de mayo, y en 2014 la cofradía estrenó la primera imagen del conjunto escultórico que lo acompaña.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/despojado/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha no da año de la talla del Señor (portal: 2008). La reseña anterior hablaba de la «carga a doble ritmo», que no está en la fuente."
+  },
+  "sagrada-cena-cadiz": {
+   "texto": "El origen de la hermandad está en un grupo escultórico de la institución de la Eucaristía, hecho en los talleres de arte religioso de Olot (Gerona) con destino a Cuba, que quedó en Cádiz al detenerse la expedición por el estallido de la revolución castrista y se depositó en el convento de Santo Domingo (1959-60). El 6 de junio de 1960 el prior dominico fray Pablo del Olmo y el que fue primer hermano mayor, José Luis Sancho Mejías, lo adquirieron con la idea de fundar una cofradía de penitencia, que la autoridad eclesiástica erigió el 13 de abril de 1963. Tras unos años dedicada al culto interno, hizo su primera salida en 1970, solo con el paso de misterio; ese mismo año Miguel José Láinez Capote adaptó cuerpos a las figuras. La Virgen de los Santos y Esperanza, de propiedad particular, salió una sola vez, en 1977, desde un tinglado en la calle Higuera.\n\nEn los años noventa renovó su patrimonio: el imaginero gaditano Luis E. González Rey esculpió entre 1991 y 1994 un nuevo misterio, en el que Cristo anuncia la traición de uno de los apóstoles, y el titular salió por primera vez en 1995. En 2003 el cabildo cambió las advocaciones a Jesús del Milagro en la Sagrada Cena y María Santísima Reina de Todos los Santos. Esta dolorosa, tallada en cedro en 2004 por Miguel Ángel Valverde Jiménez, natural de Carmona, la adquirió la hermandad en 2006 y se bendijo el 18 de octubre de 2009.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/sagrada-cena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "las-penas-cadiz": {
+   "texto": "La Archicofradía del Pilar se fundó en 1730. La cofradía de Jesús de las Penas, cuya junta pro-cultos había formado el año anterior el personal asalariado que atendía las labores litúrgicas de la parroquia de San Lorenzo, se erigió el 23 de noviembre de 1955 por decreto del obispo Tomás Gutiérrez Díaz. Ambas se fusionaron en una sola archicofradía en marzo de 1977. En 1955 el Señor salió en vía crucis, y la primera salida procesional fue el Lunes Santo de 1956, porque el Domingo de Ramos llovió copiosamente; en 1957 se inauguró en la fachada de San Lorenzo el gran mosaico del Señor, costeado por suscripción popular en el barrio. Desde 1964 lo acompaña la Virgen de la Caridad cada Domingo de Ramos.\n\nLa primera imagen del Señor tenía una cabeza de Cosme Velázquez, depositada en San Lorenzo, a la que Miguel Láinez Capote adaptó un cuerpo y que retocó José Ovando Merino. En 1986 fue sustituida por la actual talla maniatada del sevillano Luis Álvarez Duarte, que representa a Jesús conducido por el valle del Cedrón tras ser prendido en Getsemaní. El mismo escultor hizo en 1983 la Virgen de la Caridad, aprovechando las manos de la imagen anterior, obra de Manuel Pineda Calderón de 1963.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/las-penas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "humildad-y-paciencia-cadiz": {
+   "texto": "La cofradía la fundó en 1621 un grupo de cargadores de Indias, en su mayoría de origen vasco-guipuzcoano, y se la llamó cofradía nacional de los vizcaínos porque reunía a naturales de las tres provincias vascas y del reino de Navarra, cuyos escudos se ven en las esquinas de la bóveda central de la iglesia de San Agustín. En el archivo diocesano se conserva un expediente que le abrió en 1628 el tribunal eclesiástico por alterar el orden de su cortejo en la procesión de aquel año. En 1634 el capitán Diego de Aguirre dispuso en su testamento que uno de sus albaceas, Manuel de Iribarri, costeara una capilla en San Agustín y la donara a la cofradía.\n\nEl titular, el Cristo de la Humildad y Paciencia, es de Jacinto Pimentel, que llegó a Cádiz hacia 1637 y lo contó entre sus primeras obras para la ciudad, en 1638. Representa a Cristo sentado sobre una peña, meditando antes de la crucifixión. Está tallado en cedro y su composición pudo inspirarse, en posición invertida, en la estatua de Lorenzo el Magnífico de Miguel Angel en Florencia. Se ha descubierto además la probable intervención de Francisco de Zurbarán en la policromía, y su firma en el contrato de la obra; la imagen sirvió de modelo al Cristo de la Humildad y Paciencia de Chiclana, que Tomás Vadillos hizo en 1697. La Virgen de la Amargura es una dolorosa de palio; el paso de misterio se hizo en 1953 en los talleres de Juan Pérez Calvo, y el de palio entre 1953 y 1955.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/humildad-y-paciencia/",
+    "https://consejocofradiascadiz.es/columna/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Autor y fecha del Cristo (Jacinto Pimentel, 1638) tomados de la ficha de la Columna, que repasa la obra de Pimentel. La ficha no da autor de la Amargura (portal: Sebastián Santos, 1967)."
+  },
+  "la-palma-cadiz": {
+   "texto": "En 1691 el capuchino fray Pablo de Cádiz creó la Compañía Espiritual de Ave María y Coro del Santísimo Rosario, formada por vecinos del barrio de Capuchinos, que se reunían en el oratorio de la casa de Juan y María Peñalba; ella donó la viña de Malavá para levantar una capilla, que se terminó en 1699. Un incendio la destruyó en 1754, aunque se salvaron la imagen de la Virgen de la Palma y el estandarte. Ese estandarte es el que llevaba el capellán Francisco Macías, junto a fray Bernardo de Cádiz con un crucifijo, cuando se detuvieron las aguas del maremoto de 1755, año en que el obispo fray Tomás del Valle le concedió el título de archicofradía. La Virgen de la Palma, una pequeña talla para vestir de autor desconocido, fue coronada canónicamente en 1987 por el obispo Antonio Dorado Soto.\n\nLa cofradía del Cristo de la Misericordia, fundada en 1938, se fusionó con la Archicofradía de la Palma el 20 de marzo de 1968. El Cristo, de origen genovés del siglo XVIII y pensado al parecer como imagen de retablo, recibió en 1969 un cuerpo nuevo de Francisco Buiza, que respetó la cabeza. La Virgen de las Penas procede de la iglesia de los capuchinos de la calle Sagasta, que los frailes abandonaron con la desamortización de 1835; en la Semana Santa de 1813 ostentó la llave del Sagrario del monumento del Jueves Santo, y desde 1947 lleva el nombre de las Penas.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/la-palma/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La coronación de las Penas en 2022 que daba la reseña anterior no figura en la ficha."
+  },
+  "el-prendimiento-cadiz": {
+   "texto": "La hermandad reúne dos corporaciones: la Real Congregación de la Vela, fundada el 29 de junio de 1792, y la hermandad de penitencia creada el 27 de abril de 1976, que se fusionaron el 28 de abril de 1979. La Congregación es desde su fundación la responsable del jubileo circular de la ciudad; se incorporó a las de Madrid y Roma el 11 de noviembre de 1792 y recibió el título de real por orden de 17 de marzo de 1847.\n\nEl Señor del Prendimiento es obra del imaginero Alfonso Berraquero García y lo bendijo José González Astorga el 11 de marzo de 1978; aparece ante Judas, que aún no ha consumado el beso, y por eso todavía sin las manos atadas. La Virgen del Patrocinio, del siglo XVIII y de autor desconocido, procede de la iglesia del Beato Diego; Berraquero la transformó en dolorosa y la bendijo el obispo Antonio Dorado Soto el 5 de diciembre de 1976. La hermandad venera también una talla del siglo XIX del beato fray Diego José de Cádiz, procedente del desaparecido convento de Capuchinos. Su primer paso de misterio había pertenecido a la Cofradía del Descendimiento, y en 2015 estrenó la primera fase de uno nuevo, hecho en los talleres de Manuel Castillo de Puerto Real.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/prendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "nazareno-del-amor-cadiz": {
+   "texto": "A comienzos de los años cincuenta dos amigos, Eduardo Doménech Gómez y Antonio Llaves Villanueva, coincidieron representando a sus hermandades en la procesión de Jesús de la Salud y la Esperanza y decidieron fundar una nueva; se les unieron Leonardo Andamoyo Caballero, Rafael Franco Vázquez y Manuel Pérez Blanco. En el convento de San Francisco les cautivó el «Cristo del Amor», que recibía culto en la antigua capilla de la V.O.T. desde que sustituyó al Nazareno desaparecido en la Guerra Civil, y contaron con el apoyo del superior de la nueva comunidad franciscana, fray Luis Rodríguez San Román, que fue su primer director espiritual. Como tenían 18 años, pidieron que fuera hermano mayor a Juan Cuadrado Villalobos, propietario de Almacenes la Riojana. Los estatutos se aprobaron el 8 de noviembre de 1951, siendo obispo Tomás Gutiérrez Diez.\n\nEl 4 de abril del año siguiente hizo su primera estación de penitencia, con la ayuda de cofrades como Pedro Palomino Rendón y Emilio Luis Bartus Loreto. El Lunes Santo de 1954 el titular salió con túnica blanca en lugar de la morada habitual; tuvo tal aceptación que la junta se la dejó para siempre y desde entonces se le conoce como el Nazareno Blanco. La imagen es obra del sevillano José Rivera García y está datada en 1940. La Virgen de la Esperanza es de Luis Jiménez y la donó su esposa, Eugenia Caramé; Alfonso Berraquero le talló manos nuevas en 1976.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/nazareno-del-amor/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha del Nazareno del Amor fecha la Esperanza de Luis Jiménez en 1962, pero la ficha de la Merced dice que Luis Jiménez murió en 1943 y que su Esperanza es de 1941 (primero cotitular de las Cigarreras). Se omite el año. La ficha se contradice sobre cuándo compró el antiguo paso de los Afligidos; se omite."
+  },
+  "vera-cruz-cadiz": {
+   "texto": "La pérdida de sus documentos en el saqueo inglés de 1596 impide fijar la fecha de fundación, pero las escrituras de los terrenos de su capilla en la iglesia de San Francisco acreditan que ya existía en 1566, año en que se instaló en Cádiz la comunidad franciscana; la tradición atribuye la fundación a fray Juan Navarro, fundador del convento. El 22 de julio de 1569 los frailes le cedieron unos terrenos para construir su capilla, y el 22 de julio de 1579 otra escritura le cedió los que ocupa la capilla actual.\n\nEl crucificado titular sustituye desde 1773 a otro más antiguo, de probable origen novohispano y hecho en papelón, que la hermandad conserva; restaurado por Ars Nova en 2016, este «Cristo indiano» volvió a recibir culto en la capilla del Pilar del convento. El actual se atribuyó a maestros napolitanos, pero tras su restauración de 1983 y su comparación con crucificados genoveses se le sitúa en el entorno de Antón María Maragliano. En el asalto al convento de mayo de 1931 la cofradía perdió numerosos enseres e imágenes, entre ellas la Virgen de la Soledad. Reorganizada a partir de 1940, encargó en 1944 una nueva dolorosa a Sebastián Santos Rojas, talla de ciprés de 160 centímetros que está entre sus primeras obras de este tema. En 2016 celebró su 450 aniversario fundacional con un año jubilar.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/vera-cruz/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-sanidad-cadiz": {
+   "texto": "El 19 de junio de 1946 se autorizó su junta pro-cultos, que poco después se constituyó en cofradía por decreto del obispo Tomás Gutiérrez Díez. Se fundó con la idea de reunir a los distintos estamentos del gremio sanitario, de ahí que se la conozca como la Sanidad; la canastilla de su paso de misterio lleva los escudos de la Sanidad Nacional, la Enfermería, los Ayudantes Técnicos Sanitarios, la Farmacia y la Medicina. Hizo su primera salida el Miércoles Santo de 1952, en 1954 salió en la tarde del Jueves Santo y en 1960 fijó su estación de penitencia en la madrugada del Viernes Santo. En 2010 el cabildo de hermanos decidió que desde 2011 procesionara el Martes Santo.\n\nLas primeras imágenes del Señor y de la Virgen las hizo el escultor isleño Antonio Bey Olvera, pero no obtuvieron el beneplácito de la comisión de Arte Sacro. El actual Jesús del Mayor Dolor, de 1948, es del gaditano Miguel Laínez Capote; lo restauraron Pedro Macías Sánchez y Mario César de las Cuevas, que le hicieron un cuerpo nuevo, y volvió el 15 de marzo de 1991. La segunda Virgen, también de Laínez Capote, se encargó en 1950 y su busto se conserva en la casa de hermandad; la actual María Santísima de la Salud es obra de Francisco Buiza y data de 1977.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/sanidad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha fecha la Virgen de la Salud de Buiza en 1977; el portal dice 1978. La ficha del Perdón repite por error dos párrafos de la Sanidad."
+  },
+  "la-piedad-cadiz": {
+   "texto": "Se fundó en 1731 en Santa Catalina, con autorización del cabildo eclesiástico por estar vacante la sede, y el 27 de mayo de 1758 el obispo fray Tomás del Valle aprobó nuevas reglas, que sancionó el Real Consejo de Castilla. Su crucificado es de las pocas obras fechadas y documentadas del escultor genovés Francisco María Maggio, que lo hizo en 1754; no gustó a la cofradía y hubo litigios, hasta que, con la mediación de Pedro Laboria, los pintores Alejandro García Romero y Mortola lo intervinieron y quedó terminado a su gusto en 1759. Tallado en cedro y ahuecado para las salidas procesionales, lo restauraron después Sebastián Santos y José Miguel Sánchez Peña, autor de la cruz arbórea.\n\nLa Virgen de las Lágrimas es del sevillano Francisco Buiza Fernández, de 1958, y el mismo escultor hizo el San Juan (1958) y la Magdalena (1960) del misterio, que completa la Virgen de la Consolación de Luis González Rey (1997). La cofradía recibió en donación a Jesús de la Humillación, talla atribuida a Pedro Roldán y Nieva que incorporó a sus estatutos y que llegó a procesionar varios años. Rinde culto también a la Virgen del Poder Divino, imagen del siglo XVII que tiene en depósito y que sale en rosario de la aurora cada 15 de agosto.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/piedad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da fechas distintas para las restauraciones del Cristo (Santos 1961 o 1962; Sánchez Peña 1983 o 1984); se omiten. Fecha la donación de la Humillación en los años 40, mientras que el artículo de Gaditana-logía (2026) la sitúa en diciembre de 1935; aquí se omite la fecha."
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "texto": "La hermandad de Jesús Caído se fundó en 1942 en la parroquia del Carmen, donde celebró cultos internos hasta 1947 sin llegar a hacer estación de penitencia. Su titular lo había tallado en 1941 el escultor gaditano Miguel Láinez Capote sobre una viga de caoba de la iglesia del Carmen. En 1959 la junta oficial orientó a un grupo de jóvenes que querían fundar una hermandad para que revitalizaran esta; los carmelitas les cedieron la imagen y se establecieron en la parroquia del Santo Ángel, desde donde hicieron la primera salida en el antiguo paso de la Cofradía de la Columna.\n\nEn 1962 se bendijo la capilla de Jesús Caído, en el Colegio Mayor Universitario Beato Diego, edificio del arquitecto municipal Antonio Sánchez Esteve (1944), que pasó a ser su sede definitiva, y en 1964 se incorporó la Virgen de los Desamparados, de José Rivera García, reformada después por Alfonso Berraquero y restaurada por Francisco Arquillo Torres en 2011. El Señor lo restauraron Antonio Eslava (1960), José Paz Vélez (1968) y Arquillo Torres (2006). Mientras duraban las obras de la capilla, la hermandad tuvo como sede provisional y de salida la iglesia de los Remedios del convento de San Francisco.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/jesus-caido/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La vuelta a la capilla en 2026 y el apodo de «cofradía de los universitarios» de la reseña anterior no figuran en la ficha (que es anterior). La web enlazada (blogspot) solo tiene avisos."
+  },
+  "ecce-homo-cadiz": {
+   "texto": "La fundó poco antes de 1665 un grupo de esclavos y libertos mulatos de distinto origen, africanos, americanos y berberiscos; se cree que nació a mediados del siglo XVII, aunque los primeros datos fechados son de 1668. Se estableció primero en el oratorio de la casa de beatas de la Orden Tercera de la calle San Pedro, fundado por Isabel de San José, pasó después al Hospital de Mujeres y en 1687 se instaló en la iglesia de la Conversión de San Pablo. En 1843 recibió el apoyo del Colegio de Médicos y Cirugía, en 1892 obtuvo el título de real, y desde 1952 hasta principios de los noventa estuvo muy vinculada a los sindicatos de pesca de Cádiz. En el siglo XIX llegó a salir el Lunes, el Miércoles y el Jueves Santo, y en el XX quedó fijada en el Martes Santo.\n\nEl Señor del Ecce Homo lo hizo hacia 1730 el imaginero sevillano de origen gaditano José Montes de Oca, en pino de Flandes y cedro; dañado por el incendio de San Pablo de 1984, lo restauró al año siguiente Miguel Sánchez Peña, que le hizo una corona de espinas realista. El San Juan, tercer titular, es de mediados del siglo XVIII, de escuela genovesa y atribuido a Doménico Giscardi; Lainez Capote le añadió varios dedos tras el intento de saqueo de San Pablo del 8 de marzo de 1936. Entre 2016 y 2017 la archicofradía celebró los 350 años de su existencia probada.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/ecce-homo/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha atribuye el título de Real de 1892 a la reina Isabel II, lo que no cuadra con la fecha; se omite la reina. El «Manto de Yraola» (1912) de la reseña anterior no figura en la ficha."
+  },
+  "la-columna-cadiz": {
+   "texto": "El 18 de abril de 1660, 78 devotos, en su mayoría gente de mar, muchos de la Armada y otros de la Casa de Contratación, encabezados entre otros por Juan de Texada Carreño y Juan de Ochoa, decidieron pedir la creación de una nueva cofradía, cuyos estatutos aprobó cinco días después el obispo Fernando de Quesada. En el mismo acto se recaudaron 992 pesos de plata para los primeros enseres y la imagen, que se encargó a Jacinto Pimentel. Este la talló en cedro en 1660, como última obra suya, y fue bendecida el 21 de febrero de 1661 en la ermita de San Antonio, templo en el que siempre ha residido; la primera salida fue el Martes Santo de 1662. Pimentel, hermano de la archicofradía, pidió en su testamento ser enterrado a los pies de esta imagen y murió en Cádiz el 2 de marzo de 1676; la restauración de 1996, de Enrique Ortega Ortega, halló en la espalda unos pergaminos que confirmaron su autoría. La columna de plata la labró en México en 1666 el platero Francisco Suárez, regalo de los capitanes Sierra y Velázquez.\n\nSe le llama «el Aguador» porque antiguamente se sacaba en rogativas en tiempo de sequía, y estuvo muy unido a las tripulaciones del comercio con las Indias, que llevaban amarradas a los mástiles huchas para su culto. En 1788 se hermanó con la Cofradía del Ecce Homo. La Virgen de las Lágrimas, del genovés Domenico Giscardi (1776), fue en 1925 la primera dolorosa que procesionó en Cádiz bajo palio, cuando hasta entonces se usaban templetes.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/columna/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Para no repetir texto con la-resurreccion-cadiz, aquí se omite la agregación de 1662 a la Archicofradía de la Resurrección."
+  },
+  "las-cigarreras-cadiz": {
+   "texto": "Los repetidos incendios del convento de Santo Domingo impiden fijar la fecha de fundación; hay quien la sitúa en el siglo XVII, aunque parece más lógico que fuera a partir de 1701, cuando la familia Olivares era dueña de la capilla. Consta con seguridad que a finales del siglo XVIII ya existía y que un siglo después atravesó una de las épocas más duras para las cofradías de Cádiz. En 1912 se formó una junta para levantarla y ese mismo año desfiló en Semana Santa. El 11 de mayo de 1931 y el 8 de marzo de 1936 el convento fue saqueado e incendiado, y la talla de Jesús de la Salud se salvó porque Fernando García Beas se la llevó a su casa. Debe su nombre popular a su estrecha vinculación con las trabajadoras de la fábrica de tabaco.\n\nJesús de la Salud, sentado, coronado de espinas y con la caña en las manos, está atribuido a Francisco de Villegas y fechado entre 1624 y 1652; lo restauraron, entre otros, Miguel Láinez Capote y, por último, Bonilla en 1991. La anterior Virgen de la Esperanza la talló Láinez Capote en 1958 y fue sustituida en 1992 por una de Bonilla tras una restauración fallida; la actual es del sevillano Luis Álvarez Duarte, que la hizo en 2005, y se bendijo el 12 de marzo de ese año. La cofradía tiene además una titular de gloria, la Virgen del Amor Hermoso, cuya cara es una obra anónima hallada en la playa de La Caleta.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/cigarreras/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha de la Merced dice que la Esperanza de Luis Jiménez (1941) fue primero cotitular de las Cigarreras; la ficha de las Cigarreras no lo menciona."
+  },
+  "la-sentencia-cadiz": {
+   "texto": "La cofradía se fundó en el ámbito universitario de la ciudad en los años inmediatos al final de la Guerra Civil, para extender la fe entre los más jóvenes, y de ahí su nombre popular de «los estudiantes». El 9 de abril de 1939 el vicario capitular Eugenio Domaica y Martínez de Doroño firmó el decreto que constituía la comisión organizadora pro-cultos, formada entre otros por Carlos Justo Carvajal López y José Luis Alcántara Torres. El 9 de abril de 1941, Miércoles Santo, hizo su primera salida, solo con el Señor de la Sentencia en un pequeño paso prestado desde la iglesia castrense. Un decreto episcopal de 11 de marzo de 1946 la constituyó en persona jurídica pública. En 1953 hizo estación el Lunes Santo, y ese mismo año pidió pasar al Miércoles Santo a partir de 1954.\n\nEl Señor de la Sentencia es una imagen de vestir en cedro policromado cuyo origen se remonta a finales del siglo XV o comienzos del XVI, del periodo de transición del gótico al renacimiento, según los estudios de Juan Manuel Miñarro; Miguel Lainez Capote le hizo en 1940 nuevo cuerpo, piernas y pies, y Miñarro lo restauró en 1994. La Virgen del Buen Fin la talló el mismo Lainez Capote en el primer trimestre de 1950, y la bendijo el 19 de marzo de ese año el párroco José Sanchez Ortega.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/sentencia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "las-aguas-cadiz": {
+   "texto": "La fundaron profesionales de los servicios de Agua y Electricidad de Cádiz, movidos por un crucificado y una dolorosa que recibían culto en la iglesia de San Antonio, y lo lograron en 1944: hizo su primera salida siendo aún junta pro-cultos y sus reglas se aprobaron en noviembre de ese año. Desde 1950 depende de ella la Asociación de Discípulos de San Juan Evangelista, y fue la primera hermandad de Cádiz que tuvo simpecado, en honor a la Inmaculada. En 1954 la Virgen estrenó paso propio. En 1970, cerrada la parroquia de San Antonio por amenaza de ruina, la hermandad se trasladó al Oratorio y no volvió a su primera sede; tuvo que devolver las imágenes del Cristo y de la Virgen, que se conservan en San Antonio, y estrenó otras en 1982.\n\nEl Cristo de las Aguas es de Francisco Buiza Fernández (1981) y representa el momento en que Longinos ha traspasado el costado de Cristo; Buiza hizo también en 1981 la Virgen de la Luz, copia de la anterior. Completan el misterio un ángel que recoge la sangre en un cáliz, de Antonio Eslava Rubio (1954), un San Juan que Buiza dejó sin terminar a su muerte y concluyó Francisco Berlanga en 1983, y María Santísima de Guadalupe y Longinos a caballo, de Francisco Javier Navarro Moragas (1995). El San Juan Evangelista que sale en paso propio es de Eslava Rubio (1951) y lo restauró Luis González Rey en 2005.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/las-aguas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-caminito-cadiz": {
+   "texto": "La capilla del Caminito, en la calle Isabel la Católica, la erigió en 1701 el capuchino fray Pablo de Cádiz como sede de la compañía espiritual de la Virgen del Caminito; probablemente nació como rosario, costeado por Lavinio Calderón, Marcos Arroyo y sobre todo Gerónimo de Estrada, marqués de Casa Estrada, y a mediados del siglo XVIII cambió su advocación por la de las Angustias. Según las actas capitulares del Ayuntamiento, las reglas de la Hermandad de las Angustias se aprobaron en febrero de 1732, y en 2012 el obispo Rafael Zornoza Boy le reconoció antigüedad de 28 de septiembre de 1748. El 17 de mayo de 1935 la refundó como cofradía de penitencia el canónigo Pedro Jesús Bravo y Sobrado, con apoyo del personal de C.A.S.A. y con Guillermo Supervielle como primer hermano mayor. Tras la Guerra Civil procesionó desde 1940 alternando el Miércoles y el Viernes Santo, hasta que desde 1965 sale siempre el Miércoles Santo; hay constancia de salidas anteriores en 1851, 1876, 1892, 1894 y 1931.\n\nEl grupo de la Piedad, en madera de pino de Flandes y de autor desconocido, se relaciona con la escuela de los Roldanes, quizá con Diego Roldán o con su discípulo Ignacio López. Es una imagen tallada y policromada por completo, incluidas las telas, aunque para salir la Virgen viste un manto de terciopelo negro bordado en oro en los talleres de San Martín en 1958. La restauró Pilar Morillo, que la devolvió al culto el 17 de marzo de 2015.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/el-caminito/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "El año 1748 del portal para la imagen es en realidad la antigüedad reconocida a la hermandad; la ficha data el grupo hacia la primera mitad del siglo XVIII."
+  },
+  "los-afligidos-cadiz": {
+   "texto": "El origen de la cofradía está en la devoción del gaditano Francisco de Mendoza, que en 1719 encargó al pintor José Severino un lienzo con la cuarta estación del vía crucis, el encuentro de Jesús con su Madre camino del Calvario; estuvo en la fachada del convento de los Descalzos de San Diego y se conserva, restaurado en 2007, bajo el coro de San Lorenzo. La cofradía se fundó en 1726, con el obispo Lorenzo Armengual de la Mota, en la iglesia auxiliar de San Lorenzo, entonces sin terminar, como confirma el manuscrito de sus reglas de ese año. También en 1726 el escultor flamenco afincado en Sanlúcar de Barrameda Peter Stherling (o Reling) talló por encargo de Mendoza las imágenes de Jesús y de la Virgen, por 186 pesos.\n\nTras una época de decaimiento se reorganizó: en 1759 una bula de Clemente XIII le concedió indulgencias perpetuas, en 1761 redactó nuevas constituciones y en 1767 pidió su aprobación al obispo fray Tomás del Valle. Su primera salida documentada es del 31 de marzo de 1763; salía casi siempre en domingo hasta 1937, cuando pasó al Jueves Santo. El título de real lo pidió a Isabel II en 1862, tras la visita de la reina a su capilla. Su paso, estrenado en 1939, lo diseñó Antonio Castillo Lastrucci y lo talló José García Roldán; fue el primero de este estilo que se estrenó en Cádiz y está catalogado como Bien de Interés Cultural. Entre 1987 y 1993, mientras se restauraba San Lorenzo, la cofradía residió en San Juan de Dios.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/afligidos/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha escribe «Peter Stherling (o Reling)»; el portal, «Peter Sterling»."
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "texto": "En 1955 un grupo de jóvenes del colegio La Salle Mirandilla intentó fundar una cofradía de la Oración en el Huerto, pero el Obispado lo rechazó. El 16 de enero de 1956 se constituyó en la parroquia de San José la junta organizadora, con el párroco Camilo García Valenzuela como director espiritual, y se eligió como cotitular una antigua dolorosa de la parroquia, anónima y del segundo tercio del siglo XVIII, policromada por Francisco María Mortola, que la entregó en 1760; se perdió en el incendio que provocó un cortocircuito en San José en 1965. Por la falta de medios de locomoción entre Puerta Tierra y el centro, la junta se trasladó el 13 de enero de 1957 a la capilla del Beato Diego José de Cádiz.\n\nMiguel Lainez Capote talló el Señor, inspirándose en la expresión de un Cristo de Limpias; se bendijo el 23 de marzo de 1958 y salió por primera vez el 4 de abril de ese año. En febrero de 1959 la cofradía fijó su sede en la parroquia de San Severiano, entonces en construcción, y el 8 de diciembre se bendijo Nuestra Señora de Gracia y Esperanza, también de Lainez Capote, que procesionó por primera vez en 1962 en el paso de la Virgen del Rosario y desde 1968 en su propio palio. En 1983 no salió por las obras de una capilla junto a San Severiano, desde la que sale a partir de 1984. En 1989 se sustituyó la imagen del Señor por su mal estado y, en los años noventa, la de la Virgen por otra del sevillano Manuel Ramos Corona.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/oracion-en-el-huerto/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Según la ficha, la Virgen actual es de Manuel Ramos Corona; el portal atribuye la titular a Láinez Capote (1958) y no da autor al Señor de 1989. La ficha no recoge la salida de San Severiano ni el traslado a Santa Catalina que menciona la reseña anterior."
+  },
+  "medinaceli-cadiz": {
+   "texto": "Un matrimonio gaditano devoto del Cautivo de Medinaceli, Eladio Campe y Eloísa Martín, tenía un cuadro de esta advocación ante el que acudían a rezar tantos fieles que el 6 de marzo de 1936 celebraron una misa solemne en la iglesia de las Descalzas. Al año siguiente organizaron un triduo, también multitudinario, y en 1938 encargaron una imagen del Señor, con lo que se fundó la cofradía. La talla es obra del gaditano Miguel José Láinez Capote, que siguió la indicación del matrimonio de que se pareciera lo más posible a la que se venera en Madrid; representa a Jesús cautivo ya coronado de espinas.\n\nLos primeros años procesionó junto a la Cofradía del Santo Entierro, y desde 1942 lo hace de forma independiente, acompañada de una nutrida penitencia. Salía en la madrugada del Viernes Santo, a las dos, y pasó después a la noche del Jueves Santo. En 1967 se bendijo María Santísima de la Trinidad, de Francisco Buiza Fernández, y el mismo escultor hizo en 1972 un San Juan, copia del de Hita del Castillo de la sevillana Hermandad de la Amargura, que donó José Luis Ruiz-Nieto Guerrero y que procesionó por primera vez en 1986. El paso del Cautivo, de plata de ley, lo hizo Manuel Seco Velasco entre 1957 y 1967.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/medinaceli/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "texto": "No consta la fecha de fundación, pero debió de producirse entre 1590 y 1594: una relación de cofradías gaditanas de 1590 no la incluye, y en 1594 Juan Gutiérrez pidió en su testamento ser enterrado acompañado de las cofradías de la ciudad, entre ellas la del Nazareno. Se instaló primero en el convento de Nuestra Señora de los Remedios, la casa grande franciscana, donde ya estaba la Vera-Cruz, y parece fundada a imagen de la Nazarena de Sevilla, con un culto a la Santa Cruz de Jerusalén en sus reglas. Sin origen gremial, estuvo muy vinculada a los escribanos y también a los griegos y armenios de la ciudad y a la corporación municipal. Apenas hay documentos de su primera época, quizá perdidos en el saqueo anglo-holandés de 1596.\n\nEl Nazareno es obra del imaginero sevillano Andrés de Castillejos, hecha muy probablemente entre 1590 y 1602; se atribuyó durante mucho tiempo a Jácome Velardi, hasta que en la restauración de 1996 apareció en su cabeza la inscripción «Andrés C.». En el siglo XVIII se le talló un cuerpo completo y se le puso melena de pelo natural, que le valió el apodo de «el Greñúo». Ostenta desde 1681 el título de Regidor Perpetuo de Cádiz por su intercesión en la epidemia de peste, ratificado en 1942. En el asalto al convento de Santa María del 18 de marzo de 1936 los vecinos salvaron su cabeza y sus manos, y dos años después Antonio Bravo le hizo un nuevo cuerpo; la dolorosa de Benito de Hita y Castillo ardió en el asalto. La actual Virgen de los Dolores la talló Juan Luis Vassallo Parodi en 1943 por encargo de José María Pemán, que la donó, y se bendijo el 3 de abril de 1944.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/nazareno/",
+    "http://www.nazarenodesantamaria.com/titulares/imagenes-titulares/nuestro-padre-jesus-nazareno",
+    "http://www.nazarenodesantamaria.com/titulares/imagenes-titulares/maria-santisima-de-los-dolores"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La web de la cofradía escribe «Andrés de Castillejos» (el portal, «Castillejo»). La web da 1681 para el título de Regidor Perpetuo y la ficha del Consejo habla de su ratificación en 1942."
+  },
+  "el-perdon-cadiz": {
+   "texto": "El Cristo del Perdón, de autor desconocido y quizá de escuela italiana, presidía la capilla del palacete de los marqueses de Montecorto y era llamado el «Cristo de Sopranis»; la familia lo donó al convento de la Merced, en una de cuyas capillas colaterales pidió ser enterrada en 1687 la marquesa Clara de Sopranis. Un grupo de antiguos alumnos del colegio La Salle-Mirandilla, alentados por el cura regente de la Merced, José Benítez Duarte, fundó en torno a esta imagen una cofradía con una Virgen del Rosario en sus Misterios Dolorosos; el obispo José Pérez Rodríguez la erigió el 9 de marzo de 1935. En mayo de 1936 el antiguo convento de la Merced ardió y con él desapareció el Cristo.\n\nLa cofradía se acogió a la parroquia de Santa Cruz y encargó a Miguel Láinez Capote una nueva imagen a partir de la única pintura del Cristo; se bendijo el 28 de mayo de 1939, y la Virgen, del mismo autor, el 15 de octubre. En 1940 hizo su primera estación de penitencia, a las 3 de la madrugada del Viernes Santo, y en 1949 decidió quedarse en Santa Cruz. En 1963, en plena crisis económica, los cargadores gaditanos se ofrecieron a sacar los pasos gratis. En 1979 se acordó renovar las imágenes: el obispo Antonio Dorado Soto bendijo el 27 de marzo de 1980 la nueva Virgen del Rosario de Francisco Buiza Fernández, y el 19 de marzo de 1981 se bendijo el nuevo Cristo del Perdón, último crucificado que hizo Luis Ortega Bru, autor también de la Virgen del Calvario y el San Juan. El misterio, en el que Cristo perdona al buen ladrón Dimas, lo completan los ladrones y la Magdalena de Alfonso Berraquero.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/perdon/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha intercala por error dos párrafos de la Sanidad (1946-2011), que no se usan."
+  },
+  "el-descendimiento-cadiz": {
+   "texto": "La devoción de un niño, Miguel de Omaña, llevó a sus padres a encargar un paso de misterio que dio nombre a la hermandad; acudió tanta gente a verlo que tuvo que trasladarse a la iglesia de la Candelaria, y a partir de entonces se erigió en cofradía hacia 1668, llegando a tener capilla propia. En el siglo XVIII, entre altibajos, le afectaron las reformas de la Monarquía ilustrada y del obispo José Escalzo; a mediados del XIX recobró cierto auge y en 1866 se trasladó a Santo Domingo. La primera mitad del siglo XX la llevó casi a desaparecer: del incendio del convento en 1936 solo se salvó la mascarilla del primer Cristo, posiblemente del círculo de Pedro Roldán, que se conserva en la casa de hermandad.\n\nTras la guerra encargó un segundo Cristo al escultor José Bottaro, en 1943, y cinco años después dejó de salir; el obispo Tomás Gutiérrez Díez la trasladó a su parroquia actual. Salió de 1952 a 1955 y en 1964 volvió a la calle en vía crucis, con el Cristo a hombros de los penitentes. Desde su última reorganización, en 1969, encargó al sevillano Francisco Buiza Fernández el actual Cristo del Descendimiento y la Virgen de los Dolores, ambos de 1978; los Santos Varones, inacabados por la muerte de Buiza, los terminó su discípulo Francisco Berlanga, y San Juan y las tres Marías los hizo Luis E. González Rey entre 1991 y 1993. Conserva además una Quinta Angustia de escuela valenciana del siglo XVIII, que procesionaba antes de la dolorosa de Buiza.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/descendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da «hacia 1668» para la erección (el portal: «hacia 1664»). La reseña anterior decía que la familia Omaña la fundó tras ver la Quinta Angustia de Sevilla; la ficha no lo dice."
+  },
+  "la-expiracion-cadiz": {
+   "texto": "El Cristo de la Expiración se veneró, al parecer bajo la advocación de los Desamparados, en la iglesia de Nuestra Señora de los Ángeles, del convento de franciscanos descalzos de la plaza de los Descalzos, levantada entre 1622 y 1628. Pasó después a la parroquia de San Lorenzo, donde estuvo muchos años casi olvidado en el primer altar junto a la puerta principal, por lo que se le llamó «Cristo de la Puerta». En 1926, segundo centenario de la consagración del templo, el obispo Marcial López Criado quiso dedicarle el retablo izquierdo del crucero; lo limpió el gaditano José Aguado, y María Teresa de la Cruz Gurri se hizo cargo de su culto como camarista, reunió fondos para su altar y le consiguió un jubileo circular en Cuaresma.\n\nLa muerte del obispo en 1932 y los años previos a la guerra impidieron formar la cofradía. El 20 de febrero de 1938 una comisión organizadora constituyó la junta pro-cultos, que el 26 de marzo acordó hacer la imagen de la Virgen de la Victoria y sacar al Cristo; salió el Lunes Santo junto a la cofradía del Ecce Homo. La Virgen, obra de Emilio Luis Bartús Loreto, que tomó como modelo a su hermana, se bendijo el 11 de enero de 1940, con el gobernador civil Manuel Mora Figueroa como padrino. El 15 de abril de 1944 el obispo Tomás Gutiérrez Díez la erigió en cofradía. Desde 1954 creció con el apoyo de la Guardia Civil, nombrada hermano mayor honorario perpetuo, cuyo escudo incorporó en 1955 junto al antiguo de la cofradía y al de Cádiz. En 1988 Luis González Rey restauró la Virgen y le devolvió el aspecto original que le había dado Bartús.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/expiracion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da como sede actual la capilla de la V.O.T. del antiguo convento de Capuchinos; el portal, el Santo Ángel. La ficha no da autor ni época del Cristo (portal: anónimo s. XVII)."
+  },
+  "siete-palabras-cadiz": {
+   "texto": "La hermandad se fundó en marzo de 1944; su fundador fue Ricardo Zamora García, entonces gobernador civil de Cádiz, y se reorganizó en agosto de 1983. Siempre ha procesionado el Viernes Santo: desde su fundación hasta comienzos de los años sesenta lo hacía por la mañana, celebrando el Sermón de las Siete Palabras, y desde la reorganización el sermón se celebra aparte y la salida tiene lugar en la tarde-noche. Su sede está en la parroquia de Nuestra Señora de la Merced, en el barrio de Santa María, y en 1994 celebró su aniversario fundacional.\n\nSus dos titulares son del escultor gaditano Luis González Rey, tallados en cedro. El Cristo de la Sed (2007) representa la quinta palabra, «Tengo sed»; no es de estilo barroco, tiene cuatro clavos, está clavado por las muñecas y se encuentra sobre una cruz plana. María Santísima de la Piedad (2005) es una dolorosa de tamaño natural, de edad madura y con los pies tallados, que representa a la Virgen al pie de la cruz. Su único paso, austero, de cedro oscuro y líneas rectas, es obra de José Ovando Merino.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/siete-palabras/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-buena-muerte-cadiz": {
+   "texto": "El 1 de diciembre de 1894, bajo la presidencia del sacerdote Cándido Picamill, adscrito a la iglesia de San Agustín, diecinueve devotos fundaron la cofradía para dar culto al Cristo que había en el templo, que unos meses antes, en la Semana Santa de ese año, ya había salido portado por algunos hermanos. El 15 de diciembre fue nombrado hermano mayor Cayetano del Toro y Quartiellers, alcalde de Cádiz y médico oftalmólogo, que lo siguió siendo hasta su muerte en 1915. Los agustinos, que regresaron a Cádiz en 1906, fomentaron su culto. A la muerte del hermano mayor siguió un quinquenio de decadencia en el que la cofradía casi desapareció, hasta que en 1921 la reorganizaron cincuenta y cinco devotos, entre ellos los hermanos César y José María Pemán Pemartín, que le dieron el espíritu de austeridad, recogimiento, absoluto silencio y rigor penitencial que la sigue definiendo.\n\nEl Cristo de la Buena Muerte es una obra anónima de 1648, propiedad de la comunidad agustina, que se ha relacionado con Juan Martínez Montañés, Alonso Cano, José de Arce y, con más acierto, Alonso Martínez, sin descartar la participación de varias manos; lo restauró José Miguel Sánchez Peña en 1986 y 2010. María Santísima del Mayor Dolor, también anónima, se ha atribuido a las escuelas italianas, con los nombres de un escultor napolitano y de los ligures Anton Maria Maragliano y Domenico Giscardi; la propia cofradía apunta a un escultor levantino de influencia salzillesca. El palio de la Virgen lo bordó en plata Catalina Porras en 1940.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/buena-muerte/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "ecce-mater-tua-cadiz": {
+   "texto": "Las Congregaciones Marianas de la Compañía de Jesús se fundaron en Cádiz en el siglo XVII, sin carácter procesional, para la catequesis, la caridad y la adoración nocturna. En 1950 su director espiritual, el jesuita Augusto Muriel, propuso crear una sección de penitencia para dar culto público a María Santísima en su Soledad, que se logró en 1953. No obtuvo permiso para salir hasta 1956: lo hizo a las cinco de la mañana del Sábado Santo, 31 de marzo, desde la iglesia de Santiago. La congregación es autónoma respecto al Consejo Local de Hermandades y Cofradías y no hace estación de penitencia en la Catedral.\n\nSu única imagen es una dolorosa de talla completa del granadino Domingo Sánchez Mesa, de 1955, que aparece de pie sobre un monte, vestida enteramente de negro y sin bordados, con los brazos extendidos y la mirada al cielo, como expresión de la soledad de la Madre tras la muerte de su Hijo. La restauró José Miguel Sánchez Peña, que eliminó repintes anteriores, y lleva en el pecho un corazón de plata con los nombres de los hermanos que procesionan. La mesa del paso, austero y de maderas oscuras, se hizo en los años 70 en madera de ukola, con tallas de José Vera Espinosa de los Monteros.",
+   "fuentes": [
+    "https://semanasantacadiz.com/ecce-mater/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "No figura en la nómina del Consejo (la propia fuente dice que es autónoma respecto a él). Se buscó web propia, redes y prensa (Diario de Cádiz) sin hallar una fuente abierta con historia; se usa la ficha de semanasantacadiz.com, que es la fuente_url del portal."
+  },
+  "santo-entierro-cadiz": {
+   "texto": "No se conserva el documento fundacional; se supone que nació a finales del siglo XVI en el convento de San Francisco, y la hermandad, basándose en diversos estudios históricos, da como fecha de fundación 1592. El primer nombre propio que se conoce es el de Hernando de Pareja, que en 1624 encargó la talla del Cristo yacente, aunque no consta que fuera uno de los fundadores. Sin haber recibido nunca un nombramiento expreso, es por uso y costumbre la cofradía oficial de la ciudad, y en su cortejo participan representaciones de hermandades y de estamentos civiles y militares. Salía el Viernes Santo y desde 2010 procesiona el Sábado Santo.\n\nEl Yacente está documentado como obra de Francisco de Villegas, de 1624, en cedro, aunque posiblemente en el siglo XVIII se le adaptó una nueva cabeza de raigambre genovesa. Procesiona en una urna de plata hecha en 1865 por Manuel Ramírez sobre diseño de Diego María del Valle, cuyo remate se costeó con los 120.000 reales de vellón que donó la reina Isabel II al verla durante su visita a Cádiz. La Virgen de la Soledad, anónima del siglo XVIII, llegó a ser durante muchos años patrona de Cádiz y en 1995 recibió la Medalla de Oro de la ciudad; entre sus restauradores figuran Miguel Láinez, Francisco Buiza y Luis Álvarez Duarte.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/soledad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-resurreccion-cadiz": {
+   "texto": "La Archicofradía se fundó bajo el título de la Santísima Resurrección del Hospital de Santiago y de San Ildefonso de Roma, y el 17 de abril de 1662 se agregó a la cofradía de penitencia de Jesús atado a la Columna y Azotes, con la que comparte sede en la parroquia de San Antonio. Unas actas de la archicofradía muestran que en 1769 ya procesionaba el Sábado de Gloria.\n\nDurante mucho tiempo salió con una imagen atribuida al escultor genovés Domenico Giscardi, del siglo XVIII y tallada en cedro, que tuvo varias restauraciones en el siglo XX, la más importante de Francisco Buiza Fernández en 1960, y otra de José Miguel Sánchez Peña en 2006; hoy ocupa el ático del retablo de la Columna, ante un fondo paisajístico del siglo XIX, y presenta a Cristo ingrávido, mostrando la cruz como signo de salvación. La imagen que procesiona es obra de Luis González Rey, de 1993; el mismo escultor la mejoró en 1997 y volvió a retocarla durante siete meses en 2012. Se venera en una cueva del patio de la iglesia, con acceso desde la calle Zaragoza, junto a la casa de hermandad. Su paso, barroco, de metal plateado y con respiraderos de pecho de paloma, salió de los talleres de Angulo de Lucena y lo donó un hermano en 1950. Sus hermanos no salen con hábito penitencial, sino con traje oscuro.",
+   "fuentes": [
+    "https://consejocofradiascadiz.es/resucitado/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Redactada sin repetir texto con la-columna-cadiz (misma Archicofradía): aquí la agregación de 1662 y el Resucitado; allí la fundación de 1660, Pimentel y las Lágrimas."
+  },
+  "humillacion-piedad-cadiz": {
+   "texto": "Nuestro Padre Jesús de la Humillación, que representa al Señor maniatado en su prendimiento, se venera en la iglesia de Santiago y pertenece a la Cofradía del Cristo de la Piedad y María Santísima de las Lágrimas. Según las actas de la cofradía, se lo donó en diciembre de 1935 una familia gaditana, y la junta de gobierno de entonces eligió la advocación tras barajar otras como Prendimiento o Cautivo. No consta su procedencia ni lleva firma o documento en su interior; los expertos lo relacionan por sus rasgos con el taller de Pedro Roldán o su círculo, lo que lo situaría a finales del siglo XVII. En la década de los 40 lo intervino el escultor gaditano Miguel Laínez Capote, y en 1993 el restaurador sevillano Ángel Rengel Gómez le hizo un cuerpo nuevo, respetando la cabeza y las manos.\n\nSalió con la Piedad el Martes Santo desde 1939 hasta 1965, cuando dejó de hacerlo por motivos económicos y por el deterioro de su paso; en 1945 se amplió el paso y se le añadieron tres romanos, vendidos después a una hermandad de Lebrija. Tras casi dos décadas relegado a una nave lateral, en los años 80 se recuperó su culto, con un besamanos anual en la festividad de Cristo Rey desde 1995 y, ya en este siglo, triduo y vía crucis en la segunda semana de Cuaresma. En 2023 un grupo de hermanos donó un paso adquirido en Isla Cristina, con canasto tallado por Guzmán Bejarano, y un cabildo general acordó recuperar su salida: el 28 de marzo de 2026, Sábado de Pasión, volvió a procesionar después de 60 años, con estación de penitencia en la Catedral.",
+   "fuentes": [
+    "https://rodin.uca.es/handle/10498/39882",
+    "https://rodin.uca.es/handle/10498/26207"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Fuentes: dos artículos de Antonio Jesús Núñez Sánchez (vicehermano mayor de la Piedad) en la revista Gaditana-logía de la Universidad de Cádiz (2026 y 2021), PDF abiertos guardados como .2.txt y .3.txt. Discrepancias: el de 2021 nombra a la familia donante (Azpeitia) y dice que Láinez transformó un San José en Cristo, mientras que el de 2026 lo deja como hipótesis; el de 2021 sitúa la restauración de Rengel «a principios de los 90» y el de 2026 en 1993; la ficha de la Piedad del Consejo fecha la donación en los años 40. Se sigue el artículo de 2026."
   }
  }
 }
