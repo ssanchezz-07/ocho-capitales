@@ -96,11 +96,8 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
 - **Lemas de las 8 capitales:** reescritos solo con su historia o su fuente (`LEMAS` en `build-data.js`, con `lema_fuentes`), auditados. Están en la rama `lemas-capitales` y esperan el sí de Pablo.
 
 ## RETOMAR AQUÍ
-1. **Subir**, con el sí de Pablo:
-   - lemas;
-   - hábitos de Almería, Jaén y Córdoba;
-   - historias de Jaén, Córdoba, Cádiz y Sevilla (Cádiz y Sevilla, en cuanto acabe su auditor).
-2. **Hábitos que faltan** (agente en marcha; método en el scratchpad, `hab/build-prop.mjs`): Málaga 9 (Vísperas y Resucitado), Cádiz 4, Huelva 1 (La Bendición) y Sevilla 72. Sevilla: web de cada hermandad o Guía de Semana Santa de Andalucía; Wikipedia (infobox «Colores») solo si no hay otra, y marcada.
+1. **Subido a main** (3-nov, e8c7bee, con el sí de Pablo): lemas, historias de las 307 hermandades y hábitos de 291 (159 nuevos).
+2. **Hábitos sin fuente todavía** (14): Escucha, Lanzada, Divino Maestro, La O, Traslado, Higuerón y Presentación (Almería/Jaén/Córdoba); Resucitado, Desamparados, Verdad y Sagrario, Luz y Mar y Gamarra (Málaga); Humillación y Piedad (Cádiz); Carmen Doloroso (Sevilla); Facundillos (Granada). Macarena y Pasión y Muerte salen de Wikipedia: buscar fuente oficial.
 3. **Orden `EQUIPO/ORDEN-VERIFICAR-TEXTOS.md`:** se cortó por el límite de uso. Falta:
    - verificar los «Datos clave» e imprescindibles de las capitales (Jaén dice «Interés Turístico Nacional de Andalucía»);
    - inventariar los textos fijos de `build.mjs`, curiosidades y pies de foto;
