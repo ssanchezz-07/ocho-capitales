@@ -1161,6 +1161,28 @@
     else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
   });
   form.addEventListener('submit', (e) => { e.preventDefault(); const t = q.value; q.value = ''; preguntar(t); });
+  // En el plano «En la calle» el botón se aparta: sube lo justo para no tapar el crédito de OpenStreetMap (obligatorio por la
+  // licencia) ni los controles del plano; si no hay hueco, se esconde hasta que lo haya. Usa «translate», que no pisa sus transform.
+  const plano = document.querySelector('.oc-calle-mapa');
+  if (plano) {
+    let pend = false, sube = 0;
+    if (!calm) btn.style.transition = 'transform 160ms cubic-bezier(.23,1,.32,1), translate 160ms cubic-bezier(.23,1,.32,1), opacity 160ms';
+    const choca = (a, b) => a.left < b.right + 4 && a.right > b.left - 4 && a.top < b.bottom + 4 && a.bottom > b.top - 4;
+    const aparta = () => {
+      pend = false;
+      const r0 = btn.getBoundingClientRect(), base = { left: r0.left, right: r0.right, top: r0.top + sube, bottom: r0.bottom + sube };
+      const obs = [...document.querySelectorAll('.oc-calle-osm a, .oc-calle-osm')].concat([...plano.querySelectorAll('button, a[href], input, select, [role="slider"]')])
+        .map((x) => x.getBoundingClientRect()).filter((q) => q.width && q.height && q.bottom > 0 && q.top < innerHeight);
+      let s = 0;
+      while (s <= 240 && obs.some((q) => choca({ left: base.left, right: base.right, top: base.top - s, bottom: base.bottom - s }, q))) s += 4;
+      const hueco = s <= 240; sube = hueco ? s : 0;
+      btn.style.translate = sube ? '0 ' + -sube + 'px' : '';
+      btn.style.opacity = hueco ? '' : '0'; btn.style.pointerEvents = hueco ? '' : 'none';
+    };
+    const pide = () => { if (!pend) { pend = true; requestAnimationFrame(aparta); } };
+    addEventListener('scroll', pide, { passive: true }); addEventListener('resize', pide); addEventListener('pointerup', pide, { passive: true });
+    addEventListener('load', pide); pide();
+  }
   // el bocadillo del botón se presenta una vez por sesión y se retira solo
   try { if (!sessionStorage.getItem('oc-cunao')) { btn.classList.add('is-saludo'); sessionStorage.setItem('oc-cunao', '1'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); } } catch (e) { }
   // en cuanto se baja o se toca la página, el bocadillo se retira: no tapa el texto de la primera pantalla
