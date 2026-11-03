@@ -1,6 +1,18 @@
 # Progreso · marchas (sesión especializada, desde 2026-10-25)
 
-## RETOMAR AQUÍ (2026-11-02, tarde)
+## RETOMAR AQUÍ (2026-11-03, noche · sesión nueva de Marchas, worktree `marchas-campana`)
+**Hecho (sin subir hasta el sí de Pablo):** las 7 marchas de la campaña que faltaban (`EQUIPO/CAMPANA-WEB.md`), cada una con la publicación de su banda como fuente y el vídeo del estreno de su canal oficial:
+- Sanctae Crucis (López Gándara, 2025) y Yo soy la luz del mundo (M. A. González Cruz, 2026): fichas de lascigarreras.net (`repertorio-cigarreras.json`).
+- El Rezo (M. J. Guerrero Marín, 2024, a las Penas de la Estrella): vídeo del canal de Rosario de Cádiz.
+- Flagellatio (López Gándara, 2025, agrupación musical): vídeo del canal de Pasión de Linares.
+- Al son de un barrio (2026): la web de El Carmen y su vídeo dicen «hermanos Aragüez» sin nombres, así que se pone eso. En la base ya hay «Alberto y Carlos Aragüez Sánchez»; para unirlos hace falta una fuente que lo diga.
+- Jesús Lacerado (Óscar Navarro) y Siervos de tu Humildad (López Cortés, 2025): canal de Paso y Esperanza. Lacerado va sin año porque el vídeo da el del estreno (2023) y la partitura dice 2021. El compositor de Siervos sale de la ficha de su grabación publicada por la banda (`fKD3BqwlLyI`).
+- Código: el repertorio público (`clave`) puede llevar ahora `video`, `estreno`, `lugar` y `url` por marcha, y la banda no se repite si viene de dos repertorios. La batería del buscador busca las 7.
+- Para regenerar `marchas.json` en un worktree hay que copiar `auditoria/` (`cyh-marchas.json`, `patrimonio-marchas.json`, `marchas-806.json`) desde otro worktree. Sin cambios en las fuentes, la salida es idéntica.
+
+**Siguiente:** cargar los repertorios publicados por las bandas, empezando por El Carmen (bctcarmenmalaga.es/repertorio, con 23 marchas propias con autor y dedicatoria) y Cigarreras (lascigarreras.net/repertorio). Después, juntar duplicados (`EQUIPO/ORDEN-MARCHAS-PROXIMA.md`).
+
+## Anterior (2026-11-02, tarde)
 **Hecho y subido:** las 19 horas que no tenían `hora_fuente` (reserva del auditor de diseño, 78d7a23) ya la tienen.
 - Se cotejó cada una con su fuente de 2026 y no cambió ninguna hora. Málaga: malagaguia y El Español. Córdoba: Cordópolis, y para la Presentación al Pueblo el itinerario oficial. Huelva: 1minutohuelva y huelvabuenasnoticias. Almería: La Voz, cuya frase sobre La Unidad («La tarde empezará 19:30 horas») es la prueba más floja. Cádiz: el PDF de Canal Sur en copia local, salida de la cruz de guía.
 - El comprobador da error si una hora de salida o de carrera no tiene fuente. auditor-datos: APTO.
