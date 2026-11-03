@@ -733,6 +733,464 @@
    "revisado": "2026-11-03",
    "estado": "completa",
    "nota": "La ficha de la Agrupación existe en https://cofradiasdealmeria.es/penitencia/unidad/ (guardada como la-unidad-almeria.2.txt); portal.json tenía como fuente un artículo de horarios de La Voz de Almería. Conviene cambiar fuente_url en portal.json. portal.json no tiene titulares para esta hermandad."
+  },
+  "pasion-malaga": {
+   "texto": "La archicofradía nació como respuesta a los sucesos de 1931: en 1934 Rafael Poyato decidió crear una nueva corporación nazarena frente a la persecución que sufrieron los cristianos en aquellas jornadas. En 1935 se aprobaron sus estatutos y entró en la Agrupación de Cofradías, y un año más tarde quedó erigida canónicamente en la parroquia de San Felipe Neri. Finalizada la guerra civil, se reorganizó a partir de 1941 y bendijo la talla de un nazareno en la desaparecida iglesia de San José; al año siguiente salió por primera vez el Lunes Santo, y en 1943 se trasladó a la parroquia de los Santos Mártires.\n\nEn 1957 incorporó junto al Nazareno una primera talla de Simón de Cirene, y al año siguiente procesionó por primera vez la Virgen del Amor Doloroso. En esos años obtuvo el plácet del obispo Herrera Oria para salir desde el interior de su templo, y el Vía Crucis que celebraba cada Viernes Santo fue reconocido como oficial de la ciudad. 1976 y 1977 fueron años clave: llegó a Málaga el actual Nazareno, obra del imaginero hispalense Luis Ortega Brú (1976), y la hermandad fue la primera autorizada a hacer estación de penitencia en el interior de la Catedral. Su trono, de Manuel Seco Velasco (1946), fue el primero de orfebrería que procesionó por Málaga; el Simón de Cirene actual es de Darío Fernandez (2010). La Virgen del Amor Doloroso es obra de Antonio Asensio de la Cerda (1771) y la restauró Ortega Bru en los años setenta. Tras bendecir su casa hermandad en 2002, centra su actividad en la labor social en la ciudad y en Caicara del Orinoco (Venezuela).",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/pasion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "pollinica-malaga": {
+   "texto": "Sus orígenes se remontan al siglo XVII: en 1672 formaba parte, como filial, de la hermandad de La Puente del Cedrón, y en el XVIII se incorporó a la cofradía de la Oración en el Huerto, con la que procesionó hasta 1831. El 9 de abril de 1911 la imagen de Jesús a su Entrada en Jerusalén volvió a salir a la calle, impulsada por José Soriano, capellán de la abadía cisterciense de Santa Ana. Desde 1917 el jesuita Salvador Ponce, con alumnos del colegio San Estanislao de Kotska, encauzó su organización hasta la aprobación de los estatutos en 1922; un año antes la cofradía había estado entre las fundadoras de la Agrupación de Cofradías, con Francisco Triviño Salmerón como primer hermano mayor. En 1922 estrenó una talla de los talleres Ventolá y Plana de Olot, en sustitución de la que le cedía cada año la orden del Císter, y se estableció en la parroquia del Sagrario.\n\nEn los años cuarenta se hicieron las imágenes actuales y la sede pasó a San Felipe Neri. El Señor es obra del cordobés Juan Martínez Cerrillo (1943) y lo acompaña la popular «Pollinica», de Antonio Castillo Ariza (1949); la Virgen del Amparo la talló Castillo Ariza en Córdoba en 1947 y la restauró Antonio Dubé de Luque en 1988. En 1982, de la mano de Jesús Saborido Sánchez, empezó a salir por la mañana para abrir el Domingo de Ramos y se trasladó a la iglesia de San Agustín, que había rehabilitado. En el año 2000, durante una intervención episcopal, salió desde la Catedral, y desde 2006 inicia la Semana Santa desde su casa hermandad de calle Parras. Más del 70 por ciento de su cortejo son menores, por lo que se la conoce como la «escuela cofrade».",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/pollinica/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "lagrimas-y-favores-malaga": {
+   "texto": "Es la sección de las Reales Cofradías Fusionadas que sale el Domingo de Ramos, dedicada a María Santísima de Lágrimas y Favores. La Virgen no fue titular de la corporación por estatutos hasta 1982, pero desde 1953 se le dedicaba un Rosario de la Aurora al amanecer del Domingo de Ramos. La talla original, del siglo XVIII, desapareció en el incendio de la capilla de Exaltación de 1980, y el imaginero sevillano Antonio Dubé de Luque hizo la actual en 1982.\n\nEn 2006 hizo su primera salida por el recorrido oficial y al año siguiente pasó a la mañana de la primera jornada procesional. En 2015 las Fusionadas aprobaron iniciar los trámites para su coronación canónica. Procesiona en un trono de alpaca plateada de los talleres Maestrante de Sevilla (2004), diseñado por José Miguel Moreno, en cuyos talleres se bordó el manto estrenado en 2011. La Fundación Lágrimas y Favores, impulsada por el actor Antonio Banderas, organiza encuentros anuales para recaudar fondos para asociaciones malagueñas.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Una de las tres fichas de las Fusionadas (con fusionadas-malaga y vera-cruz-malaga): esta se ciñe a la sección de Lágrimas y Favores; la historia común de las fusiones va en fusionadas-malaga."
+  },
+  "dulce-nombre-malaga": {
+   "texto": "Sus primeros pasos datan de 1987, cuando un grupo de jóvenes estudiantes procedentes de escuelas salesianas empezó a dar culto a un Ecce Homo en la parroquia de la Divina Pastora, con permiso del párroco Alfonso Rosales. Dos años después decidieron organizar la hermandad del Dulce Nombre de María. En 1990 se encargó una primera imagen de la Virgen a José Dueñas Rosales, que al año siguiente talló la de Jesús, y en 1993 el Obispado de Málaga aprobó las primeras reglas, con Rodrigo Carreño Bellido como primer hermano mayor.\n\nEn 1998 el titular salió por primera vez por el entorno de la parroquia y la hermandad adoptó la advocación y el misterio de Jesús de la Soledad y las negaciones de San Pedro, para lo que encargó un grupo completo al cordobés Antonio Bernal. El nuevo Señor se bendijo en 2000, y tres años más tarde la Agrupación de Cofradías aprobó su ingreso y la hermandad hizo su primera estación de penitencia el Domingo de Ramos. Bernal ha tallado también cuatro soldados, San Pedro, la mujer acusadora, un gallo y un perro (2002-2016); el perro no alude al pasaje evangélico, sino al carácter franciscano de la hermandad. La nueva Virgen del Dulce Nombre, también de Bernal, se bendijo en septiembre de 2005 y salió por primera vez el Domingo de Ramos de 2008. Su trono es de Manuel Seco Velasco (1963).",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/dulce-nombre/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "salutacion-malaga": {
+   "texto": "El Domingo de Ramos de 1984 un grupo de cofrades decidió fundar la hermandad de la Salutación, apoyándose en un testamento del siglo XVII que mencionaba una corporación con ese nombre en la parroquia de San Juan. La junta de constitución se celebró el 1 de noviembre de 1985, aunque el Obispado de Málaga no aprobó su erección como hermandad en la parroquia de San Felipe Neri hasta 1987.\n\nEl culto empezó con la bendición de María Santísima del Patrocinio Reina de los Cielos en 1985, obra del sevillano Antonio Dubé de Luque, y cuatro años más tarde llegó del mismo autor Jesús Nazareno de la Salutación (1989). Dubé de Luque talló también la Santa Mujer Verónica (1990) y tres mujeres de Jerusalén (1991-1993); el centurión romano es de José Antonio Navarro Arteaga (1997), autor asimismo del San Juan Evangelista (1999) que acompaña a la Virgen. El Viernes de Dolores de 1990 salió por primera vez por las calles de la feligresía, meses después ingresó en la Agrupación de Cofradías y en 1991 hizo su primera estación de penitencia en la Catedral. En 2006 se bendijo el solar de su futura casa hermandad, en el número 1 de calle Parras. Cada año un artista pinta el paño de la Verónica con el rostro de Cristo.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/salutacion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que el Nazareno llegó «poco después» de la Virgen (1985); la fuente dice cuatro años más tarde (1989)."
+  },
+  "humildad-malaga": {
+   "texto": "La primitiva hermandad la fundó en 1694 la Real y Militar Orden de la Merced en el desaparecido convento de la Merced. En 1923 ingresó en la Agrupación de Cofradías, pero su actividad se extinguió tras los sucesos de mayo de 1931 y la Guerra Civil. Hasta principios del siglo XX se la conocía como «los servitas blancos», por el recogimiento de sus procesiones.\n\nEn 1980, dentro del proceso de recuperación de devociones históricas iniciado en 1975, el diseñador Juan Casielles reunió a un grupo de cofrades para reorganizarla. La Virgen de la Merced se encargó a Luis Álvarez Duarte (1982), que tallaría también el San Juan Evangelista (1986), y el Cristo de la Humildad en su Presentación al Pueblo al hispalense Francisco Buiza; tras la muerte prematura del maestro, lo terminaron sus discípulos Francisco Berlanga y Juan Manuel Miñarro. Ambas imágenes se bendijeron en el Santuario de la Victoria en 1983. Al año siguiente salió por primera vez por el barrio de la Victoria hasta el Patio de los Naranjos, donde hizo su primera estación de penitencia; en 1986 ingresó en la Agrupación y pasó al Domingo de Ramos, y diez años después salió por primera vez la Virgen de la Merced. El grupo escultórico del Ecce Homo (Poncio Pilatos, Claudia Prócula, Caifás, Barrabás, un aquilifer y un soldado romano) es de Elías Rodríguez Picón (2012).",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/humildad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "salud-malaga": {
+   "texto": "Su origen está en 1978, cuando la abadía cisterciense de Santa Ana guardaba la imagen del Cristo del Gran Amor tallada por Luis Álvarez Duarte y Francisco Puente Carbó, miembro de Misioneros de la Esperanza (MIES), propuso a otros miembros de la asociación darle culto interno. El sacerdote Diego Ernesto Wilson Plaza dio el visto bueno, con el apoyo de las monjas del Císter y del propio escultor, y en 1981 se aprobaron las primeras reglas. En sus primeros años, además del culto, se volcó en la formación y en la labor social con los necesitados, sobre todo con los enfermos.\n\nEn 1982 se bendijo la primera Virgen de la Salud, obra de Antonio Dubé de Luque. En 1985 se aprobaron los primeros estatutos y la hermandad salió por primera vez desde el colegio San Agustín; al año siguiente, tras tener que dejar la abadía del Císter, la procesión terminó en la parroquia de San Pablo, su sede canónica. La Agrupación de Cofradías aprobó su ingreso en 1988, año en que se encargó a Álvarez Duarte una nueva Virgen de la Salud, bendecida un año después, que guarda en su interior la mascarilla de la talla original. En 1991 se presentó el Cristo de la Esperanza en su Gran Amor, también de Álvarez Duarte, que procesionó por primera vez en 1999. La estrechez de la puerta de San Pablo obliga a los portadores a sacar los tronos de rodillas.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/salud/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "humildad-y-paciencia-malaga": {
+   "texto": "Su raíz es la primitiva hermandad de Humildad y Paciencia, nacida en 1634 como filial de la Pura y Limpia Concepción del convento de San Luis del Real. Al desaparecer el convento en 1835 con la desamortización, la talla del Cristo quedó en la iglesia de San Agustín, donde se perdió en los sucesos de 1931. En los años ochenta del siglo XX un grupo de cofrades, entre los que destacaba Juan Manuel Sánchez Quiñones, quiso revitalizar esa devoción, aunque su primera imagen fue una Virgen, Dolores y Esperanza: primero una talla pequeña cedida por el convento de San José de calle Don Rodrigo y después la actual, de candelero, anónima del siglo XVIII y cedida a perpetuidad por la familia Ravina Albarracín.\n\nTras un breve paso por la parroquia de San José, el grupo se asentó en 1999 en la de San Vicente de Paúl, en Cruz de Humilladero. Con Rafael González Díaz al frente de la junta, el párroco Antonio Ariza Hurtado coronó litúrgicamente a la Virgen, que salió por primera vez el Sábado de Pasión de 1999. En 2004 el obispo Antonio Dorado Soto decretó su erección canónica como hermandad, y en 2007 se bendijo en la parroquia de la Asunción un Cristo sedente de Manuel Ramos Corona, que en 2011 salió con un grupo de tres soldados romanos y dos sayones. El 9 de octubre de 2014 la asamblea de la Agrupación de Cofradías aprobó su ingreso, y en 2015 recorrió por primera vez el recorrido oficial el Domingo de Ramos. En 2017 se bendijo Nuestra Señora de la Aurora, en 2018 se incorporó a la Orden de la Bienaventurada Virgen del Monte Carmelo y en 2019 hizo su primera estación de penitencia en la Catedral. Ese año encargó al malagueño José María Ruiz Montes un nuevo Cristo, bendecido el 15 de octubre de 2022.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "El texto de la ficha llega con frases partidas; «Sábado de Pasión de 1999» se reconstruye de los fragmentos «Sába… 1999 … do de Pasión de»."
+  },
+  "huerto-malaga": {
+   "texto": "La archicofradía nace en 1920 de la unión de dos corporaciones: la de la Oración del Huerto y la de la Concepción Dolorosa. La primera surgió en 1755, quizá como reorganización de otra anterior, a partir del gremio de olivareros de la ciudad, y en 1756 encargó a Fernando Ortiz la imagen de Jesús orando en el huerto que todavía procesiona. La segunda nació en 1730 en el desaparecido convento de San Luis el Real, como reorganización de la cofradía de la Pura y Limpia Concepción, y en el siglo XIX se unió a la hermandad Sacramental de los Santos Mártires para sobrevivir a la desamortización.\n\nFundadora de la Agrupación de Cofradías en 1921, procesionó el Lunes Santo hasta la crisis de los años treinta. En 1941 se restauró el Señor y en 1942 se adquirió la actual Virgen de la Concepción, imagen anónima del siglo XVIII atribuida al círculo de Fernando Ortiz; por aquellos años pasó al Domingo de Ramos. El ángel Egudiel que acompaña al Señor es de Antonio Castillo Lastrucci (1949), y en 2005 Manuel Carmona hizo un nuevo cuerpo a la imagen de Ortiz. En los años ochenta fue hermano mayor Francisco Toledo, también presidente de la Agrupación. En 2006 inauguró la casa hermandad desde la que sale y en 2012 se hermanó con el Colegio Oficial de Farmacéuticos. Sus nazarenos llevan a la cintura una sardineta, distintivo que heredó la Pollinica por haber sido filial de la Oración del Huerto.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/huerto/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que el Señor «se salvó de los sucesos de 1931» y que Ortiz fue «uno de los escultores más importantes» del XVIII; la ficha no dice ninguna de las dos cosas y se han quitado."
+  },
+  "prendimiento-malaga": {
+   "texto": "Sus orígenes están en 1928, cuando un grupo de asentadores del mercado de Atarazanas fundó la hermandad y adquirió una primera talla de Antonio Castillo Lastrucci. La corporación actual nace en 1948, al aprobar el obispo Herrera Oria su denominación, y en sus primeros años se la conoció como la hermandad «de los trabajadores». El Domingo de Ramos de 1949 se bendijo el Jesús del Prendimiento de Pedro Pérez Hidalgo, que salió ese mismo día; ese año había sido admitida en la Agrupación de Cofradías.\n\nDesde 1956 cobró protagonismo la escuela de Formación Profesional Francisco Franco, hoy instituto Rosaleda, que creó los primeros conjuntos procesionales; su maestro, Andrés Cabello Requena, talló la Virgen del Gran Perdón (1957). Ese año la hermandad se trasladó de la parroquia del Carmen a la de la Divina Pastora. En los años sesenta se hicieron los conjuntos procesionales actuales, con diseño de Juan Casielles del Nido, y llegó el actual Señor, de Castillo Lastrucci (1961), autor también del Judas; el resto del misterio es de Juan Manuel García Palomo (2005-2007). La escuela-taller de empleo que tuvo la hermandad a comienzos del siglo XXI impulsó la renovación de los conjuntos de ambas secciones. En 2011 representó a Málaga en el Vía Crucis de la Jornada Mundial de la Juventud en Madrid, presidido por Benedicto XVI.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/prendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que «perdió su primer conjunto en 1931»; la ficha no lo dice y se ha quitado."
+  },
+  "crucifixion-malaga": {
+   "texto": "Sus primeros pasos se dieron en 1977 en Parque Victoria Eugenia, donde Antonia Hernández y un grupo de vecinos promovieron una agrupación religiosa para colaborar en la asistencia sanitaria de los más necesitados del barrio. En 1983 llegó la primera imagen de la Virgen del Mayor Dolor, titular de la entonces prohermandad, y dos años después, con la mediación del sacerdote José Luis Cacho, se trasladaron a la parroquia del Buen Pastor, su sede canónica. La Virgen salió por primera vez en 1986, pero al año siguiente sufrió un grave accidente; Antonio Dubé de Luque, a quien se encargó la restauración, hizo una nueva imagen, que llegó a finales de 1987. Al año siguiente se aprobaron los primeros estatutos como hermandad.\n\nEn 1990 pidió el ingreso en la Agrupación de Cofradías, que lo rechazó por un defecto de forma; en 1992 lo volvió a solicitar y la institución le exigió una salida de prueba al año siguiente. Tras procesionar por primera vez el Lunes Santo de 1993, la Agrupación aprobó su ingreso definitivo a finales de ese año, el mismo en que se bendijo Nuestro Padre Jesús de la Crucifixión, obra de José Manuel Bonilla Cornejo. La imagen está clavada a la cruz por las muñecas y no por las manos. Un año más tarde hizo su primera estación de penitencia en la Catedral, en la noche del Lunes Santo, y desde 2003 se volcó en la construcción de su casa hermandad de calle Diego de Siloé, bendecida diez años después.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/crucifixion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que ingresó en la Agrupación en 1992; según la ficha, en 1992 lo solicitó de nuevo y el ingreso definitivo se aprobó a finales de 1993."
+  },
+  "gitanos-malaga": {
+   "texto": "Los primeros documentos la sitúan en el siglo XVII. En 1799 el gremio de herreros encargó una imagen de Jesús atado a la columna, que talló Francisco de Paula Gómez Valdivieso tras un concurso de imagineros. En el siglo XIX se ocupó del enterramiento de sus hermanos, y fue la primera corporación en hacerlo en cementerios; destacó por sus procesiones de mediados de siglo, pero después su culto público casi desapareció hasta los albores del XX.\n\nSe reactivó en 1899 y vivió años de esplendor en los años veinte; en 1921 se incorporó a la Agrupación de Cofradías. En los sucesos de 1931 perdió su patrimonio en el incendio de la parroquia de la Merced. Ocho años después encargó a Manuel Oliver un nuevo Señor, sustituido en 1942 por el actual, obra del imaginero calé Juan Vargas; por entonces se trasladó a la parroquia de los Santos Mártires. En 1970 cumplió su principal anhelo con la bendición de María Santísima de la O, del sevillano Francisco Buiza. Desde los años veinte del siglo pasado el pueblo calé acompaña con cantes y bailes a Jesús de la Columna en su procesión del Lunes Santo. Su casa hermandad de calle Frailes la levantaron, en varias fases, los propios hermanos con sus manos.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/columna-gitanos/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "dolores-del-puente-malaga": {
+   "texto": "A finales del siglo XVII Juan Valverde levantó una capilla callejera junto al río Guadalmedina, en la actual zona de la plaza de Arriola, donde se veneraba un Crucificado bajo la advocación del Perdón. La devoción a la Virgen de los Dolores la introdujo Martín Federico, que en 1747 fundó un Rosario nocturno, conocido como el de la Hermandad de los Tiñosos; al no tener otro sitio, pidió permiso para dejar la imagen de la Virgen en la capilla del Crucificado, y el Rosario se disolvió más tarde. En 1927 la capilla fue demolida por razones urbanísticas y la Virgen pasó al otro lado del río, a una pequeña capilla que la Archicofradía de la Esperanza le labró en la fachada este de la parroquia de Santo Domingo; subsistió hasta 1992, cuando se construyó la actual.\n\nLa etapa actual comienza con la reorganización de 1982, cuando un grupo de cofrades encabezado por Jesús Castellanos sentó las bases de la devoción a la Virgen. En 1987 se bendijo el Cristo del Perdón, obra de Suso de Marcos, y la cofradía ingresó en la Agrupación e hizo su primera salida procesional el Lunes Santo. Suso de Marcos talló también el San Juan Evangelista (1986) y los ladrones Dimas y Gestas (2000), crucificados junto al Señor. La Virgen de los Dolores, talla anónima del siglo XVIII atribuida a Pedro Asensio de la Cerda, fue coronada canónicamente el 31 de octubre de 2004.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/dolores-del-puente/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "cautivo-malaga": {
+   "texto": "El 26 de abril de 1934 un grupo de jóvenes trinitarios se reunió en un aula de la Escuela Ave María para crear una asociación que diera culto a una imagen de Nuestra Señora de la Trinidad, comprada en un anticuario. Durante la Guerra Civil la talla permaneció escondida en el patio de la casa de uno de los fundadores, José Carrasco Castilla. En 1937 la hermandad se reorganizó, cambió sus estatutos y pasó a ser cofradía pasionista, y en 1938 encargó un Cristo a José Martín Simón.\n\nLa imagen se bendijo el 19 de marzo de 1939 como Nuestro Padre Jesús Cautivo. Se había concebido como un Ecce Homo cubierto solo con el paño de pureza, pero el Obispado de Málaga no aceptó que saliera tan descubierta y se la vistió con la túnica blanca que la distingue. El 12 de noviembre de 1939 la cofradía fue admitida en la Agrupación de Cofradías, que le asignó el Lunes Santo. En 1968 adquirió la actual Virgen de la Trinidad, tallada por Francisco Buiza Fernández en 1963, que sustituyó a la titular de 1934. En 1983 inauguró su casa hermandad, desde 1989 ostenta el título de Real por concesión del rey Juan Carlos I y el 21 de octubre de 2000 la Virgen fue coronada canónicamente. El traslado de los titulares el Sábado de Pasión por la Trinidad reúne a miles de devotos que lanzan claveles al paso del trono.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/cautivo/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior llamaba al escultor «José Gabriel Martín Simón»; la ficha dice «José Martín Simón»."
+  },
+  "estudiantes-malaga": {
+   "texto": "La hermandad, con orígenes en el siglo XVII, había desaparecido en 1936 cuando, en 1945 y a sugerencia del Obispado de Málaga, un grupo de estudiantes del colegio San Agustín decidió reorganizarla. Tras un primer rechazo, ese mismo año se aprobaron sus estatutos e ingresó en la Agrupación de Cofradías. Su primer objetivo fue un Ecce Homo, el Cristo Coronado de Espinas, encargado a Pedro Moreira y bendecido y procesionado en 1946; desde entonces hace estación de penitencia en la plaza del Obispo.\n\nEn 1946 los Padres Agustinos rompieron su vínculo con la hermandad, que tuvo que trasladarse a la iglesia de Nuestra Señora del Carmen. En 1947 salió por primera vez la Virgen de Gracia y Esperanza, encarnada entonces por la actual Virgen de los Remedios de la parroquia de los Santos Mártires, y al año siguiente la cofradía se instaló en la iglesia del Santo Cristo de la Salud y procesionó su titular actual, de los talleres Caderot de Madrid (1948). Por su origen académico sus titulares los portaban estudiantes, y sus portadores mantienen la estética del traje de chaqueta. Conserva su vínculo con la Universidad de Málaga, con la que celebra cada Lunes Santo un acto en la plaza del Obispo al son del Gaudeamus Igitur. Desde el año 2000 sale de su casa hermandad de calle Alcazabilla.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/estudiantes/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "rocio-malaga": {
+   "texto": "Sus orígenes se remontan a la llegada de la Orden de los Frailes Mínimos, que estableció el rezo del Vía Crucis todos los viernes del año. Disputas internas hicieron que en 1706 la Hermandad de los Pasos de Jesús se escindiera y se instalara en la capilla del Hospital de San Lázaro; allí celebró cultos internos y externos y en 1860 recibió el título de Ilustre y Venerable Hermandad de Nuestro Padre Jesús de los Pasos Sacramental. A principios del siglo XX entró en crisis y cesó su actividad, que se reanudó entre 1922 y 1924 con una nueva junta de gobierno. En 1925 ingresó en la Agrupación de Cofradías y un año más tarde recibió el título de Real.\n\nEn esos años se incorporó la devoción a la Virgen del Rocío. La primera imagen, de Pío Mollar, se bendijo en marzo de 1931 y fue destruida en la madrugada del 11 al 12 de mayo; ya en su primer Martes Santo, por salir vestida enteramente de blanco, se la llamó la Novia de Málaga. La segunda talla estuvo oculta durante la Guerra Civil en una alacena de una vivienda de calle Puerto. La Virgen actual es obra del valenciano Pío Mollar Franch (1935). Tras la guerra, la reconstrucción de la hermandad trajo la restauración de la ermita de San Lázaro. En 1977 se bendijo el Nazareno de los Pasos del sevillano Antonio Eslava Rubio, cuya cabeza y manos había iniciado Rafael Quiles. La coronación canónica de la Virgen, solicitada en 2006, se celebró en la Catedral el 12 de septiembre de 2015.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/rocio/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "penas-malaga": {
+   "texto": "Si bien se había documentado su fundación en 1935 en la desaparecida iglesia de San José, la destrucción del interior de ese templo en 1931 hace imposible esa hipótesis: la hermandad echó a andar en el convento de las Catalinas y después se trasladó al templo de calle Granada, una vez restaurado. Adquirió en Olot un primer crucificado, destruido en la Guerra Civil, mientras que la primitiva Virgen, una obra del siglo XVIII, pudo salvarse.\n\nA principios de 1940 la iglesia de San José volvió a abrir al culto y la hermandad permaneció en ella hasta su traslado a San Julián en 1966. En 1943 ingresó en la Agrupación de Cofradías y salió por primera vez el Lunes Santo. Al año siguiente, bajo la dirección del jardinero mayor del Parque, Alfonso Cruz, se hizo el primer manto de flores de la Virgen, singularidad que se mantiene: cada año los responsables municipales de Parques y Jardines elaboran uno distinto, de pino y flores, sobre todo claveles. En 1947 procesionó por primera vez el Cristo de la Agonía. La Virgen de las Penas actual es obra de Antonio Eslava Rubio y el Cristo de la Agonía, del hispalense Francisco Buiza Fernández (1971). En 2008 bendijo su casa hermandad y oratorio de Santa María Reina, decorado en los años siguientes con pinturas de Raúl Berzosa.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/penas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha fecha la Virgen de Eslava en 1964 en la historia y en 1965 en «Sagradas Imágenes»; se omite el año. La reseña anterior atribuía el manto de flores a «la escasez de medios», que la ficha no dice."
+  },
+  "nueva-esperanza-malaga": {
+   "texto": "La hermandad nació con la nueva barriada levantada en los años setenta del siglo XX por la constructora Nueva Esperanza, que protagonizó un escándalo a cuenta de esas viviendas. Entre los edificios se creó en 1973 la parroquia de Santa Ana y San Joaquín, y una reunión en la peña Nueva Esperanza, con el apoyo del párroco José María Ortega, dio pie a la corporación. Entre 1976 y 1977 llegaron las primeras imágenes del Nazareno del Perdón y de la Virgen de Nueva Esperanza, y en 1982 salió por primera vez el Cristo de Pedro Pérez Hidalgo. En junio de 1987 el obispo Ramón Buxarráis aprobó los primeros estatutos y quedó erigida como hermandad en su parroquia.\n\nPara entrar en la Agrupación de Cofradías salió en 1991 hasta la ermita de Zamarrilla y dos años después pasó por el recorrido oficial, pero su ingreso fue denegado; tras varias negativas, fue admitida en 1997 con el visto bueno del obispo y de la junta de gobierno. En 1999 el malagueño Juan Manuel García Palomo talló el actual Nazareno del Perdón. La Virgen de Nueva Esperanza es obra de José Navas-Parejo de la primera mitad del siglo XX, según documenta el historiador Torres Ponce. En los años siguientes se hicieron los dos tronos y la casa hermandad, bendecida a finales de 2010. Su procesión supera las 12 horas en la calle y recorre barrios como el Perchel y la Trinidad.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/nueva-esperanza/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "humillacion-y-estrella-malaga": {
+   "texto": "Según un documento de la propia hermandad, nació el 17 de junio de 1919 en la parroquia de San Carlos y Santo Domingo de Guzmán, aunque su primera junta de gobierno, dirigida por Joaquín Narbona, no se constituyó hasta 1921. Se formó en torno a una imagen de Cristo atado a la columna, que veinte años después se sustituyó por el pasaje del desprecio de Herodes, e ingresó en la Agrupación de Cofradías en 1924. Los sucesos del 11 al 12 de mayo de 1931 destruyeron por completo el interior de Santo Domingo, con las imágenes y parte del patrimonio de la hermandad; José Benítez Oliver, autor del primitivo trono del Señor (1922), salvó el trono y algunos enseres.\n\nTras la Guerra Civil la cofradía retomó el culto e incluyó en su título a la Virgen de la Estrella, cuya primera imagen, propiedad de la familia Souvirón, se cedía cada año para la procesión. En marzo de 1942 se bendijo Jesús de la Humillación, del malagueño Francisco Palma Burgos, y en 1946 salió por primera vez la actual Virgen de la Estrella, obra anónima del siglo XVIII con manos de Andrés Cabello Requena (1958). En los años sesenta el Cristo empezó a procesionar con un grupo escultórico, suprimido en 1997 para hacer una composición propia del momento que representa. La Policía Local, hermana mayor honoraria, la acompaña cada Martes Santo. En 2008 bendijo su casa hermandad.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/estrella/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "rescate-malaga": {
+   "texto": "En 1682 los Trinitarios Descalzos rescataron una talla de Jesús Nazareno en la ciudad marroquí de Mámora, y a raíz de aquel hecho se fundó la cofradía a finales del siglo XVII. Con la desamortización del XIX desapareció el convento trinitario y la hermandad tuvo que buscar nueva sede, que encontró en 1896 en la parroquia de Santo Domingo. Allí se reorganizó en 1924, año en que ingresó en la Agrupación de Cofradías; el primer grupo escultórico que acompañó al Señor desapareció en los sucesos de 1931.\n\nLa última reorganización llegó en 1949: la hermandad pasó a la parroquia de Santiago y dos años después se estableció en la capilla de calle Agua. En 1954 salió por primera vez el Jesús del Rescate de Antonio Castillo Lastrucci, que en 1956 talló la Virgen de Gracia (modificada por Luis Álvarez Duarte en 1982) y en 1957 las figuras del misterio. En los años setenta y ochenta se hicieron los tronos de ambos titulares, después de que las andas de la Virgen sufrieran en varias ocasiones la crisis de portadores. Estrenó su primera casa hermandad en 1980 y siete años más tarde construyó la actual. En 2010 el cortejo tuvo que volver a la casa hermandad por la inestabilidad del palio de la Virgen. El colorido de sus túnicas responde al ofrecimiento de una casa de material fotográfico que a finales de los años cincuenta empezaba a vender carretes en color.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/rescate/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "sentencia-malaga": {
+   "texto": "Fue fundada en marzo de 1929 en la iglesia de la Aurora María, junto al Guadalmedina, en el barrio de la Trinidad, por un grupo de jóvenes cofrades que daban culto a un grupo escultórico del Señor obra de José Rius. Aquel conjunto fue quemado en el río el 12 de mayo de 1931, un año después de que la Agrupación de Cofradías aceptara a la hermandad. La cofradía resurgió en la iglesia de San Pablo en torno a la imagen actual de Jesús de la Sentencia, obra de José Martín Simón (1935), que estuvo escondida durante la Guerra Civil en un edificio de calle Hinestrosa; el mismo autor completó en 1936 el misterio con Poncio Pilatos, dos sayones y un soldado romano.\n\nTerminada la contienda se trasladó a la parroquia de Santiago e incorporó como titular a la Virgen del Rosario en sus Misterios Dolorosos, obra del siglo XIX atribuida al círculo de Gutiérrez de León, concebida en origen como Inmaculada y reconvertida para la hermandad. En 1942 se estableció en su capilla. En las décadas siguientes creció su patrimonio, con el trono del Señor de Pedro Pérez Hidalgo (1958) y el palio y el manto de la Virgen, bordados por Leopoldo Padilla en los años cincuenta. En los años noventa construyó su casa hermandad en calle Frailes, y con el cambio de siglo restauró a la Virgen para devolverle su aspecto original; Antonio Dubé de Luque la remodeló en 2003. Por las obras de rehabilitación de Santiago ha tenido su sede provisional en la parroquia de San Juan.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/sentencia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "mediadora-malaga": {
+   "texto": "Entre 1989 y 1997 un grupo de fieles de la parroquia de San Antonio de Padua mantuvo el culto a la Virgen de los Dolores que se venera en ese templo. En 1997, por sus relaciones con el párroco, decidieron trasladarse a la parroquia de la Encarnación, en las escuelas del Ave María, y encargar una nueva imagen, Nuestra Señora Mediadora de la Salvación, obra del malagueño Juan Manuel García Palomo (1997); con ella se constituyeron como asociación de fieles. En 1999 salió por primera vez por Las Delicias.\n\nEl Viernes de Dolores de 2001 hizo su primera procesión en Cuaresma y después pidió el plácet del Obispado para constituirse en hermandad; al año siguiente salió ya con hermanos vestidos de nazareno y en 2005 se aprobó su erección canónica como cofradía. En 2010 la Virgen salió por primera vez bajo palio. En 2011 el cabildo aprobó incorporar un titular cristífero, Nuestro Padre Jesús Nazareno Redentor del Mundo, que talló el sevillano José Antonio Navarro Arteaga; se bendijo en noviembre de 2013 y procesionó por primera vez en la Cuaresma de 2014. Ese año la hermandad fue admitida en la Agrupación de Cofradías, y el Miércoles Santo de 2015 pasó por primera vez por el recorrido oficial. El Nazareno abraza la cruz en el instante anterior a portarla hasta el Gólgota; según la Agrupación, es el único que representa ese pasaje.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/mediadora-de-la-salvacion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior la presentaba como «una de las hermandades más jóvenes»; la ficha no lo dice."
+  },
+  "salesianos-malaga": {
+   "texto": "En 1985 un grupo de antiguos alumnos del Colegio Salesiano de San Bartolomé decidió formar una hermandad de penitencia a partir de la desaparecida devoción al Cristo de las Penas, que en el siglo XVII se veneraba en la parroquia de San Pedro. En 1987 echó a andar la comisión reorganizadora, con el apoyo del sacerdote salesiano Rafael Moreno y del párroco de la Divina Pastora, Alfonso Rosales, que permitió que la hermandad se estableciera canónicamente en el templo de Capuchinos.\n\nEn 1989 el Obispado de Málaga aceptó la creación de la hermandad, que en marzo de ese año bendijo el Santo Cristo de las Penas, obra de Manuel Carmona. El mismo autor talló la Virgen del Auxilio y San Juan Evangelista (1990), María Magdalena (1991) y María de Cleofás y María Salomé (1995). En 1991 hizo su primera salida procesional y estación de penitencia en la Catedral; ingresó en la Agrupación de Cofradías en 1995 y al año siguiente pasó por el recorrido oficial. En octubre de 2009 sus titulares se trasladaron al Santuario de María Auxiliadora, su nueva sede canónica, y en 2016 se colocó la primera piedra de su casa hermandad, frente al templo salesiano, en la calle Eduardo Domínguez Ávila. Sus orígenes, su sede y su casa hermandad giran en torno al colegio San Bartolomé, que marca su carácter.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/salesianos/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que desde 1996 es «la primera hermandad del Miércoles Santo» en el recorrido oficial; la ficha solo dice que en 1996 pasó por primera vez por él."
+  },
+  "fusionadas-malaga": {
+   "texto": "Las Reales Cofradías Fusionadas nacen de la unión de cuatro hermandades: la Archicofradía de la Santa Vera+Cruz, que fue la iniciadora, y las cofradías de Nuestro Padre Jesús de Azotes y Columna, de Ánimas de Ciegos y del Santísimo Cristo de la Exaltación. Las fusiones se sucedieron entre finales del siglo XIX y principios del XX: en 1891 se unieron Vera+Cruz y Azotes y Columna, en 1895 se sumó Ánimas de Ciegos y en 1913, Exaltación. Todas estuvieron en la fundación de la Agrupación de Cofradías en 1921.\n\nEn los sucesos de 1931 las imágenes sufrieron daños, pero se salvaron todas y se restauraron. En 1980 un incendio en la capilla de Exaltación calcinó al Crucificado, a la Virgen del Mayor Dolor, a San Juan Evangelista y a la Virgen de Lágrimas y Favores; como compensación, la Agrupación encargó a Francisco Buiza el nuevo Cristo de la Exaltación (1982), y las demás imágenes las hizo Antonio Dubé de Luque. El Miércoles Santo salen cinco de sus titulares: Nuestro Padre Jesús de Azotes y Columna, obra anónima del siglo XVIII con sayones y soldados del malagueño Juan Vega (2013); el Cristo de la Exaltación; el Santísimo Cristo de Ánimas de Ciegos, datado en 1649 y atribuido a Pedro de Zayas, y Nuestra Señora del Mayor Dolor Reina de los Ángeles con San Juan Evangelista, de Dubé de Luque (1980-1982), que procesionan en Sacra Conversazione. Durante años la hermandad hizo estación de penitencia en el interior de la Catedral.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/fusionadas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Las Fusionadas tienen tres fichas en portal.json (fusionadas-malaga, lagrimas-y-favores-malaga y vera-cruz-malaga). Esta lleva la historia común y las secciones del Miércoles Santo; las otras dos se ciñen a su sección sin repetir texto."
+  },
+  "vera-cruz-malaga": {
+   "texto": "La Archicofradía de la Santa Vera+Cruz es el origen de las Reales Cofradías Fusionadas: sus raíces están en el siglo XVI y hay documentos que fechan sus primeras reglas en 1505. Su titular, el Santísimo Cristo de la Vera+Cruz, es una obra anónima de ese siglo reconstruida en el siglo XX, y la Agrupación la considera la talla procesional más antigua de la ciudad. Deteriorado tras la contienda civil, sus restos se colocaron en la trascapilla de la Exaltación, que se reformó después de la guerra y los dejó ocultos; aparecieron en la reforma de los años ochenta que siguió al incendio de la capilla, y el Cristo se recompuso.\n\nEn 1991 se decidió recuperarlo para el culto externo. Durante varios años procesionó en la madrugada del Jueves al Viernes Santo con estación de penitencia en la Catedral, y en 2015 pasó a hacer el recorrido oficial. Sale cada noche de Jueves Santo en silencio, sobre un trono de madera barnizada que Barbero hizo en los años cincuenta, con imaginería de Suso de Marcos, y que antes procesionó con Azotes y Columna.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sección de las Fusionadas; la historia de las fusiones va en fusionadas-malaga para no repetir texto."
+  },
+  "paloma-malaga": {
+   "texto": "Una disposición notarial de 1647 es el primer testimonio de la hermandad de la Puente del Cedrón, que pudo fundarse a principios del siglo XVII en la parroquia de San Juan, bajo la dependencia de la desaparecida hermandad de Jesús de la Columna. En 1655 firmó unas constituciones para ser corporación autónoma y en 1677 el obispo de Málaga, fray Alonso de Santo Tomás, refrendó otras nuevas; desde entonces procesionaba el Miércoles Santo con las hermandades de la parroquia. En el siglo XVIII acogió como filiales a la Oración del Huerto y a la Entrada en Jerusalén.\n\nA comienzos del XIX encargó a Gutiérrez de León un nuevo grupo escultórico, que conservó la túnica realizada por Teresa de la Linde en 1768; en ese siglo iba hasta la Catedral cada Jueves Santo, aunque por los avatares del país dejó de salir en algunas etapas, situación que se prolongó hasta principios del XX. En 1921 estuvo entre las fundadoras de la Agrupación de Cofradías. En 1925 una paloma se posó en el trono de la Virgen de los Dolores durante todo el recorrido, hecho que cambió su advocación por la de la Paloma y que se recuerda cada Miércoles Santo soltando palomas a su paso. En 1936 perdió su patrimonio y se reorganizó al terminar la Guerra Civil. Desde 1945 el Ayuntamiento de Madrid es su hermano mayor honorario, y en 1995 dejó San Juan Bautista por su capilla propia de la plaza de San Francisco. El Señor actual es del sevillano Juan Manuel Miñarro (1988) y la Virgen de la Paloma, de Luis Álvarez Duarte (1970).",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/paloma/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-rico-malaga": {
+   "texto": "Unos documentos del Archivo de Protocolos Notariales fechados en 1658 sitúan la constitución de la hermandad de Jesús Nazareno en el convento de San Luis el Real, aunque Andrés Llordén sostiene que en 1584 ya formaba parte de la cofradía de la Vera+Cruz. En 1756 obtuvo el consentimiento de Fernando VI para ser corporación independiente. En tiempos de Carlos III, durante una época de epidemias, los presos se amotinaron y sacaron en procesión a Jesús El Rico; de ahí procede el privilegio por el que cada Miércoles Santo la hermandad libera a un reo, al que el Consejo de Ministros indulta cada año, en un acto que se celebra en la plaza del Obispo.\n\nEn 1836 la desamortización del convento la llevó a la parroquia de Santiago Apóstol, su sede canónica, y durante ese siglo sus salidas fueron discontinuas. En 1921 fue una de las fundadoras de la Agrupación de Cofradías, y a principios del XX incorporó la advocación de la Virgen de los Dolores, que en 1924 pasó a llamarse María Santísima del Amor. Perdió sus imágenes titulares en 1931 y 1936: José Navas-Parejo talló el Señor en 1939 y Antonio Dubé de Luque la Virgen en 1981, en sustitución de una talla anterior. En 1940 se hizo el libro de Actas de Liberación que procesiona cada año, en 1997 se recuperó la cabeza de San Juan degollado que acompaña al Nazareno y en 2002 inauguró su casa hermandad. Es la única hermandad que conserva entre sus penitentes los tradicionales capirotes «de habichuela».",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/el-rico/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "sangre-malaga": {
+   "texto": "En 1499 se estableció en Málaga la Real, Militar y Celeste Orden de Nuestra Señora de la Merced, y en su seno se creó la Cofradía de la Sangre de Cristo, que colaboraba en todas las actividades de la Orden y cuyas primeras constituciones datan de 1507; desde entonces estuvo erigida en el templo de la Merced. En el siglo XVII recibió numerosos privilegios e indulgencias de los papas y de ella surgieron tres hermandades: Llagas y Columna, Humildad y la del Santo Sudario, que sigue perteneciendo a la Sangre. El siglo XIX alternó periodos de esplendor y de decadencia, sobre todo a su final.\n\nEn 1919 volvió a procesionar el Miércoles Santo. En 1920 fue elegido hermano mayor el empresario Antonio Baena Gómez, que el 21 de enero de 1921 se convirtió en el primer presidente de la recién constituida Agrupación de Cofradías, de la que la Sangre fue fundadora. En 1922 Alfonso XIII le concedió el privilegio de portar el Pendón de Castilla. En 1931 la destrucción de la iglesia de la Merced acabó con su patrimonio, salvo la cabeza de la Virgen de Consolación y Lágrimas, algunos enseres, entre ellos el manto de salida de 1929, y Nuestra Madre Dolorosa, de Antonio Gutiérrez de León (1858). En 1941 quedó establecida en San Felipe Neri y volvió a salir con el crucificado del malagueño Francisco Palma Burgos; cuatro años más tarde salió de nuevo la Virgen de Consolación y Lágrimas, obra anónima fechable entre los siglos XVII y XVIII cuya restauración de 2019, a cargo de Francisco Naranjo, le devolvió la policromía original y abrió un estudio para datarla mejor. El Ayuntamiento y la Diputación de Burgos son sus hermanos mayores honorarios.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/sangre/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior la llamaba «una de las cofradías más antiguas de la ciudad»; la ficha no lo dice y se ha quitado."
+  },
+  "expiracion-malaga": {
+   "texto": "Sus orígenes están en la cofradía de la Virgen de los Dolores que se veneraba en 1737 en la iglesia de San Pedro, con primeras constituciones de 1750 y culto principal el Viernes de Dolores. La epidemia de fiebre amarilla de 1803-1804 mermó el número de hermanos, aunque la cofradía no sufrió las consecuencias de la desamortización del siglo XIX.\n\nLa hermandad actual se fundó el 1 de abril de 1920, cuando un grupo de fieles de San Pedro pidió al rector permiso para dar culto a las imágenes del Cristo de la Expiración y la Virgen de los Dolores que se veneraban en el templo. Al año siguiente estuvo entre las fundadoras de la Agrupación de Cofradías, y en 1923 llegó a hermano mayor Enrique Navarro Torres, figura capital de la corporación perchelera, que presidió la Agrupación en dos etapas; a su impulso se debe uno de los conjuntos artísticos más completos de la Semana Santa, con talleres como los de Félix Granda o Esperanza Elena Caro. Tras los sucesos de 1931 y 1936 la hermandad pasó a la Catedral y a la parroquia del Carmen, donde rehízo su patrimonio. En 1940 salió a la calle el Cristo del valenciano Mariano Benlliure (1939), que desde 1943 procesiona en el trono de orfebrería del taller del padre Félix Granda. En los años cincuenta se completó el trono de la Virgen, de Manuel Seco Velasco; la Virgen es una talla anónima del siglo XVIII atribuida al círculo de la familia Asensio de la Cerda. En 1964 comenzaron las obras de su casa hermandad, y desde 1938 mantiene un vínculo fraterno con la Guardia Civil.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/expiracion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior fechaba el Cristo de Benlliure en 1939-1940 y lo calificaba de «obra cumbre de la imaginería de posguerra»; la ficha lo fecha en 1939 (salió en 1940) y no hace esa valoración."
+  },
+  "sagrada-cena-malaga": {
+   "texto": "La cofradía nació el 20 de junio de 1924 por iniciativa de un grupo de trabajadores de la antigua Compañía de Ferrocarriles Andaluces, encabezados por Miguel Luque Paredes, su primer hermano mayor, y tuvo su primera sede canónica en el Santuario de Santa María de la Victoria. Ese mismo año ingresó en la Agrupación de Cofradías, y el Domingo de Ramos de 1925 salió por primera vez desde la Victoria por las calles del barrio y del centro. En 1927 recibió por decreto real el título de Real.\n\nTras los difíciles años treinta, en 1938 incorporó como titular a María Santísima de la Paz, representada al principio por una obra de José Martín Simón. En 1967 se instaló en una capilla propia junto a la estación de RENFE, con sede canónica en la parroquia del Carmen, pero el 28 de diciembre de 1969 un cortocircuito durante una eucaristía calcinó los conjuntos procesionales y gran parte del patrimonio. El hispalense Luis Álvarez Duarte talló entonces la Virgen de la Paz (1970), donada por las hermandades malagueñas, y el conjunto de la Sagrada Cena (1971), que representa el momento en que Cristo bendice el vino y lo reparte entre sus discípulos. En 2005, obligada por la reorganización urbanística, dejó la capilla por su casa hermandad de calle Compañía, con sede canónica en la parroquia de los Santos Mártires.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/sagrada-cena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha atribuye el título de Real (1927) a un decreto de «Alfonso XII», errata evidente (reinaba Alfonso XIII); se omite el nombre del rey. La reseña anterior llamaba al misterio «su primera obra cristífera» de Álvarez Duarte; la ficha no lo dice."
+  },
+  "vineros-malaga": {
+   "texto": "A pesar de que antes existía una hermandad del gremio de vinateros, la corporación comenzó su actividad en 1615 y fue aprobada por el rey Felipe III un año más tarde. Su primera sede fue la iglesia de la Merced, donde en 1643 se constituyó como cofradía de Pasión; en ese siglo se sitúan dos hechos protagonizados por la imagen del Nazareno, uno con un fraile mercedario y otro con un arcabucero. Hasta principios del siglo XX dio especial protección a los trabajadores del gremio de la uva y la pasa en asistencia y enterramientos. En el siglo XVIII el papa Pío VI le concedió el privilegio por el que el Nazareno porta cada año la llave del Sagrario de la iglesia de Santa Catalina, su sede canónica.\n\nEn 1693 se fundó la hermandad de la Virgen del Traspaso y Soledad de Viñeros. La del Nazareno se reorganizó a principios del XIX, y ambas redujeron su culto durante ese siglo hasta los inicios del XX. La quema de iglesias y conventos de 1931 acabó con la parroquia de la Merced y con las imágenes de las dos corporaciones, que se rehicieron en los primeros años de posguerra. En 1949 entró en la Agrupación de Cofradías y en abril de 1962 ambas hermandades se fusionaron. En esa década la Virgen salió por primera vez desde la parroquia de los Santos Mártires; la talla actual es del hispalense Francisco Buiza (1969), autor también del Nazareno (1975). En 1978 celebró la primera Bendición de las Uvas y el Mosto, que mantiene, y en los años noventa se instaló en su casa hermandad de la plaza de Viñeros, la antigua plaza de Biedmas.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/vineros/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que la cofradía nació «del gremio de los viñeros»; la ficha dice que en 1615 comienza su actividad «a pesar de la existencia previa de una hermandad del gremio de vinateros», sin presentarla como su origen."
+  },
+  "santa-cruz-malaga": {
+   "texto": "La hermandad se constituyó a principios de los años ochenta por iniciativa de un grupo de jóvenes de la Cofradía de Pollinica. Por indicación de la autoridad eclesiástica, presidida por monseñor Buxarráis, adoptó primero la forma de asociación privada de fieles, y el 29 de mayo de 1995 recibió la erección canónica definitiva en la parroquia de la Santa Cruz y San Felipe Neri. Su culto se centra en Nuestra Señora de los Dolores en su Amparo y Misericordia, que Antonio Dubé de Luque talló en 1983-1984, y en la Santa Cruz, incorporada poco después como titular; la que se venera en la cripta de la parroquia la hizo José Ortiz en 1986 con madera de las vigas del propio templo. Desde sus inicios, su labor social se dirige a los más necesitados de su feligresía.\n\nEn 1993 salió por primera vez por el entorno de la parroquia con la iconografía de una Soledad, la Virgen al pie de la cruz vacía, una vez retirado el cuerpo del Señor; la escena se repitió cada año en la noche del Viernes de Dolores. El 8 de febrero de 2001 se acordó su ingreso en la Agrupación de Cofradías, que le asignó el Jueves Santo. En 2007 los hermanos aprobaron salir el Sábado Santo, como prevén sus estatutos, pero el carácter alitúrgico de esa jornada hace que mantenga su salida el Jueves Santo.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/santa-cruz/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "mena-malaga": {
+   "texto": "A mediados del siglo XVI nació en la parroquia de Santo Domingo la hermandad de Nuestra Señora de la Soledad, a la que la orden dominica cedió en 1579 unos terrenos para una capilla propia. En 1756 obtuvo una Misa de Privilegio después de que, por intercesión de la Virgen, se salvara una fragata frente a las costas de Málaga, hecho que la unió para siempre a la Marina. La hermandad del Cristo de la Buena Muerte surgió en 1862 para dar culto a un crucificado de Pedro de Mena que se guardaba en el templo perchelero, y que empezó a procesionar en 1883.\n\nEn agosto de 1915 ambas corporaciones se fusionaron bajo el nombre de Congregación, y en 1921, apenas un mes después de fundarse la Agrupación de Cofradías, ingresó en ella. Su vínculo con la Legión se remonta a 1928, tres años antes de que el crucificado de Mena se perdiera en el asalto a Santo Domingo; la Congregación conserva una pierna salvada por el imaginero Francisco Palma García, y el sobrenombre de Mena se mantiene por aquella imagen. La reconstrucción llegó con el malagueño Francisco Palma Burgos, autor del actual Cristo de la Buena Muerte (1942), de la María Magdalena (1945) y del trono (1943). En los años cincuenta se recuperó la capilla. Entre 1973 y 1976 llegó una Virgen de la Soledad de Juan de Ávalos, que sustituyó a la actual pero no convenció a congregantes ni cofrades. La Soledad es una obra anónima del siglo XVIII adquirida en Antequera y fue coronada canónicamente el 11 de junio de 2016.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/mena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "zamarrilla-malaga": {
+   "texto": "Con antecedentes en un rosario callejero, la hermandad se fundó en 1788 con el fin principal de atender el enterramiento de sus hermanos. En 1792, a la vez que se construía su camarín, aparece en la documentación una imagen mariana en torno a una asociación de la que derivaría el culto externo de Zamarrilla. Al tener ermita propia, no sufrió en el siglo XIX los efectos de la desamortización, y llegó a hacer tres salidas con la Virgen que poseía. En 1889 se redactaron nuevos estatutos de la hermandad del Cristo de Zamarrilla.\n\nEn 1921 se instituyó la hermandad de la Virgen de los Dolores, que un año después ingresó en la Agrupación de Cofradías; antes de la siguiente salida, la Virgen pasó a llamarse de la Amargura. En 1926 Antonio Castillo Lastrucci hizo la primera imagen de Jesús del Santo Suplicio. En 1931 la hermandad perdió sus titulares y enseres, y en 1935 procesionó una nueva Virgen, obra de Antonio Gutiérrez de León del siglo XIX. El Cristo de los Milagros fue la opera prima de Francisco Palma Burgos. Entre 1935 y 1945 la hermandad estuvo en San Felipe Neri, y ese último año volvió a la ermita de calle Mármoles. En 1985 se bendijo el nuevo Jesús del Santo Suplicio, última obra de Palma Burgos. En 1994 se puso la primera piedra de la casa hermandad, y nueve años más tarde la Virgen de la Amargura fue coronada canónicamente en la Catedral. La rosa roja que lleva en el pecho alude a la leyenda del bandolero Zamarrilla, cuya flor blanca se tiñó cuando la Virgen lo escondió tras una persecución policial.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/zamarrilla/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha fecha el Cristo de los Milagros en 1935 en la historia y en 1939 en «Sagradas Imágenes»; se omite el año. La reseña anterior daba 1939."
+  },
+  "misericordia-malaga": {
+   "texto": "La cofradía es fruto de la fusión de tres corporaciones: la Hermandad de la Misericordia, fundada en 1864 en la parroquia del Carmen; la de Nuestro Padre Jesús de la Buena Muerte y Ánimas, y la de Nuestra Señora de los Dolores. La de la Buena Muerte ya existía en el siglo XVIII en la parroquia de San Pedro, y la de los Dolores presentó sus estatutos en 1721; ambas pasaron a la iglesia del Carmen en julio de 1883 y se fusionaron un año después, aunque no salieron en procesión en el siglo XIX.\n\nGracias a Francisco de Asís Cabrera Anaya, en 1918 volvieron a la calle. En 1920 procesionaron juntos el Nazareno y la Virgen, pues el Cristo de la Buena Muerte nunca llegó a salir, y en 1921 participaron como una sola corporación en la fundación de la Agrupación de Cofradías. En 1926 la Virgen tomó el nombre de Nuestra Señora del Gran Poder. En los sucesos de 1931 desaparecieron las dos imágenes de Cristo y se salvó la de la Virgen, obra anónima del siglo XVIII que Luis Álvarez Duarte modificó profundamente en 1979. Tras la guerra se restauró la capilla, que volvió al culto en 1944 con la llegada del Nazareno del malagueño José Navas-Parejo. Conocido como «el Chiquito», representa una caída camino del Calvario y parece pequeño, aunque incorporado alcanzaría 1,80 metros. Más tarde inauguró la casa hermandad de la plaza de Jesús de la Misericordia; sus dependencias actuales, anexas a la sede canónica, son obra de Rafael Terol en el siglo XXI.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/misericordia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "esperanza-malaga": {
+   "texto": "La Archicofradía del Dulce Nombre de Jesús está ligada directamente al establecimiento de la Orden de Predicadores en Málaga. A mediados del siglo XVI ya tenía capilla propia y, según la tradición, los toneleros malagueños se encomendaban especialmente a su protección. Tres años después de la bula del papa Pablo V de 1609 salió por primera vez Jesús del Paso, llamado así por la representación de la Pasión en la plaza principal de la ciudad, que terminaba con la bendición de la imagen al pueblo junto a San Juan Evangelista y la Santa Mujer Verónica. En 1641 se constituyó la Hermandad de la Esperanza, incorporada desde su fundación a la Archicofradía.\n\nLa representación del Nazareno en la plaza de las Cuatro Calles, hoy de la Constitución, se mantuvo hasta mediados del siglo XIX y se recuperó a principios del XX; cada Jueves Santo el Nazareno bendice allí, orientado hacia calle Larios. En 1921 la archicofradía participó en la fundación de la Agrupación de Cofradías. En 1931 perdió la antigua imagen del Nazareno, pero salvó la cabeza de la Virgen, obra anónima del siglo XVII restaurada por Adrián Risueño y después por Luis Álvarez Duarte. El Nazareno del Paso actual es obra de Mariano Benlliure (1935) y se bendijo en 1940. Desde 1567 ocupó una capilla cedida por la Orden en Santo Domingo, hasta que en 1988 pasó a su propio templo, cuya primera piedra se había puesto en 1983 y que Juan Pablo II designó basílica diez años después. El 18 de junio de 1988 la Virgen de la Esperanza fue coronada canónicamente en la plaza de la Constitución, y en junio de 2016 volvió a Santo Domingo por el 375 aniversario de la hermandad.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/esperanza/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "monte-calvario-malaga": {
+   "texto": "Tras la toma de la ciudad por los Reyes Católicos, la orden de los Frailes Mínimos obtuvo terrenos para levantar una ermita del Calvario en el cerro de la Cruz o del Humilladero, a espaldas del lugar donde Fernando el Católico instaló su campamento. En 1656 consta documentalmente una primitiva hermandad del Monte Calvario y Vía Crucis, formada por hermanos de la Orden Tercera de San Francisco de Paula.\n\nCon la inauguración del nuevo Seminario Diocesano en 1924, los seminaristas, entre los que destacó Manuel Gámez, se encargaron de cuidar la ermita y dieron culto a Santa María del Monte Calvario, imagen de autor desconocido que Luis Álvarez Duarte prácticamente rehízo en 1970; ese mismo año se encargó a Antonio Eslava Rubio el Cristo Yacente. En 1977 un grupo de jóvenes cofrades asumió el culto a estas imágenes, y dos años más tarde salió por primera vez el Sábado Santo desde el Santuario de la Victoria por las calles del barrio; en 1980 lo hizo ya el Viernes Santo. En julio de 1981 se aprobaron sus estatutos, cuatro meses después ingresó en la Agrupación de Cofradías y al año siguiente pasó por primera vez por el recorrido oficial. En 1995 estrenó su casa hermandad. En 2006 un incendio dañó gravemente a la Virgen de Fe y Consuelo, atribuida a Antonio Asensio de la Cerda (siglo XVIII), y al Cristo Yacente; los recuperó Juan Manuel Miñarro y volvieron a procesionar en 2008. Antes de partir de la basílica de la Victoria, los hermanos inician la estación de penitencia trasladando al Cristo Yacente desde la ermita del Monte Calvario.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/monte-calvario/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "descendimiento-malaga": {
+   "texto": "Sus antecedentes están en el culto a la Virgen de las Angustias, nacido en el siglo XVI al amparo de la orden agustiniana. En 1648 salió por primera vez el misterio del Sagrado Descendimiento junto a la Dolorosa, del que se pierde la pista en 1683; la hermandad de las Angustias mantuvo su esplendor, y la Virgen, sin hermandad ni culto, sigue en la iglesia de San Agustín. En 1925 se retomó la hermandad del Descendimiento, que llegó a formar parte de la Agrupación de Cofradías y a establecerse en la iglesia de la Merced, donde perdió todo su patrimonio en los sucesos de 1931 y cesó su actividad.\n\nEn 1976 un grupo de jóvenes retomó estas advocaciones para recuperar las primitivas hermandades, y la actividad comenzó en 1977. Al año siguiente empezaron a procesionar la Virgen de las Angustias de Antonio Castillo Lastrucci, que las Filipenses del convento de Santa Isabel de Sevilla cedieron a las del convento malagueño de San Carlos; salió por primera vez desde San Felipe Neri la tarde del Sábado Santo, y en 1980 pasó al Viernes Santo. Ese año se encargó a Luis Ortega Brú el grupo del Cristo. En 1982 ingresó en la Agrupación de Cofradías y en octubre de 1984 se trasladó a la capilla del Hospital Noble. Cuatro años más tarde se bendijo el conjunto del Sagrado Descendimiento, terminado tras la muerte de Ortega Brú por su hijo Luis Ángel Ortega León, autor también de Nuestra Señora del Santo Sudario (1987). Al pasar ante el Ayuntamiento, la hermandad pide a la corporación municipal una venia simbólica, además de la preceptiva en la tribuna principal.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/descendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "dolores-de-san-juan-malaga": {
+   "texto": "La hermandad de penitencia de Nuestra Señora de los Dolores nació en el siglo XVI como filial de la desaparecida del Cristo de la Columna de la parroquia de San Juan, de la que se independizó en 1675; ese año adquirió una imagen de la Virgen obra de Pedro de Mena. Antes de su denominación actual, que llegó en 1687, tuvo las advocaciones de Nuestra Señora del Triunfo y de la Soledad, y un año más tarde se aprobaron sus primeros estatutos. A finales del siglo XVIII, para no desaparecer por una orden del rey Carlos III, se unió a la hermandad sacramental de la parroquia, que databa de 1487 y estaba agregada desde 1540 a la Archicofradía del Santísimo Sacramento de la basílica romana de Santa María sopra Minerva. En aquellos siglos sus fines eran la asistencia a los hermanos y su enterramiento, y el culto al Santísimo Sacramento y a la Virgen.\n\nEn los sucesos de 1931 desapareció la imagen de Mena, y en 1941 el anticuario Antonio Pons y Rodríguez de Verger donó la actual, una talla anónima del siglo XVIII atribuida a la familia Asensio de la Cerda. En 1977 una reforma de estatutos dio nuevo impulso al culto externo, y al año siguiente la Virgen salió el Viernes Santo por el recorrido oficial; meses después la archicofradía ingresó en la Agrupación de Cofradías. Desde aquella procesión, austera y en silencio, mantiene vínculos con las Hermanas de la Cruz de la plaza de Arriola, que le dedicaron un motete improvisado a su paso. En 1987 el hispalense Juan Manuel Miñarro talló el Cristo de la Redención, y en 1989 la hermandad hizo su primera estación de penitencia en la Catedral.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/dolores-de-san-juan/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "amor-malaga": {
+   "texto": "La imagen del Cristo del Amor, que se veneraba en el desaparecido convento de las Madres Agustinas del barrio de la Victoria, dio origen a la cofradía, nacida en 1923 en uno de los momentos de mayor esplendor procesional del siglo XX. Un año después su recién estrenada junta de gobierno logró el ingreso en la Agrupación de Cofradías e hizo la primera salida con el crucificado y la Dolorosa que figura a sus pies, ambas obras de Fernando Ortiz del siglo XVIII. Desde entonces mantiene vínculos especiales con la orden agustiniana, cuyo escudo del águila bicéfala adoptó como propio. El Cristo, de tamaño menor que el natural, forma con la Dolorosa uno de los conjuntos históricos mejor conservados.\n\nEn 1931 Alfonso XIII le concedió el título de Real. En los sucesos del 11 al 12 de mayo de ese año los hermanos escondieron las imágenes en la casa de Carlos Tomassetti Caritat. En 1935 incorporó la advocación de la Virgen de la Caridad, cuya primera talla se perdió en 1936, mientras el conjunto del Cristo se escondía en el vecino hospital militar. Tras la Guerra Civil la hermandad adquirió definitivamente el Crucificado y la Dolorosa, y la reconstrucción la dirigió Alfonso Sell Aloy, hermano mayor durante casi 40 años. La Virgen de la Caridad actual es de Francisco Buiza (1947). En 1949, por decisión del Obispado, se trasladó a la capilla castrense, y en 1972 volvió al Santuario de la Victoria. Tras años de dificultades internas, ha contado con el apoyo de estudiantes de los colegios Los Olivos y Maristas, y en los últimos años ha culminado el trono de la Virgen de la Caridad y su casa hermandad, de estilo futurista, en la Victoria.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/amor/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "traslado-malaga": {
+   "texto": "Sus antecedentes se sitúan en 1665, cuando un grupo de panaderos empezó a dar culto en la iglesia de la Aurora María a una Virgen de la Soledad tallada por Pedro de Mena. A finales del siglo XVII se convirtió en titular de la hermandad propiamente dicha, con culto en San Juan, y en el siglo XIX pasó a la iglesia de San Pablo; salió en procesión por primera vez en 1851.\n\nLa corporación actual nace en 1918 por el empeño de un grupo de devotos y comerciantes, y en 1921 fue una de las fundadoras de la Agrupación de Cofradías. Hasta 1931 salía desde la Aurora María, ya con guardia romana en el cortejo. Durante la quema de iglesias y conventos los hermanos intentaron en vano salvar la imagen de la Virgen. Finalizada la Guerra Civil se le cedió para la procesión una dolorosa de Gutiérrez de León del siglo XIX, pero en 1945 Pedro Moreira López talló la Virgen actual, tomando como base la de Mena; cuatro años después el mismo imaginero hizo a Jesús y los tres varones, que procesionaron el Viernes Santo de 1951. Con la llegada del titular cristífero cambiaron las túnicas, y en los años sesenta se reformó la capilla en la que reciben culto. En 2000 se puso la primera piedra de la casa hermandad de calle Trinidad, bendecida e inaugurada tres años más tarde, y en 2011 se renovó el grupo escultórico, obra de Israel Cornejo, vestido por Ladrón de Guevara con ropajes de estilo napolitano. Como la Soledad es de talla completa y está ante la cruz, no lleva palio ni manto bordado.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/santo-traslado/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior situaba la cesión de la dolorosa de Gutiérrez de León «tras 1931»; la ficha la sitúa al terminar la Guerra Civil."
+  },
+  "piedad-malaga": {
+   "texto": "En los andenes de la estación de ferrocarriles de Málaga, un grupo de carteros decidió fundar una hermandad, que se constituyó el 11 de junio de 1926 como Hermandad de María Santísima de la Piedad. Estos trabajadores de Correos encargaron a Francisco Palma García la primera imagen, que se bendijo en 1927 y ese mismo año hizo su primera salida desde la desaparecida iglesia de la Merced; un año más tarde la hermandad ingresó en la Agrupación de Cofradías. En el asalto al templo de 1931 la talla fue destruida, y solo quedó intacto uno de los brazos del Cristo Yacente que la Virgen sostenía.\n\nEn 1940 el cartero Francisco Rodríguez Frasquier retomó la hermandad con un grupo de trabajadores de Correos y comerciantes y con Francisco Palma Burgos, que hizo la nueva Virgen de la Piedad (1941) siguiendo el modelo de su padre y reintegrando el brazo de la imagen anterior; por tratarse de una idea original de Palma García, la firmó como su autor primigenio. En 1940 la hermandad, establecida en la parroquia de los Santos Mártires, nombró hermanos mayores honorarios al director general de Correos y Telégrafos y al director de la Compañía Telefónica Nacional de España. En 1952 se trasladó a la capilla del Molinillo, del siglo XVIII, restaurada por Enrique Atencia. Los planes de ordenación urbana acabaron demoliéndola, pero sus pinturas murales se extrajeron y desde 2004 decoran la nueva capilla, de líneas similares a la antigua, tras la que se levantó la casa hermandad.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/piedad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "santo-sepulcro-malaga": {
+   "texto": "En un siglo XIX difícil para las hermandades de penitencia, marcado por conflictos y desamortizaciones, un grupo de miembros de la burguesía local fundó entre 1893 y 1894 la hermandad del Santo Sepulcro en el Santuario de la Victoria. Recuperó para las procesiones malagueñas la imagen del entierro de Cristo tras casi un siglo, con una primera salida en 1898. La presencia de la corporación municipal en el cortejo y una subvención la ligaron desde entonces al Ayuntamiento y la convirtieron en la cofradía oficial de la ciudad; esa relación se perdió a partir de 1912 por los cambios políticos y se recuperó entre 1915 y 1931.\n\nEn los años veinte formó un destacado cortejo, del que procede parte del catafalco del Señor, y en 1921 estuvo entre las fundadoras de la Agrupación de Cofradías. Los sucesos del 11 al 12 de mayo de 1931 apenas la afectaron, pero en 1936 perdió sus titulares. En 1938, por orden del obispo Balbino Santos Olivera, salió el nuevo Señor de Nicolás Prados López, y poco después volvió a procesionar la Virgen de la Soledad, obra de José Merino Román (1932) adquirida por la hermandad en 1938; se bendijo en San Román en 1935 y había salido antes con la hermandad de los Gitanos de Sevilla, aunque la encargó la de la Hiniesta. En 1943 la Armada Española fue nombrada hermana mayor honoraria, y en 1967 la hermandad se trasladó a los Santos Mártires. Con la democracia se renovaron las relaciones protocolarias con el Ayuntamiento y la Diputación, ya sin subvenciones. En diciembre de 2002 estrenó casa hermandad en calle Alcazabilla, y en 2014 sus titulares pasaron a la capilla de la abadía cisterciense de Santa Ana.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/sepulcro/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "servitas-malaga": {
+   "texto": "La Orden Tercera nació en Florencia en el siglo XIII y llegó a Málaga en 1695 con una antigua confraternidad servita que se extinguió a principios del siglo XVIII. Antonio Tomás Guerrero Coronado Zapata, conde de Buenavista e impulsor del conjunto de San Felipe Neri y del actual instituto Gaona, promovió con la orden filipense la creación de la Orden actual: en 1739 cedió la casa contigua al templo y donó una imagen de la Virgen de los Dolores, y en mayo de 1741 se erigió canónicamente la confraternidad.\n\nDesde finales del siglo XIX y hasta fechas recientes, la Virgen salía cada noche de Viernes Santo con un halo de estrellas con luz que la iluminaba. En 1931 desapareció la talla donada por el conde, que fue sustituida por otra dolorosa de Fernando Ortiz. En los difíciles años treinta la imagen recibió culto en la Catedral, y la suya fue la única procesión celebrada en 1937. En 1957 se instituyó el pésame a la Virgen en el primer templo de la ciudad, tradición ya extinguida. La Venerable Orden Tercera es miembro de honor de la Agrupación de Cofradías y cada Viernes Santo hace estación de penitencia por el recorrido oficial como si fuera una hermandad. Durante el recorrido sus miembros rezan la corona dolorosa, las calles apagan sus luces al paso del cortejo y para alumbrarlas se usan cirios de tres pabilos.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/hermandades/servitas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior atribuía a Pedro de Mena la dolorosa donada por el conde de Buenavista; la ficha no da autor y se ha quitado. La ficha fecha la Virgen de Ortiz en el «siglo XVII»; se omite el siglo."
+  },
+  "resucitado-malaga": {
+   "texto": "El Santísimo Cristo Resucitado es el titular de la Agrupación de Cofradías desde su constitución, el 21 de enero de 1921, y con él la institución cierra el ciclo de la Pasión y Muerte de Jesús que representan las demás corporaciones. Lo han representado dos imágenes. La primera, anónima del siglo XVII, procesionó entre 1921 y 1945; es propiedad del Monasterio Cisterciense de la Asunción de Nuestra Señora, en El Atabal, cuya orden la cedía cada año para el Domingo de Resurrección.\n\nEn 1943 la Agrupación, presidida por Enrique Navarro Torres, pidió bocetos para una nueva talla a imagineros como Guerrero Utrera, Adrián Risueño, Martínez Cerrillo, José Ortells o Palma Burgos, pero ninguno la convenció; aconsejada por el padre Félix Granda, la junta de gobierno eligió al escultor valenciano afincado en Madrid José Capuz para hacer la imagen y su grupo escultórico. El nuevo Resucitado salió en 1946, en el 25 aniversario de la Agrupación, y al año siguiente se terminó el grupo, dos guardianes romanos, uno dormido y otro despierto y sorprendido, que lo acompañó hasta comienzos de los años ochenta; Francisco Naranjo Beltrán lo restauró en 1999 y se conserva en la sede de la Agrupación. La imagen de Capuz, con los brazos pegados al cuerpo, sostiene una cruz dorada a modo de cetro y bendice sobre una nube con dos palomas; la restauró en 2007 el Instituto Andaluz de Patrimonio Histórico. Para dotar a la Agrupación de una titular mariana, en 1992, bajo la presidencia de Jesús Saborido Sánchez, se encargó a Luis Álvarez Duarte María Santísima Reina de los Cielos, que el obispo Antonio Dorado Soto bendijo el 8 de diciembre de 1994 en los Santos Mártires.",
+   "fuentes": [
+    "https://agrupaciondecofradias.com/titulares/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "mutilado-clemencia-malaga": {
+   "texto": "A finales del siglo XVII se encargó a Jerónimo Gómez de Hermosilla un crucificado para el ático del retablo mayor de la parroquia del Sagrario de la Catedral, donde permaneció hasta el primer tercio del siglo XX. Entre julio y septiembre de 1936 el Sagrario fue asaltado; la imagen se salvó por la altura a la que estaba, aunque con daños en la pierna derecha y el pie izquierdo. La recogió un grupo de caballeros mutilados y, a iniciativa de Fernando Roldán Andreu, el 16 de febrero de 1939 se erigió la Cofradía del Santísimo Cristo Mutilado; por tratarse de una imagen mutilada necesitó la aprobación de la Santa Sede, que dio el papa Pío XII. Ese año salió por primera vez en la noche del Jueves Santo, escoltado por 300 caballeros mutilados de uniforme, y se incorporó a la Agrupación de Cofradías; en 1940 estrenó un trono diseñado por Adrián Risueño y tallado por Andrés Cabello Requena.\n\nLa cofradía llegó a superar los 15.000 hermanos, pero el Jueves Santo de 1976 procesionó por última vez; desde entonces mantuvo el culto interno, y en 1996 fue desagrupada porque los nuevos estatutos de la Agrupación excluían a las hermandades que llevaran cinco años sin salir sin causa justificada. En marzo de 2016 incorporó como titular a Santa María Madre de la Divina Providencia, dolorosa de finales del siglo XVII atribuida a Antonio del Castillo. En 2018 su cabildo aprobó restaurar el Cristo, y Juan Manuel Miñarro López lo hizo entre 2019 y 2020, restituyendo las extremidades mediante un escaneo 3D. A finales de septiembre de 2020 se aprobó la nueva advocación de Clemencia, y tras los estatutos aprobados en octubre de 2021, el Sábado de Pasión de 2022 hizo su primera estación de penitencia en la Catedral, desde la iglesia del Sagrado Corazón, después de 46 años sin culto externo.",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Hermandad_del_Mutilado_(M%C3%A1laga)"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación (no agrupada); fuente: artículo de Wikipedia con referencias. Otro artículo de Wikipedia («Corporaciones no agrupadas») da como fecha de fundación el 17 de febrero de 1939 y sitúa el saqueo del Sagrario en mayo de 1931; se ha seguido el artículo propio de la hermandad."
+  },
+  "desamparados-malaga": {
+   "texto": "El Grupo Parroquial de Jesús en su Pasión, Nuestra Señora de los Desamparados y Santa María Goretti tiene su sede en la parroquia de Santa María Goretti, en el barrio de Los Corazones. Procede de una antigua prohermandad fundada en 2007, que a su vez era una reorganización de la antigua Hermandad del Cristo de Cabrilla, del siglo XVIII. Su titular mariana, Nuestra Señora de los Desamparados, es obra de Juan Vega de 2007, año de la fundación del grupo, y salió por primera vez ese año de manera extraordinaria con motivo de su bendición. Procesiona sobre el antiguo trono de los Dolores de San Juan, con un manto bordado por Joaquín Salcedo. Sale el Sábado de Pasión por las calles del barrio, en una procesión que se caracteriza por el luto y la sobriedad.",
+   "fuentes": [
+    "https://elitinerario.es/desamparados/",
+    "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación. Fuentes: perfil de El Itinerario (medio cofrade malagueño) y Wikipedia. Wikipedia dice que la Virgen «fue procesionada por primera vez en el año 2008»; El Itinerario, que salió de forma extraordinaria en 2007 por su bendición. Se sigue El Itinerario y se omite 2008. Ninguna fuente da autor ni fecha de la imagen del Señor."
+  },
+  "verdad-y-sagrario-malaga": {
+   "texto": "El Grupo Parroquial de Nuestro Padre Jesús de la Verdad ante Caifás y María Santísima del Sagrario se constituyó antes como asociación de Nuestro Padre Jesús de la Paz y Humildad y María Santísima Estrella del Carmen, primero en la barriada de Huelin y después en Las Delicias, hasta lograr establecerse en la parroquia de San José Obrero, en Carranque. El Señor de la Verdad es obra de Mario Zambrano Pareja y se bendijo en San José Obrero en 2016; lo acompañan Caifás, del mismo autor y año, Anás, de Francisco Pinto (siglo XX), y un guardia judío del escultor filipino Wilfredo Tadeo Layug (2023), que también intervino en su taller asiático la imagen del Señor. La Virgen del Sagrario es obra de Layug (2020) y sustituyó ese año a la imagen anterior, de Zambrano. Sale el Sábado de Pasión desde un tinglao en la calle Virgen del Rocío. En 2025 la Agrupación de Cofradías eligió a la Virgen del Sagrario, titular de un grupo no agrupado, para presidir el altar que levanta cada año en el Corpus Christi.",
+   "fuentes": [
+    "https://elitinerario.es/verdad-y-sagrario/",
+    "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga",
+    "https://www.gentedepaz.es/la-virgen-del-sagrario-de-carranque-presidira-el-altar-de-la-agrupacion-de-cofradias-en-el-corpus-christi-de-malaga/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación. La reseña anterior decía que «sus dos titulares son obra del sevillano Mario Zambrano»; según El Itinerario, la Virgen actual es de Wilfredo Tadeo Layug (2020), que sustituyó a la de Zambrano."
+  },
+  "luz-y-mar-malaga": {
+   "texto": "Sus orígenes están en una cruz de mayo: en 1999 un grupo de amigos, carnavaleros y cofrades de la peña carnavalesca de San Andrés colocó en ella una pequeña talla muy similar a Nuestro Padre Jesús Cautivo, y la devoción de los vecinos convenció a Miguel González, «El Cabeza», uno de los precursores del Carnaval de Málaga, de que el barrio necesitaba una hermandad. Así nació en el año 2000 la Asociación de Fieles del Santísimo Cristo, Luz del Mundo; María Santísima del Mar y Nuestro Padre Jesús de los Niños, con el objetivo de unir a través de la fe a los barrios de San Andrés y La Luz. El día en que se formalizó se apuntaron 70 personas.\n\nSu primera imagen oficial fue Jesús de los Niños, encargada a Pepe Dueñas para sustituir al «Cautivito» original. En 2006 llegó María Santísima del Mar, obra de Liébana, cuya advocación honra el carácter marinero del barrio, y en 2016 se bendijo el Santísimo Cristo, Luz del Mundo, de Valerio Tellez Bermúdez, que representa el momento en que se le entrega la cruz. Su fundador, Miguel González, murió el 25 de diciembre de 2011. Durante años las imágenes estuvieron en una capilla callejera, hasta que el 17 de enero de 2025 el grupo parroquial logró como sede canónica la parroquia de Nuestra Señora Virgen del Camino. Sale el Sábado de Pasión desde Nuevo San Andrés y pasa también por los barrios de La Luz y Belén.",
+   "fuentes": [
+    "https://www.elespanol.com/malaga/cultura/cofradias/20250412/luz-mar-grupo-parroquial-san-andres-cumple-anos-raices-carnavaleras-solo-pensamos-hacer-barrio/1003743711145_0.html",
+    "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación. Fuentes: El Español Málaga (12-4-2025) y Wikipedia (autores del Cristo y de la Virgen). El artículo dice «el pasado 17 de enero» en una pieza de abril de 2025, de ahí el año."
+  },
+  "buen-camino-gamarra-malaga": {
+   "texto": "Su origen está en la procesión que los alumnos de Primaria del colegio de Gamarra hacían cada Viernes de Dolores por una zona del jardín del centro. En abril de 2012 la directora titular, Mª del Pilar Linde Cirujano, se propuso dignificar ese acto, y por gestión de Jesús Castellanos Guerrero y Carlos Martínez Domínguez, de la junta de la Agrupación de Cofradías, la Hermandad del Dulce Nombre cedió sus antiguas imágenes de Jesús de la Soledad y la Virgen del Dulce Nombre, que llegaron a Gamarra en julio de 2012 y se presentaron el 29 de enero de 2013 dentro del proyecto «Sentir Cofrade». El Viernes de Dolores de 2013 la antigua Virgen del Dulce Nombre procesionó por primera vez por el interior del colegio junto al pequeño crucificado que salía cada año.\n\nDe aquella colaboración nació la asociación Cofrades de Gamarra, inscrita en julio de 2014 en el registro de asociaciones civiles, que mantuvo la procesión aunque el proyecto Sentir Cofrade se fue vaciando de contenido. En 2016 decidió adquirir una talla propia, y el 2 de marzo de 2017 se presentó en el Palacio Episcopal la Purísima Madre del Buen Camino, obra del imaginero malagueño José María Ruiz Montes, con una advocación propia de la devoción mariana de las Hijas de Jesús. Tras la Semana Santa de 2019 presentó a la Delegación de Hermandades y Cofradías y al vicario general, Antonio Coronado, la documentación para constituirse como Grupo Parroquial de la Purísima Madre del Buen Camino y Santa Cándida María de Jesús, adscrito a la parroquia de la Purísima de Gamarra; la Virgen sigue recibiendo culto en la capilla del colegio.",
+   "fuentes": [
+    "https://buencaminogamarra.com/historia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación; fuente: web propia del grupo parroquial. La reseña anterior decía que procesiona «por las calles del barrio de Gamarra»; la web solo habla de la procesión por el interior del colegio."
+  },
+  "medinaceli-martiricos-malaga": {
+   "texto": "La corporación se formó en 2004 en la parroquia de San Pío X, en el barrio de La Palma, y más tarde tuvo que trasladarse a la parroquia de Santo Tomás de Aquino, en Martiricos. Sus titulares son obra del escultor veleño Israel Cornejo: Jesús de Medinaceli (2005) y María Santísima de la Candelaria (2006), que acompaña al Señor por las calles de Málaga desde 2014. Por decreto firmado el día 10 de diciembre de 2013, el obispo Jesús Catalá erigió la asociación como hermandad de penitencia, con el título de Cofradía de Jesús de Medinaceli, Santo Cristo del Socorro y María Santísima de la Candelaria, al apreciar su «madurez eclesial». Ha intentado varias veces entrar en la Agrupación de Cofradías; la última, en 2018, con 37 votos en contra, uno favorable y tres en blanco. Sale el Viernes de Dolores, y su recorrido cruza La Goleta, El Molinillo y La Trinidad hasta el centro, por calle Larios y el entorno de la Catedral.",
+   "fuentes": [
+    "https://elitinerario.es/medinaceli/",
+    "https://rinconcofrade.com/medinaceli-erigida-como-hermandad-en-malaga/",
+    "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación. Fuentes: El Itinerario, Rincón Cofrade (24-12-2013, que cita a Elcabildo.org) y Wikipedia."
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "texto": "La devoción a la Virgen de los Dolores en el Puerto de la Torre viene de tiempo inmemorial y se cree que nació en las capillas y oratorios de los antiguos cortijos y lagares de los partidos rurales de Santa Catalina y Verdiales. Hasta mayo de 1931 la barriada tuvo una pequeña capilla con una dolorosa del siglo XVIII, y al consagrarse la iglesia parroquial de Nuestra Señora de los Dolores, el 10 de noviembre de 1942, ocupó su altar mayor una dolorosa seriada de los talleres de Olot. En torno a ella, un grupo de feligreses presidido por fray Gerardo de Jesús María, carmelita descalzo responsable de la parroquia, constituyó en mayo de 1949 la Hermandad del Santísimo Sacramento y María Santísima de los Dolores, dedicada a la caridad y al culto, que retomó la vieja tradición de la ermita de Verdiales de sacar a la Virgen el Viernes de Dolores.\n\nEn 1957 la hermandad, con aportaciones de los vecinos, donó a la parroquia un crucificado seriado, también de Olot, que se bendijo como Santísimo Cristo de la Hermandad y se incorporó a la procesión al año siguiente y al título de la corporación. Ese conjunto salió sin interrupción cada Viernes de Dolores hasta 1993, cuando se sustituyó la imagen de la Virgen y la antigua quedó presidiendo el altar mayor. En 1992, con aprobación eclesiástica, reformó sus estatutos y pasó a llamarse Cofradía Sacramental del Santísimo Cristo de la Hermandad y Nuestra Señora de los Dolores. En 1994 fundó la Banda de Cornetas y Tambores de Ntra. Sra. de los Dolores, hoy sin actividad, y en 2006 adaptó sus estatutos a la normativa diocesana.",
+   "fuentes": [
+    "https://doloresdelpuerto.com/historia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación; fuente: web propia de la cofradía. Su portada anuncia en 2026 el XXV aniversario de la bendición del «Santísimo Cristo de Hermandad y Caridad», lo que apunta a una imagen posterior a la de 1957; la página de historia no lo explica y no se ha incluido."
+  },
+  "dolores-de-churriana-malaga": {
+   "texto": "Hasta 1989 el Nazareno del Paso y la Virgen de los Dolores pertenecían a dos hermandades distintas. La Hermandad del Dulce Nombre de Jesús Nazareno del Paso y Nuestra Señora del Rosario se fundó sobre el año 1712 y se ocupaba de los entierros y las ánimas, como casi todas las de su tiempo; se cree que fue una fundación dominica. La de los Dolores se fundó en el siglo XIX. En los sucesos de 1931 la imagen del Nazareno fue vejada e incluso se le quiso cortar la cabeza con un hacha; la hermandad decidió no cubrir el corte en la restauración y aún se ve en el cuello del Señor.\n\nEn 1940 hubo una procesión de carácter parroquial el Viernes de Dolores, y en 1976, tras un periodo de languidez, se reactivó la actividad. En 1989 ambas corporaciones se fusionaron en la hermandad actual. Tanto el Nazareno como la Virgen de los Dolores, restaurada por Salvador Guzmán Moral, son obras anónimas del siglo XVIII, y el Nazareno es la imagen más antigua de la capital con esa iconografía; San Antonio Abad es una talla anónima del siglo XX. Procesiona el Viernes de Dolores por las calles de Churriana.",
+   "fuentes": [
+    "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Churriana_(M%C3%A1laga)",
+    "https://es.wikipedia.org/wiki/Corporaciones_no_agrupadas_de_la_Semana_Santa_de_M%C3%A1laga"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Sin ficha en la Agrupación. Wikipedia fecha la fusión en 1989; el campo «fundacion» de portal.json dice «unificación actual en 1990»."
   }
  }
 }
