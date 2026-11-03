@@ -1260,7 +1260,7 @@ function pageDirHerm() {
 }
 // Siglas del tipo de formación para el sello de las tarjetas de bandas
 const SIGLA_TIPO = { 'Banda de cornetas y tambores': 'CT', 'Agrupación musical': 'AM', 'Banda de música': 'BM', 'Capilla musical': 'CM', 'Música militar': 'MM', 'Formación musical': 'FM' };
-function entryBanda(b) {
+function entryBanda(b, mas = false) {
   const cs = [...new Set(b.acompana.map((a) => a.ciudad))];
   const herms = new Set(b.acompana.filter((a) => HERM[a.hermandad_slug]).map((a) => a.hermandad_slug)).size;
   const col = CAP[b.origen] ? CAP[b.origen].color : '';
@@ -1268,11 +1268,11 @@ function entryBanda(b) {
   const meta = [b.tipo ? `<span class="nx-tema">${esc(b.tipo)}</span>` : '', b.localidad ? `<span class="vx-autor">${esc(b.localidad)}</span>` : ''].join('');
   const acomp = herms ? `<p class="vx-ded">Acompaña a <b>${plural(herms, 'cofradía', 'cofradías')}</b></p>` : '';
   const pie = cs.map(cityTag).join('') + (rep ? `<span class="vx-play is-rep">${plural(rep, 'marcha', 'marchas')} en su repertorio</span>` : '');
-  return `<li class="oc-entry vx-m" data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(SIGLA_TIPO[b.tipo] || inicialesM(b.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('banda/' + b.slug + '/')}">${esc(b.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${acomp}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(SIGLA_TIPO[b.tipo] || inicialesM(b.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('banda/' + b.slug + '/')}">${esc(b.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${acomp}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirBandas() {
   const tipos = [...new Set(D.bandas.map((b) => b.tipo))].sort();
-  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map(entryBanda).join('');
+  const items = [...D.bandas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((b, i) => entryBanda(b, i >= 50)).join(''); // is-mas: como en Hermandades (pageDirHerm)
   const nAcomp = D.bandas.reduce((s, b) => s + b.acompana.filter((a) => HERM[a.hermandad_slug]).length, 0);
   const nCap = new Set(D.bandas.flatMap((b) => b.acompana.map((a) => a.ciudad))).size;
   // Por tipo: cuántas hay y la que más cofradías acompaña de cada tipo
@@ -1292,16 +1292,16 @@ function sigloImag(i) {
   return s && ROMANO[s] ? 'Siglo ' + ROMANO[s] : 'Sin datar';
 }
 const capPrincipal = (i) => { const n = {}; for (const o of i.obras) { const h = HERM[o.hermandad_slug]; if (h) n[h.ciudad] = (n[h.ciudad] || 0) + 1; } return Object.entries(n).sort((a, b) => b[1] - a[1])[0]?.[0] || i.ciudades[0] || ''; };
-function entryImag(i) {
+function entryImag(i, mas = false) {
   const cp = capPrincipal(i), col = CAP[cp] ? CAP[cp].color : '', siglo = sigloImag(i);
   const meta = [i.vida ? `<span class="vx-autor">${esc(i.vida)}</span>` : '', siglo !== 'Sin datar' ? `<span class="nx-tema">${esc(siglo)}</span>` : ''].join('');
   const obra = i.obras[0] ? `<p class="vx-ded">${plural(i.obras.length, 'obra', 'obras')}: <b>${esc(String(i.obras[0].titular).split(',')[0])}</b>${i.obras.length > 1 ? ' y más' : ''}</p>` : '';
   const pie = i.ciudades.map(cityTag).join('') + (i.escuela ? `<span class="vx-play is-rep">${esc(i.escuela.replace(/\s*\(.*\)$/, ''))}</span>` : '');
-  return `<li class="oc-entry vx-m" data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}" data-tipo="${slugify(siglo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(i.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('imaginero/' + i.slug + '/')}">${esc(i.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${obra}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}" data-tipo="${slugify(siglo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(i.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('imaginero/' + i.slug + '/')}">${esc(i.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${obra}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirImag() {
   const lista = [...D.imagineros].sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es'));
-  const items = lista.map(entryImag).join('');
+  const items = lista.map((x, k) => entryImag(x, k >= 50)).join(''); // is-mas: como en Hermandades (pageDirHerm)
   const nObras = D.imagineros.reduce((s, i) => s + i.obras.length, 0);
   const nCap = new Set(D.imagineros.flatMap((i) => i.ciudades)).size;
   // Por siglo: cuántos hay y el de más obra de cada uno
