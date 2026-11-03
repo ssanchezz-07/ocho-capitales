@@ -6,7 +6,7 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 
 ## Málaga (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-12 sin ninguna foto de titular; 20 con algún titular sin foto.
+13 sin ninguna foto de titular; 20 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -36,6 +36,7 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 | Monte Calvario | Viernes Santo | Cristo: Santísimo Cristo Yacente de la Paz y Unidad |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Santo Sepulcro; Virgen: Nuestra Señora de la Soledad |
 | Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado |
+| Desamparados | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Señora de los Desamparados |
 | Verdad y Sagrario | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Verdad ante Caifás; Virgen: María Santísima del Sagrario |
 | Luz y Mar | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo Luz del Mundo; Virgen: María Santísima del Mar |
 | Buen Camino (Gamarra) | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Purísima Madre del Buen Camino |

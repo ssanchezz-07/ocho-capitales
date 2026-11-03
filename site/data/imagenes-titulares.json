@@ -658,10 +658,10 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "titular": "Santísimo Cristo de la Sangre",
     "recorte": [
-     0.28,
-     0.1,
-     0.56,
-     0.56
+     0.42,
+     0.12,
+     0.54,
+     0.54
     ]
    },
    "virgen": {
@@ -676,12 +676,13 @@
   },
   "expiracion-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_Coronada.jpg",
-    "titulo": "File:La Virgen de los Dolores Coronada.jpg",
-    "autor": "Archicofradía de la Expiración",
+    "pagina": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_vestida_para_el_Mi%C3%A9rcoles_Santo.jpg",
+    "titulo": "File:La Virgen de los Dolores vestida para el Miércoles Santo.jpg",
+    "autor": "Luis Manuel Gómez Pozo",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de los Dolores Coronada"
+    "titular": "María Santísima de los Dolores Coronada",
+    "foco": "50% 25%"
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg",
@@ -2690,8 +2691,8 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Paz",
     "recorte": [
-     0.44,
-     0.18,
+     0.385,
+     0.17,
      0.2,
      0.4
     ]
