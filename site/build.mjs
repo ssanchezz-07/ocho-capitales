@@ -350,12 +350,12 @@ function eventosLiturgicos(years) {
     const e = easter(y);
     const add = (off, titulo, nota) => ev.push({ fecha: isoDay(e + off * 864e5), tipo: 'liturgico', titulo, nota, ciudad: '' });
     add(-46, 'Miércoles de Ceniza', 'Comienza la Cuaresma.');
-    add(-9, 'Viernes de Dolores', 'Vísperas de la Semana Santa.');
+    add(-9, 'Viernes de Dolores', 'Viernes anterior al Domingo de Ramos.');
     add(-7, 'Domingo de Ramos', 'Comienza la Semana Santa.');
-    add(-3, 'Jueves Santo', 'Santos Oficios y, por la noche, la Madrugá.');
+    add(-3, 'Jueves Santo', 'Misa de la Cena del Señor, que abre el Triduo Pascual.');
     add(-2, 'Viernes Santo', 'Pasión y muerte del Señor.');
-    add(0, 'Domingo de Resurrección', 'Termina la Semana Santa.');
-    add(60, 'Corpus Christi', 'Procesión del Santísimo en las capitales andaluzas.');
+    add(0, 'Domingo de Resurrección', 'Pascua de Resurrección.');
+    add(60, 'Corpus Christi', 'Sevilla y Granada mantienen en jueves la procesión del Corpus.');
   }
   return ev;
 }
@@ -529,7 +529,7 @@ ${body}${colabora(p, title)}
       <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
-    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades contrastados con consejos, agrupaciones y federaciones oficiales. Imágenes de Wikimedia Commons con su licencia.</p>
+    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons con su licencia.</p>
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
@@ -598,7 +598,7 @@ function horasPaso(h) {
 }
 // Los horarios cargados son de esta Semana Santa: fuera de temporada se avisa para que no parezcan los del año que viene
 const ANIO_HORARIOS = 2026;
-const avisoHorarios = () => { const { year } = pickSlot(madridNow()); return !TEMPORADA.fuera || year <= ANIO_HORARIOS ? '' : `<p class="hy-aviso">Horarios de ${ANIO_HORARIOS}; los de ${year} se publican en Cuaresma.</p>`; };
+const avisoHorarios = () => { const { year } = pickSlot(madridNow()); return !TEMPORADA.fuera || year <= ANIO_HORARIOS ? '' : `<p class="hy-aviso">Horarios de ${ANIO_HORARIOS}; los de ${year} se pondrán en cuanto se publiquen.</p>`; };
 const notaCarrera = (hs) => { const h = hs.find((x) => x.lugar_carrera); return h ? `<p class="hy-carrera">Carrera: hora de paso por ${esc(h.lugar_carrera)}, que marca el orden. Sin ese dato, se indica la salida.</p>` : ''; };
 function todayPanel() {
   const now = madridNow();
@@ -767,9 +767,9 @@ function plates(big) {
 // Curiosidades calculadas con los datos del propio portal: cada una enlaza a su ficha. Una distinta cada día (según la fecha de Madrid).
 function curiosidades() {
   const out = [];
-  for (const i of D.imagineros) if (i.obras.length >= 6) out.push({ t: `${i.nombre} firma ${i.obras.length} de las imágenes que procesionan en el portal, repartidas en ${plural(i.ciudades.length, 'capital', 'capitales')}.`, u: u('imaginero/' + i.slug + '/'), l: 'Ver imaginero' });
+  for (const i of D.imagineros) if (i.obras.length >= 6) out.push({ t: `${i.nombre} tiene ${i.obras.length} obras en las hermandades del portal${i.obras.some((o) => o.atrib) ? ' (' + i.obras.filter((o) => o.atrib).length + ' de ellas, atribuidas)' : ''}, repartidas en ${plural(i.ciudades.length, 'capital', 'capitales')}.`, u: u('imaginero/' + i.slug + '/'), l: 'Ver imaginero' });
   for (const a of AUTORES.values()) if (a.marchas.length >= 5) out.push({ t: `${a.nombre} tiene ${a.marchas.length} marchas en el catálogo, entre ellas «${a.marchas[0].titulo}».`, u: u('compositor/' + a.slug + '/'), l: 'Ver compositor' });
-  for (const b of D.bandas) { const n = new Set(b.acompana.map((x) => x.hermandad_slug)).size; const k = new Set(b.acompana.map((x) => x.ciudad)).size; if (n >= 4) out.push({ t: `${b.nombre} acompaña a ${n} cofradías en ${plural(k, 'capital', 'capitales')}.`, u: u('banda/' + b.slug + '/'), l: 'Ver banda' }); }
+  for (const b of D.bandas) { const n = new Set(b.acompana.map((x) => x.hermandad_slug)).size; const k = new Set(b.acompana.map((x) => x.ciudad)).size; if (n >= 4) out.push({ t: `${b.nombre} figura en el portal con ${n} cofradías de ${plural(k, 'capital', 'capitales')}.`, u: u('banda/' + b.slug + '/'), l: 'Ver banda' }); }
   for (const h of D.hermandades) { const y = String(h.fundacion).match(/^(\d{4})$/); if (y && +y[1] <= 1650) out.push({ t: `${h.nombre} (${CAP[h.ciudad].nombre}) se fundó en ${y[1]}: hace ${new Date().getFullYear() - +y[1]} años.`, u: u('hermandad/' + h.slug + '/'), l: 'Ver hermandad' }); }
   for (const cp of D.capitales) for (const d of DAY_ORDER) { const n = D.hermandades.filter((h) => h.ciudad === cp.slug && h.dia === d).length; if (n >= 6) out.push({ t: `El ${d} salen ${n} hermandades en ${cp.nombre}.`, u: u('semana-santa/' + cp.slug + '/#' + slugify(d)), l: 'Ver la jornada' }); }
   for (const m of MARCHAS) if (m.h && m.anio && m.autor && +m.anio <= 1960 && m.est !== 'sin-verificar') out.push({ t: `«${m.titulo}», de ${m.autor}, se compuso en ${m.anio} y está dedicada a ${m.h.nombre} (${CAP[m.h.ciudad].nombre}).`, u: u('marcha/' + m.slug + '/'), l: 'Ver marcha' });
@@ -818,7 +818,7 @@ const NAZ_HEAD = () => `<script>if(!(window.matchMedia&&matchMedia('(prefers-red
 function seccionNazareno(enPortada) {
   const A = TEMPORADA.anio, e = easter(A), f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'long' }), H = enPortada ? 'h2' : 'h1';
   return `<section class="oc-naz${enPortada ? ' is-portada' : ''}"${enPortada ? ' data-nazareno' : ''} aria-labelledby="naz-t"><div class="oc-naz-escena">${NAZ_SVG}
-  <div class="oc-naz-txt"><p class="oc-naz-frase" data-naz="1">Cada año, el mismo silencio.</p><p class="oc-naz-frase" data-naz="2">El mismo antifaz. La misma cera.</p>
+  <div class="oc-naz-txt"><p class="oc-naz-frase" data-naz="1">Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén.</p><p class="oc-naz-frase" data-naz="2">Sus hermandades, jornada a jornada.</p>
   <header data-naz="3"><p class="oc-kicker">Próxima Semana Santa</p><${H} class="oc-naz-titulo" id="naz-t">Semana Santa ${A}</${H}><p class="oc-naz-fechas">Del Viernes de Dolores, ${esc(f(-9))}, al Domingo de Resurrección, ${esc(f(0))}.</p>${leadHoy()}${enPortada ? `<a class="oc-btn oc-naz-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : ''}</header></div>
   <p class="oc-naz-pista" aria-hidden="true">Baja para dibujarlo</p></div></section>`;
 }
@@ -868,7 +868,7 @@ function pageNews() {
 }
 
 function pageCapitales() {
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">Las ocho capitales</h1><p class="oc-lead">Cada Semana Santa tiene su forma de andar, su música y su calendario.</p></header><h2 class="oc-sr">Capitales</h2>${plates(true)}`;
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">Las ocho capitales</h1><p class="oc-lead">La Semana Santa de cada capital: sus hermandades por días, su historia y sus noticias.</p></header><h2 class="oc-sr">Capitales</h2>${plates(true)}`;
   write('capitales/index.html', layout({ title: 'Las ocho capitales', desc: 'La Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: historia, hermandades por días y noticias.', body, path: 'capitales/', active: 'capitales/', crumbs: [['Portada', u()], ['Capitales', '']] }));
 }
 
@@ -891,8 +891,10 @@ function pageCapital(c) {
   const groups = byDay(conSalidas(hs));
   const bandas = D.bandas.filter((b) => b.acompana.some((a) => a.ciudad === c.slug));
   const imag = D.imagineros.filter((i) => i.ciudades.includes(c.slug));
-  const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') : '';
-  const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` : '';
+  // Fuentes de los datos clave y de los imprescindibles, sin repetir, con el formato de las fichas
+  const fuentesDe = (listas, que) => { const us = [...new Set(listas.flat())]; return us.length ? `<ul class="oc-fuentes">${us.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>${que}</span></li>`).join('')}</ul>` : ''; };
+  const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') + fuentesDe(c.datos_fuentes || [], 'datos clave') : '';
+  const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` + fuentesDe(c.claves_fuentes || [], 'imprescindibles') : '';
   const news = newsFor(c.slug, 6);
   // Portada de capital «Colgaduras»: la foto a sangre, su colgadura colgando del balcón (la misma de la portada, que viaja con
   // la transición de página) y el titular sobre un velo nazareno. El crédito de la foto va justo debajo.
@@ -960,14 +962,14 @@ function acompHtml(a, max = Infinity, h = null) {
   const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
   const fuente = 'Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. ';
   if (corta) return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + '<p class="oc-note">' + fuente + 'Aquí, las bandas de cada paso; en «Ver todas las bandas», el acompañamiento completo' + (a.resumen ? ' y las novedades de 2027' : '') + '.</p>';
-  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">' + fuente + 'Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
+  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">' + fuente + 'Los cambios para 2027 anunciados hasta ahora se indican como novedad.</p>';
 }
 // Estampa: cuando no existe ninguna foto con licencia libre, una lámina diseñada (colgadura de su capital, inicial bordada y
 // nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
 function estampaHtml(h, c) {
   const ini = esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0));
   const tit = (h.titulares || []).slice(0, 3).map((t) => `<li>${esc(t.nombre.split(',')[0])}</li>`).join('');
-  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina" aria-hidden="true"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span class="oc-estampa-ini">${ini}</span></div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Aún no hay una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
+  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina" aria-hidden="true"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span class="oc-estampa-ini">${ini}</span></div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Todavía no tenemos una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
 }
 // Díptico: el Cristo y la Virgen de la hermandad, cada uno con su crédito (licencias de Commons por separado).
 function dipticoHtml(h, c) {
@@ -989,7 +991,8 @@ function pageHerm(h) {
   const c = CAP[h.ciudad];
   const im = h.imagen;
   const bandas = (h.bandas_slugs || []).filter((s) => BANDA[s]).map((s) => [BANDA[s].nombre, u('banda/' + s + '/')]);
-  const musicaOf = (h.musica_oficial || []).length ? stackTable(['Paso o titular', 'Formación'], h.musica_oficial.map((m) => [esc(m.titular), esc(m.banda)])) + '<p class="oc-note">Acompañamiento musical oficial de 2026 publicado por la Agrupación.</p>' : '';
+  // El acompañamiento de Almería de 2026 (tools/sources/almeria-musica-2026.json) no tiene fuente registrada: no se enseña hasta tenerla (3-nov-2026)
+  const musicaOf = '';
   const RANGO = { contrastada: 0, dedicada: 1, 'sin-verificar': 2 };
   const isWiki = /wikipedia\.org/.test(h.fuente_url || '');
   let host = ''; try { host = h.fuente_url ? new URL(h.fuente_url).hostname.replace(/^www\./, '') : ''; } catch (e) { host = ''; }
@@ -1045,7 +1048,7 @@ function pageHerm(h) {
   const listaM = (ms) => `<ul class="oc-entries vx-grid fx-marchas">${ms.map(marchaLi).join('')}</ul>`;
   const marchasFx = ordenM.length ? listaM(destacadas) : '';
   const musicaUrl = u('hermandad/' + h.slug + '/musica/');
-  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad${col ? '; debajo, el color de cada prenda tal como lo describe' : ''}.</p>`); })();
+  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}<p class="oc-note">Descripción según <a href="${esc(hb.fuente_url)}" target="_blank" rel="noopener">${esc(nombreWeb(hb.fuente_url))}</a>${col ? '; debajo, el color de cada prenda tal como lo describe' : ''}.</p>`); })();
   const nM = ordenM.length; const nTipo = (e) => ordenM.filter((m) => m.est === e).length; const nc = nTipo('contrastada'), nd = nTipo('dedicada'), ns = nTipo('sin-verificar');
   const titM = ns === nM ? 'Marchas asociadas' : 'Marchas dedicadas';
   const notaTodas = `<p class="oc-note">${[nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean).join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`;
@@ -1148,7 +1151,7 @@ ${(REPERTORIO.get(b.slug) || []).length ? section('Repertorio', `<ul class="oc-e
 ${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h.nombre} (${a.rol || 'cortejo'})`, u('hermandad/' + a.hermandad_slug + '/')]))) : ''}
 ${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas y perfiles públicos; el portal no aloja audio ni vídeo.</p>`)}
 ${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
-<p class="oc-note">Configuración musical según la información publicada; las cofradías la cambian con frecuencia de un año a otro. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
+<p class="oc-note">Configuración musical según la información publicada. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre + (b.localidad && D.bandas.some((x) => x !== b && x.nombre === b.nombre) ? ' (' + b.localidad + ')' : ''), desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
@@ -1188,7 +1191,7 @@ ${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><d
 ${i.obras.length ? `<section class="oc-section fx-sec"><h2 class="nx-h">Sus obras</h2><ul class="oc-entries vx-grid ix-obras">${i.obras.map(obraCard).join('')}</ul></section>` : ''}
 <section class="oc-section fx-sec"><h2 class="nx-h">Más sobre su obra</h2><ul class="oc-linklist fx-enlaces"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul></section>
 </article>`;
-  write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en la Semana Santa de Andalucía. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
+  write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en las hermandades de las ocho capitales del portal. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
 }
 
 const AUTORES = new Map();
@@ -1204,7 +1207,7 @@ function pageCompositor(a) {
   const q = encodeURIComponent(a.nombre + ' marchas procesionales');
   const rows = ms.map((m) => [`<a href="${u('marcha/' + m.slug + '/')}"><strong>${esc(m.titulo)}</strong></a>`, esc(m.anio), esc(m.tipo), m.h ? `<a href="${u('hermandad/' + m.h.slug + '/')}">${esc(m.h.nombre)}</a> (${esc(CAP[m.h.ciudad].nombre)})${m.est === 'sin-verificar' ? ' <span class="oc-muted">(sin verificar)</span>' : ''}` : esc(m.dedicatoria)]);
   const ciudades = [...new Set(ms.filter((m) => m.h).map((m) => CAP[m.h.ciudad].nombre))];
-  const resumen = `${a.nombre}, compositor de marchas procesionales: ${plural(ms.length, 'marcha', 'marchas')}${ciudades.length ? ' dedicadas a cofradías de ' + ciudades.join(', ') : ''}.`;
+  const resumen = `${a.nombre}, compositor de marchas procesionales: ${plural(ms.length, 'marcha', 'marchas')} en el catálogo${ciudades.length ? ', algunas dedicadas a cofradías de ' + ciudades.join(', ') : ''}.`;
   const lista = ms.map((m) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.anio), esc(m.tipo), m.h ? '' : m.dedicatoria ? 'dedicada a ' + esc(m.dedicatoria) : ''].filter(Boolean).join(' · '))).join('');
   const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:var(--primary)">Compositor</p><h1 class="oc-title">${esc(a.nombre)}</h1>${cifras([[ms.length, 'marcha', 'marchas'], [ciudades.length, 'capital', 'capitales']])}<p class="oc-lead">${esc(resumen)}</p></header>
 ${section('Marchas', `<ul class="oc-entries">${lista}</ul>`)}
@@ -1300,11 +1303,11 @@ function pageDirMarchas() {
   // Por capital: cuántas marchas tiene cada una y una con grabación como muestra (la primera, por orden alfabético, de las mejor documentadas)
   const porCap = D.capitales.map((c) => { const ms = MARCHAS.filter((m) => ciudadMarcha(m) === c.slug); const ej = [...ms].sort((x, y) => (!!y.video - !!x.video) || ((y.est === 'contrastada') - (x.est === 'contrastada')) || x.titulo.localeCompare(y.titulo, 'es'))[0]; return { c, n: ms.length, ej }; }).filter((x) => x.n);
   const topAut = [...AUTORES.values()].sort((x, y) => y.marchas.length - x.marchas.length || x.nombre.localeCompare(y.nombre, 'es')).slice(0, 12);
-  const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Marchas</h1><p class="nx-lead">${MARCHAS.length} marchas procesionales de España (bases de datos de Marchas de Procesión, Patrimonio Musical y la Biblioteca Nacional, fichas de las hermandades), con compositor, formación, año y a quién van dedicadas cuando una fuente lo dice. Cada ficha enlaza sus fuentes.</p><p class="nx-pulso"><span><b>${MARCHAS.length}</b> marchas</span><span><b>${AUTORES.size}</b> compositores</span><span><b>${conVideo}</b> con grabación</span><span><b>${conHerm}</b> dedicadas a hermandades del portal</span></p></div></header>
+  const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Marchas</h1><p class="nx-lead">${MARCHAS.length} marchas procesionales (bases de datos de Marchas de Procesión, Patrimonio Musical, Cofradías y Hermandades y la Biblioteca Nacional, la Federación de Granada, Wikipedia y webs de hermandades y bandas), con compositor, formación, año y a quién van dedicadas cuando una fuente lo dice. Cada ficha enlaza sus fuentes.</p><p class="nx-pulso"><span><b>${MARCHAS.length}</b> marchas</span><span><b>${AUTORES.size}</b> compositores</span><span><b>${conVideo}</b> con grabación</span><span><b>${conHerm}</b> dedicadas a hermandades del portal</span></p></div></header>
 ${porCap.length ? `<section class="nx-caps" aria-labelledby="vx-caps-t"><h2 class="nx-h" id="vx-caps-t">Por capital</h2><ul>${porCap.map(({ c, n, ej }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} marchas de ${esc(c.nombre)}"><span>${esc(c.nombre)}</span><b>${n}</b></button>${ej ? `<h3 class="nx-cap-tit"><a class="nx-a" href="${u('marcha/' + ej.slug + '/')}">${esc(ej.titulo)}</a></h3><p class="nx-meta"><span class="nx-src">${esc(ej.autor || '')}</span>${ej.video ? '<span class="vx-play">Grabación</span>' : ''}</p>` : ''}</li>`).join('')}</ul></section>` : ''}
 ${topAut.length ? `<section class="vx-autores" aria-labelledby="vx-aut-t"><h2 class="nx-h" id="vx-aut-t">Compositores con más marchas</h2><ul>${topAut.map((a) => `<li><a href="${u('compositor/' + a.slug + '/')}"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(a.nombre))}</span></span><span class="vx-aut-n">${esc(a.nombre)}</span><b>${a.marchas.length}</b></a></li>`).join('')}</ul></section>` : ''}
 <h2 class="nx-h vx-todas">Todas las marchas</h2>${dirFilters(false, tipos, MARCHAS.length, false, 'Título, compositor, hermandad…')}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir data-resto="marchas/resto.json" data-extra="${Math.max(0, items.length - PRIMERAS)}">${items.slice(0, PRIMERAS).join('')}</ul>${dirMore}${dirEmpty}`;
-  write('marchas/index.html', layout({ title: 'Marchas', desc: 'Marchas procesionales dedicadas a las hermandades andaluzas: compositor, año, formación y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
+  write('marchas/index.html', layout({ title: 'Marchas', desc: 'Catálogo de marchas procesionales: compositor, año, formación, dedicatoria cuando una fuente la da y enlace para escucharlas.', body, path: 'marchas/', active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', '']] }));
 }
 function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, titular…', etqTipo = 'Tipo') {
   return `<div class="oc-filters" data-dir-filters>
@@ -1339,7 +1342,7 @@ function pageDirHerm() {
   const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Hermandades</h1><p class="nx-lead">Las hermandades de las ocho capitales andaluzas: su día, su sede, sus titulares y su historia.</p><p class="nx-pulso"><span><b>${D.hermandades.length}</b> hermandades</span><span><b>${caps.length}</b> capitales</span><span><b>${conFoto}</b> con foto</span></p></div></header>
 <section class="nx-caps vx-tipos hx-caps" aria-labelledby="hx-caps-t"><h2 class="nx-h" id="hx-caps-t">Por capital</h2><ul>${caps.map(({ c, n, dias }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} fichas de ${esc(c.nombre)} en la web"><span>${esc(c.nombre)}</span><b>${n}</b></button><h3 class="nx-cap-tit"><a class="nx-a" href="${u('semana-santa/' + c.slug + '/')}">Su Semana Santa, día a día</a></h3><p class="nx-meta"><span class="nx-src">${plural(dias, 'jornada', 'jornadas')}</span></p></li>`).join('')}</ul></section>
 <h2 class="nx-h vx-todas">Todas las hermandades</h2>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
-  write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de las ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
+  write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
 }
 // Siglas del tipo de formación para el sello de las tarjetas de bandas
 const SIGLA_TIPO = { 'Banda de cornetas y tambores': 'CT', 'Agrupación musical': 'AM', 'Banda de música': 'BM', 'Capilla musical': 'CM', 'Música militar': 'MM', 'Formación musical': 'FM' };
@@ -1488,7 +1491,7 @@ function datosSemanaSanta() {
 function pageFavoritos() {
   const body = `<header class="nx-head vx-head fv-head" data-head-capital><div class="nx-head-in"><h1 class="oc-title nx-title">Mis favoritos</h1><p class="nx-lead">Tus hermandades, bandas, imagineros y capitales, a mano. Se guardan solo en este dispositivo, sin registro.</p><p class="nx-pulso" data-fav-pulso role="status" hidden><span><b data-fav-n>0</b> <em data-fav-n-txt>guardados</em></span></p></div></header>
 <ul class="oc-entries fv-lista" data-fav-list></ul>
-<section class="oc-miss" data-mi-ss hidden><h2 class="nx-h">Mi Semana Santa</h2><p class="hy-nota">Tus hermandades guardadas, ordenadas por jornada. Descarga el calendario para tener cada salida en tu móvil (el horario exacto lo publica cada hermandad cuando se acerca la fecha).</p><ol class="oc-evs" data-mi-ss-list></ol><p><button class="oc-btn" type="button" data-mi-ss-ics>Descargar mi Semana Santa</button></p><script type="application/json" id="oc-ss">${JSON.stringify(datosSemanaSanta()).replace(/</g, '\\u003c')}</script></section>
+<section class="oc-miss" data-mi-ss hidden><h2 class="nx-h">Mi Semana Santa</h2><p class="hy-nota">Tus hermandades guardadas, ordenadas por jornada. Descarga el calendario para tener cada salida en tu móvil (el horario exacto se añade cuando se publica).</p><ol class="oc-evs" data-mi-ss-list></ol><p><button class="oc-btn" type="button" data-mi-ss-ics>Descargar mi Semana Santa</button></p><script type="application/json" id="oc-ss">${JSON.stringify(datosSemanaSanta()).replace(/</g, '\\u003c')}</script></section>
 <div class="fv-vacio" data-fav-empty><span class="fv-sello">${icon('star')}</span><h2>Aún no has guardado nada</h2>
 <ol class="fv-pasos"><li>Abre la ficha de una hermandad, banda, imaginero o capital.</li><li>Pulsa «Guardar».</li><li>Aquí la tendrás siempre. Tus hermandades aparecen con su fecha, listas para tu calendario.</li></ol>
 <ul class="fv-acc"><li><a class="is-toda" href="${u('hermandades/')}">Explorar hermandades${icon('arrow')}</a></li><li><a href="${u('bandas/')}">Bandas</a></li><li><a href="${u('imagineros/')}">Imagineros</a></li></ul></div>`;
@@ -1532,12 +1535,12 @@ function pageAcerca() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Fuentes y metodología</h1><p class="oc-lead">${BRAND} reúne en un solo sitio la actualidad y la historia de la Semana Santa de las ocho capitales andaluzas.</p></header>
 <div class="oc-prose">
 <h2 class="oc-h2">De dónde salen los datos</h2><ul>
-<li><strong>Málaga:</strong> fichas oficiales de la Agrupación de Cofradías de Semana Santa de Málaga.</li>
+<li><strong>Málaga:</strong> fichas oficiales de la Agrupación de Cofradías de Semana Santa de Málaga; las ocho hermandades de Vísperas, de malagaguia.com y prensa.</li>
 <li><strong>Granada:</strong> fichas oficiales de la Real Federación de Hermandades y Cofradías de Granada.</li>
 <li><strong>Córdoba:</strong> fichas oficiales de la Agrupación de Hermandades y Cofradías de Córdoba.</li>
 <li><strong>Cádiz:</strong> fichas oficiales del Consejo Local de Hermandades y Cofradías.</li>
 <li><strong>Huelva:</strong> fichas oficiales del Consejo de Hermandades y Cofradías de la Ciudad de Huelva.</li>
-<li><strong>Almería:</strong> fichas y horarios oficiales de la Agrupación de Hermandades y Cofradías (incluido el acompañamiento musical de 2026).</li>
+<li><strong>Almería:</strong> fichas y horarios oficiales de la Agrupación de Hermandades y Cofradías.</li>
 <li><strong>Jaén:</strong> fichas oficiales de la Agrupación de Cofradías y Hermandades de la Ciudad de Jaén.</li>
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
@@ -1791,7 +1794,7 @@ function datosCalle(c) {
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {
   const caps = D.capitales.filter((c) => fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')));
-  const body = `<header class="oc-pagehead"><h1 class="oc-title">En la calle</h1><p class="oc-lead">El plano de cada capital con los recorridos oficiales y dónde va cada cofradía a cada hora (posición estimada).</p></header>
+  const body = `<header class="oc-pagehead"><h1 class="oc-title">En la calle</h1><p class="oc-lead">El plano de cada capital con los recorridos publicados y dónde va cada cofradía a cada hora (posición estimada).</p></header>
 <ul class="oc-calle-indice">${caps.map((c) => `<li><a href="${u('en-la-calle/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span>${icon('arrow')}</a></li>`).join('')}</ul>`;
   write('en-la-calle/index.html', layout({ title: 'En la calle: los recorridos en el plano', desc: 'Plano de los recorridos de las cofradías de las ocho capitales andaluzas, con la posición estimada de cada una a cada hora.', body, path: 'en-la-calle/', active: 'capitales/', crumbs: [['Portada', u()], ['En la calle', '']] }));
 }
@@ -1841,7 +1844,7 @@ function pageCalle(c) {
   </section>
   <div class="oc-sheet oc-calle-ficha" hidden data-ficha><div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="calle-ficha-t"><div class="oc-sheet-head"><p class="oc-sheet-title" id="calle-ficha-t" data-ficha-titulo></p><button class="oc-iconbtn" type="button" data-ficha-cerrar aria-label="Cerrar">${icon('x')}</button></div><div data-ficha-cuerpo></div></div></div>
 </section>
-<p class="oc-note"${FUERA ? ' hidden' : ''}>Recorridos del último itinerario oficial publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
+<p class="oc-note"${FUERA ? ' hidden' : ''}>Recorridos del último itinerario publicado (${datos.anio}: ${/^https?:\/\//.test(datos.fuente || '') ? `<a href="${esc(datos.fuente)}" target="_blank" rel="noopener nofollow">documento de la fuente</a>` : esc(datos.fuente)}). La posición es una <strong>estimación</strong> a partir de las horas de paso: el cortejo puede ir adelantado o retrasado. Cuando se publiquen los itinerarios de ${anio}, se actualizarán.</p>
 <noscript><p class="oc-note">El mapa necesita JavaScript. Consulta los horarios en la página de <a href="${capHref(c)}">la Semana Santa de ${esc(c.nombre)}</a>.</p></noscript>`;
   write(`en-la-calle/${c.slug}/index.html`, layout({ title: `En la calle: recorridos de ${c.nombre}`, desc: `Mapa de los recorridos de las cofradías de ${c.nombre}, con la posición estimada de cada una a cada hora y cómo llegar.`, body, path: `en-la-calle/${c.slug}/`, active: 'capitales/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}"><script src="${u('assets/calle.js')}?v=${HUELLA.calle}" defer></script>`, crumbs: [['Portada', u()], [c.nombre, capHref(c)], ['En la calle', '']] }));
 }

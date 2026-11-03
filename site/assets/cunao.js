@@ -585,7 +585,7 @@
     }
     const HOLA = ['¿Qué pasa, cuñao? Pregúntame lo que quieras, que de esto sé más que nadie.', 'Aquí estoy, como siempre que hace falta. ¿Qué cofradía buscamos?', 'Dime, que llevo cuarenta Semanas Santas en el cuerpo.'];
     const NOSE = ['Eso no lo sé ni yo, y mira que sé de todo. Prueba con el nombre de la hermandad, su titular, el día o la ciudad.', 'Uy, esa no me suena. ¿Me la dices de otra forma? Por ejemplo: «¿A qué hora sale el Cautivo de Málaga?».', 'Me has pillado. Y antes de inventarme nada, prefiero decírtelo.'];
-    const GRACIAS = ['A mandar. Y llévate agua, que luego to\' son prisas.', 'Para eso estamos, cuñao.', 'Nada, hombre. Y ponte en la sombra, que el sol de abril engaña.'];
+    const GRACIAS = ['A mandar. Y llévate agua, que luego to\' son prisas.', 'Para eso estamos, cuñao.', 'Nada, hombre. Y ponte en la sombra, que el sol engaña.'];
     const SUGS_INICIO = ['¿Qué sale hoy?', '¿A qué hora sale la Macarena de Sevilla?', 'Jueves Santo en Málaga', '¿Cuánto falta para la Semana Santa?'];
 
     // ================= decisión =================
@@ -621,7 +621,7 @@
           C(r0, ['¿Qué sale hoy?', 'Noticias de Sevilla']); return cerrar(r0);
         case 'sugerencia':
           ctx.modo = 'sugerencia';
-          P(r0, 'Venga, cuéntamelo con detalle: qué está mal o qué falta, y de qué hermandad o página. Lo leemos todo y cada semana se repasa.');
+          P(r0, 'Venga, cuéntamelo con detalle: qué está mal o qué falta, y de qué hermandad o página. Lo leemos todo y lo revisamos con su fuente.');
           C(r0, ['Un dato está mal', 'Falta información', 'Tengo una idea']); return cerrar(r0);
       }
       // «¿y …?» sin pregunta propia hereda la anterior

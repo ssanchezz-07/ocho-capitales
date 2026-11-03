@@ -47,6 +47,16 @@ const datosCap = (id, datos) => {
   if (!out.includes(fila)) out.unshift(fila);
   return out;
 };
+// Datos clave e imprescindibles revisados contra su fuente (3-nov-2026): tools/sources/capitales-textos.json manda sobre
+// data-raw; la fila de hermandades lleva la fuente de CIFRAS. Cada fila y cada imprescindible guardan sus fuentes al lado.
+const CAPTXT = (() => { const f = path.join(__dirname, 'sources', 'capitales-textos.json'); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).capitales : {}; })();
+const datosYClaves = (c) => {
+  const t = CAPTXT[c.id]; const k = CIFRAS[c.id];
+  if (!t) return { datos: datosCap(c.id, c.datos), datos_fuentes: [], claves: c.claves, claves_fuentes: [] };
+  const datos = datosCap(c.id, t.datos.map((d) => [d.k, d.texto]));
+  const datos_fuentes = datos.map((r) => { const d = t.datos.find((x) => x.k === r[0]); return d ? d.fuentes : k ? [k.fuente[1]] : []; });
+  return { datos, datos_fuentes, claves: t.claves.map((x) => x.texto), claves_fuentes: t.claves.map((x) => x.fuentes) };
+};
 
 // ---------- Días normalizados ----------
 const DAY_ORDER = ['Viernes de Dolores','Sábado de Pasión','Vísperas','Domingo de Ramos','Lunes Santo','Martes Santo','Miércoles Santo','Jueves Santo','Jueves Santo y Madrugada','Madrugá','Viernes Santo','Sábado Santo','Domingo de Resurrección','Hermandades agrupadas'];
@@ -185,7 +195,7 @@ for (const c of raw) {
   capitales.push({
     slug: c.id, nombre: c.nombre || CITY_NAMES[c.id], color: c.color, lema: LEMAS[c.id] ? LEMAS[c.id].texto : c.lema, lema_fuentes: LEMAS[c.id] ? LEMAS[c.id].fuentes : [],
     cifra: CIFRAS[c.id] ? { n: CIFRAS[c.id].n, nombre: CIFRAS[c.id].nombre, corto: CIFRAS[c.id].corto, texto: CIFRAS[c.id].texto, fuente: CIFRAS[c.id].fuente } : null,
-    intro: INTROS[c.id] ? INTROS[c.id].texto : c.intro, intro_fuentes: INTROS[c.id] ? INTROS[c.id].fuentes : [], datos: datosCap(c.id, c.datos), claves: c.claves,
+    intro: INTROS[c.id] ? INTROS[c.id].texto : c.intro, intro_fuentes: INTROS[c.id] ? INTROS[c.id].fuentes : [], ...datosYClaves(c),
     dias: c.dias.map((d) => normDay(d.dia)), imagen: imgOf('capital:' + c.id),
   });
   for (const dia of c.dias) {

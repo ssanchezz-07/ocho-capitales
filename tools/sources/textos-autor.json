@@ -1,0 +1,85 @@
+{
+ "nota": "Textos fijos de site/build.mjs (descripciones de página y entradillas) revisados el 3-nov-2026 (EQUIPO/ORDEN-VERIFICAR-TEXTOS.md). tipo «web»: solo describe la propia web; «afirmacion»: afirma un hecho y lleva fuentes. Lo comprueba tools/comprobar-fuentes-textos.mjs: un texto nuevo sin registrar para la publicación.",
+ "textos": [
+  {
+   "texto": "Las cofradías de cada jornada de la Semana Santa en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén, con su orden de paso y enlace al plano.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Noticias cofrades de hoy en Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: hermandades, bandas, pregones y carteles, con enlace a cada medio.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "La Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén: historia, hermandades por días y noticias.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Catálogo de marchas procesionales: compositor, año, formación, dedicatoria cuando una fuente la da y enlace para escucharlas.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Bandas de cornetas y tambores, agrupaciones musicales y bandas de música que acompañan a las hermandades andaluzas.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Los escultores e imagineros de la Semana Santa andaluza: su época, su escuela y sus obras en las ocho capitales.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Agenda cofrade de las ocho capitales andaluzas: Cuaresma, Semana Santa, salidas extraordinarias, vía crucis, cultos, conciertos y pregones, y el orden de paso de cada jornada.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Buscador de hermandades, imágenes, imagineros, bandas, marchas y noticias de la Semana Santa andaluza.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Tus hermandades, bandas e imagineros guardados.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Cómo avisar de un error o aportar un dato a Ocho Capitales.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Página de reserva sin conexión.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Esta página no existe.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "Plano de los recorridos de las cofradías de las ocho capitales andaluzas, con la posición estimada de cada una a cada hora.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "La Semana Santa de cada capital: sus hermandades por días, su historia y sus noticias.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "No hay red ahora mismo. Las páginas que ya has visitado siguen disponibles; vuelve a intentarlo cuando recuperes la cobertura.",
+   "tipo": "web",
+   "fuentes": []
+  },
+  {
+   "texto": "El plano de cada capital con los recorridos publicados y dónde va cada cofradía a cada hora (posición estimada).",
+   "tipo": "web",
+   "fuentes": []
+  }
+ ]
+}

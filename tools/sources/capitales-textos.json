@@ -1,0 +1,428 @@
+{
+ "nota": "Datos clave (sin la fila de hermandades, que sale de CIFRAS en build-data.js) e imprescindibles de cada capital, revisados el 3-nov-2026 contra su fuente (EQUIPO/ORDEN-VERIFICAR-TEXTOS.md). Lo que no tenía fuente se quitó.",
+ "capitales": {
+  "sevilla": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Consejo General de Hermandades y Cofradías",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Interés Turístico Internacional (1980)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    },
+    {
+     "k": "Carrera oficial",
+     "texto": "La Campana, Sierpes, Plaza de San Francisco, Avenida de la Constitución y Catedral",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    },
+    {
+     "k": "Forma de carga",
+     "texto": "A costal",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "La Madrugá, la noche del Jueves al Viernes Santo: la abre el Silencio y la cierran los Gitanos; salen también el Gran Poder, la Macarena, el Calvario y la Esperanza de Triana.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    },
+    {
+     "texto": "La O fue la primera cofradía de Triana que hizo procesión hasta la Catedral, el 9 de abril de 1830, cruzando el antiguo puente de barcas, donde hoy está el puente de Triana.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla",
+      "https://es.wikipedia.org/wiki/Puente_de_Isabel_II"
+     ]
+    },
+    {
+     "texto": "Marchas: Virgen del Valle (Vicente Gómez-Zarzuela, estrenada en 1898), Amarguras (Manuel Font de Anta, 1919), La Estrella Sublime (Manuel López Farfán, 1925) y La Madrugá (Abel Moreno, 1987).",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Sevilla"
+     ]
+    }
+   ]
+  },
+  "malaga": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Agrupación de Cofradías de Semana Santa (1921)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Interés Turístico Internacional (1980)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    },
+    {
+     "k": "Recorrido oficial",
+     "texto": "Plaza de la Constitución, Marqués de Larios, Martínez, Atarazanas, Torregorda, Alameda Principal, Plaza de la Marina, Molina Lario y Torre Sur de la Catedral",
+     "fuentes": [
+      "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf"
+     ]
+    },
+    {
+     "k": "Forma de carga",
+     "texto": "A varal, por hombres de trono",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Jueves Santo: tras desembarcar en el puerto, los legionarios trasladan a hombros al Cristo de la Buena Muerte (Mena) mientras cantan «El novio de la muerte».",
+     "fuentes": [
+      "https://www.infobae.com/espana/agencias/2026/04/02/miles-de-personas-en-el-traslado-de-cristo-por-la-legion-en-malaga-en-el-jueves-santo/",
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    },
+    {
+     "texto": "Miércoles Santo: la hermandad de Jesús «El Rico» libera cada año a un preso, privilegio que nace de un motín de presos en tiempos de Carlos III.",
+     "fuentes": [
+      "https://agrupaciondecofradias.com/hermandades/el-rico/",
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    },
+    {
+     "texto": "Martes Santo: la Virgen de las Penas, con un manto de flores de diseño diferente cada año.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    },
+    {
+     "texto": "Jueves Santo: Zamarrilla, la Virgen de la Amargura, que debe su nombre a la leyenda del bandido.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Málaga"
+     ]
+    }
+   ]
+  },
+  "granada": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Real Federación de Hermandades y Cofradías (1927)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Granada"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Interés Turístico Internacional (2009)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Granada"
+     ]
+    },
+    {
+     "k": "Carrera oficial",
+     "texto": "Carrera de la Virgen, Bibataubín, Campillo, Mariana Pineda, Ángel Ganivet, Puerta Real, Mesones, Marqués de Gerona, Pasiegas y Catedral",
+     "fuentes": [
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Domingo de Ramos: la Sentencia y las Maravillas salen de San Pedro y San Pablo por la Carrera del Darro.",
+     "fuentes": [
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    },
+    {
+     "texto": "Miércoles Santo: los Gitanos vuelven de madrugada a la Abadía del Sacromonte por el camino del Sacromonte.",
+     "fuentes": [
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    },
+    {
+     "texto": "Medianoche del Jueves Santo: el Silencio sale de San Pedro y San Pablo con el Cristo de la Misericordia.",
+     "fuentes": [
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf",
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Granada"
+     ]
+    },
+    {
+     "texto": "Viernes Santo a las tres de la tarde: rezo de las Cinco Llagas ante el Cristo de los Favores, en el Campo del Príncipe, cuya cruz monumental levantaron los vecinos del Realejo en 1640.",
+     "fuentes": [
+      "https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/",
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Granada"
+     ]
+    },
+    {
+     "texto": "Sábado Santo: Santa María de la Alhambra, cuya imagen no salía del recinto alhambreño hasta que en 1909 bajó por primera vez a las calles de Granada; sale el Sábado Santo desde 1977.",
+     "fuentes": [
+      "https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/",
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    }
+   ]
+  },
+  "cordoba": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Agrupación de Hermandades y Cofradías (1944)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Córdoba"
+     ]
+    },
+    {
+     "k": "Carrera oficial",
+     "texto": "Entorno de la Mezquita-Catedral, con paso por su interior",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Córdoba",
+      "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/ITINERARIO-2026.pdf"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Desde 2017 las cofradías hacen estación de penitencia cruzando el interior de la Mezquita-Catedral y el Patio de los Naranjos.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Córdoba",
+      "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/ITINERARIO-2026.pdf"
+     ]
+    },
+    {
+     "texto": "Viernes Santo: el Descendimiento cruza el Puente Romano a la ida y a la vuelta.",
+     "fuentes": [
+      "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/ITINERARIO-2026.pdf"
+     ]
+    },
+    {
+     "texto": "Viernes Santo: la Virgen de los Dolores, «la Señora de Córdoba», tallada en 1719 por Juan Prieto.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Córdoba"
+     ]
+    },
+    {
+     "texto": "Lunes Santo: los pasos de Ánimas recuerdan la tradición, ya casi desaparecida, de llevar los pasos con ruedas.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Córdoba"
+     ]
+    }
+   ]
+  },
+  "cadiz": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Consejo Local de Hermandades y Cofradías",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Interés Turístico Nacional (2022)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "k": "Carrera oficial",
+     "texto": "Calle Nueva, San Juan de Dios, Pelota, Catedral, Arquitecto Acero, Compañía, Túnel de Santiago, Candelaria, Montañés y Palillero",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "k": "Forma de carga",
+     "texto": "A hombros, de costero a costero, con manigueteros",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Lunes Santo: la Palma, en el barrio de la Viña, cuna del carnaval gaditano.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "texto": "Martes Santo: el Ecce-Homo, «Señor del manto rojo» por su manto burdeos, sale al son de la marcha «Ecce-Homo» de Eduardo Escobar.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "texto": "Jueves Santo: el Nazareno de Santa María, al que la ciudad concedió en 1681 el título de Regidor Perpetuo de Cádiz.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    },
+    {
+     "texto": "Viernes Santo: la Buena Muerte, en riguroso luto y completamente a oscuras.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Cádiz"
+     ]
+    }
+   ]
+  },
+  "huelva": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Consejo de Hermandades y Cofradías (1997)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Fiesta de Interés Turístico Nacional de Andalucía (2003), de la Junta de Andalucía",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva",
+      "https://www.juntadeandalucia.es/boja/1999/18/29"
+     ]
+    },
+    {
+     "k": "Imaginero",
+     "texto": "Antonio León Ortega, que tuvo taller en Huelva desde 1938 y talló gran parte de las imágenes de su Semana Santa",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva",
+      "https://es.wikipedia.org/wiki/Antonio_León_Ortega"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Lunes Santo: la subida de la Cuesta de las Tres Caídas.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva",
+      "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf"
+     ]
+    },
+    {
+     "texto": "Madrugá: el Nazareno, cofradía fundada en 1583.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+     ]
+    },
+    {
+     "texto": "Sábado de Pasión: el Cristo de la Vera Cruz con la Legión.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Huelva"
+     ]
+    }
+   ]
+  },
+  "almeria": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Agrupación de Hermandades y Cofradías (1947)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Interés Turístico Nacional (2019)",
+     "fuentes": [
+      "https://www.boe.es/boe/dias/2019/01/17/pdfs/BOE-A-2019-528.pdf",
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    },
+    {
+     "k": "Carrera oficial",
+     "texto": "Paseo de Almería, General Tamayo, Plaza Virgen del Mar, Lucano, Trajano, Eduardo Pérez y Plaza de la Catedral",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Jueves Santo: el Encuentro de los tres pasos de la Hermandad del Nazareno en la plaza Emilio Pérez (plaza Circular), a las nueve de la noche.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    },
+    {
+     "texto": "Madrugada: vía crucis del Cristo de la Escucha desde la Catedral a las cinco de la mañana.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    },
+    {
+     "texto": "Martes Santo por la noche: el vía crucis de silencio del Cristo del Perdón, con tambores y timbales y toques de silencio ante los templos.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Almería"
+     ]
+    }
+   ]
+  },
+  "jaen": {
+   "datos": [
+    {
+     "k": "Organismo",
+     "texto": "Agrupación de Cofradías y Hermandades (1946)",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    },
+    {
+     "k": "Declaración",
+     "texto": "Fiesta de Interés Turístico Nacional de Andalucía, de la Junta de Andalucía",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén",
+      "https://www.juntadeandalucia.es/boja/1999/18/29"
+     ]
+    },
+    {
+     "k": "Forma de carga",
+     "texto": "A costal, a hombros («de costero a costero») y, en los tres tronos de la Buena Muerte, al estilo malagueño",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    }
+   ],
+   "claves": [
+    {
+     "texto": "Madrugada del Viernes Santo: la salida de «El Abuelo», Nuestro Padre Jesús Nazareno.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    },
+    {
+     "texto": "Domingo de Ramos por la mañana: la Borriquilla sale desde la iglesia de Belén y San Roque, y con el acto de la «llamá» comienza la Semana Santa en la ciudad.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    },
+    {
+     "texto": "Miércoles Santo: la Buena Muerte, que hace estación de penitencia desde la Catedral, acompañada por la Legión.",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    },
+    {
+     "texto": "Marcha «Nuestro Padre Jesús» (Emilio Cebrián).",
+     "fuentes": [
+      "https://es.wikipedia.org/wiki/Semana_Santa_en_Jaén"
+     ]
+    }
+   ]
+  }
+ }
+}
