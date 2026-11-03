@@ -589,7 +589,7 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de la Puente del Cedrón",
     "recorte": [
-     0.53,
+     0.45,
      0.03,
      0.15,
      0.3
@@ -2024,7 +2024,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de la Soledad",
-    "foco": "50% 40%"
+    "recorte": [
+     0.36,
+     0.22,
+     0.28,
+     0.55
+    ]
    }
   },
   "el-santo-sepulcro-jaen": {
@@ -2290,7 +2295,7 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de Guadalupe",
     "recorte": [
-     0.15,
+     0.2,
      0.22,
      0.3,
      0.3

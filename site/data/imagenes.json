@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T21:30:09.885Z",
+ "generado": "2026-11-03T21:41:49.274Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3918,7 +3918,7 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_Jesus.jpg",
     "recorte": [
-     0.53,
+     0.45,
      0.03,
      0.15,
      0.3
@@ -6242,19 +6242,24 @@
   },
   "la-soledad-jaen": {
    "virgen": {
-    "w": 600,
-    "h": 800,
+    "w": 573,
+    "h": 845,
     "widths": [
      160,
      480,
-     600
+     573
     ],
     "escudo": false,
     "autor": "Rlinx",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_Ja%C3%A9n.JPG",
-    "foco": "50% 40%",
+    "recorte": [
+     0.36,
+     0.22,
+     0.28,
+     0.55
+    ],
     "titular": "Nuestra Señora de la Soledad"
    }
   },
@@ -6672,7 +6677,7 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg",
     "recorte": [
-     0.15,
+     0.2,
      0.22,
      0.3,
      0.3
@@ -8829,16 +8834,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg\"|\"\"|\"\""
   },
-  "el-cachorro-sevilla": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_la_Expiraci%C3%B3n_(El_Cachorro),_Sevilla,_Espa%C3%B1a,_2017_03.jpg\"|[0.53,0.15,0.25,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Patrocinio,_Sevilla,_Espa%C3%B1a,_2017_03.jpg\"|\"\"|\"\""
-  },
   "pasion-y-muerte-sevilla": {
    "w": 960,
    "h": 640,
@@ -9029,16 +9024,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_paciencia_C%C3%A1diz.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura_de_C%C3%A1diz.jpg\"|\"\"|\"\""
   },
-  "medinaceli-cadiz": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_Medinaceli_de_C%C3%A1diz.jpg\"|\"\"|\"50% 15%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad_de_C%C3%A1diz.jpg\"|\"\"|\"\""
-  },
   "la-buena-muerte-cadiz": {
    "w": 960,
    "h": 640,
@@ -9179,16 +9164,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sagrada_Cena.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Subterr%C3%A1neo,_Sevilla.jpg\"|\"\"|\"\""
   },
-  "san-roque-sevilla": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_las_Penas_de_Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_Gracia_y_Esperanza_en_la_Iglesia_de_San_Roque_2026.jpg\"|[0.38,0.18,0.3,0.3]|\"\""
-  },
   "san-pablo-sevilla": {
    "w": 960,
    "h": 640,
@@ -9217,7 +9192,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg\"|[0.1,0,0.25,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg\"|[0.15,0.22,0.3,0.3]|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg\"|[0.1,0,0.25,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg\"|[0.2,0.22,0.3,0.3]|\"\""
   },
   "los-javieres-sevilla": {
    "w": 960,
@@ -9239,16 +9214,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Buen_Viaje.JPG\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Desamparados_(San_Esteban).jpg\"|\"\"|\"\""
   },
-  "santa-cruz-sevilla": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_las_Misericordias.jpg\"|[0.38,0.06,0.3,0.28]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Santa_Cruz,_Sevilla.jpg\"|\"\"|\"\""
-  },
   "el-buen-fin-sevilla": {
    "w": 960,
    "h": 640,
@@ -9258,16 +9223,6 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Buen_Fin,Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma.jpg\"|\"\"|\"\""
-  },
-  "redencion-sevilla": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso2.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso1.jpg\"|\"\"|\"\""
   },
   "dolores-de-torreblanca-sevilla": {
    "w": 960,

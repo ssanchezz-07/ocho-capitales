@@ -54,7 +54,9 @@ async function processOne(kind, slug, meta) {
   // con recorte se parte del original completo: el titular ocupa solo una parte de la foto
   const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 0 : 1280);
   if (!src) throw new Error('no encontrado en Commons');
-  const orig = await download(src, path.join(CACHE, `${kind}-${slug}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
+  // La caché lleva el nombre del archivo de Commons: si una hermandad cambia de foto, no se reutiliza el original anterior
+  const clave = title.replace(/^File:/, '').replace(/[^w.-]+/g, '_').slice(0, 80);
+  const orig = await download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
   const img = sharp(orig, { failOn: 'none' }).rotate();
   const m = await img.metadata();
   const fullW = m.autoOrient ? m.autoOrient.width : m.width;

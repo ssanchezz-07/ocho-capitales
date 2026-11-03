@@ -65,29 +65,34 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Sevilla (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-9 sin ninguna foto de titular; 34 con algún titular sin foto.
+19 sin ninguna foto de titular; 32 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
+| La Borriquita | Domingo de Ramos | **ninguna foto**; Cristo: Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII |
 | Jesús Despojado | Domingo de Ramos | Virgen: María Santísima de los Dolores y Misericordia |
 | La Hiniesta | Domingo de Ramos | Cristo: Cristo de la Buena Muerte |
+| San Roque | Domingo de Ramos | Virgen: María Santísima de Gracia y Esperanza |
 | La Estrella | Domingo de Ramos | Virgen: María Santísima de la Estrella |
 | La Amargura | Domingo de Ramos | Cristo: Cristo del Silencio en el Desprecio de Herodes / San Juan Evangelista |
+| Redención | Lunes Santo | Virgen: María Santísima del Rocío |
 | Santa Genoveva | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de las Mercedes |
+| Santa Marta | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Caridad en su Traslado al Sepulcro |
 | Las Penas | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de los Dolores |
 | El Museo | Lunes Santo | Cristo: Santísimo Cristo de la Expiración |
-| El Cerro | Martes Santo | Virgen: María Santísima de los Dolores |
+| El Cerro | Martes Santo | **ninguna foto**; Cristo: Santísimo Cristo de los Desamparados; Virgen: María Santísima de los Dolores |
 | Los Estudiantes | Martes Santo | Virgen: María Santísima de la Angustia |
 | San Benito | Martes Santo | **ninguna foto**; Cristo: Presentación de Jesús al Pueblo / Santísimo Cristo de la Sangre; Virgen: María Santísima de la Encarnación |
 | La Candelaria | Martes Santo | Cristo: Nuestro Padre Jesús de la Salud |
 | Dulce Nombre («La Bofetá») | Martes Santo | Virgen: María Santísima del Dulce Nombre |
-| La Sed | Miércoles Santo | Virgen: María Santísima de Consolación |
+| Santa Cruz | Martes Santo | Cristo: Santísimo Cristo de las Misericordias |
+| La Sed | Miércoles Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Sed; Virgen: María Santísima de Consolación |
 | San Bernardo | Miércoles Santo | Virgen: María Santísima del Refugio |
 | La Lanzada | Miércoles Santo | Virgen: María Santísima de Guía |
 | Cristo de Burgos | Miércoles Santo | Virgen: Madre de Dios de la Palma |
-| Siete Palabras | Miércoles Santo | Virgen: María Santísima de la Cabeza / María Santísima de los Remedios |
+| Siete Palabras | Miércoles Santo | **ninguna foto**; Cristo: Santísimo Cristo de las Siete Palabras; Virgen: María Santísima de la Cabeza / María Santísima de los Remedios |
 | Los Panaderos | Miércoles Santo | Virgen: María Santísima de Regla |
-| Los Negritos | Jueves Santo | Virgen: Nuestra Señora de los Ángeles |
+| Los Negritos | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Fundación; Virgen: Nuestra Señora de los Ángeles |
 | La Exaltación («Los Caballos») | Jueves Santo | Cristo: Exaltación de Cristo en la Cruz |
 | Las Cigarreras | Jueves Santo | Cristo: Jesús atado a la Columna |
 | Montesión | Jueves Santo | **ninguna foto**; Cristo: Oración en el Huerto; Virgen: María Santísima del Rosario en sus Misterios Dolorosos |
@@ -100,32 +105,36 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Carretería | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Salud; Virgen: Nuestra Señora de la Luz / María Santísima del Mayor Dolor en su Soledad |
 | San Isidoro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Tres Caídas; Virgen: María Santísima de Loreto |
 | San Buenaventura | Viernes Santo | **ninguna foto**; Cristo: Crucificado titular; Virgen: Dolorosa titular |
+| La Sagrada Mortaja | Viernes Santo | **ninguna foto**; Cristo: Misterio de la Sagrada Mortaja |
+| El Cachorro | Viernes Santo | Cristo: Santísimo Cristo de la Expiración «El Cachorro» |
 | Los Servitas | Sábado Santo | Virgen: María Santísima de los Dolores |
 | La Trinidad | Sábado Santo | Virgen: María Santísima de la Esperanza |
 | El Santo Entierro | Sábado Santo | Cristo: Cristo Yacente en la urna / Triunfo de la Santa Cruz sobre la muerte («La Canina») |
+| La Soledad de San Lorenzo | Sábado Santo | **ninguna foto**; Virgen: Nuestra Señora de la Soledad |
 | La Resurrección | Domingo de Resurrección | Cristo: Sagrada Resurrección |
-| Bellavista | Viernes de Dolores | Virgen: María Santísima del Dulce Nombre en sus Dolores y Compasión |
+| Bellavista | Viernes de Dolores | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Salud y Remedios; Virgen: María Santísima del Dulce Nombre en sus Dolores y Compasión |
 | Pino Montano | Viernes de Dolores | **ninguna foto**; Cristo: Nuestro Padre Jesús de Nazaret / San Marcos Evangelista / San Isidro Labrador; Virgen: María Santísima del Amor |
 | La Misión | Viernes de Dolores | Virgen: Inmaculado Corazón de María |
 | Cristo de la Corona | Viernes de Dolores | Virgen: Nuestra Señora del Rosario |
 | Padre Pío | Sábado de Pasión | Cristo: Santísimo Sacramento / Nuestro Padre Jesús de la Salud y Clemencia / San Juan de la Cruz |
 | La Milagrosa | Sábado de Pasión | **ninguna foto**; Cristo: Jesús de la Esperanza / San Juan Evangelista; Virgen: Virgen de la Medalla Milagrosa / Virgen del Rosario |
 | Divino Perdón | Sábado de Pasión | Cristo: Jesús del Divino Perdón |
-| El Sol | Sábado Santo | Virgen: María Santísima de la Salud |
+| El Sol | Sábado Santo | **ninguna foto**; Cristo: Santo Cristo Varón de Dolores de la Divina Misericordia; Virgen: María Santísima de la Salud |
 
 ## Córdoba (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-9 sin ninguna foto de titular; 14 con algún titular sin foto.
+13 sin ninguna foto de titular; 12 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
 | Entrada Triunfal | Domingo de Ramos | Virgen: Nuestra Señora de la Palma / María Santísima de la Victoria |
 | Penas de Santiago | Domingo de Ramos | Virgen: Nuestra Señora Madre de los Desamparados |
 | Vera Cruz | Domingo de Ramos | Cristo: Nuestro Señor de los Reyes |
-| La Esperanza | Domingo de Ramos | Cristo: Nuestro Padre Jesús de las Penas |
+| La Esperanza | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Esperanza |
+| El Huerto | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Oración en el Huerto / Jesús Amarrado a la Columna; Virgen: María Santísima de la Candelaria |
 | La Estrella | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Redención; Virgen: Nuestra Señora de la Estrella |
 | Ánimas | Lunes Santo | Virgen: Nuestra Señora Madre de Dios en sus Tristezas |
-| El Buen Suceso | Martes Santo | Virgen: Nuestra Señora de los Dolores / María Santísima de la Caridad |
+| El Buen Suceso | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Buen Suceso; Virgen: Nuestra Señora de los Dolores / María Santísima de la Caridad |
 | El Prendimiento | Martes Santo | Virgen: Nuestra Señora de la Piedad |
 | El Perdón | Miércoles Santo | Virgen: María Santísima del Rocío y Lágrimas |
 | La Pasión | Miércoles Santo | Cristo: Nuestro Padre Jesús de la Pasión |
@@ -140,6 +149,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Los Dolores | Viernes Santo | Cristo: Santísimo Cristo de la Clemencia |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Señor Jesucristo del Santo Sepulcro |
 | El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Nuestro Señor Resucitado |
+| Presentación al Pueblo | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de los Afligidos |
 | Dolores de Alcolea | Viernes Santo | **ninguna foto**; Virgen: María Santísima de los Dolores |
 | La Sangre de El Higuerón | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo de la Sangre / Nuestro Padre Jesús Nazareno de la Compasión / San Isidro Labrador |
 
@@ -174,7 +184,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Cádiz (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-21 sin ninguna foto de titular; 6 con algún titular sin foto.
+21 sin ninguna foto de titular; 7 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -196,6 +206,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Las Aguas | Miércoles Santo | Virgen: María Santísima de Guadalupe |
 | Los Afligidos | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús de los Afligidos; Virgen: María Santísima de los Desconsuelos |
 | Oración en el Huerto | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Oración en el Huerto; Virgen: Nuestra Señora de Gracia y Esperanza |
+| Medinaceli | Jueves Santo y Madrugada | Cristo: Nuestro Padre Jesús Cautivo y Rescatado |
 | Nazareno de Santa María | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno; Virgen: María Santísima de los Dolores |
 | El Perdón | Jueves Santo y Madrugada | Virgen: María Santísima del Rosario |
 | El Descendimiento | Viernes Santo | Virgen: Nuestra Señora de los Dolores |
