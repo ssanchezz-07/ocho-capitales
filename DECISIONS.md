@@ -504,7 +504,7 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
   - Diseño: la barra de la hora mide 28 px y debería tener 44.
   - erCuñao: a 390 px su botón tapa la esquina del plano.
 - **Pendiente:**
-  - Decisión de Pablo: que en las jornadas de una sola cofradía (extraordinarias) su recorrido se vea sin tocarla. Hoy solo se dibuja al elegirla (decisión del 25-oct).
+  - **Decidido por Pablo (3-nov), literal: «No, primero se toca y luego sale el recorrido».** También en las jornadas de una sola cofradía (extraordinarias), el recorrido solo se dibuja al tocarla. No se cambia.
   - Opcional: aligerar los datos de las cofradías (472 KB en Sevilla).
 
 ## RETOMAR AQUÍ (3-nov, oc-diseno del sobremesa; encargos de hoy, orden de Coordinación)
