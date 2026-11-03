@@ -366,6 +366,14 @@ a { text-underline-offset: .18em; }
 .fx .fx-marchas { margin: 0 0 6px; padding: 0; list-style: none; }
 .fx-enlaces { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; padding: 0; list-style: none; }
 .fx-enlaces .oc-btn { min-height: 44px; border-radius: 999px; }
+/* «Ver todas»: la ficha enseña unas pocas marchas y bandas; el resto, en hermandad/<slug>/musica/ */
+.fx-vermas { margin: 14px 0 4px; }
+.fx-vermas .oc-btn { min-height: 44px; height: auto; max-width: 100%; padding-block: 10px; border-radius: 999px; gap: 8px; border-color: var(--gold-ink); white-space: normal; text-align: left; }
+.fx-vermas .oc-btn svg { flex-shrink: 0; transition: transform var(--m-suelta) var(--e-salida); }
+@media (hover: hover) and (pointer: fine) { .fx-vermas .oc-btn:hover svg { transform: translateX(3px); } }
+.fx-musica-head .fx-kicker { margin: 0 0 14px; }
+.fx-volver svg { transform: scaleX(-1); }
+.fx-musica-pag .fx-sec { scroll-margin-top: calc(var(--header-h, 64px) + 16px); }
 
 /* Anterior y siguiente del día: dos piezas de terciopelo */
 .fx-prevnext a { --tc: color-mix(in oklab, var(--c, #2b1140) 74%, #12061c); border: 0; border-radius: 18px; padding: 16px 18px; color: #fbf6ee; background: radial-gradient(120% 140% at 0% 0%, rgb(255 214 150 / .18), transparent 60%), var(--tc); box-shadow: inset 0 0 0 1px rgb(236 211 147 / .3), 0 12px 24px -18px rgb(20 6 30 / .6); transition: transform var(--m-suelta) var(--e-salida), box-shadow var(--m-base) var(--e-salida); }

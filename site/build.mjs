@@ -155,6 +155,7 @@ const MARCHAS = MU.marchas.map((m) => {
   return { ...m, tipo: m.formacion, tipoMarcha: m.tipo || '', dedicatoria: d ? d.texto : '', h, est: h ? d.estado : '', titularDed: d ? d.titular : '', espana: !h };
 });
 const MARCHA_SLUG = new Map(); const MARCHA_SLUGS = new Set(MARCHAS.map((m) => m.slug));
+const MARCHA_POR = new Map(MARCHAS.map((m) => [m.slug, m]));
 const REPERTORIO = new Map(); // banda → [{marcha, arreglo}]
 for (const m of MARCHAS) for (const r of m.repertorio || []) if (r && r.banda) (REPERTORIO.get(r.banda) || REPERTORIO.set(r.banda, []).get(r.banda)).push({ m, arreglo: r.arreglo || '' });
 const ciudadMarcha = (m) => (m.h ? m.h.ciudad : m.ciudad && CAP[m.ciudad] ? m.ciudad : '');
@@ -911,8 +912,24 @@ ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc
 }
 
 const IGUSER = (r) => String(r).replace(/^@/, '');
-function acompHtml(a) {
+// Cuántas bandas cita la guía, novedades de 2027 incluidas (para decidir si la ficha las resume)
+const nBandasAcomp = (a) => (a ? [...a.pasos, ...((a.novedades2027 && a.novedades2027.pasos) || [])].reduce((n, p) => n + p.bandas.length, 0) : 0);
+// max: en la ficha, unas `max` bandas: solo bandas (sin escuadras ni compañías), primero las de los pasos de los titulares y luego la
+// Cruz de Guía, en el orden de la guía; sin las novedades. Todo el acompañamiento va en hermandad/<slug>/musica/.
+// Los pasos de un titular admiten una banda más (dos pasos de dos bandas caben); la Cruz de Guía solo si sobra sitio.
+// Devuelve null si el resumen no esconde nada (entonces no hace falta «Ver todas las bandas»).
+function resumenAcomp(a, max) {
+  if (!a || nBandasAcomp(a) <= max) return null;
+  const cand = a.pasos.map((p, i) => ({ ...p, i, bandas: p.bandas.filter((b) => b.banda !== false) })).filter((p) => p.bandas.length);
+  const cruz = (p) => /cruz de gu[ií]a|cortejo|escuadra/i.test(p.paso);
+  let n = 0; const elegidos = [];
+  for (const p of [...cand].sort((x, y) => cruz(x) - cruz(y) || x.i - y.i)) { if (elegidos.length && n + p.bandas.length > max + (cruz(p) ? 0 : 1)) continue; elegidos.push(p); n += p.bandas.length; }
+  return n < nBandasAcomp(a) ? { ...a, pasos: elegidos.sort((x, y) => x.i - y.i), novedades2027: null, resumen: !!(a.novedades2027 && a.novedades2027.pasos.length) } : null;
+}
+function acompHtml(a, max = Infinity) {
   if (!a) return '';
+  const r = resumenAcomp(a, max); const corta = !!r;
+  if (corta) a = r;
   const bandaLi = (x) => {
     const nom = x.slug ? '<a href="' + u('banda/' + x.slug + '/') + '">' + esc(x.nombre) + '</a>' : esc(x.nombre);
     const loc = x.banda && x.localidad && x.localidad !== 'Málaga' ? ' <span class="oc-muted">(' + esc(x.localidad) + ')</span>' : '';
@@ -922,7 +939,9 @@ function acompHtml(a) {
   };
   const tabla = (pasos) => '<dl class="oc-acomp">' + pasos.map((p) => '<div><dt>' + esc(p.paso) + '</dt><dd>' + p.bandas.map(bandaLi).join('<br>') + '</dd></div>').join('') + '</dl>';
   const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
-  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
+  const fuente = 'Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. ';
+  if (corta) return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + '<p class="oc-note">' + fuente + 'Aquí, las bandas de cada paso; en «Ver todas las bandas», el acompañamiento completo' + (a.resumen ? ' y las novedades de 2027' : '') + '.</p>';
+  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">' + fuente + 'Los cambios se anuncian a lo largo del año; los de 2027 se indican como novedad.</p>';
 }
 // Estampa: cuando no existe ninguna foto con licencia libre, una lámina diseñada (colgadura de su capital, inicial bordada y
 // nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
@@ -986,14 +1005,37 @@ function pageHerm(h) {
     const autor = t.autor ? (sl && IMAG[sl] ? `<a href="${u('imaginero/' + sl + '/')}">${esc(t.autor)}</a>` : esc(t.autor)) : '<span class="oc-muted">Autor sin documentar</span>';
     return `<li><span class="vx-sello" aria-hidden="true"><span>${esc(iniTit(t.nombre))}</span></span><div><h3>${esc(t.nombre)}</h3><p>${autor}</p></div></li>`;
   }).join('')}</ul>` : '';
-  const marchasFx = (h.marchas || []).length ? `<ul class="oc-entries vx-grid fx-marchas">${[...h.marchas].sort((x, y) => RANGO[x.est] - RANGO[y.est] || x.titulo.localeCompare(y.titulo, 'es')).map((m) => {
-    const g = MARCHAS.find((x) => x.slug === m.slug);
+  // Ficha ligera (Pablo, 3-nov: «ver unas cuantas y si quiero ver más me lleve a ese sitio»): aquí, 5 marchas y unas 3 bandas;
+  // todas, en hermandad/<slug>/musica/, que solo existe cuando algo no cabe. Primero las marchas que toca su propia banda,
+  // luego las dedicadas a sus titulares y las que tienen grabación (solo lo que dicen los datos); a igualdad, el orden de siempre.
+  const MAX_M = 5, MAX_B = 3;
+  const marchaLi = (m) => {
+    const g = MARCHA_POR.get(m.slug);
     const meta = [m.autor ? `<span class="vx-autor">${esc(m.autor)}</span>` : '', m.anio ? `<span>${esc(m.anio)}</span>` : '', m.tipo ? `<span class="nx-tema">${esc(m.tipo)}</span>` : ''].join('');
     const pie = (m.est === 'sin-verificar' ? '<span class="oc-muted">Sin verificar</span>' : '') + (g && g.video ? '<span class="vx-play">Grabación</span>' : '');
     return `<li class="oc-entry vx-m"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
-  }).join('')}</ul>` : '';
+  };
+  const ordenM = [...(h.marchas || [])].sort((x, y) => RANGO[x.est] - RANGO[y.est] || x.titulo.localeCompare(y.titulo, 'es'));
+  const propias = new Set([...(h.bandas_slugs || []), ...((h.acompanamiento && h.acompanamiento.pasos) || []).flatMap((p) => p.bandas.map((b) => b.slug))].filter(Boolean));
+  const peso = (m) => { const g = MARCHA_POR.get(m.slug); return g ? ((g.repertorio || []).some((r) => r && propias.has(r.banda)) ? 4 : 0) + (g.titularDed ? 2 : 0) + (g.video ? 1 : 0) : 0; };
+  const cortaM = ordenM.length > MAX_M;
+  const relevantes = ordenM.map((m, i) => [m, i]).sort(([a, i], [b, j]) => (a.est === 'sin-verificar') - (b.est === 'sin-verificar') || peso(b) - peso(a) || i - j).map(([m]) => m);
+  const destacadas = relevantes.slice(0, MAX_M);
+  const criterios = [[4, 'las que toca su propia banda'], [2, 'las dedicadas a sus titulares'], [1, 'las que tienen grabación']].filter(([b]) => destacadas.some((m) => peso(m) & b)).map(([, t]) => t);
+  const porQue = criterios.length ? ': primero ' + (criterios.length > 1 ? criterios.slice(0, -1).join(', ') + ' y ' + criterios[criterios.length - 1] : criterios[0]) : '';
+  const listaM = (ms) => `<ul class="oc-entries vx-grid fx-marchas">${ms.map(marchaLi).join('')}</ul>`;
+  const marchasFx = ordenM.length ? listaM(destacadas) : '';
+  const musicaUrl = u('hermandad/' + h.slug + '/musica/');
   const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}<p class="oc-note">Descripción de la ficha oficial de la hermandad${col ? '; debajo, el color de cada prenda tal como lo describe' : ''}.</p>`); })();
-  const marchasSec = marchasFx ? (() => { const n = (e) => h.marchas.filter((m) => m.est === e).length; const nc = n('contrastada'), nd = n('dedicada'), ns = n('sin-verificar'); const partes = [nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean); return sec(ns === h.marchas.length ? 'Marchas asociadas' : 'Marchas dedicadas', marchasFx + `<p class="oc-note">${partes.join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`, 'fx-sec-marchas'); })() : '';
+  const nM = ordenM.length; const nTipo = (e) => ordenM.filter((m) => m.est === e).length; const nc = nTipo('contrastada'), nd = nTipo('dedicada'), ns = nTipo('sin-verificar');
+  const titM = ns === nM ? 'Marchas asociadas' : 'Marchas dedicadas';
+  const notaTodas = `<p class="oc-note">${[nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean).join(', ')}. Cada marcha enlaza sus fuentes en su ficha.</p>`;
+  const verTodas = (href, txt) => `<p class="fx-vermas"><a class="oc-btn is-quiet" href="${href}">${txt}${icon('arrow')}</a></p>`;
+  const marchasSec = marchasFx ? sec(titM, marchasFx + (cortaM ? verTodas(musicaUrl + '#marchas', `Ver las ${nM} marchas`) + `<p class="oc-note">Aquí, ${MAX_M} de ${nM}${porQue}. Cada marcha enlaza sus fuentes en su ficha.</p>` : notaTodas), 'fx-sec-marchas') : '';
+  // Bandas: la guía del año por pasos (resumida a unas 3), la música oficial o el texto de la ficha, y las fichas de banda enlazadas
+  const cortaB = h.acompanamiento ? !!resumenAcomp(h.acompanamiento, MAX_B) : bandas.length > MAX_B;
+  const musicaHtml = (max) => (h.acompanamiento ? acompHtml(h.acompanamiento, max) : (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : ''))) + (!h.acompanamiento && bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas.slice(0, max)) : '');
+  const musicaFicha = musicaHtml(MAX_B) + (cortaB ? verTodas(musicaUrl + '#bandas', 'Ver todas las bandas') : '');
   const enlaces = (() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return sec('Escúchala y síguela', `<ul class="oc-linklist fx-enlaces">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas: el resultado depende de lo que cada hermandad haya publicado.</p>`); })();
   const body = `<article class="oc-ficha fx" style="--c:${c.color}">
 <header class="fx-hero${media ? ' has-media' : ' is-estampa'}">
@@ -1009,7 +1051,7 @@ ${datos ? `<dl class="fx-datos" aria-label="Datos de la hermandad">${datos}</dl>
 ${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa">${para(h.historia)}</div>`) : ''}
 ${sec('Titulares e imagineros', titCards)}
 ${sec('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
-${sec('Música', (h.acompanamiento ? acompHtml(h.acompanamiento) : (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : ''))) + (!h.acompanamiento && bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas) : ''), 'fx-musica')}
+${sec('Música', musicaFicha, 'fx-musica')}
 ${habito}
 ${marchasSec}
 ${enlaces}
@@ -1022,6 +1064,28 @@ ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid
     crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.dia, u('semana-santa/' + c.slug + '/#' + slugify(h.dia))], [h.nombre, '']],
     jsonld: { '@context': 'https://schema.org', '@type': 'Organization', name: h.nombre_oficial || h.nombre, alternateName: h.nombre, foundingDate: (String(h.fundacion).match(/\d{4}/) || [])[0], address: h.sede ? { '@type': 'PostalAddress', streetAddress: h.sede, addressLocality: c.nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } : undefined, url: h.web || undefined, image: im ? ogOf(im) : undefined, description: h.historia || undefined },
   }));
+  // Toda la música de la hermandad, solo si en la ficha no cabe: sin JavaScript, enlazada desde «Ver todas»
+  if (cortaM || cortaB) {
+    const secId = (id, titulo, inner, cls = '') => (inner && inner.trim() ? `<section class="oc-section fx-sec${cls ? ' ' + cls : ''}" id="${id}" aria-labelledby="${id}-t"><h2 class="nx-h" id="${id}-t">${titulo}</h2>${inner}</section>` : '');
+    const fichaUrl = u('hermandad/' + h.slug + '/');
+    const mus = `<header class="oc-caphero is-compact fx-musica-head" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
+  <img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971">
+  <div class="oc-caphero-text">
+    <p class="fx-kicker"><a href="${fichaUrl}">${esc(h.nombre)}</a> · ${esc(c.nombre)}</p>
+    <h1 class="oc-caphero-title">Bandas y marchas</h1>
+    <p class="oc-caphero-lema">${[cortaB || h.acompanamiento || bandas.length ? 'La música que la acompaña' : '', nM ? plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') : ''].filter(Boolean).join(' y ')}</p>
+    <div class="oc-actions"><a class="oc-btn is-quiet fx-volver" href="${fichaUrl}">${icon('arrow')}Volver a la ficha</a></div>
+  </div>
+</header>
+<article class="oc-ficha fx fx-musica-pag" style="--c:${c.color}">
+${secId('bandas', 'Bandas', musicaHtml(Infinity), 'fx-musica')}
+${secId('marchas', titM, nM ? listaM(relevantes) + notaTodas : '', 'fx-sec-marchas')}
+</article>`;
+    write(`hermandad/${h.slug}/musica/index.html`, layout({
+      title: `Bandas y marchas de ${h.nombre} (${c.nombre})`, desc: `Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.`, body: mus, path: `hermandad/${h.slug}/musica/`, image: ogOf(im), active: 'hermandades/',
+      crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.nombre, fichaUrl], ['Bandas y marchas', '']],
+    }));
+  }
 }
 
 function pageBanda(b) {
