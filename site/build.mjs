@@ -1643,7 +1643,7 @@ function sedesCiudad(c, P, R, xy) {
     // si la casa está en el mismo edificio que el templo (a menos de 25 m), un solo símbolo
     if (tp && cs && Math.hypot(tp[0] - cs[0], tp[1] - cs[1]) < 25) cs = null;
     const im = h.imagen;
-    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.find((w) => w >= 480) || im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug), ...dipCalle(h) });
+    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug), ...dipCalle(h) });
   };
   if (fs.existsSync(fS)) {
     const S = JSON.parse(fs.readFileSync(fS, 'utf8')), lista = Array.isArray(S) ? S : Array.isArray(S.hermandades) ? S.hermandades : Object.entries(S.hermandades || S).filter(([k]) => !k.startsWith('_')).map(([k, v]) => ({ slug: k, ...v }));
@@ -1688,7 +1688,8 @@ function dipCalle(h) {
   const t = (IMGX.titulares || {})[h.slug] || {}, out = {};
   for (const [k, tipo] of [['c', 'cristo'], ['v', 'virgen'], ['j', 'juntos']]) {
     const x = d[tipo]; if (!x || !x.local) continue;
-    const w = x.sizes.find((n) => n >= 480) || x.sizes.at(-1);
+    // la hoja ocupa todo el ancho del móvil (unos 1000 px reales en pantallas de alta densidad): la versión más grande
+    const w = x.sizes.at(-1);
     out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', '), url: x.pagina || '' };
   }
   return Object.keys(out).length ? { dip: out } : {};
