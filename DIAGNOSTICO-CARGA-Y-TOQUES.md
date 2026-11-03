@@ -173,3 +173,16 @@ Pablo: «mi web cuando la busco no aparece… ochocapitales.com». Encargo de co
 3. **Landing hasta el 14:** title más completo («Ocho Capitales · Semana Santa de las 8 capitales andaluzas»), WebSite y Organization, og:image en el dominio (con Marketing). Nada más.
 4. **Pasos para Pablo:** Google Search Console y Bing Webmaster Tools, con verificación por DNS en Cloudflare (la hace él o yo con su permiso). Sitemap de la landing ya; el completo el 14.
 Con auditor-web y el sí de Pablo para subir.
+
+## 4-nov (madrugada): pasada final del 3-nov e imágenes versionadas (`463d9e8`)
+- **Pasada final** sobre pages.dev (main en cfa4210): 22 plantillas × 390/1440 × claro/oscuro × Chromium/WebKit, 0 fallos; 1.017 enlaces internos, 0 rotos; buscador bien; LCP por debajo de 1,7 s con CPU 4×.
+- **Auditor-web** (NO APTO, 3 fallos):
+  - cabecera de las capitales bajo la colgadura en el móvil (Diseño);
+  - fotos sustituidas que se veían viejas hasta 7 días (Alojamiento, **arreglado**);
+  - bandas duplicadas (Marchas).
+  Lista enviada a coordinación.
+- **Arreglo:** `localUrl` añade `?v=` con la huella sha256 del archivo a todas las imágenes de `assets/img`. Se aplica en páginas, JSON de planos e índice. Auditor APTO; publicado y comprobado (`c-cadiz-960.webp?v=aa094dd0`).
+- **Pendiente:**
+  - `grano.png` (fondo del CSS) sigue sin versión;
+  - con todo versionado, `/assets/img/*` podría pasar a `immutable` (`despliegue.mjs`, línea 127) cuando se resuelva lo de `grano.png`.
+- **Ensayo del dominio:** hecho el 3-nov (ver `GUIA-ALOJAMIENTO.md`).
