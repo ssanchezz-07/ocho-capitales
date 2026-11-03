@@ -22,7 +22,8 @@ for (const [slug, x] of Object.entries(HI)) {
   if (!dir || !x.texto) continue;
   const fs_ = fs.readdirSync(dir).filter((f) => f === slug + '.txt' || (f.startsWith(slug + '.') && f.endsWith('.txt')));
   if (!fs_.length) { console.log('AVISO', slug + ': no hay texto de la fuente en', dir); avisos++; continue; }
-  const src = norm(fs_.map((f) => fs.readFileSync(dir + '/' + f, 'utf8')).join('\n'));
+  // Años escritos con punto de millar en la fuente («1.944») cuentan como el mismo número
+  const src = norm(fs_.map((f) => fs.readFileSync(dir + '/' + f, 'utf8')).join('\n')).replace(/(\d)\.(\d{3})(?!\d)/g, '$1$2');
   const faltan = new Set();
   for (const n of x.texto.match(/\d+/g) || []) if (!new RegExp('(^|[^0-9])' + n + '([^0-9]|$)').test(src)) faltan.add(n);
   // Nombres propios: palabras en mayúscula que no abren frase (la primera de cada frase es redacción propia)
