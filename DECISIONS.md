@@ -486,3 +486,16 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 `EQUIPO/` y la nota del proyecto no se pueden editar desde este worktree, así que el punto de retomar queda aquí. Las cinco páginas están hechas. Sin hacer de P2/P3: 5 transiciones de ancho/alto en `site.css`, pestaña activa en fichas, colores de `vida.css` a tokens, contraste de `.nx-pulso b` en Noticias, enlaces del pie de 36 px, pasada completa final.
 - **2-nov (Pablo: «el fondo debe ser el mismo oscuro y estrellado… no puede verse la web antes que la animación»):** el cielo de la landing (estrellas con gradientes CSS) va en línea en el HTML de la portada (`HEAD_ENTRADA`, build.mjs). `html.oc-entrando` lo pinta desde el primer byte y tapa la web; el globo y la portada usan ese mismo cielo, que se apaga en la ciudad. El globo arranca en «load» o a los 1,8 s, y al estar encima quita la capa; si falla, se quita al momento (onerror) y, sin JavaScript de por medio, a los 9 s por animación CSS. Una vez por visita, como antes.
 - **Pendiente tras esto: revisión de uso de «En la calle»** (encargo de Pablo: «Añádele una revisión a la página de mapa para facilitar su uso»): encontrar capital, día y hermandad; gestos; legibilidad; botones de 44 px; «Mi ubicación»; accesibilidad; rendimiento. A 390, 768 y 1440 px. Lista priorizada con capturas para Pablo.
+
+## RETOMAR AQUÍ (3-nov, Portada · plano y colores; worktree `.claude/worktrees/portada-plano`, rama `portada-plano`)
+- **Plano más ligero y sin tirones (hecho, sin subir; espera auditor-mapas y el sí de Pablo).**
+  - Las calles menores van como trazado por celdas de 1 km (`celdasCalles` en `build.mjs`). El fondo de «En la calle» es una capa aparte que se desliza al arrastrar y se repinta al parar (`moverFondo`/`fijarFondo` en `calle.js`). Los formateadores de fecha se crean una sola vez.
+  - Medido con la mediana de 5 pasadas, a 390 px, antes → después:
+    - Sevilla, arrastre por cuadro: WebKit 160 → 32 ms; Chromium con la CPU 4× más lenta, 320 → 82 ms.
+    - Sevilla, parón en Chromium 4×: 560 → ~430 ms. Lo que queda es el montaje general de la página (349 ms de estilos y maquetación antes de que lleguen los datos), que es de Alojamiento. Lo del plano ya no tiene tareas de más de 40 ms.
+    - Málaga, arrastre: WebKit 96 → 33 ms; Chromium 4×, 162 → 95 ms.
+  - Scripts de medida: `medir.mjs` y `traza.mjs` en el scratchpad de la sesión (Playwright 1.55, WebKit y Chromium).
+- **Colores del hábito desde la tabla de Diseño (hecho, sin subir).** `tools/colores-habito.mjs` lee `tools/sources/habitos-colores.json`, usa la primera sección y los nombres tal cual. Servitas de Málaga y La Resurrección de Cádiz van en tono neutro y sin nombre. No se toca `site.js` (la hoja de sede es de Diseño): esas dos llevan el tono en `coln0`, que solo leen `calle.js` y `plano.js`, así que la hoja no enseña «Hábito».
+- **Pendiente:**
+  - el informe de uso de «En la calle» (punto de partida en la línea 488 de este archivo);
+  - opcional: aligerar los datos de las cofradías (472 KB en Sevilla).

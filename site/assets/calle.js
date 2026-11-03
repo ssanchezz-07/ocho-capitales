@@ -11,8 +11,9 @@
   var D = null, dia = null, T = 0, vb = { x: 0, y: 0, w: 1000, h: 1000 }, capas = {}, yo = null, sel = null;
   var el = function (t, a) { var n = document.createElementNS(NS, t); for (var k in a) n.setAttribute(k, a[k]); return n; };
   var hhmm = function (m) { m = ((Math.round(m) % 1440) + 1440) % 1440; return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + (m % 60)).slice(-2); };
-  var ahoraMin = function () { var f = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
-  var hoyISO = function () { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date()); };
+  var fHora = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }), fDia = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }); // crearlos cuesta: una sola vez
+  var ahoraMin = function () { var f = fHora.format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
+  var hoyISO = function () { return fDia.format(new Date()); };
   var aLatLon = function (x, y) { return [D.origen[0] - y / D.ky, D.origen[1] + x / D.kx]; };
 
   // ---------- plano ----------
@@ -23,14 +24,21 @@
     var f = el('filter', { id: 'oc-brillo', x: '-50%', y: '-50%', width: '200%', height: '200%' }); f.appendChild(el('feGaussianBlur', { stdDeviation: '6' })); defs.appendChild(f);
     svg.appendChild(defs);
     capas.mundo = el('g', { 'class': 'oc-c-mundo' }); svg.appendChild(capas.mundo);
+    // Lo fijo (agua, plazas, calles, templos) va en una capa de fondo aparte y más grande que la vista: al arrastrar o pellizcar
+    // la desliza el navegador sin repintarla, y se vuelve a pintar al parar o al acercarse a su borde (moverFondo).
+    if (!fondo) { fondo = el('svg', { 'class': 'oc-calle-fondo', 'aria-hidden': 'true', focusable: 'false' }); fondo.style.cssText = 'display:block;position:absolute;left:-25%;top:-25%;width:150%;height:150%;pointer-events:none;transform-origin:0 0;will-change:transform'; mapa.insertBefore(fondo, svg); svg.style.position = 'relative'; }
+    fondo.textContent = ''; fondoVb = null;
+    var base = el('g', { 'class': 'oc-c-mundo' }); fondo.appendChild(base);
     // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
     var A = D.areas || {}, poli = function (ls) { var d = ''; (ls || []).forEach(function (l) { d += pathDe([l]) + 'Z'; }); return d; };
     [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
-      .forEach(function (c) { if (c[1]) capas.mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
-    capas.mundo.appendChild(el('path', { 'class': 'oc-c-calles', d: pathDe(D.calles) }));
-    capas.mundo.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
+      .forEach(function (c) { if (c[1]) base.appendChild(el('path', { 'class': c[0], d: c[1] })); });
+    // las calles menores llegan ya como trazado, por celdas de 1 km (build.mjs, celdasCalles); entran tras el primer fotograma
+    var gCalles = el('g', {}); base.appendChild(gCalles);
+    base.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
+    requestAnimationFrame(function () { setTimeout(function () { var fr = document.createDocumentFragment(); (D.calles || []).forEach(function (d) { fr.appendChild(el('path', { 'class': 'oc-c-calles', d: typeof d === 'string' ? d : pathDe([d]) })); }); gCalles.appendChild(fr); }, 0); });
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
-    if (A.edificios) { capas.mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); capas.mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
+    if (A.edificios) { base.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); base.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
     // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
     capas.nombres = el('g', { 'class': 'oc-c-nombres', 'aria-hidden': 'true' }); capas.mundo.appendChild(capas.nombres);
     capas.rutas = el('g', { 'class': 'oc-c-rutas' }); capas.mundo.appendChild(capas.rutas);
@@ -44,22 +52,51 @@
   // límites del plano: el centro de la vista no puede salir de la ciudad dibujada (no se «pierde» el plano)
   var lim = null;
   function calcularLimites() {
+    if (D.lim) { lim = D.lim; return; }
     var a = [Infinity, Infinity, -Infinity, -Infinity];
     [D.calles, D.principales].forEach(function (ls) { ls.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { if (l[i] < a[0]) a[0] = l[i]; if (l[i + 1] < a[1]) a[1] = l[i + 1]; if (l[i] > a[2]) a[2] = l[i]; if (l[i + 1] > a[3]) a[3] = l[i + 1]; } }); });
     lim = a;
   }
   function aplicarVista() {
     if (lim) { var cx = Math.min(Math.max(vb.x + vb.w / 2, lim[0]), lim[2]), cy = Math.min(Math.max(vb.y + vb.h / 2, lim[1]), lim[3]); vb.x = cx - vb.w / 2; vb.y = cy - vb.h / 2; }
-    svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, mapa.clientWidth);
+    svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, tamMapa()[0]);
+    moverFondo();
     svg.classList.toggle('con-nombres', Z < 2.6);
     if (D && dia) colocarMarcas();
     pedirNombres();
+  }
+  // Capa de fondo: pintada con la vista fondoVb (la de entonces más un 25 % por cada lado). Mientras la vista cambia poco solo se
+  // desplaza y escala; se repinta 140 ms después del último cambio, o al momento si se vería su borde o perdería nitidez.
+  var fondo = null, fondoVb = null, tFondo = 0, tam = null;
+  function tamMapa() { if (tam) return tam; var t = [mapa.clientWidth, mapa.clientHeight]; if (t[0]) tam = t; return t; } // sin guardar mientras mida 0 (oculto)
+  window.addEventListener('resize', function () { tam = null; fondoVb = null; });
+  function fijarFondo() {
+    clearTimeout(tFondo); if (!fondo) return;
+    fondoVb = { x: vb.x - vb.w / 4, y: vb.y - vb.h / 4, w: vb.w * 1.5, h: vb.h * 1.5 };
+    fondo.setAttribute('viewBox', fondoVb.x + ' ' + fondoVb.y + ' ' + fondoVb.w + ' ' + fondoVb.h); fondo.style.transform = '';
+  }
+  function moverFondo() {
+    if (!fondo) return;
+    if (!fondoVb) return fijarFondo();
+    var t = tamMapa(), W = t[0], H = t[1], px = W / vb.w, k = fondoVb.w / 1.5 / vb.w;
+    var tx = (fondoVb.x - vb.x) * px + W / 4, ty = (fondoVb.y - vb.y) * px + H / 4;
+    // lo que ocupa ahora la capa, en píxeles del plano: si no cubre la vista entera, o si se ha escalado mucho, se repinta ya
+    var x0 = tx - W / 4, y0 = ty - H / 4, x1 = x0 + 1.5 * W * k, y1 = y0 + 1.5 * H * k;
+    if (k < 0.7 || k > 1.6 || x0 > 0 || y0 > 0 || x1 < W || y1 < H) return fijarFondo();
+    fondo.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
+    clearTimeout(tFondo); tFondo = setTimeout(fijarFondo, 140);
   }
   // ---------- rótulos de calles e iglesias ----------
   // Cada etiqueta [x, y, ángulo, nombre, rango, largo en m] se coloca si cabe en su calle y no pisa a otra ya colocada.
   // Rango 1 (calles del recorrido y arterias) desde lejos; 2 y 3 (calles menores) al acercar. Las iglesias, muy cerca.
   var nombresPend = 0, posMarcas = [];
-  function pedirNombres() { if (nombresPend) return; nombresPend = requestAnimationFrame(function () { nombresPend = 0; pintarNombres(); }); }
+  // al arrastrar sin cambiar la escala, los rótulos ya puestos se mueven con el plano: se recolocan cuando se para (120 ms)
+  var zNombres = 0, tNombres = 0;
+  function pedirNombres() {
+    clearTimeout(tNombres);
+    if (zNombres === Z && Object.keys(punteros).length) { tNombres = setTimeout(pedirNombres, 120); return; }
+    if (nombresPend) return; nombresPend = requestAnimationFrame(function () { nombresPend = 0; zNombres = Z; pintarNombres(); });
+  }
   function pintarNombres() {
     var g = capas.nombres; if (!g || !D) return;
     g.textContent = '';
@@ -187,7 +224,7 @@
     var xs = [], ys = [];
     var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'], usados = {};
     delDia().forEach(function (h, i) {
-      var pts = h.t.paso || h.t.cruz, base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1; h.hc = k > 1 ? variar(base, k - 1) : base; // el color de su hábito; sin dato, la paleta
+      var pts = h.t.paso || h.t.cruz, base = h.col || h.coln0 || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1; h.hc = k > 1 ? variar(base, k - 1) : base; // el color de su hábito; sin dato, la paleta
       // tramos por calle, continuos; los que no se pudieron enrutar (recta de más de 150 m entre dos puntos oficiales), discontinuos
       // salidas extraordinarias: el regreso (posición 7) va aparte, con trazo discontinuo
       var d = '', da = '', dr = '', de = '', enR = false, enE = false;

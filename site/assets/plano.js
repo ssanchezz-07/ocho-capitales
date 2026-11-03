@@ -57,7 +57,8 @@
     var A = D.areas || {}, poli = function (ls) { var d = ''; (ls || []).forEach(function (l) { d += pathDe([l]) + 'Z'; }); return d; };
     [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
       .forEach(function (c) { if (c[1]) mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
-    el('path', { 'class': 'oc-pl-calles', d: pathDe(D.calles) }, mundo);
+    // calles menores: ya vienen como trazado por celdas de 1 km (build.mjs, celdasCalles); el navegador solo pinta las que se ven
+    var gCalles = el('g', {}, mundo); (D.calles || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: typeof d === 'string' ? d : pathDe([d]) }, gCalles); });
     el('path', { 'class': 'oc-pl-princ', d: pathDe(D.principales) }, mundo);
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
     if (A.edificios) { mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
@@ -100,7 +101,7 @@
     api.ponerDia = function (lista) {
       hs = lista; gR.textContent = ''; gM.textContent = ''; marcas = {}; estados = {}; var usados = {};
       hs.forEach(function (h, i) {
-        var base = h.col || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1, hc = k > 1 ? variar(base, k - 1) : base, d = '', pts = ruta(h);
+        var base = h.col || h.coln0 || PAL[i % PAL.length], k = usados[base] = (usados[base] || 0) + 1, hc = k > 1 ? variar(base, k - 1) : base, d = '', pts = ruta(h);
         pts.forEach(function (p, j) { var q = pts[j - 1]; d += (!j || (!p[6] && !q[6] && Math.hypot(p[0] - q[0], p[1] - q[1]) > 150)) ? 'M' + p[0] + ' ' + p[1] : 'L' + p[0] + ' ' + p[1]; });
         el('path', { 'class': 'oc-pl-ruta-filo', d: d }, gR); // filo oscuro debajo: el recorrido se separa de las calles
         el('path', { 'class': 'oc-pl-ruta', d: d, 'data-s': h.s, style: '--hc:' + hc }, gR);

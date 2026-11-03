@@ -1531,7 +1531,8 @@ function limpiaLugar(s) {
 // Color del hábito de cada hermandad para su recorrido (tools/colores-habito.mjs, desde tools/sources/habitos.json con fuente)
 const COLHAB_FILE = path.join(DIR, 'data', 'colores-habito.json');
 const COLHAB = fs.existsSync(COLHAB_FILE) ? JSON.parse(fs.readFileSync(COLHAB_FILE, 'utf8')) : {};
-const habito = (slug) => (COLHAB[slug] ? { col: COLHAB[slug].c, coln: COLHAB[slug].n, colf: COLHAB[slug].f } : {});
+// sin color escrito en el texto (nombre vacío): solo el tono neutro del recorrido, sin «Hábito» en la ficha
+const habito = (slug) => (!COLHAB[slug] ? {} : COLHAB[slug].n ? { col: COLHAB[slug].c, coln: COLHAB[slug].n, colf: COLHAB[slug].f } : { coln0: COLHAB[slug].c });
 // Sedes para el plano fuera de temporada: templo y casa hermandad de cada hermandad, cada punto con su fuente.
 // Si existe site/data/sedes/<ciudad>.json (lo cargan las sesiones de rutas), manda. Si no, de forma provisional: el punto de salida
 // del itinerario oficial (casa hermandad si así lo dice) y el templo de su ficha si OpenStreetMap tiene uno con ese mismo nombre.
@@ -1576,6 +1577,24 @@ function sedesCiudad(c, P, R, xy) {
     meter(slug, tp, cs);
   }
   return out;
+}
+// Las calles menores van ya como trazado SVG (coordenadas relativas, más ligeras) y partidas en celdas de 1 km: el navegador
+// solo pinta las celdas que se ven y el cliente no tiene que montar la cadena de miles de calles.
+function celdasCalles(ls, lado = 1000) {
+  const celdas = new Map();
+  for (const l of ls) {
+    const k = Math.floor(l[0] / lado) + ',' + Math.floor(l[1] / lado);
+    let d = 'M' + l[0] + ' ' + l[1] + (l.length > 2 ? 'l' : '');
+    for (let j = 2; j < l.length; j += 2) d += (j > 2 && l[j] - l[j - 2] >= 0 ? ' ' : '') + (l[j] - l[j - 2]) + (l[j + 1] - l[j - 1] >= 0 ? ' ' : '') + (l[j + 1] - l[j - 1]);
+    celdas.set(k, (celdas.get(k) || '') + d);
+  }
+  return [...celdas.values()];
+}
+// límites de lo dibujado (calles y arterias): el centro de la vista no sale de ahí
+function limitesPlano(P) {
+  const a = [Infinity, Infinity, -Infinity, -Infinity];
+  for (const l of [...P.calles, ...P.principales]) for (let i = 0; i < l.length; i += 2) { a[0] = Math.min(a[0], l[i]); a[1] = Math.min(a[1], l[i + 1]); a[2] = Math.max(a[2], l[i]); a[3] = Math.max(a[3], l[i + 1]); }
+  return a;
 }
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
@@ -1669,7 +1688,7 @@ function datosCalle(c) {
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: P.calles, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limitesPlano(P), principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {
