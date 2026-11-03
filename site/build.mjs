@@ -489,7 +489,7 @@ ${ESPECULA}
 ${head}<link rel="stylesheet" href="${u('assets/site.css')}?v=${HUELLA.css}">
 <link rel="stylesheet" href="${u('assets/vida.css')}?v=${HUELLA.vida}">
 ${ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
-<script>try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${NOTICIAS_URL ? 'window.OC_NOTICIAS=' + JSON.stringify(NOTICIAS_URL) + ';' : ''}window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
+<script>document.documentElement.classList.add('oc-js');addEventListener('load',function(){if(!window.OC_DIR)document.documentElement.classList.remove('oc-js')});try{var t=localStorage.getItem('oc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;var c=localStorage.getItem('oc-city');if(c)document.documentElement.dataset.city=c;}catch(e){}window.OC_BASE=${JSON.stringify(BASE)};${NOTICIAS_URL ? 'window.OC_NOTICIAS=' + JSON.stringify(NOTICIAS_URL) + ';' : ''}window.OC_COLORS=${JSON.stringify(Object.fromEntries(D.capitales.map((c) => [c.slug, c.color])))};</script>
 </head>
 <body>
 <a class="oc-skip" href="#contenido">Saltar al contenido</a>${TEMP_PRUEBA ? `<p class="oc-prueba" style="position:sticky;top:0;z-index:300;margin:0;padding:6px 12px;background:#b3261e;color:#fff;font:600 13px/1.3 system-ui;text-align:center">Compilación de prueba: temporada forzada a «${TEMP_PRUEBA}» (OC_TEMPORADA). No se publica.</p>` : ''}
@@ -1239,15 +1239,17 @@ function dirFilters(withDay, tipos, total, bandas = false, ph = 'Nombre, sede, t
 const dirMore = '<p class="oc-dirmore" data-dir-more hidden><button class="oc-btn is-quiet" type="button">Mostrar 50 más</button></p>';
 const dirEmpty = '<p class="oc-empty" data-dir-empty hidden>Ningún resultado con esos filtros. <button class="oc-textbtn" type="button" data-dir-reset>Quitar filtros</button></p>';
 // Tarjeta de la lista de Hermandades (lenguaje de Noticias): foto de la hermandad o su sello en el color de su capital
-function entryHermVx(h) {
+function entryHermVx(h, mas = false) {
   const c = CAP[h.ciudad], im = h.imagen;
   const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true" style="--c:${c.color}"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   const meta = `${cityTag(h.ciudad)}<span>${esc(h.dia)}</span>${h.hora ? `<span class="vx-autor">${esc(fmtHora(h.hora))} h</span>` : ''}`;
-  return `<li class="oc-entry vx-m ix-obra" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m ix-obra${mas ? ' is-mas' : ''}" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
 function pageDirHerm() {
-  const items = [...D.hermandades].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map(entryHermVx).join('');
+  // De la 51 en adelante van marcadas (is-mas): con JS, el CSS las oculta desde el primer pintado, porque site.js solo enseña 50
+  // y el móvil ya no maqueta 307 tarjetas al cargar. Sin JS se ven todas.
+  const items = [...D.hermandades].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map((h, i) => entryHermVx(h, i >= 50)).join('');
   const conFoto = D.hermandades.filter((h) => h.imagen).length;
   // Por capital: cuántas hay, en su terciopelo; al pulsar, se filtra la lista
   const caps = D.capitales.map((c) => { const hs = D.hermandades.filter((h) => h.ciudad === c.slug); return { c, n: hs.length, dias: new Set(hs.map((h) => h.dia)).size }; }).filter((x) => x.n);

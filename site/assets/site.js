@@ -995,7 +995,7 @@
       if (b.palabras.length) hay.sort(function (p, q) { return p.s - q.s || q.nv - p.nv || (p.x.el ? p.x.k : 1e6 + p.x.i) - (q.x.el ? q.x.k : 1e6 + q.x.i); });
       var n = hay.length;
       vistas.forEach(function (el) { el.hidden = true; });
-      cards.forEach(function (el) { el.hidden = true; });
+      cards.forEach(function (el) { el.hidden = true; el.classList.remove('is-mas'); }); // is-mas: ocultas por CSS hasta este momento (build.mjs)
       vistas = hay.slice(0, limit).map(function (h) { var x = h.x, el = x.el || hechas[x.i] || (hechas[x.i] = filaMarcha(x)); el.hidden = false; if (x.b && x.b.length) lineaToca(el, h.banda ? x.b : null, b); return el; });
       vistas.forEach(function (el) { grid.appendChild(el); }); // en el orden de arriba
       if (!restoOk) n += extra;
@@ -1026,6 +1026,7 @@
     var reset = $('[data-dir-reset]', scope);
     if (reset) reset.addEventListener('click', function () { Object.keys(fields).forEach(function (k) { fields[k].value = ''; }); limit = PAGE; conResto(apply); fields.q && fields.q.focus(); });
     if (restoUrl && Object.keys(fields).some(function (k) { return fields[k].value; })) conResto(apply); else apply();
+    window.OC_DIR = 1; // el listado ya manda: sin esta marca, la cabecera quita oc-js al cargar y se ven todas (build.mjs)
   });
 
   // ---------- calendario (pestañas por capital) ----------

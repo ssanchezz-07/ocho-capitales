@@ -149,3 +149,13 @@ Encargo de coordinación: aligerar las tres plantillas con más nodos: Hermandad
 4. **Coordinarse con Diseño (sobremesa):** ha rediseñado Hoy y Calendario. Solo rendimiento, sin cambiar el aspecto.
 5. **Para subir:** auditor-web, prueba de humo, comprobación a 390 y 1440 px, y avisar al subir.
 - **Pendiente de otros:** Portada publica el toque más rápido en las banderas (`304b091`) con el sí de Pablo, y aligera `data/calle` (causa 3).
+
+## 3-nov tarde: aligerar Hermandades, Hoy y Calendario
+Medido en local (Chromium con la CPU 4× y WebKit, 390 px, mediana de 7 pasadas; un toque a los 1,3 s de empezar a cargar).
+- **Hermandades** era la única con un problema real. Trae 307 tarjetas en el HTML (sin JS se ven todas; con JS, 50) y el móvil maquetaba las 307 antes de que `site.js` ocultara 257.
+  - Cambio: las tarjetas de la 51 en adelante llevan `is-mas` (`build.mjs`, `pageDirHerm`). El script de cabecera pone `oc-js` en `<html>` y `vida.css` oculta esas tarjetas desde el primer pintado. `site.js` quita la marca al filtrar. Sin JS se ven todas.
+  - Resultado: carga de 3,2 a 1,3 s, estilo y maquetación de 1,9 a 0,75 s, TBT de 0,58 a 0,18 s, toque a los 1,3 s de 0,32 a 0,12 s.
+  - Descartado: `content-visibility: auto` en las tarjetas (ganaba menos: carga 2,0 s). El auditor comprobó que en WebKit la búsqueda en la página no encontraba las tarjetas, VoiceOver no las veía y el scroll daba saltos al subir.
+- **Hoy y Calendario** ya estaban ligeros: los días y capitales que no se ven vienen con `hidden` en el HTML y no cuestan maquetación (TBT de unos 120 ms). Probado `content-visibility` en sus bloques: diferencia dentro del ruido; no se tocan.
+- Selectores CSS: 0,1 s en total. No son el cuello de botella.
+- Comprobado: filtro por capital, búsqueda, «Mostrar más», sin JS (307 visibles), Chromium y WebKit a 390 y 1440 px, sin errores.

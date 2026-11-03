@@ -242,6 +242,9 @@ a { text-underline-offset: .18em; }
 @media (min-width: 1800px) { :root:has(.vx-head) { --wrap: 1680px; } .oc-entries.vx-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .oc-entry.vx-m { position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 4px 14px; align-items: start; margin: 0; padding: 14px 16px 15px; border: 0; border-radius: 18px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .05), 0 10px 24px -20px rgb(20 6 30 / .4); transition: transform var(--m-base) var(--e-salida), box-shadow var(--m-base) var(--e-salida); }
 .oc-entry.vx-m[hidden] { display: none; }
+/* Rendimiento: con JS, las tarjetas de la 51 en adelante (is-mas, build.mjs) no se maquetan al cargar; site.js quita la marca al filtrar.
+   (content-visibility se descartó: en Safari la búsqueda en la página y VoiceOver dejaban de ver las tarjetas.) */
+.oc-js [data-dir] > .oc-entry.is-mas { display: none; }
 .oc-entry.vx-m::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 0; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--oro), var(--oro-claro), var(--oro)); transform: scaleX(0); transform-origin: 0 50%; transition: transform var(--m-base) var(--e-salida); }
 @media (hover: hover) and (pointer: fine) { .oc-entry.vx-m:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgb(20 6 30 / .07), 0 18px 32px -20px rgb(20 6 30 / .5); } .oc-entry.vx-m:hover::after { transform: scaleX(1); } .oc-entry.vx-m:hover .vx-tit a { color: var(--primary); } }
 .oc-entry.vx-m:active { transform: scale(.985); transition-duration: var(--m-toque); }
