@@ -1,0 +1,33 @@
+{
+ "banda": "banda-de-cornetas-y-tambores-nuestra-senora-de-la-victoria-las-cigarreras-sevilla",
+ "nombre_banda": "Banda de Cornetas y Tambores Nuestra Señora de la Victoria – Las Cigarreras (Sevilla)",
+ "clave": "cig",
+ "fuente": "Las Cigarreras, web oficial de la banda (repertorio) y vídeo del estreno en su canal de YouTube",
+ "url": "https://lascigarreras.net/repertorio/",
+ "revisado": "2026-11-03",
+ "nota": "Repertorio publicado por la propia banda. Cada marcha cita su ficha en la web de la banda; el vídeo es el del estreno en el canal oficial de Las Cigarreras. Solo se pone lo que dicen esas dos publicaciones.",
+ "marchas": [
+  {
+   "titulo": "Sanctae Crucis",
+   "autor": "Cristóbal López Gándara",
+   "anio": "2025",
+   "formacion": "Banda de cornetas y tambores",
+   "dedicatoria": "A la Hermandad de la Santa Cruz del Cerrillo y Santa Elena Emperatriz de Villalba del Alcor. Elia Campillo Mañas in memoriam",
+   "estreno": "Las Cigarreras",
+   "lugar": "Convento del Santo Ángel (Sevilla)",
+   "video": "vLq9anIOk1w",
+   "url": "https://lascigarreras.net/repertorio/sanctae-crucis/"
+  },
+  {
+   "titulo": "Yo soy la luz del mundo",
+   "autor": "Manuel Alejandro González Cruz",
+   "anio": "2026",
+   "formacion": "Banda de cornetas y tambores",
+   "dedicatoria": "A todas las imágenes de Jesús de las hermandades que acompaña musicalmente Las Cigarreras: Salud, Misión, Sagrada Cena, Humildad y Paciencia, Soberano Poder ante Caifás, Jesús ante Anás, Mayor Dolor, Soberano Poder en su Prendimiento, Atado a la Columna, Púrpura, Salud, Dios Hijo y Cinco Llagas",
+   "estreno": "Las Cigarreras",
+   "lugar": "Parroquia de San Roque (Sevilla)",
+   "video": "JiEroqM_31w",
+   "url": "https://lascigarreras.net/repertorio/yo-soy-la-luz-del-mundo/"
+  }
+ ]
+}

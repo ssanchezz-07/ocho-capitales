@@ -1,0 +1,21 @@
+{
+ "banda": "banda-de-cornetas-y-tambores-nuestra-senora-del-rosario-coronada-cadiz",
+ "nombre_banda": "Banda de Cornetas y Tambores Nuestra Señora del Rosario (Cádiz)",
+ "clave": "rcz",
+ "fuente": "Rosario de Cádiz, canal oficial de YouTube de la banda (vídeo del estreno)",
+ "url": "https://www.youtube.com/channel/UCN2u_wP105P0mU8fPmB4kpA",
+ "revisado": "2026-11-03",
+ "nota": "Lo que dice la banda en la descripción del vídeo del estreno, en su canal oficial. Sin año de composición: el año es el del estreno que publica la banda.",
+ "marchas": [
+  {
+   "titulo": "El Rezo",
+   "autor": "Manuel Jesús Guerrero Marín",
+   "anio": "2024",
+   "formacion": "Banda de cornetas y tambores",
+   "dedicatoria": "A Nuestro Padre Jesús de las Penas de la Hermandad de la Estrella (Sevilla)",
+   "estreno": "BCT Nuestra Señora del Rosario de Cádiz",
+   "video": "PLYwcvJ8jhI",
+   "url": "https://www.youtube.com/watch?v=PLYwcvJ8jhI"
+  }
+ ]
+}

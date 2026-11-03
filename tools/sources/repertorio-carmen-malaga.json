@@ -1,0 +1,22 @@
+{
+ "banda": "banda-de-cornetas-y-tambores-nuestra-senora-del-carmen-malaga",
+ "nombre_banda": "Banda de Cornetas y Tambores Nuestra Señora del Carmen (Málaga)",
+ "clave": "bcm",
+ "fuente": "El Carmen, web oficial de la banda (repertorio) y vídeo del estreno en su canal de YouTube",
+ "url": "https://bctcarmenmalaga.es/repertorio/",
+ "revisado": "2026-11-03",
+ "nota": "Repertorio publicado por la propia banda. La web y el vídeo dan el autor como «hermanos Aragüez», sin nombres: se pone así.",
+ "marchas": [
+  {
+   "titulo": "Al son de un barrio",
+   "autor": "Hermanos Aragüez",
+   "anio": "2026",
+   "formacion": "Banda de cornetas y tambores",
+   "dedicatoria": "Al barrio de El Perchel (Málaga) y a sus gentes",
+   "estreno": "BCT Nuestra Señora del Carmen de Málaga",
+   "lugar": "Calle Nueva (Málaga), procesión de la Virgen del Carmen del Perchel",
+   "video": "qJH3nX76we4",
+   "url": "https://www.youtube.com/watch?v=qJH3nX76we4"
+  }
+ ]
+}

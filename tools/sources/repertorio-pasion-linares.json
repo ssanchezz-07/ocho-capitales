@@ -1,0 +1,22 @@
+{
+ "banda": "agrupacion-musical-nuestro-padre-jesus-de-la-pasion-linares",
+ "nombre_banda": "Agrupación Musical Nuestro Padre Jesús de la Pasión (Linares)",
+ "clave": "pln",
+ "fuente": "Pasión de Linares, canal oficial de YouTube de la agrupación (vídeo del estreno)",
+ "url": "https://www.youtube.com/channel/UCAQeYo6-kSYPl9pEmKqi4iQ",
+ "revisado": "2026-11-03",
+ "nota": "Lo que dice la agrupación en la descripción del vídeo del estreno, en su canal oficial.",
+ "marchas": [
+  {
+   "titulo": "Flagellatio",
+   "autor": "Cristóbal López Gándara",
+   "anio": "2025",
+   "formacion": "Agrupación musical",
+   "dedicatoria": "A Nuestro Padre Jesús atado a la Columna en el Misterio de su Sagrada Flagelación, de la Hermandad de la Columna de Linares",
+   "estreno": "AM Nuestro Padre Jesús de la Pasión de Linares",
+   "lugar": "Iglesia de los Terceros (Sevilla)",
+   "video": "IIagseauqrs",
+   "url": "https://www.youtube.com/watch?v=IIagseauqrs"
+  }
+ ]
+}

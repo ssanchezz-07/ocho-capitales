@@ -287,10 +287,15 @@ for (const rp of REPS) for (const x of rp.marchas) {
   if (!r) { r = nuevo({ slug: darSlug(x.titulo + ' ' + x.autor), titulo: x.titulo, autor: x.autor }); (porTituloR.get(nt(x.titulo)) || porTituloR.set(nt(x.titulo), []).get(nt(x.titulo))).push(r); }
   // excepción de Pablo («publicar»): una marcha estrenada por la banda sin otra fuente se publica citando a la banda, sin enlace
   const f = rp.clave || (x.publicar ? 'banda' : 'part');
-  if (rp.clave) r.urls[f] = rp.url;
+  if (rp.clave) r.urls[f] = (x.url || rp.url); // repertorio público: cada marcha puede citar su propia publicación de la banda
   if (x.publicar && x.url) r.urls.banda = x.url; // enlace público de la banda (p. ej. el vídeo del estreno en su canal)
+  // repertorio público: el vídeo del estreno en el canal de la banda, la banda que la estrenó y el lugar, tal como los da su publicación
+  if (rp.clave && x.video && !r.video) { r.video = x.video; fuente(r, 'video', f); }
+  if (rp.clave) for (const c of ['estreno', 'lugar']) if (x[c] && !r[c]) { r[c] = x[c]; fuente(r, c, f); }
   fuente(r, 'titulo', f); fuente(r, 'autor', f);
-  (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) }); fuente(r, 'repertorio', f);
+  // la misma banda puede venir de dos repertorios (partituras y canal público): se apunta una vez
+  if (!(r.repertorio || []).some((y) => y.banda === rp.banda)) (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) });
+  fuente(r, 'repertorio', f);
   if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f }];
   if (x.formacion && !r.formacion) { r.formacion = x.formacion; fuente(r, 'formacion', f); }
   if (x.dedicatoria) r._deds = [...(r._deds || []), { texto: x.dedicatoria, loc: '', f, url: '' }];

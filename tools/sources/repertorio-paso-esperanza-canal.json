@@ -1,0 +1,30 @@
+{
+ "banda": "banda-de-cornetas-y-tambores-del-paso-y-la-esperanza-malaga",
+ "nombre_banda": "Banda de Cornetas y Tambores del Paso y la Esperanza (Málaga)",
+ "clave": "pye",
+ "fuente": "BCT Paso y Esperanza, canal oficial de YouTube y discografía publicada por la banda (sello SPES Music)",
+ "url": "https://www.youtube.com/channel/UCdfoCjkhLnL2aPJBIyusGRg",
+ "revisado": "2026-11-03",
+ "nota": "Públicas, a diferencia de repertorio-paso-esperanza.json (partituras). Jesús Lacerado: descripción del vídeo del estreno en el canal de la banda. Siervos de tu Humildad: el vídeo del estreno no da el autor; lo da la ficha de la grabación publicada por la banda (La Esperanza, SPES Music, 2025: «Composer: Alfonso López Cortés», https://www.youtube.com/watch?v=fKD3BqwlLyI). Ninguna de las dos fuentes da dedicatoria. Jesús Lacerado va sin año: el vídeo da el del estreno (19-3-2023) y no el de composición.",
+ "marchas": [
+  {
+   "titulo": "Jesús Lacerado",
+   "autor": "Óscar Navarro",
+   "formacion": "Banda de cornetas y tambores",
+   "estreno": "BCT Paso y Esperanza de Málaga",
+   "lugar": "Basílica del Paso y la Esperanza (Málaga), concierto del XXV aniversario",
+   "video": "j01SOwTDT-E",
+   "url": "https://www.youtube.com/watch?v=j01SOwTDT-E"
+  },
+  {
+   "titulo": "Siervos de tu Humildad",
+   "autor": "Alfonso López Cortés",
+   "anio": "2025",
+   "formacion": "Banda de cornetas y tambores",
+   "estreno": "BCT Paso y Esperanza de Málaga",
+   "lugar": "Capilla del Colegio El Monte FESD (Málaga)",
+   "video": "O9wqTPMatEs",
+   "url": "https://www.youtube.com/watch?v=fKD3BqwlLyI"
+  }
+ ]
+}
