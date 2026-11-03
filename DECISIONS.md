@@ -491,18 +491,21 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 - **2-nov (Pablo: «el fondo debe ser el mismo oscuro y estrellado… no puede verse la web antes que la animación»):** el cielo de la landing (estrellas con gradientes CSS) va en línea en el HTML de la portada (`HEAD_ENTRADA`, build.mjs). `html.oc-entrando` lo pinta desde el primer byte y tapa la web; el globo y la portada usan ese mismo cielo, que se apaga en la ciudad. El globo arranca en «load» o a los 1,8 s, y al estar encima quita la capa; si falla, se quita al momento (onerror) y, sin JavaScript de por medio, a los 9 s por animación CSS. Una vez por visita, como antes.
 - **Pendiente tras esto: revisión de uso de «En la calle»** (encargo de Pablo: «Añádele una revisión a la página de mapa para facilitar su uso»): encontrar capital, día y hermandad; gestos; legibilidad; botones de 44 px; «Mi ubicación»; accesibilidad; rendimiento. A 390, 768 y 1440 px. Lista priorizada con capturas para Pablo.
 
-## RETOMAR AQUÍ (3-nov, Portada · plano y colores; worktree `.claude/worktrees/portada-plano`, rama `portada-plano`)
-- **Plano más ligero y sin tirones (hecho, sin subir; espera auditor-mapas y el sí de Pablo).**
-  - Las calles menores van como trazado por celdas de 1 km (`celdasCalles` en `build.mjs`). El fondo de «En la calle» es una capa aparte que se desliza al arrastrar y se repinta al parar (`moverFondo`/`fijarFondo` en `calle.js`). Los formateadores de fecha se crean una sola vez.
-  - Medido con la mediana de 5 pasadas, a 390 px, antes → después:
-    - Sevilla, arrastre por cuadro: WebKit 160 → 32 ms; Chromium con la CPU 4× más lenta, 320 → 82 ms.
-    - Sevilla, parón en Chromium 4×: 560 → ~430 ms. Lo que queda es el montaje general de la página (349 ms de estilos y maquetación antes de que lleguen los datos), que es de Alojamiento. Lo del plano ya no tiene tareas de más de 40 ms.
-    - Málaga, arrastre: WebKit 96 → 33 ms; Chromium 4×, 162 → 95 ms.
-  - Scripts de medida: `medir.mjs` y `traza.mjs` en el scratchpad de la sesión (Playwright 1.55, WebKit y Chromium).
-- **Colores del hábito desde la tabla de Diseño (hecho, sin subir).** `tools/colores-habito.mjs` lee `tools/sources/habitos-colores.json`, usa la primera sección y los nombres tal cual. Servitas de Málaga y La Resurrección de Cádiz van en tono neutro y sin nombre. No se toca `site.js` (la hoja de sede es de Diseño): esas dos llevan el tono en `coln0`, que solo leen `calle.js` y `plano.js`, así que la hoja no enseña «Hábito».
+## RETOMAR AQUÍ (3-nov, Portada · plano, colores y «En la calle»; todo publicado, con el sí de Pablo)
+- **Publicado:** 977f6c9 (plano más ligero y colores del hábito), b4dd664/encuadre (el medallón ya no queda bajo el reloj en pantallas anchas) y 8bc2a8f (díptico de titulares en `data/calle` → `sedes[i].dip`, para la hoja de sede de Diseño). auditor-mapas APTO en los tres.
+- **Plano más ligero:** las calles menores van como trazado por celdas de 1 km (`celdasCalles` en `build.mjs`). El fondo de «En la calle» es una capa aparte que se desliza al arrastrar y se repinta al parar (`moverFondo`/`fijarFondo` en `calle.js`). Mediana de 5 pasadas a 390 px, antes → después:
+  - Sevilla, arrastre por cuadro: WebKit 160 → 32 ms; Chromium con la CPU 4× más lenta, 320 → 82 ms. Toque, Chromium 4×: 149 → 52 ms.
+  - Sevilla, parón en Chromium 4×: 560 → ~430 ms. Lo que queda es el montaje general de la página (349 ms), antes de que lleguen los datos: es de Alojamiento.
+  - Málaga, arrastre: WebKit 96 → 33 ms; Chromium 4×, 162 → 95 ms.
+  - Scripts de medida (`medir.mjs`, `traza.mjs`) en el scratchpad de la sesión del 3-nov, con Playwright 1.55.
+- **Colores del hábito:** `tools/colores-habito.mjs` lee `tools/sources/habitos-colores.json`, usa la primera sección y los nombres tal cual. Servitas de Málaga y La Resurrección de Cádiz llevan solo un tono neutro (`coln0`), sin «Hábito» en la ficha. No se toca `site.js`.
+- **Revisión de uso de «En la calle» (Málaga primero):** la Pasión del 14-nov se ve bien. Avisado a coordinación de lo que no es de Portada:
+  - Diseño (`site.css:1882`): en tableta con la ficha abierta, el reloj sube y tapa el medallón.
+  - Diseño: la barra de la hora mide 28 px y debería tener 44.
+  - erCuñao: a 390 px su botón tapa la esquina del plano.
 - **Pendiente:**
-  - el informe de uso de «En la calle» (punto de partida en la línea 488 de este archivo);
-  - opcional: aligerar los datos de las cofradías (472 KB en Sevilla).
+  - Decisión de Pablo: que en las jornadas de una sola cofradía (extraordinarias) su recorrido se vea sin tocarla. Hoy solo se dibuja al elegirla (decisión del 25-oct).
+  - Opcional: aligerar los datos de las cofradías (472 KB en Sevilla).
 
 ## RETOMAR AQUÍ (3-nov, oc-diseno del sobremesa; encargos de hoy, orden de Coordinación)
 Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase justo antes, auditor-diseno, 390/1440 en claro y oscuro, el sí de Pablo y aviso a Coordinación con el hash.
