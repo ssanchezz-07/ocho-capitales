@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T17:07:24.938Z",
+ "generado": "2026-11-03T17:19:24.442Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5632,18 +5632,23 @@
   },
   "la-borriquita-almeria": {
    "virgen": {
-    "w": 960,
-    "h": 723,
+    "w": 480,
+    "h": 651,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Urci dream",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:La_Borriquita_2026_04.jpg",
+    "recorte": [
+     0.4,
+     0.38,
+     0.2,
+     0.36
+    ],
     "titular": "Nuestra Señora de la Paz"
    }
   },
@@ -5698,25 +5703,30 @@
   },
   "la-coronacion-almeria": {
    "virgen": {
-    "w": 960,
-    "h": 720,
+    "w": 480,
+    "h": 737,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Coronaci%C3%B3n_06.jpg",
+    "recorte": [
+     0.32,
+     0.3,
+     0.22,
+     0.45
+    ],
     "titular": "María Santísima de Gracia y Amparo"
    }
   },
   "el-amor-almeria": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1260,
     "widths": [
      160,
      480,
@@ -5727,21 +5737,32 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Amor_03.jpg",
+    "recorte": [
+     0.26,
+     0.12,
+     0.24,
+     0.42
+    ],
     "titular": "Santísimo Cristo del Amor"
    },
    "virgen": {
-    "w": 960,
-    "h": 720,
+    "w": 480,
+    "h": 655,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Amor_01.jpg",
+    "recorte": [
+     0.32,
+     0.28,
+     0.22,
+     0.4
+    ],
     "titular": "Nuestra Señora del Primer Dolor"
    }
   },
@@ -5815,7 +5836,7 @@
   "rosario-del-mar-almeria": {
    "cristo": {
     "w": 960,
-    "h": 723,
+    "h": 964,
     "widths": [
      160,
      480,
@@ -5826,21 +5847,32 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_05.jpg",
+    "recorte": [
+     0.38,
+     0.4,
+     0.24,
+     0.32
+    ],
     "titular": "Nuestro Padre Jesús de las Penas en el Abandono"
    },
    "virgen": {
-    "w": 960,
-    "h": 723,
+    "w": 480,
+    "h": 603,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_09.jpg",
+    "recorte": [
+     0.47,
+     0.46,
+     0.18,
+     0.3
+    ],
     "titular": "María Santísima del Rosario del Mar"
    }
   },
@@ -5913,7 +5945,7 @@
   "el-santo-sepulcro-almeria": {
    "cristo": {
     "w": 960,
-    "h": 723,
+    "h": 808,
     "widths": [
      160,
      480,
@@ -5924,21 +5956,32 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Sepulcro_04.jpg",
+    "recorte": [
+     0.28,
+     0.25,
+     0.34,
+     0.38
+    ],
     "titular": "Cristo yacente"
    },
    "virgen": {
-    "w": 960,
-    "h": 723,
+    "w": 480,
+    "h": 651,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Sepulcro_05.jpg",
+    "recorte": [
+     0.48,
+     0.3,
+     0.2,
+     0.36
+    ],
     "titular": "Nuestra Señora de los Dolores"
    }
   },
@@ -8421,6 +8464,64 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg",
     "foco": "50% 15%",
     "titular": "Santísimo Cristo de la Sagrada Lanzada"
+   }
+  },
+  "cristo-de-la-escucha-almeria": {
+   "cristo": {
+    "w": 480,
+    "h": 643,
+    "widths": [
+     160,
+     480
+    ],
+    "escudo": false,
+    "autor": "Fernando",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
+    "recorte": [
+     0.36,
+     0.36,
+     0.28,
+     0.25
+    ],
+    "titular": "Cristo de la Escucha"
+   }
+  },
+  "pasion-almeria": {
+   "cristo": {
+    "w": 960,
+    "h": 723,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Eduardo Milla",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg",
+    "foco": "50% 30%",
+    "titular": "Nuestro Padre Jesús de Salud y Pasión"
+   }
+  },
+  "gran-poder-almeria": {
+   "cristo": {
+    "w": 960,
+    "h": 720,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Miguel Ángel",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg",
+    "foco": "50% 20%",
+    "titular": "Nuestro Padre Jesús del Gran Poder"
    }
   }
  }

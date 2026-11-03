@@ -231,28 +231,28 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Nuestra Señora del Prado | Viernes de Dolores | **ninguna foto**; Virgen: Nuestra Señora del Prado en su Dolor |
 | La Bendición | Sábado de Pasión | **ninguna foto**; Cristo: Cristo de la Bendición |
 
-## Almería
+## Almería (revisado el 2026-11-03)
 
-Foto mejor (la que hay es de esa hermandad, pero la Virgen apenas se ve, de lejos y tapada por la candelería): **Rosario del Mar** (María Santísima del Rosario del Mar) y **La Borriquita** (Nuestra Señora de la Paz).
-
-1 sin ninguna foto; 16 con algún titular sin foto.
+5 sin ninguna foto de titular; 13 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
-| La Borriquita | Domingo de Ramos | Cristo: Jesús de la Victoria en su Entrada en Jerusalén |
-| La Estrella | Domingo de Ramos | Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Estrella |
-| La Santa Cena | Domingo de Ramos | solo la foto de la sede; Cristo: Santa Cena; Virgen: María Santísima de Fe y Caridad |
-| Pasión | Lunes Santo | Cristo: Nuestro Padre Jesús de Salud y Pasión; Virgen: María Santísima de los Desamparados |
-| Gran Poder | Lunes Santo | Cristo: Nuestro Padre Jesús del Gran Poder; Virgen: Nuestra Señora del Carmen / María Santísima del Mayor Dolor y Traspaso |
+| La Borriquita | Domingo de Ramos | **ninguna foto**; Cristo: Jesús de la Victoria en su Entrada en Jerusalén; Virgen: Nuestra Señora de la Paz |
+| La Estrella | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Estrella |
+| La Santa Cena | Domingo de Ramos | **ninguna foto**; Cristo: Santa Cena; Virgen: María Santísima de Fe y Caridad |
+| Pasión | Lunes Santo | Virgen: María Santísima de los Desamparados |
+| Gran Poder | Lunes Santo | Virgen: Nuestra Señora del Carmen / María Santísima del Mayor Dolor y Traspaso |
 | La Coronación | Martes Santo | Cristo: Jesús de la Humildad y Paciencia en su Coronación de Espinas |
+| El Amor | Martes Santo | Virgen: Nuestra Señora del Primer Dolor |
 | El Calvario (Cristo del Mar) | Miércoles Santo | Virgen: Nuestra Señora de las Lágrimas |
 | El Prendimiento | Miércoles Santo | Cristo: Nuestro Padre Jesús en su Prendimiento / Jesús Cautivo de Medinaceli |
 | La Macarena | Miércoles Santo | Virgen: María Santísima de la Esperanza Macarena |
 | Los Estudiantes | Miércoles Santo | Cristo: Oración en el Huerto |
-| El Encuentro (Jesús Nazareno) | Jueves Santo | Virgen: María Santísima de la Amargura |
+| Rosario del Mar | Jueves Santo | Virgen: María Santísima del Rosario del Mar |
+| El Encuentro (Jesús Nazareno) | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno / Santa Mujer Verónica; Virgen: María Santísima de la Amargura |
 | Las Angustias | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte |
 | El Silencio (Descendimiento) | Jueves Santo | Virgen: Nuestra Madre María Santísima del Consuelo |
-| Cristo de la Escucha | Madrugá | Cristo: Cristo de la Escucha |
+| El Santo Sepulcro | Viernes Santo | Cristo: Cristo yacente |
 | La Soledad | Viernes Santo | Cristo: San Juan Evangelista |
 | El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Jesucristo Resucitado, Señor de la Vida |
 

@@ -158,6 +158,34 @@
   "el-descendimiento-huelva|sede": {
    "archivo": "Capilla_Sagrario_Parroquia_San_Pedro_Huelva.jpg",
    "motivo": "Retablo del Sagrario en lugar de un titular."
+  },
+  "el-encuentro-jesus-nazareno-almeria|cristo": {
+   "archivo": "Nuestro_Padre_Jesús_Nazareno_Huércal-Overa.jpg",
+   "motivo": "Es el Nazareno de Huércal-Overa (categoría «Huércal-Overa», «a su paso por la calle Arco»), no el del Encuentro de Almería."
+  },
+  "la-estrella-almeria|ficha": {
+   "archivo": "La_Estrella_Alm_04.jpg",
+   "motivo": "Nazarenos en la calle; no se ve ningún titular."
+  },
+  "la-santa-cena-almeria|sede": {
+   "archivo": "Iglesia_de_San_Pedro,_Almería.jpg",
+   "motivo": "Calle con el templo al fondo en lugar de un titular."
+  },
+  "la-borriquita-almeria|virgen": {
+   "archivo": "La_Borriquita_2026_04.jpg",
+   "motivo": "Palio de lado y de lejos: ni recortado se ve a la Virgen."
+  },
+  "el-amor-almeria|virgen": {
+   "archivo": "Procesión_Amor_01.jpg",
+   "motivo": "Palio de lejos: ni recortado se ve a la Virgen entre la candelería."
+  },
+  "rosario-del-mar-almeria|virgen": {
+   "archivo": "Rosario_del_Mar_09.jpg",
+   "motivo": "Palio de noche y de lejos: ni recortado se ve a la Virgen."
+  },
+  "el-santo-sepulcro-almeria|cristo": {
+   "archivo": "Hermandad_Sepulcro_04.jpg",
+   "motivo": "Paso de noche: el recorte enseña un ángel y la urna, no al Cristo yacente."
   }
  },
  "no_portada": {

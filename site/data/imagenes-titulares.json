@@ -1545,7 +1545,13 @@
     "autor": "Urci dream",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Paz"
+    "titular": "Nuestra Señora de la Paz",
+    "recorte": [
+     0.4,
+     0.38,
+     0.2,
+     0.36
+    ]
    }
   },
   "los-angeles-almeria": {
@@ -1583,7 +1589,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de Gracia y Amparo"
+    "titular": "María Santísima de Gracia y Amparo",
+    "recorte": [
+     0.32,
+     0.3,
+     0.22,
+     0.45
+    ]
    }
   },
   "el-amor-almeria": {
@@ -1593,7 +1605,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Santísimo Cristo del Amor"
+    "titular": "Santísimo Cristo del Amor",
+    "recorte": [
+     0.26,
+     0.12,
+     0.24,
+     0.42
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Amor_01.jpg",
@@ -1601,7 +1619,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora del Primer Dolor"
+    "titular": "Nuestra Señora del Primer Dolor",
+    "recorte": [
+     0.32,
+     0.28,
+     0.22,
+     0.4
+    ]
    }
   },
   "el-perdon-silencio-almeria": {
@@ -1651,7 +1675,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús de las Penas en el Abandono"
+    "titular": "Nuestro Padre Jesús de las Penas en el Abandono",
+    "recorte": [
+     0.38,
+     0.4,
+     0.24,
+     0.32
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_09.jpg",
@@ -1659,7 +1689,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima del Rosario del Mar"
+    "titular": "María Santísima del Rosario del Mar",
+    "recorte": [
+     0.47,
+     0.46,
+     0.18,
+     0.3
+    ]
    }
   },
   "el-encuentro-jesus-nazareno-almeria": {
@@ -1707,7 +1743,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Cristo yacente"
+    "titular": "Cristo yacente",
+    "recorte": [
+     0.28,
+     0.25,
+     0.34,
+     0.38
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Sepulcro_05.jpg",
@@ -1715,7 +1757,13 @@
     "autor": "Eduardo Milla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de los Dolores"
+    "titular": "Nuestra Señora de los Dolores",
+    "recorte": [
+     0.48,
+     0.3,
+     0.2,
+     0.36
+    ]
    }
   },
   "la-soledad-almeria": {
@@ -3198,6 +3246,44 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Sagrada Lanzada",
     "foco": "50% 15%"
+   }
+  },
+  "cristo-de-la-escucha-almeria": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
+    "titulo": "File:Almeria Cathedral 2023 - chapel Cristo de la escucha.jpg",
+    "autor": "Fernando",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Cristo de la Escucha",
+    "recorte": [
+     0.36,
+     0.36,
+     0.28,
+     0.25
+    ]
+   }
+  },
+  "pasion-almeria": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg",
+    "titulo": "File:Pasión 01.jpg",
+    "autor": "Eduardo Milla",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús de Salud y Pasión",
+    "foco": "50% 30%"
+   }
+  },
+  "gran-poder-almeria": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg",
+    "titulo": "File:Gran Poder - 7053999345.jpg",
+    "autor": "Miguel Ángel",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "titular": "Nuestro Padre Jesús del Gran Poder",
+    "foco": "50% 20%"
    }
   }
  }

@@ -85,6 +85,11 @@ function completarFoco(entry, manual) {
   if (manual) entry.foco = manual; else delete entry.foco;
 }
 
+// Fotos retiradas (tools/sources/fotos-retiradas.json): no se descargan ni se generan, para que no vuelvan a publicarse sus archivos
+const FRET = JSON.parse(fs.readFileSync(path.join(SITE, '..', 'tools', 'sources', 'fotos-retiradas.json'), 'utf8'));
+const archivoDe = (u) => { try { return decodeURIComponent(String(u || '').split('?')[0].split('/').pop()).replace(/^File:/, '').replace(/ /g, '_'); } catch { return ''; } };
+const retirada = (meta, slug, rol) => !!((FRET.retiradas || {})[archivoDe(meta.pagina || meta.titulo)] || (FRET.retiradas_en || {})[slug + '|' + rol]);
+
 const jobs = [];
 for (const h of D.hermandades) if (h.imagen) jobs.push(['h', h.slug, h.imagen]);
 for (const c of D.capitales) if (c.imagen) jobs.push(['c', c.slug, c.imagen]);
@@ -94,6 +99,7 @@ for (const [slug, list] of Object.entries(NUEVAS.capitales || {})) { const x = (
 let done = 0, fail = 0;
 for (const [kind, slug, meta] of jobs) {
   const bucket = kind === 'h' ? index.hermandades : index.capitales;
+  if (kind === 'h' && retirada(meta, slug, 'ficha')) continue;
   if (bucket[slug] && bucket[slug].pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
   try { bucket[slug] = await processOne(kind, slug, meta); done++; console.log('ok', kind, slug, bucket[slug].w + 'x' + bucket[slug].h); }
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }
@@ -106,6 +112,7 @@ index.titulares = prev.titulares || {};
 for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
   for (const tipo of ['cristo', 'virgen', 'juntos', 'sede']) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
+    if (retirada(meta, slug, tipo)) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
     if (prevT && prevT.pagina === meta.pagina && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
     try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
