@@ -267,7 +267,11 @@ const CUNAO_SVG = `<svg class="oc-cunao-cara" viewBox="0 0 64 64" aria-hidden="t
 const clean = (src) => String(src).split('?')[0];
 const wmAt = (src, w) => clean(src).replace(/\/\d+px-/, `/${w}px-`);
 const isThumb = (src) => /\/\d+px-/.test(clean(src));
-const localUrl = (im, w) => `assets/img/${im.kind}-${im.slug}-${w}.webp`;
+// ?v= con la huella del archivo, como el CSS y el JS: si una foto se sustituye con el mismo nombre (Cádiz capital, 3-nov),
+// la dirección cambia y nadie sigue viendo la vieja por la caché del navegador o del service worker.
+const HUELLA_IMG = new Map();
+const huellaImg = (f) => { if (!HUELLA_IMG.has(f)) { let h = ''; try { h = createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', 'img', f))).digest('hex').slice(0, 8); } catch (e) { console.warn('Falta la imagen assets/img/' + f); } HUELLA_IMG.set(f, h); } return HUELLA_IMG.get(f); };
+const localUrl = (im, w) => { const f = `${im.kind}-${im.slug}-${w}.webp`, h = huellaImg(f); return `assets/img/${f}${h ? '?v=' + h : ''}`; };
 // Ancho más pequeño disponible que cubre la mayor de las medidas pedidas (evita descargar 960 px para una miniatura).
 const localSet = (im, widths) => { const max = Math.max(...widths); const cut = im.sizes.findIndex((x) => x >= max); return im.sizes.slice(0, cut < 0 ? im.sizes.length : cut + 1); };
 const ogOf = (im) => (!im ? '' : im.local ? abs(localUrl(im, im.sizes.at(-1))) : isThumb(im.src) ? wmAt(im.src, 960) : clean(im.src));
