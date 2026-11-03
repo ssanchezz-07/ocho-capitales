@@ -1624,7 +1624,7 @@ function sedesCiudad(c, P, R, xy) {
     // si la casa está en el mismo edificio que el templo (a menos de 25 m), un solo símbolo
     if (tp && cs && Math.hypot(tp[0] - cs[0], tp[1] - cs[1]) < 25) cs = null;
     const im = h.imagen;
-    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.find((w) => w >= 480) || im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug) });
+    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.find((w) => w >= 480) || im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug), ...dipCalle(h) });
   };
   if (fs.existsSync(fS)) {
     const S = JSON.parse(fs.readFileSync(fS, 'utf8')), lista = Array.isArray(S) ? S : Array.isArray(S.hermandades) ? S.hermandades : Object.entries(S.hermandades || S).filter(([k]) => !k.startsWith('_')).map(([k, v]) => ({ slug: k, ...v }));
@@ -1661,6 +1661,18 @@ function limitesPlano(P) {
   const a = [Infinity, Infinity, -Infinity, -Infinity];
   for (const l of [...P.calles, ...P.principales]) for (let i = 0; i < l.length; i += 2) { a[0] = Math.min(a[0], l[i]); a[1] = Math.min(a[1], l[i + 1]); a[2] = Math.max(a[2], l[i]); a[3] = Math.max(a[3], l[i + 1]); }
   return a;
+}
+// Díptico para la hoja de sede del plano (va en «sedes», que es lo que lee la hoja; la pinta Diseño): Cristo, Virgen y juntos, solo los que hay, con la miniatura de
+// 480 px, el foco (object-position) si Imágenes lo ha fijado, el texto alternativo y el crédito. Rutas y textos cortos.
+function dipCalle(h) {
+  const d = h && h.diptico; if (!d) return {};
+  const t = (IMGX.titulares || {})[h.slug] || {}, out = {};
+  for (const [k, tipo] of [['c', 'cristo'], ['v', 'virgen'], ['j', 'juntos']]) {
+    const x = d[tipo]; if (!x || !x.local) continue;
+    const w = x.sizes.find((n) => n >= 480) || x.sizes.at(-1);
+    out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', '), url: x.pagina || '' };
+  }
+  return Object.keys(out).length ? { dip: out } : {};
 }
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
