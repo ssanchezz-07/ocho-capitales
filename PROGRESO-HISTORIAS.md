@@ -98,10 +98,8 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
 ## RETOMAR AQUÍ
 1. **Subido a main** (3-nov, e8c7bee, con el sí de Pablo): lemas, historias de las 307 hermandades y hábitos de 291 (159 nuevos).
 2. **Hábitos sin fuente todavía** (14): Escucha, Lanzada, Divino Maestro, La O, Traslado, Higuerón y Presentación (Almería/Jaén/Córdoba); Resucitado, Desamparados, Verdad y Sagrario, Luz y Mar y Gamarra (Málaga); Humillación y Piedad (Cádiz); Carmen Doloroso (Sevilla); Facundillos (Granada). Macarena y Pasión y Muerte salen de Wikipedia: buscar fuente oficial.
-3. **Orden `EQUIPO/ORDEN-VERIFICAR-TEXTOS.md`:** se cortó por el límite de uso. Falta:
-   - verificar los «Datos clave» e imprescindibles de las capitales (Jaén dice «Interés Turístico Nacional de Andalucía»);
-   - inventariar los textos fijos de `build.mjs`, curiosidades y pies de foto;
-   - añadir a la red de seguridad la comprobación de fuente de cada texto de autor.
+3. **Orden `EQUIPO/ORDEN-VERIFICAR-TEXTOS.md`: hecha y auditada** (3-nov, rama historias-hermandades, a la espera del sí de Pablo para subir): datos clave e imprescindibles en `tools/sources/capitales-textos.json`, textos fijos registrados en `tools/sources/textos-autor.json`, comprobación `tools/comprobar-fuentes-textos.mjs` en la red de seguridad y lista para Pablo en `EQUIPO/LISTA-TEXTOS-VERIFICADOS.md`. Tras subir, avisar a Marketing. Queda sin mostrar el acompañamiento musical de Almería de 2026 hasta encontrar su documento.
 4. **Lote de datos** (pedido por coordinación):
    - titulares que no cuadran con su fuente (ver `nota` en historias.json; p. ej. Salud de Huelva de David Valenciano 2000, Angustias de Almería 1943, «atribuido a» en Granada, autores de Sevilla);
+   - sede del Silencio de Granada, que según Imágenes no cuadra (pedido por coordinación);
    - marca `propia` de las bandas: Fusionadas, BCT Jesús Nazareno y Expiración (Huelva), BM Esperanza y Estrella (Córdoba).
