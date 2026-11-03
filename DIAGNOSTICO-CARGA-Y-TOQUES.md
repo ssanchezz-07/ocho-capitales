@@ -159,3 +159,17 @@ Medido en local (Chromium con la CPU 4× y WebKit, 390 px, mediana de 7 pasadas;
 - **Hoy y Calendario** ya estaban ligeros: los días y capitales que no se ven vienen con `hidden` en el HTML y no cuestan maquetación (TBT de unos 120 ms). Probado `content-visibility` en sus bloques: diferencia dentro del ruido; no se tocan.
 - Selectores CSS: 0,1 s en total. No son el cuello de botella.
 - Comprobado: filtro por capital, búsqueda, «Mostrar más», sin JS (307 visibles), Chromium y WebKit a 390 y 1440 px, sin errores.
+## RETOMAR AQUÍ: SEO (en pausa por Pablo, 3-nov: «dejemos eso por ahora»)
+Pablo: «mi web cuando la busco no aparece… ochocapitales.com». Encargo de coordinación, pendiente:
+1. **Para el 14-nov** (preparar en una rama, sin publicar):
+   - canonical, og:url, sitemap, robots y datos estructurados con https://ochocapitales.com;
+   - 301 de pages.dev al dominio con una Bulk Redirect;
+   - la red de seguridad comprueba que ninguna página lleva canonical a pages.dev.
+   - Ya existe: `SITE_URL` en `site/build.mjs` (línea 13) gobierna canonical, og:url, BreadcrumbList, `robots.txt` y `sitemap.xml`. La variable `CLOUDFLARE_URL` de Actions es la que lo pone el día 14. Falta comprobar que el sitemap tenga lastmod y se trocee si pasa de 50.000 URL, y añadir el control de canonical en la red.
+2. **Revisión SEO técnica:**
+   - title y description únicos;
+   - datos estructurados: WebSite con SearchAction, Organization, BreadcrumbList; Event solo si los datos lo sostienen;
+   - sitemap, robots, enlaces internos, noindex por error y 404.
+3. **Landing hasta el 14:** title más completo («Ocho Capitales · Semana Santa de las 8 capitales andaluzas»), WebSite y Organization, og:image en el dominio (con Marketing). Nada más.
+4. **Pasos para Pablo:** Google Search Console y Bing Webmaster Tools, con verificación por DNS en Cloudflare (la hace él o yo con su permiso). Sitemap de la landing ya; el completo el 14.
+Con auditor-web y el sí de Pablo para subir.
