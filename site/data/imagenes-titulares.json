@@ -453,12 +453,18 @@
   },
   "gitanos-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f11.2_-Cristo_de_los_Azotes_y_Columna_capilla.jpg",
-    "titulo": "File:Malaga ig Sn Juan Bautista f11.2 -Cristo de los Azotes y Columna capilla.jpg",
-    "autor": "Rodrigo Fernández",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús de la Columna"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_De_La_Columna_(147777103).jpeg",
+    "titulo": "File:Cristo De La Columna (147777103).jpeg",
+    "autor": "Ortega Fotografia",
+    "licencia": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "titular": "Nuestro Padre Jesús de la Columna",
+    "recorte": [
+     0.35,
+     0,
+     0.5,
+     1
+    ]
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_-_Trono_de_Mar%C3%ADa.jpg",
@@ -540,6 +546,15 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de Gracia"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_del_Rescate_(4479711834).jpg",
+    "titulo": "File:Ntro Padre Jesús del Rescate (4479711834).jpg",
+    "autor": "Antonio España from Madrid, España",
+    "licencia": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "titular": "Nuestro Padre Jesús del Rescate",
+    "foco": "88% 35%"
    }
   },
   "sentencia-malaga": {
@@ -562,12 +577,18 @@
   },
   "salesianos-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Penas_-_Trono_del_Cristo_2.jpg",
-    "titulo": "File:Penas - Trono del Cristo 2.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Salesianos_-_Trono_4.jpg",
+    "titulo": "File:Salesianos - Trono 4.jpg",
     "autor": "Pedro J Pacheco",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Santo Cristo de las Penas"
+    "titular": "Santo Cristo de las Penas",
+    "recorte": [
+     0.25,
+     0.05,
+     0.6,
+     0.55
+    ]
    }
   },
   "fusionadas-malaga": {
@@ -618,6 +639,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús Nazareno «El Rico»"
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:P4180468.JPG",
+    "titulo": "File:P4180468.JPG",
+    "autor": "Enr1993",
+    "licencia": "CC0",
+    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "titular": "María Santísima del Amor"
    }
   },
   "sangre-malaga": {
@@ -655,12 +684,18 @@
     "titular": "María Santísima de los Dolores Coronada"
    },
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Expiracion_Holy_Week_Malaga_2012.jpg",
-    "titulo": "File:Expiracion Holy Week Malaga 2012.jpg",
-    "autor": "Antonio España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "titular": "Santísimo Cristo de la Expiración"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg",
+    "titulo": "File:Expiración Trono.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de la Expiración",
+    "recorte": [
+     0.27,
+     0.1,
+     0.48,
+     0.48
+    ]
    }
   },
   "zamarrilla-malaga": {
@@ -2061,8 +2096,8 @@
   },
   "desamparados-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_se%C3%B1ora_de_los_Desamparados.jpg",
-    "titulo": "File:Nuestra señora de los Desamparados.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_se%C3%B1ora_de_los_Desamparados.png",
+    "titulo": "File:Nuestra señora de los Desamparados.png",
     "autor": "Jesusplaza02",
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2646,6 +2681,20 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": ""
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cena_Trono_4.jpg",
+    "titulo": "File:Cena Trono 4.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima de la Paz",
+    "recorte": [
+     0.44,
+     0.18,
+     0.2,
+     0.4
+    ]
    }
   },
   "mena-malaga": {
@@ -2656,6 +2705,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": ""
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Soledad-de-Mena-1.jpg",
+    "titulo": "File:Soledad-de-Mena-1.jpg",
+    "autor": "Ispupe14",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestra Señora de la Soledad Coronada"
    }
   },
   "buen-camino-gamarra-malaga": {
@@ -3185,6 +3242,20 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús a su Entrada en Jerusalén",
     "foco": "50% 20%"
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_del_Amparo_2.jpg",
+    "titulo": "File:Pollinica - Trono del Amparo 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima del Amparo",
+    "recorte": [
+     0.22,
+     0.18,
+     0.5,
+     0.5
+    ]
    }
   },
   "humildad-malaga": {
@@ -3651,6 +3722,50 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Expiración",
     "foco": "50% 20%"
+   }
+  },
+  "mediadora-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:RedentorMundo.jpg",
+    "titulo": "File:RedentorMundo.jpg",
+    "autor": "Hdadmediadora",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús Nazareno Redentor del Mundo"
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mediadora04.jpg",
+    "titulo": "File:Mediadora04.jpg",
+    "autor": "Mediadora",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestra Señora Mediadora de la Salvación"
+   }
+  },
+  "monte-calvario-malaga": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Calvario_(13984618325).jpg",
+    "titulo": "File:María Santísima del Calvario (13984618325).jpg",
+    "autor": "Isa Ruiz from Málaga, España",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "titular": "Santa María del Monte Calvario"
+   }
+  },
+  "descendimiento-malaga": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Descendimiento_Trono_2.jpg",
+    "titulo": "File:Descendimiento Trono 2.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Sagrado Descendimiento",
+    "recorte": [
+     0.15,
+     0.05,
+     0.7,
+     0.65
+    ]
    }
   }
  }

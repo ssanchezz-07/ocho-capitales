@@ -6,18 +6,17 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 
 ## Málaga (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-20 sin ninguna foto de titular; 21 con algún titular sin foto.
+12 sin ninguna foto de titular; 20 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
-| Pollinica | Domingo de Ramos | Virgen: María Santísima del Amparo |
 | Dulce Nombre | Domingo de Ramos | Virgen: María Santísima del Dulce Nombre |
 | Salutación | Domingo de Ramos | Virgen: María Santísima del Patrocinio Reina de los Cielos |
 | Humildad | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo de la Humildad en su Presentación al Pueblo / San Juan Evangelista; Virgen: Nuestra Madre y Señora de la Merced |
 | Huerto | Domingo de Ramos | Cristo: Nuestro Padre Jesús Orando en el Huerto / Ángel Egudiel |
 | Prendimiento | Domingo de Ramos | Cristo: Nuestro Padre Jesús del Prendimiento |
 | Crucifixión | Lunes Santo | Virgen: María Santísima del Mayor Dolor en su Soledad |
-| Gitanos | Lunes Santo | Cristo: Nuestro Padre Jesús de la Columna |
+| Gitanos | Lunes Santo | Virgen: María Santísima de la O |
 | Dolores del Puente | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo del Perdón; Virgen: Nuestra Señora de los Dolores Coronada |
 | Pasión | Lunes Santo | Virgen: María Santísima del Amor Doloroso |
 | Estudiantes | Lunes Santo | Virgen: Nuestra Señora de Gracia y Esperanza |
@@ -25,26 +24,18 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 | Penas | Martes Santo | Virgen: María Santísima de las Penas |
 | Nueva Esperanza | Martes Santo | Virgen: María Santísima de Nueva Esperanza |
 | Humillación y Estrella | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Humillación y Perdón; Virgen: María Santísima de la Estrella |
-| Rescate | Martes Santo | Cristo: Nuestro Padre Jesús del Rescate |
-| Mediadora | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno Redentor del Mundo; Virgen: Nuestra Señora Mediadora de la Salvación |
-| Salesianos | Miércoles Santo | **ninguna foto**; Cristo: Santo Cristo de las Penas / San Juan Evangelista; Virgen: María Santísima del Auxilio |
+| Salesianos | Miércoles Santo | Virgen: María Santísima del Auxilio |
 | Paloma | Miércoles Santo | Virgen: María Santísima de la Paloma |
-| El Rico | Miércoles Santo | Virgen: María Santísima del Amor |
-| Sangre | Miércoles Santo | Virgen: María Santísima de Consolación y Lágrimas / Nuestra Madre Dolorosa |
-| Expiración | Miércoles Santo | Cristo: Santísimo Cristo de la Expiración |
-| Sagrada Cena | Jueves Santo | **ninguna foto**; Cristo: Sagrada Cena Sacramental; Virgen: María Santísima de la Paz |
+| Sagrada Cena | Jueves Santo | Cristo: Sagrada Cena Sacramental |
 | Viñeros | Jueves Santo | Virgen: Nuestra Señora del Traspaso y Soledad de Viñeros |
 | Santa Cruz | Jueves Santo | Cristo: Santa Cruz / Santísimo Cristo de la Victoria |
 | Vera+Cruz | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Vera+Cruz y Sangre / San Juan Evangelista; Virgen: Nuestra Señora del Mayor Dolor Reina de los Ángeles |
-| Mena | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Buena Muerte y Ánimas; Virgen: Nuestra Señora de la Soledad Coronada |
+| Mena | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte y Ánimas |
 | Misericordia | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Misericordia; Virgen: Nuestra Señora del Gran Poder |
 | Esperanza | Jueves Santo | Cristo: Jesús Nazareno del Paso |
-| Monte Calvario | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo Yacente de la Paz y Unidad; Virgen: Nuestra Señora de Fe y Consuelo / Santa María del Monte Calvario |
-| Descendimiento | Viernes Santo | **ninguna foto**; Cristo: Sagrado Descendimiento; Virgen: Nuestra Señora del Santo Sudario / María Santísima de las Angustias |
-| Piedad | Viernes Santo | **ninguna foto**; Virgen: Nuestra Señora de la Piedad |
+| Monte Calvario | Viernes Santo | Cristo: Santísimo Cristo Yacente de la Paz y Unidad |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Santo Sepulcro; Virgen: Nuestra Señora de la Soledad |
 | Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado |
-| Desamparados | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Señora de los Desamparados |
 | Verdad y Sagrario | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Verdad ante Caifás; Virgen: María Santísima del Sagrario |
 | Luz y Mar | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo Luz del Mundo; Virgen: María Santísima del Mar |
 | Buen Camino (Gamarra) | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Purísima Madre del Buen Camino |

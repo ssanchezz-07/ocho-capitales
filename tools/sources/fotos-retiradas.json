@@ -119,10 +119,6 @@
    "archivo": "Manto_de_flores_de_la_Virgen_de_las_Penas_-_Martes_Santo_-_Málaga_-_(7047570859).jpg",
    "motivo": "El manto de flores tapa a la Virgen: no se ve la titular."
   },
-  "expiracion-malaga|cristo": {
-   "archivo": "Expiracion_Holy_Week_Malaga_2012.jpg",
-   "motivo": "De noche y de lejos: el Cristo casi no se ve."
-  },
   "humillacion-y-estrella-malaga|cristo": {
    "archivo": "Cristo_de_la_Humillación_y_Perdón,_lateral_izquierdo_del_trono.jpg",
    "motivo": "Trono visto de lejos entre los nazarenos; 720 px."
@@ -130,10 +126,6 @@
   "humillacion-y-estrella-malaga|virgen": {
    "archivo": "María_Santísima_de_la_Estrella_en_su_salida_procesional_del_martes_santo.jpg",
    "motivo": "Palio de lejos entre el público; 720 px."
-  },
-  "desamparados-malaga|virgen": {
-   "archivo": "Nuestra_señora_de_los_Desamparados.jpg",
-   "motivo": "Palio de lejos y oscuro."
   },
   "humillacion-y-estrella-malaga|ficha": {
    "archivo": "Estrella_-_Humillación.jpg",
@@ -550,6 +542,10 @@
   "la-piedad-cordoba|ficha": {
    "archivo": "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
    "motivo": "La misma foto pequeña retirada como Virgen."
+  },
+  "gitanos-malaga|virgen": {
+   "archivo": "Gitanos_-_Trono_de_María.jpg",
+   "motivo": "Palio dentro del templo: la Virgen sale pequeña al fondo."
   }
  },
  "no_portada": {
