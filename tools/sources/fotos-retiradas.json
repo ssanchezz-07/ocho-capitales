@@ -366,6 +366,50 @@
   "la-estrella-cordoba|ficha": {
    "archivo": "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg",
    "motivo": "La misma foto del palio de lejos."
+  },
+  "sagrada-cena-cadiz|sede": {
+   "archivo": "Convento_de_Nuestra_Señora_del_Rosario_y_Santo_Domingo,_Cádiz.JPG",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "las-penas-cadiz|sede": {
+   "archivo": "Iglesia_de_San_Lorenzo_Mártir_(Cádiz).jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "nazareno-del-amor-cadiz|sede": {
+   "archivo": "Spain_-_Cadiz,_Plaza_San_Francisco_-_panoramio.jpg",
+   "motivo": "Plaza con el templo al fondo en lugar de un titular."
+  },
+  "vera-cruz-cadiz|sede": {
+   "archivo": "Spain_-_Cadiz,_Plaza_San_Francisco_-_panoramio.jpg",
+   "motivo": "Plaza con el templo al fondo en lugar de un titular."
+  },
+  "la-piedad-cadiz|sede": {
+   "archivo": "Iglesia_de_Santiago,_Cádiz.jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "la-sentencia-cadiz|sede": {
+   "archivo": "Iglesia_de_Nuestra_Señora_de_la_Merced,_Cádiz.jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "siete-palabras-cadiz|sede": {
+   "archivo": "Iglesia_de_Nuestra_Señora_de_la_Merced,_Cádiz.jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "ecce-mater-tua-cadiz|sede": {
+   "archivo": "Iglesia_de_Santiago,_Cádiz.jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "la-resurreccion-cadiz|sede": {
+   "archivo": "Iglesia_de_San_Antonio_de_Padua,_Cádiz.jpg",
+   "motivo": "Templo en lugar de un titular."
+  },
+  "la-expiracion-cadiz|cristo": {
+   "archivo": "Cristo_de_la_Expiración.JPG",
+   "motivo": "Es la foto del cartel de la Semana Santa de 2009: el diseño del cartel puede no ser del autor que la subió."
+  },
+  "la-expiracion-cadiz|ficha": {
+   "archivo": "Cristo_de_la_Expiración.JPG",
+   "motivo": "La misma foto del cartel."
   }
  },
  "no_portada": {

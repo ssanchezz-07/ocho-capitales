@@ -172,9 +172,9 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | El Resucitado | Domingo de Resurrección | Virgen: Nuestra Señora de la Alegría |
 | Los Facundillos | Domingo de Resurrección | **ninguna foto**; Cristo: Dulce Nombre de Jesús |
 
-## Cádiz
+## Cádiz (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-12 sin ninguna foto; 29 con algún titular sin foto.
+21 sin ninguna foto de titular; 6 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -182,30 +182,28 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Merced (Obediencia) | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno de la Obediencia |
 | La Borriquita | Domingo de Ramos | **ninguna foto**; Cristo: Jesús de la Paz en su Entrada en Jerusalén; Virgen: María Santísima del Amparo, «la Guapa de Cádiz» |
 | El Despojado | Domingo de Ramos | Virgen: María Santísima de la Concepción |
-| Sagrada Cena | Domingo de Ramos | solo la foto de la sede; Cristo: Jesús del Milagro en la Sagrada Cena y apostolado; Virgen: María Santísima Reina de Todos los Santos |
-| Las Penas | Domingo de Ramos | solo la foto de la sede; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Caridad |
+| Sagrada Cena | Domingo de Ramos | **ninguna foto**; Cristo: Jesús del Milagro en la Sagrada Cena y apostolado; Virgen: María Santísima Reina de Todos los Santos |
+| Las Penas | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de la Caridad |
 | La Palma | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Misericordia; Virgen: María Santísima de las Penas Coronada |
 | El Prendimiento | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús en su Prendimiento; Virgen: María Santísima del Patrocinio |
-| Nazareno del Amor | Lunes Santo | solo la foto de la sede; Cristo: Nuestro Padre Jesús Nazareno del Amor; Virgen: Nuestra Señora de la Esperanza |
-| Vera+Cruz | Lunes Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Vera+Cruz; Virgen: Nuestra Señora de la Soledad |
+| Nazareno del Amor | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno del Amor; Virgen: Nuestra Señora de la Esperanza |
+| Vera+Cruz | Lunes Santo | Virgen: Nuestra Señora de la Soledad |
 | La Sanidad | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Mayor Dolor; Virgen: María Santísima de la Salud |
-| La Piedad | Martes Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Piedad / Nuestro Padre Jesús de la Humillación; Virgen: María Santísima de las Lágrimas |
+| La Piedad | Martes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Piedad / Nuestro Padre Jesús de la Humillación; Virgen: María Santísima de las Lágrimas |
 | Jesús Caído («El Señor del Parque») | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Caído; Virgen: María Santísima de los Desamparados |
-| La Columna | Martes Santo | Cristo: Jesús atado a la Columna y Azotes, «El Aguador»; Virgen: María Santísima de las Lágrimas |
-| Las Cigarreras | Miércoles Santo | Cristo: Nuestro Padre Jesús de la Salud (Coronado de Espinas); Virgen: María Santísima de la Esperanza |
-| La Sentencia | Miércoles Santo | solo la foto de la sede; Cristo: Nuestro Padre Jesús de la Sentencia; Virgen: María Santísima del Buen Fin |
+| La Columna | Martes Santo | Virgen: María Santísima de las Lágrimas |
+| La Sentencia | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Sentencia; Virgen: María Santísima del Buen Fin |
 | Las Aguas | Miércoles Santo | Virgen: María Santísima de Guadalupe |
 | Los Afligidos | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús de los Afligidos; Virgen: María Santísima de los Desconsuelos |
 | Oración en el Huerto | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Oración en el Huerto; Virgen: Nuestra Señora de Gracia y Esperanza |
-| Medinaceli | Jueves Santo y Madrugada | Cristo: Nuestro Padre Jesús Cautivo y Rescatado |
 | Nazareno de Santa María | Jueves Santo y Madrugada | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno; Virgen: María Santísima de los Dolores |
 | El Perdón | Jueves Santo y Madrugada | Virgen: María Santísima del Rosario |
 | El Descendimiento | Viernes Santo | Virgen: Nuestra Señora de los Dolores |
-| La Expiración | Viernes Santo | Cristo: Santísimo Cristo de la Expiración; Virgen: María Santísima de la Victoria |
-| Siete Palabras | Viernes Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Sed; Virgen: María Santísima de la Piedad |
-| Ecce Mater Tua | Sábado Santo | solo la foto de la sede; Cristo: Dolorosa |
+| La Expiración | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Expiración; Virgen: María Santísima de la Victoria |
+| Siete Palabras | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Sed; Virgen: María Santísima de la Piedad |
+| Ecce Mater Tua | Sábado Santo | **ninguna foto**; Virgen: Dolorosa |
 | Santo Entierro | Sábado Santo | **ninguna foto**; Cristo: Cristo yacente; Virgen: Nuestra Señora de la Soledad |
-| La Resurrección | Domingo de Resurrección | solo la foto de la sede; Cristo: Cristo Resucitado |
+| La Resurrección | Domingo de Resurrección | **ninguna foto**; Cristo: Cristo Resucitado |
 | Humillación (Piedad) | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Humillación |
 
 ## Huelva (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)

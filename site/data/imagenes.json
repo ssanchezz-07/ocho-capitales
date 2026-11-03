@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T21:23:35.203Z",
+ "generado": "2026-11-03T21:25:04.374Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5234,6 +5234,22 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad_de_C%C3%A1diz.jpg",
     "titular": "María Santísima de la Trinidad"
+   },
+   "cristo": {
+    "w": 720,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     720
+    ],
+    "escudo": false,
+    "autor": "Medinaceli Trinidad Cádiz",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_Medinaceli_de_C%C3%A1diz.jpg",
+    "foco": "50% 15%",
+    "titular": "Nuestro Padre Jesús Cautivo y Rescatado"
    }
   },
   "nazareno-de-santa-maria-cadiz": {
@@ -7486,6 +7502,22 @@
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Spain_-_Cadiz,_Plaza_San_Francisco_-_panoramio.jpg",
     "titular": "Convento de San Francisco"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vera-Cruz_de_C%C3%A1diz.jpg",
+    "foco": "50% 15%",
+    "titular": "Santísimo Cristo de la Vera+Cruz"
    }
   },
   "la-sanidad-cadiz": {
@@ -8675,6 +8707,59 @@
     "foco": "50% 20%",
     "titular": "Nuestro Padre Jesús de los Afligidos"
    }
+  },
+  "la-columna-cadiz": {
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg",
+    "foco": "50% 15%",
+    "titular": "Jesús atado a la Columna y Azotes, «El Aguador»"
+   }
+  },
+  "las-cigarreras-cadiz": {
+   "juntos": {
+    "w": 960,
+    "h": 720,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Cofradia de Cádiz",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Titulares_de_las_Cigarreras_de_c%C3%A1diz_en_sus_retablos.jpg",
+    "titular": "Nuestro Padre Jesús de la Salud y María Santísima de la Esperanza en sus retablos"
+   }
+  },
+  "la-expiracion-cadiz": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "ROSAPASION",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Expiraci%C3%B3n.JPG",
+    "foco": "50% 20%",
+    "titular": "Santísimo Cristo de la Expiración"
+   }
   }
  },
  "dipticos": {
@@ -8927,6 +9012,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_paciencia_C%C3%A1diz.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura_de_C%C3%A1diz.jpg\"|\"\"|\"\""
+  },
+  "medinaceli-cadiz": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_Medinaceli_de_C%C3%A1diz.jpg\"|\"\"|\"50% 15%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad_de_C%C3%A1diz.jpg\"|\"\"|\"\""
   },
   "la-buena-muerte-cadiz": {
    "w": 960,

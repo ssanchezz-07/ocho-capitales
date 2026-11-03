@@ -1362,6 +1362,15 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Trinidad"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_Medinaceli_de_C%C3%A1diz.jpg",
+    "titulo": "File:Paso del Cristo de Medinaceli de Cádiz.jpg",
+    "autor": "Medinaceli Trinidad Cádiz",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús Cautivo y Rescatado",
+    "foco": "50% 15%"
    }
   },
   "nazareno-de-santa-maria-cadiz": {
@@ -2775,6 +2784,15 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "titular": "Convento de San Francisco"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vera-Cruz_de_C%C3%A1diz.jpg",
+    "titulo": "File:Vera-Cruz de Cádiz.jpg",
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de la Vera+Cruz",
+    "foco": "50% 15%"
    }
   },
   "la-sanidad-cadiz": {
@@ -3573,6 +3591,38 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "titular": "Nuestro Padre Jesús de los Afligidos",
+    "foco": "50% 20%"
+   }
+  },
+  "la-columna-cadiz": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg",
+    "titulo": "File:CRISTO DE LA COLUMNA DE CÁDIZ.jpg",
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Jesús atado a la Columna y Azotes, «El Aguador»",
+    "foco": "50% 15%"
+   }
+  },
+  "las-cigarreras-cadiz": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Titulares_de_las_Cigarreras_de_c%C3%A1diz_en_sus_retablos.jpg",
+    "titulo": "File:Titulares de las Cigarreras de cádiz en sus retablos.jpg",
+    "autor": "Cofradia de Cádiz",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús de la Salud y María Santísima de la Esperanza en sus retablos"
+   }
+  },
+  "la-expiracion-cadiz": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Expiraci%C3%B3n.JPG",
+    "titulo": "File:Cristo de la Expiración.JPG",
+    "autor": "ROSAPASION",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de la Expiración",
     "foco": "50% 20%"
    }
   }
