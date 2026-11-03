@@ -288,6 +288,448 @@
    "revisado": "2026-11-03",
    "estado": "completa",
    "nota": "Usa también la ficha principal de la Humildad (la-canilla-granada.txt), que confirma la salida del Dulce Nombre el Domingo de Resurrección por la mañana. La frase sobre Cañizares en la ficha dice que «se sugirió» que el Niño presidiera la eucaristía, no que lo haga cada año; no he afirmado más."
+  },
+  "la-borriquita-huelva": {
+   "texto": "Se fundó el 23 de marzo de 1945, Viernes de Dolores, por iniciativa del historiador y poeta Diego Díaz Hierro y de Antonio Bobo Mir y Manuel Martínez Muñoz, antiguos alumnos del Colegio Colón de los Hermanos Maristas, que venían trabajando desde 1943 en un proyecto parecido. Contó con el apoyo del párroco del Sagrado Corazón de Jesús, Pablo Rodríguez; su primer hermano mayor fue Arturo López-Damas Cardigós y su sede provisional, la Parroquia Mayor de San Pedro. Díaz Hierro redactó los estatutos, y tras la Semana Santa de aquel año ya tenía más de cuatrocientos hermanos.\n\nAntonio León Ortega talló en el verano de 1946 la imagen de Jesús en su Entrada Triunfal, bendecida el 6 de enero de 1947 en San Pedro. El 27 de enero de 1947 el cardenal Pedro Segura y Sáenz, arzobispo de Sevilla, decretó la erección canónica y aprobó las primeras reglas. La primera salida fue el Domingo de Ramos 30 de marzo de 1947, en un paso cedido por la Hermandad de la Buena Muerte. Nuestra Señora de los Ángeles, también de León Ortega, se encargó en junio de 1948, se bendijo el 9 de abril de 1949 y salió por primera vez al día siguiente en el paso de la Soledad, prestado por la Hermandad del Santo Entierro.\n\nEl 15 de octubre de 1950 su hermano mayor, el torero Miguel Báez Espuny «Litri», promovió un festival benéfico con el que se pagó el primer paso de palio y se empezó la talla del paso del Señor. El 18 de enero de 2022 el Ayuntamiento concedió al Señor la Medalla de Huelva, con motivo del 75.º aniversario de la erección canónica.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-borriquita/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que su Virgen es «la única de Huelva cuyo rostro no muestra dolor»: la ficha no lo dice y se ha quitado."
+  },
+  "la-sagrada-cena-huelva": {
+   "texto": "Se fundó en 1948 en el barrio del Polvorín, con sede en la Parroquia del Sagrado Corazón de Jesús, y desde el principio tuvo un marcado carácter eucarístico. El Santísimo Cristo del Amor, de Antonio León Ortega, se talló en 1949 en madera de ciprés, se bendijo el 25 de febrero de 1951 y salió por primera vez el Domingo de Ramos 18 de marzo de ese año. Los apóstoles se encargaron en 1952 a Enrique Galarza Moreno, y León Ortega culminó sus cuerpos en 1953. El paso de misterio lo talló en pino de Flandes Miguel Hierro Barreda entre 1949 y 1951.\n\nLa dolorosa, María Santísima del Rosario en sus Misterios Dolorosos, la talló León Ortega en el Año Mariano de 1954, según la inscripción de su espalda, y salió por primera vez el Domingo de Ramos 3 de abril de 1956, año del primer paso de palio. En 1978 la hermandad obtuvo el título de «Real y Sacramental», la primera de penitencia de Huelva que lo alcanzó; ese mismo año se fundó la Agrupación Musical Santísimo Cristo del Amor. En 1982 estrenó el palio de los talleres valencianos de Suay, diseñado por Juan Borrero.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-sagrada-cena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha se contradice: la reseña histórica dice que León Ortega ejecutó el Cristo del Amor en 1951 y la artística que lo talló en 1949 y se bendijo en 1951; se sigue la artística. La Virgen es de 1954 (portal.json dice 1955). La reseña anterior decía «fundada por funcionarios municipales» y «primera hermandad sacramental de la diócesis»: la ficha no dice lo primero y lo segundo lo matiza (primera de penitencia de Huelva con el título de Real y Sacramental)."
+  },
+  "la-redencion-huelva": {
+   "texto": "Nació a comienzos de la década de 1980 en la barriada de La Navidad, donde tres jóvenes, Rafael Domínguez Carrascal, Aurelio Hernández Ramblado y Jesús Vázquez Méndez, empezaron a dar culto a la Virgen. El escultor Enrique Pérez Saavedra, vecino del barrio y discípulo de León Ortega, cedió una imagen de su colección, que salió por el barrio el Domingo de Resurrección de 1981. El 6 de julio de 1983 se erigió canónicamente la Hermandad de Gloria de Nuestra Señora de los Desamparados, cuya imagen, de Pérez Saavedra, se bendijo el 16 de julio de ese año.\n\nEl 17 de febrero de 2000 la hermandad adquirió carácter penitencial y tomó el nombre de la Redención; el 18 de marzo se bendijeron en la capilla del Asilo de Ancianos Santa Teresa Jornet el Santísimo Cristo de la Redención y María Santísima del Dulce Nombre en su Mayor Aflicción, de Elías Rodríguez Picón. En 2004 el Consejo aprobó su entrada en el Domingo de Ramos, y desde entonces pasó por la Parroquia del Carmen, el Convento de las Madres Agustinas, la Purísima Concepción y la Casa Hermandad del Rocío de Huelva. En 2006 se incorporó a la Orden Seglar de los Siervos de María. El Santo Cristo de la Preciosa Sangre, también de Rodríguez Picón, llegó en 2009 y es titular desde 2015, año en que la hermandad volvió a su barrio, a la Parroquia de Cristo Sacerdote, cuyo nuevo templo se consagró el 25 de marzo de 2022.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-rendencion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "los-mutilados-huelva": {
+   "texto": "Fue fundada el 26 de marzo de 1943 por caballeros mutilados y excombatientes del bando sublevado en la Guerra Civil, con sede en la antigua iglesia de San Francisco, que compartió con la Hermandad de la Esperanza. Ese año adquirió una primera dolorosa, obra de Federico López Pereira, bendecida el 15 de abril de 1943 como Nuestra Señora de la Paz; el primer hermano mayor fue Joaquín de la Torre. Enseguida encargó a Antonio León Ortega una nueva Virgen, que salió por primera vez en 1944, y en 1945 se bendijo el Cristo, también de León Ortega, al que se añadieron tres sayones entre 1952 y 1954. Las advocaciones de la Paz y la Victoria aludían al triunfo del bando franquista.\n\nEn 1949 incorporó como cotitular a San Rafael Arcángel, patrón del cuerpo de mutilados y excombatientes. Salió por última vez desde San Francisco en 1959 y en 1960 se trasladó a la parroquia de San Sebastián. Desde 1975 cambió de rumbo, y en 1980 se derrumbó su casa hermandad. En los años 90 comenzó una renovación artística en la que destacó la restauración de la Virgen de la Paz por Luis Álvarez Duarte. En 2011 adquirió carácter sacramental y organizó la única procesión de Impedidos de la capital. En 2018 celebró su 75º aniversario con una salida extraordinaria de la Virgen de la Paz el 29 de septiembre.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-sacramental-de-los-mutilados/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha llama al titular «Santísimo Cristo de la Victoria» y lo describe camino del Calvario con tres sayones; portal.json lo llama «Cristo de la Victoria Despojado de sus Vestiduras». La reseña artística data la Virgen de León Ortega en 1943 (bendecida y procesionada en 1944); portal.json dice 1944."
+  },
+  "el-perdon-huelva": {
+   "texto": "Se fundó en 1984 en la Parroquia de Santa Teresa de Jesús, en el barrio de La Orden, a partir de un grupo de jóvenes feligreses que, animados por Manuel Carrasco Terriza, representaban cada Cuaresma una obra sobre la Pasión; contó con el apoyo del párroco Juan José Tocino. El 24 de junio de 1987 el obispo Rafael González Moralejo la erigió como hermandad de penitencia. Salió por primera vez en la madrugada del Viernes Santo de 1988 con el Santísimo Cristo del Perdón, crucificado de Juan Abascal Fuentes (1981), en parihuela. Ese año se incorporó Nuestra Señora de los Dolores, de Manuel Vergara Herrera (1943), donada por la familia Machuca de Carrión de los Céspedes, que acompañó al Cristo desde 1992.\n\nEn 2008 adquirió carácter sacramental y en 2009 trasladó su estación de penitencia de la madrugada a la tarde del Lunes Santo. En 2012 incorporó un San Juan de José Miguel García. En octubre de 2018 aprobó un nuevo misterio, presentado en la Cuaresma de 2022, con imágenes de Martín Lagares: los nuevos titulares San Juan Evangelista y María Santísima del Amor Misericordioso, advocación que ya figuraba en el título original de 1984, además de María Magdalena, Longinos y dos romanos. Fue pionera en formar una cuadrilla de hermanos costaleros.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-perdon/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-cautivo-huelva": {
+   "texto": "Sus orígenes están en una Cruz de Mayo colocada en 1971 en el barrio de La Hispanidad, que animó a los vecinos a fundar una hermandad de gloria. El acto fundacional fue el 20 de julio de 1981, con las advocaciones de Cristo Resucitado y Nuestra Señora del Triunfo, que después pasó a ser de la Alegría. En 1983 se convirtió en hermandad de penitencia y adoptó las advocaciones de Santo Cristo Cautivo y María Santísima Madre de la Misericordia. Su primera estación de penitencia fue en 1986, desde la Parroquia de Nuestra Señora del Pilar.\n\nEl Cristo, tallado en cedro en 1985, fue la última obra de Antonio León Ortega para Huelva; entre 1992 y 1995 lo remodeló su discípulo Francisco Márquez Domínguez «El Cano». La Virgen es una talla de candelero de Enrique Pérez Saavedra, de 1984. La Hermandad de la Borriquita fue su madrina en la Unión de Cofradías, y cada Lunes Santo suena al salir la campana del submarino «Nautilus», cedida por la Marina. Desde 2020 está incorporada a la Orden Trinitaria.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-cautivo/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-calvario-huelva": {
+   "texto": "En 1972 un grupo de fundadores formó una comisión que fue recibida por el obispo de Huelva, quien les animó a buscar una parroquia como sede. La encontraron en la de Nuestra Señora de los Dolores, en la barriada de Las Colonias, cuyo párroco, Manuel López Vega, aceptó el proyecto. Encargaron el titular a Antonio León Ortega en septiembre de 1972; Nuestro Padre Jesús del Calvario, que representa el momento en que Jesús acepta la Cruz, se bendijo el 14 de abril de 1973 y salió en vía crucis el Lunes Santo 16 de abril de ese año, con medio centenar de hermanos. El 3 de mayo de 1973 el Obispado aprobó los estatutos ad experimentum, ratificados en octubre de 1976.\n\nLa titular mariana, María Santísima del Rocío y Esperanza, es una dolorosa de Sebastián Santos Rojas adquirida en diciembre de 1973 y bendecida el 4 de enero de 1974. En 1976 Jesús del Calvario hizo estación de penitencia llevado por la primera cuadrilla de costaleros de Huelva, y en 1981 la Virgen tuvo también su propia cuadrilla de hermanos costaleros. En 1990 comenzó la construcción del templo propio en la calle Jesús del Calvario, al que la hermandad se trasladó en 1992, dejando la parroquia de los Dolores.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-calvario/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "las-tres-caidas-huelva": {
+   "texto": "Se fundó en julio de 1944 en la iglesia de Nuestra Señora Estrella del Mar, en el barrio del Polvorín, por cofrades que querían una nueva cofradía para el Lunes Santo; contó con la guía del padre Miguel Gutiérrez, y su primer hermano mayor fue Nicolás Domínguez Díaz. Ese año encargó sus titulares a Antonio León Ortega. Nuestro Padre Jesús de las Penas en sus Tres Caídas se bendijo el 17 de marzo de 1945 en una ceremonia presidida por el arzobispo de Lima, Emilio Lissón Chávez, que fue nombrado hermano mayor honorario y concedió el título de «Ilustre». María Santísima del Amor, también de León Ortega, se bendijo el 8 de abril de 1949.\n\nLa primera estación de penitencia fue en la Semana Santa de 1945, desde dependencias anexas a la iglesia de la Milagrosa, porque el templo de la Estrella del Mar era pequeño. En marzo de 1947 la hermandad se trasladó a la Parroquia del Sagrado Corazón de Jesús, en el mismo barrio. En 1978 se formó la primera cuadrilla de hermanos costaleros, dirigida por Manuel Morón Illescas. En 2012 se bendijo el tercer titular, el Apóstol Santiago, de Alberto Pérez Rojas, y en 2020, en el 75 aniversario de la bendición del Señor, el Ayuntamiento le concedió la Medalla de la Ciudad.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-las-tres-caidas/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que la reina Sofía es camarista honoraria de la Virgen: la ficha no lo dice y se ha quitado."
+  },
+  "la-salud-huelva": {
+   "texto": "Se erigió en junio de 1976 en el barrio de Pérez Cubillas como Hermandad de Nuestra Señora de la Salud y San Francisco de Asís, impulsada por Antonio Salas, fundador de la parroquia de San Francisco de Asís. Durante años fue solo de gloria: celebraba cultos y procesionaba cada mes de mayo por la feligresía. El obispo Rafael González Moralejo aprobó sus primeras reglas el 15 de junio de 1981, ya con el título de «Sacramental»; el primer presidente fue Carlos Velasco Quintero. En 1991 incorporó una dolorosa de Enrique Pérez Saavedra, y en 1998 un Cristo maniatado de David Valenciano Larios, bendecido el 19 de diciembre.\n\nEl 15 de abril de 2000 el Obispado aprobó unas nuevas reglas que la convertían en cofradía de penitencia, con el título de Nuestro Padre Jesús de la Sentencia en su Presentación al Pueblo. Ese año David Valenciano hizo una nueva Virgen de la Salud, que lleva en su interior las cenizas de la imagen anterior, deteriorada. La hermandad compró al Descendimiento el paso de Antonio León Ortega, el único que talló el artista. En 2007 se aprobó el boceto de Manuel Madroñal Isorna para el misterio, cuyas figuras se incorporaron entre 2008 y 2014, y ese mismo 2007 recibió la adhesión a la Orden Franciscana. Incluida en la nómina oficial en 2011, no pudo hacer su primera estación de penitencia, a la Iglesia de la Concepción, hasta 2014, tras varios intentos frustrados por la lluvia.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "portal.json atribuye la Virgen de la Salud a Enrique Pérez Saavedra (1991); según la ficha, la dolorosa de Pérez Saavedra llegó en 1991, pero la Virgen de la Salud actual es de David Valenciano (2000). Conviene revisar ese titular en portal.json."
+  },
+  "la-lanzada-huelva": {
+   "texto": "Entre 1953 y 1954 nació en la parroquia de Nuestra Señora de los Dolores, en el barrio de Las Colonias, la Hermandad de Nuestra Señora de los Dolores, en torno a una imagen de autor desconocido cedida por el arcipreste Julio Guzmán, que salía cada Viernes de Dolores. En 1968 el imaginero zalameño Manuel Domínguez Rodríguez talló una nueva Virgen que sustituyó a la anterior, y en 1969 se estrenó el paso con ruedas conocido como «el carrito». En 1979 la Virgen salió por primera vez bajo palio, con su cuadrilla de hermanos costaleros.\n\nEn junio de 1981 el Cabildo General aprobó convertirla en hermandad de penitencia con el misterio de la Sagrada Lanzada, y se encargó el Cristo a Joaquín Moreno Daza, escultor de Isla Cristina afincado en La Palma del Condado. La imagen se entregó en mayo de 1985 y se bendijo el 14 de septiembre, y el 18 de febrero de 1986 el obispo Rafael González Moralejo firmó el decreto de erección canónica; se mantuvo la salida del Viernes de Dolores, condición fijada por el párroco Manuel López Vega. La primera estación de penitencia en Martes Santo fue en 1987. El 4 de abril de 1992 se bendijeron María Santísima del Patrocinio, San Juan Evangelista y Santa María Magdalena, que completaron el misterio. El 15 de septiembre de 2018 Nuestra Señora de los Dolores recibió la Medalla de la Ciudad de Huelva.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La imagen de Manuel Domínguez Rodríguez (1968) es Nuestra Señora de los Dolores; la ficha no da autor de María Santísima del Patrocinio (1992)."
+  },
+  "los-estudiantes-huelva": {
+   "texto": "La fundaron en 1946 alumnos del Colegio Madre de Dios (Funcadia), de donde le viene el nombre de los Estudiantes. El 3 de abril de 1949 se bendijo su primera imagen, un Cristo Cautivo llamado Cristo de la Sangre Sentenciado por Pilatos, obra de Francisco Márquez «El Cano», con el que salió por primera vez el Domingo de Ramos 10 de abril de ese año, con nazarenos de blanco. Poco después la junta decidió cambiarlo por un crucificado, que talló Antonio León Ortega: el Santísimo Cristo de la Sangre, bendecido el 1 de abril de 1950, que salió por primera vez el Martes Santo 5 de abril de 1950. La hermandad tomó entonces el título del Cristo de la Sangre y Nuestra Señora del Valle y el hábito negro con cinturón de esparto.\n\nLeón Ortega hizo también Nuestra Señora del Valle, bendecida el 18 de marzo de 1956. En 1960 la hermandad se trasladó de la parroquia del Sagrado Corazón de Jesús a la de San Sebastián. Tras un decaimiento en los años sesenta, en 1975 empezó una revitalización con nuevos estatutos y la primera cuadrilla de hermanos costaleros. Desde 1978 colabora en los cultos del patrón, San Sebastián, al que incorporó como titular junto a Santa Ángela de la Cruz en su última reforma de estatutos, y en 1984 encabezó la campaña de fondos para el monumento a Santa Ángela. En 2013 la lluvia le impidió por primera vez en 64 años hacer estación de penitencia. Está muy vinculada a la Universidad de Huelva.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-los-estudiantes/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "pasion-huelva": {
+   "texto": "Es el resultado de la fusión de la Hermandad Sacramental de la Parroquia Mayor de San Pedro, constituida canónicamente en 1536 dentro del movimiento promovido por Teresa Enríquez, «la Loca del Sacramento», y la Hermandad de Pasión, fundada en 1918. La Sacramental organizó durante los siglos XVI y XVII los cultos del Corpus, sufrió en el XVIII los daños de San Pedro por catástrofes naturales y se reorganizó en 1843. En 1942 aceptó a Pasión como filial; tras un intento fallido en 1951, la unión se hizo canónica en 1987.\n\nLa devoción a Jesús de la Pasión arranca de 1905, cuando la imagen conocida como «Cristo del Sagrario» pasó de la capilla sacramental de San Pedro a la capilla de la Victoria. El acta fundacional de la cofradía se firmó el 7 de abril de 1918, con José Hernández Cembrano como primer hermano mayor, y la primera estación de penitencia fue el Martes Santo 15 de abril de 1919. En 1921 Alfonso XIII aceptó ser hermano mayor honorario y le dio el título de «Real». El 21 de julio de 1936, en el asalto a San Pedro, la imagen fue destruida y solo se salvó la cabeza, que escondió Fernando Hernández. En 1938 se reorganizó y Antonio Infante Reina talló el nuevo Jesús de la Pasión, bendecido el Domingo de Ramos 10 de abril de 1938. En febrero de 1941 llegó María Santísima del Refugio, atribuida a José Rivera y fechada a finales del siglo XVIII, que salió ese año bajo palio. El 1 de abril de 2023 la familia Gallardo devolvió a la hermandad la cabeza de la imagen primitiva.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-sacramental-de-pasion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha atribuye la Virgen del Refugio a José Rivera (finales del siglo XVIII); portal.json la da como anónima. La reseña anterior la llamaba «la Primitiva Hermandad de la diócesis» y decía que el Señor recibió la Medalla de la Ciudad en 2009: la ficha no lo dice y se ha quitado."
+  },
+  "el-prendimiento-huelva": {
+   "texto": "La fundó en 1987 un grupo de fieles del barrio de El Carmen, vinculados a su parroquia, con el propósito de crear una cofradía de penitencia que representara el Prendimiento de Jesús en el Huerto. En 1989 fue agregada a la Orden del Carmen Descalzo, vínculo que marca su nombre, su estética y sus cultos; conserva el documento firmado por el prior general John Malley. Ese mismo año José Manuel Bonilla Cornejo talló a Nuestro Padre Jesús del Prendimiento. El Miércoles Santo de 1992 hizo su primera estación de penitencia, desde el colegio Príncipe de España.\n\nMaría Santísima de la Estrella, también de Bonilla Cornejo, se bendijo en 2001 en la Parroquia de Nuestra Señora del Carmen, su sede, y Rubén Fernández Parra completó en 2007 el grupo escultórico del misterio, que va en el paso más largo de la Semana Santa onubense, llevado por 72 costaleros. En 2005 la Virgen de la Estrella salió de forma extraordinaria para recibir la Cruz Naval Laureada de la Armada Argentina y el fajín de almirante. La hermandad organiza además cada julio la procesión de la Virgen del Carmen.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-prendimiento-y-la-estrella/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-santa-cruz-huelva": {
+   "texto": "Sus raíces están en octubre de 1988, cuando jóvenes de distintas hermandades fundaron una tertulia cultural cofrade con la idea de crear una hermandad de penitencia. Acogidos por el párroco Carlos Núñez Vega en la Parroquia de la Purísima Concepción, formaron la Tertulia Cofrade y Grupo Parroquial «El Penitente». Tras un tiempo de inactividad, diez de sus miembros retomaron el proyecto en 1998. Se constituyeron como asociación parroquial en la Merced, pero el Obispado no aceptó esa sede, y el párroco de Santiago Apóstol, Manuel Martín Gómez, les ofreció su templo; allí se decretó la erección canónica el 11 de diciembre de 2001.\n\nEl 10 de marzo de 2001 se bendijo en la Catedral María Santísima Madre de Gracia, de Elías Rodríguez Picón (1998), y el 16 de marzo de 2005 Nuestro Señor Jesús de la Providencia, un Cristo yacente de Mario Ignacio Moya (2005). Ese año fue la primera salida, desde la Merced, con estación de penitencia en Santiago. Hasta 2011 salió cada Sábado de Pasión; desde 2012, por un acuerdo con el Cabildo Catedralicio y el obispo, sale el Miércoles Santo con estación en la Concepción. En 2015 trasladó su sede a la Parroquia de la Purísima Concepción, traslado ratificado por el obispo el 9 de octubre y celebrado el 14 de noviembre de ese año.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior daba 1998 como año de la primera salida; según la ficha, en 1998 se retomó el proyecto y la primera salida fue en 2005."
+  },
+  "la-victoria-huelva": {
+   "texto": "Se fundó el 19 de marzo de 1939 en la Parroquia del Sagrado Corazón de Jesús, en el barrio de El Polvorín, por iniciativa del párroco Pablo Rodríguez Quintero y de los feligreses José Zayas Fernández, Eulogio García Ferrer y Diego Díaz Hierro, que querían reconstruir la vida cofrade del barrio tras la Guerra Civil. En agosto de 1939 el vicario general del Arzobispado de Sevilla aprobó la junta organizadora. La primera Virgen de la Victoria, del escultor onubense Joaquín Gómez del Castillo, se bendijo el 8 de diciembre de 1940. La primera estación de penitencia fue la tarde del Miércoles Santo 9 de abril de 1941, solo con el paso de palio, y la erección canónica llegó el 5 de mayo de ese año.\n\nEn 1942 fue la primera cofradía de penitencia que pasó por el convento de las Hermanas de la Cruz, y ese año se bendijo Nuestro Padre Jesús de la Humildad, de Antonio León Ortega, tallado con madera de dos cipreses del antiguo cementerio de San Sebastián; desde 1943 sale con dos pasos. En 1950 se incorporó un San Juan de León Ortega, que restauró también la Virgen tras el incendio del paso de palio en 1953. En 1968 llegó la actual María Santísima de la Victoria, obra del joven Luis Álvarez Duarte. En 1997 el Ayuntamiento concedió a la Virgen la Medalla de Oro de la Ciudad, y el 5 de mayo de 2012 fue coronada canónicamente en la Plaza de la Constitución por el obispo José Vilaplana Blasco.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-victoria/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-esperanza-huelva": {
+   "texto": "Se fundó entre 1893 y 1894 en la antigua iglesia conventual de San Francisco, en el barrio del mismo nombre, a partir de una antigua asociación dedicada a San Telmo, patrón de los mareantes; por eso sus primeros hermanos fueron marineros y pescadores. Su primera titular fue la Virgen del Mayor Dolor, imagen venerada desde el siglo XVII, y sus primeras reglas las aprobó el arzobispo de Sevilla Marcelo Spínola y Maestre. En 1936 se destruyeron sus imágenes y enseres, y el Miércoles Santo de 1937 procesionó una fotografía de la Virgen a tamaño natural. Del taller de Joaquín Gómez del Castillo salieron en 1938 la nueva Virgen del Mayor Dolor y en 1939 Nuestra Señora de la Esperanza, bendecida el 3 de abril de 1939; el Santísimo Cristo de la Expiración es obra del valenciano Ramón Chaveli Carreres, de 1939.\n\nEn 1963 tuvo que dejar San Francisco y pasó a la Catedral, donde estuvo hasta 1978; en 1979 se bendijo su capilla propia. En 1984 obtuvo el título de sacramental, y en 1992 se inauguró la Iglesia de Santa María de la Esperanza. En 1994, en su primer centenario, recibió la Medalla de Oro de la Ciudad, y en 1997 Juan Carlos I le otorgó la Cruz al Mérito Naval por sus lazos con la Armada. El 3 de junio de 2000 la Virgen de la Esperanza fue coronada canónicamente en la Catedral por el obispo Ignacio Noguer. En 2018 abrió el primer columbario de la diócesis de Huelva y un museo.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-esperanza/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía «primera dolorosa coronada de Huelva»: la ficha no lo dice y se ha quitado. Según la ficha, las imágenes de 1938-1939 son del «Taller de Joaquín Gómez del Castillo»."
+  },
+  "vera-cruz-y-oracion-huelva": {
+   "texto": "Nace de la unión de dos hermandades. De la Vera Cruz, el primer documento citado, recogido por Diego Díaz Hierro, es de marzo de 1573, y mandas testamentarias de 1583 y 1596 confirman su vida en el siglo XVI. En el XVIII creció la devoción al Cristo de la Vera Cruz y a la Virgen de los Dolores, y el papa Benedicto XIV la agregó a San Juan de Letrán por bula del 6 de mayo de 1751. Tras el sexenio revolucionario la reorganizaron unas señoras encabezadas por Josefa Jiménez, condesa de Mora Claros; las nuevas reglas se aprobaron el 30 de enero de 1896, y ese año salió la Virgen de los Dolores bajo palio. La Hermandad de la Oración en el Huerto la fundaron el 7 de abril de 1922 José Orellana, Alfonso Padilla, Manuel Romero, Luis Orellana y Rafael de la Corte en la Iglesia de la Merced; obtuvo la erección canónica el 22 de marzo de 1923 y salía el Domingo de Ramos con un Señor de Joaquín Bilbao y un ángel de Enrique Pérez Comendador.\n\nEl 20 de julio de 1936 la parroquia de la Purísima Concepción fue saqueada e incendiada y se perdieron las imágenes de ambas hermandades. Un decreto del 6 de abril de 1938 aprobó su fusión, y la primera salida conjunta fue el Domingo de Ramos de 1939. Antonio Castillo Lastrucci hizo las nuevas imágenes: el Señor de la Oración (1937) y la Virgen de los Dolores (1939), sustituida por una de Luis Álvarez Duarte bendecida el 18 de febrero de 1968. El Señor de la Oración actual lo talló Luis Ortega Brú en 1977, con el ángel de Antonio León Ortega (1943). En 1985 obtuvo el carácter sacramental. El 23 de enero de 2006 se bendijo un nuevo Cristo de la Vera Cruz, de Mariano Sánchez del Pino, que desde el 20 de abril de 2019 sale el Sábado de Pasión con la Legión. La Virgen de los Dolores fue coronada canónicamente el 19 de septiembre de 2015 en la Plaza de las Monjas.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-veracruz-y-oracion-en-el-huerto/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña artística de la ficha llama «Cristo de la Vera Cruz» a una imagen de Joaquín Bilbao bendecida el 25 de marzo de 1923 y la describe arrodillada y orante, lo que choca con la reseña histórica (Bilbao hizo el Señor de la Oración de 1923, perdido en 1936). Se sigue la histórica. La ficha también menciona una Virgen de los Dolores primitiva atribuida a Blas Molner; no se incluye por brevedad."
+  },
+  "la-misericordia-huelva": {
+   "texto": "La fundaron en 1981 jóvenes cofrades de la tertulia cultural «El Cirio Apagao», que querían una cofradía austera, recogida y penitencial. Se lo propusieron al párroco de Nuestra Señora Estrella del Mar, Carlos Núñez Vega, con el compromiso de ayudar a restaurar el templo de La Milagrosa, entonces en ruina. Se erigió canónicamente el 20 de diciembre de 1982, y el Santo Cristo de la Misericordia, encargado el 26 de diciembre de 1982 a Gabriel Cuadrado Díaz, se bendijo el 26 de noviembre de 1983. En 1984 hizo su primera estación de penitencia desde La Milagrosa, con el Cristo a hombros de sus hermanos.\n\nEn 1987 el deterioro del templo la llevó de forma provisional al convento de las Madres Agustinas. En ese tiempo incorporó el Dulce Nombre de Jesús (1993) y María Santísima de la Concepción, de Juan Manuel Miñarro (1996). Terminada la restauración de La Milagrosa el 5 de octubre de 1997, la hermandad volvió a su sede el 25 de ese mes, y en 2004 construyó su capilla y casa de hermandad con la colaboración de las Hijas de la Caridad. En 2010 trasladó su estación de penitencia al Jueves Santo y en 2011 incorporó como titular a San Expedito. Es una cofradía de silencio.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-misericordia/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que es la «única cofradía de Huelva vestida de ruan»: la ficha no lo dice y se ha quitado."
+  },
+  "la-buena-muerte-huelva": {
+   "texto": "Se fundó en 1916 en la comunidad agustina de Huelva. Su fundador fue el padre Gilberto Blanco, junto con los alumnos y los padres agustinos del colegio de la calle Puerto. Tras la marcha de los agustinos de la ciudad, la hermandad pasó una etapa en la parroquia de San Pedro, desde la que salía solo con un crucificado de Olot en la tarde-noche del Lunes Santo.\n\nEn 1940 se reorganizó tras la Guerra Civil y se estableció canónicamente en la Parroquia de la Concepción. Ese año Joaquín Gómez del Castillo hizo Nuestra Madre de la Consolación y Correa en sus Dolores, y el Santísimo Cristo de la Buena Muerte, de 1941, se le atribuye. Comenzó entonces una etapa de crecimiento patrimonial, con el paso del Cristo, tallado en caoba de la República Dominicana por José García Páez como oficial del taller de Miguel Hierro, con orfebrería de Jesús Domínguez y miniaturas de Zabala. El 27 de febrero de 1995 la hermandad recuperó su identidad agustiniana y volvió a ser acogida por la comunidad y el convento agustino. Conserva sus raíces agustinas y la presencia de niños de un centro educativo en su cortejo.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da el Cristo de la Buena Muerte (1941) como «atribuido» a Joaquín Gómez del Castillo; portal.json lo da sin atribución."
+  },
+  "los-judios-la-merced-huelva": {
+   "texto": "La devoción a los Dolores de la Virgen estaba muy presente en la Huelva de los siglos XVII y XVIII, y los padres mercedarios gestionaron la fundación de una orden tercera (V.O.T.) de Siervos de María. El 15 de diciembre de 1771 el prior general, fray Francisco Raymundo Adami, firmó en el convento de San Marcelo de Roma la licencia para constituirla, y el 20 de junio de 1772 el cardenal arzobispo de Sevilla aprobó sus reglas. El 8 de julio de 1772 obtuvo la agregación a la Archicofradía de Nuestra Señora de las Mercedes, y en paralelo se fusionó con la Cofradía de Nuestra Señora de la Merced, fundada a comienzos del siglo XVIII en el mismo convento.\n\nLa Dolorosa de la capilla mercedaria, una talla anónima de candelero con referencias desde finales del siglo XVII, despertó gran devoción, como muestra un exvoto de 1775 por la curación del platero Bernardo Basconcelos. La primera salida en Semana Santa fue el Domingo de Ramos de 1792, con estación en San Pedro y en la Purísima Concepción. Jesús de las Cadenas aparece ya en un testamento del 24 de enero de 1657, y la primera referencia a la cofradía del Cristo de Jerusalén y Buen Viaje es de 1653; ambos son de autor desconocido. La hermandad incorporó como titular al Cristo de Jerusalén el 4 de mayo de 1941. Tiene su sede en la Catedral de la Merced.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-los-judios/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha describe la Virgen de los Dolores como «talla anónima de candelero»; portal.json la da como «atrib. Jacome Vacaro». La ficha cita hipótesis sin documentación que llevan Cadenas y Buen Viaje a la escuela gaditano-genovesa; no se incluyen."
+  },
+  "el-nazareno-huelva": {
+   "texto": "Nació en el siglo XVI en el convento de la Victoria, fundado por la Orden de los Mínimos con el respaldo del duque de Medina-Sidonia, y estuvo ligada a linajes onubenses como la familia Trianes, que ejerció su patronazgo durante más de un siglo. En los siglos XVII y XVIII celebraba el Sermón del Viernes Santo y se agregó a la Hermandad del Silencio de Sevilla. La desamortización la llevó a la Parroquia de la Purísima Concepción. En el siglo XX resurgió con Roque Borrero y el párroco Pedro Román Clavero, hasta que en 1936 se incendió la iglesia y se perdieron sus titulares: el Nazareno primitivo, del siglo XVII y atribuido a la escuela de Pedro Roldán, y la Amargura, atribuida a José Montes de Oca.\n\nLa primera imagen que llegó tras la guerra fue la actual María Santísima de la Amargura, tallada en 1937 en Jerez de la Frontera por Ramón Chaveli Carreres, donada por Antonio Herrero de los Reyes y bendecida el 21 de julio de 1937 en la iglesia de la Milagrosa; es una talla de vestir completa, no de candelero. Chaveli hizo también un Nazareno bendecido en 1938, perdido en un incendio en 1950, y Sebastián Santos Rojas talló ese año en ciprés el Nuestro Padre Jesús Nazareno actual. En 1983 celebró el IV Centenario fundacional. Entre 1999 y 2006 el cierre de la Concepción la obligó a salir de su sede; en 2011 recibió el título de Real, y el 17 de junio de 2023 fue coronada canónicamente la Virgen de la Amargura.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-nazareno/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior la llamaba «la hermandad más antigua de Huelva»; la ficha dice «una de las corporaciones más antiguas». La ficha no da el año de fundación (solo «siglo XVI» y el IV Centenario en 1983)."
+  },
+  "la-fe-huelva": {
+   "texto": "Su origen está en 1988, cuando un grupo de fieles de la Parroquia de Santa María Madre de la Iglesia empezó a reunirse para crear una asociación parroquial. El 5 de diciembre de ese año, siendo obispo Rafael González Moralejo, se aprobaron los estatutos de la Asociación Parroquial del Santísimo Cristo de la Fe y Santa María Madre de la Iglesia en sus Dolores. El Cristo de la Fe es una talla de Antonio León Ortega de 1975. En 1989 organizó su primer vía crucis por el barrio.\n\nEn 1990 se bendijo Nuestra Señora de la Caridad, del sevillano José Méndez González, con Concepción Spínola, esposa del torero Miguel Báez «El Litri», como madrina; se descartó la advocación de Santa María Madre de la Iglesia y se eligió la de Caridad, recuperando una antigua devoción perdida en Huelva. La primera estación de penitencia fue en 1991, con el Cristo de la Fe, que en 1994 presidió el vía crucis de la Unión de Cofradías. En 2012 los Reyes aceptaron los títulos de hermano mayor honorífico y de camarista de honor de la Virgen. El Cristo salió de forma extraordinaria en 2013, en el XXV aniversario fundacional, y la Virgen en 2015. Mantiene desde sus orígenes un estrecho vínculo con el Cuerpo Municipal de Bomberos de Huelva.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-la-fe/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía «única del Viernes Santo con música alegre»: la ficha no lo dice y se ha quitado."
+  },
+  "el-descendimiento-huelva": {
+   "texto": "Se erigió el 18 de diciembre de 1951, fecha de aprobación de sus primeras reglas. La fundaron funcionarios del Ayuntamiento de Huelva, a los que se sumaron familiares y amigos, y por eso se la conoce como la Hermandad del Ayuntamiento. El 8 de abril de 1952 se bendijeron las imágenes del Señor, los Santos Varones y María Santísima en la Resignación de sus Dolores (el Cristo y la Virgen, tallados por Antonio León Ortega en 1952), y el 11 de abril hizo su primera estación de penitencia el Viernes Santo, en el paso de San Sebastián.\n\nEn junio de 1952 encargó a León Ortega el paso de misterio definitivo y nuevas figuras: la Virgen del Calvario, San Juan Evangelista, María Magdalena y María de Cleofás, que nunca llegó a hacerse. El conjunto, inspirado en un cuadro de Policarpio Díaz, se estrenó el 3 de abril de 1953. Desde ese año y hasta 1974 la Virgen de la Resignación salió en el paso del Patrón, mirando a la cruz vacía; el 16 de abril de 1976 salió por primera vez bajo palio, bordado en 1984 por el taller de Suay. Su palio es el único de Huelva con faroles de cola. En mayo de 2000 compró a la Hermandad del Cerro del Águila de Sevilla su paso de misterio actual, de Ángel de la Feria Ruiz, que antes fue de la Hermandad de Jesús Nazareno de Utrera; lo estrenó en 2001, año de su 50.º aniversario.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha se contradice en la fecha del paso de Ángel de la Feria Ruiz: la reseña histórica dice 1977-1979 y la patrimonial, 1957. No se da fecha."
+  },
+  "el-santo-entierro-huelva": {
+   "texto": "Es la cofradía más antigua de Huelva, con referencias documentales que se remontan a 1551. Nació como hermandad hospitalaria y, entre etapas de esplendor y de decadencia, nunca llegó a desaparecer. Salía en sus orígenes desde la antigua ermita de la Soledad; en el siglo XIX se trasladó a la Parroquia de San Pedro, donde estuvo hasta finales del siglo XX, cuando volvió a su primitiva sede.\n\nEn la Guerra Civil perdió casi todo su patrimonio: los pasos, bordados del palio de Manuel Rodríguez Ojeda y sus imágenes titulares. Se salvaron algunos de esos bordados y la cabeza del Cristo Yacente, de entre los siglos XVI y XVII, a la que Antonio León Ortega hizo un cuerpo nuevo en 1944; ese año talló también la Soledad, restaurada en 1968 por Luis Álvarez Duarte. En 1945 salió con la popular «canina», alegoría del Triunfo de la Santa Cruz sobre la muerte, y en 1958 León Ortega talló Nuestra Señora de las Angustias, con la iconografía de la Piedad. Su cortejo de tres pasos (las Angustias, el Cristo Yacente y la Soledad) sale al caer la noche del Viernes Santo y cierra la Semana Santa. Ostenta el título de Hermandad Oficial de la Semana Santa de Huelva, por lo que en él figuran representaciones de todas las cofradías y de las autoridades.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-silencio-la-soledad-huelva": {
+   "texto": "Recoge una tradición del siglo XIX, cuando la Hermandad de los Dolores y de la Vera Cruz sacaba una Virgen sola, conocida como «la del Silencio», que cerraba los desfiles de la tarde-noche del Viernes Santo. Tras el incendio de la iglesia de la Purísima Concepción en 1936, Tomás Domínguez y su esposa Teresa Vázquez Oliveira rescataron la imagen y la entregaron al párroco José Manuel Romero Bernal, que la llevó a la iglesia de La Milagrosa. Para mantener la costumbre, directivos de la Hermandad del Nazareno crearon una organización interna con esta imagen como titular, y el 26 de marzo de 1937 la Virgen recorrió sola las calles, saliendo y recogiéndose en La Milagrosa.\n\nLa Soledad es una dolorosa anónima del siglo XVI. Antonio León Ortega le hizo unas manos nuevas en 1939 y en 1942 cambió la inclinación de la cabeza, dándole la expresión que conserva. En 1944 la hermandad se erigió canónicamente como corporación propia. En los años sesenta, con muy pocos hermanos, la sacaron adelante el padre Laraña y jóvenes del Colegio Politécnico Madre de Dios. Entre 1997 y 2007, por el cierre de la Concepción, salió desde el templo de Jesús del Calvario, y en 2011 celebró su 75 aniversario con una salida extraordinaria.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-silencio/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da la Soledad como «dolorosa de autor anónimo, realizada en el siglo XVI»; portal.json la da como «atrib. Antonio del Castillo, finales s. XVII». Conviene revisar portal.json."
+  },
+  "el-resucitado-huelva": {
+   "texto": "Se fundó en 1996 para completar el ciclo litúrgico de la Semana Santa onubense con el misterio de la Resurrección, y quedó erigida canónicamente en la Parroquia de Nuestra Señora del Pilar, en el barrio de la Hispanidad. Sus dos titulares son obra de Elías Rodríguez Picón: María Santísima de la Luz, dolorosa de candelero tallada y bendecida en 2001, y el Santísimo Cristo Resucitado, bendecido en 2003, que representa a Cristo glorioso alzando la mirada al cielo.\n\nNo hace estación de penitencia por la carrera oficial, pero cierra los desfiles procesionales cada Domingo de Resurrección. En 2016, en el XV aniversario de su bendición, la Virgen de la Luz salió por primera vez de forma extraordinaria. La hermandad ha aprobado un proyecto de paso de misterio, diseñado por José María Leal, que situará al Resucitado sobre el sepulcro.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-del-resucitado/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "texto": "Conocida como «El Prado», se fundó en 2009 en el barrio del Higueral de Huelva, a partir de unas procesiones infantiles que ya se organizaban en la zona. La advocación es un homenaje a la Patrona de La Higuera de la Sierra, tierra natal del primer párroco del barrio, Francisco Girón. La titular, Nuestra Señora del Prado en su Dolor, es una dolorosa de Rubén Fernández Parra de 2009.\n\nLa Virgen salió por primera vez el Viernes de Dolores de 2009 desde el Centro Municipal Sociocultural «Lazareto», donde recibió culto hasta octubre de 2017; entonces pasó a su sede actual, la capilla de Nuestra Señora del Prado en su Dolor, en antiguas dependencias de la Parroquia de San Pablo. El 11 de noviembre de 2019 el obispo José Vilaplana Blasco la erigió como hermandad de penitencia. Prepara un paso de palio de estilo Segundo Imperio diseñado por el granadino Álvaro Abril y prevé incorporar un misterio de las Negaciones y Lágrimas de San Pedro.",
+   "fuentes": [
+    "https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-bendicion-huelva": {
+   "texto": "La Asociación Parroquial de Nuestro Padre Jesús de la Bendición y Nuestra Señora del Dulce Nombre de la Paz se fundó en 2010 en la Parroquia de San Rafael Arcángel, que sigue siendo su templo. Su titular es el Santísimo Cristo de la Bendición, obra de Rubén Fernández Parra del mismo año 2010. Sale el Sábado de Pasión con un solo paso, desde San Rafael, y según la guía oficial de 2026 cuenta con 286 hermanos y 130 nazarenos. El Consejo de Hermandades destacó en su crónica de ese Sábado de Pasión que su recorrido por distintos barrios mostraba el crecimiento y la progresiva consolidación de su proyecto.",
+   "fuentes": [
+    "https://www.huelva.es/portal/sites/default/files/documentos/cultura/guia_semana_santa_20262.pdf",
+    "https://consejohermandadeshuelva.es/sabado-de-pasion-tradicion-y-participacion-en-las-visperas-cofrades/",
+    "https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "El Consejo no tiene ficha de esta asociación (la URL /hermandad-de-la-bendicion/ da 404). Texto corto, hecho solo con los datos de la guía oficial del Ayuntamiento 2026 (p. 68), la crónica del Consejo y el itinerario de 1minutohuelva; no hay fuente abierta con su historia. Si se prefiere un mínimo más exigente, puede quedar como pendiente."
+  },
+  "la-borriquita-almeria": {
+   "texto": "Tuvo su origen en 1928 en la primitiva Cofradía del Niño Jesús de los Remedios, organizada por el sacerdote Rafael Román Donaire en la iglesia del convento de la Purísima Concepción, y salió por primera vez el Domingo de Ramos de 1929. En la Guerra Civil perdió todo su patrimonio, incluidas sus dos imágenes, el Niño Jesús y el Jesús en su Entrada en Jerusalén, ambas de Francisco Gálvez Ferrer. En 1948 la reorganizó el párroco de San Sebastián, José Pardo Medina, con miembros de Acción Católica, como hermandad de niños de 7 a 14 años; por falta de medios, la Entrada la representó ese año un niño montado en una burra. En 1957 compró una imagen de Jesús en la Casa de Arte Juan Cristóbal de Madrid, y salió hasta el Domingo de Ramos de 1970.\n\nEn 1980 empezó una tercera etapa, con sede en la Catedral, y en 1982 recibió en donación una dolorosa anónima de finales del siglo XVIII, atribuida a la escuela granadina, que tomó la advocación de Nuestra Señora de la Paz y salió bajo palio por primera vez en 1991. El 23 de marzo de 1996 se bendijo el actual Jesús de la Victoria, tallado en cedro por Miguel Bejarano Moreno. El incendio de la Catedral del Jueves Santo de 1996 dañó gravemente a la Virgen, y entre 1997 y 2005 la hermandad estuvo inhabilitada por decisión episcopal, bajo tutela de la Agrupación. En 2000 pasó a San Agustín y el 21 de mayo de 2005 a la Parroquia del Espíritu Santo, donde ese año volvió al culto la Virgen de la Paz, restaurada por Luis González Rey. En 2023 se bendijo un nuevo Niño Jesús del Remedio, atribuido a Juan Martínez Montañés.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/penitencia/borriquita/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que surgió en 1924; la ficha da 1928 y primera salida en 1929. La ficha se contradice sobre el Niño Jesús del Remedio (bendecido el 5 de febrero de 2023 y donado el 15 de octubre de 2023): solo se da el año."
+  },
+  "los-angeles-almeria": {
+   "texto": "En la Semana Santa de 1995 un grupo de cofrades, en su mayoría de las hermandades de la Macarena y el Silencio, concibió una nueva hermandad para el barrio de Los Ángeles. El 24 de abril de 1996 se constituyó la asociación pro-hermandad, que durante tres años se formó bajo la guía del párroco de Santa María de los Ángeles, Francisco Alarcón. El 21 de septiembre de 1996 se encargó la Virgen a Antonio J. Dubé de Luque; María Santísima de los Ángeles, de candelero, llegó en octubre de 1998 y la bendijo el obispo Rosendo Álvarez Gastón el 16 de enero de 1999, con la hermandad sevillana de los Negritos como madrina.\n\nEl 8 de febrero de 1999 se erigió canónicamente, y el 27 de marzo de ese año salió por primera vez por las calles de la parroquia, desde un «tinglao» montado junto al templo, cuyas dimensiones impedían salir de su interior. Su primer hermano mayor fue Pedro Martínez Oliver. El Domingo de Ramos 8 de abril de 2001 bajó por primera vez a la carrera oficial. En 2004 el paso de palio salió desde la nueva casa hermandad de la calle Diamante, con lo que fue la primera cofradía de Almería en salir de su propia casa; el edificio se bendijo el 13 de mayo de 2006. El Cristo de la Misericordia, imagen de vestir de Dubé de Luque encargada en 2008, se bendijo el 17 de enero de 2009.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/los-angeles/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "la-estrella-almeria": {
+   "texto": "La fundaron cofrades procedentes en su mayoría de la Congregación de las Angustias y Buena Muerte, que a finales de abril de 1991 eligieron en su primera reunión el nombre de María Santísima de la Estrella. La Virgen, una imagen de candelero del sevillano Luis Alberto García Jeute, de 1992, la bendijo el párroco José Burló González, y el Sábado de Pasión de 1993 salió en vía crucis por el barrio de Regiones. Ingresó en la Agrupación en 1995, que le asignó el Domingo de Ramos, y su primera salida oficial fue el 31 de marzo de 1996, desde un patio particular de la calle San Isidro, con 33 nazarenos.\n\nEl 20 de noviembre de 1999 se bendijo en la iglesia de San Isidro Labrador Nuestro Padre Jesús de las Penas, también de García Jeute, que representa a Cristo sentado sobre una roca antes de la Crucifixión. En 2004 la Virgen salió por primera vez desde el patio anexo de la parroquia, y en 2006 salió por primera vez el Señor, con las primeras figuras del misterio. El 15 de octubre de 2016 celebró su XXV aniversario con una salida extraordinaria de la Virgen. En 2018 hizo por primera vez estación de penitencia en la Catedral, y en 2019 la reina emérita Sofía aceptó el cargo de camarera mayor honoraria.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/estrella/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior hablaba de un «recorrido de casi ocho horas»: la ficha no lo dice y se ha quitado."
+  },
+  "la-santa-cena-almeria": {
+   "texto": "Nació en abril de 1983 como Hermandad de la Santa Cena y María Santísima de la Esperanza Macarena; en 1984 se aprobaron sus primeras reglas, en las que se sustituyó la advocación mariana. En 1986 el párroco de San Pedro, Eduardo Navarro López, la acogió en su templo, y en vísperas del Corpus de ese año se bendijo su primera imagen, Jesús en su Última Cena, del sevillano Elías García Rodríguez. El 11 de abril de 1987 se bendijo el apostolado, y al día siguiente, Domingo de Ramos, hizo su primera estación de penitencia.\n\nEn junio de 1989 encargó a Luis Álvarez Duarte la titular mariana, María Santísima de Fe y Caridad, que bendijo el obispo Rosendo Álvarez Gastón el 17 de marzo de 1990 y salió por primera vez el 8 de abril de ese año. En enero de 1996 los hermanos aprobaron un nuevo misterio, encargado al sevillano José Antonio Navarro Arteaga; el grupo se bendijo en San Pedro el 28 de febrero de 1999 y salió por primera vez el 28 de marzo de ese año. En 2006 se bendijo su casa de hermandad, levantada en el antiguo local de la asociación Betel. En 2020 suspendió por primera vez su estación de penitencia por la pandemia. En el Corpus de 2022 el paso de misterio participó por primera vez en la procesión, y el 23 de febrero de 2024 el Señor de la Santa Cena presidió por primera vez el Vía Crucis General y entró en la Catedral.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/santa-cena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "pasion-almeria": {
+   "texto": "Su origen está en la asociación cultural Amigos de la Semana Santa, constituida en 1992 por cofrades en su mayoría de la Hermandad de los Estudiantes y presidida por Baltasar Giménez Campuzano. A los pocos meses encargaron al sevillano Luis Álvarez Duarte la imagen de Jesús de Salud y Pasión, tallada en cedro en 1992, aunque no tenían templo donde darle culto hasta que entró en escena el sacerdote Fernando Berruezo Sánchez. El obispo Rosendo Álvarez Gastón aprobó las reglas el 20 de febrero de 1995 y la hermandad se erigió el ocho de marzo en la antigua parroquia de Santa Teresa.\n\nEl Señor, que representa la tercera caída camino del Calvario, se bendijo en la Catedral el 11 de marzo de 1995, con el Colegio Oficial de Médicos de Almería como padrino, y el 12 de marzo se trasladó a Santa Teresa. El primer hermano mayor fue José Enrique Vivas Ibáñez. Salió por primera vez en vía crucis el Viernes de Dolores de 1996 y su primera estación de penitencia fue el Lunes Santo de 1997, solo con el paso del Señor. María Santísima de los Desamparados, también de Álvarez Duarte (1998-2000), se bendijo el 9 de diciembre de 2000 en el nuevo templo de Santa Teresa y salió por primera vez bajo palio en 2003.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-de-pasion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "gran-poder-almeria": {
+   "texto": "El 9 de junio de 1994 un grupo de personas, en su mayoría devotas de la Virgen del Carmen, formó una pre-hermandad en la Parroquia de San Pío X, en el barrio del Zapillo, encabezada por Francisco Díaz Álvarez. El 9 de junio de 1995 se bendijo una primera Virgen del Carmen, obra del almeriense Juan Antonio Criado López, y el 14 de abril de 1996 Nuestro Padre Jesús del Gran Poder, de José Antonio Navarro Arteaga, con la Hermandad de la Santa Cena como madrina. El obispo Rosendo Álvarez Gastón aprobó las primeras reglas el 24 de octubre de 1996, con Andrés Anes Fernández como párroco y consiliario y Francisco Díaz Álvarez como hermano mayor.\n\nEl 21 de marzo de 1997 hizo su primer vía crucis por el barrio, con un paso prestado por la Macarena, y el Sábado de Pasión 4 de abril de 1998 su primera estación de penitencia. El 16 de julio de 1998 se bendijo la Virgen del Carmen actual, también de Navarro Arteaga. El 29 de marzo de 1999 llegó por primera vez a la carrera oficial, saliendo del colegio San Fernando y recogiéndose en San Sebastián; desde 2004, tras modificar la puerta, sale y entra en su sede. El 18 de septiembre de 2005 se bendijeron María Santísima del Mayor Dolor y Traspaso y San Juan Evangelista, de David Valenciano Larios, apadrinadas por la Hermandad del Gran Poder de Sevilla.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-gran-poder/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que nació «en el barrio de pescadores» y que su cortejo es «de riguroso silencio»: la ficha no lo dice y se ha quitado."
+  },
+  "la-coronacion-almeria": {
+   "texto": "Su andadura comenzó el 23 de junio de 1990, cuando el párroco Alfredo Gallego Fábrega bendijo en la parroquia de Santa María Magdalena, en el barrio de Los Molinos, una primera imagen de María Santísima de Gracia y Amparo, en barro cocido, obra de José Manuel Soriano López. El Viernes de Dolores de 1991 salió por primera vez como asociación religiosa, con un crucificado de la parroquia, y en 1992 la Virgen fue llevada por primera vez por costaleros. El 27 de abril de 1993 se firmó el contrato con el sevillano Salvador Madroñal Valle para las nuevas imágenes: la Virgen de Gracia y Amparo, bendecida el 18 de diciembre de 1993, que guarda en su candelero la cabeza y las manos de la primera, y Nuestro Padre Jesús de la Humildad y Paciencia, bendecido el 8 de octubre de 1995.\n\nEl 6 de diciembre de 1995, por desacuerdo con el párroco, las imágenes salieron de la parroquia, y en enero de 1996 la asociación se trasladó a la capilla de San Antonio de Padua, en el mismo barrio. En marzo de 1998 el obispo Rosendo Álvarez Gastón la erigió canónicamente en esa capilla, y ese Viernes de Dolores salió por primera vez el Señor, en un paso de estilo malagueño llevado por mujeres. El Martes Santo de 2001 pasó por primera vez por la carrera oficial, estrenando paso de palio. El 3 de octubre de 2015 la Virgen salió de forma extraordinaria por Los Molinos en los XXV años de la hermandad.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-de-la-coronacion/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que desde 2019 procesiona por su barrio sin bajar a carrera oficial: la ficha no lo dice y se ha quitado."
+  },
+  "el-amor-almeria": {
+   "texto": "La fundó en 1944 Juan Fenoy López, que pidió a muchos almerienses una limosna de diez céntimos, sin aceptar cantidades mayores, para comprar las imágenes. La directiva, reorganizada, contó con cerca de cuatrocientos cofrades, en gran parte empleados de banca y oficinas, de donde le vino un nombre popular durante una época. En 1946 se representó por primera vez la escena del Calvario, con el Santísimo Cristo del Amor, obra del artista indaliano Jesús de Perceval y del Moral, y la cofradía salía entonces el Jueves Santo; en 1947 cada titular tuvo ya su trono.\n\nDesde 1952 sale con Nuestra Señora del Primer Dolor, de José María Hervás Benet. En 1981 restauró los tronos y la Virgen estrenó palio del Sindicato Católico de la Aguja. En 1984 TVE retransmitió su procesión para toda España con comentarios de Matías Prats, y en 1985 el Cristo salió por primera vez a hombros de costaleros de la Cofradía de la Soledad de Granada. En abril de 1987 nombró hermano mayor honorario a Juan Carlos I y camarera de honor a la reina Sofía, y tomó el título de Real. En 2004 estrenó un nuevo paso para el Cristo, de los talleres sevillanos de Antonio Ibáñez. En 2019 celebró el 75 aniversario de su erección canónica con una salida extraordinaria de los dos titulares juntos el 28 de septiembre.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-amor/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-perdon-silencio-almeria": {
+   "texto": "Se fundó el 12 de septiembre de 1980 en la Parroquia de San José, en el Barrio Alto, por jóvenes que querían una hermandad diferente; pretendían sacar el Cristo del Perdón titular de esa parroquia, pero tuvieron que marcharse a la de Santiago Apóstol. En 1982 hizo su primer Vía Crucis Penitencial de Silencio, con una imagen cedida por la parroquia de Santiago gracias a su párroco, José Amat Cortes. Después la acogió la Compañía de María, donde encontró el apoyo de la madre Francisca Cirera Salas.\n\nEn 1984 encargó a Francisco Palma Burgos su propio Cristo, tallado en Úbeda, donde lo bautizaron como «Cristo de las Lluvias»; por deseo del imaginero se llama Cristo del Perdón «y de las Lluvias». Lo bendijo el 14 de abril de 1984 en la Compañía de María Juan López Martín, y salió por primera vez desde el Instituto Politécnico Alhamilla, llevado por costaleros descalzos. Desde 1989 sale en unas andas fúnebres sin ornamentación, rodeado de cuatro pebeteros con fuego. En 1992 salió por primera vez desde San Ildefonso, de donde sale cada Martes Santo, y el 23 de septiembre de 2003 acordó trasladar allí su sede canónica. En 2012 su hermana Encarnación Molina fue la primera mujer presidenta de la Agrupación de Hermandades.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-perdon/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía «nazarenos de negro y descalzos; las farolas se apagan conforme avanza»: la ficha no lo dice y se ha quitado."
+  },
+  "el-calvario-cristo-del-mar-almeria": {
+   "texto": "Todo empezó el 13 de enero de 2007, cuando un grupo de fieles, con autorización del Obispado, trasladó un crucificado desde la parroquia de San Juan Apóstol y Evangelista al colegio público Virgen de la Chanca. El 20 de enero la imagen, un Cristo vivo en el momento de pronunciar las siete palabras, tallado en cedro en 2003 por el sevillano Miguel Bejarano Moreno, se entronizó en la Iglesia Parroquial de San Roque, donde la bendijo el párroco Eduardo Fernández-Moscoso Solano con el nombre de Santísimo Cristo del Mar; el 22 de enero se firmó su donación a la parroquia, y desde entonces salía en vía crucis por sus calles.\n\nEn marzo de 2009 el Obispado dio permiso verbal para preparar la nueva hermandad, de carácter austero, con nazarenos de túnica y verdugo negros. La pre-hermandad salió por primera vez el Sábado de Pasión de 2010, con un paso de Manuel Llamas Campoy donado por la Congregación de las Angustias. El 8 de marzo de 2012 se bendijo María Santísima de las Lágrimas, también de Bejarano. El 22 de diciembre de 2013 el obispo Adolfo González Montes erigió la hermandad, la vigésimo primera de penitencia de la ciudad. En 2014 se bendijo San Juan Evangelista, de Bejarano, y José Antonio García Pardo fue elegido primer hermano mayor. El Miércoles Santo de 2017 pasó por primera vez por la carrera oficial. En 2020 se incorporó Santa María Magdalena, que completó el misterio, y en 2023 recibió el título de Marianista.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/calvario/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-prendimiento-almeria": {
+   "texto": "Se fundó el 22 de enero de 1948, día en que se aprobaron sus primeras reglas en la parroquia de San Sebastián, como Ilustre Cofradía del Prendimiento y Nuestra Señora de la Merced, conocida como «Cofradía de Excautivos». Sus primeros años fueron irregulares: salía unos años el Martes, otros el Miércoles o el Jueves Santo, y a veces solo con algún paso dentro del cortejo de otra cofradía. En 1948 salió del taller de Perceval el grupo del Prendimiento, en los años cincuenta llegó un Jesús Cautivo de Medinaceli de José Navas Parejo, y en 1956 se bendijo la Merced de Enrique Pérez Comendador.\n\nTras una etapa de decaimiento en los sesenta y setenta, en 1977 la reorganizó un grupo de jóvenes, que obtuvo la erección canónica en la Catedral. Las nuevas imágenes son de Antonio Joaquín Dubé de Luque: el Señor del Prendimiento se bendijo el 31 de marzo de 1990. En la madrugada del Jueves Santo de 1996, pocas horas después de recogerse la cofradía, un incendio en la Catedral destruyó dos de sus tres pasos y las imágenes de la Merced y del Cautivo; Dubé de Luque hizo las nuevas, la Virgen de la Merced, bendecida el 21 de septiembre de 1996, y el Cautivo, bendecido el 1 de marzo de 1997, con la ciudad como madrina. En 2005 estrenó un nuevo paso de misterio de Francisco Verdugo, con imaginería de Fernando Murciano. El 14 de mayo de 2011 se bendijo su casa de hermandad, una casa palacio de finales del siglo XVII en la Plaza Bendicho.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que es «la cofradía más numerosa de Almería», que el Medinaceli es «el Señor de Almería» y que hay petalá a la Virgen de la Merced junto a la Catedral: la ficha no lo dice y se ha quitado."
+  },
+  "la-macarena-almeria": {
+   "texto": "La fundaron el 6 de mayo de 1986 Pedro Fernández Muñoz, Antonio Navarro del Pino y Carmelo Ortíz González, que querían una hermandad de la Sentencia acompañada, como en Sevilla, por la Macarena. La hermandad sevillana dio permiso el 20 de mayo de 1986 para extender su devoción a Almería, y se encargó a Antonio J. Dubé de Luque una réplica de la Esperanza Macarena. Hasta 1990 funcionó como Asociación Cultural Macarena. El 28 de mayo de 1988 se bendijo la Virgen en la parroquia de San Ildefonso, en el barrio de la Plaza de Toros, tras trasladarla en procesión desde la casa de hermandad de la calle Quintana, y con ello la hermandad quedó erigida en la parroquia gracias al párroco José Yélamos Rubio.\n\nEl obispo Rosendo Álvarez Gastón aprobó los primeros estatutos el 4 de junio de 1990, y el primer hermano mayor fue Juan Estrada Matarín. El 16 de diciembre de 1990 se bendijo Nuestro Padre Jesús de la Sentencia, también de Dubé de Luque, y la primera estación de penitencia fue el Lunes Santo de 1991. El 14 de mayo de 2016 se bendijo la tercera titular, Nuestra Señora del Santo Rosario, obra de Antonio José Labrador Jiménez (2015), que salió por primera vez el 8 de octubre de ese año. En 2018 la hermandad trasladó su estación de penitencia al Miércoles Santo.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/macarena/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "los-estudiantes-almeria": {
+   "texto": "La fundaron en 1944 jóvenes estudiantes almerienses, antiguos alumnos del Instituto de Enseñanza Media y después universitarios en Granada. Su primer consiliario fue Andrés Pérez Molina, y su primer hermano mayor, Francisco de Asís Saiz Sanz, director del instituto. El Jueves Santo de 1945 salió por primera vez desde la Catedral, su sede, con la Oración en el Huerto, grupo de José Martínez Puertas de ese año formado por el Cristo orante y el ángel. En 1946 se incorporó Nuestra Señora del Amor y la Esperanza, de Antonio Castillo Lastrucci, la primera dolorosa almeriense que salió bajo palio.\n\nCon la creación de la Agrupación de Cofradías en 1947 pasó al Miércoles Santo, y desde entonces no ha dejado de salir, ni siquiera en los años setenta. En 1981 empezó la renovación del paso de la Virgen, que introdujo la orfebrería en la Semana Santa almeriense. En 1982 el misterio salió por primera vez a hombros de hermanos, con la primera cuadrilla de costaleros, y en 1984 ambos pasos salieron ya con costaleros. En 1983 la Casa Real aceptó los nombramientos de hermano mayor honorario para el Príncipe de Asturias y de camareras para las infantas Elena y Cristina; el título de Real llegó en 1994, en el cincuentenario. En 1996 el rector de la Universidad de Almería autorizó el título de Universitaria, y en 2006 el obispo Adolfo González Montes le concedió el de Concepcionista.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía «fundada por estudiantes de Medicina»: la ficha habla de antiguos alumnos del Instituto de Enseñanza Media, después universitarios en Granada. Se ha corregido."
+  },
+  "rosario-del-mar-almeria": {
+   "texto": "En 1995 un grupo de cofrades creó la Asociación de Santa María Magdalena para reabrir al culto la capilla del Real Hospital Provincial de Santa María Magdalena; con el apoyo del presidente de la Diputación, Tomás Azorín Muñoz, la capilla volvió a abrirse el Domingo de Ramos 9 de abril de 1995, cuando se cumplían 25 años de su cierre. El 24 de marzo de 1996 se bendijo María Santísima del Rosario del Mar en sus Misterios Dolorosos. El 15 de octubre de 2000 el obispo Rosendo Álvarez Gastón aprobó la asociación privada de fieles, y en 2001 se adquirió Nuestro Padre Jesús de las Penas en el Abandono de sus Discípulos, que Luis Álvarez Duarte había tallado en 1992 para una hermandad sevillana, bendecido el 18 de marzo de 2001 en la capilla del hospital.\n\nLa primera salida con nazarenos fue el Sábado de Pasión de 2005, y el 7 de octubre de 2006 el obispo Adolfo González Montes firmó el decreto de erección canónica. Desde 2011, por la poca altura de la puerta de la capilla, tuvo que salir desde otros edificios. En 2014, al cerrarse la capilla del hospital, las imágenes se trasladaron a la parroquia de San Juan Evangelista, su nueva sede. En 2015 la Orden de Predicadores le concedió el título de Dominicana, y desde ese año hace estación de penitencia la tarde del Jueves Santo desde la iglesia conventual de Santo Domingo el Real.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/rosario-del-mar/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha no da el autor de la Virgen del Rosario del Mar (portal.json: Álvarez Duarte). Según la ficha, su sede canónica es la parroquia de San Juan Evangelista desde 2014 y solo sale desde Santo Domingo el Real; portal.json da como sede el Santuario de la Virgen del Mar: conviene revisarlo. La reseña anterior decía «surgió en 1995»: la asociación de 1995 es civil; la hermandad se erigió en 2006."
+  },
+  "el-encuentro-jesus-nazareno-almeria": {
+   "texto": "Según la ficha de la Agrupación, es la cofradía pasionaria más antigua de Almería. Su constitución en el convento de San Francisco de Asís se data en 1743, año del Libro de la Cofradía de Jesús Nazareno, con sus preliminares y 11 constituciones. La imagen primitiva era obra de José de Mora, según un presupuesto suyo de 1668 encargado por los franciscanos, y dos testamentos de 1670 citan ya la capilla de Jesús Nazareno, por lo que la hermandad pudo nacer entre mayo y septiembre de ese año. En 1699 Gabriel Pascual y Orbaneja la describe como cofradía de la nobleza que procesionaba el Jueves Santo por la tarde.\n\nEl 17 de mayo de 1916 el Nazareno se trasladó al convento de Santa Clara, donde en 1924 reordenó la hermandad Pedro Martín Abad, organista de la Catedral; el 27 de marzo de 1929 volvió a salir y a celebrar el Encuentro en la plaza de la Catedral. En 1931 incorporó una Amargura de Francisco Gálvez Ferrer. El 22 de julio de 1936 ardió Santa Clara con las imágenes y el patrimonio, y días después fue asesinado Pedro Martín Abad. Reorganizada en 1943 en San Sebastián con Antonio Villaespesa Quintana como hermano mayor, encargó a José Martínez Puertas un nuevo Nazareno, inspirado en el de Mora, y una nueva Amargura, bendecidos en San Sebastián un 18 de abril, primer día de su triduo. En 1952 se bendijo la Santa Mujer Verónica de José María Hervás Benet. Entre 1950 y 1990 salía el Miércoles Santo desde Santa Clara; en 1991 se trasladó a San Antonio de Padua, pasó al Jueves Santo y llevó el Encuentro a la Plaza Circular.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-encuentro/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha da a la primitiva imagen como obra de José de Mora (presupuesto de 1668). El año de la reorganización y bendición (1943) se deduce del orden del texto: la ficha dice que reinicia su andadura en 1943 y que las imágenes «son bendecidas el día 18 de abril»; en el apartado de titulares dice «En 1943 ... se realiza una nueva talla»."
+  },
+  "las-angustias-almeria": {
+   "texto": "Se fundó en diciembre de 1911 como congregación jesuita de culto interno, dedicada a los cultos del «bien morir» ante un crucificado. En 1941 se le unió un grupo de funcionarios granadinos devotos de la Virgen de las Angustias, cuya advocación se añadió al título, y se encargó a José Navas Parejo el grupo de la Virgen de las Angustias, bendecido el 10 de abril de 1943: la dolorosa en pie detrás del Cristo yacente, tendido sobre un altar, como se presentaba la Virgen de las Angustias de Granada en el siglo XVIII. En 1951 se convirtió en cofradía de penitencia y salió esa misma Semana Santa. José María Hervás Benet talló el Santísimo Cristo de la Buena Muerte, un crucificado muerto inspirado en los modelos mesinos del Cristo del Amor y del de los Estudiantes de Sevilla, bendecido en 1954, y la corporación tomó el nombre de Congregación Hermandad de Nuestra Señora de las Angustias y el Santísimo Cristo de la Buena Muerte.\n\nEn los años setenta no salió, aunque mantuvo los cultos hasta 1979, y volvió a la calle en 1980. En 1983 se cerró para su restauración la iglesia del Sagrado Corazón, y en 1987 las Esclavas del Santísimo le comunicaron que las imágenes no podían volver; tras casi ochenta años allí, la hermandad se trasladó a la parroquia de San Juan Evangelista, en la Almedina. Por las dimensiones de su puerta sale el Jueves Santo desde otros lugares, desde 2010 desde la capilla de la Compañía de María.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-de-las-angustias/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha fecha la bendición de la Virgen de las Angustias el 10 de abril de 1943 (portal.json: 1942)."
+  },
+  "el-silencio-descendimiento-almeria": {
+   "texto": "Conocida como Hermandad del Silencio, nació en 1946 en la Confederación Nacional de Sindicatos, por iniciativa de altos cargos de la delegación almeriense y bajo la dirección del canónigo magistral José Antón Ortiz, consiliario de la organización sindical. La primera junta general aprobó los estatutos el 10 de junio de 1946, ratificados el 20 de junio por el obispo Enrique Delgado Gómez; el primer hermano mayor fue Mario López Rodríguez. El 10 de noviembre de 1946 se bendijo María Santísima del Consuelo, de Antonio Castillo Lastrucci, inspirada por deseo de Antón en la Virgen de la Soledad de Zamora; la advocación procede de Nuestra Señora de Consolación de Tices (Ohanes). El misterio del Descendimiento, encargado en 1946 a Eduardo Espinosa Cuadros, hizo estación de penitencia en 1948.\n\nEn su etapa de esplendor llegó a reunir mil doscientos nazarenos, y en 1960 y al año siguiente se crearon en su seno otras tres congregaciones, con imágenes de Federico Coullaut-Valera. Siguió un declive que suspendió algunas salidas en los años setenta, hasta que en 1978 un grupo de jóvenes encabezado por Miguel Aparicio se hizo cargo de ella, con sede en la parroquia de San Agustín, atendida por los franciscanos. En 1983 formó su primera cuadrilla de hermanos costaleros, y en 1996, en su cincuentenario, recibió el título de Franciscana. En enero de 2000 el cabildo decidió salir solo con los dos pasos titulares. Antes de salir el Jueves Santo, todo el cortejo promete guardar silencio absoluto durante el recorrido.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/cofradia-del-silencio/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "cristo-de-la-escucha-almeria": {
+   "texto": "La devoción al Santo Cristo de la Escucha es anterior a la hermandad: el primer vía crucis con este Cristo se celebró en 1928. Aquella imagen fue destruida durante la Guerra Civil, y la que se venera hoy la realizó Jesús de Perceval en 1941. La Hermandad del Cristo de la Escucha se fundó en 1958. Tiene su sede en la Santa y Apostólica Iglesia Catedral de la Encarnación y sale en la madrugada del Viernes Santo; quienes la acompañan no llevan hábito, sino traje.",
+   "fuentes": [
+    "https://semanasantadeandalucia.es/hermandades/hermandad-del-santo-cristo-de-la-escucha/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "No figura en la nómina de la Agrupación y no se ha encontrado web propia ni artículo de prensa abierto con su historia (búsquedas en La Voz de Almería y Diario de Almería sin resultado útil; la guía de Barceló da 403). Texto corto, solo con la ficha de semanasantadeandalucia.es. La reseña anterior contaba la leyenda de los albañiles que oyeron «¡Escucha!»; esa ficha no la recoge y se ha quitado. Si se prefiere un mínimo más exigente, puede quedar como pendiente."
+  },
+  "la-caridad-almeria": {
+   "texto": "Se aprobó como asociación el 23 de septiembre de 1995, con el nombre de Pre-Humilde Hermandad del Santísimo Cristo de la Caridad en su Traslado al Sepulcro y María Santísima de las Penas. El 25 de octubre de 1997 se presentó en la iglesia de San Martín de Sevilla el boceto del misterio y se firmó el contrato con Juan Manuel Miñarro López, autor de todas sus imágenes. El Santísimo Cristo de la Caridad, un Cristo muerto tallado en Sevilla entre 1998 y 1999, se presentó en San Martín el 6 de febrero de 1999 y se bendijo en la parroquia de San Agustín el 27 de febrero; un año después se bendijo la casa de hermandad. La primera estación de penitencia fue el Sábado de Pasión de 2001, cuando el Cristo recorrió en andas el barrio del Quemadero desde la parroquia de San Francisco de Asís.\n\nEn 2003 llegó por primera vez a la plaza de la Catedral. El 25 de septiembre de 2004 se bendijeron los Santos Varones y San Juan, que salieron en 2005, y el 23 de septiembre de 2005 el obispo Adolfo González Montes la erigió canónicamente como Humilde Hermandad de San Francisco de Asís y Cofradía de Nazarenos, diez años después de su aprobación como asociación. María Santísima de las Penas y Santa Marta se bendijeron el 27 de octubre de 2007, y en 2008 salió por primera vez el Viernes Santo. En 2012 procesionaron por primera vez todas las imágenes del misterio, y en 2015 trasladó su sede a la parroquia de Santa Teresa de Jesús.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/caridad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-santo-sepulcro-almeria": {
+   "texto": "Se fundó el 7 de abril de 1923 por un grupo de almerienses encabezado por Eduardo Pérez Cano, su primer hermano mayor; pocos meses después recibió el título de Real y Alfonso XIII aceptó su presidencia de honor. Sus primeras imágenes eran un Cristo Yacente de mediados del siglo XVII, donado por la familia Vílchez, y una Virgen de los Dolores del siglo XVIII obra de Torcuato Ruíz del Peral, que estaba en San Pedro; ambas se destruyeron con sus enseres en la Guerra Civil. En 1942 antiguos miembros formaron una nueva directiva, presidida por José Cordero Soroa, que encargó a Nicolás Prados López los nuevos titulares y el trono del Yacente; el Cristo Yacente y Nuestra Señora de los Dolores se bendijeron en San Pedro el Domingo de Ramos 25 de marzo de 1945.\n\nComo otras cofradías de la capital, vivió una fuerte decadencia a finales de los sesenta y en los setenta: en 1974 la Agrupación creó una comisión gestora, y en 1977 no salió. Se reorganizó desde 1978 y se saneó en 1985 con Antonio López Puertas. Desde 1994, con Francisco Javier Mora Martínez, recuperó la oficialidad que ostentaba, y el 2 de diciembre de 1995 se hermanó con la Hermandad del Encuentro. En 1997 el Cabildo Catedralicio le concedió hacer el Viernes Santo estación de penitencia en el interior de la Catedral, y en 1998 el Ayuntamiento aceptó ser hermano mayor honorario. En 1999 la Virgen recibió el escudo de oro de la ciudad.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La reseña anterior decía que «es la única que entra en la Catedral» y que el manto de la Virgen perteneció a la Paloma de Málaga: la ficha no dice ninguna de las dos cosas (solo que desde 1997 hace estación de penitencia en el interior de la Catedral) y se han quitado."
+  },
+  "la-soledad-almeria": {
+   "texto": "Su documento más antiguo son unas constituciones aprobadas el 2 de enero de 1773 por el obispo Claudio Sanz y Torres, tras la bula del prior general de los Servitas, fray Francisco Raymundo Adán, fechada en Roma el 1 de abril de 1772. Nació como Hermandad de la Virgen de los Dolores bajo la tutela de la Orden Tercera de los Servitas, para dar culto a una imagen donada por el presbítero Manuel de Bargas. Atravesó la invasión francesa, la desamortización y las revoluciones del siglo XIX; volvió a Santiago en 1899 y en 1918 recibió un nuevo impulso, con carácter gremial, del obispo Bernardo Martínez Noval. Su primera salida procesional fue en 1876, la primera de la Semana Santa que pasó por el Paseo del Príncipe, actual Paseo de Almería; desde 1894 la acompaña San Juan Evangelista.\n\nEn los años treinta del siglo XX se quemaron la iglesia de Santiago y la imagen, de la que se salvaron el manto, la diadema, una saya, un corazón con siete puñales y el Niño Jesús que lleva a sus pies. La imagen perdida se atribuía a Salzillo, aunque, según la ficha, fuentes más fidedignas la sitúan en la escuela granadina del siglo XVIII, en el círculo de José de Mora. José Ortells Ramos talló en 1941 una copia a partir de fotografías enviadas por los hermanos, bendecida el 15 de septiembre de 1941. En 1961 la hermandad volvió definitivamente a Santiago. El San Juan actual es de Juan Manuel Miñarro López (1997); hasta entonces salía uno de 1946 del taller de Jesús de Perceval.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-de-la-soledad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa"
+  },
+  "el-resucitado-almeria": {
+   "texto": "Sus orígenes están en un grupo de jóvenes que en mayo de 2005 empezó a reunirse como Asociación cultural Vera de El Higueral. En julio de 2007 se constituyó la Prehermandad de Jesucristo Resucitado, que se hizo cargo de la procesión del Domingo de Resurrección, cuya organización correspondía hasta entonces a la Agrupación de Hermandades y Cofradías.\n\nEn los primeros meses de 2015 fue acogida formalmente en la Iglesia Parroquial de Nuestra Señora de Montserrat, donde ya desarrollaba su actividad, y el 29 de julio de 2015 fue erigida canónicamente. Durante esos años procesionó la imagen de Jesucristo Resucitado cedida por la Agrupación, obra de Federico Collaut Valera de 1960. El 7 de marzo de 2020 se bendijo en su parroquia su propio titular, Jesucristo Resucitado, Señor de la Vida, del imaginero sevillano José María Leal Bernáldez: una imagen mayestática que sostiene una cruz de la que cuelga una bandera con la Cruz de San Jorge, que coincide con la de la ciudad de Almería.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/hermandad-de-el-resucitado/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "Se respeta la grafía de la ficha, «Federico Collaut Valera»; en la ficha del Silencio aparece como «Federico Coullaut-Valera», que parece la correcta."
+  },
+  "la-unidad-almeria": {
+   "texto": "Radica en la parroquia de San Ignacio de Loyola, que los jesuitas tienen en el barrio de Piedras Redondas. Nació en 1996 de un grupo de feligreses, bajo la tutela del padre Marcelino Sánchez Vázquez, y ese año obtuvo el nombramiento de pre-hermandad; en sus primeros años salía la tarde del Viernes Santo con un crucificado y una pequeña dolorosa de la parroquia. En 1998, tras dos años de formación, recibió el título de hermandad. La advocación de la Virgen surgió de la propuesta de Francisco García Salvador de unir en una sola, la Unidad, todas las que proponían los fundadores.\n\nMaría Santísima de la Unidad, dolorosa de vestir del gaditano Luis González Rey (2003), se bendijo el 15 de febrero de 2004, y el Sábado de Pasión 3 de abril de 2004 salió por primera vez, desde un «chambao» montado en el jardín de la parroquia porque las escaleras impedían salir del templo. Gracias a Juan Megino se construyó una rampa y se agrandó la puerta, y el 31 de marzo de 2007 la Virgen salió por primera vez desde San Ignacio. El 4 de marzo de 2012 se bendijo Nuestro Padre Jesús de la Paz en su Flagelación, del lucentino Francisco Javier López del Espino, autor también del sayón y los dos romanos del misterio, que salió por primera vez el Sábado de Pasión de 2016.",
+   "fuentes": [
+    "https://cofradiasdealmeria.es/penitencia/unidad/"
+   ],
+   "revisado": "2026-11-03",
+   "estado": "completa",
+   "nota": "La ficha de la Agrupación existe en https://cofradiasdealmeria.es/penitencia/unidad/ (guardada como la-unidad-almeria.2.txt); portal.json tenía como fuente un artículo de horarios de La Voz de Almería. Conviene cambiar fuente_url en portal.json. portal.json no tiene titulares para esta hermandad."
   }
  }
 }
