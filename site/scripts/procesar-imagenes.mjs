@@ -120,6 +120,34 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
   }
 }
+// Díptico en una sola imagen (Pablo, 3-nov: «la misma imagen en toda la web»): el Cristo y la Virgen, cada uno recortado
+// a 3:4 con su encuadre, uno junto al otro. Es la miniatura de listados, buscador y plano, y la imagen al compartir.
+const recorte34 = async (file, foco, W, H) => {
+  const m = await sharp(file).metadata();
+  const k = Math.max(W / m.width, H / m.height), w = Math.round(m.width * k), h = Math.round(m.height * k);
+  const [px, py] = (foco || '50% 22%').split(' ').map((v) => parseFloat(v) / 100);
+  return sharp(file).resize(w, h).extract({ left: Math.round((w - W) * px), top: Math.round((h - H) * py), width: W, height: H }).toBuffer();
+};
+index.dipticos = {};
+for (const [slug, t] of Object.entries(index.titulares)) {
+  const par = (TIT.hermandades || {})[slug] || {};
+  const c = t.cristo, v = t.virgen;
+  if (!c || !v || !par.cristo || !par.virgen || retirada(par.cristo, slug, 'cristo') || retirada(par.virgen, slug, 'virgen')) continue;
+  const firma = [c.pagina, c.recorte, c.foco, v.pagina, v.recorte, v.foco].map((x) => JSON.stringify(x || '')).join('|');
+  const prevD = (prev.dipticos || {})[slug];
+  if (prevD && prevD.firma === firma && fs.existsSync(path.join(OUT_DIR, `d-${slug}-960.webp`))) { index.dipticos[slug] = prevD; continue; }
+  const fc = path.join(OUT_DIR, `t-${slug}-cristo-${c.widths.at(-1)}.webp`), fv = path.join(OUT_DIR, `t-${slug}-virgen-${v.widths.at(-1)}.webp`);
+  const widths = [];
+  for (const W of WIDTHS) {
+    const half = Math.round(W / 2), H = Math.round((half * 4) / 3);
+    const lienzo = sharp({ create: { width: W, height: H, channels: 3, background: '#1a0d26' } })
+      .composite([{ input: await recorte34(fc, c.foco, half, H), left: 0, top: 0 }, { input: await recorte34(fv, v.foco, W - half, H), left: half, top: 0 }]);
+    await sharp(await lienzo.png().toBuffer()).webp({ quality: 66, effort: 6, smartSubsample: true }).toFile(path.join(OUT_DIR, `d-${slug}-${W}.webp`));
+    widths.push(W);
+  }
+  index.dipticos[slug] = { w: 960, h: 640, widths, firma };
+  done++; console.log('ok', 'd', slug);
+}
 fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
-const bytes = fs.readdirSync(OUT_DIR).reduce((a, f) => a + fs.statSync(path.join(OUT_DIR, f)).size, 0);
+const bytes =fs.readdirSync(OUT_DIR).reduce((a, f) => a + fs.statSync(path.join(OUT_DIR, f)).size, 0);
 console.log(`Procesadas ${done}, fallos ${fail}, total en índice ${Object.keys(index.hermandades).length + Object.keys(index.capitales).length}, peso ${(bytes / 1e6).toFixed(1)} MB`);

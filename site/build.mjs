@@ -100,6 +100,9 @@ for (const h of D.hermandades) {
   // un paso de lejos o el templo); la sede, solo si no hay otra
   const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen || (!h.imagen ? h.diptico.sede : null);
   if (lead && (!h.imagen || h.imagen.escudo || NO_PORTADA[archivoCommons(h.imagen.pagina)] || lead !== h.diptico.sede)) h.imagen = lead;
+  // Con Cristo y Virgen, la miniatura es el mismo díptico de la ficha en una sola imagen (d-<slug>, de procesar-imagenes.mjs)
+  const dp = (IMGX.dipticos || {})[h.slug];
+  if (dp && !h.diptico.juntos && h.diptico.cristo && h.diptico.virgen) h.imagen = { ...localImg('d', h.slug, dp), partes: [h.diptico.cristo, h.diptico.virgen] };
 }
 
 // Salidas adicionales de vísperas (p. ej. la Virgen de los Dolores de la Lanzada de Huelva el Viernes de Dolores):
@@ -291,6 +294,7 @@ function heroPreload(im, sizes, widths) {
 }
 function credit(im) {
   if (!im) return '';
+  if (im.partes) return `Izquierda: ${credit(im.partes[0])}. Derecha: ${credit(im.partes[1])}`;
   const lic = im.licurl ? `<a href="${esc(im.licurl)}" rel="license noopener" target="_blank">${esc(im.licencia)}</a>` : esc(im.licencia);
   return `Imagen: ${esc(im.autor || 'autor en Wikimedia Commons')}, ${lic}, vía <a href="${esc(im.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>${im.recorte ? ' (recortada)' : ''}`;
 }
