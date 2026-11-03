@@ -660,7 +660,7 @@ ${body}${colabora(p, title)}
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
 <button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
-<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}">
+<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}">
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
     <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa. O eso dice.</p></div><button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button></div>
     <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
@@ -2212,7 +2212,7 @@ function datosCunao() {
         // calles sin hora publicada (Málaga solo da hora en unos pocos puntos): sirven para «¿pasa por Larios?», sin hora
         const t = hhmm(p.hora) || hhmm(p.fila); if (!t) { const l = limpiaLugar(p.lugar || '').trim(); if (lugarOk(l) && !calles.includes(l)) calles.push(l); continue; }
         const l = limpiaLugar(p.lugar).replace(/\s*\(\d{1,2}[,.:]\d{2}\)/g, '').replace(/\b\d{1,2}[:.]\d{2}\b/g, '').replace(/\s+/g, ' ').trim();
-        const cof = /carrera|catedral/.test(p.como || '') || /carrera|c\. ?oficial|catedral|campana|tribuna/i.test(l) ? 1 : 0;
+        const cof = /carrera|catedral/.test(p.como || '') || /carrera oficial|c\. ?oficial|tribuna( principal| oficial)?\b|\bs\.?i\.?\s?catedral\b|^(la )?catedral\b/i.test(l) || (c.slug === 'sevilla' && /^(la )?campana\b/i.test(l)) ? 1 : 0;
         if (!lugarOk(l) && pts.length) continue;
         if (l === prev && pts.length) continue; prev = l;
         pts.push([t, lugarOk(l) ? l : '', p.hora ? 1 : 0, cof]);
@@ -2258,8 +2258,8 @@ function datosCunao() {
   const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };
   const AU = [], auIdx = new Map(), trozos = {};
   for (const m of MARCHAS) {
-    const a = m.autor || ''; if (!auIdx.has(a)) { auIdx.set(a, AU.length); AU.push([a, m.autorSlug || '', '']); }
-    const k = inicialM(m.titulo), ai = auIdx.get(a);
+    const a = m.autor || ''; if (!auIdx.has(a)) { auIdx.set(a, AU.length); AU.push([a, m.autorSlug || '', '', 0]); }
+    const k = inicialM(m.titulo), ai = auIdx.get(a); AU[ai][3]++;
     if (!AU[ai][2].includes(k)) AU[ai][2] += k;
     if (!AU[ai][1] && m.autorSlug) AU[ai][1] = m.autorSlug;
     (trozos[k] || (trozos[k] = [])).push([m.titulo, ai, m.anio || '', FORM[m.formacion] || '', m.h ? m.h.slug : (m.dedicatoria || '').slice(0, 90), m.slug]);

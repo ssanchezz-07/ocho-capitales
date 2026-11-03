@@ -243,5 +243,34 @@ caso('H4 solo signos', motor(), '???', (r) => (r.texto.length > 5 ? true : 'vac�
 caso('H5 texto larguísimo no rompe', motor(), 'a'.repeat(3000), (r) => (r.texto.length > 5 ? true : 'vacío'));
 caso('H6 HTML en la pregunta no se cuela en enlaces', motor(), '<img src=x onerror=alert(1)> macarena', (r) => (r.enlaces.every((e) => !/[<>"]/.test(e[1])) ? true : 'enlace con HTML'));
 
+// ================= Fallos de la auditoría del 3-nov (F1-F9) =================
+console.log('— Auditoría 3-nov (F1-F9)');
+{ const col = PORTAL.hermandades.filter((h) => /Columna/.test(h.nombre) && h.ciudad !== 'jaen');
+  caso('F1 la Columna de Jaén (Jaén no tiene): lo dice y ofrece la de otra capital', motor(), 'la Columna de Jaén', y(contiene('En Jaén no tengo ninguna cofradía que se llame así'), noDice(/La Columna \(Cádiz\) sale/), (r) => (col.every((h) => r.chips.some((c) => c[1] === '@h:' + h.slug)) ? true : 'no ofrece ' + col.map((h) => h.slug)))); }
+caso('F1b el Cachorro de Córdoba', motor(), 'el Cachorro de Córdoba', y(contiene('En Córdoba no tengo ninguna', 'El Cachorro (Sevilla)'), noDice('sale el Viernes Santo')));
+caso('F1c elegir la de otra capital sigue la pregunta', (() => { const x = motor(); pregunta(x, '¿a qué hora sale el Cachorro de Córdoba?'); return x; })(), '@h:el-cachorro-sevilla', contiene('El Cachorro (Sevilla) sale el Viernes Santo'));
+{ const sj = MU.find((m) => /^Soberana y Jaenera$/i.test(m.titulo));
+  caso('F2 «Soberana y Jaenera» es una marcha (no San Gonzalo)', motor(), 'Soberana y Jaenera', sj ? y(contiene('«' + sj.titulo + '» es de ' + sj.autor), noDice('San Gonzalo')) : contiene('no'));
+  caso('F2b «marcha Soberana y Jaenera»', motor(), 'marcha Soberana y Jaenera', sj ? y(contiene(sj.autor), noDice('San Gonzalo')) : contiene('no')); }
+{ const n = MU.filter((m) => m.autor === 'Manuel Font de Anta').length;
+  caso('F3 marchas de Font de Anta (solo apellidos)', motor(), 'marchas de Font de Anta', contiene('De Manuel Font de Anta tengo ' + n));
+  caso('F3b ¿Qué ha compuesto Font de Anta?', motor(), '¿Qué ha compuesto Font de Anta?', contiene('De Manuel Font de Anta tengo ' + n)); }
+caso('F4 carrera oficial en Jaén: no se inventa una calle', motor(), '¿a qué hora llega la Expiración de Jaén a la carrera oficial?', y(noDice('Campanas', 'Carrera Jesús'), contiene(/no tengo marcado el paso por carrera oficial|no tengo el itinerario/)));
+caso('F4b «Carrera Jesús» no es la carrera oficial', motor(), 'carrera oficial de la Borriquilla de Jaén', noDice('llega a Carrera Jesús'));
+caso('F4c Sevilla sigue con la Campana', motor(), '¿cuándo llega a la carrera oficial la Borriquita de Sevilla?', contiene('La Campana'));
+caso('F5 cornetas en Jaén: no responde con otra capital', motor(), 'qué cofradías de Jaén llevan cornetas y tambores', y(contiene('Jaén'), noDice('Granada', 'Sevilla', 'Málaga')));
+{ const vs = deCiudad('jaen', 'Viernes Santo');
+  caso('F5b marchas en Jaén el Viernes Santo: no lo sabe y dice quién acompaña', motor(), '¿Qué marchas tocan en Jaén el Viernes Santo?', y(contiene('no lo sé', ...vs.map((h) => h.nombre)), noDice('Esa banda no la encuentro'))); }
+{ const vc = PORTAL.hermandades.find((h) => h.slug === 'el-via-crucis-granada');
+  caso('F6 hora de El Vía Crucis de Granada (no la agenda)', motor(), '¿A qué hora sale El Vía Crucis de Granada?', contiene('El Vía Crucis (Granada) sale ' + (vc.dia === 'Madrugá' ? 'la ' : 'el ') + vc.dia + ' a las ' + vc.hora)); }
+caso('F6b Vía Crucis de Córdoba hora', motor(), 'Vía Crucis de Córdoba hora', contiene('Vía Crucis (Córdoba) sale'));
+caso('F7 la más antigua de Jaén sin «Cuento 21 de 21»', motor(), '¿La cofradía más antigua de Jaén?', y(contiene('la más antigua de Jaén'), (r, t) => { const n = deCiudad('jaen').length, c = deCiudad('jaen').filter((h) => /\d{4}/.test(h.fundacion || '')).length; return c === n ? (/Cuento/.test(t) ? 'dice «Cuento»' : true) : (t.includes('Cuento ' + c + ' de ' + n) ? true : 'no cuenta'); }));
+caso('F8 domingo 8 de noviembre no es Domingo de Ramos', motor(), '¿Hay procesión el domingo 8 de noviembre?', y(contiene('8 de noviembre', 'no hay procesiones'), noDice('sale mucha gente')));
+{ const mm = motor(fechas['Jueves Santo']); pregunta(mm, 'Jaén');
+  const ma = deCiudad('jaen', 'Jueves Santo').filter((h) => h.hora && mins(h.hora) < 14 * 60);
+  caso('F8b «esta noche» en Jueves Santo no lista las de la mañana', mm, '¿Qué sale esta noche?', y(contiene('Jueves Santo en Jaén'), noDice(...ma.map((h) => h.nombre + ' ·')))); }
+caso('F8c «por la mañana» no es «mañana»', motor(), 'que sale el domingo de ramos en jaen por la mañana', y(contiene('Domingo de Ramos en Jaén', 'La Borriquilla'), noDice('Santa Cena ·')));
+caso('F9 teléfono: no lo tiene y da la web', motor(), 'Dime el teléfono de la hermandad del Abuelo', y(contiene('no los tengo'), enlace(/cofradiaelabuelo/)));
+
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal}).`);
 process.exit(mal ? 1 : 0);
