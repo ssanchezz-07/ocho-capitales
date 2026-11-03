@@ -207,9 +207,9 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Resurrección | Domingo de Resurrección | solo la foto de la sede; Cristo: Cristo Resucitado |
 | Humillación (Piedad) | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Humillación |
 
-## Huelva
+## Huelva (revisado el 2026-11-03)
 
-13 sin ninguna foto; 22 con algún titular sin foto.
+12 sin ninguna foto de titular; 5 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -218,20 +218,15 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Los Mutilados | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo de la Victoria Despojado; Virgen: Nuestra Señora de la Paz |
 | El Cautivo | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de la Misericordia |
 | El Calvario | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Calvario; Virgen: María Santísima del Rocío y Esperanza |
-| Las Tres Caídas | Lunes Santo | Cristo: Nuestro Padre Jesús de las Penas en sus Tres Caídas |
-| La Salud | Martes Santo | Cristo: Nuestro Padre Jesús de la Sentencia en su Presentación al Pueblo |
-| La Lanzada | Martes Santo | Cristo: Santísimo Cristo de la Sagrada Lanzada; Virgen: María Santísima titular |
+| La Lanzada | Martes Santo | Virgen: María Santísima titular |
 | Los Estudiantes | Martes Santo | Virgen: Nuestra Señora del Valle |
 | El Prendimiento | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Prendimiento / Misterio del Prendimiento; Virgen: María Santísima de la Estrella |
-| La Victoria | Miércoles Santo | Cristo: Nuestro Padre Jesús de la Humildad en el Desprecio de Herodes |
-| La Esperanza | Miércoles Santo | Virgen: Nuestra Señora de la Esperanza Coronada |
 | Vera Cruz y Oración | Jueves Santo | **ninguna foto**; Cristo: Oración en el Huerto; Virgen: Nuestra Madre y Señora de los Dolores Coronada |
-| La Misericordia | Jueves Santo | solo la foto de la sede; Cristo: Santo Cristo de la Misericordia; Virgen: María Santísima de la Concepción |
-| La Buena Muerte | Jueves Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Buena Muerte; Virgen: Nuestra Madre de la Consolación y Correa |
+| La Misericordia | Jueves Santo | Virgen: María Santísima de la Concepción |
+| La Buena Muerte | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte |
 | El Nazareno | Madrugá | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno; Virgen: María Santísima de la Amargura |
 | La Fe | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Fe; Virgen: Nuestra Señora de la Caridad |
-| El Descendimiento | Viernes Santo | solo la foto de la sede; Cristo: Sagrado Descendimiento; Virgen: María Santísima de la Resignación |
-| El Santo Entierro | Viernes Santo | **ninguna foto**; Cristo: Cristo yacente; Virgen: Nuestra Señora de las Angustias |
+| El Santo Entierro | Viernes Santo | Virgen: Nuestra Señora de las Angustias |
 | El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado; Virgen: María Santísima de la Luz |
 | Nuestra Señora del Prado | Viernes de Dolores | **ninguna foto**; Virgen: Nuestra Señora del Prado en su Dolor |
 | La Bendición | Sábado de Pasión | **ninguna foto**; Cristo: Cristo de la Bendición |

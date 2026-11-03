@@ -1435,6 +1435,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima del Amor"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Besapie_se%C3%B1or_de_las_penas_de_huelva.jpg",
+    "titulo": "File:Besapie señor de las penas de huelva.jpg",
+    "autor": "Iván Regueira",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús de las Penas en sus Tres Caídas"
    }
   },
   "la-salud-huelva": {
@@ -1445,6 +1453,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de la Salud"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sentencia_de_Huelva.jpg",
+    "titulo": "File:Nuestro Padre Jesús de la Sentencia de Huelva.jpg",
+    "autor": "Adrisoto93",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús de la Sentencia en su Presentación al Pueblo"
    }
   },
   "los-estudiantes-huelva": {
@@ -1454,7 +1470,8 @@
     "autor": "Morenohuelva",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Santísimo Cristo de la Sangre"
+    "titular": "Santísimo Cristo de la Sangre",
+    "foco": "50% 8%"
    }
   },
   "pasion-huelva": {
@@ -1483,6 +1500,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Expiración"
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Esperanza.jpg",
+    "titulo": "File:Nuestra Señora de la Esperanza.jpg",
+    "autor": "Alvarito 9595",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestra Señora de la Esperanza Coronada"
    }
   },
   "los-judios-la-merced-huelva": {
@@ -2700,6 +2725,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Victoria Coronada"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Humildad.jpg",
+    "titulo": "File:Nuestro Padre Jesús de la Humildad.jpg",
+    "autor": "Webvicto",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestro Padre Jesús de la Humildad en el Desprecio de Herodes"
    }
   },
   "el-nazareno-huelva": {
@@ -2720,6 +2753,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Parroquia de San Pedro"
+   },
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Descendimiento_de_Huelva.jpg",
+    "titulo": "File:Descendimiento de Huelva.jpg",
+    "autor": "Leife",
+    "licencia": "Public domain",
+    "licurl": "",
+    "titular": "Sagrado Descendimiento"
    }
   },
   "la-buena-muerte-huelva": {
@@ -2730,6 +2771,14 @@
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "titular": "Iglesia de Santa María de Gracia"
+   },
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Madre_de_la_Consolacion_y_Correa_de_Huelva.jpg",
+    "titulo": "File:Nuestra Madre de la Consolacion y Correa de Huelva.jpg",
+    "autor": "Morenohuelva",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestra Madre de la Consolación y Correa"
    }
   },
   "la-santa-cena-almeria": {
@@ -2828,6 +2877,20 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Iglesia del Cristo de la Misericordia"
+   },
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Misericoridia_(huelva).jpg",
+    "titulo": "File:Cristo de la Misericoridia (huelva).jpg",
+    "autor": "Mr tirón 1942",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santo Cristo de la Misericordia",
+    "recorte": [
+     0.3,
+     0,
+     0.4,
+     0.72
+    ]
    }
   },
   "el-huerto-vera-cruz-jaen": {
@@ -3114,6 +3177,27 @@
      0.4,
      0.36
     ]
+   }
+  },
+  "el-santo-entierro-huelva": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:CristoYacenteHuelva.jpg",
+    "titulo": "File:CristoYacenteHuelva.jpg",
+    "autor": "leife (Fundacion Leon Ortega)",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Cristo yacente"
+   }
+  },
+  "la-lanzada-huelva": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg",
+    "titulo": "File:Lanzada Huelva.jpg",
+    "autor": "Adry gibra",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de la Sagrada Lanzada",
+    "foco": "50% 15%"
    }
   }
  }

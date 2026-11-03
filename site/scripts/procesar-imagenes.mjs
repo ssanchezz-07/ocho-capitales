@@ -26,7 +26,7 @@ const index = { generado: new Date().toISOString(), hermandades: prev.hermandade
 const fileTitle = (pagina) => { const m = decodeURIComponent(String(pagina || '')).match(/(File:[^?#]+)$/); return m ? m[1].replace(/_/g, ' ') : null; };
 
 async function sourceUrl(title, ancho = 1280) {
-  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', maxlag: '5', titles: title, prop: 'imageinfo', iiprop: 'url|size|mime', iiurlwidth: String(ancho) });
+  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', maxlag: '5', titles: title, prop: 'imageinfo', iiprop: 'url|size|mime', ...(ancho ? { iiurlwidth: String(ancho) } : {}) });
   for (let i = 0; i < 4; i++) {
     const r = await fetch(url, { headers: { 'User-Agent': UA } });
     if (r.status === 429 || r.status >= 500) { await sleep(5000 * (i + 1)); continue; }
@@ -51,8 +51,8 @@ async function download(url, file) {
 async function processOne(kind, slug, meta) {
   const title = fileTitle(meta.pagina) || meta.titulo;
   if (!title) throw new Error('sin título de archivo');
-  // con recorte hace falta más resolución de partida: el titular ocupa solo una parte de la foto
-  const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 3200 : 1280);
+  // con recorte se parte del original completo: el titular ocupa solo una parte de la foto
+  const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 0 : 1280);
   if (!src) throw new Error('no encontrado en Commons');
   const orig = await download(src, path.join(CACHE, `${kind}-${slug}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
   const img = sharp(orig, { failOn: 'none' }).rotate();

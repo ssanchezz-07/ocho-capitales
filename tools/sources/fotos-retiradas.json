@@ -146,6 +146,18 @@
   "paloma-malaga|virgen": {
    "archivo": "Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg",
    "motivo": "Palio de lejos: ni recortado se ve a la Virgen entre la candelería."
+  },
+  "la-misericordia-huelva|sede": {
+   "archivo": "CAPILLA_Misericordia.jpeg",
+   "motivo": "Capilla en lugar de un titular."
+  },
+  "la-buena-muerte-huelva|sede": {
+   "archivo": "Huelva_-_Iglesia_de_las_Agustinas_(2).jpg",
+   "motivo": "Fachada del templo en lugar de un titular."
+  },
+  "el-descendimiento-huelva|sede": {
+   "archivo": "Capilla_Sagrario_Parroquia_San_Pedro_Huelva.jpg",
+   "motivo": "Retablo del Sagrario en lugar de un titular."
   }
  },
  "no_portada": {
