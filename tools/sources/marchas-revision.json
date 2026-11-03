@@ -3218,6 +3218,17 @@
    "campos": {
     "titulo": "Buena Muerte"
    }
+  },
+  {
+   "slug": "gloria-miguel-angel-font-morgado",
+   "accion": "corregir",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-5989",
+   "nombre_fuente": "Patrimonio Musical (ficha bd-marcha-5989)",
+   "fecha": "2026-11-03",
+   "nota": "Es la misma obra que «¡A la Gloria!» de Miguel Ángel Font Morgado (2009): las dos fichas citan la misma de Patrimonio Musical y la misma de Cofradías y Hermandades (910097), que la titulan «¡A LA GLORIA!». Esta es la versión para cornetas y tambores: se corrige el título y queda como versión.",
+   "campos": {
+    "titulo": "¡A la Gloria!"
+   }
   }
  ]
 }
