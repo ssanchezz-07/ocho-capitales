@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T17:19:24.442Z",
+ "generado": "2026-11-03T17:25:35.938Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3012,7 +3012,7 @@
   "los-negritos-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 723,
+    "h": 1265,
     "widths": [
      160,
      480,
@@ -3023,6 +3023,12 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_la_Fundaci%C3%B3n_de_los_Negritos_Semana_Santa_2026.jpg",
+    "recorte": [
+     0.26,
+     0,
+     0.24,
+     0.42
+    ],
     "titular": "Santísimo Cristo de la Fundación"
    }
   },
@@ -3356,7 +3362,7 @@
   "el-cachorro-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1296,
     "widths": [
      160,
      480,
@@ -3367,6 +3373,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Expiraci%C3%B3n_(El_Cachorro),_Sevilla,_Espa%C3%B1a,_2017_03.jpg",
+    "recorte": [
+     0.53,
+     0.15,
+     0.25,
+     0.45
+    ],
     "titular": "Santísimo Cristo de la Expiración «El Cachorro»"
    },
    "virgen": {
@@ -3405,7 +3417,7 @@
   "la-trinidad-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 723,
+    "h": 1290,
     "widths": [
      160,
      480,
@@ -3416,6 +3428,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_de_las_Cinco_Llagas_Semana_Santa_2025.jpg",
+    "recorte": [
+     0.12,
+     0,
+     0.42,
+     0.75
+    ],
     "titular": "Cristo de las Cinco Llagas"
    }
   },
@@ -3456,7 +3474,7 @@
   "bellavista-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1238,
     "widths": [
      160,
      480,
@@ -3467,6 +3485,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG",
+    "recorte": [
+     0.3,
+     0.08,
+     0.32,
+     0.55
+    ],
     "titular": "Nuestro Padre Jesús de la Salud y Remedios"
    }
   },
@@ -3554,18 +3578,23 @@
   },
   "el-sol-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 1672,
+    "w": 480,
+    "h": 537,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "CarlosVdeHabsburgo",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_Var%C3%B3n_de_los_Dolores_de_la_Divina_Misericordia.jpg",
+    "recorte": [
+     0.15,
+     0.1,
+     0.7,
+     0.45
+    ],
     "titular": "Santo Cristo Varón de Dolores de la Divina Misericordia"
    }
   },
@@ -6459,18 +6488,23 @@
   },
   "jesus-despojado-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 720,
+    "w": 480,
+    "h": 623,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Origen: Fotografía cedida por su autora: Marta Morejón",
     "licencia": "CC BY-SA 3.0",
     "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jesus_despojado_01.JPG",
+    "recorte": [
+     0.4,
+     0.15,
+     0.26,
+     0.45
+    ],
     "titular": "Jesús Despojado de sus Vestiduras"
    },
    "virgen": {
@@ -6490,7 +6524,7 @@
   "la-paz-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 1440,
+    "h": 1296,
     "widths": [
      160,
      480,
@@ -6501,6 +6535,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_Victoria_en_Parque_Maria_Luisa.jpg",
+    "recorte": [
+     0.45,
+     0.15,
+     0.5,
+     0.45
+    ],
     "titular": "Cristo de la Victoria"
    },
    "virgen": {
@@ -6570,18 +6610,23 @@
   },
   "san-roque-sevilla": {
    "virgen": {
-    "w": 960,
-    "h": 1275,
+    "w": 480,
+    "h": 637,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Cofrades 2020 sevilla",
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_Gracia_y_Esperanza_en_la_Iglesia_de_San_Roque_2026.jpg",
+    "recorte": [
+     0.38,
+     0.18,
+     0.3,
+     0.3
+    ],
     "titular": "María Santísima de Gracia y Esperanza"
    },
    "cristo": {
@@ -6603,7 +6648,7 @@
   "la-estrella-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 977,
+    "h": 1294,
     "widths": [
      160,
      480,
@@ -6614,6 +6659,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_las_Penas_(La_Estrella).jpg",
+    "recorte": [
+     0.32,
+     0.08,
+     0.34,
+     0.45
+    ],
     "titular": "Nuestro Padre Jesús de las Penas"
    }
   },
@@ -6734,18 +6785,23 @@
   },
   "las-aguas-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 720,
+    "w": 480,
+    "h": 648,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Foto realizada y propiedad de Ángel Chacón",
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg",
+    "recorte": [
+     0.1,
+     0,
+     0.25,
+     0.45
+    ],
     "titular": "Santísimo Cristo de las Aguas"
    },
    "virgen": {
@@ -6761,6 +6817,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg",
+    "recorte": [
+     0.15,
+     0.22,
+     0.3,
+     0.3
+    ],
     "titular": "Nuestra Señora de Guadalupe"
    }
   },
@@ -6897,18 +6959,23 @@
   },
   "santa-cruz-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 1385,
+    "w": 480,
+    "h": 646,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "CarlosVdeHabsburgo",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_las_Misericordias.jpg",
+    "recorte": [
+     0.38,
+     0.06,
+     0.3,
+     0.28
+    ],
     "titular": "Santísimo Cristo de las Misericordias"
    },
    "virgen": {
@@ -6930,7 +6997,7 @@
   "la-sed-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 723,
+    "h": 1265,
     "widths": [
      160,
      480,
@@ -6941,6 +7008,12 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg",
+    "recorte": [
+     0.36,
+     0.12,
+     0.24,
+     0.42
+    ],
     "titular": "Santísimo Cristo de la Sed"
    },
    "virgen": {
@@ -6961,18 +7034,23 @@
   },
   "san-bernardo-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 687,
+    "w": 480,
+    "h": 703,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "CarlosVdeHabsburgo",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Salud_(San_Bernardo)_01.jpg",
+    "recorte": [
+     0.25,
+     0.35,
+     0.22,
+     0.45
+    ],
     "titular": "Santísimo Cristo de la Salud"
    },
    "virgen": {
@@ -7025,7 +7103,7 @@
   "la-lanzada-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 1705,
+    "h": 1193,
     "widths": [
      160,
      480,
@@ -7036,13 +7114,19 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Paso_de_misterio_del_Sant%C3%ADsimo_Cristo_de_la_Sagrada_Lanzada._Sevilla,_Semana_Santa_de_2025.jpg",
+    "recorte": [
+     0.15,
+     0.3,
+     0.5,
+     0.35
+    ],
     "titular": "Sagrada Lanzada"
    }
   },
   "el-baratillo-sevilla": {
    "juntos": {
     "w": 960,
-    "h": 723,
+    "h": 1276,
     "widths": [
      160,
      480,
@@ -7053,6 +7137,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_de_la_Piedad_de_Baratillo_Semana_Santa_2025.jpg",
+    "recorte": [
+     0.42,
+     0.02,
+     0.34,
+     0.6
+    ],
     "titular": ""
    }
   },
@@ -7075,18 +7165,23 @@
   },
   "siete-palabras-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 723,
+    "w": 480,
+    "h": 657,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Cofrades 2020 sevilla",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_de_las_Siete_Palabras_Semana_Santa_2025.jpg",
+    "recorte": [
+     0.27,
+     0.08,
+     0.22,
+     0.4
+    ],
     "titular": "Santísimo Cristo de las Siete Palabras"
    },
    "virgen": {
@@ -7189,18 +7284,23 @@
   },
   "dolores-de-torreblanca-sevilla": {
    "cristo": {
-    "w": 960,
+    "w": 480,
     "h": 720,
     "widths": [
      160,
-     480,
-     960
+     480
     ],
     "escudo": false,
     "autor": "Roqrub83",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_Cautivo_ante_Pilato_Torreblanca.JPG",
+    "recorte": [
+     0.33,
+     0.12,
+     0.25,
+     0.5
+    ],
     "titular": "Santísimo Sacramento"
    },
    "virgen": {
@@ -7216,6 +7316,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Dolores_Torreblanca.JPG",
+    "recorte": [
+     0.3,
+     0.2,
+     0.4,
+     0.4
+    ],
     "titular": ""
    }
   },
@@ -8522,6 +8628,126 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg",
     "foco": "50% 20%",
     "titular": "Nuestro Padre Jesús del Gran Poder"
+   }
+  },
+  "la-borriquita-sevilla": {
+   "cristo": {
+    "w": 480,
+    "h": 640,
+    "widths": [
+     160,
+     480
+    ],
+    "escudo": false,
+    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaLaBorriquita2.jpg",
+    "recorte": [
+     0.12,
+     0.08,
+     0.3,
+     0.6
+    ],
+    "titular": "Entrada en Jerusalén: Cristo sobre la borriquita"
+   }
+  },
+  "santa-marta-sevilla": {
+   "juntos": {
+    "w": 960,
+    "h": 640,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Manuel Agüera Ostos",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg",
+    "foco": "50% 30%",
+    "titular": "Santísimo Cristo de la Caridad en su Traslado al Sepulcro"
+   }
+  },
+  "las-penas-sevilla": {
+   "cristo": {
+    "w": 480,
+    "h": 720,
+    "widths": [
+     160,
+     480
+    ],
+    "escudo": false,
+    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaPenas2.jpg",
+    "recorte": [
+     0.15,
+     0.12,
+     0.65,
+     0.65
+    ],
+    "titular": "Nuestro Padre Jesús de las Penas"
+   }
+  },
+  "el-cerro-sevilla": {
+   "cristo": {
+    "w": 480,
+    "h": 523,
+    "widths": [
+     160,
+     480
+    ],
+    "escudo": false,
+    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaElCerro1.jpg",
+    "recorte": [
+     0.2,
+     0.17,
+     0.55,
+     0.4
+    ],
+    "titular": "Santísimo Cristo de los Desamparados"
+   }
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "juntos": {
+    "w": 960,
+    "h": 720,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "",
+    "licencia": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaSagradaMortaja1.jpg",
+    "foco": "45% 20%",
+    "titular": "Misterio de la Sagrada Mortaja"
+   }
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "virgen": {
+    "w": 960,
+    "h": 643,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Mflito",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_de_la_Soledad_de_San_Lorenzo.jpg",
+    "foco": "50% 45%",
+    "titular": "Nuestra Señora de la Soledad"
    }
   }
  }

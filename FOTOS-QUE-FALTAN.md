@@ -63,56 +63,54 @@ Cada foto se ha contrastado con su ficha de Wikimedia Commons (descripción y ca
 
 En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de cortejo (nazarenos, palmas, estandartes) siguen en la ficha, pero ya no encabezan si hay foto de un titular.
 
-## Sevilla
+## Sevilla (revisado el 2026-11-03)
 
-0 sin ninguna foto; 44 con algún titular sin foto.
+10 sin ninguna foto de titular; 32 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
-| La Borriquita | Domingo de Ramos | Cristo: Entrada en Jerusalén: Cristo sobre la borriquita, anónimo s. XVII |
 | La Hiniesta | Domingo de Ramos | Cristo: Cristo de la Buena Muerte |
 | La Estrella | Domingo de Ramos | Virgen: María Santísima de la Estrella |
 | La Amargura | Domingo de Ramos | Cristo: Cristo del Silencio en el Desprecio de Herodes / San Juan Evangelista |
-| Santa Genoveva | Lunes Santo | Cristo: Nuestro Padre Jesús Cautivo |
-| Santa Marta | Lunes Santo | Cristo: Santísimo Cristo de la Caridad en su Traslado al Sepulcro |
-| Las Penas | Lunes Santo | Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de los Dolores |
+| Santa Genoveva | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de las Mercedes |
+| Las Penas | Lunes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Penas; Virgen: María Santísima de los Dolores |
 | El Museo | Lunes Santo | Cristo: Santísimo Cristo de la Expiración |
-| El Cerro | Martes Santo | Cristo: Santísimo Cristo de los Desamparados; Virgen: María Santísima de los Dolores |
+| El Cerro | Martes Santo | Virgen: María Santísima de los Dolores |
 | Los Estudiantes | Martes Santo | Virgen: María Santísima de la Angustia |
-| San Benito | Martes Santo | Cristo: Presentación de Jesús al Pueblo / Santísimo Cristo de la Sangre; Virgen: María Santísima de la Encarnación |
+| San Benito | Martes Santo | **ninguna foto**; Cristo: Presentación de Jesús al Pueblo / Santísimo Cristo de la Sangre; Virgen: María Santísima de la Encarnación |
 | La Candelaria | Martes Santo | Cristo: Nuestro Padre Jesús de la Salud |
 | Dulce Nombre («La Bofetá») | Martes Santo | Virgen: María Santísima del Dulce Nombre |
+| La Sed | Miércoles Santo | Virgen: María Santísima de Consolación |
+| San Bernardo | Miércoles Santo | Virgen: María Santísima del Refugio |
 | La Lanzada | Miércoles Santo | Virgen: María Santísima de Guía |
 | Cristo de Burgos | Miércoles Santo | Virgen: Madre de Dios de la Palma |
-| Los Panaderos | Miércoles Santo | Cristo: Nuestro Padre Jesús en su Prendimiento |
+| Siete Palabras | Miércoles Santo | Virgen: María Santísima de la Cabeza / María Santísima de los Remedios |
+| Los Panaderos | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús en su Prendimiento; Virgen: María Santísima de Regla |
 | Los Negritos | Jueves Santo | Virgen: Nuestra Señora de los Ángeles |
 | La Exaltación («Los Caballos») | Jueves Santo | Cristo: Exaltación de Cristo en la Cruz |
 | Las Cigarreras | Jueves Santo | Cristo: Jesús atado a la Columna |
-| Montesión | Jueves Santo | Cristo: Oración en el Huerto |
+| Montesión | Jueves Santo | **ninguna foto**; Cristo: Oración en el Huerto; Virgen: María Santísima del Rosario en sus Misterios Dolorosos |
 | La Quinta Angustia | Jueves Santo | Cristo: Sagrado Descendimiento |
 | El Valle | Jueves Santo | Virgen: María Santísima del Valle |
 | Pasión | Jueves Santo | Virgen: Nuestra Señora de la Merced |
 | El Silencio | Madrugá | Cristo: Nuestro Padre Jesús Nazareno |
 | El Calvario | Madrugá | Virgen: María Santísima de la Presentación |
 | Los Gitanos | Madrugá | Cristo: Nuestro Padre Jesús de la Salud |
-| La Carretería | Viernes Santo | solo el escudo; Cristo: Santísimo Cristo de la Salud; Virgen: Nuestra Señora de la Luz / María Santísima del Mayor Dolor en su Soledad |
-| San Isidoro | Viernes Santo | Cristo: Nuestro Padre Jesús de las Tres Caídas; Virgen: María Santísima de Loreto |
-| San Buenaventura | Viernes Santo | solo el escudo; Cristo: Crucificado titular / Dolorosa titular |
-| La Sagrada Mortaja | Viernes Santo | Cristo: Misterio de la Sagrada Mortaja |
+| La Carretería | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Salud; Virgen: Nuestra Señora de la Luz / María Santísima del Mayor Dolor en su Soledad |
+| San Isidoro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de las Tres Caídas; Virgen: María Santísima de Loreto |
+| San Buenaventura | Viernes Santo | **ninguna foto**; Cristo: Crucificado titular; Virgen: Dolorosa titular |
 | Los Servitas | Sábado Santo | Virgen: María Santísima de los Dolores |
 | La Trinidad | Sábado Santo | Virgen: María Santísima de la Esperanza |
 | El Santo Entierro | Sábado Santo | Cristo: Cristo Yacente en la urna / Triunfo de la Santa Cruz sobre la muerte («La Canina») |
-| La Soledad de San Lorenzo | Sábado Santo | Virgen: Nuestra Señora de la Soledad |
 | La Resurrección | Domingo de Resurrección | Cristo: Sagrada Resurrección |
 | Bellavista | Viernes de Dolores | Virgen: María Santísima del Dulce Nombre en sus Dolores y Compasión |
-| Pino Montano | Viernes de Dolores | Cristo: Nuestro Padre Jesús de Nazaret / San Marcos Evangelista / San Isidro Labrador; Virgen: María Santísima del Amor |
+| Pino Montano | Viernes de Dolores | **ninguna foto**; Cristo: Nuestro Padre Jesús de Nazaret / San Marcos Evangelista / San Isidro Labrador; Virgen: María Santísima del Amor |
 | La Misión | Viernes de Dolores | Virgen: Inmaculado Corazón de María |
 | Cristo de la Corona | Viernes de Dolores | Virgen: Nuestra Señora del Rosario |
 | Padre Pío | Sábado de Pasión | Cristo: Santísimo Sacramento / Nuestro Padre Jesús de la Salud y Clemencia / San Juan de la Cruz |
-| San José Obrero | Sábado de Pasión | solo el escudo; titulares (el portal no tiene sus nombres) |
-| La Milagrosa | Sábado de Pasión | solo el escudo; Cristo: Jesús de la Esperanza / San Juan Evangelista; Virgen: Virgen de la Medalla Milagrosa / Virgen del Rosario |
+| La Milagrosa | Sábado de Pasión | **ninguna foto**; Cristo: Jesús de la Esperanza / San Juan Evangelista; Virgen: Virgen de la Medalla Milagrosa / Virgen del Rosario |
 | Divino Perdón | Sábado de Pasión | Cristo: Jesús del Divino Perdón |
-| El Sol | Sábado de Pasión | Virgen: María Santísima de la Salud |
+| El Sol | Sábado Santo | Virgen: María Santísima de la Salud |
 
 ## Córdoba
 

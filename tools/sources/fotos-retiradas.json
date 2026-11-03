@@ -186,6 +186,46 @@
   "el-santo-sepulcro-almeria|cristo": {
    "archivo": "Hermandad_Sepulcro_04.jpg",
    "motivo": "Paso de noche: el recorte enseña un ángel y la urna, no al Cristo yacente."
+  },
+  "san-benito-sevilla|ficha": {
+   "archivo": "SemanaSantaSevillaSanBenito1.jpg",
+   "motivo": "Misterio en la calle a 333 px: no se distingue al titular."
+  },
+  "san-isidoro-sevilla|ficha": {
+   "archivo": "Hermandad_de_las_Tres_Caídas_(Sevilla).svg",
+   "motivo": "Es el escudo, no una foto de los titulares; el respaldo de diseño lo sustituye."
+  },
+  "pino-montano-sevilla|ficha": {
+   "archivo": "Estandarte_de_la_Hermandad_de_Pino_Montano.jpg",
+   "motivo": "Estandarte; no es un titular."
+  },
+  "santa-genoveva-sevilla|virgen": {
+   "archivo": "Virgen_Mercedes_Santa_Genoveva.jpg",
+   "motivo": "Palio de lejos: no se ve a la Virgen."
+  },
+  "la-sed-sevilla|virgen": {
+   "archivo": "Palio_de_la_Virgen_de_la_Consolación_de_la_Sed_Semana_Santa_2026.jpg",
+   "motivo": "Palio de lejos entre el público: no se ve a la Virgen."
+  },
+  "san-bernardo-sevilla|virgen": {
+   "archivo": "Virgen_del_Refugio_(San_Bernardo).jpg",
+   "motivo": "Palio de lejos: no se ve a la Virgen."
+  },
+  "siete-palabras-sevilla|virgen": {
+   "archivo": "Palio_de_la_Cabeza_Semana_Santa_2025.jpg",
+   "motivo": "Palio de lejos: la candelería tapa a la Virgen."
+  },
+  "montesion-sevilla|virgen": {
+   "archivo": "Palio_del_Rosario_de_Monte-Sión_Semana_Santa_2025.jpg",
+   "motivo": "Palio de lejos en la calle: no se ve a la Virgen."
+  },
+  "las-penas-sevilla|cristo": {
+   "archivo": "SemanaSantaSevillaPenas2.jpg",
+   "motivo": "Paso de noche, muy oscuro: no se distingue al titular."
+  },
+  "los-panaderos-sevilla|virgen": {
+   "archivo": "Virgen_de_Regla_Sevilla.jpg",
+   "motivo": "Palio con la candelería delante: no se ve a la Virgen."
   }
  },
  "no_portada": {
