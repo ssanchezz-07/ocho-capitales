@@ -84,8 +84,27 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
   - https://cofradiasdealmeria.es/horarios-e-itinerarios/ no tiene PDF de 2026 para desempatar. No se escribe a la Agrupación por ahora.
 - Jaén: la Agrupación enlaza «Oración en el Huerto» y «Vera Cruz» a la misma página; la web tiene dos fichas. Confirmar que son dos cofradías.
 
-## RETOMAR AQUÍ (fase 3: historias de hermandades)
-1. Lista de partida: el recuento de arriba (historias de menos de 200 caracteres por capital; 1 vacía: `humillacion-piedad-cadiz`, sin nombre oficial ni fuente propia salvo el PDF de Canal Sur).
-2. Método que ha funcionado: bajar el texto de la fuente (curl, o la API de Wikipedia `action=query&prop=extracts&explaintext=1`; Málaga y Huelva necesitan navegador) y buscar cada frase con grep. Sin fuente abierta → «pendiente», no se escribe.
-3. Por lotes de capital, cada uno con su commit y el `auditor-datos` (Sonnet, 20 al azar). Empezar por Sevilla (62 cortas, todas con ficha de Wikipedia).
-4. Las historias de hermandad salen de `tools/enrich-<capital>.js` y de `tools/sources/fichas-correcciones.json`; ver cómo se mezclan en `build-data.js` antes de tocar.
+## Fase 3 · Historias de hermandad (3-nov-2026, rama `historias-hermandades`)
+- **Dónde están:** `tools/sources/historias.json` (slug → texto, fuentes, revisado, estado, nota). `build-data.js` las aplica después de `fichas-correcciones.json`; cada ficha enseña sus fuentes debajo de «Historia» (`historia_fuentes`). Las no revisadas enlazan la ficha de la que salió la reseña.
+- **Comprobador:** `node tools/comprobar-historias.mjs [--fuentes <carpeta de textos> --capital <id>]`. Sin `--fuentes` valida la estructura; con los textos bajados (`<slug>.txt`, `<slug>.N.txt`) lista cada año, cifra o nombre propio que no aparece en la fuente.
+- **Hechas las 307**, todas `completa`: Granada 33, Huelva 28, Almería 23, Málaga 53, Jaén 21, Córdoba 44, Cádiz 33 y Sevilla 72. Cada lote ha pasado por `auditor-datos` (20 al azar) con los reparos corregidos. En main desde `19c2ed7`: Granada, Huelva, Almería y Málaga.
+- **Discrepancias con `portal.json`** (titulares, autores, fechas y sedes que no cuadran con la fuente): están en el campo `nota` de cada historia. Son para el lote de datos.
+- **Hábitos** (`tools/sources/habitos.json` y `habitos-colores.json`, comprobador `tools/diseno/comprobar-habitos-colores.mjs`):
+  - Granada 32 de 33, desde la guía 2026 de Perdón y Aurora (Facundillos no tiene fuente).
+  - Almería 22, Jaén 19 y Córdoba 40, auditados.
+  - Pendientes sin fuente: Escucha, Lanzada, Divino Maestro, La O, Traslado, Higuerón y Presentación al Pueblo.
+- **Lemas de las 8 capitales:** reescritos solo con su historia o su fuente (`LEMAS` en `build-data.js`, con `lema_fuentes`), auditados. Están en la rama `lemas-capitales` y esperan el sí de Pablo.
+
+## RETOMAR AQUÍ
+1. **Subir**, con el sí de Pablo:
+   - lemas;
+   - hábitos de Almería, Jaén y Córdoba;
+   - historias de Jaén, Córdoba, Cádiz y Sevilla (Cádiz y Sevilla, en cuanto acabe su auditor).
+2. **Hábitos que faltan** (agente en marcha; método en el scratchpad, `hab/build-prop.mjs`): Málaga 9 (Vísperas y Resucitado), Cádiz 4, Huelva 1 (La Bendición) y Sevilla 72. Sevilla: web de cada hermandad o Guía de Semana Santa de Andalucía; Wikipedia (infobox «Colores») solo si no hay otra, y marcada.
+3. **Orden `EQUIPO/ORDEN-VERIFICAR-TEXTOS.md`:** se cortó por el límite de uso. Falta:
+   - verificar los «Datos clave» e imprescindibles de las capitales (Jaén dice «Interés Turístico Nacional de Andalucía»);
+   - inventariar los textos fijos de `build.mjs`, curiosidades y pies de foto;
+   - añadir a la red de seguridad la comprobación de fuente de cada texto de autor.
+4. **Lote de datos** (pedido por coordinación):
+   - titulares que no cuadran con su fuente (ver `nota` en historias.json; p. ej. Salud de Huelva de David Valenciano 2000, Angustias de Almería 1943, «atribuido a» en Granada, autores de Sevilla);
+   - marca `propia` de las bandas: Fusionadas, BCT Jesús Nazareno y Expiración (Huelva), BM Esperanza y Estrella (Córdoba).
