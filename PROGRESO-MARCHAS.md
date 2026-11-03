@@ -1,6 +1,45 @@
 # Progreso · marchas (sesión especializada, desde 2026-10-25)
 
-## RETOMAR AQUÍ (2026-11-03, noche · duplicados, bloque 1)
+## RETOMAR AQUÍ (2026-11-03, noche · EN PAUSA por prioridades de Pablo: 1 imágenes, 2 historias, 3 marketing)
+Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada sobre origin/main `3ec5d4b`. **No hay nada subido de este bloque.**
+
+**A. Duplicados, bloque 1: hecho, auditado (auditor-datos: APTO) y en commit, falta el sí de Pablo para subir** (commits `135c4e9` y `03aa152`):
+- 0 errores, las 10.098 direcciones publicadas cubiertas (con el sitemap de pages.dev), buscador en verde y 13.977 archivos.
+- Antes de subir: `git fetch`, `git rebase origin/main`, `node tools/unificar-marchas.mjs` (con `auditoria/` copiada; ver abajo), `node site/build.mjs`, `comprobar-marchas` (con el sitemap publicado), `comprobar-origen` y la batería del buscador. Después, el sí de Pablo y `git push origin HEAD:main`.
+- Observaciones menores del auditor, sin hacer:
+  - al unir se pierde la URL de Cofradías y Hermandades 912235 en «Amor y del Trabajo»;
+  - las versiones pierden la URL de su tabla de Marchas de Procesión;
+  - en 6 fichas se pierde el texto de dedicatoria de la versión unida cuando la ficha que queda ya tenía hermandad, como «Pasa la Soledad» y «Callejuela de la O»;
+  - la página enseña solo el vídeo principal (falta que Diseño pinte `versiones`).
+
+**B. Canales de YouTube de las bandas (encargo de Pablo, 3-nov: «revisar el canal de YouTube de todas las bandas posibles y extraer la información de sus marchas, ninguna repetida»). Empezado, SIN commit de datos:**
+- Herramienta: `tools/importar-repertorio-youtube.mjs`, con commit. yt-dlp, solo metadatos (`--flat-playlist -J`), instalado en `Herramientas-IA\bin\yt-dlp.exe`. Lista de canales oficiales, con la prueba de que son oficiales: `tools/sources/canales-bandas.json`. Por ahora están las 5 bandas de la campaña: Cigarreras, Rosario de Cádiz, Pasión de Linares, El Carmen y Paso y Esperanza.
+- Regla de cruce: se liga solo si un trozo del título del vídeo (el primero, o uno entre comillas) es el título de UNA sola marcha de la base para la formación de la banda. Se descarta si coincide con el nombre de una hermandad o banda sin comillas, si el título nombra otra banda o si no es una marcha (ensayo, concierto completo, podcast…).
+- Primera pasada (con `CACHE=auditoria/canales`):
+
+  | Banda | Vídeos | Marchas ligadas | Para revisar |
+  |---|---|---|---|
+  | Cigarreras | 4.413 | 116 | 528 |
+  | Rosario de Cádiz | 236 | 35 | 33 |
+  | Pasión de Linares | 93 | 5 | 25 |
+  | El Carmen | 170 | 37 | 26 |
+  | Paso y Esperanza | 261 | 20 | 89 |
+
+  Salidas, en local: `auditoria/repertorios-yt/repertorio-yt-*.json` (lo ligado) y `auditoria/youtube-*.json` (lo que queda para revisar y lo que queda fuera, con el motivo).
+- **Ojo:** los `repertorio-yt-*.json` NO están en `tools/sources/` adrede, porque el unificador lee todo `repertorio-*.json`. Para cargarlos, cópialos ahí y vuelve a pasar el unificador.
+- Antes de cargar, revisa lo ligado a mano. Hay que repasar sobre todo los vídeos con varias marchas en el título: en Rosario, «Amor» de Garfia sale de un vídeo de la Hdad. del Amor de Jerez con «El Amor» entre comillas, y es dudoso.
+- Siguiente:
+  1. revisar lo ligado y cargarlo (unificar, comprobar, auditor con 20 al azar contra el vídeo);
+  2. «para revisar»: altas nuevas solo con título y compositor claros (descripción del vídeo, Cofradías y Hermandades o Patrimonio Musical);
+  3. el resto de bandas de portal.json, con su canal oficial confirmado; las que no lo tengan, a `sin_canal`.
+
+**C. Pendientes de duplicados:** los 34 probables (`node tools/comprobar-marchas.mjs --avisos | grep "misma obra que"`), «Domine Iesu Christe» (Canilla o Facundillos), «Cádiz Cofrade», «Al Cielo el Rey de Triana» y «Sentencia» (años distintos), y las 17 marchas sin compositor.
+
+**D. Pendiente de Pablo:** año y dedicatoria de las partituras de «Jesús Lacerado» (Ecce Homo de Novelda, 2021) y «Siervos de tu Humildad» (Humildad de Málaga).
+
+**Para regenerar en un worktree nuevo:** copia `auditoria/` (`cyh-marchas.json`, `patrimonio-marchas.json` y `marchas-806.json`) desde este worktree o desde `marchas-verificadas-188492`.
+
+## Duplicados, bloque 1 (2026-11-03, noche)
 **Hecho en este bloque (subir con el sí de Pablo):**
 - Versiones (regla de Pablo, 2-nov): la misma obra en otra formación (mismo título sin artículo y mismo compositor) es ahora una ficha con `versiones` (formación, año, autor o arreglista si cambia, vídeo, bandas, fuentes y la dirección antigua, que redirige). La ficha dice «también para …». Hay 70 fichas con versiones y 75 direcciones que redirigen; las 10.098 publicadas siguen cubiertas.
 - No se juntan, y van a `auditoria/marchas-informe.json` → `dudas_union`, si los dos años se conocen y no coinciden (Al Cielo el Rey de Triana, 2000/2012; Sentencia de Cebrero, 2015/2025) o si están dedicadas a hermandades distintas.
