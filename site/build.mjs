@@ -78,7 +78,7 @@ const MAPA_FILE = path.join(DIR, 'data', 'mapa-andalucia.json');
 const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'utf8')) : null;
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
-const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina });
+const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, foco: x.foco, recorte: !!x.recorte });
 // Fotos retiradas tras comprobar su ficha en Commons (tools/sources/fotos-retiradas.json): no salen ni como foto principal ni en el díptico
 const FRET_FILE = path.join(DIR, '..', 'tools', 'sources', 'fotos-retiradas.json');
 const FRET_ALL = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')) : {};
@@ -96,9 +96,10 @@ for (const h of D.hermandades) {
   const t = (IMGX.titulares || {})[h.slug]; if (!t) continue;
   const im = (tipo) => (t[tipo] && !fotoRetirada(t[tipo], h.slug, tipo) ? { ...localImg('t', `${h.slug}-${tipo}`, t[tipo]), titular: (TIT_OK[h.slug + '|' + tipo] || {}).titular || t[tipo].titular } : null);
   h.diptico = { cristo: im('cristo'), virgen: im('virgen'), juntos: im('juntos'), sede: im('sede') };
-  // La miniatura de las listas pasa a ser el Cristo (o la Virgen, o el cortejo) en lugar del escudo; la sede, solo si no hay otra
+  // La miniatura de las listas y del plano es siempre un titular cuando lo hay (regla de Pablo, 3-nov: nunca un sayón,
+  // un paso de lejos o el templo); la sede, solo si no hay otra
   const lead = h.diptico.juntos || h.diptico.cristo || h.diptico.virgen || (!h.imagen ? h.diptico.sede : null);
-  if (lead && (!h.imagen || h.imagen.escudo || NO_PORTADA[archivoCommons(h.imagen.pagina)])) h.imagen = lead;
+  if (lead && (!h.imagen || h.imagen.escudo || NO_PORTADA[archivoCommons(h.imagen.pagina)] || lead !== h.diptico.sede)) h.imagen = lead;
 }
 
 // Salidas adicionales de vísperas (p. ej. la Virgen de los Dolores de la Lanzada de Huelva el Viernes de Dolores):
@@ -272,7 +273,7 @@ function imgTag(im, alt, { cls = '', sizes = '(max-width: 640px) 100vw, 33vw', w
   if (im.local) {
     const set = localSet(im, widths);
     const pick = set.find((x) => x >= 480) || set.at(-1);
-    return `<img src="${u(localUrl(im, pick))}" srcset="${set.map((x) => `${u(localUrl(im, x))} ${x}w`).join(', ')}" sizes="${sizes}" alt="${esc(alt)}" width="${im.w}" height="${im.h}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
+    return `<img src="${u(localUrl(im, pick))}" srcset="${set.map((x) => `${u(localUrl(im, x))} ${x}w`).join(', ')}" sizes="${sizes}" alt="${esc(alt)}" width="${im.w}" height="${im.h}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"${cls ? ` class="${cls}"` : ''}${im.foco ? ` style="object-position:${esc(im.foco)}"` : ''}>`;
   }
   const w = im.w || 900; const h = im.h || 600;
   const srcset = isThumb(im.src) ? ` srcset="${widths.map((x) => `${esc(wmAt(im.src, x))} ${x}w`).join(', ')}" sizes="${sizes}"` : '';
@@ -291,7 +292,7 @@ function heroPreload(im, sizes, widths) {
 function credit(im) {
   if (!im) return '';
   const lic = im.licurl ? `<a href="${esc(im.licurl)}" rel="license noopener" target="_blank">${esc(im.licencia)}</a>` : esc(im.licencia);
-  return `Imagen: ${esc(im.autor || 'autor en Wikimedia Commons')}, ${lic}, vía <a href="${esc(im.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>`;
+  return `Imagen: ${esc(im.autor || 'autor en Wikimedia Commons')}, ${lic}, vía <a href="${esc(im.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>${im.recorte ? ' (recortada)' : ''}`;
 }
 
 const cityTag = (slug) => (CAP[slug] ? `<span class="oc-city" style="--c:${CAP[slug].color}">${esc(CAP[slug].nombre)}</span>` : '');

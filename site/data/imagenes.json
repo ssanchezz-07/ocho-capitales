@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T18:31:51.105Z",
+ "generado": "2026-11-03T16:54:36.715Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4084,9 +4084,9 @@
     ],
     "escudo": false,
     "autor": "Jl FilpoC",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Sentencia,_Jos%C3%A9_de_Mora.jpg",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Sentencia_(Jos%C3%A9_de_Mora).jpg",
     "titular": "Jesús de la Sentencia"
    },
    "virgen": {
@@ -4098,10 +4098,10 @@
      960
     ],
     "escudo": false,
-    "autor": "Diego",
+    "autor": "Jl FilpoC",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_maravillas.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_las_Maravillas,_Iglesia_de_San_Pedro_y_San_Pablo_(Granada).jpg",
     "titular": "María Santísima de las Maravillas"
    }
   },
@@ -4136,7 +4136,8 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Imagen_de_Nuestro_Padre_Jesus_del_Rescate_en_la_Iglesia_de_la_Magdalena,_en_Granada_(Spain)).jpg",
-    "titular": "Nuestro Padre Jesús del Rescate"
+    "titular": "Nuestro Padre Jesús del Rescate",
+    "foco": "68% 30%"
    }
   },
   "cristo-de-san-agustin-granada": {
@@ -4159,7 +4160,7 @@
   "la-lanzada-granada": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 961,
     "widths": [
      160,
      480,
@@ -4169,7 +4170,7 @@
     "autor": "Claudio Landi",
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(12).JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(10).JPG",
     "titular": "Santísimo Cristo de la Lanzada"
    }
   },
@@ -4208,7 +4209,7 @@
   "los-estudiantes-granada": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1280,
     "widths": [
      160,
      480,
@@ -4218,7 +4219,7 @@
     "autor": "GCF1931",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_de_Misterio_de_Nuestro_Se%C3%B1or_de_la_Meditaci%C3%B3n.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Se%C3%B1or_de_la_Meditaci%C3%B3n..jpg",
     "titular": "Nuestro Señor de la Meditación"
    },
    "virgen": {
@@ -4331,6 +4332,21 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Aurora_del_Albayz%C3%ADn_Coronada.jpg",
     "titular": "María Santísima de la Aurora Coronada"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Álvaro de la Torre Araus",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Perd%C3%B3n._Hermandad_de_la_Aurora.jpg",
+    "titular": "Nuestro Padre Jesús del Perdón"
    }
   },
   "los-favores-granada": {
@@ -7142,7 +7158,7 @@
   "la-estrella-granada": {
    "cristo": {
     "w": 960,
-    "h": 1440,
+    "h": 1332,
     "widths": [
      160,
      480,
@@ -7153,22 +7169,14 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Pasi%C3%B3n._Granada.jpg",
-    "titular": "Nuestro Padre Jesús de la Pasión"
-   },
-   "virgen": {
-    "w": 960,
-    "h": 1280,
-    "widths": [
-     160,
-     480,
-     960
+    "recorte": [
+     0.3,
+     0.15,
+     0.4,
+     0.37
     ],
-    "escudo": false,
-    "autor": "Claudio Landi",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cofrad%C3%ADa_de_Nazarenos_de_Nuestro_Padre_Jes%C3%BAs_de_la_Pasi%C3%B3n_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG",
-    "titular": "Nuestro Padre Jesús de la Pasión"
+    "titular": "Nuestro Padre Jesús de la Pasión",
+    "foco": "50% 55%"
    }
   },
   "el-silencio-granada": {
@@ -7185,6 +7193,27 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Pedro_y_San_Pablo.jpg",
     "titular": "San Pedro y San Pablo (Paseo de los Tristes)"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Jl FilpoC",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Misericordia,_Jos%C3%A9_de_Mora.jpg",
+    "recorte": [
+     0.2,
+     0.36,
+     0.6,
+     0.6
+    ],
+    "titular": "Santísimo Cristo de la Misericordia"
    }
   },
   "los-ferroviarios-granada": {
@@ -7219,6 +7248,21 @@
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Real_Monasterio_de_San_Jer%C3%B3nimo_(Granada)._Portada.jpg",
     "titular": "Monasterio de San Jerónimo"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "José Luis Filpo Cabana",
+    "licencia": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
+    "titular": "Nuestra Señora de la Soledad"
    }
   },
   "los-facundillos-granada": {
@@ -7703,11 +7747,26 @@
      480
     ],
     "escudo": false,
-    "autor": "http://commons.wikimedia.org/wiki/User:Balbo",
+    "autor": "Balbo",
     "licencia": "CC BY-SA 3.0",
     "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada_santa_ana_exterior.jpg",
     "titular": "Iglesia de San Gil y Santa Ana (Plaza Nueva)"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Caandelagavira",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Iglesia_Santa_Ana.jpg",
+    "titular": "Nuestra Señora de la Esperanza Coronada"
    }
   },
   "el-cautivo-huelva": {
@@ -7776,6 +7835,95 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:San_Antonio_Abad_Church,_Churriana.jpg",
     "titular": "Parroquia de San Antonio Abad (Churriana)"
+   }
+  },
+  "el-huerto-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Diego",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Amargura_granada.jpg",
+    "titular": "María Santísima de la Amargura Coronada"
+   }
+  },
+  "el-resucitado-granada": {
+   "cristo": {
+    "w": 960,
+    "h": 1294,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Josezugaldia",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:16-accesit_de_cartel_(1).jpg",
+    "titular": "Santísimo Cristo Resucitado"
+   }
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 720,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Diego",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Dulce_nombre.jpg",
+    "titular": "María Santísima del Dulce Nombre y San Juan"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Diego",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Despo.jpg",
+    "titular": "Jesús Despojado de sus Vestiduras"
+   }
+  },
+  "los-gitanos-granada": {
+   "cristo": {
+    "w": 960,
+    "h": 1320,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Luisjav18",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_de_Granada.jpg",
+    "recorte": [
+     0,
+     0.08,
+     0.6,
+     0.55
+    ],
+    "titular": "Santísimo Cristo del Consuelo"
    }
   }
  }

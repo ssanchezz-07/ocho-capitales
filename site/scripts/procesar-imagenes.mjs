@@ -25,8 +25,8 @@ const index = { generado: new Date().toISOString(), hermandades: prev.hermandade
 
 const fileTitle = (pagina) => { const m = decodeURIComponent(String(pagina || '')).match(/(File:[^?#]+)$/); return m ? m[1].replace(/_/g, ' ') : null; };
 
-async function sourceUrl(title) {
-  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', maxlag: '5', titles: title, prop: 'imageinfo', iiprop: 'url|size|mime', iiurlwidth: '1280' });
+async function sourceUrl(title, ancho = 1280) {
+  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', maxlag: '5', titles: title, prop: 'imageinfo', iiprop: 'url|size|mime', iiurlwidth: String(ancho) });
   for (let i = 0; i < 4; i++) {
     const r = await fetch(url, { headers: { 'User-Agent': UA } });
     if (r.status === 429 || r.status >= 500) { await sleep(5000 * (i + 1)); continue; }
@@ -51,22 +51,38 @@ async function download(url, file) {
 async function processOne(kind, slug, meta) {
   const title = fileTitle(meta.pagina) || meta.titulo;
   if (!title) throw new Error('sin título de archivo');
-  const src = await sourceUrl(title);
+  // con recorte hace falta más resolución de partida: el titular ocupa solo una parte de la foto
+  const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 3200 : 1280);
   if (!src) throw new Error('no encontrado en Commons');
-  const orig = await download(src, path.join(CACHE, `${kind}-${slug}${path.extname(new URL(src).pathname) || '.jpg'}`));
+  const orig = await download(src, path.join(CACHE, `${kind}-${slug}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
   const img = sharp(orig, { failOn: 'none' }).rotate();
   const m = await img.metadata();
-  const srcW = m.autoOrient ? m.autoOrient.width : m.width;
-  const srcH = m.autoOrient ? m.autoOrient.height : m.height;
+  const fullW = m.autoOrient ? m.autoOrient.width : m.width;
+  const fullH = m.autoOrient ? m.autoOrient.height : m.height;
+  // recorte [x, y, ancho, alto] en fracciones del original: acerca el titular cuando la foto es un paso en la calle
+  const rc = Array.isArray(meta.recorte) ? { left: Math.round(meta.recorte[0] * fullW), top: Math.round(meta.recorte[1] * fullH), width: Math.round(meta.recorte[2] * fullW), height: Math.round(meta.recorte[3] * fullH) } : null;
+  const base = () => { const s = sharp(orig, { failOn: 'none' }).rotate(); return rc ? s.extract(rc) : s; };
+  const srcW = rc ? rc.width : fullW;
   const widths = WIDTHS.filter((w, i) => w <= srcW || i === 0);
   let outW = 0, outH = 0;
   for (const w of widths) {
     const file = path.join(OUT_DIR, `${kind}-${slug}-${w}.webp`);
-    const info = await sharp(orig, { failOn: 'none' }).rotate().resize({ width: Math.min(w, srcW), withoutEnlargement: true })
+    const info = await (rc ? sharp(await base().toBuffer()) : base()).resize({ width: Math.min(w, srcW), withoutEnlargement: true })
       .webp({ quality: meta.escudo ? 74 : 66, alphaQuality: 80, effort: 6, smartSubsample: true }).toFile(file);
     outW = info.width; outH = info.height;
   }
-  return { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
+  const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
+  if (meta.foco && !out.escudo) out.foco = meta.foco;
+  if (rc) out.recorte = meta.recorte;
+  return out;
+}
+
+// Encuadre (object-position) de los recortes de la ficha, el díptico y la hoja del plano: solo el puesto a mano en
+// data/imagenes-titulares.json («foco», p. ej. "50% 15%"); sin él, cada recorte usa su encuadre por defecto.
+// Copia a lo ya procesado el encuadre puesto a mano (o lo quita si se ha borrado)
+function completarFoco(entry, manual) {
+  if (!entry || entry.escudo) return;
+  if (manual) entry.foco = manual; else delete entry.foco;
 }
 
 const jobs = [];
@@ -78,7 +94,7 @@ for (const [slug, list] of Object.entries(NUEVAS.capitales || {})) { const x = (
 let done = 0, fail = 0;
 for (const [kind, slug, meta] of jobs) {
   const bucket = kind === 'h' ? index.hermandades : index.capitales;
-  if (bucket[slug] && bucket[slug].pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) continue;
+  if (bucket[slug] && bucket[slug].pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
   try { bucket[slug] = await processOne(kind, slug, meta); done++; console.log('ok', kind, slug, bucket[slug].w + 'x' + bucket[slug].h); }
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }
   fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
@@ -91,7 +107,7 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
   for (const tipo of ['cristo', 'virgen', 'juntos', 'sede']) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
-    if (prevT && prevT.pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) continue;
+    if (prevT && prevT.pagina === meta.pagina && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
     try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
     catch (e) { fail++; console.log('FALLO', 't', slug, tipo, e.message); }
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));

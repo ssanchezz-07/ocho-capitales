@@ -152,35 +152,34 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | La Sangre de El Higuerón | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo de la Sangre / Nuestro Padre Jesús Nazareno de la Compasión / San Isidro Labrador |
 | Traslado al Sepulcro (pro-hermandad) | Sábado de Pasión | **ninguna foto**; titulares (el portal no tiene sus nombres) |
 
-## Granada
+## Granada (revisado el 2026-11-03: cada foto contra su ficha de Commons; fuera templos, cortejos, pasos de lejos, una foto de Granada de Nicaragua y otra sin licencia)
 
-9 sin ninguna foto; 23 con algún titular sin foto.
+12 sin ninguna foto de titular; 10 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
-| La Borriquilla | Domingo de Ramos | Cristo: Entrada de Jesús en Jerusalén; Virgen: Nuestra Señora de la Paz |
-| El Despojado («Silencio Blanco») | Domingo de Ramos | **ninguna foto**; Cristo: Jesús Despojado de sus Vestiduras; Virgen: María Santísima del Dulce Nombre y San Juan |
+| La Borriquilla | Domingo de Ramos | **ninguna foto**; Cristo: Entrada de Jesús en Jerusalén; Virgen: Nuestra Señora de la Paz |
 | El Cautivo | Domingo de Ramos | **ninguna foto**; Cristo: Nuestro Padre Jesús Cautivo; Virgen: María Santísima de la Encarnación |
 | El Trabajo | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo del Trabajo; Virgen: Nuestra Señora de la Luz |
-| El Huerto | Lunes Santo | Cristo: Oración en el Huerto; Virgen: María Santísima de la Amargura Coronada |
+| Nuestra Señora de los Dolores | Lunes Santo | **ninguna foto**; Virgen: Nuestra Señora de los Dolores |
+| El Huerto | Lunes Santo | Cristo: Oración en el Huerto |
 | Cristo de San Agustín | Lunes Santo | Virgen: Nuestra Madre y Señora de la Consolación |
 | La Lanzada | Martes Santo | Virgen: María Santísima de la Caridad |
 | El Vía Crucis | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Amargura; Virgen: Nuestra Señora de los Reyes |
-| La Esperanza | Martes Santo | solo la foto de la sede; Cristo: Nuestro Padre Jesús del Gran Poder; Virgen: Nuestra Señora de la Esperanza Coronada |
-| Los Gitanos | Miércoles Santo | Cristo: Santísimo Cristo del Consuelo; Virgen: María Santísima del Sacromonte |
-| Paciencia y Penas | Miércoles Santo | Cristo: Nuestro Padre Jesús de la Paciencia |
+| La Esperanza | Martes Santo | Cristo: Nuestro Padre Jesús del Gran Poder |
+| La Cañilla | Martes Santo | Virgen: Soledad de Nuestra Señora |
+| Los Gitanos | Miércoles Santo | Virgen: María Santísima del Sacromonte |
+| Paciencia y Penas | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Paciencia; Virgen: María Santísima de las Penas |
 | El Nazareno | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno; Virgen: María Santísima de la Merced |
 | Los Salesianos | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Redención; Virgen: Nuestra Señora de la Salud |
-| La Aurora | Jueves Santo | Cristo: Nuestro Padre Jesús del Perdón (copia de Barbero Gor, 1982) |
 | La Estrella | Jueves Santo | Virgen: María Santísima de la Estrella |
-| El Silencio | Jueves Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Misericordia |
-| Los Ferroviarios | Viernes Santo | solo la foto de la sede; Cristo: Santísimo Cristo de la Buena Muerte; Virgen: Nuestra Señora del Amor y el Trabajo |
+| Los Ferroviarios | Viernes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Buena Muerte; Virgen: Nuestra Señora del Amor y el Trabajo |
 | Los Favores | Viernes Santo | Virgen: María Santísima de la Misericordia Coronada |
 | Santo Entierro | Viernes Santo | **ninguna foto**; Cristo: Cristo yacente; Virgen: Nuestra Señora de la Soledad del Calvario |
-| Las Chías | Viernes Santo | solo la foto de la sede; Cristo: Cristo del Descendimiento; Virgen: Nuestra Señora de la Soledad |
+| Las Chías | Viernes Santo | Cristo: Cristo del Descendimiento |
 | La Resurrección | Domingo de Resurrección | **ninguna foto**; Cristo: Nuestro Señor de la Resurrección; Virgen: Santa María del Triunfo |
-| El Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado; Virgen: Nuestra Señora de la Alegría |
-| Los Facundillos | Domingo de Resurrección | solo la foto de la sede; Cristo: Dulce Nombre de Jesús |
+| El Resucitado | Domingo de Resurrección | Virgen: Nuestra Señora de la Alegría |
+| Los Facundillos | Domingo de Resurrección | **ninguna foto**; Cristo: Dulce Nombre de Jesús |
 
 ## Cádiz
 

@@ -14,7 +14,7 @@
   "Soledad_Ubeda.jpg": "Soledad (Jaén): «Virgen de la Soledad, de Úbeda (Jaén)»; es la de Úbeda.",
   "Imagen_de_Cristo_Yacente_de_la_Hermandad_del_Santo_Sepulcro_de_Andújar.jpg": "Soledad (Jaén): «Cristo Yacente de la Hermandad del Santo Sepulcro de Andújar»; es de Andújar.",
   "LunesSantoa.jpg": "Cautivo (Huelva): categoría «Hermandad del Cristo de los Remedios (Moguer)»; es de Moguer (además, casi negra).",
-  "Jesús_del_Santo_Entierro.jpg": "Santo Entierro (Granada): «Procesión de Jesús del Santo Entierro el viernes santo en Granada, Nicaragua».",
+  "Jesús_del_Santo_Entierro.jpg": "Santo Entierro (Granada), foto principal: la ficha de Commons dice «Procesión de Jesús del Santo Entierro el viernes santo en Granada, Nicaragua» (categoría «Granada, Nicaragua»); es de Nicaragua.",
   "Cenahuelva.jpg": "Sagrada Cena (Huelva): «Agrupación Musical Cristo del Amor»; es una banda desfilando, no los titulares.",
   "JesusNazarenoHuelva.jpg": "Nazareno (Huelva): «Bct. Jesús Nazareno»; es la banda de cornetas (músicos y público de noche), no el titular.",
   "Virgen_de_la_Luz_en_su_retablo.jpg": "Carretería (Sevilla): «Virgen de la Luz en la iglesia de San Esteban», categoría «Hermandad de Nuestra Señora de la Luz»; es otra Virgen de la Luz (San Esteban), no la de la Carretería.",
@@ -23,7 +23,8 @@
   "Señor_del_Calvario.jpg": "El Calvario (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
   "Nuestro_Padre_Jesús_Nazaren.jpg": "Jesús Nazareno (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
   "Paso_del_Cristo_de_la_Buena_Muerte.jpg": "La Buena Muerte (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
-  "María_Santísima_de_la_Soledad.jpg": "La Soledad (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable."
+  "María_Santísima_de_la_Soledad.jpg": "La Soledad (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
+  "SemanaSantaGranadaLosDolores1.jpg": "Dolores (Granada): en Commons figura como CC BY-SA 4.0 de Manuel_Prados, pero el original de Flickr (photos/14973389@N04/2380462687) es «todos los derechos reservados» y lo subió otra cuenta sin permiso. Además, palio de lejos con la cara tapada."
  },
  "retiradas_en": {
   "el-descendimiento-cadiz|virgen": {
@@ -57,6 +58,30 @@
   "santo-entierro-cadiz|sede": {
    "archivo": "Iglesia_de_Santa_Cruz.jpg",
    "motivo": "La misma foto de la garita de la muralla delante de Santa Cruz."
+  },
+  "paciencia-y-penas-granada|virgen": {
+   "archivo": "Las_penas_gr.jpg",
+   "motivo": "Paso de palio visto de lejos: la Virgen de las Penas casi no se ve. Mejor la estampa hasta tener una foto de la titular."
+  },
+  "la-borriquilla-granada|ficha": {
+   "archivo": "Cortejo_de_palmas_de_la_Borriquilla_en_Granada.jpg",
+   "motivo": "Cortejo de nazarenos con palmas; es de esa hermandad, pero no se ve ningún titular."
+  },
+  "los-ferroviarios-granada|sede": {
+   "archivo": "Granada_-_Parroquia_de_San_Juan_de_Letrán_04.jpg",
+   "motivo": "Fachada del templo en lugar de un titular."
+  },
+  "las-chias-granada|sede": {
+   "archivo": "Real_Monasterio_de_San_Jerónimo_(Granada)._Portada.jpg",
+   "motivo": "Portada del templo en lugar de un titular."
+  },
+  "los-facundillos-granada|sede": {
+   "archivo": "Iglesia_de_Santo_Domingo_(Granada).jpg",
+   "motivo": "Fachada del templo en lugar de un titular."
+  },
+  "la-canilla-granada|virgen": {
+   "archivo": "Nuestra_Señora_de_la_Soledad,_Granada.jpg",
+   "motivo": "La ficha de Commons dice «Monasterio de San Jerónimo… titular de la Pontificia y Real Hermandad de Nuestra Señora de la Soledad y Descendimiento» (GPS en San Jerónimo): es la Soledad de las Chías, no la de la Cañilla. Pasa a las Chías."
   }
  },
  "no_portada": {
@@ -66,7 +91,9 @@
   "Cofradía_del_Santo_Sepulcro_(3757739379).jpg": "santo-sepulcro-cordoba: acólitos del cortejo; es de esa hermandad, pero no un titular.",
   "La_Estrella_Alm_04.jpg": "la-estrella-almeria: nazarenos por la calle; es de esa hermandad, pero no un titular.",
   "Salesianos_-_Estandarte.jpg": "salesianos-malaga: estandarte; es de esa hermandad, pero no un titular.",
-  "Vera+Cruz_Lectura.jpg": "vera-cruz-malaga: nazarenos en la lectura; es de esa hermandad, pero no un titular."
+  "Vera+Cruz_Lectura.jpg": "vera-cruz-malaga: nazarenos en la lectura; es de esa hermandad, pero no un titular.",
+  "Real,_Venerable_e_Ilustre_Cofradía_de_Nuestro_Padre_Jesús_del_Perdón_y_María_Santísima_de_la_Aurora,_Granada,_Semana_Santa_2009_(12).JPG": "la-aurora-granada: paso de misterio de noche, oscuro y de lejos (un sayón de espaldas); la ficha y la miniatura abren con el díptico del Cristo del Perdón y la Virgen de la Aurora.",
+  "Cristo_de_los_Favores._Granada.jpg": "los-favores-granada: paso en la calle visto de lejos; la miniatura pasa al Cristo de los Favores en San Cecilio."
  },
  "titular_corregido": {
   "dolores-de-torreblanca-sevilla|cristo": {
