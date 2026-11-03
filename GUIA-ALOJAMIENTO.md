@@ -87,7 +87,13 @@ Después te paso Lighthouse en móvil, antes y después.
 
 ### Lista de comprobación del 14-nov
 **Antes del día**
-- [ ] **Jueves 5 · ensayo:** se conecta `prueba.ochocapitales.com` al proyecto `ocho-capitales`, se mide cuánto tarda el certificado, se prueban las redirecciones y se quita. La landing no se toca.
+- [x] **Ensayo HECHO (martes 3-nov, adelantado del jueves 5, con el permiso de Pablo):** se conectó `prueba.ochocapitales.com` a `ocho-capitales` por la API (dominio de Pages y CNAME con proxy a `ocho-capitales.pages.dev`), se midió y se quitó. La landing no se tocó.
+  - **Tiempos:** de crear el dominio a la primera respuesta 200, **74 s**. El certificado ya era válido: es el comodín de la zona (Let's Encrypt, `CN=ochocapitales.com`, caduca el 26-ene-2027). Al quitarlo, en menos de 20 s dejó de responder.
+  - **Primer minuto:** alguna petición dio **522** antes de estabilizarse; después, 404 normal en las páginas que no existen. El día 14, esperar 2 minutos tras activar antes de comprobar.
+  - **Comprobado en el dominio:** `http` → `https` con 301, `/hoy` → `/hoy/` con 308, HSTS presente, analítica de Cloudflare inyectada sola, plano de Málaga 200 y prueba de humo sin fallos salvo las noticias.
+  - **Noticias:** desde `prueba` las bloquea CORS, porque solo está permitido para los dominios reales. `datos` (R2, `ocho-capitales-datos`) ya permite `https://ochocapitales.com` y `https://www.ochocapitales.com` (comprobado con la cabecera `Origin`), así que el día 14 no hay que tocar nada ahí.
+  - **Canónicos:** siguen apuntando a `pages.dev` hasta crear `CLOUDFLARE_URL` (paso 6 del día 14), como estaba previsto.
+  - **Vuelta atrás:** quitar el dominio y el CNAME tarda segundos. Para volver a la landing, contar unos 2 minutos.
 - [ ] **Jueves 12 · vídeo con enlace a ochocapitales.com:** la landing aguanta. Comprobado el 2-nov:
   - es estática en Pages, sin límite de visitas;
   - con 60 visitas a la vez, las 60 dieron 200;
@@ -110,7 +116,7 @@ Después te paso Lighthouse en móvil, antes y después.
   - `ocho-capitales.pages.dev` → dominio: con una *Bulk Redirect* de la cuenta (Pages no deja redirigir por nombre en `_redirects`). Solo el nombre exacto, sin subdominios, para que las vistas previas de cada subida sigan abriendo. Las pruebas de después de subir ya usan `CLOUDFLARE_URL`, así que no les afecta.
 - [ ] **Analítica:** a los 10 minutos salen visitas en **Análisis → Web Analytics** del dominio, y la consola no da errores de CSP.
 - [ ] **Noticias:** `/noticias/` muestra las de las 7:00 leídas de `datos.ochocapitales.com`.
-- [ ] **Vuelta atrás preparada:** se sabe cómo volver (apartado «Si algo sale mal») y en cuánto tiempo (el que salga en el ensayo del jueves 5).
+- [ ] **Vuelta atrás preparada:** se sabe cómo volver (apartado «Si algo sale mal») y en cuánto tiempo: unos 2 minutos, según el ensayo del 3-nov.
 - [ ] **Aviso a marketing:** las redes guardan la vista previa de la landing («Algo se está encendiendo»). Al lanzar, refrescarla en el depurador de cada red. Además, la imagen de compartir de la landing apunta a `ocho-capitales-espera.pages.dev`: mejor que apunte al dominio.
 - [ ] **El domingo 15, a las 7:00:** primera publicación de noticias con el dominio. El vigía no cambia; solo hay que mirar que la portada del dominio tiene la hora nueva.
 1. **Antes:** la última publicación de «ocho-capitales» en verde (GitHub → Actions) y `https://ocho-capitales.pages.dev` bien.
