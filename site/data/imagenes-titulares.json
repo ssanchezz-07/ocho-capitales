@@ -627,15 +627,22 @@
     "autor": "Antonio España from Madrid, España",
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "titular": "Santísimo Cristo de la Sangre"
+    "titular": "Santísimo Cristo de la Sangre",
+    "recorte": [
+     0.28,
+     0.1,
+     0.56,
+     0.56
+    ]
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Consolacion.jpg",
-    "titulo": "File:Consolacion.jpg",
-    "autor": "Alberto Medina ( Kilgore )",
-    "licencia": "Public domain",
-    "licurl": "",
-    "titular": "María Santísima de Consolación y Lágrimas"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg",
+    "titulo": "File:Virgen Sangre Málaga.jpg",
+    "autor": "Morancio",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Nuestra Madre Dolorosa",
+    "foco": "50% 22%"
    }
   },
   "expiracion-malaga": {
@@ -3367,12 +3374,18 @@
   },
   "piedad-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Malaga.jpg",
-    "titulo": "File:Piedad Malaga.jpg",
-    "autor": "Escuzao",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Nuestra Señora de la Piedad"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Trono.jpg",
+    "titulo": "File:Piedad Trono.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestra Señora de la Piedad",
+    "recorte": [
+     0.33,
+     0.12,
+     0.36,
+     0.66
+    ]
    }
   },
   "servitas-malaga": {

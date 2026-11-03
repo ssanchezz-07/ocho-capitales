@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T21:58:04.641Z",
+ "generado": "2026-11-03T23:15:57.490Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3958,22 +3958,29 @@
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg",
+    "recorte": [
+     0.28,
+     0.1,
+     0.56,
+     0.56
+    ],
     "titular": "Santísimo Cristo de la Sangre"
    },
    "virgen": {
     "w": 960,
-    "h": 720,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Alberto Medina ( Kilgore )",
-    "licencia": "Public domain",
-    "licurl": "",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Consolacion.jpg",
-    "titular": "María Santísima de Consolación y Lágrimas"
+    "autor": "Morancio",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg",
+    "foco": "50% 22%",
+    "titular": "Nuestra Madre Dolorosa"
    }
   },
   "expiracion-malaga": {
@@ -8397,16 +8404,24 @@
   },
   "piedad-malaga": {
    "virgen": {
-    "w": 160,
-    "h": 231,
+    "w": 960,
+    "h": 1173,
     "widths": [
-     160
+     160,
+     480,
+     960
     ],
     "escudo": false,
-    "autor": "Escuzao",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Malaga.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Trono.jpg",
+    "recorte": [
+     0.33,
+     0.12,
+     0.36,
+     0.66
+    ],
     "titular": "Nuestra Señora de la Piedad"
    }
   },
@@ -8874,6 +8889,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sentencia_-_Trono.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg\"|\"\"|\"\""
+  },
+  "sangre-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg\"|[0.28,0.1,0.56,0.56]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg\"|\"\"|\"50% 22%\""
   },
   "dolores-de-san-juan-malaga": {
    "w": 960,
