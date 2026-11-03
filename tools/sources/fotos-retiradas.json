@@ -286,6 +286,86 @@
   "dolores-del-puente-malaga|juntos": {
    "archivo": "Doloresdelpuentecoronada_cristodelperdon.jpg",
    "motivo": "En Commons el autor es «Composision de la cofradia cc» y la fuente «composicion propia»: la licencia no es fiable."
+  },
+  "la-borriquilla-jaen|sede": {
+   "archivo": "Jaén_-_Iglesia_de_Nuestra_Señora_de_Belen_y_San_Roque_02.JPG",
+   "motivo": "Fachada del templo en lugar de un titular."
+  },
+  "el-huerto-vera-cruz-jaen|sede": {
+   "archivo": "Jaén_-_Iglesia_de_San_Ildefonso.jpg",
+   "motivo": "Torre del templo en lugar de un titular."
+  },
+  "santa-cena-jaen|cristo": {
+   "archivo": "Santa_Cena_Jaén.jpg",
+   "motivo": "Misterio de lejos en el templo, oscuro: no se distingue al titular."
+  },
+  "la-clemencia-jaen|cristo": {
+   "archivo": "Clemencia.jpg",
+   "motivo": "Paso de lejos entre el público: el Cristo sale diminuto."
+  },
+  "el-perdon-jaen|virgen": {
+   "archivo": "Virgen_de_la_Esperanza,_Jaén,_2019_24J_02.jpg",
+   "motivo": "Palio de lejos: la candelería tapa a la Virgen."
+  },
+  "la-vera-cruz-los-civiles-jaen|cristo": {
+   "archivo": "Jesús_Preso,_Cofradía_de_la_Vera_Cruz_24J_01_(recortada).jpg",
+   "motivo": "Paso de lejos: no se distingue al titular."
+  },
+  "nuestro-padre-jesus-el-abuelo-jaen|virgen": {
+   "archivo": "María_Santísima_Dolores_Jaén_2019_24J_01.jpg",
+   "motivo": "Palio de noche y de lejos: no se ve a la Virgen."
+  },
+  "santa-cena-jaen|ficha": {
+   "archivo": "Santa_Cena_Jaén.jpg",
+   "motivo": "La misma foto del misterio de lejos y oscuro."
+  },
+  "la-clemencia-jaen|ficha": {
+   "archivo": "Clemencia.jpg",
+   "motivo": "La misma foto del paso de lejos."
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba|ficha": {
+   "archivo": "Cordoba_-_Iglesia_de_Nuestra_Señora_de_Gracia_(Trinitariios)_0.jpg",
+   "motivo": "Retablo de la iglesia de los Trinitarios: el Cristo de Gracia sale pequeño."
+  },
+  "la-conversion-cordoba|ficha": {
+   "archivo": "Paso_Conversión_Córdoba.jpg",
+   "motivo": "Paso visto de lejos: no se distingue al titular."
+  },
+  "santo-sepulcro-cordoba|ficha": {
+   "archivo": "Cofradía_del_Santo_Sepulcro_(3757739379).jpg",
+   "motivo": "Acólitos del cortejo en la calle; no es un titular."
+  },
+  "el-resucitado-cordoba|sede": {
+   "archivo": "Cordoba_-_Iglesia_de_Santa_Marina_de_Aguas_Santas_10.jpg",
+   "motivo": "Interior del templo en lugar de un titular."
+  },
+  "entrada-triunfal-cordoba|virgen": {
+   "archivo": "Virgen_de_la_Palma_Córdoba.JPG",
+   "motivo": "Palio de lejos: no se ve a la Virgen."
+  },
+  "penas-de-santiago-cordoba|virgen": {
+   "archivo": "Virgen_Desamparados.jpg",
+   "motivo": "Palio con la candelería delante: no se ve a la Virgen."
+  },
+  "la-estrella-cordoba|virgen": {
+   "archivo": "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg",
+   "motivo": "Palio de lejos en la calle: no se ve a la Virgen."
+  },
+  "el-prendimiento-cordoba|virgen": {
+   "archivo": "Palio_de_Nuestra_Señora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg",
+   "motivo": "Palio de lejos: no se ve a la Virgen."
+  },
+  "jesus-caido-cordoba|virgen": {
+   "archivo": "Soledad_de_San_Cayetano.jpg",
+   "motivo": "De noche y oscura: no se distingue la cara de la Virgen."
+  },
+  "la-buena-muerte-cordoba|cristo": {
+   "archivo": "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG",
+   "motivo": "El Cristo sale pequeño al fondo del templo, detrás del paso."
+  },
+  "la-estrella-cordoba|ficha": {
+   "archivo": "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg",
+   "motivo": "La misma foto del palio de lejos."
   }
  },
  "no_portada": {

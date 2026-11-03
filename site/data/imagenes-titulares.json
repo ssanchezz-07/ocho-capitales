@@ -1287,12 +1287,13 @@
   },
   "los-dolores-cordoba": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_de_los_Dolores_en_C%C3%B3rdoba,_Espa%C3%B1a_(2016)_-_03.jpg",
-    "titulo": "File:Procesión de los Dolores en Córdoba, España (2016) - 03.jpg",
-    "autor": "Edmundo Sáez",
+    "pagina": "https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg",
+    "titulo": "File:DOLORES 3.jpg",
+    "autor": "Ca",
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de los Dolores"
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "50% 25%"
    }
   },
   "lagrimas-cordoba": {
@@ -2008,12 +2009,13 @@
     "titular": "Santísimo Cristo Yacente"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_Ubeda.jpg",
-    "titulo": "File:Soledad Ubeda.jpg",
-    "autor": "Nheo23",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Nuestra Señora de la Soledad"
+    "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_Ja%C3%A9n.JPG",
+    "titulo": "File:Soledad Jaén.JPG",
+    "autor": "Rlinx",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestra Señora de la Soledad",
+    "foco": "50% 40%"
    }
   },
   "el-santo-sepulcro-jaen": {
@@ -3495,6 +3497,83 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de la Soledad",
     "foco": "50% 45%"
+   }
+  },
+  "los-estudiantes-jaen": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG",
+    "titulo": "File:Misericordias en Santa Clara.JPG",
+    "autor": "Rlinx",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Santísimo Cristo de las Misericordias",
+    "foco": "50% 20%"
+   }
+  },
+  "el-cautivo-jaen": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_Ja%C3%A9n.png",
+    "titulo": "File:Cautivo Jaén.png",
+    "autor": "Antonio Espantaleón",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Divino Redentor Jesús Cautivo",
+    "foco": "50% 20%"
+   }
+  },
+  "el-resucitado-jaen": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Resucitado_Ja%C3%A9n.jpg",
+    "titulo": "File:Resucitado Jaén.jpg",
+    "autor": "Rlinx",
+    "licencia": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "titular": "Jesús en el Misterio de su Gloriosa Resurrección",
+    "foco": "50% 30%"
+   }
+  },
+  "la-esperanza-cordoba": {
+   "virgen": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanzacordoba.jpg",
+    "titulo": "File:Esperanzacordoba.jpg",
+    "autor": "Cofradecordobes16",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "María Santísima de la Esperanza",
+    "foco": "50% 30%"
+   }
+  },
+  "el-huerto-cordoba": {
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_(C%C3%B3rdoba).jpg",
+    "titulo": "File:Huerto (Córdoba).jpg",
+    "autor": "CordobesAM",
+    "licencia": "CC0",
+    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "titular": "Nuestro Padre Jesús de la Oración en el Huerto",
+    "foco": "50% 20%"
+   }
+  },
+  "el-buen-suceso-cordoba": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:PasoBuenSuceso.jpg",
+    "titulo": "File:PasoBuenSuceso.jpg",
+    "autor": "FedeAlvrz01",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús del Buen Suceso",
+    "foco": "50% 30%"
+   }
+  },
+  "presentacion-al-pueblo-cordoba": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",
+    "titulo": "File:JESUS AFLIGIDOS EN SU SAGRADA PRESENTACION AL PUEBLO-QUINARIO (1).jpg",
+    "autor": "Cofraderuan",
+    "licencia": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "titular": "Nuestro Padre Jesús de los Afligidos",
+    "foco": "50% 20%"
    }
   }
  }
