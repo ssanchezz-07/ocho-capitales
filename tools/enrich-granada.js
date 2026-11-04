@@ -50,6 +50,16 @@ add('la-esperanza-granada', 'gran-poder-y-nuestra-senora-de-la-esperanza', { f: 
   h: 'Fundada el 27 de abril de 1927, con reglas aprobadas en octubre de ese año, añadió a la Semana Santa granadina la advocación de Nuestra Señora de la Esperanza. La Virgen es una imagen de vestir de José Risueño, de 1718, que fue titular de la antigua Cofradía del Entierro de Cristo con el título de las Tres Necesidades. El Gran Poder actual es de Manuel Ramos Corona (1996).' });
 add('la-canilla-granada', { exact: 'cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus' }, { f: '1925',
   h: 'Fundada en 1925, vio aprobados sus estatutos en 1926 por el cardenal Casanova y ese mismo año realizó su primera estación de penitencia. La Soledad de Nuestra Señora es obra de Manuel González (principios del siglo XIX) y el Dulce Nombre de Jesús, de raíces dominicas, se atribuye a Torcuato Ruiz del Peral. El Viernes Santo a las tres de la tarde la Soledad llega al Campo del Príncipe, en el Realejo, para acompañar al Cristo de los Favores.' });
+// La misma cofradía sale el Viernes Santo solo con el paso de la Soledad hasta el monumento al Cristo de los Favores (Campo del
+// Príncipe): horario oficial de la Real Federación 2025, «Sólo el Paso de la Soledad de Nuestra Señora»
+// (https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf, p. 27). Ficha propia por
+// cortejo (5-nov-2026, nombre elegido por Pablo). «Tres de la Tarde»: así la nombra la Federación en el Viernes Santo
+// (https://hermandadesdegranada.com/viernes-santo/). La imagen ya cuenta en la ficha del Martes Santo (obrasDe): no se repite en su imaginero.
+// Historia (historias.json), sede y paso (fichas-correcciones.json), con sus fuentes. Sin hábito: ninguna fuente lo da para esta salida.
+add('soledad-de-nuestra-senora-humildad-granada', { exact: 'cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus' }, {
+  dia: 'Viernes Santo', pos: 0, n: 'Soledad de Nuestra Señora (Humildad)', f: '1925', sinMarchas: true, obrasDe: 'la-canilla-granada',
+  t: [['Soledad de Nuestra Señora', 'Manuel González de los Santos, s. XIX']],
+  al: ['Tres de la Tarde'], alFuente: 'https://hermandadesdegranada.com/viernes-santo/' });
 add('los-gitanos-granada', 'cristo-del-consuelo', { f: '1939',
   h: 'Fundada el 14 de mayo de 1939. Su Cristo del Consuelo, de José Risueño (1698), se veneró primero con el título de Cristo de las Cuevas; la imagen original recibe culto en la Abadía del Sacromonte y la que procesiona es una copia hecha «por puntos» por Miguel Zúñiga Navarro entre 1987 y 1989. La Virgen del Sacromonte, atribuida a Manuel González (siglo XIX), era conocida como la Dolorosa de las Santas Cuevas.' });
 add('los-estudiantes-granada', 'esclavitud-del-santisimo-sacramento', { f: '1979',

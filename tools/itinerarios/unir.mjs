@@ -168,13 +168,41 @@ function limpiar(ciudad, pts) {
   return { pts: out, quitados, horasRescatadas };
 }
 
+// Columnas que la rejilla lee juntas (cabeceras pegadas): las primeras «filas» puntos son de una hermandad concreta (slug) y el
+// resto sigue como columna aparte. Cada caso, con su página del PDF.
+// · Granada, Viernes Santo, «El Llamador» 2026 (GRANADA 26.pdf), p. 32: la columna «TRES TARDE» (Santo Domingo) va de 13:30 a 16:00,
+//   «SALE (13:45)» … «ENTRA»; en la fila de las 16:00 la «SALIDA» es de la columna vecina. Es la Soledad de la Humildad (p. 30).
+const PARTIR = [
+  { ciudad: 'granada', dia: 'VIERNES SANTO', cabecera: 'TRES TARDE ESCOLAPIOS FERROVIARIOS', filas: 6, slug: 'soledad-de-nuestra-senora-humildad-granada',
+    lugares: { SALE: 'SALIDA', 'ENTRA SALIDA': 'ENTRA' }, resto: { cabecera: 'ESCOLAPIOS FERROVIARIOS', lugares: { 'ENTRA SALIDA': 'SALIDA' } } },
+];
+function partir(ciudad, cols) {
+  const res = [];
+  for (const c of cols) {
+    const p = PARTIR.find((x) => x.ciudad === ciudad && x.dia === c.dia && x.cabecera === c.cabecera);
+    if (!p) { res.push(c); continue; }
+    const pon = (pts, l) => pts.map((q) => (l[q.lugar] ? { ...q, lugar: l[q.lugar] } : q));
+    res.push({ ...c, cabecera: c.cabecera, slug: p.slug, puntos: pon(c.puntos.slice(0, p.filas), p.lugares) });
+    const resto = pon(c.puntos.slice(p.filas - 1), p.resto.lugares);
+    res.push({ ...c, cabecera: p.resto.cabecera, puntos: resto.slice(resto[0].lugar === 'SALIDA' ? 0 : 1) });
+  }
+  return res;
+}
+
 const out = { generado: new Date().toISOString(), anio: 2026, hermandades: {}, sin_emparejar: [] };
 for (const [ciudad, f, fuente] of FUENTES) {
   const p = path.join(DIR, f); if (!fs.existsSync(p)) continue;
   const J = JSON.parse(fs.readFileSync(p, 'utf8'));
-  const hs = D.hermandades.filter((h) => h.ciudad === ciudad);
-  for (const c0 of J.columnas) {
+  // las fichas con columna asignada a mano (PARTIR) no compiten por las demás columnas
+  const hs = D.hermandades.filter((h) => h.ciudad === ciudad && !PARTIR.some((p) => p.slug === h.slug));
+  const hsTodas = D.hermandades.filter((h) => h.ciudad === ciudad);
+  for (const c0 of partir(ciudad, J.columnas)) {
     const c = ciudad === 'cadiz' ? horasCadiz(J, c0) : c0;
+    if (c.slug) { // columna asignada a mano (PARTIR)
+      const h = hsTodas.find((x) => x.slug === c.slug); if (!h) { console.warn('PARTIR: no está la ficha', c.slug); continue; }
+      out.hermandades[h.slug] = { ciudad, dia: h.dia, fuente, pdf: J.fuente, tramos: { paso: c.puntos } };
+      continue;
+    }
     const dia = DIA[c.dia] || null;
     let cands = hs.filter((h) => !dia || h.dia === dia || (dia === 'Madrugá' && /Madrug/.test(h.dia)) || (dia === 'Jueves Santo' && /Jueves/.test(h.dia)));
     if (!cands.length) cands = hs;

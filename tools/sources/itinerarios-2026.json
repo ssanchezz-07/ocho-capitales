@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-24T08:09:49.648Z",
+ "generado": "2026-11-04T23:45:05.075Z",
  "anio": 2026,
  "hermandades": {
   "la-borriquilla-granada": {
@@ -39124,6 +39124,41 @@
      "15:15"
     ]
    }
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "ciudad": "granada",
+   "dia": "Viernes Santo",
+   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "pdf": "GRANADA 26.pdf",
+   "tramos": {
+    "paso": [
+     {
+      "fila": "13:30",
+      "lugar": "SALIDA",
+      "hora": "13:45"
+     },
+     {
+      "fila": "14:00",
+      "lugar": "Plaza del Realejo"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "Molinos"
+     },
+     {
+      "fila": "15:00",
+      "lugar": "CAMPO DEL PRÍNCIPE"
+     },
+     {
+      "fila": "15:30",
+      "lugar": "Molinos"
+     },
+     {
+      "fila": "16:00",
+      "lugar": "ENTRA"
+     }
+    ]
+   }
   }
  },
  "sin_emparejar": [
@@ -39141,12 +39176,12 @@
   {
    "ciudad": "granada",
    "dia": "VIERNES SANTO",
-   "cabecera": "TRES TARDE ESCOLAPIOS FERROVIARIOS",
+   "cabecera": "ESCOLAPIOS FERROVIARIOS",
    "sub": "",
    "opciones": [
-    "los-ferroviarios-granada:3",
-    "los-escolapios-granada:3",
-    "los-favores-granada:-6"
+    "los-ferroviarios-granada:5",
+    "los-escolapios-granada:5",
+    "los-favores-granada:-4"
    ]
   },
   {

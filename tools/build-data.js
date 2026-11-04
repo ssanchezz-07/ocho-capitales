@@ -25,12 +25,14 @@ const CITY_NAMES = { sevilla:'Sevilla', malaga:'Málaga', granada:'Granada', cor
 // Córdoba: la página de agrupadas muestra el contador «3» encima de 4 fichas (Lágrimas, Presentación, Dolores de Alcolea
 // y La O); se cuentan las 4 fichas. Una corporación con dos salidas cuenta una vez: Fusionadas (Málaga), La Cañilla
 // (Granada), la Resurrección y Columna (Cádiz, dos entradas en el menú del Consejo) y la Vera Cruz (Jaén, dos en el de la Agrupación). Sevilla: la lista está en las páginas por día que cuelgan de la URL de la fuente.
+// 5-nov (Pablo, «que cuadren»): Málaga, 42 hermandades de la Agrupación más su titular, el Resucitado; Cádiz, 31 (la Humillación es
+// un cortejo de la Piedad). «extra»: más fuentes de la fila de hermandades en los datos clave.
 const CIFRAS = {
   sevilla: { n: 71, nombre: 'hermandades', corto: '71 hermandades (11 de Vísperas)', texto: '71 de penitencia en el Consejo: 60 de Domingo de Ramos a Resurrección y 11 en las Vísperas, el Viernes de Dolores y el Sábado de Pasión', fuente: ['Consejo General de Hermandades y Cofradías', 'https://www.hermandades-de-sevilla.org/hermandades/penitencia/'], fuera: 'La Borriquita, que tiene ficha propia, sale con la Hermandad del Amor.' },
-  malaga: { n: 51, nombre: 'hermandades', corto: '51 hermandades (43 de la Agrupación y 8 de Vísperas)', texto: '43 en la Agrupación de Cofradías, contando las Fusionadas como una sola; en la calle son 45 cofradías, porque las Fusionadas salen tres días', fuente: ['Agrupación de Cofradías', 'https://agrupaciondecofradias.com/hermandades/'], fuera: 'Además, 8 cofradías de Vísperas que no pertenecen a la Agrupación: Medinaceli (Martiricos), Dolores del Puerto de la Torre y Dolores de Churriana, el Viernes de Dolores; Mutilado (Clemencia), Desamparados, Verdad y Sagrario, Luz y Mar y Buen Camino (Gamarra), el Sábado de Pasión.' },
+  malaga: { n: 50, nombre: 'hermandades', corto: '50 hermandades (42 de la Agrupación y 8 de Vísperas)', texto: '42 hermandades en la Agrupación de Cofradías, contando las Fusionadas como una sola, más el Cristo Resucitado, titular de la propia Agrupación; en la calle son 45 cortejos, porque las Fusionadas salen tres días', fuente: ['Agrupación de Cofradías', 'https://agrupaciondecofradias.com/hermandades/'], extra: ['https://agrupaciondecofradias.com/hermandades/fusionadas/', 'https://agrupaciondecofradias.com/titulares/'], fuera: 'Además, 8 cofradías de Vísperas que no pertenecen a la Agrupación: Medinaceli (Martiricos), Dolores del Puerto de la Torre y Dolores de Churriana, el Viernes de Dolores; Mutilado (Clemencia), Desamparados, Verdad y Sagrario, Luz y Mar y Buen Camino (Gamarra), el Sábado de Pasión.' },
   granada: { n: 32, nombre: 'cofradías', corto: '32 cofradías (34 cortejos)', texto: '32 en la Real Federación, que forman 34 cortejos', fuente: ['Real Federación de Hermandades y Cofradías', 'https://hermandadesdegranada.com/'], fuera: 'La Cañilla sale tres veces: el Martes Santo, el Viernes Santo («Tres de la Tarde») y el Domingo de Resurrección (Facundillos).' },
   cordoba: { n: 44, nombre: 'hermandades', corto: '44 hermandades (42 de la Agrupación)', texto: '42 en la Agrupación: 38 en la carrera oficial por días y 4 agrupadas que procesionan aparte (Lágrimas, Presentación al Pueblo, Dolores de Alcolea y La O)', fuente: ['Agrupación de Hermandades y Cofradías', 'https://www.hermandadesdecordoba.es/hermandades-agrupadas/'], fuera: 'Además, la Sangre de El Higuerón y la pro-hermandad del Traslado al Sepulcro, que salen el Sábado de Pasión y no pertenecen a la Agrupación.' },
-  cadiz: { n: 32, nombre: 'hermandades', corto: '32 hermandades (30 del Consejo)', texto: '30 de penitencia en el Consejo Local, con 31 salidas: 28 de Domingo de Ramos a Resurrección y 2 en las Vísperas (Servitas y Obediencia); la Archicofradía de la Resurrección sale el Martes Santo (la Columna) y el Domingo de Resurrección', fuente: ['Consejo Local de Hermandades y Cofradías', 'https://consejocofradiascadiz.es/hermandades-y-cofradias-penitencia'], fuera: 'Además, Ecce Mater Tua (Sábado Santo) y la Humillación (Sábado de Pasión), que no figuran en la nómina del Consejo.' },
+  cadiz: { n: 31, nombre: 'hermandades', corto: '31 hermandades (30 del Consejo)', texto: '30 de penitencia en el Consejo Local, con 31 salidas: 28 de Domingo de Ramos a Resurrección y 2 en las Vísperas (Servitas y Obediencia); la Archicofradía de la Resurrección sale el Martes Santo (la Columna) y el Domingo de Resurrección', fuente: ['Consejo Local de Hermandades y Cofradías', 'https://consejocofradiascadiz.es/hermandades-y-cofradias-penitencia'], extra: ['https://consejocofradiascadiz.es/piedad', 'https://consejocofradiascadiz.es/la-palabra-del-periodista-pablo-manuel-durio-anuncia-ya-una-nueva-semana-santa'], fuera: 'Además, Ecce Mater Tua (Sábado Santo), que no figura en la nómina del Consejo. La Humillación (Sábado de Pasión) es un cortejo de la cofradía de la Piedad.' },
   huelva: { n: 28, nombre: 'hermandades', corto: '28 hermandades (27 del Consejo)', texto: '27 de penitencia en el Consejo: 26 de Domingo de Ramos a Resurrección y 1 en las Vísperas (el Prado)', fuente: ['Consejo de Hermandades y Cofradías', 'https://consejohermandadeshuelva.es/hermandades-semana-santa-huelva/'], fuera: 'Además, La Bendición, del Sábado de Pasión, que no figura en la nómina del Consejo.' },
   almeria: { n: 23, nombre: 'hermandades', corto: '23 hermandades (22 de la Agrupación)', texto: '22 de penitencia en la Agrupación: 21 de Domingo de Ramos a Resurrección y 1 el Sábado de Pasión (la Unidad)', fuente: ['Agrupación de Hermandades y Cofradías', 'https://cofradiasdealmeria.es/penitencia/'], fuera: 'Además, la salida del Cristo de la Escucha en la Madrugá, que no figura en la nómina de la Agrupación.' },
   jaen: { n: 20, nombre: 'cofradías', corto: '20 cofradías (21 cortejos)', texto: '20 de Pasión en la Agrupación, con 21 cortejos de Domingo de Ramos a Resurrección: la Vera Cruz sale el Domingo de Ramos (Oración en el Huerto) y el Jueves Santo («los Civiles»)', fuente: ['Agrupación de Cofradías y Hermandades', 'https://cofradiasjaen.org/'], fuera: '' },
@@ -54,7 +56,7 @@ const datosYClaves = (c) => {
   const t = CAPTXT[c.id]; const k = CIFRAS[c.id];
   if (!t) return { datos: datosCap(c.id, c.datos), datos_fuentes: [], claves: c.claves, claves_fuentes: [] };
   const datos = datosCap(c.id, t.datos.map((d) => [d.k, d.texto]));
-  const datos_fuentes = datos.map((r) => { const d = t.datos.find((x) => x.k === r[0]); return d ? d.fuentes : k ? [k.fuente[1]] : []; });
+  const datos_fuentes = datos.map((r) => { const d = t.datos.find((x) => x.k === r[0]); return d ? d.fuentes : k ? [k.fuente[1], ...(k.extra || [])] : []; });
   return { datos, datos_fuentes, claves: t.claves.map((x) => x.texto), claves_fuentes: t.claves.map((x) => x.fuentes) };
 };
 
@@ -188,7 +190,8 @@ for (const c of raw) {
       if (!found) found = { n: e.n };
       let day = c.dias.find((d) => d.dia === e.dia);
       if (!day) { day = { dia: e.dia, hs: [] }; c.dias.push(day); }
-      day.hs.push(found);
+      // pos: sitio en la jornada (0, la primera en salir); sin pos, al final
+      if (e.pos != null) day.hs.splice(e.pos, 0, found); else day.hs.push(found);
     }
     c.dias = c.dias.filter((d) => d.hs.length);
   }
@@ -213,7 +216,7 @@ for (const c of raw) {
         if (e.t) h.t = e.t.map((t) => t[1] ? t[0] + ' — ' + t[1] : t[0]);
         h.src = e.url || (e.off ? AG + e.off + '/' : '');
         if (e.web) h.web = e.web;
-        if (c.id === 'granada' && e.url) { const pk = e.url.replace(/\/$/, '').split('/').pop(); if (GR_MARCHAS[pk]) h.marchas = GR_MARCHAS[pk]; }
+        if (c.id === 'granada' && e.url && !e.sinMarchas) { const pk = e.url.replace(/\/$/, '').split('/').pop(); if (GR_MARCHAS[pk]) h.marchas = GR_MARCHAS[pk]; }
         if (c.id === 'almeria' && ALM_MUS[base]) { h.musOf = ALM_MUS[base]; h.m = ALM_MUS[base].map((x) => x.titular + ': ' + x.banda).join('. ') + '. (Acompañamiento oficial 2026)'; }
       } else if (ENR[c.id]) { console.warn('SIN ENRIQUECER:', base); }
       const slug = uniqueSlug(base);
@@ -226,7 +229,8 @@ for (const c of raw) {
           if (ta && ta.autor) { autorRaw = (ta.atribucion ? 'Atribuido a ' : '') + ta.autor + (ta.anio ? ', ' + ta.anio : ''); autorFuente = ta.fuente; }
         }
         const a = parseAuthor(autorRaw);
-        if (a) {
+        // obrasDe: la misma imagen ya cuenta en otra ficha de la misma cofradía (otra salida): no se repite en su imaginero
+        if (a && !(e && e.obrasDe)) {
           if (!imagineros.has(a.nombre)) imagineros.set(a.nombre, { nombre: a.nombre, obras: [], ciudades: new Set() });
           const im = imagineros.get(a.nombre);
           im.obras.push({ titular: nom.trim(), hermandad: h.n, hermandad_slug: slug, ciudad: c.id, detalle: autorRaw, atrib: a.atrib });
@@ -244,6 +248,7 @@ for (const c of raw) {
         slug, nombre: h.n, ciudad: c.id, dia: diaN, orden: idx + 1, sede: h.s || '', fundacion: h.f || '',
         titulares, paso: h.p || '', musica: h.m || '', historia: h.h || '', nombre_oficial: h.no || '', fuente_url: h.src || '', web: h.web || '', imagen: imgOf(slug), marchas: h.marchas || [], musica_oficial: h.musOf || [],
         bandas: bs.map((b) => expandName(b.nombre)),
+        ...(e && e.al ? { alias: e.al, alias_fuente: e.alFuente } : {}), // nombre popular, con su fuente (entra en el buscador)
       });
     });
   }

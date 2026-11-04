@@ -45,6 +45,14 @@
    "fuente_url": { "valor": "https://semanasantadeandalucia.es/hermandades/hermandad-del-santo-cristo-de-la-escucha/", "nota": "no tiene ficha en cofradiasdealmeria.es" },
    "fundacion": { "valor": "1958", "fuente": "https://www.parroquiamontserrat.com/archivo/archivo-2022/", "nota": "erigida por el obispo Ródenas en 1958" },
    "nombre_oficial": { "valor": "Hermandad del Santo Cristo de la Escucha", "fuente": "https://semanasantadeandalucia.es/hermandades/hermandad-del-santo-cristo-de-la-escucha/" }
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "sede": { "valor": "Iglesia de Santo Domingo", "fuente": "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf", "nota": "horario oficial 2025, p. 27: «Iglesia de Santo Domingo. Parroquia de Santa Escolástica»; igual en el libro de horarios 2026 de Perdón y Aurora, p. 39" },
+   "paso": { "valor": "Un paso: la Soledad de Nuestra Señora.", "fuente": "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf", "nota": "horario oficial 2025, p. 27: «Sólo el Paso de la Soledad de Nuestra Señora»; «1 paso» en «El Llamador» 2026, p. 30" }
+  },
+  "humillacion-piedad-cadiz": {
+   "sede": { "valor": "Iglesia de Santiago Apóstol", "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf", "nota": "«Cruz de Guía» de Radio Cádiz 2026, pág. 6: «Iglesia de Santiago Apóstol. Un paso.» (el PDF de Canal Sur que se citaba da 404)" },
+   "paso": { "valor": "Un paso.", "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf", "nota": "«Cruz de Guía» de Radio Cádiz 2026, pág. 6" }
   }
  }
 }

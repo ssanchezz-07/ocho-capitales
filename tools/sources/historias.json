@@ -2675,6 +2675,18 @@
    "revisado": "2026-11-03",
    "estado": "completa",
    "nota": "El campo fundacion de portal.json dice 1990; la fuente habla solo de «los años 90» (agrupación parroquial en 1994, hermandad en 2000)."
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "texto": "El Viernes Santo, la Cofradía del Señor de la Humildad, Soledad de Nuestra Señora y Dulce Nombre de Jesús sale solo con el paso de la Soledad de Nuestra Señora. Deja la iglesia de Santo Domingo, llega al monumento al Cristo de los Favores, en el Campo del Príncipe, y vuelve a su templo. La Federación la nombra en esa jornada «Tres de la Tarde», como el acto que se celebra junto al monumento.\n\nEsta salida viene de 1926, el año de su primera estación de penitencia. La cofradía decidió entonces salir dos veces: el Miércoles Santo con el Señor de la Humildad y el Viernes Santo con la Soledad, para rezar la Oración de las Cinco Llagas ante el Cristo de los Favores. En 2026, al cumplirse el centenario de aquella primera salida de la Soledad, la imagen fue designada para presidir, junto al Cristo de los Favores, el Vía Crucis oficial de las hermandades y cofradías de Granada en la catedral.",
+   "fuentes": [
+    "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
+    "https://hermandadesdegranada.com/viernes-santo/",
+    "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf",
+    "https://perdonyaurora.com/wp-content/uploads/2026/03/Libro-Horarios-26.pdf"
+   ],
+   "revisado": "2026-11-05",
+   "estado": "completa",
+   "nota": "Ficha nueva (5-nov). Salida solo con la Soledad, recorrido y vuelta: horario oficial 2025, p. 27. «Tres de la Tarde»: página del Viernes Santo de la Federación. Las dos salidas desde 1926 y la Oración de las Cinco Llagas: ficha de la Federación. Centenario y Vía Crucis de 2026: libro de horarios 2026 de Perdón y Aurora, p. 75 (curiosidades de los Favores). La Cañilla sale hoy el Martes Santo."
   }
  }
 }
