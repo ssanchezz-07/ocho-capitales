@@ -1627,13 +1627,29 @@ function pagesLegales() {
     lp('Si envías una aportación, se recoge lo que escribes en el formulario: qué quieres enviar, la capital, la hermandad o página, el mensaje y el enlace a la fuente. Tu correo, solo si lo das.'),
     lp('Se usa para revisar la aportación y, si dejaste tu correo, para contestarte. El correo no se publica.'),
     lp('La base legal es tu consentimiento, que das al enviar el formulario. Puedes retirarlo cuando quieras escribiendo al correo de contacto.'),
-    formApi ? lp('El formulario se guarda en Cloudflare, que aloja la web. Para evitar envíos repetidos se guarda también una huella cifrada de la dirección IP, que cambia cada día y no permite saber cuál era.')
-      : lp('El formulario se envía a través de Web3Forms, un servicio externo que hace llegar el mensaje por correo al titular.'),
-    lp('Los mensajes se guardan solo el tiempo necesario para revisarlos y responder.'),
+    // Web3Forms, según su política de privacidad (web3forms.com/privacy, leída el 4-nov-2026): opera desde la India, usa AWS,
+    // Cloudflare y Hetzner, transfiere desde el EEE con cláusulas contractuales tipo y borra cada envío a los tres años como máximo.
+    ...(formApi ? [
+      lp('El formulario se guarda en Cloudflare, que aloja la web. Para evitar envíos repetidos se guarda también una huella cifrada de la dirección IP, que cambia cada día y no permite saber cuál era.'),
+      lp('Los mensajes se guardan solo el tiempo necesario para revisarlos y responder.'),
+    ] : [
+      lp('El formulario no lo guarda Ocho Capitales: lo envía Web3Forms, una plataforma externa que hace llegar el mensaje por correo al titular. Los detalles están en el apartado siguiente.'),
+      lp('Ocho Capitales usa los mensajes solo el tiempo necesario para revisarlos y responder.'),
+    ]),
     ...(T.analitica ? [h2('Visitas'), lp('Para saber cuántas visitas recibe, la web usa Cloudflare Web Analytics, que las cuenta de forma agregada, sin cookies y sin identificar a quien visita.')] : []),
-    h2('Alojamiento'),
-    lp('La web está alojada en Cloudflare Pages. Como cualquier servidor, recibe la dirección IP de tu dispositivo para poder enviarte las páginas.'),
-    h2('Contenidos de otras webs'),
+    h2('Plataformas externas'),
+    lp('Para funcionar, la web se apoya en estas plataformas de otras empresas:'),
+    `<ul>${[
+      ...(formApi ? [] : [ll('Web3Forms, para enviar los mensajes del formulario de Colabora;')]),
+      ll('Cloudflare Pages, que aloja la web y entrega sus páginas;'),
+      ll('los medios de comunicación, desde cuya web se cargan algunas fotos de noticias;'),
+      ll('YouTube y Spotify, solo como enlaces que abres tú.'),
+    ].join('')}</ul>`,
+    ...(formApi ? [] : [
+      lpl('Web3Forms opera desde la India y usa proveedores como Amazon Web Services, Cloudflare y Hetzner, que pueden tratar los datos fuera de la Unión Europea. Para esas transferencias aplica las cláusulas contractuales tipo de la Comisión Europea, según su {política de privacidad}.', 'https://web3forms.com/privacy', true),
+      lp('Web3Forms conserva cada envío un máximo de tres años y después lo borra.'),
+    ]),
+    lp('Cloudflare Pages, como cualquier servidor, recibe la dirección IP de tu dispositivo para poder enviarte las páginas.'),
     lp('Las fotos de algunas noticias se cargan directamente desde la web de su medio, que recibe así la dirección IP de tu dispositivo. Ocho Capitales no le dice desde qué página llegas.'),
     lp('Los enlaces a YouTube, Spotify y otras webs solo se abren si los pulsas: no hay vídeos incrustados.'),
     h2('Tus derechos'),

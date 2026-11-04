@@ -334,12 +334,6 @@
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
   },
   {
-   "texto": "El formulario se envía a través de Web3Forms, un servicio externo que hace llegar el mensaje por correo al titular.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
    "texto": "Los mensajes se guardan solo el tiempo necesario para revisarlos y responder.",
    "tipo": "web",
    "fuentes": [],
@@ -347,12 +341,6 @@
   },
   {
    "texto": "Para saber cuántas visitas recibe, la web usa Cloudflare Web Analytics, que las cuenta de forma agregada, sin cookies y sin identificar a quien visita.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
-   "texto": "La web está alojada en Cloudflare Pages. Como cualquier servidor, recibe la dirección IP de tu dispositivo para poder enviarte las páginas.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
@@ -503,6 +491,70 @@
   },
   {
    "texto": "Además, guarda una copia de las páginas que visitas, y de algunas que estás a punto de abrir, para que carguen antes y se puedan abrir sin conexión.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "El formulario no lo guarda Ocho Capitales: lo envía Web3Forms, una plataforma externa que hace llegar el mensaje por correo al titular. Los detalles están en el apartado siguiente.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales usa los mensajes solo el tiempo necesario para revisarlos y responder.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Para funcionar, la web se apoya en estas plataformas de otras empresas:",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Web3Forms, para enviar los mensajes del formulario de Colabora;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Cloudflare Pages, que aloja la web y entrega sus páginas;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "los medios de comunicación, desde cuya web se cargan algunas fotos de noticias;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "YouTube y Spotify, solo como enlaces que abres tú.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Web3Forms opera desde la India y usa proveedores como Amazon Web Services, Cloudflare y Hetzner, que pueden tratar los datos fuera de la Unión Europea. Para esas transferencias aplica las cláusulas contractuales tipo de la Comisión Europea, según su {política de privacidad}.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://web3forms.com/privacy"
+   ],
+   "nota": "Página legal (pulido, 4-nov-2026): según la política de privacidad de Web3Forms, leída el 4-nov-2026 («We operate from India…», «Standard Contractual Clauses», «retained for a maximum of three years»)."
+  },
+  {
+   "texto": "Web3Forms conserva cada envío un máximo de tres años y después lo borra.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://web3forms.com/privacy"
+   ],
+   "nota": "Página legal (pulido, 4-nov-2026): según la política de privacidad de Web3Forms, leída el 4-nov-2026 («We operate from India…», «Standard Contractual Clauses», «retained for a maximum of three years»)."
+  },
+  {
+   "texto": "Cloudflare Pages, como cualquier servidor, recibe la dirección IP de tu dispositivo para poder enviarte las páginas.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
