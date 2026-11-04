@@ -3,9 +3,9 @@
 ## RETOMAR AQUÍ (2026-11-04 · bandas con dos fichas hechas; en marcha por orden de Pablo: «quitar duplicidades YA»)
 Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada sobre origin/main `2a368d4`. **No hay nada subido de los bloques 0 y A.** Se suben juntos.
 
-**0. Bandas con dos fichas: hecho y en commit (`f1c507f`); falta el auditor y el sí de Pablo.**
-- 29 parejas unidas con su fuente en `tools/sources/bandas-unidas.json`. Las fuentes son el canal oficial de YouTube, la web oficial, Wikipedia, Federband o prensa. Quedan **205 bandas** (antes, 234).
-- 6 parejas apuntadas como «distintas», también con su fuente:
+**0. Bandas con dos fichas: hecho, auditado (auditor-datos: APTO tras quitar Cruz del Humilladero) y en commit (`f1c507f`, `5744ec2`); falta el sí de Pablo.**
+- 28 parejas unidas con su fuente en `tools/sources/bandas-unidas.json`. Las fuentes son el canal oficial de YouTube, la web oficial, Wikipedia, Federband o prensa. Quedan **206 bandas** (antes, 234). Correcciones con fuente: la Soledad de Mena pasa a Málaga y «San Isidro» de Churriana a «Banda de Música de Churriana».
+- 8 parejas apuntadas como «distintas», también con su fuente (con las dos bandas de música de Almogía frente a sus cornetas):
   - las juveniles de Santa María Magdalena, Virgen de los Reyes, Centuria Macarena y Cruz Roja;
   - la banda de música de las Cigarreras.
 - Cómo se ha hecho:
@@ -21,7 +21,7 @@ Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada 
   - hay 13.982 archivos.
 - `comprobar-marchas` avisa de las bandas con nombre casi igual en la misma localidad.
   - Para quitar el aviso, cada pareja se apunta en `unidas` o en `distintas`, siempre con fuente.
-  - **Queda 1 sin resolver**, porque no he encontrado fuente: Villalba del Alcor, «Banda de Música de la Asociación Músico-Cultural Nuestra Señora del Carmen» y «Banda de Música Nuestra Señora del Carmen».
+  - **Quedan 2 sin resolver**, sin fuente: Cruz del Humilladero y su «Banda Juvenil» (Málaga; la guía las da aparte), y Villalba del Alcor, «Banda de Música de la Asociación Músico-Cultural Nuestra Señora del Carmen» y «Banda de Música Nuestra Señora del Carmen».
 - **Pendiente, va aparte:** algunas hermandades se enlazan a una banda solo por el nombre que da la guía, sin el pueblo, y algunas acaban en la banda equivocada.
   - Humildad y Paciencia (Cádiz): la guía dice «BM Ntro. Padre Jesús Nazareno (Rota)» y se enlaza a la de San Fernando.
   - El Nazareno (Huelva): se enlaza a la BCT N. P. Jesús Nazareno de Arahal.
