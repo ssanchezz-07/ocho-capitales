@@ -3404,18 +3404,26 @@
   },
   "esperanza-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanza_Trono_3.jpg",
-    "titulo": "File:Esperanza Trono 3.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Archicofradía de la Esperanza (Málaga)",
+    "licencia": "cedida a Ocho Capitales",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "permiso": "Fotos de la Archicofradía de la Esperanza (Málaga), publicadas en su Instagram oficial (enlazado desde pasoyesperanza.es); la hermandad dio permiso a Pablo Sánchez para usarlas en Ocho Capitales el 4-nov-2026.",
+    "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Esperanza Coronada",
     "titular": "María Santísima de la Esperanza Coronada",
-    "recorte": [
-     0.48,
-     0.04,
-     0.25,
-     0.5
-    ]
+    "foco": "50% 30%"
+   },
+   "cristo": {
+    "autor": "Archicofradía de la Esperanza (Málaga)",
+    "licencia": "cedida a Ocho Capitales",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "permiso": "Fotos de la Archicofradía de la Esperanza (Málaga), publicadas en su Instagram oficial (enlazado desde pasoyesperanza.es); la hermandad dio permiso a Pablo Sánchez para usarlas en Ocho Capitales el 4-nov-2026.",
+    "local": "scripts/cedidas/malaga/esperanza-malaga-cristo.jpg",
+    "titulo": "Cedida: Jesús Nazareno del Paso",
+    "titular": "Jesús Nazareno del Paso",
+    "foco": "55% 25%"
    }
   },
   "amor-malaga": {

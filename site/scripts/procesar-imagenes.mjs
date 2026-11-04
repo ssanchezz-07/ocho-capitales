@@ -48,7 +48,14 @@ async function download(url, file) {
   throw new Error('demasiados reintentos');
 }
 
-async function processOne(kind, slug, meta) {
+// Original de la foto: de Wikimedia Commons o, si es una foto cedida por la hermandad («local»), del archivo guardado
+// en site/scripts/cedidas/ (el permiso queda anotado en «permiso» en data/imagenes-titulares.json)
+async function original(kind, slug, meta) {
+  if (meta.local) {
+    const file = path.join(SITE, meta.local);
+    if (!fs.existsSync(file)) throw new Error('no está el archivo cedido ' + meta.local);
+    return file;
+  }
   const title = fileTitle(meta.pagina) || meta.titulo;
   if (!title) throw new Error('sin título de archivo');
   // con recorte se parte del original completo: el titular ocupa solo una parte de la foto
@@ -56,7 +63,11 @@ async function processOne(kind, slug, meta) {
   if (!src) throw new Error('no encontrado en Commons');
   // La caché lleva el nombre del archivo de Commons: si una hermandad cambia de foto, no se reutiliza el original anterior
   const clave = title.replace(/^File:/, '').replace(/[^\w.-]+/g, '_').slice(0, 80);
-  const orig = await download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
+  return download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
+}
+
+async function processOne(kind, slug, meta) {
+  const orig = await original(kind, slug, meta);
   const img = sharp(orig, { failOn: 'none' }).rotate();
   const m = await img.metadata();
   const fullW = m.autoOrient ? m.autoOrient.width : m.width;
@@ -78,6 +89,7 @@ async function processOne(kind, slug, meta) {
   const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
   if (meta.foco && !out.escudo) out.foco = meta.foco;
   if (rc) out.recorte = meta.recorte;
+  if (meta.local) Object.assign(out, { cedida: true, local: meta.local });
   return out;
 }
 
@@ -118,7 +130,7 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
     if (retirada(meta, slug, tipo)) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
-    if (prevT && prevT.pagina === meta.pagina && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
+    if (prevT && prevT.pagina === meta.pagina && (prevT.local || '') === (meta.local || '') && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
     try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
     catch (e) { fail++; console.log('FALLO', 't', slug, tipo, e.message); }
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));

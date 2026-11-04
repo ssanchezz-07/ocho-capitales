@@ -78,7 +78,7 @@ const MAPA_FILE = path.join(DIR, 'data', 'mapa-andalucia.json');
 const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'utf8')) : null;
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
-const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, foco: x.foco, recorte: !!x.recorte });
+const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, foco: x.foco, recorte: !!x.recorte, cedida: !!x.cedida });
 // Fotos retiradas tras comprobar su ficha en Commons (tools/sources/fotos-retiradas.json): no salen ni como foto principal ni en el díptico
 const FRET_FILE = path.join(DIR, '..', 'tools', 'sources', 'fotos-retiradas.json');
 const FRET_ALL = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')) : {};
@@ -299,6 +299,8 @@ function heroPreload(im, sizes, widths) {
 function credit(im) {
   if (!im) return '';
   if (im.partes) return `Izquierda: ${credit(im.partes[0])}. Derecha: ${credit(im.partes[1])}`;
+  // Foto cedida por la propia hermandad (no de Commons): su nombre, enlazado a su web o red oficial
+  if (im.cedida) return `Foto: ${im.pagina ? `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${esc(im.autor)}</a>` : esc(im.autor)} · cedida a Ocho Capitales${im.recorte ? ' (recortada)' : ''}`;
   const lic = im.licurl ? `<a href="${esc(im.licurl)}" rel="license noopener" target="_blank">${esc(im.licencia)}</a>` : esc(im.licencia);
   return `Imagen: ${esc(im.autor || 'autor en Wikimedia Commons')}, ${lic}, vía <a href="${esc(im.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>${im.recorte ? ' (recortada)' : ''}`;
 }
@@ -1552,7 +1554,7 @@ function pageAcerca() {
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
 <h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada mañana a las 7:00 de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
-<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Todas las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
+<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia, salvo las fotos cedidas por las propias hermandades, que lo indican en su crédito.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }
 function pageOffline() {
@@ -1700,7 +1702,7 @@ function dipCalle(h) {
     const x = d[tipo]; if (!x || !x.local) continue;
     // la hoja ocupa todo el ancho del móvil (unos 1000 px reales en pantallas de alta densidad): la versión más grande
     const w = x.sizes.at(-1);
-    out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', ') + (x.recorte ? ' (recortada)' : ''), url: x.pagina || '' };
+    out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: (x.cedida ? `Foto: ${x.autor} · cedida a Ocho Capitales` : [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', ')) + (x.recorte ? ' (recortada)' : ''), url: x.pagina || '' };
   }
   return Object.keys(out).length ? { dip: out } : {};
 }

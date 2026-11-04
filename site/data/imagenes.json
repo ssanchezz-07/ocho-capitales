@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03T23:31:23.955Z",
+ "generado": "2026-11-04T14:48:26.909Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8456,17 +8456,32 @@
      960
     ],
     "escudo": false,
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanza_Trono_3.jpg",
-    "recorte": [
-     0.48,
-     0.04,
-     0.25,
-     0.5
-    ],
+    "autor": "Archicofradía de la Esperanza (Málaga)",
+    "licencia": "cedida a Ocho Capitales",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
     "titular": "María Santísima de la Esperanza Coronada"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Archicofradía de la Esperanza (Málaga)",
+    "licencia": "cedida a Ocho Capitales",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "foco": "55% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/esperanza-malaga-cristo.jpg",
+    "titular": "Jesús Nazareno del Paso"
    }
   },
   "amor-malaga": {
@@ -9508,6 +9523,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_Padre_Jesus_2.jpg\"|\"\"|\"50% 20%\"|\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_del_Amparo_2.jpg\"|[0.22,0.18,0.5,0.5]|\"\""
+  },
+  "esperanza-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"\"|\"55% 25%\"|\"https://www.instagram.com/pasoyesperanza\"|\"\"|\"50% 30%\""
   },
   "mediadora-malaga": {
    "w": 960,
