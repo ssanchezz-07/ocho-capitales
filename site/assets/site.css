@@ -146,7 +146,7 @@ strong, b { font-weight: 700; }
 .oc-tabbar .oc-i { width: 24px; height: 24px; transition: transform var(--duration-instant) var(--ease-out); }
 .oc-tabbar a:active .oc-i, .oc-tabbar button:active .oc-i { transform: scale(.88); }
 .oc-tabbar [aria-current="page"], .oc-tabbar [aria-expanded="true"], .oc-tabbar .is-aqui { color: var(--primary); }
-.oc-tabbar [aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 2px; border-radius: 0 0 2px 2px; background: var(--primary); }
+.oc-tabbar [aria-current="page"]::before, .oc-tabbar .is-aqui::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 2px; border-radius: 0 0 2px 2px; background: var(--primary); }
 @media (prefers-reduced-transparency: reduce) { .oc-tabbar { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; } }
 @media (min-width: 960px) { .oc-tabbar { display: none; } }
 
@@ -1148,7 +1148,7 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 @keyframes oc-vt-in { from { opacity: 0; transform: translateY(14px); } }
 
 /* Barra inferior: píldora tras el icono activo, que se desliza de pestaña a pestaña al cambiar de página */
-.oc-tabbar [aria-current="page"]::before { display: none; }
+.oc-tabbar [aria-current="page"]::before, .oc-tabbar .is-aqui::before { display: none; }
 .oc-tabbar a, .oc-tabbar button { isolation: isolate; }
 .oc-tabpill { position: absolute; top: 4px; left: 50%; width: 60px; height: 30px; margin-left: -30px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 14%, transparent); z-index: -1; view-transition-name: oc-tabpill; }
 .oc-tabbar a:active .oc-tabpill { transform: scale(.94); transition: transform 100ms var(--ease-out); }

@@ -36,7 +36,7 @@ with sync_playwright() as p:
                     pg.screenshot(path=f'{CAPT}/cab-{ruta.strip("/").replace("/", "_")}-{w}-{esq}.png')
             if w < 960:
                 for ruta, tab in BARRA.items():
-                    pg.goto(BASE + ruta, wait_until='domcontentloaded')
+                    pg.goto(BASE + ruta, wait_until='networkidle'); pg.wait_for_selector('.oc-tabbar')
                     marcadas = pg.evaluate("[...document.querySelectorAll('.oc-tabbar [aria-current=\"page\"], .oc-tabbar .is-aqui')].map((e) => e.textContent.trim())")
                     check(marcadas == [tab], f'{tag} {ruta}: barra marca {marcadas} (esperada {tab})')
             check(pg.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') <= 0, f'{tag}: sin desbordamiento')
