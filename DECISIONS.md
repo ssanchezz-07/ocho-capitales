@@ -511,7 +511,20 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 
 - **Barra de abajo y cabecera de capital en móvil (4-nov, oc-diseno; fallos de la pasada integrada).** La barra marcaba «Hoy» en capitales, fichas y el plano; ahora «Hoy» solo en /hoy/ y lo que está dentro de «Más» (capitales, hermandades, bandas, marchas, calendario, el plano…) marca «Más», con su píldora. Toca el layout común. En la cabecera de capital (y /musica/ y bandas), hasta 859 px el texto deja libre el hueco de la colgadura, con la misma posición y ancho que ella (antes la entradilla y las cifras pasaban por debajo). **Descartado** el degradado bajo la colgadura: tapaba la foto de la capital. Prueba: `tools/diseno/probar-cabecera-barra.py` (360/390/768/1440).
 
-## RETOMAR AQUÍ (4-nov, oc-diseno del sobremesa)
+## RETOMAR AQUÍ (5-nov, oc-diseno del sobremesa)
+Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta principal). Estado:
+- **Publicado con el sí de Pablo:** bandas y marchas (5faea1e), banda propia (3ec5d4b), nazareno, respaldo sin foto, barra y cabecera, imagineros (191a614..9c234d7), miniaturas del díptico y arreglos del auditor (9c234d7..25d4e55; e7c1ba6 ya auditado: NO APTO y luego APTO).
+- **En la rama, sin subir:** 9d0d4a6, hoja de sede (punto 3) y plano sin iniciales (lo que faltaba del punto 1). En auditoría con auditor-diseno y auditor-mapas; después, pedir el sí de Pablo.
+- **Pendientes:** el díptico queda unos 11 px más bajo en las filas de capital e imagineros (subirlo al borde de arriba solo ahí); en el 404, la barra marca «Más» (`masAqui` falso en el 404); 4) Volver arriba (layout común: avisar a Coordinación), reloj y barra de la hora de 44 px (hoy mide 28 px de alto; en tableta erCuñao toca el reloj).
+- **Para Datos:** la extraordinaria «8 nov · Amparo» (Sevilla) apunta a `amparo-sevilla`, que no está en la base: sale con la letra «R» en En la calle, sin nazareno.
+
+## Miniaturas del díptico y hoja de sede (4 y 5-nov, oc-diseno)
+- **Díptico 3:2 en las miniaturas:** la caja sigue de 64×64 (40×40 en el buscador) y la foto entera va dentro, en 3:2 y centrada. *Descartado:* ensanchar la caja a 96 px. Se veía mejor la foto, pero el texto de esas tarjetas empezaba más a la derecha (columna desigual) y rompía la regla de Pulido (solo cambia la imagen, no la tarjeta).
+- **Hoja de sede:** titulares arriba: díptico Cristo | Virgen; si no, una foto (juntos, Cristo o Virgen); sin ellas, la lámina del nazareno. Nunca la miniatura del punto ni la foto de la sede (es el templo, no la hermandad). En el móvil, a media altura (62dvh) con desplazamiento dentro; se cierra arrastrando la asa, como todas las hojas. *Descartado:* que la asa la estire hacia arriba (toca el código común de todas las hojas; con el desplazamiento dentro basta).
+- **Plano y En la calle:** los puntos recortan la foto en un círculo, así que las hermandades sin foto guardada en la web llevan un medallón cuadrado (`assets/naz/<slug>-r.svg`) en vez de la lámina 3:2. Así plano.js y calle.js (de Portada) no cambian. Incluye las que solo tienen foto enlazada a Commons, que el plano no puede usar.
+- **Imágenes para compartir:** `assets/naz/og.json` lista las hermandades sin ninguna foto. `og-respaldo.py` solo genera esas, porque ahora hay láminas también para las que tienen escudo o foto de la sede y no necesitan imagen propia.
+
+## (anterior) RETOMAR AQUÍ (4-nov, oc-diseno del sobremesa)
 Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta principal, no este worktree). Estado:
 - **Subidos:** bandas y marchas de la ficha (5faea1e) y banda propia (3ec5d4b).
 - **Hechos en la rama, sin subir (piden el sí de Pablo; la barra toca el layout común: avisar a Coordinación antes):** nazareno pequeño (ba2f667, 75c82d8, 999bdfa: APTO a la 3.ª), respaldo sin foto (317ab6f + 4d03b00: 2.ª revisión en curso) y barra y cabecera (4bbaefa: en auditoría). Cuando estén los APTO: rebase, compilar, pedir el sí y subir los tres juntos (van en línea).
