@@ -531,11 +531,7 @@ ${body}${colabora(p, title)}
       <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
-<<<<<<< HEAD
-    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons con su licencia.</p>
-=======
-    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades contrastados con consejos, agrupaciones y federaciones oficiales. Imágenes de Wikimedia Commons con su licencia, salvo las cedidas por las hermandades, que lo indican en su crédito.</p>
->>>>>>> a14f3b6 (Fotos cedidas: el pie de todas las páginas ya no dice que todas las imágenes sean de Commons; procesar detecta si se sustituye una foto cedida con el mismo nombre)
+    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons con su licencia, salvo las cedidas por las hermandades, que lo indican en su crédito.</p>
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
