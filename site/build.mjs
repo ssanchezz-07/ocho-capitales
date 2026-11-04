@@ -296,11 +296,22 @@ function heroPreload(im, sizes, widths) {
   const href = isThumb(im.src) ? wmAt(im.src, widths[Math.min(1, widths.length - 1)]) : clean(im.src);
   return `<link rel="preconnect" href="${origin}" crossorigin><link rel="preload" as="image" href="${esc(href)}"${set} fetchpriority="high" crossorigin="anonymous">`;
 }
+// Crédito de las dos fotos del díptico (Pablo, 4-nov: sin «Izquierda/Derecha»): una sola línea si son del mismo autor
+function creditPar(c, v) {
+  const enlace = (im, txt) => `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${txt}</a>`;
+  const rec = c.recorte || v.recorte ? ' (recortadas)' : '';
+  if (c.autor && c.autor === v.autor && !!c.cedida === !!v.cedida && (c.cedida || c.licencia === v.licencia)) {
+    if (c.cedida) return `Fotos: ${c.pagina ? enlace(c, esc(c.autor)) : esc(c.autor)}${rec}`;
+    const lic = c.licurl ? `<a href="${esc(c.licurl)}" rel="license noopener" target="_blank">${esc(c.licencia)}</a>` : esc(c.licencia);
+    return `Imágenes: ${esc(c.autor)}, ${lic}, vía Wikimedia Commons (${enlace(c, 'Cristo')} y ${enlace(v, 'Virgen')})${rec}`;
+  }
+  return `Cristo: ${credit(c)} · Virgen: ${credit(v)}`;
+}
 function credit(im) {
   if (!im) return '';
-  if (im.partes) return `Izquierda: ${credit(im.partes[0])}. Derecha: ${credit(im.partes[1])}`;
+  if (im.partes) return creditPar(im.partes[0], im.partes[1]);
   // Foto cedida por la propia hermandad (no de Commons): su nombre, enlazado a su web o red oficial
-  if (im.cedida) return `Foto: ${im.pagina ? `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${esc(im.autor)}</a>` : esc(im.autor)} · cedida a Ocho Capitales${im.recorte ? ' (recortada)' : ''}`;
+  if (im.cedida) return `Foto: ${im.pagina ? `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${esc(im.autor)}</a>` : esc(im.autor)}${im.recorte ? ' (recortada)' : ''}`;
   const lic = im.licurl ? `<a href="${esc(im.licurl)}" rel="license noopener" target="_blank">${esc(im.licencia)}</a>` : esc(im.licencia);
   return `Imagen: ${esc(im.autor || 'autor en Wikimedia Commons')}, ${lic}, vía <a href="${esc(im.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>${im.recorte ? ' (recortada)' : ''}`;
 }
@@ -531,7 +542,7 @@ ${body}${colabora(p, title)}
       <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
-    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons con su licencia, salvo las cedidas por las hermandades, que lo indican en su crédito.</p>
+    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons y de las propias hermandades, con su autor en cada foto.</p>
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
@@ -994,7 +1005,7 @@ function dipticoHtml(h, c) {
     return '';
   }
   const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
-  return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">Izquierda: ${credit(d.cristo)}. Derecha: ${credit(d.virgen)}</span></figcaption></figure>`;
+  return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">${creditPar(d.cristo, d.virgen)}</span></figcaption></figure>`;
 }
 const DESTACADAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'marchas-destacadas.json'), 'utf8')); } catch (e) { return {}; } })();
 function pageHerm(h) {
@@ -1558,7 +1569,7 @@ function pageAcerca() {
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
 <h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada mañana a las 7:00 de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
-<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons y se muestran con su autor y licencia, salvo las fotos cedidas por las propias hermandades, que lo indican en su crédito.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
+<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons, con su autor y licencia, y de las propias hermandades; cada foto lleva su autor.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }
 function pageOffline() {
@@ -1706,7 +1717,7 @@ function dipCalle(h) {
     const x = d[tipo]; if (!x || !x.local) continue;
     // la hoja ocupa todo el ancho del móvil (unos 1000 px reales en pantallas de alta densidad): la versión más grande
     const w = x.sizes.at(-1);
-    out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: (x.cedida ? `Foto: ${x.autor} · cedida a Ocho Capitales` : [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', ')) + (x.recorte ? ' (recortada)' : ''), url: x.pagina || '' };
+    out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: (x.cedida ? `Foto: ${x.autor}` : [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', ')) + (x.recorte ? ' (recortada)' : ''), url: x.pagina || '' };
   }
   return Object.keys(out).length ? { dip: out } : {};
 }
