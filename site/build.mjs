@@ -202,8 +202,8 @@ function laminaNaz(h) {
 // Solo si su huella (tools/diseno/og-respaldo.py) es la de la lámina de hoy: con un hábito cambiado, la genérica, nunca un nazareno viejo.
 const OG_HUELLAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'assets', 'og', 'huellas.json'), 'utf8')); } catch { return {}; } })();
 const huellaNaz = (h) => createHash('sha256').update(laminaNaz(h)).digest('hex').slice(0, 12);
-let ogViejas = 0;
-const ogNaz = (h) => { if (!OG_HUELLAS[h.slug]) return ''; if (OG_HUELLAS[h.slug] !== huellaNaz(h)) { ogViejas++; return ''; } return abs('assets/og/h-' + h.slug + '.jpg'); };
+const ogViejas = new Set(), ogFaltan = new Set();
+const ogNaz = (h) => { if (!OG_HUELLAS[h.slug]) { ogFaltan.add(h.slug); return ''; } if (OG_HUELLAS[h.slug] !== huellaNaz(h)) { ogViejas.add(h.slug); return ''; } return abs('assets/og/h-' + h.slug + '.jpg'); };
 const nazUrl = (h) => u('assets/naz/' + h.slug + '.svg') + '?v=' + createHash('sha256').update(laminaNaz(h)).digest('hex').slice(0, 8);
 function coloresHabito(slug) {
   const secs = HABCOL[slug] || [];
@@ -2128,7 +2128,6 @@ fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
 // Láminas de respaldo de las hermandades sin foto de un titular (las enlazan el listado, el buscador y el plano)
 for (const h of D.hermandades) if (!h.imagen) write('assets/naz/' + h.slug + '.svg', laminaNaz(h));
-if (ogViejas) console.warn(`Aviso: ${ogViejas} fichas sin foto comparten la imagen genérica porque su nazareno cambió; ejecuta tools/diseno/og-respaldo.py`);
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
 // y las unidas por escribir su nombre de dos maneras (tools/sources/bandas-unidas.json, en portal.json como bandas_unidas). En Cloudflare,
 // además, con 301 en _redirects (REDIR_301); la página con meta refresh queda para GitHub Pages y para quien la tenga en caché.
@@ -2145,6 +2144,7 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
+if (ogViejas.size || ogFaltan.size) console.warn(`Aviso: ${ogViejas.size + ogFaltan.size} fichas sin foto comparten la imagen genérica (${ogViejas.size} con el nazareno cambiado, ${ogFaltan.size} sin imagen); ejecuta tools/diseno/og-respaldo.py`);
 searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);
