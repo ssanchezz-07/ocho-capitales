@@ -1,6 +1,6 @@
 # Ocho Capitales · prueba de la hoja de sede del plano de la portada (oc-diseno, 4-nov): arriba van los titulares, en díptico
 # (Cristo | Virgen) o en una sola foto; sin ellos, la lámina del nazareno. Nunca iniciales, la miniatura del punto ni la foto de la sede.
-# Los puntos de las hermandades sin foto llevan su medallón. La hoja tiene fondo opaco.
+# Los puntos de En la calle: medallón con su nazareno si no hay foto; medallón neutro (cruz) si la procesión no tiene ficha. Nunca una letra. La hoja tiene fondo opaco.
 # A 390, 768 y 1440 px, en claro y oscuro. Uso: python -I probar-hoja-sede.py [base_url] [carpeta_capturas]
 import os, sys
 os.environ.setdefault('PLAYWRIGHT_BROWSERS_PATH', os.path.expandvars(r'%LOCALAPPDATA%\ms-playwright'))
@@ -48,10 +48,10 @@ with sync_playwright() as p:
                     pg.evaluate(CERRAR); pg.wait_for_timeout(250)
                 print(f'     {tag} {ciudad}: {n} puntos; díptico: {vistos["par"]}; una foto: {vistos["uno"]}; nazareno: {vistos["naz"]}')
             # los puntos de «En la calle» (cabeza de cada procesión): las hermandades de la base sin foto llevan su medallón, no una letra
-            med = pg.evaluate("""async () => { const d = await (await fetch('/data/calle/cordoba.json')).json(); const t = JSON.stringify(d);
+            med = pg.evaluate("""async () => { const t = (await Promise.all(['almeria', 'cadiz', 'cordoba', 'granada', 'huelva', 'jaen', 'malaga', 'sevilla'].map(async c => JSON.stringify(await (await fetch('/data/calle/' + c + '.json')).json())))).join('');
               const m = [...new Set(t.match(/assets\\/naz\\/[a-z0-9-]+-r\\.svg[^\"]*/g) || [])];
-              const r = await Promise.all(m.slice(0, 5).map(u => fetch('/' + u).then(x => x.status))); return { n: m.length, vacias: (t.match(/\"img\":\"\"/g) || []).length, r }; }""")
-            check(med['n'] > 0 and med['vacias'] == 0 and all(x == 200 for x in med['r']), f'{tag} En la calle de Córdoba: {med["n"]} medallones, ninguna hermandad sin imagen ({med["vacias"]})')
+              const r = await Promise.all(m.slice(0, 5).map(u => fetch('/' + u).then(x => x.status))); return { n: m.length, neutro: (t.match(/_neutro-[a-z]+.svg/g) || []).length, vacias: (t.match(/\"img\":\"\"/g) || []).length, r }; }""")
+            check(med['n'] > 0 and med['vacias'] == 0 and all(x == 200 for x in med['r']), f'{tag} En la calle, 8 capitales: {med["n"]} medallones con nazareno, {med["neutro"]} neutros (procesiones sin ficha), ninguna sin imagen ({med["vacias"]})')
             check(pg.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') <= 0, f'{tag}: sin desbordamiento')
             check(not err, f'{tag}: sin errores' + ('' if not err else ': ' + err[0]))
             ctx.close()
