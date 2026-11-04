@@ -453,17 +453,17 @@
   },
   "gitanos-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_De_La_Columna_(147777103).jpeg",
-    "titulo": "File:Cristo De La Columna (147777103).jpeg",
-    "autor": "Ortega Fotografia",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_-_Trono_Columna.jpg",
+    "titulo": "File:Gitanos - Trono Columna.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de la Columna",
     "recorte": [
-     0.35,
-     0,
+     0.28,
+     0.08,
      0.5,
-     1
+     0.45
     ]
    },
    "virgen": {

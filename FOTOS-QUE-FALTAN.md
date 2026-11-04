@@ -261,7 +261,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 
 ## Jaén (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-4 sin ninguna foto de titular; 13 con algún titular sin foto.
+5 sin ninguna foto de titular; 12 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -272,7 +272,7 @@ En «Qué falta» van los titulares tal como figuran en el portal. Las fotos de 
 | Los Estudiantes | Lunes Santo | Virgen: Nuestra Señora de las Lágrimas |
 | Divino Maestro (Lavatorio) | Martes Santo | Cristo: Jesús Divino Maestro y apóstol San Pedro |
 | La Clemencia | Martes Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Clemencia / Nuestro Padre Jesús de la Caída; Virgen: Santa María Magdalena / María Santísima del Mayor Dolor |
-| El Cautivo | Miércoles Santo | Virgen: María Santísima de la Trinidad |
+| El Cautivo | Miércoles Santo | **ninguna foto**; Cristo: Nuestro Divino Redentor Jesús Cautivo; Virgen: María Santísima de la Trinidad |
 | El Perdón | Miércoles Santo | Virgen: María Santísima de la Esperanza |
 | La Buena Muerte | Miércoles Santo | Virgen: Nuestra Señora de las Angustias |
 | La Lanzada | Jueves Santo | Cristo: Santísimo Cristo de las Aguas |
