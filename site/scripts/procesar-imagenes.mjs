@@ -89,7 +89,7 @@ async function processOne(kind, slug, meta) {
   const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
   if (meta.foco && !out.escudo) out.foco = meta.foco;
   if (rc) out.recorte = meta.recorte;
-  if (meta.local) Object.assign(out, { cedida: true, local: meta.local });
+  if (meta.local) Object.assign(out, { cedida: true, local: meta.local, tam: fs.statSync(path.join(SITE, meta.local)).size });
   return out;
 }
 
@@ -130,7 +130,7 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
     if (retirada(meta, slug, tipo)) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
-    if (prevT && prevT.pagina === meta.pagina && (prevT.local || '') === (meta.local || '') && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
+    if (prevT && prevT.pagina === meta.pagina && (prevT.local || '') === (meta.local || '') && (!meta.local || prevT.tam === fs.statSync(path.join(SITE, meta.local)).size) && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
     try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
     catch (e) { fail++; console.log('FALLO', 't', slug, tipo, e.message); }
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
@@ -149,7 +149,7 @@ for (const [slug, t] of Object.entries(index.titulares)) {
   const par = (TIT.hermandades || {})[slug] || {};
   const c = t.cristo, v = t.virgen;
   if (!c || !v || !par.cristo || !par.virgen || retirada(par.cristo, slug, 'cristo') || retirada(par.virgen, slug, 'virgen')) continue;
-  const firma = [c.pagina, c.recorte, c.foco, v.pagina, v.recorte, v.foco].map((x) => JSON.stringify(x || '')).join('|');
+  const firma = [c.pagina, c.local, c.tam, c.recorte, c.foco, v.pagina, v.local, v.tam, v.recorte, v.foco].map((x) => JSON.stringify(x || '')).join('|');
   const prevD = (prev.dipticos || {})[slug];
   if (prevD && prevD.firma === firma && fs.existsSync(path.join(OUT_DIR, `d-${slug}-960.webp`))) { index.dipticos[slug] = prevD; continue; }
   const fc = path.join(OUT_DIR, `t-${slug}-cristo-${c.widths.at(-1)}.webp`), fv = path.join(OUT_DIR, `t-${slug}-virgen-${v.widths.at(-1)}.webp`);

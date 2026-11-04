@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T14:48:26.909Z",
+ "generado": "2026-11-04T14:56:29.544Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8463,6 +8463,7 @@
     "foco": "50% 30%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
+    "tam": 618093,
     "titular": "María Santísima de la Esperanza Coronada"
    },
    "cristo": {
@@ -8481,6 +8482,7 @@
     "foco": "55% 25%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/esperanza-malaga-cristo.jpg",
+    "tam": 208470,
     "titular": "Jesús Nazareno del Paso"
    }
   },
@@ -9002,7 +9004,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Gran_Poder_(Bas%C3%ADlica_menor_de_Jes%C3%BAs_del_Gran_Poder_de_Sevilla).JPG\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Mayor_Dolor_y_Traspaso_(Gran_Poder).jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Gran_Poder_(Bas%C3%ADlica_menor_de_Jes%C3%BAs_del_Gran_Poder_de_Sevilla).JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Mayor_Dolor_y_Traspaso_(Gran_Poder).jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-macarena-sevilla": {
    "w": 960,
@@ -9012,7 +9014,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sentencia,Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:ESPERANZA_MACARENA.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sentencia,Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:ESPERANZA_MACARENA.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-esperanza-de-triana-sevilla": {
    "w": 960,
@@ -9022,7 +9024,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_las_Tres_Ca%C3%ADdas.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Esperanza_de_Triana.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_las_Tres_Ca%C3%ADdas.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Esperanza_de_Triana.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-o-sevilla": {
    "w": 960,
@@ -9032,7 +9034,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_de_La_O,Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_O.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_de_La_O,Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_O.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "montserrat-sevilla": {
    "w": 960,
@@ -9042,7 +9044,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "pasion-y-muerte-sevilla": {
    "w": 960,
@@ -9052,7 +9054,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Pasi%C3%B3n_y_Muerte.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Buen_Aire.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Pasi%C3%B3n_y_Muerte.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Buen_Aire.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "salud-malaga": {
    "w": 960,
@@ -9062,7 +9064,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:El_Cristo_de_la_Esperanza_en_su_Gran_Amor_(Salud)_por_el_pasillo_de_Santa_Isabel_(4470948129).jpg\"|[0.55,0.02,0.3,0.55]|\"\"|\"https://commons.wikimedia.org/wiki/File:Salud_-_Maria_Santisima_de_la_Salud.jpg\"|[0.36,0.12,0.2,0.4]|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:El_Cristo_de_la_Esperanza_en_su_Gran_Amor_(Salud)_por_el_pasillo_de_Santa_Isabel_(4470948129).jpg\"|\"\"|\"\"|[0.55,0.02,0.3,0.55]|\"\"|\"https://commons.wikimedia.org/wiki/File:Salud_-_Maria_Santisima_de_la_Salud.jpg\"|\"\"|\"\"|[0.36,0.12,0.2,0.4]|\"\""
   },
   "humildad-y-paciencia-malaga": {
    "w": 960,
@@ -9072,7 +9074,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_Paciencia_M%C3%A1laga.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Dolores_y_Esperanza.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_Paciencia_M%C3%A1laga.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Dolores_y_Esperanza.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "rescate-malaga": {
    "w": 960,
@@ -9082,7 +9084,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_del_Rescate_(4479711834).jpg\"|\"\"|\"88% 35%\"|\"https://commons.wikimedia.org/wiki/File:VirgenDeGraciaMalaga.JPG\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_del_Rescate_(4479711834).jpg\"|\"\"|\"\"|\"\"|\"88% 35%\"|\"https://commons.wikimedia.org/wiki/File:VirgenDeGraciaMalaga.JPG\"|\"\"|\"\"|\"\"|\"\""
   },
   "sentencia-malaga": {
    "w": 960,
@@ -9092,7 +9094,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sentencia_-_Trono.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sentencia_-_Trono.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-rico-malaga": {
    "w": 960,
@@ -9102,7 +9104,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Rico_Nazareno_2.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:P4180468.JPG\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Rico_Nazareno_2.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:P4180468.JPG\"|\"\"|\"\"|\"\"|\"\""
   },
   "sangre-malaga": {
    "w": 960,
@@ -9112,7 +9114,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg\"|[0.42,0.12,0.54,0.54]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg\"|\"\"|\"50% 22%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg\"|\"\"|\"\"|[0.42,0.12,0.54,0.54]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg\"|\"\"|\"\"|\"\"|\"50% 22%\""
   },
   "expiracion-malaga": {
    "w": 960,
@@ -9122,7 +9124,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg\"|[0.27,0.1,0.48,0.48]|\"\"|\"https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_vestida_para_el_Mi%C3%A9rcoles_Santo.jpg\"|\"\"|\"50% 25%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg\"|\"\"|\"\"|[0.27,0.1,0.48,0.48]|\"\"|\"https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_vestida_para_el_Mi%C3%A9rcoles_Santo.jpg\"|\"\"|\"\"|\"\"|\"50% 25%\""
   },
   "dolores-de-san-juan-malaga": {
    "w": 960,
@@ -9132,7 +9134,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f06.2_RF_-Cristo_de_la_Redencion.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f08.2_RF_-Nuestra_Sra_de_los_Dolores_capilla.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f06.2_RF_-Cristo_de_la_Redencion.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f08.2_RF_-Nuestra_Sra_de_los_Dolores_capilla.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-sentencia-maravillas-granada": {
    "w": 960,
@@ -9142,7 +9144,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Sentencia_(Jos%C3%A9_de_Mora).jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_las_Maravillas,_Iglesia_de_San_Pedro_y_San_Pablo_(Granada).jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Sentencia_(Jos%C3%A9_de_Mora).jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_las_Maravillas,_Iglesia_de_San_Pedro_y_San_Pablo_(Granada).jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "los-estudiantes-granada": {
    "w": 960,
@@ -9152,7 +9154,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Se%C3%B1or_de_la_Meditaci%C3%B3n..jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_los_Remedios.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Se%C3%B1or_de_la_Meditaci%C3%B3n..jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_los_Remedios.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "tres-caidas-y-rosario-granada": {
    "w": 960,
@@ -9162,7 +9164,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Tres_Ca%C3%ADdas_-_Granada.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:NtraSraDelRosario.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Tres_Ca%C3%ADdas_-_Granada.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:NtraSraDelRosario.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-concha-granada": {
    "w": 960,
@@ -9172,7 +9174,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Amor_y_la_Entrega.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Concepci%C3%B3n_%22La_Concha%22.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Amor_y_la_Entrega.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Concepci%C3%B3n_%22La_Concha%22.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-aurora-granada": {
    "w": 960,
@@ -9182,7 +9184,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Perd%C3%B3n._Hermandad_de_la_Aurora.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Aurora_del_Albayz%C3%ADn_Coronada.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Perd%C3%B3n._Hermandad_de_la_Aurora.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Aurora_del_Albayz%C3%ADn_Coronada.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "los-escolapios-granada": {
    "w": 960,
@@ -9192,7 +9194,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n.png\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mayor_Dolor.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n.png\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mayor_Dolor.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-rescatado-cordoba": {
    "w": 960,
@@ -9202,7 +9204,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_Rescatado_(cord).png\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Veneraci%C3%B3n_Amargura.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_Rescatado_(cord).png\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Veneraci%C3%B3n_Amargura.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-merced-cordoba": {
    "w": 960,
@@ -9212,7 +9214,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Humilde_en_su_Coronaci%C3%B3n_de_Espinas.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Merced-2010-8.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Humilde_en_su_Coronaci%C3%B3n_de_Espinas.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Merced-2010-8.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-sentencia-cordoba": {
    "w": 960,
@@ -9222,7 +9224,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro._P._Jes%C3%BAs_de_la_Sentencia.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Besamanos-gracia-y-amparo-2013-1.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro._P._Jes%C3%BAs_de_la_Sentencia.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Besamanos-gracia-y-amparo-2013-1.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-agonia-cordoba": {
    "w": 960,
@@ -9232,7 +9234,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_La_Agon%C3%ADa.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Salud_y_Consuelo_C%C3%B3rdoba.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_La_Agon%C3%ADa.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Salud_y_Consuelo_C%C3%B3rdoba.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-universitaria-cordoba": {
    "w": 960,
@@ -9242,7 +9244,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Santo_Cristo_de_la_Universidad,_C%C3%B3rdoba.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_presentaci%C3%B3n.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Santo_Cristo_de_la_Universidad,_C%C3%B3rdoba.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_presentaci%C3%B3n.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-santa-faz-cordoba": {
    "w": 960,
@@ -9252,7 +9254,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_Encuentro_con_la_Santa_Mujer_Ver%C3%B3nica_de_Santa_Faz.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad._Iglesia_de_la_Trinidad_de_C%C3%B3rdoba.JPG\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_Encuentro_con_la_Santa_Mujer_Ver%C3%B3nica_de_Santa_Faz.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad._Iglesia_de_la_Trinidad_de_C%C3%B3rdoba.JPG\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-paz-cordoba": {
    "w": 960,
@@ -9262,7 +9264,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestro_Padre_Jes%C3%BAs_de_la_Humildad_y_Paciencia._Iglesia_conventual_del_Santo_%C3%81ngel_de_C%C3%B3rdoba.JPG\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Paz_y_la_Esperanza.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestro_Padre_Jes%C3%BAs_de_la_Humildad_y_Paciencia._Iglesia_conventual_del_Santo_%C3%81ngel_de_C%C3%B3rdoba.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Paz_y_la_Esperanza.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "humildad-y-paciencia-cadiz": {
    "w": 960,
@@ -9272,7 +9274,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_paciencia_C%C3%A1diz.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura_de_C%C3%A1diz.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_paciencia_C%C3%A1diz.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura_de_C%C3%A1diz.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-buena-muerte-cadiz": {
    "w": 960,
@@ -9282,7 +9284,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:An%C3%B3nimo_granadino_-_Cristo_de_la_Buena_Muerte,_c._1648_(Iglesia_de_San_Agust%C3%ADn,_C%C3%A1diz).jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Mayor_Dolor_y_Traspaso,_Iglesia_de_San_Agust%C3%ADn.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:An%C3%B3nimo_granadino_-_Cristo_de_la_Buena_Muerte,_c._1648_(Iglesia_de_San_Agust%C3%ADn,_C%C3%A1diz).jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Mayor_Dolor_y_Traspaso,_Iglesia_de_San_Agust%C3%ADn.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-borriquita-huelva": {
    "w": 960,
@@ -9292,7 +9294,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Borriquita_Huelva_1.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Angeles_Huelva.JPG\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Borriquita_Huelva_1.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Angeles_Huelva.JPG\"|\"\"|\"\"|\"\"|\"\""
   },
   "las-tres-caidas-huelva": {
    "w": 960,
@@ -9302,7 +9304,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Besapie_se%C3%B1or_de_las_penas_de_huelva.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Besamanos42584_virgen_del_amor.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Besapie_se%C3%B1or_de_las_penas_de_huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Besamanos42584_virgen_del_amor.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-salud-huelva": {
    "w": 960,
@@ -9312,7 +9314,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sentencia_de_Huelva.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Salud_Dolorosa_de_Huelva.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sentencia_de_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Salud_Dolorosa_de_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "pasion-huelva": {
    "w": 960,
@@ -9322,7 +9324,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n2_Huelva.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n2_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "los-judios-la-merced-huelva": {
    "w": 960,
@@ -9332,7 +9334,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Cadenas,_Huelva.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Huelva_durante_su_triduo.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Cadenas,_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Huelva_durante_su_triduo.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "los-angeles-almeria": {
    "w": 960,
@@ -9342,7 +9344,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_03.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_06.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_03.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_06.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-estrella-jaen": {
    "w": 960,
@@ -9352,7 +9354,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Piedad_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Estrella_Jaen.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Piedad_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Estrella_Jaen.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-amargura-jaen": {
    "w": 960,
@@ -9362,7 +9364,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Despojado_-_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Amargura_Ja%C3%A9n.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Despojado_-_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Amargura_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-silencio-jaen": {
    "w": 960,
@@ -9372,7 +9374,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_Magna_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Madre_de_Dios_Ja%C3%A9n.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_Magna_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Madre_de_Dios_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-expiracion-jaen": {
    "w": 960,
@@ -9382,7 +9384,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Expiracion_Jaen.JPG\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Siete_Palabras_2008.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Expiracion_Jaen.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Siete_Palabras_2008.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-amor-sevilla": {
    "w": 960,
@@ -9392,7 +9394,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_del_Amor,_de_Juan_de_Mesa.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Socorro,_Sevilla.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_del_Amor,_de_Juan_de_Mesa.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Socorro,_Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-paz-sevilla": {
    "w": 960,
@@ -9402,7 +9404,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_Victoria_en_Parque_Maria_Luisa.jpg\"|[0.45,0.15,0.5,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:La_Paz_en_besamanos.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_Victoria_en_Parque_Maria_Luisa.jpg\"|\"\"|\"\"|[0.45,0.15,0.5,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:La_Paz_en_besamanos.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "la-cena-sevilla": {
    "w": 960,
@@ -9412,7 +9414,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sagrada_Cena.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Subterr%C3%A1neo,_Sevilla.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sagrada_Cena.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Subterr%C3%A1neo,_Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "san-pablo-sevilla": {
    "w": 960,
@@ -9422,7 +9424,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Parroquia_de_San_Ignacio_de_Loyola,_Jes%C3%BAs_Cautivo_y_Rescatado.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Parroquia_de_San_Ignacio_de_Loyola,_Virgen_del_Rosario.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Parroquia_de_San_Ignacio_de_Loyola,_Jes%C3%BAs_Cautivo_y_Rescatado.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Parroquia_de_San_Ignacio_de_Loyola,_Virgen_del_Rosario.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "vera-cruz-sevilla": {
    "w": 960,
@@ -9432,7 +9434,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_Vera_Cruz,_Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgendelastristezas2013001.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_Vera_Cruz,_Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgendelastristezas2013001.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "las-aguas-sevilla": {
    "w": 960,
@@ -9442,7 +9444,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg\"|[0.1,0,0.25,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg\"|[0.2,0.22,0.3,0.3]|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaAguas1.jpg\"|\"\"|\"\"|[0.1,0,0.25,0.45]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Guadalupe_(Sevilla,_Espa%C3%B1a).jpg\"|\"\"|\"\"|[0.2,0.22,0.3,0.3]|\"\""
   },
   "los-javieres-sevilla": {
    "w": 960,
@@ -9452,7 +9454,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_las_Almas.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Gracia_y_Amparo.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_las_Almas.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_Gracia_y_Amparo.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "san-esteban-sevilla": {
    "w": 960,
@@ -9462,7 +9464,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Buen_Viaje.JPG\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Desamparados_(San_Esteban).jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Buen_Viaje.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Desamparados_(San_Esteban).jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-buen-fin-sevilla": {
    "w": 960,
@@ -9472,7 +9474,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Buen_Fin,Sevilla.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Buen_Fin,Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "redencion-sevilla": {
    "w": 960,
@@ -9482,7 +9484,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso2.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso1.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso2.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaBeso1.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "dolores-de-torreblanca-sevilla": {
    "w": 960,
@@ -9492,7 +9494,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Misterio_Cautivo_ante_Pilato_Torreblanca.JPG\"|[0.33,0.12,0.25,0.5]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Dolores_Torreblanca.JPG\"|[0.3,0.2,0.4,0.4]|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Misterio_Cautivo_ante_Pilato_Torreblanca.JPG\"|\"\"|\"\"|[0.33,0.12,0.25,0.5]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Dolores_Torreblanca.JPG\"|\"\"|\"\"|[0.3,0.2,0.4,0.4]|\"\""
   },
   "la-victoria-huelva": {
    "w": 960,
@@ -9502,7 +9504,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Humildad.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:MARIA_SANT%C3%8DSIMA_VICTORIA_HUELVA.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Humildad.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:MARIA_SANT%C3%8DSIMA_VICTORIA_HUELVA.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "el-despojado-silencio-blanco-granada": {
    "w": 960,
@@ -9512,7 +9514,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Despo.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Dulce_nombre.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Despo.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Dulce_nombre.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
   "pollinica-malaga": {
    "w": 960,
@@ -9522,7 +9524,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_Padre_Jesus_2.jpg\"|\"\"|\"50% 20%\"|\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_del_Amparo_2.jpg\"|[0.22,0.18,0.5,0.5]|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_Padre_Jesus_2.jpg\"|\"\"|\"\"|\"\"|\"50% 20%\"|\"https://commons.wikimedia.org/wiki/File:Pollinica_-_Trono_del_Amparo_2.jpg\"|\"\"|\"\"|[0.22,0.18,0.5,0.5]|\"\""
   },
   "esperanza-malaga": {
    "w": 960,
@@ -9532,7 +9534,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"\"|\"55% 25%\"|\"https://www.instagram.com/pasoyesperanza\"|\"\"|\"50% 30%\""
+   "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-cristo.jpg\"|208470|\"\"|\"55% 25%\"|\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-virgen.jpg\"|618093|\"\"|\"50% 30%\""
   },
   "mediadora-malaga": {
    "w": 960,
@@ -9542,7 +9544,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:RedentorMundo.jpg\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mediadora04.jpg\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:RedentorMundo.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mediadora04.jpg\"|\"\"|\"\"|\"\"|\"\""
   }
  }
 }
