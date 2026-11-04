@@ -724,3 +724,49 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
   .oc-colabora-form { animation: nx-sube var(--m-entrada) var(--e-salida) 60ms both; }
   .cl-lado { animation: nx-sube var(--m-entrada) var(--e-salida) 120ms both; }
 }
+
+/* ---------- 9. Pulido (4-nov, ORDEN-PULIDO-ESTETICO): tarjetas del mismo alto en cada fila ----------
+   Cada tarjeta ocupa 4 filas de la rejilla y las comparte con sus vecinas (subgrid): el título, la línea de autor y año,
+   la dedicatoria (en noticias, el extracto) y el pie («Grabación», capitales; en noticias, «También en…») quedan a la misma altura en toda la fila, y el pie siempre abajo.
+   Los títulos largos se cortan a 3 líneas; el texto completo va en el title del enlace (build.mjs, noticias.js). */
+@supports (grid-template-rows: subgrid) {
+  .oc-entries.vx-grid, .nx-grid { align-items: stretch; }
+  .oc-entry.vx-m, .nx-card { grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; align-items: start; }
+  .oc-entry.vx-m > .vx-body, .nx-card > .nx-body { display: contents; }
+  .vx-sello, .nx-sello { grid-column: 1; grid-row: 1 / span 2; }
+  .oc-entry.vx-m.ix-obra { align-items: start; }
+  .oc-entry.vx-m > .ix-foto { grid-column: 1; grid-row: 1 / -1; align-self: center; }
+  .vx-tit, .vx-meta, .vx-ded, .vx-pie, .nx-tit, .nx-meta, .nx-otros, .nx-ext { grid-column: 2; }
+  .vx-tit, .nx-tit { grid-row: 1; }
+  .vx-meta, .nx-meta { grid-row: 2; }
+  .vx-ded, .nx-ext { grid-row: 3; }
+  .vx-pie { grid-row: 4; align-self: end; }
+  .nx-otros { grid-row: 4; align-self: end; padding-top: 8px; }
+  .nx-card.has-foto .nx-tit, .nx-card.has-foto .nx-meta, .nx-card.has-foto .nx-otros, .nx-card.has-foto .nx-ext { grid-column: 1; }
+  .nx-card.has-foto .nx-foto { grid-column: 2; grid-row: 1 / -1; }
+}
+.vx-tit, .nx-tit { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+
+/* ---------- 10. Pulido (4-nov): Anterior / Siguiente en la misma fila también en el móvil ----------
+   «Anterior» siempre a la izquierda y «Siguiente» a la derecha, aunque falte uno; objetivo de 44 px o más. */
+.oc-prevnext { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.oc-prevnext .is-prev { grid-column: 1; }
+.oc-prevnext .is-next { grid-column: 2; text-align: right; }
+.oc-prevnext a { min-width: 0; min-height: 44px; }
+.oc-prevnext a strong { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+@media (max-width: 639px) {
+  .oc-prevnext { gap: 10px; }
+  .fx-prevnext a { padding: 12px 14px; }
+  .fx-prevnext a span { font-size: .64rem; letter-spacing: .07em; }
+  .fx-prevnext a strong { font-size: 1.4rem; line-height: 1; }
+}
+
+/* ---------- 11. Pulido (4-nov): textos largos en el ordenador ----------
+   En el ordenador, justificados y con guiones (la web va en lang="es"); la historia y la biografía largas, a dos columnas
+   de unos 65-70 caracteres, para aprovechar el ancho sin alargar la página. En el móvil, sin justificar. */
+@media (min-width: 1100px) {
+  .oc-prose > p, .oc-bandaresumen p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; text-wrap: pretty; }
+  .fx-prosa.is-larga { max-width: none; columns: 2 30em; column-gap: clamp(36px, 4vw, 64px); orphans: 3; widows: 3; }
+  .fx-prosa.is-larga > p:first-child { margin-top: 0; }
+}
+

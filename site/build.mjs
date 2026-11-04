@@ -37,6 +37,8 @@ const u = (p = '') => BASE + String(p).replace(/^\//, '');
 const abs = (p) => (SITE ? SITE + '/' + String(p).replace(/^\//, '') : u(p));
 const slugify = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+// Tarjetas: los títulos se cortan a 3 líneas (vida.css §9); el largo va entero en el title del enlace
+const tLargo = (t) => (String(t || '').length > 60 ? ` title="${esc(t)}"` : '');
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
 // Noticias: solo imágenes https y sin iconos/emojis de WordPress (no son fotos).
@@ -1069,7 +1071,7 @@ function pageHerm(h) {
     const g = MARCHA_POR.get(m.slug);
     const meta = [m.autor ? `<span class="vx-autor">${esc(m.autor)}</span>` : '', m.anio ? `<span>${esc(m.anio)}</span>` : '', m.tipo ? `<span class="nx-tema">${esc(m.tipo)}</span>` : ''].join('');
     const pie = (m.est === 'sin-verificar' ? '<span class="oc-muted">Sin verificar</span>' : '') + (g && g.video ? '<span class="vx-play">Grabación</span>' : '');
-    return `<li class="oc-entry vx-m"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+    return `<li class="oc-entry vx-m"><span class="vx-sello" aria-hidden="true"><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}"${tLargo(m.titulo)}>${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
   };
   const ordenM = [...(h.marchas || [])].sort((x, y) => RANGO[x.est] - RANGO[y.est] || x.titulo.localeCompare(y.titulo, 'es'));
   const propias = new Set([...(h.bandas_slugs || []), ...((h.acompanamiento && h.acompanamiento.pasos) || []).flatMap((p) => p.bandas.map((b) => b.slug))].filter(Boolean));
@@ -1104,7 +1106,7 @@ function pageHerm(h) {
   <div class="fx-media">${media || estampaHtml(h, c)}</div>
 </header>
 ${datos ? `<dl class="fx-datos" aria-label="Datos de la hermandad">${datos}</dl>` : ''}
-${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa">${h.historia.split(/\n\n+/).map(para).join('')}</div>${(h.historia_fuentes || []).length ? `<ul class="oc-fuentes">${h.historia_fuentes.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('')}</ul>` : ''}`) : ''}
+${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa${h.historia.length > 700 ? ' is-larga' : ''}">${h.historia.split(/\n\n+/).map(para).join('')}</div>${(h.historia_fuentes || []).length ? `<ul class="oc-fuentes">${h.historia_fuentes.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('')}</ul>` : ''}`) : ''}
 ${sec('Titulares e imagineros', titCards)}
 ${sec('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
 ${sec('Música', musicaFicha, 'fx-musica')}
@@ -1231,7 +1233,7 @@ function pageImag(i) {
   const body = `<article class="fx ix" style="--c:${col}">
 <header class="nx-head vx-head ix-head" style="--nx-c:${col}"><div class="nx-head-in"><p class="fx-kicker">Imaginero${siglo !== 'Sin datar' ? ' · ' + esc(siglo.toLowerCase()) : ''}</p><h1 class="oc-title nx-title${i.nombre.length > 26 ? ' is-long' : ''}">${esc(i.nombre)}</h1>${i.vida ? `<p class="nx-lead">${esc(i.vida)}${i.escuela ? ' · ' + esc(i.escuela) : ''}</p>` : (i.escuela ? `<p class="nx-lead">${esc(i.escuela)}</p>` : '')}<div class="oc-actions fx-acc">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></div></header>
 <dl class="fx-datos" aria-label="Datos del imaginero">${datos}</dl>
-${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><div class="oc-prose fx-prosa">${para(i.bio)}</div>${fuentesBio.length ? `<ul class="oc-fuentes">${fuentesBio.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}
+${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><div class="oc-prose fx-prosa${i.bio.length > 700 ? ' is-larga' : ''}">${para(i.bio)}</div>${fuentesBio.length ? `<ul class="oc-fuentes">${fuentesBio.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}
 ${i.obras.length ? `<section class="oc-section fx-sec"><h2 class="nx-h">Sus obras</h2><ul class="oc-entries vx-grid ix-obras">${i.obras.map(obraCard).join('')}</ul></section>` : ''}
 <section class="oc-section fx-sec"><h2 class="nx-h">Más sobre su obra</h2><ul class="oc-linklist fx-enlaces"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul></section>
 </article>`;
@@ -1321,7 +1323,7 @@ function entryMarcha(m) {
   const meta = [m.autor ? `<span class="vx-autor">${esc(m.autor)}</span>` : '', m.anio ? `<span>${esc(m.anio)}</span>` : '', m.tipo ? `<span class="nx-tema">${esc(m.tipo)}</span>` : ''].join('');
   const ded = m.h ? `<p class="vx-ded">${m.est === 'sin-verificar' ? 'Asociada a' : 'Dedicada a'} <b>${esc(m.h.nombre)}</b></p>` : m.dedicatoria ? `<p class="vx-ded">Dedicada ${/^(a|al)\s/i.test(m.dedicatoria) ? esc(m.dedicatoria[0].toLowerCase() + m.dedicatoria.slice(1)) : 'a ' + esc(m.dedicatoria)}</p>` : ''; /* «A la Macarena» → «Dedicada a la Macarena» */
   const pie = (c ? cityTag(c) : '') + (m.video ? '<span class="vx-play">Grabación</span>' : '');
-  return `<li class="oc-entry vx-m" data-t="${esc(norm(m.titulo))}" data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}"${bandasMarcha(m).length ? ` data-b="${esc(bandasMarcha(m).join('|'))}"` : ''} data-ciudad="${c}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${ded}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m" data-t="${esc(norm(m.titulo))}" data-q="${esc(norm([m.titulo, m.autor, m.h ? m.h.nombre : m.dedicatoria, m.tipo].join(' ')))}"${bandasMarcha(m).length ? ` data-b="${esc(bandasMarcha(m).join('|'))}"` : ''} data-ciudad="${c}" data-tipo="${slugify(m.tipo || 'sin-formacion')}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(m.autor || m.titulo))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('marcha/' + m.slug + '/')}"${tLargo(m.titulo)}>${esc(m.titulo)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${ded}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirMarchas() {
   const tipos = [...new Set(MARCHAS.map((m) => m.tipo).filter(Boolean))].sort();
@@ -1374,7 +1376,7 @@ function entryHermVx(h, mas = false) {
   const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true" style="--c:${c.color}"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   const meta = `${cityTag(h.ciudad)}<span>${esc(h.dia)}</span>${h.hora ? `<span class="vx-autor">${esc(fmtHora(h.hora))} h</span>` : ''}`;
-  return `<li class="oc-entry vx-m ix-obra${mas ? ' is-mas' : ''}" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m ix-obra${mas ? ' is-mas' : ''}" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}"${tLargo(h.nombre)}>${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
 function pageDirHerm() {
   // De la 51 en adelante van marcadas (is-mas): con JS, el CSS las oculta desde el primer pintado, porque site.js solo enseña 50
@@ -1398,7 +1400,7 @@ function entryBanda(b, mas = false) {
   const meta = [b.tipo ? `<span class="nx-tema">${esc(b.tipo)}</span>` : '', b.localidad ? `<span class="vx-autor">${esc(b.localidad)}</span>` : ''].join('');
   const acomp = herms ? `<p class="vx-ded">Acompaña a <b>${plural(herms, 'cofradía', 'cofradías')}</b></p>` : '';
   const pie = cs.map(cityTag).join('') + (rep ? `<span class="vx-play is-rep">${plural(rep, 'marcha', 'marchas')} en su repertorio</span>` : '');
-  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(SIGLA_TIPO[b.tipo] || inicialesM(b.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('banda/' + b.slug + '/')}">${esc(b.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${acomp}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(b.nombre + ' ' + b.localidad + ' ' + b.acompana.map((a) => a.hermandad).join(' ')))}" data-ciudad="${cs.join(' ')}" data-origen="${b.origen || ''}" data-tipo="${slugify(b.tipo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(SIGLA_TIPO[b.tipo] || inicialesM(b.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('banda/' + b.slug + '/')}"${tLargo(b.nombre)}>${esc(b.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${acomp}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirBandas() {
   const tipos = [...new Set(D.bandas.map((b) => b.tipo))].sort();
@@ -1427,7 +1429,7 @@ function entryImag(i, mas = false) {
   const meta = [i.vida ? `<span class="vx-autor">${esc(i.vida)}</span>` : '', siglo !== 'Sin datar' ? `<span class="nx-tema">${esc(siglo)}</span>` : ''].join('');
   const obra = i.obras[0] ? `<p class="vx-ded">${plural(i.obras.length, 'obra', 'obras')}: <b>${esc(String(i.obras[0].titular).split(',')[0])}</b>${i.obras.length > 1 ? ' y más' : ''}</p>` : '';
   const pie = i.ciudades.map(cityTag).join('') + (i.escuela ? `<span class="vx-play is-rep">${esc(i.escuela.replace(/\s*\(.*\)$/, ''))}</span>` : '');
-  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}" data-tipo="${slugify(siglo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(i.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('imaginero/' + i.slug + '/')}">${esc(i.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${obra}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
+  return `<li class="oc-entry vx-m${mas ? ' is-mas' : ''}" data-q="${esc(norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular + ' ' + o.hermandad).join(' ')))}" data-ciudad="${i.ciudades.join(' ')}" data-tipo="${slugify(siglo)}"><span class="vx-sello" aria-hidden="true"${col ? ` style="--c:${col}"` : ''}><span>${esc(inicialesM(i.nombre))}</span></span><div class="vx-body"><h3 class="vx-tit"><a href="${u('imaginero/' + i.slug + '/')}"${tLargo(i.nombre)}>${esc(i.nombre)}</a></h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${obra}${pie ? `<p class="vx-pie">${pie}</p>` : ''}</div></li>`;
 }
 function pageDirImag() {
   const lista = [...D.imagineros].sort((a, b) => b.obras.length - a.obras.length || a.nombre.localeCompare(b.nombre, 'es'));

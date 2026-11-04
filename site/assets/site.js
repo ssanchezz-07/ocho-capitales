@@ -949,7 +949,7 @@
       var ded = d[0] === 3 ? 'Dedicada ' + esc(/^(a|al)\s/i.test(d[1]) ? d[1][0].toLowerCase() + d[1].slice(1) : 'a ' + d[1]) : d[0] ? (d[0] === 2 ? 'Asociada a' : 'Dedicada a') + ' <b>' + esc(d[1]) + '</b>' : '';
       var pie = (cap ? '<span class="oc-city"' + c + '>' + esc(cap[1]) + '</span>' : '') + (f[7] ? '<span class="vx-play">Grabación</span>' : '');
       li.className = 'oc-entry vx-m';
-      li.innerHTML = '<span class="vx-sello" aria-hidden="true"' + c + '><span>' + esc(f[8]) + '</span></span><div class="vx-body"><h3 class="vx-tit"><a href="' + BASE + 'marcha/' + esc(f[0]) + '/">' + esc(f[1]) + '</a></h3>'
+      li.innerHTML = '<span class="vx-sello" aria-hidden="true"' + c + '><span>' + esc(f[8]) + '</span></span><div class="vx-body"><h3 class="vx-tit"><a href="' + BASE + 'marcha/' + esc(f[0]) + '/"' + (String(f[1]).length > 60 ? ' title="' + esc(f[1]) + '"' : '') + '>' + esc(f[1]) + '</a></h3>'
         + (meta ? '<p class="vx-meta">' + meta + '</p>' : '') + (ded ? '<p class="vx-ded">' + ded + '</p>' : '') + (pie ? '<p class="vx-pie">' + pie + '</p>' : '') + '</div>';
       return li;
     }
