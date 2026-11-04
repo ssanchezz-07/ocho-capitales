@@ -35,9 +35,10 @@ hechas = []; huellas = {}
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1200, 'height': 630})
     pg.goto(BASE + '/hermandades/', wait_until='domcontentloaded')
+    NECESITAN = set(json.loads(urllib.request.urlopen(BASE + '/assets/naz/og.json').read()))  # sin ninguna foto (build.mjs)
     for h in D['hermandades']:
-        try: svg = urllib.request.urlopen(f'{BASE}/assets/naz/{h["slug"]}.svg').read().decode('utf8')
-        except Exception: continue  # tiene foto: no hace falta
+        if h['slug'] not in NECESITAN: continue  # tiene foto (o solo enlazada a Commons, que comparte la suya)
+        svg = urllib.request.urlopen(f'{BASE}/assets/naz/{h["slug"]}.svg').read().decode('utf8')
         huellas[h['slug']] = hashlib.sha256(svg.encode('utf8')).hexdigest()[:12]  # build.mjs la compara con la lámina de hoy
         # solo la figura: sin el terciopelo ni el galón de la lámina, encuadrada en su alto
         svg = re.sub(r'<rect[^>]*/>', '', svg).replace('viewBox="0 0 360 240" width="360" height="240"', 'viewBox="124 6 112 228"')

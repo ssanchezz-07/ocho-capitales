@@ -582,9 +582,20 @@
     if (extraB) extraB.addEventListener('click', function () { if (!plano) return; if (extraOn) { modoSedes(); plano.encuadrarSedes(calm ? 0 : 700, margenes()); } else modoExtra(); });
     // la hoja de una hermandad: foto, sede, día de salida, próximos cultos de la agenda y su ficha
     var fmtF = function (f) { return new Date(f + 'T12:00:00Z').toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' }).replace(/\./g, ''); };
+    // Arriba, sus titulares: el díptico (Cristo y Virgen) si están los dos; si no, la foto de los dos juntos o la que haya, a todo el ancho;
+    // sin ninguna, la lámina de su nazareno (assets/naz/<slug>.svg). Nunca la miniatura del punto ni la foto de la sede.
+    function mediaSede(h) {
+      var d = h.dip || {};
+      var img = function (x) { return '<img src="' + esc(x.src) + '" alt="' + esc(x.alt) + '" style="object-position:' + esc(x.foco || '50% 22%') + '" loading="lazy" decoding="async">'; };
+      var cred = function (x) { return x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener nofollow">' + esc(x.credito) + '</a>' : esc(x.credito); };
+      if (d.c && d.v) return '<figure class="oc-sede-dip"><div class="oc-sede-par">' + img(d.c) + img(d.v) + '</div><figcaption>' + (d.c.credito === d.v.credito ? cred(d.c) : cred(d.c) + ' · ' + cred(d.v)) + '</figcaption></figure>';
+      var uno = d.j || d.c || d.v;
+      if (uno) return '<figure class="oc-sede-dip is-uno">' + img(uno) + '<figcaption>' + cred(uno) + '</figcaption></figure>';
+      return h.naz ? '<img class="oc-sede-foto is-naz" src="' + esc(h.naz) + '" alt="' + esc(h.nazl || '') + '" width="360" height="240" decoding="async">' : '';
+    }
     function fichaHerm(h) {
-      var a = (D.anio || '') + '', foto = h.foto || h.img;
-      return (foto ? '<img class="oc-sede-foto" src="' + esc(foto) + '" alt="" loading="lazy" decoding="async">' : '<span class="oc-sede-foto is-ini" aria-hidden="true">' + esc(h.ini) + '</span>') +
+      var a = (D.anio || '') + '';
+      return mediaSede(h) +
         '<dl class="oc-sede-datos">' +
         (h.tp ? '<div><dt>Templo</dt><dd>' + esc(h.tp[2] || h.sede) + '</dd></div>' : h.sede ? '<div><dt>Sede</dt><dd>' + esc(h.sede) + '</dd></div>' : '') +
         (h.cs ? '<div><dt>Casa hermandad</dt><dd>' + esc(h.cs[2]) + '</dd></div>' : '') +

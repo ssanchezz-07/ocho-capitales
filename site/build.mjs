@@ -200,6 +200,17 @@ function laminaNaz(h) {
   const c = CAP[h.ciudad], id = 'l', r = nazRespaldo(h, id + 'g'), k = 214 / 532;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240"><defs><radialGradient id="${id}f" cx="78%" cy="0%" r="120%"><stop offset="0" stop-color="${c.color}"/><stop offset=".55" stop-color="${fondoLegible(c.color)}"/><stop offset="1" stop-color="#13071d"/></radialGradient></defs>${r.defs}<rect width="360" height="240" fill="url(#${id}f)"/><rect x="7" y="7" width="346" height="226" rx="10" fill="none" stroke="#c9a14a" stroke-opacity=".55"/><g transform="translate(${(180 - 120 * k).toFixed(2)} ${(13 - 16 * k).toFixed(2)}) scale(${k.toFixed(4)})">${r.fig}</g></svg>`;
 }
+// Medallón cuadrado (assets/naz/<slug>-r.svg) para los puntos del plano y de «En la calle», que recortan la foto en un círculo:
+// el terciopelo de su capital y el nazareno de pie, que llena el alto del círculo. Sin galón: el punto ya lleva su aro.
+function medallonNaz(h) {
+  const c = CAP[h.ciudad], r = nazRespaldo(h, 'mg'), k = 208 / 532;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240"><defs><radialGradient id="mf" cx="50%" cy="10%" r="110%"><stop offset="0" stop-color="${c.color}"/><stop offset=".55" stop-color="${fondoLegible(c.color)}"/><stop offset="1" stop-color="#13071d"/></radialGradient></defs>${r.defs}<rect width="240" height="240" fill="url(#mf)"/><g transform="translate(${(120 - 120 * k).toFixed(2)} ${(16 - 16 * k).toFixed(2)}) scale(${k.toFixed(4)})">${r.fig}</g></svg>`;
+}
+// Sin foto guardada en la web (ninguna, o solo enlazada a Commons): el plano y «En la calle» no pueden usarla y llevan su nazareno
+const sinFotoLocal = (h) => !(h.imagen && h.imagen.local);
+// La hoja de sede del plano enseña el díptico (Cristo y Virgen); sin él (sin foto, o solo el escudo o la sede), la lámina del nazareno
+const sinDipCalle = (h) => !Object.keys(dipCalle(h)).length;
+const medUrl = (h) => !HERM[h.slug] ? '' : u('assets/naz/' + h.slug + '-r.svg') + '?v=' + createHash('sha256').update(medallonNaz(h)).digest('hex').slice(0, 8);
 // Al compartir una hermandad sin foto: su lámina 1200×630 (tools/diseno/og-respaldo.py, con las letras de la web)
 // Solo si su huella (tools/diseno/og-respaldo.py) es la de la lámina de hoy: con un hábito cambiado, la genérica, nunca un nazareno viejo.
 const OG_HUELLAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'assets', 'og', 'huellas.json'), 'utf8')); } catch { return {}; } })();
@@ -1854,7 +1865,7 @@ function sedesCiudad(c, P, R, xy) {
     // si la casa está en el mismo edificio que el templo (a menos de 25 m), un solo símbolo
     if (tp && cs && Math.hypot(tp[0] - cs[0], tp[1] - cs[1]) < 25) cs = null;
     const im = h.imagen;
-    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', foto: im && im.local ? u(localUrl(im, im.sizes.at(-1))) : '', d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug), ...dipCalle(h) });
+    out.push({ s: slug, n: h.nombre, ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), img: im && im.local ? u(localUrl(im, im.sizes[0])) : medUrl(h), foto: im && im.local ? u(localUrl(im, im.sizes.at(-1))) : '', ...(sinDipCalle(h) ? { naz: nazUrl(h), nazl: nazRespaldo(h, 'x').label } : {}), d: h.dia || '', sede: h.sede || '', tp, cs, ev: agendaDeHerm(slug), ...habito(slug), ...dipCalle(h) });
   };
   if (fs.existsSync(fS)) {
     const S = JSON.parse(fs.readFileSync(fS, 'utf8')), lista = Array.isArray(S) ? S : Array.isArray(S.hermandades) ? S.hermandades : Object.entries(S.hermandades || S).filter(([k]) => !k.startsWith('_')).map(([k, v]) => ({ slug: k, ...v }));
@@ -1955,7 +1966,7 @@ function datosCalle(c) {
     }
     if (!Object.keys(tramos).length) continue;
     const im = h.imagen;
-    hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos, ...habito(slug) });
+    hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local ? u(localUrl(im, im.sizes[0])) : medUrl(h), ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos, ...habito(slug) });
   }
   // Salidas extraordinarias y magnas (tools/sources/itinerarios-extraordinarios.json): una «jornada» propia con su fecha.
   // Solo hay horas en algunos puntos del cartel: el resto se reparte por la distancia andada (posición 4 = 0, hora no oficial).
@@ -1992,7 +2003,7 @@ function datosCalle(c) {
     const etiqueta = `${Dd} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M - 1]} · ${e.corto || h.nombre}`;
     const iti = Object.fromEntries(Object.entries(e.tramos).map(([nom, tr]) => [nom, tr.map((p) => [p.lugar, p.hora || ''])]));
     const im = h.imagen;
-    hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : '', ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts }, ...habito(e.hermandad),
+    hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local ? u(localUrl(im, im.sizes[0])) : medUrl(h), ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts }, ...habito(e.hermandad),
       x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti, ...(vel ? { vel: Math.round(vel) } : {}) } });
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
@@ -2129,7 +2140,9 @@ function datosCunao() {
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
 // Láminas de respaldo de las hermandades sin foto de un titular (las enlazan el listado, el buscador y el plano)
-for (const h of D.hermandades) if (!h.imagen) write('assets/naz/' + h.slug + '.svg', laminaNaz(h));
+for (const h of D.hermandades) { if (sinFotoLocal(h) || sinDipCalle(h)) write('assets/naz/' + h.slug + '.svg', laminaNaz(h)); if (sinFotoLocal(h)) write('assets/naz/' + h.slug + '-r.svg', medallonNaz(h)); }
+// las que necesitan imagen para compartir (sin ninguna foto): la lista que lee tools/diseno/og-respaldo.py
+write('assets/naz/og.json', JSON.stringify(D.hermandades.filter((h) => !h.imagen).map((h) => h.slug)));
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
 // y las unidas por escribir su nombre de dos maneras (tools/sources/bandas-unidas.json, en portal.json como bandas_unidas). En Cloudflare,
 // además, con 301 en _redirects (REDIR_301); la página con meta refresh queda para GitHub Pages y para quien la tenga en caché.

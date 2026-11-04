@@ -42,7 +42,21 @@
 /* ---- hoja de una hermandad ---- */
 .oc-sede-cuerpo { display: grid; gap: 14px; padding-bottom: 6px; }
 .oc-sede-foto { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border-top: 4px solid var(--hc); background: var(--surface-2); }
-.oc-sede-foto.is-ini { display: grid; place-items: center; aspect-ratio: 16 / 7; background: var(--hc); color: #fff; font: 700 72px/1 Karantina, serif; }
+/* titulares de la hermandad en su hoja (site.js, mediaSede): díptico Cristo | Virgen, una sola foto, o la lámina de su nazareno */
+.oc-sede-dip { margin: 0; display: grid; gap: 6px; }
+.oc-sede-par { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; overflow: hidden; border-radius: 14px; border-top: 4px solid var(--hc); background: var(--hc); }
+.oc-sede-dip img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--surface-2); }
+.oc-sede-dip.is-uno img { aspect-ratio: 16 / 10; border-radius: 14px; border-top: 4px solid var(--hc); }
+.oc-sede-dip figcaption { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.oc-sede-dip figcaption a { color: inherit; }
+.oc-sede-foto.is-naz { aspect-ratio: 3 / 2; object-fit: cover; background: #13071d; }
+/* en el móvil, la hoja se abre a media altura (el plano sigue a la vista) y se desliza por dentro; se cierra arrastrando la asa */
+@media (max-width: 759px) {
+  .oc-sede-hoja .oc-sheet-panel { max-height: 62dvh; }
+  .oc-sede-dip img { aspect-ratio: 1; }
+  .oc-sede-dip.is-uno img { aspect-ratio: 16 / 9; }
+  .oc-sede-foto.is-naz { max-height: 34dvh; object-fit: contain; }
+}
 .oc-sede-datos { margin: 0; }
 .oc-sede-datos div { display: grid; grid-template-columns: minmax(7.5em, auto) 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); }
 .oc-sede-datos dt { color: var(--muted); font-size: 14px; }
@@ -88,7 +102,6 @@
 @media (min-width: 760px) {
   .oc-sede-hoja .oc-sheet-panel { width: min(480px, calc(100vw - 32px)); margin-inline: auto; }
 }
-.oc-sede-foto.is-ini { aspect-ratio: 16 / 5; font-size: 56px; }
 
 /* ---- entrada de la primera visita: del globo a Andalucía (assets/globo.js) ---- */
 .oc-globo { position: fixed; inset: 0; z-index: 200; background: var(--oc-cielo, #0b0511); background-size: var(--oc-cielo-t, auto); cursor: pointer; }
