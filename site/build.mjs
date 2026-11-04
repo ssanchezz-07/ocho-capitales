@@ -1626,7 +1626,7 @@ function extras() {
   fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
   for (const f of fs.readdirSync(path.join(DIR, 'assets'))) {
     const src = path.join(DIR, 'assets', f), dst = path.join(DIST, 'assets', f);
-    if (fs.statSync(src).isDirectory()) fs.cpSync(src, dst, { recursive: true, filter: (p) => !/[\\/]originales([\\/]|$)/.test(p) }); // los logos originales de las bandas no se publican
+    if (fs.statSync(src).isDirectory()) fs.cpSync(src, dst, { recursive: true });
     else if (f.endsWith('.css')) fs.writeFileSync(dst, fs.readFileSync(src, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim());
     else fs.copyFileSync(src, dst);
   }

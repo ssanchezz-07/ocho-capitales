@@ -63,17 +63,10 @@ Después, la provincia.
 ### Auditor del lote 1: APTO (4-nov)
 - Se han aplicado sus observaciones: la frase de 2015, y dos dudas más en la lista de Pablo («Siete Palabras» de Miraut y el enlace de «Reencuentro»).
 
-### Logos a una tinta (orden de Pablo, 4-nov: «minimalista como el nuestro, en blanco, pero con la forma de sus logos»): prueba con 3, esperando su visto bueno
-- **Originales** (no se publican; `build.mjs` los salta al copiar): `site/assets/bandas/originales/<slug>.png|webp`.
-- **Herramienta:** `tools/logo-banda-una-tinta.py`. Usa OpenCV y vtracer, y saca el SVG crema `#fffaf0` en `site/assets/bandas/<slug>.svg`.
-  - Corte de grosor fijo entre zonas de tono (oro, rojo, plata).
-  - Quita los detalles que no se leen a 64 px.
-- **Ajustes usados:**
-  - Carmen: `--colores 3 --moda 5`.
-  - Zamarrilla: `--sin-cortes` (ya es de una tinta). Es el escudo de la hermandad, que es el que usa la página de la banda.
-  - San Lorenzo Mártir: `--colores 2 --moda 16`. La talla barroca dorada necesita más suavizado.
-- **Muestra para Pablo:** `muestra-logos-bandas.html`, sin commit.
-- **Si le gustan:**
-  - la ficha pasa a usar el SVG: `logo.src` en `bandas-fichas.json`, y se quita el webp a color;
-  - se sigue con el resto de bandas de Málaga;
-  - luego, Federband (bandas de música que ya tenemos, ver la fase 0 del encargo).
+### Logos: los ORIGINALES (Pablo, 4-nov: «usa los originales, son horrendos los nuestros»)
+- Se probó una versión a una tinta, vectorizada, y Pablo la descartó. No se vuelve a proponer.
+- Cada banda lleva su escudo original:
+  - sacado de su web o de sus redes oficiales;
+  - recortado y a 320 px en `site/assets/img/logo-<slug>.webp` (Pillow);
+  - con la nota «Logo: <banda>» en `bandas-fichas.json`.
+- Zamarrilla: la página de la banda usa el escudo de la hermandad. Hay que buscar en sus redes si tiene uno propio antes de ponerlo.
