@@ -1,0 +1,6 @@
+{
+  "nota": "Elección editorial: marchas que la ficha de la hermandad enseña siempre primero, entre sus 5. Cada slug tiene que estar en tools/sources/marchas.json dedicado a esa hermandad (si no, el build lo ignora y avisa).",
+  "hermandades": {
+    "la-aurora-granada": ["y-amanecio-en-tu-albayzin-elias-santiago-vico"]
+  }
+}

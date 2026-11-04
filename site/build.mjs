@@ -996,6 +996,7 @@ function dipticoHtml(h, c) {
   const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
   return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">Izquierda: ${credit(d.cristo)}. Derecha: ${credit(d.virgen)}</span></figcaption></figure>`;
 }
+const DESTACADAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'marchas-destacadas.json'), 'utf8')); } catch (e) { return {}; } })();
 function pageHerm(h) {
   const c = CAP[h.ciudad];
   const im = h.imagen;
@@ -1038,8 +1039,11 @@ function pageHerm(h) {
   }).join('')}</ul>` : '';
   // Ficha ligera (Pablo, 3-nov: «ver unas cuantas y si quiero ver más me lleve a ese sitio»): aquí, 5 marchas y unas 3 bandas;
   // todas, en hermandad/<slug>/musica/, que solo existe cuando algo no cabe. Primero las marchas que toca su propia banda,
-  // luego las dedicadas a sus titulares y las que tienen grabación (solo lo que dicen los datos); a igualdad, el orden de siempre.
+  // Orden (4-nov, Pablo: la Aurora no enseñaba la marcha de su vídeo): primero las destacadas a mano (data/marchas-destacadas.json),
+  // luego las dedicadas a un titular concreto, las que toca su propia banda y las que tienen grabación; a igualdad, el orden de siempre.
   const MAX_M = 5, MAX_B = 3;
+  const destacar = (DESTACADAS.hermandades || {})[h.slug] || [];
+  for (const s of destacar) if (!(h.marchas || []).some((m) => m.slug === s)) console.warn(`marchas-destacadas: ${s} no está dedicada a ${h.slug}`);
   const marchaLi = (m) => {
     const g = MARCHA_POR.get(m.slug);
     const meta = [m.autor ? `<span class="vx-autor">${esc(m.autor)}</span>` : '', m.anio ? `<span>${esc(m.anio)}</span>` : '', m.tipo ? `<span class="nx-tema">${esc(m.tipo)}</span>` : ''].join('');
@@ -1048,11 +1052,11 @@ function pageHerm(h) {
   };
   const ordenM = [...(h.marchas || [])].sort((x, y) => RANGO[x.est] - RANGO[y.est] || x.titulo.localeCompare(y.titulo, 'es'));
   const propias = new Set([...(h.bandas_slugs || []), ...((h.acompanamiento && h.acompanamiento.pasos) || []).flatMap((p) => p.bandas.map((b) => b.slug))].filter(Boolean));
-  const peso = (m) => { const g = MARCHA_POR.get(m.slug); return g ? ((g.repertorio || []).some((r) => r && propias.has(r.banda)) ? 4 : 0) + (g.titularDed ? 2 : 0) + (g.video ? 1 : 0) : 0; };
+  const peso = (m) => { const g = MARCHA_POR.get(m.slug); return (destacar.includes(m.slug) ? 8 : 0) + (g ? (g.titularDed ? 4 : 0) + ((g.repertorio || []).some((r) => r && propias.has(r.banda)) ? 2 : 0) + (g.video ? 1 : 0) : 0); };
   const cortaM = ordenM.length > MAX_M;
   const relevantes = ordenM.map((m, i) => [m, i]).sort(([a, i], [b, j]) => (a.est === 'sin-verificar') - (b.est === 'sin-verificar') || peso(b) - peso(a) || i - j).map(([m]) => m);
   const destacadas = relevantes.slice(0, MAX_M);
-  const criterios = [[4, 'las que toca su propia banda'], [2, 'las dedicadas a sus titulares'], [1, 'las que tienen grabación']].filter(([b]) => destacadas.some((m) => peso(m) & b)).map(([, t]) => t);
+  const criterios = [[8, 'las más ligadas a la hermandad'], [4, 'las dedicadas a sus titulares'], [2, 'las que toca su propia banda'], [1, 'las que tienen grabación']].filter(([b]) => destacadas.some((m) => peso(m) & b)).map(([, t]) => t);
   const porQue = criterios.length ? ': primero ' + (criterios.length > 1 ? criterios.slice(0, -1).join(', ') + ' y ' + criterios[criterios.length - 1] : criterios[0]) : '';
   const listaM = (ms) => `<ul class="oc-entries vx-grid fx-marchas">${ms.map(marchaLi).join('')}</ul>`;
   const marchasFx = ordenM.length ? listaM(destacadas) : '';
