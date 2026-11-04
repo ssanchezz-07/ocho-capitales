@@ -474,8 +474,12 @@
   },
   {
    "titulo": "Santa Cruz",
-   "autor": "Raúl Velázquez y José Manuel Reina",
-   "url": "https://bctcarmenmalaga.es/repertorio/"
+   "autor": "José Manuel Reina Romero y Rafael Vázquez Mateo",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Santa Cruz",
+    "autor": "Raúl Velázquez y José Manuel Reina"
+   }
   },
   {
    "titulo": "La Sentencia de Cristo",
@@ -501,7 +505,7 @@
    "url": "https://bctcarmenmalaga.es/repertorio/"
   },
   {
-   "titulo": "Siete Palabras",
+   "titulo": "Cristo de las Siete Palabras",
    "autor": "Luis Alfonso Miraut Lago",
    "url": "https://bctcarmenmalaga.es/repertorio/",
    "como_en_web": {

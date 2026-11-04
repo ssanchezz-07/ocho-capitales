@@ -3229,6 +3229,92 @@
    "campos": {
     "titulo": "¡A la Gloria!"
    }
+  },
+  {
+   "slug": "resilencia-fernando-jimenez-canestro",
+   "fuente": "https://bctcarmenmalaga.es/repertorio/",
+   "nombre_fuente": "Web oficial de la BCT Nuestra Señora del Carmen (Málaga), que la estrenó: repertorio",
+   "fecha": "2026-11-04",
+   "nota": "El título es «Resiliencia»; cyh lo escribe con errata («Resilencia»). Lo dicen también la Hermandad de la Humildad y Paciencia (https://www.humildadypaciencia.org/musica/) y los vídeos de la banda. Lo confirma Pablo (4-nov).",
+   "campos": {
+    "titulo": "Resiliencia"
+   }
+  },
+  {
+   "slug": "camino-a-tu-condena-fernando-jimenez-canestro",
+   "fuente": "https://bctcarmenmalaga.es/repertorio/",
+   "nombre_fuente": "Web oficial de la BCT Nuestra Señora del Carmen (Málaga): repertorio",
+   "fecha": "2026-11-04",
+   "nota": "Título que da la banda que la estrenó, dirigida por su compositor; igual en su canal oficial (https://www.youtube.com/watch?v=-pwOyJKgVrE y https://www.youtube.com/watch?v=wXXwaT03R3k).",
+   "campos": {
+    "titulo": "El camino de tu Condena"
+   }
+  },
+  {
+   "slug": "senor-de-los-milagros-francisco-jose-ortiz-moron",
+   "fuente": "https://bctcarmenmalaga.es/repertorio/",
+   "nombre_fuente": "Web oficial de la BCT Nuestra Señora del Carmen (Málaga): repertorio",
+   "fecha": "2026-11-04",
+   "nota": "Título que da la banda que la estrenó; igual en su canal oficial (https://www.youtube.com/watch?v=FJmLWsQHGMc y https://www.youtube.com/watch?v=pSH5f3Pa278).",
+   "campos": {
+    "titulo": "El Señor de los Milagros"
+   }
+  },
+  {
+   "slug": "y-tu-estrella-bienvenido-puelles-oliver",
+   "fuente": "https://www.marchasdeprocesion.com/p/base-datos-cornetas-tambores.html",
+   "nombre_fuente": "Marchas de Procesión, base de cornetas y tambores",
+   "fecha": "2026-11-04",
+   "nota": "«tú» con tilde, como en Marchas de Procesión y en la web de la BCT del Carmen de Málaga (https://bctcarmenmalaga.es/repertorio/).",
+   "campos": {
+    "titulo": "Y tú, Estrella"
+   }
+  },
+  {
+   "slug": "cachorro-mio-jorge-aguila-ordonez",
+   "fuente": "https://bctcarmenmalaga.es/repertorio/",
+   "nombre_fuente": "Web oficial de la BCT Nuestra Señora del Carmen (Málaga): repertorio",
+   "fecha": "2026-11-04",
+   "nota": "«mío» con tilde, como en la web de la banda y en sus vídeos.",
+   "campos": {
+    "titulo": "Cachorro mío"
+   }
+  },
+  {
+   "slug": "en-tu-cruz-divina-misericordia-sergio-pastor-gonzalez",
+   "fuente": "https://bctcarmenmalaga.es/repertorio/",
+   "nombre_fuente": "Web oficial de la BCT Nuestra Señora del Carmen (Málaga): repertorio",
+   "fecha": "2026-11-04",
+   "nota": "Marcha propia de la BCT del Carmen de Málaga, que la estrenó el 7-6-2013 y la toca con cornetas y tambores (concierto de su VIII aniversario: https://www.youtube.com/watch?v=W9XbMnbYBIo). cyh y Marchas de Procesión la clasifican como de agrupación musical; no se ha encontrado ninguna versión para agrupación.",
+   "campos": {
+    "formacion": "Banda de cornetas y tambores"
+   },
+   "discrepancia": {
+    "campo": "formacion",
+    "valores": [
+     {
+      "valor": "Agrupación musical",
+      "fuente": "cyh"
+     },
+     {
+      "valor": "Agrupación musical",
+      "fuente": "mdp"
+     }
+    ],
+    "elegido": "rev"
+   }
+  },
+  {
+   "titulo": "Santa Cruz",
+   "autor": "José Manuel Reina Romero y Rafael Vázquez Mateo",
+   "fuente": "https://www.youtube.com/watch?v=4cShRFFKn6g",
+   "nombre_fuente": "Canal oficial de la BCT Esencia (YouTube): «Santa Cruz» (1996), de José Manuel Reina Romero y Rafael Vázquez Mateo",
+   "fecha": "2026-11-04",
+   "nota": "La web del Carmen la da como de «Raúl Velázquez y José Manuel Reina», una errata: los autores los confirman también https://www.youtube.com/watch?v=0c04tyWV3z8 y https://www.youtube.com/watch?v=y2fECvYxbCw.",
+   "campos": {
+    "anio": "1996",
+    "formacion": "Banda de cornetas y tambores"
+   }
   }
  ]
 }

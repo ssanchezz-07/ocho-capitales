@@ -70,3 +70,6 @@ Después, la provincia.
   - recortado y a 320 px en `site/assets/img/logo-<slug>.webp` (Pillow);
   - con la nota «Logo: <banda>» en `bandas-fichas.json`.
 - Zamarrilla: la página de la banda usa el escudo de la hermandad. Hay que buscar en sus redes si tiene uno propio antes de ponerlo.
+
+### Federband: CANCELADO
+Pablo lo canceló el 4-nov («cancela lo de esto»). No se usa federband.org como fuente. Las bandas de Málaga se completan solo con sus webs y redes oficiales, con su logo original.
