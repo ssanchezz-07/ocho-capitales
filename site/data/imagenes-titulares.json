@@ -385,6 +385,16 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Jesús Nazareno de la Salutación"
+   },
+   "virgen": {
+    "autor": "Salutación (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsalutacion",
+    "local": "scripts/cedidas/malaga/salutacion-malaga-virgen.png",
+    "titulo": "Cedida: María Santísima del Patrocinio Reina de los Cielos",
+    "titular": "María Santísima del Patrocinio Reina de los Cielos",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadsalutacion (https://www.instagram.com/p/DeyuQnKtykN/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "salud-malaga": {
@@ -453,32 +463,25 @@
   },
   "gitanos-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_-_Trono_Columna.jpg",
-    "titulo": "File:Gitanos - Trono Columna.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Gitanos (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiadelacolumna",
+    "local": "scripts/cedidas/malaga/gitanos-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Columna",
     "titular": "Nuestro Padre Jesús de la Columna",
-    "recorte": [
-     0.28,
-     0.08,
-     0.5,
-     0.45
-    ]
+    "foco": "50% 25%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @cofradiadelacolumna (https://www.instagram.com/p/DV5phzsCsNR/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Gitanos_-_Trono_de_Mar%C3%ADa.jpg",
-    "titulo": "File:Gitanos - Trono de María.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Gitanos (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiadelacolumna",
+    "local": "scripts/cedidas/malaga/gitanos-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la O",
     "titular": "María Santísima de la O",
-    "recorte": [
-     0.3,
-     0.12,
-     0.4,
-     0.4
-    ]
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @cofradiadelacolumna (https://www.instagram.com/p/DfPCWaJK62t/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "cautivo-malaga": {
@@ -503,12 +506,15 @@
   },
   "penas-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Manto_de_flores_de_la_Virgen_de_las_Penas_-_Martes_Santo_-_M%C3%A1laga_-_(7047570859).jpg",
-    "titulo": "File:Manto de flores de la Virgen de las Penas - Martes Santo - Málaga - (7047570859).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "titular": "María Santísima de las Penas"
+    "autor": "Penas (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadlaspenas",
+    "local": "scripts/cedidas/malaga/penas-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de las Penas",
+    "titular": "María Santísima de las Penas",
+    "foco": "50% 30%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadlaspenas (https://www.instagram.com/p/DerSR71tMg3/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Penas_-_Trono_del_Cristo_3.jpg",
@@ -522,12 +528,14 @@
   },
   "humillacion-y-estrella-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Estrella_en_su_salida_procesional_del_martes_santo.jpg",
-    "titulo": "File:María Santísima de la Estrella en su salida procesional del martes santo.jpg",
-    "autor": "Oscarmaldonadosuarez",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "María Santísima de la Estrella"
+    "autor": "Humillación y Estrella (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadhumillacion",
+    "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp",
+    "titulo": "Cedida: María Santísima de la Estrella",
+    "titular": "María Santísima de la Estrella",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadhumillacion (https://www.instagram.com/p/DC_d-SrC14_/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Humillaci%C3%B3n_y_Perd%C3%B3n,_lateral_izquierdo_del_trono.jpg",
@@ -589,6 +597,16 @@
      0.6,
      0.55
     ]
+   },
+   "virgen": {
+    "autor": "Salesianos (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsalesiana",
+    "local": "scripts/cedidas/malaga/salesianos-malaga-virgen.webp",
+    "titulo": "Cedida: María Santísima del Auxilio",
+    "titular": "María Santísima del Auxilio",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadsalesiana (https://www.instagram.com/p/DYttFL_N7ZV/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "fusionadas-malaga": {
@@ -2097,12 +2115,14 @@
   },
   "desamparados-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_se%C3%B1ora_de_los_Desamparados.png",
-    "titulo": "File:Nuestra señora de los Desamparados.png",
-    "autor": "Jesusplaza02",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Nuestra Señora de los Desamparados"
+    "autor": "Desamparados (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/desamparadosmalaga",
+    "local": "scripts/cedidas/malaga/desamparados-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Desamparados",
+    "titular": "Nuestra Señora de los Desamparados",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @desamparadosmalaga (https://www.instagram.com/p/Detb94QO-vX/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "medinaceli-martiricos-malaga": {
@@ -2696,6 +2716,17 @@
      0.2,
      0.4
     ]
+   },
+   "cristo": {
+    "autor": "Sagrada Cena (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lacenademalaga",
+    "local": "scripts/cedidas/malaga/sagrada-cena-malaga-cristo.jpg",
+    "titulo": "Cedida: Cristo de la Sagrada Cena",
+    "titular": "Cristo de la Sagrada Cena",
+    "foco": "50% 35%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @lacenademalaga (https://www.instagram.com/p/DfCJqJwDOHD/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "mena-malaga": {
@@ -2714,6 +2745,17 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de la Soledad Coronada"
+   },
+   "cristo": {
+    "autor": "Mena (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiamena",
+    "local": "scripts/cedidas/malaga/mena-malaga-cristo.png",
+    "titulo": "Cedida: Santísimo Cristo de la Buena Muerte y Ánimas",
+    "titular": "Santísimo Cristo de la Buena Muerte y Ánimas",
+    "foco": "50% 35%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @cofradiamena (https://www.instagram.com/p/De6143nINpD/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "buen-camino-gamarra-malaga": {
@@ -2724,6 +2766,16 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Colegio Gamarra"
+   },
+   "virgen": {
+    "autor": "Buen Camino, Gamarra (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/buencaminomlg",
+    "local": "scripts/cedidas/malaga/buen-camino-gamarra-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Purísima Madre del Buen Camino",
+    "titular": "Nuestra Purísima Madre del Buen Camino",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @buencaminomlg (https://www.instagram.com/p/DdMgSe9jCtJ/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "la-estrella-granada": {
@@ -3178,6 +3230,28 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Parroquia de San Antonio Abad (Churriana)"
+   },
+   "cristo": {
+    "autor": "Dolores de Churriana (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoydolores",
+    "local": "scripts/cedidas/malaga/dolores-de-churriana-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno del Paso",
+    "titular": "Nuestro Padre Jesús Nazareno del Paso",
+    "foco": "50% 35%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @pasoydolores (https://www.instagram.com/p/DO8V_jeiHxF/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+   },
+   "virgen": {
+    "autor": "Dolores de Churriana (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoydolores",
+    "local": "scripts/cedidas/malaga/dolores-de-churriana-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "50% 35%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @pasoydolores (https://www.instagram.com/p/DO8VzwIiDGY/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "el-huerto-granada": {
@@ -3283,6 +3357,17 @@
      0.25,
      0.5
     ]
+   },
+   "cristo": {
+    "autor": "Prendimiento (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoygranperdon",
+    "local": "scripts/cedidas/malaga/prendimiento-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Prendimiento",
+    "titular": "Nuestro Padre Jesús del Prendimiento",
+    "foco": "50% 35%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @prendimientoygranperdon (https://www.instagram.com/p/DfKuzUfDNAn/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "crucifixion-malaga": {
@@ -3309,6 +3394,16 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "titular": "Nuestra Señora de los Dolores Coronada y Santísimo Cristo del Perdón"
+   },
+   "virgen": {
+    "autor": "Dolores del Puente (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresdlpuente",
+    "local": "scripts/cedidas/malaga/dolores-del-puente-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores Coronada",
+    "titular": "Nuestra Señora de los Dolores Coronada",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @doloresdlpuente (https://www.instagram.com/p/DWYyX1tjKmv/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "pasion-malaga": {
@@ -3341,6 +3436,16 @@
      0.5,
      0.96
     ]
+   },
+   "virgen": {
+    "autor": "Estudiantes (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradia_de_estudiantes",
+    "local": "scripts/cedidas/malaga/estudiantes-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de Gracia y Esperanza",
+    "titular": "Nuestra Señora de Gracia y Esperanza",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @cofradia_de_estudiantes (https://www.instagram.com/p/DdB2C4yDPx9/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "nueva-esperanza-malaga": {
@@ -3404,11 +3509,11 @@
   },
   "esperanza-malaga": {
    "virgen": {
-    "autor": "Archicofradía de la Esperanza (Málaga)",
-    "licencia": "cedida a Ocho Capitales",
+    "autor": "@lmfotoscofrades",
+    "licencia": "",
     "licurl": "",
-    "pagina": "https://www.instagram.com/pasoyesperanza",
-    "permiso": "Fotos de la Archicofradía de la Esperanza (Málaga), publicadas en su Instagram oficial (enlazado desde pasoyesperanza.es); la hermandad dio permiso a Pablo Sánchez para usarlas en Ocho Capitales el 4-nov-2026.",
+    "pagina": "https://www.instagram.com/lmfotoscofrades",
+    "permiso": "Foto de @lmfotoscofrades, publicada por la Archicofradía de la Esperanza (@pasoyesperanza, https://www.instagram.com/p/DX33ynOjxqM/) citándole como autor. Pablo le ha escrito pidiendo permiso (4-nov-2026); hasta su respuesta se usa con su crédito por decisión de Pablo.",
     "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
     "titulo": "Cedida: María Santísima de la Esperanza Coronada",
     "titular": "María Santísima de la Esperanza Coronada",
@@ -3416,7 +3521,7 @@
    },
    "cristo": {
     "autor": "Archicofradía de la Esperanza (Málaga)",
-    "licencia": "cedida a Ocho Capitales",
+    "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/pasoyesperanza",
     "permiso": "Fotos de la Archicofradía de la Esperanza (Málaga), publicadas en su Instagram oficial (enlazado desde pasoyesperanza.es); la hermandad dio permiso a Pablo Sánchez para usarlas en Ocho Capitales el 4-nov-2026.",
@@ -3759,6 +3864,17 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "titular": "Santa María del Monte Calvario"
+   },
+   "cristo": {
+    "autor": "Monte Calvario (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/monte.calvario",
+    "local": "scripts/cedidas/malaga/monte-calvario-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo Yacente de la Paz y Unidad",
+    "titular": "Santísimo Cristo Yacente de la Paz y Unidad",
+    "foco": "35% 25%",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @monte.calvario (https://www.instagram.com/p/DfCMRjSDgS8/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   },
   "descendimiento-malaga": {
@@ -3775,6 +3891,42 @@
      0.7,
      0.65
     ]
+   }
+  },
+  "vera-cruz-malaga": {
+   "virgen": {
+    "autor": "Reales Cofradías Fusionadas (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/rcfusionadas",
+    "local": "scripts/cedidas/malaga/vera-cruz-malaga-virgen.png",
+    "titulo": "Cedida: Nuestra Señora del Mayor Dolor Reina de los Ángeles",
+    "titular": "Nuestra Señora del Mayor Dolor Reina de los Ángeles",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @rcfusionadas (https://www.instagram.com/p/De-UZFHjCHW/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+   }
+  },
+  "verdad-y-sagrario-malaga": {
+   "cristo": {
+    "autor": "Verdad y Sagrario (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/verdadysagrario",
+    "local": "scripts/cedidas/malaga/verdad-y-sagrario-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Verdad ante Caifás",
+    "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @verdadysagrario (https://www.instagram.com/p/DVMRIXECJQ7/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+   }
+  },
+  "luz-y-mar-malaga": {
+   "virgen": {
+    "autor": "Luz y Mar (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdaddesanandres",
+    "local": "scripts/cedidas/malaga/luz-y-mar-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Mar",
+    "titular": "María Santísima del Mar",
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdaddesanandres (https://www.instagram.com/p/Dcnk4egjb3s/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }
   }
  }

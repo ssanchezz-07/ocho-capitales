@@ -6,42 +6,30 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 
 ## Málaga (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-13 sin ninguna foto de titular; 19 con algún titular sin foto.
+5 sin ninguna foto de titular; 15 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
 | Dulce Nombre | Domingo de Ramos | Virgen: María Santísima del Dulce Nombre |
-| Salutación | Domingo de Ramos | Virgen: María Santísima del Patrocinio Reina de los Cielos |
 | Humildad | Domingo de Ramos | **ninguna foto**; Cristo: Santísimo Cristo de la Humildad en su Presentación al Pueblo / San Juan Evangelista; Virgen: Nuestra Madre y Señora de la Merced |
 | Huerto | Domingo de Ramos | Cristo: Nuestro Padre Jesús Orando en el Huerto / Ángel Egudiel |
-| Prendimiento | Domingo de Ramos | Cristo: Nuestro Padre Jesús del Prendimiento |
 | Crucifixión | Lunes Santo | Virgen: María Santísima del Mayor Dolor en su Soledad |
-| Gitanos | Lunes Santo | Virgen: María Santísima de la O |
-| Dolores del Puente | Lunes Santo | **ninguna foto**; Cristo: Santísimo Cristo del Perdón; Virgen: Nuestra Señora de los Dolores Coronada |
+| Dolores del Puente | Lunes Santo | Cristo: Santísimo Cristo del Perdón |
 | Pasión | Lunes Santo | Virgen: María Santísima del Amor Doloroso |
-| Estudiantes | Lunes Santo | Virgen: Nuestra Señora de Gracia y Esperanza |
 | Rocío | Martes Santo | Cristo: Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario |
-| Penas | Martes Santo | Virgen: María Santísima de las Penas |
 | Nueva Esperanza | Martes Santo | Virgen: María Santísima de Nueva Esperanza |
-| Humillación y Estrella | Martes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Humillación y Perdón; Virgen: María Santísima de la Estrella |
-| Salesianos | Miércoles Santo | Virgen: María Santísima del Auxilio |
+| Humillación y Estrella | Martes Santo | Cristo: Nuestro Padre Jesús de la Humillación y Perdón |
 | Paloma | Miércoles Santo | Virgen: María Santísima de la Paloma |
-| Sagrada Cena | Jueves Santo | Cristo: Sagrada Cena Sacramental |
 | Viñeros | Jueves Santo | Virgen: Nuestra Señora del Traspaso y Soledad de Viñeros |
 | Santa Cruz | Jueves Santo | Cristo: Santa Cruz / Santísimo Cristo de la Victoria |
-| Vera+Cruz | Jueves Santo | **ninguna foto**; Cristo: Santísimo Cristo de la Vera+Cruz y Sangre / San Juan Evangelista; Virgen: Nuestra Señora del Mayor Dolor Reina de los Ángeles |
-| Mena | Jueves Santo | Cristo: Santísimo Cristo de la Buena Muerte y Ánimas |
+| Vera+Cruz | Jueves Santo | Cristo: Santísimo Cristo de la Vera+Cruz y Sangre / San Juan Evangelista |
 | Misericordia | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Misericordia; Virgen: Nuestra Señora del Gran Poder |
-| Monte Calvario | Viernes Santo | Cristo: Santísimo Cristo Yacente de la Paz y Unidad |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Santo Sepulcro; Virgen: Nuestra Señora de la Soledad |
 | Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado |
-| Desamparados | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Señora de los Desamparados |
-| Verdad y Sagrario | Sábado de Pasión | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Verdad ante Caifás; Virgen: María Santísima del Sagrario |
-| Luz y Mar | Sábado de Pasión | **ninguna foto**; Cristo: Santísimo Cristo Luz del Mundo; Virgen: María Santísima del Mar |
-| Buen Camino (Gamarra) | Sábado de Pasión | **ninguna foto**; Virgen: Nuestra Purísima Madre del Buen Camino |
+| Verdad y Sagrario | Sábado de Pasión | Virgen: María Santísima del Sagrario |
+| Luz y Mar | Sábado de Pasión | Cristo: Santísimo Cristo Luz del Mundo |
 | Medinaceli (Martiricos) | Viernes de Dolores | Virgen: María Santísima de la Candelaria |
 | Dolores del Puerto de la Torre | Viernes de Dolores | **ninguna foto**; Cristo: Santísimo Cristo de Hermandad y Caridad; Virgen: Nuestra Señora de los Dolores |
-| Dolores de Churriana | Viernes de Dolores | **ninguna foto**; Cristo: Nuestro Padre Jesús Nazareno del Paso; Virgen: Nuestra Señora de los Dolores |
 
 ## Otras capitales (revisado el 2026-10-27)
 
