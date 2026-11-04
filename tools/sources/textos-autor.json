@@ -254,6 +254,240 @@
    "fuentes": [
     "https://es.wikipedia.org/wiki/Corpus_Christi"
    ]
+  },
+  {
+   "texto": "…",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales es una web informativa y gratuita sobre la Semana Santa de las ocho capitales andaluzas: qué sale cada día, recorridos, hermandades, bandas, marchas, imagineros y noticias. No vende nada y no pide registrarse.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los datos de hermandades, horarios, recorridos y marchas se toman de fuentes públicas: consejos, agrupaciones y federaciones de hermandades, las propias hermandades, Wikipedia y catálogos de marchas. Cada dato lleva su fuente, que se puede consultar desde su ficha.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los horarios y recorridos pueden cambiar. Si un dato no coincide con lo que publica la hermandad o su consejo, manda la información oficial. Las posiciones de los cortejos en el plano son estimaciones y se indican así.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Las noticias pertenecen a sus medios. Ocho Capitales muestra el titular, un extracto breve y la imagen de cada una, y enlaza siempre a la noticia original.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Las imágenes proceden de Wikimedia Commons, con su autor y su licencia, o las han cedido sus autores o las hermandades. Cada foto lleva su crédito.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los planos usan datos de OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL).",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "El diseño, el código y los textos propios de Ocho Capitales son de su titular. Se pueden citar con un enlace a la página de origen; para cualquier otro uso hace falta permiso.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los textos basados en Wikipedia mantienen su licencia, CC BY-SA 4.0, y las imágenes de terceros, la suya.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales enlaza a medios, hermandades y otras webs. No controla su contenido ni responde de él.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Esta web se rige por la ley española.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales no tiene cuentas de usuario y no pide registrarse. Solo trata datos personales en los casos que se explican aquí.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Si envías una aportación, se recoge lo que escribes en el formulario: qué quieres enviar, la capital, la hermandad o página, el mensaje y el enlace a la fuente. Tu correo, solo si lo das.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Se usa para revisar la aportación y, si dejaste tu correo, para contestarte. El correo no se publica.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "La base legal es tu consentimiento, que das al enviar el formulario. Puedes retirarlo cuando quieras escribiendo al correo de contacto.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "El formulario se envía a través de Web3Forms, un servicio externo que hace llegar el mensaje por correo al titular.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los mensajes se guardan solo el tiempo necesario para revisarlos y responder.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Para saber cuántas visitas recibe, la web usa Cloudflare Web Analytics, que las cuenta de forma agregada, sin cookies y sin identificar a quien visita.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "La web está alojada en Cloudflare Pages. Como cualquier servidor, recibe la dirección IP de tu dispositivo para poder enviarte las páginas.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Las fotos de algunas noticias se cargan directamente desde la web de su medio, que recibe así la dirección IP de tu dispositivo. Ocho Capitales no le dice desde qué página llegas.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los enlaces a YouTube, Spotify y otras webs solo se abren si los pulsas: no hay vídeos incrustados.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Puedes pedir el acceso, la rectificación o la supresión de tus datos, y la limitación de su tratamiento o oponerte a él, escribiendo al correo de contacto.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales no usa cookies: ni propias ni de terceros, ni para medir visitas ni para publicidad.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Para que funcionen algunas opciones que eliges tú, la web guarda pequeños datos en tu propio navegador, nunca en un servidor:",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "tus hermandades favoritas;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "el tema claro u oscuro;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "la capital que eliges;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "tus últimas búsquedas;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "cuántas aportaciones has enviado hoy desde Colabora, para evitar envíos repetidos;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "si ya has visto el saludo de erCuñao y la entrada de la portada, para no repetirlos durante la visita.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Además, guarda una copia de las páginas que visitas para que se puedan abrir sin conexión.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Nada de esto sirve para identificarte ni se comparte con nadie. Como es necesario para lo que tú pides, no requiere consentimiento (artículo 22.2 de la LSSI).",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Puedes borrarlo cuando quieras desde la configuración de tu navegador, borrando los datos de este sitio.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Para cualquier consulta sobre Ocho Capitales, escribe a:",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Para corregir un dato o enviar una foto o una fuente, mejor desde Colabora: así llega con todo lo necesario para revisarlo.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Quién está detrás de Ocho Capitales, de dónde salen sus datos y en qué condiciones se puede usar su contenido.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Qué datos personales trata Ocho Capitales, para qué y cómo ejercer tus derechos.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Ocho Capitales no usa cookies. Qué guarda en tu navegador para que funcionen las opciones que eliges.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Cómo escribir a Ocho Capitales.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
   }
  ]
 }

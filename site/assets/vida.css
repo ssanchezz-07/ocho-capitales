@@ -770,3 +770,8 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
   .fx-prosa.is-larga > p:first-child { margin-top: 0; }
 }
 
+/* ---------- 12. Pulido (4-nov): pie legal ---------- */
+.oc-footer-legal { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .88rem; color: var(--muted); }
+.oc-footer-legal .oc-copy { margin: 0; }
+.oc-footer-legal ul { display: flex; flex-wrap: wrap; gap: 0 18px; margin: 0; padding: 0; list-style: none; }
+.oc-footer-legal li a { min-height: 44px; }
