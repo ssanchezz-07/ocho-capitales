@@ -546,6 +546,10 @@ const OG_DEFAULT = 'assets/og.png';
 const capitalDe = (p) => { const [tipo, slug] = String(p).split('/'); return tipo === 'hermandad' && HERM[slug] ? HERM[slug].ciudad : ''; };
 const colabora = (p, t) => /^(hermandad|banda|imaginero|marcha|compositor)\//.test(p)
   ? `<p class="oc-note oc-colabora">¿Falta algún dato o hay un error? <a href="${esc(u('colabora/') + '?' + new URLSearchParams({ pagina: '/' + p, nombre: t || '', ...(capitalDe(p) ? { capital: capitalDe(p) } : {}) }))}">Sugerir una corrección</a>: te lo agradecemos y lo revisamos con su fuente.</p>` : '';
+// Barra de abajo: «Hoy» solo en /hoy/ (antes se marcaba también en capitales, fichas y el plano, que no son «Hoy»); lo que está
+// dentro de «Más» (capitales, hermandades, bandas, marchas, calendario, el plano…) marca «Más» (Coordinación, 4-nov).
+const TABS = (p, active) => [[u(), p === '', 'home', 'Inicio', ''], [u('hoy/'), p === 'hoy/', 'hoy', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']];
+const masAqui = (p, active) => p !== '' && !TABS(p, active).some(([, cur]) => cur);
 function layout({ title, desc, body, path: p = '', image = '', jsonld = null, active = '', crumbs: cr = null, wide = false, head = '' }) {
   const fullTitle = title ? `${title} | ${BRAND}` : `${BRAND}: Semana Santa de Andalucía hoy, noticias y hermandades`;
   const description = desc || TAGLINE;
@@ -610,8 +614,8 @@ ${body}${colabora(p, title)}
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
-  ${[[u(), p === '', 'home', 'Inicio', ''], [u('hoy/'), p === 'hoy/' || active === 'capitales/' || /^(hermandad|semana-santa|en-la-calle)\//.test(p), 'hoy', 'Hoy', ''], [u('noticias/'), active === 'noticias/', 'news', 'Noticias', ''], [u('buscar/'), p === 'buscar/', 'search', 'Buscar', ' data-open-search']].map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
-  <button type="button" data-more aria-expanded="false" aria-controls="oc-more">${icon('more')}<span>Más</span></button>
+  ${TABS(p, active).map(([h, cur, ic, l, x]) => `<a href="${h}"${x}${cur ? ' aria-current="page"' : ''}>${cur ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon(ic)}<span>${l}</span></a>`).join('\n  ')}
+  <button type="button" data-more aria-expanded="false" aria-controls="oc-more"${masAqui(p, active) ? ' class="is-aqui"' : ''}>${masAqui(p, active) ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon('more')}<span>Más</span></button>
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
 <div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}">

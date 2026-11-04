@@ -145,7 +145,7 @@ strong, b { font-weight: 700; }
 .oc-tabbar a, .oc-tabbar button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: var(--tabbar-h); padding: 6px 2px; border: 0; background: none; color: var(--muted); font-size: .75rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: color var(--duration-fast) var(--ease-out); }
 .oc-tabbar .oc-i { width: 24px; height: 24px; transition: transform var(--duration-instant) var(--ease-out); }
 .oc-tabbar a:active .oc-i, .oc-tabbar button:active .oc-i { transform: scale(.88); }
-.oc-tabbar [aria-current="page"], .oc-tabbar [aria-expanded="true"] { color: var(--primary); }
+.oc-tabbar [aria-current="page"], .oc-tabbar [aria-expanded="true"], .oc-tabbar .is-aqui { color: var(--primary); }
 .oc-tabbar [aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 2px; border-radius: 0 0 2px 2px; background: var(--primary); }
 @media (prefers-reduced-transparency: reduce) { .oc-tabbar { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; } }
 @media (min-width: 960px) { .oc-tabbar { display: none; } }
@@ -1268,6 +1268,12 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-caphero .oc-stats li { display: flex; align-items: baseline; gap: 6px; color: #f0d79c; }
 .oc-caphero .oc-stats b { font: 400 2.4rem/1 var(--display); color: #fff; }
 .oc-caphero .oc-stats span { font: 600 .78rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+/* Hasta 859 px (la cabecera va a sangre, con el margen de --gutter) el texto no se mete bajo la colgadura (pasada integrada, 4-nov) */
+@media (max-width: 859px) {
+  .oc-caphero:has(.oc-caphero-colg) .oc-caphero-text { padding-right: calc(clamp(18px, 7vw, 84px) - var(--gutter) + clamp(62px, 17vw, 124px) + 12px); }
+  .oc-caphero.is-compact:has(.oc-caphero-colg) .oc-caphero-text { padding-right: calc(clamp(18px, 7vw, 84px) - var(--gutter) + clamp(48px, 12vw, 96px) + 12px); }
+  .oc-caphero.is-compact:has(.oc-caphero-colg) .oc-caphero-title { padding-right: 0; }
+}
 /* Móvil: la imagen de la hermandad sube justo bajo el titular (antes quedaba tras toda la tabla de datos) */
 @media (max-width: 959px) {
   .oc-ficha > .oc-hero { gap: 0; }
