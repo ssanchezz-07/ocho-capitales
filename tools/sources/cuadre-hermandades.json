@@ -1,0 +1,103 @@
+{
+ "nota": "Cuadre de las fichas de hermandad con la cifra oficial de cada capital (Pablo, 5-nov-2026: «todo debe cuadrar»). El portal tiene una ficha por cortejo o salida, y la cifra oficial (capitales[].cifra.n) cuenta hermandades. Las fichas que son otro cortejo o sección de una hermandad que ya tiene su ficha se apuntan aquí, en «cortejos», cada una con la ficha principal (hermandad), el motivo y su fuente. Cuando la entidad oficial da o permite contar los cortejos, van en «cortejos_oficiales», con su fuente y de dónde sale el número («cortejos_como»). tools/comprobar-cuadre-hermandades.mjs para la publicación si fichas - cortejos ≠ cifra oficial, o si fichas ≠ cortejos_oficiales. Comprobado ficha a ficha con las webs oficiales el 5-nov-2026 (nota cuadre-cifras-hermandades.md).",
+ "capitales": {
+  "sevilla": {
+   "cortejos": [
+    {
+     "slug": "la-borriquita-sevilla",
+     "hermandad": "el-amor-sevilla",
+     "motivo": "Primera parte de la Hermandad del Amor el Domingo de Ramos: el Consejo nombra solo «El Amor» y su nómina la recoge en dos partes",
+     "fuentes": [
+      "https://www.hermandades-de-sevilla.org/hermandades/penitencia/domingo-de-ramos/",
+      "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+     ]
+    }
+   ]
+  },
+  "malaga": {
+   "cortejos": [
+    {
+     "slug": "lagrimas-y-favores-malaga",
+     "hermandad": "fusionadas-malaga",
+     "motivo": "Sección de las Reales Cofradías Fusionadas que sale el Domingo de Ramos",
+     "fuentes": [
+      "https://agrupaciondecofradias.com/hermandades/fusionadas/",
+      "https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/"
+     ]
+    },
+    {
+     "slug": "vera-cruz-malaga",
+     "hermandad": "fusionadas-malaga",
+     "motivo": "Sección de las Reales Cofradías Fusionadas que sale el Jueves Santo",
+     "fuentes": [
+      "https://agrupaciondecofradias.com/hermandades/fusionadas/",
+      "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
+     ]
+    }
+   ]
+  },
+  "granada": {
+   "cortejos_oficiales": 34,
+   "cortejos_fuente": "https://hermandadesdegranada.com/",
+   "cortejos": [
+    {
+     "slug": "los-facundillos-granada",
+     "hermandad": "la-canilla-granada",
+     "motivo": "La Cofradía de la Humildad sale el Domingo de Resurrección solo con el paso del Dulce Nombre de Jesús («Facundillos»)",
+     "fuentes": [
+      "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
+      "https://hermandadesdegranada.com/domingo-de-resurreccion/",
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    }
+   ],
+   "cortejos_como": "la portada de la Real Federación: «treinta y dos cofradías, que conforman treinta y cuatro cortejos nazarenos»"
+  },
+  "cadiz": {
+   "cortejos": [
+    {
+     "slug": "la-resurreccion-cadiz",
+     "hermandad": "la-columna-cadiz",
+     "motivo": "La misma archicofradía sale el Martes Santo (la Columna) y el Domingo de Resurrección",
+     "fuentes": [
+      "https://consejocofradiascadiz.es/columna",
+      "https://consejocofradiascadiz.es/resucitado"
+     ]
+    },
+    {
+     "slug": "humillacion-piedad-cadiz",
+     "hermandad": "la-piedad-cadiz",
+     "motivo": "Cortejo de Nuestro Padre Jesús de la Humillación, al que da culto la Hermandad de la Piedad; el Consejo anunció que procesionaría por primera vez el Sábado de Pasión de 2026",
+     "fuentes": [
+      "https://consejocofradiascadiz.es/piedad",
+      "https://consejocofradiascadiz.es/la-palabra-del-periodista-pablo-manuel-durio-anuncia-ya-una-nueva-semana-santa"
+     ]
+    }
+   ]
+  },
+  "jaen": {
+   "cortejos_oficiales": 21,
+   "cortejos_fuente": "https://cofradiasjaen.org/",
+   "cortejos": [
+    {
+     "slug": "el-huerto-vera-cruz-jaen",
+     "hermandad": "la-vera-cruz-los-civiles-jaen",
+     "motivo": "La Vera Cruz sale en dos días: el Domingo de Ramos (Oración en el Huerto) y el Jueves Santo",
+     "fuentes": [
+      "https://cofradiasjaen.org/vera-cruz/"
+     ]
+    }
+   ],
+   "cortejos_como": "el recuento de las 21 entradas del menú «Cofradías de Pasión» de la Agrupación (la Vera Cruz, dos veces)"
+  },
+  "cordoba": {
+   "cortejos": []
+  },
+  "huelva": {
+   "cortejos": []
+  },
+  "almeria": {
+   "cortejos": []
+  }
+ }
+}

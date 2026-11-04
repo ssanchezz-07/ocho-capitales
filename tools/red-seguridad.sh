@@ -2,6 +2,8 @@
 # Ocho Capitales · red de seguridad antes de publicar (GitHub Actions; también en local con Git Bash).
 # Si cualquier comprobación falla, sale con error y el flujo NO publica: se queda la versión anterior.
 #   1. Datos: marchas (tools/comprobar-marchas.mjs) y origen único de portal.json (tools/comprobar-origen.mjs), 0 errores;
+#      que las fichas de cada capital cuadren con su cifra oficial, con los cortejos de otra hermandad apuntados con su fuente
+#      (tools/comprobar-cuadre-hermandades.mjs, tools/sources/cuadre-hermandades.json);
 #      y que cada texto de autor tenga su fuente registrada (tools/comprobar-fuentes-textos.mjs).
 #   2. Enlaces internos rotos en la web generada (tools/comprobar-enlaces.mjs), y que cada ficha lleve a su apartado de fuentes
 #      en «Fuentes y metodología», con alguna fuente dentro (tools/comprobar-fuentes-fichas.mjs).
@@ -18,6 +20,7 @@ fin() { if [ "$1" -ne 0 ]; then echo "::error::Red de seguridad: falla «$2»"; 
 
 paso "Datos: marchas";            node tools/comprobar-marchas.mjs;                 fin $? "comprobar-marchas"
 paso "Datos: origen de portal";   node tools/comprobar-origen.mjs;                  fin $? "comprobar-origen"
+paso "Cuadre de hermandades";   node tools/comprobar-cuadre-hermandades.mjs;     fin $? "cuadre de hermandades"
 paso "Fuentes de los textos";    node tools/comprobar-fuentes-textos.mjs;          fin $? "fuentes de los textos"
 paso "Enlaces internos";          node tools/comprobar-enlaces.mjs "$DIST" "$BASE"; fin $? "enlaces internos"
 paso "Fuentes de las fichas";   node tools/comprobar-fuentes-fichas.mjs "$DIST" "$BASE"; fin $? "fuentes de las fichas"
