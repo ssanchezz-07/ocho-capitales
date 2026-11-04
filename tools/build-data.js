@@ -352,9 +352,30 @@ const ALIAS_BANDA = new Map(); const ALIAS_CLAVE = new Map(); // (nombre|localid
 const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado de jaen', 'agrupacion musical dulce nombre de jesus de granada', 'agrupacion musical maria santisima de la cabeza de exfiliana', 'agrupacion musical nuestra senora del mar de huercal de almeria', 'banda de cornetas y tambores monte calvario de martos', 'banda de cornetas y tambores santa cruz de almeria', 'banda de musica los iris de instincion', 'banda de musica santa cecilia de sorbas', 'capilla musical sacra redemptio de almeria']);
 { const k = (n, l) => norm0(n) + '|' + norm0(l); const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
   for (const b of bandOut) { if (b.localidad || !UNIR_BANDAS.has(norm0(b.nombre))) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (!m) continue; const otra = hay.get(k(m[1], m[2])); if (otra && otra !== b) { ALIAS_BANDA.set(b.nombre.toLowerCase(), otra.slug); b.nombre = otra.nombre; b.localidad = otra.localidad; b.slug = otra.slug; b.origen = otra.origen; } } }
+// La misma banda con el nombre escrito de dos maneras («Banda Sinfónica Virgen de la Trinidad» y «Banda de Música Sinfónica Virgen de la
+// Trinidad», Málaga): cada pareja, comprobada con su fuente, en tools/sources/bandas-unidas.json (4-nov, Pablo: «quitar duplicidades YA»).
+// La ficha que sobra pasa al nombre, la localidad y la dirección de la que queda; su dirección vieja redirige (bandas_unidas, 301).
+const BANDAS_UNIDAS = {}; // dirección vieja → dirección de la ficha que queda
+{ const BUN = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'bandas-unidas.json'), 'utf8')).unidas || [];
+  const k = (n, l) => norm0(n) + '|' + norm0(l); const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
+  const usos = new Map(); for (const b of bandOut) usos.set(b.nombre.toLowerCase(), (usos.get(b.nombre.toLowerCase()) || 0) + 1);
+  for (const x of BUN) {
+    // todas las fichas con ese nombre y localidad (puede haber dos: la de antes y la que se le unió arriba con la localidad pegada al nombre)
+    const des = bandOut.filter((b) => k(b.nombre, b.localidad) === k(x.de.nombre, x.de.localidad)), a = hay.get(k(x.a.nombre, x.a.localidad));
+    if (!des.length || !a) { console.warn('bandas-unidas.json: no hay ninguna banda «' + (!des.length ? x.de.nombre + '» en ' + x.de.localidad : x.a.nombre + '» en ' + x.a.localidad)); continue; }
+    for (const de of des) {
+      // el nombre suelto solo lleva a la ficha que queda si ninguna banda de otro pueblo se llama igual (BCT Nuestra Señora del Rosario: Arriate y Cádiz)
+      if (usos.get(de.nombre.toLowerCase()) === des.filter((d) => d.nombre === de.nombre).length) ALIAS_BANDA.set(de.nombre.toLowerCase(), a.slug);
+      ALIAS_CLAVE.set((de.nombre + '|' + de.localidad).toLowerCase(), a.slug);
+      if (de.slug !== a.slug) BANDAS_UNIDAS[de.slug] = a.slug;
+      Object.assign(de, { nombre: a.nombre, localidad: a.localidad, slug: a.slug, origen: a.origen });
+    }
+  }
+  // los alias de arriba que llevaban a una ficha que ahora se ha unido a otra, a la que queda
+  for (const M of [ALIAS_BANDA, ALIAS_CLAVE]) for (const [n, s] of M) if (BANDAS_UNIDAS[s]) M.set(n, BANDAS_UNIDAS[s]); }
 // La misma banda (mismo nombre y misma localidad) que acompaña en varias capitales es una sola ficha: se juntan sus
-// acompañamientos. Antes salía partida en dos («…-jaen» y «…-jaen-2», la Agrupación Musical Jesús Despojado).
-{ const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) { p.acompana.push(...(b.acompana || [])); if (b.nombre !== p.nombre) { ALIAS_BANDA.set(b.nombre.toLowerCase(), p.slug); ALIAS_CLAVE.set((b.nombre + '|' + b.localidad).toLowerCase(), p.slug); } } else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
+// acompañamientos (y sus redes). Antes salía partida en dos («…-jaen» y «…-jaen-2», la Agrupación Musical Jesús Despojado).
+{ const porSlug = new Map(); for (const b of bandOut) { const p = porSlug.get(b.slug); if (p) { p.acompana.push(...(b.acompana || [])); if (b.redes) p.redes = [...new Set([...(p.redes || []), ...b.redes])]; if (!p.localidad_fuente && b.localidad_fuente) p.localidad_fuente = b.localidad_fuente; if (b.nombre !== p.nombre) { ALIAS_BANDA.set(b.nombre.toLowerCase(), p.slug); ALIAS_CLAVE.set((b.nombre + '|' + b.localidad).toLowerCase(), p.slug); } } else porSlug.set(b.slug, b); } bandOut.splice(0, bandOut.length, ...porSlug.values()); }
 // el acompañamiento de la guía sigue nombrándolas sin localidad: se enlaza con su ficha nueva
 for (const n of SIN_LOC) { const b = bandOut.find((x) => x.nombre === n && x.localidad_fuente); if (b) ALIAS_CLAVE.set((n + '|').toLowerCase(), b.slug); }
 for (const b of bandOut) { const vis = new Map(); for (const a of b.acompana || []) { const kk = a.hermandad_slug + '|' + (a.rol || ''); const p = vis.get(kk); if (!p || (!p.fuente && a.fuente)) vis.set(kk, a); } b.acompana = [...vis.values()]; }
@@ -512,7 +533,7 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
 // Un templo, un nombre: tabla en tools/sources/templos.json (la comparten las fichas, las sedes y el plano)
 const TEMPLOS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'templos.json'), 'utf8'));
 for (const h of hermandades) { const t = (TEMPLOS[h.ciudad] || {})[h.sede]; if (t) h.sede = t; }
-const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut };
+const out = { version: 1, generado: new Date().toISOString(), dias_orden: DAY_ORDER, capitales, hermandades, imagineros: imgOut, bandas: bandOut, bandas_unidas: BANDAS_UNIDAS };
 const dest = path.join(__dirname, '..', 'portal-cofrade', 'data');
 fs.mkdirSync(dest, { recursive: true });
 fs.writeFileSync(process.env.PORTAL_OUT || path.join(dest, 'portal.json'), JSON.stringify(out)); // PORTAL_OUT: para comprobar sin tocar el publicado (tools/comprobar-origen.mjs)

@@ -1,0 +1,10 @@
+{
+ "nota": "Compositores cuya página ya estaba publicada y que se quedan con una sola marcha al unir fichas repetidas (la página de compositor sale desde dos marchas): su dirección lleva a esa marcha. build.mjs escribe la redirección (301 en Cloudflare).",
+ "redirecciones": {
+  "benjamin-esparza-gil": "nazareno-del-paso-benjamin-esparza",
+  "rafael-soto-reyes": "toques-de-triana-rafael-soto-reyes",
+  "antonio-martinez-ares": "lagrimas-de-san-pedro-antonio-martinez-ares",
+  "giulio-romano-caccini-vladimir-fiodorovich-vavilov": "ave-maria-giulio-romano-caccini-vladimir-fiodorovich-vavilov-y-ramiro-minguez-martinez",
+  "lowell-mason": "cerca-de-ti-senor-lowell-mason"
+ }
+}

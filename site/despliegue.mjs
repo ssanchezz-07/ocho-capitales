@@ -104,7 +104,7 @@ self.addEventListener('fetch', (e) => {
 
 // ---------- cabeceras y redirecciones de Cloudflare Pages ----------
 // Las reglas de caché no se solapan: si dos reglas ponen la misma cabecera, Cloudflare junta los valores con comas.
-export function escribeCabeceras({ DIST, BASE, SITE }) {
+export function escribeCabeceras({ DIST, BASE, SITE, redirecciones = [] }) {
   const b = BASE;
   const fijo = 'public, max-age=31536000, immutable';
   const reglas = [
@@ -143,7 +143,9 @@ export function escribeCabeceras({ DIST, BASE, SITE }) {
   if (SITE && !/\.pages\.dev$/.test(new URL(SITE).hostname)) reglas.push(['https://ocho-capitales.pages.dev/*', ['X-Robots-Tag: noindex']]);
   fs.writeFileSync(path.join(DIST, '_headers'), '# Generado por site/despliegue.mjs (Cloudflare Pages). Máximo 100 reglas.\n' + reglas.map(([p, hs]) => p + '\n' + hs.map((h) => '  ' + h).join('\n')).join('\n\n') + '\n');
   // enlaces copiados de GitHub Pages (…/ocho-capitales/…) en el dominio nuevo
-  if (b === '/') fs.writeFileSync(path.join(DIST, '_redirects'), '# Generado por site/despliegue.mjs\n/ocho-capitales/* /:splat 301\n/ocho-capitales /  301\n');
+  // y las fichas unidas con otra (bandas con dos fichas, build.mjs): la dirección vieja, con y sin barra final, a la que queda
+  if (b === '/') fs.writeFileSync(path.join(DIST, '_redirects'), '# Generado por site/despliegue.mjs\n/ocho-capitales/* /:splat 301\n/ocho-capitales /  301\n'
+    + redirecciones.flatMap(([de, a]) => [`${de} ${a} 301`, `${de.replace(/\/$/, '')} ${a} 301`]).join('\n') + (redirecciones.length ? '\n' : ''));
 }
 
 // ---------- límites ----------

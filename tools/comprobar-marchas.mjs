@@ -131,6 +131,29 @@ for (const m of U.marchas) {
   for (const b of P.bandas) { const k = norm(b.nombre) + '|' + norm(b.localidad); if (vistas.has(k)) errores.push(`banda duplicada: ${b.slug} y ${vistas.get(k)} («${b.nombre}», ${b.localidad})`); else vistas.set(k, b.slug); }
   // nombres casi iguales: el mismo con la localidad pegada al final y sin localidad («… Despojado de Jaén», sin localidad)
   for (const b of P.bandas) { if (b.localidad) continue; const m = b.nombre.match(/^(.*)\s+de\s+(\S.*)$/); if (m && vistas.has(norm(m[1]) + '|' + norm(m[2]))) errores.push(`banda casi repetida: ${b.slug} y ${vistas.get(norm(m[1]) + '|' + norm(m[2]))} («${b.nombre}» sin localidad)`); }
+  // Nombre casi igual en la misma localidad (4-nov, Pablo: «quitar duplicidades YA»): se quitan «Banda de Música», «Municipal», «Sinfónica»,
+  // «Nuestro Padre», «de <localidad>»…, sin mezclar tipos (la de cornetas y la de música de un pueblo son dos bandas). Cada par se resuelve en
+  // tools/sources/bandas-unidas.json: en «unidas» si son la misma (con su fuente) o en «distintas» si no lo son (también con fuente).
+  const BU = JSON.parse(fs.readFileSync(path.join(DIR, 'sources/bandas-unidas.json'), 'utf8'));
+  const tipoB = (s) => (/cornetas|\bbct\b/.test(s) ? 'cct' : /agrupacion|^am /.test(s) ? 'am' : /capilla/.test(s) ? 'cap' : 'bm');
+  const nucleo = (b) => { const l = norm(b.localidad); let s = norm(b.nombre).replace(/\b(sinfonica|municipal|de musica|musical|juvenil)\b/g, ' ');
+    if (l) s = s.replace(new RegExp('\\b(de |del )?' + l + '$'), ' ');
+    return s.replace(/\b(nuestro padre|nuestra senora|maria santisima|santisimo|jesus|banda|cornetas|tambores|agrupacion|asociacion|de|del|la|el|los|las|y|maestro)\b/g, ' ').replace(/\s+/g, ' ').trim(); };
+  const lev = (a, b) => { let p = Array.from({ length: b.length + 1 }, (_, j) => j); for (let i = 1; i <= a.length; i++) { const q = [i]; for (let j = 1; j <= b.length; j++) q[j] = Math.min(p[j] + 1, q[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); p = q; } return p[b.length]; };
+  const par = (a, b) => [norm(a), norm(b)].sort().join('|');
+  const resueltos = new Set(BU.distintas.map((x) => par(x.a, x.b) + '|' + norm(x.localidad)));
+  for (const x of BU.distintas) if (!x.fuente) errores.push(`bandas-unidas.json: «${x.a}» y «${x.b}» como distintas sin fuente`);
+  for (const x of BU.unidas) { if (!x.fuente) errores.push(`bandas-unidas.json: «${x.de.nombre}» unida sin fuente`); if (vistas.has(norm(x.de.nombre) + '|' + norm(x.de.localidad))) errores.push(`bandas-unidas.json: «${x.de.nombre}» (${x.de.localidad}) sigue teniendo ficha propia (¿no está «${x.a.nombre}» con esa localidad?)`); }
+  const B = P.bandas.map((b) => ({ b, k: nucleo(b), l: norm(b.localidad), t: tipoB(norm(b.nombre)) }));
+  let casi = 0;
+  for (let i = 0; i < B.length; i++) for (let j = i + 1; j < B.length; j++) {
+    const x = B[i], y = B[j];
+    if (x.t !== y.t || !x.k || !y.k || (x.l !== y.l && !(x.l && y.l && (x.l.startsWith(y.l) || y.l.startsWith(x.l))))) continue;
+    if (!(x.k === y.k || lev(x.k, y.k) <= 2 || (x.k.length > 5 && y.k.length > 5 && (x.k.includes(y.k) || y.k.includes(x.k))))) continue;
+    if (resueltos.has(par(x.b.nombre, y.b.nombre) + '|' + x.l) || resueltos.has(par(x.b.nombre, y.b.nombre) + '|' + y.l)) continue;
+    casi++; avisos.push(`bandas con nombre casi igual en ${x.b.localidad || y.b.localidad}: ${x.b.slug} («${x.b.nombre}») y ${y.b.slug} («${y.b.nombre}»): únelas o apúntalas como distintas en bandas-unidas.json, con su fuente`);
+  }
+  console.log(`bandas: ${P.bandas.length} · con nombre casi igual en la misma localidad, sin resolver: ${casi}`);
 }
 // Orden de paso (tools/sources/orden-paso.json): dentro de una jornada, el orden oficial va por la hora de CARRERA OFICIAL, no por la de
 // salida (La Paz sale antes que la Borriquita y pasa después). Error si la hora de carrera no sube, si el orden se repite o si se pasa por

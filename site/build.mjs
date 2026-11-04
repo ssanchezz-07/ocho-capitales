@@ -130,6 +130,8 @@ if (process.env.PEOR_CASO) {
 const CAP = Object.fromEntries(D.capitales.map((c) => [c.slug, c]));
 const IMAG = Object.fromEntries(D.imagineros.map((i) => [i.slug, i]));
 const BANDA = Object.fromEntries(D.bandas.map((b) => [b.slug, b]));
+// Bandas unidas con otra ficha (tools/sources/bandas-unidas.json): el repertorio que citaba la dirección vieja pasa a la ficha que queda
+const BANDA_UNIDA = D.bandas_unidas || {};
 const HERM = Object.fromEntries(D.hermandades.map((h) => [h.slug, h]));
 // Marchas dedicadas: una por título+compositor+hermandad, con ficha propia
 const HABITOS_FILE = path.join(DIR, '..', 'tools', 'sources', 'habitos.json');
@@ -160,6 +162,10 @@ const MARCHAS = MU.marchas.map((m) => {
 });
 const MARCHA_SLUG = new Map(); const MARCHA_SLUGS = new Set(MARCHAS.map((m) => m.slug));
 const MARCHA_POR = new Map(MARCHAS.map((m) => [m.slug, m]));
+for (const m of MARCHAS) {
+  if (m.repertorio) { const vis = new Set(); m.repertorio = m.repertorio.filter((r) => { if (r && BANDA_UNIDA[r.banda]) r.banda = BANDA_UNIDA[r.banda]; return !r || !r.banda || (!vis.has(r.banda) && vis.add(r.banda)); }); }
+  for (const v of m.versiones || []) if (v.bandas) v.bandas = [...new Set(v.bandas.map((s) => BANDA_UNIDA[s] || s))];
+}
 const REPERTORIO = new Map(); // banda → [{marcha, arreglo}]
 for (const m of MARCHAS) for (const r of m.repertorio || []) if (r && r.banda) (REPERTORIO.get(r.banda) || REPERTORIO.set(r.banda, []).get(r.banda)).push({ m, arreglo: r.arreglo || '' });
 const ciudadMarcha = (m) => (m.h ? m.h.ciudad : m.ciudad && CAP[m.ciudad] ? m.ciudad : '');
@@ -1946,16 +1952,21 @@ function datosCunao() {
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pageColabora(); pageOffline(); page404();
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
-{ const f = path.join(DIR, '..', 'tools', 'sources', 'bandas-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (BANDA[a]) continue; const d = u(b ? 'banda/' + b + '/' : 'bandas/'); /* sin destino: no era una banda → al listado */ write(`banda/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la banda</a></p></body></html>`); pages.pop(); } }
+// y las unidas por escribir su nombre de dos maneras (tools/sources/bandas-unidas.json, en portal.json como bandas_unidas). En Cloudflare,
+// además, con 301 en _redirects (REDIR_301); la página con meta refresh queda para GitHub Pages y para quien la tenga en caché.
+const REDIR_301 = [];
+{ const f = path.join(DIR, '..', 'tools', 'sources', 'bandas-redirecciones.json'); const R0 = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; const R = { ...R0, ...BANDA_UNIDA }; for (const [a, b0] of Object.entries(R)) { if (BANDA[a]) continue; const b = BANDA_UNIDA[b0] || b0; if (BANDA_UNIDA[a]) REDIR_301.push([u('banda/' + a + '/'), u('banda/' + b + '/')]); const d = u(b ? 'banda/' + b + '/' : 'bandas/'); /* sin destino: no era una banda → al listado */ write(`banda/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la banda</a></p></body></html>`); pages.pop(); } }
 // Imagineros que dejaron de existir (tools/sources/imagineros-redirecciones.json): a la ficha buena o al listado
 { const f = path.join(DIR, '..', 'tools', 'sources', 'imagineros-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (IMAG[a]) continue; const d = u(b && IMAG[b] ? 'imaginero/' + b + '/' : 'imagineros/'); write(`imaginero/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir al imaginero</a></p></body></html>`); pages.pop(); } }
 // Direcciones de marchas ya publicadas que dejaron de existir (fichas unidas o registros que no eran marchas): a la misma obra o al listado
 for (const [a, b] of Object.entries(MU.redirecciones || {})) { if (MARCHA_SLUGS.has(a)) continue; const d = u(b ? 'marcha/' + b + '/' : 'marchas/'); write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
+// Compositores que se quedan con una sola marcha al unir fichas repetidas (tools/sources/compositores-redirecciones.json): a esa marcha
+{ const f = path.join(DIR, '..', 'tools', 'sources', 'compositores-redirecciones.json'); const R = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).redirecciones : {}; for (const [a, b] of Object.entries(R)) { if (AUTORES.has(a)) continue; const d = u(MARCHA_SLUGS.has(b) ? 'marcha/' + b + '/' : 'marchas/'); REDIR_301.push([u('compositor/' + a + '/'), d]); write(`compositor/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la marcha</a></p></body></html>`); pages.pop(); } }
 // /hermandad/, /banda/, /marcha/ e /imaginero/ sin nombre (URL recortada a mano): a su listado, no a un 404
 for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['marcha', 'marchas/'], ['imaginero', 'imagineros/']]) {
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
-searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
+searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

@@ -1,0 +1,397 @@
+{
+ "nota": "Bandas con dos fichas por escribir su nombre de dos maneras, cada una comprobada con su fuente (4-nov, Pablo: «quitar duplicidades YA»). «unidas»: la ficha «de» se une a la ficha «a» (tools/build-data.js), que conserva sus acompañamientos, repertorio y redes; la dirección vieja redirige con 301. «distintas»: parecen la misma por el nombre, pero son dos bandas (comprobar-marchas.mjs ya no avisa de ellas).",
+ "unidas": [
+  {
+   "de": {
+    "nombre": "Banda de Música Sinfónica Virgen de la Trinidad",
+    "localidad": "Málaga"
+   },
+   "a": {
+    "nombre": "Banda Sinfónica Virgen de la Trinidad",
+    "localidad": "Málaga"
+   },
+   "fuente": "https://www.youtube.com/channel/UCK_deKrELyOYXszhEqcx5GA",
+   "nota": "Canal oficial «Banda Sinfónica Virgen de la Trinidad», banda de la Cofradía del Cautivo y la Trinidad: una sola banda sinfónica con ese nombre."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Municipal Maestro Paco Tenorio",
+    "localidad": "Arriate"
+   },
+   "a": {
+    "nombre": "Banda Municipal de Música Maestro Paco Tenorio",
+    "localidad": "Arriate"
+   },
+   "fuente": "https://www.youtube.com/channel/UCXNy5wO8lUVjgGyMUehcQkA",
+   "nota": "Canal «BM Maestro Paco Tenorio Arriate»: la banda municipal de Arriate; el orden de «Municipal» y «de Música» cambia según la guía."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario de Arriate",
+    "localidad": "Arriate"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario",
+    "localidad": "Arriate"
+   },
+   "fuente": "https://www.youtube.com/channel/UCDeiJdD2kx12cbzfpcngOnA",
+   "nota": "Canal oficial de la banda «Rosario de Arriate»: el nombre lleva el pueblo pegado al final."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Julián Cerdán",
+    "localidad": "Sanlúcar"
+   },
+   "a": {
+    "nombre": "Banda de Música Julián Cerdán",
+    "localidad": "Sanlúcar de Barrameda"
+   },
+   "fuente": "https://www.youtube.com/channel/UCKWlCb48evTookTkhfaW5Kw",
+   "nota": "Canal oficial «Banda de Música Julián Cerdán», la banda municipal de Sanlúcar de Barrameda: «Sanlúcar» es la misma localidad."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música del Maestro Tejera",
+    "localidad": "Sevilla"
+   },
+   "a": {
+    "nombre": "Banda de Música Maestro Tejera",
+    "localidad": "Sevilla"
+   },
+   "fuente": "https://www.youtube.com/channel/UCG3SlzvNi0iq5zwEQ6AwcnQ",
+   "nota": "«Canal oficial de la Banda de Música Maestro Tejera de Sevilla»: una sola banda, con o sin «del»."
+  },
+  {
+   "de": {
+    "nombre": "Agrupación Musical Santa Cecilia de Aguilar de la Frontera",
+    "localidad": "Aguilar de la Frontera"
+   },
+   "a": {
+    "nombre": "Agrupación Musical Santa Cecilia",
+    "localidad": "Aguilar de la Frontera"
+   },
+   "fuente": "https://www.youtube.com/channel/UC-ID1RUcHZ4DhkoRcD3XH8g",
+   "nota": "«Canal de la Agrupación Musical Santa Cecilia de Aguilar de la Frontera»: el nombre lleva el pueblo pegado al final."
+  },
+  {
+   "de": {
+    "nombre": "Agrupación Musical Nuestro Padre Jesús de la Pasión de Linares",
+    "localidad": "Linares"
+   },
+   "a": {
+    "nombre": "Agrupación Musical Nuestro Padre Jesús de la Pasión",
+    "localidad": "Linares"
+   },
+   "fuente": "https://www.youtube.com/channel/UCAQeYo6-kSYPl9pEmKqi4iQ",
+   "nota": "Sus vídeos dicen «Canal oficial de la Agrupación Musical Ntro. Padre Jesús de la Pasión / Linares»: el nombre lleva el pueblo pegado al final."
+  },
+  {
+   "de": {
+    "nombre": "Banda Municipal de Música de Arahal",
+    "localidad": "Arahal"
+   },
+   "a": {
+    "nombre": "Banda de Música Municipal de Arahal",
+    "localidad": "Arahal"
+   },
+   "fuente": "https://www.youtube.com/channel/UCGUB9_ugOlyK2MGaamkgXsg",
+   "nota": "«Canal de YouTube oficial de la Banda de Música Municipal de Arahal»: la banda municipal del pueblo."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Municipal de La Puebla del Río",
+    "localidad": "La Puebla del Río"
+   },
+   "a": {
+    "nombre": "Banda Municipal de Música de La Puebla del Río",
+    "localidad": "La Puebla del Río"
+   },
+   "fuente": "https://www.youtube.com/channel/UCMCPwLGs6Na46BQQOuofQWw",
+   "nota": "«Canal oficial de la Banda Municipal de Música de La Puebla del Río»."
+  },
+  {
+   "de": {
+    "nombre": "Banda Municipal de Bollullos",
+    "localidad": "Bollullos Par del Condado"
+   },
+   "a": {
+    "nombre": "Banda Municipal de Bollullos Par del Condado",
+    "localidad": "Bollullos Par del Condado"
+   },
+   "fuente": "https://www.youtube.com/channel/UC3oPPRJUXC0Nq-pt9LaaXWw",
+   "nota": "Canal «Banda Municipal de Bollullos del Condado»: fundada en 1885, la banda municipal del pueblo."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Nuestra Señora del Rosario",
+    "localidad": "El Cuervo"
+   },
+   "a": {
+    "nombre": "Banda Municipal de Música Nuestra Señora del Rosario",
+    "localidad": "El Cuervo"
+   },
+   "fuente": "https://www.youtube.com/channel/UCLd8i_EJ1M3O5b4TLYmtXpg",
+   "nota": "Canal «Banda Municipal de El Cuervo de Sevilla»; sus grabaciones la llaman «Banda Municipal Ntra. Sra. del Rosario de El Cuervo»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Nuestra Señora de la Soledad",
+    "localidad": "Cantillana"
+   },
+   "a": {
+    "nombre": "Banda de Música de la Soledad",
+    "localidad": "Cantillana"
+   },
+   "fuente": "https://www.youtube.com/channel/UCi_MgyLzkNQ73Wc4YxMl83g",
+   "nota": "«Canal oficial de la Banda de Música La Soledad de Cantillana»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música del Carmen",
+    "localidad": "Prado del Rey"
+   },
+   "a": {
+    "nombre": "Banda de Música Nuestra Señora del Carmen",
+    "localidad": "Prado del Rey"
+   },
+   "fuente": "https://www.youtube.com/channel/UCDsuYJzl9UjbOr3GPl2iNkw",
+   "nota": "Canal «Banda de Música Ntra Sra del Carmen», que sube la «Banda del Carmen de Prado del Rey»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Centuria Romana Macarena",
+    "localidad": "Sevilla"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores de la Centuria Romana Macarena",
+    "localidad": "Sevilla"
+   },
+   "fuente": "https://es.wikipedia.org/wiki/Centuria_Romana_Macarena",
+   "nota": "Wikipedia: una sola banda de cornetas de la Centuria Romana Macarena (la juvenil es otra, en «distintas»)."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores de las Cigarreras",
+    "localidad": "Sevilla"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Nuestra Señora de la Victoria – Las Cigarreras",
+    "localidad": "Sevilla"
+   },
+   "fuente": "https://lascigarreras.net",
+   "nota": "Web oficial: Banda de Cornetas y Tambores Nuestra Señora de la Victoria, «Las Cigarreras» (1979). La banda de música de las Cigarreras es otra, en «distintas»."
+  },
+  {
+   "de": {
+    "nombre": "Agrupación Musical Virgen de la Cabeza de Exfiliana",
+    "localidad": "Exfiliana"
+   },
+   "a": {
+    "nombre": "Agrupación Musical María Santísima de la Cabeza",
+    "localidad": "Exfiliana"
+   },
+   "fuente": "https://amexfiliana.com/index.php/historia/",
+   "nota": "Web de la banda: Agrupación Musical María Santísima de la Cabeza de Exfiliana, que se llamó «A.M. Virgen de la Cabeza» (1995-2001)."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Cristo de la Expiración",
+    "localidad": "Huelva"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Expiración, Salud y Esperanza",
+    "localidad": "Huelva"
+   },
+   "fuente": "https://www.esperanzadehuelva.com/fusion-de-la-banda-de-la-expiracion-y-la-salud/",
+   "nota": "Hermandad de la Esperanza: la banda del Cristo de la Expiración se fusionó en 2019 con la de la Salud y tomó ese nombre; no hay dos bandas."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario",
+    "localidad": "Cádiz"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada",
+    "localidad": "Cádiz"
+   },
+   "fuente": "https://www.youtube.com/channel/UCN2u_wP105P0mU8fPmB4kpA",
+   "nota": "«Canal oficial de la Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada», fundada en 1996 en Cádiz; sus vídeos la llaman también «Ntra. Sra. del Rosario Cádiz»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Nazareno",
+    "localidad": "Huelva"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+    "localidad": "Huelva"
+   },
+   "fuente": "https://hermandadnazarenohuelva.com/musical/",
+   "nota": "Web de la Hermandad del Nazareno de Huelva: una sola banda, «Banda de Cornetas y Tambores Jesús Nazareno»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Nuestro Padre Jesús Nazareno",
+    "localidad": "Almogía"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Jesús Nazareno",
+    "localidad": "Almogía"
+   },
+   "fuente": "https://101tv.es/los-acompanamientos-musicales-de-la-semana-santa-de-malaga-2026",
+   "nota": "101TV: una sola banda de cornetas del Nazareno de Almogía, escrita «Nuestro Padre Jesús Nazareno de Almogía» y «del Nazareno de Almogía» (la de música es otra)."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Jesús Nazareno",
+    "localidad": "Almogía"
+   },
+   "a": {
+    "nombre": "Banda de Música Nuestro Padre Jesús Nazareno",
+    "localidad": "Almogía"
+   },
+   "fuente": "https://101tv.es/los-acompanamientos-musicales-de-la-semana-santa-de-malaga-2026",
+   "nota": "101TV: una sola banda de música del Nazareno de Almogía, «Banda de Música Nuestro Padre Jesús Nazareno de Almogía» (la de cornetas es otra)."
+  },
+  {
+   "de": {
+    "nombre": "Agrupación Musical Jesús Cautivo",
+    "localidad": "Estepona"
+   },
+   "a": {
+    "nombre": "Agrupación Musical Nuestro Padre Jesús Cautivo",
+    "localidad": "Estepona"
+   },
+   "fuente": "https://semanasantacadiz.com/conoce-a-la-am-jesus-cautivo-de-estepona-que-acompanara-al-nazareno-de-santa-maria-en-2022/",
+   "nota": "«La Agrupación Musical Nuestro Padre Jesús Cautivo de Estepona fue fundada en 1991», titulada «AM Jesús Cautivo de Estepona»."
+  },
+  {
+   "de": {
+    "nombre": "Agrupación Musical Nuestro Padre Jesús Despojado",
+    "localidad": "Jaén"
+   },
+   "a": {
+    "nombre": "Agrupación Musical Jesús Despojado",
+    "localidad": "Jaén"
+   },
+   "fuente": "https://www.amjesusdespojado.com/",
+   "nota": "Web oficial «A.M. Jesús Despojado de Jaén», la agrupación de la Hermandad de la Amargura; una sola en Jaén."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Cristo de la Elevación del Campo de Criptana",
+    "localidad": "Ciudad Real"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Elevación de Campo de Criptana",
+    "localidad": "Ciudad Real"
+   },
+   "fuente": "https://www.elpertiguero.net/la-elevacion-de-campo-de-criptana-pondra-sus-sones-tras-el-cristo-de-la-esperanza-de-la-vera-cruz-en-2027/",
+   "nota": "«Banda de Cornetas y Tambores Santísimo Cristo de la Elevación, procedente del municipio manchego de Campo de Criptana»; una sola banda."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Cornetas y Tambores Cristo de la Victoria",
+    "localidad": "León"
+   },
+   "a": {
+    "nombre": "Banda de Cornetas y Tambores Santísimo Cristo de la Victoria",
+    "localidad": "León"
+   },
+   "fuente": "https://bandavictoria.es/la-banda-banda-victoria-leon",
+   "nota": "Web oficial: «La Banda de Cornetas y Tambores Santísimo Cristo de la Victoria se funda el 22 de abril de 1994 en la ciudad de León»."
+  },
+  {
+   "de": {
+    "nombre": "Banda de Música Nuestra Señora de la Consolación",
+    "localidad": "Huelva"
+   },
+   "a": {
+    "nombre": "Banda de Música Nuestra Madre de la Consolación",
+    "localidad": "Huelva"
+   },
+   "fuente": "https://es.wikipedia.org/wiki/Banda_de_m%C3%BAsica_de_Nuestra_Se%C3%B1ora_Madre_de_la_Consolaci%C3%B3n_de_Huelva",
+   "nota": "Wikipedia: «Banda de Música Nuestra Señora Madre de la Consolación de Huelva», también «Nuestra Madre de la Consolación»; una sola banda."
+  },
+  {
+   "de": {
+    "nombre": "Asociación Musical AMUECI",
+    "localidad": "Écija"
+   },
+   "a": {
+    "nombre": "Banda de Música AMUECI",
+    "localidad": "Écija"
+   },
+   "fuente": "https://federband.org/banda/banda-de-musica-amueci",
+   "nota": "Federband: en 1980 nace la Asociación Musical Ecijana, más conocida como AMUECI; su banda de música lleva ese nombre."
+  },
+  {
+   "de": {
+    "nombre": "Liceo Municipal de la Música",
+    "localidad": "Moguer"
+   },
+   "a": {
+    "nombre": "Banda de Música Sinfónica del Liceo Municipal de la Música",
+    "localidad": "Moguer"
+   },
+   "fuente": "http://bsliceomoguer.blogspot.com/",
+   "nota": "La Banda Sinfónica del Liceo Municipal de la Música de Moguer es la banda del Liceo; «Liceo Municipal de la Música» es su nombre abreviado."
+  },
+  {
+   "de": {
+    "nombre": "Banda Juvenil de Música Cruz del Humilladero",
+    "localidad": "Málaga"
+   },
+   "a": {
+    "nombre": "Banda de Música Cruz del Humilladero",
+    "localidad": "Málaga"
+   },
+   "fuente": "https://federband.org/banda/a-c-m-banda-de-musica-cruz-del-humilladero",
+   "nota": "Federband: una sola asociación, A.C.M. Banda de Música Cruz del Humilladero (su filial es la Banda Escuela, no una juvenil); antes se llamaba A.C.M. Banda Juvenil de Música Cruz del Humilladero."
+  }
+ ],
+ "distintas": [
+  {
+   "a": "Agrupación Musical Juvenil Santa María Magdalena",
+   "b": "Agrupación Musical Santa María Magdalena",
+   "localidad": "Arahal",
+   "fuente": "https://santamariamagdalena.es/",
+   "nota": "La web de la Agrupación presenta la Banda Juvenil (2016) como una formación aparte de la agrupación."
+  },
+  {
+   "a": "Agrupación Musical Juvenil Virgen de los Reyes",
+   "b": "Agrupación Musical Virgen de los Reyes",
+   "localidad": "Sevilla",
+   "fuente": "https://www.virgendelosreyes.es/historia-de-la-juvenil-de-la-a-m-virgen-de-los-reyes/",
+   "nota": "La Juvenil es «su propia formación juvenil», cantera de la agrupación."
+  },
+  {
+   "a": "Banda de Cornetas y Tambores Juvenil de la Centuria Romana Macarena",
+   "b": "Banda de Cornetas y Tambores de la Centuria Romana Macarena",
+   "localidad": "Sevilla",
+   "fuente": "https://marchasdecristo.com/banda/banda-de-cornetas-y-tambores-de-la-centuria-romana-macarena-5",
+   "nota": "Marchas de Cristo da dos bandas: la Centuria y su juvenil."
+  },
+  {
+   "a": "Banda de Cornetas y Tambores Juvenil de la Centuria Romana Macarena",
+   "b": "Banda de Cornetas y Tambores Centuria Romana Macarena",
+   "localidad": "Sevilla",
+   "fuente": "https://marchasdecristo.com/banda/banda-de-cornetas-y-tambores-de-la-centuria-romana-macarena-5",
+   "nota": "Marchas de Cristo da dos bandas: la Centuria y su juvenil."
+  },
+  {
+   "a": "Banda de Música Juvenil de la Cruz Roja",
+   "b": "Banda de Música de la Cruz Roja",
+   "localidad": "Sevilla",
+   "fuente": "https://www.bandacruzroja.es/formacion/banda-juvenil",
+   "nota": "Banda Juvenil creada en 2013 para que sus músicos pasen a la Banda de Música de la Cruz Roja."
+  },
+  {
+   "a": "Banda de Cornetas y Tambores Nuestra Señora de la Victoria – Las Cigarreras",
+   "b": "Banda de Música María Santísima de la Victoria – Las Cigarreras",
+   "localidad": "Sevilla",
+   "fuente": "https://musicofrades.com/directorio/818-banda-de-musica-maria-santisima-de-la-victoria-las-cigarreras-de-sevilla/",
+   "nota": "Musicofrades: la banda de música de las Cigarreras (1995) tiene ficha propia, aparte de la de cornetas (1979)."
+  }
+ ]
+}
