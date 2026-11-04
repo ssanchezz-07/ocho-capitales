@@ -44,6 +44,9 @@ with sync_playwright() as p:
                     vacia = pg.evaluate("(s) => s.querySelectorAll('.is-vacio').length", f.element_handle())
                     if slug in ('la-borriquilla-jaen', 'fusionadas-malaga', 'nazareno-de-santa-maria-cadiz'): check(vacia == 0, f'{tag} {slug}: la cabeza lleva su color')
                     if 'cíngulo' in alt: check(f.locator('.oc-nazm-cinto-b').count() == 1, f'{tag} {slug}: el cíngulo lleva contorno')
+                    if 'cíngulo' in alt:
+                        cb = pg.evaluate("(s) => getComputedStyle(s.querySelector('.oc-nazm-cinto-b')).stroke", f.element_handle())
+                        check('255, 255, 255' not in cb, f'{tag} {slug}: el contorno del cíngulo es oscuro también en {esq} ({cb})')
                     borde = pg.evaluate("(s) => getComputedStyle(s.querySelector('path')).stroke", f.element_handle())
                     check(('255, 255, 255' in borde) == (esq == 'dark'), f'{tag} {slug}: contorno según el modo ({borde})')
                     if CAPT and slug in ('nazareno-de-santa-maria-cadiz', 'fusionadas-malaga', 'los-estudiantes-huelva', 'la-borriquilla-jaen', 'nuestra-senora-de-los-dolores-granada') and w != 360:

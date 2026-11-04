@@ -780,7 +780,7 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 .oc-nazm path, .oc-nazm circle { stroke: var(--nazm-borde); stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .oc-nazm .is-vacio { fill: none; stroke-dasharray: 3 3; }
 .oc-nazm .oc-nazm-cinto { stroke-width: 7; stroke-linecap: round; vector-effect: none; }
-.oc-nazm .oc-nazm-cinto-b { stroke-width: 10; stroke-linecap: round; vector-effect: none; }
+.oc-nazm .oc-nazm-cinto-b { stroke: rgb(20 6 30 / .6); stroke-width: 10; stroke-linecap: round; vector-effect: none; }
 :root[data-theme="dark"] .oc-nazm { --nazm-borde: rgb(255 255 255 / .55); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-nazm { --nazm-borde: rgb(255 255 255 / .55); } }
 

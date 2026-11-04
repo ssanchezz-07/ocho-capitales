@@ -173,7 +173,7 @@ function nazPartes(p, id) {
     `<path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" fill="${fill(col.tunica)}"/>`,
     col.escapulario ? `<path d="M108 238H132L134 526Q120 530 106 526Z" fill="${fill(col.escapulario)}"/>` : '',
     col.botones ? `<g fill="${fill(col.botones)}">${[262, 292, 322, 352, 382, 412, 442, 472].map((y) => `<circle cx="120" cy="${y}" r="4.5"/>`).join('')}</g>` : '',
-    col.cinto ? `<path class="oc-nazm-cinto-b" d="${NAZ_CINTO}" fill="none" stroke-width="10" stroke-linecap="round"/><path class="oc-nazm-cinto" d="${NAZ_CINTO}" fill="none" stroke-width="7" stroke-linecap="round" style="stroke:${fill(col.cinto)}"/>` : '',
+    col.cinto ? `<path class="oc-nazm-cinto-b" d="${NAZ_CINTO}" fill="none" stroke="rgb(20 6 30 / .6)" stroke-width="10" stroke-linecap="round"/><path class="oc-nazm-cinto" d="${NAZ_CINTO}" fill="none" stroke-width="7" stroke-linecap="round" style="stroke:${fill(col.cinto)}"/>` : '',
     `<path${vacio(col.cabeza)} d="${cabeza}" fill="${fill(col.cabeza)}"/>`,
     `<path d="M104 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0ZM124 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/>`,
   ].join('');
