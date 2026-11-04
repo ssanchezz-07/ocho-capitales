@@ -29,8 +29,8 @@ const fijos = [
   ...src.matchAll(/\bdesc: '((?:[^'\\]|\\.)+)'/g), ...src.matchAll(/\bdesc: `([^`]+)`/g),
   ...src.matchAll(/class="(?:oc|nx)-lead">((?:[^<]|<(?!\/p>))+)<\/p>/g),
   ...src.matchAll(/\badd\(-?\d+, '[^']+', '((?:[^'\\]|\\.)+)'\)/g),
-  // páginas legales (pulido, 4-nov-2026): cada frase lp('…') o ll('…') y la descripción de cada página, pag('ruta/', 'Título', '…')
-  ...src.matchAll(/\b(?:lp|ll)\('((?:[^'\\]|\\.)+)'\)/g), ...src.matchAll(/\bpag\('[^']+', '[^']+', '((?:[^'\\]|\\.)+)'/g),
+  // páginas legales (pulido, 4-nov-2026): cada frase lp(…), lpl(…) (con un enlace) o ll(…) y la descripción de cada página, pag('ruta/', 'Título', …)
+  ...src.matchAll(/\b(?:lp|lpl|ll)\('((?:[^'\\]|\\.)+)'[,)]/g), ...src.matchAll(/\bpag\('[^']+', '[^']+', '((?:[^'\\]|\\.)+)'/g),
 ].map((m) => m[1]);
 const porTexto = new Map(REG.map((r) => [r.texto, r]));
 for (const t of new Set(fijos)) {

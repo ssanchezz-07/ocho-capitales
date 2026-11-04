@@ -746,6 +746,9 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
   .nx-card.has-foto .nx-foto { grid-column: 2; grid-row: 1 / -1; }
 }
 .vx-tit, .nx-tit { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+/* El recorte de 3 líneas cortaría el anillo de foco del enlace: el foco se pinta en su ::after, que cubre toda la tarjeta */
+.vx-tit a:focus-visible, .nx-card .nx-a:focus-visible { outline: none; }
+.vx-tit a:focus-visible::after, .nx-card .nx-a:focus-visible::after { outline: 3px solid var(--focus); outline-offset: -3px; border-radius: 18px; }
 
 /* ---------- 10. Pulido (4-nov): Anterior / Siguiente en la misma fila también en el móvil ----------
    «Anterior» siempre a la izquierda y «Siguiente» a la derecha, aunque falte uno; objetivo de 44 px o más. */
@@ -773,5 +776,6 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 /* ---------- 12. Pulido (4-nov): pie legal ---------- */
 .oc-footer-legal { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .88rem; color: var(--muted); }
 .oc-footer-legal .oc-copy { margin: 0; }
+.oc-footer-legal .oc-copy span { white-space: nowrap; }
 .oc-footer-legal ul { display: flex; flex-wrap: wrap; gap: 0 18px; margin: 0; padding: 0; list-style: none; }
 .oc-footer-legal li a { min-height: 44px; }

@@ -555,7 +555,7 @@ ${body}${colabora(p, title)}
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
     <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons y de las propias hermandades, con su autor en cada foto.</p>
-    <div class="oc-footer-legal"><p class="oc-copy">© 2026 Ocho Capitales · Todos los derechos reservados</p>${TITULAR ? `<ul aria-label="Información legal">${LEGALES.map(([h, t]) => `<li><a href="${u(h)}">${t}</a></li>`).join('')}</ul>` : ''}</div>
+    <div class="oc-footer-legal"><p class="oc-copy">© 2026 Ocho Capitales · <span>Todos los derechos reservados</span></p>${TITULAR ? `<ul aria-label="Información legal">${LEGALES.map(([h, t]) => `<li><a href="${u(h)}">${t}</a></li>`).join('')}</ul>` : ''}</div>
   </div>
 </footer>
 <nav class="oc-tabbar" aria-label="Accesos rápidos">
@@ -1580,18 +1580,22 @@ function pageColabora() {
 // ---------- Páginas legales (ORDEN-PULIDO-ESTETICO, 4-nov-2026) ----------
 // Aviso legal, privacidad, cookies y contacto, según la LSSI y el RGPD. Solo se generan, y el pie solo las enlaza, cuando
 // site/data/titular.json trae los datos que da Pablo: {nombre, correo, nif?, localidad?, analitica?}. Sin ese archivo no se publica nada legal.
-// Cada frase va en lp('…') (párrafo) o ll('…') (punto de lista) y está registrada en tools/sources/textos-autor.json (tipo «web»):
-// lo comprueba tools/comprobar-fuentes-textos.mjs. Describen solo lo que la web hace (comprobado en el código el 4-nov):
-// sin cookies; Colabora por Web3Forms; almacenamiento local de favoritos, tema, capital, búsquedas y envíos; copia sin conexión;
-// fotos de noticias desde su medio sin referer; YouTube y Spotify solo como enlaces. «analitica: true» enseña el párrafo de
-// Cloudflare Web Analytics: ponerlo solo cuando el contador esté activo en la web publicada (el 4-nov no lo estaba).
+// Cada frase va en lp(…) (párrafo), lpl(…) (párrafo con un enlace, el texto del enlace entre llaves) o ll(…) (punto de lista)
+// y está registrada en tools/sources/textos-autor.json (tipo «web»): lo comprueba tools/comprobar-fuentes-textos.mjs.
+// Describen solo lo que la web hace (comprobado en el código el 4-nov): sin cookies; Colabora por Web3Forms o, con
+// FORMULARIO_DESTINO=api, por /api/sugerencias (mismo destino que pageColabora); almacenamiento local de favoritos, tema, capital,
+// búsquedas y envíos; copia sin conexión y precarga; fotos de noticias desde su medio sin referer; YouTube y Spotify solo como
+// enlaces. «analitica: true» enseña el párrafo de Cloudflare Web Analytics: ponerlo solo cuando el contador esté activo en la web
+// publicada (el 4-nov no lo estaba).
 const TITULAR = (() => { try { const t = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'titular.json'), 'utf8')); return t && t.nombre && t.correo ? t : null; } catch (e) { return null; } })();
 const LEGALES = [['aviso-legal/', 'Aviso legal'], ['privacidad/', 'Política de privacidad'], ['cookies/', 'Política de cookies'], ['contacto/', 'Contacto']];
 const lp = (t) => `<p>${esc(t)}</p>`;
+const lpl = (t, href, fuera = false) => `<p>${esc(t).replace(/\{([^}]+)\}/, (_, a) => `<a href="${href}"${fuera ? ' target="_blank" rel="noopener"' : ''}>${a}</a>`)}</p>`;
 const ll = (t) => `<li>${esc(t)}</li>`;
 function pagesLegales() {
   if (!TITULAR) return;
   const T = TITULAR, correo = `<a href="mailto:${esc(T.correo)}">${esc(T.correo)}</a>`;
+  const formApi = process.env.FORMULARIO_DESTINO === 'api'; // el mismo interruptor que usa pageColabora()
   const quien = `<p><strong>${esc(T.nombre)}</strong>${T.nif ? `, NIF ${esc(T.nif)}` : ''}${T.localidad ? `, ${esc(T.localidad)}` : ''}. Correo de contacto: ${correo}.</p>`;
   const h2 = (t) => `<h2 class="oc-h2">${t}</h2>`;
   const pag = (rel, titulo, desc, inner) => write(rel + 'index.html', layout({ title: titulo, desc, path: rel, crumbs: [['Portada', u()], [titulo, '']],
@@ -1601,12 +1605,12 @@ function pagesLegales() {
     lp('Ocho Capitales es una web informativa y gratuita sobre la Semana Santa de las ocho capitales andaluzas: qué sale cada día, recorridos, hermandades, bandas, marchas, imagineros y noticias. No vende nada y no pide registrarse.'),
     h2('De dónde salen los datos'),
     lp('Los datos de hermandades, horarios, recorridos y marchas se toman de fuentes públicas: consejos, agrupaciones y federaciones de hermandades, las propias hermandades, Wikipedia y catálogos de marchas. Cada dato lleva su fuente, que se puede consultar desde su ficha.'),
-    lp('Los horarios y recorridos pueden cambiar. Si un dato no coincide con lo que publica la hermandad o su consejo, manda la información oficial. Las posiciones de los cortejos en el plano son estimaciones y se indican así.'),
-    `<p>Si encuentras un error, puedes avisar desde <a href="${u('colabora/')}">Colabora</a>.</p>`,
+    lp('Los horarios y recorridos pueden cambiar. Si un dato no coincide con lo que publica la hermandad o su consejo, prevalece la información oficial. Las posiciones de los cortejos en el plano son estimaciones y se indican así.'),
+    lpl('Si encuentras un error, puedes avisar desde {Colabora}.', u('colabora/')),
     h2('Noticias, imágenes y planos'),
     lp('Las noticias pertenecen a sus medios. Ocho Capitales muestra el titular, un extracto breve y la imagen de cada una, y enlaza siempre a la noticia original.'),
     lp('Las imágenes proceden de Wikimedia Commons, con su autor y su licencia, o las han cedido sus autores o las hermandades. Cada foto lleva su crédito.'),
-    `<p>La lista completa está en <a href="${u('acerca/#imagenes')}">Créditos de imágenes</a>.</p>`,
+    lpl('La lista completa está en {Créditos de imágenes}.', u('acerca/#imagenes')),
     lp('Los planos usan datos de OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL).'),
     h2('Propiedad intelectual'),
     lp('El diseño, el código y los textos propios de Ocho Capitales son de su titular. Se pueden citar con un enlace a la página de origen; para cualquier otro uso hace falta permiso.'),
@@ -1623,7 +1627,8 @@ function pagesLegales() {
     lp('Si envías una aportación, se recoge lo que escribes en el formulario: qué quieres enviar, la capital, la hermandad o página, el mensaje y el enlace a la fuente. Tu correo, solo si lo das.'),
     lp('Se usa para revisar la aportación y, si dejaste tu correo, para contestarte. El correo no se publica.'),
     lp('La base legal es tu consentimiento, que das al enviar el formulario. Puedes retirarlo cuando quieras escribiendo al correo de contacto.'),
-    lp('El formulario se envía a través de Web3Forms, un servicio externo que hace llegar el mensaje por correo al titular.'),
+    formApi ? lp('El formulario se guarda en Cloudflare, que aloja la web. Para evitar envíos repetidos se guarda también una huella cifrada de la dirección IP, que cambia cada día y no permite saber cuál era.')
+      : lp('El formulario se envía a través de Web3Forms, un servicio externo que hace llegar el mensaje por correo al titular.'),
     lp('Los mensajes se guardan solo el tiempo necesario para revisarlos y responder.'),
     ...(T.analitica ? [h2('Visitas'), lp('Para saber cuántas visitas recibe, la web usa Cloudflare Web Analytics, que las cuenta de forma agregada, sin cookies y sin identificar a quien visita.')] : []),
     h2('Alojamiento'),
@@ -1633,20 +1638,20 @@ function pagesLegales() {
     lp('Los enlaces a YouTube, Spotify y otras webs solo se abren si los pulsas: no hay vídeos incrustados.'),
     h2('Tus derechos'),
     lp('Puedes pedir el acceso, la rectificación o la supresión de tus datos, y la limitación de su tratamiento o oponerte a él, escribiendo al correo de contacto.'),
-    `<p>Si crees que no se han atendido bien, puedes reclamar ante la <a href="https://www.aepd.es/" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a>.</p>`,
+    lpl('Si crees que no se han atendido bien, puedes reclamar ante la {Agencia Española de Protección de Datos}.', 'https://www.aepd.es/', true),
   ].join(''));
   pag('cookies/', 'Política de cookies', 'Ocho Capitales no usa cookies. Qué guarda en tu navegador para que funcionen las opciones que eliges.', [
     lp('Ocho Capitales no usa cookies: ni propias ni de terceros, ni para medir visitas ni para publicidad.'),
     lp('Para que funcionen algunas opciones que eliges tú, la web guarda pequeños datos en tu propio navegador, nunca en un servidor:'),
     `<ul>${[
-      ll('tus hermandades favoritas;'),
+      ll('tus favoritos: hermandades, bandas, imagineros o capitales;'),
       ll('el tema claro u oscuro;'),
       ll('la capital que eliges;'),
       ll('tus últimas búsquedas;'),
       ll('cuántas aportaciones has enviado hoy desde Colabora, para evitar envíos repetidos;'),
-      ll('si ya has visto el saludo de erCuñao y la entrada de la portada, para no repetirlos durante la visita.'),
+      ll('si ya has visto el saludo de erCuñao y las animaciones de entrada de la portada, para no repetirlos durante la visita.'),
     ].join('')}</ul>`,
-    lp('Además, guarda una copia de las páginas que visitas para que se puedan abrir sin conexión.'),
+    lp('Además, guarda una copia de las páginas que visitas, y de algunas que estás a punto de abrir, para que carguen antes y se puedan abrir sin conexión.'),
     lp('Nada de esto sirve para identificarte ni se comparte con nadie. Como es necesario para lo que tú pides, no requiere consentimiento (artículo 22.2 de la LSSI).'),
     lp('Puedes borrarlo cuando quieras desde la configuración de tu navegador, borrando los datos de este sitio.'),
   ].join(''));

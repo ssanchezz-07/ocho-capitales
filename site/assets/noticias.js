@@ -40,7 +40,7 @@
     var vistas = {}; // cada foto, una sola vez en la página
     var foto = function (n) { if (!n.img || vistas[n.img]) return ''; vistas[n.img] = 1; return n.img; };
     var otros = function (n) { var x = n.otros || []; return x.length ? '<p class="nx-otros">También en ' + x.slice(0, 2).map(function (y) { return '<a href="' + esc(y.u) + '"' + ext + '>' + esc(y.f) + '</a>'; }).join(x.length === 2 ? ' y ' : ', ') + (x.length > 2 ? ' y ' + (x.length - 2) + ' más' : '') + '</p>' : ''; };
-    var enlace = function (n, cls) { return '<a class="' + cls + '" href="' + esc(n.url) + '"' + ext + (n.titulo.length > 80 ? ' title="' + esc(n.titulo) + '"' : '') + '>' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a>'; };
+    var enlace = function (n, cls) { return '<a class="' + cls + '" href="' + esc(n.url) + '"' + ext + (n.titulo.length > 60 ? ' title="' + esc(n.titulo) + '"' : '') + '>' + esc(n.titulo) + '<span class="oc-sr"> (abre ' + esc(n.fuente) + ' en otra pestaña)</span></a>'; };
     // tema principal: el que se filtra, si hay filtro; si no, el primero de la noticia
     var temaDe = function (n) { var t = n.temas || []; var k = o.tema && t.indexOf(o.tema) !== -1 ? o.tema : t[0]; return k && NOMBRE_TEMA[k] ? '<span class="nx-tema">' + esc(NOMBRE_TEMA[k]) + '</span>' : ''; };
     var meta = function (n, conCiudad) { return '<p class="nx-meta">' + temaDe(n) + '<span class="nx-src">' + esc(n.fuente) + '</span><time datetime="' + new Date(n.ts).toISOString() + '" data-ago>' + hora(n.ts) + '</time>' + (n.tipo === 'oficial' ? '<span class="nx-oficial">Oficial</span>' : '') + (conCiudad ? (n.ciudades || []).map(tag).join('') : '') + '</p>'; };

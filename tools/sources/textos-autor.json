@@ -256,12 +256,6 @@
    ]
   },
   {
-   "texto": "…",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
    "texto": "Ocho Capitales es una web informativa y gratuita sobre la Semana Santa de las ocho capitales andaluzas: qué sale cada día, recorridos, hermandades, bandas, marchas, imagineros y noticias. No vende nada y no pide registrarse.",
    "tipo": "web",
    "fuentes": [],
@@ -269,12 +263,6 @@
   },
   {
    "texto": "Los datos de hermandades, horarios, recorridos y marchas se toman de fuentes públicas: consejos, agrupaciones y federaciones de hermandades, las propias hermandades, Wikipedia y catálogos de marchas. Cada dato lleva su fuente, que se puede consultar desde su ficha.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
-   "texto": "Los horarios y recorridos pueden cambiar. Si un dato no coincide con lo que publica la hermandad o su consejo, manda la información oficial. Las posiciones de los cortejos en el plano son estimaciones y se indican así.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
@@ -400,12 +388,6 @@
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
   },
   {
-   "texto": "tus hermandades favoritas;",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
    "texto": "el tema claro u oscuro;",
    "tipo": "web",
    "fuentes": [],
@@ -425,18 +407,6 @@
   },
   {
    "texto": "cuántas aportaciones has enviado hoy desde Colabora, para evitar envíos repetidos;",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
-   "texto": "si ya has visto el saludo de erCuñao y la entrada de la portada, para no repetirlos durante la visita.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
-  },
-  {
-   "texto": "Además, guarda una copia de las páginas que visitas para que se puedan abrir sin conexión.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
@@ -485,6 +455,54 @@
   },
   {
    "texto": "Cómo escribir a Ocho Capitales.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Los horarios y recorridos pueden cambiar. Si un dato no coincide con lo que publica la hermandad o su consejo, prevalece la información oficial. Las posiciones de los cortejos en el plano son estimaciones y se indican así.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Si encuentras un error, puedes avisar desde {Colabora}.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "La lista completa está en {Créditos de imágenes}.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "El formulario se guarda en Cloudflare, que aloja la web. Para evitar envíos repetidos se guarda también una huella cifrada de la dirección IP, que cambia cada día y no permite saber cuál era.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Si crees que no se han atendido bien, puedes reclamar ante la {Agencia Española de Protección de Datos}.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "tus favoritos: hermandades, bandas, imagineros o capitales;",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "si ya has visto el saludo de erCuñao y las animaciones de entrada de la portada, para no repetirlos durante la visita.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+  },
+  {
+   "texto": "Además, guarda una copia de las páginas que visitas, y de algunas que estás a punto de abrir, para que carguen antes y se puedan abrir sin conexión.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
