@@ -21,7 +21,7 @@ Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada 
   - hay 13.982 archivos.
 - `comprobar-marchas` avisa de las bandas con nombre casi igual en la misma localidad.
   - Para quitar el aviso, cada pareja se apunta en `unidas` o en `distintas`, siempre con fuente.
-  - **Queda 1 sin resolver**, sin fuente: Cruz del Humilladero y su «Banda Juvenil» (Málaga; la guía las da aparte). Villalba del Alcor, unida con Federband (Pablo, 4-nov).
+  - **Ninguna sin resolver.** Cruz del Humilladero y su «Banda Juvenil» son dos bandas (Pablo, 4-nov), en «distintas». Villalba del Alcor, unida con Federband (Pablo, 4-nov).
 - **Pendiente, va aparte:** algunas hermandades se enlazan a una banda solo por el nombre que da la guía, sin el pueblo, y algunas acaban en la banda equivocada.
   - Humildad y Paciencia (Cádiz): la guía dice «BM Ntro. Padre Jesús Nazareno (Rota)» y se enlaza a la de San Fernando.
   - El Nazareno (Huelva): se enlaza a la BCT N. P. Jesús Nazareno de Arahal.
