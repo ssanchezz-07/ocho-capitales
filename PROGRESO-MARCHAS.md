@@ -1,25 +1,32 @@
 # Progreso · marchas (sesión especializada, desde 2026-10-25)
 
-## RETOMAR AQUÍ (2026-11-03, noche · EN PAUSA por prioridades de Pablo: 1 imágenes, 2 historias, 3 marketing)
-Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada sobre origin/main `3ec5d4b`. **No hay nada subido de este bloque.**
+## RETOMAR AQUÍ (2026-11-04 · bandas con dos fichas hechas; en marcha por orden de Pablo: «quitar duplicidades YA»)
+Rama `marchas-campana` (worktree `.claude/worktrees/marchas-campana`), rebasada sobre origin/main `2a368d4`. **No hay nada subido de los bloques 0 y A.** Se suben juntos.
 
-**0. LO PRIMERO al volver (coordinación, 2026-11-04): bandas con dos fichas**, encontradas por la pasada final de Alojamiento.
-- Seguras:
-  - Julián Cerdán (Sanlúcar);
-  - Maestro Tejera (Sevilla);
-  - Santa Cecilia (Aguilar).
-- Sospechosas, que hay que confirmar con fuente antes de unir:
-  - Amueci (Écija);
-  - la Consolación (Huelva);
-  - Jesús de la Pasión (Linares);
-  - Maestro Paco Tenorio (Arriate).
-- Qué hay que hacer:
-  - Unir cada pareja con su fuente, sin juntar nada que no la tenga.
-  - Llevar el repertorio, las marchas dedicadas y las hermandades a la ficha que queda.
-  - Redirigir con 301 el slug que desaparece y añadirlo a `alias`.
-  - Revisar si las 301 van en `_redirects` o con la meta-refresh de build.mjs.
-- Añadir a `tools/comprobar-marchas.mjs` un aviso de bandas con nombre casi igual en la misma localidad, quitando «banda», «agrupación musical», «CC.TT.», «de» y similares, con lev ≤ 2.
-- Después, lo mismo que antes de subir el bloque A: el auditor y el sí de Pablo.
+**0. Bandas con dos fichas: hecho y en commit (`f1c507f`); falta el auditor y el sí de Pablo.**
+- 29 parejas unidas con su fuente en `tools/sources/bandas-unidas.json`. Las fuentes son el canal oficial de YouTube, la web oficial, Wikipedia, Federband o prensa. Quedan **205 bandas** (antes, 234).
+- 6 parejas apuntadas como «distintas», también con su fuente:
+  - las juveniles de Santa María Magdalena, Virgen de los Reyes, Centuria Macarena y Cruz Roja;
+  - la banda de música de las Cigarreras.
+- Cómo se ha hecho:
+  - `tools/build-data.js` une las fichas y deja `bandas_unidas` en portal.json.
+  - `site/build.mjs` pasa el repertorio a la ficha que queda y escribe la página de redirección.
+  - `site/despliegue.mjs` pone los 301 en `_redirects`.
+- Al unir duplicados de marchas, 5 compositores se quedaban con una sola marcha y sin página. Ahora su dirección lleva a esa marcha (`tools/sources/compositores-redirecciones.json`).
+- Comprobado:
+  - 0 acompañamientos perdidos y 0 enlaces rotos;
+  - las 12.189 direcciones del sitemap publicado tienen archivo;
+  - comprobar-marchas y comprobar-origen dan 0 errores;
+  - el buscador está en verde;
+  - hay 13.982 archivos.
+- `comprobar-marchas` avisa de las bandas con nombre casi igual en la misma localidad.
+  - Para quitar el aviso, cada pareja se apunta en `unidas` o en `distintas`, siempre con fuente.
+  - **Queda 1 sin resolver**, porque no he encontrado fuente: Villalba del Alcor, «Banda de Música de la Asociación Músico-Cultural Nuestra Señora del Carmen» y «Banda de Música Nuestra Señora del Carmen».
+- **Pendiente, va aparte:** algunas hermandades se enlazan a una banda solo por el nombre que da la guía, sin el pueblo, y algunas acaban en la banda equivocada.
+  - Humildad y Paciencia (Cádiz): la guía dice «BM Ntro. Padre Jesús Nazareno (Rota)» y se enlaza a la de San Fernando.
+  - El Nazareno (Huelva): se enlaza a la BCT N. P. Jesús Nazareno de Arahal.
+  - Humildad y Paciencia: el Rosario de Arriate se enlaza a Linares.
+  - Ya pasaba antes de unir nada. Arreglarlo exige que `parseBandas` use la localidad que viene entre paréntesis.
 
 **A. Duplicados, bloque 1: hecho, auditado (auditor-datos: APTO) y en commit, falta el sí de Pablo para subir** (commits `135c4e9` y `03aa152`):
 - 0 errores, las 10.098 direcciones publicadas cubiertas (con el sitemap de pages.dev), buscador en verde y 13.977 archivos.

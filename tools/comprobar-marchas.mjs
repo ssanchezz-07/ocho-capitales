@@ -142,6 +142,7 @@ for (const m of U.marchas) {
   const lev = (a, b) => { let p = Array.from({ length: b.length + 1 }, (_, j) => j); for (let i = 1; i <= a.length; i++) { const q = [i]; for (let j = 1; j <= b.length; j++) q[j] = Math.min(p[j] + 1, q[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); p = q; } return p[b.length]; };
   const par = (a, b) => [norm(a), norm(b)].sort().join('|');
   const resueltos = new Set(BU.distintas.map((x) => par(x.a, x.b) + '|' + norm(x.localidad)));
+  for (const x of BU.correcciones || []) if (!x.fuente) errores.push(`bandas-unidas.json: corrección de «${x.nombre}» sin fuente`);
   for (const x of BU.distintas) if (!x.fuente) errores.push(`bandas-unidas.json: «${x.a}» y «${x.b}» como distintas sin fuente`);
   for (const x of BU.unidas) { if (!x.fuente) errores.push(`bandas-unidas.json: «${x.de.nombre}» unida sin fuente`); if (vistas.has(norm(x.de.nombre) + '|' + norm(x.de.localidad))) errores.push(`bandas-unidas.json: «${x.de.nombre}» (${x.de.localidad}) sigue teniendo ficha propia (¿no está «${x.a.nombre}» con esa localidad?)`); }
   const B = P.bandas.map((b) => ({ b, k: nucleo(b), l: norm(b.localidad), t: tipoB(norm(b.nombre)) }));

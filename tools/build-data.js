@@ -356,8 +356,22 @@ const UNIR_BANDAS = new Set(['agrupacion musical nuestro padre jesus despojado d
 // Trinidad», Málaga): cada pareja, comprobada con su fuente, en tools/sources/bandas-unidas.json (4-nov, Pablo: «quitar duplicidades YA»).
 // La ficha que sobra pasa al nombre, la localidad y la dirección de la que queda; su dirección vieja redirige (bandas_unidas, 301).
 const BANDAS_UNIDAS = {}; // dirección vieja → dirección de la ficha que queda
-{ const BUN = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'bandas-unidas.json'), 'utf8')).unidas || [];
-  const k = (n, l) => norm0(n) + '|' + norm0(l); const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
+{ const BUJ = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'bandas-unidas.json'), 'utf8')), BUN = BUJ.unidas || [];
+  const k = (n, l) => norm0(n) + '|' + norm0(l);
+  // primero, el nombre oficial o la localidad buena de una ficha, con su fuente («correcciones»: la Soledad de Mena no es de un pueblo «Mena»)
+  const LOCS = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources', 'localidades.json'), 'utf8'));
+  for (const x of BUJ.correcciones || []) {
+    const b = bandOut.find((o) => k(o.nombre, o.localidad) === k(x.nombre, x.localidad));
+    if (!b) { console.warn('bandas-unidas.json: corrección de una banda que no está: «' + x.nombre + '» en ' + x.localidad); continue; }
+    const viejo = b.slug, nombreViejo = b.nombre, clave = (b.nombre + '|' + b.localidad).toLowerCase();
+    if (x.nombre_oficial) b.nombre = x.nombre_oficial;
+    if (x.localidad_buena) { b.localidad = x.localidad_buena; b.localidad_fuente = x.fuente; }
+    b.slug = slugify(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
+    b.origen = (capitales.find((c) => norm0(c.nombre) === norm0(b.localidad)) || {}).slug || LOCS[norm0(b.localidad)] || '';
+    if (b.slug !== viejo) BANDAS_UNIDAS[viejo] = b.slug;
+    ALIAS_CLAVE.set(clave, b.slug); if (nombreViejo !== b.nombre) ALIAS_BANDA.set(nombreViejo.toLowerCase(), b.slug);
+  }
+  const hay = new Map(bandOut.map((b) => [k(b.nombre, b.localidad), b]));
   const usos = new Map(); for (const b of bandOut) usos.set(b.nombre.toLowerCase(), (usos.get(b.nombre.toLowerCase()) || 0) + 1);
   for (const x of BUN) {
     // todas las fichas con ese nombre y localidad (puede haber dos: la de antes y la que se le unió arriba con la localidad pegada al nombre)

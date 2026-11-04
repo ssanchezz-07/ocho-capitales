@@ -1,5 +1,5 @@
 {
- "nota": "Bandas con dos fichas por escribir su nombre de dos maneras, cada una comprobada con su fuente (4-nov, Pablo: «quitar duplicidades YA»). «unidas»: la ficha «de» se une a la ficha «a» (tools/build-data.js), que conserva sus acompañamientos, repertorio y redes; la dirección vieja redirige con 301. «distintas»: parecen la misma por el nombre, pero son dos bandas (comprobar-marchas.mjs ya no avisa de ellas).",
+ "nota": "Bandas con dos fichas por escribir su nombre de dos maneras, cada una comprobada con su fuente (4-nov, Pablo: «quitar duplicidades YA»). «unidas»: la ficha «de» se une a la ficha «a» (tools/build-data.js), que conserva sus acompañamientos, repertorio y redes; la dirección vieja redirige con 301. «correcciones»: nombre oficial o localidad buena de una ficha, con su fuente (la dirección vieja también redirige). «distintas»: parecen la misma por el nombre, pero son dos bandas (comprobar-marchas.mjs ya no avisa de ellas).",
  "unidas": [
   {
    "de": {
@@ -131,7 +131,7 @@
     "localidad": "El Cuervo"
    },
    "fuente": "https://www.youtube.com/channel/UCLd8i_EJ1M3O5b4TLYmtXpg",
-   "nota": "Canal «Banda Municipal de El Cuervo de Sevilla»; sus grabaciones la llaman «Banda Municipal Ntra. Sra. del Rosario de El Cuervo»."
+   "nota": "Canal oficial «Banda Municipal de El Cuervo de Sevilla»: la banda municipal del pueblo; una grabación de YouTube la titula «Banda Municipal Ntra. Sra. del Rosario de El Cuervo»."
   },
   {
    "de": {
@@ -336,18 +336,6 @@
    },
    "fuente": "http://bsliceomoguer.blogspot.com/",
    "nota": "La Banda Sinfónica del Liceo Municipal de la Música de Moguer es la banda del Liceo; «Liceo Municipal de la Música» es su nombre abreviado."
-  },
-  {
-   "de": {
-    "nombre": "Banda Juvenil de Música Cruz del Humilladero",
-    "localidad": "Málaga"
-   },
-   "a": {
-    "nombre": "Banda de Música Cruz del Humilladero",
-    "localidad": "Málaga"
-   },
-   "fuente": "https://federband.org/banda/a-c-m-banda-de-musica-cruz-del-humilladero",
-   "nota": "Federband: una sola asociación, A.C.M. Banda de Música Cruz del Humilladero (su filial es la Banda Escuela, no una juvenil); antes se llamaba A.C.M. Banda Juvenil de Música Cruz del Humilladero."
   }
  ],
  "distintas": [
@@ -392,6 +380,36 @@
    "localidad": "Sevilla",
    "fuente": "https://musicofrades.com/directorio/818-banda-de-musica-maria-santisima-de-la-victoria-las-cigarreras-de-sevilla/",
    "nota": "Musicofrades: la banda de música de las Cigarreras (1995) tiene ficha propia, aparte de la de cornetas (1979)."
+  },
+  {
+   "a": "Banda de Música Nuestro Padre Jesús Nazareno",
+   "b": "Banda de Cornetas y Tambores Jesús Nazareno",
+   "localidad": "Almogía",
+   "fuente": "https://www.youtube.com/channel/UCRWm9x1Dy0XIptl4ZIf0BXQ",
+   "nota": "Canal «BM Nazareno Almogía», con sus grabaciones como «Banda de Música Jesús Nazareno de Almogía»; la hermandad tiene banda de cornetas y banda de música (101TV las da juntas en San Andrés: cruz de guía y Virgen del Mar)."
+  },
+  {
+   "a": "Banda de Música de la Vera Cruz",
+   "b": "Banda de Cornetas y Tambores de la Vera Cruz",
+   "localidad": "Almogía",
+   "fuente": "https://www.youtube.com/channel/UCKO97hMUiwFqdEieF4V0jRA",
+   "nota": "Canal «Banda de Música Vera+Cruz de Almogía»; la de cornetas de la Vera Cruz es otra formación de la misma hermandad."
+  }
+ ],
+ "correcciones": [
+  {
+   "nombre": "Banda de Música Nuestra Señora de la Soledad",
+   "localidad": "Mena",
+   "localidad_buena": "Málaga",
+   "fuente": "https://www.museorevellodetoro.net/wp-content/uploads/2026/06/Concierto_Centenario_Revello.pdf",
+   "nota": "«Mena» no es un pueblo: es la banda de la Congregación de Mena (Pontificia y Real Congregación del Stmo. Cristo de la Buena Muerte y Ánimas y Ntra. Sra. de la Soledad Coronada), en Málaga capital."
+  },
+  {
+   "nombre": "Banda de Música San Isidro",
+   "localidad": "Churriana",
+   "nombre_oficial": "Banda de Música de Churriana",
+   "fuente": "https://www.youtube.com/channel/UC1fVCu3ZuWJBcCaHX1aiIkg",
+   "nota": "«Perfil Oficial de la Banda de Música de Churriana (Málaga). Fundada en 1982»; también se la conoce como Asociación Musical San Isidro Labrador."
   }
  ]
 }
