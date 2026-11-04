@@ -156,12 +156,14 @@ const mayus = (t) => String(t || '').replace(/^([^\p{L}]*)(\p{L})/u, (_, a, b) =
 const NAZ_PRENDA = { túnica: 'tunica', sotana: 'tunica', hábito: 'tunica', capirote: 'cabeza', antifaz: 'cabeza', capillo: 'cabeza', caperuz: 'cabeza', caperuza: 'cabeza', cubrerrostro: 'cabeza', 'cubre rostro': 'cabeza', 'cubre-rostro': 'cabeza', morrión: 'cabeza', capucha: 'cabeza', verdugo: 'cabeza', capa: 'capa', escapulario: 'escapulario', botonadura: 'botones', botonera: 'botones', cíngulo: 'cinto', cordón: 'cinto', cinturón: 'cinto', ceñidor: 'cinto', correa: 'cinto', faja: 'cinto', fajín: 'cinto' };
 let nazMiniN = 0;
 const NAZ_CINTO = 'M84 300Q120 312 156 300M134 306C136 340 132 380 136 410M142 304C146 335 146 370 150 400';
-function nazarenoMini(p, nombre) {
+// Partes del dibujo vestidas con los colores de una sección de la tabla, en las coordenadas del nazareno de la portada (240×560).
+// null si la sección no dice la túnica.
+function nazPartes(p, id) {
   const col = {}; // parte del dibujo → color de la tabla (la primera prenda que la nombra; antifaz antes que capirote, que es lo que se ve)
   for (const k of ['túnica', 'sotana', 'hábito', 'antifaz', 'capirote', 'capillo', 'caperuz', 'caperuza', 'cubrerrostro', 'cubre rostro', 'cubre-rostro', 'morrión', 'capucha', 'verdugo', 'capa', 'escapulario', 'botonadura', 'botonera', 'cíngulo', 'cordón', 'cinturón', 'ceñidor', 'correa', 'faja', 'fajín']) if (p[k] && !col[NAZ_PRENDA[k]]) col[NAZ_PRENDA[k]] = p[k];
   if (p['hábito'] && !col.cabeza) col.cabeza = p['hábito'];
-  if (!col.tunica) return '';
-  const id = 'nz' + ++nazMiniN; const defs = [];
+  if (!col.tunica) return null;
+  const defs = [];
   const fill = (c) => { if (!c) return 'none'; const cs = c.split(' y ').map((x) => COLORES[x] || '#8a8a90'); if (cs.length === 1) return cs[0]; const g = id + 'g' + defs.length; defs.push(`<linearGradient id="${g}"><stop offset=".5" stop-color="${cs[0]}"/><stop offset=".5" stop-color="${cs[1]}"/></linearGradient>`); return `url(#${g})`; };
   const vacio = (c) => (c ? '' : ' class="is-vacio"');
   const morrion = !!(p['morrión'] || p.capucha || p.verdugo) && !['capirote', 'antifaz', 'capillo', 'caperuz', 'caperuza', 'cubrerrostro', 'cubre rostro', 'cubre-rostro'].some((k) => p[k]);
@@ -175,9 +177,30 @@ function nazarenoMini(p, nombre) {
     `<path${vacio(col.cabeza)} d="${cabeza}" fill="${fill(col.cabeza)}"/>`,
     `<path d="M104 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0ZM124 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/>`,
   ].join('');
-  const dice = Object.entries(p).map(([pr, c]) => `${pr} ${colorDe(pr, c)}`).join(', ');
-  return `<svg class="oc-nazm" viewBox="38 16 164 532" width="40" height="130" role="img" aria-label="${esc(`Nazareno${nombre ? ', ' + nombre.toLowerCase() : ''}: ${dice}`)}">${defs.length ? `<defs>${defs.join('')}</defs>` : ''}${partes}</svg>`;
+  return { partes, defs: defs.length ? `<defs>${defs.join('')}</defs>` : '', dice: Object.entries(p).map(([pr, c]) => `${pr} ${colorDe(pr, c)}`).join(', ') };
 }
+function nazarenoMini(p, nombre) {
+  const r = nazPartes(p, 'nz' + ++nazMiniN); if (!r) return '';
+  return `<svg class="oc-nazm" viewBox="38 16 164 532" width="40" height="130" role="img" aria-label="${esc(`Nazareno${nombre ? ', ' + nombre.toLowerCase() : ''}: ${r.dice}`)}">${r.defs}${r.partes}</svg>`;
+}
+// Respaldo de las hermandades sin foto de un titular (Pablo y Coordinación, 4-nov): su nazareno con el hábito de la primera sección
+// de la tabla; si la tabla no lo dice, el nazareno en trazo dorado, como el de la portada, sin colores inventados.
+const NAZ_TRAZO = '<g fill="rgb(255 255 255 / .05)" stroke="#e2c27a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"><path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" vector-effect="non-scaling-stroke"/><path d="M120 24L95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152Z" vector-effect="non-scaling-stroke"/><path d="M84 300Q120 312 156 300M100 300C98 380 94 460 92 532M140 300C142 380 146 460 148 532" fill="none" vector-effect="non-scaling-stroke"/><path d="M104 150q6-4 12 0q-6 4-12 0ZM124 150q6-4 12 0q-6 4-12 0Z" fill="#e2c27a" vector-effect="non-scaling-stroke"/></g>';
+function nazRespaldo(h, id) {
+  const sec = (HABCOL[h.slug] || []).find(([, p]) => nazPartes(p, 'x'));
+  const r = sec ? nazPartes(sec[1], id) : null;
+  return r ? { defs: r.defs, fig: `<g stroke="rgb(255 255 255 / .6)" stroke-width="1.2" stroke-linejoin="round">${r.partes.replace(/<(path|circle)(?![^>]*oc-nazm-cinto)/g, '<$1 vector-effect="non-scaling-stroke"')}</g>`, label: `Nazareno de ${h.nombre} con su hábito: ${r.dice}` }
+    : { defs: '', fig: NAZ_TRAZO, label: `Nazareno de ${h.nombre}, dibujado sin colores: su hábito aún no está descrito aquí` };
+}
+// Lámina 3:2 (assets/naz/<slug>.svg): terciopelo de su capital, galón de oro y el nazareno en el centro. La usan el listado, el
+// buscador y la hoja del plano; no depende del modo claro u oscuro de la página.
+function laminaNaz(h) {
+  const c = CAP[h.ciudad], id = 'l', r = nazRespaldo(h, id + 'g'), k = 214 / 532;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240"><defs><radialGradient id="${id}f" cx="78%" cy="0%" r="120%"><stop offset="0" stop-color="${c.color}"/><stop offset=".55" stop-color="${fondoLegible(c.color)}"/><stop offset="1" stop-color="#13071d"/></radialGradient></defs>${r.defs}<rect width="360" height="240" fill="url(#${id}f)"/><rect x="7" y="7" width="346" height="226" rx="10" fill="none" stroke="#c9a14a" stroke-opacity=".55"/><g transform="translate(${(180 - 120 * k).toFixed(2)} ${(13 - 16 * k).toFixed(2)}) scale(${k.toFixed(4)})">${r.fig}</g></svg>`;
+}
+// Al compartir una hermandad sin foto: su lámina 1200×630 (tools/diseno/og-respaldo.py, con las letras de la web)
+const ogNaz = (h) => (fs.existsSync(path.join(DIR, 'assets', 'og', 'h-' + h.slug + '.jpg')) ? abs('assets/og/h-' + h.slug + '.jpg') : '');
+const nazUrl = (h) => u('assets/naz/' + h.slug + '.svg') + '?v=' + createHash('sha256').update(laminaNaz(h)).digest('hex').slice(0, 8);
 function coloresHabito(slug) {
   const secs = HABCOL[slug] || [];
   return secs.filter(([, p]) => Object.keys(p).length).map(([nombre, p]) => { const naz = nazarenoMini(p, nombre); return `<div class="oc-habito-sec${naz ? ' has-naz' : ''}">${nombre ? `<p class="oc-habito-sec-t">${esc(nombre)}</p>` : ''}${naz}<ul class="oc-swatches" aria-label="Colores del hábito${nombre ? ', ' + esc(nombre.toLowerCase()) : ''}">${Object.entries(p).map(([pr, c]) => `<li><i style="background:${muestra(c)}" aria-hidden="true"></i><span>${esc(mayus(`${pr} ${colorDe(pr, c)}`))}</span></li>`).join('')}</ul></div>`; }).join('');
@@ -1028,9 +1051,8 @@ function acompHtml(a, max = Infinity, h = null) {
 // Estampa: cuando no existe ninguna foto con licencia libre, una lámina diseñada (colgadura de su capital, inicial bordada y
 // nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
 function estampaHtml(h, c) {
-  const ini = esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0));
   const tit = (h.titulares || []).slice(0, 3).map((t) => `<li>${esc(t.nombre.split(',')[0])}</li>`).join('');
-  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina" aria-hidden="true"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span class="oc-estampa-ini">${ini}</span></div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Todavía no tenemos una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
+  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async">${(() => { const r = nazRespaldo(h, 'e' + h.slug); return `<svg class="oc-estampa-naz" viewBox="38 16 164 532" role="img" aria-label="${esc(r.label)}">${r.defs}${r.fig}</svg>`; })()}</div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Todavía no tenemos una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
 }
 // Díptico: el Cristo y la Virgen de la hermandad, cada uno con su crédito (licencias de Commons por separado).
 function dipticoHtml(h, c) {
@@ -1147,7 +1169,7 @@ ${fuente}
 ${prev || next ? `<nav class="oc-prevnext fx-prevnext" aria-label="Hermandades del mismo día" style="--c:${c.color}">${prev ? `<a class="is-prev" href="${u('hermandad/' + prev.slug + '/')}"><span>Anterior el ${esc(h.dia)}</span><strong>${esc(prev.nombre)}</strong></a>` : '<span></span>'}${next ? `<a class="is-next" href="${u('hermandad/' + next.slug + '/')}"><span>Siguiente el ${esc(h.dia)}</span><strong>${esc(next.nombre)}</strong></a>` : ''}</nav>` : ''}
 ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div>`) : ''}`;
   write(`hermandad/${h.slug}/index.html`, layout({
-    title: `${h.nombre} (${c.nombre})`, desc: `${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}`.slice(0, 300), body, path: `hermandad/${h.slug}/`, image: ogOf(im), active: 'hermandades/', head: h.diptico && h.diptico.juntos ? heroPreload(h.diptico.juntos, '(max-width: 960px) 100vw, 42vw', [500, 960]) : h.diptico && h.diptico.cristo && h.diptico.virgen ? heroPreload(h.diptico.cristo, '(max-width: 960px) 50vw, 21vw', [500, 960]) : heroPreload(im, '(max-width: 860px) 100vw, 40vw', [500, 960]),
+    title: `${h.nombre} (${c.nombre})`, desc: `${h.nombre}, hermandad de la Semana Santa de ${c.nombre} que procesiona el ${h.dia}${h.sede ? ' desde ' + h.sede : ''}. ${h.historia || ''}`.slice(0, 300), body, path: `hermandad/${h.slug}/`, image: ogOf(im) || ogNaz(h), active: 'hermandades/', head: h.diptico && h.diptico.juntos ? heroPreload(h.diptico.juntos, '(max-width: 960px) 100vw, 42vw', [500, 960]) : h.diptico && h.diptico.cristo && h.diptico.virgen ? heroPreload(h.diptico.cristo, '(max-width: 960px) 50vw, 21vw', [500, 960]) : heroPreload(im, '(max-width: 860px) 100vw, 40vw', [500, 960]),
     crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.dia, u('semana-santa/' + c.slug + '/#' + slugify(h.dia))], [h.nombre, '']],
     jsonld: { '@context': 'https://schema.org', '@type': 'Organization', name: h.nombre_oficial || h.nombre, alternateName: h.nombre, foundingDate: (String(h.fundacion).match(/\d{4}/) || [])[0], address: h.sede ? { '@type': 'PostalAddress', streetAddress: h.sede, addressLocality: c.nombre, addressRegion: 'Andalucía', addressCountry: 'ES' } : undefined, url: h.web || undefined, image: im ? ogOf(im) : undefined, description: h.historia || undefined },
   }));
@@ -1169,7 +1191,7 @@ ${secId('bandas', 'Bandas', musicaHtml(Infinity), 'fx-musica')}
 ${secId('marchas', titM, nM ? listaM(relevantes) + notaTodas : '', 'fx-sec-marchas')}
 </article>`;
     write(`hermandad/${h.slug}/musica/index.html`, layout({
-      title: `Bandas y marchas de ${h.nombre} (${c.nombre})`, desc: `Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.`, body: mus, path: `hermandad/${h.slug}/musica/`, image: ogOf(im), active: 'hermandades/',
+      title: `Bandas y marchas de ${h.nombre} (${c.nombre})`, desc: `Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.`, body: mus, path: `hermandad/${h.slug}/musica/`, image: ogOf(im) || ogNaz(h), active: 'hermandades/',
       crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.nombre, fichaUrl], ['Bandas y marchas', '']],
     }));
   }
@@ -1402,7 +1424,7 @@ const dirEmpty = '<p class="oc-empty" data-dir-empty hidden>Ningún resultado co
 // Tarjeta de la lista de Hermandades (lenguaje de Noticias): foto de la hermandad o su sello en el color de su capital
 function entryHermVx(h, mas = false) {
   const c = CAP[h.ciudad], im = h.imagen;
-  const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true" style="--c:${c.color}"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+  const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   const meta = `${cityTag(h.ciudad)}<span>${esc(h.dia)}</span>${h.hora ? `<span class="vx-autor">${esc(fmtHora(h.hora))} h</span>` : ''}`;
   return `<li class="oc-entry vx-m ix-obra${mas ? ' is-mas' : ''}" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}"${tLargo(h.nombre)}>${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
@@ -1743,7 +1765,7 @@ function searchIndex() {
   const idx = [];
   // i: miniatura (foto del titular); c: capital, para el monograma de color si no hay foto
   for (const c of D.capitales) idx.push({ t: 'c', n: 'Semana Santa de ' + c.nombre, s: cifraCap(c), u: 'semana-santa/' + c.slug + '/', c: c.slug, k: norm(c.nombre + ' semana santa capital') });
-  for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : '', c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
+  for (const h of D.hermandades) idx.push({ t: 'h', n: h.nombre, s: CAP[h.ciudad].nombre + ', ' + h.dia, u: 'hermandad/' + h.slug + '/', i: h.imagen && h.imagen.local ? u(localUrl(h.imagen, h.imagen.sizes[0])) : h.imagen ? '' : nazUrl(h), c: h.ciudad, k: norm([h.nombre, h.nombre_oficial, h.sede, h.dia, CAP[h.ciudad].nombre, ...h.titulares.map((t) => t.nombre + ' ' + t.autor), ...(h.marchas || []).map((m) => m.titulo)].join(' ')) });
   for (const b of D.bandas) idx.push({ t: 'b', n: b.nombre, s: b.tipo + (b.localidad ? ', ' + b.localidad : ''), u: 'banda/' + b.slug + '/', k: norm(b.nombre + ' ' + b.localidad + ' ' + b.tipo) });
   for (const i of D.imagineros) idx.push({ t: 'i', n: i.nombre, s: plural(i.obras.length, 'obra', 'obras'), u: 'imaginero/' + i.slug + '/', k: norm(i.nombre + ' ' + i.escuela + ' ' + i.obras.map((o) => o.titular).join(' ')) });
   // Las marchas (más de 7.000) van en search-marchas.json, que el navegador pide solo al escribir 3 letras: el índice principal pesa poco.
@@ -2096,6 +2118,8 @@ function datosCunao() {
 
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
+// Láminas de respaldo de las hermandades sin foto de un titular (las enlazan el listado, el buscador y el plano)
+for (const h of D.hermandades) if (!h.imagen) write('assets/naz/' + h.slug + '.svg', laminaNaz(h));
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
 // y las unidas por escribir su nombre de dos maneras (tools/sources/bandas-unidas.json, en portal.json como bandas_unidas). En Cloudflare,
 // además, con 301 en _redirects (REDIR_301); la página con meta refresh queda para GitHub Pages y para quien la tenga en caché.
