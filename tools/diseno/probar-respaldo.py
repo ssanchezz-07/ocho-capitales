@@ -1,7 +1,7 @@
 # Ocho Capitales · prueba del respaldo de las hermandades sin foto de un titular (oc-diseno, 4-nov): su nazareno en la ficha,
 # el listado, el buscador y al compartir; sin iniciales ni huecos. A 390 y 1440 px, en claro y oscuro.
 # Uso: python -I probar-respaldo.py [base_url]
-import json, os, sys, urllib.request
+import hashlib, json, os, sys, urllib.request
 os.environ.setdefault('PLAYWRIGHT_BROWSERS_PATH', os.path.expandvars(r'%LOCALAPPDATA%\ms-playwright'))
 from playwright.sync_api import sync_playwright
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8091'
@@ -15,6 +15,11 @@ lst = idx if isinstance(idx, list) else idx.get('i') or idx.get('items') or []
 for slug in SIN_FOTO:
     e = next((x for x in lst if isinstance(x, dict) and x.get('u') == f'hermandad/{slug}/'), None)
     check(e and '/assets/naz/' + slug + '.svg' in e.get('i', ''), f'buscador: {slug} lleva su nazareno ({e and e.get("i")})')
+# cada imagen para compartir es del nazareno de hoy (huella de og-respaldo.py = lámina que sirve la web)
+RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
+HU = json.load(open(os.path.join(RAIZ, 'site', 'assets', 'og', 'huellas.json'), encoding='utf8'))
+viejas = [s for s, v in HU.items() if hashlib.sha256(urllib.request.urlopen(f'{BASE}/assets/naz/{s}.svg').read()).hexdigest()[:12] != v]
+check(not viejas, f'imágenes para compartir al día con su nazareno ({len(HU)}; viejas: {viejas[:5]})')
 with sync_playwright() as p:
     b = p.chromium.launch()
     for w, h, mv in ((390, 844, True), (1440, 900, False)):
@@ -31,6 +36,8 @@ with sync_playwright() as p:
                 check(og.endswith(f'/assets/og/h-{slug}.jpg') and urllib.request.urlopen(BASE + '/assets/og/h-' + slug + '.jpg').status == 200, f'{tag} {slug}: imagen al compartir {og}')
             pg.goto(f'{BASE}/hermandad/{CON_FOTO}/', wait_until='networkidle')
             check(pg.locator('.oc-estampa-naz').count() == 0 and '/assets/og/' not in pg.locator('meta[property="og:image"]').get_attribute('content'), f'{tag} {CON_FOTO}: con foto, sin respaldo')
+            pg.goto(f'{BASE}/semana-santa/cordoba/', wait_until='networkidle')
+            check(pg.locator('.oc-entry-img.is-blank').count() == 0 and pg.locator('.oc-entry-img.is-naz').count() > 0, f'{tag} Córdoba: sin iniciales, con nazarenos ({pg.locator(".oc-entry-img.is-naz").count()})')
             pg.goto(f'{BASE}/hermandades/', wait_until='networkidle')
             check(pg.locator('.ix-foto.is-sello').count() == 0, f'{tag} listado: ninguna inicial')
             for slug in SIN_FOTO:

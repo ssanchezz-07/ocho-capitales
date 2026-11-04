@@ -2,9 +2,10 @@
 # Su nazareno (la lámina assets/naz/<slug>.svg que genera build.mjs), su nombre con las letras de la web y el terciopelo de su capital.
 # Se hace con Playwright porque sharp no lee las fuentes woff2 de la web y en la publicación no está; las imágenes se guardan en
 # site/assets/og/h-<slug>.jpg y build.mjs las usa solo mientras la hermandad no tenga foto.
-# Volver a ejecutar cuando cambien los hábitos o las fotos: compila primero y sirve la web.
+# Volver a ejecutar cuando cambien los hábitos o las fotos: compila primero y sirve la web. Guarda la huella de cada lámina en
+# assets/og/huellas.json: si el nazareno cambia, build.mjs deja de usar la imagen vieja (comparte la genérica) y avisa.
 # Uso: python -I og-respaldo.py [base_url]   (por defecto http://localhost:8091)
-import json, os, re, sys, urllib.request
+import hashlib, json, os, re, sys, urllib.request
 os.environ.setdefault('PLAYWRIGHT_BROWSERS_PATH', os.path.expandvars(r'%LOCALAPPDATA%\ms-playwright'))
 from playwright.sync_api import sync_playwright
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8091'
@@ -30,13 +31,14 @@ h1 { margin: 0; font: 400 __T__px/.9 K; letter-spacing: .01em; text-wrap: balanc
 .fig svg { height: 540px; width: auto; filter: drop-shadow(0 24px 30px rgb(0 0 0 / .5)); }
 </style></head><body><div class="txt"><p class="cap">__CAPN__</p><h1>__N__</h1><p class="dia">__DIA__</p></div><div class="fig">__SVG__</div><p class="marca">Ocho Capitales</p></body></html>'''
 os.makedirs(OUT, exist_ok=True)
-hechas = []
+hechas = []; huellas = {}
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1200, 'height': 630})
     pg.goto(BASE + '/hermandades/', wait_until='domcontentloaded')
     for h in D['hermandades']:
         try: svg = urllib.request.urlopen(f'{BASE}/assets/naz/{h["slug"]}.svg').read().decode('utf8')
         except Exception: continue  # tiene foto: no hace falta
+        huellas[h['slug']] = hashlib.sha256(svg.encode('utf8')).hexdigest()[:12]  # build.mjs la compara con la lámina de hoy
         # solo la figura: sin el terciopelo ni el galón de la lámina, encuadrada en su alto
         svg = re.sub(r'<rect[^>]*/>', '', svg).replace('viewBox="0 0 360 240" width="360" height="240"', 'viewBox="124 6 112 228"')
         c = CAP[h['ciudad']]
@@ -52,4 +54,5 @@ with sync_playwright() as p:
 for f in os.listdir(OUT):
     m = re.match(r'h-(.+)\.jpg$', f)
     if m and m.group(1) not in hechas: os.remove(os.path.join(OUT, f))
+json.dump(huellas, open(os.path.join(OUT, 'huellas.json'), 'w', encoding='utf8'), indent=0, sort_keys=True)
 print(f'{len(hechas)} imágenes en site/assets/og/')

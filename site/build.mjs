@@ -190,7 +190,7 @@ function nazRespaldo(h, id) {
   const sec = (HABCOL[h.slug] || []).find(([, p]) => nazPartes(p, 'x'));
   const r = sec ? nazPartes(sec[1], id) : null;
   return r ? { defs: r.defs, fig: `<g stroke="rgb(255 255 255 / .6)" stroke-width="1.2" stroke-linejoin="round">${r.partes.replace(/<(path|circle)(?![^>]*oc-nazm-cinto)/g, '<$1 vector-effect="non-scaling-stroke"')}</g>`, label: `Nazareno de ${h.nombre} con su hábito: ${r.dice}` }
-    : { defs: '', fig: NAZ_TRAZO, label: `Nazareno de ${h.nombre}, dibujado sin colores: su hábito aún no está descrito aquí` };
+    : { defs: '', fig: NAZ_TRAZO, label: `Nazareno de ${h.nombre}, dibujado sin colores: ${(HABCOL[h.slug] || []).some(([, p]) => Object.keys(p).length) ? 'su ficha no dice el color de la túnica' : 'su hábito aún no está descrito aquí'}` };
 }
 // Lámina 3:2 (assets/naz/<slug>.svg): terciopelo de su capital, galón de oro y el nazareno en el centro. La usan el listado, el
 // buscador y la hoja del plano; no depende del modo claro u oscuro de la página.
@@ -199,7 +199,11 @@ function laminaNaz(h) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240"><defs><radialGradient id="${id}f" cx="78%" cy="0%" r="120%"><stop offset="0" stop-color="${c.color}"/><stop offset=".55" stop-color="${fondoLegible(c.color)}"/><stop offset="1" stop-color="#13071d"/></radialGradient></defs>${r.defs}<rect width="360" height="240" fill="url(#${id}f)"/><rect x="7" y="7" width="346" height="226" rx="10" fill="none" stroke="#c9a14a" stroke-opacity=".55"/><g transform="translate(${(180 - 120 * k).toFixed(2)} ${(13 - 16 * k).toFixed(2)}) scale(${k.toFixed(4)})">${r.fig}</g></svg>`;
 }
 // Al compartir una hermandad sin foto: su lámina 1200×630 (tools/diseno/og-respaldo.py, con las letras de la web)
-const ogNaz = (h) => (fs.existsSync(path.join(DIR, 'assets', 'og', 'h-' + h.slug + '.jpg')) ? abs('assets/og/h-' + h.slug + '.jpg') : '');
+// Solo si su huella (tools/diseno/og-respaldo.py) es la de la lámina de hoy: con un hábito cambiado, la genérica, nunca un nazareno viejo.
+const OG_HUELLAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'assets', 'og', 'huellas.json'), 'utf8')); } catch { return {}; } })();
+const huellaNaz = (h) => createHash('sha256').update(laminaNaz(h)).digest('hex').slice(0, 12);
+let ogViejas = 0;
+const ogNaz = (h) => { if (!OG_HUELLAS[h.slug]) return ''; if (OG_HUELLAS[h.slug] !== huellaNaz(h)) { ogViejas++; return ''; } return abs('assets/og/h-' + h.slug + '.jpg'); };
 const nazUrl = (h) => u('assets/naz/' + h.slug + '.svg') + '?v=' + createHash('sha256').update(laminaNaz(h)).digest('hex').slice(0, 8);
 function coloresHabito(slug) {
   const secs = HABCOL[slug] || [];
@@ -392,13 +396,13 @@ function entryHerm(h, extra = '', enCapital = false) {
   // En la página de su capital, capital y día ya se saben: la fila dice la hora de salida y la sede
   if (enCapital) {
     const im = h.imagen;
-    const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+    const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
     const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
     const meta = [h.hora ? fmtHora(h.hora) + ' h' : '', h.sede].filter(Boolean).map(esc).join(' · ');
     return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3>${meta ? `<p class="oc-entry-sub is-hora">${meta}</p>` : ''}${tit ? `<p class="oc-entry-sub">${esc(tit)}</p>` : ''}</div></li>`;
   }
   const im = h.imagen;
-  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc(h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0))}</span></div>`;
+  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>${tit || h.sede ? `<p class="oc-entry-sub">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
@@ -1261,7 +1265,7 @@ const cifras = (list) => { const l = list.filter(([n]) => n > 0); return l.lengt
 // Fila de obra o marcha con la miniatura de su hermandad (foto, díptico o monograma)
 function filaHerm(h, titulo, sub, extra = '') {
   const c = h ? CAP[h.ciudad] : null;
-  const thumb = h && h.imagen ? `<div class="oc-entry-img${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '72px', widths: [120, 250] })}</div>` : c ? `<div class="oc-entry-img is-blank" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}" aria-hidden="true"><span>${esc((h.nombre.replace(/^(La|El|Los|Las)\s+/i, '') || '·').charAt(0))}</span></div>` : '';
+  const thumb = h && h.imagen ? `<div class="oc-entry-img${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '72px', widths: [120, 250] })}</div>` : h ? `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : '';
   return `<li class="oc-entry${thumb ? '' : ' is-text'}"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title">${titulo}</h3>${sub ? `<p class="oc-entry-sub">${sub}</p>` : ''}${h ? `<p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>` : ''}</div></li>`;
 }
 function pageImag(i) {
@@ -2124,6 +2128,7 @@ fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
 // Láminas de respaldo de las hermandades sin foto de un titular (las enlazan el listado, el buscador y el plano)
 for (const h of D.hermandades) if (!h.imagen) write('assets/naz/' + h.slug + '.svg', laminaNaz(h));
+if (ogViejas) console.warn(`Aviso: ${ogViejas} fichas sin foto comparten la imagen genérica porque su nazareno cambió; ejecuta tools/diseno/og-respaldo.py`);
 // Bandas unidas con otra ficha (tools/sources/bandas-redirecciones.json): la dirección vieja redirige a la buena
 // y las unidas por escribir su nombre de dos maneras (tools/sources/bandas-unidas.json, en portal.json como bandas_unidas). En Cloudflare,
 // además, con 301 en _redirects (REDIR_301); la página con meta refresh queda para GitHub Pages y para quien la tenga en caché.
