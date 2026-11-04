@@ -14,8 +14,10 @@ FICHAS = {
     'gitanos-malaga': (2, '#5b2a86', 'capillo morado'),                # capillo
     'los-estudiantes-huelva': (1, '#1b1b1f', 'morrión negro'),         # morrión
     'piedad-malaga': (1, '#1b1b1f', 'cíngulo dorado'),                 # sin tocado: solo contorno
+    'la-borriquilla-jaen': (1, '#f5f3ee', 'caperuz blanco'),          # caperuz: la cabeza va pintada, no vacía (auditor, 4-nov)
+    'nuestra-senora-de-los-dolores-granada': (1, '#f5f3ee', 'cíngulo blanco'),  # cíngulo del color de la túnica: lleva contorno
     'servitas-malaga': (0, None, None),                                # tabla vacía: sin figura
-    'la-aurora-granada': (0, None, None),                              # Granada aún sin hábitos: sin figura, nunca inventada
+    'la-aurora-granada': (1, '#f5f3ee', 'fajín rojo'),               # Granada, cargada el 4-nov (blanco, capillo y fajín rojo)
 }
 ok = []
 def check(c, t): ok.append(bool(c)); print(('OK   ' if c else 'FALLO') + ' ' + t)
@@ -39,9 +41,12 @@ with sync_playwright() as p:
                     bb = f.bounding_box(); check(bb and 30 <= bb['width'] <= 60 and bb['height'] <= 170, f'{tag} {slug}: tamaño de la figura {bb and round(bb["width"])}×{bb and round(bb["height"])}')
                     anim = pg.evaluate("(s) => getComputedStyle(s).animationName + '|' + getComputedStyle(s).transitionDuration", f.element_handle())
                     check(anim.startswith('none'), f'{tag} {slug}: figura quieta ({anim})')
+                    vacia = pg.evaluate("(s) => s.querySelectorAll('.is-vacio').length", f.element_handle())
+                    if slug in ('la-borriquilla-jaen', 'fusionadas-malaga', 'nazareno-de-santa-maria-cadiz'): check(vacia == 0, f'{tag} {slug}: la cabeza lleva su color')
+                    if 'cíngulo' in alt: check(f.locator('.oc-nazm-cinto-b').count() == 1, f'{tag} {slug}: el cíngulo lleva contorno')
                     borde = pg.evaluate("(s) => getComputedStyle(s.querySelector('path')).stroke", f.element_handle())
                     check(('255, 255, 255' in borde) == (esq == 'dark'), f'{tag} {slug}: contorno según el modo ({borde})')
-                    if CAPT and slug in ('nazareno-de-santa-maria-cadiz', 'fusionadas-malaga', 'los-estudiantes-huelva') and w != 360:
+                    if CAPT and slug in ('nazareno-de-santa-maria-cadiz', 'fusionadas-malaga', 'los-estudiantes-huelva', 'la-borriquilla-jaen', 'nuestra-senora-de-los-dolores-granada') and w != 360:
                         sec = pg.locator('.oc-habito-cols'); sec.scroll_into_view_if_needed(); pg.wait_for_timeout(200)
                         sec.screenshot(path=f'{CAPT}/{slug}-{w}-{esq}.png')
                 check(pg.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') <= 0, f'{tag} {slug}: sin desbordamiento')

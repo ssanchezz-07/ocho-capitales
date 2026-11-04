@@ -153,24 +153,25 @@ const mayus = (t) => String(t || '').replace(/^([^\p{L}]*)(\p{L})/u, (_, a, b) =
 // Nazareno pequeño de la ficha (oc-diseno, 3-nov): el dibujo del nazareno de la portada, simplificado y vestido con los colores de
 // tools/sources/habitos-colores.json, uno por sección. Solo se pinta lo que dice la tabla: la prenda sin color va solo con su contorno,
 // y sin túnica no hay figura. Sin cirio ni escudo, que no constan. Sin movimiento.
-const NAZ_PRENDA = { túnica: 'tunica', sotana: 'tunica', hábito: 'tunica', capirote: 'cabeza', antifaz: 'cabeza', capillo: 'cabeza', morrión: 'cabeza', capa: 'capa', escapulario: 'escapulario', botonadura: 'botones', botonera: 'botones', cíngulo: 'cinto', cordón: 'cinto', cinturón: 'cinto', ceñidor: 'cinto', correa: 'cinto', faja: 'cinto', fajín: 'cinto' };
+const NAZ_PRENDA = { túnica: 'tunica', sotana: 'tunica', hábito: 'tunica', capirote: 'cabeza', antifaz: 'cabeza', capillo: 'cabeza', caperuz: 'cabeza', caperuza: 'cabeza', cubrerrostro: 'cabeza', 'cubre rostro': 'cabeza', 'cubre-rostro': 'cabeza', morrión: 'cabeza', capucha: 'cabeza', verdugo: 'cabeza', capa: 'capa', escapulario: 'escapulario', botonadura: 'botones', botonera: 'botones', cíngulo: 'cinto', cordón: 'cinto', cinturón: 'cinto', ceñidor: 'cinto', correa: 'cinto', faja: 'cinto', fajín: 'cinto' };
 let nazMiniN = 0;
+const NAZ_CINTO = 'M84 300Q120 312 156 300M134 306C136 340 132 380 136 410M142 304C146 335 146 370 150 400';
 function nazarenoMini(p, nombre) {
   const col = {}; // parte del dibujo → color de la tabla (la primera prenda que la nombra; antifaz antes que capirote, que es lo que se ve)
-  for (const k of ['túnica', 'sotana', 'hábito', 'antifaz', 'capirote', 'capillo', 'morrión', 'capa', 'escapulario', 'botonadura', 'botonera', 'cíngulo', 'cordón', 'cinturón', 'ceñidor', 'correa', 'faja', 'fajín']) if (p[k] && !col[NAZ_PRENDA[k]]) col[NAZ_PRENDA[k]] = p[k];
+  for (const k of ['túnica', 'sotana', 'hábito', 'antifaz', 'capirote', 'capillo', 'caperuz', 'caperuza', 'cubrerrostro', 'cubre rostro', 'cubre-rostro', 'morrión', 'capucha', 'verdugo', 'capa', 'escapulario', 'botonadura', 'botonera', 'cíngulo', 'cordón', 'cinturón', 'ceñidor', 'correa', 'faja', 'fajín']) if (p[k] && !col[NAZ_PRENDA[k]]) col[NAZ_PRENDA[k]] = p[k];
   if (p['hábito'] && !col.cabeza) col.cabeza = p['hábito'];
   if (!col.tunica) return '';
   const id = 'nz' + ++nazMiniN; const defs = [];
   const fill = (c) => { if (!c) return 'none'; const cs = c.split(' y ').map((x) => COLORES[x] || '#8a8a90'); if (cs.length === 1) return cs[0]; const g = id + 'g' + defs.length; defs.push(`<linearGradient id="${g}"><stop offset=".5" stop-color="${cs[0]}"/><stop offset=".5" stop-color="${cs[1]}"/></linearGradient>`); return `url(#${g})`; };
   const vacio = (c) => (c ? '' : ' class="is-vacio"');
-  const morrion = !!p['morrión'] && !p.capirote && !p.antifaz;
+  const morrion = !!(p['morrión'] || p.capucha || p.verdugo) && !['capirote', 'antifaz', 'capillo', 'caperuz', 'caperuza', 'cubrerrostro', 'cubre rostro', 'cubre-rostro'].some((k) => p[k]);
   const cabeza = morrion ? 'M120 104C100 104 92 124 95 150C88 176 80 205 84 232Q120 252 156 232C160 205 152 176 145 150C148 124 140 104 120 104Z' : 'M120 24L95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152Z';
   const partes = [
     col.capa ? `<path d="M88 220C62 250 50 330 46 420C44 470 46 510 50 530Q120 548 190 530C194 510 196 470 194 420C190 330 178 250 152 220Z" fill="${fill(col.capa)}"/>` : '',
     `<path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" fill="${fill(col.tunica)}"/>`,
     col.escapulario ? `<path d="M108 238H132L134 526Q120 530 106 526Z" fill="${fill(col.escapulario)}"/>` : '',
     col.botones ? `<g fill="${fill(col.botones)}">${[262, 292, 322, 352, 382, 412, 442, 472].map((y) => `<circle cx="120" cy="${y}" r="4.5"/>`).join('')}</g>` : '',
-    col.cinto ? `<path class="oc-nazm-cinto" d="M84 300Q120 312 156 300M134 306C136 340 132 380 136 410M142 304C146 335 146 370 150 400" fill="none" style="stroke:${fill(col.cinto)}"/>` : '',
+    col.cinto ? `<path class="oc-nazm-cinto-b" d="${NAZ_CINTO}" fill="none" stroke-width="10" stroke-linecap="round"/><path class="oc-nazm-cinto" d="${NAZ_CINTO}" fill="none" stroke-width="7" stroke-linecap="round" style="stroke:${fill(col.cinto)}"/>` : '',
     `<path${vacio(col.cabeza)} d="${cabeza}" fill="${fill(col.cabeza)}"/>`,
     `<path d="M104 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0ZM124 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/>`,
   ].join('');
