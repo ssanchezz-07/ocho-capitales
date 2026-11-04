@@ -38,7 +38,7 @@ for (const [dir, obligado] of TIPOS) {
     const destino = ruta.slice(BASE.length).replace(/\/$/, '');
     const pag = leer(destino);
     if (!pag) { mal(`${rel}: el enlace de fuentes lleva a una página que no existe (${ruta})`); continue; }
-    const i = pag.indexOf(`<section class="oc-fuente-ficha" id="${ancla}">`);
+    const i = pag.indexOf(`<section class="oc-fuente-ficha" id="${ancla}"`);
     if (i < 0) { mal(`${rel}: el enlace de fuentes lleva a un apartado que no existe (${ruta}#${ancla})`); continue; }
     const sec = pag.slice(i, pag.indexOf('</section>', i));
     if (!/<ul class="oc-fuentes"><li>/.test(sec)) mal(`${rel}: su apartado de fuentes está vacío (${ruta}#${ancla})`);

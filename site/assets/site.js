@@ -1432,4 +1432,62 @@
       document.addEventListener('mouseout', cancela, { passive: true });
     }
   }
+  // ---------- buscador de fuentes («Fuentes y metodología», pulido 4-nov-2026) ----------
+  // Encuentra cualquier ficha con el mismo índice que el buscador de la web y lleva a su apartado de fuentes.
+  // fuentes-apartados.json dice qué imagineros y bandas tienen apartado y qué marchas no (capitales y hermandades, todas).
+  (function () {
+    var f = $('[data-fuentes-busca]'); if (!f) return;
+    var q = $('input', f), n = $('.oc-fbusca-n', f), ul = $('.oc-fbusca-res', f);
+    var aps = null, listo = null, mListas = false, MAX = 20;
+    var NOMBRE = { c: 'Capital', h: 'Hermandad', b: 'Banda', i: 'Imaginero', m: 'Marcha' };
+    f.hidden = false;
+    var abrir = false; // Enter antes de que lleguen los resultados: el texto buscado; se abre su primer resultado en cuanto llegue
+    f.addEventListener('submit', function (ev) { ev.preventDefault(); var a = $('a', ul); if (a) ir(a); else abrir = q.value.trim(); });
+    // al apartado; si está en esta misma página, el foco va a él para seguir con el teclado desde ahí
+    function ir(a) {
+      abrir = false; var h = a.getAttribute('href'), i = h.indexOf('#'), aqui = i > 0 && h.slice(0, i) === location.pathname, el = aqui && document.getElementById(decodeURIComponent(h.slice(i + 1)));
+      if (!el) { location.href = a.href; return; }
+      el.setAttribute('tabindex', '-1'); if (location.hash === h.slice(i)) el.scrollIntoView(); else location.hash = h.slice(i); /* con :target, como al llegar de otra página */ el.focus({ preventScroll: true });
+    }
+    ul.addEventListener('click', function (ev) { var a = ev.target.closest && ev.target.closest('a'); if (a && !ev.ctrlKey && !ev.metaKey && !ev.shiftKey && ev.button === 0) { ev.preventDefault(); ir(a); } });
+    var slugDe = function (url) { return (String(url).match(/([^\/]+)\/$/) || [])[1] || ''; };
+    function destino(e) {
+      var s = slugDe(e.u);
+      if (e.t === 'c') return e.c ? 'acerca/fuentes/' + e.c + '/#capital' : '';
+      if (e.t === 'h') return e.c ? 'acerca/fuentes/' + e.c + '/#' + s : '';
+      if (e.t === 'm') return aps.mx[s] ? '' : 'acerca/fuentes/marchas/' + (/[a-z]/.test(s.charAt(0)) ? s.charAt(0) : '0-9') + '/#' + s;
+      if (e.t === 'i') return aps.i[s] ? 'acerca/fuentes/imagineros/#' + s : '';
+      if (e.t === 'b') return aps.b[s] ? 'acerca/fuentes/bandas/#' + s : '';
+      return '';
+    }
+    var conjunto = function (xs) { var o = {}; (xs || []).forEach(function (x) { o[x] = 1; }); return o; };
+    function cargar() {
+      if (!listo) listo = Promise.all([loadIdx(), traer(BASE + 'fuentes-apartados.json')]).then(function (r) { aps = { i: conjunto(r[1].i), b: conjunto(r[1].b), mx: conjunto(r[1].mx) }; }).catch(function (err) { listo = null; throw err; });
+      return listo;
+    }
+    function pintar() {
+      var v = q.value.trim();
+      if (norm(v).replace(/[^a-z0-9]/g, '').length < 2) { ul.innerHTML = ''; n.textContent = v ? 'Escribe al menos dos letras.' : ''; return; }
+      if (!aps) { n.textContent = 'Buscando…'; return; }
+      var r = search(v).filter(function (e) { return NOMBRE[e.t]; }).map(function (e) { return [e, destino(e)]; }).filter(function (x) { return x[1]; });
+      var esperando = !mListas && norm(v).trim().length >= 3;
+      n.textContent = r.length ? (r.length > MAX ? 'Las ' + MAX + ' primeras de ' + r.length.toLocaleString('es-ES') + ' fichas. Escribe más para afinar.' : r.length === 1 ? '1 ficha' : r.length + ' fichas') + (esperando ? ' (buscando también en las marchas…)' : '') : esperando ? 'Buscando…' : 'Ninguna ficha con fuentes coincide con «' + v + '».';
+      ul.innerHTML = r.slice(0, MAX).map(function (x) {
+        var e = x[0], sub = e.t === 'm' ? e.s : NOMBRE[e.t] + (e.s ? ' · ' + e.s : '');
+        return '<li><a href="' + esc(BASE + x[1]) + '"><strong>' + hl(e.n, v) + '</strong><span>' + esc(sub) + '</span></a></li>';
+      }).join('');
+      if (abrir !== false && abrir === v && r.length && !esperando) ir($('a', ul)); else if (abrir !== false && abrir !== v) abrir = false; /* solo la búsqueda en la que se pulsó Enter */
+    }
+    var t = null;
+    q.addEventListener('focus', function () { cargar().then(pintar, function () { n.textContent = 'No se ha podido cargar el buscador. Revisa la conexión.'; }); }, { once: true });
+    q.addEventListener('input', function () {
+      clearTimeout(t);
+      t = setTimeout(function () {
+        cargar().then(function () {
+          pintar();
+          var p = loadMarchas(q.value); if (p && !mListas) p.then(function () { mListas = true; pintar(); }, function () { mListas = true; pintar(); });
+        }, function () { n.textContent = 'No se ha podido cargar el buscador. Revisa la conexión.'; });
+      }, 120);
+    });
+  })();
 })();

@@ -1805,6 +1805,7 @@ function pageAcerca() {
 <h2 class="oc-h2" id="fichas">Las fuentes de cada ficha</h2>
 <p>Cada ficha lleva, al final, el enlace «Fuentes de esta ficha», que lleva a su apartado en estas páginas. Ahí está cada fuente, con su enlace y el dato que aporta: la ficha oficial, la historia, los titulares, la sede, el hábito…</p>
 ${chips([...D.capitales.map((c) => [c.nombre, u('acerca/fuentes/' + c.slug + '/')]), ['Marchas', u('acerca/fuentes/marchas/a/')], ['Imagineros', u('acerca/fuentes/imagineros/')], ['Bandas', u('acerca/fuentes/bandas/')]])}
+${buscaFuentes()}
 <p>Si las fuentes no coinciden, manda la oficial: la de la propia hermandad o la de su consejo, agrupación o federación.</p>
 <p>En las marchas, la dedicatoria a una hermandad puede estar <strong>contrastada</strong> (la dan dos fuentes independientes), <strong>dedicada</strong> (la da una fuente fiable) o <strong>sin verificar</strong> (solo la recogen el foro de Patrimonio Musical de 2008 o Wikipedia). Sin verificar, la ficha dice «Asociada a» en vez de «Dedicada a».</p>
 <p>Los textos basados en Wikipedia llevan debajo la línea «Texto basado en Wikipedia (CC BY-SA 4.0)», como pide su licencia.</p>
@@ -1812,10 +1813,18 @@ ${chips([...D.capitales.map((c) => [c.nombre, u('acerca/fuentes/' + c.slug + '/'
 <h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons, con su autor y licencia, y de las propias hermandades; cada foto lleva su autor.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }
-// Páginas de fuentes (pulido, encargo 5): el apartado #slug de cada ficha con sus fuentes, guardadas al generar la ficha (FUENTES_FICHAS)
+// Páginas de fuentes (pulido, encargo 5): el apartado #slug de cada ficha con sus fuentes, guardadas al generar la ficha (FUENTES_FICHAS).
+// Para leerlas y buscarlas (Pablo, 4-nov): arriba un buscador que lleva al apartado de cualquier ficha (con el índice del buscador
+// de la web) y un índice de días o de grupos de letras; cada apartado es una tarjeta compacta, en dos columnas en el ordenador, y
+// lleva data-ficha con la dirección de su ficha.
+const buscaFuentes = () => `<form class="oc-fbusca" role="search" hidden data-fuentes-busca><label for="fb-q">Busca las fuentes de una hermandad, marcha, imaginero o banda</label><input id="fb-q" type="search" placeholder="Por ejemplo, Macarena" autocomplete="off" enterkeyhint="search" aria-describedby="fb-n"><p class="oc-fbusca-n" id="fb-n" aria-live="polite"></p><ul class="oc-fbusca-res"></ul></form>`;
 function pagesFuentes() {
-  const bloque = (x, ficha, hn = 'h3') => `<section class="oc-fuente-ficha" id="${esc(x.slug)}"><${hn}><a href="${u(ficha)}">${esc(x.nombre)}</a></${hn}>${x.html}</section>`;
+  const n = (x) => x.toLocaleString('es-ES');
+  const bloque = (x, ficha, hn = 'h3') => `<section class="oc-fuente-ficha" id="${esc(x.slug)}" data-ficha="${u(ficha)}"><${hn}><a href="${u(ficha)}">${esc(x.nombre)}</a></${hn}>${x.html}</section>`;
+  const rejilla = (html) => `<div class="oc-fuentes-grid">${html}</div>`;
+  const indice = (etq, items) => (items.length > 1 ? `<nav class="oc-letras is-sub" aria-label="${etq}"><ul>${items.map(([href, t]) => `<li><a href="${href}">${esc(t)}</a></li>`).join('')}</ul></nav>` : '');
   const pagF = ({ ruta, titulo, miga, desc, lead, cuerpo }) => write(ruta + 'index.html', layout({ title: titulo, desc, body: `<header class="oc-pagehead"><h1 class="oc-title">${esc(titulo)}</h1>${lead}</header>
+${buscaFuentes()}
 <div class="oc-fuentes-pag">${cuerpo}</div>
 <p class="oc-note"><a href="${u('acerca/#fichas')}">Cómo se eligen las fuentes</a></p>`, path: ruta, crumbs: [['Portada', u()], ['Fuentes y metodología', u('acerca/')], [miga, '']] }));
   for (const c of D.capitales) {
@@ -1823,28 +1832,37 @@ function pagesFuentes() {
     const dias = byDay(F.hermandades);
     pagF({ ruta: `acerca/fuentes/${c.slug}/`, titulo: 'Fuentes de la Semana Santa de ' + c.nombre, miga: c.nombre,
       desc: `De dónde sale cada dato de la Semana Santa de ${c.nombre} y de sus hermandades en ${BRAND}, con el enlace a cada fuente.`,
-      lead: `<p class="oc-lead">De dónde sale cada dato de la Semana Santa de ${esc(c.nombre)}: primero la capital y después cada hermandad, por días. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
-      cuerpo: (F.capital ? bloque({ slug: 'capital', nombre: 'Semana Santa de ' + c.nombre, html: F.capital }, `semana-santa/${c.slug}/`, 'h2') : '') + dias.map(([d, hs]) => `<h2 class="oc-h2">${esc(d)}</h2>${hs.map((x) => bloque(x, `hermandad/${x.slug}/`)).join('')}`).join('') });
+      lead: `<p class="oc-lead">De dónde sale cada dato de la Semana Santa de ${esc(c.nombre)} y de sus hermandades: primero la capital y después cada hermandad, por días. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
+      cuerpo: indice('Días', [...(F.capital ? [['#capital', 'La capital']] : []), ...dias.map(([d]) => ['#dia-' + slugify(d), d])]) + (F.capital ? bloque({ slug: 'capital', nombre: 'Semana Santa de ' + c.nombre, html: F.capital }, `semana-santa/${c.slug}/`, 'h2') : '') + dias.map(([d, hs]) => `<h2 class="oc-h2" id="dia-${slugify(d)}">${esc(d)} <small>${plural(hs.length, 'hermandad', 'hermandades')}</small></h2>${rejilla(hs.map((x) => bloque(x, `hermandad/${x.slug}/`)).join(''))}`).join('') });
   }
   const letras = [...FUENTES_FICHAS.marchas.keys()].sort((a, b) => (a === '0-9' ? -1 : b === '0-9' ? 1 : a.localeCompare(b)));
+  const LET = (l) => (l === '0-9' ? '0-9' : l.toUpperCase());
   for (const L of letras) {
     const etq = L === '0-9' ? 'un número' : 'la ' + L.toUpperCase();
-    const nav = `<nav class="oc-letras" aria-label="Marchas por inicial"><ul>${letras.map((l) => `<li><a href="${u(`acerca/fuentes/marchas/${l}/`)}"${l === L ? ' aria-current="page"' : ''}>${l === '0-9' ? '0-9' : l.toUpperCase()}</a></li>`).join('')}</ul></nav>`;
-    const ms = [...FUENTES_FICHAS.marchas.get(L)].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
-    pagF({ ruta: `acerca/fuentes/marchas/${L}/`, titulo: `Fuentes de las marchas: ${L === '0-9' ? '0-9' : L.toUpperCase()}`, miga: 'Marchas: ' + (L === '0-9' ? '0-9' : L.toUpperCase()),
+    const nav = `<nav class="oc-letras" aria-label="Marchas por inicial"><ul>${letras.map((l) => `<li><a href="${u(`acerca/fuentes/marchas/${l}/`)}"${l === L ? ' aria-current="page"' : ''}>${LET(l)}</a></li>`).join('')}</ul></nav>`;
+    // en el orden de su dirección (la que da la inicial; a veces sin el artículo: «El Señor de los Milagros» va con las «Se»), para que cada grupo de letras salga seguido
+    const ms = [...FUENTES_FICHAS.marchas.get(L)].sort((a, b) => (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0));
+    // con muchas marchas, en grupos por las dos primeras letras («Sa», «Se»…) con su índice; con pocas, una sola lista
+    const clave = (x) => (L === '0-9' || ms.length < 120 ? '' : x.slug.slice(0, 2));
+    const grupos = []; for (const x of ms) { const k = clave(x); if (!grupos.length || grupos.at(-1)[0] !== k) grupos.push([k, []]); grupos.at(-1)[1].push(x); }
+    const G = (k) => k.charAt(0).toUpperCase() + k.slice(1);
+    pagF({ ruta: `acerca/fuentes/marchas/${L}/`, titulo: `Fuentes de las marchas: ${LET(L)}`, miga: 'Marchas: ' + LET(L),
       desc: `De dónde sale cada dato de las marchas procesionales que empiezan por ${etq} en ${BRAND}: título, compositor, año, formación, grabación y dedicatoria.`,
-      lead: `<p class="oc-lead">De dónde sale cada dato de las marchas que empiezan por ${etq}: título, compositor, año, formación, grabación y dedicatoria. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
-      cuerpo: nav + ms.map((x) => bloque(x, `marcha/${x.slug}/`, 'h2')).join('') });
+      lead: `<p class="oc-lead">De dónde sale cada dato de las ${n(ms.length)} marchas que empiezan por ${etq}: título, compositor, año, formación, grabación y dedicatoria. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
+      cuerpo: nav + indice('Grupos de letras', grupos.filter(([k]) => k).map(([k]) => ['#grupo-' + k, G(k)])) + grupos.map(([k, xs]) => (k ? `<h2 class="oc-h2" id="grupo-${k}">${G(k)} <small>${plural(xs.length, 'marcha', 'marchas')}</small></h2>` : '') + rejilla(xs.map((x) => bloque(x, `marcha/${x.slug}/`, k ? 'h3' : 'h2')).join(''))).join('') });
   }
   const porNombre = (a, b) => a.nombre.localeCompare(b.nombre, 'es');
   if (FUENTES_FICHAS.imagineros.length) pagF({ ruta: 'acerca/fuentes/imagineros/', titulo: 'Fuentes de los imagineros', miga: 'Imagineros',
     desc: `De dónde sale la biografía de cada imaginero en ${BRAND}, con el enlace a cada fuente.`,
     lead: `<p class="oc-lead">De dónde sale la biografía de cada imaginero. Cada línea enlaza a su fuente.</p>`,
-    cuerpo: [...FUENTES_FICHAS.imagineros].sort(porNombre).map((x) => bloque(x, `imaginero/${x.slug}/`, 'h2')).join('') });
+    cuerpo: rejilla([...FUENTES_FICHAS.imagineros].sort(porNombre).map((x) => bloque(x, `imaginero/${x.slug}/`, 'h2')).join('')) });
   if (FUENTES_FICHAS.bandas.length) pagF({ ruta: 'acerca/fuentes/bandas/', titulo: 'Fuentes de las bandas', miga: 'Bandas',
     desc: `De dónde salen la historia y los datos de cada banda en ${BRAND}, con el enlace a cada fuente.`,
     lead: `<p class="oc-lead">De dónde salen la historia y los datos de cada banda. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
-    cuerpo: [...FUENTES_FICHAS.bandas].sort(porNombre).map((x) => bloque(x, `banda/${x.slug}/`, 'h2')).join('') });
+    cuerpo: rejilla([...FUENTES_FICHAS.bandas].sort(porNombre).map((x) => bloque(x, `banda/${x.slug}/`, 'h2')).join('')) });
+  // Para el buscador de fuentes: qué imagineros y bandas tienen apartado y qué marchas no (capitales y hermandades, todas)
+  const conM = new Set([...FUENTES_FICHAS.marchas.values()].flat().map((x) => x.slug));
+  fs.writeFileSync(path.join(DIST, 'fuentes-apartados.json'), JSON.stringify({ i: FUENTES_FICHAS.imagineros.map((x) => x.slug), b: FUENTES_FICHAS.bandas.map((x) => x.slug), mx: MARCHAS.filter((m) => !conM.has(m.slug)).map((m) => m.slug) }));
 }
 function pageOffline() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Sin conexión</h1><p class="oc-lead">No hay red ahora mismo. Las páginas que ya has visitado siguen disponibles; vuelve a intentarlo cuando recuperes la cobertura.</p></header><p><a class="oc-btn" href="${u()}">Ir a la portada${icon('arrow')}</a></p>`;

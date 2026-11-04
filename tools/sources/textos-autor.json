@@ -584,18 +584,6 @@
    "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
   },
   {
-   "texto": "De dónde sale cada dato de la Semana Santa de ${esc(c.nombre)}: primero la capital y después cada hermandad, por días. Cada línea enlaza a su fuente y dice qué dato aporta.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
-  },
-  {
-   "texto": "De dónde sale cada dato de las marchas que empiezan por ${etq}: título, compositor, año, formación, grabación y dedicatoria. Cada línea enlaza a su fuente y dice qué dato aporta.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
-  },
-  {
    "texto": "De dónde sale la biografía de cada imaginero. Cada línea enlaza a su fuente.",
    "tipo": "web",
    "fuentes": [],
@@ -603,6 +591,18 @@
   },
   {
    "texto": "De dónde salen la historia y los datos de cada banda. Cada línea enlaza a su fuente y dice qué dato aporta.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
+  },
+  {
+   "texto": "De dónde sale cada dato de las ${n(ms.length)} marchas que empiezan por ${etq}: título, compositor, año, formación, grabación y dedicatoria. Cada línea enlaza a su fuente y dice qué dato aporta.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
+  },
+  {
+   "texto": "De dónde sale cada dato de la Semana Santa de ${esc(c.nombre)} y de sus hermandades: primero la capital y después cada hermandad, por días. Cada línea enlaza a su fuente y dice qué dato aporta.",
    "tipo": "web",
    "fuentes": [],
    "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
