@@ -299,13 +299,14 @@ function heroPreload(im, sizes, widths) {
 // Crédito de las dos fotos del díptico (Pablo, 4-nov: sin «Izquierda/Derecha»): una sola línea si son del mismo autor
 function creditPar(c, v) {
   const enlace = (im, txt) => `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${txt}</a>`;
-  const rec = c.recorte || v.recorte ? ' (recortadas)' : '';
+  const rec = c.recorte && v.recorte ? ' (recortadas)' : c.recorte ? ' (recortada la del Cristo)' : v.recorte ? ' (recortada la de la Virgen)' : '';
   if (c.autor && c.autor === v.autor && !!c.cedida === !!v.cedida && (c.cedida || c.licencia === v.licencia)) {
     if (c.cedida) return `Fotos: ${c.pagina ? enlace(c, esc(c.autor)) : esc(c.autor)}${rec}`;
     const lic = c.licurl ? `<a href="${esc(c.licurl)}" rel="license noopener" target="_blank">${esc(c.licencia)}</a>` : esc(c.licencia);
     return `Imágenes: ${esc(c.autor)}, ${lic}, vía Wikimedia Commons (${enlace(c, 'Cristo')} y ${enlace(v, 'Virgen')})${rec}`;
   }
-  return `Cristo: ${credit(c)} · Virgen: ${credit(v)}`;
+  const sin = (im) => credit(im).replace(/^Imagen: /, '');
+  return `Cristo: ${sin(c)} · Virgen: ${sin(v)}`;
 }
 function credit(im) {
   if (!im) return '';
