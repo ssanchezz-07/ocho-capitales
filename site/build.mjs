@@ -1275,7 +1275,7 @@ function pageImag(i) {
   const obraCard = (o) => {
     const h = HERM[o.hermandad_slug], c = h ? CAP[h.ciudad] : null;
     const det = esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
-    const foto = h && h.imagen ? `<div class="ix-foto${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-sello" aria-hidden="true"${c ? ` style="--c:${c.color}"` : ''}><span>${esc(inicialesM(String(o.titular).split(',')[0]))}</span></div>`;
+    const foto = h && h.imagen ? `<div class="ix-foto${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : `<div class="ix-foto is-sello" aria-hidden="true"><span>${esc(inicialesM(String(o.titular).split(',')[0]))}</span></div>`;
     const titulo = h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular);
     const meta = [h ? `<span class="vx-autor">${esc(h.nombre)}</span>` : (o.hermandad ? `<span class="vx-autor">${esc(o.hermandad)}</span>` : ''), det ? `<span>${det}</span>` : '', o.atrib ? '<span class="nx-tema">Atribución</span>' : ''].join('');
     return `<li class="oc-entry vx-m ix-obra">${foto}<div class="vx-body"><h3 class="vx-tit">${titulo}</h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${h ? `<p class="vx-pie">${cityTag(h.ciudad)}<span class="oc-muted">${esc(h.dia)}</span></p>` : ''}</div></li>`;
