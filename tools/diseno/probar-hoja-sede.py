@@ -15,6 +15,7 @@ ABRIR = """async (i) => {
   await new Promise(r => setTimeout(r, 450));
   const b = document.querySelector('[data-sede-hoja] .oc-sede-lista button'); if (b) { b.click(); await new Promise(r => setTimeout(r, 350)); }
   const c = document.querySelector('[data-sede-hoja]');
+  await Promise.all([...c.querySelectorAll('img')].map(i => i.complete ? 0 : new Promise(r => { i.addEventListener('load', r); i.addEventListener('error', r); setTimeout(r, 5000); })));
   return { t: c.querySelector('[data-sede-titulo]').textContent, par: !!c.querySelector('.oc-sede-par'), uno: !!c.querySelector('.oc-sede-dip.is-uno'), naz: !!c.querySelector('.oc-sede-foto.is-naz'),
     ini: !!c.querySelector('.is-ini'), html: c.innerHTML.length };
 }"""
@@ -43,9 +44,10 @@ with sync_playwright() as p:
                             im = pg.evaluate("() => [...document.querySelectorAll('[data-sede-hoja] .oc-sede-dip img, [data-sede-hoja] .oc-sede-foto')].map(i => [i.complete && i.naturalWidth > 0, Math.round(i.getBoundingClientRect().height)])")
                             check(im and all(x[0] for x in im), f'{tag} {ciudad} {r["t"]} ({k}): imágenes cargadas {im}')
                             alto = pg.evaluate("(e) => Math.round(e.getBoundingClientRect().height)", panel.element_handle())
-                            check(alto <= h * (.63 if w < 760 else .86), f'{tag} {ciudad} {r["t"]} ({k}): la hoja a media altura en el móvil, sin tapar toda la pantalla ({alto} de {h} px)')
+                            check(alto <= h * .63, f'{tag} {ciudad} {r["t"]} ({k}): la hoja a media altura ({alto} de {h} px)')
                             if CAPT: pg.wait_for_timeout(300); pg.screenshot(path=f'{CAPT}/hoja-{k}-{w}-{esq}.png')
                     pg.evaluate(CERRAR); pg.wait_for_timeout(250)
+                    if all(vistos.values()) and i >= 3: break  # ya están los tres casos: no hace falta abrir todas
                 print(f'     {tag} {ciudad}: {n} puntos; díptico: {vistos["par"]}; una foto: {vistos["uno"]}; nazareno: {vistos["naz"]}')
             # los puntos de «En la calle» (cabeza de cada procesión): las hermandades de la base sin foto llevan su medallón, no una letra
             med = pg.evaluate("""async () => { const t = (await Promise.all(['almeria', 'cadiz', 'cordoba', 'granada', 'huelva', 'jaen', 'malaga', 'sevilla'].map(async c => JSON.stringify(await (await fetch('/data/calle/' + c + '.json')).json())))).join('');

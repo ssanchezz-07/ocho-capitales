@@ -47,8 +47,10 @@
 .oc-sede-par { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; overflow: hidden; border-radius: 14px; border-top: 4px solid var(--hc); background: var(--hc); }
 .oc-sede-dip img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--surface-2); }
 .oc-sede-dip.is-uno img { aspect-ratio: 16 / 10; border-radius: 14px; border-top: 4px solid var(--hc); }
-.oc-sede-dip figcaption { color: var(--muted); font-size: 12px; line-height: 1.35; }
-.oc-sede-dip figcaption a { color: inherit; }
+.oc-sede-dip figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; }
+/* el enlace del crédito ocupa 44 px de alto al tocarlo sin mover la línea */
+.oc-sede-dip figcaption a { color: inherit; display: inline-block; padding-block: 12px; margin-block: -12px; }
+.oc-sede-hoja .oc-sheet-head { margin-bottom: 8px; }
 .oc-sede-foto.is-naz { aspect-ratio: 3 / 2; object-fit: cover; background: #13071d; }
 /* en el móvil, la hoja se abre a media altura (el plano sigue a la vista) y se desliza por dentro; se cierra arrastrando la asa */
 @media (max-width: 759px) {
@@ -100,7 +102,7 @@
 
 /* la hoja de una hermandad no ocupa toda la pantalla en el ordenador */
 @media (min-width: 760px) {
-  .oc-sede-hoja .oc-sheet-panel { width: min(480px, calc(100vw - 32px)); margin-inline: auto; }
+  .oc-sede-hoja .oc-sheet-panel { width: min(480px, calc(100vw - 32px)); max-height: min(62dvh, 600px); margin-inline: auto; }
 }
 
 /* ---- entrada de la primera visita: del globo a Andalucía (assets/globo.js) ---- */

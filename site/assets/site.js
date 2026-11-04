@@ -586,7 +586,7 @@
     // sin ninguna, la lámina de su nazareno (assets/naz/<slug>.svg). Nunca la miniatura del punto ni la foto de la sede.
     function mediaSede(h) {
       var d = h.dip || {};
-      var img = function (x) { return '<img src="' + esc(x.src) + '" alt="' + esc(x.alt) + '" style="object-position:' + esc(x.foco || '50% 22%') + '" loading="lazy" decoding="async">'; };
+      var img = function (x) { return '<img src="' + esc(x.src) + '" alt="' + esc(x.alt) + '" style="object-position:' + esc(x.foco || '50% 22%') + '" decoding="async">'; };
       var cred = function (x) { return x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener nofollow">' + esc(x.credito) + '</a>' : esc(x.credito); };
       if (d.c && d.v) return '<figure class="oc-sede-dip"><div class="oc-sede-par">' + img(d.c) + img(d.v) + '</div><figcaption>' + (d.c.credito === d.v.credito ? cred(d.c) : cred(d.c) + ' · ' + cred(d.v)) + '</figcaption></figure>';
       var uno = d.j || d.c || d.v;
@@ -604,7 +604,7 @@
         '</dl>' +
         (h.ev && h.ev.length ? '<h3 class="oc-sede-h">Próximos cultos y actos</h3><ul class="oc-sede-ev">' + h.ev.map(function (e) { return '<li><time datetime="' + e[0] + '">' + esc(fmtF(e[0])) + (e[1] ? ', ' + esc(e[1]) + ' h' : '') + '</time><span>' + esc(e[2]) + '</span></li>'; }).join('') + '</ul>' : '') +
         '<a class="oc-btn" href="' + BASE + 'hermandad/' + h.s + '/">Ver su ficha' + '</a>' +
-        '<p class="oc-sede-fuente">Ubicación: ' + [h.tp, h.cs].filter(Boolean).map(function (p) { return /^https?:/.test(p[3]) ? '<a href="' + esc(p[3].split(' ')[0]) + '" target="_blank" rel="noopener nofollow">' + (p === h.cs ? 'casa hermandad' : 'templo') + '</a>' : esc(p[3]); }).join(' · ') + '</p>';
+        '<p class="oc-sede-fuente">Ubicación: ' + [h.tp, h.cs].filter(Boolean).map(function (p) { var m = String(p[3] || '').match(/https?:\/\/[^\s,;]+/); return m ? '<a href="' + esc(m[0]) + '" target="_blank" rel="noopener nofollow">' + (p === h.cs ? 'casa hermandad' : 'templo') + '</a>' : esc(p[3]); }).join(' · ') + '</p>';
     }
     function abrirHoja(hs, s) {
       if (!hoja) return; volverA = s && s.g;
