@@ -981,6 +981,17 @@ function byDay(list) {
   return Object.entries(g).sort((a, b) => dayIdx(a[0]) - dayIdx(b[0])).map(([d, hs]) => [d, hs.sort((a, b) => a.orden - b.orden)]);
 }
 
+// Fuentes de cada ficha (pulido, encargo 5; sí de Pablo, 4-nov-2026): la ficha ya no pinta sus bloques «Fuentes»; los guarda aquí,
+// hechos con las mismas funciones de siempre y desde los mismos campos, y deja una línea «Fuentes de esta ficha →» que lleva a su
+// apartado en «Fuentes y metodología» (una página por capital, por inicial de marcha, de imagineros y de bandas: pagesFuentes()).
+// tools/comprobar-fuentes-fichas.mjs para la publicación si un enlace falta, no lleva a un apartado o el apartado está vacío.
+const FUENTES_FICHAS = { capitales: new Map(), marchas: new Map(), imagineros: [], bandas: [] };
+const letraMarcha = (slug) => (/[a-z]/.test(slug[0]) ? slug[0] : '0-9');
+const fuentesCapDe = (s) => FUENTES_FICHAS.capitales.get(s) || FUENTES_FICHAS.capitales.set(s, { capital: '', hermandades: [] }).get(s);
+const enlaceFuentes = (ruta, ancla) => `<p class="oc-fuentes-ficha"><a href="${u(ruta)}#${ancla}">Fuentes de esta ficha${icon('arrow')}</a></p>`;
+// Textos tomados de Wikipedia: su licencia pide citar la autoría a la vista, así que bajo la historia queda esta línea (Pablo, 4-nov)
+const lineaWiki = (urls) => { const w = (urls || []).find((f) => /wikipedia\.org/.test(f)); return w ? `<p class="oc-wiki">Texto basado en <a href="${esc(w)}" target="_blank" rel="noopener">Wikipedia</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener">CC BY-SA 4.0</a>)</p>` : ''; };
+
 // Fuentes de la historia y de la cifra oficial de hermandades de la capital, con el formato de las fichas
 function fuentesCap(c) {
   const li = (url, txt, que) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(txt)}</a><span>${que}</span></li>`;
@@ -1003,8 +1014,10 @@ function pageCapital(c) {
     if (wiki) return `Wikipedia${mismas.length > 1 ? ': ' + decodeURIComponent(wiki[1]).replace(/_/g, ' ') : ''} (CC BY-SA 4.0)`;
     return base(f) + (mismas.length > 1 ? ` (${mismas.indexOf(f) + 1})` : '');
   }
-  const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') + fuentesDe(c.datos_fuentes || [], 'datos clave') : '';
-  const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` + fuentesDe(c.claves_fuentes || [], 'imprescindibles') : '';
+  const datos = c.datos.length ? facts(c.datos.map(([k, v]) => [k, esc(v)]), 'is-cols') : '';
+  const claves = c.claves.length ? `<ul class="oc-list">${c.claves.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>` : '';
+  // sus fuentes, en su página de «Fuentes y metodología»
+  fuentesCapDe(c.slug).capital = fuentesCap(c) + (c.datos.length ? fuentesDe(c.datos_fuentes || [], 'datos clave') : '') + (c.claves.length ? fuentesDe(c.claves_fuentes || [], 'imprescindibles') : '');
   const news = newsFor(c.slug, 6);
   // Portada de capital «Colgaduras»: la foto a sangre, su colgadura colgando del balcón (la misma de la portada, que viaja con
   // la transición de página) y el titular sobre un velo nazareno. El crédito de la foto va justo debajo.
@@ -1021,11 +1034,12 @@ ${fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json')) ? `<a cl
 ${groups.map(([d, list]) => `<section class="oc-section oc-day" id="${slugify(d)}"><h2 class="oc-h2">${esc(d)} <small>${plural(list.length, 'hermandad', 'hermandades')}</small></h2><ol class="oc-entries is-ordered">${list.map((h) => entryHerm(h, '', true)).join('')}</ol></section>`).join('')}
 </div>
 <aside class="oc-split-side">
-<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div>${fuentesCap(c)}</section>
+<section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div>${lineaWiki(c.intro_fuentes)}</section>
 ${section('Datos clave', datos)}
 ${section('Imprescindibles', claves)}
 ${section('Bandas y música', chips(bandas.map((b) => [b.nombre, u('banda/' + b.slug + '/')])))}
 ${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u('imaginero/' + i.slug + '/')])))}
+${fuentesCapDe(c.slug).capital ? enlaceFuentes(`acerca/fuentes/${c.slug}/`, 'capital') : ''}
 </aside>
 </div>
 ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
@@ -1110,8 +1124,14 @@ function pageHerm(h) {
   const ETQ = { fundacion: 'fundación', sede: 'sede', nombre_oficial: 'nombre oficial', web: 'web oficial', historia: 'historia', paso: 'pasos', titulares: 'titulares' };
   const porUrl = new Map(); for (const [c, url] of Object.entries(h.relleno_fuentes || {})) if (url && url !== h.fuente_url) (porUrl.get(url) || porUrl.set(url, []).get(url)).push(ETQ[c] || c);
   for (const t of h.titulares || []) if (t.nombre_fuente && t.nombre_fuente !== h.fuente_url) (porUrl.get(t.nombre_fuente) || porUrl.set(t.nombre_fuente, []).get(t.nombre_fuente)).push('titulares');
-  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(nombreWeb(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
-  const fuente = h.fuente_url || otras ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}</span></li>` : ''}${otras}</ul>` : '';
+  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
+  // las fuentes de la historia y del hábito también van al apartado de la hermandad en «Fuentes y metodología»
+  const histDeFicha = !!(h.historia && h.fuente_url && (h.historia_fuentes || []).includes(h.fuente_url)); // la misma web: una sola línea
+  const deHistoria = (h.historia ? h.historia_fuentes || [] : []).filter((f) => !histDeFicha || f !== h.fuente_url).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('');
+  const deHabito = HABITOS[h.slug] && HABITOS[h.slug].texto && HABITOS[h.slug].fuente_url ? `<li><a href="${esc(HABITOS[h.slug].fuente_url)}" target="_blank" rel="noopener">${esc(nombreWeb(HABITOS[h.slug].fuente_url))}</a><span>hábito de nazareno</span></li>` : '';
+  const deAcomp = h.acompanamiento && h.acompanamiento.fuente ? `<li><a href="${esc(h.acompanamiento.fuente)}" target="_blank" rel="noopener">${esc(h.acompanamiento.medio || nombreWeb(h.acompanamiento.fuente))}</a><span>acompañamiento musical ${esc(h.acompanamiento.anio)}</span></li>` : '';
+  const fuente = h.fuente_url || otras || deHistoria ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}${histDeFicha ? ' e historia' : ''}</span></li>` : ''}${otras}${deHistoria}${deHabito}${deAcomp}</ul>` : '';
+  if (fuente) fuentesCapDe(h.ciudad).hermandades.push({ slug: h.slug, nombre: h.nombre, dia: h.dia, orden: h.orden, html: fuente });
   const vecinos = D.hermandades.filter((x) => x.ciudad === h.ciudad && x.dia === h.dia).sort((a, b) => a.orden - b.orden);
   const idx = vecinos.findIndex((x) => x.slug === h.slug);
   const prev = vecinos[idx - 1]; const next = vecinos[idx + 1];
@@ -1183,14 +1203,14 @@ function pageHerm(h) {
   <div class="fx-media">${media || estampaHtml(h, c)}</div>
 </header>
 ${datos ? `<dl class="fx-datos" aria-label="Datos de la hermandad">${datos}</dl>` : ''}
-${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa${h.historia.length > 700 ? ' is-larga' : ''}">${h.historia.split(/\n\n+/).map(para).join('')}</div>${(h.historia_fuentes || []).length ? `<ul class="oc-fuentes">${h.historia_fuentes.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('')}</ul>` : ''}`) : ''}
+${h.historia ? sec('Historia', `<div class="oc-prose fx-prosa${h.historia.length > 700 ? ' is-larga' : ''}">${h.historia.split(/\n\n+/).map(para).join('')}</div>${lineaWiki([...(h.historia_fuentes || []), ...Object.entries(h.relleno_fuentes || {}).filter(([k]) => k === 'historia').map(([, v]) => v)])}`) : ''}
 ${sec('Titulares e imagineros', titCards)}
-${sec('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>` : '')}
+${sec('Pasos y cortejo', h.paso ? `<div class="oc-prose">${para(h.paso)}</div>${lineaWiki(Object.entries(h.relleno_fuentes || {}).filter(([k]) => k === 'paso').map(([, v]) => v))}` : '')}
 ${sec('Música', musicaFicha, 'fx-musica')}
 ${habito}
 ${marchasSec}
 ${enlaces}
-${fuente}
+${fuente ? enlaceFuentes(`acerca/fuentes/${h.ciudad}/`, h.slug) : ''}
 </article>
 ${prev || next ? `<nav class="oc-prevnext fx-prevnext" aria-label="Hermandades del mismo día" style="--c:${c.color}">${prev ? `<a class="is-prev" href="${u('hermandad/' + prev.slug + '/')}"><span>Anterior el ${esc(h.dia)}</span><strong>${esc(prev.nombre)}</strong></a>` : '<span></span>'}${next ? `<a class="is-next" href="${u('hermandad/' + next.slug + '/')}"><span>Siguiente el ${esc(h.dia)}</span><strong>${esc(next.nombre)}</strong></a>` : ''}</nav>` : ''}
 ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div>`) : ''}`;
@@ -1249,9 +1269,16 @@ function pageBanda(b) {
     ...(fb && fb.web ? [] : [['Buscar su web oficial', `https://www.google.com/search?q=${q}+web+oficial`]]),
   ];
   const fuenteLink = (h, t = 'su web oficial') => `<a href="${esc(h)}" target="_blank" rel="noopener">${t}</a>`;
-  const historiaHtml = fb && fb.historia && fb.historia.length ? `<div class="oc-prose">${fb.historia.map((p) => `<p>${esc(p)}</p>`).join('')}</div><p class="oc-note">Fuente: ${(fb.historia_fuentes || []).map((h) => fuenteLink(h)).join(', ')}.</p>` : '';
-  const datosHtml = fb && fb.datos && fb.datos.length ? `<dl class="bx-datos">${fb.datos.map(([k, v, f]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}${f ? ` <a class="bx-fuente" href="${esc(f)}" target="_blank" rel="noopener" aria-label="Fuente de ${esc(k.toLowerCase())}">fuente</a>` : ''}</dd></div>`).join('')}</dl>` : '';
-  const fueraHtml = fb && fb.fuera_capitales && fb.fuera_capitales.length ? `<h3 class="oc-h3">Fuera de las capitales</h3><ul class="bx-fuera">${fb.fuera_capitales.map((x) => `<li>${esc(x.texto)} · ${fuenteLink(x.fuente, 'fuente')}</li>`).join('')}</ul>` : '';
+  const historiaHtml = fb && fb.historia && fb.historia.length ? `<div class="oc-prose">${fb.historia.map((p) => `<p>${esc(p)}</p>`).join('')}</div>${lineaWiki(fb.historia_fuentes)}` : '';
+  const datosHtml = fb && fb.datos && fb.datos.length ? `<dl class="bx-datos">${fb.datos.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : '';
+  const fueraHtml = fb && fb.fuera_capitales && fb.fuera_capitales.length ? `<h3 class="oc-h3">Fuera de las capitales</h3><ul class="bx-fuera">${fb.fuera_capitales.map((x) => `<li>${esc(x.texto)}</li>`).join('')}</ul>` : '';
+  // sus fuentes (historia, cada dato y las salidas fuera de las capitales), en «Fuentes y metodología»: una línea por web, con lo que aporta
+  const bxF = new Map(); const bxAdd = (url, que) => { if (url) (bxF.get(url) || bxF.set(url, []).get(url)).push(que); };
+  if (historiaHtml) for (const f of fb.historia_fuentes || []) bxAdd(f, 'historia');
+  if (datosHtml) for (const [k, , f] of fb.datos) bxAdd(f, k.toLowerCase());
+  if (fueraHtml) for (const x of fb.fuera_capitales) bxAdd(x.fuente, 'fuera de las capitales');
+  const bxLista = (a) => { const v = [...new Set(a)]; return v.length > 1 ? v.slice(0, -1).join(', ') + ' y ' + v.at(-1) : v[0]; };
+  if (bxF.size) FUENTES_FICHAS.bandas.push({ slug: b.slug, nombre: b.nombre + (b.localidad ? ' (' + b.localidad + ')' : ''), html: `<ul class="oc-fuentes">${[...bxF].map(([url, qs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url))}</a><span>${esc(bxLista(qs))}</span></li>`).join('')}</ul>` });
   const vecinas = b.origen ? D.bandas.filter((x) => x.slug !== b.slug && x.origen === b.origen).slice(0, 16) : [];
   const nuevas = items.filter((a) => a.anio > 2026);
   const body = `<header class="oc-caphero is-compact" style="--c:${col};--c-plate:${fondoLegible(col)}">
@@ -1274,6 +1301,7 @@ ${(REPERTORIO.get(b.slug) || []).length ? section('Repertorio', `<ul class="oc-e
 ${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h.nombre} (${a.rol || 'cortejo'})`, u('hermandad/' + a.hermandad_slug + '/')]))) : ''}
 ${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">${oficiales.length ? 'Perfiles oficiales enlazados desde ' + fuenteLink(fb.redes_fuente || fb.web) + '. ' : 'Son búsquedas y perfiles públicos. '}El portal no aloja audio ni vídeo.${fb && fb.logo ? ' ' + esc(fb.logo.nota) + ', de ' + fuenteLink(fb.logo.fuente) + '.' : ''}</p>`)}
 ${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
+${bxF.size ? enlaceFuentes('acerca/fuentes/bandas/', b.slug) : ''}
 <p class="oc-note">Configuración musical según la información publicada. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre + (b.localidad && D.bandas.some((x) => x !== b && x.nombre === b.nombre) ? ' (' + b.localidad + ')' : ''), desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
@@ -1306,13 +1334,16 @@ function pageImag(i) {
     dato('is-obras', 'Obras en el portal', `<b class="fx-grande">${i.obras.length}</b><span>${plural(new Set(i.obras.map((o) => o.hermandad_slug)).size, 'hermandad', 'hermandades')}</span>`),
   ].join('');
   const fuentesBio = (i.fuentes || (i.fuente_url ? [i.fuente_url] : []));
+  const conFuentesI = !!(i.bio && fuentesBio.length);
+  if (conFuentesI) FUENTES_FICHAS.imagineros.push({ slug: i.slug, nombre: i.nombre, html: `<ul class="oc-fuentes">${fuentesBio.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` });
   const qi = encodeURIComponent(i.nombre + ' imaginero');
   const body = `<article class="fx ix" style="--c:${col}">
 <header class="nx-head vx-head ix-head" style="--nx-c:${col}"><div class="nx-head-in"><p class="fx-kicker">Imaginero${siglo !== 'Sin datar' ? ' · ' + esc(siglo.toLowerCase()) : ''}</p><h1 class="oc-title nx-title${i.nombre.length > 26 ? ' is-long' : ''}">${esc(i.nombre)}</h1>${i.vida ? `<p class="nx-lead">${esc(i.vida)}${i.escuela ? ' · ' + esc(i.escuela) : ''}</p>` : (i.escuela ? `<p class="nx-lead">${esc(i.escuela)}</p>` : '')}<div class="oc-actions fx-acc">${favBtn('imaginero', i.slug, i.nombre)}${shareBtn()}</div></div></header>
 <dl class="fx-datos" aria-label="Datos del imaginero">${datos}</dl>
-${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><div class="oc-prose fx-prosa${i.bio.length > 700 ? ' is-larga' : ''}">${para(i.bio)}</div>${fuentesBio.length ? `<ul class="oc-fuentes">${fuentesBio.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(nombreWeb(f))}</a><span>biografía</span></li>`).join('')}</ul>` : ''}</section>` : ''}
+${i.bio ? `<section class="oc-section fx-sec"><h2 class="nx-h">Biografía</h2><div class="oc-prose fx-prosa${i.bio.length > 700 ? ' is-larga' : ''}">${para(i.bio)}</div>${lineaWiki(fuentesBio)}</section>` : ''}
 ${i.obras.length ? `<section class="oc-section fx-sec"><h2 class="nx-h">Sus obras</h2><ul class="oc-entries vx-grid ix-obras">${i.obras.map(obraCard).join('')}</ul></section>` : ''}
 <section class="oc-section fx-sec"><h2 class="nx-h">Más sobre su obra</h2><ul class="oc-linklist fx-enlaces"><li><a class="oc-btn is-quiet" href="https://www.youtube.com/results?search_query=${qi}" target="_blank" rel="noopener nofollow">Ver en YouTube${icon('out')}</a></li><li><a class="oc-btn is-quiet" href="https://www.google.com/search?q=${qi}" target="_blank" rel="noopener nofollow">Buscar en la web${icon('out')}</a></li></ul></section>
+${conFuentesI ? enlaceFuentes('acerca/fuentes/imagineros/', i.slug) : ''}
 </article>`;
   write(`imaginero/${i.slug}/index.html`, layout({ title: i.nombre, desc: `${i.nombre}${i.vida ? ' (' + i.vida + ')' : ''}: ${i.obras.length} obras en las hermandades de las ocho capitales del portal. ${i.bio || ''}`.slice(0, 300), body, path: `imaginero/${i.slug}/`, active: 'imagineros/', crumbs: [['Portada', u()], ['Imagineros', u('imagineros/')], [i.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'Person', name: i.nombre, jobTitle: 'Imaginero', description: i.bio || undefined } }));
 }
@@ -1366,25 +1397,28 @@ function fuentesMarcha(m) {
   if ((m.partituras || []).length) filas.push(`<li>${m.partituras.slice(0, 4).map((p, k) => `<a href="${esc(p.url)}" target="_blank" rel="noopener nofollow">${k ? '' : 'Biblioteca Nacional '}${p.fecha ? '(' + esc(p.fecha) + (p.tipo ? ', ' + esc(p.tipo.replace(/^Música /, '')) : '') + ')' : k ? '(otra)' : ''}</a>`).join(' ')}<span>partitura</span></li>`);
   return filas.length ? `<ul class="oc-fuentes">${filas.join('')}</ul>` : '';
 }
-const DEBIL = (m) => ((m.fuentes || {}).dedicatoria || []).filter((f) => f === 'foro' || f === 'wiki').map((f) => NOMBRE_F[f]).join(' y ') || 'una fuente sin contrastar';
+const DEBIL = (m) => ((m.fuentes || {}).dedicatoria || []).filter((f) => f === 'foro' || f === 'wiki').map((f) => (f === 'foro' ? 'el ' : '') + NOMBRE_F[f]).join(' y ') || 'una fuente sin contrastar'; // con su artículo: «el foro…», «Wikipedia»
 function notaDedicatoria(m) {
   if (!m.h) return '';
   if (m.est === 'contrastada') return `La dedicatoria a ${esc(m.h.nombre)} la dan dos fuentes independientes.`;
   if (m.est === 'dedicada') return `La dedicatoria a ${esc(m.h.nombre)} la da una fuente fiable.`;
-  return `<strong>Dedicatoria sin verificar:</strong> solo la recoge el ${esc(DEBIL(m))}; no se ha podido confirmar en una fuente fiable.`;
+  return `<strong>Dedicatoria sin verificar:</strong> solo la recoge ${esc(DEBIL(m))}; no se ha podido confirmar en una fuente fiable.`;
 }
 const textoGrabacion = (m) => { const f = (m.fuentes || {}).video || []; const rev = f.includes('rev') && m.revision && m.revision.at(-1).fuente; return f.includes('mdp') ? 'Grabación del canal «Marchas de Procesión»' : f.includes('fgr') ? 'Grabación enlazada en la ficha de la Federación' : rev && /^canal /.test(rev) ? 'Grabación del ' + rev : 'Grabación en YouTube'; };
 function pageMarcha(m) {
   const h = m.h; const c = h ? CAP[h.ciudad] : null; const sinVer = h && m.est === 'sin-verificar';
+  const fuentesM = fuentesMarcha(m);
   const q = encodeURIComponent(m.titulo + ' ' + (m.autor || '') + ' marcha procesional');
   const otras = MARCHAS.filter((x) => x.slug !== m.slug && ((m.autor && x.autor === m.autor) || (h && x.h && x.h.slug === h.slug))).slice(0, 14);
   const resumen = `«${m.titulo}»${m.autor ? ', marcha procesional de ' + m.autor : ', marcha procesional'}${m.anio ? ' (' + m.anio + ')' : ''}, ${h ? (sinVer ? 'asociada a ' : 'dedicada a ') + h.nombre + ' (' + c.nombre + ')' + (sinVer ? ', sin verificar.' : '.') : (m.dedicatoria ? 'dedicada a ' + m.dedicatoria + '.' : '')}${m.tipo ? ' Formación: ' + m.tipo.toLowerCase() + '.' : ''}`;
   const yt = m.video ? 'https://www.youtube.com/watch?v=' + m.video : `https://www.youtube.com/results?search_query=${q}`;
   const escucha = `<div class="oc-escucha"><a class="oc-escucha-play" href="${esc(yt)}" target="_blank" rel="noopener nofollow" aria-label="${m.video ? 'Escuchar' : 'Buscar'} «${esc(m.titulo)}» en YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></a><div class="oc-escucha-txt"><strong>${m.video ? 'Escúchala en YouTube' : 'Búscala en YouTube'}</strong><span>${m.video ? textoGrabacion(m) : 'La grabación depende de la banda que la interprete'}</span><a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener nofollow">Buscar en Spotify${icon('out')}</a></div></div>`;
   const ded = h ? `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${m.titularDed ? ' · ' + esc(m.titularDed) : ''}${sinVer ? ' <span class="oc-muted">(sin verificar)</span>' : m.est === 'contrastada' ? ' <span class="oc-muted">(contrastada)</span>' : ''}` : esc(m.dedicatoria);
-  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo) + (m.arreglos ? ` (también para ${esc(m.arreglos)})` : '')], [sinVer ? 'Asociada a' : 'Dedicada a', ded], ['Capital', ciudadMarcha(m) ? `<a href="${u('semana-santa/' + ciudadMarcha(m) + '/')}">${esc(CAP[ciudadMarcha(m)].nombre)}</a>` : ''], ['Repertorio de', (m.repertorio || []).filter((r) => BANDA[r.banda]).map((r) => `<a href="${u('banda/' + r.banda + '/')}">${esc(BANDA[r.banda].nombre)}</a>${r.arreglo ? ' (arreglo de ' + esc(r.arreglo) + ')' : ''}`).join(', ')], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}</header>
+  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo) + (m.arreglos ? ` (también para ${esc(m.arreglos)})` : '')], [sinVer ? 'Asociada a' : 'Dedicada a', ded], ['Capital', ciudadMarcha(m) ? `<a href="${u('semana-santa/' + ciudadMarcha(m) + '/')}">${esc(CAP[ciudadMarcha(m)].nombre)}</a>` : ''], ['Repertorio de', (m.repertorio || []).filter((r) => BANDA[r.banda]).map((r) => `<a href="${u('banda/' + r.banda + '/')}">${esc(BANDA[r.banda].nombre)}</a>${r.arreglo ? ' (arreglo de ' + esc(r.arreglo) + ')' : ''}`).join(', ')], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}${h ? `<p class="oc-note">${notaDedicatoria(m)}</p>` : ''}</header>
 ${otras.length ? section('Más marchas', `<ul class="oc-entries">${otras.map((x) => filaHerm(x.h, `<a href="${u('marcha/' + x.slug + '/')}">${esc(x.titulo)}</a>`, [esc(x.autor), esc(x.anio)].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
-${section('Fuentes', `${fuentesMarcha(m)}<p class="oc-note">${notaDedicatoria(m)}${h ? ' ' : ''}Cada dato viene de su fuente. Si las fuentes no coinciden, manda la oficial.</p>`)}`;
+${fuentesM ? enlaceFuentes(`acerca/fuentes/marchas/${letraMarcha(m.slug)}/`, m.slug) : ''}`;
+  // sus fuentes, en «Fuentes y metodología» (una página por inicial)
+  if (fuentesM) { const L = letraMarcha(m.slug); (FUENTES_FICHAS.marchas.get(L) || FUENTES_FICHAS.marchas.set(L, []).get(L)).push({ slug: m.slug, nombre: m.titulo + (m.autor ? ' · ' + m.autor : ''), html: fuentesM + (h ? `<p class="oc-note">${notaDedicatoria(m)}</p>` : '') }); }
   write(`marcha/${m.slug}/index.html`, layout({ title: m.titulo + (m.autor ? ' · ' + m.autor : ''), desc: resumen.slice(0, 300), body, path: `marcha/${m.slug}/`, active: 'marchas/', crumbs: [['Portada', u()], ['Marchas', u('marchas/')], [m.titulo, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicComposition', name: m.titulo, composer: m.autor ? { '@type': 'Person', name: m.autor } : undefined, dateCreated: m.anio || undefined } }));
   // Direcciones antiguas de la misma marcha (duplicados del catálogo que se han unido): redirigen a esta
   for (const a of m.alias || []) if (a && a !== m.slug && !MARCHA_SLUGS.has(a)) { write(`marcha/${a}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u('marcha/' + m.slug + '/')}"><link rel="canonical" href="${u('marcha/' + m.slug + '/')}"><title>${BRAND}</title></head><body><p><a href="${u('marcha/' + m.slug + '/')}">Ir a la marcha</a></p></body></html>`); pages.pop(); }
@@ -1768,9 +1802,49 @@ function pageAcerca() {
 <li><strong>Jaén:</strong> fichas oficiales de la Agrupación de Cofradías y Hermandades de la Ciudad de Jaén.</li>
 <li><strong>Sevilla:</strong> el Consejo General no publica fichas por hermandad; se usan los artículos de Wikipedia (CC BY-SA 4.0) para sede, fundación y titulares.</li></ul>
 <p>Las reseñas están redactadas a partir de esas fuentes y cada ficha enlaza a la suya. Si detectas un error, prevalece la ficha oficial de la hermandad.</p>
+<h2 class="oc-h2" id="fichas">Las fuentes de cada ficha</h2>
+<p>Cada ficha lleva, al final, el enlace «Fuentes de esta ficha», que lleva a su apartado en estas páginas. Ahí está cada fuente, con su enlace y el dato que aporta: la ficha oficial, la historia, los titulares, la sede, el hábito…</p>
+${chips([...D.capitales.map((c) => [c.nombre, u('acerca/fuentes/' + c.slug + '/')]), ['Marchas', u('acerca/fuentes/marchas/a/')], ['Imagineros', u('acerca/fuentes/imagineros/')], ['Bandas', u('acerca/fuentes/bandas/')]])}
+<p>Si las fuentes no coinciden, manda la oficial: la de la propia hermandad o la de su consejo, agrupación o federación.</p>
+<p>En las marchas, la dedicatoria a una hermandad puede estar <strong>contrastada</strong> (la dan dos fuentes independientes), <strong>dedicada</strong> (la da una fuente fiable) o <strong>sin verificar</strong> (solo la recogen el foro de Patrimonio Musical de 2008 o Wikipedia). Sin verificar, la ficha dice «Asociada a» en vez de «Dedicada a».</p>
+<p>Los textos basados en Wikipedia llevan debajo la línea «Texto basado en Wikipedia (CC BY-SA 4.0)», como pide su licencia.</p>
 <h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada mañana a las 7:00 de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
 <h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons, con su autor y licencia, y de las propias hermandades; cada foto lleva su autor.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
+}
+// Páginas de fuentes (pulido, encargo 5): el apartado #slug de cada ficha con sus fuentes, guardadas al generar la ficha (FUENTES_FICHAS)
+function pagesFuentes() {
+  const bloque = (x, ficha, hn = 'h3') => `<section class="oc-fuente-ficha" id="${esc(x.slug)}"><${hn}><a href="${u(ficha)}">${esc(x.nombre)}</a></${hn}>${x.html}</section>`;
+  const pagF = ({ ruta, titulo, miga, desc, lead, cuerpo }) => write(ruta + 'index.html', layout({ title: titulo, desc, body: `<header class="oc-pagehead"><h1 class="oc-title">${esc(titulo)}</h1>${lead}</header>
+<div class="oc-fuentes-pag">${cuerpo}</div>
+<p class="oc-note"><a href="${u('acerca/#fichas')}">Cómo se eligen las fuentes</a></p>`, path: ruta, crumbs: [['Portada', u()], ['Fuentes y metodología', u('acerca/')], [miga, '']] }));
+  for (const c of D.capitales) {
+    const F = FUENTES_FICHAS.capitales.get(c.slug); if (!F) continue;
+    const dias = byDay(F.hermandades);
+    pagF({ ruta: `acerca/fuentes/${c.slug}/`, titulo: 'Fuentes de la Semana Santa de ' + c.nombre, miga: c.nombre,
+      desc: `De dónde sale cada dato de la Semana Santa de ${c.nombre} y de sus hermandades en ${BRAND}, con el enlace a cada fuente.`,
+      lead: `<p class="oc-lead">De dónde sale cada dato de la Semana Santa de ${esc(c.nombre)}: primero la capital y después cada hermandad, por días. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
+      cuerpo: (F.capital ? bloque({ slug: 'capital', nombre: 'Semana Santa de ' + c.nombre, html: F.capital }, `semana-santa/${c.slug}/`, 'h2') : '') + dias.map(([d, hs]) => `<h2 class="oc-h2">${esc(d)}</h2>${hs.map((x) => bloque(x, `hermandad/${x.slug}/`)).join('')}`).join('') });
+  }
+  const letras = [...FUENTES_FICHAS.marchas.keys()].sort((a, b) => (a === '0-9' ? -1 : b === '0-9' ? 1 : a.localeCompare(b)));
+  for (const L of letras) {
+    const etq = L === '0-9' ? 'un número' : 'la ' + L.toUpperCase();
+    const nav = `<nav class="oc-letras" aria-label="Marchas por inicial"><ul>${letras.map((l) => `<li><a href="${u(`acerca/fuentes/marchas/${l}/`)}"${l === L ? ' aria-current="page"' : ''}>${l === '0-9' ? '0-9' : l.toUpperCase()}</a></li>`).join('')}</ul></nav>`;
+    const ms = [...FUENTES_FICHAS.marchas.get(L)].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+    pagF({ ruta: `acerca/fuentes/marchas/${L}/`, titulo: `Fuentes de las marchas: ${L === '0-9' ? '0-9' : L.toUpperCase()}`, miga: 'Marchas: ' + (L === '0-9' ? '0-9' : L.toUpperCase()),
+      desc: `De dónde sale cada dato de las marchas procesionales que empiezan por ${etq} en ${BRAND}: título, compositor, año, formación, grabación y dedicatoria.`,
+      lead: `<p class="oc-lead">De dónde sale cada dato de las marchas que empiezan por ${etq}: título, compositor, año, formación, grabación y dedicatoria. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
+      cuerpo: nav + ms.map((x) => bloque(x, `marcha/${x.slug}/`, 'h2')).join('') });
+  }
+  const porNombre = (a, b) => a.nombre.localeCompare(b.nombre, 'es');
+  if (FUENTES_FICHAS.imagineros.length) pagF({ ruta: 'acerca/fuentes/imagineros/', titulo: 'Fuentes de los imagineros', miga: 'Imagineros',
+    desc: `De dónde sale la biografía de cada imaginero en ${BRAND}, con el enlace a cada fuente.`,
+    lead: `<p class="oc-lead">De dónde sale la biografía de cada imaginero. Cada línea enlaza a su fuente.</p>`,
+    cuerpo: [...FUENTES_FICHAS.imagineros].sort(porNombre).map((x) => bloque(x, `imaginero/${x.slug}/`, 'h2')).join('') });
+  if (FUENTES_FICHAS.bandas.length) pagF({ ruta: 'acerca/fuentes/bandas/', titulo: 'Fuentes de las bandas', miga: 'Bandas',
+    desc: `De dónde salen la historia y los datos de cada banda en ${BRAND}, con el enlace a cada fuente.`,
+    lead: `<p class="oc-lead">De dónde salen la historia y los datos de cada banda. Cada línea enlaza a su fuente y dice qué dato aporta.</p>`,
+    cuerpo: [...FUENTES_FICHAS.bandas].sort(porNombre).map((x) => bloque(x, `banda/${x.slug}/`, 'h2')).join('') });
 }
 function pageOffline() {
   const body = `<header class="oc-pagehead"><h1 class="oc-title">Sin conexión</h1><p class="oc-lead">No hay red ahora mismo. Las páginas que ya has visitado siguen disponibles; vuelve a intentarlo cuando recuperes la cobertura.</p></header><p><a class="oc-btn" href="${u()}">Ir a la portada${icon('arrow')}</a></p>`;
@@ -2165,6 +2239,7 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
+pagesFuentes(); // después de todas las fichas: cada una ha guardado ya sus fuentes
 if (ogViejas.size || ogFaltan.size) console.warn(`Aviso: ${ogViejas.size + ogFaltan.size} fichas sin foto comparten la imagen genérica (${ogViejas.size} con el nazareno cambiado, ${ogFaltan.size} sin imagen); ejecuta tools/diseno/og-respaldo.py`);
 searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);

@@ -784,3 +784,22 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 .oc-footer-legal .oc-copy span { white-space: nowrap; }
 .oc-footer-legal ul { display: flex; flex-wrap: wrap; gap: 0 18px; margin: 0; padding: 0; list-style: none; }
 .oc-footer-legal li a { min-height: 44px; }
+
+/* 13 · Fuentes de esta ficha (pulido, encargo 5, 4-nov-2026): la ficha deja una línea que lleva a su apartado en «Fuentes y
+   metodología»; los textos de Wikipedia llevan su línea de licencia; las páginas de fuentes, con su índice de letras */
+.oc-fuentes-ficha { margin: 28px 0 8px; }
+.oc-fuentes-ficha a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.oc-fuentes-ficha .oc-i { width: 1em; height: 1em; flex: none; }
+.oc-wiki { margin: 10px 0 0; font-size: .85rem; line-height: 1.5; color: var(--muted); }
+.oc-wiki a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+html:has(.oc-fuentes-pag) { scroll-behavior: auto; } /* el salto al apartado, directo: en una página larga el suave recorre miles de píxeles */
+.oc-fuente-ficha { margin: 0 0 22px; }
+.oc-fuente-ficha > h2, .oc-fuente-ficha > h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.35; }
+.oc-fuente-ficha > h2 a, .oc-fuente-ficha > h3 a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.oc-fuente-ficha:target > h2, .oc-fuente-ficha:target > h3 { color: var(--primary); }
+.oc-fuente-ficha:target .oc-fuentes li { box-shadow: 0 0 0 2px color-mix(in srgb, var(--oro) 55%, transparent); }
+.oc-fuentes-pag > .oc-h2 { margin-top: 32px; }
+.oc-letras ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 24px; padding: 0; list-style: none; }
+.oc-letras a { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0 8px; border-radius: 12px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06); font-weight: 700; color: var(--primary); text-decoration: none; }
+.oc-letras a[aria-current="page"] { background: var(--primary); color: var(--on-primary); }
+.oc-prose > .oc-chips { padding-left: 0; }
