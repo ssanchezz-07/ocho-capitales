@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T18:28:15.321Z",
+ "generado": "2026-11-04T18:36:50.693Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3846,7 +3846,7 @@
   "humillacion-y-estrella-malaga": {
    "virgen": {
     "w": 960,
-    "h": 960,
+    "h": 1440,
     "widths": [
      160,
      480,
@@ -3857,6 +3857,12 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hdadhumillacion",
+    "recorte": [
+     0.1667,
+     0,
+     0.6667,
+     1
+    ],
     "cedida": true,
     "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp",
     "tam": 302148,
@@ -7413,7 +7419,7 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/sagrada-cena-malaga-cristo.jpg",
     "tam": 1537565,
-    "titular": "Cristo de la Sagrada Cena"
+    "titular": "Sagrada Cena Sacramental"
    }
   },
   "mena-malaga": {

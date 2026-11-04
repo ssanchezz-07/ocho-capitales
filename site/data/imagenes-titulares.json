@@ -535,7 +535,13 @@
     "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp",
     "titulo": "Cedida: María Santísima de la Estrella",
     "titular": "María Santísima de la Estrella",
-    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadhumillacion (https://www.instagram.com/p/DC_d-SrC14_/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @hdadhumillacion (https://www.instagram.com/p/DC_d-SrC14_/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
+    "recorte": [
+     0.1667,
+     0,
+     0.6667,
+     1
+    ]
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Humillaci%C3%B3n_y_Perd%C3%B3n,_lateral_izquierdo_del_trono.jpg",
@@ -2724,7 +2730,7 @@
     "pagina": "https://www.instagram.com/lacenademalaga",
     "local": "scripts/cedidas/malaga/sagrada-cena-malaga-cristo.jpg",
     "titulo": "Cedida: Cristo de la Sagrada Cena",
-    "titular": "Cristo de la Sagrada Cena",
+    "titular": "Sagrada Cena Sacramental",
     "foco": "50% 35%",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @lacenademalaga (https://www.instagram.com/p/DfCJqJwDOHD/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
    }

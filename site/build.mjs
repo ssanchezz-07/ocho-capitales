@@ -305,7 +305,7 @@ function creditPar(c, v) {
     const lic = c.licurl ? `<a href="${esc(c.licurl)}" rel="license noopener" target="_blank">${esc(c.licencia)}</a>` : esc(c.licencia);
     return `Imágenes: ${esc(c.autor)}, ${lic}, vía Wikimedia Commons (${enlace(c, 'Cristo')} y ${enlace(v, 'Virgen')})${rec}`;
   }
-  const sin = (im) => credit(im).replace(/^Imagen: /, '');
+  const sin = (im) => credit(im).replace(/^(Imagen|Foto): /, '');
   return `Cristo: ${sin(c)} · Virgen: ${sin(v)}`;
 }
 function credit(im) {
