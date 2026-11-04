@@ -150,9 +150,36 @@ const colorDe = (prenda, c) => c === 'esparto' ? 'de esparto' : c.split(' y ').m
 const muestra = (c) => { const cs = c.split(' y ').map((x) => COLORES[x] || '#8a8a90'); return cs.length > 1 ? `linear-gradient(90deg, ${cs[0]} 50%, ${cs[1]} 50%)` : cs[0]; };
 // Primera letra en mayúscula sin tocar el resto, saltando comillas, paréntesis o signos de apertura
 const mayus = (t) => String(t || '').replace(/^([^\p{L}]*)(\p{L})/u, (_, a, b) => a + b.toLocaleUpperCase('es'));
+// Nazareno pequeño de la ficha (oc-diseno, 3-nov): el dibujo del nazareno de la portada, simplificado y vestido con los colores de
+// tools/sources/habitos-colores.json, uno por sección. Solo se pinta lo que dice la tabla: la prenda sin color va solo con su contorno,
+// y sin túnica no hay figura. Sin cirio ni escudo, que no constan. Sin movimiento.
+const NAZ_PRENDA = { túnica: 'tunica', sotana: 'tunica', hábito: 'tunica', capirote: 'cabeza', antifaz: 'cabeza', capillo: 'cabeza', morrión: 'cabeza', capa: 'capa', escapulario: 'escapulario', botonadura: 'botones', botonera: 'botones', cíngulo: 'cinto', cordón: 'cinto', cinturón: 'cinto', ceñidor: 'cinto', correa: 'cinto', faja: 'cinto', fajín: 'cinto' };
+let nazMiniN = 0;
+function nazarenoMini(p, nombre) {
+  const col = {}; // parte del dibujo → color de la tabla (la primera prenda que la nombra; antifaz antes que capirote, que es lo que se ve)
+  for (const k of ['túnica', 'sotana', 'hábito', 'antifaz', 'capirote', 'capillo', 'morrión', 'capa', 'escapulario', 'botonadura', 'botonera', 'cíngulo', 'cordón', 'cinturón', 'ceñidor', 'correa', 'faja', 'fajín']) if (p[k] && !col[NAZ_PRENDA[k]]) col[NAZ_PRENDA[k]] = p[k];
+  if (p['hábito'] && !col.cabeza) col.cabeza = p['hábito'];
+  if (!col.tunica) return '';
+  const id = 'nz' + ++nazMiniN; const defs = [];
+  const fill = (c) => { if (!c) return 'none'; const cs = c.split(' y ').map((x) => COLORES[x] || '#8a8a90'); if (cs.length === 1) return cs[0]; const g = id + 'g' + defs.length; defs.push(`<linearGradient id="${g}"><stop offset=".5" stop-color="${cs[0]}"/><stop offset=".5" stop-color="${cs[1]}"/></linearGradient>`); return `url(#${g})`; };
+  const vacio = (c) => (c ? '' : ' class="is-vacio"');
+  const morrion = !!p['morrión'] && !p.capirote && !p.antifaz;
+  const cabeza = morrion ? 'M120 104C100 104 92 124 95 150C88 176 80 205 84 232Q120 252 156 232C160 205 152 176 145 150C148 124 140 104 120 104Z' : 'M120 24L95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152Z';
+  const partes = [
+    col.capa ? `<path d="M88 220C62 250 50 330 46 420C44 470 46 510 50 530Q120 548 190 530C194 510 196 470 194 420C190 330 178 250 152 220Z" fill="${fill(col.capa)}"/>` : '',
+    `<path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" fill="${fill(col.tunica)}"/>`,
+    col.escapulario ? `<path d="M108 238H132L134 526Q120 530 106 526Z" fill="${fill(col.escapulario)}"/>` : '',
+    col.botones ? `<g fill="${fill(col.botones)}">${[262, 292, 322, 352, 382, 412, 442, 472].map((y) => `<circle cx="120" cy="${y}" r="4.5"/>`).join('')}</g>` : '',
+    col.cinto ? `<path class="oc-nazm-cinto" d="M84 300Q120 312 156 300M134 306C136 340 132 380 136 410M142 304C146 335 146 370 150 400" fill="none" style="stroke:${fill(col.cinto)}"/>` : '',
+    `<path${vacio(col.cabeza)} d="${cabeza}" fill="${fill(col.cabeza)}"/>`,
+    `<path d="M104 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0ZM124 ${morrion ? 158 : 150}q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/>`,
+  ].join('');
+  const dice = Object.entries(p).map(([pr, c]) => `${pr} ${colorDe(pr, c)}`).join(', ');
+  return `<svg class="oc-nazm" viewBox="38 16 164 532" width="40" height="130" role="img" aria-label="${esc(`Nazareno${nombre ? ', ' + nombre.toLowerCase() : ''}: ${dice}`)}">${defs.length ? `<defs>${defs.join('')}</defs>` : ''}${partes}</svg>`;
+}
 function coloresHabito(slug) {
   const secs = HABCOL[slug] || [];
-  return secs.filter(([, p]) => Object.keys(p).length).map(([nombre, p]) => `<div class="oc-habito-sec">${nombre ? `<p class="oc-habito-sec-t">${esc(nombre)}</p>` : ''}<ul class="oc-swatches" aria-label="Colores del hábito${nombre ? ', ' + esc(nombre.toLowerCase()) : ''}">${Object.entries(p).map(([pr, c]) => `<li><i style="background:${muestra(c)}" aria-hidden="true"></i><span>${esc(mayus(`${pr} ${colorDe(pr, c)}`))}</span></li>`).join('')}</ul></div>`).join('');
+  return secs.filter(([, p]) => Object.keys(p).length).map(([nombre, p]) => { const naz = nazarenoMini(p, nombre); return `<div class="oc-habito-sec${naz ? ' has-naz' : ''}">${nombre ? `<p class="oc-habito-sec-t">${esc(nombre)}</p>` : ''}${naz}<ul class="oc-swatches" aria-label="Colores del hábito${nombre ? ', ' + esc(nombre.toLowerCase()) : ''}">${Object.entries(p).map(([pr, c]) => `<li><i style="background:${muestra(c)}" aria-hidden="true"></i><span>${esc(mayus(`${pr} ${colorDe(pr, c)}`))}</span></li>`).join('')}</ul></div>`; }).join('');
 }
 // Marchas: modelo único de tools/unificar-marchas.mjs (todas las bases unidas, con la fuente de cada campo y el estado de la dedicatoria).
 // m.h = hermandad a la que está dedicada (solo si la dedicatoria es de una hermandad del portal); m.est = contrastada | dedicada | sin-verificar.

@@ -773,6 +773,15 @@ body { font-size: 1.0625rem; line-height: 1.55; letter-spacing: -.003em; }
 @media (min-width: 700px) { .oc-habito-cols { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); } }
 .oc-habito-cols .oc-swatches { margin: 0; }
 .oc-habito-sec-t { margin: 0 0 8px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+/* Nazareno pequeño vestido con los colores de la tabla (uno por sección); quieto. La prenda sin color va solo con su contorno. */
+.oc-habito-sec.has-naz { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 16px; align-items: center; }
+.oc-habito-sec.has-naz .oc-habito-sec-t { grid-column: 1 / -1; }
+.oc-nazm { display: block; width: 46px; height: auto; overflow: visible; --nazm-borde: rgb(20 6 30 / .5); }
+.oc-nazm path, .oc-nazm circle { stroke: var(--nazm-borde); stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.oc-nazm .is-vacio { fill: none; stroke-dasharray: 3 3; }
+.oc-nazm .oc-nazm-cinto { stroke-width: 7; stroke-linecap: round; vector-effect: none; }
+:root[data-theme="dark"] .oc-nazm { --nazm-borde: rgb(255 255 255 / .55); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-nazm { --nazm-borde: rgb(255 255 255 / .55); } }
 
 .oc-colabora { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule, #cfc9bd); }
 
