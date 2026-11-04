@@ -294,7 +294,7 @@ for (const rp of REPS) for (const x of rp.marchas) {
   if (rp.clave) for (const c of ['estreno', 'lugar']) if (x[c] && !r[c]) { r[c] = x[c]; fuente(r, c, f); }
   fuente(r, 'titulo', f); fuente(r, 'autor', f);
   // la misma banda puede venir de dos repertorios (partituras y canal público): se apunta una vez
-  if (!(r.repertorio || []).some((y) => y.banda === rp.banda)) (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}) });
+  if (!(r.repertorio || []).some((y) => y.banda === rp.banda)) (r.repertorio ||= []).push({ banda: rp.banda, nombre: rp.nombre_banda, ...(x.arreglo ? { arreglo: x.arreglo } : {}), ...(x.propia ? { propia: true } : {}) });
   fuente(r, 'repertorio', f);
   if (x.anio) r._anios = [...(r._anios || []), { v: x.anio, f }];
   if (x.formacion && !r.formacion) { r.formacion = x.formacion; fuente(r, 'formacion', f); }

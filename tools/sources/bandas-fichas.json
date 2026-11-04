@@ -1,0 +1,40 @@
+{
+ "_nota": "Fichas de bandas sacadas de su web y redes oficiales (orden ORDEN-REVISION-MARCHAS, fase 0). Todo dato lleva su fuente. La historia está redactada con nuestras palabras: nunca se copian sus párrafos. Logo: de la web o las redes oficiales de la banda; si la banda pide quitarlo, se quita. Fotos de la banda todavía no (se están pidiendo los permisos).",
+ "bandas": {
+  "banda-de-cornetas-y-tambores-nuestra-senora-del-carmen-malaga": {
+   "revisado": "2026-11-04",
+   "web": "https://bctcarmenmalaga.es/",
+   "logo": {
+    "src": "assets/img/logo-banda-de-cornetas-y-tambores-nuestra-senora-del-carmen-malaga.webp",
+    "ancho": 320,
+    "alto": 318,
+    "fuente": "https://bctcarmenmalaga.es/",
+    "nota": "Logo: Banda de Cornetas y Tambores Nuestra Señora del Carmen (Málaga)"
+   },
+   "datos": [
+    ["Fundación", "2005, en el barrio de El Perchel (Málaga)", "https://bctcarmenmalaga.es/historia/"],
+    ["Nombre actual", "Desde 2007, cuando se hizo independiente; lo toma de la Virgen del Carmen", "https://bctcarmenmalaga.es/historia/"],
+    ["Primer disco", "«Sentimiento y Pasión» (2012)", "https://bctcarmenmalaga.es/historia/"],
+    ["Uniforme", "Desde 2018, inspirado en el traje de gala de la Armada Española", "https://bctcarmenmalaga.es/historia/"]
+   ],
+   "historia": [
+    "Nació en 2005 en El Perchel, impulsada por el párroco Manolo Segura y un grupo de jóvenes del barrio, y sus primeros años estuvo ligada a la Hermandad de la Misericordia. En 2007 echó a andar por su cuenta y adoptó el nombre de la Virgen del Carmen.",
+    "Su primer acompañamiento a un titular de la Semana Santa de Málaga fue en 2012, tras el Cristo de la Exaltación de las Reales Cofradías Fusionadas; ese mismo año publicó su primer disco. Desde 2015 acompaña al titular de Humildad y Paciencia, desde la primera salida de la hermandad como agrupada.",
+    "En 2023 estrenó banderín y mantolines de corneta, diseñados por Curro Claros y hechos en el taller de Rubén Mesa, y en 2025 cumplió veinte años."
+   ],
+   "historia_fuentes": ["https://bctcarmenmalaga.es/historia/"],
+   "fuera_capitales": [
+    { "texto": "Viernes Santo de 2026: Angustias de Cabra (Córdoba)", "fuente": "https://bctcarmenmalaga.es/" }
+   ],
+   "redes": {
+    "instagram": "https://instagram.com/bctcarmenmalaga",
+    "facebook": "https://www.facebook.com/BctCarmenMalaga",
+    "x": "https://twitter.com/bctcarmenmalaga",
+    "tiktok": "https://tiktok.com/@bctcarmenmalaga",
+    "youtube": "https://www.youtube.com/@BCTCarmenMalaga",
+    "spotify": "https://open.spotify.com/intl-es/artist/2IBl9Gew10iHg60XsEddZW"
+   },
+   "redes_fuente": "https://bctcarmenmalaga.es/"
+  }
+ }
+}

@@ -2,10 +2,10 @@
  "banda": "banda-de-cornetas-y-tambores-nuestra-senora-del-carmen-malaga",
  "nombre_banda": "Banda de Cornetas y Tambores Nuestra Señora del Carmen (Málaga)",
  "clave": "bcm",
- "fuente": "El Carmen, web oficial de la banda (repertorio) y vídeo del estreno en su canal de YouTube",
+ "fuente": "El Carmen, web oficial de la banda (repertorio: marchas propias y de otras bandas) y vídeo del estreno en su canal de YouTube",
  "url": "https://bctcarmenmalaga.es/repertorio/",
- "revisado": "2026-11-03",
- "nota": "Repertorio publicado por la propia banda. La web y el vídeo dan el autor como «hermanos Aragüez», sin nombres: se pone así.",
+ "revisado": "2026-11-04",
+ "nota": "Repertorio completo publicado por la propia banda (68 obras: 23 propias y 45 de otras bandas). La web da el autor de «Al son de un barrio» como «hermanos Aragüez», sin nombres: se pone así. «El Reencuentro» conmemora la vuelta de la banda a la Misericordia; la web no la da como dedicada, así que va sin dedicatoria.",
  "marchas": [
   {
    "titulo": "Al son de un barrio",
@@ -16,7 +16,559 @@
    "estreno": "BCT Nuestra Señora del Carmen de Málaga",
    "lugar": "Calle Nueva (Málaga)",
    "video": "qJH3nX76we4",
-   "url": "https://www.youtube.com/watch?v=qJH3nX76we4"
+   "url": "https://www.youtube.com/watch?v=qJH3nX76we4",
+   "propia": true
+  },
+  {
+   "titulo": "Ante los Ojos de Dios",
+   "autor": "Sergio Pastor González",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Crucifixión (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Ante los ojos de Dios",
+    "autor": "Sergio Pastor González"
+   }
+  },
+  {
+   "titulo": "Carmen",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "A la propia formación (BCT Nuestra Señora del Carmen de Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Ego Sum Lux Mundi",
+   "autor": "Sergio Pastor González",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Camino a tu Condena",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "A Ntro. Padre Jesús de la Puente del Cedrón (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "El camino de tu Condena",
+    "autor": "Fernando Jiménez Cañestro"
+   }
+  },
+  {
+   "titulo": "Reencuentro",
+   "autor": "Jorge Águila Ordóñez",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "El Reencuentro",
+    "autor": "Jorge Águila Ordóñez"
+   }
+  },
+  {
+   "titulo": "En el Gólgota",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Señor de los Milagros",
+   "autor": "Francisco José Ortiz Morón",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de los Milagros (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "El Señor de los Milagros",
+    "autor": "Francisco Ortiz Morón"
+   }
+  },
+  {
+   "titulo": "En tu Cruz, Divina Misericordia",
+   "autor": "Sergio Pastor González",
+   "propia": true,
+   "dedicatoria": "A Ntro. Padre Jesús de la Misericordia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Exaltatum",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de la Exaltación (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Humildad y Paciencia",
+   "autor": "Manuel Jesús Guerrero Marín",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Humildad y Paciencia",
+    "autor": "Jesús Manuel Guerrero Marín"
+   }
+  },
+  {
+   "titulo": "Jesús Maniatado",
+   "autor": "Carlos Belmonte Ruiz",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "A Ntro. Padre Jesús de la Puente del Cedrón (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Certeza de Lo Eterno",
+   "autor": "Sergio Pastor González",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "La Certeza de lo Eterno",
+    "autor": "Sergio Pastor González"
+   }
+  },
+  {
+   "titulo": "La Humillación",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Señor de la Humillación (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La promesa de Dios",
+   "autor": "Jorge Águila Ordóñez",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Crucifixión (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Líbranos del Mal",
+   "autor": "Sergio Larrinaga Soler",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Líbranos del mal",
+    "autor": "Sergio Larrinaga Soler"
+   }
+  },
+  {
+   "titulo": "Obediente Hasta la Muerte",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Obediente hasta la muerte",
+    "autor": "Fernando Jiménez Cañestro"
+   }
+  },
+  {
+   "titulo": "Perchel",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "A la propia formación (BCT Nuestra Señora del Carmen de Málaga), en su XX aniversario",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Resilencia",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de la Humildad y Paciencia (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Resiliencia",
+    "autor": "Fernando Jiménez Cañestro"
+   }
+  },
+  {
+   "titulo": "Siempre",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Sólo Dios basta",
+   "autor": "Cristóbal López Gándara",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Stmo. Cristo de la Humildad y Paciencia",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Un Milagro entre dos Barrios",
+   "autor": "Fernando Jiménez Cañestro",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo de los Milagros (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Un milagro entre dos barrios",
+    "autor": "Fernando Jiménez Cañestro"
+   }
+  },
+  {
+   "titulo": "Vida Eterna",
+   "autor": "Francisco Ortiz Morón",
+   "formacion": "Banda de cornetas y tambores",
+   "propia": true,
+   "dedicatoria": "Al Santísimo Cristo Resucitado (Málaga)",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Al Gitano de la Cava",
+   "autor": "Pedro Manuel Pacheco Palomo",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Al gitano de la Cava",
+    "autor": "Pedro M. Pacheco"
+   }
+  },
+  {
+   "titulo": "Al Pobre Zaragoza",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Al pobre Zaragoza",
+    "autor": "Alberto Escámez López"
+   }
+  },
+  {
+   "titulo": "Amor de Madre",
+   "autor": "Francisco Javier González Ríos",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Amor de Madre",
+    "autor": "Francisco González Ríos"
+   }
+  },
+  {
+   "titulo": "Amor y Sacrificio",
+   "autor": "Jorge Águila Ordóñez",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Amor, Corneta y Costal",
+   "autor": "Raúl Rodríguez Domínguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Amor, corneta y costal",
+    "autor": "Raúl Rodríguez"
+   }
+  },
+  {
+   "titulo": "El Cachorro",
+   "autor": "Ramón Montoya Alegre",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Cachorro",
+    "autor": "Ramón Montoya Alegre"
+   }
+  },
+  {
+   "titulo": "Cachorro de Alma Gitana",
+   "autor": "Sergio Larrinaga Soler",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Cachorro de alma gitana",
+    "autor": "Sergio Larrinaga Soler"
+   }
+  },
+  {
+   "titulo": "Cachorro Mio",
+   "autor": "Jorge Águila Ordóñez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Cachorro mío",
+    "autor": "Jorge Águila Ordóñez"
+   }
+  },
+  {
+   "titulo": "Consolación y Lágrimas",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Cristo del Amor",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Cristo del Perdón",
+   "autor": "Luís Alfonso Miraut Lago",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Cristo del Perdón",
+    "autor": "Luis A. Miraut"
+   }
+  },
+  {
+   "titulo": "Crucifixión",
+   "autor": "Francisco José Martínez Pérez",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Eucaristía",
+   "autor": "Francisco Javier González Ríos",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Eucaristía",
+    "autor": "Francisco González Ríos"
+   }
+  },
+  {
+   "titulo": "Evocación",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Expiración",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Historia de un Profeta",
+   "autor": "Sergio Larrinaga Soler",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Lanzada",
+   "autor": "Ramón Montoya Alegre",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Milagrosa",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Promesa",
+   "autor": "Antonio Velasco Rodríguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "La Promesa",
+    "autor": "Antonio Velasco"
+   }
+  },
+  {
+   "titulo": "La Valiente",
+   "autor": "Isaac Manuel Gómez Jiménez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "La Valiente",
+    "autor": "Isaac Gómez"
+   }
+  },
+  {
+   "titulo": "La Virgen Llora",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Macarena",
+   "autor": "Bienvenido Puelles Oliver y Martín Salas Martínez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Macarena",
+    "autor": "Bienvenido Puelles"
+   }
+  },
+  {
+   "titulo": "Madre",
+   "autor": "Raúl Rodríguez Domínguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Madre",
+    "autor": "Raúl Rodríguez"
+   }
+  },
+  {
+   "titulo": "Mi Cristo Moreno",
+   "autor": "Raúl Rodríguez Domínguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Mi Cristo Moreno",
+    "autor": "Raúl Rodríguez"
+   }
+  },
+  {
+   "titulo": "Misericordia",
+   "autor": "Bernardo Poyuelo Domenet",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Misericordia",
+    "autor": "Bernardo Poyuelo"
+   }
+  },
+  {
+   "titulo": "Para tí, mi Estrella",
+   "autor": "José Manuel Delgado Barroso y Víctor Ramírez Pérez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Para ti, mi Estrella",
+    "autor": "Víctor Ramírez"
+   }
+  },
+  {
+   "titulo": "Pasión, Muerte y Resurrección",
+   "autor": "Francisco Javier González Ríos",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Pasión, muerte y resurrección",
+    "autor": "Francisco González Ríos"
+   }
+  },
+  {
+   "titulo": "Pilatos a Jesús",
+   "autor": "Antonio Velasco Rodríguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Pilatos a Jesús",
+    "autor": "Antonio Velasco"
+   }
+  },
+  {
+   "titulo": "Presentación",
+   "autor": "Francisco José Martínez Pérez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Presentación",
+    "autor": "Francisco J. Martínez"
+   }
+  },
+  {
+   "titulo": "Recuerdos",
+   "autor": "Francisco Japón Rodríguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Recuerdos",
+    "autor": "Francisco Japón"
+   }
+  },
+  {
+   "titulo": "Requiem",
+   "autor": "Bienvenido Puelles Oliver",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Requiem",
+    "autor": "Bienvenido Puelles"
+   }
+  },
+  {
+   "titulo": "Santa Cruz",
+   "autor": "Raúl Velázquez y José Manuel Reina",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "La Sentencia de Cristo",
+   "autor": "Manuel Pérez Tejera",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Sentencia de Cristo",
+    "autor": "Manuel Pérez Tejera"
+   }
+  },
+  {
+   "titulo": "Sentimiento Gitano",
+   "autor": "Raúl Rodríguez Domínguez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Sentimiento Gitano",
+    "autor": "Raúl Rodríguez"
+   }
+  },
+  {
+   "titulo": "Señor de Sevilla",
+   "autor": "Jorge Martín Puerto",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Siete Palabras",
+   "autor": "Luis Alfonso Miraut Lago",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Siete Palabras",
+    "autor": "Luis Alfonso Miraut"
+   }
+  },
+  {
+   "titulo": "Siete palabras de nuestro señor",
+   "autor": "Jorge Águila Ordóñez e Isaac Manuel Gómez Jiménez",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Siete palabras de Nuestro Señor",
+    "autor": "Isaac Gómez y Jorge Águila"
+   }
+  },
+  {
+   "titulo": "Sobre los Pies te Lleva Sevilla",
+   "autor": "Pedro Manuel Pacheco Palomo",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Sobre los pies te lleva Sevilla",
+    "autor": "Pedro Manuel Pacheco Palomo"
+   }
+  },
+  {
+   "titulo": "Soleá",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Soledad de San Pablo",
+   "autor": "Pascual Zueco Ramos",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Tu Cáliz de Amargura",
+   "autor": "David Álvarez García",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Tu cáliz de amargura",
+    "autor": "David Álvarez"
+   }
+  },
+  {
+   "titulo": "Virgen de la Paloma",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Virgen de los Dolores",
+   "autor": "Alberto Escámez López",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
+  },
+  {
+   "titulo": "Y tu, Estrella",
+   "autor": "Bienvenido Puelles Oliver",
+   "url": "https://bctcarmenmalaga.es/repertorio/",
+   "como_en_web": {
+    "titulo": "Y tú, Estrella",
+    "autor": "Bienvenido Puelles"
+   }
+  },
+  {
+   "titulo": "Yacente",
+   "autor": "José Manuel Moreno Cebador",
+   "url": "https://bctcarmenmalaga.es/repertorio/"
   }
  ]
 }

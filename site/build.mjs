@@ -166,8 +166,11 @@ for (const m of MARCHAS) {
   if (m.repertorio) { const vis = new Set(); m.repertorio = m.repertorio.filter((r) => { if (r && BANDA_UNIDA[r.banda]) r.banda = BANDA_UNIDA[r.banda]; return !r || !r.banda || (!vis.has(r.banda) && vis.add(r.banda)); }); }
   for (const v of m.versiones || []) if (v.bandas) v.bandas = [...new Set(v.bandas.map((s) => BANDA_UNIDA[s] || s))];
 }
-const REPERTORIO = new Map(); // banda → [{marcha, arreglo}]
-for (const m of MARCHAS) for (const r of m.repertorio || []) if (r && r.banda) (REPERTORIO.get(r.banda) || REPERTORIO.set(r.banda, []).get(r.banda)).push({ m, arreglo: r.arreglo || '' });
+const REPERTORIO = new Map(); // banda → [{marcha, arreglo, propia}]
+// Fichas de bandas desde su web y redes oficiales (tools/sources/bandas-fichas.json, orden de revisión de marchas, fase 0): logo, datos, historia
+// con nuestras palabras y su fuente, y redes oficiales. Sin ficha, la página de la banda sale como antes.
+const BFICHAS = (() => { const f = path.join(DIR, '..', 'tools', 'sources', 'bandas-fichas.json'); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).bandas : {}; })();
+for (const m of MARCHAS) for (const r of m.repertorio || []) if (r && r.banda) (REPERTORIO.get(r.banda) || REPERTORIO.set(r.banda, []).get(r.banda)).push({ m, arreglo: r.arreglo || '', propia: !!r.propia });
 const ciudadMarcha = (m) => (m.h ? m.h.ciudad : m.ciudad && CAP[m.ciudad] ? m.ciudad : '');
 // Las marchas de cada hermandad salen del modelo (no de portal.json): incluye las ligadas por la dedicatoria del catálogo
 for (const h of D.hermandades) h.marchas = [];
@@ -1156,17 +1159,26 @@ function pageBanda(b) {
     ? `${b.nombre} es ${/^[aeiou]/i.test(b.tipo) ? 'una' : 'una'} ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}. Acompaña a ${plural(new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías')} en ${ciudades.map((c) => c.nombre).join(', ')} (${plural(jornadas.size, 'jornada', 'jornadas')}).`
     : `${b.nombre} es ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}.`;
   const q = encodeURIComponent(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
+  const fb = BFICHAS[b.slug] || null, rd = (fb && fb.redes) || {};
+  const REDES = [['web', 'Web oficial'], ['youtube', 'YouTube'], ['spotify', 'Spotify'], ['instagram', 'Instagram'], ['facebook', 'Facebook'], ['x', 'X'], ['tiktok', 'TikTok']];
+  const oficiales = REDES.map(([k, l]) => [l, k === 'web' ? fb && fb.web : rd[k]]).filter(([, h]) => h);
   const enlaces = [
-    ['Escuchar en YouTube', `https://www.youtube.com/results?search_query=${q}`],
-    ['Buscar en Spotify', `https://open.spotify.com/search/${q}`],
-    ...(b.redes || []).map((r) => ['Instagram @' + IGUSER(r), `https://www.instagram.com/${IGUSER(r)}/`]),
-    ['Buscar su web oficial', `https://www.google.com/search?q=${q}+web+oficial`],
+    ...oficiales,
+    ...(rd.youtube ? [] : [['Escuchar en YouTube', `https://www.youtube.com/results?search_query=${q}`]]),
+    ...(rd.spotify ? [] : [['Buscar en Spotify', `https://open.spotify.com/search/${q}`]]),
+    ...(rd.instagram ? [] : (b.redes || []).map((r) => ['Instagram @' + IGUSER(r), `https://www.instagram.com/${IGUSER(r)}/`])),
+    ...(fb && fb.web ? [] : [['Buscar su web oficial', `https://www.google.com/search?q=${q}+web+oficial`]]),
   ];
+  const fuenteLink = (h, t = 'su web oficial') => `<a href="${esc(h)}" target="_blank" rel="noopener">${t}</a>`;
+  const historiaHtml = fb && fb.historia && fb.historia.length ? `<div class="oc-prose">${fb.historia.map((p) => `<p>${esc(p)}</p>`).join('')}</div><p class="oc-note">Fuente: ${(fb.historia_fuentes || []).map((h) => fuenteLink(h)).join(', ')}.</p>` : '';
+  const datosHtml = fb && fb.datos && fb.datos.length ? `<dl class="bx-datos">${fb.datos.map(([k, v, f]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}${f ? ` <a class="bx-fuente" href="${esc(f)}" target="_blank" rel="noopener" aria-label="Fuente de ${esc(k.toLowerCase())}">fuente</a>` : ''}</dd></div>`).join('')}</dl>` : '';
+  const fueraHtml = fb && fb.fuera_capitales && fb.fuera_capitales.length ? `<h3 class="oc-h3">Fuera de las capitales</h3><ul class="bx-fuera">${fb.fuera_capitales.map((x) => `<li>${esc(x.texto)} · ${fuenteLink(x.fuente, 'fuente')}</li>`).join('')}</ul>` : '';
   const vecinas = b.origen ? D.bandas.filter((x) => x.slug !== b.slug && x.origen === b.origen).slice(0, 16) : [];
   const nuevas = items.filter((a) => a.anio > 2026);
   const body = `<header class="oc-caphero is-compact" style="--c:${col};--c-plate:${fondoLegible(col)}">
   ${prov ? `<img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + prov.slug + '.webp')}" alt="" width="265" height="971">` : ''}
   <div class="oc-caphero-text">
+    ${fb && fb.logo ? `<figure class="bx-logo"><img src="${u(fb.logo.src)}" alt="${esc(fb.logo.nota)}" width="${fb.logo.ancho}" height="${fb.logo.alto}" decoding="async"></figure>` : ''}
     <h1 class="oc-caphero-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
     <p class="oc-caphero-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
     ${(() => { // cifras solo cuando dicen algo (con todo a 1, la frase de resumen ya lo cuenta)
@@ -1177,10 +1189,11 @@ function pageBanda(b) {
   </div>
 </header>
 <div class="oc-prose oc-bandaresumen"><p>${esc(resumen)}</p></div>
-${section('Dónde sale', porCiudad || '<p class="oc-empty">Todavía no hay cofradías del portal asociadas a esta formación.</p>')}
-${(REPERTORIO.get(b.slug) || []).length ? section('Repertorio', `<ul class="oc-entries">${[...REPERTORIO.get(b.slug)].sort((x, y) => x.m.titulo.localeCompare(y.m.titulo, 'es')).map(({ m, arreglo }) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.autor), arreglo ? 'arreglo de ' + esc(arreglo) : ''].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
+${section('Historia', historiaHtml + datosHtml)}
+${section('Dónde sale', (porCiudad || (fueraHtml ? '' : '<p class="oc-empty">Todavía no hay cofradías del portal asociadas a esta formación.</p>')) + fueraHtml)}
+${(REPERTORIO.get(b.slug) || []).length ? section('Repertorio', `<ul class="oc-entries">${[...REPERTORIO.get(b.slug)].sort((x, y) => x.m.titulo.localeCompare(y.m.titulo, 'es')).map(({ m, arreglo, propia }) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.autor), arreglo ? 'arreglo de ' + esc(arreglo) : '', propia ? '<span class="bx-propia">Marcha propia</span>' : ''].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
 ${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h.nombre} (${a.rol || 'cortejo'})`, u('hermandad/' + a.hermandad_slug + '/')]))) : ''}
-${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas y perfiles públicos; el portal no aloja audio ni vídeo.</p>`)}
+${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">${oficiales.length ? 'Perfiles oficiales enlazados desde ' + fuenteLink(fb.redes_fuente || fb.web) + '. ' : 'Son búsquedas y perfiles públicos. '}El portal no aloja audio ni vídeo.${fb && fb.logo ? ' ' + esc(fb.logo.nota) + ', de ' + fuenteLink(fb.logo.fuente) + '.' : ''}</p>`)}
 ${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
 <p class="oc-note">Configuración musical según la información publicada. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre + (b.localidad && D.bandas.some((x) => x !== b && x.nombre === b.nombre) ? ' (' + b.localidad + ')' : ''), desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
@@ -1613,7 +1626,7 @@ function extras() {
   fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
   for (const f of fs.readdirSync(path.join(DIR, 'assets'))) {
     const src = path.join(DIR, 'assets', f), dst = path.join(DIST, 'assets', f);
-    if (fs.statSync(src).isDirectory()) fs.cpSync(src, dst, { recursive: true });
+    if (fs.statSync(src).isDirectory()) fs.cpSync(src, dst, { recursive: true, filter: (p) => !/[\\/]originales([\\/]|$)/.test(p) }); // los logos originales de las bandas no se publican
     else if (f.endsWith('.css')) fs.writeFileSync(dst, fs.readFileSync(src, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim());
     else fs.copyFileSync(src, dst);
   }

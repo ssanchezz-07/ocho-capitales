@@ -1930,3 +1930,15 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-c-ruta.is-estimado { stroke-dasharray: 1.5 5; stroke-width: 1.6px; stroke-linecap: round; filter: none; }
 .oc-calle-leyenda .is-estimado::before { border-top: 2px dotted #f0d79c; }
 .oc-calle-leyenda [hidden] { display: none; }
+
+/* Fichas de bandas desde su web oficial (revision-marchas, fase 0; pendiente de que Diseño lo pula): logo, datos y marca de marcha propia */
+.bx-logo { margin: 0 0 14px; width: clamp(84px, 18vw, 128px); }
+.bx-logo img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.25)); }
+.bx-datos { display: grid; gap: 0; margin: 18px 0 0; border-top: 1px solid var(--line, rgba(0,0,0,.12)); }
+.bx-datos > div { display: grid; grid-template-columns: minmax(7.5rem, 11rem) 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line, rgba(0,0,0,.12)); }
+.bx-datos dt { font: 600 .74rem var(--mono); letter-spacing: .06em; text-transform: uppercase; opacity: .75; padding-top: .2em; }
+.bx-datos dd { margin: 0; }
+.bx-fuente { font-size: .8em; opacity: .75; }
+.bx-fuera { margin: 8px 0 0; padding-left: 1.1em; }
+.bx-propia { display: inline-block; font: 600 .68rem var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: color-mix(in srgb, currentColor 10%, transparent); }
+@media (max-width: 520px) { .bx-datos > div { grid-template-columns: 1fr; gap: 2px; } }
