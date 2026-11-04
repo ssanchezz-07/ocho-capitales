@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T18:22:45.424Z",
+ "generado": "2026-11-04T18:26:31.870Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -9278,6 +9278,27 @@
     "local": "scripts/cedidas/malaga/luz-y-mar-malaga-virgen.jpg",
     "tam": 1595278,
     "titular": "María Santísima del Mar"
+   }
+  },
+  "resucitado-malaga": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/agrupaciondecofradiasmalaga",
+    "foco": "62% 20%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/resucitado-malaga-cristo.jpg",
+    "tam": 243285,
+    "titular": "Santísimo Cristo Resucitado"
    }
   }
  },

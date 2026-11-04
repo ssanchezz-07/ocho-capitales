@@ -6,7 +6,7 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 
 ## Málaga (revisado el 2026-11-03: cada foto contra Commons y a ojo en la ficha, el listado y el plano; fuera las de otra ciudad, sin licencia libre, de lejos o de poca calidad)
 
-5 sin ninguna foto de titular; 15 con algún titular sin foto.
+4 sin ninguna foto de titular; 15 con algún titular sin foto.
 
 | Hermandad | Día | Qué falta |
 |---|---|---|
@@ -25,7 +25,6 @@ Cómo mandarlas: una carpeta por capital, y en el nombre del archivo la hermanda
 | Vera+Cruz | Jueves Santo | Cristo: Santísimo Cristo de la Vera+Cruz y Sangre / San Juan Evangelista |
 | Misericordia | Jueves Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús de la Misericordia; Virgen: Nuestra Señora del Gran Poder |
 | Santo Sepulcro | Viernes Santo | **ninguna foto**; Cristo: Nuestro Padre Jesús del Santo Sepulcro; Virgen: Nuestra Señora de la Soledad |
-| Resucitado | Domingo de Resurrección | **ninguna foto**; Cristo: Santísimo Cristo Resucitado |
 | Verdad y Sagrario | Sábado de Pasión | Virgen: María Santísima del Sagrario |
 | Luz y Mar | Sábado de Pasión | Cristo: Santísimo Cristo Luz del Mundo |
 | Medinaceli (Martiricos) | Viernes de Dolores | Virgen: María Santísima de la Candelaria |
