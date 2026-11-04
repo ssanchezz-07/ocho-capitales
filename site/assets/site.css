@@ -979,6 +979,9 @@ select.oc-cityselect[hidden] { display: none; }
 .oc-sr-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .oc-sr-thumb.is-colg { border-radius: 10px; background: none; box-shadow: none; }
 .oc-sr-thumb.is-colg img { object-fit: contain; }
+/* Díptico (Cristo y Virgen en una imagen 3:2): misma caja de 40 px, con la foto entera en 3:2 dentro para que no se corte por la junta */
+.oc-sr-thumb.is-dip { border-radius: 0; background: none; box-shadow: none; overflow: visible; }
+.oc-sr-thumb.is-dip img { height: auto; aspect-ratio: 3 / 2; border-radius: 6px; box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--gold) 70%, transparent); }
 .oc-sr-group { display: flex; align-items: center; justify-content: space-between; }
 .oc-sr-sug { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 12px 12px; }
 .oc-sr-sug a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font-weight: 600; font-size: .9rem; text-decoration: none; }
@@ -1237,6 +1240,8 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-entry-img.is-naz img, .ix-foto.is-naz img, .oc-sr-thumb img[src*="/assets/naz/"] { transform: scale(1.45); transform-origin: 50% 46%; }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) { .oc-entry:hover .oc-entry-img.is-naz img { transform: scale(1.5); } }
 .oc-entry-img.is-escudo { border-radius: 14px; }
+.oc-entry-img.is-dip { display: grid; place-items: center; background: none; border-radius: 0; overflow: visible; }
+.oc-entry-img.is-dip img { height: auto; aspect-ratio: 3 / 2; border-radius: 10px; }
 .oc-entry { transition: background-color 160ms var(--ease-out); border-radius: 2px; }
 @media (hover: hover) and (pointer: fine) { .oc-entry:hover .oc-entry-img img { transform: scale(1.05); } .oc-entry-img img { transition: transform 420ms var(--ease-out); } }
 

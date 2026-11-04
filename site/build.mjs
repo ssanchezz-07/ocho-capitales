@@ -81,6 +81,8 @@ const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'u
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
 const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, foco: x.foco, recorte: !!x.recorte, cedida: !!x.cedida });
+// Díptico (Cristo y Virgen en una sola imagen 3:2): su miniatura va en 3:2 para que no se corte por la junta
+const dipCls = (im) => (im && im.kind === 'd' ? ' is-dip' : '');
 // Fotos retiradas tras comprobar su ficha en Commons (tools/sources/fotos-retiradas.json): no salen ni como foto principal ni en el díptico
 const FRET_FILE = path.join(DIR, '..', 'tools', 'sources', 'fotos-retiradas.json');
 const FRET_ALL = fs.existsSync(FRET_FILE) ? JSON.parse(fs.readFileSync(FRET_FILE, 'utf8')) : {};
@@ -396,13 +398,13 @@ function entryHerm(h, extra = '', enCapital = false) {
   // En la página de su capital, capital y día ya se saben: la fila dice la hora de salida y la sede
   if (enCapital) {
     const im = h.imagen;
-    const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
+    const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
     const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
     const meta = [h.hora ? fmtHora(h.hora) + ' h' : '', h.sede].filter(Boolean).map(esc).join(' · ');
     return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3>${meta ? `<p class="oc-entry-sub is-hora">${meta}</p>` : ''}${tit ? `<p class="oc-entry-sub">${esc(tit)}</p>` : ''}</div></li>`;
   }
   const im = h.imagen;
-  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
+  const thumb = im ? `<div class="oc-entry-img${im.escudo ? ' is-escudo' : ''}${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>${tit || h.sede ? `<p class="oc-entry-sub">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
@@ -1265,7 +1267,7 @@ const cifras = (list) => { const l = list.filter(([n]) => n > 0); return l.lengt
 // Fila de obra o marcha con la miniatura de su hermandad (foto, díptico o monograma)
 function filaHerm(h, titulo, sub, extra = '') {
   const c = h ? CAP[h.ciudad] : null;
-  const thumb = h && h.imagen ? `<div class="oc-entry-img${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '72px', widths: [120, 250] })}</div>` : h ? `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : '';
+  const thumb = h && h.imagen ? `<div class="oc-entry-img${h.imagen.escudo ? ' is-escudo' : ''}${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: '72px', widths: [120, 250] })}</div>` : h ? `<div class="oc-entry-img is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : '';
   return `<li class="oc-entry${thumb ? '' : ' is-text'}"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title">${titulo}</h3>${sub ? `<p class="oc-entry-sub">${sub}</p>` : ''}${h ? `<p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>` : ''}</div></li>`;
 }
 function pageImag(i) {
@@ -1275,7 +1277,7 @@ function pageImag(i) {
   const obraCard = (o) => {
     const h = HERM[o.hermandad_slug], c = h ? CAP[h.ciudad] : null;
     const det = esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
-    const foto = h && h.imagen ? `<div class="ix-foto${h.imagen.escudo ? ' is-escudo' : ''}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : `<div class="ix-foto is-sello" aria-hidden="true"><span>${esc(inicialesM(String(o.titular).split(',')[0]))}</span></div>`;
+    const foto = h && h.imagen ? `<div class="ix-foto${h.imagen.escudo ? ' is-escudo' : ''}${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>` : `<div class="ix-foto is-sello" aria-hidden="true"><span>${esc(inicialesM(String(o.titular).split(',')[0]))}</span></div>`;
     const titulo = h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular);
     const meta = [h ? `<span class="vx-autor">${esc(h.nombre)}</span>` : (o.hermandad ? `<span class="vx-autor">${esc(o.hermandad)}</span>` : ''), det ? `<span>${det}</span>` : '', o.atrib ? '<span class="nx-tema">Atribución</span>' : ''].join('');
     return `<li class="oc-entry vx-m ix-obra">${foto}<div class="vx-body"><h3 class="vx-tit">${titulo}</h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${h ? `<p class="vx-pie">${cityTag(h.ciudad)}<span class="oc-muted">${esc(h.dia)}</span></p>` : ''}</div></li>`;
@@ -1432,7 +1434,7 @@ const dirEmpty = '<p class="oc-empty" data-dir-empty hidden>Ningún resultado co
 // Tarjeta de la lista de Hermandades (lenguaje de Noticias): foto de la hermandad o su sello en el color de su capital
 function entryHermVx(h, mas = false) {
   const c = CAP[h.ciudad], im = h.imagen;
-  const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
+  const foto = im ? `<div class="ix-foto${im.escudo ? ' is-escudo' : ''}${dipCls(im)}">${imgTag(im, '', { sizes: '64px', widths: [120, 250] })}</div>` : `<div class="ix-foto is-naz"><img src="${nazUrl(h)}" alt="" width="360" height="240" loading="lazy" decoding="async"></div>`;
   const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   const meta = `${cityTag(h.ciudad)}<span>${esc(h.dia)}</span>${h.hora ? `<span class="vx-autor">${esc(fmtHora(h.hora))} h</span>` : ''}`;
   return `<li class="oc-entry vx-m ix-obra${mas ? ' is-mas' : ''}" data-q="${esc(norm([h.nombre, h.nombre_oficial, h.sede, c.nombre, h.dia, ...h.titulares.map((t) => t.nombre + ' ' + t.autor)].join(' ')))}" data-ciudad="${h.ciudad}" data-dia="${slugify(h.dia)}">${foto}<div class="vx-body"><h3 class="vx-tit"><a href="${u('hermandad/' + h.slug + '/')}"${tLargo(h.nombre)}>${esc(h.nombre)}</a></h3><p class="vx-meta">${meta}</p>${tit || h.sede ? `<p class="vx-ded">${esc(tit || h.sede)}</p>` : ''}</div></li>`;

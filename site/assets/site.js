@@ -1321,7 +1321,7 @@
   var ICONO_T = { b: '♪', i: '✦', m: '♫', n: '¶' };
   function miniatura(e) {
     var col = (window.OC_COLORS && e.c && window.OC_COLORS[e.c]) || 'var(--primary)';
-    if (e.i) return '<span class="oc-sr-thumb" aria-hidden="true" style="--c:' + col + '"><img src="' + esc(e.i) + '" alt="" loading="lazy" decoding="async"></span>';
+    if (e.i) return '<span class="oc-sr-thumb' + (e.i.indexOf('/img/d-') > -1 ? ' is-dip' : '') + '" aria-hidden="true" style="--c:' + col + '"><img src="' + esc(e.i) + '" alt="" loading="lazy" decoding="async"></span>';
     var ini = e.t === 'h' ? esc(String(e.n).replace(/^(La|El|Los|Las)\s+/i, '').charAt(0)) : e.t === 'c' ? esc(String(e.n).replace(/^Semana Santa de /, '').charAt(0)) : (ICONO_T[e.t] || '·');
     return '<span class="oc-sr-thumb is-mono" aria-hidden="true" style="--c:' + col + '">' + ini + '</span>';
   }
