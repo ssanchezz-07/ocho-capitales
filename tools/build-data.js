@@ -224,10 +224,10 @@ for (const c of raw) {
         const [nom, ...rest] = t.split(' — ');
         let autorRaw = rest.join(' — ') || '', autorFuente = '';
         // Autor que falta en la ficha oficial, buscado y revisado aparte (complementos.json → titulares_autor), con su fuente
+        const ta = (((COMP.hermandades || {})[slug] || {}).titulares_autor || []).find((x) => x.titular === nom.trim());
         if (!autorRaw) {
-          const ta = (((COMP.hermandades || {})[slug] || {}).titulares_autor || []).find((x) => x.titular === nom.trim());
           if (ta && ta.autor) { autorRaw = (ta.atribucion ? 'Atribuido a ' : '') + ta.autor + (ta.anio ? ', ' + ta.anio : ''); autorFuente = ta.fuente; }
-        }
+        } else if (ta && ta.fuente && ta.autor && autorRaw.startsWith(ta.autor)) autorFuente = ta.fuente; // el autor ya venía, aquí solo se anota su fuente
         const a = parseAuthor(autorRaw);
         // obrasDe: la misma imagen ya cuenta en otra ficha de la misma cofradía (otra salida): no se repite en su imaginero
         if (a && !(e && e.obrasDe)) {

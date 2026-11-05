@@ -1616,7 +1616,27 @@
     "url": "https://www.cofradiadelahumildad.com/",
     "fuente": "https://www.cofradiadelahumildad.com/",
     "comprobada": "2026-10-16"
-   }
+   },
+   "titulares_autor": [
+    {
+     "titular": "Soledad de Nuestra Señora",
+     "autor": "Manuel González de los Santos",
+     "fuente": "https://web.archive.org/web/20141218014849/http://www.cofradiadelahumildad.com/titulares/",
+     "nota": "Página de titulares de la propia cofradía (copia archivada; la web actual ya no la tiene): «Salió de las gubias de Manuel González de los Santos (1765-1844)», sobre «nuestra Soledad de Santo Domingo». La Federación solo pone «Manuel González». Wikipedia (Manuel González de los Santos) cita esa misma página.",
+     "revisado": "2026-11-05"
+    }
+   ]
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "titulares_autor": [
+    {
+     "titular": "Soledad de Nuestra Señora",
+     "autor": "Manuel González de los Santos",
+     "fuente": "https://web.archive.org/web/20141218014849/http://www.cofradiadelahumildad.com/titulares/",
+     "nota": "Página de titulares de la propia cofradía (copia archivada; la web actual ya no la tiene): «Salió de las gubias de Manuel González de los Santos (1765-1844)», sobre «nuestra Soledad de Santo Domingo». La Federación solo pone «Manuel González». Wikipedia (Manuel González de los Santos) cita esa misma página.",
+     "revisado": "2026-11-05"
+    }
+   ]
   },
   "los-gitanos-granada": {},
   "los-estudiantes-granada": {
@@ -6260,7 +6280,7 @@
     "dia": "Sábado de Pasión",
     "fuente": "https://www.gentedepaz.es/cadiz-se-prepara-para-vivir-la-semana-santa-2026-con-pasion-y-devocion-itinerario-y-horarios-de-la-semana-santa-de-cadiz-2026/",
     "hora": "17:00",
-    "hora_fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (ficha, pág. 8: salida de la cruz de guía)"
+    "hora_fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 5: salida de la cruz de guía, 17:00)"
    },
    {
     "slug": "dolores-de-alcolea-cordoba",
@@ -6272,7 +6292,7 @@
     "dia": "Jueves Santo y Madrugada",
     "hora": "00:50",
     "orden": 5,
-    "fuente": "https://www.canalsur.es/resources/archivos_offline/2026/3/26/1774544876433CADIZ_26.pdf (págs. 24 y 35: «MADRUGADA», salida 00:50)",
+    "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 38: «MADRUGADA», salida de la cruz de guía 00:50)",
     "nota": "Decisión de Pablo (2026-10-26): con la jornada gaditana de Jueves Santo y Madrugada."
    }
   ],

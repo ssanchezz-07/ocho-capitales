@@ -103,3 +103,9 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
    - titulares que no cuadran con su fuente (ver `nota` en historias.json; p. ej. Salud de Huelva de David Valenciano 2000, Angustias de Almería 1943, «atribuido a» en Granada, autores de Sevilla);
    - sede del Silencio de Granada, que según Imágenes no cuadra (pedido por coordinación);
    - marca `propia` de las bandas: Fusionadas, BCT Jesús Nazareno y Expiración (Huelva), BM Esperanza y Estrella (Córdoba).
+5. **5-nov, tres arreglos con el sí de Pablo** (153430b subido antes con la ficha de la Soledad de la Humildad; este bloque, a la espera del sí):
+   - Imaginero de las dos Soledades (Cañilla y Humildad): se queda «Manuel González de los Santos»; fuente, la página de titulares de la cofradía (copia archivada), en `complementos.json` → `titulares_autor`.
+   - Cádiz: el PDF de Canal Sur (404) sustituido por «Cruz de Guía» de Radio Cádiz 2026 con página en los 32 recorridos, la Obediencia y el Perdón; quitadas las horas que esa guía no da; el Perdón sale a las 01:30.
+   - Granada: «El Llamador» sustituido por la Guía oficial de horarios 2026 de la Federación (`GUIA_GR` y `PAG_GR` en `tools/itinerarios/unir.mjs`); todas las horas coinciden. Escolapios y Ferroviarios ya tienen horario. La Soledad ya no cita el PDF de 2025.
+   - Pendiente de otros: 9 citas al PDF muerto de Canal Sur en `site/data/sedes/cadiz.json` (mapas); mapa de las Tres Caídas de Granada con puntos de otra cofradía (mapas); Huelva sigue citando «El Llamador» sin enlace; Siete Palabras de Cádiz: la Cruz de Guía pone «San Agustín» donde lo normal es San Francisco.
+   - Al regenerar `itinerarios-2026.json` con `unir.mjs` salen cambios de Cádiz (Humillación, Perdón) que no están revisados: aplicar solo lo que toque.

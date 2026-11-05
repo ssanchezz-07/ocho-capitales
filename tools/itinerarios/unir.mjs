@@ -250,6 +250,32 @@ if (fs.existsSync(FH)) {
   }
   for (const f of sueltas) out.sin_emparejar.push({ ciudad: 'malaga', dia: f.dia, cabecera: f.cabecera.slice(0, 120), sub: 'horarios', opciones: [] });
 }
+// Granada: todas las horas de la rejilla de «El Llamador» (que no tiene enlace que se pueda abrir) coinciden con la Guía oficial
+// de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada (comprobado punto a punto el 5-nov-2026:
+// 27 horas de salida y 141 puntos). Se cita la guía, con la página de cada cofradía.
+const GUIA_GR = 'https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf';
+const PAG_GR = {
+  'la-borriquilla-granada': 10, 'santa-cena-granada': 11, 'el-despojado-silencio-blanco-granada': 12, 'la-sentencia-maravillas-granada': 13,
+  'el-cautivo-granada': 14, 'el-huerto-granada': 18, 'el-trabajo-granada': 19, 'nuestra-senora-de-los-dolores-granada': 20,
+  'jesus-del-rescate-granada': 21, 'la-lanzada-granada': 26, 'el-via-crucis-granada': 27, 'la-esperanza-granada': 28, 'la-canilla-granada': 29,
+  'los-gitanos-granada': 32, 'los-estudiantes-granada': 33, 'paciencia-y-penas-granada': 34, 'tres-caidas-y-rosario-granada': 35,
+  'la-concha-granada': 40, 'los-salesianos-granada': 41, 'la-aurora-granada': 42, 'la-estrella-granada': 43, 'el-silencio-granada': 44,
+  'soledad-de-nuestra-senora-humildad-granada': 48, 'los-escolapios-granada': 49, 'los-ferroviarios-granada': 50, 'los-favores-granada': 51,
+  'los-facundillos-granada': 60, 'la-resurreccion-granada': 61, 'el-resucitado-granada': 62,
+};
+const fuenteGR = (slug) => `${GUIA_GR} (pág. ${PAG_GR[slug]}: Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)`;
+// Escolapios y Ferroviarios: «El Llamador» los da pegados en una sola columna; sus horas salen de la guía (págs. 49 y 50)
+const GUIA_SOLO = {
+  'los-escolapios-granada': [['Salida', '18:20'], ['Pl. del Humilladero', '18:50'], ['Carrera de la Virgen', '19:10'], ['Ángel Ganivet', '19:55'], ['Plaza de las Pasiegas', '20:40'], ['Salida Puerta Perdón', '21:25'], ['Puente Romano', '00:00'], ['Encierro', '00:15']],
+  'los-ferroviarios-granada': [['Salida', '16:00'], ['Málaga', '17:50'], ['Carrera de la Virgen', '19:50'], ['Ángel Ganivet', '20:30'], ['Plaza de las Pasiegas', '21:20'], ['Salida Puerta Perdón', '22:00'], ['Basílica S. Juan de Dios', '22:15'], ['Encierro', '00:15']],
+};
+for (const [slug, pts] of Object.entries(GUIA_SOLO)) {
+  const h = D.hermandades.find((x) => x.slug === slug);
+  if (h && !out.hermandades[slug]) out.hermandades[slug] = { ciudad: 'granada', dia: h.dia, fuente: '', pdf: 'GUIA-HORARIOS-2026_FEDERACION.pdf', tramos: { paso: pts.map(([lugar, hora]) => ({ fila: '', lugar, hora })) } };
+}
+for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'granada') {
+  if (PAG_GR[slug]) e.fuente = fuenteGR(slug); else console.warn('Granada sin página en la guía oficial:', slug);
+}
 // limpieza final de etiquetas en todas las ciudades
 const lim = { quitados: 0, horasRescatadas: 0 };
 for (const e of Object.values(out.hermandades)) for (const k of Object.keys(e.tramos)) {
