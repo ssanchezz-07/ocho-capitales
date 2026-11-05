@@ -567,12 +567,12 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de la Humillación y Perdón",
     "recorte": [
-     0.25,
-     0.0889,
-     0.6,
-     0.46
+     0.38,
+     0.115,
+     0.33,
+     0.29
     ],
-    "foco": "50% 0%"
+    "foco": "50% 10%"
    },
    "virgen": {
     "autor": "Humillación y Estrella (Málaga)",
@@ -3556,14 +3556,6 @@
     "titular": "Nuestra Señora de los Dolores Coronada",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @doloresdlpuente (https://www.instagram.com/p/DWYyX1tjKmv/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
     "foco": "50% 38%"
-   },
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Doloresdelpuentecoronada_cristodelperdon.jpg",
-    "titulo": "File:Doloresdelpuentecoronada cristodelperdon.jpg",
-    "autor": "Composision de la cofradia cc",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "titular": "Nuestra Señora de los Dolores Coronada y Santísimo Cristo del Perdón"
    }
   },
   "pasion-malaga": {

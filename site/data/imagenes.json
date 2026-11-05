@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T11:35:58.817Z",
+ "generado": "2026-11-05T11:54:43.997Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3935,7 +3935,7 @@
    },
    "cristo": {
     "w": 960,
-    "h": 1104,
+    "h": 1265,
     "widths": [
      160,
      480,
@@ -3946,12 +3946,12 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg",
-    "foco": "50% 0%",
+    "foco": "50% 10%",
     "recorte": [
-     0.25,
-     0.0889,
-     0.6,
-     0.46
+     0.38,
+     0.115,
+     0.33,
+     0.29
     ],
     "titular": "Nuestro Padre Jesús de la Humillación y Perdón"
    }
@@ -9768,7 +9768,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg\"|\"\"|\"\"|[0.25,0.0889,0.6,0.46]|\"50% 0%\"|\"https://www.instagram.com/hdadhumillacion\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp\"|302148|[0.1667,0,0.6667,1]|\"50% 11%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg\"|\"\"|\"\"|[0.38,0.115,0.33,0.29]|\"50% 10%\"|\"https://www.instagram.com/hdadhumillacion\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp\"|302148|[0.1667,0,0.6667,1]|\"50% 11%\""
   },
   "rescate-malaga": {
    "w": 960,
