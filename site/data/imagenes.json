@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T13:27:57.204Z",
+ "generado": "2026-11-05T13:34:08.360Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -9825,6 +9825,27 @@
     "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-cristo.jpg",
     "tam": 1046572,
     "titular": "Santísimo Cristo de Hermandad y Caridad"
+   }
+  },
+  "santo-sepulcro-malaga": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Santo Sepulcro (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sepulcromalaga/",
+    "foco": "50% 38%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/santo-sepulcro-malaga-virgen.jpg",
+    "tam": 352320,
+    "titular": "Nuestra Señora de la Soledad"
    }
   }
  },
