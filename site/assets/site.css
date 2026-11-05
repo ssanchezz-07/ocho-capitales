@@ -1919,7 +1919,11 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 /* ---------- En la calle: lo que la crítica señaló ---------- */
 .oc-calle-mapa { view-transition-name: oc-plano; }
 .oc-c-cruz-templo { stroke: rgb(205 186 230 / .42); } /* las cruces de los templos, en lila tenue: el oro es del cortejo */
-@media (max-width: 959px) { .oc-calle.has-ficha .oc-calle-reloj { bottom: calc(var(--ficha-h, 40dvh) + 10px); } }
+/* con la ficha de una cofradía abierta: en el móvil (hoja abajo) el reloj sube sobre ella; desde 600 px (panel a la derecha)
+   el reloj se acorta hasta el borde del panel para poder arrastrar hasta la última hora. Volver arriba se aparta mientras tanto. */
+@media (max-width: 599px) { .oc-calle.has-ficha .oc-calle-reloj { bottom: calc(var(--ficha-h, 40dvh) + 10px); } }
+@media (min-width: 600px) { .oc-calle.has-ficha .oc-calle-reloj { margin-right: max(8px, calc(min(380px, 92vw) + 16px - (100vw - 100%) / 2)); } }
+html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 .oc-calle-head .oc-title { overflow-wrap: anywhere; }
 
 /* ---------- Mapa «Bordado» (elegido por Pablo, 26-oct): terciopelo con su pelo, cordón de oro fino y la catedral de cada capital

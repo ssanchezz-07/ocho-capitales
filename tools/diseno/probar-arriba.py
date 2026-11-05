@@ -13,7 +13,7 @@ RECT = "(s) => [...document.querySelectorAll(s)].filter(e => e.getClientRects().
 def choca(a, b, m=0): return a[0] < b[2] - m and a[2] > b[0] + m and a[1] < b[3] - m and a[3] > b[1] + m
 def estado(pg):
     return pg.evaluate("""() => { const b = document.querySelector('[data-arriba]'), s = getComputedStyle(b), r = b.getBoundingClientRect();
-      return { ver: s.visibility === 'visible' && +s.opacity > .9, r: [r.left, r.top, r.right, r.bottom], borde: s.borderTopColor, label: b.getAttribute('aria-label') }; }""")
+      return { ver: s.display !== 'none' && s.visibility === 'visible' && +s.opacity > .9, r: [r.left, r.top, r.right, r.bottom], borde: s.borderTopColor, label: b.getAttribute('aria-label') }; }""")
 PAGINAS = ('/noticias/', '/hermandades/', '/semana-santa/sevilla/', '/en-la-calle/sevilla/')
 with sync_playwright() as p:
     br = p.chromium.launch()
@@ -65,6 +65,31 @@ with sync_playwright() as p:
                     pg.evaluate(f'scrollTo(0, {y})'); pg.wait_for_timeout(350)
                     osm = pg.evaluate(RECT, '.oc-calle-osm')[0]; fijos = pg.evaluate(RECT, '.oc-cunao-btn:not(.is-oculto), .oc-arriba.is-visible')
                     check(not any(choca(osm, f) for f in fijos), f'{tag} plano a {y} px: erCuñao ni volver arriba tapan el crédito de OpenStreetMap')
+                # con la ficha de una cofradía abierta (En la calle) y con la hoja de sede abierta (plano de la portada):
+                # volver arriba no está, el reloj no queda bajo el panel y el botón de la ficha se puede tocar
+                if not quieto:
+                    pg.evaluate('scrollTo(0, 0)'); pg.locator('.oc-calle-item button').first.click(); pg.wait_for_timeout(900)
+                    pg.evaluate(f'scrollTo(0, {h * 3})'); pg.wait_for_timeout(450)
+                    check(not estado(pg)['ver'], f'{tag} ficha abierta: volver arriba no está')
+                    pg.evaluate("scrollTo(0, scrollY + document.querySelector('.oc-calle-mapa').getBoundingClientRect().bottom - innerHeight + 140)"); pg.wait_for_timeout(450)
+                    f = pg.evaluate("""() => { const g = e => { const r = e.getBoundingClientRect(); return [r.left, r.top, r.right, r.bottom]; };
+                      const p = document.querySelector('.oc-calle-ficha .oc-sheet-panel'), rl = document.querySelector('.oc-calle-reloj'), inp = rl.querySelector('input');
+                      const a = [...p.querySelectorAll('a.oc-btn')].find(x => /hermandad/i.test(x.textContent)); if (a) a.scrollIntoView({ block: 'nearest' });
+                      const b = a && g(a), cx = b && (b[0] + b[2]) / 2, cy = b && (b[1] + b[3]) / 2, t = b && document.elementFromPoint(cx, cy);
+                      return { panel: g(p), reloj: g(rl), inp: g(inp), boton: !!a, tocable: !!(t && a.contains(t)) }; }""")
+                    en_vista = f['reloj'][3] > 0 and f['reloj'][1] < h
+                    check(en_vista and not choca(f['reloj'], f['panel']), f'{tag} ficha abierta: el reloj a la vista y fuera del panel (reloj {[round(x) for x in f["reloj"]]}, panel {[round(x) for x in f["panel"]]})')
+                    check(f['inp'][2] - f['inp'][0] > 150, f'{tag} ficha abierta: la barra de la hora entera ({round(f["inp"][2] - f["inp"][0])} px)')
+                    check(f['boton'] and f['tocable'], f'{tag} ficha abierta: «Ver la hermandad» se puede tocar (nada encima)')
+                    # hoja de sede en el plano de la portada
+                    pg.evaluate("sessionStorage.setItem('oc-colg', '1')"); pg.goto(BASE + '/#sevilla', wait_until='networkidle'); pg.wait_for_timeout(2000)
+                    s = pg.evaluate("""async () => { const s = document.querySelector('.oc-pl-sede'); for (let k = 0; k < 8 && document.querySelector('[data-sede-hoja]').hidden; k++) { s.dispatchEvent(new MouseEvent('click', { bubbles: true })); await new Promise(r => setTimeout(r, 450)); }
+                      const l = document.querySelector('[data-sede-hoja] .oc-sede-lista button'); if (l) { l.click(); await new Promise(r => setTimeout(r, 350)); }
+                      const v = document.querySelector('[data-sede-hoja] .oc-sede-cuerpo > .oc-btn'), r = v.getBoundingClientRect(), t = document.elementFromPoint((r.left + r.right) / 2, (r.top + r.bottom) / 2);
+                      const ar = getComputedStyle(document.querySelector('[data-arriba]')), rj = document.querySelector('.oc-colg-reloj');
+                      const rr = rj && rj.getClientRects().length ? rj.getBoundingClientRect() : null;
+                      return { ver: r.top >= 0 && r.bottom <= innerHeight, tocable: !!(t && v.contains(t)), arriba: ar.display !== 'none' && ar.visibility === 'visible', reloj: rr ? [rr.left, rr.top, rr.right, rr.bottom] : null, boton: [r.left, r.top, r.right, r.bottom] }; }""")
+                    check(s['ver'] and s['tocable'] and not s['arriba'] and not (s['reloj'] and choca(s['reloj'], s['boton'])), f'{tag} hoja de sede: «Ver su ficha» a la vista y tocable, sin volver arriba ni reloj encima')
                 check(pg.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') <= 0, f'{tag}: sin desbordamiento')
                 check(not err, f'{tag}: sin errores' + ('' if not err else ': ' + err[0]))
                 ctx.close()
