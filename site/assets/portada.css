@@ -54,7 +54,7 @@
 /* mientras carga la foto no se ve su texto alternativo */
 .oc-sede-dip img { color: transparent; }
 /* «Ver su ficha» siempre a la vista: se queda al pie de la hoja mientras se desliza el contenido */
-.oc-sede-hoja .oc-sede-cuerpo > .oc-btn { position: sticky; bottom: 0; z-index: 1; box-shadow: 0 -14px 14px -2px var(--surface); }
+.oc-sede-hoja .oc-sede-cuerpo > .oc-btn { position: sticky; bottom: 0; z-index: 1; box-shadow: 0 -14px 14px -2px var(--surface), 0 calc(24px + env(safe-area-inset-bottom)) 0 0 var(--surface); }  /* la segunda tapa el relleno del pie del panel */
 /* móvil en horizontal: más hoja y menos foto */
 @media (max-height: 500px) {
   .oc-sede-dip img, .oc-sede-foto.is-naz { max-height: 22dvh; }
