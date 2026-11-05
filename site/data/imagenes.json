@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T09:31:19.263Z",
+ "generado": "2026-11-05T10:24:27.172Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3774,6 +3774,25 @@
     ],
     "titular": "Nuestra Señora de la Concepción Dolorosa",
     "foco": "50% 50%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1357,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "51% 37%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/huerto-malaga-cristo.jpg",
+    "tam": 352970,
+    "titular": "Nuestro Padre Jesús Orando en el Huerto"
    }
   },
   "gitanos-malaga": {
@@ -9572,6 +9591,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_y_Paciencia_M%C3%A1laga.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Dolores_y_Esperanza.jpg\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "huerto-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/huerto-malaga-cristo.jpg\"|352970|\"\"|\"51% 37%\"|\"https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg\"|\"\"|\"\"|[0.33,0.2,0.24,0.48]|\"50% 50%\""
   },
   "gitanos-malaga": {
    "w": 960,
