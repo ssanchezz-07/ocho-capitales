@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T13:14:02.345Z",
+ "generado": "2026-11-05T13:27:57.204Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8971,7 +8971,7 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1086,
+    "h": 1051,
     "widths": [
      160,
      480,
@@ -8982,10 +8982,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/correonistas/",
-    "foco": "50% 82%",
+    "foco": "50% 45%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/vineros-malaga-virgen.png",
-    "tam": 2894224,
+    "tam": 4655090,
     "titular": "Nuestra Señora del Traspaso y Soledad de Viñeros"
    }
   },
@@ -9045,7 +9045,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/cfdmisericordia/",
-    "foco": "50% 79%",
+    "foco": "50% 35%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/misericordia-malaga-cristo.png",
     "tam": 1933437,
@@ -9679,7 +9679,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/rcfusionadas",
-    "foco": "50% 85%",
+    "foco": "50% 50%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/vera-cruz-malaga-cristo.png",
     "tam": 1303292,
@@ -10557,7 +10557,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg\"|\"\"|\"\"|[0.46,0.05,0.15,0.3]|\"50% 62%\"|\"https://www.instagram.com/correonistas/\"|\"scripts/cedidas/malaga/vineros-malaga-virgen.png\"|2894224|\"\"|\"50% 82%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg\"|\"\"|\"\"|[0.46,0.05,0.15,0.3]|\"50% 62%\"|\"https://www.instagram.com/correonistas/\"|\"scripts/cedidas/malaga/vineros-malaga-virgen.png\"|4655090|\"\"|\"50% 45%\""
   },
   "santa-cruz-malaga": {
    "w": 960,
@@ -10577,7 +10577,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-cristo.png\"|1933437|\"\"|\"50% 79%\"|\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-virgen.png\"|14515075|\"\"|\"50% 64%\""
+   "firma": "\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-cristo.png\"|1933437|\"\"|\"50% 35%\"|\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-virgen.png\"|14515075|\"\"|\"50% 64%\""
   },
   "esperanza-malaga": {
    "w": 960,
@@ -10617,7 +10617,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-cristo.png\"|1303292|\"\"|\"50% 85%\"|\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-virgen.png\"|1952036|\"\"|\"50% 38%\""
+   "firma": "\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-cristo.png\"|1303292|\"\"|\"50% 50%\"|\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-virgen.png\"|1952036|\"\"|\"50% 38%\""
   },
   "verdad-y-sagrario-malaga": {
    "w": 960,
