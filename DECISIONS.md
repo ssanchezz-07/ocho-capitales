@@ -514,8 +514,13 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 ## RETOMAR AQUÍ (5-nov, oc-diseno del sobremesa)
 Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta principal). Estado:
 - **Publicado con el sí de Pablo:** bandas y marchas (5faea1e), banda propia (3ec5d4b), nazareno, respaldo sin foto, barra y cabecera, imagineros (191a614..9c234d7), miniaturas del díptico y arreglos del auditor (9c234d7..25d4e55; e7c1ba6 ya auditado: NO APTO y luego APTO).
-- **Publicado también (5-nov, con el sí de Pablo):** hoja de sede (punto 3), plano y En la calle sin iniciales, medallón neutro y arreglos de los auditores (153430b..8e074a9; APTO de auditor-diseno y auditor-mapas). Pruebas: `tools/diseno/probar-hoja-sede.py` (170/170) y `probar-diptico.py` (52/52).
-- **Pendientes:** el díptico queda unos 11 px más bajo en las filas de capital e imagineros (subirlo al borde de arriba solo ahí); en el 404, la barra marca «Más» (`masAqui` falso en el 404); 4) Volver arriba (layout común: avisar a Coordinación), reloj y barra de la hora de 44 px (hoy mide 28 px de alto; en tableta erCuñao toca el reloj); la ficha nueva de la Soledad (Humildad) no tiene foto ni imagen para compartir propia: pasar `tools/diseno/og-respaldo.py`.
+- **Publicado también (5-nov, con el sí de Pablo):** hoja de sede (punto 3), plano y En la calle sin iniciales, medallón neutro y arreglos de los auditores (153430b..8e074a9; APTO de auditor-diseno y auditor-mapas). La prueba de la hoja de sede no cerraba la hoja entre sedes (selector equivocado); corregida, da 400/400 contra pages.dev con los tres casos.
+- **Publicado también (5-nov, con el sí de Pablo; última subida de esta tanda):** punto 4. Volver arriba en toda la web, reloj de En la calle de 44 px, crédito de OSM bajo la leyenda, erCuñao que se aparta del reloj, botones fijos al pie de la ficha de cofradía en el móvil y reloj acortado hasta el panel desde 600 px. APTO de auditor-diseno y auditor-mapas tras un NO APTO. Pruebas: `probar-arriba.py` 424/424 y `probar-hoja-sede.py` 400/400. **Orden de Pablo: parar aquí** hasta nuevo encargo.
+- **Pendientes:**
+  - La ficha nueva de la Soledad (Humildad) no tiene foto ni imagen para compartir propia: pasar `tools/diseno/og-respaldo.py`, solo si Pablo lo pide.
+  - El díptico queda unos 11 px más bajo en las filas de capital e imagineros: subirlo al borde de arriba solo ahí.
+  - En el 404, la barra marca «Más» (`masAqui` falso en el 404).
+  - Observaciones de los auditores: un fondo tenue tras el crédito de OSM (se mezcla con las calles y la ruta); unificar «Ver la hermandad» (ficha de En la calle) y «Ver su ficha» (hoja de sede); con la ficha abierta desde 600 px, los botones de zoom quedan bajo el panel (ya pasaba antes).
 - **Amparo (Sevilla, 8 nov):** es de gloria y no tiene ficha a propósito. En En la calle lleva el medallón neutro (`assets/naz/_neutro-<capital>.svg`), sin letra.
 
 ## Miniaturas del díptico y hoja de sede (4 y 5-nov, oc-diseno)
