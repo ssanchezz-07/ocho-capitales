@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T08:27:52.255Z",
+ "generado": "2026-11-05T08:38:20.517Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -2899,6 +2899,20 @@
    "licencia": "CC0",
    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "pagina": "https://commons.wikimedia.org/wiki/File:La_Reina_de_M%C3%A1laga,_la_Virgen_del_Roc%C3%ADo_en_la_Tribuna_de_los_Pobres.jpg"
+  },
+  "granada": {
+   "w": 960,
+   "h": 1354,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "escudo": false,
+   "autor": "Anonimo242002",
+   "licencia": "CC0",
+   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:CARTEL-SEMANA-SANTA-GRANADA-2013.jpg"
   },
   "cordoba": {
    "w": 960,
