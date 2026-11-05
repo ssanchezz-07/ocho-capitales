@@ -22,6 +22,7 @@ for (const c of D.capitales) {
   const q = C[c.slug];
   if (!c.cifra || !Number.isInteger(c.cifra.n) || !c.cifra.fuente || !url(c.cifra.fuente[1])) { mal(`${n}: no tiene cifra oficial de hermandades con fuente`); continue; }
   if (!q) { mal(`${n}: no está en tools/sources/cuadre-hermandades.json`); continue; }
+  for (const k of ['cortejos', 'sin_hermandad']) if (q[k] != null && !Array.isArray(q[k])) { mal(`${n}: «${k}» en cuadre-hermandades.json tiene que ser una lista`); q[k] = []; }
   const cortejos = q.cortejos || []; const vistos = new Set(); const antes = errores;
   for (const x of cortejos) {
     const h = HERM.get(x.slug), p = HERM.get(x.hermandad);
