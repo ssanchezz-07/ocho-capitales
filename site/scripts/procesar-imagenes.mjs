@@ -18,6 +18,8 @@ const CACHE = path.join(DIR, 'cache', 'orig');
 fs.mkdirSync(OUT_DIR, { recursive: true }); fs.mkdirSync(CACHE, { recursive: true });
 const UA = 'OchoCapitales/1.0 (https://github.com/ssanchezz-07/ocho-capitales; portal cofrade sin animo de lucro)';
 const WIDTHS = [160, 480, 960];
+// Las cabeceras de capital llenan hasta 1200 px de ancho (el doble en pantallas de alta densidad): también a 1600 y 1920 si el original da para ello
+const WIDTHS_CAP = [160, 480, 960, 1600, 1920];
 const ALL = process.argv.includes('--todo');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const prev = fs.existsSync(INDEX) && !ALL ? JSON.parse(fs.readFileSync(INDEX, 'utf8')) : { hermandades: {}, capitales: {} };
@@ -59,11 +61,13 @@ async function original(kind, slug, meta) {
   const title = fileTitle(meta.pagina) || meta.titulo;
   if (!title) throw new Error('sin título de archivo');
   // con recorte se parte del original completo: el titular ocupa solo una parte de la foto
-  const src = await sourceUrl(title, Array.isArray(meta.recorte) ? 0 : 1280);
+  // las cabeceras de capital, a 1920 (ver WIDTHS_CAP)
+  const ancho = Array.isArray(meta.recorte) ? 0 : kind === 'c' ? 1920 : 1280;
+  const src = await sourceUrl(title, ancho);
   if (!src) throw new Error('no encontrado en Commons');
   // La caché lleva el nombre del archivo de Commons: si una hermandad cambia de foto, no se reutiliza el original anterior
   const clave = title.replace(/^File:/, '').replace(/[^\w.-]+/g, '_').slice(0, 80);
-  return download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
+  return download(src, path.join(CACHE, `${kind}-${slug}-${clave}${Array.isArray(meta.recorte) ? '-grande' : kind === 'c' ? '-1920' : ''}${path.extname(new URL(src).pathname) || '.jpg'}`));
 }
 
 async function processOne(kind, slug, meta) {
@@ -76,9 +80,10 @@ async function processOne(kind, slug, meta) {
   const rc = Array.isArray(meta.recorte) ? { left: Math.round(meta.recorte[0] * fullW), top: Math.round(meta.recorte[1] * fullH), width: Math.round(meta.recorte[2] * fullW), height: Math.round(meta.recorte[3] * fullH) } : null;
   const base = () => { const s = sharp(orig, { failOn: 'none' }).rotate(); return rc ? s.extract(rc) : s; };
   const srcW = rc ? rc.width : fullW;
-  const widths = WIDTHS.filter((w, i) => w <= srcW || i === 0);
+  const ANCHOS = kind === 'c' ? WIDTHS_CAP : WIDTHS;
+  const widths = ANCHOS.filter((w, i) => w <= srcW || i === 0);
   // Entre 480 y 960 px de original, también una versión a su ancho natural: no se pierde nitidez en la ficha
-  if (srcW > widths.at(-1) + 60 && srcW < WIDTHS.at(-1)) widths.push(srcW);
+  if (srcW > widths.at(-1) + 60 && srcW < ANCHOS.at(-1)) widths.push(srcW);
   let outW = 0, outH = 0;
   for (const w of widths) {
     const file = path.join(OUT_DIR, `${kind}-${slug}-${w}.webp`);
@@ -88,6 +93,7 @@ async function processOne(kind, slug, meta) {
   }
   const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
   if (meta.foco && !out.escudo) out.foco = meta.foco;
+  if (kind === 'c') out.g1920 = true; // hecha con WIDTHS_CAP
   if (rc) out.recorte = meta.recorte;
   if (meta.local) Object.assign(out, { cedida: true, local: meta.local, tam: fs.statSync(path.join(SITE, meta.local)).size });
   return out;
@@ -116,8 +122,8 @@ let done = 0, fail = 0;
 for (const [kind, slug, meta] of jobs) {
   const bucket = kind === 'h' ? index.hermandades : index.capitales;
   if (kind === 'h' && retirada(meta, slug, 'ficha')) continue;
-  if (kind === 'c' && retirada(meta, null, 'capital')) { delete bucket[slug]; continue; } // foto de capital retirada: fuera del índice (sus webp se borran a mano)
-  if (bucket[slug] && bucket[slug].pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
+  if (kind === 'c' && retirada(meta, null, 'capital')) { if (bucket[slug] && bucket[slug].pagina === meta.pagina) delete bucket[slug]; continue; } // foto de capital retirada: fuera del índice (sus webp se borran a mano)
+  if (bucket[slug] && bucket[slug].pagina === meta.pagina && (kind !== 'c' || bucket[slug].g1920) && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
   try { bucket[slug] = await processOne(kind, slug, meta); done++; console.log('ok', kind, slug, bucket[slug].w + 'x' + bucket[slug].h); }
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }
   fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));

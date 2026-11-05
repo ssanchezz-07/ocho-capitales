@@ -258,7 +258,7 @@
       var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n, style: '--hc:' + h.hc });
       g.appendChild(el('circle', { 'class': 'oc-c-halo', r: '30' }));
       g.appendChild(el('circle', { 'class': 'oc-c-galon', r: '22' }));
-      if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', Object.assign({ href: h.img, 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, encuadre(h, 19))));  }
+      if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', Object.assign({ href: h.img, 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, encuadre(h, 19)))); }
       else { g.appendChild(el('circle', { 'class': 'oc-c-fondo', r: '19' })); var tx = el('text', { 'class': 'oc-c-ini', y: '7' }); tx.textContent = h.ini; g.appendChild(tx); }
       // nombre corto bajo el medallón (se ve al acercar el plano o al elegirla)
       var nom = el('text', { 'class': 'oc-c-nombre', y: '40' }); nom.textContent = h.n.length > 24 ? h.n.slice(0, 23).replace(/\s+\S*$/, '') + '…' : h.n; g.appendChild(nom);

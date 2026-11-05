@@ -60,6 +60,7 @@
   .oc-sede-dip img, .oc-sede-foto.is-naz { max-height: 22dvh; }
 }
 .oc-sede-foto.is-naz { aspect-ratio: 3 / 2; object-fit: cover; background: #13071d; }
+@media (max-height: 500px) { .oc-sede-foto.is-naz { width: auto; max-width: 100%; margin-inline: auto; object-fit: contain; } }  /* móvil en horizontal: el nazareno entero, no una franja del torso */
 /* en el móvil, la hoja se abre a media altura (el plano sigue a la vista) y se desliza por dentro; se cierra arrastrando la asa */
 @media (max-width: 759px) {
   .oc-sede-hoja .oc-sheet-panel { max-height: 62dvh; }
