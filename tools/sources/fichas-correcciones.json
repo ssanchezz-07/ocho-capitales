@@ -21,7 +21,14 @@
   "la-sangre-de-el-higueron-cordoba": {
    "fundacion": { "valor": "procesiona desde 2000; hermandad de pleno derecho en 2024", "fuente": "https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20240205/sangre-higueron-pasa-hermandad-pleno-derecho_172412.html", "nota": "«2005» no tenía respaldo" },
    "nombre_oficial": { "valor": "Hermandad del Santísimo Cristo de la Sangre, Nuestro Padre Jesús Nazareno de la Compasión y San Isidro Labrador", "fuente": "https://www.gentedepaz.es/la-sangre-del-higueron-ya-es-hermandad/" },
-   "titulares": { "valor": ["Santísimo Cristo de la Sangre", "Nuestro Padre Jesús Nazareno de la Compasión", "San Isidro Labrador"], "fuente": "https://www.gentedepaz.es/la-sangre-del-higueron-ya-es-hermandad/" }
+   "titulares": { "valor": ["Santísimo Cristo de la Sangre", "Nuestro Padre Jesús Nazareno de la Compasión", "San Isidro Labrador"], "fuente": "https://www.gentedepaz.es/la-sangre-del-higueron-ya-es-hermandad/" },
+   "sede": { "valor": "Parroquia de San Isidro Labrador (El Higuerón)", "fuente": "https://cordopolis.eldiario.es/cordoba-hoy/local/directo-sigue-directo-sabado-pasion_6_13106270_1120926.html", "nota": "5-nov: la sede era «El Higuerón», el barrio. No pertenece a la Agrupación, que no tiene ficha suya; Cordópolis, 28-mar-2026: la cruz de guía «ha abandonado la parroquia de San Isidro Labrador». De apoyo, la Wikipedia (Hermandad de la Compasión y Semana Santa en Córdoba, Vísperas)" }
+  },
+  "la-o-cordoba": {
+   "sede": { "valor": "Parroquia de Nuestra Señora de la Aurora", "fuente": "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf", "nota": "5-nov: la sede era «Barrio de Fátima»; programa oficial de horarios e itinerarios 2026 de la Agrupación, p. 2 (Sábado de Pasión: «La O · Parroquia de Nuestra Señora de la Aurora»)" }
+  },
+  "la-lanzada-huelva": {
+   "titulares_renombrar": { "María Santísima titular": { "nombre": "Nuestra Señora de los Dolores", "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/" } }
   },
   "la-clemencia-jaen": { "fundacion": { "valor": "1593 (refundada como cofradía de penitencia en 1945)", "fuente": "https://clemenciajaen.wixsite.com/clemenciajaen/información", "nota": "web oficial: 17-3-1593; resuelve el conflicto 1945/1593" } },
   "el-resucitado-jaen": { "fundacion": { "valor": "1987", "fuente": "https://web.archive.org/web/20260124045627/https://cofradiasjaen.org/resucitado/", "nota": "acta de la Agrupación de Cofradías de Jaén de 4-4-1987; el 1982 solo lo da Wikipedia" } },
