@@ -393,6 +393,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de la Soledad",
     "foco": "41% 33%"
+   },
+   "virgen": {
+    "autor": "Dulce Nombre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddulcenombre/",
+    "local": "scripts/cedidas/malaga/dulce-nombre-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Dulce Nombre",
+    "titular": "María Santísima del Dulce Nombre",
+    "permiso": "Origen: https://www.instagram.com/p/DdZFZnjt12N/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 38%"
    }
   },
   "salutacion-malaga": {
@@ -526,6 +537,17 @@
    }
   },
   "rocio-malaga": {
+   "cristo": {
+    "autor": "Rocío (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiadelrocio/",
+    "local": "scripts/cedidas/malaga/rocio-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario",
+    "titular": "Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario",
+    "permiso": "Origen: https://www.instagram.com/p/DcGYEHnCmPf/ (imagen 1). Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 18%"
+   },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Rocio_coronada.jpg",
     "titulo": "File:Virgen del Rocio coronada.jpg",
@@ -2238,6 +2260,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Jesús de Medinaceli",
     "foco": "50% 0%"
+   },
+   "virgen": {
+    "autor": "Medinaceli (Martiricos, Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/medinaceli_mlg/",
+    "local": "scripts/cedidas/malaga/medinaceli-martiricos-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Candelaria",
+    "titular": "María Santísima de la Candelaria",
+    "permiso": "Origen: https://www.instagram.com/p/DUIXKGdDFxy/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 76%"
    }
   },
   "el-amor-sevilla": {
@@ -2818,28 +2851,6 @@
    }
   },
   "sagrada-cena-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cena_Nazareno.jpg",
-    "titulo": "File:Cena Nazareno.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": ""
-   },
-   "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cena_Trono_4.jpg",
-    "titulo": "File:Cena Trono 4.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de la Paz",
-    "recorte": [
-     0.385,
-     0.17,
-     0.2,
-     0.4
-    ]
-   },
    "cristo": {
     "autor": "Sagrada Cena (Málaga)",
     "licencia": "",
@@ -2850,6 +2861,25 @@
     "titular": "Sagrada Cena Sacramental",
     "foco": "50% 35%",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @lacenademalaga (https://www.instagram.com/p/DfCJqJwDOHD/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+   },
+   "virgen": {
+    "autor": "Sagrada Cena (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lacenademalaga",
+    "local": "scripts/cedidas/malaga/sagrada-cena-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Paz",
+    "titular": "María Santísima de la Paz",
+    "permiso": "Origen: https://www.instagram.com/p/De3rZotDL7L/ (imagen 4). Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 18%"
+   },
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cena_Nazareno.jpg",
+    "titulo": "File:Cena Nazareno.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": ""
    }
   },
   "mena-malaga": {
@@ -3573,6 +3603,17 @@
      0.24
     ],
     "foco": "50% 38%"
+   },
+   "virgen": {
+    "autor": "Pasión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/archipasionmlg/",
+    "local": "scripts/cedidas/malaga/pasion-malaga-virgen.webp",
+    "titulo": "Cedida: María Santísima del Amor Doloroso",
+    "titular": "María Santísima del Amor Doloroso",
+    "permiso": "Origen: https://www.instagram.com/p/DOldtD0DDu3/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 54%"
    }
   },
   "estudiantes-malaga": {
@@ -3644,6 +3685,17 @@
      0.3
     ],
     "foco": "50% 62%"
+   },
+   "virgen": {
+    "autor": "Viñeros (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/correonistas/",
+    "local": "scripts/cedidas/malaga/vineros-malaga-virgen.png",
+    "titulo": "Cedida: Nuestra Señora del Traspaso y Soledad de Viñeros",
+    "titular": "Nuestra Señora del Traspaso y Soledad de Viñeros",
+    "permiso": "Origen: https://www.instagram.com/p/DXG5qHKDMxe/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil. Se recortó el 9,5 % inferior, donde iba el texto «Hermandad Sacramental de Viñeros».",
+    "foco": "50% 82%"
    }
   },
   "santa-cruz-malaga": {
@@ -3674,14 +3726,27 @@
    }
   },
   "misericordia-malaga": {
+   "cristo": {
+    "autor": "Misericordia (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cfdmisericordia/",
+    "local": "scripts/cedidas/malaga/misericordia-malaga-cristo.png",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Misericordia",
+    "titular": "Nuestro Padre Jesús de la Misericordia",
+    "permiso": "Origen: https://www.instagram.com/p/DVVc442iB1e/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil. Se recortó el 14 % inferior, donde iba el escudo de la cofradía.",
+    "foco": "50% 79%"
+   },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Granpoder.jpg",
-    "titulo": "File:Granpoder.jpg",
-    "autor": "Alberto Medina Kilgore",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "autor": "Misericordia (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cfdmisericordia/",
+    "local": "scripts/cedidas/malaga/misericordia-malaga-virgen.png",
+    "titulo": "Cedida: Nuestra Señora del Gran Poder",
     "titular": "Nuestra Señora del Gran Poder",
-    "foco": "50% 40%"
+    "permiso": "Origen: https://www.instagram.com/p/DdPHD8fNsUd/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil. Se recortó el 13 % inferior, donde iba el escudo de la cofradía.",
+    "foco": "50% 64%"
    }
   },
   "esperanza-malaga": {
@@ -4079,6 +4144,17 @@
    }
   },
   "vera-cruz-malaga": {
+   "cristo": {
+    "autor": "Reales Cofradías Fusionadas (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/rcfusionadas",
+    "local": "scripts/cedidas/malaga/vera-cruz-malaga-cristo.png",
+    "titulo": "Cedida: Santísimo Cristo de la Vera+Cruz y Sangre",
+    "titular": "Santísimo Cristo de la Vera+Cruz y Sangre",
+    "permiso": "Origen: https://www.instagram.com/p/DWmuNGkDCSm/ (imagen 1). Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil. Se recortó el 10 % inferior, donde iba el logo de las Reales Cofradías Fusionadas.",
+    "foco": "50% 85%"
+   },
    "virgen": {
     "autor": "Reales Cofradías Fusionadas (Málaga)",
     "licencia": "",
@@ -4102,6 +4178,17 @@
     "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @verdadysagrario (https://www.instagram.com/p/DVMRIXECJQ7/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
     "foco": "50% 42%"
+   },
+   "virgen": {
+    "autor": "Verdad y Sagrario (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/verdadysagrario",
+    "local": "scripts/cedidas/malaga/verdad-y-sagrario-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Sagrario",
+    "titular": "María Santísima del Sagrario",
+    "permiso": "Origen: https://www.instagram.com/p/Debev8nCFsM/ (imagen 2). Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 38%"
    }
   },
   "luz-y-mar-malaga": {
@@ -4142,6 +4229,17 @@
    }
   },
   "dolores-del-puerto-de-la-torre-malaga": {
+   "cristo": {
+    "autor": "Dolores del Puerto de la Torre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresptotorre/",
+    "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de Hermandad y Caridad",
+    "titular": "Santísimo Cristo de Hermandad y Caridad",
+    "permiso": "Origen: https://www.instagram.com/p/Dc-o42ot83n/. Publicada por la propia hermandad sin fotógrafo citado (ni en el pie ni en etiquetas ni como coautor). Pablo, 5-nov: «ESTOS CASOS PUBLICAR DIRECTAMENTE»; crédito a la hermandad con enlace a su perfil.",
+    "foco": "50% 45%"
+   },
    "virgen": {
     "autor": "Dolores del Puerto de la Torre (Málaga)",
     "licencia": "",

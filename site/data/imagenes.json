@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T11:54:43.997Z",
+ "generado": "2026-11-05T13:14:02.345Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3639,6 +3639,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Soledad.jpg",
     "titular": "Nuestro Padre Jesús de la Soledad",
     "foco": "41% 33%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Dulce Nombre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddulcenombre/",
+    "foco": "50% 38%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/dulce-nombre-malaga-virgen.jpg",
+    "tam": 1797773,
+    "titular": "María Santísima del Dulce Nombre"
    }
   },
   "salutacion-malaga": {
@@ -3868,6 +3887,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Rocio_coronada.jpg",
     "titular": "María Santísima del Rocío Coronada",
     "foco": "50% 41%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Rocío (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiadelrocio/",
+    "foco": "50% 18%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/rocio-malaga-cristo.jpg",
+    "tam": 323102,
+    "titular": "Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario"
    }
   },
   "penas-malaga": {
@@ -6617,6 +6655,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:JES%C3%9AS_DE_MEDINACELI_DE_M%C3%81LAGA.jpg",
     "titular": "Jesús de Medinaceli",
     "foco": "50% 0%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Medinaceli (Martiricos, Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/medinaceli_mlg/",
+    "foco": "50% 76%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/medinaceli-martiricos-malaga-virgen.jpg",
+    "tam": 332015,
+    "titular": "María Santísima de la Candelaria"
    }
   },
   "el-amor-sevilla": {
@@ -7568,23 +7625,21 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1281,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cena_Trono_4.jpg",
-    "recorte": [
-     0.385,
-     0.17,
-     0.2,
-     0.4
-    ],
+    "autor": "Sagrada Cena (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lacenademalaga",
+    "foco": "50% 18%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/sagrada-cena-malaga-virgen.jpg",
+    "tam": 3837453,
     "titular": "María Santísima de la Paz"
    },
    "cristo": {
@@ -8786,6 +8841,25 @@
     ],
     "titular": "Nuestro Padre Jesús de la Pasión",
     "foco": "50% 38%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pasión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/archipasionmlg/",
+    "foco": "50% 54%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/pasion-malaga-virgen.webp",
+    "tam": 423548,
+    "titular": "María Santísima del Amor Doloroso"
    }
   },
   "estudiantes-malaga": {
@@ -8894,6 +8968,25 @@
     ],
     "titular": "Nuestro Padre Jesús Nazareno de Viñeros",
     "foco": "50% 62%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1086,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Viñeros (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/correonistas/",
+    "foco": "50% 82%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/vineros-malaga-virgen.png",
+    "tam": 2894224,
+    "titular": "Nuestra Señora del Traspaso y Soledad de Viñeros"
    }
   },
   "santa-cruz-malaga": {
@@ -8938,7 +9031,46 @@
     "titular": "Santísimo Cristo de la Victoria"
    }
   },
-  "misericordia-malaga": {},
+  "misericordia-malaga": {
+   "cristo": {
+    "w": 960,
+    "h": 1101,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Misericordia (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cfdmisericordia/",
+    "foco": "50% 79%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/misericordia-malaga-cristo.png",
+    "tam": 1933437,
+    "titular": "Nuestro Padre Jesús de la Misericordia"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1113,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Misericordia (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cfdmisericordia/",
+    "foco": "50% 64%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/misericordia-malaga-virgen.png",
+    "tam": 14515075,
+    "titular": "Nuestra Señora del Gran Poder"
+   }
+  },
   "esperanza-malaga": {
    "virgen": {
     "w": 960,
@@ -9533,6 +9665,25 @@
     "tam": 1952036,
     "titular": "Nuestra Señora del Mayor Dolor Reina de los Ángeles",
     "foco": "50% 38%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1080,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Reales Cofradías Fusionadas (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/rcfusionadas",
+    "foco": "50% 85%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/vera-cruz-malaga-cristo.png",
+    "tam": 1303292,
+    "titular": "Santísimo Cristo de la Vera+Cruz y Sangre"
    }
   },
   "verdad-y-sagrario-malaga": {
@@ -9554,6 +9705,25 @@
     "tam": 866181,
     "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
     "foco": "50% 42%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Verdad y Sagrario (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/verdadysagrario",
+    "foco": "50% 38%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/verdad-y-sagrario-malaga-virgen.jpg",
+    "tam": 818074,
+    "titular": "María Santísima del Sagrario"
    }
   },
   "luz-y-mar-malaga": {
@@ -9636,6 +9806,25 @@
     "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-virgen.jpg",
     "tam": 321230,
     "titular": "Nuestra Señora de los Dolores"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Dolores del Puerto de la Torre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresptotorre/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-cristo.jpg",
+    "tam": 1046572,
+    "titular": "Santísimo Cristo de Hermandad y Caridad"
    }
   }
  },
@@ -9700,6 +9889,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Pasi%C3%B3n_y_Muerte.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Buen_Aire.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "dulce-nombre-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Soledad.jpg\"|\"\"|\"\"|\"\"|\"41% 33%\"|\"https://www.instagram.com/hermandaddulcenombre/\"|\"scripts/cedidas/malaga/dulce-nombre-malaga-virgen.jpg\"|1797773|\"\"|\"50% 38%\""
+  },
   "salutacion-malaga": {
    "w": 960,
    "h": 640,
@@ -9749,6 +9948,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/cofradiadelacolumna\"|\"scripts/cedidas/malaga/gitanos-malaga-cristo.jpg\"|365136|\"\"|\"50% 25%\"|\"https://www.instagram.com/cofradiadelacolumna\"|\"scripts/cedidas/malaga/gitanos-malaga-virgen.jpg\"|323820|\"\"|\"\""
+  },
+  "rocio-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/cofradiadelrocio/\"|\"scripts/cedidas/malaga/rocio-malaga-cristo.jpg\"|323102|\"\"|\"50% 18%\"|\"https://commons.wikimedia.org/wiki/File:Virgen_del_Rocio_coronada.jpg\"|\"\"|\"\"|\"\"|\"50% 41%\""
   },
   "penas-malaga": {
    "w": 960,
@@ -10100,6 +10309,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Expiracion_Jaen.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Siete_Palabras_2008.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "medinaceli-martiricos-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:JES%C3%9AS_DE_MEDINACELI_DE_M%C3%81LAGA.jpg\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/medinaceli_mlg/\"|\"scripts/cedidas/malaga/medinaceli-martiricos-malaga-virgen.jpg\"|332015|\"\"|\"50% 76%\""
+  },
   "el-amor-sevilla": {
    "w": 960,
    "h": 640,
@@ -10218,7 +10437,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/lacenademalaga\"|\"scripts/cedidas/malaga/sagrada-cena-malaga-cristo.jpg\"|1537565|\"\"|\"50% 35%\"|\"https://commons.wikimedia.org/wiki/File:Cena_Trono_4.jpg\"|\"\"|\"\"|[0.385,0.17,0.2,0.4]|\"\""
+   "firma": "\"https://www.instagram.com/lacenademalaga\"|\"scripts/cedidas/malaga/sagrada-cena-malaga-cristo.jpg\"|1537565|\"\"|\"50% 35%\"|\"https://www.instagram.com/lacenademalaga\"|\"scripts/cedidas/malaga/sagrada-cena-malaga-virgen.jpg\"|3837453|\"\"|\"50% 18%\""
   },
   "mena-malaga": {
    "w": 960,
@@ -10300,6 +10519,16 @@
    ],
    "firma": "\"https://www.instagram.com/doloresdlpuente\"|\"scripts/cedidas/malaga/dolores-del-puente-malaga-cristo.jpg\"|181131|\"\"|\"50% 0%\"|\"https://www.instagram.com/doloresdlpuente\"|\"scripts/cedidas/malaga/dolores-del-puente-malaga-virgen.jpg\"|580430|\"\"|\"50% 38%\""
   },
+  "pasion-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Pasion_-_Catedral_de_Malaga_2.jpg\"|\"\"|\"\"|[0.38,0.49,0.24,0.24]|\"50% 38%\"|\"https://www.instagram.com/archipasionmlg/\"|\"scripts/cedidas/malaga/pasion-malaga-virgen.webp\"|423548|\"\"|\"50% 54%\""
+  },
   "estudiantes-malaga": {
    "w": 960,
    "h": 640,
@@ -10320,6 +10549,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nueva_Esperanza_-_Trono_del_Nazareno.jpg\"|\"\"|\"\"|[0.36,0.07,0.2,0.4]|\"50% 42%\"|\"https://www.instagram.com/hermandadnuevaesperanza/\"|\"scripts/cedidas/malaga/nueva-esperanza-malaga-virgen.jpg\"|4091588|\"\"|\"50% 67%\""
   },
+  "vineros-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg\"|\"\"|\"\"|[0.46,0.05,0.15,0.3]|\"50% 62%\"|\"https://www.instagram.com/correonistas/\"|\"scripts/cedidas/malaga/vineros-malaga-virgen.png\"|2894224|\"\"|\"50% 82%\""
+  },
   "santa-cruz-malaga": {
    "w": 960,
    "h": 640,
@@ -10329,6 +10568,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/santacruzmalaga\"|\"scripts/cedidas/malaga/santa-cruz-malaga-cristo.jpg\"|246187|\"\"|\"50% 30%\"|\"https://commons.wikimedia.org/wiki/File:Santa_Cruz_Trono_2.jpg\"|\"\"|\"\"|[0.25,0.1,0.5,0.45]|\"\""
+  },
+  "misericordia-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-cristo.png\"|1933437|\"\"|\"50% 79%\"|\"https://www.instagram.com/cfdmisericordia/\"|\"scripts/cedidas/malaga/misericordia-malaga-virgen.png\"|14515075|\"\"|\"50% 64%\""
   },
   "esperanza-malaga": {
    "w": 960,
@@ -10360,6 +10609,26 @@
    ],
    "firma": "\"https://www.instagram.com/monte.calvario\"|\"scripts/cedidas/malaga/monte-calvario-malaga-cristo.jpg\"|2423395|\"\"|\"35% 25%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Calvario_(13984618325).jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "vera-cruz-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-cristo.png\"|1303292|\"\"|\"50% 85%\"|\"https://www.instagram.com/rcfusionadas\"|\"scripts/cedidas/malaga/vera-cruz-malaga-virgen.png\"|1952036|\"\"|\"50% 38%\""
+  },
+  "verdad-y-sagrario-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/verdadysagrario\"|\"scripts/cedidas/malaga/verdad-y-sagrario-malaga-cristo.jpg\"|866181|\"\"|\"50% 42%\"|\"https://www.instagram.com/verdadysagrario\"|\"scripts/cedidas/malaga/verdad-y-sagrario-malaga-virgen.jpg\"|818074|\"\"|\"50% 38%\""
+  },
   "luz-y-mar-malaga": {
    "w": 960,
    "h": 640,
@@ -10369,6 +10638,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/hdaddesanandres\"|\"scripts/cedidas/malaga/luz-y-mar-malaga-cristo.jpg\"|180011|\"\"|\"50% 14%\"|\"https://www.instagram.com/hdaddesanandres\"|\"scripts/cedidas/malaga/luz-y-mar-malaga-virgen.jpg\"|1595278|\"\"|\"50% 34%\""
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/doloresptotorre/\"|\"scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-cristo.jpg\"|1046572|\"\"|\"50% 45%\"|\"https://www.instagram.com/doloresptotorre/\"|\"scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-virgen.jpg\"|321230|\"\"|\"50% 34%\""
   }
  }
 }
