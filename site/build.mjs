@@ -1915,8 +1915,8 @@ function dipCalle(h) {
   const t = (IMGX.titulares || {})[h.slug] || {}, out = {};
   for (const [k, tipo] of [['c', 'cristo'], ['v', 'virgen'], ['j', 'juntos']]) {
     const x = d[tipo]; if (!x || !x.local) continue;
-    // la hoja ocupa todo el ancho del móvil (unos 1000 px reales en pantallas de alta densidad): la versión más grande
-    const w = x.sizes.at(-1);
+    // una sola foto ocupa todo el ancho del móvil (unos 1000 px reales en pantallas de alta densidad): la versión más grande; en el par, cada una media hoja
+    const w = d.cristo && d.cristo.local && d.virgen && d.virgen.local && tipo !== 'juntos' ? (x.sizes.find((v) => v >= 480) || x.sizes.at(-1)) : x.sizes.at(-1);
     out[k] = { src: u(localUrl(x, w)), ...(t[tipo] && t[tipo].foco ? { foco: t[tipo].foco } : {}), alt: `${String(x.titular || h.nombre).split(',')[0]}, ${h.nombre}`, credito: (x.cedida ? `Foto: ${x.autor}` : [x.autor || 'Autor en Wikimedia Commons', x.licencia].filter(Boolean).join(', ')) + (x.recorte ? ' (recortada)' : ''), url: x.pagina || '' };
   }
   return Object.keys(out).length ? { dip: out } : {};
