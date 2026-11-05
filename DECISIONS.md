@@ -514,9 +514,9 @@ Ojo: el puerto 8093 lo usa el servidor de otra sesión; para probar, el 8097.
 ## RETOMAR AQUÍ (5-nov, oc-diseno del sobremesa)
 Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta principal). Estado:
 - **Publicado con el sí de Pablo:** bandas y marchas (5faea1e), banda propia (3ec5d4b), nazareno, respaldo sin foto, barra y cabecera, imagineros (191a614..9c234d7), miniaturas del díptico y arreglos del auditor (9c234d7..25d4e55; e7c1ba6 ya auditado: NO APTO y luego APTO).
-- **En la rama, sin subir:** 9d0d4a6, hoja de sede (punto 3) y plano sin iniciales (lo que faltaba del punto 1). En auditoría con auditor-diseno y auditor-mapas; después, pedir el sí de Pablo.
-- **Pendientes:** el díptico queda unos 11 px más bajo en las filas de capital e imagineros (subirlo al borde de arriba solo ahí); en el 404, la barra marca «Más» (`masAqui` falso en el 404); 4) Volver arriba (layout común: avisar a Coordinación), reloj y barra de la hora de 44 px (hoy mide 28 px de alto; en tableta erCuñao toca el reloj).
-- **Para Datos:** la extraordinaria «8 nov · Amparo» (Sevilla) apunta a `amparo-sevilla`, que no está en la base: sale con la letra «R» en En la calle, sin nazareno.
+- **Publicado también (5-nov, con el sí de Pablo):** hoja de sede (punto 3), plano y En la calle sin iniciales, medallón neutro y arreglos de los auditores (153430b..8e074a9; APTO de auditor-diseno y auditor-mapas). Pruebas: `tools/diseno/probar-hoja-sede.py` (170/170) y `probar-diptico.py` (52/52).
+- **Pendientes:** el díptico queda unos 11 px más bajo en las filas de capital e imagineros (subirlo al borde de arriba solo ahí); en el 404, la barra marca «Más» (`masAqui` falso en el 404); 4) Volver arriba (layout común: avisar a Coordinación), reloj y barra de la hora de 44 px (hoy mide 28 px de alto; en tableta erCuñao toca el reloj); la ficha nueva de la Soledad (Humildad) no tiene foto ni imagen para compartir propia: pasar `tools/diseno/og-respaldo.py`.
+- **Amparo (Sevilla, 8 nov):** es de gloria y no tiene ficha a propósito. En En la calle lleva el medallón neutro (`assets/naz/_neutro-<capital>.svg`), sin letra.
 
 ## Miniaturas del díptico y hoja de sede (4 y 5-nov, oc-diseno)
 - **Díptico 3:2 en las miniaturas:** la caja sigue de 64×64 (40×40 en el buscador) y la foto entera va dentro, en 3:2 y centrada. *Descartado:* ensanchar la caja a 96 px. Se veía mejor la foto, pero el texto de esas tarjetas empezaba más a la derecha (columna desigual) y rompía la regla de Pulido (solo cambia la imagen, no la tarjeta).
