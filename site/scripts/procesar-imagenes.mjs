@@ -116,6 +116,7 @@ let done = 0, fail = 0;
 for (const [kind, slug, meta] of jobs) {
   const bucket = kind === 'h' ? index.hermandades : index.capitales;
   if (kind === 'h' && retirada(meta, slug, 'ficha')) continue;
+  if (kind === 'c' && retirada(meta, null, 'capital')) { delete bucket[slug]; continue; } // foto de capital retirada: fuera del índice (sus webp se borran a mano)
   if (bucket[slug] && bucket[slug].pagina === meta.pagina && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
   try { bucket[slug] = await processOne(kind, slug, meta); done++; console.log('ok', kind, slug, bucket[slug].w + 'x' + bucket[slug].h); }
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }

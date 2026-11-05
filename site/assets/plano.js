@@ -6,6 +6,12 @@
   var NS = 'http://www.w3.org/2000/svg';
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var el = function (t, a, padre) { var n = document.createElementNS(NS, t); for (var k in a || {}) n.setAttribute(k, a[k]); if (padre) padre.appendChild(n); return n; };
+  // Encuadre de la foto en el punto redondo: el mismo foco (object-position) que su miniatura en el resto de la web
+  var encuadre = function (h, r) {
+    var d = 2 * r; if (!h.f || !h.ar) return { x: -r, y: -r, width: d, height: d };
+    var f = String(h.f).split(' '), px = parseFloat(f[0]) / 100, py = parseFloat(f[1]) / 100, w = h.ar < 1 ? d : d * h.ar, hh = h.ar < 1 ? d / h.ar : d;
+    return { x: +(-r - px * (w - d)).toFixed(2), y: +(-r - py * (hh - d)).toFixed(2), width: +w.toFixed(2), height: +hh.toFixed(2) };
+  };
   var hhmm = function (m) { m = ((Math.round(m) % 1440) + 1440) % 1440; return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + (m % 60)).slice(-2); };
   var ruta = function (h) { return h.t.paso || h.t.cruz; };
   function enTramo(pts, t) {
@@ -109,7 +115,7 @@
         var a = el('a', { 'class': 'oc-pl-marca', href: o.enlace ? o.enlace(h) : '#', 'aria-label': h.n, 'data-s': h.s }, gM);
         el('circle', { 'class': 'oc-pl-sombra', r: '22', cy: '2' }, a);
         el('circle', { 'class': 'oc-pl-galon', r: '21' }, a);
-        if (h.img) { var cp = el('clipPath', { id: 'oc-pl-' + h.s }, a); el('circle', { r: '18' }, cp); el('image', { href: h.img, x: '-18', y: '-18', width: '36', height: '36', 'clip-path': 'url(#oc-pl-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, a); }
+        if (h.img) { var cp = el('clipPath', { id: 'oc-pl-' + h.s }, a); el('circle', { r: '18' }, cp); el('image', Object.assign({ href: h.img, 'clip-path': 'url(#oc-pl-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, encuadre(h, 18)), a); }
         else { el('circle', { 'class': 'oc-pl-fondo', r: '18' }, a); el('text', { 'class': 'oc-pl-ini', y: '7' }, a).textContent = h.ini; }
         el('text', { 'class': 'oc-pl-nombre', y: '38' }, a).textContent = h.n.length > 22 ? h.n.slice(0, 21).replace(/\s+\S*$/, '') + '…' : h.n;
         marcas[h.s] = a;

@@ -1236,14 +1236,13 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-entry-img { width: 64px; height: 64px; border-radius: 14px; }
 .oc-entry-img.is-blank { background: radial-gradient(120% 90% at 30% 15%, color-mix(in srgb, var(--c) 80%, #fff 10%), var(--c-plate) 70%); border: 0; box-shadow: inset 0 0 0 1px rgb(240 215 156 / .5), inset 0 0 0 4px var(--c-plate), inset 0 0 0 5px rgb(240 215 156 / .35); }
 .oc-entry-img.is-blank span { font: 400 2.1rem/1 var(--display); color: #f0d79c; text-transform: uppercase; text-shadow: 0 1px 1px rgb(0 0 0 / .45); }
-/* Sin foto: la lámina de su nazareno, más cerca para que se vean los colores del hábito */
-.oc-entry-img.is-naz img, .ix-foto.is-naz img, .oc-sr-thumb img[src*="/assets/naz/"] { transform: scale(1.45); transform-origin: 50% 46%; }
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) { .oc-entry:hover .oc-entry-img.is-naz img { transform: scale(1.5); } }
+/* Hermandad sin foto: su medallón cuadrado entero (el nazareno de pie sobre el terciopelo de su capital), sin ampliar ni recortar, también al pasar el ratón */
+.oc-entry-img.is-naz img, .ix-foto.is-naz img, .oc-sr-thumb img[src*="/assets/naz/"] { object-fit: contain; object-position: 50% 50%; transform: none; }
 .oc-entry-img.is-escudo { border-radius: 14px; }
 .oc-entry-img.is-dip { display: grid; place-items: center; background: none; border-radius: 0; overflow: visible; }
 .oc-entry-img.is-dip img { height: auto; aspect-ratio: 3 / 2; border-radius: 10px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 55%, transparent); }
 .oc-entry { transition: background-color 160ms var(--ease-out); border-radius: 2px; }
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) { .oc-entry:hover .oc-entry-img img { transform: scale(1.05); } .oc-entry-img img { transition: transform 420ms var(--ease-out); } }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) { .oc-entry:hover .oc-entry-img:not(.is-naz) img { transform: scale(1.05); } .oc-entry-img img { transition: transform 420ms var(--ease-out); } }
 
 /* Ficha de hermandad: galón de su capital, titular de cartel y datos agrupados en una tarjeta (como los ajustes de iOS) */
 .oc-kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 12px; font: 700 .78rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold-ink); }

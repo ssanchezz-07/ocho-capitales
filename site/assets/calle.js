@@ -10,6 +10,12 @@
   var fechas = {}; try { fechas = JSON.parse(sec.getAttribute('data-fechas')); } catch (e) { }
   var D = null, dia = null, T = 0, vb = { x: 0, y: 0, w: 1000, h: 1000 }, capas = {}, yo = null, sel = null;
   var el = function (t, a) { var n = document.createElementNS(NS, t); for (var k in a) n.setAttribute(k, a[k]); return n; };
+  // Encuadre de la foto en el punto redondo: el mismo foco (object-position) que su miniatura en el resto de la web
+  var encuadre = function (h, r) {
+    var d = 2 * r; if (!h.f || !h.ar) return { x: -r, y: -r, width: d, height: d };
+    var f = String(h.f).split(' '), px = parseFloat(f[0]) / 100, py = parseFloat(f[1]) / 100, w = h.ar < 1 ? d : d * h.ar, hh = h.ar < 1 ? d / h.ar : d;
+    return { x: +(-r - px * (w - d)).toFixed(2), y: +(-r - py * (hh - d)).toFixed(2), width: +w.toFixed(2), height: +hh.toFixed(2) };
+  };
   var hhmm = function (m) { m = ((Math.round(m) % 1440) + 1440) % 1440; return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + (m % 60)).slice(-2); };
   var fHora = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }), fDia = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }); // crearlos cuesta: una sola vez
   var ahoraMin = function () { var f = fHora.format(new Date()).split(':'); return +f[0] * 60 + +f[1]; };
@@ -252,7 +258,7 @@
       var g = el('g', { 'class': 'oc-c-marca', 'data-s': h.s, tabindex: '0', role: 'button', 'aria-label': h.n, style: '--hc:' + h.hc });
       g.appendChild(el('circle', { 'class': 'oc-c-halo', r: '30' }));
       g.appendChild(el('circle', { 'class': 'oc-c-galon', r: '22' }));
-      if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', { href: h.img, x: '-19', y: '-19', width: '38', height: '38', 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' })); }
+      if (h.img) { var cp = el('clipPath', { id: 'cp-' + h.s }); cp.appendChild(el('circle', { r: '19' })); g.appendChild(cp); g.appendChild(el('image', Object.assign({ href: h.img, 'clip-path': 'url(#cp-' + h.s + ')', preserveAspectRatio: 'xMidYMid slice' }, encuadre(h, 19))));  }
       else { g.appendChild(el('circle', { 'class': 'oc-c-fondo', r: '19' })); var tx = el('text', { 'class': 'oc-c-ini', y: '7' }); tx.textContent = h.ini; g.appendChild(tx); }
       // nombre corto bajo el medallón (se ve al acercar el plano o al elegirla)
       var nom = el('text', { 'class': 'oc-c-nombre', y: '40' }); nom.textContent = h.n.length > 24 ? h.n.slice(0, 23).replace(/\s+\S*$/, '') + '…' : h.n; g.appendChild(nom);
@@ -332,7 +338,7 @@
       var li = document.createElement('li'); li.className = 'oc-calle-item'; li.setAttribute('data-estado', f.est);
       var b = document.createElement('button'); b.type = 'button';
       var thumb = document.createElement('span'); thumb.className = 'oc-calle-thumb';
-      if (f.h.img) { var im = document.createElement('img'); im.src = f.h.img; im.alt = ''; im.loading = 'lazy'; thumb.appendChild(im); } else thumb.textContent = f.h.ini;
+      if (f.h.img) { var im = document.createElement('img'); im.src = f.h.img; if (f.h.f) im.style.objectPosition = f.h.f; im.alt = ''; im.loading = 'lazy'; thumb.appendChild(im); } else thumb.textContent = f.h.ini;
       var t = document.createElement('span'); t.className = 'oc-calle-txt';
       var n = document.createElement('strong'); n.textContent = f.h.n; var s = document.createElement('span'); s.textContent = f.txt;
       t.appendChild(n); t.appendChild(s); b.appendChild(thumb); b.appendChild(t);

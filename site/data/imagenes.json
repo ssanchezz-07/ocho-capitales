@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T18:36:50.693Z",
+ "generado": "2026-11-05T08:27:52.255Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -2900,20 +2900,6 @@
    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "pagina": "https://commons.wikimedia.org/wiki/File:La_Reina_de_M%C3%A1laga,_la_Virgen_del_Roc%C3%ADo_en_la_Tribuna_de_los_Pobres.jpg"
   },
-  "granada": {
-   "w": 960,
-   "h": 1354,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "escudo": false,
-   "autor": "Anonimo242002",
-   "licencia": "CC0",
-   "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "pagina": "https://commons.wikimedia.org/wiki/File:CARTEL-SEMANA-SANTA-GRANADA-2013.jpg"
-  },
   "cordoba": {
    "w": 960,
    "h": 1280,
@@ -3024,7 +3010,8 @@
     "licencia": "CC0",
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Iglesia_de_Santa_Catalina,_Virgen_de_las_L%C3%A1grimas.jpg",
-    "titular": "María Santísima de las Lágrimas"
+    "titular": "María Santísima de las Lágrimas",
+    "foco": "48% 0%"
    }
   },
   "las-cigarreras-sevilla": {
@@ -3041,7 +3028,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Victoria,_Sevilla.jpg",
-    "titular": "María Santísima de la Victoria"
+    "titular": "María Santísima de la Victoria",
+    "foco": "50% 78%"
    }
   },
   "montesion-sevilla": {
@@ -3075,7 +3063,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Quinta_Angustia.jpg",
-    "titular": "María Santísima de la Quinta Angustia"
+    "titular": "María Santísima de la Quinta Angustia",
+    "foco": "55% 30%"
    }
   },
   "el-valle-sevilla": {
@@ -3092,7 +3081,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_con_la_cruz_al_hombro.jpg",
-    "titular": "Nuestro Padre Jesús con la Cruz al hombro"
+    "titular": "Nuestro Padre Jesús con la Cruz al hombro",
+    "foco": "40% 25%"
    }
   },
   "pasion-sevilla": {
@@ -3109,7 +3099,8 @@
     "licencia": "CC BY-SA 3.0 es",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Pasi%C3%B3n._El_Salvador._Sevilla._03.JPG",
-    "titular": "Nuestro Padre Jesús de la Pasión"
+    "titular": "Nuestro Padre Jesús de la Pasión",
+    "foco": "48% 35%"
    }
   },
   "el-silencio-sevilla": {
@@ -3126,7 +3117,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Concepci%C3%B3n_(detalle),_Hermandad_del_Silencio_(Sevilla).jpg",
-    "titular": "María Santísima de la Concepción"
+    "titular": "María Santísima de la Concepción",
+    "foco": "51% 50%"
    }
   },
   "el-gran-poder-sevilla": {
@@ -3207,7 +3199,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Calvario.jpg",
-    "titular": "Santísimo Cristo del Calvario"
+    "titular": "Santísimo Cristo del Calvario",
+    "foco": "46% 0%"
    }
   },
   "la-esperanza-de-triana-sevilla": {
@@ -3256,7 +3249,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Angustias2012.jpg",
-    "titular": "María Santísima de las Angustias"
+    "titular": "María Santísima de las Angustias",
+    "foco": "50% 13%"
    }
   },
   "la-carreteria-sevilla": {},
@@ -3359,7 +3353,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Patrocinio,_Sevilla,_Espa%C3%B1a,_2017_03.jpg",
-    "titular": "Nuestra Señora del Patrocinio"
+    "titular": "Nuestra Señora del Patrocinio",
+    "foco": "59% 32%"
    }
   },
   "los-servitas-sevilla": {
@@ -3376,7 +3371,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Providencia.jpg",
-    "titular": "Santísimo Cristo de la Providencia"
+    "titular": "Santísimo Cristo de la Providencia",
+    "foco": "38% 46%"
    }
   },
   "la-trinidad-sevilla": {
@@ -3399,7 +3395,8 @@
      0.42,
      0.75
     ],
-    "titular": "Cristo de las Cinco Llagas"
+    "titular": "Cristo de las Cinco Llagas",
+    "foco": "61% 11%"
    }
   },
   "el-santo-entierro-sevilla": {
@@ -3416,7 +3413,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Villaviciosa_Sevilla.jpg",
-    "titular": "Nuestra Señora de Villaviciosa"
+    "titular": "Nuestra Señora de Villaviciosa",
+    "foco": "63% 35%"
    }
   },
   "la-resurreccion-sevilla": {
@@ -3433,7 +3431,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Aurora.jpg",
-    "titular": "María Santísima de la Aurora"
+    "titular": "María Santísima de la Aurora",
+    "foco": "49% 20%"
    }
   },
   "bellavista-sevilla": {
@@ -3505,7 +3504,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Santo_Cristo_de_la_Misi%C3%B3n.jpg",
-    "titular": "Santo Cristo de la Misión"
+    "titular": "Santo Cristo de la Misión",
+    "foco": "52% 39%"
    }
   },
   "cristo-de-la-corona-sevilla": {
@@ -3522,7 +3522,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Stmo._Cristo_de_la_Corona,_Sevilla.jpg",
-    "titular": "Santísimo Cristo de la Corona"
+    "titular": "Santísimo Cristo de la Corona",
+    "foco": "45% 50%"
    }
   },
   "padre-pio-sevilla": {
@@ -3539,7 +3540,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Divina_Gracia.jpg",
-    "titular": "Santísima Virgen de la Divina Gracia"
+    "titular": "Santísima Virgen de la Divina Gracia",
+    "foco": "50% 53%"
    }
   },
   "el-sol-sevilla": {
@@ -3579,7 +3581,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f05_-Maria_Sma_de_Lagrimas_y_Favores.jpg",
-    "titular": "María Santísima de Lágrimas y Favores"
+    "titular": "María Santísima de Lágrimas y Favores",
+    "foco": "52% 0%"
    }
   },
   "dulce-nombre-malaga": {
@@ -3596,7 +3599,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Soledad.jpg",
-    "titular": "Nuestro Padre Jesús de la Soledad"
+    "titular": "Nuestro Padre Jesús de la Soledad",
+    "foco": "47% 33%"
    }
   },
   "salutacion-malaga": {
@@ -3730,7 +3734,8 @@
      0.24,
      0.48
     ],
-    "titular": "Nuestra Señora de la Concepción Dolorosa"
+    "titular": "Nuestra Señora de la Concepción Dolorosa",
+    "foco": "55% 50%"
    }
   },
   "gitanos-malaga": {
@@ -3786,7 +3791,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_(29086279).jpeg",
-    "titular": ""
+    "titular": "",
+    "foco": "49% 38%"
    }
   },
   "rocio-malaga": {
@@ -3803,7 +3809,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Rocio_coronada.jpg",
-    "titular": "María Santísima del Rocío Coronada"
+    "titular": "María Santísima del Rocío Coronada",
+    "foco": "50% 41%"
    }
   },
   "penas-malaga": {
@@ -3866,7 +3873,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp",
     "tam": 302148,
-    "titular": "María Santísima de la Estrella"
+    "titular": "María Santísima de la Estrella",
+    "foco": "52% 11%"
    }
   },
   "rescate-malaga": {
@@ -3989,7 +3997,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:NUESTRO_PADRE_JESUS_DE_AZOTES_Y_COLUMNA.jpg",
-    "titular": "Nuestro Padre Jesús de Azotes y Columna"
+    "titular": "Nuestro Padre Jesús de Azotes y Columna",
+    "foco": "50% 24%"
    }
   },
   "paloma-malaga": {
@@ -4012,7 +4021,8 @@
      0.15,
      0.3
     ],
-    "titular": "Nuestro Padre Jesús de la Puente del Cedrón"
+    "titular": "Nuestro Padre Jesús de la Puente del Cedrón",
+    "foco": "54% 46%"
    }
   },
   "el-rico-malaga": {
@@ -4139,7 +4149,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_los_Milagros_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Amargura_Coronada.JPG",
-    "titular": ""
+    "titular": "",
+    "foco": "49% 100%"
    }
   },
   "dolores-de-san-juan-malaga": {
@@ -4188,7 +4199,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_de_la_cena_Granada.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "49% 0%"
    }
   },
   "la-sentencia-maravillas-granada": {
@@ -4255,7 +4267,7 @@
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Imagen_de_Nuestro_Padre_Jesus_del_Rescate_en_la_Iglesia_de_la_Magdalena,_en_Granada_(Spain)).jpg",
     "titular": "Nuestro Padre Jesús del Rescate",
-    "foco": "68% 30%"
+    "foco": "51% 39%"
    }
   },
   "cristo-de-san-agustin-granada": {
@@ -4272,7 +4284,8 @@
     "licencia": "CC0",
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_San_Agust%C3%ADn_Granada.jpg",
-    "titular": "Santísimo Cristo de San Agustín"
+    "titular": "Santísimo Cristo de San Agustín",
+    "foco": "41% 11%"
    }
   },
   "la-lanzada-granada": {
@@ -4289,7 +4302,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Venerable_Hermandad_del_Sant%C3%ADsimo_Cristo_de_la_Lanzada_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Caridad,_Granda,_Semana_Santa_2009_(10).JPG",
-    "titular": "Santísimo Cristo de la Lanzada"
+    "titular": "Santísimo Cristo de la Lanzada",
+    "foco": "65% 100%"
    }
   },
   "la-canilla-granada": {
@@ -4306,7 +4320,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada-Iglesia_de_Santo_Domingo-3-Cristo_de_la_Humildad_(An%C3%B3nimo).JPG",
-    "titular": "Señor de la Humildad"
+    "titular": "Señor de la Humildad",
+    "foco": "55% 0%"
    },
    "virgen": {
     "w": 960,
@@ -4483,7 +4498,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada-Iglesia_de_San_Cecilio-4-Cristo_de_los_Favores_(Pablo_de_Rojas,_siglo_XVII).JPG",
-    "titular": "Santísimo Cristo de los Favores"
+    "titular": "Santísimo Cristo de los Favores",
+    "foco": "41% 2%"
    }
   },
   "los-escolapios-granada": {
@@ -4531,7 +4547,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:3TORCU~1.jpg",
-    "titular": "Nuestra Señora de las Angustias de la Alhambra"
+    "titular": "Nuestra Señora de las Angustias de la Alhambra",
+    "foco": "42% 0%"
    }
   },
   "entrada-triunfal-cordoba": {
@@ -4548,7 +4565,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Imatge_de_la_Confraria_de_Nuestro_Padre_Jes%C3%BAs_de_los_Reyes_a_l%27esgl%C3%A9sia_de_San_Lorenzo_de_C%C3%B2rdova.jpg",
-    "titular": "Nuestro Padre Jesús de los Reyes"
+    "titular": "Nuestro Padre Jesús de los Reyes",
+    "foco": "49% 58%"
    },
    "virgen": {
     "w": 768,
@@ -4595,7 +4613,8 @@
     "licencia": "CC0",
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "pagina": "https://commons.wikimedia.org/wiki/File:Penas_de_Santiago.png",
-    "titular": "Santísimo Cristo de las Penas"
+    "titular": "Santísimo Cristo de las Penas",
+    "foco": "47% 91%"
    }
   },
   "vera-cruz-cordoba": {
@@ -4612,7 +4631,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Dulce_Nombre_en_sus_Dolores_Gloriosos.jpg",
-    "titular": "María Santísima del Dulce Nombre"
+    "titular": "María Santísima del Dulce Nombre",
+    "foco": "39% 83%"
    }
   },
   "el-rescatado-cordoba": {
@@ -4660,7 +4680,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Silencio_en_el_Desprecio_de_Herodes.jpg",
-    "titular": "Nuestro Padre Jesús del Silencio en el desprecio de Herodes"
+    "titular": "Nuestro Padre Jesús del Silencio en el desprecio de Herodes",
+    "foco": "35% 25%"
    }
   },
   "la-merced-cordoba": {
@@ -4758,7 +4779,8 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_Salud_C%C3%B3rdoba.jpg",
-    "titular": "Santo Cristo de la Salud"
+    "titular": "Santo Cristo de la Salud",
+    "foco": "46% 0%"
    }
   },
   "animas-cordoba": {
@@ -4775,7 +4797,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Remedio_de_%C3%81nimas_(Iglesia_de_San_Lorenzo_de_C%C3%B3rdoba).jpg",
-    "titular": "Santísimo Cristo del Remedio de Ánimas"
+    "titular": "Santísimo Cristo del Remedio de Ánimas",
+    "foco": "46% 6%"
    }
   },
   "la-agonia-cordoba": {
@@ -4856,7 +4879,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sangre_en_el_desprecio_de_pueblo.jpg",
-    "titular": "Nuestro Padre Jesús de la Sangre"
+    "titular": "Nuestro Padre Jesús de la Sangre",
+    "foco": "28% 0%"
    }
   },
   "la-santa-faz-cordoba": {
@@ -4905,7 +4929,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_en_su_Prendimiento.jpg",
-    "titular": "Nuestro Padre Jesús"
+    "titular": "Nuestro Padre Jesús",
+    "foco": "49% 0%"
    },
    "virgen": {
     "w": 865,
@@ -4937,7 +4962,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_paso_por_la_puerta_del_Perd%C3%B3n_de_la_Mezquita.jpg",
-    "titular": "Nuestro Padre Jesús del Perdón"
+    "titular": "Nuestro Padre Jesús del Perdón",
+    "foco": "38% 47%"
    }
   },
   "el-calvario-cordoba": {
@@ -4954,7 +4980,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_del_Calvario,_C%C3%B3rdoba.jpg",
-    "titular": "Nuestro Padre Jesús del Calvario"
+    "titular": "Nuestro Padre Jesús del Calvario",
+    "foco": "44% 0%"
    }
   },
   "la-paz-cordoba": {
@@ -5003,7 +5030,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Misericordia_y_Nuestra_Se%C3%B1ora_de_las_L%C3%A1grimas_en_su_Desamparo.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "54% 28%"
    }
   },
   "la-pasion-cordoba": {
@@ -5020,7 +5048,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Amor_y_San_Juan_Evangelista.jpg",
-    "titular": "María Santísima del Amor"
+    "titular": "María Santísima del Amor",
+    "foco": "29% 43%"
    }
   },
   "la-piedad-cordoba": {
@@ -5050,7 +5079,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_La_Piedad.jpg",
-    "titular": "Santísimo Cristo de la Piedad"
+    "titular": "Santísimo Cristo de la Piedad",
+    "foco": "51% 13%"
    }
   },
   "la-caridad-cordoba": {
@@ -5067,7 +5097,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Im%C3%A1genes_del_Se%C3%B1or_de_la_Caridad_y_de_la_Virgen_Dolorosa._Iglesia_de_San_Francisco_de_C%C3%B3rdoba.JPG",
-    "titular": ""
+    "titular": "",
+    "foco": "39% 0%"
    }
   },
   "jesus-caido-cordoba": {
@@ -5084,7 +5115,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Ca%C3%ADdo._Iglesia_de_San_Cayetano_de_C%C3%B3rdoba.JPG",
-    "titular": "Nuestro Padre Jesús Caído"
+    "titular": "Nuestro Padre Jesús Caído",
+    "foco": "59% 33%"
    },
    "virgen": {
     "w": 960,
@@ -5116,7 +5148,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestra_Se%C3%B1ora_de_las_Angustias._Iglesia_de_San_Pablo_de_C%C3%B3rdoba.JPG",
-    "titular": "Nuestra Señora de las Angustias"
+    "titular": "Nuestra Señora de las Angustias",
+    "foco": "47% 0%"
    }
   },
   "cristo-de-gracia-el-esparraguero-cordoba": {
@@ -5150,7 +5183,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestra_Se%C3%B1ora_Reina_de_los_M%C3%A1rtires._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.jpg",
-    "titular": "Nuestra Señora Reina de los Mártires"
+    "titular": "Nuestra Señora Reina de los Mártires",
+    "foco": "50% 2%"
    },
    "cristo": {
     "w": 960,
@@ -5182,7 +5216,8 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_San_Cayetano_C%C3%B3rdoba.jpg",
-    "titular": "María Santísima en su Soledad"
+    "titular": "María Santísima en su Soledad",
+    "foco": "51% 34%"
    }
   },
   "la-expiracion-cordoba": {
@@ -5199,7 +5234,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Im%C3%A1genes_del_Stmo._Cristo_de_la_Expiraci%C3%B3n_y_Mar%C3%ADa_Sant%C3%ADsima_del_Silencio._Iglesia_de_San_Pablo_de_C%C3%B3rdoba.JPG",
-    "titular": ""
+    "titular": "",
+    "foco": "43% 62%"
    }
   },
   "el-descendimiento-cordoba": {
@@ -5216,7 +5252,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Descendimiento.jpg",
-    "titular": "Santísimo Cristo del Descendimiento"
+    "titular": "Santísimo Cristo del Descendimiento",
+    "foco": "45% 12%"
    }
   },
   "los-dolores-cordoba": {
@@ -5233,7 +5270,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg",
-    "foco": "50% 25%",
+    "foco": "42% 0%",
     "titular": "Nuestra Señora de los Dolores"
    }
   },
@@ -5251,7 +5288,8 @@
     "licencia": "CC BY 4.0",
     "licurl": "https://creativecommons.org/licenses/by/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_L%C3%A1grimas_C%C3%B3rdoba.jpg",
-    "titular": "Santísimo Cristo de las Lágrimas"
+    "titular": "Santísimo Cristo de las Lágrimas",
+    "foco": "55% 21%"
    }
   },
   "servitas-cadiz": {
@@ -5317,7 +5355,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Angustias_del_Caminito.jpg",
-    "titular": "Nuestra Señora de las Angustias"
+    "titular": "Nuestra Señora de las Angustias",
+    "foco": "42% 56%"
    }
   },
   "las-aguas-cadiz": {
@@ -5334,7 +5373,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_del_Sant%C3%ADsimo_Cristo_de_las_Aguas_procesion_magna_10.jpg",
-    "titular": "Santísimo Cristo de las Aguas"
+    "titular": "Santísimo Cristo de las Aguas",
+    "foco": "33% 38%"
    }
   },
   "medinaceli-cadiz": {
@@ -5351,7 +5391,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad_de_C%C3%A1diz.jpg",
-    "titular": "María Santísima de la Trinidad"
+    "titular": "María Santísima de la Trinidad",
+    "foco": "53% 29%"
    },
    "cristo": {
     "w": 720,
@@ -5416,7 +5457,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DEL_PERD%C3%93N,_C%C3%81DIZ.jpg",
-    "titular": "Santísimo Cristo del Perdón"
+    "titular": "Santísimo Cristo del Perdón",
+    "foco": "38% 23%"
    }
   },
   "el-descendimiento-cadiz": {
@@ -5433,7 +5475,8 @@
     "licencia": "Public domain",
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:2008_21_Descendimiento_(3).JPG",
-    "titular": "Cristo del Descendimiento"
+    "titular": "Cristo del Descendimiento",
+    "foco": "45% 30%"
    },
    "virgen": {
     "w": 960,
@@ -5529,7 +5572,8 @@
     "licencia": "Public domain",
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Perd%C3%B3n_Huelva.jpg",
-    "titular": "Santísimo Cristo del Perdón"
+    "titular": "Santísimo Cristo del Perdón",
+    "foco": "62% 0%"
    },
    "virgen": {
     "w": 960,
@@ -5626,7 +5670,7 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Sangre_Huelva.jpg",
     "titular": "Santísimo Cristo de la Sangre",
-    "foco": "50% 8%"
+    "foco": "43% 10%"
    }
   },
   "pasion-huelva": {
@@ -5688,7 +5732,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:-Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n-.jpg",
-    "titular": "Santísimo Cristo de la Expiración"
+    "titular": "Santísimo Cristo de la Expiración",
+    "foco": "50% 53%"
    }
   },
   "los-judios-la-merced-huelva": {
@@ -5811,7 +5856,8 @@
      0.24,
      0.42
     ],
-    "titular": "Santísimo Cristo del Amor"
+    "titular": "Santísimo Cristo del Amor",
+    "foco": "60% 9%"
    }
   },
   "el-perdon-silencio-almeria": {
@@ -5828,7 +5874,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Perd%C3%B3n_03.jpg",
-    "titular": "Santo Cristo del Perdón"
+    "titular": "Santo Cristo del Perdón",
+    "foco": "51% 41%"
    }
   },
   "el-calvario-cristo-del-mar-almeria": {
@@ -5845,7 +5892,8 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Calvario.jpg",
-    "titular": "Santísimo Cristo del Mar"
+    "titular": "Santísimo Cristo del Mar",
+    "foco": "51% 34%"
    }
   },
   "el-prendimiento-almeria": {
@@ -5862,7 +5910,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Merced_de_Almer%C3%ADa.jpg",
-    "titular": "Nuestra Señora de la Merced"
+    "titular": "Nuestra Señora de la Merced",
+    "foco": "67% 62%"
    }
   },
   "los-estudiantes-almeria": {
@@ -5879,7 +5928,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Amor_y_la_Esperanza.jpg",
-    "titular": "Nuestra Señora del Amor y la Esperanza"
+    "titular": "Nuestra Señora del Amor y la Esperanza",
+    "foco": "54% 0%"
    }
   },
   "rosario-del-mar-almeria": {
@@ -5951,7 +6001,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Angustias_09.jpg",
-    "titular": "Nuestra Señora de las Angustias"
+    "titular": "Nuestra Señora de las Angustias",
+    "foco": "45% 35%"
    }
   },
   "el-silencio-descendimiento-almeria": {
@@ -5968,7 +6019,8 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:SANT%C3%8DSIMO_CRISTO_DE_LA_REDENCI%C3%93N_EN_SU_SAGRADO_DESCENDIMIENTO.jpg",
-    "titular": "Santísimo Cristo de la Redención en su Descendimiento"
+    "titular": "Santísimo Cristo de la Redención en su Descendimiento",
+    "foco": "54% 30%"
    }
   },
   "el-santo-sepulcro-almeria": {
@@ -6012,7 +6064,8 @@
      0.2,
      0.36
     ],
-    "titular": "Nuestra Señora de los Dolores"
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "57% 65%"
    }
   },
   "la-soledad-almeria": {
@@ -6029,7 +6082,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santiago,_Alm_01.jpg",
-    "titular": "Nuestra Señora de los Dolores en su Soledad"
+    "titular": "Nuestra Señora de los Dolores en su Soledad",
+    "foco": "50% 43%"
    }
   },
   "santa-cena-jaen": {
@@ -6127,7 +6181,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Maria_Santisima_del_Amor.jpg",
-    "titular": "María Santísima del Amor"
+    "titular": "María Santísima del Amor",
+    "foco": "47% 0%"
    }
   },
   "la-clemencia-jaen": {
@@ -6193,7 +6248,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Perd%C3%B3n,_Ja%C3%A9n_(2022)_24J_01_(recortado).jpg",
-    "titular": "Jesús del Perdón"
+    "titular": "Jesús del Perdón",
+    "foco": "58% 0%"
    },
    "virgen": {
     "w": 960,
@@ -6225,7 +6281,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Buena_Muerte_Ja%C3%A9n.jpg",
-    "titular": "Santísimo Cristo de la Buena Muerte"
+    "titular": "Santísimo Cristo de la Buena Muerte",
+    "foco": "54% 22%"
    }
   },
   "la-lanzada-jaen": {
@@ -6242,7 +6299,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Reina_Angeles_Ja%C3%A9n.jpg",
-    "titular": "María Santísima Reina de los Ángeles"
+    "titular": "María Santísima Reina de los Ángeles",
+    "foco": "44% 0%"
    }
   },
   "el-gran-poder-jaen": {
@@ -6259,7 +6317,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_Ja%C3%A9n.jpg",
-    "titular": "Jesús del Gran Poder"
+    "titular": "Jesús del Gran Poder",
+    "foco": "58% 26%"
    }
   },
   "la-vera-cruz-los-civiles-jaen": {
@@ -6291,7 +6350,8 @@
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Dolores_Vera-Cruz_2008.jpg",
-    "titular": "María Santísima de los Dolores"
+    "titular": "María Santísima de los Dolores",
+    "foco": "63% 39%"
    }
   },
   "la-expiracion-jaen": {
@@ -6340,7 +6400,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_Ja%C3%A9n_2019_24J_01.jpg",
-    "titular": "Nuestro Padre Jesús Nazareno («El Abuelo»)"
+    "titular": "Nuestro Padre Jesús Nazareno («El Abuelo»)",
+    "foco": "0% 50%"
    },
    "virgen": {
     "w": 960,
@@ -6378,7 +6439,8 @@
      0.28,
      0.55
     ],
-    "titular": "Nuestra Señora de la Soledad"
+    "titular": "Nuestra Señora de la Soledad",
+    "foco": "67% 60%"
    }
   },
   "el-santo-sepulcro-jaen": {
@@ -6395,7 +6457,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Silencio.jpg",
-    "titular": "Santa María del Silencio"
+    "titular": "Santa María del Silencio",
+    "foco": "52% 22%"
    }
   },
   "mutilado-clemencia-malaga": {
@@ -6412,7 +6475,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:El_Cristo_de_la_Clemencia_el_S%C3%A1bado_de_Pasi%C3%B3n.jpg",
-    "titular": "Santísimo Cristo de la Clemencia"
+    "titular": "Santísimo Cristo de la Clemencia",
+    "foco": "56% 5%"
    }
   },
   "desamparados-malaga": {
@@ -6432,7 +6496,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/desamparados-malaga-virgen.jpg",
     "tam": 168384,
-    "titular": "Nuestra Señora de los Desamparados"
+    "titular": "Nuestra Señora de los Desamparados",
+    "foco": "50% 2%"
    }
   },
   "medinaceli-martiricos-malaga": {
@@ -6449,7 +6514,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:JES%C3%9AS_DE_MEDINACELI_DE_M%C3%81LAGA.jpg",
-    "titular": "Jesús de Medinaceli"
+    "titular": "Jesús de Medinaceli",
+    "foco": "50% 0%"
    }
   },
   "el-amor-sevilla": {
@@ -6517,7 +6583,8 @@
      0.26,
      0.45
     ],
-    "titular": "Jesús Despojado de sus Vestiduras"
+    "titular": "Jesús Despojado de sus Vestiduras",
+    "foco": "50% 21%"
    }
   },
   "la-paz-sevilla": {
@@ -6604,7 +6671,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Hiniesta_Dolorosa_en_altar.jpg",
-    "titular": "María Santísima de la Hiniesta Dolorosa"
+    "titular": "María Santísima de la Hiniesta Dolorosa",
+    "foco": "50% 26%"
    }
   },
   "san-roque-sevilla": {
@@ -6621,7 +6689,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_las_Penas_de_Sevilla.jpg",
-    "titular": "Nuestro Padre Jesús de las Penas"
+    "titular": "Nuestro Padre Jesús de las Penas",
+    "foco": "40% 17%"
    },
    "virgen": {
     "w": 922,
@@ -6665,7 +6734,8 @@
      0.34,
      0.45
     ],
-    "titular": "Nuestro Padre Jesús de las Penas"
+    "titular": "Nuestro Padre Jesús de las Penas",
+    "foco": "52% 0%"
    }
   },
   "la-amargura-sevilla": {
@@ -6682,7 +6752,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura,_Sevilla.jpg",
-    "titular": "María Santísima de la Amargura"
+    "titular": "María Santísima de la Amargura",
+    "foco": "39% 54%"
    }
   },
   "san-pablo-sevilla": {
@@ -6748,7 +6819,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:San_Gonzalo_en_Besapi%C3%A9.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "53% 45%"
    }
   },
   "vera-cruz-sevilla": {
@@ -6840,7 +6912,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_las_Aguas,_Sevilla.jpg",
-    "titular": "Nuestra Señora de las Aguas"
+    "titular": "Nuestra Señora de las Aguas",
+    "foco": "49% 78%"
    }
   },
   "los-javieres-sevilla": {
@@ -6921,7 +6994,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Buena_Muerte_(Estudiantes).jpg",
-    "titular": "Santísimo Cristo de la Buena Muerte"
+    "titular": "Santísimo Cristo de la Buena Muerte",
+    "foco": "49% 51%"
    }
   },
   "la-candelaria-sevilla": {
@@ -6938,7 +7012,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Candelaria_Sevilla.jpg",
-    "titular": "María Santísima de la Candelaria"
+    "titular": "María Santísima de la Candelaria",
+    "foco": "49% 46%"
    }
   },
   "dulce-nombre-la-bofeta-sevilla": {
@@ -6955,7 +7030,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_ante_An%C3%A1s,_Sevilla.jpg",
-    "titular": "Nuestro Padre Jesús ante Anás"
+    "titular": "Nuestro Padre Jesús ante Anás",
+    "foco": "57% 11%"
    }
   },
   "santa-cruz-sevilla": {
@@ -6972,7 +7048,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Santa_Cruz,_Sevilla.jpg",
-    "titular": "María Santísima de los Dolores"
+    "titular": "María Santísima de los Dolores",
+    "foco": "44% 35%"
    },
    "cristo": {
     "w": 855,
@@ -7069,7 +7146,8 @@
      0.22,
      0.45
     ],
-    "titular": "Santísimo Cristo de la Salud"
+    "titular": "Santísimo Cristo de la Salud",
+    "foco": "32% 13%"
    }
   },
   "el-buen-fin-sevilla": {
@@ -7124,7 +7202,8 @@
      0.5,
      0.35
     ],
-    "titular": "Sagrada Lanzada"
+    "titular": "Sagrada Lanzada",
+    "foco": "60% 28%"
    }
   },
   "el-baratillo-sevilla": {
@@ -7147,7 +7226,8 @@
      0.34,
      0.6
     ],
-    "titular": ""
+    "titular": "",
+    "foco": "42% 82%"
    }
   },
   "cristo-de-burgos-sevilla": {
@@ -7164,7 +7244,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Burgos,_Sevilla.jpg",
-    "titular": "Santísimo Cristo de Burgos"
+    "titular": "Santísimo Cristo de Burgos",
+    "foco": "63% 42%"
    }
   },
   "siete-palabras-sevilla": {
@@ -7234,7 +7315,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Soberano_Poder_01.jpg",
-    "foco": "40% 30%",
+    "foco": "47% 27%",
     "titular": "Nuestro Padre Jesús en su Prendimiento"
    }
   },
@@ -7284,7 +7365,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_de_las_Negaciones_de_Pedro,_Hermandad_del_Carmen_Doloroso_de_Sevilla.JPG",
-    "titular": ""
+    "titular": "",
+    "foco": "40% 37%"
    }
   },
   "bendicion-y-esperanza-sevilla": {
@@ -7301,7 +7383,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misterio_del_Cristo_de_la_Bendici%C3%B3n_en_el_Santo_Encuentro_en_2016.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "42% 34%"
    }
   },
   "dolores-de-torreblanca-sevilla": {
@@ -7362,7 +7445,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Pur%C3%ADsima_Concepci%C3%B3n_(Alcosa).jpg",
-    "titular": "Virgen de la Purísima Concepción"
+    "titular": "Virgen de la Purísima Concepción",
+    "foco": "48% 71%"
    }
   },
   "sagrada-cena-malaga": {
@@ -7505,7 +7589,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/buen-camino-gamarra-malaga-virgen.jpg",
     "tam": 356868,
-    "titular": "Nuestra Purísima Madre del Buen Camino"
+    "titular": "Nuestra Purísima Madre del Buen Camino",
+    "foco": "50% 24%"
    }
   },
   "la-estrella-granada": {
@@ -7529,7 +7614,7 @@
      0.37
     ],
     "titular": "Nuestro Padre Jesús de la Pasión",
-    "foco": "50% 55%"
+    "foco": "56% 52%"
    }
   },
   "el-silencio-granada": {
@@ -7552,7 +7637,8 @@
      0.6,
      0.6
     ],
-    "titular": "Santísimo Cristo de la Misericordia"
+    "titular": "Santísimo Cristo de la Misericordia",
+    "foco": "45% 0%"
    },
    "sede": {
     "w": 685,
@@ -7616,7 +7702,8 @@
     "licencia": "CC BY 3.0",
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
-    "titular": "Nuestra Señora de la Soledad"
+    "titular": "Nuestra Señora de la Soledad",
+    "foco": "48% 10%"
    }
   },
   "los-facundillos-granada": {
@@ -7667,7 +7754,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Despojado_Cadiz.jpg",
-    "titular": "Jesús del Amor Despojado"
+    "titular": "Jesús del Amor Despojado",
+    "foco": "57% 29%"
    }
   },
   "sagrada-cena-cadiz": {
@@ -7750,7 +7838,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Vera-Cruz_de_C%C3%A1diz.jpg",
-    "foco": "50% 15%",
+    "foco": "45% 53%",
     "titular": "Santísimo Cristo de la Vera+Cruz"
    }
   },
@@ -7802,7 +7890,8 @@
     "licencia": "Public domain",
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:Titulares_Archicofrad%C3%ADa_Ecce-Homo_C%C3%A1diz.JPG",
-    "titular": ""
+    "titular": "",
+    "foco": "35% 0%"
    }
   },
   "la-sentencia-cadiz": {
@@ -7922,7 +8011,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:CapillaSantaCruzHuelva.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "45% 29%"
    }
   },
   "la-victoria-huelva": {
@@ -8002,7 +8092,8 @@
     "licencia": "Public domain",
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:Descendimiento_de_Huelva.jpg",
-    "titular": "Sagrado Descendimiento"
+    "titular": "Sagrado Descendimiento",
+    "foco": "51% 48%"
    }
   },
   "la-buena-muerte-huelva": {
@@ -8034,7 +8125,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Madre_de_la_Consolacion_y_Correa_de_Huelva.jpg",
-    "titular": "Nuestra Madre de la Consolación y Correa"
+    "titular": "Nuestra Madre de la Consolación y Correa",
+    "foco": "49% 22%"
    }
   },
   "la-santa-cena-almeria": {
@@ -8068,7 +8160,8 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Sentencia.jpg",
-    "titular": "Nuestro Padre Jesús de la Sentencia"
+    "titular": "Nuestro Padre Jesús de la Sentencia",
+    "foco": "44% 82%"
    }
   },
   "la-caridad-almeria": {
@@ -8085,7 +8178,8 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Caridad_Alm.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "40% 41%"
    }
   },
   "la-unidad-almeria": {
@@ -8102,7 +8196,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_La_Unidad.jpg",
-    "titular": ""
+    "titular": "",
+    "foco": "55% 23%"
    }
   },
   "la-borriquilla-jaen": {
@@ -8136,7 +8231,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Caridad_Jaen.jpg",
-    "titular": "Jesús de la Caridad ante Caifás"
+    "titular": "Jesús de la Caridad ante Caifás",
+    "foco": "48% 6%"
    }
   },
   "la-esperanza-granada": {
@@ -8153,7 +8249,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Iglesia_Santa_Ana.jpg",
-    "titular": "Nuestra Señora de la Esperanza Coronada"
+    "titular": "Nuestra Señora de la Esperanza Coronada",
+    "foco": "55% 0%"
    },
    "sede": {
     "w": 480,
@@ -8222,7 +8319,8 @@
      0.4,
      0.72
     ],
-    "titular": "Santo Cristo de la Misericordia"
+    "titular": "Santo Cristo de la Misericordia",
+    "foco": "45% 3%"
    }
   },
   "el-huerto-vera-cruz-jaen": {
@@ -8311,7 +8409,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Amargura_granada.jpg",
-    "titular": "María Santísima de la Amargura Coronada"
+    "titular": "María Santísima de la Amargura Coronada",
+    "foco": "71% 6%"
    }
   },
   "el-resucitado-granada": {
@@ -8328,7 +8427,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:16-accesit_de_cartel_(1).jpg",
-    "titular": "Santísimo Cristo Resucitado"
+    "titular": "Santísimo Cristo Resucitado",
+    "foco": "47% 0%"
    }
   },
   "el-despojado-silencio-blanco-granada": {
@@ -8383,7 +8483,8 @@
      0.6,
      0.55
     ],
-    "titular": "Santísimo Cristo del Consuelo"
+    "titular": "Santísimo Cristo del Consuelo",
+    "foco": "67% 27%"
    }
   },
   "pollinica-malaga": {
@@ -8502,7 +8603,8 @@
      0.2,
      0.4
     ],
-    "titular": "Santísimo Cristo de la Crucifixión"
+    "titular": "Santísimo Cristo de la Crucifixión",
+    "foco": "60% 8%"
    }
   },
   "dolores-del-puente-malaga": {
@@ -8522,7 +8624,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/dolores-del-puente-malaga-virgen.jpg",
     "tam": 580430,
-    "titular": "Nuestra Señora de los Dolores Coronada"
+    "titular": "Nuestra Señora de los Dolores Coronada",
+    "foco": "49% 38%"
    }
   },
   "pasion-malaga": {
@@ -8545,7 +8648,8 @@
      0.24,
      0.24
     ],
-    "titular": "Nuestro Padre Jesús de la Pasión"
+    "titular": "Nuestro Padre Jesús de la Pasión",
+    "foco": "64% 38%"
    }
   },
   "estudiantes-malaga": {
@@ -8609,7 +8713,8 @@
      0.2,
      0.4
     ],
-    "titular": "Jesús Nazareno del Perdón"
+    "titular": "Jesús Nazareno del Perdón",
+    "foco": "45% 42%"
    }
   },
   "vineros-malaga": {
@@ -8632,7 +8737,8 @@
      0.15,
      0.3
     ],
-    "titular": "Nuestro Padre Jesús Nazareno de Viñeros"
+    "titular": "Nuestro Padre Jesús Nazareno de Viñeros",
+    "foco": "43% 62%"
    }
   },
   "santa-cruz-malaga": {
@@ -8732,7 +8838,8 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Amor_y_Nuestra_Se%C3%B1ora_de_la_Caridad.jpg",
-    "titular": "Santísimo Cristo del Amor y Nuestra Señora de la Caridad"
+    "titular": "Santísimo Cristo del Amor y Nuestra Señora de la Caridad",
+    "foco": "49% 42%"
    }
   },
   "traslado-malaga": {
@@ -8755,7 +8862,8 @@
      0.3,
      0.6
     ],
-    "titular": "Santo Traslado al Sepulcro"
+    "titular": "Santo Traslado al Sepulcro",
+    "foco": "56% 54%"
    }
   },
   "piedad-malaga": {
@@ -8778,7 +8886,8 @@
      0.36,
      0.66
     ],
-    "titular": "Nuestra Señora de la Piedad"
+    "titular": "Nuestra Señora de la Piedad",
+    "foco": "36% 55%"
    }
   },
   "servitas-malaga": {
@@ -8801,7 +8910,8 @@
      0.4,
      0.36
     ],
-    "titular": "María Santísima de los Dolores"
+    "titular": "María Santísima de los Dolores",
+    "foco": "66% 69%"
    }
   },
   "el-santo-entierro-huelva": {
@@ -8833,7 +8943,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg",
-    "foco": "50% 15%",
+    "foco": "48% 41%",
     "titular": "Santísimo Cristo de la Sagrada Lanzada"
    }
   },
@@ -8870,7 +8980,7 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg",
-    "foco": "50% 20%",
+    "foco": "45% 29%",
     "titular": "Nuestro Padre Jesús del Gran Poder"
    }
   },
@@ -8894,7 +9004,8 @@
      0.3,
      0.6
     ],
-    "titular": "Entrada en Jerusalén: Cristo sobre la borriquita"
+    "titular": "Entrada en Jerusalén: Cristo sobre la borriquita",
+    "foco": "45% 0%"
    }
   },
   "santa-marta-sevilla": {
@@ -8936,7 +9047,8 @@
      0.55,
      0.4
     ],
-    "titular": "Santísimo Cristo de los Desamparados"
+    "titular": "Santísimo Cristo de los Desamparados",
+    "foco": "52% 98%"
    }
   },
   "la-sagrada-mortaja-sevilla": {
@@ -8989,7 +9101,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG",
-    "foco": "50% 20%",
+    "foco": "44% 0%",
     "titular": "Santísimo Cristo de las Misericordias"
    }
   },
@@ -9025,7 +9137,7 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Resucitado_Ja%C3%A9n.jpg",
-    "foco": "50% 30%",
+    "foco": "49% 31%",
     "titular": "Jesús en el Misterio de su Gloriosa Resurrección"
    }
   },
@@ -9115,7 +9227,7 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg",
-    "foco": "50% 15%",
+    "foco": "48% 44%",
     "titular": "Jesús atado a la Columna y Azotes, «El Aguador»"
    }
   },
@@ -9133,7 +9245,8 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Titulares_de_las_Cigarreras_de_c%C3%A1diz_en_sus_retablos.jpg",
-    "titular": "Nuestro Padre Jesús de la Salud y María Santísima de la Esperanza en sus retablos"
+    "titular": "Nuestro Padre Jesús de la Salud y María Santísima de la Esperanza en sus retablos",
+    "foco": "52% 32%"
    }
   },
   "la-expiracion-cadiz": {
@@ -9242,7 +9355,8 @@
      0.7,
      0.65
     ],
-    "titular": "Sagrado Descendimiento"
+    "titular": "Sagrado Descendimiento",
+    "foco": "50% 100%"
    }
   },
   "vera-cruz-malaga": {
@@ -9262,7 +9376,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/vera-cruz-malaga-virgen.png",
     "tam": 1952036,
-    "titular": "Nuestra Señora del Mayor Dolor Reina de los Ángeles"
+    "titular": "Nuestra Señora del Mayor Dolor Reina de los Ángeles",
+    "foco": "49% 38%"
    }
   },
   "verdad-y-sagrario-malaga": {
@@ -9282,7 +9397,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/verdad-y-sagrario-malaga-cristo.jpg",
     "tam": 866181,
-    "titular": "Nuestro Padre Jesús de la Verdad ante Caifás"
+    "titular": "Nuestro Padre Jesús de la Verdad ante Caifás",
+    "foco": "49% 42%"
    }
   },
   "luz-y-mar-malaga": {
@@ -9302,7 +9418,8 @@
     "cedida": true,
     "local": "scripts/cedidas/malaga/luz-y-mar-malaga-virgen.jpg",
     "tam": 1595278,
-    "titular": "María Santísima del Mar"
+    "titular": "María Santísima del Mar",
+    "foco": "52% 34%"
    }
   },
   "resucitado-malaga": {
@@ -9319,7 +9436,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/agrupaciondecofradiasmalaga",
-    "foco": "62% 20%",
+    "foco": "50% 54%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/resucitado-malaga-cristo.jpg",
     "tam": 243285,
