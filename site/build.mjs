@@ -416,19 +416,29 @@ const timeTag = (ts) => { const d = new Date(ts); return `<time datetime="${d.to
 // Hora siempre como HH:MM («0:00» → «00:00»)
 const mil = (n) => String(n).replace(/\B(?=(\d{3})+$)/g, '.');
 const fmtHora = (s) => String(s || '').replace(/\b(\d{1,2})[:.](\d{2})\b/g, (_, a, b) => a.padStart(2, '0') + ':' + b);
+// Una salida de vísperas u otra fuera de su día (conSalidas, h.extra) dice solo sus titulares, y su miniatura es la foto propia
+// de uno de ellos (díptico: cristo, virgen o juntos) o la lámina del nazareno de la hermandad; nunca la foto de otro titular
+function fotoYTitSalida(h) {
+  const x = h.extra; if (!x) return null;
+  const sale = norm(x.titulares || '');
+  const d = h.diptico || {};
+  const im = [d.juntos, d.cristo, d.virgen].find((f) => f && f.titular && sale.includes(norm(String(f.titular).split(',')[0]))) || null;
+  return { im, tit: x.titulares || '' };
+}
 function entryHerm(h, extra = '', enCapital = false) {
   const c = CAP[h.ciudad];
+  const sal = fotoYTitSalida(h);
   // En la página de su capital, capital y día ya se saben: la fila dice la hora de salida y la sede
   if (enCapital) {
-    const im = h.imagen;
+    const im = sal ? sal.im : h.imagen;
     const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
-    const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
+    const tit = sal ? sal.tit : h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
     const meta = [h.hora ? fmtHora(h.hora) + ' h' : '', h.sede].filter(Boolean).map(esc).join(' · ');
     return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3>${meta ? `<p class="oc-entry-sub is-hora">${meta}</p>` : ''}${tit ? `<p class="oc-entry-sub">${esc(tit)}</p>` : ''}</div></li>`;
   }
-  const im = h.imagen;
+  const im = sal ? sal.im : h.imagen;
   const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
-  const tit = h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
+  const tit = sal ? sal.tit : h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>${tit || h.sede ? `<p class="oc-entry-sub">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
 function entrySimple(href, title, sub, cities, extra = '') {
