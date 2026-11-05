@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T10:24:27.172Z",
+ "generado": "2026-11-05T11:35:58.817Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3932,6 +3932,28 @@
     "tam": 302148,
     "titular": "María Santísima de la Estrella",
     "foco": "50% 11%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1104,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg",
+    "foco": "50% 0%",
+    "recorte": [
+     0.25,
+     0.0889,
+     0.6,
+     0.46
+    ],
+    "titular": "Nuestro Padre Jesús de la Humillación y Perdón"
    }
   },
   "rescate-malaga": {
@@ -4080,6 +4102,28 @@
     ],
     "titular": "Nuestro Padre Jesús de la Puente del Cedrón",
     "foco": "50% 46%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_la_Paloma.jpg",
+    "foco": "50% 6%",
+    "recorte": [
+     0.4822,
+     0.2658,
+     0.2,
+     0.4
+    ],
+    "titular": "María Santísima de la Paloma"
    }
   },
   "el-rico-malaga": {
@@ -8642,26 +8686,42 @@
   },
   "crucifixion-malaga": {
    "cristo": {
-    "w": 730,
-    "h": 1094,
+    "w": 960,
+    "h": 1280,
     "widths": [
      160,
      480,
-     730
+     960
     ],
     "escudo": false,
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Crucifixi%C3%B3n_en_calle_Larios_(4475804089).jpg",
-    "recorte": [
-     0.33,
-     0.3,
-     0.2,
-     0.4
+    "autor": "Crucifixión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/crucifixion_mlg/",
+    "foco": "50% 0%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/crucifixion-malaga-cristo.jpg",
+    "tam": 638761,
+    "titular": "Santísimo Cristo de la Crucifixión"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1279,
+    "widths": [
+     160,
+     480,
+     960
     ],
-    "titular": "Santísimo Cristo de la Crucifixión",
-    "foco": "50% 8%"
+    "escudo": false,
+    "autor": "Crucifixión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/crucifixion_mlg/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/crucifixion-malaga-virgen.jpg",
+    "tam": 989836,
+    "titular": "María Santísima del Mayor Dolor en su Soledad"
    }
   },
   "dolores-del-puente-malaga": {
@@ -8683,6 +8743,25 @@
     "tam": 580430,
     "titular": "Nuestra Señora de los Dolores Coronada",
     "foco": "50% 38%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Dolores del Puente (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresdlpuente",
+    "foco": "50% 0%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/dolores-del-puente-malaga-cristo.jpg",
+    "tam": 181131,
+    "titular": "Santísimo Cristo del Perdón"
    }
   },
   "pasion-malaga": {
@@ -8772,6 +8851,25 @@
     ],
     "titular": "Jesús Nazareno del Perdón",
     "foco": "50% 42%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Nueva Esperanza (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadnuevaesperanza/",
+    "foco": "50% 67%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/nueva-esperanza-malaga-virgen.jpg",
+    "tam": 4091588,
+    "titular": "María Santísima de Nueva Esperanza"
    }
   },
   "vineros-malaga": {
@@ -8844,21 +8942,21 @@
   "esperanza-malaga": {
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1279,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "@lmfotoscofrades",
+    "autor": "Archicofradía de la Esperanza (Málaga)",
     "licencia": "",
     "licurl": "",
-    "pagina": "https://www.instagram.com/lmfotoscofrades",
-    "foco": "50% 30%",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "foco": "50% 62%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
-    "tam": 618093,
+    "tam": 480310,
     "titular": "María Santísima de la Esperanza Coronada"
    },
    "cristo": {
@@ -9477,6 +9575,25 @@
     "tam": 1595278,
     "titular": "María Santísima del Mar",
     "foco": "50% 34%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Luz y Mar (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdaddesanandres",
+    "foco": "50% 14%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/luz-y-mar-malaga-cristo.jpg",
+    "tam": 180011,
+    "titular": "Santísimo Cristo Luz del Mundo"
    }
   },
   "resucitado-malaga": {
@@ -9498,6 +9615,27 @@
     "local": "scripts/cedidas/malaga/resucitado-malaga-cristo.jpg",
     "tam": 243285,
     "titular": "Santísimo Cristo Resucitado"
+   }
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Dolores del Puerto de la Torre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresptotorre/",
+    "foco": "50% 34%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-virgen.jpg",
+    "tam": 321230,
+    "titular": "Nuestra Señora de los Dolores"
    }
   }
  },
@@ -9622,6 +9760,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Penas_-_Trono_del_Cristo_3.jpg\"|\"\"|\"\"|\"\"|\"50% 20%\"|\"https://www.instagram.com/hdadlaspenas\"|\"scripts/cedidas/malaga/penas-malaga-virgen.jpg\"|2091288|\"\"|\"50% 30%\""
   },
+  "humillacion-y-estrella-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg\"|\"\"|\"\"|[0.25,0.0889,0.6,0.46]|\"50% 0%\"|\"https://www.instagram.com/hdadhumillacion\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp\"|302148|[0.1667,0,0.6667,1]|\"50% 11%\""
+  },
   "rescate-malaga": {
    "w": 960,
    "h": 640,
@@ -9651,6 +9799,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Salesianos_-_Trono_4.jpg\"|\"\"|\"\"|[0.25,0.05,0.6,0.55]|\"\"|\"https://www.instagram.com/hdadsalesiana\"|\"scripts/cedidas/malaga/salesianos-malaga-virgen.webp\"|480064|\"\"|\"\""
+  },
+  "paloma-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_Jesus.jpg\"|\"\"|\"\"|[0.45,0.03,0.15,0.3]|\"50% 46%\"|\"https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_la_Paloma.jpg\"|\"\"|\"\"|[0.4822,0.2658,0.2,0.4]|\"50% 6%\""
   },
   "el-rico-malaga": {
    "w": 960,
@@ -10122,6 +10280,26 @@
    ],
    "firma": "\"https://www.instagram.com/prendimientoygranperdon\"|\"scripts/cedidas/malaga/prendimiento-malaga-cristo.jpg\"|121778|\"\"|\"50% 35%\"|\"https://commons.wikimedia.org/wiki/File:Prendimiento_-_Perdon.jpg\"|\"\"|\"\"|[0.32,0.16,0.25,0.5]|\"\""
   },
+  "crucifixion-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/crucifixion_mlg/\"|\"scripts/cedidas/malaga/crucifixion-malaga-cristo.jpg\"|638761|\"\"|\"50% 0%\"|\"https://www.instagram.com/crucifixion_mlg/\"|\"scripts/cedidas/malaga/crucifixion-malaga-virgen.jpg\"|989836|\"\"|\"50% 30%\""
+  },
+  "dolores-del-puente-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/doloresdlpuente\"|\"scripts/cedidas/malaga/dolores-del-puente-malaga-cristo.jpg\"|181131|\"\"|\"50% 0%\"|\"https://www.instagram.com/doloresdlpuente\"|\"scripts/cedidas/malaga/dolores-del-puente-malaga-virgen.jpg\"|580430|\"\"|\"50% 38%\""
+  },
   "estudiantes-malaga": {
    "w": 960,
    "h": 640,
@@ -10131,6 +10309,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg\"|\"\"|\"\"|[0.15,0.04,0.5,0.96]|\"\"|\"https://www.instagram.com/cofradia_de_estudiantes\"|\"scripts/cedidas/malaga/estudiantes-malaga-virgen.jpg\"|503361|\"\"|\"\""
+  },
+  "nueva-esperanza-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nueva_Esperanza_-_Trono_del_Nazareno.jpg\"|\"\"|\"\"|[0.36,0.07,0.2,0.4]|\"50% 42%\"|\"https://www.instagram.com/hermandadnuevaesperanza/\"|\"scripts/cedidas/malaga/nueva-esperanza-malaga-virgen.jpg\"|4091588|\"\"|\"50% 67%\""
   },
   "santa-cruz-malaga": {
    "w": 960,
@@ -10150,7 +10338,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-cristo.jpg\"|208470|\"\"|\"55% 25%\"|\"https://www.instagram.com/lmfotoscofrades\"|\"scripts/cedidas/malaga/esperanza-malaga-virgen.jpg\"|618093|\"\"|\"50% 30%\""
+   "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-cristo.jpg\"|208470|\"\"|\"55% 25%\"|\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-virgen.jpg\"|480310|\"\"|\"50% 62%\""
   },
   "mediadora-malaga": {
    "w": 960,
@@ -10171,6 +10359,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/monte.calvario\"|\"scripts/cedidas/malaga/monte-calvario-malaga-cristo.jpg\"|2423395|\"\"|\"35% 25%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Calvario_(13984618325).jpg\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "luz-y-mar-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdaddesanandres\"|\"scripts/cedidas/malaga/luz-y-mar-malaga-cristo.jpg\"|180011|\"\"|\"50% 14%\"|\"https://www.instagram.com/hdaddesanandres\"|\"scripts/cedidas/malaga/luz-y-mar-malaga-virgen.jpg\"|1595278|\"\"|\"50% 34%\""
   }
  }
 }

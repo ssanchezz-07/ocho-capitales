@@ -27,7 +27,10 @@
   "SemanaSantaGranadaLosDolores1.jpg": "Dolores (Granada): en Commons figura como CC BY-SA 4.0 de Manuel_Prados, pero el original de Flickr (photos/14973389@N04/2380462687) es «todos los derechos reservados» y lo subió otra cuenta sin permiso. Además, palio de lejos con la cara tapada.",
   "Cristo_De_La_Columna_(147777103).jpeg": "Marca de agua «500px» (regla de Pablo, 4-nov: no se usan fotos con marcas, ni recortadas).",
   "Cautivo_Jaén.png": "Marca de agua «ANTONIO ©» (regla de Pablo, 4-nov).",
-  "Incienso_Jaén.jpg": "Cabecera de Jaén: a Pablo no le convence (5-nov); la sustituye el Abuelo ante la Catedral."
+  "Incienso_Jaén.jpg": "Cabecera de Jaén: a Pablo no le convence (5-nov); la sustituye el Abuelo ante la Catedral.",
+  "Cristo_de_la_Humillación_y_Perdón,_lateral_izquierdo_del_trono.jpg": "humillacion-y-estrella-malaga (cristo): Trono visto de lejos entre los nazarenos; 720 px.",
+  "Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg": "paloma-malaga (virgen): Palio de lejos: ni recortado se ve a la Virgen entre la candelería.",
+  "Doloresdelpuentecoronada_cristodelperdon.jpg": "dolores-del-puente-malaga (juntos): En Commons el autor es «Composision de la cofradia cc» y la fuente «composicion propia»: la licencia no es fiable."
  },
  "retiradas_en": {
   "el-descendimiento-cadiz|virgen": {
@@ -118,17 +121,9 @@
    "archivo": "San_Antonio_Abad_Church,_Churriana.jpg",
    "motivo": "Fachada del templo en lugar de un titular."
   },
-  "humillacion-y-estrella-malaga|cristo": {
-   "archivo": "Cristo_de_la_Humillación_y_Perdón,_lateral_izquierdo_del_trono.jpg",
-   "motivo": "Trono visto de lejos entre los nazarenos; 720 px."
-  },
   "humillacion-y-estrella-malaga|ficha": {
    "archivo": "Estrella_-_Humillación.jpg",
    "motivo": "Trono visto de lejos entre los nazarenos."
-  },
-  "paloma-malaga|virgen": {
-   "archivo": "Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg",
-   "motivo": "Palio de lejos: ni recortado se ve a la Virgen entre la candelería."
   },
   "la-misericordia-huelva|sede": {
    "archivo": "CAPILLA_Misericordia.jpeg",
@@ -261,10 +256,6 @@
   "jesus-despojado-sevilla|virgen": {
    "archivo": "Virgen_de_los_Dolores_y_Misericordia.jpg",
    "motivo": "Original de 337 px: no da la calidad."
-  },
-  "dolores-del-puente-malaga|juntos": {
-   "archivo": "Doloresdelpuentecoronada_cristodelperdon.jpg",
-   "motivo": "En Commons el autor es «Composision de la cofradia cc» y la fuente «composicion propia»: la licencia no es fiable."
   },
   "la-borriquilla-jaen|sede": {
    "archivo": "Jaén_-_Iglesia_de_Nuestra_Señora_de_Belen_y_San_Roque_02.JPG",

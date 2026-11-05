@@ -559,6 +559,21 @@
    }
   },
   "humillacion-y-estrella-malaga": {
+   "cristo": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg",
+    "titulo": "File:Estrella - Humillación.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titular": "Nuestro Padre Jesús de la Humillación y Perdón",
+    "recorte": [
+     0.25,
+     0.0889,
+     0.6,
+     0.46
+    ],
+    "foco": "50% 0%"
+   },
    "virgen": {
     "autor": "Humillación y Estrella (Málaga)",
     "licencia": "",
@@ -575,14 +590,6 @@
      1
     ],
     "foco": "50% 11%"
-   },
-   "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Humillaci%C3%B3n_y_Perd%C3%B3n,_lateral_izquierdo_del_trono.jpg",
-    "titulo": "File:Cristo de la Humillación y Perdón, lateral izquierdo del trono.jpg",
-    "autor": "Oscarmaldonadosuarez",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Nuestro Padre Jesús de la Humillación y Perdón"
    }
   },
   "rescate-malaga": {
@@ -676,18 +683,19 @@
     "foco": "50% 46%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg",
-    "titulo": "File:Virgen de la Paloma por la Alameda (4480796341).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_la_Paloma.jpg",
+    "titulo": "File:Paloma Trono de la Paloma.jpg",
+    "autor": "Pedro J Pacheco",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Paloma",
     "recorte": [
-     0.35,
-     0.15,
-     0.22,
+     0.4822,
+     0.2658,
+     0.2,
      0.4
-    ]
+    ],
+    "foco": "50% 6%"
    }
   },
   "el-rico-malaga": {
@@ -3504,29 +3512,39 @@
   },
   "crucifixion-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Crucifixi%C3%B3n_en_calle_Larios_(4475804089).jpg",
-    "titulo": "File:Crucifixión en calle Larios (4475804089).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "autor": "Crucifixión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/crucifixion_mlg/",
+    "local": "scripts/cedidas/malaga/crucifixion-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Crucifixión",
     "titular": "Santísimo Cristo de la Crucifixión",
-    "recorte": [
-     0.33,
-     0.3,
-     0.2,
-     0.4
-    ],
-    "foco": "50% 8%"
+    "permiso": "Publicada por la cofradía (@crucifixion_mlg, https://www.instagram.com/p/DWOCeVyjI7N/, imagen 2). Pablo, 5-nov: «USA ESTAS LINKEANDO SU IG TENEMOS PERMISO» y «Usa estas y créditos a la Cofradía».",
+    "foco": "50% 0%"
+   },
+   "virgen": {
+    "autor": "Crucifixión (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/crucifixion_mlg/",
+    "local": "scripts/cedidas/malaga/crucifixion-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Mayor Dolor en su Soledad",
+    "titular": "María Santísima del Mayor Dolor en su Soledad",
+    "permiso": "Publicada por la cofradía (@crucifixion_mlg, https://www.instagram.com/p/DWTu1bdjHd1/, imagen 1). Pablo, 5-nov: «USA ESTAS LINKEANDO SU IG TENEMOS PERMISO» y «Usa estas y créditos a la Cofradía».",
+    "foco": "50% 30%"
    }
   },
   "dolores-del-puente-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Doloresdelpuentecoronada_cristodelperdon.jpg",
-    "titulo": "File:Doloresdelpuentecoronada cristodelperdon.jpg",
-    "autor": "Composision de la cofradia cc",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "titular": "Nuestra Señora de los Dolores Coronada y Santísimo Cristo del Perdón"
+   "cristo": {
+    "autor": "Dolores del Puente (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresdlpuente",
+    "local": "scripts/cedidas/malaga/dolores-del-puente-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo del Perdón",
+    "titular": "Santísimo Cristo del Perdón",
+    "permiso": "Publicada por la hermandad (@doloresdlpuente, https://www.instagram.com/p/DVWOnlEDGiF/, imagen 1) sin fotógrafo citado. Publicada por la propia hermandad sin fotógrafo citado; decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
+    "foco": "50% 0%"
    },
    "virgen": {
     "autor": "Dolores del Puente (Málaga)",
@@ -3538,6 +3556,14 @@
     "titular": "Nuestra Señora de los Dolores Coronada",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @doloresdlpuente (https://www.instagram.com/p/DWYyX1tjKmv/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
     "foco": "50% 38%"
+   },
+   "juntos": {
+    "pagina": "https://commons.wikimedia.org/wiki/File:Doloresdelpuentecoronada_cristodelperdon.jpg",
+    "titulo": "File:Doloresdelpuentecoronada cristodelperdon.jpg",
+    "autor": "Composision de la cofradia cc",
+    "licencia": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0",
+    "titular": "Nuestra Señora de los Dolores Coronada y Santísimo Cristo del Perdón"
    }
   },
   "pasion-malaga": {
@@ -3598,6 +3624,17 @@
      0.4
     ],
     "foco": "50% 42%"
+   },
+   "virgen": {
+    "autor": "Nueva Esperanza (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadnuevaesperanza/",
+    "local": "scripts/cedidas/malaga/nueva-esperanza-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Nueva Esperanza",
+    "titular": "María Santísima de Nueva Esperanza",
+    "permiso": "Publicada por la hermandad (@hermandadnuevaesperanza, https://www.instagram.com/p/Db7ojlsCEs4/, imagen 1) sin fotógrafo citado (solo el vestidor, @franminaar). Publicada por la propia hermandad sin fotógrafo citado; decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
+    "foco": "50% 67%"
    }
   },
   "vineros-malaga": {
@@ -3656,17 +3693,6 @@
    }
   },
   "esperanza-malaga": {
-   "virgen": {
-    "autor": "@lmfotoscofrades",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.instagram.com/lmfotoscofrades",
-    "permiso": "Foto de @lmfotoscofrades, publicada por la Archicofradía de la Esperanza (@pasoyesperanza, https://www.instagram.com/p/DX33ynOjxqM/) citándole como autor. Pablo le ha escrito pidiendo permiso (4-nov-2026); hasta su respuesta se usa con su crédito por decisión de Pablo.",
-    "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
-    "titulo": "Cedida: María Santísima de la Esperanza Coronada",
-    "titular": "María Santísima de la Esperanza Coronada",
-    "foco": "50% 30%"
-   },
    "cristo": {
     "autor": "Archicofradía de la Esperanza (Málaga)",
     "licencia": "",
@@ -3677,6 +3703,17 @@
     "titulo": "Cedida: Jesús Nazareno del Paso",
     "titular": "Jesús Nazareno del Paso",
     "foco": "55% 25%"
+   },
+   "virgen": {
+    "autor": "Archicofradía de la Esperanza (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/pasoyesperanza",
+    "local": "scripts/cedidas/malaga/esperanza-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Esperanza Coronada",
+    "titular": "María Santísima de la Esperanza Coronada",
+    "permiso": "Publicada por la archicofradía (@pasoyesperanza, https://www.instagram.com/p/DeygbOxFwBB/) sin fotógrafo citado. Publicada por la propia hermandad sin fotógrafo citado; decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir. Sustituye a la de @lmfotoscofrades, que dijo que no el 5-nov.",
+    "foco": "50% 62%"
    }
   },
   "amor-malaga": {
@@ -4076,6 +4113,17 @@
    }
   },
   "luz-y-mar-malaga": {
+   "cristo": {
+    "autor": "Luz y Mar (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdaddesanandres",
+    "local": "scripts/cedidas/malaga/luz-y-mar-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo Luz del Mundo",
+    "titular": "Santísimo Cristo Luz del Mundo",
+    "permiso": "Publicada por la hermandad (@hdaddesanandres, https://www.instagram.com/p/DWbnKHijbhI/, imagen 1) sin fotógrafo citado. Publicada por la propia hermandad sin fotógrafo citado; decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
+    "foco": "50% 14%"
+   },
    "virgen": {
     "autor": "Luz y Mar (Málaga)",
     "licencia": "",
@@ -4099,6 +4147,19 @@
     "titular": "Santísimo Cristo Resucitado",
     "foco": "50% 54%",
     "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @agrupaciondecofradiasmalaga (https://www.instagram.com/p/DWwNtCXCplw/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la Agrupación sin esperar a su permiso, que queda por pedir."
+   }
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "virgen": {
+    "autor": "Dolores del Puerto de la Torre (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/doloresptotorre/",
+    "local": "scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "permiso": "Publicada por la hermandad (@doloresptotorre, https://www.instagram.com/p/DfB-Hf5DXZb/, imagen 1) sin fotógrafo citado. Publicada por la propia hermandad sin fotógrafo citado; decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir.",
+    "foco": "50% 34%"
    }
   }
  }
