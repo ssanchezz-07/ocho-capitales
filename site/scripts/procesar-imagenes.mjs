@@ -93,6 +93,7 @@ async function processOne(kind, slug, meta) {
   }
   const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
   if (meta.foco && !out.escudo) out.foco = meta.foco;
+  if (meta.foco_ficha && !out.escudo) out.focoFicha = meta.foco_ficha; // encuadre solo para el díptico de la ficha (p. ej. que se vea la marca de agua que el autor pide respetar)
   if (kind === 'c') out.g1920 = true; // hecha con WIDTHS_CAP
   if (meta.alt) out.alt = meta.alt; // texto alternativo propio (el de su ficha de Commons)
   if (rc) out.recorte = meta.recorte;
@@ -138,7 +139,7 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
     const meta = par && par[tipo]; if (!meta || !meta.pagina) continue;
     if (retirada(meta, slug, tipo)) continue;
     const prevT = (index.titulares[slug] || {})[tipo];
-    if (prevT && prevT.pagina === meta.pagina && (prevT.local || '') === (meta.local || '') && (!meta.local || prevT.tam === fs.statSync(path.join(SITE, meta.local)).size) && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); continue; }
+    if (prevT && prevT.pagina === meta.pagina && (prevT.local || '') === (meta.local || '') && (!meta.local || prevT.tam === fs.statSync(path.join(SITE, meta.local)).size) && JSON.stringify(prevT.recorte || null) === JSON.stringify(meta.recorte || null) && fs.existsSync(path.join(OUT_DIR, `t-${slug}-${tipo}-${prevT.widths.at(-1)}.webp`))) { prevT.titular = meta.titular || prevT.titular; completarFoco(prevT, meta.foco); if (meta.foco_ficha) prevT.focoFicha = meta.foco_ficha; else delete prevT.focoFicha; continue; }
     try { (index.titulares[slug] = index.titulares[slug] || {})[tipo] = { ...(await processOne('t', `${slug}-${tipo}`, meta)), titular: meta.titular || '' }; done++; console.log('ok', 't', slug, tipo); }
     catch (e) { fail++; console.log('FALLO', 't', slug, tipo, e.message); }
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));

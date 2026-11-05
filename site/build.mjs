@@ -80,7 +80,7 @@ const MAPA_FILE = path.join(DIR, 'data', 'mapa-andalucia.json');
 const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'utf8')) : null;
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
-const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, alt: x.alt, foco: x.foco, recorte: !!x.recorte, cedida: !!x.cedida });
+const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, alt: x.alt, foco: x.foco, focoFicha: x.focoFicha, recorte: !!x.recorte, cedida: !!x.cedida });
 // Díptico (Cristo y Virgen en una sola imagen 3:2), o foto apaisada de los dos titulares juntos: la miniatura la enseña entera en 3:2,
 // sin cortar por la junta ni dejar a uno fuera. Las demás fotos van al cuadrado con su foco (la cara dentro).
 const dipCls = (im) => (im && (im.kind === 'd' || (im.kind === 't' && /-juntos$/.test(im.slug) && im.w / im.h >= 1.3)) ? ' is-dip' : '');
@@ -1127,7 +1127,7 @@ function dipticoHtml(h, c) {
     if (d.sede && (!h.imagen || h.imagen === d.sede)) return `<figure class="oc-diptico is-juntos is-sede">${imgTag(d.sede, `Sede de la hermandad: ${h.sede || ''}`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>Sede: ${esc(h.sede || 'templo de la hermandad')}</b></span><span class="oc-diptico-cred">${credit(d.sede)}</span></figcaption></figure>`;
     return '';
   }
-  const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
+  const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x.focoFicha ? { ...x, foco: x.focoFicha } : x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
   return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">${creditPar(d.cristo, d.virgen)}</span></figcaption></figure>`;
 }
 const DESTACADAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'marchas-destacadas.json'), 'utf8')); } catch (e) { return {}; } })();
