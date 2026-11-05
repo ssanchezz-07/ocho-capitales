@@ -420,9 +420,11 @@ const fmtHora = (s) => String(s || '').replace(/\b(\d{1,2})[:.](\d{2})\b/g, (_, 
 // de uno de ellos (díptico: cristo, virgen o juntos) o la lámina del nazareno de la hermandad; nunca la foto de otro titular
 function fotoYTitSalida(h) {
   const x = h.extra; if (!x) return null;
-  const sale = norm(x.titulares || '');
+  // nombre completo, no un trozo: un titular corto («María») nunca debe traer la foto de otro
+  const limpio = (t) => norm(t).replace(/s+/g, ' ').trim();
+  const sale = limpio(x.titulares || ''), partes = new Set([sale, ...sale.split(/s*(?:,|·|;)s*|s+ys+(?=(?:nuestr[oa]|santisim[oa]|maria|san|santa|jesus|cristo))/)]);
   const d = h.diptico || {};
-  const im = [d.juntos, d.cristo, d.virgen].find((f) => f && f.titular && sale.includes(norm(String(f.titular).split(',')[0]))) || null;
+  const im = [d.juntos, d.cristo, d.virgen].find((f) => f && f.titular && partes.has(limpio(String(f.titular).split(',')[0]))) || null;
   return { im, tit: x.titulares || '' };
 }
 function entryHerm(h, extra = '', enCapital = false) {
@@ -2255,7 +2257,7 @@ function datosCunao() {
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
 // Láminas de respaldo de las hermandades sin foto de un titular (las enlazan el listado, el buscador y el plano)
-for (const h of D.hermandades) { if (sinFotoLocal(h) || sinDipCalle(h)) write('assets/naz/' + h.slug + '.svg', laminaNaz(h)); if (sinFotoLocal(h) || h.imagen.escudo) write('assets/naz/' + h.slug + '-r.svg', medallonNaz(h)); }
+for (const h of D.hermandades) { if (sinFotoLocal(h) || sinDipCalle(h)) write('assets/naz/' + h.slug + '.svg', laminaNaz(h)); if (sinFotoLocal(h) || h.imagen.escudo || (h.salidas || []).some((x) => !fotoYTitSalida({ ...h, extra: x }).im)) write('assets/naz/' + h.slug + '-r.svg', medallonNaz(h)); }
 // las que necesitan imagen para compartir (sin ninguna foto): la lista que lee tools/diseno/og-respaldo.py
 for (const c of D.capitales) write('assets/naz/_neutro-' + c.slug + '.svg', medallonNeutro(c));
 write('assets/naz/og.json', JSON.stringify(D.hermandades.filter((h) => !h.imagen).map((h) => h.slug)));
