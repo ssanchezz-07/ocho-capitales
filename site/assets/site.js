@@ -916,15 +916,24 @@
   // Aparece pasadas unas dos pantallas y nunca encima de un plano (ni de su crédito de OpenStreetMap). Con «reducir movimiento», salto directo.
   (function () {
     var b = $('[data-arriba]'); if (!b) return;
-    var planos = $$('.oc-calle-mapa, .oc-colg-plano'), pedido = false;
+    var planos = $$('.oc-calle-mapa, .oc-colg-plano'), reloj = $('.oc-calle-reloj'), osm = $('.oc-calle-osm'), cunao = $('.oc-cunao-btn'), pedido = false;
+    var choca = function (a, p, m) { return p.width > 0 && p.left < a.right && p.right > a.left && p.top < a.bottom + m && p.bottom > a.top - m; };
     var mira = function () {
       pedido = false;
-      var ver = window.scrollY > innerHeight * 2;
-      if (ver && planos.length) {
+      // dos pantallas; en las páginas cortas, algo más de la mitad del recorrido (y nada si apenas hay que desplazar)
+      var largo = document.documentElement.scrollHeight - innerHeight;
+      var ver = largo > innerHeight && window.scrollY > Math.min(innerHeight * 2, largo * .6);
+      if (ver) {
         var r = b.getBoundingClientRect();
-        ver = !planos.some(function (m) { var p = m.getBoundingClientRect(); return p.width > 0 && p.left < r.right && p.right > r.left && p.top < r.bottom + 72 && p.bottom > r.top - 72; });
+        ver = !planos.some(function (m) { return choca(r, m.getBoundingClientRect(), 72); }) && !(reloj && choca(r, reloj.getBoundingClientRect(), 8));
       }
       b.classList.toggle('is-visible', ver);
+      // En la calle: el reloj sube y baja con el final del plano; erCuñao se aparta mientras pasa por su altura o por el crédito del plano
+      // (se mide su sitio sin el desplazamiento de esconderse, que va animado: si no, al volver podría quedar encima)
+      if (reloj && cunao) {
+        var c = { left: cunao.offsetLeft, top: cunao.offsetTop, right: cunao.offsetLeft + cunao.offsetWidth, bottom: cunao.offsetTop + cunao.offsetHeight };
+        cunao.classList.toggle('is-apartado', choca(c, reloj.getBoundingClientRect(), 8) || (!!osm && choca(c, osm.getBoundingClientRect(), 4)));
+      }
     };
     addEventListener('scroll', function () { if (!pedido) { pedido = true; requestAnimationFrame(mira); } }, { passive: true });
     addEventListener('resize', mira);
