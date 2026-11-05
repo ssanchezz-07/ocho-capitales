@@ -45,7 +45,7 @@ with sync_playwright() as p:
                             im = pg.evaluate("() => [...document.querySelectorAll('[data-sede-hoja] .oc-sede-dip img, [data-sede-hoja] .oc-sede-foto')].map(i => [i.complete && i.naturalWidth > 0, Math.round(i.getBoundingClientRect().height)])")
                             check(im and all(x[0] for x in im), f'{tag} {ciudad} {r["t"]} ({k}): imágenes cargadas {im}')
                             alto = pg.evaluate("(e) => Math.round(e.getBoundingClientRect().height)", panel.element_handle())
-                            check(alto <= h * (.86 if h <= 500 else .63), f'{tag} {ciudad} {r["t"]} ({k}): la hoja a media altura ({alto} de {h} px)')
+                            check((h * .8 <= alto <= h * .86) if h <= 500 else alto <= h * .63, f'{tag} {ciudad} {r["t"]} ({k}): la hoja a media altura ({alto} de {h} px)')
                             vb = pg.evaluate("() => { const b = document.querySelector('[data-sede-hoja] .oc-sede-cuerpo > .oc-btn').getBoundingClientRect(), p = document.querySelector('[data-sede-hoja] .oc-sheet-panel').getBoundingClientRect(); return b.top >= p.top && b.bottom <= p.bottom + 1; }")
                             check(vb, f'{tag} {ciudad} {r["t"]} ({k}): «Ver su ficha» a la vista sin desplazar')
                             if CAPT: pg.wait_for_timeout(300); pg.screenshot(path=f'{CAPT}/hoja-{k}-{w}-{esq}.png')
