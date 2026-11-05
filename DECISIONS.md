@@ -587,7 +587,7 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
 - **Aplicado:**
   - Tiered Cache Smart Topology: para deshacerlo, `value: off`.
   - Informes de DMARC de Cloudflare: añaden `rua` y mantienen `p=none`; el correo no cambia.
-- **No aplicado:**
+- **No aplicado** (la caché de datos se queda así por decisión de Pablo, 5-nov: «Déjalo así»):
   - Crawler Hints: la API no deja con este acceso (405). Lo tiene que activar Pablo en el panel.
   - Caché de datos.ochocapitales.com: auditor-web dio NO APTO porque el CORS va por origen y la caché de Cloudflare no separa por origen, así que podría bloquear news.json o dejar noticias atrasadas. Si se hace, antes hay que poner `Access-Control-Allow-Origin: *` con una regla de cabeceras.
 - **Descartado:** meter el origen en la clave de caché. Probablemente es de pago y lo complica.
