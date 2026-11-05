@@ -362,9 +362,9 @@ const HUELLA_IMG = new Map();
 const huellaImg = (f) => { if (!HUELLA_IMG.has(f)) { let h = ''; try { h = createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', 'img', f))).digest('hex').slice(0, 8); } catch (e) { console.warn('Falta la imagen assets/img/' + f); } HUELLA_IMG.set(f, h); } return HUELLA_IMG.get(f); };
 const localUrl = (im, w) => { const f = `${im.kind}-${im.slug}-${w}.webp`, h = huellaImg(f); return `assets/img/${f}${h ? '?v=' + h : ''}`; };
 // Ancho más pequeño disponible que cubre la mayor de las medidas pedidas (evita descargar 960 px para una miniatura).
+const localSet = (im, widths) => { const max = Math.max(...widths); const cut = im.sizes.findIndex((x) => x >= max); return im.sizes.slice(0, cut < 0 ? im.sizes.length : cut + 1); };
 // Anchos de la cabecera de capital: los mismos en la etiqueta y en su precarga (si no, en pantallas de alta densidad se baja dos veces)
 const ANCHOS_CABECERA = [500, 960, 1920];
-const localSet = (im, widths) => { const max = Math.max(...widths); const cut = im.sizes.findIndex((x) => x >= max); return im.sizes.slice(0, cut < 0 ? im.sizes.length : cut + 1); };
 const ogOf = (im) => (!im ? '' : im.local ? abs(localUrl(im, im.sizes.at(-1))) : isThumb(im.src) ? wmAt(im.src, 960) : clean(im.src));
 function imgTag(im, alt, { cls = '', sizes = '(max-width: 640px) 100vw, 33vw', widths = [330, 500, 960], eager = false } = {}) {
   if (!im) return '';
