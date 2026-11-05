@@ -109,3 +109,17 @@ Huelva San Pedro, Sagrado Corazón; Almería San Ildefonso; Jaén San Ildefonso.
    - Granada: «El Llamador» sustituido por la Guía oficial de horarios 2026 de la Federación (`GUIA_GR` y `PAG_GR` en `tools/itinerarios/unir.mjs`); todas las horas coinciden. Escolapios y Ferroviarios ya tienen horario. La Soledad ya no cita el PDF de 2025.
    - Pendiente de otros: 9 citas al PDF muerto de Canal Sur en `site/data/sedes/cadiz.json` (mapas); mapa de las Tres Caídas de Granada con puntos de otra cofradía (mapas); Huelva sigue citando «El Llamador» sin enlace; Siete Palabras de Cádiz: la Cruz de Guía pone «San Agustín» donde lo normal es San Francisco.
    - Al regenerar `itinerarios-2026.json` con `unir.mjs` salen cambios de Cádiz (Humillación, Perdón) que no están revisados: aplicar solo lo que toque.
+   - Subido 806f9d2.
+6. **5-nov, fallos de la web verificados (lotes 1 y 2 de coordinación)**. Regla de Pablo: cada dato se comprueba primero con el organismo oficial; si no está, con la hermandad, y si no, con la prensa de 2026. La Wikipedia solo vale de apoyo (`PROTOCOLO.md`).
+   - Hecho:
+     - Lanzada de Huelva: Nuestra Señora de los Dolores, el Patrocinio y la sede.
+     - Sedes con su templo: La O, El Higuerón y el Traslado (Córdoba), el Vía Crucis (Granada), la Amargura y los Javieres (Sevilla; los Javieres están en el Sagrado Corazón).
+     - Cifras: Córdoba (39 + 3 aparte; «43 hermandades y 1 pro-hermandad») y Sevilla (el 71 solo del Consejo; Paz y Misericordia). Málaga dice «8 cortejos de Vísperas».
+     - Textos de Granada, Huelva, Málaga y Cádiz.
+     - En la página de la capital, las salidas fuera de su día salen solo con sus titulares y su foto (o la lámina del nazareno) (`fotoYTitSalida` en build.mjs).
+   - Para el domingo (pasada completa):
+     - Sedes de Mutilado y Verdad y Sagrario de Málaga: sin fuente oficial ni de 2026.
+     - Quinta Angustia y pro-hermandades Bondad, Salud y Confianza en las Vísperas de Córdoba: cambian la cifra y el cuadre.
+     - Fuente oficial de la marcha «Ecce-Homo» a la salida (Cádiz).
+     - Traslado de Córdoba: fundación 2004 (no 2007) y titulares según El Relicario 2026, p. 13.
+     - Amargura: «Ntro. Padre Jesús del Silencio» según la nómina; Javieres: «María Santísima de Gracia y Amparo».
