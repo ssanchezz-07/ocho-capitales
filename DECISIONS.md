@@ -581,3 +581,14 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
 - **Descartado:**
   - Cortar todas las fotos sin terminar a 2500 px: el auditor vio que se llevaba hasta 6 perezosas que ni se habían pedido.
   - Cambiar la prueba de humo a domcontentloaded: escondería una lentitud propia. Queda como mejora opcional que la prueba aborte al instante las imágenes de otros dominios.
+
+## 5-nov · Ajustes de Cloudflare (Alojamiento, con el sí de Pablo: «Los 4»)
+- **Detalle completo y cómo deshacer cada cambio:** `EQUIPO/CLOUDFLARE-AUDITORIA.md`.
+- **Aplicado:**
+  - Tiered Cache Smart Topology: para deshacerlo, `value: off`.
+  - Informes de DMARC de Cloudflare: añaden `rua` y mantienen `p=none`; el correo no cambia.
+- **No aplicado:**
+  - Crawler Hints: la API no deja con este acceso (405). Lo tiene que activar Pablo en el panel.
+  - Caché de datos.ochocapitales.com: auditor-web dio NO APTO porque el CORS va por origen y la caché de Cloudflare no separa por origen, así que podría bloquear news.json o dejar noticias atrasadas. Si se hace, antes hay que poner `Access-Control-Allow-Origin: *` con una regla de cabeceras.
+- **Descartado:** meter el origen en la clave de caché. Probablemente es de pago y lo complica.
+- **Ojo:** nunca activar «ignorar query string» en esa caché. El vigía pide `news.json?c=…` para saltársela.
