@@ -421,8 +421,8 @@ const fmtHora = (s) => String(s || '').replace(/\b(\d{1,2})[:.](\d{2})\b/g, (_, 
 function fotoYTitSalida(h) {
   const x = h.extra; if (!x) return null;
   // nombre completo, no un trozo: un titular corto («María») nunca debe traer la foto de otro
-  const limpio = (t) => norm(t).replace(/s+/g, ' ').trim();
-  const sale = limpio(x.titulares || ''), partes = new Set([sale, ...sale.split(/s*(?:,|·|;)s*|s+ys+(?=(?:nuestr[oa]|santisim[oa]|maria|san|santa|jesus|cristo))/)]);
+  const limpio = (t) => norm(t).replace(/\s+/g, ' ').trim();
+  const sale = limpio(x.titulares || ''), partes = new Set([sale, ...sale.split(/\s*(?:,|·|;)\s*|\s+y\s+(?=(?:nuestr[oa]|santisim[oa]|maria|san|santa|jesus|cristo)\b)/).map((t) => t.trim()).filter(Boolean)]);
   const d = h.diptico || {};
   const im = [d.juntos, d.cristo, d.virgen].find((f) => f && f.titular && partes.has(limpio(String(f.titular).split(',')[0]))) || null;
   return { im, tit: x.titulares || '' };
