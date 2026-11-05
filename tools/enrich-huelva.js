@@ -22,7 +22,7 @@ add('las-tres-caidas-huelva', 'hermandad-de-las-tres-caidas');
 add('la-salud-huelva', 'hermandad-sacramental-de-la-salud', { f: 'Asociación de gloria (1976); hermandad de penitencia en 2000',
   t: [['Nuestro Padre Jesús de la Sentencia en su Presentación al Pueblo', 'David Valenciano, 1998'], ['Nuestra Señora de la Salud', 'Enrique Pérez Saavedra, 1991']] });
 add('la-lanzada-huelva', 'hermandad-de-la-sagrada-lanzada', { f: '1986 (erección canónica)',
-  t: [['Santísimo Cristo de la Sagrada Lanzada', 'Joaquín Moreno Daza, 1985'], ['María Santísima titular', 'Manuel Domínguez Rodríguez, 1968']] });
+  t: [['Santísimo Cristo de la Sagrada Lanzada', 'Joaquín Moreno Daza, 1985'], ['María Santísima titular', 'Manuel Domínguez Rodríguez, 1968'], ['María Santísima del Patrocinio']] }); // el Patrocinio (bendecido el 4-4-1992) sin autor en la ficha del Consejo
 add('los-estudiantes-huelva', 'hermandad-de-los-estudiantes', { t: [['Santísimo Cristo de la Sangre', 'Antonio León Ortega, 1950'], ['Nuestra Señora del Valle', 'Antonio León Ortega, 1956']] });
 add('pasion-huelva', 'hermandad-sacramental-de-pasion', { f: 'Sacramental de San Pedro (1536); cofradía de Pasión de 1918',
   t: [['Nuestro Padre Jesús de la Pasión', 'Antonio Infante Reina, 1938'], ['María Santísima del Refugio', 'anónima finales s. XVIII']] });

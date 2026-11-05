@@ -27,7 +27,20 @@
   "la-o-cordoba": {
    "sede": { "valor": "Parroquia de Nuestra Señora de la Aurora", "fuente": "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf", "nota": "5-nov: la sede era «Barrio de Fátima»; programa oficial de horarios e itinerarios 2026 de la Agrupación, p. 2 (Sábado de Pasión: «La O · Parroquia de Nuestra Señora de la Aurora»)" }
   },
+  "el-via-crucis-granada": {
+   "sede": { "valor": "Iglesia de San Juan de los Reyes (Albaicín)", "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf", "nota": "5-nov: la sede era «Albaicín», el barrio; guía oficial de horarios 2026 de la Federación, p. 27: «Casa de Hermandad - Ig. S. Juan de los Reyes (2 pasos)»; su ficha de la Federación: «partiendo de la Iglesia de San Juan de los Reyes, desde el año 1989»" }
+  },
+  "la-amargura-sevilla": {
+   "sede": { "valor": "Iglesia de San Juan de la Palma", "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "nota": "5-nov: la sede era «San Juan de la Palma», sin templo; nómina oficial 2026 del Consejo, p. 2: «Iglesia filial de San Juan Bautista (vulgo de la Palma)»" }
+  },
+  "los-javieres-sevilla": {
+   "sede": { "valor": "Iglesia del Sagrado Corazón", "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "nota": "5-nov: la sede era «Omnium Sanctorum»; nómina oficial 2026 del Consejo, p. 4: «Iglesia del Sagrado Corazón»; igual en la web de la hermandad, apartado Sede canónica (https://javieres.com/iglesia-sagrado-corazon/)" }
+  },
+  "traslado-al-sepulcro-pro-hermandad-cordoba": {
+   "sede": { "valor": "Parroquia de Nuestra Señora de Consolación", "fuente": "https://fundacioncajasol.com/wp-content/uploads/El-Relicario-Cofrade-2026-Fundacion-Cajasol-84-pag-web.pdf", "nota": "5-nov: la sede era «Colonia de la Paz», el barrio; no pertenece a la Agrupación; guía El Relicario Cofrade 2026 (Fundación Cajasol), p. 13, Sábado de Pasión: «Traslado al Sepulcro · Parroquia de Nuestra Señora de Consolación»" }
+  },
   "la-lanzada-huelva": {
+   "sede": { "valor": "Parroquia de Nuestra Señora de los Dolores (Las Colonias)", "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/", "nota": "5-nov: ficha del Consejo, Sede canónica: «se erige canónicamente en la Parroquia de Nuestra Señora de los Dolores… en el barrio de Las Colonias»" },
    "titulares_renombrar": { "María Santísima titular": { "nombre": "Nuestra Señora de los Dolores", "fuente": "https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/" } }
   },
   "la-clemencia-jaen": { "fundacion": { "valor": "1593 (refundada como cofradía de penitencia en 1945)", "fuente": "https://clemenciajaen.wixsite.com/clemenciajaen/información", "nota": "web oficial: 17-3-1593; resuelve el conflicto 1945/1593" } },
