@@ -186,3 +186,10 @@ Con auditor-web y el sí de Pablo para subir.
   - `grano.png` (fondo del CSS) sigue sin versión;
   - con todo versionado, `/assets/img/*` podría pasar a `immutable` (`despliegue.mjs`, línea 127) cuando se resuelva lo de `grano.png`.
 - **Ensayo del dominio:** hecho el 3-nov (ver `GUIA-ALOJAMIENTO.md`).
+
+## RETOMAR AQUÍ (5-nov): Noticias ya no se queda «cargando» (`d72c796`, con el sí de Pablo)
+- **Causa del run 41977361510:** si el servidor de un medio no contesta, la foto destacada deja la página sin terminar de cargar para siempre. La página se ve y se usa, pero «load» no llega. Medidas y decisión en `DECISIONS.md` (5-nov).
+- **Arreglo:** en `site.js`, a los 20 s se corta la foto que frena la carga. Con un medio colgado, «load» llega a los 20 s en vez de nunca, y solo se quita la destacada. Si las fotos tardan 12 s, no se quita nada. Auditor-web: las 3 condiciones que puso, cumplidas y medidas con su propia prueba (`scratchpad/aud/diag4.mjs`).
+- **Límite:** en WebKit (Safari) no libera «load».
+- **Opcional:** que la prueba de humo aborte al instante las imágenes de otros dominios. Así la publicación no dependería de los medios.
+- **Siguen pendientes:** el SEO (en pausa), `grano.png` sin versión, y avisar en el build si `marchas-destacadas.json` está mal escrito.
