@@ -156,6 +156,19 @@
   }
   document.addEventListener('error', function (e) { if (e.target && e.target.matches && e.target.matches('img[data-hide-broken]')) dropImg(e.target); }, true);
   $$('img[data-hide-broken]').forEach(function (img) { if (img.complete && !img.naturalWidth) dropImg(img); });
+  // Foto de un medio cuyo servidor no contesta nunca: el navegador se queda «cargando» sin fin. A los 20 s, si la página aún no
+  // ha terminado, se cortan las fotos de medios que siguen a medias y que de verdad frenan la carga: la destacada (no perezosa)
+  // y las perezosas ya en pantalla o a menos de 1250 px (las de más abajo ni se han pedido y se respetan). La noticia se queda
+  // con texto. Lo propio de la web no se toca: si lo lento es nuestro, se sigue notando. Medido: libera «load» en Chrome;
+  // en WebKit (Safari) la petición colgada sigue frenándolo aunque se quite la foto, así que allí solo se ve el texto.
+  setTimeout(function () {
+    if (document.readyState === 'complete') return;
+    $$('img[data-hide-broken]').forEach(function (img) {
+      if (img.complete || !img.getAttribute('src')) return;
+      if (img.loading === 'lazy' && img.getBoundingClientRect().top > innerHeight + 1250) return;
+      img.removeAttribute('src'); dropImg(img);
+    });
+  }, 20000);
 
   // ---------- ciudad persistente ----------
   var cityListeners = [];

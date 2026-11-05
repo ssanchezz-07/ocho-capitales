@@ -561,3 +561,23 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
 - **Descartado:** deducir el titular del texto de la dedicatoria. Ese texto casi siempre es el nombre completo de la hermandad, que ya incluye a todos sus titulares, así que no distingue nada.
 - **Efecto:** cambian 4 de 284 fichas: la Aurora, y Humildad, Pasión y Penas de Málaga, donde suben las dedicadas a un titular.
 - **Diseño:** el cambio está en `pageHerm` (`peso`, `criterios`, `destacar`) y en la constante `DESTACADAS`, justo encima. Hay que hacer rebase.
+
+## 5-nov · Fotos de medios que no responden nunca en Noticias (Alojamiento)
+- **Problema:** el run 41977361510 falló porque /noticias/ no llegó a «load» en 45 s. La causa: si el servidor de un medio no contesta, la foto destacada (no es perezosa) deja la página «cargando» para siempre. La página se ve y se puede usar (medido: LCP igual, 44 enlaces), pero el navegador no termina nunca.
+- **Medido en la web publicada:**
+
+  | | DCL | LCP | load |
+  |---|---|---|---|
+  | 390 px, 4G lento y CPU 4× | ~4,0 s | 2,6–3,6 s | 4,5–5,1 s |
+  | 1440 px | 0,3–0,45 s | 0,46–0,8 s | 0,34–0,47 s |
+
+  Hay 3 peticiones externas, que suman 513 KB. La más lenta es la destacada de s2.ppllstatics.com, con 2,5–2,8 s en 4G lento.
+- **Elegido:** en `site.js`, junto a `dropImg`, si a los 20 s la página aún no ha terminado de cargar, se cortan las fotos de medios que siguen a medias y que de verdad frenan la carga: la destacada y las perezosas a menos de 1250 px de la pantalla. La noticia se queda con texto.
+- **Resultado en Chrome:**
+  - con los medios colgados, «load» llega a los 20 s y solo se quita la destacada;
+  - con fotos que tardan 12 s, no se quita nada.
+- **Lo que se acepta:** en una conexión lentísima, donde la foto tarda más de 20 s, la destacada se quita y la tarjeta da un salto. Es mejor que dejar la página cargando sin fin.
+- **Límite:** en WebKit (Safari), quitar la foto no libera «load»; la petición colgada sigue frenándolo. Allí no es peor que antes.
+- **Descartado:**
+  - Cortar todas las fotos sin terminar a 2500 px: el auditor vio que se llevaba hasta 6 perezosas que ni se habían pedido.
+  - Cambiar la prueba de humo a domcontentloaded: escondería una lentitud propia. Queda como mejora opcional que la prueba aborte al instante las imágenes de otros dominios.
