@@ -336,6 +336,7 @@ const IC = {
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
   hoy: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  up: '<path d="M12 19V5M6 11l6-6 6 6"/>',
 };
 const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${IC[n]}</svg>`;
 
@@ -640,6 +641,7 @@ ${body}${colabora(p, title)}
   <button type="button" data-more aria-expanded="false" aria-controls="oc-more"${masAqui(p, active) ? ' class="is-aqui"' : ''}>${masAqui(p, active) ? '<i class="oc-tabpill" aria-hidden="true"></i>' : ''}${icon('more')}<span>Más</span></button>
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
+<button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
 <div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}">
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
     <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa. O eso dice.</p></div><button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button></div>

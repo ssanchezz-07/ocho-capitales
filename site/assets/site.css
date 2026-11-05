@@ -1506,7 +1506,7 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; border: 1px solid rgb(255 255 255 / .22); background: rgb(30 14 44 / .6); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); color: #fff; font: 600 1.3rem/1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-calle-btn:active { transform: scale(.94); }
 .oc-calle-btn svg { width: 22px; height: 22px; }
-.oc-calle-osm { position: absolute; left: 10px; bottom: 8px; margin: 0; font-size: .68rem; color: rgb(255 255 255 / .72); pointer-events: none; }
+.oc-calle-osm { position: absolute; left: 10px; bottom: 48px; margin: 0; font-size: .68rem; color: rgb(255 255 255 / .72); pointer-events: none; }
 .oc-calle-osm a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
 .oc-calle-mapa.is-error::after { content: "No se pudo cargar el plano. Comprueba la conexión."; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; }
 /* reloj: reproducir la jornada y arrastrar la hora */
@@ -1519,8 +1519,8 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .is-playing .oc-calle-play path { d: path("M7 5h4v14H7zM13 5h4v14h-4z"); }
 .oc-calle-tiempo { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .oc-calle-hora { font: 400 1.9rem/1 var(--display); color: var(--primary); font-variant-numeric: tabular-nums; }
-.oc-calle-tiempo input { width: 100%; accent-color: var(--primary); height: 28px; }
-.oc-calle-ahora { flex: none; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--primary); background: none; color: var(--primary); font-weight: 700; cursor: pointer; }
+.oc-calle-tiempo input { width: 100%; accent-color: var(--primary); height: 44px; margin: -6px 0 -10px; }
+.oc-calle-ahora { flex: none; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--primary); background: none; color: var(--primary); font-weight: 700; cursor: pointer; }
 .oc-calle-ahora[hidden] { display: none; }
 /* lista de la jornada */
 .oc-calle-lista { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 28px; }
@@ -1603,6 +1603,18 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 [data-fav-list] .oc-entry.is-text { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .oc-cunao-btn.is-oculto { transform: translateY(calc(100% + 40px)); pointer-events: none; }
 @media (prefers-reduced-motion: reduce) { .oc-cunao-btn { transition: none; } }
+/* Volver arriba: encima de erCuñao; cuando él se esconde al bajar, ocupa su sitio */
+.oc-arriba { --arriba-baja: 0px; position: fixed; right: calc(max(14px, env(safe-area-inset-right)) + 8px); bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 86px); z-index: 24; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1.5px solid var(--gold); border-radius: 50%; background: var(--surface); color: var(--primary); cursor: pointer; touch-action: manipulation; box-shadow: 0 10px 22px -12px rgb(20 8 29 / .55); opacity: 0; visibility: hidden; transform: translateY(var(--arriba-baja)) scale(.85); transition: opacity 180ms var(--ease-out), transform 240ms var(--ease-out), visibility 0s linear 240ms; }
+.oc-arriba.is-visible { opacity: 1; visibility: visible; transform: translateY(var(--arriba-baja)); transition: opacity 180ms var(--ease-out), transform 240ms var(--ease-out), visibility 0s; }
+.oc-arriba.is-visible:active { transform: translateY(var(--arriba-baja)) scale(.92); }
+.oc-arriba:focus-visible { border-radius: 50%; }
+.oc-arriba .oc-i { width: 22px; height: 22px; }
+.oc-cunao-btn.is-oculto ~ .oc-arriba { --arriba-baja: 64px; }
+@media (hover: hover) and (pointer: fine) { .oc-arriba:hover { background: color-mix(in srgb, var(--gold) 16%, var(--surface)); } }
+@media (min-width: 960px) { .oc-arriba { right: 36px; bottom: 104px; } .oc-cunao-btn.is-oculto ~ .oc-arriba { --arriba-baja: 68px; } }
+@media (prefers-reduced-motion: reduce) { .oc-arriba, .oc-arriba.is-visible { transition: none; } }
+.oc-en-ciudad .oc-arriba { display: none; }
+@media print { .oc-arriba { display: none; } }
 .oc-cunao-cara { width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0 0 3px #d9b560; }
 .oc-cunao-bocadillo { position: absolute; right: calc(100% + 10px); bottom: 10px; padding: 9px 14px; border-radius: 16px 16px 4px 16px; background: var(--surface); color: var(--primary); font: 600 .9rem/1.2 var(--sans); white-space: nowrap; box-shadow: 0 12px 28px -14px rgb(20 8 29 / .55); opacity: 0; transform: translateX(8px) scale(.96); transform-origin: right bottom; pointer-events: none; transition: opacity 220ms var(--ease-out), transform 260ms var(--ease-out); }
 .oc-cunao-btn.is-saludo .oc-cunao-bocadillo { opacity: 1; transform: none; }
@@ -1700,7 +1712,10 @@ main ol:not([class]) { padding-left: 1.4em; }
 
 /* erCuñao en el plano (móvil): más pequeño y a la izquierda, sobre el reloj, para no tapar el mapa ni sus botones */
 @media (max-width: 959px) {
-  html:has(.oc-calle) .oc-cunao-btn { left: 12px; right: auto; width: 48px; height: 48px; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 92px); }
+  html:has(.oc-calle) .oc-cunao-btn { left: 12px; right: auto; width: 48px; height: 48px; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 106px); }
+  html:has(.oc-calle) .oc-arriba { right: max(12px, env(safe-area-inset-right)); bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 106px); }
+  html:has(.oc-calle) .oc-cunao-btn.is-oculto ~ .oc-arriba { --arriba-baja: 0px; }
+  .oc-calle-osm { left: auto; right: 10px; text-align: right; }
   html:has(.oc-calle) .oc-cunao-bocadillo { display: none; }
 }
 

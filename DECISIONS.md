@@ -524,6 +524,11 @@ Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta princip
 - **Plano y En la calle:** los puntos recortan la foto en un círculo, así que las hermandades sin foto guardada en la web llevan un medallón cuadrado (`assets/naz/<slug>-r.svg`) en vez de la lámina 3:2. Así plano.js y calle.js (de Portada) no cambian. Incluye las que solo tienen foto enlazada a Commons, que el plano no puede usar.
 - **Imágenes para compartir:** `assets/naz/og.json` lista las hermandades sin ninguna foto. `og-respaldo.py` solo genera esas, porque ahora hay láminas también para las que tienen escudo o foto de la sede y no necesitan imagen propia.
 
+## Volver arriba y reloj de En la calle (5-nov, oc-diseno)
+- **Volver arriba:** botón redondo de 44 px (fondo de la web, flecha en el color principal y borde dorado) que aparece pasadas dos pantallas. Va encima de erCuñao y, cuando erCuñao se esconde al bajar, ocupa su sitio; al subir, quedan los dos apilados. En «En la calle» (móvil) va a la derecha, sobre el reloj, porque erCuñao está a la izquierda. Nunca encima de un plano: si el plano está a su altura, se esconde. Sube con desplazamiento suave (de golpe con «reducir movimiento») y deja el foco en el contenido. *Descartado:* mostrarlo solo al subir (como erCuñao). Así no estorba al leer, pero quien llega al final tendría que subir un poco para encontrarlo. *Descartado también:* ponerlo abajo a la izquierda. No chocaba con nada, pero quedaba lejos del pulgar y separado de los otros botones flotantes.
+- **Reloj de En la calle:** la barra de la hora pasa de 28 a 44 px para tocarla, sin crecer el reloj (márgenes negativos), y «Ahora» pasa de 40 a 44 px. erCuñao sube a 106 px sobre la barra de abajo para no rozar el reloj (a 92 px se montaban 2 px en móvil y tableta).
+- **Crédito de OpenStreetMap:** el reloj tapaba el crédito al quedarse sobre el borde de abajo del plano. Ahora el crédito va 48 px más arriba y, en móvil, a la derecha, porque a la izquierda está erCuñao. Prueba: `tools/diseno/probar-arriba.py`.
+
 ## (anterior) RETOMAR AQUÍ (4-nov, oc-diseno del sobremesa)
 Cola en `EQUIPO/AUDITORIA-DISENO.md` → «Cola para el 4-nov» (carpeta principal, no este worktree). Estado:
 - **Subidos:** bandas y marchas de la ficha (5faea1e) y banda propia (3ec5d4b).

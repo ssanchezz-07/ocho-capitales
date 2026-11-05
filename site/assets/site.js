@@ -912,6 +912,29 @@
     });
   });
 
+  // ---------- volver arriba ----------
+  // Aparece pasadas unas dos pantallas y nunca encima de un plano (ni de su crédito de OpenStreetMap). Con «reducir movimiento», salto directo.
+  (function () {
+    var b = $('[data-arriba]'); if (!b) return;
+    var planos = $$('.oc-calle-mapa, .oc-colg-plano'), pedido = false;
+    var mira = function () {
+      pedido = false;
+      var ver = window.scrollY > innerHeight * 2;
+      if (ver && planos.length) {
+        var r = b.getBoundingClientRect();
+        ver = !planos.some(function (m) { var p = m.getBoundingClientRect(); return p.width > 0 && p.left < r.right && p.right > r.left && p.top < r.bottom + 72 && p.bottom > r.top - 72; });
+      }
+      b.classList.toggle('is-visible', ver);
+    };
+    addEventListener('scroll', function () { if (!pedido) { pedido = true; requestAnimationFrame(mira); } }, { passive: true });
+    addEventListener('resize', mira);
+    mira();
+    b.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      var m = $('#contenido'); if (m) m.focus({ preventScroll: true });
+    });
+  })();
+
   // ---------- directorios ----------
   // Tarjetas «Por capital» y «Por tipo» de los listados (marchas, bandas…): filtran el listado de abajo
   document.addEventListener('click', function (e) {
