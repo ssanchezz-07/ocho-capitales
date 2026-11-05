@@ -1,5 +1,5 @@
 {
- "nota": "Cuadre de las fichas de hermandad con la cifra oficial de cada capital (Pablo, 5-nov-2026: «todo debe cuadrar»). El portal tiene una ficha por cortejo o salida, y la cifra oficial (capitales[].cifra.n) cuenta hermandades. Las fichas que son otro cortejo o sección de una hermandad que ya tiene su ficha se apuntan aquí, en «cortejos», cada una con la ficha principal (hermandad), el motivo y su fuente. Cuando la entidad oficial da o permite contar los cortejos, van en «cortejos_oficiales», con su fuente y de dónde sale el número («cortejos_como»). tools/comprobar-cuadre-hermandades.mjs para la publicación si fichas - cortejos ≠ cifra oficial, o si fichas ≠ cortejos_oficiales. Comprobado ficha a ficha con las webs oficiales el 5-nov-2026 (nota cuadre-cifras-hermandades.md).",
+ "nota": "Cuadre de las fichas de hermandad con la cifra oficial de cada capital (Pablo, 5-nov-2026: «todo debe cuadrar»). El portal tiene una ficha por cortejo o salida, y la cifra oficial (capitales[].cifra.n) cuenta hermandades. Las fichas que son otro cortejo o sección de una hermandad que ya tiene su ficha se apuntan aquí, en «cortejos», cada una con la ficha principal (hermandad), el motivo y su fuente. Las fichas que no son de ninguna hermandad van en «sin_hermandad», con su motivo y su fuente. Cuando la entidad oficial da o permite contar los cortejos, van en «cortejos_oficiales», con su fuente y de dónde sale el número («cortejos_como»). tools/comprobar-cuadre-hermandades.mjs para la publicación si fichas - cortejos - sin_hermandad ≠ cifra oficial, o si fichas ≠ cortejos_oficiales. Comprobado ficha a ficha con las webs oficiales el 5-nov-2026 (nota cuadre-cifras-hermandades.md).",
  "capitales": {
   "sevilla": {
    "cortejos": [
@@ -34,6 +34,16 @@
       "https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
      ]
     }
+   ],
+   "sin_hermandad": [
+    {
+     "slug": "resucitado-malaga",
+     "motivo": "Titular de la propia Agrupación de Cofradías, que organiza su salida; no es una hermandad",
+     "fuentes": [
+      "https://agrupaciondecofradias.com/titulares/",
+      "https://agrupaciondecofradias.com/hermandades/"
+     ]
+    }
    ]
   },
   "granada": {
@@ -47,6 +57,16 @@
      "fuentes": [
       "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
       "https://hermandadesdegranada.com/domingo-de-resurreccion/",
+      "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
+     ]
+    },
+    {
+     "slug": "soledad-de-nuestra-senora-humildad-granada",
+     "hermandad": "la-canilla-granada",
+     "motivo": "La Cofradía de la Humildad sale el Viernes Santo solo con el paso de la Soledad de Nuestra Señora, para el rezo de las Tres de la Tarde en el Campo del Príncipe",
+     "fuentes": [
+      "https://hermandadesdegranada.com/viernes-santo/",
+      "https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/",
       "https://archidiocesisgranada.es/wp-content/uploads/2025/02/Horarios-Oficiales-Semana-Santa-2025-.pdf"
      ]
     }
