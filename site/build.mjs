@@ -80,7 +80,7 @@ const MAPA_FILE = path.join(DIR, 'data', 'mapa-andalucia.json');
 const MAPA = fs.existsSync(MAPA_FILE) ? JSON.parse(fs.readFileSync(MAPA_FILE, 'utf8')) : null;
 const IMG_FILE = path.join(DIR, 'data', 'imagenes.json');
 const IMGX = fs.existsSync(IMG_FILE) ? JSON.parse(fs.readFileSync(IMG_FILE, 'utf8')) : { hermandades: {}, capitales: {} };
-const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, foco: x.foco, recorte: !!x.recorte, cedida: !!x.cedida });
+const localImg = (kind, slug, x) => ({ local: true, kind, slug, sizes: x.widths, src: `assets/img/${kind}-${slug}-${x.widths.at(-1)}.webp`, w: x.w, h: x.h, escudo: x.escudo, autor: x.autor, licencia: x.licencia, licurl: x.licurl, pagina: x.pagina, alt: x.alt, foco: x.foco, recorte: !!x.recorte, cedida: !!x.cedida });
 // Díptico (Cristo y Virgen en una sola imagen 3:2), o foto apaisada de los dos titulares juntos: la miniatura la enseña entera en 3:2,
 // sin cortar por la junta ni dejar a uno fuera. Las demás fotos van al cuadrado con su foco (la cara dentro).
 const dipCls = (im) => (im && (im.kind === 'd' || (im.kind === 't' && /-juntos$/.test(im.slug) && im.w / im.h >= 1.3)) ? ' is-dip' : '');
@@ -1030,7 +1030,7 @@ function pageCapital(c) {
   // Portada de capital «Colgaduras»: la foto a sangre, su colgadura colgando del balcón (la misma de la portada, que viaja con
   // la transición de página) y el titular sobre un velo nazareno. El crédito de la foto va justo debajo.
   const body = `<header class="oc-caphero${c.imagen ? ' has-img' : ''}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
-  ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 1240px) 100vw, 1200px', widths: ANCHOS_CABECERA, eager: true })}</div>` : ''}
+  ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, c.imagen.alt || 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 1240px) 100vw, 1200px', widths: ANCHOS_CABECERA, eager: true })}</div>` : ''}
   <img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" style="view-transition-name:colg-${c.slug}">
   <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${cifraCap(c)} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
 </header>

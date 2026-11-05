@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-05T09:06:06.148Z",
+ "generado": "2026-11-05T09:31:19.263Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -2987,7 +2987,8 @@
    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_en_la_Cruz_de_la_Iglesia_San_Francisco_de_C%C3%A1diz.JPG",
    "foco": "40% 50%",
-   "g1920": true
+   "g1920": true,
+   "alt": "Cristo de la Vera Cruz en la iglesia de San Francisco, Cádiz"
   },
   "jaen": {
    "w": 1920,
@@ -3005,7 +3006,8 @@
    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_Ja%C3%A9n_24J_05.jpg",
    "foco": "52% 62%",
-   "g1920": true
+   "g1920": true,
+   "alt": "Nuestro Padre Jesús Nazareno, «el Abuelo», en la plaza de Santa María, frente a la Catedral de Jaén"
   }
  },
  "titulares": {

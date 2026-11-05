@@ -94,6 +94,7 @@ async function processOne(kind, slug, meta) {
   const out = { w: outW, h: outH, widths: widths.map((w) => Math.min(w, srcW)), escudo: !!meta.escudo, autor: meta.autor || '', licencia: meta.licencia || '', licurl: meta.licurl || '', pagina: meta.pagina || '' };
   if (meta.foco && !out.escudo) out.foco = meta.foco;
   if (kind === 'c') out.g1920 = true; // hecha con WIDTHS_CAP
+  if (meta.alt) out.alt = meta.alt; // texto alternativo propio (el de su ficha de Commons)
   if (rc) out.recorte = meta.recorte;
   if (meta.local) Object.assign(out, { cedida: true, local: meta.local, tam: fs.statSync(path.join(SITE, meta.local)).size });
   return out;
@@ -123,7 +124,7 @@ for (const [kind, slug, meta] of jobs) {
   const bucket = kind === 'h' ? index.hermandades : index.capitales;
   if (kind === 'h' && retirada(meta, slug, 'ficha')) continue;
   if (kind === 'c' && retirada(meta, null, 'capital')) { if (bucket[slug] && bucket[slug].pagina === meta.pagina) delete bucket[slug]; continue; } // foto de capital retirada: fuera del índice (sus webp se borran a mano)
-  if (bucket[slug] && bucket[slug].pagina === meta.pagina && (kind !== 'c' || bucket[slug].g1920) && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); continue; }
+  if (bucket[slug] && bucket[slug].pagina === meta.pagina && (kind !== 'c' || bucket[slug].g1920) && fs.existsSync(path.join(OUT_DIR, `${kind}-${slug}-${bucket[slug].widths.at(-1)}.webp`))) { completarFoco(bucket[slug], meta.foco); if (meta.alt) bucket[slug].alt = meta.alt; continue; }
   try { bucket[slug] = await processOne(kind, slug, meta); done++; console.log('ok', kind, slug, bucket[slug].w + 'x' + bucket[slug].h); }
   catch (e) { fail++; console.log('FALLO', kind, slug, e.message); }
   fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
