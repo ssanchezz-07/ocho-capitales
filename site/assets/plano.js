@@ -65,10 +65,10 @@
       .forEach(function (c) { if (c[1]) mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
     // calles menores: ya vienen como trazado por celdas de 1 km (build.mjs, celdasCalles); el navegador solo pinta las que se ven
     var gCalles = el('g', {}, mundo); (D.calles || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: typeof d === 'string' ? d : pathDe([d]) }, gCalles); });
-    // Con fondo de afueras (solo carreteras), las calles menores del centro se desvanecen en sus últimos 700 m: si no, su recuadro
+    // Con fondo de afueras (solo carreteras), las calles menores del centro se desvanecen en su borde (el 15 % del lado, 700 m como poco): si no, su recuadro
     // se veía con bordes rectos sobre la red de carreteras. Dos máscaras de degradado (ancho y alto), sin desenfoque: baratas.
     if (D.limCentro) {
-      var L = D.limCentro, idm = 'oc-pl-c-' + (D.ciudad || 'x'), defs = el('defs', {}, base), fx = Math.min(0.45, 700 / Math.max(1, L[2] - L[0])), fy = Math.min(0.45, 700 / Math.max(1, L[3] - L[1]));
+      var L = D.limCentro, idm = 'oc-pl-c-' + (D.ciudad || 'x'), defs = el('defs', {}, base), fx = Math.min(0.45, Math.max(0.15, 700 / Math.max(1, L[2] - L[0]))), fy = Math.min(0.45, Math.max(0.15, 700 / Math.max(1, L[3] - L[1])));
       [['x', L[0], 0, L[2], 0, fx], ['y', 0, L[1], 0, L[3], fy]].forEach(function (g) {
         var lg = el('linearGradient', { id: idm + g[0] + 'g', gradientUnits: 'userSpaceOnUse', x1: g[1], y1: g[2], x2: g[3], y2: g[4] }, defs);
         [[0, 0], [g[5], 1], [1 - g[5], 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, lg); });
