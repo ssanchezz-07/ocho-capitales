@@ -2252,7 +2252,21 @@ function datosCunao() {
   const FORM = { 'Banda de música': 'BM', 'Banda de cornetas y tambores': 'CT', 'Agrupación musical': 'AM', 'Capilla musical': 'CM' };
   fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'm'), { recursive: true });
   fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'h'), { recursive: true });
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 3, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
+  // Cifra oficial de cada capital (portal.json, cuadrada con cuadre-hermandades.json): [n, nombre, corto, texto, fuente, url]
+  const ci = Object.fromEntries(D.capitales.filter((c) => c.cifra && c.cifra.n).map((c) => [c.slug, [c.cifra.n, c.cifra.nombre || 'hermandades', c.cifra.corto || '', c.cifra.texto || '', (c.cifra.fuente || [])[0] || '', (c.cifra.fuente || [])[1] || '']]));
+  // Salidas extraordinarias y magnas con itinerario (data/recorridos/<capital>.json), de ayer en adelante: «¿qué sale hoy?» fuera de Semana Santa.
+  // Fila: [fecha, hora de salida, capital, título, hermandad (slug o nombre), sede de salida, fuente, ¿en el plano?]
+  const hoyEx = isoDay(Date.UTC(N.y, N.m - 1, N.d) - 864e5), ex = [];
+  for (const c of D.capitales) {
+    const f = path.join(DIR, 'data', 'recorridos', c.slug + '.json'); if (!fs.existsSync(f)) continue;
+    for (const e of Object.values(JSON.parse(fs.readFileSync(f, 'utf8')).extraordinarias || {})) {
+      if (!e.fecha || e.fecha < hoyEx) continue;
+      const p0 = Object.values(e.tramos || {}).flat()[0] || {};
+      ex.push([e.fecha, hhmm(p0.hora), c.slug, e.titulo || '', HERM[e.hermandad] ? e.hermandad : (e.nombre_hermandad || ''), limpiaLugar(p0.lugar || ''), /^https?:\/\//.test(e.fuente_url || '') ? e.fuente_url : '', 1]);
+    }
+  }
+  ex.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
   // Marchas (todo el catálogo, ~10.000): en trozos por la inicial del título, sin el artículo («La Madrugá» → m/m.json).
   // Solo se piden cuando la pregunta es de marchas. Fila: [título, autor (índice), año, formación, dedicada a (slug de hermandad o texto), ficha]
   const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };
@@ -2269,6 +2283,11 @@ function datosCunao() {
   // Agenda de los próximos 90 días (cultos, salidas extraordinarias, conciertos…) para «¿qué hay este fin de semana?»
   const hoyIso = isoDay(Date.UTC(N.y, N.m - 1, N.d)), hasta = isoDay(Date.UTC(N.y, N.m - 1, N.d) + 90 * 864e5);
   const AG = agenda().filter((e) => e.fecha >= hoyIso && e.fecha <= hasta && GRUPO_DE[e.tipo] !== 'liturgico' && CAP[e.ciudad]);
+  // Lo de los próximos 21 días en las ocho capitales (salidas, vía crucis y cultos), para «¿qué sale hoy?» y «¿qué hay este finde?» sin cargar cada capital.
+  // Fila: [fecha, hora, tipo, título, hermandad, capital, fuente]. Va en un archivo aparte (cunao/agenda.json), que se pide solo para esas preguntas.
+  const hasta21 = isoDay(Date.UTC(N.y, N.m - 1, N.d) + 21 * 864e5);
+  const AG21 = AG.filter((e) => e.fecha <= hasta21 && ['salidas', 'via-crucis', 'cultos'].includes(GRUPO_DE[e.tipo])).map((e) => [e.fecha, e.hora || '', e.tipo, e.titulo, hermDeEvento(e) || '', e.ciudad, e.fuentes && e.fuentes[0] && /^https?:\/\//.test(e.fuentes[0].url) ? e.fuentes[0].url : '']);
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'agenda.json'), JSON.stringify(AG21));
   // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, hábito, marchas dedicadas, agenda y las seis noticias más recientes
   for (const c of D.capitales) {
     const hi = {}, pa = {}, m = {}, ha = {}, on = {};

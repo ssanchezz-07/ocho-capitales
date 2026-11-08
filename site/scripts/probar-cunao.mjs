@@ -69,7 +69,8 @@ caso('gracias', m, 'muchas gracias', (r) => (r.texto.length > 5 ? true : 'vacío
 console.log('— Fechas');
 caso('cuánto falta', m, '¿Cuánto falta para la Semana Santa?', contiene(/Faltan \d+ días/, '21 de marzo de 2027'));
 caso('cuándo es el Jueves Santo', m, '¿Cuándo es el Jueves Santo?', contiene('Jueves Santo de 2027 cae el 25 de marzo'));
-caso('qué sale hoy (fuera de temporada)', m, '¿Qué sale hoy?', contiene('Hoy no sale nadie', 'Domingo de Ramos'));
+// fuera de temporada: las extraordinarias y los cultos del día (cunao.json «ex» y cunao/agenda.json), o «no sale ninguna» y lo próximo
+caso('qué sale hoy (fuera de temporada)', m, '¿Qué sale hoy?', contiene('Domingo de Ramos', 'Ver el calendario'));
 
 console.log('— Jornadas');
 caso('Jueves Santo en Málaga', m, 'Jueves Santo en Málaga', y(contiene('Jueves Santo en Málaga', 'Mena', 'Esperanza'), enlace(/en-la-calle\/malaga\/\?dia=Jueves/)));
@@ -87,7 +88,7 @@ m = motor();
 caso('hora de la Macarena de Sevilla', m, '¿A qué hora sale la Macarena de Sevilla?', contiene('La Macarena (Sevilla) sale la Madrugá a las ' + mac.hora.padStart(5, '0'), mac.sede));
 caso('Macarena sin ciudad → desambigua', motor(), '¿A qué hora sale la Macarena?', y(elige(2), contiene('Sevilla', 'Almería')));
 caso('desambiguación con botón', (() => { const x = motor(); pregunta(x, '¿A qué hora sale la Macarena?'); return x; })(), '@h:la-macarena-sevilla', contiene('La Macarena (Sevilla) sale la Madrugá'));
-caso('Esperanza: varias', motor(), 'la esperanza', y(elige(3), contiene('¿Cuál de estas Esperanzas')));
+caso('Esperanza: varias', motor(), 'la esperanza', y(elige(3), contiene('cofradías que se llaman «Esperanza»', '¿De qué capital?')));
 caso('Esperanza de Triana', motor(), '¿a que hora sale la esperanza de triana?', contiene('La Esperanza de Triana (Sevilla) sale la Madrugá', triana.sede));
 caso('errata «macarna»', motor(), 'hora de la macarna de sevilla', contiene('La Macarena (Sevilla)'));
 caso('errata «cachoro»', motor(), 'cuando sale el cachoro', contiene('El Cachorro (Sevilla) sale el Viernes Santo'));
@@ -98,33 +99,33 @@ caso('día + hermandad', motor(), '¿a qué hora sale el Cautivo el lunes en Má
 
 console.log('— Recorridos (itinerarios)');
 m = motor();
-caso('por dónde pasa el Cautivo de Málaga', m, '¿Por dónde pasa el Cautivo de Málaga?', y(contiene('Recorrido de Cautivo (Málaga)', CIU.malaga.r['cautivo-malaga'].p[0][1]), enlace(/en-la-calle\/malaga\/\?dia=Lunes%20Santo/)));
+caso('por dónde pasa el Cautivo de Málaga', m, '¿Por dónde pasa el Cautivo de Málaga?', y(contiene('Recorrido del Cautivo (Málaga)', CIU.malaga.r['cautivo-malaga'].p[0][1]), enlace(/en-la-calle\/malaga\/\?dia=Lunes%20Santo/)));
 caso('contexto: ¿y cuándo entra?', m, '¿y cuándo entra?', contiene('Cautivo (Málaga) se recoge'));
-caso('Macarena por la Campana', motor(), '¿Cuándo pasa la Macarena de Sevilla por la Campana?', contiene('La Macarena pasa por Campana', CIU.sevilla.r['la-macarena-sevilla'].p.find((p) => /campana/i.test(p[1]))[0]));
+caso('Macarena por la Campana', motor(), '¿Cuándo pasa la Macarena de Sevilla por la Campana?', contiene('la Macarena pasa por Campana', CIU.sevilla.r['la-macarena-sevilla'].p.find((p) => /campana/i.test(p[1]))[0]));
 caso('carrera oficial (hora oficial de la nómina)', motor(), '¿a qué hora llega a la carrera oficial la Macarena de Sevilla?', contiene('llega a la carrera oficial', mac.hora_carrera));
 { const porLarios = Object.entries(CIU.malaga.r).filter(([s, R]) => HP[s].dia === 'Domingo de Ramos' && (R.p.some((p) => /larios/i.test(p[1])) || (R.c || []).some((l) => /larios/i.test(l)))).map(([s]) => HP[s].nombre);
   caso('qué cofradías pasan por Larios', motor(), '¿Qué cofradías pasan por Larios en Málaga el Domingo de Ramos?', y(contiene(/Por (Marqués de )?Larios/, ...porLarios), () => (porLarios.length ? true : 'ninguna cofradía con Larios en los datos'))); }
-caso('pasa por (lugar tras el nombre)', motor(), '¿cuándo pasa por la Campana la Macarena de Sevilla?', contiene('La Macarena pasa por Campana'));
+caso('pasa por (lugar tras el nombre)', motor(), '¿cuándo pasa por la Campana la Macarena de Sevilla?', contiene('la Macarena pasa por Campana'));
 caso('pasa por Sierpes', motor(), '¿a qué hora pasa el Gran Poder de Sevilla por Sierpes?', (r, t) => { const p = CIU.sevilla.r['el-gran-poder-sevilla'].p.find((x) => /sierpes/i.test(x[1])); return p ? (t.includes('pasa por') && t.includes(p[0]) ? true : 'no da la hora ' + p[0]) : (/No veo/.test(t) ? true : 'debía decir que no lo ve'); });
 caso('dónde la veo cerca', motor(), '¿Dónde puedo ver la Esperanza de Triana cerca de mí?', enlace(/en-la-calle\/sevilla\/\?dia=Madrug/));
 
 console.log('— Titulares e imagineros');
 caso('quién talló el Cristo del Cachorro', motor(), '¿Quién talló el Cristo del Cachorro?', contiene(tit('el-cachorro-sevilla', 0).nombre.split(',')[0], tit('el-cachorro-sevilla', 0).autor));
 caso('autor de la Virgen de la Macarena', motor(), '¿Quién hizo la Virgen de la Macarena de Sevilla?', y(contiene('Esperanza Macarena', 'Luisa Roldán'), (r, t) => (!/Sentencia/.test(r.texto) ? true : 'no debía listar al Cristo')));
-caso('contexto: «¿y su banda?»', (() => { const x = motor(); pregunta(x, 'el gran poder de sevilla'); return x; })(), '¿y su banda?', contiene('El Gran Poder (Sevilla)'));
+caso('contexto: «¿y su banda?»', (() => { const x = motor(); pregunta(x, 'el gran poder de sevilla'); return x; })(), '¿y su banda?', contiene('del Gran Poder (Sevilla)'));
 caso('quién es Juan de Mesa', motor(), '¿Quién es Juan de Mesa?', y(contiene('Juan de Mesa', 'Cristo del Amor'), enlace(/imaginero\/juan-de-mesa\//)));
 caso('obras de Castillo Lastrucci', motor(), 'obras de Castillo Lastrucci', contiene('Antonio Castillo Lastrucci', /tengo \d+ obras/));
 caso('errata en imaginero', motor(), 'quien es Ortega Bru', contiene('Luis Ortega Bru'));
 
 console.log('— Música');
-caso('qué banda acompaña a la Macarena de Sevilla', motor(), '¿Qué banda acompaña a la Macarena de Sevilla?', contiene('Música de La Macarena (Sevilla)', 'Centuria Romana Macarena'));
+caso('qué banda acompaña a la Macarena de Sevilla', motor(), '¿Qué banda acompaña a la Macarena de Sevilla?', contiene('La música de la Macarena (Sevilla)', 'Centuria Romana Macarena'));
 caso('banda de la Paloma', motor(), '¿qué banda lleva la Paloma de Málaga?', (r, t) => { const ac = paloma.acompanamiento?.pasos || []; const n = ac.length ? ac[0].bandas[0].nombre : (paloma.bandas || [])[0]; return n ? (t.includes(n) ? true : 'no cita ' + n) : (/No tengo/.test(t) ? true : 'debía reconocer que no lo sabe'); });
 caso('marchas dedicadas', motor(), '¿qué marchas tiene la Esperanza de Málaga?', (r, t) => { const h = PORTAL.hermandades.find((x) => x.ciudad === 'malaga' && x.nombre === 'Esperanza'); return (h.marchas || []).length ? (t.includes(h.marchas[0].titulo) ? true : 'no cita ' + h.marchas[0].titulo) : (/No tengo marchas/.test(t) ? true : 'debía decir que no tiene'); });
 caso('banda inversa', motor(), '¿A qué hermandades acompaña la banda Centuria Romana Macarena?', contiene('acompaña a', 'La Macarena'));
 
 console.log('— Cifras, historia, noticias, web');
-caso('cuántas hermandades tiene Jaén', motor(), '¿Cuántas hermandades tiene Jaén?', contiene('tengo ' + nHerm('jaen') + ' hermandades de Jaén'));
-caso('cuántas en Sevilla (gentilicio)', motor(), 'cuantas cofradias sevillanas hay', contiene('tengo ' + nHerm('sevilla') + ' hermandades de Sevilla'));
+caso('cuántas hermandades tiene Jaén', motor(), '¿Cuántas hermandades tiene Jaén?', contiene('Jaén tiene ' + PORTAL.capitales.find((c) => c.slug === 'jaen').cifra.corto));
+caso('cuántas en Sevilla (gentilicio)', motor(), 'cuantas cofradias sevillanas hay', contiene('Sevilla tiene ' + PORTAL.capitales.find((c) => c.slug === 'sevilla').cifra.corto));
 caso('historia del Cachorro', motor(), 'historia del cachorro', contiene(cach.fundacion ? 'Fundación: ' + cach.fundacion : 'Cachorro', (cach.historia || '').slice(0, 30)));
 caso('web de la Macarena de Sevilla', motor(), 'web de la macarena de sevilla', enlace(/hermandaddelamacarena\.es/));
 caso('noticias de Granada', motor(), 'noticias de Granada', y(contiene(CIU.granada.no[0] ? CIU.granada.no[0][0] : 'No tengo noticias'), enlace(/noticias\/\?ciudad=granada/)));
@@ -172,9 +173,9 @@ caso('J9 fundación de la Soledad de Jaén', motor(), '¿Cuándo se fundó la So
 caso('J10 Jueves Santo en Jaén', motor(), 'que sale el jueves santo en jaen', contiene('Jueves Santo en Jaén', ...deCiudad('jaen', 'Jueves Santo').map((h) => h.nombre)));
 caso('J11 Madrugá en Jaén', motor(), 'madruga en jaen', contiene('Madrugá en Jaén', '«El Abuelo»'));
 { const conH = deCiudad('jaen').filter((h) => h.hora && h.dia === 'Domingo de Ramos').sort((a, b) => mins(a.hora) - mins(b.hora));
-  caso('J12 la primera en salir en Jaén', motor(), '¿Cuál es la primera cofradía que sale en Jaén?', contiene('La primera en salir en la Semana Santa de Jaén es ' + conH[0].nombre, conH[0].hora)); }
+  caso('J12 la primera en salir en Jaén', motor(), '¿Cuál es la primera cofradía que sale en Jaén?', contiene('La primera en salir en la Semana Santa de Jaén es ' + conH[0].nombre.replace(/^(El|La|Los|Las) /, (a) => a.toLowerCase()), conH[0].hora)); }
 { const jt = deCiudad('jaen', 'Jueves Santo').filter((h) => h.hora).sort((a, b) => mins(a.hora) - mins(b.hora));
-  caso('J13 la última del Jueves Santo en Jaén', motor(), '¿cuál es la última que sale el jueves santo en jaén?', contiene('La última en salir el Jueves Santo de Jaén es ' + jt.at(-1).nombre));
+  caso('J13 la última del Jueves Santo en Jaén', motor(), '¿cuál es la última que sale el jueves santo en jaén?', contiene('La última en salir el Jueves Santo de Jaén es ' + jt.at(-1).nombre.replace(/^(El|La|Los|Las) /, (a) => a.toLowerCase())));
   const tarde = jt.filter((h) => mins(h.hora) >= 14 * 60 && mins(h.hora) < 21 * 60), manana = jt.filter((h) => mins(h.hora) < 14 * 60);
   caso('J14 Jueves Santo en Jaén por la tarde', motor(), 'que sale el jueves santo en jaen por la tarde', y(contiene('por la tarde', ...tarde.map((h) => h.nombre)), noDice(...manana.map((h) => h.nombre + ' ·'))));
   caso('J15 contexto: «¿y por la mañana?»', (() => { const x = motor(); pregunta(x, 'que sale el jueves santo en jaen'); return x; })(), '¿y por la mañana?', y(contiene('Jueves Santo en Jaén', ...manana.map((h) => h.nombre)), noDice(...tarde.map((h) => h.nombre + ' ·')))); }
@@ -183,16 +184,16 @@ caso('J11 Madrugá en Jaén', motor(), 'madruga en jaen', contiene('Madrugá en 
 { const dr = deCiudad('jaen', 'Domingo de Ramos'), antes = dr.filter((h) => h.hora && mins(h.hora) < 17 * 60), despues = dr.filter((h) => h.hora && mins(h.hora) >= 17 * 60);
   caso('J17 Domingo de Ramos en Jaén antes de las 17:00', motor(), '¿qué hermandades de Jaén salen el Domingo de Ramos antes de las 17:00?', y(contiene('antes de las 17:00', ...antes.map((h) => h.nombre)), noDice(...despues.map((h) => h.nombre + ' ·')))); }
 caso('J18 en qué orden sale la Estrella de Jaén', motor(), '¿En qué orden sale la Estrella de Jaén?', contiene('La Estrella (Jaén) es la ' + (deCiudad('jaen', 'Domingo de Ramos').sort((a, b) => a.orden - b.orden).indexOf(estrellaJ) + 1) + '.ª de las ' + deCiudad('jaen', 'Domingo de Ramos').length + ' cofradías del Domingo de Ramos'));
-caso('J19 marchas de la Borriquilla de Jaén', motor(), '¿qué marchas tiene la Borriquilla de Jaén?', contiene('Marchas dedicadas a La Borriquilla (Jaén)', '«Entrada de Jesús en Jerusalén»'));
+caso('J19 marchas de la Borriquilla de Jaén', motor(), '¿qué marchas tiene la Borriquilla de Jaén?', contiene('Marchas dedicadas a la Borriquilla (Jaén)', '«Entrada de Jesús en Jerusalén»'));
 caso('J20 nombre oficial de la Borriquilla', motor(), '¿Cuál es el nombre oficial de la Borriquilla de Jaén?', contiene(borriq.nombre_oficial));
-caso('J21 historia de la Borriquilla', motor(), 'historia de la borriquilla de jaen', contiene('Fundación: ' + borriq.fundacion, 'llamá'));
+caso('J21 historia de la Borriquilla', motor(), 'historia de la borriquilla de jaen', contiene('Fundación: ' + borriq.fundacion, borriq.historia.slice(0, 40)));
 caso('J22 sede del Cautivo de Jaén', motor(), '¿Dónde tiene su sede el Cautivo de Jaén?', contiene(hj('El Cautivo').sede));
 caso('J23 web de la Expiración de Jaén', motor(), 'web de la expiracion de jaen', enlace(/expiracionjaen/));
 caso('J24 pasos de la Estrella de Jaén', motor(), '¿cómo son los pasos de la Estrella de Jaén?', contiene(estrellaJ.paso || 'no tengo descripción'));
 caso('J25 banda de la Borriquilla (no la tengo)', motor(), '¿Qué banda lleva la Borriquilla de Jaén?', contiene('No tengo el acompañamiento musical'));
 caso('J26 cuántos nazarenos (dato que no hay)', motor(), '¿Cuántos nazarenos saca el Abuelo de Jaén?', y(contiene('no lo tengo'), sugiere));
 caso('J27 la Clemencia de Jaén', motor(), 'la clemencia de jaen', contiene('La Clemencia (Jaén) sale el Martes Santo'));
-caso('J28 contexto: «¿y su hábito?»', (() => { const x = motor(); pregunta(x, 'el gran poder de jaen'); return x; })(), '¿y su hábito?', contiene('El Gran Poder (Jaén)'));
+caso('J28 contexto: «¿y su hábito?»', (() => { const x = motor(); pregunta(x, 'el gran poder de jaen'); return x; })(), '¿y su hábito?', contiene('del Gran Poder (Jaén)'));
 caso('J29 cruz de guía = salida', motor(), '¿a qué hora sale la cruz de guía del Gran Poder de Jaén?', contiene('El Gran Poder (Jaén) sale el Jueves Santo a las ' + HP['el-gran-poder-jaen'].hora));
 caso('J30 Sábado Santo en Jaén', motor(), 'que sale el sabado santo en jaen', contiene('Sábado Santo'));
 
@@ -249,7 +250,7 @@ caso('H6 HTML en la pregunta no se cuela en enlaces', motor(), '<img src=x onerr
 console.log('— Auditoría 3-nov (F1-F9)');
 { const col = PORTAL.hermandades.filter((h) => /Columna/.test(h.nombre) && h.ciudad !== 'jaen');
   caso('F1 la Columna de Jaén (Jaén no tiene): lo dice y ofrece la de otra capital', motor(), 'la Columna de Jaén', y(contiene('En Jaén no tengo ninguna cofradía que se llame así'), noDice(/La Columna \(Cádiz\) sale/), (r) => (col.every((h) => r.chips.some((c) => c[1] === '@h:' + h.slug)) ? true : 'no ofrece ' + col.map((h) => h.slug)))); }
-caso('F1b el Cachorro de Córdoba', motor(), 'el Cachorro de Córdoba', y(contiene('En Córdoba no tengo ninguna', 'El Cachorro (Sevilla)'), noDice('sale el Viernes Santo')));
+caso('F1b el Cachorro de Córdoba', motor(), 'el Cachorro de Córdoba', y(contiene('En Córdoba no tengo ninguna', 'el Cachorro (Sevilla)'), noDice('sale el Viernes Santo')));
 caso('F1c elegir la de otra capital sigue la pregunta', (() => { const x = motor(); pregunta(x, '¿a qué hora sale el Cachorro de Córdoba?'); return x; })(), '@h:el-cachorro-sevilla', contiene('El Cachorro (Sevilla) sale el Viernes Santo'));
 { const sj = MU.find((m) => /^Soberana y Jaenera$/i.test(m.titulo));
   caso('F2 «Soberana y Jaenera» es una marcha (no San Gonzalo)', motor(), 'Soberana y Jaenera', sj ? y(contiene('«' + sj.titulo + '» es de ' + sj.autor), noDice('San Gonzalo')) : contiene('no'));
@@ -267,12 +268,33 @@ caso('F5 cornetas en Jaén: no responde con otra capital', motor(), 'qué cofrad
   caso('F6 hora de El Vía Crucis de Granada (no la agenda)', motor(), '¿A qué hora sale El Vía Crucis de Granada?', contiene('El Vía Crucis (Granada) sale ' + (vc.dia === 'Madrugá' ? 'la ' : 'el ') + vc.dia + ' a las ' + vc.hora)); }
 caso('F6b Vía Crucis de Córdoba hora', motor(), 'Vía Crucis de Córdoba hora', contiene('Vía Crucis (Córdoba) sale'));
 caso('F7 la más antigua de Jaén sin «Cuento 21 de 21»', motor(), '¿La cofradía más antigua de Jaén?', y(contiene('la más antigua de Jaén'), (r, t) => { const n = deCiudad('jaen').length, c = deCiudad('jaen').filter((h) => /\d{4}/.test(h.fundacion || '')).length; return c === n ? (/Cuento/.test(t) ? 'dice «Cuento»' : true) : (t.includes('Cuento ' + c + ' de ' + n) ? true : 'no cuenta'); }));
-caso('F8 domingo 8 de noviembre no es Domingo de Ramos', motor(), '¿Hay procesión el domingo 8 de noviembre?', y(contiene('8 de noviembre', 'no hay procesiones'), noDice('sale mucha gente')));
+caso('F8 domingo 8 de noviembre no es Domingo de Ramos', motor(), '¿Hay procesión el domingo 8 de noviembre?', y(contiene('8 de noviembre', 'no es Semana Santa'), noDice('sale mucha gente')));
 { const mm = motor(fechas['Jueves Santo']); pregunta(mm, 'Jaén');
   const ma = deCiudad('jaen', 'Jueves Santo').filter((h) => h.hora && mins(h.hora) < 14 * 60);
   caso('F8b «esta noche» en Jueves Santo no lista las de la mañana', mm, '¿Qué sale esta noche?', y(contiene('Jueves Santo en Jaén'), noDice(...ma.map((h) => h.nombre + ' ·')))); }
 caso('F8c «por la mañana» no es «mañana»', motor(), 'que sale el domingo de ramos en jaen por la mañana', y(contiene('Domingo de Ramos en Jaén', 'La Borriquilla'), noDice('Santa Cena ·')));
 caso('F9 teléfono: no lo tiene y da la web', motor(), 'Dime el teléfono de la hermandad del Abuelo', y(contiene('no los tengo'), enlace(/cofradiaelabuelo/)));
+
+console.log('— Fallos de Marketing en pages.dev (6-nov)');
+const enPagina = (c) => crearMotor(D, { base: '/', azar: (l) => l[0], pagina: () => c, hoy: () => '2026-11-08', horaAhora: () => 18 });
+const cachM = HP['el-cachorro-sevilla'];
+caso('M1 «quien tayó ar cachorro» (andaluz escrito)', motor(), 'quien tayó ar cachorro', y(contiene('Las imágenes del Cachorro (Sevilla)', cachM.titulares[0].nombre.split(',')[0]), noDice('sale el Viernes Santo')));
+caso('M2 «ande pasa la esperansa de triana»', motor(), 'ande pasa la esperansa de triana', y(contiene('Recorrido de la Esperanza de Triana (Sevilla)'), enlace(/en-la-calle\/sevilla/)));
+caso('M3 «q ora sale er cautivo»: concordancia', motor(), 'q ora sale er cautivo', y(contiene('cofradías que se llaman «Cautivo»'), noDice('estas Cautivos', 'estos Cautivas'), elige(2)));
+caso('M3b «Poder»: sin «estas Poderes»', motor(), 'a que hora sale el gran poder', noDice('estas Poderes', 'estas Poder'));
+caso('M4 «¿Quién compuso Amarguras?» es la marcha', motor(), '¿Quién compuso Amarguras?', y(contiene('«Amarguras» es de', 'dedicada a la Amargura (Sevilla)'), noDice('sale el')));
+caso('M6 Esperanza de Triana desde En la calle de Sevilla: la hermandad, no una calle', enPagina('sevilla'), '¿Dónde puedo ver a la Esperanza de Triana?', y(contiene('La Esperanza de Triana (Sevilla) sale'), noDice('Plazuela', 'pasan'), enlace(/en-la-calle\/sevilla/)));
+caso('M6b «la Macarena» desde la página de Almería es la de Almería', enPagina('almeria'), '¿a qué hora sale la Macarena?', contiene('(Almería)'));
+for (const c of PORTAL.capitales) caso('M7 cifra oficial de ' + c.nombre, motor(), '¿Cuántas hermandades salen en ' + c.nombre + '?', y(contiene(c.nombre + ' tiene ' + c.cifra.corto), noDice('En mi base tengo')));
+caso('M8 «del Cautivo», no «de Cautivo»', motor(), '¿Quién talló al Cautivo de Málaga?', y(contiene('Las imágenes del Cautivo (Málaga)'), noDice('de Cautivo')));
+caso('M8b «al Cautivo»: la música', motor(), '¿Qué banda lleva el Cautivo de Málaga?', y(contiene('La música del Cautivo (Málaga)'), noDice('de Cautivo')));
+{ const ex = (D.ex || []).find((x) => x[0] >= '2026-11-08');
+  if (ex) caso('M9 «¿qué sale hoy?» cuenta las extraordinarias', crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => { const d = new Date(ex[0] + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + (mas || 0)); return d.toISOString().slice(0, 10); }, horaAhora: () => 12 }), '¿Qué sale hoy?', y(contiene(ex[3]), noDice('Hoy no sale ninguna'))); }
+caso('M10 la Madrugá es la noche del 25 al 26', motor(), '¿cuándo es la madrugá?', y(contiene('la noche del ' + (+fechas['Madrugá'].slice(8) - 1) + ' al ' + +fechas['Madrugá'].slice(8)), noDice('cae el')));
+caso('M10b la Madrugá en «a qué hora sale el Silencio»', motor(), '¿A qué hora sale el Silencio de Sevilla?', contiene('La Madrugá de ' + D.anio + ' es la noche del'));
+caso('M11 la Macarena por la Campana sin decir la capital', motor(), '¿cuándo pasa la Macarena por la Campana?', contiene('la Macarena pasa por Campana'));
+caso('M12 «kien izo er gran poder de sevilla»', motor(), 'kien izo er gran poder de sevilla', contiene('Las imágenes del Gran Poder (Sevilla)'));
+caso('M13 «a ke ora sale la macarena de sebiya»', motor(), 'a ke ora sale la macarena de sebiya', contiene('La Macarena (Sevilla) sale la Madrugá'));
 
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal}).`);
 process.exit(mal ? 1 : 0);
