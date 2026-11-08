@@ -550,7 +550,7 @@
     window.addEventListener('resize', function () { if (actual) portada.style.height = alturaCiudad() + 'px'; });
     // la parte del plano que se ve: entre la cabecera de la portada y el pie, sin la columna de los controles
     var pieUlt = 0;
-    function margenes() { var p = pieEl.getBoundingClientRect().height; pieUlt = Math.round(p); portada.style.setProperty('--pie', pieUlt + 'px'); return { arriba: 58, abajo: pieUlt + 16, izq: 16, der: 64 }; }
+    function margenes() { var p = pieEl.getBoundingClientRect().height; pieUlt = Math.round(p); portada.style.setProperty('--pie', pieUlt + 'px'); return { arriba: 58, abajo: pieUlt + 16, izq: 30, der: 84 }; } // der: la columna de botones y medio símbolo
     // Andalucía se acerca a la capital elegida (o vuelve) moviendo su viewBox; centro en línea, escala en exponencial.
     // Arranca deprisa y frena (responde al dedo en el mismo fotograma)
     var acerca = null;
@@ -581,7 +581,9 @@
       var n = (D.sedes || []).length, ex = vigentes(), dEx = {}; ex.forEach(function (h) { dEx[h.d] = 1; });
       // la cifra cuadra con las fichas de la capital; si a alguna aún le falta su sede comprobada, se dice cuántas
       var nf = D.nFichas || n, faltan = Math.max(0, nf - n);
-      resEl.textContent = !n ? 'Aún no hay sedes con ubicación comprobada' : faltan ? (n === 1 ? '1 hermandad' : n + ' hermandades') + ' en el plano · ' + (faltan === 1 ? '1 aún sin ubicar' : faltan + ' aún sin ubicar') : (n === 1 ? '1 hermandad en el plano' : n + ' hermandades en el plano');
+      // cada mitad sin partir: si no cabe en una línea, el salto cae en el «·»
+      var mitades = !n ? ['Aún no hay sedes con ubicación comprobada'] : [(n === 1 ? '1 hermandad' : n + ' hermandades') + ' en el plano'].concat(faltan ? [(faltan === 1 ? '1 aún sin ubicar' : faltan + ' aún sin ubicar')] : []);
+      resEl.textContent = ''; mitades.forEach(function (t, i) { if (i) resEl.appendChild(document.createTextNode(' · ')); var sp = document.createElement('span'); sp.style.whiteSpace = 'nowrap'; sp.textContent = t; resEl.appendChild(sp); });
       // leyenda corta: qué es cada símbolo, qué es el color y qué es un número
       notaEl.innerHTML = n ? '<span class="oc-ley"><svg viewBox="-12 -38 24 40" aria-hidden="true"><path class="oc-ley-t" d="M-10 0V-17Q-10 -25 0 -29Q10 -25 10 -17V0Z"/></svg>Templo</span><span class="oc-ley"><svg viewBox="-12 -26 24 28" aria-hidden="true"><path class="oc-ley-c" d="M-9 0V-14L0 -21L9 -14V0Z"/></svg>Casa hermandad</span><span class="oc-ley"><i class="oc-ley-n" aria-hidden="true">3</i>Varias juntas: toca para separarlas</span><span class="oc-ley is-txt">El color es el de su hábito.</span>' : '';
       if (extraB) { var k = Object.keys(dEx).length; extraN.textContent = k ? ' · ' + k : ''; extraB.disabled = !k; extraB.title = k ? '' : 'No hay salidas extraordinarias anunciadas en ' + datos.ciudades[actual].n; }

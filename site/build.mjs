@@ -2019,7 +2019,7 @@ function celdasCalles(ls, lado = 1000) {
 // límites de lo dibujado (calles y arterias): el centro de la vista no sale de ahí
 function limitesPlano(P) {
   const a = [Infinity, Infinity, -Infinity, -Infinity];
-  for (const l of [...P.calles, ...P.principales]) for (let i = 0; i < l.length; i += 2) { a[0] = Math.min(a[0], l[i]); a[1] = Math.min(a[1], l[i + 1]); a[2] = Math.max(a[2], l[i]); a[3] = Math.max(a[3], l[i + 1]); }
+  for (const l of [...P.calles, ...(P.callesFuera || []), ...P.principales]) for (let i = 0; i < l.length; i += 2) { a[0] = Math.min(a[0], l[i]); a[1] = Math.min(a[1], l[i + 1]); a[2] = Math.max(a[2], l[i]); a[3] = Math.max(a[3], l[i + 1]); }
   // con fondo de afueras, su recuadro entero (también el mar, que no tiene calles: se ve oscuro, con su costa)
   if (P.limAfueras) for (let i = 0; i < 4; i++) a[i] = i < 2 ? Math.min(a[i], P.limAfueras[i]) : Math.max(a[i], P.limAfueras[i]);
   return a;
@@ -2043,7 +2043,8 @@ function conAfueras(slug, P) {
   const f = path.join(DIR, 'data', 'planos-afueras', slug + '.json');
   if (!fs.existsSync(f)) return P;
   const A = JSON.parse(fs.readFileSync(f, 'utf8'));
-  return { ...P, calles: [...P.calles, ...(A.calles || [])], principales: [...P.principales, ...(A.principales || [])], costa: [...(P.costa || []), ...(A.costa || [])], limAfueras: A.lim };
+  // limCentro: el recuadro del fondo con todas las calles; el plano desvanece ahí las calles menores para que no se vea su borde recto
+  return { ...P, callesFuera: A.calles || [], principales: [...P.principales, ...(A.principales || [])], costa: [...(P.costa || []), ...(A.costa || [])], limAfueras: A.lim, limCentro: limitesPlano(P) };
 }
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
@@ -2144,7 +2145,7 @@ function datosCalle(c) {
   const limP = limitesPlano(P), sedesC = sedesCiudad(c, P, R, xy);
   const sinFondo = sedesC.filter((h) => [h.tp, h.cs].some((q) => q && (q[0] < limP[0] || q[0] > limP[2] || q[1] < limP[1] || q[1] > limP[3])));
   if (sinFondo.length) console.warn(`Aviso: ${sinFondo.length} sedes de ${c.nombre} fuera del fondo del plano (${sinFondo.map((h) => h.s).join(', ')}); ejecuta «node tools/plano/afueras.mjs ${c.slug}»`);
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limP, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesC, nFichas: Object.values(HERM).filter((h) => h.ciudad === c.slug).length, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limP, ...(P.limCentro ? { limCentro: P.limCentro, callesFuera: celdasCalles(P.callesFuera) } : {}), principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesC, nFichas: Object.values(HERM).filter((h) => h.ciudad === c.slug).length, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {

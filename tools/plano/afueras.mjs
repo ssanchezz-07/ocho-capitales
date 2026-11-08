@@ -23,7 +23,7 @@ const BARRIO = 600;   // m alrededor de cada sede apartada en los que también v
 const PRINC = /^(motorway|trunk|primary|secondary|tertiary)(_link)?$/;
 const MENOR = /^(residential|unclassified|living_street|pedestrian|service)$/;
 // pantallas de referencia con los márgenes de la portada (site.js, margenes(): el pie mide unos 420 px en el móvil)
-const PANTALLAS = [{ W: 390, H: 844, arriba: 58, abajo: 460, izq: 16, der: 64 }, { W: 360, H: 740, arriba: 58, abajo: 460, izq: 16, der: 64 }, { W: 1440, H: 820, arriba: 58, abajo: 260, izq: 16, der: 64 }];
+const PANTALLAS = [{ W: 390, H: 844, arriba: 58, abajo: 460, izq: 30, der: 84 }, { W: 360, H: 740, arriba: 58, abajo: 460, izq: 30, der: 84 }, { W: 1440, H: 820, arriba: 58, abajo: 260, izq: 30, der: 84 }];
 
 // ---- recuadros por ciudad: el fondo actual y las sedes que se salen ----
 const zonas = [];

@@ -43,7 +43,7 @@
     // las calles menores llegan ya como trazado, por celdas de 1 km (build.mjs, celdasCalles); entran tras el primer fotograma
     var gCalles = el('g', {}); base.appendChild(gCalles);
     base.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
-    requestAnimationFrame(function () { setTimeout(function () { var fr = document.createDocumentFragment(); (D.calles || []).forEach(function (d) { fr.appendChild(el('path', { 'class': 'oc-c-calles', d: typeof d === 'string' ? d : pathDe([d]) })); }); gCalles.appendChild(fr); }, 0); });
+    requestAnimationFrame(function () { setTimeout(function () { var fr = document.createDocumentFragment(); (D.calles || []).concat(D.callesFuera || []).forEach(function (d) { fr.appendChild(el('path', { 'class': 'oc-c-calles', d: typeof d === 'string' ? d : pathDe([d]) })); }); gCalles.appendChild(fr); }, 0); });
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
     if (A.edificios) { base.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); base.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
     // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
