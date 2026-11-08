@@ -268,7 +268,9 @@ import vm from 'node:vm';
 const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(DIR, 'assets', 'noticias.js'), 'utf8'), sb); return sb.OCNoticias; })();
 // Política de contenido: solo scripts propios o con el hash exacto de los bloques en línea (tema, base), sin eval ni manejadores en línea.
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+// los juegos de erCuñao (assets/juegos.js y /juegos/): si están, erCuñao los propone
+const HAY_JUEGOS = fs.existsSync(path.join(DIR, 'assets', 'juegos.js'));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 // Precarga de la página siguiente (Chrome y Edge; los demás lo ignoran): las pestañas de abajo se piden en cuanto se ven,
 // y cualquier otro enlace de la web al empezar a tocarlo. Solo se descarga el HTML (prefetch, sin ejecutar nada).
 const ESPECULA = `<script type="speculationrules">${JSON.stringify({ prefetch: [
@@ -660,14 +662,14 @@ ${body}${colabora(p, title)}
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
 <button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
-<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}">
+<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}" data-motor="${u('assets/cunao.js')}?v=${HUELLA.cunao}"${HAY_JUEGOS ? ' data-juegos' : ''}>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
     <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa. O eso dice.</p></div><button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button></div>
     <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
     <form class="oc-cunao-form" data-cunao-form><label class="oc-sr" for="oc-cunao-q">Pregunta a erCuñao</label><input id="oc-cunao-q" type="text" autocomplete="off" enterkeyhint="send" placeholder="¿A qué hora sale la Macarena?" data-cunao-q><button class="oc-cunao-enviar" type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l15-7-5 15-2.5-5.5z" fill="currentColor"/></svg></button></form>
   </div>
 </div>
-<script src="${u('assets/cunao.js')}?v=${HUELLA.cunao}" defer></script>
+<script src="${u('assets/cunao-ui.js')}?v=${HUELLA.cunaoui}" defer></script>
 <div class="oc-sheet" id="oc-more" hidden data-more-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
@@ -1890,7 +1892,7 @@ function pageOffline() {
 }
 function escribeSw() {
   // la carcasa: lo que se guarda al instalar para abrir al instante y sin conexión (el resto se guarda al visitarlo)
-  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/vida.css?v=' + HUELLA.vida, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
+  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/vida.css?v=' + HUELLA.vida, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao-ui.js?v=' + HUELLA.cunaoui, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
     ...['karantina-latin.woff2', 'heebo-latin.woff2'].map((f) => BASE + 'assets/fonts/' + f), ...D.capitales.map((c) => BASE + 'assets/plates/colgadura-' + c.slug + '.webp'), BASE + 'assets/icon.svg'];
   swDespliegue({ DIST, BASE, carcasa });
 }
@@ -2228,7 +2230,7 @@ function datosCunao() {
   const hs = D.hermandades.map((h) => {
     const o = {
       s: h.slug, n: h.nombre, c: h.ciudad, d: h.dia, o: h.orden, h: hhmm(h.hora), se: h.sede || '', f: h.fundacion || '', w: h.web || '',
-      t: (h.titulares || []).map((t) => [t.nombre.split(',')[0].trim(), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1]),
+      t: (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1]),
     };
     // Música: por paso si hay acompañamiento publicado; si no, la lista de bandas de la ficha
     const ac = h.acompanamiento && h.acompanamiento.pasos || [];
@@ -2266,7 +2268,7 @@ function datosCunao() {
     }
   }
   ex.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, hoy: isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, juegos: HAY_JUEGOS ? 1 : 0, hoy: isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
   // Marchas (todo el catálogo, ~10.000): en trozos por la inicial del título, sin el artículo («La Madrugá» → m/m.json).
   // Solo se piden cuando la pregunta es de marchas. Fila: [título, autor (índice), año, formación, dedicada a (slug de hermandad o texto), ficha]
   const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };
@@ -2331,6 +2333,9 @@ function datosCunao() {
   // Fechas de la próxima Semana Santa para la IA (sin cargar el índice entero en el servidor)
   fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'ia.json'), JSON.stringify({ anio, fechas, programa: anio - 1 }));
 }
+
+// el nombre del titular sin la nota de autoría («…, anónimo s. XVII»), pero entero si la coma es parte del nombre («Nuestro Padre Jesús, Divino Salvador, en su Prendimiento»)
+const titCorto = (n) => String(n || '').replace(/,\s*an[oó]nim.*$/i, '').trim();
 
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();

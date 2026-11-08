@@ -153,8 +153,9 @@ caso('C1 imaginero por nombre completo', motor(), '¿De dónde era Antonio León
 caso('C2 este fin de semana', motor(), '¿Hay alguna procesión este fin de semana?', y(contiene('fin de semana'), (r, t) => (/Buen Fin/.test(t) ? 'empareja con el Buen Fin' : true)));
 caso('C3 Semana Santa de otro año', motor(), '¿Cuándo es la Semana Santa de 2028?', contiene('2028', '9 de abril de 2028', '16 de abril de 2028'));
 caso('C4 Sábado de Pasión no es la hermandad de Pasión', motor(), 'El Sábado de Pasión en Sevilla', contiene('El Sábado de Pasión en Sevilla salen'));
-{ const fund = PORTAL.hermandades.filter((h) => h.ciudad === 'cordoba' && /\b\d{4}\b/.test(h.fundacion || '')).sort((a, b) => +/\d{4}/.exec(a.fundacion)[0] - +/\d{4}/.exec(b.fundacion)[0])[0];
-  caso('C5 la más antigua de Córdoba', motor(), '¿Cuál es la hermandad más antigua de Córdoba?', contiene('la más antigua de Córdoba es ' + fund.nombre)); }
+{ // solo cuentan las fundaciones que empiezan por el año («Siglo XVI (…1921)» no)
+  const fund = PORTAL.hermandades.filter((h) => h.ciudad === 'cordoba' && /^\s*\d{4}\b/.test(h.fundacion || '')).sort((a, b) => +/\d{4}/.exec(a.fundacion)[0] - +/\d{4}/.exec(b.fundacion)[0])[0];
+  caso('C5 la más antigua de Córdoba', motor(), '¿Cuál es la hermandad más antigua de Córdoba?', contiene('la más antigua de Córdoba es ' + fund.nombre.replace(/^(El|La|Los|Las) /, (x) => x.toLowerCase()))); }
 caso('C6 una curiosidad', motor(), 'Dime una curiosidad', (r, t) => (D.cu.some((k) => t.includes(k[0])) ? true : 'no da una curiosidad'));
 caso('C7 la Humillación de Cádiz', motor(), '¿Sale la Humillación de Cádiz?', contiene('Humillación (Piedad) (Cádiz)'));
 
@@ -316,13 +317,44 @@ for (const q of ['¿Qué sale el 25 de marzo?', '¿Hay procesión el 10 de junio
   const otra = l.find((x) => ['procesion', 'extraordinaria', 'traslado', 'magna'].includes(x[2]) && ex.has(x[0] + '|' + x[5]) && !x[4]);
   if (!otra) omitida('A2 (hoy no hay una salida de agenda el mismo día que una extraordinaria)');
   else caso('A2 una salida de la agenda no se esconde tras la extraordinaria del mismo día', crearMotor(D, { base: '/', azar: (l_) => l_[0], hoy: () => otra[0], horaAhora: () => 12 }), '¿Qué sale hoy?', contiene(otra[3].slice(0, 30)));
-  caso('A3 en la agenda de erCuñao no entran titulares de prensa ni frases cortadas', motor(), '¿Qué sale hoy?', () => (l.some((x) => /(…|\.\.\.)\s*$/.test(x[3])) ? 'hay títulos cortados en agenda.json' : true));
+  caso('A3 en la agenda de erCuñao no entran titulares de prensa ni frases cortadas', motor(), '¿Qué sale hoy?', () => (l.some((x) => /(…|\.\.\.)\s*$/.test(x[3])) ? 'hay títulos cortados en agenda.json' : l.some((x) => /\b(cumple|cumplen|prepara|preparan|prev[eé]n?|organiza|organizan|celebrar[aá]n?|acompañar[aá]n?|anuncia|anuncian|continuar[aá]|tendr[aá]n?|ser[aá]n?|recorrer[aá]n?|vivir[aá]n?)(?![a-záéíóúñ])/i.test(x[3])) ? 'hay titulares de prensa en agenda.json' : true));
   const mas = masDias(ag.h || HOY, 5);
   if (!(mas < masDias(RAMOS, -9))) omitida('A5 (el final de la agenda cae ya en Semana Santa)');
   else caso('A5 más allá de la agenda lo dice, no afirma que no sale nadie', crearMotor(D, { base: '/', azar: (l_) => l_[0], hoy: (k) => masDias(HOY, k || 0), horaAhora: () => 12 }), '¿qué sale el ' + fechaCorta(mas) + '?', y(contiene('todavía no tengo la agenda'), noDice('no sale ninguna'))); }
 caso('A6 «kien compuso Amarguras?»', motor(), 'kien compuso Amarguras?', contiene('«Amarguras» es de'));
 caso('A9 «la O» no se queda en «O»', motor(), 'a que hora sale la o', noDice('«O»'));
 caso('A13 un emoji cortado no rompe nada', motor(), 'hola \uD800 macarena', (r, t) => (t ? true : 'sin texto'));
+
+console.log('— Revisión independiente 8-nov (bloque 2)');
+caso('R1 el lugar con nombre de otra hermandad no cambia de hermandad', motor(), '¿A qué hora pasa la Soledad de San Lorenzo de Sevilla por J. del Gran Poder?', y(contiene('la Soledad de San Lorenzo pasa por'), noDice('Madrugá')));
+caso('R2 título con «marcha» dentro', motor(), '¿Quién compuso Marcha nº 21?', contiene('«Marcha nº 21» es de'));
+caso('R3 «La Música del Pueblo» no es un compositor «del Pueblo»', motor(), '¿De quién es la marcha La Música del Pueblo?', y(contiene('«La Música del Pueblo» es de'), noDice('tengo 5 marchas')));
+caso('R4 título con paréntesis', motor(), '¿Quién compuso «Matre Plorante (Filium Suum Manibus Tenet)»?', contiene('«Matre Plorante (Filium Suum Manibus Tenet)» es de'));
+caso('R5 con errata no da otra marcha parecida', motor(), '¿Quién compuso «Paz, Victroia y Porvenir»?', y(contiene('«Paz, Victoria y Porvenir» es de'), noDice('«Paz del Porvenir» es de')));
+caso('R6 «llega … a la Campana»', motor(), 'a qué hora llega la Esperanza de Triana a la Campana', contiene('la Esperanza de Triana pasa por Campana'));
+caso('R7 «una obra suya que procesiona»', motor(), '¿Quién es Diego de Aranda?', noDice('obra suya que procesionan'));
+
+caso('R8 «qué banda lleva … cuando pasa por la Campana» sigue siendo la banda', motor(), '¿Qué banda lleva la Macarena de Sevilla cuando pasa por la Campana?', y(contiene('La música de la Macarena (Sevilla)'), noDice('pasa por Campana a las')));
+caso('R9 «quién talló … que pasa por la Campana» sigue siendo el imaginero', motor(), '¿Quién talló la Macarena de Sevilla que pasa por la Campana?', contiene('de la Macarena (Sevilla)'));
+caso('R10 con una errata no da otra marcha como la pedida', motor(), '¿Quién compuso tus lágrimas nasarenas?', noDice('«Lágrimas Macarenas» es de'));
+
+console.log('— Auditoría de Coordinación 8-nov (bloque 2)');
+caso('C1 «el Nazareno de Córdoba» existe (palabra genérica)', motor(), '¿A qué hora sale el Nazareno de Córdoba?', y(contiene('Jesús Nazareno (Córdoba) sale'), noDice('no tengo ninguna')));
+caso('C2 «los Dolores de Granada»', motor(), 'los dolores de granada', y(contiene('(Granada)'), noDice('no tengo ninguna')));
+caso('C3 «el Traslado de Córdoba» no es su agenda', motor(), 'traslado de cordoba', y(contiene('Traslado al Sepulcro'), noDice('no tengo ninguna', 'en la agenda')));
+caso('C4 las Vísperas de Sevilla son dos días', motor(), '¿Qué sale en las vísperas en Sevilla?', y(contiene('salen ' + D.hermandades.filter((h) => h.c === 'sevilla' && /Dolores|Pasión|Vísperas/.test(h.d)).length + ' cofradías'), enlace(/en-la-calle\/sevilla/)));
+caso('C5 «¿qué marchas le tocan a la Macarena?» es la Macarena, no una banda con su nombre', motor(), '¿Qué marchas le tocan a la Macarena de Sevilla?', y(contiene('la Macarena (Sevilla)'), noDice('repertorio completo de Banda')));
+caso('C6 título que no existe tal cual: lo dice', motor(), '¿Quién compuso Pasa la Virgen de la Estrella?', contiene('Con ese título exacto no la tengo'));
+caso('C7 «¿quién es el imaginero de la Macarena?»', motor(), '¿Quién es el imaginero de la Macarena de Sevilla?', contiene('Las imágenes de la Macarena (Sevilla)'));
+
+console.log('— Juegos y página');
+if (D.juegos) {
+caso('J1 «¿Echamos una partida?» lleva a los juegos', motor(), '¿Echamos una partida?', y(enlace(/\/juegos\/#j=reto/), enlace(/\/juegos\/$/)));
+caso('J2 «me aburro esperando»', motor(), 'me aburro esperando', enlace(/\/juegos\//));
+caso('J3 «trivial» no es una hora', motor(), 'quiero jugar al trivial', noDice('sale el'));
+caso('J4 en plena jornada propone una partida', motor(fechas['Jueves Santo']), '¿Qué sale hoy en Sevilla?', (r) => (r.chips.some((c) => /partida/.test(c[0])) ? true : 'sin propuesta de partida'));
+}
+caso('P1 en la ficha de una hermandad, «¿qué banda lleva?» es la suya', crearMotor(D, { base: '/', azar: (l) => l[0], paginaHerm: () => 'cautivo-malaga', pagina: () => 'malaga', hoy: () => HOY, horaAhora: () => 18 }), '¿Qué banda lleva?', contiene('La música del Cautivo (Málaga)'));
 
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal})` + (omit ? `; ${omit} omitida${omit > 1 ? 's' : ''} por la fecha.` : '.'));
 process.exit(mal ? 1 : 0);

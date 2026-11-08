@@ -37,7 +37,7 @@
   const GENERICO = set('nuestro nuestra padre senor senora santisimo santisima stmo sma ntro ntra nstra maria jesus cristo virgen dios hijo madre san real ilustre venerable fervorosa pontificia hdad sacramental nazareno nazarenos archicofradia primitiva');
   const CLAVE = set('hora horas ora horario horarios sale salen salir salida salidas sali entra entran entrada entrar recoge recogida recogen encierro vuelve regresa termina acaba pasa pasan pasar paso pasos trono tronos recorrido recorridos itinerario itinerarios ruta calle calles carrera oficial catedral campana tribuna sede templo iglesia parroquia capilla banda bandas musica toca tocan acompana acompanan acompanamiento cornetas tambores agrupacion musical marcha marchas suena suenan dedicada dedicadas imaginero imagineros talla tallo tallaron autor autora escultor esculpio hizo hicieron historia fundacion fundada fundo origen web pagina noticias noticia novedades cerca mapa ubicacion misterio palio costaleros costalero portadores titulares titular imagen imagenes dia dias jornada fecha falta faltan queda quedan obras obra hoy manana pasado ayer noche tarde ahora llega llegan cuantas cuantos siguiente habito habitos tunica tunicas capirote capirotes antifaz cingulo cinturon esparto capa visten vestidos color colores compuso compusieron compuesto compositor compositora compositores repertorio telefono movil whatsapp correo email interpreta interpretan primera primero primeras ultima ultimo ultimas temprano pronto antes despues partir orden nombre oficial completo agenda calendario extraordinaria extraordinarias besamanos besapies culto cultos triduo quinario septenario novena traslado concierto pregon');
   const DIA_FRASES = [
-    ['viernes de dolores', 'Viernes de Dolores'], ['sabado de pasion', 'Sábado de Pasión'], ['visperas', 'Viernes de Dolores'],
+    ['viernes de dolores', 'Viernes de Dolores'], ['sabado de pasion', 'Sábado de Pasión'], ['visperas', 'Vísperas'],
     ['domingo de ramos', 'Domingo de Ramos'], ['ramos', 'Domingo de Ramos'], ['lunes santo', 'Lunes Santo'], ['lunes', 'Lunes Santo'],
     ['martes santo', 'Martes Santo'], ['martes', 'Martes Santo'], ['miercoles santo', 'Miércoles Santo'], ['miercoles', 'Miércoles Santo'],
     ['jueves santo', 'Jueves Santo'], ['jueves', 'Jueves Santo'], ['madrugada', 'Madrugá'], ['madruga', 'Madrugá'],
@@ -46,7 +46,7 @@
   ];
   const DIA_PAL = set('viernes dolores sabado pasion visperas domingo ramos lunes martes miercoles jueves madrugada madruga resurreccion pascua');
   // grupos: una jornada «canónica» incluye las variantes que usan algunas ciudades
-  const GRUPO = { 'Jueves Santo': ['Jueves Santo', 'Jueves Santo y Madrugada'], 'Madrugá': ['Madrugá', 'Jueves Santo y Madrugada'], 'Viernes de Dolores': ['Viernes de Dolores', 'Vísperas'] };
+  const GRUPO = { 'Jueves Santo': ['Jueves Santo', 'Jueves Santo y Madrugada'], 'Madrugá': ['Madrugá', 'Jueves Santo y Madrugada'], 'Viernes de Dolores': ['Viernes de Dolores', 'Vísperas'], 'Vísperas': ['Viernes de Dolores', 'Sábado de Pasión', 'Vísperas'] };
   const grupo = (d) => GRUPO[d] || [d];
   const GENTILICIO = [['sevillan', 'sevilla'], ['malaguen', 'malaga'], ['granadin', 'granada'], ['cordobes', 'cordoba'], ['gaditan', 'cadiz'], ['onubense', 'huelva'], ['almeriense', 'almeria'], ['jiennense', 'jaen'], ['jaenero', 'jaen']];
   // sinónimos y jerga cofrade: se aplican sobre el texto normalizado antes de buscar
@@ -55,7 +55,7 @@
     [/\bque (hora|ora) es la salida\b/g, 'a que hora sale'], [/\b(hora|ora) de salida\b/g, 'a que hora sale'], [/\bora\b/g, 'hora'],
     [/\bcofrade?ria\b/g, 'cofradia'], [/\bprocesiona(n)?\b/g, 'sale$1'], [/\bq\b/g, 'que'], [/\bxq\b|\bpq\b/g, 'porque'],
     [/\bbcyt\b|\bbct\b|\bcctt\b|\bcc tt\b|\bbcct\b/g, 'banda cornetas tambores'], [/\bam\b(?= )/g, 'agrupacion musical'], [/\bbm\b|\bbb mm\b/g, 'banda de musica'], [/\bsemana mayor\b/g, 'semana santa'],
-    [/\bcruz de guia\b/g, 'salida'], [/\bmadrugada del viernes\b/g, 'madruga'], [/\bnazarenitos?\b/g, 'nazarenos'], [/\bmusicas\b/g, 'musica'],
+    [/\bcruz de guia\b/g, 'salida'], [/\bc oficial\b/g, 'carrera oficial'], [/\bmadrugada del viernes\b/g, 'madruga'], [/\bnazarenitos?\b/g, 'nazarenos'], [/\bmusicas\b/g, 'musica'],
     [/\bque (marchas|marcha) (suena|suenan|lleva|llevan)\b/g, 'que marchas toca'],
   ];
   // Andaluz escrito y abreviaturas: solo palabras cortas que no admiten otra lectura (las largas las arregla «corrige» con variantes)
@@ -100,7 +100,7 @@
       const W = new Set(limpiaTok(toks(h.se)));
       const full = norm(sinApodo), core = full.replace(/^(la|el|los|las) /, '');
       const frases = [full, core].concat(apodos, apodos.map((a) => a.replace(/^(la|el|los|las) /, ''))).filter((f, i, a) => f.length >= 4 && a.indexOf(f) === i);
-      IDX.push({ h, F, M, W, frases });
+      IDX.push({ h, F, M, W, frases, nombre: new Set([full, core]) });
       for (const t of new Set([...F, ...M, ...W])) df.set(t, (df.get(t) || 0) + 1);
     }
     const idf = (t) => Math.log(N / (df.get(t) || N));
@@ -210,6 +210,7 @@
       n = n.split(' ').map((t) => (Object.prototype.hasOwnProperty.call(ANDALUZ, t) ? ANDALUZ[t] : t)).join(' ');
       const rawA = n;
       for (const [re, x] of SINONIMOS) n = n.replace(re, x);
+      const nLugar = n;
       // erratas: palabra a palabra contra el vocabulario del portal
       n = n.split(' ').map(corrige).join(' ');
       const e = { raw, rawA, t: n, usadas: new Set() };
@@ -247,17 +248,25 @@
       e.toks = n.split(' ').filter((t) => t && !e.usadas.has(t) && !CLAVE.has(t));
       e.toksB = n.split(' ').filter((t) => t && !e.usadas.has(t));
       // segmento de lugar: «pasa por X», «llega a X»
-      const pm = /\b(?:pasa|pasan|pasara|llega|llegan|esta|estara)\s+(?:por|a|en)\s+(?!donde\b)(.+)$/.exec(n) || /\b(?:ver(?:la|lo|las|los)?|veo)\s+(?:por|en)\s+(?!donde\b)(.+)$/.exec(n) || /\bpor\s+(?!donde\b)((?:la |el |los |las )?(?:calle |plaza |avenida |avda )?\w+(?: \w+){0,5})$/.exec(n);
-      if (pm && (e.intent === 'pasapor' || e.intent === 'hora' || e.intent === 'cerca')) { e.lugar = pm[1]; if (e.intent !== 'pasapor') e.intent = 'pasapor'; }
+      const pmEn = (x) => /\b(?:pasa|pasan|pasara|llega|llegan|esta|estara)\s+(?:por|a|en)\s+(?!donde\b)(.+)$/.exec(x) || /\b(?:ver(?:la|lo|las|los)?|veo)\s+(?:por|en)\s+(?!donde\b)(.+)$/.exec(x);
+      // «¿a qué hora llega la Esperanza de Triana a la Campana?»: el lugar va tras el nombre, después de «a»
+      const porX = (x) => /\bpor\s+(?!donde\b)((?:la |el |los |las )?(?:calle |plaza |avenida |avda )?\w+(?: \w+){0,5})$/.exec(x) || /\b(?:llega|llegan|llegara)\b.*?\sa\s+(?!que\b)((?:la |el |los |las )?\w+(?: \w+){0,4})$/.exec(x);
+      const pm0 = pmEn(nLugar) || porX(nLugar), pm = pmEn(n) || porX(n);
+      e.lugarC = pm0 ? pm0[1] : pm ? pm[1] : null;
+      if (pm) e.antesLugar = n.slice(0, pm.index + pm[0].length - pm[1].length).trim();
+      if (e.lugarC && (['hora', 'cuando', 'cerca', 'pasapor', 'agenda'].indexOf(e.intent) >= 0 || (['autor', 'imaginero', 'info', null].indexOf(e.intent) >= 0 && !/\b(quien|de quien|tallo|hizo|imaginero|autor|escultor)\b/.test(e.antesLugar || ''))) && /\b(pasa|pasan|pasara|llega|llegan)\b.*\bpor\b/.test(nLugar) && e.intent !== 'carrera' && !/\b(carrera|tribuna)\b/.test(e.lugarC || '')) e.intent = 'pasapor';
+      if (pm && (e.intent === 'pasapor' || e.intent === 'hora' || e.intent === 'cerca')) { e.lugar = pm0 ? pm0[1] : pm[1]; if (e.intent !== 'pasapor') e.intent = 'pasapor'; }
       return e;
     }
     function intencion(n) {
       const T = (re) => re.test(n);
       if (T(/^(hola|buenas|buenos dias|buenas tardes|buenas noches|que pasa|que tal|ey|hey|saludos|ole)\b/) && n.split(' ').length < 5) return 'hola';
       if (T(/\b(gracias|grasias|genial|perfecto|estupendo|ole tu|muy bien)\b/) && n.split(' ').length < 6) return 'gracias';
+      if (T(/\b(juego|juegos|jugar|juguemos|partida|partidita|trivial|reto (de hoy|diario)|me aburro|aburrido|que hago mientras|mientras espero|echamos una)\b/) && !T(/\b(sale|salen|hora)\b/)) return 'juegos';
       if (T(/\b(quien eres|que eres|como te llamas|eres una? (ia|robot|bot|maquina))\b/)) return 'quien';
       if (T(/\b(que sabes( hacer)?|que puedes hacer|ayuda|ayudame|como funciona|que te puedo preguntar)\b/) || (T(/\binstrucciones\b/) && n.split(' ').length <= 3)) return 'ayuda';
       if (T(/\b(error|errores|equivocad\w*|sugerencia|sugerir|corregir|avisar de|aviso|un dato (esta )?mal|esta mal|falta (un|una|informacion|algo|el|la)\b|tengo una idea|enviar una sugerencia)/) && !T(/cuanto falta/)) return 'sugerencia';
+      if (T(/\bquien (lo |la |los |las |le )?(tallo|talla|esculpio|realizo|labro)\b|\b(quien es|cual es) el (imaginero|escultor|autor) de\b|\bde quien es (la imagen|el cristo|la virgen)\b/)) return 'autor';
       if (T(/\b(carrera oficial|tribuna)\b/) && T(/\b(llega|llegan|pasa|pasan|entra|entran|hora|cuando)\b/)) return 'carrera';
       if (T(/\b(extraordinari\w*|besamanos|besapies|via ?crucis|triduo|quinario|septenario|novena|traslados?|conciertos?|pregon|cartel|agenda|esta semana|este mes|proxim[oa]s? (dias|semanas|actos|cultos|salidas|procesiones)|cultos?)\b/) && !T(/\b(fin de semana|finde)\b/)) return 'agenda';
       if (T(/\b(cuanto|cuantos dias|cuantas semanas) (falta|faltan|queda|quedan)\b|\bcuenta atras\b|\bcuando (es|empieza|cae|sera|son|llega)\b(?!.*\b(sale|salen|pasa|entra)\b)|\bque (fecha|dia) (es|cae|empieza)\b|\ben que fecha\b/)) return 'falta';
@@ -305,7 +314,7 @@
           if (filtroCiudad && x.h.c !== filtroCiudad) continue;
           let s = 0, frase = null; const usadas = [];
           for (const t of new Set(q)) { const w = x.F.has(t) ? 1 : x.M.has(t) ? 0.7 : x.W.has(t) ? 0.35 : 0; if (w) { s += w * idf(t); usadas.push(t); } }
-          for (const f of x.frases) if (new RegExp('(^| )' + f + '( |$)').test(e.tSinDia != null ? e.tSinDia : e.t)) { s += f.indexOf(' ') > 0 && APODOS.some((a) => a[0] === f) ? 8 : 4; frase = f; break; }
+          for (const f of x.frases) if (new RegExp('(^| )' + f + '( |$)').test(e.tSinDia != null ? e.tSinDia : e.t)) { s += f.indexOf(' ') > 0 && APODOS.some((a) => a[0] === f) ? 8 : x.nombre.has(f) ? 5 : 4; frase = f; break; }
           if (s <= 0) continue;
           if (dias && (dias.indexOf(x.h.d) >= 0 || (x.h.x || []).some((v) => dias.indexOf(v[0]) >= 0))) s += 1;
           if (!filtroCiudad && ctx.ciudad === x.h.c) s += 0.4;
@@ -315,6 +324,12 @@
         return out.filter((r) => r.s >= 2.2).sort((a, b) => b.s - a.s);
       };
       let res = e.ciudad ? puntua(e.ciudad) : puntua(null);
+      if (!res.length && e.ciudad) {
+        const deC = IDX.filter((x) => x.h.c === e.ciudad), nomT = (x) => new Set(toks(x.h.n.replace(/\(.*?\)|«.*?»/g, ' ')).map(stem));
+        const enNombres = new Set(); deC.forEach((x) => nomT(x).forEach((t) => enNombres.add(t)));
+        const cn = norm(nombreCiudad(e.ciudad)), q2 = [...new Set((e.tSinDia != null ? e.tSinDia : e.t).split(' ').filter((t) => t.length > 3 && !STOP.has(t) && t !== cn).map(stem))].filter((t) => enNombres.has(t));
+        if (q2.length) { const hit = deC.filter((x) => { const n_ = nomT(x); return q2.every((t) => n_.has(t)); }); if (hit.length) res = hit.map((x) => ({ h: x.h, s: 2.2 + (nomT(x).size === q2.length ? 1 : 0), usadas: q2, frase: null })).sort((a, b) => b.s - a.s); }
+      }
       if (!res.length && e.ciudad) { const f = puntua(null); return { lista: [], fuera: f.length ? f.filter((x) => x.s >= f[0].s - 0.9).slice(0, 4) : null }; }
       if (!res.length) return { lista: [] };
       const top = res[0].s, cerca = res.filter((r) => r.s >= top - 0.9);
@@ -358,6 +373,8 @@
     }
     function cabecera(h, prep) { return nom(h, prep) + ' (' + nombreCiudad(h.c) + ')'; }
     const Cab = (h) => cap1(cabecera(h));
+    // el verbo concuerda con el nombre: «el Cautivo sale», «los Gitanos salen»
+    const V = (h, sing, plur) => (/^l[oa]s$/.test(articulo(h)[0]) ? plur : sing);
     // «Apunta, cuñao: el Cautivo…» (tras los dos puntos, en minúscula)
     const conPref = (h) => { const p = azar(PREF); return p ? p + cabecera(h) : Cab(h); };
     function enlacesHerm(h, conMapa) {
@@ -365,7 +382,8 @@
     }
     function respHerm(h, intent, e) {
       const r = Resp(), c = nombreCiudad(h.c);
-      const req = ['recorrido', 'pasapor', 'historia', 'pasos', 'marchas', 'habito', 'oficial', 'agenda'].indexOf(intent) >= 0;
+      const catedral = intent === 'carrera' && /\b(catedral|sicb|s i c b|estacion de penitencia)\b/.test((e && e.t) || '');
+      const req = ['recorrido', 'pasapor', 'historia', 'pasos', 'marchas', 'habito', 'oficial', 'agenda'].indexOf(intent) >= 0 || catedral;
       if (req && !tengoCiudad(h.c)) return necesita(h.c);
       const CD = CIUDADES[h.c];
       ctx.herm = h.s; ctx.ciudad = h.c; ctx.intent = intent; ctx.pend = null;
@@ -387,14 +405,14 @@
         case 'duracion': {
           if (h.r) {
             const ini = minutos(h.r[0]); let fin = minutos(h.r[2]); if (fin < ini) fin += 1440; const d = fin - ini;
-            if (d > 0) P(r, Cab(h) + ' está unas ' + Math.floor(d / 60) + ' h' + (d % 60 ? ' y ' + (d % 60) + ' min' : '') + ' en la calle: sale ' + horaTxt(h.r[0], h.r[1]) + ' y se recoge ' + horaTxt(h.r[2], h.r[3]) + ' (itinerario ' + (D.anio - 1) + ').');
+            if (d > 0) P(r, Cab(h) + V(h, ' está', ' están') + ' unas ' + Math.floor(d / 60) + ' h' + (d % 60 ? ' y ' + (d % 60) + ' min' : '') + ' en la calle: ' + V(h, 'sale ', 'salen ') + horaTxt(h.r[0], h.r[1]) + V(h, ' y se recoge ', ' y se recogen ') + horaTxt(h.r[2], h.r[3]) + ' (itinerario ' + (D.anio - 1) + ').');
             else P(r, 'Con el itinerario que tengo no me salen las cuentas de cuánto está en la calle ' + cabecera(h) + '.');
           } else { P(r, 'No tengo la hora de recogida ' + cabecera(h, 'de') + ', así que no sé cuánto está en la calle.' + (sal ? ' Sale ' + art(h.d) + ' ' + sal + '.' : '')); r.flojo = true; }
           A(r, enlacesHerm(h, true)); break;
         }
         case 'orden': {
           const l = mismoDia(), i = l.indexOf(h);
-          P(r, Cab(h) + ' es la ' + (i + 1) + '.ª de las ' + l.length + ' cofradías ' + delDia(h.d) + ' en ' + c + ', en el orden de paso de la jornada' + (sal ? '. Sale ' + sal : '') + '.');
+          P(r, Cab(h) + V(h, ' es', ' son') + ' la ' + (i + 1) + '.ª de las ' + l.length + ' cofradías ' + delDia(h.d) + ' en ' + c + ', en el orden de paso de la jornada' + (sal ? '. Sale ' + sal : '') + '.');
           if (i > 0) P(r, 'Antes sale ' + l[i - 1].n + (l[i - 1].h ? ' (' + l[i - 1].h + ')' : '') + '.');
           if (i < l.length - 1) P(r, 'Después sale ' + l[i + 1].n + (l[i + 1].h ? ' (' + l[i + 1].h + ')' : '') + '.');
           A(r, enlacesHerm(h, true)); break;
@@ -411,7 +429,7 @@
           A(r, [['Ver el calendario', BASE + 'calendario/'], ['Ver la ficha', L.herm(h)]]); break;
         }
         case 'hora': case 'cuando': {
-          P(r, conPref(h) + ' sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.');
+          P(r, conPref(h) + V(h, ' sale ', ' salen ') + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.');
           if (!sal) P(r, 'La hora de salida aún no la tengo, y no me la voy a inventar.');
           else if (!h.h && h.r) P(r, 'La hora sale del itinerario de ' + (D.anio - 1) + '; cuando se publique el de ' + D.anio + ' se actualiza.');
           (h.x || []).forEach((x) => P(r, 'Además, ' + art(x[0]) + ' sale ' + (x[3] || 'una imagen') + (x[1] ? ' a las ' + x[1] : '') + (x[2] ? ' desde ' + conArt(x[2]) : '') + '.'));
@@ -419,12 +437,15 @@
           A(r, enlacesHerm(h, true)); break;
         }
         case 'sede': {
-          P(r, h.se ? 'La sede ' + cabecera(h, 'de') + ' es ' + conArt(h.se) + '. De allí sale ' + art(h.d) + (sal ? ' ' + sal : '') + '.' : 'No tengo apuntada la sede ' + cabecera(h, 'de') + '.');
+          P(r, h.se ? 'La sede ' + cabecera(h, 'de') + ' es ' + conArt(h.se) + '. De allí ' + V(h, 'sale ', 'salen ') + art(h.d) + (sal ? ' ' + sal : '') + '.' : 'No tengo apuntada la sede ' + cabecera(h, 'de') + '.');
           A(r, enlacesHerm(h, false)); break;
         }
         case 'autor': {
-          const sel = /\b(virgen|dolorosa|palio|maria|senora|ella)\b/.test(e.t) ? 'v' : /\b(cristo|senor|jesus|nazareno|crucificado|misterio|el)\b/.test(e.t) && /\b(cristo|senor|jesus|nazareno|crucificado|misterio)\b/.test(e.t) ? 'c' : null;
-          let ts = h.t.filter((t) => !sel || (sel === 'v') === RE_MARIANA.test(norm(t[0])));
+          const tSin = toks(e.t).filter((w) => !new Set(toks(h.n)).has(w)).join(' ');
+          const sel = /\b(virgen|dolorosa|palio|maria|senora|ella)\b/.test(tSin) ? 'v' : /\b(cristo|senor|jesus|nazareno|crucificado|misterio)\b/.test(tSin) ? 'c' : null;
+          const nomH = new Set(toks(h.n)), qT = new Set(toks(e.t).filter((w) => w.length > 3 && !nomH.has(w) && !STOP.has(w) && !CLAVE.has(w)));
+          const porNombre = h.t.map((t) => [t, toks(t[0]).filter((w) => qT.has(w) && !GENERICO.has(w)).length]).sort((a, b) => b[1] - a[1]);
+          let ts = porNombre.length && porNombre[0][1] >= 1 && (porNombre.length < 2 || porNombre[0][1] > porNombre[1][1]) ? [porNombre[0][0]] : h.t.filter((t) => !sel || (sel === 'v') === RE_MARIANA.test(norm(t[0])));
           if (!ts.length) ts = h.t;
           if (!ts.length) { P(r, 'No tengo apuntados los titulares ' + cabecera(h, 'de') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); break; }
           P(r, (ts.length === 1 ? 'La imagen ' : 'Las imágenes ') + cabecera(h, 'de') + ':');
@@ -469,28 +490,30 @@
           if (!R) { P(r, 'No tengo el itinerario ' + cabecera(h, 'de') + ', así que no sé decirte por dónde pasa.'); break; }
           const hits = buscarLugar(R.p, e.lugar || '', h), sinHora = hits.length ? [] : buscarLugar((R.c || []).map((l) => ['', l, 0, 0]), e.lugar || '', h);
           if (sinHora.length) {
-            P(r, 'Según el itinerario de ' + (CD.anio || '') + ', ' + nom(h) + ' pasa por ' + bonito(sinHora[0][1]) + ' (' + art(h.d) + '). La hora de ese punto no está publicada.');
+            P(r, 'Según el itinerario de ' + (CD.anio || '') + ', ' + nom(h) + V(h, ' pasa', ' pasan') + ' por ' + bonito(sinHora[0][1]) + ' (' + art(h.d) + '). La hora de ese punto no está publicada.');
           } else if (hits.length) {
-            P(r, 'Según el itinerario de ' + (CD.anio || '') + ', ' + nom(h) + ' pasa por ' + bonito(hits[0][1]) + ' ' + horaTxt(hits[0][0], hits[0][2]) + (hits.length > 1 ? ' y vuelve a pasar ' + hits.slice(1, 3).map((x) => horaTxt(x[0], x[2])).join(' y ') : '') + ' (' + art(h.d) + ').');
+            P(r, 'Según el itinerario de ' + (CD.anio || '') + ', ' + nom(h) + V(h, ' pasa', ' pasan') + ' por ' + bonito(hits[0][1]) + ' ' + horaTxt(hits[0][0], hits[0][2]) + (hits.length > 1 ? V(h, ' y vuelve a pasar ', ' y vuelven a pasar ') + hits.slice(1, 3).map((x) => horaTxt(x[0], x[2])).join(' y ') : '') + ' (' + art(h.d) + (R.k && R.k !== 'paso' ? ', hora del ' + R.k : '') + ').');
           } else {
             P(r, 'No veo «' + (e.lugar || 'ese sitio') + '» en el itinerario ' + cabecera(h, 'de') + '. Pasa por: ' + lista(resumirRuta(R.p).map((p) => bonito(p[1])).filter(Boolean).slice(0, 8)) + '.');
           }
           A(r, [['Verla en el mapa', L.calle(h.c, h.d)]]); break;
         }
         case 'carrera': {
-          if (h.hc) P(r, Cab(h) + ' llega a la carrera oficial' + (h.lc ? ' (' + bonito(h.lc) + ')' : '') + ' a las ' + h.hc + ', ' + art(h.d) + ', según el horario oficial de ' + (D.anio - 1) + '.');
-          else if (h.r && h.r[4]) P(r, cap1(nom(h)) + ' llega a ' + bonito(h.r[4]) + ' ' + horaTxt(h.r[5], h.r[6]) + ' (' + art(h.d) + ', itinerario ' + (D.anio - 1) + ').');
-          else if (h.r) P(r, 'En el itinerario ' + cabecera(h, 'de') + ' no tengo marcado el paso por carrera oficial. Sale ' + (sal || horaTxt(h.r[0], h.r[1])) + ' y se recoge ' + horaTxt(h.r[2], h.r[3]) + '.');
+          if (h.hc) P(r, Cab(h) + V(h, ' llega', ' llegan') + ' a la carrera oficial' + (h.lc ? ' (' + bonito(h.lc) + ')' : '') + ' a las ' + h.hc + ', ' + art(h.d) + ', según el horario oficial de ' + (D.anio - 1) + '.');
+          else if (h.r && h.r[4]) P(r, cap1(nom(h)) + V(h, ' llega', ' llegan') + ' a ' + bonito(h.r[4]) + ' ' + horaTxt(h.r[5], h.r[6]) + ' (' + art(h.d) + ', itinerario ' + (D.anio - 1) + ').');
+          else if (h.r) P(r, 'En el itinerario ' + cabecera(h, 'de') + ' no tengo marcado el paso por carrera oficial. Sale ' + (sal || horaTxt(h.r[0], h.r[1])) + V(h, ' y se recoge ', ' y se recogen ') + horaTxt(h.r[2], h.r[3]) + '.');
           else P(r, 'No tengo el itinerario ' + cabecera(h, 'de') + ', así que no sé a qué hora llega a la carrera oficial.');
+          // la estación de penitencia en la Catedral, si el itinerario la trae aparte de la carrera oficial (Málaga)
+          if (catedral && CD && CD.r[h.s]) { const pc = CD.r[h.s].p.find((x) => /catedral|s\.? ?i\.? ?c\.? ?b|estaci[oó]n de penitencia/i.test(x[1] || '')); if (pc && !(h.lc && /catedral/i.test(h.lc))) P(r, 'Y ' + V(h, 'pasa', 'pasan') + ' por ' + bonito(pc[1]) + ' ' + horaTxt(pc[0], pc[2]) + ' (itinerario ' + (CD.anio || '') + ').'); }
           A(r, enlacesHerm(h, true)); break;
         }
         case 'entrada': {
-          if (h.r) P(r, Cab(h) + ' se recoge ' + horaTxt(h.r[2], h.r[3]) + ', ' + art(h.d) + (minutos(h.r[2]) > 1440 ? ' (ya de madrugada)' : '') + '. Sale ' + (sal || horaTxt(h.r[0], h.r[1])) + '.');
+          if (h.r) P(r, Cab(h) + V(h, ' se recoge ', ' se recogen ') + horaTxt(h.r[2], h.r[3]) + ', ' + art(h.d) + (minutos(h.r[2]) > 1440 ? ' (ya de madrugada)' : '') + '. ' + V(h, 'Sale ', 'Salen ') + (sal || horaTxt(h.r[0], h.r[1])) + '.');
           else P(r, 'La hora de entrada ' + cabecera(h, 'de') + ' no la tengo. Sale ' + art(h.d) + (sal ? ' ' + sal : '') + '.');
           A(r, enlacesHerm(h, true)); break;
         }
         case 'cerca': {
-          if (D.mapa.indexOf(h.c) >= 0 && h.r) { P(r, Cab(h) + ' sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); P(r, 'En «En la calle» de ' + c + ' te marco dónde va a cada hora (es una estimación por el horario) y cómo llegar.'); A(r, [['Abrir el mapa', L.calle(h.c, h.d)], ['Ver la ficha', L.herm(h)]]); }
+          if (D.mapa.indexOf(h.c) >= 0 && h.r) { P(r, Cab(h) + V(h, ' sale ', ' salen ') + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); P(r, 'En «En la calle» de ' + c + ' te marco dónde va a cada hora (es una estimación por el horario) y cómo llegar.'); A(r, [['Abrir el mapa', L.calle(h.c, h.d)], ['Ver la ficha', L.herm(h)]]); }
           else { P(r, '' + cabecera(h, 'De') + ' no tengo el recorrido en el mapa. Sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); }
           break;
         }
@@ -519,7 +542,7 @@
           ctx.intent = 'info';
           // pregunta que no he entendido sobre una hermandad que sí conozco («¿por qué le llaman el Abuelo?»): respuesta floja
           if (e && e.intent == null && e.toks) { const x = IDX.find((i) => i.h.s === h.s), nom = new Set([...x.F, ...x.M, ...x.W]); if (e.toks.filter((t) => t.length > 3 && !STOP.has(t) && !GENERICO.has(t) && !nom.has(stem(t)) && t !== h.c).length >= 2) r.flojo = true; }
-          P(r, conPref(h) + ' sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ', desde ' + conArt(h.se) : '') + '.');
+          P(r, conPref(h) + V(h, ' sale ', ' salen ') + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ', desde ' + conArt(h.se) : '') + '.');
           if (h.t.length) P(r, 'Titulares: ' + lista(h.t.map((t) => t[0])) + '.');
           A(r, enlacesHerm(h, true).concat([h.w ? ['Su web', h.w] : null]));
         }
@@ -548,14 +571,16 @@
       const nombreH = new Set(toks(h ? h.n + ' ' + h.t.map((t) => t[0]).join(' ') : ''));
       const q = toks(lugar).filter((t) => t.length > 2 && !STOP.has(t) && !CLAVE.has(t) || t === 'campana' || t === 'catedral' || t === 'tribuna').filter((t) => !nombreH.has(t) || /^(campana|catedral|tribuna)$/.test(t)).map(stem);
       if (!q.length) return [];
+      const GEN_L = /^(plaza|pza|pl|calle|avenida|avda|paseo|puerta|ronda|carrera|oficial|templo|iglesia|parroquia)$/, qe = q.filter((t) => !GEN_L.test(t)), qq = qe.length ? qe : q, frase = q.join(' ');
       let best = 0; const res = [];
       p.forEach((x) => {
-        const lt = toks(x[1]).map(stem); let s = 0;
-        q.forEach((t) => { if (lt.indexOf(t) >= 0) s += 1; else if (t.length >= 5 && lt.some((w) => w.length >= 4 && distancia(t, w, 1) <= 1)) s += 0.8; });
+        const lt = toks(x[1]).map(stem); let s = lt.join(' ') === frase ? 0.5 : 0;
+        qq.forEach((t) => { if (lt.indexOf(t) >= 0) s += 1; else if (t.length >= 5 && lt.some((w) => w.length >= 4 && distancia(t, w, 1) <= 1)) s += 0.8; });
+        if (qe.length && q.length > qe.length) q.filter((t) => GEN_L.test(t)).forEach((t) => { if (lt.indexOf(t) >= 0) s += 0.1; });
         if (s > best) { best = s; res.length = 0; }
         if (s && s === best) res.push(x);
       });
-      return best >= Math.min(1, q.length * 0.5) ? res : [];
+      return best >= Math.min(1, qq.length * 0.6) ? res : [];
     }
     function respDia(dia, ciudad) {
       const r = Resp(), g = grupo(dia);
@@ -568,16 +593,17 @@
       ctx.dia = dia; if (ciudad) ctx.ciudad = ciudad; ctx.intent = 'lista'; ctx.herm = null;
       if (!lista_.length) { P(r, (ciudad ? 'En ' + nombreCiudad(ciudad) : 'Ese día') + ' no sale ninguna cofradía ' + art(dia) + ', que yo tenga apuntada.'); C(r, chipsDia(dia, ciudad)); return cerrar(r); }
       lista_.sort((a, b) => (a.h.c > b.h.c ? 1 : a.h.c < b.h.c ? -1 : 0) || (minutos(a.hora) || 9999) - (minutos(b.hora) || 9999) || (a.h.o || 0) - (b.h.o || 0));
-      const dd = ciudad ? diaEnCiudad(ciudad, dia) : dia;
-      P(r, cap1(art(dd)) + (ciudad ? ' en ' + nombreCiudad(ciudad) : '') + ' sale' + (lista_.length === 1 ? ' 1 cofradía' : 'n ' + lista_.length + ' cofradías') + (D.fechas[dd] ? ' (' + cuandoCae(dd, true).replace(/^el /, '').replace(' (y la noche', ', y la noche').replace(/\)$/, '') + ')' : '') + ':');
+      const dd = ciudad && dia !== 'Vísperas' ? diaEnCiudad(ciudad, dia) : dia;
+      P(r, cap1(art(dd)) + (ciudad ? ' en ' + nombreCiudad(ciudad) : '') + ' sale' + (lista_.length === 1 ? ' 1 cofradía' : 'n ' + lista_.length + ' cofradías') + (dd === 'Vísperas' && D.fechas['Sábado de Pasión'] ? ' (' + +D.fechas['Viernes de Dolores'].slice(8) + ' y ' + fechaLarga(D.fechas['Sábado de Pasión']) + ')' : D.fechas[dd] ? ' (' + cuandoCae(dd, true).replace(/^el /, '').replace(' (y la noche', ', y la noche').replace(/\)$/, '') + ')' : '') + ':');
       LI(r, lista_.slice(0, 40).map((x) => ({ x: x.h.n + (x.extra ? ' (' + x.extra + ')' : ''), href: L.herm(x.h), sub: (ciudad ? '' : nombreCiudad(x.h.c) + ' · ') + (x.hora ? (x.exacta ? '' : '≈ ') + x.hora : 'hora por confirmar') })));
       if (lista_.some((x) => x.hora)) P(r, 'Horas del último programa publicado (' + (D.anio - 1) + ').');
-      if (ciudad && D.mapa.indexOf(ciudad) >= 0) A(r, [['Verlas en el mapa', L.calle(ciudad, dia)]]);
+      if (ciudad && D.mapa.indexOf(ciudad) >= 0) A(r, [['Verlas en el mapa', L.calle(ciudad, dia === 'Vísperas' ? 'Viernes de Dolores' : dia)]]);
       C(r, chipsDia(dia, ciudad));
       return cerrar(r);
     }
     function chipsDia(dia, ciudad) {
       const i = CANON.indexOf(dia), sig = CANON[i + 1];
+      if (D.juegos && dia === jornadaDeFecha(hoyISO(0))) return ['¿Echamos una partida mientras esperas?', ciudad ? 'Noticias de ' + nombreCiudad(ciudad) : null, sig ? '¿Y ' + art(sig).replace(/^en las /, 'las ') + '?' : null];
       return [sig ? '¿Y ' + art(sig).replace(/^en las /, 'las ') + '?' : null, ciudad ? '¿Cuántas hermandades tiene ' + nombreCiudad(ciudad) + '?' : null, ciudad ? 'Noticias de ' + nombreCiudad(ciudad) : '¿Cuánto falta para la Semana Santa?'];
     }
     function preguntaCiudad(r, dia, intent) {
@@ -642,9 +668,9 @@
       const quando = hoy ? 'Hoy' : iso === hoyISO(1) ? 'Mañana' : 'El ' + fechaLarga(iso), donde = ciudad ? ' en ' + nombreCiudad(ciudad) : '';
       const l = actosDe([iso], ciudad), sal = l.filter((a) => a.sal), cul = l.filter((a) => !a.sal);
       if (!l.length && iso > agendaHasta()) {
-        const r2 = Resp(); P(r2, 'Para el ' + fechaLarga(iso) + ' todavía no tengo la agenda cerrada, cuñao: las salidas y los cultos los voy apuntando conforme se anuncian. Mira el calendario, que se va completando.');
+        const r2 = Resp(); P(r2, (hoy ? 'Para hoy' : 'Para el ' + fechaLarga(iso)) + ' todavía no tengo la agenda cerrada, cuñao: las salidas y los cultos los voy apuntando conforme se anuncian. Mira el calendario, que se va completando.');
         if (n > 0) P(r2, 'El Domingo de Ramos es el ' + fechaLarga(D.fechas['Domingo de Ramos']) + '.');
-        A(r2, [['Ver el calendario', BASE + 'calendario/']]); C(r2, ['¿Qué sale hoy?', '¿Cuánto falta para la Semana Santa?']); r2.flojo = true; return cerrar(r2);
+        A(r2, [['Ver el calendario', BASE + 'calendario/']]); C(r2, [hoy ? (D.juegos ? '¿Echamos una partida mientras esperas?' : null) : '¿Qué sale hoy?', '¿Cuánto falta para la Semana Santa?']); r2.flojo = true; return cerrar(r2);
       }
       ctx.intent = 'lista'; ctx.dia = null; if (ciudad) ctx.ciudad = ciudad;
       if (sal.length) { P(r, quando + donde + ' no es Semana Santa, pero hay ' + (sal.length === 1 ? 'una salida' : sal.length + ' salidas') + ', cuñao:'); LI(r, sal.slice(0, 8).map((a) => itemActo(a, false, ciudad))); }
@@ -657,7 +683,7 @@
       }
       if (n > 0) P(r, 'Para el Domingo de Ramos faltan ' + n + ' días: es el ' + fechaLarga(D.fechas['Domingo de Ramos']) + '.');
       A(r, [['Ver el calendario', BASE + 'calendario/']]);
-      C(r, [hoy ? '¿Y mañana?' : null, '¿Qué hay este fin de semana?', '¿Cuánto falta para la Semana Santa?']);
+      C(r, [hoy ? '¿Y mañana?' : null, sal.length && hoy && D.juegos ? '¿Echamos una partida mientras esperas?' : '¿Qué hay este fin de semana?', '¿Cuánto falta para la Semana Santa?']);
       return cerrar(r);
     }
     // «este fin de semana»: el sábado y el domingo que vienen (o este, si ya es fin de semana)
@@ -693,7 +719,8 @@
     // la más antigua de una capital, por el año de fundación que dan las fichas (solo las que traen año)
     function respAntigua(c) {
       const r = Resp(); ctx.ciudad = c; ctx.intent = 'antigua';
-      const l = H.filter((h) => h.c === c && /\b\d{4}\b/.test(h.f || '')).map((h) => ({ h, y: +/\b(\d{4})\b/.exec(h.f)[1] })).sort((a, b) => a.y - b.y);
+      // solo las fichas cuya fundación empieza por el año: «Siglo XVI (…reorganizada en 1921)» no se compara por 1921
+      const l = H.filter((h) => h.c === c && /^\s*\d{4}\b/.test(h.f || '')).map((h) => ({ h, y: +/^\s*(\d{4})\b/.exec(h.f)[1] })).sort((a, b) => a.y - b.y);
       if (!l.length) { P(r, 'De ' + nombreCiudad(c) + ' no tengo años de fundación con los que compararlas.'); return cerrar(r); }
       P(r, 'Por el año de fundación que dan sus fichas, la más antigua de ' + nombreCiudad(c) + ' es ' + nom(l[0].h) + ' (' + l[0].y + '). Las siguientes:');
       LI(r, l.slice(1, 5).map((x) => ({ x: x.h.n, href: L.herm(x.h), sub: String(x.y) })));
@@ -708,7 +735,7 @@
       ctx.imag = i; ctx.intent = 'imaginero';
       const cab = x[1] + (x[2] ? ' (' + x[2] + ')' : '') + (x[3] ? ', escuela ' + x[3] : '') + '.';
       if (x[4]) { P(r, cab); P(r, x[4]); }
-      P(r, (x[4] ? '' : cab + ' ') + 'En el portal tengo ' + obras.length + (obras.length === 1 ? ' obra suya' : ' obras suyas') + ' que procesionan' + (obras.length ? ':' : '.'));
+      P(r, (x[4] ? '' : cab + ' ') + 'En el portal tengo ' + obras.length + (obras.length === 1 ? ' obra suya que procesiona' : ' obras suyas que procesionan') + (obras.length ? ':' : '.'));
       if (obras.length) LI(r, obras.slice(0, 8).map((o) => ({ x: o.t[0], href: L.herm(o.h), sub: o.h.n + ' · ' + nombreCiudad(o.h.c) + (o.t[1] && /\d{4}/.test(o.t[1]) ? ' · ' + /\d{4}/.exec(o.t[1])[0] : '') })));
       if (obras.length > 8) P(r, 'Y ' + (obras.length - 8) + ' más en su ficha.');
       A(r, [['Ver su ficha', L.imag(x[0])]]);
@@ -894,21 +921,41 @@
     const TROZOS_FALTAN = (ks) => ks.filter((k) => !MD['m/' + k]);
     // trozos que pueden tener el título: la inicial de cada palabra de la pregunta (sin las de la propia pregunta)
     function trozosPregunta(e) {
-      const ws = tokM(e.rawA || e.raw || e.t).filter((t) => !CLAVE.has(t) && !STOP.has(t) || /^\d/.test(t));
-      return [...new Set(ws.map((w) => (/[a-z]/.test(w[0]) ? w[0] : '0')))].slice(0, 8);
+      const ws = tokM(e.rawA || e.raw || e.t).filter((t) => !/^(quien|que|cual|de|la|el|es|compuso|compusieron|compositor|autor|toca|tocan|banda)$/.test(t));
+      return [...new Set(ws.map((w) => (/[a-z]/.test(w[0]) ? w[0] : '0')))].slice(0, 12);
     }
+    // primero tal como lo ha escrito; si no sale, con las erratas ya corregidas («Soeldad» → «Soledad»)
     function buscarTitulo(e) {
+      const r = buscarTitulo1(e);
+      if (r.some((x) => x.exacto) || !e.rawA || e.rawA === e.t) return r;
+      const r2 = buscarTitulo1(Object.assign({}, e, { rawA: e.t }));
+      return r2.some((x) => x.exacto) || !r.length ? r2 : r;
+    }
+    function buscarTitulo1(e) {
       const qt = new Set(tokM(e.rawA || e.raw || e.t)), qs = ' ' + tokM(e.rawA || e.raw || e.t).join(' ') + ' ';
-      const sig = [...qt].filter((t) => !PAL_PREG.has(t) && !STOP.has(t) && !CLAVE.has(t) && !(e.ciudad && t === norm(nombreCiudad(e.ciudad))));
+      const deLaPregunta = (t) => { const c = corrige(t); return PAL_PREG.has(t) || STOP.has(t) || CLAVE.has(t) || PAL_PREG.has(c) || CLAVE.has(c) || STOP.has(c); };
+      const sig = [...qt].filter((t) => !deLaPregunta(t) && !(e.ciudad && t === norm(nombreCiudad(e.ciudad))));
       const res = [];
+      // lo que va tras «compuso», «la marcha» o «de quién es»: el título que se pide
+      const mq = /\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' ')), fraseQ = mq ? mq[1].split(' ').filter((w) => w.length > 2 && !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))) : [];
       for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
-        const tt = tokM(m[0].replace(/\(.*?\)/g, ' ')); if (!tt.length) continue;
+        const ttE = tokM(m[0]), ttS = tokM(m[0].replace(/\(.*?\)/g, ' ')), entero = ttE.length > ttS.length && qs.indexOf(' ' + ttE.join(' ') + ' ') >= 0;
+        const tt = entero ? ttE : ttS; if (!tt.length) continue;
         const dentro = qs.indexOf(' ' + tt.join(' ') + ' ') >= 0;
         const k_ = tt.filter((t) => qt.has(t)).length;
         if (!dentro && k_ < tt.length) continue;
         const cubre = sig.length ? sig.filter((t) => tt.indexOf(t) >= 0).length / sig.length : 1;
         if (cubre < 0.6) continue;
-        res.push({ m, p: (dentro ? 10 : 0) + tt.length + cubre, exacto: cubre === 1 && k_ === tt.length });
+        res.push({ m, p: (dentro ? 10 : 0) + tt.length + cubre, exacto: cubre === 1 && k_ === tt.length && (!fraseQ.length || fraseQ.every((w) => tt.indexOf(w) >= 0)) });
+      }
+      // con una errata en el título («Soeldad de San Jerónimo»): el título más parecido a lo que va tras «marcha» o «compuso», a una o dos letras
+      if (!res.length) {
+        const m0 = /\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' '));
+        const frase = m0 ? m0[1].split(' ').filter((w) => !deLaPregunta(w) || w.length > 3).join(' ') : '';
+        if (frase.length >= 6) {
+          const max = Math.max(1, Math.min(2, Math.floor(frase.length / 8)));
+          for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) { const tt = tokM(m[0].replace(/\(.*?\)/g, ' ')).join(' '); if (Math.abs(tt.length - frase.length) <= max) { const d = distancia(tt, frase, max); if (d <= max) res.push({ m, p: 10 - d, exacto: d === 0 }); } }
+        }
       }
       res.sort((a, b) => b.p - a.p);
       const top = res.length ? res[0].p : 0;
@@ -921,12 +968,13 @@
       const r = Resp(); ctx.intent = 'compositor';
       if (l.length === 1) {
         const m = l[0].m, a = autorDe(m);
+        if (!l[0].exacto) P(r, 'Con ese título exacto no la tengo, cuñao. La más parecida:');
         P(r, '«' + m[0] + '» es de ' + (a || 'autor desconocido en mis datos') + (m[2] ? ', de ' + m[2] : '') + (formDe(m) ? ', para ' + formDe(m) : '') + '.' + (dedicadaTxt(m) ? ' Está ' + dedicadaTxt(m) + '.' : ''));
         const au = MD['m/autores'][m[1]];
         A(r, [['Ver la marcha', L.marcha(m[5])], au && au[1] ? ['Más de ' + au[0], L.compositor(au[1])] : null]);
         return cerrar(r);
       }
-      P(r, 'Tengo ' + l.length + ' marchas que se llaman así:');
+      P(r, l.some((x) => x.exacto) ? 'Tengo ' + l.length + ' marchas que se llaman así:' : 'Con ese título exacto no la tengo, cuñao. Las más parecidas:');
       LI(r, l.slice(0, 8).map((x) => ({ x: '«' + x.m[0] + '»', href: L.marcha(x.m[5]), sub: [autorDe(x.m), x.m[2], formDe(x.m)].filter(Boolean).join(' · ') })));
       if (l.length > 8) P(r, 'Y ' + (l.length - 8) + ' más en el buscador de marchas.');
       A(r, [['Buscar en Marchas', L.marchas()]]);
@@ -1003,7 +1051,10 @@
     const SUGS_INICIO = ['¿Qué sale hoy?', '¿A qué hora sale la Macarena de Sevilla?', 'Jueves Santo en Málaga', '¿Cuánto falta para la Semana Santa?'];
 
     // ================= decisión =================
+    // en la ficha de una hermandad, la conversación empieza hablando de ella («¿qué banda lleva?»)
+    let paginaVista = false;
     function responder(raw) {
+      if (!paginaVista) { paginaVista = true; const hp = op.paginaHerm && POR_SLUG.get(op.paginaHerm()); if (hp && !ctx.herm) { ctx.herm = hp.s; ctx.ciudad = hp.c; } }
       raw = Array.from(String(raw || '')).filter((ch) => !(ch.length === 1 && ch.charCodeAt(0) >= 0xd800 && ch.charCodeAt(0) <= 0xdfff)).join('').trim();
       // botones de desambiguación
       let m;
@@ -1031,10 +1082,14 @@
       switch (intent) {
         case 'hola': P(r0, azar(HOLA)); C(r0, SUGS_INICIO.slice(0, 3)); return cerrar(r0);
         case 'gracias': P(r0, azar(GRACIAS)); return cerrar(r0);
+        case 'juegos': if (!D.juegos) break;
+          P(r0, azar(['¿Echamos una partida mientras esperas? Que la bulla tiene sus tiempos muertos y yo no.', 'Venga, una partidita. Todo sale de las fichas de la web, así que si fallas, aprendes.', 'Aquí se viene a aprender jugando, cuñao. Elige.']));
+          A(r0, [['El reto de hoy', BASE + 'juegos/#j=reto'], ['El Trivial de las Ocho', BASE + 'juegos/#j=trivial'], ['¿Qué hermandad es?', BASE + 'juegos/#j=adivina'], ['Todos los juegos', BASE + 'juegos/']]);
+          return cerrar(r0);
         case 'quien': P(r0, 'Soy erCuñao: el que sabe dónde va cada cofradía, a qué hora sale, quién talló sus imágenes y qué banda lleva detrás. No soy una inteligencia artificial: contesto con los datos del portal, y si algo no lo sé, te lo digo.'); C(r0, SUGS_INICIO.slice(0, 3)); return cerrar(r0);
         case 'ayuda':
           P(r0, 'Pregúntame cosas como:');
-          LI(r0, ['¿Qué sale hoy en Sevilla? / ¿Y el martes?', '¿A qué hora sale la Esperanza de Triana?', '¿Por dónde pasa el Cautivo de Málaga?', '¿Cuándo pasa la Macarena por la Campana?', '¿Quién talló el Cristo del Cachorro?', '¿Qué banda lleva la Paloma?', '¿Quién es Juan de Mesa?', '¿Cuántas hermandades tiene Jaén?', '¿Cuánto falta para la Semana Santa?', 'Noticias de Granada'].map((x) => ({ x })));
+          LI(r0, ['¿Qué sale hoy en Sevilla? / ¿Y el martes?', '¿A qué hora sale la Esperanza de Triana?', '¿Por dónde pasa el Cautivo de Málaga?', '¿Cuándo pasa la Macarena por la Campana?', '¿Quién talló el Cristo del Cachorro?', '¿Qué banda lleva la Paloma?', '¿Quién es Juan de Mesa?', '¿Cuántas hermandades tiene Jaén?', '¿Cuánto falta para la Semana Santa?', 'Noticias de Granada', D.juegos ? '¿Echamos una partida?' : null].filter(Boolean).map((x) => ({ x })));
           C(r0, ['¿Qué sale hoy?', 'Noticias de Sevilla']); return cerrar(r0);
         case 'sugerencia':
           ctx.modo = 'sugerencia';
@@ -1054,7 +1109,7 @@
 
       if (intent === 'falta' && e.toks.every((t) => /^\d{4}$/.test(t))) return respFalta(e);
       // imaginero con nombre y apellidos antes que las palabras sueltas de los titulares («¿De dónde era Antonio León Ortega?»)
-      if (intent !== 'autor') {
+      if (intent !== 'autor' && intent !== 'pasapor') {
         const im = I.map((x, i) => [i, norm(x[1])]).filter((x) => x[1].indexOf(' ') > 0 && new RegExp('(^| )' + x[1] + '( |$)').test(e.t)).sort((a, b) => b[1].length - a[1].length)[0];
         if (im) return respImag(im[0]);
       }
@@ -1066,11 +1121,18 @@
         const r = Resp(); P(r, '¿De qué capital?'); ctx.intent = 'antigua'; return preguntaCiudad(r, null, 'antigua');
       }
       // hermandad
-      const bh = buscarHerm(e);
+      let bh = buscarHerm(e);
+      // con «pasa por…», la hermandad se busca antes del lugar: el lugar puede llevar el nombre de otra («J. del Gran Poder», «Puerta del Perdón»)
+      if (intent === 'pasapor' && e.lugar && e.antesLugar) {
+        const ta = new Set(e.antesLugar.split(' ')), b2 = buscarHerm(Object.assign({}, e, { t: e.antesLugar, tSinDia: null, toks: e.toks.filter((t) => ta.has(t)) }));
+        if (b2.elegida || b2.dudas) bh = b2;
+      }
       // si el nombre que casa ya lleva una palabra de intención («El Vía Crucis», «La Cena»), la intención sale del resto de la pregunta
-      if (bh.elegida && bh.elegida.frase && intencion(bh.elegida.frase)) intent = intencion((' ' + e.t + ' ').replace(' ' + bh.elegida.frase + ' ', ' ').trim());
+      // «el Traslado de Córdoba»: la palabra de agenda es el nombre de la hermandad, no una pregunta por su agenda
+      if (intent === 'agenda' && bh.elegida && !bh.elegida.frase) { const nt = new Set(toks(bh.elegida.h.n)); const resto = e.t.split(' ').filter((w) => !nt.has(w)).join(' '); if (intencion(resto) !== 'agenda') intent = intencion(resto); }
+      if (bh.elegida && bh.elegida.frase && intencion(bh.elegida.frase) && intent !== 'pasapor') { intent = intencion((' ' + e.t + ' ').replace(' ' + bh.elegida.frase + ' ', ' ').trim()); if (intent === 'pasapor' && !e.lugar) e.lugar = e.lugarC; }
       // «pasa por X»: si la hermandad solo sale de las palabras del lugar, es una búsqueda de lugar
-      if (intent === 'pasapor' && e.lugar && /\b(carrera|catedral|tribuna|estacion de penitencia)\b/.test(e.lugar)) { intent = 'carrera'; e.lugar = null; }
+      if (intent === 'pasapor' && e.lugar && /\b(carrera|tribuna)\b/.test(e.lugar) && !/\b(catedral|sicb|s i c b)\b/.test(e.lugar)) { intent = 'carrera'; e.lugar = null; }
       // «¿cuándo pasa la Macarena por la Campana?»: con varias Macarenas, manda la que tiene esa calle en su itinerario
       if (intent === 'pasapor' && bh.dudas && e.lugar) {
         const cs = [...new Set(bh.dudas.map((d) => d.h.c))].filter((c) => !tengoCiudad(c));
@@ -1092,6 +1154,8 @@
       // repertorio de una banda («¿qué marchas de cornetas toca Tres Caídas?»)
       if (intent === 'repertorio' || (intent === 'marchas' && /\b(toca|tocan|tocaba|interpreta\w*)\b/.test(e.t))) {
         const bb = buscarEn(BIX, e, 3);
+        const soloNombre = bb.length && bh.elegida && bh.elegida.frase && !/\b(banda|agrupacion|cornetas|tambores|capilla|filarmonica|musica de)\b/.test(e.t);
+        if (soloNombre) return respHerm(bh.elegida.h, 'marchas', e);
         if (bb.length) return respRepertorio(bb[0].i, e);
         if (ctx.banda != null && !bh.elegida && !e.toks.filter((t) => t.length > 2).length) return respRepertorio(ctx.banda, e);
         if (intent === 'repertorio' && !bh.elegida && (e.ciudad || e.dia) && !/\b(banda|agrupacion|capilla|filarmonica)\b/.test(e.t)) return respMusica(e.ciudad || ctx.ciudad, e.dia);
@@ -1121,10 +1185,10 @@
         const au = buscarAutor(e);
         if (intent === 'compositor' || !au.length) {
           if (falta.length) return necesitaVarios(falta.map((k) => 'm/' + k));
-          const t = buscarTitulo(e).filter((x) => tokM(x.m[0]).some((w) => !PAL_PREG.has(w) && !STOP.has(w)));
+          const t = buscarTitulo(e).filter((x) => /«|"/.test(e.raw || '') || tokM(x.m[0]).some((w) => !PAL_PREG.has(w) && !STOP.has(w)));
           if (t.length) return respMarchaTitulo(t);
         }
-        if (au.length) {
+        if (au.length && !(intent === 'compositor' && /\b(compuso|compusieron|de quien es|autor de|quien escribio)\b/.test(e.t))) {
           const f2 = TROZOS_FALTAN(MD['m/autores'][au[0].i][2].split(''));
           if (f2.length) return necesitaVarios(f2.map((k) => 'm/' + k));
           return respMarchasAutor(au[0].i, e);
@@ -1239,153 +1303,6 @@
 
   // ================= Node (pruebas) =================
   if (typeof module === 'object' && module && module.exports) { module.exports = { crearMotor, norm }; }
-  if (typeof document === 'undefined') return;
-
-  // ================= interfaz =================
-  const btn = document.querySelector('[data-cunao]'), hoja = document.querySelector('[data-cunao-hoja]');
-  if (!btn || !hoja) return;
-  const BASE = window.OC_BASE || '/';
-  const chat = hoja.querySelector('[data-cunao-chat]'), form = hoja.querySelector('[data-cunao-form]'), q = hoja.querySelector('[data-cunao-q]');
-  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches, tactil = matchMedia('(pointer: coarse)').matches;
-  let motor = null, cargando = null, ultimoFoco = null;
-  // El botón se esconde al bajar y vuelve al subir, para no tapar el texto.
-  let ultimoY = window.scrollY;
-  addEventListener('scroll', () => {
-    const y = window.scrollY, d = y - ultimoY;
-    if (Math.abs(d) < 8) return;
-    btn.classList.toggle('is-oculto', d > 0 && y > 120 && hoja.hidden);
-    ultimoY = y;
-  }, { passive: true });
-  const url = hoja.getAttribute('data-datos');
-  chat.setAttribute('role', 'log'); chat.setAttribute('aria-live', 'polite'); chat.setAttribute('aria-relevant', 'additions'); chat.setAttribute('tabindex', '-1');
-  const preferida = () => { try { return localStorage.getItem('oc-city') || null; } catch (e) { return null; } };
-  // la capital de la página que se está viendo (su Semana Santa, su plano o una de sus hermandades) desempata antes que la preferida
-  function paginaCiudad(j) {
-    const p = location.pathname.slice(BASE.length - 1), caps = (j.capitales || []).map((c) => c[0]);
-    const m = /^\/(?:semana-santa|en-la-calle)\/([a-z]+)\//.exec(p); if (m && caps.indexOf(m[1]) >= 0) return m[1];
-    const h = /^\/hermandad\/([^/]+)\//.exec(p); if (h) { const c = caps.find((x) => h[1].endsWith('-' + x)); if (c) return c; }
-    return null;
-  }
-
-  function burbuja(quien, nodo) {
-    const b = document.createElement('div'); b.className = 'oc-cunao-msg is-' + quien;
-    if (typeof nodo === 'string') { const p = document.createElement('p'); p.textContent = nodo; b.appendChild(p); } else b.appendChild(nodo);
-    chat.appendChild(b); chat.scrollTop = chat.scrollHeight;
-    if (!calm) b.animate([{ opacity: 0, transform: 'translateY(8px) scale(.98)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'cubic-bezier(.23,1,.32,1)' });
-    return b;
-  }
-  function el(tag, cls, txt) { const x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; }
-  function enlace(t, href, cls) { const a = el('a', cls, t); a.href = href; if (/^https?:/.test(href) && href.indexOf(location.host) < 0) { a.target = '_blank'; a.rel = 'noopener'; } return a; }
-  function chips(l) {
-    const d = el('div', 'oc-cunao-chips'); d.setAttribute('role', 'group'); d.setAttribute('aria-label', 'Sugerencias');
-    l.forEach((x) => { const b = el('button', null, x[0]); b.type = 'button'; b.addEventListener('click', () => { d.querySelectorAll('button').forEach((y) => { y.disabled = true; }); preguntar(x[1], x[0]); }); d.appendChild(b); });
-    return d;
-  }
-  function pintar(r) {
-    const f = document.createElement('div');
-    r.partes.forEach((p) => {
-      if (p.t === 'p') f.appendChild(el('p', null, p.x));
-      else if (p.t === 'lista') {
-        const ul = el('ul', 'oc-cunao-lista');
-        p.items.forEach((i) => { const li = el('li'); li.appendChild(i.href ? enlace(i.x, i.href) : el('b', null, i.x)); if (i.sub) li.appendChild(el('span', null, i.sub)); ul.appendChild(li); });
-        f.appendChild(ul);
-      } else if (p.t === 'acc') { const d = el('div', 'oc-cunao-acc'); p.l.forEach((x) => d.appendChild(enlace(x[0], x[1], 'oc-cunao-link'))); f.appendChild(d); }
-    });
-    if (r.chips.length) f.appendChild(chips(r.chips));
-    return f;
-  }
-  function enviarSugerencia(a) {
-    // todo lo que se sugiere llega al correo del portal: se abre el formulario de Colabora con el texto ya puesto
-    const b = burbuja('cunao', '');
-    const f = document.createElement('div'); f.appendChild(el('p', null, 'Apuntado, cuñao. Envíala desde aquí y la revisamos con su fuente:'));
-    const q = new URLSearchParams({ texto: a.texto, pagina: location.pathname }); if (a.hermandad) q.set('nombre', a.hermandad);
-    const d = el('div', 'oc-cunao-acc'); d.appendChild(enlace('Enviar la sugerencia', BASE + 'colabora/?' + q, 'oc-cunao-link')); f.appendChild(d);
-    b.textContent = ''; b.appendChild(f);
-  }
-  function cargar() {
-    if (motor) return Promise.resolve();
-    if (!cargando) cargando = fetch(url).then((r) => { if (!r.ok) throw 0; return r.json(); }).then((j) => { motor = crearMotor(j, { base: BASE, preferida, pagina: () => paginaCiudad(j) }); }).catch((e) => { cargando = null; throw e; });
-    return cargando;
-  }
-  // trozos a demanda: una capital (cunao/sevilla.json) o una parte del catálogo de marchas (cunao/m/a.json)
-  const pedidos = {};
-  const version = (url.match(/\?.*$/) || [''])[0];
-  const datosCiudad = (c) => pedidos[c] || (pedidos[c] = fetch(url.replace(/cunao\.json.*$/, 'cunao/' + c + '.json' + version)).then((r) => { if (!r.ok) throw 0; return r.json(); }).then((j) => motor.cargarDatos(c, j)).catch((e) => { delete pedidos[c]; throw e; }));
-  function pensando() { const b = burbuja('cunao', '…'); b.classList.add('is-pensando'); b.setAttribute('aria-hidden', 'true'); return b; }
-  function preguntar(valor, etiqueta) {
-    if (!valor || !String(valor).trim()) return;
-    burbuja('yo', (etiqueta || valor).trim());
-    const p = pensando();
-    const fin = (nodo) => { p.remove(); if (nodo) burbuja('cunao', nodo); if (!tactil) q.focus(); };
-    const vuelta = (n) => {
-      let r = motor.responder(valor);
-      if (r.necesita && n < 4) return Promise.all(r.necesita.map(datosCiudad)).then(() => vuelta(n + 1));
-      if (r.necesita) return fin('No he podido traer esos datos. ¿Tienes conexión?');
-      if (r.accion && r.accion.tipo === 'sugerencia') { fin(null); return enviarSugerencia(r.accion); }
-      setTimeout(() => fin(pintar(r)), calm ? 0 : 240);
-    };
-    cargar().then(() => vuelta(0)).catch(() => fin('Ahora mismo no me llegan los datos, cuñao. Prueba en un momento.'));
-  }
-
-  // ---------- abrir y cerrar (hoja inferior, nace del botón) ----------
-  function abrir() {
-    ultimoFoco = document.activeElement;
-    hoja.hidden = false; btn.setAttribute('aria-expanded', 'true');
-    requestAnimationFrame(() => hoja.classList.add('is-open'));
-    document.body.style.overflow = 'hidden';
-    cargar().catch(() => {});
-    if (!chat.childNodes.length) {
-      const f = document.createElement('div');
-      f.appendChild(el('p', null, '¿Qué pasa, cuñao? Pregúntame qué sale, a qué hora, por dónde pasa, quién talló una imagen o qué banda lleva. Si no lo sé, te lo digo.'));
-      f.appendChild(chips(['¿Qué sale hoy?', '¿A qué hora sale la Macarena de Sevilla?', 'Jueves Santo en Málaga', 'Quiero avisar de un error'].map((x) => [x, x])));
-      burbuja('cunao', f);
-    }
-    setTimeout(() => q.focus(), calm ? 0 : 280);
-  }
-  function cerrar() {
-    hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-    setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
-    (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();
-  }
-  btn.addEventListener('click', abrir);
-  hoja.querySelector('[data-cunao-cerrar]').addEventListener('click', cerrar);
-  hoja.addEventListener('click', (e) => { if (e.target === hoja) cerrar(); });
-  hoja.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { e.stopPropagation(); cerrar(); return; }
-    if (e.key !== 'Tab') return;
-    // el foco no se escapa del diálogo mientras está abierto
-    const f = [...hoja.querySelectorAll('a[href], button:not([disabled]), input')].filter((x) => x.offsetParent !== null);
-    if (!f.length) return;
-    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
-    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
-  });
-  form.addEventListener('submit', (e) => { e.preventDefault(); const t = q.value; q.value = ''; preguntar(t); });
-  // En el plano «En la calle» el botón se aparta: sube lo justo para no tapar el crédito de OpenStreetMap (obligatorio por la
-  // licencia) ni los controles del plano; si no hay hueco, se esconde hasta que lo haya. Usa «translate», que no pisa sus transform.
-  const plano = document.querySelector('.oc-calle-mapa');
-  if (plano) {
-    let pend = false, sube = 0;
-    if (!calm) btn.style.transition = 'transform 160ms cubic-bezier(.23,1,.32,1), translate 160ms cubic-bezier(.23,1,.32,1), opacity 160ms';
-    const choca = (a, b) => a.left < b.right + 4 && a.right > b.left - 4 && a.top < b.bottom + 4 && a.bottom > b.top - 4;
-    const aparta = () => {
-      pend = false;
-      const r0 = btn.getBoundingClientRect(), base = { left: r0.left, right: r0.right, top: r0.top + sube, bottom: r0.bottom + sube };
-      const obs = [...document.querySelectorAll('.oc-calle-osm a, .oc-calle-osm')].concat([...plano.querySelectorAll('button, a[href], input, select, [role="slider"]')])
-        .map((x) => x.getBoundingClientRect()).filter((q) => q.width && q.height && q.bottom > 0 && q.top < innerHeight);
-      let s = 0;
-      while (s <= 240 && obs.some((q) => choca({ left: base.left, right: base.right, top: base.top - s, bottom: base.bottom - s }, q))) s += 4;
-      const hueco = s <= 240; sube = hueco ? s : 0;
-      btn.style.translate = sube ? '0 ' + -sube + 'px' : '';
-      btn.style.opacity = hueco ? '' : '0'; btn.style.pointerEvents = hueco ? '' : 'none';
-    };
-    const pide = () => { if (!pend) { pend = true; requestAnimationFrame(aparta); } };
-    addEventListener('scroll', pide, { passive: true }); addEventListener('resize', pide); addEventListener('pointerup', pide, { passive: true });
-    addEventListener('load', pide); pide();
-  }
-  // el bocadillo del botón se presenta una vez por sesión y se retira solo
-  try { if (!sessionStorage.getItem('oc-cunao')) { btn.classList.add('is-saludo'); sessionStorage.setItem('oc-cunao', '1'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); } } catch (e) { }
-  // en cuanto se baja o se toca la página, el bocadillo se retira: no tapa el texto de la primera pantalla
-  const retira = () => { btn.classList.remove('is-saludo'); removeEventListener('scroll', alBajar); };
-  const alBajar = () => { if (scrollY > 40) retira(); };
-  addEventListener('scroll', alBajar, { passive: true }); addEventListener('pointerdown', (e) => { if (!btn.contains(e.target)) retira(); }, { once: true, passive: true });
+  // en el navegador, la interfaz (cunao-ui.js) lo pide al abrir la hoja
+  if (typeof window !== 'undefined') { window.OC_CUNAO_MOTOR = { crearMotor }; try { window.dispatchEvent(new Event('oc-cunao-motor')); } catch (e) { } }
 })(this);
