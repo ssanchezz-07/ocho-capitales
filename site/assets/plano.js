@@ -119,6 +119,7 @@
     function aplicar(centro) {
       var cy = vb.y + vb.h / 2; vb.h = vb.w * H() / W(); if (centro) vb.y = cy - vb.h / 2;
       if (!libre()) { var c = limitar(vb); vb.x = c.x; vb.y = c.y; vb.w = c.w; vb.h = vb.w * H() / W(); }
+      if (lejanas) pista();
       var v = vb.x.toFixed(1) + ' ' + vb.y.toFixed(1) + ' ' + vb.w.toFixed(1) + ' ' + vb.h.toFixed(1); base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); Z = vb.w / W(); colocar();
     }
     api.vista = function () { return { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; };
@@ -227,8 +228,25 @@
       // (tools/plano/afueras.mjs) y la cámara no se sale de él; las que quedan juntas se agrupan con su número
       var xs = simbolos.map(function (s) { return s.x; }), ys = simbolos.map(function (s) { return s.y; });
       cajaSedes = { w: Math.max.apply(null, xs) - Math.min.apply(null, xs), h: Math.max.apply(null, ys) - Math.min.apply(null, ys), m: m };
-      var cj = api.caja(xs, ys, m); if (soloCaja) return cj; api.volar(cj, ms);
+      // Si las sedes ocupan más de 8 km (Córdoba, por Alcolea y El Higuerón), el centro se quedaba en números; se encuadra el
+      // núcleo (Pablo, 8-nov: «que se vea en el centro Córdoba») y una pista discreta enseña las demás. Alejando se llega a ellas.
+      lejanas = []; var sel2 = simbolos;
+      if (Math.max(cajaSedes.w, cajaSedes.h) > 8000 && !todas) {
+        var med = function (v) { v = v.slice().sort(function (a, b) { return a - b; }); return v[Math.floor(v.length / 2)]; };
+        var cx = med(xs), cy = med(ys), ds = simbolos.map(function (s) { return Math.hypot(s.x - cx, s.y - cy); }), l2 = Math.max(800, 2.5 * med(ds));
+        sel2 = simbolos.filter(function (s, i) { return ds[i] <= l2; }); lejanas = simbolos.filter(function (s, i) { return ds[i] > l2; });
+      }
+      todas = false;
+      var cj = api.caja(sel2.map(function (s) { return s.x; }), sel2.map(function (s) { return s.y; }), m); if (soloCaja) return cj; api.volar(cj, ms);
     };
+    // la pista: «+N más lejos», arriba a la izquierda; al tocarla, todas las sedes a la vista
+    var lejanas = [], todas = false, mas = document.createElement('button'); mas.type = 'button'; mas.className = 'oc-pl-mas'; mas.hidden = true; host.appendChild(mas);
+    mas.addEventListener('click', function () { todas = true; api.encuadrarSedes(calm ? 0 : 520, cajaSedes.m); });
+    function pista() {
+      if (!lejanas.length || gS.style.display === 'none') { mas.hidden = true; return; }
+      var n = 0, vistas = {}; lejanas.forEach(function (s) { if ((s.x < vb.x || s.x > vb.x + vb.w || s.y < vb.y || s.y > vb.y + vb.h) && !vistas[s.h.s]) { vistas[s.h.s] = 1; n++; } });
+      mas.hidden = !n; if (n) { var t = '+' + n + ' más lejos'; if (mas.textContent !== t) { mas.textContent = t; mas.setAttribute('aria-label', 'Ver también ' + (n === 1 ? 'la sede más alejada' : 'las ' + n + ' sedes más alejadas')); } }
+    }
     api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, maxAncho())), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
     function colocarSedes() {
       if (!simbolos.length) return;
