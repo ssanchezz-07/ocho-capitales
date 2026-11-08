@@ -34,7 +34,10 @@
   "Granpoder.jpg": "misericordia-malaga (virgen): Palio de lejos entre la candelería: no se distingue la cara de la Virgen (auditor, 3-nov).",
   "Virgen_de_los_Dolores,_Cádiz.jpg": "La imagen original de los Servitas en una hornacina exterior de San Lorenzo: no es la titular que procesiona ni la Virgen de los Dolores del Descendimiento (antes retirada solo en servitas-cadiz|virgen y el-descendimiento-cadiz|virgen).",
   "Paso_del_Cristo_de_Medinaceli_de_Cádiz.jpg": "De noche: no se distingue la cara; original de 720 px (antes retirada solo en medinaceli-cadiz|cristo).",
-  "Cristo_de_la_Expiración.JPG": "Es la foto del cartel de la Semana Santa de 2009: el diseño del cartel puede no ser del autor que la subió (antes retirada solo en la-expiracion-cadiz|cristo y |ficha)."
+  "Cristo_de_la_Expiración.JPG": "Es la foto del cartel de la Semana Santa de 2009: el diseño del cartel puede no ser del autor que la subió (antes retirada solo en la-expiracion-cadiz|cristo y |ficha).",
+  "La_Virgen_de_los_Dolores_vestida_para_el_Miércoles_Santo.jpg": "Foto de Luis Manuel Gómez Pozo («Luisma»), que el 5-nov-2026 dijo que no quiere colaborar con fotos en una web: aunque su licencia lo permita, no se publica (Pablo, por coordinación, 8-nov: «sustitúyela sí o sí»).",
+  "María_Santísima_de_Dolores_y_Esperanza.jpg": "Foto de Luis Manuel Gómez Pozo («Luisma»), que el 5-nov-2026 dijo que no quiere colaborar con fotos en una web: aunque su licencia lo permita, no se publica (Pablo, por coordinación, 8-nov: «sustitúyela sí o sí»).",
+  "Humildad_malaga.png": "Original de 334 px: no da la calidad (antes retirada solo en humildad-malaga|cristo)."
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -236,10 +239,6 @@
   "el-santo-entierro-huelva|cristo": {
    "archivo": "CristoYacenteHuelva.jpg",
    "motivo": "Original de 422 px: no da la calidad."
-  },
-  "humildad-malaga|cristo": {
-   "archivo": "Humildad_malaga.png",
-   "motivo": "Original de 334 px: no da la calidad."
   },
   "la-piedad-cordoba|virgen": {
    "archivo": "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",

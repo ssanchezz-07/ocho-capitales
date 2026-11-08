@@ -428,32 +428,26 @@
   },
   "salud-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:El_Cristo_de_la_Esperanza_en_su_Gran_Amor_(Salud)_por_el_pasillo_de_Santa_Isabel_(4470948129).jpg",
-    "titulo": "File:El Cristo de la Esperanza en su Gran Amor (Salud) por el pasillo de Santa Isabel (4470948129).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/salud-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Esperanza en su Gran Amor",
     "titular": "Santísimo Cristo de la Esperanza en su Gran Amor",
-    "recorte": [
-     0.55,
-     0.02,
-     0.3,
-     0.55
-    ]
+    "foco": "50% 30%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DQPvAxEgP-T/ (imagen 3: Cristo de la Esperanza en su Gran Amor (octubre de 2025)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Salud_-_Maria_Santisima_de_la_Salud.jpg",
-    "titulo": "File:Salud - Maria Santisima de la Salud.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/salud-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Salud",
     "titular": "María Santísima de la Salud",
-    "recorte": [
-     0.36,
-     0.12,
-     0.2,
-     0.4
-    ]
+    "foco": "50% 55%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Dbdux2nAFk4/ (imagen 2: María Santísima de la Salud en su salida procesional (Domingo de Ramos de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "humildad-y-paciencia-malaga": {
@@ -466,12 +460,15 @@
     "titular": "Santísimo Cristo de la Humildad y Paciencia"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Dolores_y_Esperanza.jpg",
-    "titulo": "File:María Santísima de Dolores y Esperanza.jpg",
-    "autor": "Luis Manuel Gómez Pozo. @lmgomezpozo Hermandad de Humildad y Paciencia de Málaga. @hdadypaciencia",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "titular": "María Santísima de Dolores y Esperanza"
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/humildad-y-paciencia-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Dolores y Esperanza",
+    "titular": "María Santísima de Dolores y Esperanza",
+    "foco": "50% 60%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DXpxSmCjKhX/ (imagen 5: reportaje de la Hermandad de Humildad y Paciencia (Domingo de Ramos de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "huerto-malaga": {
@@ -636,12 +633,15 @@
   },
   "sentencia-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Sentencia_-_Trono.jpg",
-    "titulo": "File:Sentencia - Trono.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús de la Sentencia"
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/sentencia-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Sentencia",
+    "titular": "Nuestro Padre Jesús de la Sentencia",
+    "foco": "50% 35%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DRe8Fh1jMpr/ (imagen 4: Señor de la Sentencia (abril de 2021)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg",
@@ -706,19 +706,15 @@
     "foco": "50% 46%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_la_Paloma.jpg",
-    "titulo": "File:Paloma Trono de la Paloma.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/paloma-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Paloma",
     "titular": "María Santísima de la Paloma",
-    "recorte": [
-     0.4822,
-     0.2658,
-     0.2,
-     0.4
-    ],
-    "foco": "50% 6%"
+    "foco": "50% 45%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Db-YG8ajmi8/ (imagen 18: María Santísima de la Paloma para sus cultos (agosto de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "el-rico-malaga": {
@@ -766,13 +762,15 @@
   },
   "expiracion-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_los_Dolores_vestida_para_el_Mi%C3%A9rcoles_Santo.jpg",
-    "titulo": "File:La Virgen de los Dolores vestida para el Miércoles Santo.jpg",
-    "autor": "Luis Manuel Gómez Pozo",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/expiracion-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Dolores Coronada",
     "titular": "María Santísima de los Dolores Coronada",
-    "foco": "50% 25%"
+    "foco": "50% 38%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DXNLGwAjkoi/ (imagen 5: Nuestra Señora de los Dolores Coronada en su trono procesional). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg",
@@ -790,14 +788,27 @@
    }
   },
   "zamarrilla-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_los_Milagros_y_Mar%C3%ADa_Sant%C3%ADsima_de_la_Amargura_Coronada.JPG",
-    "titulo": "File:Santísimo Cristo de los Milagros y María Santísima de la Amargura Coronada.JPG",
-    "autor": "TheVisuales",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "",
-    "foco": "50% 98%"
+   "virgen": {
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/zamarrilla-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Amargura Coronada",
+    "titular": "María Santísima de la Amargura Coronada",
+    "foco": "50% 45%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DdWJreMAGtn/ (imagen 1: María Santísima de la Amargura Coronada en sus cultos (septiembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
+   },
+   "cristo": {
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/zamarrilla-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de los Milagros",
+    "titular": "Santísimo Cristo de los Milagros",
+    "foco": "50% 30%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DfDXzw5jvCE/ (imagen 6: Santísimo Cristo de los Milagros (octubre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "dolores-de-san-juan-malaga": {
@@ -2920,32 +2931,27 @@
    }
   },
   "mena-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Mena_Cruz_Guia.jpg",
-    "titulo": "File:Mena Cruz Guia.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": ""
-   },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Soledad-de-Mena-1.jpg",
-    "titulo": "File:Soledad-de-Mena-1.jpg",
-    "autor": "Ispupe14",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Soledad Coronada"
-   },
-   "cristo": {
-    "autor": "Mena (Málaga)",
+    "autor": "Antonio Ortiz",
     "licencia": "",
     "licurl": "",
-    "pagina": "https://www.instagram.com/cofradiamena",
-    "local": "scripts/cedidas/malaga/mena-malaga-cristo.png",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/mena-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Soledad Coronada",
+    "titular": "Nuestra Señora de la Soledad Coronada",
+    "foco": "50% 45%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DfLCHuHDj0P/ (imagen 7: Cristo de la Buena Muerte y Nuestra Señora de la Soledad (noviembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
+   },
+   "cristo": {
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/mena-malaga-cristo.jpg",
     "titulo": "Cedida: Santísimo Cristo de la Buena Muerte y Ánimas",
     "titular": "Santísimo Cristo de la Buena Muerte y Ánimas",
-    "foco": "50% 35%",
-    "permiso": "Publicada sin fotógrafo citado en la cuenta oficial @cofradiamena (https://www.instagram.com/p/De6143nINpD/). Decisión de Pablo del 4-nov-2026: se usa con el crédito de la hermandad sin esperar a su permiso, que queda por pedir."
+    "foco": "50% 30%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DfLCHuHDj0P/ (imagen 14: Cristo de la Buena Muerte y Nuestra Señora de la Soledad (noviembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "buen-camino-gamarra-malaga": {
@@ -3755,28 +3761,40 @@
   },
   "humildad-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Humildad_malaga.png",
-    "titulo": "File:Humildad malaga.png",
-    "autor": "Escuzao",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Santísimo Cristo de la Humildad en su Presentación al Pueblo"
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/humildad-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Humildad en su Presentación al Pueblo",
+    "titular": "Santísimo Cristo de la Humildad en su Presentación al Pueblo",
+    "foco": "50% 35%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Ddts8ZKAAuj/ (imagen 2: Santísimo Cristo de la Humildad en su Presentación al Pueblo, en su altar de culto (septiembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
+   },
+   "virgen": {
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/humildad-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Madre y Señora de la Merced",
+    "titular": "Nuestra Madre y Señora de la Merced",
+    "foco": "50% 42%",
+    "foco_ficha": "0% 50%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Ddm1zgalyGw/ (imagen 1, cultos de septiembre de 2026). Con su marca de agua intacta (abajo a la izquierda); foco_ficha 0% 50% para que se vea en la ficha."
    }
   },
   "prendimiento-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Prendimiento_-_Perdon.jpg",
-    "titulo": "File:Prendimiento - Perdon.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/prendimiento-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Gran Perdón",
     "titular": "María Santísima del Gran Perdón",
-    "recorte": [
-     0.32,
-     0.16,
-     0.25,
-     0.5
-    ]
+    "foco": "50% 40%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DeXld9ajjxL/ (imagen 4: María Santísima del Gran Perdón en sus cultos (octubre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "cristo": {
     "autor": "Prendimiento (Málaga)",
@@ -3922,19 +3940,15 @@
   },
   "vineros-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Vi%C3%B1eros_Trono_2.jpg",
-    "titulo": "File:Viñeros Trono 2.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/vineros-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno de Viñeros",
     "titular": "Nuestro Padre Jesús Nazareno de Viñeros",
-    "recorte": [
-     0.46,
-     0.05,
-     0.15,
-     0.3
-    ],
-    "foco": "50% 62%"
+    "foco": "50% 28%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DU_A_g6DHss/ (imagen 6: Nuestro Padre Jesús Nazareno de Viñeros, vía crucis de 2026). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "virgen": {
     "autor": "Viñeros (Málaga)",
@@ -4036,36 +4050,28 @@
   },
   "traslado-malaga": {
    "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Santo_Traslado_Traslado_2.jpg",
-    "titulo": "File:Santo Traslado Traslado 2.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/traslado-malaga-juntos.jpg",
+    "titulo": "Cedida: Santo Traslado al Sepulcro",
     "titular": "Santo Traslado al Sepulcro",
-    "recorte": [
-     0.48,
-     0,
-     0.3,
-     0.6
-    ],
-    "foco": "50% 54%"
+    "foco": "50% 50%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Dfew_cAjh2z/ (imagen 3: el Santo Traslado en su salida extraordinaria del 75 aniversario (noviembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "piedad-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Piedad_Trono.jpg",
-    "titulo": "File:Piedad Trono.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "local": "scripts/cedidas/malaga/piedad-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Piedad",
     "titular": "Nuestra Señora de la Piedad",
-    "recorte": [
-     0.33,
-     0.12,
-     0.36,
-     0.66
-    ],
-    "foco": "50% 55%"
+    "foco": "50% 50%",
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DbMCzwpjtyL/ (imagen 5: reportaje de estudio a Nuestra Señora de la Piedad (julio de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    }
   },
   "servitas-malaga": {
