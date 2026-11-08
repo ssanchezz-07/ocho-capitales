@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T21:21:22.364Z",
+ "generado": "2026-11-08T21:43:36.587Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8081,7 +8081,7 @@
     "autor": "Las Penas (Cádiz)",
     "licencia": "",
     "licurl": "",
-    "pagina": "http://archicofradiapenas.blogspot.com/search?q=Caridad",
+    "pagina": "http://archicofradiapenas.blogspot.com/2023/09/cultos-y-actos-en-honor-de-maria.html",
     "foco": "50% 72%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg",
@@ -10280,21 +10280,21 @@
   },
   "la-borriquita-cadiz": {
    "cristo": {
-    "w": 410,
-    "h": 454,
+    "w": 328,
+    "h": 270,
     "widths": [
      160,
-     410
+     328
     ],
     "escudo": false,
     "autor": "Consejo de Hermandades de Cádiz",
     "licencia": "",
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/la-paz/",
-    "foco": "50% 75%",
+    "foco": "50% 45%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg",
-    "tam": 109651,
+    "tam": 56781,
     "titular": "Jesús de la Paz en su Entrada en Jerusalén"
    },
    "virgen": {
@@ -11142,7 +11142,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|59598|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/search?q=Caridad\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
+   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|59598|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/2023/09/cultos-y-actos-en-honor-de-maria.html\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
   },
   "vera-cruz-cadiz": {
    "w": 960,
@@ -11442,7 +11442,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg\"|109651|\"\"|\"50% 75%\"|\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg\"|134303|\"\"|\"50% 50%\""
+   "firma": "\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg\"|56781|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg\"|134303|\"\"|\"50% 50%\""
   },
   "el-prendimiento-cadiz": {
    "w": 960,
