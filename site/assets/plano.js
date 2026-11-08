@@ -75,7 +75,9 @@
         var mk = el('mask', { id: idm + g[0], maskUnits: 'userSpaceOnUse', x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1] }, defs);
         el('rect', { x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1], fill: 'url(#' + idm + g[0] + 'g)' }, mk);
         // alrededor de cada sede su barrio se ve entero, aunque caiga en el desvanecido (un círculo suave de 700 m)
-        (D.sedes || []).forEach(function (h) { [h.tp, h.cs].forEach(function (q) { if (q) el('circle', { cx: q[0], cy: q[1], r: 700, fill: 'url(#' + idm + 'r)' }, mk); }); });
+        // (solo las que están en la banda del desvanecido o a menos de 700 m de ella: cada círculo cuesta al mover el plano)
+        var bx = fx * (L[2] - L[0]) + 700, by = fy * (L[3] - L[1]) + 700;
+        (D.sedes || []).forEach(function (h) { [h.tp, h.cs].forEach(function (q) { if (q && q[0] > L[0] - 700 && q[0] < L[2] + 700 && q[1] > L[1] - 700 && q[1] < L[3] + 700 && (q[0] - L[0] < bx || L[2] - q[0] < bx || q[1] - L[1] < by || L[3] - q[1] < by)) el('circle', { cx: q[0], cy: q[1], r: 700, fill: 'url(#' + idm + 'r)' }, mk); }); });
       });
       var rg = el('radialGradient', { id: idm + 'r' }, defs); [[0, 1], [0.55, 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, rg); });
       var gMx = el('g', { mask: 'url(#' + idm + 'x)' }), gMy = el('g', { mask: 'url(#' + idm + 'y)' }, gMx);
