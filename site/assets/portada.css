@@ -185,6 +185,9 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 /* aviso de los dos dedos */
 .oc-pl-aviso { position: absolute; left: 50%; top: 38%; z-index: 5; transform: translate(-50%, -50%); max-width: calc(100% - 48px); padding: 10px 14px; border-radius: 12px; background: rgb(20 8 30 / .88); color: #fff; font: 500 14px/1.3 Heebo, system-ui, sans-serif; text-align: center; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
 .oc-pl-aviso.is-on { opacity: 1; }
+/* crédito de OpenStreetMap del plano de la capital: discreto, arriba a la derecha (libre en móvil y escritorio), con fondo */
+.oc-pl-osm { position: absolute; top: 28px; right: 8px; z-index: 4; margin: 0; padding: 2px 8px; border-radius: 6px; background: rgb(15 5 22 / .6); font-size: .68rem; line-height: 1.35; color: rgb(255 255 255 / .82); pointer-events: none; }
+.oc-pl-osm a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
 /* la colgadura no asoma cortada bajo la cabecera: en la ciudad se va (vuelve con «Andalucía») */
 .oc-home .oc-portada.is-ciudad .oc-colg-row { opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility 0s linear .25s; }
 /* leyenda */

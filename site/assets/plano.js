@@ -59,6 +59,8 @@
     var base = el('svg', { 'class': 'oc-pl-svg oc-pl-base', 'aria-hidden': 'true', focusable: 'false' }, host);
     var svg = el('svg', { 'class': 'oc-pl-svg oc-pl-capa', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, host);
     var mundo = el('g', {}, base);
+    // crédito de OpenStreetMap a la vista (lo pide su licencia, ODbL), arriba a la derecha: como en «En la calle»
+    var cred = document.createElement('p'); cred.className = 'oc-pl-osm'; cred.innerHTML = 'Plano: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>'; host.appendChild(cred);
     // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
     var A = D.areas || {}, poli = function (ls) { var d = ''; (ls || []).forEach(function (l) { d += pathDe([l]) + 'Z'; }); return d; };
     [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
