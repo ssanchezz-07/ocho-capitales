@@ -116,6 +116,8 @@
     H.forEach((h) => { anota(h.n); anota(h.t.map((t) => t[0]).join(' ')); anota(h.se); });
     I.forEach((x) => anota(x[1])); B.forEach((x) => anota(x[1])); D.capitales.forEach((c) => anota(c[1]));
     [...CLAVE, ...DIA_PAL].forEach((t) => { if (t.length >= 4) VOCAB.set(t, (VOCAB.get(t) || 0) + 50); });
+    // los meses, para que el corrector no los cambie por otra palabra («marzo» → «mario», «junio» → «junto»)
+    'enero febrero marzo abril mayo junio julio agosto septiembre setiembre octubre noviembre diciembre'.split(' ').forEach((t) => VOCAB.set(t, 60));
     const VOC = [...VOCAB.keys()];
     const conocida = (t) => t.length < 4 || /\d/.test(t) || STOP.has(t) || GENERICO.has(t) || VOCAB.has(t) || VOCAB.has(stem(t)) || STOP.has(stem(t));
     // una o dos variantes de pronunciación que den una palabra conocida («tayo» → «tallo», «esperansa» → «esperanza», «sebiya» → «sevilla»)

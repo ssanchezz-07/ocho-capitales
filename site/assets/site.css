@@ -1639,12 +1639,16 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 .oc-cunao-lista li:first-child { border-top: 0; }
 /* min-width: auto y break-word: una hora («15:15») o una palabra («Descendimiento») nunca se parten; solo se corta lo que no cabe ni en una línea entera */
 .oc-cunao-lista a, .oc-cunao-lista b, .oc-cunao-lista span { min-width: auto; overflow-wrap: break-word; }
+/* y si algo no cabe ni en una línea (una dirección web, por ejemplo), la fila se parte en dos y no se sale de la burbuja */
+.oc-cunao-lista li { flex-wrap: wrap; }
+.oc-cunao-lista a, .oc-cunao-lista b { flex: 1 1 0; max-width: 100%; }
+.oc-cunao-lista span { margin-left: auto; }
 .oc-cunao-lista a { color: var(--primary); font-weight: 600; text-decoration: none; }
 .oc-cunao-lista span { flex: 0 1 auto; max-width: 62%; text-align: right; color: var(--gold-ink); font-variant-numeric: tabular-nums; font-weight: 600; font-size: .9rem; }
 .oc-cunao-chips, .oc-cunao-acc { display: flex; flex-wrap: wrap; gap: 6px; }
 .oc-cunao-chips button { min-height: 36px; max-width: 100%; padding: 8px 12px; white-space: normal; text-align: left; overflow-wrap: break-word; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent); background: var(--surface); color: var(--primary); font: 600 .86rem/1.2 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-cunao-chips button:active { transform: scale(.96); }
-.oc-cunao-link { display: inline-flex; align-items: center; min-height: 36px; max-width: 100%; padding: 8px 14px; white-space: normal; overflow-wrap: break-word; border-radius: 18px; background: var(--primary); color: var(--on-primary); font: 600 .86rem/1.2 var(--sans); text-decoration: none; }
+.oc-cunao-link { display: inline-flex; align-items: center; min-height: 36px; max-width: 100%; padding: 8px 14px; white-space: normal; overflow-wrap: anywhere; word-break: normal; border-radius: 18px; background: var(--primary); color: var(--on-primary); font: 600 .86rem/1.2 var(--sans); text-decoration: none; }
 .oc-cunao-link + .oc-cunao-link { background: var(--surface); color: var(--primary); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 35%, transparent); }
 .oc-cunao-form { display: flex; gap: 8px; padding: 10px 0 calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
 .oc-cunao-form input { flex: 1; min-width: 0; height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--line-strong) 70%, transparent); background: var(--surface); color: var(--ink); font-size: 16px; }

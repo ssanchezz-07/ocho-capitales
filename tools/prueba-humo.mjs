@@ -88,7 +88,7 @@ try {
       if (!/Macarena.*\bsale\b.*\d{1,2}:\d{2}/.test(t)) err.push('erCuñao no contesta bien: ' + t.slice(0, 100));
       // maquetación a 360 px: horas («15:15»), años y palabras enteras; solo se puede partir lo que no cabe ni en una línea
       await p.setViewportSize({ width: 360, height: 780 });
-      for (const q of ['¿Por dónde pasa la Pasión de Málaga?', '¿Por dónde pasa la Crucifixión de Málaga?', '¿Quién talló los Negritos de Sevilla?', '¿Qué banda lleva el Cautivo de Málaga?']) {
+      for (const q of ['¿Por dónde pasa la Pasión de Málaga?', '¿Por dónde pasa la Crucifixión de Málaga?', '¿Quién talló los Negritos de Sevilla?', '¿Qué banda lleva el Cautivo de Málaga?', '¿Cuál es la web de Divino Maestro de Jaén?']) {
         await pregunta(q);
         const rotas = await p.evaluate(() => {
           const out = [], b = [...document.querySelectorAll('.oc-cunao-msg.is-cunao')].pop();
@@ -96,14 +96,18 @@ try {
             const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let nd;
             while ((nd = w.nextNode())) for (const m of nd.textContent.matchAll(/[^\s\-–]+/g)) { // por un guion sí se puede partir («Gutiérrez-Reyes»)
               const r = document.createRange(); r.setStart(nd, m.index); r.setEnd(nd, m.index + m[0].length);
-              const tops = new Set([...r.getClientRects()].filter((x) => x.width > 0).map((x) => Math.round(x.top)));
-              if (tops.size > 1 && r.getBoundingClientRect().width < el.getBoundingClientRect().width - 2) out.push(m[0]);
+              const rs = [...r.getClientRects()].filter((x) => x.width > 0), tops = new Set(rs.map((x) => Math.round(x.top)));
+              // solo es un fallo si la palabra entera cabía en su caja (una web más larga que la línea sí se tiene que partir)
+              const cs = getComputedStyle(b), caja = b.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 32, larga = rs.reduce((a, x) => a + x.width, 0);
+              if (tops.size > 1 && larga < caja - 1) out.push(m[0]);
             }
             const e = el.getBoundingClientRect(), c = b.getBoundingClientRect(); if (e.right > c.right + 1) out.push('se sale: ' + el.textContent.slice(0, 30));
           });
           return out;
         });
         if (rotas.length) err.push('a 360 px se parten en dos líneas (' + q + '): ' + [...new Set(rotas)].slice(0, 6).join(' | '));
+        const lateral = await p.evaluate(() => { const c = document.querySelector('[data-cunao-chat]'); return c.scrollWidth - c.clientWidth; });
+        if (lateral > 1) err.push('a 360 px el chat se desplaza ' + lateral + ' px en horizontal (' + q + ')');
       }
       await p.setViewportSize({ width: 390, height: 844 });
     } catch (e) { err.push('erCuñao no se abre o no contesta: ' + String(e.message || e).slice(0, 100)); }
@@ -129,7 +133,8 @@ try {
       if (ancho === 390 && estado === 200) for (const e of await soltura(p, nombre)) errores.push(e);
       // el filtro de Marchas, con una batería de búsquedas reales (tools/prueba-buscador.mjs); a 1440 px, que va más deprisa
       if (ancho === 1440 && nombre === 'Marchas' && estado === 200) for (const e of await pruebaBuscador(p, BASE)) errores.push(e);
-      // erCuñao (en la portada, a 390 px): se abre, contesta de verdad y, a 360 px, ninguna hora ni palabra se parte en dos líneas
+      // erCuñao (en la primera página de la lista, a 390 px; después de la prueba de soltura): se abre, contesta de verdad y, a 360 px,
+      // ninguna hora ni palabra se parte en dos líneas y nada se sale (una web larga se parte dentro de su botón)
       if (ancho === 390 && nombre === 'Portada' && estado === 200) for (const e of await pruebaCunao(p)) errores.push(e);
       const linea = `${nombre} (/${dir}) a ${ancho}px`;
       if (errores.length) { fallos.push(linea); for (const e of [...new Set(errores)].slice(0, 5)) console.log(`::error::${linea}: ${e}`); }
