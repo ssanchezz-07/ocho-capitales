@@ -5,6 +5,21 @@
 **Recorrido de la extraordinaria siempre visible:** se probó y se quitó. Pablo dice que la línea dorada «va bien» al reproducir.
 **Fondo del plano de sedes.** Pablo: «hay hermandades fuera del mapa… al quitar el zoom se ven zonas vacías en morado». **Elegido:** `tools/plano/afueras.mjs` amplía el fondo desde el mismo pbf hasta cubrir lo que enseña la cámara al encuadrar todas las sedes en el móvil y en el ordenador; fuera del centro, solo carreteras principales y costa (de 16 a 138 KB por capital). La cámara no sale del fondo y al abrir se ven todas las sedes. Las calles menores del centro se desvanecen en el borde de su recuadro (el 15 % del lado, 700 m como poco) para que no se vea con bordes rectos, y alejar tiene tope: 1,6 veces el encuadre de todas las sedes. **Descartado:** volver a generar el fondo completo con todas las calles hasta las afueras (pesaría varias veces más y es el terreno de las herramientas de rutas) y un degradado sin más, sin fondo de afueras (se vería morado vacío alrededor). Cuando lleguen sedes nuevas fuera del fondo, `build.mjs` avisa y se vuelve a ejecutar `node tools/plano/afueras.mjs <ciudad>`.
 
+## 2026-11-08 · erCuñao, bloque 5: las seis mejoras que eligió Pablo («Me gusta la 1 2 4 6 7 8»)
+**Elegido**
+- **El recorrido en miniatura** (`data/cunao/g/<capital>.json`, que se pide solo al preguntar por un recorrido): la ida y el regreso simplificados (Douglas-Peucker), con las mismas coordenadas que el plano, y de fondo las calles principales y el río de esa zona. Se pinta en SVG, sin cargar el plano. «Síguela en el plano» abre `/en-la-calle/<capital>/?dia=…&h=<hermandad>`.
+- **La salida en una línea de tiempo:** salida, carrera oficial, Catedral (si el itinerario la trae aparte) y entrada, con horas del mismo programa. Si un momento falta, no se pinta. Si las horas no van en orden, no se pinta la línea.
+- **Gestos de erCuñao:** su mismo dibujo con dos variantes fijas. Cuando lo sabe, se baja las gafas; cuando no, levanta las cejas y se rasca la cabeza, una sola vez. Sin bucles, y con movimiento reducido no se mueve.
+- **Compartir:** una tarjeta de 1080×1080 hecha en el navegador (canvas) con la estrella, «ochocapitales», la pregunta, la respuesta corta y su miniatura, más el enlace a la ficha. En el móvil se comparte con el menú del sistema; si no lo hay, con el enlace de WhatsApp. No lleva datos personales ni pasa por ningún servidor.
+- **Preguntas según la página:** en la ficha, sobre su hermandad. En el plano y en la capital, «¿Dónde van ahora?» (solo en plena jornada) y «¿Qué sale hoy?». En Noticias, «¿Qué ha pasado hoy?» con lo último de las ocho capitales. En una banda, a quién acompaña. En una marcha, quién la compuso.
+- **«¿Dónde van ahora?»** sale del itinerario: dice entre qué dos puntos va cada cofradía a esa hora y avisa de que la posición es estimada.
+- **La cabecera se encoge** al bajar por una respuesta larga y vuelve al subir. Tiene histéresis para no rebotar.
+- **Datos que no tiene, dichos:** el capataz (y cargos parecidos) y el tiempo. Para el tiempo remite a la AEMET.
+
+**Descartado**
+- **Cargar el plano entero (`data/calle`) para la miniatura:** pesa hasta 600 KB por capital.
+- **Una imagen generada en un servidor para compartir:** el sitio es estático y la tarjeta se puede hacer en el propio móvil.
+
 ## 2026-11-08 · erCuñao «experto en todo» y juegos «mientras esperas» (sesión erCuñao, plan del domingo al martes)
 Pablo (6 y 8-nov): «tiene que ser el mejor en todo, experto en todo» y «la mejora y perfección del bot, tanto en funciones como en visualización, además de meterle los juegos de espera».
 

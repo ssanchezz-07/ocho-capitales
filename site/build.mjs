@@ -351,7 +351,7 @@ const MARK_INNER = '<rect width="40" height="40" rx="9" fill="#2b1340"/><g fill=
 const LOGO = '<svg class="oc-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="11" y="11" width="18" height="18"/><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="2.4" fill="#c79a3b" stroke="none"/></svg>';
 const WORDMARK = `${LOGO}<span class="oc-wordmark">Ocho <span>Capitales</span></span>`;
 // erCuñao: el cuñao que lo sabe todo de la Semana Santa. Gafas de sol en la cabeza y la medalla de su hermandad al cuello.
-const CUNAO_SVG = `<svg class="oc-cunao-cara" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="31" fill="#2b1140"/><path d="M14 64c2-11 9-16 18-16s16 5 18 16z" fill="#f4efe6"/><path d="M22 49l10 11 10-11" fill="none" stroke="#6b2fa3" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="58" r="4.6" fill="#d9b560" stroke="#7a5a16" stroke-width="1"/><path d="M32 55.4v5.2M29.4 58h5.2" stroke="#7a5a16" stroke-width="1.2"/><ellipse cx="32" cy="33" rx="13.5" ry="15" fill="#e7b48c"/><path d="M18.5 30c0-11 6-16 13.5-16S45.5 19 45.5 30c-2-5-6-8-13.5-8s-11.5 3-13.5 8z" fill="#2a1b14"/><rect x="19.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><rect x="33.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><path d="M30.5 21.5h3" stroke="#d9b560" stroke-width="1.2"/><circle cx="26.5" cy="32.5" r="1.7" fill="#2a1b14"/><circle cx="37.5" cy="32.5" r="1.7" fill="#2a1b14"/><path d="M24 29.3q2.5-1.6 5 0M35 29.3q2.5-1.6 5 0" stroke="#2a1b14" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M25.5 39.5q6.5-4 13 0q-6.5 2-13 0z" fill="#2a1b14"/><path d="M27.5 42.5q4.5 3 9 0" stroke="#8a3d2e" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="23" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/><circle cx="41" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/></svg>`;
+const CUNAO_SVG = `<svg class="oc-cunao-cara" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="31" fill="#2b1140"/><path d="M14 64c2-11 9-16 18-16s16 5 18 16z" fill="#f4efe6"/><path d="M22 49l10 11 10-11" fill="none" stroke="#6b2fa3" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="58" r="4.6" fill="#d9b560" stroke="#7a5a16" stroke-width="1"/><path d="M32 55.4v5.2M29.4 58h5.2" stroke="#7a5a16" stroke-width="1.2"/><ellipse cx="32" cy="33" rx="13.5" ry="15" fill="#e7b48c"/><path d="M18.5 30c0-11 6-16 13.5-16S45.5 19 45.5 30c-2-5-6-8-13.5-8s-11.5 3-13.5 8z" fill="#2a1b14"/><circle cx="26.5" cy="32.5" r="1.7" fill="#2a1b14"/><circle cx="37.5" cy="32.5" r="1.7" fill="#2a1b14"/><g class="cu-cejas"><path d="M24 29.3q2.5-1.6 5 0M35 29.3q2.5-1.6 5 0" stroke="#2a1b14" stroke-width="1.3" fill="none" stroke-linecap="round"/></g><g class="cu-gafas"><rect x="19.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><rect x="33.5" y="18.5" width="11" height="6.5" rx="3.2" fill="#1b1024" stroke="#d9b560" stroke-width="1.2"/><path d="M30.5 21.5h3" stroke="#d9b560" stroke-width="1.2"/></g><path d="M25.5 39.5q6.5-4 13 0q-6.5 2-13 0z" fill="#2a1b14"/><path d="M27.5 42.5q4.5 3 9 0" stroke="#8a3d2e" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="23" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/><circle cx="41" cy="37.5" r="2.2" fill="#e8907a" opacity=".45"/><g class="cu-mano" opacity="0"><path d="M55 52L47.5 25" stroke="#f4efe6" stroke-width="6.5" stroke-linecap="round"/><ellipse cx="45.2" cy="20.2" rx="4.8" ry="3.6" fill="#e7b48c" stroke="#b9805c" stroke-width=".8" transform="rotate(-38 45.2 20.2)"/><path d="M40.6 17.6q-1.7.7-1.7 2.6M42.2 15.6q-1.8.8-1.8 2.8M44.4 14.4q-1.6 1-1.4 2.9" stroke="#e7b48c" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M40.6 17.6q-1.7.7-1.7 2.6M42.2 15.6q-1.8.8-1.8 2.8M44.4 14.4q-1.6 1-1.4 2.9" stroke="#b9805c" stroke-width=".5" fill="none" stroke-linecap="round" opacity=".6"/></g></svg>`;
 
 // ---------- imágenes ----------
 // Las miniaturas de Wikimedia admiten otro ancho cambiando «/960px-» en la URL.
@@ -664,7 +664,7 @@ ${body}${colabora(p, title)}
 <button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
 <div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}" data-motor="${u('assets/cunao.js')}?v=${HUELLA.cunao}"${HAY_JUEGOS ? ' data-juegos' : ''}>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
-    <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa, o&nbsp;eso&nbsp;dice…</p></div>${HAY_JUEGOS ? `<a class="oc-cunao-jugar" href="${u('juegos/')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 17l-5.5 3.5L8 13.7 3 9.3l6.4-.7z" fill="currentColor"/></svg><span>Jugar</span></a>` : ''}<button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button><div class="oc-cunao-galon" aria-hidden="true"></div></div>
+    <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana&nbsp;Santa, o&nbsp;eso&nbsp;dice…</p></div>${HAY_JUEGOS ? `<a class="oc-cunao-jugar" href="${u('juegos/')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 17l-5.5 3.5L8 13.7 3 9.3l6.4-.7z" fill="currentColor"/></svg><span>Jugar</span></a>` : ''}<button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button><div class="oc-cunao-galon" aria-hidden="true"></div></div>
     <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
     <form class="oc-cunao-form" data-cunao-form><label class="oc-sr" for="oc-cunao-q">Pregunta a erCuñao</label><input id="oc-cunao-q" type="text" autocomplete="off" enterkeyhint="send" placeholder="¿A qué hora sale la Macarena?" data-cunao-q><button class="oc-cunao-enviar" type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l15-7-5 15-2.5-5.5z" fill="currentColor"/></svg></button></form>
   </div>
@@ -2154,10 +2154,32 @@ function pageCalleIndice() {
 <ul class="oc-calle-indice">${caps.map((c) => `<li><a href="${u('en-la-calle/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span>${icon('arrow')}</a></li>`).join('')}</ul>`;
   write('en-la-calle/index.html', layout({ title: 'En la calle: los recorridos en el plano', desc: 'Plano de los recorridos de las cofradías de las ocho capitales andaluzas, con la posición estimada de cada una a cada hora.', body, path: 'en-la-calle/', active: 'capitales/', crumbs: [['Portada', u()], ['En la calle', '']] }));
 }
+// erCuñao: el recorrido en miniatura de cada cofradía de la Semana Santa (ida y regreso simplificados, en las mismas
+// coordenadas que el plano) y, de fondo, las calles principales y el río de la zona por donde pasan. Unos KB por capital.
+function miniRutas(datos) {
+  const dp = (p, t) => { if (p.length < 3) return p; const a = p[0], b = p[p.length - 1], dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy); let md = 0, mi = 0; for (let i = 1; i < p.length - 1; i++) { const d = L < 1e-9 ? Math.hypot(p[i][0] - a[0], p[i][1] - a[1]) : Math.abs(dy * p[i][0] - dx * p[i][1] + b[0] * a[1] - b[1] * a[0]) / L; if (d > md) { md = d; mi = i; } } return md > t ? dp(p.slice(0, mi + 1), t).slice(0, -1).concat(dp(p.slice(mi), t)) : [a, b]; };
+  const pares = (l) => { const o = []; for (let i = 0; i + 1 < l.length; i += 2) o.push([l[i], l[i + 1]]); return o; };
+  const h = {}; let bb = [Infinity, Infinity, -Infinity, -Infinity];
+  for (const x of datos.hermandades) {
+    if (x.x || h[x.s]) continue; const p = x.t.paso || x.t.cruz; if (!p || p.length < 2) continue;
+    const ida = p.filter((q) => !q[7]), reg = p.filter((q) => q[7]);
+    const regC = reg.length ? (ida.length ? [ida[ida.length - 1]] : []).concat(reg) : [];
+    const o = { i: dp(ida.map((q) => [q[0], q[1]]), 4).flat() }; if (regC.length > 1) o.r = dp(regC.map((q) => [q[0], q[1]]), 4).flat();
+    if (o.i.length < 4 && !o.r) continue;
+    h[x.s] = o; p.forEach((q) => { bb = [Math.min(bb[0], q[0]), Math.min(bb[1], q[1]), Math.max(bb[2], q[0]), Math.max(bb[3], q[1])]; });
+  }
+  if (!Object.keys(h).length) return { f: [], rio: [], h };
+  const pad = 200, B = [bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad], dentro = (q) => q[0] >= B[0] && q[0] <= B[2] && q[1] >= B[1] && q[1] <= B[3];
+  const f = (datos.principales || []).map(pares).filter((l) => l.some(dentro)).map((l) => dp(l, 6).flat());
+  const rio = (datos.rios || []).map(pares).filter((l) => l.some(dentro)).map((l) => dp(l, 6).flat());
+  return { f, rio, h };
+}
 function pageCalle(c) {
   const datos = datosCalle(c); if (!datos) return;
   fs.mkdirSync(path.join(DIST, 'data', 'calle'), { recursive: true });
   fs.writeFileSync(path.join(DIST, 'data', 'calle', c.slug + '.json'), JSON.stringify(datos));
+  fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'g'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'g', c.slug + '.json'), JSON.stringify(miniRutas(datos)));
   const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
   const fechas = {}; for (const sl of SLOTS) for (const d of sl.dias) fechas[d] = isoDay(P + sl.off * 864e5);
   fechas['Viernes de Dolores'] = isoDay(P - 9 * 864e5); fechas['Sábado de Pasión'] = isoDay(P - 8 * 864e5);
@@ -2242,8 +2264,8 @@ function datosCunao() {
   }
   const resumen = (c, s) => {
     const x = R[c] && R[c].r[s]; if (!x) return undefined;
-    const p = x.p, co = p.find((q) => q[3]);
-    return [p[0][0], p[0][2], p.at(-1)[0], p.at(-1)[2], co ? co[1] : '', co ? co[0] : '', co ? co[2] : 0];
+    const p = x.p, co = p.find((q) => q[3]), ca = p.find((q, i) => i > 0 && i < p.length - 1 && q !== co && /^(estaci[oó]n de penitencia|(la )?s\.? ?i\.? ?c\.? ?b\b|(la )?(santa iglesia )?catedral\b)/i.test(q[1] || '')) && !(co && /catedral/i.test(co[1] || '')) ? p.find((q, i) => i > 0 && i < p.length - 1 && q !== co && /^(estaci[oó]n de penitencia|(la )?s\.? ?i\.? ?c\.? ?b\b|(la )?(santa iglesia )?catedral\b)/i.test(q[1] || '')) : null;
+    return [p[0][0], p[0][2], p.at(-1)[0], p.at(-1)[2], co ? co[1] : '', co ? co[0] : '', co ? co[2] : 0, ...(ca ? [ca[1], ca[0], ca[2]] : [])];
   };
   const hs = D.hermandades.map((h) => {
     const o = {
@@ -2288,7 +2310,7 @@ function datosCunao() {
     }
   }
   ex.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, juegos: HAY_JUEGOS ? 1 : 0, hoy: isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, juegos: HAY_JUEGOS ? 1 : 0, hoy: isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, fuera: TEMPORADA.fuera ? 1 : 0, cu: curiosidades().map((k) => [k.t, k.u, k.l]), nt: NEWS.items.filter((n) => n.titulo && /^https?:\/\//.test(n.url || '')).sort((a, b) => b.ts - a.ts).slice(0, 8).map((n) => [n.titulo, n.url, n.fuente || '', n.ts, (n.ciudades || [])[0] || '']) }));
   // Marchas (todo el catálogo, ~10.000): en trozos por la inicial del título, sin el artículo («La Madrugá» → m/m.json).
   // Solo se piden cuando la pregunta es de marchas. Fila: [título, autor (índice), año, formación, dedicada a (slug de hermandad o texto), ficha]
   const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };

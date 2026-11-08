@@ -360,5 +360,55 @@ caso('J4 en plena jornada propone una partida', motor(fechas['Jueves Santo']), '
 }
 caso('P1 en la ficha de una hermandad, «¿qué banda lleva?» es la suya', crearMotor(D, { base: '/', azar: (l) => l[0], paginaHerm: () => 'cautivo-malaga', pagina: () => 'malaga', hoy: () => HOY, horaAhora: () => 18 }), '¿Qué banda lleva?', contiene('La música del Cautivo (Málaga)'));
 
+console.log('— Bloque 5 (8-nov): recorrido en miniatura, línea de tiempo, gestos, compartir y preguntas según la página');
+const parte = (t) => (r) => (r.partes.some((p) => p.t === t) ? true : 'sin parte «' + t + '»');
+const tlDe = (r) => (r.partes.find((p) => p.t === 'tl') || { l: [] }).l;
+caso('B5-1 «¿a qué hora sale?» trae la línea de tiempo (salida, carrera, entrada)', motor(), '¿A qué hora sale el Cautivo de Málaga?', y(parte('tl'), (r) => { const l = tlDe(r).map((x) => x.e).join(','); return l === 'Salida,Carrera oficial,Entrada' ? true : 'momentos: ' + l; }));
+caso('B5-2 con la Catedral aparte (Málaga), también sale', motor(), '¿A qué hora sale la Pollinica?', (r) => (tlDe(r).some((x) => x.e === 'Catedral' && /^\d{2}:\d{2}$/.test(x.t) && !x.l) ? true : 'sin Catedral (o con un lugar que la repite)'));
+// la línea de tiempo nunca inventa: cada hora sale de los datos de la hermandad, y van en orden
+{ let malT = 0, conT = 0; const m = motor();
+  for (const h of D.hermandades.filter((x) => x.r || x.hc)) { const r = pregunta(m, '@h:' + h.s); const r2 = m.responder('¿A qué hora sale?'); const l = tlDe(r2); if (!l.length) continue; conT++;
+    const horas = new Set([h.h, ...(h.r || []), h.hc].filter(Boolean)); if (l.some((x) => !horas.has(x.t))) { malT++; if (malT < 4) console.log('✗ línea de tiempo con una hora que no es suya: ' + h.n + ' ' + JSON.stringify(l)); } }
+  if (malT) { mal++; } else ok++;
+  console.log((malT ? '✗' : '✓') + ' B5-3 líneas de tiempo comprobadas contra los datos: ' + conT + ', con una hora ajena: ' + malT); }
+caso('B5-4 «¿por dónde pasa?» trae el recorrido en miniatura (y «Síguela en el plano» solo en temporada)', motor(), '¿Por dónde pasa el Cautivo de Málaga?', y((r) => (r.mapa && r.mapa.s === 'cautivo-malaga' ? true : 'sin miniatura'), D.fuera ? noDice('Síguela') : enlace(/\/en-la-calle\/malaga\/\?dia=Lunes%20Santo&h=cautivo-malaga$/)));
+{ const Dt = Object.assign({}, D, { fuera: 0 }); caso('B5-4b en temporada, «Síguela en el plano» abre su jornada y su ficha', crearMotor(Dt, { base: '/', azar: (l) => l[0], hoy: () => HOY, horaAhora: () => 18 }), '¿Por dónde pasa el Cautivo de Málaga?', enlace(/\/en-la-calle\/malaga\/\?dia=Lunes%20Santo&h=cautivo-malaga$/)); }
+// el recorrido en miniatura: cada hermandad con mapa tiene su trazo (y nada más)
+{ let falta = 0, total = 0; for (const c of D.mapa) { const f = path.join(DIST, 'cunao', 'g', c + '.json'); if (!fs.existsSync(f)) { falta += 1000; console.log('✗ falta ' + f); continue; } const g = JSON.parse(fs.readFileSync(f, 'utf8')); for (const h of D.hermandades.filter((x) => x.c === c && CIU[c] && CIU[c].r[x.s])) { total++; if (!g.h[h.s]) falta++; } }
+  const okG = total && falta / total < 0.1; if (okG) ok++; else mal++; console.log((okG ? '✓' : '✗') + ' B5-5 miniaturas: ' + (total - falta) + ' de ' + total + ' hermandades con recorrido tienen su trazo'); }
+caso('B5-6 «¿qué ha pasado hoy?» en Noticias: lo último de las ocho, con su fuente', crearMotor(D, { base: '/', azar: (l) => l[0], hoy: () => HOY, horaAhora: () => 18 }), '¿Qué ha pasado hoy?', D.nt && D.nt.length ? y(contiene(D.nt[0][0]), enlace(/\/noticias\/$/)) : contiene('capital'));
+caso('B5-7 «¿qué pasó en la Madrugá?» no son las noticias', motor(), '¿Qué pasó en la Madrugá?', noDice('Lo último de'));
+caso('B5-8 el tiempo: no lo sabe y manda a la AEMET', motor(), '¿Qué tiempo hará el Jueves Santo?', y(contiene('Del tiempo no sé nada'), enlace(/aemet\.es/), (r) => (r.flojo ? true : 'debía ser flojo')));
+caso('B5-9 «¿quién es el capataz…?» no lo inventa', motor(), '¿Quién es el capataz del Cautivo de Málaga?', y(contiene('no lo tengo'), noDice('Titulares:')));
+// «¿dónde van ahora?» en plena jornada (Jueves Santo, 21:00): por dónde va cada una, según su itinerario
+// la próxima en salir, por hora (y con la salida oficial si el itinerario no la cuadra): 15 minutos antes de la primera de cada jornada
+{ let malP = 0, casos = 0;
+  for (const [c] of D.capitales) for (const d of ['Domingo de Ramos', 'Lunes Santo', 'Martes Santo', 'Miércoles Santo', 'Jueves Santo', 'Viernes Santo', 'Sábado Santo']) {
+    if (!fechas[d]) continue; const hs = D.hermandades.filter((h) => h.c === c && h.d === d && CIU[c].r[h.s]); if (!hs.length) continue;
+    const sal = hs.map((h) => { const t = h.h || CIU[c].r[h.s].p[0][0]; const [a, b] = t.split(':').map(Number); const v = a * 60 + b; return [h, v < 360 ? v + 1440 : v]; }).sort((a, b) => a[1] - b[1]);
+    const m1 = sal[0][1] - 15; if (m1 >= 1440 || m1 < 420) continue; casos++;
+    const m = crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => masDias(fechas[d], mas || 0), horaAhora: () => Math.floor(m1 / 60), minAhora: () => m1 });
+    const r = pregunta(m, '¿Dónde van ahora las cofradías de ' + D.capitales.find((x) => x[0] === c)[1] + '?');
+    if (/La próxima en salir/.test(r.texto) && !r.texto.toLowerCase().includes(sal[0][0].n.replace(/^(La|El|Los|Las) /, '').toLowerCase())) { malP++; if (malP < 4) console.log('✗ próxima mal: ' + c + ' ' + d + ' → ' + r.texto.slice(0, 160) + ' (esperaba ' + sal[0][0].n + ')'); } }
+  if (malP) mal++; else ok++; console.log((malP ? '✗' : '✓') + ' B5-10b «la próxima en salir» por hora: ' + casos + ' jornadas, ' + malP + ' mal'); }
+{ let malH = 0, vistas = 0; const mm = (t) => { const [a, b] = String(t).split(':').map(Number); const v = a * 60 + b; return v < 360 ? v + 1440 : v; };
+  for (const c of ['sevilla', 'malaga', 'cadiz', 'cordoba']) for (const d of ['Domingo de Ramos', 'Miércoles Santo', 'Jueves Santo', 'Madrugá']) {
+    if (!fechas[d]) continue; const hs = D.hermandades.filter((h) => h.c === c && h.d === d); if (!hs.length) continue;
+    for (let m1 = 600; m1 <= 1440 + 300; m1 += 60) {
+      const real = m1 % 1440, dia = d === 'Madrugá' && real >= 420 ? null : masDias(fechas[d], 0); if (!dia) continue;
+      const fuera_ = hs.filter((h) => { const R0 = CIU[c].r[h.s]; const ini = h.h ? mm(h.h) : R0 ? mm(R0.p[0][0]) : null; if (ini == null) return false; let fin = h.r && h.r[2] ? mm(h.r[2]) : R0 ? mm(R0.p[R0.p.length - 1][0]) : null; if (fin != null && fin < ini) fin += 1440; return ini <= m1 && (fin == null || m1 <= fin); });
+      const m = crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => masDias(dia, mas || 0), horaAhora: () => Math.floor(real / 60), minAhora: () => real });
+      const r = pregunta(m, '¿Dónde van ahora las cofradías de ' + D.capitales.find((x) => x[0] === c)[1] + '?'); if (!/Ahora mismo|A estas horas/.test(r.texto)) continue; vistas++;
+      if (fuera_.length && /no hay ninguna en la calle|ya se han recogido todas/.test(r.texto)) { malH++; if (malH < 4) console.log('✗ dice que no hay ninguna: ' + c + ' ' + d + ' ' + real + ' min, y están ' + fuera_.map((h) => h.n).slice(0, 4).join(', ')); } } }
+  if (malH) mal++; else ok++; console.log((malH ? '✗' : '✓') + ' B5-10c «¿dónde van ahora?» hora a hora contra la salida oficial y la entrada: ' + vistas + ' respuestas, ' + malH + ' con «no hay ninguna» en falso'); }
+{ const m = crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => masDias(fechas['Jueves Santo'], mas || 0), horaAhora: () => 21, minAhora: () => 21 * 60 });
+  caso('B5-10 «¿dónde van ahora?» el Jueves Santo a las 21:00 en Málaga', m, '¿Dónde van ahora las cofradías de Málaga?', y(contiene('Ahora mismo (21:00)', 'posición estimada'), (r) => { const l = (r.partes.find((p) => p.t === 'lista') || { items: [] }).items; const en = l.map((i) => D.hermandades.find((h) => h.n === i.x && h.c === 'malaga')).filter(Boolean); if (!en.length) return 'nadie en la calle'; for (const h of en) { const p = CIU.malaga.r[h.s].p; const t = p.map((x) => { const [a, b] = x[0].split(':').map(Number); const v = a * 60 + b; return v < 360 ? v + 1440 : v; }); for (let i = 1; i < t.length; i++) if (t[i] < t[i - 1]) t[i] += 1440; if (!(t[0] <= 1260 && 1260 <= t[t.length - 1])) return h.n + ' no está en la calle a las 21:00'; } return true; })); }
+caso('B5-11 fuera de Semana Santa, «¿dónde van ahora?» no se inventa posiciones', motor(), '¿Dónde van ahora las cofradías de Málaga?', noDice('Ahora mismo ('));
+// las sugerencias de cada página llevan a una respuesta de verdad (no a un «no lo sé»)
+{ const m0 = crearMotor(D, { base: '/', azar: (l) => l[0], hoy: () => HOY, horaAhora: () => 18 });
+  const pags = [{ tipo: 'herm', slug: 'cautivo-malaga' }, { tipo: 'herm', slug: 'la-macarena-sevilla' }, { tipo: 'calle', c: 'malaga' }, { tipo: 'capital', c: 'granada' }, { tipo: 'noticias' }, { tipo: 'banda', slug: D.B.find((b) => b[0] && D.hermandades.some((h) => (h.b || []).some((p) => p[1].includes(D.B.indexOf(b)))))[0] }, { tipo: 'marcha', titulo: 'Amarguras' }];
+  for (const pg of pags) { const l = m0.chipsPagina(pg) || []; if (!l.length) { mal++; console.log('✗ B5-12 sin sugerencias para ' + JSON.stringify(pg)); continue; }
+    for (const [et, val] of l) caso('B5-12 ' + pg.tipo + ' «' + et + '»', crearMotor(D, { base: '/', azar: (x) => x[0], hoy: () => HOY, horaAhora: () => 18 }), val, (r) => (r.flojo || r.nose ? 'respuesta floja' : true)); } }
+
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal})` + (omit ? `; ${omit} omitida${omit > 1 ? 's' : ''} por la fecha.` : '.'));
 process.exit(mal ? 1 : 0);

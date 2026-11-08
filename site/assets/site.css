@@ -1630,7 +1630,7 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 .oc-cunao {
   --cu-fondo: #2b1140; --cu-texto: #f4eef9; --cu-lila: #dcc7f4; --cu-oro: #c9a14a; --cu-oro-claro: #f0d79c; --cu-linea: rgb(240 215 156 / .18); --cu-ease: cubic-bezier(.32, .72, 0, 1);
   /* la conversación, en claro */
-  --cu-cuerpo: #f4eff9; --cu-msg: #fff; --cu-msg-texto: #2b1140; --cu-msg-borde: #e3d8ee; --cu-msg-sombra: 0 1px 2px rgb(43 17 64 / .06), 0 10px 22px -16px rgb(43 17 64 / .38);
+  --cu-cuerpo: #f4eff9; --cu-msg: #fff; --cu-punto-tl: #fff; --cu-msg-texto: #2b1140; --cu-msg-borde: #e3d8ee; --cu-msg-sombra: 0 1px 2px rgb(43 17 64 / .06), 0 10px 22px -16px rgb(43 17 64 / .38);
   --cu-fuerte: #2b1140; --cu-suave: #654a80; --cu-dato: #7a5714; --cu-caja: #f7f2fb; --cu-caja-linea: #e6dcf0; --cu-subr: rgb(154 116 40 / .6); --cu-sep: rgb(43 17 64 / .14);
   --cu-link2: #4a2370; --cu-link2-borde: #9a7428; --cu-chip: #4a2370; --cu-chip-fondo: #faf7fd; --cu-chip-borde: #8d73ad; --cu-chip-hover: #efe7f8;
   --cu-chipj: #6e4f12; --cu-chipj-fondo: #fbf4e3; --cu-chipj-borde: #9a7428; --cu-punto: #8a6bb0; --cu-yo-sombra: 0 6px 16px -10px rgb(43 17 64 / .45);
@@ -1639,14 +1639,14 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
 }
 /* en oscuro (el del sistema o el elegido en la web), toda la hoja es terciopelo */
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-cunao {
-  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
+  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-punto-tl: #3a224d; --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
   --cu-fuerte: #fff; --cu-suave: #dcc7f4; --cu-dato: #f0d79c; --cu-caja: rgb(0 0 0 / .18); --cu-caja-linea: rgb(240 215 156 / .18); --cu-subr: rgb(240 215 156 / .45); --cu-sep: rgb(240 215 156 / .2);
   --cu-link2: #f0d79c; --cu-link2-borde: rgb(240 215 156 / .55); --cu-chip: #dcc7f4; --cu-chip-fondo: rgb(255 255 255 / .05); --cu-chip-borde: rgb(220 199 244 / .5); --cu-chip-hover: rgb(255 255 255 / .1);
   --cu-chipj: #f0d79c; --cu-chipj-fondo: rgb(201 161 74 / .12); --cu-chipj-borde: rgb(240 215 156 / .6); --cu-punto: #f0d79c; --cu-yo-sombra: 0 6px 16px -10px rgb(0 0 0 / .7);
   --cu-form: rgb(29 10 44 / .85); --cu-form-linea: rgb(240 215 156 / .18); --cu-input: rgb(255 255 255 / .08); --cu-input-borde: rgb(240 215 156 / .45); --cu-input-texto: #fff; --cu-ph: rgb(220 199 244 / .7); --cu-foco: #f0d79c; --cu-scroll: rgb(240 215 156 / .3); --cu-mini: #1d0a2c;
 } }
 :root[data-theme="dark"] .oc-cunao {
-  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
+  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-punto-tl: #3a224d; --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
   --cu-fuerte: #fff; --cu-suave: #dcc7f4; --cu-dato: #f0d79c; --cu-caja: rgb(0 0 0 / .18); --cu-caja-linea: rgb(240 215 156 / .18); --cu-subr: rgb(240 215 156 / .45); --cu-sep: rgb(240 215 156 / .2);
   --cu-link2: #f0d79c; --cu-link2-borde: rgb(240 215 156 / .55); --cu-chip: #dcc7f4; --cu-chip-fondo: rgb(255 255 255 / .05); --cu-chip-borde: rgb(220 199 244 / .5); --cu-chip-hover: rgb(255 255 255 / .1);
   --cu-chipj: #f0d79c; --cu-chipj-fondo: rgb(201 161 74 / .12); --cu-chipj-borde: rgb(240 215 156 / .6); --cu-punto: #f0d79c; --cu-yo-sombra: 0 6px 16px -10px rgb(0 0 0 / .7);
@@ -1762,6 +1762,55 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
   .oc-cunao-msg.is-pensando i { animation: none; opacity: .8; }
   .oc-cunao-chat { scroll-behavior: auto; }
   .oc-cunao-bocadillo { transition: none; }
+}
+/* ---------- erCuñao, bloque 5 (8-nov): gestos, la salida en una línea de tiempo, el recorrido en miniatura, compartir y la cabecera que se encoge ---------- */
+/* gestos: se baja las gafas cuando lo sabe; cuando no, levanta las cejas y se rasca la cabeza (una vez, sin bucles) */
+.oc-cunao-cara .cu-gafas, .oc-cunao-cara .cu-cejas { transition: transform 280ms var(--ease-out); }
+.oc-cunao-head.is-sabe .cu-gafas { transform: translateY(10px); }
+.oc-cunao-head.is-duda .cu-cejas { transform: translateY(-1.6px); }
+.oc-cunao-head.is-duda .cu-mano { opacity: 1; transform-box: fill-box; transform-origin: 50% 100%; animation: oc-cunao-rasca 640ms var(--ease-out) 1 both; }
+@keyframes oc-cunao-rasca { 0% { opacity: 0; transform: translate(2px, 6px); } 25% { opacity: 1; transform: none; } 42% { transform: translate(-1.2px, 1.2px); } 58% { transform: translate(.6px, -.6px); } 74% { transform: translate(-1px, 1px); } 100% { opacity: 1; transform: none; } }
+/* la salida en una línea de tiempo: la hora arriba (Geist Mono), el punto en la línea de oro y el momento debajo */
+.oc-cunao-tl { --n: 4; position: relative; list-style: none; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 0 6px; margin: 12px 0 0; padding: 0; }
+.oc-cunao-tl::before { content: ""; position: absolute; top: 29px; left: calc(50% / var(--n)); right: calc(50% / var(--n)); height: 2px; border-radius: 1px; background: var(--cu-oro); }
+.oc-cunao-tl li { display: flex; flex-direction: column; align-items: center; min-width: 0; text-align: center; }
+.oc-cunao-tl li::before { content: ""; order: 1; position: relative; z-index: 1; width: 12px; height: 12px; margin: 2px 0 6px; border-radius: 50%; background: var(--cu-punto-tl); box-shadow: inset 0 0 0 3px var(--cu-oro); }
+.oc-cunao-tl li:first-child::before, .oc-cunao-tl li:last-child::before { background: var(--cu-oro); }
+.oc-cunao-tl-h { order: 0; height: 22px; font: 600 .86rem/22px "Geist Mono", ui-monospace, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .01em; color: var(--cu-dato); white-space: nowrap; }
+.oc-cunao-tl b { order: 2; font-size: .8rem; line-height: 1.2; color: var(--cu-fuerte); }
+.oc-cunao-tl small { order: 3; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin-top: 2px; font-size: .72rem; line-height: 1.25; color: var(--cu-suave); overflow-wrap: break-word; }
+.oc-cunao-msg .oc-cunao-nota { margin-top: 8px; font-size: .8rem; color: var(--cu-suave); }
+/* el recorrido en miniatura, con el fondo del plano: la ida en oro, el regreso discontinuo */
+.oc-cunao-mini { position: relative; margin: 12px 0 0; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 14px; background: radial-gradient(120% 90% at 80% 0%, #3a1857, #1d0a2c 70%); box-shadow: inset 0 0 0 1px rgb(201 161 74 / .35); }
+.oc-cunao-mini svg { display: block; width: 100%; height: 100%; }
+.oc-cunao-mini path { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.oc-cunao-mini .is-calle { stroke: rgb(220 199 244 / .3); stroke-width: 1; }
+.oc-cunao-mini .is-rio { stroke: rgb(120 160 210 / .4); stroke-width: 7; }
+.oc-cunao-mini .is-ida-borde { stroke: #1d0a2c; stroke-width: 6; }
+.oc-cunao-mini .is-ida { stroke: #e2c27a; stroke-width: 3; }
+.oc-cunao-mini .is-regreso { stroke: #e2c27a; stroke-width: 2.5; stroke-dasharray: 5 5; }
+.oc-cunao-mini .is-salida { fill: #f0d79c; stroke: #fff; stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.oc-cunao-mini::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40px; background: linear-gradient(rgb(29 10 44 / 0), rgb(29 10 44 / .85)); pointer-events: none; }
+.oc-cunao-mini-ley { position: absolute; z-index: 1; left: 10px; bottom: 6px; display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: .74rem; line-height: 1.2; color: #f4eef9; text-shadow: 0 1px 2px rgb(0 0 0 / .8); }
+.oc-cunao-mini-ley span::before { content: ""; display: inline-block; width: 14px; margin-right: 5px; vertical-align: middle; border-top: 3px solid #e2c27a; }
+.oc-cunao-mini-ley .is-regreso::before { border-top: 2px dashed #e2c27a; }
+.oc-cunao-mini-ley .is-salida::before { width: 9px; height: 9px; border: 0; border-radius: 50%; background: #f0d79c; }
+/* compartir */
+.oc-cunao-link.is-compartir { gap: 6px; }
+.oc-cunao-link.is-compartir svg { flex: none; width: 18px; height: 18px; }
+/* la cabecera se encoge al bajar por una respuesta larga (avatar pequeño, nombre y cerrar) y vuelve al subir */
+.oc-cunao-head .oc-cunao-cara { transition: width 220ms var(--ease-out), height 220ms var(--ease-out); }
+.oc-cunao-head .oc-sheet-title { transition: font-size 220ms var(--ease-out); }
+.oc-cunao-sub { max-height: 4.2em; overflow: hidden; transition: max-height 220ms var(--ease-out), opacity 160ms ease, margin-top 220ms var(--ease-out); }
+.oc-cunao.is-compacta .oc-cunao-head { grid-template-columns: auto minmax(0, 1fr) 44px; grid-template-areas: 'cara texto cerrar'; row-gap: 0; padding-bottom: 10px; }
+.oc-cunao.is-compacta .oc-cunao-head .oc-cunao-cara { width: 36px; height: 36px; align-self: center; }
+.oc-cunao.is-compacta .oc-cunao-head .oc-sheet-title { font-size: 1.6rem; }
+.oc-cunao.is-compacta .oc-cunao-sub { max-height: 0; margin-top: 0; opacity: 0; }
+.oc-cunao.is-compacta .oc-cunao-head > .oc-cunao-jugar { display: none; }
+.oc-cunao.is-compacta .oc-cunao-head > .oc-iconbtn { align-self: center; }
+@media (prefers-reduced-motion: reduce) {
+  .oc-cunao-cara .cu-gafas, .oc-cunao-cara .cu-cejas, .oc-cunao-head .oc-cunao-cara, .oc-cunao-head .oc-sheet-title, .oc-cunao-sub { transition: none; }
+  .oc-cunao-head.is-duda .cu-mano { animation: none; }
 }
 /* en «En la calle», con el plano a la vista, erCuñao va en la columna de controles del plano (cunao-ui.js lo coloca): mismo tamaño, sin sombra grande */
 .oc-cunao-btn.is-control { filter: drop-shadow(0 4px 10px rgb(20 8 29 / .35)); }

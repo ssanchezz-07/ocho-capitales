@@ -86,6 +86,12 @@ try {
       await p.click('[data-cunao]');
       const t = await pregunta('¿A qué hora sale la Macarena de Sevilla?');
       if (!/Macarena.*\bsale\b.*\d{1,2}:\d{2}/.test(t)) err.push('erCuñao no contesta bien: ' + t.slice(0, 100));
+      // bloque 5: la línea de tiempo, «Compartir» y el recorrido en miniatura (si la web los trae)
+      if (await p.evaluate(() => !!document.querySelector('.oc-cunao-msg.is-cunao .oc-cunao-tl, .oc-cunao-msg.is-cunao .is-compartir'))) {
+        if (await p.evaluate(() => [...document.querySelectorAll('.oc-cunao-msg.is-cunao')].pop().querySelectorAll('.oc-cunao-tl li').length < 2)) err.push('erCuñao: sin línea de tiempo en «¿a qué hora sale la Macarena?»');
+        await pregunta('¿Por dónde pasa el Cautivo de Málaga?');
+        await p.waitForSelector('.oc-cunao-msg.is-cunao:last-child .oc-cunao-mini svg path.is-ida', { timeout: 8000 }).catch(() => err.push('erCuñao: no pinta el recorrido en miniatura'));
+      }
       // maquetación a 360 px: horas («15:15»), años y palabras enteras; solo se puede partir lo que no cabe ni en una línea
       await p.setViewportSize({ width: 360, height: 780 });
       for (const q of ['¿Por dónde pasa la Pasión de Málaga?', '¿Por dónde pasa la Crucifixión de Málaga?', '¿Quién talló los Negritos de Sevilla?', '¿Qué banda lleva el Cautivo de Málaga?', '¿Cuál es la web de Divino Maestro de Jaén?']) {
