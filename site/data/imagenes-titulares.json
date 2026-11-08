@@ -868,12 +868,16 @@
   },
   "nuestra-senora-de-los-dolores-granada": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaGranadaLosDolores1.jpg",
-    "titulo": "File:SemanaSantaGranadaLosDolores1.jpg",
-    "autor": "Manuel_Prados",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de los Dolores"
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/nuestra-senora-de-los-dolores-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "50% 30%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B9ZduqGCpJx/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "jesus-del-rescate-granada": {
@@ -896,6 +900,18 @@
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "titular": "Santísimo Cristo de San Agustín",
     "foco": "50% 11%"
+   },
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/cristo-de-san-agustin-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Madre y Señora de la Consolación",
+    "titular": "Nuestra Madre y Señora de la Consolación",
+    "foco": "50% 30%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/Dc_f5ivtEdG/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "la-lanzada-granada": {
@@ -920,12 +936,16 @@
     "foco": "50% 0%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
-    "titulo": "File:Nuestra Señora de la Soledad, Granada.jpg",
-    "autor": "José Luis Filpo Cabana",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "titular": "Soledad de Nuestra Señora"
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/la-canilla-granada-virgen.jpg",
+    "titulo": "Cedida: Soledad de Nuestra Señora",
+    "titular": "Soledad de Nuestra Señora",
+    "foco": "50% 25%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/Cb7nh0cspaH/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "los-estudiantes-granada": {
@@ -948,12 +968,28 @@
   },
   "paciencia-y-penas-granada": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Las_penas_gr.jpg",
-    "titulo": "File:Las penas gr.jpg",
-    "autor": "Diego",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de las Penas"
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/paciencia-y-penas-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de las Penas",
+    "titular": "María Santísima de las Penas",
+    "foco": "50% 40%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/CY_8OW4s86E/. Con su firma intacta; foco_ficha para que se vea en la ficha."
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/paciencia-y-penas-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Paciencia",
+    "titular": "Nuestro Padre Jesús de la Paciencia",
+    "foco": "45% 20%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/C5g2OU6i3Yl/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "tres-caidas-y-rosario-granada": {
@@ -3011,6 +3047,18 @@
      0.37
     ],
     "foco": "50% 52%"
+   },
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/la-estrella-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Estrella",
+    "titular": "María Santísima de la Estrella",
+    "foco": "50% 30%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B89V760CY4P/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "el-silencio-granada": {
@@ -3065,6 +3113,18 @@
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "titular": "Nuestra Señora de la Soledad",
     "foco": "50% 10%"
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/las-chias-granada-cristo.jpg",
+    "titulo": "Cedida: Cristo del Descendimiento",
+    "titular": "Cristo del Descendimiento",
+    "foco": "40% 45%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/DRastyEDMZe/ (imagen 2). Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "los-facundillos-granada": {
@@ -3075,6 +3135,18 @@
     "licencia": "CC BY 2.0",
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "titular": "Iglesia de Santo Domingo"
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/los-facundillos-granada-cristo.jpg",
+    "titulo": "Cedida: Dulce Nombre de Jesús",
+    "titular": "Dulce Nombre de Jesús",
+    "foco": "50% 25%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/DTC0OK1DbQ0/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "el-resucitado-cordoba": {
@@ -3652,6 +3724,18 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de la Esperanza Coronada",
     "foco": "50% 0%"
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/la-esperanza-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Gran Poder",
+    "titular": "Nuestro Padre Jesús del Gran Poder",
+    "foco": "22% 30%",
+    "foco_ficha": "0% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/CMkaiuInvKU/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "el-cautivo-huelva": {
@@ -3740,6 +3824,18 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Amargura Coronada",
     "foco": "50% 6%"
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/el-huerto-granada-cristo.jpg",
+    "titulo": "Cedida: Oración en el Huerto",
+    "titular": "Oración en el Huerto",
+    "foco": "45% 30%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/CWqouGDsIu7/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   },
   "el-resucitado-granada": {
@@ -4782,6 +4878,48 @@
     "titular": "Nuestro Padre Jesús Nazareno de la Obediencia",
     "foco": "45% 30%",
     "permiso": "Publicada por la propia hermandad en @merced_y_obediencia_cadiz (https://www.instagram.com/p/DfMcgt9osLC/, noviembre de 2026), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "la-borriquilla-granada": {
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/la-borriquilla-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Paz",
+    "titular": "Nuestra Señora de la Paz",
+    "foco": "50% 30%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/CONj9e9nes9/. Con su firma intacta; foco_ficha para que se vea en la ficha."
+   }
+  },
+  "el-via-crucis-granada": {
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/el-via-crucis-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Amargura",
+    "titular": "Nuestro Padre Jesús de la Amargura",
+    "foco": "50% 40%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/DRatbzvjN2_/ (imagen 5). Con su firma intacta; foco_ficha para que se vea en la ficha."
+   }
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/granada/soledad-de-nuestra-senora-humildad-granada-virgen.jpg",
+    "titulo": "Cedida: Soledad de Nuestra Señora",
+    "titular": "Soledad de Nuestra Señora",
+    "foco": "50% 25%",
+    "foco_ficha": "50% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/Cb7nh0cspaH/. Con su firma intacta; foco_ficha para que se vea en la ficha."
    }
   }
  }

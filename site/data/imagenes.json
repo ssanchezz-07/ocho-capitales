@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T23:33:53.915Z",
+ "generado": "2026-11-09T07:13:06.935Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4428,17 +4428,22 @@
   "nuestra-senora-de-los-dolores-granada": {
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1200,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Manuel_Prados",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaGranadaLosDolores1.jpg",
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 30%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/nuestra-senora-de-los-dolores-granada-virgen.jpg",
+    "tam": 449067,
     "titular": "Nuestra Señora de los Dolores"
    }
   },
@@ -4476,6 +4481,26 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_San_Agust%C3%ADn_Granada.jpg",
     "titular": "Santísimo Cristo de San Agustín",
     "foco": "50% 11%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 30%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/cristo-de-san-agustin-granada-virgen.jpg",
+    "tam": 4200357,
+    "titular": "Nuestra Madre y Señora de la Consolación"
    }
   },
   "la-lanzada-granada": {
@@ -4515,17 +4540,22 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1200,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "José Luis Filpo Cabana",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 25%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-canilla-granada-virgen.jpg",
+    "tam": 650248,
     "titular": "Soledad de Nuestra Señora"
    }
   },
@@ -4564,18 +4594,43 @@
   "paciencia-y-penas-granada": {
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1200,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Diego",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Las_penas_gr.jpg",
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 40%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/paciencia-y-penas-granada-virgen.jpg",
+    "tam": 656907,
     "titular": "María Santísima de las Penas"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "45% 20%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/paciencia-y-penas-granada-cristo.jpg",
+    "tam": 1143559,
+    "titular": "Nuestro Padre Jesús de la Paciencia"
    }
   },
   "tres-caidas-y-rosario-granada": {
@@ -7880,6 +7935,26 @@
     ],
     "titular": "Nuestro Padre Jesús de la Pasión",
     "foco": "50% 52%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 30%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-estrella-granada-virgen.jpg",
+    "tam": 519280,
+    "titular": "María Santísima de la Estrella"
    }
   },
   "el-silencio-granada": {
@@ -7969,6 +8044,26 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg",
     "titular": "Nuestra Señora de la Soledad",
     "foco": "50% 10%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 539,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "40% 45%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/las-chias-granada-cristo.jpg",
+    "tam": 233591,
+    "titular": "Cristo del Descendimiento"
    }
   },
   "los-facundillos-granada": {
@@ -7986,6 +8081,26 @@
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santo_Domingo_(Granada).jpg",
     "titular": "Iglesia de Santo Domingo"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 25%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/los-facundillos-granada-cristo.jpg",
+    "tam": 627141,
+    "titular": "Dulce Nombre de Jesús"
    }
   },
   "el-resucitado-cordoba": {
@@ -8940,6 +9055,26 @@
     "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada_santa_ana_exterior.jpg",
     "titular": "Iglesia de San Gil y Santa Ana (Plaza Nueva)"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 639,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "22% 30%",
+    "focoFicha": "0% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-esperanza-granada-cristo.jpg",
+    "tam": 420948,
+    "titular": "Nuestro Padre Jesús del Gran Poder"
    }
   },
   "el-cautivo-huelva": {
@@ -9086,6 +9221,26 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Amargura_granada.jpg",
     "titular": "María Santísima de la Amargura Coronada",
     "foco": "50% 6%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "45% 30%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-huerto-granada-cristo.jpg",
+    "tam": 463364,
+    "titular": "Oración en el Huerto"
    }
   },
   "el-resucitado-granada": {
@@ -10722,6 +10877,72 @@
     "tam": 792580,
     "titular": "Nuestro Padre Jesús Nazareno de la Obediencia"
    }
+  },
+  "la-borriquilla-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 30%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-borriquilla-granada-virgen.jpg",
+    "tam": 647576,
+    "titular": "Nuestra Señora de la Paz"
+   }
+  },
+  "el-via-crucis-granada": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 40%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-via-crucis-granada-cristo.jpg",
+    "tam": 906541,
+    "titular": "Nuestro Padre Jesús de la Amargura"
+   }
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 25%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/soledad-de-nuestra-senora-humildad-granada-virgen.jpg",
+    "tam": 650248,
+    "titular": "Soledad de Nuestra Señora"
+   }
   }
  },
  "dipticos": {
@@ -10985,6 +11206,26 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Sentencia_(Jos%C3%A9_de_Mora).jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_las_Maravillas,_Iglesia_de_San_Pedro_y_San_Pablo_(Granada).jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "cristo-de-san-agustin-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_San_Agust%C3%ADn_Granada.jpg\"|\"\"|\"\"|\"\"|\"50% 11%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/cristo-de-san-agustin-granada-virgen.jpg\"|4200357|\"\"|\"50% 30%\""
+  },
+  "la-canilla-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Granada-Iglesia_de_Santo_Domingo-3-Cristo_de_la_Humildad_(An%C3%B3nimo).JPG\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/la-canilla-granada-virgen.jpg\"|650248|\"\"|\"50% 25%\""
+  },
   "los-estudiantes-granada": {
    "w": 960,
    "h": 640,
@@ -10994,6 +11235,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Se%C3%B1or_de_la_Meditaci%C3%B3n..jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_los_Remedios.jpg\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "paciencia-y-penas-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/paciencia-y-penas-granada-cristo.jpg\"|1143559|\"\"|\"45% 20%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/paciencia-y-penas-granada-virgen.jpg\"|656907|\"\"|\"50% 40%\""
   },
   "tres-caidas-y-rosario-granada": {
    "w": 960,
@@ -11415,6 +11666,26 @@
    ],
    "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/mena-malaga-cristo.jpg\"|499090|\"\"|\"50% 30%\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/mena-malaga-virgen.jpg\"|391764|\"\"|\"50% 45%\""
   },
+  "la-estrella-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_de_la_Pasi%C3%B3n._Granada.jpg\"|\"\"|\"\"|[0.3,0.15,0.4,0.37]|\"50% 52%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/la-estrella-granada-virgen.jpg\"|519280|\"\"|\"50% 30%\""
+  },
+  "las-chias-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/las-chias-granada-cristo.jpg\"|233591|\"\"|\"40% 45%\"|\"https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Soledad,_Granada.jpg\"|\"\"|\"\"|\"\"|\"50% 10%\""
+  },
   "el-despojado-cadiz": {
    "w": 960,
    "h": 640,
@@ -11535,6 +11806,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Humildad.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:MARIA_SANT%C3%8DSIMA_VICTORIA_HUELVA.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "la-esperanza-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/la-esperanza-granada-cristo.jpg\"|420948|\"\"|\"22% 30%\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Iglesia_Santa_Ana.jpg\"|\"\"|\"\"|\"\"|\"50% 0%\""
+  },
   "dolores-de-churriana-malaga": {
    "w": 960,
    "h": 640,
@@ -11544,6 +11825,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/pasoydolores\"|\"scripts/cedidas/malaga/dolores-de-churriana-malaga-cristo.jpg\"|766346|\"\"|\"50% 35%\"|\"https://www.instagram.com/pasoydolores\"|\"scripts/cedidas/malaga/dolores-de-churriana-malaga-virgen.jpg\"|479730|\"\"|\"50% 35%\""
+  },
+  "el-huerto-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/el-huerto-granada-cristo.jpg\"|463364|\"\"|\"45% 30%\"|\"https://commons.wikimedia.org/wiki/File:Amargura_granada.jpg\"|\"\"|\"\"|\"\"|\"50% 6%\""
   },
   "el-despojado-silencio-blanco-granada": {
    "w": 960,

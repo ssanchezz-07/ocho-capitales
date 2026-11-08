@@ -37,7 +37,9 @@
   "Cristo_de_la_Expiración.JPG": "Es la foto del cartel de la Semana Santa de 2009: el diseño del cartel puede no ser del autor que la subió (antes retirada solo en la-expiracion-cadiz|cristo y |ficha).",
   "La_Virgen_de_los_Dolores_vestida_para_el_Miércoles_Santo.jpg": "Foto de Luis Manuel Gómez Pozo («Luisma»), que el 5-nov-2026 dijo que no quiere colaborar con fotos en una web: aunque su licencia lo permita, no se publica (Pablo, por coordinación, 8-nov: «sustitúyela sí o sí»).",
   "María_Santísima_de_Dolores_y_Esperanza.jpg": "Foto de Luis Manuel Gómez Pozo («Luisma»), que el 5-nov-2026 dijo que no quiere colaborar con fotos en una web: aunque su licencia lo permita, no se publica (Pablo, por coordinación, 8-nov: «sustitúyela sí o sí»).",
-  "Humildad_malaga.png": "Original de 334 px: no da la calidad (antes retirada solo en humildad-malaga|cristo)."
+  "Humildad_malaga.png": "Original de 334 px: no da la calidad (antes retirada solo en humildad-malaga|cristo).",
+  "Cofradía_de_Nazarenos_de_Nuestro_Padre_Jesús_de_la_Pasión_y_María_Santísima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG": "La foto es el paso de Nuestro Padre Jesús de la Pasión de noche (revisión a ojo), no la Virgen de la Estrella. (antes retirada solo en la-estrella-granada|virgen)",
+  "Las_penas_gr.jpg": "Paso de palio visto de lejos: la Virgen de las Penas casi no se ve. Mejor la estampa hasta tener una foto de la titular. (antes retirada solo en paciencia-y-penas-granada|virgen)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -52,10 +54,6 @@
    "archivo": "Cordoba_-_Iglesia_de_Nuestra_Señora_de_Gracia_(Trinitariios)_0.jpg",
    "motivo": "Es la fachada de la iglesia de los Trinitarios, no el Cristo de Gracia (sigue como foto de la ficha)."
   },
-  "la-estrella-granada|virgen": {
-   "archivo": "Cofradía_de_Nazarenos_de_Nuestro_Padre_Jesús_de_la_Pasión_y_María_Santísima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG",
-   "motivo": "La foto es el paso de Nuestro Padre Jesús de la Pasión de noche (revisión a ojo), no la Virgen de la Estrella."
-  },
   "la-sanidad-cadiz|sede": {
    "archivo": "Iglesia_de_Santa_Cruz.jpg",
    "motivo": "«Iglesia de Santa Cruz»: en primer plano sale una garita de la muralla (categoría «Bartizans in Cádiz»), no el templo."
@@ -63,10 +61,6 @@
   "santo-entierro-cadiz|sede": {
    "archivo": "Iglesia_de_Santa_Cruz.jpg",
    "motivo": "La misma foto de la garita de la muralla delante de Santa Cruz."
-  },
-  "paciencia-y-penas-granada|virgen": {
-   "archivo": "Las_penas_gr.jpg",
-   "motivo": "Paso de palio visto de lejos: la Virgen de las Penas casi no se ve. Mejor la estampa hasta tener una foto de la titular."
   },
   "la-borriquilla-granada|ficha": {
    "archivo": "Cortejo_de_palmas_de_la_Borriquilla_en_Granada.jpg",
@@ -83,10 +77,6 @@
   "los-facundillos-granada|sede": {
    "archivo": "Iglesia_de_Santo_Domingo_(Granada).jpg",
    "motivo": "Fachada del templo en lugar de un titular."
-  },
-  "la-canilla-granada|virgen": {
-   "archivo": "Nuestra_Señora_de_la_Soledad,_Granada.jpg",
-   "motivo": "La ficha de Commons dice «Monasterio de San Jerónimo… titular de la Pontificia y Real Hermandad de Nuestra Señora de la Soledad y Descendimiento» (GPS en San Jerónimo): es la Soledad de las Chías, no la de la Cañilla. Pasa a las Chías."
   },
   "mediadora-malaga|ficha": {
    "archivo": "Mediadora02.jpg",
