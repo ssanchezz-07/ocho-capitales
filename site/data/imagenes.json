@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T22:56:37.752Z",
+ "generado": "2026-11-08T23:28:38.645Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5683,6 +5683,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:CRISTO_DEL_PERD%C3%93N,_C%C3%81DIZ.jpg",
     "titular": "Santísimo Cristo del Perdón",
     "foco": "50% 23%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Perdón (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiaperdonyrosario/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/el-perdon-cadiz-virgen.jpg",
+    "tam": 675985,
+    "titular": "María Santísima del Rosario"
    }
   },
   "el-descendimiento-cadiz": {
@@ -8161,6 +8180,25 @@
     "local": "scripts/cedidas/cadiz/nazareno-del-amor-cadiz-virgen.jpg",
     "tam": 118928,
     "titular": "Nuestra Señora de la Esperanza"
+   },
+   "cristo": {
+    "w": 755,
+    "h": 850,
+    "widths": [
+     160,
+     480,
+     755
+    ],
+    "escudo": false,
+    "autor": "Nazareno del Amor (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadamorcadiz/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/nazareno-del-amor-cadiz-cristo.jpg",
+    "tam": 202212,
+    "titular": "Nuestro Padre Jesús Nazareno del Amor"
    }
   },
   "vera-cruz-cadiz": {
@@ -8476,6 +8514,25 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Nuestra_Se%C3%B1ora_de_la_Merced,_C%C3%A1diz.jpg",
     "titular": "Iglesia de la Merced"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1396,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Siete Palabras (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sietepalabrascadiz/",
+    "foco": "30% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/siete-palabras-cadiz-cristo.jpg",
+    "tam": 342643,
+    "titular": "Santísimo Cristo de la Sed"
    }
   },
   "ecce-mater-tua-cadiz": {
@@ -8493,6 +8550,25 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santiago,_C%C3%A1diz.jpg",
     "titular": "Iglesia de Santiago"
+   },
+   "virgen": {
+    "w": 899,
+    "h": 899,
+    "widths": [
+     160,
+     480,
+     899
+    ],
+    "escudo": false,
+    "autor": "Ecce Mater Tua (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/eccematertuacadiz/",
+    "foco": "45% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/ecce-mater-tua-cadiz-virgen.jpg",
+    "tam": 250516,
+    "titular": "Dolorosa"
    }
   },
   "santo-entierro-cadiz": {
@@ -10452,6 +10528,25 @@
     "local": "scripts/cedidas/cadiz/la-palma-cadiz-virgen.jpg",
     "tam": 179633,
     "titular": "María Santísima de las Penas Coronada"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1293,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Palma (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lapalmacadiz/",
+    "foco": "40% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/la-palma-cadiz-cristo.jpg",
+    "tam": 1079477,
+    "titular": "Santísimo Cristo de la Misericordia"
    }
   },
   "el-prendimiento-cadiz": {
@@ -10571,6 +10666,48 @@
     "local": "scripts/cedidas/cadiz/oracion-en-el-huerto-cadiz-virgen.jpg",
     "tam": 454592,
     "titular": "Nuestra Señora de Gracia y Esperanza"
+   }
+  },
+  "humillacion-piedad-cadiz": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Piedad (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/piedadcadiz/",
+    "foco": "50% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/humillacion-piedad-cadiz-cristo.jpg",
+    "tam": 1264354,
+    "titular": "Nuestro Padre Jesús de la Humillación"
+   }
+  },
+  "merced-obediencia-cadiz": {
+   "cristo": {
+    "w": 960,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Merced y Obediencia (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/merced_y_obediencia_cadiz/",
+    "foco": "45% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cadiz/merced-obediencia-cadiz-cristo.jpg",
+    "tam": 792580,
+    "titular": "Nuestro Padre Jesús Nazareno de la Obediencia"
    }
   }
  },
@@ -10995,6 +11132,16 @@
    ],
    "firma": "\"https://consejocofradiascadiz.es/nazareno/\"|\"scripts/cedidas/cadiz/nazareno-de-santa-maria-cadiz-cristo.jpg\"|423524|\"\"|\"50% 25%\"|\"https://consejocofradiascadiz.es/nazareno/\"|\"scripts/cedidas/cadiz/nazareno-de-santa-maria-cadiz-virgen.jpg\"|178196|\"\"|\"50% 40%\""
   },
+  "el-perdon-cadiz": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:CRISTO_DEL_PERD%C3%93N,_C%C3%81DIZ.jpg\"|\"\"|\"\"|\"\"|\"50% 23%\"|\"https://www.instagram.com/cofradiaperdonyrosario/\"|\"scripts/cedidas/cadiz/el-perdon-cadiz-virgen.jpg\"|675985|\"\"|\"50% 35%\""
+  },
   "el-descendimiento-cadiz": {
    "w": 960,
    "h": 640,
@@ -11284,6 +11431,16 @@
     960
    ],
    "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|70987|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/2023/09/cultos-y-actos-en-honor-de-maria.html\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
+  },
+  "nazareno-del-amor-cadiz": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadamorcadiz/\"|\"scripts/cedidas/cadiz/nazareno-del-amor-cadiz-cristo.jpg\"|202212|\"\"|\"50% 35%\"|\"https://consejocofradiascadiz.es/nazareno-del-amor/\"|\"scripts/cedidas/cadiz/nazareno-del-amor-cadiz-virgen.jpg\"|118928|\"\"|\"50% 70%\""
   },
   "vera-cruz-cadiz": {
    "w": 960,
@@ -11624,6 +11781,16 @@
     960
    ],
    "firma": "\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg\"|97755|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg\"|175939|\"\"|\"50% 50%\""
+  },
+  "la-palma-cadiz": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/lapalmacadiz/\"|\"scripts/cedidas/cadiz/la-palma-cadiz-cristo.jpg\"|1079477|\"\"|\"40% 35%\"|\"https://consejocofradiascadiz.es/la-palma/\"|\"scripts/cedidas/cadiz/la-palma-cadiz-virgen.jpg\"|179633|\"\"|\"50% 75%\""
   },
   "el-prendimiento-cadiz": {
    "w": 960,

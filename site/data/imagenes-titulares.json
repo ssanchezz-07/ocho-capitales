@@ -1605,6 +1605,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo del Perdón",
     "foco": "50% 23%"
+   },
+   "virgen": {
+    "autor": "Perdón (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cofradiaperdonyrosario/",
+    "local": "scripts/cedidas/cadiz/el-perdon-cadiz-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rosario",
+    "titular": "María Santísima del Rosario",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia cofradía en @cofradiaperdonyrosario (https://www.instagram.com/p/DXOo4sMiMBm/, Pascua de 2026), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la cofradía con enlace a su perfil."
    }
   },
   "el-descendimiento-cadiz": {
@@ -3177,6 +3188,17 @@
     "foco": "50% 70%",
     "permiso": "Publicada por el Consejo Local de Hermandades y Cofradías de Cádiz (Gabinete de Prensa) en la página de la hermandad, sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): se usa con el crédito del Consejo y enlace a su página. Original: na_2.png en https://consejocofradiascadiz.es/nazareno-del-amor/. Con el sello del Gabinete de Prensa del Consejo entero, sin recortar (Pablo, 8-nov-2026: «súbelas con el sello del consejo mejor»). foco_ficha 50% 100% para que en la ficha se vea el sello.",
     "foco_ficha": "50% 100%"
+   },
+   "cristo": {
+    "autor": "Nazareno del Amor (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadamorcadiz/",
+    "local": "scripts/cedidas/cadiz/nazareno-del-amor-cadiz-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno del Amor",
+    "titular": "Nuestro Padre Jesús Nazareno del Amor",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia hermandad en @hdadamorcadiz (https://www.instagram.com/p/DetvYKDDEOL/, «MAYORDOMÍA | Vestimentas», octubre de 2026), sin fotógrafo citado, etiqueta ni firma. Recortada para acercar al Nazareno en su hornacina. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "vera-cruz-cadiz": {
@@ -3365,6 +3387,17 @@
     "licencia": "CC BY-SA 2.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
     "titular": "Iglesia de la Merced"
+   },
+   "cristo": {
+    "autor": "Siete Palabras (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sietepalabrascadiz/",
+    "local": "scripts/cedidas/cadiz/siete-palabras-cadiz-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Sed",
+    "titular": "Santísimo Cristo de la Sed",
+    "foco": "30% 25%",
+    "permiso": "Publicada por la propia hermandad en @sietepalabrascadiz (https://www.instagram.com/p/DV3I7H7gpXj/, cartel de la Función Principal de Instituto, marzo de 2026), sin fotógrafo citado, etiqueta ni firma; recortada la parte de la foto, sin el texto del cartel. Otros carteles de la cuenta llevan la firma de Jesús Patrón y no se usan. Regla de Pablo del 5-nov-2026: crédito a la hermandad con enlace a su perfil."
    }
   },
   "ecce-mater-tua-cadiz": {
@@ -3375,6 +3408,17 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Iglesia de Santiago"
+   },
+   "virgen": {
+    "autor": "Ecce Mater Tua (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/eccematertuacadiz/",
+    "local": "scripts/cedidas/cadiz/ecce-mater-tua-cadiz-virgen.jpg",
+    "titulo": "Cedida: Dolorosa de Ecce Mater Tua",
+    "titular": "Dolorosa",
+    "foco": "45% 30%",
+    "permiso": "Publicada por la propia Congregación Mariana Ecce Mater Tua en @eccematertuacadiz (https://www.instagram.com/p/DWoorP2jD0E/, imagen 2, marzo de 2026), sin fotógrafo citado, etiqueta ni firma. Otra foto suya (DWrLTIvjGF2) lleva firma de fotógrafo y no se usa. Regla de Pablo del 5-nov-2026: crédito a la congregación con enlace a su perfil."
    }
   },
   "santo-entierro-cadiz": {
@@ -4613,6 +4657,17 @@
     "foco": "50% 75%",
     "permiso": "Publicada por el Consejo Local de Hermandades y Cofradías de Cádiz (Gabinete de Prensa) en la página de la hermandad, sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): se usa con el crédito del Consejo y enlace a su página. Original: pal3.png en https://consejocofradiascadiz.es/la-palma/. Con el sello del Gabinete de Prensa del Consejo entero, sin recortar (Pablo, 8-nov-2026: «súbelas con el sello del consejo mejor»). foco_ficha 50% 100% para que en la ficha se vea el sello.",
     "foco_ficha": "50% 100%"
+   },
+   "cristo": {
+    "autor": "La Palma (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lapalmacadiz/",
+    "local": "scripts/cedidas/cadiz/la-palma-cadiz-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Misericordia",
+    "titular": "Santísimo Cristo de la Misericordia",
+    "foco": "40% 35%",
+    "permiso": "Publicada por la propia archicofradía en @lapalmacadiz (https://www.instagram.com/p/Dei4CM1jEL5/, «Viernes del Señor», 16-oct-2026), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-prendimiento-cadiz": {
@@ -4688,6 +4743,32 @@
     "titular": "Nuestra Señora de Gracia y Esperanza",
     "foco": "50% 35%",
     "permiso": "Publicada por el Consejo Local de Hermandades y Cofradías de Cádiz (Gabinete de Prensa) en la página de la hermandad, sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): se usa con el crédito del Consejo y enlace a su página. Original: 2-1.jpg en https://consejocofradiascadiz.es/oracion-en-el-huerto/."
+   }
+  },
+  "humillacion-piedad-cadiz": {
+   "cristo": {
+    "autor": "La Piedad (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/piedadcadiz/",
+    "local": "scripts/cedidas/cadiz/humillacion-piedad-cadiz-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Humillación",
+    "titular": "Nuestro Padre Jesús de la Humillación",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia cofradía de la Piedad en @piedadcadiz (https://www.instagram.com/p/DeyvdJ5CPdK/, imagen 2, «MAYORDOMÍA | Cambio vestimenta Humillación», octubre de 2026), sin fotógrafo citado, etiqueta ni firma (otras publicaciones de la cuenta sí citan fotógrafo y no se usan). Regla de Pablo del 5-nov-2026: crédito a la cofradía con enlace a su perfil."
+   }
+  },
+  "merced-obediencia-cadiz": {
+   "cristo": {
+    "autor": "Merced y Obediencia (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/merced_y_obediencia_cadiz/",
+    "local": "scripts/cedidas/cadiz/merced-obediencia-cadiz-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno de la Obediencia",
+    "titular": "Nuestro Padre Jesús Nazareno de la Obediencia",
+    "foco": "45% 30%",
+    "permiso": "Publicada por la propia hermandad en @merced_y_obediencia_cadiz (https://www.instagram.com/p/DfMcgt9osLC/, noviembre de 2026), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }
