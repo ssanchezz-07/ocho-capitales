@@ -32,7 +32,9 @@
   function burbuja(quien, nodo) {
     const b = document.createElement('div'); b.className = 'oc-cunao-msg is-' + quien;
     if (typeof nodo === 'string') { const p = document.createElement('p'); p.textContent = nodo; b.appendChild(p); } else b.appendChild(nodo);
-    chat.appendChild(b); chat.scrollTop = chat.scrollHeight;
+    chat.appendChild(b);
+    // la respuesta se ve desde su principio; la pregunta, al final
+    if (quien === 'cunao' && !b.classList.contains('is-pensando') && b.offsetHeight > chat.clientHeight * .7) { const prev = b.previousElementSibling; chat.scrollTo({ top: (prev || b).getBoundingClientRect().top - chat.getBoundingClientRect().top + chat.scrollTop - 8, behavior: calm ? 'auto' : 'smooth' }); } else chat.scrollTo({ top: chat.scrollHeight, behavior: calm ? 'auto' : 'smooth' });
     if (!calm) b.animate([{ opacity: 0, transform: 'translateY(8px) scale(.98)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'cubic-bezier(.23,1,.32,1)' });
     return b;
   }
@@ -40,16 +42,24 @@
   function enlace(t, href, cls) { const a = el('a', cls, t); a.href = href; if (/^https?:/.test(href) && href.indexOf(location.host) < 0) { a.target = '_blank'; a.rel = 'noopener'; } return a; }
   function chips(l) {
     const d = el('div', 'oc-cunao-chips'); d.setAttribute('role', 'group'); d.setAttribute('aria-label', 'Sugerencias');
-    l.forEach((x) => { const b = el('button', null, x[0]); b.type = 'button'; b.addEventListener('click', () => { d.querySelectorAll('button').forEach((y) => { y.disabled = true; }); preguntar(x[1], x[0]); }); d.appendChild(b); });
+    l.forEach((x) => { const b = el('button', /partida|jugar|juego/i.test(x[0]) ? 'is-juego' : null, x[0]); b.type = 'button'; b.addEventListener('click', () => { d.querySelectorAll('button').forEach((y) => { y.disabled = true; }); preguntar(x[1], x[0]); }); d.appendChild(b); });
     return d;
   }
+  const anios = (t) => String(t).replace(/\b(\d{4})-(\d{2,4})\b/g, '$1\u2011$2');
   function pintar(r) {
     const f = document.createElement('div');
+    if (r.foto) {
+      const t = enlace('', r.foto.href, 'oc-cunao-tarjeta'); t.textContent = '';
+      const im = el('img'); im.src = r.foto.src; im.alt = ''; im.width = 52; im.height = 52; im.loading = 'lazy'; im.decoding = 'async'; if (r.foto.dip) { im.className = 'is-dip'; im.width = 78; } if (r.foto.foco) im.style.objectPosition = r.foto.foco;
+      im.addEventListener('error', () => im.remove());
+      const d = el('div'); d.appendChild(el('b', null, r.foto.nombre)); d.appendChild(el('small', null, r.foto.sub + ' · ver su ficha'));
+      t.append(im, d); f.appendChild(t);
+    }
     r.partes.forEach((p) => {
-      if (p.t === 'p') f.appendChild(el('p', null, p.x));
+      if (p.t === 'p') f.appendChild(el('p', null, anios(p.x)));
       else if (p.t === 'lista') {
         const ul = el('ul', 'oc-cunao-lista');
-        p.items.forEach((i) => { const li = el('li'); li.appendChild(i.href ? enlace(i.x, i.href) : el('b', null, i.x)); if (i.sub) li.appendChild(el('span', null, i.sub)); ul.appendChild(li); });
+        p.items.forEach((i) => { const li = el('li'); li.appendChild(i.href ? enlace(i.x, i.href) : el('b', null, i.x)); if (i.sub) { const corto = /^(≈ )?\d{1,2}:\d{2}$|^\d{4}$/.test(i.sub.trim()); li.appendChild(el('span', corto ? 'is-hora' : null, anios(i.sub))); if (!corto && i.sub.length > 18) li.classList.add('is-largo'); } ul.appendChild(li); });
         f.appendChild(ul);
       } else if (p.t === 'acc') { const d = el('div', 'oc-cunao-acc'); p.l.forEach((x) => d.appendChild(enlace(x[0], x[1], 'oc-cunao-link'))); f.appendChild(d); }
     });
@@ -89,7 +99,7 @@
   const pedidos = {};
   const version = (url.match(/\?.*$/) || [''])[0];
   const datosCiudad = (c) => pedidos[c] || (pedidos[c] = fetch(url.replace(/cunao\.json.*$/, 'cunao/' + c + '.json' + version)).then((r) => { if (!r.ok) throw 0; return r.json(); }).then((j) => motor.cargarDatos(c, j)).catch((e) => { delete pedidos[c]; throw e; }));
-  function pensando() { const b = burbuja('cunao', '…'); b.classList.add('is-pensando'); b.setAttribute('aria-hidden', 'true'); return b; }
+  function pensando() { const d = document.createElement('div'); d.className = 'oc-cunao-msg is-cunao is-pensando'; d.setAttribute('aria-hidden', 'true'); d.append(el('i'), el('i'), el('i')); chat.appendChild(d); chat.scrollTo({ top: chat.scrollHeight, behavior: calm ? 'auto' : 'smooth' }); return d; }
   function preguntar(valor, etiqueta) {
     if (!valor || !String(valor).trim()) return;
     burbuja('yo', (etiqueta || valor).trim());
@@ -109,7 +119,7 @@
   // Teclado del móvil: en el iPhone el teclado tapa la página en vez de encogerla. Mientras la hoja está abierta, se ajusta
   // al alto que queda a la vista (visualViewport), para que el campo de texto y la última respuesta no queden debajo del teclado.
   const vv = window.visualViewport;
-  const ajusta = () => { if (!vv || hoja.hidden) return; hoja.style.height = vv.height + 'px'; hoja.style.top = vv.offsetTop + 'px'; hoja.style.bottom = 'auto'; chat.scrollTop = chat.scrollHeight; };
+  const ajusta = () => { if (!vv || hoja.hidden) return; const alFinal = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 48; hoja.style.height = vv.height + 'px'; hoja.style.top = vv.offsetTop + 'px'; hoja.style.bottom = 'auto'; if (alFinal) chat.scrollTop = chat.scrollHeight; };
   const suelta_ = () => { hoja.style.height = ''; hoja.style.top = ''; hoja.style.bottom = ''; };
   function abrir() {
     ultimoFoco = document.activeElement;

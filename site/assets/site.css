@@ -1624,46 +1624,148 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 @media (hover: hover) and (pointer: fine) { .oc-cunao-btn:hover { transform: translateY(-2px) rotate(-4deg); } .oc-cunao-btn:hover .oc-cunao-bocadillo { opacity: 1; transform: none; } }
 html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 96px); }
 @media (min-width: 960px) { html:has(.oc-calle) .oc-cunao-btn { bottom: 24px; } }
-.oc-cunao .oc-sheet-panel { display: flex; flex-direction: column; height: min(78dvh, 680px); max-height: calc(100% - 8px); padding-bottom: 0; }
-/* en «En la calle», con el plano a la vista, erCuñao va en la columna de controles del plano (cunao-ui.js lo coloca): mismo tamaño, sin sombra grande */
-.oc-cunao-btn.is-control { filter: drop-shadow(0 4px 10px rgb(20 8 29 / .35)); }
-.oc-cunao-btn.is-control .oc-cunao-bocadillo { display: none; }
-@media (min-width: 760px) { .oc-cunao { display: flex; justify-content: flex-end; align-items: flex-end; padding: 24px; } .oc-cunao .oc-sheet-panel { width: 420px; border-radius: 26px; } }
-.oc-cunao-head { align-items: center; gap: 12px; }
-.oc-cunao-head .oc-cunao-cara { width: 46px; height: 46px; flex: none; box-shadow: 0 0 0 2px #d9b560; }
+/* ---------- La hoja de erCuñao (rediseño, 8-nov): terciopelo morado con luz, oro como único acento, Karantina y Heebo ----------
+   La cabecera es siempre de terciopelo con su galón (la seña de erCuñao). La conversación sigue el tema de la web:
+   en claro, papel lila con los bocadillos de erCuñao en blanco; en oscuro, el mismo terciopelo (MARKETING/ESTILO.md). */
+.oc-cunao {
+  --cu-fondo: #2b1140; --cu-texto: #f4eef9; --cu-lila: #dcc7f4; --cu-oro: #c9a14a; --cu-oro-claro: #f0d79c; --cu-linea: rgb(240 215 156 / .18); --cu-ease: cubic-bezier(.32, .72, 0, 1);
+  /* la conversación, en claro */
+  --cu-cuerpo: #f4eff9; --cu-msg: #fff; --cu-msg-texto: #2b1140; --cu-msg-borde: #e3d8ee; --cu-msg-sombra: 0 1px 2px rgb(43 17 64 / .06), 0 10px 22px -16px rgb(43 17 64 / .38);
+  --cu-fuerte: #2b1140; --cu-suave: #654a80; --cu-dato: #7a5714; --cu-caja: #f7f2fb; --cu-caja-linea: #e6dcf0; --cu-subr: rgb(154 116 40 / .6); --cu-sep: rgb(43 17 64 / .14);
+  --cu-link2: #4a2370; --cu-link2-borde: #9a7428; --cu-chip: #4a2370; --cu-chip-fondo: #faf7fd; --cu-chip-borde: #8d73ad; --cu-chip-hover: #efe7f8;
+  --cu-chipj: #6e4f12; --cu-chipj-fondo: #fbf4e3; --cu-chipj-borde: #9a7428; --cu-punto: #8a6bb0; --cu-yo-sombra: 0 6px 16px -10px rgb(43 17 64 / .45);
+  --cu-form: #fff; --cu-form-linea: #e3d8ee; --cu-input: #f4eff9; --cu-input-borde: #8d73ad; --cu-input-texto: #2b1140; --cu-ph: #6a5585; --cu-foco: #5a2a86; --cu-scroll: rgb(43 17 64 / .25); --cu-mini: #efe7f7;
+  background: rgb(13 4 20 / .55);
+}
+/* en oscuro (el del sistema o el elegido en la web), toda la hoja es terciopelo */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-cunao {
+  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
+  --cu-fuerte: #fff; --cu-suave: #dcc7f4; --cu-dato: #f0d79c; --cu-caja: rgb(0 0 0 / .18); --cu-caja-linea: rgb(240 215 156 / .18); --cu-subr: rgb(240 215 156 / .45); --cu-sep: rgb(240 215 156 / .2);
+  --cu-link2: #f0d79c; --cu-link2-borde: rgb(240 215 156 / .55); --cu-chip: #dcc7f4; --cu-chip-fondo: rgb(255 255 255 / .05); --cu-chip-borde: rgb(220 199 244 / .5); --cu-chip-hover: rgb(255 255 255 / .1);
+  --cu-chipj: #f0d79c; --cu-chipj-fondo: rgb(201 161 74 / .12); --cu-chipj-borde: rgb(240 215 156 / .6); --cu-punto: #f0d79c; --cu-yo-sombra: 0 6px 16px -10px rgb(0 0 0 / .7);
+  --cu-form: rgb(29 10 44 / .85); --cu-form-linea: rgb(240 215 156 / .18); --cu-input: rgb(255 255 255 / .08); --cu-input-borde: rgb(240 215 156 / .45); --cu-input-texto: #fff; --cu-ph: rgb(220 199 244 / .7); --cu-foco: #f0d79c; --cu-scroll: rgb(240 215 156 / .3); --cu-mini: #1d0a2c;
+} }
+:root[data-theme="dark"] .oc-cunao {
+  --cu-cuerpo: transparent; --cu-msg: rgb(255 255 255 / .07); --cu-msg-texto: #f4eef9; --cu-msg-borde: rgb(240 215 156 / .18); --cu-msg-sombra: none;
+  --cu-fuerte: #fff; --cu-suave: #dcc7f4; --cu-dato: #f0d79c; --cu-caja: rgb(0 0 0 / .18); --cu-caja-linea: rgb(240 215 156 / .18); --cu-subr: rgb(240 215 156 / .45); --cu-sep: rgb(240 215 156 / .2);
+  --cu-link2: #f0d79c; --cu-link2-borde: rgb(240 215 156 / .55); --cu-chip: #dcc7f4; --cu-chip-fondo: rgb(255 255 255 / .05); --cu-chip-borde: rgb(220 199 244 / .5); --cu-chip-hover: rgb(255 255 255 / .1);
+  --cu-chipj: #f0d79c; --cu-chipj-fondo: rgb(201 161 74 / .12); --cu-chipj-borde: rgb(240 215 156 / .6); --cu-punto: #f0d79c; --cu-yo-sombra: 0 6px 16px -10px rgb(0 0 0 / .7);
+  --cu-form: rgb(29 10 44 / .85); --cu-form-linea: rgb(240 215 156 / .18); --cu-input: rgb(255 255 255 / .08); --cu-input-borde: rgb(240 215 156 / .45); --cu-input-texto: #fff; --cu-ph: rgb(220 199 244 / .7); --cu-foco: #f0d79c; --cu-scroll: rgb(240 215 156 / .3); --cu-mini: #1d0a2c;
+}
+.oc-cunao .oc-sheet-panel {
+  display: flex; flex-direction: column; height: min(86dvh, 720px); max-height: calc(100% - 8px); padding: 6px 16px 0;
+  color: var(--cu-texto); border-radius: 24px 24px 0 0; box-shadow: 0 -18px 50px -20px rgb(0 0 0 / .6); overflow: hidden;
+  background: radial-gradient(120% 70% at 85% -10%, #5a2a86 0%, rgb(58 24 87 / 0) 60%), radial-gradient(90% 60% at 0% 110%, rgb(201 161 74 / .10), rgb(201 161 74 / 0) 60%), linear-gradient(180deg, #3a1857 0%, #2b1140 45%, #1d0a2c 100%);
+  transform: translateY(100%); transition: transform 200ms var(--cu-ease);
+}
+.oc-cunao.is-open .oc-sheet-panel { transform: none; transition-duration: 340ms; }
+.oc-cunao .oc-grabber { background: rgb(240 215 156 / .45); width: 42px; margin: 4px auto 8px; }
+/* cabecera: erCuñao, su saludo y el galón dorado */
+.oc-cunao-head { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr) 44px; grid-template-areas: 'cara texto cerrar' 'cara jugar cerrar'; align-items: center; column-gap: 12px; row-gap: 8px; padding-bottom: 16px; margin: 0; }
+.oc-cunao-head:not(:has(.oc-cunao-jugar)) { grid-template-areas: 'cara texto cerrar'; }
+.oc-cunao-head > .oc-cunao-cara { grid-area: cara; align-self: start; }
+.oc-cunao-head > div:not(.oc-cunao-galon) { grid-area: texto; }
+.oc-cunao-head > .oc-iconbtn { grid-area: cerrar; align-self: start; }
+.oc-cunao-head > .oc-cunao-jugar { grid-area: jugar; justify-self: start; }
+.oc-cunao-head .oc-cunao-cara { width: 56px; height: 56px; flex: none; box-shadow: 0 0 0 2px var(--cu-oro), 0 8px 20px -8px rgb(0 0 0 / .6); }
 .oc-cunao-head > div { flex: 1; min-width: 0; }
-.oc-cunao-head .oc-sheet-title { font: 400 1.6rem/1 var(--display); text-transform: none; color: var(--primary); margin: 0; }
-.oc-cunao-sub { margin: 2px 0 0; font-size: .82rem; color: var(--muted); }
-.oc-cunao-chat { flex: 1; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 10px; padding: 12px 2px 16px; }
-.oc-cunao-msg { max-width: 88%; min-width: 0; padding: 10px 14px; border-radius: 18px; font-size: .97rem; line-height: 1.4; overflow-wrap: break-word; word-break: normal; hyphens: manual; }
+.oc-cunao-head .oc-sheet-title { font: 400 2.1rem/.95 var(--display); letter-spacing: .01em; text-transform: none; color: var(--cu-oro-claro); margin: 0; }
+.oc-cunao-sub { margin: 4px 0 0; font-size: .86rem; line-height: 1.3; color: var(--cu-lila); text-wrap: balance; }
+.oc-cunao-head .oc-iconbtn { width: 44px; height: 44px; color: var(--cu-lila); background: rgb(255 255 255 / .06); border-radius: 50%; }
+.oc-cunao-jugar { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgb(240 215 156 / .5); color: var(--cu-oro-claro); font: 600 .86rem/1 var(--sans); text-decoration: none; white-space: nowrap; transition: transform 140ms var(--ease-out), background-color 160ms ease; }
+.oc-cunao-jugar svg { width: 16px; height: 16px; flex: none; }
+.oc-cunao-jugar:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .oc-cunao-jugar:hover { background: rgb(240 215 156 / .1); } }
+/* en el móvil la cabecera va en una fila: «Jugar» es la estrella dorada junto a cerrar (su nombre sigue para el lector de pantalla) */
+@media (max-width: 759px) {
+  .oc-cunao-head { grid-template-columns: 52px minmax(0, 1fr) 44px 44px; grid-template-areas: 'cara texto jugar cerrar'; column-gap: 10px; padding-bottom: 14px; }
+  .oc-cunao-head:not(:has(.oc-cunao-jugar)) { grid-template-columns: 52px minmax(0, 1fr) 44px; grid-template-areas: 'cara texto cerrar'; }
+  .oc-cunao-head .oc-cunao-cara { width: 52px; height: 52px; }
+  .oc-cunao-head > .oc-cunao-jugar { align-self: start; justify-self: stretch; width: 44px; padding: 0; background: rgb(201 161 74 / .16); }
+  .oc-cunao-jugar svg { width: 20px; height: 20px; }
+  .oc-cunao-jugar span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+/* con poco alto (el teclado abierto en un móvil pequeño), el saludo se esconde y la conversación gana sitio */
+@media (max-height: 560px) { .oc-cunao-sub { display: none; } .oc-cunao-head { align-items: center; } }
+/* el galón: una cinta de oro con su fleco, como el de las colgaduras */
+.oc-cunao-galon { position: absolute; left: -16px; right: -16px; bottom: 0; height: 7px; margin: 0; background: linear-gradient(180deg, #f0d79c 0 1px, #c9a14a 1px 3px, transparent 3px), repeating-linear-gradient(90deg, rgb(201 161 74 / .75) 0 2px, transparent 2px 6px); background-size: 100% 100%, 100% 4px; background-repeat: no-repeat; background-position: top, 0 3px; opacity: .9; z-index: 1; }
+/* la conversación */
+.oc-cunao-chat { flex: 1; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; display: flex; flex-direction: column; gap: 12px; margin: 0 -16px; padding: 16px 16px 18px; background: var(--cu-cuerpo); color: var(--cu-msg-texto); scrollbar-width: thin; scrollbar-color: var(--cu-scroll) transparent; }
+.oc-cunao-msg { max-width: 92%; min-width: 0; padding: 12px 14px; border-radius: 20px; font-size: .98rem; line-height: 1.45; overflow-wrap: break-word; word-break: normal; hyphens: manual; }
 .oc-cunao-msg > div { min-width: 0; max-width: 100%; }
 .oc-cunao-msg p { margin: 0; }
-.oc-cunao-msg p + p, .oc-cunao-msg p + ul, .oc-cunao-msg ul + div, .oc-cunao-msg p + div { margin-top: 8px; }
-.oc-cunao-msg.is-cunao { align-self: flex-start; background: var(--surface-2); color: var(--ink); border-bottom-left-radius: 6px; }
-.oc-cunao-msg.is-yo { align-self: flex-end; background: var(--primary); color: var(--on-primary); border-bottom-right-radius: 6px; }
-.oc-cunao-lista { list-style: none; margin: 0; padding: 0; }
-.oc-cunao-lista li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
+.oc-cunao-msg p + p, .oc-cunao-msg p + ul, .oc-cunao-msg ul + p, .oc-cunao-msg ul + div, .oc-cunao-msg p + div, .oc-cunao-msg .oc-cunao-tarjeta + p { margin-top: 10px; }
+.oc-cunao-msg.is-cunao { align-self: flex-start; background: var(--cu-msg); color: var(--cu-msg-texto); border: 1px solid var(--cu-msg-borde); border-bottom-left-radius: 6px; box-shadow: var(--cu-msg-sombra); }
+.oc-cunao-msg.is-yo { align-self: flex-end; max-width: 82%; background: linear-gradient(180deg, #e2c27a, #c9a14a); color: #1d0a2c; font-weight: 600; border-bottom-right-radius: 6px; box-shadow: var(--cu-yo-sombra); }
+/* la hermandad de la respuesta: su miniatura (la misma de la web), su nombre y su ficha */
+.oc-cunao-tarjeta { display: flex; align-items: center; gap: 12px; margin: -2px 0 2px; padding: 8px; border-radius: 14px; background: var(--cu-caja); box-shadow: inset 0 0 0 1px var(--cu-caja-linea); color: inherit; text-decoration: none; }
+.oc-cunao-tarjeta img { flex: none; width: 52px; height: 52px; border-radius: 12px; object-fit: cover; box-shadow: 0 0 0 1px rgb(201 161 74 / .6); background: var(--cu-mini); }
+/* díptico (Cristo y Virgen en una foto 3:2): entero, sin cortar por la junta */
+.oc-cunao-tarjeta img.is-dip { width: 78px; border-radius: 10px; object-fit: contain; }
+.oc-cunao-tarjeta b { display: block; color: var(--cu-fuerte); font-size: 1.02rem; line-height: 1.2; }
+.oc-cunao-tarjeta small { display: block; margin-top: 2px; color: var(--cu-suave); font-size: .82rem; }
+/* listas de datos: el nombre destacado y el dato (la hora en Geist Mono) en oro */
+.oc-cunao-lista { list-style: none; margin: 0; padding: 0; border-radius: 14px; background: var(--cu-caja); box-shadow: inset 0 0 0 1px var(--cu-caja-linea); }
+.oc-cunao-lista li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; padding: 9px 12px; border-top: 1px solid var(--cu-caja-linea); }
 .oc-cunao-lista li:first-child { border-top: 0; }
 /* min-width: auto y break-word: una hora («15:15») o una palabra («Descendimiento») nunca se parten; solo se corta lo que no cabe ni en una línea entera */
 .oc-cunao-lista a, .oc-cunao-lista b, .oc-cunao-lista span { min-width: auto; overflow-wrap: break-word; }
-/* y si algo no cabe ni en una línea (una dirección web, por ejemplo), la fila se parte en dos y no se sale de la burbuja */
-.oc-cunao-lista li { flex-wrap: wrap; }
-.oc-cunao-lista a, .oc-cunao-lista b { flex: 1 1 0; max-width: 100%; }
-.oc-cunao-lista span { margin-left: auto; }
-.oc-cunao-lista a { color: var(--primary); font-weight: 600; text-decoration: none; }
-.oc-cunao-lista span { flex: 0 1 auto; max-width: 62%; text-align: right; color: var(--gold-ink); font-variant-numeric: tabular-nums; font-weight: 600; font-size: .9rem; }
-.oc-cunao-chips, .oc-cunao-acc { display: flex; flex-wrap: wrap; gap: 6px; }
-.oc-cunao-chips button { min-height: 36px; max-width: 100%; padding: 8px 12px; white-space: normal; text-align: left; overflow-wrap: break-word; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent); background: var(--surface); color: var(--primary); font: 600 .86rem/1.2 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
-.oc-cunao-chips button:active { transform: scale(.96); }
-.oc-cunao-link { display: inline-flex; align-items: center; min-height: 36px; max-width: 100%; padding: 8px 14px; white-space: normal; overflow-wrap: anywhere; word-break: normal; border-radius: 18px; background: var(--primary); color: var(--on-primary); font: 600 .86rem/1.2 var(--sans); text-decoration: none; }
-.oc-cunao-link + .oc-cunao-link { background: var(--surface); color: var(--primary); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 35%, transparent); }
-.oc-cunao-form { display: flex; gap: 8px; padding: 10px 0 calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
-.oc-cunao-form input { flex: 1; min-width: 0; height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--line-strong) 70%, transparent); background: var(--surface); color: var(--ink); font-size: 16px; }
-.oc-cunao-form input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 16%, transparent); }
-.oc-cunao-enviar { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--primary); color: var(--on-primary); cursor: pointer; transition: transform 140ms var(--ease-out); }
+.oc-cunao-lista a, .oc-cunao-lista b { flex: 1 1 0; max-width: 100%; color: var(--cu-fuerte); font-weight: 600; }
+.oc-cunao-lista a { text-decoration: underline; text-decoration-color: var(--cu-subr); text-underline-offset: 3px; }
+/* la fila con enlace: el enlace ocupa toda su altura (44 px para el dedo) */
+.oc-cunao-lista li:has(> a) { padding-block: 0; }
+.oc-cunao-lista li > a { display: flex; align-items: center; min-height: 44px; padding-block: 6px; }
+.oc-cunao-lista li.is-largo:has(> a) span { padding-bottom: 9px; margin-top: -6px; }
+.oc-cunao-lista span { flex: 0 1 auto; margin-left: auto; max-width: 62%; text-align: right; color: var(--cu-dato); font-size: .9rem; font-weight: 500; }
+/* con un dato largo (el autor y su año, la banda), el nombre arriba y el dato debajo */
+.oc-cunao-lista li.is-largo a, .oc-cunao-lista li.is-largo b { flex-basis: 100%; }
+.oc-cunao-lista li.is-largo span { flex-basis: 100%; max-width: 100%; margin-left: 0; text-align: left; }
+.oc-cunao-lista .is-hora { font-family: "Geist Mono", ui-monospace, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+/* botones y sugerencias: 44 px, el primero en oro */
+.oc-cunao-chips, .oc-cunao-acc { display: flex; flex-wrap: wrap; gap: 8px; }
+.oc-cunao-msg .oc-cunao-acc { margin-top: 12px; }
+.oc-cunao-msg .oc-cunao-acc + .oc-cunao-chips, .oc-cunao-msg p + .oc-cunao-chips, .oc-cunao-msg ul + .oc-cunao-chips { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--cu-sep); }
+.oc-cunao-link { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; padding: 10px 16px; white-space: normal; overflow-wrap: anywhere; word-break: normal; border-radius: 22px; background: var(--cu-oro); color: #1d0a2c; font: 700 .9rem/1.2 var(--sans); text-decoration: none; transition: transform 140ms var(--ease-out); }
+.oc-cunao-link + .oc-cunao-link { background: transparent; color: var(--cu-link2); box-shadow: inset 0 0 0 1px var(--cu-link2-borde); font-weight: 600; }
+.oc-cunao-link:active { transform: scale(.97); }
+.oc-cunao-chips button { min-height: 44px; max-width: 100%; padding: 10px 14px; white-space: normal; text-align: left; overflow-wrap: break-word; border-radius: 22px; border: 1px solid var(--cu-chip-borde); background: var(--cu-chip-fondo); color: var(--cu-chip); font: 600 .88rem/1.2 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out), background-color 160ms ease; }
+.oc-cunao-chips button.is-juego { border-color: var(--cu-chipj-borde); color: var(--cu-chipj); background: var(--cu-chipj-fondo); }
+.oc-cunao-chips button:active { transform: scale(.97); }
+.oc-cunao-chips button:disabled { opacity: .55; }
+@media (hover: hover) and (pointer: fine) { .oc-cunao-chips button:hover:not(:disabled) { background: var(--cu-chip-hover); } }
+/* «escribiendo…»: tres puntos que se encienden una vez (sin bucle) */
+.oc-cunao-msg.is-pensando { display: flex; gap: 5px; padding: 14px 16px; }
+.oc-cunao-msg.is-pensando i { width: 7px; height: 7px; border-radius: 50%; background: var(--cu-punto); opacity: .3; animation: oc-cunao-punto 520ms var(--ease-out) forwards; }
+.oc-cunao-msg.is-pensando i:nth-child(2) { animation-delay: 120ms; } .oc-cunao-msg.is-pensando i:nth-child(3) { animation-delay: 240ms; }
+@keyframes oc-cunao-punto { to { opacity: 1; transform: translateY(-2px); } }
+/* el campo de escribir, siempre abajo y por encima del teclado y de la zona segura */
+.oc-cunao-form { display: flex; gap: 8px; margin: 0 -16px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--cu-form-linea); background: var(--cu-form); }
+.oc-cunao-form input { flex: 1; min-width: 0; height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--cu-input-borde); background: var(--cu-input); color: var(--cu-input-texto); font-size: 16px; }
+.oc-cunao-form input::placeholder { color: var(--cu-ph); }
+.oc-cunao-form input:focus { outline: none; border-color: var(--cu-foco); box-shadow: 0 0 0 2px var(--cu-foco); }
+.oc-cunao-enviar { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--cu-oro); color: #1d0a2c; cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-cunao-enviar:active { transform: scale(.93); }
 .oc-cunao-enviar svg { width: 20px; height: 20px; }
-@media (prefers-reduced-motion: reduce) { .oc-cunao-bocadillo { transition: none; } }
+.oc-cunao :focus-visible { outline: 2px solid var(--cu-oro-claro); outline-offset: 2px; }
+.oc-cunao-chat :focus-visible, .oc-cunao-form :focus-visible { outline-color: var(--cu-foco); }
+/* con la hoja abierta, el botón redondo no asoma por la esquina de la ventana */
+.oc-cunao-btn[aria-expanded="true"] { opacity: 0; pointer-events: none; }
+/* en la tableta y el ordenador: una ventana flotante abajo a la derecha, junto al botón (por encima de la barra de abajo, si la hay) */
+@media (min-width: 760px) {
+  .oc-cunao { display: flex; justify-content: flex-end; align-items: flex-end; padding: 24px 24px calc(24px + var(--tabbar-h) + env(safe-area-inset-bottom)); background: rgb(13 4 20 / .25); }
+  .oc-cunao .oc-sheet-panel { width: 420px; height: min(720px, calc(100dvh - 48px - var(--tabbar-h) - env(safe-area-inset-bottom))); border-radius: 24px; padding-top: 16px; box-shadow: 0 30px 80px -24px rgb(0 0 0 / .7), 0 0 0 1px rgb(240 215 156 / .15); transform: translateY(14px) scale(.98); opacity: 0; transform-origin: 100% 100%; transition: transform 200ms var(--ease-out), opacity 160ms ease; }
+  .oc-cunao.is-open .oc-sheet-panel { transform: none; opacity: 1; transition-duration: 240ms, 200ms; }
+  .oc-cunao-form { border-radius: 0 0 24px 24px; padding-bottom: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oc-cunao .oc-sheet-panel, .oc-cunao.is-open .oc-sheet-panel { transform: none; transition: opacity 160ms ease; }
+  .oc-cunao-msg.is-pensando i { animation: none; opacity: .8; }
+  .oc-cunao-chat { scroll-behavior: auto; }
+  .oc-cunao-bocadillo { transition: none; }
+}
+/* en «En la calle», con el plano a la vista, erCuñao va en la columna de controles del plano (cunao-ui.js lo coloca): mismo tamaño, sin sombra grande */
+.oc-cunao-btn.is-control { filter: drop-shadow(0 4px 10px rgb(20 8 29 / .35)); }
+.oc-cunao-btn.is-control .oc-cunao-bocadillo { display: none; }
 
 /* «En el plano» en cada capital de Hoy */
 .oc-group-plano { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 6px; padding: 0 14px 0 12px; border-radius: 999px; background: color-mix(in srgb, var(--c) 12%, var(--surface)); color: var(--primary); font-weight: 600; font-size: .9rem; text-decoration: none; transition: transform 140ms var(--ease-out); }

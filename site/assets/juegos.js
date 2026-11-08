@@ -172,7 +172,7 @@
       const fo = modo === 'foto' ? J.fo[h.fo] : null;
       const cr = fo ? ' ' + norm(fo[1] + ' ' + (fo[2] || '')) + ' ' : '', enCredito = (x) => palabrasNombre(x.n).some((w) => cr.indexOf(' ' + w + ' ') >= 0);
       const revela = fo && enCredito(h), otra = fo && !revela && deCap(h.c).some((x) => x !== h && enCredito(x));
-      const leyenda = fo ? (revela ? 'Foto: de la propia hermandad (el crédito, al responder)' : otra ? 'Foto: de una hermandad de la capital (el crédito, al responder)' : 'Foto: ' + fo[1] + (fo[2] ? ' · ' + fo[2] : '')) : '';
+      const leyenda = fo ? (revela ? 'Foto: de la propia hermandad (el crédito, al responder)' : otra ? 'Foto: el crédito, al responder' : 'Foto: ' + fo[1] + (fo[2] ? ' · ' + fo[2] : '')) : '';
       return { cat: { naz: 'Nazarenos', foto: 'Titulares', ruta: 'Recorridos' }[modo], q: QT[modo], ...o, media: { k: modo, i: h[campo], color: CAP.get(h.c).color, leyenda }, explica: modo === 'naz' ? 'Es el hábito ' + conCap(h, 'de') + ', dibujado con los colores que da su ficha.' : modo === 'ruta' ? 'Es el recorrido ' + conCap(h, 'de') + ' (último itinerario publicado). El punto marca la salida' + (J.ru[h.ru] && J.ru[h.ru].length > 3 ? ' y el rombo, la carrera oficial.' : '.') : 'Es ' + conCap(h) + '.', credito: fo ? { autor: fo[1], licencia: fo[2], url: fo[3] } : null, enlace: ficha(h), h: h.s };
     }
 

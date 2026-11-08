@@ -186,7 +186,7 @@
     function diaEnCiudad(c, d) { const g = grupo(d); if (H.some((h) => h.c === c && h.d === d)) return d; const o = H.find((h) => h.c === c && g.indexOf(h.d) >= 0); return o ? o.d : d; }
 
     // ---- respuesta ----
-    function Resp() { return { partes: [], texto: '', enlaces: [], chips: [], necesita: null, accion: null }; }
+    function Resp() { return { partes: [], texto: '', enlaces: [], chips: [], necesita: null, accion: null, foto: null }; }
     const P = (r, x) => { r.partes.push({ t: 'p', x }); return r; };
     const LI = (r, items) => { r.partes.push({ t: 'lista', items }); return r; };
     const A = (r, l) => { l = l.filter(Boolean); if (l.length) r.partes.push({ t: 'acc', l }); return r; };
@@ -392,6 +392,8 @@
       const CD = CIUDADES[h.c];
       ctx.herm = h.s; ctx.ciudad = h.c; ctx.intent = intent; ctx.pend = null;
       r.ia = { h: [h.s] };
+      // la tarjeta de la respuesta: su miniatura (la misma de la web), su nombre y su ficha
+      if (h.im) r.foto = { src: h.im, foco: h.fo || '', dip: !!h.iw, nombre: h.n, sub: c + ' · ' + h.d, href: L.herm(h) };
       const sal = salidaTxt(h);
       const mismoDia = () => H.filter((x) => x.c === h.c && x.d === h.d).sort((a, b) => (a.o || 99) - (b.o || 99));
       switch (intent) {
@@ -485,8 +487,9 @@
           const R = CD.r[h.s];
           if (!R) { P(r, 'El itinerario ' + cabecera(h, 'de') + ' no lo tengo todavía. Sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); break; }
           P(r, 'Recorrido ' + cabecera(h, 'de') + ', ' + art(h.d) + ' (itinerario ' + (CD.anio || '') + ', horas del ' + R.k + '):');
-          LI(r, resumirRuta(R.p).map((p) => ({ x: bonito(p[1]) || '—', sub: (p[2] ? '' : '≈ ') + p[0] })));
-          P(r, '«≈» es hora aproximada (franja de media hora). Puede ir adelantada o retrasada.');
+          const rr = resumirRuta(R.p);
+          LI(r, rr.map((p) => ({ x: bonito(p[1]) || '—', sub: (p[2] ? '' : '≈ ') + p[0] })));
+          P(r, rr.some((p) => !p[2]) ? '«≈» es hora aproximada (franja de media hora). Puede ir adelantada o retrasada.' : 'Son las horas del programa: el cortejo puede ir adelantado o retrasado.');
           A(r, [['Verla en el mapa', L.calle(h.c, h.d)], ['Ver la ficha', L.herm(h)]]); break;
         }
         case 'pasapor': {

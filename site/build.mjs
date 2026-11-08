@@ -664,7 +664,7 @@ ${body}${colabora(p, title)}
 <button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
 <div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}" data-motor="${u('assets/cunao.js')}?v=${HUELLA.cunao}"${HAY_JUEGOS ? ' data-juegos' : ''}>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
-    <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa. O eso dice.</p></div><button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button></div>
+    <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana Santa, o&nbsp;eso&nbsp;dice…</p></div>${HAY_JUEGOS ? `<a class="oc-cunao-jugar" href="${u('juegos/')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 17l-5.5 3.5L8 13.7 3 9.3l6.4-.7z" fill="currentColor"/></svg><span>Jugar</span></a>` : ''}<button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button><div class="oc-cunao-galon" aria-hidden="true"></div></div>
     <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
     <form class="oc-cunao-form" data-cunao-form><label class="oc-sr" for="oc-cunao-q">Pregunta a erCuñao</label><input id="oc-cunao-q" type="text" autocomplete="off" enterkeyhint="send" placeholder="¿A qué hora sale la Macarena?" data-cunao-q><button class="oc-cunao-enviar" type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l15-7-5 15-2.5-5.5z" fill="currentColor"/></svg></button></form>
   </div>
@@ -2230,6 +2230,8 @@ function datosCunao() {
   const hs = D.hermandades.map((h) => {
     const o = {
       s: h.slug, n: h.nombre, c: h.ciudad, d: h.dia, o: h.orden, h: hhmm(h.hora), se: h.sede || '', f: h.fundacion || '', w: h.web || '',
+      // la miniatura de la web (foto del titular o, si no hay, el medallón con su nazareno), para la tarjeta de la respuesta
+      im: h.imagen && h.imagen.local && !h.imagen.escudo ? u(localUrl(h.imagen, h.imagen.sizes[0])) : medUrl(h, CAP[h.ciudad]), ...(h.imagen && h.imagen.local && h.imagen.foco ? { fo: h.imagen.foco } : {}), ...(h.imagen && h.imagen.local && !h.imagen.escudo && dipCls(h.imagen) ? { iw: 1 } : {}),
       t: (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1]),
     };
     // Música: por paso si hay acompañamiento publicado; si no, la lista de bandas de la ficha
