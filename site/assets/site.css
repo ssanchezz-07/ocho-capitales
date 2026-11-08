@@ -1505,7 +1505,7 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; border: 1px solid rgb(255 255 255 / .22); background: rgb(30 14 44 / .6); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); color: #fff; font: 600 1.3rem/1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-calle-btn:active { transform: scale(.94); }
 .oc-calle-btn svg { width: 22px; height: 22px; }
-.oc-calle-osm { position: absolute; left: 10px; top: 46px; margin: 0; padding: 2px 8px; border-radius: 6px; background: rgb(15 5 22 / .6); font-size: .66rem; line-height: 1.35; color: rgb(255 255 255 / .82); pointer-events: none; }
+.oc-calle-osm { position: absolute; left: 10px; top: 46px; margin: 0; padding: 2px 8px; border-radius: 6px; background: rgb(15 5 22 / .6); font-size: .68rem; line-height: 1.35; color: rgb(255 255 255 / .82); pointer-events: none; }
 .oc-calle-leyenda[hidden] + .oc-calle-osm { top: 10px; }
 .oc-calle-osm a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
 .oc-calle-mapa.is-error::after { content: "No se pudo cargar el plano. Comprueba la conexión."; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; }
@@ -1518,7 +1518,8 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .is-playing .oc-calle-play svg { margin: 0; }
 /* el botón de reproducir responde al instante al dedo: sin espera de doble toque, sin destello gris y sin seleccionar el icono */
 .oc-calle-play, .oc-calle-btn { touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; }
-.oc-calle-play:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+/* el plano es oscuro también en modo claro: el anillo de foco de sus botones, en oro (el morado no se veía) */
+.oc-calle-btn:focus-visible { outline-color: #e2c47a; }
 .oc-calle-tiempo { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .oc-calle-hora { font: 400 1.9rem/1 var(--display); color: var(--primary); font-variant-numeric: tabular-nums; }
 .oc-calle-tiempo input { width: 100%; accent-color: var(--primary); height: 44px; margin: -6px 0 -10px; }

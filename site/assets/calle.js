@@ -127,6 +127,7 @@
     tapas.forEach(function (c) { cajas.push(c); });
     var cabe = function (cx, cy, w, h, ang) {
       var r = ang * Math.PI / 180, hw = (Math.abs(Math.cos(r)) * w + Math.abs(Math.sin(r)) * h) / 2, hh = (Math.abs(Math.sin(r)) * w + Math.abs(Math.cos(r)) * h) / 2;
+      if (cx - hw < 2 || cx + hw > W - 2 || cy - hh < 2 || cy + hh > H - 2) return false; // nada de letras cortadas en el borde del plano
       for (var i = 0; i < cajas.length; i++) { var c = cajas[i]; if (Math.abs(c[0] - cx) < c[2] + hw && Math.abs(c[1] - cy) < c[3] + hh) return false; }
       cajas.push([cx, cy, hw, hh]); return true;
     };
