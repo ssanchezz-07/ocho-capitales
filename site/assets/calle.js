@@ -499,7 +499,7 @@
   // ---------- jornada, reloj y reproducción ----------
   var playing = false, raf = 0;
   function ponerDia(d) {
-    if (sel && sel.d !== d) cerrar(); // la ficha de otra jornada no se queda abierta
+    if (sel && sel.d !== d) { abridor = null; cerrar(); } // la ficha de otra jornada no se queda abierta (y el foco sigue en la pestaña)
     dia = d; $$('[data-dia]').forEach(function (b) {
       var si = b.getAttribute('data-dia') === d; b.setAttribute('aria-selected', si ? 'true' : 'false');
       // la pestaña elegida, a la vista en la tira deslizable (sin mover la página)
@@ -757,8 +757,8 @@
     // ?t=<minutos> y ?h=<hermandad>: se llega desde la portada a la misma hora y, si se tocó un medallón, con su ficha abierta
     var tq = +q.get('t'); if (q.get('t') && isFinite(tq)) { T = Math.max(+rango.min, Math.min(+rango.max, tq)); rango.value = T; capas.yaEncuadrado = false; dibujarRutas(); actualizar(); }
     var hq = q.get('h'), hh = hq && delDia().filter(function (x) { return x.s === hq; })[0]; if (hh) abrir(hh);
-    // solo si cambia el ancho: en el iPhone, la barra de Safari al plegarse lanza «resize» y no hay que rehacer nada
-    var anchoAntes = innerWidth;
-    window.addEventListener('resize', function () { if (innerWidth === anchoAntes) return; anchoAntes = innerWidth; capas.yaEncuadrado = false; dibujarRutas(); if (sel) marcarSel(sel); actualizar(); });
+    // solo si cambia el tamaño del plano: en el iPhone la barra de Safari lanza «resize» al plegarse, pero el plano (en svh) no cambia
+    var tamAntes = mapa.clientWidth + 'x' + mapa.clientHeight;
+    window.addEventListener('resize', function () { var t = mapa.clientWidth + 'x' + mapa.clientHeight; if (t === tamAntes) return; tamAntes = t; capas.yaEncuadrado = false; dibujarRutas(); if (sel) marcarSel(sel); actualizar(); });
   }
 })();
