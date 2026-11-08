@@ -34,14 +34,6 @@
   "Granpoder.jpg": "misericordia-malaga (virgen): Palio de lejos entre la candelería: no se distingue la cara de la Virgen (auditor, 3-nov)."
  },
  "retiradas_en": {
-  "el-descendimiento-cadiz|virgen": {
-   "archivo": "Virgen_de_los_Dolores,_Cádiz.jpg",
-   "motivo": "La ficha dice que es «the original titular image of the Third Order of Servites of Cádiz» (Montes de Oca, 1729), en una hornacina de San Lorenzo: es de los Servitas, no la Virgen de los Dolores del Descendimiento."
-  },
-  "servitas-cadiz|virgen": {
-   "archivo": "Virgen_de_los_Dolores,_Cádiz.jpg",
-   "motivo": "La misma ficha: la imagen original de los Servitas, hoy en una hornacina exterior de San Lorenzo; no consta que sea la titular que procesiona."
-  },
   "servitas-cadiz|ficha": {
    "archivo": "SERVITAS_DE_CÁDIZ.jpg",
    "motivo": "La hornacina exterior de San Lorenzo con la imagen antigua de los Servitas; no consta que sea la titular que procesiona."
@@ -370,10 +362,6 @@
    "archivo": "Iglesia_de_San_Antonio_de_Padua,_Cádiz.jpg",
    "motivo": "Templo en lugar de un titular."
   },
-  "la-expiracion-cadiz|cristo": {
-   "archivo": "Cristo_de_la_Expiración.JPG",
-   "motivo": "Es la foto del cartel de la Semana Santa de 2009: el diseño del cartel puede no ser del autor que la subió."
-  },
   "la-expiracion-cadiz|ficha": {
    "archivo": "Cristo_de_la_Expiración.JPG",
    "motivo": "La misma foto del cartel."
@@ -513,10 +501,6 @@
   "presentacion-al-pueblo-cordoba|ficha": {
    "archivo": "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",
    "motivo": "La misma foto."
-  },
-  "medinaceli-cadiz|cristo": {
-   "archivo": "Paso_del_Cristo_de_Medinaceli_de_Cádiz.jpg",
-   "motivo": "De noche: no se distingue la cara; original de 720 px."
   },
   "el-amor-almeria|ficha": {
    "archivo": "Procesión_Amor_01.jpg",
