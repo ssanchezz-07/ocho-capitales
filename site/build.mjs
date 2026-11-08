@@ -1892,7 +1892,7 @@ function pageOffline() {
 }
 function escribeSw() {
   // la carcasa: lo que se guarda al instalar para abrir al instante y sin conexión (el resto se guarda al visitarlo)
-  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/vida.css?v=' + HUELLA.vida, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao-ui.js?v=' + HUELLA.cunaoui, BASE + 'assets/cunao.js?v=' + HUELLA.cunao,
+  const carcasa = [BASE, BASE + 'offline/', BASE + 'assets/site.css?v=' + HUELLA.css, BASE + 'assets/vida.css?v=' + HUELLA.vida, BASE + 'assets/site.js?v=' + HUELLA.js, BASE + 'assets/cunao-ui.js?v=' + HUELLA.cunaoui, // el motor (cunao.js) no: se pide y se guarda al abrir erCuñao, con sus datos
     ...['karantina-latin.woff2', 'heebo-latin.woff2'].map((f) => BASE + 'assets/fonts/' + f), ...D.capitales.map((c) => BASE + 'assets/plates/colgadura-' + c.slug + '.webp'), BASE + 'assets/icon.svg'];
   swDespliegue({ DIST, BASE, carcasa });
 }

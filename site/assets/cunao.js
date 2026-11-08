@@ -266,7 +266,7 @@
       if (T(/\b(quien eres|que eres|como te llamas|eres una? (ia|robot|bot|maquina))\b/)) return 'quien';
       if (T(/\b(que sabes( hacer)?|que puedes hacer|ayuda|ayudame|como funciona|que te puedo preguntar)\b/) || (T(/\binstrucciones\b/) && n.split(' ').length <= 3)) return 'ayuda';
       if (T(/\b(error|errores|equivocad\w*|sugerencia|sugerir|corregir|avisar de|aviso|un dato (esta )?mal|esta mal|falta (un|una|informacion|algo|el|la)\b|tengo una idea|enviar una sugerencia)/) && !T(/cuanto falta/)) return 'sugerencia';
-      if (T(/\bquien (lo |la |los |las |le )?(tallo|talla|esculpio|realizo|labro)\b|\b(quien es|cual es) el (imaginero|escultor|autor) de\b|\bde quien es (la imagen|el cristo|la virgen)\b/)) return 'autor';
+      if (T(/\bquien (lo |la |los |las |le )?(tallo|talla|esculpio|realizo|labro)\b|\b(quien es|cual es) el (imaginero|escultor|autor) del?\b|\bde quien es (la imagen|el cristo|la virgen)\b/)) return 'autor';
       if (T(/\b(carrera oficial|tribuna)\b/) && T(/\b(llega|llegan|pasa|pasan|entra|entran|hora|cuando)\b/)) return 'carrera';
       if (T(/\b(extraordinari\w*|besamanos|besapies|via ?crucis|triduo|quinario|septenario|novena|traslados?|conciertos?|pregon|cartel|agenda|esta semana|este mes|proxim[oa]s? (dias|semanas|actos|cultos|salidas|procesiones)|cultos?)\b/) && !T(/\b(fin de semana|finde)\b/)) return 'agenda';
       if (T(/\b(cuanto|cuantos dias|cuantas semanas) (falta|faltan|queda|quedan)\b|\bcuenta atras\b|\bcuando (es|empieza|cae|sera|son|llega)\b(?!.*\b(sale|salen|pasa|entra)\b)|\bque (fecha|dia) (es|cae|empieza)\b|\ben que fecha\b/)) return 'falta';
@@ -325,10 +325,14 @@
       };
       let res = e.ciudad ? puntua(e.ciudad) : puntua(null);
       if (!res.length && e.ciudad) {
-        const deC = IDX.filter((x) => x.h.c === e.ciudad), nomT = (x) => new Set(toks(x.h.n.replace(/\(.*?\)|«.*?»/g, ' ')).map(stem));
-        const enNombres = new Set(); deC.forEach((x) => nomT(x).forEach((t) => enNombres.add(t)));
-        const cn = norm(nombreCiudad(e.ciudad)), q2 = [...new Set((e.tSinDia != null ? e.tSinDia : e.t).split(' ').filter((t) => t.length > 3 && !STOP.has(t) && t !== cn).map(stem))].filter((t) => enNombres.has(t));
-        if (q2.length) { const hit = deC.filter((x) => { const n_ = nomT(x); return q2.every((t) => n_.has(t)); }); if (hit.length) res = hit.map((x) => ({ h: x.h, s: 2.2 + (nomT(x).size === q2.length ? 1 : 0), usadas: q2, frase: null })).sort((a, b) => b.s - a.s); }
+        const deC = IDX.filter((x) => x.h.c === e.ciudad), cn = norm(nombreCiudad(e.ciudad));
+        const pal = [...new Set((e.tSinDia != null ? e.tSinDia : e.t).split(' ').filter((t) => t.length > 3 && !STOP.has(t) && t !== cn).map(stem))];
+        for (const nomT of [(x) => new Set(toks(x.h.n).map(stem)), (x) => new Set(toks(x.h.n + ' ' + x.h.t.map((t) => t[0]).join(' ')).map(stem))]) {
+          const enNombres = new Set(); deC.forEach((x) => nomT(x).forEach((t) => enNombres.add(t)));
+          const q2 = pal.filter((t) => enNombres.has(t)); if (!q2.length) continue;
+          const hit = deC.filter((x) => { const n_ = nomT(x); return q2.every((t) => n_.has(t)); });
+          if (hit.length) { res = hit.map((x) => ({ h: x.h, s: 2.2 + (nomT(x).size === q2.length ? 1 : 0), usadas: q2, frase: null })).sort((a, b) => b.s - a.s); break; }
+        }
       }
       if (!res.length && e.ciudad) { const f = puntua(null); return { lista: [], fuera: f.length ? f.filter((x) => x.s >= f[0].s - 0.9).slice(0, 4) : null }; }
       if (!res.length) return { lista: [] };
@@ -592,12 +596,13 @@
       });
       ctx.dia = dia; if (ciudad) ctx.ciudad = ciudad; ctx.intent = 'lista'; ctx.herm = null;
       if (!lista_.length) { P(r, (ciudad ? 'En ' + nombreCiudad(ciudad) : 'Ese día') + ' no sale ninguna cofradía ' + art(dia) + ', que yo tenga apuntada.'); C(r, chipsDia(dia, ciudad)); return cerrar(r); }
-      lista_.sort((a, b) => (a.h.c > b.h.c ? 1 : a.h.c < b.h.c ? -1 : 0) || (minutos(a.hora) || 9999) - (minutos(b.hora) || 9999) || (a.h.o || 0) - (b.h.o || 0));
+      const diaDe = (x) => (x.extra != null ? (x.h.x || []).find((v) => g.indexOf(v[0]) >= 0)[0] : x.h.d);
+      lista_.sort((a, b) => (a.h.c > b.h.c ? 1 : a.h.c < b.h.c ? -1 : 0) || (dia === 'Vísperas' ? ordDia(diaDe(a)) - ordDia(diaDe(b)) : 0) || (minutos(a.hora) || 9999) - (minutos(b.hora) || 9999) || (a.h.o || 0) - (b.h.o || 0));
       const dd = ciudad && dia !== 'Vísperas' ? diaEnCiudad(ciudad, dia) : dia;
       P(r, cap1(art(dd)) + (ciudad ? ' en ' + nombreCiudad(ciudad) : '') + ' sale' + (lista_.length === 1 ? ' 1 cofradía' : 'n ' + lista_.length + ' cofradías') + (dd === 'Vísperas' && D.fechas['Sábado de Pasión'] ? ' (' + +D.fechas['Viernes de Dolores'].slice(8) + ' y ' + fechaLarga(D.fechas['Sábado de Pasión']) + ')' : D.fechas[dd] ? ' (' + cuandoCae(dd, true).replace(/^el /, '').replace(' (y la noche', ', y la noche').replace(/\)$/, '') + ')' : '') + ':');
-      LI(r, lista_.slice(0, 40).map((x) => ({ x: x.h.n + (x.extra ? ' (' + x.extra + ')' : ''), href: L.herm(x.h), sub: (ciudad ? '' : nombreCiudad(x.h.c) + ' · ') + (x.hora ? (x.exacta ? '' : '≈ ') + x.hora : 'hora por confirmar') })));
+      LI(r, lista_.slice(0, 40).map((x) => ({ x: x.h.n + (x.extra ? ' (' + x.extra + ')' : ''), href: L.herm(x.h), sub: (ciudad ? '' : nombreCiudad(x.h.c) + ' · ') + (dia === 'Vísperas' ? (diaDe(x) === 'Sábado de Pasión' ? 'sábado · ' : 'viernes · ') : '') + (x.hora ? (x.exacta ? '' : '≈ ') + x.hora : 'hora por confirmar') })));
       if (lista_.some((x) => x.hora)) P(r, 'Horas del último programa publicado (' + (D.anio - 1) + ').');
-      if (ciudad && D.mapa.indexOf(ciudad) >= 0) A(r, [['Verlas en el mapa', L.calle(ciudad, dia === 'Vísperas' ? 'Viernes de Dolores' : dia)]]);
+      if (ciudad && D.mapa.indexOf(ciudad) >= 0) A(r, [['Verlas en el mapa', L.calle(ciudad, dia === 'Vísperas' ? (diaDe(lista_[0]) === 'Vísperas' ? 'Viernes de Dolores' : diaDe(lista_[0])) : dia)]]);
       C(r, chipsDia(dia, ciudad));
       return cerrar(r);
     }

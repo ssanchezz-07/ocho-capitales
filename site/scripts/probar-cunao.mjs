@@ -340,6 +340,10 @@ caso('R10 con una errata no da otra marcha como la pedida', motor(), '¿Quién c
 
 console.log('— Auditoría de Coordinación 8-nov (bloque 2)');
 caso('C1 «el Nazareno de Córdoba» existe (palabra genérica)', motor(), '¿A qué hora sale el Nazareno de Córdoba?', y(contiene('Jesús Nazareno (Córdoba) sale'), noDice('no tengo ninguna')));
+caso('C1b «el Nazareno de Almería» (en el paréntesis)', motor(), '¿A qué hora sale el Nazareno de Almería?', y(contiene('(Almería)'), noDice('no tengo ninguna')));
+caso('C1c «el Nazareno de Jaén» (en el titular)', motor(), 'el nazareno de jaen', y(contiene('(Jaén)'), noDice('no tengo ninguna')));
+caso('C1d «el imaginero del Cristo…»', motor(), '¿Quién es el imaginero del Cristo de la Buena Muerte de los Estudiantes de Sevilla?', contiene('Juan de Mesa'));
+caso('C4b las Vísperas dicen el día de cada una', motor(), 'que sale en visperas en cordoba', contiene('sábado · '));
 caso('C2 «los Dolores de Granada»', motor(), 'los dolores de granada', y(contiene('(Granada)'), noDice('no tengo ninguna')));
 caso('C3 «el Traslado de Córdoba» no es su agenda', motor(), 'traslado de cordoba', y(contiene('Traslado al Sepulcro'), noDice('no tengo ninguna', 'en la agenda')));
 caso('C4 las Vísperas de Sevilla son dos días', motor(), '¿Qué sale en las vísperas en Sevilla?', y(contiene('salen ' + D.hermandades.filter((h) => h.c === 'sevilla' && /Dolores|Pasión|Vísperas/.test(h.d)).length + ' cofradías'), enlace(/en-la-calle\/sevilla/)));
