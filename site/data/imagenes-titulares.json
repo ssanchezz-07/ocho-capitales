@@ -702,19 +702,15 @@
   },
   "paloma-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paloma_Trono_de_Jesus.jpg",
-    "titulo": "File:Paloma Trono de Jesus.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/paloma/",
+    "local": "scripts/cedidas/malaga/paloma-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Puente del Cedrón",
     "titular": "Nuestro Padre Jesús de la Puente del Cedrón",
-    "recorte": [
-     0.45,
-     0.03,
-     0.15,
-     0.3
-    ],
-    "foco": "50% 46%"
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/paloma/; archivo Puente-Cedron-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    },
    "virgen": {
     "autor": "Antonio Ortiz",
@@ -781,18 +777,15 @@
     "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DXNLGwAjkoi/ (imagen 5: Nuestra Señora de los Dolores Coronada en su trono procesional). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
    },
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Expiraci%C3%B3n_Trono.jpg",
-    "titulo": "File:Expiración Trono.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/expiracion/",
+    "local": "scripts/cedidas/malaga/expiracion-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Expiración",
     "titular": "Santísimo Cristo de la Expiración",
-    "recorte": [
-     0.27,
-     0.1,
-     0.48,
-     0.48
-    ]
+    "foco": "50% 60%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/expiracion/; archivo Expiracion-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página. Recorte del centro de la foto (el Cristo en la cruz; el original es apaisado y con mucho fondo negro)."
    }
   },
   "zamarrilla-malaga": {
