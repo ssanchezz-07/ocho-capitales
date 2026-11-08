@@ -73,6 +73,42 @@ try {
     }
     return e;
   };
+  // erCuñao: abrir la hoja, preguntar y leer SOLO el texto de la respuesta (sin los botones de sugerencia, que también dicen «sale»)
+  async function pruebaCunao(p) {
+    const err = [];
+    const pregunta = async (q) => {
+      const n0 = await p.evaluate(() => document.querySelectorAll('.oc-cunao-msg.is-cunao').length);
+      await p.fill('[data-cunao-q]', q); await p.press('[data-cunao-q]', 'Enter');
+      await p.waitForFunction((n) => { const l = document.querySelectorAll('.oc-cunao-msg.is-cunao:not(.is-pensando)'); return l.length > n && !document.querySelector('.oc-cunao-msg.is-pensando'); }, n0, { timeout: 15000 });
+      return p.evaluate(() => [...document.querySelectorAll('.oc-cunao-msg.is-cunao')].pop().querySelector('p').textContent);
+    };
+    try {
+      await p.click('[data-cunao]');
+      const t = await pregunta('¿A qué hora sale la Macarena de Sevilla?');
+      if (!/Macarena.*\bsale\b.*\d{1,2}:\d{2}/.test(t)) err.push('erCuñao no contesta bien: ' + t.slice(0, 100));
+      // maquetación a 360 px: horas («15:15»), años y palabras enteras; solo se puede partir lo que no cabe ni en una línea
+      await p.setViewportSize({ width: 360, height: 780 });
+      for (const q of ['¿Por dónde pasa la Pasión de Málaga?', '¿Por dónde pasa la Crucifixión de Málaga?', '¿Quién talló los Negritos de Sevilla?', '¿Qué banda lleva el Cautivo de Málaga?']) {
+        await pregunta(q);
+        const rotas = await p.evaluate(() => {
+          const out = [], b = [...document.querySelectorAll('.oc-cunao-msg.is-cunao')].pop();
+          b.querySelectorAll('.oc-cunao-lista a, .oc-cunao-lista b, .oc-cunao-lista span, p, .oc-cunao-link, .oc-cunao-chips button').forEach((el) => {
+            const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let nd;
+            while ((nd = w.nextNode())) for (const m of nd.textContent.matchAll(/[^\s\-–]+/g)) { // por un guion sí se puede partir («Gutiérrez-Reyes»)
+              const r = document.createRange(); r.setStart(nd, m.index); r.setEnd(nd, m.index + m[0].length);
+              const tops = new Set([...r.getClientRects()].filter((x) => x.width > 0).map((x) => Math.round(x.top)));
+              if (tops.size > 1 && r.getBoundingClientRect().width < el.getBoundingClientRect().width - 2) out.push(m[0]);
+            }
+            const e = el.getBoundingClientRect(), c = b.getBoundingClientRect(); if (e.right > c.right + 1) out.push('se sale: ' + el.textContent.slice(0, 30));
+          });
+          return out;
+        });
+        if (rotas.length) err.push('a 360 px se parten en dos líneas (' + q + '): ' + [...new Set(rotas)].slice(0, 6).join(' | '));
+      }
+      await p.setViewportSize({ width: 390, height: 844 });
+    } catch (e) { err.push('erCuñao no se abre o no contesta: ' + String(e.message || e).slice(0, 100)); }
+    return err;
+  }
   for (const ancho of [390, 1440]) {
     const ctx = await navegador.newContext({ viewport: { width: ancho, height: ancho < 768 ? 844 : 900 }, serviceWorkers: 'block' });
     // la entrada animada de la portada sale una vez por sesión: aquí se da por vista para medir la web en sí
@@ -93,6 +129,8 @@ try {
       if (ancho === 390 && estado === 200) for (const e of await soltura(p, nombre)) errores.push(e);
       // el filtro de Marchas, con una batería de búsquedas reales (tools/prueba-buscador.mjs); a 1440 px, que va más deprisa
       if (ancho === 1440 && nombre === 'Marchas' && estado === 200) for (const e of await pruebaBuscador(p, BASE)) errores.push(e);
+      // erCuñao (en la portada, a 390 px): se abre, contesta de verdad y, a 360 px, ninguna hora ni palabra se parte en dos líneas
+      if (ancho === 390 && nombre === 'Portada' && estado === 200) for (const e of await pruebaCunao(p)) errores.push(e);
       const linea = `${nombre} (/${dir}) a ${ancho}px`;
       if (errores.length) { fallos.push(linea); for (const e of [...new Set(errores)].slice(0, 5)) console.log(`::error::${linea}: ${e}`); }
       else console.log(`✓ ${linea}`);

@@ -2266,7 +2266,7 @@ function datosCunao() {
     }
   }
   ex.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao.json'), JSON.stringify({ v: 4, hoy: isoDay(Date.UTC(N.y, N.m - 1, N.d)), anio, fechas, dias: DAY_ORDER, capitales: D.capitales.map((c) => [c.slug, c.nombre]), ci, ex, mapa: [...conMapa], B, I, hermandades: hs, rp, cu: curiosidades().map((k) => [k.t, k.u, k.l]) }));
   // Marchas (todo el catálogo, ~10.000): en trozos por la inicial del título, sin el artículo («La Madrugá» → m/m.json).
   // Solo se piden cuando la pregunta es de marchas. Fila: [título, autor (índice), año, formación, dedicada a (slug de hermandad o texto), ficha]
   const inicialM = (t) => { const w = norm(t).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/).filter(Boolean); const x = w.find((p, i) => i === w.length - 1 || !/^(el|la|los|las|un|una|al|a|del|de|y|en|o)$/.test(p)) || '0'; return /[a-z]/.test(x[0]) ? x[0] : '0'; };

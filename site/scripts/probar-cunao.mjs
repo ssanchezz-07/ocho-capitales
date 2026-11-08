@@ -23,8 +23,16 @@ vm.runInNewContext(fs.readFileSync(path.join(DIR, 'assets', 'cunao.js'), 'utf8')
 const { crearMotor } = sandbox.module.exports;
 
 const VER = process.argv.includes('--ver');
-// Fechas de prueba: fuera de temporada (16-10-2026) y en plena Semana Santa (Jueves Santo)
-function motor(hoy = '2026-10-16', hora = 18) {
+// Fechas de prueba, sacadas de la fecha del propio build (cunao.json «hoy»), porque los datos se recortan por ella (la agenda,
+// las extraordinarias, el año de la próxima Semana Santa): la batería vale el día que se publique, no solo hoy.
+// HOY = la del build; FUERA = un día fuera de Semana Santa (la del build, o un mes antes del Domingo de Ramos si ya está encima).
+const masDias = (iso, n) => new Date(Date.parse(iso + 'T00:00:00Z') + n * 864e5).toISOString().slice(0, 10);
+const fechaLarga = (iso) => new Intl.DateTimeFormat('es-ES', { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso + 'T00:00:00Z'));
+const fechaCorta = (iso) => new Intl.DateTimeFormat('es-ES', { timeZone: 'UTC', day: 'numeric', month: 'long' }).format(new Date(iso + 'T00:00:00Z'));
+const HOY = D.hoy || new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date());
+const RAMOS = D.fechas['Domingo de Ramos'];
+const FUERA = HOY < masDias(RAMOS, -2) ? HOY : masDias(RAMOS, -30);
+function motor(hoy = FUERA, hora = 18) {
   const m = crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => { const d = new Date(hoy + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + (mas || 0)); return d.toISOString().slice(0, 10); }, horaAhora: () => hora });
   return m;
 }
@@ -67,8 +75,8 @@ caso('ayuda', m, '¿qué sabes hacer?', contiene('Esperanza de Triana'));
 caso('gracias', m, 'muchas gracias', (r) => (r.texto.length > 5 ? true : 'vacío'));
 
 console.log('— Fechas');
-caso('cuánto falta', m, '¿Cuánto falta para la Semana Santa?', contiene(/Faltan \d+ días/, '21 de marzo de 2027'));
-caso('cuándo es el Jueves Santo', m, '¿Cuándo es el Jueves Santo?', contiene('Jueves Santo de 2027 cae el 25 de marzo'));
+caso('cuánto falta', m, '¿Cuánto falta para la Semana Santa?', contiene(/Faltan \d+ días?/, fechaLarga(RAMOS)));
+caso('cuándo es el Jueves Santo', m, '¿Cuándo es el Jueves Santo?', contiene('Jueves Santo de ' + D.anio + ' cae el ' + fechaCorta(D.fechas['Jueves Santo'])));
 // fuera de temporada: las extraordinarias y los cultos del día (cunao.json «ex» y cunao/agenda.json), o «no sale ninguna» y lo próximo
 caso('qué sale hoy (fuera de temporada)', m, '¿Qué sale hoy?', contiene('Domingo de Ramos', 'Ver el calendario'));
 
@@ -268,7 +276,8 @@ caso('F5 cornetas en Jaén: no responde con otra capital', motor(), 'qué cofrad
   caso('F6 hora de El Vía Crucis de Granada (no la agenda)', motor(), '¿A qué hora sale El Vía Crucis de Granada?', contiene('El Vía Crucis (Granada) sale ' + (vc.dia === 'Madrugá' ? 'la ' : 'el ') + vc.dia + ' a las ' + vc.hora)); }
 caso('F6b Vía Crucis de Córdoba hora', motor(), 'Vía Crucis de Córdoba hora', contiene('Vía Crucis (Córdoba) sale'));
 caso('F7 la más antigua de Jaén sin «Cuento 21 de 21»', motor(), '¿La cofradía más antigua de Jaén?', y(contiene('la más antigua de Jaén'), (r, t) => { const n = deCiudad('jaen').length, c = deCiudad('jaen').filter((h) => /\d{4}/.test(h.fundacion || '')).length; return c === n ? (/Cuento/.test(t) ? 'dice «Cuento»' : true) : (t.includes('Cuento ' + c + ' de ' + n) ? true : 'no cuenta'); }));
-caso('F8 domingo 8 de noviembre no es Domingo de Ramos', motor(), '¿Hay procesión el domingo 8 de noviembre?', y(contiene('8 de noviembre', 'no es Semana Santa'), noDice('sale mucha gente')));
+{ const d = masDias(FUERA, 7) < masDias(RAMOS, -9) ? masDias(FUERA, 7) : FUERA, dn = new Intl.DateTimeFormat('es-ES', { timeZone: 'UTC', weekday: 'long' }).format(new Date(d + 'T00:00:00Z'));
+  caso('F8 un domingo cualquiera no es el Domingo de Ramos', motor(), '¿Hay procesión el ' + dn + ' ' + fechaCorta(d) + '?', y(contiene(fechaCorta(d)), noDice('sale mucha gente', 'salen ' + (D.hermandades.filter((h) => h.d === 'Domingo de Ramos').length) + ' cofradías'))); }
 { const mm = motor(fechas['Jueves Santo']); pregunta(mm, 'Jaén');
   const ma = deCiudad('jaen', 'Jueves Santo').filter((h) => h.hora && mins(h.hora) < 14 * 60);
   caso('F8b «esta noche» en Jueves Santo no lista las de la mañana', mm, '¿Qué sale esta noche?', y(contiene('Jueves Santo en Jaén'), noDice(...ma.map((h) => h.nombre + ' ·')))); }
@@ -276,7 +285,7 @@ caso('F8c «por la mañana» no es «mañana»', motor(), 'que sale el domingo d
 caso('F9 teléfono: no lo tiene y da la web', motor(), 'Dime el teléfono de la hermandad del Abuelo', y(contiene('no los tengo'), enlace(/cofradiaelabuelo/)));
 
 console.log('— Fallos de Marketing en pages.dev (6-nov)');
-const enPagina = (c) => crearMotor(D, { base: '/', azar: (l) => l[0], pagina: () => c, hoy: () => '2026-11-08', horaAhora: () => 18 });
+const enPagina = (c) => crearMotor(D, { base: '/', azar: (l) => l[0], pagina: () => c, hoy: () => HOY, horaAhora: () => 18 });
 const cachM = HP['el-cachorro-sevilla'];
 caso('M1 «quien tayó ar cachorro» (andaluz escrito)', motor(), 'quien tayó ar cachorro', y(contiene('Las imágenes del Cachorro (Sevilla)', cachM.titulares[0].nombre.split(',')[0]), noDice('sale el Viernes Santo')));
 caso('M2 «ande pasa la esperansa de triana»', motor(), 'ande pasa la esperansa de triana', y(contiene('Recorrido de la Esperanza de Triana (Sevilla)'), enlace(/en-la-calle\/sevilla/)));
@@ -288,7 +297,7 @@ caso('M6b «la Macarena» desde la página de Almería es la de Almería', enPag
 for (const c of PORTAL.capitales) caso('M7 cifra oficial de ' + c.nombre, motor(), '¿Cuántas hermandades salen en ' + c.nombre + '?', y(contiene(c.nombre + ' tiene ' + c.cifra.corto), noDice('En mi base tengo')));
 caso('M8 «del Cautivo», no «de Cautivo»', motor(), '¿Quién talló al Cautivo de Málaga?', y(contiene('Las imágenes del Cautivo (Málaga)'), noDice('de Cautivo')));
 caso('M8b «al Cautivo»: la música', motor(), '¿Qué banda lleva el Cautivo de Málaga?', y(contiene('La música del Cautivo (Málaga)'), noDice('de Cautivo')));
-{ const ex = (D.ex || []).find((x) => x[0] >= '2026-11-08');
+{ const ex = (D.ex || []).find((x) => x[0] >= HOY);
   if (ex) caso('M9 «¿qué sale hoy?» cuenta las extraordinarias', crearMotor(D, { base: '/', azar: (l) => l[0], hoy: (mas) => { const d = new Date(ex[0] + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + (mas || 0)); return d.toISOString().slice(0, 10); }, horaAhora: () => 12 }), '¿Qué sale hoy?', y(contiene(ex[3]), noDice('Hoy no sale ninguna'))); }
 caso('M10 la Madrugá es la noche del 25 al 26', motor(), '¿cuándo es la madrugá?', y(contiene('la noche del ' + (+fechas['Madrugá'].slice(8) - 1) + ' al ' + +fechas['Madrugá'].slice(8)), noDice('cae el')));
 caso('M10b la Madrugá en «a qué hora sale el Silencio»', motor(), '¿A qué hora sale el Silencio de Sevilla?', contiene('La Madrugá de ' + D.anio + ' es la noche del'));
@@ -298,13 +307,14 @@ caso('M13 «a ke ora sale la macarena de sebiya»', motor(), 'a ke ora sale la m
 
 console.log('— Auditoría 8-nov (bloque 1)');
 { const jm = PORTAL.hermandades.find((h) => h.dia === 'Jueves Santo y Madrugada'), f = fechas['Jueves Santo y Madrugada'] || fechas['Jueves Santo'];
-  if (jm) caso('A1 Jueves Santo y Madrugada: el jueves y la noche del jueves al viernes', motor(), '¿a qué hora sale ' + jm.nombre + ' de ' + PORTAL.capitales.find((c) => c.slug === jm.ciudad).nombre + '?', y(contiene('el ' + +f.slice(8) + ' de marzo (y la noche del ' + +f.slice(8) + ' al ' + (+f.slice(8) + 1) + ')'), noDice('noche del ' + (+f.slice(8) - 1)))); }
+  if (jm) caso('A1 Jueves Santo y Madrugada: el jueves y la noche del jueves al viernes', motor(), '¿a qué hora sale ' + jm.nombre + ' de ' + PORTAL.capitales.find((c) => c.slug === jm.ciudad).nombre + '?', y(contiene('el ' + fechaCorta(f) + ' (y la noche del ' + +f.slice(8) + ' al ' + +masDias(f, 1).slice(8) + ')'), noDice('noche del ' + +masDias(f, -1).slice(8) + ' al'))); }
 { const ag = JSON.parse(fs.readFileSync(path.join(DIST, 'cunao', 'agenda.json'), 'utf8')), l = ag.l || ag;
   const ex = new Set((D.ex || []).map((x) => x[0] + '|' + x[2]));
   const otra = l.find((x) => ['procesion', 'extraordinaria', 'traslado', 'magna'].includes(x[2]) && ex.has(x[0] + '|' + x[5]) && !x[4]);
   if (otra) caso('A2 una salida de la agenda no se esconde tras la extraordinaria del mismo día', crearMotor(D, { base: '/', azar: (l_) => l_[0], hoy: () => otra[0], horaAhora: () => 12 }), '¿Qué sale hoy?', contiene(otra[3].slice(0, 30)));
   caso('A3 en la agenda de erCuñao no entran titulares de prensa ni frases cortadas', motor(), '¿Qué sale hoy?', () => (l.some((x) => /(…|\.\.\.)\s*$/.test(x[3])) ? 'hay títulos cortados en agenda.json' : true));
-  caso('A5 más allá de la agenda lo dice, no afirma que no sale nadie', motor(), '¿qué sale el 20 de enero?', y(contiene('todavía no tengo la agenda'), noDice('no sale ninguna'))); }
+  const mas = masDias(ag.h || HOY, 5);
+  if (mas < masDias(RAMOS, -9)) caso('A5 más allá de la agenda lo dice, no afirma que no sale nadie', crearMotor(D, { base: '/', azar: (l_) => l_[0], hoy: (k) => masDias(HOY, k || 0), horaAhora: () => 12 }), '¿qué sale el ' + fechaCorta(mas) + '?', y(contiene('todavía no tengo la agenda'), noDice('no sale ninguna'))); }
 caso('A6 «kien compuso Amarguras?»', motor(), 'kien compuso Amarguras?', contiene('«Amarguras» es de'));
 caso('A9 «la O» no se queda en «O»', motor(), 'a que hora sale la o', noDice('«O»'));
 caso('A13 un emoji cortado no rompe nada', motor(), 'hola \uD800 macarena', (r, t) => (t ? true : 'sin texto'));
