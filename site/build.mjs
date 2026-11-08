@@ -2165,7 +2165,7 @@ function pageCalle(c) {
     <p class="oc-calle-leyenda" data-leyenda hidden><span class="is-ida">Ida</span><span class="is-regreso">Regreso</span><span class="is-estimado" hidden>Tramo estimado</span></p>
     <p class="oc-calle-osm">Plano: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a></p>
   </div>
-  <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
+  <div class="oc-calle-reloj"><button class="oc-calle-play" type="button" data-play aria-label="Reproducir la jornada" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button><div class="oc-calle-tiempo"><output class="oc-calle-hora" data-hora>--:--</output><input type="range" min="0" max="1" step="1" value="0" data-tiempo aria-label="Hora"></div><button class="oc-calle-ahora" type="button" data-ahora>Ahora</button></div>
   <h2 class="oc-h2">Cofradías de la jornada</h2>
   <ol class="oc-calle-lista" data-lista aria-live="polite"></ol>
   <section class="oc-ruta" aria-labelledby="ruta-t">

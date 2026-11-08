@@ -1505,7 +1505,8 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; border: 1px solid rgb(255 255 255 / .22); background: rgb(30 14 44 / .6); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); color: #fff; font: 600 1.3rem/1 var(--sans); cursor: pointer; transition: transform 140ms var(--ease-out); }
 .oc-calle-btn:active { transform: scale(.94); }
 .oc-calle-btn svg { width: 22px; height: 22px; }
-.oc-calle-osm { position: absolute; left: 10px; top: 46px; margin: 0; font-size: .68rem; color: rgb(255 255 255 / .72); pointer-events: none; }
+.oc-calle-osm { position: absolute; left: 10px; top: 46px; margin: 0; padding: 2px 8px; border-radius: 6px; background: rgb(15 5 22 / .6); font-size: .66rem; line-height: 1.35; color: rgb(255 255 255 / .82); pointer-events: none; }
+.oc-calle-leyenda[hidden] + .oc-calle-osm { top: 10px; }
 .oc-calle-osm a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
 .oc-calle-mapa.is-error::after { content: "No se pudo cargar el plano. Comprueba la conexión."; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; }
 /* reloj: reproducir la jornada y arrastrar la hora */
@@ -1515,7 +1516,9 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-play:active { transform: scale(.94); }
 .oc-calle-play svg { width: 22px; height: 22px; margin-left: 2px; }
 .is-playing .oc-calle-play svg { margin: 0; }
-.is-playing .oc-calle-play path { d: path("M7 5h4v14H7zM13 5h4v14h-4z"); }
+/* el botón de reproducir responde al instante al dedo: sin espera de doble toque, sin destello gris y sin seleccionar el icono */
+.oc-calle-play, .oc-calle-btn { touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; }
+.oc-calle-play:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 .oc-calle-tiempo { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .oc-calle-hora { font: 400 1.9rem/1 var(--display); color: var(--primary); font-variant-numeric: tabular-nums; }
 .oc-calle-tiempo input { width: 100%; accent-color: var(--primary); height: 44px; margin: -6px 0 -10px; }
@@ -1737,6 +1740,12 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta { display: none; }
 .oc-c-ruta.is-sel { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: 1; stroke-width: 4.5px; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
+/* Salidas extraordinarias (8-nov): una o pocas cofradías, así que su recorrido se ve siempre en oro, ida continua y regreso
+   discontinuo, como dice la leyenda; antes solo se veía el medallón hasta tocarlo. */
+.oc-calle.is-extraordinaria .oc-c-ruta { display: inline; stroke: #f0d79c; stroke-opacity: .9; stroke-width: 3.4px; }
+.oc-calle.is-extraordinaria .oc-c-ruta.is-regreso { stroke-dasharray: 10 7; }
+.oc-calle.is-extraordinaria .oc-c-ruta.is-aprox { stroke-opacity: .5; }
+.oc-calle.is-extraordinaria .oc-c-ruta[data-estado="despues"] { stroke-opacity: .55; }
 .oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
 .oc-calle-ficha { background: transparent; pointer-events: none; }
 .oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }
