@@ -286,7 +286,7 @@
     var dd = delDia(); if (dd.length === 1 && dd[0].x) $$('.oc-c-ruta').forEach(function (n) { n.classList.add('is-sola'); });
     var ley = $('[data-leyenda]'); if (ley) ley.style.setProperty('--ley', dd.length === 1 && dd[0].x ? dd[0].hc : '');
     // al redibujar con una hermandad elegida (p. ej. al girar el móvil), sigue resaltada
-    if (sel) $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { if (n.getAttribute('data-s') === sel.s) n.classList.add('is-sel'); });
+    if (sel && sel.d === dia) $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { if (n.getAttribute('data-s') === sel.s) n.classList.add('is-sel'); });
     encuadrarDia(!!capas.yaEncuadrado); capas.yaEncuadrado = true;
   }
   // Encuadre de la jornada: las cofradías que están en la calle (y su recorrido); si no hay ninguna, toda la jornada
