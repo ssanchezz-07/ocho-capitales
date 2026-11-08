@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T21:43:36.587Z",
+ "generado": "2026-11-08T22:29:32.781Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5510,7 +5510,7 @@
   "las-aguas-cadiz": {
    "cristo": {
     "w": 461,
-    "h": 514,
+    "h": 694,
     "widths": [
      160,
      461
@@ -5521,14 +5521,15 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/las-aguas/",
     "foco": "50% 55%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-aguas-cadiz-cristo.jpg",
-    "tam": 82861,
+    "tam": 122823,
     "titular": "Santísimo Cristo de las Aguas"
    },
    "virgen": {
     "w": 458,
-    "h": 511,
+    "h": 691,
     "widths": [
      160,
      458
@@ -5539,9 +5540,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/las-aguas/",
     "foco": "50% 70%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-aguas-cadiz-virgen.jpg",
-    "tam": 114433,
+    "tam": 157892,
     "titular": "María Santísima de Guadalupe"
    }
   },
@@ -5643,7 +5645,7 @@
   "el-descendimiento-cadiz": {
    "cristo": {
     "w": 321,
-    "h": 355,
+    "h": 480,
     "widths": [
      160,
      321
@@ -5654,14 +5656,15 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/descendimiento/",
     "foco": "50% 45%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/el-descendimiento-cadiz-cristo.jpg",
-    "tam": 53223,
+    "tam": 69042,
     "titular": "Cristo del Descendimiento"
    },
    "virgen": {
     "w": 331,
-    "h": 369,
+    "h": 499,
     "widths": [
      160,
      331
@@ -5672,9 +5675,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/descendimiento/",
     "foco": "50% 40%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/el-descendimiento-cadiz-virgen.jpg",
-    "tam": 69439,
+    "tam": 95289,
     "titular": "Nuestra Señora de los Dolores"
    }
   },
@@ -7944,7 +7948,7 @@
   "el-despojado-cadiz": {
    "cristo": {
     "w": 457,
-    "h": 515,
+    "h": 696,
     "widths": [
      160,
      457
@@ -7955,9 +7959,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/despojado/",
     "foco": "50% 50%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/el-despojado-cadiz-cristo.jpg",
-    "tam": 95689,
+    "tam": 123245,
     "titular": "Jesús del Amor Despojado"
    },
    "virgen": {
@@ -8053,7 +8058,7 @@
    },
    "cristo": {
     "w": 289,
-    "h": 362,
+    "h": 431,
     "widths": [
      160,
      289
@@ -8064,9 +8069,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/las-penas/",
     "foco": "50% 55%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg",
-    "tam": 59598,
+    "tam": 70987,
     "titular": "Nuestro Padre Jesús de las Penas"
    },
    "virgen": {
@@ -8107,7 +8113,7 @@
    },
    "virgen": {
     "w": 456,
-    "h": 537,
+    "h": 689,
     "widths": [
      160,
      456
@@ -8118,9 +8124,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/nazareno-del-amor/",
     "foco": "50% 70%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/nazareno-del-amor-cadiz-virgen.jpg",
-    "tam": 86809,
+    "tam": 118928,
     "titular": "Nuestra Señora de la Esperanza"
    }
   },
@@ -8158,7 +8165,7 @@
    },
    "virgen": {
     "w": 461,
-    "h": 513,
+    "h": 693,
     "widths": [
      160,
      461
@@ -8169,9 +8176,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/vera-cruz/",
     "foco": "50% 75%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/vera-cruz-cadiz-virgen.jpg",
-    "tam": 141819,
+    "tam": 196135,
     "titular": "Nuestra Señora de la Soledad"
    }
   },
@@ -8212,7 +8220,7 @@
    },
    "virgen": {
     "w": 463,
-    "h": 517,
+    "h": 698,
     "widths": [
      160,
      463
@@ -8223,9 +8231,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/sanidad/",
     "foco": "50% 55%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-sanidad-cadiz-virgen.jpg",
-    "tam": 118723,
+    "tam": 156050,
     "titular": "María Santísima de la Salud"
    }
   },
@@ -8266,7 +8275,7 @@
    },
    "virgen": {
     "w": 462,
-    "h": 547,
+    "h": 701,
     "widths": [
      160,
      462
@@ -8277,9 +8286,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/piedad/",
     "foco": "50% 55%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-piedad-cadiz-virgen.jpg",
-    "tam": 141151,
+    "tam": 175302,
     "titular": "María Santísima de las Lágrimas"
    }
   },
@@ -8400,7 +8410,7 @@
    },
    "cristo": {
     "w": 960,
-    "h": 1340,
+    "h": 1441,
     "widths": [
      160,
      480,
@@ -8412,9 +8422,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/afligidos/",
     "foco": "50% 50%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/los-afligidos-cadiz-cristo.jpg",
-    "tam": 495125,
+    "tam": 534641,
     "titular": "Nuestro Padre Jesús de los Afligidos"
    }
   },
@@ -8525,7 +8536,7 @@
    },
    "cristo": {
     "w": 462,
-    "h": 509,
+    "h": 688,
     "widths": [
      160,
      462
@@ -8536,9 +8547,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/resucitado/",
     "foco": "50% 40%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-resurreccion-cadiz-cristo.jpg",
-    "tam": 64656,
+    "tam": 85717,
     "titular": "Cristo Resucitado"
    }
   },
@@ -9909,7 +9921,7 @@
    },
    "virgen": {
     "w": 441,
-    "h": 490,
+    "h": 662,
     "widths": [
      160,
      441
@@ -9920,9 +9932,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/columna/",
     "foco": "50% 50%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-columna-cadiz-virgen.jpg",
-    "tam": 142748,
+    "tam": 197421,
     "titular": "María Santísima de las Lágrimas"
    }
   },
@@ -10280,26 +10293,27 @@
   },
   "la-borriquita-cadiz": {
    "cristo": {
-    "w": 328,
-    "h": 270,
+    "w": 410,
+    "h": 399,
     "widths": [
      160,
-     328
+     410
     ],
     "escudo": false,
     "autor": "Consejo de Hermandades de Cádiz",
     "licencia": "",
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/la-paz/",
-    "foco": "50% 45%",
+    "foco": "50% 40%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg",
-    "tam": 56781,
+    "tam": 97755,
     "titular": "Jesús de la Paz en su Entrada en Jerusalén"
    },
    "virgen": {
     "w": 410,
-    "h": 454,
+    "h": 614,
     "widths": [
      160,
      410
@@ -10310,16 +10324,17 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/la-paz/",
     "foco": "50% 50%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg",
-    "tam": 134303,
+    "tam": 175939,
     "titular": "María Santísima del Amparo, «la Guapa de Cádiz»"
    }
   },
   "la-palma-cadiz": {
    "virgen": {
     "w": 457,
-    "h": 511,
+    "h": 691,
     "widths": [
      160,
      457
@@ -10330,16 +10345,17 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/la-palma/",
     "foco": "50% 75%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/la-palma-cadiz-virgen.jpg",
-    "tam": 135998,
+    "tam": 179633,
     "titular": "María Santísima de las Penas Coronada"
    }
   },
   "el-prendimiento-cadiz": {
    "cristo": {
     "w": 461,
-    "h": 538,
+    "h": 690,
     "widths": [
      160,
      461
@@ -10350,9 +10366,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/prendimiento/",
     "foco": "50% 35%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/el-prendimiento-cadiz-cristo.jpg",
-    "tam": 96084,
+    "tam": 126109,
     "titular": "Nuestro Padre Jesús en su Prendimiento"
    },
    "virgen": {
@@ -10378,7 +10395,7 @@
   "jesus-caido-el-senor-del-parque-cadiz": {
    "cristo": {
     "w": 464,
-    "h": 545,
+    "h": 699,
     "widths": [
      160,
      464
@@ -10389,14 +10406,15 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/jesus-caido/",
     "foco": "50% 45%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-cristo.jpg",
-    "tam": 103504,
+    "tam": 131657,
     "titular": "Nuestro Padre Jesús Caído"
    },
    "virgen": {
     "w": 441,
-    "h": 489,
+    "h": 661,
     "widths": [
      160,
      441
@@ -10407,9 +10425,10 @@
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/jesus-caido/",
     "foco": "50% 45%",
+    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-virgen.jpg",
-    "tam": 159299,
+    "tam": 215292,
     "titular": "María Santísima de los Desamparados"
    }
   },
@@ -10832,7 +10851,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/las-aguas/\"|\"scripts/cedidas/cadiz/las-aguas-cadiz-cristo.jpg\"|82861|\"\"|\"50% 55%\"|\"https://consejocofradiascadiz.es/las-aguas/\"|\"scripts/cedidas/cadiz/las-aguas-cadiz-virgen.jpg\"|114433|\"\"|\"50% 70%\""
+   "firma": "\"https://consejocofradiascadiz.es/las-aguas/\"|\"scripts/cedidas/cadiz/las-aguas-cadiz-cristo.jpg\"|122823|\"\"|\"50% 55%\"|\"https://consejocofradiascadiz.es/las-aguas/\"|\"scripts/cedidas/cadiz/las-aguas-cadiz-virgen.jpg\"|157892|\"\"|\"50% 70%\""
   },
   "medinaceli-cadiz": {
    "w": 960,
@@ -10862,7 +10881,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/descendimiento/\"|\"scripts/cedidas/cadiz/el-descendimiento-cadiz-cristo.jpg\"|53223|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/descendimiento/\"|\"scripts/cedidas/cadiz/el-descendimiento-cadiz-virgen.jpg\"|69439|\"\"|\"50% 40%\""
+   "firma": "\"https://consejocofradiascadiz.es/descendimiento/\"|\"scripts/cedidas/cadiz/el-descendimiento-cadiz-cristo.jpg\"|69042|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/descendimiento/\"|\"scripts/cedidas/cadiz/el-descendimiento-cadiz-virgen.jpg\"|95289|\"\"|\"50% 40%\""
   },
   "la-buena-muerte-cadiz": {
    "w": 960,
@@ -11122,7 +11141,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/despojado/\"|\"scripts/cedidas/cadiz/el-despojado-cadiz-cristo.jpg\"|95689|\"\"|\"50% 50%\"|\"http://despojadocadiz.blogspot.com/2020/09/ix-premio-virgen-de-la-concepcion.html\"|\"scripts/cedidas/cadiz/el-despojado-cadiz-virgen.jpg\"|451159|\"\"|\"50% 30%\""
+   "firma": "\"https://consejocofradiascadiz.es/despojado/\"|\"scripts/cedidas/cadiz/el-despojado-cadiz-cristo.jpg\"|123245|\"\"|\"50% 50%\"|\"http://despojadocadiz.blogspot.com/2020/09/ix-premio-virgen-de-la-concepcion.html\"|\"scripts/cedidas/cadiz/el-despojado-cadiz-virgen.jpg\"|451159|\"\"|\"50% 30%\""
   },
   "sagrada-cena-cadiz": {
    "w": 960,
@@ -11142,7 +11161,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|59598|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/2023/09/cultos-y-actos-en-honor-de-maria.html\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
+   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|70987|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/2023/09/cultos-y-actos-en-honor-de-maria.html\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
   },
   "vera-cruz-cadiz": {
    "w": 960,
@@ -11152,7 +11171,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Vera-Cruz_de_C%C3%A1diz.jpg\"|\"\"|\"\"|\"\"|\"50% 47%\"|\"https://consejocofradiascadiz.es/vera-cruz/\"|\"scripts/cedidas/cadiz/vera-cruz-cadiz-virgen.jpg\"|141819|\"\"|\"50% 75%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Vera-Cruz_de_C%C3%A1diz.jpg\"|\"\"|\"\"|\"\"|\"50% 47%\"|\"https://consejocofradiascadiz.es/vera-cruz/\"|\"scripts/cedidas/cadiz/vera-cruz-cadiz-virgen.jpg\"|196135|\"\"|\"50% 75%\""
   },
   "la-sanidad-cadiz": {
    "w": 960,
@@ -11162,7 +11181,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/sanidad/\"|\"scripts/cedidas/cadiz/la-sanidad-cadiz-cristo.jpg\"|1300967|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/sanidad/\"|\"scripts/cedidas/cadiz/la-sanidad-cadiz-virgen.jpg\"|118723|\"\"|\"50% 55%\""
+   "firma": "\"https://consejocofradiascadiz.es/sanidad/\"|\"scripts/cedidas/cadiz/la-sanidad-cadiz-cristo.jpg\"|1300967|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/sanidad/\"|\"scripts/cedidas/cadiz/la-sanidad-cadiz-virgen.jpg\"|156050|\"\"|\"50% 55%\""
   },
   "la-piedad-cadiz": {
    "w": 960,
@@ -11172,7 +11191,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/piedad/\"|\"scripts/cedidas/cadiz/la-piedad-cadiz-cristo.jpg\"|433025|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/piedad/\"|\"scripts/cedidas/cadiz/la-piedad-cadiz-virgen.jpg\"|141151|\"\"|\"50% 55%\""
+   "firma": "\"https://consejocofradiascadiz.es/piedad/\"|\"scripts/cedidas/cadiz/la-piedad-cadiz-cristo.jpg\"|433025|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/piedad/\"|\"scripts/cedidas/cadiz/la-piedad-cadiz-virgen.jpg\"|175302|\"\"|\"50% 55%\""
   },
   "ecce-homo-cadiz": {
    "w": 960,
@@ -11202,7 +11221,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/afligidos/\"|\"scripts/cedidas/cadiz/los-afligidos-cadiz-cristo.jpg\"|495125|\"\"|\"50% 50%\"|\"https://consejocofradiascadiz.es/afligidos/\"|\"scripts/cedidas/cadiz/los-afligidos-cadiz-virgen.jpg\"|1229961|\"\"|\"50% 15%\""
+   "firma": "\"https://consejocofradiascadiz.es/afligidos/\"|\"scripts/cedidas/cadiz/los-afligidos-cadiz-cristo.jpg\"|534641|\"\"|\"50% 50%\"|\"https://consejocofradiascadiz.es/afligidos/\"|\"scripts/cedidas/cadiz/los-afligidos-cadiz-virgen.jpg\"|1229961|\"\"|\"50% 15%\""
   },
   "santo-entierro-cadiz": {
    "w": 960,
@@ -11362,7 +11381,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg\"|\"\"|\"\"|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/columna/\"|\"scripts/cedidas/cadiz/la-columna-cadiz-virgen.jpg\"|142748|\"\"|\"50% 50%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_COLUMNA_DE_C%C3%81DIZ.jpg\"|\"\"|\"\"|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/columna/\"|\"scripts/cedidas/cadiz/la-columna-cadiz-virgen.jpg\"|197421|\"\"|\"50% 50%\""
   },
   "la-expiracion-cadiz": {
    "w": 960,
@@ -11442,7 +11461,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg\"|56781|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg\"|134303|\"\"|\"50% 50%\""
+   "firma": "\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-cristo.jpg\"|97755|\"\"|\"50% 40%\"|\"https://consejocofradiascadiz.es/la-paz/\"|\"scripts/cedidas/cadiz/la-borriquita-cadiz-virgen.jpg\"|175939|\"\"|\"50% 50%\""
   },
   "el-prendimiento-cadiz": {
    "w": 960,
@@ -11452,7 +11471,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/prendimiento/\"|\"scripts/cedidas/cadiz/el-prendimiento-cadiz-cristo.jpg\"|96084|\"\"|\"50% 35%\"|\"http://hermandadprendimientodecadiz.blogspot.com/p/nuestros-sagrados-tilulares.html\"|\"scripts/cedidas/cadiz/el-prendimiento-cadiz-virgen.jpg\"|857886|\"\"|\"50% 45%\""
+   "firma": "\"https://consejocofradiascadiz.es/prendimiento/\"|\"scripts/cedidas/cadiz/el-prendimiento-cadiz-cristo.jpg\"|126109|\"\"|\"50% 35%\"|\"http://hermandadprendimientodecadiz.blogspot.com/p/nuestros-sagrados-tilulares.html\"|\"scripts/cedidas/cadiz/el-prendimiento-cadiz-virgen.jpg\"|857886|\"\"|\"50% 45%\""
   },
   "jesus-caido-el-senor-del-parque-cadiz": {
    "w": 960,
@@ -11462,7 +11481,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/jesus-caido/\"|\"scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-cristo.jpg\"|103504|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/jesus-caido/\"|\"scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-virgen.jpg\"|159299|\"\"|\"50% 45%\""
+   "firma": "\"https://consejocofradiascadiz.es/jesus-caido/\"|\"scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-cristo.jpg\"|131657|\"\"|\"50% 45%\"|\"https://consejocofradiascadiz.es/jesus-caido/\"|\"scripts/cedidas/cadiz/jesus-caido-el-senor-del-parque-cadiz-virgen.jpg\"|215292|\"\"|\"50% 45%\""
   },
   "oracion-en-el-huerto-cadiz": {
    "w": 960,
