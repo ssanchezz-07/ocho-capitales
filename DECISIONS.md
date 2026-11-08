@@ -1,5 +1,37 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-08 · erCuñao «experto en todo» y juegos «mientras esperas» (sesión erCuñao, plan del domingo al martes)
+Pablo (6 y 8-nov): «tiene que ser el mejor en todo, experto en todo» y «la mejora y perfección del bot, tanto en funciones como en visualización, además de meterle los juegos de espera».
+
+**Elegido**
+- **Sigue sin IA (opción 1).** La opción 2 (Workers AI) se deja para después del lanzamiento, porque no estaría terminada y auditada el lunes.
+- **El bot se prueba con una batería generada desde los datos** (`site/scripts/bateria-experto.mjs`), no solo con preguntas escritas a mano. Saca miles de preguntas de todos los tipos y escribe cada una de cinco formas: normal, sin tildes, en andaluz, con erratas y como en el móvil. Las que fallan pasan a una revisión independiente. La batería fija (`probar-cunao.mjs`) es la que va en la red de seguridad.
+- **Habla andaluza:**
+  - un diccionario corto, solo con palabras que no admiten otra lectura: «ande», «ar», «er», «q», «kien», «izo»…;
+  - variantes de pronunciación (seseo, ceceo, yeísmo, b/v, h, «-ao») que solo se aplican a las palabras desconocidas;
+  - las calles se toman del texto sin corregir, porque no están en el vocabulario.
+- **Artículo y concordancia** con cada nombre de hermandad: «del Cautivo», «de San Bernardo», «los Gitanos salen».
+- **Cifra de hermandades:** la oficial de cada capital (`capitales[].cifra`), no el número de fichas.
+- **«¿Qué sale hoy?» fuera de Semana Santa:**
+  - responde con las extraordinarias que tienen itinerario y con 21 días de agenda;
+  - la agenda solo admite actos verificados o de agendas cofrades, nunca titulares de prensa;
+  - más allá de esos 21 días, dice que aún no tiene la agenda.
+- **El bot no frena la web:** en cada página solo va la interfaz (`cunao-ui.js`, unos 11 KB). El motor y los datos se piden al acercar el dedo al botón o al abrirlo.
+- **Juegos** (`/juegos/`, `assets/juegos.js`, `data/juegos.json`):
+  - todas las preguntas se generan con los datos de las fichas, con semilla: el reto diario es el mismo para todos sin servidor y «Reta a un amigo» comparte la semilla por WhatsApp;
+  - la racha se guarda solo en el móvil;
+  - `probar-juegos.mjs` comprueba contra portal.json, por su cuenta, que cada pregunta tiene una sola respuesta buena y que es cierta;
+  - en «por el nazareno», las otras opciones también tienen su hábito conocido y distinto;
+  - en «por el recorrido», la forma del itinerario con la salida y la carrera oficial;
+  - las fotos llevan su crédito después de responder.
+- **Personaje:** erCuñao es el único protagonista. Presenta los juegos y los propone en plena jornada o cuando hay una salida ese día.
+
+**Descartado**
+- **Copiar los juegos de la competencia** (nombres, escudos, «impostor»): ni sus nombres ni sus dibujos, y nada de escudos, que tienen derechos.
+- **Ranking en línea, cuentas o duelos con servidor:** piden datos personales y un servidor. Se usan la semilla y el enlace.
+- **Adivinar la marcha por el audio:** los derechos son de las bandas.
+- **Precargar el motor de erCuñao en todas las páginas:** eran 120 KB de JavaScript sin usar en cada visita.
+
 ## 2026-10-27 · Noticias: qué entra y cómo se presenta (oc-diseno, por orden de Pablo)
 Pablo: «hay noticias que no son del ecosistema cofrade, hay que perfeccionar qué tipo de info se mete y cómo acogerla».
 

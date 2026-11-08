@@ -270,7 +270,7 @@ const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
 // los juegos de erCuñao (assets/juegos.js y /juegos/): si están, erCuñao los propone
 const HAY_JUEGOS = fs.existsSync(path.join(DIR, 'assets', 'juegos.js'));
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js'], ['juegos', 'juegos.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 // Precarga de la página siguiente (Chrome y Edge; los demás lo ignoran): las pestañas de abajo se piden en cuanto se ven,
 // y cualquier otro enlace de la web al empezar a tocarlo. Solo se descarga el HTML (prefetch, sin ejecutar nada).
 const ESPECULA = `<script type="speculationrules">${JSON.stringify({ prefetch: [
@@ -649,7 +649,7 @@ ${body}${colabora(p, title)}
       <div class="oc-footer-brand"><a class="oc-logo" href="${u()}">${WORDMARK}</a><p>${TAGLINE}</p></div>
       <nav aria-label="Capitales"><h2>Capitales</h2><ul>${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}">${esc(c.nombre)}</a></li>`).join('')}</ul></nav>
       <nav aria-label="Archivo"><h2>Archivo</h2><ul><li><a href="${u('noticias/')}">Noticias</a></li><li><a href="${u('calendario/')}">Calendario</a></li><li><a href="${u('hermandades/')}">Hermandades</a></li><li><a href="${u('bandas/')}">Bandas</a></li><li><a href="${u('marchas/')}">Marchas</a></li><li><a href="${u('imagineros/')}">Imagineros</a></li><li><a href="${u('favoritos/')}">Mis favoritos</a></li></ul></nav>
-      <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li></ul>
+      <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li><li><a href="${u('juegos/')}">Juegos</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
     <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons y de las propias hermandades, con su autor en cada foto.</p>
@@ -674,7 +674,7 @@ ${body}${colabora(p, title)}
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
     <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
     <ul class="oc-sheet-caps is-puntos">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
-    <ul class="oc-sheet-list">${[['calendario/', 'Calendario'], ['en-la-calle/', 'En la calle', 'plano de los recorridos'], ['hermandades/', 'Hermandades', D.hermandades.length], ['bandas/', 'Bandas', D.bandas.length], ['marchas/', 'Marchas', MARCHAS.length], ['imagineros/', 'Imagineros', D.imagineros.length], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l, n]) => `<li><a href="${u(h)}"><span>${l}</span>${n != null ? `<small>${typeof n === 'number' ? n.toLocaleString('es-ES') : n}</small>` : ''}${icon('arrow')}</a></li>`).join('')}</ul>
+    <ul class="oc-sheet-list">${[['calendario/', 'Calendario'], ['en-la-calle/', 'En la calle', 'plano de los recorridos'], ['juegos/', 'Juegos', 'con erCuñao'], ['hermandades/', 'Hermandades', D.hermandades.length], ['bandas/', 'Bandas', D.bandas.length], ['marchas/', 'Marchas', MARCHAS.length], ['imagineros/', 'Imagineros', D.imagineros.length], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l, n]) => `<li><a href="${u(h)}"><span>${l}</span>${n != null ? `<small>${typeof n === 'number' ? n.toLocaleString('es-ES') : n}</small>` : ''}${icon('arrow')}</a></li>`).join('')}</ul>
   </div>
 </div>
 <div class="oc-sheet oc-citysheet" id="oc-city" hidden data-city-sheet>
@@ -2334,8 +2334,76 @@ function datosCunao() {
   fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'ia.json'), JSON.stringify({ anio, fechas, programa: anio - 1 }));
 }
 
+// ---------- Juegos de erCuñao «mientras esperas» (data/juegos.json y /juegos/) ----------
+// Todas las preguntas las genera assets/juegos.js con estos datos, que son los de las fichas: nada escrito a mano.
+// Fila de hermandad: [slug, nombre, capital, jornada, hora, sede, año de fundación, titulares [nombre, autor, imaginero], bandas,
+// foto (índice en fo), nazareno (índice en naz), recorrido (índice en ru), orden, ¿sale otro día?]
 // el nombre del titular sin la nota de autoría («…, anónimo s. XVII»), pero entero si la coma es parte del nombre («Nuestro Padre Jesús, Divino Salvador, en su Prendimiento»)
 const titCorto = (n) => String(n || '').replace(/,\s*an[oó]nim.*$/i, '').trim();
+function datosJuegos() {
+  const iIdx = new Map(D.imagineros.map((i, k) => [i.slug, k]));
+  const fo = [], naz = [], ru = [];
+  // foto de un titular (no la sede ni el escudo), guardada en la web, con su crédito
+  const fotoDe = (h) => {
+    const d = h.diptico || {}, im = [d.cristo, d.virgen, d.juntos].find((x) => x && x.local) || (h.imagen && h.imagen.local && !h.imagen.escudo && h.imagen !== d.sede ? h.imagen : null);
+    if (!im || !im.sizes || !im.sizes.length) return -1;
+    const w = im.sizes.filter((x) => x <= 480).at(-1) || im.sizes[0];
+    fo.push([localUrl(im, w), im.autor || '', im.licencia || '', im.pagina || '']); return fo.length - 1;
+  };
+  // el dibujo del nazareno: los trazos («d») van una sola vez en «nd» y cada nazareno los cita por su número (§n)
+  const nd = [], ndI = new Map(), dicc = (svg) => svg.replace(/ d="([^"]+)"/g, (m0, d) => { if (!ndI.has(d)) { ndI.set(d, nd.length); nd.push(d); } return ' d="§' + ndI.get(d) + '"'; });
+  const nazDe = (h, k) => { const sec = (HABCOL[h.slug] || []).find(([, p]) => nazPartes(p, 'x')); if (!sec) return -1; const r = nazPartes(sec[1], 'jz' + k); const x = dicc(r.defs + r.partes); const i = naz.indexOf(x); if (i >= 0) return i; naz.push(x); return naz.length - 1; };
+  // forma del recorrido: los puntos del itinerario (con los tramos de calle entre ellos), proyectados y simplificados en una caja de 100×100
+  const REC = Object.fromEntries(D.capitales.map((c) => { const f = path.join(DIR, 'data', 'recorridos', c.slug + '.json'); return [c.slug, fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).hermandades || {} : {}]; }));
+  const simplifica = (pts, tol) => {
+    if (pts.length < 3) return pts;
+    const d2 = (p, a, b) => { const dx = b[0] - a[0], dy = b[1] - a[1], L = dx * dx + dy * dy; let t = L ? ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / L : 0; t = Math.max(0, Math.min(1, t)); const x = a[0] + t * dx - p[0], y = a[1] + t * dy - p[1]; return x * x + y * y; };
+    let mx = 0, k = 0; for (let i = 1; i < pts.length - 1; i++) { const v = d2(pts[i], pts[0], pts.at(-1)); if (v > mx) { mx = v; k = i; } }
+    return mx > tol * tol ? simplifica(pts.slice(0, k + 1), tol).slice(0, -1).concat(simplifica(pts.slice(k), tol)) : [pts[0], pts.at(-1)];
+  };
+  const rutaDe = (h) => {
+    const e = REC[h.ciudad] && REC[h.ciudad][h.slug]; if (!e || !e.tramos) return -1;
+    const k = e.tramos.paso ? 'paso' : e.tramos.palio ? 'palio' : Object.keys(e.tramos)[0]; const tr = k && e.tramos[k]; if (!tr) return -1;
+    // la carrera oficial o la catedral, para orientarse (como en el plano): el primer punto que lo dice
+    const CO = /carrera oficial|c\. ?oficial|tribuna|catedral|s\.?i\.?c\.?b|^(la )?campana\b/i;
+    const ll = []; let ico = -1; tr.forEach((p) => { if (p.lat != null) { if (ico < 0 && CO.test(p.lugar || '')) ico = ll.length; ll.push([p.lat, p.lon]); } (p.via || []).forEach(([la, lo]) => ll.push([la, lo])); });
+    if (ll.length < 6) return -1;
+    const lat0 = ll.reduce((a, p) => a + p[0], 0) / ll.length, cx = Math.cos(lat0 * Math.PI / 180);
+    const xy = ll.map(([la, lo]) => [lo * cx, -la]);
+    const x0 = Math.min(...xy.map((p) => p[0])), x1 = Math.max(...xy.map((p) => p[0])), y0 = Math.min(...xy.map((p) => p[1])), y1 = Math.max(...xy.map((p) => p[1]));
+    const s = Math.max(x1 - x0, y1 - y0); if (!s || s * 111320 < 250) return -1; // menos de 250 m de lado: no se distingue
+    const ox = (100 - (x1 - x0) / s * 100) / 2, oy = (100 - (y1 - y0) / s * 100) / 2;
+    const pts = xy.map(([x, y]) => [ox + (x - x0) / s * 100, oy + (y - y0) / s * 100]), n = simplifica(pts, 0.8);
+    const r1 = (v) => Math.round(v);
+    ru.push(['M' + n.map((p) => r1(p[0]) + ' ' + r1(p[1])).join('L'), r1(n[0][0]), r1(n[0][1])].concat(ico >= 0 ? [r1(pts[ico][0]), r1(pts[ico][1])] : [])); return ru.length - 1;
+  };
+  const hs = D.hermandades.map((h, k) => {
+    // el año de fundación solo si el texto empieza por él («1590, resultado de la fusión…»); «Siglo XVI (…reorganizada en 1921)» no da año
+    const fa0 = /^\s*(1[2-9]\d\d|20[0-2]\d)\b/.exec(h.fundacion || ''), anios = (String(h.fundacion || '').match(/\b1[2-9]\d\d\b|\b20[0-2]\d\b/g) || []).map(Number);
+    const fa = fa0 && !anios.some((y) => y < +fa0[1]) && !/fusi|antecedente|or[ií]gen|reorganiz|refund|primitiv/i.test(h.fundacion) ? fa0 : null;
+    const tit = (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1, t.atrib || /atrib/i.test(t.autor || '') ? 1 : 0]);
+    const ac = h.acompanamiento && h.acompanamiento.pasos || [];
+    const bandas = [...new Set(ac.length ? ac.flatMap((p) => p.bandas.map((b) => b.nombre)) : (h.bandas_slugs || []).map((s) => BANDA[s] && BANDA[s].nombre).filter(Boolean))];
+    return [h.slug, h.nombre, h.ciudad, h.dia, hhmmJ(h.hora), h.sede || '', fa ? +fa[1] : 0, tit, bandas, fotoDe(h), nazDe(h, k), rutaDe(h), h.orden || 0, (h.salidas || []).length ? 1 : 0];
+  });
+  // marchas dedicadas: hasta cuatro por hermandad (las que tienen ficha), para no cargar las 10.000 del catálogo
+  const m = []; for (const h of D.hermandades) (h.marchas || []).filter((x, _, todas) => x.autor && x.titulo && x.est && x.est !== 'sin-verificar' && todas.filter((y) => y.titulo.toLowerCase() === x.titulo.toLowerCase()).length === 1).map((x) => [x.titulo, x.autor, x.anio || '', h.slug, MARCHA_SLUG.get(h.slug + '|' + x.titulo + '|' + (x.autor || '')) || '']).sort((a, b) => (b[4] ? 1 : 0) - (a[4] ? 1 : 0)).slice(0, 4).forEach((x) => m.push(x));
+  const ci = Object.fromEntries(D.capitales.filter((c) => c.cifra && c.cifra.n).map((c) => [c.slug, [c.cifra.n, c.cifra.nombre || 'hermandades', c.cifra.corto || '', c.cifra.texto || '']]));
+  // huella corta (5 letras) de TODOS los títulos dedicados a cada hermandad: para que ninguna opción mala esté también dedicada a ella
+  const normJ = (t) => String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const h5 = (t) => { let x = 2166136261; for (const ch of normJ(t)) { x ^= ch.charCodeAt(0); x = Math.imul(x, 16777619); } return ((x >>> 0) % 60466176).toString(36).padStart(5, '0'); };
+  const dt = Object.fromEntries(D.hermandades.filter((h) => (h.marchas || []).length).map((h) => [h.slug, [...new Set(h.marchas.map((x) => h5(x.titulo)))].join('')]));
+  const json = JSON.stringify({ v: 1, caps: D.capitales.map((c) => [c.slug, c.nombre, c.color]), ci, I: D.imagineros.map((i) => [i.nombre, i.slug]), h: hs, m, dt, fo, naz, nd, ru });
+  write('data/juegos.json', json);
+  return createHash('sha256').update(json).digest('hex').slice(0, 10);
+}
+const hhmmJ = (t) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return x ? x[1].padStart(2, '0') + ':' + x[2] : ''; };
+function pageJuegos() {
+  const v = datosJuegos();
+  const body = `<header class="oc-jg-head"><h1 class="oc-title">Juegos</h1><p class="oc-lead">Para la espera, con erCuñao.</p></header>
+<section class="oc-jg" data-juegos data-datos="${u('data/juegos.json')}?v=${v}" aria-label="Juegos"><p class="oc-hint">Cargando los juegos…</p><noscript><p class="oc-note">Los juegos necesitan JavaScript.</p></noscript></section>`;
+  write('juegos/index.html', layout({ title: 'Juegos de Semana Santa', desc: 'Trivial de las ocho capitales, ¿qué hermandad es?, el intruso y el reto diario, con erCuñao. Para jugar mientras esperas a la cofradía, sin conexión y sin cuentas.', body, path: 'juegos/', active: 'juegos/', crumbs: [['Portada', u()], ['Juegos', '']], head: `<script src="${u('assets/juegos.js')}?v=${HUELLA.juegos}" defer></script>` }));
+}
 
 fs.rmSync(DIST, { recursive: true, force: true });
 pageHome(); pageHoy(); pageProxima(); pageCalleIndice(); pageNews(); pageCapitales(); pageCalendario(); pageDirHerm(); pageDirBandas(); pageDirMarchas(); pageDirImag(); pageBuscar(); pageFavoritos(); pageAcerca(); pagesLegales(); pageColabora(); pageOffline(); page404();
@@ -2362,6 +2430,6 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
 pagesFuentes(); // después de todas las fichas: cada una ha guardado ya sus fuentes
 if (ogViejas.size || ogFaltan.size) console.warn(`Aviso: ${ogViejas.size + ogFaltan.size} fichas sin foto comparten la imagen genérica (${ogViejas.size} con el nazareno cambiado, ${ogFaltan.size} sin imagen); ejecuta tools/diseno/og-respaldo.py`);
-searchIndex(); extras(); datosCunao(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
+searchIndex(); extras(); datosCunao(); pageJuegos(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

@@ -119,7 +119,7 @@ export function escribeCabeceras({ DIST, BASE, SITE, redirecciones = [] }) {
     // siempre se piden con ?v=<huella> (build.mjs): una versión nueva es otra URL
     // todo lo que se pide con ?v=<huella> (HUELLA en build.mjs): si cambia, cambia la dirección. Antes vida.css, portada.css y los
     // del globo iban con max-age=0: en cada visita, una ida y vuelta para preguntar si habían cambiado (vida.css, además, frena el pintado)
-    ...['site.css', 'site.js', 'calle.js', 'plano.js', 'cunao.js', 'cunao-ui.js', 'colabora.js', 'vida.css', 'portada.css', 'noticias.js', 'nazareno.js', 'globo.js', 'globo-datos.json']
+    ...['site.css', 'site.js', 'calle.js', 'plano.js', 'cunao.js', 'cunao-ui.js', 'juegos.js', 'colabora.js', 'vida.css', 'portada.css', 'noticias.js', 'nazareno.js', 'globo.js', 'globo-datos.json']
       .map((f) => [b + 'assets/' + f, ['Cache-Control: ' + fijo]]),
     [b + 'assets/vendor/*', ['Cache-Control: ' + fijo]],
     [b + 'assets/fonts/*', ['Cache-Control: ' + fijo]],

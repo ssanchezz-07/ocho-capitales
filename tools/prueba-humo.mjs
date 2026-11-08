@@ -29,7 +29,7 @@ try {
   const herm = rel(await primera('hermandades/', 'hermandad')), marcha = rel(await primera('marchas/', 'marcha'));
   if (!herm) { fallos.push('listado de hermandades'); console.log('::error::No se encuentra ninguna hermandad en hermandades/'); }
   if (!marcha) { fallos.push('listado de marchas'); console.log('::error::No se encuentra ninguna marcha en marchas/'); }
-  const PAGINAS = [['Portada', ''], ['Hoy', 'hoy/'], ['Noticias', 'noticias/'], ['Hermandad', herm], ['Marcha', marcha],
+  const PAGINAS = [['Portada', ''], ['Hoy', 'hoy/'], ['Noticias', 'noticias/'], ['Hermandad', herm], ['Marcha', marcha], ...((await fetch(BASE).then((r) => r.text()).catch(() => '')).includes('/juegos/') ? [['Juegos', 'juegos/']] : []),
     ['Buscar', 'buscar/?q=esperanza'], ['Plano de Málaga', 'en-la-calle/malaga/'], ['Calendario', 'calendario/'], ['Marchas', 'marchas/']].filter(([, r]) => r !== null);
   // Soltura en móvil (390 px, procesador 4 veces más lento): que la página no se quede pillada ni se coma los toques.
   // Límites holgados para que el ruido de la máquina de GitHub no dé falsos fallos; lo que los pasa se nota en un móvil de verdad.

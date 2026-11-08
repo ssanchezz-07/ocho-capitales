@@ -606,6 +606,18 @@
    "tipo": "web",
    "fuentes": [],
    "nota": "Página de fuentes (pulido, encargo 5, 4-nov-2026): describe lo que enseña la propia página, generada desde los campos de fuente de cada ficha."
+  },
+  {
+   "texto": "Trivial de las ocho capitales, ¿qué hermandad es?, el intruso y el reto diario, con erCuñao. Para jugar mientras esperas a la cofradía, sin conexión y sin cuentas.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Juegos de erCuñao (8-nov-2026): presentación de la página /juegos/; las preguntas salen de las fichas."
+  },
+  {
+   "texto": "Para la espera, con erCuñao.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Juegos de erCuñao (8-nov-2026): presentación de la página /juegos/; las preguntas salen de las fichas."
   }
  ]
 }
