@@ -161,7 +161,8 @@
       const u = col[col.length - 1].getBoundingClientRect(), mp = plano.getBoundingClientRect(), tam = Math.round(u.width), top = u.bottom + 8;
       const libreAbajo = (document.querySelector('.oc-tabbar') && getComputedStyle(document.querySelector('.oc-tabbar')).display !== 'none' ? document.querySelector('.oc-tabbar').getBoundingClientRect().top : innerHeight) - 8;
       // tiene que caber dentro del plano y de la pantalla, por encima de la barra de abajo y de la barra de la hora
-      const barra = [...plano.querySelectorAll('[role="slider"], input[type="range"]')].map((x) => x.closest('div') || x).map((x) => x.getBoundingClientRect()).filter((r) => r.height)[0];
+      const rel = document.querySelector('.oc-calle-reloj'), rr = rel && rel.offsetParent !== null ? rel.getBoundingClientRect() : null;
+      const barra = rr && rr.height && rr.left < u.right + 4 && rr.right > u.left - 4 ? rr : [...plano.querySelectorAll('[role="slider"], input[type="range"]')].map((x) => x.closest('div') || x).map((x) => x.getBoundingClientRect()).filter((r) => r.height)[0];
       const suelo = Math.min(libreAbajo, mp.bottom - 8, barra ? barra.top - 8 : Infinity);
       if (u.top < 0 || top + tam > suelo) return false;
       Object.assign(btn.style, { top: top + 'px', left: u.left + 'px', right: 'auto', bottom: 'auto', width: tam + 'px', height: tam + 'px', translate: '', opacity: '', pointerEvents: '' });
@@ -184,6 +185,10 @@
     const pide = () => { if (!pend) { pend = true; requestAnimationFrame(aparta); } };
     addEventListener('scroll', pide, { passive: true }); addEventListener('resize', pide); addEventListener('pointerup', pide, { passive: true });
     addEventListener('load', pide); pide();
+    const ficha = document.querySelector('[data-ficha]'), reloj = document.querySelector('.oc-calle-reloj'), calle = document.querySelector('.oc-calle');
+    if (window.MutationObserver) { const mo = new MutationObserver(pide); if (ficha) mo.observe(ficha, { attributes: true, attributeFilter: ['hidden', 'class'] }); if (calle) mo.observe(calle, { attributes: true, attributeFilter: ['class'] }); }
+    if (reloj) reloj.addEventListener('transitionend', pide);
+    if (ficha) ficha.addEventListener('transitionend', pide);
   }
   // el bocadillo del botón se presenta una vez por sesión y se retira solo
   try { if (!sessionStorage.getItem('oc-cunao')) { btn.classList.add('is-saludo'); sessionStorage.setItem('oc-cunao', '1'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); } } catch (e) { }
