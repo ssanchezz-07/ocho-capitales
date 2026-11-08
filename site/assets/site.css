@@ -1620,7 +1620,10 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 @media (hover: hover) and (pointer: fine) { .oc-cunao-btn:hover { transform: translateY(-2px) rotate(-4deg); } .oc-cunao-btn:hover .oc-cunao-bocadillo { opacity: 1; transform: none; } }
 html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 96px); }
 @media (min-width: 960px) { html:has(.oc-calle) .oc-cunao-btn { bottom: 24px; } }
-.oc-cunao .oc-sheet-panel { display: flex; flex-direction: column; height: min(78dvh, 680px); padding-bottom: 0; }
+.oc-cunao .oc-sheet-panel { display: flex; flex-direction: column; height: min(78dvh, 680px); max-height: calc(100% - 8px); padding-bottom: 0; }
+/* en «En la calle», con el plano a la vista, erCuñao va en la columna de controles del plano (cunao-ui.js lo coloca): mismo tamaño, sin sombra grande */
+.oc-cunao-btn.is-control { filter: drop-shadow(0 4px 10px rgb(20 8 29 / .35)); }
+.oc-cunao-btn.is-control .oc-cunao-bocadillo { display: none; }
 @media (min-width: 760px) { .oc-cunao { display: flex; justify-content: flex-end; align-items: flex-end; padding: 24px; } .oc-cunao .oc-sheet-panel { width: 420px; border-radius: 26px; } }
 .oc-cunao-head { align-items: center; gap: 12px; }
 .oc-cunao-head .oc-cunao-cara { width: 46px; height: 46px; flex: none; box-shadow: 0 0 0 2px #d9b560; }

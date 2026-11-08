@@ -15,7 +15,7 @@
   addEventListener('scroll', () => {
     const y = window.scrollY, d = y - ultimoY;
     if (Math.abs(d) < 8) return;
-    btn.classList.toggle('is-oculto', d > 0 && y > 120 && hoja.hidden);
+    btn.classList.toggle('is-oculto', d > 0 && y > 120 && hoja.hidden && !btn.classList.contains('is-control')); // como control del plano, va con el plano
     ultimoY = y;
   }, { passive: true });
   const url = hoja.getAttribute('data-datos');
@@ -106,9 +106,15 @@
   }
 
   // ---------- abrir y cerrar (hoja inferior, nace del botón) ----------
+  // Teclado del móvil: en el iPhone el teclado tapa la página en vez de encogerla. Mientras la hoja está abierta, se ajusta
+  // al alto que queda a la vista (visualViewport), para que el campo de texto y la última respuesta no queden debajo del teclado.
+  const vv = window.visualViewport;
+  const ajusta = () => { if (!vv || hoja.hidden) return; hoja.style.height = vv.height + 'px'; hoja.style.top = vv.offsetTop + 'px'; hoja.style.bottom = 'auto'; chat.scrollTop = chat.scrollHeight; };
+  const suelta_ = () => { hoja.style.height = ''; hoja.style.top = ''; hoja.style.bottom = ''; };
   function abrir() {
     ultimoFoco = document.activeElement;
     hoja.hidden = false; btn.setAttribute('aria-expanded', 'true');
+    if (vv) { vv.addEventListener('resize', ajusta); vv.addEventListener('scroll', ajusta); ajusta(); }
     requestAnimationFrame(() => hoja.classList.add('is-open'));
     document.body.style.overflow = 'hidden';
     cargar().catch(() => {});
@@ -122,6 +128,7 @@
   }
   function cerrar() {
     hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    if (vv) { vv.removeEventListener('resize', ajusta); vv.removeEventListener('scroll', ajusta); } suelta_();
     setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
     (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();
   }
@@ -145,8 +152,26 @@
     let pend = false, sube = 0;
     if (!calm) btn.style.transition = 'transform 160ms cubic-bezier(.23,1,.32,1), translate 160ms cubic-bezier(.23,1,.32,1), opacity 160ms';
     const choca = (a, b) => a.left < b.right + 4 && a.right > b.left - 4 && a.top < b.bottom + 4 && a.bottom > b.top - 4;
+    // Con el plano a la vista, erCuñao es un control más: en la columna de controles del plano (+, −, ubicación, pantalla
+    // completa), justo debajo del último y del mismo tamaño. Así no tapa el plano, la leyenda, el crédito ni la barra de la hora.
+    // Se ancla por posición al último control (si cambian de sitio, los sigue). Sin la columna a la vista, vuelve a su sitio de siempre.
+    const columna = () => { const bs = [...plano.querySelectorAll('.oc-calle-btn')].filter((b) => b.offsetParent !== null); if (!bs.length) return null; const x = Math.max(...bs.map((b) => b.getBoundingClientRect().left)); return bs.filter((b) => Math.abs(b.getBoundingClientRect().left - x) < 2).sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top); };
+    const enColumna = () => {
+      const col = columna(); if (!col) return false;
+      const u = col[col.length - 1].getBoundingClientRect(), mp = plano.getBoundingClientRect(), tam = Math.round(u.width), top = u.bottom + 8;
+      const libreAbajo = (document.querySelector('.oc-tabbar') && getComputedStyle(document.querySelector('.oc-tabbar')).display !== 'none' ? document.querySelector('.oc-tabbar').getBoundingClientRect().top : innerHeight) - 8;
+      // tiene que caber dentro del plano y de la pantalla, por encima de la barra de abajo y de la barra de la hora
+      const barra = [...plano.querySelectorAll('[role="slider"], input[type="range"]')].map((x) => x.closest('div') || x).map((x) => x.getBoundingClientRect()).filter((r) => r.height)[0];
+      const suelo = Math.min(libreAbajo, mp.bottom - 8, barra ? barra.top - 8 : Infinity);
+      if (u.top < 0 || top + tam > suelo) return false;
+      Object.assign(btn.style, { top: top + 'px', left: u.left + 'px', right: 'auto', bottom: 'auto', width: tam + 'px', height: tam + 'px', translate: '', opacity: '', pointerEvents: '' });
+      btn.classList.add('is-control'); return true;
+    };
+    const suelta = () => { if (!btn.classList.contains('is-control')) return; btn.classList.remove('is-control'); ['top', 'left', 'right', 'bottom', 'width', 'height'].forEach((k) => { btn.style[k] = ''; }); };
     const aparta = () => {
       pend = false;
+      if (enColumna()) return;
+      suelta();
       const r0 = btn.getBoundingClientRect(), base = { left: r0.left, right: r0.right, top: r0.top + sube, bottom: r0.bottom + sube };
       const obs = [...document.querySelectorAll('.oc-calle-osm a, .oc-calle-osm')].concat([...plano.querySelectorAll('button, a[href], input, select, [role="slider"]')])
         .map((x) => x.getBoundingClientRect()).filter((q) => q.width && q.height && q.bottom > 0 && q.top < innerHeight);
