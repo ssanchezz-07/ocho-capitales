@@ -1740,12 +1740,6 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta { display: none; }
 .oc-c-ruta.is-sel { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: 1; stroke-width: 4.5px; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
-/* Salidas extraordinarias (8-nov): una o pocas cofradías, así que su recorrido se ve siempre en oro, ida continua y regreso
-   discontinuo, como dice la leyenda; antes solo se veía el medallón hasta tocarlo. */
-.oc-calle.is-extraordinaria .oc-c-ruta { display: inline; stroke: #f0d79c; stroke-opacity: .9; stroke-width: 3.4px; }
-.oc-calle.is-extraordinaria .oc-c-ruta.is-regreso { stroke-dasharray: 10 7; }
-.oc-calle.is-extraordinaria .oc-c-ruta.is-aprox { stroke-opacity: .5; }
-.oc-calle.is-extraordinaria .oc-c-ruta[data-estado="despues"] { stroke-opacity: .55; }
 .oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
 .oc-calle-ficha { background: transparent; pointer-events: none; }
 .oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }

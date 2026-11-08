@@ -107,7 +107,12 @@
   var tapas = [];
   function medirTapas() {
     var rm = mapa.getBoundingClientRect(); tapas = [];
-    mapa.querySelectorAll('.oc-calle-leyenda, .oc-calle-osm').forEach(function (n) { if (n.hidden) return; var r = n.getBoundingClientRect(); if (!r.width) return; tapas.push([r.left - rm.left + r.width / 2, r.top - rm.top + r.height / 2, r.width / 2 + 4, r.height / 2 + 2]); });
+    mapa.querySelectorAll('.oc-calle-leyenda, .oc-calle-osm, .oc-calle-ctl').forEach(function (n) {
+      if (n.hidden) return; var r = n.getBoundingClientRect(); if (!r.width) return;
+      // la columna de controles guarda sitio para uno más debajo (el botón de erCuñao se coloca ahí con el plano a la vista)
+      var extra = n.classList.contains('oc-calle-ctl') ? 52 : 0;
+      tapas.push([r.left - rm.left + r.width / 2, r.top - rm.top + (r.height + extra) / 2, r.width / 2 + 4, (r.height + extra) / 2 + 2]);
+    });
   }
   window.addEventListener('resize', function () { requestAnimationFrame(function () { medirTapas(); pedirNombres(); }); });
   function pintarNombres() {
@@ -117,8 +122,8 @@
     var cajas = [], puestas = 0, frag = document.createDocumentFragment();
     // los medallones (con su nombre debajo) y los botones del plano no se tapan con rótulos
     posMarcas.forEach(function (p) { cajas.push([(p[0] - vb.x) / Z, (p[1] - vb.y) / Z + 8, 56, 38]); });
-    cajas.push([W - 34, 100, 36, 110]);
-    // ni debajo de la leyenda ni del crédito del plano (arriba a la izquierda); se miden al cambiar de jornada o de tamaño
+    // ni debajo de los controles (derecha), de la leyenda ni del crédito del plano; se miden al cambiar de jornada o de tamaño
+    if (!tapas.length) cajas.push([W - 34, 126, 36, 136]);
     tapas.forEach(function (c) { cajas.push(c); });
     var cabe = function (cx, cy, w, h, ang) {
       var r = ang * Math.PI / 180, hw = (Math.abs(Math.cos(r)) * w + Math.abs(Math.sin(r)) * h) / 2, hh = (Math.abs(Math.sin(r)) * w + Math.abs(Math.cos(r)) * h) / 2;
@@ -475,10 +480,7 @@
       if (si) { var tira = b.parentNode, x = b.offsetLeft - (tira.clientWidth - b.offsetWidth) / 2; if (tira.scrollWidth > tira.clientWidth) tira.scrollLeft = Math.max(0, x); }
     });
     var ley = $('[data-leyenda]');
-    // en las salidas extraordinarias el recorrido (ida y regreso) se ve siempre, como anuncia la leyenda;
-    // en las jornadas de Semana Santa, con muchas cofradías, solo el de la que se elige
     var hay = delDia(), extra = hay.some(function (h) { return h.x; });
-    sec.classList.toggle('is-extraordinaria', extra);
     if (ley) {
       // ida y regreso, en las salidas extraordinarias; «tramo estimado», si alguna cofradía de la jornada lo tiene
       var est = hay.some(function (h) { return (h.t.paso || h.t.cruz || []).some(function (p) { return p[5]; }); });
