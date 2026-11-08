@@ -480,24 +480,20 @@
     "local": "scripts/cedidas/malaga/huerto-malaga-cristo.jpg",
     "titulo": "Cedida: Nuestro Padre Jesús Orando en el Huerto",
     "titular": "Nuestro Padre Jesús Orando en el Huerto",
-    "foco": "50% 30%",
+    "foco": "64% 30%",
     "permiso": "Permiso de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 (captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_huerto_a.ortiz_fotografia_permiso.png). Publicación de origen: https://www.instagram.com/p/DW4TD_JAHGb/ (imagen 1, Domingo de Ramos 2026). Con su marca de agua, a petición del autor (5-nov): permite usar sus fotos «siempre y cuando respetes las marcas de agua», y Pablo decide respetarla. foco_ficha 50% 100% para que en la ficha se vea la firma (abajo a la derecha).",
     "foco_ficha": "50% 100%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg",
-    "titulo": "File:Huerto - Trono Concepcion.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/huerto/",
+    "local": "scripts/cedidas/malaga/huerto-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Concepción Dolorosa",
     "titular": "Nuestra Señora de la Concepción Dolorosa",
-    "recorte": [
-     0.33,
-     0.2,
-     0.24,
-     0.48
-    ],
-    "foco": "50% 50%"
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/huerto/; archivo concepcion-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "gitanos-malaga": {
@@ -524,14 +520,27 @@
    }
   },
   "cautivo-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_(29086279).jpeg",
-    "titulo": "File:Cautivo (29086279).jpeg",
-    "autor": "Eduardo Marin",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "titular": "",
-    "foco": "47% 38%"
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/cautivo/",
+    "local": "scripts/cedidas/malaga/cautivo-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Cautivo",
+    "titular": "Nuestro Padre Jesús Cautivo",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/cautivo/; archivo Cautivo-1-e1484089822878.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/cautivo/",
+    "local": "scripts/cedidas/malaga/cautivo-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Trinidad Coronada",
+    "titular": "María Santísima de la Trinidad Coronada",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/cautivo/; archivo Trinidad-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "rocio-malaga": {
@@ -580,19 +589,15 @@
   },
   "humillacion-y-estrella-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg",
-    "titulo": "File:Estrella - Humillación.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/estrella/",
+    "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Humillación y Perdón",
     "titular": "Nuestro Padre Jesús de la Humillación y Perdón",
-    "recorte": [
-     0.38,
-     0.115,
-     0.33,
-     0.29
-    ],
-    "foco": "50% 10%"
+    "foco": "50% 30%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/estrella/; archivo humillacion-1-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    },
    "virgen": {
     "autor": "Humillación y Estrella (Málaga)",
@@ -641,15 +646,18 @@
     "titulo": "Cedida: Nuestro Padre Jesús de la Sentencia",
     "titular": "Nuestro Padre Jesús de la Sentencia",
     "foco": "50% 35%",
-    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DRe8Fh1jMpr/ (imagen 4: Señor de la Sentencia (abril de 2021)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
+    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/DRe8Fh1jMpr/ (imagen 4: Señor de la Sentencia (abril de 2021)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera. Quitado el filo blanco del marco de la publicación; la firma va dentro de la foto."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg",
-    "titulo": "File:Malaga ig Sn Juan Bautista f12.2 RF -Maria Stma del Rosario en sus misterios dolorosos cBaptisterio.jpg",
-    "autor": "Rodrigo Fernández",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima del Rosario en sus Misterios Dolorosos"
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sentencia/",
+    "local": "scripts/cedidas/malaga/sentencia-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rosario en sus Misterios Dolorosos",
+    "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/sentencia/; archivo rosario-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "salesianos-malaga": {
@@ -740,18 +748,15 @@
   },
   "sangre-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg",
-    "titulo": "File:Stmo Cristo de la Sangre con San Juan Evangelista a sus pies (4481452100).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sangre/",
+    "local": "scripts/cedidas/malaga/sangre-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Sangre",
     "titular": "Santísimo Cristo de la Sangre",
-    "recorte": [
-     0.42,
-     0.12,
-     0.54,
-     0.54
-    ]
+    "foco": "40% 25%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/sangre/; archivo IMG_5680-scaled.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    },
    "virgen": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg",
@@ -3889,18 +3894,15 @@
   },
   "estudiantes-malaga": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg",
-    "titulo": "File:Ntro Padre Jesús Coronado de Espinas (Estudiantes) - Málaga - Lunes Santo (7047577553).jpg",
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/estudiantes/",
+    "local": "scripts/cedidas/malaga/estudiantes-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo Coronado de Espinas",
     "titular": "Santísimo Cristo Coronado de Espinas",
-    "recorte": [
-     0.15,
-     0.04,
-     0.5,
-     0.96
-    ]
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/estudiantes/; archivo Estudiantes-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    },
    "virgen": {
     "autor": "Estudiantes (Málaga)",
@@ -4041,27 +4043,51 @@
    }
   },
   "amor-malaga": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Amor_y_Nuestra_Se%C3%B1ora_de_la_Caridad.jpg",
-    "titulo": "File:Cristo del Amor y Nuestra Señora de la Caridad.jpg",
-    "autor": "Angeltorrico",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Santísimo Cristo del Amor y Nuestra Señora de la Caridad",
-    "foco": "100% 42%"
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/amor/",
+    "local": "scripts/cedidas/malaga/amor-malaga-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo del Amor",
+    "titular": "Santísimo Cristo del Amor",
+    "foco": "30% 45%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/amor/; archivo Amor-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/amor/",
+    "local": "scripts/cedidas/malaga/amor-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Caridad",
+    "titular": "Nuestra Señora de la Caridad",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/amor/; archivo caridad-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "traslado-malaga": {
-   "juntos": {
-    "autor": "Antonio Ortiz",
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Málaga",
     "licencia": "",
     "licurl": "",
-    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
-    "local": "scripts/cedidas/malaga/traslado-malaga-juntos.jpg",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/santo-traslado/",
+    "local": "scripts/cedidas/malaga/traslado-malaga-cristo.jpg",
     "titulo": "Cedida: Santo Traslado al Sepulcro",
     "titular": "Santo Traslado al Sepulcro",
-    "foco": "50% 50%",
-    "permiso": "Permiso general de Antonio Ortiz (@a.ortiz_fotografia) del 5-nov-2026 («puedes coger las que necesites siempre y cuando respetes las marcas de agua»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-05_a.ortiz_fotografia_permiso-general.png). Publicación: https://www.instagram.com/p/Dfew_cAjh2z/ (imagen 3: el Santo Traslado en su salida extraordinaria del 75 aniversario (noviembre de 2026)). Con su marca de agua intacta; el foco solo encuadra la cara en las miniaturas y la ficha enseña la foto entera."
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/santo-traslado/; archivo Santo-Traslado-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/santo-traslado/",
+    "local": "scripts/cedidas/malaga/traslado-malaga-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Soledad",
+    "titular": "Nuestra Señora de la Soledad",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/santo-traslado/; archivo Soledad-de-San-Pablo-1.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "piedad-malaga": {
@@ -4079,19 +4105,15 @@
   },
   "servitas-malaga": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Servitas_Trono.jpg",
-    "titulo": "File:Servitas Trono.jpg",
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/servitas/",
+    "local": "scripts/cedidas/malaga/servitas-malaga-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Dolores",
     "titular": "María Santísima de los Dolores",
-    "recorte": [
-     0.12,
-     0,
-     0.4,
-     0.36
-    ],
-    "foco": "50% 63%"
+    "foco": "50% 30%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/servitas/; archivo servitas-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "el-santo-entierro-huelva": {
@@ -4547,6 +4569,17 @@
     "titular": "Nuestra Señora de la Soledad",
     "foco": "50% 38%",
     "permiso": "Origen: https://www.instagram.com/p/DfCcO6Iou7e/ (@sepulcromalaga), sin fotógrafo citado. Pablo, 5-nov: «SI NO ESTA SE SUBE»; crédito a la hermandad con enlace a su perfil. No es la sesión de @lmfotoscofrades (DfJragQERpD), que dijo que no."
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sepulcro/",
+    "local": "scripts/cedidas/malaga/santo-sepulcro-malaga-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Santo Sepulcro",
+    "titular": "Nuestro Padre Jesús del Santo Sepulcro",
+    "foco": "25% 45%",
+    "permiso": "Publicada por la Agrupación de Cofradías de Semana Santa de Málaga en la página de la hermandad (https://agrupaciondecofradias.com/hermandades/sepulcro/; archivo sepulcro-2.jpg), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la Agrupación con enlace a la página."
    }
   },
   "la-borriquita-cadiz": {

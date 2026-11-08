@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T22:44:59.627Z",
+ "generado": "2026-11-08T22:45:05.570Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3774,25 +3774,22 @@
   "huerto-malaga": {
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg",
-    "recorte": [
-     0.33,
-     0.2,
-     0.24,
-     0.48
-    ],
-    "titular": "Nuestra Señora de la Concepción Dolorosa",
-    "foco": "50% 50%"
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/huerto/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/huerto-malaga-virgen.jpg",
+    "tam": 832263,
+    "titular": "Nuestra Señora de la Concepción Dolorosa"
    },
    "cristo": {
     "w": 960,
@@ -3807,7 +3804,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
-    "foco": "50% 30%",
+    "foco": "64% 30%",
     "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/huerto-malaga-cristo.jpg",
@@ -3870,6 +3867,44 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_(29086279).jpeg",
     "titular": "",
     "foco": "47% 38%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1172,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/cautivo/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/cautivo-malaga-cristo.jpg",
+    "tam": 513793,
+    "titular": "Nuestro Padre Jesús Cautivo"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1443,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/cautivo/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/cautivo-malaga-virgen.jpg",
+    "tam": 1054086,
+    "titular": "María Santísima de la Trinidad Coronada"
    }
   },
   "rocio-malaga": {
@@ -3974,24 +4009,21 @@
    },
    "cristo": {
     "w": 960,
-    "h": 1265,
+    "h": 1434,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg",
-    "foco": "50% 10%",
-    "recorte": [
-     0.38,
-     0.115,
-     0.33,
-     0.29
-    ],
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/estrella/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/humillacion-y-estrella-malaga-cristo.jpg",
+    "tam": 510861,
     "titular": "Nuestro Padre Jesús de la Humillación y Perdón"
    }
   },
@@ -4030,12 +4062,12 @@
   },
   "sentencia-malaga": {
    "cristo": {
-    "w": 960,
-    "h": 960,
+    "w": 784,
+    "h": 1170,
     "widths": [
      160,
      480,
-     960
+     784
     ],
     "escudo": false,
     "autor": "Antonio Ortiz",
@@ -4045,22 +4077,26 @@
     "foco": "50% 35%",
     "cedida": true,
     "local": "scripts/cedidas/malaga/sentencia-malaga-cristo.jpg",
-    "tam": 345899,
+    "tam": 346419,
     "titular": "Nuestro Padre Jesús de la Sentencia"
    },
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1369,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Rodrigo Fernández",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg",
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sentencia/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/sentencia-malaga-virgen.jpg",
+    "tam": 882041,
     "titular": "María Santísima del Rosario en sus Misterios Dolorosos"
    }
   },
@@ -4205,23 +4241,21 @@
   "sangre-malaga": {
    "cristo": {
     "w": 960,
-    "h": 1280,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg",
-    "recorte": [
-     0.42,
-     0.12,
-     0.54,
-     0.54
-    ],
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sangre/",
+    "foco": "40% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/sangre-malaga-cristo.jpg",
+    "tam": 693671,
     "titular": "Santísimo Cristo de la Sangre"
    },
    "virgen": {
@@ -9340,24 +9374,22 @@
   },
   "estudiantes-malaga": {
    "cristo": {
-    "w": 960,
-    "h": 1229,
+    "w": 864,
+    "h": 1152,
     "widths": [
      160,
      480,
-     960
+     864
     ],
     "escudo": false,
-    "autor": "Antonio España from Madrid, España",
-    "licencia": "CC BY-SA 2.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg",
-    "recorte": [
-     0.15,
-     0.04,
-     0.5,
-     0.96
-    ],
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/estudiantes/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/estudiantes-malaga-cristo.jpg",
+    "tam": 459099,
     "titular": "Santísimo Cristo Coronado de Espinas"
    },
    "virgen": {
@@ -9600,6 +9632,44 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Amor_y_Nuestra_Se%C3%B1ora_de_la_Caridad.jpg",
     "titular": "Santísimo Cristo del Amor y Nuestra Señora de la Caridad",
     "foco": "100% 42%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 640,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/amor/",
+    "foco": "30% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/amor-malaga-cristo.jpg",
+    "tam": 411081,
+    "titular": "Santísimo Cristo del Amor"
+   },
+   "virgen": {
+    "w": 900,
+    "h": 1354,
+    "widths": [
+     160,
+     480,
+     900
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/amor/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/amor-malaga-virgen.jpg",
+    "tam": 692472,
+    "titular": "Nuestra Señora de la Caridad"
    }
   },
   "traslado-malaga": {
@@ -9621,6 +9691,44 @@
     "local": "scripts/cedidas/malaga/traslado-malaga-juntos.jpg",
     "tam": 665935,
     "titular": "Santo Traslado al Sepulcro"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1439,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/santo-traslado/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/traslado-malaga-cristo.jpg",
+    "tam": 512182,
+    "titular": "Santo Traslado al Sepulcro"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/santo-traslado/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/traslado-malaga-virgen.jpg",
+    "tam": 521042,
+    "titular": "Nuestra Señora de la Soledad"
    }
   },
   "piedad-malaga": {
@@ -9646,26 +9754,23 @@
   },
   "servitas-malaga": {
    "virgen": {
-    "w": 960,
-    "h": 1296,
+    "w": 922,
+    "h": 1382,
     "widths": [
      160,
      480,
-     960
+     922
     ],
     "escudo": false,
-    "autor": "Pedro J Pacheco",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Servitas_Trono.jpg",
-    "recorte": [
-     0.12,
-     0,
-     0.4,
-     0.36
-    ],
-    "titular": "María Santísima de los Dolores",
-    "foco": "50% 63%"
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/servitas/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/servitas-malaga-virgen.jpg",
+    "tam": 615672,
+    "titular": "María Santísima de los Dolores"
    }
   },
   "el-santo-entierro-huelva": {
@@ -10354,6 +10459,25 @@
     "local": "scripts/cedidas/malaga/santo-sepulcro-malaga-virgen.jpg",
     "tam": 352320,
     "titular": "Nuestra Señora de la Soledad"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 640,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Málaga",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://agrupaciondecofradias.com/hermandades/sepulcro/",
+    "foco": "25% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/santo-sepulcro-malaga-cristo.jpg",
+    "tam": 579001,
+    "titular": "Nuestro Padre Jesús del Santo Sepulcro"
    }
   },
   "la-borriquita-cadiz": {
@@ -10646,7 +10770,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/huerto-malaga-cristo.jpg\"|376673|\"\"|\"50% 30%\"|\"https://commons.wikimedia.org/wiki/File:Huerto_-_Trono_Concepcion.jpg\"|\"\"|\"\"|[0.33,0.2,0.24,0.48]|\"50% 50%\""
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/huerto-malaga-cristo.jpg\"|376673|\"\"|\"64% 30%\"|\"https://agrupaciondecofradias.com/hermandades/huerto/\"|\"scripts/cedidas/malaga/huerto-malaga-virgen.jpg\"|832263|\"\"|\"50% 35%\""
   },
   "gitanos-malaga": {
    "w": 960,
@@ -10657,6 +10781,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/cofradiadelacolumna\"|\"scripts/cedidas/malaga/gitanos-malaga-cristo.jpg\"|365136|\"\"|\"50% 25%\"|\"https://www.instagram.com/cofradiadelacolumna\"|\"scripts/cedidas/malaga/gitanos-malaga-virgen.jpg\"|323820|\"\"|\"\""
+  },
+  "cautivo-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/cautivo/\"|\"scripts/cedidas/malaga/cautivo-malaga-cristo.jpg\"|513793|\"\"|\"50% 25%\"|\"https://agrupaciondecofradias.com/hermandades/cautivo/\"|\"scripts/cedidas/malaga/cautivo-malaga-virgen.jpg\"|1054086|\"\"|\"50% 40%\""
   },
   "rocio-malaga": {
    "w": 960,
@@ -10686,7 +10820,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Estrella_-_Humillaci%C3%B3n.jpg\"|\"\"|\"\"|[0.38,0.115,0.33,0.29]|\"50% 10%\"|\"https://www.instagram.com/hdadhumillacion\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp\"|302148|[0.1667,0,0.6667,1]|\"50% 11%\""
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/estrella/\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-cristo.jpg\"|510861|\"\"|\"50% 30%\"|\"https://www.instagram.com/hdadhumillacion\"|\"scripts/cedidas/malaga/humillacion-y-estrella-malaga-virgen.webp\"|302148|[0.1667,0,0.6667,1]|\"50% 11%\""
   },
   "rescate-malaga": {
    "w": 960,
@@ -10706,7 +10840,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/sentencia-malaga-cristo.jpg\"|345899|\"\"|\"50% 35%\"|\"https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f12.2_RF_-Maria_Stma_del_Rosario_en_sus_misterios_dolorosos_cBaptisterio.jpg\"|\"\"|\"\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/malaga/sentencia-malaga-cristo.jpg\"|346419|\"\"|\"50% 35%\"|\"https://agrupaciondecofradias.com/hermandades/sentencia/\"|\"scripts/cedidas/malaga/sentencia-malaga-virgen.jpg\"|882041|\"\"|\"50% 45%\""
   },
   "salesianos-malaga": {
    "w": 960,
@@ -10746,7 +10880,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Stmo_Cristo_de_la_Sangre_con_San_Juan_Evangelista_a_sus_pies_(4481452100).jpg\"|\"\"|\"\"|[0.42,0.12,0.54,0.54]|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg\"|\"\"|\"\"|\"\"|\"50% 22%\""
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/sangre/\"|\"scripts/cedidas/malaga/sangre-malaga-cristo.jpg\"|693671|\"\"|\"40% 25%\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Sangre_M%C3%A1laga.jpg\"|\"\"|\"\"|\"\"|\"50% 22%\""
   },
   "expiracion-malaga": {
    "w": 960,
@@ -11406,7 +11540,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro_Padre_Jes%C3%BAs_Coronado_de_Espinas_(Estudiantes)_-_M%C3%A1laga_-_Lunes_Santo_(7047577553).jpg\"|\"\"|\"\"|[0.15,0.04,0.5,0.96]|\"\"|\"https://www.instagram.com/cofradia_de_estudiantes\"|\"scripts/cedidas/malaga/estudiantes-malaga-virgen.jpg\"|503361|\"\"|\"\""
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/estudiantes/\"|\"scripts/cedidas/malaga/estudiantes-malaga-cristo.jpg\"|459099|\"\"|\"50% 35%\"|\"https://www.instagram.com/cofradia_de_estudiantes\"|\"scripts/cedidas/malaga/estudiantes-malaga-virgen.jpg\"|503361|\"\"|\"\""
   },
   "nueva-esperanza-malaga": {
    "w": 960,
@@ -11457,6 +11591,26 @@
     960
    ],
    "firma": "\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-cristo.jpg\"|208470|\"\"|\"55% 25%\"|\"https://www.instagram.com/pasoyesperanza\"|\"scripts/cedidas/malaga/esperanza-malaga-virgen.jpg\"|480310|\"\"|\"50% 62%\""
+  },
+  "amor-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/amor/\"|\"scripts/cedidas/malaga/amor-malaga-cristo.jpg\"|411081|\"\"|\"30% 45%\"|\"https://agrupaciondecofradias.com/hermandades/amor/\"|\"scripts/cedidas/malaga/amor-malaga-virgen.jpg\"|692472|\"\"|\"50% 35%\""
+  },
+  "traslado-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/santo-traslado/\"|\"scripts/cedidas/malaga/traslado-malaga-cristo.jpg\"|512182|\"\"|\"50% 40%\"|\"https://agrupaciondecofradias.com/hermandades/santo-traslado/\"|\"scripts/cedidas/malaga/traslado-malaga-virgen.jpg\"|521042|\"\"|\"50% 35%\""
   },
   "la-columna-cadiz": {
    "w": 960,
@@ -11537,6 +11691,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/doloresptotorre/\"|\"scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-cristo.jpg\"|1046572|\"\"|\"50% 45%\"|\"https://www.instagram.com/doloresptotorre/\"|\"scripts/cedidas/malaga/dolores-del-puerto-de-la-torre-malaga-virgen.jpg\"|321230|\"\"|\"50% 34%\""
+  },
+  "santo-sepulcro-malaga": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://agrupaciondecofradias.com/hermandades/sepulcro/\"|\"scripts/cedidas/malaga/santo-sepulcro-malaga-cristo.jpg\"|579001|\"\"|\"25% 45%\"|\"https://www.instagram.com/sepulcromalaga/\"|\"scripts/cedidas/malaga/santo-sepulcro-malaga-virgen.jpg\"|352320|\"\"|\"50% 38%\""
   },
   "la-borriquita-cadiz": {
    "w": 960,
