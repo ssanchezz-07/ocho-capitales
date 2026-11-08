@@ -9,7 +9,7 @@
   var svg = $('.oc-calle-svg'), mapa = $('[data-mapa]'), rango = $('[data-tiempo]'), hora = $('[data-hora]'), lista = $('[data-lista]');
   var fechas = {}; try { fechas = JSON.parse(sec.getAttribute('data-fechas')); } catch (e) { }
   var D = null, dia = null, T = 0, vb = { x: 0, y: 0, w: 1000, h: 1000 }, capas = {}, yo = null, sel = null;
-  var ultMin = null, cortejoDe = {}, firmaLista = '', firmaFicha = ''; // lo último pintado, para no repetirlo en cada fotograma
+  var ultMin = null, cortejoDe = {}, filaDe = {}, fichaDe = '', firmaLista = '', firmaFicha = ''; // lo último pintado, para no repetirlo en cada fotograma
   var el = function (t, a) { var n = document.createElementNS(NS, t); for (var k in a) n.setAttribute(k, a[k]); return n; };
   // Encuadre de la foto en el punto redondo: el mismo foco (object-position) que su miniatura en el resto de la web
   var encuadre = function (h, r) {
@@ -248,7 +248,7 @@
   }
   function dibujarRutas() {
     capas.rutas.textContent = ''; capas.marcas.textContent = ''; capas.cortejos.textContent = '';
-    cortejoDe = {}; firmaLista = firmaFicha = ''; ultMin = null; delDia().forEach(function (h) { h.est0 = null; });
+    cortejoDe = {}; filaDe = {}; lista.textContent = ''; firmaLista = firmaFicha = ''; ultMin = null; delDia().forEach(function (h) { h.est0 = null; });
     var xs = [], ys = [];
     var PAL = ['#e0b84f', '#e8735a', '#5fb3d9', '#9c7ce0', '#6cc58a', '#e86fa6', '#f09a3e', '#4fc7c0', '#c9d36a', '#d98bd9', '#7fa2f0', '#e5c07b'], usados = {};
     delDia().forEach(function (h, i) {
@@ -361,22 +361,43 @@
     // la lista (con sus fotos) solo se rehace si cambia el orden, el estado o el texto de alguna fila
     var firma = filas.map(function (f) { return f.h.s + '|' + f.est + '|' + f.txt; }).join('~');
     if (firma !== firmaLista) { firmaLista = firma; pintarLista(filas); }
-    if (sel) { var ps = enTramo(sel.t.paso || sel.t.cruz, T), fs = sel.s + '|' + (ps ? ps.estado + ps.i : '') + '|' + mm; if (fs !== firmaFicha) { firmaFicha = fs; pintarFicha(sel); } }
+    if (sel) { var fs = firmaDeFicha(sel); if (fs !== firmaFicha) { firmaFicha = fs; pintarFicha(sel); } }
+  }
+  // Cada fila se crea una vez por jornada; luego solo cambian su texto y su estado (rehacerla bajo el dedo perdía el toque
+  // en el iPhone, y recargaba la foto). Si cambia el orden, se mueven las filas que haga falta.
+  // Lo que enseña la ficha cambia solo con el estado, la calle por la que va, el próximo punto oficial y el acto en el templo
+  // de destino; el índice del punto cambia cada pocos metros y rehacerla tanto cerraba «Itinerario completo» y perdía toques.
+  function firmaDeFicha(h) {
+    var pts = h.t.paso || h.t.cruz, p = enTramo(pts, T); if (!p) return h.s;
+    var k = p.estado === 'antes' ? 0 : Math.min(p.i + 1, pts.length - 1); while (k < pts.length - 1 && pts[k][6]) k++;
+    var acto = '';
+    if (h.x) { if (h.fIda == null) { h.fIda = -1; for (var a = 0; a < pts.length; a++) if (!pts[a][7]) h.fIda = a; } var r = pts[h.fIda + 1]; acto = h.fIda >= 0 && r && T >= pts[h.fIda][2] && T < r[2] ? '1' : '0'; }
+    return h.s + '|' + p.estado + '|' + (p.estado === 'calle' ? pts[p.i][3] : '') + '|' + k + '|' + acto;
   }
   function pintarLista(filas) {
-    lista.textContent = '';
-    filas.forEach(function (f) {
-      var li = document.createElement('li'); li.className = 'oc-calle-item'; li.setAttribute('data-estado', f.est);
-      var b = document.createElement('button'); b.type = 'button';
-      var thumb = document.createElement('span'); thumb.className = 'oc-calle-thumb';
-      if (f.h.img) { var im = document.createElement('img'); im.src = f.h.img; if (f.h.f) im.style.objectPosition = f.h.f; im.alt = ''; im.loading = 'lazy'; thumb.appendChild(im); } else thumb.textContent = f.h.ini;
-      var t = document.createElement('span'); t.className = 'oc-calle-txt';
-      var n = document.createElement('strong'); n.textContent = f.h.n; var s = document.createElement('span'); s.textContent = f.txt;
-      t.appendChild(n); t.appendChild(s); b.appendChild(thumb); b.appendChild(t);
-      var dot = document.createElement('i'); dot.className = 'oc-calle-dot'; dot.setAttribute('aria-hidden', 'true'); b.appendChild(dot);
-      b.addEventListener('click', function () { abrir(f.h); });
-      li.appendChild(b); lista.appendChild(li);
+    var vistas = {};
+    filas.forEach(function (f, i) {
+      var r = filaDe[f.h.s] || (filaDe[f.h.s] = crearFila(f.h));
+      vistas[f.h.s] = 1;
+      if (r.li.getAttribute('data-estado') !== f.est) r.li.setAttribute('data-estado', f.est);
+      if (r.txt.textContent !== f.txt) r.txt.textContent = f.txt;
+      if (lista.children[i] !== r.li) lista.insertBefore(r.li, lista.children[i] || null);
     });
+    for (var k in filaDe) if (!vistas[k]) { filaDe[k].li.remove(); delete filaDe[k]; }
+  }
+  function crearFila(h) {
+    var f = { h: h };
+    var li = document.createElement('li'); li.className = 'oc-calle-item';
+    var b = document.createElement('button'); b.type = 'button';
+    var thumb = document.createElement('span'); thumb.className = 'oc-calle-thumb';
+    if (f.h.img) { var im = document.createElement('img'); im.src = f.h.img; if (f.h.f) im.style.objectPosition = f.h.f; im.alt = ''; im.loading = 'lazy'; thumb.appendChild(im); } else thumb.textContent = f.h.ini;
+    var t = document.createElement('span'); t.className = 'oc-calle-txt';
+    var n = document.createElement('strong'); n.textContent = f.h.n; var s = document.createElement('span');
+    t.appendChild(n); t.appendChild(s); b.appendChild(thumb); b.appendChild(t);
+    var dot = document.createElement('i'); dot.className = 'oc-calle-dot'; dot.setAttribute('aria-hidden', 'true'); b.appendChild(dot);
+    b.addEventListener('click', function () { abrir(f.h); });
+    li.appendChild(b);
+    return { li: li, txt: s };
   }
 
   // ---------- ficha de una hermandad: dónde va, por dónde pasará y cómo llegar ----------
@@ -388,6 +409,9 @@
     // el foco entra en la ficha (antes se quedaba detrás del diálogo)
     var x = $('[data-ficha-cerrar]'); if (x) setTimeout(function () { x.focus({ preventScroll: true }); }, calm ? 0 : 40);
     var rp = h.t.paso || h.t.cruz; if (rp && rp.length) encuadrar(rp.map(function (q) { return q[0]; }), rp.map(function (q) { return q[1]; }), !calm);
+    marcarSel(h);
+  }
+  function marcarSel(h) {
     $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { n.classList.toggle('is-sel', n.getAttribute('data-s') === h.s); });
     // la elegida, por encima de las demás (marca y recorrido), y el resto atenuado
     var gm = capas.marcas.querySelector('.oc-c-marca[data-s="' + h.s + '"]'); if (gm) capas.marcas.appendChild(gm);
@@ -401,7 +425,7 @@
   function enlaceMapa(x, y, apple) { var ll = aLatLon(x, y); return apple ? 'https://maps.apple.com/?daddr=' + ll[0].toFixed(6) + ',' + ll[1].toFixed(6) + '&dirflg=w' : 'https://www.google.com/maps/dir/?api=1&destination=' + ll[0].toFixed(6) + ',' + ll[1].toFixed(6) + '&travelmode=walking'; }
   function pintarFicha(h) {
     $('[data-ficha-titulo]').textContent = h.n;
-    var c = $('[data-ficha-cuerpo]'); c.textContent = '';
+    var c = $('[data-ficha-cuerpo]'), itiAbierto = fichaDe === h.s && !!c.querySelector('details.oc-calle-iti[open]'); fichaDe = h.s; c.textContent = '';
     var pts = h.t.paso || h.t.cruz, p = enTramo(pts, T);
     var est = document.createElement('p'); est.className = 'oc-calle-estado';
     est.textContent = !p ? '' : p.estado === 'antes' ? 'Sale a las ' + hhmm(pts[0][2]) + ' de ' + pts[0][3].toLowerCase().replace(/^salida$/, 'su templo') : p.estado === 'despues' ? 'Ya se ha recogido (' + hhmm(pts[pts.length - 1][2]) + ')' : 'Ahora, aproximadamente, por ' + pts[p.i][3];
@@ -437,7 +461,7 @@
     c.appendChild(acc);
     if (x) {
       // itinerario completo, tal cual el cartel: solo las horas oficiales
-      var it = document.createElement('details'); it.className = 'oc-calle-iti';
+      var it = document.createElement('details'); it.className = 'oc-calle-iti'; if (itiAbierto) it.open = true;
       var su = document.createElement('summary'); su.textContent = 'Itinerario completo'; it.appendChild(su);
       var tramo = function (tit, lista, cls) {
         var hh3 = document.createElement('p'); hh3.className = 'oc-calle-iti-t ' + cls; hh3.textContent = tit; it.appendChild(hh3);
@@ -475,6 +499,7 @@
   // ---------- jornada, reloj y reproducción ----------
   var playing = false, raf = 0;
   function ponerDia(d) {
+    if (sel && sel.d !== d) cerrar(); // la ficha de otra jornada no se queda abierta
     dia = d; $$('[data-dia]').forEach(function (b) {
       var si = b.getAttribute('data-dia') === d; b.setAttribute('aria-selected', si ? 'true' : 'false');
       // la pestaña elegida, a la vista en la tira deslizable (sin mover la página)
@@ -732,6 +757,8 @@
     // ?t=<minutos> y ?h=<hermandad>: se llega desde la portada a la misma hora y, si se tocó un medallón, con su ficha abierta
     var tq = +q.get('t'); if (q.get('t') && isFinite(tq)) { T = Math.max(+rango.min, Math.min(+rango.max, tq)); rango.value = T; capas.yaEncuadrado = false; dibujarRutas(); actualizar(); }
     var hq = q.get('h'), hh = hq && delDia().filter(function (x) { return x.s === hq; })[0]; if (hh) abrir(hh);
-    window.addEventListener('resize', function () { capas.yaEncuadrado = false; dibujarRutas(); actualizar(); });
+    // solo si cambia el ancho: en el iPhone, la barra de Safari al plegarse lanza «resize» y no hay que rehacer nada
+    var anchoAntes = innerWidth;
+    window.addEventListener('resize', function () { if (innerWidth === anchoAntes) return; anchoAntes = innerWidth; capas.yaEncuadrado = false; dibujarRutas(); if (sel) marcarSel(sel); actualizar(); });
   }
 })();
