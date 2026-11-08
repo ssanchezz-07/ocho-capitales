@@ -1,5 +1,10 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-08 · Plano: reproducir/pausar en el iPhone y fondo hasta todas las sedes (sesión «En la calle»)
+**Reproducir y pausar.** Pablo: «el botón de play solo inicia pero no pausa». En el iPhone, Safari no envía el «click» si la página cambia bajo el dedo, y el plano reconstruía la lista (con fotos) en cada fotograma. **Elegido:** el botón responde a `pointerup` (el click de detrás se ignora, salvo el de teclado) y en cada fotograma solo se toca lo que cambia (lista con una fila por hermandad, ficha con firma, cortejo reutilizado). **Descartado:** `touchend` con `preventDefault` (rompe el desplazamiento y la accesibilidad) y bajar la frecuencia de repintado (el cortejo daría tirones).
+**Recorrido de la extraordinaria siempre visible:** se probó y se quitó. Pablo dice que la línea dorada «va bien» al reproducir.
+**Fondo del plano de sedes.** Pablo: «hay hermandades fuera del mapa… al quitar el zoom se ven zonas vacías en morado». **Elegido:** `tools/plano/afueras.mjs` amplía el fondo desde el mismo pbf hasta cubrir lo que enseña la cámara al encuadrar todas las sedes en el móvil y en el ordenador; fuera del centro, solo carreteras principales y costa (de 16 a 138 KB por capital). La cámara no sale del fondo y al abrir se ven todas las sedes. **Descartado:** volver a generar el fondo completo con todas las calles hasta las afueras (pesaría varias veces más y es el terreno de las herramientas de rutas) y tapar los bordes con un degradado (seguiría viéndose el recuadro). Cuando lleguen sedes nuevas fuera del fondo, `build.mjs` avisa y se vuelve a ejecutar `node tools/plano/afueras.mjs <ciudad>`.
+
 ## 2026-11-08 · erCuñao «experto en todo» y juegos «mientras esperas» (sesión erCuñao, plan del domingo al martes)
 Pablo (6 y 8-nov): «tiene que ser el mejor en todo, experto en todo» y «la mejora y perfección del bot, tanto en funciones como en visualización, además de meterle los juegos de espera».
 

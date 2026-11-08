@@ -2140,7 +2140,11 @@ function datosCalle(c) {
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limitesPlano(P), principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), nFichas: Object.values(HERM).filter((h) => h.ciudad === c.slug).length, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  // Una sede nueva (con coordenada recién llegada) fuera del fondo aparece igual, pero la cámara no llega a ella hasta regenerar el fondo
+  const limP = limitesPlano(P), sedesC = sedesCiudad(c, P, R, xy);
+  const sinFondo = sedesC.filter((h) => [h.tp, h.cs].some((q) => q && (q[0] < limP[0] || q[0] > limP[2] || q[1] < limP[1] || q[1] > limP[3])));
+  if (sinFondo.length) console.warn(`Aviso: ${sinFondo.length} sedes de ${c.nombre} fuera del fondo del plano (${sinFondo.map((h) => h.s).join(', ')}); ejecuta «node tools/plano/afueras.mjs ${c.slug}»`);
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limP, principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesC, nFichas: Object.values(HERM).filter((h) => h.ciudad === c.slug).length, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {
