@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T22:44:37.009Z",
+ "generado": "2026-11-08T22:44:59.627Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4108,19 +4108,23 @@
   "fusionadas-malaga": {
    "cristo": {
     "w": 960,
-    "h": 960,
+    "h": 1200,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Mayordomiaazotesycolumna",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:NUESTRO_PADRE_JESUS_DE_AZOTES_Y_COLUMNA.jpg",
-    "titular": "Nuestro Padre Jesús de Azotes y Columna",
-    "foco": "50% 24%"
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "40% 35%",
+    "focoFicha": "0% 50%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/fusionadas-malaga-cristo.jpg",
+    "tam": 395904,
+    "titular": "Nuestro Padre Jesús de Azotes y Columna"
    }
   },
   "paloma-malaga": {
