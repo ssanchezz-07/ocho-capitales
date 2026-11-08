@@ -74,7 +74,10 @@
         [[0, 0], [g[5], 1], [1 - g[5], 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, lg); });
         var mk = el('mask', { id: idm + g[0], maskUnits: 'userSpaceOnUse', x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1] }, defs);
         el('rect', { x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1], fill: 'url(#' + idm + g[0] + 'g)' }, mk);
+        // alrededor de cada sede su barrio se ve entero, aunque caiga en el desvanecido (un círculo suave de 700 m)
+        (D.sedes || []).forEach(function (h) { [h.tp, h.cs].forEach(function (q) { if (q) el('circle', { cx: q[0], cy: q[1], r: 700, fill: 'url(#' + idm + 'r)' }, mk); }); });
       });
+      var rg = el('radialGradient', { id: idm + 'r' }, defs); [[0, 1], [0.55, 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, rg); });
       var gMx = el('g', { mask: 'url(#' + idm + 'x)' }), gMy = el('g', { mask: 'url(#' + idm + 'y)' }, gMx);
       mundo.insertBefore(gMx, gCalles); gMy.appendChild(gCalles);
       // las calles de barrio de las sedes apartadas, fuera del centro: sin máscara
@@ -93,14 +96,22 @@
     // ni al alejar ni al arrastrar, para que no asome morado vacío alrededor del plano (Pablo, 8-nov).
     // Durante el vuelo desde el mapa de Andalucía (con la provincia debajo) la cámara va libre.
     var F = D.lim && D.lim.length === 4 ? D.lim : lim;
-    var wTope = Infinity; // con sedes: como mucho 1,6 veces lo que ocupan todas (alejar más solo enseñaba campo)
-    function maxAncho() { return Math.max(250, Math.min(F[2] - F[0], (F[3] - F[1]) * W() / H(), wTope)); }
+    // Con las sedes a la vista, alejar como mucho 1,6 veces lo que ocupan todas (alejar más solo enseñaba campo). Se guarda su
+    // recuadro y los márgenes, y el tope se calcula con el tamaño de ahora (si se gira el móvil, cambia con él)
+    var cajaSedes = null;
+    function tope() {
+      if (!cajaSedes || gS.style.display === 'none') return Infinity;
+      var c = cajaSedes, iw = Math.max(60, W() - c.m.izq - c.m.der), ih = Math.max(60, H() - c.m.arriba - c.m.abajo);
+      return 1.6 * W() * Math.max(Math.max(c.w, 300) / iw, Math.max(c.h, 300) / ih) * 1.04;
+    }
+    function maxAncho() { return Math.max(250, Math.min(F[2] - F[0], (F[3] - F[1]) * W() / H(), tope())); }
     function limitar(c) {
       var w = Math.min(c.w, maxAncho()), h = w * H() / W(), cx = c.x + c.w / 2, cy = c.y + c.w * H() / W() / 2;
       cx = Math.min(Math.max(cx, F[0] + w / 2), F[2] - w / 2); cy = Math.min(Math.max(cy, F[1] + h / 2), F[3] - h / 2);
       return { x: cx - w / 2, y: cy - h / 2, w: w };
     }
-    var libre = function () { return !!(provEl && provEl.getAttribute('d')); };
+    // libre: durante el vuelo de la portada (ida y vuelta a Andalucía) la cámara la lleva site.js con fijar(c, true)
+    var enVuelo = false, libre = function () { return enVuelo || !!(provEl && provEl.getAttribute('d')); };
     function aplicar(centro) {
       var cy = vb.y + vb.h / 2; vb.h = vb.w * H() / W(); if (centro) vb.y = cy - vb.h / 2;
       if (!libre()) { var c = limitar(vb); vb.x = c.x; vb.y = c.y; vb.w = c.w; vb.h = vb.w * H() / W(); }
@@ -197,7 +208,7 @@
     };
     // Para el vuelo de la portada (site.js lleva la cámara fotograma a fotograma): fija el encuadre sin animación; con «volando»,
     // solo las calles principales y sin rótulos, como en el vuelo propio
-    api.fijar = function (c, volando) { cancelAnimationFrame(anim); vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); };
+    api.fijar = function (c, volando) { cancelAnimationFrame(anim); enVuelo = !!volando; vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); };
     api.ancho = function () { return lim[2] - lim[0]; };
     api.capas = function () { return [base, svg]; };
     // la provincia de la ciudad, debajo de todo: es el mapa de Andalucía que se convierte en el plano
@@ -210,7 +221,9 @@
       if (!simbolos.length) { if (soloCaja) return api.caja([lim[0], lim[2]], [lim[1], lim[3]], m); api.volar(api.caja([lim[0], lim[2]], [lim[1], lim[3]], m), ms); return; }
       // todas las sedes a la vista (Pablo, 8-nov: «tienen que estar todas»): el fondo ya llega hasta las de los barrios
       // (tools/plano/afueras.mjs) y la cámara no se sale de él; las que quedan juntas se agrupan con su número
-      wTope = Infinity; var cj = api.caja(simbolos.map(function (s) { return s.x; }), simbolos.map(function (s) { return s.y; }), m); wTope = cj.w * 1.6; if (soloCaja) return cj; api.volar(cj, ms);
+      var xs = simbolos.map(function (s) { return s.x; }), ys = simbolos.map(function (s) { return s.y; });
+      cajaSedes = { w: Math.max.apply(null, xs) - Math.min.apply(null, xs), h: Math.max.apply(null, ys) - Math.min.apply(null, ys), m: m };
+      var cj = api.caja(xs, ys, m); if (soloCaja) return cj; api.volar(cj, ms);
     };
     api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, maxAncho())), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
     function colocarSedes() {

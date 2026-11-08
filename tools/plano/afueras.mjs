@@ -133,7 +133,9 @@ for (const z of zonas) {
     if (!esP && !pts.some(([x, y]) => cerca(x, y))) continue;
     // lejos del centro, el trazo puede ser más simple: no se ve de cerca
     const lejos = !pts.some(([x, y]) => dentro(x, y, [z.lim[0] - 1500, z.lim[1] - 1500, z.lim[2] + 1500, z.lim[3] + 1500]));
-    const l = simplificar(pts, esP ? (lejos ? 12 : 6) : 4).flatMap(([x, y]) => [Math.round(x), Math.round(y)]);
+    if (lejos && /^tertiary/.test(v.hw)) continue; // lejos del centro, solo las carreteras de verdad
+    // a esa distancia el plano solo se ve alejado (un píxel son 20–70 m): basta un trazo de 30 m
+    const l = simplificar(pts, esP ? (lejos ? 30 : 6) : 4).flatMap(([x, y]) => [Math.round(x), Math.round(y)]);
     (esP ? princ : calles).push(l);
   }
   const out = { _fuente: '© colaboradores de OpenStreetMap (ODbL), ' + path.basename(PBF), _sedes: z.fuera.map((f) => f[2]), lim: z.T.map(Math.round), principales: princ, calles, costa };
