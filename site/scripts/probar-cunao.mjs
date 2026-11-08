@@ -209,7 +209,7 @@ caso('K9 sin franja ni capital ni jornada pregunta la capital', motor(), '¿qué
 caso('K5 Expiración de Córdoba: quién talló el Cristo', motor(), '¿Quién talló el Cristo de la Expiración de Córdoba?', contiene(HP['la-expiracion-cordoba'].titulares[0].autor));
 caso('K6 hora oficial en la carrera oficial', motor(), '¿A qué hora pasa la Borriquita de Sevilla por la carrera oficial?', contiene('carrera oficial', HP['la-borriquita-sevilla'].hora_carrera));
 caso('K7 cuánto está en la calle', motor(), '¿Cuánto dura el recorrido del Gran Poder de Sevilla?', contiene(/está unas \d+ h/));
-caso('K8 el día siguiente con ciudad', (() => { const x = motor(); pregunta(x, 'miercoles santo en cordoba'); return x; })(), '¿y el siguiente?', contiene('Jueves Santo en Córdoba'));
+caso('K8 el día siguiente con ciudad', (() => { const x = motor(); pregunta(x, 'miercoles santo en cordoba'); return x; })(), '¿y el siguiente?', contiene('Jueves Santo (y la Madrugada) en Córdoba'));
 
 console.log('— Marchas');
 const titulo = (t) => MU.filter((m) => m.titulo.toLowerCase() === t.toLowerCase());
@@ -295,6 +295,19 @@ caso('M10b la Madrugá en «a qué hora sale el Silencio»', motor(), '¿A qué 
 caso('M11 la Macarena por la Campana sin decir la capital', motor(), '¿cuándo pasa la Macarena por la Campana?', contiene('la Macarena pasa por Campana'));
 caso('M12 «kien izo er gran poder de sevilla»', motor(), 'kien izo er gran poder de sevilla', contiene('Las imágenes del Gran Poder (Sevilla)'));
 caso('M13 «a ke ora sale la macarena de sebiya»', motor(), 'a ke ora sale la macarena de sebiya', contiene('La Macarena (Sevilla) sale la Madrugá'));
+
+console.log('— Auditoría 8-nov (bloque 1)');
+{ const jm = PORTAL.hermandades.find((h) => h.dia === 'Jueves Santo y Madrugada'), f = fechas['Jueves Santo y Madrugada'] || fechas['Jueves Santo'];
+  if (jm) caso('A1 Jueves Santo y Madrugada: el jueves y la noche del jueves al viernes', motor(), '¿a qué hora sale ' + jm.nombre + ' de ' + PORTAL.capitales.find((c) => c.slug === jm.ciudad).nombre + '?', y(contiene('el ' + +f.slice(8) + ' de marzo (y la noche del ' + +f.slice(8) + ' al ' + (+f.slice(8) + 1) + ')'), noDice('noche del ' + (+f.slice(8) - 1)))); }
+{ const ag = JSON.parse(fs.readFileSync(path.join(DIST, 'cunao', 'agenda.json'), 'utf8')), l = ag.l || ag;
+  const ex = new Set((D.ex || []).map((x) => x[0] + '|' + x[2]));
+  const otra = l.find((x) => ['procesion', 'extraordinaria', 'traslado', 'magna'].includes(x[2]) && ex.has(x[0] + '|' + x[5]) && !x[4]);
+  if (otra) caso('A2 una salida de la agenda no se esconde tras la extraordinaria del mismo día', crearMotor(D, { base: '/', azar: (l_) => l_[0], hoy: () => otra[0], horaAhora: () => 12 }), '¿Qué sale hoy?', contiene(otra[3].slice(0, 30)));
+  caso('A3 en la agenda de erCuñao no entran titulares de prensa ni frases cortadas', motor(), '¿Qué sale hoy?', () => (l.some((x) => /(…|\.\.\.)\s*$/.test(x[3])) ? 'hay títulos cortados en agenda.json' : true));
+  caso('A5 más allá de la agenda lo dice, no afirma que no sale nadie', motor(), '¿qué sale el 20 de enero?', y(contiene('todavía no tengo la agenda'), noDice('no sale ninguna'))); }
+caso('A6 «kien compuso Amarguras?»', motor(), 'kien compuso Amarguras?', contiene('«Amarguras» es de'));
+caso('A9 «la O» no se queda en «O»', motor(), 'a que hora sale la o', noDice('«O»'));
+caso('A13 un emoji cortado no rompe nada', motor(), 'hola \uD800 macarena', (r, t) => (t ? true : 'sin texto'));
 
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal}).`);
 process.exit(mal ? 1 : 0);

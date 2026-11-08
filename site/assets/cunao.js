@@ -61,7 +61,7 @@
   // Andaluz escrito y abreviaturas: solo palabras cortas que no admiten otra lectura (las largas las arregla «corrige» con variantes)
   const ANDALUZ = { izo: 'hizo', iso: 'hizo', oy: 'hoy', ay: 'hay', ai: 'hay', ar: 'al', er: 'el', ande: 'donde', aonde: 'donde', onde: 'donde', ond: 'donde', dnd: 'donde', dond: 'donde', pa: 'para', pal: 'para el', quie: 'quien', kien: 'quien', qien: 'quien', ke: 'que', k: 'que', kual: 'cual', ql: 'cual', tb: 'tambien', tmb: 'tambien', tbn: 'tambien', aki: 'aqui', cdo: 'cuando', qdo: 'cuando', kndo: 'cuando', hra: 'hora', hr: 'hora', ola: 'hola', mu: 'muy', na: 'nada', toa: 'toda', aque: 'a que', enque: 'en que', porque: 'porque', xa: 'para', ehta: 'esta', ehte: 'este', cuantah: 'cuantas', ma: 'mas', nah: 'nada', d: 'de', dl: 'del', x: 'por', ntra: 'nuestra', ntro: 'nuestro', sra: 'senora', sr: 'senor', stmo: 'santisimo', sma: 'santisima', hdad: 'hermandad', cofr: 'cofradia', sto: 'santo', sta: 'santa', ss: 'semana santa', madruga: 'madruga', madrugao: 'madrugada', manana: 'manana', mañana: 'manana' };
   // Variantes de pronunciación: seseo y ceceo, yeísmo, b/v, h muda, «-ao» por «-ado», la «d» final que se come
-  const VARIANTES = [[/y/g, 'll'], [/ll/g, 'y'], [/s/g, 'z'], [/z/g, 's'], [/s(?=[ei])/g, 'c'], [/c(?=[ei])/g, 's'], [/j/g, 'g'], [/g(?=[ei])/g, 'j'], [/b/g, 'v'], [/v/g, 'b'], [/h/g, ''], [/^(?=[aeiou])/g, 'h'], [/ao$/g, 'ado'], [/ia$/g, 'ida'], [/io$/g, 'ido'], [/a$/g, 'ada'], [/(?<=[aeiu])$/g, 'd'], [/r$/g, 'l'], [/l$/g, 'r'], [/s$/g, ''], [/(?<=[aeiou])$/g, 's'], [/k/g, 'c'], [/k/g, 'qu'], [/x/g, 'ch'], [/i/g, 'y'], [/rr/g, 'r'], [/(?<=[aeiou])r(?=[aeiou])/g, 'rr']];
+  const VARIANTES = [[/y/g, 'll'], [/ll/g, 'y'], [/s/g, 'z'], [/z/g, 's'], [/s(?=[ei])/g, 'c'], [/c(?=[ei])/g, 's'], [/j/g, 'g'], [/g(?=[ei])/g, 'j'], [/b/g, 'v'], [/v/g, 'b'], [/h/g, ''], [/^(?=[aeiou])/g, 'h'], [/ao$/g, 'ado'], [/ia$/g, 'ida'], [/io$/g, 'ido'], [/a$/g, 'ada'], [/([aeiu])$/g, '$1d'], [/r$/g, 'l'], [/l$/g, 'r'], [/s$/g, ''], [/([aeiou])$/g, '$1s'], [/k/g, 'c'], [/k/g, 'qu'], [/x/g, 'ch'], [/i/g, 'y'], [/rr/g, 'r'], [/([aeiou])r(?=[aeiou])/g, '$1rr']];
   // Formación musical nombrada en la pregunta («marchas de cornetas») → código del índice de marchas
   const FORMACION = [[/\bcornetas?\b|\btambores\b/, 'CT', 'de cornetas y tambores'], [/\bagrupacion(es)? musical(es)?\b|\bagrupacion\b/, 'AM', 'de agrupación musical'], [/\bbandas? de musica\b/, 'BM', 'de banda de música'], [/\bcapillas? musical(es)?\b|\bcapilla\b/, 'CM', 'de capilla musical']];
   const NOMBRE_FORM = { BM: 'banda de música', CT: 'cornetas y tambores', AM: 'agrupación musical', CM: 'capilla musical' };
@@ -122,7 +122,7 @@
     const exacta = (v) => VOCAB.has(v) || STOP.has(v) || VOCAB.has(stem(v));
     function variantes(t) {
       const out = [];
-      for (const [re, x] of VARIANTES) { re.lastIndex = 0; let m; const rr = new RegExp(re.source, 'g'); while ((m = rr.exec(t))) { out.push(t.slice(0, m.index) + x + t.slice(m.index + m[0].length)); if (!m[0].length) rr.lastIndex++; } }
+      for (const [re, x] of VARIANTES) { re.lastIndex = 0; let m; const rr = new RegExp(re.source, 'g'); while ((m = rr.exec(t))) { out.push(t.slice(0, m.index) + x.replace(/\$(\d)/g, (z, k) => m[+k] || '') + t.slice(m.index + m[0].length)); if (!m[0].length) rr.lastIndex++; } }
       return out.filter((v, i) => v !== t && out.indexOf(v) === i);
     }
     function porVariante(t) {
@@ -162,7 +162,9 @@
     const diaDe = (iso) => +iso.slice(8, 10);
     function cuandoCae(d, larga) {
       const f = D.fechas[d]; if (!f) return '';
-      if (d === 'Madrugá' || d === 'Jueves Santo y Madrugada') { const v = masDias(f, -1); return 'la noche del ' + diaDe(v) + (v.slice(5, 7) === f.slice(5, 7) ? '' : ' de ' + fechaCorta(v).replace(/^\d+ de /, '')) + ' al ' + (larga ? fechaLarga(f) : fechaCorta(f)); }
+      // Cádiz y Córdoba juntan el Jueves Santo y la Madrugada: su fecha es el jueves, y la noche sigue hasta el viernes
+      if (d === 'Jueves Santo y Madrugada') { const v = masDias(f, 1); return 'el ' + (larga ? fechaLarga(f) : fechaCorta(f)) + ' (y la noche del ' + diaDe(f) + ' al ' + diaDe(v) + ')'; }
+      if (d === 'Madrugá') { const v = masDias(f, -1); return 'la noche del ' + diaDe(v) + (v.slice(5, 7) === f.slice(5, 7) ? '' : ' de ' + fechaCorta(v).replace(/^\d+ de /, '')) + ' al ' + (larga ? fechaLarga(f) : fechaCorta(f)); }
       return 'el ' + (larga ? fechaLarga(f) : fechaCorta(f));
     }
     const delDia = (d) => (d === 'Madrugá' ? 'de la Madrugá' : 'del ' + d);
@@ -188,7 +190,7 @@
     const A = (r, l) => { l = l.filter(Boolean); if (l.length) r.partes.push({ t: 'acc', l }); return r; };
     const C = (r, l) => { r.chips = l.filter(Boolean).map((x) => (Array.isArray(x) ? x : [x, x])); return r; };
     function cerrar(r) {
-      r.partes.forEach((p) => { if (p.t === 'p') p.x = p.x.replace(/de El /g, 'del ').replace(/a El /g, 'al '); });
+      r.partes.forEach((p) => { if (p.t === 'p') p.x = p.x.replace(/\bde El /g, 'del ').replace(/\ba El /g, 'al '); });
       r.texto = r.partes.map((p) => (p.t === 'p' ? p.x : p.t === 'lista' ? p.items.map((i) => i.x + (i.sub ? ' · ' + i.sub : '')).join('\n') : '')).join('\n');
       r.enlaces = [].concat(...r.partes.filter((p) => p.t === 'acc').map((p) => p.l), ...r.partes.filter((p) => p.t === 'lista').map((p) => p.items.filter((i) => i.href).map((i) => [i.x, i.href])));
       return r;
@@ -204,10 +206,11 @@
       let n = norm(raw);
       // habla andaluza y abreviaturas de móvil, palabra a palabra («ande», «ar», «er», «q», «pa»)
       n = n.split(' ').map((t) => (Object.prototype.hasOwnProperty.call(ANDALUZ, t) ? ANDALUZ[t] : t)).join(' ');
+      const rawA = n;
       for (const [re, x] of SINONIMOS) n = n.replace(re, x);
       // erratas: palabra a palabra contra el vocabulario del portal
       n = n.split(' ').map(corrige).join(' ');
-      const e = { raw, t: n, usadas: new Set() };
+      const e = { raw, rawA, t: n, usadas: new Set() };
       // ciudad (nombre o gentilicio)
       for (const [s, nom] of D.capitales) { const k = norm(nom); if (new RegExp('\\b' + k + '\\b').test(n)) { e.ciudad = s; e.usadas.add(k); } }
       if (!e.ciudad) for (const [g, s] of GENTILICIO) { const m = new RegExp('\\b(' + g + '\\w*)').exec(n); if (m) { e.ciudad = s; e.usadas.add(m[1]); } }
@@ -421,7 +424,7 @@
           const sel = /\b(virgen|dolorosa|palio|maria|senora|ella)\b/.test(e.t) ? 'v' : /\b(cristo|senor|jesus|nazareno|crucificado|misterio|el)\b/.test(e.t) && /\b(cristo|senor|jesus|nazareno|crucificado|misterio)\b/.test(e.t) ? 'c' : null;
           let ts = h.t.filter((t) => !sel || (sel === 'v') === RE_MARIANA.test(norm(t[0])));
           if (!ts.length) ts = h.t;
-          if (!ts.length) { P(r, 'No tengo apuntados los titulares ' + cabecera(h, 'de') + '.'); break; }
+          if (!ts.length) { P(r, 'No tengo apuntados los titulares ' + cabecera(h, 'de') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); break; }
           P(r, (ts.length === 1 ? 'La imagen ' : 'Las imágenes ') + cabecera(h, 'de') + ':');
           LI(r, ts.map((t) => ({ x: t[0], sub: t[1] || 'autor sin documentar en mis datos', href: t[2] >= 0 && I[t[2]] ? L.imag(I[t[2]][0]) : '' })));
           const im = ts.find((t) => t[2] >= 0); if (im) ctx.imag = im[2];
@@ -563,7 +566,8 @@
       ctx.dia = dia; if (ciudad) ctx.ciudad = ciudad; ctx.intent = 'lista'; ctx.herm = null;
       if (!lista_.length) { P(r, (ciudad ? 'En ' + nombreCiudad(ciudad) : 'Ese día') + ' no sale ninguna cofradía ' + art(dia) + ', que yo tenga apuntada.'); C(r, chipsDia(dia, ciudad)); return cerrar(r); }
       lista_.sort((a, b) => (a.h.c > b.h.c ? 1 : a.h.c < b.h.c ? -1 : 0) || (minutos(a.hora) || 9999) - (minutos(b.hora) || 9999) || (a.h.o || 0) - (b.h.o || 0));
-      P(r, cap1(art(dia)) + (ciudad ? ' en ' + nombreCiudad(ciudad) : '') + ' sale' + (lista_.length === 1 ? ' 1 cofradía' : 'n ' + lista_.length + ' cofradías') + (D.fechas[dia] ? ' (' + cuandoCae(dia, true).replace(/^el /, '') + ')' : '') + ':');
+      const dd = ciudad ? diaEnCiudad(ciudad, dia) : dia;
+      P(r, cap1(art(dd)) + (ciudad ? ' en ' + nombreCiudad(ciudad) : '') + ' sale' + (lista_.length === 1 ? ' 1 cofradía' : 'n ' + lista_.length + ' cofradías') + (D.fechas[dd] ? ' (' + cuandoCae(dd, true).replace(/^el /, '').replace(' (y la noche', ', y la noche').replace(/\)$/, '') + ')' : '') + ':');
       LI(r, lista_.slice(0, 40).map((x) => ({ x: x.h.n + (x.extra ? ' (' + x.extra + ')' : ''), href: L.herm(x.h), sub: (ciudad ? '' : nombreCiudad(x.h.c) + ' · ') + (x.hora ? (x.exacta ? '' : '≈ ') + x.hora : 'hora por confirmar') })));
       if (lista_.some((x) => x.hora)) P(r, 'Horas del último programa publicado (' + (D.anio - 1) + ').');
       if (ciudad && D.mapa.indexOf(ciudad) >= 0) A(r, [['Verlas en el mapa', L.calle(ciudad, dia)]]);
@@ -611,14 +615,20 @@
     // ---- actos fuera de Semana Santa: extraordinarias con itinerario (D.ex) y la agenda de 21 días (cunao/agenda.json) ----
     const TIPO_TXT = { magna: 'magna', extraordinaria: 'extraordinaria', procesion: 'procesión', traslado: 'traslado', coronacion: 'coronación', 'via-crucis': 'vía crucis', culto: 'culto', acto: 'acto', besamanos: 'besamanos' };
     const SALIDA = set('magna extraordinaria procesion traslado coronacion via-crucis');
+    const GEN_T = set('procesion procesional extraordinaria salida traslado coronacion canonica hermandad cofradia nuestra senora nuestro padre jesus maria santisima virgen cristo');
+    const sigT = (t) => new Set(toks(t).filter((w) => w.length > 3 && !GEN_T.has(w) && !STOP.has(w)));
+    const mismoTitulo = (a, b) => { const x = sigT(a), y = sigT(b); let n = 0; x.forEach((w) => { if (y.has(w)) n++; }); return n >= 2 || (n >= 1 && Math.min(x.size, y.size) <= 2); };
+    // agenda.json: { h: hasta qué día llega, l: [fecha, hora, tipo, título, hermandad, capital, fuente] }
+    const agendaL = () => { const a = CIUDADES.agenda; return Array.isArray(a) ? a : (a && a.l) || []; };
+    const agendaHasta = () => { const a = CIUDADES.agenda; return a && a.h ? a.h : '9999'; };
     function actosDe(isos, ciudad) {
-      const ag = CIUDADES.agenda || [], out = [];
+      const ag = agendaL(), out = [];
       (D.ex || []).forEach((x) => { if (isos.indexOf(x[0]) >= 0 && (!ciudad || x[2] === ciudad)) out.push({ f: x[0], h: x[1], c: x[2], t: x[3], herm: POR_SLUG.get(x[4]) || null, sal: true, mapa: x[7], fu: x[6], sede: x[5] }); });
       ag.forEach((x) => {
         if (isos.indexOf(x[0]) < 0 || (ciudad && x[5] !== ciudad)) return;
         const herm = POR_SLUG.get(x[4]) || null, sal = SALIDA.has(x[2]);
         // la misma salida que ya está con su itinerario no se repite
-        if (sal && out.some((o) => o.mapa && o.f === x[0] && o.c === x[5] && (!herm || !o.herm || o.herm === herm))) return;
+        if (sal && out.some((o) => o.mapa && o.f === x[0] && o.c === x[5] && ((herm && o.herm && o.herm === herm) || mismoTitulo(o.t, x[3])))) return;
         out.push({ f: x[0], h: x[1], c: x[5], t: x[3], herm, sal, tipo: x[2], fu: x[6] });
       });
       return out.sort((a, b) => a.f.localeCompare(b.f) || (b.sal ? 1 : 0) - (a.sal ? 1 : 0) || (a.h || '99').localeCompare(b.h || '99'));
@@ -629,6 +639,11 @@
       const r = Resp(), hoy = iso === hoyISO(0), n = diasHasta(D.fechas['Domingo de Ramos']);
       const quando = hoy ? 'Hoy' : iso === hoyISO(1) ? 'Mañana' : 'El ' + fechaLarga(iso), donde = ciudad ? ' en ' + nombreCiudad(ciudad) : '';
       const l = actosDe([iso], ciudad), sal = l.filter((a) => a.sal), cul = l.filter((a) => !a.sal);
+      if (!l.length && iso > agendaHasta()) {
+        const r2 = Resp(); P(r2, 'Para el ' + fechaLarga(iso) + ' todavía no tengo la agenda cerrada, cuñao: las salidas y los cultos los voy apuntando conforme se anuncian. Mira el calendario, que se va completando.');
+        if (n > 0) P(r2, 'El Domingo de Ramos es el ' + fechaLarga(D.fechas['Domingo de Ramos']) + '.');
+        A(r2, [['Ver el calendario', BASE + 'calendario/']]); C(r2, ['¿Qué sale hoy?', '¿Cuánto falta para la Semana Santa?']); r2.flojo = true; return cerrar(r2);
+      }
       ctx.intent = 'lista'; ctx.dia = null; if (ciudad) ctx.ciudad = ciudad;
       if (sal.length) { P(r, quando + donde + ' no es Semana Santa, pero hay ' + (sal.length === 1 ? 'una salida' : sal.length + ' salidas') + ', cuñao:'); LI(r, sal.slice(0, 8).map((a) => itemActo(a, false, ciudad))); }
       else P(r, quando + donde + ' no sale ninguna cofradía, que yo tenga apuntada.');
@@ -712,7 +727,7 @@
       ctx.pend = { intent, lugar: e.lugar || null };
       const mismas = dudas.every((d) => norm(d.h.n).replace(/^(el|la|los|las) /, '') === norm(dudas[0].h.n).replace(/^(el|la|los|las) /, ''));
       // «cofradías» siempre en femenino: «¿Cuál de ellas?» vale para el Cautivo y para la Esperanza
-      P(r, mismas ? 'Tengo ' + dudas.length + ' cofradías que se llaman «' + dudas[0].h.n.replace(/^(El|La|Los|Las) /, '') + '», cuñao. ¿De qué capital?' : 'Tengo ' + dudas.length + ' cofradías que encajan, cuñao. ¿Cuál de ellas?');
+      P(r, mismas ? 'Tengo ' + dudas.length + ' cofradías que se llaman «' + (dudas[0].h.n.replace(/^(El|La|Los|Las) /, '').length > 2 ? dudas[0].h.n.replace(/^(El|La|Los|Las) /, '') : dudas[0].h.n) + '», cuñao. ¿De qué capital?' : 'Tengo ' + dudas.length + ' cofradías que encajan, cuñao. ¿Cuál de ellas?');
       C(r, dudas.map((d) => [mismas ? nombreCiudad(d.h.c) + ' · ' + d.h.d : d.h.n + ' (' + nombreCiudad(d.h.c) + ' · ' + d.h.d + ')', '@h:' + d.h.s]));
       return cerrar(r);
     }
@@ -733,7 +748,7 @@
       const CI = D.ci || {};
       if (!c) {
         const tot = D.capitales.reduce((a, x) => a + (CI[x[0]] ? CI[x[0]][0] : 0), 0);
-        P(r, tot ? 'Según el organismo oficial de cada una, las ocho capitales suman ' + tot + ' hermandades y cofradías. ¿De cuál quieres el detalle?' : 'Tengo las ' + N + ' fichas de las ocho capitales. ¿De cuál quieres el detalle?');
+        P(r, tot ? 'Sumando la cifra de cada capital, con las de Vísperas, son ' + tot + ' hermandades y cofradías. ¿De cuál quieres el detalle?' : 'Tengo las ' + N + ' fichas de las ocho capitales. ¿De cuál quieres el detalle?');
         return preguntaCiudad(r, null, 'cuantas');
       }
       const hs = H.filter((h) => h.c === c);
@@ -741,12 +756,12 @@
       if (dia) { const n = hs.filter((h) => grupo(dia).indexOf(h.d) >= 0).length; P(r, cap1(art(dia)) + ' en ' + nombreCiudad(c) + ' salen ' + n + (n === 1 ? ' cofradía.' : ' cofradías.')); C(r, [cap1(art(dia).replace(/^en las /, 'las ')) + ' en ' + nombreCiudad(c)]); return cerrar(r); }
       // la cifra oficial de la capital (Consejo, Agrupación, Federación…), no el número de fichas: hay cortejos que tienen ficha propia
       const ci = (D.ci || {})[c];
-      if (ci) { P(r, nombreCiudad(c) + ' tiene ' + (ci[2] || ci[0] + ' ' + ci[1]) + (ci[4] ? ', según ' + (/^(Agrupaci|Real Federaci|Federaci|Junta|Uni|Asociaci)/.test(ci[4]) ? 'la ' : /^(Consejo|Cabildo|Obispado)/.test(ci[4]) ? 'el ' : '') + ci[4] : '') + '.'); if (ci[3] && ci[3].length > 70) P(r, cap1(ci[3]) + '.'); }
+      if (ci) { P(r, nombreCiudad(c) + ' tiene ' + (ci[2] || ci[0] + ' ' + ci[1]) + '.'); if (ci[3] && ci[3].length > 70) P(r, cap1(ci[3]) + '.'); }
       else P(r, 'De ' + nombreCiudad(c) + ' no tengo la cifra oficial; en el portal hay ' + hs.length + ' fichas.');
       const por = ORDEN.map((d) => [d, hs.filter((h) => h.d === d).length]).filter((x) => x[1]);
       P(r, 'Cortejos por jornada, según las fichas del portal:');
       LI(r, por.map((x) => ({ x: x[0], sub: String(x[1]) })));
-      A(r, [['Semana Santa de ' + nombreCiudad(c), L.capital(c)], ci && ci[5] ? ['Fuente oficial', ci[5]] : null]);
+      A(r, [['Semana Santa de ' + nombreCiudad(c), L.capital(c)], ci && ci[5] ? ['Fuente: ' + ci[4], ci[5]] : null]);
       C(r, ['¿Qué sale el Domingo de Ramos en ' + nombreCiudad(c) + '?', 'Noticias de ' + nombreCiudad(c)]);
       return cerrar(r);
     }
@@ -867,7 +882,7 @@
     // autores nombrados en la pregunta (apellidos poco comunes pesan más; hace falta casi el nombre entero o un apellido raro)
     function buscarAutor(e) {
       const cn = e.ciudad ? norm(nombreCiudad(e.ciudad)) : '';
-      const q = [...new Set(toks(e.raw || '').concat(toks(e.t)))].filter((t) => t.length > 2 && !STOP.has(t) && !CLAVE.has(t) && !PAL_PREG.has(t) && t !== cn);
+      const q = [...new Set(toks(e.rawA || e.raw || '').concat(toks(e.t)))].filter((t) => t.length > 2 && !STOP.has(t) && !CLAVE.has(t) && !PAL_PREG.has(t) && t !== cn);
       if (!q.length) return [];
       const X = autoresIdx(), A_ = MD['m/autores'];
       return X.ix.map((s, i) => { let p = 0, k = 0; for (const t of q) if (s.has(t)) { p += Math.log(X.n / X.d.get(t)); k++; } return { i, p, k, cubre: k / s.size, qcov: k / q.length }; })
@@ -877,11 +892,11 @@
     const TROZOS_FALTAN = (ks) => ks.filter((k) => !MD['m/' + k]);
     // trozos que pueden tener el título: la inicial de cada palabra de la pregunta (sin las de la propia pregunta)
     function trozosPregunta(e) {
-      const ws = tokM(e.raw || e.t).filter((t) => !CLAVE.has(t) && !STOP.has(t) || /^\d/.test(t));
+      const ws = tokM(e.rawA || e.raw || e.t).filter((t) => !CLAVE.has(t) && !STOP.has(t) || /^\d/.test(t));
       return [...new Set(ws.map((w) => (/[a-z]/.test(w[0]) ? w[0] : '0')))].slice(0, 8);
     }
     function buscarTitulo(e) {
-      const qt = new Set(tokM(e.raw || e.t)), qs = ' ' + tokM(e.raw || e.t).join(' ') + ' ';
+      const qt = new Set(tokM(e.rawA || e.raw || e.t)), qs = ' ' + tokM(e.rawA || e.raw || e.t).join(' ') + ' ';
       const sig = [...qt].filter((t) => !PAL_PREG.has(t) && !STOP.has(t) && !CLAVE.has(t) && !(e.ciudad && t === norm(nombreCiudad(e.ciudad))));
       const res = [];
       for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
@@ -987,7 +1002,7 @@
 
     // ================= decisión =================
     function responder(raw) {
-      raw = String(raw || '').trim();
+      raw = Array.from(String(raw || '')).filter((ch) => !(ch.length === 1 && ch.charCodeAt(0) >= 0xd800 && ch.charCodeAt(0) <= 0xdfff)).join('').trim();
       // botones de desambiguación
       let m;
       if ((m = /^@h:(.+)$/.exec(raw))) { const h = POR_SLUG.get(m[1]); if (h) { const p = ctx.pend || {}; return respHerm(h, p.intent || 'info', { t: '', lugar: p.lugar, toks: [] }); } }
@@ -1088,7 +1103,7 @@
       // un título de marcha entero («Soberana y Jaenera») manda sobre una hermandad que solo casa con parte de la pregunta
       if ((intent == null || intent === 'marchas') && !e.dia) {
         const top = bh.elegida || bh.lista[0], cn = e.ciudad ? norm(nombreCiudad(e.ciudad)) : '';
-        const sig = [...new Set(tokM(e.raw || e.t))].filter((t) => t.length > 2 && !PAL_PREG.has(t) && !STOP.has(t) && !CLAVE.has(t) && t !== cn);
+        const sig = [...new Set(tokM(e.rawA || e.raw || e.t))].filter((t) => t.length > 2 && !PAL_PREG.has(t) && !STOP.has(t) && !CLAVE.has(t) && t !== cn);
         if (sig.length >= 2 && (!top || (!top.frase && sig.some((t) => top.usadas.indexOf(stem(t)) < 0)))) {
           const falta = TROZOS_FALTAN(trozosPregunta(e).slice(0, 4));
           if (!MD['m/autores'] || falta.length) return necesitaVarios((MD['m/autores'] ? [] : ['m/autores']).concat(falta.map((k) => 'm/' + k)));

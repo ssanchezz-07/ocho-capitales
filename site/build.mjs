@@ -2285,9 +2285,13 @@ function datosCunao() {
   const AG = agenda().filter((e) => e.fecha >= hoyIso && e.fecha <= hasta && GRUPO_DE[e.tipo] !== 'liturgico' && CAP[e.ciudad]);
   // Lo de los próximos 21 días en las ocho capitales (salidas, vía crucis y cultos), para «¿qué sale hoy?» y «¿qué hay este finde?» sin cargar cada capital.
   // Fila: [fecha, hora, tipo, título, hermandad, capital, fuente]. Va en un archivo aparte (cunao/agenda.json), que se pide solo para esas preguntas.
+  // frases de noticia, no nombres de actos («El Císter cumple 50 años y prepara…», «La Federación prevé celebrar…»)
+  const TITULAR_PRENSA = /\b(cumple|cumplen|prepara|preparan|prev[eé]n?|organiza|organizan|celebrar[aá]n?|acompañar[aá]n?|anuncia|anuncian|continuar[aá]|tendr[aá]n?|ser[aá]n?|recorrer[aá]n?|vivir[aá]n?)(?![a-záéíóúñ])/i;
   const hasta21 = isoDay(Date.UTC(N.y, N.m - 1, N.d) + 21 * 864e5);
-  const AG21 = AG.filter((e) => e.fecha <= hasta21 && ['salidas', 'via-crucis', 'cultos'].includes(GRUPO_DE[e.tipo])).map((e) => [e.fecha, e.hora || '', e.tipo, e.titulo, hermDeEvento(e) || '', e.ciudad, e.fuentes && e.fuentes[0] && /^https?:\/\//.test(e.fuentes[0].url) ? e.fuentes[0].url : '']);
-  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'agenda.json'), JSON.stringify(AG21));
+  // Solo actos de agendas (verificados o de agendas cofrades), no los que se detectan en titulares de prensa, ni títulos cortados con «…»;
+  // y el mismo acto contado dos veces, una sola.
+  const AG21 = AG.filter((e) => e.fecha <= hasta21 && ['salidas', 'via-crucis', 'cultos'].includes(GRUPO_DE[e.tipo]) && (e.verificado || e.externo) && !/(…|\.\.\.)\s*$/.test(e.titulo) && !TITULAR_PRENSA.test(e.titulo)).filter((e, i, l) => !l.slice(0, i).some((o) => mismoActo(o, e))).map((e) => [e.fecha, e.hora || '', e.tipo, e.titulo, hermDeEvento(e) || '', e.ciudad, e.fuentes && e.fuentes[0] && /^https?:\/\//.test(e.fuentes[0].url) ? e.fuentes[0].url : '']);
+  fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'agenda.json'), JSON.stringify({ h: hasta21, l: AG21 }));
   // Por capital (se carga solo cuando hace falta): recorridos completos, historia, pasos, hábito, marchas dedicadas, agenda y las seis noticias más recientes
   for (const c of D.capitales) {
     const hi = {}, pa = {}, m = {}, ha = {}, on = {};
