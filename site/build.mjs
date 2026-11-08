@@ -2020,6 +2020,8 @@ function celdasCalles(ls, lado = 1000) {
 function limitesPlano(P) {
   const a = [Infinity, Infinity, -Infinity, -Infinity];
   for (const l of [...P.calles, ...P.principales]) for (let i = 0; i < l.length; i += 2) { a[0] = Math.min(a[0], l[i]); a[1] = Math.min(a[1], l[i + 1]); a[2] = Math.max(a[2], l[i]); a[3] = Math.max(a[3], l[i + 1]); }
+  // con fondo de afueras, su recuadro entero (también el mar, que no tiene calles: se ve oscuro, con su costa)
+  if (P.limAfueras) for (let i = 0; i < 4; i++) a[i] = i < 2 ? Math.min(a[i], P.limAfueras[i]) : Math.max(a[i], P.limAfueras[i]);
   return a;
 }
 // Díptico para la hoja de sede del plano (va en «sedes», que es lo que lee la hoja; la pinta Diseño): Cristo, Virgen y juntos, solo los que hay, con la miniatura de
@@ -2035,10 +2037,18 @@ function dipCalle(h) {
   }
   return Object.keys(out).length ? { dip: out } : {};
 }
+// Fondo de las afueras (tools/plano/afueras.mjs): calles principales, y las del barrio alrededor de cada sede que cae fuera
+// del fondo de los recorridos, para que ninguna sede quede sobre morado vacío; con ello crecen también los límites del plano.
+function conAfueras(slug, P) {
+  const f = path.join(DIR, 'data', 'planos-afueras', slug + '.json');
+  if (!fs.existsSync(f)) return P;
+  const A = JSON.parse(fs.readFileSync(f, 'utf8'));
+  return { ...P, calles: [...P.calles, ...(A.calles || [])], principales: [...P.principales, ...(A.principales || [])], costa: [...(P.costa || []), ...(A.costa || [])], limAfueras: A.lim };
+}
 function datosCalle(c) {
   const fP = path.join(DIR, 'data', 'planos', c.slug + '.json'), fR = path.join(DIR, 'data', 'recorridos', c.slug + '.json');
   if (!fs.existsSync(fP) || !fs.existsSync(fR)) return null;
-  const P = JSON.parse(fs.readFileSync(fP, 'utf8')), R = JSON.parse(fs.readFileSync(fR, 'utf8'));
+  const P = conAfueras(c.slug, JSON.parse(fs.readFileSync(fP, 'utf8'))), R = JSON.parse(fs.readFileSync(fR, 'utf8'));
   const xy = (la, lo) => [Math.round((lo - P.origen[1]) * P.kx), Math.round((P.origen[0] - la) * P.ky)];
   const hs = [];
   for (const [slug, e] of Object.entries(R.hermandades)) {
@@ -2130,7 +2140,7 @@ function datosCalle(c) {
   }
   const fS = path.join(DIR, 'data', 'sitios', c.slug + '.json');
   const sitios = fs.existsSync(fS) ? JSON.parse(fs.readFileSync(fS, 'utf8')).map(([la, lo, t, n]) => [...xy(la, lo), t, n]) : [];
-  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limitesPlano(P), principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
+  return { ciudad: c.slug, nombre: c.nombre, color: c.color, origen: P.origen, kx: P.kx, ky: P.ky, calles: celdasCalles(P.calles), lim: limitesPlano(P), principales: P.principales, templos: P.templos, etiquetas: P.etiquetas || [], ...(P.areas ? { areas: P.areas, rios: P.rios || [], costa: P.costa || [] } : {}), hermandades: hs, sedes: sedesCiudad(c, P, R, xy), nFichas: Object.values(HERM).filter((h) => h.ciudad === c.slug).length, sitios, fuente: Object.values(R.hermandades)[0] ? Object.values(R.hermandades)[0].fuente : '', anio: R.anio };
 }
 // /en-la-calle/: elegir la ciudad del plano (un punto de su color y su nombre; la colgadura no se repite en listas)
 function pageCalleIndice() {

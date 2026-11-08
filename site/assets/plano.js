@@ -74,8 +74,20 @@
     var vb = { x: lim[0], y: lim[1], w: lim[2] - lim[0], h: lim[3] - lim[1] }, Z = 1, T = 0, hs = [], marcas = {}, anim = 0;
     var api = { svg: svg };
     var W = function () { return Math.max(1, host.clientWidth); }, H = function () { return Math.max(1, host.clientHeight); };
+    // Lo que tiene fondo dibujado (calles y arterias; build.mjs lo manda en «lim»): la cámara nunca enseña más allá,
+    // ni al alejar ni al arrastrar, para que no asome morado vacío alrededor del plano (Pablo, 8-nov).
+    // Durante el vuelo desde el mapa de Andalucía (con la provincia debajo) la cámara va libre.
+    var F = D.lim && D.lim.length === 4 ? D.lim : lim;
+    function maxAncho() { return Math.max(250, Math.min(F[2] - F[0], (F[3] - F[1]) * W() / H())); }
+    function limitar(c) {
+      var w = Math.min(c.w, maxAncho()), h = w * H() / W(), cx = c.x + c.w / 2, cy = c.y + c.w * H() / W() / 2;
+      cx = Math.min(Math.max(cx, F[0] + w / 2), F[2] - w / 2); cy = Math.min(Math.max(cy, F[1] + h / 2), F[3] - h / 2);
+      return { x: cx - w / 2, y: cy - h / 2, w: w };
+    }
+    var libre = function () { return !!(provEl && provEl.getAttribute('d')); };
     function aplicar(centro) {
       var cy = vb.y + vb.h / 2; vb.h = vb.w * H() / W(); if (centro) vb.y = cy - vb.h / 2;
+      if (!libre()) { var c = limitar(vb); vb.x = c.x; vb.y = c.y; vb.w = c.w; vb.h = vb.w * H() / W(); }
       var v = vb.x.toFixed(1) + ' ' + vb.y.toFixed(1) + ' ' + vb.w.toFixed(1) + ' ' + vb.h.toFixed(1); base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); Z = vb.w / W(); colocar();
     }
     api.vista = function () { return { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; };
@@ -83,11 +95,12 @@
       var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
       var iw = Math.max(60, W() - m.izq - m.der), ih = Math.max(60, H() - m.arriba - m.abajo), e = Math.max(Math.max(x1 - x0, 300) / iw, Math.max(y1 - y0, 300) / ih) * 1.04;
       var w = W() * e, cx = (x0 + x1) / 2 - (m.izq - m.der) / 2 * e, cy = (y0 + y1) / 2 - (m.arriba - m.abajo) / 2 * e;
-      return { x: cx - w / 2, y: cy - w * H() / W() / 2, w: w };
+      return limitar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w });
     };
     // Vuelo de cámara: parte de lo que se ve ahora (se puede interrumpir), el centro avanza en línea y la escala en exponencial
     api.volar = function (c, ms) {
       cancelAnimationFrame(anim);
+      if (!libre()) c = limitar(c);
       if (calm || !ms) { vb.x = c.x; vb.y = c.y; vb.w = c.w; aplicar(); base.classList.remove('is-volando'); return; }
       var de = { cx: vb.x + vb.w / 2, cy: vb.y + vb.h / 2, w: vb.w }, a = { cx: c.x + c.w / 2, cy: c.y + c.w * H() / W() / 2, w: c.w }, t0 = performance.now();
       base.classList.add('is-volando');
@@ -179,14 +192,11 @@
     api.encuadrarSedes = function (ms, m, soloCaja) {
       // sin sedes todavía (capitales cuyo archivo de sedes está en camino): toda la ciudad del plano
       if (!simbolos.length) { if (soloCaja) return api.caja([lim[0], lim[2]], [lim[1], lim[3]], m); api.volar(api.caja([lim[0], lim[2]], [lim[1], lim[3]], m), ms); return; }
-      // fuera solo las muy apartadas del centro (más de 2,5 veces la distancia mediana y de 800 m): el resto entra entero
-      var med = function (v) { v = v.slice().sort(function (a, b) { return a - b; }); return v[Math.floor(v.length / 2)]; };
-      var cx = med(simbolos.map(function (s) { return s.x; })), cy = med(simbolos.map(function (s) { return s.y; }));
-      var ds = simbolos.map(function (s) { return Math.hypot(s.x - cx, s.y - cy); }), lim2 = Math.max(800, 2.5 * med(ds));
-      var dentro = simbolos.filter(function (s, i) { return ds[i] <= lim2; });
-      var cj = api.caja(dentro.map(function (s) { return s.x; }), dentro.map(function (s) { return s.y; }), m); if (soloCaja) return cj; api.volar(cj, ms);
+      // todas las sedes a la vista (Pablo, 8-nov: «tienen que estar todas»): el fondo ya llega hasta las de los barrios
+      // (tools/plano/afueras.mjs) y la cámara no se sale de él; las que quedan juntas se agrupan con su número
+      var cj = api.caja(simbolos.map(function (s) { return s.x; }), simbolos.map(function (s) { return s.y; }), m); if (soloCaja) return cj; api.volar(cj, ms);
     };
-    api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, (lim[2] - lim[0]) * 1.6)), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
+    api.zoom = function (f, ms) { var w = Math.max(250, Math.min(vb.w * f, maxAncho())), cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, ms == null ? 320 : ms); };
     function colocarSedes() {
       if (!simbolos.length) return;
       // más pequeños al alejar (hasta un 60 %), para que la ciudad entera no quede tapada
@@ -266,7 +276,7 @@
     // un arrastre no abre el medallón que quedó debajo al soltar
     svg.addEventListener('click', function (e) { if (performance.now() - finArr < 250) { e.preventDefault(); e.stopPropagation(); } }, true);
     // ---- Gestos en el móvil: un dedo sigue bajando por la página; dos dedos mueven y amplían el plano; doble toque acerca ----
-    var maxW = function () { return (lim[2] - lim[0]) * 1.6; }, wLim = function (w) { return Math.max(250, Math.min(maxW(), w)); };
+    var maxW = maxAncho, wLim = function (w) { return Math.max(250, Math.min(maxW(), w)); };
     // amplía (f < 1) o aleja alrededor de un punto de la pantalla (px, py, relativos al plano)
     function zoomEn(f, px, py, ms) {
       var w = wLim(vb.w * f), wx = vb.x + px * Z, wy = vb.y + py * Z, k = w / vb.w;

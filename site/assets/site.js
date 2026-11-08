@@ -579,7 +579,9 @@
       plano.ponerDia([]); plano.ponerSedes(D.sedes || [], abrirHoja); plano.verSedes(true);
       portada.style.removeProperty('--cielo'); portada.style.removeProperty('--noche');
       var n = (D.sedes || []).length, ex = vigentes(), dEx = {}; ex.forEach(function (h) { dEx[h.d] = 1; });
-      resEl.textContent = n ? (n === 1 ? '1 hermandad en el plano' : n + ' hermandades en el plano') : 'Aún no hay sedes con ubicación comprobada';
+      // la cifra cuadra con las fichas de la capital; si a alguna aún le falta su sede comprobada, se dice cuántas
+      var nf = D.nFichas || n, faltan = Math.max(0, nf - n);
+      resEl.textContent = !n ? 'Aún no hay sedes con ubicación comprobada' : faltan ? (n === 1 ? '1 hermandad' : n + ' hermandades') + ' en el plano · ' + (faltan === 1 ? '1 aún sin ubicar' : faltan + ' aún sin ubicar') : (n === 1 ? '1 hermandad en el plano' : n + ' hermandades en el plano');
       // leyenda corta: qué es cada símbolo, qué es el color y qué es un número
       notaEl.innerHTML = n ? '<span class="oc-ley"><svg viewBox="-12 -38 24 40" aria-hidden="true"><path class="oc-ley-t" d="M-10 0V-17Q-10 -25 0 -29Q10 -25 10 -17V0Z"/></svg>Templo</span><span class="oc-ley"><svg viewBox="-12 -26 24 28" aria-hidden="true"><path class="oc-ley-c" d="M-9 0V-14L0 -21L9 -14V0Z"/></svg>Casa hermandad</span><span class="oc-ley"><i class="oc-ley-n" aria-hidden="true">3</i>Varias juntas: toca para separarlas</span><span class="oc-ley is-txt">El color es el de su hábito.</span>' : '';
       if (extraB) { var k = Object.keys(dEx).length; extraN.textContent = k ? ' · ' + k : ''; extraB.disabled = !k; extraB.title = k ? '' : 'No hay salidas extraordinarias anunciadas en ' + datos.ciudades[actual].n; }
