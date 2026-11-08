@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-08T21:14:05.347Z",
+ "generado": "2026-11-08T21:21:22.364Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8053,7 +8053,7 @@
    },
    "cristo": {
     "w": 289,
-    "h": 319,
+    "h": 362,
     "widths": [
      160,
      289
@@ -8063,10 +8063,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://consejocofradiascadiz.es/las-penas/",
-    "foco": "50% 50%",
+    "foco": "50% 55%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg",
-    "tam": 52642,
+    "tam": 59598,
     "titular": "Nuestro Padre Jesús de las Penas"
    },
    "virgen": {
@@ -8082,7 +8082,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "http://archicofradiapenas.blogspot.com/search?q=Caridad",
-    "foco": "50% 62%",
+    "foco": "50% 72%",
     "cedida": true,
     "local": "scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg",
     "tam": 1299012,
@@ -11142,7 +11142,7 @@
     480,
     960
    ],
-   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|52642|\"\"|\"50% 50%\"|\"http://archicofradiapenas.blogspot.com/search?q=Caridad\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 62%\""
+   "firma": "\"https://consejocofradiascadiz.es/las-penas/\"|\"scripts/cedidas/cadiz/las-penas-cadiz-cristo.jpg\"|59598|\"\"|\"50% 55%\"|\"http://archicofradiapenas.blogspot.com/search?q=Caridad\"|\"scripts/cedidas/cadiz/las-penas-cadiz-virgen.jpg\"|1299012|\"\"|\"50% 72%\""
   },
   "vera-cruz-cadiz": {
    "w": 960,
