@@ -24259,43 +24259,118 @@
  "pasion-malaga-2026-11-14": {
   "id": "pasion-malaga-2026-11-14",
   "metodo": "continuidad + GraphHopper (perfil procesion)",
-  "fuente_lista": "https://www.instagram.com/archipasionmlg/",
+  "fuente_lista": "https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/",
   "avisos": [],
   "correcciones": {
    "calles": {
+    "1": {
+     "punto": [
+      36.722334,
+      -4.422187
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
+    "2": {
+     "vias": [
+      61273790
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
+    "3": {
+     "punto": [
+      36.722123,
+      -4.421968
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
+    "4": {
+     "vias": [
+      61273790
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
+    "7": {
+     "punto": [
+      36.721739,
+      -4.420431
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
+    "8": {
+     "punto": [
+      36.721664,
+      -4.420229
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
+    },
     "23": {
      "punto": [
-      36.72050532352941,
-      -4.423366211764707
+      36.72044,
+      -4.42362
      ],
-     "fuente": "OpenStreetMap way 373208280"
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «San Juan, Estación en la Parroquia de San Juan (acceso 20:45 horas - salida 21:15 horas), Calderón de la Barca»; puerta principal de la iglesia (torre-pórtico) en calle San Juan, frente a Calderón de la Barca (Wikipedia, «Entrada principal, vista desde la calle Calderón de la Barca»; fachada del edificio OSM way 373208280)"
     },
     "24": {
      "punto": [
-      36.72050532352941,
-      -4.423366211764707
+      36.72044,
+      -4.42362
      ],
-     "fuente": "OpenStreetMap way 373208280"
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «San Juan, Estación en la Parroquia de San Juan (acceso 20:45 horas - salida 21:15 horas), Calderón de la Barca»; puerta principal de la iglesia (torre-pórtico) en calle San Juan, frente a Calderón de la Barca (Wikipedia, «Entrada principal, vista desde la calle Calderón de la Barca»; fachada del edificio OSM way 373208280)"
+    },
+    "30": {
+     "vias": [
+      61497728
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza, Andrés Pérez (22:20 horas)»"
+    },
+    "39": {
+     "punto": [
+      36.722366,
+      -4.422255
+     ],
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»"
     }
    },
-   "puntos": {
-    "3": [
-     36.7220759,
-     -4.4219701
-    ],
-    "10": [
-     36.7220797,
-     -4.4182495
-    ]
-   },
+   "puntos": {},
    "fuentes": [
     {
      "fecha": "2026-10-26",
      "fuente": "Cartel oficial de la Archicofradía de la Pasión (Instagram @archipasionmlg): «Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada … Granada, Plaza Jesús Castellanos, San Agustín»",
      "cambios": "puntos de paso en la Plaza Jesús de la Pasión (fila 4) y la Plazuela de Jesús Castellanos (fila 11), los mismos que en el recorrido de Semana Santa; alias: la «Plaza de los Santos Mártires» es la Plaza de los Mártires Ciriaco y Paula en OSM"
+    },
+    {
+     "fecha": "2026-11-08",
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «San Juan, Estación en la Parroquia de San Juan (acceso 20:45 horas - salida 21:15 horas), Calderón de la Barca»; puerta principal de la iglesia (torre-pórtico) en calle San Juan, frente a Calderón de la Barca (Wikipedia, «Entrada principal, vista desde la calle Calderón de la Barca»; fachada del edificio OSM way 373208280)",
+     "cambios": "la estación en San Juan (filas 24 y 25) se sitúa en la puerta principal de la iglesia, en calle San Juan frente a Calderón de la Barca; antes caía en la casa hermandad de las Fusionadas (Postigo de San Juan 5) y el trazado subía y bajaba por calle San Juan. Se quita el punto de paso en la Plazuela Jesús Castellanos (fila 11), que hacía un pico de ida y vuelta hacia calle Beatas"
+    },
+    {
+     "fecha": "2026-11-08",
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza, Andrés Pérez (22:20 horas)»",
+     "cambios": "Plazuela Virgen de las Penas (fila 31) fijada a su vía lineal de OSM (way 61497728) y no al área de la plaza (way 86575989): el trazado daba una vuelta de unos 80 m por el borde de la plazuela antes de subir por Arco de la Cabeza"
+    },
+    {
+     "fecha": "2026-11-08",
+     "fuente": "Web oficial de la Archicofradía de la Pasión (https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/): «Parroquia de los Santos Mártires (17:30 horas), Plaza de los Santos Mártires, Santa Lucía, Plaza Jesús de la Pasión, Santa Lucía, Granada, Plaza Spínola, Plaza del Carbón, Plaza del Siglo, Granada … Pozos Dulces, Plazuela Virgen delas Penas, Arco de la Cabeza … Comedias, Plaza de los Mártires, Parroquia de los Santos Mártires (23:35 horas)»",
+     "cambios": "tras auditor-mapas: Plaza del Carbón y Plaza del Siglo (filas 8 y 9) en el eje de Calle Granada (way 452983249), sin la recta que cruzaba la manzana ni el pico en Calderería; Santa Lucía (filas 3 y 5) por su vía lineal (way 61273790) y la Plaza Jesús de la Pasión (fila 4) en su eje, sin los dientes de sierra del borde de la plaza (se quita el punto de paso anterior de la fila 4); la Plaza de los Santos Mártires a la salida (fila 2) y la Plaza de los Mártires a la entrada (fila 40) en línea recta por la plaza (arranque de Santa Lucía y final de Comedias), sin seguir los vértices del área; y dos puntos de paso por dentro de la Plazuela Virgen de las Penas antes de Arco de la Cabeza (fila 32), para no cortar el edificio de la esquina; de la puerta de los Santos Mártires a la plaza, a la salida y a la entrada, en línea recta («rectos_sede»): GraphHopper seguía los vértices del área de la plaza (way 61499658) en zigzag"
     }
    ],
-   "actualizado": "2026-10-26"
+   "actualizado": "2026-11-08",
+   "paso": {
+    "31": [
+     [
+      36.722243,
+      -4.424023
+     ],
+     [
+      36.722347,
+      -4.424156
+     ]
+    ]
+   },
+   "rectos_sede": [
+    "salida",
+    "entrada"
+   ]
   },
   "salida": {
    "punto": [
@@ -24319,14 +24394,10 @@
    {
     "i": 1,
     "lugar": "Plaza de los Santos Mártires",
-    "tipo": "calle",
-    "osm": "Calle Mártires",
-    "vias": [
-     61497725,
-     176390472,
-     61499658
-    ],
-    "candidatas": 2,
+    "tipo": "punto",
+    "osm": "Plaza de los Santos Mártires (corrección)",
+    "vias": null,
+    "candidatas": 1,
     "hueco_entrada_m": null,
     "forzado": false
    },
@@ -24345,14 +24416,12 @@
    {
     "i": 3,
     "lugar": "Plaza Jesús de la Pasión",
-    "tipo": "calle",
-    "osm": "Plaza Jesús de la Pasión",
-    "vias": [
-     184157884
-    ],
-    "candidatas": 2,
+    "tipo": "punto",
+    "osm": "Plaza Jesús de la Pasión (corrección)",
+    "vias": null,
+    "candidatas": 1,
     "hueco_entrada_m": 0,
-    "forzado": true
+    "forzado": false
    },
    {
     "i": 4,
@@ -24396,22 +24465,20 @@
     "i": 7,
     "lugar": "Plaza del Carbón",
     "tipo": "punto",
-    "osm": "Plaza del Carbón (punto con fuente, alias)",
+    "osm": "Plaza del Carbón (corrección)",
     "vias": null,
     "candidatas": 1,
-    "hueco_entrada_m": 23,
+    "hueco_entrada_m": 21,
     "forzado": false
    },
    {
     "i": 8,
     "lugar": "Plaza del Siglo",
-    "tipo": "calle",
-    "osm": "Plaza del Siglo",
-    "vias": [
-     184107523
-    ],
+    "tipo": "punto",
+    "osm": "Plaza del Siglo (corrección)",
+    "vias": null,
     "candidatas": 1,
-    "hueco_entrada_m": 17,
+    "hueco_entrada_m": 20,
     "forzado": false
    },
    {
@@ -24430,15 +24497,15 @@
    },
    {
     "i": 10,
-    "lugar": "Plaza Jesús Castellanos",
+    "lugar": "Plazuela Jesús Castellanos",
     "tipo": "calle",
     "osm": "Plazuela Jesús Castellanos",
     "vias": [
      531972124
     ],
     "candidatas": 1,
-    "hueco_entrada_m": 0,
-    "forzado": true
+    "hueco_entrada_m": 2,
+    "forzado": false
    },
    {
     "i": 11,
@@ -24604,7 +24671,7 @@
     "osm": "Parroquia de San Juan (corrección)",
     "vias": null,
     "candidatas": 1,
-    "hueco_entrada_m": 18,
+    "hueco_entrada_m": 4,
     "forzado": false
    },
    {
@@ -24626,7 +24693,7 @@
      550176682
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 27,
+    "hueco_entrada_m": 4,
     "forzado": false
    },
    {
@@ -24684,10 +24751,9 @@
     "tipo": "calle",
     "osm": "Plazuela Virgen de las Penas",
     "vias": [
-     61497728,
-     86575989
+     61497728
     ],
-    "candidatas": 2,
+    "candidatas": 1,
     "hueco_entrada_m": 0,
     "forzado": false
    },
@@ -24700,7 +24766,7 @@
      176389608
     ],
     "candidatas": 2,
-    "hueco_entrada_m": 2,
+    "hueco_entrada_m": 34,
     "forzado": false
    },
    {
@@ -24803,28 +24869,25 @@
    },
    {
     "i": 39,
-    "lugar": "Plaza de los Santos Mártires",
-    "tipo": "calle",
-    "osm": "Calle Mártires",
-    "vias": [
-     61497725,
-     176390472,
-     61499658
-    ],
-    "candidatas": 2,
+    "lugar": "Plaza de los Mártires",
+    "tipo": "punto",
+    "osm": "Plaza de los Mártires (corrección)",
+    "vias": null,
+    "candidatas": 1,
     "hueco_entrada_m": 0,
     "forzado": false
    }
   ],
   "enlaces": [
-   "23 m entre «Plaza Spínola» y «Plaza del Carbón»",
-   "17 m entre «Plaza del Carbón» y «Plaza del Siglo»",
-   "18 m entre «San Juan» y «Parroquia de San Juan»",
-   "27 m entre «Parroquia de San Juan» y «Calderón de la Barca»",
-   "4 m entre «Calderón de la Barca» y «Fernán González»"
+   "21 m entre «Plaza Spínola» y «Plaza del Carbón»",
+   "20 m entre «Plaza del Carbón» y «Plaza del Siglo»",
+   "4 m entre «San Juan» y «Parroquia de San Juan»",
+   "4 m entre «Parroquia de San Juan» y «Calderón de la Barca»",
+   "4 m entre «Calderón de la Barca» y «Fernán González»",
+   "34 m entre «Plazuela Virgen de las Penas» y «Arco de la Cabeza»"
   ],
-  "ms_graphhopper": 1066,
-  "largo_m": 2762,
-  "ms_total": 1437
+  "ms_graphhopper": 700,
+  "largo_m": 2537,
+  "ms_total": 1561
  }
 }

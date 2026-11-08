@@ -1,5 +1,5 @@
 {
- "_leeme": "Salidas extraordinarias y magnas con itinerario, copiado literal de la fuente oficial. Mismo formato de puntos que itinerarios-2026.json ({lugar, hora}); «templo» solo ayuda a situar el punto en OpenStreetMap (nombre del templo en OSM). Tramos «ida» y «regreso» (si lo hay); «acto» es lo que ocurre entre ambos. Cadena: tools/itinerarios/rutas/extraordinarias.mjs <capital> (método nuevo) → build.mjs. Revisado: 2026-10-22.",
+ "_leeme": "Salidas extraordinarias y magnas con itinerario, copiado literal de la fuente oficial. Mismo formato de puntos que itinerarios-2026.json ({lugar, hora}); «templo» solo ayuda a situar el punto en OpenStreetMap (nombre del templo en OSM). Tramos «ida» y «regreso» (si lo hay); «acto» es lo que ocurre entre ambos. Cadena: tools/itinerarios/rutas/extraordinarias.mjs <capital> (método nuevo) → build.mjs. Revisado: 2026-10-22. «celebrada»: true marca una salida ya pasada: se guarda como registro (y en la base de datos), pero no se enruta ni sale en el plano (Pablo, 8-nov).",
  "salidas": {
   "pasion-malaga-2026-11-14": {
    "hermandad": "pasion-malaga",
@@ -9,8 +9,8 @@
    "corto": "Pasión",
    "titulo": "Salida extraordinaria de la Archicofradía de la Pasión",
    "acto": "Acto Eucarístico en la Parroquia de San Juan",
-   "fuente": "Cartel oficial de la Archicofradía de la Pasión (Instagram @archipasionmlg)",
-   "fuente_url": "https://www.instagram.com/archipasionmlg/",
+   "fuente": "Web oficial de la Archicofradía de la Pasión, «Procesión extraordinaria de acción de gracias. Cincuentenario de la imagen de Ntro. Padre Jesús de la Pasión» (5-nov-2026): itinerario y horas completos (salida 17:30, Postigo de los Abades 19:15, estación en San Juan de 20:45 a 21:15, Andrés Pérez 22:20, entrada 23:35). Coincide con 101TV Málaga (21-oct-2026).",
+   "fuente_url": "https://archicofradiadelapasion.org/procesion-extraordinaria-de-accion-de-gracias-cincuentenario-de-la-imagen-de-ntro-padre-jesus-de-la-pasion/",
    "tramos": {
     "ida": [
      {
@@ -46,7 +46,7 @@
       "lugar": "Granada"
      },
      {
-      "lugar": "Plaza Jesús Castellanos"
+      "lugar": "Plazuela Jesús Castellanos"
      },
      {
       "lugar": "San Agustín"
@@ -141,7 +141,7 @@
       "lugar": "Comedias"
      },
      {
-      "lugar": "Plaza de los Santos Mártires"
+      "lugar": "Plaza de los Mártires"
      },
      {
       "lugar": "Parroquia de los Santos Mártires",
@@ -216,7 +216,8 @@
       "lugar": "Casa Hermandad"
      }
     ]
-   }
+   },
+   "celebrada": true
   },
   "amparo-sevilla-2026-11-08": {
    "hermandad": "amparo-sevilla",
@@ -318,7 +319,8 @@
       "templo": "Magdalena"
      }
     ]
-   }
+   },
+   "celebrada": true
   },
   "santa-cena-granada-2026-11-01": {
    "hermandad": "santa-cena-granada",
@@ -419,7 +421,8 @@
       "templo": "Santa Cruz la Real"
      }
     ]
-   }
+   },
+   "celebrada": true
   }
  }
 }

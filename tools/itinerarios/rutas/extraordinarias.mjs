@@ -15,7 +15,7 @@ const fFuente = path.join(RAIZ, 'tools', 'sources', 'itinerarios-extraordinarios
 const [c, ...pedidos] = process.argv.slice(2);
 const C = ciudad(c), { trazar } = motor(c);
 const S = JSON.parse(fs.readFileSync(fFuente, 'utf8')).salidas;
-const ids = Object.keys(S).filter((id) => S[id].ciudad === c && (!pedidos.length || pedidos.some((p) => id.startsWith(p))));
+const ids = Object.keys(S).filter((id) => S[id].ciudad === c && !S[id].celebrada && (!pedidos.length || pedidos.some((p) => id.startsWith(p))));
 const fR = fPublicado(c), R = JSON.parse(fs.readFileSync(fR, 'utf8'));
 const esSede = (t) => TEMPLO.test(sn(t)) || sn(t).startsWith('casa hermandad');
 
@@ -39,6 +39,8 @@ for (const id of ids) {
   calles.forEach((t, i) => { if (i > 0 && i < calles.length - 1 && esSede(t)) { const tp = e.tramos.ida.concat(e.tramos.regreso || []).find((p) => p.lugar === t && p.templo)?.templo; const s = C.sedeDe(id, tp || t); if (s) auto.calles[i] = { punto: s.punto, fuente: s.fuente }; } });
   C.LISTAS[id] = { calles, horas, hitos: new Set(hitos), fuente: e.fuente_url || e.fuente, ...(regreso_desde != null ? { regreso_desde } : {}) };
   const fc = C.leerCorrecciones()[id] || {};
+  // «rectos_sede» (corrección con fuente): de la puerta a la primera calle, y de la última a la puerta, en línea recta (una plaza entre ambas)
+  if (fc.rectos_sede) C.LISTAS[id].rectos_sede = fc.rectos_sede;
   const corr = { ...auto, ...fc, calles: { ...auto.calles, ...(fc.calles || {}) } };
   const r = await trazar(id, { corr });
   guardarTraza(c, r);

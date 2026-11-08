@@ -2094,7 +2094,10 @@ function datosCalle(c) {
   // de las que solo se conoce la hora de salida, la posición se estima con él (y se dice que es una estimación).
   const pasos = hs.map((h) => { const p = h.t.paso || h.t.cruz; let L = 0; for (let i = 1; i < p.length; i++) L += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); const dt = p[p.length - 1][2] - p[0][2]; return dt > 60 ? L / dt : null; }).filter(Boolean).sort((a, b) => a - b);
   const VEL = pasos.length >= 5 ? pasos[Math.floor(pasos.length / 2)] : null;
+  // las ya celebradas no salen ni en el plano ni en la portada (el calendario las sigue listando, desde su agenda)
+  const NX = madridNow(), hoyX = isoDay(Date.UTC(NX.y, NX.m - 1, NX.d));
   for (const [id, e] of Object.entries(R.extraordinarias || {})) {
+    if (e.fecha < hoyX) continue;
     // una hermandad sin ficha (de gloria, por ejemplo) sale con el nombre que trae su itinerario
     const h = HERM[e.hermandad] || (e.nombre_hermandad ? { nombre: e.nombre_hermandad } : null); if (!h) continue;
     const pts = [];

@@ -1475,7 +1475,7 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-dias button.is-pasada { opacity: .55; font-weight: 500; }
 .oc-calle-dias button.is-extra[aria-selected="true"] { border-style: solid; opacity: 1; }
 .oc-calle-leyenda { position: absolute; left: 10px; top: 10px; margin: 0; display: flex; gap: 14px; padding: 6px 10px; border-radius: 8px; background: rgb(15 5 22 / .72); color: #f4e9ff; font-size: .74rem; pointer-events: none; }
-.oc-calle-leyenda span::before { content: ""; display: inline-block; width: 22px; height: 0; margin-right: 6px; vertical-align: middle; border-top: 3px solid #f0d79c; }
+.oc-calle-leyenda span::before { content: ""; display: inline-block; width: 22px; height: 0; margin-right: 6px; vertical-align: middle; border-top: 3px solid var(--ley, #f0d79c); }
 .oc-calle-leyenda .is-regreso::before { border-top-style: dashed; }
 .has-sel .oc-c-marca:not(.is-sel) { opacity: .55; }
 .oc-c-guia { fill: none; stroke: rgb(240 215 156 / .75); stroke-width: 1.5px; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
@@ -1843,6 +1843,9 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta { display: none; }
 .oc-c-ruta.is-sel { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: 1; stroke-width: 4.5px; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
+/* una salida extraordinaria sola en su jornada (calle.js, «is-sola»): su recorrido se ve sin elegirla */
+.oc-c-ruta.is-sola { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: .85; stroke-width: 4px; }
+.oc-c-ruta.is-sola.is-regreso { stroke-dasharray: 10 7; }
 .oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
 .oc-calle-ficha { background: transparent; pointer-events: none; }
 .oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }
