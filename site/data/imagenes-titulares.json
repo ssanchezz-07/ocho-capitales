@@ -5308,8 +5308,8 @@
     "local": "scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg",
     "titulo": "Cedida: Nuestro Señor de la Resurrección",
     "titular": "Nuestro Señor de la Resurrección",
-    "foco": "55% 30%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @ResurreccionGR (bio «Perfil OFICIAL de la Venerable Hermandad…»; https://x.com/ResurreccionGR/status/2078758325324554428), sin fotógrafo citado ni firma. Recortada a la imagen. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @ResurreccionGR (bio «Perfil OFICIAL de la Venerable Hermandad…»; https://x.com/ResurreccionGR/status/2078758325324554428), sin fotógrafo citado ni firma. Recortada a la imagen, sin el cielo de arriba y de la izquierda. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "virgen": {
     "autor": "Resurrección (Granada)",
@@ -5345,6 +5345,19 @@
     "titular": "María Santísima de la Merced",
     "foco": "50% 18%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @NAZARENOyMERCED (https://x.com/NAZARENOyMERCED/status/2061032361257468218), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "santo-entierro-granada": {
+   "cristo": {
+    "autor": "Santo Sepulcro (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/SantoSepulcroGR",
+    "local": "scripts/cedidas/granada/santo-entierro-granada-cristo.jpg",
+    "titulo": "Cedida: Cristo yacente",
+    "titular": "Cristo yacente",
+    "foco": "20% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @SantoSepulcroGR (bio «Twitter oficial de la Pontificia, Real e ilustre Hermandad del Santo Sepulcro y Nuestra Señora de la Soledad en el Calvario»; https://x.com/SantoSepulcroGR/status/1989343475536646342, triduo de 2025), sin fotógrafo citado ni firma. Recortada al Yacente en su urna. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }

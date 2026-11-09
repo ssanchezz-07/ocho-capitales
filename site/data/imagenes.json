@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T22:12:07.023Z",
+ "generado": "2026-11-09T22:23:56.634Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -11583,22 +11583,22 @@
   },
   "la-resurreccion-granada": {
    "cristo": {
-    "w": 956,
-    "h": 1270,
+    "w": 776,
+    "h": 990,
     "widths": [
      160,
      480,
-     956
+     776
     ],
     "escudo": false,
     "autor": "Resurrección (Granada)",
     "licencia": "",
     "licurl": "",
     "pagina": "https://x.com/ResurreccionGR",
-    "foco": "55% 30%",
+    "foco": "50% 25%",
     "cedida": true,
     "local": "scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg",
-    "tam": 213667,
+    "tam": 194323,
     "titular": "Nuestro Señor de la Resurrección"
    },
    "virgen": {
@@ -11659,6 +11659,27 @@
     "local": "scripts/cedidas/granada/el-nazareno-granada-virgen.jpg",
     "tam": 702899,
     "titular": "María Santísima de la Merced"
+   }
+  },
+  "santo-entierro-granada": {
+   "cristo": {
+    "w": 804,
+    "h": 656,
+    "widths": [
+     160,
+     480,
+     804
+    ],
+    "escudo": false,
+    "autor": "Santo Sepulcro (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/SantoSepulcroGR",
+    "foco": "20% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/santo-entierro-granada-cristo.jpg",
+    "tam": 109586,
+    "titular": "Cristo yacente"
    }
   }
  },
@@ -13061,7 +13082,7 @@
     480,
     960
    ],
-   "firma": "\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg\"|213667|\"\"|\"55% 30%\"|\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-virgen.jpg\"|403553|\"\"|\"55% 25%\"|\"\"|\"\""
+   "firma": "\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg\"|194323|\"\"|\"50% 25%\"|\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-virgen.jpg\"|403553|\"\"|\"55% 25%\"|\"\"|\"\""
   },
   "el-nazareno-granada": {
    "w": 960,
