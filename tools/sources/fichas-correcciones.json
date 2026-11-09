@@ -33,6 +33,9 @@
   "el-cachorro-sevilla": {
    "sede": { "valor": "Basílica del Santísimo Cristo de la Expiración (Triana)", "fuente": "https://hermandaddelcachorro.org/contacto/", "nota": "9-nov: la sede era «Basílica del Patrocinio», de Wikipedia; «Patrocinio» es el título de la Virgen. Web oficial, Contacto: «Basílica del Santísimo Cristo de la Expiración, Calle Castilla nº 182, 41010, Triana, Sevilla»" }
   },
+  "la-esperanza-de-triana-sevilla": {
+   "titulares_renombrar": { "Nuestro Padre Jesús de las Tres Caídas": { "nombre": "Santísimo Cristo de las Tres Caídas", "fuente": "https://esperanzadetriana.es/stmo-cristo-de-las-tres-caidas/" }, "María Santísima de la Esperanza de Triana": { "nombre": "Nuestra Señora de la Esperanza", "fuente": "https://esperanzadetriana.es/ntra-sra-de-la-esperanza/" } }
+  },
   "la-amargura-sevilla": {
    "sede": { "valor": "Iglesia de San Juan de la Palma", "fuente": "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "nota": "5-nov: la sede era «San Juan de la Palma», sin templo; nómina oficial 2026 del Consejo, p. 2: «Iglesia filial de San Juan Bautista (vulgo de la Palma)»" }
   },

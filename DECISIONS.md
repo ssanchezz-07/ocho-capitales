@@ -1,5 +1,10 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-09 · Esperanza de Triana: nombres de sus titulares según la hermandad
+Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
+- Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
+- No se tocan el Nuestro Padre Jesús de las Tres Caídas de Granada (otra hermandad) ni los textos de dedicatoria de las marchas, que citan su fuente.
+
 ## 2026-11-09 · Hábito de la Crucifixión (Málaga), según la propia hermandad
 La hermandad escribió a Pablo (captura en las notas de Coordinación) que el hábito publicado, tomado de agrupaciondecofradias.com, estaba mal. Lo correcto, en sus palabras: en las dos secciones, túnica morada, capa negra con el escudo, capirote negro y guantes negros; los hombres de trono, túnica negra con cuello y bocamangas morados y guantes negros.
 **Elegido**
