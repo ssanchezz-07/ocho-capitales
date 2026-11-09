@@ -2287,7 +2287,8 @@ function datosCunao() {
     if (h.musica) o.mu = h.musica;
     if ((h.marchas || []).length) o.nm = h.marchas.length;
     if ((h.salidas || []).length) o.x = h.salidas.map((s) => [s.dia, hhmm(s.hora), s.sede || '', s.titulares || '']);
-    const r = resumen(h.ciudad, h.slug); if (r) o.r = r;
+    // rk: de qué son las horas del itinerario («paso», «palio» o «cruz de guía»); las oficiales (h, hc) son de la cruz de guía
+    const r = resumen(h.ciudad, h.slug); if (r) { o.r = r; const rk = R[h.ciudad].r[h.slug].k; if (rk) o.rk = rk; }
     // hora oficial de paso por la carrera oficial (nómina de la capital), si la hay
     if (hhmm(h.hora_carrera)) { o.hc = hhmm(h.hora_carrera); o.lc = h.lugar_carrera || ''; }
     if (HABITOS[h.slug] && HABITOS[h.slug].texto) o.ha = 1;

@@ -369,18 +369,24 @@
     // hora y del mismo programa. Lo que falta no se pinta; si las horas no cuadran (la entrada antes que la salida), no se pinta nada.
     // «Iglesia de San Agustín (Centro Histórico)» → «San Agustín»: lo justo para la línea de tiempo
     const lugarCorto = (t) => String(t || '').split(';')[0].replace(/\s*\([^)]*\)/g, '').replace(/^((real|santa|insigne|pontificia|antigua) )*(iglesia|parroquia|bas[ií]lica( menor)?|capilla|ermita|convento|santuario|colegiata|monasterio|oratorio|templo)( parroquial| conventual)?( de los| de las| de la| del| de) /i, '').trim();
+    // de qué es cada hora: las oficiales (salida y carrera del programa), de la cruz de guía; las del itinerario, de su paso («palio», «paso»)
+    const deItin = (h) => (h.rk && h.rk !== 'cruz de guía' ? h.rk : 'cruz de guía');
+    const difSalida = (h) => { const a = minutos(h.h), b = h.r && minutos(h.r[0]); if (a == null || b == null) return 0; let d = b - a; if (d < -720) d += 1440; return d; };
     function lineaTiempo(h) {
       const r_ = h.r || [], l = [];
-      const sal = h.h ? [h.h, 1] : r_[0] ? [r_[0], r_[1]] : null; if (!sal) return null;
-      l.push({ e: 'Salida', t: sal[0], ex: !!sal[1], l: lugarCorto(h.se) });
-      const co = h.hc ? [h.hc, 1, h.lc || ''] : r_[4] && r_[5] ? [r_[5], r_[6], r_[4]] : null; if (co) { const lc = lugarCorto(bonito(co[2] || '')).replace(/^carrera( oficial)?[\s:,-]*/i, ''); l.push({ e: 'Carrera oficial', t: co[0], ex: !!co[1], l: lc }); }
-      if (r_[7] && r_[8] && !(h.lc && /catedral/i.test(h.lc))) l.push({ e: 'Catedral', t: r_[8], ex: !!r_[9], l: '' });
-      if (r_[2]) l.push({ e: 'Entrada', t: r_[2], ex: !!r_[3], l: '' });
+      const sal = h.h ? [h.h, 1, 'cruz de guía'] : r_[0] ? [r_[0], r_[1], deItin(h)] : null; if (!sal) return null;
+      l.push({ e: 'Salida', t: sal[0], ex: !!sal[1], l: lugarCorto(h.se), de: sal[2] });
+      const co = h.hc ? [h.hc, 1, h.lc || '', 'cruz de guía'] : r_[4] && r_[5] ? [r_[5], r_[6], r_[4], deItin(h)] : null; if (co) { const lc = lugarCorto(bonito(co[2] || '')).replace(/^carrera( oficial)?[\s:,-]*/i, ''); l.push({ e: 'Carrera oficial', t: co[0], ex: !!co[1], l: lc, de: co[3] }); }
+      if (r_[7] && r_[8] && !(h.lc && /catedral/i.test(h.lc))) l.push({ e: 'Catedral', t: r_[8], ex: !!r_[9], l: '', de: deItin(h) });
+      if (r_[2]) l.push({ e: 'Entrada', t: r_[2], ex: !!r_[3], l: '', de: deItin(h) });
       if (l.length < 2 || l.some((x) => minutos(x.t) == null)) return null;
       const ini = minutos(l[0].t); l.forEach((x) => { x.m = minutos(x.t) < ini ? minutos(x.t) + 1440 : minutos(x.t); });
       for (let i = 1; i < l.length; i++) if (l[i].m < l[i - 1].m) return null;
       if (l[l.length - 1].m - l[0].m > 20 * 60) return null;
-      return { t: 'tl', l: l.map((x) => ({ e: x.e, t: x.t, ex: x.ex, l: x.l })), nota: 'Horas del programa de ' + (D.anio - 1) + (l.some((x) => !x.ex) ? '; «≈», aproximada' : '') + '.' };
+      // la nota dice de qué es cada hora («Salida y carrera oficial: la cruz de guía; entrada: el palio»), para no confundirlas con las del recorrido
+      const grupos = []; l.forEach((x) => { const g = grupos.find((y) => y.de === x.de); if (g) g.e.push(x.e.toLowerCase()); else grupos.push({ de: x.de, e: [x.e.toLowerCase()] }); });
+      const deTxt = grupos.length === 1 ? 'Horas ' + (grupos[0].de === 'cruz de guía' ? 'de la cruz de guía' : 'del ' + grupos[0].de) : grupos.map((g, i) => (i ? g.e.join(' y ') : cap1(g.e.join(' y '))) + ', ' + (g.de === 'cruz de guía' ? 'de la cruz de guía' : 'del ' + g.de)).join('; ');
+      return { t: 'tl', l: l.map((x) => ({ e: x.e, t: x.t, ex: x.ex, l: x.l })), nota: deTxt + '. Programa de ' + (D.anio - 1) + (l.some((x) => !x.ex) ? '; «≈», aproximada' : '') + '.' };
     }
     function chipsHerm(h, actual) {
       const c = [['¿Por dónde pasa?', 'recorrido'], ['¿Qué banda lleva?', 'banda'], ['¿Quién talló sus imágenes?', 'autor'], ['¿Dónde la veo?', 'cerca'], ['¿A qué hora sale?', 'hora'], ['¿Y su historia?', 'historia']]
@@ -463,6 +469,8 @@
           P(r, conPref(h) + V(h, ' sale ', ' salen ') + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.');
           if (!sal) P(r, 'La hora de salida aún no la tengo, y no me la voy a inventar.');
           else if (!h.h && h.r) P(r, 'La hora sale del itinerario de ' + (D.anio - 1) + '; cuando se publique el de ' + D.anio + ' se actualiza.');
+          // si el palio (o el paso) sale bastante después que la cruz de guía, se dice: son dos horas de salida distintas, y las dos valen
+          if (h.h && h.r && deItin(h) !== 'cruz de guía' && difSalida(h) >= 10) P(r, 'Esa es la hora de la cruz de guía; ' + (deItin(h) === 'palio' ? 'el palio' : 'el paso') + ' sale a las ' + h.r[0] + '.');
           if (sal) { const tl = lineaTiempo(h); if (tl) r.partes.push(tl); }
           (h.x || []).forEach((x) => P(r, 'Además, ' + art(x[0]) + ' sale ' + (x[3] || 'una imagen') + (x[1] ? ' a las ' + x[1] : '') + (x[2] ? ' desde ' + conArt(x[2]) : '') + '.'));
           if (D.fechas[h.d]) P(r, cap1(art(h.d)) + ' de ' + D.anio + (h.d === 'Madrugá' ? ' es ' : ' cae ') + cuandoCae(h.d) + '.');
@@ -512,9 +520,11 @@
         case 'recorrido': {
           const R = CD.r[h.s];
           if (!R) { P(r, 'El itinerario ' + cabecera(h, 'de') + ' no lo tengo todavía. Sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); break; }
-          P(r, 'Recorrido ' + cabecera(h, 'de') + ', ' + art(h.d) + ' (itinerario ' + (CD.anio || '') + ', horas del ' + R.k + '):');
+          // las horas del recorrido son las de su paso (R.k); si no es la cruz de guía y su salida no coincide con la oficial, se dicen las dos
+          const kR = R.k && R.k !== 'cruz de guía' ? R.k : null, dosSal = kR && h.h && difSalida(h) >= 10;
+          P(r, 'Recorrido ' + cabecera(h, 'de') + ', ' + art(h.d) + ' (itinerario ' + (CD.anio || '') + (dosSal ? '). Son las horas del ' + kR + ': la cruz de guía sale a las ' + h.h + ' y el ' + kR + ', a las ' + R.p[0][0] + ':' : ', horas del ' + (R.k || 'paso') + '):'));
           const rr = resumirRuta(R.p);
-          LI(r, rr.map((p) => ({ x: bonito(p[1]) || '—', sub: (p[2] ? '' : '≈ ') + p[0] })));
+          LI(r, rr.map((p, i) => ({ x: (kR && (i === 0 || i === rr.length - 1) && /^(salida|entrada)$/i.test(p[1] || '') ? bonito(p[1]) + ' del ' + kR : bonito(p[1])) || '—', sub: (p[2] ? '' : '≈ ') + p[0] })));
           P(r, rr.some((p) => !p[2]) ? '«≈» es hora aproximada (franja de media hora). Puede ir adelantada o retrasada.' : 'Son las horas del programa: el cortejo puede ir adelantado o retrasado.');
           if (D.mapa.indexOf(h.c) >= 0) r.mapa = { c: h.c, s: h.s, et: 'Recorrido ' + nom(h, 'de') + ' en miniatura' };
           A(r, [D.mapa.indexOf(h.c) < 0 || D.fuera ? ['Verla en el mapa', L.calle(h.c, h.d)] : ['Síguela en el plano', L.seguir(h)], ['Ver la ficha', L.herm(h)]]); break;

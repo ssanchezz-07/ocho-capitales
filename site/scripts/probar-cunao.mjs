@@ -8,7 +8,7 @@ import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DIST = path.join(DIR, 'dist', 'data');
+const DIST = path.join(DIR, process.env.DIST_DIR || 'dist', 'data'); // DIST_DIR: probar otra carpeta de build
 if (!fs.existsSync(path.join(DIST, 'cunao.json'))) { console.error('Falta dist/data/cunao.json: ejecuta antes «node build.mjs».'); process.exit(1); }
 const D = JSON.parse(fs.readFileSync(path.join(DIST, 'cunao.json'), 'utf8'));
 const CIU = Object.fromEntries(D.capitales.map(([c]) => [c, JSON.parse(fs.readFileSync(path.join(DIST, 'cunao', c + '.json'), 'utf8'))]));
@@ -448,6 +448,10 @@ caso('B6-33 glosario sin superlativos', motor(), 'qué es la madrugá', noDice('
 caso('B7-1 compositor casi entero frente a «el Puerto de la Torre»', motor(), 'marchas de José Luis de la Torre Castellano', y(contiene('De José Luis de la Torre Castellano tengo'), noDice('Puerto de la Torre')));
 caso('B7-2 compositor casi entero frente a «el Valle»', motor(), 'marchas de Juan Luís del Valle Pérez', contiene('del Valle Pérez tengo'));
 caso('B7-3 la hermandad sigue mandando si no hay compositor', motor(), 'marchas de la Virgen del Valle de Sevilla', contiene('dedicadas al Valle'));
+// cruz de guía y palio: dos horas de salida distintas, y cada vista dice cuál es cuál (aviso de Marketing con la Esperanza de Triana)
+caso('B7-4 recorrido: dice que son horas del palio y la salida de la cruz de guía', motor(), '¿Por dónde pasa la Esperanza de Triana?', contiene('la cruz de guía sale a las 01:19 y el palio, a las 03:07', 'Salida del palio'));
+caso('B7-5 hora: la de la cruz de guía, y la del palio aparte', motor(), '¿A qué hora sale la Esperanza de Triana?', y(contiene('01:19', 'Esa es la hora de la cruz de guía; el palio sale a las 03:07'), (r) => { const tl = r.partes.find((p) => p.t === 'tl'); return tl && /cruz de guía/.test(tl.nota) && /palio/.test(tl.nota) ? true : 'la línea de tiempo no dice de qué es cada hora: ' + (tl && tl.nota); }));
+caso('B7-6 sin dos salidas distintas no se añade nada', motor(), '¿A qué hora sale el Cautivo de Málaga?', noDice('Esa es la hora de la cruz de guía'));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
