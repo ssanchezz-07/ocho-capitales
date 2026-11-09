@@ -922,6 +922,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Santísimo Cristo de la Lanzada",
     "foco": "50% 80%"
+   },
+   "virgen": {
+    "autor": "La Lanzada (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lanzada_granada_oficial/",
+    "local": "scripts/cedidas/granada/la-lanzada-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Caridad",
+    "titular": "María Santísima de la Caridad",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @lanzada_granada_oficial (https://www.instagram.com/p/Dc4ARw2ilPG/, imagen 1, 4-sep), sin colaboración, fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-canilla-granada": {
@@ -1046,13 +1057,26 @@
   },
   "los-favores-granada": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Granada-Iglesia_de_San_Cecilio-4-Cristo_de_los_Favores_(Pablo_de_Rojas,_siglo_XVII).JPG",
-    "titulo": "File:Granada-Iglesia de San Cecilio-4-Cristo de los Favores (Pablo de Rojas, siglo XVII).JPG",
-    "autor": "Javi Guerra Hernando",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Los Favores (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/favoresgranada/",
+    "local": "scripts/cedidas/granada/los-favores-granada-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de los Favores",
     "titular": "Santísimo Cristo de los Favores",
-    "foco": "50% 2%"
+    "foco": "48% 32%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @favoresgranada (bio «Cuenta OFICIAL»; https://www.instagram.com/p/DfZB694CpJh/), sin colaboración, fotógrafo citado ni firma. Recortada por abajo para quitar el rótulo «Hermandad de los Favores». Sustituye a la de Commons (Javi Guerra Hernando): la de la propia hermandad va antes. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Los Favores (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/favoresgranada/",
+    "local": "scripts/cedidas/granada/los-favores-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Misericordia Coronada",
+    "titular": "María Santísima de la Misericordia Coronada",
+    "foco": "45% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @favoresgranada (bio «Cuenta OFICIAL»; https://www.instagram.com/p/DfO_vPADwTP/), sin colaboración, fotógrafo citado ni firma. Recortada a medio cuerpo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "los-escolapios-granada": {
@@ -3117,6 +3141,17 @@
     "titular": "Nuestra Señora del Amor y del Trabajo",
     "foco": "50% 35%",
     "permiso": "Publicada por la propia hermandad en @hermandadferroviariosgranada (https://www.instagram.com/p/DfVD3fKCIUN/, imagen 2), sin fotógrafo citado, etiqueta ni firma. Recortada por abajo (se queda en 1250 px de alto) para quitar entero el logo «FERROVIARIOS» de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "cristo": {
+    "autor": "Ferroviarios (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadferroviariosgranada/",
+    "local": "scripts/cedidas/granada/los-ferroviarios-granada-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Buena Muerte",
+    "titular": "Santísimo Cristo de la Buena Muerte",
+    "foco": "52% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadferroviariosgranada (bio «Perfil Oficial», enlaza cofradiadelosferroviarios.org; https://www.instagram.com/p/DfPcpMKCB9z/), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo «Ferroviarios Granada». Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "las-chias-granada": {
@@ -3500,6 +3535,17 @@
     "titular": "Santísimo Cristo de la Sed",
     "foco": "30% 25%",
     "permiso": "Publicada por la propia hermandad en @sietepalabrascadiz (https://www.instagram.com/p/DV3I7H7gpXj/, cartel de la Función Principal de Instituto, marzo de 2026), sin fotógrafo citado, etiqueta ni firma; recortada la parte de la foto, sin el texto del cartel. Otros carteles de la cuenta llevan la firma de Jesús Patrón y no se usan. Regla de Pablo del 5-nov-2026: crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Siete Palabras (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/Hdad7palabras",
+    "local": "scripts/cedidas/cadiz/siete-palabras-cadiz-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Piedad",
+    "titular": "María Santísima de la Piedad",
+    "foco": "40% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta de X @Hdad7palabras, la que enlaza el Consejo de Cádiz (https://x.com/Hdad7palabras/status/1955224800965591207, 12-ago-2025, besamanos), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "ecce-mater-tua-cadiz": {
@@ -3829,8 +3875,8 @@
     "local": "scripts/cedidas/huelva/la-misericordia-huelva-virgen.jpg",
     "titulo": "Cedida: María Santísima de la Concepción",
     "titular": "María Santísima de la Concepción",
-    "foco": "48% 28%",
-    "permiso": "Publicada por la propia hermandad en @misericordiahuelva (https://www.instagram.com/p/DfKvDyqAkVK/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en @misericordiahuelva (https://www.instagram.com/p/DfKvDyqAkVK/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad». Quitadas las franjas negras laterales del original."
    }
   },
   "el-huerto-vera-cruz-jaen": {
@@ -4856,8 +4902,8 @@
     "local": "scripts/cedidas/cadiz/la-palma-cadiz-virgen.jpg",
     "titulo": "Cedida: María Santísima de las Penas Coronada",
     "titular": "María Santísima de las Penas Coronada",
-    "foco": "50% 24%",
-    "permiso": "Publicada por la propia archicofradía en @lapalmacadiz (https://www.instagram.com/p/DdGM4AcjPEI/, imagen 3, 10-sep-2026, triduo), sin fotógrafo citado, etiqueta ni firma. Comprobada la cara frente a la de las Penas (no es la Palma Coronada). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia archicofradía en @lapalmacadiz (https://www.instagram.com/p/DdGM4AcjPEI/, imagen 3, 10-sep-2026, triduo), sin fotógrafo citado, etiqueta ni firma. Comprobada la cara frente a la de las Penas (no es la Palma Coronada). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Recortada a medio cuerpo para que la cara se vea en la miniatura."
    }
   },
   "el-prendimiento-cadiz": {
@@ -4960,6 +5006,17 @@
     "foco": "50% 30%",
     "foco_ficha": "50% 100%",
     "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/CONj9e9nes9/. Con su firma intacta; foco_ficha para que se vea en la ficha."
+   },
+   "cristo": {
+    "autor": "La Borriquilla (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.borriquilla.es/",
+    "local": "scripts/cedidas/granada/la-borriquilla-granada-cristo.jpg",
+    "titulo": "Cedida: Entrada de Jesús en Jerusalén",
+    "titular": "Entrada de Jesús en Jerusalén",
+    "foco": "48% 22%",
+    "permiso": "Publicada por la propia hermandad en su web oficial (https://www.borriquilla.es/sites/default/files/cristo.jpg), sin fotógrafo citado ni firma. Recortada por abajo para quitar el anagrama de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-via-crucis-granada": {
@@ -4973,6 +5030,17 @@
     "titular": "Nuestro Padre Jesús de la Amargura",
     "foco": "50% 40%",
     "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/DRatbzvjN2_/ (imagen 5). Esta foto no lleva firma en el original."
+   },
+   "virgen": {
+    "autor": "Vía Crucis (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://viacrucisgranada.es/",
+    "local": "scripts/cedidas/granada/el-via-crucis-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Reyes",
+    "titular": "Nuestra Señora de los Reyes",
+    "foco": "58% 25%",
+    "permiso": "Publicada por la propia hermandad en su web oficial (https://viacrucisgranada.es/wp-content/uploads/2021/02/Reyes-Punal-scaled.jpg, galería), sin fotógrafo citado ni firma; la web enlaza @viacrucis_granada. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "soledad-de-nuestra-senora-humildad-granada": {
@@ -5109,8 +5177,8 @@
     "local": "scripts/cedidas/cadiz/merced-obediencia-cadiz-cristo.jpg",
     "titulo": "Cedida: Nuestro Padre Jesús Nazareno de la Obediencia",
     "titular": "Nuestro Padre Jesús Nazareno de la Obediencia",
-    "foco": "50% 38%",
-    "permiso": "Publicada por la propia archicofradía en su cuenta de X @La_Merced_Cadiz (bio: «Perfil Oficial de la Archicofradía de la Merced de Cádiz»), https://x.com/La_Merced_Cadiz/status/2037668264302551141 (28-mar-2026, imagen HEdAeTmXIAA8N6q), sin fotógrafo citado ni firma. Recortada al Nazareno en su paso. El Consejo enlaza twitter.com/archimerced, que ya no existe. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia archicofradía en su cuenta de X @La_Merced_Cadiz (bio: «Perfil Oficial de la Archicofradía de la Merced de Cádiz»), https://x.com/La_Merced_Cadiz/status/2037668264302551141 (28-mar-2026, imagen HEdAeTmXIAA8N6q), sin fotógrafo citado ni firma. Recortada al Nazareno en su paso. El Consejo enlaza twitter.com/archimerced, que ya no existe. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Recortada de cabeza a cintura."
    }
   },
   "el-cautivo-granada": {
@@ -5157,8 +5225,8 @@
     "local": "scripts/cedidas/granada/el-trabajo-granada-virgen.jpg",
     "titulo": "Cedida: Nuestra Señora de la Luz",
     "titular": "Nuestra Señora de la Luz",
-    "foco": "50% 22%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadtrabajoyluz (bio: «Perfil OFICIAL…», la que enlaza trabajoyluz.es; https://www.instagram.com/p/DcVdMpHDWC1/, 22-ago), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadtrabajoyluz (bio: «Perfil OFICIAL…», la que enlaza trabajoyluz.es; https://www.instagram.com/p/DcVdMpHDWC1/, 22-ago), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Recortada a medio cuerpo para que la cara se vea en la miniatura."
    }
   }
  }
