@@ -1756,12 +1756,15 @@
     "foco": "50% 0%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Dolores_Huelva.jpg",
-    "titulo": "File:Dolores Huelva.jpg",
-    "autor": "Morenohuelva",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de los Dolores"
+    "autor": "El Perdón (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentaldelperdon/",
+    "local": "scripts/cedidas/huelva/el-perdon-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @sacramentaldelperdon (la que enlaza el Consejo de Huelva; https://www.instagram.com/p/De9kAHLiNrO/, imagen 2), sin fotógrafo citado ni firma. Recortada por abajo para quitar el logo «El Perdón» y el degradado. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "las-tres-caidas-huelva": {
@@ -1851,12 +1854,15 @@
     "foco": "50% 49%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Esperanza.jpg",
-    "titulo": "File:Nuestra Señora de la Esperanza.jpg",
-    "autor": "Alvarito 9595",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Esperanza Coronada"
+    "autor": "La Esperanza (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/esperanzahuelvaoficial/",
+    "local": "scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Esperanza Coronada",
+    "titular": "Nuestra Señora de la Esperanza Coronada",
+    "foco": "47% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @esperanzahuelvaoficial (la que enlaza esperanzadehuelva.com; https://www.instagram.com/p/DeePJsvCnVT/), sin fotógrafo citado ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "los-judios-la-merced-huelva": {
@@ -3631,6 +3637,17 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": ""
+   },
+   "virgen": {
+    "autor": "Sagrada Cena (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentalsagradacena/",
+    "local": "scripts/cedidas/huelva/la-sagrada-cena-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rosario en sus Misterios Dolorosos",
+    "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
+    "foco": "55% 33%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @sacramentalsagradacena (bio «Perfil oficial», enlaza hermandadsagradacenahuelva.es; https://www.instagram.com/p/DfMTsOKkf-8/), sin fotógrafo citado ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-santa-cruz-huelva": {
@@ -3722,6 +3739,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Madre de la Consolación y Correa",
     "foco": "50% 22%"
+   },
+   "cristo": {
+    "autor": "Buena Muerte (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/buenamuerte_huelva/",
+    "local": "scripts/cedidas/huelva/la-buena-muerte-huelva-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Buena Muerte",
+    "titular": "Santísimo Cristo de la Buena Muerte",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @buenamuerte_huelva (bio «Perfil Oficial»; https://www.instagram.com/p/Ddn-Im9MKyh/), sin fotógrafo citado ni firma. Recortada al Cristo sobre su paso, sin el logo ni la franja de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-santa-cena-almeria": {
@@ -4370,12 +4398,15 @@
   },
   "el-santo-entierro-huelva": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:CristoYacenteHuelva.jpg",
-    "titulo": "File:CristoYacenteHuelva.jpg",
-    "autor": "leife (Fundacion Leon Ortega)",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Cristo yacente"
+    "autor": "Santo Entierro (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsantoentierrohuelva/",
+    "local": "scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg",
+    "titulo": "Cedida: Cristo yacente",
+    "titular": "Cristo yacente",
+    "foco": "60% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadsantoentierrohuelva (la que enlaza santoentierrohuelva.org; https://www.instagram.com/p/DfCJexQIbvw/), sin fotógrafo citado ni firma. Foto en blanco y negro de la propia hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    },
    "virgen": {
     "autor": "Santo Entierro (Huelva)",
@@ -5227,6 +5258,32 @@
     "titular": "Nuestra Señora de la Luz",
     "foco": "50% 28%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadtrabajoyluz (bio: «Perfil OFICIAL…», la que enlaza trabajoyluz.es; https://www.instagram.com/p/DcVdMpHDWC1/, 22-ago), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Recortada a medio cuerpo para que la cara se vea en la miniatura."
+   }
+  },
+  "la-bendicion-huelva": {
+   "cristo": {
+    "autor": "La Bendición (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/bendicionhuelva/",
+    "local": "scripts/cedidas/huelva/la-bendicion-huelva-cristo.jpg",
+    "titulo": "Cedida: Cristo de la Bendición",
+    "titular": "Cristo de la Bendición",
+    "foco": "35% 15%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @bendicionhuelva (bio «Perfil oficial»; https://www.instagram.com/p/DeJlIXsgIR5/, imagen 2), sin fotógrafo citado ni firma. La publicación es en colaboración con su vestidor, @pegomez07, no con un fotógrafo. Recortada a medio cuerpo. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "virgen": {
+    "autor": "El Prado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadpradohuelva/",
+    "local": "scripts/cedidas/huelva/nuestra-senora-del-prado-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora del Prado en su Dolor",
+    "titular": "Nuestra Señora del Prado en su Dolor",
+    "foco": "50% 18%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadpradohuelva (bio «Cuenta Oficial», enlazada por el Consejo de Huelva; https://www.instagram.com/p/De1m4C2gHS7/, imagen 3), sin fotógrafo citado ni firma. Recortada a medio cuerpo. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   }
  }

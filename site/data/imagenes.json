@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T12:24:21.813Z",
+ "generado": "2026-11-09T15:55:12.671Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5928,17 +5928,21 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 973,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Morenohuelva",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Dolores_Huelva.jpg",
+    "autor": "El Perdón (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentaldelperdon/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-perdon-huelva-virgen.jpg",
+    "tam": 533020,
     "titular": "Nuestra Señora de los Dolores"
    }
   },
@@ -6077,16 +6081,22 @@
   },
   "la-esperanza-huelva": {
    "virgen": {
-    "w": 160,
-    "h": 213,
+    "w": 960,
+    "h": 888,
     "widths": [
-     160
+     160,
+     480,
+     960
     ],
     "escudo": false,
-    "autor": "Alvarito 9595",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Esperanza.jpg",
+    "autor": "La Esperanza (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/esperanzahuelvaoficial/",
+    "foco": "47% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg",
+    "tam": 547262,
     "titular": "Nuestra Señora de la Esperanza Coronada"
    },
    "cristo": {
@@ -8903,7 +8913,27 @@
     "titular": "Cristo Resucitado"
    }
   },
-  "la-sagrada-cena-huelva": {},
+  "la-sagrada-cena-huelva": {
+   "virgen": {
+    "w": 960,
+    "h": 1137,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Sagrada Cena (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentalsagradacena/",
+    "foco": "55% 33%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-sagrada-cena-huelva-virgen.jpg",
+    "tam": 816871,
+    "titular": "María Santísima del Rosario en sus Misterios Dolorosos"
+   }
+  },
   "la-santa-cruz-huelva": {
    "juntos": {
     "w": 960,
@@ -9057,6 +9087,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Madre_de_la_Consolacion_y_Correa_de_Huelva.jpg",
     "titular": "Nuestra Madre de la Consolación y Correa",
     "foco": "50% 22%"
+   },
+   "cristo": {
+    "w": 737,
+    "h": 846,
+    "widths": [
+     160,
+     480,
+     737
+    ],
+    "escudo": false,
+    "autor": "Buena Muerte (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/buenamuerte_huelva/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-buena-muerte-huelva-cristo.jpg",
+    "tam": 150010,
+    "titular": "Santísimo Cristo de la Buena Muerte"
    }
   },
   "la-santa-cena-almeria": {
@@ -10114,16 +10163,22 @@
   },
   "el-santo-entierro-huelva": {
    "cristo": {
-    "w": 160,
-    "h": 107,
+    "w": 960,
+    "h": 631,
     "widths": [
-     160
+     160,
+     480,
+     960
     ],
     "escudo": false,
-    "autor": "leife (Fundacion Leon Ortega)",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:CristoYacenteHuelva.jpg",
+    "autor": "Santo Entierro (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsantoentierrohuelva/",
+    "foco": "60% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg",
+    "tam": 130247,
     "titular": "Cristo yacente"
    },
    "virgen": {
@@ -11461,6 +11516,48 @@
     "tam": 141585,
     "titular": "María Santísima del Rocío y Esperanza"
    }
+  },
+  "la-bendicion-huelva": {
+   "cristo": {
+    "w": 960,
+    "h": 1142,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Bendición (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/bendicionhuelva/",
+    "foco": "35% 15%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-bendicion-huelva-cristo.jpg",
+    "tam": 646264,
+    "titular": "Cristo de la Bendición"
+   }
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "virgen": {
+    "w": 960,
+    "h": 1146,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Prado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadpradohuelva/",
+    "foco": "50% 18%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/nuestra-senora-del-prado-huelva-virgen.jpg",
+    "tam": 311604,
+    "titular": "Nuestra Señora del Prado en su Dolor"
+   }
   }
  },
  "dipticos": {
@@ -11974,6 +12071,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Borriquita_Huelva_1.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Angeles_Huelva.JPG\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "el-perdon-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_del_Perd%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/sacramentaldelperdon/\"|\"scripts/cedidas/huelva/el-perdon-huelva-virgen.jpg\"|533020|\"\"|\"50% 25%\"|\"\"|\"\""
+  },
   "las-tres-caidas-huelva": {
    "w": 960,
    "h": 640,
@@ -12013,6 +12120,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n2_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "la-esperanza-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:-Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n-.jpg\"|\"\"|\"\"|\"\"|\"50% 49%\"|\"https://www.instagram.com/esperanzahuelvaoficial/\"|\"scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg\"|547262|\"\"|\"47% 30%\"|\"\"|\"\""
   },
   "los-judios-la-merced-huelva": {
    "w": 960,
@@ -12384,6 +12501,16 @@
    ],
    "firma": "\"https://www.instagram.com/hdadnazarenohuelva/\"|\"scripts/cedidas/huelva/el-nazareno-huelva-cristo.jpg\"|599846|\"\"|\"50% 30%\"|\"https://www.instagram.com/hdadnazarenohuelva/\"|\"scripts/cedidas/huelva/el-nazareno-huelva-virgen.jpg\"|1257472|\"\"|\"50% 22%\"|\"\"|\"\""
   },
+  "la-buena-muerte-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/buenamuerte_huelva/\"|\"scripts/cedidas/huelva/la-buena-muerte-huelva-cristo.jpg\"|150010|\"\"|\"50% 28%\"|\"https://commons.wikimedia.org/wiki/File:Nuestra_Madre_de_la_Consolacion_y_Correa_de_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 22%\"|\"\"|\"\""
+  },
   "la-esperanza-granada": {
    "w": 960,
    "h": 640,
@@ -12583,6 +12710,16 @@
     960
    ],
    "firma": "\"https://agrupaciondecofradias.com/hermandades/santo-traslado/\"|\"scripts/cedidas/malaga/traslado-malaga-cristo.jpg\"|512182|\"\"|\"50% 40%\"|\"https://agrupaciondecofradias.com/hermandades/santo-traslado/\"|\"scripts/cedidas/malaga/traslado-malaga-virgen.jpg\"|521042|\"\"|\"50% 35%\"|\"\"|\"\""
+  },
+  "el-santo-entierro-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg\"|130247|\"\"|\"60% 25%\"|\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-virgen.jpg\"|623981|\"\"|\"50% 25%\"|\"\"|\"\""
   },
   "la-lanzada-huelva": {
    "w": 960,
