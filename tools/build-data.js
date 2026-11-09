@@ -516,6 +516,22 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
     }
   }
 }
+// «Pasos y cortejo» con la misma idea en todas las fichas (tools/sources/pasos-cortejo.json, sesión Fichas, 9-nov): una línea por
+// paso o trono con lo que lleva y su dato propio, y el cortejo si la fuente oficial lo da. Manda sobre «paso», que se queda como
+// texto seguido (lo leen erCuñao y la base de datos); paso_fuentes va a «Fuentes y metodología».
+{
+  const f = path.join(__dirname, 'sources', 'pasos-cortejo.json');
+  const PC = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).fichas : {};
+  for (const [slug, x] of Object.entries(PC)) {
+    const h = hermandades.find((y) => y.slug === slug); if (!h) { console.warn('pasos-cortejo.json: no está la ficha', slug); continue; }
+    if (!(x.pasos || []).length || !(x.fuentes || []).length) { console.warn('pasos-cortejo.json: sin pasos o sin fuente', slug); continue; }
+    h.pasos = x.pasos.map(([nombre, texto]) => ({ nombre, texto }));
+    if (x.cortejo) h.cortejo = x.cortejo; else delete h.cortejo;
+    h.paso = [...h.pasos.map((p) => `${p.nombre}: ${p.texto}`), ...(x.cortejo ? ['Cortejo: ' + x.cortejo] : [])].join(' ');
+    h.paso_fuentes = x.fuentes;
+    if (h.relleno_fuentes) delete h.relleno_fuentes.paso;
+  }
+}
 // Historias de hermandad revisadas contra su fuente (tools/sources/historias.json, fase 3 de PROGRESO-HISTORIAS.md): mandan sobre
 // la reseña original. Cada historia guarda sus fuentes (se enlazan debajo de «Historia»). «pendiente»: no hay fuente abierta que la complete.
 {

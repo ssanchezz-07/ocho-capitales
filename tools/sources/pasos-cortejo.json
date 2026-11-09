@@ -1,0 +1,293 @@
+{
+ "nota": "«Pasos y cortejo» de cada ficha (sesión Fichas, 9-nov-2026; punto 5 de Pablo). Una sola idea para todas: una línea por paso (en Málaga, trono) con lo que lleva y el dato propio del paso según la fuente oficial (autor y año del paso, palio, manto), y una línea «Cortejo» solo si la fuente da algo propio de la procesión. La música no se repite aquí: va en «Música», con su fuente. Etiquetas: «Paso/Trono de misterio» (escena con varias figuras), «Paso/Trono de Cristo» (un solo Cristo), «Paso/Trono de palio» (Virgen bajo palio, si la fuente nombra el palio), «Paso/Trono de la Virgen» (sin palio o sin que la fuente lo diga). En Málaga, «trono»; en el resto, «paso». build-data.js las aplica sobre la ficha (manda sobre «paso») y guarda las fuentes en paso_fuentes, que salen en «Fuentes y metodología». Formato: slug → {pasos: [[etiqueta, texto]], cortejo, fuentes: [url]}.",
+ "fichas": {
+  "pollinica-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús a su Entrada en Jerusalén, con la «Pollinica» (Antonio Castillo Ariza, 1949), San Juan Evangelista, dos niños y una mujer con su hijo en brazos (José Antonio Navarro Arteaga, 1989-1990). Trono tallado por Francisco Verdugo (2014), con imaginería de Navarro Arteaga aún en ejecución."], ["Trono de palio", "María Santísima del Amparo, en un trono de Díaz Roncero (1967), bajo palio de malla calada de Juan Rosén (2000) y con manto bordado en plata sobre terciopelo verde por las Filipenses de San Carlos (1957)."]
+   ],
+   "cortejo": "Más del 70 % de quienes forman la procesión son menores; por eso se la conoce desde antiguo como la «escuela cofrade».",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/pollinica/"
+   ]
+  },
+  "lagrimas-y-favores-malaga": {
+   "pasos": [ ["Trono de la Virgen", "María Santísima de Lágrimas y Favores, en un trono de alpaca plateada de los talleres Maestrante (2004) con diseño de José Miguel Moreno. El manto, bordado en oro sobre terciopelo verde en los talleres de José Miguel Moreno, se estrenó en 2011."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/lagrimas-y-favores-fusionadas/"
+   ]
+  },
+  "dulce-nombre-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús de la Soledad, con cuatro soldados, San Pedro, la mujer acusadora, un gallo y un perro tallados por Antonio Bernal entre 2002 y 2016. El perro alude a San Francisco de Paula, por el carácter franciscano de la hermandad. Trono diseñado por Daniel García Romero y tallado por Juan Carlos Sedeño (2007-2014)."], ["Trono de palio", "María Santísima del Dulce Nombre, en un trono de orfebrería de Manuel Seco Velasco (1963), bajo un palio de malla calada aún sin bordar, con gloria de José Palma Santander (2016)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/dulce-nombre/"
+   ]
+  },
+  "salutacion-malaga": {
+   "pasos": [ ["Trono de misterio", "Jesús Nazareno de la Salutación, con la Santa Mujer Verónica (1990) y tres mujeres de Jerusalén (1991-1993) de Antonio Dubé de Luque y un centurión romano de José Antonio Navarro Arteaga (1997). Trono de Manuel Toledano, José Manuel Ramos de Rivas y José Dueñas Rosales (1991). Cada año un artista pinta el paño que la Verónica lleva en las manos."], ["Trono de palio", "María Santísima del Patrocinio Reina de los Cielos, con San Juan Evangelista (José Antonio Navarro Arteaga, 1999), en un trono diseñado por Eloy Téllez, con las barras de palio del taller de Emilio Méndez."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/salutacion/"
+   ]
+  },
+  "humildad-malaga": {
+   "pasos": [ ["Trono de misterio", "Santísimo Cristo de la Humildad en su Presentación al Pueblo, con Poncio Pilatos, Claudia Prócula, Caifás, Barrabás, un aquilífero y un soldado romano (Elías Rodríguez Picón, 2012). Trono diseñado por Eloy Téllez Carrión y ejecutado por Manuel Guzmán Bejarano (1994-2001)."], ["Trono de palio", "Nuestra Madre y Señora de la Merced y San Juan Evangelista, en un conjunto ideado por Eloy Téllez, con orfebrería de los talleres Villarreal y palio bordado en el taller de Felicitación Gaviero."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/humildad/"
+   ]
+  },
+  "salud-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Esperanza en su Gran Amor, en un trono de madera de los talleres Hermanos Caballero, empezado en 1999 y dorado en 2016."], ["Trono de palio", "María Santísima de la Salud, en un trono proyectado por Francisco Puente (1991) y labrado en orfebrería por los talleres Villarreal (1992), bajo palio de Jesús Ruiz Cebreros y con manto bordado en oro sobre terciopelo burdeos por María Felicitación Gaviero (2009)."]
+   ],
+   "cortejo": "Por las medidas de la puerta de la parroquia de San Pablo, los portadores sacan los tronos de rodillas.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/salud/"
+   ]
+  },
+  "humildad-y-paciencia-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Humildad y Paciencia (José María Ruiz Montes, bendecido en 2022), en un trono de estilo malagueño diseñado por Fernando Prini Betés."], ["Trono de la Virgen", "María Santísima de Dolores y Esperanza, en un trono sencillo de madera barnizada y plata."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/humildad-y-paciencia/"
+   ]
+  },
+  "huerto-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús Orando en el Huerto, con el ángel Egudiel (Antonio Castillo Lastrucci, 1949), en un trono de orfebrería diseñado por Juan Casielles y labrado por el taller Villarreal (1971-1979)."], ["Trono de palio", "Nuestra Señora de la Concepción Dolorosa, en un trono de madera tallada y dorada de Manuel Guzmán Bejarano, con manto de Leopoldo Padilla (finales de los años cuarenta) y un palio que bordan Manuel Mendoza y Salvador Aguilar."]
+   ],
+   "cortejo": "Los hermanos llevan en la cintura una sardineta, su seña propia, que heredó la Pollinica cuando era filial de la Oración en el Huerto.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/huerto/"
+   ]
+  },
+  "prendimiento-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús del Prendimiento y Judas Iscariote (Antonio Castillo Lastrucci, 1961), con San Juan, Santiago, San Pedro, el criado Malco y un soldado romano de Juan Manuel García Palomo (2005-2007). Trono de orfebrería de los talleres Villarreal (1965), con diseño de Juan Casielles."], ["Trono de palio", "María Santísima del Gran Perdón, en un cajillo diseñado por Juan Casielles del Nido (1975), bajo un palio de 2007 hecho en el taller de empleo de la hermandad y con manto de los talleres Hijos de Rodríguez Sanz (1964)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/prendimiento/"
+   ]
+  },
+  "crucifixion-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Crucifixión, clavado a la cruz por las muñecas y no por las manos, en un trono de Manuel Toledano Gómez (1994) con orfebrería de Antonio Rodríguez."], ["Trono de la Virgen", "María Santísima del Mayor Dolor en su Soledad, en un trono de los talleres Orovio de la Torre (2008-2009)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/crucifixion/"
+   ]
+  },
+  "gitanos-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús de la Columna, en un trono de madera dorada de Francisco Palma Burgos (1947)."], ["Trono de palio", "María Santísima de la O, en un trono de los talleres Villarreal (1979-1985), con palio y manto del bordador Juan Rosén."]
+   ],
+   "cortejo": "Desde los años veinte del siglo XX, el pueblo gitano acompaña a Jesús de la Columna con cantes y bailes.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/columna-gitanos/"
+   ]
+  },
+  "dolores-del-puente-malaga": {
+   "pasos": [ ["Trono de misterio", "Santísimo Cristo del Perdón, crucificado entre los ladrones Dimas y Gestas (Suso de Marcos, 2000), con San Juan Evangelista (Suso de Marcos, 1986) y la Virgen de la Encarnación (anónima del siglo XVII). Trono de García Verdún (1986)."], ["Trono de la Virgen", "Nuestra Señora de los Dolores Coronada, en un trono de madera dorada de Virginia Jiménez (2005), con manto bordado en oro sobre terciopelo negro por Felicitación Gaviero y Francisco J. González Lorente."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/dolores-del-puente/"
+   ]
+  },
+  "pasion-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús de la Pasión, con Simón de Cirene (Darío Fernández, 2010), en el trono de orfebrería de Manuel Seco Velasco (1946), el primero de orfebrería que salió en Málaga."], ["Trono de palio", "María Santísima del Amor Doloroso, en un trono de orfebrería de Eduardo Seco Imberg, Cayetano González, Hijos de Juan Fernández y Manuel de los Ríos (1946-2007), bajo palio bordado en oro sobre terciopelo burdeos por Fernández y Enríquez (1995-2000) y con manto de Joaquín Salcedo (2005)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/pasion/"
+   ]
+  },
+  "cautivo-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Cautivo, en un trono de caoba y plata repujada (1953)."], ["Trono de palio", "María Santísima de la Trinidad Coronada, en un trono de orfebrería de los talleres Villarreal (1971) con diseño de Juan Casielles, ampliado después por Cristóbal Martos. Manto de los talleres de Joaquín Salcedo (2008) y palio, del mismo taller, bordado en oro sobre terciopelo malva, en ejecución desde 2015."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/cautivo/"
+   ]
+  },
+  "estudiantes-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo Coronado de Espinas, en un trono de madera dorada de Cristóbal Velasco (1955-1956)."], ["Trono de palio", "Nuestra Señora de Gracia y Esperanza, en un trono de orfebrería de los talleres Villarreal (1969-1971) con diseño de Juan Casielles, bajo palio de las Madres Trinitarias (1952) y con manto bordado en oro sobre terciopelo verde por las Religiosas Adoratrices (1960-1963)."]
+   ],
+   "cortejo": "El «Gaudeamus igitur» acompaña la procesión cada Lunes Santo, con un acto anual con la Universidad de Málaga en la plaza del Obispo.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/estudiantes/"
+   ]
+  },
+  "rocio-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Nazareno de los Pasos en el Monte Calvario, en un trono de madera dorada de Antonio Martín (1993) con diseño de Jesús Castellanos."], ["Trono de palio", "María Santísima del Rocío Coronada, en un trono de orfebrería de los talleres Villarreal (1967) con diseño de Juan Casielles, bajo palio de los talleres Brenes (2008) y con manto de Felicitación Gaviero (2015), los dos diseñados por Eloy Téllez. La llaman «la Novia de Málaga» porque en su primera salida fue vestida toda de blanco."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/rocio/"
+   ]
+  },
+  "penas-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Agonía, en un trono de madera dorada del taller de Antonio Martín (1982-1987)."], ["Trono de palio", "María Santísima de las Penas, en un trono de orfebrería diseñado por Juan Casielles del Nido y labrado por Manuel Villarreal (1964), bajo palio bordado en oro sobre terciopelo verde por Fernández y Enríquez (1997-1998). Cada año estrena un manto de flores, sobre todo claveles, y pino, que hacen los responsables municipales de Parques y Jardines en los días previos."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/penas/"
+   ]
+  },
+  "nueva-esperanza-malaga": {
+   "pasos": [ ["Trono de Cristo", "Jesús Nazareno del Perdón, en un trono de madera dorada empezado por Manuel Toledano Vega y terminado por Manuel Toledano Gómez (1996-2009)."], ["Trono de palio", "María Santísima de Nueva Esperanza, en un trono de los talleres Diego Martín e Hijos (2002-2004), con un palio bordado en oro sobre terciopelo verde por Joaquín Salcedo, en ejecución desde 2007."]
+   ],
+   "cortejo": "Pasa más de doce horas en la calle y recorre el Perchel y la Trinidad a la ida y a la vuelta del recorrido oficial.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/nueva-esperanza/"
+   ]
+  },
+  "humillacion-y-estrella-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús de la Humillación y Perdón, en un trono que conserva elementos del primitivo de caoba de José Benítez Oliver (1922), con orfebrería añadida por Seco Velasco y Díaz Roncero en los años sesenta y setenta."], ["Trono de palio", "María Santísima de la Estrella, en un trono de caoba y plata de Francisco Díaz Roncero (1971-1972), donado por su camarera mayor, Mercedes de Sansa. El palio (1957-1959) y el manto (1953-1956) se bordaron en el convento de las Madres Trinitarias."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/estrella/"
+   ]
+  },
+  "rescate-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús del Rescate, con San Pedro, San Juan, Santiago, dos sayones, dos romanos y Judas Iscariote (Antonio Castillo Lastrucci, 1957), en un trono de madera dorada de Antonio Martín (1974-1975) con imaginería de Francisco Buiza."], ["Trono de palio", "María Santísima de Gracia, en un trono de madera dorada de Antonio Martín (1982-1986), bajo palio de Joaquín Salcedo Canca (2010) y con manto de las Filipenses de San Carlos (1957-1962), ampliado por Joaquín Salcedo en 2011."]
+   ],
+   "cortejo": "El colorido de las túnicas se debe al ofrecimiento de una casa de material fotográfico que, a finales de los años cincuenta, empezaba a vender carretes en color.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/rescate/"
+   ]
+  },
+  "sentencia-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús de la Sentencia, con Poncio Pilatos, dos sayones y un soldado romano de José Martín Simón (1936) y otro romano de Alfonso Ruiz (2008), en un trono de madera dorada de Pedro Pérez Hidalgo (1958)."], ["Trono de palio", "María Santísima del Rosario en sus Misterios Dolorosos, en un trono de orfebrería de los talleres Villarreal (1965) con diseño de Juan Casielles del Nido, bajo palio y con manto bordados en oro sobre terciopelo celeste por Leopoldo Padilla en los años cincuenta."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/sentencia/"
+   ]
+  },
+  "mediadora-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Nazareno Redentor del Mundo, que abraza la cruz antes de cargarla, en un trono diseñado por Salvador de los Reyes y tallado en madera por Francisco Verdugo, con el que sale desde 2017."], ["Trono de la Virgen", "Nuestra Señora Mediadora de la Salvación, en un trono de Salvador de los Reyes y Pedro González (2010), con orfebrería de los talleres Maestrante, Santos Campanario y Manuel de los Ríos."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/mediadora-de-la-salvacion/"
+   ]
+  },
+  "salesianos-malaga": {
+   "pasos": [ ["Trono de misterio", "Un solo trono: el Santo Cristo de las Penas, María Santísima del Auxilio, San Juan Evangelista, María Magdalena, María de Cleofás y María Salomé, todos de Manuel Carmona (1989-1995), en un trono de madera barnizada de los talleres Hermanos Caballero (1997-2005)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/salesianos/"
+   ]
+  },
+  "fusionadas-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús de Azotes y Columna, con dos sayones y dos soldados romanos de Juan Vega (2013), en un trono de madera barnizada de Juan Carlos García (2012)."], ["Trono de misterio", "Santísimo Cristo de la Exaltación, con tres sayones de Antonio Dubé de Luque (1980), en un trono de madera dorada de Guzmán Bejarano (1972)."], ["Trono de Cristo", "Santísimo Cristo de Ánimas de Ciegos, en un trono de madera dorada diseñado por Jesús Castellanos y ejecutado por Hermanos Caballero (1996)."], ["Trono de palio", "Nuestra Señora del Mayor Dolor Reina de los Ángeles y San Juan Evangelista, en sacra conversación, en un trono de Manuel de los Ríos (1978-1987), con manto de las Madres Trinitarias (1963) diseñado por Juan Casielles del Nido y palio bordado en oro sobre terciopelo azul por José Miguel Moreno (2010)."]
+   ],
+   "cortejo": "El Miércoles Santo salen cinco de sus titulares en cuatro tronos. Las secciones de Lágrimas y Favores y de la Vera+Cruz salen el Domingo de Ramos y el Jueves Santo, con ficha propia.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/fusionadas/"
+   ]
+  },
+  "paloma-malaga": {
+   "pasos": [ ["Trono de misterio", "Nuestro Padre Jesús de la Puente del Cedrón, con un soldado romano y el sayón «Berruguita» de José Navas-Parejo (1939), en un trono de madera dorada de Guzmán Bejarano (1978)."], ["Trono de la Virgen", "María Santísima de la Paloma, en un trono de los talleres Hermanos Caballero, que sustituyó en 2017 al de Pedro Pérez Hidalgo (1958)."]
+   ],
+   "cortejo": "Desde el público se sueltan palomas al paso de la Virgen, en recuerdo de la que en 1925 se posó en su trono durante todo el recorrido.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/paloma/"
+   ]
+  },
+  "el-rico-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Nazareno «El Rico», en un trono de madera dorada de Nicolás Prados López (1942)."], ["Trono de palio", "María Santísima del Amor, en un trono de Nicolás Prados López (1946), con palio y manto de Leopoldo Padilla (1948-1950)."]
+   ],
+   "cortejo": "Jesús «El Rico» libera cada año a un preso indultado por el Consejo de Ministros; el acto se hace en la plaza del Obispo.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/el-rico/"
+   ]
+  },
+  "sangre-malaga": {
+   "pasos": [ ["Trono de misterio", "Santísimo Cristo de la Sangre, con Nuestra Madre Dolorosa (Antonio Gutiérrez de León, 1858), San Juan Evangelista (Amadeo Ruiz Olmos, 1943) y María de Cleofás, María Salomé, María Magdalena, Longinos a caballo y un sayón de Rafael Ruiz Liébana (1997), en un trono de madera dorada del mismo Ruiz Liébana (1995)."], ["Trono de palio", "María Santísima de Consolación y Lágrimas, en un trono de Rafael Ruiz Liébana (2008), bajo palio bordado en oro sobre terciopelo malva por Juan Rosén (2012) y con manto del mismo color, bordado en oro en el taller de Salvador Oliver (2016)."]
+   ],
+   "cortejo": "El Ayuntamiento y la Diputación de Burgos, hermanos mayores honorarios, acuden cada año a la salida del Miércoles Santo.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/sangre/"
+   ]
+  },
+  "expiracion-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Expiración, en un trono de orfebrería con metales preciosos del taller del padre Félix Granda (1943)."], ["Trono de palio", "María Santísima de los Dolores Coronada, en un trono de orfebrería de Manuel Seco Velasco (1950), con palio (1954) y manto (1955) de los talleres de Esperanza Elena Caro."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/expiracion/"
+   ]
+  },
+  "sagrada-cena-malaga": {
+   "pasos": [ ["Trono de misterio", "Sagrada Cena Sacramental, el grupo de Luis Álvarez Duarte (1971) en el momento en que Jesús bendice el vino y lo reparte a sus discípulos, en un trono de madera dorada de Guzmán Bejarano (1970, terminado en 2011)."], ["Trono de palio", "María Santísima de la Paz, en un trono de orfebrería de los talleres Villarreal (1970), bajo palio de los talleres Hermanos Rodríguez (mediados de los años cincuenta) y con manto bordado en oro sobre terciopelo azul por las Madres Adoratrices."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/sagrada-cena/"
+   ]
+  },
+  "vineros-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Nazareno de Viñeros, en un trono de peana de carrete de madera dorada de Francisco Pineda y Gonzalo Merencio, con cuatro faroles de orfebrería de Adán Jaime. El Nazareno lleva la llave del Sagrario de Santa Catalina por concesión del papa Pío VI (siglo XVIII)."], ["Trono de la Virgen", "Nuestra Señora del Traspaso y Soledad de Viñeros, en un trono de madera dorada de Francisco Pineda (2008), con manto bordado en oro sobre terciopelo negro por las Filipenses de San Carlos (1968)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/vineros/"
+   ]
+  },
+  "santa-cruz-malaga": {
+   "pasos": [ ["Trono de la Virgen", "Nuestra Señora de los Dolores en su Amparo y Misericordia, en un trono de caoba barnizada diseñado por Antonio Dubé de Luque, con talla de Julián Sánchez Medina e imaginería de José María Leal."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/santa-cruz/"
+   ]
+  },
+  "vera-cruz-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Vera+Cruz, anónimo del siglo XVI reconstruido en el XX, en un trono de madera barnizada de Barbero (años cincuenta) con imaginería de Suso de Marcos, el que antes llevaba Azotes y Columna."]
+   ],
+   "cortejo": "Sale en silencio cada noche de Jueves Santo.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/veracruz-fusionadas/"
+   ]
+  },
+  "mena-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Buena Muerte y Ánimas, con María Magdalena (Francisco Palma Burgos, 1945), en un trono de madera dorada del mismo Palma Burgos (1943)."], ["Trono de palio", "Nuestra Señora de la Soledad Coronada, en un trono de madera dorada de Antonio Ibáñez (2006), con manto del taller de Salvador Oliver y palio bordado en oro sobre terciopelo negro por Fernández y Enríquez (2001), sobre el diseño del anterior."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/mena/"
+   ]
+  },
+  "zamarrilla-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de los Milagros, en un trono de madera barnizada de los talleres Hermanos Caballero (2006) con orfebrería de Manuel de los Ríos."], ["Trono de palio", "María Santísima de la Amargura Coronada, en un trono de orfebrería de Manuel de los Ríos (2003), bajo palio de las Madres Adoratrices (1978-1988) y con manto del taller de Esperanza Elena Caro (1977). Lleva en el pecho una rosa roja, por la leyenda del bandolero Zamarrilla."]
+   ],
+   "cortejo": "Nuestro Padre Jesús del Santo Suplicio, última obra de Palma Burgos (1985), no sale todavía el Jueves Santo.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/zamarrilla/"
+   ]
+  },
+  "misericordia-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús de la Misericordia, «el Chiquito», caído camino del Calvario, en un trono de madera tallada y dorada de Cristóbal Velasco (1966)."], ["Trono de palio", "Nuestra Señora del Gran Poder, en un trono de orfebrería de los talleres Angulo (1966), bajo palio de las Madres Adoratrices (1927-1928) y con manto bordado en plata sobre terciopelo negro por las Filipenses de San Carlos (1949), ampliado por Joaquín Salcedo en 2002."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/misericordia/"
+   ]
+  },
+  "esperanza-malaga": {
+   "pasos": [ ["Trono de Cristo", "Jesús Nazareno del Paso, en un trono de madera dorada diseñado por Fernando Guerrero-Strachan y hecho por Francisco Palma Burgos."], ["Trono de palio", "María Santísima de la Esperanza Coronada, en un trono de madera dorada de Adrián Risueño, Andrés Cabello Requena y Luis Ramos Rosas (1943-1949), con manto bordado en oro sobre terciopelo verde por las Madres Adoratrices (1953) y palio del taller de bordados La Trinidad (2000)."]
+   ],
+   "cortejo": "Cada Jueves Santo, el Nazareno del Paso bendice desde la plaza de la Constitución, vuelto hacia calle Larios. El camino del cortejo se alfombra de romero, que bendice la Virgen a su paso.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/esperanza/"
+   ]
+  },
+  "monte-calvario-malaga": {
+   "pasos": [ ["Trono de misterio", "Santísimo Cristo Yacente de la Paz y Unidad, en el misterio de su Sagrada Mortaja, con Nuestra Señora de Fe y Consuelo (atribuida a Antonio Asensio de la Cerda, siglo XVIII), Nicodemo y José de Arimatea (Juan Manuel García Palomo, 1995), María Salomé (García Palomo, 1993), María de Cleofás (Juan Ventura, 1980) y María Magdalena (anónima del siglo XIX), en un trono de madera dorada de Antonio Martín."], ["Trono de palio", "Santa María del Monte Calvario, con San Juan Evangelista (Antonio Eslava Rubio, 1967), en un trono de orfebrería de Santos Campanario (1994-1999), bajo palio bordado por los talleres de Salvador Oliver (2011-2013) y Jesús Arco (2013-2016)."]
+   ],
+   "cortejo": "La estación de penitencia empieza en la ermita del Monte Calvario, desde donde los hermanos van con el Cristo Yacente hasta la basílica de Santa María de la Victoria, donde esperan los tronos.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/monte-calvario/"
+   ]
+  },
+  "descendimiento-malaga": {
+   "pasos": [ ["Trono de misterio", "Sagrado Descendimiento, con José de Arimatea y Nicodemo (Luis Ortega Bru, 1980), Nuestra Señora del Santo Sudario (Luis Ángel Ortega León, 1987) y San Juan, María Magdalena, María de Cleofás y María Salomé (Ricardo Rivera, 1984-1985), en un trono de madera barnizada de Julián Sánchez (1989)."], ["Trono de la Virgen", "María Santísima de las Angustias, en un trono de orfebrería diseñado por Juan Antonio Sánchez López y labrado por Santos Campanario (2006)."]
+   ],
+   "cortejo": "Pide la venia dos veces: la obligada en la tribuna principal y otra, simbólica, al pasar por la puerta del Ayuntamiento.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/descendimiento/"
+   ]
+  },
+  "dolores-de-san-juan-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Redención, en un trono diseñado por Fernando Prini y tallado por Manuel Toledano, con imaginería de José María Ruiz Montes, estrenado en 2013."], ["Trono de la Virgen", "Nuestra Señora de los Dolores, en un trono de los talleres Villarreal (1984) con imaginería de Carlos Valle y Suso de Marcos. Su manto se borda en los talleres de Manuel Mendoza y Salvador Aguilar."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/dolores-de-san-juan/"
+   ]
+  },
+  "amor-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo del Amor, de tamaño menor que el natural, con la Santísima Virgen de los Dolores a sus pies, los dos de Fernando Ortiz (siglo XVIII), en un trono de madera dorada de José Ávila y Pedro Román (1954)."], ["Trono de palio", "Nuestra Señora de la Caridad, en un trono de madera dorada de Manuel Caballero Farfán (1987-1988), con palio (1946) y manto bordado en oro sobre terciopelo negro (1946-1948) del taller de Leopoldo Padilla."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/amor/"
+   ]
+  },
+  "traslado-malaga": {
+   "pasos": [ ["Trono de misterio", "Santo Traslado al Sepulcro, con María Magdalena, María de Cleofás, María Salomé, José de Arimatea, Nicodemo y el pastor Stefanus (Israel Cornejo, 2011), en un trono de madera dorada de los talleres de Rafael Ruiz Liébana (2008), sobre las líneas del anterior de Pedro Pérez Hidalgo. En las esquinas lleva pebeteros en vez de luces, y el incienso perfuma el paso del cortejo."], ["Trono de la Virgen", "Nuestra Señora de la Soledad, de talla completa, ante la cruz y sin palio ni manto bordado, en un trono de orfebrería de los talleres Angulo (1958)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/santo-traslado/"
+   ]
+  },
+  "piedad-malaga": {
+   "pasos": [ ["Trono de misterio", "Un solo trono: Nuestra Señora de la Piedad con su Hijo, de Francisco Palma Burgos (1941) sobre el modelo de su padre, Francisco Palma García, en un trono de madera barnizada de Rafael Ruiz Liébana (1987) con orfebrería de los talleres Angulo. En la cruz, una paloma de Lourdes Casares."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/piedad/"
+   ]
+  },
+  "santo-sepulcro-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús del Santo Sepulcro, en una urna de madera barnizada con bronces y esmaltes, sobre el trono de los talleres del padre Granda (1927, con diseño de Moreno Carbonero), cuyo cuerpo superior rehízo el mismo taller en 1943."], ["Trono de palio", "Nuestra Señora de la Soledad, en un trono de orfebrería de Manuel Seco Velasco (1950), con manto de las Madres Adoratrices (1922) y un palio de malla calada del taller de bordados La Trinidad (2005)."]
+   ],
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/sepulcro/"
+   ]
+  },
+  "servitas-malaga": {
+   "pasos": [ ["Trono de la Virgen", "María Santísima de los Dolores, en unas andas de Manuel Seco Velasco (1946)."]
+   ],
+   "cortejo": "Rezan la corona dolorosa por las calles, que apagan sus luces al paso del cortejo; se alumbran con cirios de tres pabilos.",
+   "fuentes": ["https://agrupaciondecofradias.com/hermandades/servitas/"
+   ]
+  },
+  "resucitado-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo Resucitado, titular de la Agrupación de Cofradías desde 1921; la imagen actual es de José Capuz (1946). El grupo de dos soldados romanos que lo acompañó hasta los años ochenta ya no sale."], ["Trono de la Virgen", "María Santísima Reina de los Cielos (Luis Álvarez Duarte, bendecida en 1994), titular mariana de la Agrupación."]
+   ],
+   "cortejo": "Lo organiza la propia Agrupación de Cofradías, que cierra con él la Semana Santa.",
+   "fuentes": ["https://agrupaciondecofradias.com/titulares/"
+   ]
+  }
+ }
+}
