@@ -1172,6 +1172,7 @@
       }
       daysBox.innerHTML = html;
     };
+    listBox.classList.add('is-vivo'); // los botones «Añadir al calendario» solo se ven cuando funcionan (vida.css)
     listBox.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-ics]'); if (!b) return;
       var e = EVS[+b.dataset.ics]; if (e) window.ocIcs([e], 'ocho-capitales-' + e.f);

@@ -2,7 +2,7 @@
 
 ## 2026-11-10 · Fluidez de toda la página (noche del 9-nov, erCuñao, punto 1 del plan; no se toca el plano)
 Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, mediana de 3 pasadas, contra la versión publicada (6f3635d). Lo que más frenaba eran las imágenes (el navegador bajaba fotos de 3x para huecos pequeños) y el salto del calendario.
-- **`sizes` de las imágenes** (`build.mjs`). Las miniaturas, las tarjetas de la portada y la cabecera de las capitales piden menos ancho en pantallas de 3x (`SIZES_MINI`, `SIZES_PORTADA_CAP` y `SIZES_CABECERA`). Peso de imágenes en móvil: portada de 1168 a 447 KB, Málaga de 1213 a 291 KB y Sevilla de 1339 a 274 KB. LCP de Sevilla de 1328 a 540 ms y de Málaga de 972 a 664 ms. A simple vista no se nota peor.
+- **`sizes` de las imágenes** (`build.mjs`): las miniaturas de 64 px piden 160 en vez de 480 en pantallas de 3x (`SIZES_MINI`). Al principio también se bajaron la cabecera de las capitales y las fotos de la portada (Sevilla, de 1339 a 274 KB; LCP de 1328 a 540 ms), pero el auditor-web midió que, al ir recortadas con `object-fit: cover`, se ablandaban el bordado y las fachadas (0,48 píxeles de imagen por píxel de pantalla). Se dejan como estaban: primero la nitidez. Si se quiere el ahorro sin perderla, haría falta un ancho intermedio (por ejemplo 1440) en `ANCHOS_CABECERA`, y eso supone generar más archivos de imagen (queda propuesto).
 - **Calendario sin saltos**: el servidor pinta los próximos actos y el mes con el mismo marcado que `site.js`, y `.cx-mes` ya no nace oculto con JS (la regla global `[hidden]` obligó a poner `!important`). CLS de 0,149 a 0.
 - **`site.js`**: los formateadores `Intl` se crean una sola vez (antes, uno por fecha) y el botón de volver arriba no hace cálculos mientras no hace falta.
 - **Noticias**: en el móvil, la destacada lleva un degradado más opaco detrás del texto, que ya no se transparenta. En PC, los filtros pasan a varias líneas y no se cortan a 1440.
@@ -10,6 +10,17 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
 - **Juegos en PC** (punto 8): a partir de 960 px tiene un ancho de 1040, las tarjetas van en 3 columnas y las opciones en 2.
 - **Botones de juegos del bot en el móvil** (punto 8): un enlace del chat a la misma página (p. ej. «El reto de hoy» estando en Juegos) cierra la hoja y el juego arranca a la vista.
 - **Nazareno de la portada**: empieza a dibujarse cuando su tramo entra por la mitad de la pantalla. Al bajar rápido ya no aparece un bloque oscuro vacío.
+- **Auditoría (auditor-web, NO APTO; arreglado)**:
+  - erCuñao acoplado ya no es modal: `aria-modal="false"` y el Tab sale a la página.
+  - Escape lo cierra aunque el foco esté en la página.
+  - Cerrar y reabrir enseguida ya no deja la página bloqueada sin panel: se cancelan los temporizadores.
+  - Si se estrecha la ventana con el panel abierto, pasa a flotante, y vuelve a acoplarse al ensanchar.
+  - La portada ya no sobresale 8 px de la cabecera: se descuenta la barra de scroll, porque con `scrollbar-gutter` `clientWidth` no la descuenta.
+  - Sin JS, los botones «Añadir al calendario» quedan ocultos sin perder su sitio (los activa `site.js` con `is-vivo`).
+  - De 6f3635d, en erCuñao:
+    - «¿Cuánto dura…?» contaba desde la hora del palio como si fuera la salida. Ahora cuenta desde la cruz de guía (oficial) hasta que se recoge el palio (estimación, con su fuente).
+    - Una fuente que no es un programa va entre comillas («según "Horarios e itinerarios…"», no «según el Horarios»).
+    - Casos B8-1 a B8-5 en `probar-cunao`; el B8-5 comprueba que toda cofradía con horas del palio lleva su fuente.
 - **Descartado**: `text-wrap` (no mejora lo medido) y `content-visibility` (sigue fuera por Safari).
 - **Propuesto, sin hacer**: (1) partir el CSS por tipo de página, porque site.css (180 KB) y vida.css (83 KB) bloquean el pintado y cada página usa entre el 10 y el 17 %, y es lo que más pesa en el TBT que queda; (2) un «ver más» en bandas e imaginerías de las páginas de capital (menos DOM y menos miniaturas).
 

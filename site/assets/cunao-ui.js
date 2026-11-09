@@ -155,16 +155,28 @@
   const vv = window.visualViewport;
   const ajusta = () => { if (!vv || hoja.hidden) return; const alFinal = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 48; hoja.style.height = vv.height + 'px'; hoja.style.top = vv.offsetTop + 'px'; hoja.style.bottom = 'auto'; if (alFinal) chat.scrollTop = chat.scrollHeight; };
   const suelta_ = () => { hoja.style.height = ''; hoja.style.top = ''; hoja.style.bottom = ''; };
-  let lado = false;
+  let lado = false, tCierre = 0, tLado = 0;
+  const panelDlg = hoja.querySelector('[role="dialog"]') || hoja;
+  const anchaMQ = matchMedia('(min-width: 1440px)'); // por debajo, el hueco de 452 px deja la página más estrecha que el menú
+  // acoplado no es modal: la página sigue usable con teclado y lector de pantalla (auditoría del 10-nov); flotante, sí
+  function ponLado(v) {
+    lado = v; panelDlg.setAttribute('aria-modal', v ? 'false' : 'true');
+    const de = document.documentElement; de.classList.toggle('oc-cunao-lado', v); document.body.style.overflow = v ? '' : 'hidden';
+    if (v) de.style.setProperty('--oc-sb', Math.max(0, innerWidth - document.body.getBoundingClientRect().width) + 'px'); // barra de scroll (con scrollbar-gutter, clientWidth no la descuenta), para lo de borde a borde
+    dispatchEvent(new Event('resize'));
+  }
+  // si se estrecha o se ensancha la ventana con erCuñao abierto, cambia de modo
+  const alCambiar = () => { if (!hoja.hidden && hoja.classList.contains('is-open') && anchaMQ.matches !== lado) ponLado(anchaMQ.matches); };
+  if (anchaMQ.addEventListener) anchaMQ.addEventListener('change', alCambiar); else if (anchaMQ.addListener) anchaMQ.addListener(alCambiar);
   function abrir() {
+    clearTimeout(tCierre); clearTimeout(tLado); // cerrar y reabrir enseguida: que no se cuele el final del cierre
     ultimoFoco = document.activeElement;
     hoja.hidden = false; btn.setAttribute('aria-expanded', 'true');
     if (vv) { vv.addEventListener('resize', ajusta); vv.addEventListener('scroll', ajusta); ajusta(); }
     requestAnimationFrame(() => hoja.classList.add('is-open'));
     // En pantallas anchas, erCuñao se acopla a la derecha y la página se aparta: no tapa el mapa, la foto de la ficha ni el plano
     // (barrido del 9-nov). Los planos se recolocan con el «resize». En las estrechas, hoja modal como siempre.
-    lado = matchMedia('(min-width: 1440px)').matches; // por debajo, el hueco de 452 px deja la página más estrecha que el menú
-    if (lado) { document.documentElement.classList.add('oc-cunao-lado'); dispatchEvent(new Event('resize')); } else document.body.style.overflow = 'hidden';
+    ponLado(anchaMQ.matches);
     cargar().catch(() => {});
     if (!chat.childNodes.length) {
       const f = document.createElement('div');
@@ -179,9 +191,9 @@
   }
   function cerrar() {
     hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-    if (lado) { lado = false; setTimeout(() => { document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); }, calm ? 0 : 200); }
+    if (lado) { lado = false; tLado = setTimeout(() => { document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); }, calm ? 0 : 200); }
     if (vv) { vv.removeEventListener('resize', ajusta); vv.removeEventListener('scroll', ajusta); } suelta_();
-    setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
+    tCierre = setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
     (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();
   }
   let compacta = false, yAnt = 0, acum = 0;
@@ -206,12 +218,18 @@
   hoja.addEventListener('click', (e) => { if (e.target === hoja) cerrar(); });
   hoja.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { e.stopPropagation(); cerrar(); return; }
-    if (e.key !== 'Tab') return;
-    // el foco no se escapa del diálogo mientras está abierto
+    if (e.key !== 'Tab' || lado) return;
+    // el foco no se escapa del diálogo mientras está abierto (flotante; acoplado, la página sigue al alcance del teclado)
     const f = [...hoja.querySelectorAll('a[href], button:not([disabled]), input')].filter((x) => x.offsetParent !== null);
     if (!f.length) return;
     if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
     else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  });
+  // acoplado, Escape lo cierra aunque el foco esté en la página (si no está en un campo o en otro diálogo abierto)
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' || !lado || e.defaultPrevented || hoja.contains(e.target)) return;
+    if (e.target.closest && e.target.closest('input, textarea, select, [contenteditable], dialog[open], [role="dialog"]:not([hidden])')) return;
+    cerrar();
   });
   form.addEventListener('submit', (e) => { e.preventDefault(); const t = q.value; q.value = ''; preguntar(t); });
   // En el plano «En la calle» el botón se aparta: sube lo justo para no tapar el crédito de OpenStreetMap (obligatorio por la

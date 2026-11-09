@@ -542,6 +542,7 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 /* el mes ya viene pintado del servidor: con JS se ve desde el primer pintado (antes aparecía al cargar site.js y empujaba la
    lista 490 px: CLS 0,15 en el móvil). Sin JS sigue oculto: la cabecera quita oc-js si site.js no llega a arrancar */
 .oc-js .cx-mes[hidden] { display: block !important; } /* !important: site.css lleva [hidden] { display: none !important } */
+[data-agenda-list]:not(.is-vivo) [data-ics] { visibility: hidden; } /* sin JS no añaden nada: ocultos sin perder su sitio; site.js pone is-vivo */
 .cx-mes { overflow: hidden; border-radius: 20px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06), 0 14px 30px -20px rgb(20 6 30 / .4); }
 .cx-mes-nav { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 10px 24px; color: #fbf6ee;
   background: radial-gradient(120% 130% at 12% -30%, rgb(255 214 150 / .22), transparent 60%), linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%), var(--tc); }

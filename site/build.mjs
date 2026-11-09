@@ -369,13 +369,12 @@ const localUrl = (im, w) => { const f = `${im.kind}-${im.slug}-${w}.webp`, h = h
 const localSet = (im, widths) => { const max = Math.max(...widths); const cut = im.sizes.findIndex((x) => x >= max); return im.sizes.slice(0, cut < 0 ? im.sizes.length : cut + 1); };
 // Anchos de la cabecera de capital: los mismos en la etiqueta y en su precarga (si no, en pantallas de alta densidad se baja dos veces)
 const ANCHOS_CABECERA = [500, 960, 1920];
-// sizes de las imágenes con pantallas de alta densidad (x2,5 o más, la mayoría de los móviles): se pide el tamaño de abajo, que
-// se ve igual de nítido a ese tamaño y pesa la quinta parte (perfil del 9-nov: las capitales bajaban 1,3 MB de fotos en el móvil).
-// Miniaturas de 64 px: 160 en vez de 480 (11 KB frente a 95); fotos de la portada (173 px): 480 en vez de 960; cabecera de la
-// capital (392 px): 960 en vez de 1600. En PC y en pantallas x1/x2 no cambia nada.
+// sizes de las imágenes con pantallas de alta densidad (x2,5 o más, la mayoría de los móviles): las miniaturas de 64 px piden
+// 160 en vez de 480 (11 KB frente a 95) y se ven igual. La cabecera de la capital y las fotos de la portada NO: van recortadas
+// con object-fit: cover y con menos píxeles se ablandaban el bordado y las fachadas (auditoría del 10-nov); se quedan como estaban.
 const SIZES_MINI = '(min-resolution: 2.5dppx) 53px, 72px';
-const SIZES_PORTADA_CAP = '(max-width: 1000px) and (min-resolution: 2.5dppx) 40vw, (max-width: 1000px) 50vw, 25vw';
-const SIZES_CABECERA = '(max-width: 600px) and (min-resolution: 2.5dppx) 80vw, (max-width: 1240px) 100vw, 1200px';
+const SIZES_PORTADA_CAP = '(max-width: 1000px) 50vw, 25vw';
+const SIZES_CABECERA = '(max-width: 1240px) 100vw, 1200px';
 const ogOf = (im) => (!im ? '' : im.local ? abs(localUrl(im, im.sizes.at(-1))) : isThumb(im.src) ? wmAt(im.src, 960) : clean(im.src));
 function imgTag(im, alt, { cls = '', sizes = '(max-width: 640px) 100vw, 33vw', widths = [330, 500, 960], eager = false } = {}) {
   if (!im) return '';
