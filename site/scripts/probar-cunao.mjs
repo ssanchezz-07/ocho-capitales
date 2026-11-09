@@ -436,6 +436,16 @@ caso('B6-22 hermandades de un barrio', motor(), 'que hermandades hay en triana',
 caso('B6-23 «cuántas hermandades tiene Sevilla» no es un barrio', motor(), 'cuantas hermandades tiene sevilla', y(contiene('71'), noDice('barrio')));
 caso('B6-24 «Santo Domingo» no es el Domingo de Ramos', motor(), 'donde esta la iglesia de santo domingo en malaga', noDice('Domingo de Ramos en Málaga salen'));
 caso('B6-25 título delante: «marcha Margot de quién es»', motor(), 'marcha Margot de quien es', contiene('Joaquín Turina'));
+// los fallos de la auditoría del bloque 6
+caso('B6-26 «Ave Maris Stella» es una marcha, no un tren', motor(), 'quien compuso Ave Maris Stella', contiene('Alcácer'));
+caso('B6-27 «Avión C. Vientos» es un lugar del itinerario', motor(), '¿A qué hora pasa Los Servitas de Sevilla por Avión C. Vientos?', contiene('21:30'));
+caso('B6-28 «la Victoria» de Huelva es la hermandad, no un barrio', motor(), '¿Qué hermandades hay de la Victoria en Huelva?', y(contiene('Victoria (Huelva)'), noDice('barrio')));
+caso('B6-29 barrio con día: la lista del día', motor(), '¿qué cofradías del Centro salen el Domingo de Ramos en Málaga?', y(contiene('Domingo de Ramos en Málaga'), noDice('barrio')));
+caso('B6-30 «¿qué me recomiendas ver el Jueves Santo en Sevilla?»: la lista, no el consejo', motor(), '¿qué me recomiendas ver el Jueves Santo en Sevilla?', y(contiene('Jueves Santo en Sevilla'), noDice('Mi consejo')));
+caso('B6-31 título con errata: solo los que se llaman así', motor(), 'de quién es la marcha esperansa', noDice('O de Esperanza', '«La Esperanza»'));
+caso('B6-32 hotel en Semana Santa: fuera de tema', motor(), 'hotel barato en malaga para semana santa', contiene('lo mío son las cofradías'));
+caso('B6-33 glosario sin superlativos', motor(), 'qué es la madrugá', noDice('más larga', 'más esperada'));
+caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
 
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal})` + (omit ? `; ${omit} omitida${omit > 1 ? 's' : ''} por la fecha.` : '.'));

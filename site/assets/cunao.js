@@ -1088,12 +1088,12 @@
       if (!res.length) {
         const m0 = fraseTitulo(tokM(e.rawA || e.raw || e.t).join(' '));
         const filtra = (l) => l.filter((w) => (!deLaPregunta(w) || w.length > 3) && !(e.ciudad && w === norm(nombreCiudad(e.ciudad))));
-        const frase = m0 ? filtra(m0[1].split(' ')).join(' ') : '', fF = fon(frase);
+        const frase = m0 ? filtra(m0[1].split(' ')).join(' ') : '', fF = fon(frase), m1 = fraseTitulo(toks(e.rawA || e.raw || e.t).join(' ')), fF0 = m1 ? fon(m1[1].split(' ').filter((w) => !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))).join(' ')) : '';
         if (frase.length >= 6) {
           const max = Math.max(1, Math.min(2, Math.floor(frase.length / 8)));
           for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
             const tt = filtra(tokM(m[0].replace(/\(.*?\)/g, ' '))).join(' '), tF = fon(tt);
-            if (Math.abs(tF.length - fF.length) <= max || Math.abs(tt.length - frase.length) <= max) { const d = Math.min(distancia(tt, frase, max), distancia(tF, fF, max)); if (d <= max) res.push({ m, p: 10 - d, exacto: d === 0 }); }
+            if (Math.abs(tF.length - fF.length) <= max || Math.abs(tt.length - frase.length) <= max) { const d = Math.min(distancia(tt, frase, max), distancia(tF, fF, max)); if (d <= max) { const ex = fon(toks(m[0].replace(/\(.*?\)/g, ' ')).join(' ')) === fF0; /* el título entero, con sus artículos: «La Esperanza» no es «esperanza» */ res.push({ m, p: 10 - d + (ex ? 0.5 : 0), exacto: ex }); } }
           }
         }
       }
@@ -1187,36 +1187,38 @@
     }
     const HOLA = ['¿Qué pasa, cuñao? Pregúntame lo que quieras, que de esto sé más que nadie.', 'Aquí estoy, como siempre que hace falta. ¿Qué cofradía buscamos?', 'Dime, que llevo cuarenta Semanas Santas en el cuerpo.'];
     // ================= vocabulario cofrade («¿qué es una levantá?») =================
+    // definiciones generales y neutras: sin superlativos ni comparaciones entre ciudades (cada tierra tiene su forma)
     const GLOSARIO = [
-      [/levanta|levantada|levantas/, 'La levantá es el momento en que el paso se alza del suelo a la vez, a la orden del capataz y al golpe del llamador. Cuanto más limpia y a la vez, más se aplaude.'],
-      [/costalero|costaleros/, 'El costalero carga el paso desde dentro, debajo de las trabajaderas, con el costal (una tela enrollada) protegiéndole la nuca. No ve nada: anda a la voz del capataz. Es lo propio de Sevilla y de muchas otras capitales.'],
-      [/hombres? de trono|portadores?|varal|varales/, 'En Málaga los tronos se llevan por fuera, a hombros, con varales: son los hombres de trono (y cada vez más mujeres). Los guía el mayordomo de trono con la campana.'],
+      [/levanta|levantada|levantas/, 'La levantá es el momento en que el paso se alza del suelo, a la orden del capataz y al golpe del llamador.'],
+      [/costalero|costaleros/, 'El costalero carga el paso desde dentro, debajo de las trabajaderas, con el costal (una tela enrollada) protegiéndole la nuca. No ve la calle: anda a la voz del capataz. Así se llevan los pasos en Sevilla y en muchos otros sitios.'],
+      [/hombres? de trono|portadores?/, 'En Málaga los tronos se llevan por fuera, a hombros, con varales: quienes los llevan son los hombres de trono. Los guía el mayordomo de trono, con la campana.'],
+      [/varal|varales/, 'Los varales son las barras verticales que sostienen el techo del palio. En Málaga también se llaman varales las barras largas con las que se lleva el trono a hombros.'],
       [/capataz|capataces/, 'El capataz manda el paso desde fuera: da las órdenes a los costaleros con la voz y con el llamador, y decide cada levantá, cada parada y cada revirá.'],
       [/llamador/, 'El llamador es la aldaba del frontal del paso. El capataz lo golpea para avisar a los costaleros de que viene una levantá o una parada.'],
       [/chicota|chicotas/, 'Una chicotá es el tramo que anda el paso entre una levantá y la siguiente parada.'],
-      [/revira|reviras/, 'La revirá es el giro del paso para tomar una esquina o cambiar de calle: de las cosas más difíciles para los costaleros.'],
-      [/saeta|saetas/, 'La saeta es un cante flamenco, a palo seco, que se le canta a una imagen cuando pasa, casi siempre desde un balcón. Mientras suena, el paso se para y la calle calla.'],
-      [/nazareno|nazarenos/, 'El nazareno es el hermano que acompaña a su cofradía con túnica, antifaz y, a menudo, capirote, llevando un cirio, una cruz o una insignia. Hace la estación de penitencia en silencio.'],
-      [/penitente|penitentes/, 'Penitente es quien hace la estación de penitencia ofreciéndola como sacrificio; en muchas cofradías, los nazarenos que llevan una cruz al hombro en vez de cirio.'],
-      [/capirote|capirotes|antifaz/, 'El capirote es el cono de cartón que va bajo el antifaz del nazareno y le da la forma alta y puntiaguda; el antifaz es la tela que le cubre la cara.'],
-      [/palio|palios|paso de palio/, 'El palio es el techo de tela bordada, sostenido por varales, que cubre a la Virgen en su paso. Por eso se habla del «paso de palio».'],
-      [/paso de misterio|misterio|misterios/, 'Un paso de misterio representa una escena de la Pasión con varias figuras (el Prendimiento, la Sentencia, la Cena…), a diferencia del paso de Cristo solo o del palio de la Virgen.'],
-      [/paso|pasos/, 'El paso es la plataforma sobre la que va la imagen por la calle, llevada por costaleros. En Málaga y otras capitales de oriente se llama trono y se lleva por fuera, con varales.'],
-      [/trono|tronos/, 'En Málaga (y en otras capitales de Andalucía oriental) el paso se llama trono: más grande, y llevado por fuera, a hombros, con varales.'],
-      [/carrera oficial/, 'La carrera oficial es el tramo de calles, con sillas y palcos, que todas las cofradías de la jornada recorren en un orden fijado. Pregúntame «¿a qué hora pasa la Macarena por la carrera oficial?» y te digo la hora.'],
+      [/revira|reviras/, 'La revirá es el giro del paso para tomar una esquina o cambiar de calle.'],
+      [/saeta|saetas/, 'La saeta es un cante flamenco, sin acompañamiento, que se le canta a una imagen a su paso, a menudo desde un balcón.'],
+      [/nazareno|nazarenos/, 'El nazareno es el hermano que acompaña a su cofradía con túnica y antifaz (muchas veces con capirote), llevando un cirio, una cruz o una insignia.'],
+      [/penitente|penitentes/, 'Penitente es quien hace la estación de penitencia ofreciéndola como sacrificio; en muchas cofradías se llama así a los nazarenos que llevan una cruz al hombro en vez de cirio.'],
+      [/capirote|capirotes|antifaz/, 'El capirote es el cono que va bajo el antifaz del nazareno y le da la forma alta y puntiaguda; el antifaz es la tela que le cubre la cara.'],
+      [/palio|palios|paso de palio/, 'El palio es el techo de tela, sostenido por varales, que cubre a la Virgen en su paso. Por eso se habla del «paso de palio».'],
+      [/paso de misterio|misterio|misterios/, 'Un paso de misterio representa una escena de la Pasión con varias figuras (el Prendimiento, la Sentencia, la Cena…).'],
+      [/paso|pasos/, 'El paso es la plataforma sobre la que va la imagen por la calle. Según el sitio, lo llevan costaleros por dentro o, como en Málaga, donde se llama trono, a hombros y por fuera, con varales.'],
+      [/trono|tronos/, 'En Málaga el paso se llama trono y se lleva por fuera, a hombros, con varales.'],
+      [/carrera oficial/, 'La carrera oficial es el tramo de calles, con sillas y palcos, que recorren en un orden fijado las cofradías de cada jornada. Pregúntame «¿a qué hora pasa la Macarena por la carrera oficial?» y te digo la hora.'],
       [/estacion de penitencia/, 'La estación de penitencia es el camino de la cofradía desde su templo hasta la catedral (u otro templo) y la vuelta, hecho como penitencia.'],
-      [/madruga|madrugada/, 'La Madrugá es la noche del Jueves al Viernes Santo, la más larga y esperada en muchas capitales. Pregúntame «¿qué sale la Madrugá en Sevilla?» y te digo cuáles.'],
-      [/cruz de guia/, 'La cruz de guía abre el cortejo: es lo primero que ves de una cofradía, con sus faroles a los lados.'],
-      [/hermano mayor/, 'El hermano mayor preside la hermandad: lo eligen los hermanos en cabildo por unos años y la representa.'],
-      [/pregon|pregonero/, 'El pregón anuncia la Semana Santa unas semanas antes: un pregonero lee un texto, a menudo en verso, ante la ciudad. Cada capital tiene el suyo.'],
-      [/mantilla|mantillas|peineta|mantillas y peinetas/, 'Las mantillas son las mujeres que van de negro, con peineta y mantilla, el Jueves Santo y el Viernes Santo, en señal de luto; algunas acompañan a su cofradía en el cortejo.'],
-      [/agrupacion musical|agrupaciones musicales/, 'Una agrupación musical es una banda de cornetas, trompetas, fliscornos y otros metales con percusión: suena entre la banda de cornetas y la de música, y suele ir tras los pasos de misterio.'],
-      [/banda de cornetas|cornetas y tambores/, 'La banda de cornetas y tambores toca con cornetas y percusión; suele ir detrás de los pasos de Cristo.'],
-      [/banda de musica/, 'La banda de música lleva viento-madera, viento-metal y percusión, y suele ir detrás del palio.'],
+      [/madruga|madrugada/, 'La Madrugá es la noche del Jueves al Viernes Santo, cuando salen las cofradías de madrugada. Pregúntame «¿qué sale la Madrugá en Sevilla?» y te digo cuáles.'],
+      [/cruz de guia/, 'La cruz de guía abre el cortejo: es lo primero que ves de una cofradía.'],
+      [/hermano mayor/, 'El hermano mayor preside la hermandad: lo eligen los hermanos en cabildo por un tiempo y la representa.'],
+      [/pregon|pregonero/, 'El pregón anuncia la Semana Santa en los días previos: un pregonero lee un texto ante la ciudad. Cada capital tiene el suyo.'],
+      [/mantilla|mantillas|peineta|mantillas y peinetas/, 'Las mantillas son las mujeres que van de negro, con peineta y mantilla, en señal de luto, sobre todo el Jueves Santo; algunas acompañan a su cofradía en el cortejo.'],
+      [/agrupacion musical|agrupaciones musicales/, 'Una agrupación musical es una formación de viento-metal (trompetas, fliscornos, bombardinos…) y percusión, con un sonido distinto al de la banda de cornetas y al de la banda de música. Muchas acompañan a pasos de misterio.'],
+      [/banda de cornetas|cornetas y tambores/, 'La banda de cornetas y tambores toca con cornetas y percusión; muchas van detrás de los pasos de Cristo.'],
+      [/banda de musica/, 'La banda de música lleva viento-madera, viento-metal y percusión; muchas van detrás del palio.'],
       [/hermandad|cofradia|diferencia entre hermandad y cofradia/, 'Una hermandad es una asociación de fieles; la cofradía es la que sale a la calle en estación de penitencia. En la práctica se usan casi igual, y muchas se llaman las dos cosas.'],
       [/visperas/, 'Las Vísperas son los días antes del Domingo de Ramos (el Viernes de Dolores y el Sábado de Pasión), con cofradías que salen antes de la Semana Santa.'],
       [/bulla|bullas/, 'La bulla es el gentío en la calle alrededor de una cofradía. Consejo de cuñao: si hay bulla, no cortes el cortejo y ten paciencia.'],
-      [/cirio|cirios|cera/, 'El cirio es la vela larga que llevan los nazarenos; la cera que cae al suelo es la que los niños recogen en bolas.'],
+      [/cirio|cirios/, 'El cirio es la vela larga que llevan los nazarenos en el cortejo.'],
       [/semana santa/, 'La Semana Santa va del Domingo de Ramos al Domingo de Resurrección: recuerda la Pasión, Muerte y Resurrección de Cristo, y en Andalucía se vive en la calle con las cofradías.'],
     ];
     function glosario(t) {
@@ -1227,31 +1229,50 @@
       if (!g) return null;
       const r = Resp(); ctx.intent = 'glosario'; P(r, g[1]); return cerrar(r);
     }
-    // ================= charla y lo que no es de cofradías =================
+    // ================= hermandades de un barrio («¿qué hermandades hay en Triana?») =================
+    // el barrio que apunta su sede entre paréntesis («Parroquia de San Pablo (La Trinidad)»), limpio: ni calles, ni notas, ni el
+    // nombre de una hermandad («La Victoria» de Huelva es una hermandad, no un barrio). Con día, formación u hora, no: va la lista normal.
+    let BARRIOS = null;
+    function barrios() {
+      if (BARRIOS) return BARRIOS;
+      const CAPS_ = new Set(D.capitales.map((c) => norm(c[1]))), NOMS = new Set(H.map((h) => norm(h.n).replace(/^(el|la|los|las) /, '')));
+      BARRIOS = new Map();
+      H.forEach((h) => {
+        const m = /\(([^)]+)\)\s*$/.exec(h.se || ''); if (!m || /\d/.test(m[1])) return;
+        const b = norm(m[1]), b0 = b.replace(/^(el|la|los|las) /, '');
+        if (b.length < 4 || b.split(' ').length > 4 || CAPS_.has(b) || NOMS.has(b0) || /^(calle|c |sale|sede|parroquia|junto|antigu|iglesia|capilla|templo|casa|plaza|avenida|av |feria|en |de |del |desde)/.test(b)) return;
+        if (!BARRIOS.has(b)) BARRIOS.set(b, { txt: m[1], cs: new Set() }); BARRIOS.get(b).cs.add(h.c);
+      });
+      return BARRIOS;
+    }
     function porBarrio(e) {
-      if (e.intent === 'cuantas' || !/\b(hermandades|cofradias|procesiones)\b/.test(e.t) || !/\b(barrio|hay en|tiene|de|del)\b/.test(e.t)) return null;
-      const CAPS_ = new Set(D.capitales.map((c) => norm(c[1])));
-      const B = new Map(); H.forEach((h) => { const m = /\(([^)]+)\)\s*$/.exec(h.se || ''); if (m && !/\d/.test(m[1])) { const b = norm(m[1]); if (b.length > 3 && !CAPS_.has(b) && !B.has(b)) B.set(b, m[1]); } });
-      const b = [...B.keys()].filter((k) => new RegExp('\\b' + k + '\\b').test(e.t)).sort((x, y) => y.length - x.length)[0];
+      if (e.intent === 'cuantas' || e.dia || e.form || e.tFiltro || !/\b(hermandades|cofradias|procesiones)\b/.test(e.t) || !/\b(barrio|hay en|tiene|de|del)\b/.test(e.t)) return null;
+      // «del Perchel» vale por «El Perchel»
+      const B = barrios(), b = [...B.keys()].filter((k) => new RegExp('\\b' + k.replace(/^(el|la|los|las) /, '(?:$1 )?') + '\\b').test(e.t)).sort((x, y) => y.length - x.length)[0];
       if (!b) return null;
       const l = H.filter((h) => (!e.ciudad || h.c === e.ciudad) && (norm(h.se || '').indexOf(b) >= 0 || new RegExp('\\b' + b + '\\b').test(norm(h.n))));
       if (!l.length) return null;
-      const r = Resp(); ctx.intent = 'barrio';
-      P(r, 'En el barrio de ' + B.get(b) + ' tengo ' + l.length + (l.length === 1 ? ' cofradía' : ' cofradías') + ' (por el barrio de su sede o su nombre):');
-      LI(r, l.slice(0, 14).map((h) => ({ x: h.n, href: L.herm(h), sub: h.d + (h.h ? ' · ' + h.h : '') })));
+      const cs = [...new Set(l.map((h) => h.c))], varias = cs.length > 1;
+      const r = Resp(); ctx.intent = 'barrio'; if (!varias) ctx.ciudad = cs[0];
+      P(r, 'En el barrio de ' + B.get(b).txt + (varias ? ' (lo tengo en ' + lista(cs.map(nombreCiudad)) + ')' : ', en ' + nombreCiudad(cs[0]) + ',') + ' tengo ' + l.length + (l.length === 1 ? ' cofradía' : ' cofradías') + ', por el barrio de su sede o su nombre:');
+      LI(r, l.slice(0, 14).map((h) => ({ x: h.n + (varias ? ' (' + nombreCiudad(h.c) + ')' : ''), href: L.herm(h), sub: h.d + (h.h ? ' · ' + h.h : '') })));
       return cerrar(r);
     }
-    function fueraDeTema(t) {
+    // ================= charla y lo que no es de cofradías =================
+    // solo cuando la pregunta no trae nada cofrade (ni sale, ni pasa, ni hora, ni compuso, ni marcha…)
+    const COFRADE = /\b(cofrad\w*|hermandad\w*|procesion\w*|sale|salen|salida|pasa|pasan|llega|llegan|hora|horario|entra|recoge|paso|pasos|trono|tronos|nazaren\w*|virgen|cristo|marchas?|compuso|compusieron|banda|recorrido|itinerario|imaginero|tallo)\b/;
+    function fueraDeTema(t, e) {
       const r = Resp();
       if (/\b(de donde eres|eres de (sevilla|malaga|granada|cordoba|cadiz|huelva|almeria|jaen))\b/.test(t)) { P(r, 'Yo soy de las ocho, cuñao: de cada capital lo mismo, que con esto no se juega.'); return cerrar(r); }
       if (/\b(mierda|inutil|no sirves|no sabes nada|vaya respuesta|malisim\w*|que malo)\b/.test(t)) { P(r, 'Perdona, cuñao, a veces me lío. Dímelo de otra forma (la hermandad, la capital o el día) y, si me falta algo, avísame y lo añadimos.'); A(r, [['Avisar de un error', L.sugerir(t)]]); r.flojo = true; return cerrar(r); }
-      if (/\b(recomiendas?|recomienda(me)?|recomendacion\w*|que me aconsejas|que no me puedo perder|imprescindible\w*|guiri|primera vez)\b/.test(t) && !/\b(sale|salen|hora|pasa|banda|marcha)\b/.test(t)) {
+      // el consejo general, solo si no dice ni día ni capital («¿qué me recomiendas ver el Jueves Santo en Sevilla?» va a la lista)
+      if (/\b(recomiendas?|recomienda(me)?|recomendacion\w*|que me aconsejas|que no me puedo perder|imprescindible\w*|guiri|primera vez)\b/.test(t) && !(e && (e.dia || e.ciudad)) && !/\b(sale|salen|hora|pasa|banda|marcha)\b/.test(t)) {
         P(r, 'Mi consejo: elige capital y día, mira qué sale y a qué hora, y ponte en una esquina de su recorrido un rato antes. Dime, por ejemplo, «¿qué sale el Jueves Santo en Málaga?» y te lo digo.');
         A(r, [['Qué hay hoy', BASE + 'hoy/'], ['El calendario', BASE + 'calendario/']]); return cerrar(r);
       }
-      if (/\b(cofrad\w*|hermandad\w*|procesion\w*|sale|salen|paso|pasos|trono|tronos|nazaren\w*|virgen|cristo|marcha|banda)\b/.test(t)) return null;
+      if (COFRADE.test(t) || /«|"/.test(t)) return null;
       if (/\b(chiste|chistes|algo gracioso)\b/.test(t)) { P(r, 'Chistes, pocos, que estoy de servicio. Pero el de siempre: «¿A qué hora sale?», «A su hora, cuñao, que esto no es el autobús».'); return cerrar(r); }
-      if (/\b(comer|comida|restaurante\w*|tapas?|tapear|bares|hotel\w*|hostal\w*|alojamiento|dormir|apartamento\w*|tren|trenes|ave|autobus\w*|aparcar|aparcamiento|parking|vuelo\w*|avion|taxi|como llego)\b/.test(t)) { P(r, 'De comer, dormir o llegar no sé, cuñao: lo mío son las cofradías. Eso, mejor en la oficina de turismo de la ciudad. Lo que sí te digo es qué sale cada día, a qué hora y por dónde pasa.'); r.flojo = true; return cerrar(r); }
+      if (/\b(comer|comida|restaurante\w*|tapear|bares|hotel\w*|hostal\w*|alojamiento|dormir|apartamento\w*|tren|trenes|(el|en) ave|autobus\w*|aparcar|aparcamiento|parking|vuelos?|avion|taxi|como llego)\b/.test(t)) { P(r, 'De comer, dormir o llegar no sé, cuñao: lo mío son las cofradías. Eso, mejor en la oficina de turismo de la ciudad. Lo que sí te digo es qué sale cada día, a qué hora y por dónde pasa.'); r.flojo = true; return cerrar(r); }
       if (/\b(betis|sevilla fc|futbol|mundial|liga|champions|partido)\b/.test(t)) { P(r, 'De fútbol no hablo, cuñao, que en Cuaresma hay paz. Pregúntame de cofradías.'); r.flojo = true; return cerrar(r); }
       return null;
     }
@@ -1288,7 +1309,7 @@
       }
       const e = entender(raw);
       let intent = e.intent;
-      { const g = glosario(e.rawA) || glosario(e.t) || fueraDeTema(e.rawA) || fueraDeTema(e.t) || porBarrio(e); if (g) return g; } // primero tal como lo escribe (el corrector cambia «saeta» por «santa»)
+      { const g = glosario(e.rawA) || glosario(e.t) || fueraDeTema(e.rawA, e) || fueraDeTema(e.t, e) || porBarrio(e); if (g) return g; } // primero tal como lo escribe (el corrector cambia «saeta» por «santa»)
       if (intent === 'tiempo') { const r = Resp(); P(r, 'Del tiempo no sé nada, cuñao: no me la juego. Si llueve, cada hermandad decide ese mismo día si sale. La previsión, mírala en la AEMET, que es la oficial.'); A(r, [['Previsión de la AEMET', 'https://www.aemet.es/es/eltiempo/prediccion/municipios']]); r.flojo = true; return cerrar(r); }
       switch (intent) {
         case 'hola': P(r0, azar(HOLA)); C(r0, SUGS_INICIO.slice(0, 3)); return cerrar(r0);

@@ -86,7 +86,9 @@ try {
       await p.click('[data-cunao]');
       const t = await pregunta('¿A qué hora sale la Macarena de Sevilla?');
       if (!/Macarena.*\bsale\b.*\d{1,2}:\d{2}/.test(t)) err.push('erCuñao no contesta bien: ' + t.slice(0, 100));
-      // bloque 5: la línea de tiempo, «Compartir» y el recorrido en miniatura (si la web los trae)
+      // bloque 5: la línea de tiempo, «Compartir» y el recorrido en miniatura. Si la hoja trae data-pinta (cunao-pinta.js), son
+      // obligatorios: un cunao-pinta.js roto por dentro no da error de red y, sin esto, pasaría
+      if (await p.evaluate(() => !!document.querySelector('[data-cunao-hoja][data-pinta]')) && !(await p.evaluate(() => !!document.querySelector('.oc-cunao-msg.is-cunao .oc-cunao-tl') && !!document.querySelector('.oc-cunao-msg.is-cunao .is-compartir')))) err.push('erCuñao: sin línea de tiempo o sin «Compartir» (¿falla cunao-pinta.js?)');
       if (await p.evaluate(() => !!document.querySelector('.oc-cunao-msg.is-cunao .oc-cunao-tl, .oc-cunao-msg.is-cunao .is-compartir'))) {
         if (await p.evaluate(() => [...document.querySelectorAll('.oc-cunao-msg.is-cunao')].pop().querySelectorAll('.oc-cunao-tl li').length < 2)) err.push('erCuñao: sin línea de tiempo en «¿a qué hora sale la Macarena?»');
         await pregunta('¿Por dónde pasa el Cautivo de Málaga?');

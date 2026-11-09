@@ -112,7 +112,8 @@
     const src = hoja.getAttribute('data-pinta'); if (!src) return Promise.resolve(null);
     if (!pidePinta) pidePinta = new Promise((ok) => {
       const s = document.createElement('script'); s.src = src; s.async = true;
-      s.onload = () => { try { PINTA = window.OC_CUNAO_PINTA({ el, hoja, url, BASE }); } catch (e) { PINTA = null; } ok(PINTA); };
+      // si la fábrica falla, se avisa en la consola (la prueba de humo lo ve) y se reintenta en la pregunta siguiente
+      s.onload = () => { try { PINTA = window.OC_CUNAO_PINTA({ el, hoja, url, BASE }); } catch (e) { PINTA = null; console.error('erCuñao: cunao-pinta.js', e); } if (!PINTA) { pidePinta = null; s.remove(); } ok(PINTA); };
       s.onerror = () => { pidePinta = null; s.remove(); ok(null); };
       document.head.appendChild(s);
     });
@@ -120,7 +121,7 @@
   }
   function cargar() {
     if (motor) { if (!PINTA) pintaLista(); return Promise.resolve(); }
-    if (!cargando) cargando = Promise.all([motorListo(), fetch(url).then((r) => { if (!r.ok) throw 0; return r.json(); }), pintaLista()]).then(([M, j]) => { motor = M.crearMotor(j, { base: BASE, preferida, pagina: () => paginaCiudad(j), paginaHerm: () => { const m = /\/hermandad\/([^/]+)\//.exec(location.pathname); return m ? m[1] : null; } }); }).catch((e) => { cargando = null; throw e; });
+    if (!cargando) cargando = Promise.all([motorListo(), fetch(url).then((r) => { if (!r.ok) throw 0; return r.json(); }), Promise.race([pintaLista(), new Promise((ok) => setTimeout(ok, 1500))])]).then(([M, j]) => { motor = M.crearMotor(j, { base: BASE, preferida, pagina: () => paginaCiudad(j), paginaHerm: () => { const m = /\/hermandad\/([^/]+)\//.exec(location.pathname); return m ? m[1] : null; } }); }).catch((e) => { cargando = null; throw e; });
     return cargando;
   }
   // en cuanto el dedo o el ratón se acercan al botón, se adelanta la carga: al abrir ya está
