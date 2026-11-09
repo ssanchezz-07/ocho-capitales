@@ -6,6 +6,7 @@
 - **El título de una marcha va tras la última palabra clave** («de quién es la marcha X» → X). Antes se tomaba la primera («quién es») y el título incluía «marcha», así que fallaban las erratas y hasta el título bien escrito decía «la más parecida».
 - **Un lugar repetido en el itinerario con otra grafía** («San Miguel» y «P. SAN MIGUEL») da las dos horas.
 - **«Por la tarde» no es un lugar**, y con una hermandad en la conversación «¿y por dónde pasa por la tarde?» es su recorrido, no la lista de la tarde.
+- **Juegos, «¿Qué hermandad es?»: ninguna opción mala de la misma cofradía.** La Humillación es de la Piedad (Cádiz); el Dulce Nombre, la Cañilla y la Soledad (Humildad) son una sola cofradía (Granada); también Amor y Borriquita, las Fusionadas, Columna y Resurrección (Cádiz) y la Vera Cruz de Jaén. Se agrupan en el build por el nombre oficial sin el paréntesis final, la web propia, un titular igual en la misma sede o una «(sección de …)»; `probar-juegos.mjs` lo comprueba por su cuenta y con el código anterior encontraba 7 preguntas con dos respuestas buenas.
 - **La miniatura, la línea de tiempo y «Compartir» van en `assets/cunao-pinta.js`**, que se pide con el motor al acercarse al botón. `cunao-ui.js`, que va en todas las páginas, baja de 11,5 a 7,5 KB comprimido. Si el archivo nuevo no llega, erCuñao contesta igual, sin esos tres extras.
 
 **Descartado**

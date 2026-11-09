@@ -2385,7 +2385,8 @@ function datosCunao() {
 // ---------- Juegos de erCuñao «mientras esperas» (data/juegos.json y /juegos/) ----------
 // Todas las preguntas las genera assets/juegos.js con estos datos, que son los de las fichas: nada escrito a mano.
 // Fila de hermandad: [slug, nombre, capital, jornada, hora, sede, año de fundación, titulares [nombre, autor, imaginero], bandas,
-// foto (índice en fo), nazareno (índice en naz), recorrido (índice en ru), orden, ¿sale otro día?]
+// foto (índice en fo), nazareno (índice en naz), recorrido (índice en ru), orden, ¿sale otro día?, cofradía (las fichas de la misma
+// corporación comparten número; -1 si va sola)]
 // el nombre del titular sin la nota de autoría («…, anónimo s. XVII»), pero entero si la coma es parte del nombre («Nuestro Padre Jesús, Divino Salvador, en su Prendimiento»)
 const titCorto = (n) => String(n || '').replace(/,\s*an[oó]nim.*$/i, '').trim();
 function datosJuegos() {
@@ -2425,6 +2426,26 @@ function datosJuegos() {
     const r1 = (v) => Math.round(v);
     ru.push(['M' + n.map((p) => r1(p[0]) + ' ' + r1(p[1])).join('L'), r1(n[0][0]), r1(n[0][1])].concat(ico >= 0 ? [r1(pts[ico][0]), r1(pts[ico][1])] : [])); return ru.length - 1;
   };
+  // la misma cofradía con varias fichas (Amor y Borriquita, Piedad y Humillación, las Fusionadas…): mismo nombre oficial sin el
+  // paréntesis final, misma web propia, un titular con el mismo nombre y la misma sede, o una «(sección de …)» de otra. En
+  // «¿Qué hermandad es?» no se ofrecen como opción mala, que valdrían las dos.
+  const cofradia = (() => {
+    const nJ = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const webN = (u) => String(u || '').toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[?#].*$/, '').replace(/\/+$/, '');
+    const L = D.hermandades, nw = new Map(); L.forEach((h) => { const w = webN(h.web); if (w) nw.set(w, (nw.get(w) || 0) + 1); });
+    const pa = L.map((_, i) => i), raiz = (i) => (pa[i] === i ? i : (pa[i] = raiz(pa[i]))), une = (a, b) => { pa[raiz(a)] = raiz(b); }, ll = new Map();
+    L.forEach((h, i) => {
+      const ks = [], no = nJ(String(h.nombre_oficial || '').replace(/\s*\([^)]*\)\s*$/, '')), w = webN(h.web), se = nJ(h.sede);
+      if (no.length > 15) ks.push('no:' + no);
+      if (w && nw.get(w) <= 4) ks.push('w:' + w); // una web compartida por muchas (la del consejo) no cuenta
+      if (se) (h.titulares || []).forEach((t) => { const n = nJ(titCorto(t.nombre)); if (n.length > 8) ks.push('t:' + n + '|' + se); });
+      ks.forEach((k) => { k = h.ciudad + '#' + k; if (ll.has(k)) une(i, ll.get(k)); else ll.set(k, i); });
+      const m = /^(.*?)\s*\(secci[oó]n\b/i.exec(h.nombre_oficial || ''), b = m ? nJ(m[1]) : '';
+      if (b.length >= 25) L.forEach((x, j) => { if (j !== i && x.ciudad === h.ciudad && nJ(x.nombre_oficial).startsWith(b)) une(i, j); });
+    });
+    const tam = new Map(); L.forEach((_, i) => tam.set(raiz(i), (tam.get(raiz(i)) || 0) + 1));
+    return L.map((_, i) => (tam.get(raiz(i)) > 1 ? raiz(i) : -1));
+  })();
   const hs = D.hermandades.map((h, k) => {
     // el año de fundación solo si el texto empieza por él («1590, resultado de la fusión…»); «Siglo XVI (…reorganizada en 1921)» no da año
     const fa0 = /^\s*(1[2-9]\d\d|20[0-2]\d)\b/.exec(h.fundacion || ''), anios = (String(h.fundacion || '').match(/\b1[2-9]\d\d\b|\b20[0-2]\d\b/g) || []).map(Number);
@@ -2432,7 +2453,7 @@ function datosJuegos() {
     const tit = (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1, t.atrib || /atrib/i.test(t.autor || '') ? 1 : 0]);
     const ac = h.acompanamiento && h.acompanamiento.pasos || [];
     const bandas = [...new Set(ac.length ? ac.flatMap((p) => p.bandas.map((b) => b.nombre)) : (h.bandas_slugs || []).map((s) => BANDA[s] && BANDA[s].nombre).filter(Boolean))];
-    return [h.slug, h.nombre, h.ciudad, h.dia, hhmmJ(h.hora), h.sede || '', fa ? +fa[1] : 0, tit, bandas, fotoDe(h), nazDe(h, k), rutaDe(h), h.orden || 0, (h.salidas || []).length ? 1 : 0];
+    return [h.slug, h.nombre, h.ciudad, h.dia, hhmmJ(h.hora), h.sede || '', fa ? +fa[1] : 0, tit, bandas, fotoDe(h), nazDe(h, k), rutaDe(h), h.orden || 0, (h.salidas || []).length ? 1 : 0, cofradia[k]];
   });
   // marchas dedicadas: hasta cuatro por hermandad (las que tienen ficha), para no cargar las 10.000 del catálogo
   const m = []; for (const h of D.hermandades) (h.marchas || []).filter((x, _, todas) => x.autor && x.titulo && x.est && x.est !== 'sin-verificar' && todas.filter((y) => y.titulo.toLowerCase() === x.titulo.toLowerCase()).length === 1).map((x) => [x.titulo, x.autor, x.anio || '', h.slug, MARCHA_SLUG.get(h.slug + '|' + x.titulo + '|' + (x.autor || '')) || '']).sort((a, b) => (b[4] ? 1 : 0) - (a[4] ? 1 : 0)).slice(0, 4).forEach((x) => m.push(x));

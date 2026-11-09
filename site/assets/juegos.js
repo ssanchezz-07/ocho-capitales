@@ -21,7 +21,7 @@
     const BASE = op.base || '/';
     const CAP = new Map(J.caps.map((c) => [c[0], { s: c[0], n: c[1], color: c[2] }]));
     const I = J.I || [];
-    const H = J.h.map((r) => ({ s: r[0], n: r[1], c: r[2], d: r[3], hora: r[4], se: r[5], f: r[6], t: r[7] || [], b: r[8] || [], fo: r[9], nz: r[10], ru: r[11], o: r[12], x: r[13] }));
+    const H = J.h.map((r) => ({ s: r[0], n: r[1], c: r[2], d: r[3], hora: r[4], se: r[5], f: r[6], t: r[7] || [], b: r[8] || [], fo: r[9], nz: r[10], ru: r[11], o: r[12], x: r[13], cf: r[14] == null ? -1 : r[14] }));
     const POR = new Map(H.map((h) => [h.s, h]));
     // nombres que se repiten entre capitales («Cautivo», «Esperanza»): en esas preguntas va siempre la capital
     const veces = new Map(); H.forEach((h) => { const k = sinArt(h.n); veces.set(k, (veces.get(k) || 0) + 1); });
@@ -165,7 +165,8 @@
       const h = z.pick(l);
       // las otras tres, de la misma capital (y de la misma jornada si se puede, que se parezcan); con su propio dibujo distinto
       // por el nazareno, solo otras con su hábito conocido y distinto: si no, podría valer más de una
-      let cand = deCap(h.c).filter((x) => x !== h && sinArt(x.n) !== sinArt(h.n) && !(modo === 'naz' && !(x.nz >= 0 && x.nz !== h.nz && !nazParecidos(x.nz, h.nz))));
+      // ni una ficha de la misma cofradía (la Humillación es de la Piedad): valdrían las dos
+      let cand = deCap(h.c).filter((x) => x !== h && sinArt(x.n) !== sinArt(h.n) && !(h.cf >= 0 && x.cf === h.cf) &&!(modo === 'naz' && !(x.nz >= 0 && x.nz !== h.nz && !nazParecidos(x.nz, h.nz))));
       const mismoDia = cand.filter((x) => x.d === h.d); if (mismoDia.length >= 3 && modo !== 'naz') cand = mismoDia;
       const o = opciones(z, h.n, cand.map((x) => x.n)); if (!o) return null;
       const QT = { naz: '¿De qué cofradía de ' + CAP.get(h.c).n + ' es este nazareno?', foto: '¿De qué cofradía de ' + CAP.get(h.c).n + ' es esta imagen?', ruta: 'Este es el recorrido de una cofradía de ' + CAP.get(h.c).n + (modo === 'ruta' && cand === mismoDia ? ' ' + artDia(h.d) : '') + '. ¿De cuál?' };
