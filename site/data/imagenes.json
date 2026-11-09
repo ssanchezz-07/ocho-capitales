@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T08:28:43.023Z",
+ "generado": "2026-11-09T08:38:12.694Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -11129,7 +11129,7 @@
   "la-redencion-huelva": {
    "virgen": {
     "w": 960,
-    "h": 1008,
+    "h": 984,
     "widths": [
      160,
      480,
@@ -11143,14 +11143,14 @@
     "foco": "50% 48%",
     "cedida": true,
     "local": "scripts/cedidas/huelva/la-redencion-huelva-virgen.jpg",
-    "tam": 643811,
+    "tam": 628356,
     "titular": "María Santísima del Dulce Nombre"
    }
   },
   "el-resucitado-huelva": {
    "cristo": {
     "w": 960,
-    "h": 1067,
+    "h": 1019,
     "widths": [
      160,
      480,
@@ -11164,12 +11164,12 @@
     "foco": "66% 22%",
     "cedida": true,
     "local": "scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg",
-    "tam": 539533,
+    "tam": 517541,
     "titular": "Santísimo Cristo Resucitado"
    },
    "virgen": {
     "w": 960,
-    "h": 1067,
+    "h": 1006,
     "widths": [
      160,
      480,
@@ -11183,7 +11183,7 @@
     "foco": "50% 42%",
     "cedida": true,
     "local": "scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg",
-    "tam": 386044,
+    "tam": 361738,
     "titular": "María Santísima de la Luz"
    }
   }
@@ -12417,7 +12417,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg\"|539533|\"\"|\"66% 22%\"|\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg\"|386044|\"\"|\"50% 42%\""
+   "firma": "\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg\"|517541|\"\"|\"66% 22%\"|\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg\"|361738|\"\"|\"50% 42%\""
   }
  }
 }
