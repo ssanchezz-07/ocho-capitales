@@ -211,6 +211,7 @@
       let n = norm(raw);
       // habla andaluza y abreviaturas de móvil, palabra a palabra («ande», «ar», «er», «q», «pa»)
       n = n.split(' ').map((t) => (Object.prototype.hasOwnProperty.call(ANDALUZ, t) ? ANDALUZ[t] : t)).join(' ');
+      n = n.replace(/\bpor (?:que|q) hora\b/g, 'a que hora').replace(/\b(la )?roldana\b/g, 'luisa roldan');
       const rawA = n;
       for (const [re, x] of SINONIMOS) n = n.replace(re, x);
       const nLugar = n;
@@ -234,7 +235,7 @@
       }
       if (/\b(el|al) dia siguiente\b|\bel siguiente\b|\bdespues\b/.test(n)) e.diaSig = true;
       // sin la jornada, el texto no casa con una hermandad del mismo nombre («el Sábado de Pasión» no es la hermandad de Pasión)
-      for (const [f, d] of DIA_FRASES) if ((m = new RegExp('\\b' + f + '\\b').exec(n))) { if (e.fechaISO && f.indexOf(' ') < 0) { e.usadas.add(f); break; } e.dia = d; f.split(' ').forEach((w) => e.usadas.add(w)); if (f.indexOf(' ') > 0) e.tSinDia = n.replace(m[0], ' ').replace(/\s+/g, ' ').trim(); break; }
+      for (const [f, d] of DIA_FRASES) if ((m = new RegExp('\\b' + f + '\\b').exec(f === 'domingo' ? n.replace(/\bsanto domingo\b/g, '              ') : n))) { if (e.fechaISO && f.indexOf(' ') < 0) { e.usadas.add(f); break; } e.dia = d; f.split(' ').forEach((w) => e.usadas.add(w)); if (f.indexOf(' ') > 0) e.tSinDia = n.replace(m[0], ' ').replace(/\s+/g, ' ').trim(); break; }
       // el «domingo» a secas, con resurrección delante, es el de Pascua
       if (e.dia === 'Domingo de Ramos' && /\bresurreccion\b/.test(n) && !/\bramos\b/.test(n)) e.dia = 'Domingo de Resurrección';
       e.intent = intencion(n);
@@ -284,7 +285,7 @@
       if (T(/\bcuant[oa] (dura|tarda|esta en la calle)\b|\bcuantas horas\b|\bcuanto tiempo\b|\bduracion\b/)) return 'duracion';
       if (T(/\b(noticias?|novedad(es)?|actualidad|ultima hora|que se sabe|que ha pasado hoy|que ha pasado esta semana|que hay de nuevo)\b/) && !/\bpasado manana\b/.test(n)) return 'noticias';
       if (T(/\bnombre (oficial|completo|entero|largo)\b|\bcomo se llama (oficialmente|entera|completa|de verdad)\b|\btitulo (oficial|completo)\b/)) return 'oficial';
-      if (T(/\b(compuso|compusieron|ha compuesto|han compuesto|compositor\w*|escribio la marcha)\b|\bmarcha\b.*\b(autor|quien (la |lo )?(hizo|escribio))\b|\b(autor|quien (la |lo )?(hizo|escribio)) de la marcha\b|\bde quien es la marcha\b/)) return 'compositor';
+      if (T(/\b(compuso|compusieron|ha compuesto|han compuesto|compositor\w*|escribio la marcha)\b|\bmarcha\b.*\b(autor|quien (la |lo )?(hizo|escribio))\b|\b(autor|quien (la |lo )?(hizo|escribio)) de la marcha\b|\bde quien es la marcha\b|\bmarcha\b.+\b(de quien es|quien (la |lo )?(compuso|hizo|escribio))$/)) return 'compositor';
       if (T(/\bmarchas?\b.*\b(toca|tocan|tocaba|tocara|interpreta\w*)\b|\brepertorio\b|^(y )?que (toca|tocan)\b/)) return 'repertorio';
       if (T(/\b(habito|habitos|tunica|tunicas|capirote|capirotes|antifaz|antifaces|cingulo|cinturon|esparto|como (visten|van vestidos|se visten|van los nazarenos)|nazarenos? (visten|llevan|van)|de que color|color(es)? de (la|las|los|el|su|sus)? ?(tunica|habito|nazareno|capirote))\b/)) return 'habito';
       if (T(/\b(orden de (paso|salida)|en que orden|en que (lugar|puesto|posicion) (sale|va)|(la |el |cual es la |cual es el |quien es la |quien sale )?(primera|primero|ultima|ultimo) (cofradia|hermandad|procesion|que sale|en salir|en entrar|en recogerse|de la semana|del dia)|cual sale (antes|primero|despues|ultima|ultimo|mas tarde|mas temprano)|sale (mas tarde|mas temprano|mas pronto)|quien (abre|cierra) la semana)\b/)) return 'orden';
@@ -754,15 +755,32 @@
     }
     // la más antigua de una capital, por el año de fundación que dan las fichas (solo las que traen año)
     function respAntigua(c) {
-      const r = Resp(); ctx.ciudad = c; ctx.intent = 'antigua';
+      const r = Resp(); if (c) ctx.ciudad = c; ctx.intent = 'antigua';
       // solo las fichas cuya fundación empieza por el año: «Siglo XVI (…reorganizada en 1921)» no se compara por 1921
-      const l = H.filter((h) => h.c === c && /^\s*\d{4}\b/.test(h.f || '')).map((h) => ({ h, y: +/^\s*(\d{4})\b/.exec(h.f)[1] })).sort((a, b) => a.y - b.y);
+      const l = H.filter((h) => (!c || h.c === c) && /^\s*\d{4}\b/.test(h.f || '')).map((h) => ({ h, y: +/^\s*(\d{4})\b/.exec(h.f)[1] })).sort((a, b) => a.y - b.y);
+      if (!c && l.length) {
+        P(r, 'Por el año de fundación que dan sus fichas, la más antigua de las ocho capitales es ' + nom(l[0].h) + ' (' + nombreCiudad(l[0].h.c) + ', ' + l[0].y + '). Las siguientes:');
+        LI(r, l.slice(1, 6).map((x) => ({ x: x.h.n + ' (' + nombreCiudad(x.h.c) + ')', href: L.herm(x.h), sub: String(x.y) })));
+        P(r, 'Cuento solo las fichas que traen el año de fundación (' + l.length + ' de ' + H.length + ').');
+        A(r, [['Ver ' + nom(l[0].h), L.herm(l[0].h)]]); return cerrar(r);
+      }
       if (!l.length) { P(r, 'De ' + nombreCiudad(c) + ' no tengo años de fundación con los que compararlas.'); return cerrar(r); }
       P(r, 'Por el año de fundación que dan sus fichas, la más antigua de ' + nombreCiudad(c) + ' es ' + nom(l[0].h) + ' (' + l[0].y + '). Las siguientes:');
       LI(r, l.slice(1, 5).map((x) => ({ x: x.h.n, href: L.herm(x.h), sub: String(x.y) })));
       const total = H.filter((h) => h.c === c).length;
       if (l.length < total) P(r, 'Cuento ' + l.length + ' de ' + total + ': las demás no traen año en su ficha.');
       A(r, [['Ver ' + nom(l[0].h), L.herm(l[0].h)]]);
+      return cerrar(r);
+    }
+    // autor sin ficha de imaginero: los titulares cuya autoría lo nombra, tal como viene en la ficha («atribuida al círculo de…»)
+    function porAutoria(e) {
+      const q = toks(e.rawA || e.t).filter((t) => t.length >= 5 && !STOP.has(t) && !CLAVE.has(t) && !PAL_PREG.has(t) && !/^(obras?|imagenes|imagen|tallas?|hizo|tallo|escultor\w*|imaginer\w*|cuantas|tiene|hechas)$/.test(t));
+      if (!q.length) return null;
+      const l = []; H.forEach((h) => h.t.forEach((t) => { const a = norm(t[1] || ''); if (q.every((w) => a.indexOf(w) >= 0)) l.push({ h, t }); }));
+      if (!l.length) return null;
+      const r = Resp(); ctx.intent = 'autor';
+      P(r, 'No tengo ficha de ese imaginero, cuñao, pero ' + (l.length === 1 ? 'lo nombra la autoría de este titular' : 'lo nombran las autorías de estos ' + l.length + ' titulares') + ':');
+      LI(r, l.slice(0, 10).map((x) => ({ x: x.t[0], href: L.herm(x.h), sub: x.h.n + ' (' + nombreCiudad(x.h.c) + ') · ' + x.t[1] })));
       return cerrar(r);
     }
     function respImag(i) {
@@ -811,6 +829,13 @@
     function respCuantas(c, dia) {
       const r = Resp();
       const CI = D.ci || {};
+      if (!c && dia) {
+        const g = grupo(dia), por = D.capitales.map(([s_, nm]) => [nm, H.filter((h) => h.c === s_ && g.indexOf(h.d) >= 0).length]).filter((x) => x[1]);
+        const tot = por.reduce((a, x) => a + x[1], 0);
+        P(r, cap1(art(dia)) + ' salen ' + tot + ' cofradías en las ocho capitales:');
+        LI(r, por.map(([nm, k]) => ({ x: nm, sub: String(k) })));
+        ctx.dia = dia; return preguntaCiudad(r, dia, 'dia');
+      }
       if (!c) {
         const tot = D.capitales.reduce((a, x) => a + (CI[x[0]] ? CI[x[0]][0] : 0), 0);
         P(r, tot ? 'Sumando la cifra de cada capital, con las de Vísperas, son ' + tot + ' hermandades y cofradías. ¿De cuál quieres el detalle?' : 'Tengo las ' + N + ' fichas de las ocho capitales. ¿De cuál quieres el detalle?');
@@ -1040,13 +1065,15 @@
       const r2 = buscarTitulo1(Object.assign({}, e, { rawA: e.t }));
       return r2.some((x) => x.exacto) || !r.length ? r2 : r;
     }
+    // el título que se pide: «marcha X de quién es» → X; si no, lo que va tras la última palabra clave («de quién es la marcha X» → X)
+    const fraseTitulo = (q) => { const t = /\bmarcha (.+?) (?:de quien es|quien (?:la |lo )?(?:compuso|hizo|escribio))$/.exec(q); return t ? [t[0], t[1]] : /^.*\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(q); };
     function buscarTitulo1(e) {
       const qt = new Set(tokM(e.rawA || e.raw || e.t)), qs = ' ' + tokM(e.rawA || e.raw || e.t).join(' ') + ' ';
       const deLaPregunta = (t) => { const c = corrige(t); return PAL_PREG.has(t) || STOP.has(t) || CLAVE.has(t) || PAL_PREG.has(c) || CLAVE.has(c) || STOP.has(c); };
       const sig = [...qt].filter((t) => !deLaPregunta(t) && !(e.ciudad && t === norm(nombreCiudad(e.ciudad))));
       const res = [];
       // lo que va tras «compuso», «la marcha» o «de quién es»: el título que se pide
-      const mq = /^.*\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' ')), fraseQ = mq ? mq[1].split(' ').filter((w) => w.length > 2 && !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))) : [];
+      const mq = fraseTitulo(tokM(e.rawA || e.raw || e.t).join(' ')), fraseQ = mq ? mq[1].split(' ').filter((w) => w.length > 2 && !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))) : [];
       for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
         const ttE = tokM(m[0]), ttS = tokM(m[0].replace(/\(.*?\)/g, ' ')), entero = ttE.length > ttS.length && qs.indexOf(' ' + ttE.join(' ') + ' ') >= 0;
         const tt = entero ? ttE : ttS; if (!tt.length) continue;
@@ -1059,7 +1086,7 @@
       }
       // con una errata en el título («Soeldad de San Jerónimo»): el título más parecido a lo que va tras «marcha» o «compuso», a una o dos letras
       if (!res.length) {
-        const m0 = /^.*\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' '));
+        const m0 = fraseTitulo(tokM(e.rawA || e.raw || e.t).join(' '));
         const filtra = (l) => l.filter((w) => (!deLaPregunta(w) || w.length > 3) && !(e.ciudad && w === norm(nombreCiudad(e.ciudad))));
         const frase = m0 ? filtra(m0[1].split(' ')).join(' ') : '', fF = fon(frase);
         if (frase.length >= 6) {
@@ -1159,6 +1186,75 @@
       return cerrar(r);
     }
     const HOLA = ['¿Qué pasa, cuñao? Pregúntame lo que quieras, que de esto sé más que nadie.', 'Aquí estoy, como siempre que hace falta. ¿Qué cofradía buscamos?', 'Dime, que llevo cuarenta Semanas Santas en el cuerpo.'];
+    // ================= vocabulario cofrade («¿qué es una levantá?») =================
+    const GLOSARIO = [
+      [/levanta|levantada|levantas/, 'La levantá es el momento en que el paso se alza del suelo a la vez, a la orden del capataz y al golpe del llamador. Cuanto más limpia y a la vez, más se aplaude.'],
+      [/costalero|costaleros/, 'El costalero carga el paso desde dentro, debajo de las trabajaderas, con el costal (una tela enrollada) protegiéndole la nuca. No ve nada: anda a la voz del capataz. Es lo propio de Sevilla y de muchas otras capitales.'],
+      [/hombres? de trono|portadores?|varal|varales/, 'En Málaga los tronos se llevan por fuera, a hombros, con varales: son los hombres de trono (y cada vez más mujeres). Los guía el mayordomo de trono con la campana.'],
+      [/capataz|capataces/, 'El capataz manda el paso desde fuera: da las órdenes a los costaleros con la voz y con el llamador, y decide cada levantá, cada parada y cada revirá.'],
+      [/llamador/, 'El llamador es la aldaba del frontal del paso. El capataz lo golpea para avisar a los costaleros de que viene una levantá o una parada.'],
+      [/chicota|chicotas/, 'Una chicotá es el tramo que anda el paso entre una levantá y la siguiente parada.'],
+      [/revira|reviras/, 'La revirá es el giro del paso para tomar una esquina o cambiar de calle: de las cosas más difíciles para los costaleros.'],
+      [/saeta|saetas/, 'La saeta es un cante flamenco, a palo seco, que se le canta a una imagen cuando pasa, casi siempre desde un balcón. Mientras suena, el paso se para y la calle calla.'],
+      [/nazareno|nazarenos/, 'El nazareno es el hermano que acompaña a su cofradía con túnica, antifaz y, a menudo, capirote, llevando un cirio, una cruz o una insignia. Hace la estación de penitencia en silencio.'],
+      [/penitente|penitentes/, 'Penitente es quien hace la estación de penitencia ofreciéndola como sacrificio; en muchas cofradías, los nazarenos que llevan una cruz al hombro en vez de cirio.'],
+      [/capirote|capirotes|antifaz/, 'El capirote es el cono de cartón que va bajo el antifaz del nazareno y le da la forma alta y puntiaguda; el antifaz es la tela que le cubre la cara.'],
+      [/palio|palios|paso de palio/, 'El palio es el techo de tela bordada, sostenido por varales, que cubre a la Virgen en su paso. Por eso se habla del «paso de palio».'],
+      [/paso de misterio|misterio|misterios/, 'Un paso de misterio representa una escena de la Pasión con varias figuras (el Prendimiento, la Sentencia, la Cena…), a diferencia del paso de Cristo solo o del palio de la Virgen.'],
+      [/paso|pasos/, 'El paso es la plataforma sobre la que va la imagen por la calle, llevada por costaleros. En Málaga y otras capitales de oriente se llama trono y se lleva por fuera, con varales.'],
+      [/trono|tronos/, 'En Málaga (y en otras capitales de Andalucía oriental) el paso se llama trono: más grande, y llevado por fuera, a hombros, con varales.'],
+      [/carrera oficial/, 'La carrera oficial es el tramo de calles, con sillas y palcos, que todas las cofradías de la jornada recorren en un orden fijado. Pregúntame «¿a qué hora pasa la Macarena por la carrera oficial?» y te digo la hora.'],
+      [/estacion de penitencia/, 'La estación de penitencia es el camino de la cofradía desde su templo hasta la catedral (u otro templo) y la vuelta, hecho como penitencia.'],
+      [/madruga|madrugada/, 'La Madrugá es la noche del Jueves al Viernes Santo, la más larga y esperada en muchas capitales. Pregúntame «¿qué sale la Madrugá en Sevilla?» y te digo cuáles.'],
+      [/cruz de guia/, 'La cruz de guía abre el cortejo: es lo primero que ves de una cofradía, con sus faroles a los lados.'],
+      [/hermano mayor/, 'El hermano mayor preside la hermandad: lo eligen los hermanos en cabildo por unos años y la representa.'],
+      [/pregon|pregonero/, 'El pregón anuncia la Semana Santa unas semanas antes: un pregonero lee un texto, a menudo en verso, ante la ciudad. Cada capital tiene el suyo.'],
+      [/mantilla|mantillas|peineta|mantillas y peinetas/, 'Las mantillas son las mujeres que van de negro, con peineta y mantilla, el Jueves Santo y el Viernes Santo, en señal de luto; algunas acompañan a su cofradía en el cortejo.'],
+      [/agrupacion musical|agrupaciones musicales/, 'Una agrupación musical es una banda de cornetas, trompetas, fliscornos y otros metales con percusión: suena entre la banda de cornetas y la de música, y suele ir tras los pasos de misterio.'],
+      [/banda de cornetas|cornetas y tambores/, 'La banda de cornetas y tambores toca con cornetas y percusión; suele ir detrás de los pasos de Cristo.'],
+      [/banda de musica/, 'La banda de música lleva viento-madera, viento-metal y percusión, y suele ir detrás del palio.'],
+      [/hermandad|cofradia|diferencia entre hermandad y cofradia/, 'Una hermandad es una asociación de fieles; la cofradía es la que sale a la calle en estación de penitencia. En la práctica se usan casi igual, y muchas se llaman las dos cosas.'],
+      [/visperas/, 'Las Vísperas son los días antes del Domingo de Ramos (el Viernes de Dolores y el Sábado de Pasión), con cofradías que salen antes de la Semana Santa.'],
+      [/bulla|bullas/, 'La bulla es el gentío en la calle alrededor de una cofradía. Consejo de cuñao: si hay bulla, no cortes el cortejo y ten paciencia.'],
+      [/cirio|cirios|cera/, 'El cirio es la vela larga que llevan los nazarenos; la cera que cae al suelo es la que los niños recogen en bolas.'],
+      [/semana santa/, 'La Semana Santa va del Domingo de Ramos al Domingo de Resurrección: recuerda la Pasión, Muerte y Resurrección de Cristo, y en Andalucía se vive en la calle con las cofradías.'],
+    ];
+    function glosario(t) {
+      const m = /^(?:y )?(?:que|q) (?:es|son|significa|quiere decir|se llama)(?: un| una| el| la| los| las| lo de)? (.+?)(?: (?:de|en) (?:la )?semana santa| cofrade| en las cofradias)?$/.exec(t) || /^(?:que|q) (?:significa|quiere decir) (.+)$/.exec(t) || /^(?:cual es la )?diferencia entre (hermandad y cofradia)$/.exec(t);
+      if (!m) return null;
+      const w = m[1].replace(/^(un|una|el|la|los|las) /, '').trim();
+      const g = GLOSARIO.find(([re]) => new RegExp('^(' + re.source + ')$').test(w));
+      if (!g) return null;
+      const r = Resp(); ctx.intent = 'glosario'; P(r, g[1]); return cerrar(r);
+    }
+    // ================= charla y lo que no es de cofradías =================
+    function porBarrio(e) {
+      if (e.intent === 'cuantas' || !/\b(hermandades|cofradias|procesiones)\b/.test(e.t) || !/\b(barrio|hay en|tiene|de|del)\b/.test(e.t)) return null;
+      const CAPS_ = new Set(D.capitales.map((c) => norm(c[1])));
+      const B = new Map(); H.forEach((h) => { const m = /\(([^)]+)\)\s*$/.exec(h.se || ''); if (m && !/\d/.test(m[1])) { const b = norm(m[1]); if (b.length > 3 && !CAPS_.has(b) && !B.has(b)) B.set(b, m[1]); } });
+      const b = [...B.keys()].filter((k) => new RegExp('\\b' + k + '\\b').test(e.t)).sort((x, y) => y.length - x.length)[0];
+      if (!b) return null;
+      const l = H.filter((h) => (!e.ciudad || h.c === e.ciudad) && (norm(h.se || '').indexOf(b) >= 0 || new RegExp('\\b' + b + '\\b').test(norm(h.n))));
+      if (!l.length) return null;
+      const r = Resp(); ctx.intent = 'barrio';
+      P(r, 'En el barrio de ' + B.get(b) + ' tengo ' + l.length + (l.length === 1 ? ' cofradía' : ' cofradías') + ' (por el barrio de su sede o su nombre):');
+      LI(r, l.slice(0, 14).map((h) => ({ x: h.n, href: L.herm(h), sub: h.d + (h.h ? ' · ' + h.h : '') })));
+      return cerrar(r);
+    }
+    function fueraDeTema(t) {
+      const r = Resp();
+      if (/\b(de donde eres|eres de (sevilla|malaga|granada|cordoba|cadiz|huelva|almeria|jaen))\b/.test(t)) { P(r, 'Yo soy de las ocho, cuñao: de cada capital lo mismo, que con esto no se juega.'); return cerrar(r); }
+      if (/\b(mierda|inutil|no sirves|no sabes nada|vaya respuesta|malisim\w*|que malo)\b/.test(t)) { P(r, 'Perdona, cuñao, a veces me lío. Dímelo de otra forma (la hermandad, la capital o el día) y, si me falta algo, avísame y lo añadimos.'); A(r, [['Avisar de un error', L.sugerir(t)]]); r.flojo = true; return cerrar(r); }
+      if (/\b(recomiendas?|recomienda(me)?|recomendacion\w*|que me aconsejas|que no me puedo perder|imprescindible\w*|guiri|primera vez)\b/.test(t) && !/\b(sale|salen|hora|pasa|banda|marcha)\b/.test(t)) {
+        P(r, 'Mi consejo: elige capital y día, mira qué sale y a qué hora, y ponte en una esquina de su recorrido un rato antes. Dime, por ejemplo, «¿qué sale el Jueves Santo en Málaga?» y te lo digo.');
+        A(r, [['Qué hay hoy', BASE + 'hoy/'], ['El calendario', BASE + 'calendario/']]); return cerrar(r);
+      }
+      if (/\b(cofrad\w*|hermandad\w*|procesion\w*|sale|salen|paso|pasos|trono|tronos|nazaren\w*|virgen|cristo|marcha|banda)\b/.test(t)) return null;
+      if (/\b(chiste|chistes|algo gracioso)\b/.test(t)) { P(r, 'Chistes, pocos, que estoy de servicio. Pero el de siempre: «¿A qué hora sale?», «A su hora, cuñao, que esto no es el autobús».'); return cerrar(r); }
+      if (/\b(comer|comida|restaurante\w*|tapas?|tapear|bares|hotel\w*|hostal\w*|alojamiento|dormir|apartamento\w*|tren|trenes|ave|autobus\w*|aparcar|aparcamiento|parking|vuelo\w*|avion|taxi|como llego)\b/.test(t)) { P(r, 'De comer, dormir o llegar no sé, cuñao: lo mío son las cofradías. Eso, mejor en la oficina de turismo de la ciudad. Lo que sí te digo es qué sale cada día, a qué hora y por dónde pasa.'); r.flojo = true; return cerrar(r); }
+      if (/\b(betis|sevilla fc|futbol|mundial|liga|champions|partido)\b/.test(t)) { P(r, 'De fútbol no hablo, cuñao, que en Cuaresma hay paz. Pregúntame de cofradías.'); r.flojo = true; return cerrar(r); }
+      return null;
+    }
     const NOSE = ['Eso no lo sé ni yo, y mira que sé de todo. Prueba con el nombre de la hermandad, su titular, el día o la ciudad.', 'Uy, esa no me suena. ¿Me la dices de otra forma? Por ejemplo: «¿A qué hora sale el Cautivo de Málaga?».', 'Me has pillado. Y antes de inventarme nada, prefiero decírtelo.'];
     const GRACIAS = ['A mandar. Y llévate agua, que luego to\' son prisas.', 'Para eso estamos, cuñao.', 'Nada, hombre. Y ponte en la sombra, que el sol engaña.'];
     const SUGS_INICIO = ['¿Qué sale hoy?', '¿A qué hora sale la Macarena de Sevilla?', 'Jueves Santo en Málaga', '¿Cuánto falta para la Semana Santa?'];
@@ -1192,6 +1288,7 @@
       }
       const e = entender(raw);
       let intent = e.intent;
+      { const g = glosario(e.rawA) || glosario(e.t) || fueraDeTema(e.rawA) || fueraDeTema(e.t) || porBarrio(e); if (g) return g; } // primero tal como lo escribe (el corrector cambia «saeta» por «santa»)
       if (intent === 'tiempo') { const r = Resp(); P(r, 'Del tiempo no sé nada, cuñao: no me la juego. Si llueve, cada hermandad decide ese mismo día si sale. La previsión, mírala en la AEMET, que es la oficial.'); A(r, [['Previsión de la AEMET', 'https://www.aemet.es/es/eltiempo/prediccion/municipios']]); r.flojo = true; return cerrar(r); }
       switch (intent) {
         case 'hola': P(r0, azar(HOLA)); C(r0, SUGS_INICIO.slice(0, 3)); return cerrar(r0);
@@ -1231,6 +1328,7 @@
       if (intent === 'curiosidad') return respCuriosidad();
       if (intent === 'antigua') {
         const c = e.ciudad || ctx.ciudad || pagina() || preferida();
+        if (!e.ciudad && /\b(andalucia|de todas|las ocho|las 8|de toda|del mundo|de espana)\b/.test(e.t)) return respAntigua(null);
         if (c) return respAntigua(c);
         const r = Resp(); P(r, '¿De qué capital?'); ctx.intent = 'antigua'; return preguntaCiudad(r, null, 'antigua');
       }
@@ -1328,8 +1426,10 @@
       const imagTxt = intent === 'imaginero' || (intent === 'autor' && !bh.lista.length);
       if (imagTxt || !bh.lista.length) {
         const ii = buscarEn(IIX, e, imagTxt ? 2.5 : 5);
+        if (!ii.length && imagTxt) { const rt = porAutoria(e); if (rt) return rt; }
         if (ii.length && (imagTxt || ii[0].k >= 2)) {
           const top = ii[0].p, dudas = ii.filter((x) => x.p >= top - 0.5);
+          if (dudas.length > 1 && dudas[0].k === dudas[1].k) { const rt = porAutoria(e); if (rt) return rt; }
           if (dudas.length > 1 && dudas[0].k === dudas[1].k) { const r = Resp(); P(r, '¿Qué imaginero, cuñao?'); C(r, dudas.slice(0, 6).map((d) => [I[d.i][1], 'Quién es ' + I[d.i][1]])); return cerrar(r); }
           return respImag(ii[0].i);
         }
@@ -1400,6 +1500,7 @@
         C(r, ['¿Qué sale hoy en ' + nombreCiudad(c) + '?', 'Domingo de Ramos en ' + nombreCiudad(c), 'Noticias de ' + nombreCiudad(c)]);
         return cerrar(r);
       }
+      if (/\b(obras?|tallas?|imagenes|esculturas?|hizo|tallo|esculpio|imaginero|escultor\w*)\b/.test(e.t)) { const rt = porAutoria(e); if (rt) return rt; }
       if (intent && necesitaHerm.indexOf(intent) >= 0) { const r = Resp(); P(r, '¿De qué cofradía me hablas? Dime su nombre, su titular o su apodo.'); r.flojo = true; return cerrar(r); }
       const r = Resp();
       P(r, azar(NOSE));

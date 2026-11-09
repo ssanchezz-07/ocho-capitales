@@ -6,6 +6,15 @@
 - **El título de una marcha va tras la última palabra clave** («de quién es la marcha X» → X). Antes se tomaba la primera («quién es») y el título incluía «marcha», así que fallaban las erratas y hasta el título bien escrito decía «la más parecida».
 - **Un lugar repetido en el itinerario con otra grafía** («San Miguel» y «P. SAN MIGUEL») da las dos horas.
 - **«Por la tarde» no es un lugar**, y con una hermandad en la conversación «¿y por dónde pasa por la tarde?» es su recorrido, no la lista de la tarde.
+- **Pasada de 300 preguntas «de la calle»** (escritas por un agente aparte, sin ver el código: móvil, andaluz, erratas, charla y fuera de tema). Las respuestas flojas bajaron de 40 a 27 y los «no lo sé», de 16 a 4. Lo que se añadió:
+  - un **vocabulario cofrade** de 30 términos (levantá, costalero, capataz, saeta, palio, trono, carrera oficial, Madrugá, mantilla, agrupación musical…). Se mira el texto tal como lo escribe la persona, porque el corrector de erratas cambiaba «saeta» por «santa» y «tren» por «tres»;
+  - respuestas para **lo que no es de cofradías** (comer, dormir, llegar, fútbol, chistes), para «¿de dónde eres?», las quejas y los consejos;
+  - **las hermandades de un barrio**, por el barrio que apunta su sede o por su nombre (Triana, El Perchel, el Albaicín);
+  - **la más antigua de las ocho capitales**;
+  - el **total de una jornada** repartido por capitales;
+  - **imagineros sin ficha** (Martínez Montañés, la Roldana), con la autoría de los titulares tal como viene;
+  - **«marcha X de quién es»**, con el título delante;
+  - y dos confusiones: «x q hora» se tomaba por un lugar y «Santo Domingo» por el Domingo de Ramos.
 - **Juegos, «¿Qué hermandad es?»: ninguna opción mala de la misma cofradía.** La Humillación es de la Piedad (Cádiz); el Dulce Nombre, la Cañilla y la Soledad (Humildad) son una sola cofradía (Granada); también Amor y Borriquita, las Fusionadas, Columna y Resurrección (Cádiz) y la Vera Cruz de Jaén. Se agrupan en el build por el nombre oficial sin el paréntesis final, la web propia, un titular igual en la misma sede o una «(sección de …)»; `probar-juegos.mjs` lo comprueba por su cuenta y con el código anterior encontraba 7 preguntas con dos respuestas buenas.
 - **La miniatura, la línea de tiempo y «Compartir» van en `assets/cunao-pinta.js`**, que se pide con el motor al acercarse al botón. `cunao-ui.js`, que va en todas las páginas, baja de 11,5 a 7,5 KB comprimido. Si el archivo nuevo no llega, erCuñao contesta igual, sin esos tres extras.
 
