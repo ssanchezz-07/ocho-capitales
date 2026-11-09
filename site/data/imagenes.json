@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T15:55:12.671Z",
+ "generado": "2026-11-09T16:14:17.012Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6081,22 +6081,22 @@
   },
   "la-esperanza-huelva": {
    "virgen": {
-    "w": 960,
-    "h": 888,
+    "w": 950,
+    "h": 959,
     "widths": [
      160,
      480,
-     960
+     950
     ],
     "escudo": false,
     "autor": "La Esperanza (Huelva)",
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/esperanzahuelvaoficial/",
-    "foco": "47% 30%",
+    "foco": "42% 30%",
     "cedida": true,
     "local": "scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg",
-    "tam": 547262,
+    "tam": 546970,
     "titular": "Nuestra Señora de la Esperanza Coronada"
    },
    "cristo": {
@@ -10175,7 +10175,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hdadsantoentierrohuelva/",
-    "foco": "60% 25%",
+    "foco": "30% 30%",
     "cedida": true,
     "local": "scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg",
     "tam": 130247,
@@ -12121,16 +12121,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n2_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
-  "la-esperanza-huelva": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:-Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n-.jpg\"|\"\"|\"\"|\"\"|\"50% 49%\"|\"https://www.instagram.com/esperanzahuelvaoficial/\"|\"scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg\"|547262|\"\"|\"47% 30%\"|\"\"|\"\""
-  },
   "los-judios-la-merced-huelva": {
    "w": 960,
    "h": 640,
@@ -12719,7 +12709,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg\"|130247|\"\"|\"60% 25%\"|\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-virgen.jpg\"|623981|\"\"|\"50% 25%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-cristo.jpg\"|130247|\"\"|\"30% 30%\"|\"https://www.instagram.com/hdadsantoentierrohuelva/\"|\"scripts/cedidas/huelva/el-santo-entierro-huelva-virgen.jpg\"|623981|\"\"|\"50% 25%\"|\"\"|\"\""
   },
   "la-lanzada-huelva": {
    "w": 960,
