@@ -1,5 +1,17 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-09 · erCuñao, bloque 6: preguntas con erratas o en andaluz, y menos peso en cada página
+**Elegido**
+- **Fonética andaluza al comparar** (seseo y ceceo, yeísmo, la h muda): «plasa paliyero» casa con Plaza Palillero y «no me yores» con «No me llores, Soledad». Se compara la escritura tal cual **y** la fonética, y vale la más parecida: una errata como «traicóin» no se parece a «traisión» en fonética, pero sí a «traición» escrita.
+- **El título de una marcha va tras la última palabra clave** («de quién es la marcha X» → X). Antes se tomaba la primera («quién es») y el título incluía «marcha», así que fallaban las erratas y hasta el título bien escrito decía «la más parecida».
+- **Un lugar repetido en el itinerario con otra grafía** («San Miguel» y «P. SAN MIGUEL») da las dos horas.
+- **«Por la tarde» no es un lugar**, y con una hermandad en la conversación «¿y por dónde pasa por la tarde?» es su recorrido, no la lista de la tarde.
+- **La miniatura, la línea de tiempo y «Compartir» van en `assets/cunao-pinta.js`**, que se pide con el motor al acercarse al botón. `cunao-ui.js`, que va en todas las páginas, baja de 11,5 a 7,5 KB comprimido. Si el archivo nuevo no llega, erCuñao contesta igual, sin esos tres extras.
+
+**Descartado**
+- **Perseguir las 10 dudosas de Huelva de la batería del experto:** vienen de itinerarios con columnas mezcladas («Templo Plaza San Cristo de la Pedro Sangre»). Se arreglan en los datos, que ya están pendientes en el equipo de rutas.
+- **Meter el código de pintar en `cunao.js`:** el motor se prueba en Node sin navegador y debe seguir siendo puro.
+
 ## 2026-11-08 · Plano: reproducir/pausar en el iPhone y fondo hasta todas las sedes (sesión «En la calle»)
 **Reproducir y pausar.** Pablo: «el botón de play solo inicia pero no pausa». En el iPhone, Safari no envía el «click» si la página cambia bajo el dedo, y el plano reconstruía la lista (con fotos) en cada fotograma. **Elegido:** el botón responde a `pointerup` (el click de detrás se ignora, salvo el de teclado) y en cada fotograma solo se toca lo que cambia (lista con una fila por hermandad, ficha con firma, cortejo reutilizado). **Descartado:** `touchend` con `preventDefault` (rompe el desplazamiento y la accesibilidad) y bajar la frecuencia de repintado (el cortejo daría tirones).
 **Recorrido de la extraordinaria siempre visible:** se probó y se quitó. Pablo dice que la línea dorada «va bien» al reproducir.

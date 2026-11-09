@@ -10,6 +10,7 @@
   const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
   const stem = (t) => (t.length > 5 && /[nrld]es$/.test(t) ? t.slice(0, -2) : t.length > 5 && /ces$/.test(t) ? t.slice(0, -3) + 'z' : t.length > 4 && /s$/.test(t) ? t.slice(0, -1) : t);
   const toks = (s) => norm(s).split(' ').filter(Boolean);
+  const fon = (s) => String(s).replace(/ll/g, 'y').replace(/z/g, 's').replace(/c([ei])/g, 's$1').replace(/(^|\s)h/g, '$1');
   const set = (s) => new Set(s.split(/\s+/).filter(Boolean));
   function distancia(a, b, max) {
     // Damerau-Levenshtein (transposiciones incluidas) con corte temprano
@@ -253,9 +254,11 @@
       const pmEn = (x) => /\b(?:pasa|pasan|pasara|llega|llegan|esta|estara)\s+(?:por|a|en)\s+(?!donde\b)(.+)$/.exec(x) || /\b(?:ver(?:la|lo|las|los)?|veo)\s+(?:por|en)\s+(?!donde\b)(.+)$/.exec(x);
       // «¿a qué hora llega la Esperanza de Triana a la Campana?»: el lugar va tras el nombre, después de «a»
       const porX = (x) => /\bpor\s+(?!donde\b)((?:la |el |los |las )?(?:calle |plaza |avenida |avda )?\w+(?: \w+){0,5})$/.exec(x) || /\b(?:llega|llegan|llegara)\b.*?\sa\s+(?!que\b)((?:la |el |los |las )?\w+(?: \w+){0,4})$/.exec(x);
-      const pm0 = pmEn(nLugar) || porX(nLugar), pm = pmEn(n) || porX(n);
+      const sinFr = (x) => x.replace(/\s*\b(?:por la|esta|de la|a la) (?:manana|tarde|noche|madrugada)\b/g, '').trim();
+      const nL0 = sinFr(nLugar), n0 = sinFr(n);
+      const pm0 = pmEn(nL0) || porX(nL0), pm = pmEn(n0) || porX(n0);
       e.lugarC = pm0 ? pm0[1] : pm ? pm[1] : null;
-      if (pm) e.antesLugar = n.slice(0, pm.index + pm[0].length - pm[1].length).trim();
+      if (pm) e.antesLugar = n0.slice(0, pm.index + pm[0].length - pm[1].length).trim();
       if (e.lugarC && (['hora', 'cuando', 'cerca', 'pasapor', 'agenda'].indexOf(e.intent) >= 0 || (['autor', 'imaginero', 'info', null].indexOf(e.intent) >= 0 && !/\b(quien|de quien|tallo|hizo|imaginero|autor|escultor)\b/.test(e.antesLugar || ''))) && /\b(pasa|pasan|pasara|llega|llegan)\b.*\bpor\b/.test(nLugar) && e.intent !== 'carrera' && !/\b(carrera|tribuna)\b/.test(e.lugarC || '')) e.intent = 'pasapor';
       if (pm && (e.intent === 'pasapor' || e.intent === 'hora' || e.intent === 'cerca')) { e.lugar = pm0 ? pm0[1] : pm[1]; if (e.intent !== 'pasapor') e.intent = 'pasapor'; }
       return e;
@@ -600,13 +603,14 @@
     }
     function buscarLugar(p, lugar, h) {
       const nombreH = new Set(toks(h ? h.n + ' ' + h.t.map((t) => t[0]).join(' ') : ''));
-      const q = toks(lugar).filter((t) => t.length > 2 && !STOP.has(t) && !CLAVE.has(t) || t === 'campana' || t === 'catedral' || t === 'tribuna').filter((t) => !nombreH.has(t) || /^(campana|catedral|tribuna)$/.test(t)).map(stem);
+      let q = toks(lugar).filter((t) => t.length > 2 && !STOP.has(t) && !CLAVE.has(t) || t === 'campana' || t === 'catedral' || t === 'tribuna').filter((t) => !nombreH.has(t) || /^(campana|catedral|tribuna)$/.test(t)).map(stem);
+      if (!q.length) q = toks(lugar).filter((t) => t.length > 3 && !STOP.has(t) && !nombreH.has(t) && /^(templo|iglesia|parroquia|capilla|basilica|ermita|convento|plaza|puerta)$/.test(t));
       if (!q.length) return [];
       const GEN_L = /^(plaza|pza|pl|calle|avenida|avda|paseo|puerta|ronda|carrera|oficial|templo|iglesia|parroquia)$/, qe = q.filter((t) => !GEN_L.test(t)), qq = qe.length ? qe : q, frase = q.join(' ');
       let best = 0; const res = [];
       p.forEach((x) => {
-        const lt = toks(x[1]).map(stem); let s = lt.join(' ') === frase ? 0.5 : 0;
-        qq.forEach((t) => { if (lt.indexOf(t) >= 0) s += 1; else if (t.length >= 5 && lt.some((w) => w.length >= 4 && distancia(t, w, 1) <= 1)) s += 0.8; });
+        const lt = toks(x[1]).map(stem), ltF = lt.filter((t) => t.length > 2 && !STOP.has(t)); let s = ltF.join(' ') === frase ? 0.5 : 0;
+        qq.forEach((t) => { if (lt.indexOf(t) >= 0 || lt.some((w) => fon(w) === fon(t))) s += 1; else if (t.length >= 5 && lt.some((w) => w.length >= 4 && (distancia(t, w, 1) <= 1 || distancia(fon(t), fon(w), 1) <= 1))) s += 0.8; });
         if (qe.length && q.length > qe.length) q.filter((t) => GEN_L.test(t)).forEach((t) => { if (lt.indexOf(t) >= 0) s += 0.1; });
         if (s > best) { best = s; res.length = 0; }
         if (s && s === best) res.push(x);
@@ -1042,7 +1046,7 @@
       const sig = [...qt].filter((t) => !deLaPregunta(t) && !(e.ciudad && t === norm(nombreCiudad(e.ciudad))));
       const res = [];
       // lo que va tras «compuso», «la marcha» o «de quién es»: el título que se pide
-      const mq = /\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' ')), fraseQ = mq ? mq[1].split(' ').filter((w) => w.length > 2 && !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))) : [];
+      const mq = /^.*\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' ')), fraseQ = mq ? mq[1].split(' ').filter((w) => w.length > 2 && !(e.ciudad && w === norm(nombreCiudad(e.ciudad)))) : [];
       for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
         const ttE = tokM(m[0]), ttS = tokM(m[0].replace(/\(.*?\)/g, ' ')), entero = ttE.length > ttS.length && qs.indexOf(' ' + ttE.join(' ') + ' ') >= 0;
         const tt = entero ? ttE : ttS; if (!tt.length) continue;
@@ -1055,11 +1059,15 @@
       }
       // con una errata en el título («Soeldad de San Jerónimo»): el título más parecido a lo que va tras «marcha» o «compuso», a una o dos letras
       if (!res.length) {
-        const m0 = /\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' '));
-        const frase = m0 ? m0[1].split(' ').filter((w) => !deLaPregunta(w) || w.length > 3).join(' ') : '';
+        const m0 = /^.*\b(?:marcha|compuso|compusieron|autor de|quien es)\s+(.+)$/.exec(tokM(e.rawA || e.raw || e.t).join(' '));
+        const filtra = (l) => l.filter((w) => (!deLaPregunta(w) || w.length > 3) && !(e.ciudad && w === norm(nombreCiudad(e.ciudad))));
+        const frase = m0 ? filtra(m0[1].split(' ')).join(' ') : '', fF = fon(frase);
         if (frase.length >= 6) {
           const max = Math.max(1, Math.min(2, Math.floor(frase.length / 8)));
-          for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) { const tt = tokM(m[0].replace(/\(.*?\)/g, ' ')).join(' '); if (Math.abs(tt.length - frase.length) <= max) { const d = distancia(tt, frase, max); if (d <= max) res.push({ m, p: 10 - d, exacto: d === 0 }); } }
+          for (const k of trozosPregunta(e)) for (const m of MD['m/' + k] || []) {
+            const tt = filtra(tokM(m[0].replace(/\(.*?\)/g, ' '))).join(' '), tF = fon(tt);
+            if (Math.abs(tF.length - fF.length) <= max || Math.abs(tt.length - frase.length) <= max) { const d = Math.min(distancia(tt, frase, max), distancia(tF, fF, max)); if (d <= max) res.push({ m, p: 10 - d, exacto: d === 0 }); }
+          }
         }
       }
       res.sort((a, b) => b.p - a.p);
@@ -1330,7 +1338,8 @@
       const necesitaHerm = ['hora', 'cuando', 'sede', 'autor', 'banda', 'marchas', 'recorrido', 'pasapor', 'carrera', 'entrada', 'historia', 'pasos', 'web', 'titulares', 'habito', 'oficial', 'duracion', 'orden', 'sinDato', 'agenda'];
       // «¿cuál es la primera de Jaén?» o «¿qué sale el jueves antes de las 19:00?»: lista, no una hermandad suelta
       if (bh.fuera && (intent == null || intent === 'info' || necesitaHerm.indexOf(intent) >= 0)) return respFuera(bh.fuera, e, intent);
-      const listaFiltrada = (intent === 'orden' || e.tFiltro) && !e.fueraDeFecha && !(bh.elegida && bh.elegida.s >= 4);
+      const deUna = e.franja && ['recorrido', 'pasapor', 'carrera', 'entrada'].indexOf(intent) >= 0 && (bh.elegida || (ctx.herm && sigue));
+      const listaFiltrada = (intent === 'orden' || e.tFiltro) && !deUna && !e.fueraDeFecha && !(bh.elegida && bh.elegida.s >= 4);
       if (bh.elegida && !listaFiltrada) return respHerm(bh.elegida.h, intent && intent !== 'lista' && intent !== 'cuantas' && intent !== 'falta' ? intent : (intent === 'lista' && !dia ? 'hora' : 'info'), e);
       if (listaFiltrada) {
         const c = e.ciudad || ctx.ciudad || pagina() || preferida();

@@ -410,5 +410,17 @@ caso('B5-11 fuera de Semana Santa, «¿dónde van ahora?» no se inventa posicio
   for (const pg of pags) { const l = m0.chipsPagina(pg) || []; if (!l.length) { mal++; console.log('✗ B5-12 sin sugerencias para ' + JSON.stringify(pg)); continue; }
     for (const [et, val] of l) caso('B5-12 ' + pg.tipo + ' «' + et + '»', crearMotor(D, { base: '/', azar: (x) => x[0], hoy: () => HOY, horaAhora: () => 18 }), val, (r) => (r.flojo || r.nose ? 'respuesta floja' : true)); } }
 
+// bloque 6: títulos con erratas o en andaluz, lugares repetidos y «por la tarde»
+caso('B6-1 título con letras cambiadas tras «de quién es la marcha»', motor(), '¿De quién es la marcha Glroias de Sevilla?', y(contiene('Manuel Marvizón'), enlace(/\/marcha\/glorias-de-sevilla-/)));
+caso('B6-2 título bien escrito: sin «la más parecida»', motor(), '¿De quién es la marcha Glorias de Sevilla?', y(contiene('Manuel Marvizón'), noDice('La más parecida')));
+caso('B6-3 título en andaluz (yeísmo)', motor(), 'quién compuso «no me yores, soledad»', y(contiene('Carlos Llano'), enlace(/\/marcha\/no-me-llores-soledad-/)));
+caso('B6-4 título con errata que casa con una hermandad («Mater»)', motor(), '¿De quién es la marcha Mater Pulchrérima?', y(contiene('Fernando García Márquez'), enlace(/\/marcha\/mater-pulcherrima-/)));
+caso('B6-5 título con errata que casa con una hermandad («Cielo»)', motor(), '¿De quién es la marcha Plegaira al Cielo?', y(contiene('Rubén Melgarejo'), enlace(/\/marcha\/plegaria-al-cielo-/)));
+caso('B6-6 lugar en andaluz (seseo y yeísmo)', motor(), 'a q ora pasa la sentencia de cádiz por plasa paliyero', contiene('Plaza Palillero', '20:40'));
+caso('B6-7 lugar repetido en el itinerario: las dos horas', motor(), '¿A qué hora pasa la Borriquita de Sevilla por San Miguel?', contiene('15:30', '17:01'));
+caso('B6-8 «por la tarde» no es un lugar', motor(), '¿A qué hora pasa el Museo por la Campana por la tarde?', y(contiene('Campana', '22:50'), noDice('No veo')));
+{ const m = motor(); pregunta(m, '¿A qué hora sale el Museo de Sevilla?'); caso('B6-9 «¿y por dónde pasa por la tarde?» sigue con la del contexto', m, '¿y por dónde pasa por la tarde?', y(contiene('Recorrido del Museo'), noDice('cofradías'))); }
+caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
+
 console.log(`\n${ok} correctas, ${mal} fallidas (de ${ok + mal})` + (omit ? `; ${omit} omitida${omit > 1 ? 's' : ''} por la fecha.` : '.'));
 process.exit(mal ? 1 : 0);

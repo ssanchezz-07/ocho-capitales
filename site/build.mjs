@@ -270,7 +270,7 @@ const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
 // los juegos de erCuñao (assets/juegos.js y /juegos/): si están, erCuñao los propone
 const HAY_JUEGOS = fs.existsSync(path.join(DIR, 'assets', 'juegos.js'));
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js'], ['juegos', 'juegos.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['cunaopinta', 'cunao-pinta.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js'], ['juegos', 'juegos.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 // Precarga de la página siguiente (Chrome y Edge; los demás lo ignoran): las pestañas de abajo se piden en cuanto se ven,
 // y cualquier otro enlace de la web al empezar a tocarlo. Solo se descarga el HTML (prefetch, sin ejecutar nada).
 const ESPECULA = `<script type="speculationrules">${JSON.stringify({ prefetch: [
@@ -664,7 +664,7 @@ ${body}${colabora(p, title)}
 </nav>
 <button class="oc-cunao-btn" type="button" data-cunao aria-controls="oc-cunao" aria-expanded="false" aria-label="Pregúntale a erCuñao">${CUNAO_SVG}<span class="oc-cunao-bocadillo" aria-hidden="true">¿Qué sale hoy?</span></button>
 <button class="oc-arriba" type="button" data-arriba aria-label="Volver arriba">${icon('up')}</button>
-<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}" data-motor="${u('assets/cunao.js')}?v=${HUELLA.cunao}"${HAY_JUEGOS ? ' data-juegos' : ''}>
+<div class="oc-sheet oc-cunao" id="oc-cunao" hidden data-cunao-hoja data-datos="${u('data/cunao.json')}?v=${HUELLA.cunao}" data-motor="${u('assets/cunao.js')}?v=${HUELLA.cunao}" data-pinta="${u('assets/cunao-pinta.js')}?v=${HUELLA.cunaopinta}"${HAY_JUEGOS ? ' data-juegos' : ''}>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-cunao-t">
     <div class="oc-sheet-head oc-cunao-head">${CUNAO_SVG}<div><p class="oc-sheet-title" id="oc-cunao-t">erCuñao</p><p class="oc-cunao-sub">Lo sabe todo de la Semana&nbsp;Santa, o&nbsp;eso&nbsp;dice…</p></div>${HAY_JUEGOS ? `<a class="oc-cunao-jugar" href="${u('juegos/')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.4 1.5 6.8L12 17l-5.5 3.5L8 13.7 3 9.3l6.4-.7z" fill="currentColor"/></svg><span>Jugar</span></a>` : ''}<button class="oc-iconbtn" type="button" data-cunao-cerrar aria-label="Cerrar">${icon('x')}</button><div class="oc-cunao-galon" aria-hidden="true"></div></div>
     <div class="oc-cunao-chat" data-cunao-chat aria-live="polite"></div>
