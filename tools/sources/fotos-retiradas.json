@@ -509,6 +509,10 @@
   "el-cautivo-jaen|ficha": {
    "archivo": "Cautivo_Jaén.png",
    "motivo": "La misma foto con marca de agua."
+  },
+  "la-palma-cadiz|virgen": {
+   "archivo": "pal3.png",
+   "motivo": "La foto del Consejo (pal3.png) no es María Santísima de las Penas: es Nuestra Señora de la Palma Coronada, la Virgen de gloria (auditoría de coordinación, 9-nov). La de palma_2 lleva la firma «Alejandro DSC»."
   }
  },
  "no_portada": {

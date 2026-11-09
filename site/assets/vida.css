@@ -302,6 +302,8 @@ a { text-underline-offset: .18em; }
 /* la imagen, protagonista: marco de oro con un hilo interior */
 .fx-media { grid-area: media; min-width: 0; }
 .fx-media .oc-figure img, .fx-media .oc-diptico.is-juntos > img { display: block; width: 100%; max-height: min(66svh, 620px); object-fit: cover; border-radius: 20px; box-shadow: 0 0 0 2px var(--oro), 0 0 0 5px var(--tc), 0 0 0 6px rgb(236 211 147 / .45), 0 30px 50px -26px rgb(0 0 0 / .65); }
+/* foto única con firma del autor (.is-firma; --ar = ancho/alto, desde build.mjs): la figura se estrecha a la proporción de la foto con el mismo alto tope de la regla anterior, sin recortar la firma */
+.fx-media .oc-diptico.is-juntos.is-firma { width: min(100%, calc(min(66svh, 620px) * var(--ar))); margin-inline: auto; }
 .fx-media .oc-figure.is-escudo img { object-fit: contain; max-height: 320px; padding: 22px; background: rgb(255 255 255 / .06); }
 .fx-media .oc-diptico-par { box-shadow: 0 0 0 3px var(--tc), 0 0 0 4px rgb(236 211 147 / .45), 0 30px 50px -26px rgb(0 0 0 / .65); }
 .fx-media .oc-diptico-nombres { color: var(--oro-claro); }

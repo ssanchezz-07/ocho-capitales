@@ -145,6 +145,7 @@ for (const [slug, par] of Object.entries(TIT.hermandades || {})) {
     fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
   }
 }
+// Si una foto lleva firma o sello del autor (focoFicha), la lámina usa ese encuadre: la firma entera, nunca a medias (Antonio Ortiz: «respeta las marcas de agua»)
 // Díptico en una sola imagen (Pablo, 3-nov: «la misma imagen en toda la web»): el Cristo y la Virgen, cada uno recortado
 // a 3:4 con su encuadre, uno junto al otro. Es la miniatura de listados, buscador y plano, y la imagen al compartir.
 const recorte34 = async (file, foco, W, H) => {
@@ -158,7 +159,7 @@ for (const [slug, t] of Object.entries(index.titulares)) {
   const par = (TIT.hermandades || {})[slug] || {};
   const c = t.cristo, v = t.virgen;
   if (!c || !v || !par.cristo || !par.virgen || retirada(par.cristo, slug, 'cristo') || retirada(par.virgen, slug, 'virgen')) continue;
-  const firma = [c.pagina, c.local, c.tam, c.recorte, c.foco, v.pagina, v.local, v.tam, v.recorte, v.foco].map((x) => JSON.stringify(x || '')).join('|');
+  const firma = [c.pagina, c.local, c.tam, c.recorte, c.foco, v.pagina, v.local, v.tam, v.recorte, v.foco, c.focoFicha, v.focoFicha].map((x) => JSON.stringify(x || '')).join('|');
   const prevD = (prev.dipticos || {})[slug];
   if (prevD && prevD.firma === firma && fs.existsSync(path.join(OUT_DIR, `d-${slug}-960.webp`))) { index.dipticos[slug] = prevD; continue; }
   const fc = path.join(OUT_DIR, `t-${slug}-cristo-${c.widths.at(-1)}.webp`), fv = path.join(OUT_DIR, `t-${slug}-virgen-${v.widths.at(-1)}.webp`);
@@ -166,7 +167,7 @@ for (const [slug, t] of Object.entries(index.titulares)) {
   for (const W of WIDTHS) {
     const half = Math.round(W / 2), H = Math.round((half * 4) / 3);
     const lienzo = sharp({ create: { width: W, height: H, channels: 3, background: '#1a0d26' } })
-      .composite([{ input: await recorte34(fc, c.foco, half, H), left: 0, top: 0 }, { input: await recorte34(fv, v.foco, W - half, H), left: half, top: 0 }]);
+      .composite([{ input: await recorte34(fc, c.focoFicha || c.foco, half, H), left: 0, top: 0 }, { input: await recorte34(fv, v.focoFicha || v.foco, W - half, H), left: half, top: 0 }]);
     await sharp(await lienzo.png().toBuffer()).webp({ quality: 66, effort: 6, smartSubsample: true }).toFile(path.join(OUT_DIR, `d-${slug}-${W}.webp`));
     widths.push(W);
   }

@@ -1120,17 +1120,19 @@ function estampaHtml(h, c) {
 function dipticoHtml(h, c) {
   const d = h.diptico; if (!d) return '';
   const nombre = (x) => esc(String(x.titular || '').split(',')[0]);
-  if (d.juntos) return `<figure class="oc-diptico is-juntos">${imgTag(d.juntos, `${String(d.juntos.titular || h.nombre)}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(d.juntos) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(d.juntos)}</span></figcaption></figure>`;
+  // Foto única con firma o sello del autor (la que trae focoFicha): entera, a su proporción y con el mismo alto tope (vida.css, .is-firma)
+  const figura = (x) => (x.focoFicha ? `<figure class="oc-diptico is-juntos is-firma" style="--ar:${(x.w / x.h).toFixed(4)}">` : '<figure class="oc-diptico is-juntos">');
+  if (d.juntos) return `${figura(d.juntos)}${imgTag(d.juntos, `${String(d.juntos.titular || h.nombre)}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(d.juntos) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(d.juntos)}</span></figcaption></figure>`;
   if (!(d.cristo && d.virgen)) {
     // un solo titular: foto grande con su nombre
     const uno = d.cristo || d.virgen;
-    if (uno) return `<figure class="oc-diptico is-juntos">${imgTag(uno, `${String(uno.titular || h.nombre).split(',')[0]}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(uno) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(uno)}</span></figcaption></figure>`;
+    if (uno) return `${figura(uno)}${imgTag(uno, `${String(uno.titular || h.nombre).split(',')[0]}, ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>${nombre(uno) || esc(h.nombre)}</b></span><span class="oc-diptico-cred">${credit(uno)}</span></figcaption></figure>`;
     // solo hay foto de su sede: se dice claramente que es la iglesia, no los titulares
     if (d.sede && (!h.imagen || h.imagen === d.sede)) return `<figure class="oc-diptico is-juntos is-sede">${imgTag(d.sede, `Sede de la hermandad: ${h.sede || ''}`, { sizes: '(max-width: 960px) 100vw, 42vw', widths: [500, 960], eager: true })}<figcaption><span class="oc-diptico-nombres"><b>Sede: ${esc(h.sede || 'templo de la hermandad')}</b></span><span class="oc-diptico-cred">${credit(d.sede)}</span></figcaption></figure>`;
     return '';
   }
-  const lado = (x, eager) => `<div class="oc-diptico-img">${imgTag(x.focoFicha ? { ...x, foco: x.focoFicha } : x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
-  return `<figure class="oc-diptico"><div class="oc-diptico-par">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">${creditPar(d.cristo, d.virgen)}</span></figcaption></figure>`;
+  const lado = (x, eager) => `<div class="oc-diptico-img${x.focoFicha ? " con-firma" : ""}">${imgTag(x.focoFicha ? { ...x, foco: x.focoFicha } : x, `${String(x.titular).split(',')[0]}, hermandad de ${h.nombre} (${c.nombre})`, { sizes: '(max-width: 960px) 50vw, 21vw', widths: [500, 960], eager })}</div>`;
+  return `<figure class="oc-diptico"><div class="oc-diptico-par${d.cristo.focoFicha ? " firma-c" : ""}${d.virgen.focoFicha ? " firma-v" : ""}">${lado(d.cristo, true)}${lado(d.virgen, false)}</div><figcaption><span class="oc-diptico-nombres"><b>${nombre(d.cristo)}</b><b>${nombre(d.virgen)}</b></span><span class="oc-diptico-cred">${creditPar(d.cristo, d.virgen)}</span></figcaption></figure>`;
 }
 const DESTACADAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'marchas-destacadas.json'), 'utf8')); } catch (e) { return {}; } })();
 function pageHerm(h) {
