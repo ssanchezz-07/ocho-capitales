@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T07:24:19.388Z",
+ "generado": "2026-11-09T07:32:57.717Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4496,7 +4496,6 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 30%",
-    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/cristo-de-san-agustin-granada-virgen.jpg",
     "tam": 4200357,
@@ -4552,7 +4551,7 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 25%",
-    "focoFicha": "50% 100%",
+    "focoFicha": "0% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/la-canilla-granada-virgen.jpg",
     "tam": 650248,
@@ -4606,7 +4605,7 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 40%",
-    "focoFicha": "50% 100%",
+    "focoFicha": "0% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/paciencia-y-penas-granada-virgen.jpg",
     "tam": 656907,
@@ -4626,7 +4625,6 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "45% 20%",
-    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/paciencia-y-penas-granada-cristo.jpg",
     "tam": 1143559,
@@ -7950,7 +7948,7 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 30%",
-    "focoFicha": "50% 100%",
+    "focoFicha": "100% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/la-estrella-granada-virgen.jpg",
     "tam": 519280,
@@ -8014,7 +8012,7 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1152,
+    "h": 1111,
     "widths": [
      160,
      480,
@@ -8028,7 +8026,7 @@
     "foco": "50% 35%",
     "cedida": true,
     "local": "scripts/cedidas/granada/los-ferroviarios-granada-virgen.jpg",
-    "tam": 519112,
+    "tam": 499954,
     "titular": "Nuestra Señora del Amor y el Trabajo"
    }
   },
@@ -8078,7 +8076,6 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "40% 45%",
-    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/las-chias-granada-cristo.jpg",
     "tam": 233591,
@@ -8115,7 +8112,6 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 25%",
-    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/los-facundillos-granada-cristo.jpg",
     "tam": 627141,
@@ -9255,7 +9251,7 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "45% 30%",
-    "focoFicha": "50% 100%",
+    "focoFicha": "100% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/el-huerto-granada-cristo.jpg",
     "tam": 463364,
@@ -10934,7 +10930,6 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 40%",
-    "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/el-via-crucis-granada-cristo.jpg",
     "tam": 906541,
@@ -10956,7 +10951,7 @@
     "licurl": "",
     "pagina": "https://www.instagram.com/memoriadeunamaestra/",
     "foco": "50% 25%",
-    "focoFicha": "50% 100%",
+    "focoFicha": "0% 100%",
     "cedida": true,
     "local": "scripts/cedidas/granada/soledad-de-nuestra-senora-humildad-granada-virgen.jpg",
     "tam": 650248,
@@ -10966,7 +10961,7 @@
   "el-cautivo-granada": {
    "cristo": {
     "w": 960,
-    "h": 1200,
+    "h": 1267,
     "widths": [
      160,
      480,
@@ -10980,12 +10975,12 @@
     "foco": "50% 30%",
     "cedida": true,
     "local": "scripts/cedidas/granada/el-cautivo-granada-cristo.jpg",
-    "tam": 320328,
+    "tam": 430544,
     "titular": "Nuestro Padre Jesús Cautivo"
    },
    "virgen": {
     "w": 960,
-    "h": 960,
+    "h": 1266,
     "widths": [
      160,
      480,
@@ -10999,14 +10994,14 @@
     "foco": "50% 30%",
     "cedida": true,
     "local": "scripts/cedidas/granada/el-cautivo-granada-virgen.jpg",
-    "tam": 404377,
+    "tam": 498415,
     "titular": "María Santísima de la Encarnación"
    }
   },
   "el-trabajo-granada": {
    "virgen": {
     "w": 960,
-    "h": 1044,
+    "h": 1020,
     "widths": [
      160,
      480,
@@ -11020,7 +11015,7 @@
     "foco": "50% 30%",
     "cedida": true,
     "local": "scripts/cedidas/granada/el-trabajo-granada-virgen.jpg",
-    "tam": 678542,
+    "tam": 666682,
     "titular": "Nuestra Señora de la Luz"
    }
   },
@@ -12235,7 +12230,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-cristo.jpg\"|320328|\"\"|\"50% 30%\"|\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-virgen.jpg\"|404377|\"\"|\"50% 30%\""
+   "firma": "\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-cristo.jpg\"|430544|\"\"|\"50% 30%\"|\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-virgen.jpg\"|498415|\"\"|\"50% 30%\""
   }
  }
 }
