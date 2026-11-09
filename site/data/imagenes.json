@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T07:13:06.935Z",
+ "generado": "2026-11-09T07:24:19.388Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8011,6 +8011,25 @@
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "pagina": "https://commons.wikimedia.org/wiki/File:Granada_-_Parroquia_de_San_Juan_de_Letr%C3%A1n_04.jpg",
     "titular": "Parroquia de San Juan de Letrán"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1152,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Ferroviarios (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadferroviariosgranada/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/los-ferroviarios-granada-virgen.jpg",
+    "tam": 519112,
+    "titular": "Nuestra Señora del Amor y el Trabajo"
    }
   },
   "las-chias-granada": {
@@ -10943,6 +10962,88 @@
     "tam": 650248,
     "titular": "Soledad de Nuestra Señora"
    }
+  },
+  "el-cautivo-granada": {
+   "cristo": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivoyencarnaciongranada/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-cautivo-granada-cristo.jpg",
+    "tam": 320328,
+    "titular": "Nuestro Padre Jesús Cautivo"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivoyencarnaciongranada/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-cautivo-granada-virgen.jpg",
+    "tam": 404377,
+    "titular": "María Santísima de la Encarnación"
+   }
+  },
+  "el-trabajo-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 1044,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Trabajo y Luz (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/trabajoyluzgranada/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-trabajo-granada-virgen.jpg",
+    "tam": 678542,
+    "titular": "Nuestra Señora de la Luz"
+   }
+  },
+  "los-salesianos-granada": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Salesianos (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdad.salesianosgranada/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/los-salesianos-granada-virgen.jpg",
+    "tam": 510911,
+    "titular": "Nuestra Señora de la Salud"
+   }
   }
  },
  "dipticos": {
@@ -12125,6 +12226,16 @@
     960
    ],
    "firma": "\"https://consejocofradiascadiz.es/oracion-en-el-huerto/\"|\"scripts/cedidas/cadiz/oracion-en-el-huerto-cadiz-cristo.jpg\"|220408|\"\"|\"50% 35%\"|\"https://consejocofradiascadiz.es/oracion-en-el-huerto/\"|\"scripts/cedidas/cadiz/oracion-en-el-huerto-cadiz-virgen.jpg\"|454592|\"\"|\"50% 35%\""
+  },
+  "el-cautivo-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-cristo.jpg\"|320328|\"\"|\"50% 30%\"|\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-virgen.jpg\"|404377|\"\"|\"50% 30%\""
   }
  }
 }

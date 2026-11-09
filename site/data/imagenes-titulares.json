@@ -3094,6 +3094,17 @@
     "licencia": "CC0",
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "titular": "Parroquia de San Juan de Letrán"
+   },
+   "virgen": {
+    "autor": "Ferroviarios (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadferroviariosgranada/",
+    "local": "scripts/cedidas/granada/los-ferroviarios-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora del Amor y el Trabajo",
+    "titular": "Nuestra Señora del Amor y el Trabajo",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia hermandad en @hermandadferroviariosgranada (https://www.instagram.com/p/DfVD3fKCIUN/, imagen 2), sin fotógrafo citado, etiqueta ni firma. Recortada por abajo para quitar el logo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "las-chias-granada": {
@@ -4920,6 +4931,56 @@
     "foco": "50% 25%",
     "foco_ficha": "50% 100%",
     "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/Cb7nh0cspaH/. Con su firma intacta; foco_ficha para que se vea en la ficha."
+   }
+  },
+  "el-cautivo-granada": {
+   "cristo": {
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivoyencarnaciongranada/",
+    "local": "scripts/cedidas/granada/el-cautivo-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Cautivo",
+    "titular": "Nuestro Padre Jesús Cautivo",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en @cautivoyencarnaciongranada (https://www.instagram.com/p/DGtJpnyC9pv/, imagen 3), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivoyencarnaciongranada/",
+    "local": "scripts/cedidas/granada/el-cautivo-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Encarnación",
+    "titular": "María Santísima de la Encarnación",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en @cautivoyencarnaciongranada (https://www.instagram.com/p/DGtcgqxCGz3/, imagen 4), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "el-trabajo-granada": {
+   "virgen": {
+    "autor": "Trabajo y Luz (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/trabajoyluzgranada/",
+    "local": "scripts/cedidas/granada/el-trabajo-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Luz",
+    "titular": "Nuestra Señora de la Luz",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en @trabajoyluzgranada (https://www.instagram.com/p/DGjM5WsCHxk/), sin fotógrafo citado, etiqueta ni firma. Recortada por abajo para quitar el rótulo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "los-salesianos-granada": {
+   "virgen": {
+    "autor": "Salesianos (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdad.salesianosgranada/",
+    "local": "scripts/cedidas/granada/los-salesianos-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Salud",
+    "titular": "Nuestra Señora de la Salud",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en @hdad.salesianosgranada (https://www.instagram.com/p/DfF0KGqsWt3/), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }
