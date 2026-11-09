@@ -394,6 +394,8 @@ function creditPar(c, v) {
   const enlace = (im, txt) => `<a href="${esc(im.pagina)}" target="_blank" rel="noopener">${txt}</a>`;
   const rec = c.recorte && v.recorte ? ' (recortadas)' : c.recorte ? ' (recortada la del Cristo)' : v.recorte ? ' (recortada la de la Virgen)' : '';
   if (c.autor && c.autor === v.autor && !!c.cedida === !!v.cedida && (c.cedida || c.licencia === v.licencia)) {
+    // mismo autor con dos enlaces distintos (p. ej. su Instagram y su X): se enlazan los dos
+    if (c.cedida && c.pagina && v.pagina && c.pagina !== v.pagina) return `Fotos: ${esc(c.autor)} (${enlace(c, 'Cristo')} y ${enlace(v, 'Virgen')})${rec}`;
     if (c.cedida) return `Fotos: ${c.pagina ? enlace(c, esc(c.autor)) : esc(c.autor)}${rec}`;
     const lic = c.licurl ? `<a href="${esc(c.licurl)}" rel="license noopener" target="_blank">${esc(c.licencia)}</a>` : esc(c.licencia);
     return `Imágenes: ${esc(c.autor)}, ${lic}, vía Wikimedia Commons (${enlace(c, 'Cristo')} y ${enlace(v, 'Virgen')})${rec}`;
