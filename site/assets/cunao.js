@@ -485,8 +485,9 @@
           P(r, conPref(h) + V(h, ' sale ', ' salen ') + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.');
           if (!sal) P(r, 'La hora de salida aún no la tengo, y no me la voy a inventar.');
           else if (!h.h && h.r) P(r, 'La hora sale del itinerario de ' + (D.anio - 1) + '; cuando se publique el de ' + D.anio + ' se actualiza.');
-          // si el palio (o el paso) sale después que la cruz de guía, y el dato cuadra, se dice: son dos horas de salida distintas
-          if (coherente(h)) P(r,'Esa es la hora de la cruz de guía; ' + (deItin(h) === 'palio' ? 'el palio' : 'el paso') + ' sale a las ' + h.r[0] + '.');
+          // la salida del palio (o del paso) no la da la fuente oficial (la nómina del Consejo solo trae la de la cruz de guía), pero sí los
+          // programas de los medios: se da como estimación y con su fuente (Pablo, 9-nov: «que no sea oficial no quiere decir que esté mal»)
+          if (coherente(h)) { const fu = h.rf || ''; P(r, 'Esa es la hora oficial, la de la cruz de guía. ' + (deItin(h) === 'palio' ? 'El palio' : 'El paso') + ' sale hacia las ' + h.r[0] + (fu ? ', según el ' + fu.replace(/^Programa/, 'programa') : ', según los programas de los medios') + ' (es una estimación).'); }
           if (sal) { const tl = lineaTiempo(h); if (tl) r.partes.push(tl); }
           (h.x || []).forEach((x) => P(r, 'Además, ' + art(x[0]) + ' sale ' + (x[3] || 'una imagen') + (x[1] ? ' a las ' + x[1] : '') + (x[2] ? ' desde ' + conArt(x[2]) : '') + '.'));
           if (D.fechas[h.d]) P(r, cap1(art(h.d)) + ' de ' + D.anio + (h.d === 'Madrugá' ? ' es ' : ' cae ') + cuandoCae(h.d) + '.');
@@ -538,7 +539,7 @@
           if (!R) { P(r, 'El itinerario ' + cabecera(h, 'de') + ' no lo tengo todavía. Sale ' + art(h.d) + (sal ? ' ' + sal : '') + (h.se ? ' desde ' + conArt(h.se) : '') + '.'); A(r, [['Ver la ficha', L.herm(h)]]); break; }
           // de qué son las horas del recorrido, solo si la fuente lo dice (h.rk); las dos salidas, solo si cuadran (coherente)
           const dosSal = coherente(h) && R.k === h.rk, kR = dosSal ? h.rk : null;
-          P(r, 'Recorrido ' + cabecera(h, 'de') + ', ' + art(h.d) + ' (itinerario ' + (CD.anio || '') + (dosSal ? '). Son las horas del ' + kR + ': la cruz de guía sale a las ' + h.h + (h.hc ? ' (y llega a la carrera oficial a las ' + h.hc + ')' : '') + ' y el ' + kR + ', a las ' + R.p[0][0] + ':' : (h.rk ? ', horas ' + (h.rk === 'cruz de guía' ? 'de la cruz de guía' : 'del ' + h.rk) : '') + '):'));
+          P(r, 'Recorrido ' + cabecera(h, 'de') + ', ' + art(h.d) + ' (itinerario ' + (CD.anio || '') + (dosSal ? '). Son las horas del ' + kR + (R.f ? ' según el ' + R.f.replace(/^Programa/, 'programa') : '') + '; la salida oficial, la de la cruz de guía, es a las ' + h.h + (h.hc ? ' (y llega a la carrera oficial a las ' + h.hc + ')' : '') + ':' :(h.rk ? ', horas ' + (h.rk === 'cruz de guía' ? 'de la cruz de guía' : 'del ' + h.rk) : '') + '):'));
           const rr = resumirRuta(R.p);
           LI(r, rr.map((p, i) => ({ x: (kR && (i === 0 || i === rr.length - 1) && /^(salida|entrada)$/i.test(p[1] || '') ? bonito(p[1]) + ' del ' + kR : bonito(p[1])) || '—', sub: (p[2] ? '' : '≈ ') + p[0] })));
           P(r, rr.some((p) => !p[2]) ? '«≈» es hora aproximada (franja de media hora). Puede ir adelantada o retrasada.' : 'Son las horas del programa: el cortejo puede ir adelantado o retrasado.');

@@ -2301,7 +2301,7 @@ function datosCunao() {
       const mi = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; }, of = mi(h.hora);
       const raro = of != null && Object.values(tr).some((v) => { const s = (v || []).find((p) => /^salida$/i.test(p.lugar || '') && mi(p.hora || p.fila) != null); if (!s) return false; let d = mi(s.hora || s.fila) - of; /* también las horas aproximadas (fila) */ if (d > 720) d -= 1440; if (d < -720) d += 1440; return d < -5; });
       const rk = h.ciudad === 'cordoba' ? 'cruz de guía' : k === 'cruz de guía' ? k : !raro && tr['cruz de guía'] && tr[k] && /^(palio|paso)$/.test(k) ? k : null;
-      if (rk) o.rk = rk;
+      if (rk) { o.rk = rk; const rf = R[h.ciudad].r[h.slug].f; if (rf) o.rf = rf; } // rf: la fuente de esas horas («Programa de Canal Sur Radio…»)
     }
     // hora oficial de paso por la carrera oficial (nómina de la capital), si la hay
     if (hhmm(h.hora_carrera)) { o.hc = hhmm(h.hora_carrera); o.lc = h.lugar_carrera || ''; }
