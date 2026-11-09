@@ -140,6 +140,8 @@ const BANDA = Object.fromEntries(D.bandas.map((b) => [b.slug, b]));
 const BANDA_UNIDA = D.bandas_unidas || {};
 const HERM = Object.fromEntries(D.hermandades.map((h) => [h.slug, h]));
 // Marchas dedicadas: una por título+compositor+hermandad, con ficha propia
+// Tramos de cada itinerario tal como los da su fuente (cruz de guía, paso, palio…): para saber de qué parte del cortejo son las horas
+const ITI26 = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, '..', 'tools', 'sources', 'itinerarios-2026.json'), 'utf8')).hermandades || {}; } catch { return {}; } })();
 const HABITOS_FILE = path.join(DIR, '..', 'tools', 'sources', 'habitos.json');
 const HABITOS = fs.existsSync(HABITOS_FILE) ? JSON.parse(fs.readFileSync(HABITOS_FILE, 'utf8')) : {};
 // Colores del hábito por sección y prenda (tools/sources/habitos-colores.json, transcritos del texto de habitos.json; se comprueban con tools/diseno/comprobar-habitos-colores.mjs)
@@ -2287,8 +2289,18 @@ function datosCunao() {
     if (h.musica) o.mu = h.musica;
     if ((h.marchas || []).length) o.nm = h.marchas.length;
     if ((h.salidas || []).length) o.x = h.salidas.map((s) => [s.dia, hhmm(s.hora), s.sede || '', s.titulares || '']);
-    // rk: de qué son las horas del itinerario («paso», «palio» o «cruz de guía»); las oficiales (h, hc) son de la cruz de guía
-    const r = resumen(h.ciudad, h.slug); if (r) { o.r = r; const rk = R[h.ciudad].r[h.slug].k; if (rk) o.rk = rk; }
+    // rk: de qué parte del cortejo son las horas del itinerario, solo cuando la fuente lo distingue (auditoría del bloque 7):
+    // Córdoba, la columna CRUZ DE GUÍA del PDF oficial; Sevilla, Huelva y Jaén, el tramo «palio» o «paso» si la fuente trae
+    // además el de la cruz de guía. En las demás (Málaga, Granada, Almería, Cádiz) la fuente no lo dice: sin rk.
+    const r = resumen(h.ciudad, h.slug); if (r) {
+      o.r = r; const k = R[h.ciudad].r[h.slug].k, tr = (ITI26[h.slug] || {}).tramos || {};
+      // si algún tramo de la fuente sale antes que la cruz de guía oficial, la ficha está mal leída (Santa Marta: palio a las 13:30
+      // con la cruz a las 18:10): no se dice de qué son las horas
+      const mi = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; }, of = mi(h.hora);
+      const raro = of != null && Object.values(tr).some((v) => { const s = (v || []).find((p) => /^salida$/i.test(p.lugar || '') && mi(p.hora) != null); if (!s) return false; let d = mi(s.hora) - of; if (d > 720) d -= 1440; if (d < -720) d += 1440; return d < -5; });
+      const rk = h.ciudad === 'cordoba' ? 'cruz de guía' : k === 'cruz de guía' ? k : !raro && tr['cruz de guía'] && tr[k] && /^(palio|paso)$/.test(k) ? k : null;
+      if (rk) o.rk = rk;
+    }
     // hora oficial de paso por la carrera oficial (nómina de la capital), si la hay
     if (hhmm(h.hora_carrera)) { o.hc = hhmm(h.hora_carrera); o.lc = h.lugar_carrera || ''; }
     if (HABITOS[h.slug] && HABITOS[h.slug].texto) o.ha = 1;

@@ -449,9 +449,18 @@ caso('B7-1 compositor casi entero frente a «el Puerto de la Torre»', motor(), 
 caso('B7-2 compositor casi entero frente a «el Valle»', motor(), 'marchas de Juan Luís del Valle Pérez', contiene('del Valle Pérez tengo'));
 caso('B7-3 la hermandad sigue mandando si no hay compositor', motor(), 'marchas de la Virgen del Valle de Sevilla', contiene('dedicadas al Valle'));
 // cruz de guía y palio: dos horas de salida distintas, y cada vista dice cuál es cuál (aviso de Marketing con la Esperanza de Triana)
-caso('B7-4 recorrido: dice que son horas del palio y la salida de la cruz de guía', motor(), '¿Por dónde pasa la Esperanza de Triana?', contiene('la cruz de guía sale a las 01:19 y el palio, a las 03:07', 'Salida del palio'));
+caso('B7-4 recorrido: dice que son horas del palio y la salida de la cruz de guía', motor(), '¿Por dónde pasa la Esperanza de Triana?', contiene('la cruz de guía sale a las 01:19 (y llega a la carrera oficial a las 05:06) y el palio, a las 03:07', 'Salida del palio'));
 caso('B7-5 hora: la de la cruz de guía, y la del palio aparte', motor(), '¿A qué hora sale la Esperanza de Triana?', y(contiene('01:19', 'Esa es la hora de la cruz de guía; el palio sale a las 03:07'), (r) => { const tl = r.partes.find((p) => p.t === 'tl'); return tl && /cruz de guía/.test(tl.nota) && /palio/.test(tl.nota) ? true : 'la línea de tiempo no dice de qué es cada hora: ' + (tl && tl.nota); }));
 caso('B7-6 sin dos salidas distintas no se añade nada', motor(), '¿A qué hora sale el Cautivo de Málaga?', noDice('Esa es la hora de la cruz de guía'));
+// la auditoría del bloque 7: la segunda salida solo si el tramo cuadra, y la referencia solo si la fuente la da
+const notaTL = (re) => (r) => { const tl = r.partes.find((p) => p.t === 'tl'); return tl && re.test(tl.nota) ? true : 'nota: ' + (tl && tl.nota); };
+caso('B7-7 el Cachorro: su tramo «paso» es de otra hermandad, sin segunda salida', motor(), '¿A qué hora sale el Cachorro de Sevilla?', y(noDice('Esa es la hora de la cruz de guía'), notaTL(/^Horas del programa/)));
+caso('B7-8 La Paz: el «paso» sale después de que la cruz llegue a la carrera, sin segunda salida', motor(), '¿A qué hora sale La Paz de Sevilla?', noDice('el paso sale'));
+caso('B7-9 la Vera Cruz: sin «Salida del palio» si no cuadra', motor(), '¿Por dónde pasa la Vera Cruz de Sevilla?', noDice('Salida del palio'));
+caso('B7-10 Málaga: la fuente no dice de qué son las horas, nota neutra', motor(), '¿A qué hora sale el Cautivo de Málaga?', y(notaTL(/^Horas del programa/), noDice('cruz de guía')));
+caso('B7-11 Granada: el recorrido sin «horas del paso»', motor(), '¿Por dónde pasa la Borriquilla de Granada?', y(noDice('horas del paso', 'Salida del paso'), contiene('itinerario 2026)')));
+caso('B7-12 Córdoba: horas de la cruz de guía (columna CRUZ DE GUÍA del PDF oficial)', motor(), '¿A qué hora sale la Expiración de Córdoba?', notaTL(/^Horas de la cruz de guía/));
+caso('B7-13 Santa Marta: tramos mal leídos en la fuente, sin referencia', motor(), '¿A qué hora sale Santa Marta de Sevilla?', y(noDice('Esa es la hora de la cruz de guía'), notaTL(/^Horas del programa/)));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
