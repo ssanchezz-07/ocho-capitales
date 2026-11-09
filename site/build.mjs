@@ -2299,7 +2299,7 @@ function datosCunao() {
       // si algún tramo de la fuente sale antes que la cruz de guía oficial, la ficha está mal leída (Santa Marta: palio a las 13:30
       // con la cruz a las 18:10): no se dice de qué son las horas
       const mi = (t) => { const m = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; }, of = mi(h.hora);
-      const raro = of != null && Object.values(tr).some((v) => { const s = (v || []).find((p) => /^salida$/i.test(p.lugar || '') && mi(p.hora) != null); if (!s) return false; let d = mi(s.hora) - of; if (d > 720) d -= 1440; if (d < -720) d += 1440; return d < -5; });
+      const raro = of != null && Object.values(tr).some((v) => { const s = (v || []).find((p) => /^salida$/i.test(p.lugar || '') && mi(p.hora || p.fila) != null); if (!s) return false; let d = mi(s.hora || s.fila) - of; /* también las horas aproximadas (fila) */ if (d > 720) d -= 1440; if (d < -720) d += 1440; return d < -5; });
       const rk = h.ciudad === 'cordoba' ? 'cruz de guía' : k === 'cruz de guía' ? k : !raro && tr['cruz de guía'] && tr[k] && /^(palio|paso)$/.test(k) ? k : null;
       if (rk) o.rk = rk;
     }

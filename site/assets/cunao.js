@@ -324,6 +324,9 @@
           for (const t of new Set(q)) { const w = x.F.has(t) ? 1 : x.M.has(t) ? 0.7 : x.W.has(t) ? 0.35 : 0; if (w) { s += w * idf(t); usadas.push(t); } }
           for (const f of x.frases) if (new RegExp('(^| )' + f + '( |$)').test(e.tSinDia != null ? e.tSinDia : e.t)) { s += f.indexOf(' ') > 0 && APODOS.some((a) => a[0] === f) ? 8 : x.nombre.has(f) ? 5 : 4; frase = f; break; }
           if (s <= 0) continue;
+          // la que casa con todas las palabras de la pregunta («el Cristo de las Tres Caídas de Triana»: su titular y su nombre) gana a
+          // la que solo casa con parte, aunque sea por su nombre (las Tres Caídas de Huelva)
+          const qs = [...new Set(q)]; if (qs.length >= 3 && usadas.length === qs.length) s += 5;
           if (dias && (dias.indexOf(x.h.d) >= 0 || (x.h.x || []).some((v) => dias.indexOf(v[0]) >= 0))) s += 1;
           if (!filtroCiudad && ctx.ciudad === x.h.c) s += 0.4;
           else if (!filtroCiudad && pagina() === x.h.c) s += 0.3;

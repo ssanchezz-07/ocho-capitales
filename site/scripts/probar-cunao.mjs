@@ -463,6 +463,9 @@ caso('B7-12 Córdoba: horas de la cruz de guía (columna CRUZ DE GUÍA del PDF o
 caso('B7-13 Santa Marta: tramos mal leídos en la fuente, sin referencia', motor(), '¿A qué hora sale Santa Marta de Sevilla?', y(noDice('Esa es la hora de la cruz de guía'), notaTL(/^Horas del programa/)));
 caso('B7-14 autoría según la hermandad: anónimo, con la atribución tradicional sin base', motor(), '¿Quién talló las imágenes de la Esperanza de Triana?', y(contiene('Anónimo, entre 1608 y 1616 (atribuido tradicionalmente a Marcos Cabrera, sin base documental según la hermandad)'), noDice('Atribuido a Marcos Cabrera')));
 caso('B7-15 en su imaginero, la obra con la nota, no como obra suya sin más', motor(), 'obras de Marcos Cabrera', contiene('o que se le atribuyen', 'sin base documental'));
+caso('B7-16 «el Cristo de las Tres Caídas de Triana» es la Esperanza de Triana, no las Tres Caídas de Huelva', motor(), '¿Quién talló el Cristo de las Tres Caídas de Triana?', y(contiene('Esperanza de Triana'), noDice('León Ortega')));
+caso('B7-17 y el de Huelva sigue siendo el de Huelva', motor(), '¿Quién talló el Cristo de las Tres Caídas de Huelva?', contiene('León Ortega'));
+caso('B7-18 Vera Cruz: tramo del palio con hora aproximada antes que la cruz oficial, sin «horas del palio»', motor(), '¿Por dónde pasa la Vera Cruz de Sevilla?', noDice('horas del palio'));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
