@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T12:18:36.669Z",
+ "generado": "2026-11-09T12:24:21.813Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -11282,7 +11282,7 @@
    },
    "cristo": {
     "w": 960,
-    "h": 1280,
+    "h": 1286,
     "widths": [
      160,
      480,
@@ -11293,10 +11293,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hdad.salesianosgranada/",
-    "foco": "46% 17%",
+    "foco": "45% 15%",
     "cedida": true,
     "local": "scripts/cedidas/granada/los-salesianos-granada-cristo.jpg",
-    "tam": 302788,
+    "tam": 329219,
     "titular": "Santísimo Cristo de la Redención"
    }
   },
@@ -12772,7 +12772,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/hdad.salesianosgranada/\"|\"scripts/cedidas/granada/los-salesianos-granada-cristo.jpg\"|302788|\"\"|\"46% 17%\"|\"https://www.instagram.com/hdad.salesianosgranada/\"|\"scripts/cedidas/granada/los-salesianos-granada-virgen.jpg\"|510911|\"\"|\"50% 30%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/hdad.salesianosgranada/\"|\"scripts/cedidas/granada/los-salesianos-granada-cristo.jpg\"|329219|\"\"|\"45% 15%\"|\"https://www.instagram.com/hdad.salesianosgranada/\"|\"scripts/cedidas/granada/los-salesianos-granada-virgen.jpg\"|510911|\"\"|\"50% 30%\"|\"\"|\"\""
   },
   "el-prendimiento-huelva": {
    "w": 960,
