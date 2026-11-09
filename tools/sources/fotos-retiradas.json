@@ -44,7 +44,8 @@
   "La_Soledad_Huelva.JPG": "Commons la pone en la categoría de la Hermandad del Santo Entierro: no está claro que sea la Soledad del Silencio. (antes retirada solo en el-silencio-la-soledad-huelva|virgen)",
   "Nuestra_Señora_de_la_Esperanza.jpg": "Original de 450 px con un escudo sobreimpreso: no da la calidad. (antes retirada solo en la-esperanza-huelva|virgen)",
   "Dolores_Huelva.jpg": "Es la Virgen de los Dolores de la Hermandad de la Lanzada de Huelva (categoría «Hermandad de la Sagrada Lanzada, Huelva»), no la del Perdón. (antes retirada solo en el-perdon-huelva|virgen)",
-  "CristoYacenteHuelva.jpg": "Original de 422 px: no da la calidad. (antes retirada solo en el-santo-entierro-huelva|cristo)"
+  "CristoYacenteHuelva.jpg": "Original de 422 px: no da la calidad. (antes retirada solo en el-santo-entierro-huelva|cristo)",
+  "-Santísimo_Cristo_de_la_Expiración-.jpg": "Lleva sobreimpreso el escudo y el texto «HERMANDAD DE SAN FRANCISCO» (abajo a la derecha, un 13 % del alto): marca de la hermandad y autoría dudosa (auditor-imagenes, 9-nov). (antes retirada solo en la-esperanza-huelva|cristo)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -498,10 +499,6 @@
   "el-cautivo-jaen|ficha": {
    "archivo": "Cautivo_Jaén.png",
    "motivo": "La misma foto con marca de agua."
-  },
-  "la-esperanza-huelva|cristo": {
-   "archivo": "-Santísimo_Cristo_de_la_Expiración-.jpg",
-   "motivo": "Lleva sobreimpreso el escudo y el texto «HERMANDAD DE SAN FRANCISCO» (abajo a la derecha, un 13 % del alto): marca de la hermandad y autoría dudosa (auditor-imagenes, 9-nov)."
   }
  },
  "no_portada": {

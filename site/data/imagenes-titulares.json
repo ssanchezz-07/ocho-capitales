@@ -1845,13 +1845,15 @@
   },
   "la-esperanza-huelva": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:-Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n-.jpg",
-    "titulo": "File:-Santísimo Cristo de la Expiración-.jpg",
-    "autor": "Alvarito 9595",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "La Esperanza (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/esperanzahuelvaoficial/",
+    "local": "scripts/cedidas/huelva/la-esperanza-huelva-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Expiración",
     "titular": "Santísimo Cristo de la Expiración",
-    "foco": "50% 49%"
+    "foco": "52% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @esperanzahuelvaoficial (la que enlaza esperanzadehuelva.com y el Consejo de Huelva; https://www.instagram.com/p/DfPBBbNS0ng/), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad y su degradado. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    },
    "virgen": {
     "autor": "La Esperanza (Huelva)",

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T16:14:17.012Z",
+ "generado": "2026-11-09T16:28:33.569Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6100,20 +6100,23 @@
     "titular": "Nuestra Señora de la Esperanza Coronada"
    },
    "cristo": {
-    "w": 683,
-    "h": 1024,
+    "w": 960,
+    "h": 792,
     "widths": [
      160,
      480,
-     683
+     960
     ],
     "escudo": false,
-    "autor": "Alvarito 9595",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:-Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n-.jpg",
-    "titular": "Santísimo Cristo de la Expiración",
-    "foco": "50% 49%"
+    "autor": "La Esperanza (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/esperanzahuelvaoficial/",
+    "foco": "52% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-esperanza-huelva-cristo.jpg",
+    "tam": 185286,
+    "titular": "Santísimo Cristo de la Expiración"
    }
   },
   "los-judios-la-merced-huelva": {
@@ -12120,6 +12123,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n2_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "la-esperanza-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/esperanzahuelvaoficial/\"|\"scripts/cedidas/huelva/la-esperanza-huelva-cristo.jpg\"|185286|\"\"|\"52% 25%\"|\"https://www.instagram.com/esperanzahuelvaoficial/\"|\"scripts/cedidas/huelva/la-esperanza-huelva-virgen.jpg\"|546970|\"\"|\"42% 30%\"|\"\"|\"\""
   },
   "los-judios-la-merced-huelva": {
    "w": 960,
