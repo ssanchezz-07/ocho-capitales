@@ -1272,7 +1272,7 @@
       }
       if (COFRADE.test(t) || /«|"/.test(t)) return null;
       if (/\b(chiste|chistes|algo gracioso)\b/.test(t)) { P(r, 'Chistes, pocos, que estoy de servicio. Pero el de siempre: «¿A qué hora sale?», «A su hora, cuñao, que esto no es el autobús».'); return cerrar(r); }
-      if (/\b(comer|comida|restaurante\w*|tapear|bares|hotel\w*|hostal\w*|alojamiento|dormir|apartamento\w*|tren|trenes|(el|en) ave|autobus\w*|aparcar|aparcamiento|parking|vuelos?|avion|taxi|como llego)\b/.test(t)) { P(r, 'De comer, dormir o llegar no sé, cuñao: lo mío son las cofradías. Eso, mejor en la oficina de turismo de la ciudad. Lo que sí te digo es qué sale cada día, a qué hora y por dónde pasa.'); r.flojo = true; return cerrar(r); }
+      if (/\b(comer|comida|restaurante\w*|tapear|bares|hotel\w*|hostal\w*|alojamiento|dormir|apartamento\w*|tren|trenes|(el|en) ave|autobus\w*|aparcar|aparcamiento|parking|vuelos?|avion|taxi)\b/.test(t)) { P(r, 'De comer, dormir o llegar no sé, cuñao: lo mío son las cofradías. Eso, mejor en la oficina de turismo de la ciudad. Lo que sí te digo es qué sale cada día, a qué hora y por dónde pasa.'); r.flojo = true; return cerrar(r); }
       if (/\b(betis|sevilla fc|futbol|mundial|liga|champions|partido)\b/.test(t)) { P(r, 'De fútbol no hablo, cuñao, que en Cuaresma hay paz. Pregúntame de cofradías.'); r.flojo = true; return cerrar(r); }
       return null;
     }
