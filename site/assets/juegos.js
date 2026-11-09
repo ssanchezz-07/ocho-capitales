@@ -159,9 +159,11 @@
     const distintos = (l) => l.filter((c, k) => l.findIndex((d) => Math.hypot(c[0] - d[0], c[1] - d[1], c[2] - d[2]) < 30) === k);
     const cerca = (c, l) => l.some((d) => Math.hypot(c[0] - d[0], c[1] - d[1], c[2] - d[2]) < 60);
     const nazParecidos = (a, b) => { const x = distintos(colores(a)), y = distintos(colores(b)); return x.every((c) => cerca(c, y)) && y.every((c) => cerca(c, x)); };
+    // una imagen (nazareno, foto o recorrido) que comparten dos cofradías distintas de la misma capital no sirve de pista: valdrían las dos
+    const compartida = (campo, h) => H.some((x) => x !== h && x.c === h.c && x[campo] === h[campo]);
     function adivina(z, f, modo) {
       const campo = { naz: 'nz', foto: 'fo', ruta: 'ru' }[modo];
-      const l = H.filter((h) => h[campo] >= 0 && h[campo] != null && (!f.c || h.c === f.c)); if (!l.length) return null;
+      const l = H.filter((h) => h[campo] >= 0 && h[campo] != null && (!f.c || h.c === f.c) && !compartida(campo, h)); if (!l.length) return null;
       const h = z.pick(l);
       // las otras tres, de la misma capital (y de la misma jornada si se puede, que se parezcan); con su propio dibujo distinto
       // por el nazareno, solo otras con su hábito conocido y distinto: si no, podría valer más de una
@@ -237,8 +239,11 @@
     }
 
     // ================= Adivina la marcha (sin audio: por su dedicatoria y su compositor) =================
+    // la pista es compositor + año + dedicatoria: si dos títulos la comparten, la pregunta tendría dos respuestas buenas y no se hace
+    const pistaM = (m) => norm(m.a) + '|' + (m.y || '') + '|' + m.h.s, nPista = new Map();
+    M.forEach((m) => nPista.set(pistaM(m), (nPista.get(pistaM(m)) || 0) + 1));
     function marcha(z, f) {
-      const l = M.filter((m) => !f.c || m.h.c === f.c); if (!l.length) return null;
+      const l = M.filter((m) => (!f.c || m.h.c === f.c) && nPista.get(pistaM(m)) === 1); if (!l.length) return null;
       const m = z.pick(l);
       // las otras: del mismo compositor (si tiene) o de la misma capital; ninguna dedicada a esa cofradía
       let malas = M.filter((x) => x.a === m.a && x.h !== m.h).map((x) => x.t);

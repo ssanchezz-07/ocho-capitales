@@ -4,6 +4,19 @@
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
 - No se tocan el Nuestro Padre Jesús de las Tres Caídas de Granada (otra hermandad) ni los textos de dedicatoria de las marchas, que citan su fuente.
+## 2026-11-09 · Juegos: una pista, una respuesta (aviso de Marketing en «Adivina la marcha»)
+Marketing vio que la pista «Felipe Trujillo Lira, 2013» aparecía con dos dedicatorias. Las dos son correctas, según la Federación de Granada (hermandadesdegranada.com):
+- «De San Matías… al cielo» está dedicada a la Paciencia y Penas, cuya sede es San Matías;
+- «Rescatado en la Magdalena» está dedicada a Jesús del Rescate, en la parroquia de la Magdalena.
+
+Al revisarlo con una prueba nueva salieron otros casos del mismo tipo.
+
+**Elegido**
+- **«Adivina la marcha» no pregunta por una pista (compositor, año y dedicatoria) que comparten dos títulos.** Había 10: Pedro Morales Muñoz en 2000 para la Misión, las dos «Lágrimas» de Bendición y Esperanza, los dos motetes de la Santa Cruz…
+- **«¿Qué hermandad es?» no pregunta por una imagen que comparten dos cofradías de la misma capital.** En Sevilla, 20 dibujos de nazareno se repiten (las túnicas negras o moradas lisas). Siguen quedando 27 distinguibles en Sevilla y 16 o más en cada capital.
+- **`probar-juegos.mjs` comprueba que la misma pista no lleve a dos respuestas buenas.** Se mira el enunciado con su imagen o sus pistas. En los juegos de «¿Cuál de estas…?» cuentan también las opciones.
+- **«José Luís de la Torre Castellano» pasa a «José Luis»,** porque la fuente de Granada traía a la misma persona de las dos formas y salía como dos compositores. Se ha corregido en `granada-marchas.json` y en `marchas.json`, y en `unificar-marchas.mjs` (AUTOR_GRAFIA) para que no vuelva. Los otros «Luís» del catálogo no se tocan: en gallego o portugués es correcto y no sabemos cómo firma cada uno.
+- **erCuñao: un compositor nombrado casi entero manda sobre una hermandad que solo casa con una palabra.** Por ejemplo, «marchas de José Luis de la Torre Castellano» ya no lleva al Puerto de la Torre.
 
 ## 2026-11-09 · Hábito de la Crucifixión (Málaga), según la propia hermandad
 La hermandad escribió a Pablo (captura en las notas de Coordinación) que el hábito publicado, tomado de agrupaciondecofradias.com, estaba mal. Lo correcto, en sus palabras: en las dos secciones, túnica morada, capa negra con el escudo, capirote negro y guantes negros; los hombres de trono, túnica negra con cuello y bocamangas morados y guantes negros.

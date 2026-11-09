@@ -94,6 +94,7 @@ function comprueba(p) {
 
 let ok = 0; const fallos = new Map(), cuenta = new Map();
 const CAPS = [''].concat(J.caps.map((c) => c[0]));
+const PISTAS = new Map();
 for (const juego of Object.keys(motor.JUEGOS)) {
   for (let s = 1; s <= 160; s++) {
     const f = { c: CAPS[s % CAPS.length], nivel: ['mezcla', 'facil', 'media', 'cofrade'][s % 4], modo: ['mezcla', 'naz', 'foto', 'ruta'][s % 4] };
@@ -101,6 +102,16 @@ for (const juego of Object.keys(motor.JUEGOS)) {
     if (!ps.length && f.c === '') { fallos.set(juego + ': partida vacía', (fallos.get(juego + ': partida vacía') || 0) + 1); continue; }
     for (const p of ps) {
       cuenta.set(juego + ' · ' + p.cat, (cuenta.get(juego + ' · ' + p.cat) || 0) + 1);
+      // dos preguntas con la misma pista (enunciado, imagen o pistas) no pueden tener respuestas buenas distintas
+      // (en «El intruso» el enunciado es genérico y la pista son las opciones: ahí cuenta el enunciado con las opciones)
+      if (!p.ordenar && p.op) {
+        const base = p.q + '¦' + JSON.stringify(p.media ? [p.media.k, p.media.i] : null) + '¦' + JSON.stringify(p.pistas || null), buena = p.op[p.ok];
+        // el enunciado solo (con su imagen o sus pistas) en los juegos que señalan una sola cosa; en los demás («¿Cuál de estas…?»), con las opciones
+        const unica = ['Marchas', 'Nazarenos', 'Titulares', 'Recorridos', 'Pistas'].indexOf(p.cat) >= 0;
+        for (const kp of unica ? [base, base + '¦' + [...p.op].sort().join('|')] : [base + '¦' + [...p.op].sort().join('|')]) {
+          const ya = PISTAS.get(kp); if (ya == null) PISTAS.set(kp, buena); else if (ya !== buena) { const k = juego + ' · ' + p.cat + ': la misma pista con dos respuestas buenas'; if (!fallos.has(k)) fallos.set(k, { n: 0, ej: p.q + ' → «' + ya + '» y «' + buena + '»' }); fallos.get(k).n++; }
+        }
+      }
       const e = comprueba(p);
       if (e) { const k = juego + ' · ' + p.cat + ': ' + e; if (!fallos.has(k)) fallos.set(k, { n: 0, ej: p.q + ' → ' + p.op.join(' | ') + ' [' + (p.ordenar ? p.solucion.join(',') : p.ok) + ']' }); fallos.get(k).n++; }
       else ok++;

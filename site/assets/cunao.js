@@ -1399,6 +1399,13 @@
           return cerrar(r);
         }
       }
+      // un compositor nombrado casi entero («marchas de José Luis de la Torre Castellano», «de Juan Luís del Valle Pérez») manda sobre la
+      // hermandad que solo casa con una de sus palabras («el Puerto de la Torre», «el Valle»)
+      if ((intent == null || intent === 'marchas' || intent === 'compositor') && !e.dia && e.toks.filter((t) => t.length > 2).length >= 3) {
+        if (!MD['m/autores']) return necesitaVarios(['m/autores']);
+        const au = buscarAutor(e), top = bh.elegida || bh.lista[0];
+        if (au.length && au[0].k >= 3 && au[0].cubre >= 0.66 && (!top || au[0].k > (top.usadas || []).length)) { const f2 = TROZOS_FALTAN(MD['m/autores'][au[0].i][2].split('')); if (f2.length) return necesitaVarios(f2.map((k) => 'm/' + k)); return respMarchasAutor(au[0].i, e); }
+      }
       // un título de marcha entero («Soberana y Jaenera») manda sobre una hermandad que solo casa con parte de la pregunta
       if ((intent == null || intent === 'marchas') && !e.dia) {
         const top = bh.elegida || bh.lista[0], cn = e.ciudad ? norm(nombreCiudad(e.ciudad)) : '';

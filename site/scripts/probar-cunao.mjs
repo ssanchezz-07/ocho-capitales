@@ -445,6 +445,9 @@ caso('B6-30 «¿qué me recomiendas ver el Jueves Santo en Sevilla?»: la lista,
 caso('B6-31 título con errata: solo los que se llaman así', motor(), 'de quién es la marcha esperansa', noDice('O de Esperanza', '«La Esperanza»'));
 caso('B6-32 hotel en Semana Santa: fuera de tema', motor(), 'hotel barato en malaga para semana santa', contiene('lo mío son las cofradías'));
 caso('B6-33 glosario sin superlativos', motor(), 'qué es la madrugá', noDice('más larga', 'más esperada'));
+caso('B7-1 compositor casi entero frente a «el Puerto de la Torre»', motor(), 'marchas de José Luis de la Torre Castellano', y(contiene('De José Luis de la Torre Castellano tengo'), noDice('Puerto de la Torre')));
+caso('B7-2 compositor casi entero frente a «el Valle»', motor(), 'marchas de Juan Luís del Valle Pérez', contiene('del Valle Pérez tengo'));
+caso('B7-3 la hermandad sigue mandando si no hay compositor', motor(), 'marchas de la Virgen del Valle de Sevilla', contiene('dedicadas al Valle'));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));

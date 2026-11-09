@@ -721,6 +721,10 @@ const FUENTES = {
   rev: { nombre: 'Revisión a mano con fuente (web de la hermandad, de la banda o prensa)', url: '', fiable: true, oficial: true },
   ...FUENTES_REP,
 };
+// grafías de compositor corregidas: la fuente trae a la misma persona escrita de dos formas y saldría como dos compositores
+// («José Luís» con tilde, que en castellano no lleva; Marketing y Coordinación, 9-nov-2026)
+const AUTOR_GRAFIA = { 'José Luís de la Torre Castellano': 'José Luis de la Torre Castellano' };
+limpio.forEach((m) => { if (AUTOR_GRAFIA[m.autor]) m.autor = AUTOR_GRAFIA[m.autor]; });
 fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"redirecciones":' + JSON.stringify(redirecciones) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');
 fs.mkdirSync(path.join(RAIZ, 'auditoria'), { recursive: true });
 fs.writeFileSync(path.join(RAIZ, 'auditoria/marchas-informe.json'), JSON.stringify({ ...informe, revision_sin_usar: sinUsar }, null, 1));
