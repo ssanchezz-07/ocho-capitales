@@ -505,7 +505,8 @@ for (const f of ['marchas-hermandades-wikipedia.json', 'marchas-malaga.json']) {
   for (const [slug, campos] of Object.entries(FC)) {
     const h = hermandades.find((x) => x.slug === slug); if (!h) { console.warn('Corrección de una ficha que no está:', slug); continue; }
     for (const [campo, c] of Object.entries(campos)) {
-      if (campo === 'titulares_renombrar') { for (const [viejo, n] of Object.entries(c)) { const t = h.titulares.find((x) => x.nombre === viejo); if (t) { t.nombre = n.nombre; t.nombre_fuente = n.fuente; } } continue; }
+      // el nombre nuevo también en las obras de su imaginero (el índice de imagineros se arma antes, con el nombre original)
+      if (campo === 'titulares_renombrar') { for (const [viejo, n] of Object.entries(c)) { const t = h.titulares.find((x) => x.nombre === viejo); if (t) { t.nombre = n.nombre; t.nombre_fuente = n.fuente; } for (const im of imgOut) for (const o of im.obras || []) if (o.hermandad_slug === slug && o.titular === viejo) o.titular = n.nombre; } continue; }
       if (campo === 'titulares') { if (!h.titulares.length) { h.titulares = c.valor.map((n) => ({ nombre: n, autor: '', imaginero: '', atrib: false, nombre_fuente: c.fuente })); } continue; }
       h[campo] = c.valor;
       if (c.fuente && campo !== 'fuente_url') (h.relleno_fuentes = h.relleno_fuentes || {})[campo] = c.fuente;

@@ -3,6 +3,7 @@
 ## 2026-11-09 · Esperanza de Triana: nombres de sus titulares según la hermandad
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
+- Auditoría (NO APTO): la página del imaginero Marcos Cabrera seguía con el nombre viejo, porque `build-data.js` arma el índice de imagineros antes de aplicar `titulares_renombrar`. Ahora el renombrado llega también a las obras del imaginero, y con eso se arregla de paso «María Santísima titular» de la Lanzada de Huelva en la ficha de Manuel Domínguez Rodríguez. También se cambia el titular en `titulares-candidatas.json`, para que no vuelva el nombre viejo si se rehacen las fotos.
 - No se tocan el Nuestro Padre Jesús de las Tres Caídas de Granada (otra hermandad) ni los textos de dedicatoria de las marchas, que citan su fuente.
 
 ## 2026-11-09 · Juegos: una pista, una respuesta (aviso de Marketing en «Adivina la marcha»)
