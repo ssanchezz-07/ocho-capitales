@@ -1460,10 +1460,14 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-calle-dias button { flex: none; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--line-strong) 60%, transparent); background: var(--surface); color: var(--ink); font-weight: 600; cursor: pointer; transition: transform 140ms var(--ease-out), background-color 200ms var(--ease-out); }
 .oc-calle-dias button:active { transform: scale(.96); }
 .oc-calle-dias [aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
-.oc-calle-mapa { position: relative; height: min(68svh, 640px); margin: 0 calc(-1 * var(--gutter)); overflow: hidden; background: radial-gradient(120% 90% at 30% 0%, #3a1a52, #1a0b26 70%); touch-action: none; }
+.oc-calle-mapa { position: relative; height: min(68svh, 640px); margin: 0 calc(-1 * var(--gutter)); overflow: hidden; contain: layout paint; background: radial-gradient(120% 90% at 30% 0%, #3a1a52, #1a0b26 70%); touch-action: none; }
 @media (min-width: 860px) { .oc-calle-mapa { margin-inline: 0; border-radius: 24px; box-shadow: 0 30px 60px -40px rgb(20 8 29 / .8); } }
+/* un 50 % mayor que la vista y centrado (calle.js, «vista en caliente»): al arrastrar o pellizcar hay margen ya pintado */
+.oc-calle-capa { position: absolute; left: -25%; top: -25%; width: 150%; height: 150%; transform-origin: 0 0; will-change: transform; contain: strict; }
 .oc-calle-svg { display: block; width: 100%; height: 100%; cursor: grab; user-select: none; -webkit-user-select: none; }
 .oc-calle-svg:active { cursor: grabbing; }
+/* lo que no se toca no entra en el «hit test» del navegador (con rutas largas costaba en cada paso del zoom); los medallones sí */
+.oc-c-rutas, .oc-c-nombres, .oc-c-guias, .oc-c-cortejos { pointer-events: none; }
 .oc-c-calles { fill: none; stroke: rgb(240 230 250 / .16); stroke-width: 1.1px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .oc-c-princ { fill: none; stroke: rgb(240 230 250 / .3); stroke-width: 2.4px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .oc-c-templos path { stroke: rgb(240 215 156 / .55); stroke-width: 1.4px; vector-effect: non-scaling-stroke; }
@@ -1919,7 +1923,32 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
 /* una salida extraordinaria sola en su jornada (calle.js, «is-sola»): su recorrido se ve sin elegirla */
 .oc-c-ruta.is-sola { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: .85; stroke-width: 4px; }
-.oc-c-ruta.is-sola.is-regreso { stroke-dasharray: 10 7; }
+/* Trazo de la salida extraordinaria (Pablo, 9-nov: «más definido y minimalista»): un solo trazo continuo con filo oscuro, el regreso
+   más fino y apagado (sin rayas), flechas de sentido y un punto en su templo y en el del acto. Tres propuestas: data-estilo a, b, c */
+.oc-c-ruta.is-sola, .oc-c-ruta.is-sola.is-sel { display: inline; filter: none; stroke-dasharray: none; stroke: #f0d79c; stroke-opacity: 1; stroke-width: 3.5px; }
+.oc-c-ruta.is-sola.is-regreso, .oc-c-ruta.is-sola.is-sel.is-regreso { stroke-dasharray: none; stroke-width: 2.25px; stroke-opacity: .6; }
+.oc-c-ruta-filo { display: none; fill: none; stroke: #12061b; stroke-opacity: .9; stroke-width: 7px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.oc-c-ruta-filo.is-sola { display: inline; }
+.oc-c-ruta-filo.is-regreso { stroke-width: 5px; stroke-opacity: .55; }
+.oc-c-sentido { pointer-events: none; }
+.oc-c-flecha { fill: #f0d79c; stroke: #12061b; stroke-width: 1.2px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.oc-c-flecha.is-regreso { fill: #a8987a; }
+.oc-c-hito { fill: #f0d79c; stroke: #12061b; stroke-width: 2.5px; vector-effect: non-scaling-stroke; }
+.oc-calle-leyenda.is-sola .is-ida::before { border-top: 3.5px solid #f0d79c; }
+.oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2px solid rgb(240 215 156 / .6); }
+/* b) marfil: el trazo en blanco roto y el oro solo en los puntos */
+[data-estilo="b"] .oc-c-ruta.is-sola { stroke: #f6efe0; stroke-width: 3px; }
+[data-estilo="b"] .oc-c-ruta.is-sola.is-regreso { stroke-width: 1.75px; stroke-opacity: .55; }
+[data-estilo="b"] .oc-c-flecha { fill: #f6efe0; }
+[data-estilo="b"] .oc-c-flecha.is-regreso { fill: #a49c95; }
+[data-estilo="b"] .oc-calle-leyenda.is-sola .is-ida::before { border-top: 3px solid #f6efe0; }
+[data-estilo="b"] .oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2px solid rgb(246 239 224 / .55); }
+/* c) dos tonos: ida en oro y regreso en lila claro, los dos continuos */
+[data-estilo="c"] .oc-c-ruta.is-sola.is-regreso { stroke: #c9b4ee; stroke-width: 2.5px; stroke-opacity: .9; }
+[data-estilo="c"] .oc-c-ruta-filo.is-regreso { stroke-opacity: .8; }
+[data-estilo="c"] .oc-c-flecha.is-regreso { fill: #c9b4ee; }
+[data-estilo="c"] .oc-c-hito { fill: #12061b; stroke: #f0d79c; }
+[data-estilo="c"] .oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2.5px solid #c9b4ee; }
 .oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
 .oc-calle-ficha { background: transparent; pointer-events: none; }
 .oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }
@@ -1979,6 +2008,8 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 /* el plano de la ciudad ocupa todo el lienzo y aparece mientras Andalucía se acerca */
 .oc-colg-plano { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 420ms var(--ease-out); will-change: opacity; }
 .oc-portada.is-plano .oc-colg-plano { opacity: 1; view-transition-name: oc-plano; }
+/* plano.js: capa un 50 % mayor que el plano, con el origen del transform en la esquina del plano (16,67 % de la capa) */
+.oc-pl-mueve { position: absolute; left: -25%; top: -25%; width: 150%; height: 150%; transform-origin: 16.6667% 16.6667%; will-change: transform; contain: layout style; }
 .oc-pl-svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
 .oc-pl-base { pointer-events: none; }
 @media (hover: hover) and (pointer: fine) { .oc-pl-svg { cursor: grab; } .oc-pl-svg.is-arrastrando { cursor: grabbing; } }

@@ -56,8 +56,12 @@
     o = o || {};
     // Dos capas con la misma vista: abajo lo fijo (calles y recorridos) y arriba lo que se mueve (cortejos y medallones).
     // Al cambiar la hora solo se repinta la de arriba; repintar miles de calles en cada paso daba tirones.
-    var base = el('svg', { 'class': 'oc-pl-svg oc-pl-base', 'aria-hidden': 'true', focusable: 'false' }, host);
-    var svg = el('svg', { 'class': 'oc-pl-svg oc-pl-capa', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, host);
+    // Las dos van dentro de una capa HTML un 50 % mayor que el plano (margen ya pintado), con el origen de su transform en la esquina
+    // del plano: al pellizcar, arrastrar, girar la rueda o en las animaciones de zoom, la capa se desplaza y escala (lo hace la GPU)
+    // y el plano se vuelve a pintar una sola vez al parar. Antes se repintaba en cada fotograma (calles con máscaras incluidas).
+    var mueve = document.createElement('div'); mueve.className = 'oc-pl-mueve'; host.appendChild(mueve);
+    var base = el('svg', { 'class': 'oc-pl-svg oc-pl-base', 'aria-hidden': 'true', focusable: 'false' }, mueve);
+    var svg = el('svg', { 'class': 'oc-pl-svg oc-pl-capa', role: 'img', 'aria-label': 'Plano de ' + D.nombre + ' con los recorridos de la jornada' }, mueve);
     var mundo = el('g', {}, base);
     // crédito de OpenStreetMap a la vista (lo pide su licencia, ODbL), arriba a la derecha: como en «En la calle»
     var cred = document.createElement('p'); cred.className = 'oc-pl-osm'; cred.innerHTML = 'Plano: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>'; host.appendChild(cred);
@@ -120,7 +124,27 @@
       var cy = vb.y + vb.h / 2; vb.h = vb.w * H() / W(); if (centro) vb.y = cy - vb.h / 2;
       if (!libre()) { var c = limitar(vb); vb.x = c.x; vb.y = c.y; vb.w = c.w; vb.h = vb.w * H() / W(); }
       if (lejanas) pista();
-      var v = vb.x.toFixed(1) + ' ' + vb.y.toFixed(1) + ' ' + vb.w.toFixed(1) + ' ' + vb.h.toFixed(1); base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); Z = vb.w / W(); colocar();
+      Z = vb.w / W(); fijarVista();
+    }
+    // pinta la vista (con su margen del 25 % por cada lado) y la deja sin transform
+    var vbC = null, tVista = 0;
+    function fijarVista() {
+      clearTimeout(tVista); vbC = { x: vb.x, y: vb.y, w: vb.w, h: vb.h };
+      var v = (vb.x - vb.w / 4).toFixed(1) + ' ' + (vb.y - vb.h / 4).toFixed(1) + ' ' + (vb.w * 1.5).toFixed(1) + ' ' + (vb.h * 1.5).toFixed(1);
+      base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); mueve.style.transform = ''; colocar();
+    }
+    // en caliente: la capa ya pintada se desplaza y escala hasta la vista de ahora; si no la cubre o se ha escalado mucho, se pinta ya.
+    // Lo que va encima (medallones, sedes, rótulos) se escala con ella hasta que se pinta al parar (140 ms).
+    function mover() {
+      vb.h = vb.w * H() / W();
+      if (!libre()) { var c = limitar(vb); vb.x = c.x; vb.y = c.y; vb.w = c.w; vb.h = vb.w * H() / W(); }
+      if (!vbC || calm) return aplicar();
+      var w = W(), h = H(), k = vbC.w / vb.w, tx = (vbC.x - vb.x) * w / vb.w, ty = (vbC.y - vb.y) * w / vb.w;
+      var x0 = tx - k * w / 4, y0 = ty - k * h / 4, x1 = tx + k * w * 1.25, y1 = ty + k * h * 1.25;
+      if (k < 0.5 || k > 2.5 || (k >= 0.7 && (x0 > 0 || y0 > 0 || x1 < w || y1 < h))) return aplicar();
+      Z = vb.w / w; if (lejanas) pista();
+      mueve.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
+      clearTimeout(tVista); tVista = setTimeout(aplicar, 140);
     }
     api.vista = function () { return { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; };
     api.caja = function (xs, ys, m) {
@@ -135,11 +159,13 @@
       if (!libre()) c = limitar(c);
       if (calm || !ms) { vb.x = c.x; vb.y = c.y; vb.w = c.w; aplicar(); base.classList.remove('is-volando'); return; }
       var de = { cx: vb.x + vb.w / 2, cy: vb.y + vb.h / 2, w: vb.w }, a = { cx: c.x + c.w / 2, cy: c.y + c.w * H() / W() / 2, w: c.w }, t0 = performance.now();
-      base.classList.add('is-volando');
+      // (las calles menores ya no se apagan durante la animación: no se repintan, solo se escala la capa)
+      // al alejar, se pinta ya el destino (más amplio) y la animación lo escala desde la vista de ahora: nunca asoma su borde
+      if (c.w > vb.w * 1.15) { var ahora = { x: vb.x, y: vb.y, w: vb.w }; vb.x = c.x; vb.y = c.y; vb.w = c.w; aplicar(); vb.x = ahora.x; vb.y = ahora.y; vb.w = ahora.w; mover(); }
       (function paso(t) {
         var k = Math.min(1, (t - t0) / ms), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2, w = de.w * Math.pow(a.w / de.w, e);
         vb.w = w; vb.x = de.cx + (a.cx - de.cx) * e - w / 2; vb.y = de.cy + (a.cy - de.cy) * e - w * H() / W() / 2;
-        if (k >= 1) base.classList.remove('is-volando'); aplicar();
+        if (k >= 1) { base.classList.remove('is-volando'); aplicar(); } else mover();
         if (k < 1) anim = requestAnimationFrame(paso);
       })(t0);
     };
@@ -215,7 +241,14 @@
     // solo las calles principales y sin rótulos, como en el vuelo propio
     api.fijar = function (c, volando) { cancelAnimationFrame(anim); enVuelo = !!volando; vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); };
     api.ancho = function () { return lim[2] - lim[0]; };
-    api.capas = function () { return [base, svg]; };
+    // el vuelo de la portada (site.js) mueve «las capas» con transform desde la esquina del plano: es la capa que envuelve a las dos
+    // (su origen ya está en esa esquina, por eso se ignora transformOrigin); «overflow» va a las dos SVG, como antes
+    var capaVuelo = { style: {} };
+    Object.defineProperty(capaVuelo.style, 'transform', { set: function (v) { clearTimeout(tVista); mueve.style.transform = v; }, get: function () { return mueve.style.transform; } });
+    Object.defineProperty(capaVuelo.style, 'willChange', { set: function () { }, get: function () { return 'transform'; } });
+    Object.defineProperty(capaVuelo.style, 'transformOrigin', { set: function () { }, get: function () { return ''; } });
+    Object.defineProperty(capaVuelo.style, 'overflow', { set: function (v) { base.style.overflow = v; svg.style.overflow = v; }, get: function () { return base.style.overflow; } });
+    api.capas = function () { return [capaVuelo]; };
     // la provincia de la ciudad, debajo de todo: es el mapa de Andalucía que se convierte en el plano
     var provEl = null;
     api.provincia = function (d, color) { if (!arguments.length) return provEl; if (!provEl) { provEl = el('path', { 'class': 'oc-pl-provincia' }); mundo.insertBefore(provEl, mundo.firstChild); } provEl.setAttribute('d', d || ''); provEl.style.fill = color || ''; return provEl; };
@@ -320,7 +353,7 @@
     svg.addEventListener('pointermove', function (e) {
       if (!arr) return; var dx = e.clientX - arr.x, dy = e.clientY - arr.y;
       if (!arr.m && Math.hypot(dx, dy) < 6) return; if (!arr.m) { arr.m = true; try { svg.setPointerCapture(e.pointerId); } catch (er) { } svg.classList.add('is-arrastrando'); }
-      vb.x -= dx * Z; vb.y -= dy * Z; arr.x = e.clientX; arr.y = e.clientY; aplicar();
+      vb.x -= dx * Z; vb.y -= dy * Z; arr.x = e.clientX; arr.y = e.clientY; mover();
     });
     var soltar = function () { if (arr && arr.m) { finArr = performance.now(); svg.classList.remove('is-arrastrando'); } arr = null; };
     svg.addEventListener('pointerup', soltar); svg.addEventListener('pointercancel', soltar);
@@ -338,7 +371,7 @@
     svg.addEventListener('touchstart', function (e) {
       if (e.touches.length === 2) {
         e.preventDefault(); cancelAnimationFrame(anim); base.classList.remove('is-volando'); toque = null;
-        var a = e.touches[0], b = e.touches[1], r = svg.getBoundingClientRect();
+        var a = e.touches[0], b = e.touches[1], r = host.getBoundingClientRect();
         gesto = { d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) || 1, mx: (a.clientX + b.clientX) / 2 - r.left, my: (a.clientY + b.clientY) / 2 - r.top, x: vb.x, y: vb.y, w: vb.w, Z: Z, r: r };
       } else if (e.touches.length === 1) toque = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: performance.now(), movido: false };
     }, { passive: false });
@@ -348,7 +381,7 @@
         var a = e.touches[0], b = e.touches[1], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) || 1;
         var mx = (a.clientX + b.clientX) / 2 - gesto.r.left, my = (a.clientY + b.clientY) / 2 - gesto.r.top, w = wLim(gesto.w * gesto.d / d), z = w / W();
         // el punto del plano que estaba entre los dedos sigue entre los dedos
-        vb.x = gesto.x + gesto.mx * gesto.Z - mx * z; vb.y = gesto.y + gesto.my * gesto.Z - my * z; vb.w = w; aplicar();
+        vb.x = gesto.x + gesto.mx * gesto.Z - mx * z; vb.y = gesto.y + gesto.my * gesto.Z - my * z; vb.w = w; mover();
         return;
       }
       if (toque && e.touches.length === 1) {
@@ -365,17 +398,18 @@
       if (!tap) { ultimo = null; return; }
       // doble toque: acerca alrededor del dedo (y no abre lo que haya debajo)
       if (ultimo && ahora - ultimo.t < 320 && Math.hypot(p.clientX - ultimo.x, p.clientY - ultimo.y) < 30) {
-        e.preventDefault(); ultimo = null; finArr = ahora; var r = svg.getBoundingClientRect(); zoomEn(0.5, p.clientX - r.left, p.clientY - r.top, 320); return;
+        e.preventDefault(); ultimo = null; finArr = ahora; var r = host.getBoundingClientRect(); zoomEn(0.5, p.clientX - r.left, p.clientY - r.top, 320); return;
       }
       ultimo = { t: ahora, x: p.clientX, y: p.clientY };
     }, { passive: false });
     svg.addEventListener('touchcancel', function () { gesto = null; toque = null; });
     // en el ordenador: pellizco del panel táctil (llega como rueda con Ctrl) y Ctrl + rueda amplían donde está el puntero
     svg.addEventListener('wheel', function (e) {
-      if (!e.ctrlKey) return; e.preventDefault(); var r = svg.getBoundingClientRect();
-      zoomEn(Math.exp(Math.max(-1, Math.min(1, e.deltaY * 0.01))), e.clientX - r.left, e.clientY - r.top, 0);
+      if (!e.ctrlKey) return; e.preventDefault(); cancelAnimationFrame(anim); var r = host.getBoundingClientRect();
+      var w = wLim(vb.w * Math.exp(Math.max(-1, Math.min(1, e.deltaY * 0.01)))), wx = vb.x + (e.clientX - r.left) * Z, wy = vb.y + (e.clientY - r.top) * Z, k = w / vb.w;
+      vb.x = wx - (wx - vb.x) * k; vb.y = wy - (wy - vb.y) * k; vb.w = w; mover();
     }, { passive: false });
-    svg.addEventListener('dblclick', function (e) { var r = svg.getBoundingClientRect(); zoomEn(e.shiftKey ? 2 : 0.5, e.clientX - r.left, e.clientY - r.top, 320); });
+    svg.addEventListener('dblclick', function (e) { var r = host.getBoundingClientRect(); zoomEn(e.shiftKey ? 2 : 0.5, e.clientX - r.left, e.clientY - r.top, 320); });
     aplicar();
     if (window.ResizeObserver) new ResizeObserver(function () { aplicar(true); }).observe(host);
     return api;

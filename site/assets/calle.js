@@ -6,8 +6,11 @@
   var NS = 'http://www.w3.org/2000/svg';
   var $ = function (s, r) { return (r || sec).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || sec).querySelectorAll(s)); };
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var svg = $('.oc-calle-svg'), mapa = $('[data-mapa]'), rango = $('[data-tiempo]'), hora = $('[data-hora]'), lista = $('[data-lista]');
+  var svg = $('.oc-calle-svg'), mapa = $('[data-mapa]'), capa = document.createElement('div'), rango = $('[data-tiempo]'), hora = $('[data-hora]'), lista = $('[data-lista]');
   var fechas = {}; try { fechas = JSON.parse(sec.getAttribute('data-fechas')); } catch (e) { }
+  // el SVG va dentro de una capa HTML, que es la que se desplaza y escala en caliente: si se transformara el propio SVG, el navegador
+  // volvería a maquetar todos sus rótulos en cada fotograma (elige el tamaño de letra según la escala en pantalla)
+  capa.className = 'oc-calle-capa'; svg.parentNode.insertBefore(capa, svg); capa.appendChild(svg);
   var D = null, dia = null, T = 0, vb = { x: 0, y: 0, w: 1000, h: 1000 }, capas = {}, yo = null, sel = null;
   var ultMin = null, cortejoDe = {}, filaDe = {}, fichaDe = '', firmaLista = '', firmaFicha = ''; // lo último pintado, para no repetirlo en cada fotograma
   var el = function (t, a) { var n = document.createElementNS(NS, t); for (var k in a) n.setAttribute(k, a[k]); return n; };
@@ -33,7 +36,7 @@
     capas.mundo = el('g', { 'class': 'oc-c-mundo' }); svg.appendChild(capas.mundo);
     // Lo fijo (agua, plazas, calles, templos) va en una capa de fondo aparte y más grande que la vista: al arrastrar o pellizcar
     // la desliza el navegador sin repintarla, y se vuelve a pintar al parar o al acercarse a su borde (moverFondo).
-    if (!fondo) { fondo = el('svg', { 'class': 'oc-calle-fondo', 'aria-hidden': 'true', focusable: 'false' }); fondo.style.cssText = 'display:block;position:absolute;left:-25%;top:-25%;width:150%;height:150%;pointer-events:none;transform-origin:0 0;will-change:transform'; mapa.insertBefore(fondo, svg); svg.style.position = 'relative'; }
+    if (!fondo) { fondo = el('svg', { 'class': 'oc-calle-fondo', 'aria-hidden': 'true', focusable: 'false' }); fondo.style.cssText = 'display:block;position:absolute;left:-25%;top:-25%;width:150%;height:150%;pointer-events:none;transform-origin:0 0;will-change:transform;contain:strict'; mapa.insertBefore(fondo, capa); }
     fondo.textContent = ''; fondoVb = null;
     var base = el('g', { 'class': 'oc-c-mundo' }); fondo.appendChild(base);
     // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
@@ -49,6 +52,7 @@
     // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
     capas.nombres = el('g', { 'class': 'oc-c-nombres', 'aria-hidden': 'true' }); capas.mundo.appendChild(capas.nombres);
     capas.rutas = el('g', { 'class': 'oc-c-rutas' }); capas.mundo.appendChild(capas.rutas);
+    capas.sentido = el('g', { 'class': 'oc-c-sentido', 'aria-hidden': 'true' }); capas.mundo.appendChild(capas.sentido);
     capas.cortejos = el('g', { 'class': 'oc-c-cortejos' }); capas.mundo.appendChild(capas.cortejos);
     capas.guias = el('g', { 'class': 'oc-c-guias' }); capas.mundo.appendChild(capas.guias);
     capas.marcas = el('g', { 'class': 'oc-c-marcas' }); capas.mundo.appendChild(capas.marcas);
@@ -64,33 +68,67 @@
     [D.calles, D.principales].forEach(function (ls) { ls.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { if (l[i] < a[0]) a[0] = l[i]; if (l[i + 1] < a[1]) a[1] = l[i + 1]; if (l[i] > a[2]) a[2] = l[i]; if (l[i + 1] > a[3]) a[3] = l[i + 1]; } }); });
     lim = a;
   }
-  function aplicarVista() {
+  // Vista «en caliente»: mientras se arrastra, se pellizca, se gira la rueda o dura una animación, el plano NO se vuelve a pintar
+  // en cada fotograma (era lo que hacía lento el zoom: viewBox nuevo, rótulos rehechos y medidas forzadas en cada paso). El SVG
+  // (rutas, rótulos, medallones) es, como el fondo, un 50 % mayor que la vista: se desplaza y escala con transform desde la vista
+  // ya pintada (lo hace la GPU) y solo los medallones se recolocan a su tamaño de pantalla. Al parar (140 ms), o si se vería su
+  // borde, se fija la vista y se pinta nítida una vez.
+  var vbC = null, tVista = 0;
+  function ampliada(v) { return { x: v.x - v.w / 4, y: v.y - v.h / 4, w: v.w * 1.5, h: v.h * 1.5 }; }
+  // transform que lleva una capa pintada con la vista ampliada «a» (W·1.5 × H·1.5 px, en -25 %) a la vista actual; null si no cubre
+  function encaje(a, W, H, kMax) {
+    var px = W / vb.w, k = a.w / 1.5 / vb.w, tx = (a.x - vb.x) * px + W / 4, ty = (a.y - vb.y) * px + H / 4;
+    var x0 = tx - W / 4, y0 = ty - H / 4, x1 = x0 + 1.5 * W * k, y1 = y0 + 1.5 * H * k;
+    // al alejar se deja ver un margen sin pintar (como los mapas al cargar teselas) hasta k = 0,5: repintar a mitad de gesto da tirones
+    if (k < 0.5 || k > kMax || (k >= 0.7 && (x0 > 0 || y0 > 0 || x1 < W || y1 < H))) return null;
+    return 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
+  }
+  function aplicarVista(fijar) {
     if (lim) { var cx = Math.min(Math.max(vb.x + vb.w / 2, lim[0]), lim[2]), cy = Math.min(Math.max(vb.y + vb.h / 2, lim[1]), lim[3]); vb.x = cx - vb.w / 2; vb.y = cy - vb.h / 2; }
-    svg.setAttribute('viewBox', vb.x + ' ' + vb.y + ' ' + vb.w + ' ' + vb.h); Z = vb.w / Math.max(1, tamMapa()[0]);
+    var t = tamMapa(), W = Math.max(1, t[0]), H = Math.max(1, t[1]); Z = vb.w / W;
+    var tr = !fijar && vbC && !calm ? encaje(vbC, W, H, 2.5) : null;
+    if (!tr) return fijarVista();
+    capa.style.transform = tr;
     moverFondo();
     svg.classList.toggle('con-nombres', Z < 2.6);
     if (D && dia) colocarMarcas();
-    pedirNombres();
+    clearTimeout(tVista); tVista = setTimeout(fijarVista, 140);
   }
+  function fijarVista() {
+    clearTimeout(tVista);
+    vbC = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; var a = ampliada(vbC);
+    svg.setAttribute('viewBox', a.x + ' ' + a.y + ' ' + a.w + ' ' + a.h); capa.style.transform = '';
+    moverFondo();
+    svg.classList.toggle('con-nombres', Z < 2.6);
+    if (D && dia) colocarMarcas();
+    colocarSentido();
+    // los rótulos, en el mismo fotograma que el viewBox nuevo (si no, se verían un instante a la escala anterior)
+    if (nombresPend) { cancelAnimationFrame(nombresPend); nombresPend = 0; }
+    clearTimeout(tNombres); zNombres = Z; pintarNombres();
+  }
+  // posición del plano en pantalla (el contenedor, que no se transforma), guardada: medirla en cada evento forzaba la maqueta
+  var rS = null;
+  function rectSvg() {
+    if (rS) return rS; var r = mapa.getBoundingClientRect();
+    if (r.width) rS = { left: r.left, top: r.top, width: r.width, height: r.height }; return r;
+  }
+  window.addEventListener('scroll', function () { rS = null; }, { passive: true, capture: true });
   // Capa de fondo: pintada con la vista fondoVb (la de entonces más un 25 % por cada lado). Mientras la vista cambia poco solo se
   // desplaza y escala; se repinta 140 ms después del último cambio, o al momento si se vería su borde o perdería nitidez.
   var fondo = null, fondoVb = null, tFondo = 0, tam = null;
   function tamMapa() { if (tam) return tam; var t = [mapa.clientWidth, mapa.clientHeight]; if (t[0]) tam = t; return t; } // sin guardar mientras mida 0 (oculto)
-  window.addEventListener('resize', function () { tam = null; fondoVb = null; });
+  window.addEventListener('resize', function () { tam = null; fondoVb = null; rS = null; });
   function fijarFondo() {
     clearTimeout(tFondo); if (!fondo) return;
-    fondoVb = { x: vb.x - vb.w / 4, y: vb.y - vb.h / 4, w: vb.w * 1.5, h: vb.h * 1.5 };
+    fondoVb = ampliada(vb);
     fondo.setAttribute('viewBox', fondoVb.x + ' ' + fondoVb.y + ' ' + fondoVb.w + ' ' + fondoVb.h); fondo.style.transform = '';
   }
   function moverFondo() {
     if (!fondo) return;
     if (!fondoVb) return fijarFondo();
-    var t = tamMapa(), W = t[0], H = t[1], px = W / vb.w, k = fondoVb.w / 1.5 / vb.w;
-    var tx = (fondoVb.x - vb.x) * px + W / 4, ty = (fondoVb.y - vb.y) * px + H / 4;
-    // lo que ocupa ahora la capa, en píxeles del plano: si no cubre la vista entera, o si se ha escalado mucho, se repinta ya
-    var x0 = tx - W / 4, y0 = ty - H / 4, x1 = x0 + 1.5 * W * k, y1 = y0 + 1.5 * H * k;
-    if (k < 0.7 || k > 1.6 || x0 > 0 || y0 > 0 || x1 < W || y1 < H) return fijarFondo();
-    fondo.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
+    // si la capa ya no cubre la vista entera, o se ha escalado mucho, se repinta ya
+    var t = tamMapa(), tr = encaje(fondoVb, t[0], t[1], 4); if (!tr) return fijarFondo();
+    fondo.style.transform = tr;
     clearTimeout(tFondo); tFondo = setTimeout(fijarFondo, 140);
   }
   // ---------- rótulos de calles e iglesias ----------
@@ -118,7 +156,7 @@
   function pintarNombres() {
     var g = capas.nombres; if (!g || !D) return;
     g.textContent = '';
-    var W = mapa.clientWidth, H = mapa.clientHeight, rMax = Z < 1.9 ? 3 : Z < 4.2 ? 2 : Z < 14 ? 1 : 0;
+    var tm = tamMapa(), W = tm[0], H = tm[1], rMax = Z < 1.9 ? 3 : Z < 4.2 ? 2 : Z < 14 ? 1 : 0;
     var cajas = [], puestas = 0, frag = document.createDocumentFragment();
     // los medallones (con su nombre debajo) y los botones del plano no se tapan con rótulos
     posMarcas.forEach(function (p) { cajas.push([(p[0] - vb.x) / Z, (p[1] - vb.y) / Z + 8, 56, 38]); });
@@ -150,6 +188,34 @@
     }
     g.appendChild(frag);
   }
+  // Salida extraordinaria sola en su jornada: un filo oscuro bajo el trazo (se lee sobre el plano sin sombras, que repintaban caro),
+  // flechas de sentido discretas y un punto sobrio en los lugares del itinerario oficial con hora fija: su templo (salida y entrada)
+  // y el templo del final de la ida (el acto). Las flechas se reparten a distancia fija en pantalla: se recolocan al fijar la vista.
+  var sentido = null;
+  function adornarSola(h) {
+    sentido = null; if (capas.sentido) capas.sentido.textContent = ''; if (!h) return;
+    $$('.oc-c-ruta.is-sola').forEach(function (r) { var f = r.cloneNode(false); f.setAttribute('class', r.getAttribute('class').replace('oc-c-ruta', 'oc-c-ruta-filo')); f.removeAttribute('data-s'); capas.rutas.insertBefore(f, capas.rutas.firstChild); });
+    var pts = h.t.paso || h.t.cruz, ida = [], vuelta = [];
+    pts.forEach(function (p) { (p[7] ? vuelta : ida).push(p); });
+    if (!ida.length) return;
+    if (vuelta.length) vuelta.unshift(ida[ida.length - 1]); vuelta.reg = true;
+    sentido = { tramos: [ida, vuelta], puntos: [ida[0], ida[ida.length - 1]] };
+    colocarSentido();
+  }
+  function colocarSentido() {
+    var g = capas.sentido; if (!g) return; g.textContent = ''; if (!sentido) return;
+    var paso = 150 * Z, fr = document.createDocumentFragment();
+    sentido.tramos.forEach(function (ls) {
+      var acum = paso / 2;
+      for (var i = 1; i < ls.length; i++) {
+        var a = ls[i - 1], b = ls[i], dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy); if (!d) continue;
+        for (; acum <= d; acum += paso) fr.appendChild(el('path', { 'class': 'oc-c-flecha' + (ls.reg ? ' is-regreso' : ''), d: 'M-3.2 -3.6L3.6 0L-3.2 3.6L-1.6 0Z', transform: 'translate(' + (a[0] + dx * acum / d).toFixed(1) + ' ' + (a[1] + dy * acum / d).toFixed(1) + ') rotate(' + Math.round(Math.atan2(dy, dx) * 180 / Math.PI) + ') scale(' + Z.toFixed(3) + ')' }));
+        acum -= d;
+      }
+    });
+    sentido.puntos.forEach(function (p) { fr.appendChild(el('circle', { 'class': 'oc-c-hito', cx: p[0], cy: p[1], r: (5 * Z).toFixed(2) })); });
+    g.appendChild(fr);
+  }
   // Huecos de la pantalla tapados por los controles (derecha) y por el reloj (abajo): lo encuadrado queda a la vista
   // El reloj se mide: en pantallas anchas ocupa unos 150 px del plano y el medallón (con su nombre, ~44 px) quedaba debajo.
   var relojEl = sec.querySelector('.oc-calle-reloj');
@@ -164,14 +230,14 @@
     var esc = Math.max(Math.max(x1 - x0, 300) / iw, Math.max(y1 - y0, 300) / ih) * 1.06; // metros por píxel
     var w = W * esc, h = H * esc, cx = (x0 + x1) / 2 - (m.izq - m.der) / 2 * esc, cy = (y0 + y1) / 2 - (m.arriba - m.abajo) / 2 * esc;
     var obj = { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
-    if (!animar || calm) { vb = obj; aplicarVista(); return; }
+    if (!animar || calm) { vb = obj; aplicarVista(true); return; }
     var de = { x: vb.x, y: vb.y, w: vb.w, h: vb.h }, t0 = performance.now();
     (function paso(t) { var k = Math.max(0, Math.min(1, (t - t0) / 520)), e = 1 - Math.pow(1 - k, 3); for (var p in obj) vb[p] = de[p] + (obj[p] - de[p]) * e; aplicarVista(); if (k < 1) requestAnimationFrame(paso); })(t0);
   }
 
   // ---------- gestos: arrastrar con inercia, rueda y pellizco anclados al dedo ----------
   var punteros = {}, vel = { x: 0, y: 0 }, ultimo = null, inercia = 0, inicio = null, movido = false, finArrastre = 0, toque = null;
-  function aMundo(cx, cy) { var r = svg.getBoundingClientRect(); return { x: vb.x + (cx - r.left) / r.width * vb.w, y: vb.y + (cy - r.top) / r.height * vb.h }; }
+  function aMundo(cx, cy) { var r = rectSvg(); return { x: vb.x + (cx - r.left) / r.width * vb.w, y: vb.y + (cy - r.top) / r.height * vb.h }; }
   function zoomEn(px, py, f) { var w = Math.min(Math.max(vb.w * f, 150), 30000), k = w / vb.w; vb.x = px - (px - vb.x) * k; vb.y = py - (py - vb.y) * k; vb.w = w; vb.h = vb.h * k; aplicarVista(); }
   function zoomAnimado(px, py, f) {
     if (calm) return zoomEn(px, py, f);
@@ -180,14 +246,14 @@
   }
   // El plano no se captura al tocar: hasta que el dedo se mueve 6 px es un toque (y llega a la marca que haya debajo).
   svg.addEventListener('pointerdown', function (e) {
-    cancelAnimationFrame(inercia); punteros[e.pointerId] = { x: e.clientX, y: e.clientY };
+    cancelAnimationFrame(inercia); rueda = null; punteros[e.pointerId] = { x: e.clientX, y: e.clientY };
     if (Object.keys(punteros).length === 1) { inicio = { x: e.clientX, y: e.clientY }; movido = false; }
     else { movido = true; Object.keys(punteros).forEach(function (id) { try { svg.setPointerCapture(+id); } catch (er) { } }); }
     ultimo = { t: performance.now(), x: e.clientX, y: e.clientY }; vel = { x: 0, y: 0 };
   });
   svg.addEventListener('pointermove', function (e) {
     if (!punteros[e.pointerId]) return;
-    var ids = Object.keys(punteros), r = svg.getBoundingClientRect(), s = vb.w / r.width;
+    var ids = Object.keys(punteros), r = rectSvg(), s = vb.w / r.width;
     if (ids.length === 1) {
       if (!movido) { if (Math.hypot(e.clientX - inicio.x, e.clientY - inicio.y) < 6) return; movido = true; try { svg.setPointerCapture(e.pointerId); } catch (er) { } svg.classList.add('is-arrastrando'); }
       var p = punteros[e.pointerId], dx = e.clientX - p.x, dy = e.clientY - p.y;
@@ -211,12 +277,26 @@
       else toque = { t: ahora, x: e.clientX, y: e.clientY };
     }
     if (Object.keys(punteros).length || calm || !movido) return;
-    var r = svg.getBoundingClientRect(), s = vb.w / r.width, vx = vel.x * 16, vy = vel.y * 16;
+    var r = rectSvg(), s = vb.w / r.width, vx = vel.x * 16, vy = vel.y * 16;
     if (Math.hypot(vx, vy) < 2) return;
     (function des() { vx *= 0.92; vy *= 0.92; vb.x -= vx * s; vb.y -= vy * s; aplicarVista(); if (Math.hypot(vx, vy) > 0.3) inercia = requestAnimationFrame(des); })();
   }
   svg.addEventListener('pointerup', soltar); svg.addEventListener('pointercancel', soltar);
-  svg.addEventListener('wheel', function (e) { e.preventDefault(); var c = aMundo(e.clientX, e.clientY); zoomEn(c.x, c.y, Math.exp(e.deltaY * 0.0016)); }, { passive: false });
+  // rueda suave: cada golpe fija un ancho objetivo y la vista se acerca a él en unos fotogramas, anclada al punto bajo el cursor
+  // (antes cada golpe era un salto seco). Con «menos movimiento», salto directo.
+  var rueda = null;
+  svg.addEventListener('wheel', function (e) {
+    e.preventDefault(); cancelAnimationFrame(inercia);
+    var c = aMundo(e.clientX, e.clientY), d = e.deltaMode === 1 ? e.deltaY * 33 : e.deltaMode === 2 ? e.deltaY * 400 : e.deltaY;
+    var w = Math.min(Math.max((rueda ? rueda.w : vb.w) * Math.exp(d * 0.0016), 150), 30000);
+    if (calm) return zoomEn(c.x, c.y, w / vb.w);
+    var nueva = !rueda; rueda = { w: w, x: c.x, y: c.y };
+    if (nueva) requestAnimationFrame(function paso() {
+      if (!rueda) return; var f = Math.pow(rueda.w / vb.w, 0.35);
+      if (Math.abs(f - 1) < 0.003) { zoomEn(rueda.x, rueda.y, rueda.w / vb.w); rueda = null; return; }
+      zoomEn(rueda.x, rueda.y, f); requestAnimationFrame(paso);
+    });
+  }, { passive: false });
   svg.addEventListener('dblclick', function (e) { e.preventDefault(); });
   $$('[data-zoom]').forEach(function (b) { b.addEventListener('click', function () { var f = b.getAttribute('data-zoom') === '1' ? 0.6 : 1.6; zoomAnimado(vb.x + vb.w / 2, vb.y + vb.h / 2, f); }); });
   // botón «encuadrar»: vuelve a ver todos los recorridos de la jornada
@@ -283,8 +363,10 @@
       g.addEventListener('click', function () { if (performance.now() - finArrastre < 250) return; abrir(h); }); g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(h); } });
     });
     // una salida extraordinaria sola en su jornada: su recorrido se ve siempre, sin tener que elegirla
-    var dd = delDia(); if (dd.length === 1 && dd[0].x) $$('.oc-c-ruta').forEach(function (n) { n.classList.add('is-sola'); });
-    var ley = $('[data-leyenda]'); if (ley) ley.style.setProperty('--ley', dd.length === 1 && dd[0].x ? dd[0].hc : '');
+    var dd = delDia(), sola = dd.length === 1 && dd[0].x ? dd[0] : null;
+    if (sola) $$('.oc-c-ruta').forEach(function (n) { n.classList.add('is-sola'); });
+    adornarSola(sola);
+    var ley = $('[data-leyenda]'); if (ley) { ley.style.setProperty('--ley', sola ? sola.hc : ''); ley.classList.toggle('is-sola', !!sola); }
     // al redibujar con una hermandad elegida (p. ej. al girar el móvil), sigue resaltada
     if (sel && sel.d === dia) $$('.oc-c-marca, .oc-c-ruta').forEach(function (n) { if (n.getAttribute('data-s') === sel.s) n.classList.add('is-sel'); });
     encuadrarDia(!!capas.yaEncuadrado); capas.yaEncuadrado = true;
