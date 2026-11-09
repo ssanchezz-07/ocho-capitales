@@ -155,12 +155,16 @@
   const vv = window.visualViewport;
   const ajusta = () => { if (!vv || hoja.hidden) return; const alFinal = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 48; hoja.style.height = vv.height + 'px'; hoja.style.top = vv.offsetTop + 'px'; hoja.style.bottom = 'auto'; if (alFinal) chat.scrollTop = chat.scrollHeight; };
   const suelta_ = () => { hoja.style.height = ''; hoja.style.top = ''; hoja.style.bottom = ''; };
+  let lado = false;
   function abrir() {
     ultimoFoco = document.activeElement;
     hoja.hidden = false; btn.setAttribute('aria-expanded', 'true');
     if (vv) { vv.addEventListener('resize', ajusta); vv.addEventListener('scroll', ajusta); ajusta(); }
     requestAnimationFrame(() => hoja.classList.add('is-open'));
-    document.body.style.overflow = 'hidden';
+    // En pantallas anchas, erCuñao se acopla a la derecha y la página se aparta: no tapa el mapa, la foto de la ficha ni el plano
+    // (barrido del 9-nov). Los planos se recolocan con el «resize». En las estrechas, hoja modal como siempre.
+    lado = matchMedia('(min-width: 1440px)').matches; // por debajo, el hueco de 452 px deja la página más estrecha que el menú
+    if (lado) { document.documentElement.classList.add('oc-cunao-lado'); dispatchEvent(new Event('resize')); } else document.body.style.overflow = 'hidden';
     cargar().catch(() => {});
     if (!chat.childNodes.length) {
       const f = document.createElement('div');
@@ -175,6 +179,7 @@
   }
   function cerrar() {
     hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    if (lado) { lado = false; setTimeout(() => { document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); }, calm ? 0 : 200); }
     if (vv) { vv.removeEventListener('resize', ajusta); vv.removeEventListener('scroll', ajusta); } suelta_();
     setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
     (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();
@@ -192,6 +197,12 @@
   }, { passive: true });
   btn.addEventListener('click', abrir);
   hoja.querySelector('[data-cunao-cerrar]').addEventListener('click', cerrar);
+  // un enlace del chat a esta misma página (p. ej. «El reto de hoy» estando ya en Juegos: solo cambia el #) cierra la hoja; si no,
+  // el juego arrancaba debajo y en el móvil parecía que el botón no hacía nada (punto 8 del 9-nov)
+  chat.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href]'); if (!a || a.target === '_blank') return;
+    try { const u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname === location.pathname && u.hash) cerrar(); } catch (er) { }
+  });
   hoja.addEventListener('click', (e) => { if (e.target === hoja) cerrar(); });
   hoja.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { e.stopPropagation(); cerrar(); return; }

@@ -21,7 +21,9 @@
     if (pista) pista.style.opacity = 1 - cl(p / 0.08);
   }
   var pend = false;
-  function scroll() { pend = false; var r = rail.getBoundingClientRect(); pon(cl(-r.top / Math.max(1, r.height - innerHeight))); }
+  // empieza a dibujarse cuando el tramo entra por la mitad de la pantalla (no al quedar fijo): al llegar ya se ven los primeros
+  // trazos y la primera frase, y no un bloque oscuro vacío al bajar rápido (barrido del 9-nov). Termina en el mismo punto.
+  function scroll() { pend = false; var r = rail.getBoundingClientRect(), off = innerHeight * 0.5; pon(cl((off - r.top) / Math.max(1, r.height - innerHeight + off))); }
   addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(scroll); } }, { passive: true });
   addEventListener('resize', scroll);
   scroll();

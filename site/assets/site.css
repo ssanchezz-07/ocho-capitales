@@ -1762,6 +1762,26 @@ html:has(.oc-calle) .oc-cunao-btn { bottom: calc(var(--tabbar-h) + env(safe-area
   .oc-cunao.is-open .oc-sheet-panel { transform: none; opacity: 1; transition-duration: 240ms, 200ms; }
   .oc-cunao-form { border-radius: 0 0 24px 24px; padding-bottom: 14px; }
 }
+/* En pantallas anchas, acoplado a la derecha: la página se aparta (cunao-ui.js pone oc-cunao-lado) y no se tapa nada; sin velo,
+   y lo de fuera del panel sigue usable (se cierra con su botón o con Escape) */
+@media (min-width: 1440px) {
+  html.oc-cunao-lado body { padding-right: 452px; }
+  html.oc-cunao-lado .oc-arriba { right: 474px; }
+  html.oc-cunao-lado .oc-cunao { left: auto; width: 452px; padding: 12px 24px 24px 8px; background: transparent; align-items: stretch; }
+  html.oc-cunao-lado .oc-cunao .oc-sheet-panel { height: calc(100dvh - 36px); }
+  /* lo que va de borde a borde (la cabecera de la portada y el nazareno) cuenta con el ancho que queda libre: 100vw - 452px */
+  html.oc-cunao-lado .oc-home .oc-portada, html.oc-cunao-lado .oc-naz { margin-left: calc(50% - 50vw + 226px); margin-right: calc(50% - 50vw + 226px); }
+}
+/* la cabecera se ajusta al ancho que queda (100vw - 452px) con los mismos escalones que en pantallas medias: si no, el menú pisa el buscador */
+@media (min-width: 1440px) and (max-width: 1731px) {
+  html.oc-cunao-lado .oc-header-in { gap: 14px; }
+  html.oc-cunao-lado .oc-nav a { padding: 0 8px; font-size: .92rem; }
+  html.oc-cunao-lado .oc-nav a::after { left: 8px; right: 8px; }
+  html.oc-cunao-lado .oc-searchbtn { min-width: 0; padding: 0 12px; }
+  html.oc-cunao-lado .oc-searchbtn-txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  html.oc-cunao-lado .oc-searchbtn kbd { display: none; }
+}
+@media (min-width: 1440px) and (max-width: 1491px) { html.oc-cunao-lado .oc-nav a { padding: 0 6px; font-size: .9rem; } html.oc-cunao-lado .oc-nav a::after { left: 6px; right: 6px; } }
 @media (prefers-reduced-motion: reduce) {
   .oc-cunao .oc-sheet-panel, .oc-cunao.is-open .oc-sheet-panel { transform: none; transition: opacity 160ms ease; }
   .oc-cunao-msg.is-pensando i { animation: none; opacity: .8; }
@@ -2242,3 +2262,16 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 :root[data-theme="dark"] .oc-jg { --jg-ok: #6fc3a6; --jg-mal: #ef8a7b; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-jg { --jg-ok: #6fc3a6; --jg-mal: #ef8a7b; } }
 @media (prefers-reduced-motion: reduce) { .oc-jg-op, .oc-jg-card { transition: none; } }
+/* En PC los juegos aprovechan la pantalla (antes, 640 px pegados a la izquierda y media pantalla vacía: punto 8 del 9-nov):
+   el menú en tres columnas, las opciones en dos y la pregunta más grande; la imagen y la sopa, a un ancho cómodo */
+@media (min-width: 960px) {
+  .oc-jg { max-width: 1040px; }
+  .oc-jg-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .oc-jg-card { min-height: 112px; padding: 18px 20px; }
+  .oc-jg-cunao { max-width: 760px; }
+  .oc-jg-pregunta { font-size: 1.55rem; margin: 6px 0 16px; }
+  .oc-jg-ops { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .oc-jg-op { min-height: 64px; font-size: 1.05rem; }
+  .oc-jg-media, .oc-jg-pistas, .oc-jg-sopa, .oc-jg-fb { max-width: 760px; }
+  .oc-jg-media { margin-inline: 0; }
+}

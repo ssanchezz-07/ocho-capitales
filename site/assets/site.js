@@ -123,16 +123,19 @@
 
   // ---------- fechas relativas ----------
   // se crea la primera vez que hace falta: crearlo al arrancar costaba ~20 ms en cada página, aunque no tuviera fechas
-  var rtf;
+  // Los formateadores también se crean una sola vez: toLocaleDateString/TimeString con opciones crea uno nuevo en cada llamada,
+  // y en una capital con muchas noticias eso eran ~0,5 s de CPU en un móvil normal (perfil del 9-nov)
+  var rtf, fDiaMes, fFecha, fHora, fDiaLargo, fDiaMesU, fSemDiaMesU;
+  var fmt = function (k, o) { try { return new Intl.DateTimeFormat('es-ES', o); } catch (e) { return { format: function (d) { return d.toLocaleDateString('es-ES'); } }; } };
   function ago(iso) {
     var d = (new Date(iso) - Date.now()) / 1000, a = Math.abs(d);
     if (rtf === undefined) rtf = window.Intl && Intl.RelativeTimeFormat ? new Intl.RelativeTimeFormat('es', { numeric: 'auto' }) : null;
-    if (!rtf) return new Date(iso).toLocaleDateString('es-ES');
+    if (!rtf) return (fFecha || (fFecha = fmt('f', {}))).format(new Date(iso));
     if (a < 60) return 'ahora';
     if (a < 3600) return rtf.format(Math.round(d / 60), 'minute');
     if (a < 86400) return rtf.format(Math.round(d / 3600), 'hour');
     if (a < 86400 * 7) return rtf.format(Math.round(d / 86400), 'day');
-    return new Date(iso).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+    return (fDiaMes || (fDiaMes = fmt('dm', { day: 'numeric', month: 'short' }))).format(new Date(iso));
   }
   // En la marca de «última lectura» de noticias, pasado un rato se dice la hora exacta («ayer a las 19:16»), que suena a
   // dato y no a abandono como «hace 24 horas»
@@ -140,8 +143,8 @@
     $$('time[data-ago]', r).forEach(function (t) {
       var iso = t.getAttribute('datetime'), horas = (Date.now() - new Date(iso)) / 36e5;
       if (horas > 6 && t.closest('.oc-updated, .oc-pagehead')) {
-        var d = new Date(iso), hoy = new Date(), ayer = new Date(Date.now() - 864e5), hm = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' });
-        t.textContent = (d.toDateString() === hoy.toDateString() ? 'hoy' : d.toDateString() === ayer.toDateString() ? 'ayer' : 'el ' + d.toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })) + ' a las ' + hm;
+        var d = new Date(iso), hoy = new Date(), ayer = new Date(Date.now() - 864e5), hm = (fHora || (fHora = fmt('h', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' }))).format(d);
+        t.textContent = (d.toDateString() === hoy.toDateString() ? 'hoy' : d.toDateString() === ayer.toDateString() ? 'ayer' : 'el ' + (fDiaLargo || (fDiaLargo = fmt('dl', { day: 'numeric', month: 'long' }))).format(d)) + ' a las ' + hm;
       } else t.textContent = ago(iso);
     });
   }
@@ -519,7 +522,7 @@
     function etiquetaJornada(d) {
       var f = fechaDe(d); if (f === '9999') return d;
       if (/·/.test(d)) return d;
-      return d + ' · ' + new Date(f + 'T12:00:00Z').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: 'UTC' }).replace('.', '');
+      return d + ' · ' + (fDiaMesU || (fDiaMesU = fmt('dmu', { day: 'numeric', month: 'short', timeZone: 'UTC' }))).format(new Date(f + 'T12:00:00Z')).replace('.', '');
     }
     function urlCalle(extra) { return datos.ciudades[actual].calle + '?dia=' + encodeURIComponent(dia) + '&t=' + Math.round(T) + (extra || ''); }
     function ponerJornada(d, t) {
@@ -598,7 +601,7 @@
     }
     if (extraB) extraB.addEventListener('click', function () { if (!plano) return; if (extraOn) { modoSedes(); plano.encuadrarSedes(calm ? 0 : 700, margenes()); } else modoExtra(); });
     // la hoja de una hermandad: foto, sede, día de salida, próximos cultos de la agenda y su ficha
-    var fmtF = function (f) { return new Date(f + 'T12:00:00Z').toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' }).replace(/\./g, ''); };
+    var fmtF = function (f) { return (fSemDiaMesU || (fSemDiaMesU = fmt('sdmu', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' }))).format(new Date(f + 'T12:00:00Z')).replace(/\./g, ''); };
     // Arriba, sus titulares: el díptico (Cristo y Virgen) si están los dos; si no, la foto de los dos juntos o la que haya, a todo el ancho;
     // sin ninguna, la lámina de su nazareno (assets/naz/<slug>.svg). Nunca la miniatura del punto ni la foto de la sede.
     function mediaSede(h) {
@@ -937,6 +940,9 @@
     var choca = function (a, p, m) { return p.width > 0 && p.left < a.right && p.right > a.left && p.top < a.bottom + m && p.bottom > a.top - m; };
     var mira = function () {
       pedido = false;
+      // arriba del todo no se mide nada: leer scrollHeight y posiciones obliga al navegador a maquetar a destiempo (hasta 0,2 s
+      // en la portada de un móvil al cargar); con la regla de abajo el botón nunca sale antes del 60 % de una pantalla
+      if (window.scrollY < innerHeight * .6 && !reloj) { b.classList.remove('is-visible'); return; }
       // dos pantallas; en las páginas cortas, algo más de la mitad del recorrido (y nada si apenas hay que desplazar)
       var largo = document.documentElement.scrollHeight - innerHeight;
       var ver = largo > innerHeight && window.scrollY > Math.min(innerHeight * 2, largo * .6);

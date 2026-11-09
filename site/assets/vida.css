@@ -106,6 +106,9 @@ a { text-underline-offset: .18em; }
 .nx-chips button[aria-pressed="true"] { --tc: color-mix(in oklab, var(--c, #2b1140) 74%, #12061c); border-color: transparent; background: var(--tc); color: #fbf6ee; box-shadow: inset 0 0 0 1px rgb(236 211 147 / .55), 0 6px 14px -8px rgb(10 3 16 / .55); }
 .nx-chips button[aria-pressed="true"] i { background: var(--oro-claro); }
 .nx-toggle { flex: none; margin-left: auto; }
+/* En PC los chips (capitales y temas) bajan de línea en vez de quedarse en un carrusel cortado por la derecha («Agend…»): con ratón
+   no se desliza de lado (barrido de capturas del 9-nov). En el móvil siguen en carrusel. */
+@media (min-width: 761px) { .nx-chips-fila { flex-wrap: wrap; } .nx-chips { flex-wrap: wrap; overflow: visible; } }
 @media (max-width: 760px) { .nx-chips-fila { flex-wrap: wrap; } .nx-chips { flex: 1 1 100%; margin: 0 calc(var(--gutter) * -1); padding: 2px var(--gutter); scroll-padding: 0 var(--gutter); } .nx-toggle { margin-left: 0; } .nx-pulso { gap: 6px; font-size: .84rem; } .nx-pulso span { min-height: 30px; padding: 0 11px; } }
 .nx-toggle::before { content: ""; width: 16px; height: 16px; border-radius: 5px; border: 1.5px solid var(--line-strong); transition: background-color var(--m-rapido) var(--e-salida), border-color var(--m-rapido) var(--e-salida); }
 .nx-toggle[aria-pressed="true"] { border-color: var(--oro-hondo); background: color-mix(in srgb, var(--oro) 16%, var(--surface)); }
@@ -124,6 +127,9 @@ a { text-underline-offset: .18em; }
 .nx-destacada-foto { position: absolute; inset: 0; z-index: -2; }
 .nx-destacada-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transform: scale(1.02); transition: transform 500ms var(--e-salida); }
 .nx-destacada::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, var(--tc) 8%, color-mix(in srgb, var(--tc) 82%, transparent) 34%, transparent 72%), radial-gradient(90% 60% at 0% 100%, rgb(255 214 150 / .16), transparent 60%); }
+/* En el móvil el texto ocupa más de media tarjeta: el velo es opaco hasta casi la mitad, para que una foto con letras (un
+   cartel o un comunicado) no se lea detrás del resumen como un texto fantasma (barrido de capturas del 9-nov) */
+@media (max-width: 759px) { .nx-destacada::before { background: linear-gradient(to top, var(--tc) 46%, color-mix(in srgb, var(--tc) 90%, transparent) 60%, color-mix(in srgb, var(--tc) 55%, transparent) 76%, transparent 92%); } }
 .nx-destacada::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 12px; background: var(--galon) repeat-x 0 0 / 28px 12px; }
 .nx-destacada.is-sin-foto { min-height: 0; background: radial-gradient(120% 90% at 12% -10%, rgb(255 214 150 / .2), transparent 55%), var(--tc); }
 .nx-destacada-txt { align-self: end; padding: clamp(22px, 3.4vw, 40px) clamp(22px, 3.4vw, 40px) clamp(30px, 3.8vw, 46px); max-width: 52rem; }
@@ -533,6 +539,9 @@ html[data-city] .hy-caps { grid-template-columns: minmax(0, 1fr); }
 .cx-rejilla { display: grid; gap: 30px 44px; align-items: start; margin-bottom: 44px; }
 @media (min-width: 960px) { .cx-rejilla { grid-template-columns: 420px minmax(0, 1fr); } .cx-mes { position: sticky; top: calc(var(--header-h) + 16px); } }
 .cx-lista { min-width: 0; }
+/* el mes ya viene pintado del servidor: con JS se ve desde el primer pintado (antes aparecía al cargar site.js y empujaba la
+   lista 490 px: CLS 0,15 en el móvil). Sin JS sigue oculto: la cabecera quita oc-js si site.js no llega a arrancar */
+.oc-js .cx-mes[hidden] { display: block !important; } /* !important: site.css lleva [hidden] { display: none !important } */
 .cx-mes { overflow: hidden; border-radius: 20px; background: var(--surface); box-shadow: 0 1px 2px rgb(20 6 30 / .06), 0 14px 30px -20px rgb(20 6 30 / .4); }
 .cx-mes-nav { --tc: color-mix(in oklab, var(--nx-c) 60%, #12061c); position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 10px 24px; color: #fbf6ee;
   background: radial-gradient(120% 130% at 12% -30%, rgb(255 214 150 / .22), transparent 60%), linear-gradient(112deg, transparent 32%, rgb(255 255 255 / .05) 46%, transparent 62%), var(--tc); }

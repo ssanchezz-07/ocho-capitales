@@ -369,6 +369,13 @@ const localUrl = (im, w) => { const f = `${im.kind}-${im.slug}-${w}.webp`, h = h
 const localSet = (im, widths) => { const max = Math.max(...widths); const cut = im.sizes.findIndex((x) => x >= max); return im.sizes.slice(0, cut < 0 ? im.sizes.length : cut + 1); };
 // Anchos de la cabecera de capital: los mismos en la etiqueta y en su precarga (si no, en pantallas de alta densidad se baja dos veces)
 const ANCHOS_CABECERA = [500, 960, 1920];
+// sizes de las imágenes con pantallas de alta densidad (x2,5 o más, la mayoría de los móviles): se pide el tamaño de abajo, que
+// se ve igual de nítido a ese tamaño y pesa la quinta parte (perfil del 9-nov: las capitales bajaban 1,3 MB de fotos en el móvil).
+// Miniaturas de 64 px: 160 en vez de 480 (11 KB frente a 95); fotos de la portada (173 px): 480 en vez de 960; cabecera de la
+// capital (392 px): 960 en vez de 1600. En PC y en pantallas x1/x2 no cambia nada.
+const SIZES_MINI = '(min-resolution: 2.5dppx) 53px, 72px';
+const SIZES_PORTADA_CAP = '(max-width: 1000px) and (min-resolution: 2.5dppx) 40vw, (max-width: 1000px) 50vw, 25vw';
+const SIZES_CABECERA = '(max-width: 600px) and (min-resolution: 2.5dppx) 80vw, (max-width: 1240px) 100vw, 1200px';
 const ogOf = (im) => (!im ? '' : im.local ? abs(localUrl(im, im.sizes.at(-1))) : isThumb(im.src) ? wmAt(im.src, 960) : clean(im.src));
 function imgTag(im, alt, { cls = '', sizes = '(max-width: 640px) 100vw, 33vw', widths = [330, 500, 960], eager = false } = {}) {
   if (!im) return '';
@@ -439,13 +446,13 @@ function entryHerm(h, extra = '', enCapital = false) {
   // En la página de su capital, capital y día ya se saben: la fila dice la hora de salida y la sede
   if (enCapital) {
     const im = sal ? sal.im : h.imagen;
-    const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
+    const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: SIZES_MINI, widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
     const tit = sal ? sal.tit : h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
     const meta = [h.hora ? fmtHora(h.hora) + ' h' : '', h.sede].filter(Boolean).map(esc).join(' · ');
     return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3>${meta ? `<p class="oc-entry-sub is-hora">${meta}</p>` : ''}${tit ? `<p class="oc-entry-sub">${esc(tit)}</p>` : ''}</div></li>`;
   }
   const im = sal ? sal.im : h.imagen;
-  const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: '72px', widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
+  const thumb = im && !im.escudo ? `<div class="oc-entry-img${dipCls(im)}">${imgTag(im, '', { sizes: SIZES_MINI, widths: [120, 250] })}</div>` : `<div class="oc-entry-img is-naz">${nazMini(h)}</div>`;
   const tit = sal ? sal.tit : h.titulares.slice(0, 2).map((t) => t.nombre.split(',')[0]).join(' · ');
   return `<li class="oc-entry"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title"><a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a></h3><p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>${tit || h.sede ? `<p class="oc-entry-sub">${esc(tit || h.sede)}</p>` : ''}</div></li>`;
 }
@@ -888,7 +895,7 @@ function fondoLegible(hex, min = 4.8) {
 }
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
-    const img = c.imagen ? imgTag(c.imagen, '', { sizes: '(max-width: 1000px) 50vw, 25vw', widths: [330, 500] }) : '';
+    const img = c.imagen ? imgTag(c.imagen, '', { sizes: SIZES_PORTADA_CAP, widths: [330, 500] }) : '';
     return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p><p class="oc-plate-meta">${cifraCap(c)}</p>` : ''}</div></article></li>`; // portada (big = false) sin la cifra: Pablo, 4-nov, ya está en la ficha de cada capital
   }).join('')}</ul>`;
 }
@@ -1048,7 +1055,7 @@ function pageCapital(c) {
   // Portada de capital «Colgaduras»: la foto a sangre, su colgadura colgando del balcón (la misma de la portada, que viaja con
   // la transición de página) y el titular sobre un velo nazareno. El crédito de la foto va justo debajo.
   const body = `<header class="oc-caphero${c.imagen ? ' has-img' : ''}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">
-  ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, c.imagen.alt || 'Semana Santa en ' + c.nombre, { sizes: '(max-width: 1240px) 100vw, 1200px', widths: ANCHOS_CABECERA, eager: true })}</div>` : ''}
+  ${c.imagen ? `<div class="oc-caphero-img">${imgTag(c.imagen, c.imagen.alt || 'Semana Santa en ' + c.nombre, { sizes: SIZES_CABECERA, widths: ANCHOS_CABECERA, eager: true })}</div>` : ''}
   <img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" style="view-transition-name:colg-${c.slug}">
   <div class="oc-caphero-text"><h1 class="oc-caphero-title"><span>Semana Santa de</span> ${esc(c.nombre)}</h1><p class="oc-caphero-lema">${esc(c.lema)}</p><p class="oc-caphero-meta">${cifraCap(c)} · ${plural(groups.length, 'jornada', 'jornadas')}</p><div class="oc-actions">${favBtn('capital', c.slug, 'Semana Santa de ' + c.nombre)}<a class="oc-btn is-quiet" href="${u('calendario/#cal-' + c.slug)}">${icon('cal')}<span>Calendario</span></a></div></div>
 </header>
@@ -1069,7 +1076,7 @@ ${fuentesCapDe(c.slug).capital ? enlaceFuentes(`acerca/fuentes/${c.slug}/`, 'cap
 </aside>
 </div>
 ${news.length ? section('Últimas noticias de ' + esc(c.nombre), `<div class="oc-newsgrid">${news.map((n) => newsItem(n, { ciudad: false })).join('')}</div><p><a class="oc-btn is-quiet" href="${u('noticias/?ciudad=' + c.slug)}">Más noticias de ${esc(c.nombre)}${icon('arrow')}</a></p>`) : ''}`;
-  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Sus hermandades por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, '(max-width: 1240px) 100vw, 1200px', ANCHOS_CABECERA), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
+  write(`semana-santa/${c.slug}/index.html`, layout({ title: 'Semana Santa de ' + c.nombre, desc: `${c.lema} Sus hermandades por días, con su historia, titulares, imagineros y bandas.`, body, path: `semana-santa/${c.slug}/`, image: ogOf(c.imagen), active: 'capitales/', head: heroPreload(c.imagen, SIZES_CABECERA, ANCHOS_CABECERA), crumbs: [['Portada', u()], ['Capitales', u('capitales/')], [c.nombre, '']] }));
 }
 
 const IGUSER = (r) => String(r).replace(/^@/, '');
@@ -1341,7 +1348,7 @@ const cifras = (list) => { const l = list.filter(([n]) => n > 0); return l.lengt
 // Fila de obra o marcha con la miniatura de su hermandad (foto, díptico o monograma)
 function filaHerm(h, titulo, sub, extra = '') {
   const c = h ? CAP[h.ciudad] : null;
-  const thumb = h && h.imagen && !h.imagen.escudo ? `<div class="oc-entry-img${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: '72px', widths: [120, 250] })}</div>` : h ? `<div class="oc-entry-img is-naz">${nazMini(h)}</div>` : '';
+  const thumb = h && h.imagen && !h.imagen.escudo ? `<div class="oc-entry-img${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: SIZES_MINI, widths: [120, 250] })}</div>` : h ? `<div class="oc-entry-img is-naz">${nazMini(h)}</div>` : '';
   return `<li class="oc-entry${thumb ? '' : ' is-text'}"${extra}>${thumb}<div class="oc-entry-body"><h3 class="oc-entry-title">${titulo}</h3>${sub ? `<p class="oc-entry-sub">${sub}</p>` : ''}${h ? `<p class="oc-entry-meta">${cityTag(h.ciudad)}<span>${esc(h.dia)}</span></p>` : ''}</div></li>`;
 }
 function pageImag(i) {
@@ -1620,8 +1627,32 @@ function pageCalendario() {
   const EV = agenda();
   const N = madridNow();
   const today = isoDay(Date.UTC(N.y, N.m - 1, N.d));
-  const proximos = EV.filter((e) => e.fecha >= today).slice(0, 14);
-  const data = JSON.stringify(EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '', ...(e.hora ? { hr: e.hora } : {}), ...(hermDeEvento(e) ? { h: hermDeEvento(e), hn: HERM[hermDeEvento(e)].nombre, hu: u('hermandad/' + hermDeEvento(e) + '/') } : {}), ...(e.verificado ? { v: 1 } : {}) }))).replace(/</g, '\\u003c');
+  const EVD = EV.map((e) => ({ f: e.fecha, t: e.tipo, g: GRUPO_DE[e.tipo], n: e.titulo, c: e.ciudad, o: e.nota || '', u: e.fuentes ? e.fuentes[0].url : '', m: e.fuentes ? e.fuentes.map((x) => x.medio).join(', ') : '', ...(e.hora ? { hr: e.hora } : {}), ...(hermDeEvento(e) ? { h: hermDeEvento(e), hn: HERM[hermDeEvento(e)].nombre, hu: u('hermandad/' + hermDeEvento(e) + '/') } : {}), ...(e.verificado ? { v: 1 } : {}) }));
+  const data = JSON.stringify(EVD).replace(/</g, '\\u003c');
+  // la lista de próximos, con el MISMO marcado que pinta site.js (item() de la agenda): al rehacerla nada cambia de alto y no
+  // hay salto de diseño (CLS 0,15 en el móvil cuando el servidor la pintaba sin hora, hermandad ni «Añadir al calendario»)
+  const MES3 = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  const itemCal = (e) => {
+    const d = new Date(e.f + 'T12:00:00Z'), city = e.c ? `<span class="oc-city" style="--c:${CAP[e.c] ? CAP[e.c].color : 'var(--primary)'}">${esc(CAP[e.c] ? CAP[e.c].nombre : e.c)}</span>` : '<span>Todas las capitales</span>';
+    const title = e.u ? `<a href="${esc(e.u)}" target="_blank" rel="nofollow noopener noreferrer">${esc(e.n)}<span class="oc-sr"> (abre ${esc(e.m)})</span></a>` : esc(e.n);
+    return `<li class="oc-ev"${e.c && CAP[e.c] ? ` style="--c:${CAP[e.c].color}"` : ''}><time class="oc-ev-date" datetime="${e.f}"><span>${d.getUTCDate()}</span>${MES3[d.getUTCMonth()]}</time><div class="oc-ev-body"><p class="oc-ev-meta"><span class="oc-ev-tipo is-${e.g}">${esc(TIPOS[e.t] || e.t)}</span>${city}${e.v ? '<span class="oc-ev-ok">Confirmado</span>' : ''}${e.hr ? `<span class="oc-ev-hora">${esc(e.hr)} h</span>` : ''}</p><p class="oc-ev-title">${title}</p>${e.hn ? `<p class="oc-ev-note">Hermandad: <a href="${esc(e.hu)}">${esc(e.hn)}</a></p>` : ''}${e.o ? `<p class="oc-ev-note">${esc(e.o)}</p>` : ''}${e.m ? `<p class="oc-ev-note">Fuente: ${esc(e.m)}</p>` : ''}<p class="oc-ev-note"><button class="oc-textbtn" type="button" data-ics="${EVD.indexOf(e)}">Añadir al calendario</button></p></div></li>`;
+  };
+  const proximosH = EVD.filter((e) => e.f >= today).slice(0, 14).map(itemCal).join('');
+  // el mes de hoy, también con el marcado de site.js (renderMonth): la rejilla vacía crecía al pintarla y empujaba la lista (CLS)
+  const MESES_L = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const mesY = +today.slice(0, 4), mesM = +today.slice(5, 7) - 1, mesTit = MESES_L[mesM].charAt(0).toUpperCase() + MESES_L[mesM].slice(1) + ' ' + mesY;
+  const mesH = (() => {
+    const pad = (n) => (n < 10 ? '0' : '') + n, dotC = (g) => (g === 'liturgico' || g === 'salidas' || g === 'cultos' ? g : 'otros');
+    const lead = (new Date(Date.UTC(mesY, mesM, 1)).getUTCDay() + 6) % 7, dias = new Date(Date.UTC(mesY, mesM + 1, 0)).getUTCDate(), porDia = {};
+    EVD.forEach((e) => { (porDia[e.f] = porDia[e.f] || []).push(e); });
+    let h = ''; for (let i = 0; i < lead; i++) h += '<span class="oc-mday is-blank" aria-hidden="true"></span>';
+    for (let d = 1; d <= dias; d++) {
+      const k = mesY + '-' + pad(mesM + 1) + '-' + pad(d), evs = porDia[k] || [], gr = []; evs.forEach((e) => { const c = dotC(e.g); if (gr.indexOf(c) === -1) gr.push(c); });
+      const label = d + ' de ' + MESES_L[mesM] + (evs.length ? ', ' + evs.length + (evs.length === 1 ? ' evento' : ' eventos') : ', sin eventos');
+      h += '<button type="button" class="oc-mday' + (k === today ? ' is-today' : '') + (evs.length ? ' has-ev' : '') + '" data-day="' + k + '" aria-label="' + label + '" aria-pressed="false"' + (evs.length ? '' : ' disabled') + '><span>' + d + '</span><i class="oc-dots">' + gr.slice(0, 3).map((g) => '<b class="oc-dot is-' + g + '"></b>').join('') + '</i></button>';
+    }
+    return h;
+  })();
   const porVenir = EV.filter((e) => e.fecha >= today);
   const body = `<header class="nx-head vx-head cx-head" data-head-capital><div class="nx-head-in"><h1 class="oc-title nx-title">Calendario cofrade</h1><p class="nx-lead">La agenda de cultos, salidas y actos de las ocho capitales, y el orden de paso de cada jornada de la Semana Santa.</p><p class="nx-pulso"><span><b>${mil(porVenir.length)}</b> actos por venir</span><span><b>${mil(porVenir.filter((e) => e.verificado).length)}</b> confirmados</span><span><b>${D.capitales.length}</b> capitales</span></p></div></header>
 <section class="cx-agenda" aria-labelledby="agenda-titulo" data-agenda data-hoy="${today}">
@@ -1632,14 +1663,14 @@ function pageCalendario() {
   </div>
   <div class="cx-rejilla">
     <div class="cx-mes" data-month hidden>
-      <div class="cx-mes-nav"><button class="oc-iconbtn" type="button" data-month-prev aria-label="Mes anterior">${icon('back')}</button><p class="cx-mes-tit" data-month-title aria-live="polite"></p><button class="oc-iconbtn" type="button" data-month-next aria-label="Mes siguiente">${icon('arrow')}</button></div>
+      <div class="cx-mes-nav"><button class="oc-iconbtn" type="button" data-month-prev aria-label="Mes anterior">${icon('back')}</button><p class="cx-mes-tit" data-month-title aria-live="polite">${mesTit}</p><button class="oc-iconbtn" type="button" data-month-next aria-label="Mes siguiente">${icon('arrow')}</button></div>
       <div class="oc-month-week" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
-      <div class="oc-month-days" data-month-days></div>
+      <div class="oc-month-days" data-month-days>${mesH}</div>
       <p class="oc-month-legend"><span><i class="oc-dot is-liturgico"></i>Litúrgico</span><span><i class="oc-dot is-salidas"></i>Procesiones</span><span><i class="oc-dot is-cultos"></i>Cultos</span><span><i class="oc-dot is-otros"></i>Conciertos y anuncios</span></p>
     </div>
     <div class="cx-lista">
       <div class="cx-lista-cab"><h3 class="nx-h" data-agenda-list-title>Próximos eventos</h3><button class="oc-textbtn" type="button" data-agenda-reset hidden>Ver próximos</button></div>
-      <ol class="oc-evs" data-agenda-list>${proximos.map(agendaItem).join('')}</ol>
+      <ol class="oc-evs" data-agenda-list>${proximosH}</ol>
       <p class="oc-empty" data-agenda-empty hidden>No hay eventos con esos filtros en estas fechas.</p>
       <p class="hy-nota">Las fechas litúrgicas se calculan a partir de la Pascua. Los eventos marcados como «Confirmado» están verificados en fuentes oficiales o prensa; el resto se detecta automáticamente en las noticias de cada mañana. Confirma siempre en la fuente enlazada.</p>
     </div>

@@ -1,5 +1,18 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-10 · Fluidez de toda la página (noche del 9-nov, erCuñao, punto 1 del plan; no se toca el plano)
+Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, mediana de 3 pasadas, contra la versión publicada (6f3635d). Lo que más frenaba eran las imágenes (el navegador bajaba fotos de 3x para huecos pequeños) y el salto del calendario.
+- **`sizes` de las imágenes** (`build.mjs`). Las miniaturas, las tarjetas de la portada y la cabecera de las capitales piden menos ancho en pantallas de 3x (`SIZES_MINI`, `SIZES_PORTADA_CAP` y `SIZES_CABECERA`). Peso de imágenes en móvil: portada de 1168 a 447 KB, Málaga de 1213 a 291 KB y Sevilla de 1339 a 274 KB. LCP de Sevilla de 1328 a 540 ms y de Málaga de 972 a 664 ms. A simple vista no se nota peor.
+- **Calendario sin saltos**: el servidor pinta los próximos actos y el mes con el mismo marcado que `site.js`, y `.cx-mes` ya no nace oculto con JS (la regla global `[hidden]` obligó a poner `!important`). CLS de 0,149 a 0.
+- **`site.js`**: los formateadores `Intl` se crean una sola vez (antes, uno por fecha) y el botón de volver arriba no hace cálculos mientras no hace falta.
+- **Noticias**: en el móvil, la destacada lleva un degradado más opaco detrás del texto, que ya no se transparenta. En PC, los filtros pasan a varias líneas y no se cortan a 1440.
+- **erCuñao en PC (desde 1440 px)**: se acopla a la derecha, 452 px, y la página se aparta en vez de quedar tapada. Lo de borde a borde de la portada cuenta con el ancho que queda, y la cabecera usa los escalones de pantallas medias para que el menú no pise el buscador. Volver arriba se corre a la izquierda del panel. Por debajo de 1440 sigue siendo la ventana flotante: con 1280, la página quedaría en 828 px, más estrecha que el menú. Se cierra con su botón o con Escape.
+- **Juegos en PC** (punto 8): a partir de 960 px tiene un ancho de 1040, las tarjetas van en 3 columnas y las opciones en 2.
+- **Botones de juegos del bot en el móvil** (punto 8): un enlace del chat a la misma página (p. ej. «El reto de hoy» estando en Juegos) cierra la hoja y el juego arranca a la vista.
+- **Nazareno de la portada**: empieza a dibujarse cuando su tramo entra por la mitad de la pantalla. Al bajar rápido ya no aparece un bloque oscuro vacío.
+- **Descartado**: `text-wrap` (no mejora lo medido) y `content-visibility` (sigue fuera por Safari).
+- **Propuesto, sin hacer**: (1) partir el CSS por tipo de página, porque site.css (180 KB) y vida.css (83 KB) bloquean el pintado y cada página usa entre el 10 y el 17 %, y es lo que más pesa en el TBT que queda; (2) un «ver más» en bandas e imaginerías de las páginas de capital (menos DOM y menos miniaturas).
+
 ## 2026-11-09 · Esperanza de Triana: nombres de sus titulares según la hermandad
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
