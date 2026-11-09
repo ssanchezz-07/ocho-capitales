@@ -3604,12 +3604,26 @@
   },
   "el-nazareno-huelva": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:JesusNazarenoHuelva.jpg",
-    "titulo": "File:JesusNazarenoHuelva.jpg",
-    "autor": "NeneHuelva",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús Nazareno"
+    "autor": "Nazareno (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadnazarenohuelva/",
+    "local": "scripts/cedidas/huelva/el-nazareno-huelva-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
+    "titular": "Nuestro Padre Jesús Nazareno",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en @hdadnazarenohuelva (https://www.instagram.com/p/DfFLwPMCFNh/, imagen 12), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "virgen": {
+    "autor": "Nazareno (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadnazarenohuelva/",
+    "local": "scripts/cedidas/huelva/el-nazareno-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Amargura",
+    "titular": "María Santísima de la Amargura",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en @hdadnazarenohuelva (https://www.instagram.com/p/DfMYi-tkQVP/, imagen 5), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "el-descendimiento-huelva": {
@@ -3747,12 +3761,26 @@
   },
   "el-cautivo-huelva": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:LunesSantoa.jpg",
-    "titulo": "File:LunesSantoa.jpg",
-    "autor": "Egunonlepiark",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús Cautivo"
+    "autor": "Cautivo (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivohermandad/",
+    "local": "scripts/cedidas/huelva/el-cautivo-huelva-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Cautivo",
+    "titular": "Nuestro Padre Jesús Cautivo",
+    "foco": "48% 33%",
+    "permiso": "Publicada por la propia hermandad en @cautivohermandad (https://www.instagram.com/p/DfUg5p3G-3C/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "virgen": {
+    "autor": "Cautivo (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivohermandad/",
+    "local": "scripts/cedidas/huelva/el-cautivo-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Misericordia",
+    "titular": "María Santísima de la Misericordia",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en @cautivohermandad (https://www.instagram.com/p/DfLGAbwCcE1/, imagen 1), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-misericordia-huelva": {
@@ -4976,6 +5004,67 @@
     "titular": "Nuestra Señora de la Salud",
     "foco": "50% 30%",
     "permiso": "Publicada por la propia hermandad en @hdad.salesianosgranada (https://www.instagram.com/p/DfF0KGqsWt3/), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "el-prendimiento-huelva": {
+   "cristo": {
+    "autor": "Prendimiento (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoyestrellahuelva/",
+    "local": "scripts/cedidas/huelva/el-prendimiento-huelva-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Prendimiento",
+    "titular": "Nuestro Padre Jesús del Prendimiento",
+    "foco": "70% 40%",
+    "permiso": "Publicada por la propia hermandad en @prendimientoyestrellahuelva (https://www.instagram.com/p/DdXJ7_lo4A9/, imagen 1), sin fotógrafo citado, coautor ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "virgen": {
+    "autor": "Prendimiento (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoyestrellahuelva/",
+    "local": "scripts/cedidas/huelva/el-prendimiento-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Estrella",
+    "titular": "María Santísima de la Estrella",
+    "foco": "45% 45%",
+    "permiso": "Publicada por la propia hermandad en @prendimientoyestrellahuelva (https://www.instagram.com/p/Dcg9rvDoq80/, imagen 1), sin fotógrafo citado, coautor ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "la-redencion-huelva": {
+   "virgen": {
+    "autor": "La Redención (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadredencionhuelva/",
+    "local": "scripts/cedidas/huelva/la-redencion-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Dulce Nombre",
+    "titular": "María Santísima del Dulce Nombre",
+    "foco": "50% 48%",
+    "permiso": "Publicada por la propia hermandad en @hdadredencionhuelva (https://www.instagram.com/p/DXjBSIMDRVC/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "el-resucitado-huelva": {
+   "cristo": {
+    "autor": "Resucitado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadohuelvaoficial/",
+    "local": "scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo Resucitado",
+    "titular": "Santísimo Cristo Resucitado",
+    "foco": "66% 22%",
+    "permiso": "Publicada por la propia hermandad en @resucitadohuelvaoficial (https://www.instagram.com/p/DNdk7P-KVro/, imagen 1), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "virgen": {
+    "autor": "Resucitado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadohuelvaoficial/",
+    "local": "scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Luz",
+    "titular": "María Santísima de la Luz",
+    "foco": "50% 42%",
+    "permiso": "Publicada por la propia hermandad en @resucitadohuelvaoficial (https://www.instagram.com/p/DYAqczcEdn1/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   }
  }

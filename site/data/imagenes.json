@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T07:32:57.717Z",
+ "generado": "2026-11-09T08:28:43.023Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -8855,18 +8855,41 @@
   "el-nazareno-huelva": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1032,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "NeneHuelva",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:JesusNazarenoHuelva.jpg",
+    "autor": "Nazareno (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadnazarenohuelva/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-nazareno-huelva-cristo.jpg",
+    "tam": 599846,
     "titular": "Nuestro Padre Jesús Nazareno"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1032,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Nazareno (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadnazarenohuelva/",
+    "foco": "50% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-nazareno-huelva-virgen.jpg",
+    "tam": 1257472,
+    "titular": "María Santísima de la Amargura"
    }
   },
   "el-descendimiento-huelva": {
@@ -9095,18 +9118,41 @@
   "el-cautivo-huelva": {
    "cristo": {
     "w": 960,
-    "h": 539,
+    "h": 1104,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Egunonlepiark",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:LunesSantoa.jpg",
+    "autor": "Cautivo (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivohermandad/",
+    "foco": "48% 33%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-cautivo-huelva-cristo.jpg",
+    "tam": 366812,
     "titular": "Nuestro Padre Jesús Cautivo"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1104,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Cautivo (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivohermandad/",
+    "foco": "50% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-cautivo-huelva-virgen.jpg",
+    "tam": 706727,
+    "titular": "María Santísima de la Misericordia"
    }
   },
   "la-misericordia-huelva": {
@@ -11039,6 +11085,107 @@
     "tam": 510911,
     "titular": "Nuestra Señora de la Salud"
    }
+  },
+  "el-prendimiento-huelva": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Prendimiento (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoyestrellahuelva/",
+    "foco": "70% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-prendimiento-huelva-cristo.jpg",
+    "tam": 1430453,
+    "titular": "Nuestro Padre Jesús del Prendimiento"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Prendimiento (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoyestrellahuelva/",
+    "foco": "45% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-prendimiento-huelva-virgen.jpg",
+    "tam": 853518,
+    "titular": "María Santísima de la Estrella"
+   }
+  },
+  "la-redencion-huelva": {
+   "virgen": {
+    "w": 960,
+    "h": 1008,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Redención (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadredencionhuelva/",
+    "foco": "50% 48%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-redencion-huelva-virgen.jpg",
+    "tam": 643811,
+    "titular": "María Santísima del Dulce Nombre"
+   }
+  },
+  "el-resucitado-huelva": {
+   "cristo": {
+    "w": 960,
+    "h": 1067,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Resucitado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadohuelvaoficial/",
+    "foco": "66% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg",
+    "tam": 539533,
+    "titular": "Santísimo Cristo Resucitado"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1067,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Resucitado (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadohuelvaoficial/",
+    "foco": "50% 42%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg",
+    "tam": 386044,
+    "titular": "María Santísima de la Luz"
+   }
   }
  },
  "dipticos": {
@@ -11902,6 +12049,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Humildad.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:MARIA_SANT%C3%8DSIMA_VICTORIA_HUELVA.jpg\"|\"\"|\"\"|\"\"|\"\""
   },
+  "el-nazareno-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadnazarenohuelva/\"|\"scripts/cedidas/huelva/el-nazareno-huelva-cristo.jpg\"|599846|\"\"|\"50% 30%\"|\"https://www.instagram.com/hdadnazarenohuelva/\"|\"scripts/cedidas/huelva/el-nazareno-huelva-virgen.jpg\"|1257472|\"\"|\"50% 22%\""
+  },
   "la-esperanza-granada": {
    "w": 960,
    "h": 640,
@@ -11911,6 +12068,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/granada/la-esperanza-granada-cristo.jpg\"|420948|\"\"|\"22% 30%\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Iglesia_Santa_Ana.jpg\"|\"\"|\"\"|\"\"|\"50% 0%\""
+  },
+  "el-cautivo-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/cautivohermandad/\"|\"scripts/cedidas/huelva/el-cautivo-huelva-cristo.jpg\"|366812|\"\"|\"48% 33%\"|\"https://www.instagram.com/cautivohermandad/\"|\"scripts/cedidas/huelva/el-cautivo-huelva-virgen.jpg\"|706727|\"\"|\"50% 22%\""
   },
   "dolores-de-churriana-malaga": {
    "w": 960,
@@ -12231,6 +12398,26 @@
     960
    ],
    "firma": "\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-cristo.jpg\"|430544|\"\"|\"50% 30%\"|\"https://www.instagram.com/cautivoyencarnaciongranada/\"|\"scripts/cedidas/granada/el-cautivo-granada-virgen.jpg\"|498415|\"\"|\"50% 30%\""
+  },
+  "el-prendimiento-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/prendimientoyestrellahuelva/\"|\"scripts/cedidas/huelva/el-prendimiento-huelva-cristo.jpg\"|1430453|\"\"|\"70% 40%\"|\"https://www.instagram.com/prendimientoyestrellahuelva/\"|\"scripts/cedidas/huelva/el-prendimiento-huelva-virgen.jpg\"|853518|\"\"|\"45% 45%\""
+  },
+  "el-resucitado-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-cristo.jpg\"|539533|\"\"|\"66% 22%\"|\"https://www.instagram.com/resucitadohuelvaoficial/\"|\"scripts/cedidas/huelva/el-resucitado-huelva-virgen.jpg\"|386044|\"\"|\"50% 42%\""
   }
  }
 }
