@@ -9,7 +9,7 @@
   "humildad-y-paciencia-malaga": [[null, {"túnica": "marrón", "antifaz": "blanco", "capa": "blanco", "escapulario": "marrón", "cinturón": "negro"}]],
   "huerto-malaga": [["Sección del Señor", {"túnica": "blanco", "capirote": "morado", "capa": "morado", "botonadura": "morado"}], ["Sección de la Virgen", {"túnica": "blanco", "capirote": "azul", "capa": "azul", "botonadura": "azul"}]],
   "prendimiento-malaga": [["Sección del Señor", {"túnica": "blanco", "capirote": "rojo", "capa": "rojo", "botonadura": "rojo"}], ["Sección de la Virgen", {"túnica": "blanco", "capirote": "azul", "capa": "azul", "botonadura": "azul"}]],
-  "crucifixion-malaga": [["Sección del Señor", {"túnica": "morado", "capirote": "negro"}], ["Sección de la Virgen", {"túnica": "negro", "capirote": "morado"}]],
+  "crucifixion-malaga": [["Ambas secciones", {"túnica": "morado", "capa": "negro", "capirote": "negro"}]],
   "gitanos-malaga": [["Sección del Señor", {"túnica": "morado", "capillo": "morado"}], ["Sección de la Virgen", {"túnica": "burdeos", "capillo": "blanco"}]],
   "dolores-del-puente-malaga": [[null, {"túnica": "negro", "capirote": "negro", "cíngulo": "blanco"}]],
   "pasion-malaga": [[null, {"túnica": "morado", "capirote": "morado", "cinturón": "esparto"}]],

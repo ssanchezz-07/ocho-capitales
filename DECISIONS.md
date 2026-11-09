@@ -1,5 +1,16 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-09 · Hábito de la Crucifixión (Málaga), según la propia hermandad
+La hermandad escribió a Pablo (captura en las notas de Coordinación) que el hábito publicado, tomado de agrupaciondecofradias.com, estaba mal. Lo correcto, en sus palabras: en las dos secciones, túnica morada, capa negra con el escudo, capirote negro y guantes negros; los hombres de trono, túnica negra con cuello y bocamangas morados y guantes negros.
+**Elegido**
+- Su texto literal en `habitos.json`, con fuente «la propia hermandad (comunicación a Ocho Capitales, 9-nov-2026)» y enlace a crucifixion.es. Para esto se añade a `habitos.json` un campo opcional, `fuente_nombre`, que la ficha enseña antes del dominio.
+- Una sola figura, «Ambas secciones», con túnica, capa y capirote.
+- Los guantes y la ropa de los hombres de trono van solo en el texto, porque la figura no tiene esas prendas.
+- `colores-habito.json`: solo cambia la fuente de esta hermandad; el color sigue siendo morado y negro.
+
+**Descartado**
+- Regenerar `colores-habito.json` entero con `tools/colores-habito.mjs`: el archivo estaba atrasado y habría metido de paso unas 30 hermandades de otras capitales que no son de esta corrección.
+
 ## 2026-11-09 · erCuñao, bloque 6: preguntas con erratas o en andaluz, y menos peso en cada página
 **Elegido**
 - **Fonética andaluza al comparar** (seseo y ceceo, yeísmo, la h muda): «plasa paliyero» casa con Plaza Palillero y «no me yores» con «No me llores, Soledad». Se compara la escritura tal cual **y** la fonética, y vale la más parecida: una errata como «traicóin» no se parece a «traisión» en fonética, pero sí a «traición» escrita.
