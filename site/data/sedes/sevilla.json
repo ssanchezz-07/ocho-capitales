@@ -644,13 +644,13 @@
   "el-cachorro-sevilla": {
    "nombre": "El Cachorro",
    "templo": {
-    "nombre": "Basílica del Patrocinio",
+    "nombre": "Basílica del Santísimo Cristo de la Expiración",
     "lat": 37.3894793,
     "lon": -6.0109426,
     "osm": "way/163362242",
     "nombre_osm": "Iglesia del Cachorro",
-    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Cachorro_(Sevilla)",
-    "fuente_coordenadas": "OpenStreetMap way 163362242 («Iglesia del Cachorro»); la Basílica del Patrocinio es la del Cachorro"
+    "fuente": "https://hermandaddelcachorro.org/contacto/",
+    "fuente_coordenadas": "OpenStreetMap way 163362242 («Iglesia del Cachorro»), en el tramo final de la calle Castilla (n.º 182, según la web de la hermandad)"
    },
    "casa_hermandad": null
   },
