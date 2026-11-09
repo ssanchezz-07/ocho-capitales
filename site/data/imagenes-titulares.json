@@ -4018,6 +4018,17 @@
      0.55
     ],
     "foco": "50% 27%"
+   },
+   "virgen": {
+    "autor": "Los Gitanos (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadgitanosgr/",
+    "local": "scripts/cedidas/granada/los-gitanos-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Sacromonte",
+    "titular": "María Santísima del Sacromonte",
+    "foco": "45% 20%",
+    "permiso": "Publicada por la propia cofradía en su cuenta oficial @hdadgitanosgr (bio «PERFIL OFICIAL»; https://www.instagram.com/p/De9-fcaDALW/, imagen 2), sin fotógrafo citado ni firma; la publicación nombra solo al vestidor (@javier_nu). Recortada a medio cuerpo, sin el rótulo «Sacromonte» de abajo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "pollinica-malaga": {
@@ -5286,6 +5297,54 @@
     "titular": "Nuestra Señora del Prado en su Dolor",
     "foco": "50% 18%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadpradohuelva (bio «Cuenta Oficial», enlazada por el Consejo de Huelva; https://www.instagram.com/p/De1m4C2gHS7/, imagen 3), sin fotógrafo citado ni firma. Recortada a medio cuerpo. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "la-resurreccion-granada": {
+   "cristo": {
+    "autor": "Resurrección (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/ResurreccionGR",
+    "local": "scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Señor de la Resurrección",
+    "titular": "Nuestro Señor de la Resurrección",
+    "foco": "55% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @ResurreccionGR (bio «Perfil OFICIAL de la Venerable Hermandad…»; https://x.com/ResurreccionGR/status/2078758325324554428), sin fotógrafo citado ni firma. Recortada a la imagen. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Resurrección (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/ResurreccionGR",
+    "local": "scripts/cedidas/granada/la-resurreccion-granada-virgen.jpg",
+    "titulo": "Cedida: Santa María del Triunfo",
+    "titular": "Santa María del Triunfo",
+    "foco": "55% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @ResurreccionGR (https://x.com/ResurreccionGR/status/2042364292167585830), sin fotógrafo citado ni firma; el tuit nombra solo al vestidor (@alvaroabrilvela). Recortada por abajo para quitar el logo y la franja de redes de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "el-nazareno-granada": {
+   "cristo": {
+    "autor": "Nazareno y Merced (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/NAZARENOyMERCED",
+    "local": "scripts/cedidas/granada/el-nazareno-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
+    "titular": "Nuestro Padre Jesús Nazareno",
+    "foco": "45% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @NAZARENOyMERCED (bio «perfil oficial»; https://x.com/NAZARENOyMERCED/status/2061757860309074410), sin fotógrafo citado ni firma. Recortada por la izquierda para quitar la franja con el escudo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Nazareno y Merced (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/NAZARENOyMERCED",
+    "local": "scripts/cedidas/granada/el-nazareno-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Merced",
+    "titular": "María Santísima de la Merced",
+    "foco": "50% 18%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @NAZARENOyMERCED (https://x.com/NAZARENOyMERCED/status/2061032361257468218), sin fotógrafo citado ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T16:28:33.569Z",
+ "generado": "2026-11-09T22:12:07.023Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -9549,6 +9549,25 @@
     ],
     "titular": "Santísimo Cristo del Consuelo",
     "foco": "50% 27%"
+   },
+   "virgen": {
+    "w": 950,
+    "h": 945,
+    "widths": [
+     160,
+     480,
+     950
+    ],
+    "escudo": false,
+    "autor": "Los Gitanos (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadgitanosgr/",
+    "foco": "45% 20%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/los-gitanos-granada-virgen.jpg",
+    "tam": 220946,
+    "titular": "María Santísima del Sacromonte"
    }
   },
   "pollinica-malaga": {
@@ -11561,6 +11580,86 @@
     "tam": 311604,
     "titular": "Nuestra Señora del Prado en su Dolor"
    }
+  },
+  "la-resurreccion-granada": {
+   "cristo": {
+    "w": 956,
+    "h": 1270,
+    "widths": [
+     160,
+     480,
+     956
+    ],
+    "escudo": false,
+    "autor": "Resurrección (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/ResurreccionGR",
+    "foco": "55% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg",
+    "tam": 213667,
+    "titular": "Nuestro Señor de la Resurrección"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 896,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Resurrección (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/ResurreccionGR",
+    "foco": "55% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/la-resurreccion-granada-virgen.jpg",
+    "tam": 403553,
+    "titular": "Santa María del Triunfo"
+   }
+  },
+  "el-nazareno-granada": {
+   "cristo": {
+    "w": 929,
+    "h": 1350,
+    "widths": [
+     160,
+     480,
+     929
+    ],
+    "escudo": false,
+    "autor": "Nazareno y Merced (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/NAZARENOyMERCED",
+    "foco": "45% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-nazareno-granada-cristo.jpg",
+    "tam": 290328,
+    "titular": "Nuestro Padre Jesús Nazareno"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Nazareno y Merced (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/NAZARENOyMERCED",
+    "foco": "50% 18%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/el-nazareno-granada-virgen.jpg",
+    "tam": 702899,
+    "titular": "María Santísima de la Merced"
+   }
   }
  },
  "dipticos": {
@@ -12574,6 +12673,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Despo.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Dulce_nombre.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "los-gitanos-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Gitanos_de_Granada.jpg\"|\"\"|\"\"|[0,0.08,0.6,0.55]|\"50% 27%\"|\"https://www.instagram.com/hdadgitanosgr/\"|\"scripts/cedidas/granada/los-gitanos-granada-virgen.jpg\"|220946|\"\"|\"45% 20%\"|\"\"|\"\""
+  },
   "pollinica-malaga": {
    "w": 960,
    "h": 640,
@@ -12943,6 +13052,26 @@
     960
    ],
    "firma": "\"https://www.instagram.com/hermandaddelcalvario.huelva/\"|\"scripts/cedidas/huelva/el-calvario-huelva-cristo.jpg\"|355842|\"\"|\"45% 18%\"|\"https://www.instagram.com/hermandaddelcalvario.huelva/\"|\"scripts/cedidas/huelva/el-calvario-huelva-virgen.jpg\"|141585|\"\"|\"50% 25%\"|\"\"|\"\""
+  },
+  "la-resurreccion-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-cristo.jpg\"|213667|\"\"|\"55% 30%\"|\"https://x.com/ResurreccionGR\"|\"scripts/cedidas/granada/la-resurreccion-granada-virgen.jpg\"|403553|\"\"|\"55% 25%\"|\"\"|\"\""
+  },
+  "el-nazareno-granada": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://x.com/NAZARENOyMERCED\"|\"scripts/cedidas/granada/el-nazareno-granada-cristo.jpg\"|290328|\"\"|\"45% 25%\"|\"https://x.com/NAZARENOyMERCED\"|\"scripts/cedidas/granada/el-nazareno-granada-virgen.jpg\"|702899|\"\"|\"50% 18%\"|\"\"|\"\""
   }
  }
 }
