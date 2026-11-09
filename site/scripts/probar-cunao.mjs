@@ -461,6 +461,8 @@ caso('B7-10 Málaga: la fuente no dice de qué son las horas, nota neutra', moto
 caso('B7-11 Granada: el recorrido sin «horas del paso»', motor(), '¿Por dónde pasa la Borriquilla de Granada?', y(noDice('horas del paso', 'Salida del paso'), contiene('itinerario 2026)')));
 caso('B7-12 Córdoba: horas de la cruz de guía (columna CRUZ DE GUÍA del PDF oficial)', motor(), '¿A qué hora sale la Expiración de Córdoba?', notaTL(/^Horas de la cruz de guía/));
 caso('B7-13 Santa Marta: tramos mal leídos en la fuente, sin referencia', motor(), '¿A qué hora sale Santa Marta de Sevilla?', y(noDice('Esa es la hora de la cruz de guía'), notaTL(/^Horas del programa/)));
+caso('B7-14 autoría según la hermandad: anónimo, con la atribución tradicional sin base', motor(), '¿Quién talló las imágenes de la Esperanza de Triana?', y(contiene('Anónimo, entre 1608 y 1616 (atribuido tradicionalmente a Marcos Cabrera, sin base documental según la hermandad)'), noDice('Atribuido a Marcos Cabrera')));
+caso('B7-15 en su imaginero, la obra con la nota, no como obra suya sin más', motor(), 'obras de Marcos Cabrera', contiene('o que se le atribuyen', 'sin base documental'));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));

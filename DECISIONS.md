@@ -3,6 +3,11 @@
 ## 2026-11-09 · Esperanza de Triana: nombres de sus titulares según la hermandad
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
+- **Autoría del Cristo, según la hermandad (fuente oficial primero):** su web dice que no se sabe a ciencia cierta la autoría «por ausencia de documentación». La atribución a Marcos Cabrera viene de 1818 y otros historiadores la tienen por anónima; la hermandad la fecha entre 1608 y 1616. Se cambia el «Atribuido a Marcos Cabrera» que venía de Wikipedia por «Anónimo, entre 1608 y 1616 (atribuido tradicionalmente a Marcos Cabrera, sin base documental según la hermandad)», con la web de la hermandad como fuente.
+  - En `complementos.json` hay dos campos nuevos: `texto` (la autoría tal como la da la fuente) y `vinculo` (la obra sigue en la ficha de su imaginero, como atribución y con la nota).
+  - La página del imaginero ya no quita su nombre de esa nota, y erCuñao dice «obras suyas o que se le atribuyen».
+  - Los juegos no preguntan por ella como obra de Marcos Cabrera.
+  - La historia de la ficha (`historias.json`) sigue diciendo «entre 1608 y 1630», que es la fecha de García de la Concha, citada también por la hermandad. Es cosa de Historias.
 - Auditoría (NO APTO): la página del imaginero Marcos Cabrera seguía con el nombre viejo, porque `build-data.js` arma el índice de imagineros antes de aplicar `titulares_renombrar`. Ahora el renombrado llega también a las obras del imaginero, y con eso se arregla de paso «María Santísima titular» de la Lanzada de Huelva en la ficha de Manuel Domínguez Rodríguez. También se cambia el titular en `titulares-candidatas.json`, para que no vuelva el nombre viejo si se rehacen las fotos.
 - No se tocan el Nuestro Padre Jesús de las Tres Caídas de Granada (otra hermandad) ni los textos de dedicatoria de las marchas, que citan su fuente.
 

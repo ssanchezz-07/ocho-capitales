@@ -812,8 +812,10 @@
       ctx.imag = i; ctx.intent = 'imaginero';
       const cab = x[1] + (x[2] ? ' (' + x[2] + ')' : '') + (x[3] ? ', escuela ' + x[3] : '') + '.';
       if (x[4]) { P(r, cab); P(r, x[4]); }
-      P(r, (x[4] ? '' : cab + ' ') + 'En el portal tengo ' + obras.length + (obras.length === 1 ? ' obra suya que procesiona' : ' obras suyas que procesionan') + (obras.length ? ':' : '.'));
-      if (obras.length) LI(r, obras.slice(0, 8).map((o) => ({ x: o.t[0], href: L.herm(o.h), sub: o.h.n + ' · ' + nombreCiudad(o.h.c) + (o.t[1] && /\d{4}/.test(o.t[1]) ? ' · ' + /\d{4}/.exec(o.t[1])[0] : '') })));
+      const atribs = obras.some((o) => /atrib|^an[oó]nim/i.test(o.t[1] || ''));
+      P(r, (x[4] ? '' : cab + ' ') + 'En el portal tengo ' + obras.length + (obras.length === 1 ? (atribs ? ' obra suya o que se le atribuye, que procesiona' : ' obra suya que procesiona') : (atribs ? ' obras suyas o que se le atribuyen, que procesionan' : ' obras suyas que procesionan')) + (obras.length ? ':' : '.'));
+      // una obra anónima con atribución tradicional se dice así, con la nota de su fuente, no como obra suya sin más
+      if (obras.length) LI(r, obras.slice(0, 8).map((o) => ({ x: o.t[0], href: L.herm(o.h), sub: o.h.n + ' · ' + nombreCiudad(o.h.c) + (/^an[oó]nim/i.test(o.t[1] || '') ? ' · ' + o.t[1] : o.t[1] && /\d{4}/.test(o.t[1]) ? ' · ' + /\d{4}/.exec(o.t[1])[0] : '') })));
       if (obras.length > 8) P(r, 'Y ' + (obras.length - 8) + ' más en su ficha.');
       A(r, [['Ver su ficha', L.imag(x[0])]]);
       C(r, ['¿Qué sale hoy?', '¿Quién talló el Cachorro?']);

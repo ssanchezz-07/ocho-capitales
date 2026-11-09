@@ -1350,7 +1350,9 @@ function pageImag(i) {
   const cp = capPrincipal(i), col = CAP[cp] ? CAP[cp].color : '#3a1a5c', siglo = sigloImag(i);
   const obraCard = (o) => {
     const h = HERM[o.hermandad_slug], c = h ? CAP[h.ciudad] : null;
-    const det = esc(String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
+    // el nombre del imaginero se quita del detalle (ya está en la página), salvo en una autoría anónima con atribución tradicional,
+    // donde el nombre es parte de la nota («Anónimo… atribuido tradicionalmente a Marcos Cabrera, sin base documental…»)
+    const det = esc(/^an[oó]nim/i.test(String(o.detalle || '')) ? String(o.detalle) : String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
     const foto = h && h.imagen && !h.imagen.escudo ? `<div class="ix-foto${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? `<div class="ix-foto is-naz">${nazMini(h)}</div>` : (console.warn(`Aviso: la obra «${o.titular}» de ${i.nombre} no enlaza con ninguna hermandad: sale con el nazareno sin colores`), `<div class="ix-foto is-sello" aria-hidden="true"><svg viewBox="38 16 164 532">${NAZ_TRAZO}</svg></div>`);
     const titulo = h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular);
     const meta = [h ? `<span class="vx-autor">${esc(h.nombre)}</span>` : (o.hermandad ? `<span class="vx-autor">${esc(o.hermandad)}</span>` : ''), det ? `<span>${det}</span>` : '', o.atrib ? '<span class="nx-tema">Atribución</span>' : ''].join('');
@@ -2463,7 +2465,8 @@ function datosJuegos() {
     // el año de fundación solo si el texto empieza por él («1590, resultado de la fusión…»); «Siglo XVI (…reorganizada en 1921)» no da año
     const fa0 = /^\s*(1[2-9]\d\d|20[0-2]\d)\b/.exec(h.fundacion || ''), anios = (String(h.fundacion || '').match(/\b1[2-9]\d\d\b|\b20[0-2]\d\b/g) || []).map(Number);
     const fa = fa0 && !anios.some((y) => y < +fa0[1]) && !/fusi|antecedente|or[ií]gen|reorganiz|refund|primitiv/i.test(h.fundacion) ? fa0 : null;
-    const tit = (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) ? iIdx.get(imagSlug(t.imaginero)) : -1, t.atrib || /atrib/i.test(t.autor || '') ? 1 : 0]);
+    // una obra anónima con atribución tradicional sin base («Anónimo… atribuido tradicionalmente a…») no entra en las preguntas de imaginero
+    const tit = (h.titulares || []).map((t) => [titCorto(t.nombre), t.autor || '', t.imaginero && iIdx.has(imagSlug(t.imaginero)) && !/^an[oó]nim/i.test(t.autor || '') ? iIdx.get(imagSlug(t.imaginero)) : -1, t.atrib || /atrib/i.test(t.autor || '') ? 1 : 0]);
     const ac = h.acompanamiento && h.acompanamiento.pasos || [];
     const bandas = [...new Set(ac.length ? ac.flatMap((p) => p.bandas.map((b) => b.nombre)) : (h.bandas_slugs || []).map((s) => BANDA[s] && BANDA[s].nombre).filter(Boolean))];
     return [h.slug, h.nombre, h.ciudad, h.dia, hhmmJ(h.hora), h.sede || '', fa ? +fa[1] : 0, tit, bandas, fotoDe(h), nazDe(h, k), rutaDe(h), h.orden || 0, (h.salidas || []).length ? 1 : 0, cofradia[k]];

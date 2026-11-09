@@ -226,9 +226,12 @@ for (const c of raw) {
         // Autor que falta en la ficha oficial, buscado y revisado aparte (complementos.json → titulares_autor), con su fuente
         const ta = (((COMP.hermandades || {})[slug] || {}).titulares_autor || []).find((x) => x.titular === nom.trim());
         if (!autorRaw) {
-          if (ta && ta.autor) { autorRaw = (ta.atribucion ? 'Atribuido a ' : '') + ta.autor + (ta.anio ? ', ' + ta.anio : ''); autorFuente = ta.fuente; }
+          // «texto»: la autoría tal como la da la fuente oficial cuando no es un nombre limpio («Anónimo… atribuido tradicionalmente a…»)
+          if (ta && ta.texto) { autorRaw = ta.texto; autorFuente = ta.fuente; }
+          else if (ta && ta.autor) { autorRaw = (ta.atribucion ? 'Atribuido a ' : '') + ta.autor + (ta.anio ? ', ' + ta.anio : ''); autorFuente = ta.fuente; }
         } else if (ta && ta.fuente && ta.autor && autorRaw.startsWith(ta.autor)) autorFuente = ta.fuente; // el autor ya venía, aquí solo se anota su fuente
-        const a = parseAuthor(autorRaw);
+        // «vinculo»: la obra sigue en la ficha de ese imaginero, como atribución (con la nota de «texto»), aunque la autoría sea anónima
+        const a = parseAuthor(autorRaw) || (ta && ta.texto && ta.vinculo ? { nombre: ta.vinculo, atrib: true } : null);
         // obrasDe: la misma imagen ya cuenta en otra ficha de la misma cofradía (otra salida): no se repite en su imaginero
         if (a && !(e && e.obrasDe)) {
           if (!imagineros.has(a.nombre)) imagineros.set(a.nombre, { nombre: a.nombre, obras: [], ciudades: new Set() });
