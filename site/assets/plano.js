@@ -141,10 +141,18 @@
       if (!vbC || calm) return aplicar();
       var w = W(), h = H(), k = vbC.w / vb.w, tx = (vbC.x - vb.x) * w / vb.w, ty = (vbC.y - vb.y) * w / vb.w;
       var x0 = tx - k * w / 4, y0 = ty - k * h / 4, x1 = tx + k * w * 1.25, y1 = ty + k * h * 1.25;
-      if (k < 0.5 || k > 2.5 || (k >= 0.7 && (x0 > 0 || y0 > 0 || x1 < w || y1 < h))) return aplicar();
+      if (k < 0.5 || k > 2.5 || x0 > 0 || y0 > 0 || x1 < w || y1 < h) return aplicar();
       Z = vb.w / w; if (lejanas) pista();
       mueve.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
+      reescalar();
       clearTimeout(tVista); tVista = setTimeout(aplicar, 140);
+    }
+    // en caliente: sedes y medallones a su tamaño de pantalla (sin reagrupar); los rótulos de calles, ocultos hasta repintar
+    function reescalar() {
+      var f = Z <= 1.6 ? 1 : Math.max(0.6, 1 - (Z - 1.6) * 0.07), Zs = Z * f;
+      simbolos.forEach(function (s) { if (s.g.style.visibility !== 'hidden' && s.g.hasAttribute('transform')) s.g.setAttribute('transform', 'translate(' + s.x.toFixed(1) + ' ' + s.y.toFixed(1) + ') scale(' + Zs.toFixed(3) + ')'); });
+      for (var k in marcas) { var t = marcas[k].getAttribute('transform'); if (t) marcas[k].setAttribute('transform', t.replace(/scale\([^)]*\)/, 'scale(' + Z.toFixed(3) + ')')); }
+      gE.style.display = 'none';
     }
     api.vista = function () { return { x: vb.x, y: vb.y, w: vb.w, h: vb.h }; };
     api.caja = function (xs, ys, m) {

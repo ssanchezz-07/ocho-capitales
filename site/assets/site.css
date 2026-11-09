@@ -1921,34 +1921,21 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta { display: none; }
 .oc-c-ruta.is-sel { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: 1; stroke-width: 4.5px; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
-/* una salida extraordinaria sola en su jornada (calle.js, «is-sola»): su recorrido se ve sin elegirla */
-.oc-c-ruta.is-sola { display: inline; stroke: var(--hc, #f0d79c); stroke-opacity: .85; stroke-width: 4px; }
 /* Trazo de la salida extraordinaria (Pablo, 9-nov: «más definido y minimalista»): un solo trazo continuo con filo oscuro, el regreso
-   más fino y apagado (sin rayas), flechas de sentido y un punto en su templo y en el del acto. Tres propuestas: data-estilo a, b, c */
+   más fino y apagado (sin rayas), flechas de sentido y un punto en su templo y en el del acto. Estilo «Oro» (las otras dos
+   propuestas, «Marfil» y «Dos tonos», están en el commit 0b1b979 por si Pablo cambia) */
 .oc-c-ruta.is-sola, .oc-c-ruta.is-sola.is-sel { display: inline; filter: none; stroke-dasharray: none; stroke: #f0d79c; stroke-opacity: 1; stroke-width: 3.5px; }
 .oc-c-ruta.is-sola.is-regreso, .oc-c-ruta.is-sola.is-sel.is-regreso { stroke-dasharray: none; stroke-width: 2.25px; stroke-opacity: .6; }
+.oc-c-ruta.is-sola.is-aprox { stroke-dasharray: 2 7; stroke-width: 2px; stroke-opacity: .6; }
 .oc-c-ruta-filo { display: none; fill: none; stroke: #12061b; stroke-opacity: .9; stroke-width: 7px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .oc-c-ruta-filo.is-sola { display: inline; }
 .oc-c-ruta-filo.is-regreso { stroke-width: 5px; stroke-opacity: .55; }
 .oc-c-sentido { pointer-events: none; }
-.oc-c-flecha { fill: #f0d79c; stroke: #12061b; stroke-width: 1.2px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.oc-c-flecha.is-regreso { fill: #a8987a; }
+.oc-c-flecha { fill: #f0d79c; stroke: #12061b; stroke-width: 1.6px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.oc-c-flecha.is-regreso { fill: #b9a882; }
 .oc-c-hito { fill: #f0d79c; stroke: #12061b; stroke-width: 2.5px; vector-effect: non-scaling-stroke; }
 .oc-calle-leyenda.is-sola .is-ida::before { border-top: 3.5px solid #f0d79c; }
 .oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2px solid rgb(240 215 156 / .6); }
-/* b) marfil: el trazo en blanco roto y el oro solo en los puntos */
-[data-estilo="b"] .oc-c-ruta.is-sola { stroke: #f6efe0; stroke-width: 3px; }
-[data-estilo="b"] .oc-c-ruta.is-sola.is-regreso { stroke-width: 1.75px; stroke-opacity: .55; }
-[data-estilo="b"] .oc-c-flecha { fill: #f6efe0; }
-[data-estilo="b"] .oc-c-flecha.is-regreso { fill: #a49c95; }
-[data-estilo="b"] .oc-calle-leyenda.is-sola .is-ida::before { border-top: 3px solid #f6efe0; }
-[data-estilo="b"] .oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2px solid rgb(246 239 224 / .55); }
-/* c) dos tonos: ida en oro y regreso en lila claro, los dos continuos */
-[data-estilo="c"] .oc-c-ruta.is-sola.is-regreso { stroke: #c9b4ee; stroke-width: 2.5px; stroke-opacity: .9; }
-[data-estilo="c"] .oc-c-ruta-filo.is-regreso { stroke-opacity: .8; }
-[data-estilo="c"] .oc-c-flecha.is-regreso { fill: #c9b4ee; }
-[data-estilo="c"] .oc-c-hito { fill: #12061b; stroke: #f0d79c; }
-[data-estilo="c"] .oc-calle-leyenda.is-sola .is-regreso::before { border-top: 2.5px solid #c9b4ee; }
 .oc-c-marca .oc-c-galon { stroke: var(--hc, currentColor); }
 .oc-calle-ficha { background: transparent; pointer-events: none; }
 .oc-calle-ficha .oc-sheet-panel { pointer-events: auto; max-height: 40dvh; box-shadow: 0 -10px 30px rgb(15 5 22 / .35); }

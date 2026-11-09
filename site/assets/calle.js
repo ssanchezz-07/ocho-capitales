@@ -79,14 +79,14 @@
   function encaje(a, W, H, kMax) {
     var px = W / vb.w, k = a.w / 1.5 / vb.w, tx = (a.x - vb.x) * px + W / 4, ty = (a.y - vb.y) * px + H / 4;
     var x0 = tx - W / 4, y0 = ty - H / 4, x1 = x0 + 1.5 * W * k, y1 = y0 + 1.5 * H * k;
-    // al alejar se deja ver un margen sin pintar (como los mapas al cargar teselas) hasta k = 0,5: repintar a mitad de gesto da tirones
-    if (k < 0.5 || k > kMax || (k >= 0.7 && (x0 > 0 || y0 > 0 || x1 < W || y1 < H))) return null;
+    // si ya no cubre la vista entera (nunca asoma morado vacío, Pablo 8-nov) o se ha escalado mucho, se pinta ya
+    if (k < 0.5 || k > kMax || x0 > 0 || y0 > 0 || x1 < W || y1 < H) return null;
     return 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + k.toFixed(4) + ')';
   }
   function aplicarVista(fijar) {
     if (lim) { var cx = Math.min(Math.max(vb.x + vb.w / 2, lim[0]), lim[2]), cy = Math.min(Math.max(vb.y + vb.h / 2, lim[1]), lim[3]); vb.x = cx - vb.w / 2; vb.y = cy - vb.h / 2; }
     var t = tamMapa(), W = Math.max(1, t[0]), H = Math.max(1, t[1]); Z = vb.w / W;
-    var tr = !fijar && vbC && !calm ? encaje(vbC, W, H, 2.5) : null;
+    var tr = !fijar && vbC && !calm ? encaje(ampliada(vbC), W, H, 2.5) : null;
     if (!tr) return fijarVista();
     capa.style.transform = tr;
     moverFondo();
@@ -194,7 +194,7 @@
   var sentido = null;
   function adornarSola(h) {
     sentido = null; if (capas.sentido) capas.sentido.textContent = ''; if (!h) return;
-    $$('.oc-c-ruta.is-sola').forEach(function (r) { var f = r.cloneNode(false); f.setAttribute('class', r.getAttribute('class').replace('oc-c-ruta', 'oc-c-ruta-filo')); f.removeAttribute('data-s'); capas.rutas.insertBefore(f, capas.rutas.firstChild); });
+    $$('.oc-c-ruta.is-sola:not(.is-aprox):not(.is-estimado)').forEach(function (r) { var f = r.cloneNode(false); f.setAttribute('class', r.getAttribute('class').replace('oc-c-ruta', 'oc-c-ruta-filo')); f.removeAttribute('data-s'); capas.rutas.insertBefore(f, capas.rutas.firstChild); });
     var pts = h.t.paso || h.t.cruz, ida = [], vuelta = [];
     pts.forEach(function (p) { (p[7] ? vuelta : ida).push(p); });
     if (!ida.length) return;
@@ -204,12 +204,12 @@
   }
   function colocarSentido() {
     var g = capas.sentido; if (!g) return; g.textContent = ''; if (!sentido) return;
-    var paso = 150 * Z, fr = document.createDocumentFragment();
+    var paso = 170 * Z, fr = document.createDocumentFragment();
     sentido.tramos.forEach(function (ls) {
       var acum = paso / 2;
       for (var i = 1; i < ls.length; i++) {
         var a = ls[i - 1], b = ls[i], dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy); if (!d) continue;
-        for (; acum <= d; acum += paso) fr.appendChild(el('path', { 'class': 'oc-c-flecha' + (ls.reg ? ' is-regreso' : ''), d: 'M-3.2 -3.6L3.6 0L-3.2 3.6L-1.6 0Z', transform: 'translate(' + (a[0] + dx * acum / d).toFixed(1) + ' ' + (a[1] + dy * acum / d).toFixed(1) + ') rotate(' + Math.round(Math.atan2(dy, dx) * 180 / Math.PI) + ') scale(' + Z.toFixed(3) + ')' }));
+        for (; acum <= d; acum += paso) fr.appendChild(el('path', { 'class': 'oc-c-flecha' + (ls.reg ? ' is-regreso' : ''), d: 'M-4.6 -5.2L5.2 0L-4.6 5.2L-2.2 0Z', transform: 'translate(' + (a[0] + dx * acum / d).toFixed(1) + ' ' + (a[1] + dy * acum / d).toFixed(1) + ') rotate(' + Math.round(Math.atan2(dy, dx) * 180 / Math.PI) + ') scale(' + Z.toFixed(3) + ')' }));
         acum -= d;
       }
     });
@@ -520,7 +520,7 @@
     if (h.coln) {
       var hb = document.createElement('p'); hb.className = 'oc-calle-habito';
       var mu = document.createElement('i'); mu.setAttribute('aria-hidden', 'true'); mu.style.background = h.hc; hb.appendChild(mu);
-      hb.appendChild(document.createTextNode('Color del recorrido: su hábito, ' + h.coln));
+      hb.appendChild(document.createTextNode((h.x && delDia().length === 1 ? 'Color del hábito: ' : 'Color del recorrido: su hábito, ') + h.coln));
       if (h.colf) { hb.appendChild(document.createTextNode(' (')); var fa = document.createElement('a'); fa.href = h.colf; fa.target = '_blank'; fa.rel = 'noopener'; fa.textContent = 'fuente'; hb.appendChild(fa); hb.appendChild(document.createTextNode(')')); }
       c.appendChild(hb);
     }
