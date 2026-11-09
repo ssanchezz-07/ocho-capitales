@@ -39,7 +39,9 @@
   "María_Santísima_de_Dolores_y_Esperanza.jpg": "Foto de Luis Manuel Gómez Pozo («Luisma»), que el 5-nov-2026 dijo que no quiere colaborar con fotos en una web: aunque su licencia lo permita, no se publica (Pablo, por coordinación, 8-nov: «sustitúyela sí o sí»).",
   "Humildad_malaga.png": "Original de 334 px: no da la calidad (antes retirada solo en humildad-malaga|cristo).",
   "Cofradía_de_Nazarenos_de_Nuestro_Padre_Jesús_de_la_Pasión_y_María_Santísima_de_la_Estrella,_Granada,_Semana_Santa_2009_(1).JPG": "La foto es el paso de Nuestro Padre Jesús de la Pasión de noche (revisión a ojo), no la Virgen de la Estrella. (antes retirada solo en la-estrella-granada|virgen)",
-  "Las_penas_gr.jpg": "Paso de palio visto de lejos: la Virgen de las Penas casi no se ve. Mejor la estampa hasta tener una foto de la titular. (antes retirada solo en paciencia-y-penas-granada|virgen)"
+  "Las_penas_gr.jpg": "Paso de palio visto de lejos: la Virgen de las Penas casi no se ve. Mejor la estampa hasta tener una foto de la titular. (antes retirada solo en paciencia-y-penas-granada|virgen)",
+  "pal3.png": "La foto del Consejo (pal3.png) no es María Santísima de las Penas: es Nuestra Señora de la Palma Coronada, la Virgen de gloria (auditoría de coordinación, 9-nov). La de palma_2 lleva la firma «Alejandro DSC». (antes retirada solo en la-palma-cadiz|virgen)",
+  "La_Soledad_Huelva.JPG": "Commons la pone en la categoría de la Hermandad del Santo Entierro: no está claro que sea la Soledad del Silencio. (antes retirada solo en el-silencio-la-soledad-huelva|virgen)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -217,10 +219,6 @@
   "cristo-de-la-escucha-almeria|cristo": {
    "archivo": "Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
    "motivo": "Capilla de la Catedral: el crucificado sale diminuto y el original no da para recortarlo con calidad."
-  },
-  "el-silencio-la-soledad-huelva|virgen": {
-   "archivo": "La_Soledad_Huelva.JPG",
-   "motivo": "Commons la pone en la categoría de la Hermandad del Santo Entierro: no está claro que sea la Soledad del Silencio."
   },
   "la-esperanza-huelva|virgen": {
    "archivo": "Nuestra_Señora_de_la_Esperanza.jpg",
@@ -509,10 +507,6 @@
   "el-cautivo-jaen|ficha": {
    "archivo": "Cautivo_Jaén.png",
    "motivo": "La misma foto con marca de agua."
-  },
-  "la-palma-cadiz|virgen": {
-   "archivo": "pal3.png",
-   "motivo": "La foto del Consejo (pal3.png) no es María Santísima de las Penas: es Nuestra Señora de la Palma Coronada, la Virgen de gloria (auditoría de coordinación, 9-nov). La de palma_2 lleva la firma «Alejandro DSC»."
   }
  },
  "no_portada": {

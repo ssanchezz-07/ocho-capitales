@@ -1785,6 +1785,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Sangre",
     "foco": "50% 10%"
+   },
+   "virgen": {
+    "autor": "Los Estudiantes (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadlosestudianteshuelva/",
+    "local": "scripts/cedidas/huelva/los-estudiantes-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora del Valle",
+    "titular": "Nuestra Señora del Valle",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en @hdadlosestudianteshuelva (https://www.instagram.com/p/DUp8o8MDK-9/, imagen 2), sin fotógrafo citado, coautor ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "pasion-huelva": {
@@ -1844,12 +1855,15 @@
   },
   "el-silencio-la-soledad-huelva": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:La_Soledad_Huelva.JPG",
-    "titulo": "File:La Soledad Huelva.JPG",
-    "autor": "Calapito",
-    "licencia": "CC BY 3.0",
-    "licurl": "https://creativecommons.org/licenses/by/3.0",
-    "titular": "Nuestra Señora en su Soledad"
+    "autor": "El Silencio (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdaddelsilenciohuelva/",
+    "local": "scripts/cedidas/huelva/el-silencio-la-soledad-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora en su Soledad",
+    "titular": "Nuestra Señora en su Soledad",
+    "foco": "45% 28%",
+    "permiso": "Publicada por la propia hermandad en @hdaddelsilenciohuelva (https://www.instagram.com/p/Der9T5eosyq/), sin fotógrafo citado, coautor ni firma. Recortada a la Virgen en su paso, sin el logo «Soledad del Silencio» de la esquina. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-borriquita-almeria": {
@@ -3806,6 +3820,17 @@
      0.72
     ],
     "foco": "50% 3%"
+   },
+   "virgen": {
+    "autor": "La Misericordia (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/misericordiahuelva/",
+    "local": "scripts/cedidas/huelva/la-misericordia-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Concepción",
+    "titular": "María Santísima de la Concepción",
+    "foco": "48% 28%",
+    "permiso": "Publicada por la propia hermandad en @misericordiahuelva (https://www.instagram.com/p/DfKvDyqAkVK/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "el-huerto-vera-cruz-jaen": {
@@ -4305,6 +4330,17 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Cristo yacente"
+   },
+   "virgen": {
+    "autor": "Santo Entierro (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsantoentierrohuelva/",
+    "local": "scripts/cedidas/huelva/el-santo-entierro-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Soledad",
+    "titular": "María Santísima de la Soledad",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en @hdadsantoentierrohuelva (https://www.instagram.com/p/DXG2fQHiERo/, imagen 4), sin fotógrafo citado, coautor ni firma. La cuenta la llama «Soledad de María»; es la titular María Santísima de la Soledad del nombre oficial (Consejo de Huelva). Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-lanzada-huelva": {
@@ -4316,6 +4352,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Sagrada Lanzada",
     "foco": "50% 40%"
+   },
+   "virgen": {
+    "autor": "La Lanzada (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadlanzada/",
+    "local": "scripts/cedidas/huelva/la-lanzada-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "50% 15%",
+    "permiso": "Publicada por la propia hermandad en @hdadlanzada (https://www.instagram.com/p/DV8Jf5pCkKZ/, imagen 2), sin fotógrafo citado, coautor ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "cristo-de-la-escucha-almeria": {
@@ -4800,6 +4847,17 @@
     "titular": "Santísimo Cristo de la Misericordia",
     "foco": "40% 35%",
     "permiso": "Publicada por la propia archicofradía en @lapalmacadiz (https://www.instagram.com/p/Dei4CM1jEL5/, «Viernes del Señor», 16-oct-2026), sin fotógrafo citado, etiqueta ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "La Palma (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lapalmacadiz/",
+    "local": "scripts/cedidas/cadiz/la-palma-cadiz-virgen.jpg",
+    "titulo": "Cedida: María Santísima de las Penas Coronada",
+    "titular": "María Santísima de las Penas Coronada",
+    "foco": "50% 24%",
+    "permiso": "Publicada por la propia archicofradía en @lapalmacadiz (https://www.instagram.com/p/DdGM4AcjPEI/, imagen 3, 10-sep-2026, triduo), sin fotógrafo citado, etiqueta ni firma. Comprobada la cara frente a la de las Penas (no es la Palma Coronada). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-prendimiento-cadiz": {
@@ -5003,6 +5061,104 @@
     "titular": "María Santísima de la Luz",
     "foco": "50% 42%",
     "permiso": "Publicada por la propia hermandad en @resucitadohuelvaoficial (https://www.instagram.com/p/DYAqczcEdn1/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "la-fe-huelva": {
+   "virgen": {
+    "autor": "La Fe (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdaddelafehuelva/",
+    "local": "scripts/cedidas/huelva/la-fe-huelva-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Caridad",
+    "titular": "Nuestra Señora de la Caridad",
+    "foco": "45% 28%",
+    "permiso": "Publicada por la propia hermandad en @hdaddelafehuelva (https://www.instagram.com/p/DeuYXqFjLpP/, imagen 1), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el escudo y la franja con el nombre de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "el-calvario-huelva": {
+   "cristo": {
+    "autor": "El Calvario (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddelcalvario.huelva/",
+    "local": "scripts/cedidas/huelva/el-calvario-huelva-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Calvario",
+    "titular": "Nuestro Padre Jesús del Calvario",
+    "foco": "45% 18%",
+    "permiso": "Publicada por la propia hermandad en @hermandaddelcalvario.huelva (https://www.instagram.com/p/DbxEDfWDTei/), sin fotógrafo citado, coautor ni firma. Recortada por la derecha para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "virgen": {
+    "autor": "El Calvario (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddelcalvario.huelva/",
+    "local": "scripts/cedidas/huelva/el-calvario-huelva-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rocío y Esperanza",
+    "titular": "María Santísima del Rocío y Esperanza",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en @hermandaddelcalvario.huelva (https://www.instagram.com/p/DbXUEItmNu8/), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   }
+  },
+  "merced-obediencia-cadiz": {
+   "cristo": {
+    "autor": "Merced y Obediencia (Cádiz)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://x.com/La_Merced_Cadiz",
+    "local": "scripts/cedidas/cadiz/merced-obediencia-cadiz-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno de la Obediencia",
+    "titular": "Nuestro Padre Jesús Nazareno de la Obediencia",
+    "foco": "50% 38%",
+    "permiso": "Publicada por la propia archicofradía en su cuenta de X @La_Merced_Cadiz (bio: «Perfil Oficial de la Archicofradía de la Merced de Cádiz»), https://x.com/La_Merced_Cadiz/status/2037668264302551141 (28-mar-2026, imagen HEdAeTmXIAA8N6q), sin fotógrafo citado ni firma. Recortada al Nazareno en su paso. El Consejo enlaza twitter.com/archimerced, que ya no existe. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "el-cautivo-granada": {
+   "cristo": {
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcautivoyencarnacion/",
+    "local": "scripts/cedidas/granada/el-cautivo-granada-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Cautivo",
+    "titular": "Nuestro Padre Jesús Cautivo",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcautivoyencarnacion (bio: «OFICIAL»; https://www.instagram.com/p/DfMR08GCFFZ/, imagen 1, 1-nov-2026), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Cautivo y Encarnación (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcautivoyencarnacion/",
+    "local": "scripts/cedidas/granada/el-cautivo-granada-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Encarnación",
+    "titular": "María Santísima de la Encarnación",
+    "foco": "48% 36%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcautivoyencarnacion (bio: «OFICIAL»; https://www.instagram.com/p/DfPAe_QInlp/, Fieles Difuntos), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "el-trabajo-granada": {
+   "cristo": {
+    "autor": "Trabajo y Luz (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.trabajoyluz.es/",
+    "local": "scripts/cedidas/granada/el-trabajo-granada-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo del Trabajo",
+    "titular": "Santísimo Cristo del Trabajo",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la propia hermandad en su web oficial (https://www.trabajoyluz.es/gallery/IMG_6934.jpg, página del Santísimo Cristo del Trabajo), sin fotógrafo citado ni firma. Recortada por abajo para quitar el logo de la hermandad. Original pequeño (483x725). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Trabajo y Luz (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadtrabajoyluz/",
+    "local": "scripts/cedidas/granada/el-trabajo-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Luz",
+    "titular": "Nuestra Señora de la Luz",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadtrabajoyluz (bio: «Perfil OFICIAL…», la que enlaza trabajoyluz.es; https://www.instagram.com/p/DcVdMpHDWC1/, 22-ago), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }
