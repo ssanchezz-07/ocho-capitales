@@ -4,6 +4,7 @@
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
 - No se tocan el Nuestro Padre Jesús de las Tres Caídas de Granada (otra hermandad) ni los textos de dedicatoria de las marchas, que citan su fuente.
+
 ## 2026-11-09 · Juegos: una pista, una respuesta (aviso de Marketing en «Adivina la marcha»)
 Marketing vio que la pista «Felipe Trujillo Lira, 2013» aparecía con dos dedicatorias. Las dos son correctas, según la Federación de Granada (hermandadesdegranada.com):
 - «De San Matías… al cielo» está dedicada a la Paciencia y Penas, cuya sede es San Matías;
