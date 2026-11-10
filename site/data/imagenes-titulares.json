@@ -4535,18 +4535,13 @@
   },
   "las-penas-sevilla": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaPenas2.jpg",
-    "titulo": "File:SemanaSantaSevillaPenas2.jpg",
-    "autor": "No machine-readable author provided. Lobillo assumed (based on copyright claims).",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_las_Penas,_Sevilla.jpg",
+    "titulo": "File:Cristo de las Penas, Sevilla.jpg",
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de las Penas",
-    "recorte": [
-     0.15,
-     0.12,
-     0.65,
-     0.65
-    ]
+    "foco": "50% 45%"
    }
   },
   "el-cerro-sevilla": {

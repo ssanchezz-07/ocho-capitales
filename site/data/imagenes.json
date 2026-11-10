@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T03:51:10.545Z",
+ "generado": "2026-11-10T03:59:15.827Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -10359,7 +10359,24 @@
     "titular": "Santísimo Cristo de la Caridad en su Traslado al Sepulcro"
    }
   },
-  "las-penas-sevilla": {},
+  "las-penas-sevilla": {
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "PEPE GADEIRAS",
+    "licencia": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_las_Penas,_Sevilla.jpg",
+    "foco": "50% 45%",
+    "titular": "Nuestro Padre Jesús de las Penas"
+   }
+  },
   "el-cerro-sevilla": {
    "cristo": {
     "w": 751,
