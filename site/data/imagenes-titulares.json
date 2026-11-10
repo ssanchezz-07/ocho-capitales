@@ -3045,6 +3045,17 @@
     "licurl": "https://creativecommons.org/licenses/by/3.0",
     "titular": "Santísimo Cristo de Burgos",
     "foco": "100% 42%"
+   },
+   "virgen": {
+    "autor": "Cristo de Burgos (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcristodeburgos/",
+    "local": "scripts/cedidas/sevilla/cristo-de-burgos-sevilla-virgen.jpg",
+    "titulo": "Cedida: Madre de Dios de la Palma",
+    "titular": "Madre de Dios de la Palma",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadcristodeburgos (https://www.instagram.com/p/DfHEKrqiKYT/, imagen 1), sin fotógrafo citado, coautor ni firma. Bio «Perfil oficial de la hermandad del Santísimo Cristo de Burgos»; la de la lista, @cristodeburgos, no existe. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
    }
   },
   "siete-palabras-sevilla": {
@@ -3073,12 +3084,15 @@
   },
   "los-panaderos-sevilla": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_Regla_Sevilla.jpg",
-    "titulo": "File:Virgen de Regla Sevilla.jpg",
-    "autor": "Alera x",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de Regla"
+    "autor": "Los Panaderos (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddelospanaderos/",
+    "local": "scripts/cedidas/sevilla/los-panaderos-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Regla",
+    "titular": "María Santísima de Regla",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandaddelospanaderos (https://www.instagram.com/p/DfIjoasETp-/, imagen 2), sin fotógrafo citado, coautor ni firma. Bio «Hdad Los Panaderos (Oficial)» y la enlaza hdadpanaderos.es. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
    },
    "cristo": {
     "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Soberano_Poder_01.jpg",

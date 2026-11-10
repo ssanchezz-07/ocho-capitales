@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T19:04:45.161Z",
+ "generado": "2026-11-10T19:17:05.262Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -7983,6 +7983,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Burgos,_Sevilla.jpg",
     "titular": "Santísimo Cristo de Burgos",
     "foco": "100% 42%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Cristo de Burgos (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcristodeburgos/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/cristo-de-burgos-sevilla-virgen.jpg",
+    "tam": 845827,
+    "titular": "Madre de Dios de la Palma"
    }
   },
   "siete-palabras-sevilla": {
@@ -8033,10 +8052,14 @@
      960
     ],
     "escudo": false,
-    "autor": "Alera x",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_Regla_Sevilla.jpg",
+    "autor": "Los Panaderos (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandaddelospanaderos/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/los-panaderos-sevilla-virgen.jpg",
+    "tam": 983665,
     "titular": "María Santísima de Regla"
    },
    "cristo": {
@@ -13524,6 +13547,26 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_del_Buen_Fin,Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "cristo-de-burgos-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Burgos,_Sevilla.jpg\"|\"\"|\"\"|\"\"|\"100% 42%\"|\"https://www.instagram.com/hermandadcristodeburgos/\"|\"scripts/cedidas/sevilla/cristo-de-burgos-sevilla-virgen.jpg\"|845827|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
+  "los-panaderos-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Soberano_Poder_01.jpg\"|\"\"|\"\"|\"\"|\"38% 27%\"|\"https://www.instagram.com/hermandaddelospanaderos/\"|\"scripts/cedidas/sevilla/los-panaderos-sevilla-virgen.jpg\"|983665|\"\"|\"50% 25%\"|\"\"|\"\""
   },
   "redencion-sevilla": {
    "w": 960,

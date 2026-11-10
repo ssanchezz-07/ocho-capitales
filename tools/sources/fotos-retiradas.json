@@ -62,7 +62,8 @@
   "Coronación_06.jpg": "Recortada, la cara de la Virgen queda a oscuras tras los varales y la candelería. (antes retirada solo en la-coronacion-almeria|virgen)",
   "Virgen_de_la_Esperanza,_Jaén,_2019_24J_02.jpg": "Palio de lejos: la candelería tapa a la Virgen. (antes retirada solo en el-perdon-jaen|virgen)",
   "Palio_de_la_Virgen_de_la_Consolación_de_la_Sed_Semana_Santa_2026.jpg": "Palio de lejos entre el público: no se ve a la Virgen. (antes retirada solo en la-sed-sevilla|virgen)",
-  "Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg": "A contraluz: la cara sale apagada. (antes retirada solo en la-sed-sevilla|cristo)"
+  "Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg": "A contraluz: la cara sale apagada. (antes retirada solo en la-sed-sevilla|cristo)",
+  "Virgen_de_Regla_Sevilla.jpg": "Palio con la candelería delante: no se ve a la Virgen. (antes retirada solo en los-panaderos-sevilla|virgen)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -196,10 +197,6 @@
   "montesion-sevilla|virgen": {
    "archivo": "Palio_del_Rosario_de_Monte-Sión_Semana_Santa_2025.jpg",
    "motivo": "Palio de lejos en la calle: no se ve a la Virgen."
-  },
-  "los-panaderos-sevilla|virgen": {
-   "archivo": "Virgen_de_Regla_Sevilla.jpg",
-   "motivo": "Palio con la candelería delante: no se ve a la Virgen."
   },
   "rosario-del-mar-almeria|cristo": {
    "archivo": "Rosario_del_Mar_05.jpg",
