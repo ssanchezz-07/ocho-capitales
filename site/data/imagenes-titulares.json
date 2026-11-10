@@ -5397,6 +5397,32 @@
     "foco_ficha": "100% 100%",
     "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B6Fv4sNiTRL/. Foto suya, con su firma intacta (abajo a la derecha); foco_ficha 100% 100% para que se vea en la ficha."
    }
+  },
+  "pino-montano-sevilla": {
+   "virgen": {
+    "autor": "Pino Montano (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdad.pinomontano/",
+    "local": "scripts/cedidas/sevilla/pino-montano-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Amor",
+    "titular": "María Santísima del Amor",
+    "foco": "45% 38%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdad.pinomontano (bio «Perfil oficial», enlaza hermandadpinomontano.es; https://www.instagram.com/p/C4aOyFvC2RU/), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "la-milagrosa-sevilla": {
+   "cristo": {
+    "autor": "La Milagrosa (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandad_de_la_milagrosa/",
+    "local": "scripts/cedidas/sevilla/la-milagrosa-sevilla-cristo.jpg",
+    "titulo": "Cedida: Jesús de la Esperanza",
+    "titular": "Jesús de la Esperanza",
+    "foco": "48% 18%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandad_de_la_milagrosa (bio «Perfil Oficial»; https://www.instagram.com/p/DWJzgdXCAJl/), sin fotógrafo citado, coautor ni firma. Recortada al misterio. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
   }
  }
 }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T04:15:15.277Z",
+ "generado": "2026-11-10T04:31:38.743Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -11781,6 +11781,48 @@
     "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg",
     "tam": 624215,
     "titular": "María Santísima de Loreto"
+   }
+  },
+  "pino-montano-sevilla": {
+   "virgen": {
+    "w": 960,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pino Montano (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdad.pinomontano/",
+    "foco": "45% 38%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/pino-montano-sevilla-virgen.jpg",
+    "tam": 604093,
+    "titular": "María Santísima del Amor"
+   }
+  },
+  "la-milagrosa-sevilla": {
+   "cristo": {
+    "w": 960,
+    "h": 1172,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Milagrosa (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandad_de_la_milagrosa/",
+    "foco": "48% 18%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-milagrosa-sevilla-cristo.jpg",
+    "tam": 674146,
+    "titular": "Jesús de la Esperanza"
    }
   }
  },
