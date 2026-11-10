@@ -945,16 +945,17 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-del-amor/"
  },
  "jesus-despojado-sevilla": {
-  "texto": "Túnica de cola confeccionada en sarga beige. Capa y antifaz confeccionados en sarga negra.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-jesus-despojado/"
+  "texto": "Sotana de color crema con botonadura morada, ceñida por un cordón morado anudado al lado izquierdo. Capa negra y antifaz negro, con el escudo mercedario bordado en el antifaz, a la altura del pecho, y el escudo de la hermandad en el lado izquierdo de la capa. Guantes y calcetines blancos y zapatos negros.",
+  "fuente_url": "https://jesusdespojado.org/tunica/",
+  "fuente_nombre": "web de la hermandad (regla 5)"
  },
  "la-paz-sevilla": {
-  "texto": "Túnica, capa y antifaz confeccionados en sarga blanca",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-paz-3/"
+  "texto": "Túnica blanca con botonadura y cíngulo rojo burdeos para los nazarenos del paso de Nuestro Padre Jesús de la Victoria, y botonadura y cíngulo azul cobalto para los del paso de María Santísima de la Paz. Capa con el escudo bordado en el lado izquierdo, antifaz con capirote, guantes y calcetines blancos y zapatos negros.",
+  "fuente_url": "https://www.hermandaddelapaz.org/nazarenos/"
  },
  "la-cena-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en sarga blanca",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-cena-2/"
+  "texto": "Túnica blanca de cola con botonadura roja y cinturón de esparto.",
+  "fuente_url": "https://lacenadesevilla.es/datos-de-la-cofradia/"
  },
  "la-hiniesta-sevilla": {
   "texto": "Cristo: Túnica de cola confeccionada en sarga blanca. Antifaz confeccionado en raso azul. Virgen: Túnica y antifaz confeccionados en tela de raso azul. Capa confeccionada en sarga beige.",
@@ -965,24 +966,24 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-san-roque/"
  },
  "la-estrella-sevilla": {
-  "texto": "Cristo: Túnica y capa confeccionadas en sarga blanca. Antifaz confeccionado en terciopelo azul. Virgen: Túnica y capa confeccionadas en sarga blanca. Antifaz confeccionado en terciopelo verde",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-estrella/"
+  "texto": "Túnica y capa de lienzo blanco con antifaz de terciopelo, botonadura y cíngulo de color morado en el paso de Cristo y azul en el de la Virgen; el cíngulo se anuda a la izquierda. Escudo de la hermandad en el hombro izquierdo de la capa y escudo de San Francisco de Paula con el lema CHARITAS bordado en oro en el antifaz. Guantes y calcetines blancos y zapatos negros.",
+  "fuente_url": "https://hermandad-estrella.org/nuestra-tunica/"
  },
  "la-amargura-sevilla": {
   "texto": "Túnica de cola y antifaz confeccionados en sarga blanca",
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-amargura-4/"
  },
  "san-pablo-sevilla": {
-  "texto": "Túnica y capa confeccionadas en sarga beige y antifaz confeccionado en sarga negra.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-poligono-san-pablo/"
+  "texto": "Túnica y capa de tergal de color beige claro. Antifaz del mismo tejido en color negro. Cíngulo de seda trenzado con los colores granate y morado.",
+  "fuente_url": "https://jesuscautivoyrescatado.com/cofradia/estacion-de-penitencia/"
  },
  "redencion-sevilla": {
   "texto": "Cristo: Túnica de cola confeccionada en sarga beige. Antifaz confeccionado en terciopelo morado. Virgen: Túnica de cola confeccionada en sarga beige. Antifaz confeccionado en terciopelo verde.",
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-redencion/"
  },
  "santa-genoveva-sevilla": {
-  "texto": "Túnica confeccionada en sarga blanca, capa y antifaz confeccionados en sarga negra",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-santa-genoveva/"
+  "texto": "Túnica blanca ceñida con correa mercedaria que cae al lado izquierdo, y capa y antifaz negros. Escudo de la hermandad en la capa, al lado izquierdo a la altura del brazo, y escudo de la Merced en el antifaz. Calcetines blancos y zapatos negros.",
+  "fuente_url": "https://www.santagenoveva.com/normas-de-la-estacion-de-penitencia/"
  },
  "santa-marta-sevilla": {
   "texto": "Túnica de cola y antifaz confeccionados en sarga negra",
@@ -993,8 +994,8 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-san-gonzalo/"
  },
  "vera-cruz-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en tela de ruan negra",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-vera-cruz-4/"
+  "texto": "Túnica de ruan negro con cinturón y cíngulo franciscano de esparto.",
+  "fuente_url": "https://veracruzsevilla.org/cofradia/cortejo/"
  },
  "las-penas-sevilla": {
   "texto": "Túnica y antifaz confeccionados en tela de ruan negra",
@@ -1005,24 +1006,25 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-las-aguas/"
  },
  "el-museo-sevilla": {
-  "texto": "Cristo: Túnica de cola y antifaz confeccionados en sarga negra. Virgen: Túnica y antifaz confeccionados en sarga negra. Capa confeccionada en sarga blanca.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-del-museo/"
+  "texto": "Paso de Cristo: túnicas negras de cola, con cíngulo y botonadura blancos, el cíngulo anudado a la izquierda y el escudo de la hermandad en el antifaz, a la altura del pecho. Paso de la Virgen: túnicas negras con capa blanca, cíngulo y botonadura blancos y escudo en el antifaz; en el lado izquierdo de la capa, el escudo con la cruz de Jerusalén.",
+  "fuente_url": "https://www.hermandaddelmuseo.org/las-tunicas-2/"
  },
  "el-cerro-sevilla": {
-  "texto": "Túnica y capa confeccionadas en sarga blanca. Antifaz confeccionado en terciopelo Burdeos.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-el-cerro/"
+  "texto": "Túnica y capa blancas, con escudo en el hombro izquierdo. Botonadura de color rojo burdeos a lo largo de la túnica y tres botones del mismo color en las bocamangas. Antifaz de terciopelo rojo burdeos con escudo a la altura del pecho. Cíngulo rojo burdeos con la caída al lado derecho. Calcetines blancos y zapatos negros.",
+  "fuente_url": "http://www.doloresdelcerro.com/habito.php",
+  "fuente_nombre": "web de la hermandad (regla 17)"
  },
  "los-javieres-sevilla": {
-  "texto": "Túnica de cola y antifaz de sarga negra",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-los-javieres/"
+  "texto": "Túnica de lienzo negro o raso de algodón sin brillo, con antifaz de la misma tela y color y el escudo de la hermandad bordado en plata. Cinturón de esparto de 10 cm de ancho, pies desnudos y sandalias negras. Capirote de 90 cm.",
+  "fuente_url": "https://javieres.com/martes-santo-2/"
  },
  "san-esteban-sevilla": {
   "texto": "Realizado en sarga. Túnica de color crudo, capa celeste y antifaz celeste.",
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-san-esteban/"
  },
  "los-estudiantes-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en ruan negro",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-los-estudiantes-2/"
+  "texto": "Túnica de ruan negro con antifaz de la misma tela y color, capirote de al menos un metro y escudo estampado en el antifaz, a la altura del pecho. Cinturón ancho de esparto en su color, calcetín negro y sandalias negras de cuero.",
+  "fuente_url": "https://hermandaddelosestudiantes.es/hermandad/nazarenos-y-monaguillos/"
  },
  "san-benito-sevilla": {
   "texto": "Túnica y capa confeccionadas en sarga blanca y antifaz morado de terciopelo.",
@@ -1033,8 +1035,9 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-candelaria/"
  },
  "dulce-nombre-la-bofeta-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en sarga blanca.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-del-dulce-nombre-2/"
+  "texto": "Túnica blanca de cola, cinturón de esparto de diez centímetros y antifaz blanco con capirote de noventa centímetros; la cola va por debajo del esparto, plegada y recogida por la espalda. En el antifaz, a la altura del pecho, la cruz trinitaria, con el brazo vertical rojo sobre el horizontal azul. Sandalias de cuero negro con calcetines blancos.",
+  "fuente_url": "https://hermandaddeldulcenombre.org/cofradia-2024/",
+  "fuente_nombre": "web de la hermandad (regla 86)"
  },
  "santa-cruz-sevilla": {
   "texto": "Túnica de cola y antifaz de ruan negro",
@@ -1053,12 +1056,12 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-el-buen-fin/"
  },
  "la-lanzada-sevilla": {
-  "texto": "Túnica y capa confeccionadas en sarga beige y antifaz confeccionado en raso rojo",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-lanzada/"
+  "texto": "Túnica y capa de color crema y antifaz de raso rojo, con escudos en la capa y el antifaz; botonadura roja en la túnica y tres botones en las mangas; cíngulo trenzado rojo en el lado izquierdo. Calcetines y guantes blancos y zapatos negros con hebilla plateada. Los manigueteros llevan túnica y antifaz de raso rojo, capa crema y cíngulo oro y rojo.",
+  "fuente_url": "https://lanzada.org/cofradia/habito-nazareno/"
  },
  "el-baratillo-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en sarga azul",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-el-baratillo/"
+  "texto": "Túnica azul de cola, ceñida por un cordón de dos cabos con dos borlas que cuelga del lado izquierdo; cordón y botonadura rojos en el paso del Santísimo Cristo de la Misericordia y Nuestra Señora de la Piedad, y blancos en el de María Santísima de la Caridad en su Soledad. Antifaz del mismo color y tela que la túnica, con el escudo a la altura del pecho. Zapatos negros, o descalzos con calcetines negros.",
+  "fuente_url": "https://hermandadelbaratillo.es/habito-nazareno/"
  },
  "cristo-de-burgos-sevilla": {
   "texto": "Túnica de cola y antifaz de sarga negra.",
@@ -1077,24 +1080,24 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-los-negritos/"
  },
  "la-exaltacion-los-caballos-sevilla": {
-  "texto": "Túnica de cola confeccionada en sarga blanca. Antifaz confeccionado en sarga morada.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-exaltacion/"
+  "texto": "Túnica blanca de cola con botonadura morada de tela y antifaz de igual color, morado, con el escudo de la corporación; cinturón de esparto en su color, de 10 cm, que sostiene la cola, plegada y caída hacia el lado derecho. Zapatos negros cerrados sin hebilla, o descalzos, o con calcetines blancos.",
+  "fuente_url": "https://www.laexaltacion.org/heraldica-y-habito-nazareno/"
  },
  "las-cigarreras-sevilla": {
-  "texto": "Túnica de cola y antifaz confeccionados en raso morado. Capa confeccionada en sarga color crudo.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-las-cigarreras/"
+  "texto": "Sotana y antifaz de raso morado «pensamiento», capa blanca de merino y cíngulo de dos trencillas, morada y dorada. Escudos en el antifaz y en la capa, en el antebrazo izquierdo. Calcetín negro, zapatos negros con hebilla plateada y guantes negros. Los hermanos de cruz y los manigueteros van sin capa ni capirote.",
+  "fuente_url": "https://www.columnayazotes.es/diputaciones/diputacion-mayor-de-gobierno/el-habito-nazareno"
  },
  "montesion-sevilla": {
-  "texto": "Túnica de cola y capa confeccionadas en sarga color crudo. Antifaz confeccionado en terciopelo negro.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-monte-sion/"
+  "texto": "Túnica de color crema ceñida por un cordón de seda blanco y negro al lado izquierdo, botonadura de terciopelo negro en el frente y en las bocamangas, y capa del mismo tejido y color que la túnica, con el escudo en el hombro izquierdo. Antifaz de terciopelo negro con el escudo de la hermandad (paso del Señor) o la cruz de San Juan con un cáliz bordado en oro (paso de la Virgen). Zapatos negros con hebilla plateada y calcetines y guantes blancos.",
+  "fuente_url": "https://hermandaddemontesion.com/escudo-y-habito-de-nazareno"
  },
  "la-quinta-angustia-sevilla": {
-  "texto": "Túnica, capa y antifaz confeccionados en sarga morada",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-la-quinta-angustia/"
+  "texto": "Túnica morada con capa del mismo color, bocamangas blancas y botonadura morada, en lana de merino; antifaz y cíngulo de la misma tela morada; anagrama JHS en blanco en el lado izquierdo de la capa. Sandalias de color avellana con calcetín negro.",
+  "fuente_url": "https://laquintaangustia.org/hermandad/cultos/estacion-de-penitencia/"
  },
  "el-valle-sevilla": {
-  "texto": "Túnica de cola y antifaz de sarga morada",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-el-valle/"
+  "texto": "Antifaz y túnica morada de cola larga, que cae sobre el brazo contrario al del cirio, la cruz o la insignia, con la cola por fuera del cíngulo. Emblema de la hermandad en el antifaz. Cordón franciscano blanco con caída al lado derecho y tres nudos. Capirote de al menos 90 cm y zapato negro liso.",
+  "fuente_url": "https://elvalle.org/nazareno-y-monaguillos/"
  },
  "pasion-sevilla": {
   "texto": "Túnica de cola y antifaz de ruan negro",
@@ -1129,12 +1132,13 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-o/"
  },
  "san-buenaventura-sevilla": {
-  "texto": "Túnica de cola confeccionada en sarga blanca y antifaz confeccionado en sarga negra.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-soledad-de-san-buena-ventura/"
+  "texto": "Túnica blanca de sarga hasta el talón, con la cola recogida a la cintura; antifaz negro de un metro aproximado, que cubre los hombros y llega por delante hasta debajo de la cintura, con el escudo impreso en tela sobre el pecho; cinturón de abacá en su color natural; pies descalzos o sandalias franciscanas negras.",
+  "fuente_url": "https://soledadsanbuenaventura.com/normas-estacion-de-penitencia/"
  },
  "montserrat-sevilla": {
-  "texto": "Cristo: Túnica de cola confeccionada en sarga blanca y antifaz confeccionado en raso azul celeste. Virgen: Túnica de cola confeccionada en sarga color crudo y antifaz confeccionado en raso azul.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-montserrat/"
+  "texto": "Paso del Cristo: túnica blanca de cola con botonadura azul, cinturón de pita en su color, de unos 15 cm, y antifaz azul con el escudo circular sobre la cruz blanca de San Juan y la roja de Calatrava; calcetín blanco y zapato negro. Paso de la Virgen: túnica de cola color crema con botonadura de raso azul, cíngulo de trencillas azules y doradas con borlas y antifaz de raso azul con el mismo escudo; guantes blancos.",
+  "fuente_url": "https://www.montserratsevilla.com/normas-estacion-de-penitencia/",
+  "fuente_nombre": "web de la hermandad (regla 28)"
  },
  "la-sagrada-mortaja-sevilla": {
   "texto": "Túnica de cola confeccionada en sarga morada, capa y antifaz confeccionados en sarga negra.",
@@ -1145,24 +1149,24 @@
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-del-cachorro/"
  },
  "los-servitas-sevilla": {
-  "texto": "Túnica de cola, capa y antifaz de sarga negra",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-los-servitas/"
+  "texto": "Túnica de sarga negra con cola, cinturón de cuero negro de cinco centímetros, y escapulario y antifaz del mismo color y tela; antifaz de un metro con muceta por delante y pico monacal a la espalda, con el Corazón Doloroso de María bordado en grana y atravesado por siete puñales.",
+  "fuente_url": "https://realhermandadservita.com/normas-estacion-penitencia"
  },
  "la-trinidad-sevilla": {
-  "texto": "Túnica de cola y escapulario confeccionados en sarga de color crudo. Capa y antifaz confeccionados en sarga negra.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-la-trinidad/"
+  "texto": "Túnica de color blanco crema con escapulario del mismo color y la cruz trinitaria cosida, con el brazo vertical rojo sobre el horizontal azul; antifaz y capa negros, como los calcetines, los zapatos y los guantes.",
+  "fuente_url": "https://hermandaddelatrinidad.es/habito-nazareno/"
  },
  "el-santo-entierro-sevilla": {
-  "texto": "Túnica de ropón con cola de estilo antiguo confeccionado en sarga negra, antifaz confeccionado en sarga negra y escudo bordado en hilo rojo.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-el-santo-entierro/"
+  "texto": "Túnica (ropón) negra de cola con manguitos negros y antifaz negro con capirote de medio metro, con el escudo de la hermandad recortado en paño rojo en el centro del antifaz. Calcetín y calzado negros sin hebilla.",
+  "fuente_url": "https://www.santoentierro.org/estacion-penitencia"
  },
  "la-soledad-de-san-lorenzo-sevilla": {
   "texto": "Túnica de cola confeccionada en sarga blanca, antifaz confeccionado en sarga negra y escapulario confeccionado en sarga carmesí.",
   "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-soledad-de-san-lorenzo/"
  },
  "la-resurreccion-sevilla": {
-  "texto": "Túnica de cola, capa y antifaz de sarga blanca.",
-  "fuente_url": "https://semanasantadeandalucia.es/hermandades/hermandad-de-la-sagrada-resurreccion/"
+  "texto": "Túnicas blancas de capa con botonadura y puños azules y cíngulo azul y blanco. Escudo de La Salle en el antifaz y el de la hermandad en el lado izquierdo de la capa.",
+  "fuente_url": "https://www.hermandaddelaresurreccion.com/ficha-cofradia/"
  },
  "bellavista-sevilla": {
   "texto": "Túnica de cola confeccionada en sarga blanca. Antifaz confeccionado en sarga morada.",

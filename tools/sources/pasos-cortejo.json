@@ -1491,6 +1491,384 @@
    ],
    "fuentes": ["https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf", "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
    ]
+  },
+  "la-borriquita-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Entrada en Jerusalén: el Señor sobre la borriquita, acompañado de San Pedro, Santiago y San Juan con palmas y del pueblo que lo recibe con ramas de olivo. El paso actual es de mediados del siglo XIX."]
+   ],
+   "cortejo": "Es la primera parte de la hermandad del Amor: sale con su propio cortejo de nazarenos de blanco, separado de los otros dos pasos.",
+   "fuentes": ["https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)"
+   ]
+  },
+  "el-amor-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Amor, crucificado de Juan de Mesa (1618-1620), en el paso de Francisco Ruiz Gijón (1694)."], ["Paso de palio", "Nuestra Señora del Socorro, bajo palio. La mayor parte del paso de palio es de mediados del siglo XX."]
+   ],
+   "cortejo": "Es la segunda parte de la hermandad: sale al anochecer con nazarenos de negro y sin cruz de guía, que ya ha salido con la Borriquita. El Cristo del Amor no lleva música.",
+   "fuentes": ["https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)"
+   ]
+  },
+  "jesus-despojado-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Despojado de sus Vestiduras, con cuatro sayones y dos soldados romanos. Paso neobarroco diseñado por Antonio Martín Fernández: lo empezó el ebanista Francisco Bailac Cenizo (1973) y Antonio Martín terminó canasto, crestería y respiraderos en 1978-1979; dorado por los Hermanos González entre 2012 y 2016."], ["Paso de palio", "María Santísima de los Dolores y Misericordia, con San Juan Evangelista (Juan González Ventura, 1981) a su derecha. Bambalinas interiores y techo de las hermanas Antúnez (1886), que vinieron de la Carretería; bambalinas exteriores (2007) y manto (estrenado en 2013) de José Antonio Grande de León."]
+   ],
+   "cortejo": "Cirios de color tiniebla en el tramo del Cristo y blancos en el de la Virgen (Regla 19).",
+   "fuentes": ["https://jesusdespojado.org/paso-de-misterio/", "https://jesusdespojado.org/paso-de-palio/", "https://jesusdespojado.org/san-juan-evangelista/", "https://jesusdespojado.org/tunica/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "https://es.wikipedia.org/wiki/Hermandad_de_Jes%C3%BAs_Despojado_(Sevilla)"
+   ]
+  },
+  "la-paz-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Victoria recibe la Cruz, con un soldado romano, un sumo sacerdote y dos sayones (Antonio Illanes, 1941-1943). Paso barroco de Antonio Martín y Antonio Vega según proyecto de Iserna (1947), con ángeles de las esquinas de Buiza (1954)."], ["Paso de palio", "María Santísima de la Paz, bajo palio de malla de plata, con manto de salida blanco sin bordar. Varales, candelabros de cola y respiraderos en metal plateado de Juan Fernández."]
+   ],
+   "cortejo": "Siete tramos de nazarenos delante del paso de misterio y once delante del palio.",
+   "fuentes": ["https://www.hermandaddelapaz.org/paso-de-misterio/", "https://www.hermandaddelapaz.org/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-cena-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Cena: el Señor de la Sagrada Cena (Sebastián Santos, 1955) con el apostolado de Luis Ortega Bru (1975-1983)."], ["Paso de Cristo", "Santísimo Cristo de la Humildad y Paciencia. Paso tallado por Guzmán Bejarano (1973) y terminado a mediados de los noventa por Juan Mayorga, con diseño de Antonio J. Dubé de Luque."], ["Paso de palio", "Nuestra Señora del Subterráneo Reina de Cielos y Tierra, bajo palio bordado por Juan Manuel Rodríguez Ojeda."]
+   ],
+   "cortejo": "Cera roja en los tramos de la Sagrada Cena y de la Humildad y Paciencia, y blanca en el del palio.",
+   "fuentes": ["https://lacenadesevilla.es/datos-de-la-cofradia/", "https://lacenadesevilla.es/senor-de-la-sagrada-cena/", "https://lacenadesevilla.es/cristo-de-la-humildad-y-paciencia/", "https://lacenadesevilla.es/virgen-del-subterraneo/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-hiniesta-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte (1938) con Santa María Magdalena a sus pies (1944), las dos de Antonio Castillo Lastrucci. Paso de estilo renacentista tallado por Antonio Martín Fernández, con ebanistería de Francisco Bailac y cartelas y ángeles de Rafael Barbero."], ["Paso de palio", "María Santísima de la Hiniesta Dolorosa (Castillo Lastrucci, 1937). Palio diseñado por Juan Manuel Rodríguez Ojeda (1905-1906), que bordó bambalinas, manto y saya; techo de Guillermo Carrasquilla (1936) y orfebrería en plata de ley de los Hermanos Delgado López."]
+   ],
+   "fuentes": ["https://www.hermandaddelahiniesta.es/cofradiero/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-roque-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas con la Cruz a cuestas, ayudado por el Cirineo; las dos figuras son de Antonio Illanes (1939 y 1962). Canastilla neorrococó labrada por José Gil Ferrera (1929), con respiraderos de Manuel Cerquera (1963) retallados por Guzmán Bejarano."], ["Paso de palio", "Nuestra Señora de Gracia y Esperanza. Bambalinas del taller de Santa Bárbara (2008), réplica de las de los Sobrinos de José Caro (1955), y respiraderos de plata de Orfebrería Ramos (2004)."]
+   ],
+   "fuentes": ["https://hermandadsanroque.com/paso-de-ntro-padre-jesus-de-las-penas-2/", "https://hermandadsanroque.com/paso-de-ntra-sra-de-gracia-y-esperanza/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-estrella-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas, obra que un documento hallado en la peana durante la restauración de 1997 atribuye a José de Arce (1655)."], ["Paso de palio", "María Santísima de la Estrella, bajo palio. El estudio del IAPH de 2009-2010 la data entre 1665 y 1709 y se decanta por atribuirla a Luisa Roldán."]
+   ],
+   "fuentes": ["https://hermandad-estrella.org/nuestro-padre-jesus-de-las-penas/", "https://hermandad-estrella.org/maria-santisima-de-la-estrella/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-amargura-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Silencio en el Desprecio de Herodes (taller de Pedro Roldán, 1698), vestido con la túnica blanca del pasaje y acompañado de la escolta romana que lo lleva de nuevo a Pilatos."], ["Paso de palio", "María Santísima de la Amargura con San Juan Evangelista (Benito de Hita y Castillo, 1760), que le habla camino del Calvario. Caídas y techo de palio de Juan Manuel Rodríguez Ojeda (1926)."]
+   ],
+   "fuentes": ["https://www.amargura.org/titulares/", "https://www.amargura.org/restauracion-del-palio-de-maria-santisima-de-la-amargura/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-pablo-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Cautivo y Rescatado, obra de Luis Álvarez Duarte, como el conjunto completo del misterio."], ["Paso de palio", "Nuestra Señora del Rosario Doloroso, de Luis Álvarez Duarte, bajo palio."]
+   ],
+   "cortejo": "La hermandad publicó para 2026 unos 900 nazarenos.",
+   "fuentes": ["https://jesuscautivoyrescatado.com/cofradia/estacion-de-penitencia/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "redencion-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Redención en el Beso de Judas, con Judas, San Pedro, Santiago y San Juan, y detrás del olivo San Andrés y Santo Tomás. El Señor y los apóstoles son de Antonio Castillo Lastrucci (1958-1959)."], ["Paso de palio", "María Santísima del Rocío Coronada, bajo palio de terciopelo verde y malla de oro diseñado por Antonio Dubé de Luque (1970-1972). Las bambalinas actuales son de Francisco Carrera Iglesias (2010), sobre el modelo de las primeras."]
+   ],
+   "fuentes": ["https://hermandadredencion.com/paso-de-misterio/", "https://hermandadredencion.com/la-estacion-de-penitencia/", "https://hermandadredencion.com/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "santa-genoveva-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Cautivo. Paso neobarroco diseñado y tallado por Antonio Martín Fernández (1958-1959), con ángeles de Francisco Buiza (1959)."], ["Paso de palio", "Nuestra Señora de las Mercedes Coronada, bajo palio de terciopelo rojo y malla diseñado por José Manuel Elena Martín y bordado en el taller de los Sobrinos de Esperanza Elena Caro (1965-1968)."]
+   ],
+   "fuentes": ["https://www.santagenoveva.com/paso-de-ntro-padre-jesus-cautivo/", "https://www.santagenoveva.com/paso-de-ntra-sra-de-las-mercedes-coronada/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "santa-marta-sevilla": {
+   "pasos": [ ["Paso de misterio", "El Santísimo Cristo de la Caridad en su traslado al Sepulcro, llevado por José de Arimatea y Nicodemo, con la Virgen, San Juan, Santa Marta con los clavos, María Magdalena y otras dos santas mujeres. El Cristo y la mayoría de las figuras son de Luis Ortega Bru (1953); la Virgen (1958) y Santa Marta (1950), de Sebastián Santos."]
+   ],
+   "fuentes": ["https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf", "https://es.wikipedia.org/wiki/Hermandad_de_Santa_Marta_(Sevilla)"
+   ]
+  },
+  "san-gonzalo-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús en su Soberano Poder ante Caifás, con el tribunal del sanedrín y el trono de Caifás al fondo. Paso barroco diseñado y tallado por Manuel Guzmán Bejarano (2000-2004) y dorado por Manuel Verdugo."], ["Paso de palio", "Nuestra Señora de la Salud Coronada, bajo palio bordado en oro sobre malla. Respiraderos de plata de ley de Orfebrería Triana (2007)."]
+   ],
+   "fuentes": ["https://www.hermandaddesangonzalo.es/paso-de-cristo/", "https://www.hermandaddesangonzalo.es/paso-de-virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "vera-cruz-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Vera Cruz, entre dos ángeles ceriferarios del siglo XVIII. Paso de Antonio Ibáñez (2008), inspirado en el de Antonio Vega (1964), con figuras de Encarnación Hurtado (2009) en las esquinas e hachones de cera verde."], ["Paso de palio", "María Santísima de las Tristezas, bajo palio negro bordado en oro por Patrocinio López (1885), que fue de San Isidoro y después de las Penas de San Vicente. Varales y peana de Villarreal (1957)."]
+   ],
+   "cortejo": "Cirios verdes. Abre y cierra la cofradía el Lignum Crucis: uno en la Cruz de Guía y otro en un relicario que lleva un nazareno.",
+   "fuentes": ["https://veracruzsevilla.org/cofradia/pasos/", "https://veracruzsevilla.org/cofradia/cortejo/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "las-penas-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de las Penas. Canasto barroco estrenado en 1959, proyectado por Antonio Castillo Lastrucci, tallado por Antonio Vega y dorado por Luis Sánchez Jiménez, con evangelistas y cartelas de Rafael Barbero."], ["Paso de palio", "María Santísima de los Dolores, bajo palio."]
+   ],
+   "fuentes": ["https://www.hermandaddelaspenas.es/paso-nuestro-padre-jesus-de-las-penas/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "las-aguas-sevilla": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Aguas con Nuestra Madre y Señora del Mayor Dolor. Paso barroco en cedro con canastilla, crestería y respiraderos de Óscar Caballero y candelabros de Mariano Sánchez del Pino, estrenado completo en 2007 y dorado por Enrique Castellanos (2007-2011)."], ["Paso de palio", "María Santísima de Guadalupe, bajo palio de terciopelo azul diseñado por Antonio Dubé de Luque y bordado en el taller de Esperanza Elena Caro (1988-1992); techo diseñado por Luis Álvarez Duarte y bordado por Charo Bernardino."]
+   ],
+   "fuentes": ["https://lasaguas.es/patrimonio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-museo-sevilla": {
+   "pasos": [ ["Paso de Cristo", "La Sagrada Expiración de Nuestro Señor Jesucristo. Paso neobarroco tallado por Fernández del Toro y dorado por Fuentes (1940), con los cuatro evangelistas de Francisco Antonio Gijón (s. XVII) en las esquinas y ángeles de Francisco Buiza y Luis Ortega Bru."], ["Paso de palio", "María Santísima de las Aguas, bajo palio de malla bordado en oro por los Sobrinos de Caro (1946), con la Inmaculada en la gloria del techo. Respiraderos de plata de Orfebrería Triana (1996)."]
+   ],
+   "fuentes": ["https://www.hermandaddelmuseo.org/los-pasos-2/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-cerro-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Humildad."], ["Paso de Cristo", "Santísimo Cristo del Desamparo y Abandono, crucificado."], ["Paso de palio", "Nuestra Señora de los Dolores, bajo palio."]
+   ],
+   "fuentes": ["http://www.doloresdelcerro.com/pasos_procesionales.php", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-javieres-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de las Almas, crucificado. Canastilla barroca de pino de Flandes tallada por Manuel Guzmán Bejarano (1955), con ángeles pasionistas de José María Leal Bernáldez en las esquinas."], ["Paso de palio", "María Santísima de Gracia y Amparo, con San Juan Evangelista bajo el palio desde 2016. Paso neobarroco diseñado por Antonio Dubé de Luque; techo de terciopelo burdeos bordado por José Ramón Paleteiro (2002)."]
+   ],
+   "fuentes": ["https://javieres.com/pasodecristo/", "https://javieres.com/paso-de-palio-2/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-esteban-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Salud y Buen Viaje en la burla de los soldados, con tres sayones y un legionario romano de Antonio Castillo Lastrucci (contrato de 1940)."], ["Paso de palio", "María Santísima Madre de los Desamparados, bajo palio. Respiraderos de plata repujada de Manuel de los Ríos (1997), con diseño de José Asián Cano."]
+   ],
+   "fuentes": ["https://www.hermandadsanesteban.org/paso-cristo/", "https://www.hermandadsanesteban.org/paso-virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-estudiantes-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte, crucificado. Canasto y respiraderos renacentistas en caoba tallados por Francisco Olivera (1925-1926), con los cuatro evangelistas."], ["Paso de palio", "María Santísima de la Angustia. Paso de palio diseñado por Joaquín Castilla con José Hernández Díaz, empezado en 1943, con orfebrería de Emilio García Armenta y bordados del taller de Esperanza Elena Caro."]
+   ],
+   "fuentes": ["https://hermandaddelosestudiantes.es/hermandad/paso-de-cristo/", "https://hermandaddelosestudiantes.es/hermandad/paso-de-virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-benito-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Presentación de Jesús al Pueblo, con Pilato en su trono y un soldado romano. Paso barroco de rocalla diseñado y tallado por Antonio Martín Fernández (1967-1968), con nuevo dorado de Manolo y Antonio Doradores (2018-2020)."], ["Paso de Cristo", "Santísimo Cristo de la Sangre, crucificado, con los cuatro evangelistas de Francisco Buiza (1969). Paso barroco de Antonio Martín Fernández (1967-1969), redorado por el taller de Francisco Pardo (terminado en septiembre de 2025)."], ["Paso de palio", "Nuestra Señora de la Encarnación, bajo palio barroco bordado en oro y sedas sobre terciopelo burdeos por Juan Manuel Rodríguez Ojeda (1930-1931), pasado por Guillermo Carrasquilla (1978-1979)."]
+   ],
+   "fuentes": ["https://hermandaddesanbenito.net/misterio/", "https://hermandaddesanbenito.net/cristo/", "https://hermandaddesanbenito.net/ficha-de-la-cofradia/", "https://hermandaddesanbenito.net/virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-candelaria-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Salud con la Cruz a cuestas; un arcángel cirineo de Luis Álvarez Duarte (1995) sostiene la base de la Cruz. Canastilla neobarroca de rocalla tallada por Antonio Vega (1964), iluminada por candelabros de guardabrisas."], ["Paso de palio", "María Santísima de la Candelaria, bajo palio de terciopelo azul verdoso bordado en plata por el taller de Juan Manuel Rodríguez Ojeda (1924), con la Presentación de Jesús en el Templo en el techo. Orfebrería de Manuel Román Seco (1968-1970)."]
+   ],
+   "fuentes": ["http://www.hermandaddelacandelaria.com/seccion.php?Id=27", "http://www.hermandaddelacandelaria.com/seccion.php?Id=28", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "dulce-nombre-la-bofeta-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús ante Anás, abofeteado por Malco en presencia de Anás, con dos sanedritas, un testigo falso y un soldado romano; todas las figuras son de Antonio Castillo Lastrucci (1922-1923)."], ["Paso de palio", "María Santísima del Dulce Nombre, bajo palio."]
+   ],
+   "fuentes": ["https://hermandaddeldulcenombre.org/jesus-ante-anas/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "santa-cruz-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de las Misericordias, con Santa María de la Antigua a sus pies. Paso gótico dorado con dibujo y dirección de Antonio Martín (talla desde 1972, dorado desde 1974), con tablas de la Pasión pintadas por Rafael Gómez Millán y apóstoles de Rafael Barbero."], ["Paso de palio", "Nuestra Señora de los Dolores, bajo palio neorrenacentista estrenado en 1965: orfebrería de Emilio García Armenta y bordados de Guillermo Carrasquilla, con techo burdeos (1964-1966)."]
+   ],
+   "fuentes": ["https://www.hermandaddesantacruz.com/estacion-de-penitencia/paso-de-cristo/", "https://www.hermandaddesantacruz.com/estacion-de-penitencia/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-carmen-doloroso-sevilla": {
+   "pasos": [ ["Paso de misterio", "Las Negaciones de San Pedro: Nuestro Padre Jesús de la Paz, preso, mira a Pedro, con una criada, un judío, José de Arimatea, San Juan, un sayón y dos soldados romanos; figuras secundarias de Francisco Reyes Villadiego (1997-2000). Canasto neobarroco tallado por Francisco Verdugo (2000-2004)."], ["Paso de palio", "Nuestra Señora del Carmen en sus Misterios Dolorosos, en paso de palio estrenado en 2009, con orfebrería diseñada por Ramos inspirada en el Palacio de San Telmo."]
+   ],
+   "fuentes": ["https://www.hermandaddelcarmen.es/paso-del-senor/", "https://www.hermandaddelcarmen.es/paso-virgen-carmen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-sed-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Sed. Paso con anteproyecto de Antonio J. Dubé de Luque, dibujado y tallado por Manuel Guzmán Bejarano (estrenado en 1990) y dorado por Manuel Calvo Camacho (1992-1993)."], ["Paso de palio", "Santa María de Consolación, Madre de la Iglesia, bajo palio con bambalinas diseñadas por Rafael Guerra y bordadas por Rosario Bernardino, estrenadas el Miércoles Santo de 2012."]
+   ],
+   "fuentes": ["https://hermandaddelased.org/paso-santisimo-cristo-de-la-sed-2/", "https://hermandaddelased.org/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-bernardo-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Salud, crucificado. Paso barroco de José Gil en pino de Flandes, estrenado en 1925 y dorado por Francisco Ruiz Rodríguez, con cartelas pintadas por Rafael Blas Rodríguez."], ["Paso de palio", "María Santísima del Refugio, bajo palio de terciopelo granate bordado en oro y sedas según diseño de Juan Manuel Rodríguez Ojeda (1929), con Santas Justa y Rufina en la gloria del techo. Respiraderos de plata sobredorada de José Manuel Ramos (1995)."]
+   ],
+   "fuentes": ["https://www.hermandaddesanbernardo.com/pasos/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-buen-fin-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Buen Fin, crucificado tallado en 1645 por Sebastián Rodríguez. Hoy sale solo en el paso; antes lo acompañaba un misterio."], ["Paso de palio", "Nuestra Señora de la Palma Coronada, imagen del siglo XVII atribuida a Pedro Roldán, bajo palio."]
+   ],
+   "fuentes": ["https://hermandadbuenfin.es/stmo-cristo-del-buen-fin/", "https://hermandadbuenfin.es/virgen-de-la-palma/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-lanzada-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Lanzada: Longinos, a caballo, atraviesa el costado de Cristo muerto en la cruz ante la Virgen, San Juan y las tres Marías. Canasto neogótico diseñado por Luis Jiménez Espinosa (1944) y tallado por Manuel Guzmán Bejarano, estrenado en 1950 y terminado en 1955, con ángeles de Luis Ortega Bru y Rafael Barbero."], ["Paso de palio", "María Santísima del Buen Fin, en paso neogótico diseñado por Luis Jiménez Espinosa (1967) y tallado por Antonio Martín (1971-1973). Palio de terciopelo granate: bambalina delantera de Sobrinos de Caro (1973), trasera de Fernández y Enríquez (1990) y laterales de Curquejo (1997)."]
+   ],
+   "fuentes": ["https://lanzada.org/hermandad/pasos/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-baratillo-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestra Señora de la Piedad con el Santísimo Cristo de la Misericordia. Canasto barroco diseñado por Juan Pérez Calvo y tallado por Rafael Fernández del Toro, con relieves de los evangelistas de Luis Ortega Bru (1945); redorado por el taller de Manuel Verdugo en 2001."], ["Paso de palio", "María Santísima de la Caridad en su Soledad, bajo palio con techo de terciopelo morado diseñado por Manuel Caro y bordado en oro en el taller de Sobrinos de José Caro (1954), con la Matrona de la Caridad en la gloria."]
+   ],
+   "fuentes": ["https://hermandadelbaratillo.es/pasos-procesionales/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "cristo-de-burgos-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de Burgos, crucificado. Paso renacentista de José Merino Román (1939), ampliado por Antonio Martín Fernández (1958), en roble americano con taracea y un apostolado tallado en ciprés."], ["Paso de palio", "Madre de Dios de la Palma, bajo palio de terciopelo rojo bordado en oro por Juan Manuel Rodríguez Ojeda (1928), su obra póstuma, pasado a nuevo terciopelo por José Ramón Paleteiro (2004). Varales de Manuel Seco Velasco (1928)."]
+   ],
+   "fuentes": ["https://cristodeburgos.es/paso-de-cristo/", "https://cristodeburgos.es/paso-de-la-santisima-virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "siete-palabras-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Divina Misericordia, talla encargada a Felipe de Rivas por una hermandad de sacerdotes fundada en 1641. Paso de plata de ley con orfebrería del taller Viuda de Villarreal (1977-2000) y cartelas de Rafael Barbero (1981)."], ["Paso de misterio", "Santísimo Cristo de las Siete Palabras (Felipe Martínez, 1682). Paso neobarroco de Ricardo Reguera (1881) según diseño de Joaquín Díaz Montero, con respiraderos de Francisco Vélez Bracho (1931)."], ["Paso de palio", "Nuestra Señora de la Cabeza, bajo palio de terciopelo burdeos con bambalinas diseñadas por José Asián Pérez: trasera de José Ramón Paleteiro (2014) y frontal de Jesús Rosado (2017). Orfebrería de Manuel Villarreal (1958-1960)."]
+   ],
+   "fuentes": ["https://siete-palabras.com/pasos/", "https://siete-palabras.com/nuestro-padre-jesus-de-la-divina-misericordia/", "https://siete-palabras.com/santisimo-cristo-de-las-siete-palabras/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-panaderos-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Soberano Poder en su Prendimiento (Antonio Castillo Lastrucci, 1945), en el momento en que, tras el beso de Judas, se dispone a ser prendido."], ["Paso de palio", "María Santísima de Regla, bajo palio."]
+   ],
+   "fuentes": ["https://www.hdadpanaderos.es/titulares/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-negritos-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Fundación, crucificado."], ["Paso de palio", "Nuestra Señora de los Ángeles Coronada, bajo palio."]
+   ],
+   "fuentes": ["https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-exaltacion-los-caballos-sevilla": {
+   "pasos": [ ["Paso de misterio", "El Santísimo Cristo de la Exaltación, alzado en la cruz por cuatro sayones, con Dimas y Gestas maniatados (de La Roldana) y dos romanos a caballo en la trasera; los caballos actuales son de Juan Abascal (1960). El paso se contrató en 1678 con Luis Antonio de los Arcos y Cristóbal de Guadix."], ["Paso de palio", "Nuestra Señora de las Lágrimas, bajo palio con bordados de Juan Manuel Rodríguez Ojeda y de Hijos de Miguel del Olmo, autores también del manto (1919), y orfebrería de Villarreal."]
+   ],
+   "fuentes": ["https://www.laexaltacion.org/paso-de-misterio/", "https://www.laexaltacion.org/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "las-cigarreras-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Atado a la Columna en su flagelación, talla de Francisco Buiza (1974)."], ["Paso de palio", "María Santísima de la Victoria, bajo palio."]
+   ],
+   "fuentes": ["https://www.columnayazotes.es/titulares/nuestro-padre-jesus-atado-a-la-columna", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "montesion-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Oración de Nuestro Señor Jesucristo en el Huerto: el Señor orando, el ángel y los apóstoles San Pedro, San Juan y Santiago dormidos."], ["Paso de palio", "María Santísima del Rosario en sus Misterios Dolorosos Coronada, bajo palio bordado sobre malla de oro fino."]
+   ],
+   "fuentes": ["https://hermandaddemontesion.com/paso-de-misterio", "https://hermandaddemontesion.com/paso-de-palio", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-quinta-angustia-sevilla": {
+   "pasos": [ ["Paso de misterio", "El Sagrado Descendimiento: Nicodemo y José de Arimatea, en escaleras, bajan el cuerpo de Cristo con un lienzo; al pie de la cruz esperan la Virgen de la Quinta Angustia, San Juan y las tres Marías, arrodilladas. La historiografía actual atribuye el conjunto a Pedro Roldán."]
+   ],
+   "cortejo": "Antes de salir, los nazarenos asisten a los Oficios del Jueves Santo en la Magdalena y acompañan al Santísimo en la procesión claustral.",
+   "fuentes": ["https://laquintaangustia.org/patrimonio/esculturas/misterio-2/", "https://laquintaangustia.org/hermandad/cultos/estacion-de-penitencia/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-valle-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Coronación de Espinas."], ["Paso de Cristo", "Nuestro Padre Jesús con la Cruz al Hombro, con la Santa Mujer Verónica, que estrena paño cada Jueves Santo."], ["Paso de palio", "Nuestra Señora del Valle, bajo palio con caídas anónimas del último tercio del siglo XVII y techo del XVIII (Antonia Bazo, 1806; Teresa del Castillo, 1880). Manto de salida de Juan Manuel Rodríguez Ojeda (1919-1920)."]
+   ],
+   "fuentes": ["https://elvalle.org/patrimonio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "pasion-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Pasión, en paso de plata, marfil y madera dorada diseñado y labrado por Cayetano González (canastilla de 1943; respiraderos de 1945-1949, con relieves de los apóstoles)."], ["Paso de palio", "Nuestra Madre y Señora de la Merced con San Juan bajo palio neogótico estrenado en 1929: bordados en oro sobre terciopelo azul diseñados por Antonio Amiáns y bordados por el taller de Carmen Capmany."]
+   ],
+   "fuentes": ["https://www.hermandaddepasion.org/pasos/", "https://www.hermandaddepasion.org/paso-palio-la-stma-virgen/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-silencio-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, que abraza la Cruz de carey y plata en el momento de aceptarla, antes de empezar el camino del Calvario."], ["Paso de palio", "María Santísima de la Concepción (Sebastián Santos), acompañada por San Juan Evangelista en la calle de la Amargura."]
+   ],
+   "fuentes": ["https://www.hermandaddeelsilencio.org/nuestro-padre-jesus-nazareno/", "https://www.hermandaddeelsilencio.org/maria-santisima-de-la-concepcion/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-gran-poder-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Gran Poder, en el paso de Francisco Antonio Ruiz Gijón (contrato de 1688, terminado en 1692)."], ["Paso de palio", "María Santísima del Mayor Dolor y Traspaso con San Juan Evangelista, bajo palio de cajón bordado en oro sobre terciopelo granate con diseño de Juan Manuel Rodríguez Ojeda (1903). La peana rococó es de 1771-1779."]
+   ],
+   "fuentes": ["https://www.gran-poder.es/patrimonio/patrimonio-mueble/paso-de-jesus-del-gran-poder/", "https://www.gran-poder.es/patrimonio/patrimonio-mueble/paso-de-maria-santisima-del-mayor-dolor-y-traspaso/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-macarena-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sentencia ante Pilato, misterio de Antonio Castillo Lastrucci (1929, reformado en 1938 y ampliado en 1940). Paso de 1955 del taller de Juan Pérez Calvo, tallado por Rafael Fernández del Toro, con medallones y ángeles de Luis Ortega Bru."], ["Paso de palio", "María Santísima de la Esperanza Macarena, bajo palio. Manto de la Coronación en terciopelo verde, diseñado por Fernando Marmolejo Camargo y bordado por Esperanza Elena Caro."]
+   ],
+   "fuentes": ["https://www.hermandaddelamacarena.es/paso-de-nuestro-padre-jesus-de-la-sentencia/", "https://www.hermandaddelamacarena.es/paso-de-nuestra-senora-de-la-esperanza/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-calvario-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Calvario, crucificado. Paso renacentista de caoba sin dorar, diseñado por Francisco Farfán Ramos y tallado por Salvador Domínguez Gordillo, con orfebrería de Ángel Cabanes; salió por primera vez en 1909, iluminado por hachones."], ["Paso de palio", "Nuestra Señora de la Presentación, bajo palio de cajón bordado en oro sobre terciopelo granate por Juan Manuel Rodríguez Ojeda, estrenado el Viernes Santo de 1916 junto con el manto."]
+   ],
+   "fuentes": ["https://hermandaddelcalvario.org/paso-stmo-cristo-del-calvario/", "https://hermandaddelcalvario.org/paso-ntra-sra-de-la-presentacion/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-esperanza-de-triana-sevilla": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Tres Caídas, con el Cirineo, un esclavo negro, las mujeres con el niño y un romano a caballo, figuras de Antonio Castillo Lastrucci (desde 1938; el Cirineo, de 1939). Canasto tallado por Manuel Guzmán Bejarano, con respiraderos estrenados en 1970."], ["Paso de palio", "Nuestra Señora de la Esperanza, bajo palio de estilo regionalista inspirado en la cerámica trianera, obra de Miguel Olmo."]
+   ],
+   "fuentes": ["https://esperanzadetriana.es/paso-stmo-cristo-de-las-tres-caidas/", "https://esperanzadetriana.es/7624-2/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-gitanos-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Salud. Paso neobarroco de 1979 tallado por Antonio Martín Fernández y dorado por Luis Sánchez Jiménez, con evangelistas, ángeles y santos de Francisco Buiza."], ["Paso de palio", "María Santísima de las Angustias Coronada, bajo palio de Fernández y Enríquez (1994) que reproduce el de Caro (1938) con diseño de Ignacio Gómez Millán. Varales de plata de Ramón León (2000)."]
+   ],
+   "fuentes": ["https://www.hermandaddelosgitanos.com/paso-de-cristo/", "https://www.hermandaddelosgitanos.com/paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-carreteria-sevilla": {
+   "pasos": [ ["Paso de misterio", "Calvario con diez figuras y tres cruces: el Santísimo Cristo de la Salud, muerto y lanceado, entre Dimas y Gestas; María Santísima de la Luz en el Misterio de sus Tres Necesidades, San Juan, las tres Marías con la sábana y José de Arimatea y Nicodemo en las escaleras. Paso de caoba sin dorar tallado por Guillermo Muñiz, estrenado en 1922."], ["Paso de palio", "Nuestra Señora del Mayor Dolor en su Soledad, bajo palio."]
+   ],
+   "fuentes": ["https://hermandaddelacarreteria.org/paso-del-sagrado-misterio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-isidoro-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de las Tres Caídas."], ["Paso de palio", "Nuestra Señora de Loreto, bajo palio."]
+   ],
+   "cortejo": "La estación de penitencia se hace en completo silencio, sin acompañamiento musical.",
+   "fuentes": ["https://trescaidas.org/datos-de-interes/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-o-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, en paso diseñado y tallado en gran parte por José Martínez Martínez, encargado por acuerdo del cabildo de 30 de junio de 1976."], ["Paso de palio", "María Santísima de la O, bajo palio."]
+   ],
+   "fuentes": ["https://www.hermandaddelao.es/patrimonio-procesional-paso-de-nuestro-padre-jesus-nazareno/", "https://www.hermandaddelao.es/patrimonio-procesional-paso-de-maria-santisima-de-la-o/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "san-buenaventura-sevilla": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de la Soledad (Gabriel de Astorga, 1851) al pie de la Santa Cruz en el Monte Calvario. Paso neorrenacentista de plata y caoba diseñado por Emilio García Armenta y tallado por Manuel Guzmán Bejarano, estrenado en 1957 y terminado veintidós años después."]
+   ],
+   "fuentes": ["https://soledadsanbuenaventura.com/patrimonio-artistico/", "https://soledadsanbuenaventura.com/175-anos-de-una-iconografia-inedita-en-sevilla-la-soledad-de-maria-al-pie-de-la-cruz/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "montserrat-sevilla": {
+   "pasos": [ ["Paso de misterio", "El Santísimo Cristo de la Conversión del Buen Ladrón en la cruz, en el pasaje de San Lucas (23) de la conversión de San Dimas. La imagen del Cristo se entregó a la hermandad en febrero de 1620."], ["Paso de palio", "Nuestra Señora de Montserrat, bajo palio."]
+   ],
+   "fuentes": ["https://www.montserratsevilla.com/santisimo-cristo-conversion-buen-ladron/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Descendido de la Cruz en el Misterio de su Sagrada Mortaja, con María Santísima de la Piedad."]
+   ],
+   "fuentes": ["https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-cachorro-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Expiración, crucificado. El paso lleva faldones diseñados por José María Leal Bernáldez y bordados por Francisco Carrera Iglesias (2021), con evangelistas de Leal Bernáldez."], ["Paso de palio", "Nuestra Madre y Señora del Patrocinio, bajo palio con bambalinas diseñadas por Herminia Álvarez Udell (1920) y bordadas por el taller de los Hijos de Miguel Olmo (1923). Candelabros de cola de Jorge Ferrer Caro (1942)."]
+   ],
+   "fuentes": ["https://hermandaddelcachorro.org/pasosprocesionales/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "los-servitas-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestra Señora de los Dolores con el Santísimo Cristo de la Providencia muerto en su regazo (Sexta Angustia), grupo de José Montes de Oca. Paso neorrocalla de caoba con carpintería de Francisco Bailac (1978), canasto y respiraderos de Manuel Guzmán Bejarano y profetas modelados por Luis Ortega Bru (1981)."], ["Paso de palio", "María Santísima de la Soledad, bajo palio de cajón proyectado por Antonio Dubé de Luque y bordado en el taller del Convento de Santa Isabel (desde 1983)."]
+   ],
+   "fuentes": ["https://realhermandadservita.com/pasos-procesionales", "https://realhermandadservita.com/titulares", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-trinidad-sevilla": {
+   "pasos": [ ["Paso de misterio", "El Sagrado Decreto de la Santísima Trinidad: misterio alegórico con Dios Padre, cuya cabeza se acerca a la órbita de Juan de Mesa (cuerpo nuevo de Antonio J. Dubé de Luque, 1997), y Dios Hijo. Su presencia en la cofradía se remonta al siglo XVII."], ["Paso de misterio", "Paso de Calvario del Santísimo Cristo de las Cinco Llagas; el Senatus abre el cortejo de este segundo paso."], ["Paso de palio", "Nuestra Señora de la Esperanza, bajo palio."]
+   ],
+   "cortejo": "El Senatus no abre el primer paso sino el segundo, porque el misterio del Sagrado Decreto se considera intemporal.",
+   "fuentes": ["https://hermandaddelatrinidad.es/sagrados-titulares/", "https://hermandaddelatrinidad.es/cortejo-del-paso-de-calvario/", "https://hermandaddelatrinidad.es/cortejo-del-paso-de-palio/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-santo-entierro-sevilla": {
+   "pasos": [ ["Paso alegórico", "El Triunfo de la Santa Cruz sobre la Muerte, «la Canina»: la Muerte como esqueleto con guadaña, sentada sobre el globo terráqueo con la serpiente, ante la Cruz con dos sudarios y la inscripción «Mors mortem superavit»."], ["Paso de la urna", "Santísimo Cristo Yacente de Juan de Mesa (terminado el 12 de marzo de 1619, autoría confirmada en 2024 por un documento hallado en la talla), en urna neogótica diseñada en 1880 por Antonio del Canto Torralva."], ["Paso de la Virgen", "El Duelo: María Santísima de Villaviciosa (Antonio Cardoso de Quirós, 1693) con San Juan, Magdalena, María Cleofás, María Salomé, José de Arimatea y Nicodemo, figuras de Juan de Astorga (1829). Manto y ropas bordados por Teresa del Castillo (1880)."]
+   ],
+   "fuentes": ["https://www.santoentierro.org/patrimonio/nuestros-titulares", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "pasos": [ ["Paso de la Virgen", "María Santísima en su Soledad, sola al pie de la Cruz con el sudario y las escaleras. Paso neobarroco tallado y dorado, empezado en 1949 y de 1951, con talla de Francisco Carrero y Francisco Rivette, carpintería de Francisco Bailac, dorado de Manuel Calvo Camacho y dirección artística de Santiago Martínez."]
+   ],
+   "cortejo": "La cofradía se ordena en doce tramos y cierra el Sábado Santo; hasta 1955 cerraba los cortejos del Viernes Santo.",
+   "fuentes": ["https://www.hermandaddelasoledad.org/hermandad/titulares/maria-santisima-en-su-soledad/", "https://www.hermandaddelasoledad.org/hermandad/patrimonio/cultual/paso-procesional/", "https://www.hermandaddelasoledad.org/cofradia/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "la-resurreccion-sevilla": {
+   "pasos": [ ["Paso de misterio", "La Sagrada Resurrección de Nuestro Señor Jesucristo (Francisco Buiza, 1973) con un ángel del mismo autor (1975). Paso neobarroco diseñado y tallado por José Martínez (1973), reformado entre 2013 y 2016 con parihuela de Juan Amador García Casas y esquinas y candelabros de Francisco Verdugo."], ["Paso de palio", "Nuestra Señora de la Aurora (Antonio J. Dubé de Luque, 1978), bajo palio."]
+   ],
+   "cortejo": "La hermandad publica en su ficha 519 nazarenos.",
+   "fuentes": ["https://www.hermandaddelaresurreccion.com/ficha-cofradia/", "https://www.hermandaddelaresurreccion.com/pasos/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
+  },
+  "el-sol-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santo Cristo Varón de Dolores de la Divina Misericordia. Su paso lo está reformando el tallista José Antonio García Flores: nueva parihuela de pino de Flandes y canastilla ampliada."], ["Paso de palio", "Nuestra Señora del Sol, bajo palio."]
+   ],
+   "fuentes": ["https://hermandaddelsol.org/reforma-paso-cristo/", "https://hermandaddelsol.org/la-hermandad/sagrados-titulares/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
+   ]
   }
  }
 }
