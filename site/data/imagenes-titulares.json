@@ -2373,21 +2373,26 @@
   },
   "el-perdon-jaen": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Jes%C3%BAs_del_Perd%C3%B3n,_Ja%C3%A9n_(2022)_24J_01_(recortado).jpg",
-    "titulo": "File:Jesús del Perdón, Jaén (2022) 24J 01 (recortado).jpg",
-    "autor": "Veinticuatro de Jahén",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "El Perdón (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadperdonjn/",
+    "local": "scripts/cedidas/jaen/el-perdon-jaen-cristo.jpg",
+    "titulo": "Cedida: Jesús del Perdón",
     "titular": "Jesús del Perdón",
-    "foco": "50% 0%"
+    "foco": "40% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar el escudo de la hermandad. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Esperanza,_Ja%C3%A9n,_2019_24J_02.jpg",
-    "titulo": "File:Virgen de la Esperanza, Jaén, 2019 24J 02.jpg",
-    "autor": "Veinticuatro de Jahén",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de la Esperanza"
+    "autor": "El Perdón (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadperdonjn/",
+    "local": "scripts/cedidas/jaen/el-perdon-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Esperanza",
+    "titular": "María Santísima de la Esperanza",
+    "foco": "45% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 9), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar el escudo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-buena-muerte-jaen": {
@@ -2504,30 +2509,28 @@
     "titular": "Santísimo Cristo Yacente"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Soledad_Ja%C3%A9n.JPG",
-    "titulo": "File:Soledad Jaén.JPG",
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "La Soledad (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/yacenteysoledadjaen/",
+    "local": "scripts/cedidas/jaen/la-soledad-jaen-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Soledad",
     "titular": "Nuestra Señora de la Soledad",
-    "recorte": [
-     0.36,
-     0.22,
-     0.28,
-     0.55
-    ],
-    "foco": "50% 60%"
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @yacenteysoledadjaen (https://www.instagram.com/p/DdQfwaiguIC/, imagen 1), sin fotógrafo citado, coautor ni firma. Cuenta localizada desde @agrupacioncofradiasjaen. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-santo-sepulcro-jaen": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Silencio.jpg",
-    "titulo": "File:Virgen Silencio.jpg",
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "autor": "Santo Sepulcro (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/congregacion_santo_sepulcro/",
+    "local": "scripts/cedidas/jaen/el-santo-sepulcro-jaen-virgen.jpg",
+    "titulo": "Cedida: Santa María del Silencio",
     "titular": "Santa María del Silencio",
-    "foco": "50% 22%"
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @congregacion_santo_sepulcro (https://www.instagram.com/p/De-VuUEjJ0m/, imagen 3), sin fotógrafo citado, coautor ni firma. Cuenta localizada desde @agrupacioncofradiasjaen. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "mutilado-clemencia-malaga": {
@@ -4854,6 +4857,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Jesús en el Misterio de su Gloriosa Resurrección",
     "foco": "50% 31%"
+   },
+   "virgen": {
+    "autor": "El Resucitado (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdad.resurreccionjaen/",
+    "local": "scripts/cedidas/jaen/el-resucitado-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Victoria",
+    "titular": "María Santísima de la Victoria",
+    "foco": "52% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdad.resurreccionjaen (https://www.instagram.com/p/DfAL-cqCC-m/, imagen 1), sin fotógrafo citado, coautor ni firma. Cuenta localizada desde @agrupacioncofradiasjaen. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-esperanza-cordoba": {
