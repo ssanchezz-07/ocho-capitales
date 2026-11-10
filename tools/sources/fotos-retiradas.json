@@ -46,7 +46,8 @@
   "Dolores_Huelva.jpg": "Es la Virgen de los Dolores de la Hermandad de la Lanzada de Huelva (categoría «Hermandad de la Sagrada Lanzada, Huelva»), no la del Perdón. (antes retirada solo en el-perdon-huelva|virgen)",
   "CristoYacenteHuelva.jpg": "Original de 422 px: no da la calidad. (antes retirada solo en el-santo-entierro-huelva|cristo)",
   "-Santísimo_Cristo_de_la_Expiración-.jpg": "Lleva sobreimpreso el escudo y el texto «HERMANDAD DE SAN FRANCISCO» (abajo a la derecha, un 13 % del alto): marca de la hermandad y autoría dudosa (auditor-imagenes, 9-nov). (antes retirada solo en la-esperanza-huelva|cristo)",
-  "SemanaSantaSevillaPenas2.jpg": "Paso de noche, muy oscuro: no se distingue al titular. (antes retirada solo en las-penas-sevilla|cristo)"
+  "SemanaSantaSevillaPenas2.jpg": "Paso de noche, muy oscuro: no se distingue al titular. (antes retirada solo en las-penas-sevilla|cristo)",
+  "Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG": "A contraluz y blanda: la cara sale apagada. (antes retirada solo en bellavista-sevilla|cristo)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -448,10 +449,6 @@
   "los-estudiantes-sevilla|ficha": {
    "archivo": "SemanaSantaSevillaEstudiantes3.jpg",
    "motivo": "Autor «supuesto» en Commons (Lobillo, «own assumed»): licencia no fiable."
-  },
-  "bellavista-sevilla|cristo": {
-   "archivo": "Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG",
-   "motivo": "A contraluz y blanda: la cara sale apagada."
   },
   "la-sed-sevilla|cristo": {
    "archivo": "Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg",

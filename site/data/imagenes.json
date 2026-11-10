@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T04:31:38.743Z",
+ "generado": "2026-11-10T04:41:37.283Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3516,24 +3516,41 @@
   "bellavista-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 1238,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Samu Bético",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG",
-    "recorte": [
-     0.3,
-     0.08,
-     0.32,
-     0.55
-    ],
+    "autor": "Bellavista (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/dnbellavista/",
+    "foco": "58% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/bellavista-sevilla-cristo.jpg",
+    "tam": 455925,
     "titular": "Nuestro Padre Jesús de la Salud y Remedios"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1279,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Bellavista (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/dnbellavista/",
+    "foco": "44% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/bellavista-sevilla-virgen.jpg",
+    "tam": 616911,
+    "titular": "María Santísima del Dulce Nombre en sus Dolores y Compasión"
    }
   },
   "pasion-y-muerte-sevilla": {
@@ -11781,6 +11798,25 @@
     "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg",
     "tam": 624215,
     "titular": "María Santísima de Loreto"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 954,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "San Isidoro (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadtrescaidas/",
+    "foco": "55% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-cristo.jpg",
+    "tam": 591527,
+    "titular": "Nuestro Padre Jesús de las Tres Caídas"
    }
   },
   "pino-montano-sevilla": {
@@ -11886,6 +11922,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "bellavista-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/dnbellavista/\"|\"scripts/cedidas/sevilla/bellavista-sevilla-cristo.jpg\"|455925|\"\"|\"58% 40%\"|\"https://www.instagram.com/dnbellavista/\"|\"scripts/cedidas/sevilla/bellavista-sevilla-virgen.jpg\"|616911|\"\"|\"44% 30%\"|\"\"|\"\""
   },
   "pasion-y-muerte-sevilla": {
    "w": 960,
@@ -13246,6 +13292,16 @@
     960
    ],
    "firma": "\"https://x.com/NAZARENOyMERCED\"|\"scripts/cedidas/granada/el-nazareno-granada-cristo.jpg\"|290328|\"\"|\"45% 25%\"|\"https://x.com/NAZARENOyMERCED\"|\"scripts/cedidas/granada/el-nazareno-granada-virgen.jpg\"|702899|\"\"|\"50% 18%\"|\"\"|\"\""
+  },
+  "san-isidoro-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hermandadtrescaidas/\"|\"scripts/cedidas/sevilla/san-isidoro-sevilla-cristo.jpg\"|591527|\"\"|\"55% 25%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg\"|624215|\"\"|\"44% 33%\"|\"\"|\"100% 100%\""
   }
  }
 }

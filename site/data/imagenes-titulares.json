@@ -307,18 +307,26 @@
   },
   "bellavista-sevilla": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG",
-    "titulo": "File:Cristo de Salud y Remedios (Hdad. de Bellavista).JPG",
-    "autor": "Samu Bético",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Bellavista (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/dnbellavista/",
+    "local": "scripts/cedidas/sevilla/bellavista-sevilla-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Salud y Remedios",
     "titular": "Nuestro Padre Jesús de la Salud y Remedios",
-    "recorte": [
-     0.3,
-     0.08,
-     0.32,
-     0.55
-    ]
+    "foco": "58% 40%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @dnbellavista (https://www.instagram.com/p/DfPZ0VyhN7P/), sin fotógrafo citado, coautor ni firma. Foto en blanco y negro de la hermandad. Sustituye a la de Commons retirada. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "Bellavista (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/dnbellavista/",
+    "local": "scripts/cedidas/sevilla/bellavista-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Dulce Nombre",
+    "titular": "María Santísima del Dulce Nombre en sus Dolores y Compasión",
+    "foco": "44% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @dnbellavista (bio «Hermandad del Dulce Nombre de María… Nazarenos de N. P. Jesús de la Salud y Remedios y Mª Stma. del Dulce Nombre»; https://www.instagram.com/p/DfPN3oBF95P/, imagen 2), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "pasion-y-muerte-sevilla": {
@@ -5396,6 +5404,17 @@
     "foco": "44% 33%",
     "foco_ficha": "100% 100%",
     "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B6Fv4sNiTRL/. Foto suya, con su firma intacta (abajo a la derecha); foco_ficha 100% 100% para que se vea en la ficha."
+   },
+   "cristo": {
+    "autor": "San Isidoro (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadtrescaidas/",
+    "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de las Tres Caídas",
+    "titular": "Nuestro Padre Jesús de las Tres Caídas",
+    "foco": "55% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadtrescaidas (bio «Perfil oficial»; la misma cuenta publica a María Santísima de Loreto; https://www.instagram.com/p/DfZOO5SRKiv/), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "pino-montano-sevilla": {
