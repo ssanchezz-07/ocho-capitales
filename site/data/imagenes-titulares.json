@@ -2380,8 +2380,8 @@
     "local": "scripts/cedidas/jaen/el-perdon-jaen-cristo.jpg",
     "titulo": "Cedida: Jesús del Perdón",
     "titular": "Jesús del Perdón",
-    "foco": "40% 35%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar el escudo de la hermandad. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "35% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar entero el escudo de la hermandad. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "virgen": {
     "autor": "El Perdón (Jaén)",
@@ -2392,7 +2392,7 @@
     "titulo": "Cedida: María Santísima de la Esperanza",
     "titular": "María Santísima de la Esperanza",
     "foco": "45% 22%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 9), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar el escudo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadperdonjn (https://www.instagram.com/p/DWYN8POjpYI/, imagen 9), sin fotógrafo citado, coautor ni firma. Recortada por la izquierda para quitar entero el escudo de la hermandad. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-buena-muerte-jaen": {
@@ -4689,17 +4689,6 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de Salud y Pasión",
     "foco": "50% 30%"
-   },
-   "virgen": {
-    "autor": "Pasión (Almería)",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.instagram.com/hermandadpasionalmeria/",
-    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
-    "titulo": "Cedida: María Santísima de los Desamparados",
-    "titular": "María Santísima de los Desamparados",
-    "foco": "50% 30%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadpasionalmeria (la que enlaza la Agrupación de Almería en cofradiasdealmeria.es; https://www.instagram.com/p/DSnsJ1XgJ0V/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada para quitar las franjas laterales y el logo de la hermandad de abajo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "gran-poder-almeria": {
@@ -4820,8 +4809,8 @@
     "local": "scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg",
     "titulo": "Cedida: Nuestra Señora de las Lágrimas",
     "titular": "Nuestra Señora de las Lágrimas",
-    "foco": "50% 28%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadestudiantesjaen (https://www.instagram.com/p/DfN50RhoAYi/, imagen 1), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadestudiantesjaen (https://www.instagram.com/p/DfN50RhoAYi/, imagen 1), sin fotógrafo citado, coautor ni firma. Recortada de cintura para arriba para que se vea la cara. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-cautivo-jaen": {

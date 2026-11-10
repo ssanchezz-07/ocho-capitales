@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T17:48:31.952Z",
+ "generado": "2026-11-10T18:07:53.403Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6896,31 +6896,31 @@
   },
   "el-perdon-jaen": {
    "cristo": {
-    "w": 960,
-    "h": 1412,
+    "w": 949,
+    "h": 1440,
     "widths": [
      160,
      480,
-     960
+     949
     ],
     "escudo": false,
     "autor": "El Perdón (Jaén)",
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hdadperdonjn/",
-    "foco": "40% 35%",
+    "foco": "35% 35%",
     "cedida": true,
     "local": "scripts/cedidas/jaen/el-perdon-jaen-cristo.jpg",
-    "tam": 369640,
+    "tam": 386764,
     "titular": "Jesús del Perdón"
    },
    "virgen": {
-    "w": 907,
+    "w": 892,
     "h": 1350,
     "widths": [
      160,
      480,
-     907
+     892
     ],
     "escudo": false,
     "autor": "El Perdón (Jaén)",
@@ -6930,7 +6930,7 @@
     "foco": "45% 22%",
     "cedida": true,
     "local": "scripts/cedidas/jaen/el-perdon-jaen-virgen.jpg",
-    "tam": 415275,
+    "tam": 433205,
     "titular": "María Santísima de la Esperanza"
    }
   },
@@ -10666,25 +10666,6 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg",
     "foco": "50% 30%",
     "titular": "Nuestro Padre Jesús de Salud y Pasión"
-   },
-   "virgen": {
-    "w": 960,
-    "h": 1432,
-    "widths": [
-     160,
-     480,
-     960
-    ],
-    "escudo": false,
-    "autor": "Pasión (Almería)",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.instagram.com/hermandadpasionalmeria/",
-    "foco": "50% 30%",
-    "cedida": true,
-    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
-    "tam": 621617,
-    "titular": "María Santísima de los Desamparados"
    }
   },
   "gran-poder-almeria": {
@@ -10863,7 +10844,7 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1247,
+    "h": 1168,
     "widths": [
      160,
      480,
@@ -10874,10 +10855,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hdadestudiantesjaen/",
-    "foco": "50% 28%",
+    "foco": "50% 30%",
     "cedida": true,
     "local": "scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg",
-    "tam": 854799,
+    "tam": 336592,
     "titular": "Nuestra Señora de las Lágrimas"
    }
   },
@@ -13341,7 +13322,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/hdadperdonjn/\"|\"scripts/cedidas/jaen/el-perdon-jaen-cristo.jpg\"|369640|\"\"|\"40% 35%\"|\"https://www.instagram.com/hdadperdonjn/\"|\"scripts/cedidas/jaen/el-perdon-jaen-virgen.jpg\"|415275|\"\"|\"45% 22%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/hdadperdonjn/\"|\"scripts/cedidas/jaen/el-perdon-jaen-cristo.jpg\"|386764|\"\"|\"35% 35%\"|\"https://www.instagram.com/hdadperdonjn/\"|\"scripts/cedidas/jaen/el-perdon-jaen-virgen.jpg\"|433205|\"\"|\"45% 22%\"|\"\"|\"\""
   },
   "el-gran-poder-jaen": {
    "w": 960,
@@ -13951,7 +13932,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/hdadestudiantesjaen/\"|\"scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg\"|854799|\"\"|\"50% 28%\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/hdadestudiantesjaen/\"|\"scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg\"|336592|\"\"|\"50% 30%\"|\"\"|\"\""
   },
   "el-cautivo-jaen": {
    "w": 960,
