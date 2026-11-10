@@ -9,6 +9,11 @@
   - la fuente en corto.
 - Pasada la fecha ya no se dice. El motor lo comprueba con su fecha de hoy, porque la web compilada guarda las de ayer en adelante.
 - Casos B9-1 a B9-3 en `probar-cunao`: los tres se generan con la primera extraordinaria que haya y se omiten si no queda ninguna.
+- Auditoría (auditor-web APTO, con un fallo latente que ya está arreglado):
+  - Con una fuente de prensa salía «según la diario Sur». Ahora «según la web oficial…» solo va con las webs oficiales, y los medios van entre comillas y con su mayúscula («según «Diario Sur»»).
+  - La respuesta lleva también el botón «Fuente de la salida».
+  - Caso B9-4, con una fila simulada.
+- Queda para otro día: «¿Qué sale este sábado?» fuera de temporada contesta con el Sábado Santo y no con las salidas de ese sábado. Ya pasaba antes.
 
 ## 2026-11-10 · Fluidez de toda la página (noche del 9-nov, erCuñao, punto 1 del plan; no se toca el plano)
 Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, mediana de 3 pasadas, contra la versión publicada (6f3635d). Lo que más frenaba eran las imágenes (el navegador bajaba fotos de 3x para huecos pequeños) y el salto del calendario.

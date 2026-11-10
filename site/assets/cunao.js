@@ -391,6 +391,8 @@
     }
     // «según el programa de Canal Sur»; si la fuente no es un programa, entre comillas: «según "Horarios e itinerarios…"» (auditoría del 10-nov)
     const segun = (fu) => (!fu ? '' : /^Programa /.test(fu) ? 'según el ' + fu.replace(/^Programa/, 'programa') : 'según «' + fu + '»');
+    // lo mismo para las extraordinarias: «según la web oficial de la Archicofradía…»; un medio, tal cual: «según «Diario Sur»»
+    const segunEx = (fu) => (!fu ? '' : /^web oficial /i.test(fu) ? 'según la ' + fu.charAt(0).toLowerCase() + fu.slice(1) : 'según «' + fu + '»');
     const deItin = (h) => (h.rk === 'cruz de guía' ? 'cruz de guía' : coherente(h) ? h.rk : null);
     function lineaTiempo(h) {
       const r_ = h.r || [], l = [];
@@ -508,8 +510,9 @@
           // su próxima salida extraordinaria (itinerarios-extraordinarios.json), con sus horas y el plano de esa salida; pasada la
           // fecha ya no se dice (Pablo, 10-nov: «el bot podría indicarlo sobre la salida extraordinaria del sábado»)
           const exH = (D.ex || []).filter((x) => x[4] === h.s && x[0] >= hoyISO(0));
-          exH.forEach((x) => P(r, 'Y no hace falta esperar: ' + cuandoEx(x[0]) + ' tiene ' + (/^salida extraordinaria\b/i.test(x[3]) ? 'salida extraordinaria' : '«' + x[3] + '»') + (x[1] ? ', a las ' + x[1] : '') + (x[5] ? ' desde ' + conArt(x[5]) : '') + (x[8] ? ', con la entrada a las ' + x[8] : '') + (x[10] ? ', según la ' + x[10].charAt(0).toLowerCase() + x[10].slice(1) : '') + '.'));
-          A(r, exH.map((x) => ['Verla en la calle', L.extra(x[2], x[9])]).concat(enlacesHerm(h, true))); break;
+          exH.forEach((x) => P(r, 'Y no hace falta esperar: ' + cuandoEx(x[0]) + ' tiene ' + (/^salida extraordinaria\b/i.test(x[3]) ? 'salida extraordinaria' : '«' + x[3] + '»') + (x[1] ? ', a las ' + x[1] : '') + (x[5] ? ' desde ' + conArt(x[5]) : '') + (x[8] ? ', con la entrada a las ' + x[8] : '') + (x[10] ? ', ' + segunEx(x[10]) : '') + '.'));
+          // la fuente, que se pueda abrir (va después de los enlaces de la ficha: no quita sitio a «Verla en la calle»)
+          A(r, exH.map((x) => ['Verla en la calle', L.extra(x[2], x[9])]).concat(enlacesHerm(h, true), exH.filter((x) => x[6]).slice(0, 1).map((x) => ['Fuente de la salida', x[6]]))); break;
         }
         case 'sede': {
           P(r, h.se ? 'La sede ' + cabecera(h, 'de') + ' es ' + conArt(h.se) + '. De allí ' + V(h, 'sale ', 'salen ') + art(h.d) + (sal ? ' ' + sal : '') + '.' : 'No tengo apuntada la sede ' + cabecera(h, 'de') + '.');
