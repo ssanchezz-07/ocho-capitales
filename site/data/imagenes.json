@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T07:21:45.327Z",
+ "generado": "2026-11-10T07:57:45.739Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3264,7 +3264,7 @@
   "la-esperanza-de-triana-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 1440,
+    "h": 1442,
     "widths": [
      160,
      480,
@@ -3279,7 +3279,7 @@
     "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-cristo.jpg",
-    "tam": 545849,
+    "tam": 547956,
     "titular": "Santísimo Cristo de las Tres Caídas"
    },
    "virgen": {
@@ -3392,7 +3392,7 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1439,
+    "h": 1445,
     "widths": [
      160,
      480,
@@ -3407,7 +3407,7 @@
     "focoFicha": "50% 100%",
     "cedida": true,
     "local": "scripts/cedidas/sevilla/montserrat-sevilla-virgen.jpg",
-    "tam": 557407,
+    "tam": 559651,
     "titular": "Nuestra Señora de Montserrat"
    }
   },
@@ -12384,7 +12384,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-cristo.jpg\"|545849|\"\"|\"45% 33%\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-virgen.jpg\"|761650|\"\"|\"50% 33%\"|\"50% 100%\"|\"50% 100%\""
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-cristo.jpg\"|547956|\"\"|\"45% 33%\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-virgen.jpg\"|761650|\"\"|\"50% 33%\"|\"50% 100%\"|\"50% 100%\""
   },
   "la-o-sevilla": {
    "w": 960,
@@ -12404,7 +12404,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/montserrat-sevilla-virgen.jpg\"|557407|\"\"|\"50% 27%\"|\"\"|\"50% 100%\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/montserrat-sevilla-virgen.jpg\"|559651|\"\"|\"50% 27%\"|\"\"|\"50% 100%\""
   },
   "bellavista-sevilla": {
    "w": 960,

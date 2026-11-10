@@ -1132,6 +1132,9 @@ function estampaHtml(h, c) {
 // Díptico: el Cristo y la Virgen de la hermandad, cada uno con su crédito (licencias de Commons por separado).
 // Nombre y capital para textos alternativos y créditos: si el nombre ya acaba en «)», la capital va tras una coma
 const conCap = (n, cap) => (/\)\s*$/.test(String(n)) ? `${n}, ${cap}` : `${n} (${cap})`);
+// Medallón redondo del plano: si el díptico lleva una foto con firma (focoFicha), el círculo no puede enseñarla entera;
+// se usa la foto del titular sin firma o, si las dos la llevan, la del Cristo con su foco en la cara (la firma queda fuera)
+const imCirculo = (h) => { const im = h.imagen, d = h.diptico; if (!im || im.kind !== "d" || !d || !d.cristo || !d.virgen || !(d.cristo.focoFicha || d.virgen.focoFicha)) return im; return !d.cristo.focoFicha ? d.cristo : !d.virgen.focoFicha ? d.virgen : d.cristo; };
 function dipticoHtml(h, c) {
   const d = h.diptico; if (!d) return '';
   const nombre = (x) => esc(String(x.titular || '').split(',')[0]);
@@ -2156,7 +2159,7 @@ function datosCalle(c) {
       if (conCalles.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = conCalles;
     }
     if (!Object.keys(tramos).length) continue;
-    const im = h.imagen;
+    const im = imCirculo(h);
     hs.push({ s: slug, n: h.nombre, d: h.dia, o: h.orden, img: im && im.local && !im.escudo ? u(localUrl(im, im.sizes[0])) : medUrl(h, c), ...(im && im.local && im.foco ? { f: im.foco, ar: +(im.w / im.h).toFixed(3) } : {}), ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: tramos, ...habito(slug) });
   }
   // Salidas extraordinarias y magnas (tools/sources/itinerarios-extraordinarios.json): una «jornada» propia con su fecha.
@@ -2196,7 +2199,7 @@ function datosCalle(c) {
     const [Y, M, Dd] = e.fecha.split('-').map(Number);
     const etiqueta = `${Dd} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M - 1]} · ${e.corto || h.nombre}`;
     const iti = Object.fromEntries(Object.entries(e.tramos).map(([nom, tr]) => [nom, tr.map((p) => [p.lugar, p.hora || ''])]));
-    const im = h.imagen;
+    const im = imCirculo(h);
     hs.push({ s: e.hermandad, n: h.nombre, d: etiqueta, o: 0, img: im && im.local && !im.escudo ? u(localUrl(im, im.sizes[0])) : medUrl(h, c), ...(im && im.local && im.foco ? { f: im.foco, ar: +(im.w / im.h).toFixed(3) } : {}), ini: h.nombre.replace(/^(La|El|Los|Las)\s+/i, '').charAt(0), t: { paso: pts }, ...habito(e.hermandad),
       x: { id, fecha: e.fecha, anio: Y, tipo: e.tipo, titulo: e.titulo, acto: e.acto || '', fuente: e.fuente, url: e.fuente_url || '', iti, ...(vel ? { vel: Math.round(vel) } : {}) } });
   }
