@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T18:41:18.616Z",
+ "generado": "2026-11-10T18:49:45.230Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -12600,6 +12600,27 @@
     "local": "scripts/cedidas/almeria/el-resucitado-almeria-cristo.jpg",
     "tam": 365554,
     "titular": "Jesucristo Resucitado, Señor de la Vida"
+   }
+  },
+  "san-jose-obrero-sevilla": {
+   "virgen": {
+    "w": 960,
+    "h": 1008,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "San José Obrero (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadsjo/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/san-jose-obrero-sevilla-virgen.jpg",
+    "tam": 505201,
+    "titular": "Nuestra Señora de los Dolores"
    }
   }
  },
