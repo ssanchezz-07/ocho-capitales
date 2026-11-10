@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T07:57:45.739Z",
+ "generado": "2026-11-10T17:03:26.587Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6450,7 +6450,27 @@
     "titular": "María Santísima de la Estrella"
    }
   },
-  "la-coronacion-almeria": {},
+  "la-coronacion-almeria": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Coronación (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/coronacionalm/",
+    "foco": "48% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-coronacion-almeria-virgen.jpg",
+    "tam": 926976,
+    "titular": "María Santísima de Gracia y Amparo"
+   }
+  },
   "el-amor-almeria": {
    "cristo": {
     "w": 960,
@@ -10548,6 +10568,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg",
     "foco": "50% 30%",
     "titular": "Nuestro Padre Jesús de Salud y Pasión"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1432,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Pasión (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadpasionalmeria/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
+    "tam": 621617,
+    "titular": "María Santísima de los Desamparados"
    }
   },
   "gran-poder-almeria": {
@@ -10566,6 +10605,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg",
     "foco": "30% 29%",
     "titular": "Nuestro Padre Jesús del Gran Poder"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Gran Poder (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadgranpoderalm/",
+    "foco": "48% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/gran-poder-almeria-virgen.jpg",
+    "tam": 703971,
+    "titular": "María Santísima del Mayor Dolor y Traspaso"
    }
   },
   "la-borriquita-sevilla": {
@@ -13665,6 +13723,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 40%\"|\"https://www.instagram.com/hdadlanzada/\"|\"scripts/cedidas/huelva/la-lanzada-huelva-virgen.jpg\"|630822|\"\"|\"50% 15%\"|\"\"|\"\""
+  },
+  "gran-poder-almeria": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg\"|\"\"|\"\"|\"\"|\"30% 29%\"|\"https://www.instagram.com/hdadgranpoderalm/\"|\"scripts/cedidas/almeria/gran-poder-almeria-virgen.jpg\"|703971|\"\"|\"48% 25%\"|\"\"|\"\""
   },
   "el-huerto-cordoba": {
    "w": 960,

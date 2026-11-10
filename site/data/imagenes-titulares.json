@@ -2075,18 +2075,15 @@
   },
   "la-coronacion-almeria": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Coronaci%C3%B3n_06.jpg",
-    "titulo": "File:Coronación 06.jpg",
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "La Coronación (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/coronacionalm/",
+    "local": "scripts/cedidas/almeria/la-coronacion-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Gracia y Amparo",
     "titular": "María Santísima de Gracia y Amparo",
-    "recorte": [
-     0.32,
-     0.3,
-     0.22,
-     0.45
-    ]
+    "foco": "48% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @coronacionalm (la que enlaza la Agrupación de Almería en cofradiasdealmeria.es; https://www.instagram.com/p/DRiWmLmjCmx/, imagen 7), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-amor-almeria": {
@@ -4637,6 +4634,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de Salud y Pasión",
     "foco": "50% 30%"
+   },
+   "virgen": {
+    "autor": "Pasión (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadpasionalmeria/",
+    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Desamparados",
+    "titular": "María Santísima de los Desamparados",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadpasionalmeria (la que enlaza la Agrupación de Almería en cofradiasdealmeria.es; https://www.instagram.com/p/DSnsJ1XgJ0V/, imagen 3), sin fotógrafo citado, coautor ni firma. Recortada para quitar las franjas laterales y el logo de la hermandad de abajo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "gran-poder-almeria": {
@@ -4648,6 +4656,17 @@
     "licurl": "https://creativecommons.org/licenses/by/2.0",
     "titular": "Nuestro Padre Jesús del Gran Poder",
     "foco": "30% 29%"
+   },
+   "virgen": {
+    "autor": "Gran Poder (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadgranpoderalm/",
+    "local": "scripts/cedidas/almeria/gran-poder-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Mayor Dolor y Traspaso",
+    "titular": "María Santísima del Mayor Dolor y Traspaso",
+    "foco": "48% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadgranpoderalm (la que enlaza la Agrupación de Almería en cofradiasdealmeria.es; https://www.instagram.com/p/DH80xVQKWvl/), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-borriquita-sevilla": {

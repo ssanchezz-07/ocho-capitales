@@ -58,7 +58,8 @@
   "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg": "Original pequeño (menos de 480 px): no da la calidad. (antes retirada solo en la-piedad-cordoba|virgen)",
   "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG": "El Cristo sale pequeño al fondo del templo, detrás del paso. (antes retirada solo en la-buena-muerte-cordoba|cristo)",
   "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg": "Lleva la marca de agua de otra persona («M.A. Torres») y quien la sube dice que es obra suya: licencia dudosa. (antes retirada solo en presentacion-al-pueblo-cordoba|cristo)",
-  "Rosario_del_Mar_05.jpg": "«Rosario del Mar 05»: Nuestro Padre Jesús de las Penas, de la hermandad del Rosario del Mar; no es la Virgen de la Estrella. (antes retirada solo en la-estrella-almeria|virgen)"
+  "Rosario_del_Mar_05.jpg": "«Rosario del Mar 05»: Nuestro Padre Jesús de las Penas, de la hermandad del Rosario del Mar; no es la Virgen de la Estrella. (antes retirada solo en la-estrella-almeria|virgen)",
+  "Coronación_06.jpg": "Recortada, la cara de la Virgen queda a oscuras tras los varales y la candelería. (antes retirada solo en la-coronacion-almeria|virgen)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -200,10 +201,6 @@
   "los-panaderos-sevilla|virgen": {
    "archivo": "Virgen_de_Regla_Sevilla.jpg",
    "motivo": "Palio con la candelería delante: no se ve a la Virgen."
-  },
-  "la-coronacion-almeria|virgen": {
-   "archivo": "Coronación_06.jpg",
-   "motivo": "Recortada, la cara de la Virgen queda a oscuras tras los varales y la candelería."
   },
   "rosario-del-mar-almeria|cristo": {
    "archivo": "Rosario_del_Mar_05.jpg",
