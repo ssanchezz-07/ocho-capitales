@@ -162,15 +162,31 @@
   // Al apartarse la página (o volver), el texto cambia de alto: se guarda lo primero que se ve bajo la cabecera y, tras el cambio,
   // se corrige el scroll para que siga en el mismo sitio. El navegador no lo hace solo porque cambia el padding del body
   // (en la ficha, «Música» bajaba 274 px al abrir; auditoría de diseño del 10-nov).
-  const ancla = () => {
+  let ultAncla = null; // lo que se fijó al acoplar: al volver se fija lo mismo si sigue a la vista (la rejilla cambia de columnas)
+  const ancla = (pref) => {
     if (scrollY < 1) return null;
-    const cab = document.querySelector('.oc-header'), y = cab ? cab.getBoundingClientRect().bottom + 4 : 0;
-    const el_ = [...document.querySelectorAll('main h1, main h2, main h3, main p, main li, main img')].find((x) => x.getBoundingClientRect().bottom > y);
+    // la barra fija más baja (la cabecera y, en Noticias, sus filtros): lo que va dentro no se mueve con el texto
+    const fijoDe = (x) => { for (let n = x; n && n !== document.body; n = n.parentElement) { const p = getComputedStyle(n).position; if (p === 'sticky' || p === 'fixed') return n; } return null; };
+    const rm = (document.querySelector('main') || document.body).getBoundingClientRect(), x = (rm.left + rm.right) / 2; // en el centro: los bordes pueden quedar fuera de la barra
+    let y = 0;
+    // por debajo de la propia hoja de erCuñao, que al abrir ya cubre la pantalla
+    const enPunto = (yy) => (document.elementsFromPoint ? document.elementsFromPoint(x, yy) : [document.elementFromPoint(x, yy)]).find((e) => e && !hoja.contains(e));
+    for (let i = 0; i < 4; i++) { const f = fijoDe(enPunto(y + 2)); if (!f) break; const b = f.getBoundingClientRect().bottom; if (b <= y) break; y = b; }
+    if (pref && pref.isConnected) { const t = pref.getBoundingClientRect().top; if (t >= y - 1 && t < innerHeight - 40) return { el: pref, top: t }; }
+    // lo primero que se ve entero por debajo: eso es lo que se está leyendo
+    const el_ = [...document.querySelectorAll('main h1, main h2, main h3, main p, main li, main img')].find((e) => e.getBoundingClientRect().top >= y - 1 && e.offsetParent !== null && !fijoDe(e));
     return el_ ? { el: el_, top: el_.getBoundingClientRect().top } : null;
   };
-  const sujeta = (a) => { if (!a || !a.el.isConnected) return; const d = a.el.getBoundingClientRect().top - a.top; if (Math.abs(d) > 1) scrollBy({ top: d, behavior: 'instant' }); };
+  // el anclado de scroll del propio navegador se aplica en el fotograma siguiente y se sumaba a esta corrección (en Noticias,
+  // decenas de px de más): se apaga mientras dura el cambio
+  const sujeta = (a) => {
+    if (!a || !a.el.isConnected) return; const de = document.documentElement;
+    de.style.overflowAnchor = 'none'; requestAnimationFrame(() => requestAnimationFrame(() => { de.style.overflowAnchor = ''; }));
+    const d = a.el.getBoundingClientRect().top - a.top; if (Math.abs(d) > 1) scrollBy({ top: d, behavior: 'instant' });
+  };
   function ponLado(v) {
-    const a = v !== document.documentElement.classList.contains('oc-cunao-lado') ? ancla() : null;
+    const a = v !== document.documentElement.classList.contains('oc-cunao-lado') ? ancla(v ? null : ultAncla) : null;
+    if (v) ultAncla = a && a.el;
     lado = v; panelDlg.setAttribute('aria-modal', v ? 'false' : 'true');
     const de = document.documentElement; de.classList.toggle('oc-cunao-lado', v); document.body.style.overflow = v ? '' : 'hidden';
     if (v) de.style.setProperty('--oc-sb', Math.max(0, innerWidth - document.body.getBoundingClientRect().width) + 'px'); // barra de scroll (con scrollbar-gutter, clientWidth no la descuenta), para lo de borde a borde
@@ -203,7 +219,7 @@
   }
   function cerrar() {
     hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-    if (lado) { lado = false; tLado = setTimeout(() => { const a = ancla(); document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); sujeta(a); }, calm ? 0 : 200); }
+    if (lado) { lado = false; tLado = setTimeout(() => { const a = ancla(ultAncla); document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); sujeta(a); }, calm ? 0 : 200); }
     if (vv) { vv.removeEventListener('resize', ajusta); vv.removeEventListener('scroll', ajusta); } suelta_();
     tCierre = setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
     (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();

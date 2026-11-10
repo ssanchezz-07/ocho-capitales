@@ -15,7 +15,11 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
 - **Nazareno de la portada**: empieza a dibujarse cuando su tramo entra por la mitad de la pantalla. Al bajar rápido ya no aparece un bloque oscuro vacío.
 - **Auditoría de diseño (auditor-diseno, NO APTO; arreglado)**:
   - La barra fija de Noticias (ver arriba).
-  - Al abrir o cerrar erCuñao acoplado a media página, el texto saltaba (274 px en la ficha). Ahora se guarda lo primero que se ve bajo la cabecera y se corrige el scroll tras el cambio.
+  - Al abrir o cerrar erCuñao acoplado a media página, el texto saltaba (274 px en la ficha). Ahora se guarda lo primero que se ve entero bajo la barra fija más baja (la cabecera o, en Noticias, sus filtros; se mira por debajo de la propia hoja) y se corrige el scroll tras el cambio.
+    - Durante el cambio se apaga el anclado de scroll del navegador (`overflow-anchor`).
+    - Al cerrar, se fija lo mismo que al abrir, porque la rejilla de Noticias cambia de columnas.
+    - Comprobado en la ficha y en Noticias bajando 900, 1800 y 3000 px: 0 px de salto.
+  - Las flechas del carrusel miden 44 px, y el texto de las tarjetas de Juegos va arriba.
   - Volver arriba queda en el hueco entre el contenido y el panel.
   - En Juegos, las tarjetas de una fila tienen el mismo alto, y la que queda sola en la última fila la ocupa entera, también en tablet.
 - **Auditoría (auditor-web, NO APTO; arreglado)**:

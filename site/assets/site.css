@@ -2267,7 +2267,8 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 @media (min-width: 960px) {
   .oc-jg { max-width: 1040px; }
   .oc-jg-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-  .oc-jg-cards > li { display: grid; } /* las tarjetas de una fila, todas del mismo alto */
+  .oc-jg-cards > li { display: grid; } /* las tarjetas de una fila, todas del mismo alto, con el texto arriba */
+  .oc-jg-card { align-content: start; }
   /* la que queda sola en la última fila ocupa la fila entera (con 7 juegos, «Adivina la marcha») */
   .oc-jg-cards > li:last-child:nth-child(even) { grid-column: auto; }
   .oc-jg-cards > li:last-child:nth-child(3n+2) { grid-column: 1 / -1; }

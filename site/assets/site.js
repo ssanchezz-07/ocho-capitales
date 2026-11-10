@@ -1289,8 +1289,8 @@
       if (!sig) return;
       // las flechas van sobre los bordes del carrusel (su sitio cambia con el ancho y con erCuñao acoplado)
       sig.hidden = !hayD; ant.hidden = !hayI;
-      sig.style.top = ant.style.top = (u.offsetTop + (u.offsetHeight - 36) / 2) + 'px';
-      sig.style.left = (u.offsetLeft + u.offsetWidth - 36) + 'px'; ant.style.left = u.offsetLeft + 'px';
+      sig.style.top = ant.style.top = (u.offsetTop + (u.offsetHeight - 44) / 2) + 'px';
+      sig.style.left = (u.offsetLeft + u.offsetWidth - 44) + 'px'; ant.style.left = u.offsetLeft + 'px';
     };
     var pide = function () { if (!pend) { pend = true; requestAnimationFrame(mira); } };
     u.addEventListener('scroll', pide, { passive: true }); addEventListener('resize', pide);

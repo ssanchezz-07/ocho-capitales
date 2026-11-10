@@ -113,7 +113,7 @@ a { text-underline-offset: .18em; }
 .nx-chips.is-mas-i { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px); mask-image: linear-gradient(90deg, transparent, #000 56px); }
 .nx-chips.is-mas-i.is-mas-d { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); }
 .nx-con-flechas { position: relative; }
-.nx-flecha { position: absolute; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface); color: var(--ink); box-shadow: 0 4px 12px -6px rgb(10 3 16 / .45); cursor: pointer; transition: border-color var(--m-rapido) var(--e-salida), transform var(--m-toque) var(--e-salida); }
+.nx-flecha { position: absolute; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface); color: var(--ink); box-shadow: 0 4px 12px -6px rgb(10 3 16 / .45); cursor: pointer; transition: border-color var(--m-rapido) var(--e-salida), transform var(--m-toque) var(--e-salida); }
 .nx-flecha:hover { border-color: var(--primary); }
 .nx-flecha:active { transform: scale(.94); }
 /* temas algo más juntos en PC: a 1440 caben enteros */
