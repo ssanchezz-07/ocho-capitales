@@ -1172,13 +1172,22 @@ function pageHerm(h) {
   const habUrl = HABITOS[h.slug] && HABITOS[h.slug].texto && HABITOS[h.slug].fuente_url;
   const habUnido = !!(habUrl && porUrl.has(habUrl));
   if (habUnido) porUrl.get(habUrl).push('hábito de nazareno' + (HABITOS[h.slug].fuente_nombre ? ' · ' + HABITOS[h.slug].fuente_nombre : ''));
+  // lo mismo con la historia: si su fuente ya sale en otra línea (pasos, fundación…), se dice allí y no se repite el enlace
+  for (const f of h.historia ? h.historia_fuentes || [] : []) if (f !== h.fuente_url && porUrl.has(f)) porUrl.get(f).push('historia');
+  const acompUnido = !!(h.acompanamiento && h.acompanamiento.fuente && porUrl.has(h.acompanamiento.fuente));
+  if (acompUnido) porUrl.get(h.acompanamiento.fuente).push('acompañamiento musical ' + h.acompanamiento.anio);
   const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(rotuloFuente(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
   // las fuentes de la historia y del hábito también van al apartado de la hermandad en «Fuentes y metodología»
   const histDeFicha = !!(h.historia && h.fuente_url && (h.historia_fuentes || []).includes(h.fuente_url)); // la misma web: una sola línea
-  const deHistoria = (h.historia ? h.historia_fuentes || [] : []).filter((f) => !histDeFicha || f !== h.fuente_url).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(rotuloFuente(f))}</a><span>historia</span></li>`).join('');
-  const deHabito = habUrl && !habUnido ? `<li><a href="${esc(HABITOS[h.slug].fuente_url)}" target="_blank" rel="noopener">${esc(rotuloFuente(HABITOS[h.slug].fuente_url))}</a><span>hábito de nazareno${HABITOS[h.slug].fuente_nombre ? ' · ' + esc(HABITOS[h.slug].fuente_nombre) : ''}</span></li>` : '';
-  const deAcomp = h.acompanamiento && h.acompanamiento.fuente ? `<li><a href="${esc(h.acompanamiento.fuente)}" target="_blank" rel="noopener">${esc(h.acompanamiento.medio || nombreWeb(h.acompanamiento.fuente))}</a><span>acompañamiento musical ${esc(h.acompanamiento.anio)}</span></li>` : '';
-  const fuente = h.fuente_url || otras || deHistoria ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}${histDeFicha ? ' e historia' : ''}${pasosDeFicha ? '; pasos y cortejo' : ''}</span></li>` : ''}${otras}${deHistoria}${deHabito}${deAcomp}</ul>` : '';
+  // el hábito con la misma fuente que la ficha oficial o que la historia va en esa línea, sin repetir el enlace (auditoría de Fichas, 10-nov)
+  const habTxt = habUrl ? 'hábito de nazareno' + (HABITOS[h.slug].fuente_nombre ? ' · ' + HABITOS[h.slug].fuente_nombre : '') : '';
+  const habEnFicha = !!(habUrl && !habUnido && habUrl === h.fuente_url);
+  const histUrls = [...new Set((h.historia ? h.historia_fuentes || [] : []).filter((f) => (!histDeFicha || f !== h.fuente_url) && !porUrl.has(f)))];
+  const habEnHist = !!(habUrl && !habUnido && !habEnFicha && histUrls.includes(habUrl));
+  const deHistoria = histUrls.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(rotuloFuente(f))}</a><span>historia${habEnHist && f === habUrl ? ', ' + esc(habTxt) : ''}</span></li>`).join('');
+  const deHabito = habUrl && !habUnido && !habEnFicha && !habEnHist ? `<li><a href="${esc(HABITOS[h.slug].fuente_url)}" target="_blank" rel="noopener">${esc(rotuloFuente(HABITOS[h.slug].fuente_url))}</a><span>hábito de nazareno${HABITOS[h.slug].fuente_nombre ? ' · ' + esc(HABITOS[h.slug].fuente_nombre) : ''}</span></li>` : '';
+  const deAcomp = h.acompanamiento && h.acompanamiento.fuente && !acompUnido ? `<li><a href="${esc(h.acompanamiento.fuente)}" target="_blank" rel="noopener">${esc(h.acompanamiento.medio || nombreWeb(h.acompanamiento.fuente))}</a><span>acompañamiento musical ${esc(h.acompanamiento.anio)}</span></li>` : '';
+  const fuente = h.fuente_url || otras || deHistoria ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}${histDeFicha ? ' e historia' : ''}${pasosDeFicha ? '; pasos y cortejo' : ''}${habEnFicha ? '; ' + esc(habTxt) : ''}</span></li>` : ''}${otras}${deHistoria}${deHabito}${deAcomp}</ul>` : '';
   if (fuente) fuentesCapDe(h.ciudad).hermandades.push({ slug: h.slug, nombre: h.nombre, dia: h.dia, orden: h.orden, html: fuente });
   const vecinos = D.hermandades.filter((x) => x.ciudad === h.ciudad && x.dia === h.dia).sort((a, b) => a.orden - b.orden);
   const idx = vecinos.findIndex((x) => x.slug === h.slug);
