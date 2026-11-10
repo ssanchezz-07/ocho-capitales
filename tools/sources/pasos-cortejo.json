@@ -999,6 +999,498 @@
    "cortejo": "En 2026 escoltó sus pasos Protección Civil de Níjar.",
    "fuentes": ["https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html"
    ]
+  },
+  "la-borriquilla-granada": {
+   "pasos": [ ["Paso de misterio", "Entrada de Jesús en Jerusalén, con el pollino de Eduardo Espinosa Cuadros y, desde el siglo XXI, San Juan, Santiago, San Andrés, una mujer con una niña y otro niño."], ["Paso de la Virgen", "Nuestra Señora de la Paz."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/ilustre-cofradia-de-la-entrada-de-jesus-en-jerusalen-y-nuestra-senora-de-la-paz/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "santa-cena-granada": {
+   "pasos": [ ["Paso de misterio", "Santa Cena."], ["Paso de la Virgen", "María Santísima de la Victoria."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/muy-ilustre-y-real-cofradia-de-nazarenos-de-la-santa-cena-sacramental-y-maria-santisima-de-la-victoria/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-despojado-silencio-blanco-granada": {
+   "pasos": [ ["Paso de misterio", "Jesús Despojado de sus Vestiduras, con las imágenes del misterio, talladas por el mismo autor entre 1990 y 2001."], ["Paso de la Virgen", "María Santísima del Dulce Nombre y San Juan."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-despojado-de-sus-vestiduras-maria-santisima-del-dulce-nombre-y-san-juan-evangelista/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-sentencia-maravillas-granada": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Sentencia, con figuras del taller de Benito Barbero (1961): dos romanos, Poncio Pilato, el lector de la condena, un sanedrita y Claudia Prócula."], ["Paso de la Virgen", "María Santísima de las Maravillas."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/pontificia-e-ilustre-hermandad-sacramental-y-cofradia-de-nazarenos-de-jesus-de-la-sentencia-y-maria-santisima-de-las-maravillas/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-cautivo-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Cautivo, que va solo en su paso."], ["Paso de la Virgen", "María Santísima de la Encarnación."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/hermandad-sacramental-de-san-francisco-de-asis-y-santa-clara-y-real-cofradia-de-penitencia-de-nuestro-padre-jesus-cautivo-y-maria-santisima-de-la-encarnacion/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-trabajo-granada": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Trabajo, en un paso de unos 5,25 metros de largo por 2,45 de ancho."], ["Paso de la Virgen", "Nuestra Señora de la Luz."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/venerable-hermandad-de-caridad-del-santisimo-cristo-del-trabajo-y-nuestra-senora-de-la-luz/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "nuestra-senora-de-los-dolores-granada": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de los Dolores."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/real-cofradia-de-nuestra-senora-de-los-dolores/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "jesus-del-rescate-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Rescate. La cofradía es de un solo paso, aunque en los años cuarenta llegó a sacar a Nuestra Señora de la Aflicción."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-de-nuestro-padre-jesus-del-rescate/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-huerto-granada": {
+   "pasos": [ ["Paso de misterio", "Oración en el Huerto, grupo de Domingo Sánchez Mesa, en un paso de cedro real dorado y policromado."], ["Paso de palio", "María Santísima de la Amargura Coronada, atribuida a José de Mora, bajo un palio bordado por las Madres Comendadoras de Santiago y con orfebrería de Alberto Quirós."]
+   ],
+   "cortejo": "A la salida, en el Realejo, le cantan las Madres Comendadoras de Santiago.",
+   "fuentes": ["https://hermandadesdegranada.com/muy-ilustre-y-comendadora-hermandad-sacramental-de-santa-maria-madre-de-dios-y-cofradia-de-penitencia-de-la-oracion-de-nuestro-senor-en-el-huerto-de-los-olivos-y-maria-santisima-de-la-amargura-corona/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "cristo-de-san-agustin-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de San Agustín."], ["Paso de la Virgen", "Nuestra Madre y Señora de la Consolación."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-sacramental-del-santisimo-cristo-de-san-agustin-jesus-nazareno-de-las-penas-nuestra-madre-y-senora-de-la-consolacion-y-santo-angel-custodio/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-lanzada-granada": {
+   "pasos": [ ["Paso de misterio", "Cristo de la Sagrada Lanzada."], ["Paso de la Virgen", "María Santísima de la Caridad."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/venerable-y-fervorosa-hermandad-del-santisimo-sacramento-y-cofradia-de-nazarenos-de-nuestro-senor-jesucristo-en-su-sagrada-lanzada-y-maria-santisima-de-la-caridad/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-esperanza-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Gran Poder, con dos ángeles de Manuel Ramos Corona (1997) que rematan el paso."], ["Paso de la Virgen", "Nuestra Señora de la Esperanza Coronada."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/real-hermandad-y-cofradia-de-nazarenos-de-nuestro-padre-jesus-del-gran-poder-y-nuestra-senora-de-la-esperanza-coronada/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-canilla-granada": {
+   "pasos": [ ["Paso de misterio", "Señor de la Humildad."], ["Paso de la Virgen", "Soledad de Nuestra Señora."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-gitanos-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Consuelo."], ["Paso de palio", "María Santísima del Sacromonte, que sale bajo palio desde que Miguel Zúñiga la convirtió en imagen de vestir (1982)."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/insigne-pontificia-real-colegial-y-magistral-cofradia-del-santisimo-cristo-del-consuelo-y-maria-santisima-del-sacromonte-los-gitanos/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-estudiantes-granada": {
+   "pasos": [ ["Paso de misterio", "Nuestro Señor de la Meditación, que sale desde 1982."], ["Paso de la Virgen", "María Santísima de los Remedios."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/muy-antigua-real-e-ilustre-hermandad-de-la-esclavitud-del-santisimo-sacramento-y-cofradia-universitaria-de-nuestro-senor-de-la-meditacion-y-maria-santisima-de-los-remedios-reina-y-madre-de-los-estud/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "paciencia-y-penas-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Paciencia."], ["Paso de la Virgen", "María Santísima de las Penas."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/imperial-y-venerable-hermandad-sacramental-del-apostol-san-matias-e-ilustre-y-fervorosa-cofradia-de-penitencia-de-nuestro-padre-jesus-de-la-paciencia-y-maria-santisima-de-las-penas/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "tres-caidas-y-rosario-granada": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Tres Caídas, con un romano (2005) y un cirineo (2006) de Antonio Bernal, en un paso neobarroco del taller de Guzmán Bejarano con cartelas de Dolores León."], ["Paso de palio", "Nuestra Señora del Rosario en sus Misterios Dolorosos, con respiraderos plateados de Orfebrería Triana, brazos de cola y peana de Mallol y bambalinas, techo de palio y manto de García y Poo."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/la-muy-antigua-real-e-ilustre-hermandad-de-nuestro-padre-jesus-de-las-tres-caidas-y-nuestra-senora-del-rosario-en-sus-misterios-dolorosos/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-nazareno-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, el Señor de las Descalzas."], ["Paso de palio", "María Santísima de la Merced, bajo un palio burdeos bordado en oro en el taller de la hermandad, con el que sale desde 1987."]
+   ],
+   "cortejo": "Silencio y recogimiento, rasgos de la hermandad desde su primera estación de penitencia, en 1982.",
+   "fuentes": ["https://hermandadesdegranada.com/hermandad-de-nuestro-padre-jesus-nazareno-y-maria-santisima-de-la-merced/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-salesianos-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Redención."], ["Paso de la Virgen", "Nuestra Señora de la Salud."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/real-cofradia-de-penitencia-y-hermandad-salesiana-del-santisimo-cristo-de-la-redencion-y-nuestra-senora-de-la-salud/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-concha-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Amor y la Entrega."], ["Paso de la Virgen", "María Santísima de la Concepción."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/hermandad-de-penitencia-de-nuestro-padre-jesus-del-amor-y-la-entrega-y-maria-santisima-de-la-concepcion/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-aurora-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Perdón."], ["Paso de la Virgen", "María Santísima de la Aurora Coronada."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/real-venerable-e-ilustre-cofradia-de-nuestro-padre-jesus-del-perdon-y-maria-santisima-de-la-aurora-coronada/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-estrella-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Pasión."], ["Paso de la Virgen", "María Santísima de la Estrella."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-de-nazarenos-de-nuestro-padre-jesus-de-la-pasion-y-maria-santisima-de-la-estrella/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-silencio-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Misericordia."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/pontificia-y-real-sacramental-del-senor-san-jose-y-animas-y-cofradia-del-santisimo-cristo-de-la-misericordia-silencio/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "soledad-de-nuestra-senora-humildad-granada": {
+   "pasos": [ ["Paso de la Virgen", "Soledad de Nuestra Señora."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-ferroviarios-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte."], ["Paso de la Virgen", "Nuestra Señora del Amor y el Trabajo."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/fervorosa-hermandad-de-nazarenos-y-cofradia-de-penitencia-del-santisimo-cristo-de-la-buena-muerte-y-nuestra-senora-del-amor-y-del-trabajo/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-favores-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de los Favores."], ["Paso de la Virgen", "María Santísima de la Misericordia Coronada."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/venerable-muy-antigua-e-ilustre-hermandad-sacramental-de-nuestra-senora-de-la-paz-y-cofradia-del-santisimo-cristo-de-los-favores-y-maria-santisima-de-la-misericordia-coronada/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-escolapios-granada": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Expiración."], ["Paso de la Virgen", "María Santísima del Mayor Dolor."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/pontificia-real-y-muy-ilustre-hermandad-escolapia-y-cofradia-de-nazarenos-del-santisimo-cristo-de-la-expiracion-maria-santisima-del-mayor-dolor-y-san-jose-de-calasanz/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "santo-entierro-granada": {
+   "pasos": [ ["Paso del Sepulcro", "Cristo yacente."], ["Paso de la Virgen", "Nuestra Señora de la Soledad del Calvario."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/pontificia-real-e-ilustre-hermandad-del-santo-sepulcro-y-nuestra-senora-de-la-soledad-del-calvario/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "las-chias-granada": {
+   "pasos": [ ["Paso de misterio", "Descendimiento del Señor."], ["Paso de la Virgen", "Nuestra Señora de la Soledad."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/muy-antigua-y-real-hermandad-de-nuestra-senora-de-la-soledad-coronada-y-descendimiento-del-senor/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "santa-maria-de-la-alhambra-granada": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de las Angustias de la Alhambra, con Cristo muerto en su regazo, obra de Torcuato Ruiz del Peral."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/muy-antigua-hermandad-sacramental-de-la-santisima-trinidad-y-nombre-de-jesus-y-real-e-ilustre-cofradia-de-penitencia-de-nuestra-senora-de-las-angustias-coronada-de-santa-maria-de-la-alhambra/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "la-resurreccion-granada": {
+   "pasos": [ ["Paso de misterio", "Nuestro Señor de la Resurrección."], ["Paso de la Virgen", "Santa María del Triunfo."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/venerable-hermandad-sacramental-del-glorioso-arcangel-san-miguel-y-nazarenos-de-nuestro-senor-de-la-resurreccion-y-santa-maria-del-triunfo/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "el-resucitado-granada": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo Resucitado con Nuestra Señora de la Alegría, que va en el mismo paso, Santa María Magdalena y San Juan Evangelista."]
+   ],
+   "cortejo": "Muchos niños y jóvenes, con los campanilleros y sus campanillas de metal y nazarenos destapados.",
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-del-santisimo-cristo-resucitado-y-nuestra-senora-de-la-alegria/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "los-facundillos-granada": {
+   "pasos": [ ["Paso de Cristo", "Dulce Nombre de Jesús, de talla completa, atribuido a Torcuato Ruiz del Peral (siglo XVIII), con túnica y una cruz de caoba y marfil con los símbolos de la Pasión."]
+   ],
+   "fuentes": ["https://hermandadesdegranada.com/cofradia-del-senor-de-la-humildad-soledad-de-nuestra-senora-y-dulce-nombre-de-jesus-facundillos/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "entrada-triunfal-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de los Reyes en su Entrada Triunfal en Jerusalén."], ["Paso de palio", "Nuestra Señora de la Palma."]
+   ],
+   "cortejo": "En 2026, 281 nazarenos en un cortejo de 520 personas. En el tramo del Señor, los nazarenos llevan turbante hebreo.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "penas-de-santiago-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Penas, con Nuestra Señora y Madre de los Desamparados."], ["Paso de palio", "María Santísima de la Concepción."]
+   ],
+   "cortejo": "En 2026, 461 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-huerto-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Oración en el Huerto."], ["Paso de Cristo", "Jesús Amarrado a la Columna."], ["Paso de palio", "María Santísima de la Candelaria."]
+   ],
+   "cortejo": "En 2026, 500 nazarenos en un cortejo de 800 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-rescatado-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno Rescatado."], ["Paso de palio", "María Santísima de la Amargura."]
+   ],
+   "cortejo": "En 2026, 365 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-rescatado/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "vera-cruz-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Señor de los Reyes."], ["Paso de palio", "María Santísima del Dulce Nombre."]
+   ],
+   "cortejo": "En 2026, 209 nazarenos en un cortejo de 302 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-esperanza-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas."], ["Paso de palio", "María Santísima de la Esperanza."]
+   ],
+   "cortejo": "En 2026, 530 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-amor-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Silencio en el Desprecio de Herodes; en 2026 estrenó el dorado completo del paso."], ["Paso de Cristo", "Santísimo Cristo del Amor."], ["Paso de palio", "María Santísima de la Encarnación."]
+   ],
+   "cortejo": "En 2026, 287 nazarenos en un cortejo de 490 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-amor/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-merced-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Humilde en su Coronación de Espinas."], ["Paso de palio", "Nuestra Madre y Señora Santa María de la Merced."]
+   ],
+   "cortejo": "En 2026, 490 nazarenos en un cortejo de 900 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-merced/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "presentacion-al-pueblo-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de los Afligidos."]
+   ],
+   "cortejo": "En 2026, 145 nazarenos de blanco, con cirio al cuadril.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-estrella-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Redención ante Caifás."], ["Paso de palio", "Nuestra Señora de la Estrella."]
+   ],
+   "cortejo": "En 2026, 500 nazarenos en un cortejo de 990 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-sentencia-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sentencia."], ["Paso de palio", "María Santísima de Gracia y Amparo."]
+   ],
+   "cortejo": "En 2026, 530 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-sentencia/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "via-crucis-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santo Cristo de la Salud."]
+   ],
+   "fuentes": ["https://www.hermandadesdecordoba.es/lunes-santo/hermandad-del-via-crucis/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "animas-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Remedio de Ánimas."], ["Paso de palio", "Nuestra Señora Madre de Dios en sus Tristezas."]
+   ],
+   "cortejo": "En 2026, 288 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-agonia-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Agonía."], ["Paso de palio", "Nuestra Señora de la Salud."]
+   ],
+   "cortejo": "En 2026, 235 nazarenos en un cortejo de 530 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-agonia/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-universitaria-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santo Cristo de la Universidad."], ["Paso de la Virgen", "Nuestra Señora de la Presentación."]
+   ],
+   "cortejo": "En 2026, 87 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-universitaria/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-sangre-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sangre."], ["Paso de palio", "Nuestra Señora Reina de los Ángeles en sus Misterios Dolorosos."]
+   ],
+   "cortejo": "En el cortejo va también el Santísimo Cristo de la Conversión. En 2026, 277 nazarenos en un cortejo de 365 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-sangre/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-buen-suceso-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Buen Suceso, con Nuestra Señora de los Dolores."], ["Paso de palio", "María Santísima de la Caridad."]
+   ],
+   "cortejo": "En 2026, 210 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-santa-faz-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Nazareno de la Santa Faz."], ["Paso de palio", "Nuestra Madre y Señora María Santísima de la Trinidad."]
+   ],
+   "cortejo": "En 2026, 368 nazarenos en un cortejo de 553 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-de-la-santa-faz/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-prendimiento-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús, Divino Salvador, en su Prendimiento."], ["Paso de palio", "Nuestra Señora de la Piedad."]
+   ],
+   "cortejo": "En 2026, 550 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-perdon-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Perdón."], ["Paso de palio", "María Santísima del Rocío y Lágrimas."]
+   ],
+   "cortejo": "En 2026, 247 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-calvario-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Calvario."], ["Paso de palio", "Nuestra Señora del Mayor Dolor."]
+   ],
+   "cortejo": "En 2026, 190 nazarenos en un cortejo de 230 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-calvario/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-paz-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Humildad y Paciencia."], ["Paso de palio", "María Santísima de la Paz y Esperanza Coronada."]
+   ],
+   "cortejo": "En 2026, 520 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-paz/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-misericordia-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Misericordia."], ["Paso de palio", "Nuestra Señora de las Lágrimas en su Desamparo."]
+   ],
+   "cortejo": "En el cortejo van las reliquias de los Santos Mártires. En 2026, 450 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/miercoles-santo-hermandad-de-la-misericordia/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-pasion-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Pasión."], ["Paso de palio", "María Santísima del Amor."]
+   ],
+   "cortejo": "En 2026, 190 nazarenos en un cortejo de 315 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-piedad-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Piedad con María Santísima de Vida, Dulzura y Esperanza Nuestra, en un mismo paso."]
+   ],
+   "cortejo": "En 2026, 250 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "jesus-nazareno-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno."], ["Paso de palio", "María Santísima Nazarena."]
+   ],
+   "cortejo": "En 2026, 200 nazarenos en un cortejo de 340 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-caridad-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Señor de la Caridad, crucificado, con María Santísima junto a él."]
+   ],
+   "cortejo": "En 2026, 303 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-caridad/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "jesus-caido-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Caído."], ["Paso de palio", "Nuestra Señora del Mayor Dolor en su Soledad."]
+   ],
+   "cortejo": "En 2026, 560 nazarenos en un cortejo de 770 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-caido/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-cena-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Fe en su Sagrada Cena."], ["Paso de palio", "María Santísima de la Esperanza del Valle."]
+   ],
+   "cortejo": "En 2026, 315 nazarenos: con cubrerrostro granate en el cortejo del Señor y verde en el de la Virgen.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "las-angustias-cordoba": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de las Angustias."]
+   ],
+   "cortejo": "En 2026, 345 nazarenos en un cortejo de 460 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-las-angustias/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "cristo-de-gracia-el-esparraguero-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de Gracia."]
+   ],
+   "cortejo": "En 2026, 243 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-buena-muerte-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte."], ["Paso de palio", "Nuestra Señora Reina de los Mártires."]
+   ],
+   "cortejo": "Riguroso silencio en los dos pasos. En 2026, 250 nazarenos en un cortejo de 280 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-soledad-cordoba": {
+   "pasos": [ ["Paso de la Virgen", "María Santísima en su Soledad."]
+   ],
+   "cortejo": "En 2026, 115 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-soledad/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-expiracion-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Expiración, con María Santísima del Silencio."], ["Paso de palio", "Nuestra Señora del Rosario en sus Misterios Dolorosos Coronada."]
+   ],
+   "cortejo": "En 2026, 284 nazarenos en un cortejo de 325 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-expiracion/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-descendimiento-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Descendimiento."], ["Paso de palio", "Nuestra Señora del Buen Fin."]
+   ],
+   "cortejo": "En 2026, 366 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-descendimiento/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-conversion-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Oración y la Caridad, en su Conversión."]
+   ],
+   "cortejo": "En 2026, 90 nazarenos en un cortejo de 160 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "los-dolores-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Clemencia."], ["Paso de la Virgen", "Nuestra Señora de los Dolores."]
+   ],
+   "cortejo": "En 2026, 400 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "santo-sepulcro-cordoba": {
+   "pasos": [ ["Paso de urna", "Nuestro Señor Jesucristo del Santo Sepulcro."], ["Paso de palio", "Nuestra Señora del Desconsuelo en su Soledad."]
+   ],
+   "cortejo": "Una capilla musical acompaña al Señor y una coral polifónica a la Virgen. En 2026, 205 nazarenos en un cortejo de 225 personas.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "el-resucitado-cordoba": {
+   "pasos": [ ["Paso de misterio", "Nuestro Señor Resucitado, con el ángel anunciador y los soldados romanos de Antonio Bernal Redondo."], ["Paso de palio", "María Santísima Reina de Nuestra Alegría."]
+   ],
+   "cortejo": "En 2026, 207 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "lagrimas-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Lágrimas, en el misterio de la Exaltación."]
+   ],
+   "fuentes": ["https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-las-lagrimas/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "dolores-de-alcolea-cordoba": {
+   "pasos": [ ["Paso de la Virgen", "María Santísima de los Dolores."]
+   ],
+   "cortejo": "En 2026, 80 nazarenos.",
+   "fuentes": ["https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/", "https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf"
+   ]
+  },
+  "la-o-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Victoria en sus Tres Caídas."], ["Paso de palio", "La Virgen de la O, cuyos varales de palio se restauraron en 2026."]
+   ],
+   "fuentes": ["https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/LIBRITO-DE-ITINERARIOS-Y-HORARIOS.pdf", "https://cordopolis.eldiario.es/el-cirineo/sabado-pasion-2026-cordoba_1_13100513.html"
+   ]
   }
  }
 }
