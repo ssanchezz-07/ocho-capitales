@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T03:59:15.827Z",
+ "generado": "2026-11-10T04:15:15.277Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3311,7 +3311,27 @@
     "foco": "50% 13%"
    }
   },
-  "la-carreteria-sevilla": {},
+  "la-carreteria-sevilla": {
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Carretería (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcarreteria/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-carreteria-sevilla-virgen.jpg",
+    "tam": 400644,
+    "titular": "María Santísima del Mayor Dolor"
+   }
+  },
   "la-o-sevilla": {
    "virgen": {
     "w": 960,

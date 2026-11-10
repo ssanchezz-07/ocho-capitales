@@ -183,12 +183,15 @@
   },
   "la-carreteria-sevilla": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Luz_en_su_retablo.jpg",
-    "titulo": "File:Virgen de la Luz en su retablo.jpg",
-    "autor": "Abel Donaire",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Luz"
+    "autor": "La Carretería (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcarreteria/",
+    "local": "scripts/cedidas/sevilla/la-carreteria-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Mayor Dolor",
+    "titular": "María Santísima del Mayor Dolor",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadcarreteria (bio «Cuenta oficial de la Hermandad de la Carretería», enlaza hermandaddelacarreteria.org; https://www.instagram.com/p/DfCgdX8EaZa/), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-o-sevilla": {
