@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T06:33:08.072Z",
+ "generado": "2026-11-10T07:21:45.327Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3264,32 +3264,42 @@
   "la-esperanza-de-triana-sevilla": {
    "cristo": {
     "w": 960,
-    "h": 720,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "CarlosVdeHabsburgo",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_las_Tres_Ca%C3%ADdas.jpg",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "45% 33%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-cristo.jpg",
+    "tam": 545849,
     "titular": "Santísimo Cristo de las Tres Caídas"
    },
    "virgen": {
     "w": 960,
-    "h": 896,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "CarlosVdeHabsburgo",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Esperanza_de_Triana.jpg",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "50% 33%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-virgen.jpg",
+    "tam": 761650,
     "titular": "Nuestra Señora de la Esperanza"
    }
   },
@@ -3382,17 +3392,22 @@
    },
    "virgen": {
     "w": 960,
-    "h": 1517,
+    "h": 1439,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Zarateman",
-    "licencia": "CC0",
-    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg",
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "50% 27%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/montserrat-sevilla-virgen.jpg",
+    "tam": 557407,
     "titular": "Nuestra Señora de Montserrat"
    }
   },
@@ -7360,19 +7375,43 @@
   "la-amargura-sevilla": {
    "virgen": {
     "w": 960,
-    "h": 1279,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "PEPE GADEIRAS",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Amargura,_Sevilla.jpg",
-    "titular": "María Santísima de la Amargura",
-    "foco": "50% 50%"
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "50% 33%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-amargura-sevilla-virgen.jpg",
+    "tam": 638032,
+    "titular": "María Santísima de la Amargura"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1440,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Antonio Ortiz",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/a.ortiz_fotografia/",
+    "foco": "52% 25%",
+    "focoFicha": "50% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-amargura-sevilla-cristo.jpg",
+    "tam": 603172,
+    "titular": "Cristo del Silencio en el Desprecio de Herodes"
    }
   },
   "san-pablo-sevilla": {
@@ -12345,7 +12384,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_las_Tres_Ca%C3%ADdas.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Esperanza_de_Triana.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-cristo.jpg\"|545849|\"\"|\"45% 33%\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-esperanza-de-triana-sevilla-virgen.jpg\"|761650|\"\"|\"50% 33%\"|\"50% 100%\"|\"50% 100%\""
   },
   "la-o-sevilla": {
    "w": 960,
@@ -12365,7 +12404,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_18.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sevilla_-_Capilla_de_Nuestra_Se%C3%B1ora_de_Montserrat_16.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/montserrat-sevilla-virgen.jpg\"|557407|\"\"|\"50% 27%\"|\"\"|\"50% 100%\""
   },
   "bellavista-sevilla": {
    "w": 960,
@@ -13106,6 +13145,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_la_Sagrada_Cena.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_Subterr%C3%A1neo,_Sevilla.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "la-amargura-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-amargura-sevilla-cristo.jpg\"|603172|\"\"|\"52% 25%\"|\"https://www.instagram.com/a.ortiz_fotografia/\"|\"scripts/cedidas/sevilla/la-amargura-sevilla-virgen.jpg\"|638032|\"\"|\"50% 33%\"|\"50% 100%\"|\"50% 100%\""
   },
   "san-pablo-sevilla": {
    "w": 960,
