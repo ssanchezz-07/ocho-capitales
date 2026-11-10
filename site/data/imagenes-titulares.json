@@ -2283,6 +2283,17 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Jesús Salvador en su Santa Cena"
+   },
+   "virgen": {
+    "autor": "Santa Cena (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/santacenajaen/",
+    "local": "scripts/cedidas/jaen/santa-cena-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Caridad y Consolación",
+    "titular": "María Santísima de la Caridad y Consolación",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @santacenajaen (https://www.instagram.com/p/DdBNR1pl5Xk/, imagen 3), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-estrella-jaen": {
@@ -2392,24 +2403,39 @@
   },
   "la-lanzada-jaen": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Reina_Angeles_Ja%C3%A9n.jpg",
-    "titulo": "File:Reina Angeles Jaén.jpg",
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "La Lanzada (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lanzadajaen/",
+    "local": "scripts/cedidas/jaen/la-lanzada-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima Reina de los Ángeles",
     "titular": "María Santísima Reina de los Ángeles",
-    "foco": "50% 0%"
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @lanzadajaen (https://www.instagram.com/p/DfLCW33kQru/, imagen 2), sin fotógrafo citado, coautor ni firma. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-gran-poder-jaen": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_Ja%C3%A9n.jpg",
-    "titulo": "File:Gran Poder Jaén.jpg",
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "autor": "El Gran Poder (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/granpoderjaen/",
+    "local": "scripts/cedidas/jaen/el-gran-poder-jaen-cristo.jpg",
+    "titulo": "Cedida: Jesús del Gran Poder",
     "titular": "Jesús del Gran Poder",
-    "foco": "50% 26%"
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @granpoderjaen (https://www.instagram.com/p/DfKwdsBjjXX/, imagen 2), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor, Juan López. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "El Gran Poder (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/granpoderjaen/",
+    "local": "scripts/cedidas/jaen/el-gran-poder-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Dulce Nombre",
+    "titular": "María Santísima del Dulce Nombre",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @granpoderjaen (https://www.instagram.com/p/DfKwdsBjjXX/, imagen 4), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor, Juan López. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-vera-cruz-los-civiles-jaen": {
@@ -3965,13 +3991,15 @@
   },
   "caridad-y-salud-jaen": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Caridad_Jaen.jpg",
-    "titulo": "File:Caridad Jaen.jpg",
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Caridad y Salud (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcaridadysalud/",
+    "local": "scripts/cedidas/jaen/caridad-y-salud-jaen-cristo.jpg",
+    "titulo": "Cedida: Jesús de la Caridad ante Caifás",
     "titular": "Jesús de la Caridad ante Caifás",
-    "foco": "50% 6%"
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadcaridadysalud (https://www.instagram.com/p/De-WmlGDf6u/, imagen 2), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor, Francisco Carrillo. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-esperanza-granada": {
@@ -4073,6 +4101,28 @@
     "licencia": "CC BY-SA 3.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "titular": "Basílica Menor de San Ildefonso"
+   },
+   "cristo": {
+    "autor": "La Vera Cruz (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/veracruzjaen/",
+    "local": "scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-cristo.jpg",
+    "titulo": "Cedida: Jesús orando en el Huerto",
+    "titular": "Jesús orando en el Huerto",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @veracruzjaen (https://www.instagram.com/p/DY9h3sDCLAl/, imagen 4), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "La Vera Cruz (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/veracruzjaen/",
+    "local": "scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Desamparados",
+    "titular": "María Santísima de los Desamparados",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @veracruzjaen (https://www.instagram.com/p/DYIb0UGiE2h/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "dolores-de-churriana-malaga": {
@@ -4758,17 +4808,41 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de las Misericordias",
     "foco": "50% 0%"
+   },
+   "virgen": {
+    "autor": "Los Estudiantes (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadestudiantesjaen/",
+    "local": "scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de las Lágrimas",
+    "titular": "Nuestra Señora de las Lágrimas",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadestudiantesjaen (https://www.instagram.com/p/DfN50RhoAYi/, imagen 1), sin fotógrafo citado, coautor ni firma. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-cautivo-jaen": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_Ja%C3%A9n.png",
-    "titulo": "File:Cautivo Jaén.png",
-    "autor": "Antonio Espantaleón",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "El Cautivo (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivo.trinidad.jaen/",
+    "local": "scripts/cedidas/jaen/el-cautivo-jaen-cristo.jpg",
+    "titulo": "Cedida: Nuestro Divino Redentor Jesús Cautivo",
     "titular": "Nuestro Divino Redentor Jesús Cautivo",
-    "foco": "50% 20%"
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @cautivo.trinidad.jaen (https://www.instagram.com/p/DfFfo1wDEsU/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "virgen": {
+    "autor": "El Cautivo (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivo.trinidad.jaen/",
+    "local": "scripts/cedidas/jaen/el-cautivo-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Trinidad",
+    "titular": "María Santísima de la Trinidad",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @cautivo.trinidad.jaen (https://www.instagram.com/p/DfFfo1wDEsU/, imagen 2), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-resucitado-jaen": {

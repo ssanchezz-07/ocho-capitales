@@ -26,7 +26,7 @@
   "María_Santísima_de_la_Soledad.jpg": "La Soledad (Córdoba): la ficha de Commons copia la foto de otra web (artencordoba.com, procesionesdecordoba.com o un blog) con autor «.»; no hay autor que citar y la licencia no es fiable.",
   "SemanaSantaGranadaLosDolores1.jpg": "Dolores (Granada): en Commons figura como CC BY-SA 4.0 de Manuel_Prados, pero el original de Flickr (photos/14973389@N04/2380462687) es «todos los derechos reservados» y lo subió otra cuenta sin permiso. Además, palio de lejos con la cara tapada.",
   "Cristo_De_La_Columna_(147777103).jpeg": "Marca de agua «500px» (regla de Pablo, 4-nov: no se usan fotos con marcas, ni recortadas).",
-  "Cautivo_Jaén.png": "Marca de agua «ANTONIO ©» (regla de Pablo, 4-nov).",
+  "Cautivo_Jaén.png": "Lleva la marca de agua «ANTONIO ©» sobre la imagen (regla de Pablo, 4-nov: fotos limpias, sin marcas). (antes retirada solo en el-cautivo-jaen|cristo)",
   "Incienso_Jaén.jpg": "Cabecera de Jaén: a Pablo no le convence (5-nov); la sustituye el Abuelo ante la Catedral.",
   "Cristo_de_la_Humillación_y_Perdón,_lateral_izquierdo_del_trono.jpg": "humillacion-y-estrella-malaga (cristo): Trono visto de lejos entre los nazarenos; 720 px.",
   "Virgen_de_la_Paloma_por_la_Alameda_(4480796341).jpg": "paloma-malaga (virgen): Palio de lejos: ni recortado se ve a la Virgen entre la candelería.",
@@ -449,10 +449,6 @@
   "la-piedad-cordoba|ficha": {
    "archivo": "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
    "motivo": "La misma foto pequeña retirada como Virgen."
-  },
-  "el-cautivo-jaen|cristo": {
-   "archivo": "Cautivo_Jaén.png",
-   "motivo": "Lleva la marca de agua «ANTONIO ©» sobre la imagen (regla de Pablo, 4-nov: fotos limpias, sin marcas)."
   },
   "el-cautivo-jaen|ficha": {
    "archivo": "Cautivo_Jaén.png",

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T17:22:53.374Z",
+ "generado": "2026-11-10T17:39:48.909Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6742,6 +6742,25 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Cena_Ja%C3%A9n.jpg",
     "titular": "Jesús Salvador en su Santa Cena"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Santa Cena (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/santacenajaen/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/santa-cena-jaen-virgen.jpg",
+    "tam": 1134480,
+    "titular": "María Santísima de la Caridad y Consolación"
    }
   },
   "la-estrella-jaen": {
@@ -6936,12 +6955,15 @@
      960
     ],
     "escudo": false,
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Reina_Angeles_Ja%C3%A9n.jpg",
-    "titular": "María Santísima Reina de los Ángeles",
-    "foco": "50% 0%"
+    "autor": "La Lanzada (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/lanzadajaen/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/la-lanzada-jaen-virgen.jpg",
+    "tam": 283861,
+    "titular": "María Santísima Reina de los Ángeles"
    }
   },
   "el-gran-poder-jaen": {
@@ -6954,12 +6976,34 @@
      960
     ],
     "escudo": false,
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Gran_Poder_Ja%C3%A9n.jpg",
-    "titular": "Jesús del Gran Poder",
-    "foco": "50% 26%"
+    "autor": "El Gran Poder (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/granpoderjaen/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-gran-poder-jaen-cristo.jpg",
+    "tam": 330796,
+    "titular": "Jesús del Gran Poder"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Gran Poder (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/granpoderjaen/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-gran-poder-jaen-virgen.jpg",
+    "tam": 369141,
+    "titular": "María Santísima del Dulce Nombre"
    }
   },
   "la-vera-cruz-los-civiles-jaen": {
@@ -9506,12 +9550,15 @@
      960
     ],
     "escudo": false,
-    "autor": "Rlinx",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Caridad_Jaen.jpg",
-    "titular": "Jesús de la Caridad ante Caifás",
-    "foco": "50% 6%"
+    "autor": "Caridad y Salud (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadcaridadysalud/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/caridad-y-salud-jaen-cristo.jpg",
+    "tam": 417841,
+    "titular": "Jesús de la Caridad ante Caifás"
    }
   },
   "la-esperanza-granada": {
@@ -9679,6 +9726,44 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Ja%C3%A9n_-_Iglesia_de_San_Ildefonso.jpg",
     "titular": "Basílica Menor de San Ildefonso"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Vera Cruz (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/veracruzjaen/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-cristo.jpg",
+    "tam": 544283,
+    "titular": "Jesús orando en el Huerto"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Vera Cruz (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/veracruzjaen/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-virgen.jpg",
+    "tam": 615783,
+    "titular": "María Santísima de los Desamparados"
    }
   },
   "dolores-de-churriana-malaga": {
@@ -10768,24 +10853,65 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG",
     "foco": "50% 0%",
     "titular": "Santísimo Cristo de las Misericordias"
-   }
-  },
-  "el-cautivo-jaen": {
-   "cristo": {
+   },
+   "virgen": {
     "w": 960,
-    "h": 1440,
+    "h": 1247,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Antonio Espantaleón",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cautivo_Ja%C3%A9n.png",
-    "foco": "50% 20%",
+    "autor": "Los Estudiantes (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadestudiantesjaen/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg",
+    "tam": 854799,
+    "titular": "Nuestra Señora de las Lágrimas"
+   }
+  },
+  "el-cautivo-jaen": {
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Cautivo (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivo.trinidad.jaen/",
+    "foco": "50% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-cautivo-jaen-cristo.jpg",
+    "tam": 275952,
     "titular": "Nuestro Divino Redentor Jesús Cautivo"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1275,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Cautivo (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cautivo.trinidad.jaen/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/jaen/el-cautivo-jaen-virgen.jpg",
+    "tam": 570737,
+    "titular": "María Santísima de la Trinidad"
    }
   },
   "el-resucitado-jaen": {
@@ -13181,6 +13307,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Humildad_Magna_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Madre_de_Dios_Ja%C3%A9n.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "el-gran-poder-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/granpoderjaen/\"|\"scripts/cedidas/jaen/el-gran-poder-jaen-cristo.jpg\"|330796|\"\"|\"50% 30%\"|\"https://www.instagram.com/granpoderjaen/\"|\"scripts/cedidas/jaen/el-gran-poder-jaen-virgen.jpg\"|369141|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
   "la-expiracion-jaen": {
    "w": 960,
    "h": 640,
@@ -13551,6 +13687,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_la_Misericoridia_(huelva).jpg\"|\"\"|\"\"|[0.3,0,0.4,0.72]|\"50% 3%\"|\"https://www.instagram.com/misericordiahuelva/\"|\"scripts/cedidas/huelva/la-misericordia-huelva-virgen.jpg\"|412445|\"\"|\"50% 25%\"|\"\"|\"\""
   },
+  "el-huerto-vera-cruz-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/veracruzjaen/\"|\"scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-cristo.jpg\"|544283|\"\"|\"50% 28%\"|\"https://www.instagram.com/veracruzjaen/\"|\"scripts/cedidas/jaen/el-huerto-vera-cruz-jaen-virgen.jpg\"|615783|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
   "dolores-de-churriana-malaga": {
    "w": 960,
    "h": 640,
@@ -13760,6 +13906,26 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Gran_Poder_-_7053999345.jpg\"|\"\"|\"\"|\"\"|\"30% 29%\"|\"https://www.instagram.com/hdadgranpoderalm/\"|\"scripts/cedidas/almeria/gran-poder-almeria-virgen.jpg\"|703971|\"\"|\"48% 25%\"|\"\"|\"\""
+  },
+  "los-estudiantes-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Misericordias_en_Santa_Clara.JPG\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.instagram.com/hdadestudiantesjaen/\"|\"scripts/cedidas/jaen/los-estudiantes-jaen-virgen.jpg\"|854799|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
+  "el-cautivo-jaen": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/cautivo.trinidad.jaen/\"|\"scripts/cedidas/jaen/el-cautivo-jaen-cristo.jpg\"|275952|\"\"|\"50% 22%\"|\"https://www.instagram.com/cautivo.trinidad.jaen/\"|\"scripts/cedidas/jaen/el-cautivo-jaen-virgen.jpg\"|570737|\"\"|\"50% 30%\"|\"\"|\"\""
   },
   "el-huerto-cordoba": {
    "w": 960,
