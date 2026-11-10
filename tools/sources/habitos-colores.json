@@ -133,7 +133,7 @@
   "la-resurreccion-granada": [[null, {"túnica": "blanco", "capillo": "blanco", "capa": "blanco", "cíngulo": "dorado"}]],
   "el-resucitado-granada": [[null, {"túnica": "blanco", "capillo": "celeste", "fajín": "celeste"}]],
   "la-borriquita-almeria": [[null, {"túnica": "blanco", "capa": "blanco", "antifaz": "blanco", "cíngulo": "rojo"}]],
-  "los-angeles-almeria": [[null, {"túnica": "blanco", "cíngulo": "celeste"}]],
+  "los-angeles-almeria": [[null, {"túnica": "blanco", "capa": "celeste", "antifaz": "celeste", "cíngulo": "blanco y celeste"}]],
   "pasion-almeria": [[null, {"capa": "morado", "antifaz": "morado", "cíngulo": "dorado"}]],
   "gran-poder-almeria": [[null, {"túnica": "negro", "antifaz": "negro", "cinturón": "esparto"}]],
   "la-coronacion-almeria": [[null, {"túnica": "blanco", "antifaz": "burdeos"}]],

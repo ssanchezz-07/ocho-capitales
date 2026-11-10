@@ -696,6 +696,309 @@
    ],
    "fuentes": ["https://consejocofradiascadiz.es/la-palabra-del-periodista-pablo-manuel-durio-anuncia-ya-una-nueva-semana-santa"
    ]
+  },
+  "la-borriquita-huelva": {
+   "pasos": [ ["Paso de misterio", "Jesús en su Entrada Triunfal en Jerusalén."], ["Paso de palio", "Nuestra Señora de los Ángeles."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-borriquita/"
+   ]
+  },
+  "la-sagrada-cena-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Amor con el apostolado, en un paso barroco de pino de Flandes tallado por Miguel Hierro Barreda (1949-1951)."], ["Paso de palio", "María Santísima del Rosario en sus Misterios Dolorosos, que sale bajo palio desde 1956."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-sagrada-cena/"
+   ]
+  },
+  "la-redencion-huelva": {
+   "pasos": [ ["Paso de misterio", "Santo Cristo de la Preciosa Sangre, con San Dimas, Gestas y centuriones romanos, en el momento previo a la Crucifixión. Desde 2024 sale el Domingo de Ramos en un paso neobarroco diseñado por Daniel Sánchez Vázquez, aún en ejecución."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-rendencion/"
+   ]
+  },
+  "los-mutilados-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Victoria Despojado, en el Monte Calvario con tres sayones (1952-1954), en un paso de Miguel Llácer."], ["Paso de palio", "Nuestra Señora de la Paz, con respiraderos de Eduardo Seco Imberg, restaurados por Antonio Santos en 1990, bordados de Rafael Infante y candelería de Hijos de Juan Fernández."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-sacramental-de-los-mutilados/"
+   ]
+  },
+  "el-perdon-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Perdón, con el misterio de imágenes de Martín Lagares presentado en 2022."], ["Paso de la Virgen", "Nuestra Señora de los Dolores, que acompaña al Cristo desde 1992. En 2018 la hermandad aprobó hacerle un palio."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-perdon/"
+   ]
+  },
+  "el-cautivo-huelva": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Cautivo, en un paso neobarroco de madera tallada y dorada de Francisco Márquez Domínguez (1993-1994), con llamador de Ramón León Peñuelas."], ["Paso de palio", "María Santísima de la Misericordia."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-cautivo/"
+   ]
+  },
+  "el-calvario-huelva": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Calvario, en un paso neobarroco."], ["Paso de palio", "María Santísima del Rocío y Esperanza, con orfebrería de Jesús Domínguez Vázquez (1981-1982) y un palio bordado en oro sobre terciopelo burdeos oscuro por Francisco Carrera Iglesias (2011)."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-calvario/"
+   ]
+  },
+  "las-tres-caidas-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas en sus Tres Caídas, con las figuras de su misterio, en un paso tallado por José Oliva (1948-1954) y redorado en los talleres de Nuestra Señora del Carmen (1988-1989)."], ["Paso de palio", "María Santísima del Amor."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-las-tres-caidas/"
+   ]
+  },
+  "la-salud-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sentencia en su Presentación al Pueblo, con un misterio sobre el boceto de Manuel Madroñal Isorna (2007), en un paso de Francisco Verdugo aún en ejecución."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-sacramental-de-la-salud/"
+   ]
+  },
+  "la-lanzada-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Sagrada Lanzada, según el pasaje de San Juan (19, 31-34), con María Santísima del Patrocinio, San Juan Evangelista y Santa María Magdalena, bendecidos en 1992."], ["Paso de palio", "Nuestra Señora de los Dolores, que sale bajo palio desde 1979, con varales y candelería de Angulo."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-sagrada-lanzada/"
+   ]
+  },
+  "los-estudiantes-huelva": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Sangre."], ["Paso de palio", "Nuestra Señora del Valle."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-los-estudiantes/"
+   ]
+  },
+  "pasion-huelva": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Pasión, en un paso dorado por Antonio León Ortega (1955-1958)."], ["Paso de palio", "María Santísima del Refugio."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-sacramental-de-pasion/"
+   ]
+  },
+  "el-prendimiento-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Prendimiento, con el grupo de Rubén Fernández Parra (2007) en el momento del arresto. Es el paso más largo de Huelva: lo llevan 72 costaleros en 12 trabajaderas, y se corona con una crestería rematada en alcachofas."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-prendimiento-y-la-estrella/"
+   ]
+  },
+  "la-santa-cruz-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Señor Jesús de la Providencia en la escena del entierro, con María Santísima Madre de Gracia, que no va bajo palio sino dentro del misterio, San Juan Evangelista (Elías Rodríguez Picón), María Magdalena y otras figuras de Mario Ignacio Moya."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-santa-cruz/"
+   ]
+  },
+  "la-victoria-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Humildad en el Desprecio de Herodes."], ["Paso de palio", "María Santísima de la Victoria Coronada."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-victoria/"
+   ]
+  },
+  "la-esperanza-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Expiración, con San Juan y la Magdalena, en un paso neobarroco de perfiles románticos alumbrado por candelabros de guardabrisas."], ["Paso de palio", "Nuestra Señora de la Esperanza Coronada."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-esperanza/"
+   ]
+  },
+  "vera-cruz-y-oracion-huelva": {
+   "pasos": [ ["Paso de misterio", "Oración en el Huerto, con el ángel confortador (Antonio León Ortega, 1943) y San Pedro, San Juan y Santiago (Luis Ortega Bru, 1976-1978), en un paso barroco dorado tallado por José Oliva (1944) con candelabros de Manuel de los Ríos."], ["Paso de palio", "Nuestra Madre y Señora de los Dolores Coronada."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-veracruz-y-oracion-en-el-huerto/"
+   ]
+  },
+  "la-misericordia-huelva": {
+   "pasos": [ ["Paso de Cristo", "Santo Cristo de la Misericordia, en un paso austero con los cuatro evangelistas de Salvador Guzmán Moral (1991) en las esquinas y seis cartelas de motivos vegetales en el canasto."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-misericordia/"
+   ]
+  },
+  "la-buena-muerte-huelva": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte, en un paso de caoba de la República Dominicana, con capillas de plata que muestran escenas de la vida de Jesús y el escudo en un medallón frontal."], ["Paso de la Virgen", "Nuestra Madre de la Consolación y Correa, sin palio, en el misterio fundacional de la hermandad."]
+   ],
+   "cortejo": "En el cortejo van niños del centro educativo vinculado a la hermandad.",
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-buena-muerte/"
+   ]
+  },
+  "los-judios-la-merced-huelva": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Cadenas en la burla del Pretorio, en un paso neobarroco dorado por Manuel Calvo (2001-2004), con los evangelistas en las esquinas (plumas y nimbos de plata de los Hermanos Delgado, 2002) y un llamador de plata con la fachada de la catedral (Hermanos Delgado, 1993)."], ["Paso de Cristo", "Santísimo Cristo de Jerusalén y Buen Viaje, en un paso churrigueresco tallado por José Gil (1913)."], ["Paso de palio", "María Santísima de los Dolores."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-los-judios/"
+   ]
+  },
+  "el-nazareno-huelva": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, en un paso tallado por los Hermanos Caballero (2002-2003) con diseño neorrocalla de Miguel Díaz Charneco y Manuel Gómez Beltrán: el Antiguo Testamento en los respiraderos y el Nuevo en la canastilla, con imaginería de Carlos Valle y dos relieves de Fernando Aguado."], ["Paso de palio", "María Santísima de la Amargura."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-nazareno/"
+   ]
+  },
+  "la-fe-huelva": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Fe, con María Magdalena (Elías Rodríguez Picón, 2004), José de Arimatea, Nicodemo y otras figuras, cartelas de José María Leal Bernáldez y faldones bordados por el taller Orobordado con diseño de Miguel Clarós."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-la-fe/"
+   ]
+  },
+  "el-descendimiento-huelva": {
+   "pasos": [ ["Paso de misterio", "Sagrado Descendimiento, en el paso de Antonio León Ortega estrenado en 1953 con sus figuras secundarias."], ["Paso de palio", "María Santísima de la Resignación, que sale bajo palio desde 1975."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-sagrado-descendimiento/"
+   ]
+  },
+  "el-santo-entierro-huelva": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de las Angustias, en un paso de madera en su color, ampliado por José García Páez (1988) y restaurado por Daniel Sánchez y Rafael Borrero (2017)."], ["Paso del Sepulcro", "Santísimo Cristo Yacente en el sepulcro."], ["Paso de la Virgen", "Nuestra Señora de la Soledad."]
+   ],
+   "cortejo": "Es la hermandad oficial de la Semana Santa de Huelva: en su cortejo van representaciones de todas las cofradías de la ciudad y autoridades.",
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-santo-entierro/"
+   ]
+  },
+  "el-silencio-la-soledad-huelva": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora en su Soledad, en un paso barroco dorado de los talleres de los Hermanos García Camacho y Tello Olivares (1945), con candelabros de guardabrisas."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-silencio/"
+   ]
+  },
+  "el-resucitado-huelva": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo Resucitado. La hermandad prepara un misterio nuevo, diseñado por José María Leal, y un paso churrigueresco de Alexis Sánchez."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-del-resucitado/"
+   ]
+  },
+  "nuestra-senora-del-prado-huelva": {
+   "pasos": [ ["Paso de palio", "Nuestra Señora del Prado en su Dolor. Su paso de palio nuevo, diseñado por Álvaro Abril, empieza por la peana y los respiraderos; la hermandad piensa añadir un misterio de las Negaciones de San Pedro."]
+   ],
+   "fuentes": ["https://consejohermandadeshuelva.es/hermandad-de-penitencia-de-nuestra-senora-del-prado-en-su-dolor/"
+   ]
+  },
+  "la-bendicion-huelva": {
+   "pasos": [ ["Paso de Cristo", "Cristo de la Bendición."]
+   ],
+   "fuentes": ["https://www.1minutohuelva.com/2026/03/horarios-e-itinerarios-del-sabado-de-pasion-en-huelva/"
+   ]
+  },
+  "la-borriquita-almeria": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Victoria en su Entrada en Jerusalén."], ["Paso de palio", "Nuestra Señora de la Paz, que sale bajo palio desde 1991; en 2024 estrenó su candelería."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/penitencia/borriquita/"
+   ]
+  },
+  "los-angeles-almeria": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Misericordia."], ["Paso de la Virgen", "María Santísima de los Ángeles."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/los-angeles/"
+   ]
+  },
+  "la-estrella-almeria": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas, sentado en una roca antes de la crucifixión, con el romano a caballo, el cirineo con la cruz, el romano con la clámide y los ladrones Dimas y Gestas, todos de Luis Alberto García Jeute (2006-2010). El paso lo talla Manuel Guzmán Fernández."], ["Paso de palio", "María Santísima de la Estrella, bajo un palio diseñado por Luis Alberto García Jeute; palio, candelería y jarras del taller Aragón Orfebres."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/estrella/"
+   ]
+  },
+  "la-santa-cena-almeria": {
+   "pasos": [ ["Paso de misterio", "Santa Cena."], ["Paso de la Virgen", "María Santísima de Fe y Caridad."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/santa-cena/"
+   ]
+  },
+  "pasion-almeria": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de Salud y Pasión."], ["Paso de la Virgen", "María Santísima de los Desamparados."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-de-pasion/"
+   ]
+  },
+  "la-coronacion-almeria": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Humildad y Paciencia en su Coronación de Espinas."], ["Paso de palio", "María Santísima de Gracia y Amparo, que estrenó su paso de palio en 2001."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-de-la-coronacion/"
+   ]
+  },
+  "el-amor-almeria": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Amor."], ["Paso de palio", "Nuestra Señora del Primer Dolor, con un manto bordado en oro con piedras en los talleres del Sindicato de la Aguja de Carmen Góngora y su palio de estrellas."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-amor/"
+   ]
+  },
+  "el-perdon-silencio-almeria": {
+   "pasos": [ ["Paso de Cristo", "Santo Cristo del Perdón."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-perdon/"
+   ]
+  },
+  "el-calvario-cristo-del-mar-almeria": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo del Mar, al que acompaña desde 2012 Nuestra Señora de las Lágrimas. La hermandad proyecta un paso con el misterio del Calvario."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/calvario/"
+   ]
+  },
+  "el-prendimiento-almeria": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús en su Prendimiento."], ["Paso de Cristo", "Jesús Cautivo de Medinaceli."], ["Paso de la Virgen", "Nuestra Señora de la Merced."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-prendimiento/"
+   ]
+  },
+  "la-macarena-almeria": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sentencia."], ["Paso de la Virgen", "María Santísima de la Esperanza Macarena."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/macarena/"
+   ]
+  },
+  "los-estudiantes-almeria": {
+   "pasos": [ ["Paso de misterio", "Oración en el Huerto."], ["Paso de la Virgen", "Nuestra Señora del Amor y la Esperanza."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/cofradia-de-estudiantes/"
+   ]
+  },
+  "rosario-del-mar-almeria": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas en el Abandono, en un paso de los talleres de Juan Pérez Calvo (1961), con talla de Rafael Fernández del Toro y dorado de Antonio Sánchez González. En la delantera lleva una reliquia de Santo Domingo de Guzmán."], ["Paso de palio", "María Santísima del Rosario del Mar en sus Misterios Dolorosos, con peana de Angulo Orfebres (2001), varales de Villarreal (1975-1979) que fueron de la Borriquita de Huelva, candelería de Antonio Rodríguez-Sánchez Campanario (2007) y jarras de Alberto Quirós (2019). El palio, según proyecto de Álvaro Abril, está pendiente."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/rosario-del-mar/"
+   ]
+  },
+  "el-encuentro-jesus-nazareno-almeria": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, con potencias de plata de Orfebrería Castilleja que le donaron sus costaleros en 2017."], ["Paso de la Virgen", "María Santísima de la Amargura."], ["Paso de la Verónica", "Santa Mujer Verónica."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-encuentro/"
+   ]
+  },
+  "las-angustias-almeria": {
+   "pasos": [ ["Paso de misterio", "Nuestra Señora de las Angustias con el Santísimo Cristo de la Buena Muerte: un misterio de la Pasión centrado en María, que presenta el sacrificio de su Hijo."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-de-las-angustias/"
+   ]
+  },
+  "el-silencio-descendimiento-almeria": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Redención en su Descendimiento; el misterio se encargó en 1946 y salió por primera vez en 1948."], ["Paso de la Virgen", "Nuestra Madre María Santísima del Consuelo."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/cofradia-del-silencio/"
+   ]
+  },
+  "cristo-de-la-escucha-almeria": {
+   "pasos": [ ["Paso de Cristo", "Cristo de la Escucha, en vía crucis."]
+   ],
+   "fuentes": ["https://semanasantadeandalucia.es/hermandades/hermandad-del-santo-cristo-de-la-escucha/"
+   ]
+  },
+  "la-caridad-almeria": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Caridad en su Traslado al Sepulcro, con Santa Marta y el resto de las imágenes del misterio."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/caridad/"
+   ]
+  },
+  "el-santo-sepulcro-almeria": {
+   "pasos": [ ["Paso del Sepulcro", "Cristo yacente."], ["Paso de la Virgen", "Nuestra Señora de los Dolores."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-santo-sepulcro/"
+   ]
+  },
+  "la-soledad-almeria": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de los Dolores en su Soledad, con San Juan Evangelista."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-de-la-soledad/"
+   ]
+  },
+  "el-resucitado-almeria": {
+   "pasos": [ ["Paso de Cristo", "Jesucristo Resucitado, Señor de la Vida, con una cruz de orfebrería de la que cuelga una bandera con la cruz de San Jorge, que es también la de la ciudad."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-de-el-resucitado/"
+   ]
+  },
+  "la-unidad-almeria": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Paz en su Flagelación."], ["Paso de palio", "María Santísima de la Unidad, cuyo palio la hermandad sigue completando."]
+   ],
+   "cortejo": "En 2026 escoltó sus pasos Protección Civil de Níjar.",
+   "fuentes": ["https://www.lavozdealmeria.com/vivir/el-contador-cofrade/501098/consulta-aqui-todos-horarios-recorridos-semana-santa-almeria-2026.html"
+   ]
   }
  }
 }
