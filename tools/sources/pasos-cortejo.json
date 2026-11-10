@@ -1869,6 +1869,80 @@
    ],
    "fuentes": ["https://hermandaddelsol.org/reforma-paso-cristo/", "https://hermandaddelsol.org/la-hermandad/sagrados-titulares/", "https://www.hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf"
    ]
+  },
+  "el-via-crucis-granada": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Amargura, imagen atribuida a José de Mora. Lleva una cruz de taracea granadina con incrustaciones de marfil y carey y símbolos de la Pasión. Aurelio López Azaustre le talló en madera la cabellera, que antes era de pelo natural."], ["Paso de la Virgen", "Nuestra Señora de los Reyes, dolorosa del siglo XVIII del malagueño Antonio Asensio de la Cerda. Procesiona desde el año 2000; hasta entonces salía María Santísima de las Lágrimas."]
+   ],
+   "cortejo": "Al regreso, en la plaza de Santa Ana, empieza el rezo del Santo Vía Crucis, que sigue por la Carrera del Darro y la cuesta del Chapiz hasta San Juan de los Reyes.",
+   "fuentes": ["https://hermandadesdegranada.com/real-e-ilustre-hermandad-del-santo-via-crucis-y-nuestra-senora-de-los-favores-y-cofradia-nazarenos-de-jesus-de-la-amargura-maria-santisima-de-las-lagrimas-y-nuestra-senora-de-los-reyes/", "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf"
+   ]
+  },
+  "gran-poder-almeria": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús del Gran Poder, solo y con la cruz a cuestas, de José Antonio Navarro Arteaga (1996), en cedro policromado. En 2026 estrenó potencias."]
+   ],
+   "fuentes": ["https://cofradiasdealmeria.es/hermandad-del-gran-poder/", "https://www.lavozdealmeria.com/vivir/el-contador-cofrade/499899/itinerario-horario-lunes-santo-semana-santa-almeria-2026.html", "https://es.wikipedia.org/wiki/Semana_Santa_en_Almer%C3%ADa"
+   ]
+  },
+  "caridad-y-salud-jaen": {
+   "pasos": [ ["Paso de Cristo", "Jesús de la Caridad ante Caifás."], ["Paso de la Virgen", "María Santísima de la Salud, del cordobés Antonio Bernal Redondo (2011)."]
+   ],
+   "fuentes": ["https://www.diariojaen.es/jaen/estos-son-los-horarios-de-las-cofradias-del-lunes-santo-en-jaen-KK11280569", "https://web.archive.org/web/20251216114753/https://cofradiasjaen.org/caridad-y-salud/"
+   ]
+  },
+  "divino-maestro-lavatorio-jaen": {
+   "pasos": [ ["Paso de misterio", "Lavatorio de los pies: Jesús Divino Maestro y el apóstol San Pedro, de Antonio Martínez Rodríguez (2015)."], ["Paso de palio", "María Santísima del Amor."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251216121941/https://cofradiasjaen.org/divino-maestro/", "https://www.diariojaen.es/jaen/consulte-los-itinerarios-de-las-hermandades-del-martes-santo-en-jaen-DK11282111"
+   ]
+  },
+  "el-cautivo-jaen": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Divino Redentor Jesús Cautivo en el abandono de sus discípulos, de Francisco Romero Zafra (2012), solo y maniatado. Julián Sánchez Jara diseñó el paso y lo talla en su taller sevillano; las esquinas del canasto llevan cuatro águilas bicéfalas en cedro, por el escudo de la hermandad."], ["Paso de palio", "María Santísima de la Trinidad, de Francisco Romero Zafra (2008), que salió por primera vez el Miércoles Santo de 2022. Orfebrería de Alberto Quirós y bordados de Javier García y Martín Suárez."]
+   ],
+   "fuentes": ["https://cautivoytrinidadjaen.com/titulares/jesus-cautivo/", "https://cautivoytrinidadjaen.com/paso-de-cristo/", "https://cautivoytrinidadjaen.com/aguilas-bicefalas-del-paso-del-senor/", "https://cautivoytrinidadjaen.com/titulares/maria-santisima-de-la-trinidad/", "https://cautivoytrinidadjaen.com/bambalina-frontal-del-paso-de-palio/", "https://web.archive.org/web/20260124045858/https://cofradiasjaen.org/cautivo/"
+   ]
+  },
+  "la-lanzada-jaen": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Aguas en su Sagrada Lanzada, acompañado de María Santísima Reina de los Ángeles. Las dos imágenes son de José Miguel Tirao Carpio (2022 y 2016)."]
+   ],
+   "fuentes": ["https://www.diariojaen.es/jaen/estos-son-los-horarios-de-las-cofradias-del-jueves-santo-en-jaen-GK11288592", "https://web.archive.org/web/20260219053256/https://cofradiasjaen.org/lanzada/"
+   ]
+  },
+  "el-gran-poder-jaen": {
+   "pasos": [ ["Paso de misterio", "Encuentro en la calle de la Amargura: Jesús del Gran Poder con María Santísima del Dulce Nombre, San Juan Evangelista y Santa María Magdalena."]
+   ],
+   "fuentes": ["https://www.diariojaen.es/jaen/estos-son-los-horarios-de-las-cofradias-del-jueves-santo-en-jaen-GK11288592", "https://web.archive.org/web/20260219061640/https://cofradiasjaen.org/gran-poder/"
+   ]
+  },
+  "nuestro-padre-jesus-el-abuelo-jaen": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, «El Abuelo», anónimo del siglo XVI. Sale del Camarín de Jesús a las 2.30."], ["Paso de la Verónica", "Santa Marcela, la Verónica, de Modesto y Damián Pastor y Julia (1883). Sale con Nuestro Padre Jesús."], ["Paso de la Virgen", "María Santísima de los Dolores, de José de Medina (1741). Sale más tarde, a las 4.30, y se encuentra con su Hijo hacia las 5.45 en la plaza de Santa María, ante la Catedral."]
+   ],
+   "cortejo": "Los hermanos de promesa salen descalzos, con una cruz de madera al hombro y un ramal de esparto al cuello que les sirve de ceñidor.",
+   "fuentes": ["https://web.archive.org/web/20251216121907/https://cofradiasjaen.org/ntro-padre-jesus/", "https://cofradiaelabuelo.com/madrugada/", "https://www.diariojaen.es/jaen/este-es-el-recorrido-y-los-horarios-de-el-abuelo-en-la-madrugada-del-viernes-santo-NL11291185"
+   ]
+  },
+  "la-soledad-jaen": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo Yacente, de Constantino Unguetti (1959), en pino de Flandes, sobre la piedra de la unción. Va en un trono de caoba y bronce de Antonio Canales, adornado con claveles rojos."], ["Paso de la Virgen", "Nuestra Señora de la Soledad, de Antonio Bernal Redondo y Francisco Romero Zafra (2000), copia en cedro de la imagen de 1943. Lleva manto negro y la corona de espinas en las manos."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251117125450/https://cofradiasjaen.org/soledad/", "http://soledadjaen.es/web/?page_id=83", "https://www.diariojaen.es/jaen/la-soledad-pone-el-broche-final-a-un-profundo-viernes-santo-de-pasion-PL11293279", "http://soledadjaen.es/web/?page_id=86"
+   ]
+  },
+  "el-resucitado-jaen": {
+   "pasos": [ ["Paso de Cristo", "Jesús en el Misterio de su Gloriosa Resurrección, de Rafael Rubio Vernia (1951)."], ["Paso de la Virgen", "María Santísima de la Victoria, de Alfredo Muñoz Arcos (1955)."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20260124045627/https://cofradiasjaen.org/resucitado/", "https://www.diariojaen.es/jaen/este-es-el-recorrido-y-los-horarios-del-resucitado-en-el-domingo-de-resurreccion-PL11293851", "https://www.diariojaen.es/jaen/el-resucitado-se-recrea-en-su-encierro-para-concluir-una-magistral-semana-santa-en-jaen-JL11294739"
+   ]
+  },
+  "la-sangre-de-el-higueron-cordoba": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno de la Compasión, de Manuel Luque Bonillo, en cedro, bendecido en 2024. Lleva la cruz al hombro derecho."]
+   ],
+   "fuentes": ["https://www.gentedepaz.es/alvaro-jimenez-sanchez-seguira-al-frente-del-paso-de-misterio-de-la-compasion-que-incorporara-por-primera-vez-a-la-virgen-del-desamparo-en-2027", "https://www.gentedepaz.es/todos-los-capataces-de-las-visperas-y-la-semana-santa-de-cordoba-de-2026/"
+   ]
+  },
+  "traslado-al-sepulcro-pro-hermandad-cordoba": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de las Almas, ya muerto, con Nuestra Señora de la Salud y Traspaso. Las dos imágenes son de José Antonio Cabello Montilla; el Cristo, en cedro, se bendijo en 2019. En 2025 estrenó doce fanales de orfebrería, diseñados por Luis Agudo y hechos por Angulo."]
+   ],
+   "fuentes": ["https://cordopolis.eldiario.es/cordoba-hoy/cristo-almas-realidad-traslado-sepulcro_1_7029686.html", "https://www.gentedepaz.es/todos-los-recorridos-horarios-estrenos-capataces-y-bandas-de-las-procesiones-de-visperas-de-cordoba/", "https://www.gentedepaz.es/todos-los-capataces-de-las-visperas-y-la-semana-santa-de-cordoba-de-2026/"
+   ]
   }
  }
 }
