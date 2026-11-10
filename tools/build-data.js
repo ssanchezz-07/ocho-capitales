@@ -401,6 +401,14 @@ const BANDAS_UNIDAS = {}; // dirección vieja → dirección de la ficha que que
 // el acompañamiento de la guía sigue nombrándolas sin localidad: se enlaza con su ficha nueva
 for (const n of SIN_LOC) { const b = bandOut.find((x) => x.nombre === n && x.localidad_fuente); if (b) ALIAS_CLAVE.set((n + '|').toLowerCase(), b.slug); }
 for (const b of bandOut) { const vis = new Map(); for (const a of b.acompana || []) { const kk = a.hermandad_slug + '|' + (a.rol || ''); const p = vis.get(kk); if (!p || (!p.fuente && a.fuente)) vis.set(kk, a); } b.acompana = [...vis.values()]; }
+// La misma cofradía dos veces en una banda (barrido del 9-nov: «Jueves Santo» repetido en la de las Cigarreras): la línea de la ficha
+// original, sin año ni fuente, sobra cuando el acompañamiento del año ya la trae con su paso y su fuente. Si la que sobra decía que
+// es la banda propia de la hermandad, esa marca pasa a la que se queda.
+for (const b of bandOut) {
+  const sobra = (a) => !a.anio && (b.acompana || []).some((o) => o !== a && o.anio && o.hermandad_slug === a.hermandad_slug);
+  for (const a of b.acompana || []) if (sobra(a) && a.propia) for (const o of b.acompana) if (o.anio && o.hermandad_slug === a.hermandad_slug) o.propia = true;
+  b.acompana = (b.acompana || []).filter((a) => !sobra(a));
+}
 // ids de banda por hermandad
 const bandBySlugName = new Map(bandOut.map((b) => [b.nombre.toLowerCase(), b.slug]));
 for (const [n, sl] of ALIAS_BANDA) bandBySlugName.set(n, sl);

@@ -288,6 +288,55 @@
    "cortejo": "Lo organiza la propia Agrupación de Cofradías, que cierra con él la Semana Santa.",
    "fuentes": ["https://agrupaciondecofradias.com/titulares/"
    ]
+  },
+  "mutilado-clemencia-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de la Clemencia, de Jerónimo Gómez de Hermosilla (siglo XVII), restaurado por Juan Manuel Miñarro (2019-2020), que reconstruyó las partes de las piernas seccionadas en el saqueo de las iglesias de julio de 1936."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   ]
+  },
+  "desamparados-malaga": {
+   "pasos": [ ["Trono de la Virgen", "Nuestra Señora de los Desamparados (Juan Vega, 2007)."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   ]
+  },
+  "verdad-y-sagrario-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús de la Verdad ante Caifás (Mario Zambrano, 2016), repolicromado por Wilfredo Tadeo Layug (2021-2022)."], ["Trono de la Virgen", "María Santísima del Sagrario (Wilfredo Tadeo Layug, 2021)."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   ]
+  },
+  "luz-y-mar-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo Luz del Mundo (Valerio Téllez, 2016)."], ["Trono de la Virgen", "María Santísima del Mar (Rafael Ruiz Liébana, 2006)."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   ]
+  },
+  "buen-camino-gamarra-malaga": {
+   "pasos": [ ["Trono de la Virgen", "Nuestra Purísima Madre del Buen Camino (José María Ruiz Montes, 2017)."]
+   ],
+   "cortejo": "Sale por la mañana desde el colegio Gamarra y reza el Ángelus a las doce en la plaza Prudencio Jiménez.",
+   "fuentes": ["https://malagaguia.com/agenda/sabado-de-pasion-2026-horarios-de-traslados-y-procesiones/"
+   ]
+  },
+  "medinaceli-martiricos-malaga": {
+   "pasos": [ ["Trono de Cristo", "Jesús de Medinaceli (Israel Cornejo, 2005)."], ["Trono de la Virgen", "María Santísima de la Candelaria (Israel Cornejo, 2006)."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   ]
+  },
+  "dolores-del-puerto-de-la-torre-malaga": {
+   "pasos": [ ["Trono de Cristo", "Santísimo Cristo de Hermandad y Caridad (Manuel Ramos Corona, 2001)."], ["Trono de la Virgen", "Nuestra Señora de los Dolores (Juan Manuel García Palomo, 1993)."]
+   ],
+   "fuentes": ["https://doloresdelpuerto.com/patrimonio/trono-de-cristo/", "https://doloresdelpuerto.com/patrimonio/trono-de-virgen/", "https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   ]
+  },
+  "dolores-de-churriana-malaga": {
+   "pasos": [ ["Trono de Cristo", "Nuestro Padre Jesús Nazareno del Paso, anónimo del siglo XIX atribuido a Salvador Gutiérrez de León."], ["Trono de la Virgen", "Nuestra Señora de los Dolores, anónima de mediados del siglo XVIII."]
+   ],
+   "fuentes": ["https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
+   ]
   }
  }
 }

@@ -262,6 +262,9 @@ const imagSlug = (name) => (name ? slugify(name) : '');
 const hermsOf = (city) => D.hermandades.filter((h) => h.ciudad === city);
 // Hermandades de la capital: el total de la web con lo oficial entre paréntesis (CIFRAS en tools/build-data.js); si falta, las fichas
 const cifraCap = (c) => (c.cifra ? c.cifra.corto : plural(hermsOf(c.slug).length, 'hermandad', 'hermandades'));
+// La cifra oficial y, si no coinciden, cuántas fichas tiene la web (barrido del 9-nov: Hermandades decía 72 y Capitales 71 en Sevilla).
+// Las mismas palabras en Capitales y en Hermandades: hay más fichas que hermandades cuando una sale en varios cortejos o días.
+const cifraFichas = (c) => { const n = hermsOf(c.slug).length; return cifraCap(c) + (c.cifra && c.cifra.n !== n ? ' · ' + plural(n, 'ficha', 'fichas') : ''); };
 const pages = [];
 
 import { createHash } from 'node:crypto';
@@ -895,7 +898,7 @@ function fondoLegible(hex, min = 4.8) {
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
     const img = c.imagen ? imgTag(c.imagen, '', { sizes: SIZES_PORTADA_CAP, widths: [330, 500] }) : '';
-    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p><p class="oc-plate-meta">${cifraCap(c)}</p>` : ''}</div></article></li>`; // portada (big = false) sin la cifra: Pablo, 4-nov, ya está en la ficha de cada capital
+    return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p><p class="oc-plate-meta">${cifraFichas(c)}</p>` : ''}</div></article></li>`; // portada (big = false) sin la cifra: Pablo, 4-nov, ya está en la ficha de cada capital
   }).join('')}</ul>`;
 }
 
@@ -1538,7 +1541,7 @@ function pageDirHerm() {
   // Por capital: cuántas hay, en su terciopelo; al pulsar, se filtra la lista
   const caps = D.capitales.map((c) => { const hs = D.hermandades.filter((h) => h.ciudad === c.slug); return { c, n: hs.length, dias: new Set(hs.map((h) => h.dia)).size }; }).filter((x) => x.n);
   const body = `<header class="nx-head vx-head"><div class="nx-head-in"><h1 class="oc-title nx-title">Hermandades</h1><p class="nx-lead">Las hermandades de las ocho capitales andaluzas: su día, su sede, sus titulares y su historia.</p><p class="nx-pulso"><span><b>${D.hermandades.length}</b> hermandades</span><span><b>${caps.length}</b> capitales</span><span><b>${conFoto}</b> con foto</span></p></div></header>
-<section class="nx-caps vx-tipos hx-caps" aria-labelledby="hx-caps-t"><h2 class="nx-h" id="hx-caps-t">Por capital</h2><ul>${caps.map(({ c, n, dias }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} fichas de ${esc(c.nombre)} en la web"><span>${esc(c.nombre)}</span><b>${n}</b></button><h3 class="nx-cap-tit"><a class="nx-a" href="${u('semana-santa/' + c.slug + '/')}">Su Semana Santa, día a día</a></h3><p class="nx-meta"><span class="nx-src">${plural(dias, 'jornada', 'jornadas')}</span></p></li>`).join('')}</ul></section>
+<section class="nx-caps vx-tipos hx-caps" aria-labelledby="hx-caps-t"><h2 class="nx-h" id="hx-caps-t">Por capital</h2><ul>${caps.map(({ c, n, dias }) => `<li class="nx-cap vida-entra" style="--c:${c.color}"><button type="button" class="nx-cap-nombre" data-filtro-ciudad="${c.slug}" aria-label="Ver las ${n} fichas de ${esc(c.nombre)} en la web"><span>${esc(c.nombre)}</span><b>${n}</b></button><h3 class="nx-cap-tit"><a class="nx-a" href="${u('semana-santa/' + c.slug + '/')}">Su Semana Santa, día a día</a></h3><p class="nx-meta"><span class="nx-src">${esc(cifraFichas(c))}</span><span>${plural(dias, 'jornada', 'jornadas')}</span></p></li>`).join('')}</ul></section>
 <h2 class="nx-h vx-todas">Todas las hermandades</h2>${dirFilters(true, null, D.hermandades.length)}<h2 class="oc-sr">Resultados</h2><ul class="oc-entries vx-grid" data-dir>${items}</ul>${dirMore}${dirEmpty}`;
   write('hermandades/index.html', layout({ title: 'Hermandades', desc: `Directorio de ${D.hermandades.length} hermandades de la Semana Santa de las capitales andaluzas, filtrable por ciudad y día.`, body, path: 'hermandades/', active: 'hermandades/', crumbs: [['Portada', u()], ['Hermandades', '']] }));
 }
