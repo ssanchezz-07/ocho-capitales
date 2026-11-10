@@ -337,6 +337,365 @@
    ],
    "fuentes": ["https://malagaguia.com/agenda/viernes-de-dolores-2026-horarios-traslados-procesiones-no-agrupadas/"
    ]
+  },
+  "la-borriquilla-jaen": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Salud entrando en Jerusalén. Lo llevan 80 costaleros."], ["Paso de la Virgen", "María Santísima de la Paz, con 60 costaleros."]
+   ],
+   "cortejo": "Momentos propios: la Llamá, la entrega de palmas a las Hermanitas de los Pobres en la calle Almenas y la subida de la cuesta de Belén.",
+   "fuentes": ["https://web.archive.org/web/20260124063616/https://cofradiasjaen.org/borriquilla/"
+   ]
+  },
+  "santa-cena-jaen": {
+   "pasos": [ ["Paso de misterio", "Jesús Salvador en su Santa Cena. Lo llevan 120 costaleros, 50 por turno."], ["Paso de palio", "María Santísima de la Caridad y Consolación, con 64 costaleros, 30 por turno."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20260124065637/https://cofradiasjaen.org/santa-cena/"
+   ]
+  },
+  "la-estrella-jaen": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Piedad en su Sagrada Presentación al Pueblo. En la delantera, la trasera y los laterales lleva cuatro capillas con Cristo Rey, San Félix de Cantalicio, San Eufrasio y Santo Domingo de Guzmán, por las sedes que ha tenido la hermandad. Dos turnos de 40 costaleros."], ["Paso de palio", "María Santísima de la Estrella, con dos turnos de 35 costaleros."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251117120000/https://cofradiasjaen.org/piedad-y-estrella/"
+   ]
+  },
+  "el-huerto-vera-cruz-jaen": {
+   "pasos": [ ["Paso de misterio", "Jesús Orando en el Huerto, del grupo de la Santa Agonía hecho en Valencia en 1918 sobre el modelo de Francisco Salzillo (1754); Juan Abascal le talló una cabeza nueva en 1971. Trono de Francisco Palma Burgos (1954). Lo llevan 80 costaleros en dos turnos."], ["Paso de la Virgen", "María Santísima de los Desamparados, en un trono de Orfebrería Tuccitana (2007). La llevan 90 costaleros en tres turnos de 30: dos de mujeres y uno de hombres."]
+   ],
+   "cortejo": "La Guardia Civil, hermano mayor honorario desde la posguerra, escolta cada año los pasos.",
+   "fuentes": ["https://web.archive.org/web/20260312004707/https://cofradiasjaen.org/oracion-en-el-huerto/"
+   ]
+  },
+  "la-amargura-jaen": {
+   "pasos": [ ["Paso de misterio", "Nuestro Señor de la Pasión Despojado de sus Vestiduras."], ["Paso de palio", "María Santísima de la Amargura, Madre de la Iglesia. Su palio fue el primer paso de Jaén que se adaptó al costal."]
+   ],
+   "cortejo": "La hermandad cuenta con 180 costaleros.",
+   "fuentes": ["https://web.archive.org/web/20251028040928/https://cofradiasjaen.org/amargura/"
+   ]
+  },
+  "los-estudiantes-jaen": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de las Misericordias, el «Cristo del Bambú», propiedad de la comunidad de clarisas. Lo llevan 44 costaleros."], ["Paso de la Virgen", "Nuestra Señora de las Lágrimas, con 32 costaleros."]
+   ],
+   "cortejo": "A la salida, la Tuna Universitaria ronda a Nuestra Señora de las Lágrimas en la plaza de la Merced.",
+   "fuentes": ["https://web.archive.org/web/20251117133030/https://cofradiasjaen.org/estudiantes/"
+   ]
+  },
+  "la-clemencia-jaen": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Caída."], ["Paso de Cristo", "Santísimo Cristo de la Clemencia, con Santa María Magdalena al pie de la cruz (atribuida a Mateo de Medina, siglo XVIII)."], ["Paso de la Virgen", "María Santísima del Mayor Dolor, con San Juan Evangelista (anónimo del siglo XVIII)."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251117123425/https://cofradiasjaen.org/clemencia/"
+   ]
+  },
+  "el-silencio-jaen": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Humildad, a costal, con una cuadrilla de 32 costaleros."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20260124044656/https://cofradiasjaen.org/humildad-y-silencio/"
+   ]
+  },
+  "el-perdon-jaen": {
+   "pasos": [ ["Paso de misterio", "Cristo del Amor en su Prendimiento, con 130 costaleros."], ["Paso de Cristo", "Jesús del Perdón, con 80 costaleros."], ["Paso de palio", "María Santísima de la Esperanza, con 140 costaleros."]
+   ],
+   "cortejo": "Varios internos de la prisión hacen la estación de penitencia con la hermandad, y las Hermanitas de los Pobres la reciben en la calle Madre Soledad Torres Acosta.",
+   "fuentes": ["https://web.archive.org/web/20251117132325/https://cofradiasjaen.org/perdon/"
+   ]
+  },
+  "la-buena-muerte-jaen": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte, crucificado sobre una cruz de nogal. Lo llevan 100 anderos."], ["Paso de misterio", "Cristo Descendido de la Cruz, grupo de Víctor de los Ríos (1959): Nicodemo en la escalera, Jesús muerto en brazos de San Juan y José de Arimatea, María Magdalena, una de las santas mujeres y la Virgen. Lo llevan 100 anderos."], ["Paso de la Virgen", "Nuestra Señora de las Angustias, con su Hijo en el regazo y dos ángeles plañideros que llevan el martillo y las tenazas en metal plateado. La llevan 70 anderos."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251216125541/https://cofradiasjaen.org/buena-muerte/"
+   ]
+  },
+  "la-vera-cruz-los-civiles-jaen": {
+   "pasos": [ ["Paso de Cristo", "Jesús Preso, en el paso que hizo Emilio Pizarro de la Cruz en 1903 para el Baratillo de Sevilla; la congregación lo compró en 1944 y lo reformó Antonio Sánchez González (1967-1969)."], ["Paso de Cristo", "Santísimo Cristo de la Vera Cruz, en un trono de Antonio Sánchez González (1958-1959)."], ["Paso de palio", "María Santísima de los Dolores, en un paso de plata de ley de los talleres Villarreal (1961), con 67 kilos de plata y escenas de la vida de la Virgen; candelabros de Angulo (1998), candelería de Orovio de la Torre (2002) y palio y bambalinas de Bordados Padilla (1955)."]
+   ],
+   "cortejo": "La Guardia Civil, hermano mayor honorario desde la posguerra, escolta cada año los pasos.",
+   "fuentes": ["https://web.archive.org/web/20251216125242/https://cofradiasjaen.org/vera-cruz/"
+   ]
+  },
+  "la-expiracion-jaen": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Expiración, con un arcángel tenante de José Antonio Navarro Arteaga (2002). Respiraderos de Hijos de Juan Fernández y canasto y candelabros de Orfebrería Andaluza (Manuel de los Ríos). Tres turnos de 32 costaleros."], ["Paso de palio", "María Santísima de las Siete Palabras, con respiraderos y varales de Hijos de Juan Fernández, orfebrería de Manuel de los Ríos, peana de Villarreal y palio con bambalinas bordadas en oro por Pedro Palenciano. Lo llevan 36 costaleros."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20260124045016/https://cofradiasjaen.org/expiracion/"
+   ]
+  },
+  "el-santo-sepulcro-jaen": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Calvario, con San Juan Evangelista y los ladrones Dimas y Gestas (atribuidos a Sebastián de Solís, hacia 1579) y Santa María del Silencio (atribuida a José de Medina, mediados del siglo XVIII)."], ["Paso del Sepulcro", "Cristo muerto en el Sepulcro (Juan Abascal Fuentes, 1965), en una urna barroca anónima del siglo XVIII."], ["Paso de palio", "Nuestra Señora de los Dolores. Fue la primera hermandad de Jaén con paso de palio, desde 1928."]
+   ],
+   "fuentes": ["https://web.archive.org/web/20251216121355/https://cofradiasjaen.org/sepulcro/"
+   ]
+  },
+  "bendicion-y-esperanza-sevilla": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Bendición en el Santo Encuentro con la Virgen de la Esperanza en su Soledad, en la calle de la Amargura, con María Magdalena, San Juan, dos soldados romanos y un judío."]
+   ],
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_Bendici%C3%B3n_y_Esperanza"
+   ]
+  },
+  "pino-montano-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de Nazaret, en el misterio del Prendimiento según San Marcos. La hermandad trabaja en un paso de misterio nuevo."], ["Paso de palio", "María Santísima del Amor, en un palio de plata."]
+   ],
+   "cortejo": "Unos 800 nazarenos.",
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_Pino_Montano_(Sevilla)"
+   ]
+  },
+  "la-mision-sevilla": {
+   "pasos": [ ["Paso de misterio", "Santo Cristo de la Misión en su encuentro con las Santas Mujeres de Jerusalén en la calle de la Amargura, con San Juan Evangelista y Nuestra Señora del Amparo."]
+   ],
+   "cortejo": "Unos 500 nazarenos, con muchos jóvenes del Colegio Claret en los primeros tramos.",
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_la_Misi%C3%B3n_(Sevilla)"
+   ]
+  },
+  "bellavista-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Salud y Remedios."], ["Paso de palio", "María Santísima del Dulce Nombre en sus Dolores y Compasión, bajo palio de terciopelo azul liso."]
+   ],
+   "cortejo": "Unos 500 nazarenos. Desde 2026 sale del interior de la parroquia del Sagrado Corazón, por una puerta abierta en un muro lateral, y ya no desde una carpa.",
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_Bellavista"
+   ]
+  },
+  "cristo-de-la-corona-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Corona, en un paso de diseño renacentista de Antonio Dubé de Luque, en madera color caoba con relieves en bronce, completado por fases entre 2022 y 2024."]
+   ],
+   "cortejo": "Unos 60 nazarenos, con capilla musical y escolanía.",
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_del_Cristo_de_la_Corona_(Sevilla)"
+   ]
+  },
+  "pasion-y-muerte-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Cristo de Pasión y Muerte, en una canastilla neobarroca de Manuel Toledano (2009). El palio de la Virgen del Desconsuelo y Visitación está aprobado, pero aún no se ha hecho."]
+   ],
+   "cortejo": "Cofradía de silencio: unos 100 nazarenos de ruan negro con cera morada y solo una capilla musical.",
+   "fuentes": ["https://lavozdesevilla.es/viernes-dolores-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_Pasi%C3%B3n_y_Muerte_(Sevilla)"
+   ]
+  },
+  "padre-pio-sevilla": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Salud y Clemencia."], ["Paso de palio", "Santísima Virgen de la Divina Gracia."]
+   ],
+   "cortejo": "Unos cien nazarenos, con túnica y capa color marfil y antifaz burdeos.",
+   "fuentes": ["https://lavozdesevilla.es/sabado-pasion-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_Padre_P%C3%ADo"
+   ]
+  },
+  "san-jose-obrero-sevilla": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Caridad con Simón de Cirene, primera obra de Fernando José Aguado Hernández."], ["Paso de palio", "La Virgen de los Dolores."]
+   ],
+   "cortejo": "Unos 400 nazarenos, de túnica y antifaz azules con capa blanca.",
+   "fuentes": ["https://lavozdesevilla.es/sabado-pasion-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_San_Jos%C3%A9_Obrero"
+   ]
+  },
+  "la-milagrosa-sevilla": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Esperanza en el Puente Cedrón."], ["Paso de palio", "Virgen del Rosario."]
+   ],
+   "cortejo": "Unos 500 nazarenos, de blanco con escapulario verde.",
+   "fuentes": ["https://lavozdesevilla.es/sabado-pasion-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_la_Milagrosa"
+   ]
+  },
+  "dolores-de-torreblanca-sevilla": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús Cautivo ante Pilato, en un paso neobarroco en cedro de Pedro M. Benítez Carrión."], ["Paso de palio", "María Santísima de los Dolores. La hermandad termina un paso de palio nuevo."]
+   ],
+   "cortejo": "Unos 850 nazarenos.",
+   "fuentes": ["https://lavozdesevilla.es/sabado-pasion-sevilla-2026/", "https://es.wikipedia.org/wiki/Hermandad_de_los_Dolores_de_Torreblanca"
+   ]
+  },
+  "divino-perdon-sevilla": {
+   "pasos": [ ["Paso de misterio", "Jesús del Divino Perdón, grupo de José Antonio Navarro Arteaga estrenado en 2025, con el paso de los Hermanos Caballero aún en ejecución."], ["Paso de palio", "Virgen de la Purísima Concepción."]
+   ],
+   "fuentes": ["https://es.wikipedia.org/wiki/Hermandad_del_Divino_Perd%C3%B3n"
+   ]
+  },
+  "servitas-cadiz": {
+   "pasos": [ ["Paso de palio", "María Santísima de los Dolores, con orfebrería de Seco Velasco y Villarreal y, en el respiradero frontal, la Virgen servita italiana llamada «Madonna». Palio de terciopelo negro bordado en oro por Esperanza Elena Caro (1943) y manto del siglo XIX, restaurado en 2002 por Juan Carlos Romero y Abelardo Santiago."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/servitas-cadiz/"
+   ]
+  },
+  "merced-obediencia-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno de la Obediencia."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/merced-3/"
+   ]
+  },
+  "la-borriquita-cadiz": {
+   "pasos": [ ["Paso de misterio", "Jesús de la Paz en su Entrada en Jerusalén."], ["Paso de la Virgen", "María Santísima del Amparo, «la Guapa de Cádiz»."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/la-paz/"
+   ]
+  },
+  "el-despojado-cadiz": {
+   "pasos": [ ["Paso de misterio", "Jesús del Amor Despojado, sobre el antiguo paso del Santísimo Cristo de la Misericordia, que la comunidad salesiana compró para la procesión de San Juan Bosco. El artista Francisco Oliva León hará un paso nuevo para el misterio."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/despojado/"
+   ]
+  },
+  "sagrada-cena-cadiz": {
+   "pasos": [ ["Paso de misterio", "Jesús del Milagro en la Sagrada Cena con el apostolado, en el momento en que Cristo, instaurada la Eucaristía, anuncia la traición de uno de los apóstoles."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/sagrada-cena/"
+   ]
+  },
+  "las-penas-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de las Penas. El taller de Juan Carlos García Díaz (San Fernando) hace un paso nuevo, con canasto «de bombo» y 54 puntos de luz; los candelabros de las esquinas son los del paso anterior, de Manuel Guzmán Bejarano."], ["Paso de palio", "María Santísima de la Caridad, con respiraderos de Angulo (1964) y varales, candelabros y jarras de Villarreal, de 1980 en adelante."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/las-penas/"
+   ]
+  },
+  "humildad-y-paciencia-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Humildad y Paciencia, en un paso barroco de Juan Pérez Calvo (1953), con talla y dorado de Fernández del Toro, restaurado para 1996."], ["Paso de palio", "Nuestra Señora de la Amargura, en un paso de palio de 1953-1955 con orfebrería de Jesús Domínguez Vázquez. Palio y manto bordados en oro sobre terciopelo carmesí en el taller del colegio San Martín (1955-1959), con diseño de Juan Pérez Calvo."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/humildad-y-paciencia/"
+   ]
+  },
+  "la-palma-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Misericordia, en un paso barroco del taller de Antonio Martín estrenado en 2003, con ebanistería de Francisco Bailac, iconografía de Luis González Rey y la de Buiza del paso anterior, y seis candelabros de guardabrisas."], ["Paso de palio", "María Santísima de las Penas Coronada, con respiraderos y varales de Hijos de Juan Fernández y un techo y unas bambalinas de palio bordados por Juan Manuel Rodríguez Ojeda, que vinieron de los Negritos de Sevilla."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/la-palma/"
+   ]
+  },
+  "el-prendimiento-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús en su Prendimiento, en un paso de los talleres de Manuel Castillo (Puerto Real), estrenado en 2015 en su primera fase."], ["Paso de palio", "María Santísima del Patrocinio, en un paso de estilo sevillano en metal plateado, con orfebrería de José Luis Jiménez González y palio de terciopelo celeste bordado en la propia hermandad, con diseño de Juan Antonio Verdía y la Divina Pastora en la gloria. Cada varal lleva cuatro campanillas que suenan cuando los cargadores mecen el palio."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/prendimiento/"
+   ]
+  },
+  "nazareno-del-amor-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno del Amor."], ["Paso de la Virgen", "Nuestra Señora de la Esperanza."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/nazareno-del-amor/"
+   ]
+  },
+  "vera-cruz-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Vera+Cruz, en un paso rococó cuya iconografía gira en torno a la verdadera cruz; en las esquinas del canasto, cuatro santos relacionados con la Pasión."], ["Paso de palio", "Nuestra Señora de la Soledad, con canastilla de metal plateado de estilo rocalla, varales salomónicos y respiraderos de Seco Velasco (1946), jarras (1984) y candelabros (1993) de Manuel de los Ríos, y palio y manto bordados en plata sobre terciopelo negro en el taller de Adela Medina (1948)."]
+   ],
+   "cortejo": "Cuatro hermanos con cirios escoltan la cruz de guía, rococó del siglo XVIII, y delante de ella va una capilla musical.",
+   "fuentes": ["https://consejocofradiascadiz.es/vera-cruz/"
+   ]
+  },
+  "la-sanidad-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Mayor Dolor, en un paso barroco de madera tallada, policromada y dorada; la canastilla lleva los escudos de la parroquia de Santa Cruz y de la Sanidad Nacional, la enfermería, los ayudantes técnicos sanitarios, la farmacia y la medicina, y lo alumbran cuatro faroles."], ["Paso de palio", "María Santísima de la Salud, con orfebrería de metal plateado que fue de La Palma y candelabros de cola de Jesús Domínguez (1979)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/sanidad/"
+   ]
+  },
+  "la-piedad-cadiz": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo de la Piedad, con la Virgen de la Consolación, Madre de la Iglesia (Luis González Rey, 1997), San Juan (1958) y la Magdalena (1960) de Francisco Buiza, en un paso neorrenacentista de cedro oscuro de Antonio Velázquez (1991)."], ["Paso de palio", "María Santísima de las Lágrimas, en un paso renacentista estrenado en 1997, con orfebrería de Manuel de los Ríos y varales que fueron de la Buena Muerte. En el frontal, un relieve que recuerda el cuadro de la Santísima Trinidad de la iglesia de Santiago, apuñalado en el asalto inglés a Cádiz."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/piedad/"
+   ]
+  },
+  "jesus-caido-el-senor-del-parque-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Caído. El taller de Juan Carlos García Díaz (San Fernando) hace su paso nuevo, con orfebrería de Ramos Espinosa."], ["Paso de la Virgen", "María Santísima de los Desamparados, sin palio, en un paso renacentista de los talleres Ramos Espinosa (1999-2000), con las letanías en la cartela central, la Virgen del Pilar en el paño central y una imagen del Rosario en la peana."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/jesus-caido/"
+   ]
+  },
+  "ecce-homo-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús del Ecce-Homo, en un paso estrenado en 2003 en su primera fase, con ebanistería de Juan Amador García Casas (La Rambla) y seis candelabros de guardabrisas."], ["Paso de palio", "María Santísima de las Angustias, con techo y bambalinas de malla de plata (diseño de Antonio Accame, bordado de las Filipenses de Santa Isabel de Sevilla), manto y faldones de terciopelo azul y orfebrería de Emilio Landa (1952)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/ecce-homo/"
+   ]
+  },
+  "la-columna-cadiz": {
+   "pasos": [ ["Paso de misterio", "Jesús atado a la Columna y Azotes, «el Aguador», en un paso que talla Manuel Montañez desde 2007, con cartelas de Luis González Rey y ángeles de Ana Rey en el frontal."], ["Paso de palio", "María Santísima de las Lágrimas, la primera dolorosa que salió bajo palio en Cádiz (1925). Respiraderos y peana de Seco Velasco, varales de Villarreal, candelabros de cola y candelería de Hijos de Juan Fernández y bambalinas bordadas por Jaime Zaragoza."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/columna/"
+   ]
+  },
+  "las-cigarreras-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Salud, coronado de espinas, con dos soldados romanos y un sayón de Pérez Eslava retocados por Bonilla (1994), en un paso barroco tallado por Manuel Guzmán Bejarano (1994) y dorado por Serafín Jiménez (hasta 1997), con seis candelabros de guardabrisas."], ["Paso de palio", "María Santísima de la Esperanza, con respiraderos de Hijos de Juan Fernández (1984) y la Virgen del Rosario en el frontal, varales y peana de Antonio Santos (2000), y bambalinas, manto y techo de palio bordados por Ildefonso Jiménez (Jerez), con la Virgen del Amor Hermoso en la gloria."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/cigarreras/"
+   ]
+  },
+  "la-sentencia-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Sentencia, en un paso barroco de grandes dimensiones, con canasto de bombo, respiraderos dorados y seis candelabros de guardabrisas."], ["Paso de palio", "María Santísima del Buen Fin, en un paso de Jesús Domínguez estrenado en 1962, con palio diseñado por David Calleja y bordado por Juana Calleja (2001-2006) y la primera fase de una candelería de Ildefonso Oñate (2015)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/sentencia/"
+   ]
+  },
+  "las-aguas-cadiz": {
+   "pasos": [ ["Paso de San Juan", "San Juan Evangelista (Antonio Eslava Rubio, 1951), en un paso pequeño tallado por Antonio Martín (1976)."], ["Paso de misterio", "Santísimo Cristo de las Aguas, con un ángel que recoge su sangre en un cáliz (Antonio Eslava Rubio, 1954), San Juan (Francisco Buiza, terminado por Francisco Berlanga), María Santísima de Guadalupe y San Longinos a caballo (Francisco Javier Navarro Moragas, 1995), en un paso barroco con cartelas de Luis Ortega Bru."], ["Paso de palio", "La Virgen de la Luz, bajo palio, con candelabros de cola de Villarreal (1965)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/las-aguas/"
+   ]
+  },
+  "el-caminito-cadiz": {
+   "pasos": [ ["Paso de la Virgen", "Nuestra Señora de las Angustias con su Hijo, en el único paso de la hermandad, tallado por José Vera (1945), con pinturas de los Dolores de la Virgen de Rafael del Águila en el canasto, candelabros de Villarreal (1975) y una cruz de Francisco González Campos (1980). La Virgen, de talla completa, lleva un manto negro bordado en oro en los talleres de San Martín (1958)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/el-caminito/"
+   ]
+  },
+  "los-afligidos-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de los Afligidos en su encuentro con María Santísima de los Desconsuelos camino del Calvario, con el Cirineo, San Juan, María Magdalena y la Verónica, que se sumó al misterio en 1974. Es un paso barroco, dorado y estofado, el primero de este estilo en Cádiz: llegó con trabajaderas sevillanas, que se cambiaron por palos para cargarlo al hombro. Está catalogado como bien de interés cultural."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/afligidos/"
+   ]
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "pasos": [ ["Paso de misterio", "Nuestro Padre Jesús de la Oración en el Huerto, con el ángel y, desde 1995, los tres apóstoles dormidos: San Pedro, San Juan y Santiago."], ["Paso de palio", "Nuestra Señora de Gracia y Esperanza."]
+   ],
+   "cortejo": "Acompaña a la Virgen un grupo de hermanas con mantilla.",
+   "fuentes": ["https://consejocofradiascadiz.es/oracion-en-el-huerto/"
+   ]
+  },
+  "medinaceli-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Cautivo y Rescatado, en un paso de plata de ley de Manuel Seco Velasco (1957-1967), con capillas y figuras de marfil en los frentes y las esquinas."], ["Paso de palio", "María Santísima de la Trinidad, en un paso de plata repujada de los talleres de la viuda de Villarreal (1976), al que se añadió el palio en 1992."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/medinaceli/"
+   ]
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús Nazareno, en un paso de cedro de Antonio Díaz Fernández, de los talleres de Santa Clara (1989), con los profetas Isaías, Jeremías, Ezequiel y Daniel en las esquinas del canasto y cuatro angelotes que sostienen faroles de orfebrería inspirados en los del Gran Poder de Sevilla."], ["Paso de palio", "María Santísima de los Dolores, bajo un palio diseñado por Antonio Accame Escassi y bordado por Leopoldo Padilla (1949-1952), con el Corazón de María atravesado por un puñal en la gloria."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/nazareno/"
+   ]
+  },
+  "el-perdon-cadiz": {
+   "pasos": [ ["Paso de misterio", "Santísimo Cristo del Perdón, con Santa María Magdalena (Alfonso Berraquero García, 1984), en un paso de los talleres de Manuel Guzmán Bejarano (1985) con seis candelabros de guardabrisas."], ["Paso de palio", "María Santísima del Rosario en sus Misterios Dolorosos."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/perdon/"
+   ]
+  },
+  "el-descendimiento-cadiz": {
+   "pasos": [ ["Paso de misterio", "Cristo del Descendimiento, con José de Arimatea y Nicodemo subidos en escaleras, las santas mujeres, San Juan y Nuestra Señora de los Dolores, en el único paso que sale por ahora: barroco, de maderas oscuras, tallado por Antonio Velázquez (1979)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/descendimiento/"
+   ]
+  },
+  "la-expiracion-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Expiración, en un paso barroco de Juan Pérez Calvo (1955) con ángeles mancebos de Luis Ortega Bru y canasto de perfil gaditano «de pecho de paloma»."], ["Paso de palio", "María Santísima de la Victoria, bajo un palio de estilo malagueño de los talleres Angulo (1957), con candelería y candelabros de cola de Villarreal."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/expiracion/"
+   ]
+  },
+  "siete-palabras-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Sed, en el único paso que sale, de cedro oscuro y líneas rectas, obra de José Ovando Merino. La hermandad prepara uno nuevo."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/siete-palabras/"
+   ]
+  },
+  "la-buena-muerte-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Santísimo Cristo de la Buena Muerte, en un paso de madera de embero con incrustaciones de orfebrería de los talleres de Manuel Guzmán Bejarano (1977)."], ["Paso de palio", "María Santísima del Mayor Dolor, bajo un palio de cajón con corbatas en los varales del Taller San José de Cádiz (2014)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/buena-muerte/"
+   ]
+  },
+  "ecce-mater-tua-cadiz": {
+   "pasos": [ ["Paso de la Virgen", "La Dolorosa, en el único paso: mesa de madera de ukola de los años setenta, canastilla y tallas restauradas por los hermanos Tamayo (2016), aplicaciones de orfebrería de Seco Velasco y dos hachones delanteros con el escudo."]
+   ],
+   "fuentes": ["https://semanasantacadiz.com/ecce-mater/"
+   ]
+  },
+  "santo-entierro-cadiz": {
+   "pasos": [ ["Paso del Sepulcro", "Cristo yacente, en una urna de plata de Manuel Ramírez (1865) con diseño de Diego María del Valle. Va sobre ruedas, empujada por diez cargadores bajo los faldones."], ["Paso de la Virgen", "Nuestra Señora de la Soledad, sin palio, ante la cruz vacía, con orfebrería de plata de Villarreal (1962)."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/soledad/"
+   ]
+  },
+  "la-resurreccion-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Cristo Resucitado, en un paso barroco de metal plateado y cincelado de los talleres Angulo, con respiraderos de pecho de paloma, donado por un hermano en 1950."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/resucitado/"
+   ]
+  },
+  "humillacion-piedad-cadiz": {
+   "pasos": [ ["Paso de Cristo", "Nuestro Padre Jesús de la Humillación."]
+   ],
+   "fuentes": ["https://consejocofradiascadiz.es/la-palabra-del-periodista-pablo-manuel-durio-anuncia-ya-una-nueva-semana-santa"
+   ]
   }
  }
 }

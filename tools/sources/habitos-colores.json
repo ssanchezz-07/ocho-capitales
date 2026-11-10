@@ -285,7 +285,7 @@
   "padre-pio-sevilla": [[null, {"túnica": "marfil", "capa": "marfil", "antifaz": "burdeos"}]],
   "san-jose-obrero-sevilla": [[null, {"túnica": "azul marino", "botonadura": "azul marino", "antifaz": "azul marino", "capa": "blanco"}]],
   "la-milagrosa-sevilla": [[null, {"túnica": "blanco", "antifaz": "blanco", "escapulario": "verde"}]],
-  "dolores-de-torreblanca-sevilla": [[null, {"túnica": "morado", "capa": "blanco", "antifaz": "morado"}]],
+  "dolores-de-torreblanca-sevilla": [[null, {"túnica": "morado", "antifaz": "morado", "capa": "blanco", "botonadura": "blanco", "cíngulo": "blanco"}]],
   "divino-perdon-sevilla": [[null, {"túnica": "morado", "capa": "negro", "antifaz": "morado"}]],
   "el-sol-sevilla": [[null, {"túnica": "verde", "antifaz": "verde"}]],
   "los-gitanos-sevilla": [[null, {"túnica": "blanco", "cíngulo": "morado", "botonadura": "morado", "capa": "blanco", "antifaz": "morado"}]],
