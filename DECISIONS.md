@@ -20,6 +20,7 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
     - Al cerrar, se fija lo mismo que al abrir, porque la rejilla de Noticias cambia de columnas.
     - Comprobado en la ficha y en Noticias bajando 900, 1800 y 3000 px: 0 px de salto.
   - Las flechas del carrusel miden 44 px, y el texto de las tarjetas de Juegos va arriba.
+  - Con el teclado, el chip que recibe el foco se desplaza hasta verse entero, fuera del borde desvanecido y de la flecha; en PC el carrusel va sin imán (`scroll-snap`). El desvanecido es solo de PC y el móvil queda como estaba (auditor-web, NO APTO; arreglado).
   - Volver arriba queda en el hueco entre el contenido y el panel.
   - En Juegos, las tarjetas de una fila tienen el mismo alto, y la que queda sola en la última fila la ocupa entera, también en tablet.
 - **Auditoría (auditor-web, NO APTO; arreglado)**:

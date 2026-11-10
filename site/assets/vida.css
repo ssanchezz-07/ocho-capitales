@@ -109,9 +109,14 @@ a { text-underline-offset: .18em; }
 /* Los chips siguen en carrusel también en PC: en varias líneas la barra fija ocupaba un tercio de la pantalla (auditoría de
    diseño del 10-nov). Para que no parezcan cortados en seco («Agend…», barrido del 9-nov), site.js marca por qué lado siguen
    (is-mas-d / is-mas-i): ese borde se desvanece y, con ratón, sale una flecha que avanza el carrusel. */
-.nx-chips.is-mas-d { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 56px), transparent); }
-.nx-chips.is-mas-i { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px); mask-image: linear-gradient(90deg, transparent, #000 56px); }
-.nx-chips.is-mas-i.is-mas-d { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); }
+/* solo en PC (en el móvil el carrusel se desliza con el dedo y queda como estaba); sin imán, para que el foco del teclado y las
+   flechas lo dejen donde toca */
+@media (min-width: 761px) {
+  .nx-filtros .nx-chips { scroll-snap-type: none; }
+  .nx-chips.is-mas-d { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 56px), transparent); }
+  .nx-chips.is-mas-i { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px); mask-image: linear-gradient(90deg, transparent, #000 56px); }
+  .nx-chips.is-mas-i.is-mas-d { -webkit-mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(90deg, transparent, #000 56px, #000 calc(100% - 56px), transparent); }
+}
 .nx-con-flechas { position: relative; }
 .nx-flecha { position: absolute; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface); color: var(--ink); box-shadow: 0 4px 12px -6px rgb(10 3 16 / .45); cursor: pointer; transition: border-color var(--m-rapido) var(--e-salida), transform var(--m-toque) var(--e-salida); }
 .nx-flecha:hover { border-color: var(--primary); }
