@@ -2937,26 +2937,26 @@
   },
   "la-sed-sevilla": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg",
-    "titulo": "File:Paso del Cristo de la Sed Semana Santa 2026.jpg",
-    "autor": "Cofrades 2020 sevilla",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "autor": "La Sed (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadsed/",
+    "local": "scripts/cedidas/sevilla/la-sed-sevilla-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Sed",
     "titular": "Santísimo Cristo de la Sed",
-    "recorte": [
-     0.36,
-     0.12,
-     0.24,
-     0.42
-    ]
+    "foco": "50% 12%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadsed (https://www.instagram.com/p/DfQKfmREaOF/, imagen 2), sin fotógrafo citado, coautor ni firma. Bio «CUENTA OFICIAL». Recortada al Cristo en su retablo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta sacada de las pistas de Pablo del 10-nov («los ig son para que se busquen las fotos») y confirmada como oficial."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_la_Consolaci%C3%B3n_de_la_Sed_Semana_Santa_2026.jpg",
-    "titulo": "File:Palio de la Virgen de la Consolación de la Sed Semana Santa 2026.jpg",
-    "autor": "Cofrades 2020 sevilla",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "titular": "María Santísima de Consolación"
+    "autor": "La Sed (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadsed/",
+    "local": "scripts/cedidas/sevilla/la-sed-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Consolación",
+    "titular": "María Santísima de Consolación",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadsed (https://www.instagram.com/p/DfQKfmREaOF/, imagen 1), sin fotógrafo citado, coautor ni firma. Bio «CUENTA OFICIAL». Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta sacada de las pistas de Pablo del 10-nov («los ig son para que se busquen las fotos») y confirmada como oficial."
    }
   },
   "san-bernardo-sevilla": {
@@ -3835,6 +3835,17 @@
     "titular": "María Santísima del Rosario en sus Misterios Dolorosos",
     "foco": "55% 33%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial @sacramentalsagradacena (bio «Perfil oficial», enlaza hermandadsagradacenahuelva.es; https://www.instagram.com/p/DfMTsOKkf-8/, imagen 5), sin fotógrafo citado ni firma. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "cristo": {
+    "autor": "Sagrada Cena (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentalsagradacena/",
+    "local": "scripts/cedidas/huelva/la-sagrada-cena-huelva-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo del Amor",
+    "titular": "Santísimo Cristo del Amor",
+    "foco": "48% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @sacramentalsagradacena (https://www.instagram.com/p/Da5M6_tiLbw/, imagen 2), sin fotógrafo citado, coautor ni firma. Bio «Perfil oficial». Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "la-santa-cruz-huelva": {
@@ -5438,6 +5449,17 @@
     "titular": "María Santísima del Dulce Nombre",
     "foco": "50% 48%",
     "permiso": "Publicada por la propia hermandad en @hdadredencionhuelva (https://www.instagram.com/p/DXjBSIMDRVC/, imagen 2), sin fotógrafo citado, coautor ni firma. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
+   },
+   "cristo": {
+    "autor": "La Redención (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadredencionhuelva/",
+    "local": "scripts/cedidas/huelva/la-redencion-huelva-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Redención",
+    "titular": "Nuestro Padre Jesús de la Redención",
+    "foco": "45% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadredencionhuelva (https://www.instagram.com/p/DXYuIa7gp9k/, imagen 3), sin fotógrafo citado, coautor ni firma. Bio «Perfil oficial». El pie nombra solo al vestidor. Recortada por abajo para quitar el logo de la hermandad. Pablo, 9-nov: «Para huelva entra al instagram de cada hermandad y busca las fotos sin creditos solo de la hermandad»."
    }
   },
   "el-resucitado-huelva": {

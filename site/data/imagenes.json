@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T18:07:53.403Z",
+ "generado": "2026-11-10T18:41:18.616Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -7810,39 +7810,41 @@
   },
   "la-sed-sevilla": {
    "cristo": {
-    "w": 960,
-    "h": 1265,
+    "w": 677,
+    "h": 960,
     "widths": [
      160,
      480,
-     960
+     677
     ],
     "escudo": false,
-    "autor": "Cofrades 2020 sevilla",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Cristo_de_la_Sed_Semana_Santa_2026.jpg",
-    "recorte": [
-     0.36,
-     0.12,
-     0.24,
-     0.42
-    ],
+    "autor": "La Sed (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadsed/",
+    "foco": "50% 12%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-sed-sevilla-cristo.jpg",
+    "tam": 107235,
     "titular": "Santísimo Cristo de la Sed"
    },
    "virgen": {
     "w": 960,
-    "h": 723,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Cofrades 2020 sevilla",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_la_Virgen_de_la_Consolaci%C3%B3n_de_la_Sed_Semana_Santa_2026.jpg",
+    "autor": "La Sed (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadsed/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/la-sed-sevilla-virgen.jpg",
+    "tam": 714302,
     "titular": "María Santísima de Consolación"
    }
   },
@@ -9283,6 +9285,25 @@
     "local": "scripts/cedidas/huelva/la-sagrada-cena-huelva-virgen.jpg",
     "tam": 816871,
     "titular": "María Santísima del Rosario en sus Misterios Dolorosos"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Sagrada Cena (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sacramentalsagradacena/",
+    "foco": "48% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-sagrada-cena-huelva-cristo.jpg",
+    "tam": 205662,
+    "titular": "Santísimo Cristo del Amor"
    }
   },
   "la-santa-cruz-huelva": {
@@ -11987,6 +12008,25 @@
     "local": "scripts/cedidas/huelva/la-redencion-huelva-virgen.jpg",
     "tam": 628356,
     "titular": "María Santísima del Dulce Nombre"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1008,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Redención (Huelva)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadredencionhuelva/",
+    "foco": "45% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/huelva/la-redencion-huelva-cristo.jpg",
+    "tam": 321165,
+    "titular": "Nuestro Padre Jesús de la Redención"
    }
   },
   "el-resucitado-huelva": {
@@ -13444,6 +13484,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Buen_Viaje.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Desamparados_(San_Esteban).jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "la-sed-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hermandadsed/\"|\"scripts/cedidas/sevilla/la-sed-sevilla-cristo.jpg\"|107235|\"\"|\"50% 12%\"|\"https://www.instagram.com/hermandadsed/\"|\"scripts/cedidas/sevilla/la-sed-sevilla-virgen.jpg\"|714302|\"\"|\"50% 25%\"|\"\"|\"\""
+  },
   "el-buen-fin-sevilla": {
    "w": 960,
    "h": 640,
@@ -13643,6 +13693,16 @@
     960
    ],
    "firma": "\"https://consejocofradiascadiz.es/soledad/\"|\"scripts/cedidas/cadiz/santo-entierro-cadiz-cristo.jpg\"|675129|\"\"|\"5% 50%\"|\"https://consejocofradiascadiz.es/soledad/\"|\"scripts/cedidas/cadiz/santo-entierro-cadiz-virgen.jpg\"|515071|\"\"|\"50% 30%\"|\"\"|\"\""
+  },
+  "la-sagrada-cena-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/sacramentalsagradacena/\"|\"scripts/cedidas/huelva/la-sagrada-cena-huelva-cristo.jpg\"|205662|\"\"|\"48% 22%\"|\"https://www.instagram.com/sacramentalsagradacena/\"|\"scripts/cedidas/huelva/la-sagrada-cena-huelva-virgen.jpg\"|816871|\"\"|\"55% 33%\"|\"\"|\"\""
   },
   "la-victoria-huelva": {
    "w": 960,
@@ -14163,6 +14223,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/prendimientoyestrellahuelva/\"|\"scripts/cedidas/huelva/el-prendimiento-huelva-cristo.jpg\"|1430453|\"\"|\"70% 40%\"|\"https://www.instagram.com/prendimientoyestrellahuelva/\"|\"scripts/cedidas/huelva/el-prendimiento-huelva-virgen.jpg\"|853518|\"\"|\"45% 45%\"|\"\"|\"\""
+  },
+  "la-redencion-huelva": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadredencionhuelva/\"|\"scripts/cedidas/huelva/la-redencion-huelva-cristo.jpg\"|321165|\"\"|\"45% 30%\"|\"https://www.instagram.com/hdadredencionhuelva/\"|\"scripts/cedidas/huelva/la-redencion-huelva-virgen.jpg\"|628356|\"\"|\"50% 48%\"|\"\"|\"\""
   },
   "el-resucitado-huelva": {
    "w": 960,
