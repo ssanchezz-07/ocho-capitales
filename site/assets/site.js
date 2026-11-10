@@ -1296,6 +1296,7 @@
     // con el teclado, el chip que recibe el foco se ve entero, fuera del borde desvanecido y de la flecha (auditoría del 10-nov)
     u.addEventListener('focusin', function (ev) {
       if (u.scrollWidth <= u.clientWidth + 2) return;
+      try { if (!ev.target.matches(':focus-visible')) return; } catch (e) { } // solo con teclado: al tocarlo en Android no se mueve
       var r = ev.target.getBoundingClientRect(), c = u.getBoundingClientRect(), m = 60, d = 0;
       if (r.right > c.right - m) d = r.right - (c.right - m); else if (r.left < c.left + m) d = r.left - (c.left + m);
       if (d) u.scrollBy({ left: d, behavior: reduced ? 'auto' : 'smooth' });
