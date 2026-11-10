@@ -56,7 +56,8 @@
   "Virgen_Desamparados.jpg": "Palio con la candelería delante: no se ve a la Virgen. (antes retirada solo en penas-de-santiago-cordoba|virgen)",
   "Palio_de_Nuestra_Señora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg": "Palio de lejos: no se ve a la Virgen. (antes retirada solo en el-prendimiento-cordoba|virgen)",
   "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg": "Original pequeño (menos de 480 px): no da la calidad. (antes retirada solo en la-piedad-cordoba|virgen)",
-  "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG": "El Cristo sale pequeño al fondo del templo, detrás del paso. (antes retirada solo en la-buena-muerte-cordoba|cristo)"
+  "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG": "El Cristo sale pequeño al fondo del templo, detrás del paso. (antes retirada solo en la-buena-muerte-cordoba|cristo)",
+  "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg": "Lleva la marca de agua de otra persona («M.A. Torres») y quien la sube dice que es obra suya: licencia dudosa. (antes retirada solo en presentacion-al-pueblo-cordoba|cristo)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -442,10 +443,6 @@
   "la-esperanza-cordoba|ficha": {
    "archivo": "Esperanzacordoba.jpg",
    "motivo": "La misma foto."
-  },
-  "presentacion-al-pueblo-cordoba|cristo": {
-   "archivo": "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",
-   "motivo": "Lleva la marca de agua de otra persona («M.A. Torres») y quien la sube dice que es obra suya: licencia dudosa."
   },
   "presentacion-al-pueblo-cordoba|ficha": {
    "archivo": "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",

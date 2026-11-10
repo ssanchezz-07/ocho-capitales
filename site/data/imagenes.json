@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T05:33:48.875Z",
+ "generado": "2026-11-10T05:39:34.500Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -10829,20 +10829,23 @@
   },
   "presentacion-al-pueblo-cordoba": {
    "cristo": {
-    "w": 960,
-    "h": 1440,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     960
+     800
     ],
     "escudo": false,
-    "autor": "Cofraderuan",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",
-    "foco": "50% 20%",
-    "titular": "Nuestro Padre Jesús de los Afligidos"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/",
+    "foco": "65% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/presentacion-al-pueblo-cordoba-cristo.jpg",
+    "tam": 158548,
+    "titular": "Nuestro Padre Jesús de los Afligidos en su Sagrada Presentación al Pueblo"
    }
   },
   "la-columna-cadiz": {
@@ -12226,6 +12229,86 @@
     "local": "scripts/cedidas/cordoba/santo-sepulcro-cordoba-cristo.jpg",
     "tam": 110302,
     "titular": "Nuestro Señor Jesucristo del Santo Sepulcro"
+   }
+  },
+  "dolores-de-alcolea-cordoba": {
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "foco": "42% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-cristo.jpg",
+    "tam": 132772,
+    "titular": "Santo Cristo de las Cinco Llagas"
+   },
+   "virgen": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-virgen.jpg",
+    "tam": 105182,
+    "titular": "María Santísima de los Dolores"
+   }
+  },
+  "la-o-cordoba": {
+   "cristo": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+    "foco": "62% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg",
+    "tam": 83910,
+    "titular": "Nuestro Padre Jesús de la Victoria en sus Tres Caídas"
+   },
+   "virgen": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg",
+    "tam": 167869,
+    "titular": "María Santísima de la O"
    }
   }
  },
@@ -13829,6 +13912,26 @@
     960
    ],
    "firma": "\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/\"|\"scripts/cedidas/cordoba/la-cena-cordoba-cristo.jpg\"|100374|\"\"|\"50% 45%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/\"|\"scripts/cedidas/cordoba/la-cena-cordoba-virgen.jpg\"|148606|\"\"|\"50% 40%\"|\"\"|\"\""
+  },
+  "dolores-de-alcolea-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/\"|\"scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-cristo.jpg\"|132772|\"\"|\"42% 45%\"|\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/\"|\"scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-virgen.jpg\"|105182|\"\"|\"50% 45%\"|\"\"|\"\""
+  },
+  "la-o-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg\"|83910|\"\"|\"62% 30%\"|\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg\"|167869|\"\"|\"50% 45%\"|\"\"|\"\""
   }
  }
 }

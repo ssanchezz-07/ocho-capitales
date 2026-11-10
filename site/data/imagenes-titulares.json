@@ -4808,13 +4808,15 @@
   },
   "presentacion-al-pueblo-cordoba": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg",
-    "titulo": "File:JESUS AFLIGIDOS EN SU SAGRADA PRESENTACION AL PUEBLO-QUINARIO (1).jpg",
-    "autor": "Cofraderuan",
-    "licencia": "CC BY 4.0",
-    "licurl": "https://creativecommons.org/licenses/by/4.0",
-    "titular": "Nuestro Padre Jesús de los Afligidos",
-    "foco": "50% 20%"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/",
+    "local": "scripts/cedidas/cordoba/presentacion-al-pueblo-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de los Afligidos en su Sagrada Presentación al Pueblo",
+    "titular": "Nuestro Padre Jesús de los Afligidos en su Sagrada Presentación al Pueblo",
+    "foco": "65% 35%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-presentacion-al-pueblo/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Presentacion-al-pueblo.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-columna-cadiz": {
@@ -5661,6 +5663,54 @@
     "titular": "Nuestro Señor Jesucristo del Santo Sepulcro",
     "foco": "55% 45%",
     "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Santo-sepulcro-cristo.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "dolores-de-alcolea-cordoba": {
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "local": "scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Dolores",
+    "titular": "María Santísima de los Dolores",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Dolores-de-alcolea-virgen.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/",
+    "local": "scripts/cedidas/cordoba/dolores-de-alcolea-cordoba-cristo.jpg",
+    "titulo": "Cedida: Santo Cristo de las Cinco Llagas",
+    "titular": "Santo Cristo de las Cinco Llagas",
+    "foco": "42% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-los-dolores-de-alcolea/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Dolores-de-alcolea.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "la-o-cordoba": {
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+    "local": "scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la O",
+    "titular": "María Santísima de la O",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Virgen-hermandad-de-la-O.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
+    "local": "scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Victoria en sus Tres Caídas",
+    "titular": "Nuestro Padre Jesús de la Victoria en sus Tres Caídas",
+    "foco": "62% 30%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/cristo-hermandad-de-la-O.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   }
  }
