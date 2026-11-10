@@ -1998,6 +1998,12 @@ html { overflow-x: clip; } /* el lienzo de la portada va de borde a borde (100vw
 .oc-portada.is-plano .oc-colg-plano { opacity: 1; view-transition-name: oc-plano; }
 /* plano.js: capa un 50 % mayor que el plano, con el origen del transform en la esquina del plano (16,67 % de la capa) */
 .oc-pl-mueve { position: absolute; left: -25%; top: -25%; width: 150%; height: 150%; transform-origin: 16.6667% 16.6667%; will-change: transform; contain: layout style; }
+/* plano.js: el fondo (calles, agua, arterias, edificios) en canvas fuera del vuelo; durante el vuelo, el SVG de siempre */
+.oc-pl-cv { display: none; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.oc-pl-mueve.is-cv .oc-pl-cv { display: block; }
+.oc-pl-mueve.is-cv .oc-pl-fondo-svg { display: none; }
+.oc-pl-cv-calles { transition: opacity .6s ease; }
+@media (prefers-reduced-motion: reduce) { .oc-pl-cv-calles { transition: none; } }
 .oc-pl-svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
 .oc-pl-base { pointer-events: none; }
 @media (hover: hover) and (pointer: fine) { .oc-pl-svg { cursor: grab; } .oc-pl-svg.is-arrastrando { cursor: grabbing; } }

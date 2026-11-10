@@ -36,7 +36,12 @@
     capas.mundo = el('g', { 'class': 'oc-c-mundo' }); svg.appendChild(capas.mundo);
     // Lo fijo (agua, plazas, calles, templos) va en una capa de fondo aparte y más grande que la vista: al arrastrar o pellizcar
     // la desliza el navegador sin repintarla, y se vuelve a pintar al parar o al acercarse a su borde (moverFondo).
-    if (!fondo) { fondo = el('svg', { 'class': 'oc-calle-fondo', 'aria-hidden': 'true', focusable: 'false' }); fondo.style.cssText = 'display:block;position:absolute;left:-25%;top:-25%;width:150%;height:150%;pointer-events:none;transform-origin:0 0;will-change:transform;contain:strict'; mapa.insertBefore(fondo, capa); }
+    if (!fondo) {
+      fondo = el('svg', { 'class': 'oc-calle-fondo', 'aria-hidden': 'true', focusable: 'false' }); fondo.style.cssText = 'display:block;position:absolute;left:-25%;top:-25%;width:150%;height:150%;pointer-events:none;transform-origin:0 0;will-change:transform;contain:strict'; mapa.insertBefore(fondo, capa);
+      // en canvas si se puede (Safari repinta un SVG entero cada vez que cambia su escala; un canvas se escala como imagen):
+      // el SVG se queda oculto, como fuente de los trazados y de los colores del CSS
+      if (typeof Path2D === 'function') { fondoCv = document.createElement('canvas'); fondoCv.className = 'oc-calle-fondo-cv'; fondoCv.setAttribute('aria-hidden', 'true'); fondoCv.style.cssText = fondo.style.cssText; mapa.insertBefore(fondoCv, capa); fondo.style.display = 'none'; }
+    }
     fondo.textContent = ''; fondoVb = null;
     var base = el('g', { 'class': 'oc-c-mundo' }); fondo.appendChild(base);
     // Fondo fiel (si el plano lo trae, tools/itinerarios/fondo-osm.mjs): agua, ríos, costa, playas, parques y plazas debajo de las calles
@@ -46,7 +51,7 @@
     // las calles menores llegan ya como trazado, por celdas de 1 km (build.mjs, celdasCalles); entran tras el primer fotograma
     var gCalles = el('g', {}); base.appendChild(gCalles);
     base.appendChild(el('path', { 'class': 'oc-c-princ', d: pathDe(D.principales) }));
-    requestAnimationFrame(function () { setTimeout(function () { var fr = document.createDocumentFragment(); (D.calles || []).concat(D.callesFuera || []).forEach(function (d) { fr.appendChild(el('path', { 'class': 'oc-c-calles', d: typeof d === 'string' ? d : pathDe([d]) })); }); gCalles.appendChild(fr); }, 0); });
+    requestAnimationFrame(function () { setTimeout(function () { var fr = document.createDocumentFragment(); (D.calles || []).concat(D.callesFuera || []).forEach(function (d) { fr.appendChild(el('path', { 'class': 'oc-c-calles', d: typeof d === 'string' ? d : pathDe([d]) })); }); gCalles.appendChild(fr); if (fondoCv) { if (fondoVb) pintarFondoCv(); else if (vbC) fijarFondo(); } }, 0); });
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
     if (A.edificios) { base.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); base.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
     // nombres de calles e iglesias: se repintan al mover el plano (tamaño fijo en pantalla, sin solaparse)
@@ -115,20 +120,54 @@
   window.addEventListener('scroll', function () { rS = null; }, { passive: true, capture: true });
   // Capa de fondo: pintada con la vista fondoVb (la de entonces más un 25 % por cada lado). Mientras la vista cambia poco solo se
   // desplaza y escala; se repinta 140 ms después del último cambio, o al momento si se vería su borde o perdería nitidez.
-  var fondo = null, fondoVb = null, tFondo = 0, tam = null;
+  var fondo = null, fondoCv = null, fondoVb = null, tFondo = 0, tam = null;
   function tamMapa() { if (tam) return tam; var t = [mapa.clientWidth, mapa.clientHeight]; if (t[0]) tam = t; return t; } // sin guardar mientras mida 0 (oculto)
-  window.addEventListener('resize', function () { tam = null; fondoVb = null; rS = null; });
+  window.addEventListener('resize', function () { tam = null; fondoVb = null; rS = null; if (fondoCv) requestAnimationFrame(function () { if (!fondoVb && vbC) fijarFondo(); }); }); // el canvas no se reajusta solo, como el SVG
   function fijarFondo() {
     clearTimeout(tFondo); if (!fondo) return;
     fondoVb = ampliada(vb);
     fondo.setAttribute('viewBox', fondoVb.x + ' ' + fondoVb.y + ' ' + fondoVb.w + ' ' + fondoVb.h); fondo.style.transform = '';
+    if (fondoCv) { fondoCv.style.transform = ''; pintarFondoCv(); }
+  }
+  // recuadro de un trazado (solo M, m, L, l, como los genera build.mjs), para no pintar en el canvas lo que cae fuera de la vista
+  function cajaDe(d) {
+    var t = d.match(/[MmLl]|-?\d*\.?\d+(?:e-?\d+)?/g) || [], c = 'M', x = 0, y = 0, b = [Infinity, Infinity, -Infinity, -Infinity];
+    for (var i = 0; i < t.length; i++) {
+      if (/[MmLl]/.test(t[i])) { c = t[i]; continue; }
+      var a = +t[i], o = +t[++i]; if (c === 'M' || c === 'L') { x = a; y = o; } else { x += a; y += o; }
+      if (c === 'M') c = 'L'; else if (c === 'm') c = 'l';
+      if (x < b[0]) b[0] = x; if (y < b[1]) b[1] = y; if (x > b[2]) b[2] = x; if (y > b[3]) b[3] = y;
+    }
+    return b;
+  }
+  // el fondo en el canvas: los trazados del SVG oculto, con sus colores y grosores del CSS (uno por clase), con la vista fondoVb
+  function pintarFondoCv() {
+    var t = tamMapa(), dpr = Math.min(2, window.devicePixelRatio || 1), pw = Math.round(t[0] * 1.5 * dpr), ph = Math.round(t[1] * 1.5 * dpr), a = fondoVb;
+    if (!pw || !ph) return;
+    if (fondoCv.width !== pw || fondoCv.height !== ph) { fondoCv.width = pw; fondoCv.height = ph; }
+    var x = fondoCv.getContext('2d'), k = pw / a.w, px = dpr / k, m = 12 * px, estilos = {};
+    x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, pw, ph); x.setTransform(k, 0, 0, k, -a.x * k, -a.y * k);
+    Array.prototype.forEach.call(fondo.querySelectorAll('path'), function (n) {
+      var d = n.getAttribute('d'); if (!d) return;
+      if (!n.__p) { n.__p = new Path2D(d); n.__b = cajaDe(d); }
+      var b = n.__b; if (b[0] > a.x + a.w + m || b[2] < a.x - m || b[1] > a.y + a.h + m || b[3] < a.y - m) return;
+      var cl = n.getAttribute('class'), cs = estilos[cl] || (estilos[cl] = getComputedStyle(n)); if (cs.display === 'none') return;
+      var op = parseFloat(cs.opacity); if (isNaN(op)) op = 1;
+      if (cs.fill && cs.fill !== 'none') { x.globalAlpha = op * parseFloat(cs.fillOpacity || 1); x.fillStyle = cs.fill; x.fill(n.__p, 'evenodd'); }
+      if (cs.stroke && cs.stroke !== 'none') {
+        var da = cs.strokeDasharray && cs.strokeDasharray !== 'none' ? cs.strokeDasharray.split(/[\s,]+/).map(function (v) { return parseFloat(v) * px; }) : [];
+        x.globalAlpha = op * parseFloat(cs.strokeOpacity || 1); x.strokeStyle = cs.stroke; x.lineWidth = parseFloat(cs.strokeWidth) * px; x.setLineDash(da);
+        x.lineCap = cs.strokeLinecap || 'butt'; x.lineJoin = cs.strokeLinejoin || 'miter'; x.stroke(n.__p);
+      }
+    });
+    x.globalAlpha = 1;
   }
   function moverFondo() {
     if (!fondo) return;
     if (!fondoVb) return fijarFondo();
     // si la capa ya no cubre la vista entera, o se ha escalado mucho, se repinta ya
     var t = tamMapa(), tr = encaje(fondoVb, t[0], t[1], 4); if (!tr) return fijarFondo();
-    fondo.style.transform = tr;
+    fondo.style.transform = tr; if (fondoCv) fondoCv.style.transform = tr;
     clearTimeout(tFondo); tFondo = setTimeout(fijarFondo, 140);
   }
   // ---------- rótulos de calles e iglesias ----------

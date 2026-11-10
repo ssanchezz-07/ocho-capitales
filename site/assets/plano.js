@@ -52,6 +52,17 @@
     var c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs((h / 60) % 2 - 1)), m = l - c / 2, q = h < 60 ? [c, x, 0] : h < 120 ? [x, c, 0] : h < 180 ? [0, c, x] : h < 240 ? [0, x, c] : h < 300 ? [x, 0, c] : [c, 0, x];
     return '#' + q.map(function (v) { return ('0' + Math.round((v + m) * 255).toString(16)).slice(-2); }).join('');
   }
+  // recuadro de un trazado (solo M, m, L, l, como los genera build.mjs), para no pintar en el canvas lo que cae fuera de la vista
+  function cajaDe(d) {
+    var t = d.match(/[MmLl]|-?\d*\.?\d+(?:e-?\d+)?/g) || [], c = 'M', x = 0, y = 0, b = [Infinity, Infinity, -Infinity, -Infinity];
+    for (var i = 0; i < t.length; i++) {
+      if (/[MmLl]/.test(t[i])) { c = t[i]; continue; }
+      var a = +t[i], o = +t[++i]; if (c === 'M' || c === 'L') { x = a; y = o; } else { x += a; y += o; }
+      if (c === 'M') c = 'L'; else if (c === 'm') c = 'l';
+      if (x < b[0]) b[0] = x; if (y < b[1]) b[1] = y; if (x > b[2]) b[2] = x; if (y > b[3]) b[3] = y;
+    }
+    return b;
+  }
   function Plano(host, D, o) {
     o = o || {};
     // Dos capas con la misma vista: abajo lo fijo (calles y recorridos) y arriba lo que se mueve (cortejos y medallones).
@@ -70,30 +81,45 @@
     [['oc-c-agua', poli(A.agua)], ['oc-c-playa', poli(A.playas)], ['oc-c-parque', poli(A.parques)], ['oc-c-plaza', poli(A.plazas)], ['oc-c-rio', D.rios ? pathDe(D.rios) : ''], ['oc-c-costa', D.costa ? pathDe(D.costa) : '']]
       .forEach(function (c) { if (c[1]) mundo.appendChild(el('path', { 'class': c[0], d: c[1] })); });
     // calles menores: ya vienen como trazado por celdas de 1 km (build.mjs, celdasCalles); el navegador solo pinta las que se ven
-    var gCalles = el('g', {}, mundo); (D.calles || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: typeof d === 'string' ? d : pathDe([d]) }, gCalles); });
+    var gFuera = null, gCalles = el('g', {}, mundo); (D.calles || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: typeof d === 'string' ? d : pathDe([d]) }, gCalles); });
     // Con fondo de afueras (solo carreteras), las calles menores del centro se desvanecen en su borde (el 15 % del lado, 700 m como poco): si no, su recuadro
     // se veía con bordes rectos sobre la red de carreteras. Dos máscaras de degradado (ancho y alto), sin desenfoque: baratas.
     if (D.limCentro) {
       var L = D.limCentro, idm = 'oc-pl-c-' + (D.ciudad || 'x'), defs = el('defs', {}, base), fx = Math.min(0.45, Math.max(0.15, 700 / Math.max(1, L[2] - L[0]))), fy = Math.min(0.45, Math.max(0.15, 700 / Math.max(1, L[3] - L[1])));
+      // alrededor de cada sede su barrio se ve entero, aunque caiga en el desvanecido (un círculo suave de 700 m)
+      // (solo las que están en la banda del desvanecido o a menos de 700 m de ella: cada círculo cuesta al pintar)
+      var bx = fx * (L[2] - L[0]) + 700, by = fy * (L[3] - L[1]) + 700, circulos = [];
+      (D.sedes || []).forEach(function (h) { [h.tp, h.cs].forEach(function (q) { if (q && q[0] > L[0] - 700 && q[0] < L[2] + 700 && q[1] > L[1] - 700 && q[1] < L[3] + 700 && (q[0] - L[0] < bx || L[2] - q[0] < bx || q[1] - L[1] < by || L[3] - q[1] < by)) circulos.push(q); }); });
       [['x', L[0], 0, L[2], 0, fx], ['y', 0, L[1], 0, L[3], fy]].forEach(function (g) {
         var lg = el('linearGradient', { id: idm + g[0] + 'g', gradientUnits: 'userSpaceOnUse', x1: g[1], y1: g[2], x2: g[3], y2: g[4] }, defs);
         [[0, 0], [g[5], 1], [1 - g[5], 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, lg); });
         var mk = el('mask', { id: idm + g[0], maskUnits: 'userSpaceOnUse', x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1] }, defs);
         el('rect', { x: L[0], y: L[1], width: L[2] - L[0], height: L[3] - L[1], fill: 'url(#' + idm + g[0] + 'g)' }, mk);
-        // alrededor de cada sede su barrio se ve entero, aunque caiga en el desvanecido (un círculo suave de 700 m)
-        // (solo las que están en la banda del desvanecido o a menos de 700 m de ella: cada círculo cuesta al mover el plano)
-        var bx = fx * (L[2] - L[0]) + 700, by = fy * (L[3] - L[1]) + 700;
-        (D.sedes || []).forEach(function (h) { [h.tp, h.cs].forEach(function (q) { if (q && q[0] > L[0] - 700 && q[0] < L[2] + 700 && q[1] > L[1] - 700 && q[1] < L[3] + 700 && (q[0] - L[0] < bx || L[2] - q[0] < bx || q[1] - L[1] < by || L[3] - q[1] < by)) el('circle', { cx: q[0], cy: q[1], r: 700, fill: 'url(#' + idm + 'r)' }, mk); }); });
+        circulos.forEach(function (q) { el('circle', { cx: q[0], cy: q[1], r: 700, fill: 'url(#' + idm + 'r)' }, mk); });
       });
       var rg = el('radialGradient', { id: idm + 'r' }, defs); [[0, 1], [0.55, 1], [1, 0]].forEach(function (st) { el('stop', { offset: st[0], 'stop-color': '#fff', 'stop-opacity': st[1] }, rg); });
       var gMx = el('g', { mask: 'url(#' + idm + 'x)' }), gMy = el('g', { mask: 'url(#' + idm + 'y)' }, gMx);
       mundo.insertBefore(gMx, gCalles); gMy.appendChild(gCalles);
       // las calles de barrio de las sedes apartadas, fuera del centro: sin máscara
-      var gFuera = el('g', {}); mundo.insertBefore(gFuera, gMx.nextSibling); (D.callesFuera || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: d }, gFuera); });
+      gFuera = el('g', {}); mundo.insertBefore(gFuera, gMx.nextSibling); (D.callesFuera || []).forEach(function (d) { el('path', { 'class': 'oc-pl-calles', d: d }, gFuera); });
     }
     el('path', { 'class': 'oc-pl-princ', d: pathDe(D.principales) }, mundo);
     // templos y casas hermandad, como edificios encima de las calles (sus nombres los rotula el plano)
     if (A.edificios) { mundo.appendChild(el('path', { 'class': 'oc-c-templo', d: poli(A.edificios.filter(function (e) { return e.c === 'templo'; }).map(function (e) { return e.p; })) })); mundo.appendChild(el('path', { 'class': 'oc-c-casa', d: poli(A.edificios.filter(function (e) { return e.c === 'casa'; }).map(function (e) { return e.p; })) })); }
+    // ---- Fondo en <canvas>: calles, agua, parques, arterias y edificios ----
+    // Safari (iPhone) vuelve a pintar un SVG entero cada vez que cambia su escala (para que se vea nítido): con miles de calles,
+    // pellizcar daba tirones aunque la capa se moviera con transform. Un canvas es una imagen: se escala sin repintarse. Se pinta
+    // al fijar la vista, con los colores del CSS (leídos de los mismos elementos SVG, que siguen ahí para el vuelo de la portada:
+    // durante el vuelo se ve el SVG, como antes; fuera de él, el canvas).
+    var fondoSvg = el('g', { 'class': 'oc-pl-fondo-svg' }); while (mundo.firstChild) fondoSvg.appendChild(mundo.firstChild); mundo.appendChild(fondoSvg);
+    var cvs = [0, 1, 2].map(function (i) { var n = document.createElement('canvas'); n.className = 'oc-pl-cv' + (i === 1 ? ' oc-pl-cv-calles' : ''); n.setAttribute('aria-hidden', 'true'); mueve.insertBefore(n, base); return n; });
+    var trazos = [[], [], []], conPath2D = typeof Path2D === 'function';
+    if (conPath2D) {
+      Array.prototype.forEach.call(fondoSvg.querySelectorAll('path'), function (p) {
+        var c = p.getAttribute('class') || '', i = c === 'oc-pl-calles' ? 1 : /oc-pl-princ|oc-c-templo|oc-c-casa/.test(c) ? 2 : 0;
+        var d = p.getAttribute('d') || ''; trazos[i].push({ el: p, p: new Path2D(d), b: cajaDe(d), fuera: !!(gFuera && p.parentNode === gFuera) });
+      });
+    }
     var gR = el('g', {}, mundo), capa = el('g', {}, svg), gE = el('g', { 'class': 'oc-pl-etq', 'aria-hidden': 'true' }, capa), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
     var lim = [Infinity, Infinity, -Infinity, -Infinity];
     D.principales.forEach(function (l) { for (var i = 0; i < l.length; i += 2) { lim[0] = Math.min(lim[0], l[i]); lim[1] = Math.min(lim[1], l[i + 1]); lim[2] = Math.max(lim[2], l[i]); lim[3] = Math.max(lim[3], l[i + 1]); } });
@@ -132,6 +158,58 @@
       clearTimeout(tVista); vbC = { x: vb.x, y: vb.y, w: vb.w, h: vb.h };
       var v = (vb.x - vb.w / 4).toFixed(1) + ' ' + (vb.y - vb.h / 4).toFixed(1) + ' ' + (vb.w * 1.5).toFixed(1) + ' ' + (vb.h * 1.5).toFixed(1);
       base.setAttribute('viewBox', v); svg.setAttribute('viewBox', v); mueve.style.transform = ''; colocar();
+      if (enCanvas) pintarCanvas();
+    }
+    // modo canvas (normal) o modo SVG (durante el vuelo de la portada, que necesita ver la ciudad entera al alejarse)
+    var enCanvas = false, colorPrinc = '';
+    function modoCanvas(si) {
+      si = !!si && conPath2D; if (si === enCanvas) return;
+      enCanvas = si; mueve.classList.toggle('is-cv', si);
+      if (si) { pintarCanvas(); if (!calm) { cvs[1].style.transition = 'none'; cvs[1].style.opacity = '0'; cvs[1].getBoundingClientRect(); cvs[1].style.transition = ''; cvs[1].style.opacity = ''; } }
+    }
+    var mascara = null;
+    function pintarCanvas() {
+      var dpr = Math.min(2, window.devicePixelRatio || 1), pw = Math.round(W() * 1.5 * dpr), ph = Math.round(H() * 1.5 * dpr);
+      var ax = vb.x - vb.w / 4, ay = vb.y - vb.h / 4, k = pw / (vb.w * 1.5), px = dpr / k; // k: píxeles del canvas por metro; px: un píxel de pantalla, en metros
+      var ctxs = cvs.map(function (c) {
+        if (c.width !== pw || c.height !== ph) { c.width = pw; c.height = ph; }
+        var x = c.getContext('2d'); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, pw, ph); x.setTransform(k, 0, 0, k, -ax * k, -ay * k); return x;
+      });
+      var estilos = {}; // uno por clase: hay cientos de celdas de calles con la misma
+      var bx0 = ax - 12 * px, by0 = ay - 12 * px, bx1 = ax + vb.w * 1.5 + 12 * px, by1 = ay + vb.h * 1.5 + 12 * px;
+      var pintar = function (x, t) {
+        if (t.b[0] > bx1 || t.b[2] < bx0 || t.b[1] > by1 || t.b[3] < by0) return false;
+        var cl = t.el.getAttribute('class') + (t.fuera ? ' f' : ''), cs = estilos[cl] || (estilos[cl] = getComputedStyle(t.el)); if (cs.display === 'none') return false;
+        var op = parseFloat(cs.opacity); if (isNaN(op)) op = 1;
+        if (cs.fill && cs.fill !== 'none') { x.globalAlpha = op * parseFloat(cs.fillOpacity || 1); x.fillStyle = cs.fill; x.fill(t.p, 'evenodd'); }
+        if (cs.stroke && cs.stroke !== 'none') {
+          var da = cs.strokeDasharray && cs.strokeDasharray !== 'none' ? cs.strokeDasharray.split(/[\s,]+/).map(function (v) { return parseFloat(v) * px; }) : [];
+          x.globalAlpha = op * parseFloat(cs.strokeOpacity || 1); x.strokeStyle = cs.stroke; x.lineWidth = parseFloat(cs.strokeWidth) * px; x.setLineDash(da);
+          x.lineCap = cs.strokeLinecap || 'butt'; x.lineJoin = cs.strokeLinejoin || 'miter'; x.stroke(t.p);
+        }
+        x.globalAlpha = 1; return true;
+      };
+      trazos[0].forEach(function (t) { pintar(ctxs[0], t); });
+      // calles del centro con su desvanecido (las dos máscaras: degradado y círculos de cada eje, multiplicadas) y luego las de fuera
+      var x1 = ctxs[1], hay = false;
+      trazos[1].forEach(function (t) { if (!t.fuera && pintar(x1, t)) hay = true; });
+      if (hay && D.limCentro) {
+        if (!mascara) mascara = document.createElement('canvas');
+        if (mascara.width !== pw || mascara.height !== ph) { mascara.width = pw; mascara.height = ph; }
+        var m = mascara.getContext('2d');
+        [['x', L[0], 0, L[2], 0, fx], ['y', 0, L[1], 0, L[3], fy]].forEach(function (g) {
+          m.setTransform(1, 0, 0, 1, 0, 0); m.clearRect(0, 0, pw, ph); m.setTransform(k, 0, 0, k, -ax * k, -ay * k);
+          m.save(); m.beginPath(); m.rect(L[0], L[1], L[2] - L[0], L[3] - L[1]); m.clip();
+          var lg = m.createLinearGradient(g[1], g[2], g[3], g[4]); [[0, 0], [g[5], 1], [1 - g[5], 1], [1, 0]].forEach(function (st) { lg.addColorStop(st[0], 'rgba(255,255,255,' + st[1] + ')'); });
+          m.fillStyle = lg; m.fillRect(L[0], L[1], L[2] - L[0], L[3] - L[1]);
+          circulos.forEach(function (q) { var r = m.createRadialGradient(q[0], q[1], 0, q[0], q[1], 700); [[0, 1], [0.55, 1], [1, 0]].forEach(function (st) { r.addColorStop(st[0], 'rgba(255,255,255,' + st[1] + ')'); }); m.fillStyle = r; m.beginPath(); m.arc(q[0], q[1], 700, 0, 2 * Math.PI); m.fill(); });
+          m.restore();
+          x1.save(); x1.setTransform(1, 0, 0, 1, 0, 0); x1.globalCompositeOperation = 'destination-in'; x1.drawImage(mascara, 0, 0); x1.restore();
+        });
+      }
+      trazos[1].forEach(function (t) { if (t.fuera) pintar(x1, t); });
+      trazos[2].forEach(function (t) { pintar(ctxs[2], t); });
+      var pr = trazos[2][0]; colorPrinc = pr ? getComputedStyle(pr.el).stroke : '';
     }
     // en caliente: la capa ya pintada se desplaza y escala hasta la vista de ahora; si no la cubre o se ha escalado mucho, se pinta ya.
     // Lo que va encima (medallones, sedes, rótulos) se escala con ella hasta que se pinta al parar (140 ms).
@@ -247,7 +325,7 @@
     };
     // Para el vuelo de la portada (site.js lleva la cámara fotograma a fotograma): fija el encuadre sin animación; con «volando»,
     // solo las calles principales y sin rótulos, como en el vuelo propio
-    api.fijar = function (c, volando) { cancelAnimationFrame(anim); enVuelo = !!volando; vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); };
+    api.fijar = function (c, volando) { cancelAnimationFrame(anim); enVuelo = !!volando; if (volando) modoCanvas(false); vb.x = c.x; vb.y = c.y; vb.w = c.w; base.classList.toggle('is-volando', !!volando); aplicar(); if (!volando) modoCanvas(true); };
     api.ancho = function () { return lim[2] - lim[0]; };
     // el vuelo de la portada (site.js) mueve «las capas» con transform desde la esquina del plano: es la capa que envuelve a las dos
     // (su origen ya está en esa esquina, por eso se ignora transformOrigin); «overflow» va a las dos SVG, como antes
@@ -255,7 +333,7 @@
     Object.defineProperty(capaVuelo.style, 'transform', { set: function (v) { clearTimeout(tVista); mueve.style.transform = v; }, get: function () { return mueve.style.transform; } });
     Object.defineProperty(capaVuelo.style, 'willChange', { set: function () { }, get: function () { return 'transform'; } });
     Object.defineProperty(capaVuelo.style, 'transformOrigin', { set: function () { }, get: function () { return ''; } });
-    Object.defineProperty(capaVuelo.style, 'overflow', { set: function (v) { base.style.overflow = v; svg.style.overflow = v; }, get: function () { return base.style.overflow; } });
+    Object.defineProperty(capaVuelo.style, 'overflow', { set: function (v) { base.style.overflow = v; svg.style.overflow = v; if (v === 'visible') modoCanvas(false); }, get: function () { return base.style.overflow; } });
     api.capas = function () { return [capaVuelo]; };
     // la provincia de la ciudad, debajo de todo: es el mapa de Andalucía que se convierte en el plano
     var provEl = null;
@@ -338,6 +416,7 @@
     }
     api.ponerHora = function (t) {
       T = t; gC.textContent = '';
+      if (enCanvas && trazos[2][0] && getComputedStyle(trazos[2][0].el).stroke !== colorPrinc) pintarCanvas();
       hs.forEach(function (h) {
         var pts = ruta(h), paso = enTramo(pts, T), cruz = h.t.cruz ? enTramo(h.t.cruz, T) : null, est = estado(h, T);
         if (marcas[h.s]) marcas[h.s].setAttribute('data-estado', est);
@@ -418,7 +497,7 @@
       vb.x = wx - (wx - vb.x) * k; vb.y = wy - (wy - vb.y) * k; vb.w = w; mover();
     }, { passive: false });
     svg.addEventListener('dblclick', function (e) { var r = host.getBoundingClientRect(); zoomEn(e.shiftKey ? 2 : 0.5, e.clientX - r.left, e.clientY - r.top, 320); });
-    aplicar();
+    aplicar(); modoCanvas(!enVuelo);
     if (window.ResizeObserver) new ResizeObserver(function () { aplicar(true); }).observe(host);
     return api;
   }
