@@ -63,6 +63,7 @@
     }
     return b;
   }
+  var mascara = null; // lienzo auxiliar del desvanecido de las calles: uno para todos los planos
   function Plano(host, D, o) {
     o = o || {};
     // Dos capas con la misma vista: abajo lo fijo (calles y recorridos) y arriba lo que se mueve (cortejos y medallones).
@@ -117,7 +118,7 @@
     if (conPath2D) {
       Array.prototype.forEach.call(fondoSvg.querySelectorAll('path'), function (p) {
         var c = p.getAttribute('class') || '', i = c === 'oc-pl-calles' ? 1 : /oc-pl-princ|oc-c-templo|oc-c-casa/.test(c) ? 2 : 0;
-        var d = p.getAttribute('d') || ''; trazos[i].push({ el: p, p: new Path2D(d), b: cajaDe(d), fuera: !!(gFuera && p.parentNode === gFuera) });
+        trazos[i].push({ el: p, p: null, b: null, fuera: !!(gFuera && p.parentNode === gFuera) }); // el trazado y su recuadro, al pintar por primera vez (crear el plano retrasaba el vuelo)
       });
     }
     var gR = el('g', {}, mundo), capa = el('g', {}, svg), gE = el('g', { 'class': 'oc-pl-etq', 'aria-hidden': 'true' }, capa), gC = el('g', {}, capa), gM = el('g', {}, capa), estados = {};
@@ -161,23 +162,25 @@
       if (enCanvas) pintarCanvas();
     }
     // modo canvas (normal) o modo SVG (durante el vuelo de la portada, que necesita ver la ciudad entera al alejarse)
-    var enCanvas = false, colorPrinc = '';
+    var enCanvas = false, colorPrinc = '', tNoche = 0;
     function modoCanvas(si) {
       si = !!si && conPath2D; if (si === enCanvas) return;
       enCanvas = si; mueve.classList.toggle('is-cv', si);
       if (si) { pintarCanvas(); if (!calm) { cvs[1].style.transition = 'none'; cvs[1].style.opacity = '0'; cvs[1].getBoundingClientRect(); cvs[1].style.transition = ''; cvs[1].style.opacity = ''; } }
     }
-    var mascara = null;
-    function pintarCanvas() {
+    function pintarCanvas(soloArriba) {
       var dpr = Math.min(2, window.devicePixelRatio || 1), pw = Math.round(W() * 1.5 * dpr), ph = Math.round(H() * 1.5 * dpr);
       var ax = vb.x - vb.w / 4, ay = vb.y - vb.h / 4, k = pw / (vb.w * 1.5), px = dpr / k; // k: píxeles del canvas por metro; px: un píxel de pantalla, en metros
-      var ctxs = cvs.map(function (c) {
+      if (soloArriba && (cvs[2].width !== pw || cvs[2].height !== ph)) soloArriba = false;
+      var ctxs = cvs.map(function (c, i) {
+        if (soloArriba && i < 2) return null;
         if (c.width !== pw || c.height !== ph) { c.width = pw; c.height = ph; }
         var x = c.getContext('2d'); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, pw, ph); x.setTransform(k, 0, 0, k, -ax * k, -ay * k); return x;
       });
       var estilos = {}; // uno por clase: hay cientos de celdas de calles con la misma
       var bx0 = ax - 12 * px, by0 = ay - 12 * px, bx1 = ax + vb.w * 1.5 + 12 * px, by1 = ay + vb.h * 1.5 + 12 * px;
       var pintar = function (x, t) {
+        if (!t.p) { var d = t.el.getAttribute('d') || ''; t.p = new Path2D(d); t.b = cajaDe(d); }
         if (t.b[0] > bx1 || t.b[2] < bx0 || t.b[1] > by1 || t.b[3] < by0) return false;
         var cl = t.el.getAttribute('class') + (t.fuera ? ' f' : ''), cs = estilos[cl] || (estilos[cl] = getComputedStyle(t.el)); if (cs.display === 'none') return false;
         var op = parseFloat(cs.opacity); if (isNaN(op)) op = 1;
@@ -189,6 +192,10 @@
         }
         x.globalAlpha = 1; return true;
       };
+      if (!soloArriba) pintarAbajo();
+      trazos[2].forEach(function (t) { pintar(ctxs[2], t); });
+      var pr = trazos[2][0]; colorPrinc = pr ? getComputedStyle(pr.el).stroke : '';
+      function pintarAbajo() {
       trazos[0].forEach(function (t) { pintar(ctxs[0], t); });
       // calles del centro con su desvanecido (las dos máscaras: degradado y círculos de cada eje, multiplicadas) y luego las de fuera
       var x1 = ctxs[1], hay = false;
@@ -208,8 +215,7 @@
         });
       }
       trazos[1].forEach(function (t) { if (t.fuera) pintar(x1, t); });
-      trazos[2].forEach(function (t) { pintar(ctxs[2], t); });
-      var pr = trazos[2][0]; colorPrinc = pr ? getComputedStyle(pr.el).stroke : '';
+      }
     }
     // en caliente: la capa ya pintada se desplaza y escala hasta la vista de ahora; si no la cubre o se ha escalado mucho, se pinta ya.
     // Lo que va encima (medallones, sedes, rótulos) se escala con ella hasta que se pinta al parar (140 ms).
@@ -416,7 +422,7 @@
     }
     api.ponerHora = function (t) {
       T = t; gC.textContent = '';
-      if (enCanvas && trazos[2][0] && getComputedStyle(trazos[2][0].el).stroke !== colorPrinc) pintarCanvas();
+      if (enCanvas && trazos[2][0] && !tNoche) tNoche = requestAnimationFrame(function () { tNoche = 0; if (enCanvas && !mueve.style.transform && getComputedStyle(trazos[2][0].el).stroke !== colorPrinc) pintarCanvas(true); }); // en pleno gesto no: al soltar se pinta todo
       hs.forEach(function (h) {
         var pts = ruta(h), paso = enTramo(pts, T), cruz = h.t.cruz ? enTramo(h.t.cruz, T) : null, est = estado(h, T);
         if (marcas[h.s]) marcas[h.s].setAttribute('data-estado', est);
@@ -497,7 +503,9 @@
       vb.x = wx - (wx - vb.x) * k; vb.y = wy - (wy - vb.y) * k; vb.w = w; mover();
     }, { passive: false });
     svg.addEventListener('dblclick', function (e) { var r = host.getBoundingClientRect(); zoomEn(e.shiftKey ? 2 : 0.5, e.clientX - r.left, e.clientY - r.top, 320); });
-    aplicar(); modoCanvas(!enVuelo);
+    // el canvas, en el fotograma siguiente y solo si no ha empezado un vuelo (la portada llama a fijar(…, true) nada más crearlo,
+    // y pintar aquí la ciudad entera retrasaba el vuelo al tocar una bandera); al llegar, fijar(…, false) lo pone
+    aplicar(); requestAnimationFrame(function () { if (!enVuelo) modoCanvas(true); });
     if (window.ResizeObserver) new ResizeObserver(function () { aplicar(true); }).observe(host);
     return api;
   }
