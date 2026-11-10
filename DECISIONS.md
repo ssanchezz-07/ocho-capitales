@@ -19,6 +19,7 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
   - Sin JS, los botones «Añadir al calendario» quedan ocultos sin perder su sitio (los activa `site.js` con `is-vivo`).
   - De 6f3635d, en erCuñao:
     - «¿Cuánto dura…?» contaba desde la hora del palio como si fuera la salida. Ahora cuenta desde la cruz de guía (oficial) hasta que se recoge el palio (estimación, con su fuente).
+    - Si las horas del palio o del paso no cuadran con la cruz de guía (10 cofradías: el Cachorro, el Gran Poder, La Paz…), no saca duración de ellas: dice la salida oficial y que la recogida que tiene no cuadra (reauditoría; casos B8-6 y B8-7; K7 pasa a la Macarena).
     - Una fuente que no es un programa va entre comillas («según "Horarios e itinerarios…"», no «según el Horarios»).
     - Casos B8-1 a B8-5 en `probar-cunao`; el B8-5 comprueba que toda cofradía con horas del palio lleva su fuente.
 - **Descartado**: `text-wrap` (no mejora lo medido) y `content-visibility` (sigue fuera por Safari).

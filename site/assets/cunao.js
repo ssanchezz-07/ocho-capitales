@@ -465,7 +465,8 @@
             const ini = minutos(co ? h.h : h.r[0]); let fin = minutos(h.r[2]); if (fin < ini) fin += 1440; const d = fin - ini;
             const dur = ' unas ' + Math.floor(d / 60) + ' h' + (d % 60 ? ' y ' + (d % 60) + ' min' : '') + ' en la calle';
             if (d > 0 && co) P(r, Cab(h) + V(h, ' está', ' están') + dur + ': la cruz de guía sale a las ' + h.h + ' (hora oficial) y ' + (k === 'palio' ? 'el palio' : 'el paso') + ' se recoge hacia las ' + h.r[2] + ', ' + (segun(h.rf) || 'según los programas de los medios') + ' (es una estimación).');
-            else if (d > 0 && k) P(r, Cab(h) + V(h, ' está', ' están') + dur + ', contando por ' + (k === 'palio' ? 'el palio' : 'el paso') + ': sale ' + horaTxt(h.r[0], h.r[1]) + ' y se recoge ' + horaTxt(h.r[2], h.r[3]) + ' (itinerario ' + (D.anio - 1) + ').');
+            // horas del palio que no cuadran con la cruz de guía (el tramo puede ser de otra hermandad): no se saca duración de ellas
+            else if (k) { P(r, cap1(cabecera(h, 'de')) + ' no te puedo decir cuánto está en la calle: ' + (h.h ? 'la salida oficial, la de la cruz de guía, es a las ' + h.h + ', y las horas de recogida que tengo son ' + (k === 'palio' ? 'del palio' : 'del paso') + ' y no cuadran con ella.' : 'las horas que tengo son ' + (k === 'palio' ? 'del palio' : 'del paso') + ' y no sé a qué hora sale la cruz de guía.')); r.flojo = true; }
             else if (d > 0) P(r, Cab(h) + V(h, ' está', ' están') + dur + ': ' + V(h, 'sale ', 'salen ') + horaTxt(h.r[0], h.r[1]) + V(h, ' y se recoge ', ' y se recogen ') + horaTxt(h.r[2], h.r[3]) + ' (itinerario ' + (D.anio - 1) + ').');
             else P(r, 'Con el itinerario que tengo no me salen las cuentas de cuánto está en la calle ' + cabecera(h) + '.');
           } else { P(r, 'No tengo la hora de recogida ' + cabecera(h, 'de') + ', así que no sé cuánto está en la calle.' + (sal ? ' Sale ' + art(h.d) + ' ' + sal + '.' : '')); r.flojo = true; }

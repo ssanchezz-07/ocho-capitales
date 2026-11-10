@@ -218,7 +218,7 @@ caso('K3 franja con jornada y sin capital: las ocho capitales', motor(), '¿Qué
 caso('K9 sin franja ni capital ni jornada pregunta la capital', motor(), '¿qué sale antes de las 12?', (r) => (r.chips.some((c) => /^@c:/.test(c[1])) ? true : 'no pregunta la capital'));
 caso('K5 Expiración de Córdoba: quién talló el Cristo', motor(), '¿Quién talló el Cristo de la Expiración de Córdoba?', contiene(HP['la-expiracion-cordoba'].titulares[0].autor));
 caso('K6 hora oficial en la carrera oficial', motor(), '¿A qué hora pasa la Borriquita de Sevilla por la carrera oficial?', contiene('carrera oficial', HP['la-borriquita-sevilla'].hora_carrera));
-caso('K7 cuánto está en la calle', motor(), '¿Cuánto dura el recorrido del Gran Poder de Sevilla?', contiene(/está unas \d+ h/));
+caso('K7 cuánto está en la calle (el Gran Poder no: sus horas del palio no cuadran, B8-7)', motor(), '¿Cuánto dura el recorrido de la Macarena de Sevilla?', contiene(/está unas \d+ h/));
 caso('K8 el día siguiente con ciudad', (() => { const x = motor(); pregunta(x, 'miercoles santo en cordoba'); return x; })(), '¿y el siguiente?', contiene('Jueves Santo (y la Madrugada) en Córdoba'));
 
 console.log('— Marchas');
@@ -466,6 +466,8 @@ caso('B7-15 en su imaginero, la obra con la nota, no como obra suya sin más', m
 caso('B7-19 la Macarena: la salida del palio, como estimación y con su fuente (no es de la nómina)', motor(), '¿A qué hora sale la Macarena de Sevilla?', contiene('00:00', 'Esa es la hora oficial, la de la cruz de guía', 'El palio sale hacia las 01:40, según el programa de Canal Sur', 'es una estimación'));
 caso('B8-1 «cuánto dura» la Macarena: cuenta desde la cruz de guía (oficial) y el palio va como estimación', motor(), '¿Cuánto tiempo está en la calle la Macarena de Sevilla?', y(contiene('la cruz de guía sale a las 00:00 (hora oficial)', 'el palio se recoge hacia las', 'es una estimación'), noDice('sale a las 01:40')));
 caso('B8-2 «cuánto dura» la Esperanza de Triana: no da las 03:07 como su salida', motor(), '¿Cuánto dura la Esperanza de Triana?', y(contiene('01:19 (hora oficial)', 'es una estimación'), noDice('sale a las 03:07')));
+caso('B8-6 «cuánto dura» el Cachorro: sus horas del paso no cuadran con la cruz de guía, no saca duración de ellas', motor(), '¿Cuánto dura el Cachorro?', y(contiene('15:35', 'no cuadran'), noDice('sale a las 18:10', '4 h y 35 min')));
+caso('B8-7 «cuánto dura» el Gran Poder: no da las 01:55 del palio como su salida', motor(), '¿Cuánto dura el Gran Poder de Sevilla?', y(contiene('00:35', 'no cuadran'), noDice('sale a las 01:55', '5 h y 50 min')));
 caso('B8-3 fuente que no es un programa: entre comillas, sin «según el Horarios»', motor(), '¿A qué hora sale la Bofeta?', noDice('según el Horarios'));
 caso('B8-4 lo mismo en el recorrido', motor(), '¿Por dónde pasa la Bofeta?', noDice('según el Horarios'));
 { const sin = D.hermandades.filter((h) => h.rk && h.rk !== 'cruz de guía' && !h.rf).map((h) => h.s); const n = 'B8-5 toda cofradía con horas del palio o del paso lleva su fuente (rf)'; if (sin.length) { mal++; console.log('✗ ' + n + ': ' + sin.join(', ')); } else { ok++; if (VER) console.log('✓ ' + n); } }
