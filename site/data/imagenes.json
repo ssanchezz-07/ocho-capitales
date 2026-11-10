@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T19:23:04.654Z",
+ "generado": "2026-11-10T19:29:59.218Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -12686,6 +12686,27 @@
     "local": "scripts/cedidas/sevilla/san-jose-obrero-sevilla-virgen.jpg",
     "tam": 505201,
     "titular": "Nuestra Señora de los Dolores"
+   }
+  },
+  "la-sangre-de-el-higueron-cordoba": {
+   "cristo": {
+    "w": 960,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Sangre del Higuerón (Córdoba)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sangredelhigueron/",
+    "foco": "52% 50%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-sangre-de-el-higueron-cordoba-cristo.jpg",
+    "tam": 294243,
+    "titular": "Nuestro Padre Jesús Nazareno de la Compasión"
    }
   }
  },
