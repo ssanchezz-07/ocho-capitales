@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T05:56:43.490Z",
+ "generado": "2026-11-10T06:33:08.072Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5728,12 +5728,12 @@
   },
   "los-dolores-cordoba": {
    "virgen": {
-    "w": 804,
+    "w": 808,
     "h": 1208,
     "widths": [
      160,
      480,
-     804
+     808
     ],
     "escudo": false,
     "autor": "Carolina Fernández",
@@ -5744,7 +5744,7 @@
     "focoFicha": "100% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cordoba/los-dolores-cordoba-virgen.jpg",
-    "tam": 326980,
+    "tam": 327934,
     "titular": "Nuestra Señora de los Dolores"
    },
    "cristo": {
@@ -10722,25 +10722,6 @@
     "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-virgen.jpg",
     "tam": 109575,
     "titular": "María Santísima de la Esperanza"
-   },
-   "cristo": {
-    "w": 800,
-    "h": 450,
-    "widths": [
-     160,
-     480,
-     800
-    ],
-    "escudo": false,
-    "autor": "Agrupación de Cofradías de Córdoba",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
-    "foco": "53% 40%",
-    "cedida": true,
-    "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-cristo.jpg",
-    "tam": 96161,
-    "titular": "Nuestro Padre Jesús de las Penas"
    }
   },
   "el-huerto-cordoba": {
@@ -12123,12 +12104,12 @@
   },
   "jesus-nazareno-cordoba": {
    "cristo": {
-    "w": 936,
+    "w": 786,
     "h": 1169,
     "widths": [
      160,
      480,
-     936
+     786
     ],
     "escudo": false,
     "autor": "Carolina Fernández",
@@ -12139,7 +12120,7 @@
     "focoFicha": "0% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg",
-    "tam": 315521,
+    "tam": 320779,
     "titular": "Nuestro Padre Jesús Nazareno"
    },
    "virgen": {
@@ -12298,7 +12279,7 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/",
-    "foco": "62% 30%",
+    "foco": "15% 30%",
     "cedida": true,
     "local": "scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg",
     "tam": 83910,
@@ -12884,7 +12865,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg\"|148480|\"\"|\"55% 40%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-virgen.jpg\"|326980|\"\"|\"50% 30%\"|\"\"|\"100% 100%\""
+   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg\"|148480|\"\"|\"55% 40%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-virgen.jpg\"|327934|\"\"|\"50% 30%\"|\"\"|\"100% 100%\""
   },
   "humildad-y-paciencia-cadiz": {
    "w": 960,
@@ -13636,16 +13617,6 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 40%\"|\"https://www.instagram.com/hdadlanzada/\"|\"scripts/cedidas/huelva/la-lanzada-huelva-virgen.jpg\"|630822|\"\"|\"50% 15%\"|\"\"|\"\""
   },
-  "la-esperanza-cordoba": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "firma": "\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/\"|\"scripts/cedidas/cordoba/la-esperanza-cordoba-cristo.jpg\"|96161|\"\"|\"53% 40%\"|\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/\"|\"scripts/cedidas/cordoba/la-esperanza-cordoba-virgen.jpg\"|109575|\"\"|\"62% 35%\"|\"\"|\"\""
-  },
   "el-huerto-cordoba": {
    "w": 960,
    "h": 640,
@@ -13914,7 +13885,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg\"|315521|\"\"|\"43% 25%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg\"|213617|\"\"|\"50% 35%\"|\"0% 100%\"|\"\""
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg\"|320779|\"\"|\"43% 25%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg\"|213617|\"\"|\"50% 35%\"|\"0% 100%\"|\"\""
   },
   "la-cena-cordoba": {
    "w": 960,
@@ -13944,7 +13915,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg\"|83910|\"\"|\"62% 30%\"|\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg\"|167869|\"\"|\"50% 45%\"|\"\"|\"\""
+   "firma": "\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-cristo.jpg\"|83910|\"\"|\"15% 30%\"|\"https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/\"|\"scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg\"|167869|\"\"|\"50% 45%\"|\"\"|\"\""
   }
  }
 }
