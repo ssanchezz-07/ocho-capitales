@@ -1923,7 +1923,7 @@ main ol:not([class]) { padding-left: 1.4em; }
 .oc-c-ruta.is-sel.is-regreso { stroke-dasharray: 10 7; }
 /* Trazo de la salida extraordinaria (Pablo, 9-nov: «más definido y minimalista»): un solo trazo continuo con filo oscuro, el regreso
    más fino y apagado (sin rayas), flechas de sentido y un punto en su templo y en el del acto. Estilo «Oro» (las otras dos
-   propuestas, «Marfil» y «Dos tonos», están en el commit 0b1b979 por si Pablo cambia) */
+   propuestas, «Marfil» y «Dos tonos», están en el commit 9026548 por si Pablo cambia) */
 .oc-c-ruta.is-sola, .oc-c-ruta.is-sola.is-sel { display: inline; filter: none; stroke-dasharray: none; stroke: #f0d79c; stroke-opacity: 1; stroke-width: 3.5px; }
 .oc-c-ruta.is-sola.is-regreso, .oc-c-ruta.is-sola.is-sel.is-regreso { stroke-dasharray: none; stroke-width: 2.25px; stroke-opacity: .6; }
 .oc-c-ruta.is-sola.is-aprox, .oc-c-ruta.is-sola.is-sel.is-aprox { stroke-dasharray: 2 7; stroke-width: 2px; stroke-opacity: .6; }
