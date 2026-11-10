@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T05:39:34.500Z",
+ "generado": "2026-11-10T05:56:43.490Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -5177,19 +5177,23 @@
   "animas-cordoba": {
    "cristo": {
     "w": 960,
-    "h": 1280,
+    "h": 1200,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Tiberioclaudio99",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Remedio_de_%C3%81nimas_(Iglesia_de_San_Lorenzo_de_C%C3%B3rdoba).jpg",
-    "titular": "Santísimo Cristo del Remedio de Ánimas",
-    "foco": "50% 6%"
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "53% 38%",
+    "focoFicha": "100% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/animas-cordoba-cristo.jpg",
+    "tam": 606642,
+    "titular": "Santísimo Cristo del Remedio de Ánimas"
    },
    "virgen": {
     "w": 800,
@@ -5724,19 +5728,23 @@
   },
   "los-dolores-cordoba": {
    "virgen": {
-    "w": 960,
-    "h": 1243,
+    "w": 804,
+    "h": 1208,
     "widths": [
      160,
      480,
-     960
+     804
     ],
     "escudo": false,
-    "autor": "Ca",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg",
-    "foco": "50% 12%",
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "50% 30%",
+    "focoFicha": "100% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/los-dolores-cordoba-virgen.jpg",
+    "tam": 326980,
     "titular": "Nuestra Señora de los Dolores"
    },
    "cristo": {
@@ -6409,18 +6417,22 @@
   "la-estrella-almeria": {
    "virgen": {
     "w": 960,
-    "h": 723,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_05.jpg",
-    "titular": "Nuestro Padre Jesús de las Penas"
+    "autor": "La Estrella (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadestrellaalmeria/",
+    "foco": "44% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-estrella-almeria-virgen.jpg",
+    "tam": 1388659,
+    "titular": "María Santísima de la Estrella"
    }
   },
   "la-coronacion-almeria": {},
@@ -12111,22 +12123,23 @@
   },
   "jesus-nazareno-cordoba": {
    "cristo": {
-    "w": 800,
-    "h": 450,
+    "w": 936,
+    "h": 1169,
     "widths": [
      160,
      480,
-     800
+     936
     ],
     "escudo": false,
-    "autor": "Agrupación de Cofradías de Córdoba",
+    "autor": "Carolina Fernández",
     "licencia": "",
     "licurl": "",
-    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
-    "foco": "45% 60%",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "43% 25%",
+    "focoFicha": "0% 100%",
     "cedida": true,
     "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg",
-    "tam": 171184,
+    "tam": 315521,
     "titular": "Nuestro Padre Jesús Nazareno"
    },
    "virgen": {
@@ -12771,7 +12784,7 @@
     480,
     960
    ],
-   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_del_Remedio_de_%C3%81nimas_(Iglesia_de_San_Lorenzo_de_C%C3%B3rdoba).jpg\"|\"\"|\"\"|\"\"|\"50% 6%\"|\"https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/\"|\"scripts/cedidas/cordoba/animas-cordoba-virgen.jpg\"|111122|\"\"|\"52% 40%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/animas-cordoba-cristo.jpg\"|606642|\"\"|\"53% 38%\"|\"https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/\"|\"scripts/cedidas/cordoba/animas-cordoba-virgen.jpg\"|111122|\"\"|\"52% 40%\"|\"100% 100%\"|\"\""
   },
   "la-agonia-cordoba": {
    "w": 960,
@@ -12871,7 +12884,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg\"|148480|\"\"|\"55% 40%\"|\"https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg\"|\"\"|\"\"|\"\"|\"50% 12%\"|\"\"|\"\""
+   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg\"|148480|\"\"|\"55% 40%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-virgen.jpg\"|326980|\"\"|\"50% 30%\"|\"\"|\"100% 100%\""
   },
   "humildad-y-paciencia-cadiz": {
    "w": 960,
@@ -13901,7 +13914,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg\"|171184|\"\"|\"45% 60%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg\"|213617|\"\"|\"50% 35%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg\"|315521|\"\"|\"43% 25%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg\"|213617|\"\"|\"50% 35%\"|\"0% 100%\"|\"\""
   },
   "la-cena-cordoba": {
    "w": 960,
