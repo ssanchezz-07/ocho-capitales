@@ -2141,24 +2141,28 @@
   },
   "el-prendimiento-almeria": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Merced_de_Almer%C3%ADa.jpg",
-    "titulo": "File:Nuestra Señora de la Merced de Almería.jpg",
-    "autor": "Juanalberto27665",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "El Prendimiento (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoalm/",
+    "local": "scripts/cedidas/almeria/el-prendimiento-almeria-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Merced",
     "titular": "Nuestra Señora de la Merced",
-    "foco": "50% 62%"
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @prendimientoalm (https://www.instagram.com/p/De7psmzogfO/), sin fotógrafo citado, coautor ni firma. Recortada en vertical sobre la Virgen. Sustituye a la de Commons: la de la propia hermandad va antes. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "los-estudiantes-almeria": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Amor_y_la_Esperanza.jpg",
-    "titulo": "File:Virgen del Amor y la Esperanza.jpg",
-    "autor": "CarlosVdeHabsburgo",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Los Estudiantes (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cof_estudiantes/",
+    "local": "scripts/cedidas/almeria/los-estudiantes-almeria-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora del Amor y la Esperanza",
     "titular": "Nuestra Señora del Amor y la Esperanza",
-    "foco": "50% 0%"
+    "foco": "47% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @cof_estudiantes (https://www.instagram.com/p/De8ryDciPM3/, imagen 1), sin fotógrafo citado, coautor ni firma. Sustituye a la de Commons: la de la propia hermandad va antes. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "rosario-del-mar-almeria": {
@@ -2211,13 +2215,15 @@
     "titular": "Santísimo Cristo de la Buena Muerte"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Angustias_09.jpg",
-    "titulo": "File:Procesión Angustias 09.jpg",
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Las Angustias (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/angustias1911_oficial/",
+    "local": "scripts/cedidas/almeria/las-angustias-almeria-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de las Angustias",
     "titular": "Nuestra Señora de las Angustias",
-    "foco": "30% 35%"
+    "foco": "53% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @angustias1911_oficial (https://www.instagram.com/p/DQeaE-YDZNl/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo a quien la vistió. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-silencio-descendimiento-almeria": {
@@ -2247,19 +2253,15 @@
     ]
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Sepulcro_05.jpg",
-    "titulo": "File:Hermandad Sepulcro 05.jpg",
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Santo Sepulcro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sepulcroalmeria/",
+    "local": "scripts/cedidas/almeria/el-santo-sepulcro-almeria-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
     "titular": "Nuestra Señora de los Dolores",
-    "recorte": [
-     0.48,
-     0.3,
-     0.2,
-     0.36
-    ],
-    "foco": "50% 65%"
+    "foco": "48% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @sepulcroalmeria (https://www.instagram.com/p/De6MeG2iJj1/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-soledad-almeria": {
@@ -5756,6 +5758,19 @@
     "titular": "Nuestro Padre Jesús de la Victoria en sus Tres Caídas",
     "foco": "15% 30%",
     "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/hermandades-agrupadas/hermandad-de-la-o/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/cristo-hermandad-de-la-O.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "el-resucitado-almeria": {
+   "cristo": {
+    "autor": "El Resucitado (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadoalmeria/",
+    "local": "scripts/cedidas/almeria/el-resucitado-almeria-cristo.jpg",
+    "titulo": "Cedida: Jesucristo Resucitado, Señor de la Vida",
+    "titular": "Jesucristo Resucitado, Señor de la Vida",
+    "foco": "45% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @resucitadoalmeria (https://www.instagram.com/p/DY5SBRriHC2/, imagen 2), sin fotógrafo citado, coautor ni firma. La cabecera etiqueta al presidente de la Agrupación y a una concejala, no a fotógrafos. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   }
  }

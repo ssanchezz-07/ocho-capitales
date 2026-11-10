@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T17:03:26.587Z",
+ "generado": "2026-11-10T17:22:53.374Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6534,19 +6534,22 @@
   "el-prendimiento-almeria": {
    "virgen": {
     "w": 960,
-    "h": 1280,
+    "h": 1270,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Juanalberto27665",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_la_Merced_de_Almer%C3%ADa.jpg",
-    "titular": "Nuestra Señora de la Merced",
-    "foco": "50% 62%"
+    "autor": "El Prendimiento (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/prendimientoalm/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/el-prendimiento-almeria-virgen.jpg",
+    "tam": 220450,
+    "titular": "Nuestra Señora de la Merced"
    }
   },
   "los-estudiantes-almeria": {
@@ -6559,12 +6562,15 @@
      960
     ],
     "escudo": false,
-    "autor": "CarlosVdeHabsburgo",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_del_Amor_y_la_Esperanza.jpg",
-    "titular": "Nuestra Señora del Amor y la Esperanza",
-    "foco": "50% 0%"
+    "autor": "Los Estudiantes (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/cof_estudiantes/",
+    "foco": "47% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/los-estudiantes-almeria-virgen.jpg",
+    "tam": 813875,
+    "titular": "Nuestra Señora del Amor y la Esperanza"
    }
   },
   "rosario-del-mar-almeria": {
@@ -6625,19 +6631,22 @@
    },
    "virgen": {
     "w": 960,
-    "h": 723,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Procesi%C3%B3n_Angustias_09.jpg",
-    "titular": "Nuestra Señora de las Angustias",
-    "foco": "30% 35%"
+    "autor": "Las Angustias (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/angustias1911_oficial/",
+    "foco": "53% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/las-angustias-almeria-virgen.jpg",
+    "tam": 582405,
+    "titular": "Nuestra Señora de las Angustias"
    }
   },
   "el-silencio-descendimiento-almeria": {
@@ -6681,26 +6690,23 @@
     "titular": "Cristo yacente"
    },
    "virgen": {
-    "w": 816,
-    "h": 1106,
+    "w": 960,
+    "h": 960,
     "widths": [
      160,
      480,
-     816
+     960
     ],
     "escudo": false,
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Hermandad_Sepulcro_05.jpg",
-    "recorte": [
-     0.48,
-     0.3,
-     0.2,
-     0.36
-    ],
-    "titular": "Nuestra Señora de los Dolores",
-    "foco": "50% 65%"
+    "autor": "Santo Sepulcro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/sepulcroalmeria/",
+    "foco": "48% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/el-santo-sepulcro-almeria-virgen.jpg",
+    "tam": 556869,
+    "titular": "Nuestra Señora de los Dolores"
    }
   },
   "la-soledad-almeria": {
@@ -12400,6 +12406,27 @@
     "local": "scripts/cedidas/cordoba/la-o-cordoba-virgen.jpg",
     "tam": 167869,
     "titular": "María Santísima de la O"
+   }
+  },
+  "el-resucitado-almeria": {
+   "cristo": {
+    "w": 960,
+    "h": 1067,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Resucitado (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/resucitadoalmeria/",
+    "foco": "45% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/el-resucitado-almeria-cristo.jpg",
+    "tam": 365554,
+    "titular": "Jesucristo Resucitado, Señor de la Vida"
    }
   }
  },
