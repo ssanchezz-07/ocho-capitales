@@ -1166,11 +1166,17 @@ function pageHerm(h) {
   // «Pasos y cortejo» (tools/sources/pasos-cortejo.json): cada fuente con su etiqueta; si es la misma ficha oficial, se dice en su línea
   const pasosDeFicha = (h.paso_fuentes || []).includes(h.fuente_url);
   for (const f of h.paso_fuentes || []) if (f !== h.fuente_url) (porUrl.get(f) || porUrl.set(f, []).get(f)).push('pasos y cortejo');
-  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url) + (/.pdf($|[?#])/i.test(url) ? ' (documento PDF)' : ''))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
+  // Un mismo rótulo en las tres listas; un PDF (programa oficial, reglas…) se distingue de la web de su entidad (auditoría de Fichas, 10-nov)
+  const rotuloFuente = (url) => (/wikipedia\.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url) + (/\.pdf($|[?#])/i.test(url) ? ' (documento PDF)' : ''));
+  // si la fuente del hábito ya sale en otra línea (p. ej. el programa oficial de Córdoba, que da los pasos), se dice en esa línea
+  const habUrl = HABITOS[h.slug] && HABITOS[h.slug].texto && HABITOS[h.slug].fuente_url;
+  const habUnido = !!(habUrl && porUrl.has(habUrl));
+  if (habUnido) porUrl.get(habUrl).push('hábito de nazareno' + (HABITOS[h.slug].fuente_nombre ? ' · ' + HABITOS[h.slug].fuente_nombre : ''));
+  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(rotuloFuente(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
   // las fuentes de la historia y del hábito también van al apartado de la hermandad en «Fuentes y metodología»
   const histDeFicha = !!(h.historia && h.fuente_url && (h.historia_fuentes || []).includes(h.fuente_url)); // la misma web: una sola línea
-  const deHistoria = (h.historia ? h.historia_fuentes || [] : []).filter((f) => !histDeFicha || f !== h.fuente_url).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('');
-  const deHabito = HABITOS[h.slug] && HABITOS[h.slug].texto && HABITOS[h.slug].fuente_url ? `<li><a href="${esc(HABITOS[h.slug].fuente_url)}" target="_blank" rel="noopener">${esc(nombreWeb(HABITOS[h.slug].fuente_url))}</a><span>hábito de nazareno${HABITOS[h.slug].fuente_nombre ? ' · ' + esc(HABITOS[h.slug].fuente_nombre) : ''}</span></li>` : '';
+  const deHistoria = (h.historia ? h.historia_fuentes || [] : []).filter((f) => !histDeFicha || f !== h.fuente_url).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(rotuloFuente(f))}</a><span>historia</span></li>`).join('');
+  const deHabito = habUrl && !habUnido ? `<li><a href="${esc(HABITOS[h.slug].fuente_url)}" target="_blank" rel="noopener">${esc(rotuloFuente(HABITOS[h.slug].fuente_url))}</a><span>hábito de nazareno${HABITOS[h.slug].fuente_nombre ? ' · ' + esc(HABITOS[h.slug].fuente_nombre) : ''}</span></li>` : '';
   const deAcomp = h.acompanamiento && h.acompanamiento.fuente ? `<li><a href="${esc(h.acompanamiento.fuente)}" target="_blank" rel="noopener">${esc(h.acompanamiento.medio || nombreWeb(h.acompanamiento.fuente))}</a><span>acompañamiento musical ${esc(h.acompanamiento.anio)}</span></li>` : '';
   const fuente = h.fuente_url || otras || deHistoria ? `<ul class="oc-fuentes">${h.fuente_url ? `<li><a href="${esc(h.fuente_url)}" target="_blank" rel="noopener">${isWiki ? 'Wikipedia (CC BY-SA 4.0)' : esc(host)}</a><span>${isWiki ? 'datos de la hermandad' : /agrupacion|consejo|hermandades|federacion|cofradias/.test(host) ? 'ficha oficial de la hermandad' : 'datos de la hermandad'}${histDeFicha ? ' e historia' : ''}${pasosDeFicha ? '; pasos y cortejo' : ''}</span></li>` : ''}${otras}${deHistoria}${deHabito}${deAcomp}</ul>` : '';
   if (fuente) fuentesCapDe(h.ciudad).hermandades.push({ slug: h.slug, nombre: h.nombre, dia: h.dia, orden: h.orden, html: fuente });
