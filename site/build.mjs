@@ -1166,7 +1166,7 @@ function pageHerm(h) {
   // «Pasos y cortejo» (tools/sources/pasos-cortejo.json): cada fuente con su etiqueta; si es la misma ficha oficial, se dice en su línea
   const pasosDeFicha = (h.paso_fuentes || []).includes(h.fuente_url);
   for (const f of h.paso_fuentes || []) if (f !== h.fuente_url) (porUrl.get(f) || porUrl.set(f, []).get(f)).push('pasos y cortejo');
-  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
+  const otras = [...porUrl].map(([url, cs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url) + (/.pdf($|[?#])/i.test(url) ? ' (documento PDF)' : ''))}</a><span>${esc([...new Set(cs)].join(', '))}</span></li>`).join('');
   // las fuentes de la historia y del hábito también van al apartado de la hermandad en «Fuentes y metodología»
   const histDeFicha = !!(h.historia && h.fuente_url && (h.historia_fuentes || []).includes(h.fuente_url)); // la misma web: una sola línea
   const deHistoria = (h.historia ? h.historia_fuentes || [] : []).filter((f) => !histDeFicha || f !== h.fuente_url).map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(f) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(f))}</a><span>historia</span></li>`).join('');

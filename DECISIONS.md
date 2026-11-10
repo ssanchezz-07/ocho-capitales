@@ -71,6 +71,18 @@ Pablo, literal: «el apartado pasos y cortejo en algunas hermandades queda raro,
   - Cádiz, Huelva, Almería y Jaén: la ficha de cada hermandad en su Consejo o Agrupación.
   - Córdoba: el librito oficial 2026 de la Agrupación.
   - Granada: la guía oficial 2026 de la Federación.
+- **Etiquetas propias:** se admiten cuando el paso no es de un titular de la lista: «Paso de la urna» (Cristo yacente en urna, solo si la fuente habla de urna), «Paso de San Juan», «Paso de la Verónica» y «Paso alegórico» (la Trinidad de Sevilla).
+- **Excepciones con Wikipedia como fuente del detalle** (el número de pasos sale siempre de la nómina): el Amor, la Borriquita y Santa Marta de Sevilla, porque sus webs no responden; el Divino Perdón, porque no se encontró su web; y parte de las Vísperas de Sevilla. Ahí sale el aviso «Texto basado en Wikipedia».
+- **Auditoría (NO APTO, 10-nov), corregido:**
+  - Descendimiento de Huelva: paso de Ángel de la Feria comprado en 2000; palio desde 1976.
+  - Pino Montano: palio rojo, orfebrería plateada.
+  - Fuera un superlativo en el Prendimiento de Huelva.
+  - Paloma y Mediadora sin dar por hecho lo que la Agrupación cuenta en futuro.
+  - Dolores del Puerto con los datos de sus tronos.
+  - Luz y Mar en un solo trono.
+  - «Paso», no «trono», en Jaén.
+  - Las líneas que solo daban el nombre del titular en Córdoba, Granada, Almería y Huelva se completan con su ficha oficial.
+  - En «Fuentes y metodología» los PDF salen como «(documento PDF)», para distinguir el programa oficial de la web de la misma entidad.
 - **Descartado:**
   - Repetir en «Pasos y cortejo» la música de cada paso: ya va justo debajo, en «Música», con su fuente del año. Duplicarla era justo lo que «queda raro».
   - Citar los programas de Canal Sur 2026: sus PDF dan 404 y no están archivados. Se usaron solo como pista para saber qué buscar.
