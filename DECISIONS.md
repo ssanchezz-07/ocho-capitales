@@ -53,6 +53,31 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
 - **Descartado**: `text-wrap` (no mejora lo medido) y `content-visibility` (sigue fuera por Safari).
 - **Propuesto, sin hacer**: (1) partir el CSS por tipo de página, porque site.css (180 KB) y vida.css (83 KB) bloquean el pintado y cada página usa entre el 10 y el 17 %, y es lo que más pesa en el TBT que queda; (2) un «ver más» en bandas e imaginerías de las páginas de capital (menos DOM y menos miniaturas).
 
+## 2026-11-10 · Fichas: «Pasos y cortejo» con una sola idea y hábitos con fuente oficial (punto 5 de Pablo)
+Pablo, literal: «el apartado pasos y cortejo en algunas hermandades queda raro, no se sigue la misma idea y queda pobre». Muchas fichas decían solo «Trono de Cristo y trono de Virgen.».
+- **La idea común:**
+  - Una línea por paso (en Málaga, trono), en el orden en que salen, con una etiqueta fija: «Paso/Trono de misterio» (escena con varias figuras), «de Cristo» (un solo Cristo), «de palio» (solo si la fuente nombra el palio) o «de la Virgen».
+  - En cada línea: lo que lleva el paso (el titular y las figuras que lo acompañan, con autor y año de esas figuras) y su dato propio (autor y año del trono o paso, palio, manto, portadores), según la fuente oficial.
+  - Una línea «Cortejo» solo si la fuente da algo propio de la procesión.
+  - Sin superlativos ni tópicos. Lo que la fuente cuenta en futuro y ya está desfasado se cuenta en pasado o no va.
+- **Fuente nueva:** `tools/sources/pasos-cortejo.json`.
+  - `build-data.js` la aplica sobre «paso», que se queda como texto seguido porque lo leen erCuñao y la base de datos, y guarda `paso_fuentes`.
+  - `build.mjs` pinta la lista dentro de `.oc-prose`, que ya tenía estilo de lista, así que no hace falta CSS nuevo.
+  - En «Fuentes y metodología», si la fuente es la misma ficha oficial se añade «; pasos y cortejo» a su línea; si no, va en una línea propia.
+  - Las fichas que no están en el archivo siguen con su texto de antes.
+- **Fuentes por capital:**
+  - Málaga: «Sagradas Imágenes» y «Singularidad» de cada ficha de la Agrupación.
+  - Sevilla: número de pasos de la nómina oficial 2026 del Consejo y detalle de la web de cada hermandad; para las Vísperas, La Voz de Sevilla 2026.
+  - Cádiz, Huelva, Almería y Jaén: la ficha de cada hermandad en su Consejo o Agrupación.
+  - Córdoba: el librito oficial 2026 de la Agrupación.
+  - Granada: la guía oficial 2026 de la Federación.
+- **Descartado:**
+  - Repetir en «Pasos y cortejo» la música de cada paso: ya va justo debajo, en «Música», con su fuente del año. Duplicarla era justo lo que «queda raro».
+  - Citar los programas de Canal Sur 2026: sus PDF dan 404 y no están archivados. Se usaron solo como pista para saber qué buscar.
+  - Deducir «a costal» o «a hombros» de la capital: solo se dice si la ficha de la hermandad lo dice.
+- **Cifras (barrido del 9-nov):** Hermandades enseñaba las fichas (72 en Sevilla) y Capitales la cifra oficial (71). Ahora las dos dicen lo mismo: la cifra oficial y, si no coincide, «· N fichas» (`cifraFichas` en `build.mjs`).
+- **Bandas:** la línea de la ficha original sin año ni fuente sobra cuando el acompañamiento del año ya trae esa cofradía. Era el «Jueves Santo» repetido en la banda de las Cigarreras, y había otros 4 casos. La marca de banda propia pasa a la línea que se queda.
+
 ## 2026-11-09 · Esperanza de Triana: nombres de sus titulares según la hermandad
 Para el vídeo de Marketing. Los titulares pasan a llamarse «Santísimo Cristo de las Tres Caídas» (antes «Nuestro Padre Jesús de las Tres Caídas») y «Nuestra Señora de la Esperanza» (antes «María Santísima de la Esperanza de Triana»), como en la web de la hermandad (esperanzadetriana.es) y en la nómina 2026 del Consejo.
 - Se corrigen con `titulares_renombrar` en `fichas-correcciones.json`, con la fuente de cada uno, y en el campo «titular» de las fotos (`imagenes.json` e `imagenes-titulares.json`), que da los pies de foto y el texto alternativo del díptico. Las autorías no cambian.
