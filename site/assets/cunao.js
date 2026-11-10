@@ -156,6 +156,9 @@
     // «desde Basílica de…» → «desde la Basílica de…»
     const conArt = (s) => (/^(iglesia|bas[ií]lica|parroquia|capilla|ermita|catedral|casa|colegiata|real parroquia|santa iglesia|insigne)/i.test(s) ? 'la ' : /^(convento|santuario|oratorio|templo|monasterio|colegio|real santuario|antiguo)/i.test(s) ? 'el ' : '') + s;
     const diasHasta = (iso) => Math.round((Date.parse(iso) - Date.parse(hoyISO(0))) / 864e5);
+    // «hoy», «mañana, domingo 15 de noviembre», «este sábado 14 de noviembre» o «el sábado 5 de diciembre»
+    const SEMANA = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+    const cuandoEx = (iso) => { const n = diasHasta(iso), w = SEMANA[new Date(iso + 'T12:00:00Z').getUTCDay()]; return n <= 0 ? 'hoy, ' + w + ' ' + fechaCorta(iso) + ',' : n === 1 ? 'mañana, ' + w + ' ' + fechaCorta(iso) + ',' : (n < 7 ? 'este ' : 'el ') + w + ' ' + fechaCorta(iso); };
     const CANON = ['Viernes de Dolores', 'Sábado de Pasión', 'Domingo de Ramos', 'Lunes Santo', 'Martes Santo', 'Miércoles Santo', 'Jueves Santo', 'Madrugá', 'Viernes Santo', 'Sábado Santo', 'Domingo de Resurrección'];
     function jornadaDeFecha(iso) {
       const l = CANON.filter((d) => D.fechas[d] === iso);
@@ -181,6 +184,8 @@
       capital: (c) => BASE + 'semana-santa/' + c + '/', noticias: (c) => BASE + 'noticias/?ciudad=' + c, buscar: (q) => BASE + 'buscar/?q=' + encodeURIComponent(q),
       calle: (c, d) => BASE + 'en-la-calle/' + c + '/' + (d ? '?dia=' + encodeURIComponent(diaEnCiudad(c, d)) : ''),
       seguir: (h) => BASE + 'en-la-calle/' + h.c + '/?dia=' + encodeURIComponent(diaEnCiudad(h.c, h.d)) + '&h=' + encodeURIComponent(h.s),
+      // el plano de una salida extraordinaria, con su pestaña («14 nov · Pasión»); sin ella, el plano de la ciudad
+      extra: (c, etq) => BASE + 'en-la-calle/' + c + '/' + (etq ? '?dia=' + encodeURIComponent(etq) : ''),
       compositor: (s) => BASE + 'compositor/' + s + '/', marchas: () => BASE + 'marchas/',
       // «Sugerir»: el formulario de Colabora con la pregunta ya escrita (y la hermandad, si la hay)
       sugerir: (q, h) => BASE + 'colabora/?texto=' + encodeURIComponent(('Pregunta a erCuñao: ' + String(q || '')).slice(0, 400)) + (h ? '&nombre=' + encodeURIComponent(h.n + ' (' + nombreCiudad(h.c) + ')') + '&capital=' + h.c : ''),
@@ -500,7 +505,11 @@
           if (sal) { const tl = lineaTiempo(h); if (tl) r.partes.push(tl); }
           (h.x || []).forEach((x) => P(r, 'Además, ' + art(x[0]) + ' sale ' + (x[3] || 'una imagen') + (x[1] ? ' a las ' + x[1] : '') + (x[2] ? ' desde ' + conArt(x[2]) : '') + '.'));
           if (D.fechas[h.d]) P(r, cap1(art(h.d)) + ' de ' + D.anio + (h.d === 'Madrugá' ? ' es ' : ' cae ') + cuandoCae(h.d) + '.');
-          A(r, enlacesHerm(h, true)); break;
+          // su próxima salida extraordinaria (itinerarios-extraordinarios.json), con sus horas y el plano de esa salida; pasada la
+          // fecha ya no se dice (Pablo, 10-nov: «el bot podría indicarlo sobre la salida extraordinaria del sábado»)
+          const exH = (D.ex || []).filter((x) => x[4] === h.s && x[0] >= hoyISO(0));
+          exH.forEach((x) => P(r, 'Y no hace falta esperar: ' + cuandoEx(x[0]) + ' tiene ' + (/^salida extraordinaria\b/i.test(x[3]) ? 'salida extraordinaria' : '«' + x[3] + '»') + (x[1] ? ', a las ' + x[1] : '') + (x[5] ? ' desde ' + conArt(x[5]) : '') + (x[8] ? ', con la entrada a las ' + x[8] : '') + (x[10] ? ', según la ' + x[10].charAt(0).toLowerCase() + x[10].slice(1) : '') + '.'));
+          A(r, exH.map((x) => ['Verla en la calle', L.extra(x[2], x[9])]).concat(enlacesHerm(h, true))); break;
         }
         case 'sede': {
           P(r, h.se ? 'La sede ' + cabecera(h, 'de') + ' es ' + conArt(h.se) + '. De allí ' + V(h, 'sale ', 'salen ') + art(h.d) + (sal ? ' ' + sal : '') + '.' : 'No tengo apuntada la sede ' + cabecera(h, 'de') + '.');
@@ -724,7 +733,7 @@
     const agendaHasta = () => { const a = CIUDADES.agenda; return a && a.h ? a.h : '9999'; };
     function actosDe(isos, ciudad) {
       const ag = agendaL(), out = [];
-      (D.ex || []).forEach((x) => { if (isos.indexOf(x[0]) >= 0 && (!ciudad || x[2] === ciudad)) out.push({ f: x[0], h: x[1], c: x[2], t: x[3], herm: POR_SLUG.get(x[4]) || null, sal: true, mapa: x[7], fu: x[6], sede: x[5] }); });
+      (D.ex || []).forEach((x) => { if (isos.indexOf(x[0]) >= 0 && (!ciudad || x[2] === ciudad)) out.push({ f: x[0], h: x[1], c: x[2], t: x[3], herm: POR_SLUG.get(x[4]) || null, sal: true, mapa: x[7], fu: x[6], sede: x[5], etq: x[9] || '' }); });
       ag.forEach((x) => {
         if (isos.indexOf(x[0]) < 0 || (ciudad && x[5] !== ciudad)) return;
         const herm = POR_SLUG.get(x[4]) || null, sal = SALIDA.has(x[2]);
@@ -734,7 +743,7 @@
       });
       return out.sort((a, b) => a.f.localeCompare(b.f) || (b.sal ? 1 : 0) - (a.sal ? 1 : 0) || (a.h || '99').localeCompare(b.h || '99'));
     }
-    const itemActo = (a, conFecha, ciudad) => ({ x: a.h ? a.t.replace(/,? a las \d{1,2}[:.]\d{2}( horas| h)?/i, '') : a.t, href: a.mapa ? L.calle(a.c) : a.herm ? L.herm(a.herm) : a.fu || '', ext: !a.mapa && !a.herm && !!a.fu, sub: [conFecha ? fechaCorta(a.f) : '', ciudad ? '' : nombreCiudad(a.c), a.h ? a.h : '', a.mapa ? 'en el plano' : a.tipo && !a.sal ? TIPO_TXT[a.tipo] || '' : ''].filter(Boolean).join(' · ') });
+    const itemActo = (a, conFecha, ciudad) => ({ x: a.h ? a.t.replace(/,? a las \d{1,2}[:.]\d{2}( horas| h)?/i, '') : a.t, href: a.mapa ? L.extra(a.c, a.etq) : a.herm ? L.herm(a.herm) : a.fu || '', ext: !a.mapa && !a.herm && !!a.fu, sub: [conFecha ? fechaCorta(a.f) : '', ciudad ? '' : nombreCiudad(a.c), a.h ? a.h : '', a.mapa ? 'en el plano' : a.tipo && !a.sal ? TIPO_TXT[a.tipo] || '' : ''].filter(Boolean).join(' · ') });
     function respActos(iso, ciudad, e) {
       if (!CIUDADES.agenda) return necesitaVarios(['agenda']);
       const r = Resp(), hoy = iso === hoyISO(0), n = diasHasta(D.fechas['Domingo de Ramos']);

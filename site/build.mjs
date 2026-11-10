@@ -2356,8 +2356,15 @@ function datosCunao() {
     const f = path.join(DIR, 'data', 'recorridos', c.slug + '.json'); if (!fs.existsSync(f)) continue;
     for (const e of Object.values(JSON.parse(fs.readFileSync(f, 'utf8')).extraordinarias || {})) {
       if (!e.fecha || e.fecha < hoyEx) continue;
-      const p0 = Object.values(e.tramos || {}).flat()[0] || {};
-      ex.push([e.fecha, hhmm(p0.hora), c.slug, e.titulo || '', HERM[e.hermandad] ? e.hermandad : (e.nombre_hermandad || ''), limpiaLugar(p0.lugar || ''), /^https?:\/\//.test(e.fuente_url || '') ? e.fuente_url : '', 1]);
+      const todos = Object.values(e.tramos || {}).flat(), p0 = todos[0] || {}, pN = todos[todos.length - 1] || {};
+      // [8] entrada: solo si la fuente da la hora del último punto (si no, se habría repartido por la distancia: no se dice)
+      // [9] la jornada del plano, igual que en la pestaña de En la calle («14 nov · Pasión»), para enlazar justo esa salida
+      // [10] la fuente en corto («Web oficial de la Archicofradía de la Pasión»), para decir de dónde salen las horas
+      const [, M_, D_] = e.fecha.split('-').map(Number), hN = HERM[e.hermandad] || { nombre: e.nombre_hermandad || '' };
+      const etq = `${D_} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M_ - 1]} · ${e.corto || hN.nombre}`;
+      const fuC = String(e.fuente || '').split(/[,(«:]/)[0].trim();
+      ex.push([e.fecha, hhmm(p0.hora), c.slug, e.titulo || '', HERM[e.hermandad] ? e.hermandad : (e.nombre_hermandad || ''), limpiaLugar(p0.lugar || ''), /^https?:\/\//.test(e.fuente_url || '') ? e.fuente_url : '', 1,
+        todos.length > 1 && pN.hora ? hhmm(pN.hora) : '', etq, fuC]);
     }
   }
   ex.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]));

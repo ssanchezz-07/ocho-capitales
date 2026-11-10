@@ -1,5 +1,15 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-10 · erCuñao avisa de la próxima salida extraordinaria (Pablo, vía Marketing: «el bot podría indicarlo sobre la salida extraordinaria del sábado»)
+- En «¿A qué hora sale?» y «¿Cuándo sale?», después de la Semana Santa, erCuñao añade la próxima extraordinaria de esa cofradía. Lo hace con cualquiera de `itinerarios-extraordinarios.json` (a través de `data/recorridos/<capital>.json`), no solo con la Pasión. Ejemplo: «Y no hace falta esperar: este sábado 14 de noviembre tiene salida extraordinaria, a las 17:30 desde la Parroquia de los Santos Mártires, con la entrada a las 23:35, según la web oficial de la Archicofradía de la Pasión.»
+- Va con un botón «Verla en la calle», que abre el plano en la pestaña de esa salida (`?dia=14 nov · Pasión`). Las listas de actos («¿Qué sale el 14 de noviembre en Málaga?») también enlazan esa pestaña, y no solo el plano de la ciudad.
+- Las filas de `D.ex` (cunao.json) suman tres campos:
+  - la hora de entrada, solo si la fuente la da (si no, la habría repartido el plano por la distancia y no se dice);
+  - la etiqueta de la pestaña, igual que en `En la calle`;
+  - la fuente en corto.
+- Pasada la fecha ya no se dice. El motor lo comprueba con su fecha de hoy, porque la web compilada guarda las de ayer en adelante.
+- Casos B9-1 a B9-3 en `probar-cunao`: los tres se generan con la primera extraordinaria que haya y se omiten si no queda ninguna.
+
 ## 2026-11-10 · Fluidez de toda la página (noche del 9-nov, erCuñao, punto 1 del plan; no se toca el plano)
 Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, mediana de 3 pasadas, contra la versión publicada (6f3635d). Lo que más frenaba eran las imágenes (el navegador bajaba fotos de 3x para huecos pequeños) y el salto del calendario.
 - **`sizes` de las imágenes** (`build.mjs`): las miniaturas de 64 px piden 160 en vez de 480 en pantallas de 3x (`SIZES_MINI`). Al principio también se bajaron la cabecera de las capitales y las fotos de la portada (Sevilla, de 1339 a 274 KB; LCP de 1328 a 540 ms), pero el auditor-web midió que, al ir recortadas con `object-fit: cover`, se ablandaban el bordado y las fachadas (0,48 píxeles de imagen por píxel de pantalla). Se dejan como estaban: primero la nitidez. Si se quiere el ahorro sin perderla, haría falta un ancho intermedio (por ejemplo 1440) en `ANCHOS_CABECERA`, y eso supone generar más archivos de imagen (queda propuesto).

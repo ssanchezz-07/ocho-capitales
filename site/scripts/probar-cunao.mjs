@@ -466,6 +466,14 @@ caso('B7-15 en su imaginero, la obra con la nota, no como obra suya sin más', m
 caso('B7-19 la Macarena: la salida del palio, como estimación y con su fuente (no es de la nómina)', motor(), '¿A qué hora sale la Macarena de Sevilla?', contiene('00:00', 'Esa es la hora oficial, la de la cruz de guía', 'El palio sale hacia las 01:40, según el programa de Canal Sur', 'es una estimación'));
 caso('B8-1 «cuánto dura» la Macarena: cuenta desde la cruz de guía (oficial) y el palio va como estimación', motor(), '¿Cuánto tiempo está en la calle la Macarena de Sevilla?', y(contiene('la cruz de guía sale a las 00:00 (hora oficial)', 'el palio se recoge hacia las', 'es una estimación'), noDice('sale a las 01:40')));
 caso('B8-2 «cuánto dura» la Esperanza de Triana: no da las 03:07 como su salida', motor(), '¿Cuánto dura la Esperanza de Triana?', y(contiene('01:19 (hora oficial)', 'es una estimación'), noDice('sale a las 03:07')));
+// B9: la próxima salida extraordinaria de una cofradía (D.ex) en «¿a qué hora sale?», con sus horas y el plano de esa salida;
+// pasada la fecha, ya no (Pablo, 10-nov). Con los datos del día: si no queda ninguna por delante, se omite.
+{ const x = (D.ex || []).find((e) => D.hermandades.some((h) => h.s === e[4]));
+  if (!x) omitida('B9 extraordinaria en «a qué hora sale» (no hay ninguna por delante)');
+  else { const h = D.hermandades.find((k) => k.s === x[4]), q = '¿A qué hora sale ' + h.n + ' de ' + D.capitales.find((c) => c[0] === h.c)[1] + '?';
+    caso('B9-1 «a qué hora sale» ' + h.n + ': su extraordinaria del ' + x[0] + ', con salida, entrada, fuente y el plano de esa salida', motor(HOY), q, y(contiene('salida extraordinaria', x[1], ...(x[8] ? [x[8]] : []), ...(x[10] ? ['según la'] : [])), (r) => r.enlaces.some((e) => e[0] === 'Verla en la calle' && e[1].indexOf(encodeURIComponent(x[9])) >= 0) || 'falta «Verla en la calle» con la pestaña ' + x[9]));
+    caso('B9-2 el día de después ya no la dice', motor(masDias(x[0], 1)), q, noDice('salida extraordinaria', 'Verla en la calle'));
+    caso('B9-3 la lista de actos de ese día enlaza la pestaña de la salida', motor(HOY), '¿Qué sale el ' + fechaCorta(x[0]) + ' en ' + D.capitales.find((c) => c[0] === h.c)[1] + '?', (r) => todo(r).indexOf(encodeURIComponent(x[9])) >= 0 || 'sin la pestaña ' + x[9]); } }
 caso('B8-6 «cuánto dura» el Cachorro: sus horas del paso no cuadran con la cruz de guía, no saca duración de ellas', motor(), '¿Cuánto dura el Cachorro?', y(contiene('15:35', 'no cuadran'), noDice('sale a las 18:10', '4 h y 35 min')));
 caso('B8-7 «cuánto dura» el Gran Poder: no da las 01:55 del palio como su salida', motor(), '¿Cuánto dura el Gran Poder de Sevilla?', y(contiene('00:35', 'no cuadran'), noDice('sale a las 01:55', '5 h y 50 min')));
 caso('B8-3 fuente que no es un programa: entre comillas, sin «según el Horarios»', motor(), '¿A qué hora sale la Bofeta?', noDice('según el Horarios'));
