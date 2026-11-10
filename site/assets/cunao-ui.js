@@ -159,11 +159,23 @@
   const panelDlg = hoja.querySelector('[role="dialog"]') || hoja;
   const anchaMQ = matchMedia('(min-width: 1440px)'); // por debajo, el hueco de 452 px deja la página más estrecha que el menú
   // acoplado no es modal: la página sigue usable con teclado y lector de pantalla (auditoría del 10-nov); flotante, sí
+  // Al apartarse la página (o volver), el texto cambia de alto: se guarda lo primero que se ve bajo la cabecera y, tras el cambio,
+  // se corrige el scroll para que siga en el mismo sitio. El navegador no lo hace solo porque cambia el padding del body
+  // (en la ficha, «Música» bajaba 274 px al abrir; auditoría de diseño del 10-nov).
+  const ancla = () => {
+    if (scrollY < 1) return null;
+    const cab = document.querySelector('.oc-header'), y = cab ? cab.getBoundingClientRect().bottom + 4 : 0;
+    const el_ = [...document.querySelectorAll('main h1, main h2, main h3, main p, main li, main img')].find((x) => x.getBoundingClientRect().bottom > y);
+    return el_ ? { el: el_, top: el_.getBoundingClientRect().top } : null;
+  };
+  const sujeta = (a) => { if (!a || !a.el.isConnected) return; const d = a.el.getBoundingClientRect().top - a.top; if (Math.abs(d) > 1) scrollBy({ top: d, behavior: 'instant' }); };
   function ponLado(v) {
+    const a = v !== document.documentElement.classList.contains('oc-cunao-lado') ? ancla() : null;
     lado = v; panelDlg.setAttribute('aria-modal', v ? 'false' : 'true');
     const de = document.documentElement; de.classList.toggle('oc-cunao-lado', v); document.body.style.overflow = v ? '' : 'hidden';
     if (v) de.style.setProperty('--oc-sb', Math.max(0, innerWidth - document.body.getBoundingClientRect().width) + 'px'); // barra de scroll (con scrollbar-gutter, clientWidth no la descuenta), para lo de borde a borde
     dispatchEvent(new Event('resize'));
+    sujeta(a);
   }
   // si se estrecha o se ensancha la ventana con erCuñao abierto, cambia de modo
   const alCambiar = () => { if (!hoja.hidden && hoja.classList.contains('is-open') && anchaMQ.matches !== lado) ponLado(anchaMQ.matches); };
@@ -191,7 +203,7 @@
   }
   function cerrar() {
     hoja.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-    if (lado) { lado = false; tLado = setTimeout(() => { document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); }, calm ? 0 : 200); }
+    if (lado) { lado = false; tLado = setTimeout(() => { const a = ancla(); document.documentElement.classList.remove('oc-cunao-lado'); dispatchEvent(new Event('resize')); sujeta(a); }, calm ? 0 : 200); }
     if (vv) { vv.removeEventListener('resize', ajusta); vv.removeEventListener('scroll', ajusta); } suelta_();
     tCierre = setTimeout(() => { hoja.hidden = true; }, calm ? 0 : 200);
     (ultimoFoco && ultimoFoco.focus ? ultimoFoco : btn).focus();

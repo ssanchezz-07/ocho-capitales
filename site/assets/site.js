@@ -1268,6 +1268,36 @@
     }
   }
 
+  // ---------- filtros de Noticias en carrusel: si no caben, se desvanecen por el lado que sigue y, con ratón, una flecha lo
+  // avanza (antes, a 1440 las capitales se cortaban en seco y no había forma de verlas con la rueda; auditoría de diseño del
+  // 10-nov). Pasarlos a varias líneas hacía la barra fija de un tercio de la pantalla; por eso siguen en una fila.
+  $$('.nx-filtros .nx-chips').forEach(function (u) {
+    var fila = u.parentNode, sig = null, ant = null, pend = false;
+    if (window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var flecha = function (dir) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'nx-flecha is-' + dir; b.tabIndex = -1; b.setAttribute('aria-hidden', 'true'); b.hidden = true;
+        b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="' + (dir === 'sig' ? 'm9 6 6 6-6 6' : 'm15 6-6 6 6 6') + '" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        b.addEventListener('click', function () { u.scrollBy({ left: (dir === 'sig' ? 1 : -1) * u.clientWidth * 0.7, behavior: reduced ? 'auto' : 'smooth' }); });
+        fila.appendChild(b); return b;
+      };
+      fila.classList.add('nx-con-flechas'); sig = flecha('sig'); ant = flecha('ant');
+    }
+    var mira = function () {
+      pend = false;
+      var max = u.scrollWidth - u.clientWidth, x = u.scrollLeft, hayD = max > 2 && x < max - 2, hayI = max > 2 && x > 2;
+      u.classList.toggle('is-mas-d', hayD); u.classList.toggle('is-mas-i', hayI);
+      if (!sig) return;
+      // las flechas van sobre los bordes del carrusel (su sitio cambia con el ancho y con erCuñao acoplado)
+      sig.hidden = !hayD; ant.hidden = !hayI;
+      sig.style.top = ant.style.top = (u.offsetTop + (u.offsetHeight - 36) / 2) + 'px';
+      sig.style.left = (u.offsetLeft + u.offsetWidth - 36) + 'px'; ant.style.left = u.offsetLeft + 'px';
+    };
+    var pide = function () { if (!pend) { pend = true; requestAnimationFrame(mira); } };
+    u.addEventListener('scroll', pide, { passive: true }); addEventListener('resize', pide);
+    if (window.ResizeObserver) new ResizeObserver(pide).observe(u);
+    mira();
+  });
+
   // ---------- página de noticias (dibuja assets/noticias.js, el mismo que en la página compilada) ----------
   var nf = $('[data-news-filters]');
   if (nf && window.OCNoticias) {

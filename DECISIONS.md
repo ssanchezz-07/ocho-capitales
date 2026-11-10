@@ -5,11 +5,19 @@ Medido con Playwright en móvil 390 con la CPU 4 veces más lenta y en PC 1440, 
 - **`sizes` de las imágenes** (`build.mjs`): las miniaturas de 64 px piden 160 en vez de 480 en pantallas de 3x (`SIZES_MINI`). Al principio también se bajaron la cabecera de las capitales y las fotos de la portada (Sevilla, de 1339 a 274 KB; LCP de 1328 a 540 ms), pero el auditor-web midió que, al ir recortadas con `object-fit: cover`, se ablandaban el bordado y las fachadas (0,48 píxeles de imagen por píxel de pantalla). Se dejan como estaban: primero la nitidez. Si se quiere el ahorro sin perderla, haría falta un ancho intermedio (por ejemplo 1440) en `ANCHOS_CABECERA`, y eso supone generar más archivos de imagen (queda propuesto).
 - **Calendario sin saltos**: el servidor pinta los próximos actos y el mes con el mismo marcado que `site.js`, y `.cx-mes` ya no nace oculto con JS (la regla global `[hidden]` obligó a poner `!important`). CLS de 0,149 a 0.
 - **`site.js`**: los formateadores `Intl` se crean una sola vez (antes, uno por fecha) y el botón de volver arriba no hace cálculos mientras no hace falta.
-- **Noticias**: en el móvil, la destacada lleva un degradado más opaco detrás del texto, que ya no se transparenta. En PC, los filtros pasan a varias líneas y no se cortan a 1440.
+- **Noticias**:
+  - En el móvil, la destacada lleva un degradado más opaco detrás del texto, que ya no se transparenta.
+  - En PC los filtros siguen en carrusel de una fila. Primero se pasaron a varias líneas, pero el auditor-diseno dio NO APTO: la barra fija ocupaba del 31 al 43 % de la pantalla. Ahora, por el lado que siguen, el borde se desvanece y, con ratón, sale una flecha que avanza el carrusel (`site.js`, clases `is-mas-d` e `is-mas-i`). Los temas van algo más juntos y a 1440 caben enteros. La barra mide lo mismo que antes.
+  - Un solo corte entre móvil y PC, en 760 px.
 - **erCuñao en PC (desde 1440 px)**: se acopla a la derecha, 452 px, y la página se aparta en vez de quedar tapada. Lo de borde a borde de la portada cuenta con el ancho que queda, y la cabecera usa los escalones de pantallas medias para que el menú no pise el buscador. Volver arriba se corre a la izquierda del panel. Por debajo de 1440 sigue siendo la ventana flotante: con 1280, la página quedaría en 828 px, más estrecha que el menú. Se cierra con su botón o con Escape.
 - **Juegos en PC** (punto 8): a partir de 960 px tiene un ancho de 1040, las tarjetas van en 3 columnas y las opciones en 2.
 - **Botones de juegos del bot en el móvil** (punto 8): un enlace del chat a la misma página (p. ej. «El reto de hoy» estando en Juegos) cierra la hoja y el juego arranca a la vista.
 - **Nazareno de la portada**: empieza a dibujarse cuando su tramo entra por la mitad de la pantalla. Al bajar rápido ya no aparece un bloque oscuro vacío.
+- **Auditoría de diseño (auditor-diseno, NO APTO; arreglado)**:
+  - La barra fija de Noticias (ver arriba).
+  - Al abrir o cerrar erCuñao acoplado a media página, el texto saltaba (274 px en la ficha). Ahora se guarda lo primero que se ve bajo la cabecera y se corrige el scroll tras el cambio.
+  - Volver arriba queda en el hueco entre el contenido y el panel.
+  - En Juegos, las tarjetas de una fila tienen el mismo alto, y la que queda sola en la última fila la ocupa entera, también en tablet.
 - **Auditoría (auditor-web, NO APTO; arreglado)**:
   - erCuñao acoplado ya no es modal: `aria-modal="false"` y el Tab sale a la página.
   - Escape lo cierra aunque el foco esté en la página.
