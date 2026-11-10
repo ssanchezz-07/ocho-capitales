@@ -1926,7 +1926,8 @@ main ol:not([class]) { padding-left: 1.4em; }
    propuestas, «Marfil» y «Dos tonos», están en el commit 0b1b979 por si Pablo cambia) */
 .oc-c-ruta.is-sola, .oc-c-ruta.is-sola.is-sel { display: inline; filter: none; stroke-dasharray: none; stroke: #f0d79c; stroke-opacity: 1; stroke-width: 3.5px; }
 .oc-c-ruta.is-sola.is-regreso, .oc-c-ruta.is-sola.is-sel.is-regreso { stroke-dasharray: none; stroke-width: 2.25px; stroke-opacity: .6; }
-.oc-c-ruta.is-sola.is-aprox { stroke-dasharray: 2 7; stroke-width: 2px; stroke-opacity: .6; }
+.oc-c-ruta.is-sola.is-aprox, .oc-c-ruta.is-sola.is-sel.is-aprox { stroke-dasharray: 2 7; stroke-width: 2px; stroke-opacity: .6; }
+.oc-c-ruta.is-sola.is-estimado, .oc-c-ruta.is-sola.is-sel.is-estimado { stroke-dasharray: 1.5 5; stroke-width: 1.6px; }
 .oc-c-ruta-filo { display: none; fill: none; stroke: #12061b; stroke-opacity: .9; stroke-width: 7px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .oc-c-ruta-filo.is-sola { display: inline; }
 .oc-c-ruta-filo.is-regreso { stroke-width: 5px; stroke-opacity: .55; }
