@@ -1142,12 +1142,15 @@
     "foco": "50% 58%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma_C%C3%B3rdoba.JPG",
-    "titulo": "File:Virgen de la Palma Córdoba.JPG",
-    "autor": "Miguelpalio",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Palma"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/",
+    "local": "scripts/cedidas/cordoba/entrada-triunfal-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Palma",
+    "titular": "Nuestra Señora de la Palma",
+    "foco": "45% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestra-senora-de-la-Palma.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "penas-de-santiago-cordoba": {
@@ -1161,12 +1164,15 @@
     "foco": "50% 56%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Desamparados.jpg",
-    "titulo": "File:Virgen Desamparados.jpg",
-    "autor": "CordobesAM",
-    "licencia": "CC0",
-    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "titular": "Nuestra Señora Madre de los Desamparados"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/",
+    "local": "scripts/cedidas/cordoba/penas-de-santiago-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora Madre de los Desamparados",
+    "titular": "Nuestra Señora Madre de los Desamparados",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestra-Senora-Madre-de-los-Desamparados.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "vera-cruz-cordoba": {
@@ -1178,6 +1184,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima del Dulce Nombre",
     "foco": "50% 63%"
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/",
+    "local": "scripts/cedidas/cordoba/vera-cruz-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Señor de los Reyes",
+    "titular": "Nuestro Señor de los Reyes",
+    "foco": "45% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Senor-de-los-reyes.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-rescatado-cordoba": {
@@ -1229,12 +1246,26 @@
   },
   "la-estrella-cordoba": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ntra._Sra._de_la_Estrella_C%C3%B3rdoba_2012.jpg",
-    "titulo": "File:Ntra. Sra. de la Estrella Córdoba 2012.jpg",
-    "autor": "Abgaro2123",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "titular": "Nuestra Señora de la Estrella"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "local": "scripts/cedidas/cordoba/la-estrella-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Estrella",
+    "titular": "Nuestra Señora de la Estrella",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/NUESTRA-SENORA-DE-LA-ESTRELLA.-.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "local": "scripts/cedidas/cordoba/la-estrella-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Redención",
+    "titular": "Nuestro Padre Jesús de la Redención",
+    "foco": "35% 25%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/NUESTRO-PADRE-JESUS-DE-LA-REDENCION-ANTE-CAIFAS-NEGACIONES-Y-LAGRIMAS-DE-SAN-PEDRO-.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-sentencia-cordoba": {
@@ -1275,6 +1306,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo del Remedio de Ánimas",
     "foco": "50% 6%"
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+    "local": "scripts/cedidas/cordoba/animas-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora Madre de Dios en sus Tristezas",
+    "titular": "Nuestra Señora Madre de Dios en sus Tristezas",
+    "foco": "52% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestra-Senora-Madre-de-Dios-en-sus-Tristezas.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-agonia-cordoba": {
@@ -1353,12 +1395,15 @@
     "foco": "50% 0%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_Nuestra_Se%C3%B1ora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg",
-    "titulo": "File:Palio de Nuestra Señora de la Piedad por la Iglesia de San Lorenzo.jpg",
-    "autor": "Carlos9933",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestra Señora de la Piedad"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/",
+    "local": "scripts/cedidas/cordoba/el-prendimiento-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Piedad",
+    "titular": "Nuestra Señora de la Piedad",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Virgen-de-la-Piedad.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-perdon-cordoba": {
@@ -1370,6 +1415,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús del Perdón",
     "foco": "50% 47%"
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+    "local": "scripts/cedidas/cordoba/el-perdon-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rocío y Lágrimas",
+    "titular": "María Santísima del Rocío y Lágrimas",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Maria-Santisima-del-Rocio-y-Lagrimas-.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-calvario-cordoba": {
@@ -1421,6 +1477,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima del Amor",
     "foco": "50% 43%"
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/",
+    "local": "scripts/cedidas/cordoba/la-pasion-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Pasión",
+    "titular": "Nuestro Padre Jesús de la Pasión",
+    "foco": "45% 30%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Ntro.-padre-Jesus-de-la-pasion.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-piedad-cordoba": {
@@ -1434,12 +1501,15 @@
     "foco": "50% 13%"
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
-    "titulo": "File:María Santísima de Vida Dulzura y Esperanza Nuestra.jpg",
-    "autor": "Carlos9933",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "María Santísima de Vida"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+    "local": "scripts/cedidas/cordoba/la-piedad-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Vida, Dulzura y Esperanza Nuestra",
+    "titular": "María Santísima de Vida, Dulzura y Esperanza Nuestra",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Maria-Santisima-de-Vida-Dulzura-y-Esperanza-Nuestra.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-caridad-cordoba": {
@@ -1485,12 +1555,15 @@
   },
   "cristo-de-gracia-el-esparraguero-cordoba": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cordoba_-_Iglesia_de_Nuestra_Se%C3%B1ora_de_Gracia_(Trinitariios)_0.jpg",
-    "titulo": "File:Cordoba - Iglesia de Nuestra Señora de Gracia (Trinitariios) 0.jpg",
-    "autor": "Zarateman",
-    "licencia": "CC0",
-    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "titular": "Santísimo Cristo de Gracia"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/",
+    "local": "scripts/cedidas/cordoba/cristo-de-gracia-el-esparraguero-cordoba-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de Gracia",
+    "titular": "Santísimo Cristo de Gracia",
+    "foco": "60% 60%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Cristo-de-gracia.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-buena-muerte-cordoba": {
@@ -1504,12 +1577,15 @@
     "foco": "50% 2%"
    },
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Sant%C3%ADsimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.JPG",
-    "titulo": "File:Paso del Santísimo Cristo de la Buena Muerte. Iglesia de San Hipólito de Córdoba.JPG",
-    "autor": "Lancastermerrin88",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Santísimo Cristo de la Buena Muerte"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+    "local": "scripts/cedidas/cordoba/la-buena-muerte-cordoba-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Buena Muerte",
+    "titular": "Santísimo Cristo de la Buena Muerte",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Buena-muerte.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "la-soledad-cordoba": {
@@ -1554,6 +1630,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestra Señora de los Dolores",
     "foco": "50% 12%"
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/",
+    "local": "scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Clemencia",
+    "titular": "Santísimo Cristo de la Clemencia",
+    "foco": "55% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Cristo-dolores.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "lagrimas-cordoba": {
@@ -3244,6 +3331,17 @@
     "licencia": "Public domain",
     "licurl": "",
     "titular": "Iglesia de Santa Marina de Aguas Santas"
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/",
+    "local": "scripts/cedidas/cordoba/el-resucitado-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Señor Resucitado",
+    "titular": "Nuestro Señor Resucitado",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Resucitado.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-despojado-cadiz": {
@@ -4629,13 +4727,26 @@
   },
   "la-esperanza-cordoba": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanzacordoba.jpg",
-    "titulo": "File:Esperanzacordoba.jpg",
-    "autor": "Cofradecordobes16",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Esperanza",
     "titular": "María Santísima de la Esperanza",
-    "foco": "50% 30%"
+    "foco": "62% 35%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Esperanza-cordobesa.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de las Penas",
+    "titular": "Nuestro Padre Jesús de las Penas",
+    "foco": "53% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestro-padre-Jesus-de-las-penas.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-huerto-cordoba": {
@@ -4647,17 +4758,52 @@
     "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "titular": "Nuestro Padre Jesús de la Oración en el Huerto",
     "foco": "50% 20%"
+   },
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "local": "scripts/cedidas/cordoba/el-huerto-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Oración en el Huerto",
+    "titular": "Nuestro Padre Jesús de la Oración en el Huerto",
+    "foco": "60% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestro-Padre-Jesus-de-la-Oracion-en-el-Huerto.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "local": "scripts/cedidas/cordoba/el-huerto-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Candelaria",
+    "titular": "María Santísima de la Candelaria",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Maria-Santisima-de-la-Candelaria.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "el-buen-suceso-cordoba": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:PasoBuenSuceso.jpg",
-    "titulo": "File:PasoBuenSuceso.jpg",
-    "autor": "FedeAlvrz01",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "local": "scripts/cedidas/cordoba/el-buen-suceso-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús del Buen Suceso",
     "titular": "Nuestro Padre Jesús del Buen Suceso",
-    "foco": "50% 30%"
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/09/Nuestro-Padre-Jesus-del-Buen-Suceso-.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "local": "scripts/cedidas/cordoba/el-buen-suceso-cordoba-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de los Dolores",
+    "titular": "Nuestra Señora de los Dolores",
+    "foco": "48% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Nuestra-senora-de-los-dolores-buen-suceso.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   },
   "presentacion-al-pueblo-cordoba": {
@@ -5441,6 +5587,80 @@
     "titular": "Jesús de la Esperanza",
     "foco": "48% 18%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandad_de_la_milagrosa (bio «Perfil Oficial»; https://www.instagram.com/p/DWJzgdXCAJl/), sin fotógrafo citado, coautor ni firma. Recortada al misterio. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "jesus-nazareno-cordoba": {
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
+    "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
+    "titular": "Nuestro Padre Jesús Nazareno",
+    "foco": "45% 60%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Navareno.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
+    "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima Nazarena",
+    "titular": "María Santísima Nazarena",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Nazarena.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "la-cena-cordoba": {
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/",
+    "local": "scripts/cedidas/cordoba/la-cena-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de la Fe",
+    "titular": "Nuestro Padre Jesús de la Fe",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Padre-Jesus-de-la-Fe.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   },
+   "virgen": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/",
+    "local": "scripts/cedidas/cordoba/la-cena-cordoba-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Esperanza del Valle",
+    "titular": "María Santísima de la Esperanza del Valle",
+    "foco": "50% 40%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Maria-Santisima-de-la-Esperanza-del-Valle.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "la-conversion-cordoba": {
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/",
+    "local": "scripts/cedidas/cordoba/la-conversion-cordoba-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Oración y la Caridad",
+    "titular": "Santísimo Cristo de la Oración y la Caridad",
+    "foco": "50% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Cristo-de-la-oracion-y-caridad.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
+   }
+  },
+  "santo-sepulcro-cordoba": {
+   "cristo": {
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/",
+    "local": "scripts/cedidas/cordoba/santo-sepulcro-cordoba-cristo.jpg",
+    "titulo": "Cedida: Nuestro Señor Jesucristo del Santo Sepulcro",
+    "titular": "Nuestro Señor Jesucristo del Santo Sepulcro",
+    "foco": "55% 45%",
+    "permiso": "Publicada por la Agrupación de Hermandades y Cofradías de Córdoba en la página de la hermandad (https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/; imagen https://www.hermandadesdecordoba.es/wp-content/uploads/2026/10/Santo-sepulcro-cristo.webp), sin fotógrafo citado, firma ni marca de agua (revisada con realce de contraste). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito al organismo con enlace a su página."
    }
   }
  }

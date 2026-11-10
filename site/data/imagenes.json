@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T05:24:08.678Z",
+ "generado": "2026-11-10T05:33:48.875Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4910,35 +4910,43 @@
     "foco": "50% 58%"
    },
    "virgen": {
-    "w": 768,
-    "h": 1024,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     768
+     800
     ],
     "escudo": false,
-    "autor": "Miguelpalio",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Palma_C%C3%B3rdoba.JPG",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/",
+    "foco": "45% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/entrada-triunfal-cordoba-virgen.jpg",
+    "tam": 172997,
     "titular": "Nuestra Señora de la Palma"
    }
   },
   "penas-de-santiago-cordoba": {
    "virgen": {
-    "w": 960,
-    "h": 881,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     960
+     800
     ],
     "escudo": false,
-    "autor": "CordobesAM",
-    "licencia": "CC0",
-    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_Desamparados.jpg",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/penas-de-santiago-cordoba-virgen.jpg",
+    "tam": 137106,
     "titular": "Nuestra Señora Madre de los Desamparados"
    },
    "cristo": {
@@ -4974,6 +4982,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Dulce_Nombre_en_sus_Dolores_Gloriosos.jpg",
     "titular": "María Santísima del Dulce Nombre",
     "foco": "50% 63%"
+   },
+   "cristo": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/",
+    "foco": "45% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/vera-cruz-cordoba-cristo.jpg",
+    "tam": 187145,
+    "titular": "Nuestro Señor de los Reyes"
    }
   },
   "el-rescatado-cordoba": {
@@ -5059,19 +5086,42 @@
   },
   "la-estrella-cordoba": {
    "virgen": {
-    "w": 960,
-    "h": 1280,
+    "w": 700,
+    "h": 613,
     "widths": [
      160,
      480,
-     960
+     700
     ],
     "escudo": false,
-    "autor": "Abgaro2123",
-    "licencia": "CC BY-SA 3.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ntra._Sra._de_la_Estrella_C%C3%B3rdoba_2012.jpg",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-estrella-cordoba-virgen.jpg",
+    "tam": 127544,
     "titular": "Nuestra Señora de la Estrella"
+   },
+   "cristo": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/",
+    "foco": "35% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-estrella-cordoba-cristo.jpg",
+    "tam": 142686,
+    "titular": "Nuestro Padre Jesús de la Redención"
    }
   },
   "la-sentencia-cordoba": {
@@ -5140,6 +5190,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_del_Remedio_de_%C3%81nimas_(Iglesia_de_San_Lorenzo_de_C%C3%B3rdoba).jpg",
     "titular": "Santísimo Cristo del Remedio de Ánimas",
     "foco": "50% 6%"
+   },
+   "virgen": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/",
+    "foco": "52% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/animas-cordoba-virgen.jpg",
+    "tam": 111122,
+    "titular": "Nuestra Señora Madre de Dios en sus Tristezas"
    }
   },
   "la-agonia-cordoba": {
@@ -5274,18 +5343,22 @@
     "foco": "50% 0%"
    },
    "virgen": {
-    "w": 865,
-    "h": 1149,
+    "w": 700,
+    "h": 613,
     "widths": [
      160,
      480,
-     865
+     700
     ],
     "escudo": false,
-    "autor": "Carlos9933",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Palio_de_Nuestra_Se%C3%B1ora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-prendimiento-cordoba-virgen.jpg",
+    "tam": 174355,
     "titular": "Nuestra Señora de la Piedad"
    }
   },
@@ -5305,6 +5378,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_paso_por_la_puerta_del_Perd%C3%B3n_de_la_Mezquita.jpg",
     "titular": "Nuestro Padre Jesús del Perdón",
     "foco": "50% 47%"
+   },
+   "virgen": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-perdon-cordoba-virgen.jpg",
+    "tam": 216461,
+    "titular": "María Santísima del Rocío y Lágrimas"
    }
   },
   "el-calvario-cordoba": {
@@ -5391,21 +5483,46 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Amor_y_San_Juan_Evangelista.jpg",
     "titular": "María Santísima del Amor",
     "foco": "50% 43%"
+   },
+   "cristo": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/",
+    "foco": "45% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-pasion-cordoba-cristo.jpg",
+    "tam": 79492,
+    "titular": "Nuestro Padre Jesús de la Pasión"
    }
   },
   "la-piedad-cordoba": {
    "virgen": {
-    "w": 160,
-    "h": 216,
+    "w": 700,
+    "h": 613,
     "widths": [
-     160
+     160,
+     480,
+     700
     ],
     "escudo": false,
-    "autor": "Carlos9933",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
-    "titular": "María Santísima de Vida"
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-piedad-cordoba-virgen.jpg",
+    "tam": 133239,
+    "titular": "María Santísima de Vida, Dulzura y Esperanza Nuestra"
    },
    "cristo": {
     "w": 639,
@@ -5495,18 +5612,22 @@
   },
   "cristo-de-gracia-el-esparraguero-cordoba": {
    "cristo": {
-    "w": 960,
-    "h": 720,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     960
+     800
     ],
     "escudo": false,
-    "autor": "Zarateman",
-    "licencia": "CC0",
-    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Cordoba_-_Iglesia_de_Nuestra_Se%C3%B1ora_de_Gracia_(Trinitariios)_0.jpg",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-cristo-de-gracia/",
+    "foco": "60% 60%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/cristo-de-gracia-el-esparraguero-cordoba-cristo.jpg",
+    "tam": 139005,
     "titular": "Santísimo Cristo de Gracia"
    }
   },
@@ -5528,18 +5649,22 @@
     "foco": "50% 2%"
    },
    "cristo": {
-    "w": 960,
-    "h": 1280,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     960
+     800
     ],
     "escudo": false,
-    "autor": "Lancastermerrin88",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Paso_del_Sant%C3%ADsimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.JPG",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-buena-muerte-cordoba-cristo.jpg",
+    "tam": 84871,
     "titular": "Santísimo Cristo de la Buena Muerte"
    }
   },
@@ -5613,6 +5738,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg",
     "foco": "50% 12%",
     "titular": "Nuestra Señora de los Dolores"
+   },
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/",
+    "foco": "55% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg",
+    "tam": 148480,
+    "titular": "Santísimo Cristo de la Clemencia"
    }
   },
   "lagrimas-cordoba": {
@@ -8286,6 +8430,25 @@
     "licurl": "",
     "pagina": "https://commons.wikimedia.org/wiki/File:Cordoba_-_Iglesia_de_Santa_Marina_de_Aguas_Santas_10.jpg",
     "titular": "Iglesia de Santa Marina de Aguas Santas"
+   },
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-resurreccion/hermandad-del-resucitado/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-resucitado-cordoba-cristo.jpg",
+    "tam": 111796,
+    "titular": "Nuestro Señor Resucitado"
    }
   },
   "el-despojado-cadiz": {
@@ -10530,20 +10693,42 @@
   },
   "la-esperanza-cordoba": {
    "virgen": {
-    "w": 639,
-    "h": 960,
+    "w": 800,
+    "h": 450,
     "widths": [
      160,
      480,
-     639
+     800
     ],
     "escudo": false,
-    "autor": "Cofradecordobes16",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Esperanzacordoba.jpg",
-    "foco": "50% 30%",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "foco": "62% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-virgen.jpg",
+    "tam": 109575,
     "titular": "María Santísima de la Esperanza"
+   },
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/",
+    "foco": "53% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-esperanza-cordoba-cristo.jpg",
+    "tam": 96161,
+    "titular": "Nuestro Padre Jesús de las Penas"
    }
   },
   "el-huerto-cordoba": {
@@ -10562,24 +10747,84 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Huerto_(C%C3%B3rdoba).jpg",
     "foco": "50% 20%",
     "titular": "Nuestro Padre Jesús de la Oración en el Huerto"
+   },
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "foco": "60% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-huerto-cordoba-cristo.jpg",
+    "tam": 126926,
+    "titular": "Nuestro Padre Jesús de la Oración en el Huerto"
+   },
+   "virgen": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-huerto-cordoba-virgen.jpg",
+    "tam": 163533,
+    "titular": "María Santísima de la Candelaria"
    }
   },
   "el-buen-suceso-cordoba": {
    "cristo": {
-    "w": 960,
-    "h": 1359,
+    "w": 700,
+    "h": 613,
     "widths": [
      160,
      480,
-     960
+     700
     ],
     "escudo": false,
-    "autor": "FedeAlvrz01",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:PasoBuenSuceso.jpg",
-    "foco": "50% 30%",
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-buen-suceso-cordoba-cristo.jpg",
+    "tam": 116953,
     "titular": "Nuestro Padre Jesús del Buen Suceso"
+   },
+   "virgen": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/",
+    "foco": "48% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/el-buen-suceso-cordoba-virgen.jpg",
+    "tam": 114233,
+    "titular": "Nuestra Señora de los Dolores"
    }
   },
   "presentacion-al-pueblo-cordoba": {
@@ -11860,6 +12105,128 @@
     "tam": 674146,
     "titular": "Jesús de la Esperanza"
    }
+  },
+  "jesus-nazareno-cordoba": {
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
+    "foco": "45% 60%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg",
+    "tam": 171184,
+    "titular": "Nuestro Padre Jesús Nazareno"
+   },
+   "virgen": {
+    "w": 700,
+    "h": 613,
+    "widths": [
+     160,
+     480,
+     700
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg",
+    "tam": 213617,
+    "titular": "María Santísima Nazarena"
+   }
+  },
+  "la-cena-cordoba": {
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-cena-cordoba-cristo.jpg",
+    "tam": 100374,
+    "titular": "Nuestro Padre Jesús de la Fe"
+   },
+   "virgen": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/",
+    "foco": "50% 40%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-cena-cordoba-virgen.jpg",
+    "tam": 148606,
+    "titular": "María Santísima de la Esperanza del Valle"
+   }
+  },
+  "la-conversion-cordoba": {
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/hermandad-de-la-conversion/",
+    "foco": "50% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/la-conversion-cordoba-cristo.jpg",
+    "tam": 94150,
+    "titular": "Santísimo Cristo de la Oración y la Caridad"
+   }
+  },
+  "santo-sepulcro-cordoba": {
+   "cristo": {
+    "w": 800,
+    "h": 450,
+    "widths": [
+     160,
+     480,
+     800
+    ],
+    "escudo": false,
+    "autor": "Agrupación de Cofradías de Córdoba",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-del-santo-sepulcro/",
+    "foco": "55% 45%",
+    "cedida": true,
+    "local": "scripts/cedidas/cordoba/santo-sepulcro-cordoba-cristo.jpg",
+    "tam": 110302,
+    "titular": "Nuestro Señor Jesucristo del Santo Sepulcro"
+   }
   }
  },
  "dipticos": {
@@ -12243,6 +12610,36 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Expiraci%C3%B3n.png\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mayor_Dolor.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "entrada-triunfal-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Imatge_de_la_Confraria_de_Nuestro_Padre_Jes%C3%BAs_de_los_Reyes_a_l%27esgl%C3%A9sia_de_San_Lorenzo_de_C%C3%B2rdova.jpg\"|\"\"|\"\"|\"\"|\"50% 58%\"|\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-entrada-triunfal/\"|\"scripts/cedidas/cordoba/entrada-triunfal-cordoba-virgen.jpg\"|172997|\"\"|\"45% 45%\"|\"\"|\"\""
+  },
+  "penas-de-santiago-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Penas_de_Santiago.png\"|\"\"|\"\"|\"\"|\"50% 56%\"|\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-las-penas/\"|\"scripts/cedidas/cordoba/penas-de-santiago-cordoba-virgen.jpg\"|137106|\"\"|\"50% 40%\"|\"\"|\"\""
+  },
+  "vera-cruz-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-vera-cruz/\"|\"scripts/cedidas/cordoba/vera-cruz-cordoba-cristo.jpg\"|187145|\"\"|\"45% 40%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Dulce_Nombre_en_sus_Dolores_Gloriosos.jpg\"|\"\"|\"\"|\"\"|\"50% 63%\"|\"\"|\"\""
+  },
   "el-rescatado-cordoba": {
    "w": 960,
    "h": 640,
@@ -12263,6 +12660,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Humilde_en_su_Coronaci%C3%B3n_de_Espinas.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Merced-2010-8.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "la-estrella-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/\"|\"scripts/cedidas/cordoba/la-estrella-cordoba-cristo.jpg\"|142686|\"\"|\"35% 25%\"|\"https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-la-estrella/\"|\"scripts/cedidas/cordoba/la-estrella-cordoba-virgen.jpg\"|127544|\"\"|\"50% 30%\"|\"\"|\"\""
+  },
   "la-sentencia-cordoba": {
    "w": 960,
    "h": 640,
@@ -12272,6 +12679,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Ntro._P._Jes%C3%BAs_de_la_Sentencia.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Besamanos-gracia-y-amparo-2013-1.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "animas-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_del_Remedio_de_%C3%81nimas_(Iglesia_de_San_Lorenzo_de_C%C3%B3rdoba).jpg\"|\"\"|\"\"|\"\"|\"50% 6%\"|\"https://www.hermandadesdecordoba.es/lunes-santo/hermandad-de-animas/\"|\"scripts/cedidas/cordoba/animas-cordoba-virgen.jpg\"|111122|\"\"|\"52% 40%\"|\"\"|\"\""
   },
   "la-agonia-cordoba": {
    "w": 960,
@@ -12303,6 +12720,26 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_Encuentro_con_la_Santa_Mujer_Ver%C3%B3nica_de_Santa_Faz.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Mar%C3%ADa_Sant%C3%ADsima_de_la_Trinidad._Iglesia_de_la_Trinidad_de_C%C3%B3rdoba.JPG\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "el-prendimiento-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_en_su_Prendimiento.jpg\"|\"\"|\"\"|\"\"|\"50% 0%\"|\"https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-prendimiento/\"|\"scripts/cedidas/cordoba/el-prendimiento-cordoba-virgen.jpg\"|174355|\"\"|\"50% 40%\"|\"\"|\"\""
+  },
+  "el-perdon-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_en_su_paso_por_la_puerta_del_Perd%C3%B3n_de_la_Mezquita.jpg\"|\"\"|\"\"|\"\"|\"50% 47%\"|\"https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-del-perdon/\"|\"scripts/cedidas/cordoba/el-perdon-cordoba-virgen.jpg\"|216461|\"\"|\"50% 40%\"|\"\"|\"\""
+  },
   "la-paz-cordoba": {
    "w": 960,
    "h": 640,
@@ -12312,6 +12749,46 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestro_Padre_Jes%C3%BAs_de_la_Humildad_y_Paciencia._Iglesia_conventual_del_Santo_%C3%81ngel_de_C%C3%B3rdoba.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_de_la_Paz_y_la_Esperanza.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "la-pasion-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-pasion/\"|\"scripts/cedidas/cordoba/la-pasion-cordoba-cristo.jpg\"|79492|\"\"|\"45% 30%\"|\"https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Sant%C3%ADsima_del_Amor_y_San_Juan_Evangelista.jpg\"|\"\"|\"\"|\"\"|\"50% 43%\"|\"\"|\"\""
+  },
+  "la-piedad-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_La_Piedad.jpg\"|\"\"|\"\"|\"\"|\"50% 13%\"|\"https://www.hermandadesdecordoba.es/miercoles-santo/hermandad-de-la-piedad/\"|\"scripts/cedidas/cordoba/la-piedad-cordoba-virgen.jpg\"|133239|\"\"|\"50% 30%\"|\"\"|\"\""
+  },
+  "la-buena-muerte-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-la-buena-muerte/\"|\"scripts/cedidas/cordoba/la-buena-muerte-cordoba-cristo.jpg\"|84871|\"\"|\"50% 40%\"|\"https://commons.wikimedia.org/wiki/File:Im%C3%A1gen_de_Nuestra_Se%C3%B1ora_Reina_de_los_M%C3%A1rtires._Iglesia_de_San_Hip%C3%B3lito_de_C%C3%B3rdoba.jpg\"|\"\"|\"\"|\"\"|\"50% 2%\"|\"\"|\"\""
+  },
+  "los-dolores-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/viernes-santo/viernes-santo-hermandad-de-los-dolores/\"|\"scripts/cedidas/cordoba/los-dolores-cordoba-cristo.jpg\"|148480|\"\"|\"55% 40%\"|\"https://commons.wikimedia.org/wiki/File:DOLORES_3.jpg\"|\"\"|\"\"|\"\"|\"50% 12%\"|\"\"|\"\""
   },
   "humildad-y-paciencia-cadiz": {
    "w": 960,
@@ -13063,6 +13540,36 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Lanzada_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 40%\"|\"https://www.instagram.com/hdadlanzada/\"|\"scripts/cedidas/huelva/la-lanzada-huelva-virgen.jpg\"|630822|\"\"|\"50% 15%\"|\"\"|\"\""
   },
+  "la-esperanza-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/\"|\"scripts/cedidas/cordoba/la-esperanza-cordoba-cristo.jpg\"|96161|\"\"|\"53% 40%\"|\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-de-la-esperanza/\"|\"scripts/cedidas/cordoba/la-esperanza-cordoba-virgen.jpg\"|109575|\"\"|\"62% 35%\"|\"\"|\"\""
+  },
+  "el-huerto-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/\"|\"scripts/cedidas/cordoba/el-huerto-cordoba-cristo.jpg\"|126926|\"\"|\"60% 40%\"|\"https://www.hermandadesdecordoba.es/domingo-de-ramos/hermandad-del-huerto/\"|\"scripts/cedidas/cordoba/el-huerto-cordoba-virgen.jpg\"|163533|\"\"|\"50% 45%\"|\"\"|\"\""
+  },
+  "el-buen-suceso-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/\"|\"scripts/cedidas/cordoba/el-buen-suceso-cordoba-cristo.jpg\"|116953|\"\"|\"50% 40%\"|\"https://www.hermandadesdecordoba.es/martes-santo/hermandad-del-buen-suceso/\"|\"scripts/cedidas/cordoba/el-buen-suceso-cordoba-virgen.jpg\"|114233|\"\"|\"48% 40%\"|\"\"|\"\""
+  },
   "la-columna-cadiz": {
    "w": 960,
    "h": 640,
@@ -13302,6 +13809,26 @@
     960
    ],
    "firma": "\"https://www.instagram.com/hermandadtrescaidas/\"|\"scripts/cedidas/sevilla/san-isidoro-sevilla-cristo.jpg\"|591527|\"\"|\"55% 25%\"|\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg\"|624215|\"\"|\"44% 33%\"|\"\"|\"100% 100%\""
+  },
+  "jesus-nazareno-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-cristo.jpg\"|171184|\"\"|\"45% 60%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-del-nazareno/\"|\"scripts/cedidas/cordoba/jesus-nazareno-cordoba-virgen.jpg\"|213617|\"\"|\"50% 35%\"|\"\"|\"\""
+  },
+  "la-cena-cordoba": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/\"|\"scripts/cedidas/cordoba/la-cena-cordoba-cristo.jpg\"|100374|\"\"|\"50% 45%\"|\"https://www.hermandadesdecordoba.es/jueves-santo/jueves-santo-hermandad-de-la-sagrada-cena/\"|\"scripts/cedidas/cordoba/la-cena-cordoba-virgen.jpg\"|148606|\"\"|\"50% 40%\"|\"\"|\"\""
   }
  }
 }

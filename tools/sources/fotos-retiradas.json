@@ -47,7 +47,16 @@
   "CristoYacenteHuelva.jpg": "Original de 422 px: no da la calidad. (antes retirada solo en el-santo-entierro-huelva|cristo)",
   "-Santísimo_Cristo_de_la_Expiración-.jpg": "Lleva sobreimpreso el escudo y el texto «HERMANDAD DE SAN FRANCISCO» (abajo a la derecha, un 13 % del alto): marca de la hermandad y autoría dudosa (auditor-imagenes, 9-nov). (antes retirada solo en la-esperanza-huelva|cristo)",
   "SemanaSantaSevillaPenas2.jpg": "Paso de noche, muy oscuro: no se distingue al titular. (antes retirada solo en las-penas-sevilla|cristo)",
-  "Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG": "A contraluz y blanda: la cara sale apagada. (antes retirada solo en bellavista-sevilla|cristo)"
+  "Cristo_de_Salud_y_Remedios_(Hdad._de_Bellavista).JPG": "A contraluz y blanda: la cara sale apagada. (antes retirada solo en bellavista-sevilla|cristo)",
+  "Esperanzacordoba.jpg": "Lleva la marca de agua de otra persona («José María Ariza») y quien la sube dice que es obra suya: licencia dudosa. (antes retirada solo en la-esperanza-cordoba|virgen)",
+  "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg": "Palio de lejos en la calle: no se ve a la Virgen. (antes retirada solo en la-estrella-cordoba|virgen)",
+  "PasoBuenSuceso.jpg": "Paso entero en el templo: el Cristo sale pequeño y recortado no llega a 480 px. (antes retirada solo en el-buen-suceso-cordoba|cristo)",
+  "Cordoba_-_Iglesia_de_Nuestra_Señora_de_Gracia_(Trinitariios)_0.jpg": "Es la fachada de la iglesia de los Trinitarios, no el Cristo de Gracia (sigue como foto de la ficha). (antes retirada solo en cristo-de-gracia-el-esparraguero-cordoba|cristo)",
+  "Virgen_de_la_Palma_Córdoba.JPG": "Palio de lejos: no se ve a la Virgen. (antes retirada solo en entrada-triunfal-cordoba|virgen)",
+  "Virgen_Desamparados.jpg": "Palio con la candelería delante: no se ve a la Virgen. (antes retirada solo en penas-de-santiago-cordoba|virgen)",
+  "Palio_de_Nuestra_Señora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg": "Palio de lejos: no se ve a la Virgen. (antes retirada solo en el-prendimiento-cordoba|virgen)",
+  "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg": "Original pequeño (menos de 480 px): no da la calidad. (antes retirada solo en la-piedad-cordoba|virgen)",
+  "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG": "El Cristo sale pequeño al fondo del templo, detrás del paso. (antes retirada solo en la-buena-muerte-cordoba|cristo)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -57,10 +66,6 @@
   "la-estrella-almeria|virgen": {
    "archivo": "Rosario_del_Mar_05.jpg",
    "motivo": "«Rosario del Mar 05»: Nuestro Padre Jesús de las Penas, de la hermandad del Rosario del Mar; no es la Virgen de la Estrella."
-  },
-  "cristo-de-gracia-el-esparraguero-cordoba|cristo": {
-   "archivo": "Cordoba_-_Iglesia_de_Nuestra_Señora_de_Gracia_(Trinitariios)_0.jpg",
-   "motivo": "Es la fachada de la iglesia de los Trinitarios, no el Cristo de Gracia (sigue como foto de la ficha)."
   },
   "la-sanidad-cadiz|sede": {
    "archivo": "Iglesia_de_Santa_Cruz.jpg",
@@ -218,10 +223,6 @@
    "archivo": "Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
    "motivo": "Capilla de la Catedral: el crucificado sale diminuto y el original no da para recortarlo con calidad."
   },
-  "la-piedad-cordoba|virgen": {
-   "archivo": "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg",
-   "motivo": "Original pequeño (menos de 480 px): no da la calidad."
-  },
   "jesus-despojado-sevilla|virgen": {
    "archivo": "Virgen_de_los_Dolores_y_Misericordia.jpg",
    "motivo": "Original de 337 px: no da la calidad."
@@ -278,29 +279,9 @@
    "archivo": "Cordoba_-_Iglesia_de_Santa_Marina_de_Aguas_Santas_10.jpg",
    "motivo": "Interior del templo en lugar de un titular."
   },
-  "entrada-triunfal-cordoba|virgen": {
-   "archivo": "Virgen_de_la_Palma_Córdoba.JPG",
-   "motivo": "Palio de lejos: no se ve a la Virgen."
-  },
-  "penas-de-santiago-cordoba|virgen": {
-   "archivo": "Virgen_Desamparados.jpg",
-   "motivo": "Palio con la candelería delante: no se ve a la Virgen."
-  },
-  "la-estrella-cordoba|virgen": {
-   "archivo": "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg",
-   "motivo": "Palio de lejos en la calle: no se ve a la Virgen."
-  },
-  "el-prendimiento-cordoba|virgen": {
-   "archivo": "Palio_de_Nuestra_Señora_de_la_Piedad_por_la_Iglesia_de_San_Lorenzo.jpg",
-   "motivo": "Palio de lejos: no se ve a la Virgen."
-  },
   "jesus-caido-cordoba|virgen": {
    "archivo": "Soledad_de_San_Cayetano.jpg",
    "motivo": "De noche y oscura: no se distingue la cara de la Virgen."
-  },
-  "la-buena-muerte-cordoba|cristo": {
-   "archivo": "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG",
-   "motivo": "El Cristo sale pequeño al fondo del templo, detrás del paso."
   },
   "la-estrella-cordoba|ficha": {
    "archivo": "Ntra._Sra._de_la_Estrella_Córdoba_2012.jpg",
@@ -418,10 +399,6 @@
    "archivo": "El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg",
    "motivo": "La misma foto."
   },
-  "el-buen-suceso-cordoba|cristo": {
-   "archivo": "PasoBuenSuceso.jpg",
-   "motivo": "Paso entero en el templo: el Cristo sale pequeño y recortado no llega a 480 px."
-  },
   "el-buen-suceso-cordoba|ficha": {
    "archivo": "PasoBuenSuceso.jpg",
    "motivo": "La misma foto."
@@ -461,10 +438,6 @@
   "san-roque-sevilla|virgen": {
    "archivo": "Palio_de_la_Virgen_de_Gracia_y_Esperanza_en_la_Iglesia_de_San_Roque_2026.jpg",
    "motivo": "La Virgen sale pequeña y blanda bajo el palio."
-  },
-  "la-esperanza-cordoba|virgen": {
-   "archivo": "Esperanzacordoba.jpg",
-   "motivo": "Lleva la marca de agua de otra persona («José María Ariza») y quien la sube dice que es obra suya: licencia dudosa."
   },
   "la-esperanza-cordoba|ficha": {
    "archivo": "Esperanzacordoba.jpg",
