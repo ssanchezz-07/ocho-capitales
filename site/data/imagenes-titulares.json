@@ -91,6 +91,18 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "María Santísima de la Concepción",
     "foco": "50% 42%"
+   },
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/sevilla/el-silencio-sevilla-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
+    "titular": "Nuestro Padre Jesús Nazareno",
+    "foco": "54% 40%",
+    "foco_ficha": "100% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B620825ihI-/. Foto suya, con su firma intacta (abajo a la derecha); foco_ficha 100% 100% para que se vea en la ficha."
    }
   },
   "el-gran-poder-sevilla": {
@@ -5358,6 +5370,34 @@
     "titular": "Cristo yacente",
     "foco": "22% 18%",
     "permiso": "Publicada por la propia hermandad en su cuenta oficial de X @SantoSepulcroGR (bio «Twitter oficial de la Pontificia, Real e ilustre Hermandad del Santo Sepulcro y Nuestra Señora de la Soledad en el Calvario»; https://x.com/SantoSepulcroGR/status/1989343475536646342, triduo de 2025), sin fotógrafo citado ni firma. Recortada al Yacente expuesto en el triduo. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   }
+  },
+  "san-benito-sevilla": {
+   "cristo": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/sevilla/san-benito-sevilla-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Sangre",
+    "titular": "Santísimo Cristo de la Sangre",
+    "foco": "32% 35%",
+    "foco_ficha": "0% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B-IORjJH4YD/. Foto suya, con su firma intacta (abajo a la izquierda); foco_ficha 0% 100% para que se vea en la ficha."
+   }
+  },
+  "san-isidoro-sevilla": {
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Loreto",
+    "titular": "María Santísima de Loreto",
+    "foco": "44% 33%",
+    "foco_ficha": "100% 100%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Publicación: https://www.instagram.com/p/B6Fv4sNiTRL/. Foto suya, con su firma intacta (abajo a la derecha); foco_ficha 100% 100% para que se vea en la ficha."
    }
   }
  }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-09T22:33:54.024Z",
+ "generado": "2026-11-10T03:51:10.545Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -3157,6 +3157,26 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Concepci%C3%B3n_(detalle),_Hermandad_del_Silencio_(Sevilla).jpg",
     "titular": "María Santísima de la Concepción",
     "foco": "50% 42%"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "54% 40%",
+    "focoFicha": "100% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/el-silencio-sevilla-cristo.jpg",
+    "tam": 874647,
+    "titular": "Nuestro Padre Jesús Nazareno"
    }
   },
   "el-gran-poder-sevilla": {
@@ -11681,9 +11701,63 @@
     "tam": 109586,
     "titular": "Cristo yacente"
    }
+  },
+  "san-benito-sevilla": {
+   "cristo": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "32% 35%",
+    "focoFicha": "0% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/san-benito-sevilla-cristo.jpg",
+    "tam": 370773,
+    "titular": "Santísimo Cristo de la Sangre"
+   }
+  },
+  "san-isidoro-sevilla": {
+   "virgen": {
+    "w": 960,
+    "h": 1200,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "foco": "44% 33%",
+    "focoFicha": "100% 100%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/san-isidoro-sevilla-virgen.jpg",
+    "tam": 624215,
+    "titular": "María Santísima de Loreto"
+   }
   }
  },
  "dipticos": {
+  "el-silencio-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/memoriadeunamaestra/\"|\"scripts/cedidas/sevilla/el-silencio-sevilla-cristo.jpg\"|874647|\"\"|\"54% 40%\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_la_Concepci%C3%B3n_(detalle),_Hermandad_del_Silencio_(Sevilla).jpg\"|\"\"|\"\"|\"\"|\"50% 42%\"|\"100% 100%\"|\"\""
+  },
   "el-gran-poder-sevilla": {
    "w": 960,
    "h": 640,
