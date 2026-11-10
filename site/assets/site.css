@@ -2192,7 +2192,7 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 .oc-jg-cunao svg { flex: none; width: 52px; height: 52px; border-radius: 50%; box-shadow: 0 0 0 2px #d9b560; }
 .oc-jg-cunao p { margin: 0; padding: 10px 14px; border-radius: 18px 18px 18px 6px; background: var(--surface-2); color: var(--ink); line-height: 1.4; overflow-wrap: break-word; }
 .oc-jg-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-@media (min-width: 560px) { .oc-jg-cards { grid-template-columns: 1fr 1fr; } .oc-jg-cards li:first-child { grid-column: 1 / -1; } .oc-jg-cards > li:last-child:nth-child(even) { grid-column: 1 / -1; } .oc-jg-cards > li { display: grid; } }
+@media (min-width: 560px) { .oc-jg-cards { grid-template-columns: 1fr 1fr; } .oc-jg-cards li:first-child { grid-column: 1 / -1; } .oc-jg-cards > li:last-child:nth-child(even) { grid-column: 1 / -1; } .oc-jg-cards > li { display: grid; } .oc-jg-card { align-content: start; } }
 .oc-jg-card { display: grid; gap: 4px; width: 100%; min-height: 84px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--ink); text-align: left; cursor: pointer; transition: transform 140ms var(--ease-out), border-color 140ms var(--ease-out); }
 .oc-jg-card:active { transform: scale(.98); }
 @media (hover: hover) and (pointer: fine) { .oc-jg-card:hover { border-color: var(--primary); } }
