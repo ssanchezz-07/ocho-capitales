@@ -71,7 +71,7 @@ Pablo, literal: «el apartado pasos y cortejo en algunas hermandades queda raro,
   - Cádiz, Huelva, Almería y Jaén: la ficha de cada hermandad en su Consejo o Agrupación.
   - Córdoba: el librito oficial 2026 de la Agrupación.
   - Granada: la guía oficial 2026 de la Federación.
-- **Etiquetas propias:** se admiten cuando el paso no es de un titular de la lista: «Paso de la urna» (Cristo yacente en urna, solo si la fuente habla de urna), «Paso de San Juan», «Paso de la Verónica» y «Paso alegórico» (la Trinidad de Sevilla).
+- **Etiquetas propias:** se admiten cuando el paso no es de un titular de la lista: «Paso de la urna» (Cristo yacente en urna, solo si la fuente habla de urna), «Paso de San Juan», «Paso de la Verónica», «Paso alegórico» (la Trinidad de Sevilla) y «Cristo a hombros» (el Vía Crucis de Córdoba, que sale sin paso).
 - **Excepciones con Wikipedia como fuente del detalle** (el número de pasos sale siempre de la nómina): el Amor, la Borriquita y Santa Marta de Sevilla, porque sus webs no responden; el Divino Perdón, porque no se encontró su web; y parte de las Vísperas de Sevilla. Ahí sale el aviso «Texto basado en Wikipedia».
 - **Auditoría (NO APTO, 10-nov), corregido:**
   - Descendimiento de Huelva: paso de Ángel de la Feria comprado en 2000; palio desde 1976.
