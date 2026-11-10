@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T19:17:05.262Z",
+ "generado": "2026-11-10T19:23:04.654Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6599,18 +6599,41 @@
   "el-encuentro-jesus-nazareno-almeria": {
    "cristo": {
     "w": 960,
-    "h": 1706,
+    "h": 960,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Gurutzearen martin",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_Hu%C3%A9rcal-Overa.jpg",
+    "autor": "El Encuentro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg",
+    "tam": 302178,
     "titular": "Nuestro Padre Jesús Nazareno"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 960,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "El Encuentro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg",
+    "tam": 398001,
+    "titular": "María Santísima de la Amargura"
    }
   },
   "las-angustias-almeria": {
@@ -7731,6 +7754,25 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Buena_Muerte_(Estudiantes).jpg",
     "titular": "Santísimo Cristo de la Buena Muerte",
     "foco": "46% 51%"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Los Estudiantes (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandad.estudiantes/",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/los-estudiantes-sevilla-virgen.jpg",
+    "tam": 584564,
+    "titular": "María Santísima de la Angustia"
    }
   },
   "la-candelaria-sevilla": {
@@ -13368,6 +13410,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_03.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_06.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "el-encuentro-jesus-nazareno-almeria": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg\"|302178|\"\"|\"50% 35%\"|\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg\"|398001|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
   "la-estrella-jaen": {
    "w": 960,
    "h": 640,
@@ -13527,6 +13579,16 @@
     960
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_Salud_y_Buen_Viaje.JPG\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Desamparados_(San_Esteban).jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
+  },
+  "los-estudiantes-sevilla": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://commons.wikimedia.org/wiki/File:Cristo_de_la_Buena_Muerte_(Estudiantes).jpg\"|\"\"|\"\"|\"\"|\"46% 51%\"|\"https://www.instagram.com/hermandad.estudiantes/\"|\"scripts/cedidas/sevilla/los-estudiantes-sevilla-virgen.jpg\"|584564|\"\"|\"50% 30%\"|\"\"|\"\""
   },
   "la-sed-sevilla": {
    "w": 960,

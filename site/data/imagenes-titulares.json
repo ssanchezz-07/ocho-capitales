@@ -2197,12 +2197,26 @@
   },
   "el-encuentro-jesus-nazareno-almeria": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_Nazareno_Hu%C3%A9rcal-Overa.jpg",
-    "titulo": "File:Nuestro Padre Jesús Nazareno Huércal-Overa.jpg",
-    "autor": "Gurutzearen martin",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "titular": "Nuestro Padre Jesús Nazareno"
+    "autor": "El Encuentro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
+    "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
+    "titular": "Nuestro Padre Jesús Nazareno",
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/DfGFjIiDXey/, imagen 2), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor y a la parroquia de San Antonio de Padua, su sede. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
+   },
+   "virgen": {
+    "autor": "El Encuentro (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
+    "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Amargura",
+    "titular": "María Santísima de la Amargura",
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/DfGFjIiDXey/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
    }
   },
   "las-angustias-almeria": {
@@ -2886,6 +2900,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Buena Muerte",
     "foco": "46% 51%"
+   },
+   "virgen": {
+    "autor": "Los Estudiantes (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hermandad.estudiantes/",
+    "local": "scripts/cedidas/sevilla/los-estudiantes-sevilla-virgen.jpg",
+    "titulo": "Cedida: María Santísima de la Angustia",
+    "titular": "María Santísima de la Angustia",
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandad.estudiantes (https://www.instagram.com/p/De9MfT1kWQb/, imagen 1), sin fotógrafo citado, coautor ni firma. Bio «Perfil oficial de la Hermandad de los Estudiantes» y la enlaza hermandaddelosestudiantes.es. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
    }
   },
   "la-candelaria-sevilla": {
