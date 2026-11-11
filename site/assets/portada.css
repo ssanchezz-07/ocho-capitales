@@ -283,3 +283,18 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 
 /* móvil en horizontal: la hoja crece hasta 85dvh. Va al final para ganar a las alturas de 62dvh de más arriba (móvil y desde 760 px) */
 @media (max-height: 500px) { .oc-sede-hoja .oc-sheet-panel { max-height: 85dvh; } }
+
+/* ---- Salida extraordinaria (hoy, mañana o ahora en la calle): sustituye a la cuenta atrás, bajo «Toca una bandera…» ----
+   Una línea de texto y un botón fino al plano de esa jornada. La pinta un script de la portada con la hora de Madrid; sin JS no sale. */
+.oc-ext[hidden] { display: none; }
+.oc-ext { display: grid; justify-items: center; gap: 10px; }
+.oc-home .oc-portada .oc-ext-t { grid-area: auto; text-align: center; text-wrap: balance; } /* la cuenta atrás tiene sitio fijo en la rejilla de PC; esta línea va en su contenedor */
+.oc-home .oc-ext-t strong { color: #e7c877; }
+.oc-ext-b { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 22px; border-radius: 999px; border: 1px solid #e7c877; color: #f0d386; font-weight: 700; font-size: 1rem; line-height: 1; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.oc-ext-b:active { transform: scale(.98); }
+.oc-ext-b:focus-visible { outline: 2px solid #f0d386; outline-offset: 3px; }
+@media (hover: hover) { .oc-ext-b:hover { background: rgb(231 200 119 / .12); } }
+/* ese día la cuenta atrás del Domingo de Ramos sobra: la línea de la salida ocupa su sitio */
+.oc-home.hay-ext [data-today-lead] { display: none; }
+/* con la salida a la vista, el saludo «¿Qué sale hoy?» de erCuñao sobra y en móviles pequeños tapaba el botón */
+html:has(.oc-home.hay-ext) .oc-cunao-btn .oc-cunao-bocadillo { display: none; }

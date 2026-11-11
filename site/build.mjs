@@ -819,7 +819,7 @@ function carrilesHilos(caps) {
   permuta(caps.length);
   return caps.map((c, i) => ({ ...c, l: +niveles[mejor[i]].toFixed(1) }));
 }
-function colgaduras() {
+function colgaduras(extHtml = '') {
   const P = MAPA && MAPA.proyeccion;
   const orden = D.capitales;
   const pos = (c) => {
@@ -857,7 +857,7 @@ function colgaduras() {
   <div class="oc-colg-map" data-colg-map></div>
   <div class="oc-colg-plano" data-colg-plano hidden></div>
   <div class="oc-colg-pie" data-colg-pie>
-    <div class="oc-colg-and" data-colg-and><p class="oc-colg-ayuda">Toca una bandera y baja a su calle</p>${leadHoy()}</div>
+    <div class="oc-colg-and" data-colg-and><p class="oc-colg-ayuda">Toca una bandera y baja a su calle</p>${leadHoy()}${extHtml}</div>
     <div class="oc-colg-ciudad" data-colg-ciudad hidden>
       <div class="oc-colg-cab"><button type="button" class="oc-colg-atras" data-colg-atras>${icon('back')}<span>Andalucía</span></button><span class="oc-colg-emblema" data-colg-emblema aria-hidden="true"></span><h2 class="oc-colg-cap" data-colg-nombre tabindex="-1"></h2><p class="oc-colg-res" data-colg-res></p></div>
       <div class="oc-colg-reloj"><div class="oc-colg-jornada" role="group" aria-label="Jornada"><button type="button" class="oc-colg-paso" data-colg-jor="-1" aria-label="Jornada anterior">${icon('back')}</button><span data-colg-jornada aria-live="polite"></span><button type="button" class="oc-colg-paso" data-colg-jor="1" aria-label="Jornada siguiente">${icon('arrow')}</button></div><div class="oc-colg-hora-w"><output class="oc-colg-hora" data-colg-hora>--:--</output><input class="oc-colg-tiempo" type="range" min="0" max="1" step="1" value="0" data-colg-tiempo aria-label="Hora de la jornada"></div></div>
@@ -930,20 +930,50 @@ const CIELO_ESTRELLAS = (() => {
   const cs = [capa(9, 330, 1, 7), capa(6, 530, 1.5, 41), capa(3, 760, 2, 113)];
   return { img: cs.flatMap((c) => c.o).join(',') + ',radial-gradient(120% 90% at 50% 38%,#1a0a2a 0%,#0e0517 58%,#07030c 100%)', tam: cs.flatMap((c) => c.o.map(() => `${c.tam}px ${c.tam}px`)).join(',') + ',100% 100%' };
 })();
-const HEAD_ENTRADA = `<style>:root{--oc-cielo:${CIELO_ESTRELLAS.img};--oc-cielo-t:${CIELO_ESTRELLAS.tam}}html.oc-entrando{overflow:hidden;background:#07030c}html.oc-entrando::after{content:"";position:fixed;inset:0;z-index:199;background:var(--oc-cielo);background-size:var(--oc-cielo-t);animation:oc-entrada-fin .01s linear 9s forwards}@keyframes oc-entrada-fin{to{opacity:0;visibility:hidden}}</style><script>try{if(!sessionStorage.getItem('oc-entrada')&&!location.hash&&!(navigator.connection&&navigator.connection.saveData)){var h=document.documentElement;h.classList.add('oc-entrando');setTimeout(function(){h.classList.remove('oc-entrando')},9000);document.addEventListener('click',function c(e){if(!h.classList.contains('oc-entrando'))return document.removeEventListener('click',c,true);h.classList.remove('oc-entrando');try{sessionStorage.setItem('oc-entrada','1')}catch(x){}if(!e.detail)return;e.preventDefault();e.stopPropagation();window.ocDebajo(e)},true)}}catch(e){}window.ocDebajo=function(e){var t=document.elementFromPoint(e.clientX,e.clientY);t=t&&t.closest('.oc-tabbar a,.oc-tabbar button,.oc-header a,.oc-header button');if(t&&!(t.href&&t.pathname===location.pathname))t.click()};</script>`;
+const HEAD_ENTRADA = `<style>:root{--oc-cielo:${CIELO_ESTRELLAS.img};--oc-cielo-t:${CIELO_ESTRELLAS.tam}}html.oc-entrando{overflow:hidden;background:#07030c}html.oc-entrando::after{content:"";position:fixed;inset:0;z-index:199;background:var(--oc-cielo);background-size:var(--oc-cielo-t);animation:oc-entrada-fin .01s linear 9s forwards}@keyframes oc-entrada-fin{to{opacity:0;visibility:hidden}}</style><script>try{if(!sessionStorage.getItem('oc-entrada')&&!location.hash&&!(window.ocExt&&window.ocExt.length)&&!(navigator.connection&&navigator.connection.saveData)){var h=document.documentElement;h.classList.add('oc-entrando');setTimeout(function(){h.classList.remove('oc-entrando')},9000);document.addEventListener('click',function c(e){if(!h.classList.contains('oc-entrando'))return document.removeEventListener('click',c,true);h.classList.remove('oc-entrando');try{sessionStorage.setItem('oc-entrada','1')}catch(x){}if(!e.detail)return;e.preventDefault();e.stopPropagation();window.ocDebajo(e)},true)}}catch(e){}window.ocDebajo=function(e){var t=document.elementFromPoint(e.clientX,e.clientY);t=t&&t.closest('.oc-tabbar a,.oc-tabbar button,.oc-header a,.oc-header button');if(t&&!(t.href&&t.pathname===location.pathname))t.click()};</script>`;
+// Salida extraordinaria en la portada (tools/sources/itinerarios-extraordinarios.json): en lugar de la cuenta atrás, la víspera, ese día y
+// mientras está en la calle, una línea con su hora y un botón al plano de esa jornada. La página es estática: las salidas de los próximos
+// días van en la propia página y el navegador decide, con la hora de Madrid, si toca enseñarlas (se quitan solas al día siguiente).
+// Sirve para cualquier salida de ese archivo. OCX = salidas; ocExt = las que tocan ahora, calculada en el <head> para que la entrada
+// (el globo) sepa si debe saltarse ese día.
+const EXT_CALC = `(function(){var D=window.OCX||[],L=window.ocExt=[];try{var p={};new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var m=+p.hour*60+ +p.minute,h=Date.UTC(+p.year,+p.month-1,+p.day);D.forEach(function(e){var f=e.f.split('-'),d=Math.round((h-Date.UTC(+f[0],+f[1]-1,+f[2]))/864e5),s='';if(d===-1)s='man';else if(d===0)s=m>=e.i&&m<=e.e?'ahora':m<e.i?'hoy':'fin';else if(d===1&&e.e>1440&&m<=e.e-1440)s='ahora';if(s){e.s=s;L.push(e)}});var r=function(x){return x.s==='ahora'?0:x.s==='fin'?2:1};L.sort(function(a,b){return r(a)-r(b)||a.f.localeCompare(b.f)||a.i-b.i})}catch(x){}})();`;
+const EXT_PINTA = `(function(){var a=document.querySelector('[data-ext]'),L=window.ocExt||[];if(!a||!L.length)return;var e=L[0],k=e.s==='man'?'Mañana':e.s==='ahora'?'Ahora en la calle':'Hoy',t=e.s==='man'?e.hi:e.s==='ahora'?(e.he?'hasta las '+e.he:e.hi):(e.he?e.hi+'–'+e.he:e.hi),p=document.createElement('p'),b=document.createElement('strong'),A=document.createElement('a');p.className='oc-hero2-count oc-ext-t';b.textContent=k;p.appendChild(b);p.appendChild(document.createTextNode(' · '+e.n+' · '+t));A.className='oc-ext-b';A.href=e.u;A.textContent='Seguirla en el plano ';var g=document.createElement('span');g.setAttribute('aria-hidden','true');g.textContent='›';A.appendChild(g);a.appendChild(p);a.appendChild(A);a.hidden=false;var H=document.querySelector('[data-home]');if(H)H.classList.add('hay-ext')})();`;
+function extHome(hoy) {
+  const f = path.join(DIR, '..', 'tools', 'sources', 'itinerarios-extraordinarios.json');
+  if (!fs.existsSync(f)) return [];
+  const [y, m, d] = hoy.split('-').map(Number), tope = isoDay(Date.UTC(y, m - 1, d) + 8 * 864e5), ayer = isoDay(Date.UTC(y, m - 1, d) - 864e5);
+  const mm = (t) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return x ? +x[1] * 60 + +x[2] : null; };
+  const hh = (t) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return x ? x[1].padStart(2, '0') + ':' + x[2] : ''; };
+  const TIPO = { extraordinaria: 'extraordinaria', magna: 'magna', traslado: 'traslado', procesion: 'procesión' };
+  const out = [];
+  for (const e of Object.values(JSON.parse(fs.readFileSync(f, 'utf8')).salidas || {})) {
+    const c = D.capitales.find((x) => x.slug === e.ciudad);
+    // solo las de hoy en adelante (y como mucho de dentro de 8 días), no celebradas, con hora de salida y con plano de su ciudad
+    if (!c || !e.fecha || e.celebrada || e.fecha < ayer || e.fecha > tope || !fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json'))) continue;
+    const todos = Object.values(e.tramos || {}).flat(), ini = mm((todos[0] || {}).hora); if (ini == null) continue;
+    let fin = todos.length > 1 ? mm(todos[todos.length - 1].hora) : null; if (fin != null && fin < ini) fin += 1440;
+    if (e.fecha < hoy && !((fin != null ? fin : ini + 300) > 1440)) continue; // la de ayer solo si cruzaba la medianoche y aún puede estar en la calle
+    const h = HERM[e.hermandad] || { nombre: e.nombre_hermandad || '' }, nom = e.corto || h.nombre; if (!nom) continue;
+    const [, M_, D_] = e.fecha.split('-').map(Number);
+    const etq = `${D_} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M_ - 1]} · ${nom}`; // la jornada de su pestaña en el plano
+    out.push({ f: e.fecha, i: ini, e: fin != null ? fin : ini + 300, hi: hh((todos[0] || {}).hora), he: fin != null ? hh(todos[todos.length - 1].hora) : '', n: `${nom} ${TIPO[e.tipo] || 'extraordinaria'} en ${c.nombre}`, u: u('en-la-calle/' + c.slug + '/') + '?dia=' + encodeURIComponent(etq) });
+  }
+  return out.sort((a, b) => a.f.localeCompare(b.f) || a.i - b.i);
+}
 function pageHome() {
   const N = madridNow(); const hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d));
   const evs = agenda().filter((e) => e.fecha >= hoy);
+  const EXT = extHome(hoy);
   const body = `<div class="oc-home" data-home>
 <section class="oc-portada" aria-labelledby="hero-titulo" data-portada>
   <h1 class="oc-sr" id="hero-titulo">Ocho Capitales: la Semana Santa de Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén</h1>
-  ${colgaduras()}
+  ${colgaduras(EXT.length ? `<div class="oc-ext" data-ext hidden></div><script>${EXT_PINTA}</script>` : '')}
 </section>
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
 ${TEMPORADA.fuera ? seccionNazareno(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `${EXT.length ? `<script>window.OCX=${JSON.stringify(EXT).replace(/</g, '\\u003c')};${EXT_CALC}</script>` : ''}${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 // El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
 // En la portada fuera de temporada se dibuja al bajar; en «Próxima Semana Santa» ya está hecho, sólido (Pablo, 27-oct: «si no es muy repetitivo»).
