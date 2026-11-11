@@ -103,14 +103,24 @@ jobs:
       - name: Instalar el navegador de las pruebas
         timeout-minutes: 25
         run: |
-          # Si la descarga o apt se cuelgan, se corta a los 4 min y se reintenta (hasta 3 veces)
+          # 1) La librería Playwright (npm). Si se cuelga, se corta y se reintenta; el final del registro sale como aviso.
+          log="$RUNNER_TEMP/instalar-navegador.log"; ok=""
           for i in 1 2 3; do
-            if timeout -k 30 240 npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 && timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium; then exit 0; fi
-            if [ "$i" -lt 3 ]; then
-              echo "::warning::Intento $i de instalar el navegador fallido; se reintenta"
-              timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
-              sleep 15
-            fi
+            if timeout -k 30 180 npm i --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 >>"$log" 2>&1; then ok=1; break; fi
+            echo "::warning::npm i playwright, intento $i fallido: $(tail -c 400 "$log" | tr '\n' ' ')"
+          done
+          [ -n "$ok" ] || exit 1
+          # 2) El navegador: el Google Chrome que ya trae la máquina de GitHub (11-nov: la descarga de Chromium se
+          #    colgó en tres ejecuciones seguidas). tools/prueba-humo.mjs lo usa por NAVEGADOR. Si no está, se descarga.
+          if [ -x /usr/bin/google-chrome ]; then
+            echo "NAVEGADOR=/usr/bin/google-chrome" >> "$GITHUB_ENV"
+            echo "Navegador de las pruebas: $(/usr/bin/google-chrome --version)"
+            exit 0
+          fi
+          for i in 1 2 3; do
+            if timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium >>"$log" 2>&1; then exit 0; fi
+            echo "::warning::playwright install, intento $i fallido: $(tail -c 400 "$log" | tr '\n' ' ')"
+            timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
           done
           exit 1
       - name: Red de seguridad (si falla, no se publica)
@@ -198,14 +208,24 @@ jobs:
         if: steps.decidir.outputs.seguir == 'si'
         timeout-minutes: 25
         run: |
-          # Si la descarga o apt se cuelgan, se corta a los 4 min y se reintenta (hasta 3 veces)
+          # 1) La librería Playwright (npm). Si se cuelga, se corta y se reintenta; el final del registro sale como aviso.
+          log="$RUNNER_TEMP/instalar-navegador.log"; ok=""
           for i in 1 2 3; do
-            if timeout -k 30 240 npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 && timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium; then exit 0; fi
-            if [ "$i" -lt 3 ]; then
-              echo "::warning::Intento $i de instalar el navegador fallido; se reintenta"
-              timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
-              sleep 15
-            fi
+            if timeout -k 30 180 npm i --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 >>"$log" 2>&1; then ok=1; break; fi
+            echo "::warning::npm i playwright, intento $i fallido: $(tail -c 400 "$log" | tr '\n' ' ')"
+          done
+          [ -n "$ok" ] || exit 1
+          # 2) El navegador: el Google Chrome que ya trae la máquina de GitHub (11-nov: la descarga de Chromium se
+          #    colgó en tres ejecuciones seguidas). tools/prueba-humo.mjs lo usa por NAVEGADOR. Si no está, se descarga.
+          if [ -x /usr/bin/google-chrome ]; then
+            echo "NAVEGADOR=/usr/bin/google-chrome" >> "$GITHUB_ENV"
+            echo "Navegador de las pruebas: $(/usr/bin/google-chrome --version)"
+            exit 0
+          fi
+          for i in 1 2 3; do
+            if timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium >>"$log" 2>&1; then exit 0; fi
+            echo "::warning::playwright install, intento $i fallido: $(tail -c 400 "$log" | tr '\n' ' ')"
+            timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
           done
           exit 1
       - name: Red de seguridad (si falla, no se publica)
