@@ -317,7 +317,7 @@
     if (ficha) ficha.addEventListener('transitionend', pide);
   }
   // el bocadillo del botón se presenta una vez por sesión y se retira solo
-  try { if (!sessionStorage.getItem('oc-cunao')) { btn.classList.add('is-saludo'); sessionStorage.setItem('oc-cunao', '1'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); } } catch (e) { }
+  try { if (!sessionStorage.getItem('oc-cunao')) { sessionStorage.setItem('oc-cunao', '1'); let n = 0; const saluda = () => { if ((document.documentElement.classList.contains('oc-entrando') || document.querySelector('.oc-globo')) && n++ < 50) return setTimeout(saluda, 250); btn.classList.add('is-saludo'); setTimeout(() => btn.classList.remove('is-saludo'), 5200); }; saluda(); } } catch (e) { } // si la entrada (el globo) está en pantalla, espera a que acabe: si no, se gastaba detrás de ella
   // en cuanto se baja o se toca la página, el bocadillo se retira: no tapa el texto de la primera pantalla
   const retira = () => { btn.classList.remove('is-saludo'); removeEventListener('scroll', alBajar); };
   const alBajar = () => { if (scrollY > 40) retira(); };

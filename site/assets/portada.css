@@ -296,5 +296,6 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 @media (hover: hover) { .oc-ext-b:hover { background: rgb(231 200 119 / .12); } }
 /* ese día la cuenta atrás del Domingo de Ramos sobra: la línea de la salida ocupa su sitio */
 .oc-home.hay-ext [data-today-lead] { display: none; }
-/* con la salida a la vista, el saludo «¿Qué sale hoy?» de erCuñao sobra y en móviles pequeños tapaba el botón */
-html:has(.oc-home.hay-ext) .oc-cunao-btn .oc-cunao-bocadillo { display: none; }
+/* con la salida a la vista, el saludo de erCuñao baja 4 px para no rozar el botón; en pantallas muy pequeñas (320×568), donde no cabe sin taparlo, no sale */
+html:has(.oc-home.hay-ext) .oc-cunao-btn .oc-cunao-bocadillo { bottom: 6px; }
+@media (max-width: 340px), (max-height: 600px) { html:has(.oc-home.hay-ext) .oc-cunao-btn .oc-cunao-bocadillo { display: none; } }
