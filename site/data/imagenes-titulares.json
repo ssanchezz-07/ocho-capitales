@@ -2028,18 +2028,26 @@
   },
   "la-borriquita-almeria": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:La_Borriquita_2026_04.jpg",
-    "titulo": "File:La Borriquita 2026 04.jpg",
-    "autor": "Urci dream",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "La Borriquita (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/borriquitaalm/",
+    "local": "scripts/cedidas/almeria/la-borriquita-almeria-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de la Paz",
     "titular": "Nuestra Señora de la Paz",
-    "recorte": [
-     0.4,
-     0.38,
-     0.2,
-     0.36
-    ]
+    "foco": "50% 28%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @borriquitaalm (bio «Perfil oficial de la Hermandad de la Borriquita de Almería»; https://www.instagram.com/p/De18ETOiFcR/, imagen 1, 23-oct-2026), sin fotógrafo citado, coautor ni firma; el pie nombra solo al orfebre de la corona (@artecastilleja). Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "cristo": {
+    "autor": "La Borriquita (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/borriquitaalm/",
+    "local": "scripts/cedidas/almeria/la-borriquita-almeria-cristo.jpg",
+    "titulo": "Cedida: Jesús de la Victoria en su Entrada en Jerusalén",
+    "titular": "Jesús de la Victoria en su Entrada en Jerusalén",
+    "foco": "50% 20%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @borriquitaalm (https://www.instagram.com/p/DXKcfVFiJR8/, imagen 2, 15-abr-2026), sin fotógrafo citado, coautor ni firma; el pie nombra solo a la familia que donó las potencias. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "los-angeles-almeria": {
@@ -2167,32 +2175,26 @@
   },
   "rosario-del-mar-almeria": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_05.jpg",
-    "titulo": "File:Rosario del Mar 05.jpg",
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Rosario del Mar (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadrosariodelmar/",
+    "local": "scripts/cedidas/almeria/rosario-del-mar-almeria-cristo.jpg",
+    "titulo": "Cedida: Nuestro Padre Jesús de las Penas en el Abandono",
     "titular": "Nuestro Padre Jesús de las Penas en el Abandono",
-    "recorte": [
-     0.38,
-     0.4,
-     0.24,
-     0.32
-    ]
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadrosariodelmar (bio «Perfil oficial de la Dominicana Hermandad del Rosario del Mar de Almería»; https://www.instagram.com/p/DU-mKvmDfH8/, imagen 1, 20-feb-2026), sin fotógrafo citado, coautor ni firma (otras publicaciones de la cuenta citan «📷 @jdcazorla»; esta no). Sustituye a la de Commons, que era el misterio de espaldas. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_09.jpg",
-    "titulo": "File:Rosario del Mar 09.jpg",
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Rosario del Mar (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadrosariodelmar/",
+    "local": "scripts/cedidas/almeria/rosario-del-mar-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Rosario del Mar",
     "titular": "María Santísima del Rosario del Mar",
-    "recorte": [
-     0.47,
-     0.46,
-     0.18,
-     0.3
-    ]
+    "foco": "50% 35%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadrosariodelmar (https://www.instagram.com/p/DeAGFJrgtQ2/, imagen 1, 2-oct-2026), sin fotógrafo citado, coautor ni firma; el pie nombra solo al vestidor (@alvaroabrilvela). Sustituye a la de Commons, que era el palio de noche y de lejos. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "el-encuentro-jesus-nazareno-almeria": {
@@ -2204,8 +2206,8 @@
     "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg",
     "titulo": "Cedida: Nuestro Padre Jesús Nazareno",
     "titular": "Nuestro Padre Jesús Nazareno",
-    "foco": "50% 35%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/DfGFjIiDXey/, imagen 2), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor y a la parroquia de San Antonio de Padua, su sede. Sustituye a la de Commons. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
+    "foco": "47% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/Da2RSbPglBB/, imagen 2, 16-jul-2026), sin fotógrafo citado, coautor ni firma; el pie nombra solo al vestidor (Juan Rosales). Sustituye a la de DfGFjIiDXey, que tenía arriba un escudo del altar cortado (auditor, 11-nov). Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "virgen": {
     "autor": "El Encuentro (Almería)",
@@ -2215,8 +2217,8 @@
     "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg",
     "titulo": "Cedida: María Santísima de la Amargura",
     "titular": "María Santísima de la Amargura",
-    "foco": "50% 28%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/DfGFjIiDXey/, imagen 1), sin fotógrafo citado, coautor ni firma. El pie nombra solo al vestidor. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google, como él pidió."
+    "foco": "47% 25%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hermandadencuentroalmeria (https://www.instagram.com/p/Da2RSbPglBB/, imagen 1, 16-jul-2026), sin fotógrafo citado, coautor ni firma; el pie nombra solo al vestidor (Juan Rosales). Primer plano más nítido que la de DfGFjIiDXey. (Otra publicación de la cuenta, DdfeOfmonjX, cita «📷 Jesús Carreño»: no se usa.) Cuenta localizada con la segunda lista de pistas de Pablo (10-nov) buscando en Google. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "las-angustias-almeria": {
@@ -3997,6 +3999,28 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Iglesia de San Pedro"
+   },
+   "virgen": {
+    "autor": "La Santa Cena (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcenaalmeria/",
+    "local": "scripts/cedidas/almeria/la-santa-cena-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima de Fe y Caridad",
+    "titular": "María Santísima de Fe y Caridad",
+    "foco": "50% 36%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcenaalmeria («Hermandad de la Santa Cena de Almería», enlaza santacenadealmeria.org; https://www.instagram.com/p/DXpN1o1jpyc/, imagen única, 27-abr-2026), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el escudo del retablo. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+   },
+   "cristo": {
+    "autor": "La Santa Cena (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcenaalmeria/",
+    "local": "scripts/cedidas/almeria/la-santa-cena-almeria-cristo.jpg",
+    "titulo": "Cedida: Santa Cena",
+    "titular": "Santa Cena",
+    "foco": "50% 22%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcenaalmeria (https://www.instagram.com/p/DaixQ09DuWU/, imagen 2, 8-jul-2026), sin fotógrafo citado, coautor ni firma: el Señor de la Santa Cena con la túnica de verano. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "la-macarena-almeria": {

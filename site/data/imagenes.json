@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-10T19:29:59.218Z",
+ "generado": "2026-11-11T12:42:45.242Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6396,7 +6396,46 @@
     "titular": "Nuestra Señora en su Soledad"
    }
   },
-  "la-borriquita-almeria": {},
+  "la-borriquita-almeria": {
+   "cristo": {
+    "w": 960,
+    "h": 1273,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Borriquita (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/borriquitaalm/",
+    "foco": "50% 20%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-borriquita-almeria-cristo.jpg",
+    "tam": 493117,
+    "titular": "Jesús de la Victoria en su Entrada en Jerusalén"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Borriquita (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/borriquitaalm/",
+    "foco": "50% 28%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-borriquita-almeria-virgen.jpg",
+    "tam": 1850666,
+    "titular": "Nuestra Señora de la Paz"
+   }
+  },
   "los-angeles-almeria": {
    "cristo": {
     "w": 960,
@@ -6576,24 +6615,41 @@
   "rosario-del-mar-almeria": {
    "cristo": {
     "w": 960,
-    "h": 964,
+    "h": 1280,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Eduardo Milla",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Rosario_del_Mar_05.jpg",
-    "recorte": [
-     0.38,
-     0.4,
-     0.24,
-     0.32
-    ],
+    "autor": "Rosario del Mar (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadrosariodelmar/",
+    "foco": "50% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/rosario-del-mar-almeria-cristo.jpg",
+    "tam": 513701,
     "titular": "Nuestro Padre Jesús de las Penas en el Abandono"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1267,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "Rosario del Mar (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadrosariodelmar/",
+    "foco": "50% 35%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/rosario-del-mar-almeria-virgen.jpg",
+    "tam": 497424,
+    "titular": "María Santísima del Rosario del Mar"
    }
   },
   "el-encuentro-jesus-nazareno-almeria": {
@@ -6610,10 +6666,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
-    "foco": "50% 35%",
+    "foco": "47% 30%",
     "cedida": true,
     "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg",
-    "tam": 302178,
+    "tam": 264339,
     "titular": "Nuestro Padre Jesús Nazareno"
    },
    "virgen": {
@@ -6629,10 +6685,10 @@
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/hermandadencuentroalmeria/",
-    "foco": "50% 28%",
+    "foco": "47% 25%",
     "cedida": true,
     "local": "scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg",
-    "tam": 398001,
+    "tam": 416372,
     "titular": "María Santísima de la Amargura"
    }
   },
@@ -9560,6 +9616,44 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Pedro,_Almer%C3%ADa.jpg",
     "titular": "Iglesia de San Pedro"
+   },
+   "cristo": {
+    "w": 960,
+    "h": 1280,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Santa Cena (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcenaalmeria/",
+    "foco": "50% 22%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-santa-cena-almeria-cristo.jpg",
+    "tam": 305840,
+    "titular": "Santa Cena"
+   },
+   "virgen": {
+    "w": 960,
+    "h": 1113,
+    "widths": [
+     160,
+     480,
+     960
+    ],
+    "escudo": false,
+    "autor": "La Santa Cena (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadcenaalmeria/",
+    "foco": "50% 36%",
+    "cedida": true,
+    "local": "scripts/cedidas/almeria/la-santa-cena-almeria-virgen.jpg",
+    "tam": 682863,
+    "titular": "María Santísima de Fe y Caridad"
    }
   },
   "la-macarena-almeria": {
@@ -13421,6 +13515,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Nuestro_Padre_Jes%C3%BAs_de_las_Cadenas,_Huelva.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Virgen_de_los_Dolores_de_Huelva_durante_su_triduo.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "la-borriquita-almeria": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/borriquitaalm/\"|\"scripts/cedidas/almeria/la-borriquita-almeria-cristo.jpg\"|493117|\"\"|\"50% 20%\"|\"https://www.instagram.com/borriquitaalm/\"|\"scripts/cedidas/almeria/la-borriquita-almeria-virgen.jpg\"|1850666|\"\"|\"50% 28%\"|\"\"|\"\""
+  },
   "los-angeles-almeria": {
    "w": 960,
    "h": 640,
@@ -13431,6 +13535,16 @@
    ],
    "firma": "\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_03.jpg\"|\"\"|\"\"|\"\"|\"\"|\"https://commons.wikimedia.org/wiki/File:Hermandad_%C3%81ngeles_06.jpg\"|\"\"|\"\"|\"\"|\"\"|\"\"|\"\""
   },
+  "rosario-del-mar-almeria": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadrosariodelmar/\"|\"scripts/cedidas/almeria/rosario-del-mar-almeria-cristo.jpg\"|513701|\"\"|\"50% 25%\"|\"https://www.instagram.com/hdadrosariodelmar/\"|\"scripts/cedidas/almeria/rosario-del-mar-almeria-virgen.jpg\"|497424|\"\"|\"50% 35%\"|\"\"|\"\""
+  },
   "el-encuentro-jesus-nazareno-almeria": {
    "w": 960,
    "h": 640,
@@ -13439,7 +13553,7 @@
     480,
     960
    ],
-   "firma": "\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg\"|302178|\"\"|\"50% 35%\"|\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg\"|398001|\"\"|\"50% 28%\"|\"\"|\"\""
+   "firma": "\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-cristo.jpg\"|264339|\"\"|\"47% 30%\"|\"https://www.instagram.com/hermandadencuentroalmeria/\"|\"scripts/cedidas/almeria/el-encuentro-jesus-nazareno-almeria-virgen.jpg\"|416372|\"\"|\"47% 25%\"|\"\"|\"\""
   },
   "la-estrella-jaen": {
    "w": 960,
@@ -13880,6 +13994,16 @@
     960
    ],
    "firma": "\"https://www.instagram.com/buenamuerte_huelva/\"|\"scripts/cedidas/huelva/la-buena-muerte-huelva-cristo.jpg\"|150010|\"\"|\"50% 28%\"|\"https://commons.wikimedia.org/wiki/File:Nuestra_Madre_de_la_Consolacion_y_Correa_de_Huelva.jpg\"|\"\"|\"\"|\"\"|\"50% 22%\"|\"\"|\"\""
+  },
+  "la-santa-cena-almeria": {
+   "w": 960,
+   "h": 640,
+   "widths": [
+    160,
+    480,
+    960
+   ],
+   "firma": "\"https://www.instagram.com/hdadcenaalmeria/\"|\"scripts/cedidas/almeria/la-santa-cena-almeria-cristo.jpg\"|305840|\"\"|\"50% 22%\"|\"https://www.instagram.com/hdadcenaalmeria/\"|\"scripts/cedidas/almeria/la-santa-cena-almeria-virgen.jpg\"|682863|\"\"|\"50% 36%\"|\"\"|\"\""
   },
   "la-esperanza-granada": {
    "w": 960,
