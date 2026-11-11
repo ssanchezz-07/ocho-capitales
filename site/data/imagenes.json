@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-11T12:56:56.219Z",
+ "generado": "2026-11-11T13:18:23.388Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -6939,25 +6939,6 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Clemencia.jpg",
     "titular": "Santísimo Cristo de la Clemencia"
-   },
-   "virgen": {
-    "w": 960,
-    "h": 1133,
-    "widths": [
-     160,
-     480,
-     960
-    ],
-    "escudo": false,
-    "autor": "La Clemencia (Jaén)",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.instagram.com/jaenclemencia/",
-    "foco": "50% 25%",
-    "cedida": true,
-    "local": "scripts/cedidas/jaen/la-clemencia-jaen-virgen.jpg",
-    "tam": 615849,
-    "titular": "María Santísima del Mayor Dolor"
    }
   },
   "el-silencio-jaen": {
@@ -10850,21 +10831,22 @@
   },
   "cristo-de-la-escucha-almeria": {
    "cristo": {
-    "w": 480,
-    "h": 480,
+    "w": 640,
+    "h": 520,
     "widths": [
      160,
-     480
+     480,
+     640
     ],
     "escudo": false,
     "autor": "Cristo de la Escucha (Almería)",
     "licencia": "",
     "licurl": "",
     "pagina": "https://www.instagram.com/santocristodelaescucha/",
-    "foco": "50% 30%",
+    "foco": "50% 35%",
     "cedida": true,
     "local": "scripts/cedidas/almeria/cristo-de-la-escucha-almeria-cristo.jpg",
-    "tam": 152968,
+    "tam": 204308,
     "titular": "Cristo de la Escucha"
    }
   },
@@ -10884,25 +10866,6 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Pasi%C3%B3n_01.jpg",
     "foco": "50% 30%",
     "titular": "Nuestro Padre Jesús de Salud y Pasión"
-   },
-   "virgen": {
-    "w": 960,
-    "h": 1093,
-    "widths": [
-     160,
-     480,
-     960
-    ],
-    "escudo": false,
-    "autor": "Carolina Fernández",
-    "licencia": "",
-    "licurl": "",
-    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
-    "foco": "50% 30%",
-    "cedida": true,
-    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
-    "tam": 778899,
-    "titular": "María Santísima de los Desamparados"
    }
   },
   "gran-poder-almeria": {
