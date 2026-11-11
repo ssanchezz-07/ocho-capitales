@@ -40,6 +40,8 @@ const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toL
 // Tarjetas: los títulos se cortan a 3 líneas (vida.css §9); el largo va entero en el title del enlace
 const tLargo = (t) => (String(t || '').length > 60 ? ` title="${esc(t)}"` : '');
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+// «Málaga», «Málaga y Sevilla», «Málaga, Sevilla y Jaén»
+const listaY = (a) => (a.length > 1 ? a.slice(0, -1).join(', ') + ' y ' + a.at(-1) : a[0] || '');
 
 // Noticias: solo imágenes https y sin iconos/emojis de WordPress (no son fotos).
 const badImg = (s) => !s || !/^https:/.test(s) || /s\.w\.org\/images\/core\/emoji|gravatar|feeds\.feedburner/.test(s);
@@ -1346,7 +1348,7 @@ function pageBanda(b) {
   }).join('');
   const lugar = b.localidad ? `${b.localidad}${prov && norm(b.localidad) !== norm(prov.nombre) ? ' (provincia de ' + prov.nombre + ')' : ''}` : '';
   const resumen = items.length
-    ? `${b.nombre} es ${/^[aeiou]/i.test(b.tipo) ? 'una' : 'una'} ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}. Acompaña a ${plural(new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías')} en ${ciudades.map((c) => c.nombre).join(', ')} (${plural(jornadas.size, 'jornada', 'jornadas')}).`
+    ? `${b.nombre} es ${/^[aeiou]/i.test(b.tipo) ? 'una' : 'una'} ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}. Acompaña a ${plural(new Set(items.map((a) => a.hermandad_slug)).size, 'cofradía', 'cofradías')} en ${listaY(ciudades.map((c) => c.nombre))} (${plural(jornadas.size, 'jornada', 'jornadas')}).`
     : `${b.nombre} es ${b.tipo.toLowerCase()}${lugar ? ' de ' + lugar : ''}.`;
   const q = encodeURIComponent(b.nombre + (b.localidad ? ' ' + b.localidad : ''));
   const fb = BFICHAS[b.slug] || null, rd = (fb && fb.redes) || {};
@@ -1458,7 +1460,7 @@ function pageCompositor(a) {
   const q = encodeURIComponent(a.nombre + ' marchas procesionales');
   const rows = ms.map((m) => [`<a href="${u('marcha/' + m.slug + '/')}"><strong>${esc(m.titulo)}</strong></a>`, esc(m.anio), esc(m.tipo), m.h ? `<a href="${u('hermandad/' + m.h.slug + '/')}">${esc(m.h.nombre)}</a> (${esc(CAP[m.h.ciudad].nombre)})${m.est === 'sin-verificar' ? ' <span class="oc-muted">(sin verificar)</span>' : ''}` : esc(m.dedicatoria)]);
   const ciudades = [...new Set(ms.filter((m) => m.h).map((m) => CAP[m.h.ciudad].nombre))];
-  const resumen = `${a.nombre}, compositor de marchas procesionales: ${plural(ms.length, 'marcha', 'marchas')} en el catálogo${ciudades.length ? ', algunas dedicadas a cofradías de ' + ciudades.join(', ') : ''}.`;
+  const resumen = `${a.nombre}, compositor de marchas procesionales: ${plural(ms.length, 'marcha', 'marchas')} en el catálogo${ciudades.length ? ', algunas dedicadas a cofradías de ' + listaY(ciudades) : ''}.`;
   const lista = ms.map((m) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.anio), esc(m.tipo), m.h ? '' : m.dedicatoria ? 'dedicada a ' + esc(m.dedicatoria) : ''].filter(Boolean).join(' · '))).join('');
   const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:var(--primary)">Compositor</p><h1 class="oc-title">${esc(a.nombre)}</h1>${cifras([[ms.length, 'marcha', 'marchas'], [ciudades.length, 'capital', 'capitales']])}<p class="oc-lead">${esc(resumen)}</p></header>
 ${section('Marchas', `<ul class="oc-entries">${lista}</ul>`)}
