@@ -2367,6 +2367,17 @@
     "licencia": "CC BY-SA 4.0",
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Santísimo Cristo de la Clemencia"
+   },
+   "virgen": {
+    "autor": "La Clemencia (Jaén)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/jaenclemencia/",
+    "local": "scripts/cedidas/jaen/la-clemencia-jaen-virgen.jpg",
+    "titulo": "Cedida: María Santísima del Mayor Dolor",
+    "titular": "María Santísima del Mayor Dolor",
+    "foco": "50% 25%",
+    "permiso": "Publicada por la propia cofradía en su cuenta oficial @jaenclemencia (bio «Cuenta Oficial de la Antigua e Ilustre Cofradía del Santísimo Cristo de la Clemencia»; https://www.instagram.com/p/DQca1fqjdN_/, imagen 3, cambio de vestimenta de oct-2025). El pie la firma «📷 Cofradía»: foto de la propia cofradía, sin fotógrafo, coautor ni firma. Recortada por abajo para quitar el emblema de la cofradía. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. (Otras fotos de esta cuenta citan a fotógrafos, como «📷 David Rodríguez López» o «📷 Manuel Morales Rosa»: no se usan.)"
    }
   },
   "el-silencio-jaen": {
@@ -4008,8 +4019,8 @@
     "local": "scripts/cedidas/almeria/la-santa-cena-almeria-virgen.jpg",
     "titulo": "Cedida: María Santísima de Fe y Caridad",
     "titular": "María Santísima de Fe y Caridad",
-    "foco": "50% 36%",
-    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcenaalmeria («Hermandad de la Santa Cena de Almería», enlaza santacenadealmeria.org; https://www.instagram.com/p/DXpN1o1jpyc/, imagen única, 27-abr-2026), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el escudo del retablo. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadcenaalmeria («Hermandad de la Santa Cena de Almería», enlaza santacenadealmeria.org; https://www.instagram.com/p/DXpN1o1jpyc/, imagen única, 27-abr-2026), sin fotógrafo citado, coautor ni firma. Recortada por arriba para quitar el escudo del retablo, y después a 3:4 alrededor de la Virgen (franja del 8 % al 75 % del alto) para que la cara no salga pequeña y quitar el pie del ángel. Cuenta localizada buscando en Google, con el método de Pablo (11-nov). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    },
    "cristo": {
     "autor": "La Santa Cena (Almería)",
@@ -4740,18 +4751,15 @@
   },
   "cristo-de-la-escucha-almeria": {
    "cristo": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
-    "titulo": "File:Almeria Cathedral 2023 - chapel Cristo de la escucha.jpg",
-    "autor": "Fernando",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Cristo de la Escucha (Almería)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/santocristodelaescucha/",
+    "local": "scripts/cedidas/almeria/cristo-de-la-escucha-almeria-cristo.jpg",
+    "titulo": "Cedida: Cristo de la Escucha",
     "titular": "Cristo de la Escucha",
-    "recorte": [
-     0.36,
-     0.36,
-     0.28,
-     0.25
-    ]
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @santocristodelaescucha (bio «Perfil oficial de la Hermandad del Santísimo Cristo de la Escucha»; https://www.instagram.com/p/DSflTInDRgw/, imagen única, dic-2025, a su regreso a la Catedral tras la restauración), sin fotógrafo citado, coautor ni firma; el pie solo etiqueta a la Catedral. Recortada a un cuadrado de 500 px alrededor del Cristo (el original, 1080 px, es la capilla entera). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil. Cuenta localizada buscando en Google, con el método de Pablo (11-nov)."
    }
   },
   "pasion-almeria": {
@@ -4763,6 +4771,17 @@
     "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
     "titular": "Nuestro Padre Jesús de Salud y Pasión",
     "foco": "50% 30%"
+   },
+   "virgen": {
+    "autor": "Carolina Fernández",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/memoriadeunamaestra/",
+    "local": "scripts/cedidas/almeria/pasion-almeria-virgen.jpg",
+    "titulo": "Cedida: María Santísima de los Desamparados",
+    "titular": "María Santísima de los Desamparados",
+    "foco": "50% 30%",
+    "permiso": "Permiso general de @memoriadeunamaestra (Carolina Fernández) del 7-nov-2026, 11:24 («Sí, por supuesto!! Encantada de colaborar con vosotros de esta manera»; captura en Downloads/Fotos para web/Málaga/Permisos/2026-11-07_memoriadeunamaestra_permiso-general.png). Foto suya según la cuenta oficial de la hermandad, @hermandadpasionalmeria, que la publica con «📸 @memoriadeunamaestra» (https://www.instagram.com/p/De-GhkfINEC/, imagen 6, luto de noviembre de 2026). La imagen no lleva la firma de Carolina sino el logo de la hermandad, que se ha recortado por abajo. Su publicación propia no se ha localizado; en su catálogo hay cuatro de esta Virgen. Las otras fotos de la cuenta citan a @cfzherrera o @antoniojcl_ (no se usan)."
    }
   },
   "gran-poder-almeria": {

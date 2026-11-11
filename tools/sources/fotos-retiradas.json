@@ -58,7 +58,7 @@
   "María_Santísima_de_Vida_Dulzura_y_Esperanza_Nuestra.jpg": "Original pequeño (menos de 480 px): no da la calidad. (antes retirada solo en la-piedad-cordoba|virgen)",
   "Paso_del_Santísimo_Cristo_de_la_Buena_Muerte._Iglesia_de_San_Hipólito_de_Córdoba.JPG": "El Cristo sale pequeño al fondo del templo, detrás del paso. (antes retirada solo en la-buena-muerte-cordoba|cristo)",
   "JESUS_AFLIGIDOS_EN_SU_SAGRADA_PRESENTACION_AL_PUEBLO-QUINARIO_(1).jpg": "Lleva la marca de agua de otra persona («M.A. Torres») y quien la sube dice que es obra suya: licencia dudosa. (antes retirada solo en presentacion-al-pueblo-cordoba|cristo)",
-  "Rosario_del_Mar_05.jpg": "Misterio de espaldas: Jesús de las Penas sale por detrás. (antes retirada solo en rosario-del-mar-almeria|cristo)",
+  "Rosario_del_Mar_05.jpg": "Es Jesús de las Penas, de espaldas: no vale ni para la Estrella ni para Rosario del Mar (antes retirada en la-estrella-almeria|virgen y en rosario-del-mar-almeria|cristo).",
   "Coronación_06.jpg": "Recortada, la cara de la Virgen queda a oscuras tras los varales y la candelería. (antes retirada solo en la-coronacion-almeria|virgen)",
   "Virgen_de_la_Esperanza,_Jaén,_2019_24J_02.jpg": "Palio de lejos: la candelería tapa a la Virgen. (antes retirada solo en el-perdon-jaen|virgen)",
   "Palio_de_la_Virgen_de_la_Consolación_de_la_Sed_Semana_Santa_2026.jpg": "Palio de lejos entre el público: no se ve a la Virgen. (antes retirada solo en la-sed-sevilla|virgen)",
@@ -66,7 +66,8 @@
   "Virgen_de_Regla_Sevilla.jpg": "Palio con la candelería delante: no se ve a la Virgen. (antes retirada solo en los-panaderos-sevilla|virgen)",
   "Nuestro_Padre_Jesús_Nazareno_Huércal-Overa.jpg": "Es el Nazareno de Huércal-Overa (categoría «Huércal-Overa», «a su paso por la calle Arco»), no el del Encuentro de Almería. (antes retirada solo en el-encuentro-jesus-nazareno-almeria|cristo)",
   "La_Borriquita_2026_04.jpg": "Palio de lado y de lejos: ni recortado se ve a la Virgen. (antes retirada solo en la-borriquita-almeria|virgen)",
-  "Rosario_del_Mar_09.jpg": "Palio de noche y de lejos: ni recortado se ve a la Virgen. (antes retirada solo en rosario-del-mar-almeria|virgen)"
+  "Rosario_del_Mar_09.jpg": "Palio de noche y de lejos: ni recortado se ve a la Virgen. (antes retirada solo en rosario-del-mar-almeria|virgen)",
+  "Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg": "Capilla de la Catedral: el crucificado sale diminuto y el original no da para recortarlo con calidad. (antes retirada solo en cristo-de-la-escucha-almeria|cristo)"
  },
  "retiradas_en": {
   "servitas-cadiz|ficha": {
@@ -196,10 +197,6 @@
   "la-borriquita-almeria|ficha": {
    "archivo": "La_Borriquita_2026_01.jpg",
    "motivo": "Nazarenos en primer plano y el paso al fondo; no se ve al titular."
-  },
-  "cristo-de-la-escucha-almeria|cristo": {
-   "archivo": "Almeria_Cathedral_2023_-_chapel_Cristo_de_la_escucha.jpg",
-   "motivo": "Capilla de la Catedral: el crucificado sale diminuto y el original no da para recortarlo con calidad."
   },
   "jesus-despojado-sevilla|virgen": {
    "archivo": "Virgen_de_los_Dolores_y_Misericordia.jpg",
