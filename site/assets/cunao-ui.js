@@ -264,7 +264,7 @@
   // licencia) ni los controles del plano; si no hay hueco, se esconde hasta que lo haya. Usa «translate», que no pisa sus transform.
   const plano = document.querySelector('.oc-calle-mapa');
   if (plano) {
-    let pend = false, sube = 0;
+    let pend = false, sube = 0, marca = null; // marca: el comentario que guarda el sitio del botón mientras está dentro del plano
     if (!calm) btn.style.transition = 'transform 160ms cubic-bezier(.23,1,.32,1), translate 160ms cubic-bezier(.23,1,.32,1), opacity 160ms';
     const choca = (a, b) => a.left < b.right + 4 && a.right > b.left - 4 && a.top < b.bottom + 4 && a.bottom > b.top - 4;
     // Con el plano a la vista, erCuñao es un control más: en la columna de controles del plano (+, −, ubicación, pantalla
@@ -280,10 +280,21 @@
       const barra = rr && rr.height && rr.left < u.right + 4 && rr.right > u.left - 4 ? rr : [...plano.querySelectorAll('[role="slider"], input[type="range"]')].map((x) => x.closest('div') || x).map((x) => x.getBoundingClientRect()).filter((r) => r.height)[0];
       const suelo = Math.min(libreAbajo, mp.bottom - 8, barra ? barra.top - 8 : Infinity);
       if (u.top < 0 || top + tam > suelo) return false;
-      Object.assign(btn.style, { top: top + 'px', left: u.left + 'px', right: 'auto', bottom: 'auto', width: tam + 'px', height: tam + 'px', translate: '', opacity: '', pointerEvents: '' });
+      // Dentro del plano y en «absolute»: se mueve con él al desplazar la página, sin JS ni fotograma de retraso (fijo y recolocado
+      // en cada scroll, temblaba y daba un salto al cargar). Las posiciones son relativas al plano.
+      if (btn.parentNode !== plano) {
+        const foco = document.activeElement === btn;
+        marca = document.createComment('cunao'); btn.parentNode.insertBefore(marca, btn); plano.appendChild(btn);
+        if (foco) btn.focus({ preventScroll: true });
+      }
+      Object.assign(btn.style, { position: 'absolute', top: (top - mp.top - plano.clientTop) + 'px', left: (u.left - mp.left - plano.clientLeft) + 'px', right: 'auto', bottom: 'auto', width: tam + 'px', height: tam + 'px', translate: '', opacity: '', pointerEvents: '' });
       btn.classList.add('is-control'); return true;
     };
-    const suelta = () => { if (!btn.classList.contains('is-control')) return; btn.classList.remove('is-control'); ['top', 'left', 'right', 'bottom', 'width', 'height'].forEach((k) => { btn.style[k] = ''; }); };
+    const suelta = () => {
+      if (!btn.classList.contains('is-control')) return;
+      btn.classList.remove('is-control'); ['position', 'top', 'left', 'right', 'bottom', 'width', 'height'].forEach((k) => { btn.style[k] = ''; });
+      if (marca && marca.parentNode && btn.parentNode === plano) { const foco = document.activeElement === btn; marca.parentNode.insertBefore(btn, marca); marca.remove(); marca = null; if (foco) btn.focus({ preventScroll: true }); }
+    };
     const aparta = () => {
       pend = false;
       if (enColumna()) return;

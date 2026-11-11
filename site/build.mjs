@@ -222,6 +222,7 @@ const neutroUrl = (c) => u('assets/naz/_neutro-' + c.slug + '.svg') + '?v=' + cr
 const medUrl = (h, c) => !HERM[h.slug] ? (c ? neutroUrl(c) : '') : u('assets/naz/' + h.slug + '-r.svg') + '?v=' + createHash('sha256').update(medallonNaz(h)).digest('hex').slice(0, 8);
 // Miniatura de una hermandad sin foto del titular (sin foto, o solo su escudo: decisión de Pablo, 5-nov): su medallón cuadrado, con el nazareno entero sobre el terciopelo de su capital (el mismo del plano)
 const nazMini = (h) => `<img src="${medUrl(h)}" alt="" width="240" height="240" loading="lazy" decoding="async">`;
+const NAZ_OBRAS = new Set(); // hermandades cuyo medallón del nazareno sale en una obra de imaginero aunque tengan foto: hay que escribirlo
 // Al compartir una hermandad sin foto: su lámina 1200×630 (tools/diseno/og-respaldo.py, con las letras de la web)
 // Solo si su huella (tools/diseno/og-respaldo.py) es la de la lámina de hoy: con un hábito cambiado, la genérica, nunca un nazareno viejo.
 const OG_HUELLAS = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'assets', 'og', 'huellas.json'), 'utf8')); } catch { return {}; } })();
@@ -665,7 +666,7 @@ ${body}${colabora(p, title)}
       <div><h2>${BRAND}</h2><ul><li><a href="${u('colabora/')}">Colabora</a></li><li><a href="${u('acerca/')}">Fuentes y metodología</a></li><li><a href="${u('acerca/#imagenes')}">Créditos de imágenes</a></li><li><a href="${u('buscar/')}">Buscador</a></li><li><a href="${u('juegos/')}">Juegos</a></li></ul>
         <label class="oc-theme"><span>Tema</span><select data-theme-select><option value="">Automático</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></div>
     </div>
-    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons y de las propias hermandades, con su autor en cada foto.</p>
+    <p class="oc-legal">Las noticias pertenecen a sus medios y se enlazan a la fuente original. Datos de hermandades tomados de consejos, agrupaciones, federaciones y Wikipedia, con la fuente enlazada en cada ficha. Imágenes de Wikimedia Commons, de las propias hermandades, de sus agrupaciones y consejos, y de fotógrafos que nos han cedido su uso; cada foto lleva su autor.</p>
     <div class="oc-footer-legal"><p class="oc-copy">© 2026 Ocho Capitales · <span>Todos los derechos reservados</span></p>${TITULAR ? `<ul aria-label="Información legal">${LEGALES.map(([h, t]) => `<li><a href="${u(h)}">${t}</a></li>`).join('')}</ul>` : ''}</div>
   </div>
 </footer>
@@ -1127,7 +1128,7 @@ function acompHtml(a, max = Infinity, h = null) {
 // nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
 function estampaHtml(h, c) {
   const tit = (h.titulares || []).slice(0, 3).map((t) => `<li>${esc(t.nombre.split(',')[0])}</li>`).join('');
-  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async">${(() => { const r = nazRespaldo(h, 'e' + h.slug); return `<svg class="oc-estampa-naz" viewBox="38 16 164 532" role="img" aria-label="${esc(r.label)}">${r.defs}${r.fig}</svg>`; })()}</div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Todavía no tenemos una foto con licencia libre de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
+  return `<figure class="oc-estampa" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}"><div class="oc-estampa-lamina"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async">${(() => { const r = nazRespaldo(h, 'e' + h.slug); return `<svg class="oc-estampa-naz" viewBox="38 16 164 532" role="img" aria-label="${esc(r.label)}">${r.defs}${r.fig}</svg>`; })()}</div><figcaption>${tit ? `<ul class="oc-estampa-tit">${tit}</ul>` : ''}<span class="oc-diptico-cred">Todavía no tenemos una foto de sus titulares. <a href="${u('colabora/')}">¿Tienes una? Compártela</a>.</span></figcaption></figure>`;
 }
 // Díptico: el Cristo y la Virgen de la hermandad, cada uno con su crédito (licencias de Commons por separado).
 // Nombre y capital para textos alternativos y créditos: si el nombre ya acaba en «)», la capital va tras una coma
@@ -1383,7 +1384,11 @@ function pageImag(i) {
     // el nombre del imaginero se quita del detalle (ya está en la página), salvo en una autoría anónima con atribución tradicional,
     // donde el nombre es parte de la nota («Anónimo… atribuido tradicionalmente a Marcos Cabrera, sin base documental…»)
     const det = esc(/^an[oó]nim/i.test(String(o.detalle || '')) ? String(o.detalle) : String(o.detalle || '').replace(i.nombre + ', ', '').replace(i.nombre, '').trim());
-    const foto = h && h.imagen && !h.imagen.escudo ? `<div class="ix-foto${dipCls(h.imagen)}">${imgTag(h.imagen, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? `<div class="ix-foto is-naz">${nazMini(h)}</div>` : (console.warn(`Aviso: la obra «${o.titular}» de ${i.nombre} no enlaza con ninguna hermandad: sale con el nazareno sin colores`), `<div class="ix-foto is-sello" aria-hidden="true"><svg viewBox="38 16 164 532">${NAZ_TRAZO}</svg></div>`);
+    // Cada obra lleva la foto de SU talla, nunca la principal de la hermandad (que puede ser de otra: la «Presentación» de Castillo
+    // Lastrucci salía con el Cristo de la Sangre, de Buiza). Solo si el nombre de la obra es el del titular fotografiado
+    // (imagenes.json, ya sin las fotos retiradas); si no, la lámina del nazareno con los colores de la hermandad.
+    const fotoObra = h && h.diptico ? [h.diptico.cristo, h.diptico.virgen, h.diptico.juntos].find((p) => p && p.titular && slugify(p.titular) === slugify(o.titular)) : null;
+    const foto = fotoObra ? `<div class="ix-foto${dipCls(fotoObra)}">${imgTag(fotoObra, '', { sizes: '120px', widths: [120, 250] })}</div>` : h ? (NAZ_OBRAS.add(h.slug), `<div class="ix-foto is-naz">${nazMini(h)}</div>`) : (console.warn(`Aviso: la obra «${o.titular}» de ${i.nombre} no enlaza con ninguna hermandad: sale con el nazareno sin colores`), `<div class="ix-foto is-sello" aria-hidden="true"><svg viewBox="38 16 164 532">${NAZ_TRAZO}</svg></div>`);
     const titulo = h ? `<a href="${u('hermandad/' + o.hermandad_slug + '/')}">${esc(o.titular)}</a>` : esc(o.titular);
     const meta = [h ? `<span class="vx-autor">${esc(h.nombre)}</span>` : (o.hermandad ? `<span class="vx-autor">${esc(o.hermandad)}</span>` : ''), det ? `<span>${det}</span>` : '', o.atrib ? '<span class="nx-tema">Atribución</span>' : ''].join('');
     return `<li class="oc-entry vx-m ix-obra">${foto}<div class="vx-body"><h3 class="vx-tit">${titulo}</h3>${meta ? `<p class="vx-meta">${meta}</p>` : ''}${h ? `<p class="vx-pie">${cityTag(h.ciudad)}<span class="oc-muted">${esc(h.dia)}</span></p>` : ''}</div></li>`;
@@ -1805,7 +1810,7 @@ function pagesLegales() {
     lpl('Si encuentras un error, puedes avisar desde {Colabora}.', u('colabora/')),
     h2('Noticias, imágenes y planos'),
     lp('Las noticias pertenecen a sus medios. Ocho Capitales muestra el titular, un extracto breve y la imagen de cada una, y enlaza siempre a la noticia original.'),
-    lp('Las imágenes proceden de Wikimedia Commons, con su autor y su licencia, o las han cedido sus autores o las hermandades. Cada foto lleva su crédito.'),
+    lp('Las imágenes proceden de Wikimedia Commons, con su autor y su licencia, o las han cedido las propias hermandades, sus agrupaciones y consejos, o sus fotógrafos. Cada foto lleva su crédito.'),
     lpl('La lista completa está en {Créditos de imágenes}.', u('acerca/#imagenes')),
     lp('Los planos usan datos de OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL).'),
     h2('Propiedad intelectual'),
@@ -1896,7 +1901,7 @@ ${buscaFuentes()}
 <p>En las marchas, la dedicatoria a una hermandad puede estar <strong>contrastada</strong> (la dan dos fuentes independientes), <strong>dedicada</strong> (la da una fuente fiable) o <strong>sin verificar</strong> (solo la recogen el foro de Patrimonio Musical de 2008 o Wikipedia). Sin verificar, la ficha dice «Asociada a» en vez de «Dedicada a».</p>
 <p>Los textos basados en Wikipedia llevan debajo la línea «Texto basado en Wikipedia (CC BY-SA 4.0)», como pide su licencia.</p>
 <h2 class="oc-h2">Noticias</h2><p>Se leen automáticamente cada mañana a las 7:00 de ${NEWS.fuentes ? Object.keys(NEWS.fuentes).length : 'decenas de'} fuentes: prensa andaluza, Google Noticias por capital y tema, y webs oficiales de hermandades y consejos. Solo se muestran el titular, un extracto breve y la imagen, siempre con enlace al medio original.</p>
-<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons, con su autor y licencia, y de las propias hermandades; cada foto lleva su autor.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
+<h2 class="oc-h2" id="imagenes">Créditos de imágenes</h2><p>Las imágenes proceden de Wikimedia Commons, con su autor y licencia, de las propias hermandades, de sus agrupaciones y consejos, y de fotógrafos que nos han cedido su uso; cada foto lleva su autor.</p><p id="mapas">Los planos y recorridos de «En la calle» (calles, templos, puertas y los locales donde tomar algo o comprar agua) usan datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>, disponibles bajo la licencia <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License (ODbL)</a>.</p><p>El contorno del mapa de la portada procede de <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (dominio público), simplificado.</p><ul class="oc-credits">${imgs}</ul></div>`;
   write('acerca/index.html', layout({ title: 'Fuentes y metodología', desc: `De dónde salen los datos y las noticias de ${BRAND}.`, body, path: 'acerca/', crumbs: [['Portada', u()], ['Fuentes y metodología', '']] }));
 }
 // Páginas de fuentes (pulido, encargo 5): el apartado #slug de cada ficha con sus fuentes, guardadas al generar la ficha (FUENTES_FICHAS).
@@ -2574,6 +2579,8 @@ for (const [d, a] of [['hermandad', 'hermandades/'], ['banda', 'bandas/'], ['mar
   write(`${d}/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${u(a)}"><link rel="canonical" href="${u(a)}"><title>${BRAND}</title></head><body><p><a href="${u(a)}">Ir al listado</a></p></body></html>`);
 }
 D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.forEach(pageHerm); D.bandas.forEach(pageBanda); MARCHAS.forEach(pageMarcha); [...AUTORES.values()].forEach(pageCompositor); D.imagineros.forEach(pageImag);
+// Medallones del nazareno de las obras que no tienen foto de su talla (aunque su hermandad sí tenga fotos: ahí no se escribían)
+for (const s of NAZ_OBRAS) write('assets/naz/' + s + '-r.svg', medallonNaz(HERM[s]));
 pagesFuentes(); // después de todas las fichas: cada una ha guardado ya sus fuentes
 if (ogViejas.size || ogFaltan.size) console.warn(`Aviso: ${ogViejas.size + ogFaltan.size} fichas sin foto comparten la imagen genérica (${ogViejas.size} con el nazareno cambiado, ${ogFaltan.size} sin imagen); ejecuta tools/diseno/og-respaldo.py`);
 searchIndex(); extras(); datosCunao(); pageJuegos(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)

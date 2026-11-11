@@ -954,8 +954,12 @@
       // En la calle: el reloj sube y baja con el final del plano; erCuñao se aparta mientras pasa por su altura o por el crédito del plano
       // (se mide su sitio sin el desplazamiento de esconderse, que va animado: si no, al volver podría quedar encima)
       if (reloj && cunao) {
-        var c = { left: cunao.offsetLeft, top: cunao.offsetTop, right: cunao.offsetLeft + cunao.offsetWidth, bottom: cunao.offsetTop + cunao.offsetHeight };
-        cunao.classList.toggle('is-apartado', choca(c, reloj.getBoundingClientRect(), 8) || (!!osm && choca(c, osm.getBoundingClientRect(), 4)));
+        // como control del plano (dentro de él, con offsets relativos al plano) ya va con el plano y cunao-ui.js lo coloca: no se aparta
+        if (cunao.classList.contains('is-control')) cunao.classList.remove('is-apartado');
+        else {
+          var c = { left: cunao.offsetLeft, top: cunao.offsetTop, right: cunao.offsetLeft + cunao.offsetWidth, bottom: cunao.offsetTop + cunao.offsetHeight };
+          cunao.classList.toggle('is-apartado', choca(c, reloj.getBoundingClientRect(), 8) || (!!osm && choca(c, osm.getBoundingClientRect(), 4)));
+        }
       }
     };
     addEventListener('scroll', function () { if (!pedido) { pedido = true; requestAnimationFrame(mira); } }, { passive: true });

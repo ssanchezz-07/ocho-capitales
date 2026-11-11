@@ -94,14 +94,12 @@ Después te paso Lighthouse en móvil, antes y después.
   - **Noticias:** desde `prueba` las bloquea CORS, porque solo está permitido para los dominios reales. `datos` (R2, `ocho-capitales-datos`) ya permite `https://ochocapitales.com` y `https://www.ochocapitales.com` (comprobado con la cabecera `Origin`), así que el día 14 no hay que tocar nada ahí.
   - **Canónicos:** siguen apuntando a `pages.dev` hasta crear `CLOUDFLARE_URL` (paso 6 del día 14), como estaba previsto.
   - **Vuelta atrás:** quitar el dominio y el CNAME tarda segundos. Para volver a la landing, contar unos 2 minutos.
-- [ ] **Jueves 12 · vídeo con enlace a ochocapitales.com:** la landing aguanta. Comprobado el 2-nov:
+- [x] **Jueves 12 · vídeo con enlace a ochocapitales.com:** la landing aguanta. Comprobado el 2-nov y **repetido el 11-nov** (sesión Lanzamiento):
   - es estática en Pages, sin límite de visitas;
-  - con 60 visitas a la vez, las 60 dieron 200;
-  - `www` y `http` llevan a `https://ochocapitales.com/` con un 301;
-  - los enlaces con `?utm_…` y cualquier ruta abren la landing.
-
-  Repetir la prueba el 11 o el 12.
-- [ ] **Antes del 14:** subidos los arreglos de velocidad (Marchas, precarga, `site.js`/`cunao.js`) y, de Portada, el toque que se pierde con el globo.
+  - con 60 visitas a la vez, las 60 dieron 200 (el 11-nov, la más lenta tardó 0,24 s y la media 0,17 s);
+  - `www` y `http` llevan a `https://ochocapitales.com/` con un 301 (el 11-nov: `https://www`, `http://` y `http://www`, los tres a `https://ochocapitales.com/`);
+  - los enlaces con `?utm_…` y cualquier ruta abren la landing (el 11-nov: `/?utm_source=…` y `/sevilla/macarena/` dan 200).
+- [x] **Antes del 14:** subidos los arreglos de velocidad (Marchas, precarga, `site.js`/`cunao.js`) y, de Portada, el toque que se pierde con el globo. Comprobado el 11-nov: la rama de velocidad está dentro de `main`, y el `globo.js` publicado ya lleva el arreglo (el toque que cierra el globo abre lo que hay debajo; `f31fdafb`, 2-nov).
 - [ ] **HSTS de la zona** (Cloudflare → SSL/TLS → Edge Certificates): solo con el «sí» de Pablo. La web ya manda `Strict-Transport-Security: max-age=31536000`, sin `includeSubDomains` ni `preload`. Activarlo en la zona cubriría también la landing y `datos`. Si Pablo dice sí, empezar sin `preload`, porque `preload` es difícil de deshacer.
 
 **El día 14**
