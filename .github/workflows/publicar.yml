@@ -35,7 +35,7 @@ concurrency:
 
 jobs:
   comprobar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fijo: ubuntu-latest está pasando a Ubuntu 26 (aviso de GitHub); el 11-nov la instalación del navegador falló dos veces a los 10 min
     outputs:
       seguir: ${{ steps.edad.outputs.seguir }}
     steps:
@@ -55,7 +55,7 @@ jobs:
   construir:
     needs: comprobar
     if: needs.comprobar.outputs.seguir == 'si'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fijo: ubuntu-latest está pasando a Ubuntu 26 (aviso de GitHub); el 11-nov la instalación del navegador falló dos veces a los 10 min
     permissions:
       contents: write   # guarda news.json y las agendas en la rama datos
     steps:
@@ -101,9 +101,18 @@ jobs:
         if: github.event_name != 'push'
         run: node tools/validar-noticias.mjs site/dist/news.json
       - name: Instalar el navegador de las pruebas
+        timeout-minutes: 25
         run: |
-          npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1
-          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+          # Si la descarga o apt se cuelgan, se corta a los 4 min y se reintenta (hasta 3 veces)
+          for i in 1 2 3; do
+            if timeout -k 30 240 npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 && timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium; then exit 0; fi
+            if [ "$i" -lt 3 ]; then
+              echo "::warning::Intento $i de instalar el navegador fallido; se reintenta"
+              timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
+              sleep 15
+            fi
+          done
+          exit 1
       - name: Red de seguridad (si falla, no se publica)
         env:
           PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
@@ -133,7 +142,7 @@ jobs:
   desplegar:
     needs: construir
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fijo: ubuntu-latest está pasando a Ubuntu 26 (aviso de GitHub); el 11-nov la instalación del navegador falló dos veces a los 10 min
     permissions:
       pages: write
       id-token: write
@@ -149,7 +158,7 @@ jobs:
     # Solo se sube cuando cambia algo que sale en la web (tools/cloudflare-decidir.mjs): los documentos no cuentan y,
     # además se sube con la lectura de las 7:00 (portada, «Hoy» y agenda al día).
     needs: construir
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fijo: ubuntu-latest está pasando a Ubuntu 26 (aviso de GitHub); el 11-nov la instalación del navegador falló dos veces a los 10 min
     permissions:
       contents: read
     steps:
@@ -187,9 +196,18 @@ jobs:
         run: node build.mjs
       - name: Instalar el navegador de las pruebas
         if: steps.decidir.outputs.seguir == 'si'
+        timeout-minutes: 25
         run: |
-          npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1
-          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+          # Si la descarga o apt se cuelgan, se corta a los 4 min y se reintenta (hasta 3 veces)
+          for i in 1 2 3; do
+            if timeout -k 30 240 npm i --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.64.1 && timeout -k 30 240 "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium; then exit 0; fi
+            if [ "$i" -lt 3 ]; then
+              echo "::warning::Intento $i de instalar el navegador fallido; se reintenta"
+              timeout 120 sudo DEBIAN_FRONTEND=noninteractive dpkg --configure -a || true   # por si apt quedó cortado a medias
+              sleep 15
+            fi
+          done
+          exit 1
       - name: Red de seguridad (si falla, no se publica)
         if: steps.decidir.outputs.seguir == 'si'
         env:
@@ -231,7 +249,7 @@ jobs:
     # Último paso: la fecha de R2 es la marca de «publicada hoy». Solo se escribe si la web ya salió bien; si no, se reintenta.
     needs: [desplegar, cloudflare]
     if: ${{ vars.NOTICIAS_URL != '' && github.ref == 'refs/heads/main' && github.event_name != 'push' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fijo: ubuntu-latest está pasando a Ubuntu 26 (aviso de GitHub); el 11-nov la instalación del navegador falló dos veces a los 10 min
     permissions:
       contents: read
     steps:
