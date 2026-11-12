@@ -718,6 +718,9 @@ function crumbsHtml(items) {
 const facts = (rows, cls = '') => { const r = rows.filter(([, v]) => v && String(v).trim()); return r.length ? `<dl class="oc-facts ${cls}">${r.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}</dl>` : ''; };
 const section = (title, inner, id = '', cls = '') => (inner && inner.trim() ? `<section class="oc-section ${cls}"${id ? ` id="${id}"` : ''}><h2 class="oc-h2">${title}</h2>${inner}</section>` : '');
 const chips = (links) => (links.length ? `<ul class="oc-chips">${links.map(([l, h]) => `<li><a href="${h}">${esc(l)}</a></li>`).join('')}</ul>` : '');
+// Los primeros MAX_CHIPS y, si hay más, un botón «Ver las N…» a la lista completa (el mismo de «Ver todas las bandas» de la ficha)
+const MAX_CHIPS = 8;
+const chipsVerMas = (links, href, txt) => chips(links.slice(0, MAX_CHIPS)) + (links.length > MAX_CHIPS ? `<p class="fx-vermas"><a class="oc-btn is-quiet" href="${href}">${txt}${icon('arrow')}</a></p>` : '');
 const para = (t) => (t ? `<p>${esc(t)}</p>` : '');
 const mapLink = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 const stackTable = (heads, rows) => `<table class="oc-table"><thead><tr>${heads.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c, i) => `<td data-l="${esc(heads[i])}">${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
@@ -1073,6 +1076,13 @@ function pageCapital(c) {
   const groups = byDay(conSalidas(hs));
   const bandas = D.bandas.filter((b) => b.acompana.some((a) => a.ciudad === c.slug));
   const imag = D.imagineros.filter((i) => i.ciudades.includes(c.slug));
+  // En la portada de la capital, solo los primeros (las bandas que más cofradías de aquí acompañan y los imagineros con más obras
+  // aquí) y «Ver las N…» lleva al directorio filtrado por la capital (?ciudad=), que ya tiene la lista entera: así la página no
+  // carga 50 enlaces de golpe (Pablo, 12-nov).
+  const nAqui = (b) => new Set(b.acompana.filter((a) => a.ciudad === c.slug).map((a) => a.hermandad_slug)).size;
+  const bandasTop = [...bandas].sort((x, y) => nAqui(y) - nAqui(x) || x.nombre.localeCompare(y.nombre, 'es'));
+  const obrasAqui = (i) => i.obras.filter((o) => o.ciudad === c.slug).length;
+  const imagTop = [...imag].sort((x, y) => obrasAqui(y) - obrasAqui(x) || x.nombre.localeCompare(y.nombre, 'es'));
   // Fuentes de los datos clave y de los imprescindibles, sin repetir, con el formato de las fichas
   const fuentesDe = (listas, que) => { const us = [...new Set(listas.flat())]; return us.length ? `<ul class="oc-fuentes">${us.map((f) => `<li><a href="${esc(f)}" target="_blank" rel="noopener">${esc(etiquetaFuente(f, us))}</a><span>${que}</span></li>`).join('')}</ul>` : ''; };
   // Con dos enlaces de la misma web, la etiqueta lleva el título del artículo (Wikipedia) o un número para distinguirlos
@@ -1105,8 +1115,8 @@ ${groups.map(([d, list]) => `<section class="oc-section oc-day" id="${slugify(d)
 <section class="oc-section"><h2 class="oc-h2">Historia</h2><div class="oc-prose">${c.intro.map(para).join('')}</div>${lineaWiki(c.intro_fuentes)}</section>
 ${section('Datos clave', datos)}
 ${section('Imprescindibles', claves)}
-${section('Bandas y música', chips(bandas.map((b) => [b.nombre, u('banda/' + b.slug + '/')])))}
-${section('Imagineros con obra en la ciudad', chips(imag.map((i) => [i.nombre, u('imaginero/' + i.slug + '/')])))}
+${section('Bandas y música', chipsVerMas(bandasTop.map((b) => [b.nombre, u('banda/' + b.slug + '/')]), u('bandas/?ciudad=' + c.slug), `Ver las ${bandas.length} bandas de ${esc(c.nombre)}`))}
+${section('Imagineros con obra en la ciudad', chipsVerMas(imagTop.map((i) => [i.nombre, u('imaginero/' + i.slug + '/')]), u('imagineros/?ciudad=' + c.slug), `Ver los ${imag.length} imagineros`))}
 ${fuentesCapDe(c.slug).capital ? enlaceFuentes(`acerca/fuentes/${c.slug}/`, 'capital') : ''}
 </aside>
 </div>
