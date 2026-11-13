@@ -834,7 +834,7 @@ function colgaduras(extHtml = '') {
   // Cada colgadura es un enlace a la página de su capital (sin JavaScript sigue funcionando); con JS elige la ciudad y anima.
   const items = orden.map((c, i) => {
     const letras = [...c.nombre.toUpperCase()].map((l) => `<i>${esc(l)}</i>`).join('');
-    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true" style="--n:${[...c.nombre].length}">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${cifraCap(c)}</span></a></li>`;
+    return `<li class="oc-colg-slot"><a class="oc-colg" data-colg="${c.slug}" href="${capHref(c)}" style="--c:${c.color};--i:${i}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" decoding="async" fetchpriority="high" style="view-transition-name:colg-${c.slug}"><span class="oc-colg-name" aria-hidden="true" style="--n:${[...c.nombre].length}">${letras}</span><span class="oc-sr">${esc(c.nombre)}, ${cifraCap(c)}</span></a></li>`;
   }).join('');
   // El mapa y los hilos los dibuja el navegador a partir de estos datos (una gráfica con datos, no una ilustración incrustada).
   const datos = {
@@ -935,6 +935,9 @@ const CIELO_ESTRELLAS = (() => {
   const cs = [capa(9, 330, 1, 7), capa(6, 530, 1.5, 41), capa(3, 760, 2, 113)];
   return { img: cs.flatMap((c) => c.o).join(',') + ',radial-gradient(120% 90% at 50% 38%,#1a0a2a 0%,#0e0517 58%,#07030c 100%)', tam: cs.flatMap((c) => c.o.map(() => `${c.tam}px ${c.tam}px`)).join(',') + ',100% 100%' };
 })();
+// Las 8 colgaduras son lo primero que se ve de la portada: se piden pronto y con prioridad alta. Sin esto, en el móvil
+// alguna tardaba 3-8 s y su hueco enseñaba solo el nombre de la ciudad, sin la tela (Pablo, 13-nov: «ojo las banderas»)
+const COLG_PRELOAD = D.capitales.map((c) => `<link rel="preload" as="image" href="${u('assets/plates/colgadura-' + c.slug + '.webp')}" fetchpriority="high">`).join('');
 const HEAD_ENTRADA = `<style>:root{--oc-cielo:${CIELO_ESTRELLAS.img};--oc-cielo-t:${CIELO_ESTRELLAS.tam}}html.oc-entrando{overflow:hidden;background:#07030c}html.oc-entrando::after{content:"";position:fixed;inset:0;z-index:199;background:var(--oc-cielo);background-size:var(--oc-cielo-t);animation:oc-entrada-fin .01s linear 9s forwards}@keyframes oc-entrada-fin{to{opacity:0;visibility:hidden}}</style><script>try{if(!sessionStorage.getItem('oc-entrada')&&!location.hash&&!(navigator.connection&&navigator.connection.saveData)){var h=document.documentElement;h.classList.add('oc-entrando');setTimeout(function(){h.classList.remove('oc-entrando')},9000);document.addEventListener('click',function c(e){if(!h.classList.contains('oc-entrando'))return document.removeEventListener('click',c,true);h.classList.remove('oc-entrando');try{sessionStorage.setItem('oc-entrada','1')}catch(x){}if(!e.detail)return;e.preventDefault();e.stopPropagation();window.ocDebajo(e)},true)}}catch(e){}window.ocDebajo=function(e){var t=document.elementFromPoint(e.clientX,e.clientY);t=t&&t.closest('.oc-tabbar a,.oc-tabbar button,.oc-header a,.oc-header button');if(t&&!(t.href&&t.pathname===location.pathname))t.click()};</script>`;
 // Salida extraordinaria en la portada (tools/sources/itinerarios-extraordinarios.json): en lugar de la cuenta atrás, la víspera, ese día y
 // mientras está en la calle, una línea con su hora y un botón al plano de esa jornada. La página es estática: las salidas de los próximos
@@ -978,7 +981,7 @@ function pageHome() {
 ${TEMPORADA.fuera ? seccionNazareno(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `${EXT.length ? `<script>window.OCX=${JSON.stringify(EXT).replace(/</g, '\\u003c')};${EXT_CALC}</script>` : ''}${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `${COLG_PRELOAD}${EXT.length ? `<script>window.OCX=${JSON.stringify(EXT).replace(/</g, '\\u003c')};${EXT_CALC}</script>` : ''}${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
 // El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
 // En la portada fuera de temporada se dibuja al bajar; en «Próxima Semana Santa» ya está hecho, sólido (Pablo, 27-oct: «si no es muy repetitivo»).
