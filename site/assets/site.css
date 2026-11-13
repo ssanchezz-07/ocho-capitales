@@ -949,6 +949,19 @@ select.oc-cityselect[hidden] { display: none; }
 .oc-citychip-dot { width: 10px; height: 10px; border-radius: 50%; background: conic-gradient(#7b2d8e, #c99a3a, #3a6fb0, #2f8a57, #b03a3a, #7b2d8e); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--line-strong); }
 .oc-citychip.has-city .oc-citychip-dot { background: var(--c); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--c); }
 @media (hover: hover) and (pointer: fine) { .oc-citychip:hover { border-color: var(--primary); } }
+/* Selector de capital, rediseño del 13-nov (Pablo eligió «A y D»). A, desde 600 px: sin óvalo, una colgadura en miniatura del
+   color de la capital (con su barra dorada) y un filete dorado debajo del nombre. D, en el móvil: solo la colgadura y la flecha,
+   en una cajita; el nombre sigue ahí para el lector de pantalla. Sin capital elegida, la colgadura lleva los colores de las ocho. */
+.oc-citychip { gap: 8px; padding: 0 4px; border: 0; border-radius: 0; background: none; box-shadow: inset 0 -2px 0 var(--gold); }
+.oc-citychip-dot { width: 11px; height: 24px; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%); background: linear-gradient(var(--gold) 0 3px, transparent 3px), linear-gradient(#7b2d8e 0 20%, #c99a3a 0 40%, #3a6fb0 0 60%, #2f8a57 0 80%, #b03a3a 0); box-shadow: none; }
+.oc-citychip.has-city .oc-citychip-dot { background: linear-gradient(var(--gold) 0 3px, transparent 3px), var(--c); box-shadow: none; }
+.oc-citychip svg { color: var(--gold-ink); opacity: 1; }
+@media (hover: hover) and (pointer: fine) { .oc-citychip:hover { box-shadow: inset 0 -3px 0 var(--gold); } }
+@media (max-width: 599px) {
+  .oc-citychip { gap: 5px; min-width: 44px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--surface); box-shadow: none; }
+  .oc-citychip [data-city-label] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .oc-citychip-dot { width: 14px; height: 30px; }
+}
 
 /* Hoja «Tu capital»: las ocho colgaduras, como en la portada */
 .oc-citysheet-sub { margin: 0 0 14px; color: var(--muted); font-size: .92rem; }
