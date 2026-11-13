@@ -1,5 +1,7 @@
 {
  "nota": "Datos del titular para las páginas legales (Pablo, 4-nov-2026): titular «Ocho Capitales», sin CIF; correo info@ochocapitales.com. «analitica»: true solo cuando Cloudflare Web Analytics esté activo en la web publicada.",
  "nombre": "Ocho Capitales",
- "correo": "info@ochocapitales.com"
+ "correo": "info@ochocapitales.com",
+ "analitica": true,
+ "analitica_nota": "Activado el 13-nov-2026 (Pablo: «Sí, actívala»). Cloudflare Web Analytics está activo para ochocapitales.com con «Configuración automática», comprobado en el panel ese día. Cuenta las visitas desde que ochocapitales.com sirve esta web (sábado 14)."
 }
