@@ -860,21 +860,46 @@ html:has(.oc-fuentes-pag) { scroll-behavior: auto; } /* el salto al apartado, di
 .oc-fbusca-res span { font-size: .9rem; color: var(--muted); }
 .oc-fbusca-res mark { border-radius: 3px; background: color-mix(in srgb, var(--oro) 40%, transparent); color: inherit; }
 
-/* Móvil (Pablo, 13-nov: «estos filtros ocupan mucho e incapacitan la correcta visualización de las noticias»). La barra se
-   quedaba fija bajo la cabecera con 265 px a 390 de ancho, y casi no dejaba ver noticias. Ahora no se queda fija y va en tres
-   líneas bajas: el buscador (sin el rótulo, que sigue para los lectores de pantalla), las capitales con «Oficiales» al final y
-   los temas. Unos 150 px, que se van al bajar. */
-.nx-toggle .nx-corto { display: none; }
+/* Noticias en el móvil, diseño «Periódico» (Pablo, 13-nov: «estos filtros ocupan mucho e incapacitan la correcta visualización
+   de las noticias»; elige la propuesta 1). Antes: la cabecera de 312 px y la barra de filtros fija de 265 px; no se veía ninguna
+   noticia en la primera pantalla. Ahora:
+   - la cabecera es una línea: «NOTICIAS» y, al lado, cuándo se actualizó y cuántos medios (la entradilla queda para el PC);
+   - una sola barra fija y fina con las capitales y el botón «Filtros», que despliega el buscador, «Oficiales» y los temas
+     (site.js le pone el número de filtros activos). En el PC todo sigue igual. */
+.nx-toggle .nx-corto, .nx-filtrar { display: none; }
 @media (max-width: 760px) {
-  .nx-filtros { position: static; gap: 8px; margin-bottom: 4px; padding: 10px var(--gutter) 8px; background: none; }
-  .nx-buscar { flex: 1 1 100%; max-width: none; gap: 0; }
-  .nx-buscar label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
-  .nx-buscar input { height: 42px; }
+  /* cabecera en una línea */
+  .nx-head.is-noticias { margin: 2px 0 6px; padding: 0; border-radius: 0; background: none; box-shadow: none; color: var(--ink); }
+  .nx-head.is-noticias::before, .nx-head.is-noticias::after, .nx-head.is-noticias .nx-head-in::after { display: none; }
+  .nx-head.is-noticias .nx-head-in { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 2px 12px; max-width: none; }
+  .nx-head.is-noticias .nx-title { margin: 0; font-size: 2.6rem; line-height: .85; color: var(--ink); text-shadow: none; }
+  .nx-head.is-noticias .nx-title::after, .nx-head.is-noticias .nx-lead { display: none; }
+  .nx-head.is-noticias .nx-pulso { gap: 0; padding-bottom: 3px; font-size: .8rem; color: var(--muted); }
+  .nx-head.is-noticias .nx-pulso span { min-height: 0; padding: 0; border: 0; border-radius: 0; background: none; color: var(--muted); gap: 6px; }
+  .nx-head.is-noticias .nx-pulso span + span::before { content: "·"; margin: 0 6px; }
+  .nx-head.is-noticias .nx-pulso span:nth-child(3) { display: none; }
+  .nx-head.is-noticias .nx-pulso b { font: 600 .8rem/1 var(--sans); color: var(--muted); }
+  .nx-head.is-noticias .nx-pulso i { background: #2f9e5b; box-shadow: 0 0 0 3px rgb(47 158 91 / .2); }
+  /* barra fija y fina: capitales + «Filtros»; el resto, plegado */
+  .nx-filtros { gap: 8px; margin-bottom: 8px; padding: 8px var(--gutter); }
   .nx-chips-fila { flex: 1 1 100%; flex-wrap: nowrap; gap: 6px; }
-  .nx-chips { flex: 1 1 auto; margin: 0 0 0 calc(var(--gutter) * -1); padding: 2px 2px 2px var(--gutter); scroll-padding: 0 var(--gutter); }
+  .nx-chips { flex: 1 1 auto; margin: 0 0 0 calc(var(--gutter) * -1); padding: 2px 2px 2px var(--gutter); scroll-padding: 0 var(--gutter); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); }
+  .nx-chips button, .nx-toggle, .nx-filtrar { min-height: 36px; gap: 6px; padding: 0 12px; font-size: .88rem; }
+  .nx-chips.is-tema button { min-height: 34px; padding: 0 10px; }
   .nx-temas .nx-chips { margin: 0 calc(var(--gutter) * -1); padding: 2px var(--gutter); }
-  .nx-chips button, .nx-toggle { min-height: 38px; gap: 6px; padding: 0 12px; font-size: .9rem; }
-  .nx-chips.is-tema button { min-height: 34px; padding: 0 10px; font-size: .88rem; }
   .nx-toggle .nx-largo { display: none; }
   .nx-toggle .nx-corto { display: inline; }
+  .nx-filtrar { position: relative; display: inline-flex; flex: none; align-items: center; margin: 0; border: 1.5px solid var(--oro-hondo, #9c7a2a); border-radius: 999px; background: var(--surface); color: var(--ink); font-weight: 700; cursor: pointer; touch-action: manipulation; }
+  .nx-filtrar .oc-i { width: 16px; height: 16px; }
+  .nx-filtrar[aria-expanded="true"] { background: color-mix(in srgb, var(--oro) 18%, var(--surface)); }
+  .nx-filtrar-n { display: grid; place-items: center; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: #2b1140; color: #fbf6ee; font: 700 .7rem/1 var(--sans); }
+  .nx-filtrar-n[hidden] { display: none; }
+  /* plegado: sin buscador, sin «Oficiales» y sin temas; al abrir «Filtros», debajo de las capitales */
+  .nx-filtros:not(.is-abierto) .nx-buscar, .nx-filtros:not(.is-abierto) .nx-temas, .nx-filtros:not(.is-abierto) .nx-toggle { display: none; }
+  .nx-chips-fila:not(.nx-temas) { order: 1; }
+  .nx-buscar { order: 2; flex: 1 1 100%; max-width: none; gap: 0; }
+  .nx-temas { order: 3; }
+  .nx-buscar label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .nx-buscar input { height: 42px; }
+  .nx-count { margin-top: 0; }
 }

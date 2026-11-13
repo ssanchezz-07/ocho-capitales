@@ -1376,6 +1376,22 @@
     }
   }
 
+  // ---------- Noticias en el móvil (diseño «Periódico», 13-nov): «Filtros» despliega el buscador, «Oficiales» y los temas
+  // (vida.css los pliega por debajo de 761 px) y lleva el número de filtros puestos además de la capital.
+  $$('[data-nx-filtrar]').forEach(function (b) {
+    var f = b.closest('[data-news-filters]'), n = $('[data-nx-filtrar-n]', b); if (!f || !n) return;
+    var cuenta = function () {
+      var q = $('[data-f="q"]', f), t = $('[data-f="tema"] [aria-pressed="true"]', f), o = $('[data-f="oficiales"]', f);
+      var k = (q && q.value.trim() ? 1 : 0) + (t && t.getAttribute('data-v') ? 1 : 0) + (o && o.getAttribute('aria-pressed') === 'true' ? 1 : 0);
+      n.textContent = k; n.hidden = !k;
+    };
+    b.addEventListener('click', function () { var ab = !f.classList.contains('is-abierto'); f.classList.toggle('is-abierto', ab); b.setAttribute('aria-expanded', ab ? 'true' : 'false'); });
+    f.addEventListener('input', function () { setTimeout(cuenta, 0); });
+    f.addEventListener('click', function () { setTimeout(cuenta, 0); });
+    addEventListener('popstate', function () { setTimeout(cuenta, 50); });
+    cuenta(); setTimeout(cuenta, 400);
+  });
+
   // ---------- filtros de Noticias en carrusel: si no caben, se desvanecen por el lado que sigue y, con ratón, una flecha lo
   // avanza (antes, a 1440 las capitales se cortaban en seco y no había forma de verlas con la rueda; auditoría de diseño del
   // 10-nov). Pasarlos a varias líneas hacía la barra fija de un tercio de la pantalla; por eso siguen en una fila.
