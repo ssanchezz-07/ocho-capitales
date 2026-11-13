@@ -1192,6 +1192,10 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-caphero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgb(19 7 29 / .38) 0%, rgb(19 7 29 / 0) 26%, rgb(19 7 29 / .2) 46%, rgb(19 7 29 / .9) 100%), linear-gradient(90deg, color-mix(in srgb, var(--c-plate) 55%, transparent) 0%, transparent 65%); }
 .oc-caphero:not(.has-img)::after { background: linear-gradient(180deg, transparent 40%, rgb(19 7 29 / .45) 100%); }
 .oc-caphero-colg { position: absolute; top: -6px; right: clamp(18px, 7vw, 84px); width: clamp(62px, 17vw, 124px); height: auto; transform-origin: 50% 0; filter: drop-shadow(0 14px 16px rgb(0 0 0 / .45)); pointer-events: none; }
+/* Desde tableta, la colgadura se mide por el alto de la cabecera y no por el ancho de la pantalla: con 124 px de ancho
+   medía 442-461 px en cabeceras de 414-449 y el fleco se cortaba abajo (Córdoba y Málaga, 38 y 30 px; Pablo, 13-nov). Así
+   cuelga entera, con el fleco 10 px por encima del borde. El ancho sale de su proporción y no pasa de 124 px. */
+@media (min-width: 720px) { .oc-caphero:not(.is-compact) .oc-caphero-colg { height: calc(100% - 4px); width: auto; } }
 .oc-caphero-text { position: relative; max-width: 40rem; }
 .oc-caphero-title { margin: 0; font: 400 clamp(4rem, 19vw, 8.6rem)/.84 var(--display); text-transform: uppercase; letter-spacing: .004em; text-wrap: balance; color: #fff; text-shadow: 0 2px 24px rgb(19 7 29 / .35); }
 .oc-caphero-title span { display: block; margin-bottom: .14em; font-size: .3em; line-height: 1; letter-spacing: .14em; color: #f0d79c; }
@@ -1215,7 +1219,10 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
   @supports (animation-timeline: view()) {
     .oc-caphero-img img { animation: oc-fondo linear both; animation-timeline: --caphero; animation-range: exit 0% exit 100%; }
     .oc-caphero-text { animation: oc-despide linear both; animation-timeline: --caphero; animation-range: exit 5% exit 70%; }
-    @keyframes oc-fondo { to { transform: translateY(22%) scale(1.08); } }
+    /* La foto baja un poco más despacio que la página, pero sin dejar hueco arriba: con translateY(22%) scale(1.08) se veía
+       una franja oscura de hasta 63 px al bajar (Pablo, 13-nov: «sale una banda negra arriba en la foto»). Con el origen al
+       30 % del alto, scale(1.25) la estira hacia arriba un 7,5 % y solo baja un 6 %: el borde de arriba siempre queda fuera. */
+    @keyframes oc-fondo { to { transform: translateY(6%) scale(1.25); } }
     @keyframes oc-despide { to { opacity: 0; transform: translateY(-28px); } }
   }
 }
