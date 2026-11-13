@@ -996,7 +996,7 @@ function seccionNazareno(enPortada) {
   const A = TEMPORADA.anio, e = easter(A), f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'long' }), H = enPortada ? 'h2' : 'h1';
   return `<section class="oc-naz${enPortada ? ' is-portada' : ''}"${enPortada ? ' data-nazareno' : ''} aria-labelledby="naz-t"><div class="oc-naz-escena">${NAZ_SVG}
   <div class="oc-naz-txt"><p class="oc-naz-frase" data-naz="1">Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén.</p><p class="oc-naz-frase" data-naz="2">Sus hermandades, jornada a jornada.</p>
-  <header data-naz="3"><p class="oc-kicker">Próxima Semana Santa</p><${H} class="oc-naz-titulo" id="naz-t">Semana Santa ${A}</${H}><p class="oc-naz-fechas">Del Viernes de Dolores, ${esc(f(-9))}, al Domingo de Resurrección, ${esc(f(0))}.</p>${leadHoy()}${enPortada ? `<a class="oc-btn oc-naz-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : ''}</header></div>
+  <header data-naz="3"><p class="oc-kicker">Próxima Semana Santa</p><${H} class="oc-naz-titulo" id="naz-t">Semana Santa ${A}</${H}>${leadHoy()}${enPortada ? `<a class="oc-btn oc-naz-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : `<a class="oc-btn oc-naz-btn is-abajo" href="#prox-jornadas">Las jornadas y cada capital${icon('arrow')}</a>`}</header></div>
   <p class="oc-naz-pista" aria-hidden="true">Baja para dibujarlo</p></div></section>`;
 }
 // Próxima Semana Santa (botón de la portada fuera de temporada): cuenta atrás, fechas de cada jornada y qué tendrá cada capital.
@@ -1165,9 +1165,8 @@ function acompHtml(a, max = Infinity, h = null) {
   };
   const tabla = (pasos) => '<dl class="oc-acomp">' + pasos.map((p) => '<div><dt>' + esc(p.paso) + '</dt><dd>' + p.bandas.map(bandaLi).join('<br>') + '</dd></div>').join('') + '</dl>';
   const nv = a.novedades2027 && a.novedades2027.pasos.length ? '<h3 class="oc-h3">Novedades para 2027</h3>' + tabla(a.novedades2027.pasos) : '';
-  const fuente = 'Fuente: <a href="' + esc(a.fuente) + '" target="_blank" rel="noopener">' + esc(a.medio || 'guía publicada') + '</a>. ';
-  if (corta) return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + '<p class="oc-note">' + fuente + 'Aquí, las bandas de cada paso; en «Ver todas las bandas», el acompañamiento completo' + (a.resumen ? ' y las novedades de 2027' : '') + '.</p>';
-  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv + '<p class="oc-note">' + fuente + 'Los cambios para 2027 anunciados hasta ahora se indican como novedad.</p>';
+  if (corta) return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos);
+  return '<h3 class="oc-h3">Acompañamiento en ' + a.anio + '</h3>' + tabla(a.pasos) + nv;
 }
 // Estampa: cuando no existe ninguna foto con licencia libre, una lámina diseñada (colgadura de su capital, inicial bordada y
 // nombres de sus titulares). No pretende ser una foto: se dice en el pie y se invita a aportar una.
@@ -1287,17 +1286,16 @@ function pageHerm(h) {
   const listaM = (ms) => `<ul class="oc-entries vx-grid fx-marchas">${ms.map(marchaLi).join('')}</ul>`;
   const marchasFx = ordenM.length ? listaM(destacadas) : '';
   const musicaUrl = u('hermandad/' + h.slug + '/musica/');
-  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}<p class="oc-note">Descripción según ${hb.fuente_nombre ? esc(hb.fuente_nombre) + ' (<a href="' + esc(hb.fuente_url) + '" target="_blank" rel="noopener">' + esc(nombreWeb(hb.fuente_url)) + '</a>)' : `<a href="${esc(hb.fuente_url)}" target="_blank" rel="noopener">${esc(nombreWeb(hb.fuente_url))}</a>`}${col ? '; debajo, el color de cada prenda tal como lo describe' : ''}.</p>`); })();
+  const habito = (() => { const hb = HABITOS[h.slug]; if (!hb || !hb.texto) return ''; const col = coloresHabito(h.slug); return sec('Hábito de nazareno', `<div class="oc-prose">${para(hb.texto)}</div>${col ? `<div class="oc-habito-cols">${col}</div>` : ''}`); })();
   const nM = ordenM.length; const nTipo = (e) => ordenM.filter((m) => m.est === e).length; const nc = nTipo('contrastada'), nd = nTipo('dedicada'), ns = nTipo('sin-verificar');
   const titM = ns === nM ? 'Marchas asociadas' : 'Marchas dedicadas';
-  const notaTodas = `<p class="oc-note">${listaY([nc ? plural(nc, 'contrastada en dos fuentes', 'contrastadas en dos fuentes') : '', nd ? plural(nd, 'con una fuente fiable', 'con una fuente fiable') : '', ns ? plural(ns, 'sin verificar', 'sin verificar') + ' (solo en el foro de aficionados de 2008 o en Wikipedia)' : ''].filter(Boolean))}. Cada marcha enlaza sus fuentes en su ficha.</p>`;
   const verTodas = (href, txt) => `<p class="fx-vermas"><a class="oc-btn is-quiet" href="${href}">${txt}${icon('arrow')}</a></p>`;
-  const marchasSec = marchasFx ? sec(titM, marchasFx + (cortaM ? verTodas(musicaUrl + '#marchas', `Ver las ${nM} marchas`) + `<p class="oc-note">Aquí, ${MAX_M} de ${nM}${porQue}. Cada marcha enlaza sus fuentes en su ficha.</p>` : notaTodas), 'fx-sec-marchas') : '';
+  const marchasSec = marchasFx ? sec(titM, marchasFx + (cortaM ? verTodas(musicaUrl + '#marchas', `Ver las ${nM} marchas`) : ''), 'fx-sec-marchas') : '';
   // Bandas: la guía del año por pasos (resumida a unas 3), la música oficial o el texto de la ficha, y las fichas de banda enlazadas
   const cortaB = h.acompanamiento ? !!resumenAcomp(h.acompanamiento, MAX_B, h) : bandas.length > MAX_B;
   const musicaHtml = (max) => (h.acompanamiento ? acompHtml(h.acompanamiento, max, h) : (musicaOf || (h.musica ? `<div class="oc-prose">${para(h.musica)}</div>` : ''))) + (!h.acompanamiento && bandas.length ? '<h3 class="oc-h3">Bandas en Ocho Capitales</h3>' + chips(bandas.slice(0, max)) : '');
   const musicaFicha = musicaHtml(MAX_B) + (cortaB ? verTodas(musicaUrl + '#bandas', 'Ver todas las bandas') : '');
-  const enlaces = (() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return sec('Escúchala y síguela', `<ul class="oc-linklist fx-enlaces">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">Son búsquedas: el resultado depende de lo que cada hermandad haya publicado.</p>`); })();
+  const enlaces = (() => { const q = encodeURIComponent(h.nombre + ' ' + c.nombre + ' Semana Santa'); const e = [['Ver en YouTube', 'https://www.youtube.com/results?search_query=' + q], ['Marchas en Spotify', 'https://open.spotify.com/search/' + encodeURIComponent(h.nombre + ' marchas procesionales')], ...(h.web ? [['Web oficial', h.web]] : [['Buscar su web oficial', 'https://www.google.com/search?q=' + q + '+web+oficial']])]; return sec('Escúchala y síguela', `<ul class="oc-linklist fx-enlaces">${e.map(([l, hr]) => `<li><a class="oc-btn is-quiet" href="${esc(hr)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul>`); })();
   const body = `<article class="oc-ficha fx" style="--c:${c.color}">
 <header class="fx-hero${media ? ' has-media' : ' is-estampa'}">
   <div class="fx-hero-txt">
@@ -1340,7 +1338,7 @@ ${news.length ? section('Noticias de ' + esc(c.nombre), `<div class="oc-newsgrid
 </header>
 <article class="oc-ficha fx fx-musica-pag" style="--c:${c.color}">
 ${secId('bandas', 'Bandas', musicaHtml(Infinity), 'fx-musica')}
-${secId('marchas', titM, nM ? listaM(relevantes) + notaTodas : '', 'fx-sec-marchas')}
+${secId('marchas', titM, nM ? listaM(relevantes) : '', 'fx-sec-marchas')}
 </article>`;
     write(`hermandad/${h.slug}/musica/index.html`, layout({
       title: `Bandas y marchas de ${h.nombre} (${c.nombre})`, desc: `Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.`, body: mus, path: `hermandad/${h.slug}/musica/`, image: ogOf(im) || ogNaz(h), active: 'hermandades/',
@@ -1383,6 +1381,8 @@ function pageBanda(b) {
   if (historiaHtml) for (const f of fb.historia_fuentes || []) bxAdd(f, 'historia');
   if (datosHtml) for (const [k, , f] of fb.datos) bxAdd(f, k.toLowerCase());
   if (fueraHtml) for (const x of fb.fuera_capitales) bxAdd(x.fuente, 'fuera de las capitales');
+  if (oficiales.length && fb) bxAdd(fb.redes_fuente || fb.web, 'redes oficiales');
+  if (fb && fb.logo) bxAdd(fb.logo.fuente, 'logo');
   const bxLista = (a) => { const v = [...new Set(a)]; return v.length > 1 ? v.slice(0, -1).join(', ') + ' y ' + v.at(-1) : v[0]; };
   if (bxF.size) FUENTES_FICHAS.bandas.push({ slug: b.slug, nombre: b.nombre + (b.localidad ? ' (' + b.localidad + ')' : ''), html: `<ul class="oc-fuentes">${[...bxF].map(([url, qs]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(/wikipedia\.org/.test(url) ? 'Wikipedia (CC BY-SA 4.0)' : nombreWeb(url))}</a><span>${esc(bxLista(qs))}</span></li>`).join('')}</ul>` });
   const vecinas = b.origen ? D.bandas.filter((x) => x.slug !== b.slug && x.origen === b.origen).slice(0, 16) : [];
@@ -1405,10 +1405,10 @@ ${section('Historia', historiaHtml + datosHtml)}
 ${section('Dónde sale', (porCiudad || (fueraHtml ? '' : '<p class="oc-empty">Todavía no hay cofradías del portal asociadas a esta formación.</p>')) + fueraHtml)}
 ${(REPERTORIO.get(b.slug) || []).length ? section('Repertorio', `<ul class="oc-entries">${[...REPERTORIO.get(b.slug)].sort((x, y) => x.m.titulo.localeCompare(y.m.titulo, 'es')).map(({ m, arreglo, propia }) => filaHerm(m.h, `<a href="${u('marcha/' + m.slug + '/')}">${esc(m.titulo)}</a>`, [esc(m.autor), arreglo ? 'arreglo de ' + esc(arreglo) : '', propia ? '<span class="bx-propia">Marcha propia</span>' : ''].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
 ${nuevas.length ? section('Novedades para 2027', chips(nuevas.map((a) => [`${a.h.nombre} (${a.rol || 'cortejo'})`, u('hermandad/' + a.hermandad_slug + '/')]))) : ''}
-${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul><p class="oc-note">${oficiales.length ? 'Perfiles oficiales enlazados desde ' + fuenteLink(fb.redes_fuente || fb.web) + '. ' : 'Son búsquedas y perfiles públicos. '}El portal no aloja audio ni vídeo.${fb && fb.logo ? ' ' + esc(fb.logo.nota) + ', de ' + fuenteLink(fb.logo.fuente) + '.' : ''}</p>`)}
+${section('Escúchala y síguela', `<ul class="oc-linklist">${enlaces.map(([l, h]) => `<li><a class="oc-btn is-quiet" href="${esc(h)}" target="_blank" rel="noopener nofollow">${esc(l)}${icon('out')}</a></li>`).join('')}</ul>`)}
 ${vecinas.length ? section('Otras formaciones de ' + esc(prov.nombre) + ' y su provincia', chips(vecinas.map((x) => [x.nombre + (x.localidad ? ' (' + x.localidad + ')' : ''), u('banda/' + x.slug + '/')]))) : ''}
 ${bxF.size ? enlaceFuentes('acerca/fuentes/bandas/', b.slug) : ''}
-<p class="oc-note">Configuración musical según la información publicada. Las novedades llevan su fuente en la ficha de cada cofradía.</p>`;
+`;
   write(`banda/${b.slug}/index.html`, layout({ title: b.nombre + (b.localidad && D.bandas.some((x) => x !== b && x.nombre === b.nombre) ? ' (' + b.localidad + ')' : ''), desc: `${resumen}`.slice(0, 300), body, path: `banda/${b.slug}/`, active: 'bandas/', crumbs: [['Portada', u()], ['Bandas', u('bandas/')], [b.nombre, '']], jsonld: { '@context': 'https://schema.org', '@type': 'MusicGroup', name: b.nombre, genre: b.tipo, foundingLocation: b.localidad ? { '@type': 'Place', name: b.localidad } : undefined } }));
 }
 
@@ -1526,7 +1526,7 @@ function pageMarcha(m) {
   const yt = m.video ? 'https://www.youtube.com/watch?v=' + m.video : `https://www.youtube.com/results?search_query=${q}`;
   const escucha = `<div class="oc-escucha"><a class="oc-escucha-play" href="${esc(yt)}" target="_blank" rel="noopener nofollow" aria-label="${m.video ? 'Escuchar' : 'Buscar'} «${esc(m.titulo)}» en YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></a><div class="oc-escucha-txt"><strong>${m.video ? 'Escúchala en YouTube' : 'Búscala en YouTube'}</strong><span>${m.video ? textoGrabacion(m) : 'La grabación depende de la banda que la interprete'}</span><a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener nofollow">Buscar en Spotify${icon('out')}</a></div></div>`;
   const ded = h ? `<a href="${u('hermandad/' + h.slug + '/')}">${esc(h.nombre)}</a>${m.titularDed ? ' · ' + esc(m.titularDed) : ''}${sinVer ? ' <span class="oc-muted">(sin verificar)</span>' : m.est === 'contrastada' ? ' <span class="oc-muted">(contrastada)</span>' : ''}` : esc(m.dedicatoria);
-  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo) + (m.arreglos ? ` (también para ${esc(m.arreglos)})` : '')], [sinVer ? 'Asociada a' : 'Dedicada a', ded], ['Capital', ciudadMarcha(m) ? `<a href="${u('semana-santa/' + ciudadMarcha(m) + '/')}">${esc(CAP[ciudadMarcha(m)].nombre)}</a>` : ''], ['Repertorio de', (m.repertorio || []).filter((r) => BANDA[r.banda]).map((r) => `<a href="${u('banda/' + r.banda + '/')}">${esc(BANDA[r.banda].nombre)}</a>${r.arreglo ? ' (arreglo de ' + esc(r.arreglo) + ')' : ''}`).join(', ')], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}${h ? `<p class="oc-note">${notaDedicatoria(m)}</p>` : ''}</header>
+  const body = `<header class="oc-dossier"><p class="oc-kicker" style="--c:${c ? c.color : 'var(--primary)'}">Marcha procesional${m.anio ? ' · ' + esc(m.anio) : ''}</p><h1 class="oc-title">${esc(m.titulo)}</h1>${escucha}${facts([['Compositor', m.autorSlug ? `<a href="${u('compositor/' + m.autorSlug + '/')}">${esc(m.autor)}</a>` : esc(m.autor)], ['Año', esc(m.anio)], ['Formación', esc(m.tipo) + (m.arreglos ? ` (también para ${esc(m.arreglos)})` : '')], [sinVer ? 'Asociada a' : 'Dedicada a', ded], ['Capital', ciudadMarcha(m) ? `<a href="${u('semana-santa/' + ciudadMarcha(m) + '/')}">${esc(CAP[ciudadMarcha(m)].nombre)}</a>` : ''], ['Repertorio de', (m.repertorio || []).filter((r) => BANDA[r.banda]).map((r) => `<a href="${u('banda/' + r.banda + '/')}">${esc(BANDA[r.banda].nombre)}</a>${r.arreglo ? ' (arreglo de ' + esc(r.arreglo) + ')' : ''}`).join(', ')], ['Tipo de marcha', esc(m.tipoMarcha)], ['Banda que la estrenó', esc(m.estreno)], ['Lugar', esc(m.lugar)]])}</header>
 ${otras.length ? section('Más marchas', `<ul class="oc-entries">${otras.map((x) => filaHerm(x.h, `<a href="${u('marcha/' + x.slug + '/')}">${esc(x.titulo)}</a>`, [esc(x.autor), esc(x.anio)].filter(Boolean).join(' · '))).join('')}</ul>`) : ''}
 ${fuentesM ? enlaceFuentes(`acerca/fuentes/marchas/${letraMarcha(m.slug)}/`, m.slug) : ''}`;
   // sus fuentes, en «Fuentes y metodología» (una página por inicial)

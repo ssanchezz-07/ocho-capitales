@@ -344,8 +344,9 @@
     cityListeners.push(checkTodayEmpty);
   } else {
     // Cuenta atrás de la portada: se corrige si la copia en caché se ha quedado atrás
-    var lead0 = $('[data-today-lead]'), pk = pickSlot(new Date());
-    if (lead0 && !pk.hoy) { var ramos0 = new Date(easter(pk.year) - 7 * 864e5); lead0.innerHTML = 'Faltan <strong>' + pk.days + '</strong> ' + (pk.days === 1 ? 'día' : 'días') + ' para el Domingo de Ramos <span>(' + ramos0.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' }) + ')</span>'; }
+    // (todas: la de arriba y la del nazareno de «Próxima Semana Santa», para que digan lo mismo)
+    var leads0 = document.querySelectorAll('[data-today-lead]'), pk = pickSlot(new Date());
+    if (leads0.length && !pk.hoy) { var ramos0 = new Date(easter(pk.year) - 7 * 864e5); [].forEach.call(leads0, function (lead0) { lead0.innerHTML = 'Faltan <strong>' + pk.days + '</strong> ' + (pk.days === 1 ? 'día' : 'días') + ' para el Domingo de Ramos <span>(' + ramos0.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' }) + ')</span>'; }); }
   }
 
   // ---------- portada: las banderas, Andalucía y, al elegir una, el plano de su ciudad («Del mapa a la calle») ----------

@@ -136,8 +136,11 @@
 .oc-naz .oc-kicker { color: #c9a14a; }
 .oc-naz-titulo { margin: 0 0 .15em; font: 700 clamp(56px, 8vw, 112px)/.88 Karantina, serif; color: #f4eff9; }
 .oc-naz-fechas { margin: 0 0 10px; color: #cfc4dc; }
-.oc-naz .oc-hero2-count { color: #f4eff9; }
-.oc-naz .oc-hero2-count strong { color: #e7c877; }
+/* La cuenta atrás, más bonita (Pablo, 13-nov): «Faltan» y «días para el Domingo de Ramos» en versalitas finas a los lados de un
+   número grande en dorado, con la misma letra del título; sin la fecha entre paréntesis (las fechas están en «Las jornadas») */
+.oc-naz .oc-hero2-count { display: grid; justify-items: start; row-gap: 6px; margin: .5em 0 0; font: 500 clamp(12px, 1.05vw, 14px)/1.2 Heebo, system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #cfc4dc; }
+.oc-naz .oc-hero2-count strong { font: 700 clamp(64px, 7.5vw, 104px)/.8 Karantina, serif; letter-spacing: 0; color: #e7c877; text-shadow: 0 0 24px rgb(231 200 119 / .25); }
+.oc-naz .oc-hero2-count span { display: none; }
 .oc-naz-pista { position: absolute; bottom: 20px; left: 0; right: 0; margin: 0; text-align: center; font: 500 13px/1 Heebo, system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #cfc4dc; opacity: 0; }
 .oc-naz.is-vivo .oc-naz-pista { opacity: .85; }
 /* sin JavaScript (o con «reducir movimiento») se ve terminado: solo la cabecera, sin las frases que van y vienen */
@@ -147,8 +150,9 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-naz-js .oc-naz:not(.is-vivo) .oc-naz-fig, .oc-naz-js .oc-naz:not(.is-vivo) .oc-naz-txt { opacity: 0; }
 @media (max-width: 700px) {
   .oc-naz-escena { grid-template-columns: 1fr; grid-template-rows: auto auto; gap: 8px; align-content: center; padding: 20px 16px; }
-  .oc-naz-fig { height: min(56svh, 460px); justify-self: center; }
+  .oc-naz-fig { height: min(44svh, 380px); justify-self: center; }
   .oc-naz-txt { margin: 0 auto; text-align: center; }
+  .oc-naz .oc-hero2-count { justify-items: center; }
 }
 
 /* volver a ver la llegada desde el globo: un globo pequeño en la esquina del mapa */
@@ -163,6 +167,27 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-naz-js .oc-naz.is-portada, .oc-naz.is-portada.is-vivo { height: 240vh; }
 .oc-naz.is-portada { margin-top: 24px; }
 .oc-naz-btn { margin-top: 16px; }
+/* Portada → «Próxima Semana Santa» y vuelta (Pablo, 13-nov: «más fluida y simétrica»). Las dos cabeceras son gemelas: el mismo
+   nazareno, los mismos textos, la cuenta atrás en las dos y un botón en el mismo sitio (en la portada lleva a las fechas; aquí baja
+   a las jornadas). La escena de aquí se centra a la misma altura que la de la portada, que ocupa la pantalla entera (lo de arriba,
+   cabecera y migas, mide --naz-t). Entre páginas, el nazareno, sus textos y el fondo pasan de una a otra (View Transitions). */
+.oc-naz-btn.is-abajo svg { transform: rotate(90deg); }
+.oc-proxima { --naz-t: 91px; }
+@media (max-width: 719px) { .oc-proxima { --naz-t: 85px; } }
+.oc-proxima .oc-naz-escena { min-height: max(560px, calc(100svh - 2 * var(--naz-t))); }
+.oc-home.hay-ext .oc-naz [data-today-lead] { display: grid; }
+@media (prefers-reduced-motion: no-preference) {
+  .oc-naz-escena { view-transition-name: naz-escena; }
+  .oc-naz-fig { view-transition-name: naz-fig; }
+  .oc-naz .oc-kicker { view-transition-name: naz-kicker; }
+  .oc-naz-titulo { view-transition-name: naz-titulo; }
+  .oc-naz-fechas { view-transition-name: naz-fechas; }
+  .oc-naz .oc-hero2-count { view-transition-name: naz-cuenta; }
+  .oc-naz-btn { view-transition-name: naz-btn; }
+  ::view-transition-group(naz-escena), ::view-transition-group(naz-fig), ::view-transition-group(naz-kicker), ::view-transition-group(naz-titulo),
+  ::view-transition-group(naz-fechas), ::view-transition-group(naz-cuenta), ::view-transition-group(naz-btn) { animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); }
+  ::view-transition-old(naz-btn), ::view-transition-new(naz-btn) { height: 100%; animation-duration: .45s; }
+}
 
 /* ---- planos de ciudad más legibles (Pablo, 26-oct: «no se ven claros estos mapas») ---- */
 .oc-portada .oc-pl-calles { stroke: rgb(226 212 246 / .32); stroke-width: 1.25; }
