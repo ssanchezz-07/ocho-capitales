@@ -1859,8 +1859,10 @@ function pagesLegales() {
     lpl('La lista completa está en {Créditos de imágenes}.', u('acerca/#imagenes')),
     lp('Los planos usan datos de OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL).'),
     h2('Propiedad intelectual'),
-    lp('El diseño, el código y los textos propios de Ocho Capitales son de su titular. Se pueden citar con un enlace a la página de origen; para cualquier otro uso hace falta permiso.'),
-    lp('Los textos basados en Wikipedia mantienen su licencia, CC BY-SA 4.0, y las imágenes de terceros, la suya.'),
+    lp('Los textos propios, el diseño, las ilustraciones (el nazareno, las colgaduras y los demás dibujos), los planos, la selección y el orden de los datos y el código de Ocho Capitales son de su titular y están protegidos por la Ley de Propiedad Intelectual.'),
+    lp('Se pueden citar fragmentos breves con un enlace a la página de origen. Cualquier otro uso necesita permiso por escrito: copiar, reproducir, distribuir, transformar o publicar en otro sitio, total o parcialmente, los textos, el diseño, las ilustraciones o el código, o hacer una web o una aplicación que imite su aspecto.'),
+    lp('El titular se reserva expresamente la minería de textos y datos y el uso del contenido para entrenar o alimentar sistemas de inteligencia artificial (art. 67 del Real Decreto-ley 24/2021). Esta reserva también figura de forma legible por máquinas en robots.txt y en las cabeceras de la web.'),
+    lp('Los textos basados en Wikipedia mantienen su licencia, CC BY-SA 4.0; los datos de OpenStreetMap, la ODbL, y las imágenes de terceros, la suya.'),
     h2('Enlaces a otras webs'),
     lp('Ocho Capitales enlaza a medios, hermandades y otras webs. No controla su contenido ni responde de él.'),
     h2('Ley aplicable'),
@@ -2041,7 +2043,13 @@ function extras() {
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
   fs.writeFileSync(path.join(DIST, 'news.json'), JSON.stringify({ actualizado: NEWS.actualizado, items: NEWS.items.slice(0, 600).map(({ h, t, ...n }) => n) }));
   fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ id: BASE, name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', dir: 'ltr', categories: ['news', 'travel', 'lifestyle'], start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
-  fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n${SITE ? 'Sitemap: ' + SITE + '/sitemap.xml\n' : ''}`);
+  // Buscadores (Google, Bing…) entran; los robots que recogen contenido para entrenar o alimentar IA, no.
+  // Es una petición que los robots serios respetan; el aviso legal y la reserva TDM (despliegue.mjs) le dan base legal.
+  const ROBOTS_IA = ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'CCBot', 'Google-Extended', 'anthropic-ai', 'ClaudeBot', 'Claude-Web', 'Claude-User', 'Claude-SearchBot', 'PerplexityBot', 'Perplexity-User', 'Bytespider', 'Amazonbot', 'Applebot-Extended', 'meta-externalagent', 'meta-externalfetcher', 'FacebookBot', 'cohere-ai', 'cohere-training-data-crawler', 'Diffbot', 'Timpibot', 'AI2Bot', 'Ai2Bot-Dolma', 'YouBot', 'DuckAssistBot', 'MistralAI-User', 'Omgilibot', 'Omgili', 'ImagesiftBot', 'img2dataset', 'Kangaroo Bot', 'PanguBot', 'Webzio-Extended', 'iaskspider/2.0', 'Scrapy'];
+  fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\n${ROBOTS_IA.map((r) => 'User-agent: ' + r).join('\n')}\nDisallow: /\n${SITE ? '\nSitemap: ' + SITE + '/sitemap.xml\n' : ''}`);
+  // Reserva de minería de textos y datos (TDMRep, W3C): la forma legible por máquinas que pide el art. 67 del Real Decreto-ley 24/2021
+  fs.mkdirSync(path.join(DIST, '.well-known'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, '.well-known', 'tdmrep.json'), JSON.stringify([{ location: '/*', 'tdm-reservation': 1 }]) + '\n');
   if (SITE) fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${SITE}/${p}</loc></url>`).join('\n')}\n</urlset>\n`);
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
 }

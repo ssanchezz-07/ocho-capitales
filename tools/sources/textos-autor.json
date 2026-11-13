@@ -286,16 +286,32 @@
    "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
   },
   {
-   "texto": "El diseño, el código y los textos propios de Ocho Capitales son de su titular. Se pueden citar con un enlace a la página de origen; para cualquier otro uso hace falta permiso.",
-   "tipo": "web",
-   "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+   "texto": "Los textos propios, el diseño, las ilustraciones (el nazareno, las colgaduras y los demás dibujos), los planos, la selección y el orden de los datos y el código de Ocho Capitales son de su titular y están protegidos por la Ley de Propiedad Intelectual.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930"
+   ],
+   "nota": "Página legal (blindaje, 13-nov-2026). Texto refundido de la Ley de Propiedad Intelectual (RDLeg 1/1996): obras, programas de ordenador y bases de datos."
   },
   {
-   "texto": "Los textos basados en Wikipedia mantienen su licencia, CC BY-SA 4.0, y las imágenes de terceros, la suya.",
+   "texto": "Se pueden citar fragmentos breves con un enlace a la página de origen. Cualquier otro uso necesita permiso por escrito: copiar, reproducir, distribuir, transformar o publicar en otro sitio, total o parcialmente, los textos, el diseño, las ilustraciones o el código, o hacer una web o una aplicación que imite su aspecto.",
    "tipo": "web",
    "fuentes": [],
-   "nota": "Página legal (pulido, 4-nov-2026): describe lo que hace la propia web, comprobado en el código."
+   "nota": "Página legal (blindaje, 13-nov-2026). Condiciones de uso que fija el titular de la propia web."
+  },
+  {
+   "texto": "El titular se reserva expresamente la minería de textos y datos y el uso del contenido para entrenar o alimentar sistemas de inteligencia artificial (art. 67 del Real Decreto-ley 24/2021). Esta reserva también figura de forma legible por máquinas en robots.txt y en las cabeceras de la web.",
+   "tipo": "afirmacion",
+   "fuentes": [
+    "https://www.boe.es/buscar/act.php?id=BOE-A-2021-17910"
+   ],
+   "nota": "Página legal (blindaje, 13-nov-2026). Art. 67.3 RDL 24/2021: la excepción de minería no se aplica si el titular la reserva «a medios de lectura mecánica u otros medios que resulten adecuados». robots.txt, tdm-reservation y /.well-known/tdmrep.json, comprobados en el código (build.mjs, despliegue.mjs)."
+  },
+  {
+   "texto": "Los textos basados en Wikipedia mantienen su licencia, CC BY-SA 4.0; los datos de OpenStreetMap, la ODbL, y las imágenes de terceros, la suya.",
+   "tipo": "web",
+   "fuentes": [],
+   "nota": "Página legal (blindaje, 13-nov-2026). Describe lo que hace la propia web, comprobado en el código."
   },
   {
    "texto": "Ocho Capitales enlaza a medios, hermandades y otras webs. No controla su contenido ni responde de él.",

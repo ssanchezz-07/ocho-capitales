@@ -115,6 +115,9 @@ export function escribeCabeceras({ DIST, BASE, SITE, redirecciones = [] }) {
       "Content-Security-Policy: frame-ancestors 'none'",
       'Permissions-Policy: camera=(), microphone=(), payment=(), usb=()',
       'Strict-Transport-Security: max-age=31536000',
+      // contenido reservado: ni minería de textos y datos ni entrenamiento de IA (Google y Bing ignoran «noai» y siguen indexando)
+      'tdm-reservation: 1',
+      'X-Robots-Tag: noai, noimageai',
     ]],
     // siempre se piden con ?v=<huella> (build.mjs): una versión nueva es otra URL
     // todo lo que se pide con ?v=<huella> (HUELLA en build.mjs): si cambia, cambia la dirección. Antes vida.css, portada.css y los
