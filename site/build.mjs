@@ -686,13 +686,7 @@ ${body}${colabora(p, title)}
   </div>
 </div>
 <script src="${u('assets/cunao-ui.js')}?v=${HUELLA.cunaoui}" defer></script>
-<div class="oc-sheet" id="oc-more" hidden data-more-sheet>
-  <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-label="Más secciones">
-    <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
-    <ul class="oc-sheet-caps is-puntos">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
-    <ul class="oc-sheet-list">${[['calendario/', 'Calendario'], ['en-la-calle/', 'En la calle', 'plano de los recorridos'], ['juegos/', 'Juegos', 'con erCuñao'], ['hermandades/', 'Hermandades', D.hermandades.length], ['bandas/', 'Bandas', D.bandas.length], ['marchas/', 'Marchas', MARCHAS.length], ['imagineros/', 'Imagineros', D.imagineros.length], ['favoritos/', 'Mis favoritos'], ['colabora/', 'Colabora'], ['acerca/', 'Fuentes y metodología']].map(([h, l, n]) => `<li><a href="${u(h)}"><span>${l}</span>${n != null ? `<small>${typeof n === 'number' ? n.toLocaleString('es-ES') : n}</small>` : ''}${icon('arrow')}</a></li>`).join('')}</ul>
-  </div>
-</div>
+${menuSecciones()}
 <div class="oc-sheet oc-citysheet" id="oc-city" hidden data-city-sheet>
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-city-t">
     <div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-city-t">Tu capital</p><button class="oc-iconbtn" type="button" data-city-close aria-label="Cerrar">${icon('x')}</button></div>
@@ -919,6 +913,40 @@ function curiosidades() {
   for (const m of MARCHAS) if (m.h && m.anio && m.autor && +m.anio <= 1960 && m.est !== 'sin-verificar') out.push({ t: `«${m.titulo}», de ${m.autor}, se compuso en ${m.anio} y está dedicada a ${m.h.nombre} (${CAP[m.h.ciudad].nombre}).`, u: u('marcha/' + m.slug + '/'), l: 'Ver marcha' });
   return out;
 }
+// Menú «Secciones» (diseño C de Pablo, 13-nov): «En la calle» con un trozo de plano real, las ocho colgaduras, erCuñao con
+// una curiosidad y las cifras. Es igual en todas las páginas: se genera una vez. Lo vivo lo pone site.js al abrirlo (data/menu.json):
+// la salida que toca y dónde va, o las sedes de una capital, y otra curiosidad cada vez. Sin JS se queda este HTML, que ya sirve.
+let MENU_HTML = null;
+function menuSecciones() {
+  if (MENU_HTML) return MENU_HTML;
+  const N = madridNow(), dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5);
+  const L = curiosidades().filter((k) => k.t.length <= 110), dice = L.length ? L[(dia * 7919) % L.length].t : '¿Echamos una partida?';
+  const T = temporada(), [ay, am, ad] = T.ramos.split('-').map(Number);
+  const cifras = [['hermandades/', 'Hermandades', D.hermandades.length], ['bandas/', 'Bandas', D.bandas.length], ['marchas/', 'Marchas', MARCHAS.length], ['imagineros/', 'Imagineros', D.imagineros.length]];
+  MENU_HTML = `<div class="oc-sheet" id="oc-more" hidden data-more-sheet data-menu="${u('data/menu.json')}" data-menu-dir="${u('data/menu/')}">
+  <div class="oc-sheet-panel oc-menu" role="dialog" aria-modal="true" aria-label="Más secciones">
+    <div class="oc-sheet-head"><p class="oc-sheet-title">Secciones</p><button class="oc-iconbtn" type="button" data-more-close aria-label="Cerrar">${icon('x')}</button></div>
+    <a class="oc-mcalle" href="${u('en-la-calle/')}" data-mcalle><svg class="oc-mcalle-plano" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" data-mplano></svg><span class="oc-mcalle-txt"><b data-mt>En la calle</b><span class="oc-mcalle-k" data-mk></span><span class="oc-mcalle-q" data-mq>Plano de los recorridos</span><span class="oc-mcalle-l" data-ml hidden></span><span class="oc-mcalle-btn"><span data-mb>Abrir el plano</span>${icon('arrow')}</span></span></a>
+    <ul class="oc-mcaps">${D.capitales.map((c) => `<li><a href="${u('semana-santa/' + c.slug + '/')}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span></a></li>`).join('')}</ul>
+    <a class="oc-mjuegos" href="${u('juegos/')}" aria-label="Juegos con erCuñao"><span class="oc-mjuegos-cara">${CUNAO_SVG}</span><span class="oc-mjuegos-dice" data-mdice>${esc(dice)}</span><span class="oc-mjuegos-t"><b>Juegos</b><small>con erCuñao</small></span><span class="oc-mjuegos-chips"><i>El intruso</i><i>¿Quién va antes?</i><i>Pistas</i><i>Cifras</i></span></a>
+    <a class="oc-mcal" href="${u('calendario/')}"><strong>${ad}<small>${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][am - 1]}</small></strong><span><b>Calendario</b><small>Domingo de Ramos ${ay}</small></span>${icon('arrow')}</a>
+    <ul class="oc-mgrid">${cifras.map(([h, l, n]) => `<li><a class="oc-mnum" href="${u(h)}"><strong>${n.toLocaleString('es-ES')}</strong><b>${l}</b></a></li>`).join('')}<li><a class="oc-mmini" href="${u('favoritos/')}">${icon('star')}<b>Mis favoritos</b></a></li><li><a class="oc-mmini" href="${u('colabora/')}">${icon('arrow')}<b>Colabora</b></a></li><li class="is-ancho"><a class="oc-mmini" href="${u('acerca/')}">${icon('news')}<b>Fuentes y metodología</b>${icon('arrow')}</a></li></ul>
+  </div>
+</div>`;
+  return MENU_HTML;
+}
+// data/menu.json: lo que lee site.js al abrir el menú. sal: las salidas de los próximos 45 días (las mismas que la portada, con su
+// capital y su id para el miniplano); caps: cada capital con su plano; cu: curiosidades cortas de erCuñao (las de «Dime una
+// curiosidad»), 160 elegidas cada día para que pese poco y repartidas por tipo (imagineros, compositores, bandas, hermandades,
+// jornadas, marchas): las de compositores son las más cortas y, sin repartir, erCuñao casi solo hablaba de ellas.
+function datosMenu() {
+  const N = madridNow(), hoy = isoDay(Date.UTC(N.y, N.m - 1, N.d)), dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5);
+  const tipos = new Map();
+  for (const k of curiosidades()) { if (k.t.length > 110) continue; const t = k.u.replace(BASE, '').split('/')[0]; if (!tipos.has(t)) tipos.set(t, []); tipos.get(t).push(k); }
+  const G = [...tipos.values()], cu = [];
+  for (let r = 0; cu.length < 160 && G.some((g) => r < g.length); r++) for (const g of G) { if (r < g.length && cu.length < 160) { const k = g[(dia * 7919 + r) % g.length]; cu.push([k.t, k.u, k.l]); } }
+  fs.writeFileSync(path.join(DIST, 'data', 'menu.json'), JSON.stringify({ v: 1, sal: extHome(hoy, 45), caps: D.capitales.map((c) => [c.slug, c.nombre, u('en-la-calle/' + c.slug + '/')]), cu }));
+}
 function curiosidadDelDia() {
   const L = curiosidades(); if (!L.length) return '';
   const N = madridNow(); const dia = Math.floor(Date.UTC(N.y, N.m - 1, N.d) / 864e5); const k = L[(dia * 7919) % L.length];
@@ -946,15 +974,16 @@ const HEAD_ENTRADA = `<style>:root{--oc-cielo:${CIELO_ESTRELLAS.img};--oc-cielo-
 // y el script del hueco la pinte antes del primer fotograma. La entrada (el globo) sale siempre, también ese día (Pablo, 11-nov).
 const EXT_CALC = `(function(){var D=window.OCX||[],L=window.ocExt=[];try{var p={};new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var m=+p.hour*60+ +p.minute,h=Date.UTC(+p.year,+p.month-1,+p.day);D.forEach(function(e){var f=e.f.split('-'),d=Math.round((h-Date.UTC(+f[0],+f[1]-1,+f[2]))/864e5),s='';if(d===-1)s='man';else if(d===0)s=m>=e.i&&m<=e.e?'ahora':m<e.i?'hoy':'fin';else if(d===1&&e.e>1440&&m<=e.e-1440)s='ahora';if(s){e.s=s;L.push(e)}});var r=function(x){return x.s==='ahora'?0:x.s==='fin'?2:1};L.sort(function(a,b){return r(a)-r(b)||a.f.localeCompare(b.f)||a.i-b.i})}catch(x){}})();`;
 const EXT_PINTA = `(function(){var a=document.querySelector('[data-ext]'),L=window.ocExt||[];if(!a||!L.length)return;var e=L[0],k=e.s==='man'?'Mañana':e.s==='ahora'?'Ahora en la calle':'Hoy',t=e.s==='man'?e.hi:e.s==='ahora'?(e.he?'hasta las '+e.he:e.hi):(e.he?e.hi+'–'+e.he:e.hi),p=document.createElement('p'),b=document.createElement('strong'),A=document.createElement('a');p.className='oc-hero2-count oc-ext-t';b.textContent=k;p.appendChild(b);p.appendChild(document.createTextNode(' · '+e.n+' · '+t));A.className='oc-ext-b';A.href=e.u;A.textContent='Seguirla en el plano ';var g=document.createElement('span');g.setAttribute('aria-hidden','true');g.textContent='›';A.appendChild(g);a.appendChild(p);a.appendChild(A);a.hidden=false;var H=document.querySelector('[data-home]');if(H)H.classList.add('hay-ext')})();`;
-function extHome(hoy) {
+// dias: hasta cuántos días por delante (la portada, 8; el menú «Secciones», 45). c y k: capital e id de la salida (miniplano del menú).
+function extHome(hoy, dias = 8) {
   const f = path.join(DIR, '..', 'tools', 'sources', 'itinerarios-extraordinarios.json');
   if (!fs.existsSync(f)) return [];
-  const [y, m, d] = hoy.split('-').map(Number), tope = isoDay(Date.UTC(y, m - 1, d) + 8 * 864e5), ayer = isoDay(Date.UTC(y, m - 1, d) - 864e5);
+  const [y, m, d] = hoy.split('-').map(Number), tope = isoDay(Date.UTC(y, m - 1, d) + dias * 864e5), ayer = isoDay(Date.UTC(y, m - 1, d) - 864e5);
   const mm = (t) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return x ? +x[1] * 60 + +x[2] : null; };
   const hh = (t) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(t || ''); return x ? x[1].padStart(2, '0') + ':' + x[2] : ''; };
   const TIPO = { extraordinaria: 'extraordinaria', magna: 'magna', traslado: 'traslado', procesion: 'procesión' };
   const out = [];
-  for (const e of Object.values(JSON.parse(fs.readFileSync(f, 'utf8')).salidas || {})) {
+  for (const [k, e] of Object.entries(JSON.parse(fs.readFileSync(f, 'utf8')).salidas || {})) {
     const c = D.capitales.find((x) => x.slug === e.ciudad);
     // solo las de hoy en adelante (y como mucho de dentro de 8 días), no celebradas, con hora de salida y con plano de su ciudad
     if (!c || !e.fecha || e.celebrada || e.fecha < ayer || e.fecha > tope || !fs.existsSync(path.join(DIR, 'data', 'recorridos', c.slug + '.json'))) continue;
@@ -964,7 +993,7 @@ function extHome(hoy) {
     const h = HERM[e.hermandad] || { nombre: e.nombre_hermandad || '' }, nom = e.corto || h.nombre; if (!nom) continue;
     const [, M_, D_] = e.fecha.split('-').map(Number);
     const etq = `${D_} ${['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][M_ - 1]} · ${nom}`; // la jornada de su pestaña en el plano
-    out.push({ f: e.fecha, i: ini, e: fin != null ? fin : ini + 300, hi: hh((todos[0] || {}).hora), he: fin != null ? hh(todos[todos.length - 1].hora) : '', n: `${nom} ${TIPO[e.tipo] || 'extraordinaria'} en ${c.nombre}`, u: u('en-la-calle/' + c.slug + '/') + '?dia=' + encodeURIComponent(etq) });
+    out.push({ f: e.fecha, i: ini, e: fin != null ? fin : ini + 300, hi: hh((todos[0] || {}).hora), he: fin != null ? hh(todos[todos.length - 1].hora) : '', n: `${nom} ${TIPO[e.tipo] || 'extraordinaria'} en ${c.nombre}`, u: u('en-la-calle/' + c.slug + '/') + '?dia=' + encodeURIComponent(etq), c: c.slug, k });
   }
   return out.sort((a, b) => a.f.localeCompare(b.f) || a.i - b.i);
 }
@@ -2296,10 +2325,47 @@ function miniRutas(datos) {
   const rio = (datos.rios || []).map(pares).filter((l) => l.some(dentro)).map((l) => dp(l, 6).flat());
   return { f, rio, h };
 }
+// Menú «Secciones» (Pablo, 13-nov): el bloque «En la calle» dibuja un trozo del plano real. Por capital, data/menu/<capital>.json:
+// «s», las sedes de sus hermandades (cuando no hay ninguna salida a la vista), y «x», cada salida extraordinaria con su recorrido
+// y la hora de cada punto (site.js coloca la cruz de guía según la hora). Solo entran las calles del encuadre, que tiene la
+// proporción del bloque (358 × 190): el recorrido, a la derecha, y el texto, a la izquierda.
+function menuPlano(datos) {
+  const AS = 358 / 190, pares = (l) => { const o = []; for (let i = 0; i + 1 < l.length; i += 2) o.push([l[i], l[i + 1]]); return o; };
+  const caja = (pts) => pts.reduce((b, q) => [Math.min(b[0], q[0]), Math.min(b[1], q[1]), Math.max(b[2], q[0]), Math.max(b[3], q[1])], [Infinity, Infinity, -Infinity, -Infinity]);
+  // fx: en qué parte del ancho va el centro de lo que se enseña; ocupa: qué fracción del ancho puede llenar
+  const encuadre = (bb, fx, ocupa) => {
+    const w = bb[2] - bb[0], h = bb[3] - bb[1], pad = Math.max(w, h) * 0.1 + 60;
+    let H = Math.max(h + 2 * pad, (w + 2 * pad) / ocupa / AS), W = H * AS;
+    return [Math.round((bb[0] + bb[2]) / 2 - W * fx), Math.round((bb[1] + bb[3]) / 2 - H / 2), Math.round(W), Math.round(H)];
+  };
+  const subs = [...(datos.calles || []), ...(datos.callesFuera || [])].flatMap((s) => s.split(/(?=M)/));
+  const dentro = (vb, x, y, m) => x > vb[0] - m && x < vb[0] + vb[2] + m && y > vb[1] - m && y < vb[1] + vb[3] + m;
+  const calles = (vb) => subs.filter((sp) => { const q = /^M(-?\d+) (-?\d+)/.exec(sp); return q && dentro(vb, +q[1], +q[2], vb[2] * 0.12); }).join('');
+  const rios = (vb) => (datos.rios || []).filter((l) => pares(l).some((q) => dentro(vb, q[0], q[1], vb[2] * 0.3)));
+  // sedes: el encuadre deja fuera las más alejadas (el 10 % de cada lado), para que el centro se lea
+  const sedes = (datos.sedes || []).map((h) => h.tp || h.cs).filter(Boolean).map((q) => [q[0], q[1]]);
+  const out = { x: {} };
+  if (sedes.length) {
+    const xs = sedes.map((q) => q[0]).sort((a, b) => a - b), ys = sedes.map((q) => q[1]).sort((a, b) => a - b), k = Math.floor(sedes.length * 0.1);
+    const vb = encuadre([xs[k], ys[k], xs[xs.length - 1 - k], ys[ys.length - 1 - k]], 0.6, 0.8);
+    // las sedes, sobre las calles principales (todas las calles de un barrio como el Albaicín pesaban 100 KB); el detalle, solo en los recorridos
+    out.s = { vb, f: (datos.principales || []).filter((l) => pares(l).some((q) => dentro(vb, q[0], q[1], 0))), ri: rios(vb), p: sedes, n: sedes.length };
+  }
+  for (const h of datos.hermandades) {
+    if (!h.x || !h.t.paso || h.t.paso.length < 2) continue;
+    const p = h.t.paso, vb = encuadre(caja(p), 0.68, 0.58);
+    let ant = '';
+    const ru = p.map((q) => { const l = q[3] && q[3] !== ant ? q[3] : ''; if (q[3]) ant = q[3]; return [q[0], q[1], q[2], l]; });
+    out.x[h.x.id] = { vb, ca: calles(vb), ri: rios(vb), ru };
+  }
+  return out;
+}
 function pageCalle(c) {
   const datos = datosCalle(c); if (!datos) return;
   fs.mkdirSync(path.join(DIST, 'data', 'calle'), { recursive: true });
   fs.writeFileSync(path.join(DIST, 'data', 'calle', c.slug + '.json'), JSON.stringify(datos));
+  fs.mkdirSync(path.join(DIST, 'data', 'menu'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'data', 'menu', c.slug + '.json'), JSON.stringify(menuPlano(datos)));
   fs.mkdirSync(path.join(DIST, 'data', 'cunao', 'g'), { recursive: true });
   fs.writeFileSync(path.join(DIST, 'data', 'cunao', 'g', c.slug + '.json'), JSON.stringify(miniRutas(datos)));
   const N = madridNow(); const anio = (Date.UTC(N.y, N.m - 1, N.d) > easter(N.y) + 864e5) ? N.y + 1 : N.y; const P = easter(anio);
@@ -2636,6 +2702,6 @@ D.capitales.forEach(pageCapital); D.capitales.forEach(pageCalle); D.hermandades.
 for (const s of NAZ_OBRAS) write('assets/naz/' + s + '-r.svg', medallonNaz(HERM[s]));
 pagesFuentes(); // después de todas las fichas: cada una ha guardado ya sus fuentes
 if (ogViejas.size || ogFaltan.size) console.warn(`Aviso: ${ogViejas.size + ogFaltan.size} fichas sin foto comparten la imagen genérica (${ogViejas.size} con el nazareno cambiado, ${ogFaltan.size} sin imagen); ejecuta tools/diseno/og-respaldo.py`);
-searchIndex(); extras(); datosCunao(); pageJuegos(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
+searchIndex(); extras(); datosCunao(); datosMenu(); pageJuegos(); escribeIcs(); escribeSw(); if (BASE === '/') escribeCabeceras({ DIST, BASE, SITE, redirecciones: REDIR_301 }); // _headers y _redirects: solo para Cloudflare (raíz del dominio)
 const LIM = comprobarLimites(DIST); for (const e of [LIM.aviso, ...LIM.errores].filter(Boolean)) console.warn('Cloudflare Pages: ' + e);
 console.log(`${BRAND}: ${pages.length} páginas generadas en dist/ (base ${BASE}).`);

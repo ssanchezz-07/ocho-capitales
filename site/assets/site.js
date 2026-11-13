@@ -112,9 +112,112 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
+  // ---------- menú «Secciones»: «En la calle» enseña la salida que toca y por dónde va (o las sedes de una capital) y erCuñao
+  // dice algo distinto cada vez que se abre. Datos: data/menu.json (build.mjs, datosMenu) y data/menu/<capital>.json (menuPlano).
+  // Si algo falla, el menú se queda como viene en el HTML, que ya sirve.
+  var mDatos = null, mPide = null, mPlanos = {}, mVez = 0, mDicho = -1, mCapIni = Math.floor(Math.random() * 8);
+  var SVGNS = 'http://www.w3.org/2000/svg', MESES3 = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'], SEMANA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  function mJson(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
+  function mCarga() {
+    if (!mPide && sheet && sheet.getAttribute('data-menu') && window.fetch) mPide = mJson(sheet.getAttribute('data-menu')).then(function (d) { mDatos = d; return d; }).catch(function () { mPide = null; });
+    return mPide;
+  }
+  function mEl(n, a, padre) { var e = document.createElementNS(SVGNS, n); for (var k in a) e.setAttribute(k, a[k]); padre.appendChild(e); return e; }
+  // hora de Madrid: el día (en ms, a medianoche UTC) y los minutos desde las 00:00
+  function mMadrid() {
+    var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    return { d: Date.UTC(+p.year, +p.month - 1, +p.day), m: +p.hour * 60 + +p.minute };
+  }
+  // como la portada (EXT_CALC): ahora en la calle, hoy, mañana o más adelante; las ya terminadas no cuentan.
+  // Orden: ahora, hoy, mañana, más adelante; a igualdad, la de tu capital y luego la más cercana.
+  function mSalidas(L, city) {
+    var T = mMadrid(), out = [], R = { ahora: 0, hoy: 1, man: 2, pronto: 3 };
+    (L || []).forEach(function (e) {
+      var f = e.f.split('-'), d = Math.round((Date.UTC(+f[0], +f[1] - 1, +f[2]) - T.d) / 864e5), s = '', t = T.m;
+      if (d === 0) s = T.m >= e.i && T.m <= e.e ? 'ahora' : T.m < e.i ? 'hoy' : '';
+      else if (d === -1 && e.e > 1440 && T.m + 1440 <= e.e) { s = 'ahora'; t = T.m + 1440; }
+      else if (d === 1) s = 'man';
+      else if (d > 1) s = 'pronto';
+      if (s) out.push({ e: e, s: s, d: d, t: t });
+    });
+    out.sort(function (a, b) { return R[a.s] - R[b.s] || (a.e.c === city ? 0 : 1) - (b.e.c === city ? 0 : 1) || a.d - b.d || a.e.i - b.e.i; });
+    return out;
+  }
+  // dibuja el trozo de plano; con recorrido, la cruz de guía va donde marca su horario a la hora t (minutos del día) y
+  // devuelve el último lugar con nombre por el que ha pasado
+  function mPinta(svg, P, t) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    svg.setAttribute('viewBox', P.vb.join(' '));
+    var px = P.vb[3] / 190, lug = '';
+    (P.ri || []).forEach(function (l) { mEl('polyline', { points: l.join(' '), 'class': 'm-rio' }, svg); });
+    if (P.ca) mEl('path', { d: P.ca, 'class': 'm-calles' }, svg);
+    (P.f || []).forEach(function (l) { mEl('polyline', { points: l.join(' '), 'class': 'm-calles' }, svg); });
+    (P.p || []).forEach(function (q) { mEl('circle', { cx: q[0], cy: q[1], r: (3.2 * px).toFixed(1), 'class': 'm-sede' }, svg); });
+    var R = P.ru; if (!R || R.length < 2) return '';
+    var n = R.length, i = 0, f = 0, pts = R.map(function (q) { return q[0] + ',' + q[1]; });
+    if (t != null && t > R[0][2]) {
+      if (t >= R[n - 1][2]) i = n - 1;
+      else { while (i < n - 2 && R[i + 1][2] <= t) i++; f = Math.min(1, (t - R[i][2]) / ((R[i + 1][2] - R[i][2]) || 1)); }
+    }
+    var x = R[i][0] + (i < n - 1 ? (R[i + 1][0] - R[i][0]) * f : 0), y = R[i][1] + (i < n - 1 ? (R[i + 1][1] - R[i][1]) * f : 0);
+    mEl('polyline', { points: pts.join(' '), 'class': 'm-ruta' }, svg);
+    if (t != null && t > R[0][2]) mEl('polyline', { points: pts.slice(0, i + 1).concat([x.toFixed(1) + ',' + y.toFixed(1)]).join(' '), 'class': 'm-hecho' }, svg);
+    mEl('circle', { cx: R[0][0], cy: R[0][1], r: (4 * px).toFixed(1), 'class': 'm-templo' }, svg);
+    mEl('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: (15 * px).toFixed(1), 'class': 'm-halo' }, svg);
+    mEl('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: (6.5 * px).toFixed(1), 'class': 'm-cruz' }, svg);
+    for (var j = i; j >= 0 && !lug; j--) lug = R[j][3] || '';
+    return lug;
+  }
+  function mCalle() {
+    var a = $('[data-mcalle]', sheet); if (!a || !mDatos) return;
+    var caps = mDatos.caps || [], esCap = function (c) { return caps.some(function (x) { return x[0] === c; }); };
+    var city = store.get('oc-city', '') || ((location.pathname.match(/\/(semana-santa|en-la-calle)\/([a-z]+)\/?$/) || [])[2] || '');
+    if (!esCap(city)) city = '';
+    var L = mSalidas(mDatos.sal, city), ya = L.filter(function (x) { return x.s === 'ahora'; });
+    var sel = ya.length > 1 ? ya[mVez % ya.length] : L[0] || null;
+    var capi = sel ? sel.e.c : city || (caps[(mCapIni + mVez) % caps.length] || [])[0];
+    if (!capi) return;
+    var dir = sheet.getAttribute('data-menu-dir');
+    var pide = mPlanos[capi] || (mPlanos[capi] = mJson(dir + capi + '.json').catch(function (e) { mPlanos[capi] = null; throw e; }));
+    pide.then(function (P) {
+      var svg = $('[data-mplano]', a), X = sel && P.x && P.x[sel.e.k], tt = 'En la calle', k = '', q = '', l = '', b = 'Abrir el plano', href = '';
+      if (sel) {
+        var e = sel.e, lug = '';
+        if (X) lug = mPinta(svg, X, sel.s === 'ahora' ? sel.t : null); else if (P.s) mPinta(svg, P.s, null);
+        if (sel.s === 'ahora') { tt = 'Ahora en la calle'; k = e.he ? 'Hasta las ' + e.he : ''; if (lug) l = 'Por ' + lug + ' (según su horario)'; }
+        else if (sel.s === 'hoy') k = 'Hoy, ' + e.hi;
+        else if (sel.s === 'man') k = 'Mañana, ' + e.hi;
+        else { var f = e.f.split('-'), dt = new Date(Date.UTC(+f[0], +f[1] - 1, +f[2])); k = SEMANA[dt.getUTCDay()] + ' ' + (+f[2]) + ' ' + MESES3[+f[1] - 1] + ', ' + e.hi; }
+        q = e.n; b = 'Seguirla en el plano'; href = e.u;
+      } else {
+        if (!P.s) return;
+        mPinta(svg, P.s, null);
+        var cp = caps.filter(function (x) { return x[0] === capi; })[0] || [];
+        // sin cifra: el plano solo tiene las sedes con coordenadas, no siempre todas las hermandades de la capital
+        k = cp[1] || ''; q = 'Las sedes de sus hermandades, en el plano'; b = 'Abrir el plano'; href = cp[2] || '';
+      }
+      $('[data-mt]', a).textContent = tt; $('[data-mk]', a).textContent = k; $('[data-mq]', a).textContent = q; $('[data-mb]', a).textContent = b;
+      var ml = $('[data-ml]', a); ml.textContent = l; ml.hidden = !l;
+      if (href) a.href = href;
+      a.classList.toggle('is-ahora', !!(sel && sel.s === 'ahora'));
+    }).catch(function () { });
+  }
+  // erCuñao: una curiosidad al azar (nunca la misma dos veces seguidas)
+  function mDice() {
+    var b = $('[data-mdice]', sheet), L = mDatos && mDatos.cu; if (!b || !L || !L.length) return;
+    var i = Math.floor(Math.random() * L.length); if (L.length > 1 && i === mDicho) i = (i + 1) % L.length; mDicho = i;
+    b.textContent = L[i][0]; b.classList.remove('is-nueva'); void b.offsetWidth; b.classList.add('is-nueva');
+  }
+  function mAbre() {
+    var p = mCarga(); if (!p) return;
+    p.then(function () { mCalle(); mDice(); mVez++; });
+  }
+
   var sheet = $('[data-more-sheet]'), moreBtns = $$('[data-more]');
   if (sheet && moreBtns.length) {
-    moreBtns.forEach(function (b) { b.addEventListener('click', function () { moreBtns.forEach(function (x) { x.setAttribute('aria-expanded', 'true'); }); openLayer(sheet, $('[data-more-close]', sheet)); }); });
+    // los datos se piden al apoyar el dedo, para que estén al abrirse
+    moreBtns.forEach(function (b) { b.addEventListener('pointerdown', mCarga, { passive: true }); });
+    moreBtns.forEach(function (b) { b.addEventListener('click', function () { moreBtns.forEach(function (x) { x.setAttribute('aria-expanded', 'true'); }); mAbre(); openLayer(sheet, $('[data-more-close]', sheet)); }); });
     var closeSheet = function () { moreBtns.forEach(function (x) { x.setAttribute('aria-expanded', 'false'); }); closeLayer(sheet); };
     $('[data-more-close]', sheet).addEventListener('click', closeSheet);
     sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSheet(); });
