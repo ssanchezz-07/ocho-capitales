@@ -2331,29 +2331,34 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 
 /* ---------- Menú «Secciones» (diseño C de Pablo, 13-nov) ----------
    En la calle con un trozo de plano real (site.js lo dibuja con data/menu/<capital>.json), las ocho colgaduras, erCuñao con una
-   curiosidad distinta cada vez, el calendario y las cifras. «En la calle» y erCuñao van siempre de noche; el resto sigue el tema. */
-.oc-menu { --m-tile: #fff; --m-borde: #e2ddd2; --m-noche: #1b0d27; --m-oro: #e7c877; --m-crema: #f1e8d6; }
+   curiosidad distinta cada vez, el calendario y las cifras. «En la calle» y erCuñao van siempre de noche; el resto sigue el tema.
+   Se reescala con el ancho de la hoja (Pablo: «que se reescale a cada pantalla de móvil»): las medidas van en cqi (1 % del ancho
+   del panel), con mínimo y máximo, y antes de cada una su valor fijo para los navegadores sin unidades de contenedor (iOS < 16).
+   Diseño base: 390 px de pantalla, 358 de contenido. */
+.oc-menu { container-type: inline-size; --m-tile: #fff; --m-borde: #e2ddd2; --m-noche: #1b0d27; --m-oro: #e7c877; --m-crema: #f1e8d6; --m-hueco: 10px; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-menu { --m-tile: var(--surface-2); --m-borde: var(--line); --m-noche: #120819; } }
 :root[data-theme="dark"] .oc-menu { --m-tile: var(--surface-2); --m-borde: var(--line); --m-noche: #120819; }
 .oc-menu { border-radius: 20px 20px 0 0; }
 .oc-menu .oc-sheet-head { margin-bottom: 12px; }
 .oc-menu .oc-sheet-title { font-size: 1.5rem; }
-.oc-menu ul { list-style: none; margin: 0; padding: 0; }
+/* :where() no suma especificidad: así no pisa los márgenes de cada bloque (las baldosas tocaban a erCuñao, 13-nov) */
+:where(.oc-menu) ul { list-style: none; margin: 0; padding: 0; }
 .oc-menu a { -webkit-tap-highlight-color: transparent; }
 .oc-menu a:active { transform: scale(.985); }
+.oc-mcalle, .oc-mcaps, .oc-mjuegos { margin: 0 0 var(--m-hueco); }
 /* En la calle */
-.oc-mcalle { position: relative; display: block; min-height: 190px; margin-bottom: 12px; border-radius: 14px; overflow: hidden; background: var(--m-noche); color: var(--m-crema); text-decoration: none; isolation: isolate; }
+.oc-mcalle { position: relative; display: block; min-height: 190px; border-radius: 14px; overflow: hidden; background: var(--m-noche); color: var(--m-crema); text-decoration: none; isolation: isolate; }
 .oc-mcalle-plano { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 .oc-mcalle::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgb(27 13 39 / .97) 0%, rgb(27 13 39 / .8) 40%, rgb(27 13 39 / 0) 72%); }
 .oc-mcalle-txt { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; width: 66%; min-height: 190px; padding: 16px; }
-.oc-mcalle.is-ahora .oc-mcalle-txt > b { font-size: 2.1rem; }
-.oc-mcalle-txt > b { font: 400 2.4rem/.9 "Karantina", var(--sans); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
-.oc-mcalle-k { margin-top: auto; font: 400 1.15rem/1 "Karantina", var(--sans); letter-spacing: .05em; text-transform: uppercase; color: var(--m-oro); }
+.oc-mcalle-txt > b { font: 400 2.4rem/.9 "Karantina", var(--sans); font-size: clamp(1.9rem, 10.7cqi, 2.75rem); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+.oc-mcalle.is-ahora .oc-mcalle-txt > b { font-size: 2.1rem; font-size: clamp(1.7rem, 9.4cqi, 2.4rem); }
+.oc-mcalle-k { margin-top: auto; font: 400 1.15rem/1 "Karantina", var(--sans); font-size: clamp(.95rem, 5.1cqi, 1.3rem); letter-spacing: .05em; text-transform: uppercase; color: var(--m-oro); }
 .oc-mcalle-k:empty { display: none; }
-.oc-mcalle-q { margin-top: auto; font-weight: 700; font-size: .95rem; line-height: 1.2; }
+.oc-mcalle-q { margin-top: auto; font-weight: 700; font-size: .95rem; font-size: clamp(.85rem, 4.25cqi, 1.05rem); line-height: 1.2; }
 .oc-mcalle-k:not(:empty) + .oc-mcalle-q { margin-top: 0; }
-.oc-mcalle-l { font-size: .8rem; line-height: 1.25; color: #d8c9ea; }
-.oc-mcalle-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 7px 13px; border-radius: 999px; background: var(--m-oro); color: #1b0d27; font-weight: 700; font-size: .85rem; }
+.oc-mcalle-l { font-size: .8rem; font-size: clamp(.75rem, 3.6cqi, .9rem); line-height: 1.25; color: #d8c9ea; }
+.oc-mcalle-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 7px 13px; border-radius: 999px; background: var(--m-oro); color: #1b0d27; font-weight: 700; font-size: .85rem; font-size: clamp(.8rem, 3.8cqi, .95rem); white-space: nowrap; }
 .oc-mcalle-btn .oc-i { width: 15px; height: 15px; stroke-width: 2.2; }
 .oc-mcalle-plano .m-calles { fill: none; stroke: rgb(241 232 214 / .17); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .oc-mcalle-plano .m-rio { fill: none; stroke: rgb(110 150 190 / .45); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
@@ -2369,55 +2374,66 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 }
 @keyframes oc-mlatido { 0% { transform: scale(.6); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
 @keyframes oc-maparece { from { opacity: 0; } }
-/* capitales: su colgadura de fondo */
-.oc-mcaps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-bottom: 12px; }
-.oc-mcaps a { position: relative; display: block; height: 96px; border-radius: 12px; overflow: hidden; background: var(--c); text-decoration: none; }
+/* capitales: su colgadura de fondo; la baldosa guarda la proporción (85 × 96 en el diseño base) en cualquier ancho */
+.oc-mcaps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.oc-mcaps a { position: relative; display: block; aspect-ratio: 85 / 96; border-radius: 12px; overflow: hidden; background: var(--c); text-decoration: none; }
 .oc-mcaps img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 7%; }
-.oc-mcaps a::after { content: ""; position: absolute; inset: auto 0 0; height: 50px; background: linear-gradient(transparent, rgb(10 4 16 / .8)); }
-.oc-mcaps span { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font: 400 1.32rem/1 "Karantina", var(--sans); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
-/* Juegos con erCuñao */
-.oc-mjuegos { position: relative; display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 12px; align-items: center; margin-bottom: 12px; padding: 16px 16px 14px; border-radius: 14px; overflow: hidden; color: #fff; text-decoration: none; isolation: isolate;
+.oc-mcaps a::after { content: ""; position: absolute; inset: auto 0 0; height: 52%; background: linear-gradient(transparent, rgb(10 4 16 / .8)); }
+.oc-mcaps span { position: absolute; left: 2px; right: 2px; bottom: 8%; z-index: 1; text-align: center; font: 400 1.32rem/1 "Karantina", var(--sans); font-size: clamp(1rem, 5.9cqi, 1.5rem); letter-spacing: .04em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+/* Juegos con erCuñao: la cara mide el 27 % del ancho (96 px en el diseño base) */
+.oc-mjuegos { --cara: 96px; --cara: clamp(64px, 26.8cqi, 108px); position: relative; display: grid; grid-template-columns: var(--cara) minmax(0, 1fr); column-gap: 12px; align-items: center; padding: 16px 16px 14px; border-radius: 14px; overflow: hidden; color: #fff; text-decoration: none; isolation: isolate;
   background: radial-gradient(120% 140% at 0% 100%, #5b2a86 0%, #3a1a5c 45%, #2b1140 100%); }
 .oc-mjuegos::before { content: ""; position: absolute; right: -30px; top: -40px; z-index: -1; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgb(231 200 119 / .22), transparent 70%); }
-.oc-mjuegos-cara { grid-row: 1 / span 3; align-self: center; width: 96px; height: 96px; }
-.oc-mjuegos .oc-cunao-cara { width: 96px; height: 96px; box-shadow: 0 0 0 3px #d9b560, 0 12px 22px rgb(10 4 16 / .45); transform: rotate(-6deg); }
-.oc-mjuegos-dice { position: relative; justify-self: start; padding: 8px 12px; border-radius: 14px 14px 14px 4px; background: #fff; color: #16111b; font-weight: 600; font-size: .84rem; line-height: 1.25; }
+.oc-mjuegos-cara { grid-row: 1 / span 3; align-self: center; width: var(--cara); height: var(--cara); }
+.oc-mjuegos .oc-cunao-cara { width: var(--cara); height: var(--cara); box-shadow: 0 0 0 3px #d9b560, 0 12px 22px rgb(10 4 16 / .45); transform: rotate(-6deg); }
+.oc-mjuegos-dice { position: relative; justify-self: start; padding: 8px 12px; border-radius: 14px 14px 14px 4px; background: #fff; color: #16111b; font-weight: 600; font-size: .84rem; font-size: clamp(.78rem, 3.75cqi, .92rem); line-height: 1.25; }
 .oc-mjuegos-dice::before { content: ""; position: absolute; left: -7px; bottom: 6px; border: 7px solid transparent; border-right-color: #fff; border-left: 0; }
 .oc-mjuegos-dice.is-nueva { animation: oc-mdice 260ms var(--ease-out) both; }
 @keyframes oc-mdice { from { opacity: 0; transform: translateY(4px) scale(.97); } }
 .oc-mjuegos-t { margin-top: 8px; }
-.oc-mjuegos-t b { display: block; font: 400 2rem/.9 "Karantina", var(--sans); letter-spacing: .04em; text-transform: uppercase; }
+.oc-mjuegos-t b { display: block; font: 400 2rem/.9 "Karantina", var(--sans); font-size: clamp(1.6rem, 8.9cqi, 2.3rem); letter-spacing: .04em; text-transform: uppercase; }
 .oc-mjuegos-t small { display: block; margin-top: 2px; color: #d8c9ea; font-size: .8rem; }
 .oc-mjuegos-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
-.oc-mjuegos-chips i { font-style: normal; font-size: .75rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; border: 1px solid rgb(231 200 119 / .55); color: #f3e2b4; }
+.oc-mjuegos-chips i { font-style: normal; font-size: .75rem; font-size: clamp(.7rem, 3.35cqi, .82rem); font-weight: 600; padding: 4px 9px; border-radius: 999px; border: 1px solid rgb(231 200 119 / .55); color: #f3e2b4; white-space: nowrap; }
 /* calendario y cifras */
 .oc-mcal { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; padding: 12px 16px; border-radius: 14px; background: var(--m-tile); border: 1px solid var(--m-borde); color: var(--ink); text-decoration: none; }
-.oc-mcal strong { display: flex; align-items: flex-start; font: 400 2.9rem/.9 "Karantina", var(--sans); color: var(--primary); }
-.oc-mcal strong small { margin-left: 3px; font-size: 1.25rem; letter-spacing: .04em; text-transform: uppercase; }
-.oc-mcal span { flex: 1; display: grid; }
+.oc-mcal strong { display: flex; align-items: flex-start; font: 400 2.9rem/.9 "Karantina", var(--sans); font-size: clamp(2.3rem, 12.9cqi, 3.25rem); color: var(--primary); }
+.oc-mcal strong small { margin-left: 3px; font-size: .43em; letter-spacing: .04em; text-transform: uppercase; }
+.oc-mcal span { flex: 1; min-width: 0; display: grid; }
 .oc-mcal b { font-weight: 700; font-size: 1rem; }
 .oc-mcal span small { font-size: .82rem; color: var(--muted); }
 .oc-mcal .oc-i, .oc-mmini .oc-i:last-child:not(:first-child) { color: var(--line-strong); }
 .oc-mgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .oc-mgrid .is-ancho { grid-column: 1 / -1; }
-.oc-mnum { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; min-height: 104px; padding: 14px; border-radius: 14px; background: var(--m-tile); border: 1px solid var(--m-borde); color: var(--ink); text-decoration: none; }
-.oc-mnum strong { font: 400 3.1rem/.9 "Karantina", var(--sans); color: var(--gold-ink); letter-spacing: .01em; }
+.oc-mnum { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; min-height: 104px; min-height: clamp(88px, 29cqi, 116px); padding: 14px; border-radius: 14px; background: var(--m-tile); border: 1px solid var(--m-borde); color: var(--ink); text-decoration: none; }
+.oc-mnum strong { font: 400 3.1rem/.9 "Karantina", var(--sans); font-size: clamp(2.4rem, 13.8cqi, 3.5rem); color: var(--gold-ink); letter-spacing: .01em; }
 .oc-mnum b { font-weight: 700; font-size: 1rem; }
 .oc-mmini { display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--m-borde); color: var(--ink); text-decoration: none; }
-.oc-mmini b { font-weight: 700; font-size: 1rem; }
+.oc-mmini b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 1rem; font-size: clamp(.84rem, 4.4cqi, 1rem); }
 .oc-mmini .oc-i:first-child { color: var(--gold-ink); }
 .oc-mgrid .is-ancho .oc-mmini b { flex: 1; font-weight: 600; color: var(--muted); }
+/* pantallas muy estrechas (320-359 px): menos relleno para que quepa todo */
+@media (max-width: 359px) {
+  .oc-menu { --m-hueco: 8px; }
+  .oc-mcalle-txt { width: 72%; padding: 14px; }
+  .oc-mjuegos { column-gap: 10px; padding: 14px 12px 12px; }
+  .oc-mnum { padding: 12px; }
+  .oc-mmini { gap: 7px; padding: 0 10px; }
+  .oc-mnum b, .oc-mcal b { font-size: .88rem; }
+}
 @media (min-width: 640px) { .oc-sheet:has(.oc-menu) { justify-content: center; } .oc-menu { max-width: 480px; } }
 @media (prefers-reduced-motion: reduce) { .oc-menu a:active { transform: none; } }
 
 /* ---------- Hoja «Tu capital» (Pablo, 13-nov: «que se rediseñe también») ----------
    Las mismas baldosas con colgadura que el menú «Secciones»; la elegida, con aro dorado y una marca. «Ver las ocho capitales»
-   lleva la franja de los ocho colores. En pantallas anchas es una ventana centrada (antes, una franja a todo lo ancho). */
+   lleva la franja de los ocho colores. En pantallas anchas es una ventana centrada (antes, una franja a todo lo ancho).
+   Se reescala igual que el menú: proporción fija de las baldosas y letra en cqi. */
+.oc-citysheet .oc-sheet-panel { container-type: inline-size; }
 .oc-citysheet-grid.is-baldosas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
-.oc-citysheet-grid.is-baldosas button { position: relative; display: block; width: 100%; height: 104px; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: var(--c); cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
+.oc-citysheet-grid.is-baldosas button { position: relative; display: block; width: 100%; height: auto; aspect-ratio: 85 / 104; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: var(--c); cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
 .oc-citysheet-grid.is-baldosas img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 7%; filter: none; transform: none; transition: none; }
-.oc-citysheet-grid.is-baldosas button::after { content: ""; position: absolute; inset: auto 0 0; height: 52px; background: linear-gradient(transparent, rgb(10 4 16 / .8)); }
-.oc-citysheet-grid.is-baldosas span { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font: 400 1.32rem/1 "Karantina", var(--sans); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+.oc-citysheet-grid.is-baldosas button::after { content: ""; position: absolute; inset: auto 0 0; height: 50%; background: linear-gradient(transparent, rgb(10 4 16 / .8)); }
+.oc-citysheet-grid.is-baldosas span { position: absolute; left: 2px; right: 2px; bottom: 8%; z-index: 1; text-align: center; font: 400 1.32rem/1 "Karantina", var(--sans); font-size: clamp(1rem, 5.9cqi, 1.5rem); letter-spacing: .04em; text-transform: uppercase; color: #fff; white-space: nowrap; }
 .oc-citysheet-grid.is-baldosas button:active { transform: scale(.96); }
 .oc-citysheet-grid.is-baldosas [aria-pressed="true"] { background: var(--c); color: inherit; box-shadow: 0 0 0 2px var(--surface), 0 0 0 4.5px #d9b560, 0 10px 20px -8px rgb(20 8 29 / .5); }
 @media (hover: hover) and (pointer: fine) { .oc-citysheet-grid.is-baldosas button:hover { transform: translateY(-2px); } }
@@ -2428,6 +2444,7 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 .oc-cs-franja { flex: none; width: 34px; height: 12px; border-radius: 3px; }
 .oc-citysheet-todas .oc-cs-ok { position: static; width: 22px; height: 22px; }
 .oc-citysheet-todas[aria-pressed="true"] { border-color: #d9b560; box-shadow: inset 0 0 0 1px #d9b560; }
+@media (max-width: 359px) { .oc-citysheet-grid.is-baldosas { gap: 6px; } .oc-cs-ok { width: 20px; height: 20px; top: 4px; right: 4px; } }
 @media (min-width: 640px) {
   .oc-citysheet { justify-content: center; }
   .oc-citysheet .oc-sheet-panel { max-width: 560px; }

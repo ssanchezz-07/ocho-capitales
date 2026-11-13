@@ -125,7 +125,8 @@
 .oc-naz.is-vivo, .oc-naz-js .oc-naz { height: 300vh; }
 .oc-naz-escena { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 4vw; padding: 32px max(16px, 6vw); box-sizing: border-box; min-height: 88svh; }
 .oc-naz.is-vivo .oc-naz-escena, .oc-naz-js .oc-naz-escena { position: sticky; top: 0; height: 100svh; overflow: hidden; }
-.oc-naz-fig { height: min(78svh, 640px); width: auto; justify-self: end; overflow: visible; }
+/* el dibujo no recibe toques: la luz del cirio (overflow visible) tapaba «‹ Portada» en «Próxima Semana Santa» (Pablo, 13-nov) */
+.oc-naz-fig { height: min(78svh, 640px); width: auto; justify-self: end; overflow: visible; pointer-events: none; }
 .oc-naz-traz { fill: none; stroke: #c9a14a; stroke-width: 1.6px; stroke-linecap: round; stroke-linejoin: round; }
 .oc-naz-traz path { vector-effect: non-scaling-stroke; }
 .oc-naz-luz { mix-blend-mode: screen; }
