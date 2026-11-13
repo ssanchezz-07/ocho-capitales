@@ -2409,3 +2409,33 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
 .oc-mgrid .is-ancho .oc-mmini b { flex: 1; font-weight: 600; color: var(--muted); }
 @media (min-width: 640px) { .oc-sheet:has(.oc-menu) { justify-content: center; } .oc-menu { max-width: 480px; } }
 @media (prefers-reduced-motion: reduce) { .oc-menu a:active { transform: none; } }
+
+/* ---------- Hoja «Tu capital» (Pablo, 13-nov: «que se rediseñe también») ----------
+   Las mismas baldosas con colgadura que el menú «Secciones»; la elegida, con aro dorado y una marca. «Ver las ocho capitales»
+   lleva la franja de los ocho colores. En pantallas anchas es una ventana centrada (antes, una franja a todo lo ancho). */
+.oc-citysheet-grid.is-baldosas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+.oc-citysheet-grid.is-baldosas button { position: relative; display: block; width: 100%; height: 104px; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: var(--c); cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
+.oc-citysheet-grid.is-baldosas img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 7%; filter: none; transform: none; transition: none; }
+.oc-citysheet-grid.is-baldosas button::after { content: ""; position: absolute; inset: auto 0 0; height: 52px; background: linear-gradient(transparent, rgb(10 4 16 / .8)); }
+.oc-citysheet-grid.is-baldosas span { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font: 400 1.32rem/1 "Karantina", var(--sans); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+.oc-citysheet-grid.is-baldosas button:active { transform: scale(.96); }
+.oc-citysheet-grid.is-baldosas [aria-pressed="true"] { background: var(--c); color: inherit; box-shadow: 0 0 0 2px var(--surface), 0 0 0 4.5px #d9b560, 0 10px 20px -8px rgb(20 8 29 / .5); }
+@media (hover: hover) and (pointer: fine) { .oc-citysheet-grid.is-baldosas button:hover { transform: translateY(-2px); } }
+.oc-cs-ok { position: absolute; top: 6px; right: 6px; z-index: 2; display: none; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #e7c877; color: #1b0d27; box-shadow: 0 2px 6px rgb(10 4 16 / .4); }
+.oc-cs-ok .oc-i { width: 15px; height: 15px; stroke-width: 2.6; }
+[aria-pressed="true"] > .oc-cs-ok { display: grid; }
+.oc-citysheet-todas { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; }
+.oc-cs-franja { flex: none; width: 34px; height: 12px; border-radius: 3px; }
+.oc-citysheet-todas .oc-cs-ok { position: static; width: 22px; height: 22px; }
+.oc-citysheet-todas[aria-pressed="true"] { border-color: #d9b560; box-shadow: inset 0 0 0 1px #d9b560; }
+@media (min-width: 640px) {
+  .oc-citysheet { justify-content: center; }
+  .oc-citysheet .oc-sheet-panel { max-width: 560px; }
+}
+/* PC: ventana centrada, con todas las esquinas redondeadas y sin asa */
+@media (min-width: 960px) {
+  .oc-citysheet, .oc-sheet:has(.oc-menu) { align-items: center; padding: 24px; }
+  .oc-citysheet .oc-sheet-panel, .oc-menu { border-radius: 20px; padding-top: 14px; padding-bottom: 20px; transform: translateY(10px) scale(.985); }
+  .oc-citysheet.is-open .oc-sheet-panel, .oc-sheet.is-open .oc-menu { transform: none; }
+  .oc-citysheet .oc-grabber, .oc-menu .oc-grabber { display: none; }
+}

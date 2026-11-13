@@ -351,6 +351,7 @@ const IC = {
   back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
   hoy: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
   up: '<path d="M12 19V5M6 11l6-6 6 6"/>',
+  ok: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
 };
 const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${IC[n]}</svg>`;
 
@@ -691,8 +692,8 @@ ${menuSecciones()}
   <div class="oc-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="oc-city-t">
     <div class="oc-sheet-head"><p class="oc-sheet-title" id="oc-city-t">Tu capital</p><button class="oc-iconbtn" type="button" data-city-close aria-label="Cerrar">${icon('x')}</button></div>
     <p class="oc-citysheet-sub">«Hoy» te enseñará primero sus cofradías y el buscador la tendrá en cuenta. Puedes cambiarla cuando quieras.</p>
-    <ul class="oc-citysheet-grid is-puntos">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><i aria-hidden="true"></i><span>${esc(c.nombre)}</span></button></li>`).join('')}</ul>
-    <button class="oc-btn is-quiet oc-citysheet-todas" type="button" data-set-city="">Ver las ocho capitales</button>
+    <ul class="oc-citysheet-grid is-baldosas">${D.capitales.map((c) => `<li><button type="button" data-set-city="${c.slug}" style="--c:${c.color}"><img src="${u('assets/plates/colgadura-' + c.slug + '.webp')}" alt="" width="265" height="971" loading="lazy" decoding="async"><span>${esc(c.nombre)}</span><b class="oc-cs-ok" aria-hidden="true">${icon('ok')}</b></button></li>`).join('')}</ul>
+    <button class="oc-btn is-quiet oc-citysheet-todas" type="button" data-set-city=""><i class="oc-cs-franja" aria-hidden="true" style="background:linear-gradient(90deg,${D.capitales.map((c, i) => `${c.color} ${(i * 12.5).toFixed(1)}% ${((i + 1) * 12.5).toFixed(1)}%`).join(',')})"></i>Ver las ocho capitales<b class="oc-cs-ok" aria-hidden="true">${icon('ok')}</b></button>
   </div>
 </div>
 <div class="oc-search" hidden data-search-overlay>
