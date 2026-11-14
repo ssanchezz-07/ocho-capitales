@@ -89,11 +89,11 @@ jobs:
       - name: Generar sitio
         working-directory: site
         env:
-          # Copia de seguridad en GitHub Pages. Con GITHUB_REDIRIGE_A (p. ej. https://ochocapitales.com) cada página
+          # Copia de seguridad en GitHub Pages. Con la variable REDIRIGE_GITHUB_A (GitHub no deja nombres que empiecen por GITHUB_; p. ej. https://ochocapitales.com) cada página
           # lleva al visitante a la misma página del dominio, con el canónico allí.
           BASE_PATH: /${{ github.event.repository.name }}/
-          SITE_URL: ${{ vars.GITHUB_REDIRIGE_A || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
-          REDIRIGIR: ${{ vars.GITHUB_REDIRIGE_A && '1' || '' }}
+          SITE_URL: ${{ vars.REDIRIGE_GITHUB_A || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+          REDIRIGIR: ${{ vars.REDIRIGE_GITHUB_A && '1' || '' }}
           FORMULARIO_CLAVE: ${{ vars.FORMULARIO_CLAVE }}   # Colabora → correo del portal (Web3Forms; ver GUIA-ALOJAMIENTO.md)
           NOTICIAS_URL: ${{ vars.NOTICIAS_URL }}
         run: node build.mjs
@@ -126,7 +126,7 @@ jobs:
       - name: Red de seguridad (si falla, no se publica)
         env:
           PLAYWRIGHT_DIR: ${{ runner.temp }}/pw
-          SIN_HUMO: ${{ vars.GITHUB_REDIRIGE_A && '1' || '' }}   # con la redirección al dominio, cada página se va del sitio
+          SIN_HUMO: ${{ vars.REDIRIGE_GITHUB_A && '1' || '' }}   # con la redirección al dominio, cada página se va del sitio
         run: bash tools/red-seguridad.sh site/dist "/${{ github.event.repository.name }}/"
       - name: Guardar noticias y agendas (rama datos)
         # Si no se puede subir, se avisa y se publica igualmente con las noticias frescas.

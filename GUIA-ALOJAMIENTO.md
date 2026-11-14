@@ -110,7 +110,7 @@ Después te paso Lighthouse en móvil, antes y después.
 - [ ] **Antes de las 16:30, en el dominio:** `/en-la-calle/malaga/` abre el plano con la extraordinaria de la Pasión. Probar a 390 px con un toque. El 2-nov ya figuraba en `pages.dev`.
 - [ ] **Redirecciones:**
   - `www` → raíz: la regla ya existe;
-  - `github.io` → dominio: variable `GITHUB_REDIRIGE_A`;
+  - `github.io` → dominio: variable `REDIRIGE_GITHUB_A`;
   - `ocho-capitales.pages.dev` → dominio: con una *Bulk Redirect* de la cuenta (Pages no deja redirigir por nombre en `_redirects`). Solo el nombre exacto, sin subdominios, para que las vistas previas de cada subida sigan abriendo. Las pruebas de después de subir ya usan `CLOUDFLARE_URL`, así que no les afecta.
 - [ ] **Analítica:** a los 10 minutos salen visitas en **Análisis → Web Analytics** del dominio, y la consola no da errores de CSP.
 - [ ] **Noticias:** `/noticias/` muestra las de las 7:00 leídas de `datos.ochocapitales.com`.
@@ -124,7 +124,7 @@ Después te paso Lighthouse en móvil, antes y después.
 5. **Los dos registros DNS:** la landing los tiene a mano (CNAME `ochocapitales.com` y `www` → `ocho-capitales-espera.pages.dev`). Si al activar el dominio en el paso 3 Cloudflare no los cambia solo, en **ochocapitales.com** → **DNS** → **Registros**, edita los dos CNAME para que apunten a `ocho-capitales.pages.dev` (con proxy, la nube naranja). La regla que lleva `www` a la raíz ya existe y sirve igual. El CNAME `datos` (noticias en R2) no se toca.
 6. **GitHub, dos variables** (Settings → Secrets and variables → Actions → Variables):
    - `CLOUDFLARE_URL` = `https://ochocapitales.com`: canónicos, mapa del sitio y avisos a Google con el dominio, y `pages.dev` deja de indexarse;
-   - `GITHUB_REDIRIGE_A` = `https://ochocapitales.com`: cada página de `ssanchezz-07.github.io/ocho-capitales/…` lleva a la misma página del dominio.
+   - `REDIRIGE_GITHUB_A` = `https://ochocapitales.com`: cada página de `ssanchezz-07.github.io/ocho-capitales/…` lleva a la misma página del dominio.
 7. **Publicar:** GitHub → **Actions** → «Publicar Ocho Capitales» → **Run workflow**, o dime «publica». La red de seguridad comprueba la web antes y después de subirla.
 8. **Comprobar** (lo hago yo; te lo cuento en una línea):
    - `https://ochocapitales.com` abre la portada con candado;
