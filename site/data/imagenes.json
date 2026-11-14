@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-11T13:31:23.069Z",
+ "generado": "2026-11-14T10:06:40.531Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -1682,20 +1682,6 @@
    "licencia": "CC BY 2.0",
    "licurl": "https://creativecommons.org/licenses/by/2.0",
    "pagina": "https://commons.wikimedia.org/wiki/File:SemanaSantaSevillaMacarena3.jpg"
-  },
-  "lagrimas-y-favores-malaga": {
-   "w": 960,
-   "h": 1281,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "escudo": false,
-   "autor": "Rodrigo Fernández",
-   "licencia": "CC BY-SA 4.0",
-   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f05_-Maria_Sma_de_Lagrimas_y_Favores.jpg"
   },
   "humillacion-y-estrella-malaga": {
    "w": 960,
@@ -3696,19 +3682,22 @@
   "lagrimas-y-favores-malaga": {
    "virgen": {
     "w": 960,
-    "h": 1281,
+    "h": 1027,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "Rodrigo Fernández",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Malaga_ig_Sn_Juan_Bautista_f05_-Maria_Sma_de_Lagrimas_y_Favores.jpg",
-    "titular": "María Santísima de Lágrimas y Favores",
-    "foco": "50% 0%"
+    "autor": "Reales Cofradías Fusionadas (Málaga)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/rcfusionadas",
+    "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/malaga/lagrimas-y-favores-malaga-virgen.jpg",
+    "tam": 544448,
+    "titular": "María Santísima de Lágrimas y Favores"
    }
   },
   "dulce-nombre-malaga": {
