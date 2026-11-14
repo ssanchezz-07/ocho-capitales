@@ -1,0 +1,351 @@
+{
+ "rosario-del-mar-almeria-2026-11-14": {
+  "id": "rosario-del-mar-almeria-2026-11-14",
+  "metodo": "continuidad + GraphHopper (perfil procesion)",
+  "fuente_lista": "https://www.instagram.com/hdadrosariodelmar/",
+  "avisos": [
+   "«Plaza Virgen del Mar» omitida por corrección (Plaza Virgen del Mar es en OSM un área peatonal delante de la puerta del santuario: el trazado seguía su contorno (un rectángulo). Se cruza en recta de la puerta a Gravina (rectos_sede).)",
+   "«Juan Antonio de Barrios» sin equivalente en OSM: no se traza (no se inventa)",
+   "«Plaza Virgen del Mar» omitida por corrección (La misma plaza a la entrada: de Gravina a la puerta, en recta (rectos_sede).)",
+   "hueco de 40 m entre «Real» y «Masnou»: en OSM no se tocan"
+  ],
+  "correcciones": {
+   "calles": {
+    "1": {
+     "omitir": true,
+     "fuente": "Plaza Virgen del Mar es en OSM un área peatonal delante de la puerta del santuario: el trazado seguía su contorno (un rectángulo). Se cruza en recta de la puerta a Gravina (rectos_sede)."
+    },
+    "26": {
+     "omitir": true,
+     "fuente": "La misma plaza a la entrada: de Gravina a la puerta, en recta (rectos_sede)."
+    }
+   },
+   "rectos_sede": [
+    "salida",
+    "entrada"
+   ],
+   "fuentes": [
+    {
+     "fecha": "2026-11-14 12:00",
+     "fuente": "Instagram oficial de la Hermandad del Rosario del Mar (@hdadrosariodelmar), 13-nov-2026: «Santuario de la Virgen del Mar, Plaza Virgen del Mar, Gravina, … Gravina y Plaza Virgen del Mar, Santuario de la Virgen del Mar»",
+     "cambios": "Plaza Virgen del Mar (filas 2 y 27) sin su contorno: de la puerta a Gravina y de Gravina a la puerta en línea recta, por la plaza (Pablo, 14-nov: «no hay picos, guíate del mapa de Pasión»)"
+    }
+   ],
+   "actualizado": "2026-11-14 12:00"
+  },
+  "salida": {
+   "punto": [
+    36.8371404,
+    -2.464739
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-almeria.json",
+   "dir": null
+  },
+  "entrada": {
+   "punto": [
+    36.8371404,
+    -2.464739
+   ],
+   "como": "punto fijado (alias)",
+   "fuente": "alias-calles-almeria.json",
+   "dir": null
+  },
+  "calles": [
+   {
+    "i": 2,
+    "lugar": "Gravina",
+    "tipo": "calle",
+    "osm": "Calle Gravina",
+    "vias": [
+     27155603
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": null,
+    "forzado": false
+   },
+   {
+    "i": 3,
+    "lugar": "Real",
+    "tipo": "calle",
+    "osm": "Calle Real",
+    "vias": [
+     38985157,
+     89138493,
+     89138494,
+     89138501,
+     188590924
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 4,
+    "lugar": "Masnou",
+    "tipo": "calle",
+    "osm": "Plaza Masnou",
+    "vias": [
+     204254802
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 40,
+    "forzado": false
+   },
+   {
+    "i": 5,
+    "lugar": "Bendicho",
+    "tipo": "calle",
+    "osm": "Plaza Bendicho",
+    "vias": [
+     27155602
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 14,
+    "forzado": false
+   },
+   {
+    "i": 6,
+    "lugar": "Cubo",
+    "tipo": "calle",
+    "osm": "Calle Cubo",
+    "vias": [
+     188592532
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 15,
+    "forzado": false
+   },
+   {
+    "i": 7,
+    "lugar": "Catedral",
+    "tipo": "calle",
+    "osm": "Plaza de la Catedral",
+    "vias": [
+     39597182,
+     89138491,
+     204254800,
+     264089588,
+     291429557,
+     291429627,
+     533595718
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 9,
+    "lugar": "General Castaños",
+    "tipo": "calle",
+    "osm": "Calle Bailen",
+    "vias": [
+     27155644
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 10,
+    "lugar": "Velázquez",
+    "tipo": "calle",
+    "osm": "Calle Velázquez",
+    "vias": [
+     27155643
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 11,
+    "lugar": "Duendes",
+    "tipo": "calle",
+    "osm": "Calle Los Duendes",
+    "vias": [
+     27155637,
+     27155641,
+     1343474239
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 12,
+    "lugar": "Hospital Provincial",
+    "tipo": "calle",
+    "osm": "Calle Hospital",
+    "vias": [
+     204254788
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 13,
+    "lugar": "Reina",
+    "tipo": "calle",
+    "osm": "Calle de la Reina",
+    "vias": [
+     133287897
+    ],
+    "candidatas": 6,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 14,
+    "lugar": "Arráez",
+    "tipo": "calle",
+    "osm": "Calle Arráez",
+    "vias": [
+     27155674
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 15,
+    "lugar": "Juez",
+    "tipo": "calle",
+    "osm": "Calle Juez",
+    "vias": [
+     31110568,
+     114797609,
+     177364949
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 16,
+    "lugar": "Administración Vieja",
+    "tipo": "calle",
+    "osm": "Plaza de la Administración Vieja",
+    "vias": [
+     27155676
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 17,
+    "lugar": "Mariana",
+    "tipo": "calle",
+    "osm": "Calle Mariana",
+    "vias": [
+     89138523
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 18,
+    "lugar": "Tiendas",
+    "tipo": "calle",
+    "osm": "Calle de las Tiendas",
+    "vias": [
+     27182587,
+     29239693,
+     166717718
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 19,
+    "lugar": "Virgen de la Soledad",
+    "tipo": "calle",
+    "osm": "Calle de Hernán Cortés",
+    "vias": [
+     27182593,
+     166717714
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   },
+   {
+    "i": 20,
+    "lugar": "Plaza Flores",
+    "tipo": "calle",
+    "osm": "plaza Flores",
+    "vias": [
+     336898247
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 3,
+    "forzado": false
+   },
+   {
+    "i": 21,
+    "lugar": "Plácido Langle",
+    "tipo": "calle",
+    "osm": "Calle Siloy",
+    "vias": [
+     89138488,
+     89138516
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 22,
+    "lugar": "San Pedro",
+    "tipo": "calle",
+    "osm": "Plaza de San Pedro",
+    "vias": [
+     159002988
+    ],
+    "candidatas": 3,
+    "hueco_entrada_m": 2,
+    "forzado": false
+   },
+   {
+    "i": 24,
+    "lugar": "Real",
+    "tipo": "calle",
+    "osm": "Calle Real",
+    "vias": [
+     38985157,
+     89138493,
+     89138494,
+     89138501,
+     188590924
+    ],
+    "candidatas": 2,
+    "hueco_entrada_m": 37,
+    "forzado": false
+   },
+   {
+    "i": 25,
+    "lugar": "Gravina",
+    "tipo": "calle",
+    "osm": "Calle Gravina",
+    "vias": [
+     27155603
+    ],
+    "candidatas": 1,
+    "hueco_entrada_m": 0,
+    "forzado": false
+   }
+  ],
+  "enlaces": [
+   "14 m entre «Masnou» y «Bendicho»",
+   "15 m entre «Bendicho» y «Cubo»",
+   "37 m entre «San Pedro» y «Real»"
+  ],
+  "ms_graphhopper": 234,
+  "largo_m": 1873,
+  "ms_total": 330
+ }
+}

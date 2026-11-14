@@ -423,6 +423,115 @@
     ]
    },
    "celebrada": true
+  },
+  "rosario-del-mar-almeria-2026-11-14": {
+   "hermandad": "rosario-del-mar-almeria",
+   "ciudad": "almeria",
+   "fecha": "2026-11-14",
+   "tipo": "extraordinaria",
+   "corto": "Señor de las Penas",
+   "titulo": "Procesión extraordinaria de Nuestro Padre Jesús de las Penas (Rosario del Mar)",
+   "acto": "Paso por la Catedral",
+   "fuente": "Instagram oficial de la Hermandad del Rosario del Mar (@hdadrosariodelmar), publicación conjunta con @bajoelpalioalmeriense (13-nov-2026): salida a las 19:30 del Santuario de la Virgen del Mar, Catedral a las 20:30 y entrada a las 00:00, con el itinerario completo. Acompañamiento: selección musical de la Hermandad de los Gitanos de Sevilla.",
+   "fuente_url": "https://www.instagram.com/hdadrosariodelmar/",
+   "tramos": {
+    "ida": [
+     {
+      "lugar": "Santuario de la Virgen del Mar",
+      "hora": "19:30",
+      "templo": "Santuario de la Virgen del Mar"
+     },
+     {
+      "lugar": "Plaza Virgen del Mar"
+     },
+     {
+      "lugar": "Gravina"
+     },
+     {
+      "lugar": "Real"
+     },
+     {
+      "lugar": "Masnou"
+     },
+     {
+      "lugar": "Bendicho"
+     },
+     {
+      "lugar": "Cubo"
+     },
+     {
+      "lugar": "Catedral",
+      "hora": "20:30",
+      "templo": "Catedral de la Encarnación"
+     }
+    ],
+    "regreso": [
+     {
+      "lugar": "Catedral",
+      "hora": "20:30",
+      "templo": "Catedral de la Encarnación"
+     },
+     {
+      "lugar": "General Castaños"
+     },
+     {
+      "lugar": "Velázquez"
+     },
+     {
+      "lugar": "Duendes"
+     },
+     {
+      "lugar": "Hospital Provincial"
+     },
+     {
+      "lugar": "Reina"
+     },
+     {
+      "lugar": "Arráez"
+     },
+     {
+      "lugar": "Juez"
+     },
+     {
+      "lugar": "Administración Vieja"
+     },
+     {
+      "lugar": "Mariana"
+     },
+     {
+      "lugar": "Tiendas"
+     },
+     {
+      "lugar": "Virgen de la Soledad"
+     },
+     {
+      "lugar": "Plaza Flores"
+     },
+     {
+      "lugar": "Plácido Langle"
+     },
+     {
+      "lugar": "San Pedro"
+     },
+     {
+      "lugar": "Juan Antonio de Barrios"
+     },
+     {
+      "lugar": "Real"
+     },
+     {
+      "lugar": "Gravina"
+     },
+     {
+      "lugar": "Plaza Virgen del Mar"
+     },
+     {
+      "lugar": "Santuario de la Virgen del Mar",
+      "hora": "00:00",
+      "templo": "Santuario de la Virgen del Mar"
+     }
+    ]
+   }
   }
  }
 }

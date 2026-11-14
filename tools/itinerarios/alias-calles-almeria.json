@@ -1,0 +1,7 @@
+{
+ "_fuente": "Nombres del itinerario de la salida extraordinaria del Señor de las Penas (Rosario del Mar, 14-nov-2026; Instagram oficial de la hermandad) que OpenStreetMap escribe distinto. Cada calle se situó con Google Maps (solo para saber dónde está; el trazado es de OSM) y se comprobó en el callejero que toca a sus vecinas del itinerario: General Castaños = Calle Bailén (toca Plaza de la Catedral y Velázquez; Google la sitúa en 36.83875, -2.46793), Virgen de la Soledad = Calle de Hernán Cortés (une Tiendas con plaza Flores; Google, 36.84116, -2.46539), Plácido Langle = Calle Siloy (la única que une plaza Flores con San Pedro; Google, 36.84044, -2.46522). El santuario de la Virgen del Mar es en OSM «Parroquia Virgen del Mar». La puerta del santuario (Convento de Santo Domingo; Google lo sitúa en 36.83721, -2.46477) se fija donde el templo toca la Plaza Virgen del Mar en OSM.",
+ "General Castaños": "Calle Bailen",
+ "Virgen de la Soledad": "Calle de Hernán Cortés",
+ "Plácido Langle": "Calle Siloy",
+ "@Santuario de la Virgen del Mar": "geo:36.8371404,-2.4647390"
+}

@@ -1,0 +1,26 @@
+{
+ "rosario-del-mar-almeria-2026-11-14": {
+  "calles": {
+   "1": {
+    "omitir": true,
+    "fuente": "Plaza Virgen del Mar es en OSM un área peatonal delante de la puerta del santuario: el trazado seguía su contorno (un rectángulo). Se cruza en recta de la puerta a Gravina (rectos_sede)."
+   },
+   "26": {
+    "omitir": true,
+    "fuente": "La misma plaza a la entrada: de Gravina a la puerta, en recta (rectos_sede)."
+   }
+  },
+  "rectos_sede": [
+   "salida",
+   "entrada"
+  ],
+  "fuentes": [
+   {
+    "fecha": "2026-11-14 12:00",
+    "fuente": "Instagram oficial de la Hermandad del Rosario del Mar (@hdadrosariodelmar), 13-nov-2026: «Santuario de la Virgen del Mar, Plaza Virgen del Mar, Gravina, … Gravina y Plaza Virgen del Mar, Santuario de la Virgen del Mar»",
+    "cambios": "Plaza Virgen del Mar (filas 2 y 27) sin su contorno: de la puerta a Gravina y de Gravina a la puerta en línea recta, por la plaza (Pablo, 14-nov: «no hay picos, guíate del mapa de Pasión»)"
+   }
+  ],
+  "actualizado": "2026-11-14 12:00"
+ }
+}
