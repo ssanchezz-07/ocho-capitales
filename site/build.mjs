@@ -542,10 +542,13 @@ function eventosExternos(previos) {
 const MUNI_FILE = path.join(DIR, '..', 'tools', 'sources', 'municipios-andalucia.json');
 const MUNI = fs.existsSync(MUNI_FILE) ? Object.entries(JSON.parse(fs.readFileSync(MUNI_FILE, 'utf8')).municipios).map(([n, p]) => [' ' + norm(n).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ', p]) : [];
 const CRONICA = /\b(en imagenes|las fotos|fotos de|fotogaleria|galeria|video|asi fue|asi vivio|asi se vivio|minuto a minuto|en directo)\b/;
+// Avisos de tráfico y movilidad: hablan de una procesión, pero no son el acto (Pablo, 14-nov: erCuñao contaba «Cortes en el
+// tráfico este fin de semana por una procesión y la Carrera de la Prensa» como una salida de Málaga).
+const MOVILIDAD = /\b(trafico|cortes? (de|en) (las )?calles?|calles cortadas|desvios?|movilidad|aparcamientos?|autobus(es)?|lineas? de autobus|emt|metro de|restricciones|carrera de la prensa|media maraton|maraton)\b/;
 function actoFuera(e) {
   if (e.verificado || e.tipo === 'liturgico') return false;
   const t = ' ' + norm(e.titulo).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
-  if (CRONICA.test(t)) return true;
+  if (CRONICA.test(t) || MOVILIDAD.test(t)) return true;
   // En conciertos «Banda de <pueblo>» dice de dónde es la banda, no dónde toca: solo cuenta «en <pueblo>».
   const deVale = GRUPO_DE[e.tipo] !== 'musica';
   return MUNI.some(([n, p]) => p === e.ciudad && ((deVale && t.includes(' de' + n)) || t.includes(' en' + n)) && !t.includes(n + 'cruz '));
