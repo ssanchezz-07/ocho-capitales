@@ -127,7 +127,9 @@ export function escribeCabeceras({ DIST, BASE, SITE, redirecciones = [] }) {
     [b + 'assets/vendor/*', ['Cache-Control: ' + fijo]],
     [b + 'assets/fonts/*', ['Cache-Control: ' + fijo]],
     // imágenes con nombre fijo: una semana, y renovación en segundo plano durante un mes
-    [b + 'assets/img/*', ['Cache-Control: public, max-age=604800, stale-while-revalidate=2592000']],
+    // fotos de assets/img: todas se piden con ?v=<huella> (localUrl y los logos de banda), así que pueden guardarse un año como el
+    // CSS y el JS (PageSpeed, 14-nov). La única sin huella es la textura img/grano.png de vida.css, que no cambia.
+    [b + 'assets/img/*', ['Cache-Control: ' + fijo]],
     [b + 'assets/plates/*', ['Cache-Control: public, max-age=604800, stale-while-revalidate=2592000']],
     ...['og.png', 'icon.svg', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'].map((f) => [b + 'assets/' + f, ['Cache-Control: public, max-age=86400, stale-while-revalidate=604800']]),
     // noticias: se leen cada hora; 5 minutos de caché y la copia vale mientras llega la nueva

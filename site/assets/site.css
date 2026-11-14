@@ -1171,8 +1171,11 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 
 /* Cabecera: se asienta (sombra suave) en cuanto la página empieza a moverse */
 @supports (animation-timeline: scroll()) {
-  .oc-header { animation: oc-cab linear both; animation-timeline: scroll(root); animation-range: 0 90px; }
-  @keyframes oc-cab { from { box-shadow: 0 0 0 0 rgb(20 8 29 / 0); border-bottom-color: transparent; } to { box-shadow: 0 8px 24px -18px rgb(20 8 29 / .45); } }
+  /* la sombra y la línea van en un ::after y lo que se anima es su opacidad: el navegador la mueve sin repintar la cabecera
+     (PageSpeed, 14-nov: «animación no compuesta» al animar border-bottom-color y box-shadow) */
+  .oc-header { border-bottom-color: transparent; }
+  .oc-header::after { content: ""; display: block; position: absolute; inset: 0; height: auto; background: none; z-index: -1; pointer-events: none; border-bottom: 1px solid var(--line); box-shadow: 0 8px 24px -18px rgb(20 8 29 / .45); opacity: 0; animation: oc-cab linear both; animation-timeline: scroll(root); animation-range: 0 90px; }
+  @keyframes oc-cab { to { opacity: 1; } }
 }
 
 /* Revelado al hacer scroll, ligado al propio desplazamiento (sin JS): lo que entra en pantalla sube y se aclara.

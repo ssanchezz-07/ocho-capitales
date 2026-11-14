@@ -901,7 +901,9 @@ function fondoLegible(hex, min = 4.8) {
 }
 function plates(big) {
   return `<ul class="oc-plates${big ? ' is-big' : ''}">${D.capitales.map((c, i) => {
-    const img = c.imagen ? imgTag(c.imagen, '', { sizes: SIZES_PORTADA_CAP, widths: [330, 500] }) : '';
+    // las dos primeras (la fila de arriba en el móvil) son el elemento más grande de la pantalla: sin carga diferida y con prioridad
+    // alta (PageSpeed, 14-nov: con loading=lazy perdía 1,5 s antes de empezar a bajar)
+    const img = c.imagen ? imgTag(c.imagen, '', { sizes: SIZES_PORTADA_CAP, widths: [330, 500], eager: i < 2 }) : '';
     return `<li><article class="oc-plate${c.imagen ? '' : ' is-blank'}" style="--c:${c.color};--c-plate:${fondoLegible(c.color)}">${img}<div class="oc-plate-top"><span>${String(i + 1).padStart(2, '0')}<i>${COORD[c.slug][0].toFixed(2)}° N</i></span>${STAR}</div><div><h3><a href="${capHref(c)}">${esc(c.nombre)}</a></h3>${big ? `<p class="oc-plate-lema">${esc(c.lema)}</p><p class="oc-plate-meta">${cifraFichas(c)}</p>` : ''}</div></article></li>`; // portada (big = false) sin la cifra: Pablo, 4-nov, ya está en la ficha de cada capital
   }).join('')}</ul>`;
 }
@@ -1423,7 +1425,7 @@ function pageBanda(b) {
   const body = `<header class="oc-caphero is-compact" style="--c:${col};--c-plate:${fondoLegible(col)}">
   ${prov ? `<img class="oc-caphero-colg" src="${u('assets/plates/colgadura-' + prov.slug + '.webp')}" alt="" width="265" height="971">` : ''}
   <div class="oc-caphero-text">
-    ${fb && fb.logo ? `<figure class="bx-logo"><img src="${u(fb.logo.src)}" alt="${esc(fb.logo.nota)}" width="${fb.logo.ancho}" height="${fb.logo.alto}" decoding="async"></figure>` : ''}
+    ${fb && fb.logo ? `<figure class="bx-logo"><img src="${u(fb.logo.src)}${/^assets\/img\//.test(fb.logo.src) && huellaImg(fb.logo.src.slice(11)) ? '?v=' + huellaImg(fb.logo.src.slice(11)) : ''}" alt="${esc(fb.logo.nota)}" width="${fb.logo.ancho}" height="${fb.logo.alto}" decoding="async"></figure>` : ''}
     <h1 class="oc-caphero-title${b.nombre.length > 48 ? ' is-long' : ''}">${esc(b.nombre)}</h1>
     <p class="oc-caphero-lema">${esc(b.tipo)}${lugar ? ' de ' + esc(lugar) : ''}</p>
     ${(() => { // cifras solo cuando dicen algo (con todo a 1, la frase de resumen ya lo cuenta)
