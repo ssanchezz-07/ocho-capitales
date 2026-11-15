@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T23:03:18.878Z",
+ "generado": "2026-11-15T23:24:48.029Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -10960,22 +10960,22 @@
   },
   "santa-marta-sevilla": {
    "cristo": {
-    "w": 710,
-    "h": 620,
+    "w": 960,
+    "h": 682,
     "widths": [
      160,
      480,
-     710
+     960
     ],
     "escudo": false,
     "autor": "Santa Marta (Sevilla)",
     "licencia": "",
     "licurl": "",
-    "pagina": "https://www.instagram.com/hdadsantamarta/",
-    "foco": "50% 30%",
+    "pagina": "https://hermandaddesantamarta.org/sagradas-imagenes/cristo-de-la-caridad/",
+    "foco": "40% 35%",
     "cedida": true,
     "local": "scripts/cedidas/sevilla/santa-marta-sevilla-cristo.jpg",
-    "tam": 152501,
+    "tam": 356982,
     "titular": "Santísimo Cristo de la Caridad en su Traslado al Sepulcro"
    }
   },
