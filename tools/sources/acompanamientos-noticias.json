@@ -26,6 +26,19 @@
       "fuente": "https://www.elespanol.com/malaga/cultura/cofradias/20260328/horarios-recorridos-traslados-procesiones-sabado-pasion-malaga/1003744187930_0.html",
       "medio": "El Español",
       "fecha": "2026-03-28"
+    },
+    {
+      "slug": "medinaceli-martiricos-malaga",
+      "anio": 2027,
+      "paso": "Cristo",
+      "banda": {
+        "nombre": "Agrupación Musical de Gilena",
+        "localidad": "Gilena",
+        "tipo": "Agrupación musical"
+      },
+      "fuente": "https://www.elpespunte.es/articulo/cofrade/agrupacion-musical-gilena-da-salto-capital-acompanara-jesus-medinaceli-malaga/20261022100632157649.html",
+      "medio": "El Pespunte",
+      "fecha": "2026-10-22"
     }
   ]
 }
