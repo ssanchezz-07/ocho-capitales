@@ -1,0 +1,16 @@
+{
+ "nota": "Altas a mano: marchas que no están en ninguna base, con los datos que da su fuente abierta (tools/unificar-marchas.mjs, sección 2e). Solo lo que la fuente dice: lo que no dice (titular, banda que la estrenó, si el año es de composición o de estreno) se queda vacío.",
+ "altas": [
+  {
+   "titulo": "Ahí está Dios",
+   "autor": "Miguel Ángel Jiménez Soto",
+   "anio": "2026",
+   "formacion": "Banda de cornetas y tambores",
+   "hermandad": "el-rescatado-cordoba",
+   "fuente": "https://rescatado.es/patrimonio-musical/",
+   "nombre_fuente": "Hermandad del Rescatado (Córdoba), web oficial: patrimonio musical, n.º 13",
+   "fecha": "2026-11-16",
+   "nota": "Aviso de Colabora (15-nov). La web de la hermandad la incluye en su patrimonio musical («para banda de cornetas y tambores», 2026) sin decir a qué titular va ni qué banda la estrenó."
+  }
+ ]
+}

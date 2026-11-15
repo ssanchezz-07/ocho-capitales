@@ -335,6 +335,19 @@ if (CYH) for (const x of cyhSinCasar) {
   (porTituloR.get(nt(titulo)) || porTituloR.set(nt(titulo), []).get(nt(titulo))).push(r);
 }
 
+// ---------- 2e. altas a mano con fuente abierta (tools/sources/marchas-altas.json) ----------
+// Una marcha que no está en ninguna base (p. ej. la lista de patrimonio musical de la web de la hermandad, 16-nov) se da de alta con
+// los datos que da su fuente, citada como revisión a mano («rev»). Si la fuente es de una hermandad, la dedicatoria a esa hermandad se
+// resuelve como una revisión «confirmar» (sección 6), con el titular solo si la fuente lo dice.
+const ALTAS = leer(path.join(DIR, 'sources/marchas-altas.json'), { altas: [] }).altas;
+for (const a of ALTAS) {
+  let r = (porTituloR.get(nt(a.titulo)) || []).find((y) => mismoAutor(y.autor, a.autor));
+  if (!r) { r = nuevo({ slug: darSlug(a.titulo + ' ' + a.autor), titulo: a.titulo, autor: a.autor }); (porTituloR.get(nt(a.titulo)) || porTituloR.set(nt(a.titulo), []).get(nt(a.titulo))).push(r); }
+  for (const c of ['titulo', 'autor', 'formacion']) if (a[c]) { if (!r[c]) r[c] = a[c]; fuente(r, c, 'rev', a.fuente); }
+  if (a.anio) r._anios = [...(r._anios || []), { v: a.anio, f: 'rev' }];
+  if (a.hermandad) REV.push({ slug: r.slug, hermandad: a.hermandad, accion: 'confirmar', titular: a.titular || '', texto: a.texto || '', fuente: a.fuente, nombre_fuente: a.nombre_fuente, fecha: a.fecha, nota: a.nota || '', campos: {} });
+}
+
 // ---------- 3. Patrimonio Musical: segunda fuente (título comparable + apellido) ----------
 const pmIdx = new Map();
 if (PM) for (const [id, f] of Object.entries(PM)) if (f && f.t) { const k = nt(f.t); (pmIdx.get(k) || pmIdx.set(k, []).get(k)).push({ id, ...f }); }
