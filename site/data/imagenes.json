@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T10:06:40.531Z",
+ "generado": "2026-11-15T23:03:18.878Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -124,20 +124,6 @@
    "licencia": "CC BY-SA 4.0",
    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
    "pagina": "https://commons.wikimedia.org/wiki/File:Escudo_de_la_Hermandad_de_San_Pablo_(Sevilla).svg"
-  },
-  "santa-marta-sevilla": {
-   "w": 960,
-   "h": 640,
-   "widths": [
-    160,
-    480,
-    960
-   ],
-   "escudo": false,
-   "autor": "Manuel Agüera Ostos",
-   "licencia": "CC BY-SA 4.0",
-   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "pagina": "https://commons.wikimedia.org/wiki/File:El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg"
   },
   "san-gonzalo-sevilla": {
    "w": 160,
@@ -10973,20 +10959,23 @@
    }
   },
   "santa-marta-sevilla": {
-   "juntos": {
-    "w": 960,
-    "h": 640,
+   "cristo": {
+    "w": 710,
+    "h": 620,
     "widths": [
      160,
      480,
-     960
+     710
     ],
     "escudo": false,
-    "autor": "Manuel Agüera Ostos",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg",
+    "autor": "Santa Marta (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsantamarta/",
     "foco": "50% 30%",
+    "cedida": true,
+    "local": "scripts/cedidas/sevilla/santa-marta-sevilla-cristo.jpg",
+    "tam": 152501,
     "titular": "Santísimo Cristo de la Caridad en su Traslado al Sepulcro"
    }
   },

@@ -4826,14 +4826,16 @@
    }
   },
   "santa-marta-sevilla": {
-   "juntos": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:El_Misterio_de_Santa_Marta_saliendo_de_la_Catedral.jpg",
-    "titulo": "File:El Misterio de Santa Marta saliendo de la Catedral.jpg",
-    "autor": "Manuel Agüera Ostos",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "cristo": {
+    "autor": "Santa Marta (Sevilla)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.instagram.com/hdadsantamarta/",
+    "local": "scripts/cedidas/sevilla/santa-marta-sevilla-cristo.jpg",
+    "titulo": "Cedida: Santísimo Cristo de la Caridad en su Traslado al Sepulcro",
     "titular": "Santísimo Cristo de la Caridad en su Traslado al Sepulcro",
-    "foco": "50% 30%"
+    "foco": "50% 30%",
+    "permiso": "Publicada por la propia hermandad en su cuenta oficial @hdadsantamarta (bio «Perfil oficial - Hdad. de Santa Marta - Sevilla», enlaza hermandaddesantamarta.org; https://www.instagram.com/p/DSHUeN9jFP5/, imagen 2, 10-dic-2025: «Nuestros Titulares en el altar mayor de San Andrés»), sin fotógrafo citado, coautor ni firma. Recortada al misterio del Traslado (sin la base del altar ni el borde del retablo). Sustituye a la de Commons, el paso de lejos. Aviso de Colabora del 15-nov-2026 («No hay foto»). Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su perfil."
    }
   },
   "las-penas-sevilla": {
