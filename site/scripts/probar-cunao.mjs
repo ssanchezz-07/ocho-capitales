@@ -468,7 +468,9 @@ caso('B8-1 «cuánto dura» la Macarena: cuenta desde la cruz de guía (oficial)
 caso('B8-2 «cuánto dura» la Esperanza de Triana: no da las 03:07 como su salida', motor(), '¿Cuánto dura la Esperanza de Triana?', y(contiene('01:19 (hora oficial)', 'es una estimación'), noDice('sale a las 03:07')));
 // B9: la próxima salida extraordinaria de una cofradía (D.ex) en «¿a qué hora sale?», con sus horas y el plano de esa salida;
 // pasada la fecha, ya no (Pablo, 10-nov). Con los datos del día: si no queda ninguna por delante, se omite.
-{ const x = (D.ex || []).find((e) => D.hermandades.some((h) => h.s === e[4]));
+// Solo las de hoy en adelante: cunao.json guarda también las de ayer (para las que acaban pasada la medianoche), y el 15-nov
+// la Pasión del 14 hizo fallar la publicación de las 7, porque erCuñao, como debe, ya no la anunciaba.
+{ const x = (D.ex || []).find((e) => e[0] >= HOY && D.hermandades.some((h) => h.s === e[4]));
   if (!x) omitida('B9 extraordinaria en «a qué hora sale» (no hay ninguna por delante)');
   else { const h = D.hermandades.find((k) => k.s === x[4]), q = '¿A qué hora sale ' + h.n + ' de ' + D.capitales.find((c) => c[0] === h.c)[1] + '?';
     caso('B9-1 «a qué hora sale» ' + h.n + ': su extraordinaria del ' + x[0] + ', con salida, entrada, fuente y el plano de esa salida', motor(HOY), q, y(contiene('salida extraordinaria', x[1], ...(x[8] ? [x[8]] : []), ...(x[10] ? ['según la'] : [])), (r) => r.enlaces.some((e) => e[0] === 'Verla en la calle' && e[1].indexOf(encodeURIComponent(x[9])) >= 0) || 'falta «Verla en la calle» con la pestaña ' + x[9]));
