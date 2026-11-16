@@ -49,10 +49,14 @@ for (const m of U.marchas) {
     // o tres: «A, B y C». Cada titular una vez y sin « y » colgando (auditoría de 258e5bf5)
     //  (formato exacto: «A», «A y B», «A, B y C»: la última separación « y », las anteriores «, »)
     const formaBuena = (seps) => !seps.length || (seps.at(-1) === ' y ' && seps.slice(0, -1).every((p) => p === ', '));
+    //  (cada titular con el nombre del portal o sin su anotación final entre paréntesis: «(misterio)»; las comillas «…» se quedan)
+    const sinAnot = (t) => String(t || '').replace(/\s*\((?![«"])[^()]*\)\s*$/, '');
     const deTitulares = (s, usados = new Set(), seps = []) => (h.titulares || []).some((x) => {
       if (usados.has(x.nombre)) return false;
-      if (s === x.nombre) return formaBuena(seps);
-      return [' y ', ', '].some((p) => s.startsWith(x.nombre + p) && deTitulares(s.slice(x.nombre.length + p.length), new Set([...usados, x.nombre]), [...seps, p]));
+      return [...new Set([x.nombre, sinAnot(x.nombre)])].some((nom) => {
+        if (s === nom) return formaBuena(seps);
+        return [' y ', ', '].some((p) => s.startsWith(nom + p) && deTitulares(s.slice(nom.length + p.length), new Set([...usados, x.nombre]), [...seps, p]));
+      });
     });
     if (d.titular && !deTitulares(d.titular)) err(m,`titular «${d.titular}» que no es de ${h.nombre}`);
     if (d.estado === 'sin-verificar') av(m, `sin verificar (${(m.fuentes.dedicatoria || []).join('+')}) → ${h.nombre}`);

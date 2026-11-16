@@ -496,7 +496,7 @@ const ponDed = (r, h, estado, fuentes, texto, imagenes) => {
     return t.replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
   };
   const sinNombreOficial = quitaNombreOficial(String(texto || ''));
-  r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: titularDe(h, sinNombreOficial, sinNombreOficial !== String(texto || '')), texto: texto || '', estado };
+  r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: nombreT(titularDe(h, sinNombreOficial, sinNombreOficial !== String(texto || ''))), texto: texto || '', estado };
   for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
 };
 function titularDe(h, sinNombreOficial, quitado) {
@@ -531,6 +531,10 @@ function titularesImagen(h, imagen) {
       const pre = (h.titulares || []).map((x) => x.nombre).filter((x) => { const nx = norm(nombreT(x)); const gx = genero(x); return nx.startsWith(n + ' ') && (!g || !gx || g === gx); });
       if (pre.length === 1) t = pre[0];
     }
+    // «San Juan» es el San Juan Evangelista de la hermandad, si lo tiene por titular (Salesianos de Málaga)
+    if (!t && norm(tr) === 'san juan') t = (h.titulares || []).map((x) => x.nombre).find((x) => norm(nombreT(x)) === 'san juan evangelista') || '';
+    // (se guarda sin la anotación del portal: «(misterio)», «(copia de Barbero Gor, 1982)»; las comillas «…» sí se quedan)
+    if (t) t = nombreT(t);
     if (t && !out.includes(t)) out.push(t);
   }
   return out;
