@@ -150,7 +150,8 @@ export function escribeCabeceras({ DIST, BASE, SITE, redirecciones = [] }) {
   // enlaces copiados de GitHub Pages (…/ocho-capitales/…) en el dominio nuevo
   // y las fichas unidas con otra (bandas con dos fichas, build.mjs): la dirección vieja, con y sin barra final, a la que queda
   if (b === '/') fs.writeFileSync(path.join(DIST, '_redirects'), '# Generado por site/despliegue.mjs\n/ocho-capitales/* /:splat 301\n/ocho-capitales /  301\n'
-    + redirecciones.flatMap(([de, a]) => [`${de} ${a} 301`, `${de.replace(/\/$/, '')} ${a} 301`]).join('\n') + (redirecciones.length ? '\n' : ''));
+    // el par puede llevar su código: 302 si la redirección puede dejar de serlo (la página de música de una hermandad); si no, 301
+    + redirecciones.flatMap(([de, a, cod = 301]) => [`${de} ${a} ${cod}`, `${de.replace(/\/$/, '')} ${a} ${cod}`]).join('\n') + (redirecciones.length ? '\n' : ''));
 }
 
 // ---------- límites ----------

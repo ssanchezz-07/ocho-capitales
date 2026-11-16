@@ -1381,9 +1381,10 @@ ${secId('marchas', titM, nM ? listaM(relevantes) : '', 'fx-sec-marchas')}
     }));
   } else {
     // Sin página de música (todo cabe en la ficha): su dirección no da 404 si estuvo publicada (una hermandad que baja de 6 marchas,
-    // como los Civiles de Jaén al pasar 4 al Huerto, 16-nov). Va a la ficha: meta refresh aquí y 301 en _redirects; fuera del sitemap.
+    // como los Civiles de Jaén al pasar 4 al Huerto, 16-nov). Va a la ficha: meta refresh aquí y 302 en _redirects (no 301: si la
+    // hermandad vuelve a tener más de 5 marchas, la página vuelve, y un 301 guardado en el navegador la escondería); fuera del sitemap.
     const d = u('hermandad/' + h.slug + '/');
-    REDIR_301.push([musicaUrl, d]);
+    REDIR_301.push([musicaUrl, d, 302]);
     write(`hermandad/${h.slug}/musica/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la hermandad</a></p></body></html>`); pages.pop();
   }
 }
