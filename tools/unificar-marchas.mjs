@@ -395,7 +395,11 @@ if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v
 const informe = { retiradas: [], nuevas: [], dudas: [] };
 const ponDed = (r, h, estado, fuentes, texto) => {
   // Titular nombrado en la dedicatoria (del mismo género). Si solo nombra la hermandad («Hdad. Crucifixión»), no se deduce el titular.
-  const tk = new Set(contenido(texto || '')); const g = genero(texto || ''); const nom = new Set(NOMBRES[h.slug].flat());
+  // Cofradías y Hermandades añade al final, entre paréntesis, el nombre oficial completo de la hermandad, que nombra a todos sus
+  // titulares: para el titular solo cuenta lo de antes («Nuestro Padre Jesús Nazareno Rescatado de Córdoba (… y María Santísima de
+  // la Amargura de CÓRDOBA)» es al Señor, no a la Virgen; 16-nov).
+  const sinNombreOficial = String(texto || '').replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
+  const tk = new Set(contenido(sinNombreOficial)); const g = genero(sinNombreOficial); const nom = new Set(NOMBRES[h.slug].flat());
   const tit = (h.titulares || []).map((t) => t.nombre).find((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || !c.every((w) => nom.has(w))); }) || '';
   r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: tit, texto: texto || '', estado };
   for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
