@@ -1379,6 +1379,12 @@ ${secId('marchas', titM, nM ? listaM(relevantes) : '', 'fx-sec-marchas')}
       title: `Bandas y marchas de ${h.nombre} (${c.nombre})`, desc: `Bandas que acompañan a ${h.nombre} (${c.nombre}, ${h.dia})${nM ? ' y ' + plural(nM, 'marcha', 'marchas') + ' ' + (ns === nM ? 'asociadas' : 'dedicadas') + ' a la hermandad' : ''}.`, body: mus, path: `hermandad/${h.slug}/musica/`, image: ogOf(im) || ogNaz(h), active: 'hermandades/',
       crumbs: [['Portada', u()], [c.nombre, u('semana-santa/' + c.slug + '/')], [h.nombre, fichaUrl], ['Bandas y marchas', '']],
     }));
+  } else {
+    // Sin página de música (todo cabe en la ficha): su dirección no da 404 si estuvo publicada (una hermandad que baja de 6 marchas,
+    // como los Civiles de Jaén al pasar 4 al Huerto, 16-nov). Va a la ficha: meta refresh aquí y 301 en _redirects; fuera del sitemap.
+    const d = u('hermandad/' + h.slug + '/');
+    REDIR_301.push([musicaUrl, d]);
+    write(`hermandad/${h.slug}/musica/index.html`, `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${d}"><link rel="canonical" href="${d}"><title>${BRAND}</title></head><body><p><a href="${d}">Ir a la hermandad</a></p></body></html>`); pages.pop();
   }
 }
 
