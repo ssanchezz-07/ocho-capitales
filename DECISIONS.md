@@ -821,3 +821,30 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
 ## 2026-11-11 · Cabecera de Sevilla: sin el 71 repetido (sesión Lanzamiento)
 - Pablo vio en su iPhone el «71» dos veces en la cabecera de Sevilla (el lema empezaba por «71 hermandades,» y debajo la línea dorada daba «71 hermandades (11 de Vísperas) · 11 jornadas»). Decidió (11-nov, entre dos opciones): **quitar el 71 del lema** y dejar todo lo demás como estaba. El lema de Sevilla empieza ahora por «Pasos a costal y la Madrugá, con la Catedral como estación de penitencia desde el sínodo de 1604.» (cambio en `tools/build-data.js` y `portal-cofrade/data/portal.json`); su fuente (Consejo y Wikipedia) sigue valiendo para lo que queda. Las otras siete capitales no repetían la cifra y no cambian.
 - **Descartado (antes de esa decisión):** reorganizar la cabecera de las 8 capitales (lema como primer párrafo del contenido, línea dorada corta sin las vísperas). Pablo prefirió el cambio mínimo.
+
+## 2026-11-16 · Marchas ligadas a una hermandad que no es la suya (Marchas y base de datos)
+- **Causa:** la ficha de Cofradías y Hermandades (cyh) da por separado la imagen y el nombre oficial de su hermandad, pero se leían como un solo texto. Las palabras se mezclaban: «Esperanza, Reina de los Mártires» (imagen) + «Cautivo en su Soledad» (Hermandad del Juncal) casaban con «Virgen de la Esperanza en su Soledad», de Bendición y Esperanza; «Dulce Nombre de Jesús Nazareno del Paso» casaba con el Dulce Nombre de Málaga, y no con la Esperanza. Además, solo se guardaba la primera imagen y la ciudad salía del listado, no de la ficha (Soledad de San Pablo: la primera imagen es de Zaragoza).
+- **Elegido:** la hermandad sale solo del nombre oficial que da cyh (`hermandadCyh` en `tools/unificar-marchas.mjs`). El orden es este:
+  1. La tabla revisada a mano, `tools/sources/cyh-hermandades.json` (120 nombres; 63 son de hermandades que no tenemos y no ligan; Desamparados de Málaga, confirmado por Pablo el 16-nov: el grupo parroquial de Santa María Goretti).
+  2. El nombre oficial del portal casi igual (Dice ≥ 0,75).
+  3. Los titulares del portal (≥ 75 % de las palabras y una frase específica).
+  4. Si nada de eso resuelve, sin ligar y anotada en el informe (`cyh_sin_casar`).
+  La imagen solo decide el titular, y entre dos fichas del portal con el mismo nombre oficial: Columna/Resurrección de Cádiz y Cañilla/Soledad/Facundillos de Granada (las tres fichas tienen el mismo nombre oficial; el Dulce Nombre va a los Facundillos). Una ciudad que no es de las ocho nunca liga.
+- **Varias imágenes:** `importar-marchas-cyh.mjs --fichas-todas` vuelve a leer las fichas y guarda todas las imágenes, cada una con su hermandad (se emparejan por el número del enlace de la imagen y el del emblema). Si son dos imágenes de dos ciudades, liga la nuestra con su titular. Si son dos de la misma hermandad, se guardan los dos titulares («A y B»), porque la ficha dedica la marcha a los dos.
+- **Palabras cortas:** «la O», «la Fe» y «San Juan Evangelista» se apuntan como una sola palabra solo con la frase entera, así que una «o» o una «fe» sueltas no casan. San Juan Evangelista cuenta como advocación corriente.
+- **Alcance, para que el bloque solo corrija:**
+  - Una marcha no gana un enlace que con la lectura de antes no tenía. Esas se apuntan en el informe (`cyh_ganarian`) para otro bloque. La excepción son las que solo fallaban por «la O» / «la Fe», que es el punto 5 del encargo.
+  - Un enlace publicado que solo se apoyaba en cyh no se repone si la misma ficha, leída bien, dice que es de otra hermandad. Es su propia fuente la que lo desmiente, no una fuente nueva que choca con lo publicado (orden del 27-oct).
+  - Si esa marcha solo estaba por cyh, su ficha se queda publicada sin ligar, para que su dirección no se pierda.
+- **Glorias y patronas que aún no tenemos (Pablo, 16-nov: «indicarlo igualmente y, cuando las metamos, enlazar»):**
+  - La marcha muestra igualmente a quién está dedicada: la ficha de la marcha enseña el texto de cyh aunque no esté ligada. Son 120 marchas.
+  - Cuando una de esas hermandades entre en el portal, su nombre de cyh pasa de `null` al slug nuevo en `cyh-hermandades.json`. Si no estaba en la tabla, la regla del nombre oficial la casa sola. Después se regenera y sus marchas quedan ligadas.
+  - Para encontrarlas: los `null` de la tabla y la lista `cyh_sin_casar` del informe.
+- **Casos sueltos:**
+  - `esperanza-pedro-morales` se queda sin ligar, como estaba publicada, mediante una revisión «retirar». Dos fuentes la llevan a Córdoba (cyh mm=910897 y Patrimonio Musical) y otras dos a Málaga (cyh mm=910882 y el foro), y las dos fichas de cyh dan años distintos.
+  - `comprobar-marchas.mjs` acepta un titular doble «A y B» si los dos son titulares de esa hermandad.
+  - Al reponer un enlace publicado (7a2), la ciudad de la marcha es la de la hermandad.
+- **Descartado:**
+  - Una regla solo por cobertura de palabras: los nombres oficiales largos nombran titulares de gloria que el portal no tiene, y fallaba en las dos direcciones.
+  - Arreglar caso a caso en `marchas-revision.json`: eran cientos y volverían a salir mal en cada regeneración.
+  - Dar de alta ya las marchas que ahora ligarían: son contenido nuevo y van aparte.

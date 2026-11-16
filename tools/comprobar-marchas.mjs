@@ -45,7 +45,9 @@ for (const m of U.marchas) {
     const t = ' ' + norm(d.texto) + ' ';
     const otras = Object.entries(CAPS).filter(([s, n]) => s !== h.ciudad && t.includes(' ' + norm(n) + ' '));
     if (otras.length && !t.includes(' ' + norm(CAPS[h.ciudad]) + ' ')) err(m, `la dedicatoria nombra ${otras.map((o) => o[1]).join(', ')}: «${d.texto}»`);
-    if (d.titular && !(h.titulares || []).some((x) => x.nombre === d.titular)) err(m, `titular «${d.titular}» que no es de ${h.nombre}`);
+    // una ficha de cyh puede nombrar dos imágenes de la misma hermandad: «Titular A y Titular B» (16-nov)
+    const deTitulares = (s) => s === '' || (h.titulares || []).some((x) => s === x.nombre || (s.startsWith(x.nombre + ' y ') && deTitulares(s.slice(x.nombre.length + 3))));
+    if (d.titular && !deTitulares(d.titular)) err(m,`titular «${d.titular}» que no es de ${h.nombre}`);
     if (d.estado === 'sin-verificar') av(m, `sin verificar (${(m.fuentes.dedicatoria || []).join('+')}) → ${h.nombre}`);
   }
   for (const r of m.retiradas || []) if (!r.motivo || !r.fuente) err(m, `retirada de ${r.hermandad} sin motivo o sin fuente`);

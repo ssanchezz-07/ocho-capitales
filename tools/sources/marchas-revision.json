@@ -3315,6 +3315,16 @@
     "anio": "1996",
     "formacion": "Banda de cornetas y tambores"
    }
+  },
+  {
+   "slug": "esperanza-pedro-morales",
+   "hermandad": "esperanza-malaga",
+   "accion": "retirar",
+   "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=910897",
+   "nombre_fuente": "Cofradías y Hermandades (ficha mm=910897) y Patrimonio Musical (bd-marcha-3066)",
+   "fecha": "2026-11-16",
+   "nota": "Las fuentes no coinciden: la ficha mm=910897 de Cofradías y Hermandades y Patrimonio Musical (bd-marcha-3066) la dedican a la Esperanza de Córdoba; la ficha mm=910882 y el foro, a la Esperanza de Málaga, y las dos fichas dan años distintos (2008 y 1997). Mientras no se aclare, sin ligar, como ya estaba publicada.",
+   "campos": {}
   }
  ]
 }

@@ -44,19 +44,35 @@ const guardar = () => { fs.mkdirSync(path.dirname(OUT), { recursive: true }); fs
 
 // --fichas: abre las fichas que el unificador apunta en auditoria/cyh-fichas-pendientes.json y guarda solo dos hechos:
 // la imagen a la que está dedicada y el nombre de su hermandad (los dos enlaces de «Marcha dedicada a»)
-if (process.argv.includes('--fichas')) {
-  const pend = JSON.parse(fs.readFileSync(path.join(RAIZ, 'auditoria', 'cyh-fichas-pendientes.json'), 'utf8')).filter((id) => !(prev.fichas || {})[id]);
+// Una ficha puede dedicar la marcha a varias imágenes («Virgen de la Soledad de Zaragoza» y «Nuestra Señora de la Soledad de
+// Málaga»): se guardan todas, cada una con su hermandad. El enlace de la imagen (fichaimagineriaytallas.php?ii=6323802) lleva el
+// número de la hermandad (su emblema, images/emblemas/63238.jpg) más dos cifras: así se emparejan (16-nov).
+// --fichas-todas vuelve a leer las fichas ya leídas con el formato antiguo (solo la primera imagen).
+const leeFicha = (h) => {
+  const i = h.indexOf('Marcha dedicada a');
+  const tramo = i < 0 ? '' : h.slice(i, i + 6000).split(/<div class="col-md|<h2|audio-block/)[0];
+  const imgs = [...tramo.matchAll(/fichaimagineriaytallas\.php\?ii=(\d+)[^"]*">([\s\S]*?)<\/a>/g)].map((m) => ({ ii: m[1], imagen: dec(m[2]) }));
+  const hers = [...tramo.matchAll(/(?:emblemas\/(\d+)\.[a-z]+"[\s\S]*?)?<a href="fichacofradia[^"]*">([\s\S]*?)<\/a>/g)].map((m) => ({ id: m[1] || '', hermandad: dec(m[2]) }));
+  const dedicatorias = imgs.map((x, k) => {
+    const h1 = hers.find((y) => y.id && x.ii.slice(0, -2) === y.id) || (imgs.length === hers.length ? hers[k] : null);
+    return { imagen: x.imagen, hermandad: h1 ? h1.hermandad : '' };
+  });
+  // hermandades sin imagen (la marcha dedicada a la hermandad entera)
+  for (const y of hers) if (!dedicatorias.some((d) => d.hermandad === y.hermandad)) dedicatorias.push({ imagen: '', hermandad: y.hermandad });
+  const d0 = dedicatorias[0] || { imagen: '', hermandad: '' };
+  const texto = (d) => [d.imagen, d.hermandad && `(${d.hermandad})`].filter(Boolean).join(' ');
+  return { imagen: d0.imagen, hermandad: d0.hermandad, dedicatoria: texto(d0), dedicatorias: dedicatorias.map((d) => ({ ...d, texto: texto(d) })), v: 2 };
+};
+if (process.argv.includes('--fichas') || process.argv.includes('--fichas-todas')) {
   prev.fichas ||= {};
+  const pend = process.argv.includes('--fichas-todas')
+    ? Object.keys(prev.fichas).filter((id) => prev.fichas[id].v !== 2)
+    : JSON.parse(fs.readFileSync(path.join(RAIZ, 'auditoria', 'cyh-fichas-pendientes.json'), 'utf8')).filter((id) => !prev.fichas[id]);
   console.log('fichas por leer', pend.length);
   let n = 0;
   for (const id of pend) {
     try {
-      const h = await pedir(B + 'fichamarcha.php?mm=' + id);
-      const i = h.indexOf('Marcha dedicada a');
-      const tramo = i < 0 ? '' : h.slice(i, i + 3000).split(/<div class="col-md|<h2|audio-block/)[0];
-      const imagen = dec((tramo.match(/fichaimagineriaytallas\.php[^"]*">([\s\S]*?)<\/a>/) || [])[1] || '');
-      const hermandad = dec((tramo.match(/fichacofradia[^"]*">([\s\S]*?)<\/a>/) || [])[1] || '');
-      prev.fichas[id] = { imagen, hermandad, dedicatoria: [imagen, hermandad && `(${hermandad})`].filter(Boolean).join(' ') };
+      prev.fichas[id] = leeFicha(await pedir(B + 'fichamarcha.php?mm=' + id));
     } catch (e) { console.log('fallo', id, e.message); }
     if (++n % 50 === 0) { guardar(); console.log(n, '/', pend.length); }
   }

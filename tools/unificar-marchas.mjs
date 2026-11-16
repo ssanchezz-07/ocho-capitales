@@ -100,7 +100,12 @@ function lugares(texto) {
 // ---------- hermandades: frases que las identifican ----------
 const GENERICO = new Set('nuestro nuestra padre madre senor senora jesus maria santisima santisimo santo santa cristo virgen de del la las los el y e en su sus a al san juan evangelista ntro ntra stmo stma n s sr sra hermandad cofradia real ilustre pontificia archicofradia sacramental fervorosa venerable primitiva antigua muy hdad cofr nazarenos penitencia culto procesion dona don nino mariano'.split(' '));
 const COMUN = new Set('mercedes merced rosario carmen pilar salud angeles remedios consolacion aurora cabeza rocio reyes inmaculada concepcion asuncion pastora auxiliadora esperanza dolores dolorosa soledad amparo paz victoria angustias piedad caridad misericordia estrella luz gracia candelaria encarnacion nazareno amor perdon sangre expiracion humildad cautivo penas buena muerte amargura lagrimas traspaso socorro patrocinio refugio'.split(' '));
-const contenido = (s) => norm(s).split(' ').filter((w) => w.length >= 3 && !GENERICO.has(w));
+// Advocaciones de palabras cortas («María Santísima de la O», «Jesús de la Fe», «San Juan Evangelista»): se apuntan como una sola
+// palabra («la_o», «la_fe», «juan_evangelista») solo cuando aparece la frase entera, para que casen sin dar aciertos falsos con «o»
+// o «fe» sueltas (auditor-datos, 16-nov). San Juan Evangelista es titular de muchas hermandades: cuenta como advocación corriente.
+const CORTAS = [[/\bla o\b/, 'la_o'], [/\bde la fe\b|^la fe\b/, 'la_fe'], [/\bsan juan evangelista\b/, 'juan_evangelista']];
+const contenido = (s) => { const n = norm(s); const w = n.split(' ').filter((x) => x.length >= 3 && !GENERICO.has(x)); for (const [re, t] of CORTAS) if (re.test(n)) w.push(t); return w; };
+COMUN.add('juan_evangelista');
 // Frases de sus titulares (el nombre de la hermandad va aparte, en NOMBRES). Cada una sabe si es de Cristo o de la Virgen:
 // «Virgen del Buen Fin» no es el «Cristo del Buen Fin» (es de la Lanzada, no del Buen Fin)
 const genero = (s) => { const t = ' ' + norm(s) + ' '; const m = /\b(virgen|maria|senora|sra|ntra|reina|madre|dolorosa|nuestra)\b/.test(t), c = /\b(cristo|jesus|senor|nazareno|padre|nuestro|ntro|crucificado|cautivo)\b/.test(t); return m && !c ? 'm' : c && !m ? 'c' : ''; };
@@ -178,6 +183,68 @@ function clasifica(texto, localidad, h) {
   if (mine) return { e: 'casa' };
   return { e: 'nada' };
 }
+
+// ---------- hermandad de una ficha de Cofradías y Hermandades (16-nov) ----------
+// La ficha dice a qué imagen va la marcha y, aparte, el nombre oficial de su hermandad, que acaba en « de CIUDAD». Antes se juntaban
+// en un solo texto y las palabras de los dos se mezclaban: «Esperanza, Reina de los Mártires» (imagen) + «Cautivo en su Soledad»
+// (hermandad del Juncal) casaban con «Virgen de la Esperanza en su Soledad», de otra hermandad. Ahora la hermandad sale SOLO de su
+// nombre oficial, y la imagen solo dice el titular:
+//   1. la tabla revisada a mano (tools/sources/cyh-hermandades.json) manda;
+//   2. si no, el nombre oficial del portal casi igual (coeficiente de Dice de sus palabras ≥ 0,75, sin otra igual de cerca);
+//   3. si no, los titulares del portal: casi todas las palabras del nombre de cyh son de una sola hermandad (≥ 75 %, la siguiente
+//      ≤ 50 %) y casa entera una frase específica suya (no una advocación corriente suelta);
+//   4. si no, no es nuestra: sin ligar, y sale en el informe (cyh_sin_casar) para revisarla.
+// Una ciudad que no es de las ocho capitales (Zaragoza) nunca liga.
+const CYH_TABLA = leer(path.join(DIR, 'sources/cyh-hermandades.json'), { nombres: {} }).nombres;
+const ciudadCyh = (her) => { const m = String(her || '').match(/\sde ([A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ .'-]*?)\s*$/); return m ? m[1].trim() : ''; };
+const DECOR = new Set('insigne humilde franciscana dominica servita mercedaria trinitaria carmelita agustina serafica imperial antiquisima devota noble congregacion esclavitud agrupacion parroquial asociacion grupo fieles devotos cultural cofrade piadosa secular penitencial ilustrisima reales cofradias filial'.split(' '));
+const VACIAS = new Set('de del la las los el y e en su sus a al con por'.split(' '));
+const bolsa = (s) => new Set(norm(s).split(' ').filter((w) => w && !VACIAS.has(w)));
+const dice = (a, b) => { let n = 0; for (const w of a) if (b.has(w)) n++; return (2 * n) / (a.size + b.size || 1); };
+const PALABRAS_H = {}; for (const h of P.hermandades) PALABRAS_H[h.slug] = new Set([...FRASES[h.slug].flat(), ...NOMBRES[h.slug].flat(), ...contenido(h.nombre_oficial)]);
+const cacheCyh = new Map();
+const cyhSinCasarH = new Map();
+function hermandadCyh(her) {
+  if (cacheCyh.has(her)) return cacheCyh.get(her);
+  const lugar = ciudadCyh(her); const cap = CAPN[norm(lugar)] || '';
+  let slugs = [], via = '';
+  if (cap) {
+    if (Object.prototype.hasOwnProperty.call(CYH_TABLA, her)) { const v = CYH_TABLA[her]; slugs = v == null ? [] : [].concat(v); via = 'tabla'; }
+    else {
+      const nombre = her.slice(0, her.length - lugar.length - 4);
+      const t = bolsa(nombre);
+      const sc = P.hermandades.filter((h) => h.ciudad === cap && h.nombre_oficial).map((h) => ({ s: h.slug, d: dice(t, bolsa(h.nombre_oficial)), o: norm(h.nombre_oficial) })).sort((a, b) => b.d - a.d);
+      if (sc[0] && sc[0].d >= 0.75) { const igual = sc.filter((x) => x.o === sc[0].o); if (igual.length > 1) { slugs = igual.map((x) => x.s); via = 'nombre'; } else if (!sc[1] || sc[1].d < sc[0].d - 0.1) { slugs = [sc[0].s]; via = 'nombre'; } }
+      if (!via) {
+        const tkl = contenido(nombre).filter((w) => !DECOR.has(w)); const tk = new Set(tkl);
+        const res = [];
+        for (const h of P.hermandades) if (h.ciudad === cap) {
+          const fr = [...NOMBRES[h.slug], ...FRASES[h.slug]].filter((f) => f.every((w) => tk.has(w)));
+          if (!fr.length) continue;
+          res.push({ s: h.slug, cov: tkl.filter((w) => PALABRAS_H[h.slug].has(w)).length / (tkl.length || 1), esp: fr.some((f) => f.length >= 2 || !COMUN.has(f[0])) });
+        }
+        res.sort((a, b) => b.cov - a.cov);
+        if (res[0] && res[0].cov >= 0.75 && res[0].esp && (!res[1] || res[1].cov <= 0.5)) { slugs = [res[0].s]; via = 'titulares'; }
+      }
+      if (!via) cyhSinCasarH.set(her, 0);
+    }
+  }
+  const out = { lugar, cap, slugs, via };
+  cacheCyh.set(her, out);
+  return out;
+}
+// Titulares de una hermandad que nombra el texto de la imagen (mismo género; sin deducir nada si solo nombra la hermandad)
+const titularesEn = (h, imagen) => {
+  const tk = new Set(contenido(imagen)); const g = genero(imagen); const nom = new Set(NOMBRES[h.slug].flat());
+  return (h.titulares || []).map((t) => t.nombre).filter((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || !c.every((w) => nom.has(w))); });
+};
+// De las hermandades que da el nombre oficial, la de la imagen (si el nombre es de dos fichas del portal, decide el titular)
+const eligeCyh = (d) => {
+  const hs = d.cyh.slugs.map((s) => HERM[s]).filter(Boolean);
+  if (hs.length <= 1) return hs[0] || null;
+  const con = hs.filter((h) => titularesEn(h, d.cyh.imagen).length);
+  return con[0] || hs[0];
+};
 
 // ---------- 1. registros del catálogo (mdp) ----------
 const R = []; // registros del modelo
@@ -305,8 +372,17 @@ for (const rp of REPS) for (const x of rp.marchas) {
 // Solo para cruzar y completar: si la marcha ya está (título comparable + compositor), su ficha se cita y completa formación,
 // año y capital de la dedicatoria. Las que no están solo entran si la dedicatoria de su ficha nombra una hermandad del portal.
 // Interruptores para subir por bloques: SIN_CYH=1, SIN_NUEVAS_PM=1, SIN_REPERTORIO=1 dejan fuera esas importaciones
-const CYH = process.env.SIN_CYH ? null : leer(path.join(RAIZ, 'auditoria', 'cyh-marchas.json'), null);
+const CYH = process.env.SIN_CYH ? null : leer(process.env.CYH_JSON || path.join(RAIZ, 'auditoria', 'cyh-marchas.json'), null);
 const urlCyh = (id) => `https://www.cofradiasyhermandades.es/fichamarcha.php?mm=${id}`;
+// Cada imagen de la ficha es una dedicatoria aparte, con su hermandad y SU ciudad (la del nombre oficial, no la del listado:
+// «Soledad de San Pablo» sale en el listado de Málaga porque también va a la Soledad del Traslado, pero su primera imagen es de Zaragoza)
+// (la primera guarda también la lectura de antes, «legado»: todo en un texto y la capital del listado, para no dar enlaces nuevos)
+const dedsCyh = (f, id, cap) => (f && (f.dedicatorias || (f.dedicatoria ? [f] : [])) || []).filter((d) => d.dedicatoria || d.texto || d.imagen || d.hermandad).map((d, i) => {
+  const legado = i === 0 && f.dedicatoria ? { texto: f.dedicatoria, loc: CAP[cap], f: 'cyh', url: urlCyh(id) } : null;
+  const texto = d.texto || d.dedicatoria || [d.imagen, d.hermandad && `(${d.hermandad})`].filter(Boolean).join(' ');
+  const hc0 = d.hermandad ? hermandadCyh(d.hermandad) : null; const hc = hc0 && (hc0.cap || hc0.lugar) ? hc0 : null;
+  return { texto, loc: hc ? (hc.cap ? CAP[hc.cap] : hc.lugar || CAP[cap]) : CAP[cap], f: 'cyh', url: urlCyh(id), grupo: 'cyh' + id, legado, cyh: hc ? { ...hc, imagen: d.imagen || '', hermandad: d.hermandad } : null };
+});
 const tituloCyh = (t) => { const s = String(t || '').replace(/^[¡!¿?«»"'\s]+|[¡!¿?«»"'\s]+$/g, (m) => m.trim()).trim(); return s === s.toUpperCase() ? s.toLowerCase().replace(/(^|[\s(¡¿«"'])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|El|Y|E|En|A|Al|Su|Sus|Mi|Tu)\b(?!$)/g, (w, x, i, s) => (/^[¡¿«"'\s]*$/.test(s.slice(0, i)) ? w : w.toLowerCase())) : s; };
 const cyhSinCasar = [];
 if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v.marchas) {
@@ -318,19 +394,22 @@ if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v
   if (/^\d{4}$/.test(x.anio)) r._anios = [...(r._anios || []), { v: x.anio, f: 'cyh', url: urlCyh(x.id) }];
   (r._ciudadesCyh ||= new Set()).add(cap);
   const f = CYH.fichas && CYH.fichas[x.id];
-  if (f && f.dedicatoria) r._deds = [...(r._deds || []), { texto: f.dedicatoria, loc: CAP[cap], f: 'cyh', url: urlCyh(x.id) }];
+  if (f && !(r._deds || []).some((d) => d.grupo === 'cyh' + x.id)) r._deds = [...(r._deds || []), ...dedsCyh(f, x.id, cap)];
 }
 // Marchas que no teníamos: entran solo si su ficha (leída con --fichas) dedica la marcha a una hermandad del portal
 if (CYH) for (const x of cyhSinCasar) {
   const f = CYH.fichas && CYH.fichas[x.id];
-  if (!f || !f.dedicatoria) continue;
-  const h = (() => { const { top, cand } = mejorHermandad(f.dedicatoria, x.capital); return top && cand.length === 1 ? cand[0] : null; })();
-  if (!h || clasifica(f.dedicatoria, CAP[x.capital], h).e !== 'casa') continue;
+  const ds = dedsCyh(f, x.id, x.capital);
+  if (!ds.length) continue;
+  // Entran las mismas candidatas que con la regla de siempre (sobre el texto de la primera imagen): este arreglo corrige enlaces, no
+  // da de alta marchas nuevas (16-nov). A qué hermandad quedan ligadas (o si a ninguna, y entonces no entran) lo decide la sección 4.
+  const h = (() => { const t = f.dedicatoria || ds[0].texto; const { top, cand } = mejorHermandad(t, x.capital); return top && cand.length === 1 && clasifica(t, CAP[x.capital], cand[0]).e === 'casa' ? cand[0] : null; })();
+  if (!h) continue;
   const titulo = tituloCyh(x.titulo);
   const r = nuevo({ slug: darSlug(titulo + ' ' + x.autor), titulo, autor: x.autor, formacion: x.formacion.length === 1 ? x.formacion[0] : '' });
   fuente(r, 'titulo', 'cyh', urlCyh(x.id)); if (x.autor) fuente(r, 'autor', 'cyh'); if (r.formacion) fuente(r, 'formacion', 'cyh');
   if (/^\d{4}$/.test(x.anio)) r._anios = [{ v: x.anio, f: 'cyh', url: urlCyh(x.id) }];
-  r._deds = [{ texto: f.dedicatoria, loc: CAP[x.capital], f: 'cyh', url: urlCyh(x.id) }];
+  r._deds = ds;
   r._ciudadesCyh = new Set([x.capital]); r._soloNueva = true;
   (porTituloR.get(nt(titulo)) || porTituloR.set(nt(titulo), []).get(nt(titulo))).push(r);
 }
@@ -393,80 +472,138 @@ if (CYH) for (const [cap, v] of Object.entries(CYH.capitales)) for (const x of v
 
 // ---------- 4. dedicatorias: verificar las ligadas y ligar las del catálogo que nombran una hermandad ----------
 const informe = { retiradas: [], nuevas: [], dudas: [] };
-const ponDed = (r, h, estado, fuentes, texto) => {
+// imagenes: las imágenes de las fichas de cyh que van a esta hermandad (sin el nombre oficial). Si son dos titulares de la misma
+// hermandad («Cristo de la Redención…» y «María Santísima del Consuelo…», mm=912720) se guardan los dos: la ficha dedica la marcha
+// a los dos, y el titular es un texto que se muestra («Titular A y Titular B»).
+const ponDed = (r, h, estado, fuentes, texto, imagenes) => {
+  if (imagenes && imagenes.length) {
+    const tits = [...new Set(imagenes.map((im) => titularDe(h, im, true)).filter(Boolean))];
+    r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: tits.join(' y '), texto: texto || '', estado };
+    for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
+    return;
+  }
+  const quitaNombreOficial = (t) => {
+    if (/\sde [A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ .'-]*\)\s*$/.test(t)) { const u = t.trimEnd(); let n = 0; for (let i = u.length - 1; i >= 0; i--) { if (u[i] === ')') n++; else if (u[i] === '(' && --n === 0) return u.slice(0, i).trimEnd(); } }
+    return t.replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
+  };
+  const sinNombreOficial = quitaNombreOficial(String(texto || ''));
+  r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: titularDe(h, sinNombreOficial, sinNombreOficial !== String(texto || '')), texto: texto || '', estado };
+  for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
+};
+function titularDe(h, sinNombreOficial, quitado) {
   // Titular nombrado en la dedicatoria (del mismo género). Si solo nombra la hermandad («Hdad. Crucifixión»), no se deduce el titular.
   // Cofradías y Hermandades añade al final, entre paréntesis, el nombre oficial completo de la hermandad, que nombra a todos sus
   // titulares: para el titular solo cuenta lo de antes («Nuestro Padre Jesús Nazareno Rescatado de Córdoba (… y María Santísima de
   // la Amargura de CÓRDOBA)» es al Señor, no a la Virgen; 16-nov).
   // El paréntesis de cyh acaba siempre en « de CIUDAD)» en mayúsculas y puede llevar otro dentro («… (Mena) de MÁLAGA)»), o decir
   // «Congregación», «Agrupación»…: se quita el último contando los de dentro. Si no acaba así, solo el que nombra hermandad o cofradía.
-  const quitaNombreOficial = (t) => {
-    if (/\sde [A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ .'-]*\)\s*$/.test(t)) { const u = t.trimEnd(); let n = 0; for (let i = u.length - 1; i >= 0; i--) { if (u[i] === ')') n++; else if (u[i] === '(' && --n === 0) return u.slice(0, i).trimEnd(); } }
-    return t.replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
-  };
-  const sinNombreOficial = quitaNombreOficial(String(texto || '')); const quitado = sinNombreOficial !== String(texto || '');
   const tk = new Set(contenido(sinNombreOficial)); const g = genero(sinNombreOficial); const nom = new Set(NOMBRES[h.slug].flat());
   // Titular que no es de Cristo ni de la Virgen y se llama como la hermandad («Santa Cena», «Sagrada Cena de Almería (…)»): vale si el
   // texto, ya sin el paréntesis, lo nombra y no habla de la hermandad, y es el único titular nombrado entero (auditor-datos, 16-nov)
   const corto = contenido(h.nombre.replace(/«[^»]*»/g, ' '));
   const enteros = (h.titulares || []).filter((t) => { const c = contenido(t.nombre); return c.length && c.every((w) => tk.has(w)); }).length;
   const comoLaHermandad = (c, gt) => !gt && quitado && sinNombreOficial.trim() && !/hdad|hermandad|cofrad/i.test(sinNombreOficial) && c.length === corto.length && c.every((w) => corto.includes(w)) && enteros === 1;
-  const tit = (h.titulares || []).map((t) => t.nombre).find((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || comoLaHermandad(c, gt) || !c.every((w) => nom.has(w))); }) || '';
-  r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: tit, texto: texto || '', estado };
-  for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
+  return (h.titulares || []).map((t) => t.nombre).find((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || comoLaHermandad(c, gt) || !c.every((w) => nom.has(w))); }) || '';
+}
+// Veredicto de una dedicatoria para una hermandad. Las de cyh con nombre oficial se juzgan por ese nombre (hermandadCyh), no por
+// las palabras sueltas del texto; si el nombre no lo resuelve nadie (ni tabla ni regla), se mira solo la imagen.
+const clasificaD = (d, h) => {
+  if (!d.cyh) return clasifica(d.texto, d.loc, h);
+  const c = d.cyh;
+  if (!c.cap) return { e: 'otra', m: `la dedica a ${c.hermandad}` };
+  if (c.cap !== h.ciudad) return { e: 'otra', m: `la dedica a una hermandad de ${CAP[c.cap]}` };
+  if (c.slugs.includes(h.slug)) { const el = eligeCyh(d); return el && el.slug !== h.slug ? { e: 'otra', m: `la imagen es de ${el.nombre}`, otra: el.slug } : { e: 'casa' }; }
+  if (c.slugs.length) { const el = eligeCyh(d); return { e: 'otra', m: `la dedica a ${el.nombre} (${CAP[c.cap]})`, otra: el.slug }; }
+  if (c.via === 'tabla') return { e: 'otra', m: `la dedica a ${c.hermandad}` };
+  return clasifica(c.imagen, d.loc, h);
 };
+// Hermandad a la que liga el texto de una dedicatoria (catálogo, Patrimonio Musical, partitura o la lectura antigua de cyh)
+function casaTexto(r, d, anotar) {
+  const { caps, otros } = lugares(d.texto);
+  const locCap = d.loc ? CAPN[norm(d.loc)] : null;
+  if (d.loc && !locCap) return null;
+  const ciudades = locCap ? [locCap] : [...caps];
+  if (ciudades.length !== 1 || (otros.size && !locCap)) return null;
+  // Dedicada a una persona («En memoria de…, capataz de…»): no es una dedicatoria a la hermandad
+  if (/^\s*(en|a la)\s+memoria|^\s*in memoriam/i.test(sinTildes(d.texto))) return null;
+  const { top, cand, porNombre } = mejorHermandad(d.texto, ciudades[0]);
+  if (!top || cand.length !== 1) { if (anotar && cand.length > 1) informe.dudas.push([r.slug, cand.map((x) => x.slug).join(' / '), 'casa con varias hermandades de la ciudad: ' + d.texto]); return null; }
+  const h = cand[0];
+  if (clasifica(d.texto, d.loc, h).e !== 'casa') return null;
+  // Hace falta una frase específica: el nombre de la hermandad, dos palabras de un titular, o una sola palabra que no sea
+  // advocación corriente (las Mercedes, el Rosario o los Ángeles tienen hermandades de gloria que no están en el portal)
+  const tk = new Set(contenido(d.texto));
+  // (sí vale una advocación corriente si la hermandad se llama así: «Virgen de la Amargura de Jaén» → La Amargura de Jaén)
+  const unica = (w) => P.hermandades.filter((x) => x.ciudad === h.ciudad && x.slug !== h.slug && (FRASES[x.slug].some((g) => g.includes(w)) || NOMBRES[x.slug].some((g) => g.includes(w)))).length === 0;
+  const seLlamaAsi = (w) => NOMBRES[h.slug].some((n) => n.length === 1 && n[0] === w);
+  const especifica = porNombre || FRASES[h.slug].some((f) => f.every((w) => tk.has(w)) && (f.length >= 2 || ((!COMUN.has(f[0]) || seLlamaAsi(f[0])) && unica(f[0]))));
+  if (!especifica) { if (anotar) informe.dudas.push([r.slug, h.slug, 'dedicatoria poco específica: ' + d.texto]); return null; }
+  return h.slug;
+}
+// ¿Lo que dicen las fichas de cyh de una marcha es definitivo? (todas sus imágenes con hermandad resuelta: nuestra, otra o de fuera)
+const cyhDefinitivo = (deds) => { const c = deds.filter((d) => d.cyh); return c.length > 0 && c.every((d) => !d.cyh.cap || d.cyh.slugs.length || d.cyh.via === 'tabla'); };
+const cyhHermandades = (deds) => new Set(deds.filter((d) => d.cyh && d.cyh.cap && d.cyh.slugs.length).map((d) => eligeCyh(d)).filter(Boolean).map((h) => h.slug));
+// Texto e imágenes de las fichas de cyh que van a una hermandad: el texto junta todas las imágenes de esas fichas (también las de
+// otra hermandad u otra ciudad, que es lo que dice la fuente); las imágenes, solo las de esta hermandad, para el titular
+const textoCyh = (deds, grupos) => deds.filter((d) => grupos.has(d.grupo)).map((d) => d.texto).join(' · ');
+const imagenesCyh = (ds, h) => ds.filter((d) => d.cyh && d.cyh.slugs.includes(h.slug) && (!d.cyh.slugs.length || eligeCyh(d) === h)).map((d) => d.cyh.imagen).filter(Boolean);
 for (const r of R) {
   const deds = [...(r._deds || []), ...(r._pm || []).filter((f) => f.d || f.u).map((f) => ({ texto: f.d, loc: (f.u || '').split(' - ').length >= 3 ? f.u.split(' - ').pop() : '', f: 'pm', id: f.id, url: urlPm(f.id) }))];
   r._pmCasa = new Set();
   if (r._h) {
     const h = HERM[r._h];
-    const veredictos = deds.map((d) => ({ ...d, ...clasifica(d.texto, d.loc, h) }));
+    const veredictos = deds.map((d) => ({ ...d, ...clasificaD(d, h) }));
     const casan = veredictos.filter((v) => v.e === 'casa'); for (const v of casan) if (v.id) r._pmCasa.add(v.id);
-    const otras = veredictos.filter((v) => v.e === 'otra');
+    // en una ficha de cyh con dos imágenes, la otra imagen (de otra hermandad o ciudad) no contradice a la que casa
+    const gruposCasa = new Set(casan.map((v) => v.grupo).filter(Boolean));
+    const otras = veredictos.filter((v) => v.e === 'otra' && !(v.grupo && gruposCasa.has(v.grupo)));
     const fuentesCasa = [{ f: r._o, url: r._oUrl }, ...casan];
     const sitios = new Set(fuentesCasa.filter((f) => FIABLE.has(f.f)).map((f) => f.f));
     if (otras.length && !OFICIAL.has(r._o) && !casan.length) {
       const o = otras[0];
-      r.retiradas.push({ hermandad: h.slug, origen: r._o, url: r._oUrl, motivo: `${o.f === 'pm' ? 'Patrimonio Musical' : 'Marchas de Procesión'} ${o.m}${o.texto ? ' («' + o.texto + '»)' : ''}`, fuente: o.url });
+      r.retiradas.push({ hermandad: h.slug, origen: r._o, url: r._oUrl, motivo: `${o.f === 'pm' ? 'Patrimonio Musical' : o.f === 'cyh' ? 'Cofradías y Hermandades' : 'Marchas de Procesión'} ${o.m}${o.texto ? ' («' + o.texto + '»)' : ''}`, fuente: o.url });
       informe.retiradas.push([r.slug, h.slug, r.retiradas.at(-1).motivo]);
       if (o.otra) r._otraHerm = o.otra;
     } else {
       const estado = sitios.size >= 2 ? 'contrastada' : sitios.size === 1 ? 'dedicada' : 'sin-verificar';
-      ponDed(r, h, estado, fuentesCasa, casan[0] ? casan[0].texto : '');
+      const c0 = casan[0];
+      if (c0 && c0.cyh) ponDed(r, h, estado, fuentesCasa, textoCyh(deds, new Set([c0.grupo])), casan.filter((v) => v.grupo === c0.grupo && v.cyh).map((v) => v.cyh.imagen).filter(Boolean));
+      else ponDed(r, h, estado, fuentesCasa, c0 ? c0.texto : '');
       if (otras.length) { r.discrepancias.push({ campo: 'dedicatoria', valores: otras.map((o) => ({ valor: o.texto, fuente: o.f, url: o.url, nota: o.m })), elegido: r._o }); informe.dudas.push([r.slug, h.slug, "se mantiene (" + r._o + (casan.length ? " + " + casan.map((c) => c.f).join(" + ") : "") + ") aunque " + otras[0].f + " " + otras[0].m]); }
     }
   }
   if (!r.dedicatoria && deds.length) {
     // ¿La dedicatoria del catálogo o de Patrimonio Musical nombra una hermandad del portal en su ciudad?
-    const porH = new Map();
+    const porH = new Map(); const pon = (m, s, d) => (m.get(s) || m.set(s, []).get(s)).push(d);
     for (const d of deds) {
-      const { caps, otros } = lugares(d.texto);
-      const locCap = d.loc ? CAPN[norm(d.loc)] : null;
-      if (d.loc && !locCap) continue;
-      const ciudades = locCap ? [locCap] : [...caps];
-      if (ciudades.length !== 1 || (otros.size && !locCap)) continue;
-      // Dedicada a una persona («En memoria de…, capataz de…»): no es una dedicatoria a la hermandad
-      if (/^\s*(en|a la)\s+memoria|^\s*in memoriam/i.test(sinTildes(d.texto))) continue;
-      const { top, cand, porNombre } = mejorHermandad(d.texto, ciudades[0]);
-      if (!top || cand.length !== 1) { if (cand.length > 1) informe.dudas.push([r.slug, cand.map((x) => x.slug).join(' / '), 'casa con varias hermandades de la ciudad: ' + d.texto]); continue; }
-      const h = cand[0];
-      if (clasifica(d.texto, d.loc, h).e !== 'casa') continue;
-      // Hace falta una frase específica: el nombre de la hermandad, dos palabras de un titular, o una sola palabra que no sea
-      // advocación corriente (las Mercedes, el Rosario o los Ángeles tienen hermandades de gloria que no están en el portal)
-      const tk = new Set(contenido(d.texto));
-      // (sí vale una advocación corriente si la hermandad se llama así: «Virgen de la Amargura de Jaén» → La Amargura de Jaén)
-      const unica = (w) => P.hermandades.filter((x) => x.ciudad === h.ciudad && x.slug !== h.slug && (FRASES[x.slug].some((g) => g.includes(w)) || NOMBRES[x.slug].some((g) => g.includes(w)))).length === 0;
-      const seLlamaAsi = (w) => NOMBRES[h.slug].some((n) => n.length === 1 && n[0] === w);
-      const especifica = porNombre || FRASES[h.slug].some((f) => f.every((w) => tk.has(w)) && (f.length >= 2 || ((!COMUN.has(f[0]) || seLlamaAsi(f[0])) && unica(f[0]))));
-      if (!especifica) { informe.dudas.push([r.slug, h.slug, 'dedicatoria poco específica: ' + d.texto]); continue; }
-      (porH.get(h.slug) || porH.set(h.slug, []).get(h.slug)).push(d);
+      // cyh con nombre oficial: liga a la hermandad que da ese nombre, con la imagen para elegir entre dos fichas del mismo nombre.
+      // Si el nombre no es de ninguna nuestra (o no está claro), esa imagen no liga.
+      if (d.cyh) { if (d.cyh.cap && d.cyh.slugs.length) { const h = eligeCyh(d); if (h) pon(porH, h.slug, d); } continue; }
+      const s = casaTexto(r, d, true); if (s) pon(porH, s, d);
+    }
+    // Si las fichas de cyh dicen con su nombre oficial que la marcha es de otra hermandad (o de otra ciudad), el texto de otra fuente
+    // que casa con una nuestra no basta: queda sin ligar y anotada
+    if (porH.size === 1 && cyhDefinitivo(deds) && !cyhHermandades(deds).has([...porH.keys()][0])) { informe.dudas.push([r.slug, [...porH.keys()][0], 'otra fuente casa, pero Cofradías y Hermandades la dedica a otra: ' + deds.filter((d) => d.cyh).map((d) => d.cyh.hermandad).join(' · ')]); porH.clear(); }
+    // Este arreglo (16-nov) corrige enlaces, no da enlaces nuevos: si con la lectura de antes (la ficha de cyh como un solo texto) la
+    // marcha no quedaba ligada, tampoco ahora; se apunta en el informe (cyh_ganarian) para revisarlo aparte
+    if (porH.size === 1) {
+      const viejo = new Map();
+      for (const d of deds) { const dv = d.cyh ? d.legado : d; if (!dv) continue; const s = casaTexto(r, dv, false); if (s) pon(viejo, s, dv); }
+      if (viejo.size !== 1) { (informe.cyh_ganarian ||= []).push([r.slug, [...porH.keys()][0], deds.filter((d) => d.cyh).map((d) => d.texto).join(' · ')]); porH.clear(); }
     }
     if (porH.size === 1) {
       const [hs, ds] = [...porH][0]; const h = HERM[hs];
       if (r.retiradas.some((x) => x.hermandad === hs)) { /* ya retirada */ } else {
         const sitios = new Set(ds.map((d) => d.f)); for (const d of ds) if (d.id) r._pmCasa.add(d.id);
-        ponDed(r, h, sitios.size >= 2 ? 'contrastada' : 'dedicada', ds, ds[0].texto);
-        informe.nuevas.push([r.slug, hs, ds[0].texto]);
+        const dc = ds.filter((d) => d.cyh);
+        // el texto es el de la primera fuente, como siempre; si es de cyh, con todas sus imágenes y el titular de las suyas
+        if (ds[0].cyh) ponDed(r, h, sitios.size >= 2 ? 'contrastada' : 'dedicada', ds, textoCyh(deds, new Set(dc.map((d) => d.grupo))), imagenesCyh(dc, h));
+        else {
+          ponDed(r, h, sitios.size >= 2 ? 'contrastada' : 'dedicada', ds, ds[0].texto);
+          // el texto del catálogo no nombra el titular, pero la ficha de cyh sí
+          if (!r.dedicatoria.titular && dc.length) { const t = [...new Set(imagenesCyh(dc, h).map((im) => titularDe(h, im, true)).filter(Boolean))]; if (t.length) r.dedicatoria.titular = t.join(' y '); }
+        }
+        informe.nuevas.push([r.slug, hs, r.dedicatoria.texto]);
       }
     } else if (porH.size > 1) informe.dudas.push([r.slug, [...porH.keys()].join(' / '), 'dedicatoria que casa con varias hermandades']);
   }
@@ -638,13 +775,23 @@ for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = cla
   const PUBL = new Map(); for (const m of PREV.marchas || []) if (m.dedicatoria && m.dedicatoria.hermandad) for (const s of [m.slug, ...(m.alias || [])]) PUBL.set(s, m);
   const retiradoAMano = (r, h) => REV.some((v) => v.accion === 'retirar' && (v.slug === r.slug || r.alias.includes(v.slug)) && (!v.hermandad || v.hermandad === h));
   let repuestos = 0;
+  // Excepción (16-nov): un enlace publicado que SOLO se apoyaba en la ficha de Cofradías y Hermandades, leída mal (las palabras del
+  // nombre oficial mezcladas con las de la imagen), no se repone si esa misma ficha, leída bien, dice que la marcha es de otra
+  // hermandad, de una hermandad que no es nuestra o de otra ciudad. Su propia fuente lo desmiente; no es una fuente nueva que choca.
+  const soloCyh = (p) => (p.fuentes.dedicatoria || []).length > 0 && p.fuentes.dedicatoria.every((f) => f === 'cyh');
+  const dedsDeFicha = (p) => { const id = ((p.urls || {}).cyh || '').match(/mm=(\d+)/); return id && CYH && CYH.fichas ? dedsCyh(CYH.fichas[id[1]], id[1], p.dedicatoria.ciudad) : []; };
+  const desmiente = (deds, p) => soloCyh(p) && cyhDefinitivo(deds) && !cyhHermandades(deds).has(p.dedicatoria.hermandad);
+  informe.no_repuestos = [];
   for (const r of R) {
     const p = [r.slug, ...r.alias].map((s) => PUBL.get(s)).find(Boolean);
     if (!p || (r.dedicatoria && r.dedicatoria.hermandad) || retiradoAMano(r, p.dedicatoria.hermandad) || !HERM[p.dedicatoria.hermandad]) continue;
+    if (desmiente(r._deds && r._deds.some((d) => d.cyh) ? r._deds : dedsDeFicha(p), p)) { informe.no_repuestos.push([r.slug, p.dedicatoria.hermandad]); continue; }
     if (r.dedicatoria && r.dedicatoria.texto) r.discrepancias.push({ campo: 'dedicatoria', valores: [{ valor: r.dedicatoria.texto, fuente: (r.fuentes.dedicatoria || []).join('+') }], elegido: 'publicada' });
     r.dedicatoria = { ...p.dedicatoria };
     r.fuentes.dedicatoria = (p.fuentes.dedicatoria || []).filter((f) => p.urls[f] || FUENTES[f]);
     for (const f of r.fuentes.dedicatoria) if (p.urls[f] && !r.urls[f]) r.urls[f] = p.urls[f];
+    // la capital de la marcha es la de la hermandad repuesta (como en 6d, que va antes y no la veía ligada)
+    if (!r.ciudad && r.dedicatoria.ciudad) { r.ciudad = r.dedicatoria.ciudad; r.fuentes.ciudad = [(r.fuentes.dedicatoria || [])[0] || '']; }
     r.retiradas = r.retiradas.filter((x) => x.hermandad !== p.dedicatoria.hermandad);
     repuestos++;
   }
@@ -654,6 +801,13 @@ for (const r of R) if (r.dedicatoria && r.dedicatoria.hermandad) { const n = cla
   for (const p of PUBL.values()) {
     if (vivas.has(p.slug) || yaRepuestas.has(p.slug) || !HERM[p.dedicatoria.hermandad]) continue;
     yaRepuestas.add(p.slug);
+    // (su dirección ya está publicada: la ficha se queda, sin ligar, con lo que dice la ficha de cyh)
+    const dd = dedsDeFicha(p);
+    if (desmiente(dd, p)) {
+      informe.no_repuestos.push([p.slug, p.dedicatoria.hermandad, 'se queda sin ligar']);
+      R.push({ ...p, tipo: p.tipo || '', estreno: p.estreno || '', lugar: p.lugar || '', detalles: p.detalles || '', fuentes: { ...p.fuentes }, urls: { ...p.urls }, retiradas: p.retiradas || [], discrepancias: p.discrepancias || [], alias: p.alias || [], dedicatoria: { hermandad: '', ciudad: '', titular: '', texto: dd.map((d) => d.texto).join(' · '), estado: 'dedicada' } });
+      continue;
+    }
     // la misma obra ya está con otra dirección y la misma hermandad: se une a ella y la dirección publicada queda como principal
     const misma = R.find((r) => nt(r.titulo) === nt(p.titulo) && mismoAutor(r.autor, p.autor) && r.dedicatoria && r.dedicatoria.hermandad === p.dedicatoria.hermandad);
     if (misma) {
@@ -755,6 +909,6 @@ const AUTOR_GRAFIA = { 'José Luís de la Torre Castellano': 'José Luis de la T
 limpio.forEach((m) => { if (AUTOR_GRAFIA[m.autor]) m.autor = AUTOR_GRAFIA[m.autor]; });
 fs.writeFileSync(OUT, '{"generado":' + JSON.stringify(new Date().toISOString().slice(0, 10)) + ',\n"nota":' + JSON.stringify('Modelo único de marchas (tools/unificar-marchas.mjs). Por campo, las fuentes que lo dan; dedicatoria.estado: contrastada (dos fuentes fiables), dedicada (una fiable), sin-verificar (solo foro o Wikipedia). De Patrimonio Musical solo se guarda el enlace.') + ',\n"fuentes":' + JSON.stringify(FUENTES) + ',\n"resumen":' + JSON.stringify(resumen) + ',\n"redirecciones":' + JSON.stringify(redirecciones) + ',\n"marchas":[\n' + limpio.map((m) => JSON.stringify(m)).join(',\n') + '\n]}\n');
 fs.mkdirSync(path.join(RAIZ, 'auditoria'), { recursive: true });
-fs.writeFileSync(path.join(RAIZ, 'auditoria/marchas-informe.json'), JSON.stringify({ ...informe, revision_sin_usar: sinUsar }, null, 1));
+fs.writeFileSync(path.join(RAIZ, 'auditoria/marchas-informe.json'), JSON.stringify({ ...informe, revision_sin_usar: sinUsar, cyh_sin_casar: [...cyhSinCasarH.keys()] }, null, 1));
 console.log(JSON.stringify(resumen, null, 1));
 console.log('retiradas', informe.retiradas.length, '· nuevas', informe.nuevas.length, '· dudas', informe.dudas.length, '· revisiones sin casar', sinUsar.length, PM ? '' : '· (sin la base de Patrimonio Musical: se reutiliza la pasada anterior)');
