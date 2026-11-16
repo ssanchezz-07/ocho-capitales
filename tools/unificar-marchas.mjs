@@ -398,9 +398,20 @@ const ponDed = (r, h, estado, fuentes, texto) => {
   // Cofradías y Hermandades añade al final, entre paréntesis, el nombre oficial completo de la hermandad, que nombra a todos sus
   // titulares: para el titular solo cuenta lo de antes («Nuestro Padre Jesús Nazareno Rescatado de Córdoba (… y María Santísima de
   // la Amargura de CÓRDOBA)» es al Señor, no a la Virgen; 16-nov).
-  const sinNombreOficial = String(texto || '').replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
+  // El paréntesis de cyh acaba siempre en « de CIUDAD)» en mayúsculas y puede llevar otro dentro («… (Mena) de MÁLAGA)»), o decir
+  // «Congregación», «Agrupación»…: se quita el último contando los de dentro. Si no acaba así, solo el que nombra hermandad o cofradía.
+  const quitaNombreOficial = (t) => {
+    if (/\sde [A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ .'-]*\)\s*$/.test(t)) { const u = t.trimEnd(); let n = 0; for (let i = u.length - 1; i >= 0; i--) { if (u[i] === ')') n++; else if (u[i] === '(' && --n === 0) return u.slice(0, i).trimEnd(); } }
+    return t.replace(/\s*\([^()]*\b(hermandad|cofrad[ií]a|archicofrad[ií]a)\b[^()]*\)\s*$/i, '');
+  };
+  const sinNombreOficial = quitaNombreOficial(String(texto || '')); const quitado = sinNombreOficial !== String(texto || '');
   const tk = new Set(contenido(sinNombreOficial)); const g = genero(sinNombreOficial); const nom = new Set(NOMBRES[h.slug].flat());
-  const tit = (h.titulares || []).map((t) => t.nombre).find((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || !c.every((w) => nom.has(w))); }) || '';
+  // Titular que no es de Cristo ni de la Virgen y se llama como la hermandad («Santa Cena», «Sagrada Cena de Almería (…)»): vale si el
+  // texto, ya sin el paréntesis, lo nombra y no habla de la hermandad, y es el único titular nombrado entero (auditor-datos, 16-nov)
+  const corto = contenido(h.nombre.replace(/«[^»]*»/g, ' '));
+  const enteros = (h.titulares || []).filter((t) => { const c = contenido(t.nombre); return c.length && c.every((w) => tk.has(w)); }).length;
+  const comoLaHermandad = (c, gt) => !gt && quitado && sinNombreOficial.trim() && !/hdad|hermandad|cofrad/i.test(sinNombreOficial) && c.length === corto.length && c.every((w) => corto.includes(w)) && enteros === 1;
+  const tit = (h.titulares || []).map((t) => t.nombre).find((t) => { const c = contenido(t); const gt = genero(t); return c.length && c.every((w) => tk.has(w)) && (!g || !gt || g === gt) && (g || comoLaHermandad(c, gt) || !c.every((w) => nom.has(w))); }) || '';
   r.dedicatoria = { hermandad: h.slug, ciudad: h.ciudad, titular: tit, texto: texto || '', estado };
   for (const f of fuentes) fuente(r, 'dedicatoria', f.f, f.url);
 };
