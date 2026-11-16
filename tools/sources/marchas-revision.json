@@ -3321,9 +3321,53 @@
    "hermandad": "esperanza-malaga",
    "accion": "retirar",
    "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=910897",
-   "nombre_fuente": "Cofradías y Hermandades (ficha mm=910897) y Patrimonio Musical (bd-marcha-3066)",
+   "nombre_fuente": "Cofradías y Hermandades (fichas mm=910882 y mm=910897) y Patrimonio Musical (bd-marcha-246 y bd-marcha-3066)",
    "fecha": "2026-11-16",
-   "nota": "Las fuentes no coinciden: la ficha mm=910897 de Cofradías y Hermandades y Patrimonio Musical (bd-marcha-3066) la dedican a la Esperanza de Córdoba; la ficha mm=910882 y el foro, a la Esperanza de Málaga, y las dos fichas dan años distintos (2008 y 1997). Mientras no se aclare, sin ligar, como ya estaba publicada.",
+   "nota": "Son dos obras distintas de Pedro Morales Muñoz fundidas en este registro: «Esperanza» (1997), a la Esperanza de Málaga (Patrimonio Musical bd-marcha-246, cyh mm=910882), y «María Santísima de la Esperanza» (2008), a la Esperanza de Córdoba (Patrimonio Musical bd-marcha-3066, cyh mm=910897). Mientras no se separen, sin ligar, como ya estaba publicada.",
+   "campos": {}
+  },
+  {
+   "slug": "costaleros-del-abuelo-francisco-vilchez-ballesteros",
+   "hermandad": "nuestro-padre-jesus-el-abuelo-jaen",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-7787",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-7787)",
+   "fecha": "2026-11-16",
+   "titular": "Nuestro Padre Jesús Nazareno («El Abuelo»)",
+   "texto": "Costaleros de Jesús Nazareno «El Abuelo» de Jaén",
+   "nota": "Patrimonio Musical y el título la dedican a los costaleros de Jesús Nazareno «El Abuelo»; la ficha de Cofradías y Hermandades (mm=914453) nombra a María Santísima de los Dolores, de la misma cofradía. Se queda el titular publicado y se anota la discrepancia.",
+   "discrepancia": {
+    "campo": "dedicatoria",
+    "valores": [
+     {
+      "valor": "María Santísima de los Dolores de Jaén (Antigua, Insigne y Real Cofradía de Nuestro Padre Jesús Nazareno y María Santísima de los Dolores de JAÉN)",
+      "fuente": "cyh",
+      "url": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=914453",
+      "nota": "nombra a la Virgen de los Dolores, no a «El Abuelo»"
+     }
+    ],
+    "elegido": "rev"
+   },
+   "campos": {}
+  },
+  {
+   "slug": "en-tu-sentencia-macarena-israel-jimenez-chozas",
+   "hermandad": "",
+   "accion": "retirar",
+   "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=904826",
+   "nombre_fuente": "Cofradías y Hermandades (ficha mm=904826)",
+   "fecha": "2026-11-16",
+   "nota": "La ficha no casa consigo misma: la imagen es Nuestro Padre Jesús de la Sentencia, titular de la Macarena, y el nombre oficial es el del Baratillo (Santa Cruz, Misericordia y Piedad). Ni el Baratillo ni la Santa Cruz que estaba publicada: sin ligar mientras no haya otra fuente.",
+   "campos": {}
+  },
+  {
+   "slug": "jesus-orando-en-el-huerto-francisco-martinez-martin",
+   "hermandad": "vera-cruz-y-oracion-huelva",
+   "accion": "confirmar",
+   "fuente": "https://www.patrimoniomusical.com/bd-marcha-2663",
+   "nombre_fuente": "Patrimonio Musical, base de datos (ficha bd-marcha-2663)",
+   "fecha": "2026-11-16",
+   "nota": "Patrimonio Musical la dedica a la «Hdad. de la Vera-Cruz (Huelva)» y la ficha de Cofradías y Hermandades (mm=904204) a la Sagrada Oración en el Huerto de la Vera Cruz: es la Vera Cruz y Oración, no la Santa Cruz (Providencia y Madre de Gracia) a la que estaba ligada.",
    "campos": {}
   }
  ]

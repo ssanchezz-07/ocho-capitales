@@ -211,3 +211,10 @@ Pasos: (1) cofradiasyhermandades.es; (2) marchas de Patrimonio Musical que falta
   - **Cambios:** 284 marchas cambian de hermandad (236 cambian, 35 pierden, 13 ganan por la O/la Fe) y entran 10 de la O. Titulares: 32 ganan y 27 pasan a doble («A y B»).
   - **Glorias y patronas que no tenemos:** muestran su dedicatoria sin ligar (120 marchas). Cuando entren en el portal, se cambia su `null` en la tabla y se regenera.
   - **Pendiente, en otro bloque:** 340 marchas que ligarían con la lectura nueva (`cyh_ganarian` del informe).
+  - **Segunda vuelta (auditoría de 258e5bf5):** regeneración idempotente; cinco enlaces que sus fuentes desmienten se corrigen (la Vera Cruz de Huelva; los Desamparados de Cádiz, la Auxiliadora de la Alhambra y la Merced de Córdoba quedan sin ligar); la Vera Cruz de Jaén reparte entre los Civiles y el Huerto; los titulares compuestos y triples se rellenan.
+  - **Cómo regenerar las marchas (orden exacta):**
+    1. Hacen falta `auditoria/patrimonio-marchas.json` y `auditoria/cyh-marchas.json`, que no están en git: cópialos de una copia de trabajo que los tenga. Sin ellos, `unificar-marchas` se para.
+    2. Parte del `tools/sources/marchas.json` publicado: `git show origin/main:tools/sources/marchas.json > tools/sources/marchas.json`.
+    3. Ejecuta `node tools/unificar-marchas.mjs` y luego `node tools/comprobar-marchas.mjs` (0 errores).
+    4. Una segunda pasada debe dar el mismo archivo.
+    5. El punto de partida importa: desde origin/main sale exactamente el archivo del commit. Desde 258e5bf5 sale igual salvo en una ficha (`maria-de-la-vera-cruz-jesus-morales-lopez`: texto con las dos imágenes, y otra posición), porque al reponer un enlace publicado se conserva su texto. Cada punto de partida es estable.

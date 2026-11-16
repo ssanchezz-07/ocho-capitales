@@ -46,7 +46,14 @@ for (const m of U.marchas) {
     const otras = Object.entries(CAPS).filter(([s, n]) => s !== h.ciudad && t.includes(' ' + norm(n) + ' '));
     if (otras.length && !t.includes(' ' + norm(CAPS[h.ciudad]) + ' ')) err(m, `la dedicatoria nombra ${otras.map((o) => o[1]).join(', ')}: «${d.texto}»`);
     // una ficha de cyh puede nombrar dos imágenes de la misma hermandad: «Titular A y Titular B» (16-nov)
-    const deTitulares = (s) => s === '' || (h.titulares || []).some((x) => s === x.nombre || (s.startsWith(x.nombre + ' y ') && deTitulares(s.slice(x.nombre.length + 3))));
+    // o tres: «A, B y C». Cada titular una vez y sin « y » colgando (auditoría de 258e5bf5)
+    //  (formato exacto: «A», «A y B», «A, B y C»: la última separación « y », las anteriores «, »)
+    const formaBuena = (seps) => !seps.length || (seps.at(-1) === ' y ' && seps.slice(0, -1).every((p) => p === ', '));
+    const deTitulares = (s, usados = new Set(), seps = []) => (h.titulares || []).some((x) => {
+      if (usados.has(x.nombre)) return false;
+      if (s === x.nombre) return formaBuena(seps);
+      return [' y ', ', '].some((p) => s.startsWith(x.nombre + p) && deTitulares(s.slice(x.nombre.length + p.length), new Set([...usados, x.nombre]), [...seps, p]));
+    });
     if (d.titular && !deTitulares(d.titular)) err(m,`titular «${d.titular}» que no es de ${h.nombre}`);
     if (d.estado === 'sin-verificar') av(m, `sin verificar (${(m.fuentes.dedicatoria || []).join('+')}) → ${h.nombre}`);
   }
@@ -200,6 +207,27 @@ if (sm && fs.existsSync(sm)) {
   const perdidas = vivos.filter((s) => !slugs.has(s) && !al.has(s));
   if (perdidas.length) errores.push(`${perdidas.length} direcciones publicadas se pierden: ${perdidas.slice(0, 5).join(', ')}`);
   else console.log(`direcciones publicadas: ${vivos.length}, todas cubiertas`);
+}
+// Fichas publicadas en origin/main: siguen vivas (con su dirección o como alias) o redirigen a la MISMA obra (no al listado: «» no
+// vale). Una regeneración que las pierde es un error (auditoría de 258e5bf5: 24 marchas sin ligar desaparecían en la segunda pasada).
+{
+  let pub = null;
+  try { pub = JSON.parse(execFileSync('git', ['show', 'origin/main:tools/sources/marchas.json'], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 1 << 28, stdio: ['ignore', 'pipe', 'ignore'] })); } catch (e) { avisos.push('origin/main: no se pudo leer tools/sources/marchas.json publicado; no se comprueban sus direcciones'); }
+  if (pub) {
+    const vivo = new Set(U.marchas.flatMap((m) => [m.slug, ...(m.alias || [])]));
+    const porSlug = new Map(U.marchas.map((m) => [m.slug, m]));
+    // misma obra: mismo título y mismo compositor (apellidos sin partículas, como mismoAutor en unificar)
+    const autorK = (s) => norm(s).split(' ').filter((w) => !['de', 'del', 'la', 'las', 'los', 'y'].includes(w)).sort().join(' ');
+    const misma = (a, b) => b && norm(a.titulo) === norm(b.titulo) && (!a.autor || !b.autor || autorK(a.autor) === autorK(b.autor) || autorK(a.autor).split(' ').some((w) => w.length > 3 && autorK(b.autor).split(' ').includes(w)));
+    const perdidas = [];
+    for (const m of pub.marchas || []) {
+      if (vivo.has(m.slug)) continue;
+      const dest = (U.redirecciones || {})[m.slug];
+      if (!dest || !misma(m, porSlug.get(dest))) perdidas.push(m.slug + (dest === '' ? ' (redirige al listado)' : dest ? ` (redirige a ${dest}, otra obra)` : ''));
+    }
+    if (perdidas.length) errores.push(`${perdidas.length} fichas publicadas en origin/main desaparecen sin redirigir a la misma obra: ${perdidas.slice(0, 8).join(', ')}`);
+    else console.log(`fichas publicadas en origin/main: ${(pub.marchas || []).length}, todas vivas o redirigidas a la misma obra`);
+  }
 }
 const r = U.resumen;
 console.log(`marchas ${r.marchas} · ligadas ${r.ligadas} en ${r.hermandades} hermandades (contrastadas ${r.contrastadas}, dedicadas ${r.dedicadas}, sin verificar ${r.sin_verificar}) · retiradas ${r.retiradas}`);

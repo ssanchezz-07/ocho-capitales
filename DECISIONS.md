@@ -829,7 +829,7 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
   2. El nombre oficial del portal casi igual (Dice ≥ 0,75).
   3. Los titulares del portal (≥ 75 % de las palabras y una frase específica).
   4. Si nada de eso resuelve, sin ligar y anotada en el informe (`cyh_sin_casar`).
-  La imagen solo decide el titular, y entre dos fichas del portal con el mismo nombre oficial: Columna/Resurrección de Cádiz y Cañilla/Soledad/Facundillos de Granada (las tres fichas tienen el mismo nombre oficial; el Dulce Nombre va a los Facundillos). Una ciudad que no es de las ocho nunca liga.
+  La imagen solo decide el titular, y entre dos fichas del portal con el mismo nombre oficial: Columna/Resurrección de Cádiz y Cañilla/Soledad/Facundillos de Granada (las tres fichas tienen el mismo nombre oficial; el Dulce Nombre va a los Facundillos) y la Vera Cruz de Jaén (los Civiles / el Huerto). El nombre oficial del portal se compara sin su paréntesis final («(sección del Domingo de Ramos)»). **Si la ficha no trae imagen, va a la primera de la lista de la tabla**, que es la ficha principal: la Humildad de Granada va a la Cañilla. Una ciudad que no es de las ocho nunca liga.
 - **Varias imágenes:** `importar-marchas-cyh.mjs --fichas-todas` vuelve a leer las fichas y guarda todas las imágenes, cada una con su hermandad (se emparejan por el número del enlace de la imagen y el del emblema). Si son dos imágenes de dos ciudades, liga la nuestra con su titular. Si son dos de la misma hermandad, se guardan los dos titulares («A y B»), porque la ficha dedica la marcha a los dos.
 - **Palabras cortas:** «la O», «la Fe» y «San Juan Evangelista» se apuntan como una sola palabra solo con la frase entera, así que una «o» o una «fe» sueltas no casan. San Juan Evangelista cuenta como advocación corriente.
 - **Alcance, para que el bloque solo corrija:**
@@ -844,6 +844,18 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
   - `esperanza-pedro-morales` se queda sin ligar, como estaba publicada, mediante una revisión «retirar». Dos fuentes la llevan a Córdoba (cyh mm=910897 y Patrimonio Musical) y otras dos a Málaga (cyh mm=910882 y el foro), y las dos fichas de cyh dan años distintos.
   - `comprobar-marchas.mjs` acepta un titular doble «A y B» si los dos son titulares de esa hermandad.
   - Al reponer un enlace publicado (7a2), la ciudad de la marcha es la de la hermandad.
+- **Segunda vuelta (auditoría de coordinación a 258e5bf5, 16-nov):**
+  - **La regeneración es idempotente.** Las marchas publicadas que ya no salen vuelven en el orden en que estaban publicadas, también las que están sin ligar. Si la misma obra sigue viva con otra dirección, la publicada redirige a ella. Dos pasadas seguidas dan el mismo `marchas.json`. `comprobar-marchas` da error si una ficha publicada en origin/main desaparece sin redirigir a la misma obra (redirigir al listado no vale).
+  - **Cuando la ficha de cyh desmiente un enlace publicado**, no se repone aunque también lo apoye Patrimonio Musical, porque PM solo casaba por las palabras de su texto («Hdad. gloriosa de los Desamparados, Cádiz» no es Jesús Caído). Si lo apoya otra fuente (catálogo, revisión u oficial), el enlace se queda y se anota la discrepancia. En un enlace nuevo, la hermandad que cyh desmiente se descarta también cuando casan varias, y queda la de cyh («Jesús orando en el huerto» pasa a la Vera Cruz y Oración).
+  - **Titulares por imagen:** la imagen se parte por « y » o «, » delante de otro titular («Santísimo Cristo del Amor y Santísima Virgen de los Dolores»). Si un trozo de tres palabras o más es el principio de un solo titular del portal del mismo género, ese es el titular: «Santísimo Cristo de la Victoria» → «… Victoria Despojado». La anotación entre paréntesis del portal, como «(misterio)», no cuenta para casar. Con tres titulares se escribe «A, B y C», y `comprobar-marchas` lo acepta (cada titular una vez y sin « y » colgando).
+  - **Imagen de cyh sin hermandad emparejada:** su ciudad sale del final de su nombre, no del listado. Si no la dice, o no es la capital del listado, no liga.
+  - **Sin ligar, el texto de una ficha de cyh nombra todas sus imágenes o hermandades** («En Triana»: la Estrella y el Cachorro).
+  - **`unificar-marchas` se para si faltan `auditoria/patrimonio-marchas.json` o `auditoria/cyh-marchas.json`** (no están en git), salvo con `--sin-pm` o `SIN_CYH=1`.
+  - **Revisiones a mano:**
+    - «Costaleros del Abuelo» se queda con «El Abuelo» (Patrimonio Musical y el título) y la ficha de cyh (los Dolores) queda como discrepancia.
+    - «En tu Sentencia (Macarena)» se retira, porque la ficha mezcla la imagen de la Macarena con el nombre del Baratillo.
+    - «Jesús orando en el huerto» queda confirmada en la Vera Cruz y Oración con Patrimonio Musical.
+    - La nota de «Esperanza» de Pedro Morales dice ahora lo que es: dos obras distintas fundidas en un registro (1997, Málaga; 2008, Córdoba). Separarlas va en el bloque siguiente.
 - **Descartado:**
   - Una regla solo por cobertura de palabras: los nombres oficiales largos nombran titulares de gloria que el portal no tiene, y fallaba en las dos direcciones.
   - Arreglar caso a caso en `marchas-revision.json`: eran cientos y volverían a salir mal en cada regeneración.
