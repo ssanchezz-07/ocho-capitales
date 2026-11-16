@@ -853,7 +853,7 @@ Empiezan cuando Pablo diga «sigue». Cada bloque se sube por separado: rebase j
   - **`unificar-marchas` se para si faltan `auditoria/patrimonio-marchas.json` o `auditoria/cyh-marchas.json`** (no están en git), salvo con `--sin-pm` o `SIN_CYH=1`.
   - **Revisiones a mano:**
     - «Costaleros del Abuelo» se queda con «El Abuelo» (Patrimonio Musical y el título) y la ficha de cyh (los Dolores) queda como discrepancia.
-    - «En tu Sentencia (Macarena)» se retira, porque la ficha mezcla la imagen de la Macarena con el nombre del Baratillo.
+    - «En tu Sentencia (Macarena)» queda ligada a la Macarena con titular «Nuestro Padre Jesús de la Sentencia». Su ficha de cyh (mm=904826) da el nombre oficial del Baratillo, pero la imagen y el título son de la Macarena. Lo decidió Pablo el 16-nov; el nombre del Baratillo queda anotado como discrepancia.
     - «Jesús orando en el huerto» queda confirmada en la Vera Cruz y Oración con Patrimonio Musical.
     - La nota de «Esperanza» de Pedro Morales dice ahora lo que es: dos obras distintas fundidas en un registro (1997, Málaga; 2008, Córdoba). Separarlas va en el bloque siguiente.
 - **Descartado:**

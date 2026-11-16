@@ -3352,12 +3352,26 @@
   },
   {
    "slug": "en-tu-sentencia-macarena-israel-jimenez-chozas",
-   "hermandad": "",
-   "accion": "retirar",
+   "hermandad": "la-macarena-sevilla",
+   "accion": "confirmar",
    "fuente": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=904826",
    "nombre_fuente": "Cofradías y Hermandades (ficha mm=904826)",
    "fecha": "2026-11-16",
-   "nota": "La ficha no casa consigo misma: la imagen es Nuestro Padre Jesús de la Sentencia, titular de la Macarena, y el nombre oficial es el del Baratillo (Santa Cruz, Misericordia y Piedad). Ni el Baratillo ni la Santa Cruz que estaba publicada: sin ligar mientras no haya otra fuente.",
+   "titular": "Nuestro Padre Jesús de la Sentencia",
+   "texto": "Nuestro Padre Jesús de la Sentencia de Sevilla",
+   "nota": "La ficha da el nombre oficial del Baratillo, pero su imagen («Nuestro Padre Jesús de la Sentencia de Sevilla») y el título de la marcha («En tu Sentencia (Macarena)») son de la Macarena. Lo decidió Pablo el 16-nov: ligada a la Macarena.",
+   "discrepancia": {
+    "campo": "dedicatoria",
+    "valores": [
+     {
+      "valor": "Nuestro Padre Jesús de la Sentencia de Sevilla (Antigua y Fervorosa Hermandad de la Santa Cruz y Cofradía de Nazarenos del Santísimo Cristo de la Misericordia y Nuestra Señora de la Piedad, Patriarca Bendito Señor San José y María Santísima de la Caridad en su Soledad de SEVILLA)",
+      "fuente": "cyh",
+      "url": "https://www.cofradiasyhermandades.es/fichamarcha.php?mm=904826",
+      "nota": "el nombre oficial de la ficha es el del Baratillo"
+     }
+    ],
+    "elegido": "rev"
+   },
    "campos": {}
   },
   {
