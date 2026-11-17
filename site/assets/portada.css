@@ -64,6 +64,9 @@
 /* en el móvil, la hoja se abre a media altura (el plano sigue a la vista) y se desliza por dentro; se cierra arrastrando la asa */
 @media (max-width: 759px) {
   .oc-sede-hoja .oc-sheet-panel { max-height: 62dvh; }
+  /* 17-nov: sube desde el borde de abajo, como la hoja de erCuñao y las de la app (340 ms al abrir, 200 ms al cerrar) */
+  .oc-sede-hoja .oc-sheet-panel { transform: translateY(100%); transition: transform 200ms var(--ease-drawer); }
+  .oc-sede-hoja.is-open .oc-sheet-panel { transform: none; transition-duration: 340ms; }
   .oc-sede-dip img { aspect-ratio: 1; }
   .oc-sede-dip.is-uno img { aspect-ratio: 16 / 9; }
   .oc-sede-foto.is-naz { max-height: 34dvh; object-fit: contain; }
@@ -87,6 +90,7 @@
 @media (prefers-reduced-motion: reduce) {
   .oc-pl-sede { animation: none; }
   .oc-colg-zoom { transition: none; }
+  .oc-sede-hoja .oc-sheet-panel, .oc-sede-hoja.is-open .oc-sheet-panel { transform: none; transition: none; }
 }
 
 /* ---- Próxima Semana Santa ---- */

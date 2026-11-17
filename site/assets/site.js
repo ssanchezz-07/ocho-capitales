@@ -100,7 +100,9 @@
     if (!el || el.hidden) return;
     el.classList.remove('is-open');
     document.body.style.overflow = '';
-    setTimeout(function () { el.hidden = true; }, reduced || el.classList.contains('is-instant') ? 0 : 150);
+    // las hojas que suben desde el borde («Tu capital» y la sede) tardan 200 ms en bajar: se esconden al acabar, no a mitad
+    var bajaDelBorde = el.classList.contains('oc-citysheet') || el.classList.contains('oc-sede-hoja');
+    setTimeout(function () { el.hidden = true; }, reduced || el.classList.contains('is-instant') ? 0 : bajaDelBorde ? 220 : 150);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function trapFocus(el, e) {

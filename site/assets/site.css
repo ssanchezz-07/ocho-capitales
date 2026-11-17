@@ -1248,7 +1248,7 @@ button, .oc-btn, .oc-chips a, .oc-chips button, .oc-daynav a, .oc-tabbar a, .oc-
 .oc-daynav ul { position: relative; }
 .oc-daynav a { position: relative; z-index: 1; min-height: 44px; border-radius: 999px; padding: 0 14px; transition-property: transform, color; transition-duration: 140ms, 260ms; }
 .oc-daynav a.is-current { background: none; color: var(--on-primary); }
-.oc-daynav-ind { position: absolute; left: 0; top: 8px; height: 44px; border-radius: 999px; background: var(--primary); opacity: 0; pointer-events: none; transition: transform 460ms var(--ease-drawer), width 460ms var(--ease-drawer), opacity 200ms var(--ease-out); }
+.oc-daynav-ind { position: absolute; left: 0; top: 8px; height: 44px; border-radius: 999px; background: var(--primary); opacity: 0; pointer-events: none; transition: transform 260ms var(--ease-drawer), width 260ms var(--ease-drawer), opacity 200ms var(--ease-out); } /* 17-nov: 460 → 260 ms, es lo que más se toca. El ancho se queda: es un span vacío y absoluto (no recoloca nada) y con scaleX se deformarían los extremos redondos */
 @media (prefers-reduced-motion: reduce) { .oc-daynav-ind, .oc-daynav a { transition: none; } }
 @media (prefers-reduced-transparency: reduce) { .oc-daynav { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 
@@ -2458,4 +2458,13 @@ html:has(.oc-calle.has-ficha) .oc-arriba { display: none; }
   .oc-citysheet .oc-sheet-panel, .oc-menu { border-radius: 20px; padding-top: 14px; padding-bottom: 20px; transform: translateY(10px) scale(.985); }
   .oc-citysheet.is-open .oc-sheet-panel, .oc-sheet.is-open .oc-menu { transform: none; }
   .oc-citysheet .oc-grabber, .oc-menu .oc-grabber { display: none; }
+}
+/* 17-nov: en el móvil y la tableta, «Tu capital» sube desde el borde de abajo, como la hoja de erCuñao y las de la app
+   (340 ms al abrir, 200 ms al cerrar); en el ordenador sigue la ventana centrada de arriba */
+@media (max-width: 959px) {
+  .oc-citysheet .oc-sheet-panel { transform: translateY(100%); transition: transform 200ms var(--ease-drawer); }
+  .oc-citysheet.is-open .oc-sheet-panel { transform: none; transition-duration: 340ms; }
+}
+@media (max-width: 959px) and (prefers-reduced-motion: reduce) {
+  .oc-citysheet .oc-sheet-panel, .oc-citysheet.is-open .oc-sheet-panel { transform: none; transition: none; }
 }
