@@ -76,6 +76,34 @@ export function detectarEventos(texto, pubTs) {
   return out;
 }
 
+// Título de un acto sacado de una noticia. Una frase suelta («Por último, también hay que recordar que…») no es el nombre de
+// un acto: si la frase es una oración (conector, anáfora, verbo conjugado, cortada o larga) se usa el titular de la noticia,
+// pero solo si el titular habla de ese tipo de acto y es el único acto de ese tipo en la noticia; si no, no hay título y el
+// evento se descarta. Nunca se compone un nombre que no esté en la fuente.
+const ARRANQUE = /^(por ultimo|por otro lado|por su parte|ademas|tambien|asimismo|igualmente|antes|despues|tras|luego|mientras|aunque|asi|como|ya|y|e|pero|sin embargo|cabe|hay que|con motivo|durante|a partir|al dia siguiente|en cuanto|esta|este|estos|estas|ese|esa|dicho|dicha|la cofradia|la hermandad|la corporacion|la efigie|la imagen|la talla|la programacion|el acto|el cortejo|el (lunes|martes|miercoles|jueves|viernes|sabado|domingo)|los dias|el dia|el proximo|la proxima|por que)\b/;
+const VERBO = /(?<!\p{L})(\p{L}+(rá|rán)|se \p{L}+|ha \p{L}+do|han \p{L}+do|prevé|sale|salen|hace|hacen|es|son|está|están|tiene|tienen|celebra|celebran|acoge|organiza|vive|recuerda)(?!\p{L})/u;
+const limpiaT = (t) => String(t || '').replace(/\s+/g, ' ').trim().replace(/^[¿¡"“«(]+/, '');
+// Trozo de frase: empieza en minúscula, por un conector o una anáfora, o está cortado. Vale también para titulares ya guardados.
+export function trozoDeFrase(t) {
+  const s = limpiaT(t);
+  return !s || !/^[\p{Lu}\p{N}]/u.test(s) || /([;,:]|…|\.\.\.)$/.test(s) || ARRANQUE.test(norm(s));
+}
+// Oración completa (lleva verbo conjugado) o demasiado larga para ser el nombre de un acto.
+export const pareceFrase = (t) => trozoDeFrase(t) || VERBO.test(limpiaT(t).toLowerCase()) || limpiaT(t).split(' ').length > 16;
+/**
+ * @param {{tipo: string, frase: string}} e  evento detectado
+ * @param {string} titular                   titular de la noticia
+ * @param {{tipo: string}[]} todos           todos los eventos detectados en esa noticia
+ * @returns {string} título, o '' si no hay un nombre claro (el evento se descarta)
+ */
+export function tituloDeActo(e, titular, todos) {
+  const frase = limpiaT(e.frase).replace(/[\s.;,:]+$/, '');
+  if (!pareceFrase(frase)) return frase;
+  const re = (EV_TIPOS.find(([k]) => k === e.tipo) || [])[1];
+  const unico = todos.filter((x) => x.tipo === e.tipo).length === 1;
+  return re && unico && re.test(norm(titular)) && !trozoDeFrase(titular) ? String(titular).trim() : '';
+}
+
 // Autocomprobación: node site/eventos.mjs
 if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFileURL(process.argv[1]).href) {
   const pub = Date.UTC(2026, 9, 2);
@@ -90,5 +118,11 @@ if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFile
   eq(t('El traslado será el 10 de enero.'), ['2027-01-10 traslado'], 'cambio de año');
   eq(t('Saldrá en procesión extraordinaria el 10 de octubre. La procesión extraordinaria del 10 de octubre recorrerá el barrio.'), ['2026-10-10 extraordinaria'], 'sin duplicados');
   eq(t('La venerada imagen será retirada del Santuario el próximo 13 de octubre y está previsto que vuelva a recibir culto a finales de mes El fervor inunda Dalías al ver pasar a su Cristo de la Luz en procesión'), [], 'fecha lejos del evento');
+  const tit = (frase, tipo, titular, todos = [{ tipo }, { tipo: 'pregon' }]) => tituloDeActo({ tipo, frase }, titular, todos);
+  eq(tit('Por último, también hay que recordar que a partir del próximo miércoles 18 de noviembre se celebrará un piadoso triduo', 'culto', 'La Esperanza estrena manto'), '', 'frase de noticia sin titular útil: se descarta');
+  eq(tit('el 3 de abril habrá un pregón especial de esta efeméride, a cargo del periodista Santi Souvirón;', 'pregon', 'El Cautivo celebra su 75 aniversario', [{ tipo: 'pregon' }, { tipo: 'procesion' }]), '', 'trozo en minúscula');
+  eq(tit('Solemne triduo en honor de Nuestra Señora de la Esperanza.', 'culto', 'x'), 'Solemne triduo en honor de Nuestra Señora de la Esperanza', 'frase que ya es el nombre del acto');
+  eq(tit('Antes habrá otro traslado el 29 de octubre, de nuevo a la Catedral.', 'traslado', 'El traslado del Cautivo a la Catedral, en imágenes', [{ tipo: 'traslado' }, { tipo: 'extraordinaria' }]), 'El traslado del Cautivo a la Catedral, en imágenes', 'titular si habla del único acto de ese tipo');
+  eq(tit('Antes habrá otro traslado el 29 de octubre.', 'traslado', 'Traslados del Cautivo', [{ tipo: 'traslado' }, { tipo: 'traslado' }]), '', 'dos traslados: el titular no dice cuál');
   console.log(process.exitCode ? 'Hay fallos' : 'eventos.mjs: todas las comprobaciones OK');
 }

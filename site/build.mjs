@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { detectarEventos } from './eventos.mjs';
+import { detectarEventos, tituloDeActo, trozoDeFrase } from './eventos.mjs';
 import { clasificar, TEMAS } from './filtro-noticias.mjs';
 import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
 
@@ -508,7 +508,9 @@ function eventosNoticias() {
         const k = e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + ciudad;
         const prev = ev.get(k);
         if (prev) { if (prev.fuentes.length < 3 && !prev.fuentes.some((f) => f.url === n.url || f.medio === n.fuente)) prev.fuentes.push({ url: n.url, medio: n.fuente }); continue; }
-        ev.set(k, { fecha: e.fecha, tipo: e.tipo, titulo: multi ? e.frase : n.titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
+        const titulo = multi ? tituloDeActo(e, n.titulo, found) : n.titulo;
+        if (!titulo) continue; // la frase no nombra el acto y el titular no dice cuál es: no se inventa un nombre
+        ev.set(k, { fecha: e.fecha, tipo: e.tipo, titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
       }
     }
   }
@@ -528,7 +530,10 @@ function eventosExternos(previos) {
   const raw = JSON.parse(fs.readFileSync(AGENDA_EXT_FILE, 'utf8')).eventos.filter((e) => GRUPO_DE[e.tipo] && CAP[e.ciudad]);
   // Las agendas dan el acto en pocas palabras; de la prensa solo valen los titulares cortos (una frase larga es una noticia, no un acto).
   const AGENDAS = new Set(['InfoCofrade', 'El Itinerario', 'Andalucía Información', 'Diario SUR', 'Diario Sur', 'La Opinión de Málaga', 'Real Federación de Hermandades y Cofradías de Granada']);
-  for (let i = raw.length - 1; i >= 0; i--) { const e = raw[i]; if (!AGENDAS.has(e.fuente) && (e.titulo.length > 100 || /^Previous Post|…$|\.\.\.$/.test(e.titulo))) raw.splice(i, 1); }
+  // Lo leído en el texto de una noticia (origen «noticia», o cualquier medio que no sea agenda estructurada) no se libra por el
+  // nombre del medio: «Diario SUR» publica agendas, pero también frases sueltas («Por último, también hay que recordar que…»).
+  const ESTRUCTURADAS = new Set(['InfoCofrade', 'El Itinerario', 'Real Federación de Hermandades y Cofradías de Granada', 'Agrupación de Hermandades y Cofradías de Almería']);
+  for (let i = raw.length - 1; i >= 0; i--) { const e = raw[i]; if ((!AGENDAS.has(e.fuente) || e.origen === 'noticia') && (e.titulo.length > 100 || /^Previous Post|…$|\.\.\.$/.test(e.titulo))) raw.splice(i, 1); else if (!ESTRUCTURADAS.has(e.fuente) && (e.origen === 'noticia' || !AGENDAS.has(e.fuente) || !/^[^:.]{2,60}: \S/.test(e.titulo)) && trozoDeFrase(e.titulo)) raw.splice(i, 1); }
   raw.sort((a, b) => (EXT_ORDEN[a.fuente] ?? 1) - (EXT_ORDEN[b.fuente] ?? 1));
   const out = [];
   for (const e of raw) {

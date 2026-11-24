@@ -854,7 +854,7 @@
       Promise.all([cargarPlano(), datosCiudad(c)]).then(function (r) {
         if (actual !== c) return;
         D = r[1]; host.textContent = ''; host.hidden = false; host.style.opacity = '0';
-        plano = OCPlano.Plano(host, D, { color: D.color }); controles(); extraOn = false;
+        plano = OCPlano.Plano(host, D, { color: D.color, margenes: margenes }); controles(); extraOn = false;
         var vistos = {}, dias = D.hermandades.map(function (h) { return h.d; }).filter(function (d) { return vistos[d] ? false : (vistos[d] = 1); });
         J = dias.sort(function (a, b) { return fechaDe(a).localeCompare(fechaDe(b)); });
         if (FUERA) { modoSedes(); plano.verSedes(false); } else { var ini = jornadaInicial(), a = ahoraMin(); ponerJornada(ini.d, ini.ahora ? (a < 300 ? a + 1440 : a) : null); }

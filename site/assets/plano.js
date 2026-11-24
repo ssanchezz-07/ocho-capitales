@@ -318,7 +318,14 @@
     function tocar(s) {
       var m = s.miembros || [s], xs = m.map(function (q) { return q.x; }), ys = m.map(function (q) { return q.y; });
       // un grupo repartido por la ciudad: la cámara se acerca hasta separarlos; uno solo o todos en el mismo edificio: su hoja
-      if (Math.max.apply(null, xs) - Math.min.apply(null, xs) > 40 || Math.max.apply(null, ys) - Math.min.apply(null, ys) > 40) { var c = api.caja(xs, ys, { arriba: 70, abajo: 70, izq: 50, der: 50 }); c.w = Math.min(c.w, vb.w / 2.2); c.x = (Math.min.apply(null, xs) + Math.max.apply(null, xs)) / 2 - c.w / 2; c.y = (Math.min.apply(null, ys) + Math.max.apply(null, ys)) / 2 - c.w * H() / W() / 2; api.volar(c, 620); return; }
+      // el encuadre deja libre lo que tapa la portada (su pie con el título y los botones, y la columna de controles): los márgenes
+      // los da site.js (o.margenes); el centro del grupo va al centro de la parte que se ve, no al del plano entero
+      if (Math.max.apply(null, xs) - Math.min.apply(null, xs) > 40 || Math.max.apply(null, ys) - Math.min.apply(null, ys) > 40) {
+        var mg = (o.margenes && o.margenes()) || (cajaSedes && cajaSedes.m) || { arriba: 70, abajo: 70, izq: 50, der: 50 };
+        var w = Math.min(api.caja(xs, ys, mg).w, vb.w / 2.2), e = w / W();
+        var cx = (Math.min.apply(null, xs) + Math.max.apply(null, xs)) / 2 - (mg.izq - mg.der) / 2 * e, cy = (Math.min.apply(null, ys) + Math.max.apply(null, ys)) / 2 - (mg.arriba - mg.abajo) / 2 * e;
+        api.volar({ x: cx - w / 2, y: cy - w * H() / W() / 2, w: w }, 620); return;
+      }
       var vistos = {}, hs2 = m.map(function (q) { return q.h; }).filter(function (h) { return vistos[h.s] ? false : (vistos[h.s] = 1); });
       if (alTocar) alTocar(hs2, s);
     }

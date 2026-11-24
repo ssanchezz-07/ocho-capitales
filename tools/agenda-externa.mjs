@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { trozoDeFrase } from '../site/eventos.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const UA = 'OchoCapitales/1.0 (https://github.com/ssanchezz-07/ocho-capitales; portal cofrade sin animo de lucro)';
@@ -193,8 +194,9 @@ async function agendasPrensa() {
 // Texto completo de las noticias de los últimos días que hablan de cultos o salidas (incluidas las de Google Noticias, que solo traen el titular):
 // se lee el artículo y se buscan frases con tipo de acto + fecha concreta (site/eventos.mjs). Lo ya leído se guarda en agenda-cuerpos.json.
 const CUERPOS_FILE = path.join(DIR, 'sources', 'agenda-cuerpos.json');
+let releidas = new Set(); // urls cuyo texto se vuelve a titular en esta ejecución (todo lo guardado en agenda-cuerpos.json)
 async function eventosDeCuerpos() {
-  const { detectarEventos } = await import('../site/eventos.mjs');
+  const { detectarEventos, tituloDeActo } = await import('../site/eventos.mjs');
   let news = []; try { news = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'site', 'data', 'news.json'), 'utf8')).items; } catch (e) { return []; }
   let cache = {}; try { cache = JSON.parse(fs.readFileSync(CUERPOS_FILE, 'utf8')); } catch (e) { cache = {}; }
   const desde = Date.now() - 7 * 864e5;
@@ -213,13 +215,16 @@ async function eventosDeCuerpos() {
   }
   for (const k of Object.keys(cache)) if (cache[k].ts < Date.now() - 45 * 864e5) delete cache[k];
   fs.writeFileSync(CUERPOS_FILE, JSON.stringify(cache));
+  releidas = new Set(Object.values(cache).map((c) => c.url));
   const out = [];
   const hoy = new Date().toISOString().slice(0, 10);
   for (const c of Object.values(cache)) for (const e of c.ev) {
     if (e.fecha < hoy) continue; // crónicas y actos ya pasados
-    // con un solo acto en la noticia, su titular describe mejor el acto que la frase suelta
-    const titulo = (c.ev.length === 1 ? c.titulo : limpia(e.frase)).replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
-    out.push({ fecha: e.fecha, hora: horaDe(e.frase), ciudad: c.ciudad, tipo: e.tipo, titulo, nota: '', fuente: c.fuente, url: c.url });
+    // con un solo acto en la noticia, su titular describe mejor el acto que la frase suelta; con varios, la frase solo vale si
+    // nombra el acto (no «Por último, también hay que recordar que…»); si no, el titular o nada (site/eventos.mjs, tituloDeActo)
+    const titulo = (c.ev.length === 1 ? c.titulo : tituloDeActo({ tipo: e.tipo, frase: limpia(e.frase) }, c.titulo, c.ev)).replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
+    if (!titulo) continue;
+    out.push({ fecha: e.fecha, hora: horaDe(e.frase), ciudad: c.ciudad, tipo: e.tipo, titulo, nota: '', fuente: c.fuente, url: c.url, origen: 'noticia' });
   }
   const seen = new Set(); return out.filter((e) => { const k = e.fecha + e.ciudad + norm(e.titulo).slice(0, 50); if (seen.has(k)) return false; seen.add(k); return true; });
 }
@@ -249,7 +254,9 @@ try {
   const corte = new Date(Date.now() - 3 * 864e5).toISOString().slice(0, 10);
   const claveE = (e) => e.fecha + '|' + e.ciudad + '|' + norm(e.titulo).slice(0, 50);
   const ya = new Set(res.eventos.map(claveE));
-  for (const e of prev) if (e.fuente !== 'InfoCofrade' && e.fuente !== 'El Itinerario' && e.fecha >= corte && !ya.has(claveE(e))) res.eventos.push(e);
+  // lo sacado de una noticia cuyo texto sigue en agenda-cuerpos.json no se arrastra: se acaba de volver a titular con la regla
+  // nueva y, si ahora se descarta, no debe volver con el título viejo; de lo demás no se arrastran trozos de frase
+  for (const e of prev) if (e.fuente !== 'InfoCofrade' && e.fuente !== 'El Itinerario' && e.fecha >= corte && !ya.has(claveE(e)) && !releidas.has(e.url) && !(!/^[^:.]{2,60}: \S/.test(e.titulo) && trozoDeFrase(e.titulo))) res.eventos.push(e);
 } catch (e) { /* primera ejecución */ }
 // el último archivo bueno se conserva si ambas fuentes fallan
 const file = path.join(DIR, 'sources', 'agenda-externa.json');
