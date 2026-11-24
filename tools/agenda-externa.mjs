@@ -196,7 +196,7 @@ async function agendasPrensa() {
 const CUERPOS_FILE = path.join(DIR, 'sources', 'agenda-cuerpos.json');
 let releidas = new Set(); // urls cuyo texto se vuelve a titular en esta ejecución (todo lo guardado en agenda-cuerpos.json)
 async function eventosDeCuerpos() {
-  const { detectarEventos, tituloDeActo } = await import('../site/eventos.mjs');
+  const { detectarEventos, tituloDeActo, sigueValiendo } = await import('../site/eventos.mjs');
   let news = []; try { news = JSON.parse(fs.readFileSync(path.join(DIR, '..', 'site', 'data', 'news.json'), 'utf8')).items; } catch (e) { return []; }
   let cache = {}; try { cache = JSON.parse(fs.readFileSync(CUERPOS_FILE, 'utf8')); } catch (e) { cache = {}; }
   const desde = Date.now() - 7 * 864e5;
@@ -220,9 +220,10 @@ async function eventosDeCuerpos() {
   const hoy = new Date().toISOString().slice(0, 10);
   for (const c of Object.values(cache)) for (const e of c.ev) {
     if (e.fecha < hoy) continue; // crónicas y actos ya pasados
-    // con un solo acto en la noticia, su titular describe mejor el acto que la frase suelta; con varios, la frase solo vale si
-    // nombra el acto (no «Por último, también hay que recordar que…»); si no, el titular o nada (site/eventos.mjs, tituloDeActo)
-    const titulo = (c.ev.length === 1 ? c.titulo : tituloDeActo({ tipo: e.tipo, frase: limpia(e.frase) }, c.titulo, c.ev)).replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
+    if (!sigueValiendo(e, c.ts)) continue; // detectado con una regla que ya no vale («marchas procesionales» como procesión)
+    // la frase solo vale si nombra el acto (no «Por último, también hay que recordar que…»); si no, el titular si nombra ese acto
+    // sin ser una oración; si no, nada (site/eventos.mjs, tituloDeActo). Vale igual con uno o con varios actos en la noticia.
+    const titulo = tituloDeActo({ tipo: e.tipo, frase: limpia(e.frase) }, c.titulo, c.ev).replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
     if (!titulo) continue;
     out.push({ fecha: e.fecha, hora: horaDe(e.frase), ciudad: c.ciudad, tipo: e.tipo, titulo, nota: '', fuente: c.fuente, url: c.url, origen: 'noticia' });
   }

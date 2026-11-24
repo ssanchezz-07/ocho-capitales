@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { detectarEventos, tituloDeActo, trozoDeFrase } from './eventos.mjs';
+import { detectarEventos, tituloDeActo, trozoDeFrase, sigueValiendo } from './eventos.mjs';
 import { clasificar, TEMAS } from './filtro-noticias.mjs';
 import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
 
@@ -501,14 +501,15 @@ function eventosNoticias() {
   const ev = new Map();
   for (const n of NEWS.items) {
     if (!n.ciudades || !n.ciudades.length) continue;
-    const found = n.ev ? n.ev.map((e) => ({ fecha: e.f, tipo: e.t, frase: e.s })) : detectarEventos(n.titulo + '. ' + (n.extracto || ''), n.ts);
-    const multi = found.length > 1; // artículo con varias fechas (p. ej. «todas las extraordinarias del otoño»): se titula con la frase
+    // lo guardado en news.json se detectó con las reglas de entonces: solo cuenta si la frase sigue dando ese tipo y esa fecha
+    const found = n.ev ? n.ev.map((e) => ({ fecha: e.f, tipo: e.t, frase: e.s })).filter((e) => sigueValiendo(e, n.ts)) : detectarEventos(n.titulo + '. ' + (n.extracto || ''), n.ts);
     for (const e of found) {
       for (const ciudad of n.ciudades) {
         const k = e.fecha + '|' + GRUPO_DE[e.tipo] + '|' + ciudad;
         const prev = ev.get(k);
         if (prev) { if (prev.fuentes.length < 3 && !prev.fuentes.some((f) => f.url === n.url || f.medio === n.fuente)) prev.fuentes.push({ url: n.url, medio: n.fuente }); continue; }
-        const titulo = multi ? tituloDeActo(e, n.titulo, found) : n.titulo;
+        // con uno o con varios actos: la frase si nombra el acto; si no, el titular si lo nombra sin ser una oración
+        const titulo = tituloDeActo(e, n.titulo, found);
         if (!titulo) continue; // la frase no nombra el acto y el titular no dice cuál es: no se inventa un nombre
         ev.set(k, { fecha: e.fecha, tipo: e.tipo, titulo, ciudad, fuentes: [{ url: n.url, medio: n.fuente }] });
       }
@@ -517,7 +518,8 @@ function eventosNoticias() {
   return [...ev.values()];
 }
 function eventosVerificados() {
-  return EVENTOS_VERIFICADOS.map((e) => ({ fecha: e.fecha, hora: e.hora || '', tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: e.nota || '', fuentes: e.fuentes, verificado: true }));
+  // «pendiente»: el acto está anunciado, pero su fecha aún depende de algo (una autorización…): no se marca «Confirmado»
+  return EVENTOS_VERIFICADOS.map((e) => ({ fecha: e.fecha, hora: e.hora || '', tipo: e.tipo, titulo: e.titulo, ciudad: e.ciudad, nota: e.nota || '', fuentes: e.fuentes, ...(e.pendiente ? { externo: true, pendiente: true } : { verificado: true }) }));
 }
 // Agendas de terceros (tools/agenda-externa.mjs): InfoCofrade, El Itinerario y agendas semanales de prensa. Salen como «detectado».
 const AGENDA_EXT_FILE = path.join(DIR, '..', 'tools', 'sources', 'agenda-externa.json');
@@ -1729,7 +1731,7 @@ function icsDe(eventos, nombre) {
     if (e.hora) { const [hh, mm] = e.hora.split(':'); const fin = String(Math.min(23, +hh + 1)).padStart(2, '0'); L.push('DTSTART;TZID=Europe/Madrid:' + dia + 'T' + hh + mm + '00', 'DTEND;TZID=Europe/Madrid:' + dia + 'T' + fin + mm + '00'); }
     else { const sig = new Date(Date.parse(e.fecha + 'T12:00:00Z') + 864e5).toISOString().slice(0, 10).replace(/-/g, ''); L.push('DTSTART;VALUE=DATE:' + dia, 'DTEND;VALUE=DATE:' + sig); }
     L.push('SUMMARY:' + icsEsc(e.titulo), 'LOCATION:' + icsEsc(CAP[e.ciudad] ? CAP[e.ciudad].nombre : ''));
-    const desc = [e.nota, e.fuentes ? 'Fuente: ' + e.fuentes.map((f) => f.medio + ' ' + f.url).join(' · ') : '', e.verificado ? '' : 'Acto detectado automáticamente: confirma el horario con la hermandad.'].filter(Boolean).join('\n');
+    const desc = [e.nota, e.fuentes ? 'Fuente: ' + e.fuentes.map((f) => f.medio + ' ' + f.url).join(' · ') : '', e.verificado || e.pendiente ? '' : 'Acto detectado automáticamente: confirma el horario con la hermandad.'].filter(Boolean).join('\n');
     if (desc) L.push('DESCRIPTION:' + icsEsc(desc));
     L.push('END:VEVENT');
   }

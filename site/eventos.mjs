@@ -22,11 +22,12 @@ export const EV_TIPOS = [
   ['concierto', /concierto/],
   ['pregon', /\bpregon\b/],
   ['cartel', /presentacion del cartel|presentara el cartel|cartel (oficial|de la semana santa)/],
-  ['procesion', /procesion|procesiona|rosario de la aurora/],
+  // «marchas procesionales», «música procesional» o «paso procesional» no son una procesión; «salida procesional» sí
+  ['procesion', /procesion(?!al)|procesiona(?!l)|(salida|desfile) procesional|rosario de la aurora/],
 ];
 const EV_NO = /torea|toros|maestranza|futbol|liga |asamblea|cabildo|elecciones|junta de gobierno|designad|nombrad|elegid/;
 // Crónicas: verbos en pasado junto al evento.
-const PASADO = /\b(celebro|celebraron|vivio|vivieron|tuvo lugar|recorrio|recorrieron|salio|salieron|procesiono|procesionaron|presento|presentaron|ayer|anoche|el pasado)\b/;
+const PASADO = /\b(celebro|celebraron|ha celebrado|han celebrado|ha tenido lugar|vivio|vivieron|tuvo lugar|recorrio|recorrieron|realizo|realizaron|salio|salieron|procesiono|procesionaron|presento|presentaron|ayer|anoche|el pasado|aquel ano)\b/;
 const RANGO = /\b(del|entre el) \d{1,2}( de [a-z]+)? (al|y el) \d{1,2}\b/;
 const FECHA = new RegExp(`\\b(\\d{1,2})(?: y \\d{1,2})? de (${MESES.join('|')})(?: de (\\d{4}))?\\b`, 'g');
 
@@ -98,11 +99,17 @@ export const pareceFrase = (t) => trozoDeFrase(t) || VERBO.test(limpiaT(t).toLow
  */
 export function tituloDeActo(e, titular, todos) {
   const frase = limpiaT(e.frase).replace(/[\s.;,:]+$/, '');
-  if (!pareceFrase(frase)) return frase;
   const re = (EV_TIPOS.find(([k]) => k === e.tipo) || [])[1];
+  // la frase vale si es el nombre del acto: sin ser una oración y con el acto en sus primeras palabras («Solemne triduo…»),
+  // no al final de otra cosa («El 5 de diciembre, segunda fecha prevista…», «Incluye los recorridos… de los traslados…»)
+  if (!pareceFrase(frase) && re && re.test(norm(frase.split(' ').slice(0, 4).join(' ')))) return frase;
   const unico = todos.filter((x) => x.tipo === e.tipo).length === 1;
-  return re && unico && re.test(norm(titular)) && !trozoDeFrase(titular) ? String(titular).trim() : '';
+  // el titular tampoco vale si es una oración («Osuna comenzará este viernes el camino hacia la coronación…»): es la noticia, no el acto
+  return re && unico && re.test(norm(titular)) && !pareceFrase(titular) ? String(titular).trim() : '';
 }
+// Un evento guardado (agenda-cuerpos.json, news.json) se detectó con las reglas de entonces: solo sigue valiendo si su frase,
+// leída con las reglas de hoy, da el mismo tipo y la misma fecha (así un arreglo del detector alcanza a lo ya leído).
+export const sigueValiendo = (e, pubTs) => detectarEventos(e.frase, pubTs).some((x) => x.fecha === e.fecha && x.tipo === e.tipo);
 
 // Autocomprobación: node site/eventos.mjs
 if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFileURL(process.argv[1]).href) {
@@ -124,5 +131,15 @@ if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFile
   eq(tit('Solemne triduo en honor de Nuestra Señora de la Esperanza.', 'culto', 'x'), 'Solemne triduo en honor de Nuestra Señora de la Esperanza', 'frase que ya es el nombre del acto');
   eq(tit('Antes habrá otro traslado el 29 de octubre, de nuevo a la Catedral.', 'traslado', 'El traslado del Cautivo a la Catedral, en imágenes', [{ tipo: 'traslado' }, { tipo: 'extraordinaria' }]), 'El traslado del Cautivo a la Catedral, en imágenes', 'titular si habla del único acto de ese tipo');
   eq(tit('Antes habrá otro traslado el 29 de octubre.', 'traslado', 'Traslados del Cautivo', [{ tipo: 'traslado' }, { tipo: 'traslado' }]), '', 'dos traslados: el titular no dice cuál');
+  eq(t('Las hermandades andaluzas y la SGAE abordarán el 27 de noviembre el canon de las marchas procesionales.'), [], 'marchas procesionales no es procesión');
+  eq(t('La banda acompañará a la Virgen en su salida procesional del 28 de noviembre.'), ['2026-11-28 procesion'], 'salida procesional sí');
+  eq(t('El primer encuentro se ha celebrado este viernes en Sevilla con las cofradías en procesión.'), [], 'pretérito perfecto: crónica');
+  eq(t('Fue bendecida el 30 de enero de 1977 y realizó su primera salida procesional el 4 de abril de aquel año.'), [], 'dato histórico («de aquel año»): no se le pone el año que viene');
+  eq(tit('Osuna comenzará este viernes el camino hacia la coronación de la Virgen de los Dolores', 'coronacion', 'San Esteban procesiona hoy por su centenario', [{ tipo: 'coronacion' }, { tipo: 'procesion' }]), '', 'frase de otra noticia: se descarta');
+  eq(tit('José Manuel Peña dará el pregón el 26 de febrero.', 'pregon', 'José Manuel Peña será el pregonero de la hermandad de Los Gitanos de 2027', [{ tipo: 'pregon' }]), '', 'titular-oración no es nombre de acto');
+  eq(tit('Tambin incluye los recorridos completos previstos para los traslados del sbado 28 de noviembre', 'traslado', 'Granada programa 45 traslados desde la Catedral para el regreso de las imágenes de Kerygma: cuatro rutas y horarios del 28 de noviembre', [{ tipo: 'traslado' }]), '', 'el acto no está al principio de la frase');
+  eq(tit('Traslado de la Virgen de la Paz a la Catedral el 28 de noviembre', 'traslado', 'x', [{ tipo: 'traslado' }]), 'Traslado de la Virgen de la Paz a la Catedral el 28 de noviembre', 'frase que empieza por el acto');
+  eq(sigueValiendo({ fecha: '2026-10-09', tipo: 'procesion', frase: 'El encuentro sobre las marchas procesionales será este viernes.' }, pub), false, 'evento guardado con la regla vieja');
+  eq(sigueValiendo({ fecha: '2026-11-14', tipo: 'extraordinaria', frase: 'El sábado 14 de noviembre, procesión extraordinaria de Jesús de la Pasión.' }, pub), true, 'evento guardado que sigue valiendo');
   console.log(process.exitCode ? 'Hay fallos' : 'eventos.mjs: todas las comprobaciones OK');
 }

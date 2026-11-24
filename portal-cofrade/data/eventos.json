@@ -1,5 +1,5 @@
 {
- "_leeme": "Eventos verificados a mano en fuentes oficiales o prensa. Tienen prioridad sobre los que se detectan en las noticias (mismo día, capital y grupo). Campos: fecha (AAAA-MM-DD), hora (opcional), ciudad (slug de capital), tipo (magna, extraordinaria, procesion, traslado, coronacion, via-crucis, culto, besamanos, concierto, pregon, cartel), titulo, nota (opcional), fuentes [{medio, url}]. Revisado: 2026-10-07.",
+ "_leeme": "Eventos verificados a mano en fuentes oficiales o prensa. Tienen prioridad sobre los que se detectan en las noticias (mismo día, capital y grupo). Campos: fecha (AAAA-MM-DD), hora (opcional), ciudad (slug de capital), tipo (magna, extraordinaria, procesion, traslado, coronacion, via-crucis, culto, besamanos, concierto, pregon, cartel), titulo, nota (opcional), fuentes [{medio, url}], pendiente (opcional: true si la fecha aún depende de una autorización u otra condición; sale sin «Confirmado»). Revisado: 2026-10-07.",
  "eventos": [
   {
    "fecha": "2026-10-03",
@@ -188,6 +188,7 @@
    "ciudad": "granada",
    "tipo": "extraordinaria",
    "titulo": "Traslados de regreso de las imágenes de la exposición «Kerygma» a sus templos",
+   "pendiente": true,
    "nota": "Desde la Catedral. Fecha pendiente de la autorización de la Junta Electoral (alternativa: 5 de diciembre); recorridos sin publicar.",
    "fuentes": [
     {
