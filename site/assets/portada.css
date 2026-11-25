@@ -233,14 +233,16 @@
    espadaña, se queda por debajo del botón, que acaba a unos 375 px de lo alto de la escena (388: con un respiro).
    --est-s: el lado de la estrella, el de antes (0,7 de 100 unidades de la calle de siempre), aunque la calle mengüe */
 @media (max-width: 700px) {
-  .oc-vela-escena { --u: calc(min(var(--vh) * .44, var(--vh) - 388px) / 214); --est-s: calc(var(--vh) * .144); --naz-x: 18%; --est-x: 0px; --est-y: calc(182px - var(--est-s) / 2); }
+  .oc-vela-escena { --u: calc(min(var(--vh) * .44, var(--vh) - 388px) / 214); --est-s: min(calc(var(--vh) * .144), 112px); --naz-x: 18%; --est-x: 0px; --est-y: calc(182px - var(--est-s) / 2); }
   .oc-vela-estrella { width: var(--est-s); height: var(--est-s); }
   .oc-vela-txt { left: 16px; right: 16px; width: auto; }
   .oc-vela-frase { min-height: 2.7em; max-width: 30ch; }
 }
 /* Por debajo de unos 400 px la estrella no cabe a la derecha del título (a 360×740 lo pisaba 31 px): sube a la altura de la
-   frase, en el cielo vacío de la derecha, y la frase se estrecha para dejarle su hueco (sigue en dos renglones hasta 320 px) */
-@media (max-width: 400px) {
+   frase, en el cielo vacío de la derecha, y la frase se estrecha para dejarle su hueco (sigue en dos renglones hasta 320 px).
+   El corte va en 420 px y no en 400, y la estrella no pasa de 112 px de lado: con pantalla alta crecía con el alto y, entre
+   401 y 429 px de ancho, llegaba a quedarse a 1 px del final de «Semana Santa 2027» */
+@media (max-width: 420px) {
   .oc-vela-escena { --est-y: calc(clamp(64px, 9%, 92px) - 24px); }
   .oc-vela-frase { max-width: min(30ch, calc(100% + 10px - var(--est-s))); }
 }

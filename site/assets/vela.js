@@ -434,9 +434,12 @@
     encendida = true; tEnc = reloj; sec.classList.add('is-encendida');
     // con el ratón o el dedo, el botón se va al apagarse el aviso; con el teclado (Intro o espacio: detail 0) se queda con el
     // foco, sin verse, hasta que aparecen los textos y el foco pasa al título. Con VoiceOver el toque puede llegar con detail 1:
-    // si el botón tenía el foco, pasa ya al título (está en la página, aún sin verse) y el lector no se queda sin sitio
+    // si el botón tenía el foco, pasa ya al título (está en la página, aún sin verse) y el lector no se queda sin sitio.
+    // Safari no da el foco a un <button> al tocarlo (y el cursor de VoiceOver no es el foco del DOM): si el toque viene
+    // del propio botón y el foco está en <body>, también pasa al título
     if (!ev || ev.detail !== 0) {
-      var tit = document.activeElement === boton && sec.querySelector('#vela-t');
+      var ae = document.activeElement, delBoton = ev && ev.target && boton.contains(ev.target);
+      var tit = (ae === boton || (delBoton && (!ae || ae === document.body))) && sec.querySelector('#vela-t');
       if (tit) tit.focus({ preventScroll: true }); else boton.blur();
       setTimeout(function () { boton.hidden = true; }, 550);
     }
