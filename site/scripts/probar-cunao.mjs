@@ -438,7 +438,10 @@ caso('B6-24 «Santo Domingo» no es el Domingo de Ramos', motor(), 'donde esta l
 caso('B6-25 título delante: «marcha Margot de quién es»', motor(), 'marcha Margot de quien es', contiene('Joaquín Turina'));
 // los fallos de la auditoría del bloque 6
 caso('B6-26 «Ave Maris Stella» es una marcha, no un tren', motor(), 'quien compuso Ave Maris Stella', contiene('Alcácer'));
-caso('B6-27 «Avión C. Vientos» es un lugar del itinerario', motor(), '¿A qué hora pasa Los Servitas de Sevilla por Avión C. Vientos?', contiene('21:30'));
+// «Avión Cuatro Vientos» es de El Sol (Canal Sur, SEVILLA 26.pdf, p. 80: cruz 21:00, palio 21:30). Los Servitas la tenían
+// porque se les había leído el palio de El Sol; su palio de verdad (misma página) no pasa por ella.
+caso('B6-27 «Avión C. Vientos» es un lugar del itinerario', motor(), '¿A qué hora pasa El Sol de Sevilla por Avión C. Vientos?', contiene('Avión Cuatro Vientos', '21:30'));
+caso('B6-27b y no es de los Servitas (era el palio de El Sol)', motor(), '¿A qué hora pasa Los Servitas de Sevilla por Avión C. Vientos?', y(contiene('No veo'), noDice('21:30')));
 caso('B6-28 «la Victoria» de Huelva es la hermandad, no un barrio', motor(), '¿Qué hermandades hay de la Victoria en Huelva?', y(contiene('Victoria (Huelva)'), noDice('barrio')));
 caso('B6-29 barrio con día: la lista del día', motor(), '¿qué cofradías del Centro salen el Domingo de Ramos en Málaga?', y(contiene('Domingo de Ramos en Málaga'), noDice('barrio')));
 caso('B6-30 «¿qué me recomiendas ver el Jueves Santo en Sevilla?»: la lista, no el consejo', motor(), '¿qué me recomiendas ver el Jueves Santo en Sevilla?', y(contiene('Jueves Santo en Sevilla'), noDice('Mi consejo')));
@@ -454,13 +457,15 @@ caso('B7-5 hora: la de la cruz de guía, y la del palio aparte', motor(), '¿A q
 caso('B7-6 sin dos salidas distintas no se añade nada', motor(), '¿A qué hora sale el Cautivo de Málaga?', noDice('sale hacia las'));
 // la auditoría del bloque 7: la segunda salida solo si el tramo cuadra, y la referencia solo si la fuente la da
 const notaTL = (re) => (r) => { const tl = r.partes.find((p) => p.t === 'tl'); return tl && re.test(tl.nota) ? true : 'nota: ' + (tl && tl.nota); };
-caso('B7-7 el Cachorro: su tramo «paso» es de otra hermandad, sin segunda salida', motor(), '¿A qué hora sale el Cachorro de Sevilla?', y(noDice('sale hacia las'), notaTL(/^Horas del programa/)));
+// (el Cachorro, la Vera Cruz y Santa Marta tenían tramos de otra cofradía; con los suyos, la segunda salida cuadra: Canal Sur,
+// SEVILLA 26.pdf, p. 75 para el Cachorro, palio «Salida» en la fila de las 17:00 y «Entrada (2:35)»; p. 32 para las otras dos)
+caso('B7-7 el Cachorro: su palio sale hacia las 17:00 (franja de Canal Sur), como estimación', motor(), '¿A qué hora sale el Cachorro de Sevilla?', y(contiene('15:35', 'Esa es la hora oficial, la de la cruz de guía', 'El palio sale hacia las 17:00', 'es una estimación', 'Entrada · 02:35'), noDice('18:10'), notaTL(/cruz de guía; entrada, del palio/)));
 caso('B7-8 La Paz: el «paso» sale después de que la cruz llegue a la carrera, sin segunda salida', motor(), '¿A qué hora sale La Paz de Sevilla?', noDice('el paso sale'));
-caso('B7-9 la Vera Cruz: sin «Salida del palio» si no cuadra', motor(), '¿Por dónde pasa la Vera Cruz de Sevilla?', noDice('Salida del palio'));
+caso('B7-9 la Vera Cruz: su palio sale a las 20:25, después de la cruz (19:35), y cuadra', motor(), '¿Por dónde pasa la Vera Cruz de Sevilla?', y(contiene('Son las horas del palio', 'la salida oficial, la de la cruz de guía, es a las 19:35', 'Salida del palio · 20:25', 'Campana · 21:06'), noDice('16:30')));
 caso('B7-10 Málaga: la fuente no dice de qué son las horas, nota neutra', motor(), '¿A qué hora sale el Cautivo de Málaga?', y(notaTL(/^Horas del programa/), noDice('cruz de guía')));
 caso('B7-11 Granada: el recorrido sin «horas del paso»', motor(), '¿Por dónde pasa la Borriquilla de Granada?', y(noDice('horas del paso', 'Salida del paso'), contiene('itinerario 2026)')));
 caso('B7-12 Córdoba: horas de la cruz de guía (columna CRUZ DE GUÍA del PDF oficial)', motor(), '¿A qué hora sale la Expiración de Córdoba?', notaTL(/^Horas de la cruz de guía/));
-caso('B7-13 Santa Marta: tramos mal leídos en la fuente, sin referencia', motor(), '¿A qué hora sale Santa Marta de Sevilla?', y(noDice('sale hacia las'), notaTL(/^Horas del programa/)));
+caso('B7-13 Santa Marta: su único paso sale hacia las 18:42 (Canal Sur), como estimación', motor(), '¿A qué hora sale Santa Marta de Sevilla?', y(contiene('18:10', 'Esa es la hora oficial, la de la cruz de guía', 'El paso sale hacia las 18:42', 'es una estimación', 'Entrada · 22:20'), notaTL(/cruz de guía; entrada, del paso/)));
 caso('B7-14 autoría según la hermandad: anónimo, con la atribución tradicional sin base', motor(), '¿Quién talló las imágenes de la Esperanza de Triana?', y(contiene('Anónimo, entre 1608 y 1616 (atribuido tradicionalmente a Marcos Cabrera, sin base documental según la hermandad)'), noDice('Atribuido a Marcos Cabrera')));
 caso('B7-15 en su imaginero, la obra con la nota, no como obra suya sin más', motor(), 'obras de Marcos Cabrera', contiene('o que se le atribuyen', 'sin base documental'));
 caso('B7-19 la Macarena: la salida del palio, como estimación y con su fuente (no es de la nómina)', motor(), '¿A qué hora sale la Macarena de Sevilla?', contiene('00:00', 'Esa es la hora oficial, la de la cruz de guía', 'El palio sale hacia las 01:40, según el programa de Canal Sur', 'es una estimación'));
@@ -480,14 +485,14 @@ caso('B8-2 «cuánto dura» la Esperanza de Triana: no da las 03:07 como su sali
 { const exOrig = D.ex; D.ex = [[masDias(HOY, 20), '19:00', 'malaga', 'Traslado extraordinario de prueba', 'pasion-malaga', 'Parroquia de San Juan', 'https://www.diariosur.es/prueba', 1, '', '30 nov · Prueba', 'Diario Sur']];
   caso('B9-4 extraordinaria con fuente de prensa: «según «Diario Sur»» y botón de la fuente', motor(HOY), '¿A qué hora sale la Pasión de Málaga?', y(contiene('según «Diario Sur»', '«Traslado extraordinario de prueba»'), noDice('según la diario'), (r) => r.enlaces.some((e) => e[1] === 'https://www.diariosur.es/prueba') || 'falta el enlace a la fuente'));
   D.ex = exOrig; }
-caso('B8-6 «cuánto dura» el Cachorro: sus horas del paso no cuadran con la cruz de guía, no saca duración de ellas', motor(), '¿Cuánto dura el Cachorro?', y(contiene('15:35', 'no cuadran'), noDice('sale a las 18:10', '4 h y 35 min')));
+caso('B8-6 «cuánto dura» el Cachorro: de la cruz de guía (15:35) a la entrada del palio (2:35)', motor(), '¿Cuánto dura el Cachorro?', y(contiene('unas 11 h', 'la cruz de guía sale a las 15:35 (hora oficial)', 'el palio se recoge hacia las 02:35', 'es una estimación'), noDice('no cuadran', 'sale a las 17:00', 'sale a las 18:10')));
 caso('B8-7 «cuánto dura» el Gran Poder: no da las 01:55 del palio como su salida', motor(), '¿Cuánto dura el Gran Poder de Sevilla?', y(contiene('00:35', 'no cuadran'), noDice('sale a las 01:55', '5 h y 50 min')));
 caso('B8-3 fuente que no es un programa: entre comillas, sin «según el Horarios»', motor(), '¿A qué hora sale la Bofeta?', noDice('según el Horarios'));
 caso('B8-4 lo mismo en el recorrido', motor(), '¿Por dónde pasa la Bofeta?', noDice('según el Horarios'));
 { const sin = D.hermandades.filter((h) => h.rk && h.rk !== 'cruz de guía' && !h.rf).map((h) => h.s); const n = 'B8-5 toda cofradía con horas del palio o del paso lleva su fuente (rf)'; if (sin.length) { mal++; console.log('✗ ' + n + ': ' + sin.join(', ')); } else { ok++; if (VER) console.log('✓ ' + n); } }
 caso('B7-16 «el Cristo de las Tres Caídas de Triana» es la Esperanza de Triana, no las Tres Caídas de Huelva', motor(), '¿Quién talló el Cristo de las Tres Caídas de Triana?', y(contiene('Esperanza de Triana'), noDice('León Ortega')));
 caso('B7-17 y el de Huelva sigue siendo el de Huelva', motor(), '¿Quién talló el Cristo de las Tres Caídas de Huelva?', contiene('León Ortega'));
-caso('B7-18 Vera Cruz: tramo del palio con hora aproximada antes que la cruz oficial, sin «horas del palio»', motor(), '¿Por dónde pasa la Vera Cruz de Sevilla?', noDice('horas del palio'));
+caso('B7-18 Vera Cruz: «a qué hora sale» da la cruz oficial y el palio aparte, no el de San Gonzalo (16:30)', motor(), '¿A qué hora sale la Vera Cruz de Sevilla?', y(contiene('19:35', 'Esa es la hora oficial, la de la cruz de guía', 'El palio sale hacia las 20:25', 'es una estimación'), noDice('16:30')));
 caso('B6-35 «¿cómo llego a ver la Macarena?» es cofrade', motor(), '¿cómo llego a ver la Macarena?', noDice('lo mío son las cofradías'));
 caso('B6-34 «del Perchel»', motor(), 'hermandades del perchel', contiene('Perchel', 'Expiración'));
 caso('B6-10 la lista de la tarde sigue funcionando', motor(), '¿qué hermandades salen el Lunes Santo en Sevilla por la tarde?', contiene('por la tarde', 'San Gonzalo'));
