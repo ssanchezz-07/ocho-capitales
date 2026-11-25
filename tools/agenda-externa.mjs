@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { trozoDeFrase } from '../site/eventos.mjs';
+import { trozoDeFrase, tituloGuardado } from '../site/eventos.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const UA = 'OchoCapitales/1.0 (https://github.com/ssanchezz-07/ocho-capitales; portal cofrade sin animo de lucro)';
@@ -17,13 +17,17 @@ const CAPS = ['malaga', 'sevilla', 'granada', 'cordoba', 'jaen', 'huelva', 'cadi
 const MESES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
 const pad = (n) => String(n).padStart(2, '0');
 
-// ¿a qué capital (provincia) pertenece el acto? Se mira el paréntesis «(Córdoba)» y, si no, el pueblo nombrado.
-function ciudadDe(t) {
-  const par = t.match(/\(([^)]+)\)/g) || [];
-  for (const p of par) { const k = norm(p.replace(/[()]/g, '')); if (CAPS.includes(k)) return k; }
-  const k = norm(t);
-  for (const [loc, cap] of Object.entries(LOCS)) { if (loc.startsWith('_')) continue; if (loc.length > 4 && (' ' + k + ' ').includes(' ' + loc.replace(/-/g, ' ') + ' ')) return cap; }
-  for (const c of CAPS) if ((' ' + k + ' ').includes(' ' + c + ' ') && c !== 'sevilla') return c;
+// ¿a qué capital (provincia) pertenece el acto? La dice su sede: el paréntesis del título, «(Córdoba)» o «(Sevilla-Este)», o el
+// pueblo nombrado, primero en el título y luego en el resto. El pueblo más largo gana («Sanlúcar la Mayor» es de Sevilla y
+// «Sanlúcar», de Cádiz). La música no cuenta: la banda dice de dónde es la banda, no dónde es el acto (25-nov: «Procesión del
+// Grupo de Fieles… (Sevilla-Este)», con una agrupación de Jerez, salía en Cádiz).
+const LOCS_ORD = Object.entries(LOCS).filter(([loc]) => !loc.startsWith('_') && loc.length > 4).sort((a, b) => b[0].length - a[0].length);
+function ciudadDe(titulo, resto = '') {
+  const sinMusica = resto.replace(/\b(?:Acompa[ñn]\w*|M[úu]sica)\b[^.]*\.?/gi, ' ');
+  for (const t of [titulo, sinMusica]) for (const p of t.match(/\(([^)]+)\)/g) || []) { const w = norm(p).split(' ')[0]; if (CAPS.includes(w)) return w; }
+  for (const t of [titulo, sinMusica]) { const k = ' ' + norm(t) + ' '; for (const [loc, cap] of LOCS_ORD) if (k.includes(' ' + loc.replace(/-/g, ' ') + ' ')) return cap; }
+  const k = ' ' + norm(titulo + ' ' + sinMusica) + ' ';
+  for (const c of CAPS) if (k.includes(' ' + c + ' ') && c !== 'sevilla') return c;
   return 'sevilla';
 }
 function tipoDe(t) {
@@ -39,7 +43,8 @@ function tipoDe(t) {
   if (/^(concierto|marchas|certamen|festival|gala)/.test(k)) return 'concierto';
   if (/^(pregon|exaltacion)/.test(k)) return 'pregon';
   if (/cartel/.test(k) && /^(presentacion|cartel)/.test(k)) return 'cartel';
-  if (/^(triduo|novena|septenario|quinario|funcion|misa|veneracion|solemne|eucaristia|santa misa|rosario|aniversario|ofrenda|cabildo|jura|bendicion|vigilia|hora santa|exposicion|pleito|acto|encuentro|peregrinacion|consejo de|conferencia|presentacion|inauguracion|cultos)/.test(k)) return 'culto';
+  if (/^cabildo/.test(k)) return 'acto'; // un cabildo (de elecciones, extraordinario…) no es un culto
+  if (/^(triduo|novena|septenario|quinario|funcion|misa|veneracion|solemne|eucaristia|santa misa|rosario|aniversario|ofrenda|jura|bendicion|vigilia|hora santa|exposicion|pleito|acto|encuentro|peregrinacion|consejo de|conferencia|presentacion|inauguracion|cultos)/.test(k)) return 'culto';
   return '';
 }
 const horaDe = (t) => { const m = t.match(/(?:a las|salida:?|sale a las|desde las)\s*(\d{1,2})[:.](\d{2})/i); return m ? pad(+m[1]) + ':' + m[2] : ''; };
@@ -74,7 +79,7 @@ async function infocofrade() {
     let titulo = partes[0].replace(/\.$/, '');
     const resto = partes.slice(1).filter((p) => !/^Recorrido/i.test(p)).join('. ');
     const music = (texto.match(/Acompa[ñn]a(?:n|rán)?:?\s+([^.]+(?:\.[^.]{0,0})?)/i) || [])[1];
-    const e = { fecha: `${year}-${pad(mes)}-${pad(dia)}`, hora: horaDe(texto), ciudad: ciudadDe(titulo + ' ' + resto), tipo, titulo, nota: [resto && !music ? resto : '', music ? 'Música: ' + music.trim() : ''].filter(Boolean).join(' ').slice(0, 320), fuente: 'InfoCofrade', url };
+    const e = { fecha: `${year}-${pad(mes)}-${pad(dia)}`, hora: horaDe(texto), ciudad: ciudadDe(titulo, resto), tipo, titulo, nota: [resto && !music ? resto : '', music ? 'Música: ' + music.trim() : ''].filter(Boolean).join(' ').slice(0, 320), fuente: 'InfoCofrade', url };
     out.push(e); prev = e;
   }
   return out;
@@ -256,8 +261,14 @@ try {
   const claveE = (e) => e.fecha + '|' + e.ciudad + '|' + norm(e.titulo).slice(0, 50);
   const ya = new Set(res.eventos.map(claveE));
   // lo sacado de una noticia cuyo texto sigue en agenda-cuerpos.json no se arrastra: se acaba de volver a titular con la regla
-  // nueva y, si ahora se descarta, no debe volver con el título viejo; de lo demás no se arrastran trozos de frase
-  for (const e of prev) if (e.fuente !== 'InfoCofrade' && e.fuente !== 'El Itinerario' && e.fecha >= corte && !ya.has(claveE(e)) && !releidas.has(e.url) && !(!/^[^:.]{2,60}: \S/.test(e.titulo) && trozoDeFrase(e.titulo))) res.eventos.push(e);
+  // nueva y, si ahora se descarta, no debe volver con el título viejo. Lo demás sacado de una noticia (origen «noticia», con su
+  // texto ya fuera de agenda-cuerpos.json) se arrastra solo si su título ya es el nombre de un acto, no un titular de prensa
+  // (site/eventos.mjs, tituloGuardado, como en site/build.mjs); de las agendas de prensa no se arrastran trozos de frase
+  for (const e of prev) {
+    if (e.fuente === 'InfoCofrade' || e.fuente === 'El Itinerario' || e.fecha < corte || ya.has(claveE(e)) || releidas.has(e.url)) continue;
+    if (e.origen === 'noticia') { const titulo = tituloGuardado(e); if (titulo) res.eventos.push({ ...e, titulo }); }
+    else if (!(!/^[^:.]{2,60}: \S/.test(e.titulo) && trozoDeFrase(e.titulo))) res.eventos.push(e);
+  }
 } catch (e) { /* primera ejecución */ }
 // el último archivo bueno se conserva si ambas fuentes fallan
 const file = path.join(DIR, 'sources', 'agenda-externa.json');

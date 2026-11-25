@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { detectarEventos, tituloDeActo, trozoDeFrase, sigueValiendo } from './eventos.mjs';
+import { detectarEventos, tituloDeActo, trozoDeFrase, sigueValiendo, tituloGuardado } from './eventos.mjs';
 import { clasificar, TEMAS } from './filtro-noticias.mjs';
 import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
 import { escenaVela, cabezaVela } from './vela.mjs';
@@ -528,9 +528,28 @@ const EXT_ORDEN = { 'Diario SUR': 0, 'La Opinión de Málaga': 0, InfoCofrade: 1
 const STOPW_EV = new Set(['del', 'las', 'los', 'con', 'por', 'una', 'procesion', 'extraordinaria', 'nuestra', 'nuestro', 'senora', 'senor', 'virgen', 'santisima', 'maria', 'padre', 'jesus', 'dia', 'triduo', 'funcion', 'solemne', 'honor', 'ntra', 'sra', 'stma', 'stmo', 'cristo', 'traslado', 'vuelta', 'ida', 'regreso', 'besamanos', 'rosario', 'cultos', 'primer', 'segundo', 'tercer', 'principal', 'misa', 'hermandad', 'cofradia', 'este', 'esta', 'estos', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'itinerario', 'horario', 'horarios', 'recorrido', 'hora', 'horas', 'gloria', 'patrona', 'patron', 'calles', 'almeria', 'cadiz', 'cordoba', 'granada', 'huelva', 'jaen', 'malaga', 'sevilla']);
 const sigEv = (t) => new Set(norm(t).replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length >= 3 && !STOPW_EV.has(w)));
 const mismoActo = (a, b) => { if (a.fecha !== b.fecha || a.ciudad !== b.ciudad || GRUPO_DE[a.tipo] !== GRUPO_DE[b.tipo]) return false; const x = sigEv(a.titulo), y = sigEv(b.titulo); let n = 0; for (const w of x) if (y.has(w)) n++; return x.size && y.size && n / Math.min(x.size, y.size) >= 0.5; };
+const AGENDA_CUERPOS_FILE = path.join(DIR, '..', 'tools', 'sources', 'agenda-cuerpos.json');
 function eventosExternos(previos) {
   if (!fs.existsSync(AGENDA_EXT_FILE)) return [];
-  const raw = JSON.parse(fs.readFileSync(AGENDA_EXT_FILE, 'utf8')).eventos.filter((e) => GRUPO_DE[e.tipo] && CAP[e.ciudad]);
+  // agenda-externa.json lo escribe el bot cada hora (no en un push) y puede traer lo leído con reglas de antes: aquí se le aplican
+  // las de hoy, sin esperar a que vuelva a correr tools/agenda-externa.mjs.
+  //  · Lo sacado del texto de una noticia (origen «noticia») se vuelve a titular como en eventosNoticias(): con la frase y el
+  //    titular guardados en agenda-cuerpos.json o, si ya no están, con su título. Si no sale el nombre limpio de un acto, fuera:
+  //    un titular de prensa no es un acto («José Manuel Peña será el pregonero…»; site/eventos.mjs, tituloGuardado).
+  //  · Un cabildo (de elecciones, extraordinario…) no es un culto: «Acto».
+  //  · En InfoCofrade, la capital la dice la sede entre paréntesis del título: «(Sevilla-Este)» es Sevilla aunque la banda que
+  //    acompaña sea de Jerez (tools/agenda-externa.mjs, ciudadDe).
+  let cuerpos = {}; try { cuerpos = JSON.parse(fs.readFileSync(AGENDA_CUERPOS_FILE, 'utf8')); } catch (e) { cuerpos = {}; }
+  const lecturas = new Map(); for (const c of Object.values(cuerpos)) if (c && c.url) lecturas.set(c.url, [...(lecturas.get(c.url) || []), c]);
+  const raw = [];
+  for (const e of JSON.parse(fs.readFileSync(AGENDA_EXT_FILE, 'utf8')).eventos) {
+    const titulo = e.origen === 'noticia' ? tituloGuardado(e, lecturas.get(e.url)) : e.titulo;
+    if (!titulo) continue;
+    const tipo = /^cabildo\b/.test(norm(titulo)) ? 'acto' : e.tipo;
+    const sede = e.fuente === 'InfoCofrade' ? (titulo.match(/\(([^()]+)\)/g) || []).map((p) => norm(p).replace(/[^a-z0-9 ]/g, ' ').trim().split(/\s+/)[0]).find((w) => CAP[w]) : '';
+    const x = { ...e, titulo, tipo, ciudad: sede || e.ciudad };
+    if (GRUPO_DE[x.tipo] && CAP[x.ciudad]) raw.push(x);
+  }
   // Las agendas dan el acto en pocas palabras; de la prensa solo valen los titulares cortos (una frase larga es una noticia, no un acto).
   const AGENDAS = new Set(['InfoCofrade', 'El Itinerario', 'Andalucía Información', 'Diario SUR', 'Diario Sur', 'La Opinión de Málaga', 'Real Federación de Hermandades y Cofradías de Granada']);
   // Lo leído en el texto de una noticia (origen «noticia», o cualquier medio que no sea agenda estructurada) no se libra por el

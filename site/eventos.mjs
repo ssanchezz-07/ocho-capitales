@@ -110,6 +110,22 @@ export function tituloDeActo(e, titular, todos) {
 // Un evento guardado (agenda-cuerpos.json, news.json) se detectó con las reglas de entonces: solo sigue valiendo si su frase,
 // leída con las reglas de hoy, da el mismo tipo y la misma fecha (así un arreglo del detector alcanza a lo ya leído).
 export const sigueValiendo = (e, pubTs) => detectarEventos(e.frase, pubTs).some((x) => x.fecha === e.fecha && x.tipo === e.tipo);
+// Un acto guardado en agenda-externa.json que salió del texto de una noticia (origen «noticia») lleva el título que le dieron las
+// reglas de entonces (antes del 24-nov, el titular si la noticia traía un solo acto: «José Manuel Peña será el pregonero…»). Se
+// vuelve a titular con las de hoy, como los actos de news.json: si el texto de la noticia sigue en agenda-cuerpos.json (`cuerpos`:
+// sus lecturas con esa url), desde su frase y su titular; si no, el título guardado vale solo si ya es el nombre del acto (nombra
+// ese tipo de acto y no es una oración). '' = sin título: el acto se descarta. Lo usan site/build.mjs y tools/agenda-externa.mjs.
+const limpiaFrase = (t) => String(t || '').replace(/^[^\p{L}\p{N}¡¿"“«]+/u, '').replace(/\s+/g, ' ').trim();
+const sinFoto = (t) => t.replace(/^(Foto|Fotos|Galer[ií]a)[:.]?\s*/i, '').slice(0, 170);
+export function tituloGuardado(e, cuerpos = []) {
+  if (!cuerpos || !cuerpos.length) return sinFoto(tituloDeActo({ tipo: e.tipo, frase: e.titulo }, e.titulo, [e]));
+  for (const c of cuerpos) for (const x of c.ev || []) {
+    if (x.fecha !== e.fecha || x.tipo !== e.tipo || !sigueValiendo(x, c.ts)) continue;
+    const t = tituloDeActo({ tipo: x.tipo, frase: limpiaFrase(x.frase) }, c.titulo, c.ev);
+    if (t) return sinFoto(t);
+  }
+  return '';
+}
 
 // Autocomprobación: node site/eventos.mjs
 if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFileURL(process.argv[1]).href) {
@@ -141,5 +157,15 @@ if (process.argv[1] && import.meta.url === (await import('node:url')).pathToFile
   eq(tit('Traslado de la Virgen de la Paz a la Catedral el 28 de noviembre', 'traslado', 'x', [{ tipo: 'traslado' }]), 'Traslado de la Virgen de la Paz a la Catedral el 28 de noviembre', 'frase que empieza por el acto');
   eq(sigueValiendo({ fecha: '2026-10-09', tipo: 'procesion', frase: 'El encuentro sobre las marchas procesionales será este viernes.' }, pub), false, 'evento guardado con la regla vieja');
   eq(sigueValiendo({ fecha: '2026-11-14', tipo: 'extraordinaria', frase: 'El sábado 14 de noviembre, procesión extraordinaria de Jesús de la Pasión.' }, pub), true, 'evento guardado que sigue valiendo');
+  // agenda-externa.json escrito con las reglas de antes: lo que el bot guardó de una noticia se vuelve a titular con las de hoy
+  const gu = (titulo, tipo, cuerpos) => tituloGuardado({ fecha: '2027-02-26', tipo, titulo }, cuerpos);
+  const cuerpo = (titular, frase, tipo = 'pregon') => [{ ts: pub, titulo: titular, ev: [{ fecha: '2027-02-26', tipo, frase }] }];
+  eq(gu('José Manuel Peña será el pregonero de la hermandad de Los Gitanos de 2027', 'pregon'), '', 'guardado sin texto: un titular-oración no es un acto');
+  eq(gu('José Manuel Carmona Meléndez, pregonero de la Semana Santa 2027 de Chiclana', 'via-crucis'), '', 'guardado sin texto: un titular que no nombra el acto no es un acto');
+  eq(gu('Granada reúne en una guía los cultos de veinte hermandades por la festividad de la Inmaculada', 'traslado'), '', 'guardado sin texto: titular de otra cosa');
+  eq(gu('Pregón de la hermandad de Los Gitanos', 'pregon'), 'Pregón de la hermandad de Los Gitanos', 'guardado sin texto que ya es el nombre del acto: se queda');
+  eq(gu('José Manuel Peña será el pregonero de la hermandad de Los Gitanos de 2027', 'pregon', cuerpo('José Manuel Peña será el pregonero de la hermandad de Los Gitanos de 2027', 'El periodista y cofrade, José Manuel Peña pronunciará el pregón de la hermandad de Los Gitanos, el próximo 26 de febrero de 2027.')), '', 'con su texto: ni la frase ni el titular nombran el acto');
+  eq(gu('Los Gitanos ya tienen pregonero', 'pregon', cuerpo('Los Gitanos ya tienen pregonero', 'Pregón de la hermandad de Los Gitanos el 26 de febrero de 2027.')), 'Pregón de la hermandad de Los Gitanos el 26 de febrero de 2027', 'con su texto: se usa la frase si nombra el acto');
+  eq(gu('Pregón de Los Gitanos', 'pregon', cuerpo('Pregón de Los Gitanos', 'Pregón de Los Gitanos el 26 de febrero de 2027.', 'concierto')), '', 'con su texto, sin ese acto en él: fuera');
   console.log(process.exitCode ? 'Hay fallos' : 'eventos.mjs: todas las comprobaciones OK');
 }
