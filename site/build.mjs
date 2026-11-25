@@ -1033,7 +1033,9 @@ function seccionVela(enPortada) {
   const boton = enPortada ? `<a class="oc-btn oc-vela-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : `<a class="oc-btn oc-vela-btn is-abajo" href="#prox-jornadas">Las jornadas y cada capital${icon('arrow')}</a>`;
   return escenaVela({ modo: enPortada ? 'portada' : 'proxima', anio: TEMPORADA.anio, lead: leadHoy(), boton, colores: D.capitales.map((c) => c.color) });
 }
-// en «Próxima Semana Santa» la escena está arriba: la página no se pinta hasta que el lienzo tiene su primer fotograma (Chrome)
+// en «Próxima Semana Santa» la escena está arriba: la página no se pinta hasta que el lienzo tiene su primer fotograma (Chrome).
+// Allí va antes de las hojas de estilo: su script escribe la etiqueta de vela.js, y un script detrás de una hoja de estilo espera
+// a que llegue; delante, vela.js se pide en cuanto se lee el <head>, como cuando la etiqueta estaba escrita en el HTML
 const VELA_HEAD = (bloquea) => cabezaVela(`${u('assets/vela.js')}?v=${HUELLA.vela}`, bloquea);
 // Próxima Semana Santa (botón de la portada fuera de temporada): cuenta atrás, fechas de cada jornada y qué tendrá cada capital.
 // Los recorridos del año se publican aquí y en el plano en cuanto cada agrupación o consejo dé a conocer sus itinerarios oficiales.
@@ -1050,7 +1052,7 @@ ${seccionVela(false)}
 <section aria-labelledby="prox-caps"><h2 class="oc-h2" id="prox-caps">Qué tendrá cada capital</h2><ul class="oc-prox-caps">${caps}</ul></section>
 <p class="oc-note">Mientras tanto, las salidas extraordinarias anunciadas están en el plano de cada ciudad (portada) y en el <a href="${u('calendario/')}">calendario cofrade</a>.</p>
 </div>`;
-  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${VELA_HEAD(true)}`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
+  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `${VELA_HEAD(true)}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
 }
 // Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
 function pageHoy() {

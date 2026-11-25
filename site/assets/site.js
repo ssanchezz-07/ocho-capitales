@@ -1039,10 +1039,11 @@
   });
 
   // ---------- volver arriba ----------
-  // Aparece pasadas unas dos pantallas y nunca encima de un plano (ni de su crédito de OpenStreetMap). Con «reducir movimiento», salto directo.
+  // Aparece pasadas unas dos pantallas y nunca encima de un plano (ni de su crédito de OpenStreetMap) ni de la calle del nazareno
+  // («Enciende la vela»), que llena la pantalla. Con «reducir movimiento», salto directo.
   (function () {
     var b = $('[data-arriba]'); if (!b) return;
-    var planos = $$('.oc-calle-mapa, .oc-colg-plano'), reloj = $('.oc-calle-reloj'), osm = $('.oc-calle-osm'), cunao = $('.oc-cunao-btn'), pedido = false;
+    var planos = $$('.oc-calle-mapa, .oc-colg-plano, .oc-vela-escena'), reloj = $('.oc-calle-reloj'), osm = $('.oc-calle-osm'), cunao = $('.oc-cunao-btn'), pedido = false;
     var choca = function (a, p, m) { return p.width > 0 && p.left < a.right && p.right > a.left && p.top < a.bottom + m && p.bottom > a.top - m; };
     var mira = function () {
       pedido = false;

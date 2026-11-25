@@ -433,8 +433,13 @@
     if (encendida) return;
     encendida = true; tEnc = reloj; sec.classList.add('is-encendida');
     // con el ratón o el dedo, el botón se va al apagarse el aviso; con el teclado (Intro o espacio: detail 0) se queda con el
-    // foco, sin verse, hasta que aparecen los textos y el foco pasa al título
-    if (!ev || ev.detail !== 0) { boton.blur(); setTimeout(function () { boton.hidden = true; }, 550); }
+    // foco, sin verse, hasta que aparecen los textos y el foco pasa al título. Con VoiceOver el toque puede llegar con detail 1:
+    // si el botón tenía el foco, pasa ya al título (está en la página, aún sin verse) y el lector no se queda sin sitio
+    if (!ev || ev.detail !== 0) {
+      var tit = document.activeElement === boton && sec.querySelector('#vela-t');
+      if (tit) tit.focus({ preventScroll: true }); else boton.blur();
+      setTimeout(function () { boton.hidden = true; }, 550);
+    }
     arranca();
   }
   // al irse a «Próxima Semana Santa», allí la calle sigue por donde iba

@@ -112,6 +112,14 @@ ${portada ? '<button type="button" class="oc-vela-boton" aria-label="Enciende la
 }
 
 // En el <head>: con «reducir movimiento» (o sin lienzo) no se marca nada y se queda la escena final. Si vela.js no llega a
-// arrancar en 8 s (red muy lenta), también: mejor la escena quieta que una vela que no se enciende. bloquea: la página no se
-// pinta hasta que vela.js ha pintado su primer fotograma (en «Próxima Semana Santa», donde la escena está arriba; Chrome).
-export const cabezaVela = (src, bloquea = false) => `<script>(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.Path2D||!Path2D.prototype.addPath||!window.DOMMatrix)return;var h=document.documentElement;h.classList.add('oc-vela-js');setTimeout(function(){if(!window.ocVelaVivo)h.classList.remove('oc-vela-js')},8000)}catch(e){}})()</script><script src="${src}" defer${bloquea ? ' blocking="render"' : ''}></script>`;
+// arrancar en 8 s (red muy lenta), también: mejor la escena quieta que una vela que no se enciende.
+// bloquea (en «Próxima Semana Santa», donde la escena está arriba; Chrome): la página no se pinta hasta que vela.js ha pintado
+// su primer fotograma, y así la calle que llega de la portada sigue por donde iba. Solo cuando la escena se va a mover: con
+// «reducir movimiento» ni se pide vela.js ni se espera a nada. Por eso esa etiqueta la escribe el propio script del <head> con
+// document.write: es la única forma de que sea del analizador, con defer (corre con la página ya leída) y blocking="render"
+// (no se pinta hasta que corre); una creada con createElement no puede ser defer y dejaría pintar antes de que haya escena.
+const QUIETA = "matchMedia('(prefers-reduced-motion: reduce)').matches||!window.Path2D||!Path2D.prototype.addPath||!window.DOMMatrix";
+const MARCA = "var h=document.documentElement;h.classList.add('oc-vela-js');setTimeout(function(){if(!window.ocVelaVivo)h.classList.remove('oc-vela-js')},8000)";
+export const cabezaVela = (src, bloquea = false) => bloquea
+  ? `<script>(function(){try{if(${QUIETA})return;${MARCA};document.write('<script src=${JSON.stringify(src)} defer blocking="render"><\\/script>')}catch(e){}})()</script>`
+  : `<script>(function(){try{if(${QUIETA})return;${MARCA}}catch(e){}})()</script><script src="${src}" defer></script>`;
