@@ -353,6 +353,28 @@
     }
     return null;
   }
+  // Minutos que la cruz de guía le lleva al paso a la hora t, contados por hora: en la salida, en la entrada y en cada sitio por el
+  // que pasan las dos con hora oficial (la carrera oficial, la catedral…), la diferencia entre sus horas; entre dos de esos sitios,
+  // repartida según la hora de la cruz (el cortejo se estira o se encoge por el camino). Sin cruz, o si los datos dicen que la cruz
+  // va detrás, 0: el cortejo se queda en el paso.
+  function refsVentaja(c, p) {
+    var r = [[c[0][2], p[0][2] - c[0][2]]];
+    for (var i = 1; i < c.length - 1; i++) {
+      var a = c[i]; if (a[6] || !a[4]) continue; // punto oficial de la cruz con su hora exacta
+      for (var j = 1; j < p.length - 1; j++) { var b = p[j]; if (!b[6] && b[4] && b[2] >= a[2] && b[2] - a[2] < 240 && Math.hypot(b[0] - a[0], b[1] - a[1]) < 40) { r.push([a[2], b[2] - a[2]]); break; } }
+    }
+    r.push([c[c.length - 1][2], p[p.length - 1][2] - c[c.length - 1][2]]);
+    return r.sort(function (x, y) { return x[0] - y[0]; });
+  }
+  function ventaja(h, t) {
+    var c = h.t.cruz, p = h.t.paso; if (!c || !p || !c.length || !p.length) return 0;
+    var r = h.vref || (h.vref = refsVentaja(c, p)), k = 0;
+    if (t <= r[0][0]) return Math.max(0, r[0][1]);
+    while (k < r.length - 1 && r[k + 1][0] < t) k++;
+    if (k === r.length - 1) return Math.max(0, r[k][1]);
+    var f = r[k + 1][0] > r[k][0] ? (t - r[k][0]) / (r[k + 1][0] - r[k][0]) : 0;
+    return Math.max(0, r[k][1] + (r[k + 1][1] - r[k][1]) * f);
+  }
   var delDia = function () { return D.hermandades.filter(function (h) { return h.d === dia; }).sort(function (a, b) { return (a.o || 0) - (b.o || 0); }); };
   function limites() { var a = Infinity, b = -Infinity; delDia().forEach(function (h) { for (var k in h.t) { var p = h.t[k]; a = Math.min(a, p[0][2]); b = Math.max(b, p[p.length - 1][2]); } }); return [a - 30, b + 30]; }
 
@@ -462,14 +484,17 @@
         // el recorrido de la que está en la calle ahora se ve; los demás, de fondo
         capas.rutas.querySelectorAll('.oc-c-ruta[data-s="' + h.s + '"]').forEach(function (r) { r.setAttribute('data-estado', est); });
       }
-      // el cortejo ocupa la calle desde el paso hasta la cruz de guía
+      // el cortejo ocupa la calle desde el paso hasta la cruz de guía: es el tramo que el paso recorrerá en los minutos de
+      // ventaja que le lleva la cruz (contado por hora, no por cercanía: en las idas y vueltas por la misma calle, el punto
+      // más cercano a la cruz podía caer en la vuelta y el cortejo se dibujaba de más)
       if (est === 'calle' && h.t.paso && cruz) {
-        var pts = h.t.paso, i0 = paso.i, d = 'M' + paso.x + ' ' + paso.y, best = i0, bd = Infinity;
-        for (var j = i0; j < Math.min(pts.length, i0 + 600); j++) { var dd = Math.hypot(pts[j][0] - cruz.x, pts[j][1] - cruz.y); if (dd < bd) { bd = dd; best = j; } }
+        var pts = h.t.paso, i0 = paso.i, d = 'M' + paso.x + ' ' + paso.y;
+        var fin = enTramo(pts, Math.min(T + ventaja(h, T), pts[pts.length - 1][2])) || paso;
         // por los tramos sin calle conocida (recta de más de 150 m entre puntos oficiales) el cortejo no se dibuja
-        for (var k = i0 + 1; k <= best; k++) { var pa = pts[k - 1], pb = pts[k], salto = !pa[6] && !pb[6] && Math.hypot(pb[0] - pa[0], pb[1] - pa[1]) > 150; d += (salto ? 'M' : 'L') + pb[0] + ' ' + pb[1]; }
-        // la cruz de guía solo se une si está junto al recorrido (si no, sería una recta inventada a través de la ciudad)
-        if (bd < 80) d += 'L' + cruz.x + ' ' + cruz.y;
+        for (var k = i0 + 1; k <= fin.i; k++) { var pa = pts[k - 1], pb = pts[k], salto = !pa[6] && !pb[6] && Math.hypot(pb[0] - pa[0], pb[1] - pa[1]) > 150; d += (salto ? 'M' : 'L') + pb[0] + ' ' + pb[1]; }
+        if (fin.i >= i0 && fin.estado === 'calle') d += 'L' + fin.x + ' ' + fin.y;
+        // la cruz de guía solo se une si está junto a donde acaba el cortejo (si no, sería una recta inventada a través de la ciudad)
+        if (Math.hypot(fin.x - cruz.x, fin.y - cruz.y) < 80) d += 'L' + cruz.x + ' ' + cruz.y;
         // el mismo trazo se alarga o se acorta: no se crea uno nuevo en cada fotograma
         var cp = cortejoDe[h.s]; if (!cp) { cp = cortejoDe[h.s] = el('path', { 'class': 'oc-c-cortejo' }); capas.cortejos.appendChild(cp); }
         if (cp.getAttribute('d') !== d) cp.setAttribute('d', d);
