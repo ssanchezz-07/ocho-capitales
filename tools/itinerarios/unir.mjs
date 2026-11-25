@@ -155,7 +155,8 @@ function limpiar(ciudad, pts) {
   let quitados = 0, horasRescatadas = 0;
   for (const p0 of pts) {
     const r = limpiarLugar(ciudad, p0.lugar);
-    // una hora suelta en la fila de abajo de una «Salida» sin hora es la de esa salida (Torreblanca: «Salida» / «16:45»)
+    // una hora suelta en la fila de abajo de una «Salida» sin hora es la de esa salida (Torreblanca: «Salida» / «16:45», comprobado
+    // en la p. 2 de la rejilla del Consejo; Torreblanca va ahora copiada a mano, en A_MANO)
     const ant = out[out.length - 1];
     if (r && !r.lugar && r.horas.size === 1 && ant && !ant.hora && out.length === 1 && /^(salida|sale)$/i.test(ant.lugar)) { ant.hora = [...r.horas][0]; horasRescatadas++; quitados++; continue; }
     if (!r || !r.lugar) { quitados++; continue; }
@@ -262,7 +263,42 @@ const A_MANO = {
     'cruz de guía': [['19:00', 'Salida', '19:20'], ['19:30', 'Plaza de las Monjas'], ['20:00', 'Pérez Carasa'], ['20:30', 'Rábida'], ['21:00', 'C. OFICIAL'], ['21:30', 'Espronceda'], ['22:00', 'Plaza Constitución'], ['22:30', 'Palos/Tres Agosto'], ['23:00', 'Templo', '23:15']],
     palio: [['19:30', 'Salida', '19:50'], ['20:00', 'Pérez Carasa'], ['20:30', 'Murillo'], ['21:00', 'Hernán Cortés'], ['21:30', 'Bocas'], ['22:00', 'C. OFICIAL', '21:40'], ['22:30', 'Plaza de las Monjas'], ['23:00', 'Plaza Constitución'], ['23:30', 'Palos/Tres Agosto'], ['00:00', 'Templo']],
   } },
+  // · Sevilla, Sábado de Pasión, rejilla del Consejo (Itinerario SS Sevilla 2026 2.pdf), p. 2: la página tiene dos escalas de horas,
+  //   la del Viernes de Dolores a la izquierda (de 17:30 a 2:00, 18 filas) y la del Sábado de Pasión a la derecha (de 15:00 a 1:30,
+  //   22 filas más estrechas). El lector usó la de la izquierda para todo: las franjas del Sábado de Pasión iban de 2 h 30 min a 30 min
+  //   tarde y los nombres partidos entre dos filas. Por eso la cruz de Padre Pío (15:10, que sí es suya: columna «CRUZ DE GUÍA» de
+  //   Padre Pío, fila de las 15:00) salía más de tres horas antes que su palio (leído en la franja de las 18:30; es la de las 16:00).
+  //   Las columnas de Canal Sur (SEVILLA 26.pdf, p. 14) son una por
+  //   hermandad: la cruz de guía, con la recogida del palio en rojo; coinciden calle a calle con las cruces de aquí. El «paso» de
+  //   Divino Perdón y el de San José Obrero eran esas columnas de Canal Sur mal leídas (cruz de guía, no paso): se quitan.
+  //   Torreblanca: la «Salida 16:45» es de su cruz de guía (aquí, fila de las 16:30; en Canal Sur, «Salida (16:45)» en su columna).
+  'padre-pio-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 2, fuente: 'cgh', tramos: {
+    'cruz de guía': [['15:00', 'Salida', '15:10'], ['15:30', 'Doctora'], ['16:00', 'Puebla del Río'], ['16:30', 'Doña Francisquita'], ['17:00', 'Doña Francisquita'], ['17:30', 'Puerto de la Mora'], ['18:00', 'Calatayud'], ['18:30', 'Ntra. Sra. Dolores'], ['19:00', 'Párroco A. Gómez Villa.'], ['19:30', 'Párroco A. Gómez Villa.'], ['20:00', 'Galicia'], ['20:30', 'Coimbra'], ['21:00', 'Avda. Gavilanes'], ['21:30', 'Doña Francisquita'], ['22:00', 'Doña Francisquita'], ['22:30', 'Ronda Padre Pío'], ['23:00', 'Carrión de los Céspedes'], ['23:30', 'Puebla de Cazalla'], ['0:00', 'Castillo de las Guardas'], ['0:30', 'Entrada']],
+    palio: [['16:00', 'Salida'], ['16:30', 'Avda. La Plata'], ['17:00', 'Doña Francisquita'], ['17:30', 'Doña Francisquita'], ['18:00', 'Puerto de Piedrafita'], ['18:30', 'Fco Carrera Iglesias'], ['19:00', 'Afán de Ribera'], ['19:30', 'Ntra. Sra. Dolores'], ['20:00', 'Párroco A. Gómez Villa.'], ['20:30', 'Galicia'], ['21:00', 'Lisboa'], ['21:30', 'Coimbra'], ['22:00', 'Doña Francisquita'], ['22:30', 'Avda. Plata'], ['23:00', 'Ronda de Padre Pío'], ['23:30', 'Carrión de los Céspedes'], ['0:00', 'Puebla de Cazalla'], ['0:30', 'Castillo de las Guardas'], ['1:00', 'Ronda Padre Pío'], ['1:30', 'Entrada']],
+  }, pendiente: ['Hora exacta de salida del palio: el Consejo (p. 2) solo da la franja de las 16:00 y Canal Sur (p. 14) no la trae.'] },
+  'dolores-de-torreblanca-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 2, fuente: 'cgh', tramos: {
+    'cruz de guía': [['16:30', 'Salida', '16:45'], ['17:00', 'Pl. Platanero'], ['17:30', 'Álamo'], ['18:00', 'Encina'], ['18:30', 'Torresquevedo'], ['19:00', 'Torresquevedo'], ['19:30', 'Torrebermeja'], ['20:00', 'Torres Naharro'], ['20:30', 'Torrenueva'], ['21:00', 'Torredonjimeno'], ['21:30', 'Torrecuadrada'], ['22:00', 'Torres del Río'], ['22:30', 'Torrescarcela'], ['23:00', 'Torrelaguna'], ['23:30', 'Torremegía'], ['0:00', 'Pl. Salvador Valverde'], ['0:30', 'Cedro'], ['1:00', 'Entrada']],
+    palio: [['17:30', 'Salida', '17:45'], ['18:00', 'Pl. Platanero'], ['18:30', 'Pl. Platanero'], ['19:00', 'Pl. Acacias'], ['19:30', 'Pino'], ['20:00', 'Torresquevedo'], ['20:30', 'Torrellana'], ['21:00', 'Torres Naharro'], ['21:30', 'Torres Naharro'], ['22:00', 'Torrenueva'], ['22:30', 'Torrelaguna'], ['23:00', 'Torrecuadrada'], ['23:30', 'Torregrosa'], ['0:00', 'Torrescarcela'], ['0:30', 'Torregorda'], ['1:00', 'Acedo'], ['1:30', 'J. M. S. Román'], ['1:30', 'Entrada', '2:15']],
+  } },
+  // (Alcosa en la rejilla del Consejo; «Divino Perdón» en Canal Sur)
+  'divino-perdon-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 2, fuente: 'cgh', tramos: {
+    'cruz de guía': [['17:30', 'Salida'], ['18:00', 'Carmen Conde'], ['18:30', 'Pintor Alfonso Grosso'], ['19:00', 'Avda. Ciudad de Chiva'], ['19:30', 'Avda. Ciudad de Chiva'], ['20:00', 'Ciudad de Alfafar'], ['20:30', 'Ciudad de Paterna'], ['21:00', 'Ontur'], ['21:30', 'Pl. Zocodover'], ['22:00', 'Avda. Ciudad de Chiva'], ['22:30', 'Pl. Obradoiro'], ['23:00', 'Avda. Ciudad de Chiva'], ['23:30', 'Emilia Barral'], ['0:00', 'Entrada']],
+    palio: [['18:00', 'Salida', '18:15'], ['18:30', 'Carmen Conde'], ['19:00', 'Carmen Conde'], ['19:30', 'Pintor Alfonso Grosso'], ['20:00', 'Avda. Ciudad de Chiva'], ['20:30', 'Avda. Ciudad de Chiva'], ['21:00', 'Parroquia'], ['21:30', 'Ciudad de Paterna'], ['22:00', 'Ontur'], ['22:30', 'Pl. Zocodover'], ['23:00', 'Ciudad de Chivas'], ['23:30', 'Pl. Obradoiro'], ['0:00', 'Avda. Ciudad de Chiva'], ['0:30', 'Emilia Barral'], ['1:00', 'Entrada']],
+  }, pendiente: ['Hora exacta de salida de la cruz de guía: ni el Consejo (p. 2) ni Canal Sur (p. 14) la dan, solo la franja de las 17:30 (no se pone como hora).'] },
+  'san-jose-obrero-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 2, fuente: 'cgh', tramos: {
+    'cruz de guía': [['17:00', 'Salida', '16:55'], ['17:30', 'Antonio Filpo Rojas'], ['18:00', 'Venecia'], ['18:30', 'Joaquín Morales y T.'], ['19:00', 'Mateos'], ['19:30', 'Sol'], ['20:00', 'María Auxiliadora'], ['20:30', 'Carretera de Carmona'], ['21:00', 'Jabugo'], ['21:30', 'Mamá Margarita'], ['22:00', 'José María de Mena'], ['22:30', 'Arroyo'], ['23:00', 'Luis Álvarez Duarte'], ['23:30', 'Nicasio Gallego'], ['0:00', 'Entrada']],
+    palio: [['17:30', 'Salida', '17:35'], ['18:00', 'Antonio Filpo Rojas'], ['18:30', 'Venecia'], ['19:00', 'Arroyo'], ['19:30', 'Mateos'], ['20:00', 'Cristo de las Cinco Llagas'], ['20:30', 'Madre Isabel de la Trinidad'], ['21:00', 'Carretera de Carmona'], ['21:30', 'San Juan Bosco'], ['22:00', 'Pinta'], ['22:30', 'Maestro Góm. Zarzuela'], ['23:00', 'Vicente Alanís'], ['23:30', 'Guanahaní'], ['0:00', 'Luis Álvarez Duarte'], ['0:30', 'Iriarte'], ['1:00', 'Entrada', '0:50']],
+  } },
+  // · Sevilla, Sábado Santo, Canal Sur (SEVILLA 26.pdf), p. 81: El Santo Entierro, «CRUZ DE GUÍA» y «DUELO». El lector juntó las dos
+  //   columnas en una (dos «Salida», horas que retrocedían) y el plano la usaba como paso. La rejilla del Consejo (p. 18) da las
+  //   mismas calles y horas.
+  'el-santo-entierro-sevilla': { pdf: 'SEVILLA 26.pdf', pagina: 81, tramos: {
+    'cruz de guía': [['18:30', 'Salida', '18:45'], ['19:00', 'CAMPANA', '19:03'], ['19:30', 'PLAZA', '19:43'], ['20:00', 'P. SAN MIGUEL', '20:09'], ['20:30', 'PALOS', '20:28'], ['21:00', 'Hernando Colón'], ['21:30', 'Tetuán'], ['22:00', 'Alfonso XII'], ['22:30', 'Entrada']],
+    paso: [['19:00', 'Salida', '19:15'], ['19:30', 'CAMPANA', '19:43'], ['20:00', 'PLAZA', '20:23'], ['20:30', 'P. SAN MIGUEL', '20:49'], ['21:00', 'PALOS', '21:08'], ['21:30', 'Alemanes'], ['22:00', 'Hernando Colón'], ['22:30', 'O´Donnell'], ['23:00', 'Entrada']],
+  } },
 };
+// fuente de las columnas copiadas a mano que no son del PDF de la primera lectura («cgh»: la rejilla del Consejo de Sevilla)
+const FUENTE_A_MANO = { cgh: FUENTES.find(([, f]) => f === 'sevilla-cgh-2026.json')[2] };
 
 const out = { generado: new Date().toISOString(), anio: 2026, hermandades: {}, sin_emparejar: [] };
 // todas las columnas que caen en cada hermandad y papel (cruz de guía, paso, palio…); se elige al final
@@ -379,7 +415,7 @@ for (const [slug, x] of Object.entries(A_MANO)) {
   const h = D.hermandades.find((y) => y.slug === slug), e = out.hermandades[slug];
   if (!h) { console.warn('A_MANO: no está la ficha', slug); continue; }
   const tramos = Object.fromEntries(Object.entries(x.tramos).map(([k, pts]) => [k, pts.map(([fila, lugar, hora]) => ({ fila, lugar, ...(hora ? { hora } : {}) }))]));
-  out.hermandades[slug] = { ciudad: h.ciudad, dia: h.dia, fuente: e ? e.fuente : '', pdf: x.pdf, ...(e && e.horas_fuente ? { horas_fuente: e.horas_fuente } : {}), tramos, a_mano: `${x.pdf}, p. ${x.pagina}` };
+  out.hermandades[slug] = { ciudad: h.ciudad, dia: h.dia, fuente: x.fuente ? FUENTE_A_MANO[x.fuente] : e ? e.fuente : '', pdf: x.pdf, ...(e && e.horas_fuente ? { horas_fuente: e.horas_fuente } : {}), tramos, a_mano: `${x.pdf}, p. ${x.pagina}`, ...(x.pendiente ? { pendiente: x.pendiente } : {}) };
 }
 for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'granada') {
   if (PAG_GR[slug]) e.fuente = fuenteGR(slug); else console.warn('Granada sin página en la guía oficial:', slug);

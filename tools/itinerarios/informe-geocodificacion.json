@@ -109,19 +109,19 @@
   ]
  },
  "sevilla": {
-  "puntos": 2202,
-  "situados": 2091,
+  "puntos": 2191,
+  "situados": 2092,
   "pct": 95,
   "calles_osm": 8804,
   "templos": 156,
   "no_situados": [
    [
-    "Salida",
-    29
+    "Entrada",
+    31
    ],
    [
-    "Entrada",
-    29
+    "Salida",
+    30
    ],
    [
     "Glorieta del Cid",
@@ -140,7 +140,7 @@
     3
    ],
    [
-    "Doña",
+    "Párroco A. Gómez Villa.",
     3
    ],
    [
@@ -161,18 +161,6 @@
    ],
    [
     "Ntra. Sra. Dolores",
-    2
-   ],
-   [
-    "Párroco A. Gómez Villa.",
-    2
-   ],
-   [
-    "Pueblade Cazalla",
-    2
-   ],
-   [
-    "de Mena",
     2
    ],
    [
@@ -213,6 +201,18 @@
    ],
    [
     "Alfonso Lasso de la Vega",
+    1
+   ],
+   [
+    "Parroquia Santa Genoveva",
+    1
+   ],
+   [
+    "P. José Sebatián Bandarán",
+    1
+   ],
+   [
+    "Caminodelos Toros",
     1
    ]
   ]

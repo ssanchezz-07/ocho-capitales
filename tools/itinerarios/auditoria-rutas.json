@@ -1755,15 +1755,15 @@
   },
   "padre-pio-sevilla": {
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 47,
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "puntos": 40,
    "sinSituar": 0,
-   "estimados": 26,
+   "estimados": 8,
    "avisos": []
   },
   "dolores-de-torreblanca-sevilla": {
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
    "puntos": 36,
    "sinSituar": 36,
    "estimados": 0,
@@ -1773,20 +1773,20 @@
   },
   "divino-perdon-sevilla": {
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 39,
-   "sinSituar": 39,
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "puntos": 29,
+   "sinSituar": 29,
    "estimados": 0,
    "avisos": [
-    "39 de 39 puntos sin situar"
+    "29 de 29 puntos sin situar"
    ]
   },
   "san-jose-obrero-sevilla": {
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 28,
-   "sinSituar": 2,
-   "estimados": 10,
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "puntos": 31,
+   "sinSituar": 0,
+   "estimados": 6,
    "avisos": []
   },
   "la-milagrosa-sevilla": {
@@ -2266,13 +2266,10 @@
   "el-santo-entierro-sevilla": {
    "dia": "Sábado Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 15,
+   "puntos": 18,
    "sinSituar": 0,
    "estimados": 0,
-   "avisos": [
-    "cruz de guía: la hora retrocede en «CAMPANA» (19:30)",
-    "cruz de guía: la hora retrocede en «PALOS» (20:28)"
-   ]
+   "avisos": []
   },
   "la-soledad-de-san-lorenzo-sevilla": {
    "dia": "Sábado Santo",

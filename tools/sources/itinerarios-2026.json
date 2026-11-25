@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-25T10:23:05.235Z",
+ "generado": "2026-11-25T11:46:40.954Z",
  "anio": 2026,
  "hermandades": {
   "la-borriquilla-granada": {
@@ -11107,239 +11107,294 @@
   "padre-pio-sevilla": {
    "ciudad": "sevilla",
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
-      "fila": "17:30",
+      "fila": "15:00",
       "lugar": "Salida",
       "hora": "15:10"
      },
      {
-      "fila": "18:00",
+      "fila": "15:30",
       "lugar": "Doctora"
      },
      {
-      "fila": "18:00",
-      "lugar": "Puebla"
+      "fila": "16:00",
+      "lugar": "Puebla del Río"
      },
      {
-      "fila": "18:30",
-      "lugar": "del Río Doña"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Francisquita"
-     },
-     {
-      "fila": "19:00",
+      "fila": "16:30",
       "lugar": "Doña Francisquita"
      },
      {
-      "fila": "19:30",
-      "lugar": "Puertodela Mora"
+      "fila": "17:00",
+      "lugar": "Doña Francisquita"
      },
      {
-      "fila": "20:00",
+      "fila": "17:30",
+      "lugar": "Puerto de la Mora"
+     },
+     {
+      "fila": "18:00",
       "lugar": "Calatayud"
      },
      {
-      "fila": "20:30",
+      "fila": "18:30",
       "lugar": "Ntra. Sra. Dolores"
      },
      {
-      "fila": "20:30",
-      "lugar": "Párroco A."
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Gómez Villa."
-     },
-     {
-      "fila": "21:00",
+      "fila": "19:00",
       "lugar": "Párroco A. Gómez Villa."
      },
      {
-      "fila": "21:30",
+      "fila": "19:30",
+      "lugar": "Párroco A. Gómez Villa."
+     },
+     {
+      "fila": "20:00",
       "lugar": "Galicia"
      },
      {
-      "fila": "22:00",
+      "fila": "20:30",
       "lugar": "Coimbra"
      },
      {
-      "fila": "22:30",
+      "fila": "21:00",
       "lugar": "Avda. Gavilanes"
      },
      {
+      "fila": "21:30",
+      "lugar": "Doña Francisquita"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Doña Francisquita"
+     },
+     {
       "fila": "22:30",
-      "lugar": "Doña"
+      "lugar": "Ronda Padre Pío"
      },
      {
       "fila": "23:00",
-      "lugar": "Francisquita"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Doña"
+      "lugar": "Carrión de los Céspedes"
      },
      {
       "fila": "23:30",
-      "lugar": "Francisquita Ronda"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Padre Pío"
+      "lugar": "Puebla de Cazalla"
      },
      {
       "fila": "0:00",
-      "lugar": "Carrióndelos Céspedes"
+      "lugar": "Castillo de las Guardas"
      },
      {
       "fila": "0:30",
-      "lugar": "Pueblade Cazalla"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Castillodelas Guardas"
-     },
-     {
-      "fila": "1:30",
       "lugar": "Entrada"
      }
     ],
     "palio": [
      {
-      "fila": "18:30",
+      "fila": "16:00",
       "lugar": "Salida"
      },
      {
-      "fila": "19:00",
-      "lugar": "La Plata"
+      "fila": "16:30",
+      "lugar": "Avda. La Plata"
      },
      {
-      "fila": "19:00",
+      "fila": "17:00",
       "lugar": "Doña Francisquita"
      },
      {
-      "fila": "19:30",
+      "fila": "17:30",
       "lugar": "Doña Francisquita"
      },
      {
-      "fila": "20:00",
-      "lugar": "Puertode Piedrafita"
+      "fila": "18:00",
+      "lugar": "Puerto de Piedrafita"
      },
      {
-      "fila": "20:30",
+      "fila": "18:30",
       "lugar": "Fco Carrera Iglesias"
      },
      {
-      "fila": "20:30",
-      "lugar": "Afán de"
+      "fila": "19:00",
+      "lugar": "Afán de Ribera"
      },
      {
-      "fila": "21:00",
-      "lugar": "Ribera"
-     },
-     {
-      "fila": "21:00",
+      "fila": "19:30",
       "lugar": "Ntra. Sra. Dolores"
      },
      {
-      "fila": "21:30",
+      "fila": "20:00",
       "lugar": "Párroco A. Gómez Villa."
      },
      {
-      "fila": "22:00",
+      "fila": "20:30",
       "lugar": "Galicia"
      },
      {
-      "fila": "22:30",
+      "fila": "21:00",
       "lugar": "Lisboa"
      },
      {
-      "fila": "23:00",
+      "fila": "21:30",
       "lugar": "Coimbra"
      },
      {
-      "fila": "23:00",
-      "lugar": "Doña"
+      "fila": "22:00",
+      "lugar": "Doña Francisquita"
      },
      {
-      "fila": "23:30",
-      "lugar": "Francisquita"
-     },
-     {
-      "fila": "23:30",
+      "fila": "22:30",
       "lugar": "Avda. Plata"
      },
      {
+      "fila": "23:00",
+      "lugar": "Ronda de Padre Pío"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Carrión de los Céspedes"
+     },
+     {
       "fila": "0:00",
-      "lugar": "Rondade Padre Pío"
+      "lugar": "Puebla de Cazalla"
      },
      {
       "fila": "0:30",
-      "lugar": "Carrióndelos Céspedes"
+      "lugar": "Castillo de las Guardas"
      },
      {
       "fila": "1:00",
-      "lugar": "Pueblade Cazalla"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Castillo de las"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "Guardas"
-     },
-     {
-      "fila": "1:40",
       "lugar": "Ronda Padre Pío"
      },
      {
-      "fila": "2:00",
+      "fila": "1:30",
       "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 2",
+   "pendiente": [
+    "Hora exacta de salida del palio: el Consejo (p. 2) solo da la franja de las 16:00 y Canal Sur (p. 14) no la trae."
+   ]
   },
   "dolores-de-torreblanca-sevilla": {
    "ciudad": "sevilla",
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
-      "fila": "18:30",
+      "fila": "16:30",
       "lugar": "Salida",
       "hora": "16:45"
      },
      {
-      "fila": "19:00",
+      "fila": "17:00",
       "lugar": "Pl. Platanero"
      },
      {
-      "fila": "19:30",
+      "fila": "17:30",
       "lugar": "Álamo"
      },
      {
-      "fila": "20:00",
+      "fila": "18:00",
       "lugar": "Encina"
      },
      {
-      "fila": "20:30",
+      "fila": "18:30",
       "lugar": "Torresquevedo"
      },
      {
-      "fila": "21:00",
+      "fila": "19:00",
       "lugar": "Torresquevedo"
      },
      {
-      "fila": "21:00",
+      "fila": "19:30",
       "lugar": "Torrebermeja"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Torres Naharro"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Torrenueva"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Torredonjimeno"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Torrecuadrada"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Torres del Río"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Torrescarcela"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Torrelaguna"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Torremegía"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Pl. Salvador Valverde"
+     },
+     {
+      "fila": "0:30",
+      "lugar": "Cedro"
+     },
+     {
+      "fila": "1:00",
+      "lugar": "Entrada"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "17:30",
+      "lugar": "Salida",
+      "hora": "17:45"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "Pl. Platanero"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "Pl. Platanero"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Pl. Acacias"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Pino"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Torresquevedo"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Torrellana"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Torres Naharro"
      },
      {
       "fila": "21:30",
@@ -11351,400 +11406,296 @@
      },
      {
       "fila": "22:30",
-      "lugar": "TorredonjimenoTorres"
+      "lugar": "Torrelaguna"
      },
      {
       "fila": "23:00",
       "lugar": "Torrecuadrada"
      },
      {
-      "fila": "23:00",
-      "lugar": "Torres del Río"
-     },
-     {
       "fila": "23:30",
-      "lugar": "Torrescarcela"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Torrelaguna"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "Torremegía"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "Pl. Salvador Valverde"
-     },
-     {
-      "fila": "1:30",
-      "lugar": "Cedro"
-     },
-     {
-      "fila": "1:40",
-      "lugar": "Entrada"
-     }
-    ],
-    "palio": [
-     {
-      "fila": "19:30",
-      "lugar": "Salida",
-      "hora": "17:45"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Pl. Platanero"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Pl. Platanero"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Pl. Acacias"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Pino"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Torresquevedo"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Torrellana"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Naharro"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Torres"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Naharro"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Torrenueva"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Torrelaguna"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Torrecuadrada"
-     },
-     {
-      "fila": "0:30",
       "lugar": "Torregrosa"
      },
      {
-      "fila": "1:00",
+      "fila": "0:00",
       "lugar": "Torrescarcela"
      },
      {
-      "fila": "1:30",
+      "fila": "0:30",
       "lugar": "Torregorda"
      },
      {
-      "fila": "1:40",
+      "fila": "1:00",
       "lugar": "Acedo"
      },
      {
-      "fila": "2:00",
-      "lugar": "J. M. S. Román - Entra",
+      "fila": "1:30",
+      "lugar": "J. M. S. Román"
+     },
+     {
+      "fila": "1:30",
+      "lugar": "Entrada",
       "hora": "2:15"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 2"
   },
   "divino-perdon-sevilla": {
    "ciudad": "sevilla",
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
-    "paso": [
+    "cruz de guía": [
      {
       "fila": "17:30",
       "lugar": "Salida"
      },
      {
-      "fila": "18:30",
-      "lugar": "Grosso"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Chiva"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Ontur"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Chiva"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Emilia Barral"
-     }
-    ],
-    "cruz de guía": [
-     {
-      "fila": "19:30",
-      "lugar": "Salida"
-     },
-     {
-      "fila": "20:00",
+      "fila": "18:00",
       "lugar": "Carmen Conde"
      },
      {
-      "fila": "20:30",
+      "fila": "18:30",
       "lugar": "Pintor Alfonso Grosso"
      },
      {
-      "fila": "20:30",
-      "lugar": "Avda. Ciudad"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "de Chiva"
-     },
-     {
-      "fila": "21:00",
+      "fila": "19:00",
       "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "21:30",
+      "fila": "19:30",
+      "lugar": "Avda. Ciudad de Chiva"
+     },
+     {
+      "fila": "20:00",
       "lugar": "Ciudad de Alfafar"
      },
      {
-      "fila": "22:00",
+      "fila": "20:30",
       "lugar": "Ciudad de Paterna"
      },
      {
-      "fila": "22:30",
+      "fila": "21:00",
       "lugar": "Ontur"
      },
      {
-      "fila": "23:00",
+      "fila": "21:30",
       "lugar": "Pl. Zocodover"
      },
      {
-      "fila": "23:00",
-      "lugar": "Avda. Ciudad"
+      "fila": "22:00",
+      "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "23:30",
-      "lugar": "de Chiva"
-     },
-     {
-      "fila": "23:30",
+      "fila": "22:30",
       "lugar": "Pl. Obradoiro"
      },
      {
-      "fila": "0:00",
-      "lugar": "Avda. Ciudadde Chiva"
+      "fila": "23:00",
+      "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "0:30",
+      "fila": "23:30",
       "lugar": "Emilia Barral"
      },
      {
-      "fila": "1:00",
+      "fila": "0:00",
       "lugar": "Entrada"
      }
     ],
     "palio": [
      {
-      "fila": "20:00",
+      "fila": "18:00",
       "lugar": "Salida",
       "hora": "18:15"
      },
      {
-      "fila": "20:30",
+      "fila": "18:30",
       "lugar": "Carmen Conde"
      },
      {
-      "fila": "20:30",
-      "lugar": "Carmen"
+      "fila": "19:00",
+      "lugar": "Carmen Conde"
      },
      {
-      "fila": "21:00",
-      "lugar": "Conde"
-     },
-     {
-      "fila": "21:00",
+      "fila": "19:30",
       "lugar": "Pintor Alfonso Grosso"
      },
      {
-      "fila": "21:30",
+      "fila": "20:00",
       "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "22:00",
+      "fila": "20:30",
       "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "22:30",
+      "fila": "21:00",
       "lugar": "Parroquia"
      },
      {
-      "fila": "22:30",
-      "lugar": "Ciudadde"
+      "fila": "21:30",
+      "lugar": "Ciudad de Paterna"
      },
      {
-      "fila": "23:00",
-      "lugar": "Paterna"
-     },
-     {
-      "fila": "23:00",
+      "fila": "22:00",
       "lugar": "Ontur"
      },
      {
-      "fila": "23:30",
+      "fila": "22:30",
       "lugar": "Pl. Zocodover"
      },
      {
-      "fila": "0:00",
-      "lugar": "Ciudadde Chivas"
+      "fila": "23:00",
+      "lugar": "Ciudad de Chivas"
      },
      {
-      "fila": "0:30",
+      "fila": "23:30",
       "lugar": "Pl. Obradoiro"
      },
      {
-      "fila": "1:00",
-      "lugar": "Avda. Ciudadde Chiva"
+      "fila": "0:00",
+      "lugar": "Avda. Ciudad de Chiva"
      },
      {
-      "fila": "1:30",
+      "fila": "0:30",
       "lugar": "Emilia Barral"
      },
      {
-      "fila": "1:40",
+      "fila": "1:00",
       "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 2",
+   "pendiente": [
+    "Hora exacta de salida de la cruz de guía: ni el Consejo (p. 2) ni Canal Sur (p. 14) la dan, solo la franja de las 17:30 (no se pone como hora)."
+   ]
   },
   "san-jose-obrero-sevilla": {
    "ciudad": "sevilla",
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
-    "paso": [
-     {
-      "fila": "17:30",
-      "lugar": "Filpo Rojas"
-     },
-     {
-      "fila": "18:30",
-      "lugar": "Morales"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Mateos"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Auxiliadora"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Jabugo"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Margarita"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "de Mena"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Arroyo"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Duarte"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Gallego"
-     },
-     {
-      "fila": "1:00",
-      "lugar": "palio",
-      "hora": "0:50"
-     }
-    ],
     "cruz de guía": [
      {
-      "fila": "19:00",
+      "fila": "17:00",
       "lugar": "Salida",
       "hora": "16:55"
      },
      {
-      "fila": "19:30",
-      "lugar": "Anto n i o Filpo R o j a s"
+      "fila": "17:30",
+      "lugar": "Antonio Filpo Rojas"
      },
      {
-      "fila": "20:00",
+      "fila": "18:00",
       "lugar": "Venecia"
      },
      {
-      "fila": "20:30",
-      "lugar": "Joaquín Moralesy T."
+      "fila": "18:30",
+      "lugar": "Joaquín Morales y T."
      },
      {
-      "fila": "21:00",
+      "fila": "19:00",
       "lugar": "Mateos"
      },
      {
-      "fila": "21:00",
+      "fila": "19:30",
       "lugar": "Sol"
      },
      {
-      "fila": "21:30",
+      "fila": "20:00",
       "lugar": "María Auxiliadora"
      },
      {
-      "fila": "22:00",
-      "lugar": "Carretera de Carmona de"
+      "fila": "20:30",
+      "lugar": "Carretera de Carmona"
      },
      {
-      "fila": "22:30",
+      "fila": "21:00",
       "lugar": "Jabugo"
      },
      {
+      "fila": "21:30",
+      "lugar": "Mamá Margarita"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "José María de Mena"
+     },
+     {
       "fila": "22:30",
-      "lugar": "Mamá"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Margarita"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "José María"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "de Mena"
-     },
-     {
-      "fila": "23:30",
       "lugar": "Arroyo"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Luis Álvarez Duarte"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Nicasio Gallego"
+     },
+     {
+      "fila": "0:00",
+      "lugar": "Entrada"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "17:30",
+      "lugar": "Salida",
+      "hora": "17:35"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "Antonio Filpo Rojas"
+     },
+     {
+      "fila": "18:30",
+      "lugar": "Venecia"
+     },
+     {
+      "fila": "19:00",
+      "lugar": "Arroyo"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "Mateos"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Cristo de las Cinco Llagas"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "Madre Isabel de la Trinidad"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Carretera de Carmona"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "San Juan Bosco"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Pinta"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Maestro Góm. Zarzuela"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Vicente Alanís"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Guanahaní"
      },
      {
       "fila": "0:00",
@@ -11752,14 +11703,16 @@
      },
      {
       "fila": "0:30",
-      "lugar": "Nicasio Gallego"
+      "lugar": "Iriarte"
      },
      {
       "fila": "1:00",
-      "lugar": "Lui Entrada"
+      "lugar": "Entrada",
+      "hora": "0:50"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 2"
   },
   "la-milagrosa-sevilla": {
    "ciudad": "sevilla",
@@ -19930,31 +19883,14 @@
       "hora": "19:03"
      },
      {
-      "fila": "19:00",
-      "lugar": "Salida",
-      "hora": "19:15"
-     },
-     {
       "fila": "19:30",
       "lugar": "PLAZA",
       "hora": "19:43"
      },
      {
-      "fila": "19:30",
-      "lugar": "CAMPANA"
-     },
-     {
       "fila": "20:00",
-      "lugar": "P. SAN MIGUEL"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "PLAZA",
-      "hora": "20:23"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "P. SAN MIGUEL"
+      "lugar": "P. SAN MIGUEL",
+      "hora": "20:09"
      },
      {
       "fila": "20:30",
@@ -19966,28 +19902,63 @@
       "lugar": "Hernando Colón"
      },
      {
+      "fila": "21:30",
+      "lugar": "Tetuán"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Alfonso XII"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Entrada"
+     }
+    ],
+    "paso": [
+     {
+      "fila": "19:00",
+      "lugar": "Salida",
+      "hora": "19:15"
+     },
+     {
+      "fila": "19:30",
+      "lugar": "CAMPANA",
+      "hora": "19:43"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "PLAZA",
+      "hora": "20:23"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "P. SAN MIGUEL",
+      "hora": "20:49"
+     },
+     {
       "fila": "21:00",
       "lugar": "PALOS",
       "hora": "21:08"
      },
      {
       "fila": "21:30",
-      "lugar": "Tetuán Alemanes"
+      "lugar": "Alemanes"
      },
      {
       "fila": "22:00",
-      "lugar": "Alfonso XII Hernando Colón"
+      "lugar": "Hernando Colón"
      },
      {
       "fila": "22:30",
-      "lugar": "Entrada O´Donnell"
+      "lugar": "O´Donnell"
      },
      {
       "fila": "23:00",
       "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "SEVILLA 26.pdf, p. 81"
   },
   "la-soledad-de-san-lorenzo-sevilla": {
    "ciudad": "sevilla",

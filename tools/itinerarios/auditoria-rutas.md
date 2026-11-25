@@ -244,7 +244,7 @@ Fuente: Programa «Nazareno» de Canal Sur Radio, Semana Santa de Jaén 2026
 
 ## malaga: 0 de 45 con avisos
 
-## sevilla: 14 de 72 con avisos
+## sevilla: 13 de 72 con avisos
 
 ### el-cerro-sevilla (Martes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
@@ -278,22 +278,17 @@ Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
 - cruz de guía: la hora retrocede en «Francos Palos» (13:00)
 - 79% de los puntos son estimados
 
-### el-santo-entierro-sevilla (Sábado Santo)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- cruz de guía: la hora retrocede en «CAMPANA» (19:30)
-- cruz de guía: la hora retrocede en «PALOS» (20:28)
-
 ### la-paz-sevilla (Domingo de Ramos)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
 - palio: la hora retrocede en «Pl. Triunfo» (20:00)
 
 ### dolores-de-torreblanca-sevilla (Sábado de Pasión)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
+Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
 - 36 de 36 puntos sin situar
 
 ### divino-perdon-sevilla (Sábado de Pasión)
-Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
-- 39 de 39 puntos sin situar
+Fuente: Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)
+- 29 de 29 puntos sin situar
 
 ### santa-genoveva-sevilla (Lunes Santo)
 Fuente: Programa de Canal Sur Radio, Semana Santa de Sevilla 2026
