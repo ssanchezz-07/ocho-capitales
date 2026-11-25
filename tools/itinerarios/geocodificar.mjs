@@ -130,10 +130,11 @@ const FUERA = {
     'dolores-de-torreblanca-sevilla': 'Torreblanca queda al este del callejero: solo casaban calles homónimas del centro («Álamo», «Torres»)',
   },
 };
-// Pendiente (no se adivina): La Sed (Sevilla) no tiene sede con fuente en site/data/sedes/sevilla.json («Parroquia de la Concepción»:
-// ningún edificio de OSM con ese nombre) y su primera calle, «Hospital San Juan / de Dios», no está en el callejero con ese nombre
-// (casaba con una calle de San Juan del centro). Su salida se queda sin situar (sedeEstimada) hasta tener un alias en
-// alias-calles-sevilla.json o la sede con su fuente.
+// La Sed (Sevilla) no tiene sede con fuente en site/data/sedes/sevilla.json («Parroquia de la Concepción»). Su primera calle,
+// «Hospital San Juan de Dios», salía partida en dos renglones y casaba con una calle de San Juan del centro: la salida quedaba sin
+// situar. Desde el 25-nov, unir.mjs une los dos renglones y casa con la calle San Juan de Dios de Nervión, junto al hospital:
+// la salida va ahí como «estimado» (sedeEstimada). Pendiente: su templo con fuente (en OSM, Parroquia de la Inmaculada
+// Concepción, vía 72800137, junto a la calle Cristo de la Sed).
 function situar(ix, ciudad, h, pts) {
   if (h && FUERA[ciudad] && FUERA[ciudad][h.slug]) return { res: pts.map((p) => ({ ...p, lat: null, lon: null, como: '' })), sin: [], sede: null };
   const sede = h && h.sede ? norm(h.sede) : '';

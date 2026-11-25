@@ -163,8 +163,9 @@ function limpiar(ciudad, pts) {
     const p = { ...p0, lugar: r.lugar };
     if (!p.hora && r.horas.size === 1) { p.hora = [...r.horas][0]; horasRescatadas++; }
     // nombre partido en dos renglones: «Alameda de» + «Hércules», y también con el artículo en minúscula: «Javier Lasso de» +
-    // «la Vega», «Santa Ángela de» + «la Cruz», «Camino de» + «los Toros» (Sevilla, Canal Sur); o con el corte antes del «de», que
-    // deja el segundo renglón en minúscula: «Parque Sierra» + «de Aroche», «Hospital San Juan» + «de Dios»
+    // «la Vega», «Santa Ángela de» + «la Cruz» (Sevilla, Canal Sur), «Camino de» + «los Toros» (rejilla del Consejo); o con el corte
+    // antes del «de», que deja el segundo renglón en minúscula: «Parque Sierra» + «de Aroche» (Consejo), «Hospital San Juan» +
+    // «de Dios» (Canal Sur)
     const prev = out[out.length - 1];
     const sigue = /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) || (prev && /\sde$/i.test(' ' + prev.lugar) && /^(el|la|los|las)\s+[A-ZÁÉÍÓÚÑ]/.test(p.lugar));
     const cola = /^(de|del)\s+((el|la|los|las)\s+)?[A-ZÁÉÍÓÚÑ]/.test(p.lugar);
