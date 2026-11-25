@@ -1,5 +1,32 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-25 · Huelva (Oración en el Huerto y Los Judíos), nombres partidos de Sevilla y foto de las Angustias de la Alhambra (Pablo: «Ya» y «La 1»; rama `arreglo-huelva-sevilla-25nov`)
+Son los tres pendientes que dejó la entrada «Recorridos rotos, 2.ª tanda».
+- **Huelva, «El Llamador» (`HUELVA 26.pdf`), p. 26, mirada a 500 ppp y con la capa de texto del PDF.** Las dos columnas de cada hermandad se copian celda a celda en `A_MANO` (`unir.mjs`):
+  - **Vera Cruz y Oración** (cabecera «ORACIÓN EN EL HUERTO», Parroquia de la Concepción): antes salía en una sola columna, con la cruz y el palio mezclados («Mora Claros Salida», «Méndez Hernán Cortés Núñez»). Su hora era la del palio. La cruz de guía sale a las **19.10** y entra a las 23.15; el palio sale a las 19.55, pasa por la carrera oficial a las 20.45 y entra a las 00.10.
+  - **Los Judíos** (Parroquia de la Merced): no tenían itinerario ni hora. La cruz de guía sale a las **20.30**, pasa por la carrera oficial a las 21.40 y entra a la 01.30; el palio sale a las 21.20, pasa por la carrera a las 22.35 y entra a las 02.30.
+    - La «Salida (20.30)» de la cruz está en la fila de las 19:30 y las dos celdas siguientes van una franja por delante.
+    - La hora es la buena porque cuadra con el palio: sale 50 min después, pasa por la carrera 55 min después y entra 60 min después.
+    - Se copia tal cual; `build.mjs` no deja que el tiempo retroceda.
+  - Con fuente de la ciudad cuando la hermandad no tenía entrada: `A_MANO` toma la de `FUENTES`.
+  - En `portal.json` cambian solo esas dos horas: Vera Cruz y Oración pasa de 19:55 a 19:10; Los Judíos, de «por confirmar» a 20:30.
+- **Nombres en dos renglones con el artículo en minúscula (Sevilla, Canal Sur)**: `limpiar()` une también «… de» + «la/el/los/las Mayúscula».
+  - Son 8 tramos de 5 hermandades:
+    - «Javier Lasso de la Vega»: Vera Cruz, San Bernardo y Soledad de San Lorenzo;
+    - «Santa Ángela de la Cruz»: Carmen Doloroso;
+    - «Camino de los Toros»: Pino Montano.
+  - Cada punto queda en la calle donde ya caía la segunda mitad; desaparece el punto «estimado» de la primera, que estaba a 31-185 m.
+- **Cómo se regenera sin pisar los empalmes a mano** (ver «Empalmes a mano…» en la entrada «Recorridos rotos, 2.ª tanda»):
+  - `itinerarios-2026.json`: `unir.mjs` cambia 11 hermandades, estas 7 y las 4 de siempre. Esas 4 son El Resucitado de Jaén, El Perdón de Cádiz, La Lanzada de Huelva y Humillación y Piedad de Cádiz. Se toman solo las 7 y el resto queda como estaba, también el orden.
+  - `recorridos/sevilla.json`: con `geocodificar.mjs` y `enrutar.mjs`, en Sevilla cambian solo las 5 hermandades. Las extraordinarias se quedan como estaban.
+  - `recorridos/huelva.json`: al regenerar cambian 12. Se toman solo las 2 de esta tanda.
+  - `informe-geocodificacion.json`: Jaén se conserva y Sevilla se pone al día.
+- **Foto de N.ª S.ª de las Angustias de la Alhambra (Granada)**: es la de la portada de la web oficial de la hermandad (`_DSC3667`, 1707×2560 px).
+  - Sin fotógrafo citado, crédito ni firma, ni en la página ni en los datos de la foto. Crédito a la hermandad, con la regla de Pablo del 5-nov.
+  - Pablo la eligió el 25-nov («La 1») frente a la de Commons (Jl FilpoC).
+  - Sustituye a la de 1489acci, que estaba tomada desde arriba.
+- Sigue pendiente: erCuñao llama «palio» al segundo paso de La Buena Muerte de Huelva, que va sin palio (columna «PASO VIRGEN»).
+
 ## 2026-11-25 · Agenda sin titulares de prensa también al compilar en un push (rama `arreglo-agenda-25nov`)
 - Lo que el bot guardó en `agenda-externa.json` sacado de una noticia (origen «noticia») se vuelve a titular con las reglas de hoy en `site/build.mjs` (`eventosExternos`) y en lo que arrastra `tools/agenda-externa.mjs`, con `tituloGuardado` (`site/eventos.mjs`): desde la frase y el titular de `agenda-cuerpos.json` como en `eventosNoticias()`, o, si ya no están, el título guardado solo si nombra el acto y no es una oración; sin nombre limpio del acto, fuera (antes solo pasaba al correr el bot: con los datos del 25-nov salían 16 titulares, 13 frases y 3 sin verbo, como «José Manuel Carmona Meléndez, pregonero…» de vía crucis). Además, un cabildo es «Acto», no «Cultos», y la capital de InfoCofrade la dice la sede del título, no la banda que acompaña («(Sevilla-Este)» salía en Cádiz por una agrupación de Jerez; en `agenda-externa.mjs` gana también el pueblo más largo: «Sanlúcar la Mayor» es Sevilla, no Cádiz). Actos futuros: 253 → 237; sacados de noticias, 16 → 0; ninguno de agenda cofrade ni verificado se pierde.
 

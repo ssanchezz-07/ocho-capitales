@@ -3853,24 +3853,76 @@
    "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Huelva 2026",
    "pdf": "HUELVA 26.pdf",
    "tramos": {
-    "paso": [
+    "cruz de guía": [
+     {
+      "fila": "19:00",
+      "lugar": "Salida",
+      "hora": "19:10"
+     },
      {
       "fila": "19:30",
-      "lugar": "Mora Claros Salida",
-      "hora": "19:55"
+      "lugar": "Mora Claros"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "C. OFICIAL"
      },
      {
       "fila": "20:30",
-      "lugar": "Plaza Constitución",
+      "lugar": "Plaza Constitución"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Alfonso XII"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Plaza Niña"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Rábida/Murillo"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Vázquez López"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Rico/Concepción"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Méndez Núñez"
+     },
+     {
+      "fila": "00:00",
+      "lugar": "Templo",
+      "hora": "23:15"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "19:30",
+      "lugar": "Salida",
+      "hora": "19:55"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "José Nogales"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "C. OFICIAL",
       "hora": "20:45"
      },
      {
       "fila": "21:00",
-      "lugar": "Alfonso XII Gran Vía"
+      "lugar": "Gran Vía"
      },
      {
       "fila": "21:30",
-      "lugar": "Plaza Niña Constitución"
+      "lugar": "Plaza Constitución"
      },
      {
       "fila": "22:00",
@@ -3878,20 +3930,19 @@
      },
      {
       "fila": "22:30",
-      "lugar": "Vázquez Rábida López"
+      "lugar": "Rábida"
      },
      {
       "fila": "23:00",
-      "lugar": "Rico/ Vázquez Concepción López"
+      "lugar": "Vázquez López"
      },
      {
       "fila": "23:30",
-      "lugar": "Méndez Hernán Cortés Núñez"
+      "lugar": "Hernán Cortés"
      },
      {
       "fila": "00:00",
-      "lugar": "Templo Rico",
-      "hora": "23:15"
+      "lugar": "Rico"
      },
      {
       "fila": "00:30",
@@ -3903,7 +3954,8 @@
       "hora": "00:10"
      }
     ]
-   }
+   },
+   "a_mano": "HUELVA 26.pdf, p. 26"
   },
   "la-misericordia-huelva": {
    "ciudad": "huelva",
@@ -10695,11 +10747,7 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Camino de"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "los Toros"
+      "lugar": "Camino de los Toros"
      },
      {
       "fila": "21:00",
@@ -13881,11 +13929,7 @@
      },
      {
       "fila": "23:30",
-      "lugar": "Javier Lasso de"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "la Vega"
+      "lugar": "Javier Lasso de la Vega"
      },
      {
       "fila": "0:00",
@@ -13932,11 +13976,7 @@
      },
      {
       "fila": "0:00",
-      "lugar": "Javier Lasso de"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "la Vega"
+      "lugar": "Javier Lasso de la Vega"
      },
      {
       "fila": "0:30",
@@ -15332,11 +15372,7 @@
      },
      {
       "fila": "21:00",
-      "lugar": "Santa Ángela de"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "la Cruz"
+      "lugar": "Santa Ángela de la Cruz"
      },
      {
       "fila": "21:30",
@@ -15411,19 +15447,11 @@
      },
      {
       "fila": "21:30",
-      "lugar": "Santa Ángela de"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "la Cruz"
+      "lugar": "Santa Ángela de la Cruz"
      },
      {
       "fila": "22:00",
-      "lugar": "Santa Ángela de"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "la Cruz"
+      "lugar": "Santa Ángela de la Cruz"
      },
      {
       "fila": "22:30",
@@ -15958,11 +15986,7 @@
      },
      {
       "fila": "19:00",
-      "lugar": "Javier Lasso de"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "la Vega"
+      "lugar": "Javier Lasso de la Vega"
      },
      {
       "fila": "19:30",
@@ -20062,11 +20086,7 @@
      },
      {
       "fila": "23:30",
-      "lugar": "Javier Lasso de"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "la Vega"
+      "lugar": "Javier Lasso de la Vega"
      },
      {
       "fila": "0:00",
@@ -38407,6 +38427,133 @@
      }
     ]
    }
+  },
+  "los-judios-la-merced-huelva": {
+   "ciudad": "huelva",
+   "dia": "Jueves Santo",
+   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Huelva 2026",
+   "pdf": "HUELVA 26.pdf",
+   "tramos": {
+    "cruz de guía": [
+     {
+      "fila": "19:30",
+      "lugar": "Salida",
+      "hora": "20:30"
+     },
+     {
+      "fila": "20:00",
+      "lugar": "Paseo Independencia"
+     },
+     {
+      "fila": "20:30",
+      "lugar": "San José"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Isabel II"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "José Nogales"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "C. OFICIAL",
+      "hora": "21:40"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "Plaza Monjas"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Plaza Constitución"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Pérez Carasa"
+     },
+     {
+      "fila": "00:00",
+      "lugar": "Plaza Coto Mora"
+     },
+     {
+      "fila": "00:30",
+      "lugar": "Concepción"
+     },
+     {
+      "fila": "01:00",
+      "lugar": "Puerto"
+     },
+     {
+      "fila": "01:30",
+      "lugar": "Vázquez Limón"
+     },
+     {
+      "fila": "02:00",
+      "lugar": "Templo",
+      "hora": "01:30"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "21:00",
+      "lugar": "Salida",
+      "hora": "21:20"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Paseo Independencia"
+     },
+     {
+      "fila": "22:00",
+      "lugar": "Isabel II"
+     },
+     {
+      "fila": "22:30",
+      "lugar": "C. OFICIAL",
+      "hora": "22:35"
+     },
+     {
+      "fila": "23:00",
+      "lugar": "Plaza Monjas"
+     },
+     {
+      "fila": "23:30",
+      "lugar": "Plaza Constitución"
+     },
+     {
+      "fila": "00:00",
+      "lugar": "Berdigón"
+     },
+     {
+      "fila": "00:30",
+      "lugar": "Gobernador Alonso"
+     },
+     {
+      "fila": "01:00",
+      "lugar": "Concepción"
+     },
+     {
+      "fila": "01:30",
+      "lugar": "San José"
+     },
+     {
+      "fila": "02:00",
+      "lugar": "Amado de Lázaro"
+     },
+     {
+      "fila": "02:30",
+      "lugar": "Plaza Merced"
+     },
+     {
+      "fila": "03:00",
+      "lugar": "Templo",
+      "hora": "02:30"
+     }
+    ]
+   },
+   "a_mano": "HUELVA 26.pdf, p. 26"
   },
   "cristo-de-la-corona-sevilla": {
    "ciudad": "sevilla",

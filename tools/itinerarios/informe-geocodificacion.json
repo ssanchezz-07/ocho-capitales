@@ -109,8 +109,8 @@
   ]
  },
  "sevilla": {
-  "puntos": 2191,
-  "situados": 2092,
+  "puntos": 2183,
+  "situados": 2084,
   "pct": 95,
   "calles_osm": 8804,
   "templos": 156,
@@ -128,10 +128,6 @@
     4
    ],
    [
-    "Javier Lasso de",
-    4
-   ],
-   [
     "J. del Gran Poder",
     4
    ],
@@ -141,10 +137,6 @@
    ],
    [
     "Párroco A. Gómez Villa.",
-    3
-   ],
-   [
-    "Santa Ángela de",
     3
    ],
    [
@@ -213,6 +205,14 @@
    ],
    [
     "Caminodelos Toros",
+    1
+   ],
+   [
+    "Corraldel Agua",
+    1
+   ],
+   [
+    "Parque Sierra",
     1
    ]
   ]

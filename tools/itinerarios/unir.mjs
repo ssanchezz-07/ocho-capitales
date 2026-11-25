@@ -162,9 +162,11 @@ function limpiar(ciudad, pts) {
     if (!r || !r.lugar) { quitados++; continue; }
     const p = { ...p0, lugar: r.lugar };
     if (!p.hora && r.horas.size === 1) { p.hora = [...r.horas][0]; horasRescatadas++; }
-    // nombre partido en dos renglones: «Alameda de» + «Hércules»
+    // nombre partido en dos renglones: «Alameda de» + «Hércules», y también con el artículo en minúscula: «Javier Lasso de» +
+    // «la Vega», «Santa Ángela de» + «la Cruz», «Camino de» + «los Toros» (Sevilla, Canal Sur)
     const prev = out[out.length - 1];
-    if (prev && prev.fila && prev.fila === p.fila && CONECTOR.test(' ' + prev.lugar) && /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) && !/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
+    const sigue = /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) || (prev && /\sde$/i.test(' ' + prev.lugar) && /^(el|la|los|las)\s+[A-ZÁÉÍÓÚÑ]/.test(p.lugar));
+    if (prev && prev.fila && prev.fila === p.fila && CONECTOR.test(' ' + prev.lugar) && sigue &&!/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
       prev.lugar += ' ' + p.lugar; if (!prev.hora && p.hora) prev.hora = p.hora; continue;
     }
     out.push(p);
@@ -262,6 +264,19 @@ const A_MANO = {
   'la-buena-muerte-huelva': { pdf: 'HUELVA 26.pdf', pagina: 26, tramos: {
     'cruz de guía': [['19:00', 'Salida', '19:20'], ['19:30', 'Plaza de las Monjas'], ['20:00', 'Pérez Carasa'], ['20:30', 'Rábida'], ['21:00', 'C. OFICIAL'], ['21:30', 'Espronceda'], ['22:00', 'Plaza Constitución'], ['22:30', 'Palos/Tres Agosto'], ['23:00', 'Templo', '23:15']],
     palio: [['19:30', 'Salida', '19:50'], ['20:00', 'Pérez Carasa'], ['20:30', 'Murillo'], ['21:00', 'Hernán Cortés'], ['21:30', 'Bocas'], ['22:00', 'C. OFICIAL', '21:40'], ['22:30', 'Plaza de las Monjas'], ['23:00', 'Plaza Constitución'], ['23:30', 'Palos/Tres Agosto'], ['00:00', 'Templo']],
+  } },
+  //   Misma página: «ORACIÓN EN EL HUERTO» (Parroquia de la Concepción) salía en una sola columna con la cruz y el palio mezclados
+  //   («Mora Claros Salida», «Méndez Hernán Cortés Núñez») y la hora del palio (19:55) como salida; su cruz sale a las 19.10.
+  //   «JUDÍOS» (Parroquia de la Merced) no tenía itinerario. Su «Salida (20.30)» está en la fila de las 19:30 y las dos celdas
+  //   siguientes van una franja por delante; la hora es la buena: cuadra con el palio (sale 50 min después, pasa por la carrera
+  //   oficial 55 min después y entra 60 min después). Se copia tal cual; build.mjs no deja que el tiempo retroceda.
+  'vera-cruz-y-oracion-huelva': { pdf: 'HUELVA 26.pdf', pagina: 26, tramos: {
+    'cruz de guía': [['19:00', 'Salida', '19:10'], ['19:30', 'Mora Claros'], ['20:00', 'C. OFICIAL'], ['20:30', 'Plaza Constitución'], ['21:00', 'Alfonso XII'], ['21:30', 'Plaza Niña'], ['22:00', 'Rábida/Murillo'], ['22:30', 'Vázquez López'], ['23:00', 'Rico/Concepción'], ['23:30', 'Méndez Núñez'], ['00:00', 'Templo', '23:15']],
+    palio: [['19:30', 'Salida', '19:55'], ['20:00', 'José Nogales'], ['20:30', 'C. OFICIAL', '20:45'], ['21:00', 'Gran Vía'], ['21:30', 'Plaza Constitución'], ['22:00', 'Plaza Niña'], ['22:30', 'Rábida'], ['23:00', 'Vázquez López'], ['23:30', 'Hernán Cortés'], ['00:00', 'Rico'], ['00:30', 'Concepción'], ['01:00', 'Templo', '00:10']],
+  } },
+  'los-judios-la-merced-huelva': { pdf: 'HUELVA 26.pdf', pagina: 26, tramos: {
+    'cruz de guía': [['19:30', 'Salida', '20:30'], ['20:00', 'Paseo Independencia'], ['20:30', 'San José'], ['21:00', 'Isabel II'], ['21:30', 'José Nogales'], ['22:00', 'C. OFICIAL', '21:40'], ['22:30', 'Plaza Monjas'], ['23:00', 'Plaza Constitución'], ['23:30', 'Pérez Carasa'], ['00:00', 'Plaza Coto Mora'], ['00:30', 'Concepción'], ['01:00', 'Puerto'], ['01:30', 'Vázquez Limón'], ['02:00', 'Templo', '01:30']],
+    palio: [['21:00', 'Salida', '21:20'], ['21:30', 'Paseo Independencia'], ['22:00', 'Isabel II'], ['22:30', 'C. OFICIAL', '22:35'], ['23:00', 'Plaza Monjas'], ['23:30', 'Plaza Constitución'], ['00:00', 'Berdigón'], ['00:30', 'Gobernador Alonso'], ['01:00', 'Concepción'], ['01:30', 'San José'], ['02:00', 'Amado de Lázaro'], ['02:30', 'Plaza Merced'], ['03:00', 'Templo', '02:30']],
   } },
   // · Sevilla, Sábado de Pasión, rejilla del Consejo (Itinerario SS Sevilla 2026 2.pdf), p. 2: la página tiene dos escalas de horas,
   //   la del Viernes de Dolores a la izquierda (de 17:30 a 2:00, 18 filas) y la del Sábado de Pasión a la derecha (de 15:00 a 1:30,
@@ -415,7 +430,7 @@ for (const [slug, x] of Object.entries(A_MANO)) {
   const h = D.hermandades.find((y) => y.slug === slug), e = out.hermandades[slug];
   if (!h) { console.warn('A_MANO: no está la ficha', slug); continue; }
   const tramos = Object.fromEntries(Object.entries(x.tramos).map(([k, pts]) => [k, pts.map(([fila, lugar, hora]) => ({ fila, lugar, ...(hora ? { hora } : {}) }))]));
-  out.hermandades[slug] = { ciudad: h.ciudad, dia: h.dia, fuente: x.fuente ? FUENTE_A_MANO[x.fuente] : e ? e.fuente : '', pdf: x.pdf, ...(e && e.horas_fuente ? { horas_fuente: e.horas_fuente } : {}), tramos, a_mano: `${x.pdf}, p. ${x.pagina}`, ...(x.pendiente ? { pendiente: x.pendiente } : {}) };
+  out.hermandades[slug] = { ciudad: h.ciudad, dia: h.dia, fuente: x.fuente ? FUENTE_A_MANO[x.fuente] : e ? e.fuente : (FUENTES.find(([c]) => c === h.ciudad) || [])[2] || '', pdf: x.pdf, ...(e && e.horas_fuente ? { horas_fuente: e.horas_fuente } : {}), tramos, a_mano: `${x.pdf}, p. ${x.pagina}`, ...(x.pendiente ? { pendiente: x.pendiente } : {}) };
 }
 for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'granada') {
   if (PAG_GR[slug]) e.fuente = fuenteGR(slug); else console.warn('Granada sin página en la guía oficial:', slug);
