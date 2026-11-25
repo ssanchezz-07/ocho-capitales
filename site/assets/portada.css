@@ -145,6 +145,30 @@
   .oc-vela-escena { --vh: clamp(560px, calc(100vh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px), 920px); }
   @supports (height: 100svh) { .oc-vela-escena { --vh: clamp(560px, calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px), 920px); } }
 }
+/* «Próxima Semana Santa»: aquí la escena va arriba del todo, debajo de la cabecera y de las migas, y al llegar sin desplazar
+   tiene que verse entera. Las migas miden 40 px en el móvil («‹ Portada») y 46 desde 760 px; con la cabecera y su filete, la
+   escena empieza a 85 y a 91 px (lo que medía el antiguo --naz-t). Sin descontarlas, a 390×844 unos 40 px del suelo quedaban
+   detrás de la barra de pestañas, y en el ordenador, donde la portada no descuenta ni la cabecera (allí se baja hasta la
+   escena), a 1440×900 los zapatos del nazareno quedaban a 19 px del borde de la ventana. Así que aquí se descuentan las migas
+   y, en el ordenador, también la cabecera; el mínimo baja lo mismo (a 375×667 la escena mide 521 px y cabe). La portada no
+   cambia: estas reglas solo tocan la escena de «Próxima» */
+.oc-vela[data-vela="proxima"] .oc-vela-escena { --migas: 46px; --arriba: calc(var(--header-h) + 1px + env(safe-area-inset-top, 0px) + var(--migas));
+  --vh: clamp(calc(560px - var(--arriba)), calc(100vh - var(--arriba)), 920px); }
+@supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh: clamp(calc(560px - var(--arriba)), calc(100svh - var(--arriba)), 920px); } }
+@media (max-width: 959px) {
+  .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh: clamp(calc(560px - var(--migas)), calc(100vh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px - var(--migas)), 920px); }
+  @supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh: clamp(calc(560px - var(--migas)), calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px - var(--migas)), 920px); } }
+}
+@media (max-width: 759px) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --migas: 40px; } }
+/* En el ordenador, con la escena 91 px más baja y los textos del mismo tamaño (van con el alto de la ventana), la calle, que
+   mide casi media escena, subía detrás del botón (a 1440×900, lo alto de la espadaña 28 px por encima de su borde de abajo;
+   en la portada queda 11 px por debajo). Aquí la calle no sube más que en la portada: lo alto de la calle queda donde allí (al
+   51,68 % de aquella escena, --vh-portada: 1 − 0,47 × 220 / 214) y la calle mengua lo que haga falta para caber debajo (mide
+   220 unidades). A 1440×900 mide un 21 % menos que en la portada; en pantallas altas (escena de 920 px) mide lo mismo */
+@media (min-width: 960px) {
+  .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, 100vh, 920px); --u: min(calc(var(--vh) * .47 / 214), calc((var(--vh) - var(--vh-portada) * .5168) / 220)); }
+  @supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, 100svh, 920px); } }
+}
 .oc-vela-capa { position: absolute; display: block; overflow: visible; pointer-events: none; }
 .oc-vela-calle { left: 0; bottom: 0; width: calc(2160 * var(--u)); height: calc(220 * var(--u)); }
 .oc-vela-naz { left: var(--naz-x); bottom: calc(54 * var(--u)); width: calc(48 * var(--u)); height: calc(112 * var(--u)); }
