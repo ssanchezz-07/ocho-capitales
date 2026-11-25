@@ -1136,13 +1136,15 @@
   },
   "santa-maria-de-la-alhambra-granada": {
    "virgen": {
-    "pagina": "https://commons.wikimedia.org/wiki/File:3TORCU~1.jpg",
-    "titulo": "File:3TORCU~1.jpg",
-    "autor": "1489acci",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "autor": "Santa María de la Alhambra (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadalhambra.es/",
+    "local": "scripts/cedidas/granada/santa-maria-de-la-alhambra-granada-virgen.jpg",
+    "titulo": "Cedida: Nuestra Señora de las Angustias de la Alhambra",
     "titular": "Nuestra Señora de las Angustias de la Alhambra",
-    "foco": "50% 0%"
+    "foco": "45% 25%",
+    "permiso": "Publicada por la propia hermandad en la portada de su web oficial (https://www.hermandadalhambra.es/; archivo https://www.hermandadalhambra.es/wp-content/uploads/2024/12/01042024-_DSC3667-Mejorado-NR-scaled.jpg, subido el 14-dic-2024), sin fotógrafo citado, crédito ni firma (tampoco en los datos de la foto). La imagen entera en su altar. Elegida por Pablo el 25-nov-2026 («La 1») frente a la de Commons; sustituye a la de 1489acci, tomada desde arriba. Regla de Pablo del 5-nov-2026 («ESTOS CASOS PUBLICAR DIRECTAMENTE»): crédito a la hermandad con enlace a su web."
    }
   },
   "entrada-triunfal-cordoba": {

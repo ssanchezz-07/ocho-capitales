@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T23:24:48.029Z",
+ "generado": "2026-11-25T22:34:37.192Z",
  "hermandades": {
   "el-amor-sevilla": {
    "w": 960,
@@ -4883,19 +4883,22 @@
   "santa-maria-de-la-alhambra-granada": {
    "virgen": {
     "w": 960,
-    "h": 1271,
+    "h": 1440,
     "widths": [
      160,
      480,
      960
     ],
     "escudo": false,
-    "autor": "1489acci",
-    "licencia": "CC BY-SA 4.0",
-    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:3TORCU~1.jpg",
-    "titular": "Nuestra Señora de las Angustias de la Alhambra",
-    "foco": "50% 0%"
+    "autor": "Santa María de la Alhambra (Granada)",
+    "licencia": "",
+    "licurl": "",
+    "pagina": "https://www.hermandadalhambra.es/",
+    "foco": "45% 25%",
+    "cedida": true,
+    "local": "scripts/cedidas/granada/santa-maria-de-la-alhambra-granada-virgen.jpg",
+    "tam": 959837,
+    "titular": "Nuestra Señora de las Angustias de la Alhambra"
    }
   },
   "entrada-triunfal-cordoba": {
