@@ -128,14 +128,14 @@
    Diseño de Pablo del 13-nov («eso es perfecto»): de día en el modo claro y de noche en el oscuro. La escena tiene su alto desde
    el principio, así que nada de lo de debajo se mueve. Sin JavaScript o con «reducir movimiento» se ve la escena final, quieta y
    con todo el texto. Con JS la pinta vela.js en el lienzo y estas capas SVG quedan como sus datos (se leen sus colores de aquí).
-   --u: los píxeles que mide una unidad del dibujo; la calle ocupa media escena. */
+   --u: los píxeles que mide una unidad del dibujo; la calle ocupa algo menos de media escena (en el móvil, algo menos aún). */
 .oc-vela { --v-bg: #eeece6; --v-cielo1: #e6e0ee; --v-cielo2: #eeece6; --v-cielo3: #f5ecd8; --v-fach: #f7f5f0; --v-tr: #3a1a5c; --v-ven: #e3dcee; --v-luz: #e3dcee; --v-puerta: #3a1a5c; --v-suelo: #e4e1d9; --v-piedra: #a39d92; --v-lin: #7a5a16; --v-farol: #f1e4c0; --v-oro: #7a5a16; --v-gota: #c79a3b; --v-traz: #7a5a16; --v-mecha: #565060; --v-dia: 1; --v-noche: 0;
   --v-txt: #3a1a5c; --v-txt2: #4f4760; --v-som: #f7f5f0; --v-titulo: #2b1140; --v-num: #7a5a16; --v-pista: #7a5a16; --v-pista2: #565060;
   margin: 0 calc(50% - 50vw) 32px; color: var(--v-txt); }
 :root[data-theme="dark"] .oc-vela { --v-bg: #140820; --v-cielo1: #150927; --v-cielo2: #261239; --v-cielo3: #341a48; --v-fach: #22113a; --v-tr: #c9a14a; --v-ven: #2c1846; --v-luz: #ffcf7a; --v-puerta: #150a22; --v-suelo: #120717; --v-piedra: #33204a; --v-lin: #e8c877; --v-farol: #ffcf7a; --v-oro: #f0d48a; --v-gota: #e8c877; --v-traz: #c9a14a; --v-mecha: #8a7a68; --v-dia: 0; --v-noche: 1; --v-txt: #f6ead0; --v-txt2: #cfc4dc; --v-som: #140820; --v-titulo: #f4eff9; --v-num: #e7c877; --v-pista: #e8c877; --v-pista2: #b9a4cf; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-vela { --v-bg: #140820; --v-cielo1: #150927; --v-cielo2: #261239; --v-cielo3: #341a48; --v-fach: #22113a; --v-tr: #c9a14a; --v-ven: #2c1846; --v-luz: #ffcf7a; --v-puerta: #150a22; --v-suelo: #120717; --v-piedra: #33204a; --v-lin: #e8c877; --v-farol: #ffcf7a; --v-oro: #f0d48a; --v-gota: #e8c877; --v-traz: #c9a14a; --v-mecha: #8a7a68; --v-dia: 0; --v-noche: 1; --v-txt: #f6ead0; --v-txt2: #cfc4dc; --v-som: #140820; --v-titulo: #f4eff9; --v-num: #e7c877; --v-pista: #e8c877; --v-pista2: #b9a4cf; } }
 .oc-vela[data-vela="portada"] { margin-top: 24px; }
-.oc-vela-escena { --vh: clamp(560px, 100vh, 920px); --u: calc(var(--vh) * .5 / 214); --naz-x: 44%; --est-x: 9%; --est-y: 8%; --est-k: 1;
+.oc-vela-escena { --vh: clamp(560px, 100vh, 920px); --u: calc(var(--vh) * .47 / 214); --naz-x: 44%; --est-x: 9%; --est-y: 8%; --est-k: 1;
   position: relative; height: var(--vh); overflow: hidden; background: linear-gradient(var(--v-cielo1), var(--v-cielo2) 55%, var(--v-cielo3)); }
 @supports (height: 100svh) { .oc-vela-escena { --vh: clamp(560px, 100svh, 920px); } }
 .oc-vela-capa { position: absolute; display: block; overflow: visible; pointer-events: none; }
@@ -176,11 +176,11 @@
 .oc-vela-frase { margin: 0 0 clamp(14px, 2.6vh, 30px); min-height: 1.35em; max-width: 44ch; font: italic 500 clamp(17px, 1.5vw, 21px)/1.35 var(--it, Georgia, serif); color: var(--v-txt); text-shadow: 0 1px 2px var(--v-som), 0 0 12px var(--v-som); transition: opacity .8s ease; }
 .oc-vela-cab { display: grid; justify-items: start; }
 .oc-vela .oc-kicker { color: var(--v-oro); text-shadow: 0 0 10px var(--v-som); }
-.oc-vela-titulo { margin: 0 0 .15em; font: 700 clamp(56px, 8vw, 112px)/.88 var(--display, Karantina), serif; color: var(--v-titulo); text-shadow: 0 0 22px var(--v-som); outline: none; }
+.oc-vela-titulo { margin: 0 0 .15em; font: 700 clamp(56px, min(8vw, 11.5vh), 112px)/.88 var(--display, Karantina), serif; color: var(--v-titulo); text-shadow: 0 0 22px var(--v-som); outline: none; }
 /* La cuenta atrás (Pablo, 13-nov): «Faltan» y «días para el Domingo de Ramos» en versalitas finas a los lados de un número
    grande en dorado, con la letra del título; sin la fecha entre paréntesis (las fechas están en «Las jornadas») */
 .oc-vela .oc-hero2-count { grid-area: auto; display: grid; justify-items: start; row-gap: 6px; margin: .5em 0 0; font: 500 clamp(12px, 1.05vw, 14px)/1.2 Heebo, system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--v-txt2); text-shadow: 0 1px 2px var(--v-som), 0 0 10px var(--v-som); }
-.oc-vela .oc-hero2-count strong { font: 700 clamp(64px, 7.5vw, 104px)/.8 var(--display, Karantina), serif; letter-spacing: 0; color: var(--v-num); text-shadow: 0 0 24px var(--v-som); }
+.oc-vela .oc-hero2-count strong { font: 700 clamp(64px, min(7.5vw, 10.5vh), 104px)/.8 var(--display, Karantina), serif; letter-spacing: 0; color: var(--v-num); text-shadow: 0 0 24px var(--v-som); }
 .oc-vela .oc-hero2-count span { display: none; }
 .oc-home.hay-ext .oc-vela [data-today-lead] { display: grid; }
 .oc-vela-btn { margin-top: 16px; }

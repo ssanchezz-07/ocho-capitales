@@ -64,7 +64,8 @@ Código: `site/assets/site.css` (el bloque «Colgaduras», al final, manda sobre
   - El cielo cambia de color en 500 ms lineal, solo al cambiar la hora.
   - Con «reducir movimiento», todo pasa al instante.
 - Con `prefers-reduced-motion`, todo es instantáneo. Con `prefers-reduced-transparency`, sin cristal.
-- Nada se mueve en bucle (decisión: el tono es devoto).
+- Nada se mueve en bucle (decisión: el tono es devoto). **Única excepción:** el nazareno que anda hacia la próxima Semana Santa (Pablo, 13-nov: «quiero que el nazareno tenga una animación infinita»). Se para con la escena fuera de la vista o la pestaña oculta, y con «reducir movimiento» se queda quieto.
+- **«Enciende la vela»** (portada fuera de temporada; `site/vela.mjs` y `assets/vela.js`): vela de trazo dorado → llama → zoom a la llama → destello que tapa el paso a la llama del cirio → la cámara se aleja y el nazareno anda por una calle encalada con las colgaduras de las ocho capitales hacia la estrella de ocho puntas con el año. De día en el modo claro (papel `#eeece6`, trazo morado `#3a1a5c`, oro `#7a5a16`) y de noche en el oscuro (trazo dorado `#c9a14a` sobre morado, ventanas y faroles encendidos). Los tiempos y curvas, los del prototipo aprobado (`EQUIPO/prototipos/vela-camino-2027.html`). Se pinta en `<canvas>` y, al andar, con piezas ya pintadas que solo cambian transform y opacidad: nunca escalando un SVG (Safari lo repinta entero).
 
 ## 6. Reglas de contenido
 - No se inventan datos. Cada dato sale de una fuente oficial, de Wikipedia o de Commons, con su crédito.
