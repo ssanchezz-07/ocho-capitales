@@ -29,7 +29,9 @@ const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toL
   .replace(/\bdr\.?\s/g, 'doctor ').replace(/\bmª\s|\bma\.\s/g, 'maria ').replace(/\bcta\.?\s/g, 'cuesta ').replace(/\bglta\.?\s/g, 'glorieta ').replace(/\bcllon\.?\s/g, 'callejon ')
   .replace(/\(.*?\)/g, ' ').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const TIPO = /^(calle|plaza|avenida|paseo|puente|cuesta|glorieta|callejon|ronda|carrera|camino|pasaje|travesia|alameda|costanilla|plazuela|patio|muelle|explanada|carretera)\s+/;
-const nucleo = (s) => norm(s).replace(TIPO, '').replace(/^(de|del|de la|de los|de las)\s+/, '').trim();
+// (primero «de la», «de los», «de las»: con «de» delante, «Plaza de la Encarnación» se quedaba en «la encarnacion» y el itinerario
+// «Encarnación» casaba con la calle Virgen de la Encarnación, a 1 km)
+const nucleo = (s) => norm(s).replace(TIPO, '').replace(/^(de las|de los|de la|del|de)\s+/, '').trim();
 
 async function overpass(ciudad) {
   const f = path.join(CACHE, `osm-${ciudad}.json`);
@@ -103,14 +105,44 @@ const ALIAS = {
   malaga: { 'alameda': 'Alameda Principal', 'plaza de los santos martires': 'Plaza de los Mártires Ciriaco y Paula', 'puerta buenaventura': 'Calle Puerta de Buenaventura', 'plaza spinola': 'Plaza de Spínola', 'puente esperanza': 'Puente de la Esperanza' },
   cordoba: { 'conde cardenas': 'Conde de Cárdenas', 'doctor maranon': 'Doctor Gregorio Marañón', 'diario cordoba': 'Calle Diario de Córdoba' },
 };
+// y los de tools/itinerarios/alias-calles-<ciudad>.json, cada uno comprobado con su fuente (los mismos que usa el método nuevo de
+// rutas): Almería, «General Castaños» es la calle Bailén; sin el alias se trazaba por una calle homónima a 2,7 km. Las sedes
+// fijadas ahí («@templo») las usa solo ese método.
+for (const ciudad of Object.keys(CENTRO)) {
+  const f = path.join(DIR, `alias-calles-${ciudad}.json`); if (!fs.existsSync(f)) continue;
+  for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(f, 'utf8')))) {
+    if (k.startsWith('_') || k.startsWith('@') || typeof v !== 'string') continue;
+    const a = (ALIAS[ciudad] = ALIAS[ciudad] || {}); if (!a[norm(k)]) a[norm(k)] = v;
+  }
+}
+// Sedes con coordenadas y fuente (site/data/sedes/<ciudad>.json, las mismas del plano fuera de temporada)
+const SEDES = {};
+for (const ciudad of Object.keys(CENTRO)) {
+  const f = path.join(RAIZ, 'site', 'data', 'sedes', ciudad + '.json');
+  if (fs.existsSync(f)) SEDES[ciudad] = JSON.parse(fs.readFileSync(f, 'utf8')).hermandades || {};
+}
+// Cofradías de barrios que se salen del callejero descargado (CENTRO): sus calles no están o casan con otras homónimas de otro
+// sitio, y el recorrido se dibujaba lejos de su barrio. Se guarda el itinerario, sin situar, hasta tener el callejero de su barrio.
+const FUERA = {
+  sevilla: {
+    'bellavista-sevilla': 'Bellavista queda al sur del callejero: Guadalajara, Ávila, Logroño… casaban con las calles de San Juan de Aznalfarache, a 6 km',
+    'divino-perdon-sevilla': 'Parque Alcosa queda al este del callejero: ninguna de sus calles está',
+    'dolores-de-torreblanca-sevilla': 'Torreblanca queda al este del callejero: solo casaban calles homónimas del centro («Álamo», «Torres»)',
+  },
+};
 function situar(ix, ciudad, h, pts) {
+  if (h && FUERA[ciudad] && FUERA[ciudad][h.slug]) return { res: pts.map((p) => ({ ...p, lat: null, lon: null, como: '' })), sin: [], sede: null };
   const sede = h && h.sede ? norm(h.sede) : '';
   // ancla: el primer punto del itinerario que es una calle reconocible (para elegir la sede y la catedral cercanas)
   let ancla = null;
   for (const p of pts) { const k = [norm(p.lugar), nucleo(p.lugar)].find((x) => x && ix.calles.has(x)); if (k) { ancla = centro(ix.calles.get(k)[0]); break; } }
   const cerca = (g) => !ancla || dist(centro(g), ancla) * 111000 < 1500;
-  const cand = sede ? ix.templos.filter((t) => cerca(t.geo)).map((t) => [t, nucleo(t.nombre).split(' ').filter((w) => w.length > 3 && sede.includes(w)).length]).sort((a, b) => b[1] - a[1])[0] : null;
-  const pSede = cand && cand[1] > 0 ? centro(cand[0].geo) : null;
+  // la sede fijada con su fuente en site/data/sedes/<ciudad>.json manda; si ahí consta que no se ha podido situar, no se adivina
+  const fijada = h && SEDES[ciudad] && SEDES[ciudad][h.slug];
+  // sin ninguna calle del itinerario en el callejero no hay con qué comprobar la sede, y cualquier templo de la ciudad con una
+  // palabra en común servía: todo el recorrido se amontonaba en una iglesia de otro barrio. Así no se sitúa.
+  const cand = !fijada && sede && ancla ? ix.templos.filter((t) => cerca(t.geo)).map((t) => [t, nucleo(t.nombre).split(' ').filter((w) => w.length > 3 && sede.includes(w)).length]).sort((a, b) => b[1] - a[1])[0] : null;
+  const pSede = fijada ? (fijada.templo && fijada.templo.lat != null ? [fijada.templo.lat, fijada.templo.lon] : null) : cand && cand[1] > 0 ? centro(cand[0].geo) : null;
   const cats = ix.templos.filter((t) => /catedral/.test(t.nombre)).sort((a, b) => (ancla ? dist(centro(a.geo), ancla) - dist(centro(b.geo), ancla) : 0));
   const pCat = cats[0] ? centro(cats[0].geo) : null;
   let prev = pSede || ancla, sin = [];
@@ -162,6 +194,13 @@ function situar(ix, ciudad, h, pts) {
     const med = (a) => a.slice().sort((x, y) => x - y)[Math.floor(a.length / 2)];
     const c = { lat: med(sit.map((p) => p.lat)), lon: med(sit.map((p) => p.lon)) };
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
+  }
+  // sin sede situada (en site/data/sedes no consta con fuente), la salida y la entrada se quedan, como «estimado», en la primera y
+  // en la última calle situadas: se conserva su hora oficial sin inventar dónde está el templo
+  if (!pSede) for (const [i, d] of [[0, 1], [res.length - 1, -1]]) {
+    if (!res[i] || res[i].lat != null || res[i].como !== 'sede') continue;
+    let j = i; while (j >= 0 && j < res.length && res[j].lat == null) j += d;
+    if (j >= 0 && j < res.length) { res[i].lat = res[j].lat; res[i].lon = res[j].lon; res[i].como = 'estimado'; }
   }
   // lo que no se pudo situar se estima entre el punto situado anterior y el siguiente (marcado como «estimado»)
   for (let i = 0; i < res.length; i++) {

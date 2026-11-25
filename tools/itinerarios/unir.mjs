@@ -155,6 +155,9 @@ function limpiar(ciudad, pts) {
   let quitados = 0, horasRescatadas = 0;
   for (const p0 of pts) {
     const r = limpiarLugar(ciudad, p0.lugar);
+    // una hora suelta en la fila de abajo de una «Salida» sin hora es la de esa salida (Torreblanca: «Salida» / «16:45»)
+    const ant = out[out.length - 1];
+    if (r && !r.lugar && r.horas.size === 1 && ant && !ant.hora && out.length === 1 && /^(salida|sale)$/i.test(ant.lugar)) { ant.hora = [...r.horas][0]; horasRescatadas++; quitados++; continue; }
     if (!r || !r.lugar) { quitados++; continue; }
     const p = { ...p0, lugar: r.lugar };
     if (!p.hora && r.horas.size === 1) { p.hora = [...r.horas][0]; horasRescatadas++; }
@@ -189,14 +192,90 @@ function partir(ciudad, cols) {
   return res;
 }
 
+// ---------- Sevilla: rejilla del Consejo («Itinerario SS Sevilla 2026 2.pdf») ----------
+// Cada hermandad ocupa un bloque de columnas que empieza por su CRUZ DE GUÍA, con el nombre alineado a la izquierda del bloque.
+// El lector da a cada subcolumna el nombre que la cubre, y el palio o el paso, a la derecha del bloque, salía con el nombre de
+// la hermandad siguiente o con los dos («A · B»): La Amargura se quedaba con el palio de La Estrella, Redención con el de San
+// Pablo, Bellavista con el paso de La Misión… (comprobado sobre el PDF, p. ej. la p. 6). Aquí:
+// · el paso o el palio es de la hermandad de la cruz de guía que lo precede en la página;
+// · una cruz de guía con dos nombres es del que no es la hermandad anterior («Jesús Despojado · La Hiniesta», tras el bloque
+//   de Jesús Despojado, es La Hiniesta);
+// · la primera columna de una página sin cruz delante (su cruz no se leyó) se descarta, porque no se sabe de quién es;
+// · dos bloques seguidos con el mismo rótulo son dos hermandades cuyos nombres salen pegados en un renglón («Pasión y Muerte
+//   Cristo de la Corona…», «Santa Genoveva Santa Marta…»): si el rótulo trae los nombres de dos hermandades de la ciudad, el
+//   primer bloque es el de la que va primero (a la izquierda) y el segundo el de la otra; si no, se descartan los dos.
+const NOMBRES_SEV = D.hermandades.filter((h) => h.ciudad === 'sevilla').map((h) => ({ nombre: h.nombre, n: norm(h.nombre).replace(/^(la|el|los|las) /, '') })).filter((x) => x.n.length >= 5);
+function nombresPegados(rotulo, cuantos) {
+  const t = ' ' + norm(rotulo) + ' ';
+  const v = NOMBRES_SEV.map((x) => ({ ...x, i: t.indexOf(' ' + x.n + ' ') })).filter((x) => x.i >= 0)
+    .filter((x, _, a) => !a.some((y) => y !== x && y.n.length > x.n.length && y.n.includes(x.n))).sort((a, b) => a.i - b.i);
+  return v.length === cuantos ? v.map((x) => x.nombre) : null;
+}
+function bloquesConsejo(cols) {
+  const porPag = new Map(), res = [], fuera = [];
+  for (const c of cols) { if (!porPag.has(c.pagina)) porPag.set(c.pagina, []); porPag.get(c.pagina).push(c); }
+  for (const [pag, cs] of porPag) {
+    const bloques = []; let prev = null;
+    for (const c of cs) {
+      if (/cruz/.test(c.sub)) {
+        const partes = c.cabecera.split(' · ');
+        const nom = partes.length > 1 && prev && partes.includes(prev.nom) ? partes.filter((x) => x !== prev.nom).join(' · ') : c.cabecera;
+        prev = { nom, cols: [{ ...c, cabecera: nom }] }; bloques.push(prev);
+      } else if (prev) prev.cols.push({ ...c, cabecera: prev.nom });
+      else fuera.push(`p. ${pag}, ${c.sub} rotulado «${c.cabecera}»: sin cruz de guía delante`);
+    }
+    const veces = {}; for (const b of bloques) veces[b.nom] = (veces[b.nom] || 0) + 1;
+    const reparto = {}; for (const nom of Object.keys(veces)) if (veces[nom] > 1) reparto[nom] = nombresPegados(nom, veces[nom]);
+    for (const b of bloques) {
+      if (veces[b.nom] === 1) { res.push(...b.cols); continue; }
+      const r = reparto[b.nom];
+      if (!r) { fuera.push(`p. ${pag}, bloque «${b.nom}»: ${veces[b.nom]} cruces de guía con el mismo nombre`); continue; }
+      const nuevo = r.shift(); res.push(...b.cols.map((c) => ({ ...c, cabecera: nuevo })));
+    }
+  }
+  return { cols: res, fuera };
+}
+// Sevilla: columna leída junto con la vecina (celdas pegadas: «Salida 20:59 Alberto», «Doña Guiomar Entrada») o columna única con
+// la cruz y el palio juntos (vísperas de Canal Sur: «Entrada», «Emilia Barral», «Entrada palio»): una segunda salida, dos entradas
+// o dos salidas en un mismo punto. Solo vale si la hermandad no tiene otra columna limpia para ese papel. (Un lugar repetido en dos
+// renglones seguidos, «Entrada (1:45)» en las franjas de 1:30 y 2:00, no cuenta.)
+const mezclada = (pts) => {
+  const v = pts.filter((p, i) => !i || p.lugar !== pts[i - 1].lugar);
+  return v.some((p, i) => i > 0 && /\b(salida|sale)\b/i.test(p.lugar)) || v.filter((p) => /\b(entrada|entra)\b/i.test(p.lugar)).length > 1 || v.some((p) => (p.lugar.match(/\bsalida\b/gi) || []).length > 1);
+};
+// hora de salida de una columna (la exacta si la hay; si no, la franja), para comprobar que la cruz de guía sale antes que sus pasos
+function salidaDe(ciudad, pts) {
+  const p = pts[0]; if (!p) return null;
+  const r = limpiarLugar(ciudad, p.lugar), h = p.hora || (r && r.horas.size ? [...r.horas][0] : '') || p.fila;
+  return h && /^\d{1,2}:\d{2}$/.test(h) ? minutos(h) : null;
+}
+// Columnas que el lector mezcla con la vecina, copiadas a mano de la rejilla, celda a celda ([franja, lugar, hora exacta]).
+// · Huelva, Jueves Santo, «El Llamador» 2026 (HUELVA 26.pdf), p. 26: la cabecera «CRUZ DE / GUÍA» va en dos renglones y el lector
+//   no separó las columnas: el paso de La Misericordia salió pegado a la cruz de guía de La Buena Muerte (Salida 19:20, Plaza de
+//   las Monjas…), su cruz de guía se quedó sin la salida (19:40) y el paso de La Buena Muerte, mezclado con el de al lado.
+const A_MANO = {
+  'la-misericordia-huelva': { pdf: 'HUELVA 26.pdf', pagina: 26, tramos: {
+    'cruz de guía': [['20:00', 'Salida', '19:40'], ['20:30', 'Hernán Cortés'], ['21:00', 'C. OFICIAL', '20:45'], ['21:30', 'Plaza Monjas'], ['22:00', 'Plaza Constitución'], ['22:30', 'Sta. Ángela Cruz'], ['23:00', 'La Paz/Rábida'], ['23:30', 'Templo', '23:20']],
+    paso: [['20:00', 'Salida'], ['20:30', 'Rábida'], ['21:00', 'C. OFICIAL'], ['21:30', 'Plaza Constitución'], ['22:00', 'Berdigón'], ['22:30', 'Alonso Sánchez'], ['23:00', 'La Paz'], ['23:30', 'Rábida'], ['00:00', 'Templo', '23:40']],
+  } },
+  'la-buena-muerte-huelva': { pdf: 'HUELVA 26.pdf', pagina: 26, tramos: {
+    'cruz de guía': [['19:00', 'Salida', '19:20'], ['19:30', 'Plaza de las Monjas'], ['20:00', 'Pérez Carasa'], ['20:30', 'Rábida'], ['21:00', 'C. OFICIAL'], ['21:30', 'Espronceda'], ['22:00', 'Plaza Constitución'], ['22:30', 'Palos/Tres Agosto'], ['23:00', 'Templo', '23:15']],
+    palio: [['19:30', 'Salida', '19:50'], ['20:00', 'Pérez Carasa'], ['20:30', 'Murillo'], ['21:00', 'Hernán Cortés'], ['21:30', 'Bocas'], ['22:00', 'C. OFICIAL', '21:40'], ['22:30', 'Plaza de las Monjas'], ['23:00', 'Plaza Constitución'], ['23:30', 'Palos/Tres Agosto'], ['00:00', 'Templo']],
+  } },
+};
+
 const out = { generado: new Date().toISOString(), anio: 2026, hermandades: {}, sin_emparejar: [] };
+// todas las columnas que caen en cada hermandad y papel (cruz de guía, paso, palio…); se elige al final
+const CAND = new Map();
 for (const [ciudad, f, fuente] of FUENTES) {
   const p = path.join(DIR, f); if (!fs.existsSync(p)) continue;
   const J = JSON.parse(fs.readFileSync(p, 'utf8'));
   // las fichas con columna asignada a mano (PARTIR) no compiten por las demás columnas
   const hs = D.hermandades.filter((h) => h.ciudad === ciudad && !PARTIR.some((p) => p.slug === h.slug));
   const hsTodas = D.hermandades.filter((h) => h.ciudad === ciudad);
-  for (const c0 of partir(ciudad, J.columnas)) {
+  let columnas = J.columnas;
+  if (f === 'sevilla-cgh-2026.json') { const b = bloquesConsejo(columnas); columnas = b.cols; for (const x of b.fuera) console.log('  Consejo, descartada:', x); }
+  for (const c0 of partir(ciudad, columnas)) {
     const c = ciudad === 'cadiz' ? horasCadiz(J, c0) : c0;
     if (c.slug) { // columna asignada a mano (PARTIR)
       const h = hsTodas.find((x) => x.slug === c.slug); if (!h) { console.warn('PARTIR: no está la ficha', c.slug); continue; }
@@ -211,14 +290,37 @@ for (const [ciudad, f, fuente] of FUENTES) {
     // (exigiendo más: una sola palabra suelta, p. ej. «TRIANA», no basta para saltar de jornada)
     if (!best.length || best[0][1] < 3) {
       best = hs.map((h) => [h, puntuar(h, c.cabecera)]).sort((x, y) => y[1] - x[1]);
-      // (las rejillas mal rotuladas se desplazan como mucho una jornada)
-      if (best.length && best[0][1] < 5 && dia && Math.abs(ORDEN(best[0][0].dia) - ORDEN(dia)) > 1) best[0][1] = Math.min(best[0][1], 1);
+      // (las rejillas mal rotuladas se desplazan como mucho una jornada; ni un nombre completo vale para saltar más: «PAZ Y
+      // MISERICORDIA», del Viernes de Dolores, contiene «Paz» y se quedaba como paso de La Paz, del Domingo de Ramos)
+      if (best.length && dia && Math.abs(ORDEN(best[0][0].dia) - ORDEN(dia)) > 1) best[0][1] = Math.min(best[0][1], 1);
     }
     if (!best.length || best[0][1] < 2 || (best[1] && best[1][1] >= best[0][1] - 0.5)) { out.sin_emparejar.push({ ciudad, dia: c.dia, cabecera: c.cabecera, sub: c.sub, opciones: best.slice(0, 3).map(([h, s]) => h.slug + ':' + s) }); continue; }
     const h = best[0][0];
     const e = (out.hermandades[h.slug] = out.hermandades[h.slug] || { ciudad, dia: h.dia, fuente, pdf: J.fuente, tramos: {} });
     const sub = c.sub ? (/cruz/.test(c.sub) ? 'cruz de guía' : /final/.test(c.sub) ? 'final del cortejo' : /palio|virgen/.test(c.sub) ? 'palio' : 'paso') : 'paso';
-    if (!e.tramos[sub] || e.tramos[sub].length < c.puntos.length) e.tramos[sub] = c.puntos;
+    if (!e.tramos[sub]) e.tramos[sub] = c.puntos; // (el orden de los papeles, el de la primera columna leída)
+    const k = h.slug + '|' + sub; if (!CAND.has(k)) CAND.set(k, []); CAND.get(k).push(c.puntos);
+  }
+}
+// Elección de la columna de cada papel: la más larga (a igualdad, la primera leída), pero en Sevilla antes las que no salen
+// mezcladas con la vecina y, para los pasos, antes las que no salen antes que su cruz de guía (La Quinta Angustia: Canal Sur pone
+// «Salida (19:05)» al paso, en la franja de las 20:00; el Consejo, 20:05, y su cruz sale a las 19:35).
+const masLarga = (v) => v.reduce((a, b) => (b.length > a.length ? b : a));
+for (const [slug, e] of Object.entries(out.hermandades)) {
+  const cand = (sub) => CAND.get(slug + '|' + sub) || [];
+  const limpias = (v) => { if (e.ciudad !== 'sevilla') return v; const l = v.filter((p) => !mezclada(p)); return l.length ? l : v; };
+  if (CAND.has(slug + '|cruz de guía')) e.tramos['cruz de guía'] = masLarga(limpias(cand('cruz de guía')));
+  const cruz0 = e.tramos['cruz de guía'] ? salidaDe(e.ciudad, e.tramos['cruz de guía']) : null;
+  for (const sub of Object.keys(e.tramos)) {
+    if (sub === 'cruz de guía' || !CAND.has(slug + '|' + sub)) continue;
+    let v = limpias(cand(sub));
+    if (cruz0 != null) { const ok = v.filter((p) => { const t = salidaDe(e.ciudad, p); return t == null || t >= cruz0; }); if (ok.length) v = ok; }
+    e.tramos[sub] = masLarga(v);
+  }
+  // Sevilla: un paso o palio mezclado sobra si la hermandad tiene otro limpio
+  if (e.ciudad === 'sevilla') {
+    const pasos = Object.keys(e.tramos).filter((s) => !/cruz/.test(s));
+    if (pasos.some((s) => !mezclada(e.tramos[s]))) for (const s of pasos) if (mezclada(e.tramos[s])) delete e.tramos[s];
   }
 }
 // Málaga: horas oficiales de la Agrupación sobre la rejilla, o el itinerario completo de la ficha si no hay rejilla
@@ -272,6 +374,12 @@ const GUIA_SOLO = {
 for (const [slug, pts] of Object.entries(GUIA_SOLO)) {
   const h = D.hermandades.find((x) => x.slug === slug);
   if (h && !out.hermandades[slug]) out.hermandades[slug] = { ciudad: 'granada', dia: h.dia, fuente: '', pdf: 'GUIA-HORARIOS-2026_FEDERACION.pdf', tramos: { paso: pts.map(([lugar, hora]) => ({ fila: '', lugar, hora })) } };
+}
+for (const [slug, x] of Object.entries(A_MANO)) {
+  const h = D.hermandades.find((y) => y.slug === slug), e = out.hermandades[slug];
+  if (!h) { console.warn('A_MANO: no está la ficha', slug); continue; }
+  const tramos = Object.fromEntries(Object.entries(x.tramos).map(([k, pts]) => [k, pts.map(([fila, lugar, hora]) => ({ fila, lugar, ...(hora ? { hora } : {}) }))]));
+  out.hermandades[slug] = { ciudad: h.ciudad, dia: h.dia, fuente: e ? e.fuente : '', pdf: x.pdf, ...(e && e.horas_fuente ? { horas_fuente: e.horas_fuente } : {}), tramos, a_mano: `${x.pdf}, p. ${x.pagina}` };
 }
 for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'granada') {
   if (PAG_GR[slug]) e.fuente = fuenteGR(slug); else console.warn('Granada sin página en la guía oficial:', slug);

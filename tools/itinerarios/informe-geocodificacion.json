@@ -107,5 +107,114 @@
     1
    ]
   ]
+ },
+ "sevilla": {
+  "puntos": 2202,
+  "situados": 2097,
+  "pct": 95,
+  "calles_osm": 8804,
+  "templos": 156,
+  "no_situados": [
+   [
+    "Salida",
+    29
+   ],
+   [
+    "Entrada",
+    29
+   ],
+   [
+    "Glorieta del Cid",
+    4
+   ],
+   [
+    "Javier Lasso de",
+    4
+   ],
+   [
+    "J. del Gran Poder",
+    4
+   ],
+   [
+    "Avda. Manuel",
+    3
+   ],
+   [
+    "Doña",
+    3
+   ],
+   [
+    "Santa Ángela de",
+    3
+   ],
+   [
+    "Travesía Ntra. Sra.",
+    2
+   ],
+   [
+    "Cardenal",
+    2
+   ],
+   [
+    "Ntra. Sra. Dolores",
+    2
+   ],
+   [
+    "Párroco A. Gómez Villa.",
+    2
+   ],
+   [
+    "Pueblade Cazalla",
+    2
+   ],
+   [
+    "de Mena",
+    2
+   ],
+   [
+    "Tomás de Ibarra",
+    2
+   ],
+   [
+    "Glorieta",
+    2
+   ],
+   [
+    "Paseo Cristóbal",
+    2
+   ],
+   [
+    "Alcaicería",
+    2
+   ],
+   [
+    "de Dios",
+    2
+   ],
+   [
+    "Alameda",
+    2
+   ],
+   [
+    "Francisco Carrión",
+    2
+   ],
+   [
+    "Rotonda Esqueleto",
+    1
+   ],
+   [
+    "Ronda Ntra. Sra. Oliva",
+    1
+   ],
+   [
+    "Peña Bética Ntra. Sra. Oliva",
+    1
+   ],
+   [
+    "Alfonso Lasso de la Vega",
+    1
+   ]
+  ]
  }
 }

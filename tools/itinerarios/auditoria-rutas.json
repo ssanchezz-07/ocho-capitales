@@ -109,12 +109,9 @@
    "dia": "Jueves Santo",
    "fuente": "Programa «Pasión» de Canal Sur Radio, Semana Santa de Almería 2026 (horarios de la Agrupación)",
    "puntos": 10,
-   "sinSituar": 4,
-   "estimados": 3,
-   "avisos": [
-    "paso: acaba a 2364 m de donde sale",
-    "4 de 10 puntos sin situar"
-   ]
+   "sinSituar": 0,
+   "estimados": 4,
+   "avisos": []
   },
   "las-angustias-almeria": {
    "dia": "Jueves Santo",
@@ -144,67 +141,67 @@
  "cadiz": {
   "servitas-cadiz": {
    "dia": "Viernes de Dolores",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 20,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 4: itinerario y horario del paso de virgen)",
+   "puntos": 21,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   },
   "merced-obediencia-cadiz": {
    "dia": "Sábado de Pasión",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 26,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 5: itinerario y horario del paso de virgen)",
+   "puntos": 25,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-borriquita-cadiz": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 36,
-   "sinSituar": 1,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 8: itinerario y horario del paso de misterio)",
+   "puntos": 38,
+   "sinSituar": 0,
    "estimados": 1,
    "avisos": [
-    "paso: salto de 1283 m de «Avda. Andalucía» a «Plaza Constitución»"
+    "paso: salto de 1385 m de «Avda. Andalucía» a «Plaza Constitución»"
    ]
   },
   "las-penas-cadiz": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 26,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 10: itinerario y horario del paso de misterio)",
+   "puntos": 27,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 2,
    "avisos": []
   },
   "sagrada-cena-cadiz": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 27,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 11: itinerario y horario del paso de misterio)",
+   "puntos": 29,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 2,
    "avisos": []
   },
   "el-despojado-cadiz": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 44,
-   "sinSituar": 2,
-   "estimados": 2,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 12: itinerario y horario del paso de misterio)",
+   "puntos": 46,
+   "sinSituar": 0,
+   "estimados": 3,
    "avisos": [
     "paso: salto de 1283 m de «Avda. Andalucía» a «Plaza de la Constitución»"
    ]
   },
   "humildad-y-paciencia-cadiz": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 22,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 14: itinerario y horario del paso de misterio)",
+   "puntos": 23,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "nazareno-del-amor-cadiz": {
    "dia": "Lunes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 15: itinerario y horario del paso de misterio)",
    "puntos": 24,
    "sinSituar": 0,
    "estimados": 1,
@@ -212,15 +209,15 @@
   },
   "la-palma-cadiz": {
    "dia": "Lunes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 38,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 16: itinerario y horario del paso de misterio)",
+   "puntos": 39,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "el-prendimiento-cadiz": {
    "dia": "Lunes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 18: itinerario y horario del paso de misterio)",
    "puntos": 26,
    "sinSituar": 0,
    "estimados": 1,
@@ -228,168 +225,183 @@
   },
   "vera-cruz-cadiz": {
    "dia": "Lunes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 20: itinerario y horario del paso de misterio)",
    "puntos": 26,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-piedad-cadiz": {
    "dia": "Martes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 23,
-   "sinSituar": 1,
-   "estimados": 0,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 22: itinerario y horario del paso de misterio)",
+   "puntos": 24,
+   "sinSituar": 0,
+   "estimados": 1,
    "avisos": []
   },
   "jesus-caido-el-senor-del-parque-cadiz": {
    "dia": "Martes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 30,
-   "sinSituar": 1,
-   "estimados": 3,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 24: itinerario y horario del paso de misterio)",
+   "puntos": 29,
+   "sinSituar": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-columna-cadiz": {
    "dia": "Martes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 27,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 25: itinerario y horario del paso de misterio)",
+   "puntos": 28,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "ecce-homo-cadiz": {
    "dia": "Martes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 24,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 26: itinerario y horario del paso de misterio)",
+   "puntos": 25,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-sentencia-cadiz": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 34,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 27: itinerario y horario del paso de misterio)",
+   "puntos": 33,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 3,
    "avisos": []
   },
   "las-cigarreras-cadiz": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 29,
-   "sinSituar": 1,
-   "estimados": 2,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 28: itinerario y horario del paso de misterio)",
+   "puntos": 30,
+   "sinSituar": 0,
+   "estimados": 1,
    "avisos": []
   },
   "las-aguas-cadiz": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 24,
-   "sinSituar": 1,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 30: itinerario y horario del paso de misterio)",
+   "puntos": 26,
+   "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "el-caminito-cadiz": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 30,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 31: itinerario y horario del paso de misterio)",
+   "puntos": 31,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 1,
    "avisos": []
   },
   "los-afligidos-cadiz": {
    "dia": "Jueves Santo y Madrugada",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 32: itinerario y horario del paso de misterio)",
+   "puntos": 28,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "oracion-en-el-huerto-cadiz": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 34: itinerario y horario del paso de misterio)",
+   "puntos": 44,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "nazareno-de-santa-maria-cadiz": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 35: itinerario y horario del paso de misterio)",
+   "puntos": 37,
+   "sinSituar": 0,
+   "estimados": 4,
+   "avisos": []
+  },
+  "medinaceli-cadiz": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 36: itinerario y horario del paso de misterio)",
    "puntos": 27,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
-  "oracion-en-el-huerto-cadiz": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 42,
-   "sinSituar": 0,
-   "estimados": 8,
-   "avisos": []
-  },
-  "nazareno-de-santa-maria-cadiz": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 36,
-   "sinSituar": 0,
-   "estimados": 1,
-   "avisos": []
-  },
-  "medinaceli-cadiz": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 26,
-   "sinSituar": 1,
-   "estimados": 0,
-   "avisos": []
-  },
   "el-perdon-cadiz": {
-   "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 33,
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 38: itinerario y horario del paso de misterio)",
+   "puntos": 34,
    "sinSituar": 0,
    "estimados": 2,
    "avisos": []
   },
   "siete-palabras-cadiz": {
    "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 34,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 39: itinerario y horario del paso de misterio)",
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 2,
    "avisos": []
   },
   "la-expiracion-cadiz": {
    "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 26,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 40: itinerario y horario del paso de misterio)",
+   "puntos": 27,
    "sinSituar": 0,
    "estimados": 2,
    "avisos": []
   },
   "el-descendimiento-cadiz": {
    "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 26,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 41: itinerario y horario del paso de misterio)",
+   "puntos": 28,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-buena-muerte-cadiz": {
    "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 21,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 42: itinerario y horario del paso de misterio)",
+   "puntos": 22,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "ecce-mater-tua-cadiz": {
    "dia": "Sábado Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 19,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 44: itinerario y horario del paso de virgen)",
+   "puntos": 20,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "santo-entierro-cadiz": {
    "dia": "Sábado Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
-   "puntos": 21,
-   "sinSituar": 1,
-   "estimados": 0,
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 45: itinerario y horario del paso de misterio)",
+   "puntos": 25,
+   "sinSituar": 0,
+   "estimados": 1,
    "avisos": []
   },
   "la-resurreccion-cadiz": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Cádiz 2026 (itinerarios del Consejo)",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 46: itinerario y horario del paso de misterio)",
    "puntos": 21,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "la-sanidad-cadiz": {
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 21: itinerario y horario del paso de misterio)",
+   "puntos": 23,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
+  },
+  "humillacion-piedad-cadiz": {
+   "dia": "Sábado de Pasión",
+   "fuente": "https://files.qualifio.com/library/prisa_noticias/emails/emisoras%20varios/cruz%20de%20gu%C3%ADa%20radio%20c%C3%A1diz%202026.pdf (pág. 6: itinerario y horario del paso)",
+   "puntos": 22,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
@@ -398,422 +410,365 @@
  "cordoba": {
   "la-o-cordoba": {
    "dia": "Sábado de Pasión",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 62,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
+   "puntos": 21,
    "sinSituar": 0,
-   "estimados": 7,
-   "avisos": [
-    "7 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "lagrimas-cordoba": {
    "dia": "Sábado de Pasión",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 48,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/03/guia-de-la-semana-santa-de-cordoba-2026_28.html",
+   "puntos": 16,
    "sinSituar": 0,
-   "estimados": 12,
+   "estimados": 0,
    "avisos": []
   },
   "entrada-triunfal-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 78,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 31,
    "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "final del cortejo: la hora retrocede en «PLAZA SAN LORENZO» (10:10)"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "penas-de-santiago-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 74,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 1,
    "avisos": []
   },
   "el-huerto-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 69,
-   "sinSituar": 0,
-   "estimados": 1,
-   "avisos": []
-  },
-  "el-rescatado-cordoba": {
-   "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 88,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 25,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
   },
-  "vera-cruz-cordoba": {
+  "el-rescatado-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 73,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 40,
    "sinSituar": 0,
    "estimados": 4,
    "avisos": []
   },
+  "vera-cruz-cordoba": {
+   "dia": "Domingo de Ramos",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 28,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
+  },
   "la-esperanza-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 84,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 33,
    "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "final del cortejo: 239 m/min entre «SALIDA» y «SAN PABLO»",
-    "final del cortejo: salto de 1246 m de «SAN ANDRÉS» a «ENTRADA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "el-amor-cordoba": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 86,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260329/guia-procesiones-domingo-ramos-cordoba_401155.html",
+   "puntos": 25,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "la-merced-cordoba": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 111,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 41,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 4,
+   "avisos": []
   },
   "presentacion-al-pueblo-cordoba": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 117,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 49,
+   "sinSituar": 0,
+   "estimados": 4,
+   "avisos": []
+  },
+  "la-estrella-cordoba": {
+   "dia": "Lunes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 39,
+   "sinSituar": 0,
+   "estimados": 4,
+   "avisos": []
+  },
+  "la-sentencia-cordoba": {
+   "dia": "Lunes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 31,
+   "sinSituar": 0,
+   "estimados": 3,
+   "avisos": []
+  },
+  "via-crucis-cordoba": {
+   "dia": "Lunes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 34,
+   "sinSituar": 0,
+   "estimados": 6,
+   "avisos": []
+  },
+  "animas-cordoba": {
+   "dia": "Lunes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260330/guia-procesiones-lunes-santo-cordoba_401486.html",
+   "puntos": 28,
+   "sinSituar": 0,
+   "estimados": 4,
+   "avisos": []
+  },
+  "la-agonia-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 37,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": [
+    "paso: acaba a 3514 m de donde sale"
+   ]
+  },
+  "la-universitaria-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 36,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "la-sangre-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 26,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "el-buen-suceso-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 27,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
+  },
+  "la-santa-faz-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 33,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "el-prendimiento-cordoba": {
+   "dia": "Martes Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260331/guia-procesiones-martes-santo-cordoba_401690.html",
+   "puntos": 38,
+   "sinSituar": 0,
+   "estimados": 3,
+   "avisos": []
+  },
+  "el-perdon-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 35,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": [
+    "paso: la hora retrocede en «BUEN PASTOR» (17:10)"
+   ]
+  },
+  "la-paz-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 39,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "el-calvario-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 29,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
+  },
+  "la-misericordia-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 27,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "la-pasion-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 26,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "la-piedad-cordoba": {
+   "dia": "Miércoles Santo",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260401/guia-procesiones-miercoles-santo-cordoba_401901.html",
+   "puntos": 56,
+   "sinSituar": 0,
+   "estimados": 7,
+   "avisos": []
+  },
+  "jesus-nazareno-cordoba": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 28,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
+  },
+  "la-caridad-cordoba": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 28,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
+  },
+  "jesus-caido-cordoba": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 39,
+   "sinSituar": 0,
+   "estimados": 3,
+   "avisos": []
+  },
+  "la-cena-cordoba": {
+   "dia": "Jueves Santo y Madrugada",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 33,
    "sinSituar": 0,
    "estimados": 5,
    "avisos": [
     "3 tramos de más de 350 m en recta (sin calle)"
    ]
   },
-  "la-estrella-cordoba": {
-   "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 109,
-   "sinSituar": 0,
-   "estimados": 12,
-   "avisos": []
-  },
-  "la-sentencia-cordoba": {
-   "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 73,
-   "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "via-crucis-cordoba": {
-   "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 60,
-   "sinSituar": 0,
-   "estimados": 1,
-   "avisos": []
-  },
-  "animas-cordoba": {
-   "dia": "Lunes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 70,
-   "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-agonia-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 112,
-   "sinSituar": 0,
-   "estimados": 11,
-   "avisos": [
-    "10 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-universitaria-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 76,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "cruz de guía: salto de 1245 m de «SALIDA» a «BUEN SUCESO»",
-    "cruz de guía: salto de 1356 m de «VIRGEN DE VILLAVICIOSA» a «ENTRADA»",
-    "final del cortejo: salto de 1245 m de «SALIDA» a «BUEN SUCESO»",
-    "final del cortejo: salto de 1356 m de «VIRGEN DE VILLAVICIOSA» a «ENTRADA»",
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-sangre-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 76,
-   "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "cruz de guía: salto de 2166 m de «PAZ Y ESPERANZA» a «ENTRADA»",
-    "final del cortejo: salto de 2166 m de «PAZ Y ESPERANZA» a «ENTRADA»",
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "el-buen-suceso-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 79,
-   "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-santa-faz-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 67,
-   "sinSituar": 0,
-   "estimados": 4,
-   "avisos": []
-  },
-  "el-prendimiento-cordoba": {
-   "dia": "Martes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 91,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "el-perdon-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 42,
-   "sinSituar": 0,
-   "estimados": 3,
-   "avisos": []
-  },
-  "la-paz-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 95,
-   "sinSituar": 0,
-   "estimados": 8,
-   "avisos": []
-  },
-  "el-calvario-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 88,
-   "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-misericordia-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 64,
-   "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-pasion-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 56,
-   "sinSituar": 0,
-   "estimados": 10,
-   "avisos": [
-    "final del cortejo: salto de 1480 m de «SALIDA» a «PUERTA DE SEVILLA»",
-    "final del cortejo: salto de 1827 m de «SAN BASILIO» a «ENTRADA»",
-    "final del cortejo: 183 m/min entre «SAN BASILIO» y «ENTRADA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-piedad-cordoba": {
-   "dia": "Miércoles Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 130,
-   "sinSituar": 0,
-   "estimados": 52,
-   "avisos": [
-    "final del cortejo: salto de 2101 m de «ESCRIBA LUBNA» a «PUENTE»",
-    "final del cortejo: 210 m/min entre «ESCRIBA LUBNA» y «PUENTE»",
-    "12 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "jesus-nazareno-cordoba": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 70,
-   "sinSituar": 1,
-   "estimados": 1,
-   "avisos": [
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-caridad-cordoba": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 64,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": []
-  },
-  "jesus-caido-cordoba": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 89,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-cena-cordoba": {
-   "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 92,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
   "las-angustias-cordoba": {
    "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 78,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 35,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "cristo-de-gracia-el-esparraguero-cordoba": {
    "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 99,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 36,
    "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "cruz de guía: 234 m/min entre «SALIDA» y «MARÍA AUXILIADORA»",
-    "9 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 1,
+   "avisos": []
   },
   "la-buena-muerte-cordoba": {
    "dia": "Jueves Santo y Madrugada",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 65,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260402/guia-procesiones-jueves-santo-madrugada-cordoba_402071.html",
+   "puntos": 31,
    "sinSituar": 0,
    "estimados": 2,
-   "avisos": [
-    "final del cortejo: la hora retrocede en «SALIDA» (00:30)"
-   ]
+   "avisos": []
   },
   "santo-sepulcro-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 52,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 23,
    "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 1,
+   "avisos": []
   },
   "la-soledad-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 93,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 44,
    "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "cruz de guía: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»",
-    "final del cortejo: salto de 1293 m de «SALIDA» a «AVENIDA DEL 28 DE FEBRERO»",
-    "final del cortejo: 259 m/min entre «SALIDA» y «AVENIDA DEL 28 DE FEBRERO»",
-    "7 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "la-expiracion-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 58,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 27,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
   },
   "el-descendimiento-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 62,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 24,
    "sinSituar": 0,
    "estimados": 3,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "la-conversion-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 120,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 45,
    "sinSituar": 0,
-   "estimados": 25,
-   "avisos": [
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 7,
+   "avisos": []
   },
   "los-dolores-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 78,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://www.eldebate.com/espana/la-voz-de-cordoba/religion-y-cofradias/20260403/guia-procesiones-viernes-santo-cordoba-2026_402605.html",
+   "puntos": 35,
    "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "cruz de guía: salto de 1206 m de «SALIDA» a «CONDE DE TORRES CABRERA»",
-    "cruz de guía: salto de 1323 m de «TORRES CABRERA» a «ENTRADA»",
-    "final del cortejo: salto de 1206 m de «SALIDA» a «CONDE DE TORRES CABRERA»",
-    "final del cortejo: salto de 1323 m de «TORRES CABRERA» a «ENTRADA»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 4,
+   "avisos": []
   },
   "dolores-de-alcolea-cordoba": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
-   "puntos": 50,
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-de-cordoba-2026_3.html",
+   "puntos": 13,
    "sinSituar": 0,
-   "estimados": 32,
+   "estimados": 0,
    "avisos": [
-    "64% de los puntos son estimados"
+    "paso: «Casa Hermandad (Calle Cabo Carmona Chamizo 57, Alcolea)» a 11.0 km del centro",
+    "paso: «Cabo Carmona Chamizo» a 11.0 km del centro",
+    "paso: «Carretera de Madrid» a 11.2 km del centro",
+    "paso: «Haza del Demonio» a 10.6 km del centro",
+    "paso: «CTRA. DE MADRID (Paralela)» a 10.6 km del centro",
+    "paso: «Paralela a la Carretera de Madrid» a 10.6 km del centro",
+    "paso: «General Caballero Rodas» a 10.5 km del centro",
+    "paso: «General Pedro A. Echevarría» a 10.4 km del centro",
+    "paso: «Sierra de Hornachuelos» a 10.5 km del centro",
+    "paso: «Carretera de Madrid» a 10.5 km del centro",
+    "paso: «Acequia» a 10.7 km del centro",
+    "paso: «Cabo Carmona Chamizo» a 10.8 km del centro",
+    "paso: «Casa Hermandad (Calle Cabo Carmona Chamizo 57, Alcolea)» a 11.0 km del centro"
    ]
   },
   "el-resucitado-cordoba": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Itinerario oficial de la Agrupación de Hermandades y Cofradías de Córdoba 2026",
+   "fuente": "https://www.hermandadesdecordoba.es/itinerario-2026/ · https://sentircordoba.blogspot.com/2026/04/guia-de-la-semana-santa-2026-domingo-de.html",
    "puntos": 31,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   }
  },
  "granada": {
   "la-borriquilla-granada": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 10: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 13,
    "sinSituar": 0,
    "estimados": 0,
@@ -821,7 +776,7 @@
   },
   "santa-cena-granada": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 11: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 0,
    "estimados": 0,
@@ -829,7 +784,7 @@
   },
   "el-despojado-silencio-blanco-granada": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 12: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 7,
    "estimados": 0,
@@ -839,7 +794,7 @@
   },
   "la-sentencia-maravillas-granada": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 13: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 13,
    "sinSituar": 0,
    "estimados": 2,
@@ -847,7 +802,7 @@
   },
   "el-cautivo-granada": {
    "dia": "Domingo de Ramos",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 14: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 0,
    "estimados": 3,
@@ -855,7 +810,7 @@
   },
   "el-huerto-granada": {
    "dia": "Lunes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 18: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 13,
    "sinSituar": 0,
    "estimados": 1,
@@ -863,7 +818,7 @@
   },
   "el-trabajo-granada": {
    "dia": "Lunes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 19: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 20,
    "sinSituar": 0,
    "estimados": 3,
@@ -873,7 +828,7 @@
   },
   "nuestra-senora-de-los-dolores-granada": {
    "dia": "Lunes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 20: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 14,
    "sinSituar": 0,
    "estimados": 2,
@@ -881,7 +836,7 @@
   },
   "jesus-del-rescate-granada": {
    "dia": "Lunes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 21: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 0,
    "estimados": 1,
@@ -889,7 +844,7 @@
   },
   "la-lanzada-granada": {
    "dia": "Martes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 26: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 18,
    "sinSituar": 0,
    "estimados": 7,
@@ -897,7 +852,7 @@
   },
   "el-via-crucis-granada": {
    "dia": "Martes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 27: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 15,
    "sinSituar": 2,
    "estimados": 2,
@@ -905,7 +860,7 @@
   },
   "la-esperanza-granada": {
    "dia": "Martes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 28: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 0,
    "estimados": 0,
@@ -913,7 +868,7 @@
   },
   "la-canilla-granada": {
    "dia": "Martes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 29: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 12,
    "sinSituar": 0,
    "estimados": 2,
@@ -921,7 +876,7 @@
   },
   "los-gitanos-granada": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 32: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 19,
    "sinSituar": 4,
    "estimados": 2,
@@ -932,7 +887,7 @@
   },
   "los-estudiantes-granada": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 33: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 10,
    "sinSituar": 0,
    "estimados": 0,
@@ -943,7 +898,7 @@
   },
   "paciencia-y-penas-granada": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 34: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 10,
    "sinSituar": 0,
    "estimados": 1,
@@ -951,17 +906,15 @@
   },
   "tres-caidas-y-rosario-granada": {
    "dia": "Miércoles Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 35: horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 13,
    "sinSituar": 0,
    "estimados": 3,
-   "avisos": [
-    "paso: la hora retrocede en «CATEDRAL» (21:50)"
-   ]
+   "avisos": []
   },
   "la-concha-granada": {
    "dia": "Jueves Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 40: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 14,
    "sinSituar": 2,
    "estimados": 2,
@@ -969,7 +922,7 @@
   },
   "los-salesianos-granada": {
    "dia": "Jueves Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 41: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 20,
    "sinSituar": 10,
    "estimados": 1,
@@ -980,7 +933,7 @@
   },
   "la-aurora-granada": {
    "dia": "Jueves Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 42: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 18,
    "sinSituar": 0,
    "estimados": 3,
@@ -988,7 +941,7 @@
   },
   "la-estrella-granada": {
    "dia": "Jueves Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 43: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 21,
    "sinSituar": 0,
    "estimados": 1,
@@ -998,7 +951,7 @@
   },
   "el-silencio-granada": {
    "dia": "Jueves Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 44: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 9,
    "sinSituar": 0,
    "estimados": 4,
@@ -1006,18 +959,17 @@
   },
   "los-favores-granada": {
    "dia": "Viernes Santo",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 51: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 14,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": [
-    "paso: la hora retrocede en «VIRGEN» (20:25)",
     "paso: salto de 1288 m de «Cuesta de San Cecilio» a «ENTRA»"
    ]
   },
   "los-facundillos-granada": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 60: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 9,
    "sinSituar": 0,
    "estimados": 2,
@@ -1025,7 +977,7 @@
   },
   "la-resurreccion-granada": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 61: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 14,
    "sinSituar": 0,
    "estimados": 7,
@@ -1035,7 +987,7 @@
   },
   "el-resucitado-granada": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Granada 2026",
+   "fuente": "https://hermandadesdegranada.com/wp-content/uploads/2026/03/GUIA-HORARIOS-2026_FEDERACION.pdf (pág. 62: itinerario y horario; Guía oficial de horarios e itinerarios 2026 de la Real Federación de Cofradías de Granada)",
    "puntos": 9,
    "sinSituar": 0,
    "estimados": 2,
@@ -1159,17 +1111,17 @@
   "la-misericordia-huelva": {
    "dia": "Jueves Santo",
    "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Huelva 2026",
-   "puntos": 18,
+   "puntos": 17,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 6,
    "avisos": []
   },
   "la-buena-muerte-huelva": {
    "dia": "Jueves Santo",
    "fuente": "Programa «El Llamador» de Canal Sur Radio, Semana Santa de Huelva 2026",
-   "puntos": 14,
+   "puntos": 19,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 2,
    "avisos": []
   },
   "el-descendimiento-huelva": {
@@ -1407,369 +1359,360 @@
  "malaga": {
   "pollinica-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 10,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "lagrimas-y-favores-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 16,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 1,
    "avisos": []
   },
   "dulce-nombre-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 19,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 40,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "salutacion-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 16,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 44,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "humildad-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 17,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 40,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "salud-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 16,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "humildad-y-paciencia-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 21,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 62,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "huerto-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 45,
-   "sinSituar": 2,
-   "estimados": 4,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "pasion-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 14,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 33,
    "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "paso: salto de 1640 m de «Salida» a «Tribuna»",
-    "paso: salto de 1800 m de «Comedias» a «Encierro»"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "crucifixion-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 20,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 41,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "dolores-del-puente-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 47,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "cautivo-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 19,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 2,
    "avisos": []
   },
   "estudiantes-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 16,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 36,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 0,
    "avisos": []
   },
   "rocio-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 18,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 0,
    "avisos": []
   },
   "penas-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 16,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 34,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "nueva-esperanza-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 24,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 52,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "humillacion-y-estrella-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 19,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 41,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "paso: salto de 1307 m de «Pº Santo Domingo» a «Encierro»"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "rescate-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 18,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 36,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "sentencia-malaga": {
    "dia": "Martes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 30,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "fusionadas-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 27,
    "sinSituar": 0,
    "estimados": 2,
    "avisos": []
   },
   "mediadora-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 20,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 47,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "paso: salto de 1255 m de «Ayala» a «Encierro»"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "salesianos-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 17,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 34,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 3,
    "avisos": []
   },
   "sangre-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 14,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "el-rico-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 34,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "paloma-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 12,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 28,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "sagrada-cena-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 13,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 29,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "vineros-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 13,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 35,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "santa-cruz-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 14,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 38,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "vera-cruz-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 13,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 38,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "mena-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 41,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 0,
    "avisos": []
   },
   "zamarrilla-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 17,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 0,
    "avisos": []
   },
   "misericordia-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 40,
-   "sinSituar": 2,
-   "estimados": 1,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "monte-calvario-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 17,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 48,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
   "descendimiento-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 17,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 38,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "amor-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 19,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 45,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 2,
    "avisos": []
   },
   "dolores-de-san-juan-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 12,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 34,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "traslado-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 15,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 30,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "piedad-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 14,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 31,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 1,
    "avisos": []
   },
   "santo-sepulcro-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 35,
-   "sinSituar": 2,
-   "estimados": 3,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "servitas-malaga": {
    "dia": "Viernes Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 51,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 0,
    "avisos": []
   },
   "prendimiento-malaga": {
    "dia": "Domingo de Ramos",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 40,
-   "sinSituar": 2,
-   "estimados": 6,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 39,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "expiracion-malaga": {
    "dia": "Miércoles Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 41,
-   "sinSituar": 2,
-   "estimados": 1,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "esperanza-malaga": {
    "dia": "Jueves Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
    "puntos": 35,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 0,
    "avisos": []
   },
   "gitanos-malaga": {
    "dia": "Lunes Santo",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 34,
-   "sinSituar": 2,
-   "estimados": 2,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 32,
+   "sinSituar": 0,
+   "estimados": 1,
    "avisos": []
   },
   "resucitado-malaga": {
    "dia": "Domingo de Resurrección",
-   "fuente": "Horarios e itinerarios oficiales de la Agrupación de Cofradías de Málaga 2026",
-   "puntos": 23,
+   "fuente": "https://agrupaciondecofradias.com/wp-content/uploads/2026/02/Horarios_ACC_SS_2026.pdf",
+   "puntos": 24,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
@@ -1787,69 +1730,77 @@
   "pino-montano-sevilla": {
    "dia": "Viernes de Dolores",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 57,
+   "puntos": 36,
    "sinSituar": 0,
-   "estimados": 19,
-   "avisos": [
-    "paso: salto de 1553 m de «Bandarán» a «Entrada»"
-   ]
+   "estimados": 9,
+   "avisos": []
   },
   "la-mision-sevilla": {
    "dia": "Viernes de Dolores",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 15,
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 10,
+   "estimados": 5,
+   "avisos": []
+  },
+  "la-paz-sevilla": {
+   "dia": "Domingo de Ramos",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 46,
+   "sinSituar": 0,
+   "estimados": 8,
    "avisos": [
-    "67% de los puntos son estimados"
+    "palio: la hora retrocede en «Pl. Triunfo» (20:00)"
    ]
   },
   "padre-pio-sevilla": {
    "dia": "Sábado de Pasión",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 68,
+   "puntos": 47,
    "sinSituar": 0,
-   "estimados": 30,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 26,
+   "avisos": []
   },
   "dolores-de-torreblanca-sevilla": {
    "dia": "Sábado de Pasión",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 50,
-   "sinSituar": 8,
-   "estimados": 35,
+   "puntos": 36,
+   "sinSituar": 36,
+   "estimados": 0,
    "avisos": [
-    "8 de 50 puntos sin situar",
-    "70% de los puntos son estimados"
+    "36 de 36 puntos sin situar"
    ]
   },
   "divino-perdon-sevilla": {
    "dia": "Sábado de Pasión",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 27,
-   "sinSituar": 10,
-   "estimados": 13,
+   "puntos": 39,
+   "sinSituar": 39,
+   "estimados": 0,
    "avisos": [
-    "10 de 27 puntos sin situar"
+    "39 de 39 puntos sin situar"
    ]
   },
   "san-jose-obrero-sevilla": {
    "dia": "Sábado de Pasión",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 46,
+   "puntos": 28,
+   "sinSituar": 2,
+   "estimados": 10,
+   "avisos": []
+  },
+  "la-milagrosa-sevilla": {
+   "dia": "Sábado de Pasión",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 16,
    "sinSituar": 0,
-   "estimados": 14,
-   "avisos": [
-    "palio: la hora retrocede en «Entrada» (0:50)",
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "la-borriquita-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 17,
+   "puntos": 18,
    "sinSituar": 0,
    "estimados": 2,
    "avisos": []
@@ -1857,61 +1808,55 @@
   "la-cena-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 36,
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 9,
+   "estimados": 0,
+   "avisos": []
+  },
+  "jesus-despojado-sevilla": {
+   "dia": "Domingo de Ramos",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 32,
+   "sinSituar": 0,
+   "estimados": 5,
    "avisos": []
   },
   "la-hiniesta-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 37,
+   "puntos": 38,
    "sinSituar": 0,
    "estimados": 1,
    "avisos": []
   },
-  "la-paz-sevilla": {
-   "dia": "Domingo de Ramos",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 45,
-   "sinSituar": 0,
-   "estimados": 9,
-   "avisos": [
-    "cruz de guía: salto de 1703 m de «Salida Postigo del Aceite» a «Harinas»",
-    "palio: la hora retrocede en «Pl. Triunfo» (20:00)",
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
   "san-roque-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 17,
+   "puntos": 33,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 1,
    "avisos": []
   },
   "la-estrella-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 33,
+   "puntos": 37,
    "sinSituar": 0,
-   "estimados": 3,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "la-amargura-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 24,
-   "sinSituar": 1,
-   "estimados": 6,
+   "puntos": 27,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": []
   },
   "el-amor-sevilla": {
    "dia": "Domingo de Ramos",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 9,
+   "puntos": 18,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
@@ -1919,61 +1864,56 @@
   "san-pablo-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 56,
+   "puntos": 58,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 8,
    "avisos": [
     "cruz de guía: salto de 1512 m de «Luis Montoto» a «San Esteban»",
     "palio: salto de 1226 m de «Luis Montoto» a «San Esteban»",
-    "11 tramos de más de 350 m en recta (sin calle)"
+    "9 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "redencion-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 37,
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 11,
+   "estimados": 3,
+   "avisos": []
+  },
+  "santa-genoveva-sevilla": {
+   "dia": "Lunes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 51,
+   "sinSituar": 0,
+   "estimados": 12,
    "avisos": [
-    "cruz de guía: salto de 1363 m de «Encarnación» a «Aponte»",
-    "palio: salto de 1505 m de «Laffón Soto» a «Av. Ped. Romero»",
-    "palio: salto de 7531 m de «Av. Ped. Romero» a «Entrada»",
-    "palio: 502 m/min entre «Av. Ped. Romero» y «Entrada»",
-    "13 tramos de más de 350 m en recta (sin calle)"
+    "8 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "santa-marta-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 42,
+   "puntos": 18,
    "sinSituar": 0,
-   "estimados": 7,
-   "avisos": [
-    "paso: salto de 1541 m de «Salida» a «PLAZA»",
-    "palio: salto de 1221 m de «Río de la Plata» a «Avda. Roma»",
-    "5 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "san-gonzalo-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 44,
+   "puntos": 45,
    "sinSituar": 0,
    "estimados": 7,
-   "avisos": [
-    "palio: salto de 1251 m de «San Jacinto» a «San Pablo»",
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "vera-cruz-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 22,
+   "puntos": 23,
    "sinSituar": 0,
-   "estimados": 5,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "las-penas-sevilla": {
    "dia": "Lunes Santo",
@@ -1986,49 +1926,47 @@
   "las-aguas-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 26,
+   "puntos": 27,
    "sinSituar": 0,
-   "estimados": 8,
+   "estimados": 1,
    "avisos": []
   },
   "el-museo-sevilla": {
    "dia": "Lunes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 12,
+   "puntos": 24,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 4,
    "avisos": []
   },
   "el-cerro-sevilla": {
    "dia": "Martes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 55,
+   "puntos": 56,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 9,
    "avisos": [
-    "cruz de guía: salto de 1233 m de «Salida» a «Afán de Ribera»",
     "cruz de guía: salto de 1246 m de «Avda. Ramón y Cajal» a «Enramadilla»",
-    "cruz de guía: salto de 1273 m de «Avda. Ramón y CajalAvda. Ramón y Cajal» a «Avda. Hytasa»",
-    "cruz de guía: salto de 1233 m de «Afán de Ribera» a «Entrada»",
-    "palio: salto de 1233 m de «Salida» a «Afán de Ribera»",
     "palio: salto de 1246 m de «Avda. Ramón y Cajal» a «Enramadilla»",
     "palio: salto de 1273 m de «Avda. Ramón y Cajal» a «Avda. Hytasa»",
-    "palio: salto de 1296 m de «Ntra. Sra. de los Dolores» a «Entrada»",
-    "7 tramos de más de 350 m en recta (sin calle)"
+    "4 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-esteban-sevilla": {
    "dia": "Martes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 29,
-   "sinSituar": 6,
+   "puntos": 31,
+   "sinSituar": 0,
    "estimados": 0,
-   "avisos": [
-    "palio: salto de 1309 m de «Carlos V» a «Constitución Imagen»",
-    "palio: salto de 1703 m de «M. la Blanca Águilas» a «Ramón y Caj.»",
-    "palio: acaba a 963 m de donde sale",
-    "6 de 29 puntos sin situar"
-   ]
+   "avisos": []
+  },
+  "la-candelaria-sevilla": {
+   "dia": "Martes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 35,
+   "sinSituar": 0,
+   "estimados": 2,
+   "avisos": []
   },
   "san-benito-sevilla": {
    "dia": "Martes Santo",
@@ -2047,33 +1985,26 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 27,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "cruz de guía: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»",
-    "cruz de guía: salto de 1270 m de «Miguel de Mañara» a «Entrada»",
-    "palio: salto de 1249 m de «Salida» a «Adolfo Rodríguez Jurado»"
-   ]
+   "estimados": 7,
+   "avisos": []
   },
   "santa-cruz-sevilla": {
    "dia": "Martes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 12,
+   "puntos": 21,
    "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 2,
    "avisos": [
-    "cruz de guía: la hora retrocede en «Pl. Alianza» (20:00)",
-    "cruz de guía: la hora retrocede en «Postigo» (22:30)"
+    "cruz de guía: la hora retrocede en «Pl. Alianza» (20:00)"
    ]
   },
   "el-carmen-doloroso-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 37,
+   "puntos": 38,
    "sinSituar": 0,
    "estimados": 7,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-buen-fin-sevilla": {
    "dia": "Miércoles Santo",
@@ -2086,14 +2017,14 @@
   "la-sed-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 40,
-   "sinSituar": 3,
-   "estimados": 12,
+   "puntos": 53,
+   "sinSituar": 0,
+   "estimados": 6,
    "avisos": [
-    "cruz de guía: salto de 2334 m de «Salida» a «Hospital San Juan»",
-    "palio: salto de 2361 m de «Cardenal Lluch» a «Entrada»",
-    "palio: acaba a 1823 m de donde sale",
-    "3 tramos de más de 350 m en recta (sin calle)"
+    "cruz de guía: salto de 1374 m de «Luis Montoto» a «Jose Luis de Casso»",
+    "cruz de guía: acaba a 2077 m de donde sale",
+    "palio: salto de 1374 m de «Luis Montoto» a «José Luis de Casso»",
+    "palio: acaba a 2077 m de donde sale"
    ]
   },
   "san-bernardo-sevilla": {
@@ -2102,52 +2033,46 @@
    "puntos": 39,
    "sinSituar": 0,
    "estimados": 3,
-   "avisos": [
-    "cruz de guía: salto de 1219 m de «Salida» a «Puente de San Bernardo»",
-    "cruz de guía: salto de 1545 m de «San Bernardo» a «Entrada»",
-    "palio: salto de 1352 m de «Salida» a «Gallinato»",
-    "palio: salto de 1219 m de «San Bernardo» a «Entrada»",
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "la-lanzada-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 29,
+   "puntos": 30,
    "sinSituar": 0,
    "estimados": 1,
-   "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
+  },
+  "el-baratillo-sevilla": {
+   "dia": "Miércoles Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 29,
+   "sinSituar": 0,
+   "estimados": 3,
+   "avisos": []
   },
   "los-panaderos-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 25,
    "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 4,
+   "avisos": []
   },
   "cristo-de-burgos-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 27,
+   "puntos": 28,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "cruz de guía: salto de 1230 m de «Sales y Ferré» a «Entrada»",
-    "palio: salto de 1230 m de «Sales y Ferré» a «Entrada»",
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 5,
+   "avisos": []
   },
   "siete-palabras-sevilla": {
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 11,
+   "puntos": 24,
    "sinSituar": 0,
-   "estimados": 4,
+   "estimados": 1,
    "avisos": []
   },
   "los-negritos-sevilla": {
@@ -2155,21 +2080,15 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 31,
    "sinSituar": 0,
-   "estimados": 1,
-   "avisos": [
-    "cruz de guía: salto de 1363 m de «Salida» a «San Esteban»",
-    "cruz de guía: salto de 1452 m de «Muro de los Navarros» a «Entrada»",
-    "palio: salto de 1363 m de «Salida» a «San Esteban»",
-    "palio: salto de 1577 m de «Guadalupe» a «Entrada»",
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 5,
+   "avisos": []
   },
   "la-exaltacion-los-caballos-sevilla": {
    "dia": "Jueves Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 31,
+   "puntos": 32,
    "sinSituar": 0,
-   "estimados": 5,
+   "estimados": 0,
    "avisos": []
   },
   "las-cigarreras-sevilla": {
@@ -2177,40 +2096,31 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 30,
    "sinSituar": 0,
-   "estimados": 2,
+   "estimados": 6,
    "avisos": [
-    "palio: salto de 1302 m de «San Fernando» a «Jardines de Murillo»",
-    "4 tramos de más de 350 m en recta (sin calle)"
+    "palio: salto de 1302 m de «San Fernando» a «Jardines de Murillo»"
    ]
   },
   "montesion-sevilla": {
    "dia": "Jueves Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 26,
+   "puntos": 29,
    "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "palio: salto de 1371 m de «Francos» a «Álvarez»"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "la-quinta-angustia-sevilla": {
    "dia": "Jueves Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 28,
+   "puntos": 16,
    "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "cruz de guía: salto de 1271 m de «Salida» a «CAMPANA»",
-    "cruz de guía: salto de 1867 m de «Castelar» a «Entrada»",
-    "paso: salto de 1271 m de «Salida» a «CAMPANA»",
-    "paso: salto de 1751 m de «Zaragoza» a «Entrada»",
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "estimados": 2,
+   "avisos": []
   },
   "el-valle-sevilla": {
    "dia": "Jueves Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 21,
+   "puntos": 22,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
@@ -2218,7 +2128,7 @@
   "pasion-sevilla": {
    "dia": "Jueves Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 17,
+   "puntos": 20,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
@@ -2234,7 +2144,7 @@
   "el-gran-poder-sevilla": {
    "dia": "Madrugá",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 23,
+   "puntos": 24,
    "sinSituar": 0,
    "estimados": 0,
    "avisos": []
@@ -2252,13 +2162,8 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 16,
    "sinSituar": 0,
-   "estimados": 4,
-   "avisos": [
-    "cruz de guía: salto de 1271 m de «Salida» a «CAMPANA»",
-    "cruz de guía: la hora retrocede en «P. SAN» (6:00)",
-    "palio: salto de 1271 m de «Salida» a «Campana»",
-    "palio: salto de 1845 m de «Pl. de Molviedro» a «Entrada»"
-   ]
+   "estimados": 1,
+   "avisos": []
   },
   "la-esperanza-de-triana-sevilla": {
    "dia": "Madrugá",
@@ -2271,9 +2176,9 @@
   "los-gitanos-sevilla": {
    "dia": "Madrugá",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 38,
+   "puntos": 41,
    "sinSituar": 0,
-   "estimados": 11,
+   "estimados": 10,
    "avisos": []
   },
   "la-carreteria-sevilla": {
@@ -2281,55 +2186,10 @@
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 23,
    "sinSituar": 0,
-   "estimados": 0,
-   "avisos": []
-  },
-  "la-soledad-de-san-lorenzo-sevilla": {
-   "dia": "Sábado Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 20,
-   "sinSituar": 1,
    "estimados": 4,
    "avisos": []
   },
-  "el-cachorro-sevilla": {
-   "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 48,
-   "sinSituar": 0,
-   "estimados": 0,
-   "avisos": [
-    "cruz de guía: salto de 1378 m de «Salida» a «Castilla»",
-    "cruz de guía: salto de 1431 m de «Castilla» a «Entrada»",
-    "palio: salto de 1378 m de «Salida» a «Castilla»",
-    "palio: salto de 1403 m de «Castilla» a «Entrada»",
-    "paso: salto de 1714 m de «Zaragoza» a «Entrada»",
-    "6 tramos de más de 350 m en recta (sin calle)"
-   ]
-  },
-  "la-o-sevilla": {
-   "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 32,
-   "sinSituar": 0,
-   "estimados": 9,
-   "avisos": [
-    "cruz de guía: salto de 1285 m de «Salida» a «San Jorge»",
-    "cruz de guía: salto de 1243 m de «Callao» a «Entrada»",
-    "palio: acaba a 1247 m de donde sale"
-   ]
-  },
-  "san-isidoro-sevilla": {
-   "dia": "Viernes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 20,
-   "sinSituar": 0,
-   "estimados": 2,
-   "avisos": [
-    "palio: salto de 1258 m de «Callao» a «Entrada»"
-   ]
-  },
-  "montserrat-sevilla": {
+  "san-buenaventura-sevilla": {
    "dia": "Viernes Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 22,
@@ -2337,8 +2197,50 @@
    "estimados": 0,
    "avisos": []
   },
+  "el-cachorro-sevilla": {
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 40,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": [
+    "3 tramos de más de 350 m en recta (sin calle)"
+   ]
+  },
+  "la-o-sevilla": {
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 35,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "san-isidoro-sevilla": {
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 18,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "montserrat-sevilla": {
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 23,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
+  "la-sagrada-mortaja-sevilla": {
+   "dia": "Viernes Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 24,
+   "sinSituar": 0,
+   "estimados": 0,
+   "avisos": []
+  },
   "el-sol-sevilla": {
-   "dia": "Sábado de Pasión",
+   "dia": "Sábado Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 40,
    "sinSituar": 0,
@@ -2348,104 +2250,90 @@
   "los-servitas-sevilla": {
    "dia": "Sábado Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 33,
+   "puntos": 29,
    "sinSituar": 0,
-   "estimados": 6,
-   "avisos": [
-    "cruz de guía: la hora retrocede en «P. SAN» (19:00)",
-    "palio: salto de 1208 m de «Puerta de Jerez Cuesta Rosario» a «Avda. Carlos V»"
-   ]
+   "estimados": 0,
+   "avisos": []
   },
   "la-trinidad-sevilla": {
    "dia": "Sábado Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 40,
+   "puntos": 41,
    "sinSituar": 0,
    "estimados": 3,
-   "avisos": [
-    "3 tramos de más de 350 m en recta (sin calle)"
-   ]
+   "avisos": []
   },
   "el-santo-entierro-sevilla": {
    "dia": "Sábado Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "puntos": 23,
-   "sinSituar": 1,
-   "estimados": 2,
+   "puntos": 15,
+   "sinSituar": 0,
+   "estimados": 0,
    "avisos": [
+    "cruz de guía: la hora retrocede en «CAMPANA» (19:30)",
     "cruz de guía: la hora retrocede en «PALOS» (20:28)"
    ]
+  },
+  "la-soledad-de-san-lorenzo-sevilla": {
+   "dia": "Sábado Santo",
+   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+   "puntos": 24,
+   "sinSituar": 0,
+   "estimados": 1,
+   "avisos": []
   },
   "bellavista-sevilla": {
    "dia": "Viernes de Dolores",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 27,
-   "sinSituar": 0,
-   "estimados": 11,
+   "puntos": 28,
+   "sinSituar": 28,
+   "estimados": 0,
    "avisos": [
-    "paso: salto de 1639 m de «Padre García Tejero» a «Entrada»"
+    "28 de 28 puntos sin situar"
    ]
   },
   "pasion-y-muerte-sevilla": {
    "dia": "Viernes de Dolores",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 33,
+   "puntos": 19,
    "sinSituar": 0,
-   "estimados": 10,
-   "avisos": [
-    "cruz de guía: salto de 1432 m de «Salida (Pta del Perdón)» a «Francos»"
-   ]
-  },
-  "jesus-despojado-sevilla": {
-   "dia": "Domingo de Ramos",
-   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 11,
-   "sinSituar": 5,
-   "estimados": 2,
-   "avisos": [
-    "5 de 11 puntos sin situar"
-   ]
-  },
-  "la-candelaria-sevilla": {
-   "dia": "Martes Santo",
-   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 22,
-   "sinSituar": 0,
-   "estimados": 3,
+   "estimados": 4,
    "avisos": []
   },
   "los-javieres-sevilla": {
    "dia": "Martes Santo",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 10,
+   "puntos": 21,
    "sinSituar": 0,
-   "estimados": 1,
+   "estimados": 2,
    "avisos": []
   },
   "dulce-nombre-la-bofeta-sevilla": {
    "dia": "Martes Santo",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 21,
+   "puntos": 28,
    "sinSituar": 0,
    "estimados": 5,
    "avisos": []
   },
-  "el-baratillo-sevilla": {
-   "dia": "Miércoles Santo",
+  "la-resurreccion-sevilla": {
+   "dia": "Domingo de Resurrección",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 20,
-   "sinSituar": 1,
-   "estimados": 6,
+   "puntos": 14,
+   "sinSituar": 0,
+   "estimados": 11,
    "avisos": [
-    "4 tramos de más de 350 m en recta (sin calle)"
+    "cruz de guía: la hora retrocede en «San Luis - Relator San» (9:00)",
+    "cruz de guía: la hora retrocede en «Francos Palos» (13:00)",
+    "79% de los puntos son estimados"
    ]
   },
-  "san-buenaventura-sevilla": {
-   "dia": "Viernes Santo",
+  "cristo-de-la-corona-sevilla": {
+   "dia": "Viernes de Dolores",
    "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-   "puntos": 20,
+   "puntos": 18,
    "sinSituar": 0,
-   "estimados": 0,
+   "estimados": 1,
    "avisos": []
   }
  }
