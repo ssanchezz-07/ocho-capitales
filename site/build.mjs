@@ -2240,8 +2240,10 @@ function datosCalle(c) {
         if (a0 >= 0 && b0 < tt.length) tt[i] = tt[a0] + (tt[b0] - tt[a0]) * ((acum[i] - acum[a0]) / ((acum[b0] - acum[a0]) || 1));
       }
       pl.forEach((p, i) => {
-        const t = tt[i]; if (t == null) return;
-        const [x, y] = xyp[i];
+        if (tt[i] == null) return;
+        // a décimas de minuto, como los vértices de calle de abajo: si no, un vértice redondeado hacia arriba podía quedar por
+        // detrás del punto oficial que le sigue y la hora retrocedía unas centésimas (El Rescatado, La Sentencia, Zamarrilla)
+        const t = Math.round(tt[i] * 10) / 10, [x, y] = xyp[i];
         const q = [x, y, t, limpiaLugar(p.lugar), p.hora ? 1 : 0, p.como === 'estimado' ? 1 : 0, 0, p.tramo === 'regreso' ? 1 : 0];
         if (p.via && p.via.length) Object.defineProperty(q, 'via', { value: p.via.map(([la, lo]) => xy(la, lo)) });
         out.push(q);
@@ -2259,7 +2261,10 @@ function datosCalle(c) {
         const L = tramo[tramo.length - 1] || 1;
         for (let k = 1; k < cad.length - 1; k++) conCalles.push([cad[k][0], cad[k][1], Math.round((a[2] + (b[2] - a[2]) * tramo[k] / L) * 10) / 10, a[3], 0, a[5] || 0, 1, a[7] || 0]); // posición 5: tramo «estimado» (sin calles oficiales), como su punto
       }
-      if (conCalles.length >= 2) tramos[/cruz/.test(nom) ? 'cruz' : 'paso'] = conCalles;
+      // con varios pasos (misterio y palio), el del plano es el último del cortejo, el que sale más tarde: el cortejo va de la cruz
+      // de guía a él (antes mandaba el orden de las columnas en el PDF)
+      const k = /cruz/.test(nom) ? 'cruz' : 'paso';
+      if (conCalles.length >= 2 && (k === 'cruz' || !tramos.paso || conCalles[0][2] >= tramos.paso[0][2])) tramos[k] = conCalles;
     }
     if (!Object.keys(tramos).length) continue;
     const im = imCirculo(h);
