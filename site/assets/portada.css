@@ -124,40 +124,109 @@
 .oc-globo-saltar { position: fixed; z-index: 201; top: max(16px, env(safe-area-inset-top)); right: 16px; min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(201, 161, 74, .55); background: rgba(255, 255, 255, .08); color: #f4eff9; font: 500 15px/1 Heebo, system-ui, sans-serif; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .oc-globo-saltar:focus-visible { outline: 2px solid #e7c877; outline-offset: 2px; }
 
-/* ---- «Próxima Semana Santa»: el nazareno que se dibuja al bajar (assets/nazareno.js) ---- */
-.oc-naz { margin: 0 calc(50% - 50vw) 32px; background: radial-gradient(90% 80% at 30% 55%, #2a1240 0%, #14081d 62%, #0b0511 100%); color: #f4eff9; }
-.oc-naz.is-vivo, .oc-naz-js .oc-naz { height: 300vh; }
-.oc-naz-escena { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 4vw; padding: 32px max(16px, 6vw); box-sizing: border-box; min-height: 88svh; }
-.oc-naz.is-vivo .oc-naz-escena, .oc-naz-js .oc-naz-escena { position: sticky; top: 0; height: 100svh; overflow: hidden; }
-/* el dibujo no recibe toques: la luz del cirio (overflow visible) tapaba «‹ Portada» en «Próxima Semana Santa» (Pablo, 13-nov) */
-.oc-naz-fig { height: min(78svh, 640px); width: auto; justify-self: end; overflow: visible; pointer-events: none; }
-.oc-naz-traz { fill: none; stroke: #c9a14a; stroke-width: 1.6px; stroke-linecap: round; stroke-linejoin: round; }
-.oc-naz-traz path { vector-effect: non-scaling-stroke; }
-.oc-naz-luz { mix-blend-mode: screen; }
-.oc-naz-llama { transform-origin: 62px 98px; }
-.oc-naz-txt { display: grid; max-width: 34ch; }
-.oc-naz-txt > * { grid-area: 1 / 1; align-self: center; }
-.oc-naz-frase { margin: 0; font: 400 clamp(18px, 2vw, 23px)/1.45 Heebo, system-ui, sans-serif; color: #cfc4dc; opacity: 0; }
-.oc-naz .oc-kicker { color: #c9a14a; }
-.oc-naz-titulo { margin: 0 0 .15em; font: 700 clamp(56px, 8vw, 112px)/.88 Karantina, serif; color: #f4eff9; }
-.oc-naz-fechas { margin: 0 0 10px; color: #cfc4dc; }
-/* La cuenta atrás, más bonita (Pablo, 13-nov): «Faltan» y «días para el Domingo de Ramos» en versalitas finas a los lados de un
-   número grande en dorado, con la misma letra del título; sin la fecha entre paréntesis (las fechas están en «Las jornadas») */
-.oc-naz .oc-hero2-count { display: grid; justify-items: start; row-gap: 6px; margin: .5em 0 0; font: 500 clamp(12px, 1.05vw, 14px)/1.2 Heebo, system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #cfc4dc; }
-.oc-naz .oc-hero2-count strong { font: 700 clamp(64px, 7.5vw, 104px)/.8 Karantina, serif; letter-spacing: 0; color: #e7c877; text-shadow: 0 0 24px rgb(231 200 119 / .25); }
-.oc-naz .oc-hero2-count span { display: none; }
-.oc-naz-pista { position: absolute; bottom: 20px; left: 0; right: 0; margin: 0; text-align: center; font: 500 13px/1 Heebo, system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #cfc4dc; opacity: 0; }
-.oc-naz.is-vivo .oc-naz-pista { opacity: .85; }
-/* sin JavaScript (o con «reducir movimiento») se ve terminado: solo la cabecera, sin las frases que van y vienen */
-html:not(.oc-naz-js) .oc-naz-frase { display: none; }
-.oc-naz.is-vivo .oc-naz-rel, .oc-naz.is-vivo .oc-naz-llama, .oc-naz.is-vivo .oc-naz-luz, .oc-naz.is-vivo [data-naz="3"] { opacity: 0; }
-/* con JS, hasta que nazareno.js mide los trazos, no se ve nada (sin el destello del dibujo terminado) */
-.oc-naz-js .oc-naz:not(.is-vivo) .oc-naz-fig, .oc-naz-js .oc-naz:not(.is-vivo) .oc-naz-txt { opacity: 0; }
+/* ---- «Enciende la vela» y la calle camino de la próxima Semana Santa (site/vela.mjs y assets/vela.js) ----
+   Diseño de Pablo del 13-nov («eso es perfecto»): de día en el modo claro y de noche en el oscuro. La escena tiene su alto desde
+   el principio, así que nada de lo de debajo se mueve. Sin JavaScript o con «reducir movimiento» se ve la escena final, quieta y
+   con todo el texto. Con JS la pinta vela.js en el lienzo y estas capas SVG quedan como sus datos (se leen sus colores de aquí).
+   --u: los píxeles que mide una unidad del dibujo; la calle ocupa media escena. */
+.oc-vela { --v-bg: #eeece6; --v-cielo1: #e6e0ee; --v-cielo2: #eeece6; --v-cielo3: #f5ecd8; --v-fach: #f7f5f0; --v-tr: #3a1a5c; --v-ven: #e3dcee; --v-luz: #e3dcee; --v-puerta: #3a1a5c; --v-suelo: #e4e1d9; --v-piedra: #a39d92; --v-lin: #7a5a16; --v-farol: #f1e4c0; --v-oro: #7a5a16; --v-gota: #c79a3b; --v-traz: #7a5a16; --v-mecha: #565060; --v-dia: 1; --v-noche: 0;
+  --v-txt: #3a1a5c; --v-txt2: #4f4760; --v-som: #f7f5f0; --v-titulo: #2b1140; --v-num: #7a5a16; --v-pista: #7a5a16; --v-pista2: #565060;
+  margin: 0 calc(50% - 50vw) 32px; color: var(--v-txt); }
+:root[data-theme="dark"] .oc-vela { --v-bg: #140820; --v-cielo1: #150927; --v-cielo2: #261239; --v-cielo3: #341a48; --v-fach: #22113a; --v-tr: #c9a14a; --v-ven: #2c1846; --v-luz: #ffcf7a; --v-puerta: #150a22; --v-suelo: #120717; --v-piedra: #33204a; --v-lin: #e8c877; --v-farol: #ffcf7a; --v-oro: #f0d48a; --v-gota: #e8c877; --v-traz: #c9a14a; --v-mecha: #8a7a68; --v-dia: 0; --v-noche: 1; --v-txt: #f6ead0; --v-txt2: #cfc4dc; --v-som: #140820; --v-titulo: #f4eff9; --v-num: #e7c877; --v-pista: #e8c877; --v-pista2: #b9a4cf; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oc-vela { --v-bg: #140820; --v-cielo1: #150927; --v-cielo2: #261239; --v-cielo3: #341a48; --v-fach: #22113a; --v-tr: #c9a14a; --v-ven: #2c1846; --v-luz: #ffcf7a; --v-puerta: #150a22; --v-suelo: #120717; --v-piedra: #33204a; --v-lin: #e8c877; --v-farol: #ffcf7a; --v-oro: #f0d48a; --v-gota: #e8c877; --v-traz: #c9a14a; --v-mecha: #8a7a68; --v-dia: 0; --v-noche: 1; --v-txt: #f6ead0; --v-txt2: #cfc4dc; --v-som: #140820; --v-titulo: #f4eff9; --v-num: #e7c877; --v-pista: #e8c877; --v-pista2: #b9a4cf; } }
+.oc-vela[data-vela="portada"] { margin-top: 24px; }
+.oc-vela-escena { --vh: clamp(560px, 100vh, 920px); --u: calc(var(--vh) * .5 / 214); --naz-x: 44%; --est-x: 9%; --est-y: 8%; --est-k: 1;
+  position: relative; height: var(--vh); overflow: hidden; background: linear-gradient(var(--v-cielo1), var(--v-cielo2) 55%, var(--v-cielo3)); }
+@supports (height: 100svh) { .oc-vela-escena { --vh: clamp(560px, 100svh, 920px); } }
+.oc-vela-capa { position: absolute; display: block; overflow: visible; pointer-events: none; }
+.oc-vela-calle { left: 0; bottom: 0; width: calc(2160 * var(--u)); height: calc(220 * var(--u)); }
+.oc-vela-naz { left: var(--naz-x); bottom: calc(54 * var(--u)); width: calc(48 * var(--u)); height: calc(112 * var(--u)); }
+.oc-vela-estrella { right: var(--est-x); top: var(--est-y); width: calc(100 * var(--u) * var(--est-k)); height: calc(100 * var(--u) * var(--est-k)); }
+.oc-vela-vela { top: 12%; left: calc(50% - var(--vh) * .27 * 220 / 305); width: calc(var(--vh) * .54 * 220 / 305); height: 54%; }
+/* sin «.oc-vela» delante: los tramos de calle van con <use>, y una regla con antecesor no llega a su copia (sombra del <use>) */
+.v-fach { fill: var(--v-fach); }
+.v-tr { stroke: var(--v-tr); stroke-width: 1.2; stroke-linejoin: round; }
+.v-l { fill: none; stroke: var(--v-tr); stroke-width: 1.2; stroke-linecap: round; }
+.v-ven { fill: var(--v-ven); }
+.v-luz { fill: var(--v-luz); }
+.v-puerta { fill: var(--v-puerta); }
+.v-farol { fill: var(--v-farol); }
+.v-suelo { fill: var(--v-suelo); }
+.v-piedra { stroke: var(--v-piedra); }
+.v-gota { fill: var(--v-gota); }
+.v-lin { stroke: var(--v-lin); }
+.v-oro { fill: var(--v-oro); }
+.v-soro { stroke: var(--v-oro); }
+.v-mecha { stroke: var(--v-mecha); }
+.v-traz { fill: none; stroke: var(--v-traz); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.v-zapato { fill: #0b0b0b; stroke: #c9a14a; stroke-width: 4; }
+.v-anio { font: 400 22px Karantina, serif; }
+.v-noche { opacity: var(--v-noche); }
+.v-dia { opacity: var(--v-dia); }
+/* la vela de la portada está apagada: su llama, su halo y sus motas los enciende vela.js */
+.oc-vela-vela [data-capa="halo"], .oc-vela-vela [data-capa="mota"], .oc-vela-vela [data-capa="llama-vela"] { opacity: 0; }
+
+/* textos: arriba a la izquierda, sin fondo que tape nada (solo una sombra suave del color del cielo) */
+.oc-vela-txt { position: absolute; z-index: 3; left: max(16px, 6vw); top: clamp(64px, 9%, 92px); width: min(38rem, 52%); display: grid; justify-items: start; pointer-events: none; }
+.oc-vela-txt a { pointer-events: auto; }
+.oc-vela-frase { margin: 0 0 clamp(14px, 2.6vh, 30px); min-height: 1.35em; max-width: 44ch; font: italic 500 clamp(17px, 1.5vw, 21px)/1.35 var(--it, Georgia, serif); color: var(--v-txt); text-shadow: 0 1px 2px var(--v-som), 0 0 12px var(--v-som); transition: opacity .8s ease; }
+.oc-vela-cab { display: grid; justify-items: start; }
+.oc-vela .oc-kicker { color: var(--v-oro); text-shadow: 0 0 10px var(--v-som); }
+.oc-vela-titulo { margin: 0 0 .15em; font: 700 clamp(56px, 8vw, 112px)/.88 var(--display, Karantina), serif; color: var(--v-titulo); text-shadow: 0 0 22px var(--v-som); outline: none; }
+/* La cuenta atrás (Pablo, 13-nov): «Faltan» y «días para el Domingo de Ramos» en versalitas finas a los lados de un número
+   grande en dorado, con la letra del título; sin la fecha entre paréntesis (las fechas están en «Las jornadas») */
+.oc-vela .oc-hero2-count { grid-area: auto; display: grid; justify-items: start; row-gap: 6px; margin: .5em 0 0; font: 500 clamp(12px, 1.05vw, 14px)/1.2 Heebo, system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--v-txt2); text-shadow: 0 1px 2px var(--v-som), 0 0 10px var(--v-som); }
+.oc-vela .oc-hero2-count strong { font: 700 clamp(64px, 7.5vw, 104px)/.8 var(--display, Karantina), serif; letter-spacing: 0; color: var(--v-num); text-shadow: 0 0 24px var(--v-som); }
+.oc-vela .oc-hero2-count span { display: none; }
+.oc-home.hay-ext .oc-vela [data-today-lead] { display: grid; }
+.oc-vela-btn { margin-top: 16px; }
+.oc-vela-btn.is-abajo svg { transform: rotate(90deg); }
+
+/* el lienzo, el destello que tapa el paso de la vela al nazareno y la vela (botón) */
+.oc-vela-lienzo, .oc-vela-brillo, .oc-vela-vela, .oc-vela-boton { display: none; }
+.oc-vela-js .oc-vela-lienzo, .oc-vela-js .oc-vela-brillo, .oc-vela-js .oc-vela-vela { display: block; }
+.oc-vela-lienzo { position: absolute; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; }
+.oc-vela-brillo { position: absolute; z-index: 2; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(circle at 50% 50%, rgb(255 248 226 / .95) 0, rgb(255 214 140 / .7) 22%, rgb(255 170 80 / .25) 45%, rgb(255 170 80 / 0) 70%); }
+/* el botón es la vela con su aviso (ahí va el anillo del foco); un toque en cualquier otro punto de la escena también la enciende */
+.oc-vela-js .oc-vela-escena { --boton-w: max(300px, calc(var(--vh) * .54 * 220 / 305 + 48px)); }
+.oc-vela-js .oc-vela-boton { position: absolute; z-index: 4; top: 27%; left: calc(50% - var(--boton-w) / 2); width: var(--boton-w); height: 58%; display: grid; align-content: start; justify-items: center; margin: 0; padding: calc(var(--vh) * .43) 12px 0; border: 0; border-radius: 22px; background: transparent; color: inherit; font: inherit; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; transition: opacity .5s ease; }
+.oc-vela-js [data-vela="portada"]:not(.is-encendida) .oc-vela-escena { cursor: pointer; }
+.oc-vela-pista { display: grid; justify-items: center; gap: 6px; padding: 10px 16px; font: 600 15px/1.3 Heebo, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--v-pista); }
+.oc-vela-pista small { max-width: 32ch; font: 400 15px/1.35 Heebo, system-ui, sans-serif; letter-spacing: 0; text-transform: none; color: var(--v-pista2); }
+.oc-vela-boton:focus-visible { outline: 2px solid var(--v-oro); outline-offset: 0; }
+.oc-vela.is-encendida .oc-vela-boton { opacity: 0; pointer-events: none; }
+/* con el lienzo pintando, las capas SVG no se ven (son sus datos) */
+.oc-vela-js .oc-vela.is-lienzo .oc-vela-capa { visibility: hidden; }
+/* la portada empieza con la vela apagada: la calle y los textos esperan a que el nazareno eche a andar */
+.oc-vela-js [data-vela="portada"]:not(.is-cielo) .oc-vela-escena { background: var(--v-bg); }
+.oc-vela-js [data-vela="portada"]:not(.is-lienzo) :is(.oc-vela-calle, .oc-vela-naz, .oc-vela-estrella) { visibility: hidden; }
+.oc-vela-js [data-vela="portada"] .oc-vela-frase { opacity: 0; }
+.oc-vela-js [data-vela="portada"] .oc-vela-cab > * { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease-out, ease-out), transform .9s var(--ease-out, ease-out); }
+/* si se llega al enlace con el tabulador antes de encender la vela, los textos se ven (nunca un foco invisible) */
+.oc-vela-js [data-vela="portada"].is-texto .oc-vela-cab > *, .oc-vela-js [data-vela="portada"] .oc-vela-cab:has(:focus-visible) > * { opacity: 1; transform: none; }
+.oc-vela-js [data-vela="portada"].is-texto .oc-vela-cab > :nth-child(2) { transition-delay: .08s; }
+.oc-vela-js [data-vela="portada"].is-texto .oc-vela-cab > :nth-child(3) { transition-delay: .16s; }
+.oc-vela-js [data-vela="portada"].is-texto .oc-vela-cab > :nth-child(4) { transition-delay: .24s; }
+.oc-vela-js [data-vela="portada"]:not(.is-texto) .oc-vela-txt a { pointer-events: none; }
+/* en el móvil la calle baja un poco para dejar sitio a los textos, y la estrella va a la derecha del título */
 @media (max-width: 700px) {
-  .oc-naz-escena { grid-template-columns: 1fr; grid-template-rows: auto auto; gap: 8px; align-content: center; padding: 20px 16px; }
-  .oc-naz-fig { height: min(44svh, 380px); justify-self: center; }
-  .oc-naz-txt { margin: 0 auto; text-align: center; }
-  .oc-naz .oc-hero2-count { justify-items: center; }
+  .oc-vela-escena { --u: calc(var(--vh) * .44 / 214); --naz-x: 18%; --est-k: .7; --est-x: 0px; --est-y: calc(182px - 50 * var(--u) * var(--est-k)); }
+  .oc-vela-txt { left: 16px; right: 16px; width: auto; }
+  .oc-vela-frase { min-height: 2.7em; max-width: 30ch; }
+}
+/* Portada → «Próxima Semana Santa» (Pablo, 13-nov: «más fluida y simétrica»): las dos abren con la misma calle, los mismos
+   textos y el botón en el mismo sitio (en la portada lleva a las fechas; allí baja a las jornadas). Entre páginas, la escena y
+   sus textos pasan de una a otra con View Transitions, y la calle sigue por donde iba (vela.js). */
+@media (prefers-reduced-motion: no-preference) {
+  .oc-vela-escena { view-transition-name: vela-escena; }
+  .oc-vela-frase { view-transition-name: vela-frase; }
+  .oc-vela .oc-kicker { view-transition-name: vela-kicker; }
+  .oc-vela-titulo { view-transition-name: vela-titulo; }
+  .oc-vela .oc-hero2-count { view-transition-name: vela-cuenta; }
+  .oc-vela-btn { view-transition-name: vela-btn; }
+  ::view-transition-group(vela-escena), ::view-transition-group(vela-frase), ::view-transition-group(vela-kicker), ::view-transition-group(vela-titulo),
+  ::view-transition-group(vela-cuenta), ::view-transition-group(vela-btn) { animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); }
+  ::view-transition-old(vela-btn), ::view-transition-new(vela-btn) { height: 100%; animation-duration: .45s; }
 }
 
 /* volver a ver la llegada desde el globo: un globo pequeño en la esquina del mapa */
@@ -167,32 +236,6 @@ html:not(.oc-naz-js) .oc-naz-frase { display: none; }
 .oc-colg-otra:active { transform: scale(.92); }
 .oc-colg-otra:focus-visible { outline: 2px solid #e7c877; outline-offset: 2px; opacity: 1; }
 .oc-portada.is-ciudad .oc-colg-otra { display: none; }
-
-/* el nazareno en la portada: algo más corto que en su página, con su botón */
-.oc-naz-js .oc-naz.is-portada, .oc-naz.is-portada.is-vivo { height: 240vh; }
-.oc-naz.is-portada { margin-top: 24px; }
-.oc-naz-btn { margin-top: 16px; }
-/* Portada → «Próxima Semana Santa» y vuelta (Pablo, 13-nov: «más fluida y simétrica»). Las dos cabeceras son gemelas: el mismo
-   nazareno, los mismos textos, la cuenta atrás en las dos y un botón en el mismo sitio (en la portada lleva a las fechas; aquí baja
-   a las jornadas). La escena de aquí se centra a la misma altura que la de la portada, que ocupa la pantalla entera (lo de arriba,
-   cabecera y migas, mide --naz-t). Entre páginas, el nazareno, sus textos y el fondo pasan de una a otra (View Transitions). */
-.oc-naz-btn.is-abajo svg { transform: rotate(90deg); }
-.oc-proxima { --naz-t: 91px; }
-@media (max-width: 719px) { .oc-proxima { --naz-t: 85px; } }
-.oc-proxima .oc-naz-escena { min-height: max(560px, calc(100svh - 2 * var(--naz-t))); }
-.oc-home.hay-ext .oc-naz [data-today-lead] { display: grid; }
-@media (prefers-reduced-motion: no-preference) {
-  .oc-naz-escena { view-transition-name: naz-escena; }
-  .oc-naz-fig { view-transition-name: naz-fig; }
-  .oc-naz .oc-kicker { view-transition-name: naz-kicker; }
-  .oc-naz-titulo { view-transition-name: naz-titulo; }
-  .oc-naz-fechas { view-transition-name: naz-fechas; }
-  .oc-naz .oc-hero2-count { view-transition-name: naz-cuenta; }
-  .oc-naz-btn { view-transition-name: naz-btn; }
-  ::view-transition-group(naz-escena), ::view-transition-group(naz-fig), ::view-transition-group(naz-kicker), ::view-transition-group(naz-titulo),
-  ::view-transition-group(naz-fechas), ::view-transition-group(naz-cuenta), ::view-transition-group(naz-btn) { animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); }
-  ::view-transition-old(naz-btn), ::view-transition-new(naz-btn) { height: 100%; animation-duration: .45s; }
-}
 
 /* ---- planos de ciudad más legibles (Pablo, 26-oct: «no se ven claros estos mapas») ---- */
 .oc-portada .oc-pl-calles { stroke: rgb(226 212 246 / .32); stroke-width: 1.25; }

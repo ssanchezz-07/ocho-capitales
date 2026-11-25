@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { detectarEventos, tituloDeActo, trozoDeFrase, sigueValiendo } from './eventos.mjs';
 import { clasificar, TEMAS } from './filtro-noticias.mjs';
 import { escribeSw as swDespliegue, escribeCabeceras, comprobarLimites } from './despliegue.mjs';
+import { escenaVela, cabezaVela } from './vela.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(DIR, process.env.DIST_DIR || 'dist');
@@ -278,7 +279,7 @@ const NX = (() => { const sb = {}; vm.runInNewContext(fs.readFileSync(path.join(
 // Huella del contenido de la CSS y el JS: cambia la URL al publicar para que ni el navegador ni el service worker sirvan una versión vieja.
 // los juegos de erCuñao (assets/juegos.js y /juegos/): si están, erCuñao los propone
 const HAY_JUEGOS = fs.existsSync(path.join(DIR, 'assets', 'juegos.js'));
-const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['cunaopinta', 'cunao-pinta.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['nazareno', 'nazareno.js'], ['colabora', 'colabora.js'], ['juegos', 'juegos.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
+const HUELLA = Object.fromEntries([['css', 'site.css'], ['js', 'site.js'],['calle', 'calle.js'], ['plano', 'plano.js'], ['cunao', 'cunao.js'], ['cunaoui', 'cunao-ui.js'], ['cunaopinta', 'cunao-pinta.js'], ['noticias', 'noticias.js'], ['vida', 'vida.css'], ['portada', 'portada.css'], ['globo', 'globo.js'], ['mundo', 'globo-datos.json'], ['d3a', 'vendor/d3-array.min.js'], ['d3g', 'vendor/d3-geo.min.js'], ['vela', 'vela.js'], ['colabora', 'colabora.js'], ['juegos', 'juegos.js']].map(([k, f]) => [k, createHash('sha256').update(fs.readFileSync(path.join(DIR, 'assets', f))).digest('hex').slice(0, 10)]));
 // Precarga de la página siguiente (Chrome y Edge; los demás lo ignoran): las pestañas de abajo se piden en cuanto se ven,
 // y cualquier otro enlace de la web al empezar a tocarlo. Solo se descarga el HTML (prefetch, sin ejecutar nada).
 const ESPECULA = `<script type="speculationrules">${JSON.stringify({ prefetch: [
@@ -1020,27 +1021,20 @@ function pageHome() {
   ${colgaduras(EXT.length ? `<div class="oc-ext" data-ext hidden></div><script>${EXT_PINTA}</script>` : '')}
 </section>
 <section class="oc-section" aria-labelledby="capitales-titulo"><h2 class="oc-h2" id="capitales-titulo">Las ocho capitales</h2>${plates(false)}</section>
-${TEMPORADA.fuera ? seccionNazareno(true) : ''}
+${TEMPORADA.fuera ? seccionVela(true) : ''}
 <section class="oc-agenda-home" aria-labelledby="agenda-home"><h2 class="oc-h2" id="agenda-home">Agenda</h2>${evs.length ? `<ol class="oc-evs">${evs.slice(0, 6).map(agendaItem).join('')}</ol>` : '<p class="oc-empty">Aún no hay actos próximos.</p>'}<a class="oc-link" href="${u('calendario/')}">Calendario cofrade completo${icon('arrow')}</a></section>
 </div>`;
-  write('index.html', layout({ title: '', body, path: '', head: `${COLG_PRELOAD}${EXT.length ? `<script>window.OCX=${JSON.stringify(EXT).replace(/</g, '\\u003c')};${EXT_CALC}</script>` : ''}${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? NAZ_HEAD() : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
+  write('index.html', layout({ title: '', body, path: '', head: `${COLG_PRELOAD}${EXT.length ? `<script>window.OCX=${JSON.stringify(EXT).replace(/</g, '\\u003c')};${EXT_CALC}</script>` : ''}${HEAD_ENTRADA}<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${TEMPORADA.fuera ? VELA_HEAD(false) : ''}`, jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: abs(''), inLanguage: 'es', description: TAGLINE, potentialAction: { '@type': 'SearchAction', target: abs('buscar/') + '?q={q}', 'query-input': 'required name=q' } } }));
 }
-// El nazareno (dibujo propio, assets/nazareno.js): se dibuja a trazo al bajar, se viste y enciende su cirio; sin JS se ve terminado.
-// En la portada fuera de temporada se dibuja al bajar; en «Próxima Semana Santa» ya está hecho, sólido (Pablo, 27-oct: «si no es muy repetitivo»).
-const NAZ_SVG = `<svg class="oc-naz-fig" viewBox="0 0 240 560" role="img" aria-label="Un nazareno con su cirio encendido">
-  <defs><radialGradient id="naz-luz" cx="62" cy="96" r="230" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset=".35" stop-color="#e7a43c" stop-opacity=".18"/><stop offset="1" stop-color="#e7a43c" stop-opacity="0"/></radialGradient><radialGradient id="naz-llama" cx="62" cy="90" r="14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6d6"/><stop offset=".5" stop-color="#ffcf6b"/><stop offset="1" stop-color="#f08a24"/></radialGradient></defs>
-  <g class="oc-naz-rel"><path d="M88 220C62 250 50 330 46 420C44 470 46 510 50 530Q120 548 190 530C194 510 196 470 194 420C190 330 178 250 152 220Z" fill="#1d0b2c"/><path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228Z" fill="#2b1140"/><path d="M120 24L95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152Z" fill="#4a1f6b"/><path d="M104 150q6-4 12 0q-6 4-12 0ZM124 150q6-4 12 0q-6 4-12 0Z" fill="#0b0511"/><path d="M112 196h16v10q0 10-8 14q-8-4-8-14Z" fill="#c9a14a"/><path d="M58 470V112Q62 106 66 112V470Z" fill="#efe6d2"/></g>
-  <rect class="oc-naz-luz" x="-200" y="-200" width="640" height="900" fill="url(#naz-luz)"/>
-  <g class="oc-naz-traz"><path d="M20 548H220"/><path d="M120 24L95 152"/><path d="M120 24L145 152"/><path d="M95 152C88 175 80 205 84 232Q120 252 156 232C160 205 152 175 145 152"/><path d="M104 150q6-4 12 0q-6 4-12 0Z"/><path d="M124 150q6-4 12 0q-6 4-12 0Z"/><path d="M112 196h16v10q0 10-8 14q-8-4-8-14Z"/><path d="M88 220C62 250 50 330 46 420C44 470 46 510 50 530"/><path d="M152 220C178 250 190 330 194 420C196 470 194 510 190 530"/><path d="M86 228C78 300 72 420 66 528Q120 540 174 528C168 420 162 300 154 228"/><path d="M100 300C98 380 94 460 92 532"/><path d="M120 300L120 536"/><path d="M140 300C142 380 146 460 148 532"/><path d="M84 300Q120 312 156 300"/><path d="M134 306C136 340 132 380 136 410"/><path d="M138 306C142 335 142 370 146 400"/><path d="M131 410l5 14 5-14"/><path d="M141 400l5 14 5-14"/><path d="M90 236C80 262 72 290 70 318L84 330C88 300 92 276 96 252"/><path d="M150 240C160 280 162 320 158 350"/><path d="M58 470V112Q62 106 66 112V470Z"/><path d="M62 316q8-6 14 0v16q-7 5-14 0Z"/><path d="M62 108V100"/><path d="M88 546Q100 538 110 546"/><path d="M130 546Q140 538 152 546"/></g>
-  <path class="oc-naz-llama" d="M62 98C55 87 59 76 62 64C65 76 69 87 62 98Z" fill="url(#naz-llama)"/></svg>`;
-const NAZ_HEAD = () => `<script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('oc-naz-js')</script><script src="${u('assets/nazareno.js')}?v=${HUELLA.nazareno}" defer></script>`;
-function seccionNazareno(enPortada) {
-  const A = TEMPORADA.anio, e = easter(A), f = (off) => fmtDay(e + off * 864e5, { day: 'numeric', month: 'long' }), H = enPortada ? 'h2' : 'h1';
-  return `<section class="oc-naz${enPortada ? ' is-portada' : ''}"${enPortada ? ' data-nazareno' : ''} aria-labelledby="naz-t"><div class="oc-naz-escena">${NAZ_SVG}
-  <div class="oc-naz-txt"><p class="oc-naz-frase" data-naz="1">Sevilla, Málaga, Granada, Córdoba, Cádiz, Huelva, Almería y Jaén.</p><p class="oc-naz-frase" data-naz="2">Sus hermandades, jornada a jornada.</p>
-  <header data-naz="3"><p class="oc-kicker">Próxima Semana Santa</p><${H} class="oc-naz-titulo" id="naz-t">Semana Santa ${A}</${H}>${leadHoy()}${enPortada ? `<a class="oc-btn oc-naz-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : `<a class="oc-btn oc-naz-btn is-abajo" href="#prox-jornadas">Las jornadas y cada capital${icon('arrow')}</a>`}</header></div>
-  <p class="oc-naz-pista" aria-hidden="true">Baja para dibujarlo</p></div></section>`;
+// «Enciende la vela» y la calle camino de la próxima Semana Santa (site/vela.mjs y assets/vela.js; diseño de Pablo del 13-nov).
+// En la portada, fuera de temporada, empieza con la vela apagada; en «Próxima Semana Santa», ya en la calle con el nazareno andando.
+// Los textos de siempre (año, cuenta atrás y botón) están en el HTML desde el principio; en la portada aparecen al echar a andar.
+function seccionVela(enPortada) {
+  const boton = enPortada ? `<a class="oc-btn oc-vela-btn" href="${u('proxima-semana-santa/')}">Fechas y qué traerá cada capital${icon('arrow')}</a>` : `<a class="oc-btn oc-vela-btn is-abajo" href="#prox-jornadas">Las jornadas y cada capital${icon('arrow')}</a>`;
+  return escenaVela({ modo: enPortada ? 'portada' : 'proxima', anio: TEMPORADA.anio, lead: leadHoy(), boton, colores: D.capitales.map((c) => c.color) });
 }
+// en «Próxima Semana Santa» la escena está arriba: la página no se pinta hasta que el lienzo tiene su primer fotograma (Chrome)
+const VELA_HEAD = (bloquea) => cabezaVela(`${u('assets/vela.js')}?v=${HUELLA.vela}`, bloquea);
 // Próxima Semana Santa (botón de la portada fuera de temporada): cuenta atrás, fechas de cada jornada y qué tendrá cada capital.
 // Los recorridos del año se publican aquí y en el plano en cuanto cada agrupación o consejo dé a conocer sus itinerarios oficiales.
 function pageProxima() {
@@ -1051,12 +1045,12 @@ function pageProxima() {
     return `<li class="oc-prox-cap" id="${c.slug}" style="--c:${c.color}"><h3><i aria-hidden="true"></i>${esc(c.nombre)}</h3><p>${cifraCap(c)}. Recorridos y horarios de ${A}: en cuanto se publiquen los itinerarios oficiales.</p><p class="oc-prox-links">${plano ? `<a class="oc-link" href="${u('')}#${c.slug}">Sus hermandades en el plano${icon('arrow')}</a>` : ''}<a class="oc-link" href="${capHref(c)}">Su Semana Santa${icon('arrow')}</a></p></li>`;
   }).join('');
   const body = `<div class="oc-proxima" data-proxima>
-${seccionNazareno(false)}
+${seccionVela(false)}
 <section aria-labelledby="prox-jornadas"><h2 class="oc-h2" id="prox-jornadas">Las jornadas</h2><ol class="oc-prox-jornadas">${jornadas}</ol></section>
 <section aria-labelledby="prox-caps"><h2 class="oc-h2" id="prox-caps">Qué tendrá cada capital</h2><ul class="oc-prox-caps">${caps}</ul></section>
 <p class="oc-note">Mientras tanto, las salidas extraordinarias anunciadas están en el plano de cada ciudad (portada) y en el <a href="${u('calendario/')}">calendario cofrade</a>.</p>
 </div>`;
-  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
+  write('proxima-semana-santa/index.html', layout({ title: `Semana Santa ${A}: fechas y cuenta atrás`, desc: `Fechas de cada jornada de la Semana Santa ${A} en las ocho capitales andaluzas y cuenta atrás para el Domingo de Ramos.`, body, path: 'proxima-semana-santa/', head: `<link rel="stylesheet" href="${u('assets/portada.css')}?v=${HUELLA.portada}">${VELA_HEAD(true)}`, crumbs: [['Portada', u()], [`Semana Santa ${A}`, '']] }));
 }
 // Hoy: qué sale en cada jornada en las ocho capitales (antes en la portada), con la cuenta atrás y la curiosidad del día.
 function pageHoy() {
