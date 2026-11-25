@@ -447,15 +447,28 @@
     }
     arranca();
   }
-  // al irse a «Próxima Semana Santa», allí la calle sigue por donde iba
-  function guarda() { if (!andando) return; try { sessionStorage.setItem('oc-vela', JSON.stringify({ w: tiempoAndar(), t: Date.now() })); } catch (e) {} }
+  // al irse a «Próxima Semana Santa», allí la calle sigue por donde iba (u: lo que mide aquí una unidad de la calle, en px)
+  function guarda() { if (!andando) return; try { sessionStorage.setItem('oc-vela', JSON.stringify({ w: tiempoAndar(), t: Date.now(), u: L.calle ? L.calle.s : 0 })); } catch (e) {} }
+  // Llegando de la portada a «Próxima», donde la escena es más baja y la calle más pequeña, la transición entre páginas encaja
+  // las dos escenas por abajo a la izquierda y lleva la calle de un tamaño al otro (portada.css, .oc-vela-vt). Solo si la
+  // transición empieza después de este script (pagereveal), para no cambiarla a medias
+  function acerca(uAntes) {
+    var k = L.calle && L.calle.s > 0 ? uAntes / L.calle.s : 1;
+    if (!(k > 0) || Math.abs(k - 1) < .004) return;
+    raiz.style.setProperty('--vela-vt-k', k.toFixed(4)); raiz.style.setProperty('--vela-vt-s', (1 / k).toFixed(4));
+    addEventListener('pagereveal', function (e) {
+      if (!e.viewTransition) return;
+      var fin = function () { raiz.classList.remove('oc-vela-vt'); };
+      raiz.classList.add('oc-vela-vt'); e.viewTransition.finished.then(fin, fin);
+    }, { once: true });
+  }
 
   // ---------- arranque ----------
   function empieza() {
     prepara(); mide(); haceCache(); preparaAndar();
     if (!portada) {
       var w = 0;
-      try { var v = JSON.parse(sessionStorage.getItem('oc-vela') || 'null'); if (v && Date.now() - v.t < 15000 && v.w > 0) w = v.w; } catch (e) {}
+      try { var v = JSON.parse(sessionStorage.getItem('oc-vela') || 'null'); if (v && Date.now() - v.t < 15000 && v.w > 0) { w = v.w; if (v.u > 0) acerca(v.u); } } catch (e) {}
       echaAndar(w);
     }
     repinta(); sec.classList.add('is-lienzo');

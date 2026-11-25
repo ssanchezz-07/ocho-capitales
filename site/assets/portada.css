@@ -160,14 +160,20 @@
   @supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh: clamp(calc(560px - var(--migas)), calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px - var(--migas)), 920px); } }
 }
 @media (max-width: 759px) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --migas: 40px; } }
-/* En el ordenador, con la escena 91 px más baja y los textos del mismo tamaño (van con el alto de la ventana), la calle, que
-   mide casi media escena, subía detrás del botón (a 1440×900, lo alto de la espadaña 28 px por encima de su borde de abajo;
-   en la portada queda 11 px por debajo). Aquí la calle no sube más que en la portada: lo alto de la calle queda donde allí (al
+/* Desde 701 px, con la escena más baja y los textos del mismo tamaño (van con el alto de la ventana), la calle, que mide casi
+   media escena, subía detrás del botón (a 1440×900, lo alto de la espadaña 28 px por encima de su borde de abajo; en la
+   portada queda 11 px por debajo). Aquí la calle no sube más que en la portada: lo alto de la calle queda donde allí (al
    51,68 % de aquella escena, --vh-portada: 1 − 0,47 × 220 / 214) y la calle mengua lo que haga falta para caber debajo (mide
-   220 unidades). A 1440×900 mide un 21 % menos que en la portada; en pantallas altas (escena de 920 px) mide lo mismo */
-@media (min-width: 960px) {
+   220 unidades). --vh-portada es el --vh que tendría la portada en esa ventana (en la tableta, sin la cabecera ni la barra).
+   A 1440×900 mide un 21 % menos que en la portada; en pantallas altas (escena de 920 px) mide lo mismo. En el móvil (hasta
+   700 px) ya lo hace la regla de abajo: lo alto de la calle no pasa de 388 px de lo alto de la escena */
+@media (min-width: 701px) {
   .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, 100vh, 920px); --u: min(calc(var(--vh) * .47 / 214), calc((var(--vh) - var(--vh-portada) * .5168) / 220)); }
   @supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, 100svh, 920px); } }
+}
+@media (min-width: 701px) and (max-width: 959px) {
+  .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, calc(100vh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px), 920px); }
+  @supports (height: 100svh) { .oc-vela[data-vela="proxima"] .oc-vela-escena { --vh-portada: clamp(560px, calc(100svh - var(--header-h) - var(--tabbar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px), 920px); } }
 }
 .oc-vela-capa { position: absolute; display: block; overflow: visible; pointer-events: none; }
 .oc-vela-calle { left: 0; bottom: 0; width: calc(2160 * var(--u)); height: calc(220 * var(--u)); }
@@ -280,9 +286,31 @@
   .oc-vela-titulo { view-transition-name: vela-titulo; }
   .oc-vela .oc-hero2-count { view-transition-name: vela-cuenta; }
   .oc-vela-btn { view-transition-name: vela-btn; }
+  /* andando, el nazareno y la estrella van aparte (cada pieza con su nombre): pasan cada uno de su sitio en la portada a su
+     sitio en «Próxima», aunque allí la calle sea más pequeña */
+  .oc-vela.is-andar .oc-vela-andar.is-cuerpo { view-transition-name: vela-naz; }
+  .oc-vela.is-andar .oc-vela-andar.is-pieI { view-transition-name: vela-pie-i; }
+  .oc-vela.is-andar .oc-vela-andar.is-pieD { view-transition-name: vela-pie-d; }
+  .oc-vela.is-andar .oc-vela-andar.is-llamaW { view-transition-name: vela-llama; }
+  .oc-vela.is-andar .oc-vela-andar.is-estFondo { view-transition-name: vela-est-fondo; }
+  .oc-vela.is-andar .oc-vela-andar.is-estrella { view-transition-name: vela-est; }
   ::view-transition-group(vela-escena), ::view-transition-group(vela-frase), ::view-transition-group(vela-kicker), ::view-transition-group(vela-titulo),
-  ::view-transition-group(vela-cuenta), ::view-transition-group(vela-btn) { animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); }
+  ::view-transition-group(vela-cuenta), ::view-transition-group(vela-btn), ::view-transition-group(vela-naz), ::view-transition-group(vela-pie-i),
+  ::view-transition-group(vela-pie-d), ::view-transition-group(vela-llama), ::view-transition-group(vela-est-fondo), ::view-transition-group(vela-est) { animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); }
   ::view-transition-old(vela-btn), ::view-transition-new(vela-btn) { height: 100%; animation-duration: .45s; }
+  /* Con la escena más baja, en «Próxima» la calle es más pequeña que en la portada (a 1440×900, un 21 % menos). Si las dos
+     fotos de la escena solo se fundieran, se verían a la vez dos calles de distinto tamaño. Así que se encajan por abajo a la
+     izquierda, donde empieza la calle, y la cámara se aleja: la de la portada encoge hasta el tamaño de la otra mientras se va,
+     y la de «Próxima», debajo y entera, llega desde el tamaño de la portada. Cielo, calle y suelo coinciden en cada fotograma.
+     vela.js pone las escalas (--vela-vt-s, «Próxima» entre portada; --vela-vt-k, la inversa) y la clase solo durante la
+     transición, cuando viene de la portada andando y las calles no miden lo mismo. Lo que sobresale se recorta a la escena */
+  :root.oc-vela-vt::view-transition-image-pair(vela-escena) { overflow: hidden; }
+  :root.oc-vela-vt::view-transition-old(vela-escena), :root.oc-vela-vt::view-transition-new(vela-escena) { inset: auto auto 0 0; transform-origin: 0 100%; mix-blend-mode: normal;
+    animation-duration: .7s; animation-timing-function: cubic-bezier(.33, .8, .25, 1); animation-fill-mode: both; }
+  :root.oc-vela-vt::view-transition-old(vela-escena) { z-index: 1; animation-name: vela-vt-sale; }
+  :root.oc-vela-vt::view-transition-new(vela-escena) { animation-name: vela-vt-llega; }
+  @keyframes vela-vt-sale { to { transform: scale(var(--vela-vt-s, 1)); opacity: 0; } }
+  @keyframes vela-vt-llega { from { transform: scale(var(--vela-vt-k, 1)); } }
 }
 
 /* volver a ver la llegada desde el globo: un globo pequeño en la esquina del mapa */
