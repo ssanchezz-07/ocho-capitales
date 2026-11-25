@@ -24,7 +24,8 @@
   for (var k in CAPAS) CAPAS[k] = sec.querySelector(CAPAS[k]);
 
   // Tiempos en ms desde que se enciende (los del prototipo; el paso de una llama a otra, quieto bajo el destello).
-  var T = { zoom1: 1300, dz1: 1500, brillo: 2450, dbr: 1100, cruce: 2800, dcr: 300, zoom2: 3100, dz2: 2600, anda: 5200, texto: 5300, rampa: 900, frase: 3600 };
+  // Echa a andar al acabar el zoom, como en el prototipo; los textos entran un poco antes, con el último tramo de la cámara.
+  var T = { zoom1: 1300, dz1: 1500, brillo: 2450, dbr: 1100, cruce: 2800, dcr: 300, zoom2: 3100, dz2: 2600, anda: 5700, texto: 5450, rampa: 900, frase: 3600 };
   var FIN_ZOOM = T.zoom2 + T.dz2;
   var LLAMA_PANT = 0.62; // alto de la llama en pantalla, en el momento del cambio, respecto al alto de la escena
 
@@ -54,10 +55,10 @@
   // parpadeo irregular de las dos llamas (2,8 s) y la llama inclinada al andar (1,6 s): [escala x, escala y, sesgo en grados]
   var TB = [[0, 1, 1, 0], [.2, .93, 1.07, 2.5], [.45, 1.04, .95, -2], [.7, .97, 1.05, 1.5], [1, 1, 1, 0]];
   var LN = [[0, 1, 1, -10], [.5, 1, 1.08, -4], [1, 1, 1, -10]];
-  function llamaM(t, inclina) {
-    var a = kf(TB, (t % 2800) / 2800), b = kf(LN, (t % 1600) / 1600);
-    return new DOMMatrix().translate(0, 4).scale(lerp(a[0], b[0], inclina), lerp(a[1], b[1], inclina)).skewX(lerp(a[2], b[2], inclina)).translate(0, -4);
-  }
+  // t: reloj del parpadeo; inclina: de 0 (parpadea) a 1 (inclinada); tl: ms andados (el vaivén de la llama inclinada)
+  function llamaV(t, inclina, tl) { var a = kf(TB, (t % 2800) / 2800), b = kf(LN, (tl % 1600) / 1600); return [lerp(a[0], b[0], inclina), lerp(a[1], b[1], inclina), lerp(a[2], b[2], inclina)]; }
+  // alrededor de la base de la llama, (0, 4) en sus unidades
+  function llamaM(t, inclina, tl) { var v = llamaV(t, inclina, tl); return new DOMMatrix().translate(0, 4).scale(v[0], v[1]).skewX(v[2]).translate(0, -4); }
 
   // ---------- leer las capas SVG ----------
   function matriz(el, prop) {
@@ -111,7 +112,9 @@
       else if (t === 'use') { // los tramos de calle repetidos comparten su dibujo
         var id = (k.getAttribute('href') || k.getAttribute('xlink:href') || '').slice(1), ref = document.getElementById(id); if (!ref) continue;
         if (!usos[id]) { usos[id] = { hijos: [], o: 1 }; hijos(ref, usos[id]); }
-        n.hijos.push({ hijos: usos[id].hijos, o: 1, m: new DOMMatrix().translate(parseFloat(k.getAttribute('x')) || 0, parseFloat(k.getAttribute('y')) || 0) }); ult = null;
+        var ux = parseFloat(k.getAttribute('x')) || 0;
+        // bx: de dónde a dónde llega este tramo (360 de ancho y las cornisas que asoman), para no pintarlo si no se ve
+        n.hijos.push({ hijos: usos[id].hijos, o: 1, m: new DOMMatrix().translate(ux, parseFloat(k.getAttribute('y')) || 0), bx: [ux - 4, ux + 364] }); ult = null;
       } else if (t === 'text') { n.hijos.push(texto(k)); ult = null; }
       else {
         var h = hoja(k); if (!h) continue;
@@ -134,16 +137,16 @@
     for (var k in CAPAS) if (CAPAS[k]) arbol[k] = grupo(CAPAS[k], true);
     var s = getComputedStyle(sec), v = function (x) { return s.getPropertyValue(x).trim(); };
     col = { bg: v('--v-bg'), c1: v('--v-cielo1'), c2: v('--v-cielo2'), c3: v('--v-cielo3') };
-    calle = busca(arbol.calle, 'calle');
+    calle = busca(arbol.calle, 'calle'); suelo = busca(arbol.calle, 'suelo');
   }
   function busca(n, capa) { if (!n) return null; if (n.capa === capa) return n; for (var i = 0; i < n.hijos.length; i++) if (n.hijos[i].hijos) { var r = busca(n.hijos[i], capa); if (r) return r; } return null; }
 
   // ---------- medidas: dónde cae cada capa en la escena ----------
-  var W = 0, H = 0, dpr = 1, L = {}, calle = null;
+  var W = 0, H = 0, dpr = 1, L = {}, calle = null, suelo = null;
   function mide() {
     var r = esc.getBoundingClientRect();
     W = r.width; H = r.height; dpr = Math.min(window.devicePixelRatio || 1, 2);
-    lienzo.width = Math.max(1, Math.round(W * dpr)); lienzo.height = Math.max(1, Math.round(H * dpr));
+    if (andar) lienzo.width = lienzo.height = 1; else { lienzo.width = Math.max(1, Math.round(W * dpr)); lienzo.height = Math.max(1, Math.round(H * dpr)); }
     for (var k in CAPAS) {
       var e = CAPAS[k]; if (!e) continue;
       var b = e.getBoundingClientRect(), vb = e.viewBox.baseVal, s = b.width / vb.width, x = b.left - r.left, y = b.top - r.top;
@@ -165,13 +168,100 @@
     cache = cv; cacheS = su;
   }
 
+  // ---------- andando: piezas ya pintadas que mueve el propio navegador ----------
+  // Andando no se repinta nada ni corre JavaScript en cada fotograma: la calle, el suelo, el cuerpo del nazareno, sus zapatos,
+  // la llama de su cirio y la estrella van cada uno en su lienzo, pintados una vez, y los mueven animaciones del navegador
+  // (Web Animations) solo con transform y opacidad, con los mismos fotogramas clave que el prototipo. Así lo lleva la tarjeta
+  // gráfica y aguanta un bucle sin fin. El lienzo grande solo se usa para la vela y el zoom, y luego se suelta.
+  var AND = null, ANIM = null, ESTA = null, PIEZAS = ['tira', 'suelo', 'estFondo', 'estrella', 'pieD', 'pieI', 'cuerpo', 'llamaW'];
+  // todas en una caja fija (.oc-vela-andando, con contain) para que lo que se mueve dentro no afecte al resto de la página
+  var caja = null;
+  function lienzoAndar(k, dentro) {
+    if (!caja) { caja = document.createElement('div'); caja.className = 'oc-vela-andando'; caja.setAttribute('aria-hidden', 'true'); esc.insertBefore(caja, lienzo); }
+    var e = document.createElement(k === 'llamaW' ? 'div' : 'canvas'); e.className = 'oc-vela-andar is-' + k; (dentro || caja).appendChild(e); return e;
+  }
+  // coloca un lienzo en la escena, en píxeles enteros del dispositivo; dx y dy: lo que queda de desfase (en px del dispositivo)
+  function coloca(e, x, y, w, h) {
+    var X = Math.round(x * dpr), Y = Math.round(y * dpr), Wd = Math.max(1, Math.ceil(w * dpr)), Hd = Math.max(1, Math.ceil(h * dpr)), st = e.style;
+    e.width = Wd; e.height = Hd; st.left = X / dpr + 'px'; st.top = Y / dpr + 'px'; st.width = Wd / dpr + 'px'; st.height = Hd / dpr + 'px';
+    var cx = e.getContext('2d');
+    return { c: cx, dx: x * dpr - X, dy: y * dpr - Y, x: X / dpr, y: Y / dpr };
+  }
+  // pinta en su lienzo un trozo de una capa, quieto: caja en unidades de la capa; fuera: partes que no van; solo: la que va sola
+  var QUIETO = { bote: 0, pieI: [0, 0], pieD: [0, 0], llamaNaz: new DOMMatrix(), estrella: new DOMMatrix(), estrellaA: 1 };
+  function trozo(e, k, caja, fuera, solo) {
+    var l = L[k], d = coloca(e, l.x + (caja.x - l.vb.x) * l.s, l.y + (caja.y - l.vb.y) * l.s, caja.width * l.s, caja.height * l.s);
+    var m = new DOMMatrix([dpr, 0, 0, dpr, d.dx, d.dy]).multiply(new DOMMatrix([l.s, 0, 0, l.s, -caja.x * l.s, -caja.y * l.s]));
+    var antes = {}; for (var q in QUIETO) { antes[q] = F[q]; F[q] = QUIETO[q]; }
+    F.fuera = fuera || null; F.solo = solo || null;
+    d.c.setTransform(m.a, m.b, m.c, m.d, m.e, m.f); pinta(d.c, arbol[k], 1, false);
+    for (q in antes) F[q] = antes[q]; F.fuera = F.solo = null;
+    return d;
+  }
+  function quitaAndar() { if (ANIM) { twJS = tiempoAndar(); ANIM.forEach(function (a) { a.cancel(); }); } if (ESTA) ESTA.cancel(); ANIM = ESTA = null; if (caja) caja.remove(); caja = AND = null; }
+  function preparaAndar() {
+    if (!cache || !suelo || !L.naz || !L.estrella || !Element.prototype.animate) { quitaAndar(); return; }
+    if (!AND) { AND = {}; PIEZAS.forEach(function (k) { AND[k] = lienzoAndar(k); }); AND.llama = lienzoAndar('llama', AND.llamaW); }
+    var u = L.calle.s, vb = L.calle.vb, sn = L.naz.s;
+    // la calle: la vuelta ya pintada, repetida hasta cubrir la escena y una vuelta más (la que se va desplazando)
+    var t = coloca(AND.tira, L.calle.x, L.calle.y, W - L.calle.x + cache.width / dpr + 2, cache.height / dpr);
+    for (var px = 0; px < AND.tira.width; px += cache.width) t.c.drawImage(cache, px, 0);
+    // el suelo, que se repite cada 80 unidades
+    var y0 = L.calle.y + (240 - vb.y) * u, s = coloca(AND.suelo, L.calle.x, y0, W - L.calle.x + suelo.vuelta * u + 2, H - y0);
+    s.c.setTransform(dpr * u, 0, 0, dpr * u, s.dx, s.dy - 240 * dpr * u);
+    F.soloSuelo = true; pinta(s.c, arbol.calle, 1, false); F.soloSuelo = false;
+    // la estrella: el resplandor y el año quietos; la estrella, que late, aparte (alrededor de su centro)
+    trozo(AND.estFondo, 'estrella', L.estrella.vb, { estrella: 1 });
+    var le = L.estrella, es = trozo(AND.estrella, 'estrella', { x: -22, y: -22, width: 44, height: 44 }, null, 'estrella');
+    AND.estrella.style.transformOrigin = (le.x - le.vb.x * le.s - es.x) + 'px ' + (le.y - le.vb.y * le.s - es.y) + 'px';
+    // el nazareno (unidades de su dibujo): zapatos, cuerpo con la luz del cirio, y la llama (en una caja que sube y baja con él)
+    trozo(AND.pieD, 'naz', { x: 80, y: 534, width: 38, height: 18 }, { 'pie-i': 1, cuerpo: 1 });
+    trozo(AND.pieI, 'naz', { x: 122, y: 534, width: 38, height: 18 }, { 'pie-d': 1, cuerpo: 1 });
+    trozo(AND.cuerpo, 'naz', { x: -150, y: -140, width: 440, height: 710 }, { 'pie-i': 1, 'pie-d': 1, 'llama-naz': 1 });
+    var ll = trozo(AND.llama, 'naz', { x: 38, y: 46, width: 48, height: 64 }, { 'pie-i': 1, 'pie-d': 1 }, 'llama-naz');
+    // su caja, justo de su tamaño (la llama dentro, en 0, 0); la llama se mueve alrededor de su base: (62, 100 + 4 × 0,778)
+    var w = AND.llamaW.style, ls = AND.llama.style;
+    w.left = ls.left; w.top = ls.top; w.width = ls.width; w.height = ls.height; ls.left = ls.top = '0px';
+    AND.llama.style.transformOrigin = (L.naz.x + 62 * sn - ll.x) + 'px ' + (L.naz.y + 103.1 * sn - ll.y) + 'px';
+    if (andando) animaAndar(tiempoAndar(), rampa);
+  }
+  // las animaciones del paso, en el punto t (ms andados) y a la velocidad r (0 parado, 1 andando)
+  function animaAndar(t, r) {
+    if (ANIM) ANIM.forEach(function (a) { a.cancel(); });
+    if (ESTA) ESTA.cancel();
+    var sn = L.naz.s, io = 'ease-in-out', inf = Infinity;
+    var px = function (x, y) { return 'translate3d(' + (x * sn).toFixed(3) + 'px,' + (y * sn).toFixed(3) + 'px,0)'; };
+    var desliza = function (d) { return [{ transform: 'translate3d(0,0,0)' }, { transform: 'translate3d(' + (-d).toFixed(3) + 'px,0,0)' }]; };
+    var bote = [{ transform: px(0, 0), easing: io }, { transform: px(0, -10) }]; // el cuerpo sube con cada pisada (0,42 s)
+    var pie = [{ transform: px(-14, 0), easing: io }, { transform: px(14, -8), offset: .5, easing: io }, { transform: px(-14, 0) }]; // 0,84 s
+    var lean = [{ transform: 'scale(1,1) skewX(-10deg)', easing: io }, { transform: 'scale(1,1.08) skewX(-4deg)', offset: .5, easing: io }, { transform: 'scale(1,1) skewX(-10deg)' }];
+    ANIM = [
+      [AND.tira, desliza(cache.width / dpr), calle.vuelta / .036, 0], // 36 unidades por segundo
+      [AND.suelo, desliza(suelo.vuelta * L.calle.s), suelo.vuelta / .016, 0], // 16 unidades por segundo
+      [AND.cuerpo, bote, 420, 0, 'alternate'], [AND.llamaW, bote, 420, 0, 'alternate'], [AND.llama, lean, 1600, 0],
+      [AND.pieI, pie, 840, 0], [AND.pieD, pie, 840, 420]
+    ].map(function (d) { var a = d[0].animate(d[1], { duration: d[2], iterations: inf, direction: d[4] || 'normal' }); a.currentTime = t + d[3]; a.playbackRate = r; return a; });
+    // la estrella late a su ritmo (4 s), siga o no el nazareno
+    ESTA = AND.estrella.animate([{ transform: 'scale(1)', opacity: .85, easing: io }, { transform: 'scale(1.08)', opacity: 1, offset: .5, easing: io }, { transform: 'scale(1)', opacity: .85 }], { duration: 4000, iterations: inf });
+    ESTA.currentTime = reloj % 4000;
+    if (!corre()) { ANIM.forEach(function (a) { a.pause(); }); ESTA.pause(); }
+  }
+  // lo andado (ms): lo lleva la animación de la calle; sin ella, el reloj de aquí
+  function tiempoAndar() { var t = ANIM && ANIM[0].currentTime; return t != null ? +t : twJS; }
+  var andar = false;
+  function ponAndar(v) {
+    if (v === andar) return;
+    andar = v; sec.classList.toggle('is-andar', v);
+    if (v) { lienzo.width = lienzo.height = 1; } else mide(); // andando, el lienzo grande no se usa: se suelta su memoria
+  }
+
   // ---------- pintar ----------
   var F = {}; // lo que se mueve en este fotograma
   var mx = function (x, m) { x.transform(m.a, m.b, m.c, m.d, m.e, m.f); };
   function capaAhora(n) {
     switch (n.capa) {
       case 'calle': return { m: new DOMMatrix().translate(-(F.calle % n.vuelta), 0) };
-      case 'suelo': return { m: new DOMMatrix().translate(-(F.suelo % n.vuelta), 0) };
+      case 'suelo': return F.soloSuelo ? null : { m: new DOMMatrix().translate(-(F.suelo % n.vuelta), 0) };
       case 'cuerpo': return { m: new DOMMatrix().translate(0, F.bote) };
       case 'pie-i': return { m: new DOMMatrix().translate(F.pieI[0], F.pieI[1]) };
       case 'pie-d': return { m: new DOMMatrix().translate(F.pieD[0], F.pieD[1]) };
@@ -183,18 +273,29 @@
     }
     return null;
   }
-  function pinta(x, n, a) {
+  // dentro: ya se está dentro de la parte que se pinta sola (F.solo); F.fuera: partes que no se pintan (para las piezas sueltas)
+  function pinta(x, n, a, dentro) {
+    if (n.capa && ((n.capa === 'calle' && F.soloSuelo) || (F.fuera && F.fuera[n.capa]))) return;
+    if (n.bx && F.vista && (n.bx[1] < F.vista[0] || n.bx[0] > F.vista[1])) return; // tramo de calle fuera de cámara
     var r = n.capa ? capaAhora(n) : null; if (r === false) return;
     var al = a * n.o * (r && r.a != null ? r.a : 1); if (al < .002) return;
     x.save();
     if (n.m) mx(x, n.m);
     if (n.capa === 'calle' && F.cache && cache) { x.restore(); calleCache(x); return; }
     if (r && r.m) mx(x, r.m);
-    pintaHijos(x, n, al);
+    // la calle en vivo (durante el zoom): qué trozo cae dentro del lienzo, en unidades de la calle
+    if (n.capa === 'calle' && x.getTransform) { var iv = x.getTransform().inverse(), a0 = iv.transformPoint(new DOMPoint(0, 0)), a1 = iv.transformPoint(new DOMPoint(x.canvas.width, x.canvas.height)); F.vista = [Math.min(a0.x, a1.x), Math.max(a0.x, a1.x)]; }
+    pintaHijos(x, n, al, dentro || (!!F.solo && n.capa === F.solo));
+    if (n.capa === 'calle') F.vista = null;
     x.restore();
   }
-  function pintaHijos(x, n, al) {
-    for (var i = 0; i < n.hijos.length; i++) { var h = n.hijos[i]; if (h.hijos) pinta(x, h, al); else if (h.txt != null) letra(x, h, al); else forma(x, h, al); }
+  function pintaHijos(x, n, al, dentro) {
+    for (var i = 0; i < n.hijos.length; i++) {
+      var h = n.hijos[i];
+      if (h.hijos) pinta(x, h, al, dentro);
+      else if (F.solo && !dentro) continue;
+      else if (h.txt != null) letra(x, h, al); else forma(x, h, al);
+    }
   }
   function forma(x, h, a) {
     if (h.gr) { x.save(); mx(x, h.mg); x.globalAlpha = a * h.o * h.fo; x.fillStyle = h.gr; x.fill(h.p); x.restore(); return; }
@@ -224,26 +325,37 @@
   }
 
   // ---------- estado ----------
-  var reloj = 0, tEnc = 0, tAnda = 0, arrastre = 0, encendida = !portada, andando = false;
+  // tv: ms desde que se encendió la vela; tw: ms andados. El nazareno echa a andar al acabar el zoom (como en el prototipo) y
+  // arranca poco a poco: la velocidad sube de 0 a 1 en 0,9 s (rampa). Hasta entonces está quieto en el primer paso.
+  var reloj = 0, tEnc = 0, tAnda = 0, twJS = 0, rampa = 0, arrastre = 0, encendida = !portada, andando = false;
   var claseCielo = false, claseTexto = !portada, fraseI = -1, fraseO = -1, brilloO = 0;
-  function avanza() {
+  function echaAndar(t0) {
+    andando = true; tAnda = reloj; twJS = t0; rampa = t0 > 0 ? 1 : 0;
+    if (AND) animaAndar(t0, rampa);
+    ritmo();
+  }
+  function avanza(dt) {
     var tv = portada ? (encendida ? reloj - tEnc : -1) : 1e9;
-    if (portada && !andando && tv >= T.anda) { andando = true; tAnda = tEnc + T.anda; }
-    var tw = andando ? reloj - tAnda + arrastre : 0, R = T.rampa, xr = cl(tw / R);
-    // camino recorrido: arranca poco a poco y sigue a 36 unidades por segundo la calle y a 16 el suelo
-    var d = andando ? (tw < R ? R * (xr * xr * xr - xr * xr * xr * xr / 2) : tw - R / 2) : 0;
-    F.tv = tv; F.tw = tw; F.andar = andando ? paso(xr) : 0;
-    F.calle = d * .036; F.suelo = d * .016;
-    // paso: el cuerpo sube y baja con cada pisada y los zapatos se alternan (prototipo: .42 s y .84 s)
-    var pb = (tw % 840) / 420, e = enOut(pb < 1 ? pb : 2 - pb); F.bote = -10 * e * F.andar;
-    var pie = function (fase) { var p = ((tw + fase) % 840) / 840, q = p < .5 ? enOut(p / .5) : 1 - enOut((p - .5) / .5); return [lerp(-14, 14, q) * F.andar, -8 * q * F.andar]; };
+    if (portada && !andando && tv >= T.anda) echaAndar(0);
+    if (andando && rampa < 1) {
+      rampa = paso((reloj - tAnda) / T.rampa);
+      if (ANIM) ANIM.forEach(function (a) { if (a.updatePlaybackRate) a.updatePlaybackRate(rampa); else a.playbackRate = rampa; });
+    }
+    if (andando) twJS += (dt || 0) * rampa;
+    var tw = andando ? tiempoAndar() : 0;
+    F.tv = tv; F.tw = tw;
+    // lo que se ve en el lienzo grande (el zoom y, si no hay piezas sueltas, también al andar), con los mismos tiempos
+    F.calle = tw * .036; F.suelo = tw * .016;
+    var pb = (tw % 840) / 420; F.bote = -10 * enOut(pb < 1 ? pb : 2 - pb);
+    var pie = function (fase) { var p = ((tw + fase) % 840) / 840, q = p < .5 ? enOut(p / .5) : 1 - enOut((p - .5) / .5); return [lerp(-14, 14, q), -8 * q]; };
     F.pieI = pie(0); F.pieD = pie(420);
-    F.llamaNaz = llamaM(reloj, F.andar);
+    // la llama del cirio parpadea como la de la vela y, justo antes de andar, se inclina hasta el primer paso
+    F.llamaNaz = llamaM(reloj, andando ? 1 : portada ? paso((tv - T.anda + 400) / 400) : 1, tw);
     var pe = (reloj % 4000) / 4000, es = enOut(pe < .5 ? pe * 2 : 2 - pe * 2);
-    F.estrella = new DOMMatrix().scale(1 + .08 * es); F.estrellaA = .85 + .15 * es;
+    F.estrellaK = 1 + .08 * es; F.estrella = new DOMMatrix().scale(F.estrellaK); F.estrellaA = .85 + .15 * es;
     if (portada) {
       F.halo = tv < 0 ? 0 : suave(cl(tv / 1200));
-      F.llamaVela = tv < 0 ? null : new DOMMatrix().translate(0, 4).scale(Math.max(0, salta(cl(tv / 900)))).translate(0, -4).multiply(llamaM(reloj, 0));
+      F.llamaVela = tv < 0 ? null : new DOMMatrix().translate(0, 4).scale(Math.max(0, salta(cl(tv / 900)))).translate(0, -4).multiply(llamaM(reloj, 0, 0));
       F.llamaVelaA = cl(tv / 250);
       // destello (1,1 s, en su punto al 45 %) que tapa el cambio de llama
       var pbr = (tv - T.brillo) / T.dbr, ob = 0;
@@ -258,17 +370,20 @@
     }
     F.cache = !portada || tv >= FIN_ZOOM;
     if (portada && F.cache && !claseCielo) { claseCielo = true; sec.classList.add('is-cielo'); }
-    // frases: cada 3,6 s se va una y entra la siguiente (0,8 s de fundido)
-    if (andando && frase && FR.length) {
-      var i = Math.floor(tw / T.frase), dentro = tw - i * T.frase >= 800, idx = i % FR.length;
-      if (dentro && fraseI !== idx) { frase.textContent = FR[idx]; fraseI = idx; }
-      var o = dentro ? 1 : 0; if (o !== fraseO) { frase.style.opacity = o; fraseO = o; }
-    }
+  }
+  // frases: cada 3,6 s se va una y entra la siguiente (0,8 s de fundido); se miran cinco veces por segundo, no en cada fotograma
+  function frases() {
+    if (!andando || !frase || !FR.length) return;
+    var tw = tiempoAndar(), i = Math.floor(tw / T.frase), dentro = tw - i * T.frase >= 800, idx = i % FR.length;
+    if (dentro && fraseI !== idx) { frase.textContent = FR[idx]; fraseI = idx; }
+    var o = dentro ? 1 : 0; if (o !== fraseO) { frase.style.opacity = o; fraseO = o; }
   }
   function dibuja() {
     if (!W || !H) return;
-    c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.clearRect(0, 0, lienzo.width, lienzo.height);
     var tv = F.tv;
+    ponAndar(F.cache && !!ANIM);
+    if (andar) return; // andando, las piezas se mueven solas
+    c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.clearRect(0, 0, lienzo.width, lienzo.height);
     if (portada && tv < T.cruce + T.dcr) { // aún se ve la vela
       if (tv >= T.cruce) escena2(0);
       var q1 = tv < T.zoom1 ? 0 : entra(cl((tv - T.zoom1) / T.dz1));
@@ -292,17 +407,27 @@
     capa('estrella', cam, 1); capa('calle', cam, 1); capa('naz', cam, 1);
   }
 
-  // ---------- bucle: solo con la escena a la vista y la pestaña delante ----------
-  var visible = false, raf = 0, ultimo = 0;
-  var anima = function () { return encendida && visible && !document.hidden; };
+  // ---------- bucle: solo mientras hace falta, con la escena a la vista y la pestaña delante ----------
+  // Hace falta para la vela y el zoom, para la rampa de arranque y, si no hay piezas sueltas, para andar en el lienzo grande.
+  var visible = false, raf = 0, ultimo = 0, tic = 0;
+  var corre = function () { return visible && !document.hidden; };
+  var falta = function () { return encendida && (!andando || rampa < 1 || !ANIM); };
   function bucle(ahora) {
     raf = 0;
     var dt = ultimo ? Math.min(ahora - ultimo, 64) : 16; ultimo = ahora; reloj += dt;
-    avanza(); dibuja();
-    if (anima()) raf = requestAnimationFrame(bucle); else ultimo = 0;
+    avanza(dt); dibuja();
+    if (corre() && falta()) raf = requestAnimationFrame(bucle); else ultimo = 0;
   }
-  function arranca() { if (!raf && anima()) { ultimo = 0; raf = requestAnimationFrame(bucle); } }
-  function repinta() { avanza(); dibuja(); }
+  function arranca() { if (!raf && corre() && falta()) { ultimo = 0; raf = requestAnimationFrame(bucle); } }
+  function repinta() { avanza(0); dibuja(); }
+  // con la escena fuera de la vista o la pestaña oculta, todo se para (y sigue donde estaba al volver)
+  function ritmo() {
+    var si = corre();
+    if (ANIM) ANIM.forEach(function (a) { if (si) a.play(); else a.pause(); });
+    if (ESTA) { if (si) ESTA.play(); else ESTA.pause(); }
+    if (si && andando && !tic) { frases(); tic = setInterval(frases, 200); } else if ((!si || !andando) && tic) { clearInterval(tic); tic = 0; }
+    arranca();
+  }
 
   function enciende(ev) {
     if (encendida) return;
@@ -313,14 +438,15 @@
     arranca();
   }
   // al irse a «Próxima Semana Santa», allí la calle sigue por donde iba
-  function guarda() { if (!andando) return; try { sessionStorage.setItem('oc-vela', JSON.stringify({ w: reloj - tAnda + arrastre, t: Date.now() })); } catch (e) {} }
+  function guarda() { if (!andando) return; try { sessionStorage.setItem('oc-vela', JSON.stringify({ w: tiempoAndar(), t: Date.now() })); } catch (e) {} }
 
   // ---------- arranque ----------
   function empieza() {
-    prepara(); mide(); haceCache();
+    prepara(); mide(); haceCache(); preparaAndar();
     if (!portada) {
-      try { var v = JSON.parse(sessionStorage.getItem('oc-vela') || 'null'); if (v && Date.now() - v.t < 15000 && v.w > 0) arrastre = v.w; } catch (e) {}
-      andando = true; tAnda = 0;
+      var w = 0;
+      try { var v = JSON.parse(sessionStorage.getItem('oc-vela') || 'null'); if (v && Date.now() - v.t < 15000 && v.w > 0) w = v.w; } catch (e) {}
+      echaAndar(w);
     }
     repinta(); sec.classList.add('is-lienzo');
     if (boton) {
@@ -329,19 +455,19 @@
       esc.addEventListener('click', function (ev) { if (!encendida && ev.target !== boton && !boton.contains(ev.target) && !(ev.target.closest && ev.target.closest('a'))) enciende(ev); });
     }
     if (portada) { var b = sec.querySelector('.oc-vela-btn'); if (b) b.addEventListener('click', guarda); addEventListener('pagehide', guarda); }
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[e.length - 1].isIntersecting; arranca(); }, { rootMargin: '80px 0px' }).observe(esc);
-    else visible = true;
-    document.addEventListener('visibilitychange', arranca);
-    var pend = 0, rehace = function () { pend = 0; mide(); haceCache(); repinta(); };
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[e.length - 1].isIntersecting; ritmo(); }, { rootMargin: '80px 0px' }).observe(esc);
+    else { visible = true; ritmo(); }
+    document.addEventListener('visibilitychange', ritmo);
+    var pend = 0, rehace = function () { pend = 0; mide(); haceCache(); preparaAndar(); repinta(); };
     if ('ResizeObserver' in window) new ResizeObserver(function () { if (!pend) pend = requestAnimationFrame(rehace); }).observe(esc);
     else addEventListener('resize', function () { if (!pend) pend = requestAnimationFrame(rehace); });
     // de día en el modo claro y de noche en el oscuro, también si se cambia con la escena a la vista
-    var retema = function () { prepara(); haceCache(); repinta(); };
+    var retema = function () { prepara(); haceCache(); preparaAndar(); repinta(); };
     if (window.matchMedia) { var mq = matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', retema); else if (mq.addListener) mq.addListener(retema); }
     if ('MutationObserver' in window) new MutationObserver(retema).observe(raiz, { attributes: true, attributeFilter: ['data-theme'] });
     // el año de la estrella va con la letra de los titulares: se vuelve a pintar cuando llega
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(repinta);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { preparaAndar(); repinta(); });
     arranca();
   }
-  try { empieza(); } catch (e) { raiz.classList.remove('oc-vela-js'); sec.classList.remove('is-lienzo'); if (window.console) console.warn('vela', e); }
+  try { empieza(); } catch (e) { quitaAndar(); raiz.classList.remove('oc-vela-js'); sec.classList.remove('is-lienzo', 'is-andar'); if (window.console) console.warn('vela', e); }
 })();

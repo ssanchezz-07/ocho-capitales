@@ -163,6 +163,10 @@
 .v-anio { font: 400 22px Karantina, serif; }
 .v-noche { opacity: var(--v-noche); }
 .v-dia { opacity: var(--v-dia); }
+/* con JS, el nazareno quieto ya está en el primer paso (como arranca a andar): al tomar el relevo el lienzo, nada salta.
+   vela.js solo lee el atributo transform, no esta regla */
+.oc-vela-js .oc-vela-naz [data-capa="pie-i"] { transform: translate(-14px, 0); }
+.oc-vela-js .oc-vela-naz [data-capa="pie-d"] { transform: translate(14px, -8px); }
 /* la vela de la portada está apagada: su llama, su halo y sus motas los enciende vela.js */
 .oc-vela-vela [data-capa="halo"], .oc-vela-vela [data-capa="mota"], .oc-vela-vela [data-capa="llama-vela"] { opacity: 0; }
 
@@ -186,6 +190,15 @@
 .oc-vela-lienzo, .oc-vela-brillo, .oc-vela-vela, .oc-vela-boton { display: none; }
 .oc-vela-js .oc-vela-lienzo, .oc-vela-js .oc-vela-brillo, .oc-vela-js .oc-vela-vela { display: block; }
 .oc-vela-lienzo { position: absolute; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; }
+/* andando: la calle y el suelo ya pintados solo se desplazan (transform); el nazareno y la estrella, en lienzos pequeños */
+/* cada pieza en su capa, dentro de una caja fija: lo que se mueve dentro no obliga a recolocar las capas del resto de la página */
+.oc-vela-andando { position: absolute; z-index: 1; inset: 0; overflow: hidden; contain: strict; pointer-events: none; visibility: hidden; }
+.oc-vela-andar { position: absolute; display: block; will-change: transform; }
+.oc-vela-andar.is-estrella { will-change: transform, opacity; }
+.oc-vela-andar.is-estFondo { will-change: auto; }
+.oc-vela-lienzo { will-change: transform; }
+.oc-vela.is-andar .oc-vela-andando { visibility: visible; }
+.oc-vela.is-andar .oc-vela-lienzo { visibility: hidden; }
 .oc-vela-brillo { position: absolute; z-index: 2; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(circle at 50% 50%, rgb(255 248 226 / .95) 0, rgb(255 214 140 / .7) 22%, rgb(255 170 80 / .25) 45%, rgb(255 170 80 / 0) 70%); }
 /* el botón es la vela con su aviso (ahí va el anillo del foco); un toque en cualquier otro punto de la escena también la enciende */
 .oc-vela-js .oc-vela-escena { --boton-w: max(300px, calc(var(--vh) * .54 * 220 / 305 + 48px)); }
