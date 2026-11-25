@@ -110,7 +110,7 @@
  },
  "sevilla": {
   "puntos": 2202,
-  "situados": 2097,
+  "situados": 2091,
   "pct": 95,
   "calles_osm": 8804,
   "templos": 156,
@@ -156,6 +156,10 @@
     2
    ],
    [
+    "Glorieta",
+    2
+   ],
+   [
     "Ntra. Sra. Dolores",
     2
    ],
@@ -173,10 +177,6 @@
    ],
    [
     "Tomás de Ibarra",
-    2
-   ],
-   [
-    "Glorieta",
     2
    ],
    [

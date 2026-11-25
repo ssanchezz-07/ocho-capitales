@@ -1949,7 +1949,7 @@
     "cruz de guía: salto de 1246 m de «Avda. Ramón y Cajal» a «Enramadilla»",
     "palio: salto de 1246 m de «Avda. Ramón y Cajal» a «Enramadilla»",
     "palio: salto de 1273 m de «Avda. Ramón y Cajal» a «Avda. Hytasa»",
-    "4 tramos de más de 350 m en recta (sin calle)"
+    "5 tramos de más de 350 m en recta (sin calle)"
    ]
   },
   "san-esteban-sevilla": {
@@ -2018,13 +2018,13 @@
    "dia": "Miércoles Santo",
    "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
    "puntos": 53,
-   "sinSituar": 0,
-   "estimados": 6,
+   "sinSituar": 6,
+   "estimados": 2,
    "avisos": [
     "cruz de guía: salto de 1374 m de «Luis Montoto» a «Jose Luis de Casso»",
-    "cruz de guía: acaba a 2077 m de donde sale",
+    "cruz de guía: acaba a 1315 m de donde sale",
     "palio: salto de 1374 m de «Luis Montoto» a «José Luis de Casso»",
-    "palio: acaba a 2077 m de donde sale"
+    "palio: acaba a 1315 m de donde sale"
    ]
   },
   "san-bernardo-sevilla": {

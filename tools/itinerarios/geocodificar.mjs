@@ -130,6 +130,10 @@ const FUERA = {
     'dolores-de-torreblanca-sevilla': 'Torreblanca queda al este del callejero: solo casaban calles homónimas del centro («Álamo», «Torres»)',
   },
 };
+// Pendiente (no se adivina): La Sed (Sevilla) no tiene sede con fuente en site/data/sedes/sevilla.json («Parroquia de la Concepción»:
+// ningún edificio de OSM con ese nombre) y su primera calle, «Hospital San Juan / de Dios», no está en el callejero con ese nombre
+// (casaba con una calle de San Juan del centro). Su salida se queda sin situar (sedeEstimada) hasta tener un alias en
+// alias-calles-sevilla.json o la sede con su fuente.
 function situar(ix, ciudad, h, pts) {
   if (h && FUERA[ciudad] && FUERA[ciudad][h.slug]) return { res: pts.map((p) => ({ ...p, lat: null, lon: null, como: '' })), sin: [], sede: null };
   const sede = h && h.sede ? norm(h.sede) : '';
@@ -195,14 +199,58 @@ function situar(ix, ciudad, h, pts) {
     const c = { lat: med(sit.map((p) => p.lat)), lon: med(sit.map((p) => p.lon)) };
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
-  // sin sede situada (en site/data/sedes no consta con fuente), la salida y la entrada se quedan, como «estimado», en la primera y
-  // en la última calle situadas: se conserva su hora oficial sin inventar dónde está el templo
-  if (!pSede) for (const [i, d] of [[0, 1], [res.length - 1, -1]]) {
-    if (!res[i] || res[i].lat != null || res[i].como !== 'sede') continue;
-    let j = i; while (j >= 0 && j < res.length && res[j].lat == null) j += d;
-    if (j >= 0 && j < res.length) { res[i].lat = res[j].lat; res[i].lon = res[j].lon; res[i].como = 'estimado'; }
+  // (la salida y la entrada sin sede se estiman después, con todos los tramos de la hermandad: sedeEstimada; y lo que queda sin
+  // situar entre dos puntos, en interpolar)
+  return { res, sin, sede: pSede };
+}
+// Sin sede situada (en site/data/sedes no consta con fuente), la salida y la entrada de TODOS los tramos de una hermandad se
+// estiman en un mismo punto, marcado como «estimado»: se conserva su hora oficial sin inventar dónde está el templo.
+// · La salida, en la primera calle situada del tramo que sale antes (la cruz de guía); la entrada, en la última calle del tramo que
+//   entra después (el paso o el palio). Comprobado con las 51 hermandades con sede y dos tramos de Sevilla, Huelva y Almería: la
+//   primera calle de la cruz queda igual o más cerca del templo que la del paso en 40 de 51; para la entrada, la última del paso
+//   queda a 166 m del templo (mediana) y la de la cruz, a 241 m.
+// · Antes se estimaba tramo a tramo, y la cruz y el paso de una misma hermandad salían de sitios distintos (Santa Genoveva, a 353 m;
+//   El Museo, a 301 m; El Cerro recogía a 402 m).
+// · Una primera (o última) calle lejos de la siguiente (o de la anterior) es dudosa, porque no tiene otro vecino con el que comprobar
+//   un salto: ni ella ni la salida (o la entrada) se sitúan. «Lejos»: más de 600 m y a más de 20 m/min; ese ritmo solo lo supera el
+//   5 % de los pasos entre dos calles seguidas de Sevilla, Huelva y Almería (la mediana es 6,6 m/min). La Sed: «Hospital San Juan»
+//   casaba con una calle de San Juan del centro, a 872 m de Eduardo Dato en media hora, y su salida se iba a 2 km de su entrada.
+const LEJOS_M = 600, LEJOS_RITMO = 20;
+const minFranja = (p) => { const x = /^(\d{1,2})[:.](\d{2})/.exec(p.hora || p.fila || ''); if (!x) return null; const v = +x[1] * 60 + +x[2]; return v < 360 ? v + 1440 : v; };
+const metros = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
+function sedeEstimada(tramos) { // tramos: [[nombre, res], …] de una hermandad, ya situados y sin sede
+  const fin = (r, lado) => (lado === 'salida' ? r[0] : r[r.length - 1]);
+  for (const lado of ['salida', 'entrada']) {
+    const d = lado === 'salida' ? 1 : -1;
+    const tr = tramos.filter(([, r]) => r.length && fin(r, lado).como === 'sede' && fin(r, lado).lat == null);
+    if (!tr.length) continue;
+    // la calle de cada tramo junto a la salida (o la entrada), si no es dudosa
+    const cand = new Map();
+    for (const [nom, r] of tr) {
+      const sit = []; for (let j = d === 1 ? 1 : r.length - 2; j >= 0 && j < r.length && sit.length < 2; j += d) if (r[j].lat != null) sit.push(r[j]);
+      if (!sit.length) continue;
+      const [a, b] = sit;
+      if (b) {
+        const m = metros(a, b), ta = minFranja(a), tb = minFranja(b), dt = ta != null && tb != null ? Math.max(Math.abs(tb - ta), 30) : 30;
+        if (m > LEJOS_M && m / dt > LEJOS_RITMO) { console.log('   dudosa:', nom, lado, `«${a.lugar}»`, Math.round(m), 'm hasta', `«${b.lugar}»`); a.lat = a.lon = null; a.como = ''; continue; }
+      }
+      cand.set(nom, a);
+    }
+    // el tramo que sale antes (o entra después); a igualdad de hora, la cruz de guía para la salida y el paso para la entrada
+    const orden = [...cand.keys()].map((nom, i) => [nom, i]).sort(([na, i], [nb, j]) => {
+      const ra = tramos.find(([n]) => n === na)[1], rb = tramos.find(([n]) => n === nb)[1], ha = minFranja(fin(ra, lado)), hb = minFranja(fin(rb, lado));
+      if (ha != null && hb != null && ha !== hb) return d * (ha - hb);
+      const ca = /cruz/.test(na), cb = /cruz/.test(nb);
+      if (ca !== cb) return (lado === 'salida') === ca ? -1 : 1;
+      return i - j;
+    });
+    if (!orden.length) continue; // ninguna calle fiable: la salida (o la entrada) se queda sin situar
+    const p = cand.get(orden[0][0]);
+    for (const [, r] of tr) { const q = fin(r, lado); q.lat = p.lat; q.lon = p.lon; q.como = 'estimado'; }
   }
-  // lo que no se pudo situar se estima entre el punto situado anterior y el siguiente (marcado como «estimado»)
+}
+// lo que no se pudo situar se estima entre el punto situado anterior y el siguiente (marcado como «estimado»)
+function interpolar(res) {
   for (let i = 0; i < res.length; i++) {
     if (res[i].lat != null) continue;
     let a = i - 1; while (a >= 0 && res[a].lat == null) a--;
@@ -210,7 +258,13 @@ function situar(ix, ciudad, h, pts) {
     if (a >= 0 && b < res.length) { const t = (i - a) / (b - a); res[i].lat = +(res[a].lat + (res[b].lat - res[a].lat) * t).toFixed(6); res[i].lon = +(res[a].lon + (res[b].lon - res[a].lon) * t).toFixed(6); res[i].como = 'estimado'; }
   }
   for (const p of res) delete p._f;
-  return { res, sin, sede: pSede };
+  return res;
+}
+// sitúa todos los tramos de una hermandad (o de una salida extraordinaria): cada tramo por su cuenta y la sede estimada, en común
+function situarTramos(ix, ciudad, h, src) {
+  const r = Object.entries(src).map(([tramo, pts]) => [tramo, situar(ix, ciudad, h, pts)]);
+  if (r.length && !r[0][1].sede) sedeEstimada(r.map(([t, x]) => [t, x.res]));
+  return r.map(([tramo, x]) => [tramo, { ...x, res: interpolar(x.res) }]);
 }
 
 const solo = process.argv[2];
@@ -223,8 +277,7 @@ for (const ciudad of Object.keys(CENTRO)) {
   for (const [slug, e] of Object.entries(ITI.hermandades)) {
     if (e.ciudad !== ciudad) continue;
     const h = H[slug]; const tramos = {};
-    for (const [tramo, pts] of Object.entries(e.tramos)) {
-      const { res, sin } = situar(ix, ciudad, h, pts);
+    for (const [tramo, { res, sin }] of situarTramos(ix, ciudad, h, e.tramos)) {
       tramos[tramo] = res; tot += res.length; ok += res.filter((p) => p.lat).length;
       for (const s of sin) fallos[s] = (fallos[s] || 0) + 1;
     }
@@ -233,8 +286,7 @@ for (const ciudad of Object.keys(CENTRO)) {
   for (const [id, e] of Object.entries(EXT)) {
     if (e.ciudad !== ciudad) continue;
     const { tramos: src, ...meta } = e; const tramos = {};
-    for (const [tramo, pts] of Object.entries(src)) {
-      const { res, sin } = situar(ix, ciudad, H[e.hermandad], pts);
+    for (const [tramo, { res, sin }] of situarTramos(ix, ciudad, H[e.hermandad], src)) {
       for (const p of res) delete p.templo;
       tramos[tramo] = res; tot += res.length; ok += res.filter((p) => p.lat).length;
       for (const s of sin) fallos[s] = (fallos[s] || 0) + 1;
