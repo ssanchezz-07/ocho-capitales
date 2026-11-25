@@ -163,10 +163,12 @@ function limpiar(ciudad, pts) {
     const p = { ...p0, lugar: r.lugar };
     if (!p.hora && r.horas.size === 1) { p.hora = [...r.horas][0]; horasRescatadas++; }
     // nombre partido en dos renglones: «Alameda de» + «Hércules», y también con el artículo en minúscula: «Javier Lasso de» +
-    // «la Vega», «Santa Ángela de» + «la Cruz», «Camino de» + «los Toros» (Sevilla, Canal Sur)
+    // «la Vega», «Santa Ángela de» + «la Cruz», «Camino de» + «los Toros» (Sevilla, Canal Sur); o con el corte antes del «de», que
+    // deja el segundo renglón en minúscula: «Parque Sierra» + «de Aroche», «Hospital San Juan» + «de Dios»
     const prev = out[out.length - 1];
     const sigue = /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) || (prev && /\sde$/i.test(' ' + prev.lugar) && /^(el|la|los|las)\s+[A-ZÁÉÍÓÚÑ]/.test(p.lugar));
-    if (prev && prev.fila && prev.fila === p.fila && CONECTOR.test(' ' + prev.lugar) && sigue &&!/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
+    const cola = /^(de|del)\s+((el|la|los|las)\s+)?[A-ZÁÉÍÓÚÑ]/.test(p.lugar);
+    if (prev && prev.fila && prev.fila === p.fila && ((CONECTOR.test(' ' + prev.lugar) && sigue) || cola) && !/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
       prev.lugar += ' ' + p.lugar; if (!prev.hora && p.hora) prev.hora = p.hora; continue;
     }
     out.push(p);

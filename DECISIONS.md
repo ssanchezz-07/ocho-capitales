@@ -7,25 +7,39 @@ Son los tres pendientes que dejó la entrada «Recorridos rotos, 2.ª tanda».
   - **Los Judíos** (Parroquia de la Merced): no tenían itinerario ni hora. La cruz de guía sale a las **20.30**, pasa por la carrera oficial a las 21.40 y entra a la 01.30; el palio sale a las 21.20, pasa por la carrera a las 22.35 y entra a las 02.30.
     - La «Salida (20.30)» de la cruz está en la fila de las 19:30 y las dos celdas siguientes van una franja por delante.
     - La hora es la buena porque cuadra con el palio: sale 50 min después, pasa por la carrera 55 min después y entra 60 min después.
-    - Se copia tal cual; `build.mjs` no deja que el tiempo retroceda.
+    - Se copia tal cual; `build.mjs` no deja que el tiempo retroceda. Efecto en el plano: Paseo Independencia (fila 20:00) y San José (20:30) suben a las 20:30, y la cruz salta unos 400 m de la Merced a San José al salir.
   - Con fuente de la ciudad cuando la hermandad no tenía entrada: `A_MANO` toma la de `FUENTES`.
   - En `portal.json` cambian solo esas dos horas: Vera Cruz y Oración pasa de 19:55 a 19:10; Los Judíos, de «por confirmar» a 20:30.
-- **Nombres en dos renglones con el artículo en minúscula (Sevilla, Canal Sur)**: `limpiar()` une también «… de» + «la/el/los/las Mayúscula».
-  - Son 8 tramos de 5 hermandades:
+- **Nombres en dos renglones con el segundo en minúscula (Sevilla, Canal Sur)**: `limpiar()` une también, en la misma fila:
+  - «… de» + «la/el/los/las Mayúscula». Son 8 puntos en 7 tramos de 5 hermandades:
     - «Javier Lasso de la Vega»: Vera Cruz, San Bernardo y Soledad de San Lorenzo;
-    - «Santa Ángela de la Cruz»: Carmen Doloroso;
+    - «Santa Ángela de la Cruz»: Carmen Doloroso, dos en el palio;
     - «Camino de los Toros»: Pino Montano.
-  - Cada punto queda en la calle donde ya caía la segunda mitad; desaparece el punto «estimado» de la primera, que estaba a 31-185 m.
+    - Cada punto queda en la calle donde ya caía la segunda mitad, a 0 m de su calle en OSM. Desaparece el punto «estimado» de la primera mitad, que estaba a entre 31 y 185 m.
+  - «…» + «de/del Mayúscula», con el corte antes del «de». Lo encontró la revisión independiente:
+    - «Parque Sierra de Aroche»: Pino Montano, palio, 21:00. Antes «Parque Sierra» era un punto estimado; ahora va a la calle Parque Sierra de Aroche.
+    - «Hospital San Juan de Dios»: La Sed, en la cruz (12:30) y en el palio (13:30).
+      - Antes, «Hospital San Juan» casaba con la calle San Juan del centro, a 872 m de Eduardo Dato. Su salida era dudosa y no se situaba (ver «La Sed queda pendiente» más abajo).
+      - Ahora casa con la calle San Juan de Dios de Nervión, junto al hospital de la avenida Eduardo Dato. La salida, estimada, va ahí, y `auditar.mjs` deja de avisar de que «acaba a 1315 m de donde sale».
+      - Queda un tramo rápido: las dos filas de Eduardo Dato (13:00 y 13:30) caen en su extremo este. Hasta Jiménez Aranda, a las 14:00, hay 1073 m, porque el geocodificador pone un solo punto por calle.
+  - Medido con `unir.mjs` en las 8 capitales, comparando la regla nueva con la anterior: no cambia nada más.
 - **Cómo se regenera sin pisar los empalmes a mano** (ver «Empalmes a mano…» en la entrada «Recorridos rotos, 2.ª tanda»):
-  - `itinerarios-2026.json`: `unir.mjs` cambia 11 hermandades, estas 7 y las 4 de siempre. Esas 4 son El Resucitado de Jaén, El Perdón de Cádiz, La Lanzada de Huelva y Humillación y Piedad de Cádiz. Se toman solo las 7 y el resto queda como estaba, también el orden.
-  - `recorridos/sevilla.json`: con `geocodificar.mjs` y `enrutar.mjs`, en Sevilla cambian solo las 5 hermandades. Las extraordinarias se quedan como estaban.
+  - `itinerarios-2026.json`: `unir.mjs` cambia 12 hermandades, estas 8 y las 4 de siempre. Esas 4 son El Resucitado de Jaén, El Perdón de Cádiz, La Lanzada de Huelva y Humillación y Piedad de Cádiz. Se toman solo las 8 y el resto queda como estaba, también el orden.
+  - `recorridos/sevilla.json`: con `geocodificar.mjs` y `enrutar.mjs`, en Sevilla cambian solo las 6 hermandades. Las extraordinarias se quedan como estaban.
+  - `portal.json` no cambia por Sevilla: los nombres de calle no entran en la ficha.
   - `recorridos/huelva.json`: al regenerar cambian 12. Se toman solo las 2 de esta tanda.
   - `informe-geocodificacion.json`: Jaén se conserva y Sevilla se pone al día.
 - **Foto de N.ª S.ª de las Angustias de la Alhambra (Granada)**: es la de la portada de la web oficial de la hermandad (`_DSC3667`, 1707×2560 px).
   - Sin fotógrafo citado, crédito ni firma, ni en la página ni en los datos de la foto. Crédito a la hermandad, con la regla de Pablo del 5-nov.
   - Pablo la eligió el 25-nov («La 1») frente a la de Commons (Jl FilpoC).
   - Sustituye a la de 1489acci, que estaba tomada desde arriba.
-- Sigue pendiente: erCuñao llama «palio» al segundo paso de La Buena Muerte de Huelva, que va sin palio (columna «PASO VIRGEN»).
+- Siguen pendientes, vistos en la revisión y que ya pasaban antes:
+  - **Plano, una franja empuja una hora oficial.** Para que el tiempo no retroceda, `build.mjs` (en `datosCalle`) sube la hora oficial hasta la franja anterior.
+    - En Vera Cruz y Oración sale «00:30 Templo» en lugar de 00:10, y la cruz entra a las 23:30 en lugar de las 23:15.
+    - Pasa en unos 34 casos en las otras capitales.
+    - Arreglo propuesto: que una franja que choca con la hora oficial de un punto vecino se anule y se reparta por distancia. Eso quitaría también el salto de Los Judíos.
+  - **erCuñao mira solo el tramo del paso o del palio.** «¿Pasan los Judíos por Puerto?» dice que no, porque Puerto, Vázquez Limón y José Nogales solo están en la columna de la cruz.
+  - **erCuñao llama «palio» al segundo paso de La Buena Muerte de Huelva**, que va sin palio (columna «PASO VIRGEN»).
 
 ## 2026-11-25 · Agenda sin titulares de prensa también al compilar en un push (rama `arreglo-agenda-25nov`)
 - Lo que el bot guardó en `agenda-externa.json` sacado de una noticia (origen «noticia») se vuelve a titular con las reglas de hoy en `site/build.mjs` (`eventosExternos`) y en lo que arrastra `tools/agenda-externa.mjs`, con `tituloGuardado` (`site/eventos.mjs`): desde la frase y el titular de `agenda-cuerpos.json` como en `eventosNoticias()`, o, si ya no están, el título guardado solo si nombra el acto y no es una oración; sin nombre limpio del acto, fuera (antes solo pasaba al correr el bot: con los datos del 25-nov salían 16 titulares, 13 frases y 3 sin verbo, como «José Manuel Carmona Meléndez, pregonero…» de vía crucis). Además, un cabildo es «Acto», no «Cultos», y la capital de InfoCofrade la dice la sede del título, no la banda que acompaña («(Sevilla-Este)» salía en Cádiz por una agrupación de Jerez; en `agenda-externa.mjs` gana también el pueblo más largo: «Sanlúcar la Mayor» es Sevilla, no Cádiz). Actos futuros: 253 → 237; sacados de noticias, 16 → 0; ninguno de agenda cofrade ni verificado se pierde.

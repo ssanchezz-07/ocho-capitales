@@ -109,9 +109,9 @@
   ]
  },
  "sevilla": {
-  "puntos": 2183,
-  "situados": 2084,
-  "pct": 95,
+  "puntos": 2180,
+  "situados": 2087,
+  "pct": 96,
   "calles_osm": 8804,
   "templos": 156,
   "no_situados": [
@@ -168,10 +168,6 @@
     2
    ],
    [
-    "de Dios",
-    2
-   ],
-   [
     "Alameda",
     2
    ],
@@ -212,7 +208,11 @@
     1
    ],
    [
-    "Parque Sierra",
+    "Miguel Mañara",
+    1
+   ],
+   [
+    "Torre Norte",
     1
    ]
   ]
