@@ -150,6 +150,36 @@ function limpiarLugar(ciudad, l0) {
   if (SUELTAS.test(l) && !(ciudad === 'sevilla' && l === 'PLAZA')) return { lugar: '', horas }; // en Sevilla «PLAZA» es la de San Francisco (carrera oficial)
   return { lugar: l, horas };
 }
+// Nombres partidos en dos renglones de una misma celda que el texto solo no distingue de dos calles seguidas (los dos renglones
+// en mayúscula): [primer renglón, segundo, texto unido]. Cada par, mirado en la página renderizada y en la capa de texto (25-nov):
+// Canal Sur (SEVILLA 26.pdf) pp. 23, 31, 32, 49, 50, 51 y 81; rejilla del Consejo, p. 2 (La Misión, Bellavista).
+// «Pl. España / (Torre Norte)» lleva el paréntesis impreso, que el lector perdía.
+const UNIR = { sevilla: [
+  ['Cardenal', 'Ilundain'], ['Avda. Manuel', 'Siurot'], ['Glorieta', 'Covadonga'], ['Pl. España', 'Torre Norte', 'Pl. España (Torre Norte)'],
+  ['Pl. España', 'Torre Sur', 'Pl. España (Torre Sur)'], ['Doña María', 'Coronel'], ['Cardenal Carlos', 'Amigo'], ['Avda. Isabel la', 'Católica'],
+  ['Paseo Cristóbal', 'Colón'], ['Fray Ceferino', 'González'], ['Jesús del Gran', 'Poder'], ['Santa María la', 'Blanca'],
+  ['Adolfo Rodríguez', 'Jurado'], ['Francisco Carrión', 'Mejías'], ['Cristo de las Cinco', 'Llagas'], ['Almirante', 'Argandoña'],
+] };
+// Renglones que el lector pierde (un «Avda.» o un «Cruz» solos se toman por rótulos) y horas que lee como un lugar aparte:
+// [hermandad, tramo, franja, lugar leído, lugar impreso, hora impresa]. Mirados en la página renderizada (25-nov):
+// La Paz, Canal Sur p. 23 («Avda. / Constitución»); Siete Palabras, p. 51 («Jesús de la Vera / Cruz»); Bellavista, Consejo p. 2
+// («Entrada / 1:45» en una celda).
+const CORREGIR = [
+  ['la-paz-sevilla', 'cruz de guía', '15:00', 'Constitución', 'Avda. Constitución'],
+  ['la-paz-sevilla', 'palio', '16:00', 'Constitución', 'Avda. Constitución'],
+  ['siete-palabras-sevilla', 'palio', '22:00', 'Jesús de la Vera', 'Jesús de la Vera Cruz'],
+  ['bellavista-sevilla', 'palio', '1:30', 'Entrada', 'Entrada', '1:45'],
+];
+function corregir(slug, k, pts) {
+  let n = 0;
+  for (const [s, t, fila, leido, bueno, hora] of CORREGIR) {
+    if (s !== slug || t !== k) continue;
+    const p = pts.find((q) => q.fila === fila && q.lugar === leido);
+    if (!p) { console.warn('CORREGIR: no encuentro', s, t, fila, leido); continue; }
+    p.lugar = bueno; if (hora && !p.hora) p.hora = hora; n++;
+  }
+  return n;
+}
 function limpiar(ciudad, pts) {
   const out = [];
   let quitados = 0, horasRescatadas = 0;
@@ -169,6 +199,8 @@ function limpiar(ciudad, pts) {
     const prev = out[out.length - 1];
     const sigue = /^[A-ZÁÉÍÓÚÑ]/.test(p.lugar) || (prev && /\sde$/i.test(' ' + prev.lugar) && /^(el|la|los|las)\s+[A-ZÁÉÍÓÚÑ]/.test(p.lugar));
     const cola = /^(de|del)\s+((el|la|los|las)\s+)?[A-ZÁÉÍÓÚÑ]/.test(p.lugar);
+    const par = prev && prev.fila && prev.fila === p.fila && !(prev.hora && p.hora) && (UNIR[ciudad] || []).find(([a, b]) => prev.lugar === a && p.lugar === b);
+    if (par) { prev.lugar = par[2] || par[0] + ' ' + par[1]; if (!prev.hora && p.hora) prev.hora = p.hora; continue; }
     if (prev && prev.fila && prev.fila === p.fila && ((CONECTOR.test(' ' + prev.lugar) && sigue) || cola) && !/^(calle|c\/|plaza|pza|pl\.|avda|av\.|salida|entrada|encierro|carrera|catedral|campana)/i.test(p.lugar) && !(prev.hora && p.hora)) {
       prev.lugar += ' ' + p.lugar; if (!prev.hora && p.hora) prev.hora = p.hora; continue;
     }
@@ -307,6 +339,14 @@ const A_MANO = {
     'cruz de guía': [['17:00', 'Salida', '16:55'], ['17:30', 'Antonio Filpo Rojas'], ['18:00', 'Venecia'], ['18:30', 'Joaquín Morales y T.'], ['19:00', 'Mateos'], ['19:30', 'Sol'], ['20:00', 'María Auxiliadora'], ['20:30', 'Carretera de Carmona'], ['21:00', 'Jabugo'], ['21:30', 'Mamá Margarita'], ['22:00', 'José María de Mena'], ['22:30', 'Arroyo'], ['23:00', 'Luis Álvarez Duarte'], ['23:30', 'Nicasio Gallego'], ['0:00', 'Entrada']],
     palio: [['17:30', 'Salida', '17:35'], ['18:00', 'Antonio Filpo Rojas'], ['18:30', 'Venecia'], ['19:00', 'Arroyo'], ['19:30', 'Mateos'], ['20:00', 'Cristo de las Cinco Llagas'], ['20:30', 'Madre Isabel de la Trinidad'], ['21:00', 'Carretera de Carmona'], ['21:30', 'San Juan Bosco'], ['22:00', 'Pinta'], ['22:30', 'Maestro Góm. Zarzuela'], ['23:00', 'Vicente Alanís'], ['23:30', 'Guanahaní'], ['0:00', 'Luis Álvarez Duarte'], ['0:30', 'Iriarte'], ['1:00', 'Entrada', '0:50']],
   } },
+  // · Sevilla, Viernes de Dolores, rejilla del Consejo, p. 2 (mitad izquierda, escala de 17:30 a 2:00): Pino Montano. El lector la
+  //   rotulaba Sábado de Pasión, le daba como «paso» la columna de Bendición y Esperanza, pegaba el texto espaciado letra a letra
+  //   («Caminodelos Toros», «Corraldel Agua»), partía «Travesía Ntra. Sra. / Consolación» y perdía la «Entrada 1:20» de la cruz.
+  //   Copiada dos veces por separado, celda a celda, a 400-600 ppp; las dos copias coinciden (25-nov).
+  'pino-montano-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 2, fuente: 'cgh', tramos: {
+    'cruz de guía': [['17:30', 'Salida', '17:45'], ['18:00', 'Pl. Ramón Rueda'], ['18:30', 'Sembradores'], ['19:00', 'Estrella Agena'], ['19:30', 'Camino de los Toros'], ['20:00', 'Corral del Agua'], ['20:30', 'Corral de la Encarnación'], ['21:00', 'Corral del Acabose'], ['21:30', 'Mar de Alborán'], ['22:00', 'Travesía Ntra. Sra. Consolación'], ['22:30', 'Viñadores'], ['23:00', 'Impresores'], ['23:30', 'Esparteros'], ['0:00', 'Alfareros'], ['0:30', 'Alfareros'], ['1:00', 'Entrada', '1:20']],
+    palio: [['18:30', 'Salida'], ['19:00', 'Pl. Ramón Rueda'], ['19:30', 'Agricultores'], ['20:00', 'Estrella Agena'], ['20:30', 'Camino de los Toros'], ['21:00', 'Parque Sierra de Aroche'], ['21:30', 'Corral de la Encarnación'], ['22:00', 'Corral del Acabose'], ['22:30', 'Mar de Alborán'], ['23:00', 'Travesía Ntra. Sra. Consolación'], ['23:30', 'Mar Egeo'], ['0:00', 'Viñadores'], ['0:30', 'Soladores'], ['1:00', 'Charolistas'], ['1:30', 'Alfareros'], ['2:00', 'Entrada', '2:20']],
+  } },
   // · Sevilla, Sábado Santo, Canal Sur (SEVILLA 26.pdf), p. 81: El Santo Entierro, «CRUZ DE GUÍA» y «DUELO». El lector juntó las dos
   //   columnas en una (dos «Salida», horas que retrocedían) y el plano la usaba como paso. La rejilla del Consejo (p. 18) da las
   //   mismas calles y horas.
@@ -321,6 +361,10 @@ const FUENTE_A_MANO = { cgh: FUENTES.find(([, f]) => f === 'sevilla-cgh-2026.jso
 const out = { generado: new Date().toISOString(), anio: 2026, hermandades: {}, sin_emparejar: [] };
 // todas las columnas que caen en cada hermandad y papel (cruz de guía, paso, palio…); se elige al final
 const CAND = new Map();
+// de qué lectura sale cada columna ({fuente, pdf}): al final, la fuente de la hermandad es la de la columna que se elige, no la de
+// la primera que se leyó (Pino Montano, La Misión, Redención, La Quinta Angustia y Los Gitanos citaban Canal Sur con columnas del
+// Consejo)
+const ORIGEN = new WeakMap();
 for (const [ciudad, f, fuente] of FUENTES) {
   const p = path.join(DIR, f); if (!fs.existsSync(p)) continue;
   const J = JSON.parse(fs.readFileSync(p, 'utf8'));
@@ -353,7 +397,7 @@ for (const [ciudad, f, fuente] of FUENTES) {
     const e = (out.hermandades[h.slug] = out.hermandades[h.slug] || { ciudad, dia: h.dia, fuente, pdf: J.fuente, tramos: {} });
     const sub = c.sub ? (/cruz/.test(c.sub) ? 'cruz de guía' : /final/.test(c.sub) ? 'final del cortejo' : /palio|virgen/.test(c.sub) ? 'palio' : 'paso') : 'paso';
     if (!e.tramos[sub]) e.tramos[sub] = c.puntos; // (el orden de los papeles, el de la primera columna leída)
-    const k = h.slug + '|' + sub; if (!CAND.has(k)) CAND.set(k, []); CAND.get(k).push(c.puntos);
+    const k = h.slug + '|' + sub; if (!CAND.has(k)) CAND.set(k, []); CAND.get(k).push(c.puntos); ORIGEN.set(c.puntos, { fuente, pdf: J.fuente });
   }
 }
 // Elección de la columna de cada papel: la más larga (a igualdad, la primera leída), pero en Sevilla antes las que no salen
@@ -375,6 +419,15 @@ for (const [slug, e] of Object.entries(out.hermandades)) {
   if (e.ciudad === 'sevilla') {
     const pasos = Object.keys(e.tramos).filter((s) => !/cruz/.test(s));
     if (pasos.some((s) => !mezclada(e.tramos[s]))) for (const s of pasos) if (mezclada(e.tramos[s])) delete e.tramos[s];
+  }
+  // Fuente: la del tramo principal (el que usan el plano y erCuñao: paso; si no, palio; si no, el primero), y en «fuentes» la de
+  // cada tramo que venga de otra lectura
+  const ks = Object.keys(e.tramos), kp = e.tramos.paso ? 'paso' : e.tramos.palio ? 'palio' : ks[0];
+  const op = kp && ORIGEN.get(e.tramos[kp]);
+  if (op) {
+    e.fuente = op.fuente; e.pdf = op.pdf;
+    const otras = {}; for (const s of ks) { const o = ORIGEN.get(e.tramos[s]); if (o && o.fuente !== op.fuente) otras[s] = { fuente: o.fuente, pdf: o.pdf }; }
+    if (Object.keys(otras).length) e.fuentes = otras;
   }
 }
 // Málaga: horas oficiales de la Agrupación sobre la rejilla, o el itinerario completo de la ficha si no hay rejilla
@@ -439,9 +492,10 @@ for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'grana
   if (PAG_GR[slug]) e.fuente = fuenteGR(slug); else console.warn('Granada sin página en la guía oficial:', slug);
 }
 // limpieza final de etiquetas en todas las ciudades
-const lim = { quitados: 0, horasRescatadas: 0 };
-for (const e of Object.values(out.hermandades)) for (const k of Object.keys(e.tramos)) {
+const lim = { quitados: 0, horasRescatadas: 0, corregidos: 0 };
+for (const [slug, e] of Object.entries(out.hermandades)) for (const k of Object.keys(e.tramos)) {
   const r = limpiar(e.ciudad, e.tramos[k]); e.tramos[k] = r.pts; lim.quitados += r.quitados; lim.horasRescatadas += r.horasRescatadas;
+  lim.corregidos += corregir(slug, k, e.tramos[k]);
 }
 const OUT = path.join(DIR, '..', 'sources', 'itinerarios-2026.json');
 fs.writeFileSync(OUT, JSON.stringify(out, null, 1));

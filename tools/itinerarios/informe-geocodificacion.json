@@ -109,8 +109,8 @@
   ]
  },
  "sevilla": {
-  "puntos": 2180,
-  "situados": 2087,
+  "puntos": 2148,
+  "situados": 2056,
   "pct": 96,
   "calles_osm": 8804,
   "templos": 156,
@@ -132,24 +132,8 @@
     4
    ],
    [
-    "Avda. Manuel",
-    3
-   ],
-   [
     "Párroco A. Gómez Villa.",
     3
-   ],
-   [
-    "Travesía Ntra. Sra.",
-    2
-   ],
-   [
-    "Cardenal",
-    2
-   ],
-   [
-    "Glorieta",
-    2
    ],
    [
     "Ntra. Sra. Dolores",
@@ -160,19 +144,11 @@
     2
    ],
    [
-    "Paseo Cristóbal",
-    2
-   ],
-   [
     "Alcaicería",
     2
    ],
    [
     "Alameda",
-    2
-   ],
-   [
-    "Francisco Carrión",
     2
    ],
    [
@@ -200,19 +176,43 @@
     1
    ],
    [
-    "Caminodelos Toros",
-    1
-   ],
-   [
-    "Corraldel Agua",
-    1
-   ],
-   [
     "Miguel Mañara",
     1
    ],
    [
-    "Torre Norte",
+    "Doctora",
+    1
+   ],
+   [
+    "Fco Carrera Iglesias",
+    1
+   ],
+   [
+    "Joaquín Morales y T.",
+    1
+   ],
+   [
+    "Maestro Góm. Zarzuela",
+    1
+   ],
+   [
+    "Amorde Dios",
+    1
+   ],
+   [
+    "P. SAN MIGUEL 16,41",
+    1
+   ],
+   [
+    "Puñonrrostro",
+    1
+   ],
+   [
+    "Puente del Indio",
+    1
+   ],
+   [
+    "Lasso Vega",
     1
    ]
   ]

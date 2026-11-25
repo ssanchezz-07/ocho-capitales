@@ -10654,8 +10654,8 @@
   "pino-montano-sevilla": {
    "ciudad": "sevilla",
    "dia": "Viernes de Dolores",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
@@ -10677,11 +10677,11 @@
      },
      {
       "fila": "19:30",
-      "lugar": "Caminodelos Toros"
+      "lugar": "Camino de los Toros"
      },
      {
       "fila": "20:00",
-      "lugar": "Corraldel Agua"
+      "lugar": "Corral del Agua"
      },
      {
       "fila": "20:30",
@@ -10697,11 +10697,7 @@
      },
      {
       "fila": "22:00",
-      "lugar": "Travesía Ntra. Sra."
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Consolación"
+      "lugar": "Travesía Ntra. Sra. Consolación"
      },
      {
       "fila": "22:30",
@@ -10725,7 +10721,8 @@
      },
      {
       "fila": "1:00",
-      "lugar": "Entrada"
+      "lugar": "Entrada",
+      "hora": "1:20"
      }
     ],
     "palio": [
@@ -10767,11 +10764,7 @@
      },
      {
       "fila": "23:00",
-      "lugar": "Travesía Ntra. Sra."
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Consolación"
+      "lugar": "Travesía Ntra. Sra. Consolación"
      },
      {
       "fila": "23:30",
@@ -10799,13 +10792,14 @@
       "hora": "2:20"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 2"
   },
   "la-mision-sevilla": {
    "ciudad": "sevilla",
    "dia": "Viernes de Dolores",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "paso": [
      {
@@ -10827,19 +10821,11 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Cardenal"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Ilundain"
+      "lugar": "Cardenal Ilundain"
      },
      {
       "fila": "21:00",
-      "lugar": "Avda. Manuel"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Siurot"
+      "lugar": "Avda. Manuel Siurot"
      },
      {
       "fila": "21:30",
@@ -10898,19 +10884,11 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Avda. Manuel"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Siurot"
+      "lugar": "Avda. Manuel Siurot"
      },
      {
       "fila": "21:00",
-      "lugar": "Avda. Manuel"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Siurot"
+      "lugar": "Avda. Manuel Siurot"
      },
      {
       "fila": "21:30",
@@ -10968,7 +10946,7 @@
      },
      {
       "fila": "15:00",
-      "lugar": "Constitución"
+      "lugar": "Avda. Constitución"
      },
      {
       "fila": "15:30",
@@ -11024,11 +11002,7 @@
      },
      {
       "fila": "21:30",
-      "lugar": "Glorieta"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Covadonga"
+      "lugar": "Glorieta Covadonga"
      },
      {
       "fila": "22:00",
@@ -11059,7 +11033,7 @@
      },
      {
       "fila": "16:00",
-      "lugar": "Constitución"
+      "lugar": "Avda. Constitución"
      },
      {
       "fila": "16:30",
@@ -11111,27 +11085,15 @@
      },
      {
       "fila": "22:00",
-      "lugar": "Pl. España"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Torre Norte"
+      "lugar": "Pl. España (Torre Norte)"
      },
      {
       "fila": "22:30",
-      "lugar": "Pl. España"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Torre Sur"
+      "lugar": "Pl. España (Torre Sur)"
      },
      {
       "fila": "23:00",
-      "lugar": "Glorieta"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Covadonga"
+      "lugar": "Glorieta Covadonga"
      },
      {
       "fila": "23:30",
@@ -12300,11 +12262,7 @@
      },
      {
       "fila": "21:00",
-      "lugar": "Doña María"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Coronel"
+      "lugar": "Doña María Coronel"
      },
      {
       "fila": "21:30",
@@ -12359,11 +12317,7 @@
      },
      {
       "fila": "20:00",
-      "lugar": "Cardenal Carlos"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Amigo"
+      "lugar": "Cardenal Carlos Amigo"
      },
      {
       "fila": "20:30",
@@ -12383,11 +12337,7 @@
      },
      {
       "fila": "22:30",
-      "lugar": "Doña María"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Coronel"
+      "lugar": "Doña María Coronel"
      },
      {
       "fila": "23:00",
@@ -13209,8 +13159,8 @@
   "redencion-sevilla": {
    "ciudad": "sevilla",
    "dia": "Lunes Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
@@ -13355,6 +13305,12 @@
       "hora": "23:15"
      }
     ]
+   },
+   "fuentes": {
+    "cruz de guía": {
+     "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+     "pdf": "SEVILLA 26.pdf"
+    }
    }
   },
   "santa-genoveva-sevilla": {
@@ -13379,11 +13335,7 @@
      },
      {
       "fila": "14:00",
-      "lugar": "Avda. Isabel la"
-     },
-     {
-      "fila": "14:00",
-      "lugar": "Católica"
+      "lugar": "Avda. Isabel la Católica"
      },
      {
       "fila": "14:30",
@@ -13704,11 +13656,7 @@
      },
      {
       "fila": "17:00",
-      "lugar": "Paseo Cristóbal"
-     },
-     {
-      "fila": "17:00",
-      "lugar": "Colón"
+      "lugar": "Paseo Cristóbal Colón"
      },
      {
       "fila": "17:30",
@@ -13834,11 +13782,7 @@
      },
      {
       "fila": "22:30",
-      "lugar": "Fray Ceferino"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "González"
+      "lugar": "Fray Ceferino González"
      },
      {
       "fila": "23:00",
@@ -13854,11 +13798,7 @@
      },
      {
       "fila": "0:30",
-      "lugar": "Paseo Cristóbal"
-     },
-     {
-      "fila": "0:30",
-      "lugar": "Colón"
+      "lugar": "Paseo Cristóbal Colón"
      },
      {
       "fila": "1:00",
@@ -15485,11 +15425,7 @@
      },
      {
       "fila": "16:00",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "16:00",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "16:30",
@@ -15564,11 +15500,7 @@
      },
      {
       "fila": "17:00",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "17:00",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "17:30",
@@ -16010,11 +15942,7 @@
      },
      {
       "fila": "23:00",
-      "lugar": "Santa María la"
-     },
-     {
-      "fila": "23:00",
-      "lugar": "Blanca"
+      "lugar": "Santa María la Blanca"
      },
      {
       "fila": "23:30",
@@ -16053,11 +15981,7 @@
      },
      {
       "fila": "19:00",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "19:00",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "19:30",
@@ -16115,11 +16039,7 @@
      },
      {
       "fila": "19:30",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "19:30",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "20:00",
@@ -16285,11 +16205,7 @@
      },
      {
       "fila": "23:30",
-      "lugar": "Adolfo Rodríguez"
-     },
-     {
-      "fila": "23:30",
-      "lugar": "Jurado"
+      "lugar": "Adolfo Rodríguez Jurado"
      },
      {
       "fila": "0:00",
@@ -16328,11 +16244,7 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "21:00",
@@ -16384,11 +16296,7 @@
      },
      {
       "fila": "21:30",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "22:00",
@@ -16507,11 +16415,7 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Doña María"
-     },
-     {
-      "fila": "20:30",
-      "lugar": "Coronel"
+      "lugar": "Doña María Coronel"
      },
      {
       "fila": "21:00",
@@ -16586,11 +16490,7 @@
      },
      {
       "fila": "22:00",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "22:00",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "22:30",
@@ -16636,7 +16536,7 @@
      },
      {
       "fila": "22:00",
-      "lugar": "Jesús de la Vera"
+      "lugar": "Jesús de la Vera Cruz"
      },
      {
       "fila": "22:30",
@@ -17265,8 +17165,8 @@
   "la-quinta-angustia-sevilla": {
    "ciudad": "sevilla",
    "dia": "Jueves Santo",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
@@ -17347,6 +17247,12 @@
       "hora": "0:06"
      }
     ]
+   },
+   "fuentes": {
+    "cruz de guía": {
+     "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
+     "pdf": "SEVILLA 26.pdf"
+    }
    }
   },
   "el-valle-sevilla": {
@@ -18471,6 +18377,12 @@
       "hora": "13:45"
      }
     ]
+   },
+   "fuentes": {
+    "cruz de guía": {
+     "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+     "pdf": "Itinerario SS Sevilla 2026 2.pdf"
+    }
    }
   },
   "la-carreteria-sevilla": {
@@ -19757,11 +19669,7 @@
      },
      {
       "fila": "21:30",
-      "lugar": "Francisco Carrión"
-     },
-     {
-      "fila": "21:30",
-      "lugar": "Mejías"
+      "lugar": "Francisco Carrión Mejías"
      },
      {
       "fila": "22:00",
@@ -19840,11 +19748,7 @@
      },
      {
       "fila": "22:30",
-      "lugar": "Francisco Carrión"
-     },
-     {
-      "fila": "22:30",
-      "lugar": "Mejías"
+      "lugar": "Francisco Carrión Mejías"
      },
      {
       "fila": "23:00",
@@ -19856,11 +19760,7 @@
      },
      {
       "fila": "0:00",
-      "lugar": "Cristo de las Cinco"
-     },
-     {
-      "fila": "0:00",
-      "lugar": "Llagas"
+      "lugar": "Cristo de las Cinco Llagas"
      },
      {
       "fila": "0:30",
@@ -20038,11 +19938,7 @@
      },
      {
       "fila": "20:00",
-      "lugar": "Jesús del Gran"
-     },
-     {
-      "fila": "20:00",
-      "lugar": "Poder"
+      "lugar": "Jesús del Gran Poder"
      },
      {
       "fila": "20:30",
@@ -20168,11 +20064,7 @@
      },
      {
       "fila": "21:00",
-      "lugar": "Almirante"
-     },
-     {
-      "fila": "21:00",
-      "lugar": "Argandoña"
+      "lugar": "Almirante Argandoña"
      },
      {
       "fila": "21:30",
@@ -20208,7 +20100,8 @@
      },
      {
       "fila": "1:30",
-      "lugar": "Entrada"
+      "lugar": "Entrada",
+      "hora": "1:45"
      }
     ]
    }

@@ -479,10 +479,12 @@ for (const [slug, x] of Object.entries(COMP.hermandades || {})) {
     const IT = JSON.parse(fs.readFileSync(ITF, 'utf8')).hermandades;
     for (const h of hermandades) {
       const e = IT[h.slug]; if (!e || h.hora_fuente) continue;
-      const pts = e.tramos['cruz de guía'] || e.tramos.paso || Object.values(e.tramos)[0] || [];
+      const kt = e.tramos['cruz de guía'] ? 'cruz de guía' : e.tramos.paso ? 'paso' : Object.keys(e.tramos)[0];
+      const pts = (kt && e.tramos[kt]) || [];
       const s = pts.find((p) => p.hora && /salida/i.test(p.lugar)) || pts.find((p) => p.hora);
       // Sin hora, la toma; con hora sin fuente, solo la respalda si coincide con la salida del itinerario
-      if (s && s === pts.find((p) => p.hora) && /salida/i.test(s.lugar) && (!h.hora || h.hora === s.hora)) { h.hora = s.hora; h.hora_fuente = e.fuente; }
+      // (la fuente, la de ese tramo: puede venir de otra lectura que el tramo principal, en «fuentes»)
+      if (s && s === pts.find((p) => p.hora) && /salida/i.test(s.lugar) && (!h.hora || h.hora === s.hora)) { h.hora = s.hora; h.hora_fuente = (e.fuentes && e.fuentes[kt] && e.fuentes[kt].fuente) || e.fuente; }
     }
   }
 }

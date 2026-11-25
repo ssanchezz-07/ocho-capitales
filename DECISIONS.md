@@ -1,5 +1,41 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: los demás nombres partidos y la fuente de cada tramo (Pablo: «a) Sí, en otra subida, con su revisión»; rama `arreglo-huelva-sevilla-25nov`)
+Son los pendientes que dejó la entrada siguiente.
+- **Cotejo** (`wf_ecffa853-ba0`): se miró en la página renderizada y en la capa de texto cada uno de los 33 pares de puntos seguidos de la misma franja de Sevilla.
+  - 32 son un solo nombre en dos renglones de una celda: Canal Sur, pp. 23, 31, 32, 49, 50, 51 y 81; Consejo, p. 2.
+  - El otro, «J. M. S. Román» + «Entrada» (Torreblanca, palio, 1:30), son dos cosas: la calle y «- Entra 2:15». Se queda como está.
+- **`UNIR` en `unir.mjs`**: con los dos renglones en mayúscula, el texto solo no distingue un nombre partido de dos calles seguidas. Por eso hay una lista de pares mirados en el PDF, que solo se unen si van seguidos y en la misma franja:
+  - «Jesús del Gran Poder», 8 veces;
+  - «Doña María Coronel», «Cardenal Carlos Amigo», «Cardenal Ilundain», «Avda. Manuel Siurot» y «Glorieta Covadonga»;
+  - «Avda. Isabel la Católica», «Santa María la Blanca», «Paseo Cristóbal Colón», «Fray Ceferino González», «Adolfo Rodríguez Jurado», «Francisco Carrión Mejías», «Cristo de las Cinco Llagas» y «Almirante Argandoña»;
+  - «Pl. España (Torre Norte)» y «(Torre Sur)», con el paréntesis impreso, que el lector perdía.
+- **`CORREGIR`**: renglones que el lector perdía, mirados en la página:
+  - «Avda. / Constitución» en La Paz (Canal Sur, p. 23), en la cruz a las 15:00 y en el palio a las 16:00;
+  - «Jesús de la Vera / Cruz» en Siete Palabras (p. 51, palio, 22:00);
+  - la hora «1:45» de la «Entrada» de Bellavista (Consejo, p. 2, en la misma celda).
+- **Pino Montano, a mano (`A_MANO`, Consejo, p. 2).** Lo que hacía mal el lector:
+  - la rotulaba Sábado de Pasión y le daba como «paso» la columna de Bendición y Esperanza;
+  - pegaba el texto espaciado («Caminodelos Toros», «Corraldel Agua»);
+  - partía «Travesía Ntra. Sra. / Consolación»;
+  - perdía la «Entrada 1:20» de la cruz.
+  - Dos copias independientes, celda a celda, coinciden.
+- **Fuente de cada tramo**: `unir.mjs` guarda de qué lectura sale cada columna (`ORIGEN`).
+  - La hermandad lleva la fuente y el PDF de su tramo principal (paso; si no, palio), que es el que usan el plano y erCuñao. En `fuentes` va la de cada tramo que salga de otra lectura.
+  - Pino Montano y La Misión citan ya la rejilla del Consejo.
+  - Redención y La Quinta Angustia también, con la cruz de Canal Sur en `fuentes`.
+  - Los Gitanos siguen con Canal Sur, con la cruz del Consejo en `fuentes`.
+  - `build-data.js` toma para la hora de salida la fuente de su propio tramo. Hoy no cambia ninguna ficha, porque las cinco tienen la hora de la Nómina del Consejo.
+- **Alias** (`alias-calles-sevilla.json`):
+  - «Avda. Constitución» → «Avenida de la Constitución». Sin él casaba con una «Avenida Constitución» a 5 km, en el Aljarafe, y se quedaba estimada. Arregla también El Cerro, que ya estaba así.
+  - «Travesía Ntra. Sra. Consolación» → «Travesía de Nuestra Señora de la Consolación».
+- **Regeneración, sin pisar los empalmes a mano:**
+  - `itinerarios-2026.json`: `unir.mjs` cambia 23 hermandades, estas 19 y las 4 de siempre. Se toman solo las 19.
+  - `recorridos/sevilla.json`: `geocodificar.mjs` y `enrutar.mjs` cambian estas 19 y El Cerro (por el alias). Las extraordinarias quedan como estaban.
+  - Unos 30 puntos pasan de «estimado» a su calle.
+  - **Los Panaderos se empalma a mano**: «Jesús del Gran» + «Poder» ya caían en el mismo punto de la calle. Al regenerar, su palio sin sede tomaba el tramo de la calle más lejano (953 m hasta la Campana), salía «dudoso» y se quedaba estimado a 107 m. Se unen las dos mitades en su punto, con el trazado de la segunda. Al volver a ejecutar `geocodificar.mjs` reaparece.
+- Sigue igual: lo que ya estaba pendiente del plano (franjas que empujan horas oficiales) y de erCuñao (solo mira el tramo del palio).
+
 ## 2026-11-25 · Huelva (Oración en el Huerto y Los Judíos), nombres partidos de Sevilla y foto de las Angustias de la Alhambra (Pablo: «Ya» y «La 1»; rama `arreglo-huelva-sevilla-25nov`)
 Son los tres pendientes que dejó la entrada «Recorridos rotos, 2.ª tanda».
 - **Huelva, «El Llamador» (`HUELVA 26.pdf`), p. 26, mirada a 500 ppp y con la capa de texto del PDF.** Las dos columnas de cada hermandad se copian celda a celda en `A_MANO` (`unir.mjs`):
@@ -40,6 +76,7 @@ Son los tres pendientes que dejó la entrada «Recorridos rotos, 2.ª tanda».
     - Arreglo propuesto: que una franja que choca con la hora oficial de un punto vecino se anule y se reparta por distancia. Eso quitaría también el salto de Los Judíos.
   - **erCuñao mira solo el tramo del paso o del palio.** «¿Pasan los Judíos por Puerto?» dice que no, porque Puerto, Vázquez Limón y José Nogales solo están en la columna de la cruz.
   - **erCuñao llama «palio» al segundo paso de La Buena Muerte de Huelva**, que va sin palio (columna «PASO VIRGEN»).
+  - *(Los tres puntos siguientes, resueltos el 26-nov: ver la entrada de arriba.)*
   - **Fuente mal atribuida en 7 tramos de 5 hermandades de Sevilla.** `unir.mjs` guarda la fuente de la primera columna que lee, no la de la que elige.
     - Afecta a Pino Montano (cruz y palio), La Misión (2), Redención (palio), La Quinta Angustia (paso) y Los Gitanos (cruz).
     - Esas columnas salen de la rejilla del Consejo, pero la ficha y erCuñao citan Canal Sur.
