@@ -1,5 +1,19 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: la sede de San Pablo en su ficha, y por qué no se ponen todavía las sedes en su puerta (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
+- **Ficha de San Pablo:** la sede pasa de «Parroquia de San Pablo (Polígono)» a «Parroquia de San Ignacio de Loyola (Polígono San Pablo)».
+  - Fuente: la web de la hermandad, en su historia: «visita la Parroquia de San Ignacio de Loyola, sede canónica de nuestra Hermandad». La nota de `tools/sources/historias.json` ya avisaba del error.
+  - Se cambia en `data-raw.json`, y `portal.json` se regenera con `tools/build-data.js`. No cambia nada más en el portal, salvo el campo «generado».
+  - El plano no cambia, porque su sede ya estaba en `rutas/sedes-sevilla-correcciones.json`.
+- **Sedes en su puerta (pendiente de la entrada siguiente): no se puede todavía.**
+  - Se buscaron en OSM (Overpass) los nodos de entrada (`entrance`) de los templos que lo necesitan: El Cerro (way 42091405), Los Estudiantes (way 120225599), San Pablo (way 117010401), El Museo (node 747809164), Omnium Sanctorum (way 303650356), la Capilla de los Ángeles (way 70012573), Santa Genoveva (way 599062209), el Mayor Dolor (way 495841025) y San José Obrero (relation 1655552).
+  - Ninguno tiene puerta en OSM. Ponerla a mano sería inventarla, así que El Cerro, Los Estudiantes, El Carmen Doloroso y Los Negritos siguen sin punto, y San Pablo y El Museo con sus últimos metros fuera de las calles.
+  - Hace falta mapear sus puertas en OSM o una fuente que diga por dónde sale cada cofradía. Santa Genoveva, por ejemplo, sale por un portalón a la calle Romero de Torres, según su web.
+- **Probado y descartado:** anclar «Parroquia Santa Genoveva», en Bendición y Esperanza, a la esquina de su parroquia (Teatinos con Romero de Torres).
+  - Sus vecinos, Avda. Teatinos (22:00) y Almirante Topete (23:00), caen unos 140 m al sur, y el dibujo subiría y volvería a bajar.
+  - La causa está en dónde caen esos dos puntos.
+- **Las Cigarreras:** no se ha encontrado una fuente oficial sobre de qué templo salió en 2026. Sigue pendiente de decidir.
+
 ## 2026-11-26 · Sevilla: plazas sueltas de la red, calles estimadas y cinco sedes más (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
 Sigue con lo que dejó pendiente la entrada siguiente.
 - **Medido contra lo publicado (4a6ea529):**
