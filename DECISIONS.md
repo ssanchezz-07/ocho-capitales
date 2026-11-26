@@ -10,11 +10,19 @@
   - Según Pablo, fue por las obras de su capilla.
 - **Cómo:**
   - Campo nuevo «salida» en `rutas/sedes-sevilla-correcciones.json`, con su año. `sedes.mjs` lo pasa a `site/data/sedes/sevilla.json` (descrito en su «_leeme»).
-  - `geocodificar.mjs` hace salir y entrar el recorrido ahí, pero solo si su año es el de los itinerarios (`ITI.anio`). Así, el año que viene no se arrastra: hay que volver a mirarlo.
+  - La «salida» lleva también un «punto»: el nodo de la calle Sol frente a la iglesia (OSM way 28026682). Por él sale y entra el recorrido, porque su itinerario oficial de 2026 sale por Sol y entra por Sol.
+  - `geocodificar.mjs` hace salir y entrar el recorrido por ese punto, pero solo si su año es el de los itinerarios (`ITI.anio`).
+- **Provisional:** según Pablo, la salida de 2026 es provisional.
+  - Con los itinerarios de 2027, esta «salida» ya no vale (su año no casa), y el recorrido vuelve a salir y entrar en la sede.
+  - Si ese año sale de otro sitio, hay que poner otra «salida», con su fuente.
+- **Probado y descartado:** salir del centro del edificio, sin «punto» (la primera versión, 852e4711, que no se publicó).
+  - El centro se pegaba a la red por el Pasaje Virgen de los Gitanos, a 22 m, y el dibujo daba la vuelta por Escuelas Pías y Juan de Mesa: 481 m la salida y 606 m la entrada, con 36 m por tramo fuera de las calles.
 - **Efecto:**
-  - Solo cambia Las Cigarreras: la salida y la entrada pasan de estimadas (en Almirante Apodaca) a Los Terceros.
-  - El dibujo de salida y entrada se alarga (Los Terceros → Almirante Apodaca, unos 500 m; Doña María Coronel → Los Terceros, unos 600 m). Es el rodeo que da su itinerario oficial: Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y a la vuelta Bustos Tavera, plaza de Los Terceros y Sol.
-  - Fuera de las calles: +36 m por tramo, los últimos metros hasta el templo.
+  - Solo cambia Las Cigarreras: la salida y la entrada pasan de estimadas (en Almirante Apodaca) a Los Terceros. La Cena, que sale del mismo edificio, no cambia.
+  - **Salida:** va como dice su itinerario oficial, por Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, hasta Almirante Apodaca. Son 165 m, todo por calles.
+  - **Entrada:** 290 m, todo por calles, pero por Almirante Apodaca y Alhóndiga, no por Doña María Coronel y Bustos Tavera, como dice el itinerario.
+    - En los puntos de la Nómina no está Bustos Tavera, y el de Doña María Coronel cae al principio de la calle, junto a la plaza del Cristo de Burgos. Queda pendiente.
+  - El total de metros fuera de las calles en Sevilla no cambia (13.604 m).
 - **Sin comprobar:** el motivo y las fechas de las obras. Las páginas de la hermandad no lo dicen, y ABC Sevilla y Diario de Sevilla no se dejan leer de forma automática. En noviembre de 2026 sus cultos son en la capilla del Colegio Santa Ana y en la Parroquia de Los Remedios.
 
 ## 2026-11-26 · Sevilla: la sede de San Pablo en su ficha, y por qué no se ponen todavía las sedes en su puerta (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)

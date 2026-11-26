@@ -1,5 +1,5 @@
 {
- "_leeme": "Correcciones a mano de site/data/sedes/sevilla.json. Templo: nombre de la ficha oficial (portal), edificio de OpenStreetMap elegido a mano porque OSM lo nombra de otra forma, comprobando que está en el barrio que da la ficha. null = sin edificio con fuente.",
+ "_leeme": "Correcciones a mano de site/data/sedes/sevilla.json. Templo: nombre de la ficha oficial (portal), edificio de OpenStreetMap elegido a mano porque OSM lo nombra de otra forma, comprobando que está en el barrio que da la ficha. null = sin edificio con fuente. «salida.punto» [lat, lon]: el nodo de la red de calles por el que sale y entra ese año (si falta, el centro del edificio). «salida.punto» [lat, lon]: el nodo de la red de calles por el que sale y entra ese año (si falta, el centro del edificio).",
  "la-amargura-sevilla": {
   "templo": {
    "nombre": "San Juan de la Palma",
@@ -106,6 +106,11 @@
    "osm": "way/180110804",
    "nombre_osm": "Iglesia de Los Terceros",
    "fuente": "https://www.columnayazotes.es/diputaciones/diputacion-mayor-de-gobierno/itinerario",
+   "punto": [
+    37.3940539,
+    -5.9875204
+   ],
+   "fuente_punto": "OpenStreetMap: nodo de la calle Sol (way 28026682) frente a la iglesia; su itinerario oficial de 2026 sale por Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y entra por Bustos Tavera, plaza de Los Terceros y Sol",
    "fuente_coordenadas": "OpenStreetMap way 180110804 (el mismo edificio que la sede de La Cena)",
    "motivo": "En la Semana Santa de 2026 salió y entró en Los Terceros por las obras de su capilla; su sede sigue siendo la capilla de la Fábrica de Tabacos (Pablo, 26-nov). Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5"
   }

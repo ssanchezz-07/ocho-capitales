@@ -485,6 +485,11 @@
     "osm": "way/180110804",
     "nombre_osm": "Iglesia de Los Terceros",
     "fuente": "https://www.columnayazotes.es/diputaciones/diputacion-mayor-de-gobierno/itinerario",
+    "punto": [
+     37.3940539,
+     -5.9875204
+    ],
+    "fuente_punto": "OpenStreetMap: nodo de la calle Sol (way 28026682) frente a la iglesia; su itinerario oficial de 2026 sale por Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y entra por Bustos Tavera, plaza de Los Terceros y Sol",
     "fuente_coordenadas": "OpenStreetMap way 180110804 (el mismo edificio que la sede de La Cena)",
     "motivo": "En la Semana Santa de 2026 salió y entró en Los Terceros por las obras de su capilla; su sede sigue siendo la capilla de la Fábrica de Tabacos (Pablo, 26-nov). Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5"
    }

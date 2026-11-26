@@ -58,8 +58,6 @@ for (const h of P) {
   // ---- casa hermandad (solo si es otro edificio) ----
   const cs = CASAS[h.slug];
   if (CORR[h.slug] && 'casa_hermandad' in CORR[h.slug]) e.casa_hermandad = CORR[h.slug].casa_hermandad;
-  // la salida del año, cuando la cofradía no salió de su sede (Las Cigarreras en 2026, de Los Terceros, por las obras de su capilla)
-  if (CORR[h.slug] && CORR[h.slug].salida) e.salida = CORR[h.slug].salida;
   else if (cs && cs.dir && !ES_TEMPLO.test(sn(cs.dir))) {
     const s = C.sedeDe(h.slug, 'Casa Hermandad');
     if (s?.punto) {
@@ -68,6 +66,8 @@ for (const h of P) {
       else e.casa_hermandad = { dir: cs.dir, lat: r7(s.punto[0]), lon: r7(s.punto[1]), ...(s.puerta ? { osm: 'node/' + s.puerta } : {}), fuente: cs.fuente, fuente_coordenadas: s.puerta ? `OpenStreetMap, puerta ${s.puerta} con esa dirección` : /Nominatim/.test(s.como) ? 'Nominatim (dirección), aproximado' : `punto de casas-hermandad-${c}.json (sin coordenadas en la fuente: situado por su dirección)` };
     } else e.falta.push(`casa hermandad «${cs.dir}»: dirección sin situar en OSM`);
   }
+  // la salida del año, cuando la cofradía no salió de su sede (Las Cigarreras en 2026, de Los Terceros, por las obras de su capilla)
+  if (CORR[h.slug] && CORR[h.slug].salida) e.salida = CORR[h.slug].salida;
   if (e.templo) nT++; if (e.casa_hermandad) nC++;
   if (!e.falta.length) delete e.falta;
   out.hermandades[h.slug] = e;

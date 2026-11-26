@@ -188,8 +188,11 @@ function situar(ix, ciudad, h, pts) {
   // palabra en común servía: todo el recorrido se amontonaba en una iglesia de otro barrio. Así no se sitúa.
   const cand = !fijada && sede && ancla ? ix.templos.filter((t) => cerca(t.geo)).map((t) => [t, nucleo(t.nombre).split(' ').filter((w) => w.length > 3 && sede.includes(w)).length]).sort((a, b) => b[1] - a[1])[0] : null;
   // si ese año la cofradía no salió de su sede («salida» del año de los itinerarios: Las Cigarreras en 2026, de Los Terceros, por las
-  // obras de su capilla), sale y entra ahí; la sede sigue siendo la otra (sedes.mjs) y es la que enseña el plano fuera de temporada
-  const salidaAnio = fijada && fijada.salida && fijada.salida.anio === ITI.anio && fijada.salida.lat != null ? [fijada.salida.lat, fijada.salida.lon] : null;
+  // obras de su capilla), sale y entra ahí; la sede sigue siendo la otra (sedes.mjs) y es la que enseña el plano fuera de temporada.
+  // Si la salida trae «punto» (el nodo de la calle por el que sale, según su itinerario), se usa ese en vez del centro del edificio,
+  // que se pegaría al nodo más cercano de la red aunque sea de otra calle.
+  const sa = fijada && fijada.salida && fijada.salida.anio === ITI.anio ? fijada.salida : null;
+  const salidaAnio = sa && Array.isArray(sa.punto) ? sa.punto.slice(0, 2) : sa && sa.lat != null ? [sa.lat, sa.lon] : null;
   const pSede = salidaAnio || (fijada ? (fijada.templo && fijada.templo.lat != null ? [fijada.templo.lat, fijada.templo.lon] : null) : cand && cand[1] > 0 ? centro(cand[0].geo) : null);
   const cats = ix.templos.filter((t) => /catedral/.test(t.nombre)).sort((a, b) => (ancla ? dist(centro(a.geo), ancla) - dist(centro(b.geo), ancla) : 0));
   const pCat = cats[0] ? centro(cats[0].geo) : null;
