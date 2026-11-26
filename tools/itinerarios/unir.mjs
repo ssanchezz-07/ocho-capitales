@@ -178,6 +178,9 @@ const CORREGIR = [
   // el lector pegaba su «Cajal» al principio de la del palio
   ['el-cerro-sevilla', 'cruz de guía', '22:30', 'Avda. Ramón y', 'Avda. Ramón y Cajal'],
   ['el-cerro-sevilla', 'palio', '22:30', 'CajalAvda. Ramón y Cajal', 'Avda. Ramón y Cajal'],
+  // La Borriquita, Canal Sur p. 22, cruz, franja 16:30: «P. SAN MIGUEL / (16,41)» en dos renglones; el lector perdía el paréntesis y la
+  // hora se quedaba pegada al nombre (sin hora, y sin la Puerta de San Miguel en el plano)
+  ['la-borriquita-sevilla', 'cruz de guía', '16:30', 'P. SAN MIGUEL 16,41', 'P. SAN MIGUEL', '16:41'],
 ];
 function corregir(slug, k, pts) {
   let n = 0;

@@ -24,6 +24,7 @@ Cierra casi todo lo pendiente de la entrada siguiente.
 
   Un «Plaza» suelto sin hora del lector se sigue tirando, porque es el primer renglón de un nombre partido. Hoy solo afecta a las columnas copiadas a mano: regenerando, ninguna otra hermandad cambia.
 - **El Cerro (Canal Sur, p. 40, `CORREGIR`).** En la franja de las 22:30, las dos celdas dicen «Avda. Ramón y Cajal». El texto de la cruz desborda su celda, y el lector pegaba su «Cajal» a la del palio («Avda. Ramón y» / «CajalAvda. Ramón y Cajal»).
+- **La Borriquita (Canal Sur, p. 22, `CORREGIR`).** En la franja de las 16:30 de la cruz, «P. SAN MIGUEL / (16,41)» va en dos renglones. El lector perdía el paréntesis y la hora se quedaba pegada al nombre: «P. SAN MIGUEL 16,41», sin hora y estimado a 235 m de la Puerta. Lo vio la revisión.
 - **Puerta de San Miguel** (`geocodificar.mjs`).
   - «SAN MIGUEL» y «S. Miguel» sin la «P.» caían en la calle San Miguel, junto a la Campana. El cortejo volvía de la Plaza a la Campana y luego bajaba a Palos: unos 900 m de más en el plano, en 29 tramos de 17 hermandades.
   - Con su hora en la celda (en rojo, tras la Plaza), van a la Puerta de San Miguel de la Catedral.
@@ -33,6 +34,12 @@ Cierra casi todo lo pendiente de la entrada siguiente.
   - «Galinnato» (errata del PDF en el palio de El Cerro) → «Calle Gallinato».
   - «Card. Cervantes» y «J. Lasso Vega» (Redención, Consejo) → «Calle Cardenal Cervantes» y «Calle Javier Lasso de la Vega».
   - «Puerta de Jerez» → «Puerta Jerez», el nombre en OSM. Afecta a 6 puntos de El Cerro, La Candelaria, Las Cigarreras y El Sol, que estaban estimados hasta a 650 m.
+  - «Cuesta Rosario» (Redención, Consejo) → «Calle Cuesta del Rosario».
+    - `nucleo()` quita «Cuesta», y lo que queda, «rosario», casaba con la calle Rosario, junto a Tetuán, a 249 m.
+    - Con la cruz copiada del Consejo, la de Redención pasaba a dar un rodeo por allí. Lo vio la revisión (`wf_678871d4-30d`), y por eso no se subió el primer commit.
+    - El palio ya estaba así antes.
+    - Las dos quedan en el mismo punto de la Cuesta del Rosario que otras 15 hermandades.
+  - «Glorieta D. Juan de Austria» (cruz de El Sol) → «Plaza Don Juan de Austria», el nombre en OSM. Estaba estimada a unos 300 m.
 - **Torres de la Plaza de España** (palio de La Paz). `norm()` quita el paréntesis, y las dos caían en el mismo punto.
   - Ahora se buscan con el paréntesis (`FIJOS_PARENTESIS`).
   - Coordenadas: centro de los edificios «Torre Norte» (way 442264001) y «Torre Sur» (way 873304735) de OSM, según Overpass del 26-nov.
@@ -42,9 +49,14 @@ Cierra casi todo lo pendiente de la entrada siguiente.
   - Cuatro uniones en Puerta de Jerez y el Prado, de 9 a 54 m, entre nodos de la caché: la avenida de la Constitución, San Fernando y Carlos V con Puerta Jerez y la glorieta de Don Juan de Austria.
   - De la avenida de Carlos V a la de la Constitución, El Cerro pasa de 1.734 m a 1.011 m (en recta, 959 m).
   - El arreglo de fondo es bajar la caché con las vías sin nombre. Cambiaría todos los trazados de todas las capitales.
+  - Si al volver a bajar la caché falta alguno de esos nodos, `enrutar.mjs` lo avisa y sale con error, para que la unión no se pierda sin ruido.
 - **Regeneración, sin pisar lo hecho a mano:**
-  - `itinerarios-2026.json`: solo las 7 hermandades. `unir.mjs` cambia también las 4 de siempre, que se dejan como estaban.
-  - `recorridos/sevilla.json`: cambian 25 hermandades. Son las 7, las de la Puerta de San Miguel, las de Puerta de Jerez, La Misión, La Paz y Santa Genoveva (solo el trazado, por las uniones).
+  - `itinerarios-2026.json`: solo las 7 hermandades y La Borriquita. `unir.mjs` cambia también las 4 de siempre, que se dejan como estaban.
+  - `recorridos/sevilla.json`: cambian 25 hermandades.
+    - Las 7 de las columnas, más La Borriquita.
+    - Las de la Puerta de San Miguel y las de Puerta de Jerez.
+    - La Misión y La Paz.
+    - Santa Genoveva, solo en el trazado, por las uniones.
     - Los Panaderos y Cristo de Burgos conservan su empalme a mano. Al regenerar vuelve el problema de su ancla. Cristo de Burgos recibe solo su Puerta de San Miguel.
     - Las extraordinarias quedan como estaban (al regenerar entraba la del Amparo, del 8-nov).
   - `portal.json`: no cambia ninguna ficha.
@@ -55,6 +67,11 @@ Cierra casi todo lo pendiente de la entrada siguiente.
   - `limpiaLugar` de `build.mjs` junta «J. L. de la Vega» en «J. L.dela Vega»: ya pasaba antes, en el palio de El Dulce Nombre.
   - La Resurrección y Los Gitanos tienen estimadas algunas calles abreviadas: «J. del Gran Poder», «S. Ángela de la Cruz», «Conde de Barajas», «Alameda».
   - Otros rodeos del plano por la misma causa de la caché: Santa Genoveva y Gallinato → Campamento en El Cerro.
+  - Vistos en la revisión; todos ya pasaban antes o son como funciona `cercano()`:
+    - Una calle repetida en franjas seguidas cae siempre en el mismo vértice: el más cercano al punto anterior. El cortejo se queda parado y luego corre. Pasa en las tres «Avda. Ramón y Cajal» de la cruz de El Cerro, de 21:30 a 22:30; antes, la de las 22:30 era un punto estimado a mitad de la avenida.
+    - Una calle larga cae en el extremo más cercano al punto anterior: «San Fernando» de La Candelaria y Las Cigarreras, junto a Puerta Jerez. Habría que repartir esas apariciones a lo largo de la vía.
+    - «Jardines de Murillo» en el palio de Las Cigarreras casa con la calle Murillo, a 1 km. En la cruz ya queda estimado junto a los jardines.
+    - «Amorde Dios», en la cruz de La Borriquita, está así impreso (Canal Sur, p. 22) y queda estimado.
 
 ## 2026-11-26 · Sevilla: los demás nombres partidos y la fuente de cada tramo (Pablo: «a) Sí, en otra subida, con su revisión»; rama `arreglo-huelva-sevilla-25nov`)
 Son los pendientes que dejó la entrada siguiente.

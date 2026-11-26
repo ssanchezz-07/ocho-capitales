@@ -75,7 +75,8 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
   // uniones que faltan en OSM entre espacios peatonales contiguos (ENLACES, arriba)
   for (const [a, b] of ENLACES[ciudad] || []) {
     const i = id.get(a[0].toFixed(7) + ',' + a[1].toFixed(7)), j = id.get(b[0].toFixed(7) + ',' + b[1].toFixed(7));
-    if (i === undefined || j === undefined) { console.warn('ENLACES: no está el nodo', ciudad, a, b); continue; }
+    // (si la caché se vuelve a bajar y OSM ha movido el vértice, la unión se perdería sin ruido: se avisa y el script sale con error)
+    if (i === undefined || j === undefined) { console.error('ENLACES: no está el nodo', ciudad, a, b); process.exitCode = 1; continue; }
     const d = Math.hypot(nodos[i][2] - nodos[j][2], nodos[i][3] - nodos[j][3]); ady[i].push([j, d]); ady[j].push([i, d]);
   }
   // rejilla de 60 m para encontrar el nodo más cercano
