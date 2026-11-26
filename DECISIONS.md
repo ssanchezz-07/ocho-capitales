@@ -13,7 +13,8 @@ Son los pendientes que dejó la entrada siguiente.
 - **`CORREGIR`**: renglones que el lector perdía, mirados en la página:
   - «Avda. / Constitución» en La Paz (Canal Sur, p. 23), en la cruz a las 15:00 y en el palio a las 16:00;
   - «Jesús de la Vera / Cruz» en Siete Palabras (p. 51, palio, 22:00);
-  - la hora «1:45» de la «Entrada» de Bellavista (Consejo, p. 2, en la misma celda).
+  - la hora «1:45» de la «Entrada» de Bellavista (Consejo, p. 2, en la misma celda);
+  - «Santa / Margarita» en la cruz de Bellavista (Consejo, p. 2, franja 20:30). Ahí `SUELTAS` tiraba el «Santa» como rótulo; lo vio la revisión de 38bfaf38.
 - **Pino Montano, a mano (`A_MANO`, Consejo, p. 2).** Lo que hacía mal el lector:
   - la rotulaba Sábado de Pasión y le daba como «paso» la columna de Bendición y Esperanza;
   - pegaba el texto espaciado («Caminodelos Toros», «Corraldel Agua»);
@@ -21,7 +22,8 @@ Son los pendientes que dejó la entrada siguiente.
   - perdía la «Entrada 1:20» de la cruz.
   - Dos copias independientes, celda a celda, coinciden.
 - **Fuente de cada tramo**: `unir.mjs` guarda de qué lectura sale cada columna (`ORIGEN`).
-  - La hermandad lleva la fuente y el PDF de su tramo principal (paso; si no, palio), que es el que usan el plano y erCuñao. En `fuentes` va la de cada tramo que salga de otra lectura.
+  - La hermandad lleva la fuente y el PDF de su tramo principal: el paso o, si no hay, el palio. Es el tramo que usa erCuñao, y su fuente es la que cita. En `fuentes` va la de cada tramo que salga de otra lectura.
+  - El plano dibuja la cruz de guía y el último paso del cortejo (`site/build.mjs`, 2283-2286).
   - Pino Montano y La Misión citan ya la rejilla del Consejo.
   - Redención y La Quinta Angustia también, con la cruz de Canal Sur en `fuentes`.
   - Los Gitanos siguen con Canal Sur, con la cruz del Consejo en `fuentes`.
@@ -31,10 +33,40 @@ Son los pendientes que dejó la entrada siguiente.
   - «Travesía Ntra. Sra. Consolación» → «Travesía de Nuestra Señora de la Consolación».
 - **Regeneración, sin pisar los empalmes a mano:**
   - `itinerarios-2026.json`: `unir.mjs` cambia 23 hermandades, estas 19 y las 4 de siempre. Se toman solo las 19.
-  - `recorridos/sevilla.json`: `geocodificar.mjs` y `enrutar.mjs` cambian estas 19 y El Cerro (por el alias). Las extraordinarias quedan como estaban.
+  - `recorridos/sevilla.json`: con `geocodificar.mjs` y `enrutar.mjs` cambian 18 de estas 19 y El Cerro, por el alias. Los Gitanos no cambia, porque `fuentes` no pasa al plano. Las extraordinarias quedan como estaban.
   - Unos 30 puntos pasan de «estimado» a su calle.
-  - **Los Panaderos se empalma a mano**: «Jesús del Gran» + «Poder» ya caían en el mismo punto de la calle. Al regenerar, su palio sin sede tomaba el tramo de la calle más lejano (953 m hasta la Campana), salía «dudoso» y se quedaba estimado a 107 m. Se unen las dos mitades en su punto, con el trazado de la segunda. Al volver a ejecutar `geocodificar.mjs` reaparece.
-- Sigue igual: lo que ya estaba pendiente del plano (franjas que empujan horas oficiales) y de erCuñao (solo mira el tramo del palio).
+  - **Dos hermandades se empalman a mano.** Al volver a ejecutar `geocodificar.mjs` reaparece el problema en las dos.
+    - El problema es el mismo: el palio no tiene sede, y con el nombre unido el primer nombre reconocido es una calle larga. El ancla de `situar()` toma su primer tramo de OSM.
+    - **Los Panaderos:** «Jesús del Gran» y «Poder» ya caían en el mismo punto de la calle. Al regenerar, el palio tomaba el tramo más lejano de la calle, a 953 m de la Campana, salía «dudoso» y se quedaba estimado a 107 m.
+    - **Cristo de Burgos:** «Doña María» y «Coronel» caían en el cruce con Dueñas. Al regenerar, el palio se iba 96 m más allá del giro, hacia Bustos Tavera, y dibujaba un pico de ida y vuelta. Lo vio la revisión de 38bfaf38.
+    - En las dos se unen las dos mitades en su punto, con el trazado de la segunda. El arreglo de fondo es darles sede con fuente en `site/data/sedes/sevilla.json`: Capilla de San Andrés para Los Panaderos y Parroquia de San Pedro para Cristo de Burgos.
+- Sigue igual: lo que ya estaba pendiente del plano (franjas que empujan horas oficiales) y de erCuñao (solo mira un tramo: el paso o, si no hay, el palio).
+- **Pendiente, visto en la revisión de 38bfaf38 (`wf_d19d4d22-fe0`).** Todo ya estaba en 9f1d563c; esta tanda no lo empeora.
+  - **Columnas del Consejo mal leídas.** Ya citan al Consejo, que es de donde salen, pero su contenido no casa con la página:
+    - **Redención, palio (p. 6)**, el tramo que usa erCuñao:
+      - lee «17:05 Lasso Vega» donde la página pone «17:00 J. Lasso Vega»;
+      - lee «17:31 Campana»;
+      - falta «Plaza 18:26»;
+      - lleva pegados «Argote de MolinaPl.» y «Álvarez QuinteroSan».
+    - **Los Gitanos, cruz (p. 14):**
+      - siete nombres llevan trozos del palio pegados;
+      - las franjas 2:25 y 5:25 no existen;
+      - tiene «12:00 Juan» y «13:00 Valle» después de la Entrada.
+      - La columna de Canal Sur, p. 67, está limpia.
+    - Arreglo: copiarlas a mano o elegir la de Canal Sur.
+  - **«Plaza» con hora en el Consejo.** `limpiarLugar` solo salva «PLAZA» en mayúsculas, así que en el Consejo se pierde la carrera oficial («Plaza 21:34»). Afecta a:
+    - La Quinta Angustia, paso;
+    - Los Javieres y Dulce Nombre, cruz y palio.
+  - **Texto pegado de la celda vecina:**
+    - Dulce Nombre: «Argote de MolinaP.» y «Argote de MolinaMig.»;
+    - El Cerro: «CajalAvda. Ramón y Cajal»;
+    - La Resurrección: «Palos S.», en la franja 17:55.
+  - **Otros:**
+    - La Misión: «Páez de Ribera» casa con una calle «Ribera» a 4 km. Falta el alias «Calle Páez de Rivera».
+    - La Paz: las dos torres de la Plaza de España caen en el mismo punto, porque `norm()` quita el paréntesis.
+    - El Cerro: hasta la avenida de la Constitución, `enrutar.mjs` dibuja un rodeo de 1.730 m por la Glorieta de San Diego.
+    - `auditar.mjs` cuenta las rectas con el `via` del punto de llegada. Debería usar el del de salida, y por eso da avisos falsos.
+    - En `A_MANO`, una entrada sin `fuente` hereda la de `ORIGEN` aunque su `pdf` sea otro. Hoy solo le afecta a El Santo Entierro, y cuadra.
 
 ## 2026-11-25 · Huelva (Oración en el Huerto y Los Judíos), nombres partidos de Sevilla y foto de las Angustias de la Alhambra (Pablo: «Ya» y «La 1»; rama `arreglo-huelva-sevilla-25nov`)
 Son los tres pendientes que dejó la entrada «Recorridos rotos, 2.ª tanda».

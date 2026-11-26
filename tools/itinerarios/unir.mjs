@@ -169,6 +169,8 @@ const CORREGIR = [
   ['la-paz-sevilla', 'palio', '16:00', 'Constitución', 'Avda. Constitución'],
   ['siete-palabras-sevilla', 'palio', '22:00', 'Jesús de la Vera', 'Jesús de la Vera Cruz'],
   ['bellavista-sevilla', 'palio', '1:30', 'Entrada', 'Entrada', '1:45'],
+  // («Santa» suelto se tira como rótulo, SUELTAS; Consejo p. 2, cruz de Bellavista, franja 20:30: «Santa / Margarita»)
+  ['bellavista-sevilla', 'cruz de guía', '20:30', 'Margarita', 'Santa Margarita'],
 ];
 function corregir(slug, k, pts) {
   let n = 0;
