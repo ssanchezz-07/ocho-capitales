@@ -67,16 +67,21 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
     const i = id.get(a[0].toFixed(7) + ',' + a[1].toFixed(7)), j = id.get(b[0].toFixed(7) + ',' + b[1].toFixed(7));
     const d = Math.hypot(nodos[i][2] - nodos[j][2], nodos[i][3] - nodos[j][3]); ady[i].push([j, d]); ady[j].push([i, d]);
   }
-  // y las uniones de las plazas sueltas (uniones-osm-<ciudad>.json, ver enlaces.mjs). Todas tienen que quedar unidas a la red principal
-  // (la componente mayor del grafo): si la caché se vuelve a bajar y OSM ha cambiado sus nodos, una unión podría quedarse suelta sin
-  // ruido; entonces se avisa con cuáles son, no se escribe la ciudad y el script sale con error.
-  const lineas = uniones(ciudad), nodosU = lineas.map((l) => l.map((q) => nodo(q[0], q[1])));
+  // y las uniones de las plazas sueltas (uniones-osm-<ciudad>.json, ver enlaces.mjs). Si la caché se vuelve a bajar y OSM ha cambiado
+  // sus nodos, una unión podría quedarse suelta sin ruido, o colgada de la red por un solo lado; por eso, antes de usarlas: (1) sus
+  // anclajes (los puntos de cada unión que eran nodos de la caché) tienen que
+  // seguir en la caché; y (2) todas tienen que quedar en la red principal (la componente mayor del grafo). Si no, se dice cuáles, no
+  // se escribe la ciudad y el script sale con error.
+  const lineas = uniones(ciudad);
+  const sinAncla = lineas.filter((l) => l.anclas.some((q) => !id.has(q[0].toFixed(7) + ',' + q[1].toFixed(7))));
+  if (sinAncla.length) { console.error(`UNIONES: ${sinAncla.length} uniones de ${ciudad} tienen anclajes que ya no están en la caché; no se escribe su recorrido:`, sinAncla.map((l) => l.quien).join(' · ')); process.exitCode = 1; continue; }
+  const nodosU = lineas.map((l) => l.map((q) => nodo(q[0], q[1])));
   for (const ns of nodosU) for (let t = 1; t < ns.length; t++) { const p = ns[t - 1], i = ns[t]; if (p === i) continue; const d = Math.hypot(nodos[i][2] - nodos[p][2], nodos[i][3] - nodos[p][3]); ady[p].push([i, d]); ady[i].push([p, d]); }
   if (lineas.length) {
     const comp = new Int32Array(nodos.length).fill(-1); let nc = 0, mayor = -1, tmax = 0;
     for (let s = 0; s < nodos.length; s++) { if (comp[s] >= 0 || !ady[s].length) continue; const st = [s]; comp[s] = nc; let n = 0; while (st.length) { const u = st.pop(); n++; for (const [v] of ady[u]) if (comp[v] < 0) { comp[v] = nc; st.push(v); } } if (n > tmax) { tmax = n; mayor = nc; } nc++; }
     const sueltas = lineas.filter((l, k) => nodosU[k].some((i) => comp[i] !== mayor));
-    if (sueltas.length) { console.error(`UNIONES: ${sueltas.length} uniones de ${ciudad} no quedan unidas a la red principal; no se escribe su recorrido`, JSON.stringify(sueltas.map((l) => l[0]))); process.exitCode = 1; continue; }
+    if (sueltas.length) { console.error(`UNIONES: ${sueltas.length} uniones de ${ciudad} no quedan unidas a la red principal; no se escribe su recorrido:`, sueltas.map((l) => l.quien).join(' · ')); process.exitCode = 1; continue; }
   }
   // rejilla de 60 m para encontrar el nodo más cercano
   const rej = new Map(), C = 60;

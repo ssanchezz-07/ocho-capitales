@@ -1,5 +1,5 @@
 {
- "_leeme": "Uniones de la red de calles de Sevilla para las plazas que quedaban sueltas (islas), porque la caché de OSM solo trae vías con nombre. «vias»: vías de OpenStreetMap sin nombre que no están en la caché (aceras, pasos de peatones, peatonales y algún tramo de calle), elegidas como los caminos más cortos (≤ 300 m por ellas, sin escaleras ni carriles bici) desde cada isla hasta la red principal; se mete la vía entera, así que algún extremo queda en fondo de saco. «contiguos»: vértices de la plaza a menos de 7 m de un nodo de la red (la misma esquina, sin nodo compartido en OSM). Solo las islas que no empeoran ningún dibujo (ver DECISIONS.md, 26-nov): Plaza de España, la glorieta de Covadonga, la Ronda de Padre Pío, Ramón Rueda, San Juan de la Palma, Doña Teresa Enríquez, Santa Ana y San Román. «islas» / «isla»: la isla que une cada una. Las usan enrutar.mjs y geocodificar.mjs como aristas del grafo, nunca como calles; enrutar.mjs comprueba que todas queden en la red principal. Generado con los scripts de la sesión del 26-nov (scratchpad/tanda-plano/islas.mjs, uniones.mjs y variantes.cjs). © colaboradores de OpenStreetMap (ODbL), Overpass 2026-11-26.",
+ "_leeme": "Uniones de la red de calles de Sevilla para las plazas que quedaban sueltas (islas), porque la caché de OSM solo trae vías con nombre. «vias»: vías de OpenStreetMap sin nombre que no están en la caché (aceras, pasos de peatones, peatonales y algún tramo de calle), elegidas como los caminos más cortos (≤ 300 m por ellas, sin escaleras ni carriles bici) desde cada isla hasta la red principal; se mete la vía entera, así que algún extremo queda en fondo de saco. «contiguos»: vértices de la plaza a menos de 7 m de un nodo de la red (la misma esquina, sin nodo compartido en OSM). Solo las islas que no empeoran ningún dibujo (ver DECISIONS.md, 26-nov): Plaza de España, la glorieta de Covadonga, la Ronda de Padre Pío, Ramón Rueda, San Juan de la Palma, Doña Teresa Enríquez y San Román. «islas» / «isla»: la isla que une cada una. «anclas»: los puntos de cada vía o contiguo que son nodos de la caché (en un contiguo, el otro punto puede ser de una vía de unión); enrutar.mjs comprueba que sigan en ella antes de usar la unión. «tunnel», «layer», «covered», «oneway»: las etiquetas de OSM de la vía, si las tiene (tres vías de la Plaza de España son pasos bajo el edificio, tunnel=building_passage). Las usan enrutar.mjs y geocodificar.mjs como aristas del grafo, nunca como calles; enrutar.mjs comprueba que todas queden en la red principal. Generado con los scripts de la sesión del 26-nov (scratchpad/tanda-plano/islas.mjs, uniones.mjs y variantes.cjs). © colaboradores de OpenStreetMap (ODbL), Overpass 2026-11-26.",
  "vias": [
   {
    "id": 40671559,
@@ -7,6 +7,17 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "tunnel": "building_passage",
+   "anclas": [
+    [
+     37.3774347,
+     -5.9862055
+    ],
+    [
+     37.3772966,
+     -5.9861216
+    ]
+   ],
    "geometry": [
     [
      37.3774347,
@@ -28,6 +39,17 @@
     "padre-pio:Salida"
    ],
    "highway": "residential",
+   "oneway": "yes",
+   "anclas": [
+    [
+     37.3717842,
+     -5.9400742
+    ],
+    [
+     37.3718085,
+     -5.9398274
+    ]
+   ],
    "geometry": [
     [
      37.3717842,
@@ -45,6 +67,16 @@
     "padre-pio:Salida"
    ],
    "highway": "pedestrian",
+   "anclas": [
+    [
+     37.3717872,
+     -5.9415143
+    ],
+    [
+     37.3717583,
+     -5.9414382
+    ]
+   ],
    "geometry": [
     [
      37.3717872,
@@ -62,6 +94,17 @@
     "padre-pio:Salida"
    ],
    "highway": "residential",
+   "oneway": "yes",
+   "anclas": [
+    [
+     37.371917,
+     -5.9398595
+    ],
+    [
+     37.3717842,
+     -5.9400742
+    ]
+   ],
    "geometry": [
     [
      37.371917,
@@ -83,6 +126,12 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.3767939,
+     -5.9876789
+    ]
+   ],
    "geometry": [
     [
      37.3767939,
@@ -104,6 +153,12 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.3757911,
+     -5.9870671
+    ]
+   ],
    "geometry": [
     [
      37.375839,
@@ -129,6 +184,13 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "tunnel": "building_passage",
+   "anclas": [
+    [
+     37.3779155,
+     -5.9879501
+    ]
+   ],
    "geometry": [
     [
      37.3779155,
@@ -150,6 +212,13 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "tunnel": "building_passage",
+   "anclas": [
+    [
+     37.3759197,
+     -5.9867378
+    ]
+   ],
    "geometry": [
     [
      37.3759197,
@@ -171,6 +240,12 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.377784,
+     -5.9882829
+    ]
+   ],
    "geometry": [
     [
      37.3778365,
@@ -197,6 +272,12 @@
    ],
    "highway": "footway",
    "footway": "sidewalk",
+   "anclas": [
+    [
+     37.3717503,
+     -5.940743
+    ]
+   ],
    "geometry": [
     [
      37.3717503,
@@ -215,6 +296,12 @@
    ],
    "highway": "footway",
    "footway": "crossing",
+   "anclas": [
+    [
+     37.3715291,
+     -5.9405753
+    ]
+   ],
    "geometry": [
     [
      37.371576,
@@ -236,6 +323,12 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.3782683,
+     -5.9884961
+    ]
+   ],
    "geometry": [
     [
      37.3782683,
@@ -297,6 +390,16 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.3779155,
+     -5.9879501
+    ],
+    [
+     37.3774347,
+     -5.9862055
+    ]
+   ],
    "geometry": [
     [
      37.3779155,
@@ -386,6 +489,16 @@
     "la-paz:Pl. España"
    ],
    "highway": "footway",
+   "anclas": [
+    [
+     37.3772966,
+     -5.9861216
+    ],
+    [
+     37.3759197,
+     -5.9867378
+    ]
+   ],
    "geometry": [
     [
      37.3772966,
@@ -497,7 +610,17 @@
     37.4223127,
     -5.964582
    ],
-   "d": 6.2
+   "d": 6.2,
+   "anclas": [
+    [
+     37.4222943,
+     -5.9645152
+    ],
+    [
+     37.4223127,
+     -5.964582
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -509,7 +632,13 @@
     37.3772649,
     -5.9861013
    ],
-   "d": 3.9
+   "d": 3.9,
+   "anclas": [
+    [
+     37.3772966,
+     -5.9861216
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -521,7 +650,13 @@
     37.3772649,
     -5.9861013
    ],
-   "d": 6.6
+   "d": 6.6,
+   "anclas": [
+    [
+     37.3773177,
+     -5.9860669
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -533,7 +668,13 @@
     37.3772142,
     -5.9860709
    ],
-   "d": 5.7
+   "d": 5.7,
+   "anclas": [
+    [
+     37.3772485,
+     -5.9860235
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -545,7 +686,13 @@
     37.3764436,
     -5.9860589
    ],
-   "d": 5.1
+   "d": 5.1,
+   "anclas": [
+    [
+     37.3764091,
+     -5.986021
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -557,7 +704,13 @@
     37.3763941,
     -5.9860888
    ],
-   "d": 4.6
+   "d": 4.6,
+   "anclas": [
+    [
+     37.3763746,
+     -5.9860423
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -569,7 +722,13 @@
     37.3763536,
     -5.9861132
    ],
-   "d": 4.6
+   "d": 4.6,
+   "anclas": [
+    [
+     37.3763405,
+     -5.9860632
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -581,7 +740,13 @@
     37.3774692,
     -5.9862265
    ],
-   "d": 4.3
+   "d": 4.3,
+   "anclas": [
+    [
+     37.3774347,
+     -5.9862055
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -593,7 +758,13 @@
     37.3774692,
     -5.9862265
    ],
-   "d": 6.9
+   "d": 6.9,
+   "anclas": [
+    [
+     37.3774559,
+     -5.9861504
+    ]
+   ]
   },
   {
    "isla": "la-paz:Pl. España",
@@ -605,7 +776,13 @@
     37.3774692,
     -5.9862265
    ],
-   "d": 6.9
+   "d": 6.9,
+   "anclas": [
+    [
+     37.3775257,
+     -5.9861931
+    ]
+   ]
   },
   {
    "isla": "la-paz:Glorieta Covadonga",
@@ -617,7 +794,17 @@
     37.3743802,
     -5.9863326
    ],
-   "d": 4
+   "d": 4,
+   "anclas": [
+    [
+     37.3743859,
+     -5.9862877
+    ],
+    [
+     37.3743802,
+     -5.9863326
+    ]
+   ]
   },
   {
    "isla": "la-paz:Glorieta Covadonga",
@@ -629,7 +816,17 @@
     37.3743802,
     -5.9863326
    ],
-   "d": 1.8
+   "d": 1.8,
+   "anclas": [
+    [
+     37.3743695,
+     -5.9863176
+    ],
+    [
+     37.3743802,
+     -5.9863326
+    ]
+   ]
   },
   {
    "isla": "la-paz:Glorieta Covadonga",
@@ -641,7 +838,17 @@
     37.3739498,
     -5.9861041
    ],
-   "d": 2
+   "d": 2,
+   "anclas": [
+    [
+     37.3739677,
+     -5.9861043
+    ],
+    [
+     37.3739498,
+     -5.9861041
+    ]
+   ]
   },
   {
    "isla": "la-paz:Glorieta Covadonga",
@@ -653,7 +860,17 @@
     37.374014,
     -5.9859341
    ],
-   "d": 1.8
+   "d": 1.8,
+   "anclas": [
+    [
+     37.3740276,
+     -5.9859456
+    ],
+    [
+     37.374014,
+     -5.9859341
+    ]
+   ]
   },
   {
    "isla": "padre-pio:Salida",
@@ -665,7 +882,17 @@
     37.3718168,
     -5.9414554
    ],
-   "d": 6.7
+   "d": 6.7,
+   "anclas": [
+    [
+     37.3717583,
+     -5.9414382
+    ],
+    [
+     37.3718168,
+     -5.9414554
+    ]
+   ]
   },
   {
    "isla": "la-amargura:Salida",
@@ -677,7 +904,17 @@
     37.3950537,
     -5.9907085
    ],
-   "d": 1.9
+   "d": 1.9,
+   "anclas": [
+    [
+     37.3950639,
+     -5.9906919
+    ],
+    [
+     37.3950537,
+     -5.9907085
+    ]
+   ]
   },
   {
    "isla": "la-amargura:Salida",
@@ -689,7 +926,17 @@
     37.3952283,
     -5.9910738
    ],
-   "d": 2
+   "d": 2,
+   "anclas": [
+    [
+     37.3952369,
+     -5.9910539
+    ],
+    [
+     37.3952283,
+     -5.9910738
+    ]
+   ]
   },
   {
    "isla": "la-amargura:Salida",
@@ -701,7 +948,17 @@
     37.3953094,
     -5.9912904
    ],
-   "d": 1.6
+   "d": 1.6,
+   "anclas": [
+    [
+     37.3953195,
+     -5.9912774
+    ],
+    [
+     37.3953094,
+     -5.9912904
+    ]
+   ]
   },
   {
    "isla": "las-penas:Salida",
@@ -713,7 +970,17 @@
     37.3946081,
     -5.9994958
    ],
-   "d": 4.7
+   "d": 4.7,
+   "anclas": [
+    [
+     37.3946418,
+     -5.9994628
+    ],
+    [
+     37.3946081,
+     -5.9994958
+    ]
+   ]
   },
   {
    "isla": "las-penas:Salida",
@@ -725,7 +992,17 @@
     37.3946081,
     -5.9994958
    ],
-   "d": 5.1
+   "d": 5.1,
+   "anclas": [
+    [
+     37.3946412,
+     -5.9994557
+    ],
+    [
+     37.3946081,
+     -5.9994958
+    ]
+   ]
   },
   {
    "isla": "las-penas:Salida",
@@ -737,43 +1014,17 @@
     37.3946257,
     -5.9988812
    ],
-   "d": 1.8
-  },
-  {
-   "isla": "la-esperanza-de-triana:Plazuela Santa Ana",
-   "a": [
-    37.3825369,
-    -6.0010828
-   ],
-   "b": [
-    37.3825202,
-    -6.0011038
-   ],
-   "d": 2.6
-  },
-  {
-   "isla": "la-esperanza-de-triana:Plazuela Santa Ana",
-   "a": [
-    37.3827228,
-    -6.0008793
-   ],
-   "b": [
-    37.3827252,
-    -6.0008233
-   ],
-   "d": 4.9
-  },
-  {
-   "isla": "la-esperanza-de-triana:Plazuela Santa Ana",
-   "a": [
-    37.3825838,
-    -6.0007578
-   ],
-   "b": [
-    37.3826228,
-    -6.0007363
-   ],
-   "d": 4.7
+   "d": 1.8,
+   "anclas": [
+    [
+     37.3946218,
+     -5.9989012
+    ],
+    [
+     37.3946257,
+     -5.9988812
+    ]
+   ]
   },
   {
    "isla": "los-gitanos:Pl. San Román",
@@ -785,7 +1036,17 @@
     37.394884,
     -5.9865848
    ],
-   "d": 2.2
+   "d": 2.2,
+   "anclas": [
+    [
+     37.3949009,
+     -5.9865969
+    ],
+    [
+     37.394884,
+     -5.9865848
+    ]
+   ]
   },
   {
    "isla": "los-gitanos:Pl. San Román",
@@ -797,7 +1058,17 @@
     37.3949767,
     -5.9864664
    ],
-   "d": 3.2
+   "d": 3.2,
+   "anclas": [
+    [
+     37.3949843,
+     -5.9864309
+    ],
+    [
+     37.3949767,
+     -5.9864664
+    ]
+   ]
   },
   {
    "isla": "los-gitanos:Pl. San Román",
@@ -809,7 +1080,17 @@
     37.3947939,
     -5.9862658
    ],
-   "d": 1.8
+   "d": 1.8,
+   "anclas": [
+    [
+     37.3947957,
+     -5.9862857
+    ],
+    [
+     37.3947939,
+     -5.9862658
+    ]
+   ]
   },
   {
    "isla": "los-gitanos:Pl. San Román",
@@ -821,7 +1102,17 @@
     37.3947296,
     -5.9864574
    ],
-   "d": 1.6
+   "d": 1.6,
+   "anclas": [
+    [
+     37.394717,
+     -5.986466
+    ],
+    [
+     37.3947296,
+     -5.9864574
+    ]
+   ]
   },
   {
    "isla": "los-gitanos:Pl. San Román",
@@ -833,7 +1124,17 @@
     37.3947296,
     -5.9864574
    ],
-   "d": 2.1
+   "d": 2.1,
+   "anclas": [
+    [
+     37.3947361,
+     -5.9864796
+    ],
+    [
+     37.3947296,
+     -5.9864574
+    ]
+   ]
   }
  ]
 }

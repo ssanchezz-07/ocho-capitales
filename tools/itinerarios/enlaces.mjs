@@ -20,10 +20,12 @@ export const ENLACES = {
   ],
 };
 // Uniones de las plazas que quedaban sueltas (islas), en uniones-osm-<ciudad>.json: vías de OSM sin nombre (aceras, pasos, peatonales)
-// y vértices de la plaza a menos de 7 m de un nodo de la red (la misma esquina). Devuelve sus líneas ([[lat, lon], …]) para meterlas en el grafo como aristas, nunca como calles.
+// y vértices de la plaza a menos de 7 m de un nodo de la red (la misma esquina). Devuelve sus líneas ([[lat, lon], …]) para meterlas en el grafo
+// como aristas, nunca como calles; cada línea lleva «anclas» (los puntos que tienen que ser nodos de la caché) y «quien» (para los avisos).
 export function uniones(ciudad) {
   const f = path.join(path.dirname(fileURLToPath(import.meta.url)), `uniones-osm-${ciudad}.json`);
   if (!fs.existsSync(f)) return [];
   const U = JSON.parse(fs.readFileSync(f, 'utf8'));
-  return [...(U.vias || []).map((v) => v.geometry), ...(U.contiguos || []).map((c) => [c.a, c.b])];
+  return [...(U.vias || []).map((v) => Object.assign(v.geometry.slice(), { anclas: v.anclas || [], quien: `vía ${v.id} (${(v.islas || []).join(', ')})` })),
+    ...(U.contiguos || []).map((c) => Object.assign([c.a, c.b], { anclas: c.anclas || [c.a, c.b], quien: `contiguo de ${c.isla}` }))];
 }
