@@ -1,5 +1,22 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: Las Cigarreras, sede en Los Remedios y salida de 2026 en Los Terceros (Pablo: «Hazme caso [elcorreoweb.es, recorrido de 2025]. Este año ha salido de otro sitio por las obras, pero la sede es la otra»)
+- **Sede:** Capilla de la Fábrica de Tabacos, en Los Remedios.
+  - Fuente: la web de la hermandad, página «Sede canónica» (Regla 4; calle Juan Sebastián Elcano 7).
+  - Mapa: OSM way 222190216, «Capilla de Las Cigarreras».
+  - Es la que enseña el plano de fuera de temporada, que pasa de 62 a 63 sedes.
+- **Salida de 2026:** Iglesia de Los Terceros (OSM way 180110804, el mismo edificio que la sede de La Cena).
+  - Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5.
+  - Según Pablo, fue por las obras de su capilla.
+- **Cómo:**
+  - Campo nuevo «salida» en `rutas/sedes-sevilla-correcciones.json`, con su año. `sedes.mjs` lo pasa a `site/data/sedes/sevilla.json` (descrito en su «_leeme»).
+  - `geocodificar.mjs` hace salir y entrar el recorrido ahí, pero solo si su año es el de los itinerarios (`ITI.anio`). Así, el año que viene no se arrastra: hay que volver a mirarlo.
+- **Efecto:**
+  - Solo cambia Las Cigarreras: la salida y la entrada pasan de estimadas (en Almirante Apodaca) a Los Terceros.
+  - El dibujo de salida y entrada se alarga (Los Terceros → Almirante Apodaca, unos 500 m; Doña María Coronel → Los Terceros, unos 600 m). Es el rodeo que da su itinerario oficial: Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y a la vuelta Bustos Tavera, plaza de Los Terceros y Sol.
+  - Fuera de las calles: +36 m por tramo, los últimos metros hasta el templo.
+- **Sin comprobar:** el motivo y las fechas de las obras. Las páginas de la hermandad no lo dicen, y ABC Sevilla y Diario de Sevilla no se dejan leer de forma automática. En noviembre de 2026 sus cultos son en la capilla del Colegio Santa Ana y en la Parroquia de Los Remedios.
+
 ## 2026-11-26 · Sevilla: la sede de San Pablo en su ficha, y por qué no se ponen todavía las sedes en su puerta (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
 - **Ficha de San Pablo:** la sede pasa de «Parroquia de San Pablo (Polígono)» a «Parroquia de San Ignacio de Loyola (Polígono San Pablo)».
   - Fuente: la web de la hermandad, en su historia: «visita la Parroquia de San Ignacio de Loyola, sede canónica de nuestra Hermandad». La nota de `tools/sources/historias.json` ya avisaba del error.

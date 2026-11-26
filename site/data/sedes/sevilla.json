@@ -2,7 +2,7 @@
  "capital": "sevilla",
  "nombre": "Sevilla",
  "actualizado": "2026-11-26",
- "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «salida» {anio, nombre, lat, lon, osm, fuente, motivo}: el templo del que salió la cofradía ese año, si no fue su sede (el plano de ese año sale y entra ahí; el de fuera de temporada sigue en la sede); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
  "hermandades": {
   "la-borriquita-sevilla": {
    "nombre": "La Borriquita",
@@ -467,11 +467,27 @@
   },
   "las-cigarreras-sevilla": {
    "nombre": "Las Cigarreras",
-   "templo": null,
+   "templo": {
+    "nombre": "Capilla de la Fábrica de Tabacos (Los Remedios)",
+    "lat": 37.3776058,
+    "lon": -5.9955122,
+    "osm": "way/222190216",
+    "nombre_osm": "Capilla de Las Cigarreras",
+    "fuente": "https://www.columnayazotes.es/hermandad/sede-canonica",
+    "fuente_coordenadas": "OpenStreetMap way 222190216 («Capilla de Las Cigarreras»): media de 12 vértices. Salida temporal por obras desde la Iglesia de Los Terceros (way 180110804)"
+   },
    "casa_hermandad": null,
-   "falta": [
-    "sede canónica: Capilla de la Fábrica de Tabacos, Los Remedios (Regla 4, web oficial; calle Juan Sebastián Elcano 7; OSM way/222190216; en templo_encontrado). En la Semana Santa de 2026 salió del centro (su primera calle es Almirante Apodaca, junto a Los Terceros), así que esa capilla haría salir el cortejo de Los Remedios: pendiente de decidir qué templo usar en el plano"
-   ]
+   "salida": {
+    "anio": 2026,
+    "nombre": "Iglesia de Los Terceros (Nuestra Señora de Consolación)",
+    "lat": 37.393777,
+    "lon": -5.9874648,
+    "osm": "way/180110804",
+    "nombre_osm": "Iglesia de Los Terceros",
+    "fuente": "https://www.columnayazotes.es/diputaciones/diputacion-mayor-de-gobierno/itinerario",
+    "fuente_coordenadas": "OpenStreetMap way 180110804 (el mismo edificio que la sede de La Cena)",
+    "motivo": "En la Semana Santa de 2026 salió y entró en Los Terceros por las obras de su capilla; su sede sigue siendo la capilla de la Fábrica de Tabacos (Pablo, 26-nov). Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5"
+   }
   },
   "montesion-sevilla": {
    "nombre": "Montesión",
