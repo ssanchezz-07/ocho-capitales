@@ -1,5 +1,60 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: calles que caían en un mismo punto, los Jardines de Murillo y tres sedes (Pablo: «A», a «¿Arreglo también lo que queda pendiente en el plano? a) Sí, en otra subida, con su revisión»)
+Cierra lo que dejó pendiente del plano la entrada siguiente.
+- **Calles en un mismo punto** (`geocodificar.mjs`, `repartir()`).
+  - La causa: `cercano()` pone cada calle en su vértice más cercano al punto anterior. Una calle repetida en franjas seguidas caía siempre en el mismo vértice, y dos calles que se cruzan, en el que comparten. En el plano, el cortejo se quedaba parado media hora y luego corría.
+  - **Grupo de puntos en el mismo vértice:** se reparten por el camino, desde ese vértice hasta el de la última calle más cercano al punto siguiente. El primero se queda y los demás van a 1/k, 2/k… Casos: Ramón y Cajal en El Cerro (tres franjas), Argote de Molina y Álvarez Quintero en Redención, Luis Montoto en San Pablo y La Sed, Feria en La Macarena…
+  - **Calle pegada a la anterior** (a menos de 40 m, las dos de franja): va a la mitad de su tramo. Caso: San Fernando, a 35 m de Puerta de Jerez en La Candelaria y Las Cigarreras.
+  - **Qué se mueve y qué no:**
+    - Solo se mueven puntos con hora de franja (`fila`), nunca los de hora oficial exacta (`hora`). La carrera oficial no cambia.
+    - El camino es el más corto por la red de calles andables, la misma que dibuja `enrutar.mjs`.
+      - Por las vías con el nombre de la calle no se llegaba: las avenidas de doble calzada y las que cruzan una glorieta están partidas en vías que no comparten nodos.
+      - Si por la red no se llega, se prueba por las vías de la propia calle.
+    - No se toca nada si no hay camino, si el camino mide menos de 20 m o más de 1,5 km, o si el punto quedaría a más de 30 m de su calle. Ninguna calle es inventada: el punto sigue en la suya.
+  - **Medido en Sevilla** (`evaluar.cjs` en la sesión, contra lo publicado): las paradas falsas pasan de 69 a 6, en 28 hermandades. Son dos puntos seguidos a menos de 25 m con media hora o más entre ellos, sin contar sede ni estimados.
+    - El ritmo máximo por tramo baja o se queda igual en todos, salvo en la cruz de Las Cigarreras. Ahí sube de 20 a 25 m/min (Puerta de Jerez → Jardines de Murillo), porque los jardines ya están en su sitio.
+    - Las 6 que quedan:
+      - Padre Pío, palio: tres puntos en un cruce. El camino no pasa por Doña Francisquita.
+      - San Gonzalo y La Esperanza de Triana: el Altozano y San Jacinto. Les faltan en la caché las vías que los unen.
+      - Las Aguas, San Pablo: el vértice de entrada es también el más cercano a Rioja.
+      - El Carmen Doloroso y Pasión y Muerte: calles repetidas al final, sin punto siguiente. La entrada se estima después.
+  - **Solo se regenera Sevilla.**
+    - La regla está en el código común. Al regenerar otras capitales, también repartirá sus pares de puntos de franja en un mismo vértice. En lo publicado hay 5 en Huelva, 16 en Jaén y 3 en Almería.
+    - En Granada, Córdoba, Málaga y Cádiz no cambia nada: esos puntos no llevan franja.
+    - Huelva y Almería no están regeneradas enteras (ver «Empalmes a mano…»), y Jaén no tiene su caché de OSM en esta copia: la caché no va al repositorio. Queda para cuando se regeneren.
+- **«Jardines de Murillo»** (Las Cigarreras, cruz y palio):
+  - En OSM es un parque (way 22747191), no una calle, y casaba con la calle Murillo, a 1 km.
+  - Ahora es un punto fijo nuevo (`LUGARES`, como «calle», no en rojo): el vértice del Paseo de Catalina de Ribera (way 28113943) más cercano al centro del jardín, a 23 m.
+  - El paseo va por su borde este. Es el que La Candelaria nombra en el mismo tramo.
+- **«Paseo Catalina de Ribera»** (alias → «Paseo de Catalina de Ribera»): casaba solo con el trozo corto del norte (way 67377872, «Paseo Catalina de Ribera»), y El Sol y La Candelaria lo ponían en la punta norte. Ahora va por el paseo de los jardines.
+- **Sedes con fuente oficial** (`rutas/sedes-sevilla-correcciones.json`; `site/data/sedes/sevilla.json` regenerado con `rutas/sedes.mjs`; de 54 a 57 templos):
+  - **Los Panaderos:** Capilla de San Andrés.
+    - Fuente: la web de la hermandad, que da la calle Orfila 3.
+    - Mapa: OSM way 428744717, «Capilla de San Andrés. Hermandad de los Panaderos», con esa dirección.
+    - No estaba en la caché porque es `building=chapel` sin `amenity=place_of_worship`.
+  - **Cristo de Burgos:** Parroquia de San Pedro.
+    - Fuente: su web, «Sede Canónica».
+    - Mapa: OSM way 119432044, «Iglesia de San Pedro», plaza de San Pedro 1. No es San Pedro y San Pablo, que está en otro barrio.
+  - **La Sed:** Parroquia de la Concepción, en Nervión.
+    - Fuente: la historia de la cofradía en su web.
+    - Mapa: OSM way 72800137, «Parroquia de la Inmaculada Concepción».
+  - Con su sede, la salida y la entrada dejan de ser estimadas. **Los Panaderos y Cristo de Burgos ya no llevan empalme a mano:** se regeneran como las demás.
+    - El problema del ancla era no tener sede.
+    - La primera calle de Cristo de Burgos (palio, Doña María Coronel) cae ahora junto a San Pedro, y Feria vuelve a su sitio.
+  - Al regenerar, La Borriquita cambia solo su `fuente`: la ficha del portal cita ya la web de la hermandad (archivada) en vez de Wikipedia.
+- **Regeneración:**
+  - `recorridos/sevilla.json`, con `geocodificar.mjs` y `enrutar.mjs`: cambian 28 hermandades, todas por lo de arriba. Las extraordinarias se quedan como estaban.
+  - Regenerado con el código final, sale idéntico, también Los Panaderos y Cristo de Burgos.
+  - `informe-geocodificacion.json`: se conserva Jaén y se pone al día Sevilla. Las «Salida»/«Entrada» sin situar bajan de 30/31 a 24/25.
+- **Sigue pendiente** (de la entrada siguiente):
+  - Las franjas que empujan horas oficiales.
+  - erCuñao solo mira un tramo.
+  - «J. L.dela Vega» en `limpiaLugar`.
+  - Calles abreviadas estimadas en La Resurrección y Los Gitanos.
+  - Los rodeos de Santa Genoveva y Gallinato → Campamento.
+  - La caché de OSM sin vías sin nombre: también es la causa de dos de las 6 paradas que quedan.
+
 ## 2026-11-26 · Sevilla: columnas del Consejo mal leídas, la «Plaza», la Puerta de San Miguel y los rodeos del plano (Pablo: «A», a «¿Arreglo también estos fallos antiguos? a) Sí, en otra subida, con su revisión»)
 Cierra casi todo lo pendiente de la entrada siguiente.
 - **Seis hermandades, copiadas a mano de la rejilla del Consejo** (`A_MANO` en `unir.mjs`; `wf_813fd550-e96`).

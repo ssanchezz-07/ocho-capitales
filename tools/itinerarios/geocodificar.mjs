@@ -48,10 +48,22 @@ async function overpass(ciudad) {
   throw new Error('Overpass sin respuesta para ' + ciudad);
 }
 
+// red de calles andables (las mismas vías que usa enrutar.mjs, sin sus ENLACES): repartir() busca en ella el camino entre dos puntos
+const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|trunk)(_link)?$/;
 function indice(osm) {
-  const calles = new Map(), templos = [];
+  const calles = new Map(), templos = [], red = { ids: new Map(), nod: [], ady: [] };
+  const nodo = (q) => { const c = clave(q); let i = red.ids.get(c); if (i === undefined) { i = red.nod.length; red.ids.set(c, i); red.nod.push(q); red.ady.push([]); } return i; };
   for (const e of osm.elements) {
     const t = e.tags || {};
+    if (e.geometry && (ANDABLE.test(t.highway || '') || t.place === 'square') && t.access !== 'private' && t.foot !== 'no') {
+      let ant = -1;
+      for (const g of e.geometry) {
+        if (!g) { ant = -1; continue; }
+        const i = nodo([g.lat, g.lon]);
+        if (ant >= 0 && ant !== i) { const d = dist(red.nod[ant], red.nod[i]) * 111000; red.ady[ant].push([i, d]); red.ady[i].push([ant, d]); }
+        ant = i;
+      }
+    }
     const geo = e.geometry ? e.geometry.map((p) => [p.lat, p.lon]) : e.lat ? [[e.lat, e.lon]] : e.center ? [[e.center.lat, e.center.lon]] : null;
     if (!geo || !geo.length) continue;
     if (t.amenity === 'place_of_worship') { templos.push({ nombre: norm(t.name), geo }); continue; }
@@ -59,7 +71,7 @@ function indice(osm) {
       for (const k of new Set([norm(nm), nucleo(nm)])) { if (!k) continue; if (!calles.has(k)) calles.set(k, []); calles.get(k).push(geo); }
     }
   }
-  return { calles, templos };
+  return { calles, templos, red };
 }
 const centro = (geo) => { const n = geo.length; return [geo.reduce((a, p) => a + p[0], 0) / n, geo.reduce((a, p) => a + p[1], 0) / n]; };
 const dist = (a, b) => Math.hypot(a[0] - b[0], (a[1] - b[1]) * Math.cos(a[0] * Math.PI / 180));
@@ -106,6 +118,15 @@ const FIJOS = {
 const FIJOS_PARENTESIS = {
   sevilla: { 'plaza espana torre norte': [37.377867, -5.988045], 'plaza espana torre sur': [37.375878, -5.986844] },
 };
+// Lugares del itinerario que OSM no da como calle y que no son de la carrera oficial: van a un vértice de la calle por la que se pasa
+// junto a ellos, como «calle» (no en rojo).
+// Sevilla, «Jardines de Murillo» (Las Cigarreras, cruz y palio, entre Puerta de Jerez o San Fernando y Cano y Cueto o San José):
+// en OSM es un parque (way 22747191), no una calle, y casaba con la calle Murillo, a 1 km. Por su borde este va el Paseo de Catalina
+// de Ribera, el que La Candelaria nombra en ese mismo tramo («San Fernando, Paseo Catalina de Ribera, Cano y Cueto»). Punto: el
+// vértice del paseo (way 28113943) más cercano al centro del jardín, a 23 m. OpenStreetMap, Overpass 2026-11-26.
+const LUGARES = {
+  sevilla: { 'jardines de murillo': [37.3844506, -5.9876507] },
+};
 // Nombres cortados o abreviados en los PDF que sí existen en OSM con su nombre completo (comprobado en tools/itinerarios/cache/osm-*.json)
 const ALIAS = {
   sevilla: { 'jesus del gran': 'Jesús del Gran Poder', 'dona maria': 'Doña María Coronel', 'avenida isabel la c': 'Isabel la Católica', 'isabel la c': 'Isabel la Católica', 'ramon y caj': 'Ramón y Cajal', 'avenida ramon y cajal': 'Ramón y Cajal' },
@@ -139,11 +160,10 @@ const FUERA = {
     'dolores-de-torreblanca-sevilla': 'Torreblanca queda al este del callejero: solo casaban calles homónimas del centro («Álamo», «Torres»)',
   },
 };
-// La Sed (Sevilla) no tiene sede con fuente en site/data/sedes/sevilla.json («Parroquia de la Concepción»). Su primera calle,
-// «Hospital San Juan de Dios», salía partida en dos renglones y casaba con una calle de San Juan del centro: la salida quedaba sin
-// situar. Desde el 25-nov, unir.mjs une los dos renglones y casa con la calle San Juan de Dios de Nervión, junto al hospital:
-// la salida va ahí como «estimado» (sedeEstimada). Pendiente: su templo con fuente (en OSM, Parroquia de la Inmaculada
-// Concepción, vía 72800137, junto a la calle Cristo de la Sed).
+// La Sed (Sevilla): su primera calle, «Hospital San Juan de Dios», salía partida en dos renglones y casaba con una calle de San Juan
+// del centro. Desde el 25-nov, unir.mjs une los dos renglones y casa con la calle San Juan de Dios de Nervión, junto al hospital. Desde
+// el 26-nov tiene sede con fuente (rutas/sedes-sevilla-correcciones.json: Parroquia de la Concepción, way 72800137), como Los
+// Panaderos y Cristo de Burgos, y su salida ya no se estima.
 function situar(ix, ciudad, h, pts) {
   if (h && FUERA[ciudad] && FUERA[ciudad][h.slug]) return { res: pts.map((p) => ({ ...p, lat: null, lon: null, como: '' })), sin: [], sede: null };
   const sede = h && h.sede ? norm(h.sede) : '';
@@ -168,16 +188,18 @@ function situar(ix, ciudad, h, pts) {
     // antes de la Campana). Hasta el 26-nov, las 29 con hora caían en la calle y el cortejo volvía de la Plaza a la Campana.
     const puertaSM = ciudad === 'sevilla' && l === 'san miguel' && p.hora ? FIJOS.sevilla['puerta de san miguel'] : null;
     const fijoPar = FIJOS_PARENTESIS[ciudad] && /\(/.test(p.lugar) ? FIJOS_PARENTESIS[ciudad][lugarConParentesis(p.lugar)] : null;
-    const fijo = fijoPar || (FIJOS[ciudad] && (FIJOS[ciudad][l.replace(/ puerta perdon$/, '')] || puertaSM));
+    const lugarFijo = LUGARES[ciudad] && LUGARES[ciudad][l];
+    const fijo = fijoPar || lugarFijo || (FIJOS[ciudad] && (FIJOS[ciudad][l.replace(/ puerta perdon$/, '')] || puertaSM));
+    let geosCalle = null; // la calle de OSM donde cae el punto (para repartir(), abajo)
     // «Salida/Entrada <lugar>»: es ese lugar (una calle, la carrera oficial…), no la sede; solo «salida», «entrada templo/palio/casa hdad…» son la sede
     const mm = /^(salida|entrada|encierro|sale)\s+(.+)$/.exec(l);
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
     // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
     const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
     if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
-    else if (fijo) { pos = fijo; como = fijoPar ? 'calle' : 'carrera oficial'; }
+    else if (fijo) { pos = fijo; como = fijoPar || lugarFijo ? 'calle' : 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
-      const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); pos = cercano(ix.calles.get(k), prev); como = 'calle';
+      const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); geosCalle = ix.calles.get(k); pos = cercano(geosCalle, prev); como = 'calle';
     }
     else if (ESPECIAL.test(l) || /^(salida|entrada|encierro)\b/.test(l)) { pos = pSede; como = 'sede'; }
     else if (/catedral|s i c|estacion de penitencia/.test(l) && pCat) { pos = pCat; como = 'catedral'; }
@@ -192,10 +214,10 @@ function situar(ix, ciudad, h, pts) {
         const n = nucleo(p.lugar);
         if (n.length >= 5) for (const [k, g] of ix.calles) if (k.length >= 5 && (k === n || k.endsWith(' ' + n) || n.endsWith(' ' + k))) { geos = g; break; }
       }
-      if (geos) { pos = cercano(geos, prev); como = 'calle'; }
+      if (geos) { geosCalle = geos; pos = cercano(geos, prev); como = 'calle'; }
     }
     if (pos) prev = pos; else sin.push(p.lugar);
-    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!fijo };
+    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!fijo, _g: geosCalle, _p: pos };
   });
   // saltos imposibles (una calle homónima en otro barrio): un punto a más de 900 m de sus vecinos, que están cerca entre sí, se descarta
   const m = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
@@ -214,9 +236,89 @@ function situar(ix, ciudad, h, pts) {
     const c = { lat: med(sit.map((p) => p.lat)), lon: med(sit.map((p) => p.lon)) };
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
+  repartir(res, ix.red);
   // (la salida y la entrada sin sede se estiman después, con todos los tramos de la hermandad: sedeEstimada; y lo que queda sin
   // situar entre dos puntos, en interpolar)
   return { res, sin, sede: pSede };
+}
+// Calles que caían en un mismo punto. cercano() pone cada calle en su vértice más cercano al punto anterior, y en el plano el
+// cortejo se quedaba parado media hora y luego corría (en Sevilla, unos 50 tramos):
+// · una calle repetida en franjas seguidas cae siempre en el mismo vértice: «Avda. Ramón y Cajal» a las 21:30, 22:00 y 22:30 en la
+//   cruz de El Cerro; y dos calles que se cruzan, en el vértice que comparten: «Argote de Molina» y «Álvarez Quintero», palio de
+//   Redención. Se reparten a lo largo de su calle, desde ese vértice hasta el de la última calle más cercano al punto siguiente: la
+//   primera se queda donde estaba y las demás van a 1/k, 2/k… del camino;
+// · una calle que cae pegada (a menos de 40 m) a la anterior, cuando las dos son de franja: «San Fernando» de La Candelaria y Las
+//   Cigarreras quedaba a 35 m de Puerta de Jerez, media hora después, y el cortejo andaba luego toda la calle. Va a la mitad de su
+//   tramo (y si son varias, a 1/(k+1), 2/(k+1)…). En media hora, la mediana de lo que anda un cortejo en Sevilla es de unos 200 m.
+// Solo se mueven los puntos con hora de franja («fila»), nunca los de hora oficial exacta («hora»: Campana, Plaza…), que son de un
+// sitio concreto; así la carrera oficial no cambia. El camino es el más corto por la red de calles andables (la misma que dibuja
+// enrutar.mjs entre esos puntos): solo por las vías con el nombre de la calle no se llegaba, porque las avenidas de doble calzada
+// y las que cruzan una glorieta están partidas en vías que no comparten nodos. Si no hay camino, o no llega a 20 m o pasa de 1,5 km,
+// no se toca nada; y un punto que, repartido, quedara a más de 30 m de su calle, tampoco: no se inventa ninguna calle.
+const PEGADO_M = 40, EN_CALLE_M = 30;
+const deFranja = (p) => !p.hora && !!p.fila;
+const clave = (q) => q[0].toFixed(7) + ',' + q[1].toFixed(7);
+class Monticulo { // cola de prioridad binaria para Dijkstra (la de enrutar.mjs)
+  constructor() { this.a = []; }
+  push(n, p) { const a = this.a; a.push([p, n]); let i = a.length - 1; while (i > 0) { const j = (i - 1) >> 1; if (a[j][0] <= a[i][0]) break; [a[i], a[j]] = [a[j], a[i]]; i = j; } }
+  pop() { const a = this.a, top = a[0], u = a.pop(); if (a.length) { a[0] = u; let i = 0; for (;;) { const l = 2 * i + 1, r = l + 1; let m = i; if (l < a.length && a[l][0] < a[m][0]) m = l; if (r < a.length && a[r][0] < a[m][0]) m = r; if (m === i) break; [a[i], a[m]] = [a[m], a[i]]; i = m; } } return top; }
+  get size() { return this.a.length; }
+}
+function caminoRed(red, s, t, limite) {
+  const dd = new Map([[s, 0]]), de = new Map(), h = new Monticulo(); h.push(s, 0);
+  while (h.size) {
+    const [d, u] = h.pop(); if (u === t) break; if (d > dd.get(u) || d > limite) continue;
+    for (const [v, w] of red.ady[u]) { const nd = d + w; if (nd < (dd.has(v) ? dd.get(v) : Infinity)) { dd.set(v, nd); de.set(v, u); h.push(v, nd); } }
+  }
+  if (!dd.has(t) || dd.get(t) > limite) return null;
+  const cam = [t]; while (cam[cam.length - 1] !== s) cam.push(de.get(cam[cam.length - 1]));
+  return { largo: dd.get(t), nodos: cam.reverse().map((i) => red.nod[i]) };
+}
+// grafo de unas vías ([[lat, lon], …] cada una), unidas por sus vértices de coordenadas idénticas
+function grafoDe(vias) {
+  const g = { ids: new Map(), nod: [], ady: [] };
+  const id = (q) => { const c = clave(q); let i = g.ids.get(c); if (i === undefined) { i = g.nod.length; g.ids.set(c, i); g.nod.push(q); g.ady.push([]); } return i; };
+  for (const w of new Set(vias)) for (let t = 1; t < w.length; t++) {
+    if (!w[t - 1] || !w[t]) continue; const a = id(w[t - 1]), b = id(w[t]); if (a === b) continue;
+    const d = dist(w[t - 1], w[t]) * 111000; g.ady[a].push([b, d]); g.ady[b].push([a, d]);
+  }
+  return g;
+}
+// distancia (m) de un punto a la vía más cercana de una calle
+function aCalle(q, geos) {
+  const kx = Math.cos(q[0] * Math.PI / 180); let b = Infinity;
+  for (const w of geos) for (let t = 0; t < w.length; t++) {
+    const p1 = w[t], p0 = t ? w[t - 1] : null; if (!p1) continue;
+    if (!p0) { b = Math.min(b, dist(q, p1) * 111000); continue; }
+    const ax = (p0[1] - q[1]) * kx, ay = p0[0] - q[0], dx = (p1[1] - p0[1]) * kx, dy = p1[0] - p0[0], l2 = dx * dx + dy * dy;
+    const u = l2 ? Math.max(0, Math.min(1, -(ax * dx + ay * dy) / l2)) : 0;
+    b = Math.min(b, Math.hypot(ax + u * dx, ay + u * dy) * 111000);
+  }
+  return b;
+}
+function repartir(res, red) {
+  const orig = res.map((p) => (p.lat != null && p._p ? p._p : null)); // posiciones de antes de repartir (los vecinos no se mueven en cadena)
+  const enCalle = (i) => orig[i] && res[i].como === 'calle' && res[i]._g && deFranja(res[i]);
+  for (let i = 0; i < res.length; i++) {
+    if (!enCalle(i)) continue;
+    let j = i; while (j + 1 < res.length && enCalle(j + 1) && dist(orig[j + 1], orig[i]) * 111000 < 1) j++;
+    const k = j - i + 1, pegado = i > 0 && enCalle(i - 1) && dist(orig[i - 1], orig[i]) * 111000 < PEGADO_M;
+    let n = j + 1; while (n < res.length && res[n].lat == null) n++;
+    const grupo = i; i = j;
+    if ((k < 2 && !pegado) || n >= res.length) continue;
+    // de ese vértice al de la última calle del grupo más cercano al punto siguiente, por la red de calles; si por ella no se llega
+    // (San Jacinto, junto al Altozano: le faltan en la caché las vías sin nombre que la unen), por las vías de las propias calles
+    const E = orig[grupo], X = cercano(res[j]._g, [res[n].lat, res[n].lon]); if (clave(E) === clave(X)) continue;
+    const por = (g) => { const a = g.ids.get(clave(E)), b = g.ids.get(clave(X)); return a === undefined || b === undefined ? null : caminoRed(g, a, b, 1500); };
+    const c = por(red) || por(grafoDe(res.slice(grupo, j + 1).flatMap((p) => p._g))); if (!c || c.largo < 20) continue;
+    const L = c.largo, cam = c.nodos;
+    const en = (x) => { let a = 0; for (let t = 1; t < cam.length; t++) { const q0 = cam[t - 1], q1 = cam[t], d = dist(q0, q1) * 111000; if (a + d >= x) { const f = d ? (x - a) / d : 0; return [q0[0] + (q1[0] - q0[0]) * f, q0[1] + (q1[1] - q0[1]) * f]; } a += d; } return cam[cam.length - 1]; };
+    for (let m = 0; m < k; m++) {
+      const f = pegado ? (m + 1) / (k + 1) : m / k; if (!f) continue;
+      const q = en(L * f), p = res[grupo + m]; if (aCalle(q, p._g) > EN_CALLE_M) continue;
+      p.lat = +q[0].toFixed(6); p.lon = +q[1].toFixed(6); p._p = q;
+    }
+  }
 }
 // Sin sede situada (en site/data/sedes no consta con fuente), la salida y la entrada de TODOS los tramos de una hermandad se
 // estiman en un mismo punto, marcado como «estimado»: se conserva su hora oficial sin inventar dónde está el templo.
@@ -272,7 +374,7 @@ function interpolar(res) {
     let b = i + 1; while (b < res.length && res[b].lat == null) b++;
     if (a >= 0 && b < res.length) { const t = (i - a) / (b - a); res[i].lat = +(res[a].lat + (res[b].lat - res[a].lat) * t).toFixed(6); res[i].lon = +(res[a].lon + (res[b].lon - res[a].lon) * t).toFixed(6); res[i].como = 'estimado'; }
   }
-  for (const p of res) delete p._f;
+  for (const p of res) { delete p._f; delete p._g; delete p._p; }
   return res;
 }
 // sitúa todos los tramos de una hermandad (o de una salida extraordinaria): cada tramo por su cuenta y la sede estimada, en común

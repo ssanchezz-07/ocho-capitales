@@ -1,7 +1,7 @@
 {
  "capital": "sevilla",
  "nombre": "Sevilla",
- "actualizado": "2026-10-26",
+ "actualizado": "2026-11-26",
  "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
  "hermandades": {
   "la-borriquita-sevilla": {
@@ -12,7 +12,7 @@
     "lon": -5.9925702,
     "osm": "way/18546585",
     "nombre_osm": "Iglesia del Salvador",
-    "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+    "fuente": "https://web.archive.org/web/20190406084455/https://hermandaddelamor.net/senor-de-la-sagrada-entrada-en-jerusalen",
     "fuente_coordenadas": "OpenStreetMap way 18546585"
    },
    "casa_hermandad": null
@@ -322,11 +322,16 @@
   },
   "la-sed-sevilla": {
    "nombre": "La Sed",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo «Parroquia de la Concepción»: ningún edificio de OSM con ese nombre"
-   ]
+   "templo": {
+    "nombre": "Parroquia de la Concepción",
+    "lat": 37.383303,
+    "lon": -5.9659325,
+    "osm": "way/72800137",
+    "nombre_osm": "Parroquia de la Inmaculada Concepción",
+    "fuente": "https://hermandaddelased.org/la-hermandad-de-penitencia-historia-de-la-cofradia-de-nazarenos/",
+    "fuente_coordenadas": "OpenStreetMap way 72800137 («Parroquia de la Inmaculada Concepción», en Nervión, junto a la calle Cristo de la Sed)"
+   },
+   "casa_hermandad": null
   },
   "san-bernardo-sevilla": {
    "nombre": "San Bernardo",
@@ -382,11 +387,16 @@
   },
   "cristo-de-burgos-sevilla": {
    "nombre": "Cristo de Burgos",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo «Parroquia de San Pedro»: no está en OSM con ese nombre; casaba con «Parroquia de San Pedro y San Pablo», que está en otro barrio"
-   ]
+   "templo": {
+    "nombre": "Parroquia de San Pedro",
+    "lat": 37.3927344,
+    "lon": -5.9899202,
+    "osm": "way/119432044",
+    "nombre_osm": "Iglesia de San Pedro",
+    "fuente": "https://cristodeburgos.es/sede-canonica/",
+    "fuente_coordenadas": "OpenStreetMap way 119432044 («Iglesia de San Pedro», plaza de San Pedro 1). No es la «Parroquia de San Pedro y San Pablo», que está en otro barrio"
+   },
+   "casa_hermandad": null
   },
   "siete-palabras-sevilla": {
    "nombre": "Siete Palabras",
@@ -403,11 +413,16 @@
   },
   "los-panaderos-sevilla": {
    "nombre": "Los Panaderos",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo «Capilla de San Andrés»: no está en OSM; casaba con la parroquia de San Andrés, que es otro edificio"
-   ]
+   "templo": {
+    "nombre": "Capilla de San Andrés",
+    "lat": 37.3935175,
+    "lon": -5.9935685,
+    "osm": "way/428744717",
+    "nombre_osm": "Capilla de San Andrés. Hermandad de los Panaderos",
+    "fuente": "https://www.hdadpanaderos.es/contacto/",
+    "fuente_coordenadas": "OpenStreetMap way 428744717 («Capilla de San Andrés. Hermandad de los Panaderos», calle Orfila 3, la dirección que da la web de la hermandad). Es building=chapel sin amenity=place_of_worship: no estaba en la caché de templos (Overpass 2026-11-26)"
+   },
+   "casa_hermandad": null
   },
   "los-negritos-sevilla": {
    "nombre": "Los Negritos",
