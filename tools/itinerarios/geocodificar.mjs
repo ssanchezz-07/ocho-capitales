@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ENLACES } from './enlaces.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
@@ -48,9 +49,10 @@ async function overpass(ciudad) {
   throw new Error('Overpass sin respuesta para ' + ciudad);
 }
 
-// red de calles andables (las mismas vías que usa enrutar.mjs, sin sus ENLACES): repartir() busca en ella el camino entre dos puntos
+// red de calles andables: la misma de enrutar.mjs (vías, filtros y ENLACES), para que repartir() siga el camino que se dibuja
 const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|trunk)(_link)?$/;
-function indice(osm) {
+const CELDA = 0.0012; // rejilla de la red, en grados (unos 130 m por 105 m en Sevilla), para nodoCercano()
+function indice(osm, ciudad) {
   const calles = new Map(), templos = [], red = { ids: new Map(), nod: [], ady: [] };
   const nodo = (q) => { const c = clave(q); let i = red.ids.get(c); if (i === undefined) { i = red.nod.length; red.ids.set(c, i); red.nod.push(q); red.ady.push([]); } return i; };
   for (const e of osm.elements) {
@@ -71,6 +73,12 @@ function indice(osm) {
       for (const k of new Set([norm(nm), nucleo(nm)])) { if (!k) continue; if (!calles.has(k)) calles.set(k, []); calles.get(k).push(geo); }
     }
   }
+  for (const [a, b] of (ciudad && ENLACES[ciudad]) || []) {
+    const i = red.ids.get(clave(a)), j = red.ids.get(clave(b)); if (i === undefined || j === undefined) continue; // enrutar.mjs avisa si falta
+    const d = dist(a, b) * 111000; red.ady[i].push([j, d]); red.ady[j].push([i, d]);
+  }
+  red.rej = new Map();
+  red.nod.forEach((q, i) => { if (!red.ady[i].length) return; const k = Math.floor(q[0] / CELDA) + ':' + Math.floor(q[1] / CELDA); (red.rej.get(k) || red.rej.set(k, []).get(k)).push(i); });
   return { calles, templos, red };
 }
 const centro = (geo) => { const n = geo.length; return [geo.reduce((a, p) => a + p[0], 0) / n, geo.reduce((a, p) => a + p[1], 0) / n]; };
@@ -242,20 +250,29 @@ function situar(ix, ciudad, h, pts) {
   return { res, sin, sede: pSede };
 }
 // Calles que caían en un mismo punto. cercano() pone cada calle en su vértice más cercano al punto anterior, y en el plano el
-// cortejo se quedaba parado media hora y luego corría (en Sevilla, unos 50 tramos):
-// · una calle repetida en franjas seguidas cae siempre en el mismo vértice: «Avda. Ramón y Cajal» a las 21:30, 22:00 y 22:30 en la
-//   cruz de El Cerro; y dos calles que se cruzan, en el vértice que comparten: «Argote de Molina» y «Álvarez Quintero», palio de
-//   Redención. Se reparten a lo largo de su calle, desde ese vértice hasta el de la última calle más cercano al punto siguiente: la
-//   primera se queda donde estaba y las demás van a 1/k, 2/k… del camino;
-// · una calle que cae pegada (a menos de 40 m) a la anterior, cuando las dos son de franja: «San Fernando» de La Candelaria y Las
-//   Cigarreras quedaba a 35 m de Puerta de Jerez, media hora después, y el cortejo andaba luego toda la calle. Va a la mitad de su
-//   tramo (y si son varias, a 1/(k+1), 2/(k+1)…). En media hora, la mediana de lo que anda un cortejo en Sevilla es de unos 200 m.
-// Solo se mueven los puntos con hora de franja («fila»), nunca los de hora oficial exacta («hora»: Campana, Plaza…), que son de un
-// sitio concreto; así la carrera oficial no cambia. El camino es el más corto por la red de calles andables (la misma que dibuja
-// enrutar.mjs entre esos puntos): solo por las vías con el nombre de la calle no se llegaba, porque las avenidas de doble calzada
-// y las que cruzan una glorieta están partidas en vías que no comparten nodos. Si no hay camino, o no llega a 20 m o pasa de 1,5 km,
-// no se toca nada; y un punto que, repartido, quedara a más de 30 m de su calle, tampoco: no se inventa ninguna calle.
-const PEGADO_M = 40, EN_CALLE_M = 30;
+// cortejo se quedaba parado media hora y luego corría:
+// · una calle repetida en franjas seguidas cae siempre en el mismo vértice («Avda. Ramón y Cajal» a las 22:30, 23:00 y 23:30 en el
+//   palio de El Cerro), y dos calles que se cruzan, en el que comparten («Argote de Molina» y «Álvarez Quintero», palio de
+//   Redención): el primero se queda y los demás van a 1/k, 2/k… del tramo;
+// · una calle que cae pegada (a menos de 40 m) a la anterior, las dos de franja («San Fernando», a 35 m de Puerta de Jerez en La
+//   Candelaria y Las Cigarreras, y luego el cortejo andaba toda la calle de golpe): va a la mitad del tramo (varias: 1/(k+1)…).
+// El tramo va por la red de calles de enrutar.mjs (las mismas vías y ENLACES), desde ese vértice hasta el de la última calle del
+// grupo más cercano al punto siguiente. Cada punto va al nodo del tramo, en su propia calle, más cercano a su fracción, siempre que:
+// · desde él quede menos camino hasta el punto siguiente que desde el vértice y que desde el punto repartido anterior (por la red; si
+//   por ella no se llega, en recta, como lo dibuja enrutar.mjs), y más camino andado desde el punto anterior que hasta el vértice;
+// · ningún nodo del tramo, hasta el último punto repartido, quede más cerca del punto anterior que el vértice, ni más cerca del
+//   siguiente que ese último punto (si no, el dibujo volvería por él: ida y vuelta);
+// · el dibujo, como lo hace enrutar.mjs (punto, nodos del camino, punto), no tenga un espolón nuevo en el vértice, en el punto
+//   anterior ni en el siguiente.
+// Y además: el punto siguiente tiene que estar situado y justo detrás del grupo (uno sin situar se estima luego en recta entre sus
+// vecinos y se salía de la calle), y una calle pegada solo se mueve si el dibujo desde el punto anterior llega a su nuevo sitio.
+// Así cada punto queda en un nodo de la red y sobre el trazado. Es lo que pidió la primera revisión (NO APTO), cuando el punto iba a
+// mitad de un lado del tramo: Pl. San Leandro en Redención (se enganchaba a un área suelta de la red y el trazado salía en recta),
+// Feria en La Macarena (zigzag), y Castelar en Jesús Despojado y Manuel Siurot en La Misión (avanzaban y el trazado volvía atrás).
+// Solo se mueven puntos con hora de franja («fila»), nunca los de hora oficial exacta («hora»: Campana, Plaza…), que son de un sitio
+// concreto: la carrera oficial no cambia. Si algo de lo anterior falla, el grupo entero se queda como estaba. «En su calle»: a menos
+// de 5 m de una vía de OSM con su nombre; no se inventa ninguna calle.
+const PEGADO_M = 40, EN_CALLE_M = 5;
 const deFranja = (p) => !p.hora && !!p.fila;
 const clave = (q) => q[0].toFixed(7) + ',' + q[1].toFixed(7);
 class Monticulo { // cola de prioridad binaria para Dijkstra (la de enrutar.mjs)
@@ -272,17 +289,22 @@ function caminoRed(red, s, t, limite) {
   }
   if (!dd.has(t) || dd.get(t) > limite) return null;
   const cam = [t]; while (cam[cam.length - 1] !== s) cam.push(de.get(cam[cam.length - 1]));
-  return { largo: dd.get(t), nodos: cam.reverse().map((i) => red.nod[i]) };
+  return { largo: dd.get(t), ids: cam.reverse() };
 }
-// grafo de unas vías ([[lat, lon], …] cada una), unidas por sus vértices de coordenadas idénticas
-function grafoDe(vias) {
-  const g = { ids: new Map(), nod: [], ady: [] };
-  const id = (q) => { const c = clave(q); let i = g.ids.get(c); if (i === undefined) { i = g.nod.length; g.ids.set(c, i); g.nod.push(q); g.ady.push([]); } return i; };
-  for (const w of new Set(vias)) for (let t = 1; t < w.length; t++) {
-    if (!w[t - 1] || !w[t]) continue; const a = id(w[t - 1]), b = id(w[t]); if (a === b) continue;
-    const d = dist(w[t - 1], w[t]) * 111000; g.ady[a].push([b, d]); g.ady[b].push([a, d]);
+// distancia por la red desde un nodo a todos los que están a menos de «limite» metros
+function distanciasDesde(red, s, limite) {
+  const dd = new Map([[s, 0]]), h = new Monticulo(); h.push(s, 0);
+  while (h.size) {
+    const [d, u] = h.pop(); if (d > dd.get(u) || d > limite) continue;
+    for (const [v, w] of red.ady[u]) { const nd = d + w; if (nd <= limite && nd < (dd.has(v) ? dd.get(v) : Infinity)) { dd.set(v, nd); h.push(v, nd); } }
   }
-  return g;
+  return dd;
+}
+// el nodo de la red (con alguna arista) más cercano a un punto, a menos de 90 m: como cercano() de enrutar.mjs
+function nodoCercano(red, q) {
+  const cx = Math.floor(q[0] / CELDA), cy = Math.floor(q[1] / CELDA); let best = -1, bd = Infinity;
+  for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) for (const i of red.rej.get((cx + a) + ':' + (cy + b)) || []) { const d = dist(red.nod[i], q) * 111000; if (d < bd) { bd = d; best = i; } }
+  return bd <= 90 ? best : -1;
 }
 // distancia (m) de un punto a la vía más cercana de una calle
 function aCalle(q, geos) {
@@ -296,6 +318,20 @@ function aCalle(q, geos) {
   }
   return b;
 }
+// el dibujo entre dos puntos, como enrutar.mjs: el punto, los nodos intermedios del camino entre sus nodos y el otro punto
+function trazo(red, pa, pb) {
+  const a = nodoCercano(red, pa), b = nodoCercano(red, pb); if (a < 0 || b < 0 || a === b) return [pa, pb];
+  const r = caminoRed(red, a, b, dist(pa, pb) * 111000 * 2.6 + 500); return r ? [pa, ...r.ids.slice(1, -1).map((i) => red.nod[i]), pb] : [pa, pb];
+}
+// ida y vuelta en el punto donde se juntan dos dibujos: los metros (10, 20, 30, 50) en que el que llega y el que sale van juntos
+// (a menos de 5 m), como mide la revisión
+function espolon(llega, sale) {
+  const largo = (c) => c.reduce((s, q, i) => s + (i ? dist(c[i - 1], q) * 111000 : 0), 0);
+  const a = (c, d) => { let s = 0; for (let i = 1; i < c.length; i++) { const l = dist(c[i - 1], c[i]) * 111000; if (s + l >= d) { const f = l ? (d - s) / l : 0; return [c[i - 1][0] + (c[i][0] - c[i - 1][0]) * f, c[i - 1][1] + (c[i][1] - c[i - 1][1]) * f]; } s += l; } return null; };
+  const vuelta = llega.slice().reverse(); let r = 0;
+  for (const d of [10, 20, 30, 50]) { if (largo(llega) < d || largo(sale) < d) break; const x = a(vuelta, d), y = a(sale, d); if (x && y && dist(x, y) * 111000 < 5) r = d; else break; }
+  return r;
+}
 function repartir(res, red) {
   const orig = res.map((p) => (p.lat != null && p._p ? p._p : null)); // posiciones de antes de repartir (los vecinos no se mueven en cadena)
   const enCalle = (i) => orig[i] && res[i].como === 'calle' && res[i]._g && deFranja(res[i]);
@@ -305,19 +341,65 @@ function repartir(res, red) {
     const k = j - i + 1, pegado = i > 0 && enCalle(i - 1) && dist(orig[i - 1], orig[i]) * 111000 < PEGADO_M;
     let n = j + 1; while (n < res.length && res[n].lat == null) n++;
     const grupo = i; i = j;
-    if ((k < 2 && !pegado) || n >= res.length) continue;
-    // de ese vértice al de la última calle del grupo más cercano al punto siguiente, por la red de calles; si por ella no se llega
-    // (San Jacinto, junto al Altozano: le faltan en la caché las vías sin nombre que la unen), por las vías de las propias calles
-    const E = orig[grupo], X = cercano(res[j]._g, [res[n].lat, res[n].lon]); if (clave(E) === clave(X)) continue;
-    const por = (g) => { const a = g.ids.get(clave(E)), b = g.ids.get(clave(X)); return a === undefined || b === undefined ? null : caminoRed(g, a, b, 1500); };
-    const c = por(red) || por(grafoDe(res.slice(grupo, j + 1).flatMap((p) => p._g))); if (!c || c.largo < 20) continue;
-    const L = c.largo, cam = c.nodos;
-    const en = (x) => { let a = 0; for (let t = 1; t < cam.length; t++) { const q0 = cam[t - 1], q1 = cam[t], d = dist(q0, q1) * 111000; if (a + d >= x) { const f = d ? (x - a) / d : 0; return [q0[0] + (q1[0] - q0[0]) * f, q0[1] + (q1[1] - q0[1]) * f]; } a += d; } return cam[cam.length - 1]; };
-    for (let m = 0; m < k; m++) {
+    // el punto siguiente, situado y justo detrás: si entre medias hay uno sin situar, se estima luego en línea recta entre sus
+    // vecinos, y mover el grupo lo sacaba de la calle (Madre María Purísima en el palio de La Macarena)
+    if ((k < 2 && !pegado) || n !== j + 1) continue;
+    // tramo: del vértice del grupo al de su última calle más cercano al punto siguiente, por la red
+    const E = orig[grupo], sig = [res[n].lat, res[n].lon], X = cercano(res[j]._g, sig);
+    const s = red.ids.get(clave(E)), x = red.ids.get(clave(X)), t = nodoCercano(red, sig);
+    if (s === undefined || x === undefined || s === x || t < 0 || !red.ady[s].length) continue;
+    const c = caminoRed(red, s, x, 1500); if (!c || c.largo < 20) continue;
+    const acum = [0]; for (let y = 1; y < c.ids.length; y++) acum.push(acum[y - 1] + dist(red.nod[c.ids[y - 1]], red.nod[c.ids[y]]) * 111000);
+    const L = c.largo;
+    // cuánto falta hasta el punto siguiente: por la red; si por ella no se llega (el Altozano, para San Jacinto: un área suelta de la
+    // red), en línea recta, como lo dibuja enrutar.mjs
+    const aSig = distanciasDesde(red, t, c.largo + dist(E, sig) * 111000 * 2.6 + 500), porRed = aSig.has(s);
+    const falta = (y) => (porRed ? aSig.get(c.ids[y]) : dist(red.nod[c.ids[y]], sig) * 111000), dE = falta(0);
+    // y lo andado desde el punto anterior: el trazado hasta el vértice no puede pasar por donde va un punto repartido (Alfareros, en la
+    // cruz de Pino Montano, se llega desde Esparteros por el lado del siguiente, y repartir hacia allí dibujaba una ida y vuelta)
+    let a0 = grupo - 1; while (a0 >= 0 && res[a0].lat == null) a0--;
+    const ant = a0 >= 0 ? [res[a0].lat, res[a0].lon] : null, nAnt = ant ? nodoCercano(red, ant) : -1;
+    const aAnt = nAnt >= 0 ? distanciasDesde(red, nAnt, c.largo + dist(ant, E) * 111000 * 2.6 + 500) : new Map(), antPorRed = aAnt.has(s);
+    const andado = (y) => (!ant ? acum[y] : antPorRed ? aAnt.get(c.ids[y]) : dist(red.nod[c.ids[y]], ant) * 111000), dA = andado(0);
+    // cada punto, al nodo de su calle más cercano a su fracción, en orden y acercándose al siguiente; si alguno no tiene, nada
+    const pos = []; let desde = 1, tope = dE, suelo = dA, ok = true;
+    for (let m = 0; m < k && ok; m++) {
       const f = pegado ? (m + 1) / (k + 1) : m / k; if (!f) continue;
-      const q = en(L * f), p = res[grupo + m]; if (aCalle(q, p._g) > EN_CALLE_M) continue;
-      p.lat = +q[0].toFixed(6); p.lon = +q[1].toFixed(6); p._p = q;
+      const p = res[grupo + m]; let mejor = -1;
+      for (let y = desde; y < c.ids.length; y++) {
+        const nd = red.nod[c.ids[y]], dS = falta(y);
+        const dN = andado(y);
+        if (dS === undefined || dS >= dE || dS > tope || dN === undefined || dN <= dA || dN < suelo || aCalle(nd, p._g) > EN_CALLE_M) continue;
+        if (mejor < 0 || Math.abs(acum[y] - L * f) < Math.abs(acum[mejor] - L * f)) mejor = y;
+      }
+      if (mejor < 0) ok = false; else { pos.push([p, red.nod[c.ids[mejor]], c.ids[mejor], mejor]); desde = mejor; tope = falta(mejor); suelo = andado(mejor); }
     }
+    // sin ida y vuelta: ningún nodo del tramo hasta el último punto repartido puede estar más cerca del anterior que el vértice de
+    // partida, ni más cerca del siguiente que ese último punto (si no, el trazado del anterior al vértice, o el del último punto al
+    // siguiente, volvería por él)
+    if (ok && pos.length) {
+      const u = pos[pos.length - 1][3], dU = falta(u);
+      for (let y = 1; y <= u && ok; y++) if ((andado(y) ?? Infinity) <= dA) ok = false;
+      for (let y = 0; y < u && ok; y++) if ((falta(y) ?? Infinity) <= dU) ok = false;
+    }
+    // pegada: el trazado desde el punto anterior tiene que llegar a su nuevo sitio (si el anterior está en un área suelta de la red,
+    // como la plaza Diputado Ramón Rueda de Pino Montano, se dibuja en recta, y moverla solo alargaría la recta)
+    if (ok && pegado && pos.length) ok = nAnt >= 0 && !!caminoRed(red, nAnt, pos[0][2], dist(ant, pos[0][1]) * 111000 * 2.6 + 500);
+    // ni espolón nuevo en el dibujo (como lo hace enrutar.mjs: punto, nodos del camino, punto): en el vértice, en el punto anterior
+    // (si la calle iba pegada) y en el siguiente. Rioja, pegada a San Pablo en Las Aguas, llegaba a la Campana por donde se sale
+    // hacia la Plaza: el punto de la Campana queda a 12 m de su nodo y el dibujo hacía una ida y vuelta de 10 m.
+    if (ok && pos.length) {
+      let n2 = n + 1; while (n2 < res.length && res[n2].lat == null) n2++;
+      let a1 = a0 - 1; while (a1 >= 0 && res[a1].lat == null) a1--;
+      const P = (q) => [q.lat, q.lon], nuevos = pos.map((z) => z[1]), sig2 = n2 < res.length ? P(res[n2]) : null, ant2 = a1 >= 0 ? P(res[a1]) : null;
+      const peor = (a, b, c, a2, b2, c2) => a && c && espolon(trazo(red, a2, b2), trazo(red, b2, c2)) > espolon(trazo(red, a, b), trazo(red, b, c));
+      // ahora: …, anterior, [E], repartidos…, siguiente; antes: …, anterior, E, siguiente
+      const primero = pegado ? nuevos[0] : E, tras = pegado ? (nuevos[1] || sig) : nuevos[0];
+      if (peor(ant, E, sig, ant, primero, tras)) ok = false; // en el vértice (o donde queda el primero, si iba pegada)
+      else if (pegado && peor(ant2, ant, E, ant2, ant, nuevos[0])) ok = false; // en el anterior
+      else if (peor(E, sig, sig2, nuevos[nuevos.length - 1], sig, sig2)) ok = false; // en el siguiente
+    }
+    if (ok) for (const [p, nd] of pos) { p.lat = +nd[0].toFixed(6); p.lon = +nd[1].toFixed(6); p._p = nd; }
   }
 }
 // Sin sede situada (en site/data/sedes no consta con fuente), la salida y la entrada de TODOS los tramos de una hermandad se
@@ -388,7 +470,7 @@ const solo = process.argv[2];
 const informe = {};
 for (const ciudad of Object.keys(CENTRO)) {
   if (solo && ciudad !== solo) continue;
-  const osm = await overpass(ciudad); const ix = indice(osm);
+  const osm = await overpass(ciudad); const ix = indice(osm, ciudad);
   const out = { ciudad, anio: ITI.anio, licencia_mapa: '© colaboradores de OpenStreetMap (ODbL)', hermandades: {} };
   let tot = 0, ok = 0; const fallos = {};
   for (const [slug, e] of Object.entries(ITI.hermandades)) {

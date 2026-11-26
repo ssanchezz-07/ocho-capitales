@@ -151,8 +151,20 @@
    "lon": -5.9659325,
    "osm": "way/72800137",
    "nombre_osm": "Parroquia de la Inmaculada Concepción",
-   "fuente": "https://hermandaddelased.org/la-hermandad-de-penitencia-historia-de-la-cofradia-de-nazarenos/",
+   "fuente": "https://hermandaddelased.org/la-hermandad-sacramental-los-caballeros-de-la-inmaculada-y-adoradores-del-santisimo-sacramento/",
    "fuente_coordenadas": "OpenStreetMap way 72800137 («Parroquia de la Inmaculada Concepción», en Nervión, junto a la calle Cristo de la Sed)"
   }
+ },
+ "la-borriquita-sevilla": {
+  "templo": {
+   "nombre": "Iglesia del Salvador",
+   "lat": 37.3901391,
+   "lon": -5.9925702,
+   "osm": "way/18546585",
+   "nombre_osm": "Iglesia del Salvador",
+   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+   "fuente_coordenadas": "OpenStreetMap way 18546585"
+  },
+  "motivo_fuente": "La ficha del portal cita ahora la página archivada del Señor de la Sagrada Entrada (hermandaddelamor.net), que da «C/ Villegas 4» pero no nombra el Salvador; se deja la fuente publicada, que sí lo dice. Pendiente: una página oficial que lo diga."
  }
 }
