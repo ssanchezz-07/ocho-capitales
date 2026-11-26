@@ -3,11 +3,12 @@
 ## 2026-11-26 · Sevilla: plazas sueltas de la red, calles estimadas y cinco sedes más (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
 Sigue con lo que dejó pendiente la entrada siguiente.
 - **Medido contra lo publicado (4a6ea529):**
-  - trazado fuera de las calles: de 16.292 m a 12.388 m (`fuera-de-calle.cjs` de la revisión);
-  - tramos en recta de más de 60 m: de 219 a 176;
+  - trazado fuera de las calles: de 16.292 m a 13.428 m (`fuera-de-calle.cjs` de la revisión);
+  - tramos en recta de más de 60 m: de 219 a 187;
   - calles estimadas: de 73 a 53;
   - salidas y entradas estimadas: de 49 a 29;
-  - cambian 27 hermandades.
+  - paradas falsas en los tramos que cambian: de 10 a 8;
+  - cambian 24 hermandades.
 - **Cómo se ha decidido qué entra:**
   - Cada isla, cada alias y cada sede se probó por separado, en una copia aparte, contra lo publicado (`scratchpad/tanda-plano/variantes.cjs` y `sedes-variantes.cjs`).
   - Se rechazó lo que empeoraba algún tramo:
@@ -22,22 +23,28 @@ Sigue con lo que dejó pendiente la entrada siguiente.
     - «vias»: aceras, pasos de peatones y peatonales de OSM sin nombre, bajadas con Overpass. Son los caminos más cortos (≤ 300 m, sin escaleras ni carriles bici) de cada isla a la red principal.
     - «contiguos»: vértices de la plaza a menos de 7 m de un nodo de la red. Es la misma esquina, sin nodo compartido en OSM; pasa en las plazas dibujadas como un área sin ninguna vía.
     - `enrutar.mjs` no escribe la ciudad si una unión no toca la caché ni otra unión, igual que con los ENLACES.
-  - **Entran 9:** Plaza de España, la glorieta de Covadonga, el Altozano con San Jacinto, la Ronda de Padre Pío, Ramón Rueda, San Juan de la Palma, Doña Teresa Enríquez, Santa Ana y San Román.
-    - Por ejemplo, La Paz pasa de 1.060 a 336 m fuera de las calles. Las Penas, las Siete Palabras y Pasión y Muerte quedan a 0.
-  - **No entran 4:**
+  - **Entran 8:** Plaza de España, la glorieta de Covadonga, la Ronda de Padre Pío, Ramón Rueda, San Juan de la Palma, Doña Teresa Enríquez, Santa Ana y San Román.
+    - Por ejemplo, La Paz pasa de 1.060 a 532 m fuera de las calles en la cruz y de 1.020 a 636 m en el palio. Las Penas, las Siete Palabras y Pasión y Muerte quedan a 0.
+  - **No entran 5:**
+    - el Altozano con San Jacinto. El banco de pruebas lo aceptó, pero la revisión (`wf_cc62e7ef-d1b`, NO APTO) vio que con él El Cachorro y La O iban por el Callejón de la Inquisición, que son escaleras y un túnel por los que no pasa un paso. El banco no lo vio porque esas vías tienen nombre y no cuentan como trazado fuera de las calles. Sin esa isla, El Cachorro, La O y San Gonzalo quedan como en lo publicado;
     - el puente de Isabel II (La O): un rodeo nuevo y más trazado fuera de las calles en La Estrella;
     - San Lorenzo: un espolón de 20 a 30 m;
     - los Terceros (La Cena): un rodeo nuevo;
     - la avenida de Roma (Santa Genoveva): un rodeo nuevo.
-  - Quedan cuatro espolones nuevos de 20 a 50 m. Todos están en tramos que mejoran en 100 m o más: Plaza de España (La Paz), Ramón Rueda (Pino Montano), Avda. Teatinos (Bendición y Esperanza) y Pureza (Pasión y Muerte).
+  - Quedan cuatro espolones nuevos, según `rodeos.cjs`:
+    - Plaza de España (La Paz, cruz): 30 m, en un tramo que baja 528 m fuera de las calles;
+    - Avda. Teatinos (Bendición y Esperanza): 30 m;
+    - Pureza (Pasión y Muerte): de 30 a 50 m, en un tramo que queda sin trazado fuera de las calles;
+    - Ramón Rueda (Pino Montano, palio): 20 m, con solo 28 m menos fuera de las calles por tramo. El banco lo midió en 10 m.
+  - Se probó también a quitar de la red todas las escaleras y túneles. Se descartó: en la Encarnación y Laraña OSM une la plaza por escaleras y pasos bajo las Setas, y salían idas y vueltas de 50 m y rodeos de 500 m en 15 hermandades.
 - **Calles estimadas por cómo vienen escritas:** se buscaron en la caché por su nombre completo, y se comprobó que pasan a menos de unos 450 m de sus vecinos en el itinerario.
-  - **Entran 19 alias** (`alias-calles-sevilla.json`):
+  - **Entran 18 alias** (`alias-calles-sevilla.json`):
     - «J. L. de la Vega» → Javier Lasso de la Vega;
     - «Alcaicería» → Alcaicería de la Loza;
     - «S. Ángela de la Cruz» → Santa Ángela de la Cruz;
     - «J. de las Tres Caídas» y «Jesús Tres Caídas» → Jesús de las Tres Caídas;
     - «Miguel Mañara» → Miguel de Mañara;
-    - «Amorde Dios» → Amor de Dios (errata del PDF);
+    - «Amorde Dios» → Amor de Dios: el PDF lo imprime así, y es la calle que hay entre Cuna y la Campana, sus vecinos (no hay otra fuente del recorrido calle a calle);
     - «Marqués de Mina» → Marqués de la Mina;
     - «Fray Cefer. Glez.» → Fray Ceferino González;
     - «Puerta Carmona» → Puerta de Carmona;
@@ -48,8 +55,8 @@ Sigue con lo que dejó pendiente la entrada siguiente.
     - «Alfonso Lasso de la Vega» → Alfonso Lasso de Vega;
     - «Avda. La Plata» → Avenida de la Plata;
     - «Avda. Cid» → Avenida de El Cid;
-    - «Barcelona» → Calle Barcelona;
     - «Madre María Purísima» → Plaza María Purísima de la Cruz.
+  - «Barcelona» → Calle Barcelona se probó y se quitó: no cambiaba ningún punto.
   - **No entran 10.** Con ellos, el dibujo empeoraba porque la red de calles está incompleta. Los puntos se quedan estimados entre sus vecinos:
     - «J. del Gran Poder», «Alameda» y «Conde de Barajas»: más trazado fuera de las calles en La Resurrección;
     - «Avda. Greco»: un rodeo de 1,8 km en San Pablo;
@@ -79,8 +86,17 @@ Sigue con lo que dejó pendiente la entrada siguiente.
   - En el plano de fuera de temporada se pasa de 57 a 62 sedes.
 - **Regeneración:**
   - `recorridos/sevilla.json`, con `geocodificar.mjs` y `enrutar.mjs`. Las extraordinarias se quedan como estaban.
-  - Regenerado con el código final, sale idéntico al banco de pruebas.
+  - Regenerado con el código final, sale idéntico. (Del banco de pruebas se quitaron después la isla del Altozano y el alias «Barcelona».)
   - `informe-geocodificacion.json`: se conserva Jaén y se pone al día Sevilla. Los nombres sin situar bajan de 25 a 18.
+- **Otros cambios que trae, vistos en la revisión:**
+  - el Pasaje Francisco Molina (un paso bajo un edificio) lo usan dos tramos más: La Borriquita, cruz, de Cuna a «Amorde Dios», y La Bofeta, palio, de Cuna a «J. L. de la Vega». Lo publicado ya pasaba por él en trece;
+  - La Esperanza de Triana, palio: «Párroco D. Eugenio» cae en su esquina con Pureza, en el mismo punto que Pureza (media hora parado), aunque el tramo baja de 256 a 140 m fuera de las calles;
+  - Santa Genoveva, palio: con la sede, Almirante Topete queda a 94 m del templo y el tramo siguiente sale a 30,7 m/min;
+  - Los Negritos, palio: la entrada, estimada, se mueve 69 m; La Borriquita, cruz: la Campana se mueve 17 m, al punto que ya usan los demás tramos;
+  - en Bendición y Esperanza, «Parroquia Santa Genoveva» sigue estimada, a 165 m de la sede nueva: se podría anclar a ella.
+- **Código:**
+  - `enrutar.mjs` comprueba que todas las uniones queden en la red principal (la componente mayor del grafo) y, si no, dice cuáles y no escribe la ciudad;
+  - `geocodificar.mjs` las carga sin comprobar, porque enrutar no escribiría.
 - **Sigue pendiente:**
   - anclar las sedes a su puerta (lo piden El Cerro, Los Estudiantes y los últimos metros de las demás);
   - la red de calles completa, con las vías sin nombre (es la causa de lo rechazado);

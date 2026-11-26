@@ -90,7 +90,7 @@
  },
  "las-cigarreras-sevilla": {
   "templo": null,
-  "motivo_templo": "sede canónica: Capilla de la Fábrica de Tabacos, Los Remedios (Regla 4, web oficial; OSM way/222190216; en templo_encontrado). Su web publica un proyecto de reforma de la capilla. En la Semana Santa de 2026 salió del centro (su primera calle es Almirante Apodaca, junto a Los Terceros), así que esa capilla haría salir el cortejo de Los Remedios: pendiente de decidir qué templo usar en el plano",
+  "motivo_templo": "sede canónica: Capilla de la Fábrica de Tabacos, Los Remedios (Regla 4, web oficial; calle Juan Sebastián Elcano 7; OSM way/222190216; en templo_encontrado). En la Semana Santa de 2026 salió del centro (su primera calle es Almirante Apodaca, junto a Los Terceros), así que esa capilla haría salir el cortejo de Los Remedios: pendiente de decidir qué templo usar en el plano",
   "templo_encontrado": {
    "nombre": "Capilla de la Fábrica de Tabacos (Los Remedios)",
    "lat": 37.3776058,
@@ -160,7 +160,7 @@
  },
  "dolores-de-torreblanca-sevilla": {
   "templo": null,
-  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
+  "motivo_templo": "templo encontrado con fuente oficial (su web la da como sede canónica) y edificio en OSM (way/428041234, sin nombre; la dirección, plaza de las Acacias 1, es de OSM; en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
   "templo_encontrado": {
    "nombre": "Parroquia de San Antonio de Padua (Torreblanca)",
    "lat": 37.3835658,
@@ -217,7 +217,7 @@
  },
  "los-estudiantes-sevilla": {
   "templo": null,
-  "motivo_templo": "templo «Capilla de la Universidad» (fuente oficial; OSM way/120225599, building=chapel sin nombre; en templo_encontrado). Su centro queda dentro de la antigua Fábrica de Tabacos, a 108 m de la calle, y la salida y la entrada se dibujaban en recta a través del edificio (26-nov): pendiente de anclar la sede a su puerta",
+  "motivo_templo": "templo «Capilla de la Universidad» (fuente oficial; OSM way/120225599, building=chapel sin nombre; en templo_encontrado). Su centro queda dentro de la antigua Fábrica de Tabacos, y la salida y la entrada se dibujaban con 108 m en recta a través del edificio hasta la calle (26-nov): pendiente de anclar la sede a su puerta",
   "templo_encontrado": {
    "nombre": "Capilla de la Universidad (antigua Fábrica de Tabacos, calle San Fernando)",
    "lat": 37.3811504,
@@ -315,7 +315,7 @@
  },
  "la-carreteria-sevilla": {
   "templo": null,
-  "motivo_templo": "la web oficial da su sede canónica en la calle Real de la Carretería 15 (hermandaddelacarreteria.org/capilla-de-la-carreteria/), pero el edificio no está en OSM como templo: el 15 es building=residential (way/422059710)"
+  "motivo_templo": "la web oficial la da como su sede canónica, en la calle Real de la Carretería (hermandaddelacarreteria.org/capilla-de-la-carreteria/), en el número 15 según su página de contacto; pero el edificio no está en OSM como templo: el 15 es building=residential (way/422059710)"
  },
  "pasion-y-muerte-sevilla": {
   "templo": null,

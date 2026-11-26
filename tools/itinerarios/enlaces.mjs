@@ -1,8 +1,8 @@
+// Ocho Capitales: uniones a mano entre calles que se tocan, comunes a enrutar.mjs (que dibuja los recorridos por las calles) y a
+// geocodificar.mjs (que reparte por ese mismo camino las calles que caían en un mismo punto: repartir()).
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-// Ocho Capitales: uniones a mano entre calles que se tocan, comunes a enrutar.mjs (que dibuja los recorridos por las calles) y a
-// geocodificar.mjs (que reparte por ese mismo camino las calles que caían en un mismo punto: repartir()).
 // Uniones que faltan en el grafo entre calles que se tocan: la caché (geocodificar.mjs, overpass()) solo trae vías con nombre, y
 // los tramos sin nombre que las unen (bocas de una glorieta, pasos) no están; las áreas peatonales, en polígono, además solo se
 // unen a la red por algunos vértices. [nodo de una vía, nodo de la otra], coordenadas exactas de la caché.
@@ -20,7 +20,7 @@ export const ENLACES = {
   ],
 };
 // Uniones de las plazas que quedaban sueltas (islas), en uniones-osm-<ciudad>.json: vías de OSM sin nombre (aceras, pasos, peatonales)
-// y esquinas contiguas a menos de 7 m. Devuelve sus líneas ([[lat, lon], …]) para meterlas en el grafo como aristas, nunca como calles.
+// y vértices de la plaza a menos de 7 m de un nodo de la red (la misma esquina). Devuelve sus líneas ([[lat, lon], …]) para meterlas en el grafo como aristas, nunca como calles.
 export function uniones(ciudad) {
   const f = path.join(path.dirname(fileURLToPath(import.meta.url)), `uniones-osm-${ciudad}.json`);
   if (!fs.existsSync(f)) return [];

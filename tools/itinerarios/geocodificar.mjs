@@ -259,7 +259,7 @@ function situar(ix, ciudad, h, pts) {
 //   Redención): el primero se queda y los demás van a 1/k, 2/k… del tramo;
 // · una calle que cae pegada (a menos de 40 m) a la anterior, las dos de franja («San Fernando», a 35 m de Puerta de Jerez en La
 //   Candelaria y Las Cigarreras, y luego el cortejo andaba toda la calle de golpe): va a la mitad del tramo (varias: 1/(k+1)…).
-// El tramo va por la red de calles de enrutar.mjs (las mismas vías y ENLACES), desde ese vértice hasta el de la última calle del
+// El tramo va por la red de calles de enrutar.mjs (las mismas vías, ENLACES y uniones de plazas sueltas), desde ese vértice hasta el de la última calle del
 // grupo más cercano al punto siguiente. Cada punto va al nodo del tramo, en su propia calle, más cercano a su fracción, siempre que:
 // · desde él quede menos camino hasta el punto siguiente que desde el vértice, y no más que desde el punto repartido anterior (por
 //   la red; si por ella no se llega, en recta, como lo dibuja enrutar.mjs); y más camino andado desde el punto anterior que hasta el
