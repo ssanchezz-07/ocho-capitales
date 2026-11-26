@@ -38,10 +38,13 @@ Son los pendientes que dejó la entrada siguiente.
   - **Dos hermandades se empalman a mano.** Al volver a ejecutar `geocodificar.mjs` reaparece el problema en las dos.
     - El problema es el mismo: el palio no tiene sede, y con el nombre unido el primer nombre reconocido es una calle larga. El ancla de `situar()` toma su primer tramo de OSM.
     - **Los Panaderos:** «Jesús del Gran» y «Poder» ya caían en el mismo punto de la calle. Al regenerar, el palio tomaba el tramo más lejano de la calle, a 953 m de la Campana, salía «dudoso» y se quedaba estimado a 107 m.
-    - **Cristo de Burgos:** «Doña María» y «Coronel» caían en el cruce con Dueñas. Al regenerar, el palio se iba 96 m más allá del giro, hacia Bustos Tavera, y dibujaba un pico de ida y vuelta. Lo vio la revisión de 38bfaf38.
+    - **Cristo de Burgos:** «Doña María» y «Coronel» caían en el cruce con Dueñas. Al regenerar pasaban dos cosas. Lo vio la revisión de 38bfaf38.
+      - El punto se iba unos 90 m más allá del giro, hacia Bustos Tavera, y el cortejo daba un rodeo.
+      - Feria subía 57 m, y el trazado iba y volvía.
+      - El empalme deja los dos como en 9f1d563c.
     - En las dos se unen las dos mitades en su punto, con el trazado de la segunda. El arreglo de fondo es darles sede con fuente en `site/data/sedes/sevilla.json`: Capilla de San Andrés para Los Panaderos y Parroquia de San Pedro para Cristo de Burgos.
 - Sigue igual: lo que ya estaba pendiente del plano (franjas que empujan horas oficiales) y de erCuñao (solo mira un tramo: el paso o, si no hay, el palio).
-- **Pendiente, visto en la revisión de 38bfaf38 (`wf_d19d4d22-fe0`).** Todo ya estaba en 9f1d563c; esta tanda no lo empeora.
+- **Pendiente, visto en la revisión de 38bfaf38 (`wf_d19d4d22-fe0`) y en la de 15af05de.** Todo ya estaba en 9f1d563c, salvo el rodeo de El Cerro, que trae el alias (ver abajo).
   - **Columnas del Consejo mal leídas.** Ya citan al Consejo, que es de donde salen, pero su contenido no casa con la página:
     - **Redención, palio (p. 6)**, el tramo que usa erCuñao:
       - lee «17:05 Lasso Vega» donde la página pone «17:00 J. Lasso Vega»;
@@ -60,11 +63,16 @@ Son los pendientes que dejó la entrada siguiente.
   - **Texto pegado de la celda vecina:**
     - Dulce Nombre: «Argote de MolinaP.» y «Argote de MolinaMig.»;
     - El Cerro: «CajalAvda. Ramón y Cajal»;
-    - La Resurrección: «Palos S.», en la franja 17:55.
+    - La Resurrección, cruz (Consejo), mucho más rota que eso:
+      - horas de 9:00 a 15:00 en franjas de 13:00 a 21:30;
+      - nombres como «Palos S.», «Campana J. del», «S. Miguel Plaza», «Francos Palos» o «Entrada Pl.».
   - **Otros:**
-    - La Misión: «Páez de Ribera» casa con una calle «Ribera» a 4 km. Falta el alias «Calle Páez de Rivera».
+    - La Misión: «Páez de Ribera» casa con una calle «Ribera» a unos 5-6 km. Se descarta y el punto queda estimado, pero arrastra hacia el norte el punto de Manuel Siurot. Falta el alias «Calle Páez de Rivera», que existe en OSM.
     - La Paz: las dos torres de la Plaza de España caen en el mismo punto, porque `norm()` quita el paréntesis.
     - El Cerro: hasta la avenida de la Constitución, `enrutar.mjs` dibuja un rodeo de 1.730 m por la Glorieta de San Diego.
+      - Lo trae el alias de esta tanda. Antes el punto era estimado y ese tramo medía 1.187 m.
+      - En conjunto, de Carlos V a Arfe, pasa de 2.348 a 2.080 m.
+      - Falta ver por qué el grafo no pasa por la calle San Fernando.
     - `auditar.mjs` cuenta las rectas con el `via` del punto de llegada. Debería usar el del de salida, y por eso da avisos falsos.
     - En `A_MANO`, una entrada sin `fuente` hereda la de `ORIGEN` aunque su `pdf` sea otro. Hoy solo le afecta a El Santo Entierro, y cuadra.
 
