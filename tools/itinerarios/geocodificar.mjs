@@ -254,6 +254,14 @@ function situar(ix, ciudad, h, pts) {
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
   repartir(res, ix.red);
+  // y si la salida del año trae «entrada_por» (su itinerario oficial entra por calles que no están entre los puntos de la Nómina: Las
+  // Cigarreras en 2026, por Doña María Coronel y Bustos Tavera), el punto anterior a la entrada lleva «por»: los nodos por los que
+  // enrutar.mjs tiene que hacer pasar el camino. Sin eso, el camino más corto la metía por Almirante Apodaca, la calle de la salida.
+  if (sa && Array.isArray(sa.entrada_por) && sa.entrada_por.length) {
+    const iE = res.length - 1;
+    if (iE > 0 && res[iE].como === 'sede' && /^(entrada|encierro)\b/.test(norm(res[iE].lugar))) res[iE - 1].por = sa.entrada_por.map((q) => q.slice(0, 2));
+    else console.error(`ENTRADA_POR: ${h.slug}: el último punto no es la entrada en su sede; no se usa`);
+  }
   // (la salida y la entrada sin sede se estiman después, con todos los tramos de la hermandad: sedeEstimada; y lo que queda sin
   // situar entre dos puntos, en interpolar)
   return { res, sin, sede: pSede };

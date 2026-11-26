@@ -5,6 +5,9 @@
 // Si el camino es demasiado largo para ser verosímil (más de 2,6 veces la recta y 500 m de más), se deja la recta:
 // mejor una recta honesta que un rodeo inventado.
 // Escribe en cada punto de site/data/recorridos/<ciudad>.json el campo «via»: [[lat,lon],…] hasta el punto siguiente.
+// Si un punto trae «por» ([[lat,lon],…], lo pone geocodificar.mjs cuando el itinerario oficial va por calles que no están entre los
+// puntos), el camino hasta el siguiente pasa por esos nodos, en orden, aunque no sea el más corto. Tienen que ser nodos de la caché;
+// si no lo son o no hay camino, se avisa, no se escribe la ciudad y el script sale con error.
 // Uso: node tools/itinerarios/enrutar.mjs [ciudad]      (después de geocodificar.mjs; antes de build.mjs)
 import fs from 'node:fs';
 import path from 'node:path';
@@ -97,7 +100,7 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
     const ruta = [t]; let u = t; while (u !== s) { u = de.get(u); ruta.push(u); }
     return { largo: dist.get(t), nodos: ruta.reverse() };
   }
-  let tramos = 0, porCalle = 0, rectas = 0, mismos = 0;
+  let tramos = 0, porCalle = 0, rectas = 0, mismos = 0; const malPor = [];
   for (const h of [...Object.values(R.hermandades), ...Object.values(R.extraordinarias || {})]) for (const pts of Object.values(h.tramos)) {
     const v = pts.map((p, i) => [p, i]).filter(([p]) => p.lat != null);
     for (const [p] of v) delete p.via;
@@ -107,13 +110,29 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
       if (recta < 25) { mismos++; continue; }
       const s = cercano(ax, ay), t = cercano(bx, by);
       if (s < 0 || t < 0 || s === t) { rectas++; continue; }
-      const c = camino(s, t, recta * 2.6 + 500);
-      if (!c || c.largo > recta * 2.6 + 500) { rectas++; continue; }
+      let c = null;
+      if (Array.isArray(A.por) && A.por.length) { // pasa por los nodos de «por», en orden; cada trozo, con el mismo límite que un tramo
+        const ws = A.por.map((q) => id.get((+q[0]).toFixed(7) + ',' + (+q[1]).toFixed(7)));
+        if (ws.some((w) => w === undefined || !ady[w].length)) { malPor.push(`${A.lugar}: «por» con nodos que no están en la red`); continue; }
+        const seq = [s, ...ws, t], ns = [s]; let largo = 0;
+        for (let j = 1; j < seq.length && ns; j++) {
+          if (seq[j] === seq[j - 1]) continue;
+          const rj = Math.hypot(nodos[seq[j]][2] - nodos[seq[j - 1]][2], nodos[seq[j]][3] - nodos[seq[j - 1]][3]), cj = camino(seq[j - 1], seq[j], rj * 2.6 + 500);
+          if (!cj || cj.largo > rj * 2.6 + 500) { malPor.push(`${A.lugar}: sin camino por «por»`); ns.length = 0; break; }
+          ns.push(...cj.nodos.slice(1)); largo += cj.largo;
+        }
+        if (!ns.length) continue;
+        c = { largo, nodos: ns };
+      } else {
+        c = camino(s, t, recta * 2.6 + 500);
+        if (!c || c.largo > recta * 2.6 + 500) { rectas++; continue; }
+      }
       const linea = dp(c.nodos.map((i) => [nodos[i][2], nodos[i][3], nodos[i][0], nodos[i][1]]), 3);
       A.via = linea.slice(1, -1).map((q) => [+q[2].toFixed(6), +q[3].toFixed(6)]);
       porCalle++;
     }
   }
+  if (malPor.length) { console.error(`POR: ${malPor.length} ${malPor.length === 1 ? 'tramo' : 'tramos'} de ${ciudad} sin camino por sus nodos «por»; no se escribe su recorrido:`, malPor.join(' · ')); process.exitCode = 1; continue; }
   fs.writeFileSync(fRec, JSON.stringify(R));
   console.log(`${ciudad}: ${tramos} tramos · ${porCalle} por calles · ${rectas} en recta · ${mismos} en el mismo punto · grafo ${nodos.length} nodos`);
 }

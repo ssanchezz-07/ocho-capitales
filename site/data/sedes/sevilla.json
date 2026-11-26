@@ -2,7 +2,7 @@
  "capital": "sevilla",
  "nombre": "Sevilla",
  "actualizado": "2026-11-26",
- "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «salida» {anio, nombre, lat, lon, osm, fuente, motivo}: el templo del que salió la cofradía ese año, si no fue su sede (el plano de ese año sale y entra ahí; el de fuera de temporada sigue en la sede); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «salida» {anio, nombre, lat, lon, osm, punto?, entrada_por?, fuente, motivo}: el templo del que salió la cofradía ese año, si no fue su sede (el plano de ese año sale y entra ahí; el de fuera de temporada sigue en la sede); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
  "hermandades": {
   "la-borriquita-sevilla": {
    "nombre": "La Borriquita",
@@ -490,6 +490,13 @@
      -5.9875204
     ],
     "fuente_punto": "OpenStreetMap: nodo de la calle Sol (way 28026682) frente a la iglesia; su itinerario oficial de 2026 sale por Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y entra por Bustos Tavera, plaza de Los Terceros y Sol",
+    "entrada_por": [
+     [
+      37.3948333,
+      -5.987982
+     ]
+    ],
+    "fuente_entrada_por": "Itinerario oficial de la hermandad de 2026: «… Doña María Coronel, Bustos Tavera, plaza de Los Terceros, Sol e Iglesia de Los Terceros (00:45 horas)»; en los puntos de la Nómina no está Bustos Tavera. El nodo es el cruce de Doña María Coronel con Bustos Tavera en OpenStreetMap",
     "fuente_coordenadas": "OpenStreetMap way 180110804 (el mismo edificio que la sede de La Cena)",
     "motivo": "En la Semana Santa de 2026 salió y entró en Los Terceros por las obras de su capilla; su sede sigue siendo la capilla de la Fábrica de Tabacos (Pablo, 26-nov). Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5"
    }

@@ -1,5 +1,5 @@
 {
- "_leeme": "Correcciones a mano de site/data/sedes/sevilla.json. Templo: nombre de la ficha oficial (portal), edificio de OpenStreetMap elegido a mano porque OSM lo nombra de otra forma, comprobando que está en el barrio que da la ficha. null = sin edificio con fuente. «salida.punto» [lat, lon]: el nodo de la red de calles por el que sale y entra ese año (si falta, el centro del edificio). «salida.punto» [lat, lon]: el nodo de la red de calles por el que sale y entra ese año (si falta, el centro del edificio).",
+ "_leeme": "Correcciones a mano de site/data/sedes/sevilla.json. Templo: nombre de la ficha oficial (portal), edificio de OpenStreetMap elegido a mano porque OSM lo nombra de otra forma, comprobando que está en el barrio que da la ficha. null = sin edificio con fuente. «salida»: el templo del que salió ese año, si no fue su sede; «salida.punto» [lat, lon]: el nodo de la red de calles por el que sale y entra ese año (si falta, el centro del edificio); «salida.entrada_por» [[lat, lon], …]: nodos de la red por los que pasa, en orden, el último tramo hasta la entrada, cuando su itinerario oficial va por calles que no están entre los puntos de la Nómina.",
  "la-amargura-sevilla": {
   "templo": {
    "nombre": "San Juan de la Palma",
@@ -111,6 +111,13 @@
     -5.9875204
    ],
    "fuente_punto": "OpenStreetMap: nodo de la calle Sol (way 28026682) frente a la iglesia; su itinerario oficial de 2026 sale por Sol, plaza de Los Terceros, Capataz Manuel Santiago y Alhóndiga, y entra por Bustos Tavera, plaza de Los Terceros y Sol",
+   "entrada_por": [
+    [
+     37.3948333,
+     -5.987982
+    ]
+   ],
+   "fuente_entrada_por": "Itinerario oficial de la hermandad de 2026: «… Doña María Coronel, Bustos Tavera, plaza de Los Terceros, Sol e Iglesia de Los Terceros (00:45 horas)»; en los puntos de la Nómina no está Bustos Tavera. El nodo es el cruce de Doña María Coronel con Bustos Tavera en OpenStreetMap",
    "fuente_coordenadas": "OpenStreetMap way 180110804 (el mismo edificio que la sede de La Cena)",
    "motivo": "En la Semana Santa de 2026 salió y entró en Los Terceros por las obras de su capilla; su sede sigue siendo la capilla de la Fábrica de Tabacos (Pablo, 26-nov). Lo dan así el itinerario oficial de la hermandad («Iglesia de Los Terceros (17:00 horas)… e Iglesia de Los Terceros (00:45 horas)») y la Nómina oficial del Consejo de 2026, p. 5"
   }
