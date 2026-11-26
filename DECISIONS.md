@@ -21,7 +21,7 @@ Cierra lo que dejó pendiente del plano la entrada siguiente.
     - Si algo falla, el grupo entero se queda como estaba.
     - Solo se mueven puntos con hora de franja (`fila`). Nunca se mueven los de hora oficial exacta (`hora`), así que la carrera oficial no cambia.
   - **Primera revisión (agente auditor del plano, sobre 05cc936e): NO APTO.**
-    - En esa versión, cada punto iba a mitad de un lado del tramo, y el tramo se medía hasta el vértice más cercano en línea recta. Así, cuatro tramos se dibujaban peor que en lo publicado:
+    - En esa versión, cada punto iba a mitad de un lado del tramo y no había condiciones de avance. (El tramo sigue acabando en el vértice de la última calle más cercano en línea recta al punto siguiente; lo que cambió es dónde va cada punto y qué se le exige.) Así, cuatro tramos se dibujaban peor que en lo publicado:
       - **Pl. San Leandro, en Redención:** se enganchaba a un área suelta de la red y el trazado salía en recta, 108 m fuera de las calles.
       - **Feria, en La Macarena:** zigzag.
       - **Castelar, en Jesús Despojado:** ida y vuelta de 34 m.
@@ -38,7 +38,7 @@ Cierra lo que dejó pendiente del plano la entrada siguiente.
       - San Gonzalo baja de 556 a 236 m.
       - Solo empeoran los últimos metros hasta las tres sedes nuevas (el centro del edificio queda dentro de la manzana) y El Sol (32 m).
       - Lo de El Sol es la unión documentada de Carlos V con la glorieta de Don Juan de Austria, ahora que su paseo va junto a los jardines.
-    - **Espolones nuevos:** solo uno de 10 m en Gerona, a la salida de Cristo de Burgos. Viene de su sede nueva, no del reparto.
+    - **Espolones nuevos:** solo uno, en Gerona, a la salida de Cristo de Burgos. Mide unos 17 m (`rodeos.cjs` lo cuenta como 10 porque mide de 10 en 10). Viene de su sede nueva, no del reparto: antes la salida se estimaba a 156 m.
     - **Ritmo máximo:** solo sube en la cruz de Las Cigarreras, de 20 a 25 m/min, entre Puerta de Jerez y los Jardines de Murillo, que ya están en su sitio.
     - **Alcance:** cambian 25 hermandades y 83 puntos cambian de sitio.
   - **Las 18 paradas que quedan:**
@@ -58,20 +58,20 @@ Cierra lo que dejó pendiente del plano la entrada siguiente.
     - Huelva y Almería no están regeneradas enteras (ver «Empalmes a mano…»), y la caché de OSM de Jaén no está en esta copia: la caché no va al repositorio. Queda para cuando se regeneren.
 - **«Jardines de Murillo»** (Las Cigarreras, cruz y palio):
   - En OSM es un parque (way 22747191), no una calle, y casaba con la calle Murillo, a 1 km.
-  - Ahora es un punto fijo nuevo (`LUGARES`, como «calle», no en rojo): el vértice del Paseo de Catalina de Ribera (way 28113943) más cercano al centro del jardín, a 23 m.
+  - Ahora es un punto fijo nuevo (`LUGARES`, como «calle», no en rojo): el vértice del Paseo de Catalina de Ribera (way 28113943) más cercano al centro del jardín, a 23 m. Ese centro es la media de los vértices del parque; el del recuadro quedaría a 101 m, porque el parque es largo y estrecho.
   - El paseo va por su borde este, y es el que La Candelaria nombra en el mismo tramo.
 - **«Paseo Catalina de Ribera»** (alias → «Paseo de Catalina de Ribera»):
   - Antes casaba solo con el trozo corto del norte (way 67377872, «Paseo Catalina de Ribera»), y El Sol y La Candelaria lo ponían en la punta norte.
   - Ahora va por el paseo de los jardines.
 - **Sedes con fuente oficial** (`rutas/sedes-sevilla-correcciones.json`; `site/data/sedes/sevilla.json` regenerado con `rutas/sedes.mjs`; de 54 a 57 templos):
   - **Los Panaderos:** Capilla de San Andrés.
-    - Fuente: la web de la hermandad, en sus datos de contacto («Calle Orfila Nº 3»).
+    - Fuente: la página «Sede» de su web (la capilla de San Andrés, en la calle Orfila, con las imágenes titulares en su altar). El número, «Calle Orfila Nº 3», está en su página de contacto.
     - Mapa: OSM way 428744717, «Capilla de San Andrés. Hermandad de los Panaderos», con esa dirección. No estaba en la caché porque es `building=chapel` sin `amenity=place_of_worship`.
   - **Cristo de Burgos:** Parroquia de San Pedro.
     - Fuente: su web, en «Sede Canónica».
-    - Mapa: OSM way 119432044, «Iglesia de San Pedro», plaza de San Pedro 1. No es la de San Pedro y San Pablo, que está en otro barrio.
+    - Mapa: OSM way 119432044, «Iglesia de San Pedro», plaza de San Pedro 1. La web da la dirección de la hermandad, plaza del Cristo de Burgos 20, junto a la iglesia. No es la de San Pedro y San Pablo, que está en otro barrio.
   - **La Sed:** Parroquia de la Concepción, en Nervión.
-    - Fuente: la historia de la hermandad sacramental, en su web. Cuenta su fundación en la «Parroquia de la Concepción Inmaculada» y la llama «nuestra sede canónica».
+    - Fuente: la historia de la hermandad sacramental, en su web. Cuenta que nació en la «Parroquia de la Concepción Inmaculada», en Nervión, y habla del altar mayor de «nuestra sede canónica», aunque esa frase no nombra el templo.
     - La historia de la cofradía (misma web) cuenta que la cruz de guía sale «en la puerta de la Concepción».
     - Mapa: OSM way 72800137, «Parroquia de la Inmaculada Concepción», a 39 m de la calle Cristo de la Sed.
   - **Efecto en el plano:** la salida y la entrada dejan de ser estimadas, y **Los Panaderos y Cristo de Burgos ya no llevan empalme a mano:** se regeneran como las demás. Su problema del ancla venía de no tener sede.
@@ -80,6 +80,17 @@ Cierra lo que dejó pendiente del plano la entrada siguiente.
     - Se deja la fuente publicada, que sí lo nombra.
     - Pendiente: una página oficial que lo diga. La web de la Hermandad del Amor no se deja leer sin navegador.
   - **Pendiente, opcional:** la casa hermandad de Los Panaderos («Calle Cervantes s/n», en la misma página de contacto).
+- **Segunda revisión** (workflow `wf_bd0fefdb-024`: trazado, código y datos por separado, y un juez que comprueba): **APTO**, sin bloqueantes.
+  - Lo regeneró en su copia y le salió idéntico. También comprobó que los cuatro casos del NO APTO están bien, que la carrera oficial y las horas oficiales no cambian y que las cifras de arriba son ciertas.
+  - De sus mejorables, entran en esta misma subida:
+    - el cierre de `geocodificar.mjs` cuando un tramo acaba en un grupo de franja (`n >= res.length`, como en la primera versión). Hoy no pasa en Sevilla, pero podía pasar al regenerar otras capitales;
+    - los comentarios: la red y `trazo()` se parecen a las de `enrutar.mjs`, pero no son idénticas;
+    - las fuentes y precisiones de esta entrada.
+  - Quedan como pendientes:
+    - poner cada sede en su puerta o en la vía más cercana, y no en el centro del edificio (los últimos metros fuera de las calles);
+    - `Monticulo`, que está duplicado en `geocodificar.mjs` y `enrutar.mjs`;
+    - Huelva: al regenerarla con este código, se mueven 4 puntos de 3 hermandades (La Victoria, Vera Cruz y Santo Entierro), sin más metros fuera de las calles, pero alargando algún dibujo; hay que revisarlo entonces;
+    - al regenerar Sevilla desde cero entra la extraordinaria del Amparo (8-nov), que se deja fuera a mano.
 - **Regeneración:**
   - `recorridos/sevilla.json`, con `geocodificar.mjs` y `enrutar.mjs`: cambian 25 hermandades, todas por lo de arriba. Las extraordinarias se quedan como estaban.
   - Regenerado con el código final, sale idéntico.

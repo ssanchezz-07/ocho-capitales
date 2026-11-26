@@ -49,7 +49,9 @@ async function overpass(ciudad) {
   throw new Error('Overpass sin respuesta para ' + ciudad);
 }
 
-// red de calles andables: la misma de enrutar.mjs (vías, filtros y ENLACES), para que repartir() siga el camino que se dibuja
+// red de calles andables con las mismas vías, filtros y ENLACES que enrutar.mjs, para que repartir() siga el camino que se dibuja.
+// Las distancias se miden con dist(), y enrutar.mjs usa su proyección (kx, ky): difieren en un 0,3 %, y con dos caminos casi
+// empatados podrían elegir distinto.
 const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|trunk)(_link)?$/;
 const CELDA = 0.0012; // rejilla de la red, en grados (unos 130 m por 105 m en Sevilla), para nodoCercano()
 function indice(osm, ciudad) {
@@ -131,7 +133,7 @@ const FIJOS_PARENTESIS = {
 // Sevilla, «Jardines de Murillo» (Las Cigarreras, cruz y palio, entre Puerta de Jerez o San Fernando y Cano y Cueto o San José):
 // en OSM es un parque (way 22747191), no una calle, y casaba con la calle Murillo, a 1 km. Por su borde este va el Paseo de Catalina
 // de Ribera, el que La Candelaria nombra en ese mismo tramo («San Fernando, Paseo Catalina de Ribera, Cano y Cueto»). Punto: el
-// vértice del paseo (way 28113943) más cercano al centro del jardín, a 23 m. OpenStreetMap, Overpass 2026-11-26.
+// vértice del paseo (way 28113943) más cercano al centro del jardín (media de los vértices del parque), a 23 m. OpenStreetMap, Overpass 2026-11-26.
 const LUGARES = {
   sevilla: { 'jardines de murillo': [37.3844506, -5.9876507] },
 };
@@ -258,8 +260,9 @@ function situar(ix, ciudad, h, pts) {
 //   Candelaria y Las Cigarreras, y luego el cortejo andaba toda la calle de golpe): va a la mitad del tramo (varias: 1/(k+1)…).
 // El tramo va por la red de calles de enrutar.mjs (las mismas vías y ENLACES), desde ese vértice hasta el de la última calle del
 // grupo más cercano al punto siguiente. Cada punto va al nodo del tramo, en su propia calle, más cercano a su fracción, siempre que:
-// · desde él quede menos camino hasta el punto siguiente que desde el vértice y que desde el punto repartido anterior (por la red; si
-//   por ella no se llega, en recta, como lo dibuja enrutar.mjs), y más camino andado desde el punto anterior que hasta el vértice;
+// · desde él quede menos camino hasta el punto siguiente que desde el vértice, y no más que desde el punto repartido anterior (por
+//   la red; si por ella no se llega, en recta, como lo dibuja enrutar.mjs); y más camino andado desde el punto anterior que hasta el
+//   vértice, y no menos que hasta el punto repartido anterior;
 // · ningún nodo del tramo, hasta el último punto repartido, quede más cerca del punto anterior que el vértice, ni más cerca del
 //   siguiente que ese último punto (si no, el dibujo volvería por él: ida y vuelta);
 // · el dibujo, como lo hace enrutar.mjs (punto, nodos del camino, punto), no tenga un espolón nuevo en el vértice, en el punto
@@ -300,7 +303,7 @@ function distanciasDesde(red, s, limite) {
   }
   return dd;
 }
-// el nodo de la red (con alguna arista) más cercano a un punto, a menos de 90 m: como cercano() de enrutar.mjs
+// el nodo de la red (con alguna arista) más cercano a un punto, a menos de 90 m (como cercano() de enrutar.mjs, con dist())
 function nodoCercano(red, q) {
   const cx = Math.floor(q[0] / CELDA), cy = Math.floor(q[1] / CELDA); let best = -1, bd = Infinity;
   for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) for (const i of red.rej.get((cx + a) + ':' + (cy + b)) || []) { const d = dist(red.nod[i], q) * 111000; if (d < bd) { bd = d; best = i; } }
@@ -318,7 +321,8 @@ function aCalle(q, geos) {
   }
   return b;
 }
-// el dibujo entre dos puntos, como enrutar.mjs: el punto, los nodos intermedios del camino entre sus nodos y el otro punto
+// el dibujo entre dos puntos, aproximado al de enrutar.mjs: el punto, los nodos intermedios del camino entre sus nodos y el otro
+// punto (enrutar.mjs, además, deja en recta los pares a menos de 25 m y simplifica a 3 m)
 function trazo(red, pa, pb) {
   const a = nodoCercano(red, pa), b = nodoCercano(red, pb); if (a < 0 || b < 0 || a === b) return [pa, pb];
   const r = caminoRed(red, a, b, dist(pa, pb) * 111000 * 2.6 + 500); return r ? [pa, ...r.ids.slice(1, -1).map((i) => red.nod[i]), pb] : [pa, pb];
@@ -343,7 +347,7 @@ function repartir(res, red) {
     const grupo = i; i = j;
     // el punto siguiente, situado y justo detrás: si entre medias hay uno sin situar, se estima luego en línea recta entre sus
     // vecinos, y mover el grupo lo sacaba de la calle (Madre María Purísima en el palio de La Macarena)
-    if ((k < 2 && !pegado) || n !== j + 1) continue;
+    if ((k < 2 && !pegado) || n >= res.length || n !== j + 1) continue; // (n >= res.length: el grupo acaba el tramo)
     // tramo: del vértice del grupo al de su última calle más cercano al punto siguiente, por la red
     const E = orig[grupo], sig = [res[n].lat, res[n].lon], X = cercano(res[j]._g, sig);
     const s = red.ids.get(clave(E)), x = red.ids.get(clave(X)), t = nodoCercano(red, sig);

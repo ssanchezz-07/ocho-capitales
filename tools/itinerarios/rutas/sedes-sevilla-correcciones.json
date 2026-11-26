@@ -122,7 +122,7 @@
    "osm": "way/119432044",
    "nombre_osm": "Iglesia de San Pedro",
    "fuente": "https://cristodeburgos.es/sede-canonica/",
-   "fuente_coordenadas": "OpenStreetMap way 119432044 («Iglesia de San Pedro», plaza de San Pedro 1). No es la «Parroquia de San Pedro y San Pablo», que está en otro barrio"
+   "fuente_coordenadas": "OpenStreetMap way 119432044 («Iglesia de San Pedro», plaza de San Pedro 1; la web de la hermandad da su propia dirección, plaza del Cristo de Burgos 20, junto a la iglesia). No es la «Parroquia de San Pedro y San Pablo», que está en otro barrio"
   }
  },
  "el-cerro-sevilla": {
@@ -136,8 +136,8 @@
    "lon": -5.9935685,
    "osm": "way/428744717",
    "nombre_osm": "Capilla de San Andrés. Hermandad de los Panaderos",
-   "fuente": "https://www.hdadpanaderos.es/contacto/",
-   "fuente_coordenadas": "OpenStreetMap way 428744717 («Capilla de San Andrés. Hermandad de los Panaderos», calle Orfila 3, la dirección que da la web de la hermandad). Es building=chapel sin amenity=place_of_worship: no estaba en la caché de templos (Overpass 2026-11-26)"
+   "fuente": "https://www.hdadpanaderos.es/sede/",
+   "fuente_coordenadas": "OpenStreetMap way 428744717 («Capilla de San Andrés. Hermandad de los Panaderos», calle Orfila 3: la dirección que da la web de la hermandad en https://www.hdadpanaderos.es/contacto/). Es building=chapel sin amenity=place_of_worship: no estaba en la caché de templos (Overpass 2026-11-26)"
   }
  },
  "dolores-de-torreblanca-sevilla": {
