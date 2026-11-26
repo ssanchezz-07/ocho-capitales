@@ -56,7 +56,7 @@ Sigue con lo que dejó pendiente la entrada siguiente.
     - «Avda. Cid» → Avenida de El Cid;
     - «Madre María Purísima» → Plaza María Purísima de la Cruz.
   - «Barcelona» → Calle Barcelona se probó y se quitó: no cambiaba ningún punto.
-  - «Párroco D. Eugenio» → Párroco Don Eugenio se quitó tras la revisión: en el palio de La Esperanza de Triana caía en su esquina con Pureza, en el mismo punto (media hora parado).
+  - «Párroco D. Eugenio» → Párroco Don Eugenio se quitó tras la revisión: en la cruz de La Esperanza de Triana situaba ese punto 333 m más allá y alargaba la cruz 183 m. (La parada del palio, que se escribe con el nombre entero, venía de la isla de Santa Ana.)
   - **No entran 10.** Con ellos, el dibujo empeoraba porque la red de calles está incompleta. Los puntos se quedan estimados entre sus vecinos:
     - «J. del Gran Poder», «Alameda» y «Conde de Barajas»: más trazado fuera de las calles en La Resurrección;
     - «Avda. Greco»: un rodeo de 1,8 km en San Pablo;
@@ -86,7 +86,7 @@ Sigue con lo que dejó pendiente la entrada siguiente.
   - En el plano de fuera de temporada se pasa de 57 a 62 sedes.
 - **Regeneración:**
   - `recorridos/sevilla.json`, con `geocodificar.mjs` y `enrutar.mjs`. Las extraordinarias se quedan como estaban.
-  - Regenerado con el código final, sale idéntico. (Del banco de pruebas se quitaron después la isla del Altozano y el alias «Barcelona».)
+  - Regenerado con el código final, sale idéntico. (Del banco de pruebas se quitaron después, tras las revisiones, las islas del Altozano y de Santa Ana y los alias «Barcelona» y «Párroco D. Eugenio».)
   - `informe-geocodificacion.json`: se conserva Jaén y se pone al día Sevilla. Los nombres sin situar bajan de 34 a 19. (La lista del informe se corta en 25.)
 - **Otros cambios que trae, vistos en la revisión:**
   - el Pasaje Francisco Molina (un paso bajo un edificio) lo usan dos tramos más: La Borriquita, cruz, de Cuna a «Amorde Dios», y La Bofeta, palio, de Cuna a «J. L. de la Vega». Lo publicado ya pasaba por él en doce;

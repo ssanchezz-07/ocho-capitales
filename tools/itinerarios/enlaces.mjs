@@ -26,6 +26,8 @@ export function uniones(ciudad) {
   const f = path.join(path.dirname(fileURLToPath(import.meta.url)), `uniones-osm-${ciudad}.json`);
   if (!fs.existsSync(f)) return [];
   const U = JSON.parse(fs.readFileSync(f, 'utf8'));
-  return [...(U.vias || []).map((v) => Object.assign(v.geometry.slice(), { anclas: v.anclas || [], quien: `vía ${v.id} (${(v.islas || []).join(', ')})` })),
+  // una vía sin anclas no se podría comprobar: mejor un error que una unión que pase sin mirar
+  for (const v of U.vias || []) if (!v.anclas || !v.anclas.length) throw new Error(`uniones-osm-${ciudad}.json: la vía ${v.id} no tiene anclas`);
+  return [...(U.vias || []).map((v) => Object.assign(v.geometry.slice(), { anclas: v.anclas, quien: `vía ${v.id} (${(v.islas || []).join(', ')})` })),
     ...(U.contiguos || []).map((c) => Object.assign([c.a, c.b], { anclas: c.anclas || [c.a, c.b], quien: `contiguo de ${c.isla}` }))];
 }
