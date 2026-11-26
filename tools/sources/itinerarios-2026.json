@@ -13174,34 +13174,34 @@
      },
      {
       "fila": "15:30",
-      "lugar": "Encarnación"
+      "lugar": "Pl. San Pedro"
      },
      {
       "fila": "16:00",
-      "lugar": "Aponte"
+      "lugar": "Orfila"
      },
      {
       "fila": "16:30",
-      "lugar": "Jesús del Gran Poder"
+      "lugar": "Trajano"
      },
      {
       "fila": "17:00",
-      "lugar": "CAMPANA",
+      "lugar": "Campana",
       "hora": "16:59"
      },
      {
       "fila": "17:30",
-      "lugar": "PLAZA",
+      "lugar": "Plaza",
       "hora": "17:39"
      },
      {
       "fila": "18:00",
-      "lugar": "P. S. MIGUEL",
+      "lugar": "S. Miguel",
       "hora": "18:05"
      },
      {
       "fila": "18:30",
-      "lugar": "P. PALOS",
+      "lugar": "P. Palos",
       "hora": "18:24"
      },
      {
@@ -13210,7 +13210,7 @@
      },
      {
       "fila": "19:30",
-      "lugar": "Cuesta del Rosario"
+      "lugar": "Cuesta Rosario"
      },
      {
       "fila": "20:00",
@@ -13226,7 +13226,7 @@
      },
      {
       "fila": "21:30",
-      "lugar": "Cardenal Cervantes"
+      "lugar": "Card. Cervantes"
      },
      {
       "fila": "22:00",
@@ -13249,13 +13249,18 @@
       "lugar": "Pl. Encarnación"
      },
      {
-      "fila": "17:05",
-      "lugar": "Lasso Vega"
+      "fila": "17:00",
+      "lugar": "J. Lasso Vega"
      },
      {
-      "fila": "17:31",
+      "fila": "17:30",
       "lugar": "Campana",
       "hora": "17:46"
+     },
+     {
+      "fila": "18:00",
+      "lugar": "Plaza",
+      "hora": "18:26"
      },
      {
       "fila": "18:30",
@@ -13269,11 +13274,11 @@
      },
      {
       "fila": "19:30",
-      "lugar": "Argote de MolinaPl."
+      "lugar": "Argote de Molina"
      },
      {
       "fila": "20:00",
-      "lugar": "Álvarez QuinteroSan"
+      "lugar": "Álvarez Quintero"
      },
      {
       "fila": "20:30",
@@ -13306,12 +13311,7 @@
      }
     ]
    },
-   "fuentes": {
-    "cruz de guía": {
-     "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-     "pdf": "SEVILLA 26.pdf"
-    }
-   }
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 6"
   },
   "santa-genoveva-sevilla": {
    "ciudad": "sevilla",
@@ -14397,7 +14397,7 @@
      },
      {
       "fila": "22:30",
-      "lugar": "Avda. Ramón y"
+      "lugar": "Avda. Ramón y Cajal"
      },
      {
       "fila": "23:00",
@@ -14504,7 +14504,7 @@
      },
      {
       "fila": "22:30",
-      "lugar": "CajalAvda. Ramón y Cajal"
+      "lugar": "Avda. Ramón y Cajal"
      },
      {
       "fila": "23:00",
@@ -17176,22 +17176,22 @@
      },
      {
       "fila": "20:00",
-      "lugar": "CAMPANA",
+      "lugar": "Campana",
       "hora": "20:16"
      },
      {
       "fila": "20:30",
-      "lugar": "PLAZA",
+      "lugar": "Plaza",
       "hora": "20:56"
      },
      {
       "fila": "21:00",
-      "lugar": "SAN MIGUEL",
+      "lugar": "S. Miguel",
       "hora": "21:22"
      },
      {
       "fila": "21:30",
-      "lugar": "PALOS",
+      "lugar": "Palos",
       "hora": "21:41"
      },
      {
@@ -17218,6 +17218,11 @@
       "fila": "20:30",
       "lugar": "Campana",
       "hora": "20:54"
+     },
+     {
+      "fila": "21:00",
+      "lugar": "Plaza",
+      "hora": "21:34"
      },
      {
       "fila": "21:30",
@@ -17248,12 +17253,7 @@
      }
     ]
    },
-   "fuentes": {
-    "cruz de guía": {
-     "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-     "pdf": "SEVILLA 26.pdf"
-    }
-   }
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 12"
   },
   "el-valle-sevilla": {
    "ciudad": "sevilla",
@@ -18197,12 +18197,12 @@
   "los-gitanos-sevilla": {
    "ciudad": "sevilla",
    "dia": "Madrugá",
-   "fuente": "Programa de Canal Sur Radio, Semana Santa de Sevilla 2026",
-   "pdf": "SEVILLA 26.pdf",
+   "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
+   "pdf": "Itinerario SS Sevilla 2026 2.pdf",
    "tramos": {
     "cruz de guía": [
      {
-      "fila": "2:25",
+      "fila": "2:30",
       "lugar": "Salida"
      },
      {
@@ -18219,15 +18219,15 @@
      },
      {
       "fila": "4:30",
-      "lugar": "Encarnación Pl."
+      "lugar": "Encarnación"
      },
      {
-      "fila": "5:25",
-      "lugar": "Laraña Doña"
+      "fila": "5:00",
+      "lugar": "Laraña"
      },
      {
       "fila": "5:30",
-      "lugar": "Orfila S."
+      "lugar": "Orfila"
      },
      {
       "fila": "6:00",
@@ -18240,7 +18240,7 @@
      },
      {
       "fila": "7:00",
-      "lugar": "Plaza Jesús",
+      "lugar": "Plaza",
       "hora": "7:12"
      },
      {
@@ -18250,16 +18250,16 @@
      },
      {
       "fila": "8:00",
-      "lugar": "Palos Plaza",
+      "lugar": "Palos",
       "hora": "7:57"
      },
      {
       "fila": "8:30",
-      "lugar": "Francos San"
+      "lugar": "Francos"
      },
      {
       "fila": "9:00",
-      "lugar": "J. de las Tres Caídas Palos"
+      "lugar": "J. de las Tres Caídas"
      },
      {
       "fila": "9:30",
@@ -18276,14 +18276,6 @@
      {
       "fila": "11:00",
       "lugar": "Entrada"
-     },
-     {
-      "fila": "12:00",
-      "lugar": "Juan"
-     },
-     {
-      "fila": "13:00",
-      "lugar": "Valle"
      }
     ],
     "palio": [
@@ -18301,7 +18293,7 @@
      },
      {
       "fila": "5:30",
-      "lugar": "Santa Ángela de la Cruz"
+      "lugar": "S. Ángela de la Cruz"
      },
      {
       "fila": "6:00",
@@ -18317,22 +18309,22 @@
      },
      {
       "fila": "7:30",
-      "lugar": "CAMPANA",
+      "lugar": "Campana",
       "hora": "7:45"
      },
      {
       "fila": "8:00",
-      "lugar": "PLAZA",
+      "lugar": "Plaza",
       "hora": "8:25"
      },
      {
       "fila": "8:30",
-      "lugar": "P. SAN MIGUEL",
+      "lugar": "San Miguel",
       "hora": "8:51"
      },
      {
       "fila": "9:00",
-      "lugar": "PALOS",
+      "lugar": "Palos",
       "hora": "9:10"
      },
      {
@@ -18369,21 +18361,12 @@
      },
      {
       "fila": "13:30",
-      "lugar": "Plaza J de la Salud"
-     },
-     {
-      "fila": "14:00",
       "lugar": "Entrada",
       "hora": "13:45"
      }
     ]
    },
-   "fuentes": {
-    "cruz de guía": {
-     "fuente": "Horarios e itinerarios de Sevilla 2026 (vísperas y jornadas)",
-     "pdf": "Itinerario SS Sevilla 2026 2.pdf"
-    }
-   }
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 14"
   },
   "la-carreteria-sevilla": {
    "ciudad": "sevilla",
@@ -20218,6 +20201,11 @@
       "hora": "20:44"
      },
      {
+      "fila": "21:00",
+      "lugar": "Plaza",
+      "hora": "21:21"
+     },
+     {
       "fila": "21:30",
       "lugar": "S. Miguel",
       "hora": "21:46"
@@ -20255,13 +20243,17 @@
     "palio": [
      {
       "fila": "20:30",
-      "lugar": "Salida",
-      "hora": "20:44"
+      "lugar": "Salida"
      },
      {
       "fila": "21:00",
       "lugar": "Campana",
       "hora": "21:09"
+     },
+     {
+      "fila": "21:30",
+      "lugar": "Plaza",
+      "hora": "21:46"
      },
      {
       "fila": "22:00",
@@ -20298,7 +20290,8 @@
       "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 8"
   },
   "dulce-nombre-la-bofeta-sevilla": {
    "ciudad": "sevilla",
@@ -20330,6 +20323,11 @@
       "hora": "21:09"
      },
      {
+      "fila": "21:30",
+      "lugar": "Plaza",
+      "hora": "21:46"
+     },
+     {
       "fila": "22:00",
       "lugar": "S. Miguel",
       "hora": "22:11"
@@ -20341,7 +20339,7 @@
      },
      {
       "fila": "23:00",
-      "lugar": "Argote de MolinaP."
+      "lugar": "Argote de Molina"
      },
      {
       "fila": "23:30",
@@ -20377,7 +20375,7 @@
      },
      {
       "fila": "20:30",
-      "lugar": "Cardenal"
+      "lugar": "Cardenal Spínola"
      },
      {
       "fila": "21:00",
@@ -20389,18 +20387,22 @@
       "hora": "21:49"
      },
      {
+      "fila": "22:00",
+      "lugar": "Plaza"
+     },
+     {
       "fila": "22:30",
       "lugar": "S. Miguel",
       "hora": "22:51"
      },
      {
       "fila": "23:00",
-      "lugar": "Palos",
+      "lugar": "P. Palos",
       "hora": "23:09"
      },
      {
       "fila": "23:30",
-      "lugar": "Argote de MolinaMig."
+      "lugar": "Argote de Molina"
      },
      {
       "fila": "0:00",
@@ -20431,7 +20433,8 @@
       "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 8"
   },
   "la-resurreccion-sevilla": {
    "ciudad": "sevilla",
@@ -20441,72 +20444,149 @@
    "tramos": {
     "cruz de guía": [
      {
+      "fila": "8:30",
+      "lugar": "Salida",
+      "hora": "8:15"
+     },
+     {
+      "fila": "9:00",
+      "lugar": "San Luis - Relator"
+     },
+     {
+      "fila": "9:30",
+      "lugar": "Alameda"
+     },
+     {
+      "fila": "10:00",
+      "lugar": "Conde de Barajas"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "J. del Gran Poder"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "Campana",
+      "hora": "10:55"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "Plaza",
+      "hora": "11:35"
+     },
+     {
       "fila": "12:00",
-      "lugar": "Salida"
+      "lugar": "S. Miguel",
+      "hora": "12:06"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "Palos",
+      "hora": "12:25"
      },
      {
       "fila": "13:00",
-      "lugar": "San Luis - Relator San",
-      "hora": "9:00"
+      "lugar": "Francos"
      },
      {
       "fila": "13:30",
-      "lugar": "Alameda",
-      "hora": "9:30"
+      "lugar": "Jesús Tres Caídas"
      },
      {
       "fila": "14:00",
-      "lugar": "Conde de Barajas",
-      "hora": "10:00"
+      "lugar": "Pl. Cristo de Burgos"
+     },
+     {
+      "fila": "14:30",
+      "lugar": "Bustos Tavera"
      },
      {
       "fila": "15:00",
-      "lugar": "J. del Gran Poder",
-      "hora": "10:30"
+      "lugar": "San Luis"
      },
      {
       "fila": "15:30",
-      "lugar": "Campana J. del"
+      "lugar": "Entrada",
+      "hora": "15:20"
+     }
+    ],
+    "palio": [
+     {
+      "fila": "8:30",
+      "lugar": "Salida",
+      "hora": "8:50"
      },
      {
-      "fila": "17:00",
-      "lugar": "S. Miguel Plaza"
+      "fila": "9:00",
+      "lugar": "San Luis"
      },
      {
-      "fila": "17:55",
-      "lugar": "Palos S."
+      "fila": "9:30",
+      "lugar": "Relator"
      },
      {
-      "fila": "18:30",
-      "lugar": "Francos Palos",
+      "fila": "10:00",
+      "lugar": "Alameda"
+     },
+     {
+      "fila": "10:30",
+      "lugar": "Conde de Barajas"
+     },
+     {
+      "fila": "11:00",
+      "lugar": "J. del Gran Poder"
+     },
+     {
+      "fila": "11:30",
+      "lugar": "Campana",
+      "hora": "11:35"
+     },
+     {
+      "fila": "12:00",
+      "lugar": "Plaza",
+      "hora": "12:15"
+     },
+     {
+      "fila": "12:30",
+      "lugar": "S. Miguel",
+      "hora": "12:41"
+     },
+     {
+      "fila": "13:00",
+      "lugar": "Palos",
       "hora": "13:00"
      },
      {
-      "fila": "19:00",
-      "lugar": "Jesús Tres Caídas",
-      "hora": "13:30"
+      "fila": "13:30",
+      "lugar": "Placentines"
      },
      {
-      "fila": "20:00",
-      "lugar": "Pl. Cristo de Burgos",
-      "hora": "14:00"
+      "fila": "14:00",
+      "lugar": "Cuesta del Rosario"
      },
      {
-      "fila": "20:30",
-      "lugar": "Bustos Tavera Sales",
-      "hora": "14:30"
+      "fila": "14:30",
+      "lugar": "Sales y Ferré"
      },
      {
-      "fila": "21:30",
-      "lugar": "San Luis Doña",
-      "hora": "15:00"
+      "fila": "15:00",
+      "lugar": "Doña Mª Coronel"
      },
      {
-      "fila": "22:00",
-      "lugar": "Entrada Pl."
+      "fila": "15:30",
+      "lugar": "Pl. San Marcos"
+     },
+     {
+      "fila": "16:00",
+      "lugar": "San Luis"
+     },
+     {
+      "fila": "16:30",
+      "lugar": "Entrada"
      }
     ]
-   }
+   },
+   "a_mano": "Itinerario SS Sevilla 2026 2.pdf, p. 18"
   },
   "la-o-cordoba": {
    "ciudad": "cordoba",

@@ -109,8 +109,8 @@
   ]
  },
  "sevilla": {
-  "puntos": 2148,
-  "situados": 2056,
+  "puntos": 2169,
+  "situados": 2077,
   "pct": 96,
   "calles_osm": 8804,
   "templos": 156,
@@ -124,15 +124,19 @@
     30
    ],
    [
+    "J. del Gran Poder",
+    5
+   ],
+   [
     "Glorieta del Cid",
     4
    ],
    [
-    "J. del Gran Poder",
-    4
+    "Párroco A. Gómez Villa.",
+    3
    ],
    [
-    "Párroco A. Gómez Villa.",
+    "Alameda",
     3
    ],
    [
@@ -148,7 +152,7 @@
     2
    ],
    [
-    "Alameda",
+    "S. Ángela de la Cruz",
     2
    ],
    [
@@ -209,10 +213,6 @@
    ],
    [
     "Puente del Indio",
-    1
-   ],
-   [
-    "Lasso Vega",
     1
    ]
   ]

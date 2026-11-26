@@ -14,6 +14,22 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
 const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|trunk)(_link)?$/;
 const solo = process.argv[2];
+// Uniones que faltan en el grafo entre calles que se tocan: la caché (geocodificar.mjs, overpass()) solo trae vías con nombre, y
+// los tramos sin nombre que las unen (bocas de una glorieta, pasos) no están; las áreas peatonales, en polígono, además solo se
+// unen a la red por algunos vértices. [nodo de una vía, nodo de la otra], coordenadas exactas de la caché.
+// · Sevilla, Puerta de Jerez y Prado (caché osm-sevilla.json, comprobado el 26-nov): el área de la avenida de la Constitución (way
+//   56767102) no se une a Puerta Jerez (way 225659951) por su extremo sur (27 m); el área de la calle San Fernando (way 56767111),
+//   ni a Puerta Jerez (13 m) ni a la plaza Don Juan de Austria (way 69986998, 9 m); y la avenida de Carlos V (way 109586263) acaba
+//   a 54 m de la glorieta de Don Juan de Austria (way 285587771). Sin ellas, El Cerro iba de la avenida de Carlos V a la de la
+//   Constitución por la Glorieta de San Diego y Miguel de Mañara (1.734 m; en recta, 959 m); con ellas, por San Fernando (1.011 m).
+const ENLACES = {
+  sevilla: [
+    [[37.3828829, -5.9933841], [37.3827652, -5.9931212]],
+    [[37.3824592, -5.9930374], [37.3824664, -5.9931790]],
+    [[37.3812301, -5.9888209], [37.3812052, -5.9887189]],
+    [[37.3808849, -5.9877450], [37.3809976, -5.9883459]],
+  ],
+};
 
 class Monticulo { // cola de prioridad binaria para Dijkstra
   constructor() { this.a = []; }
@@ -55,6 +71,12 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
       if (prev >= 0 && prev !== i) { const d = Math.hypot(nodos[i][2] - nodos[prev][2], nodos[i][3] - nodos[prev][3]); ady[prev].push([i, d]); ady[i].push([prev, d]); }
       prev = i;
     }
+  }
+  // uniones que faltan en OSM entre espacios peatonales contiguos (ENLACES, arriba)
+  for (const [a, b] of ENLACES[ciudad] || []) {
+    const i = id.get(a[0].toFixed(7) + ',' + a[1].toFixed(7)), j = id.get(b[0].toFixed(7) + ',' + b[1].toFixed(7));
+    if (i === undefined || j === undefined) { console.warn('ENLACES: no está el nodo', ciudad, a, b); continue; }
+    const d = Math.hypot(nodos[i][2] - nodos[j][2], nodos[i][3] - nodos[j][3]); ady[i].push([j, d]); ady[j].push([i, d]);
   }
   // rejilla de 60 m para encontrar el nodo más cercano
   const rej = new Map(), C = 60;

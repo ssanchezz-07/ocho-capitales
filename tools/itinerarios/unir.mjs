@@ -122,7 +122,7 @@ const SUELTAS = /^(de|del|la|las|los|el|y|e|san|santa|sta\.?|s\.|pl\.?|pza\.?|p\
 const ROTULOS = /^(cruz de gu[ií]a|fin(al)? del?( cortejo)?|fin(al)? de cortejo|gu[ií]a|cortejo)$/i;
 const CONECTOR = /\s(de|del|de la|de los|de las|y|san|santa)$/i;
 const HORA_RE = /\(?(?<!\d)([01]?\d|2[0-4])[:.]([0-5]\d)(?!\d)\s*(?:h\b|horas\b)?\)?|\((\d{1,2}),(\d{2})\)/g;
-function limpiarLugar(ciudad, l0) {
+function limpiarLugar(ciudad, l0, plazaConHora) {
   let l = String(l0 || '');
   l = l.replace(/\s*ITINERARIOS\s*\d*\s*/g, '').replace(/([a-záéíóúñ])\d{1,3}\s+([a-záéíóúñ])/g, '$1$2').replace(/^\d{1,3}\s+(?=[A-ZÁÉÍÓÚÑ])/, '');
   // texto espaciado letra a letra con la hora dentro («. S a l id a o 1 7: 2 0»): se junta antes de buscar horas
@@ -147,7 +147,10 @@ function limpiarLugar(ciudad, l0) {
   l = l.replace(/^([^a-záéíóúñ]+)\s[a-záéíóúñ]{1,2}$/, '$1');
   if (!/[A-Za-zÁÉÍÓÚÑáéíóúñ]{2}/.test(l)) return { lugar: '', horas };
   if (ROTULOS.test(l)) return { lugar: '', horas };
-  if (SUELTAS.test(l) && !(ciudad === 'sevilla' && l === 'PLAZA')) return { lugar: '', horas }; // en Sevilla «PLAZA» es la de San Francisco (carrera oficial)
+  // en Sevilla «PLAZA» es la de San Francisco (carrera oficial); en la rejilla del Consejo va en minúscula y con su hora en la
+  // celda («Plaza 21:34», en rojo): sin esto se perdía (La Quinta Angustia, Los Javieres…). Un «Plaza» suelto sin hora sigue
+  // siendo el primer renglón de un nombre partido o un rótulo. (plazaConHora: la hora va aparte, en las columnas copiadas a mano)
+  if (SUELTAS.test(l) && !(ciudad === 'sevilla' && (l === 'PLAZA' || (/^plaza$/i.test(l) && (horas.size === 1 || plazaConHora))))) return { lugar: '', horas };
   return { lugar: l, horas };
 }
 // Nombres partidos en dos renglones de una misma celda que el texto solo no distingue de dos calles seguidas (los dos renglones
@@ -171,6 +174,10 @@ const CORREGIR = [
   ['bellavista-sevilla', 'palio', '1:30', 'Entrada', 'Entrada', '1:45'],
   // («Santa» suelto se tira como rótulo, SUELTAS; Consejo p. 2, cruz de Bellavista, franja 20:30: «Santa / Margarita»)
   ['bellavista-sevilla', 'cruz de guía', '20:30', 'Margarita', 'Santa Margarita'],
+  // El Cerro, Canal Sur p. 40, franja 22:30: las dos celdas dicen «Avda. Ramón y Cajal»; el texto de la cruz desborda su celda y
+  // el lector pegaba su «Cajal» al principio de la del palio
+  ['el-cerro-sevilla', 'cruz de guía', '22:30', 'Avda. Ramón y', 'Avda. Ramón y Cajal'],
+  ['el-cerro-sevilla', 'palio', '22:30', 'CajalAvda. Ramón y Cajal', 'Avda. Ramón y Cajal'],
 ];
 function corregir(slug, k, pts) {
   let n = 0;
@@ -182,11 +189,13 @@ function corregir(slug, k, pts) {
   }
   return n;
 }
-function limpiar(ciudad, pts) {
+function limpiar(ciudad, pts, aMano) {
   const out = [];
   let quitados = 0, horasRescatadas = 0;
   for (const p0 of pts) {
-    const r = limpiarLugar(ciudad, p0.lugar);
+    // (en las columnas copiadas a mano, todo lo que queda es lo impreso: también un «Plaza» sin hora, como el del palio de El
+    // Dulce Nombre, cuya hora impresa es una errata)
+    const r = limpiarLugar(ciudad, p0.lugar, !!p0.hora || !!aMano);
     // una hora suelta en la fila de abajo de una «Salida» sin hora es la de esa salida (Torreblanca: «Salida» / «16:45», comprobado
     // en la p. 2 de la rejilla del Consejo; Torreblanca va ahora copiada a mano, en A_MANO)
     const ant = out[out.length - 1];
@@ -356,6 +365,45 @@ const A_MANO = {
     'cruz de guía': [['18:30', 'Salida', '18:45'], ['19:00', 'CAMPANA', '19:03'], ['19:30', 'PLAZA', '19:43'], ['20:00', 'P. SAN MIGUEL', '20:09'], ['20:30', 'PALOS', '20:28'], ['21:00', 'Hernando Colón'], ['21:30', 'Tetuán'], ['22:00', 'Alfonso XII'], ['22:30', 'Entrada']],
     paso: [['19:00', 'Salida', '19:15'], ['19:30', 'CAMPANA', '19:43'], ['20:00', 'PLAZA', '20:23'], ['20:30', 'P. SAN MIGUEL', '20:49'], ['21:00', 'PALOS', '21:08'], ['21:30', 'Alemanes'], ['22:00', 'Hernando Colón'], ['22:30', 'O´Donnell'], ['23:00', 'Entrada']],
   } },
+  // · Sevilla, rejilla del Consejo (Itinerario SS Sevilla 2026 2.pdf): columnas que el lector mezclaba con la vecina o leía con
+  //   otra escala de horas, copiadas dos veces por separado, celda a celda (una sobre la imagen a 400 ppp; otra sobre la capa de
+  //   texto, comprobada en recortes a 600 ppp). Las dos copias coinciden en todas las celdas (26-nov):
+  //   · Redención, p. 6: el palio salía con trozos de las celdas vecinas («17:05 Lasso Vega», «Argote de MolinaPl.», sin la Plaza
+  //     de las 18:26). La cruz se tomaba de Canal Sur (p. 31), que da otro camino hasta la Campana (Encarnación, Aponte, Jesús del
+  //     Gran Poder); el Consejo pone Pl. San Pedro, Orfila y Trajano. Se sigue al Consejo, como en el palio.
+  //   · El Dulce Nombre y Los Javieres, p. 8: perdían la Plaza y llevaban texto pegado («Argote de MolinaP.»); el palio de Los
+  //     Javieres tomaba como hora de salida la de la Campana de su cruz (20:44): su «Salida» va sin hora. En el palio de El Dulce
+  //     Nombre está impreso «Plaza 20:26», entre Campana 21:49 y S. Miguel 22:51: es una errata (la cruz de Los Estudiantes, que va
+  //     detrás, pone «Plaza 22:26»). Se deja sin hora exacta, solo con su franja.
+  //   · La Quinta Angustia, p. 12: el paso perdía «Plaza 21:34»; la cruz es la misma que la de Canal Sur (p. 60).
+  //   · Los Gitanos, p. 14: la cruz llevaba trozos del palio pegados, franjas que no existen (2:25, 5:25) y dos calles después de
+  //     la Entrada; el palio se tomaba de Canal Sur (p. 67), con las mismas calles y horas.
+  //   · La Resurrección, p. 18: el bloque tiene su propia escala (de 8:30 a 17:30) y el lector usó la de la izquierda (de 12:00 a
+  //     22:00); solo se leía la cruz, y rota. Ahora van la cruz y el palio.
+  'los-gitanos-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 14, fuente: 'cgh', tramos: {
+    'cruz de guía': [['2:30', 'Salida'], ['3:00', 'Pl. San Román'], ['3:30', 'Doña María Coronel'], ['4:00', 'S. Ángela de la Cruz'], ['4:30', 'Encarnación'], ['5:00', 'Laraña'], ['5:30', 'Orfila'], ['6:00', 'Jesús del Gran Poder'], ['6:30', 'Campana', '6:32'], ['7:00', 'Plaza', '7:12'], ['7:30', 'San Miguel', '7:38'], ['8:00', 'Palos', '7:57'], ['8:30', 'Francos'], ['9:00', 'J. de las Tres Caídas'], ['9:30', 'Pl. Cristo de Burgos'], ['10:00', 'Escuelas Pías'], ['10:30', 'Pinto'], ['11:00', 'Entrada']],
+    palio: [['4:00', 'Salida'], ['4:30', 'Pl. San Román'], ['5:00', 'Doña María Coronel'], ['5:30', 'S. Ángela de la Cruz'], ['6:00', 'Encarnación'], ['6:30', 'Laraña'], ['7:00', 'Jesús del Gran Poder'], ['7:30', 'Campana', '7:45'], ['8:00', 'Plaza', '8:25'], ['8:30', 'San Miguel', '8:51'], ['9:00', 'Palos', '9:10'], ['9:30', 'Argote de Molina'], ['10:00', 'Francos'], ['10:30', 'Cuesta del Rosario'], ['11:00', 'Boteros'], ['11:30', 'Pl. Cristo de Burgos'], ['12:00', 'Juan de Mesa'], ['12:30', 'Escuelas Pías'], ['13:00', 'Valle'], ['13:30', 'Entrada', '13:45']],
+  } },
+  'dulce-nombre-la-bofeta-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 8, fuente: 'cgh', tramos: {
+    'cruz de guía': [['19:00', 'Salida', '19:22'], ['19:30', 'Cardenal Spínola'], ['20:00', 'Pl. Gavidia'], ['20:30', 'J. del Gran Poder'], ['21:00', 'Campana', '21:09'], ['21:30', 'Plaza', '21:46'], ['22:00', 'S. Miguel', '22:11'], ['22:30', 'P. Palos', '22:29'], ['23:00', 'Argote de Molina'], ['23:30', 'Chapineros'], ['0:00', 'Cuna'], ['0:30', 'Orfila'], ['1:00', 'Amor de Dios'], ['1:30', 'Santa Bárbara'], ['2:00', 'Entrada', '1:57']],
+    palio: [['20:00', 'Salida', '20:17'], ['20:30', 'Cardenal Spínola'], ['21:00', 'Gavidia'], ['21:30', 'Campana', '21:49'], ['22:00', 'Plaza'], ['22:30', 'S. Miguel', '22:51'], ['23:00', 'P. Palos', '23:09'], ['23:30', 'Argote de Molina'], ['0:00', 'Chapineros'], ['0:30', 'Pl. Salvador'], ['1:00', 'Cuna'], ['1:30', 'J. L. de la Vega'], ['2:00', 'Trajano'], ['2:30', 'Conde Barajas'], ['3:00', 'Entrada']],
+  } },
+  'redencion-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 6, fuente: 'cgh', tramos: {
+    'cruz de guía': [['14:30', 'Salida', '14:40'], ['15:00', 'Juan de Mesa'], ['15:30', 'Pl. San Pedro'], ['16:00', 'Orfila'], ['16:30', 'Trajano'], ['17:00', 'Campana', '16:59'], ['17:30', 'Plaza', '17:39'], ['18:00', 'S. Miguel', '18:05'], ['18:30', 'P. Palos', '18:24'], ['19:00', 'Álvarez Quintero'], ['19:30', 'Cuesta Rosario'], ['20:00', 'Sales y Ferré'], ['20:30', 'Dormitorio'], ['21:00', 'Pl. San Leandro'], ['21:30', 'Card. Cervantes'], ['22:00', 'Entrada', '22:05']],
+    palio: [['15:30', 'Salida', '15:35'], ['16:00', 'Juan de Mesa'], ['16:30', 'Pl. Encarnación'], ['17:00', 'J. Lasso Vega'], ['17:30', 'Campana', '17:46'], ['18:00', 'Plaza', '18:26'], ['18:30', 'S. Miguel', '18:52'], ['19:00', 'P. Palos', '19:11'], ['19:30', 'Argote de Molina'], ['20:00', 'Álvarez Quintero'], ['20:30', 'Cuesta Rosario'], ['21:00', 'Sales y Ferré'], ['21:30', 'Dormitorio'], ['22:00', 'Alhóndiga'], ['22:30', 'Pl. San Leandro'], ['23:00', 'Santiago'], ['23:30', 'Entrada', '23:15']],
+  } },
+  'la-resurreccion-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 18, fuente: 'cgh', tramos: {
+    'cruz de guía': [['8:30', 'Salida', '8:15'], ['9:00', 'San Luis - Relator'], ['9:30', 'Alameda'], ['10:00', 'Conde de Barajas'], ['10:30', 'J. del Gran Poder'], ['11:00', 'Campana', '10:55'], ['11:30', 'Plaza', '11:35'], ['12:00', 'S. Miguel', '12:06'], ['12:30', 'Palos', '12:25'], ['13:00', 'Francos'], ['13:30', 'Jesús Tres Caídas'], ['14:00', 'Pl. Cristo de Burgos'], ['14:30', 'Bustos Tavera'], ['15:00', 'San Luis'], ['15:30', 'Entrada', '15:20']],
+    palio: [['8:30', 'Salida', '8:50'], ['9:00', 'San Luis'], ['9:30', 'Relator'], ['10:00', 'Alameda'], ['10:30', 'Conde de Barajas'], ['11:00', 'J. del Gran Poder'], ['11:30', 'Campana', '11:35'], ['12:00', 'Plaza', '12:15'], ['12:30', 'S. Miguel', '12:41'], ['13:00', 'Palos', '13:00'], ['13:30', 'Placentines'], ['14:00', 'Cuesta del Rosario'], ['14:30', 'Sales y Ferré'], ['15:00', 'Doña Mª Coronel'], ['15:30', 'Pl. San Marcos'], ['16:00', 'San Luis'], ['16:30', 'Entrada']],
+  } },
+  'la-quinta-angustia-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 12, fuente: 'cgh', tramos: {
+    'cruz de guía': [['19:30', 'Salida', '19:35'], ['20:00', 'Campana', '20:16'], ['20:30', 'Plaza', '20:56'], ['21:00', 'S. Miguel', '21:22'], ['21:30', 'Palos', '21:41'], ['22:00', 'Arco del Postigo'], ['22:30', 'Castelar'], ['23:00', 'Entrada', '23:25']],
+    paso: [['20:00', 'Salida', '20:05'], ['20:30', 'Campana', '20:54'], ['21:00', 'Plaza', '21:34'], ['21:30', 'S. Miguel', '22:00'], ['22:00', 'Palos', '22:19'], ['22:30', 'Fray Cefer. Glez.'], ['23:00', 'Arfe'], ['23:30', 'Zaragoza'], ['0:00', 'Entrada', '0:06']],
+  } },
+  'los-javieres-sevilla': { pdf: 'Itinerario SS Sevilla 2026 2.pdf', pagina: 8, fuente: 'cgh', tramos: {
+    'cruz de guía': [['19:30', 'Salida', '19:50'], ['20:00', 'Santa Bárbara'], ['20:30', 'Campana', '20:44'], ['21:00', 'Plaza', '21:21'], ['21:30', 'S. Miguel', '21:46'], ['22:00', 'P. Palos', '22:04'], ['22:30', 'Almirantazgo'], ['23:00', 'Castelar'], ['23:30', 'Méndez Núñez'], ['0:00', 'O´Donnell'], ['0:30', 'J. del Gran Poder'], ['1:00', 'Entrada']],
+    palio: [['20:30', 'Salida'], ['21:00', 'Campana', '21:09'], ['21:30', 'Plaza', '21:46'], ['22:00', 'S. Miguel', '22:11'], ['22:30', 'P. Palos', '22:29'], ['23:00', 'Almirantazgo'], ['23:30', 'Gamazo'], ['0:00', 'Méndez Núñez'], ['0:30', 'O´Donnell'], ['1:00', 'J. del Gran Poder'], ['1:30', 'Entrada']],
+  } },
 };
 // fuente de las columnas copiadas a mano que no son del PDF de la primera lectura («cgh»: la rejilla del Consejo de Sevilla)
 const FUENTE_A_MANO = { cgh: FUENTES.find(([, f]) => f === 'sevilla-cgh-2026.json')[2] };
@@ -496,7 +544,7 @@ for (const [slug, e] of Object.entries(out.hermandades)) if (e.ciudad === 'grana
 // limpieza final de etiquetas en todas las ciudades
 const lim = { quitados: 0, horasRescatadas: 0, corregidos: 0 };
 for (const [slug, e] of Object.entries(out.hermandades)) for (const k of Object.keys(e.tramos)) {
-  const r = limpiar(e.ciudad, e.tramos[k]); e.tramos[k] = r.pts; lim.quitados += r.quitados; lim.horasRescatadas += r.horasRescatadas;
+  const r = limpiar(e.ciudad, e.tramos[k], e.a_mano); e.tramos[k] = r.pts; lim.quitados += r.quitados; lim.horasRescatadas += r.horasRescatadas;
   lim.corregidos += corregir(slug, k, e.tramos[k]);
 }
 const OUT = path.join(DIR, '..', 'sources', 'itinerarios-2026.json');

@@ -32,6 +32,8 @@ const TIPO = /^(calle|plaza|avenida|paseo|puente|cuesta|glorieta|callejon|ronda|
 // (primero «de la», «de los», «de las»: con «de» delante, «Plaza de la Encarnación» se quedaba en «la encarnacion» y el itinerario
 // «Encarnación» casaba con la calle Virgen de la Encarnación, a 1 km)
 const nucleo = (s) => norm(s).replace(TIPO, '').replace(/^(de las|de los|de la|del|de)\s+/, '').trim();
+// el nombre con lo que va entre paréntesis («Pl. España (Torre Norte)» → «plaza espana torre norte»), solo para FIJOS_PARENTESIS
+const lugarConParentesis = (s) => norm(String(s || '').replace(/[()]/g, ' '));
 
 async function overpass(ciudad) {
   const f = path.join(CACHE, `osm-${ciudad}.json`);
@@ -97,6 +99,13 @@ const FIJOS = {
     'tribuna': [36.72088, -4.42172], 'tribuna principal': [36.72088, -4.42172],
   },
 };
+// Puntos fijos que se buscan con lo que va entre paréntesis (norm() lo quita), y que no son de la carrera oficial.
+// Sevilla: torres de la Plaza de España («Pl. España (Torre Norte)», «(Torre Sur)», palio de La Paz, Canal Sur p. 23); sin esto,
+// las dos caían en el mismo punto de la plaza. Centro de los edificios «Torre Norte» (way 442264001) y «Torre Sur» (way 873304735)
+// de OpenStreetMap, Overpass 2026-11-26.
+const FIJOS_PARENTESIS = {
+  sevilla: { 'plaza espana torre norte': [37.377867, -5.988045], 'plaza espana torre sur': [37.375878, -5.986844] },
+};
 // Nombres cortados o abreviados en los PDF que sí existen en OSM con su nombre completo (comprobado en tools/itinerarios/cache/osm-*.json)
 const ALIAS = {
   sevilla: { 'jesus del gran': 'Jesús del Gran Poder', 'dona maria': 'Doña María Coronel', 'avenida isabel la c': 'Isabel la Católica', 'isabel la c': 'Isabel la Católica', 'ramon y caj': 'Ramón y Cajal', 'avenida ramon y cajal': 'Ramón y Cajal' },
@@ -154,14 +163,19 @@ function situar(ix, ciudad, h, pts) {
   const res = pts.map((p) => {
     const l = norm(p.lugar);
     let pos = null, como = '';
-    const fijo = FIJOS[ciudad] && FIJOS[ciudad][l.replace(/ puerta perdon$/, '')];
+    // Sevilla: «S. Miguel» / «San Miguel» con su hora en la celda es la Puerta de San Miguel de la Catedral (carrera oficial, en rojo,
+    // tras la Plaza); sin hora es la calle San Miguel, junto a la Campana (La Borriquita, Cristo de Burgos, El Valle… pasan por ella
+    // antes de la Campana). Hasta el 26-nov, las 29 con hora caían en la calle y el cortejo volvía de la Plaza a la Campana.
+    const puertaSM = ciudad === 'sevilla' && l === 'san miguel' && p.hora ? FIJOS.sevilla['puerta de san miguel'] : null;
+    const fijoPar = FIJOS_PARENTESIS[ciudad] && /\(/.test(p.lugar) ? FIJOS_PARENTESIS[ciudad][lugarConParentesis(p.lugar)] : null;
+    const fijo = fijoPar || (FIJOS[ciudad] && (FIJOS[ciudad][l.replace(/ puerta perdon$/, '')] || puertaSM));
     // «Salida/Entrada <lugar>»: es ese lugar (una calle, la carrera oficial…), no la sede; solo «salida», «entrada templo/palio/casa hdad…» son la sede
     const mm = /^(salida|entrada|encierro|sale)\s+(.+)$/.exec(l);
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
     // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
     const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
     if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
-    else if (fijo) { pos = fijo; como = 'carrera oficial'; }
+    else if (fijo) { pos = fijo; como = fijoPar ? 'calle' : 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
       const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); pos = cercano(ix.calles.get(k), prev); como = 'calle';
     }

@@ -1,5 +1,61 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: columnas del Consejo mal leídas, la «Plaza», la Puerta de San Miguel y los rodeos del plano (Pablo: «A», a «¿Arreglo también estos fallos antiguos? a) Sí, en otra subida, con su revisión»)
+Cierra casi todo lo pendiente de la entrada siguiente.
+- **Seis hermandades, copiadas a mano de la rejilla del Consejo** (`A_MANO` en `unir.mjs`; `wf_813fd550-e96`).
+  - Cada columna se copió dos veces por separado, celda a celda:
+    - una sobre la imagen a 400 ppp;
+    - otra sobre la capa de texto, comprobada en recortes a 600 ppp.
+  - Las dos copias coinciden en todas las celdas.
+  - Las seis hermandades:
+    - **Redención (p. 6).** El palio llevaba trozos de las celdas vecinas y le faltaba la Plaza de las 18:26. La cruz se tomaba de Canal Sur (p. 31), que va a la Campana por Encarnación, Aponte y Jesús del Gran Poder; el Consejo pone Pl. San Pedro, Orfila y Trajano. Se sigue al Consejo, la fuente oficial, en los dos tramos.
+    - **Los Gitanos (p. 14).** La cruz traía pegotes, franjas que no existen y dos calles después de la Entrada. El palio de Canal Sur, que era el que se usaba, coincide calle a calle con el del Consejo.
+    - **El Dulce Nombre y Los Javieres (p. 8).**
+      - A los dos les faltaba la Plaza.
+      - El Dulce Nombre llevaba texto pegado: «Argote de MolinaP.», «Cardenal» suelto.
+      - El palio de Los Javieres tomaba como hora de salida la de la Campana de su cruz (20:44). Su «Salida» no tiene hora impresa.
+      - Que la cruz de El Dulce Nombre pase a la misma hora que el palio de Los Javieres (21:09, 21:46, 22:11, 22:29) es lo impreso. En la carrera oficial, la cruz de una hermandad va detrás del último paso de la anterior.
+    - **La Quinta Angustia (p. 12).** El paso perdía «Plaza 21:34». La cruz es igual que la de Canal Sur (p. 60).
+    - **La Resurrección (p. 18).** El bloque tiene su propia escala (de 8:30 a 17:30), y el lector usó la de la izquierda. Solo se leía la cruz, y rota; ahora van la cruz y el palio.
+  - **Errata en el PDF:** el palio de El Dulce Nombre pone «Plaza 20:26», entre Campana 21:49 y S. Miguel 22:51. La cruz de Los Estudiantes, que va detrás, pone «Plaza 22:26». No se corrige a mano: la Plaza va sin hora exacta, solo con su franja (22:00).
+- **«Plaza» con hora en el Consejo** (`limpiarLugar`). En la rejilla del Consejo va en minúscula y con su hora en la celda. Ahora se conserva:
+  - si la hora va en la celda;
+  - si la columna está copiada a mano.
+
+  Un «Plaza» suelto sin hora del lector se sigue tirando, porque es el primer renglón de un nombre partido. Hoy solo afecta a las columnas copiadas a mano: regenerando, ninguna otra hermandad cambia.
+- **El Cerro (Canal Sur, p. 40, `CORREGIR`).** En la franja de las 22:30, las dos celdas dicen «Avda. Ramón y Cajal». El texto de la cruz desborda su celda, y el lector pegaba su «Cajal» a la del palio («Avda. Ramón y» / «CajalAvda. Ramón y Cajal»).
+- **Puerta de San Miguel** (`geocodificar.mjs`).
+  - «SAN MIGUEL» y «S. Miguel» sin la «P.» caían en la calle San Miguel, junto a la Campana. El cortejo volvía de la Plaza a la Campana y luego bajaba a Palos: unos 900 m de más en el plano, en 29 tramos de 17 hermandades.
+  - Con su hora en la celda (en rojo, tras la Plaza), van a la Puerta de San Miguel de la Catedral.
+  - Sin hora siguen en la calle. Es por donde pasan La Borriquita, Cristo de Burgos, El Valle, Pasión y La Sagrada Mortaja antes de la Campana.
+- **Alias** (`alias-calles-sevilla.json`). Cada uno está comprobado en la caché de OSM:
+  - «Páez de Ribera» → «Calle Páez de Rivera» (La Misión). Ya no arrastra hacia el norte el punto de Manuel Siurot: el tramo hasta Torcuato Luca de Tena pasa de 1 km a 400 m.
+  - «Galinnato» (errata del PDF en el palio de El Cerro) → «Calle Gallinato».
+  - «Card. Cervantes» y «J. Lasso Vega» (Redención, Consejo) → «Calle Cardenal Cervantes» y «Calle Javier Lasso de la Vega».
+  - «Puerta de Jerez» → «Puerta Jerez», el nombre en OSM. Afecta a 6 puntos de El Cerro, La Candelaria, Las Cigarreras y El Sol, que estaban estimados hasta a 650 m.
+- **Torres de la Plaza de España** (palio de La Paz). `norm()` quita el paréntesis, y las dos caían en el mismo punto.
+  - Ahora se buscan con el paréntesis (`FIJOS_PARENTESIS`).
+  - Coordenadas: centro de los edificios «Torre Norte» (way 442264001) y «Torre Sur» (way 873304735) de OSM, según Overpass del 26-nov.
+  - Van como «calle», no como carrera oficial.
+- **Rodeo de El Cerro** (`ENLACES` en `enrutar.mjs`).
+  - La causa: la caché de OSM solo trae vías con nombre. Faltan los tramos sin nombre que las unen, como las bocas de una glorieta, y las áreas peatonales solo se unen a la red por algunos vértices.
+  - Cuatro uniones en Puerta de Jerez y el Prado, de 9 a 54 m, entre nodos de la caché: la avenida de la Constitución, San Fernando y Carlos V con Puerta Jerez y la glorieta de Don Juan de Austria.
+  - De la avenida de Carlos V a la de la Constitución, El Cerro pasa de 1.734 m a 1.011 m (en recta, 959 m).
+  - El arreglo de fondo es bajar la caché con las vías sin nombre. Cambiaría todos los trazados de todas las capitales.
+- **Regeneración, sin pisar lo hecho a mano:**
+  - `itinerarios-2026.json`: solo las 7 hermandades. `unir.mjs` cambia también las 4 de siempre, que se dejan como estaban.
+  - `recorridos/sevilla.json`: cambian 25 hermandades. Son las 7, las de la Puerta de San Miguel, las de Puerta de Jerez, La Misión, La Paz y Santa Genoveva (solo el trazado, por las uniones).
+    - Los Panaderos y Cristo de Burgos conservan su empalme a mano. Al regenerar vuelve el problema de su ancla. Cristo de Burgos recibe solo su Puerta de San Miguel.
+    - Las extraordinarias quedan como estaban (al regenerar entraba la del Amparo, del 8-nov).
+  - `portal.json`: no cambia ninguna ficha.
+- **Sigue pendiente:**
+  - Sedes con fuente de Los Panaderos, Cristo de Burgos y La Sed.
+  - Las franjas que empujan horas oficiales en el plano.
+  - erCuñao solo mira un tramo.
+  - `limpiaLugar` de `build.mjs` junta «J. L. de la Vega» en «J. L.dela Vega»: ya pasaba antes, en el palio de El Dulce Nombre.
+  - La Resurrección y Los Gitanos tienen estimadas algunas calles abreviadas: «J. del Gran Poder», «S. Ángela de la Cruz», «Conde de Barajas», «Alameda».
+  - Otros rodeos del plano por la misma causa de la caché: Santa Genoveva y Gallinato → Campamento en El Cerro.
+
 ## 2026-11-26 · Sevilla: los demás nombres partidos y la fuente de cada tramo (Pablo: «a) Sí, en otra subida, con su revisión»; rama `arreglo-huelva-sevilla-25nov`)
 Son los pendientes que dejó la entrada siguiente.
 - **Cotejo** (`wf_ecffa853-ba0`): se miró en la página renderizada y en la capa de texto cada uno de los 33 pares de puntos seguidos de la misma franja de Sevilla.
