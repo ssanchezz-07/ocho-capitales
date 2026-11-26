@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ENLACES } from './enlaces.mjs';
+import { ENLACES, uniones } from './enlaces.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
@@ -49,7 +49,7 @@ async function overpass(ciudad) {
   throw new Error('Overpass sin respuesta para ' + ciudad);
 }
 
-// red de calles andables con las mismas vías, filtros y ENLACES que enrutar.mjs, para que repartir() siga el camino que se dibuja.
+// red de calles andables con las mismas vías, filtros, ENLACES y uniones de plazas sueltas que enrutar.mjs, para que repartir() siga el camino que se dibuja.
 // Las distancias se miden con dist(), y enrutar.mjs usa su proyección (kx, ky): difieren en un 0,3 %, y con dos caminos casi
 // empatados podrían elegir distinto.
 const ANDABLE = /^(primary|secondary|tertiary|residential|pedestrian|living_street|unclassified|footway|steps|service|road|path|cycleway|trunk)(_link)?$/;
@@ -79,6 +79,7 @@ function indice(osm, ciudad) {
     const i = red.ids.get(clave(a)), j = red.ids.get(clave(b)); if (i === undefined || j === undefined) continue; // enrutar.mjs avisa si falta
     const d = dist(a, b) * 111000; red.ady[i].push([j, d]); red.ady[j].push([i, d]);
   }
+  for (const l of (ciudad && uniones(ciudad)) || []) { let p = -1; for (const q of l) { const i = nodo(q); if (p >= 0 && p !== i) { const d = dist(red.nod[p], red.nod[i]) * 111000; red.ady[p].push([i, d]); red.ady[i].push([p, d]); } p = i; } } // y las uniones de las plazas sueltas
   red.rej = new Map();
   red.nod.forEach((q, i) => { if (!red.ady[i].length) return; const k = Math.floor(q[0] / CELDA) + ':' + Math.floor(q[1] / CELDA); (red.rej.get(k) || red.rej.set(k, []).get(k)).push(i); });
   return { calles, templos, red };

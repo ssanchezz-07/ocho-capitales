@@ -9,7 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ENLACES } from './enlaces.mjs';
+import { ENLACES, uniones } from './enlaces.mjs';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(DIR, '..', '..');
@@ -66,6 +66,14 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
     const i = id.get(a[0].toFixed(7) + ',' + a[1].toFixed(7)), j = id.get(b[0].toFixed(7) + ',' + b[1].toFixed(7));
     const d = Math.hypot(nodos[i][2] - nodos[j][2], nodos[i][3] - nodos[j][3]); ady[i].push([j, d]); ady[j].push([i, d]);
   }
+  // y las uniones de las plazas sueltas (uniones-osm-<ciudad>.json, ver enlaces.mjs). Cada línea tiene que tocar la caché o otra línea
+  // de unión (las contiguas, por sus dos puntos): si la caché se vuelve a bajar y OSM ha cambiado esos nodos, se avisa y no se escribe la ciudad.
+  // (una acera puede tocar solo otra línea de unión, como el paso de peatones que la lleva a la calle)
+  const lineas = uniones(ciudad), k7 = (q) => q[0].toFixed(7) + ',' + q[1].toFixed(7), esta = (q) => id.has(k7(q));
+  const enOtra = (l, q) => lineas.some((o) => o !== l && o.some((r) => k7(r) === k7(q)));
+  const sueltas = lineas.filter((l) => (l.length === 2 && !l.some((q) => enOtra(l, q)) ? !esta(l[0]) || !esta(l[1]) : !l.some((q) => esta(q) || enOtra(l, q))));
+  if (sueltas.length) { console.error(`UNIONES: ${sueltas.length} uniones de ${ciudad} no tocan la caché; no se escribe su recorrido`); process.exitCode = 1; continue; }
+  for (const l of lineas) { let p = -1; for (const q of l) { const i = nodo(q[0], q[1]); if (p >= 0 && p !== i) { const d = Math.hypot(nodos[i][2] - nodos[p][2], nodos[i][3] - nodos[p][3]); ady[p].push([i, d]); ady[i].push([p, d]); } p = i; } }
   // rejilla de 60 m para encontrar el nodo más cercano
   const rej = new Map(), C = 60;
   nodos.forEach((n, i) => { if (!ady[i].length) return; const k = Math.floor(n[2] / C) + ':' + Math.floor(n[3] / C); (rej.get(k) || rej.set(k, []).get(k)).push(i); });

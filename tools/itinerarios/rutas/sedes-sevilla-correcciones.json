@@ -90,7 +90,16 @@
  },
  "las-cigarreras-sevilla": {
   "templo": null,
-  "motivo_templo": "sede en revisión: la ficha da la Capilla de la Fábrica de Tabacos (Los Remedios), que según Wikipedia fue su sede de 1965 a 2024; desde 2024 estaría en la Iglesia de Nuestra Señora de los Remedios. Falta confirmarlo con la hermandad o el Consejo"
+  "motivo_templo": "sede canónica: Capilla de la Fábrica de Tabacos, Los Remedios (Regla 4, web oficial; OSM way/222190216; en templo_encontrado). Su web publica un proyecto de reforma de la capilla. En la Semana Santa de 2026 salió del centro (su primera calle es Almirante Apodaca, junto a Los Terceros), así que esa capilla haría salir el cortejo de Los Remedios: pendiente de decidir qué templo usar en el plano",
+  "templo_encontrado": {
+   "nombre": "Capilla de la Fábrica de Tabacos (Los Remedios)",
+   "lat": 37.3776058,
+   "lon": -5.9955122,
+   "osm": "way/222190216",
+   "nombre_osm": "Capilla de Las Cigarreras",
+   "fuente": "https://www.columnayazotes.es/hermandad/sede-canonica",
+   "fuente_coordenadas": "OpenStreetMap way 222190216 («Capilla de Las Cigarreras»): media de 12 vértices. Salida temporal por obras desde la Iglesia de Los Terceros (way 180110804)"
+  }
  },
  "las-aguas-sevilla": {
   "templo": {
@@ -127,7 +136,16 @@
  },
  "el-cerro-sevilla": {
   "templo": null,
-  "motivo_templo": "templo «Parroquia de Nuestra Señora de los Dolores» (Cerro del Águila): casaba con una iglesia homónima fuera del Cerro"
+  "motivo_templo": "templo «Parroquia de Nuestra Señora de los Dolores» (Cerro del Águila; fuente oficial, OSM way/42091405; en templo_encontrado). Con ella, la entrada de la cruz se dibujaba en una recta de 430 m desde Afán de Ribera, sin camino por la red (26-nov): pendiente de anclar la sede a su puerta",
+  "templo_encontrado": {
+   "nombre": "Parroquia de Nuestra Señora de los Dolores (Cerro del Águila)",
+   "lat": 37.3716916,
+   "lon": -5.9573297,
+   "osm": "way/42091405",
+   "nombre_osm": "Iglegia del Cerro del Águila",
+   "fuente": "http://www.doloresdelcerro.com/historia.php",
+   "fuente_coordenadas": "OpenStreetMap way 42091405 («Iglegia del Cerro del Águila», errata en OSM): media de 5 vértices, Cerro del Águila"
+  }
  },
  "los-panaderos-sevilla": {
   "templo": {
@@ -142,7 +160,16 @@
  },
  "dolores-de-torreblanca-sevilla": {
   "templo": null,
-  "motivo_templo": "templo «Parroquia de San Antonio de Padua» (Torreblanca): casaba con el convento homónimo del centro"
+  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
+  "templo_encontrado": {
+   "nombre": "Parroquia de San Antonio de Padua (Torreblanca)",
+   "lat": 37.3835658,
+   "lon": -5.8990385,
+   "osm": "way/428041234",
+   "nombre_osm": "(sin nombre en OSM; Plaza de las Acacias 1)",
+   "fuente": "https://hermandaddelosdolores.org/parroquia-de-san-antonio-de-padua/",
+   "fuente_coordenadas": "OpenStreetMap way 428041234 (place_of_worship sin nombre, Plaza de las Acacias 1): media de 19 vértices; duplicado en way 224531066"
+  }
  },
  "la-sed-sevilla": {
   "templo": {
@@ -162,9 +189,136 @@
    "lon": -5.9925702,
    "osm": "way/18546585",
    "nombre_osm": "Iglesia del Salvador",
-   "fuente": "https://es.wikipedia.org/wiki/Hermandad_del_Amor_(Sevilla)",
+   "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/dramos_el_amor.html",
    "fuente_coordenadas": "OpenStreetMap way 18546585"
-  },
-  "motivo_fuente": "La ficha del portal cita ahora la página archivada del Señor de la Sagrada Entrada (hermandaddelamor.net), que da «C/ Villegas 4» pero no nombra el Salvador; se deja la fuente publicada, que sí lo dice. Pendiente: una página oficial que lo diga."
+  }
+ },
+ "jesus-despojado-sevilla": {
+  "templo": {
+   "nombre": "Capilla de Nuestra Señora del Mayor Dolor (Plaza de Molviedro)",
+   "lat": 37.3877948,
+   "lon": -5.9976009,
+   "osm": "way/495841025",
+   "nombre_osm": "Capilla del Mayor Dolor",
+   "fuente": "https://jesusdespojado.org/sede-canonica/",
+   "fuente_coordenadas": "OpenStreetMap way 495841025 («Capilla del Mayor Dolor»): media de sus 10 vértices, Arenal"
+  }
+ },
+ "el-museo-sevilla": {
+  "templo": {
+   "nombre": "Capilla de la Expiración (Capilla del Museo)",
+   "lat": 37.3928975,
+   "lon": -5.9999956,
+   "osm": "node/747809164",
+   "nombre_osm": "Capilla del Museo",
+   "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/ls_el_museo.html",
+   "fuente_coordenadas": "OpenStreetMap node 747809164 («Capilla del Museo»): punto único, Plaza del Museo"
+  }
+ },
+ "los-estudiantes-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Capilla de la Universidad» (fuente oficial; OSM way/120225599, building=chapel sin nombre; en templo_encontrado). Su centro queda dentro de la antigua Fábrica de Tabacos, a 108 m de la calle, y la salida y la entrada se dibujaban en recta a través del edificio (26-nov): pendiente de anclar la sede a su puerta",
+  "templo_encontrado": {
+   "nombre": "Capilla de la Universidad (antigua Fábrica de Tabacos, calle San Fernando)",
+   "lat": 37.3811504,
+   "lon": -5.9894809,
+   "osm": "way/120225599",
+   "nombre_osm": "(sin nombre en OSM; building=chapel)",
+   "fuente": "https://hermandaddelosestudiantes.es/hermandad/sede/",
+   "fuente_coordenadas": "OpenStreetMap way 120225599 (building=chapel sin nombre): media de 13 vértices; recinto de la Universidad, extremo de la calle San Fernando"
+  }
+ },
+ "san-pablo-sevilla": {
+  "templo": {
+   "nombre": "Parroquia de San Ignacio de Loyola (Polígono San Pablo)",
+   "lat": 37.3987517,
+   "lon": -5.9582606,
+   "osm": "way/117010401",
+   "nombre_osm": "Parroquia San Ignacio de Loyola",
+   "fuente": "https://jesuscautivoyrescatado.com/hermandad/historia/",
+   "fuente_coordenadas": "OpenStreetMap way 117010401 («Parroquia San Ignacio de Loyola»): media de 13 vértices, Polígono San Pablo"
+  }
+ },
+ "santa-genoveva-sevilla": {
+  "templo": {
+   "nombre": "Parroquia de Nuestra Señora de las Mercedes y Santa Genoveva (Tiro de Línea)",
+   "lat": 37.3681544,
+   "lon": -5.9767794,
+   "osm": "way/599062209",
+   "nombre_osm": "(sin nombre en OSM; amenity=place_of_worship)",
+   "fuente": "https://www.santagenoveva.com/sede-canonica/",
+   "fuente_coordenadas": "OpenStreetMap way 599062209 (place_of_worship sin nombre): media de 5 vértices, esquina de la calle Romero de Torres con la Avenida Teatinos"
+  }
+ },
+ "san-jose-obrero-sevilla": {
+  "templo": {
+   "nombre": "Parroquia de San José Obrero y San Francisco de Paula",
+   "lat": 37.3975223,
+   "lon": -5.9753476,
+   "osm": "relation/1655552",
+   "nombre_osm": "Parroquia San José Obrero",
+   "fuente": "http://hermandadsanjoseobrerosevilla.blogspot.com/",
+   "fuente_coordenadas": "OpenStreetMap relation 1655552 («Parroquia San José Obrero», multipolígono): media de 27 vértices de sus miembros"
+  }
+ },
+ "el-carmen-doloroso-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Real Parroquia de Omnium Sanctorum» (fuente oficial, OSM way/303650356; en templo_encontrado): con ella, el dibujo de la cruz daba un rodeo nuevo por la red de calles (26-nov); pendiente de mirar la red",
+  "templo_encontrado": {
+   "nombre": "Real Parroquia de Omnium Sanctorum",
+   "lat": 37.3992161,
+   "lon": -5.991237,
+   "osm": "way/303650356",
+   "nombre_osm": "Real Parroquia de Omnium Sanctorum",
+   "fuente": "https://www.hermandaddelcarmen.es/historia/",
+   "fuente_coordenadas": "OpenStreetMap way 303650356 («Real Parroquia de Omnium Sanctorum»): media de 26 vértices; duplicado en way 82031684"
+  }
+ },
+ "los-negritos-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo «Capilla de los Ángeles» (fuente oficial, OSM way/70012573; en templo_encontrado): con ella, el dibujo de la cruz y del palio daba un rodeo nuevo por la red de calles (26-nov); pendiente de mirar la red",
+  "templo_encontrado": {
+   "nombre": "Capilla de Nuestra Señora de los Ángeles",
+   "lat": 37.3909431,
+   "lon": -5.9844858,
+   "osm": "way/70012573",
+   "nombre_osm": "Capilla de los negritos",
+   "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/js_los_negritos.html",
+   "fuente_coordenadas": "OpenStreetMap way 70012573 («Capilla de los negritos», alt_name «Capilla de los Ángeles»): media de 13 vértices"
+  }
+ },
+ "bellavista-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
+  "templo_encontrado": {
+   "nombre": "Parroquia del Sagrado Corazón de Jesús (Bellavista)",
+   "lat": 37.3245822,
+   "lon": -5.9675111,
+   "osm": "way/339700035",
+   "nombre_osm": "Parroquia Sagrado Corazón de Jesús",
+   "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/vd_bellavista.html",
+   "fuente_coordenadas": "OpenStreetMap way 339700035 («Parroquia Sagrado Corazón de Jesús»): media de 14 vértices, Bellavista"
+  }
+ },
+ "divino-perdon-sevilla": {
+  "templo": null,
+  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
+  "templo_encontrado": {
+   "nombre": "Iglesia de la Beata Madre Ana María Javouhey y San José de Cluny (Parque Alcosa)",
+   "lat": 37.410442,
+   "lon": -5.9189881,
+   "osm": "way/1375111394",
+   "nombre_osm": "Iglesia de la Beata Madre Ana María de Javohuey y San José de Cluny",
+   "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/sp_divino_perdon.html",
+   "fuente_coordenadas": "OpenStreetMap way 1375111394 («Iglesia de la Beata Madre Ana María de Javohuey y San José de Cluny»): media de sus vértices, Parque Alcosa"
+  }
+ },
+ "la-carreteria-sevilla": {
+  "templo": null,
+  "motivo_templo": "la web oficial da su sede canónica en la calle Real de la Carretería 15 (hermandaddelacarreteria.org/capilla-de-la-carreteria/), pero el edificio no está en OSM como templo: el 15 es building=residential (way/422059710)"
+ },
+ "pasion-y-muerte-sevilla": {
+  "templo": null,
+  "motivo_templo": "sede canónica: Parroquia de Nuestra Señora del Buen Aire (ficha del Consejo), que no está en OSM; la misma ficha da como sede de salida la Iglesia de San Juan Bosco (OSM way/427751618)"
  }
 }

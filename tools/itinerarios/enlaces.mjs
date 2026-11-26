@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 // Ocho Capitales: uniones a mano entre calles que se tocan, comunes a enrutar.mjs (que dibuja los recorridos por las calles) y a
 // geocodificar.mjs (que reparte por ese mismo camino las calles que caían en un mismo punto: repartir()).
 // Uniones que faltan en el grafo entre calles que se tocan: la caché (geocodificar.mjs, overpass()) solo trae vías con nombre, y
@@ -16,3 +19,11 @@ export const ENLACES = {
     [[37.3808849, -5.9877450], [37.3809976, -5.9883459]],
   ],
 };
+// Uniones de las plazas que quedaban sueltas (islas), en uniones-osm-<ciudad>.json: vías de OSM sin nombre (aceras, pasos, peatonales)
+// y esquinas contiguas a menos de 7 m. Devuelve sus líneas ([[lat, lon], …]) para meterlas en el grafo como aristas, nunca como calles.
+export function uniones(ciudad) {
+  const f = path.join(path.dirname(fileURLToPath(import.meta.url)), `uniones-osm-${ciudad}.json`);
+  if (!fs.existsSync(f)) return [];
+  const U = JSON.parse(fs.readFileSync(f, 'utf8'));
+  return [...(U.vias || []).map((v) => v.geometry), ...(U.contiguos || []).map((c) => [c.a, c.b])];
+}

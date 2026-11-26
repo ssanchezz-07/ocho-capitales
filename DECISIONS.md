@@ -1,5 +1,93 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-26 · Sevilla: plazas sueltas de la red, calles estimadas y cinco sedes más (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
+Sigue con lo que dejó pendiente la entrada siguiente.
+- **Medido contra lo publicado (4a6ea529):**
+  - trazado fuera de las calles: de 16.292 m a 12.388 m (`fuera-de-calle.cjs` de la revisión);
+  - tramos en recta de más de 60 m: de 219 a 176;
+  - calles estimadas: de 73 a 53;
+  - salidas y entradas estimadas: de 49 a 29;
+  - cambian 27 hermandades.
+- **Cómo se ha decidido qué entra:**
+  - Cada isla, cada alias y cada sede se probó por separado, en una copia aparte, contra lo publicado (`scratchpad/tanda-plano/variantes.cjs` y `sedes-variantes.cjs`).
+  - Se rechazó lo que empeoraba algún tramo:
+    - un espolón nuevo de 20 m o más, si no venía con una mejora de al menos 100 m menos fuera de las calles;
+    - más trazado fuera de las calles;
+    - un rodeo nuevo (camino de más del doble de la recta y de más de 300 m);
+    - 300 m más de largo sin mejora.
+  - Lo rechazado se queda como estaba, y aquí se dice por qué.
+- **Plazas sueltas de la red (islas).**
+  - La caché de OSM solo trae vías con nombre. Por eso 13 plazas con puntos de los itinerarios quedaban aisladas, y el dibujo pasaba en recta.
+  - **`uniones-osm-sevilla.json`** (nuevo; lo leen `enrutar.mjs` y `geocodificar.mjs` desde `enlaces.mjs`, como aristas, nunca como calles):
+    - «vias»: aceras, pasos de peatones y peatonales de OSM sin nombre, bajadas con Overpass. Son los caminos más cortos (≤ 300 m, sin escaleras ni carriles bici) de cada isla a la red principal.
+    - «contiguos»: vértices de la plaza a menos de 7 m de un nodo de la red. Es la misma esquina, sin nodo compartido en OSM; pasa en las plazas dibujadas como un área sin ninguna vía.
+    - `enrutar.mjs` no escribe la ciudad si una unión no toca la caché ni otra unión, igual que con los ENLACES.
+  - **Entran 9:** Plaza de España, la glorieta de Covadonga, el Altozano con San Jacinto, la Ronda de Padre Pío, Ramón Rueda, San Juan de la Palma, Doña Teresa Enríquez, Santa Ana y San Román.
+    - Por ejemplo, La Paz pasa de 1.060 a 336 m fuera de las calles. Las Penas, las Siete Palabras y Pasión y Muerte quedan a 0.
+  - **No entran 4:**
+    - el puente de Isabel II (La O): un rodeo nuevo y más trazado fuera de las calles en La Estrella;
+    - San Lorenzo: un espolón de 20 a 30 m;
+    - los Terceros (La Cena): un rodeo nuevo;
+    - la avenida de Roma (Santa Genoveva): un rodeo nuevo.
+  - Quedan cuatro espolones nuevos de 20 a 50 m. Todos están en tramos que mejoran en 100 m o más: Plaza de España (La Paz), Ramón Rueda (Pino Montano), Avda. Teatinos (Bendición y Esperanza) y Pureza (Pasión y Muerte).
+- **Calles estimadas por cómo vienen escritas:** se buscaron en la caché por su nombre completo, y se comprobó que pasan a menos de unos 450 m de sus vecinos en el itinerario.
+  - **Entran 19 alias** (`alias-calles-sevilla.json`):
+    - «J. L. de la Vega» → Javier Lasso de la Vega;
+    - «Alcaicería» → Alcaicería de la Loza;
+    - «S. Ángela de la Cruz» → Santa Ángela de la Cruz;
+    - «J. de las Tres Caídas» y «Jesús Tres Caídas» → Jesús de las Tres Caídas;
+    - «Miguel Mañara» → Miguel de Mañara;
+    - «Amorde Dios» → Amor de Dios (errata del PDF);
+    - «Marqués de Mina» → Marqués de la Mina;
+    - «Fray Cefer. Glez.» → Fray Ceferino González;
+    - «Puerta Carmona» → Puerta de Carmona;
+    - «Párroco D. Eugenio» → Párroco Don Eugenio;
+    - «Fco Carrera Iglesias» → Francisco Carrera Iglesias «Paquili»;
+    - «Joaquín Morales y T.» → Joaquín Morales y Torres;
+    - «Maestro Góm. Zarzuela» → Maestro Gómez Zarzuela;
+    - «Alfonso Lasso de la Vega» → Alfonso Lasso de Vega;
+    - «Avda. La Plata» → Avenida de la Plata;
+    - «Avda. Cid» → Avenida de El Cid;
+    - «Barcelona» → Calle Barcelona;
+    - «Madre María Purísima» → Plaza María Purísima de la Cruz.
+  - **No entran 10.** Con ellos, el dibujo empeoraba porque la red de calles está incompleta. Los puntos se quedan estimados entre sus vecinos:
+    - «J. del Gran Poder», «Alameda» y «Conde de Barajas»: más trazado fuera de las calles en La Resurrección;
+    - «Avda. Greco»: un rodeo de 1,8 km en San Pablo;
+    - «Puñonrrostro»: más trazado fuera de las calles en San Roque;
+    - «Párroco A. Gómez Villa.» y «Ntra. Sra. Dolores»: en Padre Pío;
+    - «Puerta de la Carne»: cambiaba la salida estimada de El Cerro y alargaba el palio 900 m;
+    - «Glorieta del Cid»: en OSM, Glorieta de San Diego, la de la estatua; más trazado fuera de las calles en Santa Genoveva;
+    - el punto fijo del **Postigo del Aceite** (puerta de la muralla, OSM way 225686967): cambiaba las calles siguientes de San Gonzalo y daba un rodeo.
+- **Sedes:** las buscaron cuatro agentes (workflow `wf_83da2300-6f4`), y un revisor comprobó cada fuente y cada edificio de OSM.
+  - **Entran 5,** con fuente oficial:
+    - Jesús Despojado: Capilla del Mayor Dolor, en la plaza de Molviedro (su web, «Sede canónica»; OSM way 495841025);
+    - El Museo: Capilla de la Expiración (ficha del Consejo; OSM node 747809164);
+    - San Pablo: Parroquia de San Ignacio de Loyola (su web: «sede canónica de nuestra Hermandad»; OSM way 117010401). **La ficha del portal dice «Parroquia de San Pablo», y está mal;**
+    - Santa Genoveva: Parroquia de las Mercedes y Santa Genoveva (su web, «Sede canónica», avenida de los Teatinos 41; OSM way 599062209, sin nombre, en esa esquina);
+    - San José Obrero: Parroquia de San José Obrero y San Francisco de Paula (su web; OSM relation 1655552).
+    - Los últimos metros hasta el centro del templo quedan fuera de las calles: 52 m en San Pablo y de 12 a 24 m en El Museo.
+  - **La Borriquita:** la fuente pasa a ser la ficha del Consejo («Iglesia Colegial del Divino Salvador»), en vez de Wikipedia.
+  - **Encontradas, pero sin punto todavía.** Van con `templo: null` y `templo_encontrado` en las correcciones, cada una con su motivo:
+    - El Cerro (Parroquia de los Dolores): la entrada sale en una recta de 430 m;
+    - Los Estudiantes (Capilla de la Universidad): el centro queda dentro de la Fábrica de Tabacos, a 108 m de la calle;
+    - El Carmen Doloroso (Omnium Sanctorum) y Los Negritos (Capilla de los Ángeles): un rodeo nuevo;
+    - Bellavista, Torreblanca y el Divino Perdón: fuera del fondo del plano (hace falta `tools/plano/afueras.mjs`);
+    - Las Cigarreras: su sede canónica es la capilla de la Fábrica de Tabacos, en Los Remedios, pero en 2026 salió del centro. Hay que decidir qué templo usar.
+  - **Sin edificio en OSM:**
+    - La Carretería: su web la da en la calle Real de la Carretería 15, que en OSM es un edificio residencial;
+    - Pasión y Muerte: el Buen Aire. El Consejo da como sede de salida San Juan Bosco.
+  - En el plano de fuera de temporada se pasa de 57 a 62 sedes.
+- **Regeneración:**
+  - `recorridos/sevilla.json`, con `geocodificar.mjs` y `enrutar.mjs`. Las extraordinarias se quedan como estaban.
+  - Regenerado con el código final, sale idéntico al banco de pruebas.
+  - `informe-geocodificacion.json`: se conserva Jaén y se pone al día Sevilla. Los nombres sin situar bajan de 25 a 18.
+- **Sigue pendiente:**
+  - anclar las sedes a su puerta (lo piden El Cerro, Los Estudiantes y los últimos metros de las demás);
+  - la red de calles completa, con las vías sin nombre (es la causa de lo rechazado);
+  - corregir la sede de San Pablo en su ficha;
+  - las sedes de fuera del fondo del plano;
+  - lo que quedaba de la entrada siguiente.
+
 ## 2026-11-26 · Sevilla: calles que caían en un mismo punto, los Jardines de Murillo y tres sedes (Pablo: «A», a «¿Arreglo también lo que queda pendiente en el plano? a) Sí, en otra subida, con su revisión»)
 Cierra lo que dejó pendiente del plano la entrada siguiente.
 - **Calles en un mismo punto** (`geocodificar.mjs`, `repartir()`).
