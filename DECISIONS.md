@@ -39,7 +39,7 @@ Cierra casi todo lo pendiente de la entrada siguiente.
     - Con la cruz copiada del Consejo, la de Redención pasaba a dar un rodeo por allí. Lo vio la revisión (`wf_678871d4-30d`), y por eso no se subió el primer commit.
     - El palio ya estaba así antes.
     - Las dos quedan en el mismo punto de la Cuesta del Rosario que otras 15 hermandades.
-  - «Glorieta D. Juan de Austria» (cruz de El Sol) → «Plaza Don Juan de Austria», el nombre en OSM. Estaba estimada a unos 300 m.
+  - «Glorieta D. Juan de Austria» (cruz de El Sol) → «Plaza Don Juan de Austria», el nombre en OSM. En lo publicado estaba estimada a unos 550 m.
 - **Torres de la Plaza de España** (palio de La Paz). `norm()` quita el paréntesis, y las dos caían en el mismo punto.
   - Ahora se buscan con el paréntesis (`FIJOS_PARENTESIS`).
   - Coordenadas: centro de los edificios «Torre Norte» (way 442264001) y «Torre Sur» (way 873304735) de OSM, según Overpass del 26-nov.
@@ -47,9 +47,9 @@ Cierra casi todo lo pendiente de la entrada siguiente.
 - **Rodeo de El Cerro** (`ENLACES` en `enrutar.mjs`).
   - La causa: la caché de OSM solo trae vías con nombre. Faltan los tramos sin nombre que las unen, como las bocas de una glorieta, y las áreas peatonales solo se unen a la red por algunos vértices.
   - Cuatro uniones en Puerta de Jerez y el Prado, de 9 a 54 m, entre nodos de la caché: la avenida de la Constitución, San Fernando y Carlos V con Puerta Jerez y la glorieta de Don Juan de Austria.
-  - De la avenida de Carlos V a la de la Constitución, El Cerro pasa de 1.734 m a 1.011 m (en recta, 959 m).
+  - De la avenida de Carlos V a la de la Constitución, El Cerro pasa de 1.731 m a 1.006 m en el plano (en recta, 959 m).
   - El arreglo de fondo es bajar la caché con las vías sin nombre. Cambiaría todos los trazados de todas las capitales.
-  - Si al volver a bajar la caché falta alguno de esos nodos, `enrutar.mjs` lo avisa y sale con error, para que la unión no se pierda sin ruido.
+  - Si al volver a bajar la caché falta alguno de esos nodos, `enrutar.mjs` lo avisa, no escribe el recorrido de esa ciudad y sale con error, para que la unión no se pierda sin ruido.
 - **Regeneración, sin pisar lo hecho a mano:**
   - `itinerarios-2026.json`: solo las 7 hermandades y La Borriquita. `unir.mjs` cambia también las 4 de siempre, que se dejan como estaban.
   - `recorridos/sevilla.json`: cambian 25 hermandades.
@@ -72,6 +72,9 @@ Cierra casi todo lo pendiente de la entrada siguiente.
     - Una calle larga cae en el extremo más cercano al punto anterior: «San Fernando» de La Candelaria y Las Cigarreras, junto a Puerta Jerez. Habría que repartir esas apariciones a lo largo de la vía.
     - «Jardines de Murillo» en el palio de Las Cigarreras casa con la calle Murillo, a 1 km. En la cruz ya queda estimado junto a los jardines.
     - «Amorde Dios», en la cruz de La Borriquita, está así impreso (Canal Sur, p. 22) y queda estimado.
+    - Redención, palio: «Argote de Molina» y «Álvarez Quintero» caen en el vértice que comparten (media hora parado). En lo publicado eran dos puntos estimados.
+    - «Jardines de Murillo» en la cruz de Las Cigarreras queda estimado en la Judería, a unos 150 m de los jardines: mejor que antes (calle Murillo, a 1 km), pero no por Menéndez Pelayo.
+  - Todo esto lo confirmó la segunda revisión (`wf_1e073094-bd5`, juez: «APTO»): ningún dato falso y ningún plano peor que en lo publicado.
 
 ## 2026-11-26 · Sevilla: los demás nombres partidos y la fuente de cada tramo (Pablo: «a) Sí, en otra subida, con su revisión»; rama `arreglo-huelva-sevilla-25nov`)
 Son los pendientes que dejó la entrada siguiente.

@@ -21,7 +21,7 @@ const solo = process.argv[2];
 //   56767102) no se une a Puerta Jerez (way 225659951) por su extremo sur (27 m); el área de la calle San Fernando (way 56767111),
 //   ni a Puerta Jerez (13 m) ni a la plaza Don Juan de Austria (way 69986998, 9 m); y la avenida de Carlos V (way 109586263) acaba
 //   a 54 m de la glorieta de Don Juan de Austria (way 285587771). Sin ellas, El Cerro iba de la avenida de Carlos V a la de la
-//   Constitución por la Glorieta de San Diego y Miguel de Mañara (1.734 m; en recta, 959 m); con ellas, por San Fernando (1.011 m).
+//   Constitución por la Glorieta de San Diego y Miguel de Mañara (1.731 m; en recta, 959 m); con ellas, por San Fernando (1.006 m).
 const ENLACES = {
   sevilla: [
     [[37.3828829, -5.9933841], [37.3827652, -5.9931212]],
@@ -72,11 +72,12 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
       prev = i;
     }
   }
-  // uniones que faltan en OSM entre espacios peatonales contiguos (ENLACES, arriba)
+  // uniones que faltan en OSM entre espacios peatonales contiguos (ENLACES, arriba). Si la caché se vuelve a bajar y OSM ha movido
+  // un vértice, la unión se perdería sin ruido: se avisa, esa ciudad no se escribe y el script sale con error.
+  const faltan = (ENLACES[ciudad] || []).filter(([a, b]) => !id.has(a[0].toFixed(7) + ',' + a[1].toFixed(7)) || !id.has(b[0].toFixed(7) + ',' + b[1].toFixed(7)));
+  if (faltan.length) { console.error(`ENLACES: no están en la caché los nodos de ${faltan.length} uniones de ${ciudad}; no se escribe su recorrido`, JSON.stringify(faltan)); process.exitCode = 1; continue; }
   for (const [a, b] of ENLACES[ciudad] || []) {
     const i = id.get(a[0].toFixed(7) + ',' + a[1].toFixed(7)), j = id.get(b[0].toFixed(7) + ',' + b[1].toFixed(7));
-    // (si la caché se vuelve a bajar y OSM ha movido el vértice, la unión se perdería sin ruido: se avisa y el script sale con error)
-    if (i === undefined || j === undefined) { console.error('ENLACES: no está el nodo', ciudad, a, b); process.exitCode = 1; continue; }
     const d = Math.hypot(nodos[i][2] - nodos[j][2], nodos[i][3] - nodos[j][3]); ady[i].push([j, d]); ady[j].push([i, d]);
   }
   // rejilla de 60 m para encontrar el nodo más cercano
