@@ -34,9 +34,9 @@
   - Ni espolones ni trazado nuevo fuera de las calles: el total de Sevilla sigue en 13.604 m.
 - **Sin comprobar:** el motivo y las fechas de las obras.
   - Las páginas de la hermandad no lo dicen, y ABC Sevilla y Diario de Sevilla no se dejan leer de forma automática.
-  - En noviembre de 2026, sus cultos no han sido en Los Terceros, según las noticias de su web:
-    - la misa de difuntos del 5 de noviembre fue en la Parroquia de Los Remedios (columnayazotes.es/noticias/solemne-misa-de-difuntos-2026);
-    - el triduo a la Virgen de la Victoria (12 a 14 de noviembre) y la jura de reglas (13 de noviembre) fueron en la capilla del Colegio Santa Ana (…/noticias/solemne-triduo-victoria-2026 y …/noticias/jura-nuevos-hermanos-2026).
+  - Sus cultos de noviembre de 2026 no estaban anunciados en Los Terceros. Según las noticias de su web, que los anuncian (no dicen si se hicieron):
+    - la misa de difuntos del 5 de noviembre, en la Parroquia de Los Remedios (columnayazotes.es/noticias/solemne-misa-de-difuntos-2026);
+    - el triduo a la Virgen de la Victoria (12 a 14 de noviembre) y la jura de reglas (13 de noviembre), en la capilla del Colegio Santa Ana (…/noticias/solemne-triduo-victoria-2026 y …/noticias/jura-nuevos-hermanos-2026).
 
 ## 2026-11-26 · Sevilla: la sede de San Pablo en su ficha, y por qué no se ponen todavía las sedes en su puerta (Pablo: «A», a «¿Sigo con lo que queda del plano? a) Sí, en otra subida, con su revisión»)
 - **Ficha de San Pablo:** la sede pasa de «Parroquia de San Pablo (Polígono)» a «Parroquia de San Ignacio de Loyola (Polígono San Pablo)».
