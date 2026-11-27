@@ -189,15 +189,20 @@ function situar(ix, ciudad, h, pts) {
   const cand = !fijada && sede && ancla ? ix.templos.filter((t) => cerca(t.geo)).map((t) => [t, nucleo(t.nombre).split(' ').filter((w) => w.length > 3 && sede.includes(w)).length]).sort((a, b) => b[1] - a[1])[0] : null;
   // si ese año la cofradía no salió de su sede («salida» del año de los itinerarios: Las Cigarreras en 2026, de Los Terceros, por las
   // obras de su capilla), sale y entra ahí; la sede sigue siendo la otra (sedes.mjs) y es la que enseña el plano fuera de temporada.
-  // Si la salida trae «punto» (el nodo de la calle por el que sale, según su itinerario), se usa ese en vez del centro del edificio,
-  // que se pegaría al nodo más cercano de la red aunque sea de otra calle.
-  const sa = fijada && fijada.salida && fijada.salida.anio === ITI.anio ? fijada.salida : null;
-  const salidaAnio = sa && Array.isArray(sa.punto) ? sa.punto.slice(0, 2) : sa && sa.lat != null ? [sa.lat, sa.lon] : null;
-  const pSede = salidaAnio || (fijada ? (fijada.templo && fijada.templo.lat != null ? [fijada.templo.lat, fijada.templo.lon] : null) : cand && cand[1] > 0 ? centro(cand[0].geo) : null);
+  const tieneSitio = (o) => o && (Array.isArray(o.punto) || o.lat != null);
+  const sa = fijada && fijada.salida && fijada.salida.anio === ITI.anio && tieneSitio(fijada.salida) ? fijada.salida : null;
+  // El edificio del que sale y entra (esa salida o su templo). Su «punto» (y «punto_entrada», si entra por otra calle) es el nodo de
+  // la calle por la que sale (y entra) según su itinerario oficial; se usa en vez del centro del edificio, que se pegaría al nodo más
+  // cercano de la red aunque sea de otra calle (Las Cigarreras, al Pasaje Virgen de los Gitanos) o, en un edificio grande, a uno a
+  // más de 100 m a través de él.
+  const ed = sa || (fijada && tieneSitio(fijada.templo) ? fijada.templo : null);
+  const nodoDe = (q) => (Array.isArray(q) && q.length >= 2 ? q.slice(0, 2) : null);
+  const pSede = ed ? nodoDe(ed.punto) || [ed.lat, ed.lon] : fijada ? null : cand && cand[1] > 0 ? centro(cand[0].geo) : null;
+  const pEntrada = ed ? nodoDe(ed.punto_entrada) || pSede : pSede;
   const cats = ix.templos.filter((t) => /catedral/.test(t.nombre)).sort((a, b) => (ancla ? dist(centro(a.geo), ancla) - dist(centro(b.geo), ancla) : 0));
   const pCat = cats[0] ? centro(cats[0].geo) : null;
   let prev = pSede || ancla, sin = [];
-  const res = pts.map((p) => {
+  const res = pts.map((p, iP) => {
     const l = norm(p.lugar);
     let pos = null, como = '';
     // Sevilla: «S. Miguel» / «San Miguel» con su hora en la celda es la Puerta de San Miguel de la Catedral (carrera oficial, en rojo,
@@ -218,7 +223,10 @@ function situar(ix, ciudad, h, pts) {
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
       const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); geosCalle = ix.calles.get(k); pos = cercano(geosCalle, prev); como = 'calle';
     }
-    else if (ESPECIAL.test(l) || /^(salida|entrada|encierro)\b/.test(l)) { pos = pSede; como = 'sede'; }
+    else if (ESPECIAL.test(l) || /^(salida|entrada|encierro)\b/.test(l)) { // la sede: por su punto de entrada si es la entrada (o el último)
+      const esEntrada = /^(entrada|entra|encierro|recogida|se recoge|a su templo|a su capilla)\b/.test(l) || (iP > 0 && iP === pts.length - 1);
+      pos = esEntrada ? pEntrada : pSede; como = 'sede';
+    }
     else if (/catedral|s i c|estacion de penitencia/.test(l) && pCat) { pos = pCat; como = 'catedral'; }
     else if (/carrera oficial|^c oficial|^carrera$/.test(l)) { const g = ix.calles.get(norm(CARRERA[ciudad])) || ix.calles.get(nucleo(CARRERA[ciudad])); if (g) { pos = cercano(g, prev); como = 'carrera oficial'; } }
     else {
@@ -254,12 +262,18 @@ function situar(ix, ciudad, h, pts) {
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
   repartir(res, ix.red);
-  // y si la salida del año trae «entrada_por» (su itinerario oficial entra por calles que no están entre los puntos de la Nómina: Las
-  // Cigarreras en 2026, por Doña María Coronel y Bustos Tavera), el punto anterior a la entrada lleva «por»: los nodos por los que
-  // enrutar.mjs tiene que hacer pasar el camino. Sin eso, el camino más corto la metía por Almirante Apodaca, la calle de la salida.
-  if (sa && Array.isArray(sa.entrada_por) && sa.entrada_por.length) {
-    const iE = res.length - 1;
-    if (iE > 0 && res[iE].como === 'sede' && /^(entrada|encierro)\b/.test(norm(res[iE].lugar))) res[iE - 1].por = sa.entrada_por.map((q) => q.slice(0, 2));
+  // y si el edificio trae «salida_por» o «entrada_por» (su itinerario oficial va por calles que no están entre los puntos del
+  // programa: Las Cigarreras en 2026 entra por Doña María Coronel y Bustos Tavera), el primer tramo (desde la salida) o el último (el
+  // que llega a la entrada) lleva «por»: los nodos por los que enrutar.mjs tiene que hacer pasar el camino. Sin eso, el camino más
+  // corto metía a Las Cigarreras por Almirante Apodaca, la calle de la salida.
+  const porNodos = (a) => (Array.isArray(a) && a.length ? a.map((q) => q.slice(0, 2)) : null);
+  if (ed && porNodos(ed.salida_por)) {
+    if (res.length > 1 && res[0].como === 'sede') res[0].por = porNodos(ed.salida_por);
+    else console.error(`SALIDA_POR: ${h.slug}: el primer punto no es la salida de su sede; no se usa`);
+  }
+  if (ed && porNodos(ed.entrada_por)) {
+    let iE = res.length - 1; while (iE > 0 && res[iE - 1].como === 'sede') iE--; // si la entrada va repetida, la primera
+    if (iE > 0 && res[res.length - 1].como === 'sede') res[iE - 1].por = porNodos(ed.entrada_por);
     else console.error(`ENTRADA_POR: ${h.slug}: el último punto no es la entrada en su sede; no se usa`);
   }
   // (la salida y la entrada sin sede se estiman después, con todos los tramos de la hermandad: sedeEstimada; y lo que queda sin

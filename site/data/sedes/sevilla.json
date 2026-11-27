@@ -1,8 +1,8 @@
 {
  "capital": "sevilla",
  "nombre": "Sevilla",
- "actualizado": "2026-11-26",
- "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «salida» {anio, nombre, lat, lon, osm, punto?, entrada_por?, fuente, motivo}: el templo del que salió la cofradía ese año, si no fue su sede (el plano de ese año sale y entra ahí; el de fuera de temporada sigue en la sede); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
+ "actualizado": "2026-11-27",
+ "_leeme": "Sedes de cada hermandad para el plano. Por hermandad (clave = slug del portal): «templo» {nombre, lat, lon, osm, fuente, fuente_coordenadas, punto?, punto_entrada?, salida_por?, entrada_por?} y «casa_hermandad» {dir, lat, lon, osm?, fuente, fuente_coordenadas} si es otro edificio (null si no hay o no tiene fuente); «salida» {anio, nombre, lat, lon, osm, punto?, punto_entrada?, salida_por?, entrada_por?, fuente, motivo} (punto y lo demás, como en «templo»: los usa geocodificar.mjs para el dibujo, no el plano): el templo del que salió la cofradía ese año, si no fue su sede (el plano de ese año sale y entra ahí; el de fuera de temporada sigue en la sede); «falta»: lo que no se ha podido situar con fuente. lat/lon: el templo, en el centro de su edificio en OpenStreetMap; la casa hermandad, en su puerta (nodo entrance de OSM con esa dirección) o en el punto que dé la fuente. Generado con tools/itinerarios/rutas/sedes.mjs. Mapas: © colaboradores de OpenStreetMap (ODbL).",
  "hermandades": {
   "la-borriquita-sevilla": {
    "nombre": "La Borriquita",
