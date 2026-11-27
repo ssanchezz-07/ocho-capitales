@@ -183,15 +183,18 @@
   }
  },
  "dolores-de-torreblanca-sevilla": {
-  "templo": null,
-  "motivo_templo": "templo encontrado con fuente oficial (su web la da como sede canónica) y edificio en OSM (way/428041234, sin nombre; la dirección, plaza de las Acacias 1, es de OSM; en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
-  "templo_encontrado": {
+  "templo": {
    "nombre": "Parroquia de San Antonio de Padua (Torreblanca)",
    "lat": 37.3835658,
    "lon": -5.8990385,
    "osm": "way/428041234",
    "nombre_osm": "(sin nombre en OSM; Plaza de las Acacias 1)",
    "fuente": "https://hermandaddelosdolores.org/parroquia-de-san-antonio-de-padua/",
+   "punto": [
+    37.3838632,
+    -5.899197
+   ],
+   "fuente_punto": "Sin itinerario oficial completo a mano (el programa empieza en la plaza del Platanero y acaba en Cedro o en J. M. S. Román). La plaza de las Acacias, donde está el templo, no está unida a la red de calles: el punto es el nodo de la calle Alberchigo (OSM way 43796957) más cercano al templo de los que sí lo están, a 36 m, camino de la plaza del Platanero. Aproximado",
    "fuente_coordenadas": "OpenStreetMap way 428041234 (place_of_worship sin nombre, Plaza de las Acacias 1): media de 19 vértices; duplicado en way 224531066"
   }
  },
@@ -321,9 +324,7 @@
   }
  },
  "bellavista-sevilla": {
-  "templo": null,
-  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
-  "templo_encontrado": {
+  "templo": {
    "nombre": "Parroquia del Sagrado Corazón de Jesús (Bellavista)",
    "lat": 37.3245822,
    "lon": -5.9675111,
@@ -334,9 +335,7 @@
   }
  },
  "divino-perdon-sevilla": {
-  "templo": null,
-  "motivo_templo": "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)",
-  "templo_encontrado": {
+  "templo": {
    "nombre": "Iglesia de la Beata Madre Ana María Javouhey y San José de Cluny (Parque Alcosa)",
    "lat": 37.410442,
    "lon": -5.9189881,

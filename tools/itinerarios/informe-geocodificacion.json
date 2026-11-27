@@ -110,18 +110,18 @@
  },
  "sevilla": {
   "puntos": 2169,
-  "situados": 2077,
-  "pct": 96,
-  "calles_osm": 8804,
-  "templos": 156,
+  "situados": 2169,
+  "pct": 100,
+  "calles_osm": 10691,
+  "templos": 168,
   "no_situados": [
    [
-    "Entrada",
-    13
+    "Salida",
+    6
    ],
    [
-    "Salida",
-    12
+    "Entrada",
+    6
    ],
    [
     "J. del Gran Poder",
@@ -169,6 +169,14 @@
    ],
    [
     "Doctora",
+    1
+   ],
+   [
+    "Acedo",
+    1
+   ],
+   [
+    "Parroquia",
     1
    ],
    [

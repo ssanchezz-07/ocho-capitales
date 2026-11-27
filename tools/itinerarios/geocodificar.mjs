@@ -169,13 +169,10 @@ for (const ciudad of Object.keys(CENTRO)) {
 }
 // Cofradías de barrios que se salen del callejero descargado (CENTRO): sus calles no están o casan con otras homónimas de otro
 // sitio, y el recorrido se dibujaba lejos de su barrio. Se guarda el itinerario, sin situar, hasta tener el callejero de su barrio.
-const FUERA = {
-  sevilla: {
-    'bellavista-sevilla': 'Bellavista queda al sur del callejero: Guadalajara, Ávila, Logroño… casaban con las calles de San Juan de Aznalfarache, a 6 km',
-    'divino-perdon-sevilla': 'Parque Alcosa queda al este del callejero: ninguna de sus calles está',
-    'dolores-de-torreblanca-sevilla': 'Torreblanca queda al este del callejero: solo casaban calles homónimas del centro («Álamo», «Torres»)',
-  },
-};
+// Hasta el 27-nov, Sevilla tenía aquí Bellavista, el Divino Perdón (Parque Alcosa) y Dolores de Torreblanca: sus barrios quedaban fuera
+// del callejero en caché, y sus calles casaban con homónimas de San Juan de Aznalfarache o del centro. Desde entonces,
+// callejero-extra-sevilla.mjs añade esos barrios a la caché, y ya se sitúan.
+const FUERA = {};
 // La Sed (Sevilla): su primera calle, «Hospital San Juan de Dios», salía partida en dos renglones y casaba con una calle de San Juan
 // del centro. Desde el 25-nov, unir.mjs une los dos renglones y casa con la calle San Juan de Dios de Nervión, junto al hospital. Desde
 // el 26-nov tiene sede con fuente (rutas/sedes-sevilla-correcciones.json: Parroquia de la Concepción, way 72800137), como Los

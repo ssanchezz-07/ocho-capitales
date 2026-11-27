@@ -830,11 +830,16 @@
   },
   "bellavista-sevilla": {
    "nombre": "Bellavista",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)"
-   ]
+   "templo": {
+    "nombre": "Parroquia del Sagrado Corazón de Jesús (Bellavista)",
+    "lat": 37.3245822,
+    "lon": -5.9675111,
+    "osm": "way/339700035",
+    "nombre_osm": "Parroquia Sagrado Corazón de Jesús",
+    "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/vd_bellavista.html",
+    "fuente_coordenadas": "OpenStreetMap way 339700035 («Parroquia Sagrado Corazón de Jesús»): media de 14 vértices, Bellavista"
+   },
+   "casa_hermandad": null
   },
   "bendicion-y-esperanza-sevilla": {
    "nombre": "Bendición y Esperanza",
@@ -937,19 +942,34 @@
   },
   "dolores-de-torreblanca-sevilla": {
    "nombre": "Dolores de Torreblanca",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo encontrado con fuente oficial (su web la da como sede canónica) y edificio en OSM (way/428041234, sin nombre; la dirección, plaza de las Acacias 1, es de OSM; en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)"
-   ]
+   "templo": {
+    "nombre": "Parroquia de San Antonio de Padua (Torreblanca)",
+    "lat": 37.3835658,
+    "lon": -5.8990385,
+    "osm": "way/428041234",
+    "nombre_osm": "(sin nombre en OSM; Plaza de las Acacias 1)",
+    "fuente": "https://hermandaddelosdolores.org/parroquia-de-san-antonio-de-padua/",
+    "punto": [
+     37.3838632,
+     -5.899197
+    ],
+    "fuente_punto": "Sin itinerario oficial completo a mano (el programa empieza en la plaza del Platanero y acaba en Cedro o en J. M. S. Román). La plaza de las Acacias, donde está el templo, no está unida a la red de calles: el punto es el nodo de la calle Alberchigo (OSM way 43796957) más cercano al templo de los que sí lo están, a 36 m, camino de la plaza del Platanero. Aproximado",
+    "fuente_coordenadas": "OpenStreetMap way 428041234 (place_of_worship sin nombre, Plaza de las Acacias 1): media de 19 vértices; duplicado en way 224531066"
+   },
+   "casa_hermandad": null
   },
   "divino-perdon-sevilla": {
    "nombre": "Divino Perdón",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo encontrado con fuente oficial y edificio en OSM (en templo_encontrado), pero queda fuera del fondo del plano de Sevilla: hace falta ampliarlo antes (tools/plano/afueras.mjs)"
-   ]
+   "templo": {
+    "nombre": "Iglesia de la Beata Madre Ana María Javouhey y San José de Cluny (Parque Alcosa)",
+    "lat": 37.410442,
+    "lon": -5.9189881,
+    "osm": "way/1375111394",
+    "nombre_osm": "Iglesia de la Beata Madre Ana María de Javohuey y San José de Cluny",
+    "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/sp_divino_perdon.html",
+    "fuente_coordenadas": "OpenStreetMap way 1375111394 («Iglesia de la Beata Madre Ana María de Javohuey y San José de Cluny»): media de sus vértices, Parque Alcosa"
+   },
+   "casa_hermandad": null
   },
   "el-sol-sevilla": {
    "nombre": "El Sol",
