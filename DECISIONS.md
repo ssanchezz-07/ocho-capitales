@@ -9,25 +9,27 @@
   - Sin esos campos, `recorridos/sevilla.json` sale idéntico al publicado.
 - **Fuentes:** un workflow (8 buscadores con Sonnet y 2 revisores con Opus) y la Nómina oficial de 2026 del Consejo (hermandades-de-sevilla.org/wp-content/uploads/2026/03/Nomina_OFICIAL_Semana_Santa_2026.pdf). El programa de Canal Sur que usa el plano solo da las calles con hora; la Nómina da el itinerario completo.
 - **Entran** (cada «punto», con su fuente en «fuente_punto»):
-  - **El Cerro:** la calle Nuestra Señora de los Dolores, a 12 m del templo. La Nómina empieza y acaba ahí.
-  - **Los Estudiantes:** la calle San Fernando, a 15 m de la capilla. La Nómina sale por «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» y entra por «…San Fernando, Doña María de Padilla y lonja de la Universidad». La lonja no está en la red.
-  - **El Museo** (ya tenía sede): la plaza del Museo, a 28 m. Baja de 36 a 0 m fuera de las calles en cada tramo.
+  - **El Cerro:** la calle Nuestra Señora de los Dolores, a 12 m del borde del templo (40 m de su centro). La Nómina empieza y acaba ahí. Es la esquina con Afán de Ribera, así que el primer trozo de Nuestra Señora de los Dolores no llega a dibujarse.
+  - **Los Estudiantes:** la calle San Fernando, a 15 m del centro de la capilla (3 m de su borde). La Nómina sale por «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» y entra por «…San Fernando, Doña María de Padilla y lonja de la Universidad». La lonja no está en la red: la entrada se dibuja por San Fernando, paralela a la lonja, y no por Doña María de Padilla (forzarla haría un espolón). Aproximado.
+  - **El Museo** (ya tenía sede): la plaza del Museo, a 28 m de la capilla (un punto único en OSM). Baja de 36 a 0 m fuera de las calles en cada tramo.
   - **La Carretería:** su web dice que la capilla está «en la calle Real de la Carretería», sin número. El 15 es la dirección de la hermandad en su página de contacto, y se usa ese edificio de OSM (way 422059710, building=residential). **Suposición:** que la capilla está en ese número.
+    - Su página /capilla/ dice que la capilla se levantó «haciendo esquina […] con la calle del lavadero de la Caridad», y el 15 no hace esquina (está a unos 13 m de Pavía): el error puede ser de 10 a 15 m.
     - Sale por Real de la Carretería, Toneleros, Antonia Díaz y Arfe, como la Nómina. Para eso, «salida_por» lleva los dos extremos de Toneleros; sin ellos, el camino más corto iba por Techada.
-- **«Lonja de la Universidad»** pasa a LUGARES (`geocodificar.mjs`), en el mismo nodo de San Fernando. Se estimaba a medio camino y se dibujaba en recta a través del recinto.
+- **«Lonja de la Universidad»** pasa a LUGARES (`geocodificar.mjs`), en el mismo nodo de San Fernando. La lonja ocupa todo el frente de la fachada; se elige ese vértice por la capilla. Se estimaba a medio camino y se dibujaba en recta a través del recinto.
   - La nombran Los Estudiantes (palio) y Santa Genoveva (cruz y palio).
   - Santa Genoveva baja de 716 a 464 m fuera de las calles en la cruz, y de 960 a 628 m en el palio.
-- **No entran**, y queda escrito en su «motivo_templo»:
-  - **El Carmen Doloroso:** con «punto» en Feria, el palio pierde un rodeo, pero la cruz iría de Feria al punto «Leonor Dávalos» del programa por el norte de la Alameda (601 m, más del doble de la recta), porque el bulevar de la Alameda no está bien unido en la red. Se probó también a pasar por Mata y Belén, y da lo mismo.
+- **No entran**, y queda escrito en las correcciones («motivo_templo»; en San Pablo, «nota_punto»):
+  - **El Carmen Doloroso:** con «punto» en Feria, el palio pierde un rodeo, pero la cruz iría de Feria al punto «Leonor Dávalos» del programa por el norte de la Alameda (601 m, 2,5 veces la recta), porque el bulevar de la Alameda no está bien unido en la red. Se probó también a pasar por Mata y Belén: 648 m, por el mismo sitio.
   - **Los Negritos:** con «punto» en Recaredo, el punto de San Esteban hace un espolón nuevo de 20 m en la cruz y en el palio.
-  - **Pasión y Muerte:** sale de San Juan Bosco (su web), por Condes de Bustillo. La red solo tiene nodos en los dos extremos de esa calle, no junto al 17. Desde cualquiera de los dos salen espolones nuevos de 50 m (San Jacinto, Trabajo, Pagés del Corro) y 48 m más en recta hacia la plaza de Santa Ana.
+  - **Pasión y Muerte:** sale de San Juan Bosco (su web), por Condes de Bustillo. La red solo tiene tres vértices en esa calle, ninguno junto al 17. Probado desde uno a cada lado del 17: salen espolones nuevos de 50 m (San Jacinto, Trabajo, Pagés del Corro) y 48 m más en recta hacia la plaza de Santa Ana.
   - **San Pablo:** su primera calle, «Señora del Rosario» o «Virgen del Rosario», no está en OSM con nombre. Hay una peatonal sin nombre junto a la parroquia, y no se le pone nombre a mano.
 - **Efecto, medido contra lo publicado (343e2ee6):**
   - cambian El Cerro, Los Estudiantes, El Museo, La Carretería y Santa Genoveva;
   - fuera de las calles, de 13.604 a 12.948 m;
-  - ni espolones ni rodeos nuevos (`rodeos.cjs` de la revisión 05cc);
+  - ningún espolón nuevo (`rodeos.cjs` de la revisión 05cc) y los mismos rodeos (más de 300 m y más del doble de la recta); lo que se alarga son la salida y la entrada, que antes se estimaban junto a su primera o última calle;
   - el plano de fuera de temporada pasa de 63 a 66 sedes.
-- **Probado y descartado:** cómo se ha decidido, en `local/banco-plano/` (`t7-variantes.cjs` y `t7-parches.json`, cada parche por separado).
+- **Probado y descartado:** cómo se ha decidido, en `local/banco-plano/tanda-plano/` (`t7-variantes.cjs` y `t7-parches.json`, cada parche por separado).
+- **Código, de la revisión:** `tieneSitio()` pide un «punto» de dos coordenadas; si un tramo solo tiene salida y entrada, sus «por» se suman; y `enrutar.mjs` avisa si un «por» no se usa (tramo de menos de 25 m o en un solo nodo). Hoy no cambia ningún recorrido.
 
 ## 2026-11-26 · Sevilla: Las Cigarreras, sede en Los Remedios y salida de 2026 en Los Terceros (Pablo: «Hazme caso [elcorreoweb.es, recorrido de 2025]. Este año ha salido de otro sitio por las obras, pero la sede es la otra»)
 - **Sede:** Capilla de la Fábrica de Tabacos, en Los Remedios.

@@ -107,9 +107,10 @@ for (const f of fs.readdirSync(path.join(RAIZ, 'site', 'data', 'recorridos'))) {
     for (let k = 0; k < v.length - 1; k++) {
       const A = v[k][0], B = v[k + 1][0]; tramos++;
       const [ax, ay] = X(A.lat, A.lon), [bx, by] = X(B.lat, B.lon), recta = Math.hypot(bx - ax, by - ay);
-      if (recta < 25) { mismos++; continue; }
+      const sinPor = () => { if (Array.isArray(A.por) && A.por.length) console.warn(`POR: ${A.lugar} → ${B.lugar}: el tramo es de menos de 25 m o cae en un solo nodo, y su «por» no se usa`); };
+      if (recta < 25) { sinPor(); mismos++; continue; }
       const s = cercano(ax, ay), t = cercano(bx, by);
-      if (s < 0 || t < 0 || s === t) { rectas++; continue; }
+      if (s < 0 || t < 0 || s === t) { sinPor(); rectas++; continue; }
       let c = null;
       if (Array.isArray(A.por) && A.por.length) { // pasa por los nodos de «por», en orden; cada trozo, con el mismo límite que un tramo
         const ws = A.por.map((q) => id.get((+q[0]).toFixed(7) + ',' + (+q[1]).toFixed(7)));

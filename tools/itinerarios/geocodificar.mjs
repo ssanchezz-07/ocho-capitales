@@ -138,7 +138,8 @@ const FIJOS_PARENTESIS = {
 // Sevilla, «Lonja de la Universidad» (Los Estudiantes, palio; Santa Genoveva, cruz y palio): la lonja de la antigua Fábrica de Tabacos,
 // delante de su fachada de la calle San Fernando, no está en la red de calles (es parte del recinto). Se estimaba a medio camino y se
 // dibujaba en recta a través del recinto. Punto: el vértice de la calle San Fernando (way 56767111) frente a la Capilla de la Universidad
-// (way 120225599, a 15 m), el mismo por el que sale y entra Los Estudiantes. OpenStreetMap, caché de 2026-11-25.
+// (way 120225599, a 15 m), el mismo por el que sale y entra Los Estudiantes. La lonja ocupa todo el frente de la fachada: se elige
+// ese vértice por la capilla, no porque una fuente sitúe ahí la lonja. OpenStreetMap, caché de 2026-11-25.
 const LUGARES = {
   sevilla: { 'jardines de murillo': [37.3844506, -5.9876507], 'lonja de la universidad': [37.3812818, -5.9894343] },
 };
@@ -193,7 +194,7 @@ function situar(ix, ciudad, h, pts) {
   const cand = !fijada && sede && ancla ? ix.templos.filter((t) => cerca(t.geo)).map((t) => [t, nucleo(t.nombre).split(' ').filter((w) => w.length > 3 && sede.includes(w)).length]).sort((a, b) => b[1] - a[1])[0] : null;
   // si ese año la cofradía no salió de su sede («salida» del año de los itinerarios: Las Cigarreras en 2026, de Los Terceros, por las
   // obras de su capilla), sale y entra ahí; la sede sigue siendo la otra (sedes.mjs) y es la que enseña el plano fuera de temporada.
-  const tieneSitio = (o) => o && (Array.isArray(o.punto) || o.lat != null);
+  const tieneSitio = (o) => o && ((Array.isArray(o.punto) && o.punto.length >= 2) || o.lat != null);
   const sa = fijada && fijada.salida && fijada.salida.anio === ITI.anio && tieneSitio(fijada.salida) ? fijada.salida : null;
   // El edificio del que sale y entra (esa salida o su templo). Su «punto» (y «punto_entrada», si entra por otra calle) es el nodo de
   // la calle por la que sale (y entra) según su itinerario oficial; se usa en vez del centro del edificio, que se pegaría al nodo más
@@ -277,7 +278,8 @@ function situar(ix, ciudad, h, pts) {
   }
   if (ed && porNodos(ed.entrada_por)) {
     let iE = res.length - 1; while (iE > 0 && res[iE - 1].como === 'sede') iE--; // si la entrada va repetida, la primera
-    if (iE > 0 && res[res.length - 1].como === 'sede') res[iE - 1].por = porNodos(ed.entrada_por);
+    // (si el tramo solo tiene salida y entrada, el mismo punto lleva los dos: primero los de la salida)
+    if (iE > 0 && res[res.length - 1].como === 'sede') res[iE - 1].por = [...(iE - 1 === 0 && res[0].por ? res[0].por : []), ...porNodos(ed.entrada_por)];
     else console.error(`ENTRADA_POR: ${h.slug}: el último punto no es la entrada en su sede; no se usa`);
   }
   // (la salida y la entrada sin sede se estiman después, con todos los tramos de la hermandad: sedeEstimada; y lo que queda sin

@@ -239,7 +239,7 @@
      37.3930548,
      -5.9997413
     ],
-    "fuente_punto": "Nómina oficial de 2026: «plaza del Museo (la rodea completamente), Alfonso XII…» a la salida y «…Bailén, Miguel de Carvajal y plaza del Museo (lado oeste)» a la entrada. El nodo es el de la plaza del Museo (OSM way 26707232) más cercano a la capilla, a 28 m"
+    "fuente_punto": "Nómina oficial de 2026: «plaza del Museo (la rodea completamente), Alfonso XII…» a la salida y «…Bailén, Miguel de Carvajal y plaza del Museo (lado oeste)» a la entrada. El nodo es el de la plaza del Museo (OSM way 26707232) más cercano a la capilla (un punto único en OSM), a 28 m"
    },
    "casa_hermandad": null
   },
@@ -257,7 +257,7 @@
      37.3720339,
      -5.9574694
     ],
-    "fuente_punto": "Nómina oficial de la Semana Santa de 2026 (Consejo de Hermandades y Cofradías de Sevilla): su itinerario empieza y acaba en «Ntra. Señora de los Dolores» (sale por Nuestra Señora de los Dolores, Afán de Ribera, Aragón…; entra por … Aníbal González, Afán de Ribera, Ntra. Señora de los Dolores). El nodo es el de la calle Nuestra Señora de los Dolores (OSM way 39628667) más cercano al templo, a 12 m"
+    "fuente_punto": "Nómina oficial de la Semana Santa de 2026 (Consejo de Hermandades y Cofradías de Sevilla): su itinerario empieza y acaba en «Ntra. Señora de los Dolores» (sale por Nuestra Señora de los Dolores, Afán de Ribera, Aragón…; entra por … Aníbal González, Afán de Ribera, Ntra. Señora de los Dolores). El nodo es el de la calle Nuestra Señora de los Dolores (OSM way 39628667) más cercano al templo, a 12 m de su borde y 40 m de su centro; es la esquina con Afán de Ribera, así que el primer trozo de Nuestra Señora de los Dolores no llega a dibujarse"
    },
    "casa_hermandad": null
   },
@@ -301,7 +301,7 @@
      37.3812818,
      -5.9894343
     ],
-    "fuente_punto": "Nómina oficial de 2026: «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» a la salida y «…San Fernando, Doña María de Padilla y lonja de la Universidad» a la entrada; su web (página de la sede) dice que la capilla tiene puerta a la calle San Fernando y a la Lonja. La lonja no está en la red de calles: el nodo es el de la calle San Fernando (OSM way 56767111) más cercano a la capilla, a 15 m"
+    "fuente_punto": "Nómina oficial de 2026: «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» a la salida y «…San Fernando, Doña María de Padilla y lonja de la Universidad» a la entrada. La lonja no está en la red de calles: el nodo es el de la calle San Fernando (OSM way 56767111) frente a la capilla, a 15 m de su centro y a 3 m de su borde. La entrada se dibuja por San Fernando hasta ese nodo; la cofradía entra por Doña María de Padilla y va por dentro de la lonja, paralela a San Fernando. Aproximado"
    },
    "casa_hermandad": null
   },
@@ -362,7 +362,7 @@
    "templo": null,
    "casa_hermandad": null,
    "falta": [
-    "templo «Real Parroquia de Omnium Sanctorum» (fuente oficial, OSM way/303650356; en templo_encontrado). Probado el 27-nov con «punto» en la calle Feria (Nómina de 2026: sale por Feria, Peris Mencheta, Mata, Belén y la Alameda): el palio mejora, pero la cruz iría de Feria al punto «Leonor Dávalos» del programa por el norte de la Alameda (601 m, el doble de la recta), porque el bulevar de la Alameda no está bien unido en la red. Pendiente de la red de calles"
+    "templo «Real Parroquia de Omnium Sanctorum» (fuente oficial, OSM way/303650356; en templo_encontrado). Probado el 27-nov con «punto» en la calle Feria (Nómina de 2026: sale por Feria, Peris Mencheta, Mata, Belén y la Alameda): el palio mejora, pero la cruz iría de Feria al punto «Leonor Dávalos» del programa por el norte de la Alameda (601 m, 2,5 veces la recta; pasando por Mata, 648 m), porque el bulevar de la Alameda no está bien unido en la red. Pendiente de la red de calles"
    ]
   },
   "la-sed-sevilla": {
@@ -669,7 +669,7 @@
      37.3855466,
      -5.9970448
     ],
-    "fuente_punto": "Nómina oficial de 2026: empieza en «calle Real de la Carretería, Toneleros, Antonia Díaz, Arfe…» y acaba en «…Dos de Mayo, Rodo y calle Real de la Carretería». El nodo es el de la calle Real de la Carretería (OSM way 367117203) frente al número 15, a 3 m",
+    "fuente_punto": "Nómina oficial de 2026: empieza en «calle Real de la Carretería, Toneleros, Antonia Díaz, Arfe…» y acaba en «…Dos de Mayo, Rodo y calle Real de la Carretería». El nodo es el de la calle Real de la Carretería (OSM way 367117203) frente al número 15, a 2 m de su borde y 9 m de su centro",
     "salida_por": [
      [
       37.3858277,
@@ -681,7 +681,7 @@
      ]
     ],
     "fuente_salida_por": "Nómina oficial de 2026: «calle Real de la Carretería, Toneleros, Antonia Díaz, Arfe…». Los nodos son los dos extremos de la calle Toneleros (OSM way 19210179): el cruce con Real de la Carretería y el cruce con Antonia Díaz (way 28111986); sin ellos, el camino más corto iba directo por Real de la Carretería o por Techada",
-    "fuente_coordenadas": "La página de la capilla dice «Su actual sede canónica, en la calle Real de la Carretería», sin número; el número, el 15, es la dirección de la hermandad en su página de contacto (hermandaddelacarreteria.org/contacto/). OpenStreetMap way 422059710, el 15 de esa calle (building=residential): media de sus vértices"
+    "fuente_coordenadas": "La página de la capilla dice «Su actual sede canónica, en la calle Real de la Carretería», sin número; el número, el 15, es la dirección de la hermandad en su página de contacto (hermandaddelacarreteria.org/contacto/). OpenStreetMap way 422059710, el 15 de esa calle (building=residential): media de sus vértices. Aproximado: su página /capilla/ dice que la capilla se levantó «haciendo esquina […] con la calle del lavadero de la Caridad», y el 15 no hace esquina (está a unos 13 m de la calle Pavía), así que el error puede ser de 10 a 15 m"
    },
    "casa_hermandad": null
   },
@@ -854,7 +854,7 @@
    "templo": null,
    "casa_hermandad": null,
    "falta": [
-    "sede canónica: Parroquia de Nuestra Señora del Buen Aire (ficha del Consejo; su web la da en la calle Virgen de Fátima 8), que no está en OSM como templo. Sale de San Juan Bosco (OSM way/427751618) desde 2022, por Condes de Bustillo (su web). Probado el 27-nov como «salida» de 2026, desde los dos extremos de Condes Bustillo (la red no tiene nodos junto al 17): espolones nuevos de 50 m en San Jacinto, Trabajo y Pagés del Corro, y 48 m más en recta hacia la plaza de Santa Ana. Pendiente"
+    "sede canónica: Parroquia de Nuestra Señora del Buen Aire (ficha del Consejo; su web la da en la calle Virgen de Fátima 8), que no está en OSM como templo. Sale de San Juan Bosco (OSM way/427751618) desde 2022, por Condes de Bustillo (su web). Probado el 27-nov como «salida» de 2026, desde dos vértices de Condes Bustillo, uno a cada lado del 17 (la vía solo tiene tres en la red, ninguno junto al 17): espolones nuevos de 50 m en San Jacinto, Trabajo y Pagés del Corro, y 48 m más en recta hacia la plaza de Santa Ana. Pendiente"
    ]
   },
   "pino-montano-sevilla": {
