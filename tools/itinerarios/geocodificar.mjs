@@ -140,6 +140,15 @@ const FIJOS_PARENTESIS = {
 // dibujaba en recta a través del recinto. Punto: el vértice de la calle San Fernando (way 56767111) frente a la Capilla de la Universidad
 // (way 120225599, a 15 m), el mismo por el que sale y entra Los Estudiantes. La lonja ocupa todo el frente de la fachada: se elige
 // ese vértice por la capilla, no porque una fuente sitúe ahí la lonja. OpenStreetMap, caché de 2026-11-25.
+// Lugares que solo valen para una hermandad, deducidos (no dados por una fuente): van como «estimado», y el plano los enseña
+// como aproximados.
+// · Sevilla, Divino Perdón, palio: «Parroquia» (21:00). Su lista es la de la cruz con una hora de retraso (Pintor Alfonso Grosso,
+//   18:30 y 19:30; Ontur, 21:00 y 22:00…), y a las 20:00 la cruz va por Ciudad de Alfafar, donde, en la esquina con Ciudad de
+//   Paterna, está la Parroquia Ntra. Sra. de los Desamparados (OSM way 1388320250). Punto: el vértice de Ciudad de Alfafar (way
+//   638713840) a 21 m de ella. Sin esto se estimaba a medio camino, dentro de una manzana, a 357 m (revisión del 27-nov).
+const LUGARES_HERMANDAD = {
+  'divino-perdon-sevilla': { parroquia: [37.4130882, -5.9288796] },
+};
 const LUGARES = {
   sevilla: { 'jardines de murillo': [37.3844506, -5.9876507], 'lonja de la universidad': [37.3812818, -5.9894343] },
 };
@@ -173,6 +182,9 @@ for (const ciudad of Object.keys(CENTRO)) {
 // del callejero en caché, y sus calles casaban con homónimas de San Juan de Aznalfarache o del centro. Desde entonces,
 // callejero-extra-sevilla.mjs añade esos barrios a la caché, y ya se sitúan.
 const FUERA = {};
+// Testigos de los barrios añadidos a la caché (un elemento de cada recuadro de callejero-extra-<ciudad>.mjs): la parroquia de
+// Bellavista, al sur, y la calle Alberchigo de Torreblanca, al este.
+const TESTIGOS = { sevilla: ['way/339700035', 'way/43796957'] };
 // La Sed (Sevilla): su primera calle, «Hospital San Juan de Dios», salía partida en dos renglones y casaba con una calle de San Juan
 // del centro. Desde el 25-nov, unir.mjs une los dos renglones y casa con la calle San Juan de Dios de Nervión, junto al hospital. Desde
 // el 26-nov tiene sede con fuente (rutas/sedes-sevilla-correcciones.json: Parroquia de la Concepción, way 72800137), como Los
@@ -213,6 +225,7 @@ function situar(ix, ciudad, h, pts) {
     const puertaSM = ciudad === 'sevilla' && l === 'san miguel' && p.hora ? FIJOS.sevilla['puerta de san miguel'] : null;
     const fijoPar = FIJOS_PARENTESIS[ciudad] && /\(/.test(p.lugar) ? FIJOS_PARENTESIS[ciudad][lugarConParentesis(p.lugar)] : null;
     const lugarFijo = LUGARES[ciudad] && LUGARES[ciudad][l];
+    const lugarH = h && LUGARES_HERMANDAD[h.slug] && LUGARES_HERMANDAD[h.slug][l];
     const fijo = fijoPar || lugarFijo || (FIJOS[ciudad] && (FIJOS[ciudad][l.replace(/ puerta perdon$/, '')] || puertaSM));
     let geosCalle = null; // la calle de OSM donde cae el punto (para repartir(), abajo)
     // «Salida/Entrada <lugar>»: es ese lugar (una calle, la carrera oficial…), no la sede; solo «salida», «entrada templo/palio/casa hdad…» son la sede
@@ -220,7 +233,8 @@ function situar(ix, ciudad, h, pts) {
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
     // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
     const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
-    if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
+    if (lugarH) { pos = lugarH; como = 'estimado'; }
+    else if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
     else if (fijo) { pos = fijo; como = fijoPar || lugarFijo ? 'calle' : 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
       const k = [mm[2], nucleo(mm[2])].find((x) => x && ix.calles.has(x)); geosCalle = ix.calles.get(k); pos = cercano(geosCalle, prev); como = 'calle';
@@ -244,7 +258,7 @@ function situar(ix, ciudad, h, pts) {
       if (geos) { geosCalle = geos; pos = cercano(geos, prev); como = 'calle'; }
     }
     if (pos) prev = pos; else sin.push(p.lugar);
-    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!fijo, _g: geosCalle, _p: pos };
+    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!(fijo || lugarH), _g: geosCalle, _p: pos };
   });
   // saltos imposibles (una calle homónima en otro barrio): un punto a más de 900 m de sus vecinos, que están cerca entre sí, se descarta
   const m = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
@@ -506,7 +520,12 @@ const solo = process.argv[2];
 const informe = {};
 for (const ciudad of Object.keys(CENTRO)) {
   if (solo && ciudad !== solo) continue;
-  const osm = await overpass(ciudad); const ix = indice(osm, ciudad);
+  const osm = await overpass(ciudad);
+  // los barrios que añade callejero-extra-<ciudad>.mjs: si la caché se ha vuelto a bajar y no se ha pasado, sus hermandades se
+  // quedarían con todos sus puntos estimados encima de la sede, sin ningún aviso. Se comprueba con un elemento de cada recuadro.
+  const faltanTestigos = (TESTIGOS[ciudad] || []).filter((t) => !osm.elements.some((e) => e.type + '/' + e.id === t));
+  if (faltanTestigos.length) { console.error(`${ciudad}: a la caché le faltan los barrios de callejero-extra-${ciudad}.mjs (${faltanTestigos.join(', ')}); pásalo antes. No se escribe ${ciudad}.`); process.exitCode = 1; continue; }
+  const ix = indice(osm, ciudad);
   const out = { ciudad, anio: ITI.anio, licencia_mapa: '© colaboradores de OpenStreetMap (ODbL)', hermandades: {} };
   let tot = 0, ok = 0; const fallos = {};
   for (const [slug, e] of Object.entries(ITI.hermandades)) {

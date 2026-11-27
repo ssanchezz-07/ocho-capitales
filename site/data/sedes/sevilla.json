@@ -301,7 +301,7 @@
      37.3812818,
      -5.9894343
     ],
-    "fuente_punto": "Nómina oficial de 2026: «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» a la salida y «…San Fernando, Doña María de Padilla y lonja de la Universidad» a la entrada. La lonja no está en la red de calles: el nodo es el de la calle San Fernando (OSM way 56767111) frente a la capilla, a 15 m de su centro y a 3 m de su borde. La entrada se dibuja por San Fernando hasta ese nodo; la cofradía entra por Doña María de Padilla y va por dentro de la lonja, paralela a San Fernando. Aproximado"
+    "fuente_punto": "Nómina oficial de 2026: «lonja de la Universidad, cancela principal del Rectorado, San Fernando…» a la salida y «…San Fernando, Doña María de Padilla y lonja de la Universidad» a la entrada. La lonja no está en la red de calles: el nodo es el de la calle San Fernando (OSM way 56767111) frente a la capilla, a 15 m de su centro y a 3 m de su borde. La entrada se dibuja por San Fernando hasta ese nodo; se supone que la cofradía entra a la lonja por Doña María de Padilla, en el extremo oeste de la Fábrica, y va por dentro, paralela a San Fernando. Aproximado"
    },
    "casa_hermandad": null
   },
@@ -681,7 +681,7 @@
      ]
     ],
     "fuente_salida_por": "Nómina oficial de 2026: «calle Real de la Carretería, Toneleros, Antonia Díaz, Arfe…». Los nodos son los dos extremos de la calle Toneleros (OSM way 19210179): el cruce con Real de la Carretería y el cruce con Antonia Díaz (way 28111986); sin ellos, el camino más corto iba directo por Real de la Carretería o por Techada",
-    "fuente_coordenadas": "La página de la capilla dice «Su actual sede canónica, en la calle Real de la Carretería», sin número; el número, el 15, es la dirección de la hermandad en su página de contacto (hermandaddelacarreteria.org/contacto/). OpenStreetMap way 422059710, el 15 de esa calle (building=residential): media de sus vértices. Aproximado: su página /capilla/ dice que la capilla se levantó «haciendo esquina […] con la calle del lavadero de la Caridad», y el 15 no hace esquina (está a unos 13 m de la calle Pavía), así que el error puede ser de 10 a 15 m"
+    "fuente_coordenadas": "Su página /capilla-de-la-carreteria/ dice «Su actual sede canónica, en la calle Real de la Carretería», sin número; el número, el 15, es la dirección de la hermandad en su página de contacto (hermandaddelacarreteria.org/contacto/). OpenStreetMap way 422059710, el 15 de esa calle (building=residential): media de sus vértices. Aproximado: su página /capilla/ dice que la capilla se levantó «haciendo esquina […] con la calle del lavadero de la Caridad», y el 15 no hace esquina (está a unos 13 m de la calle Pavía), así que el error puede ser de 10 a 15 m"
    },
    "casa_hermandad": null
   },
@@ -953,7 +953,7 @@
      37.3838632,
      -5.899197
     ],
-    "fuente_punto": "Sin itinerario oficial completo a mano (el programa empieza en la plaza del Platanero y acaba en Cedro o en J. M. S. Román). La plaza de las Acacias, donde está el templo, no está unida a la red de calles: el punto es el nodo de la calle Alberchigo (OSM way 43796957) más cercano al templo de los que sí lo están, a 36 m, camino de la plaza del Platanero. Aproximado",
+    "fuente_punto": "Sin itinerario oficial completo a mano (el programa empieza en la plaza del Platanero y acaba en Cedro o en J. M. S. Román). La plaza de las Acacias, donde está el templo, no está unida a la red de calles: el punto es uno de los dos nodos unidos a la red más cercanos al templo (empatados a unos 36 m; el otro, en Párroco Antonio Olmo): el de la calle Alberchigo (OSM way 43796957), camino de la plaza del Platanero. Aproximado",
     "fuente_coordenadas": "OpenStreetMap way 428041234 (place_of_worship sin nombre, Plaza de las Acacias 1): media de 19 vértices; duplicado en way 224531066"
    },
    "casa_hermandad": null

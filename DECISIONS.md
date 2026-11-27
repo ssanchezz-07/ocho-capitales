@@ -7,18 +7,26 @@
 - **`tools/itinerarios/callejero-extra-sevilla.mjs`** (nuevo, como `callejero-extra-cordoba.mjs`): añade a `cache/osm-sevilla.json` dos recuadros, sur y este, con la misma consulta de Overpass y sin repetir elementos.
   - Los recuadros se solapan unos 600 m con la caja de la ciudad, para que la red quede unida.
   - También baja las vías **sin nombre** de esos barrios (paseos y peatonales, sobre todo en Parque Alcosa), pero solo las que quedan enteras fuera de la caja de la ciudad. Entran en la red, no en el índice de calles.
+  - Las calles con nombre y los templos sí entran en el índice: hoy no cambia ningún otro recorrido de Sevilla, pero hay que volver a comprobarlo si cambian los recuadros.
   - La caché no está en git: **hay que pasar este script cada vez que se vuelva a bajar**, antes de `geocodificar.mjs` y `enrutar.mjs`.
 - **FUERA** queda vacío (con la historia en su comentario). Sus sedes, que ya tenían fuente oficial (en «templo_encontrado»), pasan a «templo».
 - **Alias nuevos** (`alias-calles-sevilla.json`), comprobados en el callejero ampliado, a menos de 900 m de la parroquia de Torreblanca: Torresquevedo → Torres Quevedo, Torres Naharro → Torrenaharro, Torredonjimeno → Torre Donjimeno, Torrecuadrada → Torre Cuadrada, Torrescarcela → Torre Carcelas, J. M. S. Román → José Muñoz San Román. Y «Ciudad de Chivas» → Avenida Ciudad de Chiva (errata del programa, Divino Perdón).
-- **Torreblanca:** la parroquia está en la plaza de las Acacias, que no está unida a la red (un trozo suelto de 10 nodos). Su «punto» es el nodo unido más cercano, en la calle Alberchigo, a 36 m, camino de la plaza del Platanero, el primer punto del programa. **Aproximado:** no hay itinerario oficial completo a mano.
+- **Torreblanca:** la parroquia está en la plaza de las Acacias, que no está unida a la red (un trozo suelto de 10 nodos). Su «punto» es uno de los dos nodos unidos más cercanos (empatados a unos 36 m; el otro, en Párroco Antonio Olmo): el de la calle Alberchigo, camino de la plaza del Platanero, el primer punto del programa. **Aproximado:** no hay itinerario oficial completo a mano.
+- **Divino Perdón, la «Parroquia» del palio** (21:00), en LUGARES_HERMANDAD (`geocodificar.mjs`, lugares que solo valen para una hermandad):
+  - La lista del palio es la de la cruz con una hora de retraso, y a las 20:00 la cruz va por Ciudad de Alfafar. En la esquina con Ciudad de Paterna está la Parroquia Ntra. Sra. de los Desamparados (OSM way 1388320250). Se pone en el vértice de Ciudad de Alfafar a 21 m de ella.
+  - **Es una deducción**, no una fuente: va como «estimado», y el plano lo enseña como aproximado.
+  - Sin esto (revisión del 27-nov, NO APTO), se estimaba a medio camino, dentro de una manzana, a 357 m, y a las 21:00 el palio salía por calles que no son las suyas.
+- **Testigo:** si la caché de Sevilla se vuelve a bajar y no se pasa `callejero-extra-sevilla.mjs`, sus tres hermandades se quedarían con todos los puntos estimados encima de la sede, sin aviso. Ahora `geocodificar.mjs` comprueba un elemento de cada recuadro (TESTIGOS) y, si falta, avisa y no escribe Sevilla.
 - **Efecto:**
   - solo cambian esas tres hermandades; las demás salen idénticas;
   - se sitúan todos sus puntos (Sevilla pasa del 96 % al 100 %), salvo tres estimados: Pl. Retiro (Bellavista), Acedo (Torreblanca) y «Parroquia» (Divino Perdón);
   - ningún punto a más de 955 m de su sede;
-  - fuera de las calles, por tramo: Bellavista 88 y 68 m, Torreblanca 0 y 32 m, Divino Perdón 32 y 164 m. La media del plano está en unos 90 m por tramo;
-  - tienen espolones de 30 a 50 m donde un punto cae en un vértice apartado (Almenas y Logroño en Bellavista; Pl. Zocodover y Pl. Obradoiro en Parque Alcosa…). No hay otro dibujo con el que compararlos: antes no había nada.
-- **`afueras.mjs`** se vuelve a pasar: el fondo del plano cubre ya las tres sedes, con 457 calles de barrio alrededor.
-- **Comprobado en el plano** (vista de prueba con la temporada en «semana-santa», sin commit): las tres salen con su recorrido y el fondo de su barrio.
+  - fuera de las calles, por tramo: Bellavista 88 y 68 m, Torreblanca 0 y 32 m, Divino Perdón 32 y 32 m. La media del plano está en unos 90 m por tramo. En Bellavista, la salida y la entrada cruzan la manzana desde el centro del templo (no tiene «punto»: la cruz empieza en la plaza de Fernando VI y el palio en Guadalajara);
+  - tienen 13 espolones de 20 a 50 m, donde un punto cae en un vértice apartado: 6 en Torreblanca (Álamo, Torres Naharro, Torrelaguna, Cedro, Torrecuadrada, Torrescarcela), 4 en Parque Alcosa (Pl. Zocodover y Pl. Obradoiro, en la cruz y en el palio) y 3 en Bellavista (Pl. Fernando VI, Almenas y Logroño). No hay otro dibujo con el que compararlos: antes no había nada;
+  - el plano de fuera de temporada pasa de 66 a 69 sedes;
+  - la ficha enseña los nombres del programa, como «Ciudad de Chivas»: el alias solo sirve para situar el punto.
+- **`afueras.mjs`:** las calles de barrio van ya alrededor de cada sede de fuera (600 m) y también de cada punto de su recorrido (250 m), porque los recorridos llegan a 955 m de la sede. Sevilla pasa de 107 a 151 KB, con 665 calles de barrio. Las demás capitales no se han vuelto a pasar.
+- **Comprobado en el plano** (vista de prueba con la temporada en «semana-santa», sin commit): las tres salen con su recorrido.
 
 ## 2026-11-27 · Sevilla: tres sedes más y El Museo, ancladas a la calle de su itinerario oficial; la Lonja de la Universidad, fija (Pablo: «Continua hasta llegar a un punto estable…» y «Quita el limite y dejalos hasta el 100%, ya es viernes no te preocupes»)
 - **Por qué:** el centro de un templo se pega al nodo más cercano de la red, aunque sea de otra calle o esté a más de 100 m a través del edificio. Así se quedaron sin sede El Cerro y Los Estudiantes, entre otras (entrada del 26-nov).

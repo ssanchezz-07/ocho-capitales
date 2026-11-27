@@ -5,7 +5,9 @@
 // Los recuadros se solapan con la caja de la ciudad unos 600 m, para que la red quede unida. Misma consulta de Overpass que
 // geocodificar.mjs, como callejero-extra-cordoba.mjs; no repite elementos que ya estén (manda la caché de la ciudad).
 // Además, las vías SIN nombre de esos barrios (paseos y calles peatonales, sobre todo en Parque Alcosa), solo las que quedan enteras
-// fuera de la caja de la ciudad: entran en la red de enrutar.mjs, no en el índice de calles, y no pueden cambiar ningún otro recorrido.
+// fuera de la caja de la ciudad: entran en la red de enrutar.mjs, no en el índice de calles. Comprobado el 27-nov: no cambia ningún
+// otro recorrido de Sevilla (sí entran calles con nombre y templos en el índice, así que hay que volver a comprobarlo si cambian los
+// recuadros). geocodificar.mjs avisa y no escribe Sevilla si faltan (TESTIGOS).
 // Uso (antes de geocodificar.mjs y enrutar.mjs, cada vez que se vuelva a bajar la caché):
 //   node tools/itinerarios/callejero-extra-sevilla.mjs
 // (datos © colaboradores de OpenStreetMap, ODbL)
@@ -16,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 const f = path.join(path.dirname(fileURLToPath(import.meta.url)), 'cache', 'osm-sevilla.json');
 const UA = 'OchoCapitales/1.0 (https://github.com/ssanchezz-07/ocho-capitales; portal cofrade sin animo de lucro)';
 const CAJAS = { sur: '37.300,-6.000,37.350,-5.940', este: '37.365,-5.945,37.425,-5.880' };
-// la caja de la ciudad (geocodificar.mjs: CENTRO.sevilla = [37.3891, -5.9945, 0.045], 1,25 veces en longitud)
+// la caja de la ciudad (geocodificar.mjs: CENTRO.sevilla = [37.3891, -5.9945, 0.045], 1,25 veces en longitud): si cambia allí, cámbiala aquí
 const CIUDAD = [37.3891 - 0.045, -5.9945 - 0.045 * 1.25, 37.3891 + 0.045, -5.9945 + 0.045 * 1.25];
 const dentroCiudad = (g) => g.lat >= CIUDAD[0] && g.lat <= CIUDAD[2] && g.lon >= CIUDAD[1] && g.lon <= CIUDAD[3];
 const SIN_NOMBRE = '^(footway|pedestrian|path|residential|living_street|unclassified)$';

@@ -20,6 +20,7 @@ const CIUDADES = args.length ? args : ['almeria', 'cadiz', 'cordoba', 'granada',
 const OUT = path.join(RAIZ, 'site', 'data', 'planos-afueras'); fs.mkdirSync(OUT, { recursive: true });
 const MARGEN = 700;   // m alrededor de cada sede apartada (el plano no se puede alejar más allá del fondo)
 const BARRIO = 600;   // m alrededor de cada sede apartada en los que también van las calles del barrio
+const RECORRIDO = 250; // m alrededor de cada punto del recorrido de esas hermandades (llega más allá de los 600 m de su sede)
 const PRINC = /^(motorway|trunk|primary|secondary|tertiary)(_link)?$/;
 const MENOR = /^(residential|unclassified|living_street|pedestrian|service)$/;
 // pantallas de referencia con los márgenes de la portada (site.js, margenes(): el pie mide unos 420 px en el móvil)
@@ -59,7 +60,10 @@ for (const c of CIUDADES) {
   // en grados, para filtrar nodos al leer
   const aLL = (x, y) => [P.origen[0] - y / P.ky, P.origen[1] + x / P.kx];
   const [la1, lo0] = aLL(T[0], T[3]), [la0, lo1] = aLL(T[2], T[1]);
-  zonas.push({ c, P, xy, lim, T, fuera, bb: [Math.min(la0, la1), Math.min(lo0, lo1), Math.max(la0, la1), Math.max(lo0, lo1)], fO });
+  // los puntos del recorrido de las hermandades con la sede fuera (site/data/recorridos/<ciudad>.json)
+  const fR = path.join(RAIZ, 'site', 'data', 'recorridos', c + '.json'), puntos = [];
+  if (fs.existsSync(fR)) { const Rc = JSON.parse(fs.readFileSync(fR, 'utf8')); for (const [, , s] of fuera) for (const v of Object.values((Rc.hermandades[s] || {}).tramos || {})) for (const p of v) { if (p.lat != null) puntos.push(xy(p.lat, p.lon)); for (const q of p.via || []) puntos.push(xy(q[0], q[1])); } }
+  zonas.push({ c, P, xy, lim, T, fuera, puntos, bb: [Math.min(la0, la1), Math.min(lo0, lo1), Math.max(la0, la1), Math.max(lo0, lo1)], fO });
 }
 if (!zonas.length) process.exit(0);
 const enAlguna = (la, lo) => zonas.some((z) => la >= z.bb[0] && la <= z.bb[2] && lo >= z.bb[1] && lo <= z.bb[3]);
@@ -122,7 +126,7 @@ function simplificar(p, tol) {
 }
 for (const z of zonas) {
   const dentro = (x, y, B) => x >= B[0] && x <= B[2] && y >= B[1] && y <= B[3];
-  const cerca = (x, y) => z.fuera.some(([fx, fy]) => Math.hypot(x - fx, y - fy) < BARRIO);
+  const cerca = (x, y) => z.fuera.some(([fx, fy]) => Math.hypot(x - fx, y - fy) < BARRIO) || z.puntos.some(([px, py]) => Math.hypot(x - px, y - py) < RECORRIDO);
   const princ = [], calles = [], costa = [];
   for (const v of vias) {
     const pts = v.refs.map((r) => nodos.get(r)).filter(Boolean).map(([la, lo]) => z.xy(la, lo));
