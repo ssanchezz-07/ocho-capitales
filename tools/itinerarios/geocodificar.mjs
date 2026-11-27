@@ -135,8 +135,12 @@ const FIJOS_PARENTESIS = {
 // en OSM es un parque (way 22747191), no una calle, y casaba con la calle Murillo, a 1 km. Por su borde este va el Paseo de Catalina
 // de Ribera, el que La Candelaria nombra en ese mismo tramo («San Fernando, Paseo Catalina de Ribera, Cano y Cueto»). Punto: el
 // vértice del paseo (way 28113943) más cercano al centro del jardín (media de los vértices del parque), a 23 m. OpenStreetMap, Overpass 2026-11-26.
+// Sevilla, «Lonja de la Universidad» (Los Estudiantes, palio; Santa Genoveva, cruz y palio): la lonja de la antigua Fábrica de Tabacos,
+// delante de su fachada de la calle San Fernando, no está en la red de calles (es parte del recinto). Se estimaba a medio camino y se
+// dibujaba en recta a través del recinto. Punto: el vértice de la calle San Fernando (way 56767111) frente a la Capilla de la Universidad
+// (way 120225599, a 15 m), el mismo por el que sale y entra Los Estudiantes. OpenStreetMap, caché de 2026-11-25.
 const LUGARES = {
-  sevilla: { 'jardines de murillo': [37.3844506, -5.9876507] },
+  sevilla: { 'jardines de murillo': [37.3844506, -5.9876507], 'lonja de la universidad': [37.3812818, -5.9894343] },
 };
 // Nombres cortados o abreviados en los PDF que sí existen en OSM con su nombre completo (comprobado en tools/itinerarios/cache/osm-*.json)
 const ALIAS = {
