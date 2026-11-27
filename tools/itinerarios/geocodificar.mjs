@@ -145,9 +145,12 @@ const FIJOS_PARENTESIS = {
 // · Sevilla, Divino Perdón, palio: «Parroquia» (21:00). Su lista es la de la cruz con una hora de retraso (Pintor Alfonso Grosso,
 //   18:30 y 19:30; Ontur, 21:00 y 22:00…), y a las 20:00 la cruz va por Ciudad de Alfafar, donde, en la esquina con Ciudad de
 //   Paterna, está la Parroquia Ntra. Sra. de los Desamparados (OSM way 1388320250). Punto: el vértice de Ciudad de Alfafar (way
-//   638713840) a 21 m de ella. Sin esto se estimaba a medio camino, dentro de una manzana, a 357 m (revisión del 27-nov).
+//   638713840) a 21 m de ella. Sin esto se estimaba a medio camino, dentro de una manzana, a 357 m (revisión del 27-nov). «llega_por»:
+//   el tramo que llega a ella pasa por el cruce de la Avda. Ciudad de Chiva con Ciudad de Alfafar (el punto de la cruz a las 20:00);
+//   sin él, el camino más corto (un metro más corto) se metía por Ciudad de Algemesí y Ciudad de Buñol.
+// Cada lugar es [lat, lon] o { punto: [lat, lon], llega_por: [[lat, lon], …] } (nodos de la caché por los que pasa el tramo que llega).
 const LUGARES_HERMANDAD = {
-  'divino-perdon-sevilla': { parroquia: [37.4130882, -5.9288796] },
+  'divino-perdon-sevilla': { parroquia: { punto: [37.4130882, -5.9288796], llega_por: [[37.4115328, -5.9297337]] } },
 };
 const LUGARES = {
   sevilla: { 'jardines de murillo': [37.3844506, -5.9876507], 'lonja de la universidad': [37.3812818, -5.9894343] },
@@ -233,7 +236,7 @@ function situar(ix, ciudad, h, pts) {
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
     // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
     const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
-    if (lugarH) { pos = lugarH; como = 'estimado'; }
+    if (lugarH) { pos = Array.isArray(lugarH) ? lugarH : lugarH.punto; como = 'estimado'; }
     else if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
     else if (fijo) { pos = fijo; como = fijoPar || lugarFijo ? 'calle' : 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
@@ -258,7 +261,7 @@ function situar(ix, ciudad, h, pts) {
       if (geos) { geosCalle = geos; pos = cercano(geos, prev); como = 'calle'; }
     }
     if (pos) prev = pos; else sin.push(p.lugar);
-    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!(fijo || lugarH), _g: geosCalle, _p: pos };
+    return { ...p, lat: pos ? +pos[0].toFixed(6) : null, lon: pos ? +pos[1].toFixed(6) : null, como, _f: !!(fijo || lugarH), _g: geosCalle, _p: pos, _llega: lugarH && !Array.isArray(lugarH) ? lugarH.llega_por : null };
   });
   // saltos imposibles (una calle homónima en otro barrio): un punto a más de 900 m de sus vecinos, que están cerca entre sí, se descarta
   const m = (a, b) => dist([a.lat, a.lon], [b.lat, b.lon]) * 111000;
@@ -278,6 +281,8 @@ function situar(ix, ciudad, h, pts) {
     for (const p of res) if (p.lat != null && !p._f && p.como !== 'sede' && m(p, c) > 2500) { p.lat = p.lon = null; p.como = ''; }
   }
   repartir(res, ix.red);
+  // el tramo que llega a un lugar de LUGARES_HERMANDAD con «llega_por» pasa por esos nodos (enrutar.mjs, «por»)
+  for (let i = 1; i < res.length; i++) if (res[i]._llega) res[i - 1].por = [...(res[i - 1].por || []), ...res[i]._llega.map((q) => q.slice(0, 2))];
   // y si el edificio trae «salida_por» o «entrada_por» (su itinerario oficial va por calles que no están entre los puntos del
   // programa: Las Cigarreras en 2026 entra por Doña María Coronel y Bustos Tavera), el primer tramo (desde la salida) o el último (el
   // que llega a la entrada) lleva «por»: los nodos por los que enrutar.mjs tiene que hacer pasar el camino. Sin eso, el camino más
@@ -506,7 +511,7 @@ function interpolar(res) {
     let b = i + 1; while (b < res.length && res[b].lat == null) b++;
     if (a >= 0 && b < res.length) { const t = (i - a) / (b - a); res[i].lat = +(res[a].lat + (res[b].lat - res[a].lat) * t).toFixed(6); res[i].lon = +(res[a].lon + (res[b].lon - res[a].lon) * t).toFixed(6); res[i].como = 'estimado'; }
   }
-  for (const p of res) { delete p._f; delete p._g; delete p._p; }
+  for (const p of res) { delete p._f; delete p._g; delete p._p; delete p._llega; }
   return res;
 }
 // sitúa todos los tramos de una hermandad (o de una salida extraordinaria): cada tramo por su cuenta y la sede estimada, en común
@@ -553,4 +558,7 @@ for (const ciudad of Object.keys(CENTRO)) {
   console.log(ciudad, `${ok}/${tot} (${informe[ciudad].pct} %)`, '· sin situar:', Object.keys(fallos).length);
   await new Promise((s) => setTimeout(s, 3000));
 }
-fs.writeFileSync(path.join(DIR, 'informe-geocodificacion.json'), JSON.stringify(informe, null, 1));
+// se mezcla con el informe que ya hay: las ciudades que no se han pasado (o que no se han escrito, por TESTIGOS) se quedan como estaban
+const fInf = path.join(DIR, 'informe-geocodificacion.json');
+const infPrevio = fs.existsSync(fInf) ? JSON.parse(fs.readFileSync(fInf, 'utf8')) : {};
+fs.writeFileSync(fInf, JSON.stringify({ ...infPrevio, ...informe }, null, 1) + '\n');

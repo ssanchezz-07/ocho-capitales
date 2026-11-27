@@ -15,8 +15,9 @@
 - **Divino Perdón, la «Parroquia» del palio** (21:00), en LUGARES_HERMANDAD (`geocodificar.mjs`, lugares que solo valen para una hermandad):
   - La lista del palio es la de la cruz con una hora de retraso, y a las 20:00 la cruz va por Ciudad de Alfafar. En la esquina con Ciudad de Paterna está la Parroquia Ntra. Sra. de los Desamparados (OSM way 1388320250). Se pone en el vértice de Ciudad de Alfafar a 21 m de ella.
   - **Es una deducción**, no una fuente: va como «estimado», y el plano lo enseña como aproximado.
+  - El tramo que llega a ella pasa por el cruce de la Avda. Ciudad de Chiva con Ciudad de Alfafar, donde está la cruz a las 20:00 («llega_por»). Sin él, el camino más corto, un metro más corto, se metía 150 m por Ciudad de Algemesí y Ciudad de Buñol (segunda revisión del 27-nov, NO APTO). En la «Parroquia» queda un espolón de 10 m: el vértice está 11 m más allá del de Ciudad de Paterna.
   - Sin esto (revisión del 27-nov, NO APTO), se estimaba a medio camino, dentro de una manzana, a 357 m, y a las 21:00 el palio salía por calles que no son las suyas.
-- **Testigo:** si la caché de Sevilla se vuelve a bajar y no se pasa `callejero-extra-sevilla.mjs`, sus tres hermandades se quedarían con todos los puntos estimados encima de la sede, sin aviso. Ahora `geocodificar.mjs` comprueba un elemento de cada recuadro (TESTIGOS) y, si falta, avisa y no escribe Sevilla.
+- **Testigo:** si la caché de Sevilla se vuelve a bajar y no se pasa `callejero-extra-sevilla.mjs`, sus tres hermandades se quedarían con todos los puntos estimados encima de la sede, sin aviso. Ahora `geocodificar.mjs` comprueba un elemento de cada recuadro (TESTIGOS) y, si falta, avisa y no escribe Sevilla. Además, `informe-geocodificacion.json` se mezcla con el que ya hay: pasar una sola ciudad ya no borra las demás del informe.
 - **Efecto:**
   - solo cambian esas tres hermandades; las demás salen idénticas;
   - se sitúan todos sus puntos (Sevilla pasa del 96 % al 100 %), salvo tres estimados: Pl. Retiro (Bellavista), Acedo (Torreblanca) y «Parroquia» (Divino Perdón);
