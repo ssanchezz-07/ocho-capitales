@@ -150,7 +150,7 @@ const FIJOS_PARENTESIS = {
 //   sin él, el camino más corto (un metro más corto) se metía por Ciudad de Algemesí y Ciudad de Buñol.
 // · Sevilla, Los Negritos: «San Esteban» (cruz y palio, a la salida y a la entrada). La calle tiene en OSM un trozo suelto de 20 m
 //   (way 37588748) junto a Puerta de Carmona, y el punto caía en su extremo: el dibujo entraba y volvía (un espolón de 20 m). Va a un
-//   vértice de la calle en el camino (way 31283635), hacia la mitad, como «calle»: es una calle por la que pasa, no una deducción.
+//   vértice de la calle en el camino (way 31283635), a un tercio de ella (unos 58 m desde Puerta de Carmona), como «calle»: es una calle por la que pasa, no una deducción.
 // Cada lugar es [lat, lon] o { punto: [lat, lon], llega_por: [[lat, lon], …], como: 'calle' } (llega_por: nodos de la caché por los
 // que pasa el tramo que llega; como: si no es una deducción, 'calle' en vez de 'estimado').
 const LUGARES_HERMANDAD = {
