@@ -471,11 +471,21 @@
   },
   "los-negritos-sevilla": {
    "nombre": "Los Negritos",
-   "templo": null,
-   "casa_hermandad": null,
-   "falta": [
-    "templo «Capilla de los Ángeles» (fuente oficial, OSM way/70012573; en templo_encontrado). Probado el 27-nov con «punto» en la calle Recaredo (Nómina de 2026: sale por Recaredo y entra por Guadalupe y Recaredo): la salida queda bien, pero el punto de San Esteban hace un espolón nuevo de 20 m en la cruz y en el palio. Pendiente"
-   ]
+   "templo": {
+    "nombre": "Capilla de Nuestra Señora de los Ángeles",
+    "lat": 37.3909431,
+    "lon": -5.9844858,
+    "osm": "way/70012573",
+    "nombre_osm": "Capilla de los negritos",
+    "fuente": "https://www.hermandades-de-sevilla.org/semanasanta/js_los_negritos.html",
+    "fuente_coordenadas": "OpenStreetMap way 70012573 («Capilla de los negritos», alt_name «Capilla de los Ángeles»): media de 13 vértices",
+    "punto": [
+     37.3908976,
+     -5.9840757
+    ],
+    "fuente_punto": "Nómina oficial de 2026: sale por «Recaredo, plaza de san Agustín, Puerta de Carmona, san Esteban…» y entra por «…Puerta de Carmona, Muro de los Navarros, Guadalupe y Recaredo». El nodo es el de la calle Recaredo (OSM way 37526924) frente a la capilla, a 16 m de su borde"
+   },
+   "casa_hermandad": null
   },
   "la-exaltacion-los-caballos-sevilla": {
    "nombre": "La Exaltación («Los Caballos»)",

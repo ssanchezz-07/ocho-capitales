@@ -1,5 +1,12 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-27 · Sevilla: Los Negritos, con sede en la Capilla de los Ángeles (Pablo: «Quita el limite y dejalos hasta el 100%…»)
+- **Antes:** su sede se encontró con fuente el 26-nov, pero se quedó en «templo_encontrado». Con «punto» en Recaredo (27-nov), el punto «San Esteban» de la salida hacía un espolón nuevo de 20 m: la calle tiene en OSM un trozo suelto de 20 m junto a Puerta de Carmona (way 37588748), y el punto caía en su extremo.
+- **Ahora:**
+  - «templo», con «punto» en la calle Recaredo frente a la capilla (16 m de su borde), según la Nómina oficial de 2026: sale por «Recaredo, plaza de san Agustín, Puerta de Carmona, san Esteban…» y entra por «…Puerta de Carmona, Muro de los Navarros, Guadalupe y Recaredo»;
+  - «San Esteban», en LUGARES_HERMANDAD (`geocodificar.mjs`), solo para Los Negritos: un vértice de la calle en el camino (way 31283635), hacia la mitad, como «calle» (no como estimado, porque es una calle por la que pasa). Vale para la salida y para la entrada. LUGARES_HERMANDAD admite ya `como: 'calle'`.
+- **Efecto, contra cb88e11d:** solo cambia Los Negritos; sale y entra por las calles de la Nómina; ningún espolón nuevo, un rodeo menos (el de la cruz de San Esteban a Muro de los Navarros) y los mismos metros fuera de las calles (13.200 m). El plano pasa de 69 a 70 sedes.
+
 ## 2026-11-27 · Sevilla: Bellavista, Dolores de Torreblanca y el Divino Perdón, en el plano (Pablo: «Continua hasta llegar a un punto estable…» y «Quita el limite y dejalos hasta el 100%…»)
 - **Antes:** no se dibujaban. Sus barrios quedaban fuera del callejero en caché (`geocodificar.mjs`: CENTRO ± radio), y estaban en FUERA:
   - Bellavista, al sur: sus calles Guadalajara, Ávila, Logroño… casaban con las de San Juan de Aznalfarache, a 6 km;

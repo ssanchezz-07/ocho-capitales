@@ -148,9 +148,14 @@ const FIJOS_PARENTESIS = {
 //   638713840) a 21 m de ella. Sin esto se estimaba a medio camino, dentro de una manzana, a 357 m (revisión del 27-nov). «llega_por»:
 //   el tramo que llega a ella pasa por el cruce de la Avda. Ciudad de Chiva con Ciudad de Alfafar (el punto de la cruz a las 20:00);
 //   sin él, el camino más corto (un metro más corto) se metía por Ciudad de Algemesí y Ciudad de Buñol.
-// Cada lugar es [lat, lon] o { punto: [lat, lon], llega_por: [[lat, lon], …] } (nodos de la caché por los que pasa el tramo que llega).
+// · Sevilla, Los Negritos: «San Esteban» (cruz y palio, a la salida y a la entrada). La calle tiene en OSM un trozo suelto de 20 m
+//   (way 37588748) junto a Puerta de Carmona, y el punto caía en su extremo: el dibujo entraba y volvía (un espolón de 20 m). Va a un
+//   vértice de la calle en el camino (way 31283635), hacia la mitad, como «calle»: es una calle por la que pasa, no una deducción.
+// Cada lugar es [lat, lon] o { punto: [lat, lon], llega_por: [[lat, lon], …], como: 'calle' } (llega_por: nodos de la caché por los
+// que pasa el tramo que llega; como: si no es una deducción, 'calle' en vez de 'estimado').
 const LUGARES_HERMANDAD = {
   'divino-perdon-sevilla': { parroquia: { punto: [37.4130882, -5.9288796], llega_por: [[37.4115328, -5.9297337]] } },
+  'los-negritos-sevilla': { 'san esteban': { punto: [37.3896701, -5.9855884], como: 'calle' } },
 };
 const LUGARES = {
   sevilla: { 'jardines de murillo': [37.3844506, -5.9876507], 'lonja de la universidad': [37.3812818, -5.9894343] },
@@ -236,7 +241,7 @@ function situar(ix, ciudad, h, pts) {
     const lugarSede = mm && /^(triunfal|palio|templo|casa|capilla|acto|hdad|hermandad|iglesia|parroquia|colegio|llamada|se recoge)/.test(mm[2]);
     // «templo»: pista con el nombre del templo en OSM (salidas extraordinarias que no salen ni entran en la sede de la hermandad)
     const tpl = p.templo && ix.templos.filter((t) => t.nombre.includes(norm(p.templo)));
-    if (lugarH) { pos = Array.isArray(lugarH) ? lugarH : lugarH.punto; como = 'estimado'; }
+    if (lugarH) { pos = Array.isArray(lugarH) ? lugarH : lugarH.punto; como = (!Array.isArray(lugarH) && lugarH.como) || 'estimado'; }
     else if (tpl && tpl.length) { pos = cercano(tpl.map((t) => [centro(t.geo)]), prev); como = 'templo'; }
     else if (fijo) { pos = fijo; como = fijoPar || lugarFijo ? 'calle' : 'carrera oficial'; }
     else if (mm && !lugarSede && !/\b(c o|carrera oficial)\b/.test(mm[2]) && [mm[2], nucleo(mm[2])].some((k) => k && ix.calles.has(k))) {
