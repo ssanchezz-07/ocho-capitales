@@ -289,7 +289,7 @@ function situar(ix, ciudad, h, pts) {
   // corto metía a Las Cigarreras por Almirante Apodaca, la calle de la salida.
   const porNodos = (a) => (Array.isArray(a) && a.length ? a.map((q) => q.slice(0, 2)) : null);
   if (ed && porNodos(ed.salida_por)) {
-    if (res.length > 1 && res[0].como === 'sede') res[0].por = porNodos(ed.salida_por);
+    if (res.length > 1 && res[0].como === 'sede') res[0].por = [...porNodos(ed.salida_por), ...(res[0].por || [])]; // (y, después, los de un «llega_por» del punto siguiente)
     else console.error(`SALIDA_POR: ${h.slug}: el primer punto no es la salida de su sede; no se usa`);
   }
   if (ed && porNodos(ed.entrada_por)) {
