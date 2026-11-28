@@ -1,5 +1,14 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-28 · Málaga: el trono del Cristo del Santo Sepulcro es un catafalco, no una urna (corrección recibida por el formulario de Colabora; Pablo: «Revisa esto»)
+- **La corrección decía:** «El trono del cristo no es una urna de madera barnizada. Es un catafalco de madera de caoba, bronce y oro…», con la web de la hermandad como fuente.
+- **Comprobado y corregido** en `tools/sources/pasos-cortejo.json` (y `portal.json`, regenerado con `tools/build-data.js`):
+  - es un **trono-catafalco**: la Agrupación de Cofradías dice «procesiona sobre un catafalco realizado en madera barnizada con bronces y esmaltes», y la web de la hermandad (/patrimonio/tronos-del-cristo/), que Moreno Carbonero diseñó «una especie de catafalco o túmulo que pasa a sustituir la urna». Nuestra ficha decía «en una urna», que no lo dice ninguna de las dos;
+  - **caoba y bronce, con esmaltes y cartelas de plata:** la hermandad dice que los hachones son «de caoba y bronce, siguiendo la tónica general del trono», y que las cartelas son de «plata de ley y caoba»;
+  - las **cabezas de varal**, de Miguel García Navas (1980), según la hermandad.
+- **No se pone, porque no lo dice ninguna de las dos fuentes:** el oro; la «losa en mármol» (la hermandad habla de la «losa sepulcral», con esmaltes); la madera de limón; y que las cabezas de varal sean los doce apóstoles. Según la hermandad, los apóstoles son tallas de bronce en las capillas de los hachones.
+- El correo de quien la envió no se guarda en ningún sitio del proyecto.
+
 ## 2026-11-27 · Sevilla: Los Negritos, con sede en la Capilla de los Ángeles (Pablo: «Quita el limite y dejalos hasta el 100%…»)
 - **Antes:** su sede se encontró con fuente el 26-nov, pero se quedó en «templo_encontrado». Con «punto» en Recaredo (27-nov), el punto «San Esteban» de la salida hacía un espolón nuevo de 20 m: la calle tiene en OSM un trozo suelto de 20 m junto a Puerta de Carmona (way 37588748), y el punto caía en su extremo.
 - **Ahora:**
