@@ -357,7 +357,10 @@ const IC = {
 const icon = (n, cls = 'oc-i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${IC[n]}</svg>`;
 
 // Estrella de ocho puntas (dos cuadrados): una punta por capital.
-const MARK_INNER = '<rect width="40" height="40" rx="9" fill="#2b1340"/><g fill="none" stroke="#d6b263" stroke-width="2"><rect x="11.5" y="11.5" width="17" height="17"/><rect x="11.5" y="11.5" width="17" height="17" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="2.6" fill="#d6b263"/>';
+// El icono (favicon y manifest), el mismo que el de la app desde el 28-nov (Pablo aprobó la «muestra 2»: terciopelo oscuro con un
+// brillo arriba a la izquierda y la estrella dorada, sin el galón circular). Los PNG (apple-touch-icon, icon-192 e icon-512) salen del
+// icono de 1024 de la app; este SVG lo imita con degradados, porque a 16-32 px el relieve no se ve.
+const MARK_INNER = '<defs><radialGradient id="tc" cx=".3" cy=".24" r=".95"><stop offset="0" stop-color="#6f4382"/><stop offset=".35" stop-color="#2f183d"/><stop offset=".7" stop-color="#14071f"/><stop offset="1" stop-color="#04000a"/></radialGradient><linearGradient id="or" x1="0" y1="8" x2="0" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ebd191"/><stop offset="1" stop-color="#be994a"/></linearGradient></defs><rect width="40" height="40" rx="9" fill="url(#tc)"/><g fill="none" stroke="url(#or)" stroke-width="2"><rect x="11.5" y="11.5" width="17" height="17"/><rect x="11.5" y="11.5" width="17" height="17" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="2.6" fill="url(#or)"/>';
 const LOGO = '<svg class="oc-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="11" y="11" width="18" height="18"/><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="2.4" fill="#c79a3b" stroke="none"/></svg>';
 const WORDMARK = `${LOGO}<span class="oc-wordmark">Ocho <span>Capitales</span></span>`;
 // erCuñao: el cuñao que lo sabe todo de la Semana Santa. Gafas de sol en la cabeza y la medalla de su hermandad al cuello.
@@ -660,9 +663,9 @@ function layout({ title, desc, body, path: p = '', image = '', jsonld = null, ac
 <meta property="og:site_name" content="${BRAND}"><meta property="og:locale" content="es_ES"><meta property="og:type" content="${p.startsWith('hermandad/') || p.startsWith('banda/') || p.startsWith('imaginero/') ? 'article' : 'website'}">
 <meta property="og:title" content="${esc(title || BRAND)}"><meta property="og:description" content="${esc(description.slice(0, 200))}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(ogImage)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title || BRAND)}"><meta name="twitter:description" content="${esc(description.slice(0, 200))}"><meta name="twitter:image" content="${esc(ogImage)}">
-<link rel="icon" href="${u('assets/icon.svg')}?v=2" type="image/svg+xml">
-<link rel="icon" href="${u('assets/icon-192.png')}?v=2" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=2">
+<link rel="icon" href="${u('assets/icon.svg')}?v=3" type="image/svg+xml">
+<link rel="icon" href="${u('assets/icon-192.png')}?v=3" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="${u('assets/apple-touch-icon.png')}?v=3">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 ${ESPECULA}
 <link rel="preload" href="${u('assets/fonts/karantina-latin.woff2')}" as="font" type="font/woff2" crossorigin><link rel="preload" href="${u('assets/fonts/heebo-latin.woff2')}" as="font" type="font/woff2" crossorigin>
@@ -2106,7 +2109,7 @@ function extras() {
   }
   fs.writeFileSync(path.join(DIST, 'assets', 'icon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">${MARK_INNER}</svg>`);
   fs.writeFileSync(path.join(DIST, 'news.json'), JSON.stringify({ actualizado: NEWS.actualizado, items: NEWS.items.slice(0, 600).map(({ h, t, ...n }) => n) }));
-  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ id: BASE, name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', dir: 'ltr', categories: ['news', 'travel', 'lifestyle'], start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg'), sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png'), sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
+  fs.writeFileSync(path.join(DIST, 'manifest.webmanifest'), JSON.stringify({ id: BASE, name: BRAND, short_name: BRAND, description: TAGLINE, lang: 'es', dir: 'ltr', categories: ['news', 'travel', 'lifestyle'], start_url: BASE, scope: BASE, display: 'standalone', background_color: '#f1f2f4', theme_color: '#ffffff', shortcuts: [['Hoy', ''], ['Calendario', 'calendario/'], ['Buscar', 'buscar/'], ['Mis favoritos', 'favoritos/']].map(([name, p]) => ({ name, url: u(p), icons: [{ src: u('assets/icon-192.png'), sizes: '192x192' }] })), icons: [{ src: u('assets/icon.svg') + '?v=3', sizes: 'any', type: 'image/svg+xml' }, { src: u('assets/icon-192.png') + '?v=3', sizes: '192x192', type: 'image/png' }, { src: u('assets/icon-512.png') + '?v=3', sizes: '512x512', type: 'image/png' }, { src: u('assets/icon-512.png') + '?v=3', sizes: '512x512', type: 'image/png', purpose: 'maskable' }] }));
   // Buscadores (Google, Bing…) entran; los robots que recogen contenido para entrenar o alimentar IA, no.
   // Es una petición que los robots serios respetan; el aviso legal y la reserva TDM (despliegue.mjs) le dan base legal.
   const ROBOTS_IA = ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'CCBot', 'Google-Extended', 'anthropic-ai', 'ClaudeBot', 'Claude-Web', 'Claude-User', 'Claude-SearchBot', 'PerplexityBot', 'Perplexity-User', 'Bytespider', 'Amazonbot', 'Applebot-Extended', 'meta-externalagent', 'meta-externalfetcher', 'FacebookBot', 'cohere-ai', 'cohere-training-data-crawler', 'Diffbot', 'Timpibot', 'AI2Bot', 'Ai2Bot-Dolma', 'YouBot', 'DuckAssistBot', 'MistralAI-User', 'Omgilibot', 'Omgili', 'ImagesiftBot', 'img2dataset', 'Kangaroo Bot', 'PanguBot', 'Webzio-Extended', 'iaskspider/2.0', 'Scrapy'];

@@ -1,5 +1,14 @@
 # Decisiones de diseño y técnicas
 
+## 2026-11-28 · Web: el icono nuevo, el mismo que el de la app («muestra 2» del sobremesa)
+- **Qué:** terciopelo oscuro con un brillo arriba a la izquierda y la estrella dorada en relieve, sin el galón circular. Pablo lo aprobó en el chat del sobremesa («Si hazlo»), y el sobremesa lo pone en la app. La web lleva el mismo.
+- **De dónde:** el icono de 1024 px de la app (opaco), del lienzo del sobremesa (artifact «Cartas y sobres de Ocho Capitales», recurso 3fa81f16e7aaf9796d053e9868af8e05).
+- **Cómo:**
+  - `apple-touch-icon.png` (180 px), `icon-192.png` e `icon-512.png` (también el «maskable») salen de ese icono, reducidos con Lanczos y a 256 colores con difuminado. No se ven bandas, y pesan un 35 % menos que en color completo: 20, 23 y 162 KB.
+  - El favicon SVG (`MARK_INNER` en `build.mjs`, solo lo usa `icon.svg`) imita el icono con degradados, con la misma estrella de siempre: a 16-32 px no se ve el relieve.
+  - Las etiquetas y el manifest pasan a `?v=3`, para que los navegadores, que guardan los favicons mucho tiempo, cojan el nuevo.
+- **Probado y descartado:** subir los PNG en color completo (244 KB el de 512, sin diferencia a la vista).
+
 ## 2026-11-28 · Málaga: el trono del Cristo del Santo Sepulcro es un catafalco, no una urna (corrección recibida por el formulario de Colabora; Pablo: «Revisa esto»)
 - **La corrección decía:** «El trono del cristo no es una urna de madera barnizada. Es un catafalco de madera de caoba, bronce y oro…», con la web de la hermandad como fuente.
 - **Comprobado y corregido** en `tools/sources/pasos-cortejo.json` (y `portal.json`, regenerado con `tools/build-data.js`):
